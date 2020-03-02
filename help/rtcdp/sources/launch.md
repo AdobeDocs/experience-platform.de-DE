@@ -1,83 +1,83 @@
 ---
-title: Übung Website-Tags mit Adobe Launch implementieren
-seo-title: Implementieren von Website-Tags mit Adobe Launch
-description: Verwenden Sie Adobe Launch, um Website-Tags in Adobe Experience Platform zu implementieren
-seo-description: Verwenden Sie Adobe Launch, um Website-Tags in Adobe Experience Platform zu implementieren
-translation-type: tm+mt
+title: Tutorial zum Implementieren von Website-Tags mit Adobe Launch
+seo-title: Website-Tags mit Adobe Launch implementieren
+description: Verwenden Sie Adobe Launch, um Website-Tags in Adobe Experience Platform zu implementieren.
+seo-description: Verwenden Sie Adobe Launch, um Website-Tags in Adobe Experience Platform zu implementieren.
+translation-type: ht
 source-git-commit: b8eda33a88b81dff5f3b45a131a5585a062519c2
 
 ---
 
 
-# Übung:Implementieren von Website-Tags mit Adobe Launch
+# Tutorial: Website-Tags mit Adobe Launch implementieren
 
-In diesem Lernprogramm wird beschrieben, wie Sie Ihre Website-Tags implementieren, um Daten mit Adobe Launch an Adobe Experience Platform zu senden.
+In diesem Tutorial wird beschrieben, wie Sie mit Adobe Launch Website-Tags implementieren, um Daten an Adobe Experience Platform zu senden.
 
 ## Voraussetzungen
 
-* Das erforderliche Schema und der erforderliche Datensatz werden in Platform erstellt.
-* Die erforderliche Konfiguration wurde in Experience Edge bereitgestellt und verfügt über die entsprechende Konfigurations-ID und Edge-Domäne.
-* Das Unternehmens-CMS wurde bereits für die Bereitstellung eines JavaScript-Objekts auf jeder Seite mit den Daten konfiguriert, die Sie an Platform senden müssen.
+* Das erforderliche Schema und der erforderliche Datensatz wurden in Platform erstellt.
+* Die erforderliche Konfiguration wurde in Experience Edge bereitgestellt und verfügt über die entsprechende Konfigurationskennung und Edge-Domäne.
+* Das Unternehmens-CMS wurde bereits für die Bereitstellung eines JavaScript-Objekts auf jeder Seite mit den Daten konfiguriert, die Sie an Platform senden möchten.
 
 ## Schritte
 
-Dieses Lernprogramm enthält die folgenden Schritte:
+Dieses Tutorial umfasst folgende Schritte:
 
-1. Installieren Sie die Adobe Experience Platform Web SDK-Erweiterung.
-1. Erstellen Sie eine Regel, um Launch mitzuteilen, welche Daten gesendet werden sollen.
-1. Bündeln Sie die Erweiterung und Regel in einer Bibliothek.
+1. Installieren der Adobe Experience Platform Web SDK-Erweiterung.
+1. Erstellen einer Regel, um Launch darüber zu informieren, welche Daten gesendet werden sollen.
+1. Bündeln der Erweiterung und Regel in einer Bibliothek.
 
 ## Adobe Experience Platform Web SDK-Erweiterung installieren
 
 Installieren Sie zunächst die Adobe Experience Platform Web SDK-Erweiterung.
 
-1. In Launch, open the **[!UICONTROL Extensions]** tab.
+1. Öffnen Sie in Launch die Registerkarte **[!UICONTROL Erweiterungen]**.
 
-   ![„image“](assets/launch-overview.png)
+   ![Bild](assets/launch-overview.png)
 
-1. Wählen Sie die Adobe Experience Platform Web SDK-Erweiterung aus dem Starterweiterungskatalog. Der Konfigurationsbildschirm wird geöffnet.
+1. Wählen Sie im Launch-Erweiterungskatalog die Adobe Experience Platform Web SDK-Erweiterung aus. Der Konfigurationsbildschirm wird geöffnet.
 
-   ![„image“](assets/launch-extension-install.png)
+   ![Bild](assets/launch-extension-install.png)
 
-   Weitere Informationen finden Sie unter [Erweiterungen](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) in der Dokumentation zum Starten.
+   Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Erweiterungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html).
 
-1. Erweiterungen konfigurieren.
+1. Konfigurieren Sie die Erweiterung.
 
-   Die einzigen Einstellungen, die Sie jetzt benötigen, sind:
+   Die einzigen Einstellungen, die Sie hier benötigen, sind:
 
-   * **** Konfigurations-ID: Geben Sie die Configuration-ID an, die Sie von Ihrem Adobe-Kundenbetreuer erhalten haben.
-   * **** Edge-Domäne: Geben Sie die Edge-Domäne an, die Sie von Ihrem Adobe-Kundenbetreuer erhalten haben.
+   * **Konfigurationskennung:** Geben Sie die Konfigurationskennung an, die Sie von Ihrem Adobe-Support-Mitarbeiter erhalten haben.
+   * **Edge-Domäne:** Geben Sie die Edge-Domäne an, die Sie von Ihrem Adobe-Support-Mitarbeiter erhalten haben.
 
 1. Klicken Sie auf **[!UICONTROL Speichern]** und fahren Sie mit dem nächsten Schritt fort.
 
-## Regel zum Festlegen der zu sendenden Daten für Launch erstellen
+## Regel für Launch zum Festlegen der zu sendenden Daten erstellen
 
-Anschließend erstellen Sie eine Regel, die Launch informiert, welche Daten Sie an Adobe Experience Platform senden möchten und wann Sie sie senden möchten.
+Anschließend erstellen Sie eine Regel, um Launch zu informieren, welche Daten Sie wann an Adobe Experience Platform senden möchten.
 
-1. Konfigurieren Sie auf der Registerkarte &quot; **[!UICONTROL Regeln]** &quot;ein Ereignis, das auf jeder neuen Seite der Website ausgelöst wird, wenn die Startbibliothek geladen wird.
+1. Konfigurieren Sie auf der Registerkarte **[!UICONTROL Regeln]** ein Ereignis, das auf jeder neuen Seite der Website ausgelöst wird, wenn die Launch-Bibliothek geladen wird.
 
-   ![„image“](assets/launch-make-a-rule.png)
+   ![Bild](assets/launch-make-a-rule.png)
 
-1. Hinzufügen einer Aktion.
+1. Fügen Sie eine Aktion hinzu.
 
-   Um die Aktion zu konfigurieren, teilen Sie Launch mit, wo die Datenschicht gefunden werden soll. Die Datenschicht ist ein JavaScript-Objekt, das auf der Seite vorhanden ist und von demselben CMS bereitgestellt wird, das die Webseite rendert. Geben Sie den JavaScript-Pfad zum Datenobjekt an.
+   Teilen Sie Launch mit, wo Ihre Datenschicht zu finden ist, um die Aktion zu konfigurieren. Die Datenschicht ist ein JavaScript-Objekt, das auf der Seite vorhanden ist und von demselben CMS bereitgestellt wird, das die Web-Seite rendert. Geben Sie den JavaScript-Pfad zum Datenobjekt an.
 
-   ![„image“](assets/launch-add-aep-action.png)
+   ![Bild](assets/launch-add-aep-action.png)
 
-   Das von Ihnen gesendete Datenobjekt muss ein gültiges XDM sein, das die Validierung anhand des Schemas übergibt, das vom Datensatz verwendet wird, der mit Ihrer Konfigurations-ID verbunden ist.
+   Das von Ihnen gesendete Datenobjekt muss ein gültiges XDM-Objekt sein, das die Validierung anhand des Schemas übergibt, das vom mit Ihrer Konfigurationskennung verbundenen Datensatz verwendet wird.
 
-1. Click **[!UICONTROL Keep Changes]**.
+1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]**.
 
-Weitere Informationen finden Sie unter [Regeln](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) in der Dokumentation zum Starten.
+Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Regeln](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/rules.html).
 
-## Bündeln der Erweiterung und Regel in einer Bibliothek
+## Erweiterung und Regel in einer Bibliothek bündeln
 
-Anschließend [bündeln Sie die Erweiterung](https://docs.adobe.com/content/help/en/launch/using/reference/publish/overview.html) und Ihre neue Regel in einer Bibliothek und testen Sie diese Änderungen in einer Entwicklungsumgebung.
+Anschließend [bündeln Sie die Erweiterung](https://docs.adobe.com/content/help/de-DE/launch/using/reference/publish/overview.html) und Ihre neue Regel in einer Bibliothek und testen Sie diese Änderungen in einer Entwicklungsumgebung.
 
-![„image“](assets/launch-add-changes-to-library.png)
+![Bild](assets/launch-add-changes-to-library.png)
 
-Nach Abschluss des Tests können Sie die Bibliothek über den Workflow bewerben, damit sie auf der Produktions-Site bereitgestellt werden kann. Die Daten fließen nun von jedem einzelnen Benutzer zur Adobe Experience Platform.
+Nach Abschluss des Tests können Sie die Bibliothek über den Workflow freigeben, damit sie sich auf der Produktions-Site bereitstellen lässt. Nun fließen Daten von jedem einzelnen Anwender an Adobe Experience Platform.
 
-![„image“](assets/launch-promote-library.png)
+![Bild](assets/launch-promote-library.png)
 
-Weitere Informationen finden Sie unter [Bibliotheken](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) in der Dokumentation zum Starten.
+Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Bibliotheken](https://docs.adobe.com/content/help/de-DE/launch/using/reference/publish/libraries.html).
