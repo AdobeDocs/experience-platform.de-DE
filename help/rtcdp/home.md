@@ -1,14 +1,14 @@
 ---
-title: term
-seo-title: term
-description: term
-seo-description: term
-translation-type: tm+mt
+title: Begriff
+seo-title: Begriff
+description: Begriff
+seo-description: Begriff
+translation-type: ht
 source-git-commit: 69e7fb6e5e0d35eda1486886fedbcadc1582741a
 
 ---
 
 
-# Home
+# Startseite
 
 Inhalt hier hinzufügen
