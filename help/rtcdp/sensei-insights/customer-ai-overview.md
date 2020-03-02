@@ -1,44 +1,44 @@
 ---
-title: Überblick über die Kundenaktivität (Alpha)
-seo-title: Überblick über die Kundenaktivität (Alpha)
-description: Dieses Dokument bietet einen Überblick über Sensei Insights - Customer AI (Alpha)
-seo-description: Dieses Dokument bietet einen Überblick über Sensei Insights - Customer AI (Alpha)
+title: Customer AI (Alpha) – Übersicht
+seo-title: Customer AI (Alpha) – Übersicht
+description: Dieses Dokument bietet Ihnen einen Überblick über Sensei Insights - Customer AI (Alpha).
+seo-description: Dieses Dokument bietet Ihnen einen Überblick über Sensei Insights - Customer AI (Alpha).
 index: false
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: fde2bb7af91dbcb0c701397c878b63044cb27a4d
 
 ---
 
 
-# Überblick über die Kundenaktivität (Alpha)
+# Customer AI (Alpha) – Übersicht
 
 >[!NOTE]
->Die in diesem Dokument beschriebene Funktion für Kunden-API ist alphanumerisch. Die Dokumentation und die Funktionalität können geändert werden.
+>Die in diesem Dokument beschriebene Funktion Customer AI befindet sich in der Alpha-Phase. Dokumentation und Funktionalität können sich ändern.
 
-Die Kundentelefonie in Adobe Experience Platform bietet Marketingexperten die Möglichkeit, Adobe Sensei zu nutzen, um vorherzusehen, was ihre Kunden als Nächstes durch maschinelles Lernen tun werden.
+Mit Customer AI in Adobe Experience Platform können Marketer Adobe Sensei nutzen, um mithilfe von maschinellem Lernen vorherzusagen, was Kunden als Nächstes tun werden.
 
-## Wofür wird das verwendet?
+## Wozu dient das?
 
-Die Kunden-API wird verwendet, um benutzerdefinierte Tendenzwerte wie Kehren und Konversion für einzelne Profile im Maßstab zu generieren. Dies erfolgt, ohne dass die geschäftlichen Anforderungen in ein maschinelles Lernproblem umgewandelt werden müssen, indem ein Algorithmus, eine Schulung oder eine Bereitstellung ausgewählt wird.
+Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Das ist möglich, ohne dass die geschäftlichen Anforderungen in eine Aufgabe für maschinelles Lernen umgewandelt werden müssen, indem ein Algorithmus, ein Training oder eine Implementierung ausgewählt wird.
 
-Die Kundentelefonie basiert auf:
+Customer AI erlaubt Folgendes:
 
-- Verbessern Sie das Echtzeit-Kundenprofil mit Tendenzwerten wie Kehren und Konversion.
-- Verbessern Sie die Kundenprofile mit den Begründungscodes für Tendenzwerte.
-- Erstellen Sie Kundensegmente basierend auf Tendenzwerten und einflussreichen Faktoren.
+- Verbessern von Echtzeit-Kundenprofilen mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion.
+- Optimieren von Kundenprofilen mit Begründungs-Codes für Tendenzwerte.
+- Erstellen von Kundensegmenten basierend auf Tendenzwerten und Einflussfaktoren.
 
-Der Kunde ist nicht auf Folgendes aufgebaut:
+Customer AI erlaubt Folgendes nicht:
 
-- Vorhersagen des Kaufpreises der Produkte.
-- Vorhersagen, welche zuvor gekauften Produkte bei der nächsten Bestellung eines Kunden vorhanden sein werden.
-- Produktempfehlungen im Maßstab erstellen.
-- die Phase der Kaufreise zu bestimmen, in der sich der Kunde befindet
-- Prognostizieren Sie den nächsten Checkout-Gesamtwert eines Kunden.
+- Vorhersagen des Kaufpreises von Produkten.
+- Vorhersagen, welche zuvor gekauften Produkte sich in der nächsten Bestellung eines Kunden befinden werden.
+- Skaliertes Generieren von Produktempfehlungen.
+- Bestimmen der Phase in der Customer Journey, in der sich der Kunde befindet.
+- Prognostizieren des nächsten Checkout-Gesamtwerts eines Kunden.
 
 ## Wie funktioniert das?
 
-Die Kundentraining-API analysiert vorhandene Daten zu Consumer Experience Event-Ereignissen, um Ergebnisse der Kehrzeit oder Konversionstendenz vorherzusagen. Adobe ist sich bewusst, dass die Definition von &quot;Kurn&quot;und &quot;Konversion&quot;nicht in allen Anwendungsfällen einheitlich ist. Aus diesem Grund haben Sie die Möglichkeit, benutzerdefinierte Zielziele als Bedingungssätze zu definieren. Sie können das prognostizierte Ziel so lange konfigurieren, wie das Interessenereignis in den Daten zum Verbrauchererlebnis enthalten ist.
+Customer AI analysiert vorhandene Kundenerlebnis-Ereignisdaten, um Tendenzwerte für Abwanderung oder Konversion vorherzusagen. Adobe weiß, dass die Definition von Abwanderung und Konversion nicht in allen Anwendungsfällen einheitlich ist. Daher haben Sie die Möglichkeit, benutzerdefinierte Zielvorgaben als Bedingungssätze festzulegen. Sie können das prognostizierte Ziel so lange konfigurieren, wie das jeweilige Ereignis in den erfassten Kundenerlebnis-Ereignisdaten enthalten ist.
 
 ## Wie sehen die ersten Schritte aus?
 
-Beginnen Sie mit dem Tutorial Dokument [Predict Customer Tendensity Scores mithilfe der Kunden-API](./customer-ai-tutorial.md). Es enthält Schritte zur Verwendung der Kunden-API und zeigt die Erstellung von Kundensegmenten mithilfe von Tendenzwerten.
+Beginnen Sie mit dem Tutorial-Dokument [Mit Customer AI kundenspezifische Tendenzwerte prognostizieren](./customer-ai-tutorial.md). Es informiert über Schritte zur Verwendung von Customer AI und veranschaulicht die Erstellung von Kundensegmenten mithilfe von Tendenzwerten.
