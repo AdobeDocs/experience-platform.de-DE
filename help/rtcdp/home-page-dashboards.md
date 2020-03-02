@@ -1,70 +1,70 @@
 ---
-title: Homepage und Dashboards zur Echtzeit-Datenplattform
-seo-title: Homepage und Dashboards zur Echtzeit-Datenplattform
-description: Dashboards, Homepage und Erlebnis für erstmalige Benutzer mit Adobe Experience Platform
-seo-description: Dashboards, Homepage und Erlebnis für erstmalige Benutzer mit Adobe Experience Platform
-translation-type: tm+mt
+title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
+seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
+description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
+seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
+translation-type: ht
 source-git-commit: 6dde6c90fe9073c50c0a9d3dd43ef045730d1e13
 
 ---
 
 
-# Übersicht über die Echtzeit-Metriken der Kundendatenplattform
+# Übersicht über Metriken der Echtzeit-Kundendatenplattform
 
-Die Homepage von Adobe Echtzeit-Kundendatenplattform (Echtzeit-CDP), die ein Metriken-Dashboard enthält, wird angezeigt, wenn Sie sich bei CDP in Echtzeit anmelden.
+Die Startseite der Echtzeit-Kundendatenplattform von Adobe, die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
 
-Die Homepage ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Echtzeit-CDP bietet Metrikkarten für das gesamte Erlebnis. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
+Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Die Echtzeit-Kundendatenplattform stellt Metrikkarten während des gesamten Erlebnisses bereit. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
 
-![„image“](assets/home2.jpg)
+![Bild](assets/home2.jpg)
 
-Wenn beim Anmelden bei CDP in Echtzeit keine Daten im System vorhanden sind, wird das Dashboard auf der Homepage nicht angezeigt. In diesem Fall bietet die Homepage Lernmaterial für ein erstmaliges Benutzererlebnis. Während Daten gesammelt werden, d. h. wenn <!--sources-->Datensätze, Profile, Segmente und Ziele erstellt und Daten in das System fließen, wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten<!-- in metric cards-->anzuzeigen.
+Wenn zum Zeitpunkt der Anmeldung bei der Echtzeit-Kundendatenplattform keine Daten im System vorhanden sind, wird das Dashboard auf der Startseite nicht angezeigt. In dem Fall enthält die Startseite Lernmaterial für die erstmalige Nutzung. Im Zuge der Sammlung von Daten, d. h. wenn <!--sources-->Datensätze, Profile, Segmente und Ziele erstellt werden und Daten in das System fließen, wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten anzuzeigen<!-- in metric cards-->.
 
-## Homepage-Dashboard-Ansicht
+## Dashboard-Ansicht auf der Startseite
 
 <!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
 
 Das Dashboard ist wie folgt unterteilt<!-- two areas.-->:
 
-* **Die Leiste** befindet sich oben im Dashboard. Die Lederboard zeigt die Anzahl der Datensätze, Profile, Segmente und Ziele im System an.
+* Das **Leaderboard** befindet sich oben im Dashboard. Im Leaderboard wird die Zahl der Datensätze, Profile, Segmente und Ziele im System angezeigt.
 
-   ![„image“](assets/home-leaderboard2.jpg)
+   ![Bild](assets/home-leaderboard2.jpg)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **In den letzten Elementen** werden die fünf zuletzt hinzugefügten Datensätze, Quellen, Segmente und Ziele aufgelistet.
+* Unter **Letzte Elemente** werden die fünf Datensätze, Quellen, Segmente und Ziele aufgeführt, die dem System zuletzt hinzugefügt wurden.
 
-   ![„image“](assets/home-recent.jpg)
+   ![Bild](assets/home-recent.jpg)
 
-Zusätzliche Metriken - z. B. für Profile und Segmente - stehen in anderen Teilen der Echtzeit-Kundendatenplattform zur Verfügung.
+Zusätzliche Metriken (z. B. für Profile und Segmente) stehen in anderen Teilen der Echtzeit-Kundendatenplattform zur Verfügung.
 
 ### Datensätze
 
-Der Zähler **[!UICONTROL für Datensätze]** zeigt die Anzahl der Datensätze im System und die Datenmenge in Plattform an. Dieser Zähler wird aktualisiert, wenn ein Datensatz erstellt wird.
+Der Zähler für **[!UICONTROL Datensätze]** gibt die Zahl der Datensätze im System und die Menge der Daten in Platform an. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
-Weitere Informationen zu Datensätzen finden Sie unter Daten [in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)erfassen.
+Weiterführende Informationen zu Datensätzen finden Sie unter [Daten in Adobe Experience Platform erfassen](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Profile
 
-Die Anzahl der **[!UICONTROL Profile]** zeigt die Gesamtzahl der Personen mit Profilen im Echtzeit-Kundenprofil an. Es werden keine Profilfragmente einbezogen. Dies ist Ihre gesamte adressierbare Zielgruppe.
+Der Zähler für **[!UICONTROL Profile]** zeigt die Gesamtzahl der Personen mit Profilen in Echtzeit-Kundenprofil an. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
 
-Diese Anzahl verwendet die Standardrichtlinie für die [Zusammenführung](profile/merge-policies.md) , die in der Konfiguration der Zusammenführungsrichtlinie in Unified Profile festgelegt ist.
+Der Zähler nutzt die standardmäßige [Zusammenführungsrichtlinie](profile/merge-policies.md), die in der Konfiguration der Zusammenführungsrichtlinien im einheitlichen Profil festgelegt ist.
 
-Die Anzahl der Profile wird alle 24 Stunden aktualisiert.
+Die Zahl der Profile wird alle 24 Stunden aktualisiert.
 
-Weitere Informationen zu Profilen finden Sie unter [Eine einheitliche Ansicht Ihres Kunden in Echtzeit-CDP](profile/profile-overview.md).
+Weiterführende Informationen zu Profilen finden Sie unter [Einheitliche Sicht auf Kunden in der Echtzeit-Kundendatenplattform](profile/profile-overview.md).
 
 ### Segmente
 
-**[!UICONTROL Segmente]** zeigen die Gesamtzahl der für das Unternehmen erstellten Segmente an. Diese Zahl wird aktualisiert, wenn neue Segmente erstellt werden.
+**[!UICONTROL Segmente]** gibt die Gesamtzahl der für das Unternehmen erstellten Segmente an. Diese Zahl wird aktualisiert, sobald neue Segmente erstellt werden.
 
-Weitere Informationen zu Segmenten finden Sie unter Übersicht über den [Segmentierungsdienst](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
+Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
 
 ### Ziele
 
-**[!UICONTROL Ziele]** zeigen die Gesamtzahl der Ziele an, die für das Unternehmen erstellt wurden. Diese Nummer wird aktualisiert, wenn neue Ziele erstellt werden.
+**[!UICONTROL Ziele]** gibt die Gesamtzahl der Ziele an, die für das Unternehmen erstellt wurden. Diese Zahl wird aktualisiert, sobald neue Ziele erstellt werden.
 
-Weitere Informationen zu Zielen finden Sie unter Übersicht über [Ziele](destinations/destinations-overview.md).
+Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/destinations-overview.md).
 
 <!-- ### Successful profile records
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Letzte Datensätze
 
-Die Karte **[!UICONTROL Letzte Datensätze]** zeigt die fünf neuesten Datensätze an, die innerhalb des Unternehmens erstellt wurden. Diese Liste wird aktualisiert, wenn ein neuer Datensatz erstellt wird.
+Auf der Karte **[!UICONTROL Letzte Datensätze]** werden die fünf letzten Datensätze angezeigt, die im Unternehmen erstellt wurden. Diese Liste wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
-Klicken Sie auf einen Datensatz, um die Details zu diesem Element anzuzeigen, oder **[!UICONTROL Alle]** anzeigen, um die Liste der Datensätze anzuzeigen. Von dort aus können Sie auf eine bestimmte Quelle klicken.
+Klicken Sie auf einen Datensatz, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um die Liste der Datensätze anzuzeigen. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
 
-Weitere Informationen zu Datensätzen finden Sie unter Daten [in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)erfassen.
+Weiterführende Informationen zu Datensätzen finden Sie unter [Daten in Adobe Experience Platform erfassen](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Letzte Quellen
 
-Die Metrikkarte **[!UICONTROL Letzte Quellen]** zeigt die fünf zuletzt erstellten Quellen innerhalb des Unternehmens an. Diese Liste wird aktualisiert, wenn eine neue Quelle erstellt wird.
+Auf der Metrikkarte **[!UICONTROL Letzte Quellen]** werden die fünf Quellen angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald eine neue Quelle erstellt wird.
 
-Klicken Sie auf eine Quelle, um die Details zu diesem Element anzuzeigen, oder **[!UICONTROL Alle]** anzeigen, um die Liste der Quellen anzuzeigen. Von dort aus können Sie auf eine bestimmte Quelle klicken.
+Klicken Sie auf eine Quelle, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um die Liste der Quellen anzuzeigen. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
 
-Weitere Informationen zu Quellen finden Sie unter Übersicht über [Quellen](sources/sources-overview.md).
+Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](sources/sources-overview.md).
 
 ### Letzte Segmente
 
-Die Metrikkarte **[!UICONTROL Letzte Segmente]** zeigt die fünf zuletzt erstellten Segmente innerhalb des Unternehmens an. Diese Liste wird aktualisiert, wenn ein neues Segment erstellt wird.
+Auf der Metrikkarte **[!UICONTROL Letzte Segmente]** werden die fünf Segmente angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald ein neues Segment erstellt wird.
 
-Klicken Sie auf ein Segment, um die Details zu diesem Element anzuzeigen, oder **[!UICONTROL Alle]** anzeigen, um Informationen zu weiteren Segmenten anzuzeigen.
+Klicken Sie auf ein Segment, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Segmente zu erhalten.
 
-Weitere Informationen zu Segmenten finden Sie unter Übersicht über den [Segmentierungsdienst](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
+Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
 
 ### Letzte Ziele
 
-Die Metrikkarte &quot; **[!UICONTROL Zuletzt verwendete Ziele]** &quot;zeigt die fünf zuletzt erstellten Ziele innerhalb des Unternehmens an. Diese Liste wird aktualisiert, wenn ein neues Ziel erstellt wird.
+Auf der Metrikkarte **[!UICONTROL Letzte Ziele]** werden die fünf Ziele angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald ein neues Ziel erstellt wird.
 
-Klicken Sie auf ein Ziel, um die Details zu diesem Element anzuzeigen, oder **[!UICONTROL Alle]** anzeigen, um Informationen zu weiteren Zielen anzuzeigen.
+Klicken Sie auf ein Ziel, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Ziele zu erhalten.
 
-Weitere Informationen zu Zielen finden Sie unter Übersicht über [Ziele](destinations/destinations-overview.md).
+Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/destinations-overview.md).
