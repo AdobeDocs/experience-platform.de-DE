@@ -3,17 +3,17 @@ title: Zusammenführungsrichtlinien
 seo-title: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
 description: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
 seo-description: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 ---
 
 
-# Richtlinien in Echtzeit-CDP zusammenführen
+# Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
 
-Basierend auf der Adobe Experience Platform ermöglicht Ihnen die Echtzeit-Kundendatenplattform, Daten aus mehreren Quellen zusammenzuführen und zu kombinieren, um einen vollständigen Überblick über die einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die Plattform verwendet, um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu erstellen.
+Basierend auf Adobe Experience Platform ermöglicht es Ihnen die Echtzeit-Kundendatenplattform, Daten aus verschiedenen Quellen zusammenzuführen und zu kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen.
 
-Über die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Sie können auch Voreinstellungen für Datenquellen festlegen und festlegen, welche Daten bei Auftreten eines Konflikts beim Zusammenführen Priorität haben sollen.
+Über die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. Außerdem können Sie Voreinstellungen für Datenquellen definieren und festlegen, welche Daten beim Auftreten eines Konflikts beim Zusammenführen Priorität haben sollen.
 
-Eine schrittweise Anleitung zum Arbeiten mit Zusammenführungsrichtlinien finden Sie in der Benutzeroberfläche von Adobe Experience Platform. Befolgen Sie hierzu das Lernprogramm zum [Arbeiten mit Zusammenführungsrichtlinien auf der Adobe-E/A](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/merge_policies/create-merge-policies.md)-Seite.
+Eine schrittweise Anleitung zum Arbeiten mit Zusammenführungsrichtlinien unter Verwendung der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Tutorial zum Arbeiten mit Zusammenführungsrichtlinien in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/merge_policies/create-merge-policies.md).
 
