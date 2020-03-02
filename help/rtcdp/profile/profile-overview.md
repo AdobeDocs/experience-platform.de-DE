@@ -1,34 +1,34 @@
 ---
-title: Übersicht über Kundenprofile in Echtzeit
-seo-title: Echtzeit-Kundenprofil in Echtzeit-Datenplattform
-description: Eine Übersicht darüber, wie Sie mit der Echtzeit-Kundendatenplattform koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden mithilfe von Echtzeit-Kundenprofilen erstellen können.
+title: Übersicht über das Echtzeit-Kundenprofil
+seo-title: Echtzeit-Kundenprofil in der Echtzeit-Kundendatenplattform
+description: Ein Überblick darüber, wie Sie mit der Echtzeit-Kundendatenplattform unter Verwendung von Echtzeit-Kundenprofilen koordinierte, konsistente und relevante Erlebnisse für Kunden erstellen können.
 seo-description: Echtzeit-Kundendatenplattform, Profil, Daten, Erlebnisse, Kanäle
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 ---
 
 
-# Übersicht über Kundenprofile in Echtzeit
+# Übersicht über das Echtzeit-Kundenprofil
 
-Mit dem Echtzeit-Kundenprofil können Sie einen ganzheitlichen Überblick über jeden einzelnen Kunden erhalten, indem Sie Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieterdaten, kombinieren. Mit Profil können Sie Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenfassen, die eine nachvollziehbare und zeitgestempelte Übersicht über jede Kundeninteraktion bietet.
+Mit dem Echtzeit-Kundenprofil erhalten Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem Sie Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, miteinander kombinieren. Mit dem Profil können Sie Ihre unterschiedlichen Kundendaten in einer einheitlichen Sicht zusammenfassen, die ein umsetzbares Konto mit Zeitstempel für jede Kundeninteraktion bietet.
 
-## Profile in Echtzeit-Kundendatenplattform
+## Profile in der Echtzeit-Kundendatenplattform
 
-Mit der Echtzeit-Kundendatenplattform können Sie koordinierte und konsistente Erlebnisse für Ihre Kunden bereitstellen, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Diese personalisierten Erlebnisse so bereitzustellen, dass sie sich als relevant und zeitnah erweisen, ist keine leichte Aufgabe, sondern kann mithilfe des Echtzeit-Kundenprofils, das Teil der Adobe Experience Platform ist, erreicht werden. Die Echtzeit-CDP basiert auf Experience Platform und nutzt viele Dienste und Funktionen der Experience Platform, einschließlich der Erstellung von Profilen. Diese aggregierten Ansichten eines einzelnen Kunden führen Daten aus all Ihren Marketingkanälen und den verschiedenen Systemen zusammen, die Ihr Unternehmen derzeit zur Speicherung von Kundendaten verwendet.
+Mit der Echtzeit-Kundendatenplattform können Sie koordinierte und konsistente Erlebnisse für Kunden bereitstellen, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Für personalisierte Erlebnisse zu sorgen, die relevant und zeitlich passend sind, ist keine leichte Aufgabe, wird aber mit dem Echtzeit-Kundenprofil, das Teil von Adobe Experience Platform ist, möglich. Die Echtzeit-Kundendatenplattform beruht auf Experience Platform und nutzt viele Dienste und Funktionen von Experience Platform, einschließlich der Erstellung von Profilen. In diesen aggregierten Ansichten einzelner Kunden werden Daten aus all Ihren Marketing-Kanälen und den verschiedenen Systemen zusammengeführt, die Ihr Unternehmen zur Speicherung von Kundendaten aktuell verwendet.
 
-## Identifikations- und Identitätsnamensräume
+## Identitäten und Identitäts-Namespaces
 
-Wenn Kundendaten zusammenkommen, werden sie mithilfe von Identitäten zu einem einzigen Profil zusammengeführt, und die Möglichkeit, diese Identitäten zu verbinden, sobald mehr Informationen über jeden Kunden bekannt werden. Weitere Informationen zu Identitäten und Identitätsnamen finden Sie in der Übersicht über [Identitäten](/help/rtcdp/profile/identities-overview.md).
+Wenn Kundendaten erfasst werden, werden sie mithilfe von Identitäten zu einem einzigen Profil zusammengeführt. Zudem besteht die Möglichkeit, solche Identitäten zu verknüpfen, sobald mehr Informationen über den jeweiligen Kunden bekannt werden. Weiterführende Informationen zu Identitäten und Identitäts-Namespaces finden Sie unter [Identitäten – Übersicht](/help/rtcdp/profile/identities-overview.md).
 
 ## Zusammenführungsrichtlinien
 
-Beim Zusammenführen von Kundendaten sind Zusammenführungsrichtlinien die Regeln, die Plattform verwendet, um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie in der Übersicht über die [Zusammenführungsrichtlinien](/help/rtcdp/profile/merge-policies.md).
+Beim Zusammenführen von Kundendaten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](/help/rtcdp/profile/merge-policies.md).
 
-## Profil-Viewer
+## Profilansicht
 
-Plattform ermöglicht Ihnen, Kundenprofile einfach anzuzeigen und anhand verschiedener Attribute nach bestimmten Profilen zu suchen. Weitere Informationen zum Anzeigen von Profilen innerhalb der Plattform finden Sie in der [Profil-Viewer-Übersicht](/help/rtcdp/profile/profile-viewer.md).
+Platform ermöglicht es Ihnen, Kundenprofile bequem anzuzeigen und anhand verschiedener Attribute nach bestimmten Profilen zu suchen. Weiterführende Informationen zum Anzeigen von Profilen innerhalb von Platform finden Sie unter [Profilansicht – Übersicht](/help/rtcdp/profile/profile-viewer.md).
 
 ## Nächste Schritte
 
-Nach dem Lesen dieser Übersicht sollten Sie nun verstehen, wie Echtzeit-CDP Echtzeit-Kundenprofile nutzt, um kanalübergreifende Personalisierung in großem Umfang zu ermöglichen. Indem Sie Identitäten aus verschiedenen Quellen zusammenführen, können Sie ein vollständiges Bild jedes einzelnen Kunden anzeigen, sodass Sie Ihre Marketingkampagnen auf eine ganz neue Ebene bringen können. Detailliertere Informationen, einschließlich Best Practices und Tutorials zum Arbeiten mit Echtzeit-Kundenprofildaten in der Benutzeroberfläche und über APIs, finden Sie in der Dokumentation zum [Echtzeit-Kundenprofil auf der Adobe-E/A](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)-Website.
+Nachdem Sie diesen Überblick gelesen haben, sollten Sie wissen, wie die Echtzeit-Kundendatenplattform das Echtzeit-Kundenprofil nutzt, um für skalierte, kanalübergreifende Personalisierung zu sorgen. Wenn Sie Identitäten aus verschiedenen Quellen zusammenführen, können Sie sich ein umfassendes Bild über einzelne Kunden verschaffen und Ihre Marketing-Kampagnen deutlich optimieren. Weiterführende Informationen, einschließlich Best Practices und Tutorials zum Arbeiten mit Echtzeit-Kundenprofil-Daten in der Benutzeroberfläche und via APIs, finden Sie in der [Echtzeit-Kundenprofil-Dokumentation in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md).
