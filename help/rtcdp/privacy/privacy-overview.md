@@ -1,28 +1,28 @@
 ---
-title: Datenschutz in Echtzeit-Kundendatenprofil
-seo-title: Datenschutz in Echtzeit-Kundendatenprofil
-description: Mit dem Echtzeit-Kundendatenprofil können Sie den Prozess der Einhaltung der Datenschutzbestimmungen durch Ihre Datenvorgänge optimieren.
-seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie den Prozess der Einhaltung der Datenschutzbestimmungen durch Ihre Datenvorgänge optimieren.
-translation-type: tm+mt
+title: Datenschutz im Echtzeit-Kundendatenprofil
+seo-title: Datenschutz im Echtzeit-Kundendatenprofil
+description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
+seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
+translation-type: ht
 source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
 
 ---
 
 
-# Datenschutz in Echtzeit-CDP
+# Datenschutz in der Echtzeit-Kundendatenplattform
 
-Die Echtzeit-Kundendatenplattform (Echtzeit-CDP) hilft Marketingexperten, Daten aus mehreren Unternehmenssystemen zusammenzubringen, sodass sie ihre Kunden besser identifizieren, verstehen und ansprechen können. Adobe hält den Datenschutz von Verbraucherdaten als grundlegenden Designgrundsatz und bietet verschiedene Steuerelemente, mit denen Marketingexperten die Datenschutzdaten ihrer Kunden verwalten können.
+Mit der Echtzeit-Kundendatenplattform können Marketer Daten aus verschiedenen Unternehmenssystemen zusammenführen, damit sich Kunden besser ermitteln, verstehen und ansprechen lassen. Adobe betrachtet den Schutz von Kundendaten als grundlegendes Design-Prinzip und bietet verschiedene Steuerelemente, mit denen Marketer den Datenschutz von Kunden verwalten können.
 
-Die meisten CDP-Funktionen in Echtzeit werden über Adobe Experience Platform bereitgestellt. Dieses Dokument enthält Informationen zu den verschiedenen Technologien zur Verbesserung des Datenschutzes, die von CDP in Echtzeit unterstützt werden, sowie Links zur Experience Platform-Dokumentation.
+Die meisten Funktionen der Echtzeit-Kundendatenplattform werden über Adobe Experience Platform bereitgestellt. Das vorliegende Dokument enthält Informationen über die verschiedenen Technologien zur Verbesserung des Datenschutzes, die von der Echtzeit-Kundendatenplattform unterstützt werden, sowie Links zur Experience Platform-Dokumentation, die weiterführende Informationen bieten.
 
-## Datenschutzdienst
+## Privacy Service
 
-Mit dem Adobe Experience Platform Privacy Service können Sie den Prozess der Einhaltung von Datenschutzbestimmungen wie der Allgemeinen Datenschutzverordnung (GDPR) und dem California Consumer Privacy Act (CCPA) optimieren. Da CDP in Echtzeit Experience Platform-Funktionen für die Datenerfassung und -speicherung nutzt, sollten die Zugriffs- und Löschanforderungen für GDPR und CCPA innerhalb der Plattform verwaltet werden. Eine detailliertere Einführung des Dienstes finden Sie im Übersichtsdokument zum [Datenschutzdienst](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md) .
+Mit Adobe Experience Platform Privacy Service können Sie die Einhaltung von Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) und dem California Consumer Privacy Act (CCPA) optimieren. Da die Echtzeit-Kundendatenplattform zur Datenerfassung und -speicherung Experience Platform-Funktionen nutzt, sollten Zugriffs- und Löschanfragen für DSGVO und CCPA innerhalb von Platform verwaltet werden. Eine genauere Einführung in den Dienst finden Sie im Dokument [Privacy Service – Übersicht](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md).
 
-Es gibt zwei Methoden zum Übermitteln einzelner GDPR- und CCPA-Datenanforderungen für den Zugriff auf und das Löschen von Kundendaten:
+Es gibt zwei Methoden für die Übermittlung einzelner DSGVO- und CCPA-Anfragen von Datensubjekten bezüglich des Zugriffs auf und des Löschens von Kundendaten:
 
-* Verwenden Sie die Benutzeroberfläche[ des ](https://gdprui.cloud.adobe.io/)Datenschutzdienstes, um Anforderungen in einem visuellen Arbeitsbereich zu erstellen und zu überwachen und zu löschen. Eine schrittweise Anleitung finden Sie im Tutorial[ zur Benutzeroberfläche des ](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)Datenschutzdienstes.
-* Verwenden Sie die [Datenschutzdienst-API](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html) , um Zugriff zu verwalten und Anforderungen mit RESTful-API-Aufrufen zu löschen. Eine schrittweise Anleitung finden Sie im Tutorial[ zur API des ](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md)Datenschutzdienstes.
+* Verwenden Sie die [Benutzeroberfläche von Privacy Service](https://gdprui.cloud.adobe.io/), um Zugriffs- und Löschanfragen in einem visuellen Arbeitsbereich zu erstellen und zu überwachen. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Benutzeroberfläche von Privacy Service](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md).
+* Verwenden Sie die [Privacy Service-API](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html), um Zugriffs- und Löschanfragen mit RESTful-API-Aufrufen zu verwalten. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Privacy Service-API](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md).
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
@@ -35,4 +35,4 @@ Real-time CDP provides two types of consumer opt-out capabilities:
 
 ## Nächste Schritte
 
-Dieses Dokument enthält eine kurze Einführung in die Datenschutzfunktionen von Echtzeit-CDP. Ausführlichere Informationen zu Best Practices und Schritten zum Senden von Zugriffs-/Löschanfragen finden Sie in der Dokumentation zum [Datenschutzdienst](https://www.adobe.io/apis/experiencecloud/gdpr/docs.html).
+Das vorliegende Dokument beinhaltet eine kurze Einführung in die Datenschutzfunktionen der Echtzeit-Kundendatenplattform. Ausführlichere Informationen zu Best Practices sowie zum Senden von Zugriffs- und Löschanfragen finden Sie in der [Privacy Service-Dokumentation](https://www.adobe.io/apis/experiencecloud/gdpr/docs.html).
