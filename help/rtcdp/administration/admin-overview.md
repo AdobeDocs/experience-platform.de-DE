@@ -1,30 +1,30 @@
 ---
-title: Überblick über die Administration
-seo-title: Übersicht über die CDP-Administration in Echtzeit
+title: Administration – Übersicht
+seo-title: Übersicht über die Administration der Echtzeit-Kundendatenplattform
 description: Beschreibung
-seo-description: seo description
-translation-type: tm+mt
+seo-description: SEO-Beschreibung
+translation-type: ht
 source-git-commit: 796fdbd88925422e9914175e75ff75e840b02941
 
 ---
 
 
-# Übersicht über die CDP-Administration in Echtzeit
+# Übersicht über die Administration der Echtzeit-Kundendatenplattform
 
-Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen des Echtzeit-Kundendatenprofils auf Basis der Adobe Experience Platform. Mit der Experience Platform können Administratoren rollenbasierte Zugriffssteuerung für Benutzer verwalten und virtuelle Sandboxes für die Anwendungsentwicklung verwalten.
+Das vorliegende Dokument bietet Ihnen einen Überblick über die Verwaltungsfunktionen des Echtzeit-Kundendatenprofils, das auf Adobe Experience Platform basiert. Mit Experience Platform können Administratoren rollenbasierte Zugangssteuerung für Anwender sowie virtuelle Sandboxes für die Anwendungsentwicklung verwalten.
 
-Die folgenden Abschnitte enthalten eine Einführung in die zentralen Komponenten der Experience Platform-Verwaltungsfunktionen sowie Links zur Experience Platform-Dokumentation, in denen detailliertere Informationen bereitgestellt werden.
+Die folgenden Abschnitte enthalten eine Einführung in die zentralen Komponenten der Experience Platform-Verwaltungsfunktionen sowie Links zur Experience Platform-Dokumentation, in der Sie genauere Informationen finden.
 
-## Zugriffssteuerung
+## Zugangssteuerung
 
-**Die Zugriffssteuerung** wird über die [Adobe Admin Console](http://adminconsole.adobe.com)verwaltet. Diese Funktion nutzt Produktprofile in der Admin-Konsole, sodass Sie Benutzer mit Berechtigungen und Sandboxen verknüpfen können. Mithilfe dieser Funktion können Administratoren bestimmten CDP-Funktionen für definierte Benutzergruppen Zugriff gewähren oder einschränken.
+Die **Zugangssteuerung** wird über [Adobe Admin Console](http://adminconsole.adobe.com) verwaltet. Diese Funktion nutzt Produktprofile in Admin Console, damit Sie Anwender mit Berechtigungen und Sandboxes verknüpfen können. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf einzelne Funktionen der Echtzeit-Kundendatenplattform gewähren oder vorenthalten.
 
-Weitere Informationen zur Zugriffssteuerung finden Sie in der Übersicht über die [Zugriffssteuerung](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) in der Experience Platform-Dokumentation.
+Weiterführende Informationen zur Zugangssteuerung finden Sie unter [Zugangssteuerung – Übersicht](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) in der Experience Platform-Dokumentation.
 
 ## Sandboxes
 
-Adobe Experience Platform (und Real-Time CDP als Erweiterung) wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene zu erweitern. Unternehmen führen häufig mehrere Anwendungen für digitale Erlebnisse parallel aus und müssen diese Anwendungen entwickeln, testen und einsetzen, wobei gleichzeitig die betriebliche Einhaltung der Vorschriften gewährleistet ist.
+Adobe Experience Platform (und somit auch die Echtzeit-Kundendatenplattform) wurde entwickelt, um Programme für digitale Erlebnisse global zu erweitern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
 
-Um diese Anforderungen zu erfüllen, stellt Adobe Experience Platform **Sandboxen** bereit, die eine einzelne Plattforminstanz in separate virtuelle Umgebungen unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+Darum stellt Adobe Experience Platform **Sandboxes** bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
 
-Weitere Informationen zu Sandboxes finden Sie in der Übersicht über [Sandboxen](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandboxes-overview.md) in der Experience Platform-Dokumentation.
+Weiterführende Informationen zu Sandboxes finden Sie unter [Sandboxes – Übersicht](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandboxes-overview.md) in der Experience Platform-Dokumentation.
