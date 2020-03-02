@@ -1,9 +1,9 @@
 ---
 title: Zieldetailseite
 seo-title: Zieldetailseite
-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses. '
-seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses. '
-translation-type: tm+mt
+description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
+seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
+translation-type: ht
 source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
 
 ---
@@ -11,52 +11,52 @@ source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
 
 # Zieldetailseite {#destinations-details-page}
 
-Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses. Um diese Details anzuzeigen, gehen Sie zu **Ziele** > **Durchsuchen** und klicken Sie auf den Namen des Ziels, mit dem Sie arbeiten möchten.
+Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. Um diese Details anzuzeigen, navigieren Sie zu **Ziele** > **Durchsuchen** und klicken Sie auf den Namen des Ziels, mit dem Sie arbeiten möchten.
 
-Hauptkomponenten eines einzelnen Ziels sind:
+Hauptkomponenten eines Ziels sind:
 
-* 1 - Zielname und ID
-* 2 - Am Ziel aktivierte Segmente
-* 3 - Informationen zur rechten Schiene
-* 4 - Steuerelemente zum Bearbeiten der Aktivierung und Aktivieren/Deaktivieren des Datenflusses
+* 1 – Zielname und Kennung
+* 2 – Für das Ziel aktivierte Segmente
+* 3 – Informationen in rechter Leiste
+* 4 – Steuerelemente zum Bearbeiten der Aktivierung und Aktivieren/Deaktivieren des Datenflusses
 
 ![Nummerierte Zielseite](/help/rtcdp/destinations/assets/destination-page-numbered.png)
 
-Navigieren Sie zu einer einzelnen Zielseite, um einen Überblick über die Zieldetails zu erhalten, z. B.:
+Navigieren Sie zur Seite eines Ziels, um einen Überblick über die Zieldetails zu erhalten, z. B.:
 
-## 1. Zielname und ID
+## 1. Zielname und Kennung
 
-Sie können den Zielnamen in der Seitenüberschrift und die Ziel-ID in der Seiten-URL sehen.
+Sie können den Zielnamen in der Seitenüberschrift und die Zielkennung in der Seiten-URL sehen.
 
-## 2. Am Ziel aktivierte Segmente
+## 2. Für das Ziel aktivierte Segmente
 
-Dieser Abschnitt zeigt, welche Segmente derzeit dem Ziel zugeordnet sind, sowie weitere Informationen zu diesen Segmenten. Weitere Informationen finden Sie in der nachstehenden Tabelle:
+Dieser Abschnitt zeigt, welche Segmente dem Ziel derzeit zugeordnet sind, und enthält weitere Informationen zu diesen Segmenten. Weitere Informationen finden Sie in der folgenden Tabelle:
 
 | Element | Beschreibung |
 ---------|----------|
 | Segmentname | Der Name Ihres Segments. |
 | Segmentbeschreibung | Die Beschreibung Ihres Segments. |
-| Startdatum | Das Datum, ab dem diese Segmente zum Ziel aktiviert werden. |
-| Enddatum | Das Datum, an dem diese Segmente nicht mehr am Ziel aktiviert werden. |
-| Mapping-ID | *Nicht verfügbar für E-Mail-Marketing-Ziele*. Gibt die ID an, mit der das Segment in der Zielplattform bekannt ist. |
+| Anfangsdatum | Das Datum, ab dem diese Segmente für das Ziel aktiviert werden. |
+| Enddatum | Das Datum, an dem diese Segmente für das Ziel deaktiviert werden. |
+| Mapping-ID | *Nicht verfügbar bei E-Mail-Marketing-Zielen*. Gibt die Kennung an, anhand der das Segment in der Zielplattform bekannt ist. |
 
-## 3. Informationen zur rechten Schiene
+## 3. Informationen in rechter Leiste
 
-Die rechte Leiste enthält Informationen über Ihr Ziel. Weitere Informationen finden Sie in der unten stehenden Tabelle:
+Die rechte Leiste enthält Informationen über Ihr Ziel. Weiterführende Informationen finden Sie in der folgenden Tabelle:
 
 | Element | Beschreibung |
 ---------|----------|
-| Plattform | Stellt die Zielplattform dar, an die Zielgruppen gesendet werden. Weitere Informationen finden Sie unter [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md) . |
+| Plattform | Die Zielplattform, an die Zielgruppen gesendet werden. Weiterführende Informationen finden Sie unter [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md). |
 | Beschreibung | Sie können die Beschreibung Ihres Zielflusses bearbeiten. |
-| Kategorie | Gibt den Zieltyp an. Weitere Informationen finden Sie unter [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md) . |
-| Verbindungstyp | Gibt an, in welcher Form Ihre Zielgruppen an das Ziel gesendet werden. Kann **Cookie** oder **profilbasiert** sein. |
+| Kategorie | Gibt den Zieltyp an. Weiterführende Informationen finden Sie unter [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md). |
+| Verbindungstyp | Gibt an, in welcher Form Ihre Zielgruppen an das Ziel gesendet werden. Kann **Cookie**- oder **profilbasiert** sein. |
 | Häufigkeit | Gibt an, wie oft die Zielgruppen an das Ziel gesendet werden. Kann **Streaming** oder **Batch** sein. |
-| Identität | Stellt den vom Ziel akzeptierten Identitäts-Namespace dar. Das Identitätsfeld kann beispielsweise GAID, IDFA, E-Mail lauten. Informationen zu allen akzeptierten Identitätsnamen finden Sie unter Standardnamensräume in der Übersicht über den [Identitäts-Namespace](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md). |
-| Erstellt von | Gibt den Benutzer an, der diesen Zielfluss erstellt hat. |
-| Erstellt | Gibt das UTC-Datum und die Uhrzeit an, zu der dieser Zielfluss erstellt wurde. |
+| Identität | Stellt den vom Ziel akzeptierten Identitäts-Namespace dar. Das Identitätsfeld kann beispielsweise „GAID“, „IDFA“ oder „E-Mail“ lauten. Für Informationen zu allen akzeptierten Identitäts-Namespaces konsultieren Sie die standardmäßigen Namespaces unter [Identitäts-Namespaces – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md). |
+| Erstellt von | Gibt den Anwender an, der diesen Zielfluss erstellt hat. |
+| Erstellt | Gibt Datum und Uhrzeit (UTC) an, zu dem/der dieser Zielfluss erstellt wurde. |
 
 ## 4. Steuerelemente zum Bearbeiten der Aktivierung und Aktivieren/Deaktivieren des Datenflusses
 
-Mit dem Aktivierungssteuerelement Bearbeiten können Sie bearbeiten, welche Segmente dem Ziel zugeordnet werden. Klicken Sie auf Aktivierung bearbeiten, um den Arbeitsablauf für die [Segmentaktivierung](/help/rtcdp/destinations/activate-destinations.md)zu öffnen.
+Mit dem Steuerelement „Aktivierung bearbeiten“ können Sie bearbeiten, welche Segmente dem Ziel zugeordnet werden. Klicken Sie auf „Aktivierung bearbeiten“, um den [Workflow für die Segmentaktivierung](/help/rtcdp/destinations/activate-destinations.md) zu öffnen.
 
-Mit dem Umschalter &quot; **Aktivieren/Deaktivieren** &quot;können Sie den Datenexport an ein Ziel starten und anhalten.
+Mit dem Umschalter **Aktivieren/Deaktivieren** können Sie den Datenexport an ein Ziel starten und anhalten.
