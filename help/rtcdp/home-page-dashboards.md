@@ -4,7 +4,7 @@ seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 translation-type: ht
-source-git-commit: 6dde6c90fe9073c50c0a9d3dd43ef045730d1e13
+source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
 
 ---
 
@@ -58,7 +58,7 @@ Weiterführende Informationen zu Profilen finden Sie unter [Einheitliche Sicht a
 
 **[!UICONTROL Segmente]** gibt die Gesamtzahl der für das Unternehmen erstellten Segmente an. Diese Zahl wird aktualisiert, sobald neue Segmente erstellt werden.
 
-Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
+Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
 
 ### Ziele
 
@@ -122,7 +122,7 @@ Auf der Metrikkarte **[!UICONTROL Letzte Segmente]** werden die fünf Segmente a
 
 Klicken Sie auf ein Segment, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Segmente zu erhalten.
 
-Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
+Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
 
 ### Letzte Ziele
 
