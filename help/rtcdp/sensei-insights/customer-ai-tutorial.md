@@ -5,7 +5,7 @@ description: Dieses Tutorial enthält Anleitungen zur Verwendung von Customer AI
 seo-description: Dieses Tutorial enthält Anleitungen zur Verwendung von Customer AI (Alpha).
 index: false
 translation-type: ht
-source-git-commit: fde2bb7af91dbcb0c701397c878b63044cb27a4d
+source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
 
 ---
 
@@ -27,8 +27,8 @@ In diesem Tutorial werden die Schritte zum Arbeiten mit Customer AI unter Verwen
 Dieser Leitfaden setzt Kenntnis der verschiedenen Platform-Dienste voraus, die an der Verwendung von Customer AI beteiligt sind. Bevor Sie mit dem Tutorial beginnen, lesen Sie folgende Dokumente:
 
 * [Übersicht über das Echtzeit-Kundenprofil](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)
-* [Übersicht über den Segmentierungsdienst](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)
-* [Segment Builder-Benutzerhandbuch](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segment-builder-guide.md)
+* [Übersicht über den Segmentierungsdienst](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)
+* [Segment Builder-Benutzerhandbuch](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)
 
 ## Instanz konfigurieren
 
@@ -94,7 +94,7 @@ In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine
 
 ## Kundensegmente mit prognostizierten Werten erstellen
 
-Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die auf Tendenzwerten basieren. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit Segment Builder beschrieben. Eine genauere Anleitung zum Erstellen von Segmenten finden Sie im [Segment Builder-Benutzerhandbuch](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segment-builder-guide.md).
+Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die auf Tendenzwerten basieren. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit Segment Builder beschrieben. Eine genauere Anleitung zum Erstellen von Segmenten finden Sie im [Segment Builder-Benutzerhandbuch](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md).
 
 Klicken Sie in der Benutzeroberfläche von Platform im linken Navigationsbereich auf **Segmente** und dann auf **Segment erstellen**.
 
