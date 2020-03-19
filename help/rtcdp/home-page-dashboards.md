@@ -3,7 +3,7 @@ title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
 
 ---
