@@ -3,8 +3,8 @@ title: Ziele – Übersicht
 seo-title: Ziele – Übersicht
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
-translation-type: ht
-source-git-commit: fe9f5a94b52e51fe317fc60efa7e140f4ed93cd0
+translation-type: tm+mt
+source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ---
 
@@ -37,7 +37,7 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](/help/rtcdp/destinations
 
 In der Echtzeit-Kundendatenplattform von Adobe gibt es zwei Arten von Zielen: Profilexportziele und Segmentexportziele. Im folgenden Video werden die beiden Zieltypen beschrieben.
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ### Profilexportziele
 
@@ -49,7 +49,7 @@ Segmentexportziele senden die Profile und die Segmente, für die sie qualifizier
 
 ### Zielkategorien
 
-Die Ziele im [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md) sind nach Zielkategorie (**Werbung** oder **E-Mail-Marketing**) gruppiert. Weiterführende Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md).
+The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising**, **Cloud storage**, or **Email marketing**). Weiterführende Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md).
 
 ## Ziele und Zugangssteuerungen
 
