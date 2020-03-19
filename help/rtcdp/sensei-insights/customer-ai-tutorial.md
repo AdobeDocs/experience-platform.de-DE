@@ -4,7 +4,7 @@ seo-title: Mit Customer AI kundenspezifische Tendenzwerte prognostizieren (Alpha
 description: Dieses Tutorial enthält Anleitungen zur Verwendung von Customer AI (Alpha).
 seo-description: Dieses Tutorial enthält Anleitungen zur Verwendung von Customer AI (Alpha).
 index: false
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
 
 ---
