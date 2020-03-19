@@ -3,7 +3,7 @@ title: Übersicht über den Segmentierungsdienst
 seo-title: Segmentierungsdienst in der Echtzeit-Kundendatenplattform von Adobe
 description: Eine Übersicht mit einer Beschreibung des Segmentierungsdiensts.
 seo-description: Eine Übersicht, in der der Segmentierungsdienst und Segmente in der Echtzeit-Kundendatenplattform von Adobe beschrieben werden.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
 
 ---
