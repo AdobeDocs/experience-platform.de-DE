@@ -3,8 +3,8 @@ title: Profile und Segmente für ein Ziel aktivieren
 seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
-translation-type: ht
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+translation-type: tm+mt
+source-git-commit: 73925aa59f9981d8945fb0be6c4924e1831cf902
 
 ---
 
@@ -43,9 +43,9 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in der Echtzeit-Kunde
 
 ## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
 
-### E-Mail-Marketing-Ziele
+### E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
-Bei E-Mail-Marketing-Zielen erstellt die Echtzeit-Kundendatenplattform von Adobe eine tabulatorgetrennte `.txt`- oder `.csv`-Datei am von Ihnen angegebenen Speicherort. An diesem Speicherort wird täglich eine neue Datei erstellt. Das Dateiformat lautet:
+For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. An diesem Speicherort wird täglich eine neue Datei erstellt. Das Dateiformat lautet:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 Dateien, die Sie an drei aufeinander folgenden Tagen erhalten, könnten wie folgt aussehen:
