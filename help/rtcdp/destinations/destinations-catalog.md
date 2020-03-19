@@ -3,8 +3,8 @@ title: Zielkatalog
 seo-title: Zielkatalog
 description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu den Zielen gehören Adobe-Lösungen, Werbeplattformen, CRM-Systeme (Customer Relationship Management), E-Mail-Marketing-Plattformen und mehr.
 seo-description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu den Zielen gehören Adobe-Lösungen, Werbeplattformen, CRM-Systeme (Customer Relationship Management), E-Mail-Marketing-Plattformen und mehr.
-translation-type: ht
-source-git-commit: f76c5326d4b658b76d8df3d285f185706b66a826
+translation-type: tm+mt
+source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ---
 
@@ -19,4 +19,5 @@ Sie können Ihre Daten in der Echtzeit-Kundendatenplattform für verschiedene Zi
 
 * [Adobe-Lösungen](/help/rtcdp/destinations/adobe-destinations.md)
 * [Werbeziele](/help/rtcdp/destinations/advertising-destinations.md)
+* [Ziele der Cloud-Datenspeicherung](/help/rtcdp/destinations/cloud-storage-destinations.md)
 * [E-Mail-Marketing](/help/rtcdp/destinations/email-marketing-destinations.md)
