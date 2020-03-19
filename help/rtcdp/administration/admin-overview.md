@@ -3,7 +3,7 @@ title: Administration – Übersicht
 seo-title: Übersicht über die Administration der Echtzeit-Kundendatenplattform
 description: Beschreibung
 seo-description: SEO-Beschreibung
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 33e187053790b98d2f1c36306b38c738833c4659
 
 ---
