@@ -4,22 +4,12 @@ seo-title: Ziele der Cloud-Datenspeicherung
 description: Mit Adobe Echtzeit-CDP können Sie Ihre Segmente als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte senden. In den folgenden Versionen werden wir weitere Cloud-Datenspeicherung-Ziele hinzufügen.
 seo-description: Mit Adobe Echtzeit-CDP können Sie Ihre Segmente als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte senden. In den folgenden Versionen werden wir weitere Cloud-Datenspeicherung-Ziele hinzufügen.
 translation-type: tm+mt
-source-git-commit: 8c3ce7e7258ef2597e8089cf7928e42471278591
+source-git-commit: e3c2a523ff35bfb2aabacbbac197251777b3e2b5
 
 ---
 
 
 # Ziele der Cloud-Datenspeicherung {#cloud-storage-destinations}
 
-Mit Adobe Echtzeit-CDP können Sie Ihre Segmente als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte senden. Auf diese Weise können Sie Audiencen und deren Profil-Attribute über CSV- oder tabulatorgetrennte Dateien an Ihre internen Systeme senden.
-
-![Adobe Cloud-Datenspeicherung-Ziele](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
-
-Adobe Echtzeit-CDP unterstützt derzeit zwei Cloud-Datenspeicherung-Ziele - [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) und [SFTP](/help/rtcdp/destinations/sftp-destination.md). In den folgenden Versionen werden wir weitere Cloud-Datenspeicherung-Ziele hinzufügen.
-
-Informationen zum Herstellen einer Verbindung mit Cloud-Datenspeicherung-Zielen finden Sie unter [Arbeitsablauf zum Erstellen von Cloud-Datenspeicherung-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
-
-## Datentexporttyp
-
-**Profil-basierter Export** - Sie exportieren Details zu den Einzelpersonen in der Audience. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignis, Segmentmitgliedschaften usw. umfassen.
+Cloud-Datenspeicherung-Ziele stehen in Kürze in Adobe Echtzeit-CDP zur Verfügung. Bitte lesen Sie später die Dokumentation zurück.
 
