@@ -48,7 +48,7 @@ Bevor Sie das Google Ads-Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich 
 
 ## Ziel erstellen
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
+1. Wählen Sie **[!UICONTROL Connections > Destinations]** in Google Ads die Option **[!UICONTROL Create destination]**.
    ![Google-Anzeigenziel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. Geben Sie im Assistenten zum Erstellen des Ziels die grundlegenden Informationen für das Ziel ein.
