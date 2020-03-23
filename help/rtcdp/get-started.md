@@ -154,7 +154,7 @@ Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog na
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Wählen Sie beispielsweise **[!UICONTROL Kontakte]**. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
+   For example, select **[!UICONTROL Contacts]**. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
 
    Adobe Experience Platform übernimmt in diesem Verfahren einen Großteil der manuellen Arbeit, indem Standardfelder automatisch dem Experience Data Model (XDM)-Profilschema zugeordnet werden.
 
@@ -231,7 +231,7 @@ Da Sarah wahrscheinlich einen Geschenkartikel in den Warenkorb gelegt und den Vo
 
 Wenn Sie das Segment „Warenkorb-Abbrecher, die ein Geschenk kaufen“ hinzugefügt haben, können Sie ungefähr sehen, wie viele Personen Teil dieses Segments sind. Sie können aktiv werden und es für Personalisierungszwecke kanalübergreifend bereitstellen.
 
-Klicken Sie auf **[!UICONTROL An Ziele senden]**.
+Klicken Sie auf **[!UICONTROL Send to destinations]**.
 
 In der Echtzeit-Kundendatenplattform von Adobe kann Luma zur Personalisierung nahtlos auf Zielgruppensegmente reagieren.\
 Hier sehen Sie alle Ziele, an die Luma dieses Ziel senden kann, sowohl Adobe- als auch Nicht-Adobe-Lösungen:
@@ -255,7 +255,7 @@ Außerdem können Sie planen, dass das Segment zu einer bestimmten Zeit beginnen
 >[!NOTE]
 >Wenn Sie optional auf das Datumsfeld klicken, wird automatisch für 90 Tage geplant.
 
-Klicken Sie auf **[!UICONTROL Speichern]**, um zur nächsten Seite zu wechseln.
+Click **[!UICONTROL Save]** to go to the next page.
 
 Wenn ein Kunde in dieser Zielgruppe einen Kauf tätigt, wird seine Mitgliedschaft in dieser Zielgruppe in Echtzeit unterdrückt. Er ist dann nicht mehr qualifiziert, weil sich sein Status geändert hat.
 
