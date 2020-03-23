@@ -3,7 +3,7 @@ title: Datenqualität in der Echtzeit-Kundendatenplattform
 seo-title: Datenqualität in der Echtzeit-Kundendatenplattform von Adobe
 description: Ein Dokument zur Datenqualität in der Echtzeit-Kundendatenplattform
 seo-description: Ein Dokument, das beschreibt, wie Datenqualität bei Batch- und Datenerfassung in der Echtzeit-Kundendatenplattform von Adobe sichergestellt wird
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: d7a2f7707b36c73f33ad52122d4debedc0877c7a
 
 ---
