@@ -3,7 +3,7 @@ title: Zusammenführungsrichtlinien
 seo-title: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
 description: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
 seo-description: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 ---
