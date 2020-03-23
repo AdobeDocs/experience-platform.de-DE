@@ -3,7 +3,7 @@ title: E-Mail-Marketing-Ziele
 seo-title: E-Mail-Marketing-Ziele
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
 
 ---
@@ -21,11 +21,11 @@ Stellen Sie im Zielverbindungsfluss (wie im Abschnitt unten beschrieben) eine Ve
 
 ## Schritt 1: Ziel verbinden {#connect-destination}
 
-1. Wählen Sie unter **[!UICONTROL Verbindungen > Ziele]** das E-Mail-Marketing-Ziel, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Ziel verbinden]**.
+1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
    ![Mit Ziel verbinden](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. Wählen Sie im Verbindungsassistenten den **[!UICONTROL Verbindungstyp]** für Ihren Speicherort aus. Sie können zwischen **Amazon S3**, **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
+2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. Sie können zwischen **Amazon S3**, **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 Bei Verbindungen des Typs **S3** müssen Sie die Zugriffsschlüsselkennung und den geheimen Zugriffsschlüssel angeben.
 
