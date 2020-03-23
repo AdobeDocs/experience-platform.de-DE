@@ -3,7 +3,7 @@ title: Oracle Eloqua-Ziel
 seo-title: Oracle Eloqua-Ziel
 description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 seo-description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ---
@@ -19,11 +19,11 @@ Um Segmentdaten an Oracle Eloqua zu senden, müssen Sie zunächst in der Echtzei
 
 ## Mit Ziel verbinden {#connect-destination}
 
-1. Wählen Sie unter **[!UICONTROL Verbindungen > Ziele]** die Option „Oracle Eloqua“ und dann **[!UICONTROL Ziel verbinden]**.
+1. Wählen Sie **[!UICONTROL Connections > Destinations]** in Oracle Eloqua und dann **[!UICONTROL Connect destination]**.
 
    ![Mit Eloqua verbinden](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. Wählen Sie im Zielverbindungsassistenten den **[!UICONTROL Verbindungstyp]** für Ihren Speicherort aus. Bei Oracle Eloqua können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie **[!UICONTROL Verbinden]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Bei Oracle Eloqua können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
 
    ![Assistent zum Einrichten von Eloqua](/help/rtcdp/destinations/assets/eloqua-wizard.png)
 
