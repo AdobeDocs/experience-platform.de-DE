@@ -3,7 +3,7 @@ title: Tutorial zum Implementieren von Website-Tags mit Adobe Launch
 seo-title: Website-Tags mit Adobe Launch implementieren
 description: Verwenden Sie Adobe Launch, um Website-Tags in Adobe Experience Platform zu implementieren.
 seo-description: Verwenden Sie Adobe Launch, um Website-Tags in Adobe Experience Platform zu implementieren.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
 
 ---
@@ -31,7 +31,7 @@ Dieses Tutorial umfasst folgende Schritte:
 
 Installieren Sie zunächst die Adobe Experience Platform Web SDK-Erweiterung.
 
-1. Öffnen Sie in Launch die Registerkarte **[!UICONTROL Erweiterungen]**.
+1. Öffnen Sie in Launch die Registerkarte **[!UICONTROL Extensions]**.
 
    ![Bild](assets/launch-overview.png)
 
@@ -39,7 +39,7 @@ Installieren Sie zunächst die Adobe Experience Platform Web SDK-Erweiterung.
 
    ![Bild](assets/launch-extension-install.png)
 
-   Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Erweiterungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html).
+   Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Erweiterungen](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
 
 1. Konfigurieren Sie die Erweiterung.
 
@@ -48,13 +48,13 @@ Installieren Sie zunächst die Adobe Experience Platform Web SDK-Erweiterung.
    * **Konfigurationskennung:** Geben Sie die Konfigurationskennung an, die Sie von Ihrem Adobe-Support-Mitarbeiter erhalten haben.
    * **Edge-Domäne:** Geben Sie die Edge-Domäne an, die Sie von Ihrem Adobe-Support-Mitarbeiter erhalten haben.
 
-1. Klicken Sie auf **[!UICONTROL Speichern]** und fahren Sie mit dem nächsten Schritt fort.
+1. Click **[!UICONTROL Save]** and continue to the next step.
 
 ## Regel für Launch zum Festlegen der zu sendenden Daten erstellen
 
 Anschließend erstellen Sie eine Regel, um Launch zu informieren, welche Daten Sie wann an Adobe Experience Platform senden möchten.
 
-1. Konfigurieren Sie auf der Registerkarte **[!UICONTROL Regeln]** ein Ereignis, das auf jeder neuen Seite der Website ausgelöst wird, wenn die Launch-Bibliothek geladen wird.
+1. Under the **[!UICONTROL Rules]** tab, configure an event that will trigger on each new page of the website when the Launch library loads.
 
    ![Bild](assets/launch-make-a-rule.png)
 
@@ -66,13 +66,13 @@ Anschließend erstellen Sie eine Regel, um Launch zu informieren, welche Daten S
 
    Das von Ihnen gesendete Datenobjekt muss ein gültiges XDM-Objekt sein, das die Validierung anhand des Schemas übergibt, das vom mit Ihrer Konfigurationskennung verbundenen Datensatz verwendet wird.
 
-1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]**.
+1. Klicken Sie auf **[!UICONTROL Keep Changes]**.
 
-Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Regeln](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/rules.html).
+Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Regeln](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html).
 
 ## Erweiterung und Regel in einer Bibliothek bündeln
 
-Anschließend [bündeln Sie die Erweiterung](https://docs.adobe.com/content/help/de-DE/launch/using/reference/publish/overview.html) und Ihre neue Regel in einer Bibliothek und testen Sie diese Änderungen in einer Entwicklungsumgebung.
+Anschließend [bündeln Sie die Erweiterung](https://docs.adobe.com/content/help/en/launch/using/reference/publish/overview.html) und Ihre neue Regel in einer Bibliothek und testen Sie diese Änderungen in einer Entwicklungsumgebung.
 
 ![Bild](assets/launch-add-changes-to-library.png)
 
@@ -80,4 +80,4 @@ Nach Abschluss des Tests können Sie die Bibliothek über den Workflow freigeben
 
 ![Bild](assets/launch-promote-library.png)
 
-Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Bibliotheken](https://docs.adobe.com/content/help/de-DE/launch/using/reference/publish/libraries.html).
+Weiterführende Informationen finden Sie in der Launch-Dokumentation unter [Bibliotheken](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html).
