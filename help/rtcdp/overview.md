@@ -3,7 +3,7 @@ title: Übersicht über die Echtzeit-Kundendatenplattform
 seo-title: Übersicht über die Echtzeit-Kundendatenplattform
 description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Echtzeit-Kundendatenplattform – Übersicht
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 08b35c862472308fbec282a7727035fb3924d19b
 
 ---
