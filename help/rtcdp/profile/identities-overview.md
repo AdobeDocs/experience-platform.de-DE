@@ -3,7 +3,7 @@ title: Identitäten und Identitäts-Namespaces
 seo-title: Adobe Experience Platform Identity Service
 description: Beschreibung
 seo-description: SEO-Beschreibung
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 ---
