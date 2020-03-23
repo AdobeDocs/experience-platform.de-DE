@@ -3,7 +3,7 @@ title: Adobe-Ziele
 seo-title: Adobe-Ziele
 description: Adobe-Ziele
 seo-description: Adobe-Ziele
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 520040dd7ac1e3fd3af4009eb5f112cb39e33850
 
 ---
