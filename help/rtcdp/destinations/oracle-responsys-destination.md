@@ -3,7 +3,7 @@ title: Oracle Responsys-Ziel
 seo-title: Oracle Responsys-Ziel
 description: Responsys ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von Oracle angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
 seo-description: Responsys ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von Oracle angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ---
@@ -19,11 +19,11 @@ Zum Senden von Segmentdaten an Oracle Responsys müssen Sie zunächst in der Ech
 
 ## Ziel verbinden {#connect-destination}
 
-1. Wählen Sie unter **[!UICONTROL Verbindungen > Ziele]** die Option „Oracle Responsys“ und dann **[!UICONTROL Ziel verbinden]**.
+1. Wählen Sie **[!UICONTROL Connections > Destinations]** unter &quot;Oracle-Antworten&quot;die Option **[!UICONTROL Connect destination]**.
 
    ![Mit Responsys verbinden](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-1. Wählen Sie im Zielverbindungsassistenten den **[!UICONTROL Verbindungstyp]** für Ihren Speicherort aus. Bei Oracle Responsys können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie **[!UICONTROL Verbinden]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Bei Oracle Responsys können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
 
    ![Assistent zum Einrichten von Responsys](/help/rtcdp/destinations/assets/responsys-wizard.png)
 
