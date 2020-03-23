@@ -3,7 +3,7 @@ title: Quellen – Übersicht
 seo-title: Quellen in Adobe Experience Platform
 description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der Echtzeit-Kundendatenplattform.
 seo-description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der Echtzeit-Kundendatenplattform.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: c0d5cf2e8345ad5ee84669fef508435e51700c23
 
 ---
