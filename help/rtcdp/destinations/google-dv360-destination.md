@@ -43,7 +43,7 @@ Bevor Sie das Google Display &amp; Video 360-Ziel in der Adobe Echtzeit-CDP erst
 
 ## Ziel erstellen
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Display &amp; Video 360, and select **[!UICONTROL Create destination]**.
+1. Wählen Sie **[!UICONTROL Connections > Destinations]** in &quot;Google Display &amp; Video 360&quot;die Option **[!UICONTROL Create destination]**.
    ![Google Display &amp; Video 360-Ziel verbinden](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. Geben Sie im Assistenten zum Erstellen des Ziels die grundlegenden Informationen für das Ziel ein.
