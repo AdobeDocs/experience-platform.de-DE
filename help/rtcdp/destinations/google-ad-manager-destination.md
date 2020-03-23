@@ -45,7 +45,7 @@ Bevor Sie das Google Ad Manager-Ziel in Adobe Echtzeit-CDP erstellen, müssen Si
 
 ## Ziel erstellen
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
+1. Wählen Sie **[!UICONTROL Connections > Destinations]** in &quot;Google Ad Manager&quot;die Option **[!UICONTROL Create destination]**.
    ![Google Ad Manager-Ziel verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. Geben Sie im Assistenten zum Erstellen des Ziels die grundlegenden Informationen für das Ziel ein.
