@@ -3,7 +3,7 @@ title: Datenschutz im Echtzeit-Kundendatenprofil
 seo-title: Datenschutz im Echtzeit-Kundendatenprofil
 description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
 
 ---
