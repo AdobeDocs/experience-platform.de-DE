@@ -15,11 +15,11 @@ source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ## Ziele und Quellen
 
-Eine der Kernfunktionen der Echtzeit-Kundendatenplattform besteht darin, Ihre Daten von Erstparteien zu erfassen und für Ihre geschäftlichen Anforderungen zu aktivieren. Verwenden Sie **[!UICONTROL Quellen]**, um Daten in die Echtzeit-Kundendatenplattform aufzunehmen, und **[!UICONTROL Ziele]**, um Daten aus der Echtzeit-Kundendatenplattform zu exportieren.
+Eine der Kernfunktionen der Echtzeit-Kundendatenplattform besteht darin, Ihre Daten von Erstparteien zu erfassen und für Ihre geschäftlichen Anforderungen zu aktivieren. Use **[!UICONTROL Sources]** to ingest data into Real-time CDP and **[!UICONTROL Destinations]** to export data from Real-time CDP.
 
 ## Ziele – Schritte
 
-* Verwenden Sie **[!UICONTROL Ziele]**, um Profile oder Segmente zu [aktivieren](/help/rtcdp/destinations/activate-destinations.md) und an Plattformen für Marketing-Automatisierung, digitale Werbung und andere zu senden.
+* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Wählen Sie in einem [Self-Service-Katalog](/help/rtcdp/destinations/destinations-catalog.md) unter allen in der Echtzeit-Kundendatenplattform verfügbaren Zielen.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
@@ -53,6 +53,6 @@ The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinat
 
 ## Ziele und Zugangssteuerungen
 
-Die Funktion **[!UICONTROL Ziele]** in der Echtzeit-Kundendatenplattform funktioniert mit Zugangssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md); scrollen Sie nach unten bis zum Ende der Seite.
+The **[!UICONTROL Destinations]** functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md); scrollen Sie nach unten bis zum Ende der Seite.
 
 Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md).
