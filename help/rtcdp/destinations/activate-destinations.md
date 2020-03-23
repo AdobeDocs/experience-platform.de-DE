@@ -39,7 +39,7 @@ Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige 
 Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in der Echtzeit-Kundendatenplattform zu bearbeiten:
 
 1. Wählen Sie in der linken Navigationsleiste **Ziele**, klicken Sie dann auf die Registerkarte **Durchsuchen** und klicken Sie auf den Zielnamen.
-2. Wählen Sie in der rechten Leiste **[!UICONTROL Aktivierung bearbeiten]**, um zu ändern, welche Segmente an das Ziel gesendet werden.
+2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
 
 ## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
 
@@ -67,6 +67,6 @@ Markieren Sie das entsprechende Werbeziel, für das Sie Ihre Daten aktivieren. W
 Gehen Sie wie folgt vor, um einen vorhandenen Aktivierungsfluss zu deaktivieren:
 
 1. Wählen Sie in der linken Navigationsleiste **Ziele**, klicken Sie dann auf die Registerkarte **Durchsuchen** und klicken Sie auf den Zielnamen.
-2. Klicken Sie in der rechten Leiste auf das Steuerelement **[!UICONTROL Aktiviert]**, um den Status des Aktivierungsflusses zu ändern.
+2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
 3. Wählen Sie im Fenster **Datenflussstatus aktualisieren** die Option **Bestätigen**, um den Aktivierungsfluss zu deaktivieren.
 
