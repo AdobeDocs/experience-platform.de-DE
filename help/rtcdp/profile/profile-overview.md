@@ -3,7 +3,7 @@ title: Übersicht über das Echtzeit-Kundenprofil
 seo-title: Echtzeit-Kundenprofil in der Echtzeit-Kundendatenplattform
 description: Ein Überblick darüber, wie Sie mit der Echtzeit-Kundendatenplattform unter Verwendung von Echtzeit-Kundenprofilen koordinierte, konsistente und relevante Erlebnisse für Kunden erstellen können.
 seo-description: Echtzeit-Kundendatenplattform, Profil, Daten, Erlebnisse, Kanäle
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 ---
