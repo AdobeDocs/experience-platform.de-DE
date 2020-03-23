@@ -3,7 +3,7 @@ title: Profilansicht
 seo-title: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 seo-description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 ---
