@@ -4,12 +4,14 @@ seo-title: Ziele – Übersicht
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
+source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ---
 
 
 # Ziele – Übersicht
+
+![Übersichtsbanner Ziele](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
 **Ziele** sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Mit **Zielen** können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
