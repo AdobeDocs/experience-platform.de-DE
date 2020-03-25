@@ -4,7 +4,7 @@ seo-title: Arbeitsablauf für Cloud-Datenspeicherung-Ziele
 description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
 seo-description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
 translation-type: tm+mt
-source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
+source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
 
 ---
 
