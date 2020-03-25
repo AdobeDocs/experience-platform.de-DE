@@ -4,7 +4,7 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 seo-description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: afe8032be1d96a63a3d43c5a552a0d6152e14552
 
 ---
 
@@ -23,23 +23,21 @@ Um Segmentdaten an Salesforce Marketing Cloud zu senden, müssen Sie zunächst i
 
    ![Mit Salesforce verbinden](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Bei Salesforce Marketing Cloud können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
-
-   ![Assistent zum Einrichten von Salesforce](/help/rtcdp/destinations/assets/salesforce-step1.png)
+1. Wenn Sie im Schritt **Authentifizierung** zuvor eine Verbindung zu Ihrem Cloud-Datenspeicherung-Ziel eingerichtet haben, wählen Sie Ihre bestehende Verbindung aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung einrichten **[!UICONTROL New Account]** . Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Bei Salesforce Marketing Cloud können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
    Bei Verbindungen des Typs **SFTP mit Passwort** müssen Sie Domäne, Port, Benutzernamen und Kennwort angeben.
 Bei Verbindungen des Typs **SFTP mit SSH-Schlüssel** müssen Sie Domäne, Port, Benutzernamen und SSH-Schlüssel angeben.
 
-   ![Salesforce-Informationen ausfüllen](/help/rtcdp/destinations/assets/salesforce-wizard.png)
+   ![Salesforce-Informationen ausfüllen](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
-1. Geben Sie unter **Grundlegende Informationen** die entsprechenden Informationen für Ihr Ziel ein, wie nachfolgend dargestellt:
+1. In the **Setup** step, fill in the relevant information for your destination as shown below:
    * **Name**: Wählen Sie einen passenden Namen für Ihr Ziel.
    * **Beschreibung**: Geben Sie eine Beschreibung für Ihr Ziel ein.
    * **Ordnerpfad**: Geben Sie den Pfad Ihres Speicherorts an, an dem die Echtzeit-Kundendatenplattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegen wird.
    * **Dateiformat**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
    ![Salesforce-Basisinformationen](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
-1. Klicken Sie auf **Erstellen**, nachdem Sie die Felder unter **Grundlegende Informationen** ausgefüllt haben. Ihr Ziel ist nun verbunden und Sie können für das Ziel [Segmente aktivieren](/help/rtcdp/destinations/activate-destinations.md).
+1. Click **Create destination** after filling in the fields in **Basic Information**. Ihr Ziel ist nun verbunden und Sie können für das Ziel [Segmente aktivieren](/help/rtcdp/destinations/activate-destinations.md).
 
 ## Zielattribute {#destination-attributes}
 
