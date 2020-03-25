@@ -4,7 +4,7 @@ seo-title: Arbeitsablauf für Cloud-Datenspeicherung-Ziele
 description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
 seo-description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
 translation-type: tm+mt
-source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
+source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 ---
 
@@ -32,9 +32,7 @@ Geben Sie für Amazon S3-Ziele den **[!UICONTROL Bucket name]** und den **[!UICO
 
    ![Verbindung mit Amazon S3 Cloud-Datenspeicherung-Ziel - Authentifizierungsschritt](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-
-
-   <br>Fügen Sie für SFTP-Ziele die Variable **[!UICONTROL Folder path]**
+   Geben Sie für SFTP-Ziele die **[!UICONTROL Folder path]** Stelle ein, an die die Dateien gesendet werden sollen.
 
    ![Verbindungsziel für die SFTP-Cloud-Datenspeicherung - Authentifizierungsschritt](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
