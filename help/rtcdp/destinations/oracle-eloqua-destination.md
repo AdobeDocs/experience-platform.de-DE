@@ -4,7 +4,7 @@ seo-title: Oracle Eloqua-Ziel
 description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 seo-description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
 ---
 
@@ -23,23 +23,21 @@ Um Segmentdaten an Oracle Eloqua zu senden, müssen Sie zunächst in der Echtzei
 
    ![Mit Eloqua verbinden](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Bei Oracle Eloqua können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
-
-   ![Assistent zum Einrichten von Eloqua](/help/rtcdp/destinations/assets/eloqua-wizard.png)
+2. Wenn Sie im Schritt **Authentifizierung** zuvor eine Verbindung zu Ihrem Cloud-Datenspeicherung-Ziel eingerichtet haben, wählen Sie Ihre bestehende Verbindung aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung einrichten **[!UICONTROL New Account]** . Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Bei Oracle Eloqua können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
    Bei Verbindungen des Typs **SFTP mit Passwort** müssen Sie Domäne, Port, Benutzernamen und Kennwort angeben.
 Bei Verbindungen des Typs **SFTP mit SSH-Schlüssel** müssen Sie Domäne, Port, Benutzernamen und SSH-Schlüssel angeben.
 
-   ![Eloqua-Informationen ausfüllen](/help/rtcdp/destinations/assets/eloqua-step2.png)
+   ![Assistent zum Einrichten von Eloqua](/help/rtcdp/destinations/assets/eloqua-authentication.png)
 
-1. Geben Sie unter **Grundlegende Informationen** die entsprechenden Informationen für Ihr Ziel ein (wie folgt):
+3. In the **Setup** step, fill in the relevant information for your destination as shown below:
    * **Name**: Wählen Sie einen passenden Namen für Ihr Ziel.
    * **Beschreibung**: Geben Sie eine Beschreibung für Ihr Ziel ein.
    * **Ordnerpfad**: Geben Sie den Pfad Ihres Speicherorts an, an dem die Echtzeit-Kundendatenplattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegen wird.
    * **Dateiformat**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
    ![Eloqua-Basisinformationen](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
 
-1. Klicken Sie auf **Erstellen**, nachdem Sie die Felder unter **Grundlegende Informationen** ausgefüllt haben. Ihr Ziel ist nun verbunden und Sie können für das Ziel [Segmente aktivieren](/help/rtcdp/destinations/activate-destinations.md).
+4. Klicken Sie auf Ziel **erstellen** , nachdem Sie die oben stehenden Felder ausgefüllt haben. Your destination is now created and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 ## Zielattribute
 
