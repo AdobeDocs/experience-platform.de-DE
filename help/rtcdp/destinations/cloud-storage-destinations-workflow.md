@@ -4,7 +4,7 @@ seo-title: Arbeitsablauf für Cloud-Datenspeicherung-Ziele
 description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
 seo-description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
 translation-type: tm+mt
-source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -19,7 +19,7 @@ Auf dieser Seite wird erläutert, wie Sie eine Verbindung zu Cloud-Datenspeicher
 
    ![Verbindung zum Cloud-Datenspeicherung-Ziel](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-1. Wenn Sie im Schritt **Authentifizierung** zuvor eine Verbindung zu Ihrem Cloud-Datenspeicherung-Ziel eingerichtet haben, wählen Sie Ihre bestehende Verbindung aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung **[!UICONTROL New Account]** zum Ziel Ihrer Cloud-Datenspeicherung einrichten. Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Weitere Informationen zu den Anmeldeinformationen im Schritt [Authentifizierung finden Sie unter](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3-Ziel [- und](/help/rtcdp/destinations/sftp-destination.md) SFTP-Ziel **** .
+2. Wenn Sie im Schritt **Authentifizierung** zuvor eine Verbindung zu Ihrem Cloud-Datenspeicherung-Ziel eingerichtet haben, wählen Sie Ihre bestehende Verbindung aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung **[!UICONTROL New Account]** zum Ziel Ihrer Cloud-Datenspeicherung einrichten. Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Weitere Informationen zu den Anmeldeinformationen im Schritt [Authentifizierung finden Sie unter](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3-Ziel [- und](/help/rtcdp/destinations/sftp-destination.md) SFTP-Ziel **** .
 
    >[!NOTE]
    >
@@ -27,7 +27,7 @@ Auf dieser Seite wird erläutert, wie Sie eine Verbindung zu Cloud-Datenspeicher
 
    ![Verbindungsziel für die Cloud-Datenspeicherung - Authentifizierungsschritt](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-1. Geben Sie im **[!UICONTROL Setup]** Schritt einen **[!UICONTROL Name]** und einen **[!UICONTROL Description]** Wert für die Aktivierung ein. <br>
+3. Geben Sie im **[!UICONTROL Setup]** Schritt einen **[!UICONTROL Name]** und einen **[!UICONTROL Description]** Wert für die Aktivierung ein. <br>
 Geben Sie für Amazon S3-Ziele den **[!UICONTROL Bucket name]** und den **[!UICONTROL Folder path]** in das Cloud-Datenspeicherung-Ziel ein, an das die Dateien gesendet werden sollen. Wählen Sie diese Option, **[!UICONTROL Create Destination]** nachdem Sie die oben stehenden Felder ausgefüllt haben.
 
    ![Verbindung mit Amazon S3 Cloud-Datenspeicherung-Ziel - Authentifizierungsschritt](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
@@ -36,7 +36,7 @@ Geben Sie für Amazon S3-Ziele den **[!UICONTROL Bucket name]** und den **[!UICO
 
    ![Verbindungsziel für die SFTP-Cloud-Datenspeicherung - Authentifizierungsschritt](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-1. Ihr Ziel wurde jetzt erstellt. Sie können auswählen, **[!UICONTROL Save & Exit]** ob Sie Segmente später aktivieren möchten, oder Sie können wählen, ob Sie den Workflow fortsetzen und Segmente zur Aktivierung auswählen **[!UICONTROL Next]** möchten. In beiden Fällen finden Sie weitere Informationen zum Exportieren von Daten im nächsten Abschnitt [Aktivieren von Segmenten](#activate-segments).
+4. Ihr Ziel wurde jetzt erstellt. Sie können auswählen, **[!UICONTROL Save & Exit]** ob Sie Segmente später aktivieren möchten, oder Sie können wählen, ob Sie den Workflow fortsetzen und Segmente zur Aktivierung auswählen **[!UICONTROL Next]** möchten. In beiden Fällen finden Sie weitere Informationen zum Exportieren von Daten im nächsten Abschnitt [Aktivieren von Segmenten](#activate-segments).
 
 ## Aktivieren von Segmenten {#activate-segments}
 
