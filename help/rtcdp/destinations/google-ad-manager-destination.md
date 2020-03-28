@@ -4,7 +4,7 @@ seo-title: Ziel von Google Ad Manager
 description: 'Google Ad Manager, früher DoubleClick für Herausgeber oder DoubleClick AdX, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Anzeigen auf ihren Websites, über Videos und in mobilen Apps zu verwalten. '
 seo-description: 'Google Ad Manager, früher DoubleClick für Herausgeber oder DoubleClick AdX, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Anzeigen auf ihren Websites, über Videos und in mobilen Apps zu verwalten. '
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -48,14 +48,14 @@ Bevor Sie das Google Ad Manager-Ziel in Adobe Echtzeit-CDP erstellen, müssen Si
 1. Wählen Sie **[!UICONTROL Connections > Destinations]** in &quot;Google Ad Manager&quot;die Option **[!UICONTROL Create destination]**.
    ![Google Ad Manager-Ziel verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. Geben Sie im Assistenten zum Erstellen des Ziels die grundlegenden Informationen für das Ziel ein.
+2. Füllen Sie im Arbeitsablauf &quot;Ziel erstellen&quot;die [!UICONTROL Basic Information] für das Ziel aus.
    ![Grundlegende Informationen Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
-* **Name**: Geben Sie einen bevorzugten Namen für das Ziel ein.
-* **Beschreibung**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
-* **Kontotyp**: Wählen Sie je nach Konto bei Google eine Option aus:
+* **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
+* **[!UICONTROL Description]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
+* **[!UICONTROL Account Type]**: Wählen Sie je nach Konto bei Google eine Option aus:
    * DoubleClick `DFP by Google` für Herausgeber verwenden
    * Verwenden Sie `AdX buyer` für Google AdX.
-* **Kontokennung**: Geben Sie Ihre Google-Kontokennung ein. Dies kann Ihre Netzwerk-ID oder Ihre Audience Link-ID sein. Normalerweise ist dies eine achtstellige ID.
+* **[!UICONTROL Account ID]**: Geben Sie Ihre Konto-ID bei Google ein. Dies kann Ihre Netzwerk-ID oder Ihre Audience Link-ID sein. Normalerweise ist dies eine achtstellige ID.
 
 >[!NOTE]
 >
