@@ -1,10 +1,10 @@
 ---
 title: Google Display & Video 360-Ziel
 seo-title: Google Display & Video 360-Ziel
-description: Display & Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool zum Ausführen von Retargeting und Audience zielgerichteter digitaler Campaign in den Lagerbestandsquellen Display, Video und Mobil.
-seo-description: 'Display & Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool zum Ausführen von Retargeting und Audience zielgerichteter digitaler Campaign in den Lagerbestandsquellen Display, Video und Mobil. '
+description: Display & Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool zum Ausführen von Retargeting und Audience zielgerichteter digitaler Kampagnen für Display-, Video- und Mobilgeräte.
+seo-description: 'Display & Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool zum Ausführen von Retargeting und Audience zielgerichteter digitaler Kampagnen für Display-, Video- und Mobilgeräte. '
 translation-type: tm+mt
-source-git-commit: 810028edc662a7f52484e37cf0fbdfafe5db650f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 810028edc662a7f52484e37cf0fbdfafe5db650f
 
 ## Übersicht
 
-Display &amp; Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool zum Ausführen von Retargeting und Audience zielgerichteter digitaler Campaign in den Lagerbestandsquellen Display, Video und Mobil.
+Display &amp; Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool zum Ausführen von Retargeting und Audience zielgerichteter digitaler Kampagnen für Display-, Video- und Mobilgeräte.
 
 ## Zielspezifikationen
 
@@ -46,14 +46,14 @@ Bevor Sie das Google Display &amp; Video 360-Ziel in der Adobe Echtzeit-CDP erst
 1. Wählen Sie **[!UICONTROL Connections > Destinations]** in &quot;Google Display &amp; Video 360&quot;die Option **[!UICONTROL Create destination]**.
    ![Google Display &amp; Video 360-Ziel verbinden](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. Geben Sie im Assistenten zum Erstellen des Ziels die grundlegenden Informationen für das Ziel ein.
+2. Füllen Sie im Arbeitsablauf &quot;Ziel erstellen&quot;die [!UICONTROL Basic Information] für das Ziel aus.
    ![Grundlegende Informationen Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-* **Name**: Geben Sie einen bevorzugten Namen für das Ziel ein.
-* **Beschreibung**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
-* **Kontotyp**: Wählen Sie je nach Konto bei Google eine Option aus:
+* **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
+* **[!UICONTROL Description]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
+* **[!UICONTROL Account Type]**: Wählen Sie je nach Konto bei Google eine Option aus:
    * Verwenden Sie diese Option, `Invite Advertiser` um Audiencen nur für eine bestimmte Marke in Ihrem Display &amp; Video 360-Konto freizugeben.
    * Verwenden Sie diese Option, `Invite Partner` um die Freigabe von Audiencen für alle Marken in Ihrem Display &amp; Video 360-Konto zu ermöglichen.
-* **Konto-ID**: Geben Sie Ihre **[!DNL Invite partner]** Konto-ID oder Ihre **[!DNL Invite advertiser]** Konto-ID bei Google ein. Normalerweise ist dies eine sechsstellige oder siebenstellige ID.
+* **[!UICONTROL Account ID]**: Geben Sie Ihre **[!DNL Invite partner]** Konto-ID oder Ihre **[!DNL Invite advertiser]** Konto-ID bei Google ein. Normalerweise ist dies eine sechsstellige oder siebenstellige ID.
 
 >[!NOTE]
 >
