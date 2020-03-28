@@ -4,7 +4,7 @@ seo-title: Arbeitsablauf für Cloud-Datenspeicherung-Ziele
 description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
 seo-description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -19,7 +19,7 @@ Auf dieser Seite wird erläutert, wie Sie eine Verbindung zu Cloud-Datenspeicher
 
    ![Verbindung zum Cloud-Datenspeicherung-Ziel](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. Wenn Sie im Schritt **Authentifizierung** zuvor eine Verbindung zu Ihrem Cloud-Datenspeicherung-Ziel eingerichtet haben, wählen Sie Ihre bestehende Verbindung aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung **[!UICONTROL New Account]** zum Ziel Ihrer Cloud-Datenspeicherung einrichten. Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Weitere Informationen zu den Anmeldeinformationen im Schritt [Authentifizierung finden Sie unter](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3-Ziel [- und](/help/rtcdp/destinations/sftp-destination.md) SFTP-Ziel **** .
+2. Wenn Sie zuvor eine Verbindung zum Ziel der Cloud-Datenspeicherung eingerichtet haben, wählen Sie **[!UICONTROL Authentication]** im Schritt die bestehende Verbindung aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung **[!UICONTROL New Account]** zum Ziel Ihrer Cloud-Datenspeicherung einrichten. Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Weitere Informationen zu den Anmeldeinformationen im Schritt [Authentifizierung finden Sie unter](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3-Ziel [- und](/help/rtcdp/destinations/sftp-destination.md) SFTP-Ziel **** .
 
    >[!NOTE]
    >
