@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 seo-description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,25 +23,25 @@ Zum Senden von Segmentdaten an Adobe Campaign müssen Sie zuerst in der Echtzeit
 
    ![Mit Adobe Campaign verbinden](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Bei Adobe Campaign können Sie zwischen **Amazon S3**, **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
+1. In the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. Bei Adobe Campaign können Sie zwischen **[!UICONTROL Amazon S3]** und **[!UICONTROL SFTP with Password]** wählen **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
    ![Assistent zum Einrichten von Campaign](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   Bei Verbindungen des Typs **S3** müssen Sie die Zugriffsschlüsselkennung und den geheimen Zugriffsschlüssel angeben.
-Bei Verbindungen des Typs **SFTP mit Passwort** müssen Sie Domäne, Port, Benutzernamen und Kennwort angeben.
-Bei Verbindungen des Typs **SFTP mit SSH-Schlüssel** müssen Sie Domäne, Port, Benutzernamen und SSH-Schlüssel angeben.
+   Bei Verbindungen des Typs **[!UICONTROL Amazon S3]** müssen Sie die Zugriffsschlüsselkennung und den geheimen Zugriffsschlüssel angeben.
+For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
+Für **[!UICONTROL SFTP with SSH Key]** Verbindungen müssen Sie Domäne, Anschluss, Benutzername und SSH-Schlüssel angeben.
 
    ![Campaign-Informationen ausfüllen](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
-1. Geben Sie unter **Grundlegende Informationen** die entsprechenden Informationen für Ihr Ziel ein, wie nachfolgend dargestellt:
-   * **Name**: Wählen Sie einen passenden Namen für Ihr Ziel.
-   * **Beschreibung**: Geben Sie eine Beschreibung für Ihr Ziel ein.
-   * **Bucket-Name**: *Bei S3-Verbindungen*. Geben Sie den Speicherort Ihres S3-Buckets ein, an dem die Echtzeit-Kundendatenplattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegen wird.
-   * **Ordnerpfad**: Geben Sie den Pfad Ihres Speicherorts an, an dem die Echtzeit-Kundendatenplattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegen wird.
-   * **Dateiformat**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
+1. In **[!UICONTROL Basic Information]**, fill in the relevant information for your destination, as shown below:
+   * **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
+   * **[!UICONTROL Description]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
+   * **[!UICONTROL Bucket Name]**: *Für S3-Verbindungen*. Geben Sie den Speicherort Ihres S3-Buckets ein, an dem die Echtzeit-Kundendatenplattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegen wird.
+   * **[!UICONTROL Folder Path]**: Geben Sie den Pfad in Ihrer Datenspeicherung an, in dem CDP Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegt.
+   * **[!UICONTROL File Format]**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
    ![Allgemeine Informationen zu Campaign](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. Klicken Sie auf **Erstellen**, nachdem Sie die Felder unter **Grundlegende Informationen** ausgefüllt haben. Ihr Ziel ist nun verbunden und Sie können für das Ziel [Segmente aktivieren](/help/rtcdp/destinations/activate-destinations.md).
+1. Klicken Sie auf **[!UICONTROL Create]** , nachdem Sie die oben stehenden Felder ausgefüllt haben. Ihr Ziel ist nun verbunden und Sie können für das Ziel [Segmente aktivieren](/help/rtcdp/destinations/activate-destinations.md).
 
 ## Zielattribute {#destination-attributes}
 
