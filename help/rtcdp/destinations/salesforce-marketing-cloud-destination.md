@@ -4,7 +4,7 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 seo-description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,21 +23,21 @@ Um Segmentdaten an Salesforce Marketing Cloud zu senden, müssen Sie zunächst i
 
    ![Mit Salesforce verbinden](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-2. Wenn Sie im Schritt **Authentifizierung** zuvor eine Verbindung zu Ihrem Cloud-Datenspeicherung-Ziel eingerichtet haben, wählen Sie eine Ihrer bestehenden Verbindungen aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung einrichten **[!UICONTROL New Account]** . Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Bei Salesforce Marketing Cloud können Sie zwischen **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+2. Wenn Sie zuvor eine Verbindung zum Ziel Ihrer Cloud-Datenspeicherung eingerichtet haben, wählen Sie **[!UICONTROL Authentication]** im Schritt eine der vorhandenen Verbindungen aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung einrichten **[!UICONTROL New Account]** . Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Bei Salesforce Marketing Cloud können Sie zwischen **[!UICONTROL SFTP with Password]** und **[!UICONTROL SFTP with SSH Key]** wählen. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
-   Bei Verbindungen des Typs **SFTP mit Passwort** müssen Sie Domäne, Port, Benutzernamen und Kennwort angeben.
-Bei Verbindungen des Typs **SFTP mit SSH-Schlüssel** müssen Sie Domäne, Port, Benutzernamen und SSH-Schlüssel angeben.
+   For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
+Für **[!UICONTROL SFTP with SSH Key]** Verbindungen müssen Sie Domäne, Anschluss, Benutzername und SSH-Schlüssel angeben.
 
    ![Salesforce-Informationen ausfüllen](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
-3. In the **Setup** step, fill in the relevant information for your destination as shown below:
-   * **Name**: Wählen Sie einen passenden Namen für Ihr Ziel.
-   * **Beschreibung**: Geben Sie eine Beschreibung für Ihr Ziel ein.
-   * **Ordnerpfad**: Geben Sie den Pfad Ihres Speicherorts an, an dem die Echtzeit-Kundendatenplattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegen wird.
-   * **Dateiformat**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
+3. In the **[!UICONTROL Setup]** step, fill in the relevant information for your destination as shown below:
+   * **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
+   * **[!UICONTROL Description]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
+   * **[!UICONTROL Folder Path]**: Geben Sie den Pfad in Ihrer Datenspeicherung an, in dem CDP Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegt.
+   * **[!UICONTROL File Format]**: **[!UICONTROL CSV]** oder **[!UICONTROL TAB_DELIMITED]**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
    ![Salesforce-Basisinformationen](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
-4. Klicken Sie auf Ziel **erstellen** , nachdem Sie die oben stehenden Felder ausgefüllt haben. Ihr Ziel ist nun verbunden und Sie können für das Ziel [Segmente aktivieren](/help/rtcdp/destinations/activate-destinations.md).
+4. Klicken Sie auf **[!UICONTROL Create destination]** , nachdem Sie die oben stehenden Felder ausgefüllt haben. Ihr Ziel ist nun verbunden und Sie können für das Ziel [Segmente aktivieren](/help/rtcdp/destinations/activate-destinations.md).
 
 ## Zielattribute {#destination-attributes}
 
