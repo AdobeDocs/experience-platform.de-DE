@@ -4,7 +4,7 @@ seo-title: Ziele – Übersicht
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -13,16 +13,16 @@ source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ![Übersichtsbanner Ziele](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**Ziele** sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Mit **Zielen** können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+**Ziele** sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
 
 ## Ziele und Quellen
 
-Eine der Kernfunktionen der Echtzeit-Kundendatenplattform besteht darin, Ihre Daten von Erstparteien zu erfassen und für Ihre geschäftlichen Anforderungen zu aktivieren. Use **[!UICONTROL Sources]** to ingest data into Real-time CDP and **[!UICONTROL Destinations]** to export data from Real-time CDP.
+Eine der Kernfunktionen der Echtzeit-Kundendatenplattform besteht darin, Ihre Daten von Erstparteien zu erfassen und für Ihre geschäftlichen Anforderungen zu aktivieren. Verwenden Sie Quellen, um Daten in Echtzeit-CDP und Ziele zu erfassen und Daten aus Echtzeit-CDP zu exportieren.
 
 ## Ziele – Schritte
 
-* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Wählen Sie in einem [Self-Service-Katalog](/help/rtcdp/destinations/destinations-catalog.md) unter allen in der Echtzeit-Kundendatenplattform verfügbaren Zielen.
+* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
 ## Steuerelemente
@@ -55,6 +55,6 @@ The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinat
 
 ## Ziele und Zugangssteuerungen
 
-The **[!UICONTROL Destinations]** functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md); scrollen Sie nach unten bis zum Ende der Seite.
+Die Funktion &quot;Ziele&quot;in CDP in Echtzeit funktioniert mit Berechtigungen für Adobe Experience Platform-Zugriffskontrollen. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md); scrollen Sie nach unten bis zum Ende der Seite.
 
 Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md).
