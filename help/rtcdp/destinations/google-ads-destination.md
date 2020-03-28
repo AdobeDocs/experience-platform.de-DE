@@ -4,7 +4,7 @@ seo-title: Google Ads-Ziel
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Mobilgeräte zu bezahlen.
 seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Mobilgeräte zu bezahlen.
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -51,12 +51,12 @@ Bevor Sie das Google Ads-Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich 
 1. Wählen Sie **[!UICONTROL Connections > Destinations]** in Google Ads die Option **[!UICONTROL Create destination]**.
    ![Google-Anzeigenziel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. Geben Sie im Assistenten zum Erstellen des Ziels die grundlegenden Informationen für das Ziel ein.
+2. Füllen Sie im Arbeitsablauf &quot;Ziel erstellen&quot;die [!UICONTROL Basic Information] für das Ziel aus.
    ![Grundlegende Informationen Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **Name**: Geben Sie einen bevorzugten Namen für das Ziel ein.
-* **Beschreibung**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
-* **Kontotyp**: AdWords ist die einzige verfügbare Option.
-* **Konto-ID**: Geben Sie Ihre Konto-ID mit Google Ads ein. Das ID-Format ist in der Regel 123-456-7890.
+* **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
+* **[!UICONTROL Description]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
+* **[!UICONTROL Account Type]**: AdWords ist die einzige verfügbare Option.
+* **[!UICONTROL Account ID]**: Geben Sie Ihre Konto-ID mit Google Ads ein. Das ID-Format ist in der Regel 123-456-7890.
 
 ## Aktivieren von Segmenten in Google-Anzeigen
 
