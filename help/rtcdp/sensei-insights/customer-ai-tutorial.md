@@ -5,7 +5,7 @@ description: Dieses Tutorial enthält Anleitungen zur Verwendung von Customer AI
 seo-description: Dieses Tutorial enthält Anleitungen zur Verwendung von Customer AI (Alpha).
 index: false
 translation-type: tm+mt
-source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
+source-git-commit: e0d11adb7f0ece9344efb118b4199ecb1fc37bb3
 
 ---
 
@@ -88,7 +88,7 @@ Schließen Sie Ereignisse nach Bedarf aus und klicken Sie dann auf **Fertig stel
 
 Wenn die Instanz erfolgreich erstellt wurde, wird sofort eine Prognose ausgeführt; nachfolgende Ausführungen erfolgen dann gemäß Ihrem definierten Zeitplan.
 
->   **Hinweis:** Je nach Umfang der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
+>[!NOTE] Je nach Größe der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
 
 In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine Prognose durchgeführt. Nach erfolgreicher Ausführung sorgen Bewertungsdaten für ein automatisches Ausfüllen von Profilen mit Prognosewerten. Warten Sie 24 Stunden, bevor Sie mit dem nächsten Abschnitt dieses Tutorials fortfahren.
 
