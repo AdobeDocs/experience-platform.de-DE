@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Skripts mit Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: a681ea832dcc4d97439c8122ba12ab97db7de9ad
+source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
 
 ---
 
@@ -276,7 +276,7 @@ return df
 
 Da der Zweck unseres Modells darin besteht, zukünftige wöchentliche Verkäufe vorherzusagen, müssen Sie einen Bewertungsdatensatz erstellen, mit dem bewertet wird, wie gut die Vorhersage des Modells funktioniert.
 
-Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Speicher gemessen werden, sodass Sie die `weeklySales` Werte 45 Datensätze vorwärts in eine neue Spalte namens `weeklySalesAhead`verschieben können.
+Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Datenspeicher gemessen werden, damit Sie die `weeklySales` Werte 45 vorwärts in eine neue Spalte namens `weeklySalesAhead`.
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
@@ -495,6 +495,6 @@ Um weiterhin zu lernen, wie Sie mit Ressourcen im Data Science Workspace arbeite
 
 Das folgende Video unterstützt Sie beim Erstellen und Bereitstellen von Modellen.
 
->[!VIDEO](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-science-workspace/build-and-deploy-a-model.html)
+>[!VIDEO](https://images-tv.adobe.com/mpcv3/65884d30-94fe-47ef-8d4e-efafe5303260_1578451719.1920x1080at3000_h264.mp4)
 
 
