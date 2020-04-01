@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Segment bewerten
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1e4155374b5d164fe5d955db65fe07880e246e3b
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
 
 # Segmentergebnisse auswerten und darauf zugreifen
 
-Dieses Dokument bietet eine Anleitung zur Segmentbewertung und zum Zugriff auf Segmentergebnisse mithilfe der [Echtzeit-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+In diesem Dokument finden Sie eine Anleitung zur Segmentbewertung und zum Zugriff auf Segmentergebnisse mithilfe der [Segmentierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
 
 ## Erste Schritte
 
