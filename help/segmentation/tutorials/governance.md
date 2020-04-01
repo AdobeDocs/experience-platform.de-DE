@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erzwingen der Datenverwendungskonformität für Audience-Segmente
+title: Erzwingen der Datenverwendungskonformität für Audiencen-Segmente
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
@@ -17,7 +17,7 @@ In diesem Lernprogramm werden die Schritte zum Erzwingen der Einhaltung der Date
 
 Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
 
-- [Echtzeit-Profil](../../profile/home.md): Echtzeit-Kundendaten-Profil ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von Experience Data Model-(XDM-)Daten innerhalb der Plattform verwendet. Profil führt Daten über verschiedene Unternehmensdaten hinweg zusammen und bietet Zugriff auf diese Daten in einer einheitlichen Darstellung.
+- [Echtzeit-Profil](../../profile/home.md): Echtzeit-Kundendaten-Profil ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von Erlebnisdatenmodelldaten (XDM) innerhalb der Plattform verwendet. Profil führt Daten über verschiedene Unternehmensdaten hinweg zusammen und bietet Zugriff auf diese Daten in einer einheitlichen Darstellung.
    - [Richtlinien](../../profile/api/merge-policies.md)zusammenführen: Regeln, die vom Echtzeit-Kundenkonto verwendet werden, um zu bestimmen, welche Daten unter bestimmten Bedingungen zu einer einheitlichen Ansicht zusammengeführt werden können. Merge-Richtlinien können für Zwecke der Datenverwaltung konfiguriert werden.
 - [Segmentierung](../home.md): Wie lange Kundendaten in Echtzeit eine große Gruppe von im Profil Store enthaltenen Personen in kleinere Gruppen unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
 - [Datenverwaltung](../../data-governance/home.md): Die Datenverwaltung bietet die Infrastruktur für die Kennzeichnung und Durchsetzung der Datenverwendung (DULE) unter Verwendung der folgenden Komponenten:
