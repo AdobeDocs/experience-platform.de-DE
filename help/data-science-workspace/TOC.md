@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace Help
 translation-type: tm+mt
-source-git-commit: 34fff508f49327ce314a517d77efabb286ef055c
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 ---
 
@@ -25,6 +25,7 @@ source-git-commit: 34fff508f49327ce314a517d77efabb286ef055c
    * [Modelle](api/models.md)
    * [MLServices](api/mlservices.md)
    * [Einblicke](api/insights.md)
+   * [Anhang](api/appendix.md)
 * Vordefinierte Rezepte {#pre-built-recipes}
    * [Rezept für Produktempfehlungen](pre-built-recipes/product-recommendations.md)
    * [Prognosen zum Produktkauf](pre-built-recipes/product-purchase-prediction.md)
