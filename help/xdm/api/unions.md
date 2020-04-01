@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vereinigungen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fabaabc3cc5b82cba084bddd081f5bba670b89f0
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -31,7 +31,7 @@ Das `timeSeriesEvents` Array ist eine Liste von Ereignissen aus Zeitreihen, die 
 
 ### Segmentmitgliedschaft
 
-Die `segmentMembership` Zuordnung speichert die Ergebnisse der Segmentbewertungen. Wenn Segmentaufträge erfolgreich mit der [Echtzeit-Kunden-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)ausgeführt werden, wird die Map aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Audiencen, die in Platform integriert werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können.
+Die `segmentMembership` Zuordnung speichert die Ergebnisse der Segmentbewertungen. Wenn Segmentaufträge mit der [Segmentierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Audiencen, die in Platform integriert werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können.
 
 Weitere Informationen finden Sie im Tutorial zum [Erstellen von Segmenten mit APIs](../../segmentation/tutorials/create-a-segment.md) .
 
