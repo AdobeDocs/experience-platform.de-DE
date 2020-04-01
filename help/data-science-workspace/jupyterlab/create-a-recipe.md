@@ -36,7 +36,7 @@ Dieses Lernprogramm umfasst zwei Hauptabschnitte. Zuerst erstellen Sie ein Model
 
 Das Erstellen eines Skripts von Grund auf kann im Data Science Workspace erfolgen. Um Beginn zu erhalten, navigieren Sie zur [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **ML-Modelle** , um zum Data Science Workspace zu gelangen. Klicken Sie von hier auf die Unterregisterkarte **Notebooks** und erstellen Sie im Jupyterlab-Startbildschirm ein neues Notebook, indem Sie die Vorlage Rezept Builder auswählen.
 
-Mit dem Rezept Builder Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Ergebnissen der Schulung und Bewertung zufrieden sind, können Sie ein Rezept erstellen, das in Data Science Workspace verwendet werden kann, indem Sie das Notebook verwenden, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
+Mit dem Rezept Builder Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Schulungs- und Bewertungsergebnissen zufrieden sind, können Sie ein Rezept erstellen, das in Data Science Workspace verwendet werden kann, indem Sie das Notebook verwenden, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
 
 >[!NOTE] Das Rezept Builder-Notebook unterstützt die Arbeit mit allen Dateiformaten, aber die Funktion Rezept erstellen unterstützt derzeit nur Python.
 
@@ -276,7 +276,7 @@ return df
 
 Da der Zweck unseres Modells darin besteht, zukünftige wöchentliche Verkäufe vorherzusagen, müssen Sie einen Bewertungsdatensatz erstellen, mit dem bewertet wird, wie gut die Vorhersage des Modells funktioniert.
 
-Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Datenspeicher gemessen werden, damit Sie die `weeklySales` Werte 45 vorwärts in eine neue Spalte namens `weeklySalesAhead`.
+Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Speicher gemessen werden, sodass Sie die `weeklySales` Werte 45 Datensätze vorwärts in eine neue Spalte namens `weeklySalesAhead`verschieben können.
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
