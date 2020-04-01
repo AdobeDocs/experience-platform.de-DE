@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerleitfaden für Sensei Machine Learning API
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 9e12c8087524f692a123b3389df4fdc324c4238d
+source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
 
 ---
 
@@ -37,10 +37,10 @@ Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlich
 
 Nachdem Sie die erforderlichen Authentifizierungsberechtigungen gesammelt haben, können Sie in den folgenden Abschnitten dieses Entwicklerhandbuchs Muster-API-Aufrufe für die folgenden Endpunktgruppen ausführen:
 
-* [Motoren](engines.md)
-* [Experimente](experiments.md)
-* [Einblicke](insights.md)
-* [MLInstances (Rezepte)](mlinstances.md)
-* [MLServices](mlservices.md)
-* [Modelle](models.md)
-* [Anhang](appendix.md)
+* [Motoren](./engines.md)
+* [Experimente](./experiments.md)
+* [Einblicke](./insights.md)
+* [MLInstances (Rezepte)](./mlinstances.md)
+* [MLServices](./mlservices.md)
+* [Modelle](./models.md)
+* [Anhang](./appendix.md)
