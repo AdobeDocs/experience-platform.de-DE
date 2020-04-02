@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Segmentaufbau-Benutzeroberfläche
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -173,6 +173,14 @@ Die Aktivierung Ihrer Segmentdefinitionen für Streaming kann über die Benutzer
 ![](../images/segment-builder/enable-streaming-segmentation.png)
 
 Nachdem die Streaming-Segmentierung aktiviert wurde, muss eine Grundlinie festgelegt werden (dies ist der erste Run, nach dem das Segment immer auf dem neuesten Stand ist). Das System verarbeitet die Grundbildung automatisch, dies ist jedoch nur möglich, wenn die geplante Segmentierung aktiviert wurde. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie im vorherigen Abschnitt [dieses Benutzerhandbuchs](#enable-scheduled-segmentation).
+
+## Verstöße gegen DULE-Richtlinien
+
+>[!NOTE] Verstöße gegen DULE-Richtlinien gelten nur, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
+
+Nachdem Sie Ihr Segment erstellt haben, wird das Segment von der Datenverwaltung analysiert, um sicherzustellen, dass innerhalb des Segments keine Richtlinienverletzungen auftreten. Weitere Informationen zu DUL- und Richtlinienverletzungen finden Sie in der Übersicht über die [Datenverwendung](../../data-governance/labels/overview.md).
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
 
 ## Nächste Schritte
 
