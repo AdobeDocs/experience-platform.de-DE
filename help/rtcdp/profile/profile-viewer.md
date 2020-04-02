@@ -4,7 +4,7 @@ seo-title: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzei
 description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 seo-description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,4 +15,4 @@ Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kund
 
 In der Benutzeroberfläche können Sie diese schreibgeschützten Profile anzeigen und wichtige Informationen zum jeweiligen Kunden aufrufen, z. B. Voreinstellungen, vergangene Ereignisse und Interaktionen sowie Segmente, zu denen die Person gehört.
 
-Da die Echtzeit-Kundendatenplattform auf Adobe Experience Platform aufbaut, kann sie die Anzeigefunktionen für Profile nutzen, die Teil von Experience Platform sind. Eine ausführliche Anleitung zum Anzeigen von Kundenprofilen in der Benutzeroberfläche von Platform finden Sie im [Echtzeit-Kundenprofil-Benutzerhandbuch in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/profile-user-guide.md).
+Da die Echtzeit-Kundendatenplattform auf Adobe Experience Platform aufbaut, kann sie die Anzeigefunktionen für Profile nutzen, die Teil von Experience Platform sind. For a detailed guide to viewing customer profiles within the Platform user interface, please see the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md).
