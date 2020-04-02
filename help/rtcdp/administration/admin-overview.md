@@ -4,7 +4,7 @@ seo-title: Übersicht über die Administration der Echtzeit-Kundendatenplattform
 description: Beschreibung
 seo-description: SEO-Beschreibung
 translation-type: tm+mt
-source-git-commit: 33e187053790b98d2f1c36306b38c738833c4659
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -21,10 +21,10 @@ Die folgenden Abschnitte enthalten eine Einführung in die zentralen Komponenten
 
 Die Zugangssteuerung wird über [Adobe Admin Console](http://adminconsole.adobe.com) verwaltet. Diese Funktion nutzt Produktprofile in Admin Console, damit Sie Anwender mit Berechtigungen und Sandboxes verknüpfen können. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf einzelne Funktionen der Echtzeit-Kundendatenplattform gewähren oder vorenthalten.
 
-Weitere Informationen zur Zugangssteuerung finden Sie unter [Zugangssteuerung – Übersicht](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) in der Experience Platform-Dokumentation.
+Weitere Informationen zur Zugangssteuerung finden Sie unter [Zugangssteuerung – Übersicht](../../access-control/home.md) in der Experience Platform-Dokumentation.
 
 >[!IMPORTANT]
->Befolgen Sie die im [Benutzerhandbuch für die Zugangssteuerung](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md) angegebenen Schritte, um eine ausführliche Anleitung zur Gewährung des Zugriffs auf Funktionen der Echtzeit-Kundendatenplattform zu erhalten. Achten Sie dabei insbesondere auf die Anleitungen zum Verwalten von Details und zusätzlichen Diensten für ein Produktprofil.
+>Befolgen Sie die im [Benutzerhandbuch für die Zugangssteuerung](../../access-control/ui/overview.md) angegebenen Schritte, um eine ausführliche Anleitung zur Gewährung des Zugriffs auf Funktionen der Echtzeit-Kundendatenplattform zu erhalten. Achten Sie dabei insbesondere auf die Anleitungen zum Verwalten von Details und zusätzlichen Diensten für ein Produktprofil.
 
 ## Sandboxes
 
@@ -32,4 +32,4 @@ Adobe Experience Platform (und somit auch die Echtzeit-Kundendatenplattform) wur
 
 Um diese Anforderungen zu erfüllen, stellt Adobe Experience Platform „Sandboxes“ bereit, mit denen Sie eine Plattforminstanz in separate virtuelle Umgebungen unterteilen können, die zur Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse verwendet werden können.
 
-Weiterführende Informationen zu Sandboxes finden Sie unter [Sandboxes – Übersicht](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandboxes-overview.md) in der Experience Platform-Dokumentation.
+Weiterführende Informationen zu Sandboxes finden Sie unter [Sandboxes – Übersicht](../../sandboxes/home.md) in der Experience Platform-Dokumentation.
