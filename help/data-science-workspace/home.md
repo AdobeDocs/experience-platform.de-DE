@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über den Data Science Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -209,9 +209,9 @@ Durch die Verbindung von Markenkompetenz mit dem maschinellen Lernen und der KI-
 
 Weitere Informationen, z. B. einen kompletten täglichen Arbeitsablauf, finden Sie in der [Data Science Workspace-Dokumentation](./walkthrough.md) .
 
-## Zusätzliche Ressourcen   
+## Zusätzliche Ressourcen    
 
 Das folgende Video unterstützt Sie dabei, den Data Science Workspace zu verstehen.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/2fbf62c1-44ed-4162-8eed-f47ab8599701_1578435939.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
 
