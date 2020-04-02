@@ -4,7 +4,7 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,7 +15,7 @@ Die Echtzeit-Kundendatenplattform führt Daten aus verschiedenen Unternehmenssys
 
 Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Data Governance spielt in der Echtzeit-Kundendatenplattform eine zentrale Rolle und erlaubt es Ihnen, Nutzungsrichtlinien zu definieren, Daten anhand dieser Richtlinien zu kategorisieren und bei Ausführung bestimmter Marketing-Aktionen auf Richtlinienverletzungen zu prüfen.
 
-Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform. Daher werden die meisten Data Governance-Funktionen in der Experience Platform-Dokumentation behandelt. Dieses Dokument dient als Ergänzung zu [Data Governance – Übersicht](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) für Experience Platform und bietet Informationen zu den Governance-Funktionen, die in der Echtzeit-Kundendatenplattform verfügbar sind. Folgende Themen werden behandelt:
+Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform. Daher werden die meisten Data Governance-Funktionen in der Experience Platform-Dokumentation behandelt. Dieses Dokument dient als Ergänzung zu [Data Governance – Übersicht](../../data-governance/home.md) für Experience Platform und bietet Informationen zu den Governance-Funktionen, die in der Echtzeit-Kundendatenplattform verfügbar sind. Folgende Themen werden behandelt:
 
 * [Nutzungsbezeichnungen auf Daten anwenden](#labels)
 * [Richtlinien zur Datennutzung verwalten](#policies)
@@ -25,7 +25,7 @@ Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform. Daher w
 
 Mit Data Governance können Sie Nutzungsbezeichnungen auf Ihre Daten anwenden, entweder auf der Datensatz- oder der Datensatzfeldebene. Mit Datennutzungsbezeichnungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren.
 
-Genauere Informationen zum Arbeiten mit Datennutzungsbezeichnungen finden Sie im [Benutzerhandbuch für Datennutzungsbezeichnungen](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) für Adobe Experience Platform.
+Genauere Informationen zum Arbeiten mit Datennutzungsbezeichnungen finden Sie im [Benutzerhandbuch für Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) für Adobe Experience Platform.
 
 ## Beschränkungen für Ziele festlegen
 
@@ -36,9 +36,9 @@ Anwendungsfälle für Marketing können während der _Setup_ -Phase des Arbeitsa
 
 ## Richtlinien zur Datennutzung verwalten {#policies}
 
-Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Echtzeit-Kundendatenplattform ausführen bzw. nicht ausführen dürfen. Weiterführende Informationen dazu finden Sie im Abschnitt „Datennutzungsrichtlinien“ unter [Data Governance – Übersicht](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) für Experience Platform.
+Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Echtzeit-Kundendatenplattform ausführen bzw. nicht ausführen dürfen. Weiterführende Informationen dazu finden Sie im Abschnitt „Datennutzungsrichtlinien“ unter [Data Governance – Übersicht](../../data-governance/home.md) für Experience Platform.
 
-Adobe Experience Platform bietet verschiedene **zentrale Richtlinien** für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können angezeigt werden, indem Sie eine Anfrage an die [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) richten, wie im Abschnitt „Alle Richtlinien auflisten“ des [Policy Service-Entwicklerhandbuchs](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md) dargestellt. Alternativ können Sie eigene **benutzerdefinierte Richtlinien** erstellen, um benutzerdefinierte Nutzungsbeschränkungen zu modellieren (wie im Abschnitt „Richtlinie erstellen“ des Entwicklerhandbuchs beschrieben).
+Adobe Experience Platform bietet verschiedene **zentrale Richtlinien** für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können angezeigt werden, indem Sie eine Anfrage an die [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) richten, wie im Abschnitt „Alle Richtlinien auflisten“ des [Policy Service-Entwicklerhandbuchs](../../data-governance/policies/overview.md) dargestellt. Alternativ können Sie eigene **benutzerdefinierte Richtlinien** erstellen, um benutzerdefinierte Nutzungsbeschränkungen zu modellieren (wie im Abschnitt „Richtlinie erstellen“ des Entwicklerhandbuchs beschrieben).
 
 ## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
 
@@ -70,7 +70,7 @@ Klicken Sie auf **Datenlineare** , um die Ziele, Segmente, Zusammenführungsrich
 
 Nachdem eine Verletzung ausgelöst wurde, wird die Schaltfläche **Speichern** für die Aktivierung deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden, um den Datenverwendungsrichtlinien zu entsprechen.
 
-### Richtliniendurchsetzung für aktivierte Segmente
+### Richtliniendurchsetzung für aktivierte Segmente {#policy-enforcement-for-activated-segments}
 
 Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einer Richtlinienverletzung führen würden. Aufgrund der zahlreichen Komponenten, die beim Aktivieren von Segmenten zu Zielen beteiligt sind, kann eine der folgenden Aktionen möglicherweise eine Verletzung auslösen:
 
@@ -83,4 +83,4 @@ Wenn eine der oben genannten Aktionen eine Verletzung auslöst, wird verhindert,
 
 ## Nächste Schritte
 
-Nach der Vorstellung der wichtigsten Data Governance-Funktionen in der Echtzeit-Kundendatenplattform und deren Aktivierung durch Experience Platform lesen Sie nun die [Data Governance-Dokumentation für Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html). Die Dokumentation bietet einen Überblick über wesentliche Data Governance-Konzepte sowie schrittweise Workflows zum Verwalten von Datennutzungsbezeichnungen und -richtlinien.
+Nach der Vorstellung der wichtigsten Data Governance-Funktionen in der Echtzeit-Kundendatenplattform und deren Aktivierung durch Experience Platform lesen Sie nun die [Data Governance-Dokumentation für Adobe Experience Platform](../../data-governance/home.md). Die Dokumentation bietet einen Überblick über wesentliche Data Governance-Konzepte sowie schrittweise Workflows zum Verwalten von Datennutzungsbezeichnungen und -richtlinien.
