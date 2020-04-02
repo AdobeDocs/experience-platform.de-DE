@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segment erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -53,7 +53,7 @@ Der erste Schritt bei der Segmentierung besteht darin, ein Segment zu definieren
 
 Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anforderung an den `/segment/definitions` Endpunkt in der Echtzeit-Client-Profil-API senden. Im folgenden Beispiel wird beschrieben, wie eine Definitionsanforderung formatiert wird, einschließlich der Informationen, die erforderlich sind, damit ein Segment erfolgreich definiert werden kann.
 
-Segmentdefinitionen können auf zwei Arten bewertet werden: Batch-Segmentierung und Streaming-Segmentierung. Bei der Stapelsegmentierung werden Segmente basierend auf einem voreingestellten Zeitplan oder beim manuellen Auslösen der Auswertung ausgewertet, während bei der Streaming-Segmentierung Segmente ausgewertet werden, sobald Daten in die Plattform aufgenommen werden. In diesem Lernprogramm wird die **Stapelsegmentierung** verwendet. Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Übersicht zur Streaming-Segmentierung](../ui/streaming-segmentation.md).
+Segmentdefinitionen können auf zwei Arten bewertet werden: Batch-Segmentierung und Streaming-Segmentierung. Bei der Stapelsegmentierung werden Segmente basierend auf einem voreingestellten Zeitplan oder beim manuellen Auslösen der Auswertung ausgewertet, während bei der Streaming-Segmentierung Segmente ausgewertet werden, sobald Daten in die Plattform aufgenommen werden. In diesem Lernprogramm wird die **Stapelsegmentierung** verwendet. Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Übersicht zur Streaming-Segmentierung](../api/streaming-segmentation.md).
 
 **API-Format**
 
