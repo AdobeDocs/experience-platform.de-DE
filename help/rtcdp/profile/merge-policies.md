@@ -4,7 +4,7 @@ seo-title: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendaten
 description: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
 seo-description: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,5 +15,5 @@ Basierend auf Adobe Experience Platform ermöglicht es Ihnen die Echtzeit-Kunden
 
 Über die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. Außerdem können Sie Voreinstellungen für Datenquellen definieren und festlegen, welche Daten beim Auftreten eines Konflikts beim Zusammenführen Priorität haben sollen.
 
-Eine schrittweise Anleitung zum Arbeiten mit Zusammenführungsrichtlinien unter Verwendung der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Tutorial zum Arbeiten mit Zusammenführungsrichtlinien in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/merge_policies/create-merge-policies.md).
+You can find step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface by following the [merge policies user guide](../../profile/ui/merge-policies.md).
 
