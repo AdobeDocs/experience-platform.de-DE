@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Datensatzes mit APIs
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -454,7 +454,7 @@ Mit der Stapel-ID können Sie die Datenzugriff-API verwenden, um alle Dateien, d
 
 Sie können die Datenzugriff-API auch verwenden, um den Namen, die Größe in Byte und einen Link zum Herunterladen der Datei oder des Ordners zurückzugeben.
 
-Ausführliche Anweisungen zum Arbeiten mit der Datenzugriffs-API finden Sie im Entwicklerhandbuch für [Datenzugriff](../../data-access/api.md).
+Ausführliche Anweisungen zum Arbeiten mit der Datenzugriffs-API finden Sie im Entwicklerhandbuch für [Datenzugriff](../../data-access/home.md).
 
 ## Schema des Datensatzes aktualisieren
 
