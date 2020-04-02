@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Skripts mit Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -491,10 +491,10 @@ Mit diesem Lernprogramm haben Sie gelernt, wie Sie ein Modell für maschinelles 
 
 Um weiterhin zu lernen, wie Sie mit Ressourcen im Data Science Workspace arbeiten, besuchen Sie bitte die Dropdownliste Data Science Workspace-Rezepte und -Modelle.
 
-## Zusätzliche Ressourcen   
+## Zusätzliche Ressourcen    
 
 Das folgende Video unterstützt Sie beim Erstellen und Bereitstellen von Modellen.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/65884d30-94fe-47ef-8d4e-efafe5303260_1578451719.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
 
 
