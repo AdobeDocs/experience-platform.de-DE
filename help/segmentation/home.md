@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform-Segmentdienst
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -47,7 +47,7 @@ Informationen zum Erstellen von Segmentdefinitionen mit der API finden Sie im Le
 
 Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente entsprechend der Aktivität des Benutzers aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf eingehende Daten im Echtzeit-Kundensegment angewendet. Segmentzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Audience der Zielgruppe relevant bleibt.
 
-Weitere Informationen zur Streaming-Segmentierung finden Sie in der Dokumentation zur [Streaming-Segmentierung](./ui/streaming-segmentation.md).
+Weitere Informationen zur Streaming-Segmentierung finden Sie in der Dokumentation zur [Streaming-Segmentierung](./api/streaming-segmentation.md).
 
 ### Stapelsegmentierung
 
@@ -187,7 +187,7 @@ Alle XDM-Datentypen werden im Segmentierungsdienst unterstützt. Die Regeln, die
 
 ### Zeichenfolgendaten
 
-Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht numerische Einschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuestufe auf Programm-Ebene&quot;.
+Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht-numerische Beschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuhandstufe&quot;für Programme.
 
 Stringdaten werden in Segmentdefinitionen mit logischen, einschließlich-/ausschließlichen und Vergleichsanweisungen eingeschlossen. Nachdem Sie Ihrer Segmentdefinition ein Zeichenfolgenattribut hinzugefügt haben, können Sie mit Zeichenfolgen-relevanten Anweisungen das Attribut mit anderen Zeichenfolgenfeldern vergleichen.
 
