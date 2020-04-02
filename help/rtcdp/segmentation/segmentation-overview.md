@@ -4,7 +4,7 @@ seo-title: Segmentierungsdienst in der Echtzeit-Kundendatenplattform von Adobe
 description: Eine Übersicht mit einer Beschreibung des Segmentierungsdiensts.
 seo-description: Eine Übersicht, in der der Segmentierungsdienst und Segmente in der Echtzeit-Kundendatenplattform von Adobe beschrieben werden.
 translation-type: tm+mt
-source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -25,4 +25,4 @@ Platform ermöglicht Ihnen das einfache Erstellen und Aufrufen von Segmenten sow
 
 ## Nächste Schritte
 
-Nachdem Sie diese Übersicht gelesen haben, sollten Sie wissen, wie die Echtzeit-Kundendatenplattform den Segmentierungsdienst nutzt, um die Anpassung und Personalisierung von Marketing-Kampagnen zu optimieren. Weiterführende Informationen zum Segmentierungsdienst finden Sie in der [Segmentierungsdokumentation in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+Nachdem Sie diese Übersicht gelesen haben, sollten Sie wissen, wie die Echtzeit-Kundendatenplattform den Segmentierungsdienst nutzt, um die Anpassung und Personalisierung von Marketing-Kampagnen zu optimieren. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).
