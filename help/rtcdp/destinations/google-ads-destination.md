@@ -4,7 +4,7 @@ seo-title: Google Ads-Ziel
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Mobilgeräte zu bezahlen.
 seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Mobilgeräte zu bezahlen.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der es U
 
 Beachten Sie die folgenden Details, die sich speziell auf Google Ads-Ziele beziehen:
 
-* Sie können die folgenden [Identitäten](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) an Google Ads-Ziele senden: **Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs, Amazon Fire TV-IDs**.
+* Sie können die folgenden [Identitäten](../../identity-service/namespaces.md) an Google Ads-Ziele senden: **Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs, Amazon Fire TV-IDs**.
 * Aktivierte Zielgruppen werden in der Google-Plattform programmgesteuert erstellt.
 * Die Echtzeit-Kundendatenplattform von Adobe umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Lesen Sie die Audiencen in Google, um die Integration zu validieren und die Targeting-Größe der Audience zu verstehen.
 
