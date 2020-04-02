@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Help
 translation-type: tm+mt
-source-git-commit: 63005d0fe03444c2c0e12bea3570441bf39ec75b
+source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 63005d0fe03444c2c0e12bea3570441bf39ec75b
    * [Katalog und Datensätze](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
    * [Datenzugriff](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
    * [Data Governance](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
-   * [Datenauffüllung (Stapel und Streaming)](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
+   * [Dateneinbindung](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [Data Science-Arbeitsbereich](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
    * [Entscheidungsdienst](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
