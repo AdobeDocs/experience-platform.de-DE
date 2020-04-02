@@ -4,7 +4,7 @@ seo-title: Ziele – Übersicht
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -33,7 +33,7 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](/help/rtcdp/destinations
 * Datenflüsse zu den Zielen im Katalog erstellen, bearbeiten, aktivieren und deaktivieren;
 * ein Konto an einem Speicherort erstellen oder die Echtzeit-Kundendatenplattform mit dem Konto in der Zielplattform verknüpfen;
 * auswählen, welche Segmente für Ziele aktiviert werden sollen;
-* auswählen, welche [Experience Data Model (XDM)-Felder](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) exportiert werden sollen, wenn Segmente für E-Mail-Marketing-Ziele aktiviert werden.
+* auswählen, welche [Experience Data Model (XDM)-Felder](../../xdm/home.md) exportiert werden sollen, wenn Segmente für E-Mail-Marketing-Ziele aktiviert werden.
 
 ## Zieltypen und Kategorien – Videoüberblick
 
@@ -55,6 +55,6 @@ The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinat
 
 ## Ziele und Zugangssteuerungen
 
-Die Funktion &quot;Ziele&quot;in CDP in Echtzeit funktioniert mit Berechtigungen für Adobe Experience Platform-Zugriffskontrollen. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md); scrollen Sie nach unten bis zum Ende der Seite.
+Die Funktion &quot;Ziele&quot;in CDP in Echtzeit funktioniert mit Berechtigungen für Adobe Experience Platform-Zugriffskontrollen. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
 
-Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md).
+Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](../../access-control/ui/overview.md).
