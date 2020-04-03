@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
 
 ---
 
@@ -105,7 +105,7 @@ curl -X POST \
 | `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true`eine Optimierung für die Verarbeitung der IDs in den Anwendungen darstellt (derzeit nur von Analytics unterstützt). If omitted, this value defaults to `false`. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anforderungen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn `priority` kein Wert angegeben wird, lautet das Standardverhalten `normal`. |
 | `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` kein Wert angegeben wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
-| `regulation` **(Erforderlich)** | Die Verordnung für den Antrag (muss entweder &quot;gdpr&quot; oder &quot;ccpa&quot; sein). |
+| `regulation` **(Erforderlich)** | Die Verordnung für den Antrag. muss einer der folgenden drei Werte sein: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Antwort**
 
@@ -399,7 +399,7 @@ GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{REGULATION}` | Der Regelungstyp für die Abfrage. Die zulässigen Werte sind `gdpr` und `ccpa`. |
+| `{REGULATION}` | Der Regelungstyp für die Abfrage. Die zulässigen Werte sind `gdpr`, `ccpa`und `pdpa_tha`. |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `1` und der Maximalwert ist `100`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
 
