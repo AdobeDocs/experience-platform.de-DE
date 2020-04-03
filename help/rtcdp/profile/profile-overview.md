@@ -4,7 +4,7 @@ seo-title: Echtzeit-Kundenprofil in der Echtzeit-Kundendatenplattform
 description: Ein Überblick darüber, wie Sie mit der Echtzeit-Kundendatenplattform unter Verwendung von Echtzeit-Kundenprofilen koordinierte, konsistente und relevante Erlebnisse für Kunden erstellen können.
 seo-description: Echtzeit-Kundendatenplattform, Profil, Daten, Erlebnisse, Kanäle
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -31,4 +31,4 @@ Platform ermöglicht es Ihnen, Kundenprofile bequem anzuzeigen und anhand versch
 
 ## Nächste Schritte
 
-Nachdem Sie diesen Überblick gelesen haben, sollten Sie wissen, wie die Echtzeit-Kundendatenplattform das Echtzeit-Kundenprofil nutzt, um für skalierte, kanalübergreifende Personalisierung zu sorgen. Wenn Sie Identitäten aus verschiedenen Quellen zusammenführen, können Sie sich ein umfassendes Bild über einzelne Kunden verschaffen und Ihre Marketing-Kampagnen deutlich optimieren. Weiterführende Informationen, einschließlich Best Practices und Tutorials zum Arbeiten mit Echtzeit-Kundenprofil-Daten in der Benutzeroberfläche und via APIs, finden Sie in der [Echtzeit-Kundenprofil-Dokumentation in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md).
+Nachdem Sie diesen Überblick gelesen haben, sollten Sie wissen, wie die Echtzeit-Kundendatenplattform das Echtzeit-Kundenprofil nutzt, um für skalierte, kanalübergreifende Personalisierung zu sorgen. Wenn Sie Identitäten aus verschiedenen Quellen zusammenführen, können Sie sich ein umfassendes Bild über einzelne Kunden verschaffen und Ihre Marketing-Kampagnen deutlich optimieren. For more detailed information, including best practices and tutorials for working with Real-time Customer Profile data in the user interface and via APIs, please refer to the [Real-time Customer Profile documentation](../../profile/home.md).
