@@ -4,7 +4,7 @@ seo-title: Google Display & Video 360-Ziel
 description: Display & Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool zum Ausführen von Retargeting und Audience zielgerichteter digitaler Kampagnen für Display-, Video- und Mobilgeräte.
 seo-description: 'Display & Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool zum Ausführen von Retargeting und Audience zielgerichteter digitaler Kampagnen für Display-, Video- und Mobilgeräte. '
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ Display &amp; Video 360, früher DoubleClick Bid Manager genannt, ist ein Tool z
 
 Beachten Sie die folgenden Details, die speziell für Google Display &amp; Video 360-Ziele gelten:
 
-* Sie können die folgenden [Identitäten](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) an Google Display &amp; Video 360-Ziele senden: **Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs, Amazon Fire TV-IDs**.
+* Sie können die folgenden [Identitäten](../../identity-service/namespaces.md) an Google Display &amp; Video 360-Ziele senden: **Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs, Amazon Fire TV-IDs**.
 * Aktivierte Zielgruppen werden in der Google-Plattform programmgesteuert erstellt.
 * Die Echtzeit-Kundendatenplattform von Adobe umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Lesen Sie die Audiencen in Google, um die Integration zu validieren und die Targeting-Größe der Audience zu verstehen.
 
