@@ -4,7 +4,7 @@ seo-title: Zieldetailseite
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 translation-type: tm+mt
-source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -51,7 +51,7 @@ Die rechte Leiste enthält Informationen über Ihr Ziel. Weiterführende Informa
 | Kategorie | Gibt den Zieltyp an. Weiterführende Informationen finden Sie unter [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md). |
 | Verbindungstyp | Gibt an, in welcher Form Ihre Zielgruppen an das Ziel gesendet werden. Kann **Cookie**- oder **profilbasiert** sein. |
 | Häufigkeit | Gibt an, wie oft die Zielgruppen an das Ziel gesendet werden. Kann **Streaming** oder **Batch** sein. |
-| Identität | Stellt den vom Ziel akzeptierten Identitäts-Namespace dar. Das Identitätsfeld kann beispielsweise „GAID“, „IDFA“ oder „E-Mail“ lauten. Für Informationen zu allen akzeptierten Identitäts-Namespaces konsultieren Sie die standardmäßigen Namespaces unter [Identitäts-Namespaces – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md). |
+| Identität | Stellt den vom Ziel akzeptierten Identitäts-Namespace dar. Das Identitätsfeld kann beispielsweise „GAID“, „IDFA“ oder „E-Mail“ lauten. Für Informationen zu allen akzeptierten Identitäts-Namespaces konsultieren Sie die standardmäßigen Namespaces unter [Identitäts-Namespaces – Übersicht](../../identity-service/namespaces.md). |
 | Erstellt von | Gibt den Anwender an, der diesen Zielfluss erstellt hat. |
 | Erstellt | Gibt Datum und Uhrzeit (UTC) an, zu dem/der dieser Zielfluss erstellt wurde. |
 
