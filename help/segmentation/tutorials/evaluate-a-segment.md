@@ -459,7 +459,7 @@ Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der `status` 
 Die folgenden Schritte sind erforderlich, um Ihre Audience zu exportieren:
 
 - [Erstellen Sie einen Dataset](#create-a-target-dataset) der Zielgruppe - Erstellen Sie den Datensatz, der Audiencen enthält.
-- [Generieren von Profilen zur Audience im Datensatz](#generate-profiles-for-audience-members) - Füllen Sie den Datensatz mit XDM Individuelle Profil basierend auf den Ergebnissen eines Segmentauftrags.
+- [Generieren von Profilen zur Audience im Datensatz](#generate-profiles-for-audience-members) - Füllen Sie den Datensatz mit XDM-Profilen auf Basis der Ergebnisse eines Segmentauftrags.
 - [Überwachung des Exportfortschritts](#monitor-export-progress) - Überprüfen Sie den aktuellen Fortschritt des Exportprozesses.
 - [Lesen Sie die Daten](#next-steps) zur Audience - Rufen Sie die resultierenden XDM-Profil für die Mitglieder Ihrer Audience ab.
 
