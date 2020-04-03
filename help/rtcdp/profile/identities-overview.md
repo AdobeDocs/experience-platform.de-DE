@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Identity Service
 description: Beschreibung
 seo-description: SEO-Beschreibung
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,7 +17,7 @@ Nun können Sie erkennen, dass nicht fünf verschiedene Kunden über fünf versc
 
 ## Identitäts-Namespaces
 
-Identitäts-Namespaces sind eine Komponente von Identity Service und dienen als Indikatoren, die zusätzlichen Kontext für Kundenidentitäten bereitstellen. Ein Beispiel für einen häufig verwendeten ID-Namespace wäre „E-Mail“, sodass Sie bei Verwendung derselben E-Mail-Adresse auf unterschiedlichen Websites verschiedene Identitäten miteinander verknüpfen können, die jeweils eine Unique-Customer-Kennung aufweisen. So können Sie erkennen, dass die verschiedenen Identitäten in Wahrheit demselben Kunden gehören. Mit Experience Platform können Sie ID-Namespaces verwenden, um in der Benutzeroberfläche nach einzelnen Profilen zu suchen. Weiterführende Informationen zum Anzeigen von Profilen finden Sie in der [Übersicht über die Profilansicht](/help/rtcdp/profile/profile-viewer.md). Weiterführende Informationen zu Identitäts-Namespaces finden Sie in der [Übersicht über Identitäts-Namespaces in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md).
+Identitäts-Namespaces sind eine Komponente von Identity Service und dienen als Indikatoren, die zusätzlichen Kontext für Kundenidentitäten bereitstellen. Ein Beispiel für einen häufig verwendeten ID-Namespace wäre „E-Mail“, sodass Sie bei Verwendung derselben E-Mail-Adresse auf unterschiedlichen Websites verschiedene Identitäten miteinander verknüpfen können, die jeweils eine Unique-Customer-Kennung aufweisen. So können Sie erkennen, dass die verschiedenen Identitäten in Wahrheit demselben Kunden gehören. Mit Experience Platform können Sie ID-Namespaces verwenden, um in der Benutzeroberfläche nach einzelnen Profilen zu suchen. Weiterführende Informationen zum Anzeigen von Profilen finden Sie in der [Übersicht über die Profilansicht](/help/rtcdp/profile/profile-viewer.md). Weitere Informationen zu Identitäts-Namensräumen finden Sie in der Übersicht über den [Identitäts-Namensraum](../../identity-service/namespaces.md).
 
 ## Identitätsdiagramme
 
@@ -27,4 +27,4 @@ Identity Service verwaltet ein Identitätsdiagramm, das nur für Ihr Unternehmen
 
 ## Nächste Schritte
 
-Identitäten und Beziehungen zwischen ihnen werden von Identity Service definiert und gepflegt und vom Echtzeit-Kundenprofil genutzt, um ein vollständiges Bild über einzelne Kunden und ihre Interaktionen zu liefern. Weiterführende Informationen finden Sie in der [Dokumentation zu Identity Service in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md).
+Identitäten und Beziehungen zwischen ihnen werden von Identity Service definiert und gepflegt und vom Echtzeit-Kundenprofil genutzt, um ein vollständiges Bild über einzelne Kunden und ihre Interaktionen zu liefern. Weitere Informationen finden Sie in der Dokumentation zum [Identitätsdienst](../../identity-service/home.md).
