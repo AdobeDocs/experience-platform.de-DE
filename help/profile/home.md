@@ -59,7 +59,7 @@ In diesem Abschnitt werden die Komponenten vorgestellt, mit denen Echtzeit-Kunde
 
 ### Streaming-Erfassung und Streaming-Segmentierung
 
-Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Infolgedessen können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst den Überblick über die [Datenerhebungsqualität](../ingestion/quality/overview.md).
+Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Dadurch können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst die Qualitätsübersicht [zur](../ingestion/quality/overview.md)Datenerfassung.
 
 ### Edge-Prognosen
 
@@ -95,7 +95,7 @@ Der Eckpfeiler Ihrer Marketing-Kampagne ist Ihre Audience. Das Echtzeit-Profil b
 
 * Kunden, für die seit dem letzten Einkauf eine Woche vergangen ist.
 * Kunden, für die die Summe der Käufe 10.000 USD übersteigt.
-* Kunden, die aus einer vordefinierten Liste eine bestimmte Anzahl eindeutiger Marketing-Kampagnen gesehen haben, die durch ihre Kampagnen-ID angegeben wurden, und diese innerhalb von 30 Minuten erforschen.
+* Kunden, die aus einer vordefinierten Liste eine bestimmte Anzahl eindeutiger Marketing-Kampagnen gesehen haben, die durch ihre Kampagnen-ID angegeben wurden, und diese innerhalb von 30 Minuten erkundet haben.
 
 Die ersten Schritte mit der Segmentierung finden Sie in der Übersicht über die [Segmentierung](../segmentation/home.md).
 
