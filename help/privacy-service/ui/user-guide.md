@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zum Datenschutzdienst
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, klicken Sie o
 
 ## Neue Datenschutzauftragsanforderung erstellen
 
+>[!NOTE] Um eine Datenschutzauftragsanforderung zu erstellen, müssen Sie Identitätsinformationen für bestimmte Kunden bereitstellen, deren Daten abgerufen oder gelöscht werden sollen. Bitte lesen Sie das Dokument zu [Identitätsdaten für Datenschutzanforderungen](../identity-data.md) , bevor Sie mit diesem Abschnitt fortfahren.
+
 Die Benutzeroberfläche des Datenschutzdienstes bietet zwei Methoden zum Erstellen neuer Auftragsanforderungen:
 
-* Anforderungs-Builder verwenden
-* JSON-Datei hochladen
+* [Anforderungs-Builder verwenden](#request-builder)
+* [JSON-Datei hochladen](#json)
 
 Die Schritte zur Verwendung dieser Methoden sind in den folgenden Abschnitten beschrieben.
 
-### Anforderungs-Builder verwenden
+### Anforderungs-Builder verwenden {#request-builder}
 
-Mit dem Anforderungs-Builder können Sie in der Benutzeroberfläche manuell eine neue Datenschutzauftragsanforderung erstellen. Der Anforderungs-Builder eignet sich am besten für einfachere und kleinere Anforderungsgruppen, da der Anforderungs-Builder die Anforderungen auf den ID-Typ pro Benutzer beschränkt. Bei komplizierteren Anforderungen ist es möglicherweise besser, stattdessen eine JSON-Datei [hochzuladen](#upload-a-json-file) .
+Mit dem Anforderungs-Builder können Sie in der Benutzeroberfläche manuell eine neue Datenschutzauftragsanforderung erstellen. Der Anforderungs-Builder eignet sich am besten für einfachere und kleinere Anforderungsgruppen, da der Anforderungs-Builder die Anforderungen auf den ID-Typ pro Benutzer beschränkt. Bei komplizierteren Anforderungen ist es möglicherweise besser, stattdessen eine JSON-Datei [hochzuladen](#json) .
 
 Um Beginn mit dem Anforderungs-Builder zu verwenden, klicken Sie auf Anforderung **erstellen** unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms.
 
@@ -91,19 +93,31 @@ Um Beginn mit dem Anforderungs-Builder zu verwenden, klicken Sie auf Anforderung
 
 Das Dialogfeld Anforderung *erstellen* wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Anforderung zum Schutz der Privatsphäre für den derzeit ausgewählten Regeltyp an.
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Wählen Sie den **Auftragstyp** der Anforderung (&quot;Löschen&quot;oder &quot;Zugriff&quot;) und eines oder mehrere verfügbare **Produkte** aus der Liste. Wählen Sie unter **Kunden-IDs** einen ID-Typ aus dem Dropdown-Menü (E-Mail, ECID oder AAID). Geben Sie die ID-Werte in das Textfeld rechts ein und drücken Sie **\&lt;enter>** für jede ID, um sie der Liste hinzuzufügen.
+Wählen Sie den **Auftragstyp** der Anforderung (&quot;Löschen&quot;oder &quot;Zugriff&quot;) und eines oder mehrere verfügbare **Produkte** aus der Liste.
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Die in dieser Liste enthaltenen IDs erhalten eine Kopie aller E-Mail-Benachrichtigungen des Datenschutzdienstes, die gesendet werden, wenn ein Auftrag abgeschlossen, mit Fehlern abgeschlossen oder eine Zeitüberschreitung aufgetreten ist. Klicken Sie abschließend auf **Erstellen**.
+Wählen Sie unter *Namensraum-Typ* den entsprechenden Namensraum-Typ für die Kunden-IDs aus, die an den Datenschutzdienst gesendet werden.
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+Wählen Sie bei Verwendung des _standardmäßigen_ Namensraums einen Namensraum aus dem Dropdown-Menü (E-Mail, ECID oder AAID) und geben Sie dann die ID-Werte in das Textfeld rechts ein. Drücken Sie dann **\&lt;enter>** für jede ID, um sie der Liste hinzuzufügen.
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+Bei Verwendung des _benutzerdefinierten_ Namensraums müssen Sie den Namensraum manuell eingeben, bevor Sie die unten stehenden ID-Werte eingeben.
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+Klicken Sie abschließend auf **Erstellen**.
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird zusammen mit dem aktuellen Verarbeitungsstatus im Widget &quot;Auftragsanforderungen&quot;aufgeführt.
 
-### JSON-Datei hochladen
+### JSON-Datei hochladen {#json}
 
 Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für jede verarbeitete Person verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
@@ -113,12 +127,12 @@ Klicken Sie auf den Pfeil neben Anforderung **erstellen**, unter dem Statusberic
 
 Das Dialogfeld &quot;JSON ** hochladen&quot;wird angezeigt. Es wird ein Fenster angezeigt, in das Sie die JSON-Datei per Drag &amp; Drop verschieben können.
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 Wenn Sie keine JSON-Datei zum Hochladen haben, klicken Sie auf &quot;Adobe-GDPR-Request.json **** herunterladen&quot;, um eine Vorlage herunterzuladen, die Sie entsprechend den Werten füllen können, die Sie von Ihren betroffenen Personen gesammelt haben.
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfeld. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können bei Bedarf weitere JSON-Dateien hinzufügen, indem Sie sie in das Dialogfeld ziehen und dort ablegen.
