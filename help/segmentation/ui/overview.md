@@ -187,7 +187,7 @@ Nachdem Sie Ihr Segment erstellt haben, wird das Segment von der Datenverwaltung
 Der Segmentaufbau bietet einen umfassenden Arbeitsablauf, mit dem Sie marktfähige Audiencen aus Echtzeitdaten zum Profil von Kunden isolieren können. Nach dem Lesen dieses Handbuchs sollten Sie jetzt in der Lage sein:
 
 - Erstellen Sie Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Audiencen als Bausteine.
-- Mit der Arbeitsfläche und den Containern des Regelaufbaus können Sie die Reihenfolge steuern, in der Segmentregeln ausgeführt werden.
+- Verwenden Sie die Arbeitsfläche und Container des Regelaufbaus, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
 - Ansicht schätzt die voraussichtliche Audience, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
 - Aktivieren Sie alle Segmentdefinitionen für die geplante Segmentierung.
 - Aktivieren Sie die angegebenen Segmentdefinitionen für die Streaming-Segmentierung.
