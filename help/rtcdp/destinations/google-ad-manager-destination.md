@@ -4,7 +4,7 @@ seo-title: Ziel von Google Ad Manager
 description: 'Google Ad Manager, früher DoubleClick für Herausgeber oder DoubleClick AdX, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Anzeigen auf ihren Websites, über Videos und in mobilen Apps zu verwalten. '
 seo-description: 'Google Ad Manager, früher DoubleClick für Herausgeber oder DoubleClick AdX, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Anzeigen auf ihren Websites, über Videos und in mobilen Apps zu verwalten. '
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ Google Ad Manager, früher DoubleClick für Herausgeber oder DoubleClick AdX, is
 
 Beachten Sie die folgenden Details, die sich speziell auf Google Ad Manager-Ziele beziehen:
 
-* Sie können die folgenden [Identitäten](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) an Google Ad Manager-Ziele senden: **Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs, Amazon Fire TV-IDs**.
+* Sie können die folgenden [Identitäten](../../identity-service/namespaces.md) an Google Ad Manager-Ziele senden: **Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs, Amazon Fire TV-IDs**.
 * Aktivierte Zielgruppen werden in der Google-Plattform programmgesteuert erstellt.
 * Die Echtzeit-Kundendatenplattform von Adobe umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Lesen Sie die Audiencen in Google, um die Integration zu validieren und die Targeting-Größe der Audience zu verstehen.
 
