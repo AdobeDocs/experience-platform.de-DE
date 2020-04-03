@@ -4,7 +4,7 @@ seo-title: Übersicht über Datensätze in Adobe Experience Platform
 description: Übersicht über Datensätze in Adobe Experience Platform
 seo-description: Übersicht über Datensätze in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,4 +15,4 @@ Im Arbeitsbereich „Datensätze“ von Experience Platform können Sie alle Dat
 
 View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. Der Arbeitsbereich „Datensätze“ enthält eine Liste von Datensätzen, einschließlich der Spalten für Name, Erstellung (Datum und Uhrzeit), Quelle, Schema und letzten Batch-Status, sowie Datum und Uhrzeit der letzten Aktualisierung des Datensatzes.
 
-Informationen zur Verwendung des Arbeitsbereichs „Datensätze“ finden Sie unter [Daten in Adobe Experience Platform erfassen](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Informationen zur Verwendung des Arbeitsbereichs &quot;Datasets&quot;finden Sie in der Übersicht über [Datensätze](../../catalog/datasets/overview.md).
