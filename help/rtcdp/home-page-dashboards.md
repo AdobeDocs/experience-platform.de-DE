@@ -4,7 +4,7 @@ seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
+source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
 
 ---
 
@@ -42,7 +42,7 @@ Zusätzliche Metriken (z. B. für Profile und Segmente) stehen in anderen Teile
 
 The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
-Weiterführende Informationen zu Datensätzen finden Sie unter [Daten in Adobe Experience Platform erfassen](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Weitere Informationen zu Datensätzen finden Sie in der Übersicht über [Datensätze](../catalog/datasets/overview.md).
 
 ### Profile
 
@@ -58,7 +58,7 @@ Weiterführende Informationen zu Profilen finden Sie unter [Einheitliche Sicht a
 
 **[!UICONTROL Segments]** zeigt die Gesamtzahl der für das Unternehmen erstellten Segmente. Diese Zahl wird aktualisiert, sobald neue Segmente erstellt werden.
 
-Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](segmentation/segmentation-overview.md).
 
 ### Ziele
 
@@ -106,7 +106,7 @@ The **[!UICONTROL Recent datasets]** card shows the five most recent datasets cr
 
 Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
 
-Weiterführende Informationen zu Datensätzen finden Sie unter [Daten in Adobe Experience Platform erfassen](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Weitere Informationen zu Datensätzen finden Sie in der Übersicht über [Datensätze](../catalog/datasets/overview.md).
 
 ### Letzte Quellen
 
@@ -122,7 +122,7 @@ The **[!UICONTROL Recent segments]** metric card shows the five most recent segm
 
 Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
-Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](segmentation/segmentation-overview.md).
 
 ### Letzte Ziele
 
