@@ -4,7 +4,7 @@ seo-title: E-Mail-Marketing-Ziele
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -41,7 +41,7 @@ In diesem Schritt wählen Sie die Felder aus, die an E-Mail-Marketing-Ziele expo
 
 ### Identität {#identity}
 
-Es wird empfohlen, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md) auszuwählen. Das ist das Feld, aus dem die Identitäten Ihrer Benutzer übernommen werden. In der Regel besteht das Feld aus der E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle sehen Sie die gängigsten eindeutigen Kennungen und deren XDM-Feld im einheitlichen Schema.
+Es wird empfohlen, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Das ist das Feld, aus dem die Identitäten Ihrer Benutzer übernommen werden. In der Regel besteht das Feld aus der E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle sehen Sie die gängigsten eindeutigen Kennungen und deren XDM-Feld im einheitlichen Schema.
 
 | Eindeutige Kennung | XDM-Feld im einheitlichen Schema |
 ---------|----------
