@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
+source-git-commit: cde7acc2fd112b9a5d0b86b40b3bc712c6505064
 
 ---
 
@@ -238,7 +238,7 @@ curl -X POST \
 | `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true`eine Optimierung für die Verarbeitung der IDs in den Anwendungen darstellt (derzeit nur von Analytics unterstützt). If omitted, this value defaults to `false`. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anforderungen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn `priority` kein Wert angegeben wird, lautet das Standardverhalten `normal`. |
 | `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` kein Wert angegeben wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
-| `regulation` **(Erforderlich)** | Die Verordnung für den Antrag (muss entweder &quot;gdpr&quot; oder &quot;ccpa&quot; sein). |
+| `regulation` **(Erforderlich)** | Die Verordnung für den Antrag. muss einer der folgenden drei Werte sein: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Antwort**
 
@@ -367,7 +367,7 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `productStatusResponse` | Der aktuelle Status des Auftrags. Details zu jedem möglichen Status finden Sie in der unten stehenden Tabelle. |
-| `downloadURL` | Ist der Auftragsstatus `complete`vorhanden, stellt dieses Attribut eine URL bereit, um die Auftragsergebnisse als ZIP-Datei herunterzuladen. Diese Datei kann 60 Tage nach Abschluss des Auftrags heruntergeladen werden. |
+| `downloadURL` | Ist der Auftragsstatus `complete`vorhanden, stellt dieses Attribut eine URL zum Herunterladen der Auftragsergebnisse als ZIP-Datei bereit. Diese Datei kann 60 Tage nach Abschluss des Auftrags heruntergeladen werden. |
 
 ### Auftragsstatus-Antworten
 
