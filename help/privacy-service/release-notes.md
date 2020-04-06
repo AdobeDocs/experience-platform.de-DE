@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Versionshinweise zum Datenschutzdienst
 topic: release notes
 translation-type: tm+mt
-source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
+source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
 
 ---
 
@@ -13,12 +13,22 @@ source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
 
 Dieses Dokument enthält Informationen zu neuen Funktionen des Adobe Experience Platform Privacy Service sowie zu Verbesserungen und wichtigen Fehlerkorrekturen.
 
+## 8. April 2020
+
+### Neue Funktionen
+
+| Funktion | Beschreibung |
+| --- | --- |
+| PDPA-Unterstützung | Datenschutzanforderungen können nun im Rahmen des Datenschutzgesetzes (PDPA) in Thailand erstellt und nachverfolgt werden. Bei Datenschutzanforderungen in der API akzeptiert das `regulation` Array den Wert &quot;pdpa_tha&quot;. |
+| Namensraum-Typen in der Benutzeroberfläche | Sie können jetzt im Anforderungs-Builder in der Benutzeroberfläche des Datenschutzdienstes verschiedene Namensraum angeben. Weitere Informationen finden Sie im [Benutzerhandbuch](ui/user-guide.md) . |
+| Alter Endpunktverfall | Der alte API-Endpunkt (`data/privacy/gdpr`) wurde nicht mehr unterstützt. |
+
 ## 14. Januar 2020
 
 ### Neue Funktionen
 
 | Funktion | Beschreibung |
---- | ---
+| --- | --- |
 | Umbenennung des Datenschutzdienstes | Der zuvor genannte &quot;GDPR-Dienst&quot;wurde in den Datenschutzdienst umbenannt, da der Dienst zunehmend andere Vorschriften zusätzlich zum GDPR unterstützt. |
 | Neue API-Endpunkte | Der Basispfad für die Datenschutzdienst-API wurde von `/data/privacy/gdpr` auf `/data/core/privacy/jobs` |
 | Neue erforderliche `regulation` Eigenschaft | Bei der Erstellung neuer Aufträge in der Datenschutzdienst-API muss eine `regulation` Eigenschaft in der Anforderungs-Nutzlast angegeben werden, unter welcher Regel der Auftrag verfolgt werden soll. Die zulässigen Werte sind `gdpr` und `ccpa`. Weitere Informationen finden Sie im Dokument zu [Datenschutzaufträgen](api/privacy-jobs.md) im Entwicklerhandbuch für den Datenschutzdienst. |
@@ -35,7 +45,7 @@ Dieses Dokument enthält Informationen zu neuen Funktionen des Adobe Experience 
 ### Neue Funktionen
 
 | Funktion | Beschreibung |
---- | ---
+| --- | --- |
 | Dashboard &quot;Metriken anfordern&quot; | Das neue Dashboard &quot;Metriken&quot;in der Benutzeroberfläche des Datenschutzdienstes bietet Einblicke in gesendete, fehlerhafte und abgeschlossene GDPR-Anforderungen. |
 | Anforderungs-Builder | Um Unternehmen mit technischen und nicht-technischen Benutzern, die GDPR-Anforderungen einreichen, zu betreuen, wurde der Benutzeroberfläche eine Funktion zum Erstellen einer Anforderung hinzugefügt. Die JSON-Dateiübermittlungsfunktion ist in der Benutzeroberfläche des Datenschutzdienstes weiterhin für Unternehmen verfügbar, die sie weiterhin verwenden möchten. |
 | GDPR-Ereignis-Benachrichtigungen | Ereignis-Benachrichtigungen über den GDPR-Auftragsstatus sind für viele Workflows von entscheidender Bedeutung. Während Benachrichtigungen zuvor mit einzelnen E-Mail-Benachrichtigungen verarbeitet wurden, handelt es sich bei GDPR-Ereignis-Benachrichtigungen um Nachrichten, die Adobe-E/A-Ereignis nutzen und an einen konfigurierten Web-Haken gesendet werden, der die Automatisierung von Auftragsanforderungen erleichtert. Benutzer der Benutzeroberfläche des Datenschutzdienstes können Adobe-I/O-GDPR-Ereignis abonnieren, um Updates zu erhalten, wenn ein Produkt oder der GDPR-Auftrag abgeschlossen wurde. |
