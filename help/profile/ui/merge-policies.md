@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Richtlinien zusammenführen - Benutzerhandbuch
 topic: guide
 translation-type: tm+mt
-source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
+source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
 
 ---
 
@@ -52,7 +52,7 @@ Der Bildschirm &quot; **Richtlinie** zum Zusammenführen erstellen&quot;wird ang
 * **ID-Stich**: In diesem Feld wird definiert, wie die entsprechenden Identitäten eines Kunden ermittelt werden. Es gibt zwei mögliche Werte:
    * **Keine**: Keine Identitätszuordnung durchführen.
    * **Privates Diagramm**: Führen Sie Identitätszuordnungen basierend auf Ihrem privaten Identitätsdiagramm durch.
-* **Attributzusammenführung**: Ein Profil-Fragment ist die Information des Profils für nur eine Identität aus der Liste der Identitäten, die für einen einzelnen Kunden vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit kollidierender Profil-Eigenschaftswerte, und die Priorität muss angegeben werden. Mithilfe der *Attributzusammenführung* können Sie festlegen, welche DataSet-Profil-Werte im Falle eines Zusammenführungskonflikts priorisiert werden sollen. Es gibt zwei mögliche Werte:
+* **Attributzusammenführung**: Ein Profil-Fragment ist das Profil für nur eine Identität aus der Liste der Identitäten, die für einen einzelnen Kunden vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit kollidierender Profil-Eigenschaftswerte, und die Priorität muss angegeben werden. Mithilfe der *Attributzusammenführung* können Sie festlegen, welche DataSet-Profil-Werte im Falle eines Zusammenführungskonflikts priorisiert werden sollen. Es gibt zwei mögliche Werte:
    * **Zeitstempel bestellt**: Bei Konflikten ist das zuletzt aktualisierte Profil vorrangig zu behandeln.
    * **Datensatzpriorität** : Weisen Sie Fragmenten des Profils Priorität auf der Grundlage des Datensatzes zu, aus dem sie stammen. Bei Auswahl dieser Option müssen Sie die zugehörigen Datensätze und deren Reihenfolge auswählen. Weitere Informationen finden Sie in den unten stehenden Details zur [Priorität](#dataset-precedence) des Datensatzes.
 * **Standardrichtlinie für** Zusammenführung: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie für Ihr Unternehmen standardmäßig verwendet werden soll. Wenn der Selektor aktiviert und die neue Richtlinie gespeichert wird, wird Ihre vorherige Standardrichtlinie automatisch aktualisiert, sodass sie nicht mehr die Standardrichtlinie ist.
@@ -61,7 +61,7 @@ Der Bildschirm &quot; **Richtlinie** zum Zusammenführen erstellen&quot;wird ang
 
 Wenn Sie einen *Attributzusammenführungswert* auswählen, können Sie die *Dataset-Priorität* auswählen, damit Sie Profil-Fragmenten je nach dem Datensatz, aus dem sie stammen, Priorität einräumen können.
 
-Ein Beispielverwendungsfall wäre, wenn in Ihrem Unternehmen Informationen in einem Datensatz vorhanden sind, die bevorzugt oder vertrauenswürdig sind als Daten in einem anderen Datensatz.
+Ein Anwendungsfall wäre z. B. dann, wenn in Ihrem Unternehmen Informationen in einem Datensatz vorhanden sind, die bevorzugt oder vertrauenswürdig sind als Daten in einem anderen Datensatz.
 
 Wenn Sie die *Datensatzpriorität* auswählen, wird ein separates Fenster geöffnet, in dem Sie aus den *verfügbaren Datensätzen* auswählen müssen (oder das Kontrollkästchen verwenden, um alle auszuwählen), welche Datensätze einbezogen werden. Sie können diese Datensätze dann per Drag &amp; Drop in das Bedienfeld &quot; *Ausgewählte Datensätze* &quot;ziehen und sie in die richtige Reihenfolge der Priorität ziehen. Der oberste Datensatz erhält höchste Priorität, der zweite Datensatz wird an zweiter Stelle stehen usw.
 
@@ -86,6 +86,15 @@ Nachdem Sie die erforderlichen Änderungen vorgenommen haben, klicken Sie auf **
 
 ![](../images/merge-policies/edited.png)
 
+## Verstöße gegen die Datenschutzpolitik
+
+Beim Erstellen oder Aktualisieren einer Richtlinie zum Zusammenführen wird geprüft, ob die Richtlinie zum Zusammenführen eine der von Ihrem Unternehmen definierten Datenverwendungsrichtlinien verletzt. Datenverwendungsrichtlinien sind Teil der Datenverwaltung in Adobe Experience Platform und stellen Regeln dar, die die Arten von Marketingaktionen beschreiben, von denen Sie bestimmte Plattformdaten ausführen dürfen oder deren Ausführung eingeschränkt ist. Wenn zum Beispiel eine Richtlinie zum Zusammenführen verwendet wurde, um ein Segment zu erstellen, das an ein Drittanbieterziel aktiviert wurde, und Ihr Unternehmen über eine Datenverwendungsrichtlinie verfügte, die den Export bestimmter Daten an Dritte verhinderte, erhalten Sie beim Versuch, Ihre Fusionsrichtlinie zu speichern, eine Benachrichtigung über die Meldung &quot;Verletzung der Datenschutzrichtlinien erkannt&quot;.
+
+Diese Benachrichtigung enthält eine Liste der Richtlinien zur Datenverwendung, die verletzt wurden, und ermöglicht Ihnen die Ansicht der Details der Verletzung durch Auswahl einer Richtlinie aus der Liste. Bei der Auswahl einer verletzten Richtlinie liefert die Registerkarte &quot; *Datenlinie* &quot;den *Grund für die Verletzung* und die *betroffenen Aktivierungen*, die jeweils detaillierter erläutern, wie die Datenverwendungsrichtlinie verletzt wurde.
+
+Um mehr über die Leistung der Datenverwaltung in Adobe Experience Platform zu erfahren, lesen Sie zunächst den Überblick über die [Datenverwaltung](../../data-governance/home.md).
+
+![](../images/merge-policies/policy-violation.png)
 
 ## Nächste Schritte
 
