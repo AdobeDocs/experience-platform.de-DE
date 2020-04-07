@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL-Syntax
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -317,7 +317,7 @@ where option can be one of:
 - `FORMAT`: Geben Sie das Ausgabeformat an, das TEXT, XML, JSON oder YAML sein kann. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT`.
 - `statement`: Jede `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`oder `CREATE MATERIALIZED VIEW AS` Anweisung, deren Ausführungsplan Sie sehen möchten.
 
-> [!IMPORTANT] Denken Sie daran, dass die Anweisung tatsächlich ausgeführt wird, wenn die `ANALYZE` Option verwendet wird. Obwohl `EXPLAIN` alle Ausgaben, die eine `SELECT` Rückgabe, verworfen werden, geschehen andere Nebenwirkungen der Anweisung wie gewohnt.
+>[!IMPORTANT] Denken Sie daran, dass die Anweisung tatsächlich ausgeführt wird, wenn die `ANALYZE` Option verwendet wird. Obwohl `EXPLAIN` alle Ausgaben, die eine `SELECT` Rückgabe, verworfen werden, geschehen andere Nebenwirkungen der Anweisung wie gewohnt.
 
 #### Beispiel
 
@@ -409,7 +409,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 #### Beispiel
 
-Erstellen Sie eine neue Tabelle, die nur aus den letzten Einträgen aus der Tabelle `films_recent` besteht `films`:
+Erstellen Sie eine neue Tabelle, `films_recent` die nur aus aktuellen Einträgen aus der Tabelle besteht `films`:
 
 ```
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
