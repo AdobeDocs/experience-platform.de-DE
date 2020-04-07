@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segment bewerten
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -34,7 +34,7 @@ Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle POST-, PUT- und PATCH-Anforderungen ist ein zusätzlicher Header erforderlich:
 
@@ -52,7 +52,7 @@ Wenn Sie das Tutorial zum [Erstellen eines Segments mit der Echtzeit-Kundensegme
 
 Durch die geplante Auswertung kann Ihr IMS-Org einen wiederkehrenden Zeitplan erstellen, um Exportaufträge automatisch auszuführen.
 
-> [!NOTE] Geplante Auswertung kann für Sandboxen mit maximal fünf (5) Zusammenführungsrichtlinien für XDM Individuelles Profil aktiviert werden. Wenn Ihr Unternehmen über mehr als fünf Richtlinien zum Zusammenführen von XDM-Profilen innerhalb einer einzelnen Sandbox-Umgebung verfügt, können Sie keine geplante Auswertung verwenden.
+>[!NOTE] Geplante Auswertung kann für Sandboxen mit maximal fünf (5) Zusammenführungsrichtlinien für XDM Individuelles Profil aktiviert werden. Wenn Ihr Unternehmen über mehr als fünf Richtlinien zum Zusammenführen von XDM-Profilen innerhalb einer einzelnen Sandbox-Umgebung verfügt, können Sie keine geplante Auswertung verwenden.
 
 ### Zeitplan erstellen
 
