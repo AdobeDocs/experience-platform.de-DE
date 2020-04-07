@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erzwingen der Datenverwendungskonformität für Audiencen-Segmente
+title: Erzwingen der Datenverwendungskonformität für Audience-Segmente
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -32,7 +32,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -42,7 +42,7 @@ Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -253,7 +253,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Datenverwendungsbeschriftungen zur
 
 ## Datenfelder filtern
 
-> [!NOTE] Dieser Schritt ist optional. Wenn Sie die im Segment enthaltenen Daten nicht auf Grundlage Ihrer Ergebnisse im vorherigen Schritt der [Suche nach Datenverwendungsbeschriftungen](#lookup-data-usage-labels-for-the-source-datasets)anpassen möchten, können Sie den letzten Schritt der [Auswertung der Daten auf Richtlinienverletzungen](#evaluate-data-for-policy-violations)überspringen.
+>[!NOTE] Dieser Schritt ist optional. Wenn Sie die im Segment enthaltenen Daten nicht auf Grundlage Ihrer Ergebnisse im vorherigen Schritt der [Suche nach Datenverwendungsbeschriftungen](#lookup-data-usage-labels-for-the-source-datasets)anpassen möchten, können Sie den letzten Schritt der [Auswertung der Daten auf Richtlinienverletzungen](#evaluate-data-for-policy-violations)überspringen.
 
 Wenn Sie die im Segmentsegment der Audience enthaltenen Daten anpassen möchten, können Sie dies mit einer der beiden folgenden Methoden tun:
 
