@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
+source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
 
 ---
 
@@ -13,6 +13,23 @@ source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 # Adobe Experience Platform – Versionshinweise
 
 ## Veröffentlichungsdatum: 8. April 2020
+
+## Intelligente Dienste
+
+Intelligente Dienste ermöglichen es Marketinganalysten und Praktikern, die Leistungsfähigkeit künstlicher Intelligenz und maschinelles Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. Auf diese Weise können Marketinganalysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen einer Firma erstellen, ohne dass hierfür Fachwissen in der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketingfachleute Prognosen in Adobe Experience Cloud-, Adobe Experience Platform- und Drittanbieteranwendungen aktivieren.
+
+**Wichtigste Funktionen**
+
+| Funktion | Beschreibung |
+|---|---|
+| Kunden-AI | Die Kundentechnik bietet Marketingexperten die Möglichkeit, Kundenprognosen auf individueller Ebene mit Erläuterungen zu generieren. Mithilfe von einflussreichen Faktoren kann Ihnen die Kundentraining mitteilen, was ein Kunde wahrscheinlich tun wird und warum. Darüber hinaus können Marketingexperten von den Prognosen und Einblicken der Kundenaktivität profitieren, um Kundenerlebnisse durch die Bereitstellung der am besten geeigneten Angebot und Botschaften zu personalisieren. |
+| Zuordnung AI | Attribution AI ist ein algorithmischer Zuordnungsdienst mit mehreren Kanälen, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketingfachleute die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen jeder einzelnen Kundeninteraktion auf die einzelnen Phasen der Customer Journey verstehen. |
+
+**Bekannte Probleme**
+
+* Derzeit sind keine bekannten Probleme aufgetreten.
+
+Weitere Informationen zu intelligenten Diensten und deren Angebot finden Sie in der Übersicht über [intelligente Dienste](../../intelligent-services/home.md).
 
 ## Privacy Service
 
