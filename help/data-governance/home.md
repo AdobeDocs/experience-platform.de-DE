@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Data Governance
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
 
 ---
 
@@ -74,15 +74,11 @@ Damit Datenverwendungsbeschriftungen die Datenkonformität effektiv unterstütze
 
 Ein Beispiel für eine Marketingaktion könnte der Wunsch sein, einen Datensatz in einen Drittanbieter-Service zu exportieren. Wenn eine Richtlinie besagt, dass bestimmte Datentypen, wie z. B. persönliche identifizierbare Informationen (PII), nicht exportiert werden können und eine &quot;I&quot;-Beschriftung (Identitätsdaten) auf den Datensatz angewendet wurde, erhalten Sie eine Antwort des Policy Service, in der Sie darauf hingewiesen werden, dass eine Datenverwendungsrichtlinie verletzt wurde.
 
-### So erstellen und arbeiten Sie mit Datenverwendungsrichtlinien
+Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenmanager Richtlinien mithilfe der API für den DUL-Policy-Dienst oder der Experience Platform-Benutzeroberfläche erstellen.
 
-Nachdem die Datenverwendungsbeschriftungen angewendet wurden, können Datenverwaltungen Richtlinien mit der API des DULE Policy Service erstellen.
+Weitere Informationen zum Ausführen der von der DUL Policy Service API bereitgestellten wichtigen Vorgänge finden Sie im Entwicklerhandbuch für den [Policy Service](api/getting-started.md). Eine schrittweise Anleitung zum Arbeiten mit DULE-Richtlinien finden Sie im Lernprogramm zum [Erstellen und Auswerten von DUL-Richtlinien mithilfe der API](policies/create.md).
 
-Als Datenmanager können Sie die Policy Service API verwenden, um Richtlinien im Zusammenhang mit Marketingaktionen zu verwalten und auszuwerten, die für Daten mit DULE-Beschriftungen durchgeführt werden. Mithilfe der API können Sie Richtlinien erstellen und aktualisieren, den Status einer Richtlinie ermitteln und mit Marketingaktionen bewerten, ob eine bestimmte Aktion eine Datenverwendungsrichtlinie verletzt.
-
-Innerhalb der Policy Service-API werden alle Richtlinien und Marketingaktionen als entweder `core` oder `custom` Ressourcen bezeichnet. `core` Ressourcen werden von Adobe definiert und verwaltet, während `custom` Ressourcen von einzelnen Kunden erstellt und gepflegt werden. Die `custom` Ressourcen sind daher einzigartig und nur für die Organisation sichtbar, die sie geschaffen hat.
-
-Weitere Informationen zum Ausführen der von der DUL Policy Service API bereitgestellten wichtigen Vorgänge finden Sie im Entwicklerhandbuch für den [Policy Service](api/getting-started.md). Eine schrittweise Anleitung zum Arbeiten mit DULE-Richtlinien finden Sie im Lernprogramm zum [Erstellen und Evaluieren von DULE-Richtlinien](policies/create.md).
+Informationen zum Verwalten von Richtlinien in der Benutzeroberfläche der Experience Platform finden Sie im [Richtlinien-Benutzerhandbuch](policies/user-guide.md).
 
 ## Zukünftige Versionen
 
@@ -123,7 +119,7 @@ In der folgenden Tabelle sind die Schlüsselbegriffe im Zusammenhang mit der Dat
 | **Politik** | Im Rahmen der Datenverwaltung ist eine Richtlinie eine Regel, die beschreibt, welche Marketingaktionen für bestimmte Daten zulässig oder nicht zulässig sind. |
 | **Sensible Beschriftungen** | Sensible &quot;S&quot;-Beschriftungen werden verwendet, um Daten zu kategorisieren, die Sie und Ihr Unternehmen als vertraulich betrachten. |
 
-## Zusätzliche Ressourcen   
+## Zusätzliche Ressourcen    
 
 Das folgende Video soll Ihnen dabei helfen, die Datenverwaltung zu verstehen, und zeigt die wichtigsten Aspekte des Rahmenwerks zur Datenbenennung und -durchsetzung (DULE) auf.
 
