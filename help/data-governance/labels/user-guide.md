@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zur Datenverwendung
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -99,7 +99,9 @@ Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene na
 
 Nachdem Sie nun Datenverwendungsbeschriftungen auf der Dataset- und Feldebene hinzugefügt haben, können Sie beginnen, Daten in Experience Platform zu erfassen. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
 
-## Zusätzliche Ressourcen   
+Sie können jetzt auch Datenverwendungsrichtlinien auf Basis der von Ihnen angewendeten Beschriftungen definieren. Weitere Informationen finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](../policies/overview.md).
+
+## Zusätzliche Ressourcen    
 
 Das folgende Video soll Ihr Verständnis von Data Governance unterstützen und beschreibt, wie Sie Beschriftungen auf einen Datensatz und einzelne Felder anwenden.
 
