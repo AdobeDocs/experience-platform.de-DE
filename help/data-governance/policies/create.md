@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Eine Datenverwendungsrichtlinie erstellen
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -409,6 +409,8 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 200 (OK) und die Details der 
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie erfolgreich eine DULE-Richtlinie für eine Marketingaktion erstellt. Sie können nun das Lernprogramm zum [Erzwingen von DULE-Richtlinien](../enforcement/api-enforcement.md) fortsetzen, um zu erfahren, wie Sie in Ihrer Erlebnisanwendung nach Richtlinienverletzungen suchen und diese behandeln können.
+In diesem Lernprogramm haben Sie erfolgreich eine Datenverwendungsrichtlinie für eine Marketingaktion erstellt. Sie können nun das Lernprogramm zum [Erzwingen von Datenverwendungsrichtlinien](../enforcement/api-enforcement.md) fortsetzen, um zu erfahren, wie Sie in Ihrer Erlebnisanwendung nach Richtlinienverletzungen suchen und diese behandeln können.
 
-Weitere Informationen zu den verschiedenen verfügbaren Vorgängen in der Policy Service API finden Sie im Entwicklerhandbuch für [Policy Service](../api/getting-started.md). Informationen zum Erzwingen von DULE-Richtlinien für Echtzeit-Kundendaten finden Sie im Tutorial zur [Erzwingung der Datenverwendungskonformität für Audiencen-Profil](../../segmentation/tutorials/governance.md).
+Weitere Informationen zu den verschiedenen verfügbaren Vorgängen in der Policy Service API finden Sie im Entwicklerhandbuch für [Policy Service](../api/getting-started.md). Informationen zum Erzwingen von Richtlinien für Echtzeit-Kundendaten finden Sie im Lernprogramm zur [Erzwingung der Einhaltung von Datennutzungsregeln für Audiencen-Profil](../../segmentation/tutorials/governance.md).
+
+Informationen zum Verwalten von Nutzungsrichtlinien in der Benutzeroberfläche von Experience Platform finden Sie im [Richtlinien-Benutzerhandbuch](user-guide.md).
