@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
 
 ---
 
@@ -14,30 +14,48 @@ source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
 
 ## Veröffentlichungsdatum: 8. April 2020
 
-## Zugangssteuerung
+## Privacy Service
 
-Die Experience Platform nutzt die [Adobe Admin Console](https://adminconsole.adobe.com) -Profil, um Benutzer mit Berechtigungen und Sandboxen zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Plattformfunktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung.
+Die neuen gesetzlichen und organisatorischen Vorschriften geben den Nutzern das Recht, auf ihre personenbezogenen Daten auf Anfrage aus Ihren Datenspeichern zuzugreifen oder sie zu löschen. Der Datenschutzdienst für Adobe Experience Platform stellt eine RESTful-API und eine Benutzeroberfläche bereit, mit der Sie diese Datenanforderungen Ihrer Kunden verwalten können. Mit dem Datenschutzdienst können Sie Anfragen zum Zugriff auf und Löschen von persönlichen oder privaten Kundendaten aus Adobe Experience Cloud-Anwendungen stellen, wodurch die automatische Einhaltung der gesetzlichen und organisatorischen Datenschutzbestimmungen erleichtert wird.
 
-### Wichtigste Funktionen
+**Neue Funktionen**
 
 | Funktion | Beschreibung |
-|--- | ---|
-| Zugriffsberechtigung | In der Admin-Konsole können Sie mithilfe der Registerkarte &quot; _Berechtigungen_ &quot;in einem Platform-Profil anpassen, welche Plattformfunktionen für die an dieses Profil angeschlossenen Benutzer verfügbar sind. Zu den verfügbaren Kategorien für Berechtigungen gehören: Datenmodellierung, Data Management, Profil-Management, Identitäten, Datenüberwachung, Sandbox-Administration, Ziele, Quellen. |
-| Zugriff auf Sandboxen | Über die Registerkarte _Berechtigungen_ in einem Platform-Profil können Benutzer Zugriff auf bestimmte Sandboxen erhalten. Weitere Informationen finden Sie im Abschnitt zu [Sandboxen](#sandboxes) unten. |
+| --- | --- |
+| PDPA-Unterstützung | Datenschutzanforderungen können nun im Rahmen des Datenschutzgesetzes (PDPA) in Thailand erstellt und nachverfolgt werden. Bei Datenschutzanforderungen in der API akzeptiert das `regulation` Array den Wert &quot;pdpa_tha&quot;. |
+| Namensraum-Typen in der Benutzeroberfläche | Sie können jetzt im Anforderungs-Builder in der Benutzeroberfläche des Datenschutzdienstes verschiedene Namensraum angeben. Weitere Informationen finden Sie im [Benutzerhandbuch](../../privacy-service/ui/user-guide.md) . |
+| Alter Endpunktverfall | Der alte API-Endpunkt (`data/privacy/gdpr`) wurde nicht mehr unterstützt. |
 
-Weitere Informationen finden Sie in der Übersicht über die [Zugriffskontrolle](../../access-control/home.md).
+Bekannte Probleme
+
+* Keine
+
+Weitere Informationen zum Datenschutzdienst finden Sie in der Übersicht über den [Datenschutzdienst](../../privacy-service/home.md).
+
+<!-- ## Access control
+
+Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
+
+### Key features
+
+|Feature | Description|
+|--- | ---|
+|Permissions | In the Admin Console, the _Permissions_ tab within a Platform product profile allows you customize which Platform capabilities are available for the users attached to that profile. Available permission categories include: Data Modeling, Data Management, Profile Management, Identities, Data Monitoring, Sandbox Administration, Destinations, Sources.|
+|Access to sandboxes | The _Permissions_ tab within a Platform product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
+
+For more information, please see the [access control overview](../../access-control/home.md).
 
 ## Sandboxes
 
-Die Experience Platform wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene zu bereichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderungen zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine Plattform-Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-### Wichtigste Funktionen
+### Key features
 
-| Funktion | Beschreibung |
+|Feature | Description|
 |--- | ---|
-| Produktions-Sandbox | Experience Platform bietet eine einzige Produktions-Sandbox, die weder gelöscht noch zurückgesetzt werden kann. |
-| Sandboxen ohne Produktion | Für eine einzige Plattforminstanz können mehrere Sandboxen ohne Produktionscharakter erstellt werden, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktionssandbox zu beeinträchtigen. |
-| Sandbox-Umschalter | In der Benutzeroberfläche von Experience Platform können Sie mit dem Sandbox-Umschalter in der oberen linken Ecke des Bildschirms über ein Dropdown-Menü zwischen verfügbaren Sandboxen wechseln. |
-| `x-sandbox-name` header | Alle Aufrufe von Experience Platform-APIs müssen jetzt die neue `x-sandbox-name` Kopfzeile enthalten, deren Wert auf das `name` Attribut der Sandbox verweist, in der der Vorgang ausgeführt wird. |
+|Production sandbox | Experience Platform provides a single production sandbox, which cannot be deleted or reset.|
+|Non-production sandboxes | Multiple non-production sandboxes can be created for a single Platform instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox.|
+|Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
+|`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
 
-Weitere Informationen finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
+For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->
