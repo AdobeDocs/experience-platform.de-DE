@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbindung mit PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: 8310204071375a55329f661c9ac678f96979a594
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -65,7 +65,7 @@ Klicken Sie auf **Kopieren** für &quot;PSQL-Befehl&quot;.
 
 ![Bild](../images/clients/psql/connect-bi.png)
 
-> [!IMPORTANT]: Wenn Sie sich auf einem PC befinden, verwenden Sie einen Texteditor, um die Zeilenumbrüche in der Befehlszeichenfolge zu entfernen, und kopieren Sie dann die Zeichenfolge.
+>[!IMPORTANT]: Wenn Sie sich auf einem PC befinden, verwenden Sie einen Texteditor, um die Zeilenumbrüche in der Befehlszeichenfolge zu entfernen, und kopieren Sie dann die Zeichenfolge.
 
 Fügen Sie die Befehlszeichenfolge in ein Terminal- oder Befehlsfenster ein und drücken Sie die Eingabetaste.
 
