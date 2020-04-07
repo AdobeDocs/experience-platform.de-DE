@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
+source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 
 ---
 
@@ -31,6 +31,26 @@ Bekannte Probleme
 * Keine
 
 Weitere Informationen zum Datenschutzdienst finden Sie in der Übersicht über den [Datenschutzdienst](../../privacy-service/home.md).
+
+## Quellen
+
+Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie diese Daten mithilfe von Plattformdiensten strukturieren, beschriften und verbessern können. Sie können Daten aus verschiedenen Quellen erfassen, z. B. Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Drittanbieter-Software und Ihr CRM-System.
+
+Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie Quellverbindungen für verschiedene Datenanbieter einfach einrichten können. Diese Quellverbindungen ermöglichen Ihnen die Authentifizierung und Verbindung zu externen Datenspeicherung- und CRM-Diensten, die Festlegung von Zeiten für die Erfassungsausführung und die Verwaltung des Datenaufkommens.
+
+### Neue Funktionen
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| API- und UI-Unterstützung für Datenbanken | Neue Quellanschlüsse für Apache Spark (auf HDInsights), Azurblaus Synapse Analytics, Azurblase Table Datenspeicherung, Hive (auf HDInsights) und Phoenix. |
+| API- und UI-Unterstützung für zahlungsbasierte Anwendungen | Neue Quellanschlüsse für PayPal. |
+| API- und UI-Unterstützung für protokollbasierte Anwendungen | Neue Quellschnittstellen für generische OData. |
+
+### Bekannte Probleme
+
+* Keine
+
+For more information about sources, see the [sources overview](../../source-connectors/home.md).
 
 <!-- ## Access control
 
