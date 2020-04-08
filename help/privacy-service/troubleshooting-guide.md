@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zum Datenschutzdienst
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -14,6 +14,52 @@ source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
 In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zum Datenschutzdienst für Adobe Experience Platform.
 
 Der Datenschutzdienst stellt eine RESTful-API und eine Benutzeroberfläche bereit, die Firmen bei der Verwaltung von Datenschutzanfragen unterstützen. Mit dem Datenschutzdienst können Sie Anfragen zum Zugriff auf und zum Löschen von persönlichen oder privaten Kundendaten stellen, wodurch die automatische Einhaltung der Vorschriften zum Schutz der Privatsphäre in Unternehmen und Rechtsordnungen erleichtert wird.
+
+## Was ist der Unterschied zwischen einer Benutzer- und einer Benutzer-ID, wenn Sie Datenschutzanforderungen in der API machen? {#user-ids}
+
+Um einen neuen Datenschutzauftrag in der API zu erstellen, muss die JSON-Nutzlast der Anforderung ein `users` Array enthalten, das für jeden Benutzer, für den die Datenschutzanforderung gilt, spezifische Informationen Liste. Jedes Element im `users` Array ist ein Objekt, das einen bestimmten Benutzer darstellt, der durch seinen `key` Wert identifiziert wird.
+
+Jedes Benutzerobjekt (oder `key`) enthält wiederum ein eigenes `userIDs` Array. Dieses Array Liste spezifische ID-Werte **für den jeweiligen Benutzer**.
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+Das Array enthält zwei Objekte, die einzelne Benutzer darstellen, die anhand ihrer `key` Werte identifiziert werden (&quot;DavidSmith&quot;und &quot;user12345&quot;). &quot;DavidSmith&quot;hat nur eine ID aufgelistet (ihre E-Mail-Adresse), während &quot;user12345&quot;zwei IDs hat (ihre E-Mail-Adresse und ECID).
+
+Weitere Informationen zum Bereitstellen von Informationen zur Benutzeridentität finden Sie im Handbuch zu [Identitätsdaten für Datenschutzanforderungen](identity-data.md).
+
 
 ## Kann ich den Datenschutzdienst verwenden, um Daten zu bereinigen, die versehentlich an die Plattform gesendet wurden?
 
