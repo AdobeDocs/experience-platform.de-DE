@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5f0e0deb4a2fae636ac4d2313a6541c25309c294
+source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 ---
 
@@ -64,7 +64,6 @@ Dieser Abschnitt zeigt, wie Sie einem Datensatz Datenschutzbeschriftungen hinzuf
         "createdUser": "{USER_ID}",
         "updatedUser": "{USER_ID}",
         "viewId": "5d8e9cf5872f18164763f972",
-        "aspect": "production",
         "status": "enabled",
         "fileDescription": {
             "persisted": true,
@@ -158,7 +157,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/catalog/dataSets/5d8e9c
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `namespace` | Ein Array, das die Namensraum auflistet, die mit dem in `path`angegebenen Feld verknüpft werden sollen. Namensraum werden verwendet, um datenschutzbezogene Felder beim [Senden von Zugriffs- oder Löschanforderungen](#submit) in der Datenschutzdienst-API zu identifizieren. |
+| `namespace` | Ein Array, das die Namensraum auflistet, die mit dem in `path`angegebenen Feld verknüpft werden sollen. Namensraum werden verwendet, um datenschutzbezogene Felder beim [Senden von Zugriffs- oder Löschanfragen](#submit) in der Datenschutzdienst-API zu identifizieren. |
 | `path` | Der Pfad zum Feld im zugehörigen Schema des Datensatzes, der für das `namespace`Feld gilt. Im Idealfall sollten Datenschutzbeschriftungen nur auf &quot;Blattfelder&quot;(Felder ohne Unterfelder) angewendet werden. |
 
 **Antwort**
@@ -249,4 +248,4 @@ In zukünftigen Versionen sendet Platform eine Bestätigung an den Datenschutzdi
 
 Durch das Lesen dieses Dokuments wurden Sie zu den wichtigen Konzepten der Verarbeitung von Datenschutzanforderungen für den Data Lake vorgestellt. Es wird empfohlen, die Dokumentation in diesem Handbuch weiter zu lesen, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Anweisungen zur Verarbeitung von Datenschutzanforderungen für den Profil Store finden Sie im Dokument zur Verarbeitung von [Datenschutzanforderungen für Echtzeit-Kundendaten](../profile/privacy.md) .
+Anweisungen zur Verarbeitung von Datenschutzanforderungen für den Profil Store finden Sie im Dokument zur Verarbeitung von [Datenschutzanfragen für Echtzeit-Kundendaten](../profile/privacy.md) .
