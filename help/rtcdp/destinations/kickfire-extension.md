@@ -4,7 +4,7 @@ seo-title: KickFire-Erweiterung
 description: Die KickFire-Erweiterung ist ein Ziel der Personalisierung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 seo-description: Die KickFire-Erweiterung ist ein Ziel der Personalisierung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ KickFire IP-Adressenintelligenz &amp; B2B-firmografische Daten ermöglichen es I
 KickFire ist eine Personalisierungserweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktion finden Sie auf der [Kickfire-Website](https://www.kickfire.com/).
 
 Dieses Ziel ist eine Experience Platform Launch-Erweiterung. Weitere Informationen zur Funktionsweise von Starterweiterungen in Adobe Echtzeit-CDP finden Sie unter [Experience Platform Launch Extensions - Übersicht](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+
+![Kickfire-Erweiterung](/help/rtcdp/destinations/assets/kickfire-extension.png)
 
 ## Voraussetzungen {#prerequisites}
 
