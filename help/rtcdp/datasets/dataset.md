@@ -4,15 +4,13 @@ seo-title: Übersicht über Datensätze in Adobe Experience Platform
 description: Übersicht über Datensätze in Adobe Experience Platform
 seo-description: Übersicht über Datensätze in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: 1ce68714cb5e484c7150be30c0347274d1414258
 
 ---
 
 
 # Datensätze
 
-Im Arbeitsbereich „Datensätze“ von Experience Platform können Sie alle Datensätze, die Ihr IMS-Team erstellt hat, anzeigen und verwalten sowie neue Datensätze erstellen.
+In der Benutzeroberfläche von Adobe Experience Platform können Sie alle Datensätze, die Ihre IMS-Organisation erstellt hat, Ansicht und Verwaltung vornehmen und auch neue erstellen. Um in der Benutzeroberfläche nach Datensätzen zu suchen, wählen Sie **[!UICONTROL Datasets]** in der Navigation auf der linken Seite aus. The *[!UICONTROL Browse]* tab contains a list of datasets, including columns showing Name, Created (date and time), Source, Schema, and Last Batch Status, as well as the date and time the dataset was Last Updated.
 
-View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. Der Arbeitsbereich „Datensätze“ enthält eine Liste von Datensätzen, einschließlich der Spalten für Name, Erstellung (Datum und Uhrzeit), Quelle, Schema und letzten Batch-Status, sowie Datum und Uhrzeit der letzten Aktualisierung des Datensatzes.
-
-Informationen zur Verwendung des Arbeitsbereichs &quot;Datasets&quot;finden Sie in der Übersicht über [Datensätze](../../catalog/datasets/overview.md).
+Informationen zu Datasets in Experience Platform finden Sie zunächst in der Übersicht über [Datasets](../../catalog/datasets/overview.md).
