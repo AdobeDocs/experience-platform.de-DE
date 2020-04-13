@@ -4,8 +4,9 @@ description: Versionshinweise zur Experience Platform vom 11. März 2020
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
+keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
 
 ---
 
@@ -22,8 +23,7 @@ Adobe Experience Platform Data Governance ist eine Reihe von Strategien und Tech
 
 ### Neue Funktionen
 
->[!NOTE]
->Einige der folgenden neuen Funktionen befinden sich derzeit in der Betaphase und stehen nicht allen Benutzern zur Verfügung. Beta-Funktionen können geändert werden.
+>[!NOTE] Einige der folgenden neuen Funktionen befinden sich derzeit in der Betaphase und stehen nicht allen Benutzern zur Verfügung. Beta-Funktionen können geändert werden.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
