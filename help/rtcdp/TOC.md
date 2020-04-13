@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
+source-git-commit: ee2a490ebc802684a0761dc6589d6b30defc0398
 
 ---
 
@@ -133,7 +133,6 @@ source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
    * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
-   * [Quellen-Tutorials](sources/sources-tutorials.md)
    * [Website-Tags mit Adobe Launch implementieren](sources/launch.md)
-* [Versionshinweise](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
-* [Glossar](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
+* [Versionshinweise](https://www.adobe.com/go/platform-release-notes-en)
+* [Glossar](https://www.adobe.com/go/platform-glossary-en)
