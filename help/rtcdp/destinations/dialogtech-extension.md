@@ -4,7 +4,7 @@ seo-title: DialogTech-Erweiterung
 description: Die Erweiterung DialogTech ist ein Analysenziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 seo-description: Die Erweiterung DialogTech ist ein Analysenziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -19,6 +19,7 @@ DialogTech ist eine Erweiterung der Adobe Echtzeit-Kundendatenplattform. Weitere
 
 Dieses Ziel ist eine Experience Platform Launch-Erweiterung. Weitere Informationen zur Funktionsweise von Starterweiterungen in Adobe Echtzeit-CDP finden Sie unter [Experience Platform Launch Extensions - Übersicht](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![DialogTech-Erweiterung](assets/dialogtech-extension.png)
 
 ## Voraussetzungen {#prerequisites}
 
