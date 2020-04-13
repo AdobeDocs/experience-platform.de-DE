@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -99,12 +99,12 @@ source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
          * [Gainsight (Experience Platform Launch Extension)](/help/rtcdp/destinations/gainsight-extension.md)
          * [Kickfire (Experience Platform Launch Extension)](/help/rtcdp/destinations/kickfire-extension.md)
          * [Marketo Web Personalization (Experience Platform Launch-Erweiterung)](destinations/marketo-web-personalization-extension.md)
-      * Social-Netzwerkziele{#social-network-destinations}
+      * Social-Netzwerkziele{#social-destinations}
          * [Übersicht über Social-Netzwerkziele](/help/rtcdp/destinations/social-network-destinations.md)
          * [Authentifizierungsfluss für soziale Netzwerkziele](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre (Experience Platform Launch Extension)](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Facebook-Ziel](/help/rtcdp/destinations/facebook-destination.md)
-      * Zielorte der Umfrage {#surveys}
+      * Zielorte der Umfrage {#survey-destinations}
          * [Umfrage - Ziele - Übersicht](/help/rtcdp/destinations/survey-destinations.md)
          * [foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment (Experience Platform Launch Extension)](/help/rtcdp/destinations/inmoment-extension.md)
