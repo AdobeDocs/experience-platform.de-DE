@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Übersicht über das Echtzeit-Kundenprofil
 topic: guide
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
 
 ---
 
@@ -15,9 +15,7 @@ Mit der Adobe Experience Platform können Sie koordinierte, konsistente und rele
 
 ## Verstehen des Echtzeit-Profils von Kunden
 
-Real-time Customer Profil ist ein generischer Lookup-Entitätsspeicher, der Daten aus verschiedenen Unternehmensdaten zusammenführt und dann Zugriff auf diese Daten in Form von individuellen Profilen und zugehörigen Zeitreihen-Ereignissen bietet. Diese Funktion ermöglicht es Marketingexperten, koordinierte, konsistente und relevante Erlebnisse mit ihren Audiencen über mehrere Kanal hinweg zu fördern, wie im folgenden Video zusammengefasst:
-
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&enable10seconds=on&speedcontrol=on)
+Real-time Customer Profil ist ein generischer Lookup-Entitätsspeicher, der Daten aus verschiedenen Unternehmensdaten zusammenführt und dann Zugriff auf diese Daten in Form von individuellen Profilen und zugehörigen Zeitreihen-Ereignissen bietet. Diese Funktion ermöglicht es Marketingexperten, koordinierte, konsistente und relevante Erlebnisse mit ihren Audiencen über mehrere Kanal hinweg zu fördern.
 
 ### Profil-Datenspeicher
 
@@ -45,13 +43,20 @@ Jedes Unternehmen möchte mit seinen Kunden in einer Art und Weise kommunizieren
 
 Der Segmentierungsdienst für Adobe Experience Platform stellt die Audiencen bereit, die erforderlich sind, um Erlebnisse für Ihre individuellen Kunden bereitzustellen. Wenn ein Segmentsegment erstellt wird, wird die ID dieses Segments zur Liste der Segmentmitgliedschaften für alle qualifizierten Profil hinzugefügt. Segmentregeln werden mithilfe von RESTful-APIs und der Segmentaufbau-Benutzeroberfläche erstellt und auf Echtzeitdaten von Kunden-Profilen angewendet. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
 
-### Profil-Fragmente und Vereinigung-Ansichten {#profile-fragments-and-union-schemas}
+### Profil-Fragmente und Vereinigung-Schemas {#profile-fragments-and-union-schemas}
 
-Eines der Hauptmerkmale von Echtzeit-Kundendaten-Profil ist die Fähigkeit, Daten mit mehreren Kanälen zu vereinen. Wenn Kundendaten in Echtzeit für den Zugriff auf eine Entität verwendet werden, können Sie eine zusammengeführte Ansicht aller Profil-Fragmente für diese Entität über Datensätze hinweg bereitstellen, die als Vereinigung-Ansicht bezeichnet werden. Echtzeit-Kundendaten werden über mehrere Profil hinweg zusammengeführt, wenn eine Entität oder ein Profil durch ihre ID aufgerufen oder als Segment exportiert wird. Weitere Informationen zum Zugriff auf Profil und Vereinigungen-Ansichten finden Sie im Unterleitfaden für Kunden-Profil-API-Entwickler in Echtzeit zu [Entitäten, auch als &quot;Profil-Zugriff&quot;](api/entities.md)bezeichnet.
+Eines der Hauptmerkmale von Echtzeit-Kundendaten-Profil ist die Fähigkeit, Daten mit mehreren Kanälen zu vereinen. Wenn Kundendaten in Echtzeit für den Zugriff auf eine Entität verwendet werden, können Sie eine zusammengeführte Ansicht aller Profil-Fragmente für diese Entität über Datensätze hinweg bereitstellen, die als Ansicht der Vereinigung bezeichnet und über ein so genanntes Vereinigung-Schema ermöglicht werden. Echtzeit-Kundendaten werden über mehrere Profil hinweg zusammengeführt, wenn eine Entität oder ein Profil durch ihre ID aufgerufen oder als Segment exportiert wird. Weitere Informationen zum Zugriff auf Profil und Vereinigungen-Ansichten finden Sie im Unterleitfaden für Kunden-Profil-API-Entwickler in Echtzeit zu [Entitäten, auch als &quot;Profil-Zugriff&quot;](api/entities.md)bezeichnet.
 
 ### Zusammenführungsrichtlinien
 
 Wenn Daten aus mehreren Quellen zusammengeführt und kombiniert werden, um eine vollständige Ansicht der einzelnen Kunden zu erhalten, gelten für die Zusammenführung der Richtlinien, die Plattform verwendet, um zu bestimmen, wie die Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe von APIs finden Sie im [Leitfaden](api/merge-policies.md) zu Zusammenführungsrichtlinien für Kunden-Profil-API in Echtzeit oder im Benutzerhandbuch [zu](ui/merge-policies.md) Zusammenführungsrichtlinien für die Verwendung von Zusammenführungsrichtlinien mithilfe der Plattform-Benutzeroberfläche.
+
+## (Alpha) Konfigurieren von berechneten Attributen
+
+>[!IMPORTANT]
+>Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist alphanumerisch. Die Dokumentation und Funktionalität können sich ändern.
+
+Berechnete Attribute ermöglichen es Ihnen, den Feldwert anhand anderer Werte, Berechnungen und Ausdruck automatisch zu berechnen. Berechnete Attribute werden auf Profil-Ebene ausgeführt, d. h., Sie können Werte über alle Datensätze und Ereignis hinweg Aggregat haben. Jedes berechnete Attribut enthält einen Ausdruck, oder &quot;Regel&quot;, der eingehende Daten auswertet und den sich ergebenden Wert in einem Profil-Attribut oder in einem Ereignis speichert. Diese Berechnungen helfen Ihnen, Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungen einfach zu beantworten, ohne dass Sie bei jeder erforderlichen Information manuell komplexe Berechnungen durchführen müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen finden Sie im [Unterhandbuch zur Echtzeit-Client-Profil-API zu berechneten Attributen](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle von berechneten Attributen in Adobe Experience Platform besser zu verstehen. Es enthält Beispiel-API-Aufrufe für grundlegende CRUD-Vorgänge mit der Echtzeit-Client-Profil-API.
 
 ## Echtzeitkomponenten
 
@@ -63,9 +68,18 @@ Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfa
 
 ### Edge-Prognosen
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und im Zuge von Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten durch die Verwendung von so genannten Kanten. Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht. Adobe-Anwendungen wie Adobe Zielgruppe und Adobe Campaign verwenden beispielsweise Kanten, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an eine Kante geleitet, wobei ein Projektionsziel die Kante definiert, an die die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die an der Kante zur Verfügung gestellt werden.
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und im Zuge von Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten durch die Verwendung von so genannten Kanten. Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht. Adobe-Anwendungen wie Adobe Zielgruppe und Adobe Campaign verwenden beispielsweise Kanten, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an eine Kante geleitet, wobei ein Projektionsziel die Kante definiert, an die die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die an der Kante zur Verfügung gestellt werden. Weitere Informationen und die Arbeit mit Kanten und Projektionen finden Sie im [Unterleitfaden](api/edge-projections.md)zur Echtzeit-Client-Profil-API für Edge-Projektionen.
 
-Weitere Informationen und die Arbeit mit Kanten und Projektionen finden Sie im [Unterleitfaden](api/edge-projections.md)zur Echtzeit-Client-Profil-API für Edge-Projektionen.
+## Daten Hinzufügen Echtzeit-Profil
+
+Die Plattform kann so konfiguriert werden, dass Ihre Daten zu Datensatz und Zeitreihen an Profil gesendet werden. Dies unterstützt Echtzeit-Streaming-Erfassung und Stapelverarbeitung. Weitere Informationen finden Sie in der Übung, in der das [Hinzufügen von Daten zum Echtzeit-Kundenkonto](tutorials/add-profile-data.md)beschrieben wird.
+
+>[!Note]
+>Daten, die mit Adobe-Lösungen wie Analytics Cloud, Marketing Cloud und Advertising Cloud erfasst werden, fließen in die Experience Platform und werden in Profil erfasst.
+
+### Profil-Streaming-Erfassungsmetriken
+
+Mithilfe von &quot;Observability Insights&quot;können Sie wichtige Metriken in Adobe Experience Platform bereitstellen. Zusätzlich zu den Statistiken zur Plattformnutzung und Leistungsindikatoren für verschiedene Plattformfunktionalitäten gibt es spezifische Metriken zum Profil, mit denen Sie Einblicke in eingehende Anforderungsraten, erfolgreiche Erfassungsraten, erfasste Datensatzgrößen und mehr gewinnen können. Weitere Informationen finden Sie in der Übersicht über die [Beobachtungseinblicke](../observability/home.md). Eine vollständige Liste der Profil-Metriken finden Sie in der Dokumentation zu den [verfügbaren Metriken](../observability/metrics.md).
 
 ## Datenverwaltung und Datenschutz
 
@@ -82,26 +96,8 @@ Die Datenverwaltung wird an verschiedenen Punkten verwaltet. Dazu gehört die En
 
 Mit der Experience Platform können Ihre Kunden Abmeldeanfragen im Zusammenhang mit der Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils des Kunden senden. Weitere Informationen zur Bearbeitung von Opt-out-Anfragen finden Sie in der Dokumentation zur [Berücksichtigung von Opt-out-Anfragen](../segmentation/honoring-opt-outs.md).
 
-## Daten Hinzufügen Echtzeit-Profil
+## Nächste Schritte und zusätzliche Ressourcen
 
-Die Plattform kann so konfiguriert werden, dass Ihre Daten zu Datensatz und Zeitreihen an Profil gesendet werden. Dies unterstützt Echtzeit-Streaming-Erfassung und Stapelverarbeitung. Weitere Informationen finden Sie in der Übung, in der das [Hinzufügen von Daten zum Echtzeit-Kundenkonto](tutorials/add-profile-data.md)beschrieben wird.
+Weitere Informationen zum Echtzeit-Profil von Kunden erhalten Sie, wenn Sie die Dokumentation in diesem Handbuch lesen und Ihr Lernen durch das Video unten ergänzen oder andere Videoschulungen zu [Experience Platform erkunden](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
->[!Note]
->Daten, die mit Adobe-Lösungen wie Analytics Cloud, Marketing Cloud und Advertising Cloud erfasst werden, fließen in die Experience Platform und werden in Profil erfasst.
-
-## Erstellen von Audiencen
-
-Der Eckpfeiler Ihrer Marketing-Kampagne ist Ihre Audience. Das Echtzeit-Profil bietet die Tools zur Segmentierung Ihrer Kundenbasis in Audiencen, die aus Mitgliedern bestehen, die die von Ihnen gewünschten Kriterien erfüllen. Bei der Segmentierung können Sie Audiencen mithilfe von Kriterien wie den folgenden isolieren:
-
-* Kunden, für die seit dem letzten Einkauf eine Woche vergangen ist.
-* Kunden, für die die Summe der Käufe 10.000 USD übersteigt.
-* Kunden, die aus einer vordefinierten Liste eine bestimmte Anzahl eindeutiger Marketing-Kampagnen gesehen haben, die durch ihre Kampagnen-ID angegeben wurden, und diese innerhalb von 30 Minuten erkundet haben.
-
-Die ersten Schritte mit der Segmentierung finden Sie in der Übersicht über die [Segmentierung](../segmentation/home.md).
-
-## (Alpha) Konfigurieren von berechneten Attributen
-
->[!IMPORTANT]
->Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist alphanumerisch. Dokumentation und Funktionalität können sich ändern.
-
-Berechnete Attribute ermöglichen es Ihnen, den Feldwert anhand anderer Werte, Berechnungen und Ausdruck automatisch zu berechnen. Berechnete Attribute werden auf Profil-Ebene ausgeführt, d. h., Sie können Werte über alle Datensätze und Ereignis hinweg Aggregat haben. Jedes berechnete Attribut enthält einen Ausdruck, oder &quot;Regel&quot;, der eingehende Daten auswertet und den sich ergebenden Wert in einem Profil-Attribut oder in einem Ereignis speichert. Diese Berechnungen helfen Ihnen, Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungen einfach zu beantworten, ohne dass Sie bei jeder erforderlichen Information manuell komplexe Berechnungen durchführen müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen finden Sie im [Unterhandbuch zur Echtzeit-Client-Profil-API zu berechneten Attributen](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle von berechneten Attributen in Adobe Experience Platform besser zu verstehen. Es enthält Beispiel-API-Aufrufe für grundlegende CRUD-Vorgänge mit der Echtzeit-Client-Profil-API.
+>[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
