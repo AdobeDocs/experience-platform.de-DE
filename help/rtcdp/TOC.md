@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
@@ -36,6 +36,7 @@ source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
          * [Awin Advertising Conversion Tag (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin Advertising Mastertag (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray (Experience Platform Launch Extension)](/help/rtcdp/destinations/beemray-extension.md)
+         * [Bing Ads Universal Ereignis Tracking (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/bing-ads-extension.md)
          * [Zweig (Experience Platform Launch Extension)](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
          * [Facebook-Pixel (Erlebnisplattform-Starterweiterung)](/help/rtcdp/destinations/facebook-pixel-extension.md)
