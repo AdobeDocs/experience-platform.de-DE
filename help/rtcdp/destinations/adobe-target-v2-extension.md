@@ -4,12 +4,12 @@ seo-title: Adobe Target v2-Erweiterung
 description: Die Adobe Zielgruppe v2-Erweiterung ist ein Ziel der Personalisierung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
 
-# Adobe Zielgruppe v2 Extension (#adobe-Zielgruppe-v2-extension)
+# Adobe Target v2-Erweiterung {#adobe-target-v2-extension}
 
 ## Übersicht {#overview}
 
