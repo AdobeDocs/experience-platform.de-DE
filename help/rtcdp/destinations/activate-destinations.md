@@ -4,7 +4,7 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ---
 
@@ -29,7 +29,14 @@ Beachten Sie, dass sich, wenn für ein Ziel bereits ein Aktivierungsfluss vorhan
 5. *Bedingt*. Dieser Schritt gilt nur für Segmente, die E-Mail-Marketing-Zielen zugeordnet sind. <br> Wählen Sie auf der **[!UICONTROL Destination Attributes]** Seite die Attribute aus, die Sie an das Ziel senden möchten, **[!UICONTROL Add new field]** und wählen Sie sie aus.
 Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige Kennung](/help/rtcdp/destinations/email-marketing-destinations.md#identity) zu verwenden. Weiterführende Informationen zu obligatorischen Attributen finden Sie unter „Identität“ im Artikel [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
    ![Zielattribute](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. On the **[!UICONTROL Schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+
+   >[!IMPORTANT]
+   >
+   >Bei Social-Zielen müssen Sie in diesem Schritt die Herkunft Ihrer Audience auswählen. Sie können mit dem nächsten Schritt nur fortfahren, nachdem Sie eine der Optionen in der Abbildung unten ausgewählt haben.
+
+   ![Herkunft wählen](/help/rtcdp/destinations/assets/choose-data-origin.png)
+
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 ![Auswahl bestätigen](/help/rtcdp/destinations/assets/confirm-selection.png)
@@ -61,6 +68,10 @@ Das Vorhandensein dieser Dateien an Ihrem Speicherort bestätigt die erfolgreich
 ### Werbeziele
 
 Markieren Sie das entsprechende Werbeziel, für das Sie Ihre Daten aktivieren. Wenn die Aktivierung erfolgreich war, werden in Ihrer Werbeplattform Zielgruppen ausgefüllt.
+
+### Social-Netzwerkziele
+
+Bei Facebook bedeutet eine erfolgreiche Aktivierung, dass eine benutzerdefinierte Facebook-Audience programmgesteuert im [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/)erstellt wird. Die Segmentmitgliedschaft in der Audience wird hinzugefügt und entfernt, da Benutzer für die aktivierten Segmente qualifiziert oder disqualifiziert sind.
 
 ## Aktivierung deaktivieren {#disable-activation}
 
