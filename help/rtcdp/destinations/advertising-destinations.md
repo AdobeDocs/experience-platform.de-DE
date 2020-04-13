@@ -4,7 +4,7 @@ seo-title: Werbeziele
 description: Verbinden Sie Ihre Echtzeit-Kundendatenplattform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 seo-description: Verbinden Sie Ihre Echtzeit-Kundendatenplattform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -18,8 +18,8 @@ Beim Herstellen einer Verbindung zu einem Werbeziel werden Ihre Zielgruppen als 
 Derzeit unterstützt CDP in Echtzeit die unten aufgeführten Werbeziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 * [Adobe Advertising Cloud (Experience Platform Launch Extension)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-* [Awin Adveritising Conversion Tag (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin Adveritising Mastertag (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Awin Advertising Conversion Tag (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+* [Awin Advertising Mastertag (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Beemray (Experience Platform Launch Extension)](beemray-extension.md)
 * [Bing Ads Universal Ereignis Tracking (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/bing-ads-extension.md)
 * [Zweig (Experience Platform Launch Extension)](/help/rtcdp/destinations/branch-extension.md)
