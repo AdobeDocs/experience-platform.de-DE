@@ -4,7 +4,7 @@ seo-title: Beemray-Erweiterung
 description: Die Beemray-Erweiterung ist ein Ziel der Personalisierung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 seo-description: Die Beemray-Erweiterung ist ein Ziel der Personalisierung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a94444b35cac0c002d729798d96fd54aaafbacd
 
 ---
 
@@ -18,6 +18,8 @@ Beemray hilft Ihnen bei der Beschleunigung Ihres Produkts in einem situativen Ko
 Beemray ist eine Erweiterung der Adobe Echtzeit-Kundendatenplattform zur Personalisierung. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Seite mit den Erweiterungen in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 Dieses Ziel ist eine Experience Platform Launch-Erweiterung. Weitere Informationen zur Funktionsweise von Starterweiterungen in Adobe Echtzeit-CDP finden Sie unter [Experience Platform Launch Extensions - Übersicht](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+
+![Beemray-Erweiterung](assets/beemray-extension.png)
 
 ## Voraussetzungen {#prerequisites}
 
