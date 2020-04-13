@@ -4,7 +4,7 @@ seo-title: Adobe Advertising Cloud-Erweiterung
 description: Die Adobe Advertising Cloud-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -19,6 +19,7 @@ Adobe Advertising Cloud ist eine Werbeerweiterung in der Adobe Echtzeit-Kundenda
 
 Dieses Ziel ist eine Experience Platform Launch-Erweiterung. Weitere Informationen zur Funktionsweise von Starterweiterungen in Adobe Echtzeit-CDP finden Sie unter [Experience Platform Launch Extensions - Übersicht](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![Adobe Advertising Cloud-Erweiterung](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
 
 ## Voraussetzungen {#prerequisites}
 
