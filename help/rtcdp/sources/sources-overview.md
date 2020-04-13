@@ -4,7 +4,7 @@ seo-title: Quellen in Adobe Experience Platform
 description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der Echtzeit-Kundendatenplattform.
 seo-description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der Echtzeit-Kundendatenplattform.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: ee2a490ebc802684a0761dc6589d6b30defc0398
 
 ---
 
@@ -13,4 +13,4 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 Die Echtzeit-Kundendatenplattform ermöglicht eine Erfassung von Daten aus externen Quellen und erlaubt es gleichzeitig, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu optimieren. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
-For a more detailed overview of sources, please read the [Sources overview](../../source-connectors/home.md).
+Für einen detaillierteren Überblick über die Quellen, einschließlich einer Liste der verfügbaren Quellen und Links zu Tutorials, lesen Sie bitte die [Quelldokumentation](../../source-connectors/home.md).
