@@ -4,7 +4,7 @@ seo-title: Erlebnisplattform-Starterweiterungen
 description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet.  Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
 seo-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet.  Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
 
 ---
 
@@ -17,6 +17,12 @@ Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten 
 Eine Einführung in die Funktionen zum Starten von Experience Platform finden Sie in den nachfolgend aufgeführten Ressourcen:
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/de-DE/launch/using/overview.html)
 * Experience Platform - [Schnellvideos](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html)zum Starten von Beginn Beginn mit [Einführung in Experience Platform - Einführung](https://www.youtube.com/embed/rwqqkG1SERU) und [Veröffentlichungsprozess - Übersicht](https://helpx.adobe.com/de/analytics/how-to/adobe-launch-publishing-process.html)und dann zu den nächsten Konzepten.
+
+## Finden der Starterweiterungen in der CDP-Benutzeroberfläche von Adobe in Echtzeit
+
+Um die Starterweiterungen in der Adobe Echtzeit-CDP-Oberfläche zu finden, suchen Sie den Filter **[!UICONTROL Destinations > Catalog]** und wählen Sie **[!UICONTROL Extensions]** ihn aus **[!UICONTROL Types]** .
+
+![Erweiterungsfilter in der Oberfläche](/help/rtcdp/destinations/assets/extensions-filter.png)
 
 ## Funktionsweise von Starterweiterungen
 
