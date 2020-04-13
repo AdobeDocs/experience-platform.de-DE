@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: 61b2df88bfe8cadd975eaa0b98872710aa3832d3
 
 ---
 
@@ -33,6 +33,22 @@ Das DULE-Framework vereinfacht und optimiert den Prozess der Kategorisierung von
 * Keine.
 
 Weitere Informationen finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md).
+
+
+## Ziele
+
+In der [Adobe Echtzeit-Kundendatenplattform](../../rtcdp/overview.md)sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten nahtlos an diese Partner aktivieren.
+
+### Neue Ziele
+
+Adobe Echtzeit-CDP unterstützt jetzt die Aktivierung von Daten auf mehr als fünfzig Experience Cloud-Starterweiterungen, wodurch Analysen, Personalisierung und andere Anwendungsfälle ermöglicht werden. Weitere Informationen finden Sie unter:
+
+| Dokumentation | Beschreibung |
+|--- | ---|
+| [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md) | In diesem Artikel wird der Unterschied zwischen Verbindungen und Erweiterungen in der CDP-Oberfläche von Adobe in Echtzeit erläutert und empfohlen, wann diese Ziele verwendet werden. |
+| [Erlebnis-Plattform-Starterweiterungen](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Auf dieser Seite werden die Funktionen von Launch-Erweiterungen, Anwendungsfälle für Listen und Links zur Dokumentation für jede Launch-Erweiterung in Adobe Echtzeit-CDP erläutert. |
+
+Weitere Informationen finden Sie in der Übersicht über die [Ziele](/help/rtcdp/destinations/destinations-overview.md).
 
 ## Intelligente Dienste
 
