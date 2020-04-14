@@ -4,7 +4,7 @@ seo-title: Zieltypen und Kategorien
 description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Starten Sie Erweiterungen, um Rohdaten an verschiedene Zieltypen weiterzuleiten. '
 seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Starten Sie Erweiterungen, um Rohdaten an verschiedene Zieltypen weiterzuleiten.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 ---
 
@@ -23,7 +23,7 @@ In der Adobe Echtzeit-Kundendatenplattform wird zwischen zwei Zieltypen untersch
 
 ### Verbindungen
 
-**Profil-Export** - und **Segmentexport** -Ziele in Adobe Echtzeit-Kundendatenplattform erfassen Ereignis-Daten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundendaten-Profil](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)zu bilden, Segmentierung anzuwenden und Segmente und qualifizierte Profil an Ziele zu exportieren.
+**Profil-Export** - und **Segmentexport** -Ziele in Adobe Echtzeit-Kundendatenplattform erfassen Ereignis-Daten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundendaten-Profil](/help/profile/home.md)zu bilden, Segmentierung anzuwenden und Segmente und qualifizierte Profil an Ziele zu exportieren.
 
 <br> 
 
@@ -68,7 +68,7 @@ Erweiterungen sind hilfreich, wenn Ereignis-Daten verwendet werden, um eine Akti
 
 ## Zielkategorien
 
-Die Ziele und Erweiterungen im [Zielkatalog](https://platform.adobe.com/destination/catalog) werden je nach Zielplattform (**Werbung**, **Cloud-Datenspeicherung**, **Umfrage,** E-Mail-Marketing **usw.) nach Zielplattform** gruppiert, je nachdem, welchen Marketinganwendungsfall sie Ihnen dabei helfen. Weitere Informationen zu den einzelnen Kategorien sowie zu den in den einzelnen Kategorien enthaltenen Zielen finden Sie in der [Zielkatalogdokumentation](/help/rtcdp/destinations/destinations-catalog.md).
+Die Verbindungen und Erweiterungen im [Zielkatalog](https://platform.adobe.com/destination/catalog) werden je nach Zielplattform (**Werbung**, **Cloud-Datenspeicherung**, **Umfrage-Plattformen**, **E-Mail-Marketing** usw.) gruppiert, je nachdem, welchen Marketing-Anwendungsfall sie Ihnen dabei helfen. Weitere Informationen zu den einzelnen Kategorien sowie zu den in den einzelnen Kategorien enthaltenen Zielen finden Sie in der [Zielkatalogdokumentation](/help/rtcdp/destinations/destinations-catalog.md).
 
-![Zielkategorien](/help/rtcdp/destinations/assets/destination-categories.png)
+![Zielkategorien](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
