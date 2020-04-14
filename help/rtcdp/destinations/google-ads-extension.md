@@ -4,12 +4,12 @@ seo-title: Google Ads-Erweiterung
 description: Die Google Ads-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 seo-description: Die Google Ads-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der Erweiterungsseite in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
 
-# Google Ads-Ziel
+# Google Ads-Erweiterung
 
 ## Übersicht {#overview}
 
@@ -19,7 +19,7 @@ Google Ads ist eine Anzeigenerweiterung in der Adobe Echtzeit-Kundendatenplattfo
 
 Dieses Ziel ist eine Experience Platform Launch-Erweiterung. Weitere Informationen zur Funktionsweise von Starterweiterungen in Adobe Echtzeit-CDP finden Sie unter [Experience Platform Launch Extensions - Übersicht](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Google Ads-Erweiterung](/help/rtcdp/destinations/assets/google-ads-extension.png)
+![Google Ads-Erweiterung](/help/rtcdp/destinations/assets/google-extension-2.png)
 
 ## Voraussetzungen {#prerequisites}
 
