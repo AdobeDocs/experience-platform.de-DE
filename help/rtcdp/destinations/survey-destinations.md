@@ -4,7 +4,7 @@ seo-title: Umfragen-Ziele
 description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit über Datenelemente und geben Daten mit Adobe Echtzeit-CDP frei.
 seo-description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit über Datenelemente und geben Daten mit Adobe Echtzeit-CDP frei.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 
 ---
 
@@ -15,7 +15,7 @@ Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in 
 
 Die Adobe Echtzeit-Kundendatenplattform unterstützt derzeit die unten aufgeführten Umfragen. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
-* [foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)
-* [InMoment (Experience Platform Launch Extension)](/help/rtcdp/destinations/inmoment-extension.md)
-* [Qualtrics Website Feedback (Erweiterung zu Experience Platform Launch)](qualtrics-extension.md)
-* [Web-API-Umfragen - FragePro (Experience Platform Launch-Erweiterung)](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
+* [Vorherige Erweiterung](/help/rtcdp/destinations/foresee-extension.md)
+* [InMoment-Erweiterung](/help/rtcdp/destinations/inmoment-extension.md)
+* [Qualtrics Website Feedback-Erweiterung](qualtrics-extension.md)
+* [Web-Konstante-Umfragen - FragePro-Erweiterung](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
