@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
+source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
 
 ---
 
@@ -14,6 +14,28 @@ source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 # Adobe Experience Platform – Versionshinweise
 
 ## Veröffentlichungsdatum: 8. April 2020
+
+## Erlebnis-Datenmodell (XDM)-System
+
+Standardisierung und Interoperabilität sind Schlüsselkonzepte der Experience Platform. Das von Adobe unterstützte Experience Data Model (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
+
+XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten auf der Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Audiencen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+### Neue Funktionen
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Automatische alternative Anzeigeinformationen | Die Schema-Registrierung wendet automatisch die im `alternateDisplayInfo` Deskriptor konfigurierten benutzerdefinierten Titel- und Beschreibungswerte an. |
+| Feldbeschränkungen skalieren | Die Schema-Registrierung erlaubt nicht mehr als 6000 skalare Felder in einem Schema. |
+| Leistungsüberholung | Das Schema Registry wurde überarbeitet, um die Anforderungen der Experience Platform besser zu erfüllen. |
+
+**Fehlerkorrekturen**
+
+* XDM in XED umgewandelt, um ein saubereres XED-Format für verschachtelte URI-Felder in Standard-XDM zu unterstützen.
+
+**Bekannte Probleme**
+
+* bekannt
 
 ## Data Governance
 
