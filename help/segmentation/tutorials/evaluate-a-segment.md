@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segment bewerten
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -452,7 +452,7 @@ Die folgenden Abschnitte beschreiben diese Optionen detaillierter.
 
 Wenn Sie das spezifische Profil kennen, auf das Sie zugreifen möchten, können Sie dies mit der Echtzeit-Client-Profil-API tun. Die vollständigen Schritte für den Zugriff auf einzelne Profil finden Sie in der Anleitung zum [Zugriff auf Echtzeit-Kundendaten mithilfe der Profil-API](../../profile/api/entities.md) .
 
-## Segment exportieren
+## Segment exportieren {#export}
 
 Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der `status` Attributwert &quot;ERFOLGT&quot;ist), können Sie Ihre Audience in ein Dataset exportieren, in dem darauf zugegriffen und darauf reagiert werden kann.
 
