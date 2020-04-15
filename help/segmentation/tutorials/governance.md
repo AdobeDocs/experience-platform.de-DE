@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erzwingen der Datenverwendungskonformität für Audience-Segmente
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 ---
 
@@ -22,7 +22,9 @@ Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Ado
 - [Segmentierung](../home.md): Wie lange Kundendaten in Echtzeit eine große Gruppe von im Profil Store enthaltenen Personen in kleinere Gruppen unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
 - [Datenverwaltung](../../data-governance/home.md): Die Datenverwaltung bietet die Infrastruktur für die Kennzeichnung und Durchsetzung der Datenverwendung (DULE) unter Verwendung der folgenden Komponenten:
    - [Datenverwendungsbeschriftungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern im Hinblick auf die Empfindlichkeit bei der Verarbeitung ihrer jeweiligen Daten verwendet werden.
-   - [Datenverwendungsrichtlinien](../../data-governance/api/getting-started.md): Konfigurationen, die angeben, welche Marketingaktionen für Daten zulässig sind, die durch bestimmte Datenverwendungsbeschriftungen kategorisiert wurden.
+   - [Datenverwendungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketingaktionen für Daten zulässig sind, die durch bestimmte Datenverwendungsbeschriftungen kategorisiert wurden.
+   - [Durchsetzung](../../data-governance/enforcement/overview.md)der Politik: Ermöglicht es Ihnen, Datenverwendungsrichtlinien zu erzwingen und Datenvorgänge zu verhindern, die Richtlinienverletzungen darstellen.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Plattform-APIs erfolgreich aufrufen zu können.
 
@@ -32,7 +34,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -48,11 +50,11 @@ Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlich
 
 - Content-Type: application/json
 
-## Eine Richtlinie zum Zusammenführen für eine Segmentdefinition suchen
+## Eine Richtlinie zum Zusammenführen für eine Segmentdefinition suchen {#merge-policy}
 
 Dieser Arbeitsablauf beginnt mit dem Zugriff auf ein bekanntes Audiencen-Segment. Segmente, die für die Verwendung im Echtzeit-Kundensegment aktiviert sind, enthalten eine Richtlinie-ID zum Zusammenführen innerhalb ihrer Segmentdefinition. Diese Richtlinie zum Zusammenführen enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datenverwendung enthalten.
 
-Mithilfe der [Segmentierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)können Sie eine Segmentdefinition anhand ihrer ID suchen, um die zugehörige Zusammenführungsrichtlinie zu finden.
+Mithilfe der [Segmentierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)können Sie eine Segmentdefinition anhand ihrer ID nachschlagen, um die zugehörige Mergerichtlinie zu finden.
 
 **API-Format**
 
@@ -62,7 +64,7 @@ GET /segment/definitions/{SEGMENT_DEFINITION_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | Die ID der Segmentdefinition, die Sie suchen möchten. |
+| `{SEGMENT_DEFINITION_ID}` | Die ID der Segmentdefinition, die Sie nachschlagen möchten. |
 
 **Anfrage**
 
@@ -117,9 +119,9 @@ Eine erfolgreiche Antwort gibt die Details der Segmentdefinition zurück.
 | -------- | ----------- |
 | `mergePolicyId` | Die ID der für die Segmentdefinition verwendeten Mergerichtlinie. Dies wird im nächsten Schritt verwendet. |
 
-## Suchen Sie die Quelldatasets aus der Richtlinie zum Zusammenführen
+## Suchen Sie die Quelldatasets aus der Richtlinie zum Zusammenführen {#datasets}
 
-Merge-Richtlinien enthalten Informationen zu ihren Quelldatasets, die wiederum Doppel-Beschriftungen enthalten. Sie können die Details einer Zusammenführungsrichtlinie nachschlagen, indem Sie die ID der Zusammenführungsrichtlinie in einer GET-Anforderung an die Profil-API angeben.
+Merge-Richtlinien enthalten Informationen zu ihren Quelldatasets, die wiederum Datenverwendungsbeschriftungen enthalten. Sie können die Details einer Zusammenführungsrichtlinie nachschlagen, indem Sie die ID der Zusammenführungsrichtlinie in einer GET-Anforderung an die Profil-API angeben.
 
 **API-Format**
 
@@ -129,7 +131,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | Die ID der im [vorherigen Schritt](#lookup-a-merge-policy-for-a-segment-definition)abgerufenen Zusammenführungsrichtlinie. |
+| `{MERGE_POLICY_ID}` | Die ID der im [vorherigen Schritt](#merge-policy)abgerufenen Zusammenführungsrichtlinie. |
 
 **Anfrage**
 
@@ -174,92 +176,195 @@ Eine erfolgreiche Antwort gibt die Details der Mergerichtlinie zurück.
 | `attributeMerge.type` | Der Konfigurationstyp für die Datenpriorität für die Zusammenführungsrichtlinie. Wenn der Wert `dataSetPrecedence`angegeben ist, werden die mit dieser Zusammenführungsrichtlinie verknüpften Datensätze unter `attributeMerge > data > order`. Ist der Wert `timestampOrdered`der Wert, werden alle Datensätze, die mit dem Schema verknüpft sind, auf das in der Zusammenführungsrichtlinie verwiesen `schema.name` wird, von der Richtlinie verwendet. |
 | `attributeMerge.data.order` | Ist dies der `attributeMerge.type` Fall `dataSetPrecedence`, ist dieses Attribut ein Array, das die IDs der von dieser Zusammenführungsrichtlinie verwendeten Datensätze enthält. Diese IDs werden im nächsten Schritt verwendet. |
 
-## Suchdatenverwendungsbeschriftungen für die Quelldatasets
+## Bewerten Sie Datensätze für Richtlinienverletzungen.
 
-Nachdem Sie die IDs der Quelldatasets der Richtlinie zusammengeführt haben, können Sie mit diesen IDs die für die Datasets selbst konfigurierten Datenverwendungsbeschriftungen und alle darin enthaltenen Datenfelder suchen.
+>[!NOTE]  Bei diesem Schritt wird davon ausgegangen, dass Sie über mindestens eine aktive Datenverwendungsrichtlinie verfügen, die verhindert, dass bestimmte Marketingaktionen für Daten mit bestimmten Beschriftungen durchgeführt werden. Wenn Sie keine anwendbaren Nutzungsrichtlinien für die zu evaluierenden Datensätze haben, führen Sie das [Richtlinienerstellungslehrgang](../../data-governance/policies/create.md) durch, um eine zu erstellen, bevor Sie mit diesem Schritt fortfahren.
 
-Mit dem folgenden Aufruf der [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) werden die mit einem Datensatz verknüpften Datenverwendungsbeschriftungen abgerufen, indem die ID im Anforderungspfad angegeben wird:
+Nachdem Sie die IDs der Quelldatasets der Richtlinie zur Zusammenführung erhalten haben, können Sie diese Datensätze mit der [DUL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gegen bestimmte Marketingaktionen auswerten, um Verstöße gegen die Datenverwendungsrichtlinie zu prüfen.
+
+Zur Auswertung der Datensätze müssen Sie den Namen der Marketingaktion im Pfad einer POST-Anforderung angeben und gleichzeitig die DataSet-IDs im Anforderungstext bereitstellen, wie im Beispiel unten dargestellt.
 
 **API-Format**
 
 ```http
-GET /dataSets/{DATASET_ID}/dule
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| Eigenschaft | Beschreibung |
-| -------- | ----------- |
-| `{DATASET_ID}` | Die ID des Datensatzes, dessen Datenverwendungsbeschriftungen Sie nachschlagen möchten. |
+| Parameter | Beschreibung |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion im Zusammenhang mit der Datenverwendungsrichtlinie, nach der Sie die Datensätze bewerten. Je nachdem, ob die Richtlinie von Adobe oder Ihrem Unternehmen definiert wurde, müssen Sie sie verwenden `/marketingActions/core` bzw. `/marketingActions/custom`verwenden. |
 
 **Anfrage**
 
+Die folgende Anforderung testet die `exportToThirdParty` Marketingaktion mit den im [vorherigen Schritt](#datasets)erhaltenen Datensätzen. Die Anforderungs-Nutzlast ist ein Array, das die IDs der einzelnen Datensätze enthält.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b95b155419ec801e6eee780/dule \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780"
+    },
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df"
+    }
+  ]'
 ```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `entityType` | Jedes Element im Payload-Array muss den Typ der zu definierenden Entität angeben. In diesem Anwendungsfall ist der Wert immer &quot;dataSet&quot;. |
+| `entityID` | Jedes Element im Payload-Array muss die eindeutige ID für einen Datensatz bereitstellen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Datenverwendungsbeschriftungen zurück, die mit dem Datensatz als Ganzes verknüpft sind, sowie alle mit dem Quelldatenfeld verknüpften Datenfelder.
+Eine erfolgreiche Antwort gibt den URI für die Marketingaktion, die von den bereitgestellten Datasets erfassten Datenverwendungsbeschriftungen und eine Liste aller Datenverwendungsrichtlinien zurück, die durch das Testen der Aktion gegen diese Beschriftungen verletzt wurden. In diesem Beispiel wird die Richtlinie &quot;Daten an Dritte exportieren&quot;im `violatedPolicies` Array angezeigt, was angibt, dass die Marketingaktion eine Richtlinienverletzung ausgelöst hat.
 
 ```json
 {
-    "connection": {},
-    "dataset": {
-        "identity": [],
-        "contract": [
-            "C3"
-        ],
-        "sensitive": [],
-        "contracts": [
-            "C3"
-        ],
-        "identifiability": [],
-        "specialTypes": []
+  "timestamp": 1556324277895,
+  "clientId": "{CLIENT_ID}",
+  "userId": "{USER_ID}",
+  "imsOrg": "{IMS_ORG}",
+  "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
+  "duleLabels": [
+    "C1",
+    "C2",
+    "C4",
+    "C5"
+  ],
+  "discoveredLabels": [
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C2",
+            ],
+            "path": "/properties/_customer"
+          },
+          {
+            "labels": [
+              "C5"
+            ],
+            "path": "/properties/geoUnit"
+          },
+          {
+            "labels": [
+              "C1"
+            ],
+            "path": "/properties/identityMap"
+          }
+        ]
+      }
     },
-    "fields": [],
-    "schemaFields": [
-        {
-            "path": "/properties/personalEmail/properties/address",
-            "identity": [
-                "I1"
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C5"
             ],
-            "contract": [
-                "C2",
-                "C9"
+            "path": "/properties/createdByBatchID"
+          },
+          {
+            "labels": [
+              "C5"
             ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C9"
-            ],
-            "identifiability": [
-                "I1"
-            ],
-            "specialTypes": []
+            "path": "/properties/faxPhone"
+          }
+        ]
+      }
+    }
+  ],
+  "violatedPolicies": [
+    {
+      "name": "Export Data to Third Party",
+      "status": "ENABLED",
+      "marketingActionRefs": [
+        "https://platform-stage.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty"
+      ],
+      "description": "Conditions under which data cannot be exported to a third party",
+      "deny": {
+        "operator": "OR",
+        "operands": [
+          {
+            "label": "C1"
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C3"
+              },
+              {
+                "label": "C7"
+              }
+            ]
+          }
+        ]
+      },
+      "imsOrg": "{IMS_ORG}",
+      "created": 1565651746693,
+      "createdClient": "{CREATED_CLIENT}",
+      "createdUser": "{CREATED_USER",
+      "updated": 1565723012139,
+      "updatedClient": "{UPDATED_CLIENT}",
+      "updatedUser": "{UPDATED_USER}",
+      "_links": {
+        "self": {
+          "href": "https://platform-stage.adobe.io/data/foundation/dulepolicy/policies/custom/5d51f322e553c814e67af1a3"
         }
-    ]
+      },
+      "id": "5d51f322e553c814e67af1a3"
+    }
+  ]
 }
 ```
 
 | Eigenschaft | Beschreibung |
-| -------- | ----------- |
-| `dataset` | Ein Objekt, das die Datenverwendungsbeschriftungen enthält, die auf den Datensatz als Ganzes angewendet werden. |
-| `schemaFields` | Ein Array von Objekten, die bestimmte Schema-Felder darstellen, auf die Datenverwendungsbeschriftungen angewendet wurden. |
-| `schemaFields.path` | Der Pfad des Schema-Felds, dessen Datenverwendungsbeschriftungen im selben Objekt aufgeführt sind. |
+| --- | --- |
+| `duleLabels` | Eine Liste von Datenverwendungsbeschriftungen, die aus den bereitgestellten Datensätzen extrahiert wurden. |
+| `discoveredLabels` | Eine Liste der Datensätze, die in der Anforderungsnutzlast bereitgestellt wurden, mit den Beschriftungen auf Datensatzebene und auf Feldebene, die in den einzelnen Datensätzen gefunden wurden. |
+| `violatedPolicies` | Ein Array, das alle Datenverwendungsrichtlinien auflistet, die durch Testen der (in `marketingActionRef`) Marketingaktion gegen die bereitgestellte `duleLabels`Variable verletzt wurden. |
+
+Mithilfe der in der API-Antwort zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverstöße bei deren Auftreten angemessen zu erzwingen.
 
 ## Datenfelder filtern
 
->[!NOTE] Dieser Schritt ist optional. Wenn Sie die im Segment enthaltenen Daten nicht auf Grundlage Ihrer Ergebnisse im vorherigen Schritt der [Suche nach Datenverwendungsbeschriftungen](#lookup-data-usage-labels-for-the-source-datasets)anpassen möchten, können Sie den letzten Schritt der [Auswertung der Daten auf Richtlinienverletzungen](#evaluate-data-for-policy-violations)überspringen.
-
-Wenn Sie die im Segmentsegment der Audience enthaltenen Daten anpassen möchten, können Sie dies mit einer der beiden folgenden Methoden tun:
+Wenn Ihr Segmentsegment die Auswertung nicht bestanden hat, können Sie die im Audience enthaltenen Daten mit einer der beiden folgenden Methoden anpassen.
 
 ### Aktualisieren der Richtlinie zum Zusammenführen der Segmentdefinition
 
-Beim Aktualisieren der Richtlinie zum Zusammenführen einer Segmentdefinition werden die Datensätze und Felder angepasst, die beim Ausführen des Segmentauftrags einbezogen werden. Weitere Informationen finden Sie im Abschnitt zum [Aktualisieren einer vorhandenen Zusammenführungsrichtlinie](../../profile/api/merge-policies.md) im Lernprogramm zur Zusammenführung.
+Beim Aktualisieren der Richtlinie zum Zusammenführen einer Segmentdefinition werden die Datensätze und Felder angepasst, die beim Ausführen des Segmentauftrags einbezogen werden. Weitere Informationen finden Sie im Abschnitt zum [Aktualisieren einer vorhandenen Richtlinie](../../profile/api/merge-policies.md#update) für die Zusammenführung der API im Tutorial zur API-Zusammenführung.
 
 ### Beim Exportieren des Segments bestimmte Datenfelder beschränken
 
@@ -267,11 +372,7 @@ Beim Exportieren eines Segments in ein Dataset mit der Echtzeit-Kunden-Profil-AP
 
 Betrachten Sie ein Segment mit Datenfeldern mit den Namen &quot;A&quot;, &quot;B&quot;und &quot;C&quot;. Wenn Sie nur das Feld &quot;C&quot;exportieren möchten, enthält der `fields` Parameter nur das Feld &quot;C&quot;. Dadurch werden die Felder &quot;A&quot;und &quot;B&quot;beim Exportieren des Segments ausgeschlossen.
 
-Weitere Informationen finden Sie im Abschnitt zum [Exportieren eines Segments](./evaluate-a-segment.md#export-a-segment) im Segmentierungstraining.
-
-## Daten für Richtlinienverletzungen auswerten
-
-Nachdem Sie nun die mit Ihrem Segmentsegment verknüpften Datenverwendungsbeschriftungen gesammelt haben, können Sie diese Bezeichnungen mit Marketingaktionen testen, um Verstöße gegen die Richtlinien zur Datenverwendung zu bewerten. Ausführliche Anweisungen zum Durchführen von Richtlinienbewertungen mit der [DUL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)finden Sie im Dokument zur [Richtlinienbewertung](../../data-governance/enforcement/overview.md).
+Weitere Informationen finden Sie im Abschnitt zum [Exportieren eines Segments](./evaluate-a-segment.md#export) im Segmentierungstraining.
 
 ## Nächste Schritte
 
