@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Überwachen der Datenerfassung
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,15 +21,21 @@ Klicken Sie in der Benutzeroberfläche [der](https://platform.adobe.com)Experien
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Die Seite zur *Streaming-End-to-End* -Überwachung wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gesendeten Nachrichten sowie eine detaillierte Liste der eingehenden Daten anzeigt.
+Die Seite zur *Streaming-End-to-End* -Überwachung wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der Streaming-Ereignis anzeigt, die von der Plattform empfangen werden, ein Diagramm, das die Rate der Streaming-Ereignis anzeigt, die erfolgreich vom [Echtzeit-Kundenkonto](../../profile/home.md)verarbeitet wurden, sowie eine detaillierte Liste der eingehenden Daten.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-Standardmäßig zeigt das Diagramm die Rate der Aufnahme in den letzten sieben Tagen an. Dieser Datumsbereich kann angepasst werden, um verschiedene Zeiträume anzuzeigen, indem Sie auf die hervorgehobene Schaltfläche klicken.
+Standardmäßig zeigt das obere Diagramm die Rate der Aufnahme in den letzten sieben Tagen an. Dieser Datumsbereich kann angepasst werden, um verschiedene Zeiträume anzuzeigen, indem Sie auf die hervorgehobene Schaltfläche klicken.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-Unter dem Diagramm befindet sich eine Liste aller Streaming-Erfassungsdatensätze, die dem oben angezeigten Datumsbereich entsprechen. Jeder aufgelistete Stapel zeigt die ID, den Namen des Datensatzes, bei der letzten Aktualisierung die Anzahl der Datensätze im Stapel sowie die Anzahl der Fehler (sofern vorhanden) an. Sie können auf einen der Datensätze klicken, um detaillierte Informationen zu diesem Datensatz zu erhalten.
+Das untere Diagramm zeigt die Rate der erfolgreich verarbeiteten Streaming-Ereignis nach Profil in den letzten sieben Tagen. Dieser Datumsbereich kann angepasst werden, um verschiedene Zeiträume anzuzeigen, indem Sie auf die hervorgehobene Schaltfläche klicken.
+
+> [!NOTE] Damit Daten in diesem Diagramm angezeigt werden, müssen sie zum Profil **explizit** aktiviert werden. Informationen zum Aktivieren von Streaming-Daten für Profil finden Sie im Benutzerhandbuch zu [Datensätzen](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
+
+Unter den Diagrammen befindet sich eine Liste aller Streaming-Erfassungsdatensätze, die dem oben angezeigten Datumsbereich entsprechen. Jeder aufgelistete Stapel zeigt die ID, den Namen des Datensatzes, bei der letzten Aktualisierung die Anzahl der Datensätze im Stapel sowie die Anzahl der Fehler (sofern vorhanden) an. Sie können auf einen der Datensätze klicken, um detaillierte Informationen zu diesem Datensatz zu erhalten.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
