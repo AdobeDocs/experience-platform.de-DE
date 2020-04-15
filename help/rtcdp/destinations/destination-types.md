@@ -4,7 +4,7 @@ seo-title: Zieltypen und Kategorien
 description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Starten Sie Erweiterungen, um Rohdaten an verschiedene Zieltypen weiterzuleiten. '
 seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Starten Sie Erweiterungen, um Rohdaten an verschiedene Zieltypen weiterzuleiten.
 translation-type: tm+mt
-source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
+source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
 
 ---
 
@@ -29,7 +29,7 @@ In der Adobe Echtzeit-Kundendatenplattform wird zwischen zwei Zieltypen untersch
 
 #### Profilexportziele
 
-Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält. Diese Ziele nutzen Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Das Ziel [der](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 Cloud-Datenspeicherung ist ein Beispiel dafür, wo Sie Dateien mit Profil-Exporten hinterlegen können.
+Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält. Diese Ziele nutzen Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Das Ziel [der](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 Cloud-Datenspeicherung ist ein Beispiel dafür, wo Sie Dateien mit Profil-Exporten ablegen können.
 
 #### Segmentexportziele
 
@@ -47,10 +47,11 @@ Das folgende Video führt Sie durch die Besonderheiten der beiden Zieltypen:
 
 Adobe Echtzeit-CDP nutzt die Leistungsstärke und Flexibilität von Experience Platform Launch, um Launch-Erweiterungen in die CDP-Oberfläche von Adobe in Echtzeit einzuschließen.
 
+>[!TIP]
+>
+>Detaillierte Informationen zu Experience Platform Launch-Erweiterungen, einschließlich Anwendungsfällen und deren Auffinden in der Oberfläche, finden Sie in der Übersicht über [Launch Extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+
 Starten Sie Erweiterungen, um Rohdaten an verschiedene Zieltypen weiterzuleiten. Stellen Sie sich Erweiterungen als **Ereignis Forwarding** -Zieltyp vor. Dies ist eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](/help/rtcdp/destinations/gainsight-extension.md) oder die [Bestätigungsstimme der Kundenerweiterung](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
-
-Detaillierte Informationen zu Experience Platform Launch-Erweiterungen finden Sie in der Übersicht über [Launch-Erweiterungen](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
-
 
 ![Erlebnis-Plattform-Starterweiterungen im Vergleich zu anderen Zielen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
