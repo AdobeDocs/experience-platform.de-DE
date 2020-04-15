@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -418,7 +418,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Mergerichtlinie zu
 
 Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) zu Beginn dieses Dokuments.
 
-## Eine Richtlinie zum Zusammenführen aktualisieren
+## Eine Richtlinie zum Zusammenführen aktualisieren {#update}
 
 Sie können eine vorhandene Richtlinie zum Zusammenführen ändern, indem Sie einzelne Attribute (PATCH) bearbeiten oder die gesamte Richtlinie zum Zusammenführen mit neuen Attributen (PUT) überschreiben. Nachfolgend sind Beispiele für die einzelnen Beispiele aufgeführt.
 
