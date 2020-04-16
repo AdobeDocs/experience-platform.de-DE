@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Dateneinbindung in der Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -35,7 +35,7 @@ Mit Experience Platform können Sie Quellverbindungen zu verschiedenen Datenanbi
 
 Quellverbindungen können so konfiguriert werden, dass Daten aus anderen Adobe-Anwendungen (z. B. Adobe Analytics und Adobe Audience Manager), Cloud-Datenspeicherung-Quellen von Drittanbietern (z. B. Azurblase, Amazon S3, FTP-Server und SFTP-Server) und CRM- von Drittanbietern (z. B. Microsoft Dynamics und Salesforce) erfasst werden.
 
-See the [Sources overview](../source-connectors/home.md) for more information.
+See the [Sources overview](../sources/home.md) for more information.
 
 ## Nächste Schritte
 
