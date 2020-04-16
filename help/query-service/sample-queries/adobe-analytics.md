@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Abfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # Beispieldaten für Abfragen für Adobe Analytics
 
-Daten aus ausgewählten Adobe Analytics-Report Suites werden in XDM ExperienceEvents umgewandelt und als Datensätze in Adobe Experience Platform integriert. In diesem Dokument wird eine Reihe von Anwendungsfällen erläutert, in denen Adobe Experience Platform Abfrage Service diese Daten nutzt. Die darin enthaltenen Beispieldaten sollten mit Ihren Adobe Analytics-Datensätzen zusammenarbeiten. Weitere Informationen zur Zuordnung zu XDM ExperienceEvents finden Sie in der Dokumentation [zur Feldzuordnung für](../../source-connectors/ui/adobe-applications/analytics-mapping.md) Analytics.
+Daten aus ausgewählten Adobe Analytics-Report Suites werden in XDM ExperienceEvents umgewandelt und als Datensätze in Adobe Experience Platform integriert. In diesem Dokument wird eine Reihe von Anwendungsfällen erläutert, in denen Adobe Experience Platform Abfrage Service diese Daten nutzt. Die darin enthaltenen Beispieldaten sollten mit Ihren Adobe Analytics-Datensätzen zusammenarbeiten. Weitere Informationen zur Zuordnung zu XDM ExperienceEvents finden Sie in der Dokumentation [zur Feldzuordnung für](../../sources/connectors/adobe-applications/analytics-mapping.md) Analytics.
 
 ## Erste Schritte
 
@@ -197,7 +197,7 @@ Ein anderer Typ einer Merchandising-Variablen in Adobe Analytics ist die Konvert
 1. Ein Benutzer führt eine interne Suche nach &quot;Winterhut&quot;durch, wodurch die für die Konversionssyntax aktivierte Merchandising eVar6 auf &quot;Interne Suche:Winterhut&quot;gesetzt wird
 2. Der Benutzer klickt auf &quot;Waffelmütze&quot; und landet auf der Produktdetailseite.\
    a. Die Landung hier löst ein `Product View` Ereignis für die &quot;Waffelmütze&quot; für $12.99 aus.\
-   b. Da `Product View` das Produkt &quot;Waffelmütze&quot; als Binding-Ereignis konfiguriert ist, ist es nun an den eVar6-Wert von &quot;internal search:winter hat&quot; gebunden. Jedes Mal, wenn das Produkt &quot;Waffelmütze&quot;gesammelt wird, wird es mit &quot;Interne Suche:Winterhut&quot;verknüpft, bis entweder (1) die Ablaufeinstellung erreicht ist oder (2) ein neuer eVar6-Wert festgelegt wird und das Binding-Ereignis mit diesem Produkt erneut auftritt.
+   b. Da `Product View` das Produkt &quot;Waffelmütze&quot; als Binding-Ereignis konfiguriert ist, ist es nun an den eVar6-Wert von &quot;internal search:winter hat&quot; gebunden. Jedes Mal, wenn das Produkt &quot;Waffelmütze&quot;gesammelt wird, wird es mit &quot;Interne Suche:Winterhut&quot;verknüpft, bis entweder (1) die Ablaufeinstellung erreicht ist oder (2) ein neuer eVar6-Wert festgelegt wird und das Binding-Ereignis erneut mit diesem Produkt auftritt.
 3. Der Benutzer fügt das Produkt zum Warenkorb hinzu und löst das `Cart Add` Ereignis aus.
 4. Der Benutzer führt eine weitere interne Suche nach &quot;Summer Shirt&quot;durch, wodurch die Konversionssyntax für Merchandising eVar6 auf &quot;internal search:Summer shirt&quot;gesetzt wird.
 5. Der Benutzer klickt auf &quot;sporty t-shirt&quot; und landet auf der Produktdetailseite.\
