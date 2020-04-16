@@ -1,0 +1,29 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Blue-Synapse-Analytics-Anschluss
+topic: overview
+translation-type: tm+mt
+source-git-commit: 41aa36f146834537813fb7e05a17291dbd4f9d9b
+
+---
+
+
+# Blue-Synapse-Analytics-Anschluss
+
+Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+
+Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eines Drittanbieters. Die Plattform kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relational, NoSQL oder Data Warehouse herstellen. Zur Unterstützung von Datenbankanbietern gehört die Azurblase Synapse Analytics.
+
+In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie die Azurblase-Synapse-Analyse mit APIs oder der Benutzeroberfläche mit der Plattform verbinden:
+
+## Azurblase-Synapse-Analyse mit APIs an die Plattform anschließen
+
+- [Erstellen eines Azurblase-Synapse-Analytics-Connectors mit der Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
+
+## Verbinden von Azurblase Synapse Analytics mit der Plattform mithilfe der Benutzeroberfläche
+
+- [Erstellen eines Azurblase-Synapse-Analytics-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
