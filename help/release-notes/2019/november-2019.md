@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -98,7 +98,7 @@ Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfl�
 
 * Quellschnittstellen f체r Cloud-basierte Datenspeicherung unterst체tzen nicht die Erfassung komprimierter Dateien.
 
-Weiterf체hrende Informationen zu Quellen finden Sie in der [Quellen체bersicht](../../source-connectors/home.md).
+Weiterf체hrende Informationen zu Quellen finden Sie in der [Quellen체bersicht](../../sources/home.md).
 
 ## Data Science-Arbeitsbereich
 
