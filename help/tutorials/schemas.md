@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM-Schema und -Deskriptoren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -23,7 +23,7 @@ Die Fähigkeit, die Beziehungen zwischen Ihren Kunden und ihre Interaktionen mit
 
 ## Erstellen eines Ad-hoc-Schemas
 
-Unter bestimmten Umständen kann es erforderlich sein, ein XDM-Schema (Experience Data Model) mit Feldern zu erstellen, die nur für die Verwendung durch einen einzigen Datensatz benannt werden. Dies wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schema werden in verschiedenen [Datenerfassungs](../ingestion/home.md) -Workflows für Experience Platform verwendet, einschließlich der Erfassung von CSV-Dateien und der Erstellung bestimmter Arten von [Quellverbindungen](../source-connectors/home.md). Das Erstellen eines Ad-hoc-Schemas erfolgt mithilfe der Schema Registry API und ist für die Verwendung mit anderen Experience Platform-Lehrgängen vorgesehen, bei denen im Rahmen ihres Workflows ein Ad-hoc-Schema erstellt werden muss. Informationen zum Erstellen eines Ad-hoc-Schemas finden Sie im Lernprogramm zum [Erstellen eines Ad-hoc-Schemas mit der API](../xdm/tutorials/ad-hoc.md).
+Unter bestimmten Umständen kann es erforderlich sein, ein XDM-Schema (Experience Data Model) mit Feldern zu erstellen, die nur für die Verwendung durch einen einzigen Datensatz benannt werden. Dies wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schema werden in verschiedenen [Datenerfassungs](../ingestion/home.md) -Workflows für Experience Platform verwendet, einschließlich der Erfassung von CSV-Dateien und der Erstellung bestimmter Arten von [Quellverbindungen](../sources/home.md). Das Erstellen eines Ad-hoc-Schemas erfolgt mithilfe der Schema Registry API und ist für die Verwendung mit anderen Experience Platform-Lehrgängen vorgesehen, bei denen im Rahmen ihres Workflows ein Ad-hoc-Schema erstellt werden muss. Informationen zum Erstellen eines Ad-hoc-Schemas finden Sie im Lernprogramm zum [Erstellen eines Ad-hoc-Schemas mit der API](../xdm/tutorials/ad-hoc.md).
 
 ## Nächste Schritte
 
