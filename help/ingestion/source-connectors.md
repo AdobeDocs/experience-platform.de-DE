@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -15,4 +15,4 @@ Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden,
 
 Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie Quellverbindungen zu verschiedenen Datenanbietern einfach einrichten können. Diese Quellverbindungen ermöglichen es Ihnen, Ihre Datenspeicherung- und CRM-Dienste zu authentifizieren,  für die Erfassung festzulegen und den Datendurchsatz zu verwalten.
 
-Weitere Informationen zu diesen Quell-Connectors finden Sie in der Dokumentation zu [Quell-Connectors](../source-connectors/home.md).
+Weitere Informationen zu diesen Quell-Connectors finden Sie in der Dokumentation zu [Quell-Connectors](../sources/home.md).
