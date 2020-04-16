@@ -6,14 +6,14 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-## Releasedatum: 11. März 2020
+## Veröffentlichungsdatum: 11. März 2020
 
 ## Data Governance
 
@@ -64,7 +64,7 @@ Es stehen neue Ziele zur Verfügung, mit denen Sie Ihre Adobe Experience Platfor
 
 | Ziel | Beschreibung |
 |--- | ---|
-| Ziele der Cloud-Datenspeicherung | Adobe Echtzeit-CDP kann Ihre Segmente jetzt als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte bereitstellen. Auf diese Weise können Sie Audiencen und deren Profil-Attribute über CSV- oder tabulatorgetrennte Dateien an Ihre internen Systeme senden. |
+| Cloud-Speicher-Ziele | Adobe Echtzeit-CDP kann Ihre Segmente jetzt als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte bereitstellen. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV- oder tabulatorgetrennte Dateien an Ihre internen Systeme senden. |
 | Werbeziele | Die Google-Zielkarte ist jetzt in drei Zielkarten für die drei verschiedenen Google-Plattformen aufgeteilt, die derzeit in Adobe Echtzeit-CDP unterstützt werden: Google Ads, Google Ad Manager, Google Display &amp; Video 360. |
 
 Weitere Informationen finden Sie in der Übersicht über die [Ziele](../../rtcdp/destinations/destinations-overview.md)
@@ -108,4 +108,4 @@ Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfl�
 
 * Keine
 
-Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../source-connectors/home.md).
+Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).
