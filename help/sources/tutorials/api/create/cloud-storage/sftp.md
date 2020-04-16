@@ -1,0 +1,189 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Erstellen eines SFTP-Connectors mit der Flow Service API
+topic: overview
+translation-type: tm+mt
+source-git-commit: a038abcdc411b638f41b94dea0140518c12f5600
+
+---
+
+
+# Erstellen eines SFTP-Connectors mit der Flow Service API
+
+Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+
+Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zur Verbindung von Experience Platform mit einem SFTP-Server (Secure File Transfer Protocol) zu führen.
+
+Wenn Sie die Benutzeroberfläche in Experience Platform lieber verwenden möchten, enthält das [UI-Lernprogramm](../../../ui/create/cloud-storage/ftp-sftp.md) eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen.
+
+## Erste Schritte
+
+Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+
+* [Quellen](../../../../home.md): Mit Experience Platform können Daten aus verschiedenen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern.
+* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der Flow Service API eine erfolgreiche Verbindung zu einem SFTP-Server herzustellen.
+
+### Erforderliche Berechtigungen erfassen
+
+Damit der Flow-Dienst eine Verbindung zu SFTP herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+
+| Berechtigung | Beschreibung |
+| ---------- | ----------- |
+| `host` | Der Name oder die IP-Adresse, die mit Ihrem SFTP-Server verknüpft ist. |
+| `username` | Der Benutzername mit Zugriff auf Ihren SFTP-Server. |
+| `password` | Das Kennwort für Ihren SFTP-Server. |
+
+### Lesen von Beispiel-API-Aufrufen
+
+In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+
+### Werte für erforderliche Kopfzeilen sammeln
+
+Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+
+* Genehmigung: Träger `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
+
+Alle Ressourcen in Experience Platform, einschließlich der Ressourcen des Flow-Dienstes, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+
+* x-sandbox-name: `{SANDBOX_NAME}`
+
+Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein zusätzlicher Medientyp-Header erforderlich:
+
+* Content-Type: `application/json`
+
+## Verbindungsspezifikationen nachschlagen
+
+Um eine SFTP-Verbindung zu erstellen, muss ein Satz von SFTP-Verbindungsspezifikationen innerhalb des Flow-Dienstes vorhanden sein. Der erste Schritt beim Verbinden von Plattform mit SFTP besteht darin, diese Spezifikationen abzurufen.
+
+**API-Format**
+
+Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Sie können Verbindungsspezifikationen für SFTP nachschlagen, indem Sie eine GET-Anforderung ausführen und Abfragen-Parameter verwenden.
+
+Beim Senden einer GET-Anforderung ohne Abfrage-Parameter werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können die Abfrage einschließen, `property=name=="sftp"` um Informationen speziell für SFTP abzurufen.
+
+```http
+GET /connectionSpecs
+GET /connectionSpecs?property=name=="sftp"
+```
+
+**Anfrage**
+
+Die folgende Anforderung ruft die Verbindungsspezifikationen für einen SFTP-Server ab.
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sftp"' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt die Verbindungsspezifikation für den SFTP-Server einschließlich der eindeutigen Kennung (`id`) zurück. Diese ID ist im nächsten Schritt erforderlich, um eine Basisverbindung zu erstellen.
+
+```json
+{
+    "items": [
+        {
+            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+            "name": "sftp",
+            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "version": "1.0",
+            "authSpec": [
+                {
+                    "name": "Basic Authentication for sftp",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "object",
+                        "description": "defines auth params required for connecting to sftp",
+                        "properties": {
+                            "host": {
+                                "type": "string",
+                                "description": "Specify the name or IP address of the SFTP server."
+                            },
+                            "userName": {
+                                "type": "string",
+                                "description": "Specify the user who has access to the SFTP server."
+                            },
+                            "password": {
+                                "type": "string",
+                                "description": "Specify the password for the user (userName).",
+                                "format": "password"
+                            }
+                        },
+                        "required": [
+                            "host",
+                            "userName",
+                            "password"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+
+## Basisverbindung erstellen
+
+Eine Basisverbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro SFTP-Konto ist nur eine Basisverbindung erforderlich, da diese zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+
+**API-Format**
+
+```http
+POST /connections
+```
+
+**Anfrage**
+
+```shell
+curl -X POST \
+    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d  "auth": {
+        "specName": "Basic Authentication for sftp",
+        "params": {
+            "host": "{HOST_NAME}",
+            "userName": "{USER_NAME}",
+            "password": "{PASSWORD}"
+        }
+    },
+    "connectionSpec": {
+        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+        "version": "1.0"
+    }
+}
+```
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `auth.params.host` | Der Hostname des SFTP-Servers. |
+| `auth.params.username` | Der mit Ihrem SFTP-Server verknüpfte Benutzername. |
+| `auth.params.password` | Das Ihrem SFTP-Server zugeordnete Kennwort. |
+| `connectionSpec.id` | Die Verbindungsspezifikation `id` des SFTP-Servers, der im vorherigen Schritt abgerufen wurde. |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Basisverbindung zurück. Diese ID ist erforderlich, um Ihren SFTP-Server im nächsten Lernprogramm zu erkunden.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
+## Nächste Schritte
+
+In diesem Lernprogramm haben Sie eine SFTP-Verbindung mit der Flow Service API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um Cloud-Datenspeicherung mithilfe der Flow Service API [zu](../../explore/cloud-storage.md) untersuchen oder Parkettdaten mithilfe der Flow Service API [zu erfassen](../../cloud-storage-parquet.md).
