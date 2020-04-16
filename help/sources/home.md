@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform-Quellschnittstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 92ba230d71e419e33567833ad562e6ffef996d0a
+source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
 
 ---
 
@@ -26,9 +26,10 @@ Quellen in Experience Platform sind in die folgenden Kategorien gruppiert:
 Mit Experience Platform können Daten aus anderen Adobe-Anwendungen, einschließlich Adobe Analytics, Adobe Audience Manager und Experience Platform Launch, erfasst werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über Adobe Audience Manager Connector](connectors/adobe-applications/audience-manager.md)
-- [Erstellen eines Adobe Audience Manager-Quellconnectors in der Benutzeroberfläche](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)
+- [Erstellen eines Adobe Audience Manager-Quellconnectors in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Übersicht über Adobe Analytics-Datenschnittstellen](connectors/adobe-applications/analytics.md)
-- [Erstellen eines Adobe Analytics-Quell-Connectors in der Benutzeroberfläche](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
+- [Erstellen eines Adobe Analytics-Quell-Connectors in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Erstellen eines Quell-Connectors für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Werbung
 
@@ -102,7 +103,7 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche auf der Grundlage v
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
 | **Ansicht-Quellen** auf | Gewähren Sie schreibgeschützten Zugriff auf Quellen in jedem Quelltyp auf der Registerkarte &quot; *Katalog* &quot;sowie auf die Registerkarten &quot; *Durchsuchen*&quot;, &quot; *Konten*&quot;und &quot; *DataFlow* &quot;. |
-| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen in den **Ansichten-Quellen** Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
+| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen, die in den **Ansichten-Quellen** enthalten sind, Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
 | **Ansicht-Quellen** deaktivieren und Quellen **verwalten** deaktivieren | Sperren Sie den Zugriff auf alle Quellen. |
 
 Weitere Informationen zu den verfügbaren Berechtigungen, die über die Admin-Konsole erteilt wurden, einschließlich dieser vier Quellen, finden Sie in der Übersicht über die [Zugriffskontrolle](../access-control/home.md).
