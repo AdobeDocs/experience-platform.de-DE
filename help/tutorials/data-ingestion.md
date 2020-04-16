@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Lernprogramme zur Datenüberlastung
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
 
 # Daten in die Experience Platform integrieren
 
-Die Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketingexperten ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Adobe Experience Platform Data Ingestion stellt die verschiedenen Methoden dar, mit denen Plattform Daten aus diesen Quellen zusammenfasst, sowie die Art und Weise, wie diese Daten im Data Lake für die Verwendung durch nachgelagerte Plattformdienste beibehalten werden. Die Dateningestion umfasst die Stapelverarbeitung, Streaming-Erfassung und Erfassung mithilfe von Quellschnittstellen. Weitere Informationen finden Sie in der Übersicht über die [Dateneinbettung](../ingestion/home.md) oder direkt in der [Quelldokumentation](../source-connectors/home.md).
+Die Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketingexperten ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Adobe Experience Platform Data Ingestion stellt die verschiedenen Methoden dar, mit denen Plattform Daten aus diesen Quellen zusammenfasst, sowie die Art und Weise, wie diese Daten im Data Lake für die Verwendung durch nachgelagerte Plattformdienste beibehalten werden. Die Dateningestion umfasst die Stapelverarbeitung, Streaming-Erfassung und Erfassung mithilfe von Quellschnittstellen. Weitere Informationen finden Sie in der Übersicht über die [Dateneinbettung](../ingestion/home.md) oder direkt in der [Quelldokumentation](../sources/home.md).
 
 ## Erstellen eines Quell-Connectors in der Benutzeroberfläche und der API
 
-Mithilfe von Source Connectors können Sie Daten aus mehreren Quellen erfassen und dann mit Plattformdiensten beschriftet, strukturiert und erweitert werden. Um mit der Erstellung eines Connectors über die Benutzeroberfläche zu beginnen, besuchen Sie bitte die Seite zum [Erstellen eines Quell-Connectors in der UI-Übersicht](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md). Um Quellschnittstellen mithilfe der API zu erstellen, [erstellen Sie mithilfe der Übersicht](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)zur Flussdienst-API einen Quellanschluss.
+Mithilfe von Source Connectors können Sie Daten aus mehreren Quellen erfassen und dann mit Plattformdiensten beschriftet, strukturiert und erweitert werden. Informationen zum Erstellen eines Quell-Connectors finden Sie in der [Quellenübersicht](../sources/home.md).
 
 ## Stapeldaten aufnehmen
 
