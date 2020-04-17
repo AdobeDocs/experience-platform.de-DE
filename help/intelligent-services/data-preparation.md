@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1d827d1637da05d3d2afc338f48911bb23039949
+source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
 
 ---
 
 
 # Daten für die Verwendung in Intelligent Services vorbereiten
 
-Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von **Consumer Experience Ereignisses (CEE)** entsprechen.
+Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze mit dem XDM-Schema von **Consumer ExperienceEvent (CEE)** übereinstimmen.
 
 In diesem Dokument erhalten Sie allgemeine Anleitungen zur Zuordnung Ihrer Marketing-Ereignis-Daten aus mehreren Kanälen zu diesem Schema. In diesen Anleitungen werden Informationen zu wichtigen Feldern im Schema zusammengefasst, die Ihnen bei der Bestimmung helfen, wie Sie Ihre Daten effektiv der Struktur zuordnen können.
 
@@ -52,7 +52,7 @@ Das `xdm:channel` Feld stellt den Marketing-Kanal im Zusammenhang mit dem Experi
 
 ## Zuordnung und Erfassung von Daten
 
-Sobald Sie festgestellt haben, ob Ihre Zeitreihendaten dem CEE-Schema zugeordnet werden können, können Sie den Prozess des Imports Ihrer Daten in Intelligent Services Beginn haben. Wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und sie in den Dienst zu integrieren.
+Sobald Sie festgestellt haben, ob Ihre Daten zu Marketing-Ereignissen dem CEE-Schema zugeordnet werden können, können Sie den Prozess der Datenübertragung in Intelligent Services Beginn einleiten. Wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und sie in den Dienst zu integrieren.
 
 Wenn Sie über ein Adobe Experience Platform-Abonnement verfügen und die Daten selbst zuordnen und erfassen möchten, führen Sie die im folgenden Abschnitt beschriebenen Schritte aus.
 
