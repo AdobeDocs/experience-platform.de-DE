@@ -1,9 +1,9 @@
 ---
-source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
-translation-type: ht
+source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
+translation-type: tm+mt
 
 ---
-# Artikel beitragen
+# Beitrag zum Inhalt
 
 Wir freuen uns über Inhaltsbeiträge unserer Community und von Adobe-Mitarbeitern außerhalb der Dokumentationsteams.
 
@@ -11,7 +11,7 @@ Wir freuen uns über Inhaltsbeiträge unserer Community und von Adobe-Mitarbeite
 
 Für dieses Projekt gilt der [Adobe Open Source-Verhaltenskodex](code-of-conduct.md) oder der [.NET Foundation-Verhaltenskodex](https://dotnetfoundation.org/code-of-conduct). Weitere Informationen finden Sie im Artikel [Beitragen](contributing.md).
 
-## Informationen zu Ihren Beiträgen zu den Adobe-Inhalten
+## Möglichkeiten zum Beitrag zu Adobe-Inhalten
 
 Lesen Sie das [Adobe Docs-Mitarbeiter-Handbuch](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
@@ -33,26 +33,32 @@ Wenn Sie Mitglied der Adobe-Community sind und einen Artikel erstellen oder umfa
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Umfangreiche Änderungen von Adobe-Mitarbeitern
+### Wichtige Änderungen oder neue Artikel von Adobe-Mitarbeitern
 
-Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine [!UICONTROL Adobe Experience Cloud]-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. Siehe [Handbuch zur internen Zusammenarbeit](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
+Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine Adobe Experience Cloud-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. Weitere Informationen finden Sie im Handbuch zur [internen Zusammenarbeit](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) .
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
+## Kontakt zum Dokumentationsteam der Experience Platform
+
+Wie oben erläutert, können Mitglieder der Adobe-Community eine Ausgabe einreichen, die dem jeweiligen Autor zugewiesen wird. Wenn Sie Adobe-Mitarbeiter sind, können Sie eine Ausgabe senden oder sich direkt an das Experience Platform-Dokumentationsteam wenden. Informationen zum Interessentenautor für einen bestimmten Plattformbereich finden Sie im Wiki [zur](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)Adobe Experience Platform-Dokumentation.
+
 ## Werkzeuge und Einrichtung
+
+### GitHub-Benutzeroberfläche
 
 Community-Mitarbeiter können die GitHub-Benutzeroberfläche zur einfachen Bearbeitung oder zur Abspaltung des Repositorys verwenden, um umfangreiche Beiträge vorzunehmen.
 
 Weitere Informationen finden Sie im [Adobe Docs-Mitarbeiter-Handbuch](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
-## Markdown zum Formatieren Ihres Themas verwenden
+### Markdown
 
 Alle Artikel in diesem Repository verwenden GitHub Flavored Markdown. Wenn Sie mit Markdown nicht vertraut sind, lesen Sie:
 
 * [Markdown-Grundlagen](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [Druckbares Markdown-Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## Bezeichnungen
+### Bezeichnungen
 
 Im öffentlichen Repository werden automatisierte Bezeichnungen Pull-Anforderungen zugewiesen, damit wir den Arbeitsablauf für Pull-Anforderungen verwalten und Ihnen mitteilen können, was mit Ihrer Pull-Anforderung passiert:
 
