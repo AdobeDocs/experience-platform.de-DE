@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Akzeptierte Identitäts-Namensraum und Qualifikatoren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 ## Standard-Identitäts-Namensraum
 
-Alle Identitäten, die an den Datenschutzdienst gesendet werden, müssen unter einem bestimmten Namensraum angegeben werden. Identity Namensraums sind eine Komponente des [Adobe Experience Platform Identity Service](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) , die den Kontext angibt, auf den sich eine Identität bezieht.
+Alle Identitäten, die an den Datenschutzdienst gesendet werden, müssen unter einem bestimmten Namensraum angegeben werden. Identity Namensraums sind eine Komponente des [Adobe Experience Platform Identity Service](../../identity-service/home.md) , die den Kontext angibt, auf den sich eine Identität bezieht.
 
 In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitätstypen, die von Experience Platform bereitgestellt werden, zusammen mit den zugehörigen `namespace` Werten aufgeführt:
 
@@ -22,7 +22,7 @@ In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitä
 | E-Mail  | E-Mail  | 6 |
 | Telefon | Telefon | 7 |
 | Adobe Advertising Cloud ID | AdCloud | 411 |
-| UUID von Adobe Audience Manager | CORE | 0 |
+| UUID für Adobe Audience Manager | CORE | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
 | Adobe Zielgruppe ID | TNTID | 9 |
 | Apple-ID für Werbetreibende | IDFA | 20915 |
@@ -31,7 +31,7 @@ In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitä
 
 >[!NOTE] Jeder Identitätstyp verfügt auch über einen `namespaceId` ganzzahligen Wert, der anstelle der `namespace` Zeichenfolge verwendet werden kann, wenn die `type` Eigenschaft der Identität auf &quot;namespaceId&quot;gesetzt wird. Weitere Informationen finden Sie im Abschnitt zu [Namensraum-Qualifikatoren](#namespace-qualifiers) .
 
-Sie können eine Liste von Identitäts-Namensräumen abrufen, die in Ihrem Unternehmen verwendet werden, indem Sie eine GET-Anforderung an den `idnamespace/identities` Endpunkt in der Identitätsdienst-API stellen. Weitere Informationen finden Sie im Entwicklerhandbuch für den [Identitätsdienst](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_api.md) .
+Sie können eine Liste von Identitäts-Namensräumen abrufen, die in Ihrem Unternehmen verwendet werden, indem Sie eine GET-Anforderung an den `idnamespace/identities` Endpunkt in der Identitätsdienst-API stellen. Weitere Informationen finden Sie im Entwicklerhandbuch für den [Identitätsdienst](../../identity-service/api/getting-started.md) .
 
 ## Namensraum-Qualifikatoren
 
