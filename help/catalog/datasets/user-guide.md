@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -50,7 +50,7 @@ Für stabilere Methoden zum Zugriff auf Ihre Daten bietet Experience Platform na
 * [Übersicht über den Abfrage Service](../../query-service/home.md)
 * [JupyterLab-Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md)
 
-## Datensatz erstellen
+## Datensatz erstellen {#create}
 
 Um einen neuen Datensatz zu erstellen, klicken Sie im Dashboard &quot; **Datensatz** &quot;auf &quot;Datensatz ** erstellen&quot;, um einen neuen Datensatz zu erstellen.
 
@@ -142,7 +142,7 @@ Wenn Sie den Stapel löschen möchten, klicken Sie dazu auf Stapel **löschen** 
 
 ## Nächste Schritte
 
-Dieses Benutzerhandbuch enthält Anweisungen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Benutzeroberfläche von Experience Platform. Schritte zum Ausführen gemeinsamer Plattform-Workflows mit Datensätzen finden Sie in den folgenden Lernprogrammen:
+Dieses Benutzerhandbuch enthält Anweisungen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Benutzeroberfläche von Experience Platform. Schritte zum Ausführen gemeinsamer Plattform-Workflows mit Datensätzen finden Sie in den folgenden Übungen:
 
 * [Erstellen eines Datensatzes mit APIs](create.md)
 * [Abfrage von Datensatzdaten mit der Datenzugriffs-API](../../data-access/home.md)
