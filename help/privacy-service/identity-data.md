@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identitätsdaten für Datenschutzanforderungen
 topic: overview
 translation-type: tm+mt
-source-git-commit: f2fe9c01c8355d0b312a0236f76085d1743aa8cc
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -23,13 +23,13 @@ Bei der Bearbeitung von Kundendatenanforderungen im Datenschutzdienst kann eine 
 
 Daher ist es erforderlich, dass jede an den Datenschutzdienst gesendete Identität mit einem **Namensraum** versehen wird, der einen Kontext bietet, indem der Identitätswert mit seinem System der Herkunft verknüpft wird. Ein Namensraum kann ein allgemeines Konzept wie eine E-Mail-Adresse (&quot;E-Mail&quot;) oder die Identität einer bestimmten Anwendung zuordnen, z. B. einer Adobe Advertising Cloud ID (&quot;AdCloud&quot;) oder einer Adobe-Zielgruppe-ID (&quot;TNTID&quot;).
 
-Der Identitätsdienst für Adobe Experience Platform verwaltet einen Store von global definierten und benutzerdefinierten Identitäts-Namensräumen. Weitere Informationen zu Namensräumen finden Sie in der Übersicht über den [Identitäts-Namensraum](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md). Eine Liste der im Datenschutzdienst häufig verwendeten Namensraum und Namensraum-Qualifikatoren finden Sie im [Anhang](api/appendix.md) im Entwicklerhandbuch.
+Der Identitätsdienst für Adobe Experience Platform verwaltet einen Store von global definierten und benutzerdefinierten Identitäts-Namensräumen. Weitere Informationen zu Namensräumen finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md). Eine Liste der im Datenschutzdienst häufig verwendeten Namensraum und Namensraum-Qualifikatoren finden Sie im [Anhang](api/appendix.md) im Entwicklerhandbuch.
 
 ## ECID- und Einwahldienst
 
-Der Adobe Experience Cloud-Identitätsdienst dient als gemeinsames Identifizierungsframework für Experience Cloud und weist jedem Site-Besucher eine eindeutige, beständige ID zu. Mit der Experience Cloud ID (ECID) wird die Aktivität eines Kunden durch die Verwendung eines Erstanbieter-Cookies verfolgt, ein Gerät kann für mehrere Anwendungen eindeutig identifiziert werden und Sie können denselben Site-Besucher und dessen Daten in verschiedenen Experience Cloud-Anwendungen identifizieren. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) for more information.
+Der Adobe Experience Cloud-Identitätsdienst dient als gemeinsames Identifizierungsframework für Experience Cloud und weist jedem Site-Besucher eine eindeutige, beständige ID zu. Mit der Experience Cloud ID (ECID) wird die Aktivität eines Kunden durch die Verwendung eines Erstanbieter-Cookies verfolgt, ein Gerät kann für mehrere Anwendungen eindeutig identifiziert werden und Sie können denselben Site-Besucher und dessen Daten in verschiedenen Experience Cloud-Anwendungen identifizieren. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/de-DE/id-service/using/intro/overview.html) for more information.
 
-Mit dem optionalen Dienst, einer Erweiterung des Experience Cloud-Identitätsdienstes, können Sie Protokolle für Ihre Anwendung einrichten, mit denen Besucher bestimmen können, ob ein Cookie auf dem Gerät oder Browser des Besuchers gesetzt werden kann. Ausführlichere Informationen zum Opt-in-Dienst, einschließlich der Einrichtung des Dienstes für Ihre Anwendung, finden Sie in der Dokumentation zum [Einstiegsdienst](https://docs.adobe.com/content/help/en/id-service/using/implementation/opt-in-service/optin-overview.html).
+Mit dem optionalen Dienst, einer Erweiterung des Experience Cloud-Identitätsdienstes, können Sie Protokolle für Ihre Anwendung einrichten, mit denen Besucher bestimmen können, ob ein Cookie auf dem Gerät oder Browser des Besuchers gesetzt werden kann. Ausführlichere Informationen zum Opt-in-Dienst, einschließlich der Einrichtung des Dienstes für Ihre Anwendung, finden Sie in der Dokumentation zum [Einstiegsdienst](https://docs.adobe.com/content/help/de-DE/id-service/using/implementation/opt-in-service/optin-overview.html).
 
 Sobald Ihren Site-Besuchern ECIDs zugewiesen wurden, können Sie diese IDs mithilfe der Adobe Privacy JavaScript Library abrufen, um sie in Datenschutzanforderungen zu verwenden, wie im nächsten Abschnitt beschrieben.
 
