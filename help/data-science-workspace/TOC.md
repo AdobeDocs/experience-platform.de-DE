@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Science Workspace Help
+user-guide-title: Hilfe zu Adobe Experience Platform Data Science Workspace
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 8825ed17f4e1c8b325fab9256dfbc666f3ea8462
 
 ---
 
@@ -50,5 +50,6 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
    * [Veröffentlichen eines Modells als Dienst (Benutzeroberfläche)](models-recipes/publish-model-service-ui.md)
    * [Veröffentlichen eines Modells als Dienst (API)](models-recipes/publish-model-service-api.md)
    * [Planen der automatisierten Schulung und Auswertung eines Dienstes (UI)](models-recipes/schedule-models-ui.md)
+* [Migrationshandbücher für Rezept und Notebooks](recipe-notebook-migration.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
