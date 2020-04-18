@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verpacktes Rezept importieren (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ---
 
@@ -15,7 +15,7 @@ Dieses Lernprogramm bietet einen Einblick in die Konfiguration und den Import ei
 
 ## Voraussetzungen
 
-Dieses Lernprogramm erfordert ein gepacktes Rezept in Form einer Docker-Bild-URL oder einer Binärdatei. Weitere Informationen finden Sie im Lernprogramm zum [Verpacken von Quelldateien in einem Rezept](./package-source-files-recipe.md) .
+Dieses Lernprogramm erfordert ein gepacktes Rezept in Form einer Docker-Bild-URL. Weitere Informationen finden Sie im Lernprogramm zum [Verpacken von Quelldateien in einem Rezept](./package-source-files-recipe.md) .
 
 ## Arbeitsablauf der Benutzeroberfläche
 
@@ -23,10 +23,14 @@ Für das Importieren eines gepackten Rezepts in Data Science Workspace sind spez
 
 Der Arbeitsablauf zum Importieren eines Paketrezepts besteht aus den folgenden Schritten:
 - [Konfigurieren eines Rezepts](#configure)
-- [Binärbasiertes Rezept importieren - PySpark](#pyspark)
-- [Binärbasiertes Rezept importieren - Scala Spark](#scala)
 - [Dockerbasiertes Rezept importieren - Python](#python)
 - [Dockerbasiertes Rezept importieren - R](#r)
+- [Docker-basiertes Rezept importieren - PySpark](#pyspark)
+- [Docker-basiertes Rezept importieren - Scala](#scala)
+
+Veraltete Workflows:
+- [Binärbasiertes Rezept importieren - PySpark](#pyspark-deprecated)
+- [Binärbasiertes Rezept importieren - Scala Spark](#scala-deprecated)
 
 ### Konfigurieren eines Rezepts {#configure}
 
@@ -106,16 +110,156 @@ Im Folgenden finden Sie eine Beispielkonfigurationsdatei mit standardmäßigen T
 | `max_depth` | Zahl | Maximale Tiefe eines Baums in der Random Forest Classifier. |
 | `ACP_DSW_INPUT_FEATURES` | Zeichenfolge | Liste von kommagetrennten Eingabe-Schema-Attributen. |
 | `ACP_DSW_TARGET_FEATURES` | Zeichenfolge | Liste von kommagetrennten Schema-Attributen. |
-| `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolesch  | Bestimmt, ob Eingabe- und Ausgabefunktionen geändert werden können |
+| `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolesch | Bestimmt, ob Eingabe- und Ausgabefunktionen geändert werden können |
 | `tenantId` | Zeichenfolge | Diese ID stellt sicher, dass die von Ihnen erstellten Ressourcen korrekt benannt und in Ihrer IMS-Organisation enthalten sind. [Gehen Sie wie folgt vor](../../xdm/api/getting-started.md#know-your-tenant_id) , um Ihre Mandanten-ID zu finden. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | Zeichenfolge | Das für die Modellschulung verwendete Input-Schema. Lassen Sie diese Angabe beim Importieren in die Benutzeroberfläche leer. Ersetzen Sie sie beim Importieren mit der API durch die Schulung SchemaID. |
 | `evaluation.labelColumn` | Zeichenfolge | Spaltenbeschriftung für Evaluierungsvisualisierungen. |
 | `evaluation.metrics` | Zeichenfolge | Kommagetrennte Liste von Bewertungsmetriken, die für die Bewertung eines Modells verwendet werden. |
 | `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | Zeichenfolge | Das für das Scoring eines Schemas verwendete Ausgabemodell. Lassen Sie diese Angabe beim Importieren in die Benutzeroberfläche leer. Ersetzen Sie sie beim Importieren mit der API durch eine Bewertungsschema-ID. |
 
-Für diese Übung können Sie die Standardkonfigurationsdateien für das Rezept &quot;Einzelhandel&quot;im Data Science Workspace-Referenzhandbuch wie gewünscht belassen.
+Für diese Übung können Sie die Standardkonfigurationsdateien für das Rezept Einzelhandel im Data Science Workspace-Referenzhandbuch wie gewünscht beibehalten.
 
-### Binärbasiertes Rezept importieren - PySpark {#pyspark}
+### Dockerbasiertes Rezept importieren - Python {#python}
+
+Beginn durch Navigieren und Auswählen von **Workflows** oben links in der Plattform-Benutzeroberfläche. Wählen Sie als Nächstes *Rezept* importieren und klicken Sie auf **Starten**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateien* wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **Weiter** .
+
+![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> In den Quelldateien [für das Verpacken in einem Rezept](./package-source-files-recipe.md) -Lernprogramm wurde am Ende der Erstellung des Retail Sales-Rezepts mit Python-Quelldateien eine Docker-URL bereitgestellt.
+
+Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit Python-Quelldateien erstellten gepackten Rezept in das Feld **Quell-URL** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag &amp; Drop oder verwenden Sie den Dateisystem- **Browser**. Die angegebene Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Wählen Sie **Python** in der Dropdown-Liste *Laufzeit* und **Klassifizierung** in der Dropdown-Liste *Typ* . Klicken Sie nach dem Ausfüllen auf **Weiter** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
+
+>[!NOTE]
+> *Typ *unterstützt **Classification**und **Regression**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **Benutzerdefiniert**.
+
+![](../images/models-recipes/import-package-ui/recipe_source_python.png)
+
+Wählen Sie anschließend die Schema für die Eingabe und Ausgabe im Einzelhandel unter &quot;Schema *verwalten*&quot;aus. Sie wurden mithilfe des bereitgestellten Bootstrap-Skripts im Lernprogramm zum Erstellen des Schemas und des Datensatzes für den Einzelhandel [erstellt](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Klicken Sie im Abschnitt *Funktionsverwaltung* auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
+
+Überprüfen Sie das Rezept, fügen Sie Konfigurationen hinzu, ändern oder entfernen Sie sie nach Bedarf. Klicken Sie auf **Fertig stellen** , um das Rezept zu erstellen.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, wie ein Modell in Data Science Workspace mit dem neu erstellten Rezept Einzelhandelsverkäufe erstellt wird.
+
+### Dockerbasiertes Rezept importieren - R {#r}
+
+Beginn durch Navigieren und Auswählen von **Workflows** oben links in der Plattform-Benutzeroberfläche. Wählen Sie als Nächstes *Rezept* importieren und klicken Sie auf **Starten**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateien* wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **Weiter** .
+
+![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> In den Quelldateien [für das Verpacken in einem Rezept](./package-source-files-recipe.md) -Lernprogramm wurde am Ende der Erstellung des Retail Sales-Rezepts mit R-Quelldateien eine Docker-URL bereitgestellt.
+
+Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit R-Quelldateien erstellten gepackten Rezept in das Feld **Quell-URL** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag &amp; Drop oder verwenden Sie den Dateisystem- **Browser**. Die angegebene Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Wählen Sie **R** in der Dropdownliste *Laufzeit* und **Classification** in der Dropdownliste *Typ* . Klicken Sie nach dem Ausfüllen auf **Weiter** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
+
+>[!NOTE]
+> *Typ *unterstützt **Classification**und **Regression**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **Benutzerdefiniert**.
+
+![](../images/models-recipes/import-package-ui/recipe_source_R.png)
+
+Wählen Sie anschließend die Schema für die Eingabe und Ausgabe im Einzelhandel unter &quot;Schema *verwalten*&quot;aus. Sie wurden mithilfe des bereitgestellten Bootstrap-Skripts im Lernprogramm zum Erstellen des Schemas und des Datensatzes für den Einzelhandel [erstellt](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Klicken Sie im Abschnitt *Funktionsverwaltung* auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
+
+Überprüfen Sie das Rezept, fügen Sie Konfigurationen hinzu, ändern oder entfernen Sie sie nach Bedarf. Klicken Sie auf **Fertig stellen** , um das Rezept zu erstellen.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, wie ein Modell in Data Science Workspace mit dem neu erstellten Rezept Einzelhandelsverkäufe erstellt wird.
+
+### Docker-basiertes Rezept importieren - PySpark {#pyspark}
+
+Beginn durch Navigieren und Auswählen von **Workflows** oben links in der Plattform-Benutzeroberfläche. Wählen Sie als Nächstes *Rezept* importieren und klicken Sie auf **Starten**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateien* wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **Weiter** , um fortzufahren.
+
+![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> In der [Paketquellendatei in einem Rezept](./package-source-files-recipe.md) -Tutorial wurde am Ende der Erstellung des Retail Sales-Rezeptes mit PySpark-Quelldateien eine Docker-URL bereitgestellt.
+
+Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit PySpark-Quelldateien erstellten gepackten Rezept in das Feld **Quell-URL** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag &amp; Drop oder verwenden Sie den Dateisystem- **Browser**. Die angegebene Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Wählen Sie **PySpark** in der Dropdown-Liste *Laufzeit* . Sobald die PySpark-Laufzeit ausgewählt ist, wird das standardmäßige Artefakt automatisch in **Docker** eingetragen. Wählen Sie anschließend **Klassifizierung** in der Dropdown-Liste *Typ* . Klicken Sie nach dem Ausfüllen auf **Weiter** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
+
+>[!NOTE]
+> *Typ *unterstützt **Classification**und **Regression**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **Benutzerdefiniert**.
+
+![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
+
+Wählen Sie anschließend die Schema für die Eingabe und Ausgabe im Einzelhandel unter &quot;Schema *verwalten*&quot;aus. Sie wurden mithilfe des bereitgestellten Bootstrap-Skripts im Lernprogramm zum Erstellen des Schemas und des Datensatzes für den Einzelhandel [erstellt](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Klicken Sie im Abschnitt *Funktionsverwaltung* auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
+
+Überprüfen Sie das Rezept, fügen Sie Konfigurationen hinzu, ändern oder entfernen Sie sie nach Bedarf. Klicken Sie auf **Fertig stellen** , um das Rezept zu erstellen.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, wie ein Modell in Data Science Workspace mit dem neu erstellten Rezept Einzelhandelsverkäufe erstellt wird.
+
+### Docker-basiertes Rezept importieren - Scala {#scala}
+
+Beginn durch Navigieren und Auswählen von **Workflows** oben links in der Plattform-Benutzeroberfläche. Wählen Sie als Nächstes *Rezept* importieren und klicken Sie auf **Starten**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateien* wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **Weiter** , um fortzufahren.
+
+![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> In der [Paketquellendatei in einem Rezept](./package-source-files-recipe.md) -Tutorial wurde am Ende der Erstellung des Retail Sales-Rezeptes mit Scala-Quelldateien (Spark) eine Docker-URL bereitgestellt.
+
+Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit Scala-Quelldateien erstellten gepackten Rezept in das Feld *Quell-URL* ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag &amp; Drop oder verwenden Sie den Dateisystem- **Browser**. Die angegebene Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Wählen Sie **Spark** in der Dropdown-Liste *Laufzeit* . Nach Auswahl der Spark-Laufzeit wird das standardmäßige Artefakt automatisch mit **Docker** gefüllt. Wählen Sie dann **Regression** aus der Dropdownliste *Typ* . Klicken Sie nach dem Ausfüllen auf **Weiter** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
+
+>[!NOTE]
+> *Typ *unterstützt **Classification**und **Regression**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **Benutzerdefiniert**.
+
+![](../images/models-recipes/import-package-ui/scala-databricks.png)
+
+Wählen Sie anschließend die Schema für die Eingabe und Ausgabe im Einzelhandel unter &quot;Schema *verwalten*&quot;aus. Sie wurden mithilfe des bereitgestellten Bootstrap-Skripts im Lernprogramm zum Erstellen des Schemas und des Datensatzes für den Einzelhandel [erstellt](../models-recipes/create-retails-sales-dataset.md) .
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Klicken Sie im Abschnitt *Funktionsverwaltung* auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
+
+Überprüfen Sie das Rezept, fügen Sie Konfigurationen hinzu, ändern oder entfernen Sie sie nach Bedarf. Klicken Sie auf **Fertig stellen** , um das Rezept zu erstellen.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, wie ein Modell in Data Science Workspace mit dem neu erstellten Rezept Einzelhandelsverkäufe erstellt wird.
+
+## Nächste Schritte
+
+Dieses Lernprogramm bietet einen Einblick in die Konfiguration und den Import eines Skripts in Data Science Workspace. Sie können ein Modell jetzt mit dem neu erstellten Rezept erstellen, ausbilden und auswerten.
+
+- [Erstellen und Auswerten eines Modells in der Benutzeroberfläche](./train-evaluate-model-ui.md)
+- [Erstellen und Auswerten eines Modells mithilfe der API](./train-evaluate-model-api.md)
+
+## Veraltete Workflows
+
+>[!CAUTION]
+>Das Importieren binärer Rezepte wird in PySpark 3 (Spark 2.4) und Scala (Spark 2.4) nicht mehr unterstützt.
+
+### Binärbasiertes Rezept importieren - PySpark {#pyspark-deprecated}
 
 In den Quelldateien [Package in ein Rezept](./package-source-files-recipe.md) -Lernprogramm wurde eine **EGG** -Binärdatei mithilfe der Quelldateien Retail Sales PySpark erstellt.
 
@@ -128,14 +272,14 @@ Importieren Sie die bereitgestellte Konfigurationsdatei auch per Drag &amp; Drop
    ![](../images/models-recipes/import-package-ui/recipe_source.png)
 4. An dieser Stelle können Fehler auftreten. Dies ist ein normales Verhalten und ist zu erwarten. Wählen Sie die Schemas für die Eingabe und Ausgabe im Einzelhandel unter **Verwalten von Schemas** aus. Sie wurden mithilfe des Bootstrap-Skripts im Lernprogramm zum Erstellen des Schemas und des Datensatzes [](../models-recipes/create-retails-sales-dataset.md) für den Einzelhandel erstellt.
    ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Klicken Sie im Bereich **Funktionsverwaltung** auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
+Klicken Sie im Abschnitt **Funktionsverwaltung** auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
 5. Überprüfen Sie das Rezept, fügen Sie Konfigurationen hinzu, ändern oder entfernen Sie sie nach Bedarf. Klicken Sie auf **Fertig stellen** , um das Rezept zu erstellen.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Herzlichen Glückwunsch! Sie haben das Rezept für den Einzelhandel erstellt! Gehen Sie zu den [nächsten Schritten](#next-steps) , um herauszufinden, wie ein Modell in Data Science Workspace mithilfe des neu erstellten Vertriebsrezepts für Einzelhändler erstellt wird.
+Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, wie ein Modell in Data Science Workspace mit dem neu erstellten Rezept Einzelhandelsverkäufe erstellt wird.
 
 
-### Binärbasiertes Rezept importieren - Scala Spark {#scala}
+### Binärbasiertes Rezept importieren - Scala Spark {#scala-deprecated}
 
 In den Quelldateien [Package in ein Rezept](./package-source-files-recipe.md) -Lernprogramm wurde eine **JAR** -Binärdatei mithilfe der Quelldateien Retail Sales Scala Spark erstellt.
 
@@ -147,43 +291,8 @@ In den Quelldateien [Package in ein Rezept](./package-source-files-recipe.md) -L
    ![](../images/models-recipes/import-package-ui/recipe_source_scala.png)
 4. An dieser Stelle können Fehler auftreten. Dies ist ein normales Verhalten und ist zu erwarten. Wählen Sie die Schemas für die Eingabe und Ausgabe im Einzelhandel unter **Verwalten von Schemas** aus. Sie wurden mithilfe des Bootstrap-Skripts im Lernprogramm zum Erstellen des Schemas und des Datensatzes [](../models-recipes/create-retails-sales-dataset.md) für den Einzelhandel erstellt.
    ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Klicken Sie im Bereich **Funktionsverwaltung** auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
+Klicken Sie im Abschnitt **Funktionsverwaltung** auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
 5. Überprüfen Sie das Rezept, fügen Sie Konfigurationen hinzu, ändern oder entfernen Sie sie nach Bedarf. Klicken Sie auf **Fertig stellen** , um das Rezept zu erstellen.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Herzlichen Glückwunsch! Sie haben das Rezept für den Einzelhandel erstellt! Gehen Sie zu den [nächsten Schritten](#next-steps) , um herauszufinden, wie ein Modell in Data Science Workspace mithilfe des neu erstellten Vertriebsrezepts für Einzelhändler erstellt wird.
-
-### Dockerbasiertes Rezept importieren - Python {#python}
-
-In den Quelldateien [für das Verpacken in einem Rezept](./package-source-files-recipe.md) -Lernprogramm wurde am Ende der Erstellung des Retail Sales-Rezepts mit Python-Quelldateien eine Docker-URL bereitgestellt.
-
-1. Fügen Sie die Docker-URL entsprechend dem mit Python-Quelldateien erstellten gepackten Rezept in das Feld **Quell-URL** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag &amp; Drop oder verwenden Sie den Dateisystem- **Browser**. Die angegebene Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Klicken Sie auf **Weiter** , wenn beide Elemente bereitgestellt wurden.
-   ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
-2. Wählen Sie die Schemas für die Eingabe und Ausgabe im Einzelhandel unter **Verwalten von Schemas** aus. Sie wurden mithilfe des Bootstrap-Skripts im Lernprogramm zum Erstellen des Schemas und des Datensatzes [](../models-recipes/create-retails-sales-dataset.md) für den Einzelhandel erstellt.
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Klicken Sie im Bereich **Funktionsverwaltung** auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
-3. Überprüfen Sie das Rezept, fügen Sie Konfigurationen hinzu, ändern oder entfernen Sie sie nach Bedarf. Klicken Sie auf **Fertig stellen** , um das Rezept zu erstellen.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Herzlichen Glückwunsch! Sie haben das Rezept für den Einzelhandel erstellt! Gehen Sie zu den [nächsten Schritten](#next-steps) , um herauszufinden, wie ein Modell in Data Science Workspace mithilfe des neu erstellten Vertriebsrezepts für Einzelhändler erstellt wird.
-
-### Dockerbasiertes Rezept importieren - R {#r}
-
-In den Quelldateien [für das Verpacken in einem Rezept](./package-source-files-recipe.md) -Lernprogramm wurde am Ende der Erstellung des Retail Sales-Rezepts mit R-Quelldateien eine Docker-URL bereitgestellt.
-
-1. Fügen Sie die Docker-URL entsprechend dem mit R-Quelldateien erstellten gepackten Rezept in das Feld **Quell-URL** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag &amp; Drop oder verwenden Sie den Dateisystem- **Browser**. Die angegebene Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Klicken Sie auf **Weiter** , wenn beide Elemente bereitgestellt wurden.
-   ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
-2. Wählen Sie die Schemas für die Eingabe und Ausgabe im Einzelhandel unter **Verwalten von Schemas** aus. Sie wurden mithilfe des Bootstrap-Skripts im Lernprogramm zum Erstellen des Schemas und des Datensatzes [](../models-recipes/create-retails-sales-dataset.md) für den Einzelhandel erstellt.
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Klicken Sie im Bereich **Funktionsverwaltung** auf Ihre Pachtnummer im Schema-Viewer, um das Schema für die Eingabe des Einzelhandelsverkaufs zu erweitern. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und im rechten Fenster &quot; **Feldeigenschaften&quot;entweder &quot;** Eingabefunktion **&quot;oder &quot;** Zielgruppe-Funktion **&quot;auswählen** . Legen Sie für diese Übung **weeklySales** als **Zielgruppe-Funktion** und alles andere als **Input-Funktion** fest. Klicken Sie auf **Weiter** , um Ihr neues konfiguriertes Rezept zu überprüfen.
-3. Überprüfen Sie das Rezept, fügen Sie Konfigurationen hinzu, ändern oder entfernen Sie sie nach Bedarf. Klicken Sie auf **Fertig stellen** , um das Rezept zu erstellen.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Herzlichen Glückwunsch! Sie haben das Rezept für den Einzelhandel erstellt! Gehen Sie zu den [nächsten Schritten](#next-steps) , um herauszufinden, wie ein Modell in Data Science Workspace mithilfe des neu erstellten Vertriebsrezepts für Einzelhändler erstellt wird.
-
-## Nächste Schritte
-
-Dieses Lernprogramm bietet einen Einblick in die Konfiguration und den Import eines Skripts in Data Science Workspace. Sie können ein Modell jetzt mit dem neu erstellten Rezept erstellen, ausbilden und auswerten.
-
-- [Erstellen und Auswerten eines Modells in der Benutzeroberfläche](./train-evaluate-model-ui.md)
-- [Erstellen und Auswerten eines Modells mithilfe der API](./train-evaluate-model-api.md)
+Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, wie ein Modell in Data Science Workspace mit dem neu erstellten Rezept Einzelhandelsverkäufe erstellt wird.
