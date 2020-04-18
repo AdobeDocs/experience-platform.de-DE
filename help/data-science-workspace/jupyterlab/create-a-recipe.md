@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Skripts mit Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ Das Erstellen eines Skripts von Grund auf kann im Data Science Workspace erfolge
 
 Mit dem Rezept Builder Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Schulungs- und Bewertungsergebnissen zufrieden sind, können Sie ein Rezept erstellen, das in Data Science Workspace verwendet werden kann, indem Sie das Notebook verwenden, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
 
->[!NOTE] Das Rezept Builder-Notebook unterstützt die Arbeit mit allen Dateiformaten, aber die Funktion Rezept erstellen unterstützt derzeit nur Python.
+>[!NOTE]
+>Das Rezept Builder-Notebook unterstützt die Arbeit mit allen Dateiformaten, aber die Funktion Rezept erstellen unterstützt derzeit nur Python.
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Wenn Sie vom Starter auf das Rezept Builder-Notebook klicken, wird das Notebook in der Registerkarte geöffnet. Die im Notebook verwendete Vorlage ist das Python Retail Sales Forecasting Rezept, das auch in [diesem öffentlichen Repository zu finden ist](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ Sie werden feststellen, dass es in der Symbolleiste drei weitere Aktionen gibt, 
 
 ## Bearbeiten von Skriptdateien
 
-<!-- Databricks update to recipe needed -->
 Um Änderungen an den Skriptdateien vorzunehmen, navigieren Sie zu der Zelle im Jupyter, die dem Dateipfad entspricht. Wenn Sie zum Beispiel Änderungen vornehmen möchten, suchen Sie nach `evaluator.py`dieser Option `%%writefile demo-recipe/evaluator.py`.
 
 Beginn, die die erforderlichen Änderungen an der Zelle vornehmen, führen Sie die Zelle nach Abschluss einfach aus. Der `%%writefile filename.py` Befehl schreibt den Inhalt der Zelle in die `filename.py`. Sie müssen die Zelle für jede Datei mit Änderungen manuell ausführen.
@@ -69,9 +69,6 @@ Jetzt, da Sie die Grundlagen der JupyterLab Notebook-Umgebung kennen, können Si
 - [Evaluator-Datei](#evaluator-file)
 - [Datenspeicherdatei](#data-saver-file)
 
-
-
-
 ### Anforderungsdatei
 
 Die Datei &quot;requirements&quot;dient zum Deklarieren zusätzlicher Bibliotheken, die Sie im Rezept verwenden möchten. Sie können die Versionsnummer angeben, wenn eine Abhängigkeit vorliegt. Weitere Bibliotheken finden Sie unter https://anaconda.org. Die Liste der bereits verwendeten Hauptbibliotheken umfasst:
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] Bibliotheken oder spezifische Versionen, die Sie hinzufügen, sind möglicherweise nicht mit den oben genannten Bibliotheken kompatibel.
-
-
+>[!NOTE]
+>Bibliotheken oder spezifische Versionen, die Sie hinzufügen, sind möglicherweise nicht mit den oben genannten Bibliotheken kompatibel.
 
 ### Konfigurationsdateien
 
@@ -101,9 +97,9 @@ Benutzer müssen die folgenden Variablen ausfüllen, bevor sie eine Schulung und
 
 Um den Datensatz und die Schema-IDs zu finden, gehen Sie in Notebooks auf der linken Navigationsleiste (unter dem Ordnersymbol) zur Registerkarte &quot;Daten&quot;.
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
-Dieselben Informationen finden Sie auf der [Adobe Experience Platform](https://platform.adobe.com/) unter den Registerkarten &quot; **[Schema](https://platform.adobe.com/schema)**&quot;und &quot;**[ Datasets](https://platform.adobe.com/dataset/overview)** &quot;.
+Dieselben Informationen finden Sie auf der [Adobe Experience Platform](https://platform.adobe.com/) unter den Registerkarten &quot; **[Schema](https://platform.adobe.com/schema)**&quot;und &quot;**[Datasets](https://platform.adobe.com/dataset/overview)** &quot;.
 
 Standardmäßig werden beim Zugriff auf Daten die folgenden Konfigurationsparameter festgelegt:
 
@@ -111,8 +107,6 @@ Standardmäßig werden beim Zugriff auf Daten die folgenden Konfigurationsparame
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## Schulungsdatenlader
 
@@ -129,7 +123,8 @@ In diesem Schritt wird das [Pandas-Dataframe](https://pandas.pydata.org/pandas-d
 - [Plattform-SDK](#platform-sdk)
 - [Externe Quellen](#external-sources)
 
->[!NOTE] Im Recipe Builder-Notebook werden Daten über den `platform_sdk` Datenlader geladen.
+>[!NOTE]
+>Im Recipe Builder-Notebook werden Daten über den `platform_sdk` Datenlader geladen.
 
 ### Plattform-SDK
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 Jetzt befinden sich Ihre Daten im DataFrame-Objekt und können im [nächsten Abschnitt](#data-preparation-and-feature-engineering)analysiert und bearbeitet werden.
 
-
-
 ### Von Data Access SDK (nicht mehr unterstützt)
 
->[!CAUTION]  Es `data_access_sdk_python` wird nicht mehr empfohlen. Eine Anleitung zur Verwendung des Datenladeprogramms finden Sie unter [Datenzugriffscode in Plattform-SDK](../authoring/platform-sdk.md) `platform_sdk` konvertieren.
+>[!CAUTION]
+> `data_access_sdk_python` wird nicht mehr empfohlen. Eine Anleitung zur Verwendung des Datenladeprogramms finden Sie unter [Datenzugriffscode in Plattform-SDK](../authoring/platform-sdk.md) konvertieren `platform_sdk` .
 
 Benutzer können Daten mit dem Data Access SDK laden. Die Bibliothek kann oben auf der Seite importiert werden, indem die folgende Zeile eingefügt wird:
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] Wie im Abschnitt [&quot;](#configuration-files)Konfigurationsdatei&quot;erwähnt, werden die folgenden Konfigurationsparameter für Sie festgelegt, wenn Sie auf Daten von Experience Platform zugreifen:
+>[!NOTE]
+>Wie im Abschnitt [&quot;](#configuration-files)Konfigurationsdatei&quot;erwähnt, werden die folgenden Konfigurationsparameter für Sie festgelegt, wenn Sie auf Daten von Experience Platform zugreifen:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 Die `load()` Funktion in Ihrer Datenladefunktion sollte mit dem Bewertungsdataset als Ausgabe abgeschlossen werden.
 
-
-
 ### Pipeline-Datei
 
-Die `pipeline.py` Datei enthält eine Logik für Schulung und Bewertung. Wir werden in den nächsten beiden Abschnitten über beide gehen.
+Die `pipeline.py` Datei enthält eine Logik für Schulung und Bewertung.
 
 ### Schulung
 
 Der Zweck der Schulung besteht darin, ein Modell mithilfe von Funktionen und Beschriftungen in Ihrem Schulungsdatensatz zu erstellen.
 
->[!NOTE]  Die _Funktionen_ beziehen sich auf die Eingabevariable, die vom maschinellen Lernmodell zur Vorhersage der _Beschriftungen_ verwendet wird.
+>[!NOTE]\
+>_Funktionen_ beziehen sich auf die Eingabevariable, die vom maschinellen Lernmodell zur Vorhersage der _Beschriftungen_ verwendet wird.
 
 Die `train()` Funktion sollte das Schulungsmodell enthalten und das geschulte Modell zurückgeben. Einige Beispiele für verschiedene Modelle finden Sie in der Dokumentation [des](https://scikit-learn.org/stable/user_guide.html)Benutzerhandbuchszum Scikit-Lernen.
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 Beachten Sie, dass je nach Anwendung Argumente in Ihrer `GradientBoostingRegressor()` Funktion vorhanden sind. `xTrainingDataset` sollte Ihre für Schulungen verwendeten Funktionen enthalten, während die Beschriftungen enthalten sein `yTrainingDataset` sollten.
-
-
 
 ### Bewertung
 
@@ -456,7 +448,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## Ausbildung und Punktesystem
 
 Wenn Sie Ihre Änderungen an Ihrem Notebook vorgenommen haben und Ihr Rezept trainieren möchten, können Sie auf die entsprechenden Schaltflächen oben in der Leiste klicken, um einen Schulungslauf in der Zelle zu erstellen. Wenn Sie auf die Schaltfläche klicken, wird ein Protokoll mit Befehlen und Ausgängen aus dem Schulungsskript im Notebook (unter der `evaluator.py` Zelle) angezeigt. Conda installiert zuerst alle Abhängigkeiten, dann wird die Schulung initiiert.
@@ -467,7 +458,11 @@ Wenn Sie zum Debugging die ausgeblendete Ausgabe anzeigen möchten, fügen Sie s
 
 ## Rezept erstellen
 
-Wenn Sie das Rezept bearbeitet haben und mit der Schulungs-/Bewertungsausgabe zufrieden sind, können Sie ein Rezept aus dem Notebook erstellen, indem Sie auf Rezept **erstellen** klicken. Nach dem Klicken auf die Schaltfläche werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das auf der Plattform erstellt wurde.
+Wenn Sie die Bearbeitung des Rezepts abgeschlossen haben und mit der Schulungs-/Bewertungsausgabe zufrieden sind, können Sie ein Rezept aus dem Notebook erstellen, indem Sie in der Navigation oben rechts auf Rezept **erstellen** klicken.
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+Nach dem Klicken auf die Schaltfläche werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das auf der Plattform erstellt wurde.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -491,7 +486,7 @@ Mit diesem Lernprogramm haben Sie gelernt, wie Sie ein Modell für maschinelles 
 
 Um weiterhin zu lernen, wie Sie mit Ressourcen im Data Science Workspace arbeiten, besuchen Sie bitte die Dropdownliste Data Science Workspace-Rezepte und -Modelle.
 
-## Zusätzliche Ressourcen    
+## Zusätzliche Ressourcen
 
 Das folgende Video unterstützt Sie beim Erstellen und Bereitstellen von Modellen.
 
