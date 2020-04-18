@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -427,11 +427,11 @@ Mit PySpark 3 (Spark 2.4) `sc = spark.sparkContext` ist beim Laden definiert.
 
 ![Laden 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**Laden von Erlebnis könnte Plattformdaten in PySpark 2.3 - nicht mehr unterstützt**
+**Laden von Experience Cloud-Plattformdaten in PySpark 2.3 - nicht mehr unterstützt**
 
 ![Load 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Laden von Erlebnis könnte Plattformdaten in PySpark 2.4**
+**Laden von Experience Cloud-Plattformdaten in PySpark 2.4**
 
 Mit PySpark 3 (Spark 2.4) müssen die `org_id` und `dataset_id` nicht mehr definiert werden. Außerdem `df = spark.read.format` wurde eine benutzerdefinierte Magie ersetzt, [`%dataset`](#magic) um das Lesen und Schreiben von Datensätzen zu vereinfachen.
 
