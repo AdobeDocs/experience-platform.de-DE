@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Anhang
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0081cbd414e983d767b4a6f3aceed85d72a34816
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -67,7 +67,7 @@ Die folgende Beispielkonfiguration gibt die Verwendung einer CPU für Schulungen
 
 ## Ressourcenkonfigurationen von PySpark und Spark {#resource-config}
 
-PySpark- und Spark-Engines haben die Möglichkeit, zu Schulungs- und Bewertungszwecken Berechnungsressourcen zu ändern. Diese Ressourcen werden in der folgenden Tabelle beschrieben:
+Spark Engines haben die Möglichkeit, zu Schulungs- und Bewertungszwecken Computerressourcen zu ändern. Diese Ressourcen werden in der folgenden Tabelle beschrieben:
 
 | Ressource | Beschreibung | Typ |
 | -------- | ----------- | ---- |
