@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verpacken von Quelldateien in einem Rezept
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
 
 ---
 
@@ -27,47 +27,51 @@ Konzepte zum Verständnis:
 
 ## Rezepterstellung
 
-Beginn zur Rezepterstellung mit Quelldateien zum Erstellen einer Archivdatei. Quelldateien definieren die Logik des maschinellen Lernens und Algorithmen, die zur Lösung eines bestimmten Problems verwendet werden, und werden entweder in Python, R, PySpark oder Scala Spark geschrieben. Je nachdem, in welcher Sprache die Quelldateien geschrieben werden, sind die erstellten Archivdateien entweder ein Dockerbild oder eine Binärdatei. Nach der Erstellung wird die verpackte Archivdatei in Data Science Workspace importiert, um ein Rezept [in der Benutzeroberfläche](./import-packaged-recipe-ui.md) oder [mithilfe der API](./import-packaged-recipe-api.md)zu erstellen.
+Beginn zur Rezepterstellung mit Quelldateien zum Erstellen einer Archivdatei. Quelldateien definieren die Logik des maschinellen Lernens und Algorithmen, die zur Lösung eines bestimmten Problems verwendet werden, und werden entweder in Python, R, PySpark oder Scala geschrieben. Die erstellten Archivdateien haben die Form eines Dockerbilds. Nach der Erstellung wird die verpackte Archivdatei in Data Science Workspace importiert, um ein Rezept [in der Benutzeroberfläche](./import-packaged-recipe-ui.md) oder [mithilfe der API](./import-packaged-recipe-api.md)zu erstellen.
 
 ### Dockerbasiertes Modell-Authoring
 
 Ein Docker-Bild ermöglicht es einem Entwickler, eine Anwendung mit allen benötigten Teilen wie Bibliotheken und anderen Abhängigkeiten zu verpacken und als ein Paket zu versenden.
 
-Das erstellte Docker-Bild wird mit den Anmeldeinformationen, die Sie während des Rezepterstellungs-Workflows erhalten haben, in die Azurblase-Container-Registrierung gesendet.
+Das erstellte Docker-Bild wird mit den Anmeldeinformationen, die Sie während des Rezepterstellungsarbeitsablaufs erhalten haben, in die Azurblaue Container-Registrierung verschoben.
 
->[!NOTE] Nur Quelldateien, die in **Python**, **R** und **Tensorflow** geschrieben wurden, erfordern die Anmeldeinformationen der Azurblase Container Registry.
+Melden Sie sich zum Erhalt der Anmeldedaten für Ihre Azurblase Container-Registrierung bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>an. Navigieren Sie in der linken Navigationsspalte zu **Workflows**. Wählen Sie **Rezept** importieren und anschließend **Starten**. Siehe Screenshot unten als Referenz.
 
-Melden Sie sich zum Erhalt der Anmeldedaten für Ihre Azurblase Container-Registrierung bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>an. Navigieren Sie in der linken Navigationsspalte zu **Workflows**. Wählen Sie **Rezept aus Quelldatei** importieren und **starten** Sie eine neue Importaktion. Siehe Screenshot unten als Referenz.
+![](../images/models-recipes/package-source-files/import.png)
 
-![](../images/models-recipes/package-source-files/workflow_ss.png)
+Die Seite &quot; *Konfigurieren* &quot;wird geöffnet. Geben Sie einen entsprechenden **Rezeptnamen** ein, z. B. &quot;Retail Sales recipe&quot;, und geben Sie optional eine Beschreibung oder eine Dokumentations-URL ein. Klicken Sie nach Abschluss des Vorgangs auf **Weiter**.
 
-Geben Sie einen entsprechenden **Rezeptnamen** ein, z. B. &quot;Retail Sales recipe&quot;, und geben Sie optional eine Beschreibung oder eine Dokumentations-URL ein. Klicken Sie nach Abschluss des Vorgangs auf **Weiter**.
+![](../images/models-recipes/package-source-files/configure.png)
 
-![](../images/models-recipes/package-source-files/recipe_info.png)
+Wählen Sie die entsprechende *Laufzeitumgebung* und dann eine **Klassifizierung** für den *Typ*. Ihre Anmeldedaten für die Azurblase-Container-Registrierung werden nach Abschluss der Überprüfung generiert.
 
-Wählen Sie die entsprechende **Laufzeitumgebung** und dann **Klassifizierung** für **Typ**. Ihre Anmeldedaten für die Blaue Container-Registrierung werden generiert.
+>[!NOTE]
+>*Typ *ist die Klasse des maschinellen Lernproblems, für das das Rezept entwickelt wurde und nach dem Training verwendet wird, um die Beurteilung der Trainingslaufzeit anzupassen.
 
-![](../images/models-recipes/package-source-files/recipe_workflow_recipe_source.png)
+>[!TIP]
+>- Wählen Sie für Python-Rezepte die **Python** -Laufzeit.
+>- Wählen Sie für R-Rezepte die **R** -Laufzeit.
+>- Wählen Sie für PySpark-Rezepte die **PySpark** -Laufzeit. Ein Artefakttyp wird automatisch gefüllt.
+>- Wählen Sie für Scala-Rezepte die **Spark** -Laufzeit. Ein Artefakttyp wird automatisch gefüllt.
 
-Notieren Sie die Werte für **Docker-Host**, **Benutzername** und **Kennwort**. Diese werden später zum Erstellen und Push Ihres Docker-Bildes verwendet.
 
-Nach dem Push können Sie und andere Benutzer über URL auf das Bild zugreifen. Das Feld **Quelldatei** erwartet diese URL als Eingabe.
+![](../images/models-recipes/package-source-files/docker-creds.png)
 
-### Binärbasiertes Modell-Authoring
+Notieren Sie die Werte für *Docker-Host*, *Benutzername* und *Kennwort*. Diese werden verwendet, um Ihr Docker-Bild in der Workflows unten beschrieben zu erstellen und zu verschieben.
 
-Für Quelldateien, die in Scala oder PySpark geschrieben wurden, wird eine Binärdatei generiert. Das Erstellen der Binärdatei ist so einfach wie das Ausführen des bereitgestellten Buildskripts.
->[!NOTE] Nur Quelldateien, die in ScalaSpark oder PySpark geschrieben wurden, erzeugen beim Ausführen des Buildskripts eine Binärdatei.
+>[!NOTE]
+>Die Quell-URL wird nach Abschluss der unten beschriebenen Schritte bereitgestellt. Die Konfigurationsdatei wird in den nachfolgenden Übungen in den [nächsten Schritten](#next-steps)erläutert.
 
 ### Verpacken der Quelldateien
 
-Beginn durch Abrufen der Codebasis für Beispieldateien im <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a> -Repository. Je nachdem, in welcher Programmiersprache die Beispielquelldateien geschrieben werden, unterscheidet sich das Erstellen der jeweiligen Archivdatei im Verfahren.
+Beginn durch Abrufen der Codebasis für Beispieldateien im <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a> -Repository.
 
-- [Python-Docker-Bild erstellen](#build-python-docker-image)
-- [R-Docker-Bild erstellen](#build-r-docker-image)
-- [PySpark-Binärdateien erstellen](#build-pyspark-binaries)
-- [Scala-Binärdateien erstellen](#build-scala-binaries)
+- [Python-Docker-Bild erstellen](#python-docker)
+- [R-Docker-Bild erstellen](#r-docker)
+- [PySpark Docker-Bild erstellen](#pyspark-docker)
+- [Punktdiagrammbild erstellen (Spark)](#scala-docker)
 
-#### Python-Docker-Bild erstellen
+### Python-Docker-Bild erstellen {#python-docker}
 
 Falls nicht, klonen Sie das github-Repository mit dem folgenden Befehl auf Ihrem lokalen System:
 
@@ -75,7 +79,7 @@ Falls nicht, klonen Sie das github-Repository mit dem folgenden Befehl auf Ihrem
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. Hier finden Sie die Skripte `login.sh` und `build.sh` die Sie verwenden werden, um sich bei Docker anzumelden und das Python Docker-Bild zu erstellen. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
+Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. Hier finden Sie die Skripte `login.sh` und `build.sh` benutzt, um sich bei Docker anzumelden und das Python Docker-Bild zu erstellen. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
 
 ```BASH
 # for logging in to Docker
@@ -96,7 +100,7 @@ Nachdem das Build-Skript abgeschlossen ist, erhalten Sie eine Docker-Quelldatei-
 
 Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
 
-#### R-Docker-Bild erstellen
+### R-Docker-Bild erstellen {#r-docker}
 
 Falls nicht, klonen Sie das github-Repository mit dem folgenden Befehl auf Ihrem lokalen System:
 
@@ -125,7 +129,77 @@ Nachdem das Build-Skript abgeschlossen ist, erhalten Sie eine Docker-Quelldatei-
 
 Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
 
-#### PySpark-Binärdateien erstellen
+### PySpark Docker-Bild erstellen {#pyspark-docker}
+
+Beginn durch Klonen des github-Repositorys auf Ihrem lokalen System mit folgendem Befehl:
+
+```shell
+git clone https://github.com/adobe/experience-platform-dsw-reference.git
+```
+
+Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/retail`. Die Skripten `login.sh` und `build.sh` sind hier zu finden und zum Anmelden bei Docker und zum Erstellen des Docker-Bildes. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
+
+```BASH
+# for logging in to Docker
+./login.sh
+ 
+# for building Docker image
+./build.sh
+```
+
+Beachten Sie, dass Sie beim Ausführen des Anmeldeskripts den Docker-Host, den Benutzernamen und das Kennwort angeben müssen. Beim Erstellen müssen Sie den Docker-Host und ein Version-Tag für den Build angeben.
+
+Nachdem das Build-Skript abgeschlossen ist, erhalten Sie eine Docker-Quelldatei-URL in der Konsolenausgabe. Für dieses spezifische Beispiel sieht es wie folgt aus:
+
+```BASH
+# URL format: 
+{DOCKER_HOST}/ml-retailsales-pyspark:{VERSION_TAG}
+```
+
+Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
+
+### Erstellen eines Skala-Dockerbilds {#scala-docker}
+
+Beginn durch Klonen des github-Repositorys auf Ihrem lokalen System mit dem folgenden Befehl im Terminal:
+
+```shell
+git clone https://github.com/adobe/experience-platform-dsw-reference.git
+```
+
+Navigieren Sie anschließend zum Ordner, in dem Sie die Skripte `experience-platform-dsw-reference/recipes/scala/retail` und `login.sh` `build.sh`die Skripte finden können. Diese Skripten werden verwendet, um sich bei Docker anzumelden und das Docker-Bild zu erstellen. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
+
+```BASH
+# for logging in to Docker
+./login.sh
+ 
+# for building Docker image
+./build.sh
+```
+
+Beim Ausführen des Anmeldeskripts müssen Sie den Docker-Host, den Benutzernamen und das Kennwort angeben. Beim Erstellen müssen Sie den Docker-Host und ein Version-Tag für den Build angeben.
+
+Nachdem das Build-Skript abgeschlossen ist, erhalten Sie eine Docker-Quelldatei-URL in der Konsolenausgabe. Für dieses spezifische Beispiel sieht es wie folgt aus:
+
+```BASH
+# URL format: 
+{DOCKER_HOST}/ml-retailsales-spark:{VERSION_TAG}
+```
+
+Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
+
+## Nächste Schritte {#next-steps}
+
+Diese Übung übernahm das Verpacken von Quelldateien in ein Rezept, die Voraussetzung für den Import eines Rezepts in Data Science Workspace. Sie sollten jetzt ein Docker-Bild in der Azurblauen Container-Registrierung zusammen mit der entsprechenden Bild-URL haben. Sie können jetzt mit dem Lernprogramm zum **Importieren eines zusammengestellten Rezepts in den Data Science Workspace** beginnen. Wählen Sie einen der folgenden Links, um zu beginnen.
+
+- [Verpacktes Rezept in die Benutzeroberfläche importieren](./import-packaged-recipe-ui.md)
+- [Verpacktes Rezept mit der API importieren](./import-packaged-recipe-api.md)
+
+## Erstellen von Binärdateien (nicht mehr unterstützt)
+
+>[!CAUTION]
+> Binärdateien werden in neuen PySpark- und Scala-Rezepten nicht unterstützt und sind in einer zukünftigen Version zu entfernen. Bitte folgen Sie dem [Docker Workflows](#docker-based-model-authoring) , wenn Sie mit PySpark und Scala arbeiten. Die folgenden Workflows gelten nur für Spark 2.3-Rezepte.
+
+### PySpark-Binärdateien erstellen (nicht mehr unterstützt)
 
 Falls nicht, klonen Sie das github-Repository mit dem folgenden Befehl auf Ihrem lokalen System:
 
@@ -144,7 +218,7 @@ Die `.egg` Datei wird im `dist` Ordner generiert.
 
 Sie können jetzt zu den [nächsten Schritten](#next-steps)fortfahren.
 
-#### Scala-Binärdateien erstellen
+#### Scala-Binärdateien erstellen (nicht mehr unterstützt)
 
 Wenn Sie dies noch nicht getan haben, führen Sie den folgenden Befehl aus, um das Github-Repository auf Ihrem lokalen System zu klonen:
 
@@ -162,10 +236,3 @@ cd recipes/scala/
 Das generierte `.jar` Artefakt mit Abhängigkeiten befindet sich im `/target` Verzeichnis.
 
 Sie können jetzt zu den [nächsten Schritten](#next-steps)fortfahren.
-
-## Nächste Schritte
-
-Diese Übung übernahm das Verpacken von Quelldateien in ein Rezept, die Voraussetzung für den Import eines Rezepts in Data Science Workspace. Sie sollten jetzt ein Docker-Bild in der Azurblauen Container-Registrierung zusammen mit der entsprechenden Bild-URL oder eine Binärdatei, die lokal in Ihrem Dateisystem gespeichert ist, haben. Sie können jetzt mit dem Lernprogramm zum **Importieren eines zusammengestellten Rezepts in den Data Science Workspace** beginnen. Wählen Sie einen der folgenden Links, um zu beginnen.
-
-- [Verpacktes Rezept in die Benutzeroberfläche importieren](./import-packaged-recipe-ui.md)
-- [Verpacktes Rezept mit der API importieren](./import-packaged-recipe-api.md)
