@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -291,6 +291,10 @@ Jüngste Änderungen an JupyterLab-Notebooks erfordern, dass Sie Ihre bestehende
 
 - [Migrationshandbuch für PySpark 2.3 bis 2.4](#pyspark-notebook-migration)
 - [Migrationshandbuch Spark 2.3 bis Spark 2.4 (Scala)](#spark-notebook-migration)
+
+Das folgende Video hilft Ihnen dabei, die für JupyterLab-Notebooks erforderlichen Änderungen besser zu verstehen:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## Migrationshandbuch für PySpark 2.3 bis 2.4 {#pyspark-notebook-migration}
 
