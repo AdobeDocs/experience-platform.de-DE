@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Audience Manager-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ Im Folgenden finden Sie Beispiele für die Audience Manager-Struktur, die XDM Ex
 
 ## Wie werden Felder von Adobe Audience Manager zu XDM zugeordnet?
 
-Weitere Informationen finden Sie in der Dokumentation zu [Audience Manager-Zuordnungsfeldern][audience-manager-mapping-fields] .
+Weitere Informationen finden Sie in der Dokumentation zu [Audience Manager-Zuordnungsfeldern](./mapping/audience-manager.md) .
 
 ## Data Management auf Plattform
 
