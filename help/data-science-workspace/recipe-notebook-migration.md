@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
+source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
 
 ---
 
@@ -66,11 +66,9 @@ Mit den Aktualisierungen der Spark-Rezepte müssen eine Reihe von Werten hinzuge
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-import com.adobe.platform.Abfrage.QSOption
-
-var df = sparkSession.read.format(&quot;com.adobe.platform.Abfrage&quot;).option(QSOption.userToken&quot;, {userToken}).option(QSOption.serviceToken, {serviceToken}).option(QSOption.imsOrg, {orgId}).option(QSOption.apiKey, {apiKey}).option(QSOption.mode, &quot;interactive&quot;).option(QSOption.datasetId, {dataSetId}).load()
-</pre>
-</td>
+import com.adobe.platform.Abfrage.QSOptionvar df = sparkSession.read.format("com.adobe.platform.Abfrage") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {org .option(QSOption.apiKey, {apiKey}) .option(QSOption.mode, "interactive") .option(QSOption.datasetId, {dataSetId}) .load()
+  </pre>
+  </td>
   </tr>
 </table>
 
@@ -94,11 +92,9 @@ Mit den Aktualisierungen der Spark-Rezepte müssen eine Reihe von Werten hinzuge
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-import com.adobe.platform.Abfrage.QSOption
-
-df.write.format(&quot;com.adobe.platform.Abfrage&quot;).option(QSOption.userToken&quot;, {userToken}).option(QSOption.serviceToken, {serviceToken}).option(QSOption.imsOrg, {orgId}).option(QSOption.apiKey, {apiKey}).option(QSOption.datasetId, {dataSetId}).save()
+import com.adobe.platform.Abfrage.QSOptiondf.write.format("com.adobe.platform.Abfrage") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {orgId}) .option QSOption.apiKey, {apiKey}) .option(QSOption.datasetId, {dataSetId}) .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -186,18 +182,14 @@ Mit den Aktualisierungen der Spark-Rezepte müssen eine Reihe von Werten hinzuge
   <tr>
   <td>
   <pre class="JSON language-JSON hljs">
-dataset_options = get_dataset_options(spark.sparkContext)
-
-pd = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.serviceToken(), service_token).option(dataset_options.userToken(), user_token).option(dataset_options.orgId(), org_id).option(dataset_options.serviceApi Key(), api_key).load(dataset_id)
+dataset_options = get_dataset_options(spark.sparkContext)pd = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.serviceToken(), service_token) .option(dataset_options.userToken(), user_token) .option(dataset_options.org Id(), org_id) .option(dataset_options.serviceApiKey(), api_key) .load(dataset_id)
 </pre>
-</td>
+  </td>
   <td>
 <pre class="JSON language-JSON hljs">
-qs_option = spark_context._jvm.com.adobe.platform.Abfrage.QSOption
-
-pd = sparkSession.read.format(&quot;com.adobe.platform.Abfrage&quot;).option(qs_option.userToken, {userToken}).option(qs_option.serviceToken, {serviceToken}).option(qs_option.imsOrg, {orgId}).option(qs_option.apiKey, iKey}).option(qs_option.mode, &quot;interactive&quot;).option(qs_option.datasetId, {dataSetId}).load()
-</pre>
-</td>
+qs_option = spark_context._jvm.com.adobe.platform.Abfrage.QSOptionpd = sparkSession.read.format("com.adobe.platform.Abfrage") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken, {serviceToken}) .option(qs_option.imsOrg, {orgId}) .option(qs_option.apiKey, {apiKey}) .option(qs_option.mode, "interactive") .option(qs_option.datasetId, {dataSetId}) .load()
+  </pre>
+  </td>
   </tr>
 </table>
 
@@ -221,11 +213,9 @@ df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgI
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-qs_option = spark_context._jvm.com.adobe.platform.Abfrage.QSOption
-
-scored_df.write.format(&quot;com.adobe.platform.Abfrage&quot;).option(qs_option.userToken, {userToken}).option(qs_option.serviceToken, {serviceToken}).option(qs_option.imsOrg, {orgId}).option(qs_option.apiKey, {api Schlüssel}).option(qs_option.datasetId, {dataSetId}).save()
+qs_option = spark_context._jvm.com.adobe.platform.Abfrage.QSOptions cored_df.write.format("com.adobe.platform.Abfrage") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken, {serviceToken}) .option(qs_option.imsOrg, {orgId}) .option qs_option.apiKey, {apiKey}) .option(qs_option.datasetId, {dataSetId}) .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -401,11 +391,9 @@ Mit der Einführung von Spark 2.4 wird [`%dataset`](#magic) maßgeschneiderte Ma
   <th>Code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
-
-pd0 = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).load(&quot;5e68141134492718af974844&quot;)
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionspd0 = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .load("5e68141134492718af97 4844")
 </pre>
-</td>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
 %dataset read —datasetId 5e68141134492718af974844 —dataFrame pd0
@@ -529,20 +517,14 @@ Mit der Einführung von Spark 2.4 wird [`%dataset`](#magic) maßgeschneiderte Ma
   <th>Code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf().get("spark.garn.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.garn.appMasterEnv.SERVICE_TOKEN")serviceApiKey = spark.spark Context.getConf().get("spark.garn.appMasterEnv.SERVICE_API_KEY")
-
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
-
-pd0.write.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(dataset_options.userToken(), userToken).option(dataset_options.serviceToken(), serviceToken).option(dataset_options.serviceApiKey(), serviceApiKey).save(&quot;5e68141134492718af974844&quot;)
-</pre>
-</td>
+userToken = spark.sparkContext.getConf().get("spark.garn.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.garn.appMasterEnv.SERVICE_TOKEN")serviceApiKey = spark.spark Context.getConf().get("spark.garn.appMasterEnv.SERVICE_API_KEY")dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionspd0.write.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .option(dataset_options.userToken(), userToken) .option(dataset_options.serviceToken(), serviceToken) option(dataset_options.serviceApiKey(), serviceApiKey) .save("5e68141134492718af974844")
+  </pre>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-%dataset write —datasetId 5e68141134492718af974844 —dataFrame pd0
-
-pd0.description()pd0.show(10, False)
+%dataset write —datasetId 5e68141134492718af974844 —dataFrame pd0pd0.description()pd0.show(10, False)
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -714,20 +696,14 @@ In Spark 2.3 mussten Sie Variablen für `option` Werte definieren, die zum Lesen
   <th>code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import com.adobe.platform.dataset.DataSetOptions
-
-var df1 = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(DataSetOptions.orgId, &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(DataSetOptions.batchId, &quot;dbe154d3-197a-4e6c-80f8-9b7025eea b9&quot;).load(&quot;5e68141134492718af974844&quot;)
+import com.adobe.platform.dataset.DataSetOptions var df1 = spark.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-8 0f8-9b7025eea2b9") .load("5e68141134492718af974844")
 </pre>
-</td>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import org.apache.spark.sql.{Dataset, SparkSession}val spark = SparkSession.builder().master(&quot;local&quot;).getOrCreate()
-
-val df1 = spark.read.format(&quot;com.adobe.platform.Abfrage&quot;).option(&quot;user-token&quot;, sys.env(&quot;PYDASDK_IMS_TOKEN&quot;)).option(&quot;ims-org&quot;, sys.env(&quot;IMS_ORG_ID&quot;).option(&quot;api-key&quot;, sys.js env(&quot;PYDASDK_IMS_CLIENT_ID&quot;).option(&quot;service-token&quot;, sys.env(&quot;PYDASDK_IMS_SERVICE_TOKEN&quot;)).option(&quot;mode&quot;, &quot;interactive&quot;).option(&quot;dataset-id&quot;, &quot;5e68141134444 92718af974844&quot;).load()
+import org.apache.spark.sql.{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()val df1 = spark.read.format("com.adobe.platform.Abfrage") .option("user-token", sys.env("PYDASASASTON_IMS_USER_TOKEN")) .option "ims-org", sys.env("IMS_ORG_ID") .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID")) .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN") .option("mode", "interactive") .option("dataset-id", "5e68141134492718af974844") .load()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -776,22 +752,14 @@ Das Scala-Notebook (Spark 2.4) verwendet den Scala-Kernel, der bei der Einrichtu
   <th>code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import com.adobe.platform.dataset.DataSetOptions
-
-var userToken = spark.sparkContext.getConf.getOption(&quot;spark.garn.appMasterEnv.USER_TOKEN&quot;).getvar serviceToken = spark.sparkContext.getConf.getOption(&quot;spark.garn.appMasterEnv.SERVICE_TOKEN&quot;).getvar service ApiKey = spark.sparkContext.getConf.getOption(&quot;spark.garn.appMasterEnv.SERVICE_API_KEY&quot;).get
-
-df1.write.format(&quot;com.adobe.platform.dataset&quot;).option(DataSetOptions.orgId, &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(DataSetOptions.userToken, userToken).option(DataSetOptions.serviceToken, serviceToken).option(DataSetOptions.serviceApiKey, serviceApiKey).save(&quot;5e68141134492718af974844&quot;)
-</pre>
-</td>
+import com.adobe.platform.dataset.DataSetOptions var userToken = spark.sparkContext.getConf.getOption("spark.garn.appMasterEnv.USER_TOKEN").getvar serviceToken = spark.sparkContext.getConf.getOption("spark.appMaster Env.SERVICE_TOKEN").getvar serviceApiKey = spark.sparkContext.getConf.getOption("spark.garn.appMasterEnv.SERVICE_API_KEY").getdf1.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, 310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.serviceApiKey, serviceApiKey) .save("5e68141134492718af 974844")
+  </pre>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import org.apache.spark.sql.{Dataset, SparkSession}val spark = SparkSession.builder().master(&quot;local&quot;).getOrCreate()
-
-df1.write.format(&quot;com.adobe.platform.Abfrage&quot;).option(&quot;user-token&quot;, sys.env(&quot;PYDASDK_IMS_USER_TOKEN&quot;)).option(&quot;service-token&quot;, sys.env(&quot;PYDASDK_IMS_SERVICE_TOKEN&quot;).option(&quot;ims-org&quot;, sys.env(&quot;IMS_ORG_ID&quot;).option(&quot;api-key&quot;, sys.env(&quot;PYDASDK_IMS_CLIENT_ID&quot;)).option(&quot;mode&quot;, &quot;interactive&quot;).option(&quot;dataset-id&quot;, &quot;5e681411344922 718af974844&quot;).save()
+import org.apache.spark.sql.{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()df1.write.format("com.adobe.platform.Abfrage") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN")) .option("service-service ken", sys.env("PYDASDK_IMS_SERVICE_TOKEN")) .option("ims-org", sys.env("IMS_ORG_ID")) .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID") .option("mode", "interactive") .option("dataset-id", "5e68141134492718af974844") .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
