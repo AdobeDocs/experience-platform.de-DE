@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Datenverwendung
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ Weitere Informationen zu den verfügbaren Datenverwendungsbeschriftungen in Expe
 
 ## Nächste Schritte
 
-Nachdem Sie die Beschriftungen für die Datenverwendung eingeführt haben, können Sie das [Benutzerhandbuch](user-guide.md) lesen, um zu erfahren, wie Sie Beschriftungen in der Benutzeroberfläche der Experience Platform verwalten.
+Nachdem Sie die Beschriftungen für die Datenverwendung eingeführt haben, können Sie das [Benutzerhandbuch](user-guide.md) lesen, um zu erfahren, wie Sie Beschriftungen in der Benutzeroberfläche der Experience Platform verwalten. Anweisungen zum Verwalten von Bezeichnungen mit APIs finden Sie im entsprechenden Abschnitt im Entwicklerhandbuch für den [Katalogdienst](../../catalog/api/labels.md).
