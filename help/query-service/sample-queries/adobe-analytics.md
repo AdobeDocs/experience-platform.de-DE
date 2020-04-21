@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Abfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
 
 # Beispieldaten für Abfragen für Adobe Analytics
 
-Daten aus ausgewählten Adobe Analytics-Report Suites werden in XDM ExperienceEvents umgewandelt und als Datensätze in Adobe Experience Platform integriert. In diesem Dokument wird eine Reihe von Anwendungsfällen erläutert, in denen Adobe Experience Platform Abfrage Service diese Daten nutzt. Die darin enthaltenen Beispieldaten sollten mit Ihren Adobe Analytics-Datensätzen zusammenarbeiten. Weitere Informationen zur Zuordnung zu XDM ExperienceEvents finden Sie in der Dokumentation [zur Feldzuordnung für](../../sources/connectors/adobe-applications/analytics-mapping.md) Analytics.
+Daten aus ausgewählten Adobe Analytics-Report Suites werden in XDM ExperienceEvents umgewandelt und als Datensätze in Adobe Experience Platform integriert. In diesem Dokument wird eine Reihe von Anwendungsfällen erläutert, in denen Adobe Experience Platform Abfrage Service diese Daten nutzt. Die darin enthaltenen Beispieldaten sollten mit Ihren Adobe Analytics-Datensätzen zusammenarbeiten. Weitere Informationen zur Zuordnung zu XDM ExperienceEvents finden Sie in der Dokumentation [zur Feldzuordnung für](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics.
 
 ## Erste Schritte
 
