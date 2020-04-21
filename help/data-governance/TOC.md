@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zur Datenverwaltung in der Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -13,7 +13,8 @@ source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 * [Data Governance – Übersicht](home.md)
 * Datenverwendungsbeschriftungen {#labels}
    * [Übersicht über die Datenverwendung](labels/overview.md)
-   * [Benutzerhandbuch zur Datenverwendung](labels/user-guide.md)
+   * [Verwalten von Datenverwendungsbeschriftungen in der Benutzeroberfläche](labels/user-guide.md)
+   * [Verwalten von Datenverwendungsbeschriftungen in der API](labels/api.md)
    * [Unterstützte Beschriftungen für die Datenverwendung](labels/reference.md)
 * Datenverwendungsrichtlinien {#policies}
    * [Übersicht über die Datenverwendungsrichtlinien](policies/overview.md)
