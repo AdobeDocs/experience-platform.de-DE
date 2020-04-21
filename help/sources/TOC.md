@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
+source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
 
 ---
 
@@ -16,6 +16,10 @@ source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
       - [Analytics Data Connector](connectors/adobe-applications/analytics.md)
       - [Audience Manager-Anschluss](connectors/adobe-applications/audience-manager.md)
       - [Connector für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
+      - Adobe-Anwendungsfelder zuordnen {#mapping}
+         - [Analytics-Zuordnungsfelder](connectors/adobe-applications/mapping/analytics.md)
+         - [Zuordnungsfelder für Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Zielgruppen-Mapping-Felder](connectors/adobe-applications/mapping/target.md)
    - Werbung {#advertising}
       - [Google Ads Connector](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
