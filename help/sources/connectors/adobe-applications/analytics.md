@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analytics Data Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -39,7 +39,7 @@ Weitere Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../../../x
 
 Wenn über die Plattform-Benutzeroberfläche eine Quellverbindung zum Übertragen von Analytics-Daten in die Experience Platform hergestellt wird, werden Datenfelder automatisch zugeordnet und innerhalb von Minuten in das Echtzeit-Kundenkonto eingeordnet. Anweisungen zum Erstellen einer Quellverbindung mit Adobe Analytics mithilfe der Plattform-Benutzeroberfläche finden Sie im Lernprogramm [Analytics-Datenschnittstellen](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-Detaillierte Informationen zur Feldzuordnung zwischen Analytics und Experience Platform finden Sie im Handbuch zur Feldzuordnung für [Adobe Analytics](./analytics-mapping.md) .
+Detaillierte Informationen zur Feldzuordnung zwischen Analytics und Experience Platform finden Sie im Handbuch zur Feldzuordnung für [Adobe Analytics](./mapping/analytics.md) .
 
 ## Welche Latenz wird für Analytics Data on Platform erwartet?
 
