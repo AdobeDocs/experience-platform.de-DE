@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Catalog and Datasets Help
+user-guide-title: Hilfe zu Katalogen und Datensätzen
 translation-type: tm+mt
-source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -22,6 +22,7 @@ source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
    * [Löschen eines Objekts](api/delete-object.md)
    * [Datensatz erstellen](api/create-dataset.md)
    * [Stapel erstellen](api/create-batch.md)
+   * [Datenverwendungsbeschriftungen](api/labels.md)
    * [Anhang](api/appendix.md)
 * Datensätze {#datasets}
    * [Übersicht über Datasets](datasets/overview.md)
