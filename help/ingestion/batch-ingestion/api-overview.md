@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch zu Adobe Experience Platform Batch Ingestion
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -33,7 +33,7 @@ In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ih
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -54,7 +54,7 @@ Anforderungen, die eine Nutzlast enthalten (POST, PUT, PATCH), erfordern möglic
 
 Beim Erfassen von Daten ist es wichtig, zu verstehen, wie Experience Data Model (XDM)-Schema funktionieren. Weitere Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Schema Registry Developer Guide](../../xdm/api/getting-started.md).
 
-Beim Eingeben von Daten gibt es eine gewisse Flexibilität. Wenn ein Typ nicht mit dem Schema Zielgruppe übereinstimmt, werden die Daten in den Typ der ausgedrückten Zielgruppe konvertiert.  Wenn dies nicht möglich ist, schlägt der Stapel mit einem `TypeCompatibilityException`Fehler fehl.
+Beim Eingeben von Daten gibt es eine gewisse Flexibilität. Wenn ein Typ nicht mit dem Schema Zielgruppe übereinstimmt, werden die Daten in den Typ der ausgedrückten Zielgruppe konvertiert. Wenn dies nicht möglich ist, schlägt der Stapel mit einem `TypeCompatibilityException`Fehler fehl.
 
 Beispielsweise haben weder JSON noch CSV einen Datums- oder Uhrzeittyp. Daher werden diese Werte mit [ISO 8061 formatierten Zeichenfolgen](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) oder Unix Time in Millisekunden formatiert (153126395999 000) und werden zur Erfassungszeit in den XDM-Typ der Zielgruppe konvertiert.
 
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parameter | Beschreibung |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | Die ID des Referenzdatasets. |
 
 **Antwort**
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Stapel löschen
+## Stapel löschen {#delete-a-batch}
 
 Ein Stapel kann gelöscht werden, indem die folgende POST-Anforderung mit dem Parameter `action=REVERT` Abfrage zur ID des Stapels ausgeführt wird, den Sie löschen möchten. Der Stapel ist als &quot;inaktiv&quot;markiert, sodass er für die Müllabfuhr zugelassen wird. Der Stapel wird asynchron erfasst und zu diesem Zeitpunkt als &quot;gelöscht&quot;gekennzeichnet.
 
