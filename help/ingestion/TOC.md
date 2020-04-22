@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Ingestion Help
+user-guide-title: Hilfe zur Dateneinbindung in der Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 1e4155374b5d164fe5d955db65fe07880e246e3b
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -37,3 +37,4 @@ source-git-commit: 1e4155374b5d164fe5d955db65fe07880e246e3b
    - [Ereignisse zur Datenerfassung abonnieren](quality/subscribe-events.md)
 - [Quellenanschlüsse](source-connectors.md)
 - [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
