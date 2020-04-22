@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -153,3 +153,4 @@ source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
       - [Konfigurieren eines Datenflusses für einen Protokollanschluss](tutorials/ui/dataflow/protocols.md)
    - [Aktivieren von Eingangsdaten zum Ausfüllen von Profilen](tutorials/ui/profile.md)
    - [Überwachen von Konten und Datenflüssen](tutorials/ui/monitor.md)
+- [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
