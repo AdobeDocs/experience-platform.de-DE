@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zur Datenverwaltung in der Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
+source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
 
 ---
 
@@ -29,3 +29,4 @@ source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
    * [Marketingaktionen](api/marketing-actions.md)
    * [Test](api/evaluation.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
