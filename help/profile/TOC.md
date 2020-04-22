@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Real-time Customer Profile Help
+user-guide-title: Hilfe zum Echtzeit-Profil
 translation-type: tm+mt
-source-git-commit: d16d13fdec107d3654ff2ef5c8e18661763470f0
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -25,6 +25,7 @@ source-git-commit: d16d13fdec107d3654ff2ef5c8e18661763470f0
 * Tutorials {#tutorials}
    * [Daten in Profil Hinzufügen](tutorials/add-profile-data.md)
    * [Dataset für Profil und Identität konfigurieren](tutorials/dataset-configuration.md)
-   * [Weitere Übungen](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
+   * [Weitere Übungen](https://docs.adobe.com/content/help/de-DE/experience-platform/tutorials/home.html)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
+* [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
