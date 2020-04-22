@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace - Anleitung zur Fehlerbehebung
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
 
 ---
 
@@ -15,9 +15,9 @@ In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zum Adobe E
 
 ## JupyterLab-Umgebung wird in Google Chrome nicht geladen
 
-Mit der neuesten Aktualisierung des Google Chrome-Browsers auf Version 80.x werden alle Drittanbieter-Cookies standardmäßig blockiert. Diese neue Richtlinie kann verhindern, dass JupyterLab in Adobe Experience Platform geladen wird.
+>[!IMPORTANT] Dieses Problem wurde behoben, könnte aber weiterhin im Browser Google Chrome 80.x vorhanden sein. Stellen Sie sicher, dass Ihr Chrome-Browser auf dem neuesten Stand ist.
 
->[!NOTE] Das ist ein vorübergehendes Problem. Die Abhängigkeit von Drittanbieter-Cookies wird in einer zukünftigen Version entfernt.
+Bei der Google Chrome-Browserversion 80.x werden alle Drittanbieter-Cookies standardmäßig blockiert. Diese Richtlinie kann verhindern, dass JupyterLab in Adobe Experience Platform geladen wird.
 
 Gehen Sie wie folgt vor, um dieses Problem zu beheben:
 
@@ -45,7 +45,19 @@ Nach Schritt 2 werden Sie aufgefordert, Ihren Browser neu zu starten. Nach dem N
 
 ## Warum kann ich nicht auf JupyterLab in Safari zugreifen?
 
-Safari deaktiviert Cookies von Drittanbietern standardmäßig. Da sich Ihre virtuelle Jupyter-Computerinstanz in einer anderen Domäne befindet als der übergeordnete Rahmen, erfordert Adobe Experience Platform derzeit die Aktivierung von Drittanbieter-Cookies. Aktivieren Sie Drittanbieter-Cookies oder wechseln Sie zu einem anderen Browser wie Google Chrome.
+Safari deaktiviert Cookies von Drittanbietern standardmäßig in Safari &lt; 12. Da sich Ihre virtuelle Jupyter-Computerinstanz in einer anderen Domäne befindet als der übergeordnete Rahmen, erfordert Adobe Experience Platform derzeit die Aktivierung von Drittanbieter-Cookies. Aktivieren Sie Drittanbieter-Cookies oder wechseln Sie zu einem anderen Browser wie Google Chrome.
+
+Für Safari 12 müssen Sie Ihren Benutzeragent auf &quot;Chrome&quot;oder &quot;Firefox&quot;umstellen. Um den Benutzeragent zu wechseln, öffnen Sie das *Safari* -Menü und wählen Sie &quot; **Voreinstellungen&quot;**. Das Fenster &quot;Voreinstellungen&quot;wird angezeigt.
+
+![Safari-Voreinstellungen](./images/faq/preferences.png)
+
+Wählen Sie im Fenster &quot;Safari-Voreinstellungen&quot;die Option **Erweitert**. Markieren Sie dann das Menü &quot;Entwicklung *anzeigen&quot;in der Menüleiste* . Nach Abschluss dieses Schritts können Sie das Fenster &quot;Voreinstellungen&quot;schließen.
+
+![Safari Advanced](./images/faq/advanced.png)
+
+Wählen Sie dann in der oberen Navigationsleiste das Menü &quot; **Entwicklung** &quot;aus. Bewegen Sie den Mauszeiger über den *Benutzeragent* im Dropdownmenü *Entwickeln*. Sie können die **Chrome** - oder **Firefox** -Benutzeragenten-Zeichenfolge auswählen, die Sie verwenden möchten.
+
+![Entwicklungsmenü](./images/faq/user-agent.png)
 
 ## Warum wird beim Versuch, eine Datei in JupyterLab hochzuladen oder zu löschen, die Meldung &quot;403 Verboten&quot;angezeigt?
 
