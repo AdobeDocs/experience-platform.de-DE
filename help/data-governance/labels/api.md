@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Verwalten von Datenverwendungsbeschriftungen mit APIs '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ Eine erfolgreiche Antwort gibt die Beschriftungen zurück, die dem Datensatz hin
 
 Sie können die auf einen Datensatz angewendeten Beschriftungen löschen, indem Sie eine DELETE-Anforderung ausführen.
 
->[!NOTE] Verwenden Sie diesen Vorgang nur, wenn Sie den übergeordneten Datensatz zum Löschen vorbereiten.
-
 **API-Format**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort HTTP-Status 200 (OK), gab an, dass die Beschriftungen gelöscht wurden. Sie können die vorhandenen Bezeichnungen [für den Datensatz in einem separaten Aufruf](#lookup) nachschlagen, um dies zu bestätigen.
+Eine erfolgreiche Antwort HTTP-Status 200 (OK), der angibt, dass die Beschriftungen gelöscht wurden. Sie können die vorhandenen Bezeichnungen [für den Datensatz in einem separaten Aufruf](#lookup) nachschlagen, um dies zu bestätigen.
 
 ## Nächste Schritte
 
