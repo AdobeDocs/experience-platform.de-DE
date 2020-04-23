@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
 
 ---
 
@@ -14,30 +14,37 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## Veröffentlichungsdatum: 15. Januar 2020
 
-## Erlebnis-Datenmodell (XDM)-System
+Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
+
+* [Erlebnis-Datenmodell (XDM)-System](#xdm)
+* [Privacy Service](#privacy)
+* [Quellen](#sources)
+* [Ziele](#destinations)
+
+## Erlebnis-Datenmodell (XDM)-System {#xdm}
 
 Standardisierung und Interoperabilität sind Schlüsselkonzepte der Experience Platform. Das von Adobe unterstützte Experience Data Model (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten auf der Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Audiencen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
-### Neue Funktionen
+**Neue Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
 | Feldtypeinschränkungen für Felder gleicher Hierarchie | Nachdem ein XDM-Feld als ein bestimmter Typ definiert wurde, müssen alle anderen Felder mit demselben Namen und derselben Hierarchie unabhängig von den Klassen oder Mixins, in denen sie verwendet werden, denselben Feldtyp verwenden. Wenn beispielsweise ein Mixin für die XDM-Profil-Klasse ein `profile.age` Feld vom Typ &quot;integer&quot;enthält, kann ein ähnliches Mixin für XDM ExperienceEvent kein Feld vom Typ &quot;string&quot; `profile.age` aufweisen. Um einen anderen Feldtyp zu verwenden, muss das Feld eine andere Hierarchie aufweisen als das zuvor definierte Feld (z. B. `profile.person.age`). Diese Funktion soll Konflikte verhindern, wenn Schema in einer Vereinigung zusammengeführt werden. Die Beschränkung wirkt sich nicht rückwirkend auf vorhandene Schema aus. Es wird jedoch dringend empfohlen, Ihre Schema auf Feldkonflikte zu überprüfen und sie nach Bedarf zu bearbeiten. |
 | Groß-/Kleinschreibung bei der Feldüberprüfung | Benutzerdefinierte Felder auf derselben Ebene müssen unabhängig von der Groß-/Kleinschreibung unterschiedliche Namen haben. Wenn Sie beispielsweise ein benutzerdefiniertes Feld mit dem Namen &quot;E-Mail&quot;hinzufügen, können Sie kein weiteres benutzerdefiniertes Feld mit dem Namen &quot;E-Mail&quot;hinzufügen. |
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Keine
 
 Weitere Informationen zum Arbeiten mit XDM mithilfe der Schema Registry API und Schema Editor Benutzeroberfläche finden Sie in der [XDM-Systemdokumentation](../../xdm/home.md).
 
-## Privacy Service
+## Privacy Service {#privacy}
 
 Die neuen gesetzlichen und organisatorischen Vorschriften geben den Nutzern das Recht, auf ihre personenbezogenen Daten auf Anfrage aus Ihren Datenspeichern zuzugreifen oder sie zu löschen. Der Datenschutzdienst für Adobe Experience Platform stellt eine RESTful-API und eine Benutzeroberfläche bereit, mit der Sie diese Datenanforderungen Ihrer Kunden verwalten können. Mit dem Datenschutzdienst können Sie Anfragen zum Zugriff auf und Löschen von persönlichen oder privaten Kundendaten aus Adobe Experience Cloud-Anwendungen stellen, wodurch die automatische Einhaltung der gesetzlichen und organisatorischen Datenschutzbestimmungen erleichtert wird.
 
-### Neue Funktionen
+**Neue Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
@@ -47,19 +54,19 @@ Die neuen gesetzlichen und organisatorischen Vorschriften geben den Nutzern das 
 | Unterstützung der Adobe Primetime-Authentifizierung | Der Datenschutzdienst akzeptiert jetzt Zugriff-/Löschanforderungen aus der Adobe Primetime-Authentifizierung, wobei `primetimeAuthentication` als Produktwert verwendet wird. |
 | Verbesserungen der Benutzeroberfläche des Datenschutzdienstes | Separate Auftragsverfolgungsseiten für GDPR- und CCPA-Regeln. Neues _Regeltyp_ -Dropdown, um zwischen den Verfolgungsdaten für GDPR und CCPA zu wechseln. |
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Keine
 
 Weitere Informationen zum Datenschutzdienst finden Sie in der Übersicht über den [Datenschutzdienst](../../privacy-service/home.md).
 
-## Quellen
+## Quellen {#sources}
 
 Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie diese Daten mithilfe von Plattformdiensten strukturieren, beschriften und verbessern können. Sie können Daten aus verschiedenen Quellen erfassen, z. B. Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Drittanbieter-Software und Ihr CRM-System.
 
 Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie Quellverbindungen für verschiedene Datenanbieter einfach einrichten können. Diese Quellverbindungen ermöglichen Ihnen die Authentifizierung und Verbindung zu externen Datenspeicherung- und CRM-Diensten, die Festlegung von Zeiten für die Erfassungsausführung und die Verwaltung des Datenaufkommens.
 
-### Neue Funktionen
+**Neue Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
@@ -74,17 +81,17 @@ Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfl�
 | Dateneinbindung | Quellen verwalten | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
 | Dateneinbindung | Ansichten-Quellen | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte &quot; *Katalog* &quot;und authentifizierte Quellen auf der Registerkarte &quot; *Durchsuchen* &quot;. |
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Keine
 
 For more information about sources, see the [sources overview](../../sources/home.md)
 
-## Ziele
+## Ziele {#destinations}
 
 In [Adobe Echtzeit-CDP](../../rtcdp/overview.md)sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten auf nahtlose Weise für diese Partner aktivieren.
 
-### Neue Funktionen
+**Neue Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
@@ -98,7 +105,7 @@ In [Adobe Echtzeit-CDP](../../rtcdp/overview.md)sind Ziele vordefinierte Integra
 | Ziele | Ansichten-Ziele | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte &quot; _Katalog_ &quot;und authentifizierte Ziele auf der Registerkarte &quot; _Durchsuchen_ &quot;. |
 | Ziele | Ziele aktivieren | Möglichkeit, Daten an Ziele zu aktivieren. Für diese Berechtigung muss dem Profil &quot;Ansicht&quot;entweder &quot;Ziele verwalten&quot;oder &quot;Zielorte verwalten&quot;hinzugefügt werden. |
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Keine
 
