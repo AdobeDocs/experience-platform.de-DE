@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
 
 ---
 
@@ -14,18 +14,18 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## Releasedatum: 18. November 2019
 
-Neue Versionen:
-* [Echtzeit-Kundendatenplattform](#real-time-customer-data-platform)
+Neue Funktionen in Adobe Experience Platform:
+* [Echtzeit-Kundendatenplattform](#rtcdp)
 * [Ziele](#destinations)
 * [Quellen](#sources)
 
 Aktualisierungen vorhandener Funktionen:
-* [Data Science-Arbeitsbereich](#data-science-workspace)
-* [Erlebnis-Datenmodell (XDM)-System](#experience-data-model-xdm-system)
-* [Echtzeit-Kundenprofil](#real-time-customer-profile)
-* [Segmentierungsdienst](#segmentation-service)
+* [Data Science-Arbeitsbereich](#dsw)
+* [Erlebnis-Datenmodell (XDM)-System](#xdm)
+* [Echtzeit-Kundenprofil](#profile)
+* [Segmentierungsdienst](#segmentation)
 
-## Echtzeit-Kundendatenplattform
+## Echtzeit-Kundendatenplattform {#rtcdp}
 
 Die auf der Adobe Experience Platform aufbauende Echtzeit-Kundendatenplattform (Echtzeit-CDP) von Adobe hilft Firmen, bekannte und unbekannte Daten zusammenzuführen, um Profil mit intelligenten Entscheidungen während der gesamten Customer Journey zu aktivieren. Die Echtzeit-Kundendatenplattform fasst unterschiedliche Unternehmensdatenquellen zusammen, um in Echtzeit einheitliche Profile zu erstellen, die über alle Kanäle und Geräte hinweg ein personalisiertes Kundenerlebnis möglich machen.
 
@@ -42,7 +42,7 @@ Mit der Echtzeit-Kundendatenplattform profitieren Sie von folgenden Vorteilen:
 
 Weitere Informationen finden Sie in der Dokumentation [zur](../../rtcdp/overview.md)Adobe Echtzeit-Kundendatenplattform.
 
-### Wichtigste Funktionen
+**Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 |---|---|
@@ -50,7 +50,7 @@ Weitere Informationen finden Sie in der Dokumentation [zur](../../rtcdp/overview
 | Dashboard zu Startseiten-Metriken | Die Startseite zur Adobe Echtzeit-Kundendatenplattform (Echtzeit-CDP) enthält ein Dashboard mit Metriken, in dem Informationen zu Profilen und Segmenten angezeigt werden. Die Startseite enthält auch Links zu Lernmaterialien. Siehe den Abschnitt zu den Metriken [der](#real-time-customer-data-platform-metrics) Echtzeit-Kundendatenplattform. |
 | Quellen | Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System. Weitere Informationen finden Sie im Abschnitt [Quellen](#sources) . |
 
-### Echtzeit-Metriken zur Kundendatenplattform
+**Echtzeit-Metriken zur Kundendatenplattform**
 
 Die Startseite der Echtzeit-Kundendatenplattform von Adobe, die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
 
@@ -60,11 +60,11 @@ Wenn zum Zeitpunkt der Anmeldung bei der Echtzeit-Kundendatenplattform keine Dat
 
 Weitere Informationen finden Sie in der Übersicht über die Metriken der [Echtzeit-Kundendatenplattform](../../rtcdp/home-page-dashboards.md)
 
-## Ziele
+## Ziele {#destinations}
 
 Ziele sind vordefinierte Integrationen mit Zielplattformen, die von der Echtzeit-Kundendatenplattform von Adobe unterstützt werden und die Daten nahtlos für diese Partner aktivieren. Weitere Informationen finden Sie im Artikel [Ziele-Übersicht](../../rtcdp/destinations/destinations-overview.md) .
 
-### Verfügbare Ziele
+**Verfügbare Ziele**
 
 Ab der November-Version unterstützt die Echtzeit-Kundendatenplattform von Adobe die folgenden Ziele:
 
@@ -73,20 +73,20 @@ Ab der November-Version unterstützt die Echtzeit-Kundendatenplattform von Adobe
 
 Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../../rtcdp/destinations/destinations-catalog.md) .
 
-### Bekannte Einschränkungen
+**Bekannte Einschränkungen**
 
 * Das Steuerelement zum Zulassen von Zeitplänen für benutzerdefinierte Aktivierungen im [Aktivierungen-Fluss](../../rtcdp/destinations/activate-destinations.md#activate-data) (Planschritt) ist in der ersten Version nicht verfügbar.
 * Es gibt derzeit keine Möglichkeit, eine Zielkonfiguration zu bearbeiten oder zu löschen. Um diese Einschränkung zu umgehen, können Sie das Ziel oben rechts auf der Seite mit den [Zieldetails aktivieren oder deaktivieren](../../rtcdp/destinations/destination-details-page.md).
 * Es gibt derzeit keine Überprüfung für Kontodetails, Pfad oder Anmeldeinformationen, wenn eine Verbindung mit Ihrem Ziel- oder Datenspeicherung-Konto hergestellt wird. Vergewissern Sie sich, dass Sie die richtigen Anmeldeinformationen eingeben und die Dublette auf Rechtschreibfehler oder Tippfehler überprüfen.
 * Mit der ersten Version wurden keine Anmeldeinformationen verlängert. Nachdem ein Konto abgelaufen ist oder aktualisiert werden muss, müssen Sie eine neue Zielverbindung erstellen und Ihre zuvor zugeordneten Segmente neu zuordnen.
 
-## Quellen
+## Quellen {#sources}
 
 Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie diese Daten mithilfe von Plattformdiensten strukturieren, beschriften und verbessern können. Sie können Daten aus verschiedenen Quellen erfassen, z. B. Adobe Solutions, Cloud-basierte Datenspeicherung, Drittanbieter-Software und Ihr CRM-System.
 
 Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie Quellverbindungen für verschiedene Datenanbieter einfach einrichten können. Mit diesen Quellverbindungen können Sie sich bei Ihren Datenspeicherung- und CRM-Diensten authentifizieren, die Erfassungsdauer festlegen und den Datendurchsatz verwalten.
 
-### Wichtigste Funktionen
+**Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ---------- | ------------ |
@@ -94,17 +94,17 @@ Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfl�
 | Überarbeitete Workflows für CRM-Connectors | Neuer intuitiver Arbeitsablauf für die Benutzeroberfläche zum Erstellen und Verwalten von Microsoft Dynamics und Salesforce Connectors. |
 | Connector-Unterstützung für Cloud-basierte Datenspeicherung | Connectors können jetzt auf Cloud-basierte Datenspeicherung zugreifen. Zu den neuen Quellen zählen Amazon S3, Azurblase und FTP/SFTP-Server. |
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Quellschnittstellen für Cloud-basierte Datenspeicherung unterstützen nicht die Erfassung komprimierter Dateien.
 
 Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).
 
-## Data Science-Arbeitsbereich
+## Data Science-Arbeitsbereich {#dsw}
 
 Mit dem Data Science Workspace der Adobe Experience Platform können Datenwissenschaftler Einblicke aus Daten und Inhalten in Adobe-Anwendungen und Drittanbietersystemen nahtlos erstellen, indem sie maschinelle Lernmodelle erstellen und operationalisieren. Data Science Workspace ist eng mit der Plattform integriert und ermöglicht den End-to-End-Data Science-Lebenszyklus, einschließlich der Erforschung und Vorbereitung von XDM-Daten, gefolgt von der Entwicklung und Inbetriebnahme von Modellen, um das Echtzeit-Profil von Kunden automatisch mit Machine Learning Insights zu bereichern.
 
-### Neue Funktionen
+**Neue Funktionen**
 
 | Funktion | Beschreibung |
 | -----------| ---------- |
@@ -113,13 +113,13 @@ Mit dem Data Science Workspace der Adobe Experience Platform können Datenwissen
 
 Weitere Informationen finden Sie in der Übersicht über den Arbeitsbereich für [Datenwissenschaften](../../data-science-workspace/home.md).
 
-## Erlebnis-Datenmodell (XDM)-System
+## Erlebnis-Datenmodell (XDM)-System {#xdm}
 
 Standardisierung und Interoperabilität sind Schlüsselkonzepte der Experience Platform. Das von Adobe unterstützte Experience Data Model (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten auf der Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Audiencen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
-### Neue Funktionen
+**Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ---------- | ------------ |
@@ -130,13 +130,13 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 | Formatbeschränkungen für `xdm:alternateDisplayInfo` | Die Felder &quot;Titel&quot;und &quot;Beschreibung&quot;für `xdm:alternateDisplayInfo` müssen beide Zeichenfolgen sein, um die Überprüfung zu bestehen. |
 | Namensänderung: XDM Individuelles Profil | Der &quot;title&quot; der Klasse &quot;XDM Profil&quot; wurde auf &quot;XDM Individuelles Profil&quot; aktualisiert. Die Form `$id` der Klasse hat sich nicht geändert. |
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Keine.
 
 Weitere Informationen zum Arbeiten mit XDM mithilfe der Schema Registry API und Schema Editor Benutzeroberfläche finden Sie in der [XDM-Systemdokumentation](../../xdm/home.md).
 
-## Echtzeit-Kundenprofil
+## Echtzeit-Kundenprofil {#profile}
 
 Mit der Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden bereitstellen, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Mit Echtzeit-Kundendaten können Sie eine ganzheitliche Ansicht jedes einzelnen Profils anzeigen, die Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieterdaten, kombiniert. Mit dem Profil können Sie Ihre unterschiedlichen Kundendaten in einer einheitlichen Sicht zusammenfassen, die ein umsetzbares Konto mit Zeitstempel für jede Kundeninteraktion bietet.
 
@@ -148,17 +148,17 @@ Mit der Adobe Experience Platform können Sie koordinierte, konsistente und rele
 | Zusammenführungsrichtlinien pro Projektion konfigurieren | Anwendungen können jetzt Zusammenführungsrichtlinien pro Projektion konfigurieren, um eine Ansicht der Daten zu generieren, die von einer bestimmten Zusammenführungsrichtlinie bestimmt wird. |
 | Berechnete Attribute | Berechnete Attribute berechnen den Feldwert automatisch anhand anderer Werte, Berechnungen und Ausdruck. Berechnete Attribute werden auf Profil-/Aggregat-Ebene verwendet, z. B. &quot;Gesamtkauf&quot;, &quot;Lebenszeitwert&quot;oder &quot;Trichterstatus&quot;, basierend auf einem eingehenden Ereignis, einem eingehenden Ereignis und einem eingehenden Profil oder einem eingehenden Ereignis, Profil-Daten und historischen Ereignissen. |
 
-### Fehlerkorrekturen
+**Fehlerkorrekturen**
 
 * Vereinfachte Liste der verfügbaren ID-Zuordnungsstrategien im Arbeitsablauf zur Erstellung von Zusammenführungsrichtlinien.
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Keine.
 
 Weitere Informationen zum Echtzeit-Profil von Kunden, einschließlich Übungen und Best Practices für die Arbeit mit Profil-Daten, finden Sie in der Übersicht über das [Echtzeit-Profil](../../profile/home.md).
 
-## Segmentierungsdienst
+## Segmentierungsdienst {#segmentation}
 
 Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren Echtzeit-Daten zum Profil von Kunden generieren können. Diese Segmente werden zentral auf der Plattform konfiguriert und gepflegt, sodass sie von jeder Adobe-Anwendung leicht zugänglich sind.
 
@@ -173,7 +173,7 @@ Der Segmentierungsdienst definiert eine bestimmte Untergruppe von Profilen, inde
 | RBAC-Unterstützung | Segmentaufbau unterstützt jetzt grundlegende rollenbasierte Zugriffskontrollen und Berechtigungen. |
 | Erweiterte Unterstützung für die Freigabe externer Audiencen zwischen Plattform- und Adobe-Lösungen | Benutzer können jetzt externe Metadaten (ohne Plattform) für Audiencen in Szenarien einbringen, in denen die Anzahl der Audiencen a priori groß oder nicht bekannt ist. Diese Version enthält Zugriff auf Audience Manager-Metadaten für Kunden, die den Lösungsanschluss bereitgestellt haben. Diese Audience-Metadaten können im Segmentaufbau verwendet werden, um neue Erlebnisplattformsegmente zu erstellen. <br/><br/> Darüber hinaus stehen in Experience Platform erstellte Segmente jetzt zur Verwendung in integrierten Adobe-Lösungen zur Verfügung, einschließlich Audience Manager, Zielgruppe und Ad Cloud. |
 
-### Fehlerkorrekturen
+**Fehlerkorrekturen**
 
 * Es wurde ein Fehler behoben, der dazu führte, dass bei der Segmentierung mehrerer Entitäten bei verschachtelten Beziehungen keine Profil zurückgegeben wurden.
 * Es wurde ein Problem behoben, bei dem die Ausschlusslogik irreführende Ergebnisse zurückgab.
@@ -181,7 +181,7 @@ Der Segmentierungsdienst definiert eine bestimmte Untergruppe von Profilen, inde
 * Es wurde ein zeitweiliger Fehler behoben, durch den mehrere Kopien desselben XDM-Ordners angezeigt wurden.
 * Es werden nun Nachrichten erzeugt, die einen Benutzer darüber informieren, wenn Segmentschätzungen für die ausgewählte Zusammenführungsrichtlinie nicht verfügbar sind.
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Keine.
 
