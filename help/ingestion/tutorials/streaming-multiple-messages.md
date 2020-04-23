@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Streaming mehrerer Nachrichten in einer einzelnen HTTP-Anforderung
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 ---
 
@@ -20,7 +20,7 @@ Dieses Dokument bietet eine Anleitung zum Senden mehrerer Nachrichten an Experie
 Dieses Lernprogramm erfordert ein Verständnis der Adobe Experience Platform Data Ingestion. Bevor Sie dieses Lernprogramm beginnen, lesen Sie bitte die folgende Dokumentation:
 
 - [Dateneinbettung - Übersicht](../home.md): Behandelt die Kernkonzepte der Experience Platform Data Ingestion, einschließlich Erfassungsmethoden und Data Connectors.
-- [Übersicht](../streaming-ingestion/overview.md)zur Streaming-Erfassung: Der Arbeitsablauf und die Bausteine der Streaming-Erfassung, wie Streaming-Verbindungen, Datasets, XDM Individuelles Profil und XDM ExperienceEvent.
+- [Übersicht](../streaming-ingestion/overview.md)zur Streaming-Erfassung: Der Arbeitsablauf und die Bausteine der Streaming-Erfassung, wie Streaming-Verbindungen, Datasets, XDM-Individuelles Profil und XDM ExperienceEvent.
 
 Für dieses Lernprogramm müssen Sie außerdem das Lernprogramm &quot; [Authentifizierung für Adobe Experience Platform](../../tutorials/authentication.md) &quot;abgeschlossen haben, um erfolgreich Aufrufe an Plattform-APIs durchführen zu können. Das Abschließen des Authentifizierungslehrgangs stellt den Wert für den Autorisierungs-Header bereit, der für alle API-Aufrufe in diesem Lernprogramm erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
 
@@ -47,7 +47,7 @@ Anstelle eines vorhandenen Datensatzes können Sie einen neuen Datensatz erstell
 **API-Format**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Eigenschaft | Beschreibung |
@@ -57,7 +57,7 @@ POST /collection/{CONNECTION_ID}
 **Anfrage**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -229,7 +229,7 @@ Die Anforderungs-Nutzlast ist ein Array von JSON-Objekten, die das Ereignis im X
 **API-Format**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Eigenschaft | Beschreibung |
@@ -239,7 +239,7 @@ POST /collection/{CONNECTION_ID}
 **Anfrage**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
