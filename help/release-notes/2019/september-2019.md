@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 26568ebbbe48b5a82e4f6b5cf035c354c11e8ed1
 
 ---
 
@@ -14,7 +14,13 @@ source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
 
 ## Releasedatum: 10. September 2019
 
-## Dateneinbindung
+Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
+
+* [Dateneinbindung](#ingestion)
+* [Data Science-Arbeitsbereich](#dsw)
+* [Abfrage](#query)
+
+## Dateneinbindung {#ingestion}
 
 Adobe Experience Platform bietet eine Vielzahl von Funktionen, mit denen Daten jeder Art und Latenzzeit erfasst werden können. Adobe Experience Platform Data Ingestion bietet mehrere Alternativen zum Erfassen von Daten, einschließlich Batch-APIs, Streaming-APIs, nativen Adobe-Connectors, Data Integration-Partnern oder der Benutzeroberfläche der Adobe Experience Platform.
 
@@ -26,7 +32,7 @@ Adobe Experience Platform bietet eine Vielzahl von Funktionen, mit denen Daten j
 
 Weitere Informationen finden Sie in der [Datenaufnahmendokumentation](../../ingestion/home.md).
 
-## Data Science-Arbeitsbereich
+## Data Science-Arbeitsbereich {#dsw}
 
 Adobe Experience Platform Data Science Workspace ist ein vollständig verwalteter Dienst innerhalb der Experience Platform, mit dem Datenwissenschaftler nahtlos Einblicke aus Daten und Inhalten in Adobe-Lösungen und Drittanbietersystemen generieren können, indem sie maschinelle Lernmodelle erstellen und operationalisieren. Data Science Workspace ist eng mit der Plattform integriert und ermöglicht den End-to-End-Data Science-Lebenszyklus, einschließlich der Erforschung und Vorbereitung von XDM-Daten, gefolgt von der Entwicklung und Inbetriebnahme von Modellen, um das Echtzeit-Profil von Kunden automatisch mit Machine Learning Insights zu bereichern.
 
@@ -46,7 +52,7 @@ Adobe Experience Platform Data Science Workspace ist ein vollständig verwaltete
 
 Weitere Informationen finden Sie unter Übersicht über den [Data Science Workspace](../../data-science-workspace/home.md).
 
-## Abfrage
+## Abfrage {#query}
 
 Abfrage Service bietet die Möglichkeit, Standarddaten aus SQL zur Abfrage in Adobe Experience Platform zu verwenden, um eine Vielzahl von Anwendungsfällen für Analyse und Data Management zu unterstützen. Es ist ein serverloses Tool, mit dem Sie Datasets aus dem Data Lake zusammenführen und die Abfragen als neuer Datensatz erfassen können, der in Berichte, Data Science Workspace oder zur Erfassung in Echtzeit-Kundendaten verwendet werden kann.
 
