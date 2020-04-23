@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
 
 ---
 
@@ -14,13 +14,17 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## Versionsdatum: 12. Februar 2020
 
-## Quellen
+Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
+
+* [Quellen](#sources)
+
+## Quellen {#sources}
 
 Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie diese Daten mithilfe von Plattformdiensten strukturieren, beschriften und verbessern können. Sie können Daten aus verschiedenen Quellen erfassen, z. B. Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Drittanbieter-Software und Ihr CRM-System.
 
 Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie Quellverbindungen für verschiedene Datenanbieter einfach einrichten können. Diese Quellverbindungen ermöglichen Ihnen die Authentifizierung und Verbindung zu externen Datenspeicherung- und CRM-Diensten, die Festlegung von Zeiten für die Erfassungsausführung und die Verwaltung des Datenaufkommens.
 
-### Neue Funktionen
+**Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
@@ -30,7 +34,7 @@ Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfl�
 | API-Unterstützung für Cloud-Datenspeicherung-Systeme | Neue Quellschnittstellen für die Azurblase Data Lake Service Gen 2 API und die Google Cloud Datenspeicherung API. |
 | Benutzeroberflächenunterstützung für Cloud-Datenspeicherung-Systeme | Neuer Quell-Connector für Google Cloud-Datenspeicherung in der Benutzeroberfläche. |
 
-### Bekannte Probleme
+**Bekannte Probleme**
 
 * Keine
 
