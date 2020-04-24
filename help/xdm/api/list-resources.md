@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Listen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # Listen
 
 Sie können eine Liste aller Ressourcen (Schema, Klassen, Mixins oder Datentypen) in einem Container durch eine einzelne GET-Anforderung Ansicht.
+
+>[!NOTE] Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie [Seitenparameter](#paging)verwenden. Es wird außerdem empfohlen, Abfrage-Parameter zum [Filtern der Ergebnisse](#filtering) und zur Reduzierung der zurückgegebenen Ressourcen zu verwenden.
+>
+> Wenn Sie die Beschränkung auf 300 Elemente vollständig außer Kraft setzen möchten, müssen Sie die Kopfzeile &quot;Akzeptieren&quot;verwenden, `application/vnd.adobe.xdm-v2+json` um alle Ergebnisse in einer einzigen Anforderung zurückzugeben.
 
 **API-Format**
 
@@ -42,8 +46,9 @@ Das Antwortformat hängt vom Accept-Header ab, der in der Anforderung gesendet w
 
 | Kopfzeile akzeptieren | Beschreibung |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | Gibt eine kurze Zusammenfassung jeder Ressource zurück, im Allgemeinen die bevorzugte Kopfzeile für die Auflistung |
-| application/vnd.adobe.xed+json | Gibt für jede Ressource das vollständige JSON-Schema zurück, wobei das Original `$ref` und `allOf` |
+| application/vnd.adobe.xed-id+json | Gibt eine kurze Zusammenfassung der einzelnen Ressourcen zurück. Dies ist die empfohlene Kopfzeile für die Auflistung der Ressourcen. (Maximal: 300) |
+| application/vnd.adobe.xed+json | Gibt das vollständige JSON-Schema für jede Ressource zurück, wobei das Original `$ref` und `allOf` die Variable enthalten sind. (Maximal: 300) |
+| application/vnd.adobe.xdm-v2+json | Gibt das vollständige JSON-Schema für alle Ergebnisse in einer einzigen Anforderung zurück, wobei die Beschränkung von 300 Elementen außer Kraft gesetzt wird. |
 
 **Antwort**
 
@@ -74,7 +79,7 @@ Die Schema Registry unterstützt die Verwendung von Abfrage-Parametern zum Anzei
 
 >[!NOTE] Bei der Kombination mehrerer Parameter für die Abfrage müssen diese durch das kaufmännische Und (`&`) getrennt werden.
 
-### Seite
+### Seite {#paging}
 
 Zu den gebräuchlichsten Parametern für die Abfrage von Paging gehören:
 
@@ -84,7 +89,7 @@ Zu den gebräuchlichsten Parametern für die Abfrage von Paging gehören:
 | `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Mitteln zurück. |
 | `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: Die Ergebnisse `orderby=title` werden in aufsteigender Reihenfolge (A-Z) nach Titel sortiert. Durch Hinzufügen eines `-` Vor-Titels (`orderby=-title`) werden Elemente in absteigender Reihenfolge nach Titel sortiert (Z-A). |
 
-### Filter
+### Filter {#filtering}
 
 Sie können die Ergebnisse mithilfe des `property` Parameters filtern, der verwendet wird, um einen bestimmten Operator auf eine bestimmte JSON-Eigenschaft in den abgerufenen Ressourcen anzuwenden. Zu den unterstützten Operatoren gehören:
 
