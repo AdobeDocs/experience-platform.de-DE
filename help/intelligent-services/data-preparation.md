@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
+source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 
 ---
 
@@ -19,6 +19,10 @@ In diesem Dokument erhalten Sie allgemeine Anleitungen zur Zuordnung Ihrer Marke
 
 Das Consumer ExperienceEvent-Schema beschreibt das Verhalten eines Individuums in Bezug auf digitale Marketing-Ereignis (Web oder Mobil) sowie Online- oder Offline-Commerce-Aktivitäten. Die Verwendung dieses Schemas ist für Intelligent Services aufgrund seiner semantisch definierten Felder (Spalten) erforderlich, wodurch unbekannte Namen vermieden werden, die sonst die Daten weniger eindeutig machen würden.
 
+Intelligent Services nutzt mehrere Schlüsselfelder in diesem Schema, um Erkenntnisse aus Ihren Marketing-Ereignissen-Daten zu generieren. Diese können alle auf der Stammebene gefunden und erweitert werden, um die erforderlichen Unterfelder anzuzeigen.
+
+![](./images/data-preparation/schema-expansion.gif)
+
 Wie alle XDM-Schema ist auch das CEE-Mixin erweiterbar. Mit anderen Worten, dem CEE-Mixin können zusätzliche Felder hinzugefügt werden, und bei Bedarf können verschiedene Varianten in mehreren Schemas enthalten sein.
 
 Ein vollständiges Beispiel des Mixins finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)und sollten als Referenz für die Schlüsselfelder verwendet werden, die im folgenden Abschnitt beschrieben werden.
@@ -30,6 +34,8 @@ In den folgenden Abschnitten werden die Schlüsselfelder im CEE-Mixin hervorgeho
 ### xdm:Kanal
 
 Dieses Feld stellt den Marketing-Kanal im Zusammenhang mit dem ExperienceEvent dar. Das Feld enthält Informationen zum Typ des Kanals, Medientyp und Standort. **Dieses Feld _muss_bereitgestellt werden, damit Attribution AI mit Ihren Daten** arbeiten kann.
+
+![](./images/data-preparation/channel.png)
 
 **Beispiel-Schema**
 
@@ -63,25 +69,25 @@ Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem `xd
 
 Dieses Feld enthält eine Reihe von Artikeln, die die von einem Kunden ausgewählten Produkte darstellen, einschließlich der Produkt-SKU, des Namens, des Preises und der Menge.
 
+![](./images/data-preparation/productListItems.png)
+
 **Beispiel-Schema**
 
 ```json
 [
   {
     "xdm:SKU": "1002352692",
-    "xdm:lineItemId": "12345678",
     "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 159
+    "xdm:priceTotal": 159.45
   },
   {
     "xdm:SKU": "3398033623",
-    "xdm:lineItemId": "48693817",
     "xdm:name": "16ft RGB LED Strips",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 80
+    "xdm:priceTotal": 79.99
   }
 ]
 ```
@@ -91,6 +97,8 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:pr
 ### xdm:commerce
 
 Dieses Feld enthält handelsspezifische Informationen zum ExperienceEvent, einschließlich Bestellnummer und Zahlungsinformationen.
+
+![](./images/data-preparation/commerce.png)
 
 **Beispiel-Schema**
 
@@ -128,6 +136,8 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:co
 
 Dieses Feld enthält Webdetails zum ExperienceEvent, wie Interaktion, Seitendetails und Werber.
 
+![](./images/data-preparation/web.png)
+
 **Beispiel-Schema**
 
 ```json
@@ -155,6 +165,8 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:pr
 ### xdm:marketing
 
 Dieses Feld enthält Informationen zu Marketing-Aktivitäten, die mit dem Touchpoint aktiv sind.
+
+![](./images/data-preparation/marketing.png)
 
 **Beispiel-Schema**
 
