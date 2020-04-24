@@ -4,27 +4,16 @@ solution: Experience Platform
 title: Funktionsebenen erstellen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
 
 # Funktionsebenen erstellen
 
-Mit der Adobe Experience Platform können Sie benutzerdefinierte Funktionselemente erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime (im Folgenden &quot;Laufzeit&quot; genannt) Funktionen im Maßstab zu entwickeln.
+Mit der Adobe Experience Platform können Sie benutzerdefinierte Funktionselemente erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime (im Folgenden &quot;Laufzeit&quot; genannt) Funktionstechnik im Maßstab durchzuführen.
 
 In diesem Dokument werden die verschiedenen Klassen in einer Feature Pipeline beschrieben und ein schrittweises Lernprogramm zum Erstellen einer benutzerdefinierten Feature Pipeline mit dem [Model Authoring SDK](./sdk.md) in PySpark und Spark bereitgestellt.
-
-Das Lernprogramm umfasst die folgenden Schritte:
-- [Implementieren von Funktionen in Pipeline-Klassen](#implement-your-feature-pipeline-classes)
-   - [Variablen in einer Konfigurationsdatei definieren](#define-variables-in-the-configuration-json-file)
-   - [Vorbereiten der Eingabedaten mit DataLoader](#prepare-the-input-data-with-dataloader)
-   - [Datentransfer mit DataSetTransformer](#transform-a-dataset-with-datasettransformer)
-   - [Datenfunktionen für Entwickler mit FeaturePipelineFactory](#engineer-data-features-with-featurepipelinefactory)
-   - [Speichern Sie Ihr Feature DataSet mit DataSaver](#store-your-feature-dataset-with-datasaver)
-   - [Geben Sie Ihre implementierten Klassennamen in der Anwendungsdatei an](#specify-your-implemented-class-names-in-the-application-file)
-- [Binäres Artefakt erstellen](#build-the-binary-artifact)
-- [Erstellen einer Feature Pipeline-Engine mit der API](#create-a-feature-pipeline-engine-using-the-api)
 
 ## Funktionspipeline-Klassen
 
@@ -44,11 +33,11 @@ Das folgende Flussdiagramm zeigt die Ausführungsreihenfolge der Laufzeitumgebun
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Implementieren von Funktionen in Pipeline-Klassen
+## Implementieren von Funktionen in Pipeline-Klassen {#implement-your-feature-pipeline-classes}
 
 Die folgenden Abschnitte enthalten Details und Beispiele zur Implementierung der erforderlichen Klassen für eine Feature Pipeline.
 
-### Variablen in der JSON-Konfigurationsdatei definieren
+### Variablen in der JSON-Konfigurationsdatei definieren {#define-variables-in-the-configuration-json-file}
 
 Die JSON-Konfigurationsdatei besteht aus Schlüssel-Wert-Paaren und dient zum Angeben von Variablen, die später während der Laufzeit definiert werden sollen. Diese Schlüssel-Wert-Paare können Eigenschaften wie den Speicherort des Eingabedatasets, die ID des Ausgabedatasets, die Mandant-ID, Spaltenköpfe usw. definieren.
 
@@ -96,7 +85,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 ```
 
 
-### Vorbereiten der Eingabedaten mit DataLoader
+### Vorbereiten der Eingabedaten mit DataLoader {#prepare-the-input-data-with-dataloader}
 
 DataLoader ist für das Abrufen und Filtern von Eingabedaten zuständig. Ihre Implementierung von DataLoader muss die abstrakte Klasse erweitern `DataLoader` und die abstrakte Methode überschreiben `load`.
 
@@ -200,7 +189,7 @@ class MyDataLoader extends DataLoader {
 
 
 
-### Datentransfer mit DataSetTransformer
+### Datentransfer mit DataSetTransformer {#transform-a-dataset-with-datasettransformer}
 
 Ein DatasetTransformer stellt die Logik zum Transformieren eines DataFrame-Eingabedaten bereit und gibt einen neuen abgeleiteten DataFrame zurück. Diese Klasse kann implementiert werden, um entweder gemeinsam mit einer FeaturePipelineFactory zu arbeiten, als einzige Funktionstechnikkomponente zu arbeiten, oder Sie können festlegen, dass diese Klasse nicht implementiert wird.
 
@@ -255,7 +244,7 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 
 
-### Datenfunktionen für Entwickler mit FeaturePipelineFactory
+### Datenfunktionen für Entwickler mit FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
 Mit einer FeaturePipelineFactory können Sie Ihre Funktionstechnik-Logik implementieren, indem Sie eine Reihe von Spark-Transformatoren über eine Spark-Pipeline definieren und verketten. Diese Klasse kann implementiert werden, um entweder mit einem DatasetTransformer zusammenzuarbeiten, als einzige Komponente der Funktionstechnik zu arbeiten, oder Sie können diese Klasse nicht implementieren.
 
@@ -334,7 +323,7 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### Speichern Sie Ihr Feature DataSet mit DataSaver
+### Speichern Sie Ihr Feature DataSet mit DataSaver {#store-your-feature-dataset-with-datasaver}
 
 Der DataSaver ist für das Speichern der sich ergebenden Funktionsdatensätze an einem Speicherort für die Datenspeicherung zuständig. Ihre Implementierung von DataSaver muss die abstrakte Klasse erweitern `DataSaver` und die abstrakte Methode überschreiben `save`.
 
@@ -467,7 +456,7 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### Geben Sie Ihre implementierten Klassennamen in der Anwendungsdatei an
+### Geben Sie Ihre implementierten Klassennamen in der Anwendungsdatei an {#specify-your-implemented-class-names-in-the-application-file}
 
 Nachdem Sie die Klassen in der Feature Pipeline definiert und implementiert haben, müssen Sie die Namen Ihrer Klassen in der Anwendungsdatei angeben.
 
@@ -515,7 +504,7 @@ feature.dataSaver=MyDataSaver
 
 
 
-## Binäres Artefakt erstellen
+## Binäres Artefakt erstellen {#build-the-binary-artifact}
 
 Nachdem Ihre Feature Pipeline-Klassen implementiert wurden, können Sie sie erstellen und in ein binäres Artefakt kompilieren, das dann zur Erstellung einer Feature Pipeline über API-Aufrufe verwendet werden kann.
 
@@ -543,11 +532,11 @@ mvn clean install
 
 Wenn Sie Ihre Feature Pipeline erfolgreich erstellen, wird ein `.jar` Artefakt im `/dist` Verzeichnis generiert. Mit diesem Artefakt wird eine Feature Pipeline erstellt.
 
-## Erstellen einer Feature Pipeline-Engine mit der API
+## Erstellen einer Feature Pipeline-Engine mit der API {#create-a-feature-pipeline-engine-using-the-api}
 
 Nachdem Sie Ihre Feature Pipeline erstellt und das binäre Artefakt erstellt haben, können Sie eine Feature Pipeline Engine mit der Sensei Machine Learning API [erstellen](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts). Wenn Sie eine Feature Pipeline Engine erfolgreich erstellen, erhalten Sie eine Engine-ID als Teil des Antwortkörpers. Achten Sie darauf, diesen Wert zu speichern, bevor Sie mit den nächsten Schritten fortfahren.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 
