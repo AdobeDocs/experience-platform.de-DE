@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Planen eines Modells (Benutzeroberfläche)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 541acd9e1df8a53ae372f71230a705fb6a95d92b
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -24,7 +24,7 @@ Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf die Erlebnisplatt
 
 Für dieses Lernprogramm ist ein bestehender Dienst erforderlich. Wenn Sie keinen verfügbaren Dienst haben, mit dem Sie arbeiten können, können Sie einen Dienst erstellen, indem Sie im Tutorial &quot;Benutzeroberfläche [&quot;auf &quot;Modell als Dienst](./publish-model-service-ui.md) veröffentlichen&quot;folgen.
 
-## Geplante Bewertung konfigurieren
+## Geplante Bewertung konfigurieren {#configure-scheduled-scoring}
 
 Modellauswertung kann als automatisierter Prozess auf geplanter Basis konfiguriert werden. Nachdem ein Dienst erstellt wurde, können Sie die folgenden Schritte ausführen, um einen Bewertungszeitplan zu konfigurieren und anzuwenden:
 
@@ -41,7 +41,7 @@ Modellauswertung kann als automatisierter Prozess auf geplanter Basis konfigurie
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Planmäßige Schulungen konfigurieren
+## Planmäßige Schulungen konfigurieren {#configure-scheduled-training}
 
 Die Konfiguration geplanter Schulungen wird auf einem Dienst ausgeführt, um sicherzustellen, dass das Modell für maschinelles Lernen auf die neuesten Datenmuster aktualisiert wird. Bei jedem Abschluss eines geplanten Schulungslaufs wird das resultierende trainierte Modell verwendet, um den Dienst bis zum nächsten geplanten Schulungslauf zu aktivieren.
 
