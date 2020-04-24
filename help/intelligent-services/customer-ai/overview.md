@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Customer AI – Übersicht
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -42,4 +42,4 @@ Customer AI analysiert vorhandene Kundenerlebnis-Ereignisdaten, um Tendenzwerte 
 
 ## Nächste Schritte
 
-Beginnen Sie mit der Befolgung des Handbuchs [zu den ersten Schritten](./getting-started.md) . Dieser Leitfaden führt Sie durch die Einrichtung aller erforderlichen Vorabanforderungen für Kunden-AI. Wenn Sie bereits über alle Ihre Anmeldedaten und Daten verfügen, besuchen Sie das [Handbuch](./user-guide.md)für Kunden-API. Es informiert über Schritte zur Verwendung von Customer AI und veranschaulicht die Erstellung von Kundensegmenten mithilfe von Tendenzwerten.
+Beginnen Sie mit der Befolgung des Handbuchs [zu den ersten Schritten](./getting-started.md) . Dieser Leitfaden führt Sie durch die Einrichtung aller erforderlichen Voraussetzungen für die Kundenaktivität. Wenn Sie bereits über alle Anmeldeinformationen und Daten verfügen, besuchen Sie die [Konfiguration einer Customer AI-Instanz](./user-guide/configure.md). Es enthält Schritte zur Verwendung der Kunden-API.
