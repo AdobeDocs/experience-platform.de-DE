@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verpacktes Rezept (API) importieren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ Je nachdem, in welcher Form die verpackte Recipe-Datei als Teil der API-Anforder
 - [Erstellen einer Engine mit einer Docker-URL](#create-an-engine-with-a-docker-url)
 - [Erstellen einer Engine mit einem binären Artefakt (nicht mehr unterstützt)](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### Erstellen einer Engine mit einer Docker-URL
+### Erstellen einer Engine mit einer Docker-URL {#create-an-engine-with-a-docker-url}
 
 Um eine Engine mit einer gepackten Rezept-Datei zu erstellen, die in einem Docker-Container gespeichert ist, müssen Sie die Docker-URL zur gepackten Rezeptdatei angeben.
 
@@ -89,7 +89,7 @@ curl -X POST \
 | -------  | ----------- |
 | `engine.name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Data Science Workspace-Benutzeroberfläche als Rezeptname angezeigt wird. |
 | `engine.description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche von Data Science Workspace als Beschreibung des Rezepts angezeigt wird. Entfernen Sie diese Eigenschaft nicht, lassen Sie diesen Wert eine leere Zeichenfolge sein, wenn Sie keine Beschreibung angeben möchten. |
-| `engine.type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `type` wird entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
+| `engine.type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `type` wird entweder `Python`, `R`, `PySpark`, `Spark` (Skala) oder `Tensorflow`. |
 | `artifacts.default.image.location` | Du `{DOCKER_URL}` gehst hierher. Eine vollständige Docker-URL hat die folgende Struktur: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Ein zusätzlicher Name für die Docker-Bilddatei. Entfernen Sie diese Eigenschaft nicht, lassen Sie diesen Wert eine leere Zeichenfolge sein, wenn Sie keinen zusätzlichen Docker-Bilddateinamen angeben möchten. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp dieser Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `executionType` wird entweder `Python`, `R`, `PySpark`, `Spark` (Skala) oder `Tensorflow`. |
@@ -199,11 +199,11 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu er
 
 Eine erfolgreiche Antwort zeigt eine JSON-Nutzlast mit Informationen zur neu erstellten Engine. Der `id` Schlüssel stellt die eindeutige Engine-ID dar und ist im nächsten Lernprogramm erforderlich, um eine MLInstanz zu erstellen. Stellen Sie sicher, dass die Engine-ID gespeichert wird, bevor Sie mit den nächsten Schritten fortfahren.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Sie haben eine Engine mit der API erstellt und eine eindeutige Engine-ID wurde als Teil des Antwortkörpers abgerufen. Sie können diese Engine-ID im nächsten Lernprogramm verwenden, während Sie erfahren, wie Sie ein Modell mithilfe der API [erstellen, ausbilden und auswerten](./train-evaluate-model-api.md).
 
-### Erstellen einer Engine mit einem binären Artefakt (nicht mehr unterstützt)
+### Erstellen einer Engine mit einem binären Artefakt (nicht mehr unterstützt) {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
