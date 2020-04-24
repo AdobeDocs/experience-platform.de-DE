@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Exemplarische Vorgehensweise zum Erstellen und Veröffentlichen eines maschinellen Lernmodells
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -47,9 +47,9 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
    * Stapel: Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird.
    * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist eine webbasierte Open-Source-Schnittstelle für Project Jupyter und ist eng in Experience Platform integriert.
 
-## Daten vorbereiten
+## Daten vorbereiten {#prepare-your-data}
 
-Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen vermittelt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten mithilfe von Adobe Analytics in Plattform eingebunden werden und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden soll.
+Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen zukommen lässt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten mithilfe von Adobe Analytics in Plattform eingebunden werden und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden soll.
 
 ### Daten und Schemas
 
@@ -68,7 +68,7 @@ Die anderen Datensätze wurden zur Vorschau mit Stapeln vorausgefüllt. Sie kön
 | Recommendations-Eingabedaten | Recommendations Input-Schema | Die Analytics-Daten werden mithilfe einer Feature-Pipeline in einen Schulungsdatensatz umgewandelt. Diese Daten werden zur Schulung des maschinellen Lernmodells von Produktempfehlungen verwendet. `itemid` und `userid` einem von diesem Kunden erworbenen Produkt entsprechen. |
 | Recommendations Output DataSet | Recommendations Output Schema | Der Datensatz, für den die Bewertungsergebnisse gespeichert werden, enthält die Liste der empfohlenen Produkte für jeden Kunden. |
 
-## Modell erstellen
+## Modell erstellen {#author-your-model}
 
 Die zweite Komponente des Data Science Workspace-Lebenszyklus umfasst das Authoring von Rezepten und Modellen. Das Rezept &quot;Produktempfehlungen&quot;wurde entwickelt, um Produktempfehlungen im Maßstab zu generieren, indem alte Kaufdaten und maschinelles Lernen verwendet werden.
 
@@ -85,7 +85,7 @@ Rezepte bilden die Grundlage für ein Modell, da sie maschinelle Lernalgorithmen
 
 Sie haben jetzt die Eingabe- und Ausgabeformate überprüft, die für das Produktempfehlungsrezept erforderlich sind. Sie können nun mit dem nächsten Abschnitt fortfahren, um herauszufinden, wie ein Produktempfehlungsmodell erstellt, trainiert und ausgewertet wird.
 
-## Trainieren und Auswerten Ihres Modells
+## Trainieren und Auswerten Ihres Modells {#train-and-evaluate-your-model}
 
 Nachdem Ihre Daten vorbereitet und das Rezept einsatzbereit ist, können Sie Ihr Modell für maschinelles Lernen erstellen, ausbilden und auswerten.
 
@@ -130,7 +130,7 @@ Bei jedem Abschluss eines Schulungslaufs können Sie die resultierenden Bewertun
 3. Sie können den Datensatz, das Schema und die Konfigurationsparameter anzeigen, die für jeden Schulungslauf auf der rechten Leiste verwendet werden.
 4. Navigieren Sie zurück zur Modellseite und identifizieren Sie die Schulungen mit der höchsten Leistung, indem Sie deren Bewertungsmetriken beobachten.
 
-## Modell operationalisieren
+## Modell operationalisieren {#operationalize-your-model}
 
 Der letzte Schritt im Data Science-Arbeitsablauf besteht darin, Ihr Modell zu operieren, um Erkenntnisse aus Ihrem Datenspeicher zu bewerten und zu nutzen.
 
