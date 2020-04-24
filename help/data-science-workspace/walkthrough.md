@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Anleitung zum Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -28,7 +28,7 @@ Die Lösung eines Datenwissenschaftlers besteht darin, den Reichtum historischer
 
 In diesem Überblick gehen wir über die Schritte hinaus, die ein Datenwissenschaftler ausführen würde, um einen Datensatz zu erstellen und ein Modell zu erstellen, das die wöchentlichen Verkäufe vorhersagt. Wir werden die folgenden Abschnitte im Beispiel für Einzelhandelsverkäufe im Adobe Experience Platform Data Science Workspace durchgehen:
 
-- [Setup](#setup)
+- [Einrichten](#setup)
 - [Daten untersuchen](#exploring-data)
 - [Funktionstechnik](#feature-engineering)
 - [Schulung und Überprüfung](#training-and-verification)
@@ -45,7 +45,7 @@ In unserem Tutorial verwenden wir Python 3 im Jupyter-Notebook, um zu zeigen, wi
 
 ![](./images/walkthrough/retail_sales.png)
 
-### Setup
+### Einrichten {#setup}
 
 Mit dem geöffneten Retail Sales Notebook laden wir als Erstes die für unseren Workflow erforderlichen Bibliotheken. In der folgenden Liste wird kurz beschrieben, wofür die einzelnen Anwendungen verwendet werden:
 - **numpy** - eine wissenschaftliche Computing-Bibliothek, die Unterstützung für große, multidimensionale Arrays und Matrizen bietet
@@ -55,7 +55,7 @@ Mit dem geöffneten Retail Sales Notebook laden wir als Erstes die für unseren 
 - **sklearn** - Bibliothek für maschinelles Lernen mit Classification-, Regression-, Support-Vektor- und Cluster-Algorithmen
 - **Warnungen** - Bibliothek, die Warnmeldungen steuert
 
-### Daten untersuchen
+### Daten untersuchen {#exploring-data}
 
 #### Daten laden
 
@@ -129,7 +129,7 @@ Mit demselben für den Handel bestimmten Datensatz können wir die Korrelationsm
 
 Beachten Sie die Diagonale der Diagonalen in der Mitte. Dies zeigt, dass eine Variable beim Vergleich mit sich selbst eine vollständige positive Korrelation aufweist. Starke positive Korrelation wird eine Größenordnung näher an 1 liegen, während schwache Korrelationen näher an 0 liegen werden. Negative Korrelation wird mit einem negativen Koeffizienten angezeigt, der einen umgekehrten Trend zeigt.
 
-### Funktionstechnik
+### Funktionstechnik {#feature-engineering}
 
 In diesem Abschnitt werden wir Änderungen an unserem Retail-Datensatz vornehmen. Wir führen die folgenden Vorgänge durch:
 
@@ -177,7 +177,7 @@ Eine Zusammenfassung des Datensatzes nach unseren Änderungen ist unten dargeste
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Schulung und Überprüfung
+### Schulung und Überprüfung {#training-and-verification}
 
 Nun ist es an der Zeit, einige Datenmodelle zu erstellen und auszuwählen, welches Modell die beste Leistung für die Vorhersage künftiger Verkäufe ist. Wir werden die folgenden 5 Algorithmen auswerten:
 
@@ -215,7 +215,7 @@ Schließlich werden wir unser Prognosemodell mit den tatsächlichen wöchentlich
 
 Mit dieser Übersicht haben wir den Arbeitsablauf durchlaufen, den ein Datenwissenschaftler durchlaufen würde, um ein Einzelhandelsproblem zu lösen. Im Einzelnen haben wir die folgenden Schritte unternommen, um eine Lösung zu finden, die zukünftige wöchentliche Verkäufe vorhersagt.
 
-- [Setup](#setup)
+- [Einrichten](#setup)
 - [Daten untersuchen](#exploring-data)
 - [Funktionstechnik](#feature-engineering)
 - [Schulung und Überprüfung](#training-and-verification)
