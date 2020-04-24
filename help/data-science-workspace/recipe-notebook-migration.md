@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
+source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 
 ---
 
@@ -144,12 +144,12 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 ### Abhängigkeiten ändern (Spark) {#change-dependencies-spark}
 
-Wenn Sie ein vorhandenes Rezept verwenden, sind Änderungen in der Datei &quot;pom.xml&quot;für Abhängigkeiten erforderlich. Ändern Sie die Abhängigkeitsversion model-authoring-sdk in 1.0.0. Aktualisieren Sie dann die Spark-Version in der Pom-Datei auf 2.4.3 und die Scala-Version auf 2.11.12.
+Wenn Sie ein vorhandenes Rezept verwenden, sind Änderungen in der Datei &quot;pom.xml&quot;für Abhängigkeiten erforderlich. Ändern Sie die Abhängigkeitsversion model-authoring-sdk in 2.0.0. Aktualisieren Sie dann die Spark-Version in der Pom-Datei auf 2.4.3 und die Scala-Version auf 2.11.12.
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
 <artifactId>authoring-sdk_2.11</artifactId>
-<version>1.0.0</version>
+<version>2.0.0</version>
 <classifier>jar-with-dependencies</classifier>
 ```
 
