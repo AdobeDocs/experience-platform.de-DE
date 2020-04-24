@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SDK-Entwicklerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,18 +13,9 @@ source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 Das Modell Authoring-SDK ermöglicht Ihnen die Entwicklung benutzerdefinierter Rezepte für maschinelles Lernen und Funktionslinien, die in Adobe Experience Platform Data Science Workspace verwendet werden können. Es stellt implementierbare Vorlagen in PySpark und Spark bereit.
 
-Dieses Dokument enthält Informationen zu den verschiedenen Klassen im Model Authoring-SDK:
+Dieses Dokument enthält Informationen zu den verschiedenen Klassen im Model Authoring-SDK.
 
-- [DataLoader](#dataloader)
-   - [Daten aus einem Plattformdataset laden](#load-data-from-a-platform-dataset)
-- [DataSaver](#datasaver)
-   - [Daten in einem Platform-Datensatz speichern](#save-data-to-a-platform-dataset)
-- [DatasetTransformer](#datasettransformer)
-- [FeaturePipelineFactory](#featurepipelinefactory)
-- [PipelineFactory](#pipelinefactory)
-- [MLEvaluator](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 Die DataLoader-Klasse enthält alle Daten zum Abrufen, Filtern und Zurückgeben von Rohdaten. Beispiele für Eingabedaten sind Schulungsdaten, Bewertungsdaten oder Funktionstechniken. Datenlader erweitern die abstrakte Klasse `DataLoader` und müssen die abstrakte Methode überschreiben `load`.
 
@@ -83,7 +74,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer Spark Data Loader-
     </tbody>
 </table>
 
-### Daten aus einem Plattformdataset laden
+### Daten aus einem Plattformdataset laden {#load-data-from-a-platform-dataset}
 
 Im folgenden Beispiel werden Plattformdaten nach ID abgerufen und ein DataFrame zurückgegeben, wobei die DataSet-ID (`datasetId`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
 
@@ -199,7 +190,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 Die DataSaver-Klasse kapselt alles, was mit dem Speichern von Ausgabedaten zu tun hat, einschließlich Daten aus der Scoring- oder Funktionstechnik. Datensparer erweitern die abstrakte Klasse `DataSaver` und müssen die abstrakte Methode überschreiben `save`.
 
@@ -258,7 +249,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer Spark Data Saver-K
     </tbody>
 </table>
 
-### Daten in einem Platform-Datensatz speichern
+### Daten in einem Platform-Datensatz speichern {#save-data-to-a-platform-dataset}
 
 Um Daten in einem Platform-Dataset zu speichern, müssen die Eigenschaften entweder bereitgestellt oder in der Konfigurationsdatei definiert werden:
 
@@ -398,7 +389,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 Die DatasetTransformer-Klasse ändert und transformiert die Struktur eines Datensatzes. Die Sensei Machine Learning Runtime erfordert keine Definition dieser Komponente und wird entsprechend Ihren Anforderungen implementiert.
 
@@ -459,7 +450,7 @@ Die folgende Tabelle beschreibt die abstrakten Methoden einer Spark-DataSet-Tran
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 Die FeaturePipelineFactory-Klasse enthält Algorithmen zur Extraktion von Funktionen und definiert die Phasen einer Feature Pipeline von Beginn zu Ende.
 
@@ -541,7 +532,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer Spark FeaturePipelineF
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 Die PipelineFactory-Klasse enthält Methoden und Definitionen für Modellschulungen und -bewertungen, wobei Schulungslogik und -algorithmen in Form einer Spark-Pipeline definiert werden.
 
@@ -650,7 +641,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer Spark PipelineFactory 
     </tbody>
 </table>
 
-## MLEvaluator
+## MLEvaluator {#mlevaluator}
 
 Die MLEvaluator-Klasse stellt Methoden zum Definieren von Bewertungsmetriken und zum Festlegen von Schulungs- und Testdatasets bereit.
 
