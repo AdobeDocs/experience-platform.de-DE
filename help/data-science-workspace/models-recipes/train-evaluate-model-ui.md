@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen und Auswerten eines Modells (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -70,7 +70,7 @@ Dieses Lernprogramm erfordert ein vorhandenes Rezept. Wenn Sie kein Rezept haben
    Die Metrik &quot;Präzision&quot;beschreibt den Prozentsatz der relevanten Instanzen im Vergleich zur insgesamt *abgerufenen* Instanzen. Präzision kann als Wahrscheinlichkeit gesehen werden, dass ein zufällig ausgewähltes Ergebnis korrekt ist.
    ![](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
 
-   Klicken Sie auf einen bestimmten Schulungslauf, um die Details zu dieser Ausführung Ansicht. Dies kann bereits vor Abschluss der Ausführung erfolgen. Auf der Seite &quot;Ausführungsdetails&quot;können Sie weitere Evaluierungsmetriken, Konfigurationsparameter und Visualisierungen sehen, die spezifisch für den Schulungsablauf sind. Sie können auch Aktivitäten-Protokolle herunterladen, um die Details der Ausführung anzuzeigen. Protokolle sind besonders nützlich für fehlgeschlagene Ausführung, um zu sehen, was schiefgelaufen ist.
+   Klicken Sie auf einen bestimmten Schulungslauf, um die Details zu diesem Run Ansicht. Dies kann bereits vor Abschluss der Ausführung erfolgen. Auf der Seite &quot;Ausführungsdetails&quot;können Sie weitere Evaluierungsmetriken, Konfigurationsparameter und Visualisierungen sehen, die spezifisch für den Schulungsablauf sind. Sie können auch Aktivitäten-Protokolle herunterladen, um die Details der Ausführung anzuzeigen. Protokolle sind besonders nützlich für fehlgeschlagene Ausführung, um zu sehen, was schiefgelaufen ist.
    ![](../images/models-recipes/train-evaluate-ui/activity_logs.png)
 
 3. Hyperparameter können nicht trainiert werden und ein Modell muss durch Testen verschiedener Kombinationen von Hyperparametern optimiert werden. Wiederholen Sie diesen Modellschulungs- und -bewertungsprozess, bis Sie zu einem optimierten Modell gelangt sind.
@@ -79,7 +79,7 @@ Dieses Lernprogramm erfordert ein vorhandenes Rezept. Wenn Sie kein Rezept haben
 
 Dieses Lernprogramm führte Sie durch die Erstellung, Schulung und Auswertung eines Modells im Data Science Workspace. Sobald Sie ein optimiertes Modell erreicht haben, können Sie das geschulte Modell verwenden, um Einblicke zu generieren, indem Sie der [Bewertung eines Modells im UI](./score-model-ui.md) -Lernprogramm folgen.
 
-## Referenz
+## Referenz {#reference}
 
 ### Konfiguration von Rezept für Einzelhandel
 
@@ -97,7 +97,7 @@ Zusätzliche Parameter bestimmen die technischen Eigenschaften des Modells:
 | ----- | ----- | ----- |
 | `ACP_DSW_INPUT_FEATURES` | Zeichenfolge | Liste von kommagetrennten Eingabe-Schema-Attributen. |
 | `ACP_DSW_TARGET_FEATURES` | Zeichenfolge | Liste von kommagetrennten Schema-Attributen. |
-| `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolesch  | Bestimmt, ob Eingabe- und Ausgabefunktionen geändert werden können |
+| `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolesch | Bestimmt, ob Eingabe- und Ausgabefunktionen geändert werden können |
 | `tenantId` | Zeichenfolge | Diese ID stellt sicher, dass die von Ihnen erstellten Ressourcen korrekt benannt und in Ihrer IMS-Organisation enthalten sind. [Gehen Sie wie folgt vor](../../xdm/api/getting-started.md#know-your-tenant-id) , um Ihre Mandanten-ID zu finden. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | Zeichenfolge | Das für die Modellschulung verwendete Input-Schema. |
 | `evaluation.labelColumn` | Zeichenfolge | Spaltenbeschriftung für Evaluierungsvisualisierungen. |
