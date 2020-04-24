@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLab-Benutzerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -51,16 +51,16 @@ Informationen zu den wichtigsten Funktionen von JupyterLab und Anweisungen zur D
 * [Codezellen](#code-cells)
 * [Kernels](#kernels)
 * [Kernel-Sitzungen](#kernel-sessions)
-* [Ausführungsressource PySpark/Spark](#pysparkspark-execution-resource)
+* [Ausführungsressource PySpark/Spark](#execution-resource)
 * [Starter](#launcher)
 
-### Zugriff auf JupyterLab
+### Zugriff auf JupyterLab {#access-jupyterlab}
 
 Wählen Sie in [Adobe Experience Platform](https://platform.adobe.com)in der linken Navigationsspalte die Option **Notebooks** . Warten Sie einige Zeit, bis JupyterLab vollständig initialisiert ist.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### JupyterLab-Schnittstelle
+### JupyterLab-Schnittstelle {#jupyterlab-interface}
 
 Die JupyterLab-Schnittstelle besteht aus einer Menüleiste, einer reduzierbaren linken Seitenleiste und dem Hauptarbeitsbereich mit Registerkarten von Dokumenten und Aktivitäten.
 
@@ -98,7 +98,7 @@ Der Hauptarbeitsbereich in JupyterLab ermöglicht es Ihnen, Dokumente und andere
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### Codezellen
+### Codezellen {#code-cells}
 
 Codezellen sind der Hauptinhalt von Notebooks. Sie enthalten Quellcode in der Sprache des zugehörigen Kernels des Notebooks und die Ausgabe als Ergebnis der Ausführung der Codepelle. Rechts neben jeder Codezelle, die die Ausführungsreihenfolge darstellt, wird ein Ausführungszähler angezeigt.
 
@@ -130,7 +130,7 @@ Bestimmte Funktionen und Funktionen sind auf bestimmte Kernels beschränkt, wie 
 | **Spark - nicht mehr unterstützt** | Nein | <ul><li>Sensei-ML-Framework</li><li>Katalogdienst</li></ul> |
 | **Scala** | Nein | <ul><li>Sensei-ML-Framework</li><li>Katalogdienst</li></ul> |
 
-### Kernel-Sitzungen
+### Kernel-Sitzungen {#kernel-sessions}
 
 Jedes aktive Notebook oder jede Aktivität auf JupyterLab verwendet eine Kernelsitzung. Alle aktiven Sitzungen finden Sie in der linken Seitenleiste, indem Sie die Registerkarte **Laufende Terminals und Kernel** erweitern. Der Typ und der Zustand des Kernels eines Notebooks können durch Beobachtung der oberen rechten Ecke der Notebook-Oberfläche identifiziert werden. In der Abbildung unten ist der zugehörige Kernel des Notebooks **Python 3** und der aktuelle Status wird durch einen grauen Kreis rechts dargestellt. Ein leerer Kreis impliziert einen Leerlauf und ein ausgefüllter Kreis impliziert einen aktiven Kernel.
 
@@ -149,7 +149,7 @@ Wenn der Kernel über einen längeren Zeitraum heruntergefahren oder inaktiv ist
 >
 >Neue Spark-Notebooks sollten den Scala-Kernel verwenden. Eine ausführliche Anleitung zur Aktualisierung vorhandener Notebooks finden Sie im Handbuch zur Umwandlung von [Spark 2.3 in Scala (Spark 2.4)](../recipe-notebook-migration.md) .
 
-PySpark- und Spark-Kernel ermöglichen es Ihnen, Spark-Cluster-Ressourcen innerhalb Ihres PySpark- oder Spark-Notebooks zu konfigurieren, indem Sie den Befehl konfigurieren (`%%configure`) und eine Liste von Konfigurationen bereitstellen. Idealerweise werden diese Konfigurationen definiert, bevor die Spark-Anwendung initialisiert wird. Für das Ändern der Konfigurationen während der Aktivierung der Spark-Anwendung ist nach dem Befehl (`%%configure -f`) ein zusätzliches Force-Flag erforderlich, das die Anwendung neu startet, damit die Änderungen angewendet werden, wie unten dargestellt:
+PySpark- und Spark-Kernel ermöglichen es Ihnen, Spark-Clusterressourcen innerhalb Ihres PySpark- oder Spark-Notebooks zu konfigurieren, indem Sie den Befehl konfigurieren (`%%configure`) und eine Liste von Konfigurationen bereitstellen. Idealerweise werden diese Konfigurationen definiert, bevor die Spark-Anwendung initialisiert wird. Für das Ändern der Konfigurationen während der Aktivierung der Spark-Anwendung ist nach dem Befehl (`%%configure -f`) ein zusätzliches Force-Flag erforderlich, das die Anwendung neu startet, damit die Änderungen angewendet werden, wie unten dargestellt:
 
 >[!CAUTION]
 >Bei PySpark 3 (Spark 2.4) und Scala (Spark 2.4) Notebooks wird `%%` Sparkmagic nicht mehr unterstützt. Die folgenden Vorgänge können nicht mehr verwendet werden:
@@ -193,7 +193,7 @@ Alle konfigurierbaren Eigenschaften sind in der folgenden Tabelle aufgeführt:
 | name | Name des Antrags | Zeichenfolge |
 | conf | Spark-Konfigurationseigenschaft | Zuordnung von key=val |
 
-### Starter
+### Starter {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -799,7 +799,7 @@ timedf.show()
 | Python | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Optionale SQL-Flags für den Abfrage-Dienst
+## Optionale SQL-Flags für den Abfrage-Dienst {#optional-sql-flags-for-query-service}
 
 In dieser Tabelle sind die optionalen SQL-Flags aufgeführt, die für den Abfrage Service verwendet werden können.
 
