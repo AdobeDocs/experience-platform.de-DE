@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Steigerung des Echtzeit-Profils von Kunden durch Einblicke in das maschinelle Lernen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Neben den oben genannten Dokumenten sollten Sie auch die folgenden Leitfäden zu
 * [Grundlagen der Zusammensetzung](../../xdm/schema/composition.md)des Schemas: Beschreibt XDM-Schema, Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Experience Platform verwendet werden sollen.
 * [Schema-Editor-Lernprogramm](../../xdm/tutorials/create-schema-ui.md): Enthält ausführliche Anleitungen zum Erstellen von Schemas mit dem Schema-Editor in Experience Platform.
 
-## Schema und Datensatz für die Ausgabe erstellen
+## Schema und Datensatz für die Ausgabe erstellen {#create-an-output-schema-and-dataset}
 
 Der erste Schritt zur Bereicherung des Echtzeit-Kundenobjekts mit bewerteten Einblicken ist das Wissen, welches Echtzeit-Profil (z. B. eine Person) Ihre Daten definieren. Wenn Sie Ihre Daten verstehen, können Sie eine Struktur beschreiben und entwerfen, die für Ihre Daten von Bedeutung ist, ähnlich wie beim Entwerfen einer relationalen Datenbank.
 
@@ -73,7 +73,7 @@ Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen defin
 
 Nachdem Sie einen Output Schema-Datensatz erstellt haben, fahren Sie mit dem nächsten Abschnitt fort, um ihn für die Anreicherung des Profils zu konfigurieren und zu aktivieren.
 
-## Schema und Datensatz für die Ausgabe konfigurieren
+## Schema und Datensatz für die Ausgabe konfigurieren {#configure-an-output-schema-and-dataset}
 
 Bevor Sie einen Datensatz zum Profil aktivieren können, müssen Sie das Schema des Datensatzes so konfigurieren, dass ein primäres Identitätsfeld vorhanden ist, und das Schema dann zum Profil aktivieren. Wenn Sie ein neues Schema erstellen und aktivieren möchten, finden Sie Informationen zum [Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md)im Lernprogramm. Befolgen Sie andernfalls die unten stehenden Anweisungen, um ein vorhandenes Schema und einen vorhandenen Datensatz zu aktivieren.
 
@@ -97,7 +97,7 @@ Bevor Sie einen Datensatz zum Profil aktivieren können, müssen Sie das Schema 
 
 Wenn Daten in einen Profil-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als Profil-Datensätze erfasst. Nachdem Ihr Schema und Ihr Datensatz vorbereitet wurden, generieren Sie einige Daten in den Datensatz, indem Sie mit einem geeigneten Modell Bewertungsläufe durchführen, und fahren Sie mit diesem Lernprogramm fort, um mithilfe des Segmentaufbaus Insight-Segmente zu erstellen.
 
-## Erstellen von Segmenten mit dem Segmentaufbau
+## Erstellen von Segmenten mit dem Segmentaufbau {#create-segments-using-the-segment-builder}
 
 Nachdem Sie nun Einblicke in Ihren Profil-aktivierten Datensatz generiert und gesammelt haben, können Sie diese Daten verwalten, indem Sie mithilfe des Segmentaufbaus Untergruppen verwandter Elemente identifizieren. Gehen Sie wie folgt vor, um eigene Segmente zu erstellen.
 
@@ -117,6 +117,6 @@ Nachdem Sie nun Einblicke in Ihren Profil-aktivierten Datensatz generiert und ge
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 Dieses Dokument führte Sie durch die Schritte, die erforderlich sind, um ein Schema und einen Datensatz zum Profil zu aktivieren, und demonstrierte kurz den Arbeitsablauf zum Erstellen von Insight-Segmenten mit dem Segmentaufbau. Weitere Informationen zu Segmenten und zum Segmentaufbau finden Sie in der Übersicht über den [Segmentdienst](../../segmentation/home.md).
