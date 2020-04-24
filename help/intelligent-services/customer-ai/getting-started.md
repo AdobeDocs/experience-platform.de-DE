@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erste Schritte mit der Kunden-API
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ Die Leitfäden für die Kundentechnik erfordern ein Verständnis der verschieden
 
 ## Herunterladen von Kunden-AI-Ergebnissen
 
->[!NOTE] Wenn Sie keine Rohdaten herunterladen müssen, können Sie diesen Schritt überspringen und mit dem Benutzerhandbuch fortfahren.
+>[!NOTE] Wenn Sie keine Rohdaten herunterladen müssen, können Sie diesen Schritt überspringen und zum [Konfigurationshandbuch](./user-guide/configure.md)fortfahren.
 
 Das Herunterladen von Kunden-AI-Ergebnissen erfolgt über eine Kombination von API-Aufrufen. Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
@@ -42,4 +42,4 @@ In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ih
 
 ## Nächste Schritte
 
-Sobald Sie alle Ihre Anmeldedaten und Schema eingerichtet haben, befolgen Sie den Beginn des Handbuchs zur [Benutzeroberfläche](./user-guide.md)der Customer AI. Dieser Leitfaden führt Sie durch das Erstellen einer Instanz und das Einreichen zur Schulung und Bewertung.
+Nachdem Sie die im obigen Dokument beschriebenen Schritte ausgeführt haben, lesen Sie die Dokumentation zu [Eingabe und Ausgabe](./input-output.md) . In diesem Dokument erhalten Sie einen kurzen Überblick darüber, welche Datentypen in der Kundentechnik verwendet und produziert werden.
