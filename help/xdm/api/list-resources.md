@@ -4,18 +4,16 @@ solution: Experience Platform
 title: Listen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # Listen
 
-Sie können eine Liste aller Ressourcen (Schema, Klassen, Mixins oder Datentypen) in einem Container durch eine einzelne GET-Anforderung Ansicht.
+Sie können eine Liste aller Schema Registry-Ressourcen eines bestimmten Typs (Klassen, Mixins, Schema, Datentypen oder Deskriptoren) in einem Container durch eine GET-Anforderung erstellen.
 
 >[!NOTE] Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie [Seitenparameter](#paging)verwenden. Es wird außerdem empfohlen, Abfrage-Parameter zum [Filtern der Ergebnisse](#filtering) und zur Reduzierung der zurückgegebenen Ressourcen zu verwenden.
->
-> Wenn Sie die Beschränkung auf 300 Elemente vollständig außer Kraft setzen möchten, müssen Sie die Kopfzeile &quot;Akzeptieren&quot;verwenden, `application/vnd.adobe.xdm-v2+json` um alle Ergebnisse in einer einzigen Anforderung zurückzugeben.
 
 **API-Format**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{CONTAINER_ID}` | Der Container, in dem sich die Ressourcen befinden (&quot;global&quot;oder &quot;mieter&quot;). |
-| `{RESOURCE_TYPE}` | Der Typ der Ressource, die aus der Schema-Bibliothek abgerufen werden soll. Gültige Typen sind `datatypes`, `mixins`, `schemas`und `classes`. |
+| `{RESOURCE_TYPE}` | Der Typ der Ressource, die aus der Schema-Bibliothek abgerufen werden soll. Gültige Typen sind `classes`, `mixins`, `schemas`, `datatypes`und `descriptors`. |
 | `{QUERY_PARAMS`} | Optionale Abfrage-Parameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu den Parametern für die [Abfrage](#query) . |
 
 **Anfrage**
@@ -48,7 +46,7 @@ Das Antwortformat hängt vom Accept-Header ab, der in der Anforderung gesendet w
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Gibt eine kurze Zusammenfassung der einzelnen Ressourcen zurück. Dies ist die empfohlene Kopfzeile für die Auflistung der Ressourcen. (Maximal: 300) |
 | application/vnd.adobe.xed+json | Gibt das vollständige JSON-Schema für jede Ressource zurück, wobei das Original `$ref` und `allOf` die Variable enthalten sind. (Maximal: 300) |
-| application/vnd.adobe.xdm-v2+json | Gibt das vollständige JSON-Schema für alle Ergebnisse in einer einzigen Anforderung zurück, wobei die Beschränkung von 300 Elementen außer Kraft gesetzt wird. |
+| application/vnd.adobe.xdm-v2+json | Bei Verwendung des `/descriptors` Endpunkts muss dieser Accept-Header verwendet werden, um Paging-Funktionen zu nutzen. |
 
 **Antwort**
 
