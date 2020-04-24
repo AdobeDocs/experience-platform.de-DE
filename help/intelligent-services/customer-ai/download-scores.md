@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Herunterladen von Punktzahlen in der Kunden-API
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -34,7 +34,7 @@ Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen 
 
 ![Datenbestand-ID](./images/download-scores/access-scores.png)
 
-## Ihre Stapel-ID abrufen
+## Ihre Stapel-ID abrufen {#retrieve-your-batch-id}
 
 Wenn Sie Ihre DataSet-ID aus dem vorherigen Schritt verwenden, müssen Sie die Katalog-API aufrufen, um eine Stapel-ID abzurufen. Für diesen API-Aufruf werden zusätzliche Parameter für die Abfrage verwendet, um einen einzelnen Stapel anstelle einer Liste von Stapeln aus Ihrem Unternehmen zurückzugeben. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfragen-Parametern](../../catalog/api/filter-data.md).
 
@@ -98,7 +98,7 @@ Im Objekt für die Batch-ID des Punkts befindet sich ein `relatedObjects` Array.
 }
 ```
 
-## Abrufen des nächsten API-Aufrufs mit Ihrer Stapel-ID
+## Abrufen des nächsten API-Aufrufs mit Ihrer Stapel-ID {#retrieve-the-next-api-call-with-your-batch-id}
 
 Sobald Sie über eine Stapel-ID verfügen, können Sie eine neue GET-Anforderung an `/batches`vornehmen. Die Anforderung gibt einen Link zurück, der als nächste API-Anforderung verwendet wird.
 
@@ -152,7 +152,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein `_links` Objekt en
 }
 ```
 
-## Dateien abrufen
+## Dateien abrufen {#retrieving-your-files}
 
 Erstellen Sie eine neue GET-Anforderung, um den `href` Wert, den Sie im vorherigen Schritt als API-Aufruf erhalten haben, zum Abrufen des Dateiverzeichnisses zu verwenden.
 
