@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst (Benutzeroberfläche)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: af491361c5c3518e9bcc0af41a5aa79022229a2d
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -26,32 +26,32 @@ Dieses Lernprogramm erfordert ein vorhandenes Modell mit einem erfolgreichen Sch
 
 Wenn Sie ein Modell mithilfe von Sensei Machine Learning APIs veröffentlichen möchten, lesen Sie das [API-Lernprogramm](./publish-model-service-api.md).
 
-## Veröffentlichen eines Modells
+## Veröffentlichen eines Modells {#publish-a-model}
 
-1. Klicken Sie in Adobe Experience Platform auf den Link **Modelle** in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Suchen Sie nach dem Namen des Modells, das als Dienst veröffentlicht werden soll, und klicken Sie darauf.
+1. Klicken Sie in Adobe Experience Platform auf den **[!UICONTROL Models]** Link in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Suchen Sie nach dem Namen des Modells, das als Dienst veröffentlicht werden soll, und klicken Sie darauf.
    ![](../images/models-recipes/publish-model/1_browse_model.png)
-1. Klicken Sie auf **Veröffentlichen** oben rechts auf der Modellübersichtsseite, um einen Diensterstellungsprozess Beginn.
+2. Klicken Sie **[!UICONTROL Publish]** oben rechts auf der Modellübersichtsseite auf , um einen Diensterstellungsprozess Beginn.
    ![](../images/models-recipes/publish-model/2_view_training_runs.png)
-1. Geben Sie einen gewünschten Namen für den Dienst ein und geben Sie optional eine Dienstbeschreibung ein. Klicken Sie nach Abschluss des Vorgangs auf **Weiter** .
+3. Geben Sie einen gewünschten Namen für den Dienst ein und geben Sie optional eine Dienstbeschreibung ein. Klicken Sie anschließend **[!UICONTROL Next]** auf .
    ![](../images/models-recipes/publish-model/3_configure_service.png)
-1. Alle erfolgreichen Schulungen zum Modell werden aufgelistet. Der neue Dienst übernimmt die Trainings- und Bewertungskonfigurationen aus dem ausgewählten Schulungslauf.
+4. Alle erfolgreichen Schulungen zum Modell werden aufgelistet. Der neue Dienst übernimmt die Trainings- und Bewertungskonfigurationen aus dem ausgewählten Schulungslauf.
    ![](../images/models-recipes/publish-model/4_select_training_run.png)
-1. Klicken Sie auf **Fertig stellen** , um den Dienst zu erstellen und zur **Dienstgalerie** umzuleiten, um alle verfügbaren Dienste einschließlich des neu erstellten Dienstes anzuzeigen.
+5. Klicken Sie auf , **[!UICONTROL Finish]** um den Dienst zu erstellen, und führen Sie eine Umleitung zum **[!UICONTROL Service Gallery]** Fenster mit allen verfügbaren Diensten, einschließlich des neu erstellten Dienstes, durch.
    ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## Ergebnis mit einem Dienst
+## Ergebnis mit einem Dienst {#access-a-service}
 
-1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **Dienste** in der linken Navigationsspalte, um auf die *Dienstgalerie* zuzugreifen. Suchen Sie den gewünschten Dienst und klicken Sie auf **Ergebnis**.
+1. Klicken Sie in Adobe Experience Platform auf die **[!UICONTROL Services]** Registerkarte in der linken Navigationsspalte, um auf die *Dienstgalerie* zuzugreifen. Suchen Sie den gewünschten Dienst und klicken Sie auf **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
-1. Wählen Sie einen entsprechenden Eingabedatensatz für die Bewertungsausführung und klicken Sie dann auf **Weiter**.
+2. Wählen Sie einen entsprechenden Eingabedatensatz für die Bewertungsausführung aus und klicken Sie dann auf **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
-1. Wählen Sie einen entsprechenden Ausgabedatensatz für die Bewertungsergebnisse und klicken Sie dann auf **Weiter**.
+3. Wählen Sie einen entsprechenden Ausgabedatensatz für die Bewertungsergebnisse und klicken Sie dann auf **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
-1. Wenn ein Dienst erstellt wird, übernimmt er die standardmäßigen Scoring-Konfigurationen. Sie können diese Konfigurationen überprüfen und nach Bedarf anpassen, indem Sie mit der Dublette auf die Werte klicken. Wenn Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **Fertig stellen** , um den Bewertungsvorgang zu starten.
+4. Wenn ein Dienst erstellt wird, übernimmt er die standardmäßigen Scoring-Konfigurationen. Sie können diese Konfigurationen überprüfen und nach Bedarf anpassen, indem Sie mit der Dublette auf die Werte klicken. Sobald Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **[!UICONTROL Finish]** , um den Bewertungsvorgang zu starten.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-1. Auf der Seite &quot; *Übersicht* &quot;des Dienstes werden Details zum neuen Bewertungsauftrag und dessen Fortschritt angezeigt. Nach Abschluss des Auftrags wird der **letzte** Bewertungsauftrag aktualisiert.
+5. Auf der Seite &quot; *Übersicht* &quot;des Dienstes werden Details zum neuen Bewertungsauftrag und dessen Fortschritt angezeigt. Nach Abschluss des Auftrags wird der **[!UICONTROL Most Recent]** Bewertungsauftrag aktualisiert.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 In diesem Tutorial haben Sie erfolgreich ein Modell als barrierefreier Dienst veröffentlicht und Daten mithilfe des neuen Dienstes über die *Service Gallery* erfasst. Fahren Sie mit dem nächsten Lernprogramm fort, um zu erfahren, wie Sie automatisierte Schulungs- und Bewertungsläufe für einen Dienst [planen können](./schedule-models-ui.md).
