@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch zur Schema Registry API
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlich
 
 * Content-Type: application/json
 
-## Ihre TENANT_ID kennen {#know-your-tenant-id}
+## Ihre TENANT_ID kennen {#know-your-tenant_id}
 
 In diesem Handbuch werden Verweise auf eine `TENANT_ID`Seite angezeigt. Diese ID wird verwendet, um sicherzustellen, dass die von Ihnen erstellten Ressourcen korrekt benannt und in Ihrer IMS-Organisation enthalten sind. Wenn Sie Ihre ID nicht kennen, können Sie sie mit der folgenden GET-Anforderung abrufen:
 
