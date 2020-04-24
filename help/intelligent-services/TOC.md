@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Intelligente Dienste - Hilfe
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
 
 ---
 
@@ -21,7 +21,10 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * Kunden-AI {#customer-ai}
    * [Übersicht](customer-ai/overview.md)
    * [Erste Schritte mit der Kunden-API](customer-ai/getting-started.md)
-   * [Handbuch zur Benutzeroberfläche](customer-ai/user-guide.md)
-   * [Einblicke entdecken](customer-ai/discover-insights.md)
-   * [Herunterladen von Scores](customer-ai/download-scores.md)
+   * [Eingabe und Ausgabe](customer-ai/input-output.md)
+   * Handbuch zur Benutzeroberfläche {#user-guide}
+      * [Instanz konfigurieren](customer-ai/user-guide/configure.md)
+      * [Einblicke entdecken](customer-ai/user-guide/discover-insights.md)
+      * [Erstellen von Segmenten mit Kunden-AI-Ergebnissen](customer-ai/user-guide/create-segment.md)
+      * [Herunterladen von Scores](customer-ai/user-guide/download-scores.md)
 * [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
