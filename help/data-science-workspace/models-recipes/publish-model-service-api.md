@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Dienstes mit
 
 Beachten Sie, dass ein ML-Dienst mit einer ML-Instanz erstellt werden kann, ohne Schulungs- oder Bewertungsexperimente zu planen. Ein solcher ML-Dienst erstellt normale Experimententitäten und einen einzigen Experimentlauf für Schulung und Bewertung.
 
-### ML-Dienst mit geplantem Experiment für die Bewertung
+### ML-Dienst mit geplantem Experiment für die Bewertung {#ml-service-with-scheduled-experiment-for-scoring}
 
 Das Erstellen eines ML-Diensts durch Veröffentlichen einer ML-Instanz mit geplanten Experimentabläufen für die Auswertung führt zur Erstellung einer normalen Experimententität für die Schulung. Der erstellte Schulungsexperimentlauf wird für alle geplanten Testläufe verwendet. Vergewissern Sie sich, dass Sie über die für die Erstellung des ML-Diensts erforderlichen Werte verfügen `mlInstanceId`, `trainingDataSetId`und diese `scoringDataSetId` benötigen und dass sie vorhanden sind und gültige Werte sind.
 
@@ -197,7 +197,7 @@ curl -X POST
 
 Aus der `JSON` Antwort geht hervor, dass die Schlüssel `trainingExperimentId` und der `scoringExperimentId` Vorschlag, dass für diesen ML-Dienst eine neue Entität für Training und Scoring Experiment erstellt wurde. Das Vorhandensein des `scoringSchedule` Objekts bezieht sich auf Details zum Zeitplan für die Auswertung von Experimenten. Der `id` Schlüssel in der Antwort bezieht sich auf den soeben erstellten ML-Dienst.
 
-### ML-Dienst mit geplanten Experimenten für Schulung und Bewertung
+### ML-Dienst mit geplanten Experimenten für Schulung und Bewertung {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 Um eine vorhandene ML-Instanz als XML-Dienst mit geplanten Schulungs- und BewertungsexperimentLAUFEN zu veröffentlichen, müssen Sie Schulungs- und Bewertungszeitpläne bereitstellen. Wenn ein ML-Dienst dieser Konfiguration erstellt wird, werden auch geplante Experimententitäten für Schulung und Bewertung erstellt. Beachten Sie, dass Schulungs- und Bewertungszeitpläne nicht identisch sein müssen. Während der Ausführung eines Bewertungsauftrags wird das neueste geschulte Modell, das von geplanten Testlauf-Schulungen produziert wird, abgerufen und für die geplante Bewertungsausführung verwendet.
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 Die Hinzufügung von und `trainingExperimentId` `scoringExperimentId` im Reaktionsgremium deutet auf die Schaffung von Experimententitäten sowohl für die Ausbildung als auch für die Bewertung hin. Die Anwesenheit `trainingSchedule` und `scoringSchedule` der Hinweis, dass die oben genannten Experimententitäten für Schulung und Bewertung Experimente sind geplant. Der `id` Schlüssel in der Antwort bezieht sich auf den soeben erstellten ML-Dienst.
 
-## Abrufen von ML-Diensten
+## Abrufen von ML-Diensten {#retrieving-ml-services}
 
 Ein vorhandener ML-Dienst abzurufen ist so einfach, wie eine `GET` Anforderung an den `/mlServices` Endpunkt zu stellen. Stellen Sie sicher, dass die ML-Dienst-ID für den spezifischen ML-Dienst, den Sie abrufen möchten, vorhanden ist.
 
