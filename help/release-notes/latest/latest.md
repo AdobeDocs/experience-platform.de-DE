@@ -6,14 +6,14 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 8cc3b63fc91877ca1337f65e8f5c0e949b7ef01f
+source-git-commit: 43db1992ae45e27134bc0c4405963c405275750e
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-## Releasedatum: 8. April 2020
+**Releasedatum: 8. April 2020**
 
 Neue Funktionen in Adobe Experience Platform:
 * [Intelligente Dienste](#intelligent)
@@ -95,7 +95,7 @@ Adobe Echtzeit-CDP unterstützt jetzt die Aktivierung von Daten auf mehr als fü
 
 | Dokumentation | Beschreibung |
 |--- | ---|
-| [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md) | In diesem Artikel wird der Unterschied zwischen Verbindungen und Erweiterungen in der CDP-Oberfläche von Adobe in Echtzeit erläutert und empfohlen, wann diese Ziele verwendet werden. |
+| [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md) | In diesem Artikel wird der Unterschied zwischen Verbindungen und Erweiterungen in der Adobe Echtzeit-CDP-Oberfläche erläutert und empfohlen, wann diese Ziele verwendet werden. |
 | [Erlebnis-Plattform-Starterweiterungen](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Auf dieser Seite werden die Funktionen von Launch-Erweiterungen, Anwendungsfälle für Listen und Links zur Dokumentation für jede Launch-Erweiterung in Adobe Echtzeit-CDP erläutert. |
 
 Weitere Informationen finden Sie in der Übersicht über die [Ziele](/help/rtcdp/destinations/destinations-overview.md).
