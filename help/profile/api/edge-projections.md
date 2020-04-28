@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
 
 ---
 
@@ -136,7 +136,12 @@ curl -X POST \
       }'
 ```
 
-|Eigenschaft|Beschreibung||`type` **(Erforderlich)** |Die Art des zu erstellenden Ziels. Der einzige akzeptierte Wert, &quot;EDGE&quot;, erstellt ein Kantenziel.||`dataCenters` **(Erforderlich)** |Ein Zeichenfolgen-Array, das die Kanten Liste, zu denen Prognosen gedreht werden sollen. Kann einen oder mehrere der folgenden Werte enthalten: &quot;OR1&quot; - Western United States, &quot;VA5&quot; - Eastern United States, &quot;NLD1&quot; - EMEA.||`ttl` **(Erforderlich)** |Gibt den Projektionsablauf an. Akzeptierter Wertebereich: 600 bis 604800. Standardwert: 3600.||`replicationPolicy` **(Erforderlich)** |Definiert das Verhalten der Datenreplikation vom Hub bis zu den Rändern.  Unterstützte Werte: PROAKTIV, REAKTIV. Standardwert: REAKTIV.|
+| Eigenschaft | Beschreibung |
+|---|---|
+| `type` **(Erforderlich)** | Der zu erstellende Zieltyp. Der einzige akzeptierte Wert, &quot;EDGE&quot;, erstellt ein Kantenziel. |
+| `dataCenters` **(Erforderlich)** | Ein Zeichenfolgen-Array, das die Kanten Liste, in die die Projektionen gedreht werden sollen. Kann einen oder mehrere der folgenden Werte enthalten: &quot;OR1&quot; - Western United States, &quot;VA5&quot; - Eastern United States, &quot;NLD1&quot; - EMEA. |
+| `ttl` **(Erforderlich)** | Gibt den Projektionsablauf an. Akzeptierter Wertebereich: 600 bis 604800. Standardwert: 3600. |
+| `replicationPolicy` **(Erforderlich)** | Definiert das Verhalten der Datenreplikation vom Hub bis zu den Kanten.  Unterstützte Werte: PROAKTIV, REAKTIV. Standardwert: REAKTIV. |
 
 **Antwort**
 
