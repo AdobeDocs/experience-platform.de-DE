@@ -1,8 +1,14 @@
 ---
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+keywords: Experience Platform;insights; customer ai;popular topics
+solution: Experience Platform
+title: Kundensegmente mit prognostizierten Werten erstellen
+topic: Create a segment
 translation-type: tm+mt
+source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
 
 ---
+
+
 # Kundensegmente mit prognostizierten Werten erstellen
 
 Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Die Anreicherung von Profilen mit Kundentreuewerten ermöglicht die Erstellung von Kundensegmenten, um Audiencen anhand ihrer Tendenzwerte zu finden. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit Segment Builder beschrieben. Eine genauere Anleitung zum Erstellen von Segmenten finden Sie im [Segment Builder-Benutzerhandbuch](../../../segmentation/tutorials/create-a-segment.md).
