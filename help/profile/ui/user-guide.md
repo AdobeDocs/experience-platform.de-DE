@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Handbuch zum Echtzeit-Profil
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
@@ -73,7 +73,7 @@ Klicken Sie auf Richtlinien **zusammenführen** , um eine Liste der zu Ihrem Unt
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien in der Benutzeroberfläche finden Sie im Benutzerhandbuch [&quot;Richtlinien](merge-policies.md)zusammenführen&quot;.
+Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien in der Benutzeroberfläche finden Sie im Benutzerhandbuch [](merge-policies.md)&quot;Richtlinien zusammenführen&quot;.
 
 ## Vereinigung Schema
 
