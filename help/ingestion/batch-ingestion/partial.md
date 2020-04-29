@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Übersicht über die partielle Batchverarbeitung in Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 ---
 
 
 
-# Partielle Batch-Erfassung
+# Partielle Batch-Erfassung (Beta)
 
 Partielle Stapelverarbeitung ist die Fähigkeit, Daten mit Fehlern bis zu einem bestimmten Schwellenwert zu erfassen. Mit dieser Funktion können Benutzer alle korrekten Daten erfolgreich in Adobe Experience Platform aufnehmen, während alle fehlerhaften Daten separat gestapelt werden, zusammen mit Details, warum sie ungültig sind.
 
 Dieses Dokument bietet eine Anleitung zum Verwalten der partiellen Stapelverarbeitung.
 
-Darüber hinaus bietet der [Anhang](#partial-batch-ingestion-error-types) zu diesem Lernprogramm eine Referenz zu Fehlertypen bei der Partiellen Stapelverarbeitung.
+Darüber hinaus bietet der [Anhang](#appendix) zu diesem Lernprogramm eine Referenz zu Fehlertypen bei der Partiellen Stapelverarbeitung.
+
+>[!IMPORTANT] Diese Funktion existiert nur mit der API. Wenden Sie sich an Ihr Team, um Zugriff auf diese Funktion zu erhalten.
 
 ## Erste Schritte
 
@@ -47,7 +49,7 @@ Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen
 
 ## Aktivieren eines Datensatzes für die teilweise Stapelverarbeitung in der API
 
->[!NOTE] In diesem Abschnitt wird die Aktivierung eines Datensatzes für die teilweise Stapelverarbeitung mithilfe der API beschrieben. Anweisungen zur Verwendung der Benutzeroberfläche finden Sie im Abschnitt zum [Aktivieren eines Datensatzes für die teilweise Stapelverarbeitung im UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) -Schritt.
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 Sie können einen neuen Datensatz erstellen oder einen vorhandenen Datensatz mit aktivierter teilweiser Erfassung ändern.
 
@@ -71,35 +73,35 @@ Um einen vorhandenen Datensatz zu ändern, führen Sie die Schritte im Entwickle
 
 Innerhalb des Datensatzes müssen Sie das oben beschriebene Tag hinzufügen.
 
-## Aktivieren eines Datensatzes für die teilweise Stapelverarbeitung in der Benutzeroberfläche
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie einen Datensatz für die teilweise Stapelverarbeitung mithilfe der Benutzeroberfläche aktivieren. Wenn Sie bereits einen Datensatz für die teilweise Stapelverarbeitung mithilfe der API aktiviert haben, können Sie mit dem nächsten Abschnitt fortfahren.
+>[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
-Um einen Datensatz für die teilweise Erfassung über die Plattform-Benutzeroberfläche zu aktivieren, klicken Sie im linken Navigationsbereich auf **Datensätze** . Sie können entweder einen neuen Datensatz [erstellen](#create-a-new-dataset-with-partial-batch-ingestion-enabled) oder einen vorhandenen Datensatz [ändern](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
-### Erstellen eines neuen Datensatzes mit aktivierter partieller Batchverarbeitung
+### Create a new dataset with partial batch ingestion enabled
 
-Um einen neuen Datensatz zu erstellen, führen Sie die Schritte im Benutzerhandbuch zum [Datensatz aus](../../catalog/datasets/user-guide.md). Nachdem Sie den Schritt zum *Konfigurieren des Datensatzes* erreicht haben, beachten Sie die Felder *Partielle Eingabe* und *Fehlerdiagnose* .
+To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
 
-Mit dem Umschalter *Partielle Erfassung* können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-Der Umschalter *Fehlerdiagnose* wird nur angezeigt, wenn der Umschalter für die *partielle Einbindung* deaktiviert ist. Mit dieser Funktion kann die Plattform detaillierte Fehlermeldungen zu den erfassten Stapeln generieren. Wenn der Umschalter für die *partielle* Eingabe aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
 
-Mit dem *Fehlerschwellenwert* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### Vorhandene Datensätze ändern, um die teilweise Stapelverarbeitung zu aktivieren
+### Modify an existing dataset to enable partial batch ingestion
 
-Um einen vorhandenen Datensatz zu ändern, wählen Sie den zu ändernden Datensatz aus. Die Seitenleiste auf der rechten Seite enthält Informationen zum Datensatz.
+To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
 
 ![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
 
-Mit dem Umschalter *Partielle Erfassung* können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-Mit dem *Fehlerschwellenwert* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## Abrufen von Fehlern bei der partiellen Stapelverarbeitung
 
@@ -176,7 +178,7 @@ Wenn der Stapel einen Fehler aufweist und die Fehlerdiagnose aktiviert ist, laut
 
 In diesem Lernprogramm wurde beschrieben, wie Sie einen Datensatz erstellen oder ändern, um die teilweise Stapelverarbeitung zu aktivieren. Weitere Informationen zur Stapelverarbeitung finden Sie im [Entwicklerhandbuch](./api-overview.md)zur Stapelverarbeitung.
 
-## Fehlertypen bei der Partielle Stapelverarbeitung
+## Fehlertypen bei der Partielle Stapelverarbeitung {#appendix}
 
 Bei der Partiellen Stapelverarbeitung gibt es beim Erfassen von Daten vier verschiedene Fehlertypen.
 
