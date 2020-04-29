@@ -75,7 +75,7 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [Workflow zum Erstellen von Cloud-Speicher-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon S3-Ziel](destinations/amazon-s3-destination.md)
          * [SFTP-Ziel](destinations/sftp-destination.md)
-      * Data Management Platform-Ziele {dmp-Ziele}
+      * Data Management Platform-Ziele {#dmp-destinations}
          * [Data Management Platform - Ziele - Übersicht](destinations/dmp-destinations.md)
          * [Audience Manager DIL-Erweiterung](/help/rtcdp/destinations/aam-dil-extension.md)
       * E-Mail-Marketing-Ziele {#email-destinations}
