@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erfassen von Daten aus einer externen Datenbank oder einem NoSQL-System über Quellschnittstellen und APIs
+title: Erfassen von Daten aus einer Drittanbieter-Datenbank über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00764a59629eb8a5a06ac28ad446084b0bdb2293
+source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
 
 ---
 
 
-# Erfassen von Daten aus einer externen Datenbank oder einem NoSQL-System über Quellschnittstellen und APIs
+# Erfassen von Daten aus einer Drittanbieter-Datenbank über Quellschnittstellen und APIs
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank oder einem NoSQL-System und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und APIs beschrieben.
+In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Datenbank und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und APIs beschrieben.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert den Zugriff auf eine Datenbank eines Drittanbieters oder ein NoSQL-System über eine gültige Basisverbindung und Informationen über die Datei, die Sie in die Plattform einführen möchten, einschließlich Pfad und Struktur der Datei. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung einer Datenbank oder eines NoSQL-Systems mit der Flow Service API](../explore/database-nosql.md) , bevor Sie dieses Lernprogramm durchführen.
+Für dieses Lernprogramm ist eine gültige Verbindung zu einer Datenbank eines Drittanbieters sowie Informationen über die Datei erforderlich, die Sie in Platform einbringen möchten (einschließlich Pfad und Struktur der Datei). Wenn Sie diese Informationen nicht haben, lesen Sie das Tutorial zur [Erforschung einer Datenbank mithilfe der Flow Service API](../explore/database-nosql.md) , bevor Sie dieses Tutorial durchführen.
 
 Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten der Adobe Experience Platform verstehen:
 
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `baseConnectionId` | Die ID einer Basisverbindung für eine Datenbank oder ein NoSQL-System. |
+| `baseConnectionId` | Die ID einer Datenbankverbindung. |
 | `data.schema.id` | Die `$id` des Ad-hoc-XDM-Schemas. |
 | `params.path` | Der Pfad der Quelldatei. |
 | `connectionSpec.id` | Die Verbindungs-Spezifikations-ID für eine Datenbank oder ein NoSQL-System. |
@@ -463,7 +463,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
 }
 ```
 
-## Spezifikationen zum Nachschlagen von Datenblättern {#specs}
+## Datennachrichtenspezifikationen abrufen {#specs}
 
 Ein Datennachweis ist dafür verantwortlich, Daten aus Quellen zu sammeln und sie in Plattform zu bringen. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET-Anforderung an die Flow Service API ausführen. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System verantwortlich.
 
@@ -616,7 +616,7 @@ Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstelle
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 **API-Format**
 
@@ -648,16 +648,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
-                    }
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
@@ -675,10 +665,10 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `flowSpec.id` | Die mit Ihrer Datenbank oder Ihrem NoSQL-System verknüpfte Datenfeldspezifikations-ID. |
-| `sourceConnectionIds` | Die mit Ihrer Datenbank oder Ihrem NoSQL-System verknüpfte Quell-Verbindungs-ID. |
-| `targetConnectionIds` | Die mit der Zielgruppe oder dem NoSQL-System verknüpfte Verbindungs-ID. |
-| `transformations.params.mappingId` | Die Zuordnungs-ID, die mit Ihrer Datenbank oder Ihrem NoSQL-System verknüpft ist. |
+| `flowSpec.id` | Die mit Ihrer Datenbank verknüpfte Datenfadenspezifikations-ID. |
+| `sourceConnectionIds` | Die der Datenbank zugeordnete Quell-Verbindungs-ID. |
+| `targetConnectionIds` | Die mit der Zielgruppe verknüpfte Verbindungs-ID. |
+| `transformations.params.mappingId` | Die mit Ihrer Datenbank verknüpfte Zuordnungs-ID. |
 
 **Antwort**
 
@@ -692,7 +682,30 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses zur
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie einen Quellanschluss erstellt, um Daten aus einer Datenbank oder einem NoSQL-System planmäßig zu erfassen. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, mit dem Daten aus einer Datenbank eines Drittanbieters planmäßig erfasst werden. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
+
+## Anhang
+
+Im folgenden Abschnitt werden die verschiedenen Cloud-Datenspeicherung-Quellschnittstellen und deren Verbindungsspezifikationen Liste.
+
+### Verbindungsspezifikation
+
+| Connector-Name | Verbindungs-Spec-ID |
+| -------------- | --------------- |
+| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| Apache Hive auf Azurblauer HDInsights | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| Apache Spark auf Azurblauen HDInsights | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| Blue Data Explorer | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| Azurblase Synapse Analytics | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| Datenspeicherung | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
+| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| Phoenix | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| PostgreSQL | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
