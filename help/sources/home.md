@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform-Quellschnittstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
+source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
 
 ---
 
@@ -67,12 +67,15 @@ Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eine
 - [Amazon Redshift Connector](connectors/databases/redshift.md)
 - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
 - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
+- [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
 - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
 - [Datenspeicherung-Stecker](connectors/databases/ats.md)
 - [Google BigQuery Connector](connectors/databases/bigquery.md)
+- [IBM DB2 Connector](connectors/databases/ibm-db2.md)
 - [MariaDB-Anschluss](connectors/databases/mariadb.md)
 - [Microsoft SQL Server Connector](connectors/databases/sql-server.md)
 - [MySQL Connector](connectors/databases/mysql.md)
+- [Oracle Connector](connectors/databases/oracle.md)
 - [Phoenix-Anschluss](connectors/databases/phoenix.md)
 - [PostgreSQL Connector](connectors/databases/postgres.md)
 
@@ -103,7 +106,7 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche auf der Grundlage v
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
 | **Ansicht-Quellen** auf | Gewähren Sie schreibgeschützten Zugriff auf Quellen in jedem Quelltyp auf der Registerkarte &quot; *Katalog* &quot;sowie auf die Registerkarten &quot; *Durchsuchen*&quot;, &quot; *Konten*&quot;und &quot; *DataFlow* &quot;. |
-| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen, die in den **Ansichten-Quellen** enthalten sind, Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
+| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen in den **Ansichten-Quellen** Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
 | **Ansicht-Quellen** deaktivieren und Quellen **verwalten** deaktivieren | Sperren Sie den Zugriff auf alle Quellen. |
 
 Weitere Informationen zu den verfügbaren Berechtigungen, die über die Admin-Konsole erteilt wurden, einschließlich dieser vier Quellen, finden Sie in der Übersicht über die [Zugriffskontrolle](../access-control/home.md).
