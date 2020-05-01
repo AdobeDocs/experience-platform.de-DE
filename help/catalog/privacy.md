@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: d3584202554baf46aad174d671084751e6557bbc
 
 ---
 
 
 # Verarbeitung von Datenschutzanfragen im Data Lake
 
-Der Adobe Experience Platform Privacy Service verarbeitet Anfragen von Kunden zum Zugriff auf ihre personenbezogenen Daten, zu Opt-out oder zu löschen, wie sie in Datenschutzbestimmungen wie der Allgemeinen Datenschutzverordnung (GDPR) und dem California Consumer Privacy Act (CCPA) definiert sind.
+Der Adobe Experience Platform-Datenschutzdienst verarbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt.
 
 In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanforderungen für im Data Lake gespeicherte Kundendaten behandelt.
 
@@ -22,168 +22,114 @@ Es wird empfohlen, die folgenden Experience Platform-Dienste zu verstehen, bevor
 * [Datenschutzdienst](../privacy-service/home.md): Verwaltet Kundenanforderungen für den Zugriff auf, die Einstellung des Verkaufs oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
 * [Katalogdienst](home.md): Das Datensatzsystem für die Position und die Lineage von Daten in Experience Platform. Stellt eine API bereit, mit der die Metadaten des Datensatzes aktualisiert werden können.
 * [Erlebnis-Datenmodell (XDM)-System](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [Identitätsdienst](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 
-## Hinzufügen von Datenschutzbezeichnungen zu Datensätzen {#privacy-labels}
+## Identitäts-Namensräume {#namespaces}
 
-Damit ein Datensatz in einer Datenschutzanforderung für den Data Lake verarbeitet werden kann, muss der Datensatz mit Datenschutzetiketten versehen werden. Datenschutzetiketten geben an, welche Felder im zugehörigen Schema eines Datasets auf die Namensraum zutreffen, die voraussichtlich in Datenschutzanfragen gesendet werden.
+Der Identitätsdienst für Adobe Experience Platform verbindet Daten zur Kundenidentität über Systeme und Geräte hinweg. Der Identitätsdienst nutzt **Identitätskennungen** , um einen Kontext für Identitätswerte bereitzustellen, indem er sie mit ihrem System der Herkunft verknüpft. Ein Namensraum kann ein allgemeines Konzept wie eine E-Mail-Adresse (&quot;E-Mail&quot;) oder die Identität einer bestimmten Anwendung zuordnen, z. B. einer Adobe Advertising Cloud ID (&quot;AdCloud&quot;) oder einer Adobe-Zielgruppe-ID (&quot;TNTID&quot;).
 
-Dieser Abschnitt zeigt, wie Sie einem Datensatz Datenschutzbeschriftungen hinzufügen, die in Datenschutzanforderungen von Data Lake verwendet werden können. Beachten Sie zunächst den folgenden Datensatz:
+Der Identitätsdienst verwaltet einen Store von global definierten (Standard-) und benutzerdefinierten (benutzerdefinierten) Identitäts-Namensräumen. Standardmäßige Namensraum stehen für alle Unternehmen zur Verfügung (z. B. &quot;E-Mail&quot;und &quot;ECID&quot;), während Ihr Unternehmen benutzerdefinierte Namensraum erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
-```json
-{
-    "5d8e9cf5872f18164763f971": {
-        "name": "Loyalty Members",
-        "description": "Dataset for the Loyalty Members schema",
-        "imsOrg": "{IMS_ORG}",
-        "tags": {
-            "adobe/pqs/table": [
-                "loyalty_members"
-            ]
-        },
-        "namespace": "ACP",
-        "state": "DRAFT",
-        "id": "5d8e9cf5872f18164763f971",
-        "dule": {
-            "identity": [],
-            "contract": [
-                "C2",
-                "C5"
-            ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C5"
-            ],
-            "identifiability": [],
-            "specialTypes": []
-        },
-        "version": "1.0.2",
-        "created": 1569627381749,
-        "updated": 1569880723282,
-        "createdClient": "acp_ui_platform",
-        "createdUser": "{USER_ID}",
-        "updatedUser": "{USER_ID}",
-        "viewId": "5d8e9cf5872f18164763f972",
-        "status": "enabled",
-        "fileDescription": {
-            "persisted": true,
-            "containerFormat": "parquet",
-            "format": "parquet"
-        },
-        "files": "@/dataSets/5d8e9cf5872f18164763f971/views/5d8e9cf5872f18164763f972/files",
-        "schemaMetadata": {
-            "primaryKey": [],
-            "delta": [],
-            "dule": [
-                {
-                    "path": "/properties/personalEmail/properties/address",
-                    "identity": [
-                        "I1"
-                    ],
-                    "contract": [],
-                    "sensitive": [],
-                    "contracts": [],
-                    "identifiability": [
-                        "I1"
-                    ],
-                    "specialTypes": []
-                }
-            ],
-            "gdpr": []
-        },
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2c66c3a4323128d3701289df4468e8a6",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        }
-    }
-}
-```
+Weitere Informationen zu Identitäts-Namensräumen in Experience Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
 
-Die `schemaMetadata` Eigenschaft für den Datensatz enthält ein `gdpr` Array, das zurzeit leer ist. Um dem Datensatz Datenschutzbeschriftungen hinzuzufügen, muss dieses Array mit einer PATCH-Anforderung an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)aktualisiert werden.
+## Hinzufügen von Identitätsdaten zu Datensätzen
 
->[!NOTE] Obwohl das Array benannt ist `gdpr`, ermöglicht es das Hinzufügen von Bezeichnungen für Datenschutzaufträge sowohl für GDPR- als auch für CCPA-Regeln.
+Beim Erstellen von Datenschutzanforderungen für den Data Lake müssen für jeden einzelnen Kunden gültige Identitätswerte (und die zugehörigen Namensraum) angegeben werden, um die Daten zu finden und entsprechend zu verarbeiten. Daher müssen alle Datensätze, die Datenschutzanforderungen unterliegen, einen **Identitätsdeskriptor** in ihrem zugehörigen XDM-Schema enthalten.
+
+>[!NOTE] Datensätze, die auf Schemas basieren, die keine Identitätsdeskriptordaten unterstützen (z. B. Ad-hoc-Datensätze), können derzeit nicht in Datenschutzanforderungen verarbeitet werden.
+
+In diesem Abschnitt werden die Schritte zum Hinzufügen eines Identitätsdeskriptors zum XDM-Schema eines vorhandenen Datensatzes beschrieben. Wenn Sie bereits über einen Datensatz mit einem Identitätsdeskriptor verfügen, können Sie mit dem [nächsten Abschnitt](#nested-maps)fortfahren.
+
+>[!IMPORTANT] Berücksichtigen Sie bei der Entscheidung, welche Schema-Felder als Identitäten festgelegt werden sollen, die [Einschränkungen bei der Verwendung verschachtelter Kartenfelder](#nested-maps).
+
+Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem DataSet-Schema:
+
+* [Verwenden der Benutzeroberfläche](#identity-ui)
+* [Verwenden der API](#identity-api)
+
+### Verwenden der Benutzeroberfläche {#identity-ui}
+
+In der Benutzeroberfläche von Experience Platform können Sie mit dem _[!UICONTROL Schemas]_Arbeitsbereich Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum[Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field)im Schema-Editor-Lernprogramm.
+
+Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt zum [Senden von Datenschutzanforderungen](#submit)fortfahren.
+
+### Verwenden der API {#identity-api}
+
+>[!NOTE] In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mithilfe der Katalogdienst-API abrufen. Nachdem Sie den [Abschnitt &quot;Erste Schritte](./api/getting-started.md) &quot;im Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die unter zur [Auflistung](./api/list-objects.md) oder [Suche](./api/look-up-object.md) von Katalogobjekten nach dem Datensatz beschrieben werden. Die Schema-ID finden Sie unter `schemaRef.id`
+>
+> Dieser Abschnitt enthält Aufrufe der Schema Registry API. Wichtige Informationen zur Verwendung der API, einschließlich der Kenntnisse über Ihre `{TENANT_ID}` und das Konzept der Container, finden Sie im Abschnitt [Erste Schritte](../xdm/api/getting-started.md) im Entwicklerhandbuch.
+
+Sie können dem XDM-Schema eines Datasets einen Identitätsdeskriptor hinzufügen, indem Sie eine POST-Anforderung an den `/descriptors` Endpunkt in der Schema Registry-API senden.
 
 **API-Format**
 
 ```http
-PATCH /dataSets/{DATASET_ID}
+POST /descriptors
 ```
-
-| Parameter | Beschreibung |
-| --- | --- |
-| `{DATASET_ID}` | Der `id` Wert des zu aktualisierenden Datensatzes. |
 
 **Anfrage**
 
-In diesem Beispiel enthält ein Datensatz eine E-Mail-Adresse in das `personalEmail.address` Feld. Damit dieses Feld als Bezeichner für Datenschutzanforderungen von Data Lake fungiert, muss ein Etikett mit einem nicht registrierten Namensraum in sein `gdpr` Array aufgenommen werden.
-
-Die folgende Anforderung fügt eine Datenschutzbeschriftung hinzu, mit der der Namensraum &quot;email_label&quot;dem `personalEmail.address` Feld zugewiesen wird.
-
->[!IMPORTANT] Wenn Sie einen PATCH-Vorgang für die `schemaMetadata` Eigenschaft eines Datensatzes ausführen, stellen Sie sicher, dass Sie alle vorhandenen Untereigenschaften innerhalb der Anforderungsnutzlast kopieren. Wenn Sie vorhandene Werte aus der Nutzlast ausschließen, werden sie aus dem Datensatz entfernt.
+Die folgende Anforderung definiert einen Identitätsdeskriptor für ein &quot;E-Mail-Adresse&quot;-Feld in einem Beispiel-Schema.
 
 ```shell
-curl -X PATCH 'https://platform.adobe.io/data/foundation/catalog/dataSets/5d8e9cf5872f18164763f971' \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'Content-Type: application/json' \
-  -d '{ 
-    "schemaMetadata": { 
-      "primaryKey": [],
-      "delta": [],
-      "dule": [
-        {
-          "path": "/properties/personalEmail/properties/address",
-          "identity": [
-              "I1"
-          ],
-          "contract": [],
-          "sensitive": [],
-          "contracts": [],
-          "identifiability": [
-              "I1"
-          ],
-          "specialTypes": []
-        }
-      ],
-      "gdpr": [
-          {
-              "namespace": ["email_label"],
-              "path": "/properties/personalEmail/properties/address"
-          }
-      ]
-  }'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '
+      {
+        "@type": "xdm:descriptorIdentity",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/personalEmail/address",
+        "xdm:namespace": "Email",
+        "xdm:property": "xdm:code",
+        "xdm:isPrimary": false
+      }'
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `namespace` | Ein Array, das die Namensraum auflistet, die mit dem in `path`angegebenen Feld verknüpft werden sollen. Namensraum werden verwendet, um datenschutzbezogene Felder beim [Senden von Zugriffs- oder Löschanfragen](#submit) in der Datenschutzdienst-API zu identifizieren. |
-| `path` | Der Pfad zum Feld im zugehörigen Schema des Datensatzes, der für das `namespace`Feld gilt. Im Idealfall sollten Datenschutzbeschriftungen nur auf &quot;Blattfelder&quot;(Felder ohne Unterfelder) angewendet werden. |
+| `@type` | Der Typ des zu erstellenden Deskriptors. Bei Identitätsdeskriptoren muss der Wert &quot;xdm:descriptorIdentity&quot;lauten. |
+| `xdm:sourceSchema` | Die eindeutige URI-ID des XDM-Schemas Ihres Datensatzes. |
+| `xdm:sourceVersion` | Die Version des XDM-Schemas, die in `xdm:sourceSchema`. |
+| `xdm:sourceProperty` | Der Pfad zum Schema, auf das der Deskriptor angewendet wird. |
+| `xdm:namespace` | Einer der vom Datenschutzdienst erkannten [Identitätskennungen](../privacy-service/api/appendix.md#standard-namespaces) oder ein benutzerdefinierter Namensraum, der von Ihrem Unternehmen definiert wird. |
+| `xdm:property` | Entweder &quot;xdm:id&quot;oder &quot;xdm:code&quot;, je nach Namensraum, der unter `xdm:namespace`verwendet wird. |
+| `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn &quot;true&quot;, bedeutet dies, dass das Feld eine primäre Identität ist. Schema dürfen nur eine primäre Identität enthalten. Die Standardeinstellung lautet &quot;false&quot;(falsch), wenn sie nicht enthalten ist. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) mit der ID des Datensatzes zurück, der in der Payload bereitgestellt wird. Wenn Sie die ID zum Nachschlagen des Datensatzes verwenden, wird deutlich, dass die Datenschutzbeschriftungen hinzugefügt wurden.
+Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und die Details des neu erstellten Deskriptors zurück.
 
 ```json
-[
-    "@/dataSets/5d8e9cf5872f18164763f971"
-]
+{
+  "@type": "xdm:descriptorIdentity",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/personalEmail/address",
+  "xdm:namespace": "Email",
+  "xdm:property": "xdm:code",
+  "xdm:isPrimary": false,
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
 ```
-
-### Bezeichnen verschachtelter Kartenfelder
-
-Beachten Sie, dass es zwei Arten von verschachtelten Kartenfeldern gibt, die keine Datenschutzkennzeichnung unterstützen:
-
-* Ein Feld vom Typ &quot;map&quot;in einem Feld vom Typ &quot;array&quot;
-* Ein Feld vom Typ &quot;Map&quot;in einem anderen Feld vom Typ &quot;map&quot;
-
-Die Verarbeitung von Datenschutzaufträgen für eines der beiden obigen Beispiele schlägt schließlich fehl. Aus diesem Grund wird empfohlen, verschachtelte Felder vom Typ &quot;Map&quot;nicht zum Speichern von Daten privater Kunden zu verwenden. Relevante Kunden-IDs sollten als Nicht-Map-Datentyp innerhalb des `identityMap` Felds (selbst ein Zuordnungsfeld) für Datensatzdatasets oder als `endUserID` Feld für zeitreihenbasierte Datensätze gespeichert werden.
 
 ## Einreichen von Anträgen {#submit}
 
->[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Data Lake formatieren. Es wird dringend empfohlen, die Dokumentation der [Datenschutzdienst-API](../privacy-service/api/getting-started.md) oder der Benutzeroberfläche [des](../privacy-service/ui/overview.md) Datenschutzdienstes zu lesen, um die vollständigen Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
+>[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Data Lake formatieren. Es wird dringend empfohlen, die Dokumentation der Benutzeroberfläche [des](../privacy-service/ui/overview.md) Datenschutzdienstes oder der [Datenschutzdienst-API](../privacy-service/api/getting-started.md) zu lesen, um die vollständigen Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
 
-Im folgenden Abschnitt wird beschrieben, wie Sie mit der Datenschutzdienst-API oder der Benutzeroberfläche Datenschutzanforderungen für den Data Lake durchführen.
+Im folgenden Abschnitt wird beschrieben, wie Sie mithilfe der Benutzeroberfläche oder API des Datenschutzdienstes Datenschutzanforderungen für den Data Lake durchführen.
+
+### Verwenden der Benutzeroberfläche
+
+Wählen Sie beim Erstellen von Auftragsanforderungen in der Benutzeroberfläche **AEP Data Lake** und/oder **Profil** unter _Products_ aus, um Aufträge für Daten zu verarbeiten, die im Data Lake bzw. im Real-Time Customer Profil gespeichert werden.
+
+<img src="images/privacy/product-value.png" width="450"><br>
 
 ### Verwenden der API
 
@@ -232,12 +178,6 @@ curl -X POST \
 }'
 ```
 
-### Verwenden der Benutzeroberfläche
-
-Wählen Sie beim Erstellen von Auftragsanforderungen in der Benutzeroberfläche **AEP Data Lake** und/oder **Profil** unter _Products_ aus, um Aufträge für Daten zu verarbeiten, die im Data Lake bzw. im Real-Time Customer Profil gespeichert werden.
-
-<img src="images/privacy/product-value.png" width="450"><br>
-
 ## Anforderungsverarbeitung löschen
 
 Wenn Experience Platform eine Löschanforderung vom Datenschutzdienst erhält, sendet Platform eine Bestätigung an den Datenschutzdienst, dass die Anforderung empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake entfernt. Während dieses siebentägigen Fensters werden die Daten weich gelöscht und stehen daher keinem Plattformdienst zur Verfügung.
@@ -248,4 +188,17 @@ In zukünftigen Versionen sendet Platform eine Bestätigung an den Datenschutzdi
 
 Durch das Lesen dieses Dokuments wurden Sie zu den wichtigen Konzepten der Verarbeitung von Datenschutzanforderungen für den Data Lake vorgestellt. Es wird empfohlen, die Dokumentation in diesem Handbuch weiter zu lesen, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Anweisungen zur Verarbeitung von Datenschutzanforderungen für den Profil Store finden Sie im Dokument zur Verarbeitung von [Datenschutzanfragen für Echtzeit-Kundendaten](../profile/privacy.md) .
+Anweisungen zur Verarbeitung von Datenschutzanforderungen für den Profil Store finden Sie im Dokument zur Verarbeitung von [Datenschutzanforderungen für Echtzeit-Kundendaten](../profile/privacy.md) .
+
+## Anhang
+
+Der folgende Abschnitt enthält zusätzliche Informationen zur Verarbeitung von Datenschutzanforderungen im Data Lake.
+
+### Bezeichnen verschachtelter Kartenfelder {#nested-maps}
+
+Beachten Sie, dass es zwei Arten von verschachtelten Kartenfeldern gibt, die keine Datenschutzkennzeichnung unterstützen:
+
+* Ein Feld vom Typ &quot;map&quot;in einem Feld vom Typ &quot;array&quot;
+* Ein Feld vom Typ &quot;Map&quot;in einem anderen Feld vom Typ &quot;map&quot;
+
+Die Verarbeitung von Datenschutzaufträgen für eines der beiden obigen Beispiele schlägt schließlich fehl. Aus diesem Grund wird empfohlen, verschachtelte Felder vom Typ &quot;Map&quot;nicht zum Speichern von Daten privater Kunden zu verwenden. Relevante Kunden-IDs sollten als Nicht-Map-Datentyp innerhalb des `identityMap` Felds (selbst ein Zuordnungsfeld) für Datensatzdatasets oder als `endUserID` Feld für zeitreihenbasierte Datensätze gespeichert werden.
