@@ -1,0 +1,24 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Blue Data Explorer-Anschluss
+topic: overview
+translation-type: tm+mt
+source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+
+---
+
+
+# Blue Data Explorer-Anschluss
+
+Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+
+Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eines Drittanbieters. Die Plattform kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relational, NoSQL oder Data Warehouse herstellen. Zur Unterstützung von Datenbankanbietern gehört auch Azurblase Data Explorer.
+
+Die nachstehende Dokumentation enthält Informationen zum Verbinden von Azurblauer Data Explorer mit Plattform mithilfe von APIs:
+
+## Verbinden von Azurblase Data Explorer mit Plattformen mithilfe von APIs
+
+- [Erstellen eines Azurblauen Data Explorer-Connectors mit der Flow-Dienst-API](../../tutorials/api/create/databases/data-explorer.md)
+- [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
