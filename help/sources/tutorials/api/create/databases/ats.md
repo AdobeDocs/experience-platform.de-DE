@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Datenspeicherung-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 69ea79aff57ad82d8bc462984526b2126858c0b1
+source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
 
 ---
 
@@ -68,7 +68,6 @@ POST /connections
 **Anfrage**
 
 Um eine ATS-Verbindung zu erstellen, muss die eindeutige Verbindungs-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungs-Spezifikations-ID für ATS lautet `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
-
 
 ```shell
 curl -X POST \
