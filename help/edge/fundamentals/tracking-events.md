@@ -4,7 +4,7 @@ seo-title: Verfolgen von Adobe Experience Platform Web SDK-Ereignissen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 3c6f9663ef5b83ceeb93539171017e2b282a613f
 
 ---
 
@@ -42,6 +42,9 @@ alloy("event", {
   }
 });
 ```
+
+>[!Note]
+>Die Daten, die in jedem Ereignis im XDM-Feld gesendet werden können, sind auf 32 KB beschränkt.
 
 ### Senden von Nicht-XDM-Daten
 
