@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Akzeptierte Identitäts-Namensraum und Qualifikatoren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
 
 # Anhang
 
-## Standard-Identitäts-Namensraum
+## Standard-Identitäts-Namensraum {#standard-namespaces}
 
 Alle Identitäten, die an den Datenschutzdienst gesendet werden, müssen unter einem bestimmten Namensraum angegeben werden. Identity Namensraums sind eine Komponente des [Adobe Experience Platform Identity Service](../../identity-service/home.md) , die den Kontext angibt, auf den sich eine Identität bezieht.
 
