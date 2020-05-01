@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5f0e0deb4a2fae636ac4d2313a6541c25309c294
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
@@ -33,7 +33,7 @@ Weitere Informationen zu Identitäts-Namensräumen in Experience Platform finden
 
 ## Einreichen von Anträgen {#submit}
 
->[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Data Lake formatieren. Es wird dringend empfohlen, die Dokumentation der [Datenschutzdienst-API](../privacy-service/api/getting-started.md) oder der Benutzeroberfläche [des](../privacy-service/ui/overview.md) Datenschutzdienstes zu lesen, um die vollständigen Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
+>[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Profil-Datenspeicher erstellen. Es wird dringend empfohlen, die Dokumentation der [Datenschutzdienst-API](../privacy-service/api/getting-started.md) oder der Benutzeroberfläche [des](../privacy-service/ui/overview.md) Datenschutzdienstes zu lesen, um die vollständigen Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
 
 Im folgenden Abschnitt wird beschrieben, wie Sie mithilfe der Datenschutzdienst-API oder der Benutzeroberfläche Datenschutzanforderungen für Echtzeit-Kundendaten und den Data Lake erstellen.
 
