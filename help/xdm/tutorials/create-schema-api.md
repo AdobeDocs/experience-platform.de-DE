@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Schemas mit der Schema Registry API
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -24,9 +24,9 @@ Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe E
 * [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Header für die Anforderung (mit besonderer Aufmerksamkeit auf den Accept-Header und seine möglichen Werte).
+Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
 
-In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas für Treuemitglieder beschrieben, in dem die Daten zu den Mitgliedern eines Programms zur Treue von Kunden beschrieben werden. Bevor Sie beginnen, sollten Sie das Schema [](#complete-schema) zu den Treuemitgliedern im Anhang Vorschau haben.
+In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas für Treuemitglieder beschrieben, in dem die Daten zu den Mitgliedern eines Programms zur Treue von Kunden beschrieben werden. Bevor Sie beginnen, möchten Sie vielleicht das Schema [](#complete-schema) zu den Treuemitgliedern im Anhang Vorschau haben.
 
 ## Erstellen eines Schemas mit einer Standardklasse
 
@@ -951,7 +951,7 @@ Die Ausführung einer GET-Anforderung zum Nachschlagen des Schemas zeigt jetzt d
 
 Schema werden für die Erfassung von Daten in Experience Platform verwendet. Diese Daten werden letztendlich über mehrere Dienste hinweg verwendet, um eine einzelne, einheitliche Ansicht zu erstellen. Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identität&quot;markiert werden. Bei der Datenerfassung werden die Daten in diesen Feldern in das &quot;Identitätsdiagramm&quot;für die betreffende Person eingefügt. Die Diagrammdaten können dann vom [Echtzeit-Kundenservice](../../profile/home.md) und anderen Experience Platform-Diensten aufgerufen werden, um eine zusammengeführte Ansicht der einzelnen Kunden zu bieten.
 
-Zu den Feldern, die häufig als &quot;Identität&quot;gekennzeichnet werden, gehören: E-Mail-Adresse, Telefonnummer, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM-ID oder andere eindeutige ID-Felder.
+Zu den Feldern, die häufig als &quot;Identität&quot;gekennzeichnet werden, gehören: E-Mail-Adresse, Telefonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM-ID oder andere eindeutige ID-Felder.
 
 Berücksichtigen Sie alle eindeutigen IDs, die für Ihr Unternehmen spezifisch sind, da es sich auch um gute Identitätsfelder handeln kann.
 
