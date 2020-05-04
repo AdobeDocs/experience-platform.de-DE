@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Experience Data Model (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Experience Data Model (XDM) System sowie eine Anleitung zur Fehlerbehebung für häufige Fehler. Fragen und Fehlerbehebung zu anderen Diensten in Adobe Experience Platform finden Sie im Handbuch [Experience Platform zur Fehlerbehebung](../landing/troubleshooting.md).
 
-**Experience Data Model (XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schema für das Kundenerlebnis-Management definiert. Die Methodik, auf der Experience Platform aufgebaut ist, **XDM-System**, operalisiert Experience Data Model-Schema für die Verwendung durch Plattformdienste. Die **Schema Registry** stellt eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **Schema-Bibliothek** in Experience Platform bereit. Weitere Informationen finden Sie in der [XDM-Dokumentation](home.md) .
+**Experience Data Model (XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schema für das Kundenerlebnis-Management definiert. Die Methodik, auf der Experience Platform aufgebaut ist, **XDM-System**, operalisiert Experience Data Model-Schema für die Verwendung durch Plattformdienste. Die **Schema Registry** stellt eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **Schema-Bibliothek** in Experience Platform bereit. See the [XDM documentation](home.md) for more information.
 
 ## FAQs
 
@@ -49,7 +49,7 @@ Weitere Informationen zu Feldtypen finden Sie im Abschnitt [Definieren von XDM-F
 
 ### Wie definiere ich Identitäten für mein Schema?
 
-In Experience Platform werden Identitäten unabhängig von den zu interpretierenden Datenquellen zur Identifizierung eines Subjekts (in der Regel einer einzelnen Person) verwendet. Sie werden in Schemas definiert, indem Sie Schlüsselfelder als &quot;Identität&quot;markieren. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM-ID und andere eindeutige ID-Felder.
+In Experience Platform werden Identitäten unabhängig von den zu interpretierenden Datenquellen zur Identifizierung eines Subjekts (in der Regel einer einzelnen Person) verwendet. Sie werden in Schemas definiert, indem Sie Schlüsselfelder als &quot;Identität&quot;markieren. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM-ID und andere eindeutige ID-Felder.
 
 Felder können entweder über die API oder die Benutzeroberfläche als Identitäten gekennzeichnet werden.
 
