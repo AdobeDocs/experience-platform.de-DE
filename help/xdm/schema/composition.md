@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Grundlagen der Schema-Komposition
 topic: overview
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -60,7 +60,7 @@ Schema werden für die Erfassung von Daten in Experience Platform verwendet. Die
 
 Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identität&quot;markiert werden. Bei der Datenerfassung werden die Daten in diesen Feldern in das &quot;Identitätsdiagramm&quot; für die betreffende Person eingefügt. Die Diagrammdaten können dann vom [Echtzeit-Kundenservice](../../profile/home.md) und anderen Experience Platform-Diensten aufgerufen werden, um eine zusammengeführte Ansicht der einzelnen Kunden zu bieten.
 
-Zu den Feldern, die häufig als &quot;Identität&quot;gekennzeichnet werden, gehören: E-Mail-Adresse, Telefonnummer, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM-ID oder andere eindeutige ID-Felder. Sie sollten außerdem alle eindeutigen IDs berücksichtigen, die für Ihr Unternehmen spezifisch sind, da es sich hierbei auch um gute &quot;Identität&quot;-Felder handeln kann.
+Zu den Feldern, die häufig als &quot;Identität&quot;gekennzeichnet werden, gehören: E-Mail-Adresse, Telefonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM-ID oder andere eindeutige ID-Felder. Sie sollten außerdem alle eindeutigen IDs berücksichtigen, die für Ihr Unternehmen spezifisch sind, da es sich hierbei auch um gute &quot;Identität&quot;-Felder handeln kann.
 
 Es ist wichtig, während der Planungsphase des Schemas über Kundenidentitäten nachzudenken, um sicherzustellen, dass Daten zusammengeführt werden, um ein möglichst stabiles Profil zu schaffen. In der Übersicht über den [Identitätsdienst](../../identity-service/home.md) erfahren Sie mehr darüber, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
 
@@ -129,7 +129,7 @@ Ein Feld ist der grundlegendste Baustein eines Schemas. Felder enthalten Einschr
 * Zeichenfolge
 * Ganzzahl
 * Zahl
-* Boolesch 
+* Boolesch
 * Array
 * Objekt
 
