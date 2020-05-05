@@ -4,7 +4,7 @@ seo-title: Verfolgen von Adobe Experience Platform Web SDK-Ereignissen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### Starten einer Ansicht
-
-Wenn eine Ansicht gestartet wurde, ist es wichtig, das SDK zu benachrichtigen, indem Sie `viewStart` im `event`-Befehl auf `true` einstellen. Dies gibt unter anderem an, dass das SDK personalisierte Inhalte abrufen und rendern sollte. Auch wenn Sie derzeit keine Personalisierung verwenden, wird die Aktivierung der Personalisierung oder anderer Funktionen später erheblich vereinfacht, da Sie den Code auf der Seite nicht ändern müssen. Darüber hinaus ist die Verfolgung von Ansichten nützlich, wenn nach der Datenerfassung Analyseberichte angezeigt werden.
-
-Die Definition einer Ansicht kann vom Kontext abhängen.
-
-* Auf einer regulären Website wird jede Web-Seite in der Regel als individuelle Ansicht betrachtet. In diesem Fall sollte ein Ereignis mit `viewStart` auf `true` eingestellt so bald wie möglich am Seitenanfang ausgeführt werden.
-* In einer Single Page Application \(SPA\) ist eine Ansicht weniger definiert. Dies bedeutet in der Regel, dass der Nutzer innerhalb der Anwendung navigiert hat und der Großteil des Inhalts geändert wurde. Für diejenigen, die mit den technischen Grundlagen von Single Page Applications vertraut sind, ist dies normalerweise der Fall, wenn die Anwendung eine neue Route lädt. Wenn ein Nutzer zu einer neuen Ansicht wechselt, solle unabhängig davon, wie Sie eine _Ansicht_ definieren, ein Ereignis mit `viewStart` auf `true` eingestellt ausgeführt werden.
-
-Das Ereignis, bei dem `viewStart` auf `true` eingestellt ist, ist der Hauptmechanismus zum Senden von Daten an Adobe Experience Cloud und zum Anfordern von Inhalten aus Adobe Experience Cloud. So wird eine Ansicht begonnen:
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-Nach dem Senden der Daten reagiert der Server unter anderem mit personalisierten Inhalten. Diese personalisierten Inhalte werden automatisch in Ihrer Ansicht gerendert. Link-Handler werden auch automatisch an den Inhalt der neuen Ansicht angehängt.
-
 ## Verwenden der sendBeacon-API
 
 Es kann schwierig sein, Ereignisdaten zu senden, kurz bevor der Nutzer die Web-Seite verlassen hat. Wenn die Anforderung zu lange dauert, kann der Browser die Anforderung abbrechen. Einige Browser haben eine Web-Standard-API namens `sendBeacon` implementiert, mit der Daten in dieser Zeit leichter erfasst werden können. Bei der Verwendung von `sendBeacon` stellt der Browser die Web-Anforderung im globalen Browser-Kontext dar. Das bedeutet, dass der Browser die Beacon-Anforderung im Hintergrund ausführt und die Seitennavigation nicht beeinträchtigt. Damit das Adobe Experience Platform Web SDK `sendBeacon` verwendet, fügen Sie die Option `"documentUnloading": true` zum Ereignis-Befehl hinzu.  Siehe folgendes Beispiel:
@@ -138,7 +109,7 @@ Wenn Sie eine Antwort eines Ereignisses bearbeiten möchten, können Sie wie fol
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
