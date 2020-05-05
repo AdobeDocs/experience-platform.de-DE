@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Rezept für Einzelhandel
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -48,12 +48,12 @@ Dieses Rezept verwendet [XDM-Schema](../../xdm/schema/field-dictionary.md) , um 
 | markdown | Zahl |
 | cpi | Zahl |
 | Arbeitslosigkeit | Zahl |
-| isHoliday | Boolesch  |
+| isHoliday | Boolesch |
 
 
 ## Algorithmus
 
-Zunächst wird der Schulungsdatensatz im **DSWRetailSales** -Schema geladen. Von hier aus wird das Modell mit einem [Steigerungs-Regressoralgorithmus](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)trainiert. Die Verlaufsverstärkung basiert auf der Vorstellung, dass schwache Lernende (die wenigstens etwas besser sind als eine zufällige Chance) eine Reihe von Lernenden bilden können, die sich darauf konzentrieren, die Schwächen des vorherigen Lernenden zu verbessern. Zusammen können sie dazu verwendet werden, ein leistungsfähiges Vorhersagemodell zu schaffen.
+Zunächst wird der Schulungsdatensatz im *DSWRetailSales* -Schema geladen. Von hier aus wird das Modell mit einem [Steigerungs-Regressoralgorithmus](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)trainiert. Die Verlaufsverstärkung basiert auf der Vorstellung, dass schwache Lernende (die wenigstens etwas besser sind als eine zufällige Chance) eine Reihe von Lernenden bilden können, die sich darauf konzentrieren, die Schwächen des vorherigen Lernenden zu verbessern. Zusammen können sie dazu verwendet werden, ein leistungsfähiges Vorhersagemodell zu schaffen.
 
 Das Verfahren umfasst drei Elemente: eine Verlustfunktion, ein schwacher Lerner und ein additives Modell.
 
