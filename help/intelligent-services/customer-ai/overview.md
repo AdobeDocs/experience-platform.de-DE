@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Customer AI – Übersicht
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -35,6 +35,10 @@ Customer AI erlaubt Folgendes nicht:
 - Die Kundentelefonie ist kein Tool für Produktempfehlungen. Wenn Sie Tausende von SKUs haben, verwenden Sie nicht die Kundendienstmitarbeiter als Proxy für eine echte Produktempfehlungslösung wie Adobe Zielgruppe.
 - Die Kundentraining kann nicht vorhersagen, in welcher Phase der Kauffahrt sich der Kunde befindet, z. B. wenn er sich in einer &quot;Bewusstseins&quot;-, &quot;Bedacht&quot;-, &quot;Kauf&quot;- oder &quot;Retention&quot;-Phase befindet.
 - Verwenden Sie keine Kunden-API, um Kunden zu ermitteln, die wahrscheinlich ein Produkt kaufen, das in der Zukunft gestartet wird. Dies setzt voraus, dass bestimmte Erfolgsereignisse in der Vergangenheit vorhanden sind, damit Kunden-AI den maschinellen Lernalgorithmus erfolgreich in Ihren Daten ausbilden kann.
+
+Das folgende Video unterstützt Sie dabei, die Kundentechnik zu verstehen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Wie funktioniert das?
 
