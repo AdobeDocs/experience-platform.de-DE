@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Einblicke in die Kundentechnik
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -122,3 +122,9 @@ Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie a
 ## Nächste Schritte
 
 In diesem Dokument werden die Einblicke einer Instanz des Kundenservice erläutert. Sie können jetzt das Tutorial zum [Herunterladen von Punktzahlen in der Kundenaktivität](./download-scores.md) fortsetzen oder die anderen [Adobe Intelligent Services](../../home.md) -Handbücher durchsuchen, die angeboten werden.
+
+## Zusätzliche Ressourcen
+
+In dem folgenden Video wird erläutert, wie die KUNDENKI verwendet werden kann, um die Ausgabe der Modelle und einflussreichen Faktoren zu sehen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
