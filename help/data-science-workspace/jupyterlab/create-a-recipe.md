@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Skripts mit Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -22,7 +22,7 @@ Dieses Lernprogramm umfasst zwei Hauptabschnitte. Zuerst erstellen Sie ein Model
 
 ## Erste Schritte mit der JupyterLab Notebook-Umgebung
 
-Das Erstellen eines Skripts von Grund auf kann im Data Science Workspace erfolgen. Um Beginn zu erhalten, navigieren Sie zur [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **ML-Modelle** , um zum Data Science Workspace zu gelangen. Klicken Sie von hier auf die Unterregisterkarte **Notebooks** und erstellen Sie im Jupyterlab-Startbildschirm ein neues Notebook, indem Sie die Vorlage Rezept Builder auswählen.
+Das Erstellen eines Skripts von Grund auf kann im Data Science Workspace erfolgen. Navigieren Sie zum Beginn zu [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf die **[!UICONTROL Notebooks]** Registerkarte links. Erstellen Sie ein neues Notebook, indem Sie im JupyterLab Launcher die Vorlage Rezept Builder auswählen.
 
 Mit dem Rezept Builder Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Ergebnissen der Schulung und Bewertung zufrieden sind, können Sie ein Rezept erstellen, das in Data Science Workspace verwendet werden kann, indem Sie das Notebook verwenden, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
 
