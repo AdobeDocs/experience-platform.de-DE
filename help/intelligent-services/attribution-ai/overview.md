@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Zuordnungs-AI
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -23,6 +23,10 @@ Zuordnungs-AI-Daten können von Adobe (z. B. Analytics) oder von Nicht-Adobe-Dat
 
 Attribution AI unterstützt zwei Kategorien von Scores, algorithmisch und regelbasiert. Algorithmische Ergebnisse beinhalten inkrementelle und beeinflusste Werte. Regelbasierte Ergebnisse sind First Touch, Last Touch, Linear, U-förmig und Time-Decay.
 
+Das folgende Video wurde entwickelt, um Ihr Verständnis von Attribution AI zu unterstützen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+
 ## Algorithmische Ergebnisse der Zuordnung
 
 Attribution AI unterstützt zwei Kategorien von Zuordnungswerten, algorithmische und regelbasierte Werte.
@@ -38,7 +42,7 @@ Die nachstehende Tabelle enthält weitere Details zu den einzelnen Zuordnungswer
 | Linear | Regelbasiertes Zuordnungsergebnis, das jedem Touchpoint auf einem Konversionspfad die gleiche Gutschrift zuweist. |
 | U-förmig | Regelbasiertes Zuordnungsergebnis, bei dem 40 % der Gutschrift dem ersten Touchpoint und 40 % der Gutschrift dem letzten Touchpoint zugeordnet werden, während die übrigen 20 % gleichmäßig auf die anderen Touchpoints aufgeteilt werden. |
 | Zeitverfall | Regelbasierter Zuordnungswert, bei dem Touchpoints, die näher an der Konversion liegen, mehr gutgeschrieben werden als Touchpoints, die zeitlich weiter von der Konversion entfernt sind. |
-| Beeinflusst (algorithmisch) | Einflussreiches Ergebnis ist der Anteil der Konversion, für den jeder Marketing-Touchpoint verantwortlich ist. |
+| Beeinflusst (algorithmisch) | Einflussreiches Ergebnis ist der Anteil der Konversion, für die jeder Marketing-Touchpoint verantwortlich ist. |
 | Inkrementell (algorithmisch) | Inkrementelles Ergebnis ist die Höhe des Grenzeffekts, der direkt durch einen Marketing-Touchpoint verursacht wird. |
 
 ## Beispiele für Geschäftsverwendungsfälle
