@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Konfigurieren einer Customer AI-Instanz
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -76,4 +76,10 @@ In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine
 ## Nächste Schritte {#next-steps}
 
 In diesem Lernprogramm haben Sie erfolgreich eine Instanz der Kunden-API konfiguriert und Tendenzwerte generiert. Sie können jetzt den Segment Builder verwenden, um Kundensegmente mit prognostizierten Ergebnissen zu [erstellen](./create-segment.md) oder Einblicke in die Kundentoftware [zu erhalten](./discover-insights.md).
+
+## Zusätzliche Ressourcen
+
+Das folgende Video unterstützt Sie dabei, den Konfigurationsarbeitsablauf für Kunden-API zu verstehen. Darüber hinaus werden Best Practices und Verwendungsfallbeispiele bereitgestellt.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
 
