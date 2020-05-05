@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verpacken von Quelldateien in einem Rezept
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -35,24 +35,24 @@ Ein Docker-Bild ermöglicht es einem Entwickler, eine Anwendung mit allen benöt
 
 Das erstellte Docker-Bild wird mit den Anmeldeinformationen, die Sie während des Rezepterstellungsarbeitsablaufs erhalten haben, in die Azurblaue Container-Registrierung verschoben.
 
-Melden Sie sich zum Erhalt der Anmeldedaten für Ihre Azurblase Container-Registrierung bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>an. Navigieren Sie in der linken Navigationsspalte zu **Workflows**. Wählen Sie **Rezept** importieren und anschließend **Starten**. Siehe Screenshot unten als Referenz.
+Melden Sie sich zum Erhalt der Anmeldedaten für Ihre Azurblase Container-Registrierung bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>an. Navigieren Sie in der linken Navigationsspalte zu **[!UICONTROL Workflows]**. Wählen Sie **[!UICONTROL Import Recipe]** gefolgt von der Auswahl **[!UICONTROL Launch]**. Siehe Screenshot unten als Referenz.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Die Seite &quot; *Konfigurieren* &quot;wird geöffnet. Geben Sie einen entsprechenden **Rezeptnamen** ein, z. B. &quot;Retail Sales recipe&quot;, und geben Sie optional eine Beschreibung oder eine Dokumentations-URL ein. Klicken Sie nach Abschluss des Vorgangs auf **Weiter**.
+Die Seite &quot; *Konfigurieren* &quot;wird geöffnet. Geben Sie einen entsprechenden *Rezeptnamen* ein, z. B. &quot;Retail Sales recipe&quot;, und geben Sie optional eine Beschreibung oder eine Dokumentations-URL ein. Klicken Sie nach Abschluss des Vorgangs auf **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Wählen Sie die entsprechende *Laufzeitumgebung* und dann eine **Klassifizierung** für den *Typ*. Ihre Anmeldedaten für die Azurblase-Container-Registrierung werden nach Abschluss der Überprüfung generiert.
+Wählen Sie die entsprechende *Laufzeitumgebung* aus und wählen Sie dann einen **[!UICONTROL Classification]** für den *Typ*. Ihre Anmeldedaten für die Azurblase-Container-Registrierung werden nach Abschluss der Überprüfung generiert.
 
 >[!NOTE]
 >*Typ *ist die Klasse des maschinellen Lernproblems, für das das Rezept entwickelt wurde und nach dem Training verwendet wird, um die Beurteilung der Trainingslaufzeit anzupassen.
 
 >[!TIP]
->- Wählen Sie für Python-Rezepte die **Python** -Laufzeit.
->- Wählen Sie für R-Rezepte die **R** -Laufzeit.
->- Wählen Sie für PySpark-Rezepte die **PySpark** -Laufzeit. Ein Artefakttyp wird automatisch gefüllt.
->- Wählen Sie für Scala-Rezepte die **Spark** -Laufzeit. Ein Artefakttyp wird automatisch gefüllt.
+>- Wählen Sie für Python-Rezepte die **[!UICONTROL Python]** Laufzeitumgebung aus.
+>- Wählen Sie für R-Rezepte die **[!UICONTROL R]** Laufzeitumgebung aus.
+>- Wählen Sie für PySpark-Rezepte die **[!UICONTROL PySpark]** Laufzeitumgebung aus. Ein Artefakttyp wird automatisch gefüllt.
+>- Wählen Sie für Scala-Rezepte die **[!UICONTROL Spark]** Laufzeitumgebung aus. Ein Artefakttyp wird automatisch gefüllt.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -189,7 +189,7 @@ Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
 
 ## Nächste Schritte {#next-steps}
 
-Diese Übung übernahm das Verpacken von Quelldateien in ein Rezept, die Voraussetzung für den Import eines Rezepts in Data Science Workspace. Sie sollten jetzt ein Docker-Bild in der Azurblauen Container-Registrierung zusammen mit der entsprechenden Bild-URL haben. Sie können jetzt mit dem Lernprogramm zum **Importieren eines zusammengestellten Rezepts in den Data Science Workspace** beginnen. Wählen Sie einen der folgenden Links, um zu beginnen.
+Diese Übung übernahm das Verpacken von Quelldateien in ein Rezept, die Voraussetzung für den Import eines Rezepts in Data Science Workspace. Sie sollten jetzt ein Docker-Bild in der Azurblauen Container-Registrierung zusammen mit der entsprechenden Bild-URL haben. Sie können jetzt mit dem Tutorial zum Importieren eines zusammengestellten Rezepts in den Data Science Workspace beginnen. Wählen Sie einen der folgenden Links zum Einstieg:
 
 - [Verpacktes Rezept in die Benutzeroberfläche importieren](./import-packaged-recipe-ui.md)
 - [Verpacktes Rezept mit der API importieren](./import-packaged-recipe-api.md)
