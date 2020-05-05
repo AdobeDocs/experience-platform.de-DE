@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erste Schritte mit Attribution AI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 14d47f99f1edd7734245b25b7c39f3a71e7aac50
+source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
 
 ---
 
@@ -25,18 +25,26 @@ Für die Zuordnung von AI müssen die Datensätze dem Consumer Experience Ereign
 
 - **Touchpoint:** Alle digitalen Ereignisse oder digitalen Interaktionen, die Kunden auf dem Weg zu einem Ziel ausführen. Beispiele sind Marketing-Maßnahmen vor dem Kauf, Anzeigen von Anzeigenimpressionen und Klicks auf gebührenpflichtige Suchen.
 
-## Zugreifen auf Ergebnisse und Abfragen
+## Herunterladen von Attribution AI-Ergebnissen
 
->[!NOTE] Wenn Sie keine Abfrage oder keinen Zugriff auf Rohdaten benötigen, können Sie diesen Schritt überspringen und zum [Benutzerhandbuch](./user-guide.md)wechseln.
+>[!NOTE] Wenn Sie keine Rohdaten herunterladen müssen, können Sie diesen Schritt überspringen und mit den [nächsten Schritten](#next-steps)fortfahren.
 
-Der Zugriff auf und die Abfrage von Ergebnissen für Attribution AI erfolgt über Snowflake. Derzeit müssen Sie den Adobe-Support unter attributionai-support@adobe.com per E-Mail senden, um die Anmeldeinformationen für Ihr Reader-Konto für Snowflake einzurichten und zu erhalten oder Rohdaten stapelweise zu exportieren.
+Das Herunterladen von Attributions-AI-Bewertungen erfolgt über eine Kombination von API-Aufrufen. Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
-Nachdem der Adobe-Support Ihre Anforderung verarbeitet hat, erhalten Sie eine URL für das Reader-Konto für Snowflake und die entsprechenden Anmeldeinformationen unten:
+- Genehmigung: Träger `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-- Schneeflocken-URL
-- Benutzername
-- Kennwort
+Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
-## Nächste Schritte
+- x-sandbox-name: `{SANDBOX_NAME}`
+
+>[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+
+### Lesen von Beispiel-API-Aufrufen
+
+In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md) im Handbuch zur Fehlerbehebung für Experience Platform.
+
+## Nächste Schritte {#next-steps}
 
 Sobald Sie alle Ihre Anmeldedaten und Schema installiert haben, folgen Sie dem Benutzerhandbuch zur [Attribution AI, um Beginn zu erhalten](./user-guide.md). Dieser Leitfaden führt Sie durch das Erstellen einer Instanz und das Einreichen zur Schulung und Bewertung.
