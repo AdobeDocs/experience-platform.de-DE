@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace - Anleitung zur Fehlerbehebung
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -103,4 +103,4 @@ Sie können Ressourcen konfigurieren, indem Sie den folgenden Block zur ersten Z
 }
 ```
 
-Weitere Informationen zur Spark-Clusterressourcenkonfiguration, einschließlich der vollständigen Liste konfigurierbarer Eigenschaften, finden Sie im [JupyterLab-Benutzerhandbuch](./jupyterlab/overview.md#pyspark-spark-execution-resource).
+Weitere Informationen zur Spark-Clusterressourcenkonfiguration, einschließlich der vollständigen Liste konfigurierbarer Eigenschaften, finden Sie im [JupyterLab-Benutzerhandbuch](./jupyterlab/overview.md#kernels).
