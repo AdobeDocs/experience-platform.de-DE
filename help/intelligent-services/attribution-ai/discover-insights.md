@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erkenntnisse über Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -117,7 +117,7 @@ Klicken Sie auf das Kalendersymbol, um das Popup für den Datumsbereich zu öffn
 
 ## Übersicht über Ihre Daten
 
-Die *Übersichtskarte* zeigt Ihre Gesamtumrechnungen nach Zuordnungsmodell an. Die Gesamtzahl ändert sich je nach Art der Suche anhand der zuvor in diesem Dokument beschriebenen Filter. Wenn Sie weitere Modelle auswählen, werden der Übersicht weitere Kreise hinzugefügt, von denen jede eine eigene Farbe hat, die der Legende entspricht.
+Die *Übersichtskarte* zeigt Ihre Gesamtumrechnungen nach Zuordnungsmodell an. Die Gesamtzahl ändert sich je nach Art der Suche anhand der zuvor in diesem Dokument beschriebenen Filter. Wenn Sie weitere Modelle auswählen, werden der Übersicht weitere Kreise hinzugefügt, die jeweils eine eigene Farbe haben, die der Legende entspricht.
 
 ![Übersicht](./images/insights/Overview.png)
 
@@ -152,3 +152,9 @@ Auf der Karte &quot; *Wichtigste Kampagnen* &quot;wird ein Überblick über Ihre
 ## Nächste Schritte
 
 Sobald Sie die Daten gefiltert haben und die entsprechenden Informationen anzeigen können, haben Sie die Möglichkeit, auf die Ergebnisse zuzugreifen. Eine ausführliche Anleitung zum Zugriff auf Ihre Punktzahlen finden Sie in der [Anleitung zur Attribution AI](./download-scores.md) . Darüber hinaus können Sie die Zusammenfassungsdaten wie in [weiteren Aktionen](#more-actions)angegeben herunterladen. Wenn Sie &quot;Zusammenfassungsdaten herunterladen&quot;auswählen, werden die nach Datumsangaben aggregierten Zusammenfassungsdaten heruntergeladen.
+
+## Zusätzliche Ressourcen
+
+Das folgende Video hilft Ihnen dabei zu lernen, wie Sie die Insight-Seite &quot;Attribution AI&quot;nutzen können, um den ROI von Marketing-Kanälen und -Kampagnen zu verstehen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
