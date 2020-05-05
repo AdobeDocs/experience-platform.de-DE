@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Rezept zum Produktkauf
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -39,9 +39,9 @@ Dieses Rezept verwendet [XDM-Schema](../../xdm/home.md) , um die Daten zu modell
 | genderRatio | Zahl |
 | ageY | Zahl |
 | ageM | Zahl |
-| optinEmail | Boolesch  |
-| optinMobile | Boolesch  |
-| optinAddress | Boolesch  |
+| optinEmail | Boolesch |
+| optinMobile | Boolesch |
+| optinAddress | Boolesch |
 | created | Ganzzahl |
 | totalOrders | Zahl |
 | totalItems | Zahl |
@@ -56,6 +56,6 @@ Dieses Rezept verwendet [XDM-Schema](../../xdm/home.md) , um die Daten zu modell
 
 ## Algorithmus
 
-Zunächst wird der Schulungsdatensatz im Schema **ProductPrediction** geladen. Von hier aus wird das Modell mit einem [zufälligen Waldklassifizierer](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)trainiert. Random forest classifier ist eine Art zusammengesetzter Algorithmus, der sich auf einen Algorithmus bezieht, der mehrere Algorithmen kombiniert, um eine bessere Vorhersageleistung zu erzielen. Die Idee hinter dem Algorithmus ist, dass der Random Forest Classifier mehrere Entscheidungsbäume baut und diese zusammenführt, um eine genauere und stabilere Prognose zu erstellen.
+Zunächst wird der Schulungsdatensatz im Schema *ProductPrediction* geladen. Von hier aus wird das Modell mit einem [zufälligen Waldklassifizierer](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)trainiert. Random forest classifier ist eine Art zusammengesetzter Algorithmus, der sich auf einen Algorithmus bezieht, der mehrere Algorithmen kombiniert, um eine bessere Vorhersageleistung zu erzielen. Die Idee hinter dem Algorithmus ist, dass der Random Forest Classifier mehrere Entscheidungsbäume baut und diese zusammenführt, um eine genauere und stabilere Prognose zu erstellen.
 
 Dieser Vorgang Beginn beim Erstellen einer Reihe von Entscheidungsbäumen, die nach dem Zufallsprinzip Untergruppen von Schulungsdaten auswählen. Danach werden die Ergebnisse der einzelnen Entscheidungsbaume gemittelt.
