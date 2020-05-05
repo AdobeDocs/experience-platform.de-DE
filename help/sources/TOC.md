@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
+source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
 
 ---
 
@@ -35,6 +35,7 @@ source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
       - [ServiceNow Connector](connectors/customer-success/servicenow.md)
    - Datenbanken {#databases}
       - [Amazon Redshift Connector](connectors/databases/redshift.md)
+      - [Apache Cassandra-Anschluss](connectors/databases/cassandra.md)
       - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
@@ -73,6 +74,7 @@ source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
          - [ServiceNow Connector](tutorials/api/create/customer-success/servicenow.md)
       - Datenbanken {#databases}
          - [Amazon Redshift Connector](tutorials/api/create/databases/redshift.md)
+         - [Apache Cassandra-Anschluss](tutorials/api/create/databases/cassandra.md)
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/api/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
          - [Blue Data Explorer-Anschluss](tutorials/api/create/databases/data-explorer.md)
