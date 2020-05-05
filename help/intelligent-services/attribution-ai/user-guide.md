@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zur Zuordnung von AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
 
 ---
 
@@ -174,3 +174,9 @@ Klicken Sie nach Auswahl des Schulungsfensters in der oberen rechten Ecke auf **
 ## Nächste Schritte
 
 Indem Sie diesem Tutorial folgen, haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz ihre Bewertung abgeschlossen hat (bis zu 24 Stunden), können Sie [Zuordnungs-AI-Einblicke](./discover-insights.md)entdecken. Wenn Sie außerdem Ihre Ergebnisse herunterladen möchten, lesen Sie die Dokumentation zu den [Downloads von Rohwerten](./download-scores.md) .
+
+## Zusätzliche Ressourcen
+
+Im folgenden Video wird ein durchgängiger Arbeitsablauf zum Erstellen einer neuen Instanz in Attribution AI beschrieben.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
