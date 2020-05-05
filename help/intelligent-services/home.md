@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Intelligente Dienste
 topic: Intelligent Services overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
 # Übersicht über Intelligente Dienste
 
 Intelligente Dienste ermöglichen es Marketinganalysten und Praktikern, die Leistungsfähigkeit künstlicher Intelligenz und maschinelles Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. Auf diese Weise können Marketinganalysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen einer Firma erstellen, ohne dass hierfür Fachwissen in der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketingfachleute Prognosen in Adobe Experience Cloud-, Adobe Experience Platform- und Drittanbieteranwendungen aktivieren.
+
+Das folgende Video unterstützt Sie dabei, Intelligente Dienste besser zu verstehen. In diesem Video, das Beispielfälle für geschäftliche Nutzung enthält, wird ein Workflow auf hoher Ebene erläutert und die Funktionen von Attribution AI und Customer AI erläutert.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Vorteile von Intelligent Services
 
