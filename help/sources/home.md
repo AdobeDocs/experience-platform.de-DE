@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform-Quellschnittstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
+source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
 
 ---
 
@@ -65,6 +65,7 @@ Experience Platform unterstützt die Erfassung von Daten aus einer Drittanbieter
 Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eines Drittanbieters. Weitere Informationen zu bestimmten Quellschnittstellen finden Sie in den folgenden Dokumenten:
 
 - [Amazon Redshift Connector](connectors/databases/redshift.md)
+- [Apache Cassandra-Anschluss](connectors/databases/cassandra.md)
 - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
 - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
 - [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
@@ -106,7 +107,7 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche auf der Grundlage v
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
 | **Ansicht-Quellen** auf | Gewähren Sie schreibgeschützten Zugriff auf Quellen in jedem Quelltyp auf der Registerkarte &quot; *Katalog* &quot;sowie auf die Registerkarten &quot; *Durchsuchen*&quot;, &quot; *Konten*&quot;und &quot; *DataFlow* &quot;. |
-| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen in den **Ansichten-Quellen** Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
+| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen, die in den **Ansichten-Quellen** enthalten sind, Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
 | **Ansicht-Quellen** deaktivieren und Quellen **verwalten** deaktivieren | Sperren Sie den Zugriff auf alle Quellen. |
 
 Weitere Informationen zu den verfügbaren Berechtigungen, die über die Admin-Konsole erteilt wurden, einschließlich dieser vier Quellen, finden Sie in der Übersicht über die [Zugriffskontrolle](../access-control/home.md).
