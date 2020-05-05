@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über den Data Science Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -90,7 +90,7 @@ Verwenden Sie während des Browsens R, Python oder Scala mit dem integrierten, g
 
 Im Rahmen des Arbeitsablaufs für die Datenforschung können Sie auch neue Daten erfassen oder vorhandene Funktionen zur Datenvorbereitung verwenden.
 
-### Authoring
+### Authoring – 
 
 Mit Data Science Workspace entscheiden Sie, wie Sie Rezepte erstellen möchten.
 
@@ -172,7 +172,6 @@ Alle Daten in Adobe Experience Platform entsprechen einem standardisierten XDM-S
 Wenn Sie die benötigten Daten nicht sofort finden, sie aber außerhalb von Adobe Experience Platform vorhanden sind, ist es eine relativ einfache Aufgabe, zusätzliche Datensätze zu erfassen, die sich auch in das standardisierte XDM-Schema umwandeln.\
 Sie können Jupyter-Notebook verwenden, um die Vorverarbeitung von Daten zu vereinfachen - möglicherweise beginnend mit einer Notebook-Vorlage oder einem Notebook, das Sie zuvor für die Kaufneigung verwendet haben.
 
-<!-- databricks update-->
 ![](./images/home/notebook_templates.png)
 
 ### Rezept erstellen
@@ -209,7 +208,7 @@ Durch die Verbindung von Markenkompetenz mit dem maschinellen Lernen und der KI-
 
 Weitere Informationen, z. B. einen kompletten täglichen Arbeitsablauf, finden Sie in der [Data Science Workspace-Dokumentation](./walkthrough.md) .
 
-## Zusätzliche Ressourcen    
+## Zusätzliche Ressourcen
 
 Das folgende Video unterstützt Sie dabei, den Data Science Workspace zu verstehen.
 
