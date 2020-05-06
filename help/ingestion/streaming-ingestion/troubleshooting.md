@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Fehlerbehebung bei der Streaming-Erfassung
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '1046'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ Nutzdatenanforderungen können nur ausgewertet werden, nachdem sie an die Plattf
 
 Wenn die synchrone Validierung für den angeforderten Speicherort nicht unterstützt wird, wird eine 501-Fehlerantwort zurückgegeben. Weitere Informationen zur synchronen Validierung finden Sie in der Übersicht über die [Streaming-Validierung](../quality/streaming-validation.md) .
 
-### Wie authentifiziert ich gesendete Daten?
+### Wie stelle ich sicher, dass Daten nur aus vertrauenswürdigen Quellen erfasst werden?
 
 Experience Platform unterstützt die sichere Datenerfassung. Wenn die authentifizierte Datenerfassung aktiviert ist, müssen Clients ein JSON-WebToken (JWT) und ihre IMS-Organisations-ID als Anforderungsheader senden. Weitere Informationen zum Senden authentifizierter Daten an die Plattform finden Sie im Handbuch zur [authentifizierten Datenerfassung](../tutorials/create-authenticated-streaming-connection.md).
 
