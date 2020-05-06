@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Erstellen einer Streaming-Verbindung mit der API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 181719e729748adcde62199c9406a97b7a807182
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -177,6 +180,6 @@ Dieser Abschnitt enthält zusätzliche Informationen zum Erstellen von Streaming
 
 ### Authentifizierte Streaming-Verbindungen
 
-Die authentifizierte Datenerfassung ermöglicht es Adobe Experience Platform-Diensten, wie z. B. dem Echtzeit-Kunden-Profil und der Identität, zwischen Datensätzen aus vertrauenswürdigen Quellen und nicht vertrauenswürdigen Quellen zu unterscheiden. Kunden, die persönliche identifizierbare Informationen (PII) senden möchten, können dies tun, indem sie IMS-Zugriffstoken als Teil der POST-Anfrage senden - wenn das IMS-Token gültig ist, werden die Datensätze als aus gültigen Quellen gesammelt gekennzeichnet.
+Die authentifizierte Datenerfassung ermöglicht es Adobe Experience Platform-Diensten, wie z. B. Echtzeit-Kundendaten und -Identitäten, zwischen Datensätzen aus vertrauenswürdigen Quellen und nicht vertrauenswürdigen Quellen zu unterscheiden. Kunden, die persönliche identifizierbare Informationen (PII) senden möchten, können dies tun, indem sie IMS-Zugriffstoken als Teil der POST-Anforderung senden - wenn das IMS-Token gültig ist, werden die Datensätze als von vertrauenswürdigen Quellen erfasst markiert.
 
 Weitere Informationen zum Erstellen einer authentifizierten Streaming-Verbindung finden Sie im Lernprogramm zum [Erstellen einer authentifizierten Streaming-Verbindung](create-authenticated-streaming-connection.md).
