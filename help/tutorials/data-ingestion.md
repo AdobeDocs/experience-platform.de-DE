@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Lernprogramme zur Datenüberlastung
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Um CSV-Daten in Adobe Experience Platform zu erfassen, müssen die Daten einem X
 
 ## Erstellen einer Streaming-Verbindung
 
-Um Streaming-Daten an Experience Platform Beginn, müssen Sie zunächst eine Streaming-HTTP-Verbindung erstellen. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und angeben, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen. Dies kann über die Plattform- oder Experience Platform-APIs erfolgen. Weitere Informationen finden Sie in den Übungen zum [Erstellen einer Streaming-Verbindung mit der Benutzeroberfläche](../ingestion/tutorials/create-streaming-connection-ui.md) oder zum [Erstellen einer Streaming-Verbindung mit APIs](../ingestion/tutorials/create-streaming-connection.md).
+Um Streaming-Daten an Experience Platform Beginn, müssen Sie zunächst einen HTTP-Endpunkt anfordern. Sie haben die Möglichkeit, diesen Endpunkt zu konfigurieren, um authentifiziertes Verhalten zu erzwingen. Dies kann über die Plattform- oder Experience Platform-APIs erfolgen. Weitere Informationen finden Sie in den Übungen zum [Erstellen einer Streaming-Verbindung mit der Benutzeroberfläche](../ingestion/tutorials/create-streaming-connection-ui.md) oder zum [Erstellen einer Streaming-Verbindung mit APIs](../ingestion/tutorials/create-streaming-connection.md).
 
 ## Authentifizierte Streaming-Verbindung erstellen
 
