@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Authentifizierung und Zugriff auf Experience Platform-APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: fca15ebf87559b08dd09e63b5df5655b57ef5977
+source-git-commit: e1ba476fffc164b78decd7168192714993c791bc
+workflow-type: tm+mt
+source-wordcount: '849'
+ht-degree: 1%
 
 ---
 
@@ -34,14 +37,13 @@ In den folgenden Abschnitten werden die Schritte zum Erstellen einer Adobe-ID un
 
 Wenn Sie keine Adobe-ID haben, können Sie eine wie folgt erstellen:
 
-1. Zur [Adobe-E/A-Konsole wechseln](https://console.adobe.io)
+1. Zur [Adobe Developer Console wechseln](https://console.adobe.io)
 2. Klicken Sie auf **Neues Konto erstellen**
 3. Anmeldevorgang abschließen
 
+## Werden Sie Entwickler und Benutzer von Experience Platform für eine Organisation
 
-### Werden Sie Entwickler und Benutzer von Experience Platform für eine Organisation
-
-Vor der Erstellung von Integrationen auf Adobe I/O muss Ihr Konto über Entwicklerberechtigungen für ein Produkt in einer IMS-Organisation verfügen. Ausführliche Informationen zu Entwicklerkonten in der Admin-Konsole finden Sie im [Support-Dokument](https://helpx.adobe.com/enterprise/using/manage-developers.html) für die Verwaltung von Entwicklern.
+Vor der Erstellung von Integrationen auf Adobe I/O muss Ihr Konto über Entwicklerberechtigungen für ein Produkt in einer IMS-Organisation verfügen. Ausführliche Informationen zu Entwicklerkonten in der Admin-Konsole finden Sie im [Support-Dokument](https://helpx.adobe.com/de/enterprise/using/manage-developers.html) für die Verwaltung von Entwicklern.
 
 **Entwicklerzugriff erlangen**
 
@@ -53,7 +55,7 @@ Der Administrator muss Sie als Entwickler mindestens einem Produkt-Profil zuweis
 
 ![](images/authentication/add-developer.png)
 
-Nachdem Sie als Entwickler zugewiesen wurden, haben Sie Zugriffsrechte, um Integrationen auf [Adobe I/O](https://console.adobe.io/)zu erstellen. Bei diesen Integrationen handelt es sich um eine Pipeline von externen Apps und Diensten zur Adobe API.
+Nachdem Sie als Entwickler zugewiesen wurden, haben Sie Zugriffsrechte, um Integrationen auf [Adobe I/O](https://www.adobe.com/go/devs_console_ui)zu erstellen. Bei diesen Integrationen handelt es sich um eine Pipeline von externen Apps und Diensten zur Adobe API.
 
 **Benutzerzugriff sichern**
 
@@ -66,188 +68,54 @@ Der Administrator der Admin-Konsole muss Sie auch als Benutzer zum Produkt hinzu
 ![](images/authentication/assign-user-details.png)
 
 
-## Einmalige Einrichtung
+## Erstellen von Zugriffsberechtigungen in der Adobe Developer Console
 
-Die folgenden Schritte müssen nur einmal durchgeführt werden:
+Mit Adobe Developer Console müssen Sie die folgenden drei Zugriffsberechtigungen generieren:
 
-* Anmelden bei Adobe I/O Console
-* Integration erstellen
-* Abwärts-Zugriffswerte kopieren
+* `{IMS_ORG}`
+* `{API_KEY}`
+* `{ACCESS_TOKEN}`
 
-Sobald Sie über Ihre Integrations- und Zugriffswerte verfügen, können Sie diese in Zukunft zur Authentifizierung wiederverwenden. Jeder Schritt wird nachfolgend detailliert behandelt.
+Ihre `{IMS_ORG}` und `{API_KEY}` nur einmal generiert werden müssen und können in zukünftigen Plattform-API-Aufrufen wiederverwendet werden. Ihre `{ACCESS_TOKEN}` Daten sind jedoch nur vorübergehend und müssen alle 24 Stunden neu generiert werden.
 
-### Anmelden bei der Adobe I/O-Konsole
+Die Schritte werden nachfolgend detailliert beschrieben.
 
-Wechseln Sie zur [Adobe-E/A-Konsole](https://console.adobe.io/) und melden Sie sich mit Ihrer Adobe-ID an.
+### Einmalige Einrichtung
 
-Nachdem Sie angemeldet sind, klicken Sie oben im Bildschirm auf die Registerkarte **Integrationen** . Eine Integration ist ein Dienstkonto, das für die ausgewählte IMS-Organisation erstellt wird. Sie dürfen nur die IMS-Organisation aufrufen, in der die Integration erstellt wird.
+Wechseln Sie zur [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
 
->[!NOTE]
->Wenn Ihr Konto mit mehreren Organisationen verknüpft ist, können Sie über das Dropdown-Menü oben rechts im Bildschirm problemlos zwischen ihnen wechseln.
+Nachdem Sie ein neues Projekt erstellt haben, klicken Sie im Bildschirm &quot; **[!UICONTROL Projektübersicht]** &quot;auf _Hinzufügen API_ .
 
-### Integration erstellen
+![](images/authentication/add-api-button.png)
 
-Klicken Sie auf der Seite &quot; **Integrationen** &quot;auf **Neue Integration** , um den Prozess Beginn. Der Prozess umfasst drei Schritte:
-* Integrationstyp auswählen
-* Wählen Sie, welcher Adobe-Dienst in
-* Details zur Hinzufügen, öffentlicher Schlüssel und Produkt-Profil
+Der _Hinzufügen eines API_ -Bildschirms wird angezeigt. Klicken Sie auf das Produktsymbol für Adobe Experience Platform und wählen Sie dann **[!UICONTROL Experience Platform API]** , bevor Sie auf **[!UICONTROL Weiter]** klicken.
 
-![](images/authentication/integrations.png)
+![](images/authentication/add-platform-api.png)
 
-#### Integrationstyp auswählen
+Nachdem Sie Experience Platform als API ausgewählt haben, die dem Projekt hinzugefügt werden soll, führen Sie die Schritte aus, die im Lernprogramm zum [Hinzufügen einer API zu einem Projekt mithilfe eines Dienstkontos (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (beginnend mit dem Schritt &quot;API konfigurieren&quot;) beschrieben sind, um den Prozess abzuschließen.
 
-Im nächsten Bildschirm wird gefragt, ob Sie auf eine API zugreifen oder Beinahe-Echtzeit-Ereignis empfangen möchten. Wählen Sie **Zugriff auf eine API** und dann **Fortfahren**.
+Nachdem die API zum Projekt hinzugefügt wurde, zeigt die Seite &quot; _Projektübersicht_ &quot;die folgenden Anmeldeinformationen an, die für alle Aufrufe der Experience Platform-APIs erforderlich sind:
 
-![](images/authentication/create-new-integration.png)
+* `{API_KEY}` (Client-ID)
+* `{IMS_ORG}` (Organisations-ID)
 
-#### Wählen Sie, welcher Adobe-Dienst in
+![](./images/authentication/api-key-ims-org.png)
 
-Wenn Ihr Konto mit mehreren IMS-Organisationen verknüpft ist, können Sie über das Dropdown-Menü oben rechts zwischen ihnen wechseln. Wählen Sie **Workshop** und **Experience Platform API** unter **Adobe Experience Platform** , um auf die APIs zuzugreifen.
+### Authentifizierung für jede Sitzung
 
-![](images/authentication/integration-select-service.png)
+Die letzte erforderliche Berechtigung, die Sie erfassen müssen, ist Ihre `{ACCESS_TOKEN}`. Im Gegensatz zu den Werten für `{API_KEY}` und `{IMS_ORG}`muss alle 24 Stunden ein neues Token generiert werden, um weiterhin Plattform-APIs verwenden zu können.
 
-Klicken Sie auf **Weiter** , um zum nächsten Abschnitt zu wechseln.
+Um ein neues zu erstellen, führen Sie die Schritte `{ACCESS_TOKEN}`zum [Generieren eines JWT-Tokens](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) im Handbuch mit den Anmeldeinformationen für die Developer Console aus.
 
-#### Details zur Hinzufügen, öffentlicher Schlüssel und Produkt-Profil
+## Zugriffsberechtigungen testen
 
-Im nächsten Bildschirm werden Sie aufgefordert, Ihre Integrationsdetails auszufüllen, Ihr Zertifikat für den öffentlichen Schlüssel einzugeben und ein Profil auszuwählen.
+Nachdem Sie alle drei erforderlichen Anmeldeinformationen gesammelt haben, können Sie versuchen, den folgenden API-Aufruf durchzuführen. Dieser Aufruf Liste alle Erlebnisdatenmodellklassen (XDM) innerhalb des `global` Containers der Schema-Registrierung:
 
-![](images/authentication/integration-details.png)
+**API-Format**
 
-Geben Sie zuerst Ihre Integrationsdetails ein. Wählen Sie anschließend ein Profil aus. Produktfunktionen gewähren granularen Zugriff auf eine Reihe von Profilen, die zu dem Dienst gehören, den Sie in den vorherigen Schritten ausgewählt haben.
-
-Für den Zertifikatabschnitt müssen Sie ein Zertifikat generieren:
-
-**Für MacOS- und Linux-Plattformen:**
-
-Öffnen Sie die Befehlszeile und führen Sie den folgenden Befehl aus:
-
-`openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt`
-
-
-**Für Windows-Plattformen:**
-
-1. Laden Sie einen openssl-Client herunter, um öffentliche Zertifikate zu generieren (z. B. [OpenSSL-Windows-Client](https://bintray.com/vszakats/generic/download_file?file_path=openssl-1.1.1-win64-mingw.zip))
-
-1. Extrahieren Sie den Ordner und kopieren Sie ihn in den Ordner C:/libs/.
-
-1. Öffnen Sie die Befehlszeilenaufforderung und führen Sie die folgenden Befehle aus:
-
-   `set OPENSSL_CONF=C:/libs/openssl-1.1.1-win64-mingw/openssl.cnf`
-
-   `cd C:/libs/openssl-1.1.1-win64-mingw/`
-
-   `openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub.crt`
-
-Sie erhalten eine Antwort wie die folgende, die Sie auffordert, einige Informationen über sich selbst einzugeben:
-
+```http
+GET /global/classes
 ```
-Generating a 2048 bit RSA private key
-.................+++
-.......................................+++
-writing new private key to 'private.key'
------
-You are about to be asked to enter information that will be incorporated
-into your certificate request.
-What you are about to enter is what is called a Distinguished Name or a DN.
-There are quite a few fields but you can leave some blank
-For some fields there will be a default value,
-If you enter '.', the field will be left blank.
------
-Country Name (2 letter code) []:
-State or Province Name (full name) []:
-Locality Name (eg, city) []:
-Organization Name (eg, company) []:
-Organizational Unit Name (eg, section) []:
-Common Name (eg, fully qualified host name) []:
-Email Address []:
-```
-
-Nach Eingabe der Informationen werden zwei Dateien generiert: `certificate_pub.crt` und `private.key`.
-
->[!NOTE]
->`certificate_pub.crt` läuft in 365 Tagen ab. Sie können den Zeitraum verlängern, indem Sie den Wert von `days` im obigen `openssl` Befehl ändern. Das regelmäßige Drehen der Anmeldeinformationen ist jedoch eine gute Sicherheitsmaßnahme.
-
-Die `private.key` wird verwendet, um unsere JWT im späteren Abschnitt zu generieren.
-
-Mit der `certificate_pub.crt` wird ein API-Schlüssel erstellt. Gehen Sie zurück zur Adobe I/O-Konsole und klicken Sie auf Datei **auswählen** , um Ihre `certificate_pub.crt` Datei hochzuladen.
-
-Klicken Sie auf Integration **erstellen** , um den Prozess abzuschließen.
-
-### Herunterladen von Zugriffswerten
-
-Nachdem Sie die Integration erstellt haben, können Sie deren Details Ansicht vornehmen. Klicken Sie auf **Clientgeheimnis** abrufen, und Ihr Bildschirm sieht in etwa so aus:
-
-![](images/authentication/access-values.png)
-
-Kopieren Sie die Werte für `{API KEY}`, d. h. `{IMS ORG}` die Organisations-ID, `{CLIENT SECRET}` da diese im nächsten Schritt verwendet werden.
-
-## Authentifizierung für jede Sitzung
-
-Der letzte Schritt besteht darin, Ihre API-Aufrufe zu generieren, `{ACCESS_TOKEN}` die zur Authentifizierung verwendet werden. Das Zugriffstoken muss bei jedem API-Aufruf, den Sie an Adobe Experience Platform richten, im Autorisierungs-Header enthalten sein. Zugriffstoken laufen nach 24 Stunden ab. Danach müssen neue Token generiert werden, um weiterhin die APIs verwenden zu können.
-
-### JWT erstellen
-
-Navigieren Sie auf der Detailseite Ihrer Integration in der Adobe I/O-Konsole zur Registerkarte **JWT** :
-
-![](images/authentication/generate-jwt.png)
-
-Auf der Seite werden Sie aufgefordert, die im vorherigen Abschnitt `private.key` erstellte einzugeben. Öffnen Sie die Befehlszeile, um den Inhalt der `private.key` Datei Ansicht:
-
-```shell
-cat private.key
-```
-
-Ihre Ausgabe sieht ungefähr so aus:
-
-```shell
------BEGIN PRIVATE KEY-----
-MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCYjPj18NrVlmrc
-H+YUTuwWrlHTiPfkBGM0P1HbIOdwrlSTCmPhmaNNG5+mEiULJLWlrhQpx/7uQVNW
-......
-xbWgBWatJ2hUhU5/K2iFlNJBVXyNy7rN0XzOagLRJ1uS2CM6Hn3vBOqLbHRG4Pen
-J1LvEocGunT12UJekLdEaQR4AKodIyjv5opvewrzxUZhVvUIIgeU5vUpg9smCXai
-wPW5MQjmygodzCh7+eGLrg==
------END PRIVATE KEY-----
-```
-
-Kopieren Sie die gesamte Ausgabe und fügen Sie sie in das Textfeld ein. Klicken Sie dann auf JWT **generieren**. Kopieren Sie die generierte JWT für den nächsten Schritt nach unten.
-
-![](images/authentication/generated-jwt.png)
-
-### Zugriffstoken generieren
-
-Sie können ein Zugriffstoken über einen cURL-Befehl generieren. Wenn Sie cURL nicht installiert haben, können Sie es mit `npm install curl`installieren. Weitere Informationen zu cURL [finden Sie hier](https://curl.haxx.se/)
-
-Nach der Installation von cURL müssen Sie die Felder im folgenden Befehl durch Ihre eigenen Felder `{API_KEY}`, `{CLIENT_SECRET}`und `{JWT_TOKEN}`ersetzen:
-
-```SHELL
-curl -X POST "https://ims-na1.adobelogin.com/ims/exchange/jwt/" \
-  -F "client_id={API_KEY}" \
-  -F "client_secret={CLIENT_SECRET}" \
-  -F "jwt_token={JWT_TOKEN}"
-```
-
-Bei erfolgreichem Abschluss sieht die Ausgabe wie folgt aus:
-
-```JSON
-{
-  "token_type":"bearer",
-  "access_token":"eyJ4NXUiOiJpbXNfbmExLXN0ZzEta2V5LT2VyIiwiYWxnIjoiUlMyNTYifQ.eyJpZCI6IjE1MjAzMDU0ODY5MDhfYzMwM2JkODMtMWE1My00YmRiLThhNjctMWDhhNDJiNTE1X3VlMSIsImNsaWVudF9pZCI6ImYwNjY2Y2M4ZGVhNzQ1MWNiYzQ2ZmI2MTVkMzY1YzU0IiwidXNlcl9pZCI6IjA0ODUzMkMwNUE5ODg2QUQwQTQ5NDEzOUB0ZWNoYWNjdC5hZG9iZS5jb20iLCJzdGF0ZSI6IntcInNlc3Npb25cIjpcImh0dHBzOi8vaW1zLW5hMS1zdGcxLmFkb2JlbG9naW4uY29tL2ltcy9zZXNzaW9uL3YxL05UZzJZemM1TVdFdFlXWTNaUzAwT1RWaUxUZ3lPVFl0WkdWbU5EUTVOelprT0dFeUxTMHdORGcxTXpKRPVGc0TmtGRU1FRTBPVFF4TXpsQWRHVmphR0ZqWTNRdVlXUnZZbVV1WTI5dFwifSIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJhcyI6Imltcy1uYTEtc3RnMSIsImZnIjoiU0hRUlJUQ0ZTWFJJTjdSQjVVQ09NQ0lBWVU9PT09PT0iLCJtb2kiOiJhNTYwOWQ5ZiIsImMiOiJMeksySTBuZ2F2M1BhWWIxV0J3d3FRPT0iLCJleHBpcmVzX2luIjoiODY0MDAwMDAiLCJzY29wZSI6Im9wZW5pZCxzZXNzaW9uLEFkb2JlSUQscmVhZF9vcmdhbml6YXRpb25zLGFkZGl0aW9uYWxfaW5mby5wcm9qZWN0ZWRQcm9kdWN0Q29udGV4dCIsImNyZWF0ZWRfYXQiOiIxNTIwMzA1NDg2OTA4In0.EBgpw0JyKVzbjIBmH6fHDZUvJpvNG8xf8HUHNCK2l-dnVJqXxdi0seOk_kjVodkIa3evC54V560N60vi_mzt7gef-g954VH6l3gFh6XQ7yqRJD2LMW7G1lhQGhga4hrQCnJlfSQoztvIp9hkar9Zcu-MYgyEB5UlwK3KtB3elu7vJGk35F3T9OnqVL4PFj0Ix6zcuN_4gikgQgmtoUjuXULinbtu9Bkmdf7so9FvhapUd5ZTUTTMrAfJ36gEOQPqsuzlu9oUQaYTAn8v4B9TgoS0Paslo6WIksc4f_rSVWsbO6_TSUqIOi0e_RyL6GkMBA1ELA-Dkgbs-jUdkw",
-  "expires_in":86399947
-}
-```
-
-Ihr Zugriffstoken ist der Wert unter dem `access_token` Schlüssel. Dieses Zugriffstoken `expires_in` 86399947 Millisekunden (24 Stunden). Danach müssen Sie ein neues Zugriffstoken erstellen, indem Sie die oben beschriebenen Schritte ausführen.
-
-Sie können jetzt API-Anfragen in Adobe Experience Platform stellen!
-
-### Zugriffscode testen
-
-Um zu testen, ob Ihr Zugriffstoken gültig ist, können Sie den folgenden API-Aufruf durchführen. Dieser Aufruf Liste alle Klassen innerhalb des `global` Containers:
-
->[!NOTE]
->`{API_KEY}` und `{IMS_ORG}` beziehen Sie sich auf die oben generierten Werte.
 
 **Anfrage**
 
@@ -259,8 +127,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-
-Wenn Ihre Antwort der unten aufgeführten ähnlich ist, dann `access_token` ist Ihre Gültigkeit gültig und funktioniert. (Diese Antwort wurde aus Platzgründen abgeschnitten.)
+Wenn Ihre Antwort der unten stehenden ähnelt, sind Ihre Anmeldeinformationen gültig und funktionieren. (Diese Antwort wurde aus Platzgründen abgeschnitten.)
 
 **Antwort**
 
@@ -286,3 +153,9 @@ Wenn Ihre Antwort der unten aufgeführten ähnlich ist, dann `access_token` ist 
 ## Verwenden von Postman für JWT-Authentifizierung und API-Aufrufe
 
 [Postman](https://www.getpostman.com/) ist ein beliebtes Werkzeug, um mit RESTful APIs zu arbeiten. In diesem [Beitrag](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) &quot;Mittel&quot;wird beschrieben, wie Sie Postman so einrichten können, dass eine JWT-Authentifizierung automatisch durchgeführt und Adobe Experience Platform-APIs verwendet werden.
+
+## Nächste Schritte
+
+Durch Lesen dieses Dokuments haben Sie Ihre Zugriffsberechtigungen für Plattform-APIs gesammelt und erfolgreich getestet. Sie können nun die in der gesamten [Dokumentation](../landing/documentation/overview.md)bereitgestellten Beispiel-API-Aufrufe verwenden.
+
+Zusätzlich zu den Authentifizierungswerten, die Sie in diesem Lernprogramm gesammelt haben, benötigen viele Plattform-APIs auch eine gültige Kopfzeile `{SANDBOX_NAME}` als Kopfzeile. See the [sandboxes overview](../sandboxes/home.md) for more information.
