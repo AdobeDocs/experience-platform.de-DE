@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Network-Hilfe
 translation-type: tm+mt
-source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
+source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+workflow-type: tm+mt
+source-wordcount: '89'
+ht-degree: 73%
 
 ---
 
@@ -27,6 +30,7 @@ source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
    * [Verwalten des Flackerns](fundamentals/managing-flicker.md)
    * [Unterstützen von Zustimmung](fundamentals/supporting-consent.md)
    * [Unterstützung von In-App-Browsern](fundamentals/supporting-in-app-browsers.md)
+   * [Abrufen der Experience Cloud ID](fundamentals/retrieving-experience-cloud-id.md)
 * Was wird implementiert {#implement}
    * [Produkte](what-to-implement/commerce.md)
 * Lösungsspezifische Aspekte {#solutions}
