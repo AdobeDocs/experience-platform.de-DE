@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform-Quellschnittstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
+source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 1%
 
 ---
 
@@ -65,7 +68,6 @@ Experience Platform unterstützt die Erfassung von Daten aus einer Drittanbieter
 Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eines Drittanbieters. Weitere Informationen zu bestimmten Quellschnittstellen finden Sie in den folgenden Dokumenten:
 
 - [Amazon Redshift Connector](connectors/databases/redshift.md)
-- [Apache Cassandra-Anschluss](connectors/databases/cassandra.md)
 - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
 - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
 - [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
