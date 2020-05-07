@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
+source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +38,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [ServiceNow Connector](connectors/customer-success/servicenow.md)
    - Datenbanken {#databases}
       - [Amazon Redshift Connector](connectors/databases/redshift.md)
-      - [Apache Cassandra-Anschluss](connectors/databases/cassandra.md)
       - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
@@ -74,7 +76,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
          - [ServiceNow Connector](tutorials/api/create/customer-success/servicenow.md)
       - Datenbanken {#databases}
          - [Amazon Redshift Connector](tutorials/api/create/databases/redshift.md)
-         - [Apache Cassandra-Anschluss](tutorials/api/create/databases/cassandra.md)
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/api/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
          - [Blue Data Explorer-Anschluss](tutorials/api/create/databases/data-explorer.md)
@@ -112,8 +113,8 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [Erfassen von Daten zur Marketingautomatisierung](tutorials/api/collect/marketing-automation.md)
       - [Zahlungsdaten erfassen](tutorials/api/collect/payments.md)
       - [Protokolldaten erfassen](tutorials/api/collect/protocols.md)
-   - [Erfassen von Parketdaten aus einem Cloud-Datenspeicherung-System eines Drittanbieters](tutorials/api/create-dataset-base-connection.md)
-   - [Erstellen einer Datenbank-Basisverbindung mit der Flow Service API](tutorials/api/cloud-storage-parquet.md)
+   - [Erfassen von Parketdaten aus einem Cloud-Datenspeicherung-System eines Drittanbieters](tutorials/api/cloud-storage-parquet.md)
+   - [Erstellen einer Datenbank-Basisverbindung mit der Flow Service API](tutorials/api/create-dataset-base-connection.md)
 - UI-Lernprogramme {#ui-tutorials}
    - Erstellen eines Quell-Connectors {#create}
       - Adobe-Programme {#adobe-applications}
