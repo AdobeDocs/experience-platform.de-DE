@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLab-Benutzerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '3356'
 ht-degree: 6%
@@ -54,7 +54,7 @@ Informationen zu den wichtigsten Funktionen von JupyterLab und Anweisungen zur D
 * [Codezellen](#code-cells)
 * [Kernels](#kernels)
 * [Kernel-Sitzungen](#kernel-sessions)
-* [Ausführungsressource PySpark/Spark](#pyspark-spark-execution-resource)
+* [Ausführungsressource PySpark/Spark](#execution-resource)
 * [Starter](#launcher)
 
 ### Zugriff auf JupyterLab {#access-jupyterlab}
@@ -143,7 +143,7 @@ Wenn der Kernel über einen längeren Zeitraum heruntergefahren oder inaktiv ist
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### Ausführungsressource PySpark/Spark {#pyspark-spark-execution-resource}
+### Ausführungsressource PySpark/Spark {#execution-resource}
 
 >[!IMPORTANT]
 >Mit der Transition von Spark 2.3 auf Spark 2.4 werden sowohl die Spark- als auch die PySpark-Kernel veraltet.
@@ -152,7 +152,7 @@ Wenn der Kernel über einen längeren Zeitraum heruntergefahren oder inaktiv ist
 >
 >Neue Spark-Notebooks sollten den Scala-Kernel verwenden. Eine ausführliche Anleitung zur Aktualisierung vorhandener Notebooks finden Sie im Handbuch zur Umwandlung von [Spark 2.3 in Scala (Spark 2.4)](../recipe-notebook-migration.md) .
 
-PySpark- und Spark-Kernel ermöglichen es Ihnen, Spark-Clusterressourcen innerhalb Ihres PySpark- oder Spark-Notebooks zu konfigurieren, indem Sie den Befehl konfigurieren (`%%configure`) und eine Liste von Konfigurationen bereitstellen. Idealerweise werden diese Konfigurationen definiert, bevor die Spark-Anwendung initialisiert wird. Für das Ändern der Konfigurationen während der Aktivierung der Spark-Anwendung ist nach dem Befehl (`%%configure -f`) ein zusätzliches Force-Flag erforderlich, das die Anwendung neu startet, damit die Änderungen angewendet werden, wie unten dargestellt:
+PySpark- und Spark-Kernel ermöglichen es Ihnen, Spark-Cluster-Ressourcen innerhalb Ihres PySpark- oder Spark-Notebooks zu konfigurieren, indem Sie den Befehl konfigurieren (`%%configure`) und eine Liste von Konfigurationen bereitstellen. Idealerweise werden diese Konfigurationen definiert, bevor die Spark-Anwendung initialisiert wird. Für das Ändern der Konfigurationen während der Aktivierung der Spark-Anwendung ist nach dem Befehl (`%%configure -f`) ein zusätzliches Force-Flag erforderlich, das die Anwendung neu startet, damit die Änderungen angewendet werden, wie unten dargestellt:
 
 >[!CAUTION]
 >Bei PySpark 3 (Spark 2.4) und Scala (Spark 2.4) Notebooks wird `%%` Sparkmagic nicht mehr unterstützt. Die folgenden Vorgänge können nicht mehr verwendet werden:
