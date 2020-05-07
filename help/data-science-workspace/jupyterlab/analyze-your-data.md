@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Analysieren Ihrer Daten mithilfe von Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3dc16c835cb6ab0949fc0d4bf18349d415d680ed
+source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+workflow-type: tm+mt
+source-wordcount: '1746'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Wor
 
 Die folgenden Konzepte werden eingeführt:
 
-- **JupyterLab:** Das [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die webbasierte Benutzeroberfläche der nächsten Generation für Project Jupyter und ist eng in die Adobe Experience Platform integriert.
+- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die webbasierte Benutzeroberfläche der nächsten Generation für Project Jupyter und ist eng in die Adobe Experience Platform integriert.
 - **Stapel:** Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird. Beim Hinzufügen von Daten zu einem Datensatz werden neue Stapel erstellt.
 - **Data Access SDK (nicht mehr unterstützt):** Das Data Access SDK ist jetzt veraltet. Bitte verwenden Sie das Handbuch [Plattform-SDK](../authoring/platform-sdk.md) .
 
@@ -51,7 +54,7 @@ Das Rezept für den Einzelhandel ist ein eigenständiges Beispiel, das mit demse
 
 Wir werden den internen Zugriff auf Daten von Adobe Experience Platform und Daten extern fortsetzen. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die pandas Python-Bibliothek.
 
-#### Externe Daten
+#### Externe Daten {#external-data}
 
 Wenn das Notebook für den Einzelhandel geöffnet ist, finden Sie die Kopfzeile &quot;Daten laden&quot;. Der folgende Python-Code verwendet die `DataFrame` Datenstruktur von Pandas und die [Funktion read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) , um das auf Github gehostete CSV in den DataFrame zu lesen:
 
@@ -69,7 +72,7 @@ Schließlich können wir einen Blick darauf werfen, wie unsere Daten aussehen. W
 
 Jetzt greifen wir auf die Daten der Experience Platform zu.
 
-##### Nach Datenbestand-ID
+#### Nach Datenbestand-ID
 
 Für diesen Abschnitt verwenden wir den Datensatz Einzelhandelsverkäufe, der mit dem Datensatz für Einzelhandelsverkäufe identisch ist.
 
@@ -145,7 +148,7 @@ Wenn wir uns die Mindest- und Höchstwerte ansehen, `store`können wir feststell
 
 Das bedeutet, dass 22 Läden sind von `storeType` , `A`17 sind `storeType` und 6 sind `B``storeType` `C`.
 
-#### Datenvisualisierung
+### Datenvisualisierung
 
 Jetzt, da wir unsere Datenrahmenwerte kennen, möchten wir dies durch Visualisierungen ergänzen, um die Dinge klarer zu gestalten und Muster leichter zu identifizieren. Diagramme sind auch nützlich, wenn Ergebnisse an eine Audience übermittelt werden. Einige Python-Bibliotheken, die für die Visualisierung nützlich sind, sind:
 - [Matplotlib](https://matplotlib.org/)
@@ -164,7 +167,7 @@ In diesem Abschnitt werden wir schnell über einige Vorteile für die Verwendung
 [ggplot](https://ggplot2.tidyverse.org/) ist ein Paket auch auf matplotlib gebaut. Der Hauptunterschied ist jedoch, dass das Tool ein Port von ggplot2 für R ist. Ähnlich wie beim Seeschleppen besteht das Ziel darin, sich bei matplotlib zu verbessern. Benutzer, die mit &quot;ggplot2 for R&quot;vertraut sind, sollten diese Bibliothek in Betracht ziehen.
 
 
-##### Einheitliche Diagramme
+### Einheitliche Diagramme
 
 Univariate-Diagramme sind Diagramme einer einzelnen Variablen. Ein gemeinsames univariatives Diagramm wird verwendet, um Ihre Daten zu visualisieren ist die Box und Whisker-Plot.
 
@@ -174,7 +177,7 @@ Mit unserem Retail-Datensatz von vorher können wir die Box und Whisker-Plot fü
 
 Eine Box- und Whisker-Plot wird verwendet, um die Verteilung der Daten anzuzeigen. Die äußeren Linien des Grundstücks zeigen den oberen und unteren Quartil, während der Rahmen den interquartilen Bereich umfasst. Die Linie im Feld markiert den Median. Alle Datenpunkte, die mehr als das 1,5-fache des oberen oder unteren Quartil betragen, werden als Kreis markiert. Diese Punkte werden als Ausreißer betrachtet.
 
-##### Multivarianz-Diagramme
+### Multivarianz-Diagramme
 
 Multivarianz-Diagramme werden verwendet, um die Interaktion zwischen Variablen anzuzeigen. Mit der Visualisierung können Datenwissenschaftler sehen, ob Korrelationen oder Muster zwischen den Variablen bestehen. Ein häufig verwendetes Multivarianz-Diagramm ist eine Korrelationsmatrix. Bei einer Korrelationsmatrix werden Abhängigkeiten zwischen mehreren Variablen mit dem Korrelationskoeffizienten quantifiziert.
 
