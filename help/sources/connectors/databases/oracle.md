@@ -4,21 +4,29 @@ solution: Experience Platform
 title: Oracle Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+workflow-type: tm+mt
+source-wordcount: '124'
+ht-degree: 0%
 
 ---
 
 
 # Oracle Connector
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie Microsoft, MySQL und Azurblau. Sie können Ihre Daten aus diesen Systemen in Plattform übertragen.
 
-Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eines Drittanbieters. Die Plattform kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relational, NoSQL oder Data Warehouse herstellen. Zu den Datenbankanbietern zählen Oracle.
+Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Zu den Datenbankanbietern zählen Oracle.
 
-Die nachstehende Dokumentation enthält Informationen zum Verbinden von Oracle mit einer Plattform mithilfe von APIs:
+In der folgenden Dokumentation finden Sie Informationen zum Verbinden von Oracle mit einer Plattform mithilfe von APIs oder der Benutzeroberfläche:
 
 ## Verbinden von Oracle mit Plattform mithilfe von APIs
 
 - [Oracle Connector mithilfe der Flow Service API erstellen](../../tutorials/api/create/databases/oracle.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
+
+## Verbinden von Oracle mit der Plattform mithilfe der Benutzeroberfläche
+
+- [Oracle-Quellanschluss in der Benutzeroberfläche erstellen](../../tutorials/ui/create/databases/oracle.md)
+- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
