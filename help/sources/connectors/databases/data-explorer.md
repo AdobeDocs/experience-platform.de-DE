@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Blue Data Explorer-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -28,5 +28,5 @@ In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs o
 
 ## Verbinden von Azurblase Data Explorer mit der Plattform mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/ats.md)
+- [Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/data-explorer.md)
 - [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
