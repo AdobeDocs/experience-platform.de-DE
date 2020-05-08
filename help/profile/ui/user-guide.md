@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Handbuch zum Echtzeit-Profil
 topic: guide
 translation-type: tm+mt
-source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
+source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 3%
 
 ---
 
@@ -43,7 +46,9 @@ Sie können die in der Liste angezeigten Attribute anpassen, indem Sie auf das S
 
 Die Anzahl der Profil zeigt die Gesamtzahl der Profil an, die Ihr Unternehmen in Experience Platform hat, nachdem die standardmäßige Zusammenführungsrichtlinie Ihres Unternehmens Profil-Fragmente zusammengeführt hat, um für jeden einzelnen Kunden ein Profil zu bilden. Mit anderen Worten, Ihr Unternehmen verfügt möglicherweise über mehrere Produktfragmente, die sich auf einen einzelnen Profil beziehen, der mit Ihrer Marke über verschiedene Kanal hinweg interagiert. Diese Fragmente werden jedoch zusammengeführt (gemäß der standardmäßigen Fusionsrichtlinie) und geben ein &quot;1&quot;-Profil zurück, da sie alle mit derselben Person zusammenhängen.
 
-Die Profil-Anzahl umfasst auch Profil mit Attributen (Datensatzdaten) sowie Profil (wie Adobe Analytics-Profil), die nur Zeitreihendaten (Ereignis) enthalten. Die Anzahl wird regelmäßig aktualisiert, um eine aktuelle Gesamtanzahl von Profilen innerhalb der Plattform bereitzustellen. Wenn eine Erfassung von Profilen die Anzahl um mehr als 5 % erhöht oder verringert, wird automatisch ein Auftrag ausgelöst, um die Anzahl zu aktualisieren. Wenn Ihr Unternehmen Streaming-Erfassung verwendet, sind die Aufträge für die Erfassung neu erfasster Daten für jede Stunde geplant.
+Die Profil-Anzahl umfasst auch Profil mit Attributen (Datensatzdaten) sowie Profil, die nur Zeitreihendaten (Ereignis) enthalten, wie z. B. Adobe Analytics-Profil. Die Anzahl der Profil wird regelmäßig aktualisiert, um eine aktuelle Gesamtanzahl von Profilen innerhalb der Plattform bereitzustellen.
+
+Wenn die Erfassung von Profilen im Profil Store die Anzahl um mehr als 5 % erhöht oder verringert, wird ein Auftrag zur Aktualisierung der Anzahl ausgelöst. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Anzahl der Profil zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
 
 ![](../images/user-guide/profile-count.png)
 
@@ -77,7 +82,7 @@ Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien in der Benut
 
 ## Vereinigung Schema
 
-Klicken Sie auf **Vereinigung Schema** , um die Schema der Vereinigung für Ihren Profil-Datenspeicher Ansicht. Ein Vereinigung-Schema ist eine Zusammenführung aller Erlebnis-Datenmodellfelder (XDM) derselben Klasse, deren Schema für die Verwendung im Echtzeit-Customer-Profil aktiviert wurden. Klicken Sie auf eine Klasse in der linken Liste, um die Struktur des Schemas &quot;Vereinigung&quot;auf der Arbeitsfläche Ansicht.
+Klicken Sie auf **Vereinigung Schema** , um die Schema der Vereinigung für Ihren Profil-Datenspeicher Ansicht. Ein Vereinigung-Schema ist eine Zusammenführung aller Erlebnis-Datenmodellfelder (XDM) derselben Klasse, deren Schema für die Verwendung im Echtzeit-Customer-Profil aktiviert wurden. Klicken Sie auf eine Klasse in der linken Liste, um die Struktur des Schemas Vereinigung auf der Arbeitsfläche Ansicht.
 
 ![](../images/user-guide/profile-union-schema.png)
 
