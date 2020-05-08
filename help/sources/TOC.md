@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
+source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 2%
 
 ---
@@ -137,6 +137,7 @@ ht-degree: 2%
          - [Amazon Redshift Connector](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/ui/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/ui/create/databases/spark.md)
+         - [Blue Data Explorer-Anschluss](tutorials/ui/create/databases/data-explorer.md)
          - [Blue-Synapse-Analytics-Anschluss](tutorials/ui/create/databases/synapse-analytics.md)
          - [Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
          - [Google Big Abfrage Connector](tutorials/ui/create/databases/bigquery.md)
