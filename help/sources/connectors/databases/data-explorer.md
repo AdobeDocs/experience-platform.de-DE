@@ -4,21 +4,29 @@ solution: Experience Platform
 title: Blue Data Explorer-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+workflow-type: tm+mt
+source-wordcount: '140'
+ht-degree: 0%
 
 ---
 
 
 # Blue Data Explorer-Anschluss
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie Microsoft, MySQL und Azurblau. Sie können Ihre Daten aus diesen Systemen in Plattform übertragen.
 
-Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eines Drittanbieters. Die Plattform kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relational, NoSQL oder Data Warehouse herstellen. Zur Unterstützung von Datenbankanbietern gehört auch Azurblase Data Explorer.
+Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Zur Unterstützung von Datenbankanbietern gehört auch Azurblase Data Explorer.
 
-Die nachstehende Dokumentation enthält Informationen zum Verbinden von Azurblauer Data Explorer mit Plattform mithilfe von APIs:
+In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs oder der Benutzeroberfläche den Blue Data Explorer mit der Plattform verbinden:
 
 ## Verbinden von Azurblase Data Explorer mit Plattformen mithilfe von APIs
 
 - [Erstellen eines Azurblauen Data Explorer-Connectors mit der Flow-Dienst-API](../../tutorials/api/create/databases/data-explorer.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
+
+## Verbinden von Azurblase Data Explorer mit der Plattform mithilfe der Benutzeroberfläche
+
+- [Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/ats.md)
+- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
