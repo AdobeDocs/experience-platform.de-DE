@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zur Adobe Experience Platform und Handbuch zur Fehlerbehebung
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '2001'
+ht-degree: 3%
 
 ---
 
@@ -85,11 +88,11 @@ Weitere Informationen zu bestimmten Endpunkten in Plattform-APIs, einschließlic
 
 ## Was ist meine IMS-Einrichtung? {#what-is-my-ims-organization}
 
-Eine IMS-Organisation ist eine Adobe-Vertretung eines Kunden. Alle lizenzierten Adobe-Lösungen sind in diese Kundenorganisation integriert. Wenn eine IMS-Organisation über die Berechtigung &quot;Experience Platform&quot;verfügt, kann sie Entwicklern Zugriff zuweisen. Die IMS-Organisations-ID (`x-gw-ims-org-id`) stellt die Organisation dar, für die ein API-Aufruf ausgeführt werden soll, und ist daher in allen API-Anforderungen als Header erforderlich. Diese ID kann über die [Adobe I/O-Konsole](https://console.adobe.io/)gefunden werden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** für eine bestimmte Integration, um die ID unter **Clientberechtigungen** zu finden. Eine schrittweise Anleitung zum Authentifizieren in der Plattform finden Sie im [Authentifizierungslehrgang](../tutorials/authentication.md).
+Eine IMS-Organisation ist eine Adobe-Vertretung eines Kunden. Alle lizenzierten Adobe-Lösungen sind in diese Kundenorganisation integriert. Wenn eine IMS-Organisation über die Berechtigung &quot;Experience Platform&quot;verfügt, kann sie Entwicklern Zugriff zuweisen. Die IMS-Organisations-ID (`x-gw-ims-org-id`) stellt die Organisation dar, für die ein API-Aufruf ausgeführt werden soll, und ist daher in allen API-Anforderungen als Header erforderlich. Diese ID kann über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)gefunden werden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** für eine bestimmte Integration, um die ID unter **Clientberechtigungen** zu finden. Eine schrittweise Anleitung zum Authentifizieren in der Plattform finden Sie im [Authentifizierungslehrgang](../tutorials/authentication.md).
 
 ## Wo finde ich meinen API-Schlüssel? {#where-can-i-find-my-api-key}
 
-In allen API-Anforderungen ist ein API-Schlüssel als Header erforderlich. Sie finden sie über die [Adobe I/O-Konsole](https://console.adobe.io/). Navigieren Sie in der Konsole auf der Registerkarte &quot; **Integrationen** &quot;zum Abschnitt &quot; **Übersicht** &quot;für eine bestimmte Integration und finden Sie den Schlüssel unter &quot; **Clientberechtigungen**&quot;. Eine schrittweise Anleitung zum Authentifizieren auf der Plattform finden Sie im [Authentifizierungslehrgang](../tutorials/authentication.md).
+In allen API-Anforderungen ist ein API-Schlüssel als Header erforderlich. Sie finden sie über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Navigieren Sie in der Konsole auf der Registerkarte &quot; **Integrationen** &quot;zum Abschnitt &quot; **Übersicht** &quot;für eine bestimmte Integration und finden Sie den Schlüssel unter &quot; **Clientberechtigungen**&quot;. Eine schrittweise Anleitung zum Authentifizieren auf der Plattform finden Sie im [Authentifizierungslehrgang](../tutorials/authentication.md).
 
 ## Wie bekomme ich ein Zugriffstoken? {#how-do-i-get-an-access-token}
 
@@ -143,7 +146,7 @@ Die folgenden Statuscodes können in jeder Experience Platform-API gefunden werd
 | 401 | Authentifizierung fehlgeschlagen | Die Anforderung hat keine Authentifizierungsprüfung bestanden. Ihr Zugriffstoken fehlt oder ist ungültig. Weitere Informationen finden Sie im Abschnitt [OAuth-Token-Fehler](#oauth-token-is-missing) . |
 | 403 | Verboten | Die Ressource wurde gefunden, Sie haben jedoch nicht die richtigen Anmeldeinformationen, um sie Ansicht. |
 | 404 | Nicht gefunden | Die angeforderte Ressource konnte nicht auf dem Server gefunden werden. Die Ressource wurde möglicherweise gelöscht oder der angeforderte Pfad wurde falsch eingegeben. |
-| 500 | Interner Serverfehler | Dies ist ein serverseitiger Fehler. Wenn Sie viele gleichzeitige Aufrufe durchführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Weitere Informationen zum [Filtern von Daten](../catalog/api/filter-data.md) finden Sie im Handbuch für den Entwickler der Katalogdienst-API.) Warten Sie kurz, bevor Sie Ihre Anforderung erneut ausprobieren, und wenden Sie sich an Ihren Administrator, wenn das Problem weiterhin besteht. |
+| 500 | Interner Server-Fehler | Dies ist ein serverseitiger Fehler. Wenn Sie viele gleichzeitige Aufrufe durchführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Weitere Informationen zum [Filtern von Daten](../catalog/api/filter-data.md) finden Sie im Handbuch für den Entwickler der Katalogdienst-API.) Warten Sie kurz, bevor Sie Ihre Anforderung erneut ausprobieren, und wenden Sie sich an Ihren Administrator, wenn das Problem weiterhin besteht. |
 
 ## Anforderungskopfzeilenfehler {#request-header-errors}
 
