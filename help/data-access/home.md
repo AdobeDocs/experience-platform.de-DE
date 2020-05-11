@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Übersicht über den Datenzugriff
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 4%
 
 ---
 
@@ -200,7 +203,7 @@ Wenn ein Ordner zurückgegeben wird, enthält er ein Array aller Dateien im Ordn
 
 ## Zugriff auf den Inhalt einer Datei
 
-Die Datenzugriffs-API kann auch verwendet werden, um auf den Inhalt einer Datei zuzugreifen. Auf diese Weise können Sie die Inhalte in eine externe Quelle herunterladen.
+Die Datenzugriffs-API kann auch verwendet werden, um auf den Inhalt einer Datei zuzugreifen. Auf diese Weise können Sie den Inhalt in eine externe Quelle herunterladen.
 
 **API-Format**
 
@@ -237,7 +240,6 @@ Contents of the file
 
 Weitere Beispiele finden Sie im [Lernprogramm](tutorials/dataset-data.md)zum Datenzugriff.
 
-
 ## Ereignisse zur Datenerfassung abonnieren
 
-Plattform stellt bestimmte hochwertige Ereignis über die [Adobe-Konsole](https://console.adobe.io/)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen zur Verwendung von Adobe-E/A-Ereignissen finden Sie im [Handbuch](https://www.adobe.io/apis/experienceplatform/events/docs.html)zu den ersten Schritten.
+Plattform stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
