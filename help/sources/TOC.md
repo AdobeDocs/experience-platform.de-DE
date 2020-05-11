@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
+source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 2%
    - Cloud storage {#cloud-storage}
       - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
       - [Azurblauch und Amazon S3-Stecker](connectors/cloud-storage/blob-s3.md)
+      - [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- und SFTP-Anschluss](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
@@ -65,6 +66,7 @@ ht-degree: 2%
          - [Amazon S3 Connector](tutorials/api/create/cloud-storage/s3.md)
          - [Azurblutstecker](tutorials/api/create/cloud-storage/blob.md)
          - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Adapterkabel für die Datenspeicherung](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloud-Datenspeicherung-Connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-Anschluss](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -126,6 +128,7 @@ ht-degree: 2%
       - Cloud storage {#cloud-storage}
          - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azurblauch und Amazon S3-Stecker](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Adapterkabel für die Datenspeicherung](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP- und SFTP-Anschluss](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google Cloud-Datenspeicherung-Connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
