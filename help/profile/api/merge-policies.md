@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 33091568c850375b399435f375e854667493152c
+workflow-type: tm+mt
+source-wordcount: '2057'
+ht-degree: 3%
 
 ---
 
@@ -170,7 +173,7 @@ Dabei `name` ist der Wert von der XDM-Klasse, auf der das Schema basiert, das de
 
 ## Zugriff auf Zusammenführungsrichtlinien {#access-merge-policies}
 
-Mithilfe der Echtzeit-Client-Profil-API können Sie mit dem `/config/mergePolicies` Endpunkt eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie mit ihrer ID Ansicht oder auf alle Zusammenführungsrichtlinien in Ihrer IMS-Organisation zuzugreifen, gefiltert nach bestimmten Kriterien.
+Mithilfe der Echtzeit-Client-Profil-API können Sie mit dem `/config/mergePolicies` Endpunkt eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie mit ihrer ID Ansicht oder auf alle Zusammenführungsrichtlinien in Ihrer IMS-Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können den `/config/mergePolicies/bulk-get` Endpunkt auch verwenden, um mehrere Zusammenführungsrichtlinien nach ihren IDs abzurufen. Die Schritte für die Durchführung dieser Aufrufe sind in den folgenden Abschnitten beschrieben.
 
 ### Zugriff auf eine einzige Zusammenführungsrichtlinie mit ID
 
@@ -217,6 +220,99 @@ Eine erfolgreiche Antwort gibt die Details der Mergerichtlinie zurück.
     },
     "default": false,
     "updateEpoch": 1551127597
+}
+```
+
+Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) zu Beginn dieses Dokuments.
+
+### Abrufen mehrerer Zusammenführungsrichtlinien nach ihren IDs
+
+Sie können mehrere Zusammenführungsrichtlinien abrufen, indem Sie eine POST-Anforderung an den `/config/mergePolicies/bulk-get` Endpunkt senden und die IDs der Zusammenführungsrichtlinien einschließen, die Sie im Anforderungstext abrufen möchten.
+
+**API-Format**
+
+```http
+POST /config/mergePolicies/bulk-get
+```
+
+**Anfrage**
+
+Der Anforderungstext enthält ein &quot;ids&quot;-Array mit einzelnen Objekten, die die &quot;id&quot; für jede Zusammenführungsrichtlinie enthalten, für die Sie Details abrufen möchten.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "ids": [
+          {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
+          }
+          {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
+          }
+        ]
+      }'
+```
+
+**Antwort**
+
+Bei einer erfolgreichen Antwort werden HTTP-Status 207 (Multi-Status) und die Details der Zusammenführungsrichtlinien zurückgegeben, deren IDs in der POST-Anforderung bereitgestellt wurden.
+
+```json
+{
+    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+    "name": "Profile Default Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    },
+    "default": true,
+    "updateEpoch": 1552086578
+},
+{
+    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+    "name": "Dataset Precedence Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "pdg"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": false,
+    "updateEpoch": 1576099719
 }
 ```
 
