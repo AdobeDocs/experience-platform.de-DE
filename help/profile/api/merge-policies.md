@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 33091568c850375b399435f375e854667493152c
+source-git-commit: 4bab89c981f7e30b28477068625d1b6f534fa838
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 3%
@@ -55,7 +55,7 @@ Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von
 | `id` | Der vom System erzeugte eindeutige Bezeichner, der zur Erstellungszeit zugewiesen wurde |
 | `name` | Benutzerfreundlicher Name, unter dem die Richtlinie zum Zusammenführen in Ansichten der Liste identifiziert werden kann. |
 | `imsOrgId` | Organisations-ID, zu der diese Richtlinie gehört |
-| `identityGraph` | [Identitätsdiagramm](#identity-graph) -Objekt, das das Identitätsdiagramm angibt, aus dem die entsprechenden Identitäten abgerufen werden. Profil-Fragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
+| `identityGraph` | [Identitätsdiagramm](#identity-graph) -Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profil-Fragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
 | `attributeMerge` | [Attributzusammenführungs](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie bei Datenkonflikten Profil-Attributwerte priorisiert. |
 | `schema` | Das [Schema](#schema) -Objekt, für das die Zusammenführungsrichtlinie verwendet werden kann. |
 | `default` | Boolescher Wert, der angibt, ob diese Richtlinie für das angegebene Schema standardmäßig verwendet wird. |
@@ -251,7 +251,7 @@ curl -X POST \
         "ids": [
           {
             "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
-          }
+          },
           {
             "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
           }
