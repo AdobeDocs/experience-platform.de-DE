@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform-Quellschnittstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 1%
 
 ---
@@ -46,6 +46,7 @@ Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in die Plattform über
 
 - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
 - [Azurblauch und Amazon S3-Stecker](connectors/cloud-storage/blob-s3.md)
+- [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
 - [FTP- und SFTP-Anschluss](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
 
@@ -109,7 +110,7 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche auf der Grundlage v
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
 | **Ansicht-Quellen** auf | Gewähren Sie schreibgeschützten Zugriff auf Quellen in jedem Quelltyp auf der Registerkarte &quot; *Katalog* &quot;sowie auf die Registerkarten &quot; *Durchsuchen*&quot;, &quot; *Konten*&quot;und &quot; *DataFlow* &quot;. |
-| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen, die in den **Ansichten-Quellen** enthalten sind, Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
+| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen in den **Ansichten-Quellen** Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
 | **Ansicht-Quellen** deaktivieren und Quellen **verwalten** deaktivieren | Sperren Sie den Zugriff auf alle Quellen. |
 
 Weitere Informationen zu den verfügbaren Berechtigungen, die über die Admin-Konsole erteilt wurden, einschließlich dieser vier Quellen, finden Sie in der Übersicht über die [Zugriffskontrolle](../access-control/home.md).
