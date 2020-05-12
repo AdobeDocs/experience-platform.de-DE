@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Produktdokumentation zu Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
+source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+workflow-type: tm+mt
+source-wordcount: '6973'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 ## A
 
-**Zugriffskontrolle:** Zugriffskontrolle {#access-control} für Experience Platform verknüpft Benutzer mit Zugriffsberechtigungen und Sandbox-Umgebung über Produkt-Profil in der Adobe Admin-Konsole.
+**Zugriffskontrolle:** {#access-control} Zugriffskontrolle für Experience Platform verknüpft Benutzer mit Zugriffsberechtigungen und Sandbox-Umgebung über Produkt-Profil in der Adobe Admin-Konsole.
 
 **Zugriffsschlüssel-ID:** Die Zugriffsschlüssel-ID ist eine eindeutige Kennung, die mit einem geheimen Zugriffsschlüssel für Amazon S3 verknüpft ist. Die Zugriffsschlüssel-ID und der geheime Zugriffsschlüssel werden zusammen verwendet, um AWS-Anforderungen zu signieren.
 
@@ -49,6 +52,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Attribute:** Attribute sind bestimmte Eigenschaften, die ein Profil darstellen.
 
+**Attributzusammenführung:** Die Attributzusammenführung definiert, wie eine Richtlinie zum Zusammenführen den Attributwert des Profils bei Datenkonflikten priorisiert.
+
 **Zuordnung AI:** Attribution AI ist ein Adobe Sensei Service, der algorithmische Funktionen zur Zuordnung mehrerer Kanal über den gesamten Kundenlebenszyklus hinweg bereitstellt.
 
 **Audience**: Eine Audience ist der resultierende Satz von Profilen, die die Kriterien einer Segmentdefinition erfüllen.
@@ -61,7 +66,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Aufstockung:** In der Echtzeit-Kundendatenplattform ermöglicht die Aufstockung in geplanten Quellverbindungen die Erfassung historischer Daten.
 
-**Aufstockungszeitraum:** Es `Backfill period` ist eine Option zum Festlegen der Zeitdauer für die Erfassung historischer Daten von Drittanbietern über eine Verbindung. Wenn Sie einen Aufstockungszeitraum für immer wählen, wird der gesamte Verlauf der Quelldaten an die Experience Platform übertragen.
+**Aufstockungszeitraum:** `Backfill period` ist eine Option, um die Dauer für die Erfassung von Verlaufsdaten von Drittanbietern über eine Verbindung festzulegen. Wenn Sie einen Aufstockungszeitraum für immer wählen, wird der gesamte Verlauf der Quelldaten an die Experience Platform übertragen.
 
 **Stapel:** Der Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird.
 
@@ -103,29 +108,29 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Vertragsdaten &quot;C&quot;-Beschriftungen:** Vertragsbezeichnungen `C` werden verwendet, um Daten zu kategorisieren, die vertragliche Verpflichtungen haben oder mit den Datenschutzrichtlinien eines Kunden in Zusammenhang stehen.
 
-**C1 Vertragssiegel:** Die `C1` Bezeichnung für die Verwaltung von Vertragsdaten gibt an, dass Daten nur in aggregierter Form aus Adobe Experience Cloud exportiert werden können, ohne dass dabei einzelne IDs oder Gerätekennungen einbezogen werden. Zum Beispiel Daten, die aus sozialen Netzwerken stammen.
+**C1 Vertragssiegel:** `C1` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nur in aggregierter Form aus Adobe Experience Cloud exportiert werden können, ohne dass dabei einzelne IDs oder Gerätekennungen einbezogen werden. Zum Beispiel Daten, die aus sozialen Netzwerken stammen.
 
-**C2 Vertragsbezeichnung:** Die Bezeichnung `C2` &quot;Governance&quot;für Vertragsdaten gibt Daten an, die nicht in eine dritte Partei exportiert werden können. Einige Datenanbieter haben in ihren Verträgen Bedingungen, die den Export von Daten, von denen sie ursprünglich erfasst wurden, verbieten.  So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft durch Verträge eingeschränkt. C2 ist restriktiver als C1, was nur Aggregation und anonyme Daten erfordert.
+**C2 Vertragsbezeichnung:** `C2` Die Beschriftung zur Verwaltung von Vertragsdaten gibt Daten an, die nicht in eine dritte Partei exportiert werden können. Einige Datenanbieter haben in ihren Verträgen Bedingungen, die den Export von Daten, von denen sie ursprünglich erfasst wurden, verbieten.  So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft durch Verträge eingeschränkt. C2 ist restriktiver als C1, was nur Aggregation und anonyme Daten erfordert.
 
-**C3 Vertragssiegel:** Die `C3` Bezeichnung &quot;Governance&quot;für Vertragsdaten gibt Daten an, die nicht mit direkt identifizierbaren Informationen kombiniert oder anderweitig verwendet werden können. Einige Datenanbieter haben Vertragsbedingungen, die die Kombination oder Verwendung dieser Daten mit direkt identifizierbaren Informationen verbieten.  Verträge für Daten, die aus Werbenetzwerken, Werbeservern und Drittanbietern von Daten bezogen werden, enthalten beispielsweise oft spezifische vertragliche Verbote für die Verwendung direkt identifizierbarer Daten.
+**C3 Vertragssiegel:** `C3` Die Beschriftung zur Verwaltung von Vertragsdaten gibt Daten an, die nicht mit direkt identifizierbaren Informationen kombiniert oder anderweitig verwendet werden können. Einige Datenanbieter haben Vertragsbedingungen, die die Kombination oder Verwendung dieser Daten mit direkt identifizierbaren Informationen verbieten.  Verträge für Daten, die aus Werbenetzwerken, Werbeservern und Drittanbietern von Daten bezogen werden, enthalten beispielsweise oft spezifische vertragliche Verbote für die Verwendung direkt identifizierbarer Daten.
 
-**C4 Vertragssiegel:** Die Bezeichnung `C4` &quot;Governance&quot;für Vertragsdaten gibt an, dass Daten nicht für das Targeting von Anzeigen oder Inhalten verwendet werden können, weder auf der Site noch auf der Site. C4 ist die restriktivste Bezeichnung, da sie C5-, C6- und C7-Etiketten umfasst.
+**C4 Vertragssiegel:** `C4` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nicht für das Targeting von Anzeigen oder Inhalten verwendet werden können, weder auf der Site noch auf der Site. C4 ist die restriktivste Bezeichnung, da sie C5-, C6- und C7-Etiketten umfasst.
 
-**C5-Vertragssiegel:** Die Bezeichnung `C5` &quot;Governance&quot;für Vertragsdaten gibt an, dass Daten nicht für interessensbasiertes, Site-übergreifendes Targeting von Inhalten oder Anzeigen verwendet werden können. Interessensbasiertes Targeting oder Personalisierung tritt auf, wenn die folgenden drei Bedingungen erfüllt sind:  Die auf der Site erfassten Daten werden verwendet, um Rückschlüsse auf das Interesse eines Benutzers zu ziehen, in einem anderen Kontext, z. B. auf einer anderen Site oder App, verwendet und um festzulegen, welche Inhalte oder Anzeigen auf der Grundlage dieser Schlussfolgerungen bereitgestellt werden.
+**C5-Vertragssiegel:** `C5` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nicht für interessensbasiertes, Site-übergreifendes Targeting von Inhalten oder Anzeigen verwendet werden können. Interessensbasiertes Targeting oder Personalisierung tritt auf, wenn die folgenden drei Bedingungen erfüllt sind:  Die auf der Site erfassten Daten werden verwendet, um Rückschlüsse auf das Interesse eines Benutzers zu ziehen, in einem anderen Kontext, z. B. auf einer anderen Site oder App, verwendet und um festzulegen, welche Inhalte oder Anzeigen auf der Grundlage dieser Schlussfolgerungen bereitgestellt werden.
 
-**C6 Vertragssiegel:** Die `C6` Bezeichnung &quot;Governance&quot;für Vertragsdaten gibt an, dass Daten nicht für das Targeting von Onsite-Anzeigen verwendet werden können. Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen.  Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über das Interesse der Benutzer, um Anzeigen auszuwählen, Prozessdaten darüber, wann und wo Werbung angezeigt wurde und ob die Benutzer irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, z. B. das Klicken auf eine Anzeige oder einen Kauf.
+**C6 Vertragssiegel:** `C6` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nicht für das Targeting von Onsite-Anzeigen verwendet werden können. Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen.  Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über das Interesse der Benutzer an der Auswahl von Anzeigen, Prozessdaten darüber, wann und wo Werbung angezeigt wurde und ob die Benutzer irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, z. B. das Klicken auf eine Anzeige oder einen Kauf.
 
-**C7-Vertragsbezeichnung:** Die `C7` Bezeichnung &quot;Governance&quot;für Vertragsdaten gibt an, dass Daten nicht für das Targeting von Inhalten auf der Site verwendet werden können.  Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte.  Dazu gehören zuvor erfasste Informationen über das Interesse der Benutzer an der Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, z. B. das Klicken auf Inhalte.
+**C7-Vertragsbezeichnung:** `C7` &quot;Contract Data Governance&quot;-Bezeichnung gibt an, dass Daten nicht für das Targeting von Inhalten auf der Site verwendet werden können.  Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte.  Dazu gehören zuvor erfasste Informationen über das Interesse der Benutzer an der Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, z. B. das Klicken auf Inhalte.
 
-**C8 Vertragssiegel:** Die Bezeichnung &quot;Governance&quot;für `C8` Vertragsdaten gibt an, dass Daten nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden können. Daten können nicht verwendet werden, um die Nutzung der Sites oder Apps Ihres Unternehmens durch Benutzer zu messen, zu verstehen und Berichte darüber zu erstellen. Dies umfasst nicht das interessensbasierte Targeting, d. h. die Erfassung von Informationen über Ihre Nutzung dieses Dienstes zur späteren Personalisierung von Inhalten und/oder Werbung in anderen Kontexten.
+**C8 Vertragssiegel:** `C8` &quot;Contract Data Governance&quot;-Bezeichnung gibt an, dass Daten nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden können. Daten können nicht verwendet werden, um die Nutzung der Sites oder Apps Ihres Unternehmens durch Benutzer zu messen, zu verstehen und Berichte darüber zu erstellen. Dies umfasst nicht das interessensbasierte Targeting, d. h. die Erfassung von Informationen über Ihre Nutzung dieses Dienstes zur späteren Personalisierung von Inhalten und/oder Werbung in anderen Kontexten.
 
-**C9-Vertragssiegel:** Die `C9` Bezeichnung &quot;Governance&quot;für Vertragsdaten gibt an, dass Daten in Data Science-Workflows nicht verwendet werden können. Einige Verträge beinhalten explizite Verbote von Daten, die für die Datenwissenschaft verwendet werden.  Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verbieten.
+**C9-Vertragssiegel:** `C9` &quot;Contract Data Governance&quot;-Etikett gibt an, dass Daten in Data Science-Workflows nicht verwendet werden können. Einige Verträge beinhalten explizite Verbote von Daten, die für die Datenwissenschaft verwendet werden.  Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verbieten.
 
 **Spalte &quot;Erstellungsdatum&quot;:** Die Auswahl einer `Created Date` Spalte ist eine Option, wenn Daten von Drittanbietern über eine Verbindung angegeben werden. Wenn die Speicherstrategie zum Anhängen ausgewählt ist und der Datensatz ein Schema mit mehreren Daten enthält, muss der Benutzer aus dem verfügbaren Datums-/Uhrzeitfeld wählen, um eine `Created Date` Schlüsselspalte anzugeben. `Created Date` nicht verfügbar ist, wenn die Speicherstrategie überschreiben ausgewählt ist.
 
 **Tabelle als Auswahl erstellen:** &quot;Tabelle als Auswahl erstellen&quot;ist ein SQL-Befehl, der, wenn er als Teil einer vollständigen und gültigen SQL-Abfrage ausgeführt wird, den Abfrage Service anweist, die Ergebnisse der Abfrage in einem Datensatz auf dem Data Lake beizubehalten. Zu den Optionen gehören: Neu erstellen, Alle vorherigen überschreiben und An Vorherige anhängen.
 
-**Site-übergreifende Daten:** Site-übergreifende Daten sind die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort-Daten und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen.
+**Site-übergreifende Daten:** Site-übergreifende Daten sind die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort- und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen.
 
 **Benutzerdefinierter Identitäts-Namensraum:** Benutzerdefinierte Identitätskennungen sind vom Namensraum erstellte IDs, die zur Darstellung von Identitäten für ein bestimmtes Unternehmen oder eine bestimmte Geschäftsbeziehung verwendet werden.
 
@@ -145,14 +150,6 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Datenstream:** Ein Datenstrom ist ein Satz oder eine Sammlung von Nachrichten, die dasselbe Schema teilen und von derselben Quelle gesendet werden.
 
-**Datensatz:** Ein Datensatz ist ein Datenspeicherung- und Verwaltungskonstrukt für eine Datenerfassung, normalerweise eine Tabelle, die Schema (Spalten) und Felder (Zeilen) enthält.
-
-**Datenfluss:** In der Echtzeit-Kundendatenplattform ist ein Datenfluss eine visuelle Darstellung von Quelldatensätzen, die durch Echtzeit-Kundendaten-Profile zu Zielen fließen.
-
-**Datenbestand-ID:** Eine von Adobe generierte ID für einen erfassten Datensatz.
-
-**Datensatzausgabe:** Die Datensatzausgabe bietet einen Mechanismus, mit dem bestimmt wird, welche Option &quot;Tabelle als Auswahl *erstellen* &quot;für eine bestimmte Ausführung des Abfrage-Dienstes verwendet wird.
-
 **Datenverwaltung:** Die Datenverwaltung umfasst die Strategien und Technologien, mit denen sichergestellt werden soll, dass die Daten im Einklang mit Vorschriften und organisatorischen Richtlinien zur Datenverwendung stehen.
 
 **Bezeichnungen für Datenverwaltung:** Datenverwaltungs-Etiketten bieten Benutzern die Möglichkeit, Daten zu klassifizieren, die datenschutzbezogene Erwägungen und Vertragsbedingungen widerspiegeln, damit sie mit Vorschriften und Unternehmensrichtlinien in Einklang stehen. Zu einem Datensatz hinzugefügte Datenverwaltungs-Beschriftungen werden vererbt oder auf alle Felder in diesem Datensatz angewendet.  Datenverwaltungs-Beschriftungen können auch direkt auf Felder angewendet werden.
@@ -170,6 +167,14 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Datentyp:** Der Datentyp ist ein wiederverwendbares Objekt mit Eigenschaften in einer hierarchischen Darstellung.
 
 **Beschriftungen für die Datenverwendung:** Datenverwendungsbeschriftungen bieten Benutzern die Möglichkeit, Daten zu kategorisieren, die datenschutzbezogene Erwägungen und Vertragsbedingungen widerspiegeln, damit sie mit Vorschriften und Unternehmensrichtlinien übereinstimmen.
+
+**Datenflug:** In der Echtzeit-Kundendatenplattform ist ein Datenflug eine virtuelle Datenpipeline, die von einer Quelle bis zu Zielen in die Plattform fließt.
+
+**Datensatz:** Ein Datensatz ist ein Datenspeicherung- und Verwaltungskonstrukt für eine Datenerfassung, normalerweise eine Tabelle, die Schema (Spalten) und Felder (Zeilen) enthält.
+
+**Datenbestand-ID:** Eine von Adobe generierte ID für einen erfassten Datensatz.
+
+**Datensatzausgabe:** Die Datensatzausgabe bietet einen Mechanismus, mit dem bestimmt wird, welche Option &quot;Tabelle als Auswahl *erstellen* &quot;für eine bestimmte Ausführung des Abfrage-Dienstes verwendet wird.
 
 **Ereignis der Entscheidung:** Ein Ereignis dient der Erfassung von Bemerkungen zum Ergebnis und zum Kontext einer Aktivität. Das Ereignis &quot;Decision&quot;erfasst Informationen darüber, wie die Entscheidung erfolgte, wann sie erfolgte, welche Optionen vorgeschlagen (gewählt) wurden und welcher kontextuelle Zustand existierte, der die Entscheidung beeinflusste oder während des Entscheidungsprozesses beobachtet werden konnte. Das Ereignis &quot;Decision&quot;erfasst auch die Proposition-ID, eine weltweit eindeutige Kennung, mit der die Entscheidung mit anderen Ereignissen korreliert werden kann.
 
@@ -214,6 +219,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Erlebnisdatenmodell (XDM):** Erlebnis-Datenmodell (XDM) ist das Konzept der Verwendung von Standard-Schemas zur Vereinheitlichung von Daten für die Verwendung mit Experience Platform- und Adobe Experience Cloud-Anwendungen. XDM standardisiert die Strukturierung von Daten und beschleunigt und vereinfacht den Prozess der Gewinnung von Erkenntnissen aus enormen Datenmengen.
 
 **Erlebnisplattform-Start:** Launch ist ein Tag- und SDK-Management-Ökosystem, das in Experience Platform- und Experience Cloud-Anwendungen integriert ist. Launch bietet Tools zur Bereitstellung, Vereinheitlichung und Verwaltung von Analyse-, Marketing- und Werbeintegrationen, die erforderlich sind, um relevante Kundenerlebnisse auf allen Client-Geräten zu ermöglichen.
+
+**Erlebnis-Plattform-Starterweiterungen:** Mit Experience Platform Launch-Erweiterungen können Rohdaten aus Ereignissen direkt an Zielorte der Echtzeit-Datenplattform des Kunden Versand werden. Für die Installation von Starterweiterungen ist der Zugriff auf die Eigenschaften von &quot;Start&quot;erforderlich.
 
 **Experiment:** Bei einem Experiment wird ein trainiertes Modell erstellt, indem die Instanz mit einem Beispielteil der Live-Produktionsdaten trainiert wird.
 
@@ -263,7 +270,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Identität:** Identity ist ein Bezeichner wie eine Cookie-ID, Geräte-ID oder E-Mail-ID, die einen Endkunden eindeutig repräsentiert.
 
-**Identitäts-&quot;I&quot;-Datenbezeichnungen:** Mit `Identity I` Beschriftungen werden Daten kategorisiert, die eine bestimmte Person identifizieren oder kontaktieren können.
+**Identitäts-&quot;I&quot;-Datenbezeichnungen:** `Identity I` werden zur Kategorisierung von Daten verwendet, die eine bestimmte Person identifizieren oder kontaktieren können.
 
 **Identitätsdiagramm:** Das Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verbundenen und gehefteten Identitäten, die mit der Aktivität von Kunden nahezu in Echtzeit aktualisiert wird.
 
@@ -274,6 +281,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Identitätsfixierung:** Identitätszuordnung ist der Prozess der Identifizierung von Datenfragmenten und deren Zusammenführung, um einen vollständigen Datensatz eines Profils zu bilden.
 
 **Identitätssymbol:** Identitätssymbol ist eine Abkürzung eines Identitäts-Namensraums, der als Referenz in APIs verwendet werden kann.
+
+**Identitätswert:** Identitätswert sind Daten, die mit einer zugeordneten Identität im Schema verknüpft sind. Bei der Zuordnung von Datensatzdaten zu Profil-Fragmenten müssen sowohl der Identitätswert als auch der Namensraum übereinstimmen.
 
 **I1-Datenbeschriftung:** Die `I1` Datenbeschriftung dient zur Klassifizierung direkt identifizierbarer Daten, die eine bestimmte Person anstatt eines Geräts identifizieren oder kontaktieren können.
 
@@ -347,7 +356,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Einrichtung:** Eine Organisation ist der Name, der zur Identifizierung einer Firma oder einer bestimmten Gruppe innerhalb einer Firma in allen Adobe-Produkten verwendet wird. Administratoren können den Zugriff und die Berechtigungen von Funktionen für Benutzer einer Organisation konfigurieren und verwalten.
 
-**Speicherstrategie überschreiben:** Die `Overwrite` Speicherstrategie ist eine Option zum Erfassen von Daten von Drittanbietern über eine Verbindung, bei der der Benutzer angibt, ob die erfassten Daten nach einem bestimmten Zeitplan überschrieben werden. Experience Platform erfasst den angegebenen Datensatz aus der Drittanbieter-Quelle und überschreibt den Datensatz auf Experience Platform.
+**Speicherstrategie überschreiben:** `Overwrite` Speicherstrategie ist eine Option zum Erfassen von Daten von Drittanbietern über eine Verbindung, bei der der Benutzer angibt, ob die erfassten Daten nach einem bestimmten Zeitplan überschrieben werden. Experience Platform erfasst den angegebenen Datensatz aus der Drittanbieter-Quelle und überschreibt den Datensatz auf Experience Platform.
 
 [Zurück zum Anfang](#adobe-experience-platform-glossary)
 
@@ -377,6 +386,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Profil-Export:** Der Export von Profilen ist einer der beiden Zieltypen in der Echtzeit-Kundendatenplattform. Beim Profil-Export wird eine Datei mit Profilen und Attributen erstellt, PII-Rohdaten mit E-Mail verwendet und in Marketing- und E-Mail-Automatisierungsplattformen integriert.
 
+**Profil FProfile Fragment:** Ein Profil-Fragment ist das Profil für nur eine Identität aus der Liste der Identitäten, die für einen bestimmten Benutzer vorhanden sind.
+
 **Profil-ID:** Eine Profil-ID ist eine automatisch generierte ID, die einem Identitätstyp zugeordnet ist und ein Profil darstellt.
 
 **Eigenschaft:** In Experience Platform Launch ist eine Eigenschaft ein Container für alles, was zum Bereitstellen eines Satzes von Tags erforderlich ist.
@@ -389,7 +400,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Abfragen-Editor:** Abfrage Editor ist ein Tool zum Schreiben, Prüfen und Senden von SQL-Anweisungen im Abfrage Service.
 
-**Abfrage Service for Adobe Experience Platform:** Der *Experience Platform Abfrage Service* ermöglicht Datenanalysten die Verwendung von Abfrage ExperienceEvents und XDMs für die Analyse und das maschinelle Lernen. Mit dem Abfrage Service können Datenwissenschaftler und Analysten alle in Experience Platform gespeicherten Datensätze abrufen - einschließlich Verhaltensdaten sowie POS (Point-of-Sale), CRM (Customer Relationship Management) und mehr - und diese Datensätze zur Beantwortung spezifischer Fragen zu den Daten Abfrage.
+**Abfrage Service for Adobe Experience Platform:** *Der Experience Platform Abfrage Service* ermöglicht Datenanalysten die Verwendung von Abfrage ExperienceEvents und XDMs für die Analyse und das maschinelle Lernen. Mit dem Abfrage Service können Datenwissenschaftler und Analysten alle in Experience Platform gespeicherten Datensätze abrufen - einschließlich Verhaltensdaten sowie POS (Point-of-Sale), CRM (Customer Relationship Management) und mehr - und diese Datensätze zur Beantwortung spezifischer Fragen zu den Daten Abfrage.
 
 [Zurück zum Anfang](#adobe-experience-platform-glossary)
 
@@ -465,9 +476,9 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Dienste:** Ein leistungsstarkes Framework zur Operationalisierung von AI- und ML-Diensten mithilfe von Adobe Intelligent Services. Services liefern personalisierte Kundenerlebnisse in Echtzeit oder operalisieren benutzerdefinierte intelligente Dienste.
 
-**S1-Datenbeschriftung:** Die `S1` Datenbeschriftung dient zur Klassifizierung von Daten, die Breiten- und Längengrad angeben, mit denen die genaue Position eines Geräts bestimmt werden kann.
+**S1-Datenbeschriftung:** `S1` Datenbeschriftung wird verwendet, um Daten zu klassifizieren, die Breiten- und Längengrad angeben, die zur Bestimmung der genauen Position eines Geräts verwendet werden können.
 
-**S2-Datenbeschriftung:** Die `S2` Datenbeschriftung dient zur Klassifizierung von Daten, die zur Bestimmung eines breit definierten Geozäunungsgebiets verwendet werden können.
+**S2-Datenbeschriftung:** `S2` Datenbeschriftung wird verwendet, um Daten zu klassifizieren, die zur Bestimmung eines breit definierten Geo-Zaun-Bereichs verwendet werden können.
 
 **Quelle:** Source ist ein allgemeiner Begriff für jeden Input Connector in der Echtzeit-Kundendatenplattform.
 
