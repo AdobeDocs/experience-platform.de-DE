@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Data Lake Datenspeicherung Gen2-Quell-Connectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Ado
    - [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
 - [Echtzeit-Profil](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Wenn Sie bereits über eine ADLS Gen2-Basisverbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Lernprogramm zur [Konfiguration eines Datenflusses](../../dataflow/cloud-storage.md)fortfahren.
+Wenn Sie bereits über eine ADLS Gen2-Basisverbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Lernprogramm zur [Konfiguration eines Datenflusses](../../dataflow/batch/cloud-storage.md)fortfahren.
 
 ### Erforderliche Berechtigungen erfassen
 
@@ -63,4 +66,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das ADLS Gen2-Konto, mit dem 
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem ADLS Gen2-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/cloud-storage.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem ADLS Gen2-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/batch/cloud-storage.md)zu übertragen.
