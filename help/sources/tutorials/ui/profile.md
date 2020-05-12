@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Aktivieren Sie eingehende Quelldaten, um Kundendaten zu füllen.
 topic: overview
 translation-type: tm+mt
-source-git-commit: d6d2faf3d5eabcd8e948d3717fd8f8df4b9cb85a
+source-git-commit: 3e43e043df296c29cafb4c6933c8be1105c985ab
+workflow-type: tm+mt
+source-wordcount: '499'
+ht-degree: 0%
 
 ---
 
@@ -34,27 +37,27 @@ Um die Profile von Kunden zu bereichern, muss das Quell-Schema des Zielgruppe-Da
 
 Klicken Sie im Quellenarbeitsbereich auf die Registerkarte &quot; **Durchsuchen** &quot;, um Ihre Basisverbindungen Liste. Suchen Sie in der angezeigten Liste die Verbindung, die den Datenfluss enthält, mit dem Sie Profil füllen möchten. Klicken Sie auf den Namen der Verbindung, um deren Details anzuzeigen.
 
-![](../../images/tutorials/dataflow/cloud-storage/browse.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
 Der Bildschirm &quot; *Quelldaten* &quot;der Verbindung wird angezeigt und zeigt die Datensätze an, in die die Verbindung Quelldaten eingibt. Klicken Sie auf den Namen des Datensatzes, den Sie zum Profil aktivieren möchten.
 
-![](../../images/tutorials/dataflow/cloud-storage/dataset-dataflow.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
 Der Bildschirm &quot; *Aktivität* des Datensatzes&quot;wird angezeigt. In der Spalte &quot; *Eigenschaften* &quot;auf der rechten Seite des Bildschirms werden die Details des Datensatzes angezeigt. Sie enthält einen **Profil** -Schalter und einen Link zum Schema, dem der Datensatz entspricht. Klicken Sie auf den Namen des Schemas, um seine Zusammensetzung Ansicht.
 
-![](../../images/tutorials/dataflow/cloud-storage/select-dataset-schema.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
 Der *Schema-Editor* wird angezeigt und zeigt die Struktur des Schemas in der mittleren Arbeitsfläche an. Wählen Sie auf der Arbeitsfläche das Feld aus, das als primäre Identität festgelegt werden soll. Aktivieren Sie unter der angezeigten Registerkarte *Feldeigenschaften* das Kontrollkästchen **Identität** und anschließend **Primäre Identität**. Wählen Sie schließlich einen entsprechenden **Identitäts-Namensraum** und klicken Sie dann auf **Übernehmen**.
 
-![](../../images/tutorials/dataflow/cloud-storage/set-schema-identity.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
 Klicken Sie auf das Objekt auf der obersten Ebene der Struktur des Schemas, und die Spalte mit den Eigenschaften des *Schemas* wird angezeigt. Aktivieren Sie das Schema zum Profil, indem Sie auf den **Profil** -Schalter umschalten. Klicken Sie auf **Speichern** , um die Änderungen abzuschließen.
 
-![](../../images/tutorials/dataflow/cloud-storage/enable-profile.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
 Nachdem das Schema zum Profil aktiviert wurde, kehren Sie zum Bildschirm &quot; *Datenaset-Aktivität* &quot;zurück und aktivieren Sie den Datensatz zum Profil, indem Sie auf den Umschalter **Profil** in der Spalte &quot; *Eigenschaften* &quot;klicken.
 
-![](../../images/tutorials/dataflow/cloud-storage/enable-dataset-profile.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
 Wenn sowohl das Schema als auch der Datensatz zum Profil aktiviert sind, füllen die in diesen Datensatz erfassten Daten nun auch die Profil der Kunden aus.
 
