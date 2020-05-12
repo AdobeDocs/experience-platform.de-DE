@@ -1,24 +1,27 @@
 ---
-title: SDK konfigurieren
-seo-title: Adobe Experience Platform Web SDK konfigurieren
+title: Konfigurieren des SDK
+seo-title: Konfigurieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 99%
 
 ---
 
 
-# (Beta) SDK konfigurieren
+# (Beta) Konfiguriere des SDK
 
 >[!IMPORTANT]
 >
->Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
+>Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
-Die Konfiguration für das SDK erfolgt mit dem `configure` Befehl.
+Die Konfiguration für das SDK erfolgt mit dem `configure`-Befehl.
 
->[!Iportant]
->`configure` sollte _immer_ der erste Befehl genannt werden.
+>[!IWichtig]
+>`configure` sollte _immer_ als erster Befehl abgerufen werden.
 
 ```javascript
 alloy("configure", {
@@ -27,7 +30,7 @@ alloy("configure", {
 });
 ```
 
-Es gibt viele Optionen, die während der Konfiguration festgelegt werden können. Alle Optionen sind nachfolgend gruppiert nach Kategorie aufgeführt.
+Es gibt viele Optionen, die während der Konfiguration festgelegt werden können. Alle Optionen sind nachstehend nach Kategorie gruppiert aufgeführt.
 
 ## Allgemeine Optionen
 
@@ -45,7 +48,7 @@ Ihre zugewiesene Konfigurations-ID, die das SDK mit den entsprechenden Konten un
 | ---------------- | ------------ | -------------------------------------------------- |
 | Array von Zeichenfolgen | Nein | `["web", "device", "environment", "placeContext"]` |
 
-Gibt an, welche Kontext-Kategorien automatisch erfasst werden sollen, wie unter [Automatische Informationen](../reference/automatic-information.md)beschrieben.  Wenn diese Konfiguration nicht angegeben ist, werden standardmäßig alle Kategorien verwendet.
+Gibt an, welche Kontextkategorien automatisch erfasst werden sollen, wie unter [Automatische Informationen](../reference/automatic-information.md) beschrieben.  Wenn diese Konfiguration nicht angegeben ist, werden standardmäßig alle Kategorien verwendet.
 
 ### `debugEnabled`
 
@@ -53,12 +56,12 @@ Gibt an, welche Kontext-Kategorien automatisch erfasst werden sollen, wie unter 
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | `false` |
 
-Gibt an, ob das Debugging aktiviert werden soll. Durch das Festlegen dieser Konfiguration `true` werden die folgenden Funktionen aktiviert:
+Gibt an, ob Debugging aktiviert werden soll. Durch das Festlegen dieser Konfiguration auf `true` werden die folgenden Funktionen aktiviert:
 
 | **Funktion** |  |  |
 | ---------------------- | ------------------ |
 | Synchrone Überprüfung | Prüft die für das Schema erfassten Daten und gibt in der Antwort unter der folgenden Beschriftung einen Fehler zurück: `collect:error OR success` |
-| Konsolenprotokollierung | Aktiviert die Anzeige von Debugging-Meldungen in der JavaScript-Konsole des Browsers |
+| Konsolen-Logging | Aktiviert die Anzeige von Debugging-Meldungen in der JavaScript-Konsole des Browsers |
 
 ### `edgeDomain`
 
@@ -66,15 +69,7 @@ Gibt an, ob das Debugging aktiviert werden soll. Durch das Festlegen dieser Konf
 | -------- | ------------ | ------------------ |
 | Zeichenfolge | Nein | `beta.adobedc.net` |
 
-Die Domäne, die für die Interaktion mit Adobe Services verwendet wird. Dies wird nur verwendet, wenn Sie über eine Erstanbieter-Domäne (CNAME) verfügen, die Anforderungen an die Adobe Edge-Infrastruktur weiterleitet.
-
-### `errorsEnabled`
-
-| **Typ** | **Erforderlich** | **Standardwert** |
-| -------- | ------------ | ----------------- |
-| Boolesch | Nein | `true` |
-
-Gibt an, ob Fehler unterdrückt werden sollen. Wie unter [Befehle](executing-commands.md)ausführen beschrieben, werden _nicht abgefangene_ Fehler bei der Entwicklerkonsole protokolliert, unabhängig davon, ob das Debugging in Adobe Experience Platform Web SDK aktiviert ist. Durch Einstellung `errorsEnabled` auf `false`werden von Adobe Experience Platform Web SDK zurückgegebene Versprechen nie zurückgewiesen, obwohl Fehler weiterhin bei der Konsole protokolliert werden, wenn die Protokollierung in Adobe Experience Platform Web SDK aktiviert ist.
+Die Domäne, die für die Interaktion mit Adobe Services verwendet wird. Wird nur verwendet, wenn Sie über eine Erstanbieter-Domäne (CNAME) verfügen, die Anforderungen an die Adobe Edge-Infrastruktur weiterleitet.
 
 ### `orgId`
 
@@ -82,7 +77,7 @@ Gibt an, ob Fehler unterdrückt werden sollen. Wie unter [Befehle](executing-com
 | -------- | ------------ | ----------------- |
 | Zeichenfolge | Ja | Keine |
 
-Ihre zugewiesene Experience Cloud-Organisations-ID.  Beim Konfigurieren mehrerer Instanzen innerhalb einer Seite müssen Sie für jede Instanz eine andere `orgId` konfigurieren.
+Ihre zugewiesene Experience Cloud-Organisations-Kennung (ID).  Beim Konfigurieren mehrerer Instanzen innerhalb einer Seite müssen Sie für jede Instanz eine andere `orgId` konfigurieren.
 
 ## Datenerfassung
 
@@ -92,13 +87,13 @@ Ihre zugewiesene Experience Cloud-Organisations-ID.  Beim Konfigurieren mehrerer
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | `true` |
 
-Gibt an, ob mit Linkklicks verbundene Daten automatisch erfasst werden sollen. Für Klicks, die als Link-Klicks gelten, werden die folgenden [Webinteraktionsdaten](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) erfasst:
+Gibt an, ob mit Link-Klicks verbundene Daten automatisch erfasst werden sollen. Für Klicks, die als Link-Klicks gelten, werden die folgenden [Web-Interaktionsdaten](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) erfasst:
 
 | **Eigenschaft** |  |
 | ------------ | ----------------------------------- |
-| Link-Name | Durch den Linkkontext bestimmter Name |
+| Link-Name | Durch den Link-Kontext bestimmter Name |
 | Link-URL | Normalisierte URL |
-| Link-Typ | Auf Herunterladen, Beenden oder andere festlegen |
+| Link-Typ | Auf Herunterladen, Beenden oder Sonstiges festlegen |
 
 ### `onBeforeEventSend`
 
@@ -106,7 +101,7 @@ Gibt an, ob mit Linkklicks verbundene Daten automatisch erfasst werden sollen. F
 | -------- | ------------ | ----------------- |
 | Funktion | Nein | () => nicht definiert |
 
-Legen Sie dies fest, um einen Rückruf zu konfigurieren, der für jedes Ereignis kurz vor dem Senden aufgerufen wird.  Ein Objekt mit dem Feld `xdm` wird an den Rückruf gesendet.  Ändern Sie das xdm-Objekt, um die gesendeten Daten zu ändern.  Innerhalb des Rückrufs werden dem `xdm` Objekt bereits die Daten im Ereignis-Befehl und die automatisch erfassten Informationen übergeben.  Weitere Informationen zum Timing dieses Rückrufs und ein Beispiel finden Sie unter Globales [Ändern von Ereignissen](tracking-events.md#modifying-events-globally).
+Legen Sie dies fest, um einen Rückruf zu konfigurieren, der für jedes Ereignis kurz vor dem Senden aufgerufen wird.  Ein Objekt mit dem Feld `xdm` wird an den Rückruf gesendet.  Ändern Sie das XDM-Objekt, um die gesendeten Daten zu ändern.  Innerhalb des Rückrufs werden dem `xdm`-Objekt bereits die Daten im Ereignisbefehl und die automatisch erfassten Informationen übergeben.  Weitere Informationen zum Timing dieses Rückrufs und ein Beispiel finden Sie unter [Globale Änderung von Ereignissen](tracking-events.md#modifying-events-globally).
 
 ## Datenschutzoptionen
 
@@ -116,7 +111,7 @@ Legen Sie dies fest, um einen Rückruf zu konfigurieren, der für jedes Ereignis
 | -------- | ------------ | ----------------- |
 | Objekt | Nein | `{"general": "in"}` |
 
-Legt die Standardgenehmigung des Benutzers fest. Dies wird verwendet, wenn für den Benutzer noch keine Voreinstellung für die Zustimmung gespeichert wurde. Der andere gültige Wert ist `{"general": "pending"}`. Wenn dies festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Benutzer die Voreinstellungen für die Zustimmung eingibt. Nachdem die Voreinstellungen des Benutzers bereitgestellt wurden, wird die Arbeit entweder fortgesetzt oder basierend auf den Voreinstellungen des Benutzers abgebrochen. Weitere Informationen finden Sie unter [Unterstützende Zustimmung](supporting-consent.md) .
+Legt die Standardzustimmung des Nutzers fest. Wird verwendet, wenn für den Nutzer noch keine Voreinstellung für die Zustimmung gespeichert wurde. Der andere gültige Wert ist `{"general": "pending"}`. Wenn dies festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Nutzer die Zustimmungseinstellungen eingibt. Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit basierend auf den Voreinstellungen des Nutzers entweder fortgesetzt oder abgebrochen. Weitere Informationen finden Sie unter [Unterstützen von Zustimmung](supporting-consent.md).
 
 ## Personalisierungsoptionen
 
@@ -126,15 +121,15 @@ Legt die Standardgenehmigung des Benutzers fest. Dies wird verwendet, wenn für 
 | -------- | ------------ | ----------------- |
 | Zeichenfolge | Nein | Keine |
 
-Wird verwendet, um eine CSS-Stildefinition zu erstellen, die Inhaltsbereiche Ihrer Webseite ausblendet, während personalisierter Inhalt vom Server geladen wird. Wenn diese Option nicht bereitgestellt wird, versucht das SDK nicht, Inhaltsbereiche auszublenden, während personalisierte Inhalte geladen werden, was möglicherweise zu einem Flackern führt.
+Wird verwendet, um eine CSS-Stildefinition zu erstellen, die Inhaltsbereiche Ihrer Web-Seite ausblendet, während personalisierter Inhalt vom Server geladen wird. Wenn diese Option nicht bereitgestellt wird, versucht das SDK nicht, Inhaltsbereiche auszublenden, während personalisierte Inhalte geladen werden, was möglicherweise zu einem „Flackern“ führt.
 
-Wenn Sie z. B. ein Element auf Ihrer Webseite mit einer ID haben, `container` deren Standardinhalt Sie ausblenden möchten, während personalisierter Inhalt vom Server geladen wird, wäre ein Beispiel für einen Prähidierungsstil wie folgt:
+Wenn Sie z. B. ein Element auf Ihrer Web-Seite mit einer Kennung von `container` haben, dessen Standardinhalt Sie ausblenden möchten, während personalisierter Inhalt vom Server geladen wird, wäre ein Beispiel für einen Vorabausblendungsstil wie folgt:
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
 
-## Optionen für Audiencen
+## Optionen für Zielgruppen
 
 ### `cookieDestinationsEnabled`
 
@@ -168,7 +163,7 @@ Die Container-ID, die angibt, welche ID-Synchronisierungen ausgelöst werden. Di
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | `true` |
 
-Aktiviert die ID-Synchronisierungsfunktion, mit der URLs ausgelöst werden können, um die Adobe-Unique User-ID mit der Unique User-ID einer Drittanbieter-Datenquelle zu synchronisieren.
+Aktiviert die ID-Synchronisierungsfunktion, mit der URLs ausgelöst werden können, um die individuelle Adobe-Nutzerkennung mit der individuellen Nutzerkennung einer Drittanbieter-Datenquelle zu synchronisieren.
 
 ### `thirdPartyCookiesEnabled`
 
