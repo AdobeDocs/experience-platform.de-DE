@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '551'
 ht-degree: 2%
 
 ---
@@ -26,8 +26,10 @@ ht-degree: 2%
    - Werbung {#advertising}
       - [Google Ads Connector](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
+      - [Amazon Kinesis Connector](connectors/cloud-storage/kinesis.md)
       - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
       - [Azurblauch und Amazon S3-Stecker](connectors/cloud-storage/blob-s3.md)
+      - [Azurblauer Ereignis-Hubs-Anschluss](connectors/cloud-storage/eventhub.md)
       - [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- und SFTP-Anschluss](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
@@ -159,7 +161,8 @@ ht-degree: 2%
          - [Generischer OData Connector](tutorials/ui/create/protocols/odata.md)
    - Konfigurieren eines Datenflusses {#dataflow}
       - [Konfigurieren eines Datenflusses für einen Werbeanschluss](tutorials/ui/dataflow/advertising.md)
-      - [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector](tutorials/ui/dataflow/cloud-storage.md)
+      - [Konfigurieren eines Datenflusses für einen Batch Cloud-Datenspeicherung-Connector](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Konfigurieren eines Datenflusses für einen Streaming Cloud-Datenspeicherung-Connector](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [Konfigurieren eines Datenflusses für einen Datenbankanschluss](tutorials/ui/dataflow/databases.md)
       - [Konfigurieren eines Datenflusses für einen CRM-Connector](tutorials/ui/dataflow/crm.md)
       - [Konfigurieren eines Datenflusses für einen Kunden-Erfolgsstecker](tutorials/ui/dataflow/customer-success.md)
