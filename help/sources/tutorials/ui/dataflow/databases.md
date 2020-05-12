@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
+source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+workflow-type: tm+mt
+source-wordcount: '1049'
+ht-degree: 1%
 
 ---
 
@@ -31,9 +34,9 @@ Nach dem Erstellen des Datenbankconnectors wird der Schritt &quot;Daten ** ausw�
 - Die linke Hälfte der Oberfläche ist ein Browser, der die Liste der Datenbanken Ihres Kontos anzeigt.
 - In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen Vorschau werden.
 
-Wählen Sie die gewünschte Datenbank aus und klicken Sie auf **Weiter**.
+Wählen Sie die gewünschte Datenbank aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
-![](../../../images/tutorials/dataflow/databases/select-data-next.png)
+![](../../../images/tutorials/dataflow/databases/add-data.png)
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
@@ -43,33 +46,35 @@ Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. 
 
 ### Vorhandenen Datensatz verwenden
 
-Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot;Vorhandenen Datensatz **verwenden**&quot;und klicken Sie dann auf das Dataset-Symbol.
+Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot; **[!UICONTROL Vorhandener Datensatz]**&quot;und klicken Sie dann auf das Dataset-Symbol.
 
-![](../../../images/tutorials/dataflow/databases/use-existing-dataset.png)
+![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-Das Dialogfeld &quot;Datensatz _auswählen_ &quot;wird angezeigt. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **Weiter**.
+Das Dialogfeld &quot;Datensatz *[!UICONTROL auswählen]* &quot;wird angezeigt. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-![](../../../images/tutorials/dataflow/databases/select-dataset.png)
+![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
 ### Verwenden eines neuen Datensatzes
 
-Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen Datensatz **erstellen** &quot;und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein. Klicken Sie anschließend auf das Symbol Schema.
+Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot; **[!UICONTROL Neuer Datensatz]** &quot;und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein.
 
-![](../../../images/tutorials/dataflow/databases/use-new-dataset.png)
+Sie können ein Schema anhängen, indem Sie in der Suchleiste &quot;Schema **[!UICONTROL auswählen]** &quot;einen Schema eingeben. Sie können auch das Dropdownsymbol auswählen, um eine Liste der vorhandenen Schema anzuzeigen. Alternativ können Sie die **[!UICONTROL erweiterte Suche]** auswählen, um einen Bildschirm mit vorhandenen Schemas mit den entsprechenden Details anzuzeigen.
 
-Das Dialogfeld &quot;Schema _auswählen_ &quot;wird angezeigt. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **Fertig**.
+![](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-![](../../../images/tutorials/dataflow/databases/select-schema.png)
+Das Dialogfeld &quot;Schema[!UICONTROL auswählen] &quot;wird angezeigt. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
+
+![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
 Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weitere Informationen zu Funktionen für die Datenzuordnung und -zuordnung finden Sie im Lernprogramm zur [Zuordnung von CSV-Daten zu XDM-Schema-Feldern](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Nachdem Sie die Quelldaten zugeordnet haben, klicken Sie auf **Weiter**.
+Nachdem Sie die Quelldaten zugeordnet haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-![](../../../images/tutorials/dataflow/databases/mapping-data.png)
+![](../../../images/tutorials/dataflow/databases/mapping.png)
 
 ## Planen von Erfassungsabläufen
 
-Der Schritt *Planung* wird angezeigt, mit dem Sie einen Erfassungszeitplan konfigurieren können, um die ausgewählten Quelldaten automatisch mit den konfigurierten Zuordnungen zu erfassen. In der folgenden Tabelle sind die verschiedenen konfigurierbaren Felder für die Planung aufgeführt:
+Der Schritt *[!UICONTROL Planung]* wird angezeigt, mit dem Sie einen Erfassungszeitplan konfigurieren können, um die ausgewählten Quelldaten automatisch mit den konfigurierten Zuordnungen zu erfassen. In der folgenden Tabelle sind die verschiedenen konfigurierbaren Felder für die Planung aufgeführt:
 
 | Feld | Beschreibung |
 | --- | --- |
@@ -77,48 +82,35 @@ Der Schritt *Planung* wird angezeigt, mit dem Sie einen Erfassungszeitplan konfi
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Frequenz festlegt. |
 | Beginn | Ein UTC-Zeitstempel, bei dem die erste Erfassung erfolgt. |
 | Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die *Aufstockung* aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die *Aufstockung* deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der *Beginn* geladen wurden. Dateien, die vor dem *Beginn* geladen wurden, werden nicht erfasst. |
+| Delta-Spalte | Eine Option mit gefilterten Quelldatumsfeldern vom Typ, Schema oder Uhrzeit. Dieses Feld wird verwendet, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
 
-Datenflüsse sind so konzipiert, dass Daten auf planmäßiger Basis automatisch erfasst werden. Wenn Sie nur einmal über diesen Arbeitsablauf erfassen möchten, können Sie dies tun, indem Sie die **Häufigkeit** auf &quot;Tag&quot;konfigurieren und eine sehr große Zahl für das **Intervall**, z. B. 10000 oder Ähnliches, anwenden.
+Datenflüsse sind so konzipiert, dass Daten auf planmäßiger Basis automatisch erfasst werden. Wenn Sie nur einmal über diesen Arbeitsablauf erfassen möchten, können Sie dies tun, indem Sie die **[!UICONTROL Häufigkeit]** auf &quot;Tag&quot;konfigurieren und eine sehr große Zahl für das **[!UICONTROL Intervall]**, z. B. 10000 oder Ähnliches, anwenden.
 
-Geben Sie Werte für den Zeitplan ein und klicken Sie auf **Weiter**.
+Geben Sie Werte für den Zeitplan ein und wählen Sie **[!UICONTROL Weiter]**.
 
-![](../../../images/tutorials/dataflow/databases/scheduling.png)
+![](../../../images/tutorials/dataflow/databases/schedule.png)
 
 ## Benennen des Datenflusses
 
-Der Schritt zum *Namensfluss* wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenflug angeben müssen. Klicken Sie auf Weiter, wenn Sie fertig sind.&quot;
+Der Schritt *[!UICONTROL für die Datenflug-Details]* wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenflug angeben müssen. Wählen Sie **[!UICONTROL Weiter]** , wenn Sie fertig sind.
 
-![](../../../images/tutorials/dataflow/databases/name-flow.png)
+![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
 ## Überprüfen Sie Ihren Datenfluss
 
-Der *Schritt zum Überprüfen* wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
+Der *[!UICONTROL Schritt zum Überprüfen]* wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
 
-- *Verbindungsdetails*: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
-- *Zuordnungsdetails*: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
-- *Details* planen: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmeplans an.
+- *Verbindung*: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
+- *Zuweisen von Dataset- und Zuordnungsfeldern*: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
+- *Planung*: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmeplans an.
 
-Klicken Sie nach Überprüfung des Datenflusses auf **Fertig stellen** und lassen Sie die Erstellung des Datenflusses etwas Zeit.
+Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen]** und lassen Sie die Erstellung des Datenflusses etwas Zeit.
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
 ## Überwachen des Datenflusses
 
-Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Gehen Sie wie folgt vor, um auf den DataSet-Monitor eines Datenflusses zuzugreifen.
-
-Klicken Sie im Arbeitsbereich &quot; _Quellen_ &quot;auf die Registerkarte &quot; **Durchsuchen** &quot;, um Ihre Basisverbindungen Liste. Suchen Sie in der angezeigten Liste nach der Verbindung, die den zu überwachenden Datendurchlauf enthält, indem Sie auf dessen Namen klicken.
-
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
-
-Der Bildschirm &quot; *Quell-Aktivität* &quot;wird angezeigt. Klicken Sie von hier auf den Namen des Datensatzes, dessen Aktivität Sie überwachen möchten.
-
-![](../../../images/tutorials/dataflow/databases/select-dataflow-dataset.png)
-
-Der Bildschirm &quot; *Aktivität* des Datensatzes&quot;wird angezeigt. Diese Seite zeigt die Rate der Nachrichten an, die in Form eines Diagramms konsumiert werden.
-
-![](../../../images/tutorials/dataflow/databases/dataset-activity.png)
-
-Weitere Informationen zur Überwachung von Datensätzen und zur Erfassung finden Sie im Lernprogramm zur [Überwachung von Streaming-Datenflüssen](../../../../ingestion/quality/monitor-data-flows.md).
+Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Weitere Informationen zur Überwachung der Datenflüsse finden Sie im Lernprogramm zu [Konten und Datenflüssen](../monitor.md).
 
 ## Nächste Schritte
 
@@ -135,13 +127,13 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit Q
 
 Beim Erstellen eines Datenflusses wird dieser sofort aktiv und erfasst Daten gemäß dem festgelegten Zeitplan. Sie können einen aktiven Datenfeed jederzeit deaktivieren, indem Sie die unten stehenden Anweisungen befolgen.
 
-Klicken Sie im Arbeitsbereich &quot; _Quellen_ &quot;auf die Registerkarte &quot; **Durchsuchen** &quot;. Klicken Sie anschließend auf den Namen der Basisverbindung, die mit dem zu deaktivierenden Datenfeed verknüpft ist.
+Wählen Sie im Arbeitsbereich &quot; *[!UICONTROL Quellen]* &quot;die Registerkarte &quot; **[!UICONTROL Datenflüsse]** &quot;aus. Wählen Sie als Nächstes den Datenflug aus, den Sie deaktivieren möchten.
 
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
+![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-Die Seite &quot; _Quellseite_ &quot;wird angezeigt. Wählen Sie den aktiven Datenfluss aus der Liste aus, um die Spalte &quot; *Eigenschaften* &quot;auf der rechten Seite des Bildschirms mit der Schaltfläche &quot; **Aktiviert** &quot;zu öffnen. Klicken Sie auf den Umschalter, um den Datenflug zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenflug nach dessen Deaktivierung erneut zu aktivieren.
+Die Spalte &quot; *Eigenschaften* &quot;wird auf der rechten Seite des Bildschirms angezeigt, einschließlich der Schaltfläche &quot; **[!UICONTROL Aktiviert]** &quot;. Wählen Sie den Umschalter aus, um den Datenflug zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenflug nach dessen Deaktivierung erneut zu aktivieren.
 
-![](../../../images/tutorials/dataflow/databases/toggle-enabled.png)
+![](../../../images/tutorials/dataflow/databases/disable.png)
 
 ### Aktivieren von Eingangsdaten für die Profil-Population
 
