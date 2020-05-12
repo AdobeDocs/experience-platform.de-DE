@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Erfassen von Cloud-Datenspeicherung-Daten über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4309d668acf43a237648b405973ebd0701b6f977
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+workflow-type: tm+mt
+source-wordcount: '1489'
+ht-degree: 2%
 
 ---
 
@@ -19,12 +22,12 @@ Für dieses Lernprogramm ist es erforderlich, dass Sie über eine gültige Basis
 
 Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten der Adobe Experience Platform verstehen:
 
-* [Erlebnis-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Zusammensetzung](../../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
-   * [Entwicklerhandbuch](../../../../xdm/api/getting-started.md)zur Schema-Registrierung: Enthält wichtige Informationen, die Sie zur erfolgreichen Durchführung von Aufrufen der Schema Registry API kennen müssen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
-* [Katalogdienst](../../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie in der Experience Platform.
-* [Stapelverarbeitung](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch Ingestion API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
-* [Sandboxen](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Erlebnis-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+   - [Grundlagen der Zusammensetzung](../../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
+   - [Entwicklerhandbuch](../../../../xdm/api/getting-started.md)zur Schema-Registrierung: Enthält wichtige Informationen, die Sie zur erfolgreichen Durchführung von Aufrufen der Schema Registry API kennen müssen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
+- [Katalogdienst](../../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie in der Experience Platform.
+- [Stapelverarbeitung](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch Ingestion API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
+- [Sandboxen](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der Flow Service API eine Verbindung zu einer Cloud-Datenspeicherung herstellen zu können.
 
@@ -36,17 +39,17 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
-* Genehmigung: Träger `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+- Genehmigung: Träger `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
 Alle Ressourcen in Experience Platform, einschließlich derer, die zu Flow Service gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein zusätzlicher Medientyp-Header erforderlich:
 
-* Content-Type: `application/json`
+- Content-Type: `application/json`
 
 ## Erstellen einer Ad-hoc-XDM-Klasse und eines Ad-hoc-Schemas
 
@@ -456,7 +459,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
 }
 ```
 
-## Spezifikationen zum Nachschlagen von Datenblättern {#specs}
+## Datennachrichtenspezifikationen abrufen {#specs}
 
 Ein Datennachweis ist dafür verantwortlich, Daten aus Quellen zu sammeln und sie in Plattform zu bringen. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, die für die Erfassung von Cloud-Datenspeicherung-Daten zuständig sind.
 
@@ -575,10 +578,10 @@ Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation 
 
 Der letzte Schritt zur Erfassung von Cloud-Datenspeicherung-Daten besteht darin, einen Datenflug zu erstellen. Jetzt haben Sie die folgenden erforderlichen Werte vorbereitet:
 
-* [Quell-Verbindungs-ID](#source)
-* [Zielgruppen-Verbindungs-ID](#target)
-* [Mapping-ID](#mapping)
-* [Dataflow-Spezifikation-ID](#specs)
+- [Quell-Verbindungs-ID](#source)
+- [Zielgruppen-Verbindungs-ID](#target)
+- [Mapping-ID](#mapping)
+- [Dataflow-Spezifikation-ID](#specs)
 
 Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
@@ -653,5 +656,21 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses zur
 
 In diesem Lernprogramm haben Sie einen Quell-Connector erstellt, um Daten aus Ihrer Cloud-Datenspeicherung planmäßig zu erfassen. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
-* [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
+- [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
+- [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
+
+## Anhang
+
+Im folgenden Abschnitt werden die verschiedenen Cloud-Datenspeicherung-Quellschnittstellen und deren Verbindungsspezifikationen Liste.
+
+### Verbindungsspezifikation
+
+| Connector-Name | Verbindungsspezifikation |
+| -------------- | --------------- |
+| Amazon S3 (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
+| Amazon-Kinesis (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
+| Azurblut (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| AUS Data Lake Datenspeicherung Gen2 (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| Azurblauer Ereignis Hubs (EventHub) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| Google Cloud-Datenspeicherung | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
