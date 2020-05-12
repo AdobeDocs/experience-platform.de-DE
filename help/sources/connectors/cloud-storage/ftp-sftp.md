@@ -4,18 +4,21 @@ solution: Experience Platform
 title: FTP- und SFTP-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: ca3d2e7ac6d32b71e19e150f301f21b2d87c08ad
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
 # FTP- und SFTP-Anschluss
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, Google Cloud Platform und Azurblase. Sie können Ihre Daten aus diesen Systemen in Plattform übertragen.
 
-Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in die Plattform übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird über die Benutzeroberfläche in den Sources-Workflow integriert. Zu den Cloud-Datenspeicherung-Anbietern zählen FTP- und SFTP-Server.
+Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in die Plattform übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. Mit der Plattform können Sie Daten von einem FTP- oder SFTP-Server in Batches importieren.
 
-In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen FTP- oder SFTP-Server mit einer Plattform verbinden:
+In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen FTP- oder STFP-Server mit Platform verbinden:
 
 ## Verbinden von FTP und SFTP mit Plattform mithilfe von APIs
 
@@ -26,4 +29,4 @@ In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mithilfe v
 ## Verbinden von FTP oder SFTP mit Plattform mithilfe der Benutzeroberfläche
 
 - [Erstellen eines FTP- oder SFTP-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
