@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adapterkabel für die Datenspeicherung
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -29,4 +29,4 @@ Die nachstehende Dokumentation enthält Informationen zum Verbinden der Datenspe
 ## Verbinden Sie die Datenspeicherung der Azurblase-Datei mit der Plattform mithilfe der Benutzeroberfläche
 
 - [Erstellen eines Azurblase-Datenspeicherung-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
