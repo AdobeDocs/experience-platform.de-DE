@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Data Lake Datenspeicherung Gen2-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 065076aee83990bcad0110f0d7704a60fac400c6
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '571'
+ht-degree: 2%
 
 ---
 
@@ -43,7 +46,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -57,89 +60,9 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindungsspezifikationen nachschlagen
+## Verbindung erstellen
 
-Bevor Sie die Plattform mit ADLS Gen2 verbinden, müssen Sie sicherstellen, dass die Verbindungsspezifikationen für ADLS Gen2 vorhanden sind. Wenn keine Verbindungsspezifikationen vorhanden sind, kann keine Verbindung hergestellt werden.
-
-Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Sie können die Verbindungsspezifikationen für ADLS Gen2 nachschlagen, indem Sie eine GET-Anforderung ausführen und Abfragen-Parameter verwenden.
-
-**API-Format**
-
-Beim Senden einer GET-Anforderung ohne Abfrage-Parameter werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können die Abfrage einbeziehen, Informationen speziell für ADLS Gen2 `property=name=="adls-gen2"` zu erhalten.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="adls-gen2"
-```
-
-**Anfrage**
-
-Die folgende Anforderung ruft die Verbindungsspezifikationen für ADLS Gen2 ab.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="adls-gen2"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für ADLS Gen2 einschließlich der eindeutigen Kennung (`id`) zurück. Diese ID ist im nächsten Schritt erforderlich, um eine Basisverbindung zu erstellen.
-
-```json
-{
-    "items": [
-        {
-            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
-            "name": "adls-gen2",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for adls-gen2",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to adlsgen2 using service principal",
-                        "properties": {
-                            "url": {
-                                "type": "string",
-                                "description": "Endpoint for Azure Data Lake Storage Gen2."
-                            },
-                            "servicePrincipalId": {
-                                "type": "string",
-                                "description": "Service Principal Id to connect to ADLSGen2."
-                            },
-                            "servicePrincipalKey": {
-                                "type": "string",
-                                "description": "Service Principal Key to connect to ADLSGen2.",
-                                "format": "password"
-                            },
-                            "tenant": {
-                                "type": "string",
-                                "description": "Tenant information(domain name or tenant ID)."
-                            }
-                        },
-                        "required": [
-                            "url",
-                            "servicePrincipalId",
-                            "servicePrincipalKey",
-                            "tenant"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Basisverbindung erstellen
-
-Eine Basisverbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro ADLS Gen2-Konto ist nur eine Basisverbindung erforderlich, da diese zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro ADLS Gen2-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -159,7 +82,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "adls-gen2",
-        "description": "base connection for adls-gen2",
+        "description": "Connection for adls-gen2",
         "auth": {
             "specName": "Basic Authentication for adls-gen2",
             "params": {
@@ -182,11 +105,11 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | Die Dienstprinzips-ID Ihres ADLS Gen2-Kontos. |
 | `auth.params.servicePrincipalKey` | Der Hauptschlüssel des Dienstes Ihres ADLS Gen2-Kontos. |
 | `auth.params.tenant` | Die Mietinformationen Ihres ADLS Gen2-Kontos. |
-| `connectionSpec.id` | Die Verbindungsspezifikation `id` Ihres ADLS Gen2-Kontos, die im vorherigen Schritt abgerufen wurde. |
+| `connectionSpec.id` | Die ADLS Gen2-Verbindungs-ID: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Diese ID ist erforderlich, um im nächsten Schritt Ihre Cloud-Datenspeicherung zu untersuchen.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um im nächsten Schritt Ihre Cloud-Datenspeicherung zu untersuchen.
 
 ```json
 {
