@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Azurblauch und Amazon S3-Stecker
 topic: overview
 translation-type: tm+mt
-source-git-commit: ca3d2e7ac6d32b71e19e150f301f21b2d87c08ad
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '193'
+ht-degree: 0%
 
 ---
 
 
 # Azurblauch und Amazon S3-Stecker
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, Google Cloud Platform und Azurblase. Sie können Ihre Daten aus diesen Systemen in Plattform übertragen.
 
-Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in die Plattform übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird über die Benutzeroberfläche in den Sources-Workflow integriert. Zur Unterstützung von Cloud-Datenspeicherung-Anbietern gehören Azurblauch und Amazon S3.
+Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in die Plattform übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. Mit der Plattform können Sie Daten aus dem Azurblut und S3 durch Stapel einbringen.
 
 In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung von Azurblb und S3 mit der Plattform herstellen:
 
@@ -27,4 +30,4 @@ In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs o
 ## Verbindung von Blob und S3 zur Plattform mithilfe der Benutzeroberfläche
 
 - [Erstellen eines Azurblauch- oder Amazon S3-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob-s3.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
