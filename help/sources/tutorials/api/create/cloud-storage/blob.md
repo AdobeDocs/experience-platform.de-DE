@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Azurblauch-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5c9bc1ec9170e4971a7d693038d12315aca616d5
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 2%
 
 ---
 
@@ -56,73 +59,9 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindungsspezifikationen nachschlagen
+## Verbindung erstellen
 
-Bevor Sie die Plattform mit einer Blob-Datenspeicherung verbinden, müssen Sie sicherstellen, dass die Verbindungsspezifikationen für Blob vorhanden sind. Wenn keine Verbindungsspezifikationen vorhanden sind, kann keine Verbindung hergestellt werden.
-
-Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Sie können die Verbindungsspezifikationen für Blob nachschlagen, indem Sie eine GET-Anforderung ausführen und Abfragen-Parameter verwenden.
-
-**API-Format**
-
-Beim Senden einer GET-Anforderung ohne Abfrage-Parameter werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können die Abfrage einbeziehen, um Informationen speziell für Blob `property=name=="azure-blob"` zu erhalten.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="azure-blob"
-```
-
-**Anfrage**
-
-Die folgende Anforderung ruft die Verbindungsspezifikationen für Blob ab.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="azure-blob"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für Blob einschließlich der eindeutigen Kennung (`id`) zurück. Diese ID ist im nächsten Schritt erforderlich, um eine Basisverbindung zu erstellen.
-
-```json
-{
-    "items": [
-        {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "name": "azure-blob",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "ConnectionString",
-                    "type": "ConnectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Basisverbindung erstellen
-
-Eine Basisverbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Blob-Konto ist nur eine Basisverbindung erforderlich, da diese zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Blob-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -141,8 +80,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Blob Base Connection",
-        "description": "Base connection for an Azure Blob account",
+        "name": "Blob Connection",
+        "description": "Cnnection for an Azure Blob account",
         "auth": {
             "specName": "ConnectionString",
             "params": {
@@ -159,11 +98,11 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge für Ihre Blob-Datenspeicherung. |
-| `connectionSpec.id` | Die Verbindungsspezifikation `id` der Blob-Datenspeicherung, die im vorherigen Schritt abgerufen wurde. |
+| `connectionSpec.id` | Verbindungs-ID der Blob Datenspeicherung: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Diese ID ist erforderlich, um Ihre Datenspeicherung im nächsten Lernprogramm zu untersuchen.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Datenspeicherung im nächsten Lernprogramm zu untersuchen.
 
 ```json
 {
