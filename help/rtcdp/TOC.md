@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 42%
+source-wordcount: '439'
+ht-degree: 38%
 
 ---
 
@@ -76,7 +76,9 @@ ht-degree: 42%
       * Cloud-Speicher-Ziele {#cloud-storage}
          * [Übersicht über die Cloud-Speicher-Ziele](destinations/cloud-storage-destinations.md)
          * [Workflow zum Erstellen von Cloud-Speicher-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+         * [Amazon-Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3-Ziel](destinations/amazon-s3-destination.md)
+         * [Azurblauer EventHubs-Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP-Ziel](destinations/sftp-destination.md)
       * Ziele der Data Management Platform {#dmp-destinations}
          * [Data Management Platform - Ziele - Übersicht](destinations/dmp-destinations.md)
@@ -120,9 +122,12 @@ ht-degree: 42%
          * [Invoca Tags Extension](/help/rtcdp/destinations/invoca-extension.md)
          * [Medallia-Erweiterung](destinations/medallia-extension.md)
          * [Talk URL Inbox Extension](destinations/talkurl-extension.md)
-   * Tutorials zu Zielen {#dest-tutorials}
+   * Übungen zur Benutzeroberfläche &quot;Ziele&quot; {#dest-tutorials}
       * [Mit Ziel verbinden](/help/rtcdp/destinations/connect-destination.md)
       * [Profile und Segmente für ein Ziel aktivieren](destinations/activate-destinations.md)
+   * Ziel-API-Tutorials {API-Tutorials}
+      * [Verbindung zu Streaming-Zielen (AWS Kinesis und Azurblase Ereignis Hubs) und Aktivierung von Daten](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Verbindungen zu E-Mail-Marketingzielen herstellen und Daten aktivieren](/help/tutorials/destinations/email-marketing-api.md)
 * Datenschutz und Data Governance {#privacy}
    * [Datenschutz – Übersicht](privacy/privacy-overview.md)
    * [Data Governance – Übersicht](privacy/data-governance-overview.md)
