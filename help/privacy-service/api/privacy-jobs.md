@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Aufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+workflow-type: tm+mt
+source-wordcount: '1669'
+ht-degree: 2%
 
 ---
 
 
 # Datenschutzaufträge
 
-In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des Stamm-Endpunkts (`/`) in der Datenschutzdienst-API tätigen können. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranforderung mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mit dem `/jobs` Endpunkt in der Datenschutzdienst-API durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranforderung mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-## Erstellen eines Datenschutzauftrags
+## Erstellen eines Datenschutzauftrags {#create-job}
 
 Bevor Sie eine neue Auftragsanforderung erstellen, müssen Sie zunächst identifizierende Informationen zu den betroffenen Personen erfassen, deren Daten Sie aufrufen, löschen oder Opt-out verkaufen möchten. Sobald Sie über die erforderlichen Daten verfügen, müssen diese in der Payload einer POST-Anforderung an den Stamm-Endpunkt bereitgestellt werden.
 
@@ -33,7 +36,7 @@ In diesem Abschnitt wird gezeigt, wie mithilfe der API eine Anfrage zum Zugriff/
 **API-Format**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Anfrage**
@@ -157,7 +160,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Aufträge zurück.
 | --- | --- |
 | `jobId` | Eine schreibgeschützte, eindeutige, systemgenerierte ID für einen Auftrag. Dieser Wert wird im nächsten Schritt der Suche nach einem bestimmten Auftrag verwendet. |
 
-Nachdem Sie die Auftragsanforderung erfolgreich gesendet haben, können Sie mit dem nächsten Schritt zur [Überprüfung des Auftragsstatus](#check-the-status-of-a-job)fortfahren.
+Nachdem Sie die Auftragsanforderung erfolgreich gesendet haben, können Sie mit dem nächsten Schritt zur [Überprüfung des Auftragsstatus](#check-status)fortfahren.
 
 ### Erstellen eines Abmeldeauftrags {#opt-out}
 
@@ -166,7 +169,7 @@ In diesem Abschnitt wird gezeigt, wie eine Anforderung zum Ausschluss vom Verkau
 **API-Format**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Anfrage**
@@ -281,7 +284,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Aufträge zurück.
 
 Nachdem Sie die Auftragsanforderung erfolgreich gesendet haben, können Sie mit dem nächsten Schritt zur Überprüfung des Auftragsstatus fortfahren.
 
-## Status eines Auftrags überprüfen
+## Status eines Auftrags überprüfen {#check-status}
 
 Mithilfe eines der im vorherigen Schritt zurückgegebenen `jobId` Werte können Sie Informationen zu diesem Auftrag abrufen, z. B. den aktuellen Verarbeitungsstatus.
 
@@ -290,12 +293,12 @@ Mithilfe eines der im vorherigen Schritt zurückgegebenen `jobId` Werte können 
 **API-Format**
 
 ```http
-GET /{JOB_ID}
+GET /jobs/{JOB_ID}
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{JOB_ID}` | Die ID des Auftrags, den Sie nachschlagen möchten, wird `jobId` in der Antwort des [vorherigen Schritts](#create-a-job-request)zurückgegeben. |
+| `{JOB_ID}` | Die ID des Auftrags, den Sie nachschlagen möchten, wird `jobId` in der Antwort des [vorherigen Schritts](#create-job)zurückgegeben. |
 
 **Anfrage**
 
@@ -391,10 +394,10 @@ Sie können eine Liste aller in Ihrem Unternehmen verfügbaren Auftragsanfragen 
 Dieses Anforderungsformat verwendet einen Parameter für die `regulation` Abfrage am Stamm-Endpunkt (`/`). Daher beginnt es mit einem Fragezeichen (`?`), wie unten dargestellt. Die Antwort wird paginiert, sodass Sie andere Abfragen (`page` und `size`) verwenden können, um die Antwort zu filtern. Sie können mehrere Parameter mithilfe von Ampersands (`&`) trennen.
 
 ```http
-GET ?regulation={REGULATION}
-GET ?regulation={REGULATION}&page={PAGE}
-GET ?regulation={REGULATION}&size={SIZE}
-GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 ```
 
 | Parameter | Beschreibung |
