@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK – Rendern von personalisiertem In
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 translation-type: tm+mt
-source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
+source-git-commit: 938e0e56111c96f6b0b378c9e14fb92af70c5e10
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 40%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
 >
 >Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
-Das Adobe Experience Platform Web SDK unterstützt die Abfrage der Personalisierungslösungen bei Adobe einschließlich Adobe Zielgruppe. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](managing-flicker.md).
+Das Adobe Experience Platform Web SDK unterstützt die Abfrage der Personalisierungslösungen bei Adobe einschließlich Adobe Zielgruppe. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../../edge/solution-specific/target/flicker-management.md).
 
 ## Inhalt automatisch wiedergeben
 
