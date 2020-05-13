@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Übersicht über die Datenverwendung
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
+source-git-commit: 4b6b9ca5ae7861f8e8b974550be14fbce6efdcf1
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -22,6 +25,14 @@ Mit Datenverwendungsbeschriftungen können Sie Datensätze und Felder entspreche
 Datenverwendungsbeschriftungen, die auf Datensatzebene angewendet werden, werden auf alle Felder im Datensatz übertragen. Bezeichnungen können auch direkt auf einzelne Felder (Spaltenüberschriften) in einem Datensatz angewendet werden, ohne dass eine Weitergabe erfolgt.
 
 Weitere Informationen zu den verfügbaren Datenverwendungsbeschriftungen in Experience Platform und den Verwendungsrichtlinien, die sie darstellen, finden Sie im Handbuch zu den [unterstützten Datenverwendungsbeschriftungen](reference.md).
+
+## Beschriftungsvererbung für Audiencen
+
+Alle vom [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) erstellten Segmentsegmente übernehmen die Gebrauchsbeschriftungen der zugehörigen Datensätze. Auf diese Weise können auf der Experience Platform aufbauende Anwendungen (wie z. B. Echtzeit-Kundendatenplattform) eine automatische Durchsetzung der Datenverwendungsrichtlinien bei der Aktivierung von Segmenten an Ziele bereitstellen.
+
+Neben der Vererbung von Bezeichnungen auf Datensatzebene übernehmen Segmente standardmäßig alle Bezeichnungen auf Feldebene aus den zugehörigen Datensätzen. Je nachdem, wie Ihre plattformbasierte Anwendung Segmente verbraucht, können Sie potenziell angeben, welche Felder verwendet werden, wodurch verhindert wird, dass das Segment Beschriftungen aus ausgeschlossenen Feldern erbt.
+
+Weitere Informationen zur Funktionsweise der automatischen Datendurchsetzung in Echtzeit-CDP finden Sie in der Übersicht zur [Echtzeit-Datenverwaltung](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
 ## Nächste Schritte
 
