@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
@@ -27,11 +27,11 @@ Die Dokumentation zu Experience Platform wird für eine Vielzahl von Funktionen 
 
 >[!NOTE]
 >
->Ab Mai 2020 wird die Domäne und die Kopfzeilenleiste von Adobe aktualisiert, um Ihre Erfahrung in allen Experience Cloud-Anwendungen zu vereinheitlichen und zu verbessern. Dazu gehört ein neues Hilfemenü. Das neue Hilfemenü umfasst Folgendes:
+>Ab Mai 2020 stellt Adobe Updates für die Domäne und Kopfzeilenleiste bereit, um Ihr Erlebnis in allen Experience Cloud-Anwendungen zu vereinheitlichen und zu verbessern. Dazu gehört ein neues Hilfemenü. Das neue Hilfemenü umfasst Folgendes:
 >
 >* Links zu Artikeln mit besonderen Merkmalen
 >* Kontextrelevante Dokumentationsempfehlungen
->* Feedback zu Dokumentation- und Berichtproblemen geben
+>* Die Möglichkeit, Feedback zu Problemen mit der Experience Plattform und Berichten zu geben
 >* Verbesserte Suchergebnisse, die auch Ergebnisse aus Community-Foren und Videoinhalten enthalten.
 >
 > 
