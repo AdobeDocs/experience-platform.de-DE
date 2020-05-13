@@ -3,15 +3,19 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform  – Versionshinweise
 translation-type: tm+mt
-source-git-commit: fa1c78ff7d9fd682d93e1feae510fc1823f2d998
+source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+workflow-type: tm+mt
+source-wordcount: '22'
+ht-degree: 95%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise {#release-notes}
 
-* [April 2020](latest/latest.md)
-* [&amp;#x200B;. März 2020](2020/march-2020.md)
+* [Mai 2020](latest/latest.md)
+* [April 2020](2020/april-2020.md)
+* [März 2020](2020/march-2020.md)
 * [Februar 2020](2020/february-2020.md)
 * [Januar 2020](2020/january-2020.md)
 * 2019 {#2019}
