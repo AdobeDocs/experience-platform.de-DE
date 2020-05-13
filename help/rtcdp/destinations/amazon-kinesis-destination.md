@@ -4,15 +4,20 @@ seo-title: Amazon-Kinesis-Ziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon-Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon-Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 5%
+source-wordcount: '446'
+ht-degree: 6%
 
 ---
 
 
-# Amazon-Kinesis-Ziel
+# (Beta) Amazon Kinesis-Ziel
+
+
+>[!IMPORTANT]
+>
+>Das [!DNL Amazon Kinesis] Ziel in Adobe Echtzeit-CDP befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
 
 ## Übersicht {#overview}
 
@@ -21,7 +26,7 @@ Mit dem [!DNL Kinesis Data Streams] Dienst von Amazon Web Services können Sie g
 Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Amazon Kinesis] Datenspeicherung erstellen, um Daten von Adobe Experience Platform zu streamen.
 
 * Weitere Informationen finden Sie [!DNL Amazon Kinesis]in der [Amazon-Dokumentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* Informationen zum Herstellen einer Verbindung mit [!DNL Amazon Kinesis] API-Aufrufen finden Sie im [Streaming-Ziel-API-Lernprogramm].
+* Informationen zum Herstellen einer Verbindung mit [!DNL Amazon Kinesis] API-Aufrufen finden Sie im [Streaming-Ziel-API-Lernprogramm](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * Informationen zum Herstellen einer Verbindung mit der [!DNL Amazon Kinesis] CDP-Benutzeroberfläche von Adobe in Echtzeit finden Sie in den folgenden Abschnitten.
 
 ![Amazon-Kinesis in der Benutzeroberfläche](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -97,7 +102,7 @@ Ihre exportierten Experience Platform-Daten werden im JSON- [!DNL Amazon Kinesis
 
 >[!MORELIKETHIS]
 >
->* Link zum Amazon Kinesis API-Lernprogramm
+>* [Verbindung zur Amazon-Kinesis herstellen und Daten mithilfe von API-Aufrufen aktivieren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Azurblauer Ereignis Hubs Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md)
 
