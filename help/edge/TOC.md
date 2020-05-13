@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Network-Hilfe
 translation-type: tm+mt
-source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
+source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 74%
    * [Debugging](fundamentals/debugging.md)
    * [Interagieren mit mehreren Eigenschaften](fundamentals/interacting-with-multiple-properties.md)
    * [Rendern von personalisiertem Inhalt](fundamentals/rendering-personalization-content.md)
-   * [Verwalten des Flackerns](fundamentals/managing-flicker.md)
    * [Unterstützen von Zustimmung](fundamentals/supporting-consent.md)
    * [Unterstützung von In-App-Browsern](fundamentals/supporting-in-app-browsers.md)
    * [Identität](fundamentals/identity.md)
@@ -40,7 +39,8 @@ ht-degree: 74%
    * Audience Manager {#aam}
       * [Übersicht über Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
-      * [Übersicht über Zielgruppen](solution-specific/target/target-overview.md)
+      * [Übersicht über Target](solution-specific/target/target-overview.md)
+      * [Flimmern-Management](solution-specific/target/flicker-management.md)
 * Referenz {#ref}
    * [Automatisch erfasste Informationen](reference/automatic-information.md)
    * [Abrufen von Bibliotheksinformationen](reference/retrieving-library-information.md)
