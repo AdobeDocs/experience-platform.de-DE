@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Handbuch zum Echtzeit-Profil
 topic: guide
 translation-type: tm+mt
-source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+source-git-commit: 5718a3930f1e12e62a7bbe60f249c7f6f3434fa7
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '880'
 ht-degree: 3%
 
 ---
@@ -26,21 +26,17 @@ Dieses Benutzerhandbuch erfordert ein Verständnis der verschiedenen Experience 
 * [Identitätsdienst](../../identity-service/home.md): Ermöglicht Kunden-Profil in Echtzeit durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Plattform integriert werden.
 * [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 
-## Profil – Übersicht
+## Übersicht
 
-Klicken Sie in der Benutzeroberfläche [der](http://platform.adobe.com)Experience Platform im linken Navigationsbereich auf **Profile** , um die Registerkarte _Übersicht_ im Arbeitsbereich _Profile_ zu öffnen. Auf dieser Registerkarte werden verschiedene Widgets angezeigt, die allgemeine Informationen zum Profil-Store enthalten, darunter die gesamte adressierbare Audience, die Anzahl der in der letzten Woche erfassten Profil-Datensätze sowie Statistiken zu erfolgreichen und fehlgeschlagenen Datensätzen für den gleichen Zeitraum.
+Klicken Sie in der Benutzeroberfläche [der](http://platform.adobe.com)Experience Platform im linken Navigationsbereich auf **Profil** , um die Registerkarte _Übersicht_ zu öffnen. Diese Registerkarte enthält Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
 
-![](../images/user-guide/profile-overview.png)
+![](../images/user-guide/profiles-overview.png)
 
-## Beispiele für Ansicht Profil
+## Durchsuchen von Profilen
 
-Klicken Sie auf **Durchsuchen** , um eine Liste der verfügbaren Profil Ansicht. Dieses Beispiel umfasst bis zu 50 Profil Ihrer gesamten [Profil-Anzahl](#profile-count). Die Beispiele werden durch einen automatischen Auftrag aktualisiert, der neue Profil-Daten während der Erfassung abruft. Jedes aufgelistete Profil zeigt seine ID, seinen Vornamen, seinen Nachnamen und seine persönliche E-Mail-Adresse an. Wenn Sie auf die ID eines aufgelisteten Profils klicken, werden dessen Details im [Profil-Viewer](#profile-viewer)angezeigt.
+Klicken Sie auf die Registerkarte &quot; **Durchsuchen** &quot;, um nach Profilen nach Identitäten zu suchen. Auf dieser Registerkarte finden Sie auch die Gesamtzahl der [Profil](#profile-count).
 
-![](../images/user-guide/profile-samples.png)
-
-Sie können die in der Liste angezeigten Attribute anpassen, indem Sie auf das Symbol für die Spaltenauswahl klicken. Dadurch wird eine Dropdown-Liste mit allgemeinen Profil-Attributen angezeigt, die Sie hinzufügen oder entfernen können.
-
-![](../images/user-guide/column-selector.png)
+![](../images/user-guide/profiles-browse.png)
 
 ### Anzahl der Profil {#profile-count}
 
@@ -50,43 +46,53 @@ Die Profil-Anzahl umfasst auch Profil mit Attributen (Datensatzdaten) sowie Prof
 
 Wenn die Erfassung von Profilen im Profil Store die Anzahl um mehr als 5 % erhöht oder verringert, wird ein Auftrag zur Aktualisierung der Anzahl ausgelöst. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Anzahl der Profil zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
 
-![](../images/user-guide/profile-count.png)
+### Identitäts-Namensraum
 
-### Profil-Suche
+Mit der **Identitäts-Namensraum** -Auswahl wird ein Dialogfeld geöffnet, in dem Sie den Identitäts-Namensraum auswählen können, mit dem Sie suchen möchten, und die Attribute anpassen können, die bei der Suche angezeigt werden, indem Sie das Filtersymbol auswählen und festlegen, welche Attribute Sie hinzufügen oder entfernen möchten.
 
-Wenn Sie eine verknüpfte Identität für ein bestimmtes Profil kennen (z. B. seine E-Mail-Adresse), können Sie dieses Profil nachschlagen, indem Sie auf &quot; **Profil** suchen&quot;klicken. Dies ist die zuverlässigste Möglichkeit, auf ein bestimmtes Profil zuzugreifen, unabhängig davon, ob es in der Liste von Beispielen angezeigt wird.
+![](../images/user-guide/profiles-search-filter.png)
 
-![](../images/user-guide/find-a-profile.png)
+Wählen Sie im Dialogfeld &quot;Identitätsnamen ** auswählen&quot;den Namensraum aus, nach dem Sie suchen möchten, oder verwenden Sie die **Suchleiste** im Dialogfeld, um mit der Eingabe des Namens eines Namensraums zu beginnen. Sie können einen Namensraum auswählen, um weitere Details Ansicht. Sobald Sie den Namensraum gefunden haben, den Sie suchen möchten, können Sie das Optionsfeld auswählen und die **Auswahl** drücken, um fortzufahren.
 
-Wählen Sie im angezeigten Dialogfeld einen entsprechenden ID-Namensraum aus der Dropdown-Liste (&quot;E-Mail&quot; in diesem Beispiel) und geben Sie den ID-Wert unten ein, bevor Sie auf **OK** klicken. Wenn Sie die Informationen zum Targeting-Profil gefunden haben, werden diese wie im nächsten Abschnitt beschrieben im Profil-Viewer angezeigt.
+![](../images/user-guide/profiles-select-identity-namespace.png)
 
-![](../images/user-guide/find-a-profile-details.png)
+### Identitätswert
 
-### Profilansicht {#profile-viewer}
+Nach Auswahl eines **Identitäts-Namensraums** kehren Sie zur Registerkarte &quot; *Durchsuchen* &quot;zurück, auf der Sie einen **Identitätswert** eingeben können. Dieser Wert ist spezifisch für ein einzelnes Profil und muss ein gültiger Eintrag für den bereitgestellten Namensraum sein. Wenn Sie beispielsweise den **Identitäts-Namensraum** &quot;E-Mail&quot;auswählen, ist ein **Identitätswert** in Form einer gültigen E-Mail-Adresse erforderlich.
 
-Wenn Sie ein bestimmtes Profil auswählen oder suchen, wird der Bildschirm &quot; _Details_ &quot;des Profil-Viewers geöffnet. Auf dieser Seite finden Sie Informationen zum ausgewählten Profil, wie z. B. die Grundattribute des Profils, verknüpfte Identitäten und verfügbare Kanal. Die angezeigten Profil-Informationen wurden aus mehreren Profil-Fragmenten zusammengeführt, um eine Ansicht des jeweiligen Kunden zu bilden.
+![](../images/user-guide/profiles-show-profile.png)
 
-![](../images/user-guide/profile-viewer-detail.png)
+Nachdem ein Wert eingegeben wurde, wählen Sie &quot;Profil **anzeigen** &quot;und ein Profil, das dem Wert entspricht, wird zurückgegeben. Wählen Sie die **Profil-ID** aus, um die Details des Profils Ansicht.
 
-Der Profil-Viewer bietet außerdem Registerkarten, mit denen Sie mit diesem Profil verbundene Ereignis und Segmentmitgliedschaften, sofern vorhanden, Ansichten durchführen können.
+![](../images/user-guide/profiles-display-profile.png)
 
-![](../images/user-guide/profile-viewer-events-seg.png)
+### Profil
+
+Nach Auswahl der **Profil-ID** wird die Registerkarte &quot; _Details_ &quot;geöffnet. Auf dieser Seite finden Sie Informationen zum ausgewählten Profil, einschließlich Basisattribute, verknüpfte Identitäten und verfügbare Kanal. Die angezeigten Profil-Informationen wurden aus mehreren Profil-Fragmenten zusammengeführt, um eine Ansicht des jeweiligen Kunden zu bilden.
+
+![](../images/user-guide/profiles-profile-detail.png)
+
+Sie können zusätzliche Informationen zum Profil, einschließlich Attribute, Ereignis und Segmente, zu denen das Profil gehört, Ansicht leisten.
+
+![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Zusammenführungsrichtlinien
 
 Klicken Sie auf Richtlinien **zusammenführen** , um eine Liste der zu Ihrem Unternehmen gehörenden Zusammenführungsrichtlinien Ansicht. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, und das Schema, für das sie gilt.
 
-![](../images/user-guide/profile-merge-policies.png)
-
 Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien in der Benutzeroberfläche finden Sie im Benutzerhandbuch [](merge-policies.md)&quot;Richtlinien zusammenführen&quot;.
+
+![](../images/user-guide/profiles-merge-policies.png)
 
 ## Vereinigung Schema
 
-Klicken Sie auf **Vereinigung Schema** , um die Schema der Vereinigung für Ihren Profil-Datenspeicher Ansicht. Ein Vereinigung-Schema ist eine Zusammenführung aller Erlebnis-Datenmodellfelder (XDM) derselben Klasse, deren Schema für die Verwendung im Echtzeit-Customer-Profil aktiviert wurden. Klicken Sie auf eine Klasse in der linken Liste, um die Struktur des Schemas Vereinigung auf der Arbeitsfläche Ansicht.
+Klicken Sie auf **Vereinigung Schema** , um die Schema der Vereinigung für Ihren Profil Store Ansicht. Ein Vereinigung-Schema ist eine Zusammenführung aller Erlebnis-Datenmodellfelder (XDM) derselben Klasse, deren Schema für die Verwendung im Echtzeit-Customer-Profil aktiviert wurden. Klicken Sie auf eine Klasse in der linken Liste, um die Struktur des Schemas &quot;Vereinigung&quot;auf der Arbeitsfläche Ansicht.
 
-![](../images/user-guide/profile-union-schema.png)
+Wenn Sie beispielsweise &quot;XDM-Profil&quot;auswählen, wird das Schema &quot;Vereinigung&quot;für die XDM-Klasse für individuelles Profil angezeigt.
 
 Weitere Informationen zu Schemas der Vereinigung und ihrer Rolle im Echtzeit-Profil finden Sie im Abschnitt zu Schemas zur Vereinigung im [Schema-Kompositionshandbuch](../../xdm/schema/composition.md) .
+
+![](../images/user-guide/profiles-union-schema.png)
 
 ## Nächste Schritte
 
