@@ -1,25 +1,35 @@
 ---
-title: Ziele der Cloud-Datenspeicherung
-seo-title: Ziele der Cloud-Datenspeicherung
-description: Mit Adobe Echtzeit-CDP können Sie Ihre Segmente als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte senden. In den folgenden Versionen werden wir weitere Cloud-Datenspeicherung-Ziele hinzufügen.
-seo-description: Mit Adobe Echtzeit-CDP können Sie Ihre Segmente als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte senden. In den folgenden Versionen werden wir weitere Cloud-Datenspeicherung-Ziele hinzufügen.
+title: Cloud-Speicher-Ziele
+seo-title: Cloud-Speicher-Ziele
+description: Mit Adobe Echtzeit-CDP können Sie Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azurblauen Ereignis-Hubs- oder SFTP-Cloud-Datenspeicherung-Standorte senden.
+seo-description: Mit Adobe Echtzeit-CDP können Sie Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azurblauen Ereignis-Hubs- oder SFTP-Cloud-Datenspeicherung-Standorte senden.
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 34%
 
 ---
 
 
-# Ziele der Cloud-Datenspeicherung {#cloud-storage-destinations}
+# Cloud-Speicher-Ziele {#cloud-storage-destinations}
 
-Mit Adobe Echtzeit-CDP können Sie Ihre Segmente als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte senden. Auf diese Weise können Sie Audiencen und deren Profil-Attribute über CSV- oder tabulatorgetrennte Dateien an Ihre internen Systeme senden.
+Adobe Echtzeit-CDP kann Ihre Segmente als Datendateien an Ihre Cloud-Datenspeicherung-Speicherorte liefern. Auf diese Weise können Sie Audiencen und deren Profil-Attribute über CSV- oder tabulatorgetrennte Dateien für Amazon S3 und SFTP an Ihre internen Systeme senden. Für AWS Kinesis- und Azurblase Ereignis Hubs-Ziele werden Daten aus Experience Platform im JSON-Format übertragen.
 
-![Adobe Cloud-Datenspeicherung-Ziele](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
+![Adobe-Cloud-Speicher-Ziele](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 
-Adobe Echtzeit-CDP unterstützt derzeit zwei Cloud-Datenspeicherung-Ziele - [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) und [SFTP](/help/rtcdp/destinations/sftp-destination.md). In den folgenden Versionen werden wir weitere Cloud-Datenspeicherung-Ziele hinzufügen.
+Informationen zum Herstellen einer Verbindung zu Cloud-Speicher-Zielen finden Sie unter [Workflow zum Erstellen von Cloud-Speicher-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
 
-Informationen zum Herstellen einer Verbindung mit Cloud-Datenspeicherung-Zielen finden Sie unter [Arbeitsablauf zum Erstellen von Cloud-Datenspeicherung-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
+## Datenexporttyp
 
-## Datentexporttyp
+**Profil-basierter Export** – Sie exportieren Details zu den Einzelpersonen in der Zielgruppe. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignisse, Segmentabos usw. umfassen.
 
-**Profil-basierter Export** - Sie exportieren Details zu den Einzelpersonen in der Audience. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignis, Segmentmitgliedschaften usw. umfassen.
+## Verfügbare Cloud-Datenspeicherung-Ziele
 
+* [Amazon S3-Ziel](/help/rtcdp/destinations/amazon-s3-destination.md)
+* [SFTP-Ziel](/help/rtcdp/destinations/sftp-destination.md)
+
+## Verfügbare Streaming-Ziele für Cloud-Datenspeicherung
+
+* [Amazon-Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+* [Azurblauer EventHubs-Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
