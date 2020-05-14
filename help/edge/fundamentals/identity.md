@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform Web SDK Abrufen der Experience Cloud ID
 description: Erfahren Sie, wie Sie die Adobe Experience Cloud ID abrufen.
 seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud ID abrufen.
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 12%
+source-wordcount: '398'
+ht-degree: 7%
 
 ---
 
 
-# (Beta) Abrufen der Experience Cloud ID
-
->[!IMPORTANT]
->
->Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
+# Abrufen der Experience Cloud ID
 
 Das Adobe Experience Platform Web SDK nutzt den [Adobe-Identitätsdienst](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige ID verfügt, die auf dem Gerät beibehalten wird, damit die Aktivität zwischen den Seiten miteinander verknüpft werden kann.
 
