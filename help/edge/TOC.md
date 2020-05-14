@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Network-Hilfe
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
 workflow-type: tm+mt
-source-wordcount: '85'
-ht-degree: 75%
+source-wordcount: '89'
+ht-degree: 71%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 75%
 * [Übersicht über Edge Network](home.md)
 * Erste Schritte {#get-started}
    * [Schnellstart mit Launch](getting-started/quick-start-with-launch.md)
+   * [Quick Beginn ohne Start](getting-started/quick-start-without-launch.md)
 * Grundlagen {#fundamentals}
    * [Installieren des SDK](fundamentals/installing-the-sdk.md)
    * [Ausführen von Befehlen](fundamentals/executing-commands.md)
