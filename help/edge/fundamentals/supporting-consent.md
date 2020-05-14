@@ -1,32 +1,31 @@
 ---
-title: Zustimmung
-seo-title: Unterstützende Adobe Experience Platform Web SDK-Genehmigungsvoreinstellung
-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Voreinstellungen für die Zustimmung unterstützen.
-seo-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Voreinstellungen für die Zustimmung unterstützen.
+title: Unterstützen von Zustimmung
+seo-title: Unterstützen der Zustimmungseinstellung des Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
+seo-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '518'
+ht-degree: 99%
 
 ---
 
 
-# (Beta) Unterstützende Zustimmung
+# Unterstützende Zustimmung
 
->[!IMPORTANT]
->
->Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
+Um die Privatsphäre Ihres Nutzers zu respektieren, sollten Sie die Zustimmung des Nutzers einholen, bevor Sie dem SDK die Verwendung benutzerspezifischer Daten für bestimmte Zwecke gestatten. Das SDK erlaubt es derzeit nur Nutzern, alle Zwecke ein- oder auszuschalten, in Zukunft möchte Adobe jedoch eine genauere Kontrolle über bestimmte Zwecke ermöglichen.
 
-Um die Privatsphäre Ihres Benutzers zu respektieren, sollten Sie die Zustimmung des Benutzers einholen, bevor Sie dem SDK die Verwendung benutzerspezifischer Daten für bestimmte Zwecke gestatten. Das SDK erlaubt es derzeit nur Benutzern, alle Aufgaben zu Opt-in oder auszuschalten, in Zukunft hofft Adobe jedoch auf eine genauere Kontrolle über bestimmte Zwecke.
+Wenn der Nutzer sich für alle Zwecke anmeldet, darf das SDK die folgenden Aufgaben ausführen:
 
-Wenn der Benutzer sich für alle Zwecke anmeldet, darf das SDK die folgenden Aufgaben ausführen:
+* Senden an und Empfangen von Daten von Adobe-Servern.
+* Cookies oder Elemente der Web-Datenspeicherung lesen und schreiben (mit Ausnahme der Beibehaltung der Anmeldevoreinstellungen des Nutzers).
 
-* Senden Sie Daten an die Server von Adobe und von diesen.
-* Cookies oder Elemente der Web-Datenspeicherung lesen und schreiben (mit Ausnahme der Beibehaltung der Anmeldevoreinstellungen des Benutzers).
-
-Wenn der Benutzer sich von allen Zwecken abmeldet, führt das SDK keine dieser Aufgaben aus.
+Wenn der Nutzer sich von allen Zwecken abmeldet, führt das SDK keine dieser Aufgaben aus.
 
 ## Konfigurieren der Zustimmung
 
-Standardmäßig ist der Benutzer für alle Zwecke aktiviert. Um zu verhindern, dass das SDK die oben genannten Aufgaben ausführt, bis der Benutzer sich anmeldet, müssen Sie die SDK-Konfiguration wie folgt `"defaultConsent": { "general": "pending" }` weiterleiten:
+Standardmäßig ist der Nutzer für alle Zwecke angemeldet. Um zu verhindern, dass das SDK die oben genannten Aufgaben ausführt, bevor der Nutzer sich anmeldet, müssen Sie `"defaultConsent": { "general": "pending" }` während der SDK-Konfiguration wie folgt weiterleiten:
 
 ```javascript
 alloy("configure", {
@@ -36,13 +35,13 @@ alloy("configure", {
 });
 ```
 
-Wenn die Standardgenehmigung für den allgemeinen Zweck auf &quot;Ausstehend&quot;festgelegt ist, führt der Versuch, Befehle auszuführen, die von den Benutzeroptionseinstellungen (z. B. dem `event` Befehl) abhängen, dazu, dass der Befehl innerhalb des SDK in die Warteschlange gestellt wird. Diese Befehle werden erst verarbeitet, nachdem Sie die Anmeldevoreinstellungen des Benutzers an das SDK übermittelt haben.
+Wenn die Standardzustimmung für den allgemeinen Zweck auf „Ausstehend“ eingestellt ist, führt der Versuch, Befehle auszuführen, die von den Nutzeranmeldeeinstellungen (z. B. `event`-Befehl) abhängen, dazu, dass der Befehl innerhalb des SDK in die Warteschlange gestellt wird. Diese Befehle werden erst verarbeitet, nachdem Sie die Nutzeranmeldeeinstellungen an das SDK übermittelt haben.
 
-An dieser Stelle möchten Sie den Benutzer vielleicht bitten, irgendwo in Ihrer Benutzeroberfläche zu Opt-in. Sobald die Benutzereinstellungen erfasst wurden, teilen Sie diese Voreinstellungen dem SDK mit.
+An dieser Stelle möchten Sie den Nutzer vielleicht bitten, sich irgendwo in Ihrer Benutzeroberfläche anzumelden. Sobald die Benutzereinstellungen erfasst wurden, teilen Sie diese Voreinstellungen dem SDK mit.
 
-## Voreinstellungen für die Übermittlung von Genehmigungen
+## Voreinstellungen für die Übermittlung von Zustimmungen
 
-Wenn sich der Benutzer anmeldet, führen Sie den `setConsent` Befehl mit der `general` folgenden Option aus `in` :
+Wenn sich der Nutzer anmeldet, führen Sie den `setConsent`-Befehl mit der `general`-Option, die auf `in` eingestellt ist, wie folgt aus:
 
 ```javascript
 alloy("setConsent", {
@@ -50,9 +49,9 @@ alloy("setConsent", {
 });
 ```
 
-Da der Benutzer jetzt angemeldet ist, werden alle zuvor in die Warteschlange gestellten Befehle vom SDK ausgeführt. Zukünftige Befehle, die vom Benutzer abhängen, werden _nicht_ in die Warteschlange gestellt und stattdessen sofort ausgeführt.
+Da der Nutzer jetzt angemeldet ist, werden alle zuvor in die Warteschlange gestellten Befehle vom SDK ausgeführt. Zukünftige Befehle, die vom Nutzer abhängen, werden _nicht_ in die Warteschlange gestellt und stattdessen sofort ausgeführt.
 
-Wenn der Benutzer Opt-out möchte, führen Sie den `setConsent` Befehl mit der `general` folgenden Option aus `out` :
+Wenn der Nutzer sich entscheidet, sich abzumelden, führen Sie den `setConsent`-Befehl wie folgt aus, während die `general`-Option auf `out` eingestellt ist:
 
 ```javascript
 alloy("setConsent", {
@@ -62,14 +61,14 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->Nachdem sich ein Benutzer abgewählt hat, ist es im SDK nicht möglich, die Benutzereinwilligung festzulegen `in`.
+>Nachdem sich ein Nutzer abgemeldet hat, ist es im SDK nicht möglich, die Nutzerzustimmung auf `in` einzustellen.
 
-Da der Benutzer sich für Opt-out entschieden hat, werden Versprechungen, die von zuvor in die Warteschlange gestellten Befehlen zurückgegeben wurden, abgelehnt. Zukünftige Befehle, die vom Benutzer abhängen, geben Versprechen zurück, die in ähnlicher Weise abgelehnt werden. Weitere Informationen zum Umgang mit oder zur Fehlerbehebung finden Sie unter [Ausführungsbefehle](executing-commands.md).
+Da der Nutzer sich für eine Abmeldung entschieden hat, werden Promises, die von zuvor in die Warteschlange gestellten Befehlen zurückgegeben wurden, abgelehnt. Zukünftige Befehle, die von der Anmeldung des Nutzers abhängen, geben Promises zurück, die in ähnlicher Weise abgelehnt werden. Weitere Informationen zum Umgang mit oder zur Unterdrückung von Fehlern finden Sie unter [Befehle ausführen](executing-commands.md).
 
 >[!NOTE]
 >
->Derzeit unterstützt das SDK nur den `general` Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, ist die aktuelle Implementierung eine Alles-oder-Nichts-Methode zur Teilnahme.  Dies gilt nur für das Adobe Experience Platform Web SDK und NICHT für andere Adobe JavaScript-Bibliotheken.
+>Derzeit unterstützt das SDK nur den `general`-Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, bietet die aktuelle Implementierung nur die Alles-oder-Nichts-Methode zur Teilnahme.  Dies gilt nur für das Adobe Experience Platform Web SDK und NICHT für andere Adobe JavaScript-Bibliotheken.
 
-## Beständigkeit der Voreinstellungen für die Zustimmung
+## Beständigkeit der Zustimmungseinstellungen
 
-Nachdem Sie dem SDK mithilfe des `setConsent` Befehls Benutzereinstellungen mitgeteilt haben, behält das SDK die Voreinstellungen des Benutzers in einem Cookie bei. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft das SDK diese beibehaltenen Voreinstellungen ab und verwendet sie. Es ist nicht erforderlich, den `setConsent` Befehl erneut auszuführen, außer um eine Änderung der Voreinstellungen des Benutzers mitzuteilen, die Sie jederzeit vornehmen können.
+Nachdem Sie dem SDK mithilfe des `setConsent`-Befehls Benutzereinstellungen mitgeteilt haben, behält das SDK die Voreinstellungen des Nutzers in einem Cookie bei. Wenn der Nutzer das nächste Mal Ihre Website im Browser lädt, ruft das SDK diese beibehaltenen Voreinstellungen ab und verwendet sie. Es ist nicht erforderlich, den `setConsent`-Befehl erneut auszuführen, außer um eine Änderung der Voreinstellungen des Nutzers mitzuteilen, was jederzeit möglich ist.
