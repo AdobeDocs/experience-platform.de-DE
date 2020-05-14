@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
 
 # Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche
+
+> [!NOTE]
+> Der Azurblauer Data Explorer-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Azurblauen Data Explorer (im Folgenden &quot;Data Explorer&quot;)-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
