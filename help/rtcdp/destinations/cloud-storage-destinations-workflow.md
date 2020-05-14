@@ -1,43 +1,46 @@
 ---
-title: Arbeitsablauf für Cloud-Datenspeicherung-Ziele
-seo-title: Arbeitsablauf für Cloud-Datenspeicherung-Ziele
-description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
-seo-description: Anleitung zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung
+title: Workflow für Cloud-Speicher-Ziele
+seo-title: Workflow für Cloud-Speicher-Ziele
+description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
+seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+workflow-type: tm+mt
+source-wordcount: '329'
+ht-degree: 67%
 
 ---
 
 
-# Arbeitsablauf zum Erstellen von Cloud-Datenspeicherung-Zielen
+# Workflow zum Erstellen von Cloud-Speicher-Zielen
 
 ## Übersicht
 
-Auf dieser Seite wird erläutert, wie Sie eine Verbindung zu Cloud-Datenspeicherung in der Adobe Echtzeit-Kundendatenplattform herstellen können.
+Auf dieser Seite wird erläutert, wie Sie in der Adobe-Echtzeit-Kundendatenplattform eine Verbindung zu Cloud-Speichern herstellen können.
 
-1. Wählen Sie **[!UICONTROL Connections > Destinations]** im Menü Ihr bevorzugtes Cloud-Datenspeicherung-Ziel und dann **[!UICONTROL Connect destination]**.
+1. Wählen Sie unter **[!UICONTROL Verbindungen > Ziele]** Ihr bevorzugtes Cloud-Speicher-Ziel und wählen Sie dann **[!UICONTROL Ziel verbinden]**.
 
-   ![Verbindung zum Cloud-Datenspeicherung-Ziel](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
+   ![Verbindung zum Cloud-Speicher-Ziel herstellen](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. Wenn Sie zuvor eine Verbindung zum Ziel der Cloud-Datenspeicherung eingerichtet haben, wählen Sie **[!UICONTROL Authentication]** im Schritt die bestehende Verbindung aus **[!UICONTROL Existing Account]** und wählen Sie sie aus. Sie können auch eine neue Verbindung **[!UICONTROL New Account]** zum Ziel Ihrer Cloud-Datenspeicherung einrichten. Geben Sie Ihre Kontoauthentifizierungsdaten ein und wählen Sie **[!UICONTROL Connect to destination]**. Weitere Informationen zu den Anmeldeinformationen im Schritt [Authentifizierung finden Sie unter](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3-Ziel [- und](/help/rtcdp/destinations/sftp-destination.md) SFTP-Ziel **** .
+2. Wenn Sie im Schritt **[!UICONTROL Authentifizieren]** zuvor eine Verbindung zu Ihrem Cloud-Speicher-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem Cloud-Speicher-Ziel einzurichten. Geben Sie die Anmeldeinformationen für die Kontoauthentifizierung ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. <br> Weitere Informationen zu den Anmeldeinformationen im Schritt [Authentifizierung finden Sie unter](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 [-Ziel, Ziel der](/help/rtcdp/destinations/amazon-kinesis-destination.md) Amazon-Kinesis [-API, Ziel der](/help/rtcdp/destinations/azure-event-hubs-destination.md) Amazon-Ereignis-Hubs [und](/help/rtcdp/destinations/sftp-destination.md) SFTP **-Ziel** .
 
    >[!NOTE]
    >
-   >Adobe Echtzeit-CDP unterstützt die Berechtigungsprüfung im Authentifizierungsprozess und zeigt eine Fehlermeldung an, wenn Sie falsche Anmeldeinformationen in Ihre Cloud-Datenspeicherung eingeben. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldeinformationen abschließen.
+   >Die Adobe Echtzeit-CDP unterstützt die Berechtigungsprüfung im Authentifizierungsprozess und zeigt eine Fehlermeldung an, wenn Sie falsche Anmeldeinformationen für Ihren Cloud-Speicher eingeben. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldeinformationen abschließen.
 
-   ![Verbindungsziel für die Cloud-Datenspeicherung - Authentifizierungsschritt](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
+   ![Mit dem Cloud-Speicher-Ziel verbinden – Authentifizierungsschritt](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-3. Geben Sie im **[!UICONTROL Setup]** Schritt einen **[!UICONTROL Name]** und einen **[!UICONTROL Description]** Wert für die Aktivierung ein. <br>
-Geben Sie für Amazon S3-Ziele den **[!UICONTROL Bucket name]** und den **[!UICONTROL Folder path]** in das Cloud-Datenspeicherung-Ziel ein, an das die Dateien gesendet werden sollen. Wählen Sie diese Option, **[!UICONTROL Create Destination]** nachdem Sie die oben stehenden Felder ausgefüllt haben.
+3. Geben Sie im Schritt **[!UICONTROL Einrichten]** einen **[!UICONTROL Namen]** und eine **[!UICONTROL Beschreibung]** für die Aktivierung ein. <br>
+Geben Sie für Amazon S3-Ziele den **[!UICONTROL Behälternamen]** und den **[!UICONTROL Ordnerpfad]** in das Ziel der Cloud-Datenspeicherung ein, an das die Dateien gesendet werden sollen. Wählen Sie **[!UICONTROL Ziel erstellen]**, nachdem Sie die obigen Felder ausgefüllt haben.
 
    ![Verbindung mit Amazon S3 Cloud-Datenspeicherung-Ziel - Authentifizierungsschritt](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-   Geben Sie für SFTP-Ziele die **[!UICONTROL Folder path]** Stelle ein, an die die Dateien gesendet werden sollen.
+   Geben Sie für SFTP-Ziele den **[!UICONTROL Ordnerpfad]** ein, unter dem die Dateien bereitgestellt werden sollen.
 
    ![Verbindungsziel für die SFTP-Cloud-Datenspeicherung - Authentifizierungsschritt](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-4. Ihr Ziel wurde jetzt erstellt. Sie können auswählen, **[!UICONTROL Save & Exit]** ob Sie Segmente später aktivieren möchten, oder Sie können wählen, ob Sie den Workflow fortsetzen und Segmente zur Aktivierung auswählen **[!UICONTROL Next]** möchten. In beiden Fällen finden Sie weitere Informationen zum Exportieren von Daten im nächsten Abschnitt [Aktivieren von Segmenten](#activate-segments).
+4. Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow to export data.
 
 ## Aktivieren von Segmenten {#activate-segments}
 
-Informationen zum Arbeitsablauf für die SegmentAktivierung finden Sie unter Profil und Segmente an ein Ziel [](/help/rtcdp/destinations/activate-destinations.md) aktivieren.
+Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile und Segmente für ein Ziel aktivieren](/help/rtcdp/destinations/activate-destinations.md).
