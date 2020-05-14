@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK – Schnellstart mit Launch
 description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
 seo-description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 31%
 
 ---
@@ -17,14 +17,16 @@ ht-degree: 31%
 In diesem Handbuch erfahren Sie, wie Sie das Adobe Experience Platform Web SDK in Launch einrichten. Um diese Funktion nutzen zu können, müssen Sie auf die Positivliste gesetzt werden. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
 
 - Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über eine CNAME für Analytics verfügen, sollten Sie diese verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen
-- Sie haben die Berechtigung zur Adobe Experience Platform-Datenplattform. Wenn Sie keine Plattform gekauft haben, stellen wir Ihnen Experience Platform Data Services Foundation zur Verwendung mit dem SDK zur Verfügung.
+- Sie haben die Berechtigung zur Adobe Experience Platform-Datenplattform. Wenn Sie keine Plattform erworben haben, stellen wir Ihnen die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK ohne Aufpreis zur Verfügung.
 - Verwenden Sie die neueste Version des Besucher-ID-Diensts
 
 ## Erstellen einer Konfigurations-ID
 
 Sie können beim Start eine Konfigurations-ID mit dem [Edge-Konfigurationstool](../fundamentals/edge-configuration.md) erstellen. Dadurch können Sie das Edge-Netzwerk aktivieren, um Daten an die verschiedenen Lösungen zu senden. Einzelheiten zu den einzelnen Optionen finden Sie auf der Seite [Edge Configuration Tool](../fundamentals/edge-configuration.md) .
 
->Hinweis: Ihre Organisation muss für die Funktion auf die Positivliste gesetzt werden. Wenden Sie sich an Ihren CSM, um die Liste für eine eventuelle Whitelist zu erhalten.
+>[!NOTE]
+>
+>Ihre Organisation muss für die Funktion auf die Positivliste gesetzt werden. Wenden Sie sich an Ihren CSM, um die Liste für eine eventuelle Whitelist zu erhalten.
 
 ## Schemas vorbereiten
 
@@ -56,6 +58,7 @@ Weitere Informationen zur Verfolgung von Ereignissen finden Sie unter [Verfolgen
 Sobald Daten gesendet wurden, können Sie Folgendes tun.
 
 - [Erstellen Sie Ihr Schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [Informationen zum Debugging](../fundamentals/debugging.md)
 - Erfahren Sie, wie Sie das Erlebnis [personalisieren.](../fundamentals/rendering-personalization-content.md)
 - Informationen zum Senden von Daten an mehrere Lösungen
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
