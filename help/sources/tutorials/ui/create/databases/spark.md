@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen Sie einen Apache Spark auf einem Azurblauen HDInsights-Quellanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: ae059f93f09dbbae4f1ef46f68901071afba9729
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 1%
 
 ---
 
 
 # Erstellen Sie einen Apache Spark auf einem Azurblauen HDInsights-Quellanschluss in der Benutzeroberfläche
+
+> [!NOTE]
+> Der Apache Spark auf der Azurblauen HDInsights Stecker ist in der Beta. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Apache Spark auf dem Azurblauen HDInsights-Quellanschluss mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
