@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines SQL Server-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 173faf861ca8feb6dd4e2159b0708e41fa0f601f
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 1%
 
 ---
 
 
 # Erstellen eines Microsoft SQL Server-Connectors mithilfe der Flow Service API
+
+>[!NOTE]
+>Der Microsoft SQL Server Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
