@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Authentifizierte Streaming-Verbindung erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 2%
 
 ---
 
@@ -32,7 +35,7 @@ In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ih
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -194,11 +197,3 @@ Wenn der `Authorization` Header nicht vorhanden ist oder ein ungültiges/abgelau
     }
 }
 ```
-
-### Senden von Nachrichten an eine nicht authentifizierte Streaming-Verbindung mit der Autorisierung
-
-Wenn für eine Streaming-Verbindung keine Authentifizierung aktiviert ist, kann der Client die `Authorization` Kopfzeile weiterhin (optional) zu ihrer Anforderung hinzufügen.
-
-Wenn der `Authorization` Header nicht vorhanden ist oder ein ungültiges/abgelaufenes Zugriffstoken gesendet wird, wird eine HTTP 401 Unauthorized-Antwort zurückgegeben, die Daten werden weiterhin veröffentlicht, wobei das `authenticatedRequest` Feld jedoch auf `false`eingestellt ist.
-
-Wenn die `Authorization` Kopfzeile vorhanden und gültig ist, werden die Daten mit dem `authenticatedRequest` Feldsatz `true`veröffentlicht.
