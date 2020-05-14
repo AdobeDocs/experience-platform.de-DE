@@ -4,32 +4,31 @@ seo-title: Senden von Daten an Adobe Analytics mit dem Adobe Experience Platform
 description: Erfahren Sie, wie Daten mit dem Experience Platform Web SDK an Adobe Analytics gesendet werden
 seo-description: Erfahren Sie, wie Daten mit dem Experience Platform Web SDK an Adobe Analytics gesendet werden
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 100%
 
 ---
 
 
-# (Beta) Senden von Daten an Adobe Analytics
+# Senden von Daten an Adobe Analytics
 
->[!IMPORTANT]
->
->Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
-
-Das Adobe Experience Platform Web SDK kann Daten an Adobe Analytics senden. Dies funktioniert durch die Übersetzung `xdm` in ein Format, das Adobe Analytics verwenden kann.
+Das Adobe Experience Platform Web SDK kann Daten an Adobe Analytics senden. Dies funktioniert durch die Übersetzung von `xdm` in ein Format, das Adobe Analytics verwenden kann.
 
 ## Einrichten
 
-Adobe Analytics nimmt die gesendeten Daten automatisch auf, wenn eine Report Suite in der Benutzeroberfläche für die Kundenkonfiguration zugeordnet ist. Hier können Sie einen oder mehrere Berichte einer bestimmten Konfiguration zuordnen. Nachdem eine Report Suite zugeordnet wurde, beginnen die Daten automatisch mit dem Datenfluss.
+Adobe Analytics nimmt die gesendeten Daten automatisch auf, wenn in der Benutzeroberfläche für die Kundenkonfiguration eine Report Suite zugeordnet ist. Hier können Sie einen oder mehrere Berichte einer bestimmten Konfiguration zuordnen. Nachdem eine Report Suite zugeordnet wurde, beginnt automatisch der Datenfluss.
 
 ## Automatisch zugeordnete Daten
 
-Das Adobe Experience Platform Edge Network ordnet automatisch viele XDM-Variablen zu. Die vollständige Liste der automatisch zugeordneten Variablen ist [hier](../analytics/automatically-mapped-vars.md)aufgeführt.
+Das Adobe Experience Platform Edge Network ordnet viele XDM-Variablen automatisch zu. Die vollständige Liste der automatisch zugeordneten Variablen ist [hier](../analytics/automatically-mapped-vars.md) aufgeführt.
 
 ## Manuell zugeordnete Daten
 
-Alle vom Edge-Netzwerk erfassten Daten können über Verarbeitungsregeln abgerufen werden. Die Daten werden mithilfe der Punktnotation reduziert und stehen als contextData zur Verfügung.
+Auf alle vom Edge Network erfassten Daten kann über Verarbeitungsregeln zugegriffen werden. Die Daten werden mithilfe der Punktnotation reduziert und stehen als Kontextdaten zur Verfügung.
 
-Wenn du ein Schema hättest, das so aussah.
+Angenommen, Sie haben ein Schema, das so aussieht:
 
 ```javascript
 {
@@ -54,7 +53,7 @@ Wenn du ein Schema hättest, das so aussah.
 }
 ```
 
-Dies wären dann die Kontextdatenschlüssel, die Ihnen zur Verfügung stehen.
+Dann wären dies die Kontextdatenschlüssel, die Ihnen zur Verfügung stehen.
 
 ```javascript
 a.x.key //value
