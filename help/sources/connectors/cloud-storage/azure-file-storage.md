@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Adapterkabel für die Datenspeicherung
 topic: overview
 translation-type: tm+mt
-source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
 
-# Adapterkabel für die Datenspeicherung
+# (Beta) Blue File Datenspeicherung Connector
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, Google Cloud Platform und Azurblase. Sie können Ihre Daten aus diesen Systemen in Plattform übertragen.
 
