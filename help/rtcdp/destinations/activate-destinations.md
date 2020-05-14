@@ -4,7 +4,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+workflow-type: tm+mt
+source-wordcount: '639'
+ht-degree: 77%
 
 ---
 
@@ -19,14 +22,14 @@ Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbin
 
 ## Daten aktivieren {#activate-data}
 
-1. In **[!UICONTROL Destinations > Browse]**, select the destination where you want to activate your segments.
+1. Wählen Sie unter **[!UICONTROL Ziele > Durchsuchen]** das Ziel aus, an dem Sie Ihre Segmente aktivieren möchten.
 2. Klicken Sie auf den Namen des Ziels. So gelangen Sie zum Aktivierungsfluss.
    ![Aktivierungsfluss](/help/rtcdp/destinations/assets/activate-flow.png)
-Beachten Sie, dass sich, wenn für ein Ziel bereits ein Aktivierungsfluss vorhanden ist, die Segmente anzeigen lassen, die derzeit an das Ziel gesendet werden. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-3. Select **[!UICONTROL Activate]**;
-4. Wählen Sie im **[!UICONTROL Activate destination]** Workflow auf der **[!UICONTROL Select Segments]** Seite die Segmente aus, die an das Ziel gesendet werden sollen.
+Beachten Sie, dass sich, wenn für ein Ziel bereits ein Aktivierungsfluss vorhanden ist, die Segmente anzeigen lassen, die derzeit an das Ziel gesendet werden. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
+3. Wählen Sie **[!UICONTROL Aktivieren]**.
+4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
    ![Segment an Ziel](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Bedingt*. Dieser Schritt gilt nur für Segmente, die E-Mail-Marketing-Zielen zugeordnet sind. <br> Wählen Sie auf der **[!UICONTROL Destination Attributes]** Seite die Attribute aus, die Sie an das Ziel senden möchten, **[!UICONTROL Add new field]** und wählen Sie sie aus.
+5. *Bedingt*. Dieser Schritt gilt nur für Segmente, die Cloud-Datenspeicherung-Zielen und E-Mail-Marketingzielen zugeordnet sind. <br> Wählen Sie auf der Seite **[!UICONTROL Zielattribute]** die Option **[!UICONTROL Neues Feld hinzufügen]** und wählen Sie die Attribute aus, die Sie an das Ziel senden möchten.
 Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige Kennung](/help/rtcdp/destinations/email-marketing-destinations.md#identity) zu verwenden. Weiterführende Informationen zu obligatorischen Attributen finden Sie unter „Identität“ im Artikel [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
    ![Zielattribute](/help/rtcdp/destinations/assets/destination-attributes.png)
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
@@ -37,7 +40,7 @@ Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige 
 
    ![Herkunft wählen](/help/rtcdp/destinations/assets/choose-data-origin.png)
 
-7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
+7. Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 ![Auswahl bestätigen](/help/rtcdp/destinations/assets/confirm-selection.png)
 
@@ -45,14 +48,14 @@ Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige 
 
 Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in der Echtzeit-Kundendatenplattform zu bearbeiten:
 
-1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
-2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
+1. Wählen Sie in der linken Navigationsleiste **[!UICONTROL Ziele]**, klicken Sie dann auf die Registerkarte **[!UICONTROL Durchsuchen]** und klicken Sie auf den Zielnamen.
+2. Wählen Sie in der rechten Leiste **[!UICONTROL Aktivierung bearbeiten]**, um zu ändern, welche Segmente an das Ziel gesendet werden.
 
 ## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
 
-### E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
+### E-Mail-Marketing- und Cloud-Speicher-Ziele
 
-For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. An diesem Speicherort wird täglich eine neue Datei erstellt. Das Dateiformat lautet:
+Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt die Adobe-Echtzeit-CDP eine tabulatorgetrennte `.txt`- oder `.csv`-Datei am von Ihnen angegebenen Speicherort. An diesem Speicherort wird täglich eine neue Datei erstellt. Das Dateiformat lautet:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 Dateien, die Sie an drei aufeinander folgenden Tagen erhalten, könnten wie folgt aussehen:
@@ -77,7 +80,7 @@ Bei Facebook bedeutet eine erfolgreiche Aktivierung, dass eine benutzerdefiniert
 
 Gehen Sie wie folgt vor, um einen vorhandenen Aktivierungsfluss zu deaktivieren:
 
-1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
-2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
+1. Wählen Sie in der linken Navigationsleiste **[!UICONTROL Ziele]**, klicken Sie dann auf die Registerkarte **[!UICONTROL Durchsuchen]** und klicken Sie auf den Zielnamen.
+2. Klicken Sie in der rechten Leiste auf das Steuerelement **[!UICONTROL Aktiviert]**, um den Status des Aktivierungsflusses zu ändern.
 3. Wählen Sie im Fenster **Datenflussstatus aktualisieren** die Option **Bestätigen**, um den Aktivierungsfluss zu deaktivieren.
 
