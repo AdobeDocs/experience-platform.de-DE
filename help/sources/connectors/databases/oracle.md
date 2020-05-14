@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Oracle Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
 
-# Oracle Connector
+# (Beta) Oracle Connector
 
 Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie Microsoft, MySQL und Azurblau. Sie können Ihre Daten aus diesen Systemen in Plattform übertragen.
 
