@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Blue-Synapse-Analytics-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41aa36f146834537813fb7e05a17291dbd4f9d9b
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
 
-# Blue-Synapse-Analytics-Anschluss
+# (Beta) Azurblauer Synapse Analytics-Connector
 
 Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
 
