@@ -4,12 +4,15 @@ solution: Experience Platform
 title: ServiceNow Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0077b43d99869585ddf010ba62ea3bf5daca944b
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 0%
 
 ---
 
 
-# ServiceNow Connector
+# (Beta) ServiceNow-Connector
 
 Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
 
