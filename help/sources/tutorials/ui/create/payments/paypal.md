@@ -4,12 +4,18 @@ solution: Experience Platform
 title: PayPal-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8c67ba710b486501374020ab505b04931f327c0f
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '489'
+ht-degree: 1%
 
 ---
 
 
 # PayPal-Quellanschluss in der Benutzeroberfläche erstellen
+
+> [!NOTE]
+> Der PayPal-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines PayPal-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
