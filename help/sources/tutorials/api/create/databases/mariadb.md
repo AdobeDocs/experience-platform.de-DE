@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines MariaDB-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 540e419230cd516a258d39947d6b07c1e8b115c7
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 1%
 
 ---
 
 
 # Erstellen eines MariaDB-Connectors mit der Flow Service API
+
+>[!NOTE]
+>Der MariaDB-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
