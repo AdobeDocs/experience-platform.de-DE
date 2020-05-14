@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines ServiceNow-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 90f00d726c94f2f13e7c52991fa59e7e5d3ecd31
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '697'
+ht-degree: 1%
 
 ---
 
 
 # Erstellen eines ServiceNow-Connectors mit der Flow Service API
+
+>[!NOTE]
+>Der ServiceNow-Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
