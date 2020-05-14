@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Erstellen eines Azurblase-Datenspeicherung-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 
 # Erstellen eines Azurblase-Datenspeicherung-Quellconnectors in der Benutzeroberfläche
+
+>[!NOTE]
+>Die Datenspeicherung des Blauen Tischs ist in Beta. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Authentifizieren eines Azurblauen File Datenspeicherung-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
