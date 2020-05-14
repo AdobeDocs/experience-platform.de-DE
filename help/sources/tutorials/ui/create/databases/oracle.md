@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Oracle DB-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '490'
 ht-degree: 1%
 
 ---
 
 
 # Oracle-Quellanschluss in der Benutzeroberfläche erstellen
+
+> [!NOTE]
+> Der Oracle Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Oracle-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
