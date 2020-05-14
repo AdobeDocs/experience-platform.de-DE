@@ -4,12 +4,18 @@ solution: Experience Platform
 title: IBM DB2 Connector mithilfe der Flow Service API erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 2%
 
 ---
 
 
 # IBM DB2 Connector mithilfe der Flow Service API erstellen
+
+>[!NOTE]
+>Der IBM DB2 Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
@@ -54,7 +60,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro DB2-Konto ist nur ein Connector erforderlich, da er zum Erstellen mehrerer Quellschnittstellen verwendet werden kann, um verschiedene Daten einzubringen.
 
