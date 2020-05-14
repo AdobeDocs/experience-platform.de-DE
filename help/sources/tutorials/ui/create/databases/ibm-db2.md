@@ -4,9 +4,9 @@ solution: Experience Platform
 title: IBM DB2-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,9 @@ ht-degree: 0%
 
 
 # IBM DB2-Quellanschluss in der Benutzeroberfläche erstellen
+
+> [!NOTE]
+> Der IBM DB2 Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines IBM DB2-Quellconnectors (im Folgenden &quot;DB2&quot;) mithilfe der Plattform-Benutzeroberfläche.
 
