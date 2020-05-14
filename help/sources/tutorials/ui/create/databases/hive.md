@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen Sie einen Apache Hive auf einem Azurblauen HDInsights-Quellanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bc9e369c7141ab70d7f7e6deffe9e0ad92ca92e
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
 
 # Erstellen Sie einen Apache Hive auf einem Azurblauen HDInsights-Quellanschluss in der Benutzeroberfläche
+
+> [!NOTE]
+> Der Apache Hive auf der Azurblauen HDInsights Stecker ist in der Beta. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Apache Hive auf Azurblauen HDInsights-Quellsteckers mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
