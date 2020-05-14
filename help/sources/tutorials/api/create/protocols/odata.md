@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines generischen OData-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 34334a6ff5a3f0c16ad32b4d0438d4ee8513372f
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '564'
+ht-degree: 2%
 
 ---
 
 
 # Erstellen eines generischen OData-Connectors mithilfe der Flow Service API
+
+>[!NOTE]
+>Der Generic OData Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
@@ -55,7 +61,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro OData-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
