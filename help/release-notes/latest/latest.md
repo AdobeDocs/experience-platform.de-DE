@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
+source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '1026'
 ht-degree: 6%
 
 ---
@@ -104,6 +104,7 @@ Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfl�
 | ------- | ----------- |
 | Zusätzliche API- und UI-Unterstützung für Cloud-Datenspeicherung | Neue Quellanschlüsse für die Datenspeicherung von Azurblauen Dateien. |
 | Zusätzliche API- und UI-Unterstützung für Datenbanken | Neue Quellschnittstellen für Azurblase Data Explorer, IBM DB2 und Oracle DB. |
+| Datenfreigabe mit Adobe Audience Manager für Experience Platform | Der Bereitstellungsprozess für den Audience Manager Connector wurde aktualisiert. Audience Manager-Datensätze für Echtzeit-Kundendaten sind jetzt standardmäßig deaktiviert. Sie können manuell festlegen, welche Datensätze für Profil bewerben sollen. Die neuen Standardeinstellungen sind nicht rückwirkend und wirken sich nur auf die Bereitstellung für neue Audience Manager-Connectors aus. Weitere Informationen finden Sie im [Benutzerhandbuch](../../catalog/datasets/user-guide.md)für Datasets. |
 
 **Bekannte Probleme**
 
