@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines HubSpot-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '510'
+ht-degree: 0%
 
 ---
 
 
 # Erstellen eines HubSpot-Quellconnectors in der Benutzeroberfläche
+
+> [!NOTE]
+> Der HubSpot-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines HubSpot-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
@@ -63,4 +69,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das HubSpot-Konto, mit dem Si
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem HubSpot-Konto aufgebaut. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Marketingautomatisierungssystemen in Platform](../../dataflow/marketing-automation.md)zu bringen.
+Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem HubSpot-Konto aufgebaut. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Marketingautomatisierungssystemen in Plattform](../../dataflow/marketing-automation.md)zu übertragen.
