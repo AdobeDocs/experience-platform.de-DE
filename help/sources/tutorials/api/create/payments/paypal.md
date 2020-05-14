@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines PayPal-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 34334a6ff5a3f0c16ad32b4d0438d4ee8513372f
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 2%
 
 ---
 
 
 # Erstellen eines PayPal-Connectors mit der Flow Service API
+
+>[!NOTE]
+>Der PayPal-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
@@ -43,7 +49,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -57,7 +63,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro PayPal-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
