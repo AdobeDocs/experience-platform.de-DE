@@ -4,16 +4,15 @@ seo-title: Verfolgen von Adobe Experience Platform Web SDK-Ereignissen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 translation-type: tm+mt
-source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 97%
 
 ---
 
 
 # Verfolgen von Ereignissen
-
->[!IMPORTANT]
->
->Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
 Verwenden Sie den `event`-Befehl, um Ereignisdaten an Adobe Experience Cloud zu senden. Der `event`-Befehl ist die wichtigste Methode zum Senden von Daten an Experience Cloud und zum Abrufen von personalisierten Inhalten, Identitäten und Zielgruppenzielen.
 
