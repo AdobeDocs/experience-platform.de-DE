@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Datenschutzdienst und Experience Cloud-Anwendungen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: f4a007b66806cb0d322226e1e1837cfce7ca4095
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 18%
 
 ---
 
@@ -30,13 +33,11 @@ Im Folgenden finden Sie eine Liste von Experience Cloud-Anwendungen, die in den 
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>Analytics verarbeitet Ausschluss-Anfragen mithilfe von Variablen des [Privacy Berichte](https://docs.adobe.com/content/help/de-DE/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Dokumentation zur Abmeldung](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.campaign.adobe.com/doc/standard/getting_started/de/ACS_GDPR.html)</li><li>[Dokumentation zur Abmeldung](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Adobe-Kundenattribute (CRS) | ✓ | K. A. | <ul><li>[Dokumentation für GDPR aufrufen/löschen](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/ccpa.html)</li><li>Kundenattribute sind nicht in der Lage, Daten zu übertragen. Daher sind Ausschlussanfragen nicht möglich.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Dokumentation zum Data Lake aufrufen/löschen](../catalog/privacy.md)</li><li>[Dokumentation für Echtzeit-Kundendaten aufrufen/löschen](../profile/privacy.md)</li><li>Experience Platform berücksichtigt [Abmeldeanforderungen für Audiencen-Segmente](../segmentation/honoring-opt-outs.md).</li></ul> |
 | Adobe Primetime-Authentifizierung | ✓ | K. A. | <ul><li>[Dokumentation aufrufen/löschen](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime ist nicht in der Lage, Daten zu übertragen. Daher sind Ausschlussanträge nicht möglich.</li></ul> |
 | Adobe Target | ✓ | K. A. | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.translate.html)</li><li>Die Zielgruppe kann keine Daten übertragen, daher sind Ausschlussanträge nicht möglich.</li></ul> |
 
-<!-- (To include once access/delete documentation is available)
-Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
--->
 
 ## Selbstbedienungsanwendungen {#self-serve}
 
