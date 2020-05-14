@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Erstellen eines Quellconnectors für die Datenspeicherung eines Blauen Diagramms in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 899c4fbe8a1bb3fef24f606e77f13ef5184d1eda
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 
 # Erstellen eines Quellconnectors für die Datenspeicherung eines Blauen Diagramms in der Benutzeroberfläche
+
+>[!NOTE]
+>Der Datenspeicherung-Stecker aus dem Azurblauen Tisch ist in Beta. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm wird beschrieben, wie Sie mit der Plattform-Benutzeroberfläche einen Azurblauen Tabelle-Datenspeicherung-Quellanschluss (im Folgenden &quot;ATS&quot;) erstellen können.
 
