@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Blue Data Explorer-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
 
-# Blue Data Explorer-Anschluss
+# (Beta) Azurblauer Data Explorer-Anschluss
 
 Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie Microsoft, MySQL und Azurblau. Sie können Ihre Daten aus diesen Systemen in Plattform übertragen.
 
