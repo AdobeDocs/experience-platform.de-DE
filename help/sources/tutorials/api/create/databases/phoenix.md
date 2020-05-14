@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines Phoenix-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: c00edf487404e1d08bc86cb6692325f536964af6
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '674'
+ht-degree: 1%
 
 ---
 
 
 # Erstellen eines Phoenix-Connectors mit der Flow Service API
+
+>[!NOTE]
+>Der Phoenix-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
@@ -60,7 +66,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Phoenix-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
