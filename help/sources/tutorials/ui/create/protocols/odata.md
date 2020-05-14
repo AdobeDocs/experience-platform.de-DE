@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines generischen OData-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8c67ba710b486501374020ab505b04931f327c0f
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '512'
+ht-degree: 0%
 
 ---
 
 
 # Erstellen eines generischen OData-Quellconnectors in der Benutzeroberfläche
+
+> [!NOTE]
+> Der Generic OData Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Generischen Open Data Protocol (im Folgenden &quot;OData&quot;)-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
