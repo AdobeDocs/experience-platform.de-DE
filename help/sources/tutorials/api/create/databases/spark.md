@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen Sie einen Apache Spark auf einem Blue HDInsights-Connector mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2fd9f38673750af705021d1e8f160be9304039a0
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 1%
 
 ---
 
 
 # Erstellen Sie einen Apache Spark auf einem Blue HDInsights-Connector mithilfe der Flow Service API
+
+>[!NOTE]
+>Der Apache Spark auf der Azurblauen HDInsights Stecker ist in der Beta. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
@@ -57,7 +63,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Spark-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
