@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK und Verwendung von Adobe Zielgruppe
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Zielgruppe rendern
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Zielgruppe rendern
 translation-type: tm+mt
-source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Das AEP Web SDK ist befugt, Ihre Erlebnisse, die über den VEC der Adobe-Zielgru
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -65,7 +65,7 @@ Der formularbasierte Experience Composer ist eine nicht visuelle Benutzeroberfl�
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -91,7 +91,7 @@ alloy
 AEP Web SDK bietet eine Funktion, mit der Sie VEC-Aktionen abrufen können, ohne sich auf das AEP Web SDK verlassen zu müssen, um die VEC-Aktionen für Sie wiederzugeben. Senden Sie ein Ereignis mit der `__view__` Definition als `decisionScopes`.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 
