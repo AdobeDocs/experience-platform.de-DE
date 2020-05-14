@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Amazon Redshift-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 1%
 
 ---
 
 
 # Amazon Redshift-Quellanschluss in der Benutzeroberfläche erstellen
+
+>Die Menüauswahlmöglichkeiten für die [!NOTE]
+>Der Amazon Redshift Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines Amazon Redshift-Quellconnectors (im Folgenden &quot;Redshift&quot;) mithilfe der Plattform-Benutzeroberfläche.
 
