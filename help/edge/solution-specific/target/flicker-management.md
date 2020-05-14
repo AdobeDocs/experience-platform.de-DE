@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: Verwalten des Flackers für personalisierte Erlebnisse
+seo-title: Adobe Experience Platform Web SDK Flackern verwalten
+description: Erfahren Sie, wie Sie Flackern in Benutzererlebnissen verwalten
+seo-description: Erfahren Sie, wie Flackern mit den Experience Platform Web SDK-Eigenschaften verwaltet werden
 translation-type: tm+mt
-source-wordcount: '459'
-ht-degree: 82%
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
+ht-degree: 76%
 
 ---
+
+
 # Beheben von Flackern
 
 Beim Versuch, Personalisierungsinhalte zu rendern, muss das SDK sicherstellen, dass kein Flackern auftritt. Beim Flackern, auch FOOC (Flash of Original Content) genannt, wird ein Originalinhalt kurz angezeigt, bevor die Alternative während des Tests/der Personalisierung angezeigt wird. Das SDK versucht, CSS-Stile auf Elemente der Seite anzuwenden, um sicherzustellen, dass diese Elemente ausgeblendet werden, bis der Personalisierungsinhalt erfolgreich gerendert wird.
