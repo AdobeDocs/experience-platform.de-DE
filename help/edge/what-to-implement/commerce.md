@@ -4,7 +4,7 @@ seo-title: Unterstützen von Produkten mit Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
 seo-description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 100%
@@ -44,7 +44,7 @@ Nachstehend finden Sie eine Liste der Maßnahmen (`measures`), die im `commerce`
 Hier ist ein Beispiel, wie Sie diese Maßnahmen (`Measures`) im SDK festlegen.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm":{
     "commerce":{
       "productViews":{
@@ -72,12 +72,12 @@ Das Commerce-Objekt verfügt auch über ein spezielles Feld zum Sammeln von Best
 Hier ein Beispiel für einen typischen Kauf im SDK.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "order":{
         "purchaseID":"123456789",
-        "currenceCode":"USD",
+        "currencyCode":"USD",
         "priceTotal":39.98,
         "payments":[
           {
@@ -100,7 +100,7 @@ alloy("event",{
         "SKU":"HT104",
         "name":"The Small Floppy Hat",
         "priceTotal":9.99,
-        "qauntity":1
+        "quantity":1
       }
     ]
   }
@@ -126,7 +126,7 @@ Die Produktliste gibt an, welche Produkte mit der entsprechenden Aktion in Verbi
 `productView`-Ereignis
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "productViews":{
@@ -150,7 +150,7 @@ alloy("event",{
 `productView`-Ereignis
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "productListAdds":{
@@ -180,7 +180,7 @@ alloy("event",{
 `checkout`-Ereignis
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "checkouts":{
@@ -208,12 +208,12 @@ alloy("event",{
 `purchase`-Ereignis
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "order":{
         "purchaseID":"123456789",
-        "currenceCode":"USD",
+        "currencyCode":"USD",
         "priceTotal":39.98,
         "payments":[
           {
@@ -236,7 +236,7 @@ alloy("event",{
         "SKU":"HT104",
         "name":"The Small Floppy Hat",
         "priceTotal":9.99,
-        "qauntity":1
+        "quantity":1
       }
     ]
   }
