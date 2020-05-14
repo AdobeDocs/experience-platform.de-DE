@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Erstellen eines PostgreSQL-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: aa9e1e5ab345978e6f4727affb741ef69435e703
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '656'
+ht-degree: 1%
 
 ---
 
 
 # Erstellen eines PostgreSQL-Connectors mit der Flow Service API
+
+>[!NOTE]
+>Der PostgreSQL-Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
