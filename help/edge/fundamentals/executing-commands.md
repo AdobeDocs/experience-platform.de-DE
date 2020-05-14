@@ -4,19 +4,15 @@ seo-title: Ausführen von Adobe Experience Platform Web SDK-Befehlen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 80%
+source-wordcount: '419'
+ht-degree: 79%
 
 ---
 
 
-# (Beta) Ausführen von Befehlen
-
->[!IMPORTANT]
->
->Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
+# Ausführen von Befehlen
 
 Nachdem der Basis-Code auf Ihrer Web-Seite implementiert wurde, können Sie mit der Ausführung von Befehlen mit dem SDK beginnen. Sie müssen nicht warten, bis die externe Datei \(`alloy.js`\) vom Server geladen wird, damit Befehle ausgeführt werden können. Wenn das SDK noch nicht fertig geladen wurde, werden Befehle in die Warteschlange gestellt und so bald wie möglich vom SDK verarbeitet.
 
