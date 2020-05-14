@@ -4,19 +4,19 @@ seo-title: Zusammenführen von Adobe Experience Platform Web SDK-Ereignisdaten
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisdaten zusammenführen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisdaten zusammenführen
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 100%
+source-wordcount: '436'
+ht-degree: 95%
 
 ---
 
 
-# (Beta) Zusammenführen von Ereignisdaten
+# Zusammenführen von Ereignisdaten
 
 >[!IMPORTANT]
 >
->Das Adobe Experience Platform Web SDK befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
+>Diese Funktion befindet sich noch in der Entwicklung, sodass nicht alle Lösungen diese Daten zusammenführen können.
 
 Manchmal sind nicht alle Daten verfügbar, wenn ein Ereignis auftritt. Möglicherweise möchten Sie die _vorhandenen_ Daten erfassen, damit sie nicht verloren gehen, wenn der Nutzer beispielsweise den Browser schließt. Vielleicht möchten Sie aber auch alle Daten einbeziehen, die später verfügbar werden.
 
