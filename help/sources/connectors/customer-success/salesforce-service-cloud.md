@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Salesforce Service Cloud Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5ab1bfc3d2b3ff69579f1745576938258ccbe75
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
 
-# Salesforce Service Cloud Connector
+# (Beta) Salesforce Service Cloud Connector
 
 Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
 
