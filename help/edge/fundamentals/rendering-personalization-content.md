@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK – Rendern von personalisiertem In
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 34%
@@ -21,7 +21,7 @@ Das Adobe Experience Platform Web SDK unterstützt die Abfrage der Personalisier
 Das SDK rendert automatisch personalisierte Inhalte, wenn Sie ein Ereignis an den Server senden und `renderDecisions` als Option des Ereignisses auf `true` festlegen.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ Die Wiedergabe personalisierter Inhalte erfolgt asynchron, sodass keine Annahme 
 Sie können die Liste der Entscheidungen als Versprechen auf dem `event` Befehl anfordern, indem Sie `scopes`. Ein Gültigkeitsbereich ist eine Zeichenfolge, mit der die Personalisierungslösung wissen kann, welche Entscheidung Sie möchten.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
