@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zum Adobe Experience Platform-Datenschutzdienst
 translation-type: tm+mt
-source-git-commit: 284768c0f5416972e51d2fa2078ad5267e1b8628
+source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '87'
 ht-degree: 11%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 11%
 * Privacy Service API {#api}
    * [Erste Schritte](api/getting-started.md)
    * [Datenschutzaufträge](api/privacy-jobs.md)
+   * [Zustimmung](api/consent.md)
    * [Anhang](api/appendix.md)
 * Benutzeroberfläche des Datenschutzdienstes {#ui}
    * [Übersicht über die Benutzeroberfläche des Datenschutzdienstes](ui/overview.md)
