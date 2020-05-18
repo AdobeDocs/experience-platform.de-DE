@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
+source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
 workflow-type: tm+mt
-source-wordcount: '1026'
-ht-degree: 6%
+source-wordcount: '1075'
+ht-degree: 5%
 
 ---
 
@@ -55,7 +55,15 @@ Weitere Informationen zur Migration Ihrer Notebooks und Rezepte auf Spark 2.4 fi
 
 In der [Adobe Echtzeit-Kundendatenplattform](../../rtcdp/overview.md)sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten nahtlos an diese Partner aktivieren.
 
-**Neue Ziele**
+**Facebook**
+
+Adobe Echtzeit-CDP unterstützt jetzt die Aktivierung von Daten auf Facebook, sodass Sie Profil für Ihre Facebook-Kampagnen aktivieren können, um Audiencen-Targeting, Personalisierung und Unterdrückung auf Basis von Hash-E-Mails zu ermöglichen.
+
+Weitere Informationen zu den neuen Funktionen finden Sie auf der [Facebook-Zielseite](/help/rtcdp/destinations/facebook-destination.md) .
+
+<br> 
+
+**Amazon Kinesis und Azurblase Ereignis Hubs Streaming Cloud Datenspeicherung Ziele**
 
 Adobe Echtzeit-CDP unterstützt jetzt die Aktivierung von Daten in Streaming-Cloud-Datenspeicherung-Ziele, sodass Sie Audiencen- und Ereignisse im JSON-Format an diese Ziele exportieren können. Anschließend können Sie die Geschäftslogik über diesen Ereignissen in Ihren Zielen beschreiben. Weitere Informationen finden Sie unter:
 
