@@ -4,7 +4,10 @@ seo-title: Ziele – Übersicht
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 49479cd1520bd2407ecd5140265661aefe0817a3
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 81%
 
 ---
 
@@ -22,7 +25,7 @@ Eine der Kernfunktionen der Echtzeit-Kundendatenplattform besteht darin, Ihre Da
 ## Ziele – Schritte
 
 * Wählen Sie in einem [Self-Service-Katalog](/help/rtcdp/destinations/destinations-catalog.md) unter allen in der Echtzeit-Kundendatenplattform verfügbaren Zielen.
-* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Verwenden Sie **[!UICONTROL Ziele]**, um Profile oder Segmente zu [aktivieren](/help/rtcdp/destinations/activate-destinations.md) und an Plattformen für Marketing-Automatisierung, digitale Werbung und andere zu senden.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
 ## Steuerelemente
@@ -44,3 +47,15 @@ Detaillierte Informationen finden Sie unter [Zieltypen und Kategorien - Übersic
 Die Funktion &quot;Ziele&quot;in CDP in Echtzeit funktioniert mit Berechtigungen für Adobe Experience Platform-Zugriffskontrollen. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
 
 Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](../../access-control/ui/overview.md).
+
+<!--
+
+// Commenting out DULE in Destinations service
+
+## Destinations and Data Usage Labeling and Enforcement (DULE)
+
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. DULE is currently *not* enforced in Adobe Real-time CDP destinations.
+
+You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform.
+
+-->
