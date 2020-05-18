@@ -4,10 +4,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 77%
+source-wordcount: '775'
+ht-degree: 61%
 
 ---
 
@@ -29,9 +29,13 @@ Beachten Sie, dass sich, wenn für ein Ziel bereits ein Aktivierungsfluss vorhan
 3. Wählen Sie **[!UICONTROL Aktivieren]**.
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
    ![Segment an Ziel](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Bedingt*. Dieser Schritt gilt nur für Segmente, die Cloud-Datenspeicherung-Zielen und E-Mail-Marketingzielen zugeordnet sind. <br> Wählen Sie auf der Seite **[!UICONTROL Zielattribute]** die Option **[!UICONTROL Neues Feld hinzufügen]** und wählen Sie die Attribute aus, die Sie an das Ziel senden möchten.
+5. *Bedingt*. Dieser Schritt unterscheidet sich je nach Zieltyp, in dem Sie Ihre Segmente aktivieren. <br> Wählen Sie für *E-Mail-Marketing-Ziele* und *Cloud-Datenspeicherung-Ziele* auf der Seite &quot;Attribute **[!UICONTROL auswählen]** &quot; **[!UICONTROL Hinzufügen neues Feld]** und wählen Sie die Attribute aus, die Sie an das Ziel senden möchten.
 Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige Kennung](/help/rtcdp/destinations/email-marketing-destinations.md#identity) zu verwenden. Weiterführende Informationen zu obligatorischen Attributen finden Sie unter „Identität“ im Artikel [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
-   ![Zielattribute](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![Zielattribute](/help/rtcdp/destinations/assets/select-attributes-step.png)
+Wählen Sie für *Social-Netzwerkziele* im Schritt der **[!UICONTROL Identitätszuordnung]** die Quellattribute aus, die den Identitäten der Zielgruppe zugeordnet werden sollen.
+   ![Identitätszuordnung vor dem Ausfüllen von Feldern](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)In dem unten stehenden Beispiel wurde die persönliche E-Mail-Adresse im Identitäts-Schema bei der Erfassung in Experience Platform gehasht, um die Anforderungen [für das Facebook-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)E-Mail-Hashing zu erfüllen. Klicken Sie nach Auswahl der Zuordnung auf **[!UICONTROL Weiter]** .
+   ![Identitätszuordnung nach dem Ausfüllen von Feldern](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
    >[!IMPORTANT]
@@ -76,6 +80,10 @@ Markieren Sie das entsprechende Werbeziel, für das Sie Ihre Daten aktivieren. W
 
 Bei Facebook bedeutet eine erfolgreiche Aktivierung, dass eine benutzerdefinierte Facebook-Audience programmgesteuert im [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/)erstellt wird. Die Segmentmitgliedschaft in der Audience wird hinzugefügt und entfernt, da Benutzer für die aktivierten Segmente qualifiziert oder disqualifiziert sind.
 
+>[!TIP]
+>
+>Die Integration von Adobe Echtzeit-CDP und Facebook unterstützt historische Audiencen-Backups. Alle historischen Segmentqualifikationen werden an Facebook gesendet, wenn Sie die Segmente an das Ziel aktivieren.
+
 ## Aktivierung deaktivieren {#disable-activation}
 
 Gehen Sie wie folgt vor, um einen vorhandenen Aktivierungsfluss zu deaktivieren:
@@ -84,3 +92,4 @@ Gehen Sie wie folgt vor, um einen vorhandenen Aktivierungsfluss zu deaktivieren:
 2. Klicken Sie in der rechten Leiste auf das Steuerelement **[!UICONTROL Aktiviert]**, um den Status des Aktivierungsflusses zu ändern.
 3. Wählen Sie im Fenster **Datenflussstatus aktualisieren** die Option **Bestätigen**, um den Aktivierungsfluss zu deaktivieren.
 
+Generieren Sie in AWS Kinesis einen Zugriffsschlüssel - ein Schlüssel-Paar für den geheimen Zugriff, um Adobe Echtzeit-CDP Zugriff auf Ihr AWS-Kinesis-Konto zu gewähren. Weitere Informationen finden Sie in der [AWS-Kinesis-Dokumentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
