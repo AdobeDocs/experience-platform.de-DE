@@ -4,9 +4,9 @@ seo-title: Facebook-Ziel
 description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 seo-description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '665'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 1%
 ## Übersicht {#overview}
 
 Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
+
+![Facebook-Ziel in der CDP-Benutzeroberfläche in Echtzeit](/help/rtcdp/destinations/assets/facebook-destination.png)
 
 ## Nutzungsszenarien
 
