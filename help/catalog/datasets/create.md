@@ -5,6 +5,9 @@ title: Erstellen eines Datensatzes mit APIs
 topic: datasets
 translation-type: tm+mt
 source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+workflow-type: tm+mt
+source-wordcount: '1263'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +48,7 @@ Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlich
 
 * Content-Type: application/json
 
-## Übung
+## Tutorial
 
 Um einen Datensatz zu erstellen, muss zunächst ein Schema definiert werden. Ein Schema ist ein Regelsatz, der die Darstellung von Daten unterstützt. Schema beschreiben nicht nur die Datenstruktur, sondern bieten auch Einschränkungen und Erwartungen, die angewendet und zur Validierung von Daten verwendet werden können, während sie zwischen Systemen verschoben werden.
 
