@@ -5,6 +5,9 @@ title: Erstellen eines Datensatzes zum Exportieren eines Segments für eine Audi
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+workflow-type: tm+mt
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
