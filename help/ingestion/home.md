@@ -5,6 +5,9 @@ title: Übersicht über die Dateneinbindung in der Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
 source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 0%
 
 ---
 
