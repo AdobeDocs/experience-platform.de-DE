@@ -5,6 +5,9 @@ title: Richtlinien
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+workflow-type: tm+mt
+source-wordcount: '948'
+ht-degree: 2%
 
 ---
 
