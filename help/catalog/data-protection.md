@@ -5,6 +5,9 @@ title: Datenschutz in Adobe Experience Platform
 topic: data protection
 translation-type: tm+mt
 source-git-commit: edf7cef0991ceef0465d5c1d750bd1885754f716
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
