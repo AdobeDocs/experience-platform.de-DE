@@ -5,6 +5,9 @@ title: Übersicht über die Durchsetzung der Richtlinien
 topic: enforcement
 translation-type: tm+mt
 source-git-commit: d1659bbdd40cf1e598713f1fe1a6eeae8e8249cc
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 0%
 
 ---
 
