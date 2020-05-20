@@ -5,6 +5,9 @@ description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmen
 seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Starten Sie Erweiterungen, um Rohdaten an verschiedene Zieltypen weiterzuleiten.
 translation-type: tm+mt
 source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +32,7 @@ In der Adobe Echtzeit-Kundendatenplattform wird zwischen zwei Zieltypen untersch
 
 #### Profilexportziele
 
-Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält. Diese Ziele nutzen Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Das Ziel [der](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 Cloud-Datenspeicherung ist ein Beispiel dafür, wo Sie Dateien mit Profil-Exporten ablegen können.
+Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält. Diese Ziele nutzen Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Das Ziel [der](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 Cloud-Datenspeicherung ist ein Beispiel dafür, wo Sie Dateien mit Profil-Exporten hinterlegen können.
 
 #### Segmentexportziele
 
