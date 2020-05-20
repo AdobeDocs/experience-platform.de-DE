@@ -5,6 +5,9 @@ title: Daten aus einem Drittanbieter-Cloud-Datenspeicherung-System mithilfe der 
 topic: overview
 translation-type: tm+mt
 source-git-commit: 0e993e3b0ad4ff58a67e7db742f97c5fb2c3308d
+workflow-type: tm+mt
+source-wordcount: '1114'
+ht-degree: 3%
 
 ---
 
@@ -30,7 +33,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -44,7 +47,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 - Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Um Parkettdaten mithilfe von Plattform-APIs zu erfassen, müssen Sie über eine gültige Verbindung für die Cloud-Datenspeicherung von Drittanbietern verfügen, auf die Sie zugreifen. Wenn Sie noch keine Verbindung zu der Datenspeicherung haben, mit der Sie arbeiten möchten, können Sie eine dieser Übungen erstellen:
 
@@ -371,7 +374,7 @@ Der letzte Schritt zur Erfassung von Parkettdaten aus einer Cloud-Datenspeicheru
 - [Quell-Verbindungs-ID](#source)
 - [Zielgruppen-Verbindungs-ID](#target)
 
-Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 **API-Format**
 
