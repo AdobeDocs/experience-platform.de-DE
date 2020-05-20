@@ -5,6 +5,9 @@ title: Verwalten von Entscheidungsdienst-Entitäten mithilfe von APIs
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '7249'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -70,7 +73,7 @@ API-Nutzdatenformate werden mit einem `Accept` oder einer `Content-Type` Kopfzei
 
 Die Verwendung der einzelnen **Formatvarianten** hängt von der jeweiligen API ab:
 
-| API  | Content-Type-Kopfzeile | Kopfzeile akzeptieren |
+| API | Content-Type-Kopfzeile | Kopfzeile akzeptieren |
 | --- | --- | --- |
 | Container <br/>&quot;Instanz erstellen&quot; | `hal`<br/>mit Schema-Parameter | `xdm.receipt` |
 | Update<br/>InstanceUpdate Container | `hal`<br/>mit Schema-Parameter | `xdm.receipt` |
@@ -257,7 +260,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-Die JSON-Eigenschaften der Instanz werden in die `_instance` Eigenschaft eingeschlossen und die anderen Eigenschaften auf der Stammebene enthalten Metadaten zur Instanz.
+Die JSON-Eigenschaften der Instanz werden in die `_instance` Eigenschaft eingeschlossen, und die anderen Eigenschaften der Stammebene enthalten Metadaten zur Instanz.
 
 Die Ressource enthält auch ein Array von JSON-Schema-IDs. Dieses Array zeigt die JSON-Schema an, für die diese Instanz validiert wurde.
 
@@ -348,9 +351,10 @@ Die zurückgegebene Liste von Instanzen enthält die Instanzen, für die der Aus
 <br/>
 Die Eigenschaft, die mit dem angegebenen Wert verglichen werden soll, wird als Pfad identifiziert. Die einzelnen Pfadkomponenten werden durch "." wie folgt getrennt: s_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
-Für Eigenschaften mit Zeichenfolgen-, numerischen oder Datums-/Uhrzeitwerten sind folgende Operatoren zulässig: `==`, `!=`, `<`, `<=`und `>` `>=`. Darüber hinaus `~` kann für Eigenschaften mit einem Zeichenfolgenwert ein Operator verwendet werden. Der `~` -Operator stimmt mit der angegebenen Eigenschaft gemäß einem regulären Ausdruck überein. Der Zeichenfolgenwert der Eigenschaft muss mit dem **gesamten** Ausdruck übereinstimmen, damit die Entitäten in die gefilterten Ergebnisse einbezogen werden. Wenn Sie beispielsweise nach der Zeichenfolge `cars` an einer beliebigen Stelle im Eigenschaftswert suchen, muss der reguläre Ausdruck `.*cars.*`vorhanden sein. Ohne den Anfang oder das Ende `.*`stimmen nur Entitäten überein, bei denen ein Eigenschaftswert beginnt oder endet `cars`. Für den `~` Operator wird beim Vergleich von Buchstaben nicht zwischen Groß- und Kleinschreibung unterschieden. Bei allen anderen Operatoren wird beim Vergleich die Groß-/Kleinschreibung beachtet.<br/><br/>
+Für Eigenschaften mit Zeichenfolgen-, numerischen oder Datums-/Uhrzeitwerten sind folgende Operatoren zulässig: `==`, `!=`, `<`, `<=`, `>` und `>=`. Darüber hinaus `~` kann für Eigenschaften mit einem Zeichenfolgenwert ein Operator verwendet werden. Der `~` -Operator stimmt mit der angegebenen Eigenschaft gemäß einem regulären Ausdruck überein. Der Zeichenfolgenwert der Eigenschaft muss mit dem **gesamten** Ausdruck übereinstimmen, damit die Entitäten in die gefilterten Ergebnisse einbezogen werden. Wenn Sie beispielsweise nach der Zeichenfolge `cars` an einer beliebigen Stelle im Eigenschaftswert suchen, muss der reguläre Ausdruck `.*cars.*`vorhanden sein. Ohne den Anfang oder das Ende `.*`stimmen nur Entitäten überein, bei denen ein Eigenschaftswert beginnt oder endet `cars`. Für den `~` Operator wird beim Vergleich von Buchstaben nicht zwischen Groß- und Kleinschreibung unterschieden. Bei allen anderen Operatoren wird beim Vergleich die Groß-/Kleinschreibung beachtet.<br/><br/>
 In Filter-Ausdrücken können nicht nur Instanznutzlasteigenschaften verwendet werden. Die Hülleneigenschaften werden auf die gleiche Weise verglichen, z. `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
-<br/>Der Parameter &quot; `property` Abfrage&quot;kann wiederholt werden, sodass mehrere Filterbedingungen angewendet werden, z. B. um alle Instanzen zurückzugeben, die nach einem bestimmten Datum und vor einem bestimmten Datum zuletzt geändert wurden. Die Werte in diesen Ausdrücken müssen URL-kodiert sein. Wenn kein Ausdruck angegeben ist und der Name der Eigenschaft einfach aufgelistet ist, sind die Elemente, die eine Eigenschaft mit dem angegebenen Namen haben, die entsprechenden Kriterien.<br/>
+<br/>
+Der Parameter `property` &quot;Abfrage&quot;kann wiederholt werden, sodass mehrere Filterbedingungen angewendet werden, z. B. um alle Instanzen zurückzugeben, die nach einem bestimmten Datum und vor einem bestimmten Datum zuletzt geändert wurden. Die Werte in diesen Ausdrücken müssen URL-kodiert sein. Wenn kein Ausdruck angegeben ist und der Name der Eigenschaft einfach aufgelistet ist, sind die Elemente, die eine Eigenschaft mit dem angegebenen Namen haben, die entsprechenden Kriterien.<br/>
 <br/>
 
 - **`id`**: Manchmal muss eine Liste durch den URI der Instanzen gefiltert werden. Der Parameter `property` &quot;Abfrage&quot;kann verwendet werden, um eine Instanz zu filtern. Um jedoch mehr als eine Instanz zu erhalten, kann der Anforderung eine Liste von URIs zugewiesen werden. Der `id` Parameter wird wiederholt, und jedes Vorkommen gibt einen URI-Wert an. Die URI-Werte müssen URL-kodiert sein. `id={URI_1}&id={URI_2},…`
@@ -453,7 +457,7 @@ Zusätzlich zu den Paging- und Filterparametern aus den Liste-APIs ermöglicht d
 
 Die Volltextsuche wird durch die folgenden Parameter gesteuert:
 
-- **`q`**: Enthält eine durch Leerzeichen getrennte, ungeordnete Liste von Begriffen, die normalisiert werden, bevor sie mit Zeichenfolgeneigenschaften der Instanzen abgeglichen werden. Zeichenfolgeneigenschaften werden auf Begriffe analysiert und diese Begriffe werden ebenfalls normalisiert. Die Abfrage &quot;Suchen&quot;versucht, einem oder mehreren der im `q` Parameter angegebenen Begriffe zu entsprechen. Die Zeichen +, -, =, &amp;,||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, : / haben eine besondere Bedeutung für die Bestimmung der Wortgrenzen in der Abfrage-Zeichenfolge und sollten bei der Darstellung in einem Token, das mit dem Zeichen übereinstimmen sollte, mit einem umgekehrten Schrägstrich versehen werden. Die Zeichenfolge für die Abfrage kann durch Anführungszeichen für die Dublette der exakten Zeichenfolgenübereinstimmung und um Sonderzeichen zu Escape-Zeichen umgeben werden.
+- **`q`**: Enthält eine durch Leerzeichen getrennte, ungeordnete Liste von Begriffen, die normalisiert werden, bevor sie mit Zeichenfolgeneigenschaften der Instanzen abgeglichen werden. Zeichenfolgeneigenschaften werden auf Begriffe analysiert und diese Begriffe werden ebenfalls normalisiert. Die Abfrage &quot;Suchen&quot;versucht, einem oder mehreren der im `q` Parameter angegebenen Begriffe zu entsprechen. Die Zeichen +, -, =, &amp;, ||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, : / haben eine besondere Bedeutung für die Bestimmung der Wortgrenzen in der Abfrage-Zeichenfolge und sollten bei der Darstellung in einem Token, das mit dem Zeichen übereinstimmen sollte, mit einem umgekehrten Schrägstrich versehen werden. Die Zeichenfolge für die Abfrage kann durch Anführungszeichen für die Dublette der exakten Zeichenfolgenübereinstimmung und um Sonderzeichen zu Escape-Zeichen umgeben werden.
 - **`field`**: Wenn die Suchbegriffe nur mit einer Untergruppe der Eigenschaften übereinstimmen sollten, kann der Feldparameter den Pfad zu dieser Eigenschaft angeben. Der Parameter kann wiederholt werden, um mehr als eine Eigenschaft anzugeben, die abgeglichen werden soll.
 - **`qop`**: Enthält einen Steuerungsparameter, mit dem das passende Verhalten der Suche geändert wird. Wenn der Parameter auf festgelegt ist und dann alle Suchbegriffe übereinstimmen müssen und wenn der Parameter fehlt oder sein Wert auf gesetzt ist oder dann kann jeder Begriff für eine Übereinstimmung zählen.
 
@@ -506,7 +510,7 @@ Die PATCH-Anforderung wendet die Anweisungen an und validiert dann die resultier
 
 Mithilfe der folgenden Anmerkungen können Sie verhindern, dass Eigenschaften beim Erstellen und/oder Aktualisieren festgelegt werden:
 
-- **`"meta:usereditable"`**: Boolescher Wert: Wenn eine Anforderung von einem Benutzeragenten stammt, der den Aufrufer mit einem Zugriffstoken für ein Benutzerkonto oder ein technisches Konto identifiziert, `"meta:usereditable": false` sollten Eigenschaften, mit denen eine Anmerkung versehen wurde, nicht in der Payload vorhanden sein. Ist dies der Fall, dürfen sie keinen anderen Wert haben als den, der derzeit festgelegt wird. Wenn sich die Werte unterscheiden, wird die Anforderung zum Aktualisieren oder Patch mit dem Status 422 Nicht verarbeitbare Entität abgelehnt.
+- **`"meta:usereditable"`**: Boolescher Wert: Wenn eine Anforderung von einem Benutzeragenten stammt, der den Aufrufer mit einem Zugriffstoken für ein Benutzerkonto oder ein technisches Konto identifiziert, `"meta:usereditable": false` sollten Eigenschaften, die mit Anmerkungen versehen sind, nicht in der Payload vorhanden sein. Ist dies der Fall, dürfen sie keinen anderen Wert haben als den, der derzeit festgelegt wird. Wenn sich die Werte unterscheiden, wird die Anforderung zum Aktualisieren oder Patch mit dem Status 422 Nicht verarbeitbare Entität abgelehnt.
 - **`"meta:immutable"`**: Boolescher Wert: Eigenschaften, die mit Anmerkungen versehen sind, `"meta:immutable": true` können nach dem Festlegen nicht mehr geändert werden. Dies gilt für Anfragen, die von einem Endbenutzer, einer technischen Kontointegration oder einem besonderen Dienst kommen.
 
 **Test auf gleichzeitige Aktualisierung**
@@ -831,7 +835,7 @@ Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von In
 
 Der Wert in der Eigenschaft &quot;Bedingung&quot;der Regel enthält einen PQL-Ausdruck. Die Kontextdaten werden über den Ausdruck für speziellen Pfad @{schemaID} referenziert.
 
-Regeln richten sich natürlich an Segmente in der Erlebnisplattform, und oft verwendet eine Regel einfach die Segmentabsicht, indem sie die `segmentMembership` Eigenschaft eines Profils testen. Die `segmentMembership` Eigenschaft enthält die Ergebnisse der Segmentbedingungen, die bereits bewertet wurden. Auf diese Weise kann eine Organisation ihre domänenspezifischen Audiencen einmal definieren, sie benennen und die Bedingungen einmal auswerten.
+Regeln richten sich natürlich an Segmente in der Erlebnisplattform aus. Oft verwendet eine Regel einfach die Segmentabsicht, indem die `segmentMembership` Eigenschaft eines Profils getestet wird. Die `segmentMembership` Eigenschaft enthält die Ergebnisse der Segmentbedingungen, die bereits bewertet wurden. Auf diese Weise kann eine Organisation ihre domänenspezifischen Audiencen einmal definieren, sie benennen und die Bedingungen einmal auswerten.
 
 ## Verwalten von Angebot-Sammlungen
 
