@@ -62,7 +62,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 - Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Azurblauer Ereignis Hubs-Konto ist nur eine Verbindung erforderlich, da sie zur Erstellung mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
