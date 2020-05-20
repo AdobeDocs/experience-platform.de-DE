@@ -5,6 +5,9 @@ title: Dienste
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+workflow-type: tm+mt
+source-wordcount: '811'
+ht-degree: 2%
 
 ---
 
@@ -318,7 +321,7 @@ curl -X DELETE \
 
 ## MLServices nach MLInstance-ID löschen
 
-Sie können alle zu einer bestimmten MLServices gehörenden MLServices löschen, indem Sie eine DELETE-Anforderung ausführen, die eine MLInstance-ID als Parameter für die Abfrage angibt.
+Sie können alle MLServices, die zu einer bestimmten MLInstanz gehören, löschen, indem Sie eine DELETE-Anforderung ausführen, die eine MLInstance-ID als Parameter für die Abfrage angibt.
 
 **API-Format**
 
