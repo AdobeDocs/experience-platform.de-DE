@@ -5,6 +5,9 @@ title: Kennzeichnen eines Felds als Identität
 topic: api guide
 translation-type: tm+mt
 source-git-commit: 40ce232e39f62f1ee478ef05229dd2fc125ee4c0
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 1%
 
 ---
 
