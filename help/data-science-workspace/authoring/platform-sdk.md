@@ -5,6 +5,9 @@ title: Handbuch zum Plattform-SDK
 topic: SDK authoring
 translation-type: tm+mt
 source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 5%
 
 ---
 
