@@ -5,6 +5,9 @@ title: Dataset für Profil- und Identitätsdienst mithilfe von APIs konfiguriere
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 1%
 
 ---
 
