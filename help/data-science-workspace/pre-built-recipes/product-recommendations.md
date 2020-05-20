@@ -5,6 +5,9 @@ title: Rezept für Produktempfehlungen
 topic: overview
 translation-type: tm+mt
 source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+workflow-type: tm+mt
+source-wordcount: '426'
+ht-degree: 5%
 
 ---
 
