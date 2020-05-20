@@ -5,6 +5,9 @@ title: Streaming mehrerer Nachrichten in einer einzelnen HTTP-Anforderung
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 1%
 
 ---
 
