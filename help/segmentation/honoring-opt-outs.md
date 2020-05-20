@@ -5,6 +5,9 @@ title: Anerkennung von Ausschlussmöglichkeiten
 topic: overview
 translation-type: tm+mt
 source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+workflow-type: tm+mt
+source-wordcount: '1066'
+ht-degree: 0%
 
 ---
 
