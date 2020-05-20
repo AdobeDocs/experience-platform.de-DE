@@ -5,6 +5,9 @@ title: 'Verwalten von Datenverwendungsbeschriftungen mit APIs '
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
+workflow-type: tm+mt
+source-wordcount: '591'
+ht-degree: 3%
 
 ---
 
