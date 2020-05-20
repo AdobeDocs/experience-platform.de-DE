@@ -1,19 +1,22 @@
 ---
-title: Ziel von Google Ad Manager
-seo-title: Ziel von Google Ad Manager
-description: 'Google Ad Manager, früher DoubleClick für Herausgeber oder DoubleClick AdX, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Anzeigen auf ihren Websites, über Videos und in mobilen Apps zu verwalten. '
-seo-description: 'Google Ad Manager, früher DoubleClick für Herausgeber oder DoubleClick AdX, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Anzeigen auf ihren Websites, über Videos und in mobilen Apps zu verwalten. '
+title: Google Ad Manager-Ziel
+seo-title: Google Ad Manager-Ziel
+description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
+seo-description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '588'
+ht-degree: 39%
 
 ---
 
 
-# Ziel von Google Ad Manager
+# Google Ad Manager-Ziel
 
 ## Übersicht
 
-Google Ad Manager, früher DoubleClick für Herausgeber oder DoubleClick AdX, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Anzeigen auf ihren Websites, über Videos und in mobilen Apps zu verwalten.
+Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 
 ## Zielspezifikationen
 
@@ -45,17 +48,17 @@ Bevor Sie das Google Ad Manager-Ziel in Adobe Echtzeit-CDP erstellen, müssen Si
 
 ## Ziel erstellen
 
-1. Wählen Sie **[!UICONTROL Connections > Destinations]** in &quot;Google Ad Manager&quot;die Option **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
    ![Google Ad Manager-Ziel verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. Füllen Sie im Arbeitsablauf &quot;Ziel erstellen&quot;die [!UICONTROL Basic Information] für das Ziel aus.
+2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination.
    ![Grundlegende Informationen Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
-* **[!UICONTROL Description]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
-* **[!UICONTROL Account Type]**: Wählen Sie je nach Konto bei Google eine Option aus:
+* **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
+* **[!UICONTROL Kontotyp]**: Wählen Sie je nach Konto bei Google eine Option aus:
    * DoubleClick `DFP by Google` für Herausgeber verwenden
    * Verwenden Sie `AdX buyer` für Google AdX.
-* **[!UICONTROL Account ID]**: Geben Sie Ihre Konto-ID bei Google ein. Dies kann Ihre Netzwerk-ID oder Ihre Audience Link-ID sein. Normalerweise ist dies eine achtstellige ID.
+* **[!UICONTROL Kontokennung]**: Geben Sie Ihre Google-Kontokennung ein. Dies kann Ihre Netzwerk-ID oder Ihre Audience Link-ID sein. Normalerweise ist dies eine achtstellige ID.
 
 >[!NOTE]
 >
