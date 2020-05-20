@@ -5,6 +5,9 @@ title: Löschen von Ressourcen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 7%
 
 ---
 
