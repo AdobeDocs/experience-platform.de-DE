@@ -5,6 +5,9 @@ title: Produktdokumentation zu Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
 source-git-commit: 9e5273c077b8bd27bcab69c3391340e95295b990
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 7%
 
 ---
 
