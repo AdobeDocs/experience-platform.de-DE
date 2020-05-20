@@ -5,6 +5,9 @@ title: Entwicklerhandbuch für Abfrage Service
 topic: query templates
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '643'
+ht-degree: 3%
 
 ---
 
