@@ -57,4 +57,4 @@ Geben Sie im Eingabefeld einen Namen, eine optionale Beschreibung und Ihre Blob-
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basis-Verbindung zu Ihrem Blue Blob- oder Amazon S3-Konto eingerichtet. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/batch/cloud-storage.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Basis-Verbindung zu Ihrem Blue Blob oder Amazon S3 Konto eingerichtet. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/batch/cloud-storage.md)zu übertragen.
