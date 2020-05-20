@@ -5,6 +5,9 @@ description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kunde
 seo-description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit über Datenelemente und geben Daten mit Adobe Echtzeit-CDP frei.
 translation-type: tm+mt
 source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
