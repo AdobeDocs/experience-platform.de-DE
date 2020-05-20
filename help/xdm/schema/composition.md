@@ -5,6 +5,9 @@ title: Grundlagen der Schema-Komposition
 topic: overview
 translation-type: tm+mt
 source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+workflow-type: tm+mt
+source-wordcount: '2761'
+ht-degree: 0%
 
 ---
 
