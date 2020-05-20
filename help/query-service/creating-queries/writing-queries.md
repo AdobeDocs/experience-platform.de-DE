@@ -5,6 +5,9 @@ title: Schreiben von Abfragen
 topic: queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '667'
+ht-degree: 1%
 
 ---
 
