@@ -5,6 +5,9 @@ description: Ein Dokument zur Datenqualität in der Echtzeit-Kundendatenplattfor
 seo-description: Ein Dokument, das beschreibt, wie Datenqualität bei Batch- und Datenerfassung in der Echtzeit-Kundendatenplattform von Adobe sichergestellt wird
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 100%
 
 ---
 
