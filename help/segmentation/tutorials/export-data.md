@@ -5,6 +5,9 @@ title: Daten mit APIs exportieren
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 1%
 
 ---
 
@@ -180,7 +183,7 @@ curl -X POST \
 | `mergePolicy.id` | Die ID der Zusammenführungsrichtlinie. |
 | `mergePolicy.version` | Die spezifische Version der zu verwendenden Mergerichtlinie. Wenn Sie diesen Wert auslassen, wird standardmäßig die neueste Version verwendet. |
 | `filter` | *(Optional)* Gibt einen oder mehrere der folgenden Filter an, die vor dem Exportieren auf das Segment angewendet werden sollen. |
-| `filter.segments` | *(Optional)* Gibt die zu exportierenden Segmente an. Wird dieser Wert nicht angegeben, werden alle Daten aus allen Profilen exportiert. Akzeptiert ein Array von Segmentobjekten, die jeweils die folgenden Felder enthalten:<ul><li>`segmentId`: **(Erforderlich bei Verwendung`segments`)** Segment-ID für zu exportierende Profil.</li><li>`segmentNs` *(Optional)* Segmentcode für den jeweiligen Namensraum `segmentID`.</li><li>`status` *(Optional)* Ein Array von Zeichenfolgen, das einen Statusfilter für die `segmentID`Zeichenfolge bereitstellt. Standardmäßig `status` wird der Wert `["realized", "existing"]` verwendet, der alle Profil darstellt, die zum aktuellen Zeitpunkt in das Segment fallen. Mögliche Werte sind: `"realized"`, `"existing"`und `"exited"`.</br></br>Weitere Informationen finden Sie im Lernprogramm zum [Erstellen von Segmenten](./create-a-segment.md).</li></ul> |
+| `filter.segments` | *(Optional)* Gibt die zu exportierenden Segmente an. Wird dieser Wert nicht angegeben, werden alle Daten aus allen Profilen exportiert. Akzeptiert ein Array von Segmentobjekten, die jeweils die folgenden Felder enthalten:<ul><li>`segmentId`: **(Erforderlich bei Verwendung`segments`)** der Segment-ID für Profil, die exportiert werden sollen.</li><li>`segmentNs` *(Optional)* Segmentcode für den jeweiligen Namensraum `segmentID`.</li><li>`status` *(Optional)* Ein Array von Zeichenfolgen, das einen Statusfilter für die `segmentID`Zeichenfolge bereitstellt. Standardmäßig `status` wird der Wert `["realized", "existing"]` verwendet, der alle Profil darstellt, die zum aktuellen Zeitpunkt in das Segment fallen. Mögliche Werte sind: `"realized"`, `"existing"`und `"exited"`.</br></br>Weitere Informationen finden Sie im Lernprogramm zum [Erstellen von Segmenten](./create-a-segment.md).</li></ul> |
 | `filter.segmentQualificationTime` | *(Optional)* Filtern Sie nach der Segmentqualifizierungszeit. Die Beginn- und/oder Endzeit können angegeben werden. |
 | `filter.segmentQualificationTime.startTime` | *(Optional)* Segmentqualifizierungs-Beginn für eine Segment-ID für einen bestimmten Status. Es wurde nicht angegeben, es wird kein Filter für die Zeit des Beginns für eine Segment-ID-Qualifizierung angezeigt. Der Zeitstempel muss im [RFC 3339](https://tools.ietf.org/html/rfc3339) -Format angegeben werden. |
 | `filter.segmentQualificationTime.endTime` | *(Optional)* Endzeit der Segmentqualifizierung für eine Segment-ID für einen bestimmten Status. Es wurde kein Filter für die Endzeit einer Segment-ID-Qualifizierung bereitgestellt. Der Zeitstempel muss im [RFC 3339](https://tools.ietf.org/html/rfc3339) -Format angegeben werden. |
