@@ -5,13 +5,16 @@ title: Übersicht über die Adobe Privacy JavaScript Library
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b916ac5529db6ca383bf8bad56961bb1b8a0b0c
+workflow-type: tm+mt
+source-wordcount: '972'
+ht-degree: 5%
 
 ---
 
 
 # Übersicht über die Adobe Privacy JavaScript Library
 
-Als Datenverarbeiter verarbeitet Adobe personenbezogene Daten gemäß den Anweisungen und Genehmigungen Ihrer Firma. Als Datenverantwortlicher legen Sie fest, welche personenbezogenen Daten Adobe in Ihrem Namen verarbeitet und speichert. Je nach den Informationen, die Sie über Adobe Experience Cloud-Lösungen senden, kann Adobe private Informationen speichern, die für Datenschutzbestimmungen wie die Allgemeine Datenschutzverordnung (GDPR) und das California Consumer Privacy Act (CCPA) gelten. Weitere Informationen zur Datenerfassung durch Experience Cloud-Lösungen finden Sie im Dokument zum [Datenschutz in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) .
+Als Datenverarbeiter verarbeitet Adobe personenbezogene Daten gemäß den Anweisungen und Genehmigungen Ihrer Firma. Als Datenverantwortlicher legen Sie fest, welche personenbezogenen Daten Adobe in Ihrem Namen verarbeitet und speichert. Je nach den Informationen, die Sie über Adobe Experience Cloud-Lösungen senden, kann Adobe private Informationen speichern, die für Datenschutzbestimmungen wie die Allgemeine Datenschutzverordnung (GDPR) und das California Consumer Privacy Act (CCPA) gelten. Weitere Informationen zur Datenerfassung durch Experience Cloud-Lösungen finden Sie im Dokument zum [Datenschutz in Adobe Experience Cloud](https://www.adobe.com/de/privacy/marketing-cloud.html) .
 
 Die JavaScript-Bibliothek **zum Schutz der Privatsphäre in** Adobe ermöglicht es Datenverarbeitungs-Controllern, den Abruf aller von Experience Cloud-Lösungen generierten Identitäten der betroffenen Personen für eine bestimmte Domäne zu automatisieren. Mithilfe der vom [Adobe Experience Platform Privacy Service](home.md)bereitgestellten API können diese Identitäten dann zum Erstellen und Löschen von Anforderungen für private Daten dieser betroffenen Personen verwendet werden.
 
@@ -29,7 +32,7 @@ In der folgenden Tabelle sind die verschiedenen Funktionen der Bibliothek aufgef
 | `removeIdentities` | Entfernt jede übereinstimmende (gültige) Identität aus dem Browser. Gibt ein Array mit übereinstimmenden Identitäten (`validIds`) zurück, wobei jede Identität einen `isDeleteClientSide` booleschen Wert enthält, der angibt, ob diese ID gelöscht wurde. |
 | `retrieveThenRemoveIdentities` | Ruft ein Array mit übereinstimmenden Identitäten (`validIds`) ab und entfernt diese dann aus dem Browser. Diese Funktion ähnelt zwar der Funktion, `removeIdentities`wird jedoch am besten verwendet, wenn die von Ihnen verwendete Adobe-Lösung eine Zugriffsanfrage erfordert, bevor das Löschen möglich ist (z. B. wenn eine eindeutige ID abgerufen werden muss, bevor sie in einer Löschanforderung bereitgestellt wird). |
 
->[!NOTE] Entfernen `removeIdentities` und entfernen Sie `retrieveThenRemoveIdentities` nur Identitäten aus dem Browser für bestimmte Adobe-Lösungen, die diese unterstützen. Adobe Audience Manager löscht beispielsweise nicht die demdex-IDs, die in Drittanbieter-Cookies gespeichert sind, während Adobe Zielgruppe alle Cookies löscht, die ihre IDs speichern.
+>[!NOTE] `removeIdentities` und entfernen Sie `retrieveThenRemoveIdentities` nur Identitäten aus dem Browser für bestimmte Adobe-Lösungen, die diese unterstützen. Adobe Audience Manager löscht beispielsweise nicht die demdex-IDs, die in Drittanbieter-Cookies gespeichert sind, während Adobe Zielgruppe alle Cookies löscht, die ihre IDs speichern.
 
 Da alle drei Funktionen asynchrone Prozesse darstellen, müssen alle abgerufenen Identitäten mit Rückrufen oder Versprechungen behandelt werden.
 
