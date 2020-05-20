@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform-Quellschnittstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 1%
 
 ---
@@ -77,6 +77,8 @@ Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eine
 - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
 - [Datenspeicherung-Stecker](connectors/databases/ats.md)
 - [Google BigQuery Connector](connectors/databases/bigquery.md)
+- [GreenPlum-Anschluss](connectors/databases/greenplum.md)
+- [HP-Vertikalanschluss](connectors/databases/hp-vertica.md)
 - [IBM DB2 Connector](connectors/databases/ibm-db2.md)
 - [MariaDB-Anschluss](connectors/databases/mariadb.md)
 - [Microsoft SQL Server Connector](connectors/databases/sql-server.md)
@@ -112,7 +114,7 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche auf der Grundlage v
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
 | **Ansicht-Quellen** auf | Gewähren Sie schreibgeschützten Zugriff auf Quellen in jedem Quelltyp auf der Registerkarte &quot; *Katalog* &quot;sowie auf die Registerkarten &quot; *Durchsuchen*&quot;, &quot; *Konten*&quot;und &quot; *DataFlow* &quot;. |
-| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen, die in den **Ansichten-Quellen** enthalten sind, Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
+| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen in den **Ansichten-Quellen** Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
 | **Ansicht-Quellen** deaktivieren und Quellen **verwalten** deaktivieren | Sperren Sie den Zugriff auf alle Quellen. |
 
 Weitere Informationen zu den verfügbaren Berechtigungen, die über die Admin-Konsole erteilt wurden, einschließlich dieser vier Quellen, finden Sie in der Übersicht über die [Zugriffskontrolle](../access-control/home.md).
