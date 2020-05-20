@@ -7,6 +7,9 @@ author: ens71067
 keywords: release notes;
 translation-type: tm+mt
 source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+workflow-type: tm+mt
+source-wordcount: '922'
+ht-degree: 8%
 
 ---
 
