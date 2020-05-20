@@ -5,6 +5,9 @@ title: Erstellen eines Quell-Connectors für Kundenattribute in der Benutzerober
 topic: overview
 translation-type: tm+mt
 source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +18,7 @@ In diesem Lernprogramm wird beschrieben, wie Sie in der Benutzeroberfläche eine
 
 ## Erstellen einer Quellverbindung
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden verfügbare Quellen zum Erstellen von eingehenden Verbindungen angezeigt. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind. Wählen Sie die Option für **Kundenattribute** und klicken Sie dann auf Quelle **verbinden**. Warten Sie einige Zeit, bis die Verbindung hergestellt ist. Sie werden umgeleitet, wenn eine Verbindung erfolgreich hergestellt wurde.
+Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden verfügbare Quellen angezeigt, mit denen eingehende Verbindungen erstellt werden können. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind. Wählen Sie die Option für **Kundenattribute** und klicken Sie dann auf Quelle **verbinden**. Warten Sie einige Zeit, bis die Verbindung hergestellt ist. Sie werden umgeleitet, wenn eine Verbindung erfolgreich hergestellt wurde.
 
 >[!NOTE] Wenn Sie bereits einen Quell-Connector für Kundenattributdaten eingerichtet haben, wird die Option zum Herstellen einer Verbindung mit dem Profil deaktiviert.
 
