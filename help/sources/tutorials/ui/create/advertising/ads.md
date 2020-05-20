@@ -5,6 +5,9 @@ title: Erstellen eines Google Ads-Quell-Connectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b5821d641d35e1190ea9fecfd4def5beced6ecc
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 0%
 
 ---
 
