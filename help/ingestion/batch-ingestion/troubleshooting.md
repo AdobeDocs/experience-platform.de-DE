@@ -5,6 +5,9 @@ title: Handbuch zur Fehlerbehebung bei der Stapeleinbettung in Adobe Experience 
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+workflow-type: tm+mt
+source-wordcount: '1366'
+ht-degree: 1%
 
 ---
 
@@ -256,6 +259,6 @@ Es gibt zwei Gründe, warum Metriken möglicherweise nicht für Ihren Stapel ver
 | 106 | Die Datensatzdatei ist leer. |
 | 118 | Die CSV-Datei enthält eine leere Kopfzeile. |
 | 200 | Der Stapel wurde zur Verarbeitung akzeptiert und wird in einen finalen Status wie &quot;Aktiv&quot;oder &quot;Fehler&quot;Transition. Nach der Übermittlung kann der Stapel mithilfe des `GetBatch` Endpunkts überwacht werden. |
-| 400 | Fehlerhafte Anforderung. Wird zurückgegeben, wenn ein Stapel fehlende oder überlappende Abschnitte enthält. |
+| 400 | Ungültige Anfrage. Wird zurückgegeben, wenn ein Stapel fehlende oder überlappende Abschnitte enthält. |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
