@@ -5,6 +5,9 @@ title: Datensatz erstellen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 1%
 
 ---
 
