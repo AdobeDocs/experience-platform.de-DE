@@ -5,6 +5,9 @@ title: Mehrere Objekte suchen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: f3e9da9ab3d02006c07c59b17751c971a95d49bc
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +25,8 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> || `{ID}` | Ein Bezeichner für eines der spezifischen Objekte, die Sie abrufen möchten. |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | Ein Bezeichner für eines der spezifischen Objekte, die Sie abrufen möchten. |
 
 **Anfrage**
 
