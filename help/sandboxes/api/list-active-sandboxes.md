@@ -5,6 +5,9 @@ title: Liste aktiver Sandboxen für den aktuellen Benutzer
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 982764ae7807e40cbca5ca60c70bf363a271e3c2
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 1%
 
 ---
 
