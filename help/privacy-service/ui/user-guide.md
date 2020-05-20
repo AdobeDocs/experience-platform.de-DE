@@ -5,6 +5,9 @@ title: Benutzerhandbuch zum Datenschutzdienst
 topic: UI guide
 translation-type: tm+mt
 source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+workflow-type: tm+mt
+source-wordcount: '1079'
+ht-degree: 0%
 
 ---
 
@@ -119,7 +122,7 @@ Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge)
 
 ### JSON-Datei hochladen {#json}
 
-Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für jede verarbeitete Person verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
+Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für die einzelnen verarbeiteten Datensubjekte verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
 Klicken Sie auf den Pfeil neben Anforderung **erstellen**, unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms. Wählen Sie in der Liste der angezeigten Optionen die Option JSON **hochladen**.
 
