@@ -5,6 +5,9 @@ title: Adobe Experience Platform-Segmentdienst
 topic: overview
 translation-type: tm+mt
 source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+workflow-type: tm+mt
+source-wordcount: '2398'
+ht-degree: 3%
 
 ---
 
@@ -202,14 +205,14 @@ Stringdaten werden in Segmentdefinitionen mit logischen, einschließlich-/aussch
 
 Mit den Datumsdaten können Sie Ihren Segmentdefinitionen zeitbasierten Kontext zuweisen, entweder durch Verwendung spezifischer Beginn-/Enddaten oder durch Verwendung datumsrelevanter Anweisungen, wie in der unten stehenden Tabelle dargestellt. Eine Implementierung könnte eine Audience von Kunden schaffen, die *dieses Jahr* jederzeit mit Ihrer Marke interagiert haben und auch in den letzten Tagen aktiv *gewesen* sind.
 
-| Beispielfeld | Datumsbezogene Aussagen | Planung |
+| Beispielfeld | Datumsbezogene Aussagen | Timeline |
 | ------------- | ------------------------ | --------- |
 | person.firstPurchase | heute, gestern, diesen Monat, dieses Jahr | Relevant für den Tag, an dem das Segment erstellt wurde. |
 | person.lastPurchase | zuletzt, während, vor, nach, innerhalb | Relevant innerhalb einer beliebigen Woche/eines Monats. |
 
 ### Experience Ereignisses
 
-Als Adobe Experience Platform-Schema zeichnet XDM ExperienceEvents explizite und implizite Kundeninteraktionen mit plattformintegrierten Anwendungen auf, einschließlich einer Momentaufnahme des Systems zum Zeitpunkt der Interaktion. ExperienceEvents sind Faktendatensätze. Sie sind daher eine Datenquelle, die Sie während der Segmentdefinition erhalten.
+Als Adobe Experience Platform-Schema zeichnet XDM ExperienceEvents explizite und implizite Kundeninteraktionen mit plattformintegrierten Anwendungen auf, einschließlich einer Momentaufnahme des Systems zum Zeitpunkt der Interaktion. ExperienceEvents sind Faktendatensätze. Sie sind daher eine Datenquelle, die Ihnen während der Segmentdefinition zur Verfügung steht.
 
 Wie in der unten stehenden Tabelle dargestellt, werden die Ereignis-Daten mit Suchbegriffen wiedergegeben, die das Verhalten von Ereignissen verfeinern und Ereignis-Attribute angeben.
 
@@ -241,7 +244,7 @@ Zusätzlich zu den oben genannten umfasst die Liste unterstützter Datentypen au
 - Ganzzahl
 - Short
 - Byte
-- Boolesch 
+- Boolesch
 - Datum
 - Datum/Uhrzeit
 - Array
