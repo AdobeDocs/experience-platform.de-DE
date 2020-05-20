@@ -5,6 +5,9 @@ description: Personalisierungsplattformen erfassen Daten und Erkenntnisse aus ei
 seo-description: Personalisierungsplattformen erfassen Daten und Erkenntnisse aus einzelnen Verhaltensweisen. Diese Plattformen können Marketingexperten dabei helfen, durch anonyme Daten zu navigieren, Angebote oder Anzeigen für Potenzieller Kunde bereitzustellen, die auf der vorherigen Aktivität oder im Rahmen von Segmenten der Audience mit ähnlichen Gewohnheiten basieren.
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 7%
 
 ---
 
