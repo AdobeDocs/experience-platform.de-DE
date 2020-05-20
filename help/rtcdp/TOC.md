@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 38%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 38%
          * [Workflow zum Erstellen von Cloud-Speicher-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon-Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3-Ziel](destinations/amazon-s3-destination.md)
-         * [Azurblauer EventHubs-Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+         * [Azurblauer Ereignis Hubs Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP-Ziel](destinations/sftp-destination.md)
       * Ziele der Data Management Platform {#dmp-destinations}
          * [Data Management Platform - Ziele - Übersicht](destinations/dmp-destinations.md)
