@@ -5,6 +5,9 @@ title: Verfügbare Metriken
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
+workflow-type: tm+mt
+source-wordcount: '912'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +20,7 @@ In den folgenden Tabellen werden alle Metriken, die von Observability Insights b
 
 In der folgenden Tabelle sind die Metriken für die Dateneinbettung in Adobe Experience Platform aufgeführt. Metriken in **Fettdruck** sind Streaming-Erfassungsmetriken.
 
-| Insight-Metrik | Beschreibung | ID-Abfrage-Parameter |
+| Insight-Metrik  | Beschreibung | ID-Abfrage-Parameter |
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Gesamtzahl der erstellten Datensätze. | K. A. |
 | timeseries.ingestion.dataset.size | Kumulative Größe aller Daten, die für einen Datensatz für oder alle Datensätze erfasst werden. | Datensatz-ID (optional) |
@@ -45,7 +48,7 @@ In der folgenden Tabelle sind die Metriken für die Dateneinbettung in Adobe Exp
 
 In der folgenden Tabelle sind die Metriken für den Identitätsdienst für Adobe Experience Platform aufgeführt.
 
-| Insight-Metrik | Beschreibung | ID-Abfrage-Parameter |
+| Insight-Metrik  | Beschreibung | ID-Abfrage-Parameter |
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Anzahl der Datensätze, die vom Identitätsdienst in ihre Datenquelle geschrieben wurden, für einen Datensatz oder alle Datensätze. | Datensatz-ID (optional) |
 | timeseries.identity.dataset.recordfailed.count | Anzahl der Datensätze, die vom Identitätsdienst, für einen Datensatz oder für alle Datensätze fehlgeschlagen sind. | Datensatz-ID (optional) |
@@ -61,7 +64,7 @@ In der folgenden Tabelle sind die Metriken für den Identitätsdienst für Adobe
 
 In der folgenden Tabelle sind die Metriken für den Adobe Experience Platform-Datenschutzdienst aufgeführt.
 
-| Insight-Metrik | Beschreibung | ID-Abfrage-Parameter |
+| Insight-Metrik  | Beschreibung | ID-Abfrage-Parameter |
 | ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Gesamtzahl der durch das GDPR geschaffenen Arbeitsplätze. | ENV (**erforderlich**) |
 | timeseries.gdpr.jobs.completedjobs.count | Gesamtzahl der abgeschlossenen Aufträge aus dem GDPR. | ENV (**erforderlich**) |
@@ -71,7 +74,7 @@ In der folgenden Tabelle sind die Metriken für den Adobe Experience Platform-Da
 
 In der folgenden Tabelle sind die Metriken für den Adobe Experience Platform Abfrage Service aufgeführt.
 
-| Insight-Metrik | Beschreibung | ID-Abfrage-Parameter |
+| Insight-Metrik  | Beschreibung | ID-Abfrage-Parameter |
 | ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Gesamtanzahl der nicht wiederkehrenden geplanten Abfragen. | K. A. |
 | timeseries.queryservice.query.scheduledrecurring.count | Gesamtanzahl der wiederkehrenden geplanten Abfragen. | K. A. |
@@ -84,7 +87,7 @@ In der folgenden Tabelle sind die Metriken für den Adobe Experience Platform Ab
 
 In der folgenden Tabelle sind die Metriken für das Echtzeit-Profil von Kunden aufgeführt.
 
-| Insight-Metrik | Beschreibung | ID-Abfrage-Parameter |
+| Insight-Metrik  | Beschreibung | ID-Abfrage-Parameter |
 | ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Anzahl der Datensätze, die aus dem Datensee nach Profil, für einen Datensatz oder für alle Datensätze gelesen werden. | Datensatz-ID (optional) |
 | timeseries.profiles.dataset.recordsuccess.count | Anzahl der Datensätze, die in ihre Datenquelle geschrieben wurden, nach Profil, für einen Datensatz oder für alle Datensätze. | Datensatz-ID (optional) |
