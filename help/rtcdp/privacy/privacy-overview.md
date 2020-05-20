@@ -5,6 +5,9 @@ description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von D
 seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 translation-type: tm+mt
 source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+workflow-type: tm+mt
+source-wordcount: '331'
+ht-degree: 97%
 
 ---
 
