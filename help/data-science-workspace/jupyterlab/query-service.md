@@ -5,6 +5,9 @@ title: Abfrage-Service für Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+workflow-type: tm+mt
+source-wordcount: '817'
+ht-degree: 1%
 
 ---
 
@@ -31,23 +34,23 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
 ## Zugriff auf JupyterLab und Abfrage {#access-jupyterlab-and-query-service}
 
-1. Navigieren Sie in [Experience Platform](https://platform.adobe.com)zur linken Navigationsspalte **[!UICONTROL Notebooks]** . Warten Sie einen Moment, bis JupyterLab geladen ist.
+1. Navigieren Sie in [Experience Platform](https://platform.adobe.com)in der linken Navigationsspalte zu **[!UICONTROL Notebooks]** . Warten Sie einen Moment, bis JupyterLab geladen ist.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Wenn nicht automatisch eine neue Registerkarte &quot;Starter&quot;angezeigt wird, öffnen Sie eine neue Registerkarte &quot;Starter&quot;, indem Sie auf **[!UICONTROL File]** und dann auf **[!UICONTROL New Launcher]**.
+   > [!NOTE] Wenn nicht automatisch eine neue Registerkarte &quot;Starter&quot;angezeigt wird, öffnen Sie eine neue Registerkarte &quot;Starter&quot;, indem Sie auf **[!UICONTROL Datei]** klicken und dann **[!UICONTROL Neuer Starter]** auswählen.
 
-2. Klicken Sie auf der Registerkarte Starter auf das **[!UICONTROL Blank]** Symbol in einer Python 3-Umgebung, um ein leeres Notebook zu öffnen.
+2. Klicken Sie auf der Registerkarte Starter auf das Symbol **[!UICONTROL Leer]** in einer Python 3-Umgebung, um ein leeres Notebook zu öffnen.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3 ist derzeit die einzige unterstützte Umgebung für Abfrage Service in Notebooks.
 
-3. Klicken Sie in der linken Auswahlleiste auf das **[!UICONTROL Data]** Symbol und Dublette und klicken Sie auf das **[!UICONTROL Datasets]** Verzeichnis, um alle Datensätze Liste.
+3. Klicken Sie in der linken Auswahlleiste auf das Symbol &quot; **[!UICONTROL Daten]** &quot;und Dublette auf das Verzeichnis &quot; **[!UICONTROL Datensätze]** &quot;, um alle Datensätze Liste.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Suchen Sie einen Adobe Analytics-Datensatz, den Sie untersuchen möchten, und klicken Sie mit der rechten Maustaste auf die Liste, klicken Sie auf , um SQL-Abfragen im leeren Notebook **[!UICONTROL Query Data in Notebook]** zu generieren.
+4. Suchen Sie nach einem Adobe Analytics-Datensatz, um ihn zu untersuchen, und klicken Sie mit der rechten Maustaste auf die Liste, klicken Sie auf **[!UICONTROL Abfrage Daten im Notebook]** , um SQL-Abfragen im leeren Notebook zu generieren.
 
 5. Klicken Sie auf die erste generierte Zelle, die die Funktion enthält, `qs_connect()` und führen Sie sie durch Klicken auf die Wiedergabeschaltfläche aus. Diese Funktion erstellt eine Verbindung zwischen der Notebook-Instanz und dem Abfrage Service.
 
@@ -86,13 +89,13 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
 ## Abfrage der Daten {#query-your-data}
 
-Geben Sie die folgenden SQL-Abfragen in die einzelnen Notebook-Zellen ein. Führen Sie eine Abfrage aus, indem Sie auf ihre Zelle und dann auf die **[!UICONTROL play]** Schaltfläche klicken. Erfolgreiche Abfragen oder Fehlerprotokolle werden unterhalb der ausgeführten Zelle angezeigt.
+Geben Sie die folgenden SQL-Abfragen in die einzelnen Notebook-Zellen ein. Führen Sie eine Abfrage aus, indem Sie auf ihre Zelle klicken und dann auf die Schaltfläche **[!UICONTROL Abspielen]** klicken. Erfolgreiche Abfragen oder Fehlerprotokolle werden unterhalb der ausgeführten Zelle angezeigt.
 
-Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und dem Abfrage Service unterbrochen werden. Starten Sie in solchen Fällen JupyterLab neu, indem Sie auf die Schaltfläche oben rechts **[!UICONTROL Power]** klicken.
+Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und dem Abfrage Service unterbrochen werden. Starten Sie in solchen Fällen JupyterLab neu, indem Sie auf die **[!UICONTROL Power]** -Schaltfläche oben rechts klicken.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-Der Notebook-Kernel wird zurückgesetzt, aber die Zellen bleiben, erneut ausführen, **[!UICONTROL all]** die Zellen zu fortsetzen, wo Sie aufgehört hatten.
+Der Notebook-Kernel wird zurückgesetzt, aber die Zellen bleiben, **[!UICONTROL alle]** Zellen erneut ausführen, um dort weiterzumachen, wo Sie aufgehört haben.
 
 ### Stündliche Besucher {#hourly-visitor-count}
 
