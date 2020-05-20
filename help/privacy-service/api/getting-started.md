@@ -6,6 +6,9 @@ description: Verwenden Sie die RESTful-API, um die personenbezogenen Daten Ihrer
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+workflow-type: tm+mt
+source-wordcount: '381'
+ht-degree: 2%
 
 ---
 
