@@ -5,6 +5,9 @@ title: Sandbox-Übersicht
 topic: overview
 translation-type: tm+mt
 source-git-commit: 564940f37b66159c84ca7402bd3648010232182b
+workflow-type: tm+mt
+source-wordcount: '680'
+ht-degree: 4%
 
 ---
 
