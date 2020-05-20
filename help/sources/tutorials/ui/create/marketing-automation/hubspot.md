@@ -69,4 +69,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das HubSpot-Konto, mit dem Si
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem HubSpot-Konto aufgebaut. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Marketingautomatisierungssystemen in Plattform](../../dataflow/marketing-automation.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem HubSpot-Konto aufgebaut. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Marketingautomatisierungssystemen in Platform](../../dataflow/marketing-automation.md)zu bringen.
