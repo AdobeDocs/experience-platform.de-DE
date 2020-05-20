@@ -5,6 +5,9 @@ title: Spark-SQL-Funktionen
 topic: spark sql functions
 translation-type: tm+mt
 source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
+workflow-type: tm+mt
+source-wordcount: '4903'
+ht-degree: 6%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
 
 Die SQL-Helfer von Spark bieten integrierte Spark-SQL-Funktionen, um die SQL-Funktionalität zu erweitern.
 
-Referenz: Dokumentation zur [SQL-Funktion](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
+Referenz: [Dokumentation zu Spark-SQL-Funktionen](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
 >[!NOTE] Nicht alle Funktionen in der externen Dokumentation werden unterstützt.
 
@@ -2422,7 +2425,7 @@ Beispiele:
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] Die `concat` Logik für Arrays ist seit 2.4.0 verfügbar.
+>[!NOTE] `concat` Logik für Arrays ist seit 2.4.0 verfügbar.
 
 #### concat_ws
 
