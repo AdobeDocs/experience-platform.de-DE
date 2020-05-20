@@ -1,15 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Einblicke
+title: Insights
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+workflow-type: tm+mt
+source-wordcount: '474'
+ht-degree: 4%
 
 ---
 
 
-# Einblicke
+# Insights
 
 Statistiken enthalten Metriken, mit denen ein Datenwissenschaftler in die Lage versetzt wird, optimale ML-Modelle durch Anzeige relevanter Bewertungsmetriken zu bewerten und auszuwählen.
 
