@@ -5,6 +5,9 @@ title: Erstellen und Auswerten eines Modells (UI)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '985'
+ht-degree: 2%
 
 ---
 
@@ -23,42 +26,42 @@ Dieses Lernprogramm erfordert ein vorhandenes Rezept. Wenn Sie kein Rezept haben
 
 ## Modell erstellen
 
-1. Klicken Sie in Adobe Experience Platform auf den **[!UICONTROL Models]** Link in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Klicken Sie **[!UICONTROL Create Model]** oben rechts auf der Seite auf , um mit der Modellerstellung zu beginnen.
+1. Klicken Sie in Adobe Experience Platform auf den Link **[!UICONTROL Modelle]** in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Klicken Sie oben rechts auf der Seite auf Modell **[!UICONTROL erstellen]** , um mit der Modellerstellung zu beginnen.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Durchsuchen Sie die Liste der vorhandenen Rezepte, suchen Sie das Rezept, das zum Erstellen des Modells verwendet werden soll, und wählen Sie es aus und klicken Sie auf **[!UICONTROL Next]**.
+2. Durchsuchen Sie die Liste der vorhandenen Rezepte, wählen Sie das Rezept aus, das zum Erstellen des Modells verwendet werden soll, und klicken Sie auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Wählen Sie einen entsprechenden Eingabedatensatz aus und klicken Sie auf **[!UICONTROL Next]**. Dadurch wird der Standard-Datensatz für die Eingabeschulung für das Modell festgelegt.
+3. Wählen Sie einen entsprechenden Eingabedatensatz aus und klicken Sie auf **[!UICONTROL Weiter]**. Dadurch wird der Standard-Datensatz für die Eingabeschulung für das Modell festgelegt.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Geben Sie einen Namen für das Modell ein und überprüfen Sie die Standardmodellkonfigurationen. Während der Erstellung von Rezepten wurden Standardkonfigurationen angewendet, um die Konfigurationswerte zu überprüfen und zu ändern, indem die Dublette auf die Werte klickt. Um einen neuen Konfigurationssatz bereitzustellen, klicken Sie auf eine JSON-Datei mit Modellkonfigurationen **[!UICONTROL Upload New Config]** und ziehen Sie sie in das Browserfenster. Klicken Sie auf **[!UICONTROL Finish]** , um das Modell zu erstellen.
+4. Geben Sie einen Namen für das Modell ein und überprüfen Sie die Standardmodellkonfigurationen. Während der Erstellung von Rezepten wurden Standardkonfigurationen angewendet, um die Konfigurationswerte zu überprüfen und zu ändern, indem die Dublette auf die Werte klickt. Um einen neuen Konfigurationssatz bereitzustellen, klicken Sie auf Neue Konfiguration **[!UICONTROL hochladen]** und ziehen Sie eine JSON-Datei mit Modellkonfigurationen in das Browserfenster. Klicken Sie auf **[!UICONTROL Fertig stellen]** , um das Modell zu erstellen.
    >[!NOTE]Konfigurationen sind eindeutig und spezifisch für das gewünschte Rezept. Das bedeutet, dass Konfigurationen für das Einzelhandelsrezept für das Produktempfehlungsrezept nicht funktionieren. Eine Liste der Retail-Rezeptkonfigurationen finden Sie im [Referenzabschnitt](#reference) .
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Erstellen eines Schulungslaufs
 
-1. Klicken Sie in Adobe Experience Platform auf den **[!UICONTROL Models]** Link in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Klicken Sie auf den Namen des zu trainierenden Modells.
+1. Klicken Sie in Adobe Experience Platform auf den Link **[!UICONTROL Modelle]** in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Klicken Sie auf den Namen des zu trainierenden Modells.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Alle vorhandenen Schulungen mit ihrem aktuellen Schulungsstatus werden aufgelistet. Bei Modellen, die mit der Benutzeroberfläche von Data Science Workspace erstellt wurden, wird automatisch ein Schulungslauf mit den Standardkonfigurationen und dem Eingabeteilschulungsdatensatz generiert und ausgeführt.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Erstellen Sie eine neue Schulung, indem Sie oben rechts auf der Modellübersichtsseite auf **[!UICONTROL Train]** klicken.
+3. Erstellen Sie eine neue Schulung, indem Sie auf **[!UICONTROL Zug]** oben rechts auf der Modellübersichtsseite klicken.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Wählen Sie den für die Schulung eingegebenen Datensatz aus und klicken Sie auf **[!UICONTROL Next]**.
+4. Wählen Sie den für die Schulung erforderlichen Eingabedatensatz aus und klicken Sie auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. Während der Modellerstellung bereitgestellte Standardkonfigurationen werden angezeigt, ändern und ändern Sie sie entsprechend, indem Sie die Dublette auf die Werte klicken. Klicken Sie auf **[!UICONTROL Finish]** , um den Schulungslauf zu erstellen und auszuführen.
+5. Während der Modellerstellung bereitgestellte Standardkonfigurationen werden angezeigt, ändern und ändern Sie sie entsprechend, indem Sie die Dublette auf die Werte klicken. Klicken Sie auf **[!UICONTROL Fertig stellen]** , um den Schulungsvorgang zu erstellen und auszuführen.
    >[!NOTE]Konfigurationen sind eindeutig und spezifisch für das gewünschte Rezept. Das bedeutet, dass Konfigurationen für das Einzelhandelsrezept für das Produktempfehlungsrezept nicht funktionieren. Eine Liste der Retail-Rezeptkonfigurationen finden Sie im [Referenzabschnitt](#reference) .
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Modell bewerten
 
-1. Klicken Sie in Adobe Experience Platform auf den **[!UICONTROL Models]** Link in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Klicken Sie auf den Namen des auszuwertenden Modells.
+1. Klicken Sie in Adobe Experience Platform auf den Link **[!UICONTROL Modelle]** in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Klicken Sie auf den Namen des auszuwertenden Modells.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Alle vorhandenen Schulungen mit ihrem aktuellen Schulungsstatus werden aufgelistet. Bei mehreren abgeschlossenen Schulungsläufen können Bewertungsmetriken über verschiedene Schulungsläufe im Modellbewertungsdiagramm verglichen werden. Wählen Sie eine Bewertungsmetrik aus der Dropdown-Liste oberhalb des Diagramms.
