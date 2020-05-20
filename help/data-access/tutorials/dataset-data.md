@@ -5,6 +5,9 @@ title: Übersicht über den Datenzugriff
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+workflow-type: tm+mt
+source-wordcount: '1367'
+ht-degree: 2%
 
 ---
 
