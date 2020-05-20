@@ -5,6 +5,9 @@ title: Liste, Objekte
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 1%
 
 ---
 
