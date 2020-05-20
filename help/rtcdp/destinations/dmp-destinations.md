@@ -5,6 +5,9 @@ description: Data Management-Plattformen (DMPs) ermöglichen es Werbetreibenden,
 seo-description: Data Management-Plattformen (DMPs) ermöglichen es Werbetreibenden, Herausgebern und Agenturen, Profil für einzigartige Audiencen zu erstellen, ihre wertvollsten Segmente zu identifizieren und sie für alle digitalen Kanal zu nutzen. Dadurch können Sie eine echte 360-Ansicht eines Consumer-Profils erstellen, aussagekräftige Audiencen erstellen und aktivieren.
 translation-type: tm+mt
 source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
