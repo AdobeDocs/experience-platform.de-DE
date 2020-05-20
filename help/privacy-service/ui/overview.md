@@ -5,6 +5,9 @@ title: Übersicht über die Benutzeroberfläche des Datenschutzdienstes
 topic: UI guide
 translation-type: tm+mt
 source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
