@@ -5,6 +5,9 @@ title: Domänenmodell für Erlebnisentscheidung
 topic: overview
 translation-type: tm+mt
 source-git-commit: 0f13ea667eecf936c69bcd98b0035a4355d73631
+workflow-type: tm+mt
+source-wordcount: '1381'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ In diesem Abschnitt werden die Komponenten des Entscheidungsdienstes erläutert 
 
 Eine Erlebnis- *Entscheidungsoption* ist ein potenzielles Erlebnis, das einem bestimmten Kunden präsentiert werden kann. Eine Option wird auch als Alternative bezeichnet. Bei der Entscheidung über die nächste beste Option für einen Kunden berücksichtigt der Entscheidungsdienst die Optionen ***d<sub>1</sub>***bis***<sub>dN</sub>*** aus einem begrenzten Optionssatz **`D`**.
 
-Die Entscheidungen werden getroffen, indem die beste Option aus einer Reihe verfügbarer Optionen ermittelt wird. Eine Möglichkeit besteht darin, die *Entscheidungsoptionen* von ***<sub>Di</sub>***nacheinander aus dem Set*** D ***zu entfernen, bis entweder nur einer übrig bleibt, und dann einen &quot;Gewinner&quot;zufällig aus dem verbleibenden Satz zu wählen. Eine andere Form der Entscheidungsfindung besteht darin, die verbleibenden (förderfähigen) Entscheidungsoptionen nach ihrem erwarteten Ergebnis zu bewerten.
+Entscheidungen werden getroffen, indem die beste Option in einer Reihe verfügbarer Optionen ermittelt wird. Eine Möglichkeit besteht darin, die *Entscheidungsoptionen* von ***<sub>Di</sub>***nacheinander aus dem Set*** D ***zu entfernen, bis entweder nur einer übrig bleibt, und dann einen &quot;Gewinner&quot;zufällig aus dem verbleibenden Satz zu wählen. Eine andere Form der Entscheidungsfindung besteht darin, die verbleibenden (förderfähigen) Entscheidungsoptionen nach ihrem erwarteten Ergebnis zu bewerten.
 
 ### Endlicher Satz von Entscheidungsoptionen
 
@@ -30,11 +33,11 @@ Es ist wichtig, zwischen dem Ergebnis der Entscheidung `d` und dem Ergebnis, d.h
 Zur optimalen Entscheidung wird jedem Ergebnis ein ***Dienstprogrammwert*** zugewiesen `U(o) = U(f(d))`.
 Für den Anwendungsfall der Angebot-Entscheidungsfindung würde diese Funktion die Kosten für die Erfüllung des Angebots und den vom Unternehmen erzielten Wert berechnen, wenn das Angebot vom Kunden akzeptiert wird. Das Ergebnis wird verwendet, um die optimale Entscheidung (Angebot) zu finden, indem der Dienstprogrammwert über alle Optionen (Angebot) maximiert wird.
 
-Es ist im Allgemeinen nicht möglich, mit Sicherheit vorherzusagen, wie das Ergebnis einer bestimmten Entscheidung aussehen wird, und daher ist ein probabilistischer Ansatz erforderlich. Der ***Dienstprogrammwert*** wird zum `U(o)` erwarteten Nutzwert einer Entscheidungsoption ******`EU(d)`
+Es ist im Allgemeinen nicht möglich, mit Sicherheit vorherzusagen, wie das Ergebnis einer bestimmten Entscheidung aussehen wird, und daher ist ein probabilistischer Ansatz erforderlich. Der ***Dienstprogrammwert*** `U(o)` wird zum ***erwarteten Nutzwert einer Entscheidungsoption*** `EU(d)`
 
 ## Beschlussvorschläge
 
-Bei einem *Entscheidungsvorschlag* handelt es sich um eine Auswahl der Entscheidungsoption, die auf einen tatsächlichen Entscheidungsantrag hin getroffen wurde. Wie bereits erwähnt, können die Ergebnisse einer Entscheidung viel später eintreten, und die Ergebnisse werden möglicherweise auch nicht in einem Schritt erreicht. Daher ist es wichtig, die Vorschläge über verschiedene *Erfahrungswerte* nachzuverfolgen, damit sie den Entscheidungsoptionen zugeordnet werden können. Diese Feedback-Schleife wird verwendet, um die Präzisionsgenauigkeit für `EU(d)`die Vorschau zu verbessern.
+Bei einem *Entscheidungsvorschlag* handelt es sich um eine Auswahl der Entscheidungsoption, die auf ein tatsächliches Entscheidungsersuchen hin getroffen wurde. Wie bereits erwähnt, können die Ergebnisse einer Entscheidung viel später eintreten, und die Ergebnisse werden möglicherweise auch nicht in einem Schritt erreicht. Daher ist es wichtig, die Vorschläge über verschiedene *Erfahrungswerte* nachzuverfolgen, damit sie den Entscheidungsoptionen zugeordnet werden können. Diese Feedback-Schleife wird verwendet, um die Präzisionsgenauigkeit für `EU(d)`die Vorschau zu verbessern.
 
 Ein Vorschlag wird als Entität beibehalten und hat daher einen Bezeichner. Die Entität enthält Verweise auf die ausgewählten Optionen und kann Kontextdaten aufzeichnen, die bei der Entscheidungsfindung verwendet wurden. Mit einer Kennung können auch andere Entitäten darauf verweisen. Eine dieser Einrichtungen ist *Decision Ereignis*. Es enthält den Zeitstempel und kennzeichnet den Zeitpunkt, zu dem seine Entscheidung (Vorschlag) getroffen wurde. Ein Ereignis einer Entscheidung ist ein festgestelltes Vorkommen der Maßnahme zur Vollstreckung der Entscheidung. Andere Ereignis, die auf die Entität des Proposition verweisen, sind Erlebnis-Ereignis. Jedes Erlebnis-Ereignis kann erweitert werden, um auf ein Entscheidungsvorschlag zu verweisen. Die Auslegung, dies zu tun, ist, dass das Ereignis der Erfahrung ganz oder teilweise auf den Vorschlag der Entscheidung zurückgeführt werden kann.
 
