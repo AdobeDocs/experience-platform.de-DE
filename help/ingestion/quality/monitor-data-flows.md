@@ -5,6 +5,9 @@ title: Überwachen der Datenerfassung
 topic: overview
 translation-type: tm+mt
 source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
+workflow-type: tm+mt
+source-wordcount: '530'
+ht-degree: 0%
 
 ---
 
