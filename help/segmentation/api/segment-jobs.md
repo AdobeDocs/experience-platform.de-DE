@@ -5,6 +5,9 @@ title: Segmentaufträge
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: db4cdbfb7719d94919c896162ca7875fdf7d2502
+workflow-type: tm+mt
+source-wordcount: '579'
+ht-degree: 3%
 
 ---
 
