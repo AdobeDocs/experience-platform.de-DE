@@ -5,6 +5,9 @@ title: Boolesche Funktionen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 6%
 
 ---
 
