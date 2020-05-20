@@ -5,6 +5,9 @@ title: Handbuch zur Fehlerbehebung beim Adobe Experience Platform Abfrage Servic
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
+workflow-type: tm+mt
+source-wordcount: '154'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
 | ---------------- | ----------- | --------------- |
 | 400 | Ungültige Anforderung | Falsche oder illegale Abfrage |
 | 401 | Authentifizierung fehlgeschlagen | Ungültiges Authentifizierungstoken |
-| 500 | Interner Serverfehler | Systemfehler |
+| 500 | Interner Server-Fehler | Systemfehler |
 
 ## PostgreSQL-API-Fehler
 
