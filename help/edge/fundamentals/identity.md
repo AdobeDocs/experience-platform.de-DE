@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -30,7 +30,7 @@ Wenn Sie diese eindeutige ID verwenden möchten, verwenden Sie den `getIdentity`
 
 >[!NOTE]
 >
->Diese Methode wird in der Regel bei benutzerdefinierten Lösungen verwendet, bei denen die Experience Cloud ID gelesen werden muss. Es wird nicht von einer Standardimplementierung verwendet.
+>Diese Methode wird in der Regel bei benutzerdefinierten Lösungen verwendet, bei denen die Experience Cloud ID gelesen werden muss. Sie wird nicht von einer Standardimplementierung verwendet.
 
 ```javascript
 alloy("getIdentity")
