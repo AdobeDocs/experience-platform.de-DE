@@ -5,6 +5,9 @@ description: Voice-Plattformen sammeln und sammeln Daten aus verschiedenen Quell
 seo-description: Voice-Plattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Call-Daten und Chat-Konversationen. Die erfassten Informationen können gefiltert und analysiert werden, damit Firmen ihre Website entsprechend ihren Anforderungen optimieren können.
 translation-type: tm+mt
 source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
