@@ -5,6 +5,9 @@ title: Kafka-Anschluss
 topic: overview
 translation-type: tm+mt
 source-git-commit: f80b2e1d787d1f8d9fe8ac306422aa7744a69cd3
+workflow-type: tm+mt
+source-wordcount: '159'
+ht-degree: 0%
 
 ---
 
