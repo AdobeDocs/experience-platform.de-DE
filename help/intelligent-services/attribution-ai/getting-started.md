@@ -5,6 +5,9 @@ title: Erste Schritte mit Attribution AI
 topic: Getting started
 translation-type: tm+mt
 source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
+workflow-type: tm+mt
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
