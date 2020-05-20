@@ -5,6 +5,9 @@ title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema Sche
 topic: tutorials
 translation-type: tm+mt
 source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
+workflow-type: tm+mt
+source-wordcount: '836'
+ht-degree: 0%
 
 ---
 
