@@ -5,6 +5,9 @@ title: Erzwingen der Datenverwendungskonformität für Audience-Segmente
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
+workflow-type: tm+mt
+source-wordcount: '1372'
+ht-degree: 2%
 
 ---
 
