@@ -5,6 +5,9 @@ title: Adobe Experience Platform Data Governance
 topic: overview
 translation-type: tm+mt
 source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
+workflow-type: tm+mt
+source-wordcount: '1508'
+ht-degree: 3%
 
 ---
 
@@ -116,10 +119,10 @@ In der folgenden Tabelle sind die Schlüsselbegriffe im Zusammenhang mit der Dat
 | **Beschriftungen** | Identitäts-&quot;I&quot;-Beschriftungen werden zur Kategorisierung von Daten verwendet, die eine bestimmte Person identifizieren oder kontaktieren können. |
 | **Interessensbasiertes Targeting** | Interessensbasiertes Targeting, auch Personalisierung genannt, tritt auf, wenn die folgenden drei Bedingungen erfüllt sind: Daten, die vor Ort gesammelt werden, werden verwendet, um Rückschlüsse auf das Interesse eines Benutzers zu ziehen, werden in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder App (außerhalb der Site), und werden verwendet, um festzulegen, welche Inhalte oder Anzeigen auf der Grundlage dieser Schlussfolgerungen bereitgestellt werden. |
 | **Marketingaktion** | Eine Marketingaktion im Kontext des Data Governance-Rahmens ist eine Aktion, die ein Datennutzer von Experience Platform durchführt und bei der überprüft werden muss, ob gegen die Datenverwendungsrichtlinien verstoßen wurde |
-| **Politik** | Im Rahmen der Datenverwaltung ist eine Richtlinie eine Regel, die beschreibt, welche Marketingaktionen für bestimmte Daten zulässig oder nicht zulässig sind. |
+| **Richtlinie** | Im Rahmen der Datenverwaltung ist eine Richtlinie eine Regel, die beschreibt, welche Marketingaktionen für bestimmte Daten zulässig oder nicht zulässig sind. |
 | **Sensible Beschriftungen** | Sensible &quot;S&quot;-Beschriftungen werden verwendet, um Daten zu kategorisieren, die Sie und Ihr Unternehmen als vertraulich betrachten. |
 
-## Zusätzliche Ressourcen    
+## Zusätzliche Ressourcen
 
 Das folgende Video soll Ihnen dabei helfen, die Datenverwaltung zu verstehen, und zeigt die wichtigsten Aspekte des Rahmenwerks zur Datenbenennung und -durchsetzung (DULE) auf.
 
