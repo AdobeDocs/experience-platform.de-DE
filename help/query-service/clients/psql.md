@@ -5,6 +5,9 @@ title: Verbindung mit PSQL
 topic: connect
 translation-type: tm+mt
 source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 1%
 
 ---
 
