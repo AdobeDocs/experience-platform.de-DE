@@ -5,6 +5,9 @@ title: Schema und Datensätze zu Vorschauen
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
@@ -13,15 +16,15 @@ source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 Nach erfolgreichem Abschluss des Bootstrap-Skripts aus der Übung zum [Erstellen des Retail-Sales-Schemas und des Datasets](./create-retails-sales-dataset.md) . Output-Schema und -Datensätze können auf Experience Platform angezeigt werden. Gehen Sie zur Ansicht der Schema und Datensätze wie folgt vor:
 
-1. Klicken Sie auf den **[!UICONTROL Schemas]** Link in der linken Navigationsspalte und suchen Sie das vom Bootstrap-Schema erstellte Eingabedatum. Der Name des Schemas entspricht dem, was im vorherigen Schritt `config.yaml` definiert wurde. Ansicht der Schema-Details und die Komposition durch Klicken darauf.
+1. Klicken Sie in der linken Navigationsspalte auf den Link &quot; **[!UICONTROL Schema]** &quot;und suchen Sie das vom Bootstrap-Schema erstellte Eingabedatum. Der Name des Schemas entspricht dem, was im vorherigen Schritt `config.yaml` definiert wurde. Ansicht der Schema-Details und die Komposition durch Klicken darauf.
 
    ![](../images/models-recipes/access-data/schema_overview.png)
 
-2. Klicken Sie auf den **[!UICONTROL Datasets]** Link in der linken Navigationsspalte und öffnen Sie das Eingabedataset, das durch Klicken auf den Namen der Auflistung erstellt wurde. Der Name des Datensatzes entspricht dem, was im vorherigen Schritt `config.yaml` definiert wurde.
+2. Klicken Sie in der linken Navigationsspalte auf den Link **[!UICONTROL Datasets]** und öffnen Sie das Eingabedataset, das durch Klicken auf den Namen der Auflistung erstellt wurde. Der Name des Datensatzes entspricht dem, was im vorherigen Schritt `config.yaml` definiert wurde.
 
    ![](../images/models-recipes/access-data/dataset_overview.png)
 
-3. Klicken Sie oben rechts in der Vorschau auf **[!UICONTROL Preview Dataset]** eine Untergruppe des Datensatzes.
+3. Klicken Sie oben rechts in der Vorschau auf **[!UICONTROL Vorschau Dataset]** , eine Untergruppe des Datensatzes.
 
    ![](../images/models-recipes/access-data/preview_dataset.png)
 
