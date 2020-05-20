@@ -5,6 +5,9 @@ title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
 source-git-commit: 95e002c60389ca7e4c1dcf32bbcf6f552cd55d95
+workflow-type: tm+mt
+source-wordcount: '1078'
+ht-degree: 1%
 
 ---
 
