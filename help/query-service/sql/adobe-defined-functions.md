@@ -5,13 +5,16 @@ title: Von Adobe definierte Funktionen
 topic: functions
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '2190'
+ht-degree: 4%
 
 ---
 
 
 # Von Adobe definierte Funktionen
 
-Adobe-definierte Funktionen (ADFs) sind vordefinierte Funktionen im Abfrage Service, mit denen Sie häufige geschäftsbezogene Aufgaben zu ExperienceEvent-Daten durchführen können. Dazu gehören Funktionen für die Sessionierung und Zuordnung, wie sie in Adobe Analytics gefunden werden. Weitere Informationen zu Adobe Analytics und den Konzepten hinter den auf dieser Seite definierten ADFs finden Sie in der Dokumentation [zu](https://docs.adobe.com/content/help/en/analytics/landing/home.html) Adobe Analytics. Dieses Dokument enthält Informationen zu von Adobe definierten Funktionen, die im Abfrage Service verfügbar sind.
+Adobe-definierte Funktionen (ADFs) sind vordefinierte Funktionen im Abfrage Service, mit denen Sie häufige geschäftsbezogene Aufgaben zu ExperienceEvent-Daten durchführen können. Dazu gehören Funktionen für die Sessionierung und Zuordnung, wie sie in Adobe Analytics gefunden werden. Weitere Informationen zu Adobe Analytics und den Konzepten hinter den auf dieser Seite definierten ADFs finden Sie in der Dokumentation [zu](https://docs.adobe.com/content/help/de-DE/analytics/landing/home.html) Adobe Analytics. Dieses Dokument enthält Informationen zu von Adobe definierten Funktionen, die im Abfrage Service verfügbar sind.
 
 ## Fensterfunktionen
 
@@ -44,7 +47,7 @@ Syntax: `SESS_TIMEOUT(timestamp, expirationInSeconds) OVER ([partition] [order] 
 | Parameter | Beschreibung |
 | --- | --- |
 | `timestamp` | Im Dataset gefundenes Zeitstempelfeld |
-| `expirationInSeconds` | Anzahl der Sekunden, die zwischen den Ereignissen zur Qualifizierung des Sitzungsende und des Beginns einer neuen Sitzung erforderlich sind |
+| `expirationInSeconds` | Anzahl der Sekunden, die zwischen den Ereignissen benötigt werden, um das Ende der aktuellen Sitzung und den Beginn einer neuen Sitzung zu qualifizieren |
 
 | Zurückgegebene Objektparameter | Beschreibung |
 | ---------------------- | ------------- |
@@ -91,7 +94,7 @@ LIMIT 10
 
 Die Verknüpfung von Kundenaktionen mit Erfolgen ist ein wichtiger Teil des Verständnisses der Faktoren, die das Kundenerlebnis beeinflussen. Die folgenden ADFs unterstützen die Zuordnung &quot;Erste&quot;und &quot;Letzte&quot;mit unterschiedlichen Ablaufeinstellungen.
 
-Weitere Informationen zur Zuordnung in Adobe Analytics finden Sie in der Übersicht über die [Zuordnungs-IQ](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) im Analytics-Analytics-Handbuch.
+Weitere Informationen zur Zuordnung in Adobe Analytics finden Sie in der Übersicht über die [Zuordnungs-IQ](https://docs.adobe.com/content/help/de-DE/analytics/analyze/analysis-workspace/panels/attribution.html) im Analytics-Analytics-Handbuch.
 
 ### First Touch-Zuordnung
 
@@ -220,7 +223,7 @@ Syntax: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, ex
 | `channelName` | Ein Anzeigename, der als Beschriftung im zurückgegebenen Objekt verwendet wird |
 | `channelValue` | Die Spalte oder das Feld, die bzw. das der Kanal für die Zielgruppe für die Abfrage ist |
 | `expCondition` | Die Bedingung, die den Ablaufpunkt des Kanals bestimmt |
-| `expBefore` | Die Standardeinstellung ist `false`. Boolescher Wert, der angibt, ob der Kanal vor oder nach Erfüllung der angegebenen Bedingung abläuft. Primär für Sitzungsablaufbedingungen aktiviert (z. B. `sess.depth = 1, true`), um sicherzustellen, dass der erste Kontakt nicht aus einer vorherigen Sitzung ausgewählt wird. |
+| `expBefore` | Die Standardeinstellung ist `false`. Boolescher Wert, der angibt, ob der Kanal vor oder nach Erfüllung der angegebenen Bedingung abläuft. Primär für Sitzungsablaufbedingungen aktiviert (z. B. `sess.depth = 1, true`), um sicherzustellen, dass die erste Berührung nicht aus einer vorherigen Sitzung ausgewählt wird. |
 
 | Zurückgegebene Objektparameter | Beschreibung |
 | ---------------------- | ------------- |
@@ -262,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### First Touch-Zuordnung mit Ablauftimeout
 
-Gibt den First Touch-Zuordnungswert und Details für einen einzelnen Kanal im ExperienceEvent-Datensatz der Zielgruppe für einen bestimmten Zeitraum zurück. Die Abfrage gibt ein `struct` Objekt mit dem First Touch-Wert, dem Zeitstempel und der Zuordnung für jede für den ausgewählten Kanal zurückgegebene Zeile zurück. Diese Abfrage ist nützlich, wenn Sie sehen möchten, welche Interaktion innerhalb eines bestimmten Zeitraums zu einer Kundenaktion führte. Im unten gezeigten Beispiel ist die erste Berührung, die für jede Kundenaktion zurückgegeben wird, die früheste Interaktion innerhalb der letzten sieben Tage (`expTimeout = 86400 * 7`).
+Gibt den First Touch-Zuordnungswert und Details für einen einzelnen Kanal im ExperienceEvent-Datensatz der Zielgruppe für einen bestimmten Zeitraum zurück. Die Abfrage gibt ein `struct` Objekt mit dem First Touch-Wert, dem Zeitstempel und der Zuordnung für jede für den ausgewählten Kanal zurückgegebene Zeile zurück. Diese Abfrage ist hilfreich, wenn Sie sehen möchten, welche Interaktion innerhalb eines bestimmten Zeitraums zu einer Kundenaktion führte. Im unten gezeigten Beispiel ist die erste Berührung, die für jede Kundenaktion zurückgegeben wird, die früheste Interaktion innerhalb der letzten sieben Tage (`expTimeout = 86400 * 7`).
 
 #### Spezifikation
 
@@ -436,7 +439,7 @@ Syntax: `PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame]
 | --- | --- |
 | `key` | Die Spalte oder das Feld aus dem Ereignis. |
 | `shift` | (Optional) Die Anzahl der Ereignis außerhalb des aktuellen Ereignisses. Der Standardwert ist 1. |
-| `ingnoreNulls` | Boolescher Wert, der angibt, ob Null- `key` Werte ignoriert werden sollen. Default is `false`. |
+| `ingnoreNulls` | Boolescher Wert, der angibt, ob Null- `key` Werte ignoriert werden sollen. Der Standardwert ist `false`. |
 
 
 | Zurückgegebene Objektparameter | Beschreibung |
@@ -486,7 +489,7 @@ Syntax: `NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
 | --- | --- |
 | `key` | Die Spalte oder das Feld im Ereignis |
 | `shift` | (Optional) Die Anzahl der Ereignis außerhalb des aktuellen Ereignisses. Der Standardwert ist 1. |
-| `ingnoreNulls` | Boolescher Wert, der angibt, ob Null- `key` Werte ignoriert werden sollen. Default is `false`. |
+| `ingnoreNulls` | Boolescher Wert, der angibt, ob Null- `key` Werte ignoriert werden sollen. Der Standardwert ist `false`. |
 
 
 | Zurückgegebene Objektparameter | Beschreibung |
