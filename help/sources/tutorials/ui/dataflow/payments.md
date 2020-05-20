@@ -5,6 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Zahlungsanschluss in der Benu
 topic: overview
 translation-type: tm+mt
 source-git-commit: 1eb9b470ddb048c5825c18c2a998a6b736ddc42a
+workflow-type: tm+mt
+source-wordcount: '1088'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +29,7 @@ Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits ein Zahlungskont
 
 ## Daten auswählen
 
-Nach dem Erstellen Ihres Zahlungskontos wird der Schritt Daten ** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
+Nach der Erstellung Ihres Zahlungskontos wird der Schritt Daten ** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
 
 - Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
 - In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
