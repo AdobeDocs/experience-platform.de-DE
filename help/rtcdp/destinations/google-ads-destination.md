@@ -1,10 +1,13 @@
 ---
-title: Google AdsDestination
+title: Google Ads-Ziel
 seo-title: Google Ads-Ziel
-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Mobilgeräte zu bezahlen.
-seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Mobilgeräte zu bezahlen.
+description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
+seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '532'
+ht-degree: 32%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ## Übersicht
 
-Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Mobilgeräte zu bezahlen.
+Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 
 ## Zielspezifikationen
 
@@ -48,15 +51,15 @@ Bevor Sie das Google Ads-Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich 
 
 ## Ziel erstellen
 
-1. Wählen Sie **[!UICONTROL Connections > Destinations]** in Google Ads die Option **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
    ![Google-Anzeigenziel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. Füllen Sie im Arbeitsablauf &quot;Ziel erstellen&quot;die [!UICONTROL Basic Information] für das Ziel aus.
+2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination.
    ![Grundlegende Informationen Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
-* **[!UICONTROL Description]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
-* **[!UICONTROL Account Type]**: AdWords ist die einzige verfügbare Option.
-* **[!UICONTROL Account ID]**: Geben Sie Ihre Konto-ID mit Google Ads ein. Das ID-Format ist in der Regel 123-456-7890.
+* **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
+* **[!UICONTROL Kontotyp]**: AdWords ist die einzige verfügbare Option.
+* **[!UICONTROL Konto-ID]**: Geben Sie Ihre Konto-ID mit Google Ads ein. Das ID-Format ist in der Regel 123-456-7890.
 
 ## Aktivieren von Segmenten in Google-Anzeigen
 
