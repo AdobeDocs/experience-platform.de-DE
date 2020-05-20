@@ -5,6 +5,9 @@ title: Liste aller Sandboxen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 2%
 
 ---
 
