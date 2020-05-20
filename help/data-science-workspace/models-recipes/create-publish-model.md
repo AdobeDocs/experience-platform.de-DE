@@ -5,6 +5,9 @@ title: Exemplarische Vorgehensweise zum Erstellen und Veröffentlichen eines mas
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '1596'
+ht-degree: 0%
 
 ---
 
@@ -49,13 +52,13 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
 ## Daten vorbereiten {#prepare-your-data}
 
-Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen zukommen lässt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten mithilfe von Adobe Analytics in Plattform eingebunden werden und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden soll.
+Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen vermittelt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten mithilfe von Adobe Analytics in Plattform eingebunden werden und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden soll.
 
 ### Daten und Schemas
 
 1. Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com/) an und klicken Sie auf **[!UICONTROL Datasets]** , um alle vorhandenen Datensätze Liste, und wählen Sie den Datensatz aus, den Sie untersuchen möchten. In diesem Fall ist der Analytics-Datensatz **Golden Data Set postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. Wählen Sie **[!UICONTROL Preview Dataset]** oben rechts aus, um Beispieldatensätze zu prüfen, und klicken Sie dann auf **[!UICONTROL Close]**.
+2. Wählen Sie oben rechts die Option &quot; **[!UICONTROL Vorschau-Datensatz]** &quot;, um die Musterdatensätze zu prüfen, und klicken Sie dann auf **[!UICONTROL Schließen]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3. Wählen Sie den Link unter Schema in der rechten Leiste aus, um das Schema für den Datensatz Ansicht, und gehen Sie dann zurück zur Seite mit den Datensatzdetails.&quot;
    ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -70,17 +73,17 @@ Die anderen Datensätze wurden zur Vorschau mit Stapeln vorausgefüllt. Sie kön
 
 ## Modell erstellen {#author-your-model}
 
-Die zweite Komponente des Data Science Workspace-Lebenszyklus umfasst das Authoring von Rezepten und Modellen. Das Rezept für Produktempfehlungen wurde entwickelt, um Produktempfehlungen im Maßstab zu generieren, indem alte Kaufdaten und maschinelles Lernen verwendet werden.
+Die zweite Komponente des Data Science Workspace-Lebenszyklus umfasst das Authoring von Rezepten und Modellen. Das Rezept &quot;Produktempfehlungen&quot;wurde entwickelt, um Produktempfehlungen im Maßstab zu generieren, indem alte Kaufdaten und maschinelles Lernen verwendet werden.
 
 Rezepte bilden die Grundlage für ein Modell, da sie maschinelle Lernalgorithmen und Logik zur Lösung spezifischer Probleme enthalten. Wichtiger noch: Rezepte ermöglichen es Ihnen, das maschinelle Lernen in Ihrer gesamten Organisation zu demokratisieren, sodass andere Benutzer auf ein Modell für unterschiedliche Anwendungsfälle zugreifen können, ohne Code schreiben zu müssen.
 
 ### Produktempfehlungen-Rezept
 
-1. Navigieren Sie in Adobe Experience Platform zu **[!UICONTROL Models]** der linken Navigationsspalte und klicken Sie dann oben auf **[!UICONTROL Recipes]** , um eine Liste der verfügbaren Rezepte für Ihr Unternehmen Ansicht.
+1. Navigieren Sie in Adobe Experience Platform in der linken Navigationsspalte zu **[!UICONTROL Modellen]** und klicken Sie dann oben auf **[!UICONTROL Rezepte]** , um eine Liste der verfügbaren Rezepte für Ihr Unternehmen Ansicht.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Suchen und öffnen Sie die angegebene Datei, **[!UICONTROL Recommendations Recipe]** indem Sie auf ihren Namen klicken.
+2. Suchen und öffnen Sie das bereitgestellte **[!UICONTROL Recommendations-Rezept]** , indem Sie auf seinen Namen klicken.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Klicken Sie in der rechten Leiste auf **[!UICONTROL Recommendations Input Schema]** , um das Schema, das das Rezept aktiviert, Ansicht. Die Schema-Felder **[!UICONTROL itemId]** und **[!UICONTROL userId]** entsprechen einem Produkt, das der Kunde zu einem bestimmten Zeitpunkt gekauft hat (**[!UICONTROL interactionType]**) (**[!UICONTROL timestamp]**). Führen Sie die gleichen Schritte aus, um die Felder für den **[!UICONTROL Recommendations Output Schema]**Bericht zu überprüfen.
+3. Klicken Sie in der rechten Leiste auf **[!UICONTROL Recommendations Input Schema]** , um das Schema mit dem Skript zu Ansicht. Die Schema-Felder **[!UICONTROL itemId]** und **[!UICONTROL userId]** entsprechen einem Produkt, das von diesem Kunden zu einem bestimmten Zeitpunkt gekauft wurde (**[!UICONTROL interactionType]**) (**[!UICONTROL timestamp]**). Führen Sie die gleichen Schritte aus, um die Felder für das **[!UICONTROL Recommendations Output-Schema]**zu überprüfen.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 Sie haben jetzt die Eingabe- und Ausgabeformate überprüft, die für das Produktempfehlungsrezept erforderlich sind. Sie können nun mit dem nächsten Abschnitt fortfahren, um herauszufinden, wie ein Produktempfehlungsmodell erstellt, trainiert und ausgewertet wird.
@@ -93,13 +96,13 @@ Nachdem Ihre Daten vorbereitet und das Rezept einsatzbereit ist, können Sie Ihr
 
 Ein Modell ist eine Instanz eines Rezeptes, mit dem Sie mit Daten im Maßstab trainieren und bewerten können.
 
-1. Navigieren Sie in Adobe Experience Platform zu **[!UICONTROL Models]** der linken Navigationsspalte und klicken Sie dann oben auf **[!UICONTROL Recipes]** , um eine Liste aller für Ihr Unternehmen verfügbaren Rezepte anzuzeigen.
+1. Navigieren Sie in Adobe Experience Platform in der linken Navigationsspalte zu **[!UICONTROL Modellen]** und klicken Sie dann oben auf der Seite auf **[!UICONTROL Rezepte]** , um eine Liste aller für Ihr Unternehmen verfügbaren Rezepte anzuzeigen.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Suchen und öffnen Sie das angegebene Formular, **[!UICONTROL Recommendations Recipe]** indem Sie auf seinen Namen klicken und die Übersichtsseite des Rezepts eingeben. Klicken Sie **[!UICONTROL Create a Model]** entweder von der Mitte aus (wenn keine vorhandenen Modelle vorhanden sind) oder oben rechts auf der Seite &quot;Rezeptseitenübersicht&quot;.
+2. Suchen und öffnen Sie das bereitgestellte **[!UICONTROL Empfehlungsrezept]** , indem Sie auf seinen Namen klicken und die Übersichtsseite des Rezepts eingeben. Klicken Sie entweder von der Mitte aus (sofern keine vorhandenen Modelle vorhanden sind) oder oben rechts auf der Seite &quot;Rezept-Übersicht&quot;auf &quot;Modell **[!UICONTROL erstellen]** &quot;.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Eine Liste der verfügbaren Eingabedaten für Schulungen wird angezeigt, wählen Sie **[!UICONTROL Recommendations Input Dataset]** und klicken Sie auf **[!UICONTROL Next]**.
+3. Es wird eine Liste der verfügbaren Eingabedaten für Schulungen angezeigt, wählen Sie &quot; **[!UICONTROL Recommendations-Eingabedatensatz]** &quot;und klicken Sie auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Geben Sie einen Namen für das Modell ein, z. B. &quot;Produktempfehlungsmodell&quot;. Die verfügbaren Konfigurationen für das Modell werden aufgelistet und enthalten Einstellungen für das Standardschulungs- und Bewertungsverhalten des Modells. Es sind keine Änderungen erforderlich, da diese Konfigurationen für Ihr Unternehmen spezifisch sind. Überprüfen Sie die Konfigurationen und klicken Sie auf **[!UICONTROL Finish]**.
+4. Geben Sie einen Namen für das Modell ein, z. B. &quot;Produktempfehlungsmodell&quot;. Die verfügbaren Konfigurationen für das Modell werden aufgelistet und enthalten Einstellungen für das Standardschulungs- und Bewertungsverhalten des Modells. Es sind keine Änderungen erforderlich, da diese Konfigurationen für Ihr Unternehmen spezifisch sind. Überprüfen Sie die Konfigurationen und klicken Sie auf **[!UICONTROL Fertig stellen]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. Das Modell wurde jetzt erstellt und die Seite *Übersicht* des Modells wird in einem neu erstellten Schulungslauf angezeigt. Beim Erstellen eines Modells wird standardmäßig ein Schulungslauf generiert.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -108,13 +111,13 @@ Sie können auf den Abschluss des Schulungslaufs warten oder im folgenden Abschn
 
 ### Modell mithilfe benutzerdefinierter Hyperparameter trainieren
 
-1. Klicken Sie auf der Seite *Modellübersicht* oben rechts auf **[!UICONTROL Train]** , um einen neuen Schulungslauf zu erstellen. Wählen Sie den gleichen Eingabedataset aus, den Sie beim Erstellen des Modells verwendet haben, und klicken Sie auf **[!UICONTROL Next]**.
+1. Klicken Sie auf der Seite *Modellübersicht* oben rechts auf **[!UICONTROL Zug]** , um einen neuen Schulungslauf zu erstellen. Wählen Sie denselben Eingabedatensatz, den Sie beim Erstellen des Modells verwendet haben, und klicken Sie auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. Die Seite &quot; *Konfiguration* &quot;wird angezeigt. Hier können Sie den **[!UICONTROL num_recommendations]** Wert des Trainingslaufs konfigurieren, auch als Hyperparameter bezeichnet. Ein geschultes und optimiertes Modell verwendet die leistungsstärksten Hyperparameter, die auf den Ergebnissen der Schulungsausführung basieren.
+2. Die Seite &quot; *Konfiguration* &quot;wird angezeigt. Hier können Sie den Wert **[!UICONTROL num_recommendations]** des Schulungslaufs konfigurieren, auch als Hyperparameter bezeichnet. Ein geschultes und optimiertes Modell verwendet die leistungsstärksten Hyperparameter, die auf den Ergebnissen der Schulungsausführung basieren.
 
    Hyperparameter können nicht erlernt werden, daher müssen sie vor Schulungsdurchläufen zugewiesen werden. Die Anpassung von Hyperparametern kann die Genauigkeit des eingeübten Modells ändern. Da die Optimierung eines Modells ein iterativer Prozess ist, kann es erforderlich sein, dass mehrere Schulungen durchgeführt werden, bevor eine zufriedenstellende Bewertung erreicht wird.
 
-   >[!TIP] Auf **[!UICONTROL num_recommendations]** 10 setzen.
+   >[!TIP] Setzen Sie **[!UICONTROL num_recommendations]** auf 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Ein zusätzlicher Datenpunkt wird auf dem Modellbewertungsdiagramm angezeigt, sobald der neue Schulungslauf abgeschlossen ist. Dies kann bis zu mehreren Minuten dauern.
@@ -137,12 +140,12 @@ Der letzte Schritt im Data Science-Arbeitsablauf besteht darin, Ihr Modell zu op
 ### Bewertung und Erstellung von Einblicken
 
 1. Klicken Sie auf der Seite &quot;Produktempfehlungen - Modellübersicht&quot;auf den Namen des *Schulungslaufs mit den höchsten Rückruf- und Genauigkeitswerten* .
-2. Klicken Sie oben rechts auf der Seite mit den Details zum Schulungslauf auf **[!UICONTROL Score]**.
-3. Wählen Sie den Datensatz **[!UICONTROL Recommendations Input Dataset]** als Bewertungseingabedatensatz aus, der mit dem Datensatz identisch ist, den Sie beim Erstellen des Modells und beim Ausführen der Schulungsausführung verwendet haben. Then, click **[!UICONTROL Next]**.
+2. Klicken Sie oben rechts auf der Seite mit den Details zum Schulungslauf auf **[!UICONTROL Ergebnis]**.
+3. Wählen Sie das **[!UICONTROL Recommendations-Eingabedataset]** als Bewertungseingabedataset aus, das mit dem Datensatz identisch ist, den Sie beim Erstellen des Modells und bei der Ausführung der Schulungen verwendet haben. Klicken Sie dann auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Wählen Sie den Wert **[!UICONTROL Recommendations Output Dataset]** als Bewertungsausgabedataset aus. Die Bewertungsergebnisse werden in diesem Datensatz als Stapel gespeichert.
+4. Wählen Sie das **[!UICONTROL Recommendations-Ausgabedataset]** als Bewertungsausgabedataset aus. Die Bewertungsergebnisse werden in diesem Datensatz als Stapel gespeichert.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. Überprüfen Sie die Bewertungskonfigurationen. Diese Parameter enthalten die zuvor ausgewählten Eingabe- und Ausgabedaten zusammen mit den entsprechenden Schemas. Klicken Sie **[!UICONTROL Finish]** auf , um den Bewertungsvorgang zu starten. Die Ausführung kann mehrere Minuten dauern.
+5. Überprüfen Sie die Bewertungskonfigurationen. Diese Parameter enthalten die zuvor ausgewählten Eingabe- und Ausgabedaten zusammen mit den entsprechenden Schemas. Klicken Sie auf **[!UICONTROL Fertig stellen]** , um mit dem Bewertungsvorgang zu beginnen. Die Ausführung kann mehrere Minuten dauern.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
@@ -150,9 +153,9 @@ Der letzte Schritt im Data Science-Arbeitsablauf besteht darin, Ihr Modell zu op
 
 Nach erfolgreichem Abschluss der Bewertungsausführung können Sie die Ergebnisse Vorschau und Ansicht der gewonnenen Erkenntnisse vornehmen.
 
-1. Klicken Sie auf der Seite mit den Scoring-Vorgängen auf die abgeschlossene Scoring-Ausführung und dann auf **[!UICONTROL Preview Scoring Results Dataset]** die rechte Leiste.
+1. Klicken Sie auf der Seite mit den Bewertungsergebnissen auf die abgeschlossene Bewertungsausführung und klicken Sie dann auf der rechten Leiste auf **[!UICONTROL Vorschau Scoring Results Dataset]** .
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. In der Tabelle &quot;Vorschau&quot;enthält jede Zeile Produktempfehlungen für einen bestimmten Kunden, die als **[!UICONTROL recommendations]** bzw. **[!UICONTROL userId]** gekennzeichnet sind. Da der **[!UICONTROL num_recommendations]** Hyperparameter in den Screenshots der Beispiele auf 10 gesetzt wurde, kann jede Empfehlungszeile bis zu 10 Produktidentitäten enthalten, die durch ein Nummernzeichen (#) getrennt sind.
+2. In der Tabelle &quot;Vorschau&quot;enthält jede Zeile Produktempfehlungen für einen bestimmten Kunden, die als **[!UICONTROL Recommendations]** bzw. **[!UICONTROL userId]** beschriftet sind. Da der Hyperparameter **[!UICONTROL num_recommendations]** in den Screenshots auf 10 gesetzt wurde, kann jede Empfehlungszeile bis zu 10 Produktidentitäten enthalten, die durch ein Nummernzeichen (#) getrennt sind.
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Nächste Schritte {#next-steps}
