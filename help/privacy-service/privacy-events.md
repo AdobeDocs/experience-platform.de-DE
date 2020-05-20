@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ereignisse zum Schutz der Privatsphäre abonnieren
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e4cd042722e13dafc32b059d75fca2dab828df60
+source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie eine Integration für Datenschutzdi
 
 ## Erste Schritte
 
-Dieses Tutorial verwendet **ngrok**, ein Softwareprodukt, das lokale Server über sichere Tunnel dem öffentlichen Internet zugänglich macht. Bitte [installieren Sie ngrok](https://ngrok.com/download) , bevor Sie dieses Tutorial starten, um weiter zu folgen und einen Webhaken zu Ihrem lokalen Computer zu erstellen. Für dieses Handbuch müssen Sie außerdem ein GIT-Repository herunterladen, das einen einfachen Server enthält, der in [Node.js](https://nodejs.org/)geschrieben ist.
+Dieses Tutorial verwendet **ngrok**, ein Softwareprodukt, das lokale Server über sichere Tunnel dem öffentlichen Internet zugänglich macht. Bitte [installieren Sie ngrok](https://ngrok.com/download) , bevor Sie dieses Tutorial starten, um weiter zu folgen und einen Webhaken zu Ihrem lokalen Computer zu erstellen. Für dieses Handbuch müssen Sie außerdem ein GIT-Repository herunterladen, das einen einfachen [Node.js](https://nodejs.org/) -Server enthält.
 
 ## Lokalen Server erstellen
 
@@ -60,71 +60,73 @@ Diese Befehle installieren alle Abhängigkeiten und initialisieren den Server. B
 
 ## Erstellen eines Webhofs mit ngrok
 
-Geben Sie in demselben Ordner und in einem neuen Befehlszeilenfenster den folgenden Befehl ein:
+Öffnen Sie ein neues Befehlszeilenfenster und navigieren Sie zu dem Ordner, in dem Sie ngrok zuvor installiert haben. Geben Sie von hier aus den folgenden Befehl ein:
 
 ```shell
-ngrok http -bind-tls=true 3000
+./ngrok http -bind-tls=true 3000
 ```
 
 Eine erfolgreiche Ausgabe sieht wie folgt aus:
 
 ![ngrok-Ausgabe](images/privacy-events/ngrok-output.png)
 
-Notieren Sie sich die `Forwarding` URL (`https://e142b577.ngrok.io`), da diese verwendet wird, um Ihren Webshaken im nächsten Schritt zu identifizieren.
+Notieren Sie sich die `Forwarding` URL (`https://212d6cd2.ngrok.io`), da diese verwendet wird, um Ihren Webshaken im nächsten Schritt zu identifizieren.
 
-## Neue Integration mit der Adobe I/O-Konsole erstellen
+## Neues Projekt in der Adobe Developer Console erstellen
 
-Melden Sie sich bei der [Adobe-E/A-Konsole](https://console.adobe.io) an und klicken Sie auf die Registerkarte **Integrationen** . Das Fenster _Integrationen_ wird angezeigt. Klicken Sie von hier auf **Neue Integration**.
+Wechseln Sie zur [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
 
-![Ansicht-Integrationen in der Adobe I/O-Konsole](images/privacy-events/integrations.png)
+## Ereignisse zum Schutz der Privatsphäre im Projekt Hinzufügen
 
-Das Fenster *Neue Integration* erstellen wird angezeigt. Wählen Sie &quot;Beinahe-Echtzeit-Ereignis **empfangen**&quot;und klicken Sie dann auf **Weiter**.
+Nachdem Sie mit der Erstellung eines neuen Projekts in der Konsole fertig sind, klicken Sie im Bildschirm &quot; **[!UICONTROL Projektübersicht]** &quot;auf _Hinzufügen Ereignis_ .
 
-![Neue Integration erstellen](images/privacy-events/new-integration.png)
+![](./images/privacy-events/add-event-button.png)
 
-Im nächsten Bildschirm finden Sie Optionen zum Erstellen von Integrationen mit verschiedenen Ereignissen, Produkten und Diensten, die Ihrem Unternehmen aufgrund Ihrer Abonnements, Berechtigungen und Berechtigungen zur Verfügung stehen. Wählen Sie für diese Integration die Ereignisse **des** Datenschutzdienstes und klicken Sie dann auf **Weiter**.
+Das Dialogfeld _Hinzufügen Ereignis_ wird angezeigt. Wählen Sie **[!UICONTROL Experience Cloud]** , um die Liste der verfügbaren Ereignistyp zu filtern, und wählen Sie dann die Ereignis **[!UICONTROL des]** Datenschutzdienstes, bevor Sie auf **[!UICONTROL Weiter]** klicken.
 
-![Datenschutzeinstellungen auswählen](images/privacy-events/privacy-events.png)
+![](./images/privacy-events/add-privacy-events.png)
 
-Das Formular *Integrationsdetails* wird angezeigt. Sie müssen einen Namen und eine Beschreibung für die Integration sowie ein Zertifikat mit öffentlichem Schlüssel angeben.
+Das Dialogfeld &quot;Registrierung _des Ereignisses_ konfigurieren&quot;wird angezeigt. Wählen Sie die Ereignis aus, die Sie erhalten möchten, indem Sie die entsprechenden Kontrollkästchen aktivieren. Ereignis, die Sie auswählen, werden in der linken Spalte unter &quot; _[!UICONTROL Abonnierte Ereignis]_&quot;angezeigt. Klicken Sie abschließend auf**[!UICONTROL  Weiter ]**.
 
-![Integrationsdetails](images/privacy-events/integration-details.png)
+![](./images/privacy-events/choose-subscriptions.png)
 
-Wenn Sie kein öffentliches Zertifikat haben, können Sie ein Zertifikat mit dem folgenden Befehl &quot;Terminal&quot;generieren:
+Im nächsten Bildschirm werden Sie aufgefordert, einen öffentlichen Schlüssel für die Registrierung des Ereignisses bereitzustellen. Sie haben die Möglichkeit, automatisch ein Schlüsselpaar zu erstellen oder einen eigenen öffentlichen Schlüssel hochzuladen, der im Terminal generiert wurde.
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+Für diese Übung wird die erste Option verwendet. Klicken Sie auf das Optionsfeld für **[!UICONTROL Generate a key pair]** und dann unten rechts auf die Schaltfläche **[!UICONTROL Generate keypair]** .
 
-Nachdem Sie ein Zertifikat generiert haben, ziehen Sie die Datei in das Feld &quot;Zertifikate **mit** öffentlichen Schlüsseln&quot;oder klicken Sie auf &quot;Datei **** auswählen&quot;, um den Dateiordner zu durchsuchen und das Zertifikat direkt auszuwählen.
+![](./images/privacy-events/generate-key-value.png)
 
-Nach dem Hinzufügen des Zertifikats wird die Option &quot; *Ereignis-Registrierung* &quot;angezeigt. Klicken Sie auf **Hinzufügen Ereignis Registrierung**.
+Wenn das Schlüsselpaar generiert wird, wird es automatisch vom Browser heruntergeladen. Sie müssen diese Datei selbst speichern, da sie nicht in der Developer Console beibehalten wird.
 
-![Hinzufügen Ereignis-Registrierung](images/privacy-events/add-event-registration.png)
+Im nächsten Bildschirm können Sie die Details des neu generierten Schlüsselpaars überprüfen. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-Das Dialogfeld wird erweitert, um zusätzliche Steuerelemente anzuzeigen. Hier können Sie Ihre gewünschten Ereignistyp auswählen und Ihren Webhaken registrieren. Geben Sie einen Namen für die Registrierung des Ereignisses, die Webshaken-URL (die `Forwarding` Adresse, die Sie beim [Erstellen des Webhofs](#create-a-webhook-using-ngrok)zurückgegeben haben) sowie eine kurze Beschreibung ein. Wählen Sie abschließend die Ereignistyp aus, die Sie abonnieren möchten, und klicken Sie dann auf **Speichern**.
+![](./images/privacy-events/keypair-generated.png)
 
-![Ereignis-Registrierungsformular](images/privacy-events/event-registration-form.png)
+Geben Sie im nächsten Bildschirm einen Namen und eine Beschreibung für die Registrierung des Ereignisses ein. Best Practice ist, einen eindeutigen, leicht identifizierbaren Namen zu erstellen, um diese Ereignis-Registrierung von anderen im selben Projekt zu unterscheiden.
 
-Nachdem das Ereignis-Registrierungsformular ausgefüllt wurde, klicken Sie auf Integration **erstellen** und die E/A-Integration ist abgeschlossen.
+![](./images/privacy-events/event-details.png)
 
-![Integration erstellen](images/privacy-events/create-integration.png)
+Weiter unten auf dem gleichen Bildschirm stehen Ihnen zwei Optionen zur Konfiguration des Empfangs von Ereignissen zur Verfügung. Wählen Sie **[!UICONTROL WebHaken]** und geben Sie die `Forwarding` URL für den oben erstellten ngrok-Webhaken unter der _[!UICONTROL WebHook-URL]_ein. Wählen Sie dann den gewünschten Versand-Stil (Einzel- oder Stapelform), bevor Sie auf Konfigurierte Ereignis****speichern klicken, um die Ereignis-Registrierung abzuschließen.
+
+![](./images/privacy-events/webhook-details.png)
+
+Die Detailseite für Ihr Projekt wird erneut angezeigt, wobei die Ereignisse zum Datenschutz unter den _[!UICONTROL Ereignissen]_im linken Navigationsbereich angezeigt werden.
 
 ## Ansicht Ereignis-Daten
 
-Nachdem Sie Ihre E/A-Integrations- und Datenschutzaufträge erstellt haben, können Sie alle Benachrichtigungen für diese Integration Ansicht haben. Navigieren Sie auf der Registerkarte **Integrationen** in der E/A-Konsole zu Ihrer Integration und klicken Sie auf **Ansicht**.
+Sobald Sie die Ereignisse zum Datenschutz bei Ihrem Projekt registriert haben und Datenschutzaufträge verarbeitet wurden, können Sie alle eingegangenen Benachrichtigungen für diese Registrierung Ansicht haben. Wählen Sie auf der Registerkarte &quot; **[!UICONTROL Projekte]** &quot;in der Developer Console Ihr Projekt aus der Liste aus, um die Seite &quot; _Produktübersicht_ &quot;zu öffnen. Wählen Sie von hier aus im linken Navigationsbereich die Option **[!UICONTROL Datenschutz-Ereignisse]** .
 
-![Integration von Ansichten](images/privacy-events/view-integration.png)
+![](./images/privacy-events/events-left-nav.png)
 
-Die Detailseite für die Integration wird angezeigt. Klicken Sie auf **Ereignis** , um die Ereignis-Registrierungen für die Integration Ansicht. Suchen Sie nach der Registrierung für die Ereignisse zum Datenschutz und klicken Sie auf **Ansicht**.
+Die Registerkarte &quot; _Registrierungsdetails_ &quot;wird angezeigt, auf der Sie weitere Informationen zur Registrierung Ansicht, die Konfiguration bearbeiten oder die Ereignis, die Sie seit der Aktivierung Ihres Webhofs erhalten haben, in Ansicht setzen können.
 
-![Registrierung für Ansicht Ereignis](images/privacy-events/view-registration.png)
+![](./images/privacy-events/registration-details.png)
 
-Das Fenster &quot; *Ereignis-Details* &quot;wird angezeigt, in dem Sie weitere Informationen zur Registrierung Ansicht, die Konfiguration bearbeiten oder die Ereignis, die Sie seit der Aktivierung Ihres Webhofs erhalten haben, Ansicht vornehmen können. Sie können die Details des Ereignisses Ansicht und zur **Debug-Ablaufverfolgung** navigieren.
+Klicken Sie auf die Registerkarte **[!UICONTROL Debug-Verfolgung]** , um eine Liste der empfangenen Ereignis Ansicht. Klicken Sie auf ein aufgelistetes Ereignis, um dessen Details Ansicht.
 
-![Debugging-Verfolgung](images/privacy-events/debug-tracing.png)
+![](images/privacy-events/debug-tracing.png)
 
-Der Abschnitt **Nutzlast** enthält Details zum ausgewählten Ereignis, einschließlich dessen Ereignistyp (`"com.adobe.platform.gdpr.productcomplete"`), wie im Beispiel oben hervorgehoben.
+Der Abschnitt _[!UICONTROL Nutzlast]_enthält Details zum ausgewählten Ereignis, einschließlich dessen Ereignistyp (`com.adobe.platform.gdpr.productcomplete`), wie im Beispiel oben hervorgehoben.
 
 ## Nächste Schritte
 
