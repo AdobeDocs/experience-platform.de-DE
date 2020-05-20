@@ -5,6 +5,9 @@ title: Verbindung mit Tableau
 topic: connect
 translation-type: tm+mt
 source-git-commit: 8310204071375a55329f661c9ac678f96979a594
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
