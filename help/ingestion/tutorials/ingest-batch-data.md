@@ -5,6 +5,9 @@ title: Daten in die Adobe Experience Platform integrieren
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+workflow-type: tm+mt
+source-wordcount: '1291'
+ht-degree: 3%
 
 ---
 
