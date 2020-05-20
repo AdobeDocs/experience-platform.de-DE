@@ -5,6 +5,9 @@ title: Erstellen eines Schemas mit dem Schema-Editor
 topic: tutorials
 translation-type: tm+mt
 source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+workflow-type: tm+mt
+source-wordcount: '3409'
+ht-degree: 0%
 
 ---
 
@@ -79,7 +82,7 @@ Die Arbeitsfläche wird wieder angezeigt. Der *Klassenabschnitt* enthält nun di
 
 ![Zugewiesene XDM-Profil-Klasse](../images/tutorials/create-schema/class_assigned_structure.png)
 
-Die Felder werden im Format &quot;fieldName&quot;angezeigt| Datentyp&quot;. Die Schritte zum Definieren von Schema-Feldern in der Benutzeroberfläche finden Sie weiter unten in diesem Lernprogramm.
+Die Felder werden im Format &quot;fieldName&quot;angezeigt | Datentyp&quot;. Die Schritte zum Definieren von Schema-Feldern in der Benutzeroberfläche finden Sie weiter unten in diesem Lernprogramm.
 
 >[!NOTE] Sie können die Klasse eines Schemas [jederzeit während des anfänglichen Kompositionsprozesses](#change-class) ändern, bevor das Schema gespeichert wurde. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Daher wird die Arbeitsfläche und alle hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
 
@@ -119,7 +122,7 @@ Sie können nun das Mixin &quot;Profil Persönliche Details&quot;aus dem *Hinzuf
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. Die &quot;Profil Persönliche Daten&quot;sind jetzt unter *Mixins* im Bereich *Komposition* aufgelistet, und die Felder für die Adresse, das Handy und mehr wurden unter *Struktur* hinzugefügt.
+Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. Die &quot;Profil Persönliche Daten&quot;sind jetzt unter *Mixins* im Bereich *Komposition* aufgelistet, und die Felder für die Hausanschrift, das Handy und mehr wurden unter *Struktur* hinzugefügt.
 
 Ähnlich wie beim Feld &quot;Name&quot;stellen die soeben hinzugefügten Felder Konzepte für mehrere Felder dar. Beispielsweise hat &quot;homeAddress&quot;den Datentyp &quot;Address&quot;und &quot;mobilePhone&quot;den Datentyp &quot;Phone Number&quot;. Sie können auf jedes dieser Felder klicken, um sie zu erweitern und die zusätzlichen Felder im Datentyp anzuzeigen.
 
