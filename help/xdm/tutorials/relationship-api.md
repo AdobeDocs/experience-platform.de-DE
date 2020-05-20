@@ -5,6 +5,9 @@ title: Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Regi
 topic: tutorials
 translation-type: tm+mt
 source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ Dieses Lernprogramm erfordert ein funktionierendes Verständnis von Experience D
 * [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Header für die Anforderung (mit besonderer Aufmerksamkeit auf den Accept-Header und seine möglichen Werte).
+Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
 
 ## Definieren eines Schemas für Quelle und Ziel {#define-schemas}
 
@@ -361,7 +364,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --- | --- |
 | `@type` | Der Typ des zu erstellenden Deskriptors. Der `@type` Wert für Identitätsdeskriptoren ist `xdm:descriptorIdentity`. |
-| `xdm:sourceSchema` | Der `$id` Wert des im [vorherigen Schritt](#define-schemas)erhaltenen Zielwerts. |
+| `xdm:sourceSchema` | Der `$id` Wert des im [vorherigen Schema](#define-schemas)erhaltenen Zielwerts. |
 | `xdm:sourceVersion` | Die Versionsnummer des Schemas. |
 | `sourceProperty` | Der Pfad zum jeweiligen Feld, das als primäre Identität des Schemas dient. Dieser Pfad sollte mit einem &quot;/&quot;beginnen und nicht mit einem &quot;/&quot;enden, während auch alle &quot;properties&quot;-Namensraum ausgeschlossen werden. Die oben aufgeführte Anforderung verwendet zum Beispiel `/_{TENANT_ID}/hotelId` anstelle von `/properties/_{TENANT_ID}/properties/hotelId`. |
 | `xdm:namespace` | Der Identitäts-Namensraum für das Identitätsfeld. `hotelId` in diesem Beispiel ein ECID-Wert ist, daher wird der Namensraum &quot;ECID&quot;verwendet. Eine Liste der verfügbaren Namensraum finden Sie in der Übersicht über den [Identitäts-Namensraum](../../identity-service/home.md) . |
