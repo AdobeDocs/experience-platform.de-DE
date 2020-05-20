@@ -5,6 +5,9 @@ title: Erfassen von CRM-Daten über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
 source-git-commit: 88376a67e064208ab62dd339e820adb8e47d3c4e
+workflow-type: tm+mt
+source-wordcount: '1435'
+ht-degree: 2%
 
 ---
 
@@ -609,7 +612,7 @@ Der letzte Schritt zur Erfassung von CRM-Daten besteht darin, einen Datendurchla
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 **API-Format**
 
