@@ -5,6 +5,9 @@ title: SQL-Syntax
 topic: syntax
 translation-type: tm+mt
 source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+workflow-type: tm+mt
+source-wordcount: '1957'
+ht-degree: 1%
 
 ---
 
