@@ -5,6 +5,9 @@ title: Qualität der Datenverarbeitung
 topic: overview
 translation-type: tm+mt
 source-git-commit: 24df962656706d769a7034020d96a545e8f905ca
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 6%
 
 ---
 
