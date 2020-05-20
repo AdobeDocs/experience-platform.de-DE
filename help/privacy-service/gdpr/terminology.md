@@ -5,6 +5,9 @@ title: DSGVO-Terminologie
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: 39d5446c04fcceaf9d75db91ecb2c136986de098
+workflow-type: tm+mt
+source-wordcount: '1072'
+ht-degree: 5%
 
 ---
 
