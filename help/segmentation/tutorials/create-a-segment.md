@@ -5,6 +5,9 @@ title: Segment erstellen
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+workflow-type: tm+mt
+source-wordcount: '1328'
+ht-degree: 2%
 
 ---
 
