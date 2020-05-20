@@ -5,6 +5,9 @@ title: Handbuch zu Adobe Experience Platform Abfrage Service Abfrage Editor
 topic: query editor
 translation-type: tm+mt
 source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 1%
 
 ---
 
