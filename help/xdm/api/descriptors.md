@@ -5,6 +5,9 @@ title: Deskriptoren
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+workflow-type: tm+mt
+source-wordcount: '1420'
+ht-degree: 1%
 
 ---
 
