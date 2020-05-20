@@ -5,6 +5,9 @@ title: Datenverwendungsbeschriftungen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
+workflow-type: tm+mt
+source-wordcount: '50'
+ht-degree: 0%
 
 ---
 
