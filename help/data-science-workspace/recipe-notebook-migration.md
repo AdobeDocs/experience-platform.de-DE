@@ -5,6 +5,9 @@ title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+workflow-type: tm+mt
+source-wordcount: '3460'
+ht-degree: 0%
 
 ---
 
