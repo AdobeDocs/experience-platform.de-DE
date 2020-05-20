@@ -5,6 +5,9 @@ title: Erstellen einer Datenbank-Basisverbindung mit der Experience Platform mit
 topic: overview
 translation-type: tm+mt
 source-git-commit: e409b287d6965ede4030829287bd3e405e9d709b
+workflow-type: tm+mt
+source-wordcount: '722'
+ht-degree: 1%
 
 ---
 
