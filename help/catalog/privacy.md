@@ -5,6 +5,9 @@ title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem Data
 
 ### Verwenden der Benutzeroberfläche {#identity-ui}
 
-In der Benutzeroberfläche von Experience Platform können Sie mit dem _[!UICONTROL Schemas]_Arbeitsbereich Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum[Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field)im Schema-Editor-Lernprogramm.
+In der Benutzeroberfläche von Experience Platform können Sie Ihre vorhandenen XDM-Schema mit dem Arbeitsbereich _[!UICONTROL Schemas]_bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum[Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field)im Schema-Editor-Lernprogramm.
 
 Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt zum [Senden von Datenschutzanforderungen](#submit)fortfahren.
 
