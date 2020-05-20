@@ -5,6 +5,9 @@ title: Erstellen eines Apache Cassandra-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
 source-git-commit: accbb95234085c7c1969e9fecc4f5db52426c8b7
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 3%
 
 ---
 
@@ -58,7 +61,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Cassandra-Konto ist nur ein Connector erforderlich, da er zur Erstellung mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
