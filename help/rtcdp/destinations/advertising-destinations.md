@@ -5,6 +5,9 @@ description: Verbinden Sie Ihre Echtzeit-Kundendatenplattform mit einer Drittanb
 seo-description: Verbinden Sie Ihre Echtzeit-Kundendatenplattform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 60%
 
 ---
 
