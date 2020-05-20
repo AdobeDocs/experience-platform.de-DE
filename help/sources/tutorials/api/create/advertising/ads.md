@@ -5,6 +5,9 @@ title: Erstellen eines Google Ads-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
 source-git-commit: 950fa88ed6c9235bff98658763b662113bb76caa
+workflow-type: tm+mt
+source-wordcount: '647'
+ht-degree: 1%
 
 ---
 
@@ -59,7 +62,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Google Ads-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
