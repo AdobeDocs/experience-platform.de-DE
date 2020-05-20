@@ -5,6 +5,9 @@ title: Übersicht über die Zugriffskontrolle
 topic: overview
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '1177'
+ht-degree: 3%
 
 ---
 
@@ -95,7 +98,7 @@ In der folgenden Tabelle sind die für Experience Platform in der Admin-Konsole 
 | Dateneinbindung | Ansichten-Quellen | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte &quot; *Katalog* &quot;und authentifizierte Quellen auf der Registerkarte &quot; *Durchsuchen* &quot;. |
 | Data Science-Arbeitsbereich | Data Science Workspace | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen im Data Science Workspace. |
 
-_(*) Diese Berechtigung erfordert Bestimmungen für die Echtzeit-Kundendatenplattform. Für weitere Informationen zu Echtzeit-CDP lesen Sie bitte zunächst die[Echtzeit-CDP-Übersicht](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
+_(*) Diese Berechtigung erfordert Bestimmungen für die Echtzeit-Kundendatenplattform. Für weitere Informationen zu Echtzeit-CDP lesen Sie bitte zunächst die[Echtzeit-CDP-Übersicht](https://docs.adobe.com/content/help/de-DE/experience-platform/rtcdp/overview.html)._
 
 ## Nächste Schritte
 
