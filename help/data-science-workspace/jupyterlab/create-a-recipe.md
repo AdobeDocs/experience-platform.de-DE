@@ -5,6 +5,9 @@ title: Erstellen eines Skripts mit Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+workflow-type: tm+mt
+source-wordcount: '2333'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +25,9 @@ Dieses Lernprogramm umfasst zwei Hauptabschnitte. Zuerst erstellen Sie ein Model
 
 ## Erste Schritte mit der JupyterLab Notebook-Umgebung
 
-Das Erstellen eines Skripts von Grund auf kann im Data Science Workspace erfolgen. Navigieren Sie zum Beginn zu [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf die **[!UICONTROL Notebooks]** Registerkarte links. Erstellen Sie ein neues Notebook, indem Sie im JupyterLab Launcher die Vorlage Rezept Builder auswählen.
+Das Erstellen eines Skripts von Grund auf kann im Data Science Workspace erfolgen. Navigieren Sie zum Beginn zu [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **[!UICONTROL Notebooks]** . Erstellen Sie ein neues Notebook, indem Sie im JupyterLab Launcher die Vorlage Rezept Builder auswählen.
 
-Mit dem Rezept Builder Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Ergebnissen der Schulung und Bewertung zufrieden sind, können Sie ein Rezept erstellen, das in Data Science Workspace verwendet werden kann, indem Sie das Notebook verwenden, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
+Mit dem Rezept Builder Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Schulungs- und Bewertungsergebnissen zufrieden sind, können Sie ein Rezept erstellen, das in Data Science Workspace verwendet werden kann, indem Sie das Notebook verwenden, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
 
 >[!NOTE]
 >Das Rezept Builder-Notebook unterstützt die Arbeit mit allen Dateiformaten, aber die Funktion Rezept erstellen unterstützt derzeit nur Python.
@@ -33,7 +36,7 @@ Mit dem Rezept Builder Notebook können Sie Trainings- und Scoring-Runs im Noteb
 
 Wenn Sie vom Starter auf das Rezept Builder-Notebook klicken, wird das Notebook in der Registerkarte geöffnet. Die im Notebook verwendete Vorlage ist das Python Retail Sales Forecasting Rezept, das auch in [diesem öffentlichen Repository zu finden ist](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Sie werden feststellen, dass es in der Symbolleiste drei weitere Aktionen gibt: - **[!UICONTROL Train]**, **[!UICONTROL Score]** und **[!UICONTROL Create Recipe]**. Diese Symbole werden nur im Rezept Builder-Notebook angezeigt. Weitere Informationen zu diesen Aktionen erhalten Sie [im Bereich](#training-and-scoring) Training und Bewertung, nachdem Sie Ihr Rezept im Notebook erstellt haben.
+Sie werden feststellen, dass es in der Symbolleiste drei weitere Aktionen gibt, nämlich **[!UICONTROL Zug]**, **[!UICONTROL Punktzahl]** und Rezept **[!UICONTROL erstellen]**. Diese Symbole werden nur im Rezept Builder-Notebook angezeigt. Weitere Informationen zu diesen Aktionen erhalten Sie [im Bereich](#training-and-scoring) Training und Bewertung, nachdem Sie Ihr Rezept im Notebook erstellt haben.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -259,7 +262,7 @@ return df
 
 Da der Zweck unseres Modells darin besteht, zukünftige wöchentliche Verkäufe vorherzusagen, müssen Sie einen Bewertungsdatensatz erstellen, mit dem bewertet wird, wie gut die Vorhersage des Modells funktioniert.
 
-Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Datenspeicher gemessen werden, damit Sie die `weeklySales` Werte 45 vorwärts in eine neue Spalte namens `weeklySalesAhead`.
+Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Speicher gemessen werden, sodass Sie die `weeklySales` Werte 45 Datensätze vorwärts in eine neue Spalte namens `weeklySalesAhead`verschieben können.
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
@@ -440,13 +443,13 @@ def save(configProperties, prediction):
 
 Wenn Sie Ihre Änderungen an Ihrem Notebook vorgenommen haben und Ihr Rezept trainieren möchten, können Sie auf die entsprechenden Schaltflächen oben in der Leiste klicken, um einen Schulungslauf in der Zelle zu erstellen. Wenn Sie auf die Schaltfläche klicken, wird ein Protokoll mit Befehlen und Ausgängen aus dem Schulungsskript im Notebook (unter der `evaluator.py` Zelle) angezeigt. Conda installiert zuerst alle Abhängigkeiten, dann wird die Schulung initiiert.
 
-Beachten Sie, dass Sie mindestens einmal eine Schulung ausführen müssen, bevor Sie die Punktbewertung durchführen können. Wenn Sie auf die **[!UICONTROL Run Scoring]** Schaltfläche klicken, wird das trainierte Modell bewertet, das während der Schulung generiert wurde. Das Bewertungsskript wird unter `datasaver.py`angezeigt.
+Beachten Sie, dass Sie mindestens einmal eine Schulung ausführen müssen, bevor Sie die Punktbewertung durchführen können. Wenn Sie auf die Schaltfläche &quot;Punktzahl **[!UICONTROL ausführen]** &quot;klicken, wird das trainierte Modell bewertet, das während der Schulung generiert wurde. Das Bewertungsskript wird unter `datasaver.py`angezeigt.
 
 Wenn Sie zum Debugging die ausgeblendete Ausgabe anzeigen möchten, fügen Sie sie `debug` zum Ende der Ausgabenzelle hinzu und führen Sie sie erneut aus.
 
 ## Rezept erstellen {#create-recipe}
 
-Wenn Sie die Bearbeitung des Rezepts abgeschlossen haben und mit der Schulungs-/Bewertungsausgabe zufrieden sind, können Sie ein Rezept aus dem Notebook erstellen, indem Sie **[!UICONTROL Create Recipe]** in der oberen rechten Navigation drücken.
+Wenn Sie die Bearbeitung des Rezepts abgeschlossen haben und mit der Schulungs-/Bewertungsausgabe zufrieden sind, können Sie ein Rezept aus dem Notebook erstellen, indem Sie in der Navigation oben rechts auf Rezept **[!UICONTROL erstellen]** klicken.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -454,7 +457,7 @@ Nach dem Klicken auf die Schaltfläche werden Sie aufgefordert, einen Rezeptname
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Nach dem Drücken der Taste können **[!UICONTROL Ok]** Sie zu dem neuen Rezept auf der [Adobe Experience Platform](https://platform.adobe.com/)navigieren. Sie können auf die **[!UICONTROL View Recipes]** Schaltfläche klicken, um zur **[!UICONTROL Recipes]** Registerkarte unter **[!UICONTROL ML Models]**
+Wenn Sie **[!UICONTROL OK]** drücken, können Sie zu dem neuen Rezept auf der [Adobe Experience Platform](https://platform.adobe.com/)navigieren. Sie können auf die Schaltfläche **[!UICONTROL Ansicht Rezepte]** klicken, um zur Registerkarte **[!UICONTROL Rezepte]** unter **[!UICONTROL ML-Modelle zu gelangen]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
