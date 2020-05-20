@@ -5,6 +5,9 @@ title: Zielgruppen-Mapping
 topic: overview
 translation-type: tm+mt
 source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+workflow-type: tm+mt
+source-wordcount: '427'
+ht-degree: 0%
 
 ---
 
