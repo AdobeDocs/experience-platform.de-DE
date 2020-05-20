@@ -5,6 +5,9 @@ description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtz
 seo-description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendatenplattform von Adobe mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '129'
+ht-degree: 86%
 
 ---
 
