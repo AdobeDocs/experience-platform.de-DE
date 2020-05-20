@@ -5,6 +5,9 @@ title: Herunterladen von Punktzahlen in der Kunden-API
 topic: Downloading scores
 translation-type: tm+mt
 source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ Derzeit gibt es zwei Möglichkeiten, Kunden-AI-Bewertungen herunterzuladen:
 
 ## Find your dataset ID {#dataset-id}
 
-Klicken Sie in Ihrer Dienstinstanz für Customer AI Insights auf das Dropdownmenü *Mehr Aktionen* in der oberen rechten Navigation und wählen Sie dann **[!UICONTROL Access scores]**.
+Klicken Sie in Ihrer Dienstinstanz für Customer AI Insights in der Navigation oben rechts auf das Dropdownmenü *Mehr Aktionen* und wählen Sie **[!UICONTROL Access-Ergebnisse]**.
 
 ![mehr Aktionen](../images/insights/more-actions.png)
 
