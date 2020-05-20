@@ -5,6 +5,9 @@ title: Richtlinien zusammenführen - Benutzerhandbuch
 topic: guide
 translation-type: tm+mt
 source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
+workflow-type: tm+mt
+source-wordcount: '1131'
+ht-degree: 3%
 
 ---
 
