@@ -5,6 +5,9 @@ title: Angebot-Entscheidungsdomänenmodell
 topic: overview
 translation-type: tm+mt
 source-git-commit: fdaef24a23c1c1da064ca33e8bed522e506fead5
+workflow-type: tm+mt
+source-wordcount: '2621'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Angebote haben oft einen Zusammenhang mit Waren oder Dienstleistungen und es geh
 
 Der prognostizierte Wert eines akzeptierten Angebots für das Unternehmen ist das Optimierungskriterium und steht im Widerspruch zu den Kosten für die Erstellung eines Angebots. Kosten, Annahmewahrscheinlichkeit und voraussichtlicher Wert werden zur Rangordnung der Angebot verwendet. Das beste Angebot ist das mit den höchsten prognostizierten positiven Auswirkungen auf die Ziele Ihrer Angebot-Aktivitäten.
 
-Bei der Angebot-Entscheidungsfindung werden die Interaktionen berücksichtigt, die ein Endbenutzer _**über viele Kanal**_ und Anwendungen hinweg hatte, und es werden die Daten des Profil- und Erlebnis-Ereignisses eines Endbenutzers genutzt. Beispielsweise kann eine Call-Center-Anwendung mithilfe der Angebot-Entscheidungsfunktion ein Angebot aktivieren oder unterdrücken, das auf Käufen und Rezensionen basiert, die vom Endbenutzer veröffentlicht wurden. oder eine E-Mail-Management-Anwendung kann sich darauf verlassen, dass Angebot-Entscheidungsfindung das Nächste Beste Angebot in einem wöchentlichen Newsletter auswählt, basierend auf dem Browserverlauf auf einer Website.
+Bei der Angebot-Entscheidungsfindung werden die Interaktionen berücksichtigt, die ein Endbenutzer _**über viele Kanal**_ und Anwendungen hinweg hatte, und es werden die Daten des Profil- und Erlebnis-Ereignisses eines Endbenutzers genutzt. Beispielsweise kann eine Call-Center-Anwendung mithilfe der Angebot-Entscheidungsfunktion ein Angebot aktivieren oder unterdrücken, das auf Käufen und Reviews basiert, die vom Endbenutzer veröffentlicht wurden. oder eine E-Mail-Management-Anwendung kann sich darauf verlassen, dass Angebot-Entscheidungsfindung das Nächste Beste Angebot in einem wöchentlichen Newsletter auswählt, basierend auf dem Browserverlauf auf einer Website.
 
 Angebote haben andere interessante Eigenschaften. Häufig gibt es einen definierten _**Zeitplan**_ oder einen Datums- und Zeitbereich, wann das Angebot gültig ist und wann das Angebot ungültig gemacht werden muss.
 
@@ -124,7 +127,7 @@ Wenn Optionen explizit in eine Sammlung platziert werden, wird ihr Tag-Satz für
 
 Aktivitäten konfigurieren und steuern den Entscheidungsprozess. Derzeit ist die Entscheidungsstrategie im Wesentlichen vorab festgelegt, aber künftige Iterationen des Angebot Decision Domain-Modells werden die Auswahl von Modellen, zusätzlichen Regeln und Einschränkungen ermöglichen.
 
-Ein Erlebnis kann mit vielen Aktivitäten gleichzeitig zusammengestellt werden. Derzeit können bis zu 30 Aktivitäten in einer einzigen Entscheidungsanforderung behandelt werden. Wenn mehr als 30 Aktivitäten oder Slots in einem Erlebnis mit Inhalten gefüllt werden müssen, können für dasselbe Profil mehrere Anforderungen gestellt werden. Werden jedoch Aktivitäten in ein und demselben Entscheidungsersuchen aufgenommen, so werden die Angebotsvorschläge zwischen diesen Aktivitäten dedupliziert.
+Ein Erlebnis kann mit vielen Aktivitäten gleichzeitig zusammengestellt werden. Derzeit können bis zu 30 Aktivitäten in einer einzigen Entscheidungsanforderung behandelt werden. Wenn mehr als 30 Aktivitäten oder Slots in einem Erlebnis mit Inhalten gefüllt werden müssen, können für dasselbe Profil mehrere Anforderungen gestellt werden. Werden jedoch Aktivitäten in ein und demselben Entscheidungsersuchen einbezogen, so werden die Angebotsvorschläge zwischen diesen Aktivitäten dedupliziert.
 
 Wenn Aktivitäten so definiert werden, dass sie aus unterschiedlichen Angeboten ausgewählt werden, macht es kaum einen Unterschied, ob Aktivitäten in derselben Anforderung kombiniert oder in separate Anforderungen aufgeteilt werden. Allerdings erfordern Netzwerk- und Reaktionszeitbeschränkungen möglicherweise, dass Aktivitäten in derselben Anforderung kombiniert werden. Da verschiedene Anforderungen an verschiedene Dienstknoten weitergeleitet werden, müssen möglicherweise dieselben Profil-Daten in verschiedene Nodes abgerufen werden. Dadurch wird die effektive IO-Bandbreite für andere Anforderungen reduziert.
 
