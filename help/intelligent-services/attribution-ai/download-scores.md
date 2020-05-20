@@ -5,6 +5,9 @@ title: Zugreifen auf Ergebnisse in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
 source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ Um auf die Ergebnisse für Attribution AI zugreifen zu können, benötigen Sie a
 
 ## Find your dataset ID {#dataset-id}
 
-Klicken Sie in Ihrer Dienstinstanz für Zuordnungs-AI-Einblicke auf das Dropdownmenü *Mehr Aktionen* in der oberen rechten Navigation und wählen Sie dann **[!UICONTROL Access scores]**.
+Klicken Sie in Ihrer Dienstinstanz für Zuordnungs-AI-Einblicke auf das Dropdownmenü *Mehr Aktionen* in der oberen rechten Navigation und wählen Sie dann **[!UICONTROL Zugriffswerte]**.
 
 ![mehr Aktionen](./images/download-scores/more-actions.png)
 
