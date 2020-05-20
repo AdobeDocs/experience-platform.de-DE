@@ -5,13 +5,16 @@ title: Segmentierung mehrerer Entitäten
 topic: overview
 translation-type: tm+mt
 source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 4%
 
 ---
 
 
 # Segmentierung mehrerer Entitäten
 
-Die Segmentierung mehrerer Entitäten ist die Möglichkeit, Profil-Daten mit zusätzlichen Daten zu erweitern, die auf Produktklassen, Stores oder anderen Nicht-Profil-Klassen basieren. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, als wären sie nativ für das Profil-Schema.
+Die Segmentierung mehrerer Entitäten ist die Möglichkeit, Profil-Daten mit zusätzlichen Daten zu erweitern, die auf Produktklassen, Stores oder anderen Nicht-Profil-Klassen basieren. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden.
 
 Weitere Informationen zur Segmentierung mehrerer Entitäten finden Sie in der [Segmentierungsübersicht](./home.md).
 
