@@ -5,6 +5,9 @@ title: Erstellen einer Streaming-Verbindung über die Benutzeroberfläche
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 181719e729748adcde62199c9406a97b7a807182
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
 
