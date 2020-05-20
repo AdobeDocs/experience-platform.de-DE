@@ -5,6 +5,9 @@ title: Steigerung des Echtzeit-Profils von Kunden durch Einblicke in das maschin
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '1226'
+ht-degree: 0%
 
 ---
 
@@ -38,37 +41,37 @@ Der erste Schritt zur Bereicherung des Echtzeit-Kundenobjekts mit bewerteten Ein
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Dieser Abschnitt enthält grundlegende Anweisungen zum Erstellen eines Schemas mit dem Schema Builder. Ein ausführlicheres Tutorial zum [Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md)finden Sie im Tutorial.
 
-1. Klicken Sie auf der Adobe Experience Platform auf die **[!UICONTROL Schema]** Registerkarte, um den Schema-Browser aufzurufen. Klicken Sie auf **[!UICONTROL Create Schema]** den *Schema-Editor*, in dem Sie interaktiv Schema erstellen und erstellen können.
+1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Schema]** , um auf den Schema-Browser zuzugreifen. Klicken Sie auf Schema **** erstellen, um auf den *Schema-Editor*zuzugreifen, in dem Sie interaktiv Schemas erstellen und erstellen können.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Klicken Sie im Fenster &quot; *Komposition* &quot;auf **[!UICONTROL Assign]** , um die verfügbaren Klassen zu durchsuchen.
-   * Um eine vorhandene Klasse zuzuweisen, markieren Sie die gewünschte Klasse und klicken Sie auf **[!UICONTROL Assign Class]**.
+2. Klicken Sie im Fenster &quot; *Komposition* &quot;auf **[!UICONTROL Zuweisen]** , um die verfügbaren Klassen zu durchsuchen.
+   * Um eine vorhandene Klasse zuzuweisen, markieren Sie die gewünschte Klasse und klicken Sie auf **[!UICONTROL Klasse]**zuweisen.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
-   * Um eine benutzerdefinierte Klasse zu erstellen, klicken Sie auf &quot; **[!UICONTROL Create New Class]** Suchen&quot;am oberen Rand des Browserfensters. Geben Sie einen Klassennamen und eine Beschreibung ein und wählen Sie das Verhalten der Klasse aus. Klicken Sie auf **[!UICONTROL Assign Class]** , sobald Sie fertig sind.
+   * Um eine benutzerdefinierte Klasse zu erstellen, klicken Sie auf Neue Klasse **** erstellen, die sich in der Mitte des Browserfensters befindet. Geben Sie einen Klassennamen und eine Beschreibung ein und wählen Sie das Verhalten der Klasse aus. Klicken Sie auf Klasse **[!UICONTROL zuweisen]** , sobald Sie fertig sind.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
    An diesem Punkt sollte die Struktur Ihres Schemas einige Klassenfelder enthalten und Sie können Mixins zuweisen. Ein Mixin ist eine Gruppe aus einem oder mehreren Feldern, die ein bestimmtes Konzept beschreiben.
 
-3. Klicken Sie im Fenster &quot; *Komposition* &quot; **[!UICONTROL Add]** im Unterabschnitt &quot; *Mixins* &quot;auf .
-   * Um ein vorhandenes Mixin zuzuweisen, markieren Sie das gewünschte Mixin und klicken Sie dann auf **[!UICONTROL Add Mixin]**. Im Gegensatz zu Klassen können einem einzelnen Schema mehrere Mixins zugewiesen werden, sofern dies angemessen ist.
+3. Klicken Sie im Fenster &quot; *Komposition* &quot;im Unterabschnitt &quot; **[!UICONTROL Mixins]** &quot;auf *Hinzufügen* .
+   * Um ein vorhandenes Mixin zuzuweisen, markieren Sie das gewünschte Mixin und klicken Sie dann auf **[!UICONTROL Hinzufügen Mixin]**. Im Gegensatz zu Klassen können einem einzelnen Schema mehrere Mixins zugewiesen werden, sofern dies angemessen ist.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
-   * Um eine neue Mischung zu erstellen, klicken Sie auf &quot; **[!UICONTROL Create New Mixin]** Suchen&quot;am oberen Rand des Browserfensters. Geben Sie einen Namen und eine Beschreibung für das Mixin ein und klicken Sie dann auf **[!UICONTROL Assign Mixin]** , sobald Sie fertig sind.
+   * Um ein neues Mixin zu erstellen, klicken Sie auf Neues Mixin **** erstellen, das sich in der Mitte des Browserfensters befindet. Geben Sie einen Namen und eine Beschreibung für das Mixin ein und klicken Sie dann auf Mixin **[!UICONTROL zuweisen]** , sobald Sie fertig sind.
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Um Mixin-Felder hinzuzufügen, klicken Sie im Fenster &quot; *Komposition* &quot;auf den Namen des Mixins. Sie erhalten dann die Möglichkeit, Mixin-Felder hinzuzufügen, indem Sie **[!UICONTROL Add Field]** im Fenster *Struktur* auf klicken. Stellen Sie sicher, dass die mixin-Eigenschaften entsprechend bereitgestellt werden.
+   * Um Mixin-Felder hinzuzufügen, klicken Sie im Fenster &quot; *Komposition* &quot;auf den Namen des Mixins. Sie erhalten dann die Möglichkeit, Mixin-Felder hinzuzufügen, indem Sie im Fenster &quot; **[!UICONTROL Struktur]** &quot;auf *Hinzufügen Feld* klicken. Stellen Sie sicher, dass die mixin-Eigenschaften entsprechend bereitgestellt werden.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. Nachdem Sie das Schema erstellt haben, klicken Sie im Fenster &quot; *Struktur* &quot;auf das Feld auf der obersten Ebene des Schemas, um die Eigenschaften des Schemas im rechten Eigenschaftenfenster anzuzeigen. Geben Sie einen Namen und eine Beschreibung ein und klicken Sie auf **[!UICONTROL Save]** , um das Schema zu erstellen.
+4. Nachdem Sie das Schema erstellt haben, klicken Sie im Fenster &quot; *Struktur* &quot;auf das Feld auf der obersten Ebene des Schemas, um die Eigenschaften des Schemas im rechten Eigenschaftenfenster anzuzeigen. Geben Sie einen Namen und eine Beschreibung ein und klicken Sie auf **[!UICONTROL Speichern]** , um das Schema zu erstellen.
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. Erstellen Sie ein Ausgabedataset mit Ihrem neu erstellten Schema, indem Sie in **[!UICONTROL Datasets]** der linken Navigationsspalte auf klicken und dann auf **[!UICONTROL Create dataset]**. Wählen Sie im nächsten Bildschirm **[!UICONTROL Create dataset from schema]**.
+5. Erstellen Sie ein Ausgabedataset mit Ihrem neu erstellten Schema, indem Sie in der linken Navigationsspalte auf **[!UICONTROL Datensätze]** klicken und dann auf Datensatz **[!UICONTROL erstellen]** klicken. Wählen Sie im nächsten Bildschirm &quot;Datensatz aus Schema **[!UICONTROL erstellen&quot;]**.
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. Suchen und wählen Sie im Schema-Browser das neu erstellte Schema aus und klicken Sie dann auf **[!UICONTROL Next]**.
+6. Suchen und wählen Sie im Schema-Browser das neu erstellte Schema aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
-7. Geben Sie einen Namen und eine optionale Beschreibung ein und klicken Sie dann auf **[!UICONTROL Finish]** , um den Datensatz zu erstellen.
+7. Geben Sie einen Namen und eine optionale Beschreibung ein und klicken Sie dann auf **[!UICONTROL Fertig stellen]** , um den Datensatz zu erstellen.
    ![](../images/models-recipes/enrich-rtcdp/configure_dataset.png)
 
 Nachdem Sie einen Output Schema-Datensatz erstellt haben, fahren Sie mit dem nächsten Abschnitt fort, um ihn für die Anreicherung des Profils zu konfigurieren und zu aktivieren.
@@ -83,16 +86,16 @@ Bevor Sie einen Datensatz zum Profil aktivieren können, müssen Sie das Schema 
 2. Erweitern Sie die Schema-Struktur und suchen Sie ein geeignetes Feld, das als primärer Bezeichner festgelegt werden soll. Klicken Sie auf das gewünschte Feld, um dessen Eigenschaften anzuzeigen.
    ![](../images/models-recipes/enrich-rtcdp/schema_structure.png)
 
-3. Legen Sie das Feld als primäre Identität fest, indem Sie die **[!UICONTROL Identity]** Eigenschaft und **[!UICONTROL Primary Identity]** Eigenschaft des Felds aktivieren und dann eine entsprechende Auswahl treffen **[!UICONTROL Identity Namespace]**. Klicken Sie auf **[!UICONTROL Apply]** , sobald Sie Ihre Änderungen vorgenommen haben.
+3. Legen Sie das Feld als primäre Identität fest, indem Sie die **[!UICONTROL Identity]** -Eigenschaft des Felds und die **[!UICONTROL Primary Identity]** -Eigenschaft aktivieren und dann einen entsprechenden **[!UICONTROL Identity-Namensraum]** auswählen. Klicken Sie auf **[!UICONTROL Übernehmen]** , nachdem Sie Ihre Änderungen vorgenommen haben.
    ![](../images/models-recipes/enrich-rtcdp/set_identity.png)
 
-4. Klicken Sie auf das Objekt auf der obersten Ebene Ihrer Schema-Struktur, um die Schema-Eigenschaften anzuzeigen und das Schema zum Profil durch Umschalten des **[!UICONTROL Profile]** Switches zu aktivieren. Klicken Sie auf , **[!UICONTROL Save]** um die Änderungen abzuschließen. Der mit diesem Schema erstellte Datensatz kann jetzt zum Profil aktiviert werden.
+4. Klicken Sie auf das Objekt auf der obersten Ebene Ihrer Schema-Struktur, um die Schema-Eigenschaften anzuzeigen und das Schema zum Profil zu aktivieren, indem Sie den **[!UICONTROL Profil]** -Schalter aktivieren. Klicken Sie auf **[!UICONTROL Speichern]** , um die Änderungen abzuschließen. Dataset, die mit diesem Schema erstellt wurden, kann jetzt zum Profil aktiviert werden.
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
 5. Verwenden Sie den DataSet-Browser, um den Datensatz zu finden, auf dem Sie Profil aktivieren möchten, und klicken Sie auf dessen Namen, um auf dessen Details zuzugreifen.
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. Aktivieren Sie den Datensatz zum Profil, indem Sie den in der rechten Informationsspalte **[!UICONTROL Profile]** angezeigten Schalter umschalten.
+6. Aktivieren Sie den Datensatz zum Profil, indem Sie den in der rechten Informationsspalte angezeigten **[!UICONTROL Profil]** -Schalter umschalten.
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
 Wenn Daten in einen Profil-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als Profil-Datensätze erfasst. Nachdem Ihr Schema und Ihr Datensatz vorbereitet wurden, generieren Sie einige Daten in den Datensatz, indem Sie mit einem geeigneten Modell Bewertungsläufe durchführen, und fahren Sie mit diesem Lernprogramm fort, um mithilfe des Segmentaufbaus Insight-Segmente zu erstellen.
@@ -101,7 +104,7 @@ Wenn Daten in einen Profil-aktivierten Datensatz aufgenommen werden, werden dies
 
 Nachdem Sie nun Einblicke in Ihren Profil-aktivierten Datensatz generiert und gesammelt haben, können Sie diese Daten verwalten, indem Sie mithilfe des Segmentaufbaus Untergruppen verwandter Elemente identifizieren. Gehen Sie wie folgt vor, um eigene Segmente zu erstellen.
 
-1. Klicken Sie auf der Adobe Experience Platform auf die **[!UICONTROL Segments]** Registerkarte und anschließend **[!UICONTROL Create Segment]** auf den Segmentaufbau.
+1. Klicken Sie auf der Adobe Experience Platform auf die Registerkarte **[!UICONTROL Segmente]** und anschließend auf Segment **[!UICONTROL erstellen]** , um auf den Segmentaufbau zuzugreifen.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. Im Segmentaufbau bietet die linke Leiste Zugriff auf die wichtigsten Segmentbausteine: Attribute, Ereignis und vorhandene Segmente. Jeder Baustein erscheint auf seiner eigenen Registerkarte. Wählen Sie die Profil-aktivierte Segmentklasse aus, und suchen Sie dann nach den Segmentbausteinen.
@@ -113,7 +116,7 @@ Nachdem Sie nun Einblicke in Ihren Profil-aktivierten Datensatz generiert und ge
 4. Während Sie Ihr Segment erstellen, können Sie geschätzte Segmentergebnisse unter Beachtung des Bereichs *Segmenteigenschaften* Vorschau haben.
    ![](../images/models-recipes/enrich-rtcdp/preview_segment.gif)
 
-5. Wählen Sie einen entsprechenden Namen **[!UICONTROL Merge Policy]** aus, geben Sie einen Namen und eine optionale Beschreibung ein und klicken Sie dann auf **[!UICONTROL Save]** , um das neue Segment abzuschließen.
+5. Wählen Sie eine entsprechende **[!UICONTROL Merge Policy]**, geben Sie einen Namen und eine optionale Beschreibung ein und klicken Sie dann auf **[!UICONTROL Speichern]** , um Ihr neues Segment abzuschließen.
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
