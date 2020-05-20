@@ -5,6 +5,9 @@ title: Arbeiten mit der Laufzeit des Entscheidungsdienstes mithilfe von APIs
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+workflow-type: tm+mt
+source-wordcount: '2022'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -220,7 +223,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
 - **`xdm:dryRun`** - Wenn der Wert dieser optionalen Eigenschaft auf &quot;true&quot;gesetzt ist, wird der Entscheidungsantrag Beschränkungen der Deckelung unterliegen, diese Zähler aber nicht wirklich abziehen, ist es die Erwartung, dass der Aufrufer das Angebot nie dem Profil vorlegen will. Der Entscheidungsdienst zeichnet den Vorschlag nicht als offizielles XDM-Entscheidungsinstrument auf und wird nicht in den Berichte-Datensätzen angezeigt. Der Standardwert dieser Eigenschaft ist &quot;false&quot;. Wenn die Eigenschaft weggelassen wird, gilt die Entscheidung nicht als Testlauf und wird daher dem Endbenutzer vorgelegt.
 - **`xdm:validateContextData`** - Diese optionale Eigenschaft aktiviert bzw. deaktiviert die Überprüfung der Kontextdaten. Wenn die Überprüfung aktiviert ist, wird für jedes angegebene Kontextdatenelement das Schema (basierend auf dem `@type` Feld) aus der XDM-Registrierung abgerufen und das `xdm:data` Objekt wird dafür validiert.
 
-Die Anforderung nach diesem Schema enthält ein Array von URIs, die auf Angebot-Aktivitäten verweisen, eine Profil-ID und ein Array mit Kontextdatenelementen:
+Die Anforderung nach diesem Schema enthält ein Array von URIs, die auf Angebot-Aktivitäten, eine Profil-ID und ein Array mit Kontextdatenelementen verweisen:
 
 - **`xdm:offerActivities`** - Diese obligatorische Eigenschaft ist ein Array von Objekten, bei denen jedes Element Daten zur Angebot-Aktivität enthält. Die Angebot-Aktivität verfügt über die folgenden Eigenschaften:
    - **`xdm:offerActivity`** - Der eindeutige Bezeichner (URI) der Aktivität. Dies ist der Wert der `@id` Eigenschaft der Angebot-Aktivität.
