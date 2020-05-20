@@ -5,6 +5,9 @@ title: Planen eines Modells (Benutzeroberfläche)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 0%
 
 ---
 
@@ -28,13 +31,13 @@ Für dieses Lernprogramm ist ein bestehender Dienst erforderlich. Wenn Sie keine
 
 Modellauswertung kann als automatisierter Prozess auf geplanter Basis konfiguriert werden. Nachdem ein Dienst erstellt wurde, können Sie die folgenden Schritte ausführen, um einen Bewertungszeitplan zu konfigurieren und anzuwenden:
 
-1. Klicken Sie in Adobe Experience Platform auf die **[!UICONTROL Services]** Registerkarte in der linken Navigationsspalte, um auf die *Dienstgalerie* zuzugreifen. Suchen Sie nach dem Dienst, auf dem Sie die Bewertung planen möchten, und klicken Sie auf **[!UICONTROL Open]** , um die zugehörige *Übersichtsseite* Ansicht.
+1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Dienste]** in der linken Navigationsspalte, um auf die *Dienstgalerie* zuzugreifen. Suchen Sie den Dienst, auf dem Sie die Bewertung planen möchten, und klicken Sie auf **[!UICONTROL Öffnen]** , um die zugehörige *Übersichtsseite* Ansicht.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. Auf der Seite Überblick werden die Bewertungsinformationen des Dienstes angezeigt. Klicken Sie auf den **[!UICONTROL Update Schedule]** Link, um einen Bewertungszeitplan zu konfigurieren.
+2. Auf der Seite Überblick werden die Bewertungsinformationen des Dienstes angezeigt. Klicken Sie auf den Link Plan **[!UICONTROL aktualisieren]** , um einen Bewertungszeitplan zu konfigurieren.
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
-3. Konfigurieren Sie Häufigkeit, Beginn, Enddatum, Eingabedatensatz und Ausgabedatensatz für den Bewertungszeitplan. Wenn Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **[!UICONTROL Create]** , um den Zeitplan für die Bewertung des Dienstes zu aktualisieren.
+3. Konfigurieren Sie Häufigkeit, Beginn, Enddatum, Eingabedatensatz und Ausgabedatensatz für den Bewertungszeitplan. Wenn Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **[!UICONTROL Erstellen]** , um den Zeitplan für die Bewertung des Dienstes zu aktualisieren.
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
 4. Ihr aktualisierter Bewertungszeitplan wird auf der Seite *Übersicht* des Dienstes angezeigt.
@@ -47,13 +50,13 @@ Die Konfiguration geplanter Schulungen wird auf einem Dienst ausgeführt, um sic
 
 Nachdem ein Dienst erstellt wurde, können Sie die folgenden Schritte ausführen, um einen Schulungsplan zu konfigurieren und anzuwenden:
 
-1. Klicken Sie in Adobe Experience Platform auf die **[!UICONTROL Services]** Registerkarte in der linken Navigationsspalte, um auf die *Dienstgalerie* zuzugreifen. Suchen Sie den Service, den Sie für die Ausführung von Schulungen planen möchten, und klicken Sie auf **[!UICONTROL Open]** , um die zugehörige *Übersichtsseite* Ansicht.
+1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Dienste]** in der linken Navigationsspalte, um auf die *Dienstgalerie* zuzugreifen. Suchen Sie den Dienst, auf dem Sie Schulungen planen möchten, und klicken Sie auf **[!UICONTROL Öffnen]** , um die zugehörige *Übersichtsseite* Ansicht.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. Auf der Seite Überblick werden die Schulungsinformationen des Dienstes angezeigt. Klicken Sie auf den **[!UICONTROL Update Schedule]** Link, um einen Schulungsplan zu konfigurieren.
+2. Auf der Seite Überblick werden die Schulungsinformationen des Dienstes angezeigt. Klicken Sie auf den Link &quot;Zeitplan **[!UICONTROL aktualisieren&quot;]** , um einen Schulungsplan zu konfigurieren.
    ![](../images/models-recipes/schedule/service_overview_train.png)
 
-3. Konfigurieren Sie die Häufigkeit, das Beginn, das Enddatum und den Eingabedatensatz, die für den Schulungsplan verwendet werden. Wenn Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **[!UICONTROL Create]** , um den Schulungsplan des Dienstes zu aktualisieren.
+3. Konfigurieren Sie die Häufigkeit, das Beginn, das Enddatum und den Eingabedatensatz, die für den Schulungsplan verwendet werden. Wenn Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **[!UICONTROL Erstellen]** , um den Schulungsplan des Dienstes zu aktualisieren.
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
 4. Ihr aktualisierter Schulungsplan wird auf der Seite *Übersicht* des Dienstes angezeigt.
