@@ -5,6 +5,9 @@ title: E-Mail-Marketingziele erstellen
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 7ee83b5bf14ec802801cfbc17141c02ceeaccd82
+workflow-type: tm+mt
+source-wordcount: '1660'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 7ee83b5bf14ec802801cfbc17141c02ceeaccd82
 
 In diesem Lernprogramm wird gezeigt, wie Sie mithilfe von API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, ein [E-Mail-Marketingziel](../../rtcdp/destinations/email-marketing-destinations.md)erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten an Ihr neu erstelltes Ziel aktivieren können.
 
-In diesem Lernprogramm wird das Adobe Campaign-Ziel in allen Beispielen verwendet, aber die Schritte sind für alle E-Mail-Marketingziele identisch.
+In diesem Lernprogramm wird in allen Beispielen das Adobe Campaign-Ziel verwendet, aber die Schritte sind für alle E-Mail-Marketingziele identisch.
 
 ![Übersicht - Schritte zum Erstellen eines Ziels und Aktivieren von Segmenten](../images/destinations/flow-api-destinations-steps-overview.png)
 
@@ -34,7 +37,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie zur Aktiv
 Um die Schritte in diesem Lernprogramm abzuschließen, sollten Sie die folgenden Anmeldeinformationen entsprechend der Art der Ziele, mit denen Sie Segmente verbinden und aktivieren, bereitstellen.
 
 * Für Amazon S3-Verbindungen zu E-Mail-Marketingplattformen: `accessId`, `secretKey`
-* Für SFTP-Verbindungen zu E-Mail-Marketingplattformen: `domain`, `port`, `username`oder `password` `ssh key` (je nach Verbindungsmethode zum FTP-Speicherort)
+* Für SFTP-Verbindungen zu E-Mail-Marketingplattformen: `domain`, `port`, `username``password` oder `ssh key` (je nach Verbindungsmethode zum FTP-Speicherort)
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -514,7 +517,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Verwenden Sie den Fluss für das E-Mail-Marketingziel, mit dem Sie eine Verbindung herstellen möchten. Um die Flussspezifikation abzurufen, führen Sie einen GET-Vorgang am `flowspecs` Endpunkt durch. Weitere Informationen finden Sie in der Swagger-Dokumentation: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Suchen `upsTo` und kopieren Sie in der Antwort die entsprechende ID des E-Mail-Marketingziels, mit dem Sie eine Verbindung herstellen möchten. Suchen Sie beispielsweise für Adobe Campaign nach dem Parameter `upsToCampaign` und kopieren Sie ihn `id` .
+* `{FLOW_SPEC_ID}`: Verwenden Sie den Fluss für das E-Mail-Marketingziel, mit dem Sie eine Verbindung herstellen möchten. Um die Flussspezifikation abzurufen, führen Sie einen GET-Vorgang am `flowspecs` Endpunkt durch. Weitere Informationen finden Sie in der Swagger-Dokumentation: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Suchen `upsTo` und kopieren Sie in der Antwort die entsprechende ID des E-Mail-Marketingziels, mit dem Sie eine Verbindung herstellen möchten. Suchen Sie zum Adobe Campaign nach dem `upsToCampaign` Parameter `id` und kopieren Sie ihn.
 * `{SOURCE_CONNECTION_ID}`: Verwenden Sie die Quell-Verbindungs-ID, die Sie im Schritt [Verbindung zu Ihrer Experience Platform](#connect-to-your-experience-platform-data)herstellen erhalten haben.
 * `{TARGET_CONNECTION_ID}`: Verwenden Sie die Zielgruppe-Verbindungs-ID, die Sie im Schritt [Verbinden mit E-Mail-Marketingziel](#connect-to-email-marketing-destination)erhalten haben.
 
