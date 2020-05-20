@@ -5,6 +5,9 @@ title: Erfassen von Zahlungsdaten über Quell-Connectors und APIs
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+workflow-type: tm+mt
+source-wordcount: '1499'
+ht-degree: 2%
 
 ---
 
@@ -445,7 +448,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für die Übertragung von Daten aus Ihrer Zahlungsanwendung an die Plattform verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
+Eine erfolgreiche Antwort gibt die Details der Datenaflow-Spezifikation zurück, die für die Übertragung von Daten aus Ihrer Zahlungsanwendung an die Plattform verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -576,7 +579,7 @@ Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstelle
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 **API-Format**
 
