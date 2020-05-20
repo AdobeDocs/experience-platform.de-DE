@@ -5,6 +5,9 @@ title: Protokolldaten über Quellschnittstellen und APIs erfassen
 topic: overview
 translation-type: tm+mt
 source-git-commit: a5c4c78fe12141e7292fbb94fc37465319ba2bc8
+workflow-type: tm+mt
+source-wordcount: '1467'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +20,7 @@ In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Proto
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert den Zugriff auf ein Protokollsystem über eine gültige Basisverbindung und Informationen über die Datei, die Sie in Platform einbringen möchten, einschließlich Pfad und Struktur der Tabelle. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung von Protokollsystemen mithilfe der Flow Service API](../explore/protocols.md) , bevor Sie dieses Lernprogramm durchführen.
+Dieses Lernprogramm erfordert den Zugriff auf ein Protokollsystem über eine gültige Basisverbindung und Informationen über die Datei, die Sie in Platform einbringen möchten, einschließlich Pfad und Struktur der Tabelle. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zum [Erforschen von Protokollsystemen mithilfe der Flow Service API](../explore/protocols.md) , bevor Sie dieses Lernprogramm durchführen.
 
 * [Erlebnis-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Zusammensetzung](../../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
@@ -34,7 +37,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
