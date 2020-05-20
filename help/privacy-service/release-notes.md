@@ -5,6 +5,9 @@ title: Versionshinweise zum Datenschutzdienst
 topic: release notes
 translation-type: tm+mt
 source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
+workflow-type: tm+mt
+source-wordcount: '533'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
 
 Dieses Dokument enthält Informationen zu neuen Funktionen des Adobe Experience Platform Privacy Service sowie zu Verbesserungen und wichtigen Fehlerkorrekturen.
 
-## 8. April 2020
+## 8. April 2020
 
 ### Neue Funktionen
 
@@ -32,7 +35,7 @@ Dieses Dokument enthält Informationen zu neuen Funktionen des Adobe Experience 
 | Umbenennung des Datenschutzdienstes | Der zuvor genannte &quot;GDPR-Dienst&quot;wurde in den Datenschutzdienst umbenannt, da der Dienst zunehmend andere Vorschriften zusätzlich zum GDPR unterstützt. |
 | Neue API-Endpunkte | Der Basispfad für die Datenschutzdienst-API wurde von `/data/privacy/gdpr` auf `/data/core/privacy/jobs` |
 | Neue erforderliche `regulation` Eigenschaft | Bei der Erstellung neuer Aufträge in der Datenschutzdienst-API muss eine `regulation` Eigenschaft in der Anforderungs-Nutzlast angegeben werden, unter welcher Regel der Auftrag verfolgt werden soll. Die zulässigen Werte sind `gdpr` und `ccpa`. Weitere Informationen finden Sie im Dokument zu [Datenschutzaufträgen](api/privacy-jobs.md) im Entwicklerhandbuch für den Datenschutzdienst. |
-| Unterstützung der Adobe Primetime-Authentifizierung | Der Datenschutzdienst akzeptiert jetzt Zugriff-/Löschanforderungen aus der Adobe Primetime-Authentifizierung, wobei `primetimeAuthentication` als Produktwert verwendet wird. Weitere Informationen finden Sie in der Dokumentation zur [Primetime-Authentifizierung](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) . |
+| Unterstützung der Adobe Primetime-Authentifizierung | Der Datenschutzdienst akzeptiert jetzt Zugriff-/Löschanforderungen aus der Adobe Primetime-Authentifizierung, wobei `primetimeAuthentication` als Produktwert verwendet wird. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### Verbesserungen
 
