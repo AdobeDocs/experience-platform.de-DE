@@ -5,6 +5,9 @@ description: Analytics-Ziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site
 seo-description: Analytics-Ziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Audience zu verstehen. Diese Plattformen bieten einzigartige Einblicke in die Interaktion und Konversion Ihrer wertvollsten Besucher.
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 5%
 
 ---
 
