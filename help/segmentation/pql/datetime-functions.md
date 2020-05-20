@@ -5,6 +5,9 @@ title: Datums- und Uhrzeitfunktionen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 4%
 
 ---
 
@@ -140,8 +143,8 @@ Die `occurs` Funktion kann in einem der folgenden Formate geschrieben werden:
 | --------- | ----------- |
 | `{COMPARISON}` | Ein Vergleichsoperator. Kann eine der folgenden Operatoren sein: `>`, `>=`, `<`, `<=`, `=`, `!=`. Weitere Informationen zu den Vergleichsfunktionen finden Sie im Dokument [Vergleichsfunktionen](./comparison-functions.md). |
 | `{INTEGER}` | Eine nicht negative Ganzzahl. |
-| `{TIME_UNIT}` | Eine Zeiteinheit. Kann eines der folgenden Wörter sein: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`,, `centuries``millennium``millennia`. |
-| `{DIRECTION}` | Eine Präposition, die beschreibt, wann das Datum mit dem Datum zu vergleichen ist. Kann eines der folgenden Wörter sein: `before`, `after``from`. |
+| `{TIME_UNIT}` | Eine Zeiteinheit. Kann eines der folgenden Wörter sein: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`,. |
+| `{DIRECTION}` | Eine Präposition, die beschreibt, wann das Datum mit dem Datum zu vergleichen ist. Kann eines der folgenden Wörter sein: `before`, `after`, `from`. |
 | `{TIME}` | Kann ein Zeitstempelliteral (`today`, `now`, `yesterday`, `tomorrow`), eine relative Zeiteinheit (eine von `this`, `last`oder `next` gefolgt von einer Zeiteinheit) oder ein Zeitstempelattribut sein. |
 
 >[!NOTE] Die Verwendung des Wortes `on` ist optional. Es ist da, um die Lesbarkeit für einige Kombinationen zu verbessern, wie `timestamp occurs on date(2019,12,31)`.
