@@ -5,6 +5,9 @@ title: Kundensegmente mit prognostizierten Werten erstellen
 topic: Create a segment
 translation-type: tm+mt
 source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 52%
 
 ---
 
@@ -15,21 +18,21 @@ Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profi
 
 >[!IMPORTANT] Um diese Methode verwenden zu können, muss Echtzeit-Kundendaten-Profil für den Datensatz aktiviert werden.
 
-In the Platform UI, click **[!UICONTROL Segments]** in the left navigation, and then click **[!UICONTROL Create segment]**.
+Klicken Sie in der Benutzeroberfläche von Platform im linken Navigationsbereich auf **[!UICONTROL Segmente]** und dann auf **[!UICONTROL Segment erstellen]**.
 
 ![](../images/user-guide/segments.png)
 
-*Segment Builder* wird angezeigt. From the left *Fields* column and under the *Attributes* tab, click the folder named **[!UICONTROL XDM Individual Profile]** and then click the folder with the namespace of your organization. Der Ordner **[!UICONTROL Customer AI]** enthält die Ergebnisse von Prognoseausführungen und wird nach der Instanz benannt, zu der die Werte gehören. Klicken Sie auf einen Instanzordner, um auf die Ergebnisse der gewünschten Instanz zuzugreifen.
+*Segment Builder* wird angezeigt. Klicken Sie in der linken Spalte *Felder* und auf der Registerkarte *Attribute* auf den Ordner **[!UICONTROL Individuelles XDM-Profil]** und dann auf den Ordner mit dem Namespace Ihres Unternehmens. Der Ordner **[!UICONTROL Customer AI]** enthält die Ergebnisse von Prognoseausführungen und wird nach der Instanz benannt, zu der die Werte gehören. Klicken Sie auf einen Instanzordner, um auf die Ergebnisse der gewünschten Instanz zuzugreifen.
 
 ![](../images/user-guide/results.png)
 
-Located in the center of Segment Builder, drag and drop the **[!UICONTROL Score]** attribute onto the *rule builder canvas* to define a rule.
+Ziehen Sie das Attribut **[!UICONTROL Wert]**, das sich in der Mitte von Segment Builder befindet, in die *Arbeitsfläche zum Erstellen von Regeln*, um eine Regel zu definieren.
 
 Geben Sie in der rechten Spalte *Segmenteigenschaften* einen Namen für das Segment ein.
 
 ![](../images/user-guide/properties.png)
 
-Klicken Sie über der Spalte &quot; *Felder* links&quot;auf das **Zahnradsymbol** und wählen Sie aus der Dropdownliste eine Richtlinie *für die* Zusammenführung aus. Klicken Sie auf **[!UICONTROL Save]** , um das Segment zu erstellen.
+Klicken Sie über der Spalte &quot; *Felder* links&quot;auf das **Zahnradsymbol** und wählen Sie aus der Dropdownliste eine Richtlinie *für die* Zusammenführung aus. Click **[!UICONTROL Save]** to create the segment.
 
 ![](../images/user-guide/merge_policy.png)
 
