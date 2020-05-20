@@ -5,6 +5,9 @@ description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der 
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
 source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+workflow-type: tm+mt
+source-wordcount: '920'
+ht-degree: 100%
 
 ---
 
@@ -29,9 +32,9 @@ Genauere Informationen zum Arbeiten mit Datennutzungsbezeichnungen finden Sie im
 
 ## Beschränkungen für Ziele festlegen
 
-Sie können Datenverwendungsbeschränkungen für ein Ziel festlegen, indem Sie Anwendungsfälle für das Marketing für dieses Ziel definieren. Wenn Sie Anwendungsfälle für Ziele definieren, können Sie prüfen, ob Verstöße gegen die Nutzungsrichtlinien vorliegen, und sicherstellen, dass alle an dieses Ziel gesendeten Profil oder Segmente mit den Datenverwaltungsregeln kompatibel sind.
+Sie können Datennutzungsbeschränkungen für ein Ziel festlegen, indem Sie Anwendungsfälle für das Marketing für dieses Ziel definieren. Wenn Sie Anwendungsfälle für Ziele definieren, können Sie prüfen, ob Verstöße gegen die Nutzungsrichtlinien vorliegen, und sicherstellen, dass alle an dieses Ziel gesendeten Profile oder Segmente mit den Data Governance-Regeln kompatibel sind.
 
-Anwendungsfälle für Marketing können während der _Setup_ -Phase des Arbeitsablaufs &quot;Ziel _bearbeiten_ &quot;definiert werden. Weitere Informationen finden Sie in der Zieldokumentation.
+Anwendungsfälle für das Marketing können während der _Setup_-Phase des Workflows _Ziel bearbeiten_ definiert werden. Weitere Informationen finden Sie in der Zieldokumentation.
 
 
 ## Richtlinien zur Datennutzung verwalten {#policies}
@@ -40,46 +43,46 @@ Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen k�
 
 Adobe Experience Platform bietet verschiedene **zentrale Richtlinien** für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können angezeigt werden, indem Sie eine Anfrage an die [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) richten, wie im Abschnitt „Alle Richtlinien auflisten“ des [Policy Service-Entwicklerhandbuchs](../../data-governance/policies/overview.md) dargestellt. Alternativ können Sie eigene **benutzerdefinierte Richtlinien** erstellen, um benutzerdefinierte Nutzungsbeschränkungen zu modellieren (wie im Abschnitt „Richtlinie erstellen“ des Entwicklerhandbuchs beschrieben).
 
-## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
+## (Beta) Einhaltung von Datennutzungsrichtlinien durchsetzen {#enforce-data-usage-compliance}
 
 >[!IMPORTANT]
->Diese Funktion befindet sich derzeit in der Betaphase und steht nicht allen Benutzern zur Verfügung. Sie kann auf Anfrage aktiviert werden. Dokumentation und Funktionalität können sich ändern.
+>Diese Funktion befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Sie kann auf Anfrage aktiviert werden. Dokumentation und Funktionalität können sich ändern.
 
-Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Segmenten der Audience in CDP in Echtzeit erzwingt die Datenverwaltung automatisch Nutzungsrichtlinien, falls Verstöße auftreten sollten.
+Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Zielgruppensegmenten in der Echtzeit-CDP erzwingt Data Governance automatisch Nutzungsrichtlinien, falls Verstöße auftreten sollten.
 
-Das folgende Diagramm zeigt, wie die Richtliniendurchsetzung in den Datenfluss der SegmentAktivierung integriert wird:
+Das folgende Diagramm zeigt, wie die Richtliniendurchsetzung in den Datenfluss der Segmentaktivierung integriert wird:
 
 ![](assets/enforcement-flow.png)
 
-Wenn ein Segment zum ersten Mal aktiviert wird, prüft der DULE-Policy-Dienst anhand der folgenden Faktoren, ob Richtlinienverletzungen vorliegen:
+Wenn ein Segment zum ersten Mal aktiviert wird, prüft der DULE Policy Service anhand der folgenden Faktoren, ob Richtlinienverletzungen vorliegen:
 
-* Die Datenverwendungsbeschriftungen, die auf Felder und Datensätze innerhalb des zu aktivierenden Segments angewendet werden.
-* Der Vermarktungszweck der Bestimmung.
+* Die Datennutzungsbezeichnungen, die auf Felder und Datensätze innerhalb des zu aktivierenden Segments angewendet werden.
+* Marketing-Zweck des Ziels.
 
-### Richtlinienverletzungsmeldungen {#enforcement}
+### Meldungen zu Richtlinienverstößen {#enforcement}
 
-Wenn eine Richtlinienverletzung beim Versuch auftritt, ein Segment zu aktivieren (oder ein bereits aktiviertes Segment [zu](#policy-enforcement-for-activated-segments)bearbeiten), wird die Aktion verhindert und ein Popup angezeigt, das anzeigt, dass eine oder mehrere Richtlinien verletzt wurden. Wählen Sie eine Richtlinienverletzung in der linken Spalte des Popup aus, um Details zu dieser Verletzung anzuzeigen.
+Wenn ein Richtlinienverstoß beim Versuch auftritt, ein Segment zu aktivieren (oder [ein bereits aktiviertes Segment zu bearbeiten](#policy-enforcement-for-activated-segments)), wird die Aktion verhindert und in einem Popup angezeigt, dass gegen eine oder mehrere Richtlinien verstoßen wurden. Wählen Sie einen Richtlinienverstoß in der linken Spalte des Popups aus, um Details zu diesem Verstoß anzuzeigen.
 
 ![](assets/violation-popover.png)
 
-Die Registerkarte &quot; *Details* &quot;des Popup-Fensters zeigt die Aktion an, die die Verletzung ausgelöst hat, den Grund für die Verletzung und enthält Vorschläge, wie das Problem möglicherweise gelöst werden kann.
+Die Registerkarte *Details* des Popup-Fensters zeigt die Aktion an, die den Verstoß ausgelöst hat, den Grund für den Verstoß und Vorschläge, wie das Problem möglicherweise gelöst werden kann.
 
-Klicken Sie auf **Datenlineare** , um die Ziele, Segmente, Zusammenführungsrichtlinien oder Datensätze zu verfolgen, deren Datenbeschriftungen die Verletzung ausgelöst haben.
+Klicken Sie auf **Datenherkunft**, um die Ziele, Segmente, Zusammenführungsrichtlinien oder Datensätze zu verfolgen, deren Datenbezeichnungen den Verstoß ausgelöst haben.
 
 ![](assets/data-lineage.png)
 
-Nachdem eine Verletzung ausgelöst wurde, wird die Schaltfläche **Speichern** für die Aktivierung deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden, um den Datenverwendungsrichtlinien zu entsprechen.
+Nachdem ein Verstoß ausgelöst wurde, wird die Schaltfläche **Speichern** für die Aktivierung deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden, um den Datennutzungsrichtlinien zu entsprechen.
 
 ### Richtliniendurchsetzung für aktivierte Segmente {#policy-enforcement-for-activated-segments}
 
-Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einer Richtlinienverletzung führen würden. Aufgrund der zahlreichen Komponenten, die beim Aktivieren von Segmenten zu Zielen beteiligt sind, kann eine der folgenden Aktionen möglicherweise eine Verletzung auslösen:
+Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einem Richtlinienverstoß führen würden. Aufgrund der zahlreichen Komponenten, die beim Aktivieren von Segmenten zu Zielen beteiligt sind, kann eine der folgenden Aktionen möglicherweise einen Verstoß auslösen:
 
-* Aktualisieren von Beschriftungen für die Datenverwendung
+* Aktualisieren von Datennutzungsbezeichnungen
 * Ändern von Datensätzen für ein Segment
-* Segmentvorhersagen ändern
-* Ändern der Zielkonfigurationen
+* Ändern von Segmenteigenschaften
+* Ändern von Zielkonfigurationen
 
-Wenn eine der oben genannten Aktionen eine Verletzung auslöst, wird verhindert, dass diese Aktion gespeichert wird und eine Richtlinienverletzungsmeldung angezeigt wird. Dadurch wird sichergestellt, dass Ihre aktivierten Segmente beim Ändern der Datenverwendungsrichtlinien weiterhin eingehalten werden.
+Wenn eine der oben genannten Aktionen einen Verstoß auslöst, wird verhindert, dass diese Aktion gespeichert wird, und eine Richtlinienverstoßmeldung wird angezeigt. Dadurch wird sichergestellt, dass Ihre aktivierten Segmente nach dem Ändern weiterhin den Datennutzungsrichtlinien entsprechen.
 
 ## Nächste Schritte
 
