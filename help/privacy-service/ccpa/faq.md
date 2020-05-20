@@ -5,6 +5,9 @@ title: Häufig gestellte Fragen zum CCPA
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
