@@ -5,6 +5,9 @@ title: Sandbox löschen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
