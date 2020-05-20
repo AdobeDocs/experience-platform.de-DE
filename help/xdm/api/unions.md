@@ -5,6 +5,9 @@ title: Vereinigungen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+workflow-type: tm+mt
+source-wordcount: '806'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Die Schema-Registrierung enthält automatisch drei Mixins innerhalb des Vereinig
 
 Das Schema einer Vereinigung `identityMap` ist eine Darstellung der bekannten Identitäten innerhalb der zugehörigen DatensatzSchema der Vereinigung. Die Identitätszuordnung trennt Identitäten in verschiedene Arrays, die nach Namensraum geordnet sind. Jede aufgelistete Identität ist selbst ein Objekt, das einen eindeutigen `id` Wert enthält.
 
-Weitere Informationen finden Sie in der Dokumentation [zum](../../identity-service/home.md) Identitätsdienst.
+See the [Identity Service documentation](../../identity-service/home.md) for more information.
 
 ### Zeitreihen-Ereignis
 
