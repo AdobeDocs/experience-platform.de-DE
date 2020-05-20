@@ -5,6 +5,9 @@ title: Google Ads Connector
 topic: overview
 translation-type: tm+mt
 source-git-commit: 1afa5e6acd5e4fd983505df11f4a76f6835ac30f
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 0%
 
 ---
 
