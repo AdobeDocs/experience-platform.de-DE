@@ -5,6 +5,9 @@ title: Schnellstartanleitung zum Adobe Experience Platform Abfrage Service
 topic: quickstart
 translation-type: tm+mt
 source-git-commit: 659955e60531abd505337f1b266b147ce08ddad9
+workflow-type: tm+mt
+source-wordcount: '128'
+ht-degree: 0%
 
 ---
 
