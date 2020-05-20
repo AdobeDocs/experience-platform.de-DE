@@ -5,6 +5,9 @@ title: Ressource ersetzen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
