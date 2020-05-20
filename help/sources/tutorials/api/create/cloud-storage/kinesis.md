@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Amazon Kinesis-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Damit der Flow-Dienst eine Verbindung zu Ihrem Amazon Kinesis-Konto herstellen k
 | ---------- | ----------- |
 | `accessKeyId` | Die Zugriffsschlüssel-ID für Ihr Kinesis-Konto. |
 | `secretKey` | Der geheime Zugriffsschlüssel für Ihr Kinesis-Konto. |
+| `region` |  | Die Region für Ihr Kinesis-Konto. |
 | `connectionSpec.id` | Die Spezifikations-ID der Kinesis-Verbindung: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-Weitere Informationen zu diesen Werten finden Sie in [diesem EventHub-Dokument](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Weitere Informationen zu diesen Werten finden Sie in [diesem Kinesis Dokument](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -103,6 +104,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | Die Zugriffsschlüssel-ID für Ihr Kinesis-Konto. |
 | `auth.params.secretKey` | Der geheime Zugriffsschlüssel für Ihr Kinesis-Konto. |
+| `auth.params.region` | Die Region für Ihr Kinesis-Konto. |
 | `connectionSpec.id` | Die Spezifikations-ID der Kinesis-Verbindung: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Antwort**
