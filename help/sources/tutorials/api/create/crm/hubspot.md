@@ -5,6 +5,9 @@ title: Erstellen eines HubSpot-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
 source-git-commit: 7aa6f85308bacb275bd6f3234d03530a621c1c02
+workflow-type: tm+mt
+source-wordcount: '689'
+ht-degree: 1%
 
 ---
 
