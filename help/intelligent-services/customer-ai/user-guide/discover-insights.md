@@ -5,6 +5,9 @@ title: Einblicke in die Kundentechnik
 topic: Discovering insights
 translation-type: tm+mt
 source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+workflow-type: tm+mt
+source-wordcount: '1062'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +24,7 @@ Um Einblicke in die Kundenaktivität zu erhalten, benötigen Sie eine Dienstinst
 
 ## Übersicht über die Dienstinstanzen
 
-Klicken Sie in der Benutzeroberfläche von Adobe Experience Platform auf **[!UICONTROL Services]** die linke Navigation. Der *Dienste* -Browser wird angezeigt und zeigt verfügbare intelligente Dienste an. In the container for Customer AI, click **[!UICONTROL Open]**.
+In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. Der *Dienste* -Browser wird angezeigt und zeigt verfügbare intelligente Dienste an. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
 
 ![Zugriff auf Ihre Instanz](../images/insights/navigate-to-service.png)
 
@@ -44,7 +47,7 @@ Als Nächstes wird die Einblicke-Seite für diese Dienstinstanz angezeigt, auf d
 
 Es gibt zwei Möglichkeiten, Dienstinstanzdetails Ansicht: Die erste stammt aus dem Dashboard und die zweite aus der Dienstinstanz.
 
-Klicken Sie zur Ansicht von Details innerhalb des Dashboards auf einen Dienstinstanz-Container, um den Hyperlink zu vermeiden, der mit dem Namen verknüpft ist. Dadurch wird eine rechte Leiste geöffnet, die zusätzliche Details wie Beschreibung, Bewertungsfrequenz, Prognoseziel und förderfähige Bevölkerung enthält. Darüber hinaus können Sie die Instanz bearbeiten und löschen, indem Sie auf klicken **[!UICONTROL Edit]** oder **[!UICONTROL Delete]**.
+Klicken Sie zur Ansicht von Details innerhalb des Dashboards auf einen Dienstinstanz-Container, um den Hyperlink zu vermeiden, der mit dem Namen verknüpft ist. Dadurch wird eine rechte Leiste geöffnet, die zusätzliche Details wie Beschreibung, Bewertungsfrequenz, Prognoseziel und förderfähige Bevölkerung enthält. Darüber hinaus können Sie die Instanz bearbeiten und löschen, indem Sie auf **[!UICONTROL Bearbeiten]** oder **[!UICONTROL Löschen]** klicken.
 
 ![rechte Schiene](../images/insights/success-run.png)
 
@@ -52,7 +55,7 @@ Klicken Sie zur Ansicht von Details innerhalb des Dashboards auf einen Dienstins
 
 ![fehlgeschlagene Ausführungsmeldung](../images/insights/failed-run.png)
 
-Die zweite Möglichkeit zur Ansicht zusätzlicher Details für eine Dienstinstanz befindet sich auf der Einblicke-Seite. Sie können **[!UICONTROL Show more]** oben rechts klicken, um eine Dropdown-Liste zu füllen. Details werden aufgelistet, wie die Score-Definition, der Erstellungszeitpunkt und der Tendenztyp. Weitere Informationen zu den aufgelisteten Eigenschaften finden Sie unter [Konfigurieren einer Kunden-AI-Instanz](./configure.md).
+Die zweite Möglichkeit zur Ansicht zusätzlicher Details für eine Dienstinstanz befindet sich auf der Einblicke-Seite. Sie können oben rechts auf Mehr **** anzeigen klicken, um eine Dropdown-Liste auszufüllen. Details werden aufgelistet, wie die Score-Definition, der Erstellungszeitpunkt und der Tendenztyp. Weitere Informationen zu den aufgelisteten Eigenschaften finden Sie unter [Konfigurieren einer Kunden-AI-Instanz](./configure.md).
 
 ![Mehr anzeigen](../images/insights/landing-show-more.png)
 
@@ -60,21 +63,21 @@ Die zweite Möglichkeit zur Ansicht zusätzlicher Details für eine Dienstinstan
 
 ### Bearbeiten einer Instanz
 
-Um eine Instanz zu bearbeiten, klicken Sie **[!UICONTROL Edit]** in der Navigation oben rechts.
+Um eine Instanz zu bearbeiten, klicken Sie in der Navigation oben rechts auf **[!UICONTROL Bearbeiten]** .
 
 ![Klicken Sie auf die Schaltfläche &quot;Bearbeiten&quot;](../images/insights/edit-button.png)
 
-Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie die *Beschreibung* und die *Bewertungshäufigkeit* der Instanz bearbeiten können. Um Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen, klicken Sie unten rechts **[!UICONTROL Edit]** auf .
+Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie die *Beschreibung* und die *Bewertungshäufigkeit* der Instanz bearbeiten können. Um die Änderungen zu bestätigen und das Dialogfeld zu schließen, klicken Sie unten rechts auf **[!UICONTROL Bearbeiten]** .
 
 ![Bearbeiten-Popup](../images/insights/edit-instance.png)
 
 ### Weitere Aktionen
 
-Die **[!UICONTROL More actions]** Schaltfläche befindet sich in der oberen rechten Navigation neben **[!UICONTROL Edit]**. Durch Klicken **[!UICONTROL More actions]** wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
+Die Schaltfläche &quot; **[!UICONTROL Mehr Aktionen]** &quot;befindet sich in der oberen rechten Navigation neben **[!UICONTROL Bearbeiten]**. Wenn Sie auf **[!UICONTROL Mehr Aktionen]** klicken, wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
 
-- **[!UICONTROL Delete]**: Löscht die Instanz.
-- **[!UICONTROL Access scores]**: Durch Klicken auf *Zugriffsergebnisse* wird ein Dialogfeld geöffnet, das einen Link zu den [Download-Ergebnissen für das Tutorial zur Kundenwerbung](./download-scores.md) enthält. Außerdem enthält das Dialogfeld die Dataset-ID, die zum Aufrufen von API-Aufrufen erforderlich ist.
-- **[!UICONTROL View run history]**: Ein Dialogfeld mit einer Liste aller mit der Dienstinstanz verknüpften Bewertungsläufe wird angezeigt.
+- **[!UICONTROL Löschen]**: Löscht die Instanz.
+- **[!UICONTROL Zugangsdaten]**: Durch Klicken auf *Zugriffsergebnisse* wird ein Dialogfeld geöffnet, das einen Link zu den [Download-Ergebnissen für das Tutorial zur Kundenwerbung](./download-scores.md) enthält. Außerdem enthält das Dialogfeld die Dataset-ID, die zum Aufrufen von API-Aufrufen erforderlich ist.
+- **[!UICONTROL Ansicht-Ausführungsverlauf]**: Ein Dialogfeld mit einer Liste aller mit der Dienstinstanz verknüpften Bewertungsläufe wird angezeigt.
 
 ![mehr Aktionen](../images/insights/more-actions.png)
 
@@ -100,22 +103,22 @@ Für jeden Ergebnisbehälter wird eine Karte generiert, die die 10 wichtigsten E
 
 ### Segment erstellen
 
-Durch Klicken auf die **[!UICONTROL Create Segment]** Schaltfläche in einer der Behälter für niedrige, mittlere und hohe Tendenz werden Sie zum Segmentaufbau weitergeleitet.
+Durch Klicken auf die Schaltfläche Segment **** erstellen in einer der Behälter für niedrige, mittlere und hohe Tendenz werden Sie zum Segmentaufbau weitergeleitet.
 
 >[!NOTE]
->Die **[!UICONTROL Create Segment]** Schaltfläche steht nur zur Verfügung, wenn das Kundenkonto in Echtzeit für den Datensatz aktiviert ist. Weitere Informationen zur Aktivierung von Echtzeit-Kundendaten finden Sie in der Übersicht über das [Echtzeit-Profil](../../../rtcdp/overview.md).
+>Die Schaltfläche &quot;Segment **** erstellen&quot;ist nur verfügbar, wenn für den Datensatz das Kundenkonto in Echtzeit aktiviert ist. Weitere Informationen zur Aktivierung von Echtzeit-Kundendaten finden Sie in der Übersicht über das [Echtzeit-Profil](../../../rtcdp/overview.md).
 
 ![Klicken Sie auf Segment erstellen](../images/insights/influential-factors-create-segment.png)
 
 ![Segment erstellen](../images/insights/create-segment.png)
 
-Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie **[!UICONTROL Create Segment]** von der Seite &quot;Einblicke&quot;auswählen, fügt die Kundenunterstützung dem Segment automatisch die ausgewählten Behälterinformationen hinzu. Füllen Sie zum Abschluss der Segmenterstellung einfach die Container *Name* und *Beschreibung* in der rechten Leiste der Segment Builder-Benutzeroberfläche aus. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, klicken Sie oben rechts **[!UICONTROL Save]** auf .
+Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;Einblicke&quot;die Option Segment **** erstellen auswählen, fügt die Kunden-API dem Segment automatisch die ausgewählten Behälterinformationen hinzu. Füllen Sie zum Abschluss der Segmenterstellung einfach die Container *Name* und *Beschreibung* in der rechten Leiste der Segment Builder-Benutzeroberfläche aus. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, klicken Sie oben rechts auf **[!UICONTROL Speichern]** .
 
 >!![NOTE] Da die Tendenzwerte in das jeweilige Profil geschrieben werden, sind sie wie alle anderen Segmentattribute im Segmentaufbau verfügbar. Wenn Sie zum Segmentaufbau navigieren, um neue Segmente zu erstellen, können Sie alle verschiedenen Tendenzwerte unter Ihrer Namensraum Customer AI sehen.
 
 ![Segmentfüllung](../images/insights/segment-saving.png)
 
-Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie auf **[!UICONTROL Segments]** der linken Navigationsleiste. Die Seite &quot; *Durchsuchen* &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
+Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Die Seite &quot; *Durchsuchen* &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
 
 ![Alle Segmente](../images/insights/Segments-dashboard.png)
 
