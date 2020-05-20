@@ -5,6 +5,9 @@ title: Ereignisse zur Datenerfassung abonnieren
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+workflow-type: tm+mt
+source-wordcount: '768'
+ht-degree: 2%
 
 ---
 
