@@ -5,6 +5,9 @@ title: Ressource aktualisieren
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 2%
 
 ---
 
