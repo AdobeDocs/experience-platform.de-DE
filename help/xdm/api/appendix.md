@@ -5,6 +5,9 @@ title: Schema Registry Developer-Anhang
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+workflow-type: tm+mt
+source-wordcount: '1296'
+ht-degree: 4%
 
 ---
 
@@ -56,9 +59,9 @@ Das Open-Source-Projekt steht Ihnen zur Verfügung, aber wenn es darum geht, mit
 
 ## Definieren von XDM-Feldtypen in der API {#field-types}
 
-XDM-Schema werden mithilfe von JSON-Schema-Standards und einfachen Feldtypen definiert, mit zusätzlichen Einschränkungen für Feldnamen, die von Experience Platform erzwungen werden. Mit XDM können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. Die XDM-Feldtypen werden durch das Attribut auf Feldebene verfügbar gemacht, `meta:xdmType`.
+XDM-Schema werden mithilfe von JSON-Schema-Standards und einfachen Feldtypen definiert, mit zusätzlichen Einschränkungen für Feldnamen, die von Experience Platform erzwungen werden. Mit XDM können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. Die XDM-Feldtypen werden durch das Attribut auf Feldebene offen gelegt, `meta:xdmType`.
 
->[!NOTE] Es `meta:xdmType` handelt sich um einen systemgenerierten Wert. Daher müssen Sie diese Eigenschaft nicht zum JSON für Ihr Feld hinzufügen. Es empfiehlt sich, JSON-Schema-Typen (z. B. String und Ganzzahl) mit den entsprechenden Min/Max-Einschränkungen zu verwenden, wie in der folgenden Tabelle definiert.
+>[!NOTE] `meta:xdmType` ist ein systemgenerierter Wert. Daher müssen Sie diese Eigenschaft nicht zum JSON für Ihr Feld hinzufügen. Es empfiehlt sich, JSON-Schema-Typen (z. B. String und Ganzzahl) mit den entsprechenden Min/Max-Einschränkungen zu verwenden, wie in der folgenden Tabelle definiert.
 
 In der folgenden Tabelle sind die entsprechenden Formatierungen zur Definition von skalaren Feldtypen und spezifischeren Feldtypen mit optionalen Eigenschaften aufgeführt. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
 
@@ -241,12 +244,12 @@ Die folgende Tabelle beschreibt die Zuordnung zwischen &quot;meta:xdmType&quot;u
 | XDM-Typ<br>(meta:xdmType) | JSON<br>(JSON-Schema) | Parquet<br>(type/annotation) | Spark SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protokoll 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Zeichenfolge | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Zeichenfolge | System.String | Zeichenfolge | Zeichenfolge | Zeichenfolge | Zeichenfolge |
-| number | type:number | DUBLETTE | DoubleType | java.lang.Dublette | Doppelt | System.Dublette | Zahl | Dublette | Doppelt | Dublette |
+| number | type:number | DUBLETTE | DoubleType | java.lang.Double | Doppelt | System.Double | Zahl | Dublette | Doppelt | Dublette |
 | long | type:<br>integerMaximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.Long | lang | System.Int64 | Zahl | long | Ganzzahl | int64 |
 | int | type:<br>integerMaximum:2^31<br>minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Zahl | int | Ganzzahl | int32 |
 | short | type:<br>integerMaximum:2^15<br>minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Short | System.Int16 | Zahl | int | Ganzzahl | int32 |
 | byte | type:<br>integerMaximum:2^7<br>minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Zahl | int | Ganzzahl | int32 |
-| Boolescher Wert | Typ:boolean | BOOLEAN | BooleanType | java.lang.Boolean | Boolesch  | System.Boolean | Boolesch  | bool | Ganzzahl | Ganzzahl | bool |
+| Boolescher Wert | Typ:boolean | BOOLEAN | BooleanType | java.lang.Boolean | Boolesch | System.Boolean | Boolesch | bool | Ganzzahl | Ganzzahl | bool |
 | date | Typ:<br>stringformat:date<br>(RFC 3339, Abschnitt 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | date | Integer<br>(Unix-Millis) | int64<br>(Unix-Millis) |
 | date-time | type:<br>stringformat:date-time<br>(RFC 3339, Abschnitt 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | timestamp | Integer<br>(Unix-Millis) | int64<br>(Unix-Millis) |
 | map | object | MAP-kommentierte Gruppe<br><br>&lt;<span>Schlüssel_Typ</span>> MUSS STRING<br><br>&lt;<span>Wert_Typ</span>> Typ der Map-Wertesein | MapType<br><br>&quot;keyType&quot;MUSS StringType<br><br>&quot;valueType&quot;der Typ der Map-Werte sein. | java.util.Map | Landkarte | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
