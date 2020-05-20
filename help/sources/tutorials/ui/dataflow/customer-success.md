@@ -5,6 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Kunden-Erfolgsstecker in der 
 topic: overview
 translation-type: tm+mt
 source-git-commit: e6784177e517e4071f3b92ade1a66c053669f083
+workflow-type: tm+mt
+source-wordcount: '1128'
+ht-degree: 1%
 
 ---
 
