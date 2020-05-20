@@ -5,6 +5,9 @@ title: Erlebnis-Datenmodell (XDM)-System
 topic: overview
 translation-type: tm+mt
 source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+workflow-type: tm+mt
+source-wordcount: '1744'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Experience Platform verwendet Schema, um die Datenstruktur konsistent und wieder
 
 Bevor Daten in eine Plattform aufgenommen werden können, muss ein Schema zusammengestellt werden, das die Datenstruktur beschreibt und Einschränkungen für den Datentyp bereitstellt, der in den einzelnen Feldern enthalten sein kann. Schema bestehen aus einer Basisklasse und Null oder mehr Mixins.
 
-Weitere Informationen zum Schema-Kompositionsmodell, einschließlich Designprinzipien und Best Practices, finden Sie in den [Grundlagen der Schema-Komposition](schema/composition.md).
+Weitere Informationen zum Schema-Kompositionsmodell, einschließlich Entwurfsprinzipien und Best Practices, finden Sie in den [Grundlagen der Schema-Komposition](schema/composition.md).
 
 ### Schema-Registrierung und Schema-Bibliothek
 
