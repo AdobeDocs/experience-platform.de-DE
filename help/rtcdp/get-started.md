@@ -5,6 +5,9 @@ description: Beispielszenario für die Echtzeit-Kundendatenplattform von Adobe
 seo-description: Beispielszenario für die Echtzeit-Kundendatenplattform von Adobe
 translation-type: tm+mt
 source-git-commit: eb26b9fbe2f4b63ea411ca61735f6e1b5308777c
+workflow-type: tm+mt
+source-wordcount: '2373'
+ht-degree: 100%
 
 ---
 
@@ -78,7 +81,7 @@ Sobald der Kunde klickt, um mehr über die Produkte zu erfahren, werden die ents
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
-Luma kann das Verhalten des Besuchers einem Benutzerprofil in Adobe Experience Platform zuordnen und damit beginnen, sich einen genaueren Überblick über das Verhalten des Kunden zu verschaffen.
+Luma kann das Verhalten des Besuchers einem Nutzerprofil in Adobe Experience Platform zuordnen und damit beginnen, sich einen genaueren Überblick über das Verhalten des Kunden zu verschaffen.
 
 ### Detailliertere Ansicht des Kunden
 
@@ -111,7 +114,7 @@ Dank der Adobe Sensei-basierten Personalisierung in Adobe Target, bei der ihre b
 
 Weiter unten auf der Seite werden Sarah vorgestellte Produkte sowie eine Ablage mit neuen Empfehlungen angezeigt, die auf ihren zuletzt angezeigten Artikeln basieren.
 
-Diese personalisierten Inhalte helfen Sarah dabei, rasch passende Artikel zu finden. Dadurch wird die Konversionsrate verbessert und entsteht ein angenehmeres Kundenerlebnis.
+Diese personalisierten Inhalte helfen Sarah dabei, rasch passende Artikel zu finden. Dadurch wird die Konversionsrate verbessert und ein angenehmeres Kundenerlebnis entsteht.
 
 ### Den Kunden zurückholen
 
@@ -154,7 +157,7 @@ Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog na
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   For example, select **[!UICONTROL Contacts]**. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
+   Wählen Sie beispielsweise **[!UICONTROL Kontakte]**. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
 
    Adobe Experience Platform übernimmt in diesem Verfahren einen Großteil der manuellen Arbeit, indem Standardfelder automatisch dem Experience Data Model (XDM)-Profilschema zugeordnet werden.
 
@@ -171,13 +174,13 @@ Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog na
 
 Damit ist der Vorgang abgeschlossen. Sie haben gerade das Microsoft-CRM als Datenquelle zu Experience Platform hinzugefügt.
 
-### Bezeichnen von erfassten Daten für Verwendungsrichtlinien
+### Bezeichnen von erfassten Daten für Nutzungsrichtlinien
 
-Luma hat viele interne Richtlinien, die die Nutzung bestimmter Arten von erfassten Informationen einschränken und auch rechtliche und datenschutzrechtliche Bedenken bezüglich der Nutzung von Daten berücksichtigen müssen. Mithilfe der Datenverwaltung für die Adobe Experience Platform können vordefinierte Datenverwendungsbeschriftungen auf Datasets (und bestimmte Felder in diesen Datensätzen) angewendet werden, sodass Luma ihre Daten nach bestimmten Verwendungsbeschränkungen kategorisieren kann.
+Luma hat viele interne Richtlinien, die die Nutzung bestimmter Arten von erfassten Informationen einschränken und auch rechtlichen und datenschutzrechtlichen Vorgaben bezüglich der Nutzung von Daten entsprechen müssen. Mit Data Governance in Adobe Experience Platform können vordefinierte Datennutzungsbezeichnungen auf Datensätze (und bestimmte Felder in diesen Datensätzen) angewendet werden, sodass Luma die Daten nach bestimmten Nutzungsbeschränkungen kategorisieren kann.
 
 ![](assets/governance-labels.png)
 
-Sobald die Beschriftungen für die Datenverwendung angewendet wurden, kann Luma dann die Datenverwaltung verwenden, um Datenverwendungsrichtlinien zu erstellen. Datenverwendungsrichtlinien sind Regeln, die beschreiben, welche Arten von Aktionen Sie für Daten ausführen dürfen, die bestimmte Beschriftungen enthalten. Bei dem Versuch, eine Aktion in Echtzeit-CDP durchzuführen, die eine Richtlinienverletzung darstellt, wird die Aktion verhindert und eine Warnung angezeigt, die zeigt, welche Richtlinie verletzt wurde und warum.
+Sobald die Datennutzungsbezeichnungen angewendet wurden, kann Luma dann Data Governance verwenden, um Datennutzungsrichtlinien zu erstellen. Datennutzungsrichtlinien sind Regeln, die beschreiben, welche Arten von Aktionen Sie für Daten ausführen dürfen, die bestimmte Bezeichnungen enthalten. Bei dem Versuch, eine Aktion in der Echtzeit-CDP durchzuführen, die eine Richtlinienverletzung darstellt, wird die Aktion verhindert und eine Warnung angezeigt, die zeigt, welche Richtlinie verletzt wurde und warum.
 
 ## Zusammenführen der Daten für einen bestimmten Kunden
 
@@ -192,7 +195,7 @@ Alle Profilinformationen, die Luma zu Sarah hat, werden angezeigt. Dazu gehören
 | Identitäten | Zeigt die Identitäten an, die in Platform durch Sarahs Interaktionen mit Luma über verschiedene Kanäle und Geräte hinweg miteinander verknüpft wurden. Ihre ECID von der Website wird angezeigt. Zu ihrer Identität gehören auch die ECID ihrer App, ihre E-Mail-ID, eine CRM-ID aus dem kürzlich hinzugefügten Microsoft Dynamics-Datensatz und eine Treue-ID, die vom Luma-Treuesystem an Adobe Experience Platform weitergeleitet wird. |
 | Ereignisse | Zeigt alle Interaktionsdaten von Sarah mit der Marke Luma an. Dazu gehören der Artikel, den sie gerade angesehen hat, alles, was Sarah in der Vergangenheit angesehen hat, die E-Mails, die sie erhalten hat, ihre Interaktionen mit dem Callcenter sowie Daten darüber, auf welchem Kanal und welchem Gerät die einzelnen Interaktionen stattgefunden haben. |
 
-Das Echtzeit-CDP-Profil reduziert den Arbeitsablauf des Luma-Marketingteams von Woche zu Minute und eröffnet Möglichkeiten zur Personalisierung auf der Grundlage dieser 360-Grad-Ansicht. Das Profil fasst die Verhaltensdaten, die erfasst wurden, als sie die Site vor dem Anmelden durchsucht hat, mit ihrem bestehenden Kundenprofil zusammen und erlaubt so einen genauen Überblick über Sarah.
+Das Profil in der Echtzeit-CDP reduziert den Arbeitsaufwand für das Luma-Marketing-Team von Wochen in Minuten und bietet auf Grundlage dieser 360-Grad-Kundenansicht umfassende Möglichkeiten zur Personalisierung. Das Profil fasst die Verhaltensdaten, die erfasst wurden, als sie die Site vor dem Anmelden durchsucht hat, mit ihrem bestehenden Kundenprofil zusammen und erlaubt so einen genauen Überblick über Sarah.
 
 Das Marketing-Team kann dieses erweiterte Echtzeit-Kundenprofil nutzen, um Sarahs Erlebnis weiter zu personalisieren und die Markenloyalität zu Luma zu erhöhen.
 
@@ -231,7 +234,7 @@ Da Sarah wahrscheinlich einen Geschenkartikel in den Warenkorb gelegt und den Vo
 
 Wenn Sie das Segment „Warenkorb-Abbrecher, die ein Geschenk kaufen“ hinzugefügt haben, können Sie ungefähr sehen, wie viele Personen Teil dieses Segments sind. Sie können aktiv werden und es für Personalisierungszwecke kanalübergreifend bereitstellen.
 
-Klicken Sie auf **[!UICONTROL Send to destinations]**.
+Klicken Sie auf **[!UICONTROL An Ziele senden]**.
 
 In der Echtzeit-Kundendatenplattform von Adobe kann Luma zur Personalisierung nahtlos auf Zielgruppensegmente reagieren.\
 Hier sehen Sie alle Ziele, an die Luma dieses Ziel senden kann, sowohl Adobe- als auch Nicht-Adobe-Lösungen:
@@ -255,19 +258,19 @@ Außerdem können Sie planen, dass das Segment zu einer bestimmten Zeit beginnen
 >[!NOTE]
 >Wenn Sie optional auf das Datumsfeld klicken, wird automatisch für 90 Tage geplant.
 
-Click **[!UICONTROL Save]** to go to the next page.
+Klicken Sie auf **[!UICONTROL Speichern]**, um zur nächsten Seite zu wechseln.
 
 Wenn ein Kunde in dieser Zielgruppe einen Kauf tätigt, wird seine Mitgliedschaft in dieser Zielgruppe in Echtzeit unterdrückt. Er ist dann nicht mehr qualifiziert, weil sich sein Status geändert hat.
 
 Das spart dem Direktor des Medien-Teams von Luma Hunderttausende von Dollar, da er Inventar nicht für eine Zielgruppe verwenden muss, die gar nicht qualifiziert ist.
 
-### Durchsetzung von Datenverwendungsrichtlinien für Ziele
+### Durchsetzung von Datennutzungsrichtlinien für Ziele
 
-Adobe Experience Platform enthält Datenschutz- und Sicherheitskontrollen, um zu ermitteln, ob ein Segment für ein bestimmtes Ziel aktiviert werden kann. Die Aktivierung ist je nach dem/den Marketingzweck(en), der/die dem Ziel beim Erstellen zugewiesen wurde, sowie den von Ihrem Unternehmen festgelegten Datenverwendungsrichtlinien aktiviert oder eingeschränkt.
+Adobe Experience Platform enthält Datenschutz- und Sicherheitskontrollen, um zu ermitteln, ob ein Segment für ein bestimmtes Ziel aktiviert werden kann. Die Aktivierung ist je nach Marketing-Zweck, der dem Ziel beim Erstellen zugewiesen wurde, sowie den von Ihrem Unternehmen festgelegten Datennutzungsrichtlinien aktiviert oder eingeschränkt.
 
-Wenn Ihre Aktivität eine Richtlinie verletzt, wird eine Warnmeldung angezeigt. Diese Warnung enthält Informationen zur Datenreihenbildung, mit denen Sie erkennen können, warum die Richtlinie verletzt wurde und was Sie tun können, um die Verletzung zu beheben.
+Wenn Ihre Aktivität gegen eine Richtlinie verstößt, wird eine Warnmeldung angezeigt. Diese Warnmeldung enthält Informationen zur Datenherkunft, mit denen Sie erkennen können, wie gegen die Richtlinie verstoßen wurde und was Sie tun können, um den Verstoß zu beheben.
 
-Mit diesen Steuerelementen unterstützt Experience Platform Luma bei der Einhaltung von Vorschriften und beim verantwortungsvollen Marketing. Diese Kontrollen sind flexibel und können an die Anforderungen der Sicherheits- und Verwaltungsteams von Luma angepasst werden, sodass sie auf die regionalen und organisatorischen Anforderungen für die Verwaltung bekannter und unbekannter Kundendaten vertrauen können.
+Mit diesen Steuerelementen unterstützt Experience Platform Luma bei der Einhaltung von Vorschriften und beim verantwortungsvollen Marketing. Diese Steuerelemente sind flexibel und können an die Anforderungen der Sicherheits- und Governance-Teams von Luma angepasst werden, sodass sie die regionalen und organisatorischen Anforderungen für die Verwaltung bekannter und unbekannter Kundendaten sicher handhaben können.
 
 ### Arbeitsfläche für Datenflüsse
 
