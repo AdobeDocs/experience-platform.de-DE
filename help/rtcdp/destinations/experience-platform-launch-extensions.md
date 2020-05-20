@@ -1,18 +1,20 @@
 ---
 title: Erlebnisplattform-Starterweiterungen
 seo-title: Erlebnisplattform-Starterweiterungen
-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet.  Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
-seo-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet.  Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
+description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
+seo-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 translation-type: tm+mt
 source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+workflow-type: tm+mt
+source-wordcount: '622'
+ht-degree: 22%
 
 ---
 
 
 # Experience Platform Launch extensions {#experience-platform-launch-extensions}
 
-Experience Platform Launch ist die nächste Generation der Tag-Management-Funktionen von Adobe. 
-Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden. Der Start wird Adobe Experience Cloud-Kunden als zusätzliche, nützliche Funktion angeboten.
+Experience Platform Launch ist die nächste Generation der Tag-Management-Funktionen von Adobe. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind. Der Start wird Adobe Experience Cloud-Kunden als zusätzliche, nützliche Funktion angeboten.
 
 Eine Einführung in die Funktionen zum Starten von Experience Platform finden Sie in den nachfolgend aufgeführten Ressourcen:
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/de-DE/launch/using/overview.html)
@@ -20,7 +22,7 @@ Eine Einführung in die Funktionen zum Starten von Experience Platform finden Si
 
 ## Finden der Starterweiterungen in der CDP-Benutzeroberfläche von Adobe in Echtzeit {#how-to-find-extensions-in-interface}
 
-Um die Starterweiterungen in der Adobe Echtzeit-CDP-Oberfläche zu finden, suchen Sie den Filter **[!UICONTROL Destinations > Catalog]** und wählen Sie **[!UICONTROL Extensions]** ihn aus **[!UICONTROL Types]** .
+Um die Starterweiterungen in der Adobe Echtzeit-CDP-Oberfläche zu finden, navigieren Sie zu **[!UICONTROL Ziele > Katalog]** und wählen Sie **[!UICONTROL Erweiterungen]** im Filter **[!UICONTROL Typen]** .
 
 ![Erweiterungsfilter in der Oberfläche](/help/rtcdp/destinations/assets/extensions-filter.png)
 
@@ -59,6 +61,6 @@ Starterweiterungen können in Adobe Echtzeit-CDP unter die folgenden Kategorien 
 * [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
 * [Data Management-Plattform](/help/rtcdp/destinations/dmp-destinations.md)
 * [E-Mail-Marketing-](/help/rtcdp/destinations/email-marketing-destinations.md)
-* [Personalisierung ](/help/rtcdp/destinations/personalization-destinations.md)
+* [Personalisierung   ](/help/rtcdp/destinations/personalization-destinations.md)
 * [Umfragen](/help/rtcdp/destinations/survey-destinations.md)
 * [Stimme des Kunden](/help/rtcdp/destinations/voice-of-customer-destinations.md)
