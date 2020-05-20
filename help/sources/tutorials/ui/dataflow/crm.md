@@ -5,6 +5,9 @@ title: Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzer
 topic: overview
 translation-type: tm+mt
 source-git-commit: 55fa2d9ca706f9d80bf5011811ec5939f690ba05
+workflow-type: tm+mt
+source-wordcount: '1090'
+ht-degree: 1%
 
 ---
 
