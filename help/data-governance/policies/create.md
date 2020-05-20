@@ -5,6 +5,9 @@ title: Eine Datenverwendungsrichtlinie erstellen
 topic: policies
 translation-type: tm+mt
 source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
+workflow-type: tm+mt
+source-wordcount: '1213'
+ht-degree: 3%
 
 ---
 
