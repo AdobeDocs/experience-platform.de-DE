@@ -5,6 +5,9 @@ title: Sandbox-UI - Übersicht
 topic: user guide
 translation-type: tm+mt
 source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
 
