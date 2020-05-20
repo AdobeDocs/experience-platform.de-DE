@@ -5,6 +5,9 @@ title: Übersicht über die Datenverwendungsrichtlinien
 topic: policies
 translation-type: tm+mt
 source-git-commit: d08f06b3c2bdb21e0f4935bbcb6f163892ab9842
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 2%
 
 ---
 
