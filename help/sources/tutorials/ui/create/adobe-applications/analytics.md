@@ -5,6 +5,9 @@ title: Erstellen eines Adobe Analytics-Quell-Connectors in der Benutzeroberfläc
 topic: overview
 translation-type: tm+mt
 source-git-commit: d2f8e11591b30a0bfd345e56a33a8bb62501358c
+workflow-type: tm+mt
+source-wordcount: '726'
+ht-degree: 1%
 
 ---
 
@@ -23,17 +26,17 @@ Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Ado
 
 ## Erstellen einer Quellverbindung mit Adobe Analytics
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste die Option **[!UICONTROL Sources]** , um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden verfügbare Quellen zum Erstellen von eingehenden Verbindungen angezeigt. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenströme, die ihnen zugeordnet sind.
+Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden verfügbare Quellen zum Erstellen von eingehenden Verbindungen angezeigt. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenströme, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie &quot; *Adobe-Anwendungen* &quot; **[!UICONTROL Adobe Analytics]** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um vorhandene Konten Ansicht, wählen Sie **[!UICONTROL Accounts]**.
+Wählen Sie unter der Kategorie &quot; *Adobe-Anwendungen* &quot;die Option &quot; **[!UICONTROL Adobe Analytics]** &quot;, um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um vorhandene Konten Ansicht, wählen Sie **[!UICONTROL Konten]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Daten auswählen
 
-Der *Adobe Analytics* -Schritt wird angezeigt. In diesem Anzeigebereich werden zuvor eingerichtete Datenflüsse für Analytics aufgeführt. Sie können einen neuen Dataset-Fluss erstellen, indem Sie auf **[!UICONTROL Select data]**.
+Der *Adobe Analytics* -Schritt wird angezeigt. In diesem Anzeigebereich werden zuvor eingerichtete Datenflüsse für Analytics aufgeführt. Sie können einen neuen Datenfluss erstellen, indem Sie auf Daten **[!UICONTROL auswählen]** klicken.
 
 >[!NOTE] Es können mehrere eingehende Verbindungen zu einer Quelle hergestellt werden, um verschiedene Daten einzubringen.
 
@@ -41,7 +44,7 @@ Der *Adobe Analytics* -Schritt wird angezeigt. In diesem Anzeigebereich werden z
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-Wählen Sie in der Liste der verfügbaren Report Suites die Report Suites aus, die Sie in die Plattform aufnehmen möchten, und klicken Sie auf **[!UICONTROL Next]**.
+Wählen Sie in der Liste der verfügbaren Report Suites die Report Suites aus, die Sie in die Plattform aufnehmen möchten, und klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
