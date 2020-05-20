@@ -5,6 +5,9 @@ title: Übungen zur Segmentierung
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 6705cb699b0785e317a6e437fc8a01ca77266f84
+workflow-type: tm+mt
+source-wordcount: '584'
+ht-degree: 8%
 
 ---
 
@@ -42,4 +45,4 @@ Die Streaming-Segmentierung (auch als kontinuierliche Abfrage bezeichnet) ist di
 
 ## Segmentierung mehrerer Entitäten
 
-Die Segmentierung mehrerer Entitäten ist die Möglichkeit, Profil-Daten mit zusätzlichen Daten zu erweitern, die auf Produktklassen, Stores oder anderen Nicht-Profil-Klassen basieren. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, als wären sie nativ für das Profil-Schema. Informationen zum Verschieben finden Sie in der Dokumentation zur Segmentierung [mehrerer Entitäten](../segmentation/multi-entity-segmentation.md).
+Die Segmentierung mehrerer Entitäten ist die Möglichkeit, Profil-Daten mit zusätzlichen Daten zu erweitern, die auf Produktklassen, Stores oder anderen Nicht-Profil-Klassen basieren. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden. Informationen zum Verschieben finden Sie in der Dokumentation zur Segmentierung [mehrerer Entitäten](../segmentation/multi-entity-segmentation.md).
