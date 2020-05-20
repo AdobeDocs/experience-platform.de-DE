@@ -5,6 +5,9 @@ title: Handbuch zur Benutzeroberfläche des Adobe Experience Platform Abfrage Se
 topic: guide
 translation-type: tm+mt
 source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+workflow-type: tm+mt
+source-wordcount: '618'
+ht-degree: 2%
 
 ---
 
