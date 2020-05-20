@@ -5,6 +5,9 @@ title: Benutzerhandbuch zur Zugriffskontrolle
 topic: user guide
 translation-type: tm+mt
 source-git-commit: 9a409dceb996b56ecfec1ff0a3ad985319e72ee6
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 1%
 
 ---
 
