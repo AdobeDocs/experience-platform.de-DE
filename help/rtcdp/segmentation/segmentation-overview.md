@@ -5,6 +5,9 @@ description: Eine Übersicht mit einer Beschreibung des Segmentierungsdiensts.
 seo-description: Eine Übersicht, in der der Segmentierungsdienst und Segmente in der Echtzeit-Kundendatenplattform von Adobe beschrieben werden.
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '277'
+ht-degree: 95%
 
 ---
 
