@@ -5,6 +5,9 @@ title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
 source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+workflow-type: tm+mt
+source-wordcount: '1506'
+ht-degree: 2%
 
 ---
 
@@ -94,7 +97,7 @@ Die Antwort enthält ein Array mit den untergeordneten Elementen mit einem Objek
 | status | Der Status der Löschanforderung. Mögliche Werte sind &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
 | Metriken | Ein Objekt, das die Anzahl der verarbeiteten Datensätze (&quot;recordsProcessing&quot;) und die Zeit in Sekunden, die die Anforderung verarbeitet wurde, oder die Dauer der Anforderung (&quot;timeTakenInSec&quot;) enthält. |
 
-## Eine Löschanforderung erstellen {#create-a-delete-request}
+## Create a delete request {#create-a-delete-request}
 
 Die Initiierung einer neuen Löschanforderung erfolgt über eine POST-Anforderung an den `/systems/jobs` Endpunkt, wobei die ID des zu löschenden Datensatzes oder Stapels im Hauptteil der Anforderung angegeben wird.
 
@@ -311,7 +314,7 @@ Die folgenden Informationen ergänzen den Vorgang des Löschens eines Datensatze
 
 ### Löschen eines Datensatzes mithilfe der Benutzeroberfläche der Experience Platform
 
-Wenn Sie mit der Benutzeroberfläche von Experience Platform einen zum Profil aktivierten Datensatz löschen, wird ein Dialogfeld mit der Frage angezeigt: &quot;Sind Sie sicher, dass Sie diesen Datensatz aus dem Experience Data Lake löschen möchten? Verwenden Sie die API &quot;Profil-Systemaufträge&quot;, um diesen Datensatz aus dem Profil-Dienst zu löschen.&quot;
+Wenn Sie mit der Benutzeroberfläche von Experience Platform einen zum Profil aktivierten Datensatz löschen, wird ein Dialogfeld mit der Frage angezeigt: &quot;Sind Sie sicher, dass Sie diesen Datensatz aus dem Experience Data Lake löschen möchten? Verwenden Sie die API &quot;Profil systems jobs&quot;, um diesen Datensatz aus dem Profil Service zu löschen.&quot;
 
 Wenn Sie in der Benutzeroberfläche auf &quot; **Löschen** &quot;klicken, wird der Datensatz zur Erfassung deaktiviert. Der Datensatz wird jedoch NICHT automatisch im Backend gelöscht. Um den Datensatz dauerhaft zu löschen, muss eine Löschanforderung manuell mithilfe der Schritte in diesem Handbuch zum [Erstellen einer Löschanforderung](#create-a-delete-request)erstellt werden.
 
