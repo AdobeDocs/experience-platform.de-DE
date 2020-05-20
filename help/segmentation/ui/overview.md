@@ -5,6 +5,9 @@ title: Handbuch zur Segmentaufbau-Benutzeroberfläche
 topic: ui guide
 translation-type: tm+mt
 source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
+workflow-type: tm+mt
+source-wordcount: '2349'
+ht-degree: 0%
 
 ---
 
