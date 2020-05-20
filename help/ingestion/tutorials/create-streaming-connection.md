@@ -51,7 +51,7 @@ Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlich
 
 - Content-Type: application/json
 
-## Verbindung erstellen
+## Verbindung herstellen
 
 Eine Verbindung gibt die Quelle an und enthält die Informationen, die erforderlich sind, um den Fluss mit Streaming-APIs kompatibel zu machen.
 
