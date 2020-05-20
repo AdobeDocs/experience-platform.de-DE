@@ -5,6 +5,9 @@ title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
 source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+workflow-type: tm+mt
+source-wordcount: '2434'
+ht-degree: 1%
 
 ---
 
@@ -209,7 +212,7 @@ Ein erfolgreich erstelltes berechnetes Attribut gibt HTTP-Status 200 (OK) und ei
 | `positionPath` | Ein Array, das das dekonstruierte `path` zu dem in der Anforderung gesendeten Feld enthält. |
 | `returnSchema.meta:xdmType` | Der Typ des Felds, in dem das berechnete Attribut gespeichert wird. |
 | `definedOn` | Ein Array, das die Schema der Vereinigung anzeigt, auf denen das berechnete Attribut definiert wurde. Enthält ein Objekt pro Vereinigung-Schema, d. h. es können mehrere Objekte im Array vorhanden sein, wenn das berechnete Attribut mehreren Schemas basierend auf verschiedenen Klassen hinzugefügt wurde. |
-| `active` | Ein boolescher Wert, der anzeigt, ob das berechnete Attribut aktuell aktiv ist. Der Standardwert ist `true`. |
+| `active` | Ein boolescher Wert, der anzeigt, ob das berechnete Attribut aktuell aktiv ist. By default the value is `true`. |
 | `type` | Der Typ der erstellten Ressource, in diesem Fall &quot;ComputeAttribute&quot;, ist der Standardwert. |
 | `createEpoch` und `updateEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut erstellt bzw. zuletzt aktualisiert wurde. |
 
@@ -353,7 +356,7 @@ Die Antwort enthält auch ein `children` Array, das aus einem oder mehreren Obje
 | Eigenschaft | Beschreibung |
 |---|---|
 | `_page.totalCount` | Die Gesamtzahl der von Ihrer IMS-Organisation definierten berechneten Attribute. |
-| `_page.pageSize` | Die Anzahl der berechneten Attribute, die auf dieser Ergebnisseite zurückgegeben werden. Ist `pageSize` gleich `totalCount`, bedeutet dies, dass nur eine Seite mit Ergebnissen vorhanden ist und alle berechneten Attribute zurückgegeben wurden. Wenn sie nicht gleich sind, gibt es zusätzliche Seiten mit Ergebnissen, auf die zugegriffen werden kann. Weitere Informationen finden Sie `_links.next` unter . |
+| `_page.pageSize` | Die Anzahl der berechneten Attribute, die auf dieser Ergebnisseite zurückgegeben werden. Ist `pageSize` gleich `totalCount`, bedeutet dies, dass nur eine Seite mit Ergebnissen vorhanden ist und alle berechneten Attribute zurückgegeben wurden. Wenn sie nicht gleich sind, gibt es zusätzliche Seiten mit Ergebnissen, auf die zugegriffen werden kann. See `_links.next` for details. |
 | `children` | Ein Array, das aus einem oder mehreren Objekten besteht, von denen jedes die Details eines einzelnen berechneten Attributs enthält. Wenn keine berechneten Attribute definiert wurden, ist das `children` Array leer. |
 | `id` | Ein eindeutiger, schreibgeschützter, systemgenerierter Wert, der einem berechneten Attribut automatisch zugewiesen wird, wenn er erstellt wird. Weitere Informationen zu den Komponenten eines berechneten Attributobjekts finden Sie im Abschnitt zum [Erstellen eines berechneten Attributs](#create-a-computed-attribute) weiter oben in diesem Lernprogramm. |
 | `_links.next` | Wenn eine einzelne Seite mit berechneten Attributen zurückgegeben wird, `_links.next` ist dies ein leeres Objekt, wie in der obigen Beispielantwort dargestellt. Wenn Ihr Unternehmen über viele berechnete Attribute verfügt, werden diese auf mehreren Seiten zurückgegeben, auf die Sie über eine GET-Anforderung zum `_links.next` Wert zugreifen können. |
