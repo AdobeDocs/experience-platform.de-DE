@@ -5,6 +5,9 @@ title: Übersicht über das Echtzeit-Kundenprofil
 topic: guide
 translation-type: tm+mt
 source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+workflow-type: tm+mt
+source-wordcount: '1636'
+ht-degree: 3%
 
 ---
 
@@ -54,7 +57,7 @@ Wenn Daten aus mehreren Quellen zusammengeführt und kombiniert werden, um eine 
 ## (Alpha) Konfigurieren von berechneten Attributen
 
 >[!IMPORTANT]
->Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist alphanumerisch. Die Dokumentation und Funktionalität können sich ändern.
+>Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist alphanumerisch. Dokumentation und Funktionalität können sich ändern.
 
 Berechnete Attribute ermöglichen es Ihnen, den Feldwert anhand anderer Werte, Berechnungen und Ausdruck automatisch zu berechnen. Berechnete Attribute werden auf Profil-Ebene ausgeführt, d. h., Sie können Werte über alle Datensätze und Ereignis hinweg Aggregat haben. Jedes berechnete Attribut enthält einen Ausdruck, oder &quot;Regel&quot;, der eingehende Daten auswertet und den sich ergebenden Wert in einem Profil-Attribut oder in einem Ereignis speichert. Diese Berechnungen helfen Ihnen, Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungen einfach zu beantworten, ohne dass Sie bei jeder erforderlichen Information manuell komplexe Berechnungen durchführen müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen finden Sie im [Unterhandbuch zur Echtzeit-Client-Profil-API zu berechneten Attributen](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle von berechneten Attributen in Adobe Experience Platform besser zu verstehen. Es enthält Beispiel-API-Aufrufe für grundlegende CRUD-Vorgänge mit der Echtzeit-Client-Profil-API.
 
@@ -64,7 +67,7 @@ In diesem Abschnitt werden die Komponenten vorgestellt, mit denen Echtzeit-Kunde
 
 ### Streaming-Erfassung und Streaming-Segmentierung
 
-Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Dadurch können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst die Qualitätsübersicht [zur](../ingestion/quality/overview.md)Datenerfassung.
+Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Dadurch können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst den Überblick über die [Datenerhebungsqualität](../ingestion/quality/overview.md).
 
 ### Edge-Prognosen
 
