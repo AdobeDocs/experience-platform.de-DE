@@ -5,6 +5,9 @@ title: Klasse erstellen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 0%
 
 ---
 
