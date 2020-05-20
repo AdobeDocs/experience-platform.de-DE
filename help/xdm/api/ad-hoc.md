@@ -5,6 +5,9 @@ title: Ad-hoc-Schema
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 118c6ca5c2b82429e1f636ab25a46f58c05e42d9
+workflow-type: tm+mt
+source-wordcount: '79'
+ht-degree: 0%
 
 ---
 
