@@ -5,6 +5,9 @@ title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 translation-type: tm+mt
 source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
+workflow-type: tm+mt
+source-wordcount: '1181'
+ht-degree: 1%
 
 ---
 
@@ -108,7 +111,7 @@ Wenn ein Datensatz bereits Daten enthält und dann zum Profil aktiviert ist, wer
 
 ## Verwalten und Erzwingen der Datenverwaltung in einem Datensatz
 
-Datennutzungskennzeichnung und -durchsetzung (DULE) ist der zentrale Datenverwaltungsmechanismus für die Experience Platform. Mit den DULE-Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weitere Informationen zu Beschriftungen finden Sie in der Übersicht [zur](../../data-governance/home.md) Datenverwaltung oder im Benutzerhandbuch [zu den](../../data-governance/labels/overview.md) Datenverwendungsbeschriftungen, in dem beschrieben wird, wie Sie Beschriftungen auf Datensätze anwenden.
+Datennutzungskennzeichnung und -durchsetzung (DULE) ist der zentrale Datenverwaltungs-Mechanismus für Experience Platform. Mit den DULE-Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weitere Informationen zu Beschriftungen finden Sie in der Übersicht [zur](../../data-governance/home.md) Datenverwaltung oder im Benutzerhandbuch [zu den](../../data-governance/labels/overview.md) Datenverwendungsbeschriftungen, in dem beschrieben wird, wie Sie Beschriftungen auf Datensätze anwenden.
 
 ## Löschen eines Datensatzes
 
@@ -142,7 +145,7 @@ Wenn Sie den Stapel löschen möchten, klicken Sie dazu auf Stapel **löschen** 
 
 ## Nächste Schritte
 
-Dieses Benutzerhandbuch enthält Anweisungen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Benutzeroberfläche von Experience Platform. Schritte zum Ausführen gemeinsamer Plattform-Workflows mit Datensätzen finden Sie in den folgenden Übungen:
+Dieses Benutzerhandbuch enthält Anweisungen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Benutzeroberfläche von Experience Platform. Schritte zum Ausführen gemeinsamer Plattform-Workflows mit Datensätzen finden Sie in den folgenden Lernprogrammen:
 
 * [Erstellen eines Datensatzes mit APIs](create.md)
 * [Abfrage von Datensatzdaten mit der Datenzugriffs-API](../../data-access/home.md)
