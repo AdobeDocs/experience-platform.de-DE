@@ -5,6 +5,9 @@ title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 translation-type: tm+mt
 source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+workflow-type: tm+mt
+source-wordcount: '1146'
+ht-degree: 1%
 
 ---
 
