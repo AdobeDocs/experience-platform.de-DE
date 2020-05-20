@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ereignisse zur Datenerfassung abonnieren
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '851'
 ht-degree: 2%
 
 ---
@@ -39,42 +39,54 @@ Im Folgenden finden Sie eine Liste der verfügbaren Statusbenachrichtigungen zur
 
 Das Ereignis für die Datenerfassungsbenachrichtigung ist ein XDM-Schema (Experience Data Model) mit Feldern und Werten, die Details zum Status der erfassten Daten enthalten. Bitte besuchen Sie den öffentlichen XDM GitHub-Repo, um das aktuelle [Benachrichtigungs-Nutzlast-Schema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)Ansicht.
 
-## Datenaufnahmenstatusbenachrichtigungen abonnieren
+## Statusbenachrichtigungen zur Datenaufnahme abonnieren
 
-Über [Adobe-E/A-Ereignisse](https://www.adobe.io/apis/experienceplatform/events.html)können Sie mehrere Benachrichtigungstypen über Webhooks abonnieren. Weitere Informationen zu Webhooks und zum Abonnieren von Adobe-E/A-Ereignisse mithilfe von Webhooks finden Sie im Handbuch [Einführung zu Adobe-I/O-Ereignisse für Webhooks](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) .
+Über [Adobe-E/A-Ereignisse](https://www.adobe.io/apis/experienceplatform/events.html)können Sie mehrere Benachrichtigungstypen über Webhooks abonnieren. In den folgenden Abschnitten werden die Schritte zum Abonnieren von Plattformbenachrichtigungen für Datenverarbeitungs-Ereignis mit der Adobe Developer Console beschrieben.
 
-### Neue Integration mit der Adobe I/O-Konsole erstellen
+### Neues Projekt in der Adobe Developer Console erstellen
 
-Melden Sie sich bei der [Adobe-E/A-Konsole](https://console.adobe.io/home) an und klicken Sie auf die Registerkarte &quot; *Integrationen* &quot;oder unter &quot;Schneller Beginn&quot;auf Integration **erstellen** . Wenn der Bildschirm &quot; *Integration* &quot;angezeigt wird, klicken Sie auf **Neue Integration** , um eine neue Integration zu erstellen.
+Wechseln Sie zur [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
 
-![Neue Integration erstellen](../images/quality/subscribe-events/create_integration_start.png)
+### Hinzufügen Ereignisse der Experience Platform zum Projekt
 
-Der Bildschirm &quot;Neue Integration *erstellen* &quot;wird angezeigt. Wählen Sie &quot;Beinahe-Echtzeit-Ereignis **empfangen**&quot;und klicken Sie dann auf **Weiter**.
+Nachdem Sie ein neues Projekt erstellt haben, navigieren Sie zum Übersichtsbildschirm dieses Projekts. Klicken Sie von hier auf **[!UICONTROL Hinzufügen Ereignis]**.
 
-![Ereignisse in Echtzeit empfangen](../images/quality/subscribe-events/create_integration_receive_events.png)
+![](../images/quality/subscribe-events/add-event-button.png)
 
-Im nächsten Bildschirm finden Sie Optionen zum Erstellen von Integrationen mit verschiedenen Ereignissen, Produkten und Diensten, die Ihrem Unternehmen aufgrund Ihrer Abonnements, Berechtigungen und Berechtigungen zur Verfügung stehen. Wählen Sie für diese Integration **Plattformbenachrichtigungen** unter &quot;Experience Platform&quot;und klicken Sie dann auf **Weiter**.
+Das Dialogfeld _[!UICONTROL Hinzufügen Ereignis]_wird angezeigt. Klicken Sie auf**[!UICONTROL  Erlebnisplattform ]**, um die Liste der verfügbaren Optionen zu filtern, und klicken Sie dann auf**[!UICONTROL  Plattformbenachrichtigungen ]**, bevor Sie auf**[!UICONTROL  Weiter ]**klicken.
 
-![Ereignis-Provider auswählen](../images/quality/subscribe-events/create_integration_select_provider.png)
+![](../images/quality/subscribe-events/select-platform-events.png)
 
-Das Formular *Integrationsdetails* wird angezeigt. Sie müssen einen Namen und eine Beschreibung für die Integration sowie ein Zertifikat mit öffentlichem Schlüssel angeben.
+Im nächsten Bildschirm wird eine Liste von Ereignistypen angezeigt, die abonniert werden sollen. Wählen Sie **[!UICONTROL Datenerfassungsbenachrichtigung]** und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-Wenn Sie kein öffentliches Zertifikat haben, können Sie ein Zertifikat im Terminal mit dem folgenden Befehl generieren:
+![](../images/quality/subscribe-events/choose-event-subscriptions.png)
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+Im nächsten Bildschirm werden Sie aufgefordert, ein JSON-WebToken (JWT) zu erstellen. Sie haben die Möglichkeit, automatisch ein Schlüsselpaar zu erstellen oder einen eigenen öffentlichen Schlüssel hochzuladen, der im Terminal generiert wurde.
 
-Nachdem Sie ein Zertifikat generiert haben, ziehen Sie die Datei in das Feld &quot;Zertifikate **mit** öffentlichen Schlüsseln&quot;oder klicken Sie auf &quot;Datei **** auswählen&quot;, um den Dateiordner zu durchsuchen und das Zertifikat direkt auszuwählen.
+Für diese Übung wird die erste Option verwendet. Markieren Sie das Optionsfeld für **[!UICONTROL Generate a key pair]** und klicken Sie dann unten rechts auf die Schaltfläche **[!UICONTROL Generate keypair]** .
 
-Nach dem Hinzufügen des Zertifikats wird die Option &quot; *Ereignis-Registrierung* &quot;angezeigt. Klicken Sie auf **Hinzufügen Ereignis Registrierung**.
+![](../images/quality/subscribe-events/generate-keypair.png)
 
-![Integrationsdetails](../images/quality/subscribe-events/create_integration_details.png)
+Wenn das Schlüsselpaar generiert wird, wird es automatisch vom Browser heruntergeladen. Sie müssen diese Datei selbst speichern, da sie nicht in der Developer Console beibehalten wird.
 
-Das Dialogfeld *Ereignis Registrierungsdetails* wird erweitert und zeigt zusätzliche Steuerelemente an. Hier können Sie Ihre gewünschten Ereignistyp auswählen und Ihren Webhaken registrieren. Geben Sie einen Namen für die Registrierung des Ereignisses, die Webshaken-URL *(optional)* sowie eine kurze Beschreibung ein. Wählen Sie abschließend die Ereignistyp aus, die Sie abonnieren möchten (Benachrichtigung zur Datenaufnahme), und klicken Sie dann auf **Speichern**.
+Im nächsten Bildschirm können Sie die Details des neu generierten Schlüsselpaars überprüfen. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Ereignisse auswählen](../images/quality/subscribe-events/create_integration_select_event.png)
+![](../images/quality/subscribe-events/keypair-generated.png)
+
+Geben Sie im nächsten Bildschirm einen Namen und eine Beschreibung für die Registrierung des Ereignisses ein. Best Practice ist, einen eindeutigen, leicht identifizierbaren Namen zu erstellen, um diese Ereignis-Registrierung von anderen im selben Projekt zu unterscheiden.
+
+![](../images/quality/subscribe-events/registration-details.png)
+
+Weiter unten auf dem gleichen Bildschirm können Sie optional konfigurieren, wie Ereignis empfangen werden. **[!UICONTROL Mit WebHook]** können Sie eine benutzerdefinierte Webhocker-Adresse für den Empfang von Ereignissen angeben, während die **[!UICONTROL Laufzeitaktion]** es Ihnen ermöglicht, dasselbe mit der [Adobe I/O-Laufzeit](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)zu tun.
+
+Dieses Lernprogramm überspringt diesen optionalen Konfigurationsschritt. Nachdem Sie fertig sind, klicken Sie auf **[!UICONTROL Konfigurierte Ereignisse]** speichern, um die Ereignis-Registrierung abzuschließen.
+
+![](../images/quality/subscribe-events/receive-events.png)
+
+Die Detailseite für die neu erstellte Ereignis-Registrierung wird angezeigt, auf der Sie die empfangenen Ereignis überprüfen, die Debugging-Verfolgung durchführen und die Konfiguration bearbeiten können.
+
+![](../images/quality/subscribe-events/registration-complete.png)
 
 ## Nächste Schritte
 
-Nachdem Sie Ihre E/A-Integration erstellt haben, können Sie alle Benachrichtigungen für diese Integration Ansicht haben. Detaillierte Anweisungen zur Verfolgung Ihrer Ereignis finden Sie im Handbuch [Rückverfolgung von Adobe-E/A-Ereignissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
+Nachdem Sie Plattformbenachrichtigungen für Ihr Projekt registriert haben, können Sie Ereignis aus dem Dashboard des Projekts Ansicht haben. Detaillierte Anweisungen zur Verfolgung Ihrer Ereignis finden Sie im Handbuch [Rückverfolgung von Adobe-E/A-Ereignissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
