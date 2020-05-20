@@ -5,6 +5,9 @@ title: Von Adobe definierte Funktionen
 topic: queries
 translation-type: tm+mt
 source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 6%
 
 ---
 
