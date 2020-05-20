@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Hilfe zu Katalogen und Datensätzen
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+workflow-type: tm+mt
+source-wordcount: '93'
+ht-degree: 5%
 
 ---
 
