@@ -5,6 +5,9 @@ title: Profil Abfrage Language (PQL) - Übersicht
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 3%
 
 ---
 
@@ -58,10 +61,10 @@ PQL unterstützt die folgenden Literaltypen:
 | Literal | Definition | Beispiel |
 | ------- | ---------- | ------- |
 | Zeichenfolge | Ein Datentyp, der aus Zeichen besteht, die von Dubletten-Anführungszeichen umgeben sind. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
-| Boolesch  | Ein Datentyp, der entweder &quot;true&quot;oder &quot;false&quot;ist. | `true`, `false` |
+| Boolesch | Ein Datentyp, der entweder &quot;true&quot;oder &quot;false&quot;ist. | `true`, `false` |
 | Ganzzahl | Ein Datentyp, der eine ganze Zahl darstellt. Es kann positiv, negativ oder null sein. | `-201`, `0`, `412` |
 | Doppelt | Ein Datentyp, der eine beliebige reale Zahl darstellt. Es kann positiv, negativ oder null sein. | `-51.24`, `3.14`, `0.6942058` |
-| Datum | Ein Datentyp, der zum Erstellen von Daten basierend auf den Parametern Jahr, Monat und Tag als Ganzzahl verwendet werden kann. Das Format lautet `date(year, month, day)` | `date(2020, 3, 14)` |
+| Datum | Ein Datentyp, der zum Erstellen von Daten basierend auf den Parametern Jahr, Monat und Tag als Ganzzahl verwendet werden kann. It is formatted as `date(year, month, day)` | `date(2020, 3, 14)` |
 | Array | Ein Datentyp, der als Gruppe anderer Literalwerte zusammengesetzt ist. Es verwendet eckige Klammern zur Gruppierung und Kommas zur Trennung zwischen verschiedenen Werten. <br> **Hinweis:** Sie können nicht direkt auf Eigenschaften von Elementen in einem Array zugreifen. Wenn Sie also auf eine Eigenschaft in einem Array zugreifen müssen, wird die unterstützte Methode `select X from array where X.item = ...`verwendet. <br> PQL behält sich das Wort `xEvent` vor, auf eine Reihe von Erlebnis-Ereignissen zu verweisen, die mit einem Profil verknüpft sind. | `[1, 4, 7]`, `["US", "CA"]` |
 | Relative Zeitreferenzen | Reservierte Wörter, die zum Erstellen von Zeitstempeln und Zeitintervallverweisen verwendet werden können. <ul><li>jetzt, heute, gestern, morgen</li><li>this, last, next</li><li>before, after, from</li><li>Millisekunde(n), Sekunde(n), Minute(n), Stunde(n), Tag(e), Woche(n), Monat(n), Jahr(e), Jahrzehnt(e), Jahrhundert/Jahrhunderte, Jahrtausend/Jahrtausend</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
@@ -72,7 +75,7 @@ In der folgenden Tabelle sind die verschiedenen Kategorien unterstützter PQL-Fu
 
 | Kategorie | Definition |
 | -------- | ---------- |
-| Boolesch  | Wird verwendet, um boolesche Algebra in PQL zu implementieren. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [zu booleschen Funktionen](./boolean-functions.md). |
+| Boolesch | Wird verwendet, um boolesche Algebra in PQL zu implementieren. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [zu booleschen Funktionen](./boolean-functions.md). |
 | Vergleich | Dient zum Vergleich zwischen verschiedenen PQL-Elementen. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [Vergleichsfunktionen](./comparison-functions.md). |
 | Array, Liste und Satz | Wird für die Interaktion mit Arrays, Listen und Sets verwendet. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [zu](./array-functions.md)Array-, Liste- und Set-Funktionen. |
 | Landkarte | Wird verwendet, um mit Karten zu interagieren. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [Kartenfunktionen](./map-functions.md). |
