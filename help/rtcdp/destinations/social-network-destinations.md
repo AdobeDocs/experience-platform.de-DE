@@ -5,6 +5,9 @@ description: Mit Social-Netzwerk-Zielen können Sie Profil für Ihre Kampagnen a
 seo-description: Mit Social-Netzwerk-Zielen können Sie Profil für Ihre Kampagnen aktivieren, um Audiencen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails zu ermöglichen.
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 1%
 
 ---
 
