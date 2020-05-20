@@ -5,6 +5,9 @@ title: Erfassen von Anzeigendaten über Quell-Connectors und APIs
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+workflow-type: tm+mt
+source-wordcount: '1437'
+ht-degree: 2%
 
 ---
 
