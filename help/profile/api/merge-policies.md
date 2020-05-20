@@ -55,7 +55,7 @@ Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von
 | `id` | Der vom System erzeugte eindeutige Bezeichner, der zur Erstellungszeit zugewiesen wurde |
 | `name` | Benutzerfreundlicher Name, unter dem die Richtlinie zum Zusammenführen in Ansichten der Liste identifiziert werden kann. |
 | `imsOrgId` | Organisations-ID, zu der diese Richtlinie gehört |
-| `identityGraph` | [Identitätsdiagramm](#identity-graph) -Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profil-Fragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
+| `identityGraph` | [Identitätsdiagramm](#identity-graph) -Objekt, das das Identitätsdiagramm angibt, aus dem die entsprechenden Identitäten abgerufen werden. Profil-Fragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
 | `attributeMerge` | [Attributzusammenführungs](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie bei Datenkonflikten Profil-Attributwerte priorisiert. |
 | `schema` | Das [Schema](#schema) -Objekt, für das die Zusammenführungsrichtlinie verwendet werden kann. |
 | `default` | Boolescher Wert, der angibt, ob diese Richtlinie für das angegebene Schema standardmäßig verwendet wird. |
