@@ -5,6 +5,9 @@ title: Clients mit dem Abfrage Service verbinden
 topic: connect
 translation-type: tm+mt
 source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
+workflow-type: tm+mt
+source-wordcount: '76'
+ht-degree: 0%
 
 ---
 
