@@ -5,6 +5,9 @@ title: Objekt ersetzen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 2%
 
 ---
 
