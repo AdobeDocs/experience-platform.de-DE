@@ -5,6 +5,9 @@ title: Marketingaktionen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+workflow-type: tm+mt
+source-wordcount: '540'
+ht-degree: 1%
 
 ---
 
