@@ -5,6 +5,9 @@ title: Schätzungen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 3%
 
 ---
 
