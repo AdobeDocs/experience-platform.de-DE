@@ -5,6 +5,9 @@ title: Audience Manager-Anschluss
 topic: overview
 translation-type: tm+mt
 source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+workflow-type: tm+mt
+source-wordcount: '726'
+ht-degree: 0%
 
 ---
 
@@ -66,7 +69,7 @@ Obwohl Benutzer die Möglichkeit haben, Datensätze zu deaktivieren, wird nicht 
 
 ### Verbindungen
 
-Adobe Audience Manager erstellt eine Verbindung im Katalog: Verbindung mit **Audience Manager**. Catalog ist das System der Datensätze für den Speicherort und die Datenlinie in Adobe Experience Platform. Eine Verbindung ist ein Katalogobjekt, das eine kundenspezifische Instanz von Connectors ist. Weitere Informationen zu Katalogen, Verbindungen und Connectors finden Sie in der Übersicht über den [Katalogdienst](../../../catalog/home.md) .
+Adobe Audience Manager erstellt eine Verbindung im Katalog: **Audience Manager Connection**. Catalog ist das System der Datensätze für den Speicherort und die Datenlinie in Adobe Experience Platform. Eine Verbindung ist ein Katalogobjekt, das eine kundenspezifische Instanz von Connectors ist. Weitere Informationen zu Katalogen, Verbindungen und Connectors finden Sie in der Übersicht über den [Katalogdienst](../../../catalog/home.md) .
 
 ## Welche Latenz wird für Audience Manager-Daten auf der Plattform erwartet?
 
