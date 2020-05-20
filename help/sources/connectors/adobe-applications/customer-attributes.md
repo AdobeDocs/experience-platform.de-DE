@@ -5,6 +5,9 @@ title: Connector für Kundenattribute
 topic: overview
 translation-type: tm+mt
 source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
