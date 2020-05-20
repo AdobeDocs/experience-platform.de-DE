@@ -6,6 +6,9 @@ last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
 source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+workflow-type: tm+mt
+source-wordcount: '590'
+ht-degree: 4%
 
 ---
 
@@ -63,7 +66,7 @@ Mit dem Abfrage Service können Sie Ökosysteme zur Analyse von Daten erstellen 
 | Funktion | Beschreibung |
 | -----------| ---------- |
 | Verbesserungen am Abfragen-Editor | Es wurde eine Speicherfunktion hinzugefügt, mit der Sie eine Abfrage speichern und später daran arbeiten können. Der Benutzeroberfläche des Abfrage Service auf der Adobe Experience Platform wurde die Registerkarte &quot;Durchsuchen&quot;hinzugefügt, auf der die von den Benutzern in Ihrem Unternehmen gespeicherten Abfragen angezeigt werden. Es wurde ein Bedienfeld mit Details zur Abfrage implementiert, in dem nützliche Metadaten zur angezeigten Abfrage angezeigt werden. |
-| Neue Zuordnungsfunktionen | Von Adobe definierte Funktionen im Abfrage Service to Abfrage für die Zuordnung von Kanälen mit Ablaufparametern. |
+| Neue Zuordnungsfunktionen | Von Adobe definierte Funktionen im Abfrage Service to Abfrage für die Zuweisung von Kanälen mit Ablaufparametern. |
 | Verbesserungen der SQL-Syntax | Unterstützung der &quot;Gefällt mir&quot;-Syntax. |
 | Generieren von Datensätzen mit einem definierten XDM-Schema | Es wurde eine neue Klausel in &quot;Tabelle erstellen&quot;zu den Abfragen &quot;Auswählen&quot;(CTAS) hinzugefügt, mit der Sie ein Zielgruppe-Schema angeben können. |
 
