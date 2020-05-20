@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Zugriffskontrolle in der Adobe Experience Platform-Hilfe
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 8%
 
 ---
 
