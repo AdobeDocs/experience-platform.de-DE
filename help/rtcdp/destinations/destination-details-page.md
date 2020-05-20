@@ -5,6 +5,9 @@ description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick ü
 seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 translation-type: tm+mt
 source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 100%
 
 ---
 
