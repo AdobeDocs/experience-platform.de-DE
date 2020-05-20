@@ -5,6 +5,9 @@ title: Entwicklerleitfaden für Sensei Machine Learning API
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+workflow-type: tm+mt
+source-wordcount: '209'
+ht-degree: 2%
 
 ---
 
@@ -39,7 +42,7 @@ Nachdem Sie die erforderlichen Authentifizierungsberechtigungen gesammelt haben,
 
 * [Motoren](./engines.md)
 * [Experimente](./experiments.md)
-* [Einblicke](./insights.md)
+* [Insights](./insights.md)
 * [MLInstances (Rezepte)](./mlinstances.md)
 * [MLServices](./mlservices.md)
 * [Modelle](./models.md)
