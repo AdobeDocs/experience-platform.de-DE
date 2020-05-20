@@ -5,6 +5,9 @@ title: Modellbewertung (API)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+workflow-type: tm+mt
+source-wordcount: '508'
+ht-degree: 1%
 
 ---
 
