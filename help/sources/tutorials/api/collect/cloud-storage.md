@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erfassen von Cloud-Datenspeicherung-Daten über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1490'
 ht-degree: 2%
 
 ---
@@ -583,7 +583,7 @@ Der letzte Schritt zur Erfassung von Cloud-Datenspeicherung-Daten besteht darin,
 - [Mapping-ID](#mapping)
 - [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 **API-Format**
 
@@ -671,6 +671,6 @@ Im folgenden Abschnitt werden die verschiedenen Cloud-Datenspeicherung-Quellschn
 | Amazon-Kinesis (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
 | Azurblut (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 | AUS Data Lake Datenspeicherung Gen2 (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
-| Azurblauer Ereignis Hubs (EventHub) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| Azurblauer Ereignis Hubs (Ereignis Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | Google Cloud-Datenspeicherung | `32e8f412-cdf7-464c-9885-78184cb113fd` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
