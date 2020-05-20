@@ -5,6 +5,9 @@ title: Erzwingen von Datenverwendungsrichtlinien mithilfe der Policy Service API
 topic: enforcement
 translation-type: tm+mt
 source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+workflow-type: tm+mt
+source-wordcount: '886'
+ht-degree: 3%
 
 ---
 
