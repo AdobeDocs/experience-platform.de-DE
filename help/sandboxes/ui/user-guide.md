@@ -5,6 +5,9 @@ title: Sandbox-Benutzerhandbuch
 topic: user guide
 translation-type: tm+mt
 source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+workflow-type: tm+mt
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
@@ -61,7 +64,7 @@ Um eine Sandbox in der Benutzeroberfläche zurückzusetzen, klicken Sie im linke
 
 ![](../images/ui/reset-sandbox-button.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Klicken Sie auf **Zurücksetzen** , um fortzufahren.
+Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Click **Reset** to continue.
 
 <img src="../images/ui/reset-are-you-sure.png" width="350"><br>
 
@@ -79,7 +82,7 @@ Um eine Sandbox in der Benutzeroberfläche zu löschen, klicken Sie im linken Na
 
 ![](../images/ui/delete-sandbox-button.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Klicken Sie auf **Löschen** , um fortzufahren.
+Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Click **Delete** to continue.
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
