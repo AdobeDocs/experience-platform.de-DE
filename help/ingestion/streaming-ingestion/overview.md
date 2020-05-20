@@ -5,6 +5,9 @@ title: Adobe Experience Platform Streaming Ingestion - Überblick
 topic: overview
 translation-type: tm+mt
 source-git-commit: a570a7a3d905c4618d80f56f01747cced1d124e8
+workflow-type: tm+mt
+source-wordcount: '260'
+ht-degree: 3%
 
 ---
 
