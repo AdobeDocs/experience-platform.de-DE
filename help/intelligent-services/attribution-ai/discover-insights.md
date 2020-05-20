@@ -5,6 +5,9 @@ title: Erkenntnisse über Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
 source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+workflow-type: tm+mt
+source-wordcount: '1167'
+ht-degree: 1%
 
 ---
 
@@ -135,7 +138,7 @@ Wenn Sie den Mauszeiger über die Datenzeile eines bestimmten Zuordnungsmodells 
 
 ## Aufschlüsselung nach Kanal
 
-Die *Aufschlüsselungskarte nach Kanal* wird verwendet, um die Gesamtanzahl der Konversionen im Verhältnis zu den einzelnen Kanälen zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanal und die Kapitalrendite getroffen werden.
+Die *Aufschlüsselungskarte nach Kanal* wird verwendet, um die Gesamtanzahl der Konversionen in Bezug auf jeden Kanal zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanal und die Kapitalrendite getroffen werden.
 
 ![Aufschlüsselungs-Kanal](./images/insights/channel-breakdown.png)
 
