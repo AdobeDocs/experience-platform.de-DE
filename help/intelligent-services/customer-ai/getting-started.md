@@ -5,6 +5,9 @@ title: Erste Schritte mit der Kunden-API
 topic: Getting started
 translation-type: tm+mt
 source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+workflow-type: tm+mt
+source-wordcount: '546'
+ht-degree: 15%
 
 ---
 
@@ -24,7 +27,7 @@ Die Leitfäden für die Kundentechnik erfordern ein Verständnis der verschieden
 
 >[!NOTE] Wenn Sie keine Rohdaten herunterladen müssen, können Sie diesen Schritt überspringen und zum [Konfigurationshandbuch](./user-guide/configure.md)fortfahren.
 
-Das Herunterladen von Kunden-AI-Ergebnissen erfolgt über eine Kombination von API-Aufrufen. Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Das Herunterladen von Kunden-AI-Ergebnissen erfolgt über eine Kombination von API-Aufrufen. Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
