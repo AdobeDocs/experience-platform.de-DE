@@ -5,6 +5,9 @@ title: Datentyp erstellen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b0d8c8ee4df11d601d8feb122c70a9cd5d7d5b77
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 0%
 
 ---
 
