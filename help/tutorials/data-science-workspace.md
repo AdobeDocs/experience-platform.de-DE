@@ -5,6 +5,9 @@ title: Übungen zum Arbeitsbereich für Datenwissenschaften
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 34fff508f49327ce314a517d77efabb286ef055c
+workflow-type: tm+mt
+source-wordcount: '355'
+ht-degree: 0%
 
 ---
 
