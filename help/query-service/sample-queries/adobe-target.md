@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Abfragen
+title: Sample queries
 topic: queries
 translation-type: tm+mt
 source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 2%
 
 ---
 
 
 # Beispieldaten für Abfragen zur Adobe-Zielgruppe
 
-Daten aus Adobe Zielgruppe werden in Experience Ereignis XDM-Schema umgewandelt und als Datensätze in Experience Platform integriert. Es gibt viele Anwendungsfälle für den Abfrage Service mit diesen Daten. Die folgenden Abfragen sollten mit Ihren Adobe Zielgruppe-Datensätzen verwendet werden.
+Daten aus Adobe Zielgruppe werden in Experience Ereignis XDM-Schema umgewandelt und als Datensätze in Experience Platform integriert. There are many use cases for Query Service with this data, and the following sample queries should work with your Adobe Target datasets.
 
 >[!NOTE]
 >In den folgenden Beispielen müssen Sie SQL bearbeiten, um die erwarteten Parameter für Ihre Abfragen basierend auf dem Datensatz, den Variablen oder dem Zeitrahmen, den Sie bewerten möchten, auszufüllen. Geben Sie Parameter an, wo immer Sie `{ }` in SQL sehen.
