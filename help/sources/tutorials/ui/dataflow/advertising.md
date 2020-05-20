@@ -5,6 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Werbeanschluss in der Benutze
 topic: overview
 translation-type: tm+mt
 source-git-commit: 91bc87a6dcaf5c2d58da429712f010643c400a7a
+workflow-type: tm+mt
+source-wordcount: '1088'
+ht-degree: 1%
 
 ---
 
@@ -92,7 +95,7 @@ Geben Sie Werte für den Zeitplan ein und klicken Sie auf **Weiter**.
 
 ## Benennen des Datenflusses
 
-Der Schritt *Datenfluss* im Detail wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Wählen Sie **Weiter** , wenn Sie fertig sind.
+Der Schritt für die Details *des* Datenflusses wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Wählen Sie **Weiter** , wenn Sie fertig sind.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/advertising/dataset-flow-detail.png)
 
