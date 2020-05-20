@@ -5,6 +5,9 @@ title: Erstellen eines Ad-hoc-Schemas
 topic: tutorials
 translation-type: tm+mt
 source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +25,7 @@ Dieses Lernprogramm erfordert ein funktionierendes Verständnis des XDM-Systems 
 - [XDM-System - Übersicht](../home.md): Eine allgemeine Übersicht über XDM und seine Implementierung in Experience Platform.
 - [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Übersicht über die Grundkomponenten von XDM-Schemas.
 
-Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Header für die Anforderung (mit besonderer Aufmerksamkeit auf den Accept-Header und seine möglichen Werte).
+Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
 
 ## Erstellen einer Ad-hoc-Klasse
 
@@ -296,6 +299,6 @@ Bei einer erfolgreichen Antwort werden die Details des Schemas einschließlich a
 
 ## Nächste Schritte {#next-steps}
 
-Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie als Teil eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
+Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie im Rahmen eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
 
 Weitere Informationen zum Arbeiten mit der Schema Registry API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
