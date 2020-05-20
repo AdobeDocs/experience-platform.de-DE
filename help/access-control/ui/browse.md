@@ -5,6 +5,9 @@ title: Arbeitsbereich "Zugriffskontrolle"durchsuchen
 topic: user guide
 translation-type: tm+mt
 source-git-commit: d961bad816d37ade5367ab25c19594dc1b625153
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +26,7 @@ Der Arbeitsbereich &quot;Zugriffskontrolle&quot;für Adobe Experience Platform w
 
 ![platform-access-control](../images/platform-access-control.png)
 
-Dieses Benutzerhandbuch konzentriert sich auf die Verwendung der Admin-Konsole zum Zuweisen von Zugriffsberechtigungen für die Plattform. Weitere allgemeine Informationen zum Navigieren in der Admin-Konsole finden Sie im Benutzerhandbuch [zur](https://helpx.adobe.com/enterprise/using/admin-console.html)Admin-Konsole.
+Dieses Benutzerhandbuch konzentriert sich auf die Verwendung der Admin-Konsole zum Zuweisen von Zugriffsberechtigungen für die Plattform. Weitere allgemeine Informationen zum Navigieren in der Admin-Konsole finden Sie im Benutzerhandbuch [zur](https://helpx.adobe.com/de/enterprise/using/admin-console.html)Admin-Konsole.
 
 ## Nächste Schritte
 
