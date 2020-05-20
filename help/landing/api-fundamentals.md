@@ -5,6 +5,9 @@ title: Grundlagen der Adobe Experience Platform-API
 topic: getting started
 translation-type: tm+mt
 source-git-commit: c94f065a5d56ac495dd2d541531aaec94c187612
+workflow-type: tm+mt
+source-wordcount: '435'
+ht-degree: 2%
 
 ---
 
