@@ -5,6 +5,9 @@ title: Dokumentation zur Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
 source-git-commit: 319eb01f7a9e4bda01e7f50695daee49b96bc20b
+workflow-type: tm+mt
+source-wordcount: '1055'
+ht-degree: 3%
 
 ---
 
@@ -51,5 +54,5 @@ Die Dokumentation steht derzeit für die Dienste und Funktionen der Adobe Experi
 * **Echtzeit-Kundendatenplattform:** Echtzeit-CDP kombiniert mehrere Unternehmensdatenquellen, um einheitliche Profil in Echtzeit zu erstellen, mit denen individuelle Kundenerlebnisse für alle Kanal und Geräte bereitgestellt werden können.
 * **Sandboxen:** Sandboxes unterteilen eine einzelne Plattform-Instanz in separate virtuelle Umgebung, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 * **Segmentierung:** Erstellen Sie Segmente basierend auf Daten aus dem Echtzeit-Profil von Kunden, um Audiencen zu generieren und die Benutzererfahrung zu steigern.
-* **Quellen (Verbindungen):** {#sources} Bringen Sie Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken usw. in die Adobe Experience Platform.
+* **Quellen (Verbindungen):** {#sources} Bringen Sie Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und mehr in die Adobe Experience Platform.
 * **XDM (Experience Data Model)**: XDM wird von Adobe unterstützt und dient der Standardisierung von Kundenerlebnisdaten und der Definition von Schemas für das Kundenerlebnis-Management. XDM-Schema zur Unterstützung der Interoperabilität von Daten über Experience Platform-Komponenten hinweg.
