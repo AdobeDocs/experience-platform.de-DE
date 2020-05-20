@@ -5,6 +5,9 @@ title: Lernprogramme zum Datenzugriff
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 6705cb699b0785e317a6e437fc8a01ca77266f84
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 0%
 
 ---
 
