@@ -5,6 +5,9 @@ title: Schulungen zum Echtzeit-Profil von Kunden
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+workflow-type: tm+mt
+source-wordcount: '490'
+ht-degree: 6%
 
 ---
 
