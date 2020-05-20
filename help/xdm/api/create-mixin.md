@@ -5,6 +5,9 @@ title: Erstellen eines Mixins
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 0%
 
 ---
 
