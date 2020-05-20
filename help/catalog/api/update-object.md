@@ -5,6 +5,9 @@ title: Objekt aktualisieren
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 3%
 
 ---
 
