@@ -5,6 +5,9 @@ title: SDK-Entwicklerhandbuch
 topic: Overview
 translation-type: tm+mt
 source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 1%
 
 ---
 
