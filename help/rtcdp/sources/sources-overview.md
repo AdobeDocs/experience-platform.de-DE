@@ -5,6 +5,9 @@ description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der 
 seo-description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der Echtzeit-Kundendatenplattform.
 translation-type: tm+mt
 source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 78%
 
 ---
 
