@@ -5,6 +5,9 @@ title: Einblicke in die Adobe Experience Platform-Überwachung
 topic: overview
 translation-type: tm+mt
 source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+workflow-type: tm+mt
+source-wordcount: '408'
+ht-degree: 2%
 
 ---
 
