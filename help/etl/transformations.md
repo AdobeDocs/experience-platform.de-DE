@@ -5,6 +5,9 @@ title: Beispiel-ETL-Transformationen
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+workflow-type: tm+mt
+source-wordcount: '470'
+ht-degree: 1%
 
 ---
 
@@ -63,7 +66,7 @@ Die Zuordnungsanforderungen für die CRM-Daten sind in der folgenden Tabelle auf
 | LAND | homeAddress.country | Als Zeichenfolge kopieren |
 | ZIP | homeAddress.postalCode | Als Zeichenfolge kopieren |
 | LAT | homeAddress.latitude | In Dublette konvertieren |
-| LANG | homeAddress.Längengrad | In Dublette konvertieren |
+| LANG | homeAddress.longitude | In Dublette konvertieren |
 
 
 ### Ausgabe-XDM
