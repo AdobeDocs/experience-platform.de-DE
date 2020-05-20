@@ -5,6 +5,9 @@ title: Schema und Dataset für den Einzelhandel erstellen
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+workflow-type: tm+mt
+source-wordcount: '532'
+ht-degree: 0%
 
 ---
 
