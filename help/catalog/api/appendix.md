@@ -5,6 +5,9 @@ title: Handbuch zum Entwickler von Katalogdiensten
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+workflow-type: tm+mt
+source-wordcount: '908'
+ht-degree: 0%
 
 ---
 
