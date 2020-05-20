@@ -5,6 +5,9 @@ title: Entwicklerhandbuch für Segmentdienst
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 1%
 
 ---
 
