@@ -5,6 +5,9 @@ title: Entwicklerhandbuch zur Schema Registry API
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
+workflow-type: tm+mt
+source-wordcount: '1246'
+ht-degree: 0%
 
 ---
 
@@ -154,7 +157,7 @@ Eine erfolgreiche Antwort gibt Informationen zur Verwendung der Schema-Registrie
 
 * `tenantId`: Der `TENANT_ID` Wert für Ihre IMS-Organisation.
 
-## Verstehen Sie die `CONTAINER_ID`{#container}
+## Verstehen Sie die `CONTAINER_ID` {#container}
 
 Für Aufrufe der Schema Registry-API muss eine `CONTAINER_ID`Variable verwendet werden. Es gibt zwei Container, für die API-Aufrufe durchgeführt werden können: der **globale Container** und der **Mieter-Container**.
 
@@ -221,7 +224,7 @@ Das folgende Beispielfeld zeigt ein ordnungsgemäß formatiertes XDM-Feld mit we
 ```
 
 * Der Name eines Feldobjekts kann alphanumerische Zeichen, Bindestriche oder Unterstriche enthalten, **darf jedoch nicht** mit einem Unterstrich versehen sein.
-   * **Richtig:** `fieldName`, `field_name2`, `Field-Name`und `field-name_3`
+   * **Richtig:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **Falsch:** `_fieldName`
 * camelCase wird für den Namen des Feldobjekts bevorzugt. Beispiel: `fieldName`
 * Das Feld sollte eine `title`in der Titelleiste geschriebene Zeichenfolge enthalten. Beispiel: `Field Name`
