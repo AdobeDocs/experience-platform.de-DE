@@ -5,6 +5,9 @@ title: Berechtigungsnamen und Ressourcentypen der Liste
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
+workflow-type: tm+mt
+source-wordcount: '124'
+ht-degree: 1%
 
 ---
 
