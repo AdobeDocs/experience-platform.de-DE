@@ -5,6 +5,9 @@ title: Konfigurieren einer Customer AI-Instanz
 topic: Instance creation
 translation-type: tm+mt
 source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+workflow-type: tm+mt
+source-wordcount: '715'
+ht-degree: 59%
 
 ---
 
@@ -17,11 +20,11 @@ Intelligent Services bieten Kunden-AI als einfach zu verwendenden Adobe Sensei-D
 
 ## Instanz einrichten {#set-up-your-instance}
 
-In the Platform UI, click **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays all available services at your disposal. In the container for Customer AI, click **[!UICONTROL Open]**.
+Klicken Sie in der Benutzeroberfläche von Platform im linken Navigationsbereich auf **[!UICONTROL Dienste]**. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
-Im Bildschirm *Customer AI* werden alle vorhandenen Customer AI-Instanzen angezeigt. Klicken Sie auf **[!UICONTROL Create instance]**.
+Im Bildschirm *Customer AI* werden alle vorhandenen Customer AI-Instanzen angezeigt. Klicken Sie auf **[!UICONTROL Instanz erstellen]**.
 
 ![](../images/user-guide/dashboard.png)
 
@@ -31,13 +34,13 @@ Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie der Instanz be
 
 * Der Name der Instanz wird an allen Stellen verwendet, an denen die Kunden-AI-Bewertung angezeigt wird. Daher sollte man in Namen beschreiben, was die Prognosewerte darstellen, z. B. &quot;Wahrscheinlichkeit, das Abonnement eines Magazins abzubrechen&quot;.
 
-* Der Tendenztyp bestimmt den Zweck des Wertes und die Metrikpolarität. Sie können entweder wählen **[!UICONTROL Churn]** oder **[!UICONTROL Conversion]**. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Bewertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
+* Der Tendenztyp bestimmt den Zweck des Wertes und die Metrikpolarität. Sie können entweder **[!UICONTROL Abwanderung]** oder **[!UICONTROL Konversion]** wählen. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Bewertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
 
 * Die Datenquelle befindet sich an der Stelle, an der sich die Daten befinden. Der Datensatz ist der Eingabedatensatz, mit dem Ergebnisse vorhergesagt werden. Standardmäßig nutzt Customer AI Kundenerlebnis-Ereignisdaten, um Tendenzwerte zu berechnen. Wenn Sie einen Datensatz aus der Dropdown-Auswahl auswählen, werden nur die Datensätze aufgelistet, die mit der Kunden-API kompatibel sind.
 
 * Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es wurde eine qualifizierte Zielgruppe angegeben. Sie können eine qualifizierte Zielgruppe angeben, indem Sie Bedingungen festlegen, um Profile auf Grundlage von Ereignissen ein- oder auszuschließen.
 
-Provide the required values and then click **[!UICONTROL Next]**.
+Geben Sie die erforderlichen Werte ein und klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![](../images/user-guide/setup.png)
 
@@ -45,13 +48,13 @@ Provide the required values and then click **[!UICONTROL Next]**.
 
 Der Schritt *Ziel definieren* wird angezeigt und bietet eine interaktive Umgebung, in der Sie ein Ziel visuell festlegen können. Ein Ziel besteht aus einem oder mehreren Ereignissen, bei denen das Auftreten eines jeden Ereignisses auf der Bedingung basiert, die es enthält. Ziel einer Customer AI-Instanz ist es, die Wahrscheinlichkeit zu bestimmen, mit der ihr Ziel innerhalb eines bestimmten Zeitraums erreicht wird.
 
-Klicken Sie auf **[!UICONTROL Enter Field Name]** und wählen Sie ein Feld aus der Dropdown-Liste aus. Klicken Sie auf die zweite Eingabe und wählen Sie eine Klausel für die Ereignisbedingung. Geben Sie dann einen Zielwert ein, um das Ereignis fertigzustellen. Additional events can be configured by clicking **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then click **[!UICONTROL Next]**.
+Klicken Sie auf **[!UICONTROL Feldnamen eingeben]** und wählen Sie ein Feld aus der Dropdown-Liste aus. Klicken Sie auf die zweite Eingabe und wählen Sie eine Klausel für die Ereignisbedingung. Geben Sie dann einen Zielwert ein, um das Ereignis fertigzustellen. Weitere Ereignisse können durch Klicken auf **[!UICONTROL Ereignis hinzufügen]** konfiguriert werden. Schließen Sie das Ziel ab, indem Sie einen Prognosezeitrahmen (Zahl der Tage) anwenden, und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
 ![](../images/user-guide/goal.png)
 
 ### Zeitplan konfigurieren *(optional)* {#configure-a-schedule}
 
-Der Schritt *Erweitert* wird angezeigt. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or click **[!UICONTROL Finish]** if nothing is needed.
+Der Schritt *Erweitert* wird angezeigt. In diesem optionalen Schritt können Sie einen Zeitplan konfigurieren, um die Ausführung von Prognosen zu automatisieren, Prognoseausschlüsse zum Filtern bestimmter Ereignisse definieren oder auf **[!UICONTROL Fertig stellen]** klicken, wenn nichts mehr erforderlich ist.
 
 Richten Sie einen Bewertungszeitplan ein, indem Sie die *Bewertungshäufigkeit* festlegen. Die Ausführung automatisierter Prognosen kann entweder wöchentlich oder monatlich geplant werden.
 
@@ -59,11 +62,11 @@ Richten Sie einen Bewertungszeitplan ein, indem Sie die *Bewertungshäufigkeit* 
 
 Unter der Zeitplankonfiguration können Sie Prognoseausschlüsse definieren, um zu verhindern, dass bei der Generierung von Werten Ereignisse ausgewertet werden, die bestimmte Bedingungen erfüllen. Mit dieser Funktion können irrelevante Dateneingaben herausgefiltert werden.
 
-To exclude certain events, click **[!UICONTROL Add exclusion]** and define the event in the same fashion as to how the goal is defined. To remove an exclusion, click the ellipses (**[!UICONTROL ...]**) to the top-right of the event container and then click **[!UICONTROL Remove Container]**.
+Um bestimmte Ereignisse auszuschließen, klicken Sie auf **[!UICONTROL Ausschluss hinzufügen]** und definieren Sie das Ereignis auf dieselbe Weise wie das Ziel. Um einen Ausschluss zu entfernen, klicken Sie auf die Auslassungspunkte (**[!UICONTROL ...]**) oben rechts neben dem Ereignis-Container und dann auf **[!UICONTROL Container entfernen]**.
 
 ![](../images/user-guide/exclusion.png)
 
-Exclude events as needed and then click **[!UICONTROL Finish]** to create the instance.
+Schließen Sie Ereignisse nach Bedarf aus und klicken Sie dann auf **[!UICONTROL Fertig stellen]**, um die Instanz zu erstellen.
 
 ![](../images/user-guide/advanced.png)
 
