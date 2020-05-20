@@ -5,6 +5,9 @@ title: Löschen eines Objekts
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
