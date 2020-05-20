@@ -5,6 +5,9 @@ description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience 
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 97%
 
 ---
 
@@ -40,13 +43,13 @@ Zusätzliche Metriken (z. B. für Profile und Segmente) stehen in anderen Teile
 
 ### Datensätze
 
-The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
+Der Zähler für **[!UICONTROL Datensätze]** gibt die Zahl der Datensätze im System und die Menge der Daten in Platform an. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
 Weitere Informationen zu Datensätzen finden Sie in der Übersicht über [Datensätze](../catalog/datasets/overview.md).
 
 ### Profile
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the Real-time Customer Profile. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
+Der Zähler für **[!UICONTROL Profile]** zeigt die Gesamtzahl der Personen mit Profilen in Echtzeit-Kundenprofil an. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
 
 Der Zähler nutzt die standardmäßige [Zusammenführungsrichtlinie](profile/merge-policies.md), die in der Konfiguration der Zusammenführungsrichtlinien im einheitlichen Profil festgelegt ist.
 
@@ -56,13 +59,13 @@ Weiterführende Informationen zu Profilen finden Sie unter [Einheitliche Sicht a
 
 ### Segmente
 
-**[!UICONTROL Segments]** zeigt die Gesamtzahl der für das Unternehmen erstellten Segmente. Diese Zahl wird aktualisiert, sobald neue Segmente erstellt werden.
+**[!UICONTROL Segmente]** gibt die Gesamtzahl der für das Unternehmen erstellten Segmente an. Diese Zahl wird aktualisiert, sobald neue Segmente erstellt werden.
 
 Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](segmentation/segmentation-overview.md).
 
 ### Ziele
 
-**[!UICONTROL Destinations]** zeigt die Gesamtzahl der Ziele, die für die Organisation erstellt wurden. Diese Zahl wird aktualisiert, sobald neue Ziele erstellt werden.
+**[!UICONTROL Ziele]** gibt die Gesamtzahl der Ziele an, die für das Unternehmen erstellt wurden. Diese Zahl wird aktualisiert, sobald neue Ziele erstellt werden.
 
 Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/destinations-overview.md).
 
@@ -102,32 +105,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Letzte Datensätze
 
-The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. Diese Liste wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
+Auf der Karte **[!UICONTROL Letzte Datensätze]** werden die fünf letzten Datensätze angezeigt, die im Unternehmen erstellt wurden. Diese Liste wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
-Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
+Klicken Sie auf einen Datensatz, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um die Liste der Datensätze anzuzeigen. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
 
 Weitere Informationen zu Datensätzen finden Sie in der Übersicht über [Datensätze](../catalog/datasets/overview.md).
 
 ### Letzte Quellen
 
-The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. Diese Liste wird aktualisiert, sobald eine neue Quelle erstellt wird.
+Auf der Metrikkarte **[!UICONTROL Letzte Quellen]** werden die fünf Quellen angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald eine neue Quelle erstellt wird.
 
-Click a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
+Klicken Sie auf eine Quelle, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um die Liste der Quellen anzuzeigen. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
 
 Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](sources/sources-overview.md).
 
 ### Letzte Segmente
 
-The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. Diese Liste wird aktualisiert, sobald ein neues Segment erstellt wird.
+Auf der Metrikkarte **[!UICONTROL Letzte Segmente]** werden die fünf Segmente angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald ein neues Segment erstellt wird.
 
-Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
+Klicken Sie auf ein Segment, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Segmente zu erhalten.
 
 Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](segmentation/segmentation-overview.md).
 
 ### Letzte Ziele
 
-The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. Diese Liste wird aktualisiert, sobald ein neues Ziel erstellt wird.
+Auf der Metrikkarte **[!UICONTROL Letzte Ziele]** werden die fünf Ziele angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald ein neues Ziel erstellt wird.
 
-Click a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
+Klicken Sie auf ein Ziel, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Ziele zu erhalten.
 
 Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/destinations-overview.md).
