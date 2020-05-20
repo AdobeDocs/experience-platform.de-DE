@@ -5,6 +5,9 @@ title: Adobe Experience Platform Abfrage Service
 topic: overview
 translation-type: tm+mt
 source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+workflow-type: tm+mt
+source-wordcount: '572'
+ht-degree: 0%
 
 ---
 
