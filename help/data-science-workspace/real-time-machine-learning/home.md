@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
 workflow-type: tm+mt
 source-wordcount: '513'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -41,7 +41,7 @@ Daten werden mit dem Experience Data Model (XDM) auf der Adobe Experience Platfo
 
 Erstellen Sie ein Echtzeit-Modell für maschinelles Lernen, indem Sie es von Grund auf bearbeiten oder als vorab geschultes serialisiertes ONNX-Modell in Adobe Experience Platform Jupyter-Notebooks einführen.
 
-### Bereitstellung
+### Implemenierung
 
 Stellen Sie Ihr Modell für Experience Edge bereit, um einen Service für maschinelles Lernen in Echtzeit in der Service Gallery mithilfe des Prediction API-Endpunkts zu erstellen.
 
