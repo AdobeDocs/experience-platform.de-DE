@@ -5,6 +5,9 @@ title: ETL-Arbeitsablauf
 topic: overview
 translation-type: tm+mt
 source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 0%
 
 ---
 
