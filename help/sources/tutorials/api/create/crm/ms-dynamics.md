@@ -5,6 +5,9 @@ title: Erstellen eines Microsoft Dynamics Connectors mithilfe der Flow Service A
 topic: overview
 translation-type: tm+mt
 source-git-commit: 6c86cec91774f3444dc90042cd7ad5c71429aabd
+workflow-type: tm+mt
+source-wordcount: '731'
+ht-degree: 1%
 
 ---
 
