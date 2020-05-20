@@ -5,6 +5,9 @@ title: Segment bewerten
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+workflow-type: tm+mt
+source-wordcount: '2841'
+ht-degree: 2%
 
 ---
 
