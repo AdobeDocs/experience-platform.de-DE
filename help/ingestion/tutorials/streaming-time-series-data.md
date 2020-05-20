@@ -5,6 +5,9 @@ title: Streaming-Zeitreihendaten
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+workflow-type: tm+mt
+source-wordcount: '1173'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +34,7 @@ In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ih
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -493,6 +496,6 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zu den angeforderten 
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in Plattform erfassen können. Sie können versuchen, mehr Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie Beginn zur Überwachung der erfassten Daten über die Plattform-Benutzeroberfläche verwenden. Weitere Informationen finden Sie im Handbuch zur Erfassung der [Überwachungsdaten](../quality/monitor-data-flows.md) .
+Indem Sie dieses Dokument lesen, verstehen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in Plattform erfassen. Sie können versuchen, mehr Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie Beginn zur Überwachung der erfassten Daten über die Plattform-Benutzeroberfläche verwenden. Weitere Informationen finden Sie im Handbuch zur Erfassung der [Überwachungsdaten](../quality/monitor-data-flows.md) .
 
 Weitere Informationen zur Streaming-Erfassung im Allgemeinen finden Sie in der [Streaming-Übersicht](../streaming-ingestion/overview.md).
