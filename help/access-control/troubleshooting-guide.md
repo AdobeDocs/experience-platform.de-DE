@@ -5,6 +5,9 @@ title: Handbuch zur Fehlerbehebung bei Zugriffskontrollen
 topic: troubleshooting guide
 translation-type: tm+mt
 source-git-commit: c4da32630d3a6476956347b76d611553ef1853fa
+workflow-type: tm+mt
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
@@ -29,4 +32,4 @@ Wenn Sie keine Zugriffsberechtigungen für eine bestimmte Plattformfunktion habe
 
 Berechtigungen werden nach Plattformfunktionen gruppiert und kategorisiert, auf die sie angewendet werden (z. B. Data Management- und Profil-Management). Eine vollständige Liste der verfügbaren Berechtigungen und der Gruppen, zu denen sie gehören, finden Sie im Abschnitt &quot; [Berechtigungen&quot;](home.md#permissions) in der Übersicht über die Zugriffskontrolle.
 
-Weitere Informationen zur Bereitstellung rollenbasierter Zugriffskontrolle finden Sie im Überblick über die [Zugriffskontrolle](home.md) .
+Weitere Informationen zur rollenbasierten Zugriffskontrolle finden Sie in der Übersicht über die [Zugriffskontrolle](home.md) .
