@@ -1,10 +1,13 @@
 ---
 title: SFTP-Ziel
 seo-title: SFTP-Ziel
-description: Erstellen Sie eine Live-ausgehende Verbindung mit Ihrem SFTP-Server, um in regelmäßigen Abständen durch Trennzeichen getrennte Datendateien aus Experience Platform zu exportieren.
-seo-description: Erstellen Sie eine Live-ausgehende Verbindung mit Ihrem SFTP-Server, um in regelmäßigen Abständen durch Trennzeichen getrennte Datendateien aus Experience Platform zu exportieren.
+description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
+seo-description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 translation-type: tm+mt
 source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 66%
 
 ---
 
@@ -13,13 +16,13 @@ source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ## Übersicht
 
-Erstellen Sie eine Live-ausgehende Verbindung mit Ihrem SFTP-Server, um in regelmäßigen Abständen durch Trennzeichen getrennte Datendateien aus Experience Platform zu exportieren.
+Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 
 Führen Sie zum Exportieren von Daten die folgenden Schritte aus:
 
 ## Ziel verbinden {#connect-destination}
 
-Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung-Zielen, einschließlich SFTP, finden Sie [im Arbeitsablauf für ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)Cloud-Datenspeicherung-Ziele.
+Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Speicher-Zielen, einschließlich SFTP, finden Sie unter [Workflow für Cloud-Speicher-Ziele](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
 
 Geben Sie für SFTP-Ziele im Arbeitsablauf zum Erstellen des Ziels im Schritt **Authentifizierung** die folgenden Informationen ein:
 
