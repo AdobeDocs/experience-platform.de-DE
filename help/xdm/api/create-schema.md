@@ -5,6 +5,9 @@ title: Schema erstellen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 162316c3b908ffa87d8df4dff72e26ba237993db
+workflow-type: tm+mt
+source-wordcount: '239'
+ht-degree: 1%
 
 ---
 
