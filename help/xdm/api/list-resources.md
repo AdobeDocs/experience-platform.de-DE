@@ -5,6 +5,9 @@ title: Listen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 2%
 
 ---
 
@@ -77,15 +80,15 @@ Die Schema Registry unterstützt die Verwendung von Abfrage-Parametern zum Anzei
 
 >[!NOTE] Bei der Kombination mehrerer Parameter für die Abfrage müssen diese durch das kaufmännische Und (`&`) getrennt werden.
 
-### Seite {#paging}
+### Paging {#paging}
 
 Zu den gebräuchlichsten Parametern für die Abfrage von Paging gehören:
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `start` | Geben Sie an, wo die aufgelisteten Ergebnisse angezeigt werden sollen. Beispiel: Die Liste `start=2` resultiert aus dem dritten zurückgegebenen Element. |
-| `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Mitteln zurück. |
-| `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: Die Ergebnisse `orderby=title` werden in aufsteigender Reihenfolge (A-Z) nach Titel sortiert. Durch Hinzufügen eines `-` Vor-Titels (`orderby=-title`) werden Elemente in absteigender Reihenfolge nach Titel sortiert (Z-A). |
+| `start` | Geben Sie an, wo die aufgelisteten Ergebnisse angezeigt werden sollen. Beispiel: `start=2` wird die Liste aus dem dritten zurückgegebenen Element. |
+| `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Ressourcen zurück. |
+| `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse nach Titel in aufsteigender Reihenfolge (A-Z). Durch Hinzufügen eines `-` Vor-Titels (`orderby=-title`) werden Elemente in absteigender Reihenfolge nach Titel sortiert (Z-A). |
 
 ### Filter {#filtering}
 
