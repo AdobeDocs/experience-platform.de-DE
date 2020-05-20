@@ -5,6 +5,9 @@ title: Eingabe und Ausgabe von Kunden-AI
 topic: Getting started
 translation-type: tm+mt
 source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+workflow-type: tm+mt
+source-wordcount: '441'
+ht-degree: 1%
 
 ---
 
