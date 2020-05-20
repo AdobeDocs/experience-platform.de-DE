@@ -5,6 +5,9 @@ title: Häufig gestellte Fragen zur DSGVO
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: e176cc69613fad1d4a6b44138a6d88a688438578
+workflow-type: tm+mt
+source-wordcount: '646'
+ht-degree: 0%
 
 ---
 
