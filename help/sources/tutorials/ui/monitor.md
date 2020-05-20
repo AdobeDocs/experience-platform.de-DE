@@ -5,6 +5,9 @@ title: Überwachen von Konten und Datenflüssen
 topic: overview
 translation-type: tm+mt
 source-git-commit: fc0a406bdea7b31e046d02427805a9deba557e93
+workflow-type: tm+mt
+source-wordcount: '475'
+ht-degree: 1%
 
 ---
 
