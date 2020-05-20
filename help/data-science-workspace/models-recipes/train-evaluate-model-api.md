@@ -5,6 +5,9 @@ title: Erstellen und Auswerten eines Modells (API)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+workflow-type: tm+mt
+source-wordcount: '1191'
+ht-degree: 1%
 
 ---
 
