@@ -5,6 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '1593'
+ht-degree: 6%
 
 ---
 
@@ -15,7 +18,7 @@ Die Bereitstellung relevanter digitaler Erlebnisse erfordert ein vollständiges 
 
 ## Identitätsdienst
 
-Jeden Tag interagieren Kunden mit Ihrem Unternehmen und etablieren eine stetig wachsende Beziehung zu Ihrer Marke. Ein typischer Kunde kann in einer beliebigen Anzahl von Systemen in der Dateninfrastruktur Ihres Unternehmens tätig sein, z. B. in Ihren E-Commerce-, Loyalität- und Help-Desk-Systemen. Derselbe Kunde kann sich auch anonym an einer beliebigen Anzahl von Geräten beteiligen. Mit dem Identitätsdienst können Sie ein vollständiges Bild Ihres Kunden zusammenstellen und damit zusammenhängende Daten sammeln, die andernfalls über verschiedene Systeme hinweg simuliert werden könnten.
+Jeden Tag interagieren Kunden mit Ihrem Unternehmen und etablieren eine stetig wachsende Beziehung zu Ihrer Marke. Ein typischer Kunde kann in einer beliebigen Anzahl von Systemen in der Dateninfrastruktur Ihres Unternehmens tätig sein, z. B. in Ihren E-Commerce-, Loyalität- und Help-Desk-Systemen. Derselbe Kunde kann sich auch anonym an einer beliebigen Anzahl von Geräten beteiligen. Mit dem Identitätsdienst können Sie ein vollständiges Bild Ihres Kunden zusammenstellen und damit zusammenhängende Daten zusammenstellen, die andernfalls über verschiedene Systeme hinweg simuliert werden könnten.
 
 Betrachten Sie ein alltägliches Beispiel für die Beziehung eines Verbrauchers zu Ihrer Marke:
 
