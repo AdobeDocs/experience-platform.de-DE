@@ -5,6 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Marketingautomatisierungsansc
 topic: overview
 translation-type: tm+mt
 source-git-commit: c9e02dacb549cb889f937aeaef2aaff9b013b80e
+workflow-type: tm+mt
+source-wordcount: '1128'
+ht-degree: 1%
 
 ---
 
