@@ -5,6 +5,9 @@ title: Erstellen von ETL-Integrationen
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+workflow-type: tm+mt
+source-wordcount: '4227'
+ht-degree: 0%
 
 ---
 
@@ -53,7 +56,7 @@ In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ih
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -85,7 +88,7 @@ Im [ETL-Arbeitsablauf](./workflow.md)wurden die Modelle für ein Beispiel-ETL-To
 
 Mithilfe der Datenquelle für die Zuordnung kann eine Liste aller verfügbaren Datensätze mit der [Katalog-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)abgerufen werden.
 
-Sie können eine einzige API-Anfrage zur Ansicht aller verfügbaren Datensätze (z. `GET /dataSets`), wobei es sich am besten eignet, Abfragen einzubeziehen, die die Größe der Antwort beschränken.
+Sie können eine einzige API-Anfrage zur Ansicht aller verfügbaren Datensätze (z. `GET /dataSets`), wobei es sich bewährt hat, Abfragen einzubeziehen, die die Größe der Antwort beschränken.
 
 In Fällen, in denen _vollständige_ Datensatzinformationen angefordert werden, kann die Antwortnutzlast größer als 3 GB sein, was die Gesamtleistung verlangsamen kann. Die Verwendung von Abfragen-Parametern zum Filtern nur der benötigten Informationen macht die Abfragen des Katalogs effizienter.
 
@@ -196,7 +199,7 @@ Das Antwortformat hängt vom Typ des Accept-Headers ab, der in der Anforderung g
 | `application/vnd.adobe.xed-full-notext+json; version={major version}` | $refs und allOf aufgelöst, keine Titel oder Beschreibungen |
 | `application/vnd.adobe.xed-full-desc+json; version={major version}` | $refs und allOf resolved, Deskriptoren enthalten |
 
->[!NOTE] und `application/vnd.adobe.xed-id+json` `application/vnd.adobe.xed-full+json; version={major version}` sind die am häufigsten verwendeten Accept-Header. `application/vnd.adobe.xed-id+json` wird für die Auflistung von Ressourcen in der Schema-Registrierung bevorzugt, da nur &quot;title&quot;, &quot;id&quot;und &quot;version&quot;zurückgegeben werden. `application/vnd.adobe.xed-full+json; version={major version}` wird empfohlen, eine bestimmte Ressource (durch ihre &quot;ID&quot;) anzuzeigen, da alle Felder (verschachtelt unter &quot;Eigenschaften&quot;) sowie Titel und Beschreibungen zurückgegeben werden.
+>[!NOTE] `application/vnd.adobe.xed-id+json` und `application/vnd.adobe.xed-full+json; version={major version}` sind die am häufigsten verwendeten Accept-Header. `application/vnd.adobe.xed-id+json` wird für die Auflistung von Ressourcen in der Schema-Registrierung bevorzugt, da nur &quot;title&quot;, &quot;id&quot;und &quot;version&quot;zurückgegeben werden. `application/vnd.adobe.xed-full+json; version={major version}` wird empfohlen, eine bestimmte Ressource (durch ihre &quot;ID&quot;) anzuzeigen, da alle Felder (verschachtelt unter &quot;Eigenschaften&quot;) sowie Titel und Beschreibungen zurückgegeben werden.
 
 **Antwort**
 
