@@ -5,6 +5,9 @@ title: Akzeptierte Identitäts-Namensraum und Qualifikatoren
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
+workflow-type: tm+mt
+source-wordcount: '479'
+ht-degree: 8%
 
 ---
 
