@@ -5,6 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Protokollanschluss in der Ben
 topic: overview
 translation-type: tm+mt
 source-git-commit: 8a331e6711fab6f1823ff2ad030e5077e24d22d3
+workflow-type: tm+mt
+source-wordcount: '1088'
+ht-degree: 1%
 
 ---
 
