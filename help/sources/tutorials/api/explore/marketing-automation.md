@@ -5,6 +5,9 @@ title: Kennenlernen eines Marketingautomatisierungssystems mithilfe der Flow Ser
 topic: overview
 translation-type: tm+mt
 source-git-commit: 42cd06f9a42b78fb68a7da19fcfbf90545dc1377
+workflow-type: tm+mt
+source-wordcount: '623'
+ht-degree: 1%
 
 ---
 
