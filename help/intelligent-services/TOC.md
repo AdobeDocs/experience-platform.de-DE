@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Intelligente Dienste - Hilfe
 translation-type: tm+mt
 source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 7%
 
 ---
 
