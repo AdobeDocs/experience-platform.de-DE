@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Ereignis-Hubs-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Damit der Flow-Dienst eine Verbindung mit Ihrem Azurblase-Ereignis-Hubs-Konto he
 | ---------- | ----------- |
 | `sasKeyName` | Der Name der Autorisierungsregel, der auch als SAS-Schlüsselname bezeichnet wird. |
 | `sasKey` | Die generierte Unterschrift für den gemeinsamen Zugriff. |
-| `namespace` | Der Namensraum des EventHub, auf den Sie zugreifen. |
+| `namespace` | Der Namensraum der Ereignis-Hubs, auf die Sie zugreifen. |
+| `connectionSpec.id` | Verbindungsspezifikations-ID des Azurblauen Ereignisses: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-Weitere Informationen zu diesen Werten finden Sie in [diesem EventHub-Dokument](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Weitere Informationen zu diesen Werten finden Sie in [diesem Ereignis-Hubs-Dokument](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,6 +105,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | Der Name der Autorisierungsregel, der auch als SAS-Schlüsselname bezeichnet wird. |
 | `auth.params.sasKey` | Die generierte Unterschrift für den gemeinsamen Zugriff. |
+| `namespace` | Der Namensraum der Ereignis-Hubs, auf die Sie zugreifen. |
 | `connectionSpec.id` | Verbindungsspezifikations-ID des Azurblauen Ereignisses: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Antwort**
