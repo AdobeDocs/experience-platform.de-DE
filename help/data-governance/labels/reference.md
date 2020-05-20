@@ -5,6 +5,9 @@ title: Unterstützte Beschriftungen für die Datenverwendung
 topic: labels
 translation-type: tm+mt
 source-git-commit: 5aa0325a051d9e6e6dd65234db27ab251cfb2d9e
+workflow-type: tm+mt
+source-wordcount: '1826'
+ht-degree: 2%
 
 ---
 
