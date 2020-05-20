@@ -5,6 +5,9 @@ title: Erstellen eines Adobe Audience Manager-Quellconnectors in der Benutzerobe
 topic: overview
 translation-type: tm+mt
 source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+workflow-type: tm+mt
+source-wordcount: '269'
+ht-degree: 4%
 
 ---
 
