@@ -5,6 +5,9 @@ title: Verschiedene Funktionen
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: d7ec6240864916d3b54db8bd641f4917a38f9480
+workflow-type: tm+mt
+source-wordcount: '108'
+ht-degree: 3%
 
 ---
 
