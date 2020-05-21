@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1445'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,8 @@ Ein vollständiges Beispiel des Mixins finden Sie im [öffentlichen XDM-Reposito
 ## Schlüsselfelder
 
 In den folgenden Abschnitten werden die Schlüsselfelder im CEE-Mixin hervorgehoben, die genutzt werden sollten, damit Intelligent Services nützliche Einblicke generieren kann, einschließlich Beschreibungen und Links zur Referenzdokumentation für weitere Beispiele.
+
+>[!IMPORTANT] Das `xdm:channel` Feld (im ersten Abschnitt unten erläutert) ist **erforderlich** , damit Attribution AI mit Ihren Daten arbeiten kann, während Customer AI keine Pflichtfelder hat. Alle anderen Schlüsselfelder werden dringend empfohlen, jedoch nicht obligatorisch.
 
 ### xdm:Kanal
 
@@ -185,7 +187,9 @@ Vollständige Informationen zu jedem der erforderlichen Unterfelder finden Sie `
 
 ## Zuordnung und Erfassung von Daten
 
-Sobald Sie festgestellt haben, ob Ihre Daten zu Marketing-Ereignissen dem CEE-Schema zugeordnet werden können, können Sie den Prozess der Datenübertragung in Intelligent Services Beginn einleiten. Wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und sie in den Dienst zu integrieren.
+Sobald Sie festgestellt haben, ob Ihre Marketing-Ereignis-Daten dem CEE-Schema zugeordnet werden können, müssen Sie als Nächstes ermitteln, welche Daten Sie in Intelligent Services einführen möchten. Alle in Intelligent Services verwendeten Verlaufsdaten müssen innerhalb des Mindestzeitraums von vier Monaten an Daten liegen, zuzüglich der Anzahl der Tage, die als Lookback-Zeitraum gedacht sind.
+
+Nachdem Sie den zu sendenden Datenbereich festgelegt haben, wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und sie in den Dienst zu integrieren.
 
 Wenn Sie über ein Adobe Experience Platform-Abonnement verfügen und die Daten selbst zuordnen und erfassen möchten, führen Sie die im folgenden Abschnitt beschriebenen Schritte aus.
 
@@ -211,9 +215,81 @@ Nachdem Sie das Schema erstellt und gespeichert haben, können Sie auf der Grund
 * [Erstellen Sie ein Dataset in der Benutzeroberfläche](../catalog/datasets/user-guide.md#create) (zum Verwenden eines vorhandenen Schemas im Workflow)
 * [Erstellen eines Datensatzes in der API](../catalog/datasets/create.md)
 
-#### Daten zuordnen und erfassen
+#### Hinzufügen eines primären Identitäts-Namensraum-Tags zum Dataset
+
+Wenn Sie Daten aus Adobe Audience Manager, Adobe Analytics oder einer anderen externen Quelle eingeben, müssen Sie dem Datensatz ein `primaryIdentityNameSpace` -Tag hinzufügen. Dies kann durch eine PATCH-Anforderung an die Katalogdienst-API erfolgen.
+
+Wenn Sie Daten aus einer lokalen CSV-Datei aufnehmen, können Sie den nächsten Abschnitt über die [Zuordnung und Erfassung von Daten](#ingest)überspringen.
+
+Bevor Sie dem Beispiel-API-Aufruf unten folgen, finden Sie im Abschnitt [&quot;](../catalog/api/getting-started.md) Erste Schritte&quot;im Katalog-Entwicklerhandbuch wichtige Informationen zu den erforderlichen Kopfzeilen.
+
+**API-Format**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{DATASET_ID}` | Die ID des zuvor erstellten Datensatzes. |
+
+**Anfrage**
+
+Je nachdem, aus welcher Quelle Sie Daten abrufen, müssen Sie entsprechende `primaryIdentityNamespace` und `sourceConnectorId` Tag-Werte in der Anforderungsnutzlast angeben.
+
+Mit der folgenden Anforderung werden die entsprechenden Tag-Werte für Audience Manager hinzugefügt:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["mcid"],
+          "sourceConnectorId": ["audiencemanager"],
+        }
+      }'
+```
+
+Die folgende Anforderung fügt die entsprechenden Tag-Werte für Analytics hinzu:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["aaid"],
+          "sourceConnectorId": ["analytics"],
+        }
+      }'
+```
+
+>[!NOTE] Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten Datensatzes enthält. Diese ID sollte mit der in der PATCH-Anforderung gesendeten ID übereinstimmen.
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
+#### Daten zuordnen und erfassen {#ingest}
 
 Nachdem Sie ein CEE-Schema und einen Dataset erstellt haben, können Sie Ihre Datentabellen dem Schema zuordnen und diese Daten in Platform erfassen. Anweisungen dazu, wie Sie dies in der Benutzeroberfläche durchführen, finden Sie im Lernprogramm zum [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md) . Nachdem ein Datensatz gefüllt wurde, kann derselbe Datensatz zum Erfassen zusätzlicher Datendateien verwendet werden.
+
+Wenn Ihre Daten in einer unterstützten Drittanbieteranwendung gespeichert werden, können Sie auch einen [Quellanschluss](../sources/home.md) erstellen, um Ihre Marketing-Ereignis-Daten in Echtzeit in Platform zu erfassen.
 
 ## Nächste Schritte {#next-steps}
 
