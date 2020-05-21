@@ -4,10 +4,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
 workflow-type: tm+mt
-source-wordcount: '775'
-ht-degree: 61%
+source-wordcount: '889'
+ht-degree: 53%
 
 ---
 
@@ -32,9 +32,25 @@ Beachten Sie, dass sich, wenn für ein Ziel bereits ein Aktivierungsfluss vorhan
 5. *Bedingt*. Dieser Schritt unterscheidet sich je nach Zieltyp, in dem Sie Ihre Segmente aktivieren. <br> Wählen Sie für *E-Mail-Marketing-Ziele* und *Cloud-Datenspeicherung-Ziele* auf der Seite &quot;Attribute **[!UICONTROL auswählen]** &quot; **[!UICONTROL Hinzufügen neues Feld]** und wählen Sie die Attribute aus, die Sie an das Ziel senden möchten.
 Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige Kennung](/help/rtcdp/destinations/email-marketing-destinations.md#identity) zu verwenden. Weiterführende Informationen zu obligatorischen Attributen finden Sie unter „Identität“ im Artikel [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
    ![Zielattribute](/help/rtcdp/destinations/assets/select-attributes-step.png)
-Wählen Sie für *Social-Netzwerkziele* im Schritt der **[!UICONTROL Identitätszuordnung]** die Quellattribute aus, die den Identitäten der Zielgruppe zugeordnet werden sollen.
-   ![Identitätszuordnung vor dem Ausfüllen von Feldern](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)In dem unten stehenden Beispiel wurde die persönliche E-Mail-Adresse im Identitäts-Schema bei der Erfassung in Experience Platform gehasht, um die Anforderungen [für das Facebook-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)E-Mail-Hashing zu erfüllen. Klicken Sie nach Auswahl der Zuordnung auf **[!UICONTROL Weiter]** .
-   ![Identitätszuordnung nach dem Ausfüllen von Feldern](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
+   <br> 
+
+   Bei *Social-Zielen* können Sie im Schritt zur **[!UICONTROL Identitätszuordnung]** Quellattribute auswählen, die als Zielgruppen-Identitäten im Ziel zugeordnet werden sollen. Dieser Schritt ist entweder optional oder obligatorisch, je nachdem, welche primäre Identität Sie im Schema verwenden. <br> 
+
+   *E-Mail-Adresse als primäre Identität*: Wenn Sie die E-Mail-Adresse als primäre Identität in Ihrem Schema verwenden, können Sie den Schritt für die Identitätszuordnung überspringen, wie nachfolgend gezeigt:
+
+   ![E-Mail-Adresse als Identität](/help/rtcdp/destinations/assets/email-as-identity.gif)
+
+   <br> 
+
+   *Eine weitere ID als primäre Identität*: Wenn Sie eine andere ID wie *Belohnungs-ID* oder *Loyalität-ID* als primäre Identität in Ihrem Schema verwenden, müssen Sie die E-Mail-Adresse aus Ihrem Identitäts-Schema manuell als Zielgruppen-ID im Social-Ziel zuordnen, wie nachfolgend gezeigt:
+
+   ![Loyalität-ID als Identität](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+
+
+   Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Datenerfassung auf der Adobe Experience Platform entsprechend den Anforderungen [für das](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)E-Mail-Hashing in Facebook Kundenadressen mit Hashing versehen haben. <br> Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Adobe CDP in Echtzeit hash die E-Mail-Adressen, um die Facebook-Anforderungen zu erfüllen.
+
+   ![Identitätszuordnung nach dem Ausfüllen von Feldern](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
