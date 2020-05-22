@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
+source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
 workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 5%
+source-wordcount: '1299'
+ht-degree: 7%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 5%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-- [Adobe Experience Platform – Versionshinweise](#adobe-experience-platform-release-notes)
-   - [Aktualisierungen der Benutzeroberfläche {#ux}](#user-interface-updates-ux)
-   - [Data Science-Arbeitsbereich {#dsw}](#data-science-workspace-dsw)
-   - [Ziele {#destinations}](#destinations-destinations)
-   - [Experience Platform Web SDK und Experience Platform Edge Network {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
-   - [Quellen {#sources}](#sources-sources)
+- [Aktualisierungen der Benutzeroberfläche](#ux)
+- [Data Science-Arbeitsbereich](#dsw)
+- [Ziele](#destinations)
+- [Experience Platform Web SDK und Experience Platform Edge Network](#edge)
+- [Echtzeit-Kundenprofil](#profile)
+- [Quellen](#sources)
 
 ## Aktualisierungen der Benutzeroberfläche {#ux}
 
@@ -100,6 +100,29 @@ Das Experience Platform Web SDK und Experience Platform Edge Network ermögliche
 
 Weitere Informationen zu Platform Web SDK und Edge Network finden Sie in der [Dokumentation](../../edge/home.md).
 
+## Echtzeit-Kundenprofil {#profile}
+
+Mit der Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden bereitstellen, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Mit Echtzeit-Kundendaten können Sie eine ganzheitliche Ansicht jedes einzelnen Profils anzeigen, die Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieterdaten, kombiniert. Mit dem Profil können Sie Ihre unterschiedlichen Kundendaten in einer einheitlichen Sicht zusammenfassen, die ein umsetzbares Konto mit Zeitstempel für jede Kundeninteraktion bietet.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| -----------| ---------- |
+| Neue Profil-Exportmetriken | Es wurden Metriken zu Exportaufträgen für Profile hinzugefügt, die die Gesamtzahl der exportierten Profil und die Anzahl der Profil in jedem Namensraum anzeigen. |
+| Neue Metriken zur Beobachtbarkeit | Die Insight-API für die Observability Insights-Funktion verfügt jetzt über die folgenden Metriken für die Streaming-Erfassung in Profil: Eingehende Anforderungsrate, Erfolgreiche Ingestion-Rate, Aufgenommene Datensatzgröße. |
+| Massen-GET-Endpunkt | Es wurde ein Massen-GET-Endpunkt zur Echtzeit-Kunden-Profil-API hinzugefügt, um das Abrufen mehrerer Ergebnisse in einem einzigen API-Aufruf zu ermöglichen. Für Segmentdefinitionen, Segmentaufträge und Zusammenführungsrichtlinien können Sie jetzt eine Massen-GET-Datei mit bis zu 100 IDs erstellen. |
+| Profil nach Identität durchsuchen | In der Plattform-Benutzeroberfläche können Sie jetzt einen Identitäts-Namensraum auswählen und einen Identitätswert angeben, um ein Profil zu durchsuchen. |
+
+**Fehlerkorrekturen**
+
+- Keine.
+
+**Bekannte Probleme**
+
+- Keine.
+
+Weitere Informationen zum Echtzeit-Profil von Kunden, einschließlich Übungen und Best Practices für die Arbeit mit Profil-Daten, finden Sie in der Übersicht über das [Echtzeit-Kundenerlebnis](../../profile/home.md).
+
 ## Quellen {#sources}
 
 Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie diese Daten mithilfe von Plattformdiensten strukturieren, beschriften und verbessern können. Sie können Daten aus verschiedenen Quellen erfassen, z. B. Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Drittanbieter-Software und Ihr CRM-System.
@@ -116,6 +139,6 @@ Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfl�
 
 **Bekannte Probleme**
 
-- Keine
+- Keine.
 
 Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).
