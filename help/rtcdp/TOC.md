@@ -125,7 +125,7 @@ ht-degree: 38%
    * Übungen zur Benutzeroberfläche &quot;Ziele&quot; {#dest-tutorials}
       * [Mit Ziel verbinden](/help/rtcdp/destinations/connect-destination.md)
       * [Profile und Segmente für ein Ziel aktivieren](destinations/activate-destinations.md)
-   * Ziel-API-Tutorials {API-Tutorials}
+   * Ziel-API-Tutorials {#api-tutorials}
       * [Verbindung zu Streaming-Zielen (AWS Kinesis und Azurblase Ereignis Hubs) und Aktivierung von Daten](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [Verbindungen zu E-Mail-Marketingzielen herstellen und Daten aktivieren](/help/tutorials/destinations/email-marketing-api.md)
 * Datenschutz und Data Governance {#privacy}
