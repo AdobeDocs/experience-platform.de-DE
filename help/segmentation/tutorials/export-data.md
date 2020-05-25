@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Daten mit APIs exportieren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1953'
 ht-degree: 1%
 
 ---
@@ -172,6 +172,9 @@ curl -X POST \
     },
     "schema": {
       "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
   }'
 ```
@@ -192,6 +195,7 @@ curl -X POST \
 | `additionalFields.eventList` | *(Optional)* Steuert die Zeitreihen-Ereignis-Felder, die für untergeordnete oder zugehörige Objekte exportiert werden, indem eine oder mehrere der folgenden Einstellungen bereitgestellt werden:<ul><li>`eventList.fields`: Steuerung der zu exportierenden Felder.</li><li>`eventList.filter`: Gibt Kriterien an, die die Ergebnisse verknüpfter Objekte einschränken. Erwartet einen für den Export erforderlichen Mindestwert, normalerweise ein Datum.</li><li>`eventList.filter.fromIngestTimestamp`: Filter erhalten Zeitreihen-Ereignis zu denen, die nach dem bereitgestellten Zeitstempel erfasst wurden. Dies ist nicht die Ereignis-Zeit selbst, sondern die Aufnahmezeit für die Ereignisse.</li></ul> |
 | `destination` | **(Erforderlich)** Zielinformationen für die exportierten Daten:<ul><li>`destination.datasetId`: **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`destination.segmentPerBatch`: *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig `false`lautet. Beim Wert `false` werden alle Segment-IDs in eine einzige Stapel-ID exportiert. Ein Wert von `true` exportiert eine Segment-ID in eine Stapel-ID. Beachten Sie, dass die Einstellung des Werts sich auf die Exportleistung des Stapels auswirken `true` kann.</li></ul> |
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
+| `evaluationInfo.segmentation` | *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig auf `false`. Der Wert `true` gibt an, dass die Segmentierung für den Exportauftrag durchgeführt werden muss. |
 
 >[!NOTE] Um nur Profil-Daten zu exportieren und keine zugehörigen ExperienceEvent-Daten einzuschließen, entfernen Sie das Objekt &quot;additionalFields&quot;aus der Anforderung.
 
