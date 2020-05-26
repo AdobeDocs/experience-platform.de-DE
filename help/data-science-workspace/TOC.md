@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Data Science Workspace
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '215'
 ht-degree: 4%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 4%
    * [Analysieren Ihrer Daten mithilfe von Notebooks](jupyterlab/analyze-your-data.md)
    * [Abfrage-Service für Jupyter-Notebooks](jupyterlab/query-service.md)
    * [Erstellen eines Skripts mit Jupyter-Notebooks](jupyterlab/create-a-recipe.md)
+   * [Zusammenarbeit in JupyterLab mit Git](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
    * [Erste Schritte](api/getting-started.md)
    * [Motoren](api/engines.md)
