@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über maschinelles Lernen in Echtzeit
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 2%
@@ -61,7 +61,7 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 > Alpha-Beschränkungen:
 > - Derzeit werden nur ONNX-basierte Modelle unterstützt.
 > - Funktionen, die in Knoten verwendet werden, können nicht serialisiert werden. Beispielsweise eine Lambda-Funktion, die in einem Pandas-Knoten verwendet wird.
-> - Nach der manuellen Bereitstellung von Edge wird eine 60-Sekunden-Unterbrechung ausgeführt.
+> - Nach der manuellen Bereitstellung von Edge wird ein 20-Sekunden-Ruhezustand ausgeführt.
 > - Für tiefes Lernen müssen Ihre Daten so gesendet werden, dass, wenn sie genannt `df.values` werden, ein Array zurückgegeben wird, das von Ihrem DL-Modell akzeptiert werden kann. Dies liegt daran, dass der ONNX Modell-Scoring-Knoten verwendet `df.values` und sendet die Ausgabe zu Ergebnis mit dem Modell.
 
 
