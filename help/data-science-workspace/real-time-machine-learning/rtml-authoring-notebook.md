@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch für Notebook-PCs in Echtzeit
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,8 @@ Beginn durch Laden der Schulungsdaten.
 >[!NOTE]
 >In der **Echtzeit-ML** -Vorlage wird der CSV-Dataset [der](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) Fahrzeugversicherung von Github erfasst.
 
+![Laden von Trainingsdaten](../images/rtml/load_training.png)
+
 Wenn Sie einen Datensatz aus Adobe Experience Platform verwenden möchten, heben Sie die Auskommentierung der Zelle unten auf. Als Nächstes müssen Sie `DATASET_ID` den entsprechenden Wert ersetzen.
 
 ![rtml-Datensatz](../images/rtml/rtml-dataset.png)
@@ -114,7 +116,7 @@ Mit der *Echtzeit-ML* -Vorlage müssen Sie Ihr ML-Modell analysieren, vorbereite
 Die Zelle &quot; *Echtzeit-ML* -Vorlagen *Datentransformationen* &quot;muss so geändert werden, dass sie mit Ihrem eigenen Datensatz funktioniert. Dies umfasst in der Regel das Umbenennen von Spalten, die Datenaggregation und die Datenvorbereitung/Funktionstechnik.
 
 >[!NOTE]
->Das folgende Beispiel wurde zur Lesbarkeit mithilfe von `[ ... ]`gekürzt. Bitte Ansicht der *Echtzeit-ML* -Vorlage für die gesamte Codezelle.
+>Das folgende Beispiel wurde zur Lesbarkeit mithilfe von `[ ... ]`gekürzt. Bitte Ansicht und Erweiterung des Bereichs *Echtzeit-ML* -Vorlagen für Datentransformationen für die gesamte Codemelle.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -189,7 +191,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Führen Sie die angegebene Zelle aus, um ein Beispielergebnis anzuzeigen. Die vom `carinsurancedataset.csv` Datensatz zurückgegebene Ausgabentabelle gibt die definierten Änderungen zurück.
+Führen Sie die angegebene Zelle aus, um ein Beispielergebnis anzuzeigen. Die vom `carinsurancedataset.csv` Datensatz zurückgegebene Ausgabentabelle gibt die von Ihnen definierten Änderungen zurück.
 
 ![Beispiel für Datentransformationen](../images/rtml/table-return.png)
 
@@ -237,18 +239,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>Ändern Sie den `model_path` Zeichenfolgenwert (`model.onnx`), um den Namen des Modells zu ändern.
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>Die folgende Zelle ist weder bearbeitbar noch lesbar und wird benötigt, damit Ihre Echtzeitanwendung für maschinelles Lernen funktioniert.
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->Ändern Sie den `model_path` Zeichenfolgenwert, um Ihrem Modell einen Namen zu geben.
 
 ![ONNX-Modell](../images/rtml/onnx-model-rail.png)
 
@@ -272,7 +279,7 @@ In diesem Abschnitt wird die Erstellung einer DSL beschrieben. Sie werden die Kn
 ### Node Authoring
 
 >[!NOTE]
-> Je nach verwendetem Datentyp verfügen Sie wahrscheinlich über mehrere Knoten. Im folgenden Beispiel wird nur eine einzelne Node in der *Echtzeit-ML* -Vorlage umrissen. Bitte Ansicht der *Echtzeit-ML* -Vorlage für die gesamte Codezelle.
+> Je nach verwendetem Datentyp verfügen Sie wahrscheinlich über mehrere Knoten. Im folgenden Beispiel wird nur eine einzelne Node in der *Echtzeit-ML* -Vorlage umrissen. Bitte Ansicht der *Echtzeit-ML* -Vorlagen für *Node Authoring* für die gesamte Codezelle.
 
 Der unten stehende Pandas-Knoten verwendet `"import": "map"` den Methodennamen als Zeichenfolge in die Parameter, gefolgt von der Eingabe der Parameter als Zuordnungsfunktion. Im folgenden Beispiel wird dies mithilfe von `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Nachdem Sie die Karte eingerichtet haben, können Sie sie `inplace` als `True` oder `False`festlegen. Legen Sie `inplace` als `True` oder `False` basierend darauf fest, ob die Transformation angewendet werden soll oder nicht. Standardmäßig `"inplace": False` wird eine neue Spalte erstellt. Die Unterstützung für die Bereitstellung eines neuen Spaltennamens ist so eingestellt, dass er in einer späteren Version hinzugefügt wird. Die letzte Zeile `cols` kann ein einzelner Spaltenname oder eine Liste von Spalten sein. Geben Sie die Spalten an, auf die die Transformation angewendet werden soll. In diesem Beispiel `leasing` wird angegeben. Weitere Informationen zu den verfügbaren Knoten und deren Verwendung finden Sie im [Node Reference Guide](./node-reference.md).
 
@@ -323,7 +330,7 @@ Verbinden Sie dann die Knoten mit Kanten. Jeder Tupel ist eine Edge-Verbindung.
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-Sobald Ihre Knoten verbunden sind, erstellen Sie das Diagramm.
+Sobald Ihre Knoten verbunden sind, erstellen Sie das Diagramm. Die nachstehende Zelle ist obligatorisch und kann nicht bearbeitet oder gelöscht werden.
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -413,10 +420,33 @@ Verwenden Sie die folgende Zelle in der *Echtzeit-ML* -Vorlage, um das Ergebnis 
 
 Sobald die Bewertung abgeschlossen ist, werden die Edge-URL, die Nutzlast und die Ergebnisausgabe vom Edge zurückgegeben.
 
-## Löschen einer bereitgestellten App aus Edge (optional)
+## Liste der bereitgestellten Apps vom Edge
 
->!![CAUTION]
-Diese Zelle wird zum Löschen der bereitgestellten Edge-Anwendung verwendet. Verwenden Sie die folgende Zelle nur, wenn Sie eine bereitgestellte Edge-Anwendung löschen müssen.
+Führen Sie folgende Codezelle aus, um eine Liste der aktuell bereitgestellten Apps am Rand zu erstellen. Diese Zelle kann nicht bearbeitet oder gelöscht werden.
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+Die zurückgegebene Antwort ist ein Array Ihrer bereitgestellten Dienste.
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40eq76c0-1c6f-427a-8f8f-54y9cdf041b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
+
+## Eine bereitgestellte App oder Dienst-ID aus der Edge löschen (optional)
+
+>[!CAUTION]
+>Diese Zelle wird zum Löschen der bereitgestellten Edge-Anwendung verwendet. Verwenden Sie die folgende Zelle nur, wenn Sie eine bereitgestellte Edge-Anwendung löschen müssen.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
