@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines MySQL-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 1%
+source-wordcount: '586'
+ht-degree: 2%
 
 ---
 
@@ -36,9 +36,10 @@ Damit der Flow-Dienst eine Verbindung zu Ihrer MySQL-Datenspeicherung herstellen
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die mit Ihrem Konto verknüpfte MySQL-Verbindungszeichenfolge. |
+| `connectionString` | Die mit Ihrem Konto verknüpfte MySQL-Verbindungszeichenfolge. Das Muster für die Verbindungszeichenfolge lautet: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | Die ID, mit der eine Verbindung generiert wird. Die Spezial-ID für die Verbindung für MySQL ist `26d738e0-8963-47ea-aadf-c60de735468a`festgelegt. |
 
-Weitere Informationen zu Verbindungs-Zeichenfolgen und zum Abrufen dieser Zeichenfolgen finden Sie im [MySQL-Dokument](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
+Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [diesem MySQL-Dokument](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -60,77 +61,9 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindungsspezifikationen nachschlagen
+## Verbindung herstellen
 
-Um eine MySQL-Verbindung zu erstellen, muss ein Satz von MySQL-Verbindungsspezifikationen im Flow-Dienst vorhanden sein. Der erste Schritt beim Verbinden von Platform mit MySQL besteht darin, diese Spezifikationen abzurufen.
-
-**API-Format**
-
-Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Beim Senden einer GET-Anforderung an den `/connectionSpecs` Endpunkt werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können auch die Abfrage einschließen, Informationen speziell für MySQL `property=name=="mysql"` zu erhalten.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="mysql"
-```
-
-**Anfrage**
-
-Die folgende Anforderung ruft die Verbindungsspezifikation für MySQL ab.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="mysql"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für MySQL einschließlich der eindeutigen Kennung (`id`) zurück. Diese ID ist im nächsten Schritt zum Erstellen einer Basisverbindung erforderlich.
-
-```json
-{
-    "items": [
-        {
-            "id": "26d738e0-8963-47ea-aadf-c60de735468a",
-            "name": "mysql",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionStringAuth",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to MySql",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any MySql instance.",
-                                "format": "password",
-                                "pattern": "^([sS]erver=)(.*)( ?;[pP]ort=)(.*)(; ?[dD]atabase=)(.*)(; ?[uU]id=)(.*)(; ?[pP]wd=)(.*)(;)",
-                                "examples": [
-                                    "Server=myserver.mysql.database.azure.com; Port=3306; Database=my_sql_db; Uid=username; Pwd=password; SslMode=Preferred;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Basisverbindung erstellen
-
-Eine Basisverbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro MySQL-Konto ist nur eine Basisverbindung erforderlich, da diese zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro MySQL-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **Anfrage**
+
+Um eine MySQL-Verbindung zu erstellen, muss die eindeutige Verbindungsspezifikations-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungsspezifikations-ID für MySQL ist `26d738e0-8963-47ea-aadf-c60de735468a`.
 
 ```shell
 curl -X POST \
@@ -154,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -166,12 +101,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die mit Ihrem MySQL-Konto verknüpfte Verbindungszeichenfolge. |
-| `connectionSpec.id` | Die ID der Verbindungsspezifikation für Ihr MySQL-Konto. |
+| `auth.params.connectionString` | Die mit Ihrem Konto verknüpfte MySQL-Verbindungszeichenfolge. Das Muster für die Verbindungszeichenfolge lautet: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | Die Spezic-ID für feste Verbindungen für MySQL: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Diese ID ist erforderlich, um Ihre Daten im nächsten Lernprogramm zu untersuchen.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Diese ID ist erforderlich, um Ihre Datenbank im nächsten Lernprogramm zu untersuchen.
 
 ```json
 {
@@ -182,4 +117,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einsch
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine MySQL-Basisverbindung mit der Flow Service API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Basis-Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken oder NoSQL-Systeme mit der Flow Service API [erkunden können](../../explore/database-nosql.md).
+In diesem Lernprogramm haben Sie eine MySQL-Verbindung mit der Flow Service API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken oder NoSQL-Systeme mit der Flow Service API [erkunden können](../../explore/database-nosql.md).
