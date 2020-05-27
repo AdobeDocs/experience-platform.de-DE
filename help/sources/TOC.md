@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
+source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
          - [Zuordnungsfelder für Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Zielgruppen-Mapping-Felder](connectors/adobe-applications/mapping/target.md)
    - Werbung {#advertising}
-      - [Google Ads Connector](connectors/advertising/ads.md)
+      - [Google AdWords Connector](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
       - [Amazon Kinesis Connector](connectors/cloud-storage/kinesis.md)
       - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
@@ -65,7 +65,7 @@ ht-degree: 2%
 - API-Lernprogramme {#api-tutorials}
    - Erstellen eines Quell-Connectors {#create}
       - Werbung {#advertising}
-         - [Google Ads Connector](tutorials/api/create/advertising/ads.md)
+         - [Google AdWords Connector](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
          - [Amazon-Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3 Connector](tutorials/api/create/cloud-storage/s3.md)
@@ -132,7 +132,7 @@ ht-degree: 2%
          - [Adobe Audience Manager Connector](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connector für Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Werbung {#create}
-         - [Google Ads Connector](tutorials/ui/create/advertising/ads.md)
+         - [Google AdWords Connector](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
          - [Amazon-Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](tutorials/ui/create/cloud-storage/adls-gen2.md)
