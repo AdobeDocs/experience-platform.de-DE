@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines HP Vertica-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Damit der Flow-Dienst eine Verbindung mit HP Vertica herstellen kann, müssen Si
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer HP Vertica-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für HP Vertica ist `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer HP Vertica-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für HP Vertica ist `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | Der zum Erstellen einer Verbindung erforderliche Bezeichner. Die spezifizierte ID für feste Verbindungen für HP Vertica lautet: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 Weitere Informationen zum Erwerb einer Verbindungszeichenfolge finden Sie in [diesem HP Vertica-Dokument](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
@@ -47,7 +47,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](https://docs.adobe.com/content/help/en/experience-platform/tutorials/authentication.html)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](https://docs.adobe.com/content/help/en/experience-platform/tutorials/authentication.html)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die mit Ihrem HP Vertica-Konto verknüpfte Verbindungszeichenfolge. |
+| `auth.params.connectionString` | Die mit Ihrem HP Vertica-Konto verknüpfte Verbindungszeichenfolge. Das Verbindungszeichenfolgen-Muster für HP Vertica lautet: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | Die HP Vertica-Verbindungs-spec-ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Antwort**
