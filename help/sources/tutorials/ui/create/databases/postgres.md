@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines PostgreSQL-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Um auf Ihr PSQL-Konto auf Plattform zugreifen zu können, müssen Sie den folgen
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die mit Ihrem PSQL-Konto verknüpfte Verbindungszeichenfolge. |
+| `connectionString` | Die mit Ihrem PSQL-Konto verknüpfte Verbindungszeichenfolge. Das Muster der PSQL-Verbindungszeichenfolge lautet: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
 Weitere Informationen zum Einstieg finden Sie in diesem [PSQL-Dokument](https://www.postgresql.org/docs/9.2/app-psql.html).
 
