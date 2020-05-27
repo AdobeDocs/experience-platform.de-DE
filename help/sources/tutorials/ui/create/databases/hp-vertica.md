@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines HP Vertica-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer HP Vertica-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für HP Vertica ist `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer HP Vertica-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für HP Vertica ist `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 Weitere Informationen zum Einstieg finden Sie in [diesem HP Vertica Dokument](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
