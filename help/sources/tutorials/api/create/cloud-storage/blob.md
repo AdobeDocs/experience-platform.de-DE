@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Azurblauch-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 2%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -35,9 +35,10 @@ Damit der Flow-Dienst eine Verbindung zu Ihrer Blob-Datenspeicherung herstellen 
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, die für den Zugriff auf Daten in Ihrer Blob-Datenspeicherung erforderlich ist. |
+| `connectionString` | Die Verbindungszeichenfolge, die für den Zugriff auf Daten in Ihrer Blob-Datenspeicherung erforderlich ist. Das Muster für die Zeichenfolge der Blob-Verbindung lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für Blob lautet: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-Für weitere Informationen über den Einstieg besuchen Sie [dieses blaue Blob Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie im [folgenden Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string):
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -71,6 +72,8 @@ POST /connections
 
 **Anfrage**
 
+Um eine Blob-Verbindung zu erstellen, muss die eindeutige Verbindungs-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungsspezifikations-ID für Blob ist `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+
 ```shell
 curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -85,7 +88,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -97,8 +100,8 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge für Ihre Blob-Datenspeicherung. |
-| `connectionSpec.id` | Verbindungs-ID der Blob Datenspeicherung: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die für den Zugriff auf Daten in Ihrer Blob-Datenspeicherung erforderlich ist. Das Muster für die Zeichenfolge der Blob-Verbindung lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | Die Verbindungs-ID der Blob-Datenspeicherung lautet: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Antwort**
 
