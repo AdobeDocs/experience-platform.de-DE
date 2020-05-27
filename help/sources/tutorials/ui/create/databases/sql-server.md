@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Microsoft SQL Server-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Um eine Verbindung zu SQL Server on Platform herzustellen, müssen Sie die folge
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die mit Ihrem SQL Server-Konto verknüpfte Verbindungszeichenfolge. |
+| `connectionString` | Die mit Ihrem SQL Server-Konto verknüpfte Verbindungszeichenfolge. Das Muster der SQL Server-Verbindungszeichenfolge lautet: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 
 Weitere Informationen zum Einstieg in SQL Server finden Sie in [diesem Dokument](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) .
 
