@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines SQL Server-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '607'
 ht-degree: 1%
 
 ---
@@ -36,9 +36,10 @@ Um eine Verbindung zu SQL Server herzustellen, müssen Sie die folgende Verbindu
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die mit Ihrem SQL Server-Konto verknüpfte Verbindungszeichenfolge. |
+| `connectionString` | Die mit Ihrem SQL Server-Konto verknüpfte Verbindungszeichenfolge. Das Muster der SQL Server-Verbindungszeichenfolge lautet: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | Die ID, mit der eine Verbindung generiert wird. Die spezifizierte ID für feste Verbindungen für SQL Server ist `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`festgelegt. |
 
-Weitere Informationen zum Einstieg in SQL Server finden Sie in [diesem Dokument](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) .
+Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [diesem SQL Server-Dokument](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -60,77 +61,9 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 * Content-Type: `application/json`
 
-## Verbindungsspezifikationen nachschlagen
+## Verbindung herstellen
 
-Um eine SQL Server-Verbindung zu erstellen, muss ein Satz von SQL Server-Verbindungsspezifikationen innerhalb des Flow-Dienstes vorhanden sein. Der erste Schritt beim Verbinden von Platform mit SQL Server besteht darin, diese Spezifikationen abzurufen.
-
-**API-Format**
-
-Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Beim Senden einer GET-Anforderung an den `/connectionSpecs` Endpunkt werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können auch die Abfrage einschließen, Informationen speziell für SQL Server `property=name=="sql-server"` zu erhalten.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sql-server"
-```
-
-**Anfrage**
-
-Die folgende Anforderung ruft die Verbindungsspezifikationen für SQL Server ab.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sql-server"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für SQL Server einschließlich der eindeutigen Kennung (`id`) zurück. Diese ID ist im nächsten Schritt erforderlich, um eine Basisverbindung zu erstellen.
-
-```json
-{
-    "items": [
-        {
-            "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-            "name": "sql-server",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to SQL Server database",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any SQL Server database.",
-                                "format": "password",
-                                "pattern": "^(Data Source=)(.*)(;Initial Catalog=)(.*)(;Integrated Security=)(.*)(;User ID=)(.*)(;Password=)(.*)(;)",
-                                "examples": [
-                                    "Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Basisverbindung erstellen
-
-Eine Basisverbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro SQL Server-Konto ist nur eine Basisverbindung erforderlich, da diese zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro SQL Server-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **Anfrage**
+
+Um eine SQL Server-Verbindung zu erstellen, muss die eindeutige Verbindungsspezifikations-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungsspezifikations-ID für SQL Server ist `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
 
 ```shell
 curl -X POST \
@@ -154,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
             }
         },
         "connectionSpec": {
@@ -165,12 +100,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die mit der SQL Server-Authentifizierung verknüpfte Verbindungszeichenfolge. |
-| `connectionSpec.id` | Die Verbindungsspezifikation (`id`), die im vorherigen Schritt erfasst wurde. |
+| `auth.params.connectionString` | Die mit Ihrem SQL Server-Konto verknüpfte Verbindungszeichenfolge. Das Muster der SQL Server-Verbindungszeichenfolge lautet: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID für SQL Server lautet: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Diese ID ist erforderlich, um Ihre Daten im nächsten Lernprogramm zu untersuchen.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Datenbank im nächsten Lernprogramm zu untersuchen.
 
 ```json
 {
@@ -181,4 +116,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einsch
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine SQL Server-Basisverbindung mit der Flow Service API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Basis-Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken oder NoSQL-Systeme mit der Flow Service API [erkunden können](../../explore/database-nosql.md).
+In diesem Lernprogramm haben Sie eine SQL Server-Verbindung mit der Flow Service API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken oder NoSQL-Systeme mit der Flow Service API [erkunden können](../../explore/database-nosql.md).
