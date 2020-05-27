@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Azurblase-Synapse-Analytics-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 2%
+source-wordcount: '603'
+ht-degree: 1%
 
 ---
 
@@ -36,10 +36,10 @@ Damit der Flow-Dienst eine Verbindung mit Synapse herstellen kann, müssen Sie W
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, die zum Herstellen einer Verbindung mit Azurblase Synapse Analytics verwendet wird. |
+| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Synapse hergestellt wird. Das Muster für die Verbindungszeichenfolge &quot;Synapse&quot;lautet `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für Synapse lautet: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
-Weitere Informationen zu den ersten Schritten finden Sie in [diesem Synapse-Dokument](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
+Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [diesem Synapse-Dokument](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -47,7 +47,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
             }
         },
         "connectionSpec": {
@@ -101,12 +101,12 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die mit Ihrem Synapse-Konto verknüpfte Verbindungszeichenfolge. |
-| `connectionSpec.id` | Die Verbindungs-ID der Synapse-Verbindung: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Synapse hergestellt wird. Das Muster für die Verbindungszeichenfolge &quot;Synapse&quot;lautet `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionSpec.id` | Die Verbindungs-ID für die Synapse-Verbindung lautet: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Lernprogramm zu untersuchen.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Datenbank im nächsten Lernprogramm zu untersuchen.
 
 ```json
 {
