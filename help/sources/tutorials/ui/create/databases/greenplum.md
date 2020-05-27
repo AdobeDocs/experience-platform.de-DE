@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines GreenPlum-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer GreenPlum-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für GreenPlum ist `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer GreenPlum-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für GreenPlum ist `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 Weitere Informationen zum Einstieg finden Sie in [diesem GreenPlum Dokument](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
 
