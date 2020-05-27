@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Oracle DB-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Um auf Ihr Oracle-Konto auf Plattform zugreifen zu können, müssen Sie die folg
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Oracle hergestellt wird. Das Muster der Oracle-Verbindungszeichenfolge lautet: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Oracle hergestellt wird. Das Muster der Oracle-Verbindungszeichenfolge lautet: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für Oracle lautet `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Weitere Informationen zum Einstieg finden Sie in [diesem Oracle-Dokument](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
