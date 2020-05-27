@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines MariaDB-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Um auf Ihr Maria DB-Konto auf der Plattform zuzugreifen, müssen Sie den folgend
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die mit Ihrer MariaDB-Authentifizierung verknüpfte Verbindungszeichenfolge. |
+| `connectionString` | Die mit Ihrer MariaDB-Authentifizierung verknüpfte Verbindungszeichenfolge. Das Muster für die MariaDB-Verbindungszeichenfolge lautet: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 Weitere Informationen zu den ersten Schritten mit MariaDB finden Sie in [diesem Dokument](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) .
 
