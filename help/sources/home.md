@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform-Quellschnittstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Mit Experience Platform können Daten aus anderen Adobe-Anwendungen, einschließ
 
 Experience Platform unterstützt die Erfassung von Daten aus einem Drittanbieteranzeigesystem. Weitere Informationen zu bestimmten Quellschnittstellen finden Sie in den folgenden Dokumenten:
 
-- [Google Ads Connector](connectors/advertising/ads.md)
+- [Google AdWords Connector](connectors/advertising/ads.md)
 
 ### Cloud-Speicherplatz
 
@@ -114,7 +114,7 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche auf der Grundlage v
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
 | **Ansicht-Quellen** auf | Gewähren Sie schreibgeschützten Zugriff auf Quellen in jedem Quelltyp auf der Registerkarte &quot; *Katalog* &quot;sowie auf die Registerkarten &quot; *Durchsuchen*&quot;, &quot; *Konten*&quot;und &quot; *DataFlow* &quot;. |
-| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen in den **Ansichten-Quellen** Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
+| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen, die in den **Ansichten-Quellen** enthalten sind, Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
 | **Ansicht-Quellen** deaktivieren und Quellen **verwalten** deaktivieren | Sperren Sie den Zugriff auf alle Quellen. |
 
 Weitere Informationen zu den verfügbaren Berechtigungen, die über die Admin-Konsole erteilt wurden, einschließlich dieser vier Quellen, finden Sie in der Übersicht über die [Zugriffskontrolle](../access-control/home.md).
