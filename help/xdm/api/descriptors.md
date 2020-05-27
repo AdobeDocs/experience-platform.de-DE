@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Deskriptoren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1499'
 ht-degree: 1%
 
 ---
@@ -304,20 +304,25 @@ Ein Identitätsdeskriptor signalisiert, dass &quot;sourceProperty&quot;des &quot
 
 #### Anzeigename-Deskriptor
 
-Mit benutzerfreundlichen Namensdeskriptoren können Sie die `title` und `description` Werte der Schema-Kernfelder der Bibliothek ändern. Besonders nützlich bei der Arbeit mit &quot;eVars&quot;und anderen &quot;generischen&quot;Feldern, die als mit unternehmensspezifischen Informationen gekennzeichnete Felder gekennzeichnet werden sollen. Die Benutzeroberfläche kann diese verwenden, um einen benutzerfreundlicheren Namen anzuzeigen oder nur Felder mit einem benutzerfreundlichen Namen anzuzeigen.
+Mit benutzerfreundlichen Namensdeskriptoren können Sie die Schema-Felder `title`, `description`und `meta:enum` Werte der Hauptbibliothek ändern. Besonders nützlich bei der Arbeit mit &quot;eVars&quot;und anderen &quot;generischen&quot;Feldern, die als mit unternehmensspezifischen Informationen gekennzeichnete Felder gekennzeichnet werden sollen. Die Benutzeroberfläche kann diese verwenden, um einen benutzerfreundlicheren Namen anzuzeigen oder nur Felder mit einem benutzerfreundlichen Namen anzuzeigen.
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -329,6 +334,7 @@ Mit benutzerfreundlichen Namensdeskriptoren können Sie die `title` und `descrip
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, die die Identität sein soll. Pfad sollte mit einem &quot;/&quot;beginnen und nicht mit einem enden. &quot;Eigenschaften&quot;nicht in den Pfad einschließen (z. B. &quot;/personalEmail/address&quot;anstelle von &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | Der neue Titel, den Sie für dieses Feld anzeigen möchten, geschrieben in der Titelleiste. |
 | `xdm:description` | Eine optionale Beschreibung kann zusammen mit dem Titel hinzugefügt werden. |
+| `meta:enum` | Wenn das angegebene Feld ein Zeichenfolgenfeld `xdm:sourceProperty` ist, bestimmt `meta:enum` es die Liste der vorgeschlagenen Werte für das Feld in der Benutzeroberfläche der Experience Platform. Beachten Sie, dass keine Auflistung deklariert oder eine Datenvalidierung für das XDM-Feld bereitgestellt `meta:enum` wird.<br><br>Dies sollte nur für von Adobe definierte Kern-XDM-Felder verwendet werden. Wenn die source-Eigenschaft ein benutzerdefiniertes Feld ist, das von Ihrem Unternehmen definiert wird, sollten Sie die `meta:enum` Eigenschaft des Felds stattdessen direkt über eine [PUT-Anforderung](./update-resource.md)bearbeiten. |
 
 #### Beziehungsdeskriptor
 
