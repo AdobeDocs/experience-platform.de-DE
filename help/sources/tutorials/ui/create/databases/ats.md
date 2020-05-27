@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Quellconnectors für die Datenspeicherung eines Blauen Diagramms in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 >Der Datenspeicherung-Stecker aus dem Azurblauen Tisch ist in Beta. Die Funktionen und Dokumentation können sich ändern.
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm wird beschrieben, wie Sie mit der Plattform-Benutzeroberfläche einen Azurblauen Tabelle-Datenspeicherung-Quellanschluss (im Folgenden &quot;ATS&quot;) erstellen können.
+Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm wird beschrieben, wie Sie mit der Plattform-Benutzeroberfläche einen Azurblauen Tabelle-Datenspeicherung (im Folgenden &quot;ATS&quot;)-Quellanschluss erstellen können.
 
 ## Erste Schritte
 
@@ -36,7 +36,7 @@ Um auf Ihr ATS-Konto auf Plattform zugreifen zu können, müssen Sie die folgend
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Eine Verbindungszeichenfolge zum Herstellen einer Verbindung mit der Datenspeicherung der Azurblauen Tabelle. |
+| `connectionString` | Eine Verbindungszeichenfolge zum Herstellen einer Verbindung mit der Datenspeicherung der Azurblauen Tabelle. Die Verbindungszeichenfolge, mit der eine Verbindung zur ATS-Instanz hergestellt werden soll. Das Verbindungszeichenfolgen-Muster für ATS ist `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`festgelegt. |
 
 Weitere Informationen zu den ersten Schritten finden Sie in [diesem Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)zur Datenspeicherung der Blaue Tabelle.
 
