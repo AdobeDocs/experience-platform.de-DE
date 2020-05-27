@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Azurblauch- oder Amazon S3-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
@@ -37,15 +37,28 @@ Experience Platform unterstützt die folgenden Dateiformate, die aus externen Da
 
 ### Erforderliche Berechtigungen erfassen
 
-Um auf Ihre Blob-Datenspeicherung auf Platform zugreifen zu können, müssen Sie eine gültige Verbindungszeichenfolge für die **Datenspeicherung** bereitstellen. Sie können mehr über Verbindungs-Zeichenfolgen erfahren, einschließlich Möglichkeiten, sie durch <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">dieses Microsoft-Azurblase-Dokument</a>zu erhalten.
+Um auf Ihre Blob-Datenspeicherung auf Plattform zugreifen zu können, müssen Sie einen gültigen Wert für die folgende Berechtigung angeben:
 
-Für den Zugriff auf den S3-Behälter auf der Plattform müssen Sie Ihren **S3-Zugriffsschlüssel** und **S3-Geheimschlüssel** angeben. For more information, refer to <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">this AWS document</a>.
+| Berechtigung | Beschreibung |
+| ---------- | ----------- |
+| `connectionString` | Die Verbindungszeichenfolge, die für den Zugriff auf Daten in Ihrer Blob-Datenspeicherung erforderlich ist. Das Muster für die Zeichenfolge der Blob-Verbindung lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+
+Für weitere Informationen über den Einstieg besuchen Sie [dieses blaue Blob Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+
+Für den Zugriff auf den S3-Behälter auf der Plattform müssen Sie außerdem gültige Werte für die folgenden Anmeldeinformationen angeben:
+
+| Berechtigung | Beschreibung |
+| ---------- | ----------- |
+| `s3AccessKey` | Die Zugriffsschlüssel-ID für Ihre S3-Datenspeicherung. |
+| `s3SecretKey` | Die geheime Schlüssel-ID für Ihre S3-Datenspeicherung. |
+
+Weitere Informationen zum Einstieg finden Sie in [diesem AWS-Dokument](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/).
 
 ## Verbinden Sie Ihr Blob- oder S3-Konto
 
 Wenn die Anmeldeinformationen Ihrer Cloud-Datenspeicherung fertig sind, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, um Ihr Blob- oder S3-Konto mit Platform zu verknüpfen.
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
 
 Wählen Sie unter der Kategorie &quot; *Cloud-Datenspeicherung* &quot;entweder **Azurblase-Datenspeicherung** oder **Amazon S3** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zur Ansicht der Dokumentation oder zur Verbindung mit der Quelle. Um eine neue eingehende Basisverbindung zu erstellen, klicken Sie auf Quelle **verbinden**.
 
