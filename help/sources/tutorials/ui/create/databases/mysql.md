@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines MySQL-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Um auf Ihr MySQL-Konto auf Plattform zugreifen zu können, müssen Sie den folge
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die mit Ihrem Konto verknüpfte MySQL-Verbindungszeichenfolge. |
+| `connectionString` | Die mit Ihrem Konto verknüpfte MySQL-Verbindungszeichenfolge. Das Muster für die Verbindungszeichenfolge lautet: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 Weitere Informationen zu Verbindungs-Zeichenfolgen und zum Abrufen dieser Zeichenfolgen finden Sie im [MySQL-Dokument](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
