@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen eines Google Ads-Connectors mithilfe der Flow Service API
+title: Erstellen eines Google AdWords-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 950fa88ed6c9235bff98658763b662113bb76caa
+source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 1%
@@ -12,11 +12,11 @@ ht-degree: 1%
 ---
 
 
-# Erstellen eines Google Ads-Connectors mithilfe der Flow Service API
+# Erstellen eines Google AdWords-Connectors mithilfe der Flow Service API
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zur Verbindung von Experience Platform mit Google Ads zu führen.
+In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zur Verbindung von Experience Platform mit Google AdWords zu führen.
 
 ## Erste Schritte
 
@@ -29,18 +29,18 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Erforderliche Berechtigungen erfassen
 
-Damit der Flow-Dienst eine Verbindung mit Anzeigen herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften bereitstellen:
+Damit der Flow-Dienst eine Verbindung mit AdWords herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften bereitstellen:
 
 | **Berechtigung** | **Beschreibung** |
 | -------------- | --------------- |
-| Kunden-ID des Kunden | Die Kunden-ID des Ads-Kontos. |
+| Kunden-ID des Kunden | Die Kunden-ID des AdWords-Kontos. |
 | Entwickler-Token | Das mit dem Managerkonto verknüpfte Entwicklertoken. |
-| Token aktualisieren | Das Aktualisierungstoken, das von Google für die Autorisierung des Zugriffs auf Anzeigen erhalten wurde. |
+| Token aktualisieren | Das Aktualisierungstoken, das von Google für die Autorisierung des Zugriffs auf AdWords erhalten wurde. |
 | Client-ID | Die Client-ID der Google-Anwendung, mit der das Aktualisierungstoken erfasst wurde. |
 | Kundengeheimnis | Das Clientgeheimnis der Google-Anwendung, das zum Abrufen des Aktualisierungstokens verwendet wurde. |
-| Verbindungs-ID | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungsspezifikations-ID für Google Ads lautet: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| Verbindungs-ID | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungsspezifikations-ID für Google AdWords lautet: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
-Weitere Informationen zu diesen Werten finden Sie in diesem [Google Ads-Dokument](https://developers.google.com/adwords/api/docs/guides/authentication).
+Weitere Informationen zu diesen Werten finden Sie in diesem [Google AdWords-Dokument](https://developers.google.com/adwords/api/docs/guides/authentication).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -64,7 +64,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 ## Verbindung herstellen
 
-Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Google Ads-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro Google AdWords-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -74,7 +74,7 @@ POST /connections
 
 **Anfrage**
 
-Um eine Google Ads-Verbindung zu erstellen, muss die eindeutige Verbindungs-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungsspezifikations-ID für Google Ads lautet `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+Um eine Google AdWords-Verbindung zu erstellen, muss die eindeutige Verbindungs-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungsspezifikations-ID für Google AdWords lautet `221c7626-58f6-4eec-8ee2-042b0226f03b`.
 
 ```shell
 curl -X POST \
@@ -85,8 +85,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "google-ads connection",
-        "description": "Connection for google-ads",
+        "name": "google-AdWords connection",
+        "description": "Connection for google-AdWords",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -107,12 +107,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | Die Kunden-ID Ihres Anzeigenkontos. |
-| `auth.params.developerToken` | Das Entwicklertoken Ihres Anzeigenkontos. |
-| `auth.params.refreshToken` | Das Aktualisierungstoken Ihres Anzeigenkontos. |
-| `auth.params.clientID` | Die Client-ID Ihres Anzeigenkontos. |
-| `auth.params.clientSecret` | Das Kundengeheimnis Ihres Anzeigenkontos. |
-| `connectionSpec.id` | Die Google Ads-Verbindungs-ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | Die Client-Kunden-ID Ihres AdWords-Kontos. |
+| `auth.params.developerToken` | Das Entwicklertoken Ihres AdWords-Kontos. |
+| `auth.params.refreshToken` | Das Aktualisierungstoken Ihres AdWords-Kontos. |
+| `auth.params.clientID` | Die Client-ID Ihres AdWords-Kontos. |
+| `auth.params.clientSecret` | Das Kundengeheimnis Ihres AdWords-Kontos. |
+| `connectionSpec.id` | Die Google AdWords-Verbindungs-ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Antwort**
 
@@ -127,4 +127,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine Google Ads-Verbindung mit der Flow Service API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie mithilfe der Flow Service API [Werbetechnologien](../../explore/advertising.md)untersuchen.
+In diesem Lernprogramm haben Sie eine Google AdWords-Verbindung mit der Flow Service API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie mithilfe der Flow Service API [Werbetechnologien](../../explore/advertising.md)untersuchen.
