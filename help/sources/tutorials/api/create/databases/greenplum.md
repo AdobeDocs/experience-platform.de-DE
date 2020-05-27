@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines GreenPlum-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '566'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer GreenPlum-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für GreenPlum ist `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer GreenPlum-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für GreenPlum ist `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | Der zum Erstellen einer Verbindung erforderliche Bezeichner. Die feste Verbindungs-spec-ID für GreenPlum ist `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 Weitere Informationen zum Erwerb einer Verbindungszeichenfolge finden Sie in [diesem GreenPlum-Dokument](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
             "params": {
-                    "connectionString": "HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>"
+                    "connectionString": "HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die mit Ihrem GreenPlum-Konto verknüpfte Verbindungszeichenfolge. |
-| `connectionSpec.id` | Die DB2-Verbindungs-Spezifikations-ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einem GreenPlum-Konto hergestellt wird. Das Verbindungszeichenfolgen-Muster lautet: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | Die GreenPlum-Verbindungs-Spec-ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **Antwort**
 
