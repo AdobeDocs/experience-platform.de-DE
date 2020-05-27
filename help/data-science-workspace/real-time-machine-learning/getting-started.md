@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erste Schritte mit maschinellem Lernen in Echtzeit
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Um maschinelles Lernen in Echtzeit nutzen zu können, benötigen Sie Zugriff auf
 
 Die Leitfäden für Echtzeit-Maschinelles Lernen erfordern ein funktionierendes Verständnis von Python 3, [Jupyter-Notebooks](../jupyterlab/overview.md), Datenwissenschaft und maschinellem Lernen.
 
-Schlüsselbegriffe:
+**Schlüsselbegriffe:**
 
 - **DSL:** Domänenspezifische Sprache.
 - **Kante:** Der Dienst für maschinelles Lernen in Echtzeit kann auf Edge-Clustern ausgeführt werden, die näher an Ihren Aktivierungen und Anwendungen liegen.
