@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Datenspeicherung-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -36,10 +36,10 @@ Damit der Flow-Dienst eine Verbindung mit ATS herstellen kann, müssen Sie Werte
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge für die Verbindung mit der Datenspeicherung der Azurblauen Tabelle. |
-| `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für ATS lautet `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einer ATS-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für ATS lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | Die ID, mit der eine Verbindung generiert wird. Die spezifizierte ID für feste Verbindungen für ATS ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`festgelegt. |
 
-Weitere Informationen zum Einstieg finden Sie in [diesem ATS-Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
+Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [diesem ATS-Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Anfrage**
 
-Um eine ATS-Verbindung zu erstellen, muss die eindeutige Verbindungs-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungs-Spezifikations-ID für ATS lautet `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+Um eine ATS-Verbindung zu erstellen, muss die eindeutige Verbindungsspezifikations-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungs-spec-ID für ATS ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -101,8 +101,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die mit Ihrem ATS-Konto verknüpfte Verbindungszeichenfolge. |
-| `connectionSpec.id` | Die ATS-Verbindungs-ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einer ATS-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für ATS lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | Die ATS-Verbindungs-Spec-ID lautet: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Antwort**
 
