@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
+source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 2%
+source-wordcount: '526'
+ht-degree: 4%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 2%
 # Übersicht über Adobe Experience Platform
 
 >[!NOTE]
+>
 >Die Dokumentation zu Adobe Experience Platform wurde kürzlich verschoben. Bitte nehmen Sie sich einen Moment Zeit, um die neue Navigation zu überprüfen und vorhandene Lesezeichen zu aktualisieren.
 
 Adobe Experience Platform ist das leistungsfähigste, flexibelste und offenste System auf dem Markt, um vollständige Lösungen zu entwickeln und zu verwalten, die das Kundenerlebnis fördern. Die Experience Platform ermöglicht Unternehmen die Zentralisierung und Standardisierung von Kundendaten und -inhalten aus allen Systemen sowie die Anwendung von Datenwissenschaft und maschinellem Lernen, um die Gestaltung und den Versand von komplexen, personalisierten Erlebnissen erheblich zu verbessern.
@@ -42,6 +43,10 @@ Von Zeit zu Zeit erhalten Sie möglicherweise eine Umfrage für weitere Feedback
 ## Übungen zur Erlebnisplattform
 
 Beginnen Sie schnell und einfach mit Platform, indem Sie sich mit schrittweisen Übungen für alles - von der Vorbereitung Ihrer Daten für die Erfassung bis hin zu fortgeschrittenen Algorithmen für das maschinelle Lernen - beschäftigen. Diese Lernprogramme wurden entwickelt, um die in der Experience Platform-Dokumentation enthaltenen Informationen zu ergänzen. Damit die besten Ergebnisse erzielt werden können, sollten die Dokumente während des Abschlusses der Lernprogramme zur Verfügung stehen. Die ersten Schritte finden Sie in den Tutorials [zur](../tutorials/home.md) Erlebnisplattform.
+
+## Videoschulungen
+
+Sehen Sie sich [Video-Tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) für eine Vielzahl von Themen der Erlebnisplattform an.
 
 ## Referenz-Dokumente und -Ressourcen
 
