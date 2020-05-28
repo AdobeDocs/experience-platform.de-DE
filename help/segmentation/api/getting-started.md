@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Entwicklerhandbuch für Segmentdienst
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 1%
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
@@ -86,6 +86,10 @@ For more information on using this endpoint, please read the [segment definition
 Segmentaufträge verarbeiten zuvor festgelegte Segmentdefinitionen, um ein Audiencen-Segment zu erstellen. Mit dem `/segment/jobs` Endpunkt können Sie eine Liste von Segmentaufträgen abrufen, einen neuen Segmentauftrag erstellen, Details zu einem bestimmten Segmentauftrag abrufen oder einen bestimmten Segmentauftrag löschen.
 
 Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Entwicklerhandbuch für [Segmentaufträge](./segment-jobs.md).
+
+## Segmentsuche
+
+Die Segmentsuche wird verwendet, um konfigurierbare Felder, die in verschiedenen Datenquellen enthalten sind, zu suchen und zu indizieren und sie in Echtzeit zurückzugeben. Informationen zum Arbeiten mit der Segmentsuche finden Sie im Handbuch für [Suchentwickler](segment-search.md)
 
 ## Nächste Schritte
 
