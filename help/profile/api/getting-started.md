@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 8449681a7fd0fc5dccf4837a1e8e512f1e2f2601
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -78,10 +78,6 @@ Beim Zusammenführen von Daten aus mehreren Quellen in Experience Platform sind 
 Mit der Echtzeit-Client-Profil-API können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API finden Sie im Unterleitfaden [Zusammenführungsrichtlinien](merge-policies.md).
 
 Eine Anleitung zum Arbeiten mit Richtlinien zum Zusammenführen mithilfe der Plattform-Benutzeroberfläche finden Sie im Benutzerhandbuch [](../ui/merge-policies.md)Richtlinien zusammenführen.
-
-## Profil-Suche
-
-Mit der Profil-Suche können konfigurierbare Felder, die in verschiedenen Datenquellen enthalten sind, gesucht und indexiert werden und in Echtzeit zurückgegeben werden. Informationen zum Beginn der Arbeit mit der Suche nach Profilen finden Sie im [Unterleitfaden für die Suche](profile-search.md)
 
 ## Profil-Systemaufträge
 
