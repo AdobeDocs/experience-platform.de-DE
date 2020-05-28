@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Deskriptoren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -334,7 +334,7 @@ Mit benutzerfreundlichen Namensdeskriptoren können Sie die Schema-Felder `title
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, die die Identität sein soll. Pfad sollte mit einem &quot;/&quot;beginnen und nicht mit einem enden. &quot;Eigenschaften&quot;nicht in den Pfad einschließen (z. B. &quot;/personalEmail/address&quot;anstelle von &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | Der neue Titel, den Sie für dieses Feld anzeigen möchten, geschrieben in der Titelleiste. |
 | `xdm:description` | Eine optionale Beschreibung kann zusammen mit dem Titel hinzugefügt werden. |
-| `meta:enum` | Wenn das angegebene Feld ein Zeichenfolgenfeld `xdm:sourceProperty` ist, bestimmt `meta:enum` es die Liste der vorgeschlagenen Werte für das Feld in der Benutzeroberfläche der Experience Platform. Beachten Sie, dass keine Auflistung deklariert oder eine Datenvalidierung für das XDM-Feld bereitgestellt `meta:enum` wird.<br><br>Dies sollte nur für von Adobe definierte Kern-XDM-Felder verwendet werden. Wenn die source-Eigenschaft ein benutzerdefiniertes Feld ist, das von Ihrem Unternehmen definiert wird, sollten Sie die `meta:enum` Eigenschaft des Felds stattdessen direkt über eine [PUT-Anforderung](./update-resource.md)bearbeiten. |
+| `meta:enum` | Wenn das angegebene Feld ein Zeichenfolgenfeld `xdm:sourceProperty` ist, bestimmt `meta:enum` es die Liste der vorgeschlagenen Werte für das Feld in der Benutzeroberfläche der Experience Platform. Beachten Sie, dass keine Auflistung deklariert oder eine Datenvalidierung für das XDM-Feld bereitgestellt `meta:enum` wird.<br><br>Dies sollte nur für von Adobe definierte Kern-XDM-Felder verwendet werden. Wenn es sich bei der source-Eigenschaft um ein von Ihrer Organisation definiertes benutzerdefiniertes Feld handelt, sollten Sie stattdessen die `meta:enum` Eigenschaft des Felds direkt über eine [PATCH-Anforderung](./update-resource.md)bearbeiten. |
 
 #### Beziehungsdeskriptor
 
