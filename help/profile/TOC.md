@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zum Echtzeit-Profil
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 59831f5c2445f65371d1897f66dfc45507a9955c
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '78'
 ht-degree: 25%
 
 ---
@@ -20,7 +20,6 @@ ht-degree: 25%
    * [Edge-Prognosen](api/edge-projections.md)
    * [Entitäten (Profil-Zugriff)](api/entities.md)
    * [Zusammenführungsrichtlinien](api/merge-policies.md)
-   * [Profil-Suche](api/profile-search.md)
    * [Profil-Systemaufträge (Anforderungen löschen)](api/profile-system-jobs.md)
 * Profil-Benutzeroberfläche {#ui}
    * [Profil-Benutzerhandbuch](ui/user-guide.md)
