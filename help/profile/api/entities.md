@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 95e002c60389ca7e4c1dcf32bbcf6f552cd55d95
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1694'
 ht-degree: 1%
 
 ---
@@ -776,7 +776,7 @@ Mithilfe dieser Nutzlast im Anforderungstext können Sie eine zusätzliche POST-
 
 ## Zugriff auf Zeitreihen-Ereignis in mehreren Schemas
 
-Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor verbunden sind. Der folgende Beispiel-API-Aufruf geht davon aus, dass zwischen zwei Schemas bereits eine Beziehung definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im Schema Registry API-Entwicklerhandbuch [Deskriptoren (Unterhandbuch])](../../xdm/api/descriptors.md).
+Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor verbunden sind. Der folgende Beispiel-API-Aufruf geht davon aus, dass zwischen zwei Schemas bereits eine Beziehung definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [Unterhandbuch](../../xdm/api/descriptors.md)zur Schema Registry API-Entwicklerhandbuch.
 
 Sie können Parameter für die Abfrage in den Anforderungspfad einbeziehen, um anzugeben, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, die durch ein kaufmännisches Und (&amp;) getrennt sind. Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrage Parameter](#query-parameters) im Anhang.
 
