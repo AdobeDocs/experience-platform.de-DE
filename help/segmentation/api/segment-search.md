@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch zur Segmentierungs-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 7c33ba8edc886d2b689e1125b5c378e16a487324
+source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1172'
 ht-degree: 2%
 
 ---
@@ -41,8 +41,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Erforderlich)** Dabei stellt {SCHEMA} den Schema-Klassenwert dar, der den Suchobjekten zugeordnet ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| s={SEARCH_TERM} | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage darstellt, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Dabei stellt {SCHEMA} den Schema-Klassenwert dar, der den Suchobjekten zugeordnet ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage darstellt, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -65,18 +65,22 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit den folgenden Informationen z
 {
   "namespaces": [
     {
-      "name": "AAMTraits",
+      "namespace": "AAMTraits",
+      "displayName": "AAMTraits",
       "count": 45
     },
     {
-      "name": "AAMSegments",
+      "namespace": "AAMSegments",
+      "displayName": "AAMSegment",
       "count": 10
     },
     {
-      "name": "SegmentsAISegments",
+      "namespace": "SegmentsAISegments",
+      "displayName": "SegmentSAISegment",
       "count": 3
     }
   ],
+  "totalCount": 3,
   "status": {
     "message": "Success"
   }
@@ -97,12 +101,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Erforderlich)** Dabei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schema-Klassenwert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| Namensraum={NAMENSRAUM} | **(Erforderlich)** Dabei enthält {NAMENSRAUM} den Namensraum, in dem Sie suchen möchten. |
-| s={SEARCH_TERM} | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
-| entityId={ENTITY_ID} | *(Optional)* Beschränkt Ihre Suche auf den mit {ENTITY_ID} angegebenen Ordner. |
-| limit={LIMIT} | *(Optional)* Dabei stellt {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse dar. Der Standardwert lautet 50. |
-| page={PAGE} | *(Optional)* Dabei steht {PAGE} für die Seitenzahl, die zur Paginierung der Ergebnisse der gesuchten Abfrage verwendet wird. Bitte beachten Sie, dass die Seitenzahl um **0** Beginn ist. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Dabei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schema-Klassenwert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `namespace={NAMESPACE}` | **(Erforderlich)** Dabei enthält {NAMENSRAUM} den Namensraum, in dem Sie suchen möchten. |
+| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `entityId={ENTITY_ID}` | *(Optional)* Schränkt Ihre Suche auf den mit {ENTITY_ID} angegebenen Ordner ein. |
+| `limit={LIMIT}` | *(Optional)* Dabei stellt {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse dar. Der Standardwert lautet 50. |
+| `page={PAGE}` | *(Optional)* Dabei steht {PAGE} für die Seitenzahl, die zur Paginierung der Ergebnisse der gesuchten Abfrage verwendet wird. Bitte beachten Sie, dass die Seitenzahl um **0** Beginn ist. |
 
 
 **Anfrage**
@@ -168,9 +172,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(Erforderlich)** Dabei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schema-Klassenwert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| Namensraum={NAMENSRAUM} | **(Erforderlich)** Dabei enthält {NAMENSRAUM} den Namensraum, in dem Sie suchen möchten. |
-| entityId={ENTITY_ID} | **(Erforderlich)** Die ID des Suchobjekts, über das Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Dabei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schema-Klassenwert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `namespace={NAMESPACE}` | **(Erforderlich)** Dabei enthält {NAMENSRAUM} den Namensraum, in dem Sie suchen möchten. |
+| `entityId={ENTITY_ID}` | **(Erforderlich)** Die ID des Suchobjekts, über das Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
 
 **Anfrage**
 
