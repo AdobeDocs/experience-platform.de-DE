@@ -4,10 +4,10 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 100%
+source-wordcount: '946'
+ht-degree: 97%
 
 ---
 
@@ -87,3 +87,7 @@ Wenn eine der oben genannten Aktionen einen Verstoß auslöst, wird verhindert, 
 ## Nächste Schritte
 
 Nach der Vorstellung der wichtigsten Data Governance-Funktionen in der Echtzeit-Kundendatenplattform und deren Aktivierung durch Experience Platform lesen Sie nun die [Data Governance-Dokumentation für Adobe Experience Platform](../../data-governance/home.md). Die Dokumentation bietet einen Überblick über wesentliche Data Governance-Konzepte sowie schrittweise Workflows zum Verwalten von Datennutzungsbezeichnungen und -richtlinien.
+
+Das folgende Video bietet einen Überblick über die Datenverwaltung in CDP in Echtzeit, einschließlich der Verwendung von Anwendungsfällen für das Marketing an Zielen und Workflows für verschiedene Szenarien:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
