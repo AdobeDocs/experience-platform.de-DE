@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datenverwendungsrichtlinien
 topic: policies
 translation-type: tm+mt
-source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '435'
 ht-degree: 2%
 
 ---
@@ -70,3 +70,7 @@ Sie können benutzerdefinierte Datenverwendungsrichtlinien auf der Registerkarte
 ## Nächste Schritte
 
 Dieses Dokument gab einen Überblick darüber, wie Datenverwendungsrichtlinien in der Benutzeroberfläche von Experience Platform verwaltet werden. Anweisungen zum Verwalten von Richtlinien mit der DUL-Richtlinie-API finden Sie im [Entwicklerhandbuch](../api/getting-started.md). Informationen zum Erzwingen von Datenverwendungsrichtlinien finden Sie in der Übersicht über die [Richtliniendurchsetzung](../enforcement/overview.md).
+
+Das folgende Video zeigt, wie mit Nutzungsrichtlinien in der Benutzeroberfläche der Experience Platform gearbeitet wird:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
