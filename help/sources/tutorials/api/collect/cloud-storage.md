@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erfassen von Cloud-Datenspeicherung-Daten über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: 4a66be0b49bdcd765fd5dcbd0e646d35df54c7e4
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1688'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,13 @@ ht-degree: 2%
 
 # Erfassen von Cloud-Datenspeicherung-Daten über Quellschnittstellen und APIs
 
+Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Cloud-Datenspeicherung eines Drittanbieters und deren anschließender Integration in die Plattform über Quellschnittstellen und APIs beschrieben.
 
 ## Erste Schritte
 
-Für dieses Lernprogramm ist es erforderlich, dass Sie über eine gültige Basisverbindung Zugriff auf eine Cloud-Datenspeicherung eines Drittanbieters haben und Informationen über die Datei, die Sie in Platform einbringen möchten, einschließlich des Dateipfads und der Dateistruktur erhalten. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung einer Cloud-Datenspeicherung von Drittanbietern mithilfe der Flow Service API](../explore/cloud-storage.md) , bevor Sie dieses Lernprogramm durchführen.
+Für dieses Lernprogramm ist es erforderlich, dass Sie über eine gültige Verbindung Zugriff auf eine Cloud-Datenspeicherung eines Drittanbieters haben und Informationen über die Datei erhalten, die Sie in Platform einbringen möchten, einschließlich des Dateipfads und der Dateistruktur. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung einer Cloud-Datenspeicherung von Drittanbietern mithilfe der Flow Service API](../explore/cloud-storage.md) , bevor Sie dieses Lernprogramm durchführen.
 
 Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten der Adobe Experience Platform verstehen:
 
@@ -57,11 +59,23 @@ Um externe Daten über Quell-Connectors in die Plattform zu bringen, müssen ein
 
 Um eine Ad-hoc-Klasse und ein Ad-hoc-Schema zu erstellen, führen Sie die im [Ad-hoc-Schema-Lernprogramm](../../../../xdm/tutorials/ad-hoc.md)beschriebenen Schritte aus. Beim Erstellen einer Ad-hoc-Klasse müssen alle in den Quelldaten gefundenen Felder im Anforderungstext beschrieben werden.
 
-Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad-hoc-Schema erstellt haben. Rufen Sie die eindeutige Kennung (`$id`) des Ad-hoc-Schemas ab und speichern Sie sie und fahren Sie dann mit dem nächsten Schritt dieses Lernprogramms fort.
+Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad-hoc-Schema erstellt haben. Die eindeutige Kennung (`$id`) des Ad-hoc-Schemas ist erforderlich, um mit dem nächsten Schritt dieses Lernprogramms fortzufahren.
 
 ## Erstellen einer Quellverbindung {#source}
 
-Wenn ein Ad-hoc-XDM-Schema erstellt wurde, kann jetzt eine Quellverbindung mit einer POST-Anforderung an die Flow Service API erstellt werden. Eine Quellverbindung besteht aus einer Basisverbindung, einer Quelldatendatei und einem Verweis auf das Schema, das die Quelldaten beschreibt.
+Wenn ein Ad-hoc-XDM-Schema erstellt wurde, kann jetzt eine Quellverbindung mit einer POST-Anforderung an die Flow Service API erstellt werden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einer Quelldatendatei und einem Verweis auf das Schema, das die Quelldaten beschreibt.
+
+Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformatattribut definieren.
+
+Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
+
+| Data.format | Enum-Wert |
+| ----------- | ---------- |
+| Getrennte Dateien | `delimited` |
+| JSON-Dateien | `json` |
+| Parkettdateien | `parquet` |
+
+Für alle **tabellenbasierten Connectors** verwenden Sie den Enum-Wert: `tabular`.
 
 **API-Format**
 
@@ -73,52 +87,57 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source Connection for a cloud storage",
-        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
-        "description": "Source Connection to ingest data.csv",
+        "name": "Test source connection for a Cloud Storage connector",
+        "baseConnectionId": "ac33bd66-1565-4915-b3bd-6615657915c4",
+        "description": "Test source connection for a Cloud Storage connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "delimited",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/22a4ab59462a64de551d42dd10ec1f19d8d7246e3f90072a",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
         "params": {
-            "path": "/some/path/data.csv",
+            "path": "/backfil/data8.csv",
             "recursive": "true"
         },
         "connectionSpec": {
-            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
             "version": "1.0"
+        }
     }'
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `baseConnectionId` | Die ID einer Basisverbindung für ein Cloud-Datenspeicherung-System. |
+| `baseConnectionId` | Die eindeutige Verbindungs-ID des Cloud-Datenspeicherung-Systems eines Drittanbieters, auf das Sie zugreifen. |
 | `data.schema.id` | Die ID des Ad-hoc-XDM-Schemas. |
-| `params.path` | Der Pfad der Quelldatei. |
+| `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. |
+| `connectionSpec.id` | Die mit Ihrem Cloud-Datenspeicherung-System eines Drittanbieters verknüpfte Verbindungsspezifikations-ID. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix) . |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Speichern Sie diesen Wert so, wie er in späteren Schritten zum Erstellen einer Zielgruppe-Verbindung erforderlich ist.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
 
 ```json
 {
-    "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
+    "id": "8bae595c-8548-4716-ae59-5c85480716e9",
+    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
 }
 ```
 
 ## Zielgruppe XDM-Schema erstellen {#target}
 
 In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. Damit die Quelldaten in Platform verwendet werden können, muss auch ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein Plattformdataset erstellt, in dem die Quelldaten enthalten sind.
+
+Ein Zielgruppe-XDM-Schema kann erstellt werden, indem eine POST-Anforderung an die [Schema-Registrierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)ausgeführt wird.
 
 Wenn Sie die Benutzeroberfläche in Experience Platform bevorzugen, finden Sie im [Schema Editor-Tutorial](../../../../xdm/tutorials/create-schema-ui.md) eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen im Schema-Editor.
 
@@ -142,14 +161,17 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for cloud storage source connector",
-        "description": "",
+        "title": "Target schema for a Cloud Storage connector",
+        "description": "Target schema for a Cloud Storage connector",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
             },
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
+            },
+            {
+                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             },
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
@@ -164,47 +186,74 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich seiner eindeutigen Kennung (`$id`) zurück. Speichern Sie diese ID so, wie es in späteren Schritten erforderlich ist, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
+Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich seiner eindeutigen Kennung (`$id`) zurück. Diese ID ist in späteren Schritten erforderlich, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
-    "meta:altId": "{TENANT_ID}.schemas.417a33eg81a221bd10495920574gfa2d",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+    "meta:altId": "_{TENANT_ID}.schemas.e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for cloud storage source connector",
-    "description": "",
+    "title": "Target schema for a Cloud Storage connector",
     "type": "object",
+    "description": "Target schema for Cloud Storage",
     "allOf": [
         {
-            "$ref": "https://ns.adobe.com/xdm/context/profile"
+            "$ref": "https://ns.adobe.com/xdm/context/profile",
+            "type": "object",
+            "meta:xdmType": "object"
         },
         {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
+            "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
+            "type": "object",
+            "meta:xdmType": "object"
         },
         {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
+            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
+            "type": "object",
+            "meta:xdmType": "object"
+        },
+        {
+            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
+            "type": "object",
+            "meta:xdmType": "object"
         }
     ],
-    "meta:xdmType": "object",
-    "meta:class": "https://ns.adobe.com/xdm/context/profile",
-    "meta:abstract": false,
-    "meta:extensible": false,
-    "meta:extends": [
-        "https://ns.adobe.com/xdm/context/profile",
+    "refs": [
         "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/xdm/context/profile-personal-details"
+        "https://ns.adobe.com/xdm/context/profile-personal-details",
+        "https://ns.adobe.com/xdm/context/profile"
     ],
-    "meta:containerId": "tenant",
+    "imsOrg": "{IMS_ORG}",
+    "meta:extensible": false,
+    "meta:abstract": false,
+    "meta:extends": [
+        "https://ns.adobe.com/xdm/context/profile-person-details",
+        "https://ns.adobe.com/xdm/context/profile-personal-details",
+        "https://ns.adobe.com/xdm/common/auditable",
+        "https://ns.adobe.com/xdm/data/record",
+        "https://ns.adobe.com/xdm/context/profile"
+    ],
+    "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "eTag": "6m/FrIlXYU2+yH6idbcmQhKSlMo="
-    }
+        "repo:createdDate": 1589398474190,
+        "repo:lastModifiedDate": 1589398474190,
+        "xdm:createdClientId": "{CREATED_CLIENT_ID}",
+        "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
+        "xdm:createdUserId": "{CREATED_USER_ID}",
+        "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
+        "eTag": "f07723475e933dc30ed411d97986a36f13aa20c820463dd8cf7b74e63f4e7801",
+        "meta:globalLibVersion": "1.10.1.1"
+    },
+    "meta:class": "https://ns.adobe.com/xdm/context/profile",
+    "meta:containerId": "tenant",
+    "meta:tenantNamespace": "_{TENANT_ID}"
 }
 ```
 
 ## Zielgruppen-Dataset erstellen
 
-Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST-Anforderung an die Katalogdienst-API ausgeführt wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
+Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST-Anforderung an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)ausgeführt wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
 
 **API-Format**
 
@@ -223,9 +272,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset",
+        "name": "Target dataset for a Cloud Storage connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
+            "id": "https://ns.adobe.com/{TENANT}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -237,25 +286,19 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die DataSet-ID ist eine schreibgeschützte, systemgenerierte Zeichenfolge, mit der auf den Datensatz in API-Aufrufen verwiesen wird. Speichern Sie die Zielgruppe-Dataset-ID wie in den späteren Schritten zum Erstellen einer Zielgruppe- und eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die DataSet-ID ist eine schreibgeschützte, systemgenerierte Zeichenfolge, mit der auf den Datensatz in API-Aufrufen verwiesen wird. Die Zielgruppe DataSet-ID ist in späteren Schritten erforderlich, um eine Zielgruppe- und einen Datendurchlauf zu erstellen.
 
 ```json
 [
-    "@/dataSets/5c8c3c555033b814b69f947f"
+    "@/dataSets/5ebc4be8590b1b191a8dc4ca"
 ]
 ```
 
-## Erstellen einer Datenbank-Basisverbindung
-
-Um externe Daten in Platform zu erfassen, muss zunächst eine Verbindung zur Experience Platform-Datenbank aufgebaut werden.
-
-Gehen Sie zum Erstellen einer Datenbankverbindung zum DataSet wie im Lernprogramm zur [Datenbankverbindung beschrieben vor](../create-dataset-base-connection.md).
-
-Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine Datenbank-Basisverbindung erstellt haben. Rufen Sie den eindeutigen Bezeichner ab und speichern Sie ihn (`$id`) und verwenden Sie ihn im nächsten Schritt als Basis-Verbindungs-ID, um eine Zielgruppe zu erstellen.
-
 ## Erstellen einer Zielgruppe-Verbindung
 
-Sie haben jetzt die eindeutigen Bezeichner für eine Datenbankverbindung, ein Schema für die Zielgruppe und einen Datensatz für die Zielgruppe. Mithilfe dieser Bezeichner können Sie mithilfe der Flow Service API eine Verbindung zur Zielgruppe herstellen, um das Dataset anzugeben, das die eingehenden Quelldaten enthalten soll.
+Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Zielgruppe-Verbindung zu erstellen, müssen Sie die mit dem Datensee verknüpfte feste Verbindungs-spec-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe dieser Bezeichner können Sie mithilfe der Flow Service API eine Verbindung zur Zielgruppe herstellen, um das Dataset anzugeben, das die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -267,49 +310,45 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection",
-        "description": "Target Connection for cloud storage data",
+        "name": "Target Connection for a Cloud Storage connector",
+        "description": "Target Connection for a Cloud Storage connector",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5c8c3c555033b814b69f947f"
+            "dataSetId": "5ebc4be8590b1b191a8dc4ca"
         },
-        "connectionSpec": {
-            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+            "connectionSpec": {
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
+        }
     }'
 ```
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `baseConnectionId` | Die ID der Datenbankverbindung Ihres Datensatzes. |
 | `data.schema.id` | Die `$id` der Zielgruppe XDM Schema. |
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
-| `connectionSpec.id` | Die Verbindungs-Spezifikations-ID für Ihre Cloud-Datenspeicherung. |
-
->[!NOTE] Achten Sie beim Erstellen einer Zielgruppe darauf, den Wert für die Basisverbindung des Data Lake für die Basisverbindung `id` im Gegensatz zur Basisverbindung des Drittanbieter-Quell-Connectors zu verwenden.
+| `connectionSpec.id` | Die feste Verbindungs-spec-ID zum Datensee. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbindung zurück (`id`). Speichern Sie diesen Wert so, wie er in späteren Schritten erforderlich ist.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbindung zurück (`id`). Diese ID ist in späteren Schritten erforderlich.
 
 ```json
 {
-    "id": "4ee890c7-519c-4291-bd20-d64186b62da8",
-    "etag": "\"2a007aa8-0000-0200-0000-5e597aaf0000\""
+    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
+    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
 }
 ```
 
@@ -335,13 +374,13 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
                 "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "FirstName",
+                "sourceAttribute": "first_name",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -349,23 +388,7 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "LastName",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "Email",
+                "sourceAttribute": "last_name",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -373,7 +396,15 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "_id",
-                "sourceAttribute": "Id",
+                "sourceAttribute": "id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "personalEmail.address",
+                "sourceAttribute": "email",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -389,73 +420,16 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Speichern Sie diesen Wert so, wie er in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich ist.
+Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Dieser Wert ist in einem späteren Schritt erforderlich, um einen Datenflug zu erstellen.
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "version": 0,
+    "createdDate": 1589398562232,
+    "modifiedDate": 1589398562232,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
@@ -481,7 +455,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für das Übertragen von Daten aus Ihrer Cloud-Datenspeicherung in die Plattform zuständig ist. Speichern Sie den Wert des `id` Felds so, wie er im nächsten Schritt zum Erstellen eines neuen Datenflusses erforderlich ist.
+Bei einer erfolgreichen Antwort werden die Details der Datenfeldspezifikation zurückgegeben, die für das Übertragen von Daten aus Ihrer Cloud-Datenspeicherung in die Plattform zuständig ist. Die Antwort enthält eine eindeutige Flussspec-ID. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -491,6 +465,20 @@ Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation 
             "name": "CloudStorageToAEP",
             "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
             "version": "1.0",
+            "sourceConnectionSpecIds": [
+                "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+                "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+                "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
+                "4c10e202-c428-4796-9208-5f1f5732b1cf",
+                "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
+                "32e8f412-cdf7-464c-9885-78184cb113fd",
+                "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+                "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
+                "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8"
+            ],
+            "targetConnectionSpecIds": [
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+            ],
             "transformationSpecs": [
                 {
                     "name": "Mapping",
@@ -568,6 +556,26 @@ Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation 
                         }
                     }
                 }
+            },
+            "permissionsInfo": {
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ],
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ]
             }
         }
     ]
@@ -583,7 +591,9 @@ Der letzte Schritt zur Erfassung von Cloud-Datenspeicherung-Daten besteht darin,
 - [Mapping-ID](#mapping)
 - [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+
+Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
 **API-Format**
 
@@ -601,34 +611,29 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between cloud storage and Platform",
-        "description": "collecting data.csv",
+        "name": "Cloud Storage flow to AEP",
+        "description": "Cloud Storage flow to AEP",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "9a603322-19d2-4de9-89c6-c98bd54eb184"
+            "8bae595c-8548-4716-ae59-5c85480716e9"
         ],
         "targetConnectionIds": [
-            "4ee890c7-519c-4291-bd20-d64186b62da8"
+            "1f5af99c-f1ef-4076-9af9-9cf1ef507678"
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "mode": "append"
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
+                    "mappingId": "febec6a6785e45ea9ed594422cc483d7",
+                    "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
+            "startTime": "1589398646",
             "frequency":"minute",
             "interval":"30"
         }
@@ -637,10 +642,13 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `flowSpec.id` | Dataflow-Spezifikation-ID |
-| `sourceConnectionIds` | Quell-Verbindungs-ID |
-| `targetConnectionIds` | Zielgruppen-Verbindungs-ID |
-| `transformations.params.mappingId` | Mapping-ID |
+| `flowSpec.id` | Die Flussspec-ID, die im vorherigen Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die Quell-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die Zielgruppe-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `transformations.params.mappingId` | Die Zuordnungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `scheduleParams.startTime` | Die Zeitdauer des Beginns für den Datendurchlauf in Sekunden. |
+| `scheduleParams.frequency` | Die auswählbaren Frequenzwerte umfassen: `once`, `minute`, `hour`, `day`oder `week`. |
+| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit für andere Frequenzwerte festgelegt ist `once` und größer oder gleich `15` sein sollte. |
 
 **Antwort**
 
@@ -648,7 +656,8 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses zur
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
@@ -672,5 +681,6 @@ Im folgenden Abschnitt werden die verschiedenen Cloud-Datenspeicherung-Quellschn
 | Azurblut (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 | AUS Data Lake Datenspeicherung Gen2 (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
 | Azurblauer Ereignis Hubs (Ereignis Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| Azurbladdatei-Datenspeicherung | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Google Cloud-Datenspeicherung | `32e8f412-cdf7-464c-9885-78184cb113fd` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
