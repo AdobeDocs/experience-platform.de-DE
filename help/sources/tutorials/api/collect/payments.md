@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erfassen von Zahlungsdaten über Quell-Connectors und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+source-git-commit: 577027e52041d642e03ca5abf5cb8b05c689b9f2
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1663'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Zahlu
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert den Zugriff auf ein Zahlungssystem über eine gültige Basisverbindung sowie Informationen über die Datei, die Sie in Platform einbringen möchten (einschließlich Pfad und Struktur der Datei). Wenn Sie diese Informationen nicht haben, lesen Sie das Tutorial zur [Überprüfung einer Zahlungsanwendung mithilfe der Flow Service API](../explore/payments.md) , bevor Sie dieses Tutorial durchführen.
+Dieses Lernprogramm erfordert den Zugriff auf ein Zahlungssystem über eine gültige Verbindung sowie Informationen über die Datei, die Sie in Platform einbringen möchten (einschließlich Pfad und Struktur der Datei). Wenn Sie diese Informationen nicht haben, lesen Sie das Tutorial zur [Überprüfung einer Zahlungsanwendung mithilfe der Flow Service API](../explore/payments.md) , bevor Sie dieses Tutorial durchführen.
 
 Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten der Adobe Experience Platform verstehen:
 
@@ -65,6 +65,18 @@ Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad
 
 Wenn ein Ad-hoc-XDM-Schema erstellt wurde, kann jetzt eine Quellverbindung mit einer POST-Anforderung an die Flow Service API erstellt werden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einer Quelldatendatei und einem Verweis auf das Schema, das die Quelldaten beschreibt.
 
+Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformatattribut definieren.
+
+Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
+
+| Data.format | Enum-Wert |
+| ----------- | ---------- |
+| Getrennte Dateien | `delimited` |
+| JSON-Dateien | `json` |
+| Parkettdateien | `parquet` |
+
+Für alle **tabellenbasierten Connectors** verwenden Sie den Enum-Wert: `tabular`.
+
 **API-Format**
 
 ```https
@@ -86,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
         "description": "Paypal",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/396f583b57577b2f2fca79c2cb88e9254992f5fa70ce5f1a",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -104,7 +116,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `baseConnectionId` | Die Verbindungs-ID Ihres Zahlungsantrags |
+| `baseConnectionId` | Die eindeutige Verbindungs-ID der Zahlungsanwendung eines Drittanbieters, auf die Sie zugreifen. |
 | `data.schema.id` | Die `$id` des Ad-hoc-XDM-Schemas. |
 | `params.path` | Der Pfad der Quelldatei. |
 | `connectionSpec.id` | Die Verbindungs-Spezifikations-ID Ihres Zahlungsantrags. |
@@ -278,17 +290,11 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des neu erstellten 
 ]
 ```
 
-## Erstellen einer Datenbank-Basisverbindung
-
-Um externe Daten in Platform zu erfassen, muss zunächst eine Verbindung zur Experience Platform-Datenbank aufgebaut werden.
-
-Gehen Sie zum Erstellen einer Datenbankverbindung zum DataSet wie im Lernprogramm zur [Datenbankverbindung beschrieben vor](../create-dataset-base-connection.md).
-
-Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine Datenbank-Basisverbindung erstellt haben. Rufen Sie den eindeutigen Bezeichner ab und speichern Sie ihn (`$id`) und verwenden Sie ihn im nächsten Schritt als Verbindungs-ID, um eine Zielgruppe zu erstellen.
-
 ## Erstellen einer Zielgruppe-Verbindung
 
-Sie haben jetzt die eindeutigen Bezeichner für eine DataSet-Basisverbindung, ein Zielgruppe-Schema und einen Dataset für die Zielgruppe. Sie können jetzt eine Zielgruppe-Verbindung mit der Flow Service API erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
+Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Zielgruppe-Verbindung zu erstellen, müssen Sie die mit dem Datensee verknüpfte feste Verbindungs-spec-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe dieser Bezeichner können Sie mithilfe der Flow Service API eine Verbindung zur Zielgruppe herstellen, um das Dataset anzugeben, das die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -307,11 +313,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "72c47da8-c225-40c0-847d-a8c22550c01b",
         "name": "Target Connection for payments",
         "description": "Target Connection for payments",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722"
             }
@@ -328,10 +332,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `baseConnectionId` | Die ID der Datenbankverbindung Ihres Datensatzes. |
 | `data.schema.id` | Die `$id` der Zielgruppe XDM Schema. |
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
-| `connectionSpec.id` | Die Verbindungs-Spezifikations-ID für Ihre Zahlungsanwendung. |
+| `connectionSpec.id` | Die feste Verbindungs-spec-ID zum Datensee. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 
@@ -579,7 +582,9 @@ Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstelle
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+
+Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
 **API-Format**
 
@@ -630,11 +635,21 @@ curl -X POST \
         ],
         "scheduleParams": {
             "startTime": "1567411548",
-            "frequency":"minute",
+            "frequency": "minute",
             "interval":"30"
         }
     }'
 ```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `flowSpec.id` | Die Flussspec-ID, die im vorherigen Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die Quell-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die Zielgruppe-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `transformations.params.mappingId` | Die Zuordnungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `scheduleParams.startTime` | Die Zeitdauer des Beginns für den Datendurchlauf in Sekunden. |
+| `scheduleParams.frequency` | Die auswählbaren Frequenzwerte umfassen: `once`, `minute`, `hour`, `day`oder `week`. |
+| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit für andere Frequenzwerte festgelegt ist `once` und größer oder gleich `15` sein sollte. |
 
 **Antwort**
 
@@ -642,7 +657,8 @@ Eine erfolgreiche Antwort gibt die ID `id` des neu erstellten Datenflusses zurü
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
