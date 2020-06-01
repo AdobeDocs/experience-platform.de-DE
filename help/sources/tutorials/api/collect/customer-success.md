@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erfassen von Daten aus einem Kundenerfolgssystem über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: c216e321fd913773578107df027d953f10d99a36
+source-git-commit: 6df2ccd06f506ada0be5805143c487edb853396b
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 2%
+source-wordcount: '1663'
+ht-degree: 1%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Customer Success-System (&quot;CS&quot;) und zum Integrieren in die Plattform über Quellschnittstellen und APIs beschrieben.
+In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Kundenerfolgssystem und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und APIs erläutert.
 
 ## Erste Schritte
 
-Für dieses Lernprogramm ist es erforderlich, dass Sie über eine gültige Basisverbindung Zugriff auf ein CS-System eines Drittanbieters haben und Informationen über die Datei erhalten, die Sie in Platform einführen möchten, einschließlich des Dateipfads und der Dateistruktur. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung einer Datenbank oder eines NoSQL-Systems mit der Flow Service API](../explore/customer-success.md) , bevor Sie dieses Lernprogramm durchführen.
+Für dieses Lernprogramm müssen Sie über eine gültige Verbindung und Informationen über die Datei, die Sie in die Plattform einbringen möchten, Zugriff auf ein Drittanbieter-Erfolgssystem haben, einschließlich Pfad und Struktur der Datei. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung einer Datenbank oder eines NoSQL-Systems mit der Flow Service API](../explore/customer-success.md) , bevor Sie dieses Lernprogramm durchführen.
 
 Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten der Adobe Experience Platform verstehen:
 
@@ -31,7 +31,7 @@ Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten der Ado
 * [Stapelverarbeitung](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch Ingestion API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
 * [Sandboxen](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der Flow Service API eine erfolgreiche Verbindung zu einem CS-System herzustellen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der Flow Service API eine erfolgreiche Verbindung zu einem Kundenerfolgssystem herzustellen.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -59,11 +59,23 @@ Um externe Daten über Quell-Connectors in die Plattform zu bringen, müssen ein
 
 Um eine Ad-hoc-Klasse und ein Ad-hoc-Schema zu erstellen, führen Sie die im [Ad-hoc-Schema-Lernprogramm](../../../../xdm/tutorials/ad-hoc.md)beschriebenen Schritte aus. Beim Erstellen einer Ad-hoc-Klasse müssen alle in den Quelldaten gefundenen Felder im Anforderungstext beschrieben werden.
 
-Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad-hoc-Schema erstellt haben. Rufen Sie die eindeutige Kennung (`$id`) des Ad-hoc-Schemas ab und speichern Sie sie und fahren Sie dann mit dem nächsten Schritt dieses Lernprogramms fort.
+Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad-hoc-Schema erstellt haben. Die eindeutige Kennung (`$id`) des Ad-hoc-Schemas ist erforderlich, um mit dem nächsten Schritt dieses Lernprogramms fortzufahren.
 
 ## Erstellen einer Quellverbindung {#source}
 
-Wenn ein Ad-hoc-XDM-Schema erstellt wurde, kann jetzt eine Quellverbindung mit einer POST-Anforderung an die Flow Service API erstellt werden. Eine Quellverbindung besteht aus einer Basisverbindung, einer Quelldatendatei und einem Verweis auf das Schema, das die Quelldaten beschreibt.
+Wenn ein Ad-hoc-XDM-Schema erstellt wurde, kann jetzt eine Quellverbindung mit einer POST-Anforderung an die Flow Service API erstellt werden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einer Quelldatendatei und einem Verweis auf das Schema, das die Quelldaten beschreibt.
+
+Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformatattribut definieren.
+
+Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
+
+| Data.format | Enum-Wert |
+| ----------- | ---------- |
+| Getrennte Dateien | `delimited` |
+| JSON-Dateien | `json` |
+| Parkettdateien | `parquet` |
+
+Für alle **tabellenbasierten Connectors** verwenden Sie den Enum-Wert: `tabular`.
 
 **API-Format**
 
@@ -82,13 +94,13 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source connection for CS",
-        "baseConnectionId": "60a5c8b9-3c30-43ba-a5c8-b93c3093ba66",
-        "description": "Source Connection for CS to ingest Account",
+        "name": "Source connection for Customer Success",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "description": "Source connection for a Customer Success connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/classes/51dd6dce662f8aebe4353c74bbb49c77cb3cbcd6c6b29021",
+                "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/classes/5d032b2230d5495aef49437d04d1c5fac4788b17ae85bf93",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
@@ -96,18 +108,18 @@ curl -X POST \
             "path": "Account"
         },
         "connectionSpec": {
-            "id": "eb13cb25-47ab-407f-ba89-c0125281c563",
+            "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
-    }
-}'
+        }
+    }}'
 ```
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `baseConnectionId` | Die ID einer Basisverbindung für ein CS-System |
+| `baseConnectionId` | Die eindeutige Verbindungs-ID des Kundenerfolgssystems eines Drittanbieters, auf das Sie zugreifen. |
 | `data.schema.id` | Die `$id` des Ad-hoc-XDM-Schemas. |
 | `params.path` | Der Pfad der Quelldatei. |
-| `connectionSpec.id` | Die Verbindungs-Spezifikations-ID für ein CS-System. |
+| `connectionSpec.id` | Die Verbindungs-spec-ID, die mit Ihrem spezifischen Drittanbieter-Kundenerfolgssystem verknüpft ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix) . |
 
 **Antwort**
 
@@ -115,8 +127,8 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ```json
 {
-    "id": "01b7cbea-cf18-4552-b7cb-eacf18055294",
-    "etag": "\"2103ac94-0000-0200-0000-5e543ad70000\""
+    "id": "17faf955-2cf8-4b15-baf9-552cf88b1540",
+    "etag": "\"2900a761-0000-0200-0000-5ed18cea0000\""
 }
 ```
 
@@ -148,8 +160,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for CS",
-        "description": "Target schema for CS",
+        "title": "Target schema for a Customer Success connector",
+        "description": "Target schema for Database",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -161,6 +173,10 @@ curl -X POST \
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
+        "meta:containerId": "tenant",
+        "meta:resourceType": "schemas",
+        "meta:xdmType": "object",
+        "meta:class": "https://ns.adobe.com/xdm/context/profile"
     }'
 ```
 
@@ -170,13 +186,13 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
-    "meta:altId": "_{TENANT_ID}.schemas.deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
+    "meta:altId": "_{TENANT_ID}.schemas.b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for CS",
+    "title": "Target schema for a Customer Success connector",
     "type": "object",
-    "description": "Target schema for CS",
+    "description": "Target schema for Database",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -211,13 +227,14 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1582578764554,
-        "repo:lastModifiedDate": 1582578764554,
+        "repo:createdDate": 1590791550228,
+        "repo:lastModifiedDate": 1590791550228,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "213e4bf7cbac74e3a9e6f988da321e2f7353acacd9ea651a5652bd49b28b8d2a"
+        "eTag": "d730441903b95425145d9c742647ab4426d86549159182913e5f99cc904be5b1",
+        "meta:globalLibVersion": "1.10.4.2"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
@@ -232,7 +249,7 @@ Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST-Anforderung an d
 **API-Format**
 
 ```http
-POST /dataSets
+POST catalog/dataSets
 ```
 
 **Anfrage**
@@ -246,9 +263,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset for CS",
+        "name": "Target dataset for a Customer Success connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -264,21 +281,15 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des neu erstellten 
 
 ```json
 [
-    "@/dataSets/5e543e8a60b15218ad44b95f"
+    "@/dataSets/5ed18e0f4f90b719196f44a9"
 ]
 ```
 
-## Erstellen einer Datenbank-Basisverbindung
-
-Um externe Daten in Platform zu erfassen, muss zunächst eine Verbindung zur Experience Platform-Datenbank aufgebaut werden.
-
-Gehen Sie zum Erstellen einer Datenbankverbindung zum DataSet wie im Lernprogramm zur [Datenbankverbindung beschrieben vor](../create-dataset-base-connection.md).
-
-Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine Datenbank-Basisverbindung erstellt haben. Rufen Sie den eindeutigen Bezeichner ab und speichern Sie ihn (`$id`) und verwenden Sie ihn im nächsten Schritt als Basis-Verbindungs-ID, um eine Zielgruppe zu erstellen.
-
 ## Erstellen einer Zielgruppe-Verbindung
 
-Sie haben jetzt die eindeutigen Bezeichner für eine DataSet-Basisverbindung, ein Zielgruppe-Schema und einen Dataset für die Zielgruppe. Sie können jetzt eine Zielgruppe-Verbindung mit der Flow Service API erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
+Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Zielgruppe-Verbindung zu erstellen, müssen Sie die mit dem Datensee verknüpfte feste Verbindungs-spec-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe dieser Bezeichner können Sie mithilfe der Flow Service API eine Verbindung zur Zielgruppe herstellen, um das Dataset anzugeben, das die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -317,10 +328,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `baseConnectionId` | Die ID der Datenbankverbindung Ihres Datensatzes. |
 | `data.schema.id` | Die `$id` der Zielgruppe XDM Schema. |
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
-| `connectionSpec.id` | Die Verbindungs-ID für Ihr Kundenerfolgssystem. |
+| `connectionSpec.id` | Die feste Verbindungs-spec-ID zum Datensee. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 
@@ -328,8 +338,8 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbi
 
 ```json
 {
-    "id": "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5",
-    "etag": "\"5d02211d-0000-0200-0000-5e543f0f0000\""
+    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
+    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
 }
 ```
 
@@ -355,12 +365,20 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name",
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.fullName",
                 "sourceAttribute": "Name",
                 "identity": false,
                 "identityGroup": null,
@@ -368,16 +386,8 @@ curl -X POST \
                 "version": 0
             },
             {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "destinationXdmPath": "_repo.createDate",
+                "sourceAttribute": "CreatedDate",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -397,75 +407,18 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/efea012ad5deefcdf51afd23ceb3583f",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "7c3547d3cfc14f568a51c32b4c0ed739",
+    "version": 0,
+    "createdDate": 1590792069173,
+    "modifiedDate": 1590792069173,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
-## Spezifikationen zum Nachschlagen von Datenblättern {#specs}
+## Datennachrichtenspezifikationen abrufen {#specs}
 
-Ein Datennachweis ist dafür verantwortlich, Daten aus Quellen zu sammeln und sie in Plattform zu bringen. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET-Anforderung an die Flow Service API ausführen. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System verantwortlich.
+Ein Datennachweis ist dafür verantwortlich, Daten aus Quellen zu sammeln und sie in Plattform zu bringen. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET-Anforderung an die Flow Service API ausführen. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einem Drittanbieter-Kundenerfolgssystem verantwortlich.
 
 **API-Format**
 
@@ -485,7 +438,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für die Übertragung von Daten aus Ihrem CS-System in die Plattform verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
+Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrem Kundenerfolgssystem an die Plattform verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -616,7 +569,7 @@ Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstelle
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
 **API-Format**
 
@@ -634,41 +587,40 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between database or NoSQL Platform",
-        "description": "Inbound data to Platform",
+        "name": "Creating a dataflow for a Customer Success connector",
+        "description": "Creating a dataflow for a Customer Success connector",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "01b7cbea-cf18-4552-b7cb-eacf18055294"
+            "17faf955-2cf8-4b15-baf9-552cf88b1540"
         ],
         "targetConnectionIds": [
-            "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5"
+            "bc36ecd6-3b04-4067-b6ec-d63b04b0673d"
         ],
         "transformations": [
             {
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
+                        "name": "date-time"
                     }
                 }
             },
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                    "mappingId": "7c3547d3cfc14f568a51c32b4c0ed739",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
-            "frequency":"minute",
-            "interval":"30"
+            "startTime": "1590792316",
+            "frequency": "minute",
+            "interval": "15",
+            "backfill": "true"
         }
     }'
 ```
@@ -679,13 +631,35 @@ Eine erfolgreiche Antwort gibt die ID `id` des neu erstellten Datenflusses zurü
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `flowSpec.id` | Die Flussspec-ID, die im vorherigen Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die Quell-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die Zielgruppe-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `transformations.params.mappingId` | Die Zuordnungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `scheduleParams.startTime` | Die Zeitdauer des Beginns für den Datendurchlauf in Sekunden. |
+| `scheduleParams.frequency` | Die auswählbaren Frequenzwerte umfassen: `once`, `minute`, `hour`, `day`oder `week`. |
+| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit für andere Frequenzwerte festgelegt ist `once` und größer oder gleich `15` sein sollte. |
+
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie einen Quell-Connector erstellt, um Daten aus einem CS-System planmäßig zu erfassen. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Durch Befolgung dieser Übung haben Sie einen Quell-Connector erstellt, um Daten aus einem Kundenerfolgssystem planmäßig zu erfassen. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
+
+## Anhang
+
+Im folgenden Abschnitt werden die verschiedenen Cloud-Datenspeicherung-Quellschnittstellen und deren Verbindungsspezifikationen Liste.
+
+### Verbindungsspezifikation
+
+| Connector-Name | Verbindungsspezifikation |
+| -------------- | --------------- |
+| Salesforce Service Cloud | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
+| ServiceNow | `eb13cb25-47ab-407f-ba89-c0125281c563` |
