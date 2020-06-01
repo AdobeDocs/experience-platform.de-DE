@@ -4,7 +4,7 @@ seo-title: Facebook-Ziel
 description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 seo-description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 translation-type: tm+mt
-source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
+source-git-commit: 79aecf4955507622ac7879c148cdcd23e893dd65
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 1%
@@ -35,8 +35,10 @@ Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreiche
 
 
 Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silver und Gold) und möchte jede dieser Stufen mit personalisierten Angeboten über soziale Plattformen versorgen. Nicht alle Kunden verwenden jedoch die mobile App der Fluggesellschaft, und einige von ihnen haben sich noch nicht bei der Website der Firma angemeldet. Die einzigen IDs, die die Firma zu diesen Kunden hat, sind Mitgliedschafts-IDs und E-Mail-Adressen.
-Um sie über soziale Netzwerke hinweg Zielgruppe, können sie die Kundendaten aus ihrem CRM-System in die Adobe Echtzeit-CDP einbinden und die Hash-E-Mail-Adressen als ID verwenden.
-Als Nächstes können sie ihre Offline-Daten mit ihren vorhandenen Daten zur Online-Aktivität kombinieren, um neue Audiencen zu erstellen, die sie über das Facebook-Ziel Zielgruppe werden können.
+
+Um sie über soziale Netzwerke hinweg Zielgruppe, können sie die Kundendaten aus ihrem CRM-System in Adobe Echtzeit-CDP einbinden und dabei die E-Mail-Adressen als ID verwenden.
+
+Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das Facebook-Ziel Zielgruppe haben.
 
 ## Zielspezifikationen {#destination-specs}
 
