@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Mit Streaming-Zielen verbinden und Daten aktivieren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1847'
 ht-degree: 2%
 
 ---
 
 
-# Stellen Sie eine Verbindung zu Streaming-Zielen her und aktivieren Sie Daten in der Echtzeit-Kundendatenplattform von Adobe mithilfe von APIs
+# Connect to streaming destinations and activate data in Adobe&#39;s Real-time Customer Data Platform using APIs
 
 >[!NOTE]
 >
->Die CDP-Dateien [!DNL Amazon Kinesis] und die [!DNL Azure Event Hubs] Ziele in Adobe Echtzeit sind derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
+>The [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations in Adobe Real-time CDP are currently in beta. Dokumentation und Funktionalität können sich ändern.
 
 In diesem Lernprogramm wird gezeigt, wie Sie mithilfe von API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, eine Verbindung zu einem Streaming Cloud-Datenspeicherung-Ziel herstellen ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) oder [Azurblauer Ereignis-Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten an Ihr neu erstelltes Ziel aktivieren können.
 
-Dieses Lernprogramm verwendet das [!DNL Amazon Kinesis] Ziel in allen Beispielen, aber die Schritte sind für [!DNL Azure Event Hubs]identisch.
+This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure Event Hubs].
 
 ![Übersicht - Schritte zum Erstellen eines Streaming-Ziels und Aktivieren von Segmenten](/help/rtcdp/destinations/assets/flow-prelim.png)
 
@@ -55,7 +55,7 @@ Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authenti
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Ressourcen in Experience Platform können zu bestimmten virtuellen Sandboxen isoliert werden. Bei Anforderungen an Plattform-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt wird. Dies sind optionale Parameter.
+Resources in Experience Platform can be isolated to specific virtual sandboxes. Bei Anforderungen an Plattform-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt wird. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`: *Für Amazon-Kinesis-Verbindungen.* Geben Sie den Namen Ihres vorhandenen Datenstroms in Ihrem Amazon Kinesis-Konto ein. Adobe Echtzeit-CDP exportiert Daten in diesen Stream.
 * `{REGION}`: *Für Amazon-Kinesis-Verbindungen.* Die Region in Ihrem Amazon Kinesis-Konto, in der Adobe Echtzeit-CDP Ihre Daten streamen wird.
 * `{EVENT_HUB_NAME}`: *Für das Ereignis sind Verbindungen möglich.* Füllen Sie den Azurblauen Ereignis Hub-Namen aus, unter dem Adobe Echtzeit-CDP Ihre Daten streamen wird. Weitere Informationen finden Sie unter Ereignis-Hub [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) erstellen in der Microsoft-Dokumentation.
-* `{EVENT_HUB_NAMESPACE}`: *Für das Ereignis sind Verbindungen möglich.* Füllen Sie den Namensraum der Azurblauen Ereignis Hubs aus, in dem Adobe Echtzeit-CDP Ihre Daten streamen wird. Weitere Informationen finden Sie unter Ereignis-Hubs-Namensraum [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) erstellen in der Microsoft-Dokumentation.
 
 **Antwort**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Verwenden Sie den Fluss für das Streaming-Ziel, mit dem Sie eine Verbindung herstellen möchten. Um die Flussspezifikation abzurufen, führen Sie einen GET-Vorgang am `flowspecs` Endpunkt durch. Weitere Informationen finden Sie in der Swagger-Dokumentation: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Suchen `upsTo` und kopieren Sie in der Antwort die entsprechende ID des Streaming-Ziels, mit dem Sie eine Verbindung herstellen möchten.
+* `{FLOW_SPEC_ID}`: Die Flussspec-ID für Profil-basierte Ziele lautet `71471eba-b620-49e4-90fd-23f1fa0174d8`. Verwenden Sie diesen Wert im Aufruf.
 * `{SOURCE_CONNECTION_ID}`: Verwenden Sie die Quell-Verbindungs-ID, die Sie im Schritt [Verbindung zu Ihrer Experience Platform](#connect-to-your-experience-platform-data)herstellen erhalten haben.
 * `{TARGET_CONNECTION_ID}`: Verwenden Sie die Zielgruppe-Verbindungs-ID, die Sie im Schritt [Verbinden mit Streaming-Ziel](#connect-to-streaming-destination)erhalten haben.
 
@@ -392,7 +390,7 @@ Bei einer erfolgreichen Antwort werden die ID (`id`) des neu erstellten Datenflu
 ```
 
 
-## Aktivieren von Daten an Ihrem neuen Ziel
+## Aktivieren von Daten an Ihrem neuen Ziel {#activate-data}
 
 ![Übersichtsschritt zu den Zielschritten 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: Verwenden Sie den Datenfluss, den Sie im vorherigen Schritt erhalten haben.
 * `{ETAG}`: Verwenden Sie das Tag, das Sie im vorherigen Schritt erhalten haben.
 * `{SEGMENT_ID}`: Geben Sie die Segment-ID an, die Sie an dieses Ziel exportieren möchten. Um Segment-IDs für die Segmente abzurufen, die Sie aktivieren möchten, gehen Sie zu https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, wählen Sie im linken Navigationsmenü die Option **Segmentierungsdienst-API** und suchen Sie nach dem `GET /segment/jobs` Vorgang.
-* `{PROFILE_ATTRIBUTE}`: Beispiel, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: Beispiel: `personalEmail.address` oder `person.lastName`
 
 **Antwort**
 
@@ -503,8 +513,23 @@ Die zurückgegebene Antwort sollte die Segmente und Profil-Attribute, die Sie im
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ Die zurückgegebene Antwort sollte die Segmente und Profil-Attribute, die Sie im
         }
     }
 ],
+```
+
+**Exportierte Daten**
+
+>[!IMPORTANT]
+>
+> Zusätzlich zu den Segmenten im Schritt Daten an Ihr neues Profil [aktivieren](#activate-data), enthalten die exportierten Daten in AWS Kinesis und Azurblauer Ereignis Hubs auch Informationen zur Identitätskarte. Dies stellt die Identitäten der exportierten Profil dar (z. B. [ECID](https://docs.adobe.com/content/help/de-DE/id-service/using/intro/id-request.html), mobile ID, Google-ID, E-Mail-Adresse usw.). Siehe ein Beispiel unten.
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## Nächste Schritte
