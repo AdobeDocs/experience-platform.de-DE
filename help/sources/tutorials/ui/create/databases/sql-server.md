@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Microsoft SQL Server-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe E
 
 Wählen Sie unter der Kategorie &quot; *Datenbanken* &quot;die Option &quot; **Microsoft SQL Server** &quot;, um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Basisverbindung zu erstellen, wählen Sie &quot; **Connect source**&quot;aus.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/sources-catalog.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 Die Seite *Verbindung mit Microsoft SQL Server* herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
@@ -56,13 +56,13 @@ Die Seite *Verbindung mit Microsoft SQL Server* herstellen wird angezeigt. Auf d
 
 Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **Neues Konto**&quot;aus. Geben Sie im angezeigten Eingabedatum einen Namen, eine optionale Beschreibung und Ihre SQL Server-Anmeldeinformationen für die Basisverbindung ein. Wenn Sie fertig sind, wählen Sie &quot; **Verbinden** &quot;und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### Vorhandenes Konto
 
 Um ein vorhandenes Konto zu verbinden, wählen Sie das SQL Server-Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **Weiter** , um fortzufahren.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 ## Nächste Schritte
 
