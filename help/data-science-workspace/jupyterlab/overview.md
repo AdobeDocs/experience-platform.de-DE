@@ -4,9 +4,9 @@ solution: Experience Platform
 title: JupyterLab-Benutzerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '3356'
+source-wordcount: '3349'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # JupyterLab-Benutzerhandbuch
 
-JupyterLab ist eine webbasierte Benutzeroberfläche für <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> und ist eng in die Adobe Experience Platform integriert. Es bietet eine interaktive Entwicklungs-Umgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Codes und -Daten arbeiten können.
+JupyterLab ist eine webbasierte Benutzeroberfläche für <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> und ist fest in [!DNL Adobe Experience Platform]integriert. Es bietet eine interaktive Entwicklungs-Umgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Codes und -Daten arbeiten können.
 
 In diesem Dokument erhalten Sie einen Überblick über JupyterLab und seine Funktionen sowie Anleitungen zum Durchführen gemeinsamer Aktionen.
 
@@ -29,7 +29,7 @@ In der folgenden Liste werden einige der Funktionen vorgestellt, die für Jupyte
 | **Kernels** | Kernels bieten Notebook- und andere JupyterLab-Front-Ends die Möglichkeit, Code in verschiedenen Programmiersprachen auszuführen und zu überprüfen. Experience Platform bietet zusätzliche Kernel zur Unterstützung der Entwicklung in Python, R, PySpark und Spark. Weitere Informationen finden Sie im Abschnitt [Kernels](#kernels) . |
 | **Datenzugriff** | Greifen Sie direkt von JupyterLab aus auf vorhandene Datensätze zu, und nutzen Sie die volle Unterstützung für Lese- und Schreibfunktionen. |
 | **Integration von Plattformdiensten** | Mit integrierten Integrationen können Sie andere Plattformdienste direkt von JupyterLab aus nutzen. Eine vollständige Liste der unterstützten Integrationen finden Sie im Abschnitt zur [Integration mit anderen Plattformdiensten](#service-integration). |
-| **Authentifizierung** | Zusätzlich zum integrierten Sicherheitsmodell <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">von</a>JupyterLab wird jede Interaktion zwischen Ihrer Anwendung und Experience Platform, einschließlich der Kommunikation zwischen Plattformdiensten und Diensten, über das <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe Identity Management System (IMS)</a>verschlüsselt und authentifiziert. |
+| **Authentifizierung** | Zusätzlich zum integrierten Sicherheitsmodell <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">von</a>JupyterLab wird jede Interaktion zwischen Ihrer Anwendung und Experience Platform, einschließlich der Kommunikation zwischen Plattformservice und -service, über das <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>verschlüsselt und authentifiziert. |
 | **Entwicklungsbibliotheken** | In Experience Platform stellt JupyterLab vorinstallierte Bibliotheken für Python, R und PySpark bereit. Eine vollständige Liste der unterstützten Bibliotheken finden Sie im [Anhang](#supported-libraries) . |
 | **Bibliothekscontroller** | Wenn die vorinstallierten Bibliotheken Ihren Anforderungen nicht entsprechen, können zusätzliche Bibliotheken für Python und R installiert und vorübergehend in isolierten Containern gespeichert werden, um die Integrität der Plattform zu wahren und die Sicherheit Ihrer Daten zu gewährleisten. Weitere Informationen finden Sie im Abschnitt [Kernels](#kernels) . |
 
@@ -152,7 +152,7 @@ Wenn der Kernel über einen längeren Zeitraum heruntergefahren oder inaktiv ist
 >
 >Neue Spark-Notebooks sollten den Scala-Kernel verwenden. Eine ausführliche Anleitung zur Aktualisierung vorhandener Notebooks finden Sie im Handbuch zur Umwandlung von [Spark 2.3 in Scala (Spark 2.4)](../recipe-notebook-migration.md) .
 
-PySpark- und Spark-Kernel ermöglichen es Ihnen, Spark-Cluster-Ressourcen innerhalb Ihres PySpark- oder Spark-Notebooks zu konfigurieren, indem Sie den Befehl konfigurieren (`%%configure`) und eine Liste von Konfigurationen bereitstellen. Idealerweise werden diese Konfigurationen definiert, bevor die Spark-Anwendung initialisiert wird. Für das Ändern der Konfigurationen während der Aktivierung der Spark-Anwendung ist nach dem Befehl (`%%configure -f`) ein zusätzliches Force-Flag erforderlich, das die Anwendung neu startet, damit die Änderungen angewendet werden, wie unten dargestellt:
+PySpark- und Spark-Kernel ermöglichen es Ihnen, Spark-Clusterressourcen innerhalb Ihres PySpark- oder Spark-Notebooks zu konfigurieren, indem Sie den Befehl konfigurieren (`%%configure`) und eine Liste von Konfigurationen bereitstellen. Idealerweise werden diese Konfigurationen definiert, bevor die Spark-Anwendung initialisiert wird. Für das Ändern der Konfigurationen während der Aktivierung der Spark-Anwendung ist nach dem Befehl (`%%configure -f`) ein zusätzliches Force-Flag erforderlich, das die Anwendung neu startet, damit die Änderungen angewendet werden, wie unten dargestellt:
 
 >[!CAUTION]
 >Bei PySpark 3 (Spark 2.4) und Scala (Spark 2.4) Notebooks wird `%%` Sparkmagic nicht mehr unterstützt. Die folgenden Vorgänge können nicht mehr verwendet werden:
