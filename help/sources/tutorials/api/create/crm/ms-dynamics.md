@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Microsoft Dynamics Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6c86cec91774f3444dc90042cd7ad5c71429aabd
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '729'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der A
 
 Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die Plattform mit einem Microsoft Dynamics-Konto (im Folgenden &quot;Dynamics&quot; genannt) zu verbinden, um CRM-Daten zu erfassen.
 
-Wenn Sie die Benutzeroberfläche in Experience Platform lieber verwenden möchten, finden Sie im Lernprogramm [für die Benutzeroberfläche des](../../../ui/create/crm/dynamics-salesforce.md) Dynamics- oder Salesforce-Quell-Connectors eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen.
+Wenn Sie die Benutzeroberfläche in Experience Platform lieber verwenden möchten, enthält das Lernprogramm [für die Benutzeroberfläche des](../../../ui/create/crm/dynamics.md) Dynamics-Quell-Connectors eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen.
 
 ## Erste Schritte
 
