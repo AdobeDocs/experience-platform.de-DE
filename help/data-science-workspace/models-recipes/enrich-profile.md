@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Steigerung des Echtzeit-Profils von Kunden durch Einblicke in das maschinelle Lernen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Steigerung des Echtzeit-Profils von Kunden durch Einblicke in das maschinelle Lernen
 
-Der Adobe Experience Platform Data Science Workspace bietet die Werkzeuge und Ressourcen zum Erstellen, Auswerten und Verwenden von maschinellen Lernmodellen, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke in das maschinelle Lernen in einen Profil-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als Profil-Datensätze erfasst, die dann mithilfe des Experience Platform-Segmentierungsdiensts in Untergruppen verwandter Elemente segmentiert werden können.
+[!DNL Adobe Experience Platform] Data Science Workspace bietet die Werkzeuge und Ressourcen, um maschinelle Lernmodelle zu erstellen, zu bewerten und zu nutzen, um Datenprognosen und Erkenntnisse zu generieren. Wenn Einblicke in das maschinelle Lernen in einen Profil-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als Profil-Datensätze erfasst, die dann mithilfe des Experience Platform-Segmentierungsdiensts in Untergruppen verwandter Elemente segmentiert werden können.
 
 Dieses Dokument bietet eine schrittweise Anleitung zur Verbesserung des Echtzeit-Profils durch maschinelles Lernen. Die Schritte sind in die folgenden Abschnitte unterteilt:
 
@@ -24,7 +24,7 @@ Dieses Dokument bietet eine schrittweise Anleitung zur Verbesserung des Echtzeit
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Aspekte der Adobe Experience Platform beim Erfassen von Profil-Daten und Erstellen von Segmenten. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Aspekte, die beim Erfassen von Profil-Daten und beim Erstellen von Segmenten [!DNL Adobe Experience Platform] auftreten. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 * [Echtzeit-Profil](../../rtcdp/overview.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Identitätsdienst](../../identity-service/home.md): Ermöglicht Kunden-Profil in Echtzeit durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Plattform integriert werden.
@@ -50,6 +50,7 @@ Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen defin
 
    * Um eine benutzerdefinierte Klasse zu erstellen, klicken Sie auf Neue Klasse **** erstellen, die sich in der Mitte des Browserfensters befindet. Geben Sie einen Klassennamen und eine Beschreibung ein und wählen Sie das Verhalten der Klasse aus. Klicken Sie auf Klasse **[!UICONTROL zuweisen]** , sobald Sie fertig sind.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
+
    An diesem Punkt sollte die Struktur Ihres Schemas einige Klassenfelder enthalten und Sie können Mixins zuweisen. Ein Mixin ist eine Gruppe aus einem oder mehreren Feldern, die ein bestimmtes Konzept beschreiben.
 
 3. Klicken Sie im Fenster &quot; *Komposition* &quot;im Unterabschnitt &quot; **[!UICONTROL Mixins]** &quot;auf *Hinzufügen* .
