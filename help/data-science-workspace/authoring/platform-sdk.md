@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zum Plattform-SDK
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '451'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ Dieses Tutorial bietet Informationen zum Konvertieren `data_access_sdk_python` i
 
 ## Authentifizierung erstellen {#build-authentication}
 
-Die Authentifizierung ist erforderlich, um Aufrufe an Adobe Experience Platform durchzuführen. Sie besteht aus API-Schlüssel, IMS-Organisations-ID, einem Benutzertoken und einem Service-Token.
+Die Authentifizierung ist erforderlich, um Aufrufe an [!DNL Adobe Experience Platform]und besteht aus API-Schlüssel, IMS-Organisations-ID, einem Benutzertoken und einem Service-Token.
 
 ### Python
 
