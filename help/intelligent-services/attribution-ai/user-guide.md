@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zur Zuordnung von AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Es gibt drei verschiedene Arten von Eingabedaten, die zur Definition von Ereigni
 - **Lookback-Fenster:** Stellt einen Zeitraum bereit, der angibt, wie viele Tage vor dem Konversions-Ereignis Touchpoints eingeschlossen werden sollen.
 - **Touchpoints:** Marketing-Ereignis auf Empfänger-, Individual- und/oder Cookie-Ebene, die zur Bewertung der numerischen oder umsatzbasierten Auswirkungen von Konversionen verwendet werden.
 
-### Definieren von Konversions-Ereignissen
+### Definieren von Konversions-Ereignissen {#define-conversion-events}
 
 Um ein Konversions-Ereignis zu definieren, müssen Sie dem Ereignis einen Namen geben und den Ereignistyp auswählen, indem Sie auf das Dropdown-Menü &quot;Feldname **eingeben&quot;klicken** .
 
@@ -144,7 +144,7 @@ Klicken Sie auf das Uhrensymbol, um die Uhrzeit zu ändern, zu der die Bewertung
 
 ![Uhrensymbol](./images/user-guide/time_of_day.png)
 
-### Regionale Modellierung (optional)
+### Regionale Modellierung (optional) {#region-based-modeling-optional}
 
 Das Verhalten Ihrer Kunden kann sich je nach Land und Region erheblich unterscheiden. Für globale Unternehmen kann die Verwendung von länderbasierten oder regionsbasierten Modellen die Genauigkeit der Zuordnung erhöhen. Jede hinzugefügte Region erstellt ein neues Modell mit den Daten dieser Region.
 
