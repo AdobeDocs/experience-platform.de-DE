@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analysieren Ihrer Daten mithilfe von Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Wor
 
 Die folgenden Konzepte werden eingeführt:
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die webbasierte Benutzeroberfläche der nächsten Generation für Project Jupyter und ist eng in die Adobe Experience Platform integriert.
+- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die webbasierte Schnittstelle der nächsten Generation für Project Jupyter und ist fest in [!DNL Adobe Experience Platform]integriert.
 - **Stapel:** Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird. Beim Hinzufügen von Daten zu einem Datensatz werden neue Stapel erstellt.
 - **Data Access SDK (nicht mehr unterstützt):** Das Data Access SDK ist jetzt veraltet. Bitte verwenden Sie das Handbuch [Plattform-SDK](../authoring/platform-sdk.md) .
 
@@ -38,7 +38,7 @@ Standardmäßig funktioniert Tensorflow-Rezeptur in einem GPU-Cluster und Python
 
 ### Erstellen eines neuen Notebooks
 
-Klicken Sie in der Benutzeroberfläche von Adobe Experience Platform auf die Registerkarte Data Science im oberen Menü, um zum Data Science Workspace zu gelangen. Klicken Sie auf dieser Seite auf die Registerkarte JupyterLab, um den JupyterLab-Starter zu öffnen. Sie sollten eine ähnliche Seite sehen.
+Klicken Sie in der [!DNL Adobe Experience Platform] Benutzeroberfläche auf die Registerkarte &quot;Datenwissenschaft&quot;im oberen Menü, um zum Data Science Workspace zu gelangen. Klicken Sie auf dieser Seite auf die Registerkarte JupyterLab, um den JupyterLab-Starter zu öffnen. Sie sollten eine ähnliche Seite sehen.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Das Rezept für den Einzelhandel ist ein eigenständiges Beispiel, das mit demse
 
 >[!NOTE] Das `data_access_sdk_python` wird nicht mehr unterstützt und nicht mehr empfohlen. Informationen zum Konvertieren Ihres Codes finden Sie im Tutorial zum [Konvertieren von Datenzugriffs-SDK in Platform SDK](../authoring/platform-sdk.md) . Für dieses Lernprogramm gelten weiterhin die folgenden Schritte.
 
-Wir werden den internen Zugriff auf Daten von Adobe Experience Platform und Daten extern fortsetzen. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die pandas Python-Bibliothek.
+Wir gehen weiter auf Daten intern von [!DNL Adobe Experience Platform] und Daten extern zugreifen. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die pandas Python-Bibliothek.
 
 #### Externe Daten
 
@@ -70,7 +70,7 @@ Schließlich können wir einen Blick darauf werfen, wie unsere Daten aussehen. W
 
 #### Experience Platform-Daten
 
-Jetzt greifen wir auf die Daten der Experience Platform zu.
+Jetzt gehen wir über den Zugriff auf [!DNL Experience Platform] Daten hinaus.
 
 ##### Nach Datenbestand-ID
 
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Wenn Sie mit anderen Kerneln als Python arbeiten, finden Sie auf [dieser Seite](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) Zugriff auf Daten auf der Adobe Experience Platform.
+Wenn Sie mit anderen Kerneln als Python arbeiten, lesen Sie bitte [diese Seite](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) , um auf Daten auf der [!DNL Adobe Experience Platform].
 
 Wenn Sie die ausführbare Zelle auswählen und dann auf die Wiedergabeschaltfläche in der Symbolleiste klicken, wird der ausführbare Code ausgeführt. Die Ausgabe für `head()` ist eine Tabelle mit den Schlüsseln Ihres Datensatzes als Spalten und die ersten n Zeilen im Datensatz. `head()` akzeptiert ein ganzzahliges Argument, um anzugeben, wie viele Zeilen ausgegeben werden sollen. Standardmäßig ist dies 5.
 
@@ -190,7 +190,7 @@ Beachten Sie, dass die Diagonale von 1 in der Mitte unten ist. Dies zeigt, dass 
 
 ## Nächste Schritte
 
-In dieser Übung wurde erläutert, wie ein neues Jupyter-Notizbuch im Data Science Workspace erstellt und wie Daten extern sowie über die Adobe Experience Platform abgerufen werden können. Im Einzelnen haben wir die folgenden Schritte ausgeführt:
+In diesem Lernprogramm wurde erläutert, wie ein neues Jupyter-Notizbuch im Data Science Workspace erstellt und wie Daten extern und von [!DNL Adobe Experience Platform]aus aufgerufen werden können. Im Einzelnen haben wir die folgenden Schritte ausgeführt:
 - Neues Jupyter-Notebook erstellen
 - Zugriff auf Daten und Schema
 - Datasets erkunden
