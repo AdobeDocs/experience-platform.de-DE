@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Einblicke in die Kundentechnik
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1062'
-ht-degree: 4%
+source-wordcount: '1059'
+ht-degree: 5%
 
 ---
 
@@ -24,7 +24,7 @@ Um Einblicke in die Kundenaktivität zu erhalten, benötigen Sie eine Dienstinst
 
 ## Übersicht über die Dienstinstanzen
 
-In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. Der *Dienste* -Browser wird angezeigt und zeigt verfügbare intelligente Dienste an. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Der *Dienste* -Browser wird angezeigt und zeigt verfügbare intelligente Dienste an. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
 
 ![Zugriff auf Ihre Instanz](../images/insights/navigate-to-service.png)
 
