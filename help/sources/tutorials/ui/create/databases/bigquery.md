@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Google Big Abfrage-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe E
 
 Wählen Sie unter der Kategorie &quot; *Datenbanken* &quot;die Option &quot; **Google Big-Abfrage** &quot;, um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Basisverbindung zu erstellen, wählen Sie &quot; **Connect source**&quot;aus.
 
-![](../../../../images/tutorials/create/google-big-query/sources-catalog.png)
+![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 Die Seite &quot; *Verbindung zu Google Big-Abfrage* herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
@@ -59,13 +59,13 @@ Die Seite &quot; *Verbindung zu Google Big-Abfrage* herstellen&quot;wird angezei
 
 Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **Neues Konto**&quot;aus. Geben Sie im angezeigten Eingabedatum die Basisverbindung mit einem Namen, einer optionalen Beschreibung und Ihren GBQ-Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie &quot; **Verbinden** &quot;und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-new-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### Vorhandenes Konto
 
 Um ein vorhandenes Konto zu verbinden, wählen Sie das GBQ-Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **Weiter** , um fortzufahren.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-existing-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## Nächste Schritte
 
