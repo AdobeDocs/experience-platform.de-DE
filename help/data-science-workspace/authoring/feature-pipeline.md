@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funktionsebenen erstellen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Funktionsebenen erstellen
 
-Mit der Adobe Experience Platform können Sie benutzerdefinierte Funktionselemente erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime (im Folgenden &quot;Laufzeit&quot; genannt) Funktionstechnik im Maßstab durchzuführen.
+[!DNL Adobe Experience Platform] ermöglicht es Ihnen, benutzerdefinierte Funktionselemente zu erstellen und zu erstellen, um die Funktionstechnik im Maßstab über die Sensei Machine Learning Framework Runtime (im Folgenden &quot;Laufzeit&quot; genannt) durchzuführen.
 
 In diesem Dokument werden die verschiedenen Klassen in einer Feature Pipeline beschrieben und ein schrittweises Lernprogramm zum Erstellen einer benutzerdefinierten Feature Pipeline mit dem [Model Authoring SDK](./sdk.md) in PySpark und Spark bereitgestellt.
 
