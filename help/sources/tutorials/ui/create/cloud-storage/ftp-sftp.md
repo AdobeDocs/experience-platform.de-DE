@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines FTP- oder SFTP-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 46b57900d9323cffeb59a0a6250bf5a9f4ac64ab
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '556'
 ht-degree: 1%
 
 ---
@@ -42,22 +42,32 @@ Experience Platform unterstützt die folgenden Dateiformate, die aus externen Qu
 
 Um auf Ihren FTP- oder SFTP-Server auf der Plattform zugreifen zu können, müssen Sie den **Hostnamen** des Servers, einen **Benutzernamen** und ein **Kennwort** angeben.
 
-## Verbindung zum Server herstellen
+## Herstellen einer Verbindung mit dem FTP- oder SFTP-Server
 
-Wenn die Anmeldeinformationen Ihres Servers bereit sind, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, um Ihren FTP- oder SFTP-Server mit der Plattform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues FTP- oder SFTP-Konto für die Verbindung mit der Plattform zu erstellen.
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellenarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die mit ihnen verbunden sind.
 
-Wählen Sie unter der Kategorie *Cloud-Datenspeicherung* entweder **FTP** oder **SFTP** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zur Ansicht der Dokumentation oder zur Verbindung mit der Quelle. Um eine neue eingehende Basisverbindung zu erstellen, klicken Sie auf Quelle **verbinden**.
+Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-![](../../../../images/tutorials/create/sftp/sftp_sources_catalog.png)
+Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option **[!UICONTROL SFTP]** durch Klicken **auf das Pluszeichen (+)** , um einen neuen FTP- oder SFTP-Connector zu erstellen.
 
-Geben Sie im Eingabefeld einen Namen, eine optionale Beschreibung und Ihre FTP- oder SFTP-Anmeldeinformationen für die Basisverbindung ein. Klicken Sie schließlich auf **Verbinden** und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
+![Katalog](../../../../images/tutorials/create/sftp/catalog.png)
 
-![](../../../../images/tutorials/create/sftp/sftp_credentials.png)
+Die Seite *[!UICONTROL Verbindung mit SFTP]* herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
-Sobald eine Basisverbindung mit Ihrem FTP- oder SFTP-Server hergestellt wurde, können Sie mit dem nächsten Abschnitt fortfahren und einen Datendurchlauf konfigurieren, um Daten in die Plattform zu übertragen.
+### Neues Konto
+
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im angezeigten Eingabedatum einen Namen, eine optionale Beschreibung und Ihre FTP- oder SFTP-Anmeldeinformationen für die Verbindung ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis das neue Konto eingerichtet ist.
+
+![connect](../../../../images/tutorials/create/sftp/new.png)
+
+### Vorhandenes Konto
+
+Um ein vorhandenes Konto zu verbinden, wählen Sie das FTP- oder SFTP-Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** , um fortzufahren.
+
+![existing](../../../../images/tutorials/create/sftp/existing.png)
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine Verbindung zu Ihrem FTP- oder SFTP-Server hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/batch/cloud-storage.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem FTP- oder SFTP-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/batch/cloud-storage.md)zu übertragen.
