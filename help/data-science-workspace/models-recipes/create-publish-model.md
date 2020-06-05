@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Exemplarische Vorgehensweise zum Erstellen und Veröffentlichen eines maschinellen Lernmodells
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1582'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Tun Sie so, als ob Sie eine Online-Einzelhandelswebsite besitzen. Wenn Ihre Kunden auf Ihrer Retail-Website einkaufen, möchten Sie ihnen personalisierte Produktempfehlungen präsentieren, um eine Reihe anderer Produkte Ihrer geschäftlichen Angebot verfügbar zu machen. Im Laufe der Existenz Ihrer Website haben Sie kontinuierlich Kundendaten gesammelt und möchten diese Daten irgendwie zur Erstellung personalisierter Produktempfehlungen verwenden.
 
-Der Adobe Experience Platform Data Science Workspace bietet die Möglichkeit, Ihr Ziel mithilfe des vordefinierten [Produktempfehlungsprogramms](../pre-built-recipes/product-recommendations.md)zu erreichen. In diesem Lernprogramm erfahren Sie, wie Sie auf Ihre Einzelhandelsdaten zugreifen und diese verstehen, ein Modell für maschinelles Lernen erstellen und optimieren und Einblicke in Data Science Workspace generieren können.
+[!DNL Adobe Experience Platform] Data Science Workspace bietet die Möglichkeit, Ihr Ziel mithilfe des vordefinierten [Produktempfehlungsrezepts](../pre-built-recipes/product-recommendations.md)zu erreichen. In diesem Lernprogramm erfahren Sie, wie Sie auf Ihre Einzelhandelsdaten zugreifen und diese verstehen, ein Modell für maschinelles Lernen erstellen und optimieren und Einblicke in Data Science Workspace generieren können.
 
 Dieses Lernprogramm spiegelt den Arbeitsablauf von Data Science Workspace wider und behandelt die folgenden Schritte zum Erstellen eines Modells für maschinelles Lernen:
 
@@ -31,7 +31,7 @@ Dieses Lernprogramm spiegelt den Arbeitsablauf von Data Science Workspace wider 
 
 Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Voraussetzungen verfügen:
 
-* Zugriff auf Adobe Experience Platform Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+* Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
 * Aktivieren von Assets. Wenden Sie sich an Ihren Kundenbetreuer, um die folgenden Punkte für Sie bereitzustellen.
    * Recommendations-Rezept
@@ -52,7 +52,7 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
 ## Daten vorbereiten {#prepare-your-data}
 
-Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen vermittelt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten mithilfe von Adobe Analytics in Plattform eingebunden werden und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden soll.
+Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen zukommen lässt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten in Plattform integriert werden [!DNL Adobe Analytics]und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden soll.
 
 ### Daten und Schemas
 
@@ -79,7 +79,7 @@ Rezepte bilden die Grundlage für ein Modell, da sie maschinelle Lernalgorithmen
 
 ### Produktempfehlungen-Rezept
 
-1. Navigieren Sie in Adobe Experience Platform in der linken Navigationsspalte zu **[!UICONTROL Modellen]** und klicken Sie dann oben auf **[!UICONTROL Rezepte]** , um eine Liste der verfügbaren Rezepte für Ihr Unternehmen Ansicht.
+1. Navigieren Sie [!DNL Adobe Experience Platform]in der linken Navigationsspalte zu **[!UICONTROL Modellen]** und klicken Sie dann oben auf **[!UICONTROL Rezepte]** , um eine Liste der verfügbaren Rezepte für Ihr Unternehmen Ansicht.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Suchen und öffnen Sie das bereitgestellte **[!UICONTROL Recommendations-Rezept]** , indem Sie auf seinen Namen klicken.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
@@ -96,7 +96,7 @@ Nachdem Ihre Daten vorbereitet und das Rezept einsatzbereit ist, können Sie Ihr
 
 Ein Modell ist eine Instanz eines Rezeptes, mit dem Sie mit Daten im Maßstab trainieren und bewerten können.
 
-1. Navigieren Sie in Adobe Experience Platform in der linken Navigationsspalte zu **[!UICONTROL Modellen]** und klicken Sie dann oben auf der Seite auf **[!UICONTROL Rezepte]** , um eine Liste aller für Ihr Unternehmen verfügbaren Rezepte anzuzeigen.
+1. Navigieren Sie [!DNL Adobe Experience Platform]in der linken Navigationsspalte zu **[!UICONTROL Modellen]** und klicken Sie dann oben auf der Seite auf **[!UICONTROL Rezepte]** , um eine Liste aller für Ihr Unternehmen verfügbaren Rezepte anzuzeigen.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Suchen und öffnen Sie das bereitgestellte **[!UICONTROL Empfehlungsrezept]** , indem Sie auf seinen Namen klicken und die Übersichtsseite des Rezepts eingeben. Klicken Sie entweder von der Mitte aus (sofern keine vorhandenen Modelle vorhanden sind) oder oben rechts auf der Seite &quot;Rezept-Übersicht&quot;auf &quot;Modell **[!UICONTROL erstellen]** &quot;.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
