@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem `xd
 | --- | --- | --- | --- |
 | Paid Search | https:/<span>/ns.adobe.com/xdm/Kanal-types/search | bezahlt | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/Kanal-types/social | verdient | clicks |
-| Anzeigen  | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | clicks |
+| Anzeigen | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | clicks |
 | E-Mail  | https:/<span>/ns.adobe.com/xdm/Kanal-types/email | bezahlt | clicks |
 | Interner Werber | https:/<span>/ns.adobe.com/xdm/Kanal-types/direct | besetzt | clicks |
 | Display ViewThrough | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | impressions |
@@ -191,7 +191,7 @@ Sobald Sie festgestellt haben, ob Ihre Marketing-Ereignis-Daten dem CEE-Schema z
 
 Nachdem Sie den zu sendenden Datenbereich festgelegt haben, wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und sie in den Dienst zu integrieren.
 
-Wenn Sie über ein Adobe Experience Platform-Abonnement verfügen und die Daten selbst zuordnen und erfassen möchten, führen Sie die im folgenden Abschnitt beschriebenen Schritte aus.
+Wenn Sie ein [!DNL Adobe Experience Platform] Abonnement haben und die Daten selbst zuordnen und erfassen möchten, führen Sie die im folgenden Abschnitt beschriebenen Schritte aus.
 
 ### Verwenden der Adobe Experience Platform
 
@@ -217,7 +217,7 @@ Nachdem Sie das Schema erstellt und gespeichert haben, können Sie auf der Grund
 
 #### Hinzufügen eines primären Identitäts-Namensraum-Tags zum Dataset
 
-Wenn Sie Daten aus Adobe Audience Manager, Adobe Analytics oder einer anderen externen Quelle eingeben, müssen Sie dem Datensatz ein `primaryIdentityNameSpace` -Tag hinzufügen. Dies kann durch eine PATCH-Anforderung an die Katalogdienst-API erfolgen.
+Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]oder einer anderen externen Quelle einreichen, müssen Sie dem Datensatz ein `primaryIdentityNameSpace` -Tag hinzufügen. Dies kann durch eine PATCH-Anforderung an die Katalogdienst-API erfolgen.
 
 Wenn Sie Daten aus einer lokalen CSV-Datei aufnehmen, können Sie den nächsten Abschnitt über die [Zuordnung und Erfassung von Daten](#ingest)überspringen.
 
