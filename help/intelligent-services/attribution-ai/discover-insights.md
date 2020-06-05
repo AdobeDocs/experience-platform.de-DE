@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erkenntnisse über Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -57,7 +57,7 @@ Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie die Beschreibung
 
 ![Bearbeiten-Popup](./images/insights/edit-popover.png)
 
-### Weitere Aktionen
+### Weitere Aktionen {#more-actions}
 
 Die Schaltfläche &quot; *Mehr Aktionen* &quot;befindet sich in der oberen rechten Navigation neben *Bearbeiten*. Wenn Sie auf **Mehr Aktionen** klicken, wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
 
