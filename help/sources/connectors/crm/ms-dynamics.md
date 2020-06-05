@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Microsoft Dynamics Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: f46e95b1e1af3ff5021561eb45f408e45c657834
+source-git-commit: 565c8c4b084343e5488a725a6a93d5d50d59fe66
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 3%
@@ -28,5 +28,5 @@ In der folgenden Dokumentation finden Sie Informationen zum Verbinden von Micros
 
 ## Verbinden von Microsoft Dynamics mit der Plattform mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Microsoft Dynamics-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [Erstellen eines Microsoft Dynamics-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/crm/dynamics.md)
 - [Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)
