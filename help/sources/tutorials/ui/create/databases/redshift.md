@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Amazon Redshift-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe E
 
 Wählen Sie unter der Kategorie *Datenbanken* die Option **Amazon Redshift** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Basisverbindung zu erstellen, wählen Sie &quot; **Connect source**&quot;aus.
 
-![](../../../../images/tutorials/create/redshift/sources-catalog.png)
+![](../../../../images/tutorials/create/redshift/catalog.png)
 
 Die Seite *Verbindung mit Amazon Redshift* wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
@@ -59,13 +59,13 @@ Die Seite *Verbindung mit Amazon Redshift* wird angezeigt. Auf dieser Seite kön
 
 Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **Neues Konto**&quot;aus. Geben Sie im eingeblendeten Eingabebild einen Namen, eine optionale Beschreibung und Ihre Redshift-Anmeldedaten für die Basisverbindung ein. Wenn Sie fertig sind, wählen Sie &quot; **Verbinden** &quot;und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
 
-![](../../../../images/tutorials/create/redshift/new-credentials.png)
+![](../../../../images/tutorials/create/redshift/new.png)
 
 ### Vorhandenes Konto
 
 Um ein vorhandenes Konto zu verbinden, wählen Sie das Redshift-Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **Weiter** , um fortzufahren.
 
-![](../../../../images/tutorials/create/redshift/existing-credentials.png)
+![](../../../../images/tutorials/create/redshift/existing.png)
 
 ## Nächste Schritte
 
