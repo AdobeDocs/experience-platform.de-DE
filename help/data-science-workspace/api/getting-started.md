@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Entwicklerleitfaden für Sensei Machine Learning API
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '206'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der [Sensei Mac
 
 ## Erste Schritte
 
-Sie müssen das [Authentifizierungs](../../tutorials/authentication.md) -Tutorial abgeschlossen haben, um Zugriff auf die folgenden Anforderungsheader zu haben, um Aufrufe an Adobe Experience Platform-APIs durchzuführen:
+Sie müssen das [Authentifizierungs](../../tutorials/authentication.md) -Tutorial abgeschlossen haben, um Zugriff auf die folgenden Anforderungsheader zu haben, um Aufrufe an [!DNL Adobe Experience Platform] APIs durchzuführen:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
