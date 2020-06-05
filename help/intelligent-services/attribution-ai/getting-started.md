@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erste Schritte mit Attribution AI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 # Erste Schritte mit Attribution AI
 
-Die folgenden Leitfäden erfordern ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die mit der Verwendung von Attribution AI verbunden sind. Bevor Sie mit den Tutorials beginnen, lesen Sie bitte die folgenden Dokumente:
+Die folgenden Handbücher erfordern ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die mit der Verwendung von Attribution AI verbunden sind. Bevor Sie mit den Tutorials beginnen, lesen Sie bitte die folgenden Dokumente:
 
-- [Systemübersicht](../../xdm/home.md)zum Erlebnis-Datenmodell (XDM): XDM ist das grundlegende Framework, mit dem Adobe Experience Cloud, powered by Experience Platform, die richtige Botschaft an die richtige Person im richtigen Kanal und genau zum richtigen Zeitpunkt senden kann. Die Methode, auf der Experience Platform aufgebaut ist, XDM-System, operalisiert Experience Data Model-Schema für die Verwendung durch Plattformdienste.
-- [Grundlagen der Zusammensetzung](../../xdm/schema/composition.md)des Schemas: Dieses Dokument bietet eine Einführung in Experience Data Model-(XDM-)Schema und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
+- [Systemübersicht](../../xdm/home.md)zum Erlebnis-Datenmodell (XDM): XDM ist das Fundament, das es ermöglicht, [!DNL Adobe Experience Cloud]mithilfe von Experience Platform die richtige Botschaft an die richtige Person zu senden, am richtigen Kanal, genau zum richtigen Zeitpunkt. Die Methode, auf der Experience Platform aufgebaut ist, XDM-System, operalisiert Experience Data Model-Schema für die Verwendung durch Plattformdienste.
+- [Grundlagen der Zusammensetzung](../../xdm/schema/composition.md)des Schemas: Dieses Dokument bietet eine Einführung in Experience Data Model-(XDM-)Schema und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in [!DNL Adobe Experience Platform]verwendet werden sollen.
 - [Erstellen von Schemas](../../xdm/tutorials/create-schema-ui.md): In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas mit dem Schema-Editor in Experience Platform beschrieben.
 
 Für die Zuordnung von AI müssen die Datensätze dem Consumer Experience Ereignisses (CEE)-Schema entsprechen, bei dem es sich um eine Mischung im [Experience Data Model](../../xdm/home.md) (XDM) handelt. Wenden Sie sich an den Adobe-Support unter attributionai-support@adobe.com, um diese Daten zu implementieren oder zu ändern. Wenn Daten zu Medienausgaben vorhanden sind, können Sie weitere Analysen durchführen, z. B. inkrementellen Umsatz und ROI. Wenn Kundendaten verfügbar sind, können Sie Gutschriften auch auf Kundenebene zuordnen, wenn Profil-Daten verfügbar sind.
