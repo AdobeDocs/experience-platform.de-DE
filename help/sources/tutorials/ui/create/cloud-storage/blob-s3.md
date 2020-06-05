@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Azurblauch- oder Amazon S3-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 9fd00ec198f61843bb9a395103215e5441b23745
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '644'
 ht-degree: 2%
 
 ---
@@ -56,18 +56,30 @@ Weitere Informationen zum Einstieg finden Sie in [diesem AWS-Dokument](https://a
 
 ## Verbinden Sie Ihr Blob- oder S3-Konto
 
-Wenn die Anmeldeinformationen Ihrer Cloud-Datenspeicherung fertig sind, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, um Ihr Blob- oder S3-Konto mit Platform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues Blob- oder S3-Konto für die Verbindung mit der Plattform zu erstellen.
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellenarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die mit ihnen verbunden sind.
 
-Wählen Sie unter der Kategorie &quot; *Cloud-Datenspeicherung* &quot;entweder **Azurblase-Datenspeicherung** oder **Amazon S3** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zur Ansicht der Dokumentation oder zur Verbindung mit der Quelle. Um eine neue eingehende Basisverbindung zu erstellen, klicken Sie auf Quelle **verbinden**.
+Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
+Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option **[!UICONTROL Azurblase-Datenspeicherung]** oder **[!UICONTROL Amazon S3]** , indem Sie **auf das +-Symbol (+)** klicken, um einen neuen Blob- oder S3-Anschluss zu erstellen.
 
-Geben Sie im Eingabefeld einen Namen, eine optionale Beschreibung und Ihre Blob- oder S3-Anmeldeinformationen für die Basisverbindung ein. Klicken Sie schließlich auf **Verbinden** und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
+![Katalog](../../../../images/tutorials/create/blob/catalog.png)
 
-![](../../../../images/tutorials/create/s3/s3_credentials.png)
+Die Seite &quot; *[!UICONTROL Verbindung mit der Blase-Datenspeicherung]* herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+
+### Neues Konto
+
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im angezeigten Eingabedatum einen Namen, eine optionale Beschreibung und Ihre Blob- oder S3-Anmeldeinformationen für die Verbindung ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis das neue Konto eingerichtet ist.
+
+![connect](../../../../images/tutorials/create/blob/new.png)
+
+### Vorhandenes Konto
+
+Um ein vorhandenes Konto zu verbinden, wählen Sie das Blob- oder S3-Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** , um fortzufahren.
+
+![existing](../../../../images/tutorials/create/blob/existing.png)
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basis-Verbindung zu Ihrem Blue Blob oder Amazon S3 Konto eingerichtet. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/batch/cloud-storage.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem Blob- oder S3-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/batch/cloud-storage.md)zu übertragen.
