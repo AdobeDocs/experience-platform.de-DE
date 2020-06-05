@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Salesforce-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc999ce1ab426f412c0cc2b69173a336a14024f3
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '732'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der A
 
 Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, mit denen Sie die Plattform mit einem Salesforce-Konto verbinden können, um CRM-Daten zu erfassen.
 
-Wenn Sie die Benutzeroberfläche in Experience Platform lieber verwenden möchten, finden Sie im Lernprogramm [für die Benutzeroberfläche des](../../../ui/create/crm/dynamics-salesforce.md) Dynamics- oder Salesforce-Quell-Connectors eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen.
+Wenn Sie lieber die Benutzeroberfläche in Experience Platform verwenden möchten, enthält das [Salesforce-UI-Lernprogramm](../../../ui/create/crm/salesforce.md) schrittweise Anleitungen zum Durchführen ähnlicher Aktionen.
 
 ## Erste Schritte
 
@@ -48,7 +48,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
