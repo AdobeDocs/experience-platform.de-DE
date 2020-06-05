@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK – Debugging
 description: Erfahren Sie, wie Sie das Debugging im Experience Platform Web SDK aktivieren
 seo-description: Erfahren Sie, wie Sie das Debugging im Experience Platform Web SDK aktivieren
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 31a527cb4ad1348262131f827c7e932404542c4b
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 100%
@@ -19,7 +19,7 @@ Wenn das Debugging aktiviert ist, gibt das SDK Meldungen an die Browser-Konsole 
 Das Debuggen ist standardmäßig deaktiviert, kann jedoch auf drei verschiedene Arten aktiviert werden:
 
 * `configure`-Befehl
-* `debug`-Befehl
+* `setDebug`-Befehl
 * Abfragezeichenfolge-Parameter
 
 ## Debugging mit dem Befehl „Konfigurieren“ aktivieren
@@ -42,7 +42,7 @@ alloy("configure", {
 Schalten Sie das Debugging wie folgt mit einem separaten `debug`-Befehl um:
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
