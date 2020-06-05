@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Abfrage-Service für Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 1%
 
 # Abfrage-Service für Jupyter-Notebooks
 
-Mit Adobe Experience Platform können Sie SQL (Structured Abfrage Language) in Data Science Workspace verwenden, indem Sie Abfrage Service als Standardfunktion in JupyterLab integrieren.
+[!DNL Adobe Experience Platform] ermöglicht Ihnen die Verwendung von SQL (Structured Abfrage Language) in Data Science Workspace durch Integration von Abfrage Service in JupyterLab als Standardfunktion.
 
-In diesem Lernprogramm werden Beispiele von SQL-Abfragen für gängige Anwendungsfälle zur Untersuchung, Transformation und Analyse von Adobe Analytics-Daten vorgestellt.
+In diesem Lernprogramm werden Beispiele von SQL-Abfragen für gängige Anwendungsfälle zur Untersuchung, Transformation und Analyse von [!DNL Adobe Analytics] Daten vorgestellt.
 
 ## Erste Schritte
 
 Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Voraussetzungen verfügen:
 
-- Zugriff auf Adobe Experience Platform Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren
+- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren
 
-- Ein Adobe Analytics-Datensatz
+- Ein [!DNL Adobe Analytics] Datensatz
 
 - Ein Arbeitsverständnis mit den folgenden Schlüsselkonzepten, die in diesem Lernprogramm verwendet werden:
    - [Erlebnis-Datenmodell (XDM) und XDM-System](../../xdm/home.md)
    - [Abfrage](../../query-service/home.md)
    - [SQL-Syntax von Abfrage Service](../../query-service/sql/overview.md)
-   - Adobe Analytics
+   - [!DNL Adobe Analytics]
 
 ## Zugriff auf JupyterLab und Abfrage {#access-jupyterlab-and-query-service}
 
@@ -50,13 +50,13 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Suchen Sie nach einem Adobe Analytics-Datensatz, um ihn zu untersuchen, und klicken Sie mit der rechten Maustaste auf die Liste, klicken Sie auf **[!UICONTROL Abfrage Daten im Notebook]** , um SQL-Abfragen im leeren Notebook zu generieren.
+4. Suchen Sie einen [!DNL Adobe Analytics] Datensatz zu erkunden und klicken Sie mit der rechten Maustaste auf die Auflistung, klicken Sie auf **[!UICONTROL Abfrage Daten in Notebook]** , um SQL-Abfragen in das leere Notebook zu generieren.
 
 5. Klicken Sie auf die erste generierte Zelle, die die Funktion enthält, `qs_connect()` und führen Sie sie durch Klicken auf die Wiedergabeschaltfläche aus. Diese Funktion erstellt eine Verbindung zwischen der Notebook-Instanz und dem Abfrage Service.
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Kopieren Sie den Adobe Analytics-Dataset-Namen aus der zweiten generierten SQL-Abfrage herunter. Dieser Wert ist der Wert nach `FROM`.
+6. Kopieren Sie den [!DNL Adobe Analytics] Datasetnamen aus der zweiten generierten SQL-Abfrage herunter. Dieser Wert ist der Wert nach `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -81,10 +81,11 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
    target_day = "01"
    ```
 
-   - `target_table` : Name des Adobe Analytics-Datensatzes.
+   - `target_table` : Name des [!DNL Adobe Analytics] Datensatzes.
    - `target_year` : Bestimmtes Jahr, aus dem die Daten der Zielgruppe stammen.
    - `target_month` : Bestimmter Monat, aus dem die Zielgruppe stammt.
    - `target_day` : Bestimmter Tag, von dem die Daten der Zielgruppe stammen.
+
    >[!NOTE] Sie können diese Werte jederzeit ändern. Führen Sie dabei die Variablenzelle aus, damit die Änderungen angewendet werden.
 
 ## Abfrage der Daten {#query-your-data}
