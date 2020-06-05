@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Customer AI – Übersicht
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '487'
 ht-degree: 25%
 
 ---
@@ -35,7 +35,7 @@ Customer AI erlaubt Folgendes nicht:
 
 - Die Kundentoftware sollte nicht zur Vorhersage dynamischer Preise oder des Preispunkts verwendet werden, zu dem der Kunde einen Kauf tätigt.
 - Die Kundenunterstützung kann nicht bestimmen, ob das Angeben eines Angebots die Wahrscheinlichkeit erhöht, dass der Kunde einen Artikel kauft. Obwohl Sie sich entscheiden können, Rabatt-Angebot basierend auf Tendenzwerten zu senden, ist dies nicht unbedingt die beste Möglichkeit, diese Kunden umzurechnen.
-- Die Kundentelefonie ist kein Tool für Produktempfehlungen. Wenn Sie Tausende von SKUs haben, verwenden Sie nicht die Kundendienstmitarbeiter als Proxy für eine echte Produktempfehlungslösung wie Adobe Zielgruppe.
+- Die Kundentelefonie ist kein Tool für Produktempfehlungen. Wenn Sie Tausende von SKUs haben, verwenden Sie die Kundendienstmitarbeiterkennung nicht als Proxy für eine echte Produktempfehlungslösung wie [!DNL Adobe Target].
 - Die Kundentraining kann nicht vorhersagen, in welcher Phase der Kauffahrt sich der Kunde befindet, z. B. wenn er sich in einer &quot;Bewusstseins&quot;-, &quot;Bedacht&quot;-, &quot;Kauf&quot;- oder &quot;Retention&quot;-Phase befindet.
 - Verwenden Sie keine Kunden-API, um Kunden zu ermitteln, die wahrscheinlich ein Produkt kaufen, das in der Zukunft gestartet wird. Dies setzt voraus, dass bestimmte Erfolgsereignisse in der Vergangenheit vorhanden sind, damit Kunden-AI den maschinellen Lernalgorithmus erfolgreich in Ihren Daten ausbilden kann.
 
