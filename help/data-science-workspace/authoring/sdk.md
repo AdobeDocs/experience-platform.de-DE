@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SDK-Entwicklerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '943'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # SDK-Entwicklerhandbuch
 
-Das Modell Authoring-SDK ermöglicht Ihnen die Entwicklung benutzerdefinierter Rezepte für maschinelles Lernen und Funktionslinien, die in Adobe Experience Platform Data Science Workspace verwendet werden können. Es stellt implementierbare Vorlagen in PySpark und Spark bereit.
+Das Model Authoring-SDK ermöglicht Ihnen die Entwicklung benutzerdefinierter maschineller Lernrezepte und Funktionslinien, die in Data Science Workspace verwendet werden können. Es stellt implementierbare Vorlagen in PySpark und Spark bereit. [!DNL Adobe Experience Platform]
 
 Dieses Dokument enthält Informationen zu den verschiedenen Klassen im Model Authoring-SDK.
 
