@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erkenntnisse über Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Um Einblicke in Attribution AI zu verwenden, benötigen Sie eine Dienstinstanz m
 
 ## Übersicht über Dienstinstanzen
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. Der *Dienste* -Browser wird angezeigt und zeigt verfügbare Adobe Intelligent Services an. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Der *Dienste* -Browser wird angezeigt und zeigt verfügbare Adobe Intelligent Services an. In the container for Attribution AI, click **Open**.
 
 ![Zugriff auf Ihre Instanz](./images/insights/open_Attribution_ai.png)
 
@@ -138,7 +138,7 @@ Wenn Sie den Mauszeiger über die Datenzeile eines bestimmten Zuordnungsmodells 
 
 ## Aufschlüsselung nach Kanal
 
-Die *Aufschlüsselungskarte nach Kanal* wird verwendet, um die Gesamtanzahl der Konversionen in Bezug auf jeden Kanal zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanal und die Kapitalrendite getroffen werden.
+Die *Aufschlüsselungskarte nach Kanal* wird verwendet, um die Gesamtanzahl der Konversionen im Verhältnis zu den einzelnen Kanälen zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanal und die Kapitalrendite getroffen werden.
 
 ![Aufschlüsselungs-Kanal](./images/insights/channel-breakdown.png)
 
