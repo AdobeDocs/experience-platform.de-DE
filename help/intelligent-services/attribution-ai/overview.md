@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Zuordnungs-AI
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Attribution AI wird verwendet, um Gutschriften auf Touchpoints zuzuordnen, die z
 
 Die Zuordnungs-AI-Ausgaben können über verschiedene Dimensionen getrennt werden und können über verschiedene Phasen der Customer Journey hinweg verwendet werden. Dies erfolgt, ohne dass geschäftliche Anforderungen in maschinelle Lernprobleme, die Auswahl von Algorithmen, Schulungen oder die Bereitstellung von Modellen übersetzt werden müssen.
 
-Zuordnungs-AI-Daten können von Adobe (z. B. Analytics) oder von Nicht-Adobe-Datenquellen stammen.
+Zuordnungs-AI-Daten können von Adobe stammen (z. [!DNL Analytics]) oder Nicht-Adobe-Datenquellen.
 
 Attribution AI unterstützt zwei Kategorien von Scores, algorithmisch und regelbasiert. Algorithmische Ergebnisse beinhalten inkrementelle und beeinflusste Werte. Regelbasierte Ergebnisse sind First Touch, Last Touch, Linear, U-förmig und Time-Decay.
 
@@ -60,7 +60,7 @@ Mithilfe der Attribution AI können Sie die folgenden Anwendungsfälle im Beispi
 
 ### Zusätzliche Funktionen
 
-Attribution AI kann auch mit anderen Adobe-Lösungen wie Adobe Analytics integriert werden. Auf diese Weise können Sie mithilfe dieser Lösungen das anpassbare Algorithmusmodell zur Bewertung der Medienleistung und zur Bereitstellung analytischer Einblicke einsetzen.
+Attribution AI kann auch mit anderen Adobe-Angeboten wie [!DNL Adobe Analytics]z. B. Auf diese Weise können Sie mithilfe dieser Lösungen das anpassbare Algorithmusmodell zur Bewertung der Medienleistung und zur Bereitstellung analytischer Einblicke einsetzen.
 
 ## Nächste Schritte
 
