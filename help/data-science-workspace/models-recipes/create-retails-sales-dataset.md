@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema und Dataset für den Einzelhandel erstellen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 # Schema und Dataset für den Einzelhandel erstellen
 
-Dieses Lernprogramm bietet Ihnen die Voraussetzungen und Elemente, die für alle anderen Lernprogramme des Adobe Experience Platform Data Science Workspace erforderlich sind. Nach Abschluss des Projekts stehen Ihnen und Mitgliedern Ihrer IMS-Organisation auf Experience Platform das Schema und die Datensätze für den Einzelhandel zur Verfügung.
+Dieses Tutorial bietet Ihnen die Voraussetzungen und Elemente, die für alle anderen Lernprogramme des Arbeitsbereichs [!DNL Adobe Experience Platform] für Datenwissenschaften erforderlich sind. Nach Abschluss des Projekts stehen Ihnen und Mitgliedern Ihrer IMS-Organisation auf Experience Platform das Schema und die Datensätze für den Einzelhandel zur Verfügung.
 
 ## Erste Schritte
 
 Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Voraussetzungen verfügen:
-- Zugriff auf Adobe Experience Platform Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 - Autorisierung zum Durchführen von Experience Platform-API-Aufrufen. Führen Sie das Lernprogramm zum [Authentifizieren und Zugreifen auf Adobe Experience Platform-APIs](../../tutorials/authentication.md) durch, um die folgenden Werte abzurufen, damit dieses Lernprogramm erfolgreich abgeschlossen werden kann:
    - Genehmigung: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
