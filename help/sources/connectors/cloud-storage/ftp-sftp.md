@@ -4,9 +4,9 @@ solution: Experience Platform
 title: FTP- und SFTP-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # (Beta) FTP- und SFTP-Anschluss
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, Google Cloud Platform und Azurblase. Sie können Ihre Daten aus diesen Systemen in Plattform übertragen.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, Google Cloud Platform und Azurblase, sodass Sie Ihre Daten von diesen Systemen mitnehmen können.
 
 Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in die Plattform übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. Mit der Plattform können Sie Daten von einem FTP- oder SFTP-Server in Batches importieren.
 
