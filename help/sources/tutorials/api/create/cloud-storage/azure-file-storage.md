@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen Sie einen Azurblase-Datenspeicherung-Connector mit der Flow-Dienst-API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,8 @@ POST /connections
 
 **Anfrage**
 
-Um eine Datenspeicherung mit einer Azurblauen Datei zu erstellen, muss die eindeutige Verbindungs-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungsspezifikations-ID für die Datenspeicherung von Azurblauer Datei ist `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+Mit der folgenden Anforderung wird eine neue Azurblase-Datenspeicherung erstellt, die von den in der Payload bereitgestellten Eigenschaften konfiguriert wird:
+
 
 ```shell
 curl -X POST \
