@@ -4,10 +4,10 @@ solution: Experience Platform
 title: JupyterLab-Benutzerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
 workflow-type: tm+mt
-source-wordcount: '2773'
-ht-degree: 6%
+source-wordcount: '3672'
+ht-degree: 11%
 
 ---
 
@@ -37,13 +37,14 @@ In der folgenden Liste werden einige der Funktionen vorgestellt, die für Jupyte
 
 ## Integration mit anderen Plattformdiensten {#service-integration}
 
-Standardisierung und Interoperabilität sind Schlüsselkonzepte der Experience Platform. Die Integration von JupyterLab auf der Plattform als eingebettete IDE ermöglicht es, mit anderen Plattformdiensten zu interagieren, sodass Sie die Plattform optimal nutzen können. Die folgenden Plattformdienste sind in JupyterLab verfügbar:
+Normung und Interoperabilität sind Schlüsselkonzepte [!DNL Experience Platform]. Die Integration von JupyterLab [!DNL Platform] als eingebettete IDE ermöglicht es Ihnen, mit anderen [!DNL Platform] Diensten zu interagieren, sodass Sie ihr Potenzial voll ausschöpfen [!DNL Platform] können. Die folgenden [!DNL Platform] Dienste sind in JupyterLab verfügbar:
 
 * **Katalogdienst:** Zugriff auf und Erforschung von Datensätzen mit Lese- und Schreibfunktionen.
 * **Abfrage-Dienst:** Zugriff auf und Untersuchung von Datensätzen mit SQL, wodurch der Datenzugriff bei großen Datenmengen kostengünstiger wird.
 * **Sensei-ML-Framework:** Modellentwicklung mit der Möglichkeit, Daten zu trainieren und zu bewerten, sowie Rezepterstellung mit einem Klick.
+* **Erlebnisdatenmodell (XDM):** Standardisierung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform. [Das von Adobe unterstützte Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en)ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
->[!NOTE] Einige Plattformdienstintegrationen auf JupyterLab sind auf bestimmte Kernels beschränkt. Weitere Informationen finden Sie im Abschnitt zu [Kerneln](#kernels) .
+>[!NOTE] Einige [!DNL Platform] Dienstintegrationen auf JupyterLab sind auf bestimmte Kernels beschränkt. Weitere Informationen finden Sie im Abschnitt zu [Kerneln](#kernels) .
 
 ## Wichtige Funktionen und allgemeine Vorgänge
 
@@ -230,6 +231,82 @@ Um einen neuen *Starter* zu öffnen, klicken Sie auf **Datei > Neuer Starter**. 
 
 Jeder unterstützte Kernel bietet integrierte Funktionen, mit denen Sie Plattformdaten aus einem Datensatz in einem Notebook lesen können. Die Unterstützung für die Paginierung von Daten ist jedoch auf Python- und R-Notebooks beschränkt.
 
+### Einschränkungen bei Notebook-Daten
+
+Die folgenden Informationen definieren die maximale Datenmenge, die gelesen werden kann, welche Art von Daten verwendet wurde und den geschätzten Zeitrahmen, in dem die Daten gelesen werden. Für Python und R wurde ein mit 40 GB RAM konfigurierter Notebook-Server für die Benchmarks verwendet. Für PySpark und Scala wurde ein mit 64 GB RAM, 8 Kerne, 2 DBU mit maximal 4 Mitarbeitern konfigurierter Datenbankcluster für die unten beschriebenen Benchmarks verwendet.
+
+Die verwendeten ExperienceEvent-Schema-Daten variierten in der Größe von 1.000 Zeilen bis zu einer Milliarde Zeilen (1B). Beachten Sie, dass für die PySpark- und Spark-Metriken ein Datumsbereich von 10 Tagen für die XDM-Daten verwendet wurde.
+
+Die Ad-hoc-Schema-Daten wurden mit Abfrage Service Create Table als Select (CTAS) vorverarbeitet. Diese Daten variierten auch in der Größe von 1.000 Zeilen (1.000) bis zu einer Milliarde (1.000) Zeilen.
+
+#### Datenbeschränkungen für Python-Notebooks
+
+**XDM ExperienceEvent-Schema:** Sie sollten maximal 2 Millionen Zeilen (~6,1 GB Daten auf der Festplatte) XDM Daten in weniger als 22 Minuten lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
+
+| Anzahl Zeilen | 1K | 10K | 100K | 1M | 2M |
+| ----------------------- | ------ | ------ | ----- | ----- | ----- |
+| Größe auf Festplatte (MB) | 18.73 | 187.5 | 308 | 3000 | 6050 |
+| SDK (in Sekunden) | 20.3 | 86.8 | 63 | 659 | 1315 |
+
+**Ad-hoc-Schema:** Sie sollten maximal 5 Millionen Zeilen (~5,6 GB Daten auf der Festplatte) von Nicht-XDM-Daten (Ad-hoc-Daten) in weniger als 14 Minuten lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
+
+| Anzahl Zeilen | 1K | 10K | 100K | 1M | 2M | 3M | 5M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
+| Größe auf Festplatte (in MB) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
+| SDK (in Sekunden) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
+
+#### R Datenbeschränkungen für Notebooks
+
+**XDM ExperienceEvent-Schema:** Sie sollten in weniger als 13 Minuten maximal 1 Million Zeilen XDM Daten (3 GB Daten auf Festplatte) lesen können.
+
+| Anzahl Zeilen | 1K | 10K | 100K | 1M |
+| ----------------------- | ------ | ------ | ----- | ----- |
+| Größe auf Festplatte (MB) | 18.73 | 187.5 | 308 | 3000 |
+| R Kernel (in Sekunden) | 14.03 | 69.6 | 86.8 | 775 |
+
+**Ad-hoc-Schema:** Sie sollten in etwa 10 Minuten maximal 3 Millionen Zeilen Ad-hoc-Daten (293 MB Daten auf dem Datenträger) lesen können.
+
+| Anzahl Zeilen | 1K | 10K | 100K | 1M | 2M | 3M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
+| Größe auf Festplatte (in MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
+| R SDK (in Sekunden) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
+
+#### Datenbeschränkungen für PySpark-Notebooks (Python-Kernel):
+
+**XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~13,42 GB Daten auf Festplatte) XDM Daten in etwa 20 Minuten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Stapelmodus zu wechseln. Im Batch-Modus sollten Sie maximal 500 Millionen Zeilen (~1,31 TB Daten auf der Festplatte) XDM Daten in etwa 14 Stunden lesen können.
+
+| Anzahl Zeilen | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Größe auf dem Datenträger | 2.93MB | 4.38MB | 29.02 | 2.69 GB   | 5.39 GB   | 8.09 GB   | 13.42 GB   | 26.82 GB   | 134.24 GB   | 268.39 GB   | 1.31TB |
+| SDK (interaktiver Modus) | 33 Sek. | 32.4 Sek. | 55.1 Sek. | 253.5 Sek. | 489.2 Sek. | 729.6 Sek. | 1206.8 Sek. | – | – | – | – |
+| SDK (Stapelmodus) | 815.8 Sek. | 492.8 Sek. | 379.1 Sek. | 637.4 Sek. | 624.5 Sek. | 869.2 Sek. | 1104.1 Sek. | 1786 Sek. | 5387.2 Sek. | 10624.6 Sek. | 50547 Sek. |
+
+**Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 1 Milliarde Zeilen (~1.05TB Daten auf Festplatte) von Nicht-XDM Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie maximal 1 Milliarde Zeilen (~1.05TB Daten auf Festplatte) von Nicht-XDM Daten in etwa 18 Minuten lesen können.
+
+| Anzahl Zeilen | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
+| Größe auf Datenträger | 1.12MB | 11.24MB | 109.48MB | 2.69 GB   | 2.14 GB   | 3.21 GB   | 5.36 GB   | 10.71 GB   | 53.58 GB   | 107.52 GB   | 535.88 GB   | 1.05TB |
+| SDK-Interaktiver Modus (in Sekunden) | 28.2 Sek. | 18.6 Sek. | 20.8 Sek. | 20.9 Sek. | 23.8 Sek. | 21.7 Sek. | 24.7 Sek. | 22 Sek. | 28.4 Sek. | 40 Sek. | 97.4 Sek. | 154.5 Sek. |
+| SDK-Stapelmodus (in Sekunden) | 428.8 Sek. | 578.8 Sek. | 641.4 Sek. | 538.5 Sek. | 630.9 Sek. | 467.3 Sek. | 411 Sek. | 675 Sek. | 702 Sek. | 719.2 Sek. | 1022.1 Sek. | 1122.3 Sek. |
+
+#### Datenbeschränkungen für Spark-Notebooks (Scala-Kernel):
+
+**XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~13,42 GB Daten auf Festplatte) XDM Daten in etwa 18 Minuten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Stapelmodus zu wechseln. Im Batch-Modus sollten Sie maximal 500 Millionen Zeilen (~1,31 TB Daten auf der Festplatte) XDM Daten in etwa 14 Stunden lesen können.
+
+| Anzahl Zeilen | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Größe auf Datenträger | 2.93MB | 4.38MB | 29.02 | 2.69 GB   | 5.39 GB   | 8.09 GB   | 13.42 GB   | 26.82 GB   | 134.24 GB   | 268.39 GB   | 1.31TB |
+| SDK-Interaktiver Modus (in Sekunden) | 37.9 Sek. | 22.7 Sek. | 45.6 Sek. | 231.7 Sek. | 444.7 Sek. | 660.6 Sek. | 1100 Sek. | – | – | – | – |
+| SDK-Stapelmodus (in Sekunden) | 374.4 Sek. | 398.5 Sek. | 527 Sek. | 487.9 Sek. | 588.9 Sek. | 829 Sek. | 939.1 Sek. | 1441 Sek. | 5473.2 Sek. | 10118.8 | 49207.6 |
+
+**Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 1 Milliarde Zeilen (~1.05TB Daten auf Festplatte) von Nicht-XDM Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie maximal 1 Milliarde Zeilen (~1.05TB Daten auf Festplatte) von Nicht-XDM Daten in etwa 16 Minuten lesen können.
+
+| Anzahl Zeilen | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
+| Größe auf Datenträger | 1.12MB | 11.24MB | 109.48MB | 2.69 GB   | 2.14 GB   | 3.21 GB   | 5.36 GB   | 10.71 GB   | 53.58 GB   | 107.52 GB   | 535.88 GB   | 1.05TB |
+| SDK-Interaktiver Modus (in Sekunden) | 35.7 Sek. | 31 Sek. | 19.5 Sek. | 25.3 Sek. | 23 Sek. | 33.2 Sek. | 25.5 Sek. | 29.2 Sek. | 29.7 Sek. | 36.9 Sek. | 83.5 Sek. | 139 Sek. |
+| SDK-Stapelmodus (in Sekunden) | 448.8 Sek. | 459.7 Sek. | 519 Sek. | 475.8 Sek. | 599.9 Sek. | 347.6 Sek. | 407.8 Sek. | 397 Sek. | 518.8 Sek. | 487.9 Sek. | 760.2 Sek. | 975.4 Sek. |
+
 ### Aus einem Datensatz in Python/R lesen
 
 Mit Python- und R-Notebooks können Sie Daten beim Zugriff auf Datensätze paginieren. Nachstehend finden Sie Beispielcode zum Lesen von Daten mit und ohne Paginierung.
@@ -296,7 +373,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: Die eindeutige Identität des Datensatzes, auf den zugegriffen werden soll
 
-### Aus einem Datensatz in PySpark/Scala lesen
+### Gelesen aus einem Datensatz in PySpark/Spark/Scala
 
 Wenn ein aktives PySpark- oder Scala-Notebook geöffnet ist, erweitern Sie die Registerkarte **Data Explorer** von der linken Seitenleiste und klicken Sie auf **Datasets** , um eine Liste verfügbarer Datensätze Ansicht. Klicken Sie mit der rechten Maustaste auf den Datensatz, auf den Sie zugreifen möchten, und klicken Sie auf Daten im Notebook **untersuchen**. Die folgenden Codezellen werden generiert:
 
