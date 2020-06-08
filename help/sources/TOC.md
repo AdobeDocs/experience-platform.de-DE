@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
+source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 2%
       - [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- und SFTP-Anschluss](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
+      - [HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Microsoft Dynamics Connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-Anschluss](connectors/crm/salesforce.md)
@@ -46,6 +47,7 @@ ht-degree: 2%
       - [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
       - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
       - [Datenspeicherung-Stecker](connectors/databases/ats.md)
+      - [CouchBase-Anschluss](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
       - [HP-Vertikalanschluss](connectors/databases/hp-vertica.md)
@@ -74,6 +76,7 @@ ht-degree: 2%
          - [Azurblauer Ereignis-Hubs-Anschluss](tutorials/api/create/cloud-storage/eventhub.md)
          - [Adapterkabel für die Datenspeicherung](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloud-Datenspeicherung-Connector](tutorials/api/create/cloud-storage/google.md)
+         - [HDFS-Anschluss](tutorials/api/create/cloud-storage/hdfs.md)
          - [SFTP-Anschluss](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [HubSpot-Anschluss](tutorials/api/create/crm/hubspot.md)
@@ -89,6 +92,7 @@ ht-degree: 2%
          - [Blue Data Explorer-Anschluss](tutorials/api/create/databases/data-explorer.md)
          - [Blue-Synapse-Analytics-Anschluss](tutorials/api/create/databases/synapse-analytics.md)
          - [Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
+         - [CouchBase-Anschluss](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/api/create/databases/greenplum.md)
          - [HP-Vertikalanschluss](tutorials/api/create/databases/hp-vertica.md)
