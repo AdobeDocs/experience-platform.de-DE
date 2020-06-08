@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verpacktes Rezept (API) importieren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '1301'
-ht-degree: 1%
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -31,9 +31,8 @@ Eine Engine enthält Algorithmen und Logik zum maschinellen Lernen, um bestimmte
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert eine gepackte Rezeptdatei in Form eines binären Artefakts oder einer Docker-URL. Folgen Sie den Quelldateien [des Pakets in einem Rezept](./package-source-files-recipe.md) -Lernprogramm, um eine verpackte Rezept-Datei zu erstellen oder eine eigene anzugeben.
+Für dieses Lernprogramm ist eine gepackte Rezept-Datei in Form einer Docker-URL erforderlich. Folgen Sie den Quelldateien [des Pakets in einem Rezept](./package-source-files-recipe.md) -Lernprogramm, um eine verpackte Rezept-Datei zu erstellen oder eine eigene anzugeben.
 
-- Binärartefakt (nicht mehr unterstützt): Das binäre Artefakt (z. JAR, EGG), mit dem eine Engine erstellt wird.
 - `{DOCKER_URL}`: Eine URL-Adresse für ein Docker-Bild eines intelligenten Dienstes.
 
 Für dieses Lernprogramm müssen Sie das Lernprogramm &quot; [Authentifizierung für Adobe Experience Platform&quot;abgeschlossen haben, damit Sie erfolgreich Aufrufe an Plattform-APIs durchführen können](../../tutorials/authentication.md) . Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
@@ -47,7 +46,6 @@ Für dieses Lernprogramm müssen Sie das Lernprogramm &quot; [Authentifizierung 
 Je nachdem, in welcher Form die verpackte Recipe-Datei als Teil der API-Anforderung enthalten sein soll, wird eine Engine auf zwei Arten erstellt:
 
 - [Erstellen einer Engine mit einer Docker-URL](#create-an-engine-with-a-docker-url)
-- [Erstellen einer Engine mit einem binären Artefakt (nicht mehr unterstützt)](#create-an-engine-with-a-binary-artifact-deprecated)
 
 ### Erstellen einer Engine mit einer Docker-URL {#create-an-engine-with-a-docker-url}
 
@@ -92,10 +90,10 @@ curl -X POST \
 | -------  | ----------- |
 | `engine.name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Data Science Workspace-Benutzeroberfläche als Rezeptname angezeigt wird. |
 | `engine.description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche von Data Science Workspace als Beschreibung des Rezepts angezeigt wird. Entfernen Sie diese Eigenschaft nicht, lassen Sie diesen Wert eine leere Zeichenfolge sein, wenn Sie keine Beschreibung angeben möchten. |
-| `engine.type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `type` wird entweder `Python`, `R`, `PySpark`, `Spark` (Skala) oder `Tensorflow`. |
+| `engine.type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `type` wird entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
 | `artifacts.default.image.location` | Du `{DOCKER_URL}` gehst hierher. Eine vollständige Docker-URL hat die folgende Struktur: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Ein zusätzlicher Name für die Docker-Bilddatei. Entfernen Sie diese Eigenschaft nicht, lassen Sie diesen Wert eine leere Zeichenfolge sein, wenn Sie keinen zusätzlichen Docker-Bilddateinamen angeben möchten. |
-| `artifacts.default.image.executionType` | Der Ausführungstyp dieser Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `executionType` wird entweder `Python`, `R`, `PySpark`, `Spark` (Skala) oder `Tensorflow`. |
+| `artifacts.default.image.executionType` | Der Ausführungstyp dieser Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `executionType` wird entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
 
 **Anfrage PySpark**
 
@@ -205,72 +203,3 @@ Eine erfolgreiche Antwort zeigt eine JSON-Nutzlast mit Informationen zur neu ers
 ## Nächste Schritte {#next-steps}
 
 Sie haben eine Engine mit der API erstellt und eine eindeutige Engine-ID wurde als Teil des Antwortkörpers abgerufen. Sie können diese Engine-ID im nächsten Lernprogramm verwenden, während Sie erfahren, wie Sie ein Modell mithilfe der API [erstellen, ausbilden und auswerten](./train-evaluate-model-api.md).
-
-### Erstellen einer Engine mit einem binären Artefakt (nicht mehr unterstützt) {#create-an-engine-with-a-binary-artifact-deprecated}
-
-<!-- Will need to remove binary artifact documentation once the old flags are turned off -->
-
->[!CAUTION]
-> Binäre Artefakte werden in alten PySpark- und Spark-Rezepten verwendet. Data Science Workspace unterstützt jetzt Docker-URLs für alle Rezepte. Mit diesem Update werden jetzt alle Engines mit einer Docker-URL erstellt. Siehe Abschnitt [Docker-URL](#create-an-engine-with-a-docker-url) in diesem Dokument. Binäre Artefakte werden so eingestellt, dass sie in einer folgenden Version entfernt werden.
-
-Um eine Engine mit einem lokalen gepackten `.jar` oder `.egg` binären Artefakt zu erstellen, müssen Sie den absoluten Pfad zur binären Artefaktdatei in Ihrem lokalen Dateisystem angeben. Erwägen Sie, zu dem Ordner zu navigieren, der das binäre Artefakt in einer Terminal-Umgebung enthält, und den `pwd` Unix-Befehl für den absoluten Pfad auszuführen.
-
-Der folgende Aufruf erstellt eine Engine mit einem binären Artefakt:
-
-**API-Format**
-
-```http
-POST /engines
-```
-
-**Anfrage**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: {ACCESS_TOKEN}' \
-    -H 'X-API-KEY: {API_KEY}' \
-    -H 'content-type: multipart/form-data' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -F 'engine={
-        "name": "Retail Sales Engine PySpark",
-        "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-        "type": "PySpark"
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file/pysparkretailapp-0.1.0-py3.7.egg'
-```
-
-| Eigenschaft | Beschreibung |
-| -------  | ----------- |
-| `engine.name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Data Science Workspace-Benutzeroberfläche als Rezeptname angezeigt wird. |
-| `engine.description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche von Data Science Workspace als Beschreibung des Rezepts angezeigt wird. Entfernen Sie diese Eigenschaft nicht, lassen Sie diesen Wert eine leere Zeichenfolge sein, wenn Sie keine Beschreibung angeben möchten. |
-| `engine.type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das binäre Artefakt entwickelt wurde. Wenn Sie ein binäres Artefakt hochladen, um eine Engine zu erstellen, `type` ist entweder `Spark` oder `PySpark`. |
-| `defaultArtifact` | Der absolute Pfad zur binären Artefaktdatei, die zum Erstellen der Engine verwendet wird. Vergewissern Sie sich, dass sie `@` vor dem Dateipfad enthalten sind. |
-
-**Antwort**
-
-```JSON
-{
-    "id": "00000000-1111-2222-3333-abcdefghijkl",
-    "name": "Retail Sales Engine PySpark",
-    "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-    "type": "PySpark",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "your_user_id@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://some-storage-location.net/some-path/your-uploaded-binary-artifact.egg",
-                "name": "pysparkretailapp-0.1.0-py3.7.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-Eine erfolgreiche Antwort zeigt eine JSON-Nutzlast mit Informationen zur neu erstellten Engine. Der `id` Schlüssel stellt die eindeutige Engine-ID dar und ist im nächsten Lernprogramm erforderlich, um eine MLInstanz zu erstellen. Stellen Sie sicher, dass die Engine-ID gespeichert wird, bevor Sie mit den [nächsten Schritten](#next-steps)fortfahren.
