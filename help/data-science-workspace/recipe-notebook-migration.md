@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3459'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Migrationshandbücher für Rezept und Notebooks
 
 >[!NOTE]
->Notebooks und Rezepte mit Python/R bleiben davon unberührt. Die Migration gilt nur für bestehende PySpark/Spark Rezepte und Notebooks.
+>Notebooks und Rezepte mit Python/R bleiben davon unberührt. Die Migration gilt nur für PySpark/Spark (2.3) Rezepte und Notebooks.
 
 In den folgenden Handbüchern werden die Schritte und Informationen erläutert, die für die Migration vorhandener Rezepte und Notebooks erforderlich sind.
 
