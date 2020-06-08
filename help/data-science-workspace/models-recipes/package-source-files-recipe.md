@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verpacken von Quelldateien in einem Rezept
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -196,46 +196,3 @@ Diese Übung übernahm das Verpacken von Quelldateien in ein Rezept, die Vorauss
 
 - [Verpacktes Rezept in die Benutzeroberfläche importieren](./import-packaged-recipe-ui.md)
 - [Verpacktes Rezept mit der API importieren](./import-packaged-recipe-api.md)
-
-## Erstellen von Binärdateien (nicht mehr unterstützt)
-
->[!CAUTION]
-> Binärdateien werden in neuen PySpark- und Scala-Rezepten nicht unterstützt und sind in einer zukünftigen Version zu entfernen. Bitte folgen Sie dem [Docker Workflows](#docker-based-model-authoring) , wenn Sie mit PySpark und Scala arbeiten. Die folgenden Workflows gelten nur für Spark 2.3-Rezepte.
-
-### PySpark-Binärdateien erstellen (nicht mehr unterstützt)
-
-Falls nicht, klonen Sie das github-Repository mit dem folgenden Befehl auf Ihrem lokalen System:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Navigieren Sie zum geklonten Repository auf Ihrem lokalen System und führen Sie die folgenden Befehle aus, um die erforderliche `.egg` Datei zum Importieren eines PySpark-Rezeptes zu erstellen:
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-Die `.egg` Datei wird im `dist` Ordner generiert.
-
-Sie können jetzt zu den [nächsten Schritten](#next-steps)fortfahren.
-
-#### Scala-Binärdateien erstellen (nicht mehr unterstützt)
-
-Wenn Sie dies noch nicht getan haben, führen Sie den folgenden Befehl aus, um das Github-Repository auf Ihrem lokalen System zu klonen:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Um das `.jar` Artefakt zum Importieren eines Scala-Rezepts zu erstellen, navigieren Sie zu Ihrem geklonten Repository und führen Sie die folgenden Schritte aus:
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-Das generierte `.jar` Artefakt mit Abhängigkeiten befindet sich im `/target` Verzeichnis.
-
-Sie können jetzt zu den [nächsten Schritten](#next-steps)fortfahren.
