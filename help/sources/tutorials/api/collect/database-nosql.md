@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erfassen von Daten aus einer Drittanbieter-Datenbank über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 4a831a0e72ac614bb4646ea3aa5f511984e5aa07
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Si
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -619,7 +619,7 @@ Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstelle
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST-Anforderung ausführen und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 **API-Format**
 
@@ -704,6 +704,7 @@ Im folgenden Abschnitt werden die verschiedenen Cloud-Datenspeicherung-Quellschn
 | Blue Data Explorer | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | Azurblase Synapse Analytics | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | Datenspeicherung | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| CouchBase | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
 | Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
 | IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
 | MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
