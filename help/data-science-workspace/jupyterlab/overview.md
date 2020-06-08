@@ -4,9 +4,9 @@ solution: Experience Platform
 title: JupyterLab-Benutzerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '3349'
+source-wordcount: '2773'
 ht-degree: 6%
 
 ---
@@ -119,9 +119,7 @@ Häufige Zellaktionen werden nachfolgend beschrieben:
 
 ### Kernels {#kernels}
 
-Notebook-Kernel sind die sprachspezifischen Computing-Engines zur Verarbeitung von Notebook-Zellen. Zusätzlich zu Python bietet JupyterLab zusätzliche Sprachunterstützung in R, PySpark und Spark. Wenn Sie ein Notebook-Dokument öffnen, wird der zugehörige Kernel gestartet. Wenn eine Notebook-Zelle ausgeführt wird, führt der Kernel die Berechnung durch und erzeugt Ergebnisse, die erhebliche CPU- und Speicherressourcen beanspruchen können. Beachten Sie, dass zugewiesener Speicher erst freigegeben wird, wenn der Kernel heruntergefahren wird.
-
->[!IMPORTANT] JupyterLab Launcher wurde von Spark 2.3 auf Spark 2.4 aktualisiert. Spark- und PySpark-Kernel werden in Spark 2.4-Notebooks nicht mehr unterstützt.
+Notebook-Kernel sind die sprachspezifischen Computing-Engines zur Verarbeitung von Notebook-Zellen. Zusätzlich zu Python bietet JupyterLab zusätzliche Sprachunterstützung in R, PySpark und Spark (Scala). Wenn Sie ein Notebook-Dokument öffnen, wird der zugehörige Kernel gestartet. Wenn eine Notebook-Zelle ausgeführt wird, führt der Kernel die Berechnung durch und erzeugt Ergebnisse, die erhebliche CPU- und Speicherressourcen beanspruchen können. Beachten Sie, dass zugewiesener Speicher erst freigegeben wird, wenn der Kernel heruntergefahren wird.
 
 Bestimmte Funktionen und Funktionen sind auf bestimmte Kernels beschränkt, wie in der folgenden Tabelle beschrieben:
 
@@ -129,8 +127,6 @@ Bestimmte Funktionen und Funktionen sind auf bestimmte Kernels beschränkt, wie 
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Ja | <ul><li>Sensei-ML-Framework</li><li>Katalogdienst</li><li>Abfrage</li></ul> |
 | **R** | Ja | <ul><li>Sensei-ML-Framework</li><li>Katalogdienst</li></ul> |
-| **PySpark - nicht mehr unterstützt** | Nein | <ul><li>Sensei-ML-Framework</li><li>Katalogdienst</li></ul> |
-| **Spark - nicht mehr unterstützt** | Nein | <ul><li>Sensei-ML-Framework</li><li>Katalogdienst</li></ul> |
 | **Scala** | Nein | <ul><li>Sensei-ML-Framework</li><li>Katalogdienst</li></ul> |
 
 ### Kernel-Sitzungen {#kernel-sessions}
@@ -142,59 +138,6 @@ Jedes aktive Notebook oder jede Aktivität auf JupyterLab verwendet eine Kernels
 Wenn der Kernel über einen längeren Zeitraum heruntergefahren oder inaktiv ist, dann **Kein Kernel!** mit einem ausgefüllten Kreis angezeigt wird. Aktivieren Sie einen Kernel, indem Sie auf den Kernel-Status klicken und den entsprechenden Kernel-Typ auswählen, wie unten gezeigt:
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
-
-### Ausführungsressource PySpark/Spark {#execution-resource}
-
->[!IMPORTANT]
->Mit der Transition von Spark 2.3 auf Spark 2.4 werden sowohl die Spark- als auch die PySpark-Kernel veraltet.
->
->Neue PySpark 3 (Spark 2.4) Notebooks verwenden den Python3 Kernel. Eine ausführliche Anleitung zum Aktualisieren Ihrer vorhandenen Notebooks finden Sie im Handbuch zur Umwandlung von [Pyspark 3 (Spark 2.3) in PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) .
->
->Neue Spark-Notebooks sollten den Scala-Kernel verwenden. Eine ausführliche Anleitung zur Aktualisierung vorhandener Notebooks finden Sie im Handbuch zur Umwandlung von [Spark 2.3 in Scala (Spark 2.4)](../recipe-notebook-migration.md) .
-
-PySpark- und Spark-Kernel ermöglichen es Ihnen, Spark-Clusterressourcen innerhalb Ihres PySpark- oder Spark-Notebooks zu konfigurieren, indem Sie den Befehl konfigurieren (`%%configure`) und eine Liste von Konfigurationen bereitstellen. Idealerweise werden diese Konfigurationen definiert, bevor die Spark-Anwendung initialisiert wird. Für das Ändern der Konfigurationen während der Aktivierung der Spark-Anwendung ist nach dem Befehl (`%%configure -f`) ein zusätzliches Force-Flag erforderlich, das die Anwendung neu startet, damit die Änderungen angewendet werden, wie unten dargestellt:
-
->[!CAUTION]
->Bei PySpark 3 (Spark 2.4) und Scala (Spark 2.4) Notebooks wird `%%` Sparkmagic nicht mehr unterstützt. Die folgenden Vorgänge können nicht mehr verwendet werden:
-* `%%help`
-* `%%info`
-* `%%cleanup`
-* `%%delete`
-* `%%configure`
-* `%%local`
-
-```python
-%%configure -f 
-{
-    "numExecutors": 10,
-    "executorMemory": "8G",
-    "executorCores":4,
-    "driverMemory":"2G",
-    "driverCores":2,
-    "conf": {
-        "spark.cores.max": "40"
-    }
-}
-```
-
-Alle konfigurierbaren Eigenschaften sind in der folgenden Tabelle aufgeführt:
-
-| Eigenschaft | Beschreibung | Typ |
-| :------- | :---------- | :-----:|
-| kind | Sitzungstyp (erforderlich) | `session kind`_ |
-| proxyUser | Der Benutzer, der die Identität annehmen soll, die diese Sitzung ausführt (z. B. &quot;bob&quot;) | Zeichenfolge |
-| jars | Auf der Java-Datei zu platzierende Dateien `classpath` | Liste von Pfaden |
-| pyFiles | Dateien, die auf der `PYTHONPATH` | Liste von Pfaden |
-| files | Dateien, die in den Arbeitsordner des Ausführers eingefügt werden sollen | Liste von Pfaden |
-| driverMemory | Speicher für Treiber in Megabyte oder Gigabyte (z. B. 1000M, 2G) | Zeichenfolge |
-| driverCores | Anzahl der vom Fahrer verwendeten Kernkerne (nur im YARN-Modus) | int |
-| executeMemory | Speicherkapazität für Führungskräfte in Megabytes oder Gigabytes (z. B. 1000M, 2G) | Zeichenfolge |
-| executeCores | Anzahl der vom Prüfer verwendeten Kerne | int |
-| numExecutors | Anzahl der ausführenden Personen (nur YARN-Modus) | int |
-| archives | Zu dekomprimierende Archive im Ausführungsarbeitsverzeichnis (nur YARN-Modus) | Liste von Pfaden |
-| queue | Die YARN-Warteschlange, an die gesendet werden soll (nur YARN-Modus) | Zeichenfolge |
-| name | Name des Antrags | Zeichenfolge |
-| conf | Spark-Konfigurationseigenschaft | Zuordnung von key=val |
 
 ### Starter {#launcher}
 
@@ -252,30 +195,6 @@ Einige Notebook-Vorlagen sind auf bestimmte Kernels beschränkt. Die Vorlagenver
         <td >no</td>
         <td >no</td>
         <td >no</td>
-    </tr>
-    <tr>
-        <th  ><strong>PySpark 3 (Spark 2.3 - nicht mehr unterstützt)</strong></th>
-        <td >yes</td>
-        <td >yes</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >yes</td>
-        <td >yes</td>
-        <td >no</td>
-    </tr>
-    <tr>
-        <th ><strong>Spark (Spark 2.3 - nicht mehr unterstützt)</strong></th>
-        <td >yes</td>
-        <td >yes</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >yes</td>
     </tr>
       <tr>
         <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
@@ -377,28 +296,9 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: Die eindeutige Identität des Datensatzes, auf den zugegriffen werden soll
 
-### Gelesen aus einem Datensatz in PySpark/Spark/Scala
+### Aus einem Datensatz in PySpark/Scala lesen
 
->[!IMPORTANT]
->Mit der Transition von Spark 2.3 auf Spark 2.4 werden sowohl die Spark- als auch die PySpark-Kernel veraltet.
->
->Neue PySpark 3 (Spark 2.4) Notebooks verwenden den Python3 Kernel. Lesen Sie das Handbuch zur Konvertierung von [Pyspark 3 (Spark 2.3) in PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) , wenn Sie vorhandenen Spark 2.3-Code konvertieren möchten. Neue Notebooks sollten dem unten stehenden Beispiel [PySpark 3 (Spark 2.4)](#pyspark2.4) folgen.
->
->Neue Spark-Notebooks sollten den Scala-Kernel verwenden. Lesen Sie das Handbuch zur Konvertierung von [Spark 2.3 in Scala (Spark 2.4)](../recipe-notebook-migration.md) , wenn Sie vorhandenen Spark 2.3-Code konvertieren möchten. Neue Notebooks sollten dem Beispiel [Scala (Spark 2.4)](#spark2.4) folgen.
-
-Wenn ein aktives PySpark- oder Spark-Notebook geöffnet ist, erweitern Sie die Registerkarte **Data Explorer** von der linken Seitenleiste und klicken Sie auf **Datasets** , um eine Liste verfügbarer Datensätze Ansicht. Klicken Sie mit der rechten Maustaste auf den Datensatz, auf den Sie zugreifen möchten, und klicken Sie auf Daten im Notebook **untersuchen**. Die folgenden Codezellen werden generiert:
-
-#### PySpark (Spark 2.3 - nicht mehr unterstützt)
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd0 = spark.read.format("com.adobe.platform.dataset").\
-    option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-pd0.describe()
-pd0.show(10, False)
-```
+Wenn ein aktives PySpark- oder Scala-Notebook geöffnet ist, erweitern Sie die Registerkarte **Data Explorer** von der linken Seitenleiste und klicken Sie auf **Datasets** , um eine Liste verfügbarer Datensätze Ansicht. Klicken Sie mit der rechten Maustaste auf den Datensatz, auf den Sie zugreifen möchten, und klicken Sie auf Daten im Notebook **untersuchen**. Die folgenden Codezellen werden generiert:
 
 #### PySpark (Spark 2.4) {#pyspark2.4}
 
@@ -410,20 +310,6 @@ Mit der Einführung von Spark 2.4 wird [`%dataset`](#magic) maßgeschneiderte Ma
 %dataset read --datasetId {DATASET_ID} --dataFrame pd0
 pd0.describe()
 pd0.show(10, False)
-```
-
-#### Spark (Spark 2.3 - nicht mehr unterstützt)
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-dataFrame.printSchema()
-dataFrame.show()
 ```
 
 #### Scala (Spark 2.4) {#spark2.4}
@@ -560,34 +446,9 @@ df <- dataset_reader$
 
 ### Filtern von ExperienceEvent-Daten in PySpark/Spark
 
->[!IMPORTANT]
->Mit der Transition von Spark 2.3 auf Spark 2.4 werden sowohl die Spark- als auch die PySpark-Kernel veraltet.
->
->Neue PySpark 3 (Spark 2.4) Notebooks verwenden den Python3 Kernel. Weitere Informationen zur Konvertierung des vorhandenen Codes finden Sie im Handbuch zur Konvertierung von [Pyspark 3 (Spark 2.3) in PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) . Wenn Sie ein neues PySpark-Notebook erstellen, verwenden Sie das [PySpark 3-Beispiel (Spark 2.4)](#pyspark3-spark2.4) zum Filtern der ExperienceEvent-Daten.
->
->Neue Spark-Notebooks sollten den Scala-Kernel verwenden. Weitere Informationen zur Konvertierung des vorhandenen Codes finden Sie im Handbuch zur Konvertierung von [Spark 2.3 in Scala (Spark 2.4)](../recipe-notebook-migration.md) . Wenn Sie ein neues Spark-Notebook erstellen, verwenden Sie das [Scala-Beispiel (Spark 2.4)](#scala-spark) zum Filtern der ExperienceEvent-Daten.
-
-Für den Zugriff auf und das Filtern eines ExperienceEvent-Datensatzes in einem PySpark- oder Spark-Notebook müssen Sie die Dataset-Identität (`{DATASET_ID}`), die IMS-Identität Ihres Unternehmens und die Filterregeln, die einen bestimmten Zeitraum definieren, angeben. Ein Filterzeitbereich wird mithilfe der Funktion definiert, `spark.sql()`bei der der Funktionsparameter eine SQL-Abfrage-Zeichenfolge ist.
+Für den Zugriff auf und das Filtern eines ExperienceEvent-Datensatzes in einem PySpark- oder Scala-Notebook müssen Sie die Dataset-Identität (`{DATASET_ID}`), die IMS-Identität Ihres Unternehmens und die Filterregeln, die einen bestimmten Zeitraum definieren, angeben. Ein Filterzeitbereich wird mithilfe der Funktion definiert, `spark.sql()`bei der der Funktionsparameter eine SQL-Abfrage-Zeichenfolge ist.
 
 Die folgenden Zellen filtern einen ExperienceEvent-Datensatz nach Daten, die ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 existierten.
-
-#### PySpark 3 (Spark 2.3 - nicht mehr unterstützt)
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd = spark.read.format("com.adobe.platform.dataset").\
-    option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-
-pd.createOrReplaceTempView("event")
-timepd = spark.sql("""
-    SELECT *
-    FROM event
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-```
 
 #### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
 
@@ -607,26 +468,6 @@ timepd = spark.sql("""
     AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
 """)
 timepd.show()
-```
-
-#### Spark (Spark 2.3 - nicht mehr unterstützt)
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-
-dataFrame.createOrReplaceTempView("event")
-val timedf = spark.sql("""
-    SELECT * 
-    FROM event 
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
 ```
 
 #### Scala (Spark 2.4) {#scala-spark}
