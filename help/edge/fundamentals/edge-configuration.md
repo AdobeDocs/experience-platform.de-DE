@@ -4,9 +4,9 @@ seo-title: Edge-Konfiguration für das Experience Platform Web SDK
 description: 'Erfahren Sie, wie Sie das Experience Platform Edge-Netzwerk konfigurieren. '
 seo-description: 'Erfahren Sie, wie Sie das Experience Platform Edge-Netzwerk konfigurieren. '
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '886'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Edge-Konfigurations-IDs können in Launch mit dem Edge-Konfigurationstool erstel
 
 >[!NOTE]
 >
->Das Edge-Konfigurationstool steht Kunden in der Positivliste unabhängig davon zur Verfügung, ob sie Launch als Tag-Manager verwenden. Außerdem benötigen Benutzer beim Start Entwicklungsberechtigungen. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der Dokumentation zum Starten.
+>Das Edge-Konfigurationstool steht Kunden mit der Liste &quot;Zulassen&quot;zur Verfügung, unabhängig davon, ob sie Launch als Tag-Manager verwenden. Außerdem benötigen Benutzer beim Start Entwicklungsberechtigungen. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der Dokumentation zum Starten.
 
 Sie können eine Edge-Konfiguration erstellen, indem Sie oben rechts im Bildschirm auf **[UICONTROL New Edge Configuration]** klicken. Nachdem Sie einen Namen und eine Beschreibung angegeben haben, werden Sie nach den Standardeinstellungen für jede Umgebung gefragt.
 
