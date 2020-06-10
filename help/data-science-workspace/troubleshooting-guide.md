@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Science Workspace - Anleitung zur Fehlerbehebung
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Schalten Sie schließlich &quot;Drittanbieter-Cookies blockieren&quot;auf &quot;
 
 ![Chrome Advanced](./images/faq/toggle-off.png)
 
->[!NOTE] Alternativ können Sie Drittanbieter-Cookies und Whitelist [* deaktivieren.]ds.adobe.net
+>[!NOTE] Alternativ können Sie Drittanbieter-Cookies deaktivieren und [* hinzufügen.]ds.adobe.net auf die Liste allow.
 
 Navigieren Sie in Ihrer Adressleiste zu &quot;chrome://flags/&quot;. Suchen und deaktivieren Sie das Flag *&quot;SameSite by default cookies&quot;* über das Dropdown-Menü rechts.
 
@@ -64,7 +64,7 @@ Wählen Sie dann in der oberen Navigationsleiste das Menü &quot; **Entwicklung*
 
 ## Warum wird beim Versuch, eine Datei in JupyterLab hochzuladen oder zu löschen, die Meldung &quot;403 Verboten&quot;angezeigt?
 
-Wenn Ihr Browser mit einer Werbeblockiersoftware wie Ghostery oder AdBlock Plus aktiviert ist, muss die Domäne &quot;\*.adobe.net&quot;in jeder Werbeblockiersoftware auf die Positivliste gesetzt werden, damit JupyterLab normal funktioniert. Dies liegt daran, dass virtuelle JupyterLab-Computer unter einer anderen Domäne als die Experience Platform-Domäne ausgeführt werden.
+Wenn Ihr Browser mit Werbeblockiersoftware wie Ghostery oder AdBlock Plus aktiviert ist, muss die Domäne &quot;\*.adobe.net&quot;in jeder Werbeblockiersoftware zugelassen werden, damit JupyterLab normal funktioniert. Dies liegt daran, dass virtuelle JupyterLab-Computer unter einer anderen Domäne als die Experience Platform-Domäne ausgeführt werden.
 
 ## Warum sehen einige Teile meines Jupyter-Notebooks verwirrt aus oder werden nicht als Code gerendert?
 
