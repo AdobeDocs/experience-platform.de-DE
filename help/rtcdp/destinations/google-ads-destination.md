@@ -4,10 +4,10 @@ seo-title: Google Ads-Ziel
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 32%
+source-wordcount: '544'
+ht-degree: 31%
 
 ---
 
@@ -34,15 +34,15 @@ Beachten Sie die folgenden Details, die sich speziell auf Google Ads-Ziele bezie
 
 ### Vorhandenes Google Ads-Konto
 
-Google hat alle neuen Google Ads-Integrationen mit Drittanbietern angehalten. Sie müssen über eine vorhandene Integration mit Google Ads verfügen, um die Schritte zur Whitelist im nächsten Abschnitt durchführen und ein Google Ads-Ziel in Adobe Echtzeit-CDP erstellen zu können.
+Google hat alle neuen Google Ads-Integrationen mit Drittanbietern angehalten. Sie müssen bereits über eine Integration mit Google Ads verfügen, um die im nächsten Abschnitt beschriebenen Schritte zur Liste zulassen und ein Google Ads-Ziel in Adobe Echtzeit-CDP erstellen zu können.
 
-### Whitelisting
+### Liste zulassen
 
 >[!NOTE]
 >
->Die Whitelist vor der Einrichtung Ihres ersten Google Ads-Ziels in Adobe Echtzeit-CDP obligatorisch. Vergewissern Sie sich bitte, dass die unten beschriebene Whitelist-Vorgehensweise von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Liste &quot;Zulassen&quot;ist obligatorisch, bevor Sie Ihr erstes Google Ads-Ziel in der Adobe Echtzeit-CDP einrichten. Vergewissern Sie sich bitte, dass der unten beschriebene Vorgang der Liste zulassen von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
 
-Bevor Sie das Google Ads-Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich an Google wenden und Adobe bitten, sich als Datenanbieter in die Positivliste zu setzen und Ihr Konto auf die Positivliste zu setzen. Kontaktieren Sie Google und machen Sie folgende Angaben:
+Bevor Sie das Google Ads-Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich an Google wenden, damit Adobe die Liste der zulässigen Datenanbieter erhält und Ihr Konto zur Liste &quot;Zulassen&quot;hinzugefügt wird. Kontaktieren Sie Google und machen Sie folgende Angaben:
 
 * **Kontokennung**: Dies ist die Adobe-Kontokennung bei Google. Wenden Sie sich an den Adobe-Kundendienst oder Ihren Adobe-Kundenbetreuer, um diese ID zu erhalten.
 * **Kundenkennung**: Dies ist die Adobe-Kundenkonto-Kennung bei Google. Wenden Sie sich an den Adobe-Kundendienst oder Ihren Adobe-Kundenbetreuer, um diese ID zu erhalten.
@@ -55,6 +55,7 @@ Bevor Sie das Google Ads-Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich 
    ![Google-Anzeigenziel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+
    ![Grundlegende Informationen Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
