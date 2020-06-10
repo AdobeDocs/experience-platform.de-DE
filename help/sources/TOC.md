@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
+source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '594'
 ht-degree: 2%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 2%
       - [Google AdWords Connector](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
       - [Amazon Kinesis Connector](connectors/cloud-storage/kinesis.md)
+      - [Apache HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
       - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
       - [Azurblauch und Amazon S3-Stecker](connectors/cloud-storage/blob-s3.md)
       - [Azurblauer Ereignis-Hubs-Anschluss](connectors/cloud-storage/eventhub.md)
       - [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- und SFTP-Anschluss](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
-      - [HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Microsoft Dynamics Connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-Anschluss](connectors/crm/salesforce.md)
@@ -47,7 +47,7 @@ ht-degree: 2%
       - [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
       - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
       - [Datenspeicherung-Stecker](connectors/databases/ats.md)
-      - [CouchBase-Anschluss](connectors/databases/couchbase.md)
+      - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
       - [HP-Vertikalanschluss](connectors/databases/hp-vertica.md)
@@ -71,12 +71,12 @@ ht-degree: 2%
       - Cloud storage {#cloud-storage}
          - [Amazon-Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3 Connector](tutorials/api/create/cloud-storage/s3.md)
+         - [Apache HDFS-Anschluss](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azurblutstecker](tutorials/api/create/cloud-storage/blob.md)
          - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azurblauer Ereignis-Hubs-Anschluss](tutorials/api/create/cloud-storage/eventhub.md)
          - [Adapterkabel für die Datenspeicherung](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloud-Datenspeicherung-Connector](tutorials/api/create/cloud-storage/google.md)
-         - [HDFS-Anschluss](tutorials/api/create/cloud-storage/hdfs.md)
          - [SFTP-Anschluss](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [HubSpot-Anschluss](tutorials/api/create/crm/hubspot.md)
@@ -92,7 +92,7 @@ ht-degree: 2%
          - [Blue Data Explorer-Anschluss](tutorials/api/create/databases/data-explorer.md)
          - [Blue-Synapse-Analytics-Anschluss](tutorials/api/create/databases/synapse-analytics.md)
          - [Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
-         - [CouchBase-Anschluss](tutorials/api/create/databases/couchbase.md)
+         - [Steckverbinder](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/api/create/databases/greenplum.md)
          - [HP-Vertikalanschluss](tutorials/api/create/databases/hp-vertica.md)
@@ -138,7 +138,8 @@ ht-degree: 2%
       - Werbung {#create}
          - [Google AdWords Connector](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Amazon-Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Amazon Kinesis Connector](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Apache HDFS-Anschluss](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azurblauch und Amazon S3-Stecker](tutorials/ui/create/cloud-storage/blob-s3.md)
          - [Azurblauer Ereignis-Hubs-Anschluss](tutorials/ui/create/cloud-storage/eventhub.md)
@@ -158,6 +159,7 @@ ht-degree: 2%
          - [Blue Data Explorer-Anschluss](tutorials/ui/create/databases/data-explorer.md)
          - [Blue-Synapse-Analytics-Anschluss](tutorials/ui/create/databases/synapse-analytics.md)
          - [Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
+         - [Steckverbinder](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Abfrage Connector](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/ui/create/databases/greenplum.md)
          - [HP-Vertikalanschluss](tutorials/ui/create/databases/hp-vertica.md)
