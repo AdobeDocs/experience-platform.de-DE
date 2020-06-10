@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Schemas mit der Schema Registry API
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe E
 
 Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
 
-In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas für Treuemitglieder beschrieben, in dem die Daten zu den Mitgliedern eines Programms zur Treue von Kunden beschrieben werden. Bevor Sie beginnen, möchten Sie vielleicht das Schema [](#complete-schema) zu den Treuemitgliedern im Anhang Vorschau haben.
+In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas für Treuemitglieder beschrieben, in dem die Daten zu den Mitgliedern eines Programms zur Treue von Kunden beschrieben werden. Bevor Sie beginnen, sollten Sie das Schema [](#complete-schema) zu den Treuemitgliedern im Anhang Vorschau haben.
 
 ## Erstellen eines Schemas mit einer Standardklasse
 
@@ -1778,7 +1778,7 @@ Im Folgenden sehen Sie das Schema der abgeschlossenen Treuemitglieder im JSON-Fo
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1853,7 +1853,7 @@ Im Folgenden sehen Sie das Schema der abgeschlossenen Treuemitglieder im JSON-Fo
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1905,7 +1905,7 @@ Im Folgenden sehen Sie das Schema der abgeschlossenen Treuemitglieder im JSON-Fo
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1970,7 +1970,7 @@ Im Folgenden sehen Sie das Schema der abgeschlossenen Treuemitglieder im JSON-Fo
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2035,7 +2035,7 @@ Im Folgenden sehen Sie das Schema der abgeschlossenen Treuemitglieder im JSON-Fo
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
