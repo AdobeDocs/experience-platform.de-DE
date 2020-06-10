@@ -4,10 +4,10 @@ seo-title: Google Display & Video 360-Ziel
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 seo-description: 'Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile. '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 27%
+source-wordcount: '586'
+ht-degree: 26%
 
 ---
 
@@ -32,13 +32,13 @@ Beachten Sie die folgenden Details, die speziell für Google Display &amp; Video
 
 ## Voraussetzungen
 
-### Whitelisting
+### Liste zulassen
 
 >[!NOTE]
 >
->Die Whitelist obligatorisch, bevor Sie Ihr erstes Google Display &amp; Video 360-Ziel in Adobe Echtzeit-CDP einrichten. Vergewissern Sie sich bitte, dass die unten beschriebene Whitelist-Vorgehensweise von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Liste &quot;Zulassen&quot;ist obligatorisch, bevor Sie Ihr erstes Google Display &amp; Video 360-Ziel in Adobe Echtzeit-CDP einrichten. Vergewissern Sie sich bitte, dass der unten beschriebene Vorgang der Liste zulassen von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
 
-Bevor Sie das Google Display &amp; Video 360-Ziel in der Adobe Echtzeit-CDP erstellen, müssen Sie sich an Google wenden und um die Zulassung von Adobe als Datenanbieter und die Positivliste Ihres Kontos bitten. Kontaktieren Sie Google und machen Sie folgende Angaben:
+Bevor Sie das Google Display &amp; Video 360-Ziel in der Adobe Echtzeit-CDP erstellen, müssen Sie sich an Google wenden und darum bitten, dass Adobe die Liste der zulässigen Datenanbieter übernimmt und dass Ihr Konto zur Liste &quot;Zulassen&quot;hinzugefügt wird. Kontaktieren Sie Google und machen Sie folgende Angaben:
 
 * **Kontokennung**: Dies ist die Adobe-Kontokennung bei Google. Wenden Sie sich an den Adobe-Kundendienst oder Ihren Adobe-Kundenbetreuer, um diese ID zu erhalten.
 * **Kundenkennung**: Dies ist die Adobe-Kundenkonto-Kennung bei Google. Wenden Sie sich an den Adobe-Kundendienst oder Ihren Adobe-Kundenbetreuer, um diese ID zu erhalten.
@@ -50,6 +50,7 @@ Bevor Sie das Google Display &amp; Video 360-Ziel in der Adobe Echtzeit-CDP erst
    ![Google Display &amp; Video 360-Ziel verbinden](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+
    ![Grundlegende Informationen Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
