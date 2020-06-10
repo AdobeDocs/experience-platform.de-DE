@@ -4,9 +4,9 @@ seo-title: 'Adobe Experience Platform Web SDK - schneller Beginn '
 description: Kurzanleitung zum Einsatz des Experience Platform Web SDK zur Datenerfassung
 seo-description: Kurzanleitung zum Einsatz des Experience Platform Web SDK zur Datenerfassung
 translation-type: tm+mt
-source-git-commit: 7c5d4306f9964553cf48a208166fce265dcdd94d
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '515'
 ht-degree: 14%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 # Willkommen
 
-Dieser Leitfaden führt Sie durch die verschiedenen Methoden zum Einrichten des Adobe Experience Platform Web SDK. Um diese Funktion nutzen zu können, müssen Sie in die Positivliste aufgenommen werden. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
+Dieser Leitfaden führt Sie durch die verschiedenen Methoden zum Einrichten des Adobe Experience Platform Web SDK. Um diese Funktion nutzen zu können, müssen Sie auf der Liste &quot;Zulassen&quot;stehen. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
 
 - Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über eine CNAME für Analytics verfügen, sollten Sie diese verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen
 - Sie haben die Berechtigung zur Adobe Experience Platform-Datenplattform.  Wenn Sie keine Plattform erworben haben, stellen wir Ihnen die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK kostenlos zur Verfügung.
@@ -26,7 +26,7 @@ Sie können eine Konfigurations-ID mit dem [Edge-Konfigurationstool](../fundamen
 
 >[!NOTE]
 >
->Ihre Organisation muss für die Funktion auf die Positivliste gesetzt werden. Wenden Sie sich an Ihren CSM, um die Liste für eine eventuelle Whitelist zu erhalten.
+>Ihre Organisation muss die Liste für die Funktion zulassen haben. Wenden Sie sich an Ihren CSM, um die Liste zu übernehmen.
 
 ## Schemas vorbereiten
 
