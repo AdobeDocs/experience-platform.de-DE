@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Adobe Experience Platform-Quellschnittstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '763'
 ht-degree: 1%
 
 ---
@@ -47,11 +47,11 @@ Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in die Plattform über
 - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
 - [Azurblauch und Amazon S3-Stecker](connectors/cloud-storage/blob-s3.md)
 - [Amazon Kinesis Connector](connectors/cloud-storage/kinesis.md)
+- [Apache HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
 - [Azurblauer Ereignis-Hubs-Anschluss](connectors/cloud-storage/eventhub.md)
 - [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
 - [FTP- und SFTP-Anschluss](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
-- [HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
 
 ### CRM (Customer Relationship Management)
 
@@ -77,7 +77,7 @@ Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eine
 - [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
 - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
 - [Datenspeicherung-Stecker](connectors/databases/ats.md)
-- [CouchBase-Anschluss](connectors/databases/couchbase.md)
+- [Steckverbinder](connectors/databases/couchbase.md)
 - [Google BigQuery Connector](connectors/databases/bigquery.md)
 - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
 - [HP-Vertikalanschluss](connectors/databases/hp-vertica.md)
@@ -116,7 +116,7 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche auf der Grundlage v
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
 | **Ansicht-Quellen** auf | Gewähren Sie schreibgeschützten Zugriff auf Quellen in jedem Quelltyp auf der Registerkarte &quot; *Katalog* &quot;sowie auf die Registerkarten &quot; *Durchsuchen*&quot;, &quot; *Konten*&quot;und &quot; *DataFlow* &quot;. |
-| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen in den **Ansichten-Quellen** Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
+| **Quellen** verwalten unter | Gewährt zusätzlich zu den Funktionen, die in den **Ansichten-Quellen** enthalten sind, Zugriff auf die Option &quot; *Verbindungsquelle* &quot;im *Katalog* und auf die Option &quot;Daten ** auswählen&quot;in *Durchsuchen*. **Mit Quellen** verwalten können Sie auch *DataFlows* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
 | **Ansicht-Quellen** deaktivieren und Quellen **verwalten** deaktivieren | Sperren Sie den Zugriff auf alle Quellen. |
 
 Weitere Informationen zu den verfügbaren Berechtigungen, die über die Admin-Konsole erteilt wurden, einschließlich dieser vier Quellen, finden Sie in der Übersicht über die [Zugriffskontrolle](../access-control/home.md).
