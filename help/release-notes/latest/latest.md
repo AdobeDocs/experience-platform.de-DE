@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '429'
 ht-degree: 6%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 6%
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Data Science-Arbeitsbereich](#dsw)
+- [Segmentierung](#segmentation)
 - [Quellen](#sources)
 
 ## Data Science-Arbeitsbereich {#dsw}
@@ -35,6 +36,20 @@ Beachten Sie, dass sich das maschinelle Lernen in Echtzeit in der Alpha-Phase be
 | JupyterLab Launcher Echtzeit-ML-Starter | Der JupyterLab Launcher enthält jetzt einen Python Notebook-Starter für Echtzeit-Maschinelles Lernen (Alpha). |
 
 Weitere Informationen zum Real-time Machine Learning-Alpha finden Sie in der Übersicht [zum](../../data-science-workspace/real-time-machine-learning/home.md)Echtzeit-Maschinellen Lernen.
+
+## Segmentierung {#segmentation}
+
+Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren Echtzeit-Daten zum Profil von Kunden generieren können. Diese Segmente werden zentral auf der Plattform konfiguriert und gepflegt, sodass sie von jeder Adobe-Anwendung leicht zugänglich sind.
+
+Der Segmentierungsdienst definiert eine bestimmte Untergruppe von Profilen, indem er die Kriterien beschreibt, die eine vermarktbare Personengruppe innerhalb Ihrer Kundenbasis unterscheiden. Segmente können auf Datensatzdaten (z. B. demografische Informationen) oder Zeitreihen-Ereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Datumsfelder | Eine Funktion zum &quot;Jubiläum&quot;für Datumsfunktionen wurde hinzugefügt, mit der Benutzer Daten ohne Jahr bewerten können. |
+
+Weitere Informationen zur Segmentierung finden Sie in der Übersicht über die [Segmentierung](../../segmentation/home.md)
 
 ## Quellen {#sources}
 
