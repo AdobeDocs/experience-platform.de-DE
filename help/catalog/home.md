@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den Katalogdienst
 topic: overview
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 0%
+source-wordcount: '804'
+ht-degree: 5%
 
 ---
 
@@ -42,7 +42,7 @@ Weitere allgemeine Informationen zum XDM-System finden Sie in der [XDM-Systemüb
 
 Experience Platform erfasst Daten aus mehreren Quellen und behält Datensätze als Datensätze innerhalb des Data Lake bei. Der Katalog verfolgt die Metadaten für diese Datensätze, unabhängig von ihrer Quelle oder Methode der Erfassung.
 
-Bei Verwendung der Stapelverarbeitungsmethode verfolgt Catalog auch zusätzliche Metadaten für **Stapeldateien** . Stapel sind Dateneinheiten, die aus einer oder mehreren Dateien bestehen, die als eine Einheit erfasst werden sollen. Der Katalog verfolgt die Metadaten für diese Stapeldateien sowie die Datensätze, in denen sie nach der Erfassung beibehalten werden. Stapelmetadaten enthalten Informationen zur Anzahl der erfolgreich erfassten Datensätze sowie alle fehlgeschlagenen Datensätze und zugehörigen Fehlermeldungen.
+Bei Verwendung der Stapelverarbeitungsmethode verfolgt Catalog auch zusätzliche Metadaten für **Stapeldateien** . Batches sind Dateneinheiten, die aus einer oder mehreren Dateien bestehen und als Einheit erfasst werden. Der Katalog verfolgt die Metadaten für diese Stapeldateien sowie die Datensätze, in denen sie nach der Erfassung beibehalten werden. Stapelmetadaten enthalten Informationen zur Anzahl der erfolgreich erfassten Datensätze sowie alle fehlgeschlagenen Datensätze und zugehörigen Fehlermeldungen.
 
 See the [data ingestion overview](../ingestion/home.md) for more information.
 
@@ -55,10 +55,10 @@ In der folgenden Tabelle sind die verschiedenen vom Katalog unterstützten Objek
 | Objekt | API-Endpunkt | Definition |
 |---|---|---|
 | Konto | `/accounts` | Beim Erstellen von Quellverbindungen müssen Authentifizierungsberechtigungen angegeben werden. Ein Konto stellt eine Sammlung von Authentifizierungsberechtigungen dar, die zum Erstellen einer Verbindung eines bestimmten Typs verwendet wurden. Jede Verbindung verfügt über eine Reihe von eindeutigen Parametern, die vom Katalog beibehalten und in einem Azurblauen Schlüssel-Vault gesichert werden. |
-| Stapel | `/batches` | Stapel sind Dateneinheiten, die aus einer oder mehreren Dateien bestehen, die als eine Einheit erfasst werden sollen. Ein Stapelobjekt im Katalog skizziert die Erfassungsmetriken des Stapels (z. B. die Anzahl der verarbeiteten Datensätze oder die Größe auf der Festplatte) und kann auch Links zu Datensätzen, Ansichten und anderen Ressourcen enthalten, die von dem Stapelvorgang betroffen waren. |
+| Stapel | `/batches` | Batches sind Dateneinheiten, die aus einer oder mehreren Dateien bestehen und als Einheit erfasst werden. Ein Stapelobjekt im Katalog skizziert die Erfassungsmetriken des Stapels (z. B. die Anzahl der verarbeiteten Datensätze oder die Größe auf der Festplatte) und kann auch Links zu Datensätzen, Ansichten und anderen Ressourcen enthalten, die von dem Stapelvorgang betroffen waren. |
 | Verbindung | `/connections` | Eine Verbindung ist eine einzelne Instanz eines Quell-Connectors, die für Ihr Unternehmen eindeutig ist und mit den entsprechenden Authentifizierungsberechtigungen für den Connector-Typ konfiguriert wurde. |
 | Connector | `/connectors` | Connectors definieren, wie Quellverbindungen Daten aus anderen Adobe-Anwendungen (z. B. Adobe Analytics und Adobe Audience Manager), Cloud-Datenspeicherung-Quellen von Drittanbietern (z. B. Blue Blob, Amazon S3, FTP-Server und SFTP-Server) und CRM- von Drittanbietern (z. B. Microsoft Dynamics und Salesforce) erfassen sollen. |
-| Datenbestand | `/dataSets` | Ein Datensatz ist ein Datenspeicherung- und Verwaltungskonstrukt, das für die Datenerfassung (normalerweise eine Tabelle) mit einem Schema (Spalten) und Feldern (Zeilen) verwendet wird. |
+| Datenbestand | `/dataSets` | Ein Datensatz ist ein Datenspeicherung- und Verwaltungskonstrukt, das für die Datenerfassung (normalerweise eine Tabelle) mit einem Schema (Spalten) und Feldern (Zeilen) verwendet wird. See the [datasets overview](./datasets/overview.md) for more information. |
 | Datenbestand-Datei | `/datasetFiles` | Datenaset-Dateien stellen Datenblöcke dar, die auf der Plattform gespeichert wurden. Als Datensätze von Literaldateien finden Sie hier die Dateigröße, die Anzahl der darin enthaltenen Datensätze und einen Verweis auf den Stapel, der die Datei erfasst hat. |
 
 ## Nächste Schritte
