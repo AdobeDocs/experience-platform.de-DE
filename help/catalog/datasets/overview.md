@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Datasets
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 06733eb374d1b9409102a7cf13d61ed266cedaad
+source-git-commit: dcdd94a3a13a13b4104e57b74ecf613bc316b0af
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 0%
+source-wordcount: '776'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ Weitere Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../../xdm/
 
 ## Daten in Datensätze aufnehmen
 
-Adobe Experience Platform Data Ingestion stellt die verschiedenen Methoden dar, mit denen Plattform Daten aus verschiedenen Quellen erfasst. Unabhängig von der Erfassungsmethode werden alle erfolgreich erfassten Daten in Stapeldateien konvertiert. Stapel sind Dateneinheiten, die aus einer oder mehreren Dateien bestehen, die als eine Einheit erfasst werden sollen. Diese Stapeldateien werden dann zu dedizierten Datensätzen hinzugefügt und bleiben im Data Lake erhalten.
+Adobe Experience Platform Data Ingestion stellt die verschiedenen Methoden dar, mit denen Plattform Daten aus verschiedenen Quellen erfasst. Unabhängig von der Erfassungsmethode werden alle erfolgreich erfassten Daten in Stapeldateien konvertiert. Batches sind Dateneinheiten, die aus einer oder mehreren Dateien bestehen und als Einheit erfasst werden. Diese Stapeldateien werden dann zu dedizierten Datensätzen hinzugefügt und bleiben im Data Lake erhalten.
 
 See the [Data Ingestion overview](../../ingestion/home.md) for more information.
 
@@ -44,11 +44,14 @@ Mit Adobe Experience Platform Data Governance können Sie Kundendaten verwalten,
 
 Datenverwendungsbeschriftungen können auf ganze Datensätze oder einzelne Datensatzfelder angewendet werden. Auf Datensatzebene hinzugefügte Bezeichnungen werden von allen Feldern in diesem Datensatz übernommen.
 
-Weitere Informationen zum Dienst finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md) . Anweisungen zum Arbeiten mit Nutzungsbeschriftungen in der Benutzeroberfläche der Experience Platform finden Sie im Benutzerhandbuch [zu den](../../data-governance/labels/user-guide.md)Datenverwendungsbeschriftungen.
+Weitere Informationen zum Dienst finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md) . Anweisungen zum Arbeiten mit Nutzungsbeschriftungen finden Sie in [!DNL Platform]den folgenden Handbüchern:
+
+* [Verwalten von Beschriftungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md)
+* [Verwalten von Beschriftungen in der API](../../data-governance/labels/api.md)
 
 ## Datenbestände in nachgelagerten Plattformdiensten
 
-Sobald Datasets zur Speicherung von erfassten Daten verwendet wurden, werden diese Datensätze von den Diensten der nachgeschalteten Plattform verwendet, um Kundendaten zu aktualisieren, Erkenntnisse durch maschinelles Lernen zu gewinnen und vieles mehr.
+Sobald Datasets zur Speicherung von erfassten Daten verwendet wurden, werden diese Datensätze von den Diensten der nachgeschalteten Plattform verwendet, um Kundendaten zu aktualisieren, Einblicke durch maschinelles Lernen zu gewinnen und vieles mehr.
 
 Im Folgenden finden Sie eine Liste nachgelagerter Dienste, die Datasets für verschiedene Vorgänge verwenden. Weitere Informationen finden Sie in der Dokumentation zu den einzelnen Diensten.
 
