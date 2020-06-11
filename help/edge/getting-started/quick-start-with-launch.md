@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK – Schnellstart mit Launch
 description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
 seo-description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 62b18ed8f70ad87b04f60ade5730ff30d8985415
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 30%
+source-wordcount: '511'
+ht-degree: 33%
 
 ---
 
@@ -17,7 +17,6 @@ ht-degree: 30%
 Dieser Leitfaden führt Sie durch die verschiedenen Schritte zum Einrichten des Adobe Experience Platform Web SDK in Launch. Um diese Funktion nutzen zu können, müssen Sie über Berechtigungen verfügen und auf der Liste &quot;Zulassen&quot;stehen. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
 
 - Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über eine CNAME für Analytics verfügen, sollten Sie diese verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen
-- Sie haben die Berechtigung zur Adobe Experience Platform-Datenplattform. Wenn Sie keine Plattform erworben haben, stellen wir Ihnen die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK ohne Aufpreis zur Verfügung.
 - Verwenden Sie die neueste Version des Besucher-ID-Diensts
 
 ## Erstellen einer Konfigurations-ID
