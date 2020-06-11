@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Oracle Connector mithilfe der Flow Service API erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Oracle hergestellt wird. Das Muster der Oracle-Verbindungszeichenfolge lautet: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Oracle hergestellt wird. Das Muster der Oracle-Verbindungszeichenfolge lautet: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für Oracle lautet `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Weitere Informationen zum Einstieg finden Sie in [diesem Oracle-Dokument](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die zum Herstellen einer Verbindung mit der Oracle-Datenbank verwendet wird. Das Muster der Oracle-Verbindungszeichenfolge lautet: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die zum Herstellen einer Verbindung mit der Oracle-Datenbank verwendet wird. Das Muster der Oracle-Verbindungszeichenfolge lautet: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Die Oracle-Verbindungs-Spezifikations-ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Antwort**
