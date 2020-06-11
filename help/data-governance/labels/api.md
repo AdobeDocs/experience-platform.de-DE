@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Verwalten von Datenverwendungsbeschriftungen mit APIs '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '610'
 ht-degree: 3%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 3%
 
 # Verwalten von Datenverwendungsbeschriftungen mit APIs
 
-In diesem Dokument wird beschrieben, wie Sie mit der Katalogdienst-API Datenverwendungsbeschriftungen auf Dataset- und Feldebene verwalten.
+Mit der DataSet-Dienst-API können Sie Nutzungsbeschriftungen für Datensätze programmgesteuert verwalten. Es gehört zu den Datenkatalogfunktionen der Adobe Experience Platform, ist jedoch von der Katalogdienst-API getrennt, die die Metadaten des Datensatzes verwaltet.
+
+In diesem Dokument wird beschrieben, wie Sie mit der DataSet-Dienst-API Datenverwendungsbeschriftungen auf Dataset- und Feldebene verwalten.
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, sollten Sie die Übersicht über den [Katalogdienst](../../catalog/home.md) lesen, um eine solidere Einführung in den Dienst zu erhalten. Darüber hinaus müssen Sie auch die Schritte befolgen, die im Abschnitt [&quot;](../../catalog/api/getting-started.md) Erste Schritte&quot;im Entwicklerhandbuch für Kataloge beschrieben sind, um die erforderlichen Anmeldeinformationen für Aufrufe der Katalog-API zu sammeln.
+Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [&quot;](../../catalog/api/getting-started.md) Erste Schritte&quot;im Handbuch für den Katalogentwickler beschrieben sind, um die erforderlichen Anmeldeinformationen für Aufrufe von [!DNL Platform] APIs zu sammeln.
 
-Um die in den folgenden Abschnitten beschriebenen Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id` Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Abschnitt &quot;Entwicklerhandbuch&quot;Informationen zum [Auflisten von Katalogobjekten](../../catalog/api/list-objects.md) , um die IDs der vorhandenen Datensätze zu finden.
+Um die in den folgenden Abschnitten beschriebenen Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id` Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch zur [Auflistung von Katalogobjekten](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
 
 ## Suchen von Beschriftungen für einen Datensatz {#lookup}
 
@@ -29,7 +31,7 @@ Sie können die Datenverwendungsbeschriftungen nachschlagen, die auf einen vorha
 **API-Format**
 
 ```http
-GET /dataSets/{DATASET_ID}/labels
+GET /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Beschreibung |
@@ -40,7 +42,7 @@ GET /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -82,8 +84,8 @@ Sie können einen Satz von Bezeichnungen für einen Datensatz erstellen, indem S
 **API-Format**
 
 ```http
-POST /dataSets/{DATASET_ID}/labels
-PUT /dataSets/{DATASET_ID}/labels
+POST /datasets/{DATASET_ID}/labels
+PUT /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Beschreibung |
@@ -96,7 +98,7 @@ Mit der folgenden POST-Anforderung wird dem Datensatz eine Reihe von Beschriftun
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +151,7 @@ Sie können die auf einen Datensatz angewendeten Beschriftungen löschen, indem 
 **API-Format**
 
 ```http
-DELETE /dataSets/{DATASET_ID}/labels
+DELETE /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Beschreibung |
@@ -160,7 +162,7 @@ DELETE /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -176,3 +178,5 @@ Eine erfolgreiche Antwort HTTP-Status 200 (OK), der angibt, dass die Beschriftun
 Nachdem Sie nun Datenverwendungsbeschriftungen auf der Dataset- und Feldebene hinzugefügt haben, können Sie beginnen, Daten in Experience Platform zu erfassen. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
 
 Sie können jetzt auch Datenverwendungsrichtlinien auf Basis der von Ihnen angewendeten Beschriftungen definieren. Weitere Informationen finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](../policies/overview.md).
+
+Weitere Informationen zum Verwalten von Datensätzen in [!DNL Experience Platform]finden Sie in der Übersicht über [Datensätze](../../catalog/datasets/overview.md).
