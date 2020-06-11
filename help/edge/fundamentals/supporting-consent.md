@@ -4,7 +4,7 @@ seo-title: Unterstützen der Zustimmungseinstellung des Adobe Experience Platfor
 description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
 seo-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 99%
@@ -29,7 +29,7 @@ Standardmäßig ist der Nutzer für alle Zwecke angemeldet. Um zu verhindern, da
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "defaultConsent": { "general": "pending" }
 });
@@ -45,7 +45,13 @@ Wenn sich der Nutzer anmeldet, führen Sie den `setConsent`-Befehl mit der `gene
 
 ```javascript
 alloy("setConsent", {
-  "general": "in"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "in" 
+      }
+    }]
 });
 ```
 
@@ -55,7 +61,13 @@ Wenn der Nutzer sich entscheidet, sich abzumelden, führen Sie den `setConsent`-
 
 ```javascript
 alloy("setConsent", {
-  "general": "out"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "out" 
+      }
+    }]
 });
 ```
 
