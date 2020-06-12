@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,26 @@ Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erha
 
 In diesem Dokument erhalten Sie allgemeine Anleitungen zur Zuordnung Ihrer Marketing-Ereignis-Daten aus mehreren Kanälen zu diesem Schema. In diesen Anleitungen werden Informationen zu wichtigen Feldern im Schema zusammengefasst, die Ihnen bei der Bestimmung helfen, wie Sie Ihre Daten effektiv der Struktur zuordnen können.
 
-## Das CEE-Schema
+## Workflow-Übersicht
+
+Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in Adobe Experience Platform oder extern gespeichert werden. In diesem Abschnitt werden die notwendigen Schritte zusammengefasst, die Sie in beiden Szenarien unternehmen müssen.
+
+### Vorbereitung externer Daten
+
+Wenn Ihre Daten außerhalb von gespeichert werden, führen Sie die folgenden Schritte aus [!DNL Experience Platform]:
+
+1. Wenden Sie sich an Adobe Consulting Services, um Zugangsdaten für einen dedizierten Container der Azurblase-Datenspeicherung anzufordern.
+1. Laden Sie Ihre Daten mit Ihren Zugriffsberechtigungen in den Blob-Container hoch.
+1. Arbeiten Sie mit Adobe Consulting Services zusammen, um Ihre Daten dem [Consumer ExperienceEvent-Schema](#cee-schema) zuzuordnen und in Intelligent Services zu erfassen.
+
+### [!DNL Experience Platform] Datenaufbereitung
+
+Wenn Ihre Daten bereits in gespeichert sind, führen Sie [!DNL Platform]die folgenden Schritte aus:
+
+1. Überprüfen Sie die Struktur des [Consumer ExperienceEvent-Schemas](#cee-schema) und stellen Sie fest, ob Ihre Daten Feldern zugeordnet werden können.
+1. Wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und sie in Intelligent Services zu erfassen, oder [befolgen Sie die Schritte in diesem Handbuch](#mapping) , wenn Sie die Daten selbst zuordnen möchten.
+
+## Das CEE-Schema {#cee-schema}
 
 Das Consumer ExperienceEvent-Schema beschreibt das Verhalten eines Individuums in Bezug auf digitale Marketing-Ereignis (Web oder Mobil) sowie Online- oder Offline-Commerce-Aktivitäten. Die Verwendung dieses Schemas ist für Intelligent Services aufgrund seiner semantisch definierten Felder (Spalten) erforderlich, wodurch unbekannte Namen vermieden werden, die sonst die Daten weniger eindeutig machen würden.
 
@@ -59,7 +78,7 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:ch
 
 Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem `xdm:channel` Schema zugeordnet sind:
 
-| Kanal | `@type` | `mediaType` | `mediaAction` |
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Paid Search | https:/<span>/ns.adobe.com/xdm/Kanal-types/search | bezahlt | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/Kanal-types/social | verdient | clicks |
@@ -185,7 +204,7 @@ Dieses Feld enthält Informationen zu Marketing-Aktivitäten, die mit dem Touchp
 
 Vollständige Informationen zu jedem der erforderlichen Unterfelder finden Sie `xdm:productListItems`in der [Marketing-Sechsfachspezifikation](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) .
 
-## Zuordnung und Erfassung von Daten
+## Zuordnung und Erfassung von Daten (#mapping)
 
 Sobald Sie festgestellt haben, ob Ihre Marketing-Ereignis-Daten dem CEE-Schema zugeordnet werden können, müssen Sie als Nächstes ermitteln, welche Daten Sie in Intelligent Services einführen möchten. Alle in Intelligent Services verwendeten Verlaufsdaten müssen innerhalb des Mindestzeitraums von vier Monaten an Daten liegen, zuzüglich der Anzahl der Tage, die als Lookback-Zeitraum gedacht sind.
 
