@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zum Datenschutzdienst
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: 5921f89ce551a4bdec4c5038d579cebd0451f5f2
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
 
 
-# Häufig gestellte Fragen zum Datenschutzdienst
+# Handbuch zur Fehlerbehebung beim Datenschutzdienst
 
-In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zum Datenschutzdienst für Adobe Experience Platform.
+Der Datenschutzdienst für Adobe Experience Platform stellt eine RESTful-API und eine Benutzeroberfläche bereit, die Firmen bei der Verwaltung von Datenschutzanforderungen für Kunden unterstützen. Mit dem Datenschutzdienst können Sie Anfragen zum Zugriff auf und zum Löschen von persönlichen oder privaten Kundendaten stellen, wodurch die automatische Einhaltung der Vorschriften zum Schutz der Privatsphäre in Unternehmen und Rechtsordnungen erleichtert wird.
 
-Der Datenschutzdienst stellt eine RESTful-API und eine Benutzeroberfläche bereit, die Firmen bei der Verwaltung von Datenschutzanfragen unterstützen. Mit dem Datenschutzdienst können Sie Anfragen zum Zugriff auf und zum Löschen von persönlichen oder privaten Kundendaten stellen, wodurch die automatische Einhaltung der Vorschriften zum Schutz der Privatsphäre in Unternehmen und Rechtsordnungen erleichtert wird.
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Datenschutzdienst sowie Informationen zu häufig auftretenden Fehlern in der API.
 
 ## Was ist der Unterschied zwischen einer Benutzer- und einer Benutzer-ID, wenn Sie Datenschutzanforderungen in der API machen? {#user-ids}
 
@@ -95,3 +95,18 @@ Weitere Informationen finden Sie im Abschnitt zum [Suchen eines Auftrags nach se
 ### Verwenden der Benutzeroberfläche
 
 Suchen Sie im Dashboard der Benutzeroberfläche des Datenschutzdienstes den Auftrag, den Sie herunterladen möchten, über das Widget **Auftragsanforderungen** . Klicken Sie auf die ID des Auftrags, um die Seite &quot; _Auftragsdetails_ &quot;zu öffnen. Klicken Sie von hier oben rechts auf **Herunterladen** , um die ZIP-Datei herunterzuladen. Detailliertere Schritte finden Sie im Benutzerhandbuch [zum](ui/user-guide.md) Datenschutzdienst.
+
+## Allgemeine Fehlermeldungen
+
+Die folgende Tabelle enthält einige häufige Fehler im Datenschutzdienst mit Beschreibungen, die zur Lösung der jeweiligen Probleme beitragen.
+
+| Fehlermeldung | Beschreibung |
+| --- | --- |
+| Benutzer-IDs wurden nicht gefunden. | Einige der in der Anforderung angegebenen Benutzer-IDs konnten nicht gefunden werden und wurden übersprungen. Stellen Sie sicher, dass Sie die richtigen Namensraum- und ID-Werte in der Anforderungs-Nutzlast verwenden. Eine genauere Erläuterung finden Sie im Dokument zur [Bereitstellung von Identitätsdaten](./identity-data.md) . |
+| Ungültiger Namensraum | Ein bereitgestellter Identitäts-Namensraum für eine Benutzer-ID war ungültig. Eine Liste der zugelassenen Namensraum finden Sie im Abschnitt zu [Namensräumen](./api/appendix.md#standard-namespaces) der Standardidentität im Developer Guide des Datenschutzdienstes. Wenn Sie einen benutzerspezifischen Namensraum verwenden, stellen Sie sicher, dass Sie die ID- `type` Eigenschaft auf &quot;benutzerspezifisch&quot;setzen. |
+| Teilweise abgeschlossen | Der Auftrag wurde erfolgreich abgeschlossen, einige Daten waren jedoch für die jeweilige Anforderung nicht verfügbar und wurden übersprungen. |
+| Die Daten haben nicht das erforderliche Format. | Einer oder mehrere Datenwerte für die angegebene Anwendung wurden falsch formatiert. Weitere Informationen finden Sie in den Auftragsdetails. |
+| Das IMS-Org wurde nicht bereitgestellt. | Diese Meldung tritt auf, wenn Ihr IMS-Org nicht für den Datenschutzdienst bereitgestellt wurde. Wenden Sie sich für weitere Informationen an Ihren Administrator. |
+| Zugriff und Berechtigungen sind erforderlich. | Für die Verwendung des Datenschutzdienstes sind Zugriff und Berechtigungen erforderlich. Wenden Sie sich an Ihren Administrator, um Zugriff zu erhalten. |
+| Beim Hochladen und Archivieren der Zugangsdaten ist ein Problem aufgetreten. | Wenn dieser Fehler auftritt, laden Sie die Zugangsdaten erneut hoch und versuchen Sie es erneut. |
+| Die Arbeitslast wurde für die aktuelle Dokument-Rate überschritten. | Wenn dieser Fehler auftritt, reduzieren Sie die Übermittlungsrate und versuchen Sie es erneut. |
