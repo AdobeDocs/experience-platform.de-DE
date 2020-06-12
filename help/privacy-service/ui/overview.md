@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Benutzeroberfläche des Datenschutzdienstes
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: 8704d762ea71b44133cd6d394587342198c54b99
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '183'
 ht-degree: 1%
 
 ---
@@ -20,15 +20,17 @@ Der Datenschutzdienst für Adobe Experience Platform bietet eine RESTful-API und
 
 Sie müssen über eine Adobe-ID verfügen, um sich bei der Benutzeroberfläche des Datenschutzdienstes authentifizieren zu können. Darüber hinaus müssen Sie über Systemadministrator-Berechtigungen innerhalb der Organisation verfügen, mit der Ihre Adobe ID verknüpft ist.
 
-Navigieren Sie zur Adobe Experience Cloud-Anmeldeseite unter https://experience.adobe.com. Klicken Sie auf **Anmelden mit einer Adobe-ID** und geben Sie bei Aufforderung Ihre Adobe-ID-Anmeldeinformationen ein. Klicken Sie nach dem Anmelden auf **Administration**.
+Navigieren Sie zur Adobe Experience Cloud-Anmeldeseite unter https://experience.adobe.com. Klicken Sie auf **[!UICONTROL Anmelden mit einer Adobe-ID]** und geben Sie bei Aufforderung Ihre Adobe-ID-Anmeldeinformationen ein.
 
-![Registerkarte &quot;Administration&quot;](../images/ui-overview/admin-tab.png)
+Klicken Sie nach dem Anmelden auf **[!UICONTROL Datenschutz-Benutzeroberfläche]**.
 
->[!NOTE] Die Registerkarte &quot;Administration&quot;wird nur angezeigt, wenn Sie über Systemadmin-Berechtigungen in Ihrem Unternehmen verfügen.
+![](../images/ui-overview/quick-access.png)
 
-Wählen Sie schließlich im nächsten Bildschirm die Option **Datenschutzbenutzeroberfläche** starten, um die Benutzeroberfläche des Datenschutzdienstes zu öffnen.
+### Anmeldung über Experience Platform
 
-![Administrationsseite](../images/ui-overview/admin-page.png)
+Wenn Sie Zugriff auf die Benutzeroberfläche der Adobe Experience Platform haben, können Sie auch über die Registerkarte **[!UICONTROL Anforderungen]** im linken Navigationsbereich auf die Benutzeroberfläche des Datenschutzdienstes zugreifen.
+
+![](../images/ui-overview/platform.png)
 
 ## Nächste Schritte
 
