@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zum Datenschutzdienst
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1088'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,11 @@ Das Dashboard für die Benutzeroberfläche des Datenschutzdienstes enthält zwei
 
 ### Regeltyp
 
-Der Datenschutzdienst unterstützt Auftragsanforderungen für zwei Regeltypen:
+Der Datenschutzdienst unterstützt Auftragsanforderungen für drei Regeltypen:
 
-* Die Allgemeine Datenschutzverordnung
-* The California Consumer Privacy Act (CCPA).
+* Allgemeine Datenschutzverordnung der Europäischen Vereinigung
+* The California Consumer Privacy Act (CCPA)
+* Thailands Gesetz zum Schutz personenbezogener Daten (PDPA_THA)
 
 Aufträge für jeden Regelungstyp werden separat verfolgt. Um zwischen Regelungstypen zu wechseln, klicken Sie auf das Dropdown-Menü **Regelungstyp** und wählen Sie die gewünschte Regelart aus der Liste aus.
 
@@ -122,7 +123,7 @@ Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge)
 
 ### JSON-Datei hochladen {#json}
 
-Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für die einzelnen verarbeiteten Datensubjekte verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
+Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für jede verarbeitete Person verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
 Klicken Sie auf den Pfeil neben Anforderung **erstellen**, unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms. Wählen Sie in der Liste der angezeigten Optionen die Option JSON **hochladen**.
 
