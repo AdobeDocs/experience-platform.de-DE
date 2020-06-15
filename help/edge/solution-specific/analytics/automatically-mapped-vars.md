@@ -4,10 +4,10 @@ seo-title: Variablen, die in Analytics automatisch mit dem Adobe Experience Plat
 description: Erfahren Sie, welche Variablen in Analytics mit dem Experience Platform Web SDK automatisch zugeordnet werden
 seo-description: Erfahren Sie, welche Variablen in Analytics mit dem Experience Platform Web SDK automatisch zugeordnet werden
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: a7c8830c5c8152b1f21373a506b2fff97d43c40a
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 100%
+source-wordcount: '550'
+ht-degree: 58%
 
 ---
 
@@ -18,6 +18,41 @@ Nachfolgend finden Sie eine Liste von Variablen, die vom Adobe Experience Platfo
 
 | XDM-Feldpfad | Analytics-Abfrage-Zeichenfolge/HTTP-Kopfzeile | Beschreibung |
 | ---------- | ------------------------- | -------- |
+| `commerce.order.purchaseID` | `pi` | AppMeasurement Abfrageparameter, PURCHASEID-Zuordnung. |
+| `commerce.order.currencyCode` | `cc` | AppMeasurement-Abfrageparameter, CURRENCY-Zuordnung. |
+| `commerce.purchases.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit Konversions-COMMERCE_PURCHASE unter Verwendung des Trennzeichens `,`. |
+| `commerce.productViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_Referrer_ANSICHT unter Verwendung des Trennzeichens `,`. |
+| `commerce.productListOpens.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_OPEN unter Verwendung des Trennzeichens `,`. |
+| `commerce.productListViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der KonversionsCOMMERCE_SC_ANSICHT unter Verwendung des Trennzeichens `,`. |
+| `commerce.checkouts.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_CHECKOUT unter Verwendung des Trennzeichens `,`. |
+| `commerce.productListAdds.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_HINZUFÜGEN unter Verwendung des Trennzeichens `,`. |
+| `commerce.productListRemovals.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_REMOVE unter Verwendung des Trennzeichens `,`. |
+| `commerce.productViews.id` | `events` | `prodView` Ereignis-Serialisierung. |
+| `commerce.productListOpens.id` | `events` | `scOpen` Ereignis-Serialisierung. |
+| `commerce.productListViews.id` | `events` | `scView` Ereignis-Serialisierung. |
+| `commerce.productListAdds.id` | `events` | `scAdd` Ereignis-Serialisierung. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` Ereignis-Serialisierung. |
+| `commerce.checkouts.id` | `events` | `scCheckout` Ereignis-Serialisierung. |
+| `device.screenHeight` | `s` | AppMeasurement Abfrage-Parameterzuordnung Bildschirmauflösung. |
+| `device.screenWidth` | `s` | AppMeasurement Abfrage-Parameterzuordnung Bildschirmauflösung. |
+| `productlistitems.[N].lineitemid` | `products` | AppMeasurement Abfrage-Parameter Produktzuordnung für Kategorien. |
+| `productlistitems.[N].name` | `products` | AppMeasurement Abfrage Parameter Produktnamenzuordnung. |
+| `productlistitems.[N].quantity` | `products` | AppMeasurement Abfrage-Parameter Produktmengenzuordnung. |
+| `productlistitems.[N].pricetotal` | `products` | AppMeasurement Abfrage-Parameter Produktpreiszuordnung. |
+| `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.primaryAssetReference.@id` | `c.a.media.asset` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue` | `c.a.media.rating` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre` | `c.a.media.genre` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name` | `c.a.media.originator` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.starts.value` | `c.a.media.view` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.progress10.value` | `c.a.media.progress10` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.firstQuartiles.value` | `c.a.media.progress25` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.midpoints.value` | `c.a.media.progress50` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.thirdQuartiles.value` | `c.a.media.progress75` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.progress95.value` | `c.a.media.progress95` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.completes.value` | `c.a.media.complete` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.mediaSegmentView.value` | `c.a.media.segmentView` | AppMeasurement-Kontextdaten. |
+| `media.mediaTimed.dropBeforeStart.value` | `c.a.media.view`, `c.a.media.timePlayed`, `c.a.media.play` | AppMeasurement-Kontextdaten. |
 | `environment.browserDetails.userAgent` | `User-Agent` | Dies ist eine HTTP-Kopfzeilen-Zuordnung, HEADER_USER_AGENT. |
 | `environment.browserDetails.acceptLanguage` | `Accept-Language` | Dies ist eine HTTP-Kopfzeilen-Zuordnung, HEADER_ACCEPT_LANGUAGE. |
 | `environment.browserDetails.cookiesEnabled` | `k` | AppMeasurement-Abfrageparameter, COOKIES-Zuordnung mit der Konvertierung BOOLEAN_TO_YN. |
@@ -36,11 +71,14 @@ Nachfolgend finden Sie eine Liste von Variablen, die vom Adobe Experience Platfo
 | `web.webPageDetails.URL` | `g` | AppMeasurement Abfrageparameter, PAGE_URL-Zuordnung. |
 | `web.webPageDetails.homePage` | `hp` | AppMeasurement-Abfrageparameter, HOMEPAGE-Zuordnung mit der Konvertierung BOOLEAN_TO_YN. |
 | `web.webReferrer.URL` | `r` | AppMeasurement Abfrageparameter, REFERRER-Zuordnung. |
+| `web.webInteraction.type` | `pe` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS-Zuordnung mit Konversion CLICK_MAP_TYPE. |
+| `web.webInteraction.URL` | `pev1` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS_VAR1-Zuordnung. |
+| `web.webInteraction.name` | `pev2` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS_VAR2-Zuordnung. |
+| `web.webPageDetails.siteSection` | `ch` | AppMeasurement Abfrage-Parameterzuordnung für KANAL. |
+| `web.webPageDetails.errorPage` | `pageType` | AppMeasurement-Abfrage-Parameter PAGE_TYPE_FULL-Zuordnung mit Konversion ERROR_PAGE_TYPE. |
 | `application.id` | `c.a.appid` | AppMeasurement-Kontextdatenzuordnung `c.a.appid`. |
 | `application.launches.value` | `c.a.launches` | AppMeasurement-Kontextdatenzuordnung `c.a.launches`. |
 | `marketing.trackingCode` | `v0` | AppMeasurement Abfrageparameter, CAMPAIGN-Zuordnung. |
-| `commerce.purchaseID` | `pi` | AppMeasurement Abfrageparameter, PURCHASEID-Zuordnung. |
-| `commerce.currencyCode` | `cc` | AppMeasurement-Abfrageparameter, CURRENCY-Zuordnung. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | AppMeasurement-Kontextdatenzuordnung `a.media.name`. |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | AppMeasurement-Kontextdatenzuordnung `c.a.media.length`. |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastContentType` | `c.a.contentType` | AppMeasurement-Kontextdatenzuordnung `c.a.contentType`. |
@@ -62,4 +100,5 @@ Nachfolgend finden Sie eine Liste von Variablen, die vom Adobe Experience Platfo
 | `media.mediaTimed.pauses.value` | `c.a.media.pauseCount` | AppMeasurement-Kontextdatenzuordnung `c.a.media.pauseCount`. |
 | `media.mediaTimed.pauseTime.value` | `c.a.media.pauseTime` | AppMeasurement-Kontextdatenzuordnung `c.a.media.pauseTime`. |
 | `media.mediaTimed.resumes.value` | `c.a.media.resume` | AppMeasurement-Kontextdatenzuordnung `c.a.media.resume`. |
-| `identitymap.ecid.[0].id` | `mid` | AppMeasurement-Abfrageparameter, MID-Zuordnung. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement context data `c.a.media.type` mapping with conversion VIDEO_SHOW_TYPE. |
+| `identityMap.ECID.[0].id` | `mid` | AppMeasurement-Abfrageparameter, MID-Zuordnung. |
