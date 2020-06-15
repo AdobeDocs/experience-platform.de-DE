@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Motoren
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: d9f4649f5946fa3eea8d6a2ab65a07568f9c697f
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1118'
 ht-degree: 3%
 
 ---
@@ -202,7 +202,7 @@ curl -X POST \
                 "executionType": "PySpark",
                 "packagingType": "docker"
             },
-           "defaultMLInstanceConfigs": [
+           "defaultMLInstanceConfigs": [ ...
            ]
        }
    }
@@ -219,6 +219,7 @@ curl -X POST \
 | `artifacts.default.image.location` | Die Position des Dockerbilds. Es wird nur Azurblauer ACR oder Public (nicht authentifiziert) Dockerhub unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
 | `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker`gesetzt werden. |
+| `artifacts.default.defaultMLInstanceConfigs` | Ihre `pipeline.json` Konfigurationsdateiparameter. |
 
 **Antwort**
 
@@ -242,7 +243,8 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu er
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
-            }
+            },
+        "defaultMLInstanceConfigs": [ ... ]
         }
     }
 }
@@ -468,7 +470,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den aktualisierten Details der 
 
 ## Eine Engine löschen
 
-Sie können eine Engine löschen, indem Sie eine DELETE-Anforderung ausführen und dabei die ID der Zielgruppe-Engine im Anforderungspfad angeben. Durch das Löschen einer Engine werden alle MLInstances, die auf diese Engine verweisen, inklusive aller Experimente und Experimentabläufe, die zu diesen MLInstances gehören, kaskadiert.
+Sie können eine Engine löschen, indem Sie eine DELETE-Anforderung ausführen und gleichzeitig die ID der Zielgruppe Engine im Anforderungspfad angeben. Durch das Löschen einer Engine werden alle MLInstances, die auf diese Engine verweisen, inklusive aller Experimente und Experimentabläufe, die zu diesen MLInstances gehören, kaskadiert.
 
 **API-Format**
 
