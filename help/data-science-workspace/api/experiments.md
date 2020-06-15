@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experimente
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -14,9 +14,9 @@ ht-degree: 4%
 
 # Experimente
 
-Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Runden besteht.
+Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Läufen besteht.
 
-## Experiment erstellen
+## Experiment erstellen {#create-an-experiment}
 
 Sie können ein Experiment erstellen, indem Sie eine POST-Anforderung ausführen und gleichzeitig einen Namen und eine gültige MLInstance-ID in der Anforderungs-Nutzlast angeben.
 
@@ -67,7 +67,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu er
 }
 ```
 
-## Erstellen und Ausführen eines Schulungs- oder Bewertungslaufs
+## Erstellen und Ausführen eines Schulungs- oder Bewertungslaufs {#experiment-training-scoring}
 
 Sie können Schulungs- oder Bewertungsabläufe erstellen, indem Sie eine POST-Anforderung ausführen, eine gültige Experiment-ID bereitstellen und die ausgeführte Aufgabe angeben. Bewertungsläufe können nur erstellt werden, wenn das Experiment über einen vorhandenen und erfolgreichen Schulungslauf verfügt. Durch die erfolgreiche Erstellung eines Schulungslaufs wird der Modellschulungsvorgang initialisiert, und der erfolgreiche Abschluss führt zu einem geschulten Modell. Das Generieren geschulter Modelle ersetzt alle bereits vorhandenen Modelle, sodass ein Experiment zu jeder Zeit nur ein einziges trainiertes Modell verwenden kann.
 
@@ -98,7 +98,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `{TASK}` | Gibt die Aufgabe des Vorgangs an. Legen Sie diesen Wert entweder `train` für Schulungen, `score` Bewertungen oder `fp` für Feature-Pipeline fest. |
+| `{TASK}` | Gibt die Aufgabe des Vorgangs an. Legen Sie diesen Wert entweder `train` für Schulungen, `score` Bewertungen oder `featurePipeline` für Feature-Pipeline fest. |
 
 **Antwort**
 
@@ -219,7 +219,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Antwort**
 
@@ -369,7 +368,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den aktualisierten Details des 
 
 ## Experimente löschen
 
-Sie können ein einzelnes Experiment löschen, indem Sie eine DELETE-Anforderung ausführen, die die ID des Experiments &quot;Zielgruppe&quot;im Anforderungspfad enthält.
+Sie können ein einzelnes Experiment löschen, indem Sie eine DELETE-Anforderung ausführen, die die ID des Zielgruppen-Experiments im Anforderungspfad enthält.
 
 **API-Format**
 
@@ -404,7 +403,7 @@ curl -X DELETE \
 
 ## Experimente nach MLInstance-ID löschen
 
-Sie können alle Experimente, die zu einer bestimmten MLInstanz gehören, löschen, indem Sie eine DELETE-Anforderung ausführen, die die MLInstance-ID als Parameter für die Abfrage enthält.
+Sie können alle Experimente, die zu einer bestimmten MLInstanz gehören, löschen, indem Sie eine DELETE-Anforderung ausführen, die die MLInstance-ID als Abfrage-Parameter enthält.
 
 **API-Format**
 
