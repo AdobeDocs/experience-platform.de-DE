@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verpacktes Rezept (API) importieren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Dieses Lernprogramm verwendet die [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) , um eine [Engine](../api/engines.md)zu erstellen, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
 
-Bevor Sie beginnen, sollten Sie bedenken, dass Adobe Experience Platform Data Science Workspace verschiedene Begriffe verwendet, um auf ähnliche Elemente innerhalb der API und Benutzeroberfläche zu verweisen. Die API-Begriffe werden in diesem Lernprogramm verwendet, und die folgende Tabelle zeigt die entsprechenden Begriffe an:
+Bevor Sie beginnen, sollten Sie bedenken, dass Adobe Experience Platform Data Science Workspace verschiedene Begriffe verwendet, um auf ähnliche Elemente in der API und Benutzeroberfläche zu verweisen. Die API-Begriffe werden in diesem Lernprogramm verwendet, und die folgende Tabelle zeigt die entsprechenden Begriffe an:
 
 | Begriff der Benutzeroberfläche | API-Begriff |
 | ---- | ---- |
@@ -35,17 +35,15 @@ Für dieses Lernprogramm ist eine gepackte Rezept-Datei in Form einer Docker-URL
 
 - `{DOCKER_URL}`: Eine URL-Adresse für ein Docker-Bild eines intelligenten Dienstes.
 
-Für dieses Lernprogramm müssen Sie das Lernprogramm &quot; [Authentifizierung für Adobe Experience Platform&quot;abgeschlossen haben, damit Sie erfolgreich Aufrufe an Plattform-APIs durchführen können](../../tutorials/authentication.md) . Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Für dieses Lernprogramm müssen Sie das Lernprogramm &quot; [Authentifizierung für Adobe Experience Platform&quot;abgeschlossen haben, damit Platformen-APIs erfolgreich aufgerufen werden können](../../tutorials/authentication.md) . Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.
-- `{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.
-- `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.
+- `{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.
+- `{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.
 
 ## Erstellen einer Engine
 
-Je nachdem, in welcher Form die verpackte Recipe-Datei als Teil der API-Anforderung enthalten sein soll, wird eine Engine auf zwei Arten erstellt:
-
-- [Erstellen einer Engine mit einer Docker-URL](#create-an-engine-with-a-docker-url)
+Engines können durch eine POST-Anforderung an den Endpunkt /engine erstellt werden. Die erstellte Engine wird auf der Grundlage der gepackten Rezept-Datei konfiguriert, die als Teil der API-Anforderung eingeschlossen werden muss.
 
 ### Erstellen einer Engine mit einer Docker-URL {#create-an-engine-with-a-docker-url}
 
@@ -93,7 +91,7 @@ curl -X POST \
 | `engine.type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `type` wird entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
 | `artifacts.default.image.location` | Du `{DOCKER_URL}` gehst hierher. Eine vollständige Docker-URL hat die folgende Struktur: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Ein zusätzlicher Name für die Docker-Bilddatei. Entfernen Sie diese Eigenschaft nicht, lassen Sie diesen Wert eine leere Zeichenfolge sein, wenn Sie keinen zusätzlichen Docker-Bilddateinamen angeben möchten. |
-| `artifacts.default.image.executionType` | Der Ausführungstyp dieser Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `executionType` wird entweder `Python`, `R`, `PySpark`, `Spark` (Scala) oder `Tensorflow`. |
+| `artifacts.default.image.executionType` | Der Ausführungstyp dieser Engine. Dieser Wert entspricht der Sprache, in der das Docker-Bild entwickelt wird. Wenn eine Docker-URL zum Erstellen einer Engine bereitgestellt wird, `executionType` wird entweder `Python`, `R`, `PySpark`, `Spark` (Skala) oder `Tensorflow`. |
 
 **Anfrage PySpark**
 
