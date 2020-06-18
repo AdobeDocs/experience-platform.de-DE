@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines GreenPlum-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 # Erstellen eines GreenPlum-Quellconnectors in der Benutzeroberfläche
 
 > [!NOTE]
-> Der GreenPlum-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
+> Der GreenPlum-Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines GreenPlum-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden die Schritte zum Erstellen eines GreenPlum-Quell-Connectors mithilfe der Benutzeroberfläche &quot;Platform&quot;beschrieben.
 
 ## Erste Schritte
 
@@ -42,9 +42,9 @@ Weitere Informationen zum Einstieg finden Sie in [diesem GreenPlum Dokument](htt
 
 ## Verbinden Sie Ihr GreenPlum-Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues GreenPlum-Konto zu erstellen, um eine Verbindung zur Plattform herzustellen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues GreenPlum-Konto zu erstellen, um eine Verbindung zur Platform herzustellen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellenarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
@@ -68,4 +68,4 @@ Um ein vorhandenes Konto zu verknüpfen, wählen Sie das GreenPlum-Konto, mit de
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem GreenPlum-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/databases.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem GreenPlum-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in die Platform](../../dataflow/databases.md)zu bringen.
