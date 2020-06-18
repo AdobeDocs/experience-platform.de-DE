@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 # Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche
 
 > [!NOTE]
-> Der Azurblauer Data Explorer-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
+> Der Azurblauer Data Explorer-Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Azurblauen Data Explorer (im Folgenden &quot;Data Explorer&quot;)-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm wird beschrieben, wie Sie mit der Benutzeroberfläche der Platform einen Azurblauen Data Explorer (im Folgenden &quot;Data Explorer&quot;)-Quellanschluss erstellen können.
 
 ## Erste Schritte
 
@@ -32,7 +32,7 @@ Wenn Sie bereits über eine gültige Data Explorer-Verbindung verfügen, können
 
 ### Erforderliche Berechtigungen erfassen
 
-Um auf Ihr Data Explorer-Konto auf der Plattform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr Data Explorer-Konto bei Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -46,9 +46,9 @@ Weitere Informationen zum Einstieg finden Sie in [diesem Data Explorer-Dokument]
 
 ## Verbinden Sie Ihr Azurblase Data Explorer-Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues Data Explorer-Konto für die Verbindung mit der Plattform zu erstellen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um ein neues Data Explorer-Konto für die Verbindung mit der Platform zu erstellen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *Quellenarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein Inbound-Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *Quellarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein Inbound-Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
@@ -72,4 +72,4 @@ Um ein vorhandenes Konto zu verknüpfen, wählen Sie das Data Explorer-Konto, mi
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Lernprogramms haben Sie eine Verbindung zu Ihrem Data Explorer-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/databases.md)zu übertragen.
+Durch Befolgen dieses Lernprogramms haben Sie eine Verbindung zu Ihrem Data Explorer-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in die Platform](../../dataflow/databases.md)zu bringen.
