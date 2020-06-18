@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Oracle DB-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 # Oracle-Quellanschluss in der Benutzeroberfläche erstellen
 
 > [!NOTE]
-> Der Oracle Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
+> Der Oracle Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Oracle-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden die Schritte zum Erstellen eines Oracle-Quell-Connectors mithilfe der Benutzeroberfläche &quot;Platform&quot;beschrieben.
 
 ## Erste Schritte
 
@@ -32,7 +32,7 @@ Wenn Sie bereits über eine gültige Oracle DB-Verbindung verfügen, können Sie
 
 ### Erforderliche Berechtigungen erfassen
 
-Um auf Ihr Oracle-Konto auf Plattform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr Oracle-Konto auf der Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -43,9 +43,9 @@ Weitere Informationen zum Einstieg finden Sie in [diesem Oracle-Dokument](https:
 
 ## Oracle-Konto verbinden
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues Oracle-Konto für die Verbindung mit der Plattform zu erstellen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um ein neues Oracle-Konto für die Verbindung mit der Platform zu erstellen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellenarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein Inbound-Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein Inbound-Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
@@ -69,4 +69,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das Oracle-Konto, mit dem Sie
 
 ## Nächste Schritte
 
-Mit diesem Lernprogramm haben Sie eine Verbindung zu Ihrem Oracle-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/databases.md)zu übertragen.
+Mit diesem Lernprogramm haben Sie eine Verbindung zu Ihrem Oracle-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in die Platform](../../dataflow/databases.md)zu bringen.
