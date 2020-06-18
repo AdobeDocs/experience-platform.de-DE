@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Apache Spark auf dem Azurblauen HDInsights-Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) Apache Spark auf dem Azurblauen HDInsights-Connector
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+>[!NOTE]
+>Der Apache Spark auf der Azurblauen HDInsights Stecker ist in der Beta. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
-Experience Platform unterstützt das Erfassen von Daten aus einer Datenbank eines Drittanbieters. Die Plattform kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relational, NoSQL oder Data Warehouse herstellen. Die Unterstützung für Datenbankanbieter beinhaltet Apache Spark auf Azurblauen HDInsights.
+Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platformen zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie Apache Spark auf Blue HDInsights mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann:
+Experience Platform unterstützt das Erfassen von Daten aus einer Drittanbieterdatenbank. Platform kann eine Verbindung zu verschiedenen Datenbanktypen wie relationaler Datenbank, NoSQL oder data warehouse herstellen. Die Unterstützung für Datenbankanbieter beinhaltet Apache Spark auf Azurblauen HDInsights.
 
-## Verbinden von Apache Spark mit Azurblauen HDInsights mithilfe von APIs
+Die nachstehende Dokumentation enthält Informationen dazu, wie Sie Apache Spark auf Blue HDInsights mithilfe von APIs oder der Benutzeroberfläche mit der Platform verbinden:
+
+## Verbinden von Apache Spark mit Azurblauen HDInsights mit der Platform mithilfe von APIs
 
 - [Erstellen Sie einen Apache Spark auf einem Blue HDInsights-Connector mithilfe der Flow Service API](../../tutorials/api/create/databases/spark.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Apache Spark über die Benutzeroberfläche mit Azurblaus HDInsights mit Platform verbinden
+## Verbinden Sie Apache Spark mit der Platform über die Benutzeroberfläche
 
 - [Erstellen Sie einen Apache Spark auf einem Azurblauen HDInsights-Quellanschluss in der Benutzeroberfläche](../../tutorials/ui/create/databases/spark.md)
 - [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
