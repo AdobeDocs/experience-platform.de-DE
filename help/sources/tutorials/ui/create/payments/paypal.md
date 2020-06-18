@@ -4,9 +4,9 @@ solution: Experience Platform
 title: PayPal-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '492'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 # PayPal-Quellanschluss in der Benutzeroberfläche erstellen
 
 > [!NOTE]
-> Der PayPal-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
+> Der PayPal-Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines PayPal-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden die Schritte zum Erstellen eines PayPal-Quell-Connectors mithilfe der Benutzeroberfläche &quot;Platform&quot;beschrieben.
 
 ## Erste Schritte
 
@@ -32,7 +32,7 @@ Wenn Sie bereits über eine PayPal-Basisverbindung verfügen, können Sie den Re
 
 ### Erforderliche Berechtigungen erfassen
 
-Um auf Ihre PayPal-Kontoplattform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihre PayPal-Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -44,9 +44,9 @@ Weitere Informationen zu den ersten Schritten finden Sie in diesem [PayPal-Dokum
 
 ## Verbinden Sie Ihr PayPal-Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, um Ihr PayPal-Konto mit der Plattform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, um Ihr PayPal-Konto mit der Platform zu verknüpfen.
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den *Quellenarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den *Quellarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
 
 Wählen Sie unter der *CRM* -Kategorie **PayPal** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Basisverbindung zu erstellen, wählen Sie &quot; **Connect source**&quot;aus.
 
@@ -68,4 +68,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das PayPal-Konto, mit dem Sie
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem PayPal-Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um CRM-Daten in die Plattform](../../dataflow/payments.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem PayPal-Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um CRM-Daten in die Platform](../../dataflow/payments.md)zu bringen.
