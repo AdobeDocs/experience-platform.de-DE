@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst (Benutzeroberfläche)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,11 @@ ht-degree: 0%
 
 # Veröffentlichen eines Modells als Dienst (Benutzeroberfläche)
 
-Mit dem Data Science Workspace der Adobe Experience Platform können Sie Ihr geschultes und ausgewertetes Modell als Service veröffentlichen, sodass Benutzer innerhalb Ihrer IMS-Organisation Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
-
-Dieses Lernprogramm führt Sie durch die Schritte, um ein Modell als Dienst zu veröffentlichen und Daten mithilfe eines Dienstes in der *Service Gallery* zu bewerten. Er ist in die folgenden Hauptabschnitte unterteilt:
-
-- [Veröffentlichen eines Modells](#publish-a-model)
-- [Ergebnis mit einem Dienst](#access-a-service)
+Adobe Experience Platform Data Science Workspace ermöglicht es Ihnen, Ihr geschultes und ausgewertetes Modell als Service zu veröffentlichen, sodass Benutzer innerhalb Ihres IMS-Unternehmens Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 
 ## Erste Schritte
 
-Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf die Erlebnisplattform haben. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in haben, wenden Sie sich an Ihren Systemadministrator, [!DNL Experience Platform]bevor Sie fortfahren.
 
 Dieses Lernprogramm erfordert ein vorhandenes Modell mit einem erfolgreichen Schulungslauf. Wenn Sie über kein publizierbares Modell verfügen, führen Sie den [Zug aus und bewerten Sie ein Modell im UI](./train-evaluate-model-ui.md) -Lernprogramm, bevor Sie fortfahren.
 
