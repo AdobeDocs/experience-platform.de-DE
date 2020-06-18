@@ -4,9 +4,9 @@ solution: Experience Platform
 title: PayPal-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) PayPal-Connector
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+>[!NOTE]
+>Der PayPal-Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
-Experience Platform unterstützt die Erfassung von Daten aus einer Drittanbieter-Zahlungsanwendung. Die Unterstützung für Zahlungsdienstleister beinhaltet PayPal.
+Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platformen zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
 
-In der folgenden Dokumentation finden Sie Informationen dazu, wie PayPal mithilfe von APIs oder der Benutzeroberfläche mit Plattform verbunden werden kann:
+Experience Platform unterstützt die Erfassung von Daten aus einem Drittanbieter-Zahlungsantrag. Die Unterstützung für Zahlungsdienstleister beinhaltet PayPal.
 
-## Verbinden von PayPal mit Plattform mithilfe von APIs
+Die nachstehende Dokumentation enthält Informationen zum Verbinden von PayPal mit der Platform mithilfe von APIs oder der Benutzeroberfläche:
+
+## Verbinden von PayPal mit Platform mithilfe von APIs
 
 - [Erstellen eines PayPal-Connectors mit der Flow Service API](../../tutorials/api/create/payments/paypal.md)
 - [Durchsuchen einer Zahlungsanwendung mit der Flow Service API](../../tutorials/api/explore/payments.md)
 - [Erfassen von Daten aus einer Zahlungsanwendung mithilfe der Flow Service API](../../tutorials/api/collect/payments.md)
 
-## Verbinden von PayPal mit Plattform mithilfe der Benutzeroberfläche
+## Verbinden von PayPal mit der Platform mithilfe der Benutzeroberfläche
 
 - [PayPal-Quellanschluss in der Benutzeroberfläche erstellen](../../tutorials/ui/create/payments/paypal.md)
 - [Konfigurieren eines Datenflusses für einen Zahlungsanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/payments.md)
