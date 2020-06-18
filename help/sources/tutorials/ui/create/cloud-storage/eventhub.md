@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Ereignis-Hubs-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '476'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 # Erstellen eines Azurblauen Ereignis-Hubs-Quellconnectors in der Benutzeroberfläche
 
 >[!NOTE]
-> Der Azurblauer Ereignis Hubs Stecker ist in Beta. Die Funktionen und Dokumentation können sich ändern.
+> Der Azurblauer Ereignis Hubs Stecker ist in Beta. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Authentifizieren eines Azurblauen Ereignis-Hubs (im Folgenden &quot;Ereignis Hubs&quot; genannt) mithilfe der Plattform-Benutzeroberfläche beschrieben.
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Authentifizieren eines Azurblauen Ereignis-Hubs (im Folgenden &quot;Ereignis-Hubs&quot; genannt) mithilfe der Benutzeroberfläche der Platform beschrieben.
 
 ## Erste Schritte
 
@@ -44,9 +44,9 @@ Weitere Informationen zu diesen Werten finden Sie in [diesem Ereignis-Hubs-Dokum
 
 ## Verbinden Sie Ihr Ereignis-Hubs-Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr Ereignis-Hubs-Konto mit der Plattform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr Ereignis-Hubs-Konto mit der Platform zu verknüpfen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den *Quellenarbeitsbereich* zuzugreifen. Auf der Registerkarte &quot; *Katalog* &quot;werden verschiedene Quellen angezeigt, für die eine Verbindung zur Plattform möglich ist. Jede Quelle zeigt die Anzahl der vorhandenen Konten, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den *Quellarbeitsbereich* zuzugreifen. Auf der Registerkarte &quot; *Katalog* &quot;werden eine Reihe von Quellen angezeigt, für die eine Verbindung zur Platform möglich ist. Jede Quelle zeigt die Anzahl der vorhandenen Konten, die ihnen zugeordnet sind.
 
 Wählen Sie unter der Kategorie *Cloud-Datenspeicherung* die Option **Azurblauer Ereignis-Hubs** und klicken Sie **auf das Pluszeichen (+)** , um einen neuen Ereignis-Hubs-Connector zu erstellen.
 
@@ -68,4 +68,4 @@ Um ein bestehendes Konto zu verknüpfen, wählen Sie das Ereignis-Hubs-Konto, mi
 
 ## Nächste Schritte
 
-Indem Sie diesem Tutorial folgen, haben Sie Ihr Ereignis-Hubs-Konto mit Platform verbunden. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/streaming/cloud-storage.md)zu übertragen.
+Indem Sie diesem Tutorial folgen, haben Sie Ihr Ereignis-Hubs-Konto mit der Platform verbunden. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in die Platform](../../dataflow/streaming/cloud-storage.md)zu bringen.
