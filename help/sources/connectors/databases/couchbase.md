@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Steckverbinder
 topic: overview
 translation-type: tm+mt
-source-git-commit: d56ebfe4b72fd305120f73a32a915b3dce9046c0
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,14 @@ ht-degree: 0%
 
 # (Beta) Couchbase-Anschluss
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie Microsoft, MySQL und Azurblase, sodass Sie Ihre Daten von diesen Systemen übertragen können. Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter beinhaltet auch Couchbase.
+>[!NOTE]
+>Der Couchbase-Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen Couchbase und Plattform herstellen:
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie Microsoft, MySQL und Azurblau, sodass Sie Ihre Daten von diesen Systemen mitbringen können. Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL oder data warehouse. Unterstützung für Datenbankanbieter beinhaltet auch Couchbase.
 
-## Verbinden von Couchbase mit Plattform mithilfe von APIs
+Die nachstehende Dokumentation enthält Informationen zum Verbinden von Couchbase mit der Platform mithilfe von APIs oder der Benutzeroberfläche:
+
+## Verbinden von Couchbase mit Platform mithilfe von APIs
 
 - [Erstellen eines Couchbase-Connectors mit der Flow Service API](../../tutorials/api/create/databases/couchbase.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
