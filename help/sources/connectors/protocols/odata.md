@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Generischer OData Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) Allgemeiner OData-Connector
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+>[!NOTE]
+>Der Generic OData Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
+
+Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platformen zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
 
 Experience Platform unterstützt das Erfassen von Daten aus einer Protokollanwendung eines Drittanbieters. Zu den Protokollanbietern zählen generische OData.
 
-In der folgenden Dokumentation finden Sie Informationen dazu, wie generische OData mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbunden werden können:
+Die nachstehende Dokumentation enthält Informationen dazu, wie generische OData mit APIs oder der Benutzeroberfläche mit der Platform verbunden werden können:
 
-## Generische OData mit APIs an die Plattform anschließen
+## Generische OData mit APIs an die Platform anschließen
 
 - [Erstellen eines generischen OData-Connectors mithilfe der Flow Service API](../../tutorials/api/create/protocols/odata.md)
 - [Protokollanwendung mit der Flow Service API](../../tutorials/api/explore/protocols.md)
 - [Erfassen von Daten aus einer Protokollanwendung mithilfe der Flow Service API](../../tutorials/api/collect/protocols.md)
 
-## Verbinden von generischen OData mit der Plattform mithilfe der Benutzeroberfläche
+## Generische OData über die Benutzeroberfläche mit der Platform verbinden
 
 - [Erstellen eines generischen OData-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/protocols/odata.md)
 - [Konfigurieren eines Datenflusses für einen Protokollanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/protocols.md)
