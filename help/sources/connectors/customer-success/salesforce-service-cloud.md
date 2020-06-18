@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Salesforce Service Cloud Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) Salesforce Service Cloud Connector
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+>[!NOTE]
+>Der Salesforce Service Cloud Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
+
+Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platformen zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
 
 Experience Platform unterstützt die Erfassung von Daten aus einem Drittanbieter-Kundenerfolgssystem. Die Unterstützung von Anbietern von Kundenerfolgen umfasst die Salesforce Service Cloud.
 
-In der folgenden Dokumentation finden Sie Informationen dazu, wie Salesforce Service Cloud mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbunden werden kann:
+Die nachstehende Dokumentation enthält Informationen dazu, wie Salesforce Service Cloud mit der Platform mithilfe von APIs oder der Benutzeroberfläche verbunden werden kann:
 
-## Verbindung von Salesforce Service Cloud mit Plattform mithilfe von APIs
+## Verbindung von Salesforce Service Cloud mit Platform mithilfe von APIs
 
 - [Erstellen eines Salesforce Service Cloud-Connectors mit der Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
 - [Erkunden Sie ein Kundenerfolgssystem mit der Flow Service API](../../tutorials/api/explore/customer-success.md)
 - [Erfassen von Daten aus einem Kundenerfolgssystem mithilfe der Flow Service API](../../tutorials/api/collect/customer-success.md)
 
-## Verbindung von Salesforce Service Cloud mit der Plattform über die Benutzeroberfläche
+## Salesforce Service Cloud mit der Platform über die Benutzeroberfläche verbinden
 
 - [Erstellen eines Salesforce Service Cloud-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
 - [Konfigurieren des Datenflusses für einen Kunden-Erfolgsstecker in der Benutzeroberfläche](../../tutorials/ui/dataflow/customer-success.md)
