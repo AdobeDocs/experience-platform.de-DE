@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Google AdWords-Quell-Connectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: e7211c9ebfd8fecff3780198d71e18436f3ffab3
+source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,10 @@ ht-degree: 0%
 
 # Erstellen eines Google AdWords-Quell-Connectors in der Benutzeroberfläche
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines Google AdWords-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche.
+>[!NOTE]
+>Der Google AdWords Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Google AdWords-Quell-Connectors mithilfe der Benutzeroberfläche &quot;Platform&quot;beschrieben.
 
 ## Erste Schritte
 
@@ -29,7 +32,7 @@ Wenn Sie bereits über eine Google AdWords-Verbindung verfügen, können Sie den
 
 ### Erforderliche Berechtigungen erfassen
 
-Um auf Ihre Google AdWords-Kontoplattform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihre Google AdWords-Konto-Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -43,9 +46,9 @@ Weitere Informationen zu den ersten Schritten finden Sie in diesem [Google AdWor
 
 ## Google AdWords-Konto verbinden
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, um Ihr Google AdWords-Konto mit der Plattform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, um Ihr Google AdWords-Konto mit der Platform zu verknüpfen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den *Quellenarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den *Quellarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
 
 Wählen Sie unter der Kategorie *Werbung* die Option **Google AdWords** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Basisverbindung zu erstellen, wählen Sie &quot; **Connect source**&quot;aus.
 
@@ -67,4 +70,4 @@ Um ein bestehendes Konto zu verbinden, wählen Sie das Google AdWords-Konto, mit
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem Google AdWords-Konto aufgebaut. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datenbogen [konfigurieren, um Werbedaten in Plattform](../../dataflow/advertising.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem Google AdWords-Konto aufgebaut. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Anzeigendaten in die Platform](../../dataflow/advertising.md)zu bringen.
