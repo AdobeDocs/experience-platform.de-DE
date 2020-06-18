@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines ServiceNow-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 # Erstellen eines ServiceNow-Quellconnectors in der Benutzeroberfläche
 
 >[!NOTE]
->Der ServiceNow-Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
+>Der ServiceNow-Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines ServiceNow-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden die Schritte zum Erstellen eines ServiceNow-Quell-Connectors mithilfe der Benutzeroberfläche &quot;Platform&quot;beschrieben.
 
 ## Erste Schritte
 
@@ -32,7 +32,7 @@ Wenn Sie bereits über eine ServiceNow-Verbindung verfügen, können Sie den Res
 
 ### Erforderliche Berechtigungen erfassen
 
-Um auf Ihr ServiceNow-Konto auf Plattform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihr ServiceNow-Konto bei Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -44,9 +44,9 @@ Weitere Informationen zum Einstieg finden Sie in [diesem ServiceNow-Dokument](ht
 
 ## ServiceNow-Konto verbinden
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues ServiceNow-Konto für die Verbindung mit der Plattform zu erstellen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um ein neues ServiceNow-Konto für die Verbindung mit der Platform zu erstellen.
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den *Quellenarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
+Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den *Quellarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
@@ -70,4 +70,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das ServiceNow-Konto, mit dem
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem ServiceNow-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/customer-success.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem ServiceNow-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in die Platform](../../dataflow/customer-success.md)zu bringen.
