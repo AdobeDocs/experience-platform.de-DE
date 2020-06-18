@@ -4,24 +4,17 @@ solution: Experience Platform
 title: Optimieren eines Modells
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
 
 
-# Optimieren eines Modells
+# Optimieren eines Modells mithilfe des Model Insights-Frameworks
 
-
-Dieses Tutorial umfasst:
-
-- Konfigurieren von Rezept-Code
-- Definieren benutzerdefinierter Metriken
-- Verwenden von vordefinierten Evaluierungsmetriken und Visualisierungsdiagrammen
-
-Am Ende dieses Lernprogramms sollten Sie Rezept-Code konfigurieren, benutzerdefinierte Metriken definieren, vordefinierte Evaluierungsmetriken und standardmäßige Visualisierungsdiagramme verwenden können.
+Das Model Insights Framework bietet den Datenwissenschaftlern Werkzeuge im Data Science Workspace, um auf der Grundlage von Experimenten schnell und fundierte Entscheidungen für optimale Modelle des maschinellen Lernens zu treffen. Der Rahmen wird die Geschwindigkeit und Effektivität des Arbeitsablaufs für maschinelles Lernen verbessern und die Benutzerfreundlichkeit von Datenwissenschaftlern verbessern. Dies geschieht durch Bereitstellung einer Standardvorlage für jeden maschinellen Lernalgorithmustyp, um die Modellverfeinerung zu unterstützen. Das Endergebnis ermöglicht es Datenwissenschaftlern und Bürgerdatenwissenschaftlern, bessere Modelloptimierungsentscheidungen für ihre Endkunden zu treffen.
 
 ## Was sind Metriken?
 
@@ -30,10 +23,6 @@ Nach der Implementierung und Schulung eines Modells würde ein Datenwissenschaft
 - Fläche unter Kurve
 - Verwechslungsmatrix
 - Klassifizierungsbericht
-
-## Was ist das Model Insight Framework?
-
-Das Model Insights Framework bietet den Datenwissenschaftlern Werkzeuge im Data Science Workspace, um auf der Grundlage von Experimenten schnell und fundierte Entscheidungen für optimale Modelle des maschinellen Lernens zu treffen. Der Rahmen wird die Geschwindigkeit und Effektivität des Arbeitsablaufs für maschinelles Lernen verbessern und die Benutzerfreundlichkeit von Datenwissenschaftlern verbessern. Dies geschieht durch Bereitstellung einer Standardvorlage für jeden maschinellen Lernalgorithmustyp, um die Modellverfeinerung zu unterstützen. Das Endergebnis ermöglicht es Datenwissenschaftlern und Bürgerdatenwissenschaftlern, bessere Modelloptimierungsentscheidungen für ihre Endkunden zu treffen.
 
 ## Konfigurieren des Rezeptcodes
 
