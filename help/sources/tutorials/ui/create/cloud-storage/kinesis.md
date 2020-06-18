@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Amazon Kinesis-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '454'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 # Erstellen eines Amazon Kinesis-Quellconnectors in der Benutzeroberfläche
 
 >[!NOTE]
-> Der Amazon Kinesis Connector befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern.
+>Der Amazon Kinesis Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Authentifizieren eines Amazon Kinesis-Quellconnectors (im Folgenden &quot;Kinesis&quot;) mithilfe der Plattform-Benutzeroberfläche.
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Authentifizieren eines Amazon Kinesis-Quellconnectors (im Folgenden &quot;Kinesis&quot;) mithilfe der Benutzeroberfläche der Platform beschrieben.
 
 ## Erste Schritte
 
@@ -44,9 +44,9 @@ Weitere Informationen zu diesen Werten finden Sie in [diesem Kinesis Dokument](h
 
 ## Verbinden Sie Ihr Kinesis-Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr Kinesis-Konto mit der Plattform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr Kinesis-Konto mit der Platform zu verknüpfen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den *Quellenarbeitsbereich* zuzugreifen. Auf der Registerkarte &quot; *Katalog* &quot;werden verschiedene Quellen angezeigt, für die eine Verbindung zur Plattform möglich ist. Jede Quelle zeigt die Anzahl der vorhandenen Konten, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den *Quellarbeitsbereich* zuzugreifen. Auf der Registerkarte &quot; *Katalog* &quot;werden eine Reihe von Quellen angezeigt, für die eine Verbindung zur Platform möglich ist. Jede Quelle zeigt die Anzahl der vorhandenen Konten, die ihnen zugeordnet sind.
 
 Wählen Sie unter der Kategorie *Cloud-Datenspeicherung* die Option **Amazon-Kinesis** und klicken Sie **auf das Pluszeichen (+)** , um einen neuen Kinesis-Connector zu erstellen.
 
@@ -68,4 +68,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das Kinesis-Konto, mit dem Si
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Lernprogramms haben Sie eine Verbindung zu Ihrem Kinesis-Konto mit Platform hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/streaming/cloud-storage.md)zu übertragen.
+Indem Sie diesem Tutorial folgen, haben Sie eine Verbindung zu Ihrem Kinesis-Konto zur Platform hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in die Platform](../../dataflow/streaming/cloud-storage.md)zu bringen.
