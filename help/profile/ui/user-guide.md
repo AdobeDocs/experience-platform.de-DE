@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Handbuch zum Echtzeit-Profil
 topic: guide
 translation-type: tm+mt
-source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
+source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1208'
 ht-degree: 2%
 
 ---
@@ -32,19 +32,21 @@ Klicken Sie in der Benutzeroberfläche [der](http://platform.adobe.com)Experienc
 
 ![](../images/user-guide/profiles-overview.png)
 
-## Durchsuchen von Profilen
+## Durchsuchen
 
-Klicken Sie auf die Registerkarte &quot; **Durchsuchen** &quot;, um Profile nach Identität zu durchsuchen.
+Wählen Sie die Registerkarte &quot; *Durchsuchen* &quot;aus, um nach Profilen anhand ihrer Identität zu suchen.
+
+![](../images/user-guide/profiles-browse.png)
 
 ### Profil-Metriken {#profile-metrics}
 
-Auf der rechten Seite der Registerkarte &quot; **Durchsuchen** &quot;finden Sie eine Reihe wichtiger Profil-Metriken zu Ihren Profil-Daten, einschließlich der Gesamtzahl der [Profil](#profile-count) sowie einer Auflistung der [Profil nach Namensraum](#profiles-by-namespace).
+Auf der rechten Seite der Registerkarte &quot; *Durchsuchen* &quot;finden Sie eine Reihe wichtiger Metriken zu Ihren Profil-Daten, darunter die Gesamtzahl der [Profil](#profile-count) sowie eine Auflistung der [Profil nach Namensraum](#profiles-by-namespace).
 
 Diese Profil-Metriken werden mit der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens ausgewertet. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien, einschließlich der Definition einer standardmäßigen Zusammenführungsrichtlinie, finden Sie im [Benutzerhandbuch](merge-policies.md)&quot;Richtlinien zusammenführen&quot;.
 
 Zusätzlich zu diesen Metriken bietet der Bereich &quot;Profil-Metriken&quot;auch das Datum und die Uhrzeit der *letzten Aktualisierung* , die anzeigen, wann die Metriken zuletzt ausgewertet wurden.
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### Anzahl der Profil {#profile-count}
 
@@ -92,13 +94,13 @@ Nach Auswahl der **Profil-ID** wird die Registerkarte &quot; _Details_ &quot;ge�
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Sie können zusätzliche Informationen zum Profil, einschließlich Attribute, Ereignis und Segmente, zu denen das Profil gehört, Ansicht leisten.
+Sie können zusätzliche Informationen zum Profil, einschließlich *Attribute*, *Ereignis* und *Segmente* , zu denen das Profil gehört, Ansicht leisten.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Zusammenführungsrichtlinien
 
-Klicken Sie auf Richtlinien **zusammenführen** , um eine Liste der zu Ihrem Unternehmen gehörenden Zusammenführungsrichtlinien Ansicht. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, und das Schema, für das sie gilt.
+Wählen Sie die Registerkarte &quot;Richtlinien ** zusammenführen&quot;, um eine Liste der zu Ihrem Unternehmen gehörenden ZusammenführungsrichtlinienAnsicht. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, und das Schema, für das sie gilt.
 
 For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
 
@@ -106,7 +108,7 @@ For more information on merge policies, see the [Merge Policies user guide](merg
 
 ## Vereinigung Schema
 
-Klicken Sie auf **Vereinigung Schema** , um die Schema der Vereinigung für Ihren Profil Store Ansicht. Ein Vereinigung-Schema ist eine Zusammenführung aller Erlebnis-Datenmodellfelder (XDM) derselben Klasse, deren Schema für die Verwendung im Echtzeit-Customer-Profil aktiviert wurden. Klicken Sie auf eine Klasse in der linken Liste, um die Struktur des Schemas &quot;Vereinigung&quot;auf der Arbeitsfläche Ansicht.
+Wählen Sie die Registerkarte &quot;Schema *der* Vereinigung&quot;aus, um die Schema der Vereinigung für Ihren Profil Store Ansicht. Ein Vereinigung-Schema ist eine Zusammenführung aller Erlebnis-Datenmodellfelder (XDM) derselben Klasse, deren Schema für die Verwendung im Echtzeit-Customer-Profil aktiviert wurden. Wählen Sie in der linken Liste eine Klasse aus, um die Struktur des Schemas &quot;Vereinigung&quot;auf der Arbeitsfläche Ansicht.
 
 Wenn Sie beispielsweise &quot;XDM-Profil&quot;auswählen, wird das Schema &quot;Vereinigung&quot;für die XDM-Klasse für individuelles Profil angezeigt.
 
