@@ -4,10 +4,10 @@ seo-title: Arbeitsablauf für Social-Netzwerkziele
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Social-Netzwerk-Anzeigenkonten
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Social-Netzwerk-Anzeigenkonten
 translation-type: tm+mt
-source-git-commit: ab53e2efffed536e8028beabd64aee843d1eeee8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 13%
+source-wordcount: '473'
+ht-degree: 11%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 13%
 
 ## Arbeitsablauf zum Erstellen von Social-Netzwerk-Zielen
 
-In diesem Lernprogramm wird Facebook als Beispiel verwendet, aber der Arbeitsablauf in der Adobe Echtzeit-Kundendatenplattform ist für alle Social-Netzwerk-Ziele gleich, sobald dem Produkt weitere hinzugefügt werden.
+In diesem Lernprogramm wird Facebook als Beispiel verwendet, aber der Arbeitsablauf in der Adobe Echtzeit-Platform &quot;Kundendaten&quot;ist für alle Social-Netzwerkziele gleich, sobald dem Produkt weitere hinzugefügt werden.
 
 1. Blättern Sie unter **[!UICONTROL Ziele > Katalog]** zur **[!UICONTROL Social]** -Kategorie. Wählen Sie Ihr bevorzugtes Social-Netzwerk-Ziel und dann **[!UICONTROL Connect-Ziel]**.
 
@@ -34,28 +34,18 @@ In diesem Lernprogramm wird Facebook als Beispiel verwendet, aber der Arbeitsabl
 
    ![Anmeldeinformationen bestätigt](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. Geben Sie im Schritt **[!UICONTROL Einrichtung]** einen **[!UICONTROL Namen]** und eine **[!UICONTROL Beschreibung]** für die Aktivierung ein und geben Sie die **[!UICONTROL Konto-ID]** Ihres Social-Netzwerk-Anzeigenkontos ein. Wählen Sie alle Anwendungsfälle für das Marketing aus, die für dieses Ziel gelten sollen. Wählen Sie **[!UICONTROL Ziel erstellen]**, nachdem Sie die obigen Felder ausgefüllt haben.
+4. Geben Sie im Schritt **[!UICONTROL Einrichtung]** einen **[!UICONTROL Namen]** und eine **[!UICONTROL Beschreibung]** für die Aktivierung ein und geben Sie die **[!UICONTROL Konto-ID]** Ihres Social-Netzwerk-Anzeigenkontos ein. <br> In diesem Schritt können Sie auch einen beliebigen **[!UICONTROL Marketing-Anwendungsfall]** auswählen, der für dieses Ziel gelten soll. Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Echtzeit-CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Informationen zu den einzelnen von Adobe definierten Anwendungsfällen für Marketing finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](/help/data-governance/policies/overview.md#core-actions). <br> Wählen Sie **[!UICONTROL Ziel erstellen]**, nachdem Sie die obigen Felder ausgefüllt haben.
 
    >[!IMPORTANT]
    >
-   > Für Facebook-Ziele. **[!UICONTROL Die Konto-ID]** ist Ihre Facebook-Konto-ID. Sie finden diese ID im Facebook Ads Manager. Präfix der ID `act_` wie unten gezeigt:
+   > * Der Anwendungsfall *Single Identity Personalization* Marketing ist standardmäßig für Social Network-Ziele ausgewählt und kann nicht entfernt werden.
+   > * Für Facebook-Ziele. **[!UICONTROL Die Konto-ID]** ist Ihre Facebook-Konto-ID. Sie finden diese ID im Facebook Ads Manager. Präfix der ID `act_` wie unten gezeigt:
 
-   ![Verbindung zum Ziel des sozialen Netzwerks herstellen - Setup-Schritt](/help/rtcdp/destinations/assets/social-network-setup-step.png)
+
+   ![Verbindung zum Ziel des sozialen Netzwerks herstellen - Setup-Schritt](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
 
 5. Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In either case, see the next section, [Activate segments to social networks](#activate-segments), for the rest of the workflow.
 
 ## Aktivieren von Segmenten in sozialen Netzwerken {#activate-segments}
 
 For instructions on how to activate segments to social networks, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
-
-
-<!--
-
-// update IMPORTANT note in step 4 after marketing use cases are released for RTCDP
-
-    >[!IMPORTANT]
-    >
-    > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
-    > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
-
-    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
