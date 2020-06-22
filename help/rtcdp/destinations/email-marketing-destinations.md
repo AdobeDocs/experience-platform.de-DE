@@ -4,10 +4,10 @@ seo-title: E-Mail-Marketing-Ziele
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 100%
+source-wordcount: '731'
+ht-degree: 56%
 
 ---
 
@@ -26,17 +26,28 @@ Stellen Sie im Zielverbindungsfluss (wie im Abschnitt unten beschrieben) eine Ve
 
 1. Wählen Sie unter **[!UICONTROL Verbindungen > Ziele]** das E-Mail-Marketing-Ziel, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Ziel verbinden]**.
 
-   ![Mit Ziel verbinden](/help/rtcdp/destinations/assets/connect-destination-1.png)
+   ![Mit Ziel verbinden](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. Wählen Sie im Verbindungsassistenten den **[!UICONTROL Verbindungstyp]** für Ihren Speicherort aus. Sie können zwischen **Amazon S3**, **SFTP mit Passwort** und **SFTP mit SSH-Schlüssel** wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In der Auswahl **[!UICONTROL Verbindungstyp]** können Sie zwischen **Amazon S3**, **SFTP mit Kennwort**, **SFTP mit SSH-Schlüssel** wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
 
-Bei Verbindungen des Typs **S3** müssen Sie die Zugriffsschlüsselkennung und den geheimen Zugriffsschlüssel angeben.
+   For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key.
 
-Bei Verbindungen des Typs **SFTP mit Passwort** müssen Sie Domäne, Port, Benutzernamen und Kennwort angeben.
+   For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 
-Bei Verbindungen des Typs **SFTP mit SSH-Schlüssel** müssen Sie Domäne, Port, Benutzernamen und SSH-Schlüssel angeben.
+   For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
-## Schritt 2: Auswählen, welche Schemafelder in Ihren exportierten Dateien als Zielattribute verwendet werden sollen {#destination-attributes}
+3. Geben Sie im Schritt **[!UICONTROL Setup]** einen **[!UICONTROL Namen]** und eine **[!UICONTROL Beschreibung]** für Ihr neues Ziel sowie das **[!UICONTROL Dateiformat]** für die exportierten Dateien ein. <br>
+Wenn Sie im vorherigen Schritt Amazon S3 als Option für die Datenspeicherung ausgewählt haben, fügen Sie den **[!UICONTROL Behälternamen]** und den **[!UICONTROL Ordnerpfad]** in das Ziel Ihrer Cloud-Datenspeicherung ein, an dem die Dateien bereitgestellt werden sollen. Geben Sie für die Option &quot;SFTP-Datenspeicherung&quot;den **[!UICONTROL Ordnerpfad]** ein, unter dem die Dateien bereitgestellt werden sollen. <br>
+In diesem Schritt können Sie auch einen beliebigen **[!UICONTROL Marketing-Anwendungsfall]** auswählen, der für dieses Ziel gelten soll. Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Echtzeit-CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Informationen zu den einzelnen von Adobe definierten Anwendungsfällen für Marketing finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](/help/data-governance/policies/overview.md#core-actions). <br>
+   ![Email-Setup](/help/rtcdp/destinations/assets/email-setup-step.png)
+
+## Schritt 2: Wählen Sie die Segmentmitglieder aus, die in Ihre Zielexporte einbezogen werden sollen {#select-segments}
+
+On the **[!UICONTROL Select Segments]** page, select which segments to send to the destination. Weitere Informationen zu den Feldern finden Sie in den folgenden Abschnitten.
+
+![Segmente auswählen](/help/rtcdp/destinations/assets/email-select-segments.png)
+
+## Schritt 3: Auswählen, welche Schemafelder in Ihren exportierten Dateien als Zielattribute verwendet werden sollen {#destination-attributes}
 
 In diesem Schritt wählen Sie die Felder aus, die an E-Mail-Marketing-Ziele exportiert werden sollen.
 
@@ -44,7 +55,7 @@ In diesem Schritt wählen Sie die Felder aus, die an E-Mail-Marketing-Ziele expo
 
 ### Identität {#identity}
 
-Es wird empfohlen, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Das ist das Feld, aus dem die Identitäten Ihrer Benutzer übernommen werden. In der Regel besteht das Feld aus der E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle sehen Sie die gängigsten eindeutigen Kennungen und deren XDM-Feld im einheitlichen Schema.
+Es wird empfohlen, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Das ist das Feld, aus dem die Identitäten Ihrer Benutzer übernommen werden. In der Regel besteht das Feld aus der E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle finden Sie die gängigsten eindeutigen Bezeichner und deren XDM-Feld im Schema Vereinigung.
 
 | Eindeutige Kennung | XDM-Feld im einheitlichen Schema |
 ---------|----------
