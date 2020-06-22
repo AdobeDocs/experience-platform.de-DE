@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Unterstützte Beschriftungen für die Datenverwendung
 topic: labels
 translation-type: tm+mt
-source-git-commit: 5aa0325a051d9e6e6dd65234db27ab251cfb2d9e
+source-git-commit: 2f8da8688897476f89ca1b176e0c988d6e79264b
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1882'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 2%
 
 # Unterstützte Beschriftungen für die Datenverwendung
 
-Die Adobe Experience Platform umfasst eine Infrastruktur für die Datenverwaltung mit der Datenausnutzung-Kennzeichnung und -Durchsetzung (DULE).  Mit den Funktionen DULE können Datenverwendungsbeschriftungen auf Datensätze und Felder angewendet werden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren.
+Die Adobe Experience Platform umfasst eine Infrastruktur für die Datenverwaltung mit der Datenverwendungskennzeichnung und -durchsetzung (DULE).  Mit den Funktionen DULE können Datenverwendungsbeschriftungen auf Datensätze und Felder angewendet werden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren.
 
-In der folgenden Liste werden alle Datenverwendungsbeschriftungen beschrieben, die derzeit von Experience Platform unterstützt werden.
-
-Weitere Informationen zu Datenverwaltung und DUL finden Sie in der Übersicht über die [Datenverwaltung](../home.md).
+In diesem Dokument werden alle derzeit von der Experience Platform unterstützten Beschriftungen zur Datenverwendung beschrieben. Weitere Informationen zu Datenverwaltung und DUL finden Sie in der Übersicht über die [Datenverwaltung](../home.md).
 
 ## Vertragsbezeichnungen
 
@@ -35,8 +33,9 @@ Die &quot;C&quot;-Beschriftungen des Vertrags werden zur Kategorisierung von Dat
 | **C7** | Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden. [Weitere Infos...](#c7) |
 | **C8** | Daten können nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden. [Weitere Infos...](#c8) |
 | **C9** | Daten können nicht in Data Science Workflows verwendet werden. [Weitere Infos...](#c9) |
+| **C10** | Daten können nicht für die Aktivierung einer gehefteten Identität verwendet werden. [Weitere Infos...](#c10) |
 
-## Identitätsbezeichnungen
+## Beschriftungen
 
 Identitäts-&quot;I&quot;-Beschriftungen werden zur Kategorisierung von Daten verwendet, die eine bestimmte Person identifizieren oder kontaktieren können.
 
@@ -56,28 +55,31 @@ Eine Art von Daten, die Sie als sensibel betrachten, kann verschiedene Arten geo
 | **S1** | Daten zur Angabe von Breiten- und Längengrad, die zur Bestimmung der genauen Position eines Geräts verwendet werden können. |
 | **S2** | Daten, die zur Bestimmung eines allgemein definierten Geofence-Bereichs verwendet werden können. |
 
+## Anhang
 
-## Weitere Informationen
+Die folgenden Abschnitte enthalten weitere Informationen zu den verfügbaren Datenverwendungsbeschriftungen.
 
-Im folgenden Abschnitt finden Sie detaillierte Informationen zur Implementierung spezifischer Etiketten.
+### Angaben zum Vertragszeichen
 
-### C1 {#c1}
+Die folgenden Abschnitte enthalten detaillierte Informationen zur Einführung spezifischer &quot;C&quot;-Kennzeichnungen.
+
+#### C1 {#c1}
 
 Einige Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei einzelne IDs oder Geräte-IDs einbezogen werden. Zum Beispiel Daten, die aus sozialen Netzwerken stammen.
 
-### C2 {#c2}
+#### C2 {#c2}
 
 Einige Datenanbieter haben in ihren Verträgen Bedingungen, die den Export von Daten, von denen sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft eingeschränkt. Das C2-Etikett ist restriktiver als [C1](#c1), was nur Aggregation und anonyme Daten erfordert.
 
-### C3 {#c3}
+#### C3 {#c3}
 
 Einige Datenanbieter haben Vertragsbedingungen, die die Kombination oder Verwendung dieser Daten mit direkt identifizierbaren Informationen verbieten. Verträge über Daten, die aus Werbenetzwerken, Werbeservern und Drittanbietern von Daten bezogen werden, enthalten beispielsweise oft spezifische vertragliche Verbote für die Verwendung solcher Daten mit direkt identifizierbaren Daten.
 
-### C4 {#c4}
+#### C4 {#c4}
 
 C4 ist die restriktivste Bezeichnung - sie umfasst die Etiketten [C5](#c5), [C6](#c6)und [C7](#c7).
 
-### C5 {#c5}
+#### C5 {#c5}
 
 Interessensbasiertes Targeting oder Personalisierung tritt auf, wenn die folgenden drei Bedingungen erfüllt sind: Die vor Ort erfassten Daten werden (1) verwendet, um Rückschlüsse auf die Interessen der Benutzer zu ziehen, (2) in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder App (außerhalb der Site) UND (3) wird verwendet, um festzulegen, welche Inhalte oder Anzeigen auf der Grundlage dieser Schlussfolgerungen bereitgestellt werden.
 
@@ -93,7 +95,7 @@ IAB: Personalisierung. Die Erfassung und Verarbeitung von Informationen über Ih
 
 DAA: Online-verhaltensbasierte Werbung. Erfassen von Daten über das Verhalten von Webansichten auf einem bestimmten Computer oder Gerät im Zeitverlauf und über Websites, die keine Tochterunternehmen sind, zum Zweck der Verwendung solcher Daten zur Vorhersage von Benutzervorlieben oder -interessen, um auf der Grundlage von Voreinstellungen oder Interessen, die aus solchen Webansichtsverhalten abgeleitet werden, Werbung für diesen Computer oder dieses Gerät zu liefern.
 
-### C6 {#c6}
+#### C6 {#c6}
 
 Anzeigen sind Nachrichten oder Benachrichtigungen, einschließlich Text und Bilder, die auf einer Website oder App erscheinen und in erster Linie dazu dienen, den Verkauf von Waren oder Dienstleistungen zu fördern. Es liegt an Ihnen, den Zweck solcher Nachrichten oder Benachrichtigungen zu bestimmen. Anzeigen sind getrennt von Inhalten auf der Site, die unter das Etikett [C7](#c7)fallen. Daten mit einem C6-Etikett können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen. Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über die Interessen der Benutzer bei der Auswahl von Anzeigen, Prozessdaten darüber, wann und wo Werbung angezeigt wurde und ob die Benutzer Aktionen im Zusammenhang mit der Werbung ergriffen haben, z. B. das Klicken auf eine Anzeige oder einen Kauf. In der Regel würden die auf den Aktivitäten der Benutzer vor Ort beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Anzeigen vor Ort nicht als interessenbasiertes Targeting (auch Personalisierung genannt) gelten, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt würden. _[Diese Anforderungen finden Sie auf dem Etikett C5.](#c5)_
 
@@ -103,7 +105,7 @@ IAB: 3. Anzeigenauswahl, Versand, Berichte: Die Erfassung von Informationen und 
 
 DAA: Die Online-verhaltensbasierte Werbung umfasst nicht die Aktivitäten von Erstanbietern, Anzeigen-Versand oder Anzeigen-Berichte oder kontextbezogene Werbung (d. h. Werbung, die auf dem Inhalt der besuchten Webseite, dem aktuellen Besuch eines Abfrage auf einer Webseite oder einer Suchseite basiert).
 
-### C7 {#c7}
+#### C7 {#c7}
 
 Inhalt auf der Site ist Text und Bilder, die zur Information, Ausbildung oder Unterhaltung konzipiert sind und nicht zur Förderung des Verkaufs von Waren oder Dienstleistungen erstellt wurden. Es liegt an Ihnen, den Zweck des Inhalts zu bestimmen, einschließlich der Frage, ob der Inhalt als native Werbung gelten würde. Das C7-Etikett ist nicht für Onsite-Anzeigen vorgesehen, die unter das Etikett [C6](#c6)fallen. Daten mit einer C7-Bezeichnung können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte. Dazu gehören zuvor erfasste Informationen über die Interessen der Benutzer an ausgewählten Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke Aktionen im Zusammenhang mit dem Inhalt, z. B. das Klicken auf den Inhalt, durchgeführt haben. In der Regel würden die auf den Aktivitäten der Benutzer vor Ort beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Inhalten vor Ort nicht als interessenbasiertes Targeting (auch Personalisierung genannt) gelten, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt würden. _[Diese Anforderungen finden Sie auf dem Etikett C5.](#c5)_
 
@@ -113,10 +115,14 @@ IAB: 4. Inhaltsauswahl, Versand, Berichte: Die Erfassung von Informationen und d
 
 DAA: Die Online-verhaltensbasierte Werbung umfasst nicht die Aktivitäten von Erstanbietern, Anzeigen-Versand oder Anzeigen-Berichte oder kontextbezogene Werbung (d. h. Werbung, die auf dem Inhalt der Webseite basiert, die gerade besucht wird, dem aktuellen Besuch eines Abfrage auf einer Webseite oder einer Suchseite).
 
-### C8 {#c8}
+#### C8 {#c8}
 
 Daten können nicht verwendet werden, um die Nutzung der Sites oder Apps Ihres Unternehmens durch Benutzer zu messen, zu verstehen und Berichte darüber zu erstellen. Dies umfasst nicht das interessensbasierte Targeting (Cross-Site-Targeting), d. h. die Sammlung von Informationen über Ihre Nutzung dieses Dienstes, um Inhalte und/oder Werbung später für Sie in anderen Kontexten, z. B. auf anderen Diensten wie Websites oder Apps, im Laufe der Zeit zu personalisieren.
 
-### C9 {#c9}
+#### C9 {#c9}
 
 Einige Verträge beinhalten explizite Verbote der Datenverwendung für die Datenwissenschaft. Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (AI), maschinelles Lernen (ML) oder Modellierung verbieten.
+
+#### C10 {#c10}
+
+Einige Datenverwendungsrichtlinien beschränken die Verwendung von gehefteten Identitätsdaten für die Personalisierung. Die C10-Beschriftung wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option &quot;Privates Diagramm&quot;verwenden.
