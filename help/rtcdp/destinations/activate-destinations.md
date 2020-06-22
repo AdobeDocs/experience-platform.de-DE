@@ -4,10 +4,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 24e4746b28620210c138a1e803b6afadff79ab30
+source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 53%
+source-wordcount: '1019'
+ht-degree: 46%
 
 ---
 
@@ -18,7 +18,7 @@ Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vor
 
 ## Voraussetzungen {#prerequisites}
 
-Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbindung zu einem Ziel](/help/rtcdp/destinations/assets/connect-destination-1.png) hergestellt haben. Wenn Sie das noch nicht getan haben, navigieren Sie zum [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md), durchsuchen Sie die unterstützten Ziele und richten Sie ein oder mehrere Ziele ein.
+Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbindung zu einem Ziel](/help/rtcdp/destinations/connect-destination.md) hergestellt haben. Wenn Sie das noch nicht getan haben, navigieren Sie zum [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md), durchsuchen Sie die unterstützten Ziele und richten Sie ein oder mehrere Ziele ein.
 
 ## Daten aktivieren {#activate-data}
 
@@ -28,9 +28,19 @@ Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbin
 Beachten Sie, dass sich, wenn für ein Ziel bereits ein Aktivierungsfluss vorhanden ist, die Segmente anzeigen lassen, die derzeit an das Ziel gesendet werden. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
 3. Wählen Sie **[!UICONTROL Aktivieren]**.
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
-   ![Segment an Ziel](/help/rtcdp/destinations/assets/select-segments.png)
+   ![Segment an Ziel](/help/rtcdp/destinations/assets/email-select-segments.png)
 5. *Bedingt*. Dieser Schritt unterscheidet sich je nach Zieltyp, in dem Sie Ihre Segmente aktivieren. <br> Wählen Sie für *E-Mail-Marketing-Ziele* und *Cloud-Datenspeicherung-Ziele* auf der Seite &quot;Attribute **[!UICONTROL auswählen]** &quot; **[!UICONTROL Hinzufügen neues Feld]** und wählen Sie die Attribute aus, die Sie an das Ziel senden möchten.
 Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige Kennung](/help/rtcdp/destinations/email-marketing-destinations.md#identity) zu verwenden. Weiterführende Informationen zu obligatorischen Attributen finden Sie unter „Identität“ im Artikel [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
+
+   >[!NOTE]
+   > 
+   >Wenn Datenverwendungsbeschriftungen auf bestimmte Felder in einem Datensatz angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Beschriftungen auf Feldebene bei der Aktivierung unter folgenden Bedingungen:
+   >* Die Felder werden in der Segmentdefinition verwendet.
+   >* Die Felder sind als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
+
+   >
+   > Betrachten Sie den Screenshot unten. Wenn das Feld beispielsweise bestimmte Beschriftungen für die Datenverwendung enthält, die mit dem Marketing-Verwendungsfall des Ziels kollidieren, wird Ihnen im Review-Schritt (Schritt 7) eine Verletzung der Datenverwendungsrichtlinie angezeigt. `person.name.first.Name` Weitere Informationen finden Sie unter [Datenverwaltung in Echtzeit-CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations)
+
    ![Zielattribute](/help/rtcdp/destinations/assets/select-attributes-step.png)
 
    <br> 
@@ -48,7 +58,7 @@ Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige 
    ![Loyalität-ID als Identität](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Datenerfassung auf der Adobe Experience Platform entsprechend den Anforderungen [für das](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)E-Mail-Hashing in Facebook Kundenadressen mit Hashing versehen haben. <br> Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Adobe CDP in Echtzeit hash die E-Mail-Adressen, um die Facebook-Anforderungen zu erfüllen.
+   Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Datenerfassung per Hash an E-Mail-Adressen von Kunden gemäß den Anforderungen [für das Facebook-](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)E-Mail-Hashing eine Adobe Experience Platform gesendet haben. <br> Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Adobe CDP in Echtzeit hash die E-Mail-Adressen, um die Facebook-Anforderungen zu erfüllen.
 
    ![Identitätszuordnung nach dem Ausfüllen von Feldern](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -62,7 +72,17 @@ Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige 
 
 7. Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
+   >[!IMPORTANT]
+   >
+   >In diesem Schritt sucht CDP in Echtzeit nach Verstößen gegen die Datenverwendungsrichtlinie. Unten sehen Sie ein Beispiel, bei dem eine Richtlinie verletzt wird. Sie können den Segmentarbeitsablauf erst dann abschließen, wenn Sie die Aktivierung gelöst haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Richtliniendurchsetzung](/help/rtcdp/privacy/data-governance-overview.md#enforcement) im Abschnitt zur Datenverwaltung.
+
+![Auswahl bestätigen](/help/rtcdp/destinations/assets/data-policy-violation.png)
+
+Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Fertig stellen]** , um Ihre Auswahl zu bestätigen und den Beginn, der Daten an das Ziel sendet, zu bestätigen.
+
 ![Auswahl bestätigen](/help/rtcdp/destinations/assets/confirm-selection.png)
+
+
 
 ## Aktivierung bearbeiten {#edit-activation}
 
@@ -107,5 +127,3 @@ Gehen Sie wie folgt vor, um einen vorhandenen Aktivierungsfluss zu deaktivieren:
 1. Wählen Sie in der linken Navigationsleiste **[!UICONTROL Ziele]**, klicken Sie dann auf die Registerkarte **[!UICONTROL Durchsuchen]** und klicken Sie auf den Zielnamen.
 2. Klicken Sie in der rechten Leiste auf das Steuerelement **[!UICONTROL Aktiviert]**, um den Status des Aktivierungsflusses zu ändern.
 3. Wählen Sie im Fenster **Datenflussstatus aktualisieren** die Option **Bestätigen**, um den Aktivierungsfluss zu deaktivieren.
-
-Generieren Sie in AWS Kinesis einen Zugriffsschlüssel - ein Schlüssel-Paar für den geheimen Zugriff, um Adobe Echtzeit-CDP Zugriff auf Ihr AWS-Kinesis-Konto zu gewähren. Weitere Informationen finden Sie in der [AWS-Kinesis-Dokumentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
