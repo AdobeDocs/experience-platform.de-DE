@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Richtlinien
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Richtlinien
 
-Datenverwendungsrichtlinien sind Regeln, die Ihr Unternehmen anwendet und die Arten von Marketingaktionen beschreiben, von denen Sie Daten in Experience Platform nutzen dürfen oder aus denen Sie eingeschränkt sind.
+Datenverwendungsrichtlinien sind Regeln, die Ihr Unternehmen anwendet und die Arten von Marketingaktionen beschreiben, von denen Sie Daten innerhalb der Experience Platform nutzen dürfen oder aus denen Sie eingeschränkt sind.
 
 Der `/policies` Endpunkt wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Datenverwendungsrichtlinien verwendet.
 
@@ -133,7 +133,7 @@ Die Antwort enthält eine &quot;Anzahl&quot;, die die Gesamtanzahl der Richtlini
 }
 ```
 
-## Nachschlagen spezifischer Richtlinien
+## Eine Richtlinie nachschlagen
 
 Jede Richtlinie enthält ein `id` Feld, mit dem die Details einer bestimmten Richtlinie angefordert werden können. Wenn der Wert `id` einer Richtlinie unbekannt ist, können Sie sie mithilfe der Auflistungsanforderung (GET) finden, um alle Richtlinien in einem bestimmten Container (`core` oder `custom`) wie im vorherigen Schritt dargestellt Liste.
 
@@ -506,7 +506,7 @@ Bei einer erfolgreichen Updateanforderung wird ein HTTP-Status 200 (OK) zurückg
 
 ## Eine Richtlinie löschen
 
-Wenn Sie eine von Ihnen erstellte Richtlinie entfernen müssen, können Sie dazu eine DELETE-Anforderung an die Seite der Richtlinie senden, `id` die Sie löschen möchten. Es empfiehlt sich, zuerst eine GET-Anforderung (Lookup) durchzuführen, um die Richtlinie Ansicht und zu bestätigen, dass sie die richtige Richtlinie ist, die Sie entfernen möchten. **Nach dem Löschen können Richtlinien nicht wiederhergestellt werden.**
+Wenn Sie eine von Ihnen erstellte Richtlinie entfernen müssen, können Sie dazu eine DELETE-Anforderung an die Seite `id` der Richtlinie senden, die Sie löschen möchten. Es empfiehlt sich, zuerst eine GET-Anforderung (Lookup) durchzuführen, um die Richtlinie Ansicht und zu bestätigen, dass sie die richtige Richtlinie ist, die Sie entfernen möchten. **Nach dem Löschen können Richtlinien nicht wiederhergestellt werden.**
 
 **API-Format**
 
