@@ -4,10 +4,10 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 97%
+source-wordcount: '1085'
+ht-degree: 72%
 
 ---
 
@@ -30,18 +30,22 @@ Mit Data Governance können Sie Nutzungsbezeichnungen auf Ihre Daten anwenden, e
 
 Genauere Informationen zum Arbeiten mit Datennutzungsbezeichnungen finden Sie im [Benutzerhandbuch für Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) für Adobe Experience Platform.
 
-## Beschränkungen für Ziele festlegen
+## Anwendungsfälle für das Marketing für Ziele konfigurieren {#destinations}
 
-Sie können Datennutzungsbeschränkungen für ein Ziel festlegen, indem Sie Anwendungsfälle für das Marketing für dieses Ziel definieren. Wenn Sie Anwendungsfälle für Ziele definieren, können Sie prüfen, ob Verstöße gegen die Nutzungsrichtlinien vorliegen, und sicherstellen, dass alle an dieses Ziel gesendeten Profile oder Segmente mit den Data Governance-Regeln kompatibel sind.
+Sie können Datenverwendungsbeschränkungen für ein Ziel festlegen, indem Sie Anwendungsfälle für das Marketing (auch als Marketingaktionen bezeichnet) für dieses Ziel definieren. Ein Anwendungsfall für das Marketing für ein Ziel gibt den Zweck der Daten an, die an dieses Ziel exportiert werden.
 
-Anwendungsfälle für das Marketing können während der _Setup_-Phase des Workflows _Ziel bearbeiten_ definiert werden. Weitere Informationen finden Sie in der Zieldokumentation.
+>[!NOTE] Weitere Informationen zu Marketingaktionen und deren Verwendung in Datenverwendungsrichtlinien finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](../../data-governance/policies/overview.md) in der Dokumentation zur Experience Platform.
+
+Durch die Definition von Anwendungsfällen für das Marketing an Zielen können Sie sicherstellen, dass alle an diese Ziele gesendeten Profil oder Segmente mit den Datenverwendungsrichtlinien übereinstimmen. Daher sollten Sie Ihren Zielen entsprechend den Anforderungen Ihres Unternehmens, Richtlinienbeschränkungen für die Aktivierung durchzusetzen, geeignete Anwendungsfälle für das Marketing hinzufügen.
+
+Anwendungsfälle für Marketing können nur beim erstmaligen Einrichten eines Ziels ausgewählt werden. Je nach Zieltyp, mit dem Sie arbeiten, wird die Möglichkeit zur Konfiguration von Anwendungsfällen für das Marketing an verschiedenen Punkten im Setup-Arbeitsablauf angezeigt. Anweisungen zum Konfigurieren des jeweiligen Ziels finden Sie in der [Zieldokumentation](../destinations/destinations-overview.md) .
 
 
 ## Richtlinien zur Datennutzung verwalten {#policies}
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Echtzeit-Kundendatenplattform ausführen bzw. nicht ausführen dürfen. Weiterführende Informationen dazu finden Sie im Abschnitt „Datennutzungsrichtlinien“ unter [Data Governance – Übersicht](../../data-governance/home.md) für Experience Platform.
 
-Adobe Experience Platform bietet verschiedene **zentrale Richtlinien** für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können angezeigt werden, indem Sie eine Anfrage an die [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) richten, wie im Abschnitt „Alle Richtlinien auflisten“ des [Policy Service-Entwicklerhandbuchs](../../data-governance/policies/overview.md) dargestellt. Alternativ können Sie eigene **benutzerdefinierte Richtlinien** erstellen, um benutzerdefinierte Nutzungsbeschränkungen zu modellieren (wie im Abschnitt „Richtlinie erstellen“ des Entwicklerhandbuchs beschrieben).
+Adobe Experience Platform bietet verschiedene **zentrale Richtlinien** für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können in der Benutzeroberfläche angezeigt werden, indem Sie zum Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;navigieren und die Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;auswählen. Detailliertere Anweisungen zum Arbeiten mit Richtlinien in der Benutzeroberfläche finden Sie im Benutzerhandbuch zu [Richtlinien](../../data-governance/policies/user-guide.md) in der Dokumentation zur Experience Platform, einschließlich der Erstellung eigener benutzerdefinierter Richtlinien.
 
 ## (Beta) Einhaltung von Datennutzungsrichtlinien durchsetzen {#enforce-data-usage-compliance}
 
@@ -58,6 +62,11 @@ Wenn ein Segment zum ersten Mal aktiviert wird, prüft der DULE Policy Service a
 
 * Die Datennutzungsbezeichnungen, die auf Felder und Datensätze innerhalb des zu aktivierenden Segments angewendet werden.
 * Marketing-Zweck des Ziels.
+
+>[!NOTE] Wenn es Datenverwendungsbeschriftungen gibt, die nur auf bestimmte Felder innerhalb eines Datensatzes angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Beschriftungen auf Feldebene bei der Aktivierung nur unter folgenden Bedingungen:
+>* Die Felder werden in der Segmentdefinition verwendet.
+>* Die Felder sind als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
+
 
 ### Meldungen zu Richtlinienverstößen {#enforcement}
 
