@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Data Governance
+title: Datenverwaltung durch Adobe Experience Platformen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
+source-git-commit: 42d4fe7eecf1f64fab1c9554cfdc4bfeb42ffdeb
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1462'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 # Data Governance – Übersicht
 
-Eine der Kernfunktionen der Adobe Experience Platform besteht darin, Daten aus mehreren Unternehmenssystemen zusammenzuführen, damit Marketingexperten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Es ist daher wichtig sicherzustellen, dass Ihre Datenoperationen innerhalb der Plattform mit den Datenverwendungsrichtlinien konform sind.
+Eine der Kernfunktionen der Adobe Experience Platform besteht darin, Daten aus mehreren Unternehmenssystemen zusammenzuführen, um es Marketingexperten zu ermöglichen, Kunden besser zu identifizieren, zu verstehen und einzubinden. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Es ist daher wichtig sicherzustellen, dass Ihre Datenvorgänge in der Platform mit den Datenverwendungsrichtlinien konform sind.
 
-Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Es spielt eine Schlüsselrolle in der Experience Platform auf verschiedenen Ebenen, wie z.B. Katalogisierung, Datennutzungsbeschriftung, Datenverwendungsrichtlinien und Steuerung der Nutzung von Daten für Marketingaktionen.
+Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Es spielt eine Schlüsselrolle in der Experience Platform auf verschiedenen Ebenen, wie z.B. Katalogisierung, Datennutzungskennzeichnung, Datenverwendungsrichtlinien und die Steuerung der Nutzung von Daten für Marketingaktionen.
 
 ## Datenverwaltungsfunktionen
 
@@ -56,32 +56,31 @@ Das DUL-Framework umfasst drei Kernelemente: Bezeichnungen, Richtlinien und Durc
 
 Die Datenverwaltung ermöglicht es Datenführern, Nutzungsbezeichnungen auf der Dataset- und Feldebene anzuwenden, um Daten entsprechend den jeweiligen Richtlinien zu kategorisieren.
 
-Das DULE-Framework enthält vordefinierte Datenverwendungsbeschriftungen, mit denen Daten auf vier Arten kategorisiert werden können:
+Das DULE-Framework enthält vordefinierte Datenverwendungsbeschriftungen, mit denen Daten auf drei Arten kategorisiert werden können:
 
 ![Kategorien zur Bezeichnung der Datenverwendung](./images/overview/label-categories.png)
 
 * **Vertragsdatenbezeichnungen &quot;C&quot;:** Kennzeichnen und Kategorisieren von Daten, die vertragliche Verpflichtungen haben oder mit den Richtlinien zur Verwaltung von Kundendaten in Zusammenhang stehen.
 * **Identitäts-&quot;I&quot;-Datenbezeichnungen:** Kennzeichnen und Kategorisieren von Daten, die eine bestimmte Person identifizieren oder kontaktieren können.
 * **Sensible &quot;S&quot;-Datenbezeichnungen:** Beschriften und Kategorisieren von Daten, die mit sensiblen Daten wie geografischen Daten zusammenhängen.
-* **GDPR-Datenbeschriftungen:** Kennzeichnen und Kategorisieren von Daten, die persönliche IDs für den Zugriff auf GDPR und/oder Löschanforderungen enthalten können.
 
 >[!NOTE] Eine vollständige Liste der verfügbaren Beschriftungen sowie Definitionen für jeden Beschriftungstyp finden Sie im Handbuch zu den [unterstützten Datenverwendungsbezeichnungen](labels/reference.md) .
 
-Bezeichnungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practice empfiehlt die Kennzeichnung von Daten, sobald diese in die Experience Platform integriert werden oder sobald Daten in Platform verfügbar sind.
+Bezeichnungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practice empfiehlt die Kennzeichnung von Daten, sobald diese in die Experience Platform aufgenommen wurden oder sobald Daten in der Platform verfügbar sind.
 
-Eine schrittweise Anleitung zum Anwenden von Beschriftungen auf Datasets und Felder mithilfe der Benutzeroberfläche finden Sie in der Übersicht über die [Datenverwendungsbeschriftungen](./labels/overview.md) .
+Weitere Informationen finden Sie in der Übersicht über die Beschriftungen [zur](./labels/overview.md) Datenverwendung.
 
 ## Datenverwendungsrichtlinien
 
-Damit Datenverwendungsbeschriftungen die Datenkonformität effektiv unterstützen können, müssen Datenverwendungsrichtlinien implementiert werden. Datenverwendungs-Richtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, die Sie für Daten in Experience Platform ausführen dürfen oder von denen Sie eingeschränkt sind.
+Damit Datenverwendungsbeschriftungen die Datenkonformität effektiv unterstützen können, müssen Datenverwendungsrichtlinien implementiert werden. Datenverwendungsrichtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, von denen Sie Daten innerhalb der Experience Platform ausführen dürfen oder von denen Sie eingeschränkt sind.
 
 Ein Beispiel für eine Marketingaktion könnte der Wunsch sein, einen Datensatz in einen Drittanbieter-Service zu exportieren. Wenn eine Richtlinie besagt, dass bestimmte Datentypen, wie z. B. persönliche identifizierbare Informationen (PII), nicht exportiert werden können und eine &quot;I&quot;-Beschriftung (Identitätsdaten) auf den Datensatz angewendet wurde, erhalten Sie eine Antwort des Policy Service, in der Sie darauf hingewiesen werden, dass eine Datenverwendungsrichtlinie verletzt wurde.
 
-Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenmanager Richtlinien mithilfe der API für den DUL-Policy-Dienst oder der Experience Platform-Benutzeroberfläche erstellen.
+Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenmanager Richtlinien mithilfe der API für den DUL-Policy-Dienst oder der Benutzeroberfläche für die Experience Platform erstellen.
 
-Weitere Informationen zum Ausführen der von der DUL Policy Service API bereitgestellten wichtigen Vorgänge finden Sie im Entwicklerhandbuch für den [Policy Service](api/getting-started.md). Eine schrittweise Anleitung zum Arbeiten mit DULE-Richtlinien finden Sie im Lernprogramm zum [Erstellen und Auswerten von DUL-Richtlinien mithilfe der API](policies/create.md).
+>[!IMPORTANT] Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren.
 
-Informationen zum Verwalten von Richtlinien in der Benutzeroberfläche der Experience Platform finden Sie im [Richtlinien-Benutzerhandbuch](policies/user-guide.md).
+Weitere Informationen zu Datenverwendungsrichtlinien und Marketingaktionen finden Sie in der [Richtlinienübersicht](./policies/overview.md).
 
 ## Zukünftige Versionen
 
@@ -109,7 +108,7 @@ In der folgenden Tabelle sind die Schlüsselbegriffe im Zusammenhang mit der Dat
 |---|---|
 | **Vertragsbezeichnungen** | Die &quot;C&quot;-Beschriftungen des Vertrags werden zur Kategorisierung von Daten verwendet, die vertragliche Verpflichtungen haben oder mit den Datenschutzrichtlinien Ihres Unternehmens in Zusammenhang stehen. |
 | **Site-übergreifende Daten** | Site-übergreifende Daten sind die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort-Daten und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen. |
-| **Datenverwaltung** | Die Datenverwaltung umfasst die Strategien und Technologien, mit denen sichergestellt werden soll, dass die Daten in Übereinstimmung mit den Vorschriften und Unternehmensrichtlinien zur Datenverwendung stehen. |
+| **Datenverwaltung** | Die Datenverwaltung umfasst die Strategien und Technologien, mit denen sichergestellt wird, dass die Daten in Übereinstimmung mit den Vorschriften und der Unternehmenspolitik in Bezug auf die Datenverwendung stehen. |
 | **Datenstatus** | Der Datenverwalter ist die Person, die für die Verwaltung, Überwachung und Durchsetzung der Datenbestände einer Organisation verantwortlich ist. Ein Datenmanager stellt außerdem sicher, dass die Datenschutzrichtlinien geschützt und so aufrechterhalten werden, dass sie mit den Regierungs- und Organisationspolitiken im Einklang stehen. |
 | **Datenverwendungsbeschriftungen** | Datenverwendungsbeschriftungen bieten Benutzern die Möglichkeit, Daten zu kategorisieren, die datenschutzbezogene Erwägungen und Vertragsbedingungen widerspiegeln, damit sie mit Vorschriften und Unternehmensrichtlinien übereinstimmen. |
 | **Datenbeschriftungen** | Bezeichnungen können einem Datensatz hinzugefügt werden. Alle Felder in einem Datensatz übernehmen die Beschriftungen des Datensatzes. |
@@ -118,7 +117,7 @@ In der folgenden Tabelle sind die Schlüsselbegriffe im Zusammenhang mit der Dat
 | **Geofence** | Eine Geofence ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und die Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet betritt oder verlässt. |
 | **Beschriftungen** | Identitäts-&quot;I&quot;-Beschriftungen werden zur Kategorisierung von Daten verwendet, die eine bestimmte Person identifizieren oder kontaktieren können. |
 | **Interessensbasiertes Targeting** | Interessensbasiertes Targeting, auch Personalisierung genannt, tritt auf, wenn die folgenden drei Bedingungen erfüllt sind: Daten, die vor Ort gesammelt werden, werden verwendet, um Rückschlüsse auf das Interesse eines Benutzers zu ziehen, werden in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder App (außerhalb der Site), und werden verwendet, um festzulegen, welche Inhalte oder Anzeigen auf der Grundlage dieser Schlussfolgerungen bereitgestellt werden. |
-| **Marketingaktion** | Eine Marketingaktion im Kontext des Data Governance-Rahmens ist eine Aktion, die ein Datennutzer von Experience Platform durchführt und bei der überprüft werden muss, ob gegen die Datenverwendungsrichtlinien verstoßen wurde |
+| **Marketingaktion** | Eine Marketingaktion im Rahmen des Data Governance-Rahmens ist eine Maßnahme, die ein Datenanwender in der Experience Platform ergreift und bei der überprüft werden muss, ob gegen die Datenverwendungsrichtlinien verstoßen wurde |
 | **Richtlinie** | Im Rahmen der Datenverwaltung ist eine Richtlinie eine Regel, die beschreibt, welche Marketingaktionen für bestimmte Daten zulässig oder nicht zulässig sind. |
 | **Sensible Beschriftungen** | Sensible &quot;S&quot;-Beschriftungen werden verwendet, um Daten zu kategorisieren, die Sie und Ihr Unternehmen als vertraulich betrachten. |
 
