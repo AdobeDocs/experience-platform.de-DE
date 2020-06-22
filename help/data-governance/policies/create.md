@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Eine Datenverwendungsrichtlinie erstellen
 topic: policies
 translation-type: tm+mt
-source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1216'
 ht-degree: 3%
 
 ---
 
 
-# Eine Datenverwendungsrichtlinie erstellen
+# Eine Datenverwendungsrichtlinie in der API erstellen
 
-Die Datenbenennung und -durchsetzung (DULE) ist der Kernmechanismus der Datenverwaltung in der Adobe Experience Platform. Mit der [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie DULE-Richtlinien erstellen und verwalten, um zu bestimmen, welche Marketingaktionen für Daten mit bestimmten DULE-Beschriftungen durchgeführt werden können.
+Die Datenverwendung - Kennzeichnung und Durchsetzung (DULE) ist der Kernmechanismus der Datenverwaltung in der Adobe Experience Platform. Mit der [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie DULE-Richtlinien erstellen und verwalten, um zu bestimmen, welche Marketingaktionen für Daten mit bestimmten DULE-Beschriftungen durchgeführt werden können.
 
 Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer DULE-Richtlinie mithilfe der Policy Service API. Eine umfassendere Anleitung zu den verschiedenen in der API verfügbaren Operationen finden Sie im Entwicklerhandbuch für [Policy Service](../api/getting-started.md).
 
@@ -22,16 +22,16 @@ Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer DULE-Rich
 
 Dieses Lernprogramm erfordert ein Verständnis der folgenden Schlüsselkonzepte, die beim Erstellen und Evaluieren von DUL-Richtlinien zum Einsatz kommen:
 
-* [Datenverwaltung](../home.md): Das Framework, mit dem die Plattform die Einhaltung der Datenverwendung erzwingt.
+* [Datenverwaltung](../home.md): Das Framework, mit dem die Platform die Einhaltung der Datenverwendungskonformität erzwingt.
 * [Datenverwendungsbeschriftungen](../labels/overview.md): Datenverwendungsbeschriftungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
-* [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die API für den DUL-Policy-Dienst benötigen, einschließlich der erforderlichen Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Definieren einer Marketingaktion {#define-action}
 
-Im Rahmen der Datenverwaltung handelt es sich bei einer Marketingaktion um eine Aktion, die ein Experience Platform-Datenbenutzer durchführt und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
+Im Rahmen der Datenverwaltung handelt es sich bei einer Marketingaktion um eine Experience Platform, die von einem Datenbenutzer ausgeführt wird und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
 
 Der erste Schritt bei der Erstellung einer DULE-Richtlinie besteht darin, zu bestimmen, welche Marketingaktion die Richtlinie bewerten soll. Dies kann mit einer der folgenden Optionen durchgeführt werden:
 
@@ -44,7 +44,7 @@ Sie können vorhandene Marketingaktionen nachschlagen, die von Ihrer DULE-Richtl
 
 **API-Format**
 
-Je nachdem, ob Sie eine Marketingaktion von Experience Platform oder eine benutzerdefinierte Marketingaktion Ihres Unternehmens nachschlagen, verwenden Sie die `marketingActions/core` bzw. die `marketingActions/custom` Endpunkte.
+Je nachdem, ob Sie eine Marketingaktion, die durch Experience Platform bereitgestellt wird, oder eine benutzerdefinierte Marketingaktion Ihres Unternehmens suchen, verwenden Sie die `marketingActions/core` bzw. die `marketingActions/custom` Endpunkte.
 
 ```http
 GET /marketingActions/core
@@ -416,4 +416,4 @@ In diesem Lernprogramm haben Sie erfolgreich eine Datenverwendungsrichtlinie fü
 
 Weitere Informationen zu den verschiedenen verfügbaren Vorgängen in der Policy Service API finden Sie im Entwicklerhandbuch für [Policy Service](../api/getting-started.md). Informationen zum Erzwingen von Richtlinien für Echtzeit-Kundendaten finden Sie im Lernprogramm zur [Erzwingung der Einhaltung von Datennutzungsregeln für Audiencen-Profil](../../segmentation/tutorials/governance.md).
 
-Informationen zum Verwalten von Nutzungsrichtlinien in der Benutzeroberfläche von Experience Platform finden Sie im [Richtlinien-Benutzerhandbuch](user-guide.md).
+Informationen zum Verwalten von Nutzungsrichtlinien in der Benutzeroberfläche der Experience Platform finden Sie im [Richtlinien-Benutzerhandbuch](user-guide.md).
