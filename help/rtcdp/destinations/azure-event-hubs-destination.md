@@ -1,10 +1,10 @@
 ---
 title: (Beta) Azurblauer Ereignis Hubs-Ziel
 seo-title: (Beta) Azurblauer Ereignis Hubs-Ziel
-description: Erstellen Sie eine Ausgangsverbindung in Echtzeit zu Ihrer Azurblauen Ereignis Hubs-Datenspeicherung, um Daten von Experience Platform zu streamen.
-seo-description: Erstellen Sie eine Ausgangsverbindung in Echtzeit zu Ihrer Azurblauen Ereignis Hubs-Datenspeicherung, um Daten von Experience Platform zu streamen.
+description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
+seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 6%
@@ -22,7 +22,7 @@ ht-degree: 6%
 
 [!DNL Azure Event Hubs] ist eine große Datenstreaming-Plattform und ein Ereignis-Erfassungsdienst. Es kann Millionen von Ereignissen pro Sekunde empfangen und verarbeiten. Daten, die an einen Ereignis-Hub gesendet werden, können mithilfe eines beliebigen Echtzeitanalyseanbieters oder von Batch-/Datenspeicherung-Adaptern transformiert und gespeichert werden.
 
-Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs] Datenspeicherung erstellen, um Daten von Adobe Experience Platform zu streamen.
+Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs] Datenspeicherung erstellen, um Daten aus der Adobe Experience Platform zu streamen.
 
 * Weitere Informationen finden Sie [!DNL Azure Event Hubs]in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Informationen zum Herstellen einer Verbindung mit [!DNL Azure Event Hubs] API-Aufrufen finden Sie im [Streaming-Ziel-API-Lernprogramm](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
@@ -42,20 +42,20 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Azure Event Hubs] destinations, enter the following information in the create destination workflow:
 
-### Im Kontoschritt {#account-step}
+### Im Authentifizierungsschritt {#authentication-step}
 
 * **[!UICONTROL SAS-Schlüsselname]** und **[!UICONTROL SAS-Schlüssel]**: Geben Sie den Namen und die Taste Ihres SAS-Schlüssels ein. Informationen zur Authentifizierung mit [!DNL Azure Event Hubs] SAS-Schlüsseln finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namensraum]**: Füllen Sie Ihren [!DNL Azure Event Hubs] Namensraum aus. Informationen zu [!DNL Azure Event Hubs] Namensräumen finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-![Im Authentifizierungsschritt erforderliche Eingabe](/help/rtcdp/destinations/assets/event-hubs-account-step.png)
+![Im Authentifizierungsschritt erforderliche Eingabe](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
 
-### Im Authentifizierungsschritt {#authentication-step}
+### Im Setup-Schritt {#setup-step}
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen für die Verbindung ein [!DNL Azure Event Hubs].
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung der Verbindung ein.  Beispiele: &quot;Premium-Tier-Kunden&quot;, &quot;Männer, die am Kitesurfen interessiert sind&quot;.
 * **[!UICONTROL eventHubName]**: Geben Sie einen Namen für den Stream zu Ihrem [!DNL Azure Event Hubs] Ziel ein.
 
-![Im Setup-Schritt erforderliche Daten](/help/rtcdp/destinations/assets/event-hubs-authentication-step.png)
+![Im Setup-Schritt erforderliche Daten](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
 
 ## Aktivieren von Segmenten {#activate-segments}
 
@@ -64,7 +64,7 @@ Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile
 
 ## Exportierte Daten {#exported-data}
 
-Ihre exportierten Experience Platform-Daten werden im JSON- [!DNL Azure Event Hubs] Format gespeichert. Das folgende Ereignis enthält beispielsweise das Segmentattribut &quot;E-Mail-Adresse&quot;einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind ECID und E-Mail.
+Ihre exportierten Experience Platformen werden im JSON- [!DNL Azure Event Hubs] Format gespeichert. Das folgende Ereignis enthält beispielsweise das Segmentattribut &quot;E-Mail-Adresse&quot;einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind ECID und E-Mail.
 
 ```
 {
