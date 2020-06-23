@@ -4,49 +4,47 @@ solution: Experience Platform
 title: Streaming-Segmentierung
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 2%
+source-wordcount: '1343'
+ht-degree: 1%
 
 ---
 
 
-# Bewerten Sie Ereignis in Echtzeit mit der Streaming-Segmentierung (Beta).
+# Bewerten Sie Ereignis in Echtzeit mit der Streaming-Segmentierung.
 
->[!NOTE] Die Streaming-Segmentierung ist eine Beta-Funktion und steht auf Anfrage zur Verfügung.
-
-Die Streaming-Segmentierung (auch als kontinuierliche Abfrage bezeichnet) ist die Möglichkeit, einen Kunden sofort zu bewerten, sobald ein Ereignis in eine bestimmte Segmentgruppe aufgenommen wird. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an Adobe Experience Platform übergeben werden. Das bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
+Die Streaming-Segmentierung für [!DNL Adobe Experience Platform] ermöglicht es Kunden, die Segmentierung in Echtzeit durchzuführen und sich dabei auf den Datenreichtum zu konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten eingehen, [!DNL Platform]was die Planung und Ausführung von Segmentierungsaufträgen verringert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, während die Daten weitergegeben werden. [!DNL Platform]Das bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## Erste Schritte
 
-Dieses Entwicklerhandbuch erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die mit der Streaming-Segmentierung zusammenhängen. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Entwicklerhandbuch erfordert ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die mit der Streaming-Segmentierung zusammenhängen. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches Verbraucherdatenquellen-Profil in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
-- [Segmentierung](../home.md): Ermöglicht das Erstellen von Segmenten und Audiencen aus Ihren Echtzeit-Daten zum Profil von Kunden.
-- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches Verbraucherdatenquellen-Profil in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
+- [!DNL Segmentation](../home.md): Ermöglicht das Erstellen von Segmenten und Audiencen aus Ihren [!DNL Real-time Customer Profile] Daten.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an Plattform-APIs durchführen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Platform] APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-Dieses Entwicklerhandbuch enthält Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+Dieses Entwicklerhandbuch enthält Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur [!DNL Experience Platform] Fehlerbehebung.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um [!DNL Platform] APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sandboxen isoliert. Alle Anforderungen an [!DNL Platform] APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE] Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -54,22 +52,39 @@ Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlich
 
 Es können zusätzliche Header erforderlich sein, um bestimmte Anforderungen abzuschließen. Die richtigen Kopfzeilen werden in jedem der Beispiele in diesem Dokument angezeigt. Achten Sie besonders auf die Beispielanforderungen, um sicherzustellen, dass alle erforderlichen Header enthalten sind.
 
-### Streaming-Segmentierungsaktivierung von Abfragen
+### Streaming-Segmentierungsaktivierung von Abfragen {#streaming-segmentation-query-types}
 
-In der folgenden Tabelle werden die verschiedenen Segmentierungsarten und Abfragen, unabhängig davon, ob sie Streaming-Segmentierung unterstützen, Liste.
+>[!NOTE] Sie müssen die geplante Segmentierung für das Unternehmen aktivieren, damit die Streaming-Segmentierung funktioniert. Informationen zur Aktivierung der geplanten Segmentierung finden Sie im Abschnitt zur [Aktivierung der geplanten Segmentierung](#enable-scheduled-segmentation)
 
-| Abfrage | Abfrage | Unterstützung der Streaming-Segmentierung |
-| ---------- | ------------ | --------------------------------- |
-| Einfache demografische | &quot;Gib mir alle Leute, deren Adresse in Kanada ist.&quot; | Unterstützt |
-| Zeitreihen-Ereignis | &quot;Gib mir alle Leute, die Lightroom heruntergeladen haben.&quot; | Unterstützt |
-| Demografie und Zeitreihen | &quot;Gib mir alle Leute, die in Kanada leben und in den letzten 30 Tagen eine Bestellung aufgegeben haben.&quot; | Unterstützt |
-| Fehlen von Ereignissen | &quot;Gib mir alle Menschen, die zwei verschiedene Einkaufswagen innerhalb von zwei Tagen aufgegeben haben.&quot; | Unterstützt |
-| Mehrere Entitäten | &quot;Gib mir alle Leute, deren Berechtigungstyp &quot;Erfahren&quot; ist.&quot; | Nicht unterstützt |
-| Erweiterte PQL-Funktionen | &quot;Geben Sie mir alle Profile, die in der letzten Woche eine Bestellung aufgegeben haben, und fügen Sie die SKU und den Namen für alle gekauften Produkte bei.&quot; | Nicht unterstützt |
+Damit ein Segment mithilfe der Streaming-Segmentierung bewertet werden kann, muss die Abfrage den folgenden Richtlinien entsprechen.
 
-## Rufen Sie alle für die Streaming-Segmentierung aktivierten Segmente ab
+| Abfrage | Details |
+| ---------- | ------- |
+| Eingehender Treffer | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. |
+| Eingehender Treffer innerhalb eines relativen Zeitfensters | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis **innerhalb der letzten sieben Tage** verweist. |
+| Eingehender Treffer, der sich auf ein Profil bezieht | Eine Segmentdefinition, die sich auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profil-Attribute bezieht. |
+| Eingehender Treffer, der sich auf ein Profil innerhalb eines relativen Zeitfensters bezieht | Eine Segmentdefinition, die sich **innerhalb der letzten sieben Tage** auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profil-Attribute bezieht. |
+| Mehrere Ereignis, die auf ein Profil verweisen | Jede Segmentdefinition, die sich **innerhalb der letzten 24 Stunden** auf mehrere Ereignis bezieht und (optional) ein oder mehrere Profil-Attribute besitzt. |
 
-Bevor Sie ein neues Streaming-fähiges Segment erstellen oder ein vorhandenes Segment für Streaming-fähig aktualisieren, sollten Sie sicherstellen, dass Sie keine Informationen duplizieren, indem Sie eine Liste aller Streaming-fähigen Segmente abrufen.
+Im folgenden Abschnitt werden Segmentdefinitionsbeispiele Liste, die für die Streaming-Segmentierung **nicht** aktiviert werden.
+
+| Abfrage | Details |
+| ---------- | ------- | 
+| Eingehender Treffer innerhalb eines relativen Zeitfensters | Wenn sich die Segmentdefinition auf ein eingehendes Ereignis bezieht, das **nicht** innerhalb der **letzten sieben Tage** liegt. Zum Beispiel innerhalb der **letzten zwei Wochen**. |
+| Eingehender Treffer, der sich auf ein Profil in einem relativen Fenster bezieht | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein eingehendes Ereignis **nicht** innerhalb der **letzten sieben Tage**.</li><li>Eine Segmentdefinition, die Segmente oder Eigenschaften des Adobe Audience Managers (AAM) enthält.</li></ul> |
+| Mehrere Ereignis, die auf ein Profil verweisen | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein Ereignis, das **nicht** innerhalb **der letzten 24 Stunden** auftritt.</li><li>Eine Segmentdefinition, die Segmente oder Eigenschaften des Adobe Audience Managers (AAM) enthält.</li></ul> |
+| Abfragen mit mehreren Entitäten | Abfragen mit mehreren Entitäten werden durch Streaming-Segmentierung insgesamt **nicht** unterstützt. |
+
+Darüber hinaus gelten einige Richtlinien für die Streaming-Segmentierung:
+
+| Abfrage | Leitlinie |
+| ---------- | -------- |
+| Abfrage mit einem Ereignis | Das Rückblickfenster ist auf **sieben Tage** begrenzt. |
+| Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen **muss** eine strikte Zeitbestellbedingung bestehen.</li><li>Nur einfache Zeitreihenfolgen (vor und nach) zwischen den Ereignissen sind zulässig.</li><li>Die einzelnen Ereignis **können nicht** negiert werden. Die gesamte Abfrage **kann** jedoch negiert werden.</li></ul> |
+
+## Rufen Sie alle Segmente ab, die für die Streaming-Segmentierung aktiviert sind.
+
+Sie können eine Liste aller Segmente abrufen, die für die Streaming-Segmentierung innerhalb Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET-Anforderung an den `/segment/definitions` Endpunkt senden.
 
 **API-Format**
 
@@ -88,7 +103,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME'
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
@@ -182,7 +197,7 @@ Eine erfolgreiche Antwort gibt ein Array von Segmenten in Ihrer IMS-Organisation
 
 ## Erstellen eines Streaming-fähigen Segments
 
-Nachdem Sie bestätigt haben, dass das Segment, das Sie erstellen möchten, noch nicht vorhanden ist, können Sie ein neues Segment erstellen, das für die Streaming-Segmentierung aktiviert ist.
+Ein Segment wird automatisch für das Streaming aktiviert, wenn es mit einem der oben [aufgeführten](#streaming-segmentation-query-types)Streaming-Segmentierungstypen übereinstimmt.
 
 **API-Format**
 
@@ -191,8 +206,6 @@ POST /segment/definitions
 ```
 
 **Anfrage**
-
-Mit der folgenden Anforderung wird ein neues Segment erstellt, bei dem die Streaming-Segmentierung aktiviert ist. Note that the `continuous` section is set to `enabled: true`.
 
 ```shell
 curl -X POST \
@@ -213,22 +226,11 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] Dies ist eine Standardanforderung zum Erstellen eines Segments, wobei der hinzugefügte Parameter des `continuous` Abschnitts auf `enabled: true`eingestellt ist. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie in der Dokumentation zur [Segmenterstellung](../tutorials/create-a-segment.md).
+>[!NOTE] Hierbei handelt es sich um eine Standardanforderung für das Erstellen eines Segments. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial zum [Erstellen eines Segments](../tutorials/create-a-segment.md).
 
 **Antwort**
 
@@ -272,174 +274,9 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Segmentdefinition 
 }
 ```
 
-## Vorhandenes Segment für Streaming-Segmentierung aktivieren
+## Geplante Evaluierung aktivieren {#enable-scheduled-segmentation}
 
-Sie können ein vorhandenes Segment für die Streaming-Segmentierung aktivieren, indem Sie die ID der Segmentdefinition im Pfad einer PATCH-Anforderung angeben. Darüber hinaus muss die Nutzlast dieser PATCH-Anforderung die vollständigen Details der vorhandenen Segmentdefinition enthalten, auf die zugegriffen werden kann, indem eine GET-Anforderung an die betreffende Segmentdefinition gestellt wird.
-
-### Vorhandene Segmentdefinition suchen
-
-Um eine vorhandene Segmentdefinition nachzuschlagen, müssen Sie ihre ID im Pfad einer GET-Anforderung angeben.
-
-**API-Format**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | Die ID der Segmentdefinition, die Sie nachschlagen möchten. |
-
-**Anfrage**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt Details zur angeforderten Segmentdefinition zurück.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] Für die nächste Anforderung benötigen Sie die vollständigen Details der Segmentdefinition, die in dieser Antwort zurückgegeben wurden. Bitte kopieren Sie die Details dieser Antwort, die im Text der nächsten Anforderung verwendet werden soll.
-
-### Vorhandenes Segment für Streaming-Segmentierung aktivieren
-
-Nachdem Sie die Details des Segments kennen, das Sie aktualisieren möchten, können Sie eine PATCH-Anforderung ausführen, um das Segment zu aktualisieren, um die Streaming-Segmentierung zu aktivieren.
-
-**API-Format**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**Anfrage**
-
-Die Nutzlast der folgenden Anforderung stellt die Details der Segmentdefinition (die im [vorherigen Schritt](#look-up-an-existing-segment-definition)abgerufen wurde) bereit und aktualisiert sie, indem sie ihre `continuous.enabled` Eigenschaft in `true`.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt die Details der neu aktualisierten Segmentdefinition zurück.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-```
-
-## Geplante Evaluierung aktivieren
-
-Nachdem die Streaming-Bewertung aktiviert wurde, muss eine Grundlinie erstellt werden (danach ist das Segment immer auf dem neuesten Stand). Dies erfolgt automatisch durch das System, die geplante Evaluierung (auch als geplante Segmentierung bezeichnet) muss jedoch zuerst aktiviert werden, damit die Basisberechnung durchgeführt werden kann.
-
-Mit der geplanten Segmentierung kann Ihr IMS-Org einen wiederkehrenden Zeitplan erstellen, um Exportaufträge automatisch auszuführen, um Segmente auszuwerten.
+Nachdem die Streaming-Bewertung aktiviert wurde, muss eine Grundlinie erstellt werden (danach ist das Segment immer auf dem neuesten Stand). Zuerst muss eine geplante Evaluierung (auch als geplante Segmentierung bezeichnet) aktiviert werden, damit das System automatisch Baselining durchführen kann. Bei der geplanten Segmentierung kann Ihr IMS-Org an einen wiederkehrenden Zeitplan festhalten, um Exportaufträge automatisch zur Segmentauswertung auszuführen.
 
 >[!NOTE] Geplante Auswertung kann für Sandboxen mit maximal fünf (5) Zusammenführungsrichtlinien für XDM Individuelles Profil aktiviert werden. Wenn Ihr Unternehmen über mehr als fünf Richtlinien zum Zusammenführen von XDM-Profilen innerhalb einer einzelnen Sandbox-Umgebung verfügt, können Sie keine geplante Auswertung verwenden.
 
@@ -554,4 +391,4 @@ Derselbe Vorgang kann zum Deaktivieren eines Zeitplans verwendet werden, indem d
 
 Nachdem Sie jetzt sowohl neue als auch vorhandene Segmente für die Streaming-Segmentierung aktiviert und die geplante Segmentierung aktiviert haben, um eine Grundlage zu entwickeln und wiederkehrende Bewertungen durchzuführen, können Sie mit der Erstellung von Segmenten für Ihr Unternehmen beginnen.
 
-Weitere Informationen zum Durchführen ähnlicher Aktionen und zum Arbeiten mit Segmenten mithilfe der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Segment Builder-Benutzerhandbuch](../ui/overview.md).
+Weitere Informationen zum Durchführen ähnlicher Aktionen und zum Arbeiten mit Segmenten mithilfe der Benutzeroberfläche &quot;Adobe Experience Platform&quot;finden Sie im [Segment Builder-Benutzerhandbuch](../ui/overview.md).
