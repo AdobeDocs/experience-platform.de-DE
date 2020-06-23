@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segment bewerten
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
 workflow-type: tm+mt
 source-wordcount: '2841'
 ht-degree: 2%
@@ -18,26 +18,26 @@ In diesem Dokument finden Sie eine Anleitung zur Segmentbewertung und zum Zugrif
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die beim Erstellen von Audiencen-Segmenten erforderlich sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Adobe Experience Platformen, die beim Erstellen von Audiencen-Segmenten erforderlich sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [Adobe Experience Platform Segmentation Service](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus Echtzeitdaten zum Profil von Kunden.
-- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
-- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ### Erforderliche Kopfzeilen
 
-Für dieses Lernprogramm müssen Sie außerdem das [Authentifizierungstraining](../../tutorials/authentication.md) abgeschlossen haben, um Platform-APIs erfolgreich aufzurufen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Für dieses Lernprogramm müssen Sie außerdem das [Authentifizierungstraining](../../tutorials/authentication.md) abgeschlossen haben, um erfolgreich Platform-APIs aufzurufen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Anforderungen an Plattform-APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang stattfindet:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Anforderungen an Platform-APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE] Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle POST-, PUT- und PATCH-Anforderungen ist ein zusätzlicher Header erforderlich:
 
@@ -51,7 +51,7 @@ Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, k
 
 Wenn Sie das Tutorial zum [Erstellen eines Segments mit der Echtzeit-Kundensegment-API](./create-a-segment.md) noch nicht abgeschlossen haben oder eine Segmentdefinition mit dem [Segmentaufbau](../ui/overview.md)erstellt haben, führen Sie dies bitte vor dem Fortfahren mit diesem Tutorial durch.
 
-## Geplante Bewertung
+## Geplante Bewertung {#scheduled-evaulation}
 
 Durch die geplante Auswertung kann Ihr IMS-Org einen wiederkehrenden Zeitplan erstellen, um Exportaufträge automatisch auszuführen.
 
@@ -413,7 +413,7 @@ Eine erfolgreiche Antwort gibt die Details des Segmentierungsauftrags zurück un
 
 ## Segmentergebnisse interpretieren
 
-Wenn Segmentaufträge erfolgreich ausgeführt werden, wird die `segmentMembership` Zuordnung für jedes Profil im Segment aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Audiencen, die in Platform integriert werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können.
+Wenn Segmentaufträge erfolgreich ausgeführt werden, wird die `segmentMembership` Zuordnung für jedes Profil im Segment aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Audiencen, die in die Platform eingebunden werden, was eine Integration mit anderen Lösungen wie Adobe Audience Manager ermöglicht.
 
 Das folgende Beispiel zeigt, wie das `segmentMembership` Attribut für jeden einzelnen Profil-Datensatz aussieht:
 
@@ -475,7 +475,7 @@ Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert
 Es gibt zwei Möglichkeiten, den erforderlichen Datensatz zu erstellen:
 
 - **Verwenden von APIs:** In den folgenden Schritten wird beschrieben, wie Sie ein Dataset erstellen, das auf das Schema zur Vereinigung einzelner XDM-Profil mithilfe der Katalog-API verweist.
-- **Verwenden der Benutzeroberfläche:** Um mithilfe der Benutzeroberfläche von Adobe Experience Platform einen Datensatz zu erstellen, der auf das Schema &quot;Vereinigung&quot;verweist, führen Sie die Schritte im [UI-Lernprogramm](../ui/overview.md) aus und kehren Sie dann zu diesem Lernprogramm zurück, um die Schritte zum [Generieren von Profilen](#generate-xdm-profiles-for-audience-members)der Audience fortzusetzen.
+- **Verwenden der Benutzeroberfläche:** Um mithilfe der Benutzeroberfläche &quot;Adobe Experience Platform&quot;einen Datensatz zu erstellen, der auf das Schema &quot;Vereinigung&quot;verweist, führen Sie die Schritte im [UI-Lernprogramm](../ui/overview.md) aus und kehren Sie dann zu diesem Lernprogramm zurück, um mit den Schritten zum [Generieren von Profilen](#generate-xdm-profiles-for-audience-members)der Audience fortzufahren.
 
 Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen ID kennen, können Sie direkt mit dem Schritt zum [Generieren von Profilen](#generate-xdm-profiles-for-audience-members)zur Audience fortfahren.
 
@@ -951,7 +951,7 @@ curl -X GET \
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Exports sind Ihre Daten in der Experience Platform &quot;Data Lake in Experience Platform&quot;verfügbar. Sie können dann mit der [Datenzugriff-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` Datei verwenden. Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
+Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake in der Experience Platform verfügbar. Sie können dann mit der [Datenzugriff-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` Datei verwenden. Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Zugriff auf und Herunterladen von Stapeldateien mit der Datenzugriff-API finden Sie im Lernprogramm [Datenzugriff](../../data-access/tutorials/dataset-data.md).
 
