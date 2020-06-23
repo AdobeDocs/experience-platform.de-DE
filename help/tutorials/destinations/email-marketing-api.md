@@ -4,17 +4,17 @@ solution: Experience Platform
 title: E-Mail-Marketingziele erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7ee83b5bf14ec802801cfbc17141c02ceeaccd82
+source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1670'
 ht-degree: 1%
 
 ---
 
 
-# Erstellen Sie E-Mail-Marketing-Ziele und aktivieren Sie Daten in der Echtzeit-Kundendatenplattform von Adobe
+# Erstellen Sie E-Mail-Marketing-Ziele und aktivieren Sie Daten in der Adobe-Platform für Echtzeit-Kundendaten
 
-In diesem Lernprogramm wird gezeigt, wie Sie mithilfe von API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, ein [E-Mail-Marketingziel](../../rtcdp/destinations/email-marketing-destinations.md)erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten an Ihr neu erstelltes Ziel aktivieren können.
+In diesem Lernprogramm wird gezeigt, wie Sie mit API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platformen herstellen, ein [E-Mail-Marketingziel](../../rtcdp/destinations/email-marketing-destinations.md)erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten zu Ihrem neu erstellten Ziel aktivieren können.
 
 In diesem Lernprogramm wird in allen Beispielen das Adobe Campaign-Ziel verwendet, aber die Schritte sind für alle E-Mail-Marketingziele identisch.
 
@@ -27,8 +27,8 @@ Wenn Sie die Benutzeroberfläche in der Echtzeit-CDP von Adobe verwenden möchte
 Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
 
 * [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Katalogdienst](../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie in der Experience Platform.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Katalogdienst](../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie innerhalb der Experience Platform.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie zur Aktivierung von Daten für E-Mail-Marketing-Ziele in Adobe Echtzeit-CDP kennen müssen.
 
@@ -41,22 +41,22 @@ Um die Schritte in diesem Lernprogramm abzuschließen, sollten Sie die folgenden
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Werte für erforderliche und optionale Überschriften sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Ressourcen in Experience Platform können zu bestimmten virtuellen Sandboxen isoliert werden. Bei Anforderungen an Plattform-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt wird. Dies sind optionale Parameter.
+Ressourcen in Experience Platform können zu bestimmten virtuellen Sandboxen isoliert werden. Bei Anforderungen an Platformen-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt wird. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Note]
->Weitere Informationen zu Sandboxes in Experience Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NHinweis]
+>Weitere Informationen zu Sandboxen in der Experience Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein zusätzlicher Medientyp-Header erforderlich:
 
@@ -80,7 +80,7 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 ### Swagger-Dokumentation
 
-Die zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in diesem Tutorial in Swagger. Siehe https://platform.adobe.io/data/foundation/flowservice/swagger#/. Es wird empfohlen, dieses Tutorial und die Seite Swagger-Dokumentation parallel zu verwenden.
+Die zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in diesem Tutorial in Swagger. Weitere Informationen finden Sie in der Dokumentation zur [Flow Service API unter Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Es wird empfohlen, dieses Tutorial und die Seite Swagger-Dokumentation parallel zu verwenden.
 
 ## Liste der verfügbaren Ziele {#get-the-list-of-available-destinations}
 
@@ -134,17 +134,17 @@ Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihrer e
 }
 ```
 
-## Verbindung zu den Daten Ihrer Experience Platform {#connect-to-your-experience-platform-data}
+## Herstellen einer Verbindung zu Ihren Experience Platformen {#connect-to-your-experience-platform-data}
 
 ![Übersichtsschritt zu den Zielschritten 2](../images/destinations/flow-api-destinations-step2.png)
 
-Als Nächstes müssen Sie eine Verbindung zu Ihren Experience Platform-Daten herstellen, damit Sie Profil-Daten exportieren und sie in Ihrem bevorzugten Ziel aktivieren können. Diese besteht aus zwei Unterteilen, die nachfolgend beschrieben werden.
+Als Nächstes müssen Sie eine Verbindung zu den Daten Ihrer Experience Platform herstellen, damit Sie die Profil-Daten exportieren und in Ihrem bevorzugten Ziel aktivieren können. Diese besteht aus zwei Unterteilen, die nachfolgend beschrieben werden.
 
 1. Zunächst müssen Sie einen Aufruf ausführen, um den Zugriff auf Ihre Daten in Experience Platform zu autorisieren, indem Sie eine Basisverbindung einrichten.
-2. Anschließend führen Sie mit der Basis-Verbindungs-ID einen weiteren Aufruf durch, bei dem Sie eine Quellverbindung erstellen, die die Verbindung zu Ihren Experience Platform-Daten herstellt.
+2. Anschließend führen Sie mit der Basis-Verbindungs-ID einen weiteren Aufruf durch, bei dem Sie eine Quellverbindung erstellen, die die Verbindung zu den Daten Ihrer Experience Platform herstellt.
 
 
-### Zugriff auf Ihre Daten in Experience Platform genehmigen
+### Zugriff auf Ihre Daten in der Experience Platform genehmigen
 
 **API-Format**
 
@@ -208,7 +208,7 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 }
 ```
 
-### Verbindung zu den Daten Ihrer Experience Platform
+### Herstellen einer Verbindung zu Ihren Experience Platformen
 
 **API-Format**
 
@@ -274,7 +274,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstellte Quellverbindung zum Unified Profil Service zurück. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihren Experience Platform-Daten hergestellt haben. Speichern Sie diesen Wert so, wie er in einem späteren Schritt erforderlich ist.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstellte Quellverbindung zum Unified Profil Service zurück. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihren Experience Platformen hergestellt haben. Speichern Sie diesen Wert so, wie er in einem späteren Schritt erforderlich ist.
 
 ```json
 {
@@ -465,7 +465,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstel
 
 ![Übersichtsschritt zu den Zielschritten 4](../images/destinations/flow-api-destinations-step4.png)
 
-Mithilfe der IDs, die Sie in den vorherigen Schritten erhalten haben, können Sie jetzt einen Datenflug zwischen Ihren Experience Platform-Daten und dem Ziel erstellen, an das Sie Daten aktivieren möchten. Stellen Sie sich diesen Schritt als eine Konstruktion der Pipeline vor, durch die Daten später zwischen der Experience Platform und dem gewünschten Ziel fließen.
+Mithilfe der IDs, die Sie in den vorherigen Schritten erhalten haben, können Sie jetzt einen Datendurchlauf zwischen den Daten Ihrer Experience Platform und dem Ziel erstellen, an das Sie Daten aktivieren möchten. Stellen Sie sich diesen Schritt als eine Konstruktion der Pipeline vor, durch die Daten später zwischen der Experience Platform und dem gewünschten Ziel fließen.
 
 Um einen Datenflug zu erstellen, führen Sie eine POST-Anforderung wie unten dargestellt durch und geben Sie dabei die unten genannten Werte innerhalb der Nutzlast ein.
 
