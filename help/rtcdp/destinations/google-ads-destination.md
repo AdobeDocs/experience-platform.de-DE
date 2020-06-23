@@ -4,7 +4,7 @@ seo-title: Google Ads-Ziel
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 28%
@@ -56,7 +56,7 @@ Bevor Sie das Google Ads-Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich 
 
 2. Geben Sie im Schritt **Einrichten** des Arbeitsablaufs zum Erstellen des Ziels die [!UICONTROL Grundinformationen] für das Ziel ein. <br>
 
-   ![Grundlegende Informationen Google Ads](/help/rtcdp/destinations/assets/google-ads-setup-step.png)
+   ![Grundlegende Informationen Google Ads](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
 * **[!UICONTROL Kontotyp]**: AdWords ist die einzige verfügbare Option.
