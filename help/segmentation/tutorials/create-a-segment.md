@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segment erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
 workflow-type: tm+mt
 source-wordcount: '1328'
 ht-degree: 2%
@@ -20,31 +20,31 @@ Informationen zum Erstellen von Segmenten mithilfe der Benutzeroberfläche finde
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die beim Erstellen von Audiencen-Segmenten erforderlich sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Adobe Experience Platformen, die beim Erstellen von Audiencen-Segmenten erforderlich sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [Adobe Experience Platform Segmentation Service](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus Echtzeitdaten zum Profil von Kunden.
-- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Plattform-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platformen-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE] Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -56,7 +56,7 @@ Der erste Schritt bei der Segmentierung besteht darin, ein Segment zu definieren
 
 Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anforderung an den `/segment/definitions` Endpunkt in der Echtzeit-Client-Profil-API senden. Im folgenden Beispiel wird beschrieben, wie eine Definitionsanforderung formatiert wird, einschließlich der Informationen, die erforderlich sind, damit ein Segment erfolgreich definiert werden kann.
 
-Segmentdefinitionen können auf zwei Arten bewertet werden: Batch-Segmentierung und Streaming-Segmentierung. Bei der Stapelsegmentierung werden Segmente basierend auf einem voreingestellten Zeitplan oder beim manuellen Auslösen der Auswertung ausgewertet, während bei der Streaming-Segmentierung Segmente ausgewertet werden, sobald Daten in die Plattform aufgenommen werden. In diesem Lernprogramm wird die **Stapelsegmentierung** verwendet. Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Übersicht zur Streaming-Segmentierung](../api/streaming-segmentation.md).
+Segmentdefinitionen können auf zwei Arten bewertet werden: Batch-Segmentierung und Streaming-Segmentierung. Bei der Stapelsegmentierung werden Segmente auf der Grundlage eines vorgegebenen Zeitplans oder bei manueller Auslösung der Auswertung ausgewertet, während bei der Streaming-Segmentierung Segmente ausgewertet werden, sobald Daten in die Platform aufgenommen werden. In diesem Lernprogramm wird die **Stapelsegmentierung** verwendet. Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Übersicht zur Streaming-Segmentierung](../api/streaming-segmentation.md).
 
 **API-Format**
 
@@ -122,7 +122,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Segmentdefinition 
 }
 ```
 
-## Schätzung und Vorschau einer Audience
+## Schätzung und Vorschau einer Audience {#estimate-and-preview-an-audience}
 
 Während Sie Ihre Segmentdefinition entwickeln, können Sie die Tools für Schätzung und Vorschau innerhalb des Echtzeit-Profils des Kunden verwenden, um Informationen auf der Ebene der Ansicht zu erhalten, um sicherzustellen, dass Sie die erwartete Audience isolieren. Schätzungen liefern statistische Informationen zu einer Segmentdefinition, wie zum Beispiel die projizierte Audience und das Konfidenzintervall. Vorschauen bieten paginierte Listen von qualifizierten Profilen für eine Segmentdefinition, mit denen Sie die Ergebnisse mit Ihren Erwartungen vergleichen können.
 
