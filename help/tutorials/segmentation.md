@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übungen zur Segmentierung
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6705cb699b0785e317a6e437fc8a01ca77266f84
+source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '576'
 ht-degree: 8%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 8%
 
 # Übungen zur Segmentierung
 
-Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren Echtzeit-Daten zum Profil von Kunden generieren können. Diese Segmente werden zentral auf der Plattform konfiguriert und gepflegt und stehen für jede Adobe-Lösung zur Verfügung. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
+Der Segmentierungsdienst für Adobe Experience Platformen bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren Echtzeit-Daten zum Profil von Kunden generieren können. Diese Segmente werden auf Platform zentral konfiguriert und gepflegt und stehen für jede Adobe-Lösung zur Verfügung. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
 
 ## Erstellen einer Segmentdefinition
 
-Eine Segmentdefinition ist der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe-Audience verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Segmentmitglieder für eine Audience zu bestimmen. Die Entwicklung, Prüfung, Vorschau und Speicherung einer Segmentdefinition können über die Plattform-Benutzeroberfläche oder -APIs erfolgen. Um eine Segmentdefinition zu erstellen, führen Sie das [Erstellen eines Segment-API-Tutorials](../segmentation/tutorials/create-a-segment.md) oder das Benutzerhandbuch [für die](../segmentation/ui/overview.md)Segmentaufbau-Benutzeroberfläche aus.
+Eine Segmentdefinition ist der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe-Audience verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Segmentmitglieder für eine Audience zu bestimmen. Das Entwickeln, Testen, Anzeigen und Speichern einer Segmentdefinition kann über die Benutzeroberfläche oder APIs der Platform erfolgen. Um eine Segmentdefinition zu erstellen, führen Sie das [Erstellen eines Segment-API-Tutorials](../segmentation/tutorials/create-a-segment.md) oder das Benutzerhandbuch [für die](../segmentation/ui/overview.md)Segmentaufbau-Benutzeroberfläche aus.
 
 ## Bewerten eines Segments und Zugreifen auf Ergebnisse
 
@@ -30,7 +30,7 @@ Für das Exportieren von Segmenten, die Profil-Daten enthalten, muss zunächst e
 
 ## Zusammenführungsrichtlinien konfigurieren
 
-Mit der Adobe Experience Platform können Sie Daten aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Informationen zum Arbeiten mit Zusammenführungsrichtlinien in der Plattform-Benutzeroberfläche finden Sie im [Benutzerhandbuch](../profile/ui/merge-policies.md)zu Zusammenführungsrichtlinien. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Echtzeit-Profil-API finden Sie im Entwicklerhandbuch für [Zusammenführungsrichtlinien](../profile/api/merge-policies.md).
+Adobe Experience Platform ermöglicht Ihnen, Daten aus mehreren Quellen zusammenzuführen und zu kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Informationen zum Arbeiten mit Zusammenführungsrichtlinien in der Benutzeroberfläche der Platform finden Sie im [Benutzerhandbuch](../profile/ui/merge-policies.md)zu Zusammenführungsrichtlinien. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Echtzeit-Profil-API finden Sie im Entwicklerhandbuch für [Zusammenführungsrichtlinien](../profile/api/merge-policies.md).
 
 ## Erzwingen der Datenverwendungskonformität für Segmente
 
@@ -41,7 +41,7 @@ Segmente, die für die Verwendung im Echtzeit-Kundensegment aktiviert sind, enth
 >[!NOTE]
 >Die Streaming-Segmentierung erfolgt in der Beta-Version und steht auf Anfrage zur Verfügung. Die Funktionen und Dokumentation können sich ändern.
 
-Die Streaming-Segmentierung (auch als kontinuierliche Abfrage bezeichnet) ist die Möglichkeit, einen Kunden sofort zu bewerten, sobald ein Ereignis in eine bestimmte Segmentgruppe aufgenommen wird. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an Adobe Experience Platform übergeben werden. Das bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden. Weitere Informationen finden Sie in der Übersicht über die [Streaming-Segmentierung](../segmentation/api/streaming-segmentation.md).
+Streaming-Segmentierung ist die Möglichkeit, einen Kunden sofort zu bewerten, sobald ein Ereignis in eine bestimmte Segmentgruppe aufgenommen wird. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Adobe Experience Platform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden. Weitere Informationen finden Sie in der Übersicht über die [Streaming-Segmentierung](../segmentation/api/streaming-segmentation.md).
 
 ## Segmentierung mehrerer Entitäten
 
