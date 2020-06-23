@@ -4,7 +4,7 @@ seo-title: Google Ad Manager-Ziel
 description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 seo-description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 34%
@@ -53,7 +53,7 @@ Bevor Sie das Google Ad Manager-Ziel in Adobe Echtzeit-CDP erstellen, müssen Si
 
 2. Geben Sie im Schritt **Einrichten** des Arbeitsablaufs zum Erstellen des Ziels die [!UICONTROL Grundinformationen] für das Ziel ein. <br>
 
-   ![Grundlegende Informationen Google Ad Manager](/help/rtcdp/destinations/assets/ad-manager-setup-step.png)
+   ![Grundlegende Informationen Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination-setup-step.png)
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
 * **[!UICONTROL Kontotyp]**: Wählen Sie je nach Konto bei Google eine Option aus:
