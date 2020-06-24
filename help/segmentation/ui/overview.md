@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Segmentaufbau-Benutzeroberfläche
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Sie können dann einfach per Drag &amp; Drop [!DNL ExperienceEvents] und [!UICON
 
 ![](../images/segment-builder/events-eventTypes.png)
 
-Standardmäßig werden nur ausgefüllte Schema-Felder aus Ihrem Datenspeicher angezeigt. Dies schließt [!UICONTROL Ereignistyp]ein. Wenn die Liste &quot; [!UICONTROL Ereignistyp] &quot;nicht sichtbar ist oder Sie nur &quot;[!UICONTROL Beliebig]&quot;als [!UICONTROL Ereignistyp]auswählen können, klicken Sie auf das Zahnradsymbol neben &quot; *[!UICONTROL Felder]*&quot;und wählen Sie dann unter &quot;Verfügbare Felder&quot;die Option &quot;Vollständiges XDM-Schema **** ** anzeigen&quot;unter &quot; verfügbare Felder&quot;aus. Klicken Sie erneut auf das Zahnradsymbol, um zur Registerkarte &quot; *[!UICONTROL Felder]* &quot;zurückzukehren. Jetzt sollten Sie mehrere [!UICONTROL Ereignistyp] - und Schema-Felder unabhängig davon, ob sie Daten enthalten oder nicht, Ansicht werden können.
+Standardmäßig werden nur ausgefüllte Schema-Felder aus Ihrem Datenspeicher angezeigt. Dies schließt [!UICONTROL Ereignistyp]ein. Wenn die Liste &quot; [!UICONTROL Ereignistyp] &quot;nicht sichtbar ist oder Sie nur &quot;[!UICONTROL Beliebig]&quot;als [!UICONTROL Ereignistyp]auswählen können, klicken Sie auf das Zahnradsymbol neben &quot; *[!UICONTROL Felder]*&quot;und wählen Sie dann unter &quot;Verfügbare Felder&quot;die Option &quot;Vollständiges XDM-Schema **** ** anzeigen&quot;unter &quot; verfügbare Felder&quot;aus. Klicken Sie erneut auf das Zahnradsymbol, um zur Registerkarte &quot; *[!UICONTROL Felder]* &quot;zurückzukehren, und Sie sollten jetzt mehrere [!UICONTROL Ereignistyp] - und Schema-Felder unabhängig davon, ob sie Daten enthalten oder nicht, Ansicht werden können.
 
 ![](../images/segment-builder/show-populated.png)
 
@@ -103,11 +103,23 @@ Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel
 
 Sie können eine Audience per Drag &amp; Drop von der Registerkarte &quot; *[!UICONTROL Audience]* &quot;auf die Arbeitsfläche &quot;Rule Builder&quot;ziehen, um auf die Mitgliedschaft in der Audience in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie die Audiencen-Mitgliedschaft als Attribut in der neuen Segmentregel ein- oder ausschließen.
 
-Bei [!DNL Platform] Audiencen, die mit dem Segmentaufbau erstellt wurden, können Sie die Audience in den Regelsatz konvertieren, der in der Segmentdefinition für diese Audience verwendet wurde. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition geändert werden kann.
+Bei [!DNL Platform] Audiencen, die mit dem [!UICONTROL Segmentaufbau]erstellt wurden, können Sie die Audience in den Regelsatz konvertieren, der in der Segmentdefinition für diese Audience verwendet wurde. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition geändert werden kann. Vergewissern Sie sich, dass Sie alle Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in Regellogik konvertieren.
 
 >[!NOTE] Beim Hinzufügen einer Audience aus einer externen Quelle wird nur auf die Audience-Mitgliedschaft verwiesen. Sie können die Audience nicht in Regeln konvertieren. Daher können die zum Erstellen der ursprünglichen Audience verwendeten Regeln in der neuen Segmentdefinition nicht geändert werden.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+Treten beim Konvertieren von Audiencen in Regeln Konflikte auf, versucht der [!UICONTROL Segmentaufbau] , die vorhandenen Optionen optimal zu erhalten.
+
+### Code-Ansicht
+
+Alternativ können Sie eine codebasierte Version einer Regel, die im [!UICONTROL Segmentaufbau]erstellt wurde, Ansicht vornehmen. Nachdem Sie Ihre Regel auf der Arbeitsfläche des Regelaufbaus erstellt haben, können Sie die **[!UICONTROL Code-Ansicht]** auswählen, um Ihr Segment als PQL anzuzeigen.
+
+![](../images/segment-builder/code-view.png)
+
+Die Code-Ansicht bietet eine Schaltfläche, mit der Sie den Segmentwert kopieren können, der in API-Aufrufen verwendet werden soll. Um die neueste Version des Segments abzurufen, stellen Sie sicher, dass Sie die neuesten Änderungen am Segment gespeichert haben.
+
+![](../images/segment-builder/copy-code.png)
 
 ## Behälter
 
