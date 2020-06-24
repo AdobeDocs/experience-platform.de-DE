@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übungen zur Segmentierung
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '556'
 ht-degree: 8%
 
 ---
@@ -36,10 +36,7 @@ Adobe Experience Platform ermöglicht Ihnen, Daten aus mehreren Quellen zusammen
 
 Segmente, die für die Verwendung im Echtzeit-Kundensegment aktiviert sind, enthalten eine Richtlinie-ID zum Zusammenführen innerhalb ihrer Segmentdefinition. Diese Richtlinie zum Zusammenführen enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datenverwendung enthalten. Spezifische Schritte zum Erzwingen der Einhaltung von Datenverwendungsbedingungen für ein Segmentsegment finden Sie im [Tutorial zur Segmentkonformität](../segmentation/tutorials/governance.md).
 
-## (Beta) Streaming-Segmentierung
-
->[!NOTE]
->Die Streaming-Segmentierung erfolgt in der Beta-Version und steht auf Anfrage zur Verfügung. Die Funktionen und Dokumentation können sich ändern.
+## Streaming-Segmentierung
 
 Streaming-Segmentierung ist die Möglichkeit, einen Kunden sofort zu bewerten, sobald ein Ereignis in eine bestimmte Segmentgruppe aufgenommen wird. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Adobe Experience Platform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden. Weitere Informationen finden Sie in der Übersicht über die [Streaming-Segmentierung](../segmentation/api/streaming-segmentation.md).
 
