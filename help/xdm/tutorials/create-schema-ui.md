@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen eines Schemas mit dem Schema-Editor
+title: Erstellen eines Schemas mit dem Schema-Editor.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 ---
 
 
-# Erstellen eines Schemas mit dem Schema-Editor
+# Erstellen eines Schemas mit dem Schema-Editor.
 
-Die Schema Registry stellt eine Benutzeroberfläche und RESTful-API bereit, über die Sie alle Ressourcen in der Adobe Experience Platform Schema Library Ansicht und verwalten können. Die Schema-Bibliothek enthält Ressourcen, die Ihnen von Adobe, Experience Platform-Partnern und Anbietern, deren Anwendungen Sie verwenden, zur Verfügung gestellt werden, sowie Ressourcen, die Sie definieren und in der Schema-Registrierung speichern.
+Die Schema Registry bietet eine Benutzeroberfläche und RESTful-API, über die Sie alle Ressourcen in der Adobe Experience Platform Schema Library Ansicht und verwalten können. Die Schema-Bibliothek enthält Ressourcen, die Ihnen von Adobe, Experience Platform-Partnern und Anbietern, deren Anwendungen Sie verwenden, zur Verfügung gestellt werden, sowie Ressourcen, die Sie definieren und in der Schema-Registrierung speichern.
 
-In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas mit dem Schema-Editor in Experience Platform beschrieben. Wenn Sie lieber ein Schema mit der Schema Registry-API erstellen möchten, lesen Sie zunächst das Entwicklerhandbuch [für die](../api/getting-started.md) Schema-Registrierung, bevor Sie versuchen, ein Schema mithilfe der API [zu](create-schema-api.md)erstellen.
+In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas mit dem Schema-Editor in der Experience Platform beschrieben. Wenn Sie lieber ein Schema mit der Schema Registry-API erstellen möchten, lesen Sie zunächst das Entwicklerhandbuch [für die](../api/getting-started.md) Schema-Registrierung, bevor Sie versuchen, ein Schema mithilfe der API [zu](create-schema-api.md)erstellen.
 
 Dieses Lernprogramm enthält außerdem Schritte zum [Definieren einer neuen Klasse](#create-new-class) , die Sie dann zum Erstellen eines Schemas verwenden können.
 
@@ -24,23 +24,23 @@ Dieses Lernprogramm enthält außerdem Schritte zum [Definieren einer neuen Klas
 
 Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Aspekte der Adobe Experience Platform, die mit der Verwendung des Schema-Editors verbunden sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Konzepte:
 
-* [Erlebnisdatenmodell (XDM)](../home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+* [Erlebnisdatenmodell (XDM)](../home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
 * [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Übersicht über XDM-Schema und ihre Bausteine, einschließlich Klassen, Mixins, Datentypen und Felder.
 * [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Für dieses Lernprogramm benötigen Sie Zugriff auf die Erlebnisplattform. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Für dieses Lernprogramm benötigen Sie Zugriff auf die Experience Platform. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
-## Vorhandene Schema im Arbeitsbereich &quot;Schemas&quot;durchsuchen
+## Vorhandene Schema im Arbeitsbereich &quot;Schemas&quot;durchsuchen {#browse}
 
-Der Arbeitsbereich &quot;Schemas&quot;in Experience Platform bietet eine Visualisierung der Schema-Bibliothek, mit der Sie alle Schema, die Ihnen zur Verfügung stehen, Ansicht und Verwaltung sowie neue erstellen können. Der Arbeitsbereich umfasst auch den Schema-Editor, die Arbeitsfläche, auf der Sie ein Schema während dieses Lernprogramms erstellen werden.
+Der Arbeitsbereich &quot;Schemas&quot;in der Experience Platform bietet eine Visualisierung der Schema-Bibliothek, mit der Sie alle verfügbaren Schema Ansicht und verwalten sowie neue erstellen können. Der Arbeitsbereich umfasst auch den Schema-Editor, die Arbeitsfläche, auf der Sie ein Schema während dieses Lernprogramms erstellen werden.
 
-Klicken Sie nach dem Anmelden bei Experience Platform im linken Navigationsbereich auf **Schema** und Sie gelangen zum Arbeitsbereich &quot;Schemas&quot;. Daraufhin wird eine Liste von Schemas angezeigt (eine Darstellung der Schema-Bibliothek), in denen Sie alle verfügbaren Schema Ansicht, Verwaltung und Anpassung vornehmen können. Die Liste umfasst den Namen, den Typ, die Klasse und das Verhalten (Datensatz oder Zeitreihen), auf dem das Schema basiert, sowie das Datum und die Uhrzeit der letzten Änderung des Schemas.
+Nachdem Sie sich bei der Experience Platform angemeldet haben, klicken Sie im linken Navigationsbereich auf **Schemas** und Sie gelangen zum Arbeitsbereich &quot;Schemas&quot;. Daraufhin wird eine Liste von Schemas angezeigt (eine Darstellung der Schema-Bibliothek), in denen Sie alle verfügbaren Schema Ansicht, Verwaltung und Anpassung vornehmen können. Die Liste umfasst den Namen, den Typ, die Klasse und das Verhalten (Datensatz oder Zeitreihen), auf dem das Schema basiert, sowie das Datum und die Uhrzeit der letzten Änderung des Schemas.
 
 Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen für alle Ressourcen in der Registrierung zu verwenden, einschließlich Klassen, Mixins und Datentypen.
 
 ![Ansicht der Schema-Bibliothek](../images/tutorials/create-schema/schemas_filter.png)
 
-## Erstellen und Benennen eines Schemas
+## Erstellen und Benennen eines Schemas {#create}
 
 Um mit dem Erstellen eines Schemas zu beginnen, klicken Sie rechts oben im Arbeitsbereich &quot;Schemas&quot;auf Schema **** erstellen.
 
@@ -62,7 +62,7 @@ Bei der Entscheidung über einen Namen für Ihr Schema sind einige wichtige Aspe
 
 Dieses Tutorial stellt ein Schema zum Erfassen von Daten über die Mitglieder eines Treueanschlusses vor, daher heißt das Schema &quot;Treueanwärter&quot;.
 
-## Klasse zuweisen
+## Klasse zuweisen {#class}
 
 Auf der linken Seite des Editors befindet sich der Abschnitt &quot; *Komposition* &quot;. Es enthält derzeit zwei Unterabschnitte: *Schema* und *Klasse*.
 
@@ -86,7 +86,7 @@ Die Felder werden im Format &quot;fieldName&quot;angezeigt | Datentyp&quot;. Die
 
 >[!NOTE] Sie können die Klasse eines Schemas [jederzeit während des anfänglichen Kompositionsprozesses](#change-class) ändern, bevor das Schema gespeichert wurde. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Daher wird die Arbeitsfläche und alle hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
 
-## Hinzufügen einer Mischung
+## Hinzufügen einer Mischung {#mixin}
 
 Nachdem eine Klasse zugewiesen wurde, enthält der Abschnitt &quot; *Komposition* &quot;einen dritten Unterabschnitt: *Mixins*.
 
@@ -114,7 +114,7 @@ Beachten Sie, dass das Feld &quot;Name&quot;einen Datentyp von &quot;Personennam
 
 Klicken Sie auf verschiedene Felder auf der Arbeitsfläche, um weitere Felder anzuzeigen, die sie zur Schema-Struktur beitragen.
 
-## Hinzufügen einer anderen Mischung
+## Hinzufügen einer anderen Mischung {#mixin-2}
 
 Sie können jetzt dieselben Schritte wiederholen, um eine weitere Mixin hinzuzufügen. Wenn Sie dieses Mal das *Hinzufügen Mixin* -Dialogfeld Ansicht haben, beachten Sie, dass das Mixin &quot;Profil-Personendetails&quot;ausgegraut wurde und das Optionsfeld daneben nicht ausgewählt werden kann. Dadurch wird verhindert, dass Mixins, die Sie bereits im aktuellen Schema enthalten haben, versehentlich dupliziert werden.
 
@@ -122,13 +122,13 @@ Sie können nun das Mixin &quot;Profil Persönliche Details&quot;aus dem *Hinzuf
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. Die &quot;Profil Persönliche Daten&quot;sind jetzt unter *Mixins* im Bereich *Komposition* aufgelistet, und die Felder für die Hausanschrift, das Handy und mehr wurden unter *Struktur* hinzugefügt.
+Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. Die &quot;Profil Persönliche Daten&quot;sind jetzt unter *Mixins* im Bereich *Komposition* aufgelistet, und die Felder für die Adresse, das Handy und mehr wurden unter *Struktur* hinzugefügt.
 
 Ähnlich wie beim Feld &quot;Name&quot;stellen die soeben hinzugefügten Felder Konzepte für mehrere Felder dar. Beispielsweise hat &quot;homeAddress&quot;den Datentyp &quot;Address&quot;und &quot;mobilePhone&quot;den Datentyp &quot;Phone Number&quot;. Sie können auf jedes dieser Felder klicken, um sie zu erweitern und die zusätzlichen Felder im Datentyp anzuzeigen.
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Definieren eines neuen Mixins
+## Definieren eines neuen Mixins {#define-mixin}
 
 Das Schema &quot;Treueanwärter&quot;ist dazu gedacht, Daten über die Mitglieder eines Treueanschlusses zu erfassen, sodass es einige spezifische treuebezogene Programme erfordert. Es gibt keine standardmäßigen Mixins, die die erforderlichen Felder enthalten. Daher müssen Sie ein neues Mixin definieren.
 
@@ -142,7 +142,7 @@ Benennen Sie für dieses Tutorial das neue Mixin &quot;Loyalitätsdetails&quot;.
 
 Klicken Sie auf **Hinzufügen Mixin** , um zum Schema-Editor zurückzukehren. &quot;Treuedetails&quot;sollten jetzt auf der linken Seite der Arbeitsfläche unter *Mixins* angezeigt werden, es sind jedoch noch keine Felder mit ihr verknüpft und daher werden keine neuen Felder unter *Struktur* angezeigt.
 
-## Hinzufügen von Feldern zur Mischung
+## Hinzufügen von Feldern zur Mischung {#mixin-fields}
 
 Nachdem Sie jetzt das Mixin &quot;Loyalitätsdetails&quot;erstellt haben, ist es an der Zeit, die Felder zu definieren, die das Mixin zum Schema beitragen wird.
 
@@ -158,7 +158,7 @@ Innerhalb dieses Namespaced-Knotens ist ein &quot;Neues Feld&quot;. Dies ist der
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Mithilfe der *Feldeigenschaften* auf der rechten Seite des Editors erstellen Sie ein Treuefeld mit dem Typ &quot;Objekt&quot;, das zur Speicherung Ihrer treuebezogenen Felder verwendet wird. Klicken Sie abschließend auf **Übernehmen**.
+Mithilfe der *Feldeigenschaften* auf der rechten Seite des Editors erstellen Sie ein Treuefeld mit dem Typ &quot;Objekt&quot;, das zur Speicherung Ihrer treuebezogenen Felder verwendet wird. When finished, click **Apply**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
@@ -181,7 +181,7 @@ Je nach ausgewähltem Datentyp stehen verschiedene Einschränkungsoptionen zur V
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Hinzufügen von mehr Feldern zum Mixen
+## Hinzufügen von mehr Feldern zum Mixen {#mixin-fields-2}
 
 Nachdem Sie jetzt das Feld &quot;loyaltyId&quot;hinzugefügt haben, können Sie zusätzliche Felder hinzufügen, um treuebezogene Informationen zu erfassen, z. B.:
 
@@ -194,7 +194,7 @@ Nach Abschluss des Vorgangs enthält das Treueobjekt Felder für: Loyalität-ID,
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Feld &#39;enum&#39; Hinzufügen mixin
+## Feld &#39;enum&#39; Hinzufügen mixin {#enum}
 
 Beim Definieren von Feldern im Schema-Editor gibt es einige zusätzliche Optionen, die Sie auf einfache Feldtypen anwenden können, um weitere Einschränkungen für die Daten, die das Feld enthalten kann, bereitzustellen.
 
@@ -215,7 +215,7 @@ Weitere Informationen zu verfügbaren zusätzlichen Einschränkungen:
 * **Enum:** Gibt an, dass dieses Feld einen der Werte aus einer aufgezählten Liste möglicher Werte enthalten muss.
 * **Identität:** Gibt an, dass dieses Feld ein Identitätsfeld ist. Weitere Informationen zu Identitätsfeldern finden Sie [weiter unten in dieser Übung](#identity-field).
 
-## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp
+## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#datatype}
 
 Nachdem mehrere treuespezifische Felder hinzugefügt wurden, enthält das Objekt &quot;Loyalität&quot;jetzt eine gemeinsame Datenstruktur, die in anderen Schemas nützlich sein könnte.
 
@@ -233,13 +233,13 @@ In einem zukünftigen Schema können Sie nun einem Feld den **Typ** &quot;Loyali
 
 ## Festlegen eines Schema-Felds als Identitätsfeld {#identity-field}
 
-Schema werden für die Dateneingabe in die Experience Platform verwendet, und diese Daten werden letztendlich zur Identifizierung von Einzelpersonen und zum Zusammenführen von Informationen aus mehreren Quellen verwendet. Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identitätsfelder&quot;markiert werden.
+Schema werden für die Erfassung von Daten in die Experience Platform verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzuführen. Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identitätsfelder&quot;markiert werden.
 
-Mit der Experience Platform können Sie ein Identitätsfeld ganz einfach durch das Kontrollkästchen &quot; **Identität** &quot;im Schema-Editor kennzeichnen.
+Mit Experience Platform können Sie ein Identitätsfeld ganz einfach über das Kontrollkästchen &quot; **Identität** &quot;im Schema-Editor kennzeichnen.
 
 So kann es beispielsweise Tausende von Mitgliedern des Treuebereichs geben, die derselben &quot;Ebene&quot;angehören, aber jedes Mitglied des Treuebereichs-Programms hat eine eindeutige &quot;loyaltyId&quot;(E-Mail-Adresse des jeweiligen Mitglieds). Die Tatsache, dass &quot;loyaltyId&quot;eine eindeutige Kennung für jedes Mitglied ist, macht es zu einem guten Kandidaten für ein Identitätsfeld, während &quot;level&quot;dies nicht tut.
 
-Klicken Sie im Editor im Bereich *Struktur* auf das von Ihnen erstellte Feld &quot;loyaltyId&quot;. Das Kontrollkästchen **Identität** wird unter *Feldeigenschaften* angezeigt. Markieren Sie das Kästchen und Sie haben die Möglichkeit, dies als **primäre Identität** festzulegen. Markieren Sie auch dieses Kästchen.
+Klicken Sie im Editor im Bereich *Struktur* auf das von Ihnen erstellte Feld &quot;loyaltyId&quot;. Das Kontrollkästchen **Identität** wird unter *Feldeigenschaften* angezeigt. Markieren Sie das Kästchen und Sie haben die Möglichkeit, dies als **Primär Identity** festzulegen. Markieren Sie auch dieses Kästchen.
 
 Als Nächstes müssen Sie einen **Identitätsnamen angeben**. Es gibt mehrere vordefinierte Namensraum. Da &quot;loyaltyId&quot;jedoch die E-Mail-Adresse des Mitglieds ist, wählen Sie &quot;E-Mail&quot;aus der Dropdown-Liste. Sie können jetzt auf **Übernehmen** klicken, um die Aktualisierungen im Feld &quot;loyaltyId&quot;zu bestätigen.
 
@@ -263,9 +263,9 @@ More information about relationships and other schema metadata can be found in t
 
 ## Aktivieren des Schemas zur Verwendung im Echtzeit-Profil {#profile}
 
-Der Schema-Editor bietet die Möglichkeit, ein Schema für die Verwendung mit [Echtzeit-Kundendaten](../../profile/home.md)zu aktivieren. Profil bietet eine ganzheitliche Ansicht der einzelnen Kunden, indem es ein robustes, 360°-Profil mit Kundenattributen sowie eine zeitgestempelte Übersicht über jede Interaktion erstellt, die der Kunde über ein mit Experience Platform integriertes System verfügt.
+Der Schema-Editor bietet die Möglichkeit, ein Schema für die Verwendung mit [Echtzeit-Kundendaten](../../profile/home.md)zu aktivieren. Profil bietet eine ganzheitliche Ansicht der einzelnen Kunden, indem es ein robustes, 360°-Profil von Kundenattributen sowie eine zeitgestempelte Übersicht über jede Interaktion erstellt, die der Kunde über ein mit der Experience Platform integriertes System hatte.
 
-Damit ein Schema für die Verwendung mit Echtzeit-Kundendaten aktiviert werden kann, muss eine primäre Identität definiert sein. Sie erhalten die Fehlermeldung &quot;Fehlende primäre Identität&quot;, wenn Sie versuchen, ein Schema zu aktivieren, ohne vorher eine primäre Identität zu definieren.
+Damit ein Schema für die Verwendung mit Echtzeit-Kundendaten aktiviert werden kann, muss eine primäre Identität definiert sein. Sie erhalten die Fehlermeldung &quot;Fehlende Primär-Identität&quot;, wenn Sie versuchen, ein Schema zu aktivieren, ohne vorher eine primäre Identität zu definieren.
 
 ![](../images/tutorials/create-schema/missing_primary_identity.png)
 
@@ -285,7 +285,7 @@ Klicken Sie auf **Profil** , und es wird ein Popup angezeigt, in dem Sie aufgefo
 
 Nachdem Sie das Schema &quot;Treuemitglieder&quot;fertig gestellt haben, können Sie das vollständige Schema im Bereich &quot; *Struktur* &quot;des Editors sehen. Klicken Sie auf **Speichern** , und das Schema wird in der Schema-Bibliothek gespeichert, damit es von der Schema-Registrierung aufgerufen werden kann.
 
-Ihr neues Schema kann jetzt verwendet werden, um Daten in Plattform zu erfassen. Denken Sie daran, dass nach Verwendung des Schemas zur Datenerfassung nur noch zusätzliche Änderungen vorgenommen werden dürfen. Weitere Informationen zur Schema-Versionierung finden Sie in den [Grundlagen der Schema-Komposition](../schema/composition.md) .
+Ihr neues Schema kann jetzt verwendet werden, um Daten in die Platform zu erfassen. Denken Sie daran, dass nach Verwendung des Schemas zur Datenerfassung nur noch zusätzliche Änderungen vorgenommen werden dürfen. Weitere Informationen zur Schema-Versionierung finden Sie in den [Grundlagen der Schema-Komposition](../schema/composition.md) .
 
 Das Schema &quot;Treuemitglieder&quot;steht auch zur Ansicht und Verwaltung mit der Schema Registry-API zur Verfügung. Um mit der API zu arbeiten, lesen Sie Beginn im Entwicklerhandbuch für die [Schema-Registrierungs-API](../api/getting-started.md).
 
@@ -295,7 +295,7 @@ Die folgenden Informationen ergänzen das Schema Editor Tutorial.
 
 ### Create a new class {#create-new-class}
 
-Experience Platform bietet die Flexibilität, ein Schema auf der Grundlage einer Klasse zu definieren, die für Ihr Unternehmen individuell ist.
+Experience Platform bietet die Flexibilität, ein Schema auf der Grundlage einer für Ihr Unternehmen spezifischen Klasse zu definieren.
 
 Öffnen Sie das Dialogfeld *Klasse* zuweisen, indem Sie im Schema-Editor im Abschnitt &quot; **Klasse** &quot;auf *Zuweisen* klicken. Wählen Sie im Dialogfeld &quot;Neue Klasse **erstellen&quot;**.
 
