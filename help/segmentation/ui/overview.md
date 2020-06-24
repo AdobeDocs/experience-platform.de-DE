@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Segmentaufbau-Benutzeroberfläche
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2562'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Sie können dann einfach per Drag &amp; Drop [!DNL ExperienceEvents] und [!UICON
 
 ![](../images/segment-builder/events-eventTypes.png)
 
-Standardmäßig werden nur ausgefüllte Schema-Felder aus Ihrem Datenspeicher angezeigt. Dies schließt [!UICONTROL Ereignistyp]ein. Wenn die Liste &quot; [!UICONTROL Ereignistyp] &quot;nicht sichtbar ist oder Sie nur &quot;[!UICONTROL Beliebig]&quot;als [!UICONTROL Ereignistyp]auswählen können, klicken Sie auf das Zahnradsymbol neben &quot; *[!UICONTROL Felder]*&quot;und wählen Sie dann unter &quot;Verfügbare Felder&quot;die Option &quot;Vollständiges XDM-Schema **** ** anzeigen&quot;unter &quot; verfügbare Felder&quot;aus. Klicken Sie erneut auf das Zahnradsymbol, um zur Registerkarte &quot; *[!UICONTROL Felder]* &quot;zurückzukehren, und Sie sollten jetzt mehrere [!UICONTROL Ereignistyp] - und Schema-Felder unabhängig davon, ob sie Daten enthalten oder nicht, Ansicht werden können.
+Standardmäßig werden nur ausgefüllte Schema-Felder aus Ihrem Datenspeicher angezeigt. Dies schließt [!UICONTROL Ereignistyp]ein. Wenn die Liste &quot; [!UICONTROL Ereignistyp] &quot;nicht sichtbar ist oder Sie nur &quot;[!UICONTROL Beliebig]&quot;als [!UICONTROL Ereignistyp]auswählen können, klicken Sie auf das Zahnradsymbol neben &quot; *[!UICONTROL Felder]*&quot;und wählen Sie dann unter &quot;Verfügbare Felder&quot;die Option &quot;Vollständiges XDM-Schema **** ** anzeigen&quot;unter &quot; verfügbare Felder&quot;aus. Klicken Sie erneut auf das Zahnradsymbol, um zur Registerkarte &quot; *[!UICONTROL Felder]* &quot;zurückzukehren. Jetzt sollten Sie mehrere [!UICONTROL Ereignistyp] - und Schema-Felder unabhängig davon, ob sie Daten enthalten oder nicht, Ansicht werden können.
 
 ![](../images/segment-builder/show-populated.png)
 
@@ -165,7 +165,7 @@ Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweis
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Streaming-Segmentierung
+## Streaming-Segmentierung {#streaming-segmentation}
 
 >[!NOTE] Damit Streaming-Segmentierung funktioniert, muss der Kunde die geplante Segmentierung für das Unternehmen aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie im vorherigen Abschnitt [dieses Benutzerhandbuchs](#enable-scheduled-segmentation).
 
@@ -222,7 +222,7 @@ Nachdem Sie Ihr Segment erstellt haben, wird das Segment analysiert, [!DNL Data 
 Der Segmentaufbau bietet einen umfassenden Arbeitsablauf, mit dem Sie marktfähige Audiencen von [!DNL Real-time Customer Profile] Daten isolieren können. Nach dem Lesen dieses Handbuchs sollten Sie jetzt in der Lage sein:
 
 - Erstellen Sie Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Audiencen als Bausteine.
-- Mit der Arbeitsfläche und den Containern des Regelaufbaus können Sie die Reihenfolge steuern, in der Segmentregeln ausgeführt werden.
+- Verwenden Sie die Arbeitsfläche und Container des Regelaufbaus, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
 - Ansicht schätzt die voraussichtliche Audience, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
 - Aktivieren Sie alle Segmentdefinitionen für die geplante Segmentierung.
 - Aktivieren Sie die angegebenen Segmentdefinitionen für die Streaming-Segmentierung.
