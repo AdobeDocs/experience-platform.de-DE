@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Schemas mit der Schema Registry API
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Erstellen eines Schemas mit der Schema Registry API
 
-Die Schema-Registrierung wird verwendet, um auf die Schema-Bibliothek in Adobe Experience Platform zuzugreifen. Die Schema-Bibliothek enthält Ressourcen, die Ihnen von Adobe, Experience Platform-Partnern und Anbietern, deren Anwendungen Sie verwenden, zur Verfügung gestellt werden. Die Registrierung bietet eine Benutzeroberfläche und eine RESTful-API, über die alle verfügbaren Bibliotheksressourcen zugänglich sind.
+Die Schema-Registrierung wird verwendet, um innerhalb der Adobe Experience Platform auf die Schema-Bibliothek zuzugreifen. Die Schema-Bibliothek enthält Ressourcen, die Ihnen von Adobe, Experience Platform-Partnern und Anbietern, deren Anwendungen Sie verwenden, zur Verfügung gestellt werden. Die Registrierung bietet eine Benutzeroberfläche und eine RESTful-API, über die alle verfügbaren Bibliotheksressourcen zugänglich sind.
 
 In diesem Lernprogramm wird die Schema Registry API verwendet, um Sie durch die Schritte zu führen, mit denen Sie ein Schema mithilfe einer Standardklasse erstellen können. Wenn Sie die Benutzeroberfläche in Experience Platform bevorzugen, enthält das [Schema Editor-Tutorial](create-schema-ui.md) eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen im Schema-Editor.
 
@@ -25,15 +25,15 @@ Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe E
 * [Erlebnis-Datenmodell (XDM)-System](../home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
 * [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
 
-In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas für Treuemitglieder beschrieben, in dem die Daten zu den Mitgliedern eines Programms zur Treue von Kunden beschrieben werden. Bevor Sie beginnen, sollten Sie das Schema [](#complete-schema) zu den Treuemitgliedern im Anhang Vorschau haben.
+In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas für Treuemitglieder beschrieben, in dem die Daten zu den Mitgliedern eines Programms zur Treue von Kunden beschrieben werden. Bevor Sie beginnen, möchten Sie vielleicht das Schema [](#complete-schema) zu den Treuemitgliedern im Anhang Vorschau haben.
 
 ## Erstellen eines Schemas mit einer Standardklasse
 
-Ein Schema kann als Entwurf für die Daten betrachtet werden, die Sie in Experience Platform erfassen möchten. Jedes Schema besteht aus einer Klasse und null oder mehr Mixins. Das heißt, Sie müssen kein Mixin hinzufügen, um ein Schema zu definieren, aber in den meisten Fällen wird mindestens ein Mixin verwendet.
+Ein Schema kann als Vorlage für die Daten betrachtet werden, die Sie in die Experience Platform aufnehmen möchten. Jedes Schema besteht aus einer Klasse und null oder mehr Mixins. Das heißt, Sie müssen kein Mixin hinzufügen, um ein Schema zu definieren, aber in den meisten Fällen wird mindestens ein Mixin verwendet.
 
 ### Klasse zuweisen
 
@@ -135,7 +135,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Antwort **
+**Antwort**
 
 Das Antwortformat hängt vom Accept-Header ab, der mit der Anforderung gesendet wird. Experimentieren Sie mit verschiedenen Accept-Headern, um zu sehen, welche am besten Ihren Anforderungen entspricht.
 
@@ -952,9 +952,9 @@ Die Ausführung einer GET-Anforderung zum Nachschlagen des Schemas zeigt jetzt d
 
 ### Identitätsdeskriptor definieren
 
-Schema werden für die Erfassung von Daten in Experience Platform verwendet. Diese Daten werden letztendlich über mehrere Dienste hinweg verwendet, um eine einzelne, einheitliche Ansicht zu erstellen. Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identität&quot;markiert werden. Bei der Datenerfassung werden die Daten in diesen Feldern in das &quot;Identitätsdiagramm&quot;für die betreffende Person eingefügt. Die Diagrammdaten können dann vom [Echtzeit-Kundenservice](../../profile/home.md) und anderen Experience Platform-Diensten aufgerufen werden, um eine zusammengeführte Ansicht der einzelnen Kunden zu bieten.
+Schema werden zur Erfassung von Daten in die Experience Platform verwendet. Diese Daten werden letztendlich über mehrere Dienste hinweg verwendet, um eine einzelne, einheitliche Ansicht zu erstellen. Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identität&quot;markiert werden. Bei der Datenerfassung werden die Daten in diesen Feldern in das &quot;Identitätsdiagramm&quot;für die betreffende Person eingefügt. Die Diagrammdaten können dann von [Echtzeit-Kundenservice](../../profile/home.md) und anderen Experience Platformen aufgerufen werden, um eine zusammengeführte Ansicht der einzelnen Kunden zu erhalten.
 
-Zu den Feldern, die häufig als &quot;Identität&quot;gekennzeichnet werden, gehören: E-Mail-Adresse, Telefonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM-ID oder andere eindeutige ID-Felder.
+Zu den Feldern, die häufig als &quot;Identität&quot;gekennzeichnet werden, gehören: E-Mail-Adresse, Telefonnummer, [Experience Cloud-ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM-ID oder andere eindeutige ID-Felder.
 
 Berücksichtigen Sie alle eindeutigen IDs, die für Ihr Unternehmen spezifisch sind, da es sich auch um gute Identitätsfelder handeln kann.
 
@@ -970,7 +970,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anforderung definiert einen Identitätsdeskriptor im Feld &quot;loyaltyId&quot;. Auf diese Weise wird Experience Platform angewiesen, die eindeutige Mitgliedskennung für das Treueprogramm (in diesem Fall die E-Mail-Adresse des Mitglieds) zu verwenden, um Informationen über die Person zusammenzuführen.
+Die folgende Anforderung definiert einen Identitätsdeskriptor im Feld &quot;loyaltyId&quot;. Dies weist die Experience Platform an, die Unique Loyalty Programm Member ID (in diesem Fall die E-Mail-Adresse des Mitglieds) zu verwenden, um Informationen über die Person zusammenzuführen.
 
 ```SHELL
 curl -X POST \
@@ -1165,11 +1165,11 @@ Die Antwort ist eine gefilterte Liste von Schemas, die nur die beiden Anforderun
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Lernprogramms haben Sie erfolgreich ein Schema sowohl mit Standardmixins als auch mit einem von Ihnen definierten Mixin zusammengestellt. Sie können dieses Schema jetzt verwenden, um einen Datensatz zu erstellen und Datensatzdaten in Adobe Experience Platform zu erfassen.
+Durch Befolgen dieses Lernprogramms haben Sie erfolgreich ein Schema sowohl mit Standardmixins als auch mit einem von Ihnen definierten Mixin zusammengestellt. Sie können dieses Schema jetzt verwenden, um einen Datensatz zu erstellen und Datensatzdaten in die Adobe Experience Platform zu erfassen.
 
 Das vollständige Schema der Treuemitglieder, wie es in diesem Tutorial erstellt wurde, ist im folgenden Anhang verfügbar. Wenn Sie sich das Schema ansehen, können Sie sehen, wie die Mixins zur Gesamtstruktur beitragen und welche Felder für die Datenerfassung verfügbar sind.
 
-Nachdem Sie mehr als ein Schema erstellt haben, können Sie Beziehungen zwischen ihnen mithilfe von Beziehungsdeskriptoren definieren. Weitere Informationen finden Sie im Tutorial zum [Definieren einer Beziehung zwischen zwei Schemas](relationship-api.md) . Ausführliche Beispiele zur Durchführung aller Vorgänge (GET, POST, PUT, PATCH und DELETE) in der Registrierung finden Sie im Entwicklerhandbuch für die [Schema-Registrierung](../api/getting-started.md) , während Sie mit der API arbeiten.
+Nachdem Sie mehr als ein Schema erstellt haben, können Sie Beziehungen zwischen ihnen mithilfe von Beziehungsdeskriptoren definieren. Weitere Informationen finden Sie im Tutorial zum [Definieren einer Beziehung zwischen zwei Schemas](relationship-api.md) . Ausführliche Beispiele zur Durchführung aller Vorgänge (GET, POST, PUT, PATCH und DELETE) in der Registrierung finden Sie im [Schema Registry-Entwicklerhandbuch](../api/getting-started.md) beim Arbeiten mit der API.
 
 ## Anhang {#appendix}
 
