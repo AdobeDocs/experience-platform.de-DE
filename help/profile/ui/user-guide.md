@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Handbuch zum Echtzeit-Profil
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
+source-git-commit: 62ed8892b4f359da3f0368013b5bfd0b9380cc22
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 2%
@@ -54,7 +54,7 @@ Die Anzahl der Profil zeigt die Gesamtzahl der Profil an, die Ihr Unternehmen in
 
 Die Profil-Anzahl umfasst auch Profil mit Attributen (Datensatzdaten) sowie Profil, die nur Zeitreihendaten (Ereignis) enthalten, wie z. B. Adobe Analytics-Profil. Die Anzahl der Profil wird regelmäßig aktualisiert, um eine aktuelle Gesamtanzahl der Profil innerhalb der Platform bereitzustellen.
 
-Wenn die Erfassung von Profilen im Profil Store die Anzahl um mehr als 5 % erhöht oder verringert, wird ein Auftrag zur Aktualisierung der Anzahl ausgelöst. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Anzahl der Profil zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
+Wenn die Erfassung von Datensätzen im Profil Store die Anzahl um mehr als 5 % erhöht oder verringert, wird ein Auftrag zur Aktualisierung der Anzahl ausgelöst. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Anzahl der Profil zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
 
 ### Profile nach Namensraum {#profiles-by-namespace}
 
