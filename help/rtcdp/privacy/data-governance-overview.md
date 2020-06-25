@@ -4,10 +4,10 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
+source-git-commit: 490154c23b0ae764ac30b7e93d42b33d09b8a5d6
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 72%
+source-wordcount: '1056'
+ht-degree: 71%
 
 ---
 
@@ -22,7 +22,7 @@ Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform. Daher w
 
 * [Nutzungsbezeichnungen auf Daten anwenden](#labels)
 * [Richtlinien zur Datennutzung verwalten](#policies)
-* [Einhaltung von Datennutzungsrichtlinien durchsetzen](#enforcement)
+* [Einhaltung von Datennutzungsrichtlinien durchsetzen](#enforce-data-usage-compliance)
 
 ## Nutzungsbezeichnungen auf Daten anwenden {#labels}
 
@@ -47,10 +47,7 @@ Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen k�
 
 Adobe Experience Platform bietet verschiedene **zentrale Richtlinien** für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können in der Benutzeroberfläche angezeigt werden, indem Sie zum Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;navigieren und die Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;auswählen. Detailliertere Anweisungen zum Arbeiten mit Richtlinien in der Benutzeroberfläche finden Sie im Benutzerhandbuch zu [Richtlinien](../../data-governance/policies/user-guide.md) in der Dokumentation zur Experience Platform, einschließlich der Erstellung eigener benutzerdefinierter Richtlinien.
 
-## (Beta) Einhaltung von Datennutzungsrichtlinien durchsetzen {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->Diese Funktion befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Sie kann auf Anfrage aktiviert werden. Dokumentation und Funktionalität können sich ändern.
+## Einhaltung von Datennutzungsrichtlinien durchsetzen {#enforce-data-usage-compliance}
 
 Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Zielgruppensegmenten in der Echtzeit-CDP erzwingt Data Governance automatisch Nutzungsrichtlinien, falls Verstöße auftreten sollten.
 
