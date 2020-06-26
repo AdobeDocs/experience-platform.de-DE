@@ -4,17 +4,17 @@ seo-title: Adobe Experience Platform Web SDK – Rendern von personalisiertem In
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 34%
+source-wordcount: '232'
+ht-degree: 24%
 
 ---
 
 
 # Übersicht über die Personalisierungsoptionen
 
-Das Adobe Experience Platform Web SDK unterstützt die Abfrage der Personalisierungslösungen bei Adobe einschließlich Adobe Zielgruppe. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../../edge/solution-specific/target/flicker-management.md).
+Das Adobe Experience Platform Web SDK unterstützt die Abfrage der Personalisierungslösungen bei Adobe, einschließlich Adobe Target. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../../edge/solution-specific/target/flicker-management.md).
 
 ## Inhalt automatisch wiedergeben
 
@@ -36,7 +36,7 @@ alloy("sendEvent", {
 });
 ```
 
-Die Wiedergabe personalisierter Inhalte erfolgt asynchron, sodass keine Annahme dazu möglich ist, wann ein bestimmtes Inhaltselement Teil der Seite ist.
+Das Rendern personalisierter Inhalte erfolgt asynchron. Daher sollte es keine Annahme geben, wenn ein bestimmtes Inhaltselement Teil der Seite ist.
 
 ## Manuelles Wiedergeben von Inhalten
 
@@ -90,9 +90,10 @@ Dadurch wird eine Liste von Entscheidungen als JSON-Objekt für jede Entscheidun
 }
 ```
 
-{info}Wenn Sie Zielgruppen-Scopes verwenden, werden sie auf dem Server zu mBoxes, dann sind nur sie alle Anforderungen gleichzeitig und nicht einzeln. Die globale Mbox wird immer gesendet.
-{info}
+>[!TIP]
+>
+> Wenn Sie Target-Scopes auf dem Server zu mBoxes werden, sind nur diese alle Anfragen gleichzeitig und nicht einzeln. Die globale Mbox wird immer gesendet.
 
 ### Automatische Inhalte abrufen
 
-Wenn Sie möchten, dass die automatischen `result.decisions` Rendering-Entscheidungen `renderDecisions` auf &quot;false&quot;gesetzt werden, können Sie den speziellen Bereich einschließen `__view__`
+Wenn Sie möchten, dass die automatisch renderbaren Entscheidungen `result.decisions` in den Bericht aufgenommen werden, können Sie `renderDecisions` auf &quot;false&quot;setzen und den speziellen Bereich einschließen `__view__`.
