@@ -1,28 +1,28 @@
 ---
-title: Abrufen der Experience Cloud ID
-seo-title: Adobe Experience Platform Web SDK Abrufen der Experience Cloud ID
+title: Abrufen der Experience Cloud-ID
+seo-title: Adobe Experience Platform Web SDK Experience Cloud-ID abrufen
 description: Erfahren Sie, wie Sie die Adobe Experience Cloud ID abrufen.
 seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud ID abrufen.
 translation-type: tm+mt
-source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '412'
 ht-degree: 10%
 
 ---
 
 
-# Abrufen der Experience Cloud ID
+# Identität - Abrufen der Experience Cloud-ID
 
 Das Adobe Experience Platform Web SDK nutzt den [Adobe-Identitätsdienst](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige ID verfügt, die auf dem Gerät beibehalten wird, damit die Aktivität zwischen den Seiten miteinander verknüpft werden kann.
 
 ## Identität des Ersten
 
-Der ID-Dienst speichert die Identität in einem Cookie in einer Erstanbieterdomäne. Der ID-Dienst versucht, das Cookie mithilfe eines HTTP-Headers in der Domäne einzustellen, wenn dies fehlschlägt, wird der ID-Dienst auf das Setzen von Cookies über JavaScript zurückgreifen. Adobe empfiehlt, dass Sie einen CNAME einrichten, um sicherzustellen, dass Ihre Cookies nicht durch clientseitige ITP-Beschränkungen begrenzt werden.
+Die [!DNL Identity Service] Identität wird in einem Cookie in einer Erstanbieterdomäne gespeichert. Der [!DNL Identity Service] Versuch, das Cookie mit einem HTTP-Header in der Domäne festzulegen. Wenn dies fehlschlägt, [!DNL Identity Service] kehrt das Programm zurück, um Cookies über JavaScript zu setzen. Adobe empfiehlt, dass Sie einen CNAME einrichten, um sicherzustellen, dass Ihre Cookies nicht durch clientseitige ITP-Beschränkungen begrenzt werden.
 
 ## Drittanbieter-Identität
 
-Die ID-Dienste haben die Möglichkeit, eine ID mit einer Drittanbieterdomäne (demdex.net) zu synchronisieren, um die Site-übergreifende Verfolgung zu aktivieren. Wenn dies aktiviert ist, wird die erste Anforderung für einen Besucher (z.B. eine Person ohne ECID) an demdex.net gesendet. Dies geschieht nur in Browsern, die es zulassen (z.B. Chrome) und wird durch den `thirdPartyCookiesEnabled` Parameter in der Konfiguration gesteuert. Wenn Sie diese Funktion deaktivieren möchten, setzen Sie sie alle zusammen `thirdPartyCookiesEnabled` auf &quot;false&quot;.
+Die [!DNL Identity Service] Gruppe kann eine ID mit einer Drittanbieterdomäne (demdex.net) synchronisieren, um die Verfolgung über mehrere Sites hinweg zu ermöglichen. Wenn dies aktiviert ist, wird die erste Anforderung für einen Besucher (z.B. eine Person ohne ECID) an demdex.net gesendet. Dies geschieht nur in Browsern, die es zulassen (z.B. Chrome) und wird durch den `thirdPartyCookiesEnabled` Parameter in der Konfiguration gesteuert. Wenn Sie diese Funktion vollständig deaktivieren möchten, setzen Sie sie `thirdPartyCookiesEnabled` auf &quot;false&quot;.
 
 ## Abrufen der Besucher-ID
 
@@ -30,7 +30,7 @@ Wenn Sie diese eindeutige ID verwenden möchten, verwenden Sie den `getIdentity`
 
 >[!NOTE]
 >
->Diese Methode wird in der Regel bei benutzerdefinierten Lösungen verwendet, bei denen die Experience Cloud ID gelesen werden muss. Sie wird nicht von einer Standardimplementierung verwendet.
+>Diese Methode wird in der Regel bei benutzerdefinierten Lösungen verwendet, bei denen die Experience Cloud-ID gelesen werden muss. Sie wird nicht von einer Standardimplementierung verwendet.
 
 ```javascript
 alloy("getIdentity")
@@ -45,7 +45,7 @@ alloy("getIdentity")
 
 ## Identitäten synchronisieren
 
-Darüber hinaus ermöglicht Ihnen der Identitätsdienst die Synchronisierung Ihrer eigenen IDs mit der ECID mithilfe des `syncIdentity` Befehls.
+Darüber hinaus [!DNL Identity Service] können Sie mit dem Befehl Ihre eigenen IDs mit der ECID synchronisieren `syncIdentity` .
 
 ```javascript
 alloy("syncIdentity",{
@@ -68,7 +68,7 @@ alloy("syncIdentity",{
 | -------- | ------------ | ----------------- |
 | Zeichenfolge | Ja | Keine |
 
-Der Schlüssel für das Objekt ist das Symbol für den [Identitäts-Namensraum](../../identity-service/namespaces.md) . Sie finden dies in der Benutzeroberfläche von Adobe Experience Platform unter Identitäten.
+Der Schlüssel für das Objekt ist das Symbol für den [Identitäts-Namensraum](../../identity-service/namespaces.md) . Sie finden diese in der Benutzeroberfläche der Adobe Experience Platform unter [!UICONTROL Identitäten].
 
 #### `id`
 
@@ -92,7 +92,7 @@ Der Authentifizierungsstatus der ID.
 | -------- | ------------ | ----------------- |
 | Boolesch | optional | false |
 
-Sollte diese Identität als primäres Fragment im einheitlichen Profil verwendet werden. Standardmäßig wird die ECID als primäre ID für den Benutzer festgelegt.
+Bestimmt, ob diese Identität als primäres Fragment im einheitlichen Profil verwendet werden soll. Standardmäßig wird die ECID als primäre ID für den Benutzer festgelegt.
 
 #### `hashEnabled`
 
