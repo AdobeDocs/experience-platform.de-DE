@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
 
 
-# Edge-Ziele und -Projektionen
+# Endpunkte für Edge-Projektionen und Ziele
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und im Zuge von Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten durch die Verwendung von so genannten Kanten. Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht. Adobe-Anwendungen wie Adobe Zielgruppe und Adobe Campaign verwenden beispielsweise Kanten, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an eine Kante geleitet, wobei ein Projektionsziel die Kante definiert, an die die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die an der Kante zur Verfügung gestellt werden. In diesem Handbuch finden Sie detaillierte Anweisungen zur Verwendung der Echtzeit-API für das Profil von Kunden, um mit Edge-Projektionen, einschließlich Zielen und Konfigurationen, zu arbeiten.
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und im Zuge von Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten durch die Verwendung von so genannten Rändern. Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht. Adobe-Anwendungen wie Adobe Target und Adobe Campaign verwenden beispielsweise Kanten, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an eine Kante geleitet, wobei ein Projektionsziel die Kante definiert, an die die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die an der Kante zur Verfügung gestellt werden. In diesem Handbuch finden Sie detaillierte Anweisungen zur Verwendung der Echtzeit-API für das Profil von Kunden, um mit Edge-Projektionen, einschließlich Zielen und Konfigurationen, zu arbeiten.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Real-time Customer Profil API. Bevor Sie fortfahren, lesen Sie sich bitte das Entwicklerhandbuch für [Echtzeit-Profil durch](getting-started.md). Insbesondere enthält der [Abschnitt](getting-started.md#getting-started) &quot;Erste Schritte&quot;des Profil-Entwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
 
 >[!NOTE]
 >Anforderungen, die eine Nutzlast enthalten (POST, PUT, PATCH), erfordern einen `Content-Type` Header. In diesem Dokument `Content-Type` werden mehrere verwendet. Achten Sie besonders auf die Kopfzeilen in den Beispielaufrufen, um sicherzustellen, dass Sie für jede Anforderung die richtige `Content-Type` verwenden.
@@ -292,7 +292,7 @@ Die Antwort enthält die aktualisierten Details zum Ziel, einschließlich der ID
 
 ### Ziel löschen
 
-Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem eine DELETE-Anforderung an den `/config/destinations` Endpunkt gesendet wird und die ID des Ziels, das Sie löschen möchten, im Anforderungspfad enthalten ist.
+Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem Sie eine DELETE-Anforderung an den `/config/destinations` Endpunkt richten und die ID des Ziels, das Sie löschen möchten, im Anforderungspfad einschließen.
 
 >[!CAUTION]
 >Die API-Antwort auf die Löschanforderung erfolgt sofort, die tatsächlichen Änderungen an den Daten an den Rändern werden jedoch asynchron ausgeführt. Das heißt, die Profil-Daten werden von allen Kanten entfernt (die im Projektionsziel `dataCenters` angegeben sind), aber der Vorgang dauert einige Zeit.
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Anfrage**
 
-Die folgende Anforderung Liste alle Projektionskonfigurationen, die mit der Experience Data Model Schema-Klasse, XDM Individuelles Profil, verknüpft sind. Für weitere Informationen über XDM und seine Rolle innerhalb der Plattform, lesen Sie bitte zunächst die [XDM System Übersicht](../../xdm/home.md).
+Die folgende Anforderung Liste alle Projektionskonfigurationen, die mit der Experience Data Model Schema-Klasse, XDM Individuelles Profil, verknüpft sind. Für weitere Informationen über XDM und seine Rolle in der Platform, bitte lesen Sie zunächst die [XDM-Systemübersicht](../../xdm/home.md).
 
 ```shell
 curl -X GET \
@@ -639,4 +639,4 @@ Gibt nur die Werte der Felder `type` und `city` Felder für jedes Element im `ad
 
 ## Nächste Schritte
 
-In diesem Handbuch werden die Schritte zum Konfigurieren von Edge-Projektionen und -Zielen beschrieben, einschließlich der richtigen Formatierung des `selector` Parameters. Sie können jetzt neue Edgeziele und Projektionen erstellen, die speziell auf die Anforderungen Ihres Unternehmens zugeschnitten sind. Weitere über die Profil-API verfügbare Aktionen finden Sie im Entwicklerhandbuch [zur](getting-started.md)Echtzeit-Client-Profil-API.
+In diesem Handbuch werden die Schritte zum Konfigurieren von Projektionen und Zielen beschrieben, einschließlich der richtigen Formatierung des `selector` Parameters. Sie können jetzt neue Projektionsziele und -konfigurationen erstellen, die den Anforderungen Ihres Unternehmens entsprechen.
