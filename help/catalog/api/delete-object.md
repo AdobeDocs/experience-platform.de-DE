@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Löschen eines Objekts
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Sie können ein Katalogobjekt löschen, indem Sie dessen ID im Pfad einer DELETE-Anforderung angeben.
 
->[!WARNING] Gehen Sie beim Löschen von Objekten besonders vorsichtig vor, da dies nicht rückgängig gemacht werden kann und andernorts in der Experience Platform zu unerwarteten Änderungen führen kann.
+>[!WARNING] Gehen Sie beim Löschen von Objekten besonders vorsichtig vor, da dies nicht rückgängig gemacht werden kann und andernorts in der Experience Platform zu Umbrüchen führen kann.
 
 **API-Format**
 
@@ -24,7 +24,9 @@ Sie können ein Katalogobjekt löschen, indem Sie dessen ID im Pfad einer DELETE
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] Der `DELETE /batches/{ID}` Endpunkt wurde nicht mehr unterstützt. Um einen Stapel zu löschen, sollten Sie die [Stapelverarbeitungs-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)verwenden.
+>[!IMPORTANT]
+>
+>Der `DELETE /batches/{ID}` Endpunkt wurde nicht mehr unterstützt. Um einen Stapel zu löschen, sollten Sie die [Stapelverarbeitungs-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)verwenden.
 
 | Parameter | Beschreibung |
 | --- | --- |
