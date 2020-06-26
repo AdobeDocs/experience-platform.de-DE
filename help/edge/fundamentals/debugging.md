@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK – Debugging
 description: Erfahren Sie, wie Sie das Debugging im Experience Platform Web SDK aktivieren
 seo-description: Erfahren Sie, wie Sie das Debugging im Experience Platform Web SDK aktivieren
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 100%
+source-wordcount: '324'
+ht-degree: 91%
 
 ---
 
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >Dies ermöglicht das Debugging für alle Nutzer der Web-Seite und nicht nur für Ihren persönlichen Browser.
 
 ## Debugging mit dem Befehl „Debuggen“ aktivieren
@@ -61,7 +62,7 @@ http://example.com/?alloy_debug=true
 
 ## Priorität und Dauer
 
-Wenn das Debugging über den `debug`-Befehl oder den Abfragezeichenfolgen-Parameter festgelegt wird, setzt er alle `debug`-Optionen, die im `configure`-Befehl eingestellt sind, außer Kraft. In diesen beiden Fällen bleibt das Debugging auch während der Dauer der Sitzung umgeschaltet. Wenn Sie also das Debugging mit dem Debugging-Befehl oder dem Abfragezeichenfolgen-Parameter aktivieren, bleibt es aktiviert, bis einer der folgenden Schritte ausgeführt wird:
+Wenn das Debugging über den `debug`-Befehl oder den Abfragezeichenfolgen-Parameter festgelegt wird, setzt er alle `debug`-Optionen, die im `configure`-Befehl eingestellt sind, außer Kraft. In diesen beiden Fällen bleibt das Debugging auch für die Dauer der Sitzung aktiviert. Wenn Sie also das Debugging mit dem Debugging-Befehl oder dem Abfragezeichenfolgen-Parameter aktivieren, bleibt es aktiviert, bis einer der folgenden Schritte ausgeführt wird:
 
 * Beenden der Sitzung
 * Sie führen den `debug`-Befehl aus
