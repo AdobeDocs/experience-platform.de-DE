@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -14,26 +14,26 @@ ht-degree: 0%
 
 # Verarbeitung von Datenschutzanfragen im Data Lake
 
-Der Adobe Experience Platform-Datenschutzdienst verarbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt.
+Adobe Experience Platform Privacy Service verarbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt.
 
 In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanforderungen für im Data Lake gespeicherte Kundendaten behandelt.
 
 ## Erste Schritte
 
-Es wird empfohlen, die folgenden Experience Platform-Dienste zu verstehen, bevor Sie dieses Handbuch lesen:
+Es wird empfohlen, die folgenden Experience Platformen zu verstehen, bevor Sie dieses Handbuch lesen:
 
-* [Datenschutzdienst](../privacy-service/home.md): Verwaltet Kundenanforderungen für den Zugriff auf, die Einstellung des Verkaufs oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
-* [Katalogdienst](home.md): Das Datensatzsystem für die Position und die Lineage von Daten in Experience Platform. Stellt eine API bereit, mit der die Metadaten des Datensatzes aktualisiert werden können.
+* [Privacy Service](../privacy-service/home.md): Verwaltet Kundenanforderungen für den Zugriff auf, die Einstellung des Verkaufs oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
+* [Katalogdienst](home.md): Das Datensatzsystem für die Datenposition und -linie innerhalb der Experience Platform. Stellt eine API bereit, mit der die Metadaten des Datensatzes aktualisiert werden können.
 * [Erlebnis-Datenmodell (XDM)-System](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
 * [Identitätsdienst](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 
 ## Identitäts-Namensräume {#namespaces}
 
-Der Identitätsdienst für Adobe Experience Platform verbindet Daten zur Kundenidentität über Systeme und Geräte hinweg. Der Identitätsdienst nutzt **Identitätskennungen** , um einen Kontext für Identitätswerte bereitzustellen, indem er sie mit ihrem System der Herkunft verknüpft. Ein Namensraum kann ein allgemeines Konzept wie eine E-Mail-Adresse (&quot;E-Mail&quot;) oder die Identität einer bestimmten Anwendung zuordnen, z. B. einer Adobe Advertising Cloud ID (&quot;AdCloud&quot;) oder einer Adobe-Zielgruppe-ID (&quot;TNTID&quot;).
+Der Identitätsdienst für Adobe Experience Platformen überbrückt Identitätsdaten von Kunden über Systeme und Geräte hinweg. Der Identitätsdienst nutzt **Identitätskennungen** , um einen Kontext für Identitätswerte bereitzustellen, indem er sie mit ihrem System der Herkunft verknüpft. Ein Namensraum kann ein allgemeines Konzept wie eine E-Mail-Adresse (&quot;E-Mail&quot;) oder die Identität einer bestimmten Anwendung zuordnen, z. B. einer Adobe-Advertising Cloud-ID (&quot;AdCloud&quot;) oder einer Adobe Target-ID (&quot;TNTID&quot;).
 
 Der Identitätsdienst verwaltet einen Store von global definierten (Standard-) und benutzerdefinierten (benutzerdefinierten) Identitäts-Namensräumen. Standardmäßige Namensraum stehen für alle Unternehmen zur Verfügung (z. B. &quot;E-Mail&quot;und &quot;ECID&quot;), während Ihr Unternehmen benutzerdefinierte Namensraum erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
-Weitere Informationen zu Identitäts-Namensräumen in Experience Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+Weitere Informationen zu Identitäts-Namensräumen in der Experience Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
 
 ## Hinzufügen von Identitätsdaten zu Datensätzen
 
@@ -43,7 +43,9 @@ Beim Erstellen von Datenschutzanforderungen für den Data Lake müssen für jede
 
 In diesem Abschnitt werden die Schritte zum Hinzufügen eines Identitätsdeskriptors zum XDM-Schema eines vorhandenen Datensatzes beschrieben. Wenn Sie bereits über einen Datensatz mit einem Identitätsdeskriptor verfügen, können Sie mit dem [nächsten Abschnitt](#nested-maps)fortfahren.
 
->[!IMPORTANT] Berücksichtigen Sie bei der Entscheidung, welche Schema-Felder als Identitäten festgelegt werden sollen, die [Einschränkungen bei der Verwendung verschachtelter Kartenfelder](#nested-maps).
+>[!IMPORTANT]
+>
+>Berücksichtigen Sie bei der Entscheidung, welche Schema-Felder als Identitäten festgelegt werden sollen, die [Einschränkungen bei der Verwendung verschachtelter Kartenfelder](#nested-maps).
 
 Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem DataSet-Schema:
 
@@ -52,7 +54,7 @@ Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem Data
 
 ### Verwenden der Benutzeroberfläche {#identity-ui}
 
-In der Benutzeroberfläche von Experience Platform können Sie Ihre vorhandenen XDM-Schema mit dem Arbeitsbereich _[!UICONTROL Schemas]_bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum[Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field)im Schema-Editor-Lernprogramm.
+In der Benutzeroberfläche &quot;Experience Platform&quot;können Sie mit dem Arbeitsbereich &quot; _[!UICONTROL Schemas]_&quot;Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum[Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field)im Schema-Editor-Lernprogramm.
 
 Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt zum [Senden von Datenschutzanforderungen](#submit)fortfahren.
 
@@ -100,7 +102,7 @@ curl -X POST \
 | `xdm:sourceSchema` | Die eindeutige URI-ID des XDM-Schemas Ihres Datensatzes. |
 | `xdm:sourceVersion` | Die Version des XDM-Schemas, die in `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Der Pfad zum Schema, auf das der Deskriptor angewendet wird. |
-| `xdm:namespace` | Einer der vom Datenschutzdienst erkannten [Identitätskennungen](../privacy-service/api/appendix.md#standard-namespaces) oder ein benutzerdefinierter Namensraum, der von Ihrem Unternehmen definiert wird. |
+| `xdm:namespace` | Einer der vom Privacy Service erkannten [Identitäts-Namensraum](../privacy-service/api/appendix.md#standard-namespaces) oder ein von Ihrem Unternehmen definierter benutzerspezifischer Namensraum. |
 | `xdm:property` | Entweder &quot;xdm:id&quot;oder &quot;xdm:code&quot;, je nach Namensraum, der unter `xdm:namespace`verwendet wird. |
 | `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn &quot;true&quot;, bedeutet dies, dass das Feld eine primäre Identität ist. Schema dürfen nur eine primäre Identität enthalten. Die Standardeinstellung lautet &quot;false&quot;(falsch), wenn sie nicht enthalten ist. |
 
@@ -124,9 +126,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und die Details des ne
 
 ## Einreichen von Anträgen {#submit}
 
->[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Data Lake formatieren. Es wird dringend empfohlen, die Dokumentation der Benutzeroberfläche [des](../privacy-service/ui/overview.md) Datenschutzdienstes oder der [Datenschutzdienst-API](../privacy-service/api/getting-started.md) zu lesen, um die vollständigen Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
+>[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Data Lake formatieren. Es wird dringend empfohlen, die Dokumentation zur Benutzeroberfläche [des](../privacy-service/ui/overview.md) Privacy Service oder zur [Privacy Service-API](../privacy-service/api/getting-started.md) zu lesen, um die Grundlagen zum Senden eines Datenschutzauftrags zu erläutern, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
 
-Im folgenden Abschnitt wird beschrieben, wie Sie mithilfe der Benutzeroberfläche oder API des Datenschutzdienstes Datenschutzanforderungen für den Data Lake durchführen.
+Im folgenden Abschnitt wird beschrieben, wie Sie mithilfe der Benutzeroberfläche oder API des Privacy Service Datenschutzanforderungen für den Data Lake durchführen.
 
 ### Verwenden der Benutzeroberfläche
 
@@ -183,15 +185,15 @@ curl -X POST \
 
 ## Anforderungsverarbeitung löschen
 
-Wenn Experience Platform eine Löschanforderung vom Datenschutzdienst erhält, sendet Platform eine Bestätigung an den Datenschutzdienst, dass die Anforderung empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake entfernt. Während dieses siebentägigen Fensters werden die Daten weich gelöscht und stehen daher keinem Plattformdienst zur Verfügung.
+Wenn die Experience Platform eine Löschanfrage von Privacy Service erhält, sendet die Platform eine Bestätigung an den Privacy Service, dass die Anforderung eingegangen ist und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake entfernt. Während dieses siebentägigen Fensters werden die Daten weich gelöscht und stehen daher keinem Platform-Dienst zur Verfügung.
 
-In zukünftigen Versionen sendet Platform eine Bestätigung an den Datenschutzdienst, nachdem die Daten physisch gelöscht wurden.
+In zukünftigen Versionen sendet Platform eine Bestätigung an Privacy Service, nachdem die Daten physisch gelöscht wurden.
 
 ## Nächste Schritte
 
 Durch das Lesen dieses Dokuments wurden Sie zu den wichtigen Konzepten der Verarbeitung von Datenschutzanforderungen für den Data Lake vorgestellt. Es wird empfohlen, die Dokumentation in diesem Handbuch weiter zu lesen, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Anweisungen zur Verarbeitung von Datenschutzanforderungen für den Profil Store finden Sie im Dokument zur Verarbeitung von [Datenschutzanforderungen für Echtzeit-Kundendaten](../profile/privacy.md) .
+Anweisungen zur Verarbeitung von Datenschutzanforderungen für den Profil Store finden Sie im Dokument zur Verarbeitung von [Datenschutzanfragen für Echtzeit-Kundendaten](../profile/privacy.md) .
 
 ## Anhang
 
