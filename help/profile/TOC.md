@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zum Echtzeit-Profil
 translation-type: tm+mt
-source-git-commit: 59831f5c2445f65371d1897f66dfc45507a9955c
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '81'
 ht-degree: 25%
 
 ---
@@ -14,14 +14,15 @@ ht-degree: 25%
 # Echtzeit-Kundenprofil {#profile}
 
 * [Profil – Übersicht](home.md)
-* Profil-API {#api}
+* Entwicklerhandbuch für die Profil-API {#api}
+   * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [(Alpha) Berechnete Attribute](api/computed-attributes.md)
    * [Edge-Prognosen](api/edge-projections.md)
    * [Entitäten (Profil-Zugriff)](api/entities.md)
    * [Zusammenführungsrichtlinien](api/merge-policies.md)
    * [Profil-Systemaufträge (Anforderungen löschen)](api/profile-system-jobs.md)
-* Profil-Benutzeroberfläche {#ui}
+* Benutzeroberflächen-Handbücher {#ui}
    * [Profil-Benutzerhandbuch](ui/user-guide.md)
    * [Richtlinien zusammenführen - Benutzerhandbuch](ui/merge-policies.md)
 * Tutorials {#tutorials}
@@ -30,4 +31,4 @@ ht-degree: 25%
    * [Weitere Übungen](https://docs.adobe.com/content/help/de-DE/experience-platform/tutorials/home.html)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
-* [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
+* [Versionshinweise zur Platform](https://www.adobe.com/go/platform-release-notes-en)
