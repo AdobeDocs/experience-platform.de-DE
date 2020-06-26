@@ -4,23 +4,21 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1690'
 ht-degree: 1%
 
 ---
 
 
-# Entitäten (Profil-Zugriff)
+# Entitätsendpunkt (Profil-Zugriff)
 
-Mit der Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Daten aus dem Echtzeit-Profil von Kunden zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten zugreifen, die häufiger als &quot;Profil&quot;bezeichnet werden. Weitere Informationen zum Zugriff auf Profil-Daten über die Plattform-Benutzeroberfläche finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
+Adobe Experience Platform ermöglicht Ihnen den Zugriff auf Echtzeit-Kundendaten mithilfe von RESTful-APIs oder der Benutzeroberfläche. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten zugreifen, die häufiger als &quot;Profil&quot;bezeichnet werden. Weitere Informationen zum Zugriff auf Profil über die Benutzeroberfläche der Platform finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Real-time Customer Profil API. Bevor Sie fortfahren, lesen Sie bitte das Entwicklerhandbuch [zur](getting-started.md)Echtzeit-Customer Profil API.
-
-Insbesondere enthält der [Abschnitt](getting-started.md#getting-started) &quot;Erste Schritte&quot;des Profil-Entwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
 
 ## Zugriff auf Profil-Daten nach Identität
 
@@ -776,7 +774,7 @@ Mithilfe dieser Nutzlast im Anforderungstext können Sie eine zusätzliche POST-
 
 ## Zugriff auf Zeitreihen-Ereignis in mehreren Schemas
 
-Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor verbunden sind. Der folgende Beispiel-API-Aufruf geht davon aus, dass zwischen zwei Schemas bereits eine Beziehung definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [Unterhandbuch](../../xdm/api/descriptors.md)zur Schema Registry API-Entwicklerhandbuch.
+Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor verbunden sind. Der folgende Beispiel-API-Aufruf geht davon aus, dass zwischen zwei Schemas bereits eine Beziehung definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im Handbuch zur Schema Registry API für Entwickler- [Deskriptoren-Endpunkt-Handbuch](../../xdm/api/descriptors.md).
 
 Sie können Parameter für die Abfrage in den Anforderungspfad einbeziehen, um anzugeben, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, die durch ein kaufmännisches Und (&amp;) getrennt sind. Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrage Parameter](#query-parameters) im Anhang.
 
@@ -886,7 +884,7 @@ Die Ergebnisse werden beim Abrufen von Zeitreihen-Ereignissen paginiert. Wenn si
 
 ## Nächste Schritte
 
-In diesem Handbuch haben Sie erfolgreich auf die Datenfelder, Profil und Zeitreihendaten zum Echtzeit-Profil von Kunden zugegriffen. Informationen zum Zugriff auf andere in der Plattform gespeicherte Datenressourcen finden Sie in der Übersicht über den [Datenzugriff](../../data-access/home.md).
+In diesem Handbuch haben Sie erfolgreich auf die Datenfelder, Profil und Zeitreihendaten zum Echtzeit-Profil von Kunden zugegriffen. Informationen zum Zugriff auf andere in der Platform gespeicherte Datenressourcen finden Sie in der Übersicht über den [Datenzugriff](../../data-access/home.md).
 
 ## Anhang {#appendix}
 
