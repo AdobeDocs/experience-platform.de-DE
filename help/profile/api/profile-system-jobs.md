@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1501'
 ht-degree: 2%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 2%
 
 # Profil-Systemaufträge (Anforderungen löschen)
 
-Mit der Adobe Experience Platform können Sie Daten aus mehreren Quellen erfassen und stabile Profil für einzelne Kunden erstellen. Daten, die in Platform aufgenommen werden, werden im Data Lake sowie im Echtzeit-Kundendatenspeicher gespeichert. Gelegentlich kann es erforderlich sein, einen Datensatz oder Stapel aus dem Profil-Store zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dies erfordert die Verwendung der Echtzeit-Client-Profil-API zum Erstellen eines Profil-Systemauftrags (auch als &quot;Löschanforderung&quot;bezeichnet), der bei Bedarf auch modifiziert, überwacht oder entfernt werden kann.
+Mit Adobe Experience Platform können Sie Daten aus mehreren Quellen erfassen und stabile Profil für einzelne Kunden erstellen. Daten, die in die Platform aufgenommen werden, werden im Data Lake sowie im Echtzeit-Kundendatenspeicher gespeichert. Gelegentlich kann es erforderlich sein, einen Datensatz oder Stapel aus dem Profil Store zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dies erfordert die Verwendung der Echtzeit-Client-Profil-API zum Erstellen eines Profil-Systemauftrags (auch als &quot;Löschanforderung&quot;bezeichnet), der bei Bedarf auch modifiziert, überwacht oder entfernt werden kann.
 
 >[!NOTE]
 >Wenn Sie versuchen, Datasets oder Stapel aus dem Data Lake zu löschen, finden Sie Anweisungen in der Übersicht über den [Katalogdienst](../../catalog/home.md) .
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Real-time Customer Profil API. Bevor Sie fortfahren, lesen Sie bitte das Entwicklerhandbuch [zur](getting-started.md)Echtzeit-Customer Profil API. Insbesondere enthält der [Abschnitt](getting-started.md#getting-started) &quot;Erste Schritte&quot;des Profil-Entwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
 
 ## Ansichten löschen
 
@@ -93,7 +93,7 @@ Die Antwort enthält ein Array mit den untergeordneten Elementen mit einem Objek
 |---|---|
 | _page.count | Die Gesamtanzahl der Anforderungen. Diese Antwort wurde für den Weltraum abgeschnitten. |
 | _page.next | Wenn eine zusätzliche Ergebnisseite vorhanden ist, wird die nächste Ergebnisseite Ansicht, indem der ID-Wert in einer [Suchanfrage](#view-a-specific-delete-request) durch den bereitgestellten Wert &quot;next&quot;ersetzt wird. |
-| jobType | Der Typ des zu erstellenden Auftrags. In diesem Fall wird immer &quot;LÖSCHEN&quot;zurückgegeben. |
+| jobType | Der Typ des zu erstellenden Auftrags. In diesem Fall wird immer &quot;DELETE&quot;zurückgegeben. |
 | status | Der Status der Löschanforderung. Mögliche Werte sind &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
 | Metriken | Ein Objekt, das die Anzahl der verarbeiteten Datensätze (&quot;recordsProcessing&quot;) und die Zeit in Sekunden, die die Anforderung verarbeitet wurde, oder die Dauer der Anforderung (&quot;timeTakenInSec&quot;) enthält. |
 
@@ -103,10 +103,10 @@ Die Initiierung einer neuen Löschanforderung erfolgt über eine POST-Anforderun
 
 ### Löschen eines Datensatzes
 
-Um einen Datensatz zu löschen, muss die DataSet-ID im Hauptteil der POST-Anforderung enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. Mit Experience Platform können Sie Datensätze basierend auf Schemas aus Datensatz- und Zeitreihen löschen.
+Um einen Datensatz zu löschen, muss die DataSet-ID im Hauptteil der POST-Anforderung enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. Mit der Experience Platform können Sie Datensätze basierend auf Schemas aus Datensatz- und Zeitreihen löschen.
 
 >[!CAUTION]
-> Beim Versuch, einen Profil-aktivierten Datensatz mithilfe der Experience Platform-Benutzeroberfläche zu löschen, ist der Datensatz für die Erfassung deaktiviert, wird jedoch erst gelöscht, wenn mit der API eine Löschanforderung erstellt wurde. Weitere Informationen finden Sie im [Anhang](#appendix) zu diesem Dokument.
+> Beim Versuch, einen Profil-aktivierten Datensatz mithilfe der Benutzeroberfläche &quot;Experience Platform&quot;zu löschen, ist der Datensatz für die Erfassung deaktiviert, wird jedoch erst gelöscht, wenn mit der API eine Löschanforderung erstellt wurde. Weitere Informationen finden Sie im [Anhang](#appendix) zu diesem Dokument.
 
 **API-Format**
 
@@ -269,7 +269,7 @@ Die Antwort enthält die Details der Löschanforderung, einschließlich des aktu
 
 | Eigenschaften | Beschreibung |
 |---|---|
-| jobType | Der Typ des zu erstellenden Auftrags, in diesem Fall wird immer &quot;LÖSCHEN&quot;zurückgegeben. |
+| jobType | Der Typ des zu erstellenden Auftrags, in diesem Fall wird immer &quot;DELETE&quot;zurückgegeben. |
 | status | Der Status der Löschanforderung. Mögliche Werte: &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;FEHLER&quot;. |
 | Metriken | Ein Array, das die Anzahl der verarbeiteten Datensätze (&quot;recordsProcessing&quot;) und die Zeit in Sekunden, in der die Anforderung verarbeitet wurde, oder die Dauer der Anforderung (&quot;timeTakenInSec&quot;) enthält. |
 
@@ -277,7 +277,7 @@ Sobald der Löschanforderungsstatus &quot;ABGESCHLOSSEN&quot;ist, können Sie be
 
 ## Löschen einer Anforderung
 
-Mit Experience Platform können Sie eine vorherige Anforderung löschen. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Löschauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängen geblieben ist. Um eine Löschanforderung zu entfernen, können Sie eine DELETE-Anforderung an den `/system/jobs` Endpunkt ausführen und die ID der Löschanforderung einschließen, die Sie in den Anforderungspfad entfernen möchten.
+Mit der Experience Platform können Sie eine vorherige Anforderung löschen. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Löschauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängen geblieben ist. Um eine Löschanforderung zu entfernen, können Sie eine DELETE-Anforderung an den `/system/jobs` Endpunkt ausführen und die ID der Löschanforderung einschließen, die Sie in den Anforderungspfad entfernen möchten.
 
 **API-Format**
 
@@ -306,15 +306,15 @@ Bei einer erfolgreichen Löschanforderung werden HTTP-Status 200 (OK) und ein le
 
 ## Nächste Schritte
 
-Da Sie nun wissen, wie Sie Datasets und Stapel aus dem Profil Store in Experience Platform löschen, können Sie Daten, die irrtümlicherweise hinzugefügt wurden oder die Ihr Unternehmen nicht mehr benötigt, problemlos löschen. Bitte beachten Sie, dass eine Löschanforderung nicht rückgängig gemacht werden kann. Daher sollten Sie nur Daten löschen, die Sie sicher sind, dass Sie jetzt nicht mehr benötigen und in Zukunft nicht mehr benötigen.
+Da Sie nun wissen, wie Sie innerhalb der Experience Platform Daten und Stapel aus dem Profil Store löschen, können Sie Daten, die irrtümlicherweise hinzugefügt wurden oder die Ihr Unternehmen nicht mehr benötigt, problemlos löschen. Bitte beachten Sie, dass eine Löschanforderung nicht rückgängig gemacht werden kann. Daher sollten Sie nur Daten löschen, die Sie sicher sind, dass Sie jetzt nicht mehr benötigen und in Zukunft nicht mehr benötigen.
 
 ## Anhang {#appendix}
 
 Die folgenden Informationen ergänzen den Vorgang des Löschens eines Datensatzes aus dem Profil-Store.
 
-### Löschen eines Datensatzes mithilfe der Benutzeroberfläche der Experience Platform
+### Löschen eines Datensatzes mithilfe der Benutzeroberfläche &quot;Experience Platform&quot;
 
-Wenn Sie mit der Benutzeroberfläche von Experience Platform einen zum Profil aktivierten Datensatz löschen, wird ein Dialogfeld mit der Frage angezeigt: &quot;Sind Sie sicher, dass Sie diesen Datensatz aus dem Experience Data Lake löschen möchten? Verwenden Sie die API &quot;Profil systems jobs&quot;, um diesen Datensatz aus dem Profil Service zu löschen.&quot;
+Wenn Sie mit der Benutzeroberfläche &quot;Experience Platform&quot;einen zum Profil aktivierten Datensatz löschen, wird ein Dialogfeld mit der Frage angezeigt: &quot;Sind Sie sicher, dass Sie diesen Datensatz aus dem Experience Data Lake löschen möchten? Verwenden Sie die API &quot;Profil-Systemaufträge&quot;, um diesen Datensatz aus dem Profil-Dienst zu löschen.&quot;
 
 Wenn Sie in der Benutzeroberfläche auf &quot; **Löschen** &quot;klicken, wird der Datensatz zur Erfassung deaktiviert. Der Datensatz wird jedoch NICHT automatisch im Backend gelöscht. Um den Datensatz dauerhaft zu löschen, muss eine Löschanforderung manuell mithilfe der Schritte in diesem Handbuch zum [Erstellen einer Löschanforderung](#create-a-delete-request)erstellt werden.
 
