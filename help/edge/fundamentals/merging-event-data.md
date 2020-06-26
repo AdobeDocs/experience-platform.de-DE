@@ -4,10 +4,10 @@ seo-title: Zusammenführen von Adobe Experience Platform Web SDK-Ereignisdaten
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisdaten zusammenführen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisdaten zusammenführen
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 95%
+source-wordcount: '411'
+ht-degree: 41%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->Diese Funktion befindet sich noch in der Entwicklung, sodass nicht alle Lösungen diese Daten zusammenführen können.
+>Diese Funktion befindet sich noch in der Entwicklung. Nicht alle Lösungen können Ereignis-Daten zusammenführen, wie auf dieser Seite beschrieben.
 
 Manchmal sind nicht alle Daten verfügbar, wenn ein Ereignis auftritt. Möglicherweise möchten Sie die _vorhandenen_ Daten erfassen, damit sie nicht verloren gehen, wenn der Nutzer beispielsweise den Browser schließt. Vielleicht möchten Sie aber auch alle Daten einbeziehen, die später verfügbar werden.
 
@@ -58,15 +58,15 @@ alloy("sendEvent", {
 });
 ```
 
-In diesem Beispiel werden durch die Übergabe desselben Werts für die Ereigniszusammenführungs-ID an beide Ereignisbefehle die Daten im zweiten Ereignisbefehl mit Daten angereichert, die zuvor beim ersten Ereignisbefehl gesendet wurden. In Experience Data Platform wird ein Datensatz für jeden Ereignisbefehl erstellt, während des Reportings werden die Datensätze jedoch anhand der Ereigniszusammenführungs-ID verknüpft und als ein Ereignis angezeigt.
+By passing the same `eventMergeID` value to both event commands in this example, the data in the second event command is augmented to data previously sent on the first event command. A record for each event command is created in the Experience Data Platform, but during reporting the records are joined together using the `eventMergeID` and appear as a single event.
 
-Wenn Sie Daten zu einem bestimmten Ereignis an Drittanbieter senden, können Sie auch dieselbe Ereigniszusammenführungs-ID für diese Daten angeben. Wenn Sie später die Daten von Drittanbietern in Adobe Experience Platform importieren, wird die Ereigniszusammenführungs-ID verwendet, um alle Daten zusammenzuführen, die aufgrund des diskreten Ereignisses auf Ihrer Web-Seite erfasst wurden.
+If you are sending data about a particular event to third-party providers, you can include the same `eventMergeID` with that data as well. Later, if you choose to import the third-party data into the Adobe Experience Platform, `eventMergeID` will be used to merge together all data that was collected as a result of the discrete event that occurred on your webpage.
 
-## Generieren einer Ereigniszusammenführungs-ID
+## Generieren einer `eventMergeID`
 
-Der Wert für die Ereigniszusammenführungs-ID kann eine beliebige Zeichenfolge sein. Beachten Sie jedoch, dass alle Ereignisse, die mit derselben ID gesendet werden, als ein einziges Ereignis gemeldet werden. Achten Sie daher darauf, Eindeutigkeit zu erzwingen, wenn Ereignisse nicht zusammengeführt werden sollen. Wenn Sie möchten, dass das SDK in Ihrem Namen eine eindeutige Ereigniszusammenführungs-ID generiert (entsprechend der allgemein verwendeten [UUID v4-Spezifikation](https://www.ietf.org/rfc/rfc4122.txt)), können Sie dafür den `createEventMergeId`-Befehl verwenden.
+The `eventMergeID` value can be any string you choose, but remember that all events sent using the same ID are reported as a single event, so be careful to enforce uniqueness when events should not be merged. If you would like the SDK to generate a unique `eventMergeID` on your behalf (following the widely-adopted [UUID v4 specification](https://www.ietf.org/rfc/rfc4122.txt)), you can use the `createEventMergeId` command to do so.
 
-Wie bei allen Befehlen wird ein Promise zurückgegeben, da Sie den Befehl ausführen können, bevor das SDK geladen wurde. Das Promise wird so bald wie möglich mit einer eindeutigen Ereigniszusammenführungs-ID aufgelöst. Sie können wie folgt warten, bis das Promise aufgelöst ist, bevor Sie Daten an den Server senden:
+Wie bei allen Befehlen wird ein Promise zurückgegeben, da Sie den Befehl ausführen können, bevor das SDK geladen wurde. The promise will be resolved with a unique `eventMergeID` as soon as possible. Sie können wie folgt warten, bis das Promise aufgelöst ist, bevor Sie Daten an den Server senden:
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
@@ -110,7 +110,7 @@ eventMergeIdPromise.then(function(results) {
 });
 ```
 
-Gehen Sie genauso vor, wenn Sie aus anderen Gründen auf die Ereigniszusammenführungs-ID zugreifen möchten (beispielsweise, um diese an einen Drittanbieter zu senden):
+Follow this same pattern if you would like access to the `eventMergeID` for other reasons (for example, to send it to a third-party provider):
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
