@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Handbuch zum Echtzeit-Profil
 topic: guide
 translation-type: tm+mt
-source-git-commit: 62ed8892b4f359da3f0368013b5bfd0b9380cc22
+source-git-commit: 59dff7687f8a0c5b5084eb1ce7dd222cc18d8dbf
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 2%
@@ -60,7 +60,7 @@ Wenn die Erfassung von Datensätzen im Profil Store die Anzahl um mehr als 5 % e
 
 Die Metrik &quot; *Profil nach Namensraum* &quot;zeigt die Gesamtanzahl und Unterteilung der Namensraum für alle zusammengeführten Profil im Profil Store an. Die Gesamtanzahl der Profil nach Namensraum (d. h. das Addieren der für jeden Namensraum angezeigten Werte) ist immer höher als die Metrik für die Anzahl der Profil, da ein Profil mit mehreren Namensräumen verknüpft sein könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft.
 
-Ähnlich wie bei der Metrik für die [Profil-Anzahl](#profile-count) wird ein Auftrag zur Aktualisierung der Namensraum-Metriken ausgelöst, wenn durch die Erfassung von Profilen im Profil-Store die Anzahl um mehr als 5 % erhöht oder verringert wird. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag zur Aktualisierung der Metriken ausgeführt, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
+Ähnlich wie bei der Metrik für die [Profil-Zählung](#profile-count) wird ein Auftrag zur Aktualisierung der Namensraum-Metriken ausgelöst, wenn die Erfassung von Datensätzen im Profil Store die Anzahl um mehr als 5 % erhöht oder verringert. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag zur Aktualisierung der Metriken ausgeführt, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
 
 ### Richtlinie zusammenführen
 
