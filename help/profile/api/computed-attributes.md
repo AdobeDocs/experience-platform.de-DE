@@ -4,15 +4,15 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2434'
+source-wordcount: '2431'
 ht-degree: 1%
 
 ---
 
 
-# (Alpha) Berechnete Attribute
+# (Alpha) Endpunkt &quot;Berechnete Attribute&quot;
 
 >[!IMPORTANT]
 >Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
@@ -21,19 +21,17 @@ Berechnete Attribute ermöglichen es Ihnen, den Feldwert anhand anderer Werte, B
 
 Jedes berechnete Attribut enthält einen Ausdruck, oder &quot;Regel&quot;, der eingehende Daten auswertet und den sich ergebenden Wert in einem Profil-Attribut oder in einem Ereignis speichert. Diese Berechnungen helfen Ihnen, Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungen einfach zu beantworten, ohne dass Sie bei jeder erforderlichen Information manuell komplexe Berechnungen durchführen müssen.
 
-Dieses Handbuch hilft Ihnen, berechnete Attribute innerhalb der Adobe Experience Platform besser zu verstehen. Es enthält Beispiel-API-Aufrufe für die Durchführung grundlegender CRUD-Vorgänge mit dem `/config/computedAttributes` Endpunkt.
+Dieses Handbuch hilft Ihnen, berechnete Attribute innerhalb der Adobe Experience Platform besser zu verstehen. Es enthält Beispiel-API-Aufrufe für die Ausführung grundlegender CRUD-Vorgänge mit dem `/config/computedAttributes` Endpunkt.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Real-time Customer Profil API. Bevor Sie fortfahren, lesen Sie sich bitte das Entwicklerhandbuch für [Echtzeit-Profil durch](getting-started.md).
-
-Insbesondere enthält der [Abschnitt](getting-started.md) &quot;Erste Schritte&quot;des Profil-Entwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
 
 ## Berechnete Attribute
 
-Mit der Adobe Experience Platform können Sie Daten aus mehreren Quellen einfach importieren und zusammenführen, um Kundendaten in Echtzeit zu generieren. Jedes Profil enthält wichtige Informationen zu einer Einzelperson, wie z. B. Kontaktinformationen, Präferenzen und Kaufverlauf, und bietet so eine Ansicht des Kunden von 360 Grad.
+Mit der Adobe Experience Platform können Sie Daten aus mehreren Quellen einfach importieren und zusammenführen, um Echtzeit-Profil zu generieren. Jedes Profil enthält wichtige Informationen zu einer Einzelperson, wie z. B. Kontaktinformationen, Präferenzen und Kaufverlauf, und bietet so eine 360-Grad-Ansicht des Kunden.
 
-Einige der im Profil erfassten Informationen sind beim direkten Lesen der Datenfelder leicht verständlich (z. B. &quot;Vorname&quot;), während für andere Daten mehrere Berechnungen oder andere Felder und Werte erforderlich sind, um die Informationen zu generieren (z. B. &quot;Kaufsumme während der Lebensdauer&quot;). Damit diese Daten auf einen Blick leichter zu verstehen sind, können Sie mit der Plattform **berechnete Attribute** erstellen, die automatisch diese Verweise und Berechnungen durchführen und den Wert im entsprechenden Feld zurückgeben.
+Einige der im Profil erfassten Informationen sind beim direkten Lesen der Datenfelder leicht verständlich (z. B. &quot;Vorname&quot;), während für andere Daten mehrere Berechnungen oder andere Felder und Werte erforderlich sind, um die Informationen zu generieren (z. B. &quot;Kaufsumme während der Lebensdauer&quot;). Damit diese Daten auf einen Blick leichter zu verstehen sind, können Sie mit der Platform **berechnete Attribute** erstellen, die automatisch diese Verweise und Berechnungen durchführen und den Wert im entsprechenden Feld zurückgeben.
 
 Berechnete Attribute umfassen das Erstellen eines Ausdrucks oder einer &quot;Regel&quot;, der für eingehende Daten arbeitet und den sich ergebenden Wert in einem Profil- oder Ereignis speichert. Ausdruck können auf unterschiedliche Weise definiert werden. Sie können festlegen, dass eine Regel nur eingehende Ereignis, eingehende Ereignis- und Profil-Daten oder eingehende Ereignis, Profil- und historische Ereignis auswertet.
 
@@ -58,7 +56,7 @@ Der Arbeitsablauf in diesem Lernprogramm verwendet ein Profil-aktiviertes Schema
 
 ### Ansicht eines Schemas
 
-In den folgenden Schritten wird die Benutzeroberfläche von Adobe Experience Platform verwendet, um ein Schema zu suchen, eine Mischung hinzuzufügen und ein Feld zu definieren. Wenn Sie lieber die Schema Registry API verwenden möchten, lesen Sie bitte das Entwicklerhandbuch für die [Schema-Registrierung](../../xdm/api/getting-started.md) , um zu erfahren, wie Sie eine Mixin erstellen, eine Mixin zu einem Schema hinzufügen und ein Schema für die Verwendung mit dem Echtzeit-Customer-Profil aktivieren.
+Die folgenden Schritte werden mithilfe der Benutzeroberfläche &quot;Adobe Experience Platform&quot;ausgeführt, um ein Schema zu suchen, eine Mischung hinzuzufügen und ein Feld zu definieren. Wenn Sie lieber die Schema Registry API verwenden möchten, lesen Sie bitte das Entwicklerhandbuch für die [Schema-Registrierung](../../xdm/api/getting-started.md) , um zu erfahren, wie Sie eine Mixin erstellen, eine Mixin zu einem Schema hinzufügen und ein Schema für die Verwendung mit dem Echtzeit-Customer-Profil aktivieren.
 
 Klicken Sie in der Benutzeroberfläche auf der linken Leiste auf **Schema** und verwenden Sie die Suchleiste auf der Registerkarte &quot; *Durchsuchen* &quot;, um das Schema, das Sie aktualisieren möchten, schnell zu finden.
 
@@ -482,10 +480,10 @@ Bei einer erfolgreichen Aktualisierung werden HTTP-Status 204 (Kein Inhalt) und 
 
 ## Berechnete Attribute löschen
 
-Es ist auch möglich, ein berechnetes Attribut mithilfe der API zu löschen. Dies geschieht durch eine DELETE-Anforderung an den `/config/computedAttributes` Endpunkt und einschließlich der ID des berechneten Attributs, das Sie im Anforderungspfad löschen möchten.
+Es ist auch möglich, ein berechnetes Attribut mithilfe der API zu löschen. Dies geschieht, indem eine DELETE-Anforderung an den `/config/computedAttributes` Endpunkt gesendet wird und die ID des berechneten Attributs, das Sie löschen möchten, im Anforderungspfad enthalten ist.
 
->[!Note]
->Gehen Sie beim Löschen eines berechneten Attributs vorsichtig vor, da es in mehr als einem Schema verwendet wird und der DELETE-Vorgang nicht rückgängig gemacht werden kann.
+>[!NHinweis]
+>Gehen Sie beim Löschen eines berechneten Attributs vorsichtig vor, da es in mehr als einem Schema verwendet wird und der Vorgang des DELETE nicht rückgängig gemacht werden kann.
 
 **API-Format**
 
