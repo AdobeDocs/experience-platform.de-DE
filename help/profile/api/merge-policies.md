@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2052'
 ht-degree: 3%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # Zusammenführungsrichtlinien
 
-Mit der Adobe Experience Platform können Sie Daten aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche finden Sie im [Benutzerhandbuch](../ui/merge-policies.md)zu Zusammenführungsrichtlinien.
+Adobe Experience Platform ermöglicht Ihnen, Daten aus mehreren Quellen zusammenzuführen und zu kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche finden Sie im [Benutzerhandbuch](../ui/merge-policies.md)zu Zusammenführungsrichtlinien.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Real-time Customer Profil API. Bevor Sie fortfahren, lesen Sie bitte das Entwicklerhandbuch [zur](getting-started.md)Echtzeit-Customer Profil API. Insbesondere enthält der [Abschnitt](getting-started.md#getting-started) &quot;Erste Schritte&quot;des Profil-Entwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
-Merge-Richtlinien sind privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schema auf die gewünschte Weise zusammenzuführen. Für alle API-Zugriffe auf Profil-Daten ist eine Zusammenführungsrichtlinie erforderlich. Eine Standardeinstellung wird verwendet, wenn keine explizite Angabe erfolgt. Plattform bietet eine standardmäßige Zusammenführungsrichtlinie oder Sie können eine Zusammenführungsrichtlinie für ein bestimmtes Schema erstellen und diese als Standard für Ihr Unternehmen markieren. Jedes Unternehmen kann potenziell über mehrere Zusammenführungsrichtlinien pro Schema verfügen, jedoch kann jedes Schema nur eine Standardzusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Schema-Name angegeben wird und eine Zusammenführungsrichtlinie erforderlich, jedoch nicht angegeben ist. Wenn Sie eine Mergerichtlinie als Standard festlegen, werden alle vorhandenen Mergerichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert, sodass sie nicht mehr als Standard verwendet werden.
+Merge-Richtlinien sind privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schema auf die gewünschte Weise zusammenzuführen. Für alle API-Zugriffe auf Profil-Daten ist eine Zusammenführungsrichtlinie erforderlich. Eine Standardeinstellung wird verwendet, wenn keine explizite Angabe erfolgt. Platform bietet eine standardmäßige Zusammenführungsrichtlinie oder Sie können eine Zusammenführungsrichtlinie für ein bestimmtes Schema erstellen und als Standard für Ihr Unternehmen markieren. Jedes Unternehmen kann potenziell über mehrere Zusammenführungsrichtlinien pro Schema verfügen, jedoch kann jedes Schema nur eine Standardzusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Schema-Name angegeben wird und eine Zusammenführungsrichtlinie erforderlich, jedoch nicht angegeben ist. Wenn Sie eine Mergerichtlinie als Standard festlegen, werden alle vorhandenen Mergerichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert, sodass sie nicht mehr als Standard verwendet werden.
 
 ### Richtlinienobjekt für Zusammenführung abschließen
 
@@ -59,7 +59,7 @@ Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von
 | `attributeMerge` | [Attributzusammenführungs](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie bei Datenkonflikten Profil-Attributwerte priorisiert. |
 | `schema` | Das [Schema](#schema) -Objekt, für das die Zusammenführungsrichtlinie verwendet werden kann. |
 | `default` | Boolescher Wert, der angibt, ob diese Richtlinie für das angegebene Schema standardmäßig verwendet wird. |
-| `version` | Plattformgepflegte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Mergerichtlinie inkrementiert. |
+| `version` | Die Version der Zusammenführungsrichtlinie wurde von der Platform beibehalten. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Mergerichtlinie inkrementiert. |
 | `updateEpoch` | Datum der letzten Aktualisierung der Zusammenführungsrichtlinie. |
 
 **Beispielrichtlinie für die Zusammenführung**
@@ -86,7 +86,7 @@ Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von
 
 ### Identitätsdiagramm {#identity-graph}
 
-[Der Adobe Experience Platform Identity Service](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jedes Unternehmen auf Experience Platform verwendet werden. Das `identityGraph` Attribut der Richtlinie zum Zusammenführen definiert, wie die entsprechenden Identitäten für einen Benutzer bestimmt werden.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jedes Unternehmen auf der Experience Platform verwendet werden. Das `identityGraph` Attribut der Richtlinie zum Zusammenführen definiert, wie die entsprechenden Identitäten für einen Benutzer bestimmt werden.
 
 **identityGraph-Objekt**
 
@@ -693,7 +693,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Zusammenführungsr
 
 ## Eine Richtlinie zum Zusammenführen löschen
 
-Eine Richtlinie zum Zusammenführen kann gelöscht werden, indem eine DELETE-Anforderung an den `/config/mergePolicies` Endpunkt gesendet wird und die ID der Richtlinie zum Zusammenführen, die Sie im Anforderungspfad löschen möchten.
+Eine Richtlinie zum Zusammenführen kann gelöscht werden, indem eine DELETE-Anforderung an den `/config/mergePolicies` Endpunkt gesendet wird und die ID der Zusammenführungsrichtlinie, die Sie löschen möchten, im Anforderungspfad enthalten ist.
 
 **API-Format**
 
@@ -724,7 +724,7 @@ Bei einer erfolgreichen Löschanforderung werden HTTP-Status 200 (OK) und ein le
 
 ## Nächste Schritte
 
-Da Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihre IMS-Organisation erstellen und konfigurieren, können Sie diese verwenden, um Audiencen-Segmente aus Ihren Echtzeit-Kundendaten zu erstellen. Informationen zum Definieren und Arbeiten mit Segmenten finden Sie in der Dokumentation [zum Segmentierungsdienst für](../../segmentation/home.md) Adobe Experience Platform.
+Da Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihre IMS-Organisation erstellen und konfigurieren, können Sie diese verwenden, um Audiencen-Segmente aus Ihren Echtzeit-Kundendaten zu erstellen. Informationen zum Definieren und Arbeiten mit Segmenten finden Sie in der Dokumentation [zum Segmentierungsdienst für](../../segmentation/home.md) Adobe Experience Platformen.
 
 
 
