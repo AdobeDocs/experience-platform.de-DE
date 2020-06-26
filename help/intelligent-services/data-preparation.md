@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
+source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1878'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ In diesem Dokument erhalten Sie allgemeine Anleitungen zur Zuordnung Ihrer Marke
 
 ## Workflow-Übersicht
 
-Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in Adobe Experience Platform oder extern gespeichert werden. In diesem Abschnitt werden die notwendigen Schritte zusammengefasst, die Sie in beiden Szenarien unternehmen müssen.
+Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in der Adobe Experience Platform oder extern gespeichert werden. In diesem Abschnitt werden die notwendigen Schritte zusammengefasst, die Sie in beiden Szenarien unternehmen müssen.
 
 ### Vorbereitung externer Daten
 
@@ -28,7 +28,7 @@ Wenn Ihre Daten außerhalb von gespeichert werden, führen Sie die folgenden Sch
 
 1. Wenden Sie sich an Adobe Consulting Services, um Zugangsdaten für einen dedizierten Container der Azurblase-Datenspeicherung anzufordern.
 1. Laden Sie Ihre Daten mit Ihren Zugriffsberechtigungen in den Blob-Container hoch.
-1. Arbeiten Sie mit Adobe Consulting Services zusammen, um Ihre Daten dem [Consumer ExperienceEvent-Schema](#cee-schema) zuzuordnen und in Intelligent Services zu erfassen.
+1. Arbeiten Sie mit Adobe Consulting Services, um Ihre Daten dem [Consumer ExperienceEvent-Schema](#cee-schema) zuzuordnen und in Intelligent Services zu integrieren.
 
 ### [!DNL Experience Platform] Datenaufbereitung
 
@@ -41,6 +41,8 @@ Wenn Ihre Daten bereits in gespeichert sind, führen Sie [!DNL Platform]die folg
 
 Das Consumer ExperienceEvent-Schema beschreibt das Verhalten eines Individuums in Bezug auf digitale Marketing-Ereignis (Web oder Mobil) sowie Online- oder Offline-Commerce-Aktivitäten. Die Verwendung dieses Schemas ist für Intelligent Services aufgrund seiner semantisch definierten Felder (Spalten) erforderlich, wodurch unbekannte Namen vermieden werden, die sonst die Daten weniger eindeutig machen würden.
 
+Das CEE-Schema erfasst wie alle XDM ExperienceEvent-Schema den zeitreihenbasierten Systemzustand, in dem ein Ereignis (oder eine Reihe von Ereignissen) aufgetreten ist, einschließlich des Zeitpunkts und der Identität des jeweiligen Objekts. Erfahrungs-Ereignisse sind Faktenberichte über das, was geschehen ist, und somit sind sie unveränderlich und stellen dar, was ohne Aggregation oder Interpretation passiert ist.
+
 Intelligent Services nutzt mehrere Schlüsselfelder in diesem Schema, um Erkenntnisse aus Ihren Marketing-Ereignissen-Daten zu generieren. Diese können alle auf der Stammebene gefunden und erweitert werden, um die erforderlichen Unterfelder anzuzeigen.
 
 ![](./images/data-preparation/schema-expansion.gif)
@@ -51,13 +53,38 @@ Ein vollständiges Beispiel des Mixins finden Sie im [öffentlichen XDM-Reposito
 
 ## Schlüsselfelder
 
-In den folgenden Abschnitten werden die Schlüsselfelder im CEE-Mixin hervorgehoben, die genutzt werden sollten, damit Intelligent Services nützliche Einblicke generieren kann, einschließlich Beschreibungen und Links zur Referenzdokumentation für weitere Beispiele.
+Es gibt mehrere Schlüsselfelder im CEE-Mixin, die genutzt werden sollten, damit Intelligent Services nützliche Einblicke generieren kann. In diesem Abschnitt werden der Verwendungsfall und die erwarteten Daten für diese Felder beschrieben und Links zur Referenzdokumentation für weitere Beispiele bereitgestellt.
 
->[!IMPORTANT] Das `xdm:channel` Feld (im ersten Abschnitt unten erläutert) ist **erforderlich** , damit Attribution AI mit Ihren Daten arbeiten kann, während Customer AI keine Pflichtfelder hat. Alle anderen Schlüsselfelder werden dringend empfohlen, jedoch nicht obligatorisch.
+### Obligatorische Felder
 
-### xdm:Kanal
+Die Verwendung aller Schlüsselfelder wird dringend empfohlen, es gibt jedoch zwei Felder, die **erforderlich** sind, damit Intelligent Services funktioniert:
 
-Dieses Feld stellt den Marketing-Kanal im Zusammenhang mit dem ExperienceEvent dar. Das Feld enthält Informationen zum Typ des Kanals, Medientyp und Standort. **Dieses Feld _muss_bereitgestellt werden, damit Attribution AI mit Ihren Daten** arbeiten kann.
+* [Ein primäres Identitätsfeld](#identity)
+* [xdm:timestamp](#timestamp)
+* [xdm:Kanal](#channel) (nur obligatorisch für Attribution AI)
+
+#### Primär {#identity}
+
+Eines der Felder in Ihrem Schema muss als primäres Identitätsfeld festgelegt werden, das es Intelligent Services ermöglicht, jede Instanz von Zeitreihendaten mit einer Person zu verknüpfen.
+
+Sie müssen das beste Feld als primäre Identität basierend auf der Quelle und der Art Ihrer Daten festlegen. Ein Identitätsfeld muss einen **Identitäts-Namensraum** enthalten, der den Typ der Identitätsdaten angibt, den das Feld als Wert erwartet. Zu den gültigen Namensräumen gehören:
+
+* &quot;email&quot;
+* &quot;phone&quot;
+* &quot;mcid&quot;(für Adobe Audience Manager-IDs)
+* &quot;aaid&quot;(für Adobe Analytics IDs)
+
+Wenn Sie sich nicht sicher sind, welches Feld Sie als primäre Identität verwenden sollten, wenden Sie sich an Adobe Consulting Services, um die beste Lösung zu finden.
+
+#### xdm:timestamp {#timestamp}
+
+Dieses Feld gibt den Zeitpunkt an, zu dem das Ereignis aufgetreten ist. Dieser Wert muss als Zeichenfolge gemäß ISO 8601 angegeben werden.
+
+#### xdm:Kanal {#channel}
+
+>[!NOTE] Dieses Feld ist nur bei Verwendung von Attribution AI obligatorisch.
+
+Dieses Feld stellt den Marketing-Kanal im Zusammenhang mit dem ExperienceEvent dar. Das Feld enthält Informationen zum Typ des Kanals, Medientyp und Standort.
 
 ![](./images/data-preparation/channel.png)
 
@@ -74,7 +101,7 @@ Dieses Feld stellt den Marketing-Kanal im Zusammenhang mit dem ExperienceEvent d
 
 Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:channel`finden Sie in der [Experience Kanal Schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) -Spezifikation. Beispielzuordnungen finden Sie in der [Tabelle unten](#example-channels).
 
-#### Beispielzuordnungen für Kanal {#example-channels}
+##### Beispielzuordnungen für Kanal {#example-channels}
 
 Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem `xdm:channel` Schema zugeordnet sind:
 
@@ -89,7 +116,11 @@ Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem `xd
 | QR-Codeumleitung | https:/<span>/ns.adobe.com/xdm/Kanal-types/direct | besetzt | clicks |
 | Mobil | https:/<span>/ns.adobe.com/xdm/Kanal-types/mobile | besetzt | clicks |
 
-### xdm:productListItems
+### Empfohlene Felder
+
+Die übrigen Schlüsselfelder werden in diesem Abschnitt beschrieben. Diese Felder sind zwar nicht unbedingt erforderlich, damit Intelligent Services funktionieren kann, es wird jedoch dringend empfohlen, möglichst viele davon zu verwenden, um umfassendere Einblicke zu erhalten.
+
+#### xdm:productListItems
 
 Dieses Feld enthält eine Reihe von Artikeln, die die von einem Kunden ausgewählten Produkte darstellen, einschließlich der Produkt-SKU, des Namens, des Preises und der Menge.
 
@@ -118,7 +149,7 @@ Dieses Feld enthält eine Reihe von Artikeln, die die von einem Kunden ausgewäh
 
 Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:productListItems`finden Sie in der [Commerce-Details-Schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) -Spezifikation.
 
-### xdm:commerce
+#### xdm:commerce
 
 Dieses Feld enthält handelsspezifische Informationen zum ExperienceEvent, einschließlich Bestellnummer und Zahlungsinformationen.
 
@@ -156,7 +187,7 @@ Dieses Feld enthält handelsspezifische Informationen zum ExperienceEvent, einsc
 
 Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:commerce`finden Sie in der [Commerce-Details-Schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) -Spezifikation.
 
-### xdm:web
+#### xdm:web
 
 Dieses Feld enthält Webdetails zum ExperienceEvent, wie Interaktion, Seitendetails und Werber.
 
@@ -186,7 +217,7 @@ Dieses Feld enthält Webdetails zum ExperienceEvent, wie Interaktion, Seitendeta
 
 Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:productListItems`finden Sie in der Spezifikation des [ExperienceEvent-Webdetails-Schemas](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) .
 
-### xdm:marketing
+#### xdm:marketing
 
 Dieses Feld enthält Informationen zu Marketing-Aktivitäten, die mit dem Touchpoint aktiv sind.
 
@@ -212,11 +243,11 @@ Nachdem Sie den zu sendenden Datenbereich festgelegt haben, wenden Sie sich an A
 
 Wenn Sie ein [!DNL Adobe Experience Platform] Abonnement haben und die Daten selbst zuordnen und erfassen möchten, führen Sie die im folgenden Abschnitt beschriebenen Schritte aus.
 
-### Verwenden der Adobe Experience Platform
+### Adobe Experience Platform verwenden
 
->[!NOTE] Die folgenden Schritte erfordern ein Abonnement zu Experience Platform. Wenn Sie keinen Zugriff auf die Plattform haben, fahren Sie mit dem Abschnitt [Nächste Schritte](#next-steps) fort.
+>[!NOTE] Die folgenden Schritte erfordern ein Abonnement zur Experience Platform. Wenn Sie keinen Zugriff auf die Platform haben, fahren Sie mit den [nächsten Schritten](#next-steps) fort.
 
-In diesem Abschnitt wird der Arbeitsablauf für die Zuordnung und Erfassung von Daten zur Experience Platform zur Verwendung in Intelligent Services beschrieben, einschließlich Links zu Schulungen für detaillierte Schritte.
+In diesem Abschnitt wird der Arbeitsablauf für die Zuordnung und Erfassung von Daten zur Experience Platform für die Verwendung in Intelligent Services beschrieben, einschließlich Links zu Schulungen für detaillierte Schritte.
 
 #### Erstellen eines CEE-Schemas und eines Datasets
 
@@ -234,7 +265,13 @@ Nachdem Sie das Schema erstellt und gespeichert haben, können Sie auf der Grund
 * [Erstellen Sie ein Dataset in der Benutzeroberfläche](../catalog/datasets/user-guide.md#create) (zum Verwenden eines vorhandenen Schemas im Workflow)
 * [Erstellen eines Datensatzes in der API](../catalog/datasets/create.md)
 
+Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche &quot;Platform&quot;im Arbeitsbereich &quot; *[!UICONTROL Datensätze]* &quot;finden.
+
+![](images/data-preparation/dataset-location.png)
+
 #### Hinzufügen eines primären Identitäts-Namensraum-Tags zum Dataset
+
+>[!NOTE] In zukünftigen Versionen von Intelligent Services wird der Identitätsdienst für [Adobe Experience Platformen](../identity-service/home.md) in die Kundenidentifizierungsfunktionen integriert. Die unten aufgeführten Schritte können sich daher ändern.
 
 Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]oder einer anderen externen Quelle einreichen, müssen Sie dem Datensatz ein `primaryIdentityNameSpace` -Tag hinzufügen. Dies kann durch eine PATCH-Anforderung an die Katalogdienst-API erfolgen.
 
@@ -256,7 +293,7 @@ PATCH /dataSets/{DATASET_ID}
 
 Je nachdem, aus welcher Quelle Sie Daten abrufen, müssen Sie entsprechende `primaryIdentityNamespace` und `sourceConnectorId` Tag-Werte in der Anforderungsnutzlast angeben.
 
-Mit der folgenden Anforderung werden die entsprechenden Tag-Werte für Audience Manager hinzugefügt:
+Die folgende Anforderung fügt die entsprechenden Tag-Werte für Audience Manager hinzu:
 
 ```shell
 curl -X PATCH \
@@ -292,7 +329,7 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+>[!NOTE] Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in der Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
 
 **Antwort**
 
@@ -308,7 +345,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten 
 
 Nachdem Sie ein CEE-Schema und einen Dataset erstellt haben, können Sie Ihre Datentabellen dem Schema zuordnen und diese Daten in Platform erfassen. Anweisungen dazu, wie Sie dies in der Benutzeroberfläche durchführen, finden Sie im Lernprogramm zum [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md) . Nachdem ein Datensatz gefüllt wurde, kann derselbe Datensatz zum Erfassen zusätzlicher Datendateien verwendet werden.
 
-Wenn Ihre Daten in einer unterstützten Drittanbieteranwendung gespeichert werden, können Sie auch einen [Quellanschluss](../sources/home.md) erstellen, um Ihre Marketing-Ereignis-Daten in Echtzeit in Platform zu erfassen.
+Wenn Ihre Daten in einer unterstützten Drittanbieteranwendung gespeichert werden, können Sie auch einen [Quellanschluss](../sources/home.md) erstellen, um Ihre Marketing-Ereignis-Daten in Echtzeit in die Platform zu übernehmen.
 
 ## Nächste Schritte {#next-steps}
 
