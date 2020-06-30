@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Erstellen einer Feature-Pipeline
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -282,9 +282,9 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
         return None
 ```
 
-### Speichern Sie Ihr Feature DataSet mit DataSaver {#store-your-feature-dataset-with-datasaver}
+### Speichern Sie Ihr Funktionsdatensatz mit DataSaver {#store-your-feature-dataset-with-datasaver}
 
-Der DataSaver ist für das Speichern der sich ergebenden Funktionsdatensätze an einem Speicherort für die Datenspeicherung zuständig. Ihre Implementierung von DataSaver muss die abstrakte Klasse erweitern `DataSaver` und die abstrakte Methode überschreiben `save`.
+Der DataSaver ist für das Speichern der sich ergebenden Funktionsdatensätze in einer Datenspeicherung zuständig. Ihre Implementierung von DataSaver muss die abstrakte Klasse erweitern `DataSaver` und die abstrakte Methode überschreiben `save`.
 
 Im folgenden Beispiel wird die DataSaver-Klasse erweitert, in der Daten nach ID in einem [!DNL Platform] Datensatz gespeichert werden, wobei die DataSet-ID (`featureDatasetId`) und die Mandant-ID (`tenantId`) Eigenschaften in der Konfiguration sind.
 
@@ -387,7 +387,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## Erstellen Sie Ihre Feature Pipeline-Engine mit der API {#create-feature-pipeline-engine-api}
 
-Nachdem Sie Ihre Feature-Pipeline erstellt haben, müssen Sie ein Docker-Bild erstellen, um die Feature-Pipeline-Endpunkte in der Sensei Machine Learning API aufzurufen. Sie benötigen eine Docker-Bild-URL, um die Feature-Pipeline-Endpunkte aufzurufen.
+Nachdem Sie Ihre Feature-Pipeline erstellt haben, müssen Sie ein Docker-Bild erstellen, um die Feature-Pipeline-Endpunkte in der [!DNL Sensei Machine Learning] API aufzurufen. Sie benötigen eine Docker-Bild-URL, um die Feature-Pipeline-Endpunkte aufzurufen.
 
 >[!TIP]
 >Wenn Sie keine Docker-URL haben, besuchen Sie die Quelldateien des [Pakets in einem Rezept](../models-recipes/package-source-files-recipe.md) -Lernprogramm, um eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL zu erhalten.
@@ -398,7 +398,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Erstellen einer Feature-Pipeline-Engine {#create-engine-api}
 
-Sobald Sie Ihren Docker-Bildspeicherort haben, können Sie eine Feature-Pipeline-Engine [mit der Sensei Machine Learning API](../api/engines.md#feature-pipeline-docker) erstellen, indem Sie einen POST-Test zu `/engines`erstellen. Durch die erfolgreiche Erstellung einer Feature Pipeline-Engine erhalten Sie eine eindeutige Engine-ID (`id`). Achten Sie darauf, diesen Wert zu speichern, bevor Sie fortfahren.
+Sobald Sie Ihren Docker-Bildspeicherort haben, können Sie eine Feature-Pipeline-Engine [mit der](../api/engines.md#feature-pipeline-docker) API [!DNL Sensei Machine Learning] erstellen, indem Sie einen POST-Test durchführen `/engines`. Durch die erfolgreiche Erstellung einer Feature Pipeline-Engine erhalten Sie eine eindeutige Engine-ID (`id`). Achten Sie darauf, diesen Wert zu speichern, bevor Sie fortfahren.
 
 ### Erstellen einer MLInstanz {#create-mlinstance}
 
@@ -435,4 +435,4 @@ Sobald die Bewertung abgeschlossen ist, sollte Ihre Feature-Pipeline betriebsber
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Durch Lesen dieses Dokuments haben Sie mithilfe des Model Authoring-SDK eine Feature-Pipeline erstellt, ein Docker-Bild erstellt und mit der Docker-Bild-URL ein Feature-Pipeline-Modell mithilfe der Sensei Machine Learning API erstellt. Sie sind jetzt bereit, mit der Transformation von Datensätzen und der Extrahierung von Datenfunktionen im Maßstab mit der [Sensei Machine Learning API](../api/getting-started.md)fortzufahren.
+Durch Lesen dieses Dokuments haben Sie mit dem Modell-Authoring-SDK eine Feature-Pipeline erstellt, ein Docker-Bild erstellt und mit der Docker-Bild-URL ein Feature-Pipeline-Modell mithilfe der [!DNL Sensei Machine Learning] API erstellt. Sie sind jetzt bereit, mit der Transformation von Datensätzen und der Extrahierung von Datenfunktionen im Maßstab fortzufahren [!DNL Sensei Machine Learning API](../api/getting-started.md).
