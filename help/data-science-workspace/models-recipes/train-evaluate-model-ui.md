@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Auswerten eines Modells (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '975'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen, Ausbilden und A
 
 ## Erste Schritte
 
-Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf die Erlebnisplattform haben. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in haben, wenden Sie sich an Ihren Systemadministrator, [!DNL Experience Platform]bevor Sie fortfahren.
 
 Dieses Lernprogramm erfordert ein vorhandenes Rezept. Wenn Sie kein Rezept haben, befolgen Sie die Anweisungen zum [Importieren eines gepackten Rezepts im UI](./import-packaged-recipe-ui.md) -Lernprogramm, bevor Sie fortfahren.
 
@@ -45,7 +45,7 @@ Dieses Lernprogramm erfordert ein vorhandenes Rezept. Wenn Sie kein Rezept haben
 1. Klicken Sie in Adobe Experience Platform auf den Link **[!UICONTROL Modelle]** in der linken Navigationsspalte, um alle vorhandenen Modelle Liste. Klicken Sie auf den Namen des zu trainierenden Modells.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Alle vorhandenen Schulungen mit ihrem aktuellen Schulungsstatus werden aufgelistet. Bei Modellen, die mit der Benutzeroberfläche von Data Science Workspace erstellt wurden, wird automatisch ein Schulungslauf mit den Standardkonfigurationen und dem Eingabeteilschulungsdatensatz generiert und ausgeführt.
+2. Alle vorhandenen Schulungen mit ihrem aktuellen Schulungsstatus werden aufgelistet. Bei Modellen, die mit der [!DNL Data Science Workspace] Benutzeroberfläche erstellt wurden, wird automatisch ein Schulungslauf generiert und mit den Standardkonfigurationen und dem Eingabeteilschulungsdatensatz ausgeführt.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
 3. Erstellen Sie eine neue Schulung, indem Sie auf **[!UICONTROL Zug]** oben rechts auf der Modellübersichtsseite klicken.
@@ -80,7 +80,7 @@ Dieses Lernprogramm erfordert ein vorhandenes Rezept. Wenn Sie kein Rezept haben
 
 ## Nächste Schritte
 
-Dieses Lernprogramm führte Sie durch die Erstellung, Schulung und Auswertung eines Modells im Data Science Workspace. Sobald Sie ein optimiertes Modell erreicht haben, können Sie das geschulte Modell verwenden, um Einblicke zu generieren, indem Sie der [Bewertung eines Modells im UI](./score-model-ui.md) -Lernprogramm folgen.
+Dieses Lernprogramm führte Sie durch die Erstellung, Schulung und Auswertung eines Modells in [!DNL Data Science Workspace]. Sobald Sie ein optimiertes Modell erreicht haben, können Sie das geschulte Modell verwenden, um Einblicke zu generieren, indem Sie der [Bewertung eines Modells im UI](./score-model-ui.md) -Lernprogramm folgen.
 
 ## Referenz {#reference}
 
