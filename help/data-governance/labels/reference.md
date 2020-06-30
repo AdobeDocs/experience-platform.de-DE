@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Unterstützte Beschriftungen für die Datenverwendung
 topic: labels
 translation-type: tm+mt
-source-git-commit: 2f8da8688897476f89ca1b176e0c988d6e79264b
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1878'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Die Adobe Experience Platform umfasst eine Infrastruktur für die Datenverwaltung mit der Datenverwendungskennzeichnung und -durchsetzung (DULE).  Mit den Funktionen DULE können Datenverwendungsbeschriftungen auf Datensätze und Felder angewendet werden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren.
 
-In diesem Dokument werden alle derzeit von der Experience Platform unterstützten Beschriftungen zur Datenverwendung beschrieben. Weitere Informationen zu Datenverwaltung und DUL finden Sie in der Übersicht über die [Datenverwaltung](../home.md).
+In diesem Dokument werden alle derzeit von [!DNL Experience Platform]unterstützten Datenverwendungsbezeichnungen erläutert. Weitere Informationen zu [!DNL Data Governance] und zu DULE finden Sie in der Übersicht über die [Datenverwaltung](../home.md).
 
 ## Vertragsbezeichnungen
 
