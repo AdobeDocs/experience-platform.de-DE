@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analysieren Ihrer Daten mithilfe von Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -18,31 +18,31 @@ Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Wor
 
 Die folgenden Konzepte werden eingeführt:
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die webbasierte Schnittstelle der nächsten Generation für Project Jupyter und ist fest in [!DNL Adobe Experience Platform]integriert.
+- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)ist die webbasierte Schnittstelle der nächsten Generation für Project Jupyter und ist eng in[!DNL Adobe Experience Platform]integriert.
 - **Stapel:** Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird. Beim Hinzufügen von Daten zu einem Datensatz werden neue Stapel erstellt.
-- **Data Access SDK (nicht mehr unterstützt):** Das Data Access SDK ist jetzt veraltet. Bitte verwenden Sie das Handbuch [Plattform-SDK](../authoring/platform-sdk.md) .
+- **Data Access SDK (nicht mehr unterstützt):** Das Data Access SDK ist jetzt veraltet. Bitte verwenden Sie das [!DNL Platform SDK](../authoring/platform-sdk.md) Handbuch.
 
 ## Notebooks im Data Science Workspace
 
 In diesem Abschnitt werden Daten untersucht, die zuvor in das Schema für den Einzelhandel aufgenommen wurden.
 
-Mit Data Science Workspace können Benutzer Jupyter-Notebooks über die JupyterLab-Plattform erstellen, auf der sie Workflows für maschinelles Lernen erstellen und bearbeiten können. JupyterLab ist ein Tool zur Zusammenarbeit zwischen Server und Client, das es Benutzern ermöglicht, Notebook-Dokumente über einen Webbrowser zu bearbeiten. Diese Notebooks können sowohl ausführbaren Code als auch Rich-Text-Elemente enthalten. Zu unserem Zweck verwenden wir Markdown für die Analyse und ausführbaren Python-Code, um Daten zu erforschen und Analysen durchzuführen.
+Mit Data Science Workspace können Benutzer [!DNL Jupyter Notebooks] über die [!DNL JupyterLab] Plattform maschinelles Lernen erstellen und Workflows bearbeiten. [!DNL JupyterLab] ist ein Tool zur Zusammenarbeit zwischen Server und Client, das es Benutzern ermöglicht, Notebook-Dokumente über einen Webbrowser zu bearbeiten. Diese Notebooks können sowohl ausführbaren Code als auch Rich-Text-Elemente enthalten. Zu unseren Zwecken verwenden wir Markdown für die Analyse und ausführbaren [!DNL Python] Code, um Daten zu erforschen und Analysen durchzuführen.
 
 ### Arbeitsbereich auswählen
 
-Beim Start von JupyterLab wird eine webbasierte Schnittstelle für Jupyter-Notebooks vorgestellt. Je nachdem, welchen Typ von Notebook wir wählen, wird ein entsprechender Kernel gestartet.
+Beim Start [!DNL JupyterLab]wird eine webbasierte Benutzeroberfläche für Jupyter-Notebooks vorgestellt. Je nachdem, welchen Typ von Notebook wir wählen, wird ein entsprechender Kernel gestartet.
 
-Beim Vergleich der zu verwendenden Umgebung müssen wir die jeweiligen Einschränkungen berücksichtigen. Wenn wir z.B. die [pandas](https://pandas.pydata.org/) Bibliothek mit Python verwenden, beträgt die RAM-Grenze 2 GB als normaler Benutzer. Auch als Strombenutzer wären wir auf 20 GB RAM beschränkt. Bei größeren Berechnungen wäre es sinnvoll, Spark zu verwenden, welche Angebot 1,5 TB für alle Notebook-Instanzen freigegeben sind.
+Beim Vergleich der zu verwendenden Umgebung müssen wir die jeweiligen Einschränkungen berücksichtigen. Wenn wir z.B. die [pandas](https://pandas.pydata.org/) Bibliothek mit verwenden [!DNL Python], beträgt die RAM-Grenze als normaler Benutzer 2 GB. Auch als Strombenutzer wären wir auf 20 GB RAM beschränkt. Bei größeren Berechnungen wäre es sinnvoll, [!DNL Spark] welche Angebot 1,5 TB für alle Notebook-Instanzen freizugeben.
 
 Standardmäßig funktioniert Tensorflow-Rezeptur in einem GPU-Cluster und Python wird in einem CPU-Cluster ausgeführt.
 
 ### Erstellen eines neuen Notebooks
 
-Klicken Sie in der [!DNL Adobe Experience Platform] Benutzeroberfläche auf die Registerkarte &quot;Datenwissenschaft&quot;im oberen Menü, um zum Data Science Workspace zu gelangen. Klicken Sie auf dieser Seite auf die Registerkarte JupyterLab, um den JupyterLab-Starter zu öffnen. Sie sollten eine ähnliche Seite sehen.
+Klicken Sie in der [!DNL Adobe Experience Platform] Benutzeroberfläche auf die Registerkarte &quot;Datenwissenschaft&quot;im oberen Menü, um zum Data Science Workspace zu gelangen. Klicken Sie auf dieser Seite auf die [!DNL JupyterLab] Registerkarte, die den [!DNL JupyterLab] Starter öffnet. Sie sollten eine ähnliche Seite sehen.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
-In unserem Tutorial verwenden wir Python 3 im Jupyter-Notebook, um zu zeigen, wie man auf die Daten zugreifen und sie untersuchen kann. Auf der Startseite stehen Beispielnotizen zur Verfügung. Wir werden das Retail Sales Rezept für Python 3 verwenden.
+In unserem Tutorial verwenden wir [!DNL Python] 3 im Jupyter-Notebook, um zu zeigen, wie Sie auf die Daten zugreifen und sie untersuchen können. Auf der Startseite stehen Beispielnotizen zur Verfügung. Wir werden das Retail Sales Rezept für [!DNL Python] 3 verwenden.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -50,13 +50,13 @@ Das Rezept für den Einzelhandel ist ein eigenständiges Beispiel, das mit demse
 
 ### Zugriffsdaten
 
->[!NOTE] Das `data_access_sdk_python` wird nicht mehr unterstützt und nicht mehr empfohlen. Informationen zum Konvertieren Ihres Codes finden Sie im Tutorial zum [Konvertieren von Datenzugriffs-SDK in Platform SDK](../authoring/platform-sdk.md) . Für dieses Lernprogramm gelten weiterhin die folgenden Schritte.
+>[!NOTE] Das `data_access_sdk_python` wird nicht mehr unterstützt und nicht mehr empfohlen. Informationen zum Konvertieren von Code finden Sie im Tutorial zum [Konvertieren von Datenzugriff-SDK](../authoring/platform-sdk.md) in Platform. Für dieses Lernprogramm gelten weiterhin die folgenden Schritte.
 
-Wir gehen weiter auf Daten intern von [!DNL Adobe Experience Platform] und Daten extern zugreifen. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die pandas Python-Bibliothek.
+Wir gehen weiter auf Daten intern von [!DNL Adobe Experience Platform] und Daten extern zugreifen. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die Pandas- [!DNL Python] Bibliothek.
 
 #### Externe Daten
 
-Wenn das Notebook für den Einzelhandel geöffnet ist, finden Sie die Kopfzeile &quot;Daten laden&quot;. Der folgende Python-Code verwendet die `DataFrame` Datenstruktur von Pandas und die [Funktion read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) , um das auf Github gehostete CSV in den DataFrame zu lesen:
+Wenn das Notebook für den Einzelhandel geöffnet ist, finden Sie die Kopfzeile &quot;Daten laden&quot;. Der folgende [!DNL Python] Code verwendet die `DataFrame` Datenstruktur des Pandas und die Funktion [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) , um das auf dem DataFrame gehostete CSV zu lesen [!DNL Github] :
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -68,7 +68,7 @@ Schließlich können wir einen Blick darauf werfen, wie unsere Daten aussehen. W
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### Experience Platform-Daten
+#### [!DNL Experience Platform] data
 
 Jetzt gehen wir über den Zugriff auf [!DNL Experience Platform] Daten hinaus.
 
@@ -86,7 +86,7 @@ Da der Datensatz identisch ist, möchten wir die Daten des vorherigen Abschnitts
 
 Jetzt können wir mit der rechten Maustaste auf den `Retail-Training-<your-alias>` Datensatz klicken und die Option &quot;Daten im Notebook untersuchen&quot;in der Dropdown-Liste auswählen. Ein ausführbarer Code-Eintrag wird in Ihrem Notebook angezeigt.
 
->[!TIP] Lesen Sie das Handbuch zum [Plattform-SDK](../authoring/platform-sdk.md) , um Ihren Code zu konvertieren.
+>[!TIP] finden Sie in der [!DNL Platform SDK](../authoring/platform-sdk.md) Anleitung zum Konvertieren Ihres Codes.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Wenn Sie mit anderen Kerneln als Python arbeiten, lesen Sie bitte [diese Seite](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) , um auf Daten auf der [!DNL Adobe Experience Platform].
+Wenn Sie mit anderen Kerneln als [!DNL Python]arbeiten, lesen Sie bitte [diese Seite](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) , um auf Daten auf der [!DNL Adobe Experience Platform].
 
 Wenn Sie die ausführbare Zelle auswählen und dann auf die Wiedergabeschaltfläche in der Symbolleiste klicken, wird der ausführbare Code ausgeführt. Die Ausgabe für `head()` ist eine Tabelle mit den Schlüsseln Ihres Datensatzes als Spalten und die ersten n Zeilen im Datensatz. `head()` akzeptiert ein ganzzahliges Argument, um anzugeben, wie viele Zeilen ausgegeben werden sollen. Standardmäßig ist dies 5.
 
@@ -122,7 +122,7 @@ Da wir nun auf Ihre Daten zugreifen können, konzentrieren wir uns auf die Daten
 
 #### Statistische Zusammenfassung
 
-Wir können Pythons Pandas-Bibliothek nutzen, um den Datentyp jedes Attributs zu erhalten. Die Ausgabe des folgenden Aufrufs gibt uns Informationen über die Anzahl der Einträge und den Datentyp für jede der Spalten:
+Wir können die [!DNL Python's] Pandas-Bibliothek nutzen, um den Datentyp jedes Attributs zu erhalten. Die Ausgabe des folgenden Aufrufs gibt uns Informationen über die Anzahl der Einträge und den Datentyp für jede der Spalten:
 
 ```PYTHON
 df.info()
@@ -150,7 +150,7 @@ Das bedeutet, dass 22 Läden sind von `storeType` , `A`17 sind `storeType` und 6
 
 #### Datenvisualisierung
 
-Jetzt, da wir unsere Datenrahmenwerte kennen, möchten wir dies durch Visualisierungen ergänzen, um die Dinge klarer zu gestalten und Muster leichter zu identifizieren. Diagramme sind auch nützlich, wenn Ergebnisse an eine Audience übermittelt werden. Einige Python-Bibliotheken, die für die Visualisierung nützlich sind, sind:
+Jetzt, da wir unsere Datenrahmenwerte kennen, möchten wir dies durch Visualisierungen ergänzen, um die Dinge klarer zu gestalten und Muster leichter zu identifizieren. Diagramme sind auch nützlich, wenn Ergebnisse an eine Audience übermittelt werden. Einige [!DNL Python] Bibliotheken, die für die Visualisierung nützlich sind, sind:
 - [Matplotlib](https://matplotlib.org/)
 - [Pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -158,7 +158,7 @@ Jetzt, da wir unsere Datenrahmenwerte kennen, möchten wir dies durch Visualisie
 
 In diesem Abschnitt werden wir schnell über einige Vorteile für die Verwendung der einzelnen Bibliotheken gehen.
 
-[Matplotlib](https://matplotlib.org/) ist das älteste Python Visualisierungspaket. Ihr Ziel ist es, &quot;einfache Dinge einfach und schwierige Dinge möglich zu machen&quot;. Dies ist eher wahr, da das Paket extrem mächtig ist, aber auch mit Komplexität. Es ist nicht immer einfach, eine vernünftige Grafik zu bekommen, ohne viel Zeit und Mühe zu verlieren.
+[Matplotlib](https://matplotlib.org/) ist das älteste [!DNL Python] Visualisierungspaket. Ihr Ziel ist es, &quot;einfache Dinge einfach und schwierige Dinge möglich zu machen&quot;. Dies ist eher wahr, da das Paket extrem mächtig ist, aber auch mit Komplexität. Es ist nicht immer einfach, eine vernünftige Grafik zu bekommen, ohne viel Zeit und Mühe zu verlieren.
 
 [Pandas](https://pandas.pydata.org/) wird hauptsächlich für sein DataFrame-Objekt verwendet, das die Datenbearbeitung mit integrierter Indexierung ermöglicht. Pandas verfügen jedoch auch über eine integrierte Plotfunktion, die auf matplotlib basiert.
 
