@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Kennzeichnen eines Felds als Identität
 topic: api guide
 translation-type: tm+mt
-source-git-commit: 40ce232e39f62f1ee478ef05229dd2fc125ee4c0
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '145'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Kennzeichnen eines Felds als Identität
 
-Felder, die persönliche identifizierbare Informationen enthalten, können als Identitätsfelder gekennzeichnet werden. Ein in einem Identitätsfeld bereitgestellter Wert wird vom Identitätsdienst als Identität interpretiert. Der Namensraum der Identität wird als Teil der Kennzeichnung des Feldes angegeben.
+Felder, die persönliche identifizierbare Informationen enthalten, können als Identitätsfelder gekennzeichnet werden. Ein in einem Identitätsfeld bereitgestellter Wert wird als Identität interpretiert [!DNL Identity Service]. Der Namensraum der Identität wird als Teil der Kennzeichnung des Feldes angegeben.
 
 Die folgenden Kriterien müssen erfüllt sein, damit ein Feld als Identität gekennzeichnet wird:
 
