@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erzwingen von Datenverwendungsrichtlinien mithilfe der Policy Service API
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '875'
 ht-degree: 3%
 
 ---
@@ -18,18 +18,18 @@ Nachdem Sie Datenverwendungsbeschriftungen für Ihre Daten erstellt und Nutzungs
 
 >[!NOTE] Standardmäßig `ENABLED` können nur Richtlinien, deren Status auf &quot;Testen&quot;festgelegt ist, an der Evaluierung teilnehmen. Damit `DRAFT` Richtlinien an der Auswertung teilnehmen können, müssen Sie den Parameter &quot;Abfrage&quot; `includeDraft=true` in den Anforderungspfad einbeziehen.
 
-In diesem Dokument wird beschrieben, wie Sie mit der Policy Service-API in verschiedenen Szenarien nach Richtlinienverletzungen suchen.
+In diesem Dokument wird beschrieben, wie Sie die [!DNL Policy Service] API verwenden, um in verschiedenen Szenarien nach Richtlinienverletzungen zu suchen.
 
 ## Erste Schritte
 
 Dieses Lernprogramm erfordert ein Verständnis der folgenden Schlüsselkonzepte, die bei der Durchsetzung von DULE-Richtlinien zum Tragen kommen:
 
-* [Datenverwaltung](../home.md): Das Framework, mit dem die Plattform die Einhaltung der Datenverwendung erzwingt.
+* [Datenverwaltung](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Platform] erzwungen wird.
    * [Datenverwendungsbeschriftungen](../labels/overview.md): Datenverwendungsbeschriftungen werden auf Datasets (und/oder einzelne Felder innerhalb dieser Datensätze) angewendet und geben Einschränkungen für die Verwendung dieser Daten an.
    * [Datenverwendungsrichtlinien](../policies/overview.md): Datenverwendungs-Richtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, die für bestimmte Sätze von DULE-Beschriftungen zulässig oder eingeschränkt sind.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die API für den DUL-Policy-Dienst benötigen, einschließlich der erforderlichen Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
+Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die DULE [!DNL Policy Service] -API benötigen, einschließlich erforderlicher Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Bewerten Sie die Bewertung mit DULE-Etiketten und einer Marketingaktion.
 
@@ -365,4 +365,4 @@ Bei einer erfolgreichen Antwort werden die URL für die Marketingaktion, die DUL
 
 Durch Lesen dieses Dokuments haben Sie bei der Durchführung einer Marketingaktion für einen Datensatz oder eine Reihe von DULE-Beschriftungen erfolgreich auf Richtlinienverletzungen überprüft. Mithilfe der in den API-Antworten zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverletzungen bei deren Auftreten angemessen zu erzwingen.
 
-Anweisungen zum Erzwingen von Datenverwendungsrichtlinien für Audiencen-Segmente im Echtzeit-Kundendienstprogramm finden Sie im folgenden [Lernprogramm](../../segmentation/tutorials/governance.md).
+Anweisungen zum Erzwingen von Datenverwendungsrichtlinien für Audiencen-Segmente in [!DNL Real-time Customer Profile]finden Sie im folgenden [Lernprogramm](../../segmentation/tutorials/governance.md).
