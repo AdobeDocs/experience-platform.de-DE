@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Angebot-Entscheidungsdomänenmodell
 topic: overview
 translation-type: tm+mt
-source-git-commit: fdaef24a23c1c1da064ca33e8bed522e506fead5
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2621'
+source-wordcount: '2614'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Übersicht über das Angebot-Entscheidungsdomänenmodell
 
-Die Entscheidungsfindung im Angebot ist ein Anwendungsfall des Entscheidungsdienstes, bei dem Sie die Regeln und Prognosen, die für die Kundenbindung mit Angeboten verwendet werden, formalisieren und zentral verwalten. Angebot-Entscheidungsfindung wird als eine Art von _**Inhaltsentscheidung**_ betrachtet. In diesem Fall werden die _**Entscheidungsoptionen**_ als _**Angebot**_ bezeichnet und als solche durch den ihnen beigefügten Inhalt gekennzeichnet. Eine Einführung in das vom Entscheidungsdienst verwendete Objektmodell finden Sie unter [Entscheidungsdienst-Domänenmodell](experience-model.md).
+Bei der Angebot-Entscheidungsfindung handelt es sich um einen Anwendungsfall, bei dem Sie die Regeln und Prognosen für die Kundenbindung mit Angeboten formalisieren und zentral verwalten [!DNL Decisioning Service] können. Angebot-Entscheidungsfindung wird als eine Art von _**Inhaltsentscheidung**_ betrachtet. In diesem Fall werden die _**Entscheidungsoptionen**_ als _**Angebot**_ bezeichnet und als solche durch den ihnen beigefügten Inhalt gekennzeichnet. Eine Einführung in das Objektmodell, das von der verwendet wird, [!DNL Decisioning Service]finden Sie unter [Entscheidungsdienst-Domänenmodell](experience-model.md).
 
 Ziel ist es, dem Endbenutzer in jedem Kanal ein &quot;bestes Angebot&quot;auf der Grundlage von Targeting-Kriterien, Kosten- und Frequenzbeschränkungen sowie vorherigen Interaktionen zwischen Kanälen, einschließlich der zuvor vorgeschlagenen Angebot, bereitzustellen.
 
@@ -26,7 +26,7 @@ Angebote haben oft einen Zusammenhang mit Waren oder Dienstleistungen und es geh
 
 Der prognostizierte Wert eines akzeptierten Angebots für das Unternehmen ist das Optimierungskriterium und steht im Widerspruch zu den Kosten für die Erstellung eines Angebots. Kosten, Annahmewahrscheinlichkeit und voraussichtlicher Wert werden zur Rangordnung der Angebot verwendet. Das beste Angebot ist das mit den höchsten prognostizierten positiven Auswirkungen auf die Ziele Ihrer Angebot-Aktivitäten.
 
-Bei der Angebot-Entscheidungsfindung werden die Interaktionen berücksichtigt, die ein Endbenutzer _**über viele Kanal**_ und Anwendungen hinweg hatte, und es werden die Daten des Profil- und Erlebnis-Ereignisses eines Endbenutzers genutzt. Beispielsweise kann eine Call-Center-Anwendung mithilfe der Angebot-Entscheidungsfunktion ein Angebot aktivieren oder unterdrücken, das auf Käufen und Reviews basiert, die vom Endbenutzer veröffentlicht wurden. oder eine E-Mail-Management-Anwendung kann sich darauf verlassen, dass Angebot-Entscheidungsfindung das Nächste Beste Angebot in einem wöchentlichen Newsletter auswählt, basierend auf dem Browserverlauf auf einer Website.
+Bei der Angebot-Entscheidungsfindung werden die Interaktionen berücksichtigt, die ein Endbenutzer _**über viele Kanal**_ und Anwendungen hinweg hatte, und es werden die Daten des Profil- und Erlebnis-Ereignisses eines Endbenutzers genutzt. Beispielsweise kann eine Call-Center-Anwendung mithilfe der Angebot-Entscheidungsfunktion ein Angebot aktivieren oder unterdrücken, das auf Käufen und Rezensionen basiert, die vom Endbenutzer veröffentlicht wurden. oder eine E-Mail-Management-Anwendung kann sich darauf verlassen, dass Angebot-Entscheidungsfindung das Nächste Beste Angebot in einem wöchentlichen Newsletter auswählt, basierend auf dem Browserverlauf auf einer Website.
 
 Angebote haben andere interessante Eigenschaften. Häufig gibt es einen definierten _**Zeitplan**_ oder einen Datums- und Zeitbereich, wann das Angebot gültig ist und wann das Angebot ungültig gemacht werden muss.
 
@@ -63,7 +63,7 @@ Allgemeine Angebote, auch als personalisierte Angebote bezeichnet, stehen im Mit
 
 Platzierungen definieren Inhaltsbeschränkungen und geben mit einer Aktivität den Ort an, an dem das nächste beste Erlebnis bereitgestellt wird. Dies verringert die Anzahl der Optionen, die in Betracht gezogen werden können, und stellt eine weitere Einschränkung dar, die von der Aktivität auferlegt wird. Dies wird als Platzierungsbeschränkung bezeichnet. Es werden nur Optionen in Betracht gezogen, bei denen Inhalt eine Platzierungseinschränkung erfüllt, z. B. Angebote. Dies wird in den frühen Phasen der Entscheidungsstrategie bewertet. Wenn Optionsobjekte die Platzierungseinschränkungen jeder Aktivität ändern, werden diese neu bewertet und die Option kann für eine oder mehrere Aktivitäten in Betracht gezogen oder ausgeschlossen werden.
 
-Der Entscheidungsdienst ist nicht dafür verantwortlich, die komplexen Details der Inhaltsabhängigkeiten zu formalisieren. Stattdessen identifiziert jeder Kunde die Liste der Platzierungen in allen Kanälen und gibt diesen Platzierungen eindeutige Bezeichner und Namen. Durch Verweis auf eine bestimmte Platzierung bestätigt der Designer, dass der angegebene Inhalt in die Platzierung passt.
+Es liegt nicht in der Verantwortung des [!DNL Decisioning Service] Unternehmens, die komplexen Details der Inhaltsabhängigkeiten zu formalisieren. Stattdessen identifiziert jeder Kunde die Liste der Platzierungen in allen Kanälen und gibt diesen Platzierungen eindeutige Bezeichner und Namen. Durch Verweis auf eine bestimmte Platzierung bestätigt der Designer, dass der angegebene Inhalt in die Platzierung passt.
 
 Wenn Inhalte entwickelt werden, wird der Angebot-Marketingspezialist und der Inhaltsentwickler einfach einen &quot;impliziten Vertrag&quot;vereinbaren, der hinter dem Namen &quot;Startseite Hero Image&quot;oder &quot;Service Call Open Script&quot;steht. Das erste Bild kann als Bild von 600 px Breite und 350 px Höhe vereinbart werden, und das zweite kann den Inhalt auf Text in zwei Sprachvarianten beschränken, die nicht mehr als 50 Wörter in drei oder vier Sätzen mit semantischer Struktur sind. Platzierung, um nicht die gesamte Bedeutung des ausgeblendeten Vertrags zu speichern.
 
@@ -101,7 +101,7 @@ Wenn eine Entscheidung beantragt wird, kann der Kunde gleichzeitig nach Vorschl�
 
 Duplizierungsbeschränkungen werden derzeit nicht in das Repository für Geschäftsobjekte geschrieben. Stattdessen ist die Deduplizierung zur Laufzeit die Standardstrategie. Ein Anforderungsparameter kann das Standardverhalten überschreiben, um Deduplizierungsschritte zu unterdrücken.
 
-### Einschränkungen des Profils - Eignungsregeln
+### [!DNL Profile] Einschränkungen - Eignungsregeln
 
 Bislang waren die diskutierten Einschränkungen unabhängig davon anwendbar, für wen das Angebot ausgewählt wurde. Die Erfahrungsentscheidung unterstützt auch einen Anwendungsfall, bei dem die Personalisierung von Angeboten auf den Ereignissen der Datensatz- und Zeitreihen des Kunden basiert. Regeln werden pro Profil ausgewertet, um zu entscheiden, ob ein Angebot für diesen Benutzer qualifiziert ist oder unterdrückt werden muss. Dazu kann jedem Angebot eine Eignungsregel zugeordnet werden. Neben den Profil- und Erlebnis-Ereignissen eines Endbenutzers berücksichtigt die Eignungsregel Echtzeitkontextdaten. Diese Daten werden vom Versand-Dienst bereitgestellt und können in Form von Daten vorliegen, die nicht mit einem Profil in Zusammenhang stehen, z. B. Lagerbestände, Wetterbedingungen und Flugpläne.
 
@@ -127,7 +127,7 @@ Wenn Optionen explizit in eine Sammlung platziert werden, wird ihr Tag-Satz für
 
 Aktivitäten konfigurieren und steuern den Entscheidungsprozess. Derzeit ist die Entscheidungsstrategie im Wesentlichen vorab festgelegt, aber künftige Iterationen des Angebot Decision Domain-Modells werden die Auswahl von Modellen, zusätzlichen Regeln und Einschränkungen ermöglichen.
 
-Ein Erlebnis kann mit vielen Aktivitäten gleichzeitig zusammengestellt werden. Derzeit können bis zu 30 Aktivitäten in einer einzigen Entscheidungsanforderung behandelt werden. Wenn mehr als 30 Aktivitäten oder Slots in einem Erlebnis mit Inhalten gefüllt werden müssen, können für dasselbe Profil mehrere Anforderungen gestellt werden. Werden jedoch Aktivitäten in ein und demselben Entscheidungsersuchen einbezogen, so werden die Angebotsvorschläge zwischen diesen Aktivitäten dedupliziert.
+Ein Erlebnis kann mit vielen Aktivitäten gleichzeitig zusammengestellt werden. Derzeit können bis zu 30 Aktivitäten in einer einzigen Entscheidungsanforderung behandelt werden. Wenn mehr als 30 Aktivitäten oder Slots in einem Erlebnis mit Inhalten gefüllt werden müssen, können für dasselbe Profil mehrere Anforderungen gestellt werden. Werden jedoch Aktivitäten in ein und demselben Entscheidungsersuchen aufgenommen, so werden die Angebotsvorschläge zwischen diesen Aktivitäten dedupliziert.
 
 Wenn Aktivitäten so definiert werden, dass sie aus unterschiedlichen Angeboten ausgewählt werden, macht es kaum einen Unterschied, ob Aktivitäten in derselben Anforderung kombiniert oder in separate Anforderungen aufgeteilt werden. Allerdings erfordern Netzwerk- und Reaktionszeitbeschränkungen möglicherweise, dass Aktivitäten in derselben Anforderung kombiniert werden. Da verschiedene Anforderungen an verschiedene Dienstknoten weitergeleitet werden, müssen möglicherweise dieselben Profil-Daten in verschiedene Nodes abgerufen werden. Dadurch wird die effektive IO-Bandbreite für andere Anforderungen reduziert.
 
