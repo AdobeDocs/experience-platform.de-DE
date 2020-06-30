@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst (Benutzeroberfläche)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Wenn Sie ein Modell mithilfe von Sensei Machine Learning APIs veröffentlichen m
 
 ## Ergebnis mit einem Dienst {#access-a-service}
 
-1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Dienste]** in der linken Navigationsspalte, um auf die *Dienstgalerie* zuzugreifen. Suchen Sie den gewünschten Dienst und klicken Sie auf **[!UICONTROL Ergebnis]**.
+1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Dienste]** in der linken Navigationsspalte, um auf die *[!UICONTROL Dienstgalerie]* zuzugreifen. Suchen Sie den gewünschten Dienst und klicken Sie auf **[!UICONTROL Ergebnis]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Wählen Sie einen entsprechenden Eingabedatensatz für die Bewertungsausführung und klicken Sie dann auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -52,4 +52,4 @@ Wenn Sie ein Modell mithilfe von Sensei Machine Learning APIs veröffentlichen m
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich ein Modell als barrierefreier Dienst veröffentlicht und Daten mithilfe des neuen Dienstes über die *Service Gallery* erfasst. Fahren Sie mit dem nächsten Lernprogramm fort, um zu erfahren, wie Sie automatisierte Schulungs- und Bewertungsläufe für einen Dienst [planen können](./schedule-models-ui.md).
+In diesem Tutorial haben Sie erfolgreich ein Modell als barrierefreier Dienst veröffentlicht und Daten mithilfe des neuen Dienstes über die *[!UICONTROL Service Gallery]* erfasst. Fahren Sie mit dem nächsten Lernprogramm fort, um zu erfahren, wie Sie automatisierte Schulungs- und Bewertungsläufe für einen Dienst [planen können](./schedule-models-ui.md).
