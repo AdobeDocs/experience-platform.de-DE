@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übungen zum Arbeitsbereich für Datenwissenschaften
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Weitere Informationen finden Sie im Tutorial zum [Erstellen einer Feature-Pipeli
 
 ## Erstellen einer Echtzeit-Anwendung für maschinelles Lernen (Alpha)
 
-Eine Kombination aus nahtloser Berechnung auf dem Hub und dem Edge verringert die Latenz, die traditionell bei der Bereitstellung übermäßig personalisierter Erlebnisse, die sowohl relevant als auch reaktionsfähig sind, eine entscheidende Rolle spielt. Das maschinelle Lernen in Echtzeit bietet somit eine unglaublich niedrige Latenz für synchrone Entscheidungen. Beispiele sind das Rendering personalisierter Webseiteninhalte, das Aufdecken eines Angebots und Rabatte, um den Absturz zu reduzieren und gleichzeitig die Konversionen in einem Webstore zu erhöhen.
+Eine Kombination aus nahtloser Berechnung auf dem Hub und dem [!DNL Edge] reduziert die Latenz, die traditionell bei der Erzielung übermäßig personalisierter Erlebnisse, die sowohl relevant als auch reaktionsfähig sind, eine entscheidende Rolle spielt. Das maschinelle Lernen in Echtzeit bietet somit eine unglaublich niedrige Latenz für synchrone Entscheidungen. Beispiele sind das Rendering personalisierter Webseiteninhalte, das Aufdecken eines Angebots und Rabatte, um den Absturz zu reduzieren und gleichzeitig die Konversionen in einem Webstore zu erhöhen.
 
 **Dieses Handbuch hilft Ihnen:**
 - Verstehen Sie die Architektur des maschinellen Lernens in Echtzeit.
