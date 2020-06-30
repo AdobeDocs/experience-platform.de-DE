@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SDK-Entwicklerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 564603fdec6050463937c6e162cdff00cda506c4
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # SDK-Entwicklerhandbuch
 
-Das Model Authoring SDK ermöglicht Ihnen die Entwicklung von benutzerdefinierten maschinellen Lernrezepten und Feature Pipelines, die im Data Science Workspace verwendet werden können. Es bietet implementierbare Vorlagen in PySpark und Spark (Scala). [!DNL Adobe Experience Platform]
+Das Model Authoring-SDK ermöglicht Ihnen die Entwicklung benutzerdefinierter Rezepte für maschinelles Lernen und von Funktionslinien, die im Data Science Workspace verwendet werden können, und stellt implementierbare Vorlagen in [!DNL Adobe Experience Platform] und [!DNL PySpark] [!DNL Spark (Scala)]bereit.
 
 Dieses Dokument enthält Informationen zu den verschiedenen Klassen im Model Authoring-SDK.
 
@@ -37,7 +37,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer PySpark Data Loade
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>Plattformdaten als Pandas-Datenrahmen laden und zurückgeben</p>
+                <p>Daten zur Platform als Pandas DataFrame laden und zurückgeben</p>
             </td>
             <td>
                 <ul>
@@ -52,7 +52,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer PySpark Data Loade
 
 **Spark**
 
-In der folgenden Tabelle werden die abstrakten Methoden einer Spark Data Loader-Klasse beschrieben:
+In der folgenden Tabelle werden die abstrakten Methoden einer Data [!DNL Spark] Loader-Klasse beschrieben:
 
 <table>
     <thead>
@@ -65,7 +65,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer Spark Data Loader-
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>Plattformdaten als DataFrame laden und zurückgeben</p>
+                <p>Daten zur Platform als DataFrame laden und zurückgeben</p>
             </td>
             <td>
                 <ul>
@@ -77,9 +77,9 @@ In der folgenden Tabelle werden die abstrakten Methoden einer Spark Data Loader-
     </tbody>
 </table>
 
-### Daten aus einem Plattformdataset laden {#load-data-from-a-platform-dataset}
+### Daten aus einem [!DNL Platform] Datensatz laden {#load-data-from-a-platform-dataset}
 
-Im folgenden Beispiel werden Plattformdaten nach ID abgerufen und ein DataFrame zurückgegeben, wobei die DataSet-ID (`datasetId`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
+Im folgenden Beispiel werden [!DNL Platform] Daten nach ID abgerufen und ein DataFrame zurückgegeben, wobei die DataSet-ID (`datasetId`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
 
 **PySpark**
 
@@ -198,7 +198,7 @@ Die DataSaver-Klasse kapselt alles, was mit dem Speichern von Ausgabedaten zu tu
 
 **PySpark**
 
-In der folgenden Tabelle werden die abstrakten Methoden einer PySpark Data Saver-Klasse beschrieben:
+In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL PySpark] Data Saver-Klasse beschrieben:
 
 <table>
     <thead>
@@ -226,7 +226,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer PySpark Data Saver
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die abstrakten Methoden einer Spark Data Saver-Klasse beschrieben:
+In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL Spark] Data Saver-Klasse beschrieben:
 
 <table>
     <thead>
@@ -251,14 +251,14 @@ In der folgenden Tabelle werden die abstrakten Methoden einer Spark Data Saver-K
     </tbody>
 </table>
 
-### Daten in einem Platform-Datensatz speichern {#save-data-to-a-platform-dataset}
+### Daten in einem [!DNL Platform] Datensatz speichern {#save-data-to-a-platform-dataset}
 
-Um Daten in einem Platform-Dataset zu speichern, müssen die Eigenschaften entweder bereitgestellt oder in der Konfigurationsdatei definiert werden:
+Um Daten in einem [!DNL Platform] Datensatz zu speichern, müssen die Eigenschaften entweder bereitgestellt oder in der Konfigurationsdatei definiert werden:
 
-- Eine gültige Plattform-Datensatz-ID, in der Daten gespeichert werden
+- Eine gültige [!DNL Platform] DataSet-ID, in der Daten gespeichert werden
 - Die Mandanten-ID in Ihrer Organisation
 
-Die folgenden Beispiele speichern Daten (`prediction`) in einem Platform-Dataset, wobei die Dataset-ID (`datasetId`) und die Mandant-ID (`tenantId`) Eigenschaften in der Konfigurationsdatei sind.
+Die folgenden Beispiele speichern Daten (`prediction`) in einem [!DNL Platform] Datensatz, wobei die Dataset-ID (`datasetId`) und die Mandant-ID (`tenantId`) Eigenschaften in der Konfigurationsdatei sind.
 
 
 **PySpark**
@@ -394,7 +394,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-Die DatasetTransformer-Klasse ändert und transformiert die Struktur eines Datensatzes. Die Sensei Machine Learning Runtime erfordert keine Definition dieser Komponente und wird entsprechend Ihren Anforderungen implementiert.
+Die DatasetTransformer-Klasse ändert und transformiert die Struktur eines Datensatzes. Die Komponente muss [!DNL Sensei Machine Learning Runtime] nicht definiert werden und wird entsprechend Ihren Anforderungen implementiert.
 
 Im Hinblick auf eine Feature-Pipeline können DataSet-Transformer gemeinsam mit einer Feature-Pipeline-Fabrik zur Vorbereitung von Daten für die Funktionstechnik eingesetzt werden.
 
@@ -428,7 +428,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer PySpark-DataSet-Transf
 
 **Spark (Scala)**
 
-Die folgende Tabelle beschreibt die abstrakten Methoden einer Spark-DataSet-Transformer-Klasse:
+Die folgende Tabelle beschreibt die abstrakten Methoden einer DataSet-Transformer- [!DNL Spark] Klasse:
 
 <table>
     <thead>
@@ -499,7 +499,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer PySpark FeaturePipelin
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die Klassenmethoden einer Spark FeaturePipelineFactory beschrieben:
+In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] FeaturePipelineFactory beschrieben:
 
 <table>
     <thead>
@@ -537,7 +537,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer Spark FeaturePipelineF
 
 ## PipelineFactory {#pipelinefactory}
 
-Die PipelineFactory-Klasse enthält Methoden und Definitionen für Modellschulungen und -bewertungen, wobei Schulungslogik und -algorithmen in Form einer Spark-Pipeline definiert werden.
+Die PipelineFactory-Klasse enthält Methoden und Definitionen für Modellschulungen und -bewertungen, wobei Schulungslogik und -algorithmen in Form einer [!DNL Spark] Pipeline definiert werden.
 
 **PySpark**
 
@@ -608,7 +608,7 @@ Die folgende Tabelle beschreibt die Klassenmethoden einer PySpark PipelineFactor
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die Klassenmethoden einer Spark PipelineFactory beschrieben:
+In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] PipelineFactory beschrieben:
 
 <table>
     <thead>
@@ -692,7 +692,7 @@ In der folgenden Tabelle werden die Klassenmethoden eines PySpark MLEvaluators b
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die Klassenmethoden eines Spark MLEvaluators beschrieben:
+In der folgenden Tabelle werden die Klassenmethoden eines [!DNL Spark] MLEvaluators beschrieben:
 
 <table>
     <thead>
