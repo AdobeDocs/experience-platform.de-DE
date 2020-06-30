@@ -4,32 +4,32 @@ solution: Experience Platform
 title: ServiceNow Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) ServiceNow-Connector
+# (Beta) [!DNL ServiceNow] -Anschluss
 
 >[!NOTE]
->Der ServiceNow-Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
+>Der [!DNL ServiceNow] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
-Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platformen zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
 
-Experience Platform unterstützt die Erfassung von Daten aus einem Drittanbieter-Kundenerfolgssystem. Zu den Support-Anbietern für Kundenerfolge zählen ServiceNow.
+[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieter-Kundenerfolgssystem. Der Support für Kunden-Erfolgsanbieter umfasst [!DNL ServiceNow].
 
-Die nachstehende Dokumentation enthält Informationen zum Verbinden von ServiceNow mit einer Platform mithilfe von APIs oder der Benutzeroberfläche:
+Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbindung [!DNL ServiceNow] mit [!DNL Platform] APIs oder der Benutzeroberfläche:
 
-## Verbindung von ServiceNow mit der Platform mithilfe von APIs
+## Verbindung [!DNL ServiceNow] mit [!DNL Platform] APIs
 
 - [Erstellen eines ServiceNow-Connectors mit der Flow Service API](../../tutorials/api/create/customer-success/servicenow.md)
 - [Erkunden Sie ein Kundenerfolgssystem mit der Flow Service API](../../tutorials/api/explore/customer-success.md)
 - [Erfassen von Daten aus einem Kundenerfolgssystem mithilfe der Flow Service API](../../tutorials/api/collect/customer-success.md)
 
-## Verbindung von ServiceNow mit Platform über die Benutzeroberfläche
+## Verbindung [!DNL ServiceNow] mit der [!DNL Platform] Benutzeroberfläche
 
 - [Erstellen eines ServiceNow-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/customer-success/servicenow.md)
 - [Konfigurieren des Datenflusses für einen Kunden-Erfolgsstecker in der Benutzeroberfläche](../../tutorials/ui/dataflow/customer-success.md)
