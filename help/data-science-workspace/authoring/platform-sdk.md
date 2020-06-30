@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Handbuch zum Plattform-SDK
+title: Handbuch zum Platform SDK
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '447'
 ht-degree: 5%
 
 ---
 
 
-# Handbuch zum Plattform-SDK
+# [!DNL Platform] SDK-Handbuch
 
 Dieses Tutorial bietet Informationen zum Konvertieren `data_access_sdk_python` in den neuen Python `platform_sdk` in Python und R. Dieses Lernprogramm enthält Informationen zu den folgenden Vorgängen:
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Grundlegende Datenauswertung {#basic-reading-of-data}
 
-Mit dem neuen Plattform-SDK beträgt die maximale Lesegröße 32 GB mit einer maximalen Lesedauer von 10 Minuten.
+Mit dem neuen [!DNL Platform] SDK beträgt die maximale Lesegröße 32 GB mit einer maximalen Lesedauer von 10 Minuten.
 
 Wenn Ihre Lesezeit zu lang dauert, können Sie eine der folgenden Filteroptionen verwenden:
 
@@ -144,7 +144,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Das neue Plattform-SDK unterstützt die folgenden Vorgänge:
+Das neue [!DNL Platform] SDK unterstützt die folgenden Vorgänge:
 
 | Vorgang | Funktion |
 | --------- | -------- |
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Nächste Schritte
 
-Nachdem Sie den `platform_sdk` Datenladevorgang konfiguriert haben, werden die Daten vorbereitet und in die Datasets `train` und `val` Datensätze aufgeteilt. Informationen zur Datenvorbereitung und zur Funktionstechnik finden Sie im Abschnitt zur [Datenvorbereitung und Funktionstechnik](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) im Tutorial zum Erstellen eines Skripts mit JupyterLab-Notebooks.
+Nachdem Sie den `platform_sdk` Datenladevorgang konfiguriert haben, werden die Daten vorbereitet und in die Datasets `train` und `val` Datensätze aufgeteilt. Um mehr über die Datenvorbereitung und die Funktionstechnik zu erfahren, besuchen Sie bitte den Abschnitt über die [Datenvorbereitung und die Funktionstechnik](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) im Tutorial zur Erstellung eines Rezeptes mit [!DNL JupyterLab] Notebooks.
