@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Protokolldaten über Quellschnittstellen und APIs erfassen
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5c4c78fe12141e7292fbb94fc37465319ba2bc8
+source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1415'
 ht-degree: 2%
 
 ---
@@ -14,36 +14,36 @@ ht-degree: 2%
 
 # Protokolldaten über Quellschnittstellen und APIs erfassen
 
-Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Protokollanwendung und zum Integrieren in die Plattform über Quellschnittstellen und APIs beschrieben.
+In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Protokollanwendung und zum Einbinden dieser Daten [!DNL Platform] über Quellschnittstellen und APIs beschrieben.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert den Zugriff auf ein Protokollsystem über eine gültige Basisverbindung und Informationen über die Datei, die Sie in Platform einbringen möchten, einschließlich Pfad und Struktur der Tabelle. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zum [Erforschen von Protokollsystemen mithilfe der Flow Service API](../explore/protocols.md) , bevor Sie dieses Lernprogramm durchführen.
+Dieses Lernprogramm erfordert den Zugriff auf ein Protokollsystem über eine gültige Basisverbindung und Informationen über die Datei, in die Sie eingehen möchten, [!DNL Platform]einschließlich Pfad und Struktur der Tabelle. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung von Protokollsystemen mithilfe der Flow Service API](../explore/protocols.md) , bevor Sie dieses Lernprogramm durchführen.
 
-* [Erlebnis-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [Erlebnis-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Zusammensetzung](../../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
    * [Entwicklerhandbuch](../../../../xdm/api/getting-started.md)zur Schema-Registrierung: Enthält wichtige Informationen, die Sie zur erfolgreichen Durchführung von Aufrufen der Schema Registry API kennen müssen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
-* [Katalogdienst](../../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie in der Experience Platform.
-* [Stapelverarbeitung](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch Ingestion API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
-* [Sandboxen](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Katalogdienst](../../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform].
+* [Stapelverarbeitung](../../../../ingestion/batch-ingestion/overview.md): Mit der Stapeleinbetungs-API können Sie Daten [!DNL Experience Platform] als Batch-Dateien erfassen.
+* [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der Flow Service API eine Verbindung zu einer Protokollanwendung herzustellen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine Verbindung zu einer Protokollanwendung mit der [!DNL Flow Service] API herstellen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur [!DNL Experience Platform] Fehlerbehebung.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um [!DNL Platform] APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform, einschließlich derer, die zu Flow Service gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Sämtliche Ressourcen in [!DNL Experience Platform]und auch die Ressourcen, die [!DNL Flow Service]gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Alle Anforderungen an [!DNL Platform] APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -53,7 +53,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 ## Erstellen einer Ad-hoc-XDM-Klasse und eines Ad-hoc-Schemas
 
-Um externe Daten über Quell-Connectors in die Plattform zu bringen, müssen eine Ad-hoc-XDM-Klasse und ein Schema für die Rohquellendaten erstellt werden.
+Um externe Daten [!DNL Platform] über Quell-Connectors zu importieren, müssen eine Ad-hoc-XDM-Klasse und ein Schema für die Rohquellendaten erstellt werden.
 
 Um eine Ad-hoc-Klasse und ein Ad-hoc-Schema zu erstellen, führen Sie die im [Ad-hoc-Schema-Lernprogramm](../../../../xdm/tutorials/ad-hoc.md)beschriebenen Schritte aus. Beim Erstellen einer Ad-hoc-Klasse müssen alle in den Quelldaten gefundenen Felder im Anforderungstext beschrieben werden.
 
@@ -61,7 +61,7 @@ Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad
 
 ## Erstellen einer Quellverbindung {#source}
 
-Wenn ein Ad-hoc-XDM-Schema erstellt wurde, kann jetzt eine Quellverbindung mit einer POST-Anforderung an die Flow Service API erstellt werden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einer Quelldatendatei und einem Verweis auf das Schema, das die Quelldaten beschreibt.
+Bei Erstellung eines Ad-hoc-XDM-Schemas kann jetzt eine Quellverbindung mit einer POST-Anforderung an die [!DNL Flow Service] API erstellt werden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einer Quelldatendatei und einem Verweis auf das Schema, das die Quelldaten beschreibt.
 
 **API-Format**
 
@@ -120,9 +120,9 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Zielgruppe XDM-Schema erstellen {#target}
 
-In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. Damit die Quelldaten in Platform verwendet werden können, muss auch ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein Plattformdataset erstellt, in dem die Quelldaten enthalten sind. Dieses XDM-Schema der Zielgruppe erweitert auch die XDM Individual Profil-Klasse.
+In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. Damit die Quelldaten in verwendet werden können, [!DNL Platform]muss auch ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform] Datensatz erstellt, in dem die Quelldaten enthalten sind. Diese Zielgruppe XDM Schema erweitert auch die XDM [!DNL Individual Profile] -Klasse.
 
-Ein Zielgruppe-XDM-Schema kann erstellt werden, indem eine POST-Anforderung an die [Schema-Registrierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)ausgeführt wird. Wenn Sie die Benutzeroberfläche in Experience Platform bevorzugen, finden Sie im [Schema Editor-Tutorial](../../../../xdm/tutorials/create-schema-ui.md) eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen im Schema-Editor.
+Ein Zielgruppe-XDM-Schema kann erstellt werden, indem eine POST-Anforderung an die [Schema-Registrierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)ausgeführt wird. Wenn Sie lieber die Benutzeroberfläche in verwenden möchten, [!DNL Experience Platform]finden Sie im [Schema Editor-Tutorial](../../../../xdm/tutorials/create-schema-ui.md) eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen im Schema-Editor.
 **API-Format**
 
 ```http
@@ -131,7 +131,7 @@ POST /tenant/schemas
 
 **Anfrage**
 
-Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM Individual Profil-Klasse erweitert.
+Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM- [!DNL Individual Profile] Klasse erweitert.
 
 ```shell
 curl -X POST \
@@ -277,7 +277,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des neu erstellten 
 
 ## Erstellen einer Datenbank-Basisverbindung
 
-Um externe Daten in Platform zu erfassen, muss zunächst eine Verbindung zur Experience Platform-Datenbank aufgebaut werden.
+Zur Erfassung externer Daten in [!DNL Platform]muss zunächst eine [!DNL Experience Platform] Datenbank-Verbindung aufgebaut werden.
 
 Gehen Sie zum Erstellen einer Datenbankverbindung zum DataSet wie im Lernprogramm zur [Datenbankverbindung beschrieben vor](../create-dataset-base-connection.md).
 
@@ -285,7 +285,7 @@ Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine D
 
 ## Erstellen einer Zielgruppe-Verbindung
 
-Sie haben jetzt die eindeutigen Bezeichner für eine DataSet-Basisverbindung, ein Zielgruppe-Schema und einen Dataset für die Zielgruppe. Sie können jetzt eine Zielgruppe-Verbindung mit der Flow Service API erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
+Sie haben jetzt die eindeutigen Bezeichner für eine DataSet-Basisverbindung, ein Zielgruppe-Schema und einen Dataset für die Zielgruppe. Sie können jetzt eine Zielgruppe-Verbindung mit der [!DNL Flow Service] API erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -424,7 +424,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
 
 ## Spezifikationen zum Nachschlagen von Datenblättern {#specs}
 
-Ein Datennachweis ist dafür verantwortlich, Daten aus Quellen zu sammeln und sie in Plattform zu bringen. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET-Anforderung an die Flow Service API ausführen. Dataflow-Spezifikationen sind für die Datenerfassung aus einer Anwendung für externe Protokolle zuständig.
+Ein Datennachweis ist für das Sammeln von Daten aus Quellen und deren Umsetzung zuständig [!DNL Platform]. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET-Anforderung an die [!DNL Flow Service] API ausführen. Dataflow-Spezifikationen sind für die Datenerfassung aus einer Anwendung für externe Protokolle zuständig.
 
 **API-Format**
 
@@ -445,7 +445,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für das Übertragen von Daten aus der Protokollanwendung in die Plattform verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
+Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für die Übertragung von Daten aus der Protokollanwendung in [!DNL Platform]verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -572,7 +572,7 @@ Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation 
 Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstellen. An dieser Stelle sollten die folgenden erforderlichen Werte vorbereitet sein:
 
 * [Quell-Verbindungs-ID](#source)
-* [Zielgruppen-Verbindungs-ID](#target)
+* [Target-Verbindungs-ID](#target)
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
@@ -645,7 +645,7 @@ Eine erfolgreiche Antwort gibt die ID `id` des neu erstellten Datenflusses zurü
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Lernprogramms haben Sie einen Quell-Connector erstellt, um Daten aus einer Protokollanwendung planmäßig zu erfassen. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Durch Befolgen dieses Lernprogramms haben Sie einen Quell-Connector erstellt, um Daten aus einer Protokollanwendung planmäßig zu erfassen. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
