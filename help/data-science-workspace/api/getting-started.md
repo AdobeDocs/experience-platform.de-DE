@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Entwicklerleitfaden für Sensei Machine Learning API
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 2%
+source-wordcount: '196'
+ht-degree: 3%
 
 ---
 
 
-# Entwicklerleitfaden für Sensei Machine Learning API
+# [!DNL Sensei Machine Learning] API-Entwicklerleitfaden
 
-Die Sensei Machine Learning API bietet Datenwissenschaftlern einen Mechanismus zur Organisation und Verwaltung von Dienstleistungen des maschinellen Lernens, von Algorithmus-Onboarding über Experimentierungen bis hin zur Service-Bereitstellung.
+Die [!DNL Sensei Machine Learning] API bietet Datenwissenschaftlern einen Mechanismus zur Organisation und Verwaltung von Dienstleistungen für maschinelles Lernen, von der Algorithmusüberwachung über Experimente bis zur Dienstbereitstellung.
 
 In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Beginn ausführen können. Außerdem werden API-Aufrufe für die Ausführung von CRUD-Vorgängen in verschiedenen Data Science Workspace-Ressourcen veranschaulicht.
 
@@ -26,11 +26,11 @@ Sie müssen das [Authentifizierungs](../../tutorials/authentication.md) -Tutoria
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sandboxen isoliert. Alle Anforderungen an [!DNL Platform] APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
