@@ -4,32 +4,32 @@ solution: Experience Platform
 title: GreenPlum-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) GreenPlum-Anschluss
+# (Beta) [!DNL GreenPlum] -Anschluss
 
 >[!NOTE]
->Der GreenPlum-Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
+>Der [!DNL GreenPlum] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie Microsoft, MySQL und Azurblau. Sie können Ihre Daten aus diesen Systemen in Platform bringen.
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform]importieren.
 
-Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL oder data warehouse. Die Unterstützung für Datenbankanbieter beinhaltet GreenPlum.
+Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL oder data warehouse. Die Unterstützung von Datenbankanbietern umfasst [!DNL GreenPlum].
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie GreenPlum mit APIs oder der Benutzeroberfläche mit der Platform verbunden werden kann:
+Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbindung [!DNL GreenPlum] mit [!DNL Platform] APIs oder der Benutzeroberfläche:
 
-## Verbinden von GreenPlum mit einer Platform mithilfe von APIs
+## Verbindung [!DNL GreenPlum] mit [!DNL Platform] APIs
 
 - [Erstellen eines GreenPlum-Connectors mithilfe der Flow Service API](../../tutorials/api/create/databases/greenplum.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinden von GreenPlum mit der Platform über die Benutzeroberfläche
+## Verbindung [!DNL GreenPlum] mit der [!DNL Platform] Benutzeroberfläche
 
 - [Erstellen eines GreenPlum-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/greenplum.md)
 - [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
