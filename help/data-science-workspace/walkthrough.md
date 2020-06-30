@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Anleitung zum Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
 
 
-# Anleitung zum Data Science Workspace
+# [!DNL Data Science Workspace] exemplarische Vorgehensweise
 
-Dieses Dokument bietet eine exemplarische Anleitung für den Adobe Experience Platform Data Science Workspace. Insbesondere werden wir über den allgemeinen Arbeitsablauf, den ein Datenwissenschaftler durchlaufen würde, hinausgehen, um ein Problem mit maschinellem Lernen zu lösen.
+Dieses Dokument bietet eine exemplarische Vorgehensweise für die Adobe Experience Platform [!DNL Data Science Workspace]. Insbesondere werden wir über den allgemeinen Arbeitsablauf, den ein Datenwissenschaftler durchlaufen würde, hinausgehen, um ein Problem mit maschinellem Lernen zu lösen.
 
 ## Voraussetzungen
 
-- Ein registriertes Adobe ID-Konto
-   - Das Adobe ID-Konto muss einer Organisation mit Zugriff auf die Adobe Experience Platform und den Data Science Workspace hinzugefügt worden sein.
+- Ein registriertes Adoben ID-Konto
+   - Das Konto &quot;Adobe ID&quot;muss einer Organisation hinzugefügt worden sein, die Zugriff auf die Adobe Experience Platform und die [!DNL Data Science Workspace]
 
 ## Motivation des Datenwissenschaftlers
 
@@ -29,22 +29,22 @@ Ein Einzelhändler steht vor vielen Herausforderungen, um auf dem aktuellen Mark
 
 Die Lösung eines Datenwissenschaftlers besteht darin, den Reichtum historischer Daten zu nutzen, auf die ein Einzelhändler Zugriff hat, zukünftige Trends vorherzusagen und Preisentscheidungen zu optimieren. Wir werden frühere Verkaufsdaten verwenden, um unser maschinelles Lernmodell auszubilden und das Modell zur Vorhersage künftiger Verkaufstrends zu verwenden. Damit kann der Einzelhändler Einblicke erhalten, die ihm bei Preisänderungen helfen.
 
-In diesem Überblick gehen wir über die Schritte hinaus, die ein Datenwissenschaftler ausführen würde, um einen Datensatz zu erstellen und ein Modell zu erstellen, das die wöchentlichen Verkäufe vorhersagt. Wir werden die folgenden Abschnitte im Beispiel für Einzelhandelsverkäufe im Adobe Experience Platform Data Science Workspace durchgehen:
+In diesem Überblick gehen wir über die Schritte hinaus, die ein Datenwissenschaftler ausführen würde, um einen Datensatz zu erstellen und ein Modell zu erstellen, das die wöchentlichen Verkäufe vorhersagt. Wir werden die folgenden Abschnitte im Beispiel für Einzelhandelsverkäufe auf der Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Einrichten](#setup)
 - [Daten untersuchen](#exploring-data)
 - [Funktionstechnik](#feature-engineering)
 - [Schulung und Überprüfung](#training-and-verification)
 
-### Notebooks im Arbeitsbereich der Datenwissenschaften
+### Notebooks in [!DNL Data Science Workspace]
 
-Zunächst möchten wir ein JupyterLab-Notebook erstellen, um das &quot;Retail Sales&quot;-Musterheft zu öffnen. Die Schritte des Datenwissenschaftlers im Notebook werden uns ein Verständnis eines typischen Arbeitsablaufs verschaffen.
+Zunächst möchten wir ein [!DNL JupyterLab] Notebook erstellen, um das Stichprobenfragment &quot;Einzelhandel&quot;zu öffnen. Die Schritte des Datenwissenschaftlers im Notebook werden uns ein Verständnis eines typischen Arbeitsablaufs verschaffen.
 
-Klicken Sie in der Benutzeroberfläche von Adobe Experience Platform auf die Registerkarte Data Science im oberen Menü, um zum Data Science Workspace zu gelangen. Klicken Sie auf dieser Seite auf die Registerkarte JupyterLab, um den JupyterLab-Starter zu öffnen. Sie sollten eine ähnliche Seite sehen.
+Klicken Sie in der Benutzeroberfläche &quot;Adobe Experience Platform&quot;auf die Registerkarte &quot;Datenwissenschaft&quot;im oberen Menü, um zum [!DNL Data Science Workspace]Thema zu gelangen. Klicken Sie auf dieser Seite auf die [!DNL JupyterLab] Registerkarte, die den [!DNL JupyterLab] Starter öffnet. Sie sollten eine ähnliche Seite sehen.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-In unserem Tutorial verwenden wir Python 3 im Jupyter-Notebook, um zu zeigen, wie man auf die Daten zugreifen und sie untersuchen kann. Auf der Startseite stehen Ihnen Beispielnotizen zur Verfügung. Wir werden die Stichprobe &quot;Einzelhandel&quot; für Python 3 verwenden.
+In unserem Tutorial werden wir [!DNL Python] [!DNL Jupyter Notebook] 3 in der verwenden, um zu zeigen, wie man auf die Daten zugreifen und zu erkunden. Auf der Startseite stehen Ihnen Beispielnotizen zur Verfügung. Wir werden die Stichprobe &quot;Einzelhandel&quot; für [!DNL Python] 3 verwenden.
 
 ![](./images/walkthrough/retail_sales.png)
 
@@ -62,7 +62,7 @@ Mit dem geöffneten Retail Sales Notebook laden wir als Erstes die für unseren 
 
 #### Daten laden
 
-Nachdem die Bibliotheken geladen wurden, können wir Beginn mit den Daten arbeiten. Der folgende Python-Code verwendet die `DataFrame` Datenstruktur von Pandas und die [Funktion read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) , um das auf Github gehostete CSV in das Pandas DataFrame zu lesen:
+Nachdem die Bibliotheken geladen wurden, können wir Beginn mit den Daten arbeiten. Der folgende [!DNL Python] Code verwendet die `DataFrame` Datenstruktur des Pandas und die Funktion [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) , um das auf dem Pandas-DataFrame gehostete CSV zu lesen [!DNL Github] :
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -76,7 +76,7 @@ Schließlich können wir einen Blick darauf werfen, wie unsere Daten aussehen. W
 
 #### Statistische Zusammenfassung
 
-Wir können Pythons Pandas-Bibliothek nutzen, um den Datentyp jedes Attributs zu erhalten. Die Ausgabe des folgenden Aufrufs gibt uns Informationen über die Anzahl der Einträge und den Datentyp für jede der Spalten:
+Wir können die [!DNL Python's] Pandas-Bibliothek nutzen, um den Datentyp jedes Attributs zu erhalten. Die Ausgabe des folgenden Aufrufs gibt uns Informationen über die Anzahl der Einträge und den Datentyp für jede der Spalten:
 
 ```PYTHON
 df.info()
