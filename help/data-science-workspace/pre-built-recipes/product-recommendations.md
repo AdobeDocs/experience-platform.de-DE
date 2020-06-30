@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Rezept für Produktempfehlungen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '421'
 ht-degree: 5%
 
 ---
@@ -26,7 +26,7 @@ Das Rezept &quot;Produktempfehlungen&quot;verwendet maschinelles Lernen, um die 
 
 ## Wie sehen die ersten Schritte aus?
 
-Beginnen Sie mit dem Tutorial zum Adobe Experience Platform Lab (siehe Link unten). Dieses Lernprogramm zeigt Ihnen, wie Sie das Rezept &quot;Produktempfehlungen&quot;in einem Jupyter-Notebook erstellen, indem Sie dem Arbeitsablauf [für Rezept](../jupyterlab/create-a-recipe.md) folgen und das Rezept in Experience Platform Data Science Workspace implementieren.
+Beginnen Sie mit dem Tutorial Adobe Experience Platform Lab (siehe Link unten). Dieses Lernprogramm zeigt Ihnen, wie Sie das Rezept &quot;Produktempfehlungen&quot;in einem Jupyter-Notebook erstellen, indem Sie dem Arbeitsablauf [für Rezept](../jupyterlab/create-a-recipe.md) folgen und das Rezept in implementieren [!DNL Experience Platform][!DNL Data Science Workspace].
 
 * [Lab: Prognostizieren der Zukunft mit dem Arbeitsbereich für Datenwissenschaften](https://expleague.azureedge.net/labs/L777/index.html)
 * [Lab-Ressourcen](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
