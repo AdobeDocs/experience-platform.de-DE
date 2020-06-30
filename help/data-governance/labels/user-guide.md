@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zur Datenverwendung
 topic: labels
 translation-type: tm+mt
-source-git-commit: 475e774d5e7ebac036b42aa94736ba8e22c7185f
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Benutzerhandbuch zur Datenverwendung
 
-Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen (auch als DULE-Beschriftungen bezeichnet) in der Benutzeroberfläche von Experience Platform. Bevor Sie den Leitfaden verwenden, lesen Sie bitte die Übersicht über die [Datenverwaltung](../home.md) , um eine solidere Einführung in das DUL-Framework zu erhalten.
+Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen (auch als DULE-Beschriftungen bezeichnet) in der [!DNL Experience Platform] Benutzeroberfläche. Bevor Sie den Leitfaden verwenden, lesen Sie bitte die Übersicht über die [Datenverwaltung](../home.md) , um eine solidere Einführung in das DUL-Framework zu erhalten.
 
 ## Verwalten von Datenverwendungsbeschriftungen auf der Datensatzebene
 
-Zur Verwaltung der Datenverwendungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Nach der Anmeldung bei Adobe Experience Platform wählen Sie **[!UICONTROL Datasets]** in der linken Navigation, um den Arbeitsbereich &quot; _Datasets_ &quot;zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz Liste.
+Zur Verwaltung der Datenverwendungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Nach dem Anmelden bei der Adobe Experience Platform wählen Sie im linken Navigationsbereich &quot; **[!UICONTROL Datasets]** &quot;aus, um den _Datasets_ -Arbeitsbereich zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz Liste.
 
 ![Registerkarte &quot;Datenbestand&quot;im Datenbereich](../images/labels/datasets.png)
 
@@ -100,12 +100,12 @@ Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene na
 
 ## Nächste Schritte
 
-Nachdem Sie nun Datenverwendungsbeschriftungen auf der Dataset- und Feldebene hinzugefügt haben, können Sie beginnen, Daten in Experience Platform zu erfassen. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
+Nachdem Sie nun Bezeichnungen zur Datenverwendung auf der Ebene des Datensatzes und der Felder hinzugefügt haben, können Sie beginnen, Daten zu erfassen [!DNL Experience Platform]. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
 
 Sie können jetzt auch Datenverwendungsrichtlinien auf Basis der von Ihnen angewendeten Beschriftungen definieren. Weitere Informationen finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](../policies/overview.md).
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video soll Ihr Verständnis von Data Governance unterstützen und beschreibt, wie Sie Beschriftungen auf einen Datensatz und einzelne Felder anwenden.
+Das folgende Video soll Ihnen dabei helfen, Beschreibungen zu verstehen [!DNL Data Governance]und beschreibt, wie Sie Beschriftungen auf einen Datensatz und einzelne Felder anwenden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
