@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Datenverwendungsrichtlinien
 topic: policies
 translation-type: tm+mt
-source-git-commit: 92092620a7ba9129eef4bde852b1e0afc6612d74
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '979'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Übersicht über die Datenverwendungsrichtlinien
 
-Damit Datenverwendungsbeschriftungen die Datenkonformität effektiv unterstützen können, müssen Datenverwendungsrichtlinien implementiert werden. Datenverwendungsrichtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, von denen Sie Daten innerhalb der Experience Platform ausführen dürfen oder von denen Sie eingeschränkt sind.
+Damit Datenverwendungsbeschriftungen die Datenkonformität effektiv unterstützen können, müssen Datenverwendungsrichtlinien implementiert werden. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 Dieses Dokument bietet einen allgemeinen Überblick über die Richtlinien zur Datenverwendung und enthält Links zu weiteren Dokumentationen zum Arbeiten mit Richtlinien in der Benutzeroberfläche oder API.
 
 ## Marketingaktionen {#marketing-actions}
 
-**Marketingaktionen**(auch als **Marketing-Nutzungsszenarien** bezeichnet) im Rahmen des Data Governance-Rahmens sind Aktionen, die ein Datennutzer ausführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Daher wird eine Datenverwendungsrichtlinie wie folgt definiert:
+**Marketingaktionen**(auch als **Marketing-Nutzungsszenarien** bezeichnet) im Rahmen des Data Governance-Rahmens sind Aktionen, die ein [!DNL Experience Platform] Datenkonsument durchführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Daher wird eine Datenverwendungsrichtlinie wie folgt definiert:
 
 1. Eine bestimmte Marketingaktion
 2. Die Datenverwendungs-Beschriftungen, die für diese Aktion eingeschränkt sind, gegen
 
-Ein Beispiel für eine Marketingaktion könnte der Wunsch sein, einen Datensatz in einen Drittanbieter-Service zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. persönliche identifizierbare Informationen (PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine &quot;I&quot;-Beschriftung (Identitätsdaten) enthält, erhalten Sie eine Antwort des Policy Service, in der Sie darauf hingewiesen werden, dass eine Datenverwendungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketingaktion könnte der Wunsch sein, einen Datensatz in einen Drittanbieter-Service zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. &quot;Persönlich identifizierbare Informationen&quot;(PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine &quot;I&quot;-Beschriftung (Identitätsdaten) enthält, erhalten Sie eine Antwort der [!DNL Policy Service] Ihnen mitteilenden Person, dass eine Datenverwendungsrichtlinie verletzt wurde.
 
 >[!NOTE] Marketingaktionen allein schränken die Datenverwendung nicht ein. Sie müssen in aktivierte Datenverwendungsrichtlinien eingeschlossen werden, damit diese Aktionen auf Richtlinienverletzungen hin bewertet werden können.
 
