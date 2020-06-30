@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über maschinelles Lernen in Echtzeit
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 2%
 >[!IMPORTANT]
 >Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzern zur Verfügung. Diese Funktion ist alphanumerisch und wird noch getestet. Dieses Dokument kann sich ändern.
 
-Echtzeit-maschinelles Lernen kann die Relevanz Ihrer digitalen Erlebnisinhalte für Ihre Endbenutzer dramatisch erhöhen. Dies wird durch die Nutzung von Echtzeit-Inferencing und kontinuierlichem Lernen im Experience Edge ermöglicht.
+Echtzeit-maschinelles Lernen kann die Relevanz Ihrer digitalen Erlebnisinhalte für Ihre Endbenutzer dramatisch erhöhen. Dies wird durch die Nutzung von Echtzeit-Inferencing und kontinuierlichem Lernen am [!DNL Experience Edge].
 
-Eine Kombination aus nahtloser Berechnung auf dem Hub und dem Edge verringert die Latenz, die traditionell bei der Bereitstellung übermäßig personalisierter Erlebnisse, die sowohl relevant als auch reaktionsfähig sind, eine entscheidende Rolle spielt. Das maschinelle Lernen in Echtzeit bietet somit eine unglaublich niedrige Latenz für synchrone Entscheidungen. Beispiele sind das Rendern personalisierter Webseiteninhalte oder das Aufdecken eines Angebots oder Rabatt, um die Umrechnung in einem Webstore zu reduzieren und zu erhöhen.
+Eine Kombination aus nahtloser Berechnung auf dem Hub und dem [!DNL Edge] reduziert die Latenz, die traditionell bei der Erzielung übermäßig personalisierter Erlebnisse, die sowohl relevant als auch reaktionsfähig sind, eine entscheidende Rolle spielt. Das maschinelle Lernen in Echtzeit bietet somit eine unglaublich niedrige Latenz für synchrone Entscheidungen. Beispiele sind das Rendern personalisierter Webseiteninhalte oder das Aufdecken eines Angebots oder Rabatt, um die Umrechnung in einem Webstore zu reduzieren und zu erhöhen.
 
 ## Architektur für maschinelles Lernen in Echtzeit {#architecture}
 
@@ -35,7 +35,7 @@ Im folgenden Arbeitsablauf werden die typischen Schritte und Ergebnisse beim Ers
 
 ### Datenerfassung und -vorbereitung
 
-Daten werden mit dem Experience Data Model (XDM) auf der Adobe Experience Platform erfasst und transformiert. Diese Daten werden für Modellschulungen verwendet. Weitere Informationen zu XDM finden Sie in der [XDM-Übersicht](../../xdm/home.md).
+Daten werden mit dem [!DNL Experience Data Model] (XDM) auf der Adobe Experience Platform erfasst und transformiert. Diese Daten werden für Modellschulungen verwendet. Weitere Informationen zu XDM finden Sie in der [XDM-Übersicht](../../xdm/home.md).
 
 ### Authoring – 
 
@@ -43,7 +43,7 @@ Erstellen Sie ein Echtzeit-Modell für maschinelles Lernen, indem Sie es von Gru
 
 ### Implemenierung
 
-Stellen Sie Ihr Modell für Experience Edge bereit, um einen Service für maschinelles Lernen in Echtzeit in der Service Gallery mithilfe des Prediction API-Endpunkts zu erstellen.
+Stellen Sie Ihr Modell bereit, [!DNL Experience Edge] um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Service Gallery] zu erstellen, indem Sie den Endpunkt Prognose-API verwenden.
 
 ### Folgerung   
 
@@ -51,7 +51,7 @@ Verwenden Sie den REST API-Endpunkt &quot;Prognose&quot;, um Einblicke in das ma
 
 ### Bereitstellung
 
-Marketingexperten können dann Segmente und Regeln definieren, die Echtzeit-maschinelle Lernergebnisse Erlebnissen mit Adobe-Zielgruppe zuordnen. Dadurch können Besucher der Website Ihrer Marke in Echtzeit mit einem hyper-personalisierten Erlebnis versehen werden.
+Marketingexperten können dann Segmente und Regeln definieren, die Echtzeit-maschinelle Lernergebnisse Erlebnissen mit Adobe Target zuordnen. Dadurch können Besucher der Website Ihrer Marke in Echtzeit mit einem hyper-personalisierten Erlebnis versehen werden.
 
 ## Aktuelle Funktion
 
@@ -61,7 +61,7 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 > Alpha-Beschränkungen:
 > - Derzeit werden nur ONNX-basierte Modelle unterstützt.
 > - Funktionen, die in Knoten verwendet werden, können nicht serialisiert werden. Beispielsweise eine Lambda-Funktion, die in einem Pandas-Knoten verwendet wird.
-> - Nach der manuellen Bereitstellung von Edge wird ein 20-Sekunden-Ruhezustand ausgeführt.
+> - Nach der manuellen [!DNL Edge] Bereitstellung wird 20 Sekunden lang schlafen.
 > - Für tiefes Lernen müssen Ihre Daten so gesendet werden, dass, wenn sie genannt `df.values` werden, ein Array zurückgegeben wird, das von Ihrem DL-Modell akzeptiert werden kann. Dies liegt daran, dass der ONNX Modell-Scoring-Knoten verwendet `df.values` und sendet die Ausgabe zu Ergebnis mit dem Modell.
 
 
