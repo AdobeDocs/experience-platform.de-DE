@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 967ca85efba315819c6241d034dc3c25a5b1fc70
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Veröffentlichen eines Modells als Dienst (API)
 
-Dieses Lernprogramm beschreibt den Prozess der Veröffentlichung eines Modells als Dienst mit der [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Dieses Lernprogramm behandelt den Prozess der Veröffentlichung eines Modells als Dienst mit dem [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis von Adobe Experience Platform Data Science Workspace. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Übersicht über den [Data Science Workspace](../home.md) , um eine allgemeine Einführung in den Dienst zu erhalten.
+Dieses Lernprogramm erfordert ein Verständnis der Adobe Experience Platform Data Science Workspace. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Übersicht über den [Data Science Workspace](../home.md) , um eine allgemeine Einführung in den Dienst zu erhalten.
 
 Um mit diesem Lernprogramm fortzufahren, müssen Sie über eine vorhandene ML-Engine, ML-Instanz und ein Experiment verfügen. Anweisungen zum Erstellen dieser Skripten in der API finden Sie im Lernprogramm zum [Importieren eines zusammengestellten Skripts](./import-packaged-recipe-api.md).
 
-Bevor Sie dieses Lernprogramm starten, lesen Sie abschließend den [Abschnitt &quot;Erste Schritte](../api/getting-started.md) &quot;im Entwicklerhandbuch nach wichtigen Informationen, die Sie für die erfolgreichen Aufrufe der Sensei Machine Learning API benötigen, einschließlich der erforderlichen Kopfzeilen, die in diesem Lernprogramm verwendet werden:
+Bevor Sie dieses Lernprogramm starten, lesen Sie abschließend den Abschnitt &quot; [Erste Schritte](../api/getting-started.md) &quot;im Entwicklerhandbuch nach wichtigen Informationen, die Sie für eine erfolgreiche Verwendung der [!DNL Sensei Machine Learning] API benötigen, einschließlich der erforderlichen Kopfzeilen, die in diesem Lernprogramm verwendet werden:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -38,7 +38,7 @@ In der folgenden Tabelle werden einige häufig verwendete Terminologie für dies
 
 | Begriff | Definition |
 --- | ---
-| **Instanz für maschinelles Lernen (ML-Instanz)** | Eine Instanz einer Sensei-Engine für einen bestimmten Mieter, die bestimmte Daten, Parameter und Sensei-Code enthält. |
+| **Instanz für maschinelles Lernen (ML-Instanz)** | Eine Instanz einer [!DNL Sensei] Engine für einen bestimmten Mandanten, die bestimmte Daten, Parameter und [!DNL Sensei] Code enthält. |
 | **Experiment** | Eine Dacheinheit für die Durchführung von Experimentübungen, Scoring Experiment Runs oder beides. |
 | **Geplantes Experiment** | Ein Begriff, der die Automatisierung von Trainings- oder Bewertungsexperimenten beschreibt und von einem benutzerdefinierten Zeitplan bestimmt wird. |
 | **Experimentausführung** | Eine bestimmte Instanz von Trainings- oder Bewertungsexperimenten. Mehrere Experimentabläufe eines bestimmten Experiments können sich von den für die Schulung oder Auswertung verwendeten Datensatzwerten unterscheiden. |
@@ -120,7 +120,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 
 ## Erstellen eines ML-Dienstes aus einer vorhandenen ML-Instanz
 
-Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Diensts mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Lernprogramm werden die spezifischen Fälle behandelt, in denen:
+Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Dienstes mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Lernprogramm werden die spezifischen Fälle behandelt, in denen:
 
 - [Sie benötigen keine geplante Schulung, sondern eine geplante Bewertung.](#ml-service-with-scheduled-experiment-for-scoring)
 - [Sie benötigen geplante Experimentabläufe sowohl für Schulungen als auch für Punktbewertungen.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
