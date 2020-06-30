@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Richtlinien
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '940'
 ht-degree: 2%
 
 ---
@@ -493,6 +493,6 @@ In der folgenden Antwort sehen Sie, dass die Liste von jetzt kürzer `duleLabels
 }
 ```
 
-## Richtlinienbewertung für Echtzeit-Profil von Kunden
+## Politikbewertung für [!DNL Real-time Customer Profile]
 
-Die Policy-Service-API kann auch verwendet werden, um Richtlinienverletzungen zu überprüfen, die die Verwendung von Echtzeit-Kundensegmenten beinhalten. Weiterführende Informationen finden Sie im Tutorial zum [Erzwingen der Einhaltung von Datennutzungsrichtlinien für Zielgruppensegmente](../../segmentation/tutorials/governance.md).
+Die [!DNL Policy Service] API kann auch verwendet werden, um Richtlinienverletzungen zu überprüfen, die die Verwendung von [!DNL Real-time Customer Profile] Segmenten beinhalten. Weiterführende Informationen finden Sie im Tutorial zum [Erzwingen der Einhaltung von Datennutzungsrichtlinien für Zielgruppensegmente](../../segmentation/tutorials/governance.md).
