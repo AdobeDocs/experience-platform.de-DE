@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Abrufen des Clusterverlaufs einer Identität
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Abrufen des Clusterverlaufs einer Identität
 
-Identitäten können Cluster über den Verlauf verschiedener Gerätediagramme verschieben. Der Identitätsdienst ermöglicht die Sichtbarkeit der Clusterzuordnungen einer bestimmten Identität im Laufe der Zeit.
+Identitäten können Cluster über den Verlauf verschiedener Gerätediagramme verschieben. [!DNL Identity Service] ermöglicht die Sichtbarkeit der Clusterzuordnungen einer bestimmten Identität im Laufe der Zeit.
 
 Verwenden Sie einen optionalen `graph-type` Parameter, um den Ausgabetyp anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
 
