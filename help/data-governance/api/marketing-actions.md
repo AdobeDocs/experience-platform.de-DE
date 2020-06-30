@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Marketingaktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '536'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Marketingaktionen
 
-Eine Marketingaktion im Zusammenhang mit der Datenverwaltung für die Adobe Experience Platform ist eine Aktion, die ein Datenerfassungsbenutzer von Experience Platform durchführt und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
+Eine Marketingaktion im Rahmen der Adobe Experience Platform Data Governance ist eine Maßnahme, die ein [!DNL Experience Platform] Datenbenutzer ergreift und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
 
 Zum Arbeiten mit Marketingaktionen in der API müssen Sie den `/marketingActions` Endpunkt verwenden.
 
@@ -142,7 +142,7 @@ Das Antwortobjekt enthält die Details zur Marketingaktion, einschließlich des 
 
 ## Erstellen oder Aktualisieren einer Marketingaktion
 
-Mit der Policy Service API können Sie Ihre eigenen Marketingaktionen definieren und vorhandene aktualisieren. Die Erstellung und Aktualisierung erfolgt jeweils mit einem PUT-Vorgang zum Namen der Marketingaktion.
+Mit der [!DNL Policy Service] API können Sie Ihre eigenen Marketingaktionen definieren und bestehende aktualisieren. Die Erstellung und Aktualisierung erfolgt jeweils mit einem PUT-Vorgang zum Namen der Marketingaktion.
 
 **API-Format**
 
