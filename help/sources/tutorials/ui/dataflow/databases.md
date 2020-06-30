@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1043'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 
-Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Datenbankanschluss beschrieben.
+Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Platform abgerufen und in einen Dataset aufgenommen werden. In diesem Lernprogramm werden Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Datenbankanschluss beschrieben.
 
 ## Erste Schritte
 
@@ -40,7 +40,7 @@ Wählen Sie die gewünschte Datenbank aus und klicken Sie auf **[!UICONTROL Weit
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Der Schritt *Zuordnung* wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem Plattformdatensatz zuzuordnen.
+Der *Zuordnungsschritt* wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem Platform-Datensatz zuzuordnen.
 
 Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen.
 
@@ -114,7 +114,7 @@ Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die ü
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie erfolgreich einen Datenbogen erstellt, um Daten aus einer externen Datenbank einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Lernprogramm haben Sie erfolgreich einen Datenbogen erstellt, um Daten aus einer externen Datenbank einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Eingehende Daten können jetzt von Diensten der nachgelagerten Platform wie dem Echtzeit-Profil von Kunden und dem Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 - [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
@@ -131,10 +131,10 @@ Wählen Sie im Arbeitsbereich &quot; *[!UICONTROL Quellen]* &quot;die Registerka
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-Die Spalte &quot; *Eigenschaften* &quot;wird auf der rechten Seite des Bildschirms angezeigt, einschließlich der Schaltfläche &quot; **[!UICONTROL Aktiviert]** &quot;. Wählen Sie den Umschalter aus, um den Datenflug zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenflug nach dessen Deaktivierung erneut zu aktivieren.
+Die Spalte &quot; *[!UICONTROL Eigenschaften]* &quot;wird auf der rechten Seite des Bildschirms angezeigt, einschließlich der Schaltfläche &quot; **[!UICONTROL Aktiviert]** &quot;. Wählen Sie den Umschalter aus, um den Datenflug zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenflug nach dessen Deaktivierung erneut zu aktivieren.
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
-### Aktivieren von Eingangsdaten für die Profil-Population
+### Aktivieren von Eingangsdaten für die [!DNL Profile] Bevölkerung
 
-Eingehende Daten aus Ihrem Quell-Connector können zur Bereicherung und zum Ausfüllen Ihrer Echtzeit-Kundendaten verwendet werden. Weitere Informationen zum Ausfüllen von Daten zum Real-Customer-Profil finden Sie im Lernprogramm zur [Profil-Population](../profile.md).
+Eingehende Daten aus Ihrem Quellanschluss können zur Anreicherung und zum Ausfüllen Ihrer [!DNL Real-time Customer Profile] Daten verwendet werden. Weitere Informationen zum Ausfüllen Ihrer [!DNL Real-time Customer Profile] Daten finden Sie im Tutorial zur [Profil-Population](../profile.md).
