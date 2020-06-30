@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Richtlinien
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Richtlinien
 
-Datenverwendungsrichtlinien sind Regeln, die Ihr Unternehmen anwendet und die Arten von Marketingaktionen beschreiben, von denen Sie Daten innerhalb der Experience Platform nutzen dürfen oder aus denen Sie eingeschränkt sind.
+Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 Der `/policies` Endpunkt wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Datenverwendungsrichtlinien verwendet.
 
@@ -406,7 +406,7 @@ Bei einer erfolgreichen Updateanforderung wird ein HTTP-Status 200 (OK) zurückg
 
 Ein bestimmter Teil einer Richtlinie kann mithilfe einer PATCH-Anforderung aktualisiert werden. Im Gegensatz zu PUT-Anforderungen, die die Richtlinie _umschreiben_ , aktualisieren PATCH-Anforderungen nur den im Anforderungstext angegebenen Pfad. Dies ist besonders hilfreich, wenn Sie eine Richtlinie aktivieren oder deaktivieren möchten, da Sie nur den spezifischen Pfad, den Sie aktualisieren möchten (`/status`), und dessen Wert (`ENABLE` oder `DISABLE`) senden müssen.
 
-Die Policy-Service-API unterstützt derzeit PATCH-Vorgänge &quot;Hinzufügen&quot;, &quot;Ersetzen&quot;und &quot;Entfernen&quot;und ermöglicht es Ihnen, mehrere Aktualisierungen zu einem einzigen Aufruf zu kombinieren, indem Sie sie als Objekt im Array hinzufügen, wie in den folgenden Beispielen dargestellt.
+Die [!DNL Policy Service] API unterstützt derzeit PATCH-Vorgänge &quot;Hinzufügen&quot;, &quot;Ersetzen&quot;und &quot;Entfernen&quot;und ermöglicht es Ihnen, mehrere Aktualisierungen zu einem einzigen Aufruf zu kombinieren, indem Sie sie als Objekt im Array hinzufügen, wie in den folgenden Beispielen dargestellt.
 
 **API-Format**
 
