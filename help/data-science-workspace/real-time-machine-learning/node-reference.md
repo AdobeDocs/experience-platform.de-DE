@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Referenzhandbuch zu Nodes für maschinelles Lernen in Echtzeit
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ In der folgenden Anleitung werden die unterstützten Node-Bibliotheken für masc
 
 ## Entdecken von Nodes zur Verwendung in Ihrer ML-Pipeline
 
-Kopieren Sie den folgenden Code in ein Python-Notebook, um alle verfügbaren Knoten Ansicht.
+Kopieren Sie den folgenden Code in ein [!DNL Python] Notebook, um alle verfügbaren Knoten Ansicht.
 
 ```python
 from pprint import pprint
@@ -121,7 +121,7 @@ msg6 = model_train.process(msg5)
 | Wert | Beschreibung |
 | --- | --- |
 | Funktionen | Eingabefunktionen für das Modell (Liste von Zeichenfolgen). <br> Beispiel: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Spaltenname der Zielgruppe (Zeichenfolge). |
+| label | Spaltenname des Targets (Zeichenfolge). |
 | mode | Zug/Test (Zeichenfolge). |
 | model_path | Pfad zum gespeicherten Modell lokal im Format &quot;onnx&quot;. |
 | params.model | Absoluter Importpfad zum Modell (Zeichenfolge), z. B.: `sklearn.linear_model.LogisticRegression`. |
