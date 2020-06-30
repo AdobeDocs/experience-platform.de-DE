@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Anhang
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '298'
 ht-degree: 4%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 4%
 
 # Anhang
 
-Die folgenden Abschnitte enthalten Referenzinformationen zu verschiedenen Funktionen der Sensei Machine Learning API.
+Die folgenden Abschnitte enthalten Referenzinformationen zu verschiedenen Funktionen der [!DNL Sensei Machine Learning] API.
 
 ## Abfragen-Parameter für den Asset-Abruf {#query}
 
-Die Sensei Machine Learning API unterstützt Abfragen beim Abrufen von Assets. Die verfügbaren Parameter für die Abfrage und ihre Verwendung werden in der folgenden Tabelle beschrieben:
+Die [!DNL Sensei Machine Learning] API unterstützt Abfragen beim Abrufen von Assets. Die verfügbaren Parameter für die Abfrage und ihre Verwendung werden in der folgenden Tabelle beschrieben:
 
 | Abfrageparameter | Beschreibung | Standardwert |
 | --------------- | ----------- | ------- |
