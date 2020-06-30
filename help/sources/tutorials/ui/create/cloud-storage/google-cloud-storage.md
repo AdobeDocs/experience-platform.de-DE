@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Erstellen eines Google Cloud-Datenspeicherung-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---
 
 
-# Erstellen eines Google Cloud-Datenspeicherung-Quellconnectors in der Benutzeroberfläche
+# Erstellen eines [!DNL Google Cloud Storage] Quellconnectors in der Benutzeroberfläche
 
-Source Connectors in Adobe Experience Platform bieten die Möglichkeit, Daten aus externen Quellen planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines Google Cloud-Datenspeicherung-Quellconnectors (im Folgenden &quot;GCS&quot;) mithilfe der Plattform-Benutzeroberfläche beschrieben.
+Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Google Cloud Storage] (im Folgenden &quot;GCS&quot; genannt) Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -29,7 +29,7 @@ Wenn Sie bereits über eine GCS-Basisverbindung verfügen, können Sie den Rest 
 
 ### Unterstützte Dateiformate
 
-Experience Platform unterstützt die folgenden Dateiformate, die aus externen Datenspeicherung erfasst werden:
+[!DNL Experience Platform] unterstützt die folgenden Dateiformate, die von externen Datenspeicherung erfasst werden:
 
 * Trennzeichen-getrennte Werte (DSV): Die Unterstützung für DSV-formatierte Datendateien ist derzeit auf kommagetrennte Werte beschränkt. Der Wert von Feldkopfzeilen in DSV-formatierten Dateien darf nur aus alphanumerischen Zeichen und Unterstrichen bestehen. Die Unterstützung für allgemeine DSV-Dateien wird in Zukunft bereitgestellt.
 * JavaScript Object Notation (JSON): JSON-formatierte Datendateien müssen XDM-kompatibel sein.
@@ -37,13 +37,13 @@ Experience Platform unterstützt die folgenden Dateiformate, die aus externen Da
 
 ### Erforderliche Berechtigungen erfassen
 
-Um auf Ihre GCS-Daten auf der Plattform zugreifen zu können, müssen Sie eine gültige GCS- **Zugriffsschlüssel-ID** und **Geheimhaltung** angeben. Weitere Informationen zum Abrufen dieser Werte finden Sie im <a href="https://cloud.google.com/docs/authentication/production" target="_blank">Server-zu-Server-Authentifizierungshandbuch</a> für Google Cloud.
+Um auf Ihre GCS-Daten zugreifen zu können, [!DNL Platform]müssen Sie eine gültige GCS- **Zugriffsschlüssel-ID** und **Geheimhaltung** angeben. Weitere Informationen zum Abrufen dieser Werte finden Sie im <a href="https://cloud.google.com/docs/authentication/production" target="_blank">Server-zu-Server-Authentifizierungshandbuch</a> für [!DNL Google Cloud].
 
 ## Verbinden Sie Ihr GCS-Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues GCS-Konto für die Verbindung mit der Plattform zu erstellen.
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues GCS-Konto zu erstellen, mit dem eine Verbindung hergestellt werden soll [!DNL Platform].
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellenarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die mit ihnen verbunden sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
@@ -67,4 +67,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das GCS-Konto, mit dem Sie ei
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem GCS-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/batch/cloud-storage.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem GCS-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in die Platform](../../dataflow/batch/cloud-storage.md)zu bringen.
