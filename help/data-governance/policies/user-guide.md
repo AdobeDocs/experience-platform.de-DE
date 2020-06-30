@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datenverwendungsrichtlinien
 topic: policies
 translation-type: tm+mt
-source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 1%
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
 
 # Benutzerhandbuch zu Datenverwendungsrichtlinien
 
-Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie in der Benutzeroberfläche &quot;Experience Platform&quot;im Arbeitsbereich &quot; _Richtlinien_ &quot;ausführen können.
+Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. In diesem Dokument erhalten Sie einen Überblick über die Aktionen, die Sie in der Benutzeroberfläche im Arbeitsbereich &quot; _Richtlinien_ &quot;ausführen können [!DNL Experience Platform] .
 
 >[!IMPORTANT] Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren. Anweisungen dazu finden Sie im Abschnitt zum [Aktivieren von Richtlinien](#enable) in der Benutzeroberfläche.
 
 ## Voraussetzungen
 
-Dieser Leitfaden erfordert ein Verständnis der folgenden Konzepte der Experience Platform:
+Dieser Leitfaden erfordert ein funktionierendes Verständnis der folgenden [!DNL Experience Platform] Konzepte:
 
-- [Data Governance](../home.md)
+- [!DNL Data Governance](../home.md)
 - [Datenverwendungsrichtlinien](./overview.md)
 
 ## Ansicht-Datenverwendungsrichtlinien {#view-policies}
 
-Klicken Sie in der Benutzeroberfläche &quot;Experience Platform&quot;auf **[!UICONTROL Richtlinien]** , um den Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;zu öffnen. Auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;wird eine Liste der verfügbaren Richtlinien angezeigt, einschließlich der zugehörigen Beschriftungen, Marketingaktionen und Status.
+Klicken Sie in der [!DNL Experience Platform] Benutzeroberfläche auf **[!UICONTROL Richtlinien]** , um den Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;zu öffnen. Auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;wird eine Liste der verfügbaren Richtlinien angezeigt, einschließlich der zugehörigen Beschriftungen, Marketingaktionen und Status.
 
 ![](../images/policies/browse-policies.png)
 
@@ -37,7 +37,7 @@ Klicken Sie auf eine aufgelistete Richtlinie, um deren Beschreibung und Typ Ansi
 
 ## Benutzerdefinierte Datenverwendungsrichtlinie erstellen {#create-policy}
 
-Um eine neue Richtlinie zur Verwendung benutzerdefinierter Daten zu erstellen, klicken Sie auf Richtlinie **** erstellen in der oberen rechten Ecke der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; *Richtlinien* &quot;.
+Um eine neue Richtlinie zur Verwendung benutzerdefinierter Daten zu erstellen, klicken Sie auf Richtlinie **** erstellen in der oberen rechten Ecke der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;.
 
 ![](../images/policies/create-policy-button.png)
 
@@ -107,8 +107,8 @@ Wenn die Marketingaktion nicht von vorhandenen Nutzungsrichtlinien verwendet wir
 
 ## Nächste Schritte
 
-Dieses Dokument gab einen Überblick darüber, wie Datenverwendungsrichtlinien in der Benutzeroberfläche der Experience Platform verwaltet werden. Anweisungen zum Verwalten von Richtlinien mit der DUL-Richtlinie-API finden Sie im [Entwicklerhandbuch](../api/getting-started.md). Informationen zum Erzwingen von Datenverwendungsrichtlinien finden Sie in der Übersicht über die [Richtliniendurchsetzung](../enforcement/overview.md).
+Dieses Dokument gab einen Überblick darüber, wie Datenverwendungsrichtlinien in der [!DNL Experience Platform] Benutzeroberfläche verwaltet werden. Anweisungen zum Verwalten von Richtlinien mit der DUL-Richtlinie-API finden Sie im [Entwicklerhandbuch](../api/getting-started.md). Informationen zum Erzwingen von Datenverwendungsrichtlinien finden Sie in der Übersicht über die [Richtliniendurchsetzung](../enforcement/overview.md).
 
-Im folgenden Video wird gezeigt, wie mit Nutzungsrichtlinien in der Benutzeroberfläche der Experience Platform gearbeitet wird:
+Das folgende Video zeigt, wie mit Nutzungsrichtlinien in der [!DNL Experience Platform] Benutzeroberfläche gearbeitet wird:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
