@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Abfrage-Service für Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Abfrage-Service für Jupyter-Notebooks
 
-[!DNL Adobe Experience Platform] ermöglicht Ihnen die Verwendung von SQL (Structured Abfrage Language) in Data Science Workspace durch Integration von Abfrage Service in JupyterLab als Standardfunktion.
+[!DNL Adobe Experience Platform] ermöglicht die Verwendung von SQL (Structured Abfrage Language) in [!DNL Data Science Workspace] durch Integration [!DNL Query Service] in [!DNL JupyterLab] eine Standardfunktion.
 
 In diesem Lernprogramm werden Beispiele von SQL-Abfragen für gängige Anwendungsfälle zur Untersuchung, Transformation und Analyse von [!DNL Adobe Analytics] Daten vorgestellt.
 
@@ -22,19 +22,19 @@ In diesem Lernprogramm werden Beispiele von SQL-Abfragen für gängige Anwendung
 
 Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Voraussetzungen verfügen:
 
-- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren
+- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in haben [!DNL Experience Platform], wenden Sie sich vor dem Fortfahren an Ihren Systemadministrator
 
 - Ein [!DNL Adobe Analytics] Datensatz
 
 - Ein Arbeitsverständnis mit den folgenden Schlüsselkonzepten, die in diesem Lernprogramm verwendet werden:
-   - [Erlebnis-Datenmodell (XDM) und XDM-System](../../xdm/home.md)
-   - [Abfrage](../../query-service/home.md)
-   - [SQL-Syntax von Abfrage Service](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## Zugriff auf JupyterLab und Abfrage {#access-jupyterlab-and-query-service}
+## Zugriff [!DNL JupyterLab] und [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Navigieren Sie in [Experience Platform](https://platform.adobe.com)in der linken Navigationsspalte zu **[!UICONTROL Notebooks]** . Warten Sie einen Moment, bis JupyterLab geladen ist.
+1. Navigieren Sie [!DNL Experience Platform](https://platform.adobe.com)in der linken Navigationsspalte zu **[!UICONTROL Notebooks]** . Warten Sie einen Moment, bis JupyterLab geladen ist.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
 4. Suchen Sie einen [!DNL Adobe Analytics] Datensatz zu erkunden und klicken Sie mit der rechten Maustaste auf die Auflistung, klicken Sie auf **[!UICONTROL Abfrage Daten in Notebook]** , um SQL-Abfragen in das leere Notebook zu generieren.
 
-5. Klicken Sie auf die erste generierte Zelle, die die Funktion enthält, `qs_connect()` und führen Sie sie durch Klicken auf die Wiedergabeschaltfläche aus. Diese Funktion erstellt eine Verbindung zwischen der Notebook-Instanz und dem Abfrage Service.
+5. Klicken Sie auf die erste generierte Zelle, die die Funktion enthält, `qs_connect()` und führen Sie sie durch Klicken auf die Wiedergabeschaltfläche aus. Diese Funktion erstellt eine Verbindung zwischen der Notebook-Instanz und der [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -92,7 +92,7 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
 Geben Sie die folgenden SQL-Abfragen in die einzelnen Notebook-Zellen ein. Führen Sie eine Abfrage aus, indem Sie auf ihre Zelle klicken und dann auf die Schaltfläche **[!UICONTROL Abspielen]** klicken. Erfolgreiche Abfragen oder Fehlerprotokolle werden unterhalb der ausgeführten Zelle angezeigt.
 
-Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und dem Abfrage Service unterbrochen werden. Starten Sie in solchen Fällen JupyterLab neu, indem Sie auf die **[!UICONTROL Power]** -Schaltfläche oben rechts klicken.
+Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und [!DNL Query Service] beschädigt werden. In solchen Fällen starten Sie den Computer neu, [!DNL JupyterLab] indem Sie auf die **[!UICONTROL Power]** -Schaltfläche in der oberen rechten Ecke klicken.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -120,7 +120,7 @@ ORDER  BY Hour;
 
 In der obigen Abfrage ist die Zielgruppe `_acp_year` in der `WHERE` Klausel auf den Wert von `target_year`. Fügen Sie Variablen in SQL-Abfragen ein, indem Sie sie in geschweifte Klammern setzen (`{}`).
 
-Die erste Zeile der Abfrage enthält die optionale Variable `hourly_visitor`. Die Ergebnisse der Abfrage werden in dieser Variablen als Pandas-Dataframe gespeichert. Das Speichern von Ergebnissen in einem Datenrame ermöglicht es Ihnen, die Ergebnisse der Abfrage später mit einem gewünschten Python-Paket zu visualisieren. Führen Sie den folgenden Python-Code in einer neuen Zelle aus, um ein Balkendiagramm zu generieren:
+Die erste Zeile der Abfrage enthält die optionale Variable `hourly_visitor`. Die Ergebnisse der Abfrage werden in dieser Variablen als Pandas-Dataframe gespeichert. Das Speichern von Ergebnissen in einem Datenraum ermöglicht es Ihnen, die Ergebnisse der Abfrage später mithilfe eines gewünschten [!DNL Python] Pakets zu visualisieren. Führen Sie den folgenden [!DNL Python] Code in einer neuen Zelle aus, um ein Balkendiagramm zu generieren:
 
 ```python
 trace = go.Bar(
@@ -210,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Führen Sie den folgenden Python-Code aus, um ein Histogramm für die Anzahl der Ereignis pro Besuchssitzung zu generieren:
+Führen Sie den folgenden [!DNL Python] Code aus, um ein Histogramm für die Anzahl der Ereignis pro Besuchssitzung zu generieren:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -284,4 +284,4 @@ LIMIT  10;
 
 ## Nächste Schritte <!-- omit in toc -->
 
-In diesem Lernprogramm wurden einige Beispielverwendungsfälle für die Verwendung von Abfrage Service in Jupyter-Notebooks erläutert. Folgen Sie dem Lernprogramm [Analysieren Ihrer Daten mithilfe von Jupyter-Notebooks](./analyze-your-data.md) , um zu sehen, wie ähnliche Vorgänge mit dem Data Access-SDK ausgeführt werden.
+Dieses Lernprogramm demonstrierte einige Beispielverwendungsfälle für die Verwendung [!DNL Query Service] in [!DNL Jupyter] Notebooks. Folgen Sie dem Lernprogramm [Analysieren Ihrer Daten mithilfe von Jupyter-Notebooks](./analyze-your-data.md) , um zu sehen, wie ähnliche Vorgänge mit dem Data Access-SDK ausgeführt werden.
