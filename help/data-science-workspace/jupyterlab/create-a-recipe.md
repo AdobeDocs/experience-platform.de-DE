@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Skripts mit Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2292'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Erstellen eines Skripts mit Jupyter-Notebooks
 
-Dieses Lernprogramm umfasst zwei Hauptabschnitte. Zuerst erstellen Sie ein Modell für maschinelles Lernen mit einer Vorlage im JupyterLab-Notebook. Als Nächstes führen Sie den Arbeitsablauf für die Skripterstellung in JupyterLab durch, um ein Rezept in Data Science Workspace zu erstellen.
+Dieses Lernprogramm umfasst zwei Hauptabschnitte. Zuerst erstellen Sie ein maschinelles Lernmodell mit einer Vorlage in [!DNL JupyterLab Notebook]. Als Nächstes führen Sie das Notebook durch, um den Arbeitsablauf für Rezepte zu realisieren, in dem Sie ein Rezept [!DNL JupyterLab] erstellen [!DNL Data Science Workspace].
 
 ## Vorgestellte Konzepte:
 
@@ -23,20 +23,20 @@ Dieses Lernprogramm umfasst zwei Hauptabschnitte. Zuerst erstellen Sie ein Model
 - **Schulung:** Schulung ist der Prozess des Lernens von Mustern und Erkenntnissen aus gekennzeichneten Daten.
 - **Bewertung:** Die Auswertung ist der Prozess, bei dem mithilfe eines geschulten Modells Erkenntnisse aus Daten generiert werden.
 
-## Erste Schritte mit der JupyterLab Notebook-Umgebung
+## Erste Schritte mit der [!DNL JupyterLab] Notebook-Umgebung
 
-Das Erstellen eines Skripts von Grund auf kann im Data Science Workspace erfolgen. Navigieren Sie zum Beginn zu [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **[!UICONTROL Notebooks]** . Erstellen Sie ein neues Notebook, indem Sie im JupyterLab Launcher die Vorlage Rezept Builder auswählen.
+Das Erstellen eines Rezeptes von Grund auf kann innerhalb von [!DNL Data Science Workspace]vorgenommen werden. Navigieren Sie zum Beginn zur [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **[!UICONTROL Notebooks]** . Erstellen Sie ein neues Notebook, indem Sie die Vorlage Rezept-Builder aus dem [!DNL JupyterLab Launcher].
 
-Mit dem Rezept Builder Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Ergebnissen der Schulung und Bewertung zufrieden sind, können Sie ein Rezept erstellen, das in Data Science Workspace verwendet werden kann, indem Sie das Notebook verwenden, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
+Mit dem [!UICONTROL Rezept Builder] Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Ausgaben der Schulung und Bewertung zufrieden sind, können Sie ein Rezept erstellen, das bei der [!DNL Data Science Workspace] Verwendung des Notebooks verwendet werden kann, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
 
 >[!NOTE]
->Das Rezept Builder-Notebook unterstützt die Arbeit mit allen Dateiformaten, aber die Funktion Rezept erstellen unterstützt derzeit nur Python.
+>Das Rezept Builder-Notebook unterstützt alle Dateiformate, aber derzeit unterstützt die Funktion Rezept erstellen nur [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Wenn Sie vom Starter auf das Rezept Builder-Notebook klicken, wird das Notebook in der Registerkarte geöffnet. Die im Notebook verwendete Vorlage ist das Python Retail Sales Forecasting Rezept, das auch in [diesem öffentlichen Repository zu finden ist](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Sie werden feststellen, dass es in der Symbolleiste drei weitere Aktionen gibt, nämlich **[!UICONTROL Zug]**, **[!UICONTROL Punktzahl]** und Rezept **[!UICONTROL erstellen]**. Diese Symbole werden nur im Rezept Builder-Notebook angezeigt. Weitere Informationen zu diesen Aktionen erhalten Sie [im Bereich](#training-and-scoring) Training und Bewertung, nachdem Sie Ihr Rezept im Notebook erstellt haben.
+Sie werden feststellen, dass es in der Symbolleiste drei weitere Aktionen gibt, nämlich **[!UICONTROL Zug]**, **[!UICONTROL Punktzahl]** und Rezept **[!UICONTROL erstellen]**. Diese Symbole werden nur im [!UICONTROL Rezept Builder] -Notebook angezeigt. Weitere Informationen zu diesen Aktionen erhalten Sie [im Bereich](#training-and-scoring) Training und Bewertung, nachdem Sie Ihr Rezept im Notebook erstellt haben.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -50,7 +50,7 @@ Beginn, die die erforderlichen Änderungen an der Zelle vornehmen, führen Sie d
 
 ## Erste Schritte mit dem Rezept Builder-Notebook
 
-Jetzt, da Sie die Grundlagen der JupyterLab Notebook-Umgebung kennen, können Sie damit beginnen, sich die Dateien anzuschauen, aus denen sich ein Rezept für ein maschinelles Lernmodell zusammensetzt. Die Dateien, über die wir sprechen werden, sind hier dargestellt:
+Jetzt, da Sie die Grundlagen der [!DNL JupyterLab] Notebook-Umgebung kennen, können Sie damit beginnen, die Dateien zu betrachten, die ein Rezept für ein maschinelles Lernmodell ausmachen. Die Dateien, über die wir sprechen werden, sind hier dargestellt:
 
 - [Anforderungsdatei](#requirements-file)
 - [Konfigurationsdateien](#configuration-files)
@@ -90,7 +90,7 @@ Um den Datensatz und die Schema-IDs zu finden, gehen Sie in Notebooks auf der li
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-Dieselben Informationen finden Sie auf der [Adobe Experience Platform](https://platform.adobe.com/) unter den Registerkarten &quot; **[Schema](https://platform.adobe.com/schema)**&quot;und &quot;**[Datasets](https://platform.adobe.com/dataset/overview)** &quot;.
+Die gleichen Informationen finden Sie auf der [Adobe Experience Platform](https://platform.adobe.com/) unter den Registerkarten **[Schema](https://platform.adobe.com/schema)**und**[Datensatz](https://platform.adobe.com/dataset/overview)** .
 
 Standardmäßig werden beim Zugriff auf Daten die folgenden Konfigurationsparameter festgelegt:
 
@@ -102,24 +102,24 @@ Standardmäßig werden beim Zugriff auf Daten die folgenden Konfigurationsparame
 ## Schulungsdatenlader {#training-data-loader}
 
 Der Zweck des Schulungsdaten-Laders besteht darin, Daten zu instanziieren, die zum Erstellen des maschinellen Lernmodells verwendet werden. In der Regel gibt es zwei Aufgaben, die der Schulungsdatenlader ausführen wird:
-- Daten von Plattform laden
+- Daten laden von [!DNL Platform]
 - Datenvorbereitung und Funktionstechnik
 
 Die folgenden beiden Abschnitte gehen über das Laden von Daten und die Datenvorbereitung.
 
 ### Daten laden {#loading-data}
 
-In diesem Schritt wird das [Pandas-Dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)verwendet. Daten können aus Dateien geladen werden, die entweder das Plattform-SDK ( [!DNL Adobe Experience Platform] )`platform_sdk`verwenden, oder aus externen Quellen mithilfe von Pandas- `read_csv()` oder `read_json()` -Funktionen.
+In diesem Schritt wird das [Pandas-Dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)verwendet. Daten können aus Dateien geladen werden, die entweder [!DNL Adobe Experience Platform] mit dem [!DNL Platform] SDK (`platform_sdk`) oder aus externen Quellen mithilfe von Pandas `read_csv()` oder `read_json()` Funktionen verwendet werden.
 
-- [Plattform-SDK](#platform-sdk)
+- [!DNL Platform SDK](#platform-sdk)
 - [Externe Quellen](#external-sources)
 
 >[!NOTE]
 >Im Recipe Builder-Notebook werden Daten über den `platform_sdk` Datenlader geladen.
 
-### Plattform-SDK {#platform-sdk}
+### [!DNL Platform] SDK {#platform-sdk}
 
-Eine ausführliche Anleitung zur Verwendung des `platform_sdk` Datenladers finden Sie im Handbuch [Plattform-SDK](../authoring/platform-sdk.md). Dieses Lernprogramm enthält Informationen zur Buildauthentifizierung, zum grundlegenden Lesen von Daten und zum grundlegenden Schreiben von Daten.
+Eine ausführliche Anleitung zur Verwendung des `platform_sdk` Datenladeprogramms finden Sie im Handbuch zum [Platform-SDK](../authoring/platform-sdk.md). Dieses Lernprogramm enthält Informationen zur Buildauthentifizierung, zum grundlegenden Lesen von Daten und zum grundlegenden Schreiben von Daten.
 
 ### Externe Quellen {#external-sources}
 
@@ -144,7 +144,7 @@ Jetzt befinden sich Ihre Daten im DataFrame-Objekt und können im [nächsten Abs
 ### Von Data Access SDK (nicht mehr unterstützt)
 
 >[!CAUTION]
-> `data_access_sdk_python` wird nicht mehr empfohlen. Eine Anleitung zur Verwendung des Datenladeprogramms finden Sie unter [Datenzugriffscode in Plattform-SDK](../authoring/platform-sdk.md) konvertieren `platform_sdk` .
+> `data_access_sdk_python` wird nicht mehr empfohlen. Eine Anleitung zur Verwendung des Datenladeprogramms finden Sie unter [Datenzugriffscode in Platform-SDK](../authoring/platform-sdk.md) konvertieren `platform_sdk` .
 
 Benutzer können Daten mit dem Data Access SDK laden. Die Bibliothek kann oben auf der Seite importiert werden, indem die folgende Zeile eingefügt wird:
 
@@ -162,7 +162,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->Wie im Abschnitt [&quot;](#configuration-files)Konfigurationsdatei&quot;erwähnt, werden die folgenden Konfigurationsparameter für Sie festgelegt, wenn Sie auf Daten von Experience Platform zugreifen:
+>Wie im Abschnitt [Konfigurationsdatei](#configuration-files)erwähnt, werden die folgenden Konfigurationsparameter für Sie festgelegt, wenn Sie Daten aus [!DNL Experience Platform]den folgenden Quellen aufrufen:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -203,7 +203,7 @@ In diesem Beispiel werden dem ursprünglichen Datensatz fünf Dinge angefertigt:
 - Offset `weeklySales` für den zukünftigen und vorherigen Verkaufswert
 - Daten nach Datum, zu `train` und `val` Datensatz aufteilen
 
-Erstens werden `week` und `year` Spalten erstellt und die ursprüngliche `date` Spalte in Python [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)konvertiert. Wochen- und Jahreswerte werden aus dem datetime-Objekt extrahiert.
+Erstens werden `week` und `year` Spalten erstellt und die ursprüngliche `date` Spalte in [!DNL Python] datetime [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)konvertiert. Wochen- und Jahreswerte werden aus dem datetime-Objekt extrahiert.
 
 Als Nächstes `storeType` werden drei Spalten umgewandelt, die die drei verschiedenen Speichertypen (`A`, `B`und `C`) darstellen. Jede enthält einen booleschen Wert für den Status, der &quot;true&quot; `storeType` lautet. Die `storeType` Spalte wird abgelegt.
 
@@ -262,7 +262,7 @@ return df
 
 Da der Zweck unseres Modells darin besteht, zukünftige wöchentliche Verkäufe vorherzusagen, müssen Sie einen Bewertungsdatensatz erstellen, mit dem bewertet wird, wie gut die Vorhersage des Modells funktioniert.
 
-Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Datenspeicher gemessen werden, damit Sie die `weeklySales` Werte 45 vorwärts in eine neue Spalte namens `weeklySalesAhead`.
+Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Speicher gemessen werden, sodass Sie die `weeklySales` Werte 45 Datensätze vorwärts in eine neue Spalte namens `weeklySalesAhead`verschieben können.
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
@@ -408,9 +408,9 @@ Beachten Sie, dass die Funktion ein `metric` Objekt zurückgibt, das ein Array v
 
 ### Datenspeicherdatei {#data-saver-file}
 
-Die `datasaver.py` Datei enthält die `save()` Funktion zum Speichern Ihrer Prognose während des Testens der Bewertung. Die `save()` Funktion nimmt Ihre Vorhersage vor und schreibt mithilfe der Experience Platform Catalog-APIs die Daten in die `scoringResultsDataSetId` von Ihnen in Ihrer `scoring.conf` Datei angegebenen Daten.
+Die `datasaver.py` Datei enthält die `save()` Funktion zum Speichern Ihrer Prognose während des Testens der Bewertung. Die `save()` Funktion nimmt Ihre Vorhersage vor und schreibt mithilfe von [!DNL Experience Platform Catalog] APIs die Daten in die von `scoringResultsDataSetId` Ihnen in der `scoring.conf` Datei angegebene Datei.
 
-Das Beispiel, das im Rezept für Einzelhandelsverkäufe verwendet wird, ist hier dargestellt. Beachten Sie die Verwendung der `DataSetWriter` Bibliothek zum Schreiben von Daten in Plattform:
+Das Beispiel, das im Rezept für Einzelhandelsverkäufe verwendet wird, ist hier dargestellt. Beachten Sie die Verwendung der `DataSetWriter` Bibliothek zum Schreiben von Daten in die Platform:
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter
@@ -453,11 +453,11 @@ Wenn Sie die Bearbeitung des Rezepts abgeschlossen haben und mit der Schulungs-/
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Nach dem Klicken auf die Schaltfläche werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das auf der Plattform erstellt wurde.
+Nach dem Klicken auf die Schaltfläche werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das am [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Wenn Sie **[!UICONTROL OK]** drücken, können Sie zu dem neuen Rezept auf der [Adobe Experience Platform](https://platform.adobe.com/)navigieren. Sie können auf die Schaltfläche **[!UICONTROL Ansicht Rezepte]** klicken, um zur Registerkarte **[!UICONTROL Rezepte]** unter **[!UICONTROL ML-Modelle zu gelangen]**
+Wenn Sie **[!UICONTROL OK]** drücken, können Sie auf der [Adobe Experience Platform](https://platform.adobe.com/)zu dem neuen Rezept navigieren. Sie können auf die Schaltfläche **[!UICONTROL Ansicht Rezepte]** klicken, um zur Registerkarte **[!UICONTROL Rezepte]** unter **[!UICONTROL ML-Modelle zu gelangen]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -473,9 +473,9 @@ Sobald der Prozess abgeschlossen ist, sieht das Rezept wie folgt aus:
 
 ## Nächste Schritte {#next-steps}
 
-Mit diesem Lernprogramm haben Sie gelernt, wie Sie ein Modell für maschinelles Lernen im Rezept Builder-Notebook erstellen können. Sie haben auch gelernt, wie Sie den Arbeitsablauf für Rezept im Notebook nutzen können, um ein Rezept in Data Science Workspace zu erstellen.
+Mit diesem Lernprogramm haben Sie gelernt, wie Sie ein Modell für maschinelles Lernen im Rezept Builder-Notebook erstellen können. Sie haben auch gelernt, wie Sie das Notebook mit dem Rezept-Workflow im Notebook ausüben können, um ein Rezept in [!DNL Data Science Workspace]Ihrem Notebook zu erstellen.
 
-Um weiterhin zu lernen, wie Sie mit Ressourcen im Data Science Workspace arbeiten, besuchen Sie bitte die Dropdownliste Data Science Workspace-Rezepte und -Modelle.
+Um weiter zu lernen, wie man mit Ressourcen innerhalb von zu arbeiten, besuchen Sie [!DNL Data Science Workspace]bitte das Dropdown-Menü [!DNL Data Science Workspace] Rezepte und Modelle.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
