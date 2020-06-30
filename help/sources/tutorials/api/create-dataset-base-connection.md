@@ -1,51 +1,51 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen einer Datenbank-Basisverbindung mit der Experience Platform mithilfe der Flow Service API
+title: Erstellen einer Experience Platform-Datenbank-Basisverbindung mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: e409b287d6965ede4030829287bd3e405e9d709b
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '690'
 ht-degree: 1%
 
 ---
 
 
-# Erstellen einer Datenbank-Basisverbindung mit der Experience Platform mithilfe der Flow Service API
+# Erstellen einer [!DNL Experience Platform] Datenbank-Basisverbindung mit der [!DNL Flow Service] API
 
-Mit dem Flow-Dienst werden Kundendaten aus verschiedenen Quellen innerhalb der Adobe Experience Platform erfasst und zentralisiert. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Um Daten von einer Drittanbieter-Quelle mit der Plattform zu verbinden, muss zunächst eine Datenbank-Verbindung hergestellt werden.
+Um Daten von einer Drittanbieter-Quelle mit zu verbinden, muss zunächst eine Datenbank-Verbindung hergestellt [!DNL Platform]werden.
 
-In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zum Erstellen einer Datenbank-Basisverbindung zu führen.
+Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zum Erstellen einer Datenbank-Basisverbindung zu führen.
 
 ## Erste Schritte
 
 Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
 
-* [Erlebnis-Datenmodell (XDM)-System](../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [Erlebnis-Datenmodell (XDM)-System](../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Zusammensetzung](../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
    * [Entwicklerhandbuch](../../../xdm/api/getting-started.md)zur Schema-Registrierung: Enthält wichtige Informationen, die Sie zur erfolgreichen Durchführung von Aufrufen der Schema Registry API kennen müssen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
-* [Katalogdienst](../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie in der Experience Platform.
-* [Stapelverarbeitung](../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Erfassungsschnittstelle können Sie Daten als Batch-Dateien in Experience Platform erfassen.
-* [Sandboxen](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Katalogdienst](../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform].
+* [Stapelverarbeitung](../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Erfassungsschnittstelle können Sie Daten als Batch-Dateien in die Experience Platform aufnehmen.
+* [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der Flow Service API eine erfolgreiche Verbindung mit Data Lake herzustellen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] API eine erfolgreiche Verbindung zu Data Lake herzustellen.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur [!DNL Experience Platform] Fehlerbehebung.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um [!DNL Platform] APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform, einschließlich derer, die zu Flow Service gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Sämtliche Ressourcen in [!DNL Experience Platform]und auch die Ressourcen, die [!DNL Flow Service]gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Alle Anforderungen an [!DNL Platform] APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein 
 
 ## Verbindungsspezifikationen nachschlagen
 
-Der erste Schritt beim Erstellen einer DataSet-Basisverbindung besteht darin, eine Reihe von Verbindungsspezifikationen aus dem Flow-Dienst abzurufen.
+Der erste Schritt bei der Erstellung einer DataSet-Basisverbindung besteht darin, eine Reihe von Verbindungsspezifikationen von innen abzurufen [!DNL Flow Service].
 
 **API-Format**
 
@@ -182,7 +182,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einsch
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine Verbindung zur Datenbank-Basis mithilfe der Flow Service API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Basisverbindung verwenden, um eine Zielgruppe zu erstellen. Die folgenden Lernprogramme erläutern die Schritte zum Erstellen einer Zielgruppe-Verbindung, je nach Kategorie des verwendeten Quell-Connectors:
+In diesem Lernprogramm haben Sie eine Verbindung zur Datenbank-Basis mithilfe der [!DNL Flow Service] API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Basisverbindung verwenden, um eine Zielgruppe zu erstellen. Die folgenden Lernprogramme erläutern die Schritte zum Erstellen einer Zielgruppe-Verbindung, je nach Kategorie des verwendeten Quell-Connectors:
 
 * [Cloud-Datenspeicherung](./collect/cloud-storage.md)
 * [CRM](./collect/crm.md)
