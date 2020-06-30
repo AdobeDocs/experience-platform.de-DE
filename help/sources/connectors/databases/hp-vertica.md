@@ -4,32 +4,32 @@ solution: Experience Platform
 title: HP-Vertikalanschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) HP Vertica Connector
+# (Beta) [!DNL HP Vertica] -Anschluss
 
 >[!NOTE]
->Der HP Vertica Stecker befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
+>Der [!DNL HP Vertica] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie Microsoft, MySQL und Azurblau. Sie können Ihre Daten aus diesen Systemen in Platform bringen.
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform]importieren.
 
-Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL oder data warehouse. Die Unterstützung für Datenbankanbieter umfasst HP Vertica.
+Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL oder data warehouse. Die Unterstützung von Datenbankanbietern umfasst [!DNL HP Vertica].
 
-Die nachstehende Dokumentation enthält Informationen zum Verbinden von HP Vertica mit der Platform mithilfe von APIs oder der Benutzeroberfläche:
+Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbindung [!DNL HP Vertica] mit [!DNL Platform] APIs oder der Benutzeroberfläche:
 
-## Verbinden von HP Vertica mit der Platform mithilfe von APIs
+## Verbindung [!DNL HP Vertica] mit [!DNL Platform] APIs
 
 - [Erstellen eines HP Vertica-Connectors mit der Flow Service API](../../tutorials/api/create/databases/hp-vertica.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinden von HP Vertica mit der Platform über die Benutzeroberfläche
+## Verbindung [!DNL HP Vertica] mit der [!DNL Platform] Benutzeroberfläche
 
 - [Erstellen eines HP Vertica-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/hp-vertica.md)
 - [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
