@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Modellbewertung (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Modellbewertung (UI)
 
-Die Bewertung in Adobe Experience Platform Data Science Workspace kann durch die Einspeisung von Eingabedaten in ein vorhandenes geschultes Modell erreicht werden. Die Bewertungsergebnisse werden dann als neuer Stapel in einem angegebenen Ausgabedataset gespeichert und angezeigt.
+Die Bewertung in der Adobe Experience Platform [!DNL Data Science Workspace] lässt sich durch die Einspeisung von Eingabedaten in ein vorhandenes geschultes Modell erzielen. Die Bewertungsergebnisse werden dann als neuer Stapel in einem angegebenen Ausgabedataset gespeichert und angezeigt.
 
-In diesem Lernprogramm werden die Schritte erläutert, die erforderlich sind, um ein Modell in der Benutzeroberfläche von Data Science Workspace zu bewerten.
+In diesem Lernprogramm werden die Schritte erläutert, die erforderlich sind, um ein Modell in der [!DNL Data Science Workspace] Benutzeroberfläche zu bewerten.
 
 ## Erste Schritte
 
-Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf die Erlebnisplattform haben. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in haben, wenden Sie sich an Ihren Systemadministrator, [!DNL Experience Platform]bevor Sie fortfahren.
 
 Dieses Lernprogramm erfordert ein geschultes Modell. Wenn Sie kein ausgebildetes Modell haben, folgen Sie dem [Zug und bewerten Sie ein Modell im UI](./train-evaluate-model-ui.md) -Lernprogramm, bevor Sie fortfahren.
 
@@ -63,4 +63,4 @@ Bei einer Bewertungsausführung wird einer der vier folgenden Status angezeigt: 
 
 ## Nächste Schritte
 
-Dieses Lernprogramm begleitet Sie durch die Schritte zum Erfassen von Daten mithilfe eines geschulten Modells im Data Science Workspace. Befolgen Sie das Lernprogramm zum [Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche](./publish-model-service-ui.md) , damit Benutzer in Ihrem Unternehmen Daten bewerten können, indem sie einfachen Zugriff auf einen maschinellen Lerndienst bieten.
+Dieses Tutorial begleitet Sie durch die Schritte, um Daten mit einem geschulten Modell in zu bewerten [!DNL Data Science Workspace]. Befolgen Sie das Lernprogramm zum [Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche](./publish-model-service-ui.md) , damit Benutzer in Ihrem Unternehmen Daten bewerten können, indem sie einfachen Zugriff auf einen maschinellen Lerndienst bieten.
