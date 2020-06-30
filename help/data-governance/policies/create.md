@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Eine Datenverwendungsrichtlinie erstellen
 topic: policies
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1194'
 ht-degree: 3%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 3%
 
 Die Datenverwendung - Kennzeichnung und Durchsetzung (DULE) ist der Kernmechanismus der Datenverwaltung in der Adobe Experience Platform. Mit der [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie DULE-Richtlinien erstellen und verwalten, um zu bestimmen, welche Marketingaktionen für Daten mit bestimmten DULE-Beschriftungen durchgeführt werden können.
 
-Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer DULE-Richtlinie mithilfe der Policy Service API. Eine umfassendere Anleitung zu den verschiedenen in der API verfügbaren Operationen finden Sie im Entwicklerhandbuch für [Policy Service](../api/getting-started.md).
+Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer DULE-Richtlinie mit der [!DNL Policy Service] API. Eine umfassendere Anleitung zu den verschiedenen in der API verfügbaren Operationen finden Sie im Entwicklerhandbuch für [Policy Service](../api/getting-started.md).
 
 ## Erste Schritte
 
 Dieses Lernprogramm erfordert ein Verständnis der folgenden Schlüsselkonzepte, die beim Erstellen und Evaluieren von DUL-Richtlinien zum Einsatz kommen:
 
-* [Datenverwaltung](../home.md): Das Framework, mit dem die Platform die Einhaltung der Datenverwendungskonformität erzwingt.
+* [Datenverwaltung](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Platform] erzwungen wird.
 * [Datenverwendungsbeschriftungen](../labels/overview.md): Datenverwendungsbeschriftungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
-* [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die API für den DUL-Policy-Dienst benötigen, einschließlich der erforderlichen Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
+Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die DULE [!DNL Policy Service] -API benötigen, einschließlich erforderlicher Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Definieren einer Marketingaktion {#define-action}
 
-Im Rahmen der Datenverwaltung handelt es sich bei einer Marketingaktion um eine Experience Platform, die von einem Datenbenutzer ausgeführt wird und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
+In diesem [!DNL Data Governance] Rahmen ist eine Marketingaktion eine Aktion, die ein [!DNL Experience Platform] Datenbenutzer unternimmt und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
 
 Der erste Schritt bei der Erstellung einer DULE-Richtlinie besteht darin, zu bestimmen, welche Marketingaktion die Richtlinie bewerten soll. Dies kann mit einer der folgenden Optionen durchgeführt werden:
 
@@ -44,7 +44,7 @@ Sie können vorhandene Marketingaktionen nachschlagen, die von Ihrer DULE-Richtl
 
 **API-Format**
 
-Je nachdem, ob Sie eine Marketingaktion, die durch Experience Platform bereitgestellt wird, oder eine benutzerdefinierte Marketingaktion Ihres Unternehmens suchen, verwenden Sie die `marketingActions/core` bzw. die `marketingActions/custom` Endpunkte.
+Je nachdem, ob Sie nach einer Marketingaktion suchen, die von Ihrer Organisation bereitgestellt wird, [!DNL Experience Platform] oder nach einer benutzerspezifischen Marketingaktion, verwenden Sie die `marketingActions/core` bzw. die `marketingActions/custom` Endpunkte.
 
 ```http
 GET /marketingActions/core
@@ -414,6 +414,6 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 200 (OK) und die Details der 
 
 In diesem Lernprogramm haben Sie erfolgreich eine Datenverwendungsrichtlinie für eine Marketingaktion erstellt. Sie können nun das Lernprogramm zum [Erzwingen von Datenverwendungsrichtlinien](../enforcement/api-enforcement.md) fortsetzen, um zu erfahren, wie Sie in Ihrer Erlebnisanwendung nach Richtlinienverletzungen suchen und diese behandeln können.
 
-Weitere Informationen zu den verschiedenen verfügbaren Vorgängen in der Policy Service API finden Sie im Entwicklerhandbuch für [Policy Service](../api/getting-started.md). Informationen zum Erzwingen von Richtlinien für Echtzeit-Kundendaten finden Sie im Lernprogramm zur [Erzwingung der Einhaltung von Datennutzungsregeln für Audiencen-Profil](../../segmentation/tutorials/governance.md).
+Weitere Informationen zu den verschiedenen verfügbaren Vorgängen in der [!DNL Policy Service] API finden Sie im [Policy Service-Entwicklerhandbuch](../api/getting-started.md). Informationen zum Erzwingen von Richtlinien für [!DNL Real-time Customer Profile] Daten finden Sie im Lernprogramm zum [Erzwingen der Datenverwendungskonformität für Audiencen-Segmente](../../segmentation/tutorials/governance.md).
 
-Informationen zum Verwalten von Nutzungsrichtlinien in der Benutzeroberfläche der Experience Platform finden Sie im [Richtlinien-Benutzerhandbuch](user-guide.md).
+Informationen zum Verwalten von Nutzungsrichtlinien in der [!DNL Experience Platform] Benutzeroberfläche finden Sie im [Richtlinien-Benutzerhandbuch](user-guide.md).
