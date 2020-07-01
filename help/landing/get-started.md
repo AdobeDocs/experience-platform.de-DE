@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Produktdokumentation zu Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 9e5273c077b8bd27bcab69c3391340e95295b990
+source-git-commit: b5503440aec5afd48cafdfa765fd3521f6ea4c68
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 7%
+source-wordcount: '61'
+ht-degree: 8%
 
 ---
 
 
-# Erste Schritte mit Adobe Experience Platform
+# Erste Schritte mit der Adobe Experience Platform
 
-Dieses Video bietet eine schnelle Einführung in die Experience Platform und beschreibt die geschäftlichen Herausforderungen, die mit ihr gelöst werden können. Zur Ergänzung der Plattformdokumentation stehen mehrere Videolehrgänge zur Verfügung. Weitere Videos, die Ihnen bei den ersten Schritten mit der Plattform helfen, finden Sie in der Videoreihe [Einführung in die Plattform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/overview.html).
+In diesem Video werden die geschäftlichen Herausforderungen, die mit der App gelöst werden, kurz erläutert [!DNL Experience Platform] und erläutert. Zur Ergänzung der [!DNL Platform] Dokumentation stehen mehrere Videolehrgänge zur Verfügung. Weitere Videos zu den ersten Schritten [!DNL Platform]finden Sie in der Videoreihe [Einführung in die Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/overview.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
