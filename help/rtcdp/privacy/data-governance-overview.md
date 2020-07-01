@@ -4,10 +4,10 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: 490154c23b0ae764ac30b7e93d42b33d09b8a5d6
+source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 71%
+source-wordcount: '1085'
+ht-degree: 72%
 
 ---
 
@@ -47,7 +47,10 @@ Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen k�
 
 Adobe Experience Platform bietet verschiedene **zentrale Richtlinien** für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können in der Benutzeroberfläche angezeigt werden, indem Sie zum Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;navigieren und die Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;auswählen. Detailliertere Anweisungen zum Arbeiten mit Richtlinien in der Benutzeroberfläche finden Sie im Benutzerhandbuch zu [Richtlinien](../../data-governance/policies/user-guide.md) in der Dokumentation zur Experience Platform, einschließlich der Erstellung eigener benutzerdefinierter Richtlinien.
 
-## Einhaltung von Datennutzungsrichtlinien durchsetzen {#enforce-data-usage-compliance}
+## (Beta) Einhaltung von Datennutzungsrichtlinien durchsetzen {#enforce-data-usage-compliance}
+
+>[!IMPORTANT]
+>Diese Funktion befindet sich derzeit in der Betaphase und steht nicht allen Nutzern zur Verfügung. Sie kann auf Anfrage aktiviert werden. Dokumentation und Funktionalität können sich ändern.
 
 Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Zielgruppensegmenten in der Echtzeit-CDP erzwingt Data Governance automatisch Nutzungsrichtlinien, falls Verstöße auftreten sollten.
 
