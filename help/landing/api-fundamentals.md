@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Grundlagen der Adobe Experience Platform-API
+title: Grundlagen der Adobe Experience Platformen-API
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c94f065a5d56ac495dd2d541531aaec94c187612
+source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 2%
+source-wordcount: '425'
+ht-degree: 3%
 
 ---
 
 
-# Grundlagen der Adobe Experience Platform-API
+# Grundlagen der Adobe Experience Platformen-API
 
-Adobe Experience Platform-APIs verwenden verschiedene zugrunde liegende Technologien und Syntaxen, die für eine effektive Verwaltung der JSON-basierten Plattformressourcen wichtig sind. Dieses Dokument bietet einen kurzen Überblick über diese Technologien sowie Links zur externen Dokumentation für weitere Informationen.
+Adobe Experience Platformen-APIs verwenden verschiedene zugrunde liegende Technologien und Syntaxen, die für eine effektive Verwaltung von JSON-basierten [!DNL Platform] Ressourcen wichtig sind. Dieses Dokument bietet einen kurzen Überblick über diese Technologien sowie Links zur externen Dokumentation für weitere Informationen.
 
 ## JSON-Zeiger {#json-pointer}
 
-JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) zur Identifizierung bestimmter Werte in JSON-Dokumenten. Ein JSON-Zeiger ist eine Zeichenfolge aus Token, die durch `/` Zeichen getrennt ist und entweder Objektschlüssel oder Array-Indizes angeben. Die Token können eine Zeichenfolge oder eine Zahl sein. JSON-Zeigerzeichenfolgen werden in vielen PATCH-Operationen für Plattform-APIs verwendet, wie weiter unten in diesem Dokument beschrieben. Weitere Informationen zu JSON-Zeiger finden Sie in der [JSON-Zeiger-Übersichtsdokumentation](https://rapidjson.org/md_doc_pointer.html).
+JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) zur Identifizierung bestimmter Werte in JSON-Dokumenten. Ein JSON-Zeiger ist eine Zeichenfolge aus Token, die durch `/` Zeichen getrennt ist und entweder Objektschlüssel oder Array-Indizes angeben. Die Token können eine Zeichenfolge oder eine Zahl sein. JSON-Zeigerzeichenfolgen werden in vielen PATCH-Vorgängen für [!DNL Platform] APIs verwendet, wie weiter unten in diesem Dokument beschrieben. Weitere Informationen zu JSON-Zeiger finden Sie in der [JSON-Zeiger-Übersichtsdokumentation](https://rapidjson.org/md_doc_pointer.html).
 
 ### Beispiel für ein JSON-Schema
 
@@ -80,12 +80,12 @@ JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://to
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
->[!Note]
->Beim Umgang mit den Deskriptoren `xdm:sourceProperty` und `xdm:destinationProperty` Attributen des Experience Data Model (XDM) müssen alle `properties` Schlüssel aus der JSON-Zeigerzeichenfolge **ausgeschlossen** werden. Weitere Informationen finden Sie im Unterhandbuch zu [Deskriptoren](../xdm/api/descriptors.md) im Handbuch für die API-Entwickler der Schema-Registrierung.
+>[!NHinweis]
+>Beim Umgang mit den `xdm:sourceProperty` und `xdm:destinationProperty` Attributen von [!DNL Experience Data Model] (XDM-)Deskriptoren müssen alle `properties` Schlüssel aus der JSON-Zeigerzeichenfolge **ausgeschlossen** werden. Weitere Informationen finden Sie im Unterhandbuch zu [Deskriptoren](../xdm/api/descriptors.md) im Handbuch für die API-Entwickler der Schema-Registrierung.
 
 ## JSON-Patch
 
-Es gibt viele PATCH-Vorgänge für Plattform-APIs, die JSON-Patch-Objekte für ihre Anforderungs-Nutzdaten akzeptieren. JSON Patch ist ein standardisiertes Format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) zur Beschreibung von Änderungen an einem JSON-Dokument. Damit können Sie Teilaktualisierungen zu JSON definieren, ohne das gesamte Dokument in einem Anforderungstext senden zu müssen.
+Es gibt viele PATCH-Vorgänge für [!DNL Platform] APIs, die JSON Patch-Objekte für ihre Anforderungs-Nutzdaten akzeptieren. JSON Patch ist ein standardisiertes Format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) zur Beschreibung von Änderungen an einem JSON-Dokument. Damit können Sie Teilaktualisierungen zu JSON definieren, ohne das gesamte Dokument in einem Anforderungstext senden zu müssen.
 
 ### Beispiel für ein JSON-Patch-Objekt
 
@@ -96,7 +96,7 @@ Es gibt viele PATCH-Vorgänge für Plattform-APIs, die JSON-Patch-Objekte für i
 }
 ```
 
-* `op`: Die Art des Patch-Vorgangs. Obwohl JSON Patch mehrere verschiedene Operationstypen unterstützt, sind nicht alle PATCH-Vorgänge in Plattform-APIs mit jedem Operationstyp kompatibel. Verfügbare Vorgangsarten sind:
+* `op`: Die Art des Patch-Vorgangs. Obwohl JSON Patch mehrere verschiedene Operationstypen unterstützt, sind nicht alle PATCH-Vorgänge in [!DNL Platform] APIs mit jedem Operationstyp kompatibel. Verfügbare Vorgangsarten sind:
    * `add`
    * `remove`
    * `replace`
@@ -113,4 +113,4 @@ JSON-Schema ist ein Format, mit dem die Struktur von JSON-Daten beschrieben und 
 
 ## Nächste Schritte
 
-In diesem Dokument wurden einige der Technologien und Syntaxen für die Verwaltung von JSON-basierten Ressourcen für Experience Platform eingeführt. Weitere Informationen zum Arbeiten mit Plattform-APIs, einschließlich Best Practices und Antworten auf häufig gestellte Fragen, finden Sie im Handbuch zur Fehlerbehebung für [Plattformen](troubleshooting.md).
+In diesem Dokument wurden einige der Technologien und Syntaxen eingeführt, die mit der Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform]die Arbeit verbunden sind. Weitere Informationen zum Arbeiten mit [!DNL Platform] APIs, einschließlich Best Practices und Antworten auf häufig gestellte Fragen, finden Sie im Handbuch zur Fehlerbehebung für [Platformen](troubleshooting.md).
