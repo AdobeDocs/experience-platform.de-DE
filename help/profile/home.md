@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Übersicht über das Echtzeit-Kundenprofil
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 2%
 
 ---
@@ -54,7 +54,7 @@ Eines der Hauptmerkmale von Echtzeit-Kundendaten-Profil ist die Fähigkeit, Date
 
 Wenn Daten aus mehreren Quellen zusammengeführt und kombiniert werden, um eine vollständige Ansicht der einzelnen Kunden zu erhalten, gelten für die Zusammenführung der Richtlinien, die Platform verwendet, um zu bestimmen, wie die Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien mit der Echtzeit-Profil-API finden Sie im Endpunkthandbuch [zu](api/merge-policies.md)Zusammenführungsrichtlinien. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche &quot;Experience Platform&quot;finden Sie im Benutzerhandbuch [zu Zusammenführungsrichtlinien](ui/merge-policies.md).
 
-## (Alpha) Konfigurieren von berechneten Attributen
+### (Alpha) Konfigurieren von berechneten Attributen
 
 >[!IMPORTANT]
 >Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist alphanumerisch. Dokumentation und Funktionalität können sich ändern.
@@ -67,7 +67,7 @@ In diesem Abschnitt werden die Komponenten vorgestellt, mit denen Echtzeit-Kunde
 
 ### Streaming-Erfassung und Streaming-Segmentierung
 
-Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Dadurch können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst den Überblick über die [Datenerhebungsqualität](../ingestion/quality/overview.md).
+Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Infolgedessen können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst die Qualitätsübersicht [zur](../ingestion/quality/overview.md)Datenerfassung.
 
 ### Edge-Projektionskonfigurationen und -ziele
 
@@ -80,7 +80,7 @@ Die Platform kann so konfiguriert werden, dass Daten zu Datensatz und Zeitreihen
 >[!NHinweis]
 >Daten, die über Adobe-Lösungen erfasst werden, einschließlich Analytics Cloud, Marketing Cloud und Advertising Cloud, fließen in die Experience Platform und werden in Profil erfasst.
 
-### Profil-Streaming-Erfassungsmetriken
+### Profil-Erfassungsmetriken
 
 Mithilfe von &quot;Observability Insights&quot;können Sie wichtige Metriken in der Adobe Experience Platform verfügbar machen. Zusätzlich zu den Nutzungsstatistiken und Leistungsindikatoren für verschiedene Funktionen der Platform gibt es spezifische Profil-bezogene Metriken, mit denen Sie Einblicke in eingehende Anforderungsraten, erfolgreiche Erfassungsraten, erfasste Datensatzgrößen und mehr gewinnen können. Weitere Informationen finden Sie in der Übersicht über die [Beobachtungseinblicke](../observability/home.md). Eine vollständige Liste der Profil-Metriken finden Sie in der Dokumentation zu den [verfügbaren Metriken](../observability/metrics.md).
 
