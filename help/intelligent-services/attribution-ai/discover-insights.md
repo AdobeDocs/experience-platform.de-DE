@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erkenntnisse über Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -30,7 +30,9 @@ In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navig
 
 Die Seite des Zuordnungs-API-Dienstes wird angezeigt. Auf dieser Seite werden Dienstinstanzen von Attribution AI Liste und Informationen zu diesen Instanzen, einschließlich des Namens der Instanz, der Konvertierungseinstellungen, der Häufigkeit der Ausführung der Instanz und des Status der letzten Aktualisierung, angezeigt. Klicken Sie auf einen Dienstinstanznamen, um zu beginnen.
 
->[!NOTE] Es können nur Dienstinstanzen ausgewählt werden, die erfolgreiche Testläufe abgeschlossen haben.
+>[!NOTE]
+>
+>Es können nur Dienstinstanzen ausgewählt werden, die erfolgreiche Testläufe abgeschlossen haben.
 
 ![Instanz erstellen](./images/insights/select-service-instance.png)
 
@@ -72,7 +74,9 @@ Die Schaltfläche &quot; *Mehr Aktionen* &quot;befindet sich in der oberen recht
 
 Mithilfe von Attributions-AI-Einblicken können Sie Ihre Daten filtern und die UI-Visualisierungen automatisch auf Grundlage Ihrer ausgewählten Filter aktualisieren.
 
->[!NOTE] Standardmäßig ist jeder Filter auf &quot;Alle&quot;eingestellt, mit Ausnahme des Filters für das *Zuordnungsmodell* , der auf &quot;Inkrementelle und einflussreiche zurechenbare Konvertierungen&quot;eingestellt ist.
+>[!NOTE]
+>
+>Standardmäßig ist jeder Filter auf &quot;Alle&quot;eingestellt, mit Ausnahme des Filters für das *Zuordnungsmodell* , der auf &quot;Inkrementelle und einflussreiche zurechenbare Konvertierungen&quot;eingestellt ist.
 
 ### Konversions-Ereignis
 
@@ -98,21 +102,25 @@ Mit dem *Filter &quot;Produkt* &quot;können Sie aus allen Produkten auswählen,
 
 Der *Geografie* -Filter füllt Ländercodes basierend auf regional basierten Modellen. Abhängig von Ihren Daten ist dieser Filter möglicherweise nicht vorhanden.
 
->[!NOTE] Ländercodes sind zwei Zeichen lang. Eine vollständige Liste finden Sie hier: [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Ländercodes sind zwei Zeichen lang. Eine vollständige Liste finden Sie hier: [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ### Region
 
->[!NOTE] Dieser Filter ist nur verfügbar, wenn Sie beim Erstellen Ihrer Dienstinstanz das optionale, auf [Regionen basierte Modellieren](./user-guide.md#region-based-modeling-optional) im Benutzeroberflächen-Handbuch Attribution AI durchgeführt haben.
+>[!NOTE]
+>
+>Dieser Filter ist nur verfügbar, wenn Sie beim Erstellen Ihrer Dienstinstanz das optionale, auf [Regionen basierte Modellieren](./user-guide.md#region-based-modeling-optional) im Benutzeroberflächen-Handbuch Attribution AI durchgeführt haben.
 
 Mit diesem Filter können Sie alle Regionen auswählen, die Sie im Instanzerstellungsprozess eingerichtet haben.
 
-### Kanal
+### Channel
 
 Wenn Sie auf den *Kanal* -Filter klicken, wird eine Dropdown-Liste mit allen verfügbaren Marketing-Kanälen angezeigt. Sie können mehrere Kanal zum Vergleich auswählen.
 
-![Kanal](./images/insights/channel.png)
+![Channel](./images/insights/channel.png)
 
-### Datumsbereich
+### Date Range
 
 Klicken Sie auf das Kalendersymbol, um das Popup für den Datumsbereich zu öffnen. Die Daten des Start- und Endkonvertierungs-Ereignisses bestimmen die Datenmenge, die in der Benutzeroberfläche ausgefüllt wird. Sie können den Datumsbereich einschränken oder erweitern, um die aufgefüllten Daten zu fokussieren oder zu erweitern.
 
@@ -120,7 +128,7 @@ Klicken Sie auf das Kalendersymbol, um das Popup für den Datumsbereich zu öffn
 
 ## Übersicht über Ihre Daten
 
-Die *Übersichtskarte* zeigt Ihre Gesamtumrechnungen nach Zuordnungsmodell an. Die Gesamtzahl ändert sich je nach Art der Suche anhand der zuvor in diesem Dokument beschriebenen Filter. Wenn Sie weitere Modelle auswählen, werden der Übersicht weitere Kreise hinzugefügt, die jeweils eine eigene Farbe haben, die der Legende entspricht.
+Die *Übersichtskarte* zeigt Ihre Gesamtumrechnungen nach Zuordnungsmodell an. Die Gesamtzahl ändert sich je nach Art der Suche anhand der zuvor in diesem Dokument beschriebenen Filter. Wenn Sie weitere Modelle auswählen, werden der Übersicht weitere Kreise hinzugefügt, von denen jede eine eigene Farbe hat, die der Legende entspricht.
 
 ![Übersicht](./images/insights/Overview.png)
 
@@ -138,7 +146,7 @@ Wenn Sie den Mauszeiger über die Datenzeile eines bestimmten Zuordnungsmodells 
 
 ## Aufschlüsselung nach Kanal
 
-Die *Aufschlüsselungskarte nach Kanal* wird verwendet, um die Gesamtanzahl der Konversionen im Verhältnis zu den einzelnen Kanälen zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanal und die Kapitalrendite getroffen werden.
+Die *Aufschlüsselungskarte nach Kanal* wird verwendet, um die Gesamtanzahl der Konversionen in Bezug auf jeden Kanal zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanal und die Kapitalrendite getroffen werden.
 
 ![Aufschlüsselungs-Kanal](./images/insights/channel-breakdown.png)
 
