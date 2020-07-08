@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Optimieren eines Modells
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -62,7 +62,9 @@ Nachdem eine Bewertungsklasse aktiviert wurde, wird während der Schulung standa
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] Wenn die Metrik nicht definiert ist, sind die Standardmetriken aktiv.
+>[!NOTE]
+>
+>Wenn die Metrik nicht definiert ist, sind die Standardmetriken aktiv.
 
 Eine bestimmte Metrik kann aktiviert werden, indem Sie den Wert für ändern `evaluation.metrics.com`. Im folgenden Beispiel ist die F-Score-Metrik aktiviert.
 
@@ -83,7 +85,9 @@ In der folgenden Tabelle sind die Standardmetriken für jede Klasse aufgeführt.
 
 Der benutzerdefinierte Auswerter kann bereitgestellt werden, indem Sie die Oberfläche `MLEvaluator.scala` in Ihrer `Evaluator.scala` Datei erweitern. In der Beispieldatei [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) definieren wir benutzerdefinierte `split()` und `evaluate()` Funktionen. Unsere `split()` Funktion teilt unsere Daten zufällig mit einem Verhältnis von 8:2 auf und unsere `evaluate()` Funktion definiert und gibt 3 Metriken zurück: MAPE, MAE und RMSE.
 
->[!IMPORTANT] Verwenden Sie für die `MLMetric` Klasse nicht `"measures"` für `valueType` `MLMetric` die Erstellung einer neuen Metrik, da die Metrik sonst nicht in der Tabelle mit den benutzerspezifischen Bewertungsmetriken gefüllt wird.
+>[!IMPORTANT]
+>
+>Verwenden Sie für die `MLMetric` Klasse nicht `"measures"` für `valueType` `MLMetric` die Erstellung einer neuen Metrik, da die Metrik sonst nicht in der Tabelle mit den benutzerspezifischen Bewertungsmetriken gefüllt wird.
 >  
 > Führen Sie folgende Schritte aus: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > Nicht: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
