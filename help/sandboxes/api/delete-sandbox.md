@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sandbox löschen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 4%
@@ -16,7 +16,9 @@ ht-degree: 4%
 
 Sie können eine Sandbox löschen, indem Sie eine DELETE-Anforderung ausführen, die die Sandbox `name` im Anforderungspfad enthält.
 
->[!NOTE] Durch diesen API-Aufruf wird die `status` Eigenschaft der Sandbox auf &quot;Gelöscht&quot;aktualisiert und deaktiviert. GET-Anforderungen können weiterhin die Details der Sandbox abrufen, nachdem sie gelöscht wurden.
+>[!NOTE]
+>
+>Durch diesen API-Aufruf wird die `status` Eigenschaft der Sandbox auf &quot;Gelöscht&quot;aktualisiert und deaktiviert. GET-Anforderungen können weiterhin die Details der Sandbox abrufen, nachdem sie gelöscht wurden.
 
 **API-Format**
 
