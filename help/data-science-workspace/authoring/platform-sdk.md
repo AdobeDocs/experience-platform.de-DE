@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zum Platform SDK
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 5%
@@ -78,7 +78,9 @@ Wenn Ihre Lesezeit zu lang dauert, können Sie eine der folgenden Filteroptionen
 - [Filtern von Daten nach Spalten](#filter-by-selected-columns)
 - [Sortierte Ergebnisse abrufen](#get-sorted-results)
 
->[!NOTE] Das IMS-Org wird innerhalb der `client_context`Variablen festgelegt.
+>[!NOTE]
+>
+>Das IMS-Org wird innerhalb der `client_context`Variablen festgelegt.
 
 ### Python
 
@@ -192,7 +194,9 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 ## Grundlegende Datenverarbeitung {#basic-writing-of-data}
 
->[!NOTE] Das IMS-Org wird innerhalb der `client_context`Variablen festgelegt.
+>[!NOTE]
+>
+>Das IMS-Org wird innerhalb der `client_context`Variablen festgelegt.
 
 Um Daten in Python und R zu schreiben, verwenden Sie eines der folgenden Beispiele:
 
