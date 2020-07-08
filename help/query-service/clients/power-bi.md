@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbindung mit Power BI
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -46,7 +46,9 @@ Nachdem Sie diese vorbereitenden Schritte durchgeführt haben, können Sie Power
 
 - *(Optional, jedoch empfohlen, wenn &quot;all&quot;für die Datenbank deklariert wird)* Geben Sie eine SQL-Anweisung ein.
 
->[!NOTE] Wenn keine SQL-Anweisung bereitgestellt wird, werden alle Datenbanktabellen von Power BI Vorschau. Für hierarchische Daten sollte eine benutzerdefinierte SQL-Anweisung verwendet werden. Wenn das Tabellenelement flach ist, funktioniert es mit oder ohne eine benutzerdefinierte SQL-Anweisung. Zusammengesetzte Typen werden noch nicht von Power BI unterstützt - um Primitive-Typen von zusammengesetzten Typen zu erhalten, müssen Sie SQL-Anweisungen schreiben, um sie abzuleiten.
+>[!NOTE]
+>
+>Wenn keine SQL-Anweisung bereitgestellt wird, werden alle Datenbanktabellen von Power BI Vorschau. Für hierarchische Daten sollte eine benutzerdefinierte SQL-Anweisung verwendet werden. Wenn das Tabellenelement flach ist, funktioniert es mit oder ohne eine benutzerdefinierte SQL-Anweisung. Zusammengesetzte Typen werden noch nicht von Power BI unterstützt - um Primitive-Typen von zusammengesetzten Typen zu erhalten, müssen Sie SQL-Anweisungen schreiben, um sie abzuleiten.
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
