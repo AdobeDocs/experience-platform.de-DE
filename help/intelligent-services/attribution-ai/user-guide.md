@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zur Zuordnung von AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -60,7 +60,9 @@ Um ein Konversions-Ereignis zu definieren, müssen Sie dem Ereignis einen Namen 
 
 Nach Auswahl eines Ereignisses wird rechts ein neues Dropdown-Feld angezeigt. Die zweite Dropdownliste dient dazu, durch die Verwendung von Vorgängen weiteren Kontext für Ihr Ereignis zu schaffen. Für dieses Konvertierungs-Ereignis wird der Standardvorgang *existiert* .
 
->[!NOTE] Eine Zeichenfolge unter Ihrem *Konvertierungsnamen* wird aktualisiert, wenn Sie Ihr Ereignis definieren.
+>[!NOTE]
+>
+>Eine Zeichenfolge unter Ihrem *Konvertierungsnamen* wird aktualisiert, wenn Sie Ihr Ereignis definieren.
 
 ![no dropdown](./images/user-guide/conversion_event_1.png)
 
@@ -98,7 +100,9 @@ Für den Zweck dieses Touchpoints wählen Sie &quot; **Gleich&quot;**.
 
 Wenn ein Operator für einen Touchpoint ausgewählt ist, wird der Wert &quot; *Feldeingabe&quot;verfügbar gemacht* . Die Dropdown-Werte für &quot;Feldwert *eingeben&quot;* basieren auf dem zuvor ausgewählten Operator- und Touchpoint-Wert. Wenn ein Wert nicht in der Dropdown-Liste enthalten ist, können Sie diesen Wert manuell eingeben. Klicken Sie auf das Dropdownmenü und wählen Sie **KLICKEN**.
 
->[!NOTE] Den Operatoren &quot;exists&quot;und &quot;not exists&quot;sind keine Feldwerte zugeordnet.
+>[!NOTE]
+>
+>Den Operatoren &quot;exists&quot;und &quot;not exists&quot;sind keine Feldwerte zugeordnet.
 
 ![Touchpoint-Dropdown](./images/user-guide/touchpoint_dropdown.png)
 
@@ -112,7 +116,9 @@ Wenn Sie auf **Hinzufügen Gruppe** klicken, können Sie weitere Felder getrennt
 
 ![Touchpoint-Übersicht](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] Verwenden Sie die Zeichenfolge unter dem *Touchpoint-Namen* , um einen schnellen Überblick über Ihren Touchpoint zu erhalten. Beachten Sie, dass die Zeichenfolge mit dem Namen des Touchpoints übereinstimmt.
+>[!NOTE]
+>
+>Verwenden Sie die Zeichenfolge unter dem *Touchpoint-Namen* , um einen schnellen Überblick über Ihren Touchpoint zu erhalten. Beachten Sie, dass die Zeichenfolge mit dem Namen des Touchpoints übereinstimmt.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -140,7 +146,9 @@ Klicken Sie auf das Dropdownmenü unter *Bewertungshäufigkeit* , um zwischen t�
 
 Klicken Sie auf das Uhrensymbol, um die Uhrzeit zu ändern, zu der die Bewertung erfolgen soll. Geben Sie in der neuen Überlagerung, die angezeigt wird, die Uhrzeit ein, zu der die Bewertung erfolgen soll. Klicken Sie auf eine Stelle außerhalb der Überlagerung, um sie zu schließen.
 
->[!NOTE] Es kann bis zu 24 Stunden dauern, bis jeder Bewertungsvorgang abgeschlossen ist.
+>[!NOTE]
+>
+>Es kann bis zu 24 Stunden dauern, bis jeder Bewertungsvorgang abgeschlossen ist.
 
 ![Uhrensymbol](./images/user-guide/time_of_day.png)
 
@@ -158,7 +166,9 @@ Wählen Sie als Nächstes einen Operator aus.
 
 Geben Sie abschließend den Ländercode in der Dropdown-Liste *Feldwert* eingeben ein.
 
->[!NOTE] Ländercodes sind zwei Zeichen lang. Eine vollständige Liste finden Sie hier: [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Ländercodes sind zwei Zeichen lang. Eine vollständige Liste finden Sie hier: [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![region](./images/user-guide/region-based.png)
 
@@ -166,7 +176,9 @@ Geben Sie abschließend den Ländercode in der Dropdown-Liste *Feldwert* eingebe
 
 Um sicherzustellen, dass Sie das bestmögliche Modell erhalten, ist es wichtig, Ihr Modell mit historischen Daten auszubilden, die Ihr Geschäft repräsentieren. Standardmäßig wird das Modell mit 2 Quartalen (6 Monate) an Daten trainiert. Wählen Sie das Dropdown-Menü aus, um die Standardeinstellung zu ändern. Sie können zwischen einem und vier Quartalen der Daten (3-12 Monate) trainieren.
 
->[!NOTE] Ein kürzeres Schulungsfenster ist anfälliger für aktuelle Trends, während ein längeres Schulungsfenster ein robusteres Modell schafft und weniger anfällig für aktuelle Trends ist.
+>[!NOTE]
+>
+>Ein kürzeres Schulungsfenster ist anfälliger für aktuelle Trends, während ein längeres Schulungsfenster ein robusteres Modell schafft und weniger anfällig für aktuelle Trends ist.
 
 ![Schulungsfenster](./images/user-guide/training_window.png)
 
