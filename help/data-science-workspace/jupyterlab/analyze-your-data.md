@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analysieren Ihrer Daten mithilfe von Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ Das Rezept für den Einzelhandel ist ein eigenständiges Beispiel, das mit demse
 
 ### Zugriffsdaten
 
->[!NOTE] Das `data_access_sdk_python` wird nicht mehr unterstützt und nicht mehr empfohlen. Informationen zum Konvertieren von Code finden Sie im Tutorial zum [Konvertieren von Datenzugriff-SDK](../authoring/platform-sdk.md) in Platform. Für dieses Lernprogramm gelten weiterhin die folgenden Schritte.
+>[!NOTE]
+>
+>Das `data_access_sdk_python` wird nicht mehr unterstützt und nicht mehr empfohlen. Informationen zum Konvertieren von Code finden Sie im Tutorial zum [Konvertieren von Datenzugriff-SDK](../authoring/platform-sdk.md) in Platform. Für dieses Lernprogramm gelten weiterhin die folgenden Schritte.
 
 Wir gehen weiter auf Daten intern von [!DNL Adobe Experience Platform] und Daten extern zugreifen. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die Pandas- [!DNL Python] Bibliothek.
 
@@ -86,7 +88,9 @@ Da der Datensatz identisch ist, möchten wir die Daten des vorherigen Abschnitts
 
 Jetzt können wir mit der rechten Maustaste auf den `Retail-Training-<your-alias>` Datensatz klicken und die Option &quot;Daten im Notebook untersuchen&quot;in der Dropdown-Liste auswählen. Ein ausführbarer Code-Eintrag wird in Ihrem Notebook angezeigt.
 
->[!TIP] finden Sie in der [!DNL Platform SDK](../authoring/platform-sdk.md) Anleitung zum Konvertieren Ihres Codes.
+>[!TIP]
+>
+>finden Sie in der [!DNL Platform SDK](../authoring/platform-sdk.md) Anleitung zum Konvertieren Ihres Codes.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
