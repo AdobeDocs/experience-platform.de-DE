@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzer für ein Profil verwalten
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 1%
@@ -22,7 +22,9 @@ Das Dialogfeld *Hinzufügen Benutzer* wird angezeigt. Mithilfe des Suchfelds kö
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
->[!NOTE] Wenn ein Benutzer nicht im Fenster zur automatischen Vervollständigung angezeigt wird, geben Sie seine vollständige E-Mail-Adresse in der Suchleiste ein. Eine Einladung wird mit Anweisungen zur Einrichtung eines Adobe ID-Kontos an die E-Mail gesendet.
+>[!NOTE]
+>
+>Wenn ein Benutzer nicht im Fenster zur automatischen Vervollständigung angezeigt wird, geben Sie seine vollständige E-Mail-Adresse in der Suchleiste ein. Eine Einladung wird mit Anweisungen zur Einrichtung eines Kontos für die Adobe ID an die E-Mail gesendet.
 
 Nachdem Sie einen Benutzer ausgewählt haben, klicken Sie auf **Speichern** , um ihn dem Profil hinzuzufügen.
 
@@ -34,4 +36,4 @@ Die Registerkarte &quot; *Benutzer* &quot;für das Produkt-Profil wird erneut an
 
 ## Nächste Schritte
 
-Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf Plattformfunktionen über die Admin-Konsole steuern können, finden Sie weitere Informationen zu den einzelnen Berechtigungen und den Plattformfunktionen, auf die Sie Zugriff gewähren, im Anhang im Überblick über die [Zugriffskontrolle](../home.md) .
+Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf Funktionen der Platform über die Admin Console steuern können, lesen Sie den Anhang im Überblick über die [](../home.md) Zugriffskontrolle, um mehr über die einzelnen Berechtigungen und die Funktionen der Platform zu erfahren, auf die sie Zugriff gewähren.
