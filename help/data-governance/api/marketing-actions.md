@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Marketingaktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 Beachten Sie in der folgenden Anforderung, dass die `name` in der Anforderungs-Nutzlast mit der `{marketingActionName}` im API-Aufruf identisch ist. Anders als bei `id` einer Richtlinie, die schreibgeschützt und systemgeneriert ist, müssen Sie bei der Erstellung einer Marketingaktion den _beabsichtigten_ Namen der Marketingaktion angeben.
 
->[!NOTE] Wenn Sie den `{marketingActionName}` im Aufruf nicht angeben, wird ein Fehler von 405 ausgegeben (Methode nicht zulässig), da es Ihnen nicht gestattet ist, direkt eine PUT zum `/marketingActions/custom` Endpunkt durchzuführen. Wenn die `name` in der Nutzlast nicht mit der `{marketingActionName}` im Pfad übereinstimmt, erhalten Sie einen 400-Fehler (Fehlerhafte Anforderung).
+>[!NOTE]
+>
+>Wenn Sie den `{marketingActionName}` im Aufruf nicht angeben, wird ein Fehler von 405 ausgegeben (Methode nicht zulässig), da es Ihnen nicht gestattet ist, direkt eine PUT zum `/marketingActions/custom` Endpunkt durchzuführen. Wenn die `name` in der Nutzlast nicht mit der `{marketingActionName}` im Pfad übereinstimmt, erhalten Sie einen 400-Fehler (Fehlerhafte Anforderung).
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ Bei erfolgreicher Erstellung erhalten Sie einen HTTP-Status 201 (Erstellt) und d
 
 Sie können Marketingaktionen löschen, indem Sie eine DELETE-Anfrage an die Stelle `{marketingActionName}` der Marketingaktion senden, die Sie entfernen möchten.
 
->[!NOTE] Sie können keine Marketingaktionen löschen, auf die durch vorhandene Richtlinien verwiesen wird. Der Versuch, dies zu tun, führt zu einem 400-Fehler (Fehlerhafte Anforderung) zusammen mit einer Fehlermeldung, die die `id` (oder mehrere IDs) einer Richtlinie (oder Richtlinien) enthält, die einen Verweis auf die Marketingaktion enthält, die Sie löschen möchten.
+>[!NOTE]
+>
+>Sie können keine Marketingaktionen löschen, auf die durch vorhandene Richtlinien verwiesen wird. Der Versuch, dies zu tun, führt zu einem 400-Fehler (Fehlerhafte Anforderung) zusammen mit einer Fehlermeldung, die die `id` (oder mehrere IDs) einer Richtlinie (oder Richtlinien) enthält, die einen Verweis auf die Marketingaktion enthält, die Sie löschen möchten.
 
 **API-Format**
 
