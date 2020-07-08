@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Herunterladen von Punktzahlen in der Kunden-API
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 2%
@@ -243,7 +243,9 @@ Kopieren Sie den `href` Wert für ein beliebiges Dateiobjekt im `data` Array und
 
 Um Ihre Dateidaten herunterzuladen, stellen Sie eine GET-Anforderung an den `"href"` Wert, den Sie im vorherigen Schritt beim [Abrufen Ihrer Dateien](#retrieving-your-files)kopiert haben.
 
->[!NOTE] Wenn Sie diese Anforderung direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Anforderungsheader hinzuzufügen. Im folgenden Anforderungsbeispiel wird `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Wenn Sie diese Anforderung direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Anforderungsheader hinzuzufügen. Im folgenden Anforderungsbeispiel wird `--output {FILENAME.FILETYPE}`.
 
 **API-Format**
 
@@ -267,7 +269,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -O 'filename.parquet'
 ```
 
->[!TIP] Vergewissern Sie sich, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET-Anforderung senden.
+>[!TIP]
+>
+>Vergewissern Sie sich, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET-Anforderung senden.
 
 **Antwort**
 
@@ -279,7 +283,9 @@ Die Antwort lädt die Datei herunter, die Sie im aktuellen Verzeichnis angeforde
 
 Alternativ können Sie Ihre Ergebnisdaten herunterladen, indem Sie Ihre Audience in einen Datensatz exportieren. Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der `status` Attributwert &quot;ERFOLGT&quot;ist), können Sie Ihre Audience in ein Dataset exportieren, in dem darauf zugegriffen und darauf reagiert werden kann. Weitere Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../../../segmentation/home.md).
 
->[!IMPORTANT] Um diese Methode des Exports zu verwenden, muss das Kundenkonto in Echtzeit für den Datensatz aktiviert werden.
+>[!IMPORTANT]
+>
+>Um diese Methode des Exports zu verwenden, muss das Kundenkonto in Echtzeit für den Datensatz aktiviert werden.
 
 Der Abschnitt zum [Exportieren eines Segments](../../../segmentation/tutorials/evaluate-a-segment.md) im Segmentbewertungshandbuch beschreibt die erforderlichen Schritte zum Exportieren eines Segmentdatasets. Der Leitfaden enthält Beispiele für Folgendes:
 
