@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Effektive Ansicht
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
@@ -40,7 +40,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] Eine vollständige Liste der Berechtigungen und Ressourcentypen, die im Payload-Array bereitgestellt werden können, finden Sie im Anhang zu [zulässigen Berechtigungen und Ressourcentypen](#accepted-permissions-and-resource-types).
+>[!NOTE]
+>
+>Eine vollständige Liste der Berechtigungen und Ressourcentypen, die im Payload-Array bereitgestellt werden können, finden Sie im Anhang zu [zulässigen Berechtigungen und Ressourcentypen](#accepted-permissions-and-resource-types).
 
 **Antwort**
 
@@ -63,7 +65,7 @@ Eine erfolgreiche Antwort gibt Informationen zu den Berechtigungen und Ressource
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie Sie die Zugriffskontrollen-API aufrufen, um Informationen über aktive Berechtigungen und zugehörige Richtlinien für Ressourcentypen zurückzugeben. Weitere Informationen zur Zugriffskontrolle für Experience Platform finden Sie in der Übersicht über die [Zugriffskontrolle](../home.md).
+In diesem Dokument wurde beschrieben, wie Sie die Zugriffskontrollen-API aufrufen, um Informationen über aktive Berechtigungen und zugehörige Richtlinien für Ressourcentypen zurückzugeben. Weitere Informationen zur Zugriffskontrolle der Experience Platform finden Sie in der Übersicht über die [Zugriffskontrolle](../home.md).
 
 ## Anhang
 
