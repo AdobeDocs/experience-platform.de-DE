@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Nachschlagen eines Objekts
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Wenn Sie die eindeutige ID für ein bestimmtes Katalogobjekt kennen, können Sie eine GET-Anforderung ausführen, um die Details dieses Objekts Ansicht.
 
->[!NOTE] Beim Anzeigen bestimmter Objekte empfiehlt es sich weiterhin, nach Eigenschaften [zu](filter-data.md) filtern und nur die Eigenschaften zurückzugeben, an denen Sie interessiert sind.
+>[!NOTE]
+>
+>Beim Anzeigen bestimmter Objekte empfiehlt es sich weiterhin, nach Eigenschaften [zu](filter-data.md) filtern und nur die Eigenschaften zurückzugeben, an denen Sie interessiert sind.
 
 **API-Format**
 
@@ -63,4 +65,6 @@ Bei einer erfolgreichen Antwort wird der angegebene Datensatz nur mit dem angefo
 }
 ```
 
->[!NOTE] Eigenschaften, deren Werte mit einem Präfix versehen sind, `@` stellen miteinander verknüpfte Objekte dar. Anweisungen zur Ansicht dieser Objekte finden Sie im Anhang zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects) .
+>[!NOTE]
+>
+>Eigenschaften, deren Werte mit einem Präfix versehen sind, `@` stellen miteinander verknüpfte Objekte dar. Anweisungen zur Ansicht dieser Objekte finden Sie im Anhang zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects) .
