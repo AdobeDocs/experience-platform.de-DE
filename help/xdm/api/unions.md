@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vereinigungen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Das `timeSeriesEvents` Array ist eine Liste von Ereignissen aus Zeitreihen, die 
 
 ### Segmentmitgliedschaft
 
-Die `segmentMembership` Zuordnung speichert die Ergebnisse der Segmentbewertungen. Wenn Segmentaufträge mit der [Segmentierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Audiencen, die in Platform integriert werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können.
+Die `segmentMembership` Zuordnung speichert die Ergebnisse der Segmentbewertungen. Wenn Segmentaufträge mit der [Segmentierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Audiencen, die in die Platform eingebunden werden, was eine Integration mit anderen Lösungen wie Adobe Audience Manager ermöglicht.
 
 Weitere Informationen finden Sie im Tutorial zum [Erstellen von Segmenten mit APIs](../../segmentation/tutorials/create-a-segment.md) .
 
@@ -42,7 +42,9 @@ Weitere Informationen finden Sie im Tutorial zum [Erstellen von Segmenten mit AP
 
 Damit ein Schema in die Ansicht der zusammengeführten Vereinigung aufgenommen werden kann, muss das Tag &quot;Vereinigung&quot;dem `meta:immutableTags` Attribut des Schemas hinzugefügt werden. Dies erfolgt über eine PATCH-Anforderung, um das Schema zu aktualisieren und das `meta:immutableTags` Array mit dem Wert &quot;Vereinigung&quot;hinzuzufügen.
 
->[!NOTE] Unveränderliche Tags sind Tags, die festgelegt, aber nie entfernt werden sollen.
+>[!NOTE]
+>
+>Unveränderliche Tags sind Tags, die festgelegt, aber nie entfernt werden sollen.
 
 **API-Format**
 
@@ -164,7 +166,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein `results` Array im A
 
 Sie können eine bestimmte Vereinigung durch eine GET-Anforderung, die den `$id` und, je nach Accept-Header, einige oder alle Details der Vereinigung enthält, eine Ansicht durchführen.
 
->[!NOTE] Vereinigungen-Lookups sind über den `/unions` und- `/schemas` Endpunkt verfügbar, um sie für die Verwendung in Profil-Exporten in einen Datensatz zu aktivieren.
+>[!NOTE]
+>
+>Vereinigungen-Lookups sind über den `/unions` und- `/schemas` Endpunkt verfügbar, um sie für die Verwendung in Profil-Exporten in einen Datensatz zu aktivieren.
 
 **API-Format**
 
