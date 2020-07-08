@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erzwingen der Datenverwendungskonformität für Audience-Segmente
+title: Erzwingen der Datenverwendungskonformität für Audiencen-Segmente
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1372'
 ht-degree: 2%
@@ -20,34 +20,36 @@ In diesem Lernprogramm werden die Schritte zum Erzwingen der Einhaltung der Date
 
 Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
 
-- [Echtzeit-Profil](../../profile/home.md): Echtzeit-Kundendaten-Profil ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von Erlebnisdatenmodelldaten (XDM) innerhalb der Plattform verwendet. Profil führt Daten über verschiedene Unternehmensdaten hinweg zusammen und bietet Zugriff auf diese Daten in einer einheitlichen Darstellung.
+- [Echtzeit-Profil](../../profile/home.md): Echtzeit-Kundendaten-Profil ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von Erlebnisdatenmodelldaten (XDM) innerhalb der Platform verwendet. Profil führt Daten über verschiedene Unternehmensdaten hinweg zusammen und bietet Zugriff auf diese Daten in einer einheitlichen Darstellung.
    - [Richtlinien](../../profile/api/merge-policies.md)zusammenführen: Regeln, die vom Echtzeit-Kundenkonto verwendet werden, um zu bestimmen, welche Daten unter bestimmten Bedingungen zu einer einheitlichen Ansicht zusammengeführt werden können. Merge-Richtlinien können für Zwecke der Datenverwaltung konfiguriert werden.
 - [Segmentierung](../home.md): Wie lange Kundendaten in Echtzeit eine große Gruppe von im Profil Store enthaltenen Personen in kleinere Gruppen unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
 - [Datenverwaltung](../../data-governance/home.md): Die Datenverwaltung bietet die Infrastruktur für die Kennzeichnung und Durchsetzung der Datenverwendung (DULE) unter Verwendung der folgenden Komponenten:
    - [Datenverwendungsbeschriftungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern im Hinblick auf die Empfindlichkeit bei der Verarbeitung ihrer jeweiligen Daten verwendet werden.
    - [Datenverwendungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketingaktionen für Daten zulässig sind, die durch bestimmte Datenverwendungsbeschriftungen kategorisiert wurden.
    - [Durchsetzung](../../data-governance/enforcement/overview.md)der Politik: Ermöglicht es Ihnen, Datenverwendungsrichtlinien zu erzwingen und Datenvorgänge zu verhindern, die Richtlinienverletzungen darstellen.
-- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Plattform-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platformen-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -181,7 +183,9 @@ Eine erfolgreiche Antwort gibt die Details der Mergerichtlinie zurück.
 
 ## Bewerten Sie Datensätze für Richtlinienverletzungen.
 
->[!NOTE]  Bei diesem Schritt wird davon ausgegangen, dass Sie über mindestens eine aktive Datenverwendungsrichtlinie verfügen, die verhindert, dass bestimmte Marketingaktionen für Daten mit bestimmten Beschriftungen durchgeführt werden. Wenn Sie keine anwendbaren Nutzungsrichtlinien für die zu evaluierenden Datensätze haben, führen Sie das [Richtlinienerstellungslehrgang](../../data-governance/policies/create.md) durch, um eine zu erstellen, bevor Sie mit diesem Schritt fortfahren.
+>[!NOTE]
+>
+> Bei diesem Schritt wird davon ausgegangen, dass Sie über mindestens eine aktive Datenverwendungsrichtlinie verfügen, die verhindert, dass bestimmte Marketingaktionen für Daten mit bestimmten Beschriftungen durchgeführt werden. Wenn Sie keine anwendbaren Nutzungsrichtlinien für die zu evaluierenden Datensätze haben, führen Sie das [Richtlinienerstellungslehrgang](../../data-governance/policies/create.md) durch, um eine zu erstellen, bevor Sie mit diesem Schritt fortfahren.
 
 Nachdem Sie die IDs der Quelldatasets der Richtlinie zur Zusammenführung erhalten haben, können Sie diese Datensätze mit der [DUL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gegen bestimmte Marketingaktionen auswerten, um Verstöße gegen die Datenverwendungsrichtlinie zu prüfen.
 
@@ -379,4 +383,4 @@ Weitere Informationen finden Sie im Abschnitt zum [Exportieren eines Segments](.
 
 ## Nächste Schritte
 
-Indem Sie diesem Tutorial folgen, haben Sie die mit einem Audiencen-Segment verknüpften Datenverwendungsbeschriftungen nachgeschlagen und sie auf Richtlinienverletzungen gegen bestimmte Marketingaktionen getestet. Weitere Informationen zur Datenverwaltung in Experience Platform finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md).
+Indem Sie diesem Tutorial folgen, haben Sie die mit einem Audiencen-Segment verknüpften Datenverwendungsbeschriftungen nachgeschlagen und sie auf Richtlinienverletzungen gegen bestimmte Marketingaktionen getestet. Weitere Informationen zur Datenverwaltung in der Experience Platform finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md).
