@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mehrere Objekte suchen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f3e9da9ab3d02006c07c59b17751c971a95d49bc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 1%
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 Wenn Sie anstelle einer Anforderung pro Objekt mehrere bestimmte Objekte Ansicht haben möchten, stellt Catalog eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs bereit. Sie können eine einzelne GET-Anforderung verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine kommagetrennte Liste von IDs einschließen.
 
->[!NOTE] Auch wenn Sie bestimmte Katalogobjekte anfordern, empfiehlt es sich dennoch, den Parameter &quot; `properties` Abfrage&quot;so zu verwenden, dass nur die benötigten Eigenschaften zurückgegeben werden.
+>[!NOTE]
+>
+>Auch wenn Sie bestimmte Katalogobjekte anfordern, empfiehlt es sich dennoch, den Parameter &quot; `properties` Abfrage&quot;so zu verwenden, dass nur die benötigten Eigenschaften zurückgegeben werden.
 
 **API-Format**
 
@@ -45,7 +47,9 @@ curl -X GET \
 
 Eine erfolgreiche Antwort gibt eine Liste der angegebenen Datensätze zurück, die nur die angeforderten Eigenschaften (`name`, `description`und `files`) enthält.
 
->[!NOTE] Wenn ein zurückgegebenes Objekt nicht mehr eine der angeforderten Eigenschaften enthält, die von der `properties` Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie unten unter &quot;Beispiel-Datensatz 3&quot;und &quot;Beispiel-Datensatz 4&quot;dargestellt.
+>[!NOTE]
+>
+>Wenn ein zurückgegebenes Objekt nicht mehr eine der angeforderten Eigenschaften enthält, die von der `properties` Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie unten unter &quot;Beispiel-Datensatz 3&quot;und &quot;Beispiel-Datensatz 4&quot;dargestellt.
 
 ```json
 {
