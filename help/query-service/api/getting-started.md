@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch für Abfrage Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 91104399e50bce03fed7c9196e6e83fc48a54d1c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 1%
@@ -18,31 +18,33 @@ Dieses Entwicklerhandbuch enthält Anweisungen zum Ausführen verschiedener Vorg
 
 ## Erste Schritte
 
-Dieses Handbuch erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die mit der Verwendung des Abfrage Service verbunden sind.
+Dieser Leitfaden erfordert ein Verständnis der verschiedenen Adobe Experience Platformen, die mit der Verwendung des Abfrage-Dienstes verbunden sind.
 
-- [Abfrage-Dienst](../home.md): Ermöglicht die Abfrage von Datensätzen und die Erfassung der resultierenden Abfragen als neue Datensätze in Experience Platform.
+- [Abfrage-Dienst](../home.md): Ermöglicht die Abfrage von Datensätzen und die Erfassung der resultierenden Abfragen als neue Datensätze in der Experience Platform.
 - [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um den Abfrage Service mit der API erfolgreich nutzen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den in dieser Dokumentation verwendeten Konventionen für API-Beispielaufrufe finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in dieser Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Experience Platform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Plattform-API-Aufrufen bereit, wie unten dargestellt:
+Um Experience Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zum Arbeiten mit Sandboxen in Experience Platform finden Sie in der Übersicht über [Sandboxes](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zum Arbeiten mit Sandboxen in der Experience Platform finden Sie in der Übersicht über [Sandboxen](../../sandboxes/home.md).
 
 ## Beispiel-API-Aufrufe
 
