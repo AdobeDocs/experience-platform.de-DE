@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Arbeiten mit der Laufzeit des Entscheidungsdienstes mithilfe von APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sand
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../tutorials/authentication.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../tutorials/authentication.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -53,7 +55,9 @@ Wird auch für Laufzeitanforderungen benötigt:
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` ist eine Zeichenfolge im UUUID-Format, die global eindeutig ist und nicht für verschiedene API-Aufrufe wiederverwendet werden darf.
+>[!NOTE]
+>
+>`UUID` ist eine Zeichenfolge im UUUID-Format, die global eindeutig ist und nicht für verschiedene API-Aufrufe wiederverwendet werden darf.
 
 [!DNL Decisioning Service] wird von einer Reihe von Geschäftsobjekten gesteuert, die miteinander verbunden sind. Alle Geschäftsobjekte werden im [!DNL Platform’s] Business Object Repository, XDM Core Object Repository, gespeichert. Eine wichtige Funktion dieses Repositorys ist, dass die APIs orthogonal zum Typ des Geschäftsobjekts sind. Statt eine POST-, GET-, PUT-, PATCH- oder DELETE-API zu verwenden, die den Ressourcentyp im API-Endpunkt angibt, gibt es nur 6 generische Endpunkte, die jedoch einen Parameter akzeptieren oder zurückgeben, der den Objekttyp angibt, wenn diese Unterscheidung erforderlich ist. Das Schema muss beim Repository registriert sein, darüber hinaus ist das Repository jedoch für einen Satz von Objekttypen mit offenem Ende einsetzbar.
 
