@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: fd6516d1c1d3792b41de65d0f44d78af1124ccc7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '666'
 ht-degree: 0%
@@ -23,6 +23,8 @@ Informationen zur Ansicht aller verfügbaren Endpunkte und CRUD-Vorgänge finden
 ## (Alpha) Berechnete Attribute
 
 >[!IMPORTANT]
+>
+>
 >Die Funktion für berechnete Attribute ist alphanumerisch und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können geändert werden.
 
 Berechnete Attribute ermöglichen es Ihnen, den Feldwert anhand anderer Werte, Berechnungen und Ausdruck automatisch zu berechnen. Berechnete Attribute werden auf Profil-Ebene ausgeführt, d. h., Sie können Werte über alle Datensätze und Ereignis hinweg Aggregat haben. Jedes berechnete Attribut enthält einen Ausdruck, oder &quot;Regel&quot;, der eingehende Daten auswertet und den sich ergebenden Wert in einem Profil-Attribut oder in einem Ereignis speichert. Diese Berechnungen helfen Ihnen, Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungen einfach zu beantworten, ohne dass Sie bei jeder erforderlichen Information manuell komplexe Berechnungen durchführen müssen. Sie können berechnete Attribute mithilfe des `config/computedAttributes` Endpunkts erstellen, Ansichten vornehmen, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im Handbuch [zum Endpunkt berechneter Attribute](computed-attributes.md).
