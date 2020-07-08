@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Grundlagen der Adobe Experience Platformen-API
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 3%
@@ -81,6 +81,8 @@ JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://to
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NHinweis]
+>
+>
 >Beim Umgang mit den `xdm:sourceProperty` und `xdm:destinationProperty` Attributen von [!DNL Experience Data Model] (XDM-)Deskriptoren müssen alle `properties` Schlüssel aus der JSON-Zeigerzeichenfolge **ausgeschlossen** werden. Weitere Informationen finden Sie im Unterhandbuch zu [Deskriptoren](../xdm/api/descriptors.md) im Handbuch für die API-Entwickler der Schema-Registrierung.
 
 ## JSON-Patch
