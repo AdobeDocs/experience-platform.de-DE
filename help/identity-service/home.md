@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 5%
@@ -94,7 +94,9 @@ Abhängig von Ihrer Strategie zur Unternehmenserfassung bestimmen die Datenfelde
 
 Während [!DNL Experience Platform] Angebote für eine Reihe von Standard-Namensräumen erforderlich sind, müssen Sie möglicherweise zusätzliche Namensraum erstellen, um Ihre Identitäten korrekt zu kategorisieren. Weitere Informationen finden Sie im Abschnitt zum [Anzeigen und Erstellen von Namensräumen für Ihr Unternehmen](./namespaces.md) in der Übersicht über Identitäts-Namensraum.
 
->[!NOTE] Identitäts-Namensraum sind ein Qualifikator für Identitäten. Nachdem ein Namensraum erstellt wurde, kann er daher nicht mehr gelöscht werden.
+>[!NOTE]
+>
+>Identitäts-Namensraum sind ein Qualifikator für Identitäten. Nachdem ein Namensraum erstellt wurde, kann er daher nicht mehr gelöscht werden.
 
 ### Identitätsdaten in [!DNL Experience Data Model] (XDM) einschließen
 
@@ -109,7 +111,9 @@ Jedes Feld des Typs `string` in Schemas, das XDM-Klassen für Datensätze oder Z
 Identitätsfelder ermöglichen auch die Verknüpfung von Identitäten, wenn sie gemeinsame PII-Daten verwenden.
 Wenn Sie z. B. Telefonnummernfelder als Identitätsfelder kennzeichnen, zeichnet [!DNL Identity Service] automatisch die Beziehungen zu den anderen Personen auf, bei denen festgestellt wurde, dass sie dieselbe Telefonnummer verwenden.
 
->[!NOTE] Der Namensraum der resultierenden Identitäten wird zum Zeitpunkt der Feldbeschriftung bereitgestellt.
+>[!NOTE]
+>
+>Der Namensraum der resultierenden Identitäten wird zum Zeitpunkt der Feldbeschriftung bereitgestellt.
 
 ### Dataset konfigurieren für [!DNL Identity Service]
 
