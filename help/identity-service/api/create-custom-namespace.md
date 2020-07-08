@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines benutzerspezifischen Namensraums
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 5%
@@ -18,7 +18,9 @@ Mithilfe der [!DNL Identity Namespace] API können Sie einen benutzerdefinierten
 
 Empfehlungen zum Erstellen benutzerdefinierter Namensraum finden Sie in [der FAQ-Dokumentation](../troubleshooting-guide.md)zum Identitätsdienst.
 
->[!NOTE] Namensraum sind ein Qualifikator für Identitäten. Daher kann ein Namensraum, sobald er erstellt wurde, nicht gelöscht werden.
+>[!NOTE]
+>
+>Namensraum sind ein Qualifikator für Identitäten. Daher kann ein Namensraum, sobald er erstellt wurde, nicht gelöscht werden.
 
 **API-Format**
 
