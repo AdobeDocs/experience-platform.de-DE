@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2431'
 ht-degree: 1%
@@ -483,6 +483,8 @@ Bei einer erfolgreichen Aktualisierung werden HTTP-Status 204 (Kein Inhalt) und 
 Es ist auch möglich, ein berechnetes Attribut mithilfe der API zu löschen. Dies geschieht, indem eine DELETE-Anforderung an den `/config/computedAttributes` Endpunkt gesendet wird und die ID des berechneten Attributs, das Sie löschen möchten, im Anforderungspfad enthalten ist.
 
 >[!NHinweis]
+>
+>
 >Gehen Sie beim Löschen eines berechneten Attributs vorsichtig vor, da es in mehr als einem Schema verwendet wird und der Vorgang des DELETE nicht rückgängig gemacht werden kann.
 
 **API-Format**
