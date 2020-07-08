@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim Adobe Experience Platform Identity Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 1%
@@ -80,7 +80,7 @@ Die folgenden Standard-Namensräume stehen allen Organisationen in der Experienc
 | ------------ | --- | --- | ----------- |
 | CORE | 0 | CORE | Legacy-Name: &quot;Adobe AudienceManager&quot; |
 | ECID | 4 | ECID | alias: &quot;Adobe Marketing Cloud-ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platformen-ID&quot; |
-| E-Mail  | 6 | E-Mail  |  |
+| E-Mail | 6 | E-Mail |  |
 | E-Mail (SHA256, Kleinbuchstaben) | 11 | E-Mails | Standard-Namensraum für E-Mail mit einem Hash. Die in diesem Namensraum bereitgestellten Werte werden vor dem Hashing mit SHA-256 in Kleinbuchstaben umgewandelt. |
 | Telefon | 7 | Telefon |  |
 | Windows-BEIHILFE | 8 | WAID |  |
@@ -120,7 +120,9 @@ Wenn Sie Hash-PII-Werte an den Identitätsdienst senden, müssen Sie dieselbe Ve
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
->[!NOTE] An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
+>[!NOTE]
+>
+>An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
 
 Write|XDM identity field|`identityMap`
 ---|---|---
