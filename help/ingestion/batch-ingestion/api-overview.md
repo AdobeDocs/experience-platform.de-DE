@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Entwicklerhandbuch zu Adobe Experience Platform Batch Ingestion
+title: Entwicklerhandbuch zur Adobe Experience Platform Batch Ingestion
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2577'
 ht-degree: 6%
@@ -26,27 +26,29 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
 
-- [Stapelverarbeitung](./overview.md): Ermöglicht Ihnen das Erfassen von Daten in Adobe Experience Platform als Stapeldateien.
+- [Stapelverarbeitung](./overview.md): Ermöglicht Ihnen das Erfassen von Daten in die Adobe Experience Platform als Stapeldateien.
 - [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Anforderungen, die eine Nutzlast enthalten (POST, PUT, PATCH), erfordern möglicherweise einen zusätzlichen `Content-Type` Header. Die für jeden Aufruf akzeptierten Werte werden in den Aufrufparametern bereitgestellt. Die folgenden Inhaltstypen werden in diesem Handbuch verwendet:
 
@@ -63,7 +65,7 @@ Beispielsweise haben weder JSON noch CSV einen Datums- oder Uhrzeittyp. Daher we
 
 Die folgende Tabelle zeigt die Konvertierungen, die beim Erfassen von Daten unterstützt werden.
 
-| Inbound (row) vs. Zielgruppe (col) | Zeichenfolge | Byte | Short | Ganzzahl | lang | Doppelt | Datum | Date-Time | Objekt | Landkarte |
+| Inbound (row) vs. Target (col) | Zeichenfolge | Byte | Short | Ganzzahl | lang | Doppelt | Datum | Date-Time | Objekt | Landkarte |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Zeichenfolge | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
@@ -76,7 +78,9 @@ Die folgende Tabelle zeigt die Konvertierungen, die beim Erfassen von Daten unte
 | Objekt |  |  |  |  |  |  |  |  | X | X |
 | Landkarte |  |  |  |  |  |  |  |  | X | X |
 
->[!NOTE] Booleans und Arrays können nicht in andere Typen konvertiert werden.
+>[!NOTE]
+>
+>Booleans und Arrays können nicht in andere Typen konvertiert werden.
 
 ## Engpasseinschränkungen
 
@@ -88,13 +92,17 @@ Die Stapeldatenerfassung unterliegt einigen Einschränkungen:
 
 ## JSON-Dateien aufnehmen
 
->[!NOTE] Die folgenden Schritte gelten für kleine Dateien (256 MB oder weniger). Wenn Sie einen Gateway-Timeout-Wert erreichen oder Fehler in der Körpergröße anfordern, müssen Sie zum Hochladen großer Dateien wechseln.
+>[!NOTE]
+>
+>Die folgenden Schritte gelten für kleine Dateien (256 MB oder weniger). Wenn Sie einen Gateway-Timeout-Wert erreichen oder Fehler in der Körpergröße anfordern, müssen Sie zum Hochladen großer Dateien wechseln.
 
 ### Stapel erstellen
 
 Zunächst müssen Sie einen Stapel erstellen, wobei JSON als Eingabeformat dient. Beim Erstellen des Stapels müssen Sie eine DataSet-ID angeben. Sie müssen außerdem sicherstellen, dass alle im Batch hochgeladenen Dateien mit dem XDM-Schema übereinstimmen, das mit dem bereitgestellten Datensatz verknüpft ist.
 
->[!NOTE] Die folgenden Beispiele beziehen sich auf einzeilige JSON-Dateien. Um mehrzeiliges JSON zu erfassen, muss das `isMultiLineJson` Flag eingestellt werden. Weitere Informationen finden Sie im Handbuch zur Fehlerbehebung bei der [Stapelverarbeitung](./troubleshooting.md).
+>[!NOTE]
+>
+>Die folgenden Beispiele beziehen sich auf einzeilige JSON-Dateien. Um mehrzeiliges JSON zu erfassen, muss das `isMultiLineJson` Flag eingestellt werden. Weitere Informationen finden Sie im Handbuch zur Fehlerbehebung bei der [Stapelverarbeitung](./troubleshooting.md).
 
 **API-Format**
 
@@ -154,7 +162,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Nachdem Sie einen Stapel erstellt haben, können Sie die Datei `batchId` von vor verwenden, um Dateien in den Stapel hochzuladen. Sie können mehrere Dateien in den Stapel hochladen.
 
->[!NOTE] Im Anhang finden Sie ein [Beispiel für eine ordnungsgemäß formatierte JSON-Datendatei](#data-transformation-for-batch-ingestion).
+>[!NOTE]
+>
+>Im Anhang finden Sie ein [Beispiel für eine ordnungsgemäß formatierte JSON-Datendatei](#data-transformation-for-batch-ingestion).
 
 **API-Format**
 
@@ -170,7 +180,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Anfrage**
 
->[!NOTE] Die API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist.
+>[!NOTE]
+>
+>Die API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -224,7 +236,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ## Parquet-Dateien einbeziehen
 
->[!NOTE] Die folgenden Schritte gelten für kleine Dateien (256 MB oder weniger). Wenn Sie einen Gateway-Timeout-Wert erreichen oder Fehler in der Körpergröße anfordern, müssen Sie zum Hochladen großer Dateien wechseln.
+>[!NOTE]
+>
+>Die folgenden Schritte gelten für kleine Dateien (256 MB oder weniger). Wenn Sie einen Gateway-Timeout-Wert erreichen oder Fehler in der Körpergröße anfordern, müssen Sie zum Hochladen großer Dateien wechseln.
 
 ### Stapel erstellen
 
@@ -301,7 +315,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Anfrage**
 
->[!CAUTION] Diese API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist.
+>[!CAUTION]
+>
+>Diese API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -355,7 +371,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Große Parkettdateien aufnehmen
 
->[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Dateien hochladen, die größer als 256 MB sind. Die großen Dateien werden in Textbausteinen hochgeladen und dann über ein API-Signal verbunden.
+>[!NOTE]
+>
+>In diesem Abschnitt wird beschrieben, wie Sie Dateien hochladen, die größer als 256 MB sind. Die großen Dateien werden in Textbausteinen hochgeladen und dann über ein API-Signal verbunden.
 
 ### Stapel erstellen
 
@@ -470,7 +488,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Anfrage**
 
->[!CAUTION] Diese API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist.
+>[!CAUTION]
+>
+>Diese API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -562,7 +582,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Um CSV-Dateien zu erfassen, müssen Sie eine Klasse, ein Schema und einen Datensatz erstellen, der CSV unterstützt. Detaillierte Informationen zum Erstellen der erforderlichen Klasse und des erforderlichen Schemas finden Sie in den Anweisungen im Lernprogramm zur Erstellung von [Ad-hoc-Schemas](../../xdm/api/ad-hoc.md).
 
->[!NOTE] Die folgenden Schritte gelten für kleine Dateien (256 MB oder weniger). Wenn Sie einen Gateway-Timeout-Wert erreichen oder Fehler in der Körpergröße anfordern, müssen Sie zum Hochladen großer Dateien wechseln.
+>[!NOTE]
+>
+>Die folgenden Schritte gelten für kleine Dateien (256 MB oder weniger). Wenn Sie einen Gateway-Timeout-Wert erreichen oder Fehler in der Körpergröße anfordern, müssen Sie zum Hochladen großer Dateien wechseln.
 
 ### Datensatz erstellen
 
@@ -698,7 +720,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Nachdem Sie einen Stapel erstellt haben, können Sie die Datei `batchId` von vor verwenden, um Dateien in den Stapel hochzuladen. Sie können mehrere Dateien in den Stapel hochladen.
 
->[!NOTE] Im Anhang finden Sie ein [Beispiel für eine ordnungsgemäß formatierte CSV-Datendatei](#data-transformation-for-batch-ingestion).
+>[!NOTE]
+>
+>Im Anhang finden Sie ein [Beispiel für eine ordnungsgemäß formatierte CSV-Datendatei](#data-transformation-for-batch-ingestion).
 
 **API-Format**
 
@@ -714,7 +738,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Anfrage**
 
->[!CAUTION] Diese API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist.
+>[!CAUTION]
+>
+>Diese API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -919,7 +945,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Anfrage**
 
->[!CAUTION] Diese API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist. Verwenden Sie nicht die Option curl -F, da standardmäßig eine mehrteilige Anforderung verwendet wird, die mit der API nicht kompatibel ist.
+>[!CAUTION]
+>
+>Diese API unterstützt das Hochladen von Einzelteilen. Stellen Sie sicher, dass der Content-Typ application/octet-stream ist. Verwenden Sie nicht die Option curl -F, da standardmäßig eine mehrteilige Anforderung verwendet wird, die mit der API nicht kompatibel ist.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
