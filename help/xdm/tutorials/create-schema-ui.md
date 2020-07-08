@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Schemas mit dem Schema-Editor.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -84,7 +84,9 @@ Die Arbeitsfläche wird wieder angezeigt. Der *Klassenabschnitt* enthält nun di
 
 Die Felder werden im Format &quot;fieldName&quot;angezeigt | Datentyp&quot;. Die Schritte zum Definieren von Schema-Feldern in der Benutzeroberfläche finden Sie weiter unten in diesem Lernprogramm.
 
->[!NOTE] Sie können die Klasse eines Schemas [jederzeit während des anfänglichen Kompositionsprozesses](#change-class) ändern, bevor das Schema gespeichert wurde. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Daher wird die Arbeitsfläche und alle hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
+>[!NOTE]
+>
+>Sie können die Klasse eines Schemas [jederzeit während des anfänglichen Kompositionsprozesses](#change-class) ändern, bevor das Schema gespeichert wurde. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Daher wird die Arbeitsfläche und alle hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
 
 ## Hinzufügen einer Mischung {#mixin}
 
@@ -108,7 +110,9 @@ Die Arbeitsfläche des Schemas wird wieder angezeigt. Im Bereich *Mixins* wird n
 
 Diese Mischung trägt mehrere Felder unter dem Namen der obersten Ebene &quot;Person&quot;mit dem Datentyp &quot;Person&quot;ein. Diese Gruppe von Feldern beschreibt Informationen zu einer Person, einschließlich Name, Geburtsdatum und Geschlecht.
 
->[!NOTE] Denken Sie daran, dass Felder skalare Typen (z. B. String, Ganzzahl, Array oder Datum) als Datentyp sowie alle &quot;Datentypen&quot;(eine Feldgruppe, die ein gemeinsames Konzept darstellt) in der Schema-Registrierung verwenden können.
+>[!NOTE]
+>
+>Denken Sie daran, dass Felder skalare Typen (z. B. String, Ganzzahl, Array oder Datum) als Datentyp sowie alle &quot;Datentypen&quot;(eine Feldgruppe, die ein gemeinsames Konzept darstellt) in der Schema-Registrierung verwenden können.
 
 Beachten Sie, dass das Feld &quot;Name&quot;einen Datentyp von &quot;Personenname&quot;hat, d. h., es beschreibt auch ein gemeinsames Konzept und enthält namensbezogene Unterfelder wie Vorname, Nachname und vollständiger Name.
 
@@ -122,7 +126,7 @@ Sie können nun das Mixin &quot;Profil Persönliche Details&quot;aus dem *Hinzuf
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. Die &quot;Profil Persönliche Daten&quot;sind jetzt unter *Mixins* im Bereich *Komposition* aufgelistet, und die Felder für die Adresse, das Handy und mehr wurden unter *Struktur* hinzugefügt.
+Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. Die &quot;Profil Persönliche Daten&quot;sind jetzt unter *Mixins* im Bereich *Komposition* aufgelistet, und die Felder für die Hausanschrift, das Handy und mehr wurden unter *Struktur* hinzugefügt.
 
 Ähnlich wie beim Feld &quot;Name&quot;stellen die soeben hinzugefügten Felder Konzepte für mehrere Felder dar. Beispielsweise hat &quot;homeAddress&quot;den Datentyp &quot;Address&quot;und &quot;mobilePhone&quot;den Datentyp &quot;Phone Number&quot;. Sie können auf jedes dieser Felder klicken, um sie zu erweitern und die zusätzlichen Felder im Datentyp anzuzeigen.
 
@@ -235,7 +239,7 @@ In einem zukünftigen Schema können Sie nun einem Feld den **Typ** &quot;Loyali
 
 Schema werden für die Erfassung von Daten in die Experience Platform verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzuführen. Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identitätsfelder&quot;markiert werden.
 
-Mit Experience Platform können Sie ein Identitätsfeld ganz einfach über das Kontrollkästchen &quot; **Identität** &quot;im Schema-Editor kennzeichnen.
+Mit Experience Platform können Sie ein Identitätsfeld ganz einfach durch das Kontrollkästchen &quot; **Identität** &quot;im Schema-Editor kennzeichnen.
 
 So kann es beispielsweise Tausende von Mitgliedern des Treuebereichs geben, die derselben &quot;Ebene&quot;angehören, aber jedes Mitglied des Treuebereichs-Programms hat eine eindeutige &quot;loyaltyId&quot;(E-Mail-Adresse des jeweiligen Mitglieds). Die Tatsache, dass &quot;loyaltyId&quot;eine eindeutige Kennung für jedes Mitglied ist, macht es zu einem guten Kandidaten für ein Identitätsfeld, während &quot;level&quot;dies nicht tut.
 
@@ -247,7 +251,9 @@ Jetzt werden alle Daten, die in das Feld &quot;loyaltyId&quot;eingegeben werden,
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
->[!NOTE] Nachdem ein Schema als primäre Identität festgelegt wurde, erhalten Sie eine Fehlermeldung, wenn Sie später versuchen, ein anderes Feld im Schema als primäres Feld festzulegen. Jedes Schema darf nur ein primäres Identitätsfeld enthalten.
+>[!NOTE]
+>
+>Nachdem ein Schema als primäre Identität festgelegt wurde, erhalten Sie eine Fehlermeldung, wenn Sie später versuchen, ein anderes Feld im Schema als primäres Feld festzulegen. Jedes Schema darf nur ein primäres Identitätsfeld enthalten.
 
 Weitere Informationen zum Arbeiten mit Identitäten finden Sie in der Dokumentation zum [Identitätsdienst](../../identity-service/home.md) .
 
@@ -279,7 +285,9 @@ Klicken Sie auf **Profil** , und es wird ein Popup angezeigt, in dem Sie aufgefo
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
->[!NOTE] Nachdem ein Schema für Echtzeit-Kundendaten aktiviert und gespeichert wurde, kann es nicht deaktiviert werden.
+>[!NOTE]
+>
+>Nachdem ein Schema für Echtzeit-Kundendaten aktiviert und gespeichert wurde, kann es nicht deaktiviert werden.
 
 ## Nächste Schritte
 
@@ -303,13 +311,17 @@ Anschließend können Sie der neuen Klasse einen **Anzeigenamen** (einen kurzen,
 
 ![Neue Klassendetails](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] Denken Sie beim Erstellen eines Schemas, das eine von Ihrem Unternehmen definierte Klasse implementiert, daran, dass Mixins nur für kompatible Klassen verfügbar sind. Da die von Ihnen definierte Klasse neu ist, sind keine kompatiblen Mixins im Dialogfeld *Hinzufügen Mixin* aufgeführt. Stattdessen müssen Sie &quot;Neues Mixin **erstellen&quot;auswählen** und ein Mixin definieren, das mit dieser Klasse verwendet werden soll. Wenn Sie das nächste Mal ein Schema erstellen, das die neue Klasse implementiert, wird das von Ihnen definierte Mixin aufgelistet und zur Verwendung verfügbar.
+>[!NOTE]
+>
+>Denken Sie beim Erstellen eines Schemas, das eine von Ihrem Unternehmen definierte Klasse implementiert, daran, dass Mixins nur für kompatible Klassen verfügbar sind. Da die von Ihnen definierte Klasse neu ist, sind keine kompatiblen Mixins im Dialogfeld *Hinzufügen Mixin* aufgeführt. Stattdessen müssen Sie &quot;Neues Mixin **erstellen&quot;auswählen** und ein Mixin definieren, das mit dieser Klasse verwendet werden soll. Wenn Sie das nächste Mal ein Schema erstellen, das die neue Klasse implementiert, wird das von Ihnen definierte Mixin aufgelistet und zur Verwendung verfügbar.
 
 ### Klasse eines Schemas ändern {#change-class}
 
 Sie können jederzeit während der anfänglichen Erstellung des Schemas vor dem Speichern des Schemas die Klasse ändern, auf der das Schema basiert.
 
->[!WARNING] Üben Sie bitte Vorsicht, bevor Sie den Unterricht wechseln. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, wird die Arbeitsfläche zurückgesetzt und alle Felder, die Sie zu diesem Punkt hinzugefügt haben, werden entfernt.
+>[!WARNING]
+>
+>Üben Sie bitte Vorsicht, bevor Sie den Unterricht wechseln. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, wird die Arbeitsfläche zurückgesetzt und alle Felder, die Sie zu diesem Punkt hinzugefügt haben, werden entfernt.
 
 Um die Klasse zu ändern, klicken Sie im Editor im Abschnitt &quot; **Komposition** &quot;neben *Klasse* auf *Zuweisen* .
 
