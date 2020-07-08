@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Konfigurieren einer Customer AI-Instanz
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 59%
@@ -72,7 +72,9 @@ Schließen Sie Ereignisse nach Bedarf aus und klicken Sie dann auf **[!UICONTROL
 
 Wenn die Instanz erfolgreich erstellt wurde, wird sofort eine Prognoseausführung ausgelöst und die nachfolgenden Ausläufe werden gemäß Ihrem definierten Zeitplan ausgeführt.
 
->[!NOTE] Je nach Größe der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
+>[!NOTE]
+>
+>Je nach Größe der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
 
 In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine Prognose durchgeführt. Nach erfolgreichem Abschluss des Vorgangs werden die Profil automatisch mit Ergebniswerten gefüllt. Bitte warten Sie bis zu 24 Stunden, bevor Sie mit dem nächsten Abschnitt dieses Tutorials fortfahren.
 
