@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Die folgenden Identitätstypen sind innerhalb [!DNL Platform]von verfügbar:
 | Cookie | Diese Identitäten sind für die Erweiterung von entscheidender Bedeutung und bilden den Großteil des Identitätsdiagramms. Sie verfallen jedoch naturgemäß schnell und verlieren mit der Zeit ihren Wert. Das Löschen von Cookies wird speziell im Identitätsdiagramm behandelt. |
 | Geräteübergreifend | Dies deutet darauf hin, dass dies als eine starke Personennummer betrachtet werden [!DNL Identity Service] sollte und daher für immer erhalten bleiben sollte. Beispiele sind eine Anmelde-ID, CRM-ID, Loyalität-ID usw. |
 | Gerät | Umfasst IDFA-, GAID- und andere IOT-IDs. Diese können auch von Menschen in Haushalten geteilt werden. |
-| E-Mail  | Identitäten dieser Art beinhalten persönlich identifizierbare Informationen (PII). Dies ist ein Hinweis [!DNL Identity Service] auf eine sinnvolle Handhabung des Wertes. |
+| E-Mail | Identitäten dieser Art beinhalten persönlich identifizierbare Informationen (PII). Dies ist ein Hinweis [!DNL Identity Service] auf eine sinnvolle Handhabung des Wertes. |
 | Mobil | Zu diesen Identitäten gehören PII. Dies ist ein Hinweis [!DNL Identity Service] auf eine sinnvolle Handhabung des Wertes. |
 | Nichtpersonen | Dient zum Speichern von Identifikatoren, die Namensraum benötigen, aber nicht an einen Personenzusammenschnitt gebunden sind. Diese Bezeichner werden dann aus dem Identitätsdiagramm gefiltert. Mögliche Anwendungsfälle sind Daten zu Produkten, Organisationen, Geschäften usw. (Zum Beispiel eine Produkt-SKU.) |
 | Telefon | Zu diesen Identitäten gehören PII. Dies ist ein Hinweis [!DNL Identity Service] auf eine sinnvolle Handhabung des Werts. |
@@ -72,7 +72,9 @@ Namensraum, die Sie definieren, sind für Ihr Unternehmen privat und benötigen 
 
 Ähnlich wie bei Standard-Namensräumen können Sie auf einen benutzerspezifischen Namensraum auf der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;klicken, um dessen Details Ansicht. Bei einem benutzerspezifischen Namensraum können Sie jedoch auch dessen Anzeigenamen und -beschreibung im Detailbereich bearbeiten.
 
->[!NOTE] Nachdem ein Namensraum erstellt wurde, kann er nicht gelöscht werden und sein &quot;Identitätssymbol&quot;(oder &quot;Code&quot; in der API) und &quot;Typ&quot; können nicht mehr geändert werden.
+>[!NOTE]
+>
+>Nachdem ein Namensraum erstellt wurde, kann er nicht gelöscht werden und sein &quot;Identitätssymbol&quot;(oder &quot;Code&quot; in der API) und &quot;Typ&quot; können nicht mehr geändert werden.
 
 ## Namensraum in Identitätsdaten
 
