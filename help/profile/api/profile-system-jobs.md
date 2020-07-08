@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
+title: Profil-Systemaufträge - Echtzeit-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1503'
 ht-degree: 2%
 
 ---
 
 
-# Profil-Systemaufträge (Anforderungen löschen)
+# Endpunkt &quot;Systemaufträge&quot;(Anforderungen löschen)
 
 Mit Adobe Experience Platform können Sie Daten aus mehreren Quellen erfassen und stabile Profil für einzelne Kunden erstellen. Daten, die in die Platform aufgenommen werden, werden im Data Lake sowie im Echtzeit-Kundendatenspeicher gespeichert. Gelegentlich kann es erforderlich sein, einen Datensatz oder Stapel aus dem Profil Store zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dies erfordert die Verwendung der Echtzeit-Client-Profil-API zum Erstellen eines Profil-Systemauftrags (auch als &quot;Löschanforderung&quot;bezeichnet), der bei Bedarf auch modifiziert, überwacht oder entfernt werden kann.
 
@@ -314,7 +314,7 @@ Die folgenden Informationen ergänzen den Vorgang des Löschens eines Datensatze
 
 ### Löschen eines Datensatzes mithilfe der Benutzeroberfläche &quot;Experience Platform&quot;
 
-Wenn Sie mit der Benutzeroberfläche &quot;Experience Platform&quot;einen zum Profil aktivierten Datensatz löschen, wird ein Dialogfeld mit der Frage angezeigt: &quot;Sind Sie sicher, dass Sie diesen Datensatz aus dem Experience Data Lake löschen möchten? Verwenden Sie die API &quot;Profil-Systemaufträge&quot;, um diesen Datensatz aus dem Profil-Dienst zu löschen.&quot;
+Wenn Sie mit der Benutzeroberfläche &quot;Experience Platform&quot;einen zum Profil aktivierten Datensatz löschen, wird ein Dialogfeld mit der Frage angezeigt: &quot;Sind Sie sicher, dass Sie diesen Datensatz aus dem Experience Data Lake löschen möchten? Verwenden Sie die API &quot;Profil systems jobs&quot;, um diesen Datensatz aus dem Profil Service zu löschen.&quot;
 
 Wenn Sie in der Benutzeroberfläche auf &quot; **Löschen** &quot;klicken, wird der Datensatz zur Erfassung deaktiviert. Der Datensatz wird jedoch NICHT automatisch im Backend gelöscht. Um den Datensatz dauerhaft zu löschen, muss eine Löschanforderung manuell mithilfe der Schritte in diesem Handbuch zum [Erstellen einer Löschanforderung](#create-a-delete-request)erstellt werden.
 
