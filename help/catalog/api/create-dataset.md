@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datensatz erstellen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 1%
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 Um mit der Katalog-API einen Datensatz zu erstellen, müssen Sie den `$id` Wert des XDM-Schemas (Experience Data Model) kennen, auf dem der Datensatz basieren soll. Sobald Sie über die Schema-ID verfügen, können Sie einen Datensatz erstellen, indem Sie eine POST-Anforderung an den `/datasets` Endpunkt in der Katalog-API senden.
 
->[!NOTE] In diesem Dokument wird nur die Erstellung eines Datensatzobjekts im Katalog behandelt. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Lernprogramm](../datasets/create.md).
+>[!NOTE]
+>
+>In diesem Dokument wird nur die Erstellung eines Datensatzobjekts im Katalog behandelt. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Lernprogramm](../datasets/create.md).
 
 **API-Format**
 
@@ -55,7 +57,9 @@ curl -X POST \
 | `name` | Der Name des zu erstellenden Datensatzes. |
 | `schemaRef.id` | Der URI- `$id` Wert für das XDM-Schema, auf dem der Datensatz basiert. |
 
->[!NOTE] In diesem Beispiel wird das [Parquet](https://parquet.apache.org/documentation/latest/) -Dateiformat für seine `containerFormat` Eigenschaft verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im Entwicklerhandbuch für [Stapelverarbeitung](../../ingestion/batch-ingestion/api-overview.md).
+>[!NOTE]
+>
+>In diesem Beispiel wird das [Parquet](https://parquet.apache.org/documentation/latest/) -Dateiformat für seine `containerFormat` Eigenschaft verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im Entwicklerhandbuch für [Stapelverarbeitung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
