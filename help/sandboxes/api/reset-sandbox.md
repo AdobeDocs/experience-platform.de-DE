@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zurücksetzen einer Sandbox
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 4%
@@ -62,4 +62,6 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück un
 }
 ```
 
->[!NOTE] Sobald eine Sandbox zurückgesetzt wurde, dauert es etwa 15 Minuten, bis sie vom System bereitgestellt wird. Nach der Bereitstellung `state` wird die Sandbox &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
+>[!NOTE]
+>
+>Sobald eine Sandbox zurückgesetzt wurde, dauert es etwa 15 Minuten, bis sie vom System bereitgestellt wird. Nach der Bereitstellung `state` wird die Sandbox &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
