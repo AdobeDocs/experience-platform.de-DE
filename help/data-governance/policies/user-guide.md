@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datenverwendungsrichtlinien
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. In diesem Dokument erhalten Sie einen Überblick über die Aktionen, die Sie in der Benutzeroberfläche im Arbeitsbereich &quot; _Richtlinien_ &quot;ausführen können [!DNL Experience Platform] .
 
->[!IMPORTANT] Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren. Anweisungen dazu finden Sie im Abschnitt zum [Aktivieren von Richtlinien](#enable) in der Benutzeroberfläche.
+>[!IMPORTANT]
+>
+>Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren. Anweisungen dazu finden Sie im Abschnitt zum [Aktivieren von Richtlinien](#enable) in der Benutzeroberfläche.
 
 ## Voraussetzungen
 
@@ -51,7 +53,9 @@ Wählen Sie anschließend die Datenverwendungsbeschriftungen aus, auf denen die 
 
 Der Schritt Marketingaktionen *[!UICONTROL auswählen]* wird angezeigt. Wählen Sie die entsprechenden Marketingaktionen aus der bereitgestellten Liste und klicken Sie dann auf **[!UICONTROL Weiter]** , um fortzufahren.
 
->[!NOTE] Bei der Auswahl mehrerer Marketingaktionen interpretiert die Richtlinie diese als &quot;OR&quot;-Regel. Mit anderen Worten, die Richtlinie gilt, wenn _eine_ der ausgewählten Marketingaktionen durchgeführt wird.
+>[!NOTE]
+>
+>Bei der Auswahl mehrerer Marketingaktionen interpretiert die Richtlinie diese als &quot;OR&quot;-Regel. Mit anderen Worten, die Richtlinie gilt, wenn _eine_ der ausgewählten Marketingaktionen durchgeführt wird.
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -93,7 +97,9 @@ Die neu erstellte Aktion wird auf der Registerkarte &quot; *[!UICONTROL Marketin
 
 ## Bearbeiten oder Löschen einer Marketingaktion {#edit-delete-marketing-action}
 
->[!NOTE] Es können nur benutzerdefinierte Marketingaktionen bearbeitet werden, die von Ihrer Organisation definiert wurden. Von Adobe definierte Marketingaktionen können nicht geändert oder gelöscht werden.
+>[!NOTE]
+>
+>Es können nur benutzerdefinierte Marketingaktionen bearbeitet werden, die von Ihrer Organisation definiert wurden. Von Adobe definierte Marketingaktionen können nicht geändert oder gelöscht werden.
 
 Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;die Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;aus, um eine Liste der verfügbaren Marketingaktionen Ansicht, die von Adobe und Ihrem eigenen Unternehmen definiert wurden. Wählen Sie eine benutzerdefinierte Marketingaktion aus der Liste und bearbeiten Sie dann die Details der Marketingaktion mit den entsprechenden Feldern im rechten Bereich.
 
@@ -101,7 +107,9 @@ Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;die Regi
 
 Wenn die Marketingaktion nicht von vorhandenen Nutzungsrichtlinien verwendet wird, können Sie sie löschen, indem Sie auf Marketingaktion **[!UICONTROL löschen klicken]**.
 
->[!NOTE] Beim Versuch, eine Marketingaktion zu löschen, die von einer vorhandenen Richtlinie verwendet wird, wird eine Fehlermeldung angezeigt, die darauf hinweist, dass der Löschversuch fehlgeschlagen ist.
+>[!NOTE]
+>
+>Beim Versuch, eine Marketingaktion zu löschen, die von einer vorhandenen Richtlinie verwendet wird, wird eine Fehlermeldung angezeigt, die darauf hinweist, dass der Löschversuch fehlgeschlagen ist.
 
 ![](../images/policies/delete-marketing-action.png)
 
