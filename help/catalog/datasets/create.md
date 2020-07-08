@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Datensatzes mit APIs
 topic: datasets
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 1%
@@ -14,35 +14,37 @@ ht-degree: 1%
 
 # Erstellen eines Datensatzes mit APIs
 
-In diesem Dokument werden allgemeine Schritte zum Erstellen eines Datensatzes mit Adobe Experience Platform-APIs und zum Ausfüllen des Datensatzes mit einer Datei beschrieben.
+In diesem Dokument werden allgemeine Schritte zum Erstellen eines Datensatzes mithilfe von Adobe Experience Platformen-APIs und zum Ausfüllen des Datensatzes mit einer Datei beschrieben.
 
 ## Erste Schritte
 
 Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
 
-* [Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md): Mit Experience Platform können Sie Daten als Batch-Dateien erfassen.
+* [Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md): Mit der Experience Platform können Sie Daten als Stapeldateien erfassen.
 * [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Plattform-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platformen-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -210,7 +212,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] In diesem Tutorial wird das [Parquet](https://parquet.apache.org/documentation/latest/) -Dateiformat für alle Beispiele verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im Entwicklerhandbuch für die [Stapelverarbeitung](../../ingestion/batch-ingestion/api-overview.md)
+>[!NOTE]
+>
+>In diesem Tutorial wird das [Parquet](https://parquet.apache.org/documentation/latest/) -Dateiformat für alle Beispiele verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im Entwicklerhandbuch für die [Stapelverarbeitung](../../ingestion/batch-ingestion/api-overview.md)
 
 **Antwort**
 
@@ -292,7 +296,9 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und ein Antwor
 
 Nachdem Sie erfolgreich einen neuen Stapel zum Hochladen erstellt haben, können Sie jetzt Dateien in den jeweiligen Datensatz hochladen. Beachten Sie, dass Sie bei der Definition des Datensatzes das Dateiformat als Parkett angegeben haben. Daher müssen die hochgeladenen Dateien in diesem Format vorliegen.
 
->[!NOTE] Die größte unterstützte Datei zum Hochladen von Daten ist 512 MB. Wenn Ihre Datendatei größer als diese ist, muss sie in Blöcke mit nicht mehr als 512 MB aufgeteilt werden, die einzeln hochgeladen werden sollen. Sie können jede Datei im selben Stapel hochladen, indem Sie diesen Schritt für jede Datei wiederholen und dieselbe Stapel-ID verwenden. Die Anzahl der hochzuladenden Dateien ist unbegrenzt.
+>[!NOTE]
+>
+>Die größte unterstützte Datei zum Hochladen von Daten ist 512 MB. Wenn Ihre Datendatei größer als diese ist, muss sie in Blöcke mit nicht mehr als 512 MB aufgeteilt werden, die einzeln hochgeladen werden sollen. Sie können jede Datei im selben Stapel hochladen, indem Sie diesen Schritt für jede Datei wiederholen und dieselbe Stapel-ID verwenden. Die Anzahl der hochzuladenden Dateien ist unbegrenzt.
 
 **API-Format**
 
@@ -449,7 +455,9 @@ Eine negative Antwort gibt ein Objekt mit dem Wert `"failed"` in seinem `"status
 }
 ```
 
->[!NOTE] Ein empfohlener Abfrageintervall beträgt zwei Minuten.
+>[!NOTE]
+>
+>Ein empfohlener Abfrageintervall beträgt zwei Minuten.
 
 ## Daten aus dem Datensatz lesen
 
