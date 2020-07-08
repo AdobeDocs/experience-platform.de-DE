@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch für Abfrage Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 2%
@@ -147,7 +147,9 @@ Bei einer erfolgreichen Antwort wird HTTP-Status 200 mit einer Liste der Ausfüh
 }
 ```
 
->[!NOTE] Sie können den Wert von verwenden, `_links.cancel` um eine Ausführung für eine bestimmte geplante Abfrage [zu](#immediately-stop-a-run-for-a-specific-scheduled-query)stoppen.
+>[!NOTE]
+>
+>Sie können den Wert von verwenden, `_links.cancel` um eine Ausführung für eine bestimmte geplante Abfrage [zu](#immediately-stop-a-run-for-a-specific-scheduled-query)stoppen.
 
 ### Sofort einen Run für eine bestimmte geplante Abfrage auslösen
 
