@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aktivieren Sie eingehende Quelldaten, um Kundendaten zu füllen.
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -61,7 +61,9 @@ Kehren Sie nach Aktivierung des Schemas zum Bildschirm &quot; [!DNL Profile]Data
 
 Wenn sowohl das Schema als auch der Datensatz aktiviert sind, [!DNL Profile]füllen die in diesen Datensatz erfassten Daten nun auch die Profil der Kunden aus.
 
->[!NOTE] Vorhandene Daten in einem kürzlich aktivierten Datensatz werden nicht von [!DNL Profile]
+>[!NOTE]
+>
+>Vorhandene Daten in einem kürzlich aktivierten Datensatz werden nicht von [!DNL Profile]
 
 ## Nächste Schritte
 
