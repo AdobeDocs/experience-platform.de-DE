@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Von Adobe definierte Funktionen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 6%
@@ -23,7 +23,7 @@ Dieses Dokument umfasst von Adobe definierte Funktionen (ADFs) zur Unterstützun
 
 ## Sessionierung
 
-Die `SESS_TIMEOUT()` Reproduktion der Besuchergruppen in Adobe Analytics. Es führt eine ähnliche zeitbasierte Gruppierung durch, jedoch mit anpassbaren Parametern.
+Die `SESS_TIMEOUT()` Reproduktion der mit Adobe Analytics gefundenen Besuchergruppen. Es führt eine ähnliche zeitbasierte Gruppierung durch, jedoch mit anpassbaren Parametern.
 
 **Syntax:**
 
@@ -95,7 +95,9 @@ Die Zuordnungs-ADFs, die im Abfrage Service gefunden werden, ermöglichen es, di
 
 Dieses Beispiel konzentriert sich auf die Last Touch-Zuordnung, aber auch auf die First Touch-Zuordnung von Adobe.
 
->[!NOTE] Andere Optionen mit Timeouts und Ereignis-basiertem Ablauf stehen in zukünftigen Versionen von Abfrage Service zur Verfügung.
+>[!NOTE]
+>
+>Andere Optionen mit Timeouts und Ereignis-basiertem Ablauf stehen in zukünftigen Versionen von Abfrage Service zur Verfügung.
 
 **Syntax:**
 
