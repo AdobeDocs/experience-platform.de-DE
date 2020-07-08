@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Anhang
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 4%
@@ -27,7 +27,9 @@ Die [!DNL Sensei Machine Learning] API unterstützt Abfragen beim Abrufen von As
 | `orderby` | Gibt die Eigenschaften an, die für die Sortierung in der Reihenfolge der Priorität verwendet werden sollen. Fügen Sie vor dem Namen einer Eigenschaft einen Bindestrich (**-**) ein, der in absteigender Reihenfolge sortiert werden soll. Andernfalls werden die Ergebnisse in aufsteigender Reihenfolge sortiert. | `orderby=created` |
 | `property` | Gibt den Vergleichs-Ausdruck an, den ein Objekt erfüllen muss, um zurückgegeben zu werden. | `property=deleted==false` |
 
->[!NOTE] Beim Kombinieren mehrerer Abfragen müssen diese durch das kaufmännische Und (**&amp;**) getrennt werden.
+>[!NOTE]
+>
+>Beim Kombinieren mehrerer Abfragen müssen diese durch das kaufmännische Und (**&amp;**) getrennt werden.
 
 ## Python CPU- und GPU-Konfigurationen {#cpu-gpu-config}
 
@@ -66,7 +68,9 @@ Die folgende Beispielkonfiguration gibt die Verwendung einer CPU für Schulungen
 ]
 ```
 
->[!NOTE] Die Werte `cpus` und `gpus` nicht die Anzahl der CPUs oder GPUs, sondern die Anzahl der physischen Maschinen. Diese Werte sind zulässig `"1"` und werden andernfalls eine Ausnahme auslösen.
+>[!NOTE]
+>
+>Die Werte `cpus` und `gpus` nicht die Anzahl der CPUs oder GPUs, sondern die Anzahl der physischen Maschinen. Diese Werte sind zulässig `"1"` und werden andernfalls eine Ausnahme auslösen.
 
 ## Ressourcenkonfigurationen von PySpark und Spark {#resource-config}
 
