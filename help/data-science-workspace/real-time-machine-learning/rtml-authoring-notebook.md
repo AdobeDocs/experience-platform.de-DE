@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch für Notebook-PCs in Echtzeit
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -274,6 +274,8 @@ Laden Sie mit der Upload-Taste in [!DNL JupyterLab] Notebooks Ihr vorab geschult
 In diesem Abschnitt wird die Erstellung einer DSL beschrieben. Sie werden die Knoten erstellen, die jede Vorverarbeitung von Daten zusammen mit dem ONNX-Knoten enthalten. Als Nächstes wird ein DSL-Diagramm mit Knoten und Kanten erstellt. Edges connect nodes using tuple based format (node_1, node_2). Das Diagramm sollte keine Zyklen aufweisen.
 
 >[!IMPORTANT]
+>
+>
 >Die Verwendung des ONNX-Knotens ist obligatorisch. Ohne den ONNX-Knoten ist die Anwendung nicht erfolgreich.
 
 ### Node Authoring
