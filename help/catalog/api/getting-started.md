@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch für Entwickler von Katalogdiensten
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -14,37 +14,39 @@ ht-degree: 0%
 
 # Handbuch für Entwickler von Katalogdiensten
 
-Der Katalogdienst ist das Datensatzsystem für die Datenposition und -leitung innerhalb der Adobe Experience Platform. Der Katalog dient als Metadatenspeicher oder &quot;Katalog&quot;, in dem Sie Informationen zu Ihren Daten in Experience Platform finden können, ohne dass Sie selbst auf die Daten zugreifen müssen. See the [Catalog overview](../home.md) for more information.
+Der Katalogdienst ist das Datensatzsystem für die Datenposition und -linie innerhalb der Adobe Experience Platform. Der Katalog dient als Metadatenspeicher oder &quot;Katalog&quot;, in dem Sie Informationen zu Ihren Daten innerhalb der Experience Platform finden können, ohne dass Sie selbst auf die Daten zugreifen müssen. See the [Catalog overview](../home.md) for more information.
 
 In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der Katalog-API Beginn ausführen können. Das Handbuch enthält dann Beispiel-API-Aufrufe für die Ausführung wichtiger Vorgänge mithilfe von Catalog.
 
 ## Voraussetzungen
 
-Catalog verfolgt Metadaten für verschiedene Arten von Ressourcen und Vorgängen in Experience Platform. Dieses Entwicklerhandbuch erfordert ein Verständnis der verschiedenen Experience Platform-Dienste, die mit der Erstellung und Verwaltung dieser Ressourcen verbunden sind:
+Der Katalog verfolgt Metadaten für verschiedene Arten von Ressourcen und Vorgängen in der Experience Platform. Dieses Entwicklerhandbuch erfordert ein Verständnis der verschiedenen Experience Platform-Services, die mit der Erstellung und Verwaltung dieser Ressourcen verbunden sind:
 
-* [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
-* [Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md): So werden Daten aus Datendateien wie CSV und Parquet in Experience Platform erfasst und gespeichert.
+* [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+* [Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md): Wie Experience Platform Daten aus Datendateien wie CSV und Parquet erfasst und speichert.
 * [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): So erfasst und speichert Experience Platform Daten von client- und serverseitigen Geräten in Echtzeit.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Katalogdienst-API erfolgreich aufrufen zu können.
 
 ## Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ## Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
