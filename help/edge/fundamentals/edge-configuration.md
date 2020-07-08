@@ -4,10 +4,10 @@ seo-title: Edge-Konfiguration für das Web SDK der Experience Platform
 description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 seo-description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '882'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -23,6 +23,8 @@ Edge-Konfigurations-IDs können in Adobe [!DNL Launch] mit dem Edge-Konfiguratio
 ![Edge-Konfigurationstool](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
+>
+>
 >
 >Das Edge-Konfigurationstool steht Kunden auf der zulassungsliste zur Verfügung, unabhängig davon, ob sie [!DNL Launch] als Tag-Manager verwendet werden. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der [!DNL Launch] Dokumentation.
 
@@ -78,6 +80,8 @@ Zum Konfigurieren von Adobe Target müssen Sie einen Clientcode angeben. Die and
 
 >[!NOTE]
 >
+>
+>
 >Die mit dem Clientcode verknüpfte Organisation muss mit der Organisation übereinstimmen, in der die Konfigurations-ID erstellt wird.
 
 ##### [!UICONTROL Clientcode]
@@ -86,7 +90,7 @@ Die eindeutige ID für ein Zielgruppen-Konto. Um dies zu finden, navigieren Sie 
 
 ##### [!UICONTROL Eigenschafts-Token]
 
-Mit Target können Kunden Berechtigungen mithilfe von Eigenschaften steuern. Einzelheiten finden Sie im Abschnitt [Enterprise Permissions (Berechtigungen](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) für Unternehmen) in der Dokumentation zum Target.
+Mit Target können Kunden Berechtigungen mithilfe von Eigenschaften steuern. Einzelheiten finden Sie im Abschnitt [Enterprise Permissions (Berechtigungen](https://docs.adobe.com/content/help/de-DE/target/using/administer/manage-users/enterprise/properties-overview.html) für Unternehmen) in der Dokumentation zum Target.
 
 Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL-Eigenschaften]
 
