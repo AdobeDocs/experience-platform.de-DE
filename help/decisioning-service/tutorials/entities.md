@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verwalten von Entscheidungsdienst-Entitäten mithilfe von APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sand
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -102,7 +104,9 @@ Wenn der Administrator Containern für normale Benutzer oder Integrationen Zugri
 
 Der Kontext für die [!DNL Platform] Container ist derzeit [!DNL Decisioning Service] `dma_offers`.
 
->[!NOTE] Der Kontext für [!DNL Platform Decisioning Containers] wird sich bald ändern `acp`. Die Filterung ist optional, aber nur Filter `dma_offers` müssen bei einer zukünftigen Version bearbeitet werden. Zur Vorbereitung auf diese Änderung sollten Kunden keine Filter verwenden oder beide Kontexte als Filter anwenden.
+>[!NOTE]
+>
+>Der Kontext für [!DNL Platform Decisioning Containers] wird sich bald ändern `acp`. Die Filterung ist optional, aber nur Filter `dma_offers` müssen bei einer zukünftigen Version bearbeitet werden. Zur Vorbereitung auf diese Änderung sollten Kunden keine Filter verwenden oder beide Kontexte als Filter anwenden.
 
 **Anfrage**
 
@@ -233,7 +237,9 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
->[!NOTE] Obwohl dieser Parameter als Pfadparameter angegeben `instanceId` wird, sollten Anwendungen den Pfad nach Möglichkeit nicht selbst erstellen und stattdessen Links zu Instanzen in Liste- und Suchvorgängen folgen. Einzelheiten finden Sie in den Abschnitten ‎ 6.4.4 und ‎ 6.4.6.
+>[!NOTE]
+>
+>Obwohl dieser Parameter als Pfadparameter angegeben `instanceId` wird, sollten Anwendungen den Pfad nach Möglichkeit nicht selbst erstellen und stattdessen Links zu Instanzen in Liste- und Suchvorgängen folgen. Einzelheiten finden Sie in den Abschnitten ‎ 6.4.4 und ‎ 6.4.6.
 
 **Antwort**
 
@@ -260,7 +266,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-Die JSON-Eigenschaften der Instanz werden in die `_instance` Eigenschaft eingeschlossen und die anderen Eigenschaften auf der Stammebene enthalten Metadaten zur Instanz.
+Die JSON-Eigenschaften der Instanz werden in die `_instance` Eigenschaft eingeschlossen, und die anderen Eigenschaften der Stammebene enthalten Metadaten zur Instanz.
 
 Die Ressource enthält auch ein Array von JSON-Schema-IDs. Dieses Array zeigt die JSON-Schema an, für die diese Instanz validiert wurde.
 
@@ -326,7 +332,9 @@ Die Antwort hängt von der `{schemaId}` angegebenen ab. Für &quot;https<span></
 }
 ```
 
->[!NOTE] Das Ergebnis enthält die Instanzen für das angegebene Schema oder die erste Seite dieser Liste. Beachten Sie, dass Instanzen mehr als einem Schema entsprechen können und daher in mehr als einer Liste angezeigt werden können.
+>[!NOTE]
+>
+>Das Ergebnis enthält die Instanzen für das angegebene Schema oder die erste Seite dieser Liste. Beachten Sie, dass Instanzen mehr als einem Schema entsprechen können und daher in mehr als einer Liste angezeigt werden können.
 
 Seitenressourcen sind transient und schreibgeschützt. sie können nicht aktualisiert oder gelöscht werden. Das Paging-Modell bietet zufälligen Zugriff auf Teilmengen großer Listen über einen längeren Zeitraum hinweg, ohne dass der Status pro Client beibehalten wird.
 
@@ -347,20 +355,21 @@ Die Paging-Funktion wird durch folgende Parameter gesteuert:
 Das Filtern von Listen ist möglich und erfolgt unabhängig vom Seitenmechanismus. Filter überspringen Instanzen einfach in der Reihenfolge der Listen oder fordern explizit nur die Instanzen auf, die eine bestimmte Bedingung erfüllen. Ein Client kann die Verwendung des Ausdrucks der Eigenschaft als Filter anfordern oder eine Liste von URIs angeben, die als Werte des Primärschlüssels der Instanzen verwendet werden sollen.
 
 - **`property`**: Enthält einen Eigenschaftsnamenpfad gefolgt von einem Vergleichsoperator gefolgt von einem Wert. <br/>
-Die zurückgegebene Liste von Instanzen enthält die Instanzen, für die der Ausdruck &quot;true&quot;ergibt. Angenommen, die Instanz verfügt über eine Payload-Eigenschaft `status``draft``approved``archived``deleted``property=_instance.status==approved`<br/>
+Die zurückgegebene Liste von Instanzen enthält die Instanzen, für die der Ausdruck &quot;true&quot;ergibt. Angenommen, die Instanz verfügt über eine Payload-Eigenschaft `status` und die möglichen Werte sind `draft`, `approved`, `archived` und `deleted` `property=_instance.status==approved` dann gibt der Parameter Abfrage nur Instanzen zurück, für die der Status genehmigt wurde. <br/>
+<br/>
+Die Eigenschaft, die mit dem angegebenen Wert verglichen werden soll, wird als Pfad identifiziert. Die einzelnen Pfadkomponenten werden durch "." wie folgt getrennt: s_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
-
-
-
-- Für Eigenschaften mit Zeichenfolgen-, numerischen oder Datums-/Uhrzeitwerten sind folgende Operatoren zulässig: `==`, `!=`, `<`, `<=`, `>` und `>=`. Darüber hinaus `~` kann für Eigenschaften mit einem Zeichenfolgenwert ein Operator verwendet werden. Der `~` -Operator stimmt mit der angegebenen Eigenschaft gemäß einem regulären Ausdruck überein. Der Zeichenfolgenwert der Eigenschaft muss mit dem **gesamten** Ausdruck übereinstimmen, damit die Entitäten in die gefilterten Ergebnisse einbezogen werden. Wenn Sie beispielsweise nach der Zeichenfolge `cars` an einer beliebigen Stelle im Eigenschaftswert suchen, muss der reguläre Ausdruck `.*cars.*`vorhanden sein. Ohne den Anfang oder das Ende `.*`stimmen nur Entitäten überein, bei denen ein Eigenschaftswert beginnt oder endet `cars`. Für den `~` Operator wird beim Vergleich von Buchstaben nicht zwischen Groß- und Kleinschreibung unterschieden. Bei allen anderen Operatoren wird beim Vergleich die Groß-/Kleinschreibung beachtet.<br/><br/>
+Für Eigenschaften mit Zeichenfolgen-, numerischen oder Datums-/Uhrzeitwerten sind folgende Operatoren zulässig: `==`, `!=`, `<`, `<=`, `>` und `>=`. Darüber hinaus `~` kann für Eigenschaften mit einem Zeichenfolgenwert ein Operator verwendet werden. Der `~` -Operator stimmt mit der angegebenen Eigenschaft gemäß einem regulären Ausdruck überein. Der Zeichenfolgenwert der Eigenschaft muss mit dem **gesamten** Ausdruck übereinstimmen, damit die Entitäten in die gefilterten Ergebnisse einbezogen werden. Wenn Sie beispielsweise nach der Zeichenfolge `cars` an einer beliebigen Stelle im Eigenschaftswert suchen, muss der reguläre Ausdruck `.*cars.*`vorhanden sein. Ohne den Anfang oder das Ende `.*`stimmen nur Entitäten überein, bei denen ein Eigenschaftswert beginnt oder endet `cars`. Für den `~` Operator wird beim Vergleich von Buchstaben nicht zwischen Groß- und Kleinschreibung unterschieden. Bei allen anderen Operatoren wird beim Vergleich die Groß-/Kleinschreibung beachtet.<br/><br/>
 In Filter-Ausdrücken können nicht nur Instanznutzlasteigenschaften verwendet werden. Die Hülleneigenschaften werden auf die gleiche Weise verglichen, z. `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
 <br/>
 Der Parameter `property` &quot;Abfrage&quot;kann wiederholt werden, sodass mehrere Filterbedingungen angewendet werden, z. B. um alle Instanzen zurückzugeben, die nach einem bestimmten Datum und vor einem bestimmten Datum zuletzt geändert wurden. Die Werte in diesen Ausdrücken müssen URL-kodiert sein. Wenn kein Ausdruck angegeben ist und der Name der Eigenschaft einfach aufgelistet ist, sind die Elemente, die eine Eigenschaft mit dem angegebenen Namen haben, die entsprechenden Kriterien.<br/>
 <br/>
 
-**`id`**: Manchmal muss eine Liste durch den URI der Instanzen gefiltert werden. Der Parameter `property` &quot;Abfrage&quot;kann verwendet werden, um eine Instanz zu filtern. Um jedoch mehr als eine Instanz zu erhalten, kann der Anforderung eine Liste von URIs zugewiesen werden. Der `id` Parameter wird wiederholt, und jedes Vorkommen gibt einen URI-Wert an. Die URI-Werte müssen URL-kodiert sein. `id={URI_1}&id={URI_2},…`
+- **`id`**: Manchmal muss eine Liste durch den URI der Instanzen gefiltert werden. Der Parameter `property` &quot;Abfrage&quot;kann verwendet werden, um eine Instanz zu filtern. Um jedoch mehr als eine Instanz zu erhalten, kann der Anforderung eine Liste von URIs zugewiesen werden. Der `id` Parameter wird wiederholt, und jedes Vorkommen gibt einen URI-Wert an. Die URI-Werte müssen URL-kodiert sein. `id={URI_1}&id={URI_2},…`
 
-Seitenergebnisse werden als spezieller MIME-Typ zurückgegeben `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`.**
+Seitenergebnisse werden als spezieller MIME-Typ zurückgegeben `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`.
+
+**Anfrage**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderby${ORDER_BY_PROPERTY_PATH}&property={TIMESTAMP_PROPERTY_PATH}>=2019-02-19T03:19:03.627Z&property${TIMESTAMP_PROPERTY_PATH}<=2019-06-19T03:19:03.627Z \ 
@@ -371,7 +380,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-**Anfrage**
+**Antwort**
 
 ```json
 { 
@@ -433,13 +442,13 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
 } 
 ```
 
-**Antwort**
+Die Antwort enthält die Liste der Ergebniselemente in den Ergebnissen der JSON-Eigenschaft neben zwei Eigenschaften, die die Anzahl der Ergebnisse auf dieser Seite und die Gesamtanzahl der Elemente in der gefilterten Liste angeben, beginnend mit der soeben zurückgegebenen Seite.
 
-### Die Antwort enthält die Liste der Ergebniselemente in den Ergebnissen der JSON-Eigenschaft neben zwei Eigenschaften, die die Anzahl der Ergebnisse auf dieser Seite und die Gesamtanzahl der Elemente in der gefilterten Liste angeben, beginnend mit der soeben zurückgegebenen Seite.
+### Volltextsuche und strukturierte Abfragen
 
-Volltextsuche und strukturierte Abfragen
+In Fällen, in denen Kunden komplexere Filterbedingungen und Suchinstanzen nach Begriffen in Zeichenfolgeneigenschaften bereitstellen möchten, stellt das Repository eine leistungsfähigere Such-API bereit.
 
-**In Fällen, in denen Kunden komplexere Filterbedingungen und Suchinstanzen nach Begriffen in Zeichenfolgeneigenschaften bereitstellen möchten, stellt das Repository eine leistungsfähigere Such-API bereit.**
+**Anfrage**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_ID}"&… \ 
@@ -452,21 +461,21 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_I
 
 <!-- TODO: needs example response -->
 
-**Anfrage**
-
 Zusätzlich zu den Paging- und Filterparametern aus den Liste-APIs ermöglicht diese API den Clients das Hinzufügen von Volltext- und booleschen Abfragen-Parametern.
 
-- **`q`**Die Volltextsuche wird durch die folgenden Parameter gesteuert:`q`[]
+Die Volltextsuche wird durch die folgenden Parameter gesteuert:
+
 - **`q`**: Enthält eine durch Leerzeichen getrennte, ungeordnete Liste von Begriffen, die normalisiert werden, bevor sie mit Zeichenfolgeneigenschaften der Instanzen abgeglichen werden. Zeichenfolgeneigenschaften werden auf Begriffe analysiert und diese Begriffe werden ebenfalls normalisiert. Die Abfrage &quot;Suchen&quot;versucht, einem oder mehreren der im `q` Parameter angegebenen Begriffe zu entsprechen. Die Zeichen +, -, =, &amp;, ||, >, &lt;,!, (,), {, }, [,], ^, &quot;, ~, *, ?, : / haben eine besondere Bedeutung für die Bestimmung der Wortgrenzen in der Abfrage-Zeichenfolge und sollten bei der Darstellung in einem Token, das mit dem Zeichen übereinstimmen sollte, mit einem umgekehrten Schrägstrich versehen werden. Die Zeichenfolge für die Abfrage kann durch Anführungszeichen für die Dublette der exakten Zeichenfolgenübereinstimmung und um Sonderzeichen zu Escape-Zeichen umgeben werden.
 - **`field`**: Wenn die Suchbegriffe nur mit einer Untergruppe der Eigenschaften übereinstimmen sollten, kann der Feldparameter den Pfad zu dieser Eigenschaft angeben. Der Parameter kann wiederholt werden, um mehr als eine Eigenschaft anzugeben, die abgeglichen werden soll.
+- **`qop`**: Enthält einen Steuerungsparameter, mit dem das passende Verhalten der Suche geändert wird. Wenn der Parameter auf festgelegt ist und dann alle Suchbegriffe übereinstimmen müssen und wenn der Parameter fehlt oder sein Wert auf gesetzt ist oder dann kann jeder Begriff für eine Übereinstimmung zählen.
 
-### **`qop`**: Enthält einen Steuerungsparameter, mit dem das passende Verhalten der Suche geändert wird. Wenn der Parameter auf festgelegt ist und dann alle Suchbegriffe übereinstimmen müssen und wenn der Parameter fehlt oder sein Wert auf gesetzt ist oder dann kann jeder Begriff für eine Übereinstimmung zählen.
+### Aktualisieren und Patchen von Instanzen
 
-Aktualisieren und Patchen von Instanzen
-
-Um eine Instanz zu aktualisieren, kann ein Client entweder die gesamte Liste von Eigenschaften gleichzeitig überschreiben oder eine JSON PATCH-Anforderung verwenden, um einzelne Eigenschaftenwerte einschließlich Listen zu bearbeiten.[](#create-instances)`Location``containerId``instanceId`
+Um eine Instanz zu aktualisieren, kann ein Client entweder die gesamte Liste von Eigenschaften gleichzeitig überschreiben oder eine JSON PATCH-Anforderung verwenden, um einzelne Eigenschaftenwerte einschließlich Listen zu bearbeiten.
 
 In beiden Fällen gibt die URL der Anforderung den Pfad zur physischen Instanz an, und in beiden Fällen ist die Antwort eine JSON-Quittung wie die vom [Erstellungsvorgang](#create-instances)zurückgegebene Nutzlast. Ein Client sollte vorzugsweise den `Location` Header oder einen HAL-Link verwenden, den er von einem vorherigen API-Aufruf für dieses Objekt erhalten hat, als vollständigen URL-Pfad für diese API. Ist dies nicht möglich, kann der Client die URL aus der `containerId` und der `instanceId`.
+
+**Anforderung** (PUT)
 
 ```shell
 curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -486,7 +495,7 @@ curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }'  
 ```
 
-**Anforderung** (PUT)
+**Anforderung** (PATCH)
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -503,24 +512,24 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-**Anforderung** (PATCH)
-
-**Die PATCH-Anforderung wendet die Anweisungen an und validiert dann die resultierende Entität gegen das Schema und dieselben Entitäts- und Referenziellen Integritätsregeln wie die PUT-Anforderung.**
+Die PATCH-Anforderung wendet die Anweisungen an und validiert dann die resultierende Entität gegen das Schema und dieselben Entitäts- und Referenziellen Integritätsregeln wie die PUT-Anforderung.
 
 **Bearbeiten von Eigenschaftswerten steuern**
 
-- **`"meta:usereditable"`**Mithilfe der folgenden Anmerkungen können Sie verhindern, dass Eigenschaften beim Erstellen und/oder Aktualisieren festgelegt werden:`"meta:usereditable": false`
+Mithilfe der folgenden Anmerkungen können Sie verhindern, dass Eigenschaften beim Erstellen und/oder Aktualisieren festgelegt werden:
+
 - **`"meta:usereditable"`**: Boolescher Wert: Wenn eine Anforderung von einem Benutzeragenten stammt, der den Aufrufer mit einem Zugriffstoken für ein Benutzerkonto oder ein technisches Konto identifiziert, `"meta:usereditable": false` sollten Eigenschaften, mit denen eine Anmerkung versehen wurde, nicht in der Payload vorhanden sein. Ist dies der Fall, dürfen sie keinen anderen Wert haben als den, der derzeit festgelegt wird. Wenn sich die Werte unterscheiden, wird die Anforderung zum Aktualisieren oder Patch mit dem Status 422 Nicht verarbeitbare Entität abgelehnt.
+- **`"meta:immutable"`**: Boolescher Wert: Eigenschaften, die mit Anmerkungen versehen sind, `"meta:immutable": true` können nach dem Festlegen nicht mehr geändert werden. Dies gilt für Anfragen, die von einem Endbenutzer, einer technischen Kontointegration oder einem besonderen Dienst kommen.
 
-**`"meta:immutable"`**: Boolescher Wert: Eigenschaften, die mit Anmerkungen versehen sind, `"meta:immutable": true` können nach dem Festlegen nicht mehr geändert werden. Dies gilt für Anfragen, die von einem Endbenutzer, einer technischen Kontointegration oder einem besonderen Dienst kommen.**
+**Test auf gleichzeitige Aktualisierung**
 
-**Test auf gleichzeitige Aktualisierung**`etag``etag``etag`
+Es gibt Bedingungen, unter denen mehrere Clients versuchen, eine Instanz gleichzeitig zu aktualisieren. Das Repository wird auf einem Cluster von Rechnerknoten ohne zentrale Transaktionsverwaltung betrieben. Um zu vermeiden, dass ein Client eine Instanz schreibt, die gleichzeitig von einer anderen geschrieben wird, können die Clients eine bedingte Update- oder Patch-Anforderung verwenden. Wenn Sie die `etag` Zeichenfolge in der Kopfzeile angeben, muss `If-Match` das Repository sicherstellen, dass nur die erste Anforderung erfolgreich ist und die Folgeanforderungen anderer Clients, die denselben `etag` Wert verwenden, fehlschlagen. Der `etag` Wert ändert sich mit jeder Änderung der Instanz. Clients müssen die Instanz abrufen, um den neuesten `etag` Wert abzurufen, und dann kann nur ein von vielen Clients, die die Aktualisierung versuchen, diesen Wert verwenden. Andere Kunden werden mit der Meldung 409 Konflikt abgelehnt.
 
-### Es gibt Bedingungen, unter denen mehrere Clients versuchen, eine Instanz gleichzeitig zu aktualisieren. Das Repository wird auf einem Cluster von Rechnerknoten ohne zentrale Transaktionsverwaltung betrieben. Um zu vermeiden, dass ein Client eine Instanz schreibt, die gleichzeitig von einer anderen geschrieben wird, können die Clients eine bedingte Update- oder Patch-Anforderung verwenden. Wenn Sie die `etag` Zeichenfolge in der Kopfzeile angeben, muss `If-Match` das Repository sicherstellen, dass nur die erste Anforderung erfolgreich ist und die Folgeanforderungen anderer Clients, die denselben `etag` Wert verwenden, fehlschlagen. Der `etag` Wert ändert sich mit jeder Änderung der Instanz. Clients müssen die Instanz abrufen, um den neuesten `etag` Wert abzurufen, und dann kann nur ein von vielen Clients, die die Aktualisierung versuchen, diesen Wert verwenden. Andere Kunden werden mit der Meldung 409 Konflikt abgelehnt.
-
-Löschen von Instanzen`Location``containerId``instanceId`
+### Löschen von Instanzen
 
 Instanzen können mit einem DELETE-Aufruf gelöscht werden. Ein Client sollte vorzugsweise den `Location` Header oder einen HAL-Link verwenden, den er von einem vorherigen API-Aufruf dafür erhalten hat, als vollständigen URL-Pfad. Ist dies nicht möglich, kann der Client die URL aus dem `containerId` und dem physischen `instanceId`.
+
+**Anfrage**
 
 ```shell
 curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -531,7 +540,7 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-**Anfrage**
+**Antwort**
 
 ```json
 { 
@@ -547,15 +556,15 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-**Antwort**
-
 Nach Erhalt einer Löschanforderung prüft das Repository, ob andere Instanzen eines beliebigen Schemas auf die zu löschende Instanz verweisen. In einem verteilten, hochverfügbaren System kann die referenzielle Integrität nicht sofort überprüft werden. Wenn Fremdschlüsselbeziehungen definiert sind, werden Prüfungen asynchron durchgeführt. Dies führt zu einer etwas verzögerten Antwort auf das Ergebnis der Löschanforderung. Wenn diese Prüfungen durchgeführt werden, enthält die sofortige Antwort den Status 202 Akzeptiert und einen Link, um das Ergebnis des Löschvorgangs in der `Location` Kopfzeile zu überprüfen. Ein Kunde sollte dann diesen Link für das Ergebnis überprüfen.
 
-## Wenn eine Instanz gefunden wird, die auf die zu löschende Instanz verweist, wird der Löschvorgang abgelehnt. Wenn keine weiteren Fremdschlüsselverweise gefunden werden, wird der Löschvorgang abgeschlossen. Wenn das Ergebnis noch nicht entschieden ist, zeigt die Antwort, dass durch weitere 202 Akzeptierte Antwort mit der gleichen `Location` Kopfzeile und fordert den Kunden, die Überprüfung. Wenn das Ergebnis bestimmt wird, zeigt die Antwort an, dass mit einem 200-Ok-Status und der Nutzlast der Antwort das Ergebnis der ursprünglichen Löschanforderung enthalten ist. Beachten Sie, dass die Antwort &quot;200 OK&quot;nur bedeutet, dass das Ergebnis bekannt ist und der Antworttext die Bestätigung oder Ablehnung der Löschanforderung enthält.
+Wenn eine Instanz gefunden wird, die auf die zu löschende Instanz verweist, wird der Löschvorgang abgelehnt. Wenn keine weiteren Fremdschlüsselverweise gefunden werden, wird der Löschvorgang abgeschlossen. Wenn das Ergebnis noch nicht entschieden ist, zeigt die Antwort, dass durch weitere 202 Akzeptierte Antwort mit der gleichen `Location` Kopfzeile und fordert den Kunden, die Überprüfung. Wenn das Ergebnis bestimmt wird, zeigt die Antwort an, dass mit einem 200-Ok-Status und der Nutzlast der Antwort das Ergebnis der ursprünglichen Löschanforderung enthalten ist. Beachten Sie, dass die Antwort &quot;200 OK&quot;nur bedeutet, dass das Ergebnis bekannt ist und der Antworttext die Bestätigung oder Ablehnung der Löschanforderung enthält.
 
-Erstellen von Angeboten und ihren Unterkomponenten`content-type`
+## Erstellen von Angeboten und ihren Unterkomponenten
 
-Die im vorherigen Abschnitt beschriebenen APIs gelten einheitlich für alle Typen von Geschäftsobjekten. Der einzige Unterschied zwischen z. B. dem Erstellen eines Angebots und einer Aktivität ist der `content-type` Header, der das JSON-Schema und die JSON-Nutzlast der Anforderung angibt, die dem Schema entspricht. Daher müssen sich die folgenden Abschnitte nur auf diese Schemas und die Beziehungen zwischen ihnen konzentrieren.`_instance``_links`
+Die im vorherigen Abschnitt beschriebenen APIs gelten einheitlich für alle Typen von Geschäftsobjekten. Der einzige Unterschied zwischen z. B. dem Erstellen eines Angebots und einer Aktivität ist der `content-type` Header, der das JSON-Schema und die JSON-Nutzlast der Anforderung angibt, die dem Schema entspricht. Daher müssen sich die folgenden Abschnitte nur auf diese Schemas und die Beziehungen zwischen ihnen konzentrieren.
+
+Bei Verwendung der APIs mit dem Inhaltstyp `application/vnd.adobe.platform.xcore.hal+json; schema="{SCHEMA_ID}"`werden die eigenen Eigenschaften der Instanz in die `_instance` Eigenschaft eingebettet, neben der eine `_links` Eigenschaft vorhanden ist. Dies ist das allgemeine Format, in dem alle Instanzen dargestellt werden:
 
 ```json
 { 
@@ -569,14 +578,16 @@ Die im vorherigen Abschnitt beschriebenen APIs gelten einheitlich für alle Type
 }
 ```
 
->Bei Verwendung der APIs mit dem Inhaltstyp `application/vnd.adobe.platform.xcore.hal+json; schema="{SCHEMA_ID}"`werden die eigenen Eigenschaften der Instanz in die `_instance` Eigenschaft eingebettet, neben der eine `_links` Eigenschaft vorhanden ist. Dies ist das allgemeine Format, in dem alle Instanzen dargestellt werden:
+>[!NOTE]
+>
+>Aus Gründen der Kürze werden in allen JSON-Snippets nur die Instanzeigenschaften veranschaulicht und nur dann, wenn dies erforderlich ist, werden die Hülleneigenschaften und der Abschnitt &quot;_links&quot;angezeigt.
 
-### [!NOTE] Aus Gründen der Kürze werden in allen JSON-Snippets nur die Instanzeigenschaften veranschaulicht und nur dann, wenn dies erforderlich ist, werden die Hülleneigenschaften und der Abschnitt &quot;_links&quot;angezeigt.
+### Allgemeine Eigenschaften von Angeboten
 
-Allgemeine Eigenschaften von Angeboten
+Angebot sind eine Art Entscheidungsoption und das JSON-Schema von Angeboten übernimmt die Standardoptionseigenschaften, über die jede Optionsinstanz verfügt.
 
-- **`@id`**Angebot sind eine Art Entscheidungsoption und das JSON-Schema von Angeboten übernimmt die Standardoptionseigenschaften, über die jede Optionsinstanz verfügt.
 - **`@id`** - Ein eindeutiger Bezeichner für jede Option, bei der es sich um den Primärschlüssel handelt und mit dem auf die Option von anderen Objekten verwiesen wird. Diese Eigenschaft wird zugewiesen, wenn die Instanz erstellt wird, unveränderlich und nicht bearbeitbar ist.
+- **`xdm:name`** - Jede Option hat einen Namen, der für Such- und Anzeigezwecke verwendet wird. Der Name ist nicht unveränderlich und kann nicht zur eindeutigen Identifizierung der Instanz verwendet werden. Der Name kann frei ausgewählt werden, sollte jedoch in allen Angebot-Instanzen eindeutig sein.
 
 ```json
 { 
@@ -588,19 +599,19 @@ Allgemeine Eigenschaften von Angeboten
 }
 ```
 
-**`xdm:name`** - Jede Option hat einen Namen, der für Such- und Anzeigezwecke verwendet wird. Der Name ist nicht unveränderlich und kann nicht zur eindeutigen Identifizierung der Instanz verwendet werden. Der Name kann frei ausgewählt werden, sollte jedoch in allen Angebot-Instanzen eindeutig sein.](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
-
 Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss ein `https://ns.adobe.com/experience/offer-management/personalized-offer` oder `https://ns.adobe.com/experience/offer-management/fallback-offer` ein Fallback-Angebot sein.
 
-### Jede Angebot-Instanz kann über einen optionalen Satz von Eigenschaften verfügen, die nur für diese Instanz charakteristisch sind. Verschiedene Angebot können unterschiedliche Schlüssel für diese Eigenschaften haben. Die Werte müssen jedoch Zeichenfolgen sein. Diese Eigenschaften können in Entscheidungs- und Segmentierungsregeln verwendet werden. Sie sind auch verfügbar, um das beschlossene Erlebnis zusammenzustellen, um die Nachrichten weiter anzupassen.
+Jede Angebot-Instanz kann über einen optionalen Satz von Eigenschaften verfügen, die nur für diese Instanz charakteristisch sind. Verschiedene Angebot können unterschiedliche Schlüssel für diese Eigenschaften haben. Die Werte müssen jedoch Zeichenfolgen sein. Diese Eigenschaften können in Entscheidungs- und Segmentierungsregeln verwendet werden. Sie sind auch verfügbar, um das beschlossene Erlebnis zusammenzustellen, um die Nachrichten weiter anzupassen.
 
-Lebenszyklus von Angeboten
+### Lebenszyklus von Angeboten
 
-![](../images/entities/offer-lifecycle.png)Es gibt einen einfachen Status-Transition-Fluss, dem alle Optionen folgen. Sie werden in einem Entwurfszustand Beginn, und wenn sie bereit sind, wird ihr Zustand auf die Genehmigung eingestellt. Nach Ablauf des Enddatums können sie in den archivierten Zustand verschoben werden. In diesem Zustand können sie gelöscht oder wiederverwendet werden, indem sie wieder in den Entwurfszustand versetzt werden.
+Es gibt einen einfachen Status-Transition-Fluss, dem alle Optionen folgen. Sie werden in einem Entwurfszustand Beginn, und wenn sie bereit sind, wird ihr Zustand auf die Genehmigung eingestellt. Nach Ablauf des Enddatums können sie in den archivierten Zustand verschoben werden. In diesem Zustand können sie gelöscht oder wiederverwendet werden, indem sie wieder in den Entwurfszustand versetzt werden.
 
-- ![](../images/entities/offer-lifecycle.png)
+![](../images/entities/offer-lifecycle.png)
 
-**`xdm:status`** - Diese Eigenschaft wird für das Lebenszyklusmanagement der Instanz verwendet. Der Wert stellt einen Workflow-Status dar, der angibt, ob das Angebot noch in der Konstruktion ist (value = draft), allgemein von der Laufzeit berücksichtigt werden kann (value = authorised) oder ob es nicht mehr verwendet werden sollte (value = archived).
+- **`xdm:status`** - Diese Eigenschaft wird für das Lebenszyklusmanagement der Instanz verwendet. Der Wert stellt einen Workflow-Status dar, der angibt, ob das Angebot noch in der Konstruktion ist (value = draft), allgemein von der Laufzeit berücksichtigt werden kann (value = authorised) oder ob es nicht mehr verwendet werden sollte (value = archived).
+
+Ein einfacher PATCH-Vorgang für die Instanz wird normalerweise dazu verwendet, eine `xdm:status` Eigenschaft zu manipulieren:
 
 ```json
 [
@@ -612,14 +623,14 @@ Lebenszyklus von Angeboten
 ]
 ```
 
-Ein einfacher PATCH-Vorgang für die Instanz wird normalerweise dazu verwendet, eine `xdm:status` Eigenschaft zu manipulieren:](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
+Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss ein `https://ns.adobe.com/experience/offer-management/personalized-offer` oder `https://ns.adobe.com/experience/offer-management/fallback-offer` ein Fallback-Angebot sein.
 
-### Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss ein `https://ns.adobe.com/experience/offer-management/personalized-offer` oder `https://ns.adobe.com/experience/offer-management/fallback-offer` ein Fallback-Angebot sein.
-
-Repräsentationen und Praktika
+### Repräsentationen und Praktika
 
 Angebot sind Entscheidungsoptionen mit Inhaltsdarstellungen. Wenn eine Entscheidung getroffen wird, wird die Option ausgewählt und ihre Kennung verwendet, um die Inhalte oder Inhaltsreferenzen für die Bereitstellung abzurufen, die bereitgestellt werden muss. Ein Angebot kann mehrere Darstellungen aufweisen, für jedes muss jedoch eine andere Platzierungsreferenz vorhanden sein. Dadurch wird sichergestellt, dass die Darstellung mit einer bestimmten Platzierung eindeutig bestimmt werden kann.
-Während des Entscheidungsvorgangs wird die Platzierung zusammen mit dem Objekt &quot;Aktivität&quot;bestimmt. Angebot, die mit dieser Platzierung als Referenz nicht repräsentiert sind, werden automatisch aus der Liste der Auswahlmöglichkeiten entfernt.`https://ns.adobe.com/experience/offer-management/offer-placement`
+Während des Entscheidungsvorgangs wird die Platzierung zusammen mit dem Objekt &quot;Aktivität&quot;bestimmt. Angebot, die mit dieser Platzierung als Referenz nicht repräsentiert sind, werden automatisch aus der Liste der Auswahlmöglichkeiten entfernt.
+
+Bevor einem Angebot Darstellungen hinzugefügt werden können, müssen die Platzierungsinstanzen vorhanden sein. Diese Instanzen werden mit der Schema-ID`https://ns.adobe.com/experience/offer-management/offer-placement`erstellt.
 
 ```json
 {
@@ -634,47 +645,47 @@ Während des Entscheidungsvorgangs wird die Platzierung zusammen mit dem Objekt 
 } 
 ```
 
-Bevor einem Angebot Darstellungen hinzugefügt werden können, müssen die Platzierungsinstanzen vorhanden sein. Diese Instanzen werden mit der Schema-ID`https://ns.adobe.com/experience/offer-management/offer-placement`erstellt.](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
-
 Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss ein `https://ns.adobe.com/experience/offer-management/personalized-offer` oder `https://ns.adobe.com/experience/offer-management/fallback-offer` ein Fallback-Angebot sein.
 
-- Eine **Platzierungsinstanz** kann die folgenden Eigenschaften aufweisen:
+Eine **Platzierungsinstanz** kann die folgenden Eigenschaften aufweisen:
+
 - **`xdm:name`** - Enthält zugewiesene Namen für die Platzierung, auf die in menschlichen Interaktionen und Benutzeroberflächen verwiesen wird.
 - **`xdm:description`** - Dient zum Vermitteln von für Menschen lesbaren Absichten darüber, wie Inhalte in dieser Platzierung im gesamten Versand der Nachricht verwendet werden. Wenn Versand-Kanal neue Platzierungen definieren, können sie weitere Informationen zu dieser Eigenschaft hinzufügen, damit ein Inhaltsersteller den Inhalt entsprechend erstellen oder auswählen kann. Diese Anweisungen werden nicht formell ausgelegt oder durchgesetzt. Diese Eigenschaft dient lediglich als Ort, um die Absichten zu kommunizieren.
 - **`xdm:channel`** - Der URI eines Kanals. Der Kanal gibt an, wo der dynamische Inhalt bereitgestellt werden soll. Die Kanal-Beschränkung wird verwendet, um nicht nur zu vermitteln, wo das Angebot verwendet wird, sondern auch um den Content-Editor oder Validator zu bestimmen, der für das Erlebnis verwendet wird.
-   - **`xdm:componentType`** - Eine Modellkennung, d. h. URI, für den Inhalt, der an dem durch diese Platzierung beschriebenen Ort angezeigt werden kann. Komponententypen sind: Bild-Link, HTML oder Nur-Text. Jeder Komponententyp kann einen bestimmten Satz von Eigenschaften (ein Modell) beinhalten, über die das Inhaltselement verfügen kann. Die Liste von Komponententypen kann erweitert werden. Es gibt drei vordefinierte Komponententypwerte:
+- **`xdm:componentType`** - Eine Modellkennung, d. h. URI, für den Inhalt, der an dem durch diese Platzierung beschriebenen Ort angezeigt werden kann. Komponententypen sind: Bild-Link, HTML oder Nur-Text. Jeder Komponententyp kann einen bestimmten Satz von Eigenschaften (ein Modell) beinhalten, über die das Inhaltselement verfügen kann. Die Liste von Komponententypen kann erweitert werden. Es gibt drei vordefinierte Komponententypwerte:
    - `https://ns.adobe.com/experience/offer-management/content-component-imagelink`
    - `https://ns.adobe.com/experience/offer-management/content-component-text`
-- `https://ns.adobe.com/experience/offer-management/content-component-html`
+   - `https://ns.adobe.com/experience/offer-management/content-component-html`
+- **`xdm:contentTypes`**, Eine Beschränkung für die Medientypen der Komponenten, die bei dieser Platzierung erwartet werden. Es kann mehr als einen Medientyp für einen Komponententyp geben, z. B. verschiedene Bildformate.
 
-**`xdm:contentTypes`**, Eine Beschränkung für die Medientypen der Komponenten, die bei dieser Platzierung erwartet werden. Es kann mehr als einen Medientyp für einen Komponententyp geben, z. B. verschiedene Bildformate.**`xdm:representations`
+**Darstellungselemente** in einem Angebot haben eine Objektstruktur in der Array-Eigenschaft `xdm:representations`. Jedes Element kann die folgenden Eigenschaften aufweisen:
 
-- **Darstellungselemente** in einem Angebot haben eine Objektstruktur in der Array-Eigenschaft `xdm:representations`. Jedes Element kann die folgenden Eigenschaften aufweisen:
 - **`xdm:placement`** - Diese Eigenschaft enthält den Verweis auf die Platzierungsinstanz. Der Wert wird überprüft, wenn die Darstellung dem Angebot hinzugefügt wird. Eine Platzierungsinstanz mit diesem URI muss vorhanden sein und darf nicht als gelöscht markiert werden. Darüber hinaus wird eine Überprüfung durchgeführt, um sicherzustellen, dass eine Angebot-Instanz nicht über zwei Darstellungen mit demselben Wert für ihre Platzierungsreferenz verfügt.
-   - **`xdm:components`** - Inhaltskomponenten sind die mit einer bestimmten Angebotsdarstellung verknüpften Fragmente. Diese Fragmente werden später verwendet, um das Endbenutzererlebnis zu erstellen. Beachten Sie, dass der Entscheidungsdienst selbst nicht die gesamte Endbenutzererfahrung zusammenstellt. Die folgenden Eigenschaften sind Teil des Modells jeder Komponente.`@type`
+- **`xdm:components`** - Inhaltskomponenten sind die mit einer bestimmten Angebotsdarstellung verknüpften Fragmente. Diese Fragmente werden später verwendet, um das Endbenutzererlebnis zu erstellen. Beachten Sie, dass der Entscheidungsdienst selbst nicht die gesamte Endbenutzererfahrung zusammenstellt. Die folgenden Eigenschaften sind Teil des Modells jeder Komponente.
    - **`@type`** - diese Eigenschaft identifiziert den Komponententyp. Ein anderer Name für dieses Konzept ist das Inhaltsfragmentmodell. Die Komponente `@type` ist lediglich ein URI für ein Modell, das von der Anwendung oder dem Dienst definiert wird, die bzw. der das Endbenutzererlebnis zusammenstellt.
    - **`repo:id`** - diese Eigenschaft enthält einen global eindeutigen, unveränderlichen Bezeichner für die Hauptressource der Komponente im Repository, in dem das Asset gespeichert wird.
    - **`repo:name`** - Diese Eigenschaft enthält einen lesbaren Namen für das Asset im Repository. Dieser Name ist benutzerdefiniert und garantiert nicht eindeutig.
    - **`repo:resolveURL`** - diese Eigenschaft enthält eine eindeutige Ressourcensuche, um das Asset in einem Inhalts-Repository zu lesen. Dadurch wird es einfacher, das Asset abzurufen, ohne dass der Client versteht, welche APIs aufgerufen werden sollen. Die URL gibt die Bytes der primären Ressource des Assets zurück.
    - **`dc:format`** - diese Eigenschaft stammt von der Dublin Core Metadata Initiative. Das Format kann verwendet werden, um die Software, Hardware oder andere Geräte zu bestimmen, die zum Anzeigen oder Betrieb der Ressource erforderlich sind. Es wird empfohlen, einen Wert aus einem kontrollierten Vokabular auszuwählen (z. B. die Liste von Internetmedientypen, die Computermedienformate definieren).
+   - **`dc:language`** - Diese Eigenschaft enthält die Sprache oder Sprachen der Ressource. Die Sprache wird im Sprachcode gemäß der Definition in IETF RFC 3066 angegeben.
 
-**`dc:language`** - Diese Eigenschaft enthält die Sprache oder Sprachen der Ressource. Die Sprache wird im Sprachcode gemäß der Definition in IETF RFC 3066 angegeben.
+Es gibt drei vordefinierte Komponententypen, die in der `@type` Eigenschaft ausgedrückt werden:
 
-- Es gibt drei vordefinierte Komponententypen, die in der `@type` Eigenschaft ausgedrückt werden:
 - https<span></span>://ns.adobe.com/experience/Angebot-management/content-component-imagelink
 - https<span></span>://ns.adobe.com/experience/Angebot-management/content-component-text
+- https<span></span>://ns.adobe.com/experience/Angebot-management/content-component-html
 
-https<span></span>://ns.adobe.com/experience/Angebot-management/content-component-html`xdm:components`
+Je nach Wert der `@type` Eigenschaft `xdm:components` enthält die folgenden zusätzlichen Eigenschaften:
 
-- Je nach Wert der `@type` Eigenschaft `xdm:components` enthält die folgenden zusätzlichen Eigenschaften:`user-agent`
 - **`xdm:linkURL`** - Vorhanden, wenn die Komponente ein Bild-Link ist. Diese Eigenschaft enthält den Link, der mit dem Bild verknüpft ist und zu dem der Endbenutzer navigiert, wenn er mit dem Angebot interagiert. `user-agent`
+- **`xdm:copyline`** - Wird verwendet, wenn die Komponente ein Text ist. Zusätzlich zum Verweis auf ein Textelement, z. B. für Angebote mit langer Formulartextformatierung, die Formatierung enthalten können, kann eine kurze Textzeichenfolge direkt in der Eigenschaft xdm:copyline gespeichert werden.
 
-**`xdm:copyline`** - Wird verwendet, wenn die Komponente ein Text ist. Zusätzlich zum Verweis auf ein Textelement, z. B. für Angebote mit langer Formulartextformatierung, die Formatierung enthalten können, kann eine kurze Textzeichenfolge direkt in der Eigenschaft xdm:copyline gespeichert werden.
+Clients können zusätzliche Eigenschaften verwenden, um Anweisungen zur Handhabung des Kontexts festzulegen und auszuwerten. Der Angebot UI Library Client fügt beispielsweise die folgenden optionalen Eigenschaften hinzu, um die Anzeige einfacher zu handhaben:
 
-- Clients können zusätzliche Eigenschaften verwenden, um Anweisungen zur Handhabung des Kontexts festzulegen und auszuwerten. Der Angebot UI Library Client fügt beispielsweise die folgenden optionalen Eigenschaften hinzu, um die Anzeige einfacher zu handhaben:`xdm:components`
-   - Innerhalb jedes Elements im `xdm:components` Array fügt der UI-Client der Angebot-Bibliothek die folgenden Eigenschaften hinzu. Diese Eigenschaften sollten nicht gelöscht oder bearbeitet werden, ohne die Auswirkungen auf die Benutzeroberfläche zu verstehen:
+- Innerhalb jedes Elements im `xdm:components` Array fügt der UI-Client der Angebot-Bibliothek die folgenden Eigenschaften hinzu. Diese Eigenschaften sollten nicht gelöscht oder bearbeitet werden, ohne die Auswirkungen auf die Benutzeroberfläche zu verstehen:
+   - **`offerui:previewThumbnail`** - Dies ist eine optionale Eigenschaft, die die Benutzeroberfläche der Angebot-Bibliothek verwendet, um eine Wiedergabe des Assets anzuzeigen. Diese Darstellung ist nicht mit dem Asset selbst identisch. Der Inhalt könnte beispielsweise HTML sein, und die Darstellung ist ein Bitmapbild, das nur eine Annäherung zeigt. Diese (minderwertige) Darstellung wird im Repräsentationsblock des Angebots angezeigt.
 
-**`offerui:previewThumbnail`** - Dies ist eine optionale Eigenschaft, die die Benutzeroberfläche der Angebot-Bibliothek verwendet, um eine Wiedergabe des Assets anzuzeigen. Diese Darstellung ist nicht mit dem Asset selbst identisch. Der Inhalt könnte beispielsweise HTML sein, und die Darstellung ist ein Bitmapbild, das nur eine Annäherung zeigt. Diese (minderwertige) Darstellung wird im Repräsentationsblock des Angebots angezeigt.
+Ein Beispiel für einen PATCH-Vorgang auf einer Angebot-Instanz zeigt, wie die Darstellungen manipuliert werden:
 
 ```json
 [
@@ -695,22 +706,22 @@ https<span></span>://ns.adobe.com/experience/Angebot-management/content-componen
 ]' 
 ```
 
-Ein Beispiel für einen PATCH-Vorgang auf einer Angebot-Instanz zeigt, wie die Darstellungen manipuliert werden:[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
-
 Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss ein `https://ns.adobe.com/experience/offer-management/personalized-offer` oder `https://ns.adobe.com/experience/offer-management/fallback-offer` ein Fallback-Angebot sein.
 
-## Der PATCH-Vorgang kann fehlschlagen, wenn noch keine Eigenschaft vorhanden `xdm:representations` ist. In diesem Fall könnte dem oben genannten Vorgang zum Hinzufügen ein weiterer Vorgang vorangestellt werden, der das `xdm:representations` Array erstellt, oder der Vorgang zum einmaligen Hinzufügen legt das Array direkt fest.
+Der PATCH-Vorgang kann fehlschlagen, wenn noch keine Eigenschaft vorhanden `xdm:representations` ist. In diesem Fall könnte dem oben genannten Vorgang zum Hinzufügen ein weiterer Vorgang vorangestellt werden, der das `xdm:representations` Array erstellt, oder der Vorgang zum einmaligen Hinzufügen legt das Array direkt fest.
 Die beschriebenen Schema und Eigenschaften werden für alle Angebot-Typen, Personalisierungs-Angebot sowie Ausweich-Angebot verwendet. Die folgenden beiden Abschnitte zu Einschränkungen und Entscheidungsregeln erläutern die Aspekte von Personalisierungs-Angeboten.
 
-### Festlegen von Einschränkungen für Angebot
+## Festlegen von Einschränkungen für Angebot
 
-Kalendereinschränkungen`xdm:selectionConstraint`
+### Kalendereinschränkungen
 
-- Entscheidungsoptionen können generell ein Beginn und ein Enddatum und eine Uhrzeit angeben, die als Kalenderbeschränkung dienen. Die Eigenschaften sind in der Eigenschaft eingebettet `xdm:selectionConstraint`:
+Entscheidungsoptionen können generell ein Beginn und ein Enddatum und eine Uhrzeit angeben, die als Kalenderbeschränkung dienen. Die Eigenschaften sind in der Eigenschaft eingebettet `xdm:selectionConstraint`:
+
 - **`xdm:startDate`** - Diese Eigenschaft gibt das Datum und die Uhrzeit des Beginns an. Der Wert ist eine Zeichenfolge, die nach RFC 3339-Regeln formatiert ist, d. h. wie in diesem Zeitstempel: &quot;2019-06-13T11:21:23.356Z&quot;.
 Entscheidungsoptionen, die ihren Beginn noch nicht erreicht haben, werden bei der Entscheidung noch nicht berücksichtigt.
+- **`xdm:endDate`** - Diese Eigenschaft gibt das Enddatum und die Endzeit an. Der Wert ist eine Zeichenfolge, die nach RFC 3339-Regeln formatiert ist, d. h. wie in diesem Zeitstempel: &quot;2019-07-13T11:00:00.000Z&quot;Entscheidungsoptionen, die ihr Enddatum und ihre Uhrzeit überschritten haben, gelten im Entscheidungsprozess nicht mehr als zulässig.
 
-**`xdm:endDate`** - Diese Eigenschaft gibt das Enddatum und die Endzeit an. Der Wert ist eine Zeichenfolge, die nach RFC 3339-Regeln formatiert ist, d. h. wie in diesem Zeitstempel: &quot;2019-07-13T11:00:00.000Z&quot;Entscheidungsoptionen, die ihr Enddatum und ihre Uhrzeit überschritten haben, gelten im Entscheidungsprozess nicht mehr als zulässig.
+Das Ändern einer Kalenderbeschränkung kann mit dem folgenden PATCH-Aufruf ausgeführt werden:
 
 ```json
 [
@@ -725,16 +736,16 @@ Entscheidungsoptionen, die ihren Beginn noch nicht erreicht haben, werden bei de
 ]' 
 ```
 
-Das Ändern einer Kalenderbeschränkung kann mit dem folgenden PATCH-Aufruf ausgeführt werden:[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
+Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/personalized-offer`sein. Fallback-Angebot haben keine Einschränkungen.
 
-### Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/personalized-offer`sein. Fallback-Angebot haben keine Einschränkungen.
+### Beschränkungen für die Deckelung
 
-Beschränkungen für die Deckelung`xdm:cappingConstraint`
+Eine Deckelungsbeschränkung ist eine Komponente in einer Entscheidungsoption, die die Parameter für die Deckelung definiert. Durch die Deckelung wird begrenzt, wie oft eine Option vorgeschlagen werden kann, sowohl für ein einzelnes Profil als auch für alle Profil. Die Eigenschaften enthalten einen ganzzahligen Wert, der größer oder gleich 1 sein muss. Die Eigenschaften sind innerhalb einer Eigenschaft verschachtelt `xdm:cappingConstraint`:
 
-- Eine Deckelungsbeschränkung ist eine Komponente in einer Entscheidungsoption, die die Parameter für die Deckelung definiert. Durch die Deckelung wird begrenzt, wie oft eine Option vorgeschlagen werden kann, sowohl für ein einzelnes Profil als auch für alle Profil. Die Eigenschaften enthalten einen ganzzahligen Wert, der größer oder gleich 1 sein muss. Die Eigenschaften sind innerhalb einer Eigenschaft verschachtelt `xdm:cappingConstraint`:
 - **`xdm:globalCap`** - Eine globale Obergrenze ist eine Beschränkung dafür, wie oft ein Angebot in seiner Gesamtheit vorgeschlagen werden kann.
+- **`xdm:profileCap`** - Eine Profil-Obergrenze ist eine Einschränkung, wie oft ein Angebot einem bestimmten Profil vorgeschlagen werden kann.
 
-**`xdm:profileCap`** - Eine Profil-Obergrenze ist eine Einschränkung, wie oft ein Angebot einem bestimmten Profil vorgeschlagen werden kann.
+Das Festlegen oder Ändern der Begrenzung für ein Personalisierungs-Angebot kann mit dem folgenden PATCH-Aufruf ausgeführt werden:
 
 ```json
 [
@@ -749,19 +760,19 @@ Beschränkungen für die Deckelung`xdm:cappingConstraint`
 ]' 
 ```
 
-Das Festlegen oder Ändern der Begrenzung für ein Personalisierungs-Angebot kann mit dem folgenden PATCH-Aufruf ausgeführt werden:[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
-
 Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/personalized-offer`sein. Fallback-Angebot haben keine Einschränkungen.
 
-### Um die Werte für die Begrenzung zu entfernen, wird der Vorgang &quot;add&quot;durch den Vorgang &quot;remove&quot;ersetzt. Beachten Sie, dass die Werte für die Begrenzung einzeln vorhanden sind und auch einzeln eingestellt oder entfernt werden können.
+Um die Werte für die Begrenzung zu entfernen, wird der Vorgang &quot;add&quot;durch den Vorgang &quot;remove&quot;ersetzt. Beachten Sie, dass die Werte für die Begrenzung einzeln vorhanden sind und auch einzeln eingestellt oder entfernt werden können.
 
-Berechtigungseinschränkungen
+### Berechtigungseinschränkungen
 
-Angebot können im Entscheidungsprozess bedingt ausgewählt werden. Wenn ein Angebot zur Personalisierung einen Verweis auf eine Eignungsregel enthält, muss die Regelbedingung als &quot;true&quot;ausgewertet werden, damit das Angebot-Objekt für ein bestimmtes Profil berücksichtigt wird. Die Eignungsregeln werden unabhängig von den Entscheidungsoptionen erstellt und verwaltet. Dieselbe Regel kann von mehreren Personalisierungs-Angeboten referenziert werden.`xdm:selectionConstraint`
+Angebot können im Entscheidungsprozess bedingt ausgewählt werden. Wenn ein Angebot zur Personalisierung einen Verweis auf eine Eignungsregel enthält, muss die Regelbedingung als &quot;true&quot;ausgewertet werden, damit das Angebot-Objekt für ein bestimmtes Profil berücksichtigt wird. Die Eignungsregeln werden unabhängig von den Entscheidungsoptionen erstellt und verwaltet. Dieselbe Regel kann von mehreren Personalisierungs-Angeboten referenziert werden.
 
-- Der Verweis auf die Regel ist in der Eigenschaft eingebettet `xdm:selectionConstraint`:`@id`
+Der Verweis auf die Regel ist in der Eigenschaft eingebettet `xdm:selectionConstraint`:
 
-**`xdm:eligibilityRule`** - Diese Eigenschaft enthält einen Verweis auf eine Eignungsregel. Der Wert ist der `@id` einer Instanz von Schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
+- **`xdm:eligibilityRule`** - Diese Eigenschaft enthält einen Verweis auf eine Eignungsregel. Der Wert ist der `@id` einer Instanz von Schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
+
+Das Hinzufügen und Löschen einer Regel kann auch mit einem PATCH-Vorgang erfolgen:
 
 ```
 [
@@ -773,18 +784,18 @@ Angebot können im Entscheidungsprozess bedingt ausgewählt werden. Wenn ein Ang
 ]'
 ```
 
-Das Hinzufügen und Löschen einer Regel kann auch mit einem PATCH-Vorgang erfolgen:[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
-
 Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/personalized-offer`sein. Fallback-Angebot haben keine Einschränkungen.
 
-## Beachten Sie, dass die Eignungsregel zusammen mit den Kalenderbeschränkungen in die `xdm:selectionConstraint` Eigenschaft eingebettet ist. PATCH-Vorgänge sollten nicht versuchen, die gesamte `SelectionConstraint` Eigenschaft zu entfernen.
+Beachten Sie, dass die Eignungsregel zusammen mit den Kalenderbeschränkungen in die `xdm:selectionConstraint` Eigenschaft eingebettet ist. PATCH-Vorgänge sollten nicht versuchen, die gesamte `SelectionConstraint` Eigenschaft zu entfernen.
 
-Festlegen der Priorität eines Angebots`xdm:rank`
+## Festlegen der Priorität eines Angebots
 
-- Qualifizierende Entscheidungsoptionen werden nach Rang geordnet, um die beste Option für das jeweilige Profil zu ermitteln. Um die Rangfolge zu unterstützen und eine Standardeinstellung anzugeben, falls die Rangfolge nicht durch einen anderen Mechanismus bestimmt werden kann, kann für jedes Personalisierungs-Angebot eine Basispriorität festgelegt werden.
+Qualifizierende Entscheidungsoptionen werden nach Rang geordnet, um die beste Option für das jeweilige Profil zu ermitteln. Um die Rangfolge zu unterstützen und eine Standardeinstellung anzugeben, falls die Rangfolge nicht durch einen anderen Mechanismus bestimmt werden kann, kann für jedes Personalisierungs-Angebot eine Basispriorität festgelegt werden.
 Die Basispriorität ist in der Eigenschaft eingebettet `xdm:rank`:
 
-**`xdm:priority`** - Diese Eigenschaft stellt die Standardreihenfolge dar, in der ein Angebot über einem anderen ausgewählt wird, falls keine spezielle Rangreihenfolge für Profil bekannt ist. Wenn nach dem Vergleich des Prioritätswerts immer noch zwei oder mehr Angebot zur Personalisierung gebunden sind, wird eines zufällig ausgewählt und im Angebotsvorschlag verwendet. Der Wert für diese Eigenschaft muss eine Ganzzahl größer oder gleich 0 sein.
+- **`xdm:priority`** - Diese Eigenschaft stellt die Standardreihenfolge dar, in der ein Angebot über einem anderen ausgewählt wird, falls keine spezielle Rangreihenfolge für Profil bekannt ist. Wenn nach dem Vergleich des Prioritätswerts immer noch zwei oder mehr Angebot zur Personalisierung gebunden sind, wird eines zufällig ausgewählt und im Angebotsvorschlag verwendet. Der Wert für diese Eigenschaft muss eine Ganzzahl größer oder gleich 0 sein.
+
+Die Anpassung der Basispriorität kann mit dem folgenden PATCH-Aufruf erfolgen:
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
@@ -803,15 +814,15 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-Die Anpassung der Basispriorität kann mit dem folgenden PATCH-Aufruf erfolgen:[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
+Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/personalized-offer`sein. Fallback-Angebot haben keine Rangeigenschaften.
 
-## Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/personalized-offer`sein. Fallback-Angebot haben keine Rangeigenschaften.
+## Verwalten von Entscheidungsregeln
 
-Verwalten von Entscheidungsregeln
+Eignungsregeln verfügen über die Bedingungen, die bewertet werden, um festzustellen, ob eine bestimmte Entscheidungsoption für ein bestimmtes Profil infrage kommt. Wenn eine Regel einer oder mehreren Entscheidungsoptionen zugeordnet wird, muss die Regel für diese Option implizit &quot;true&quot;zurückgeben, damit die Option für diesen Benutzer berücksichtigt wird. Die Regel kann Tests zu Profil-Attributen enthalten, Ausdruck mit Erlebnis-Ereignissen für dieses Profil bewerten und Kontextdaten einschließen, die an die Entscheidungsanforderung weitergeleitet wurden. Eine Bedingung kann beispielsweise wie folgt beschrieben werden:
 
-> Eignungsregeln verfügen über die Bedingungen, die bewertet werden, um festzustellen, ob eine bestimmte Entscheidungsoption für ein bestimmtes Profil infrage kommt. Wenn eine Regel einer oder mehreren Entscheidungsoptionen zugeordnet wird, muss die Regel für diese Option implizit &quot;true&quot;zurückgeben, damit die Option für diesen Benutzer berücksichtigt wird. Die Regel kann Tests zu Profil-Attributen enthalten, Ausdruck mit Erlebnis-Ereignissen für dieses Profil bewerten und Kontextdaten einschließen, die an die Entscheidungsanforderung weitergeleitet wurden. Eine Bedingung kann beispielsweise wie folgt beschrieben werden:
+> &quot;Schließen Sie Personen mit Elite-Status ein, die in den letzten sechs Monaten dreimal einen Flug durchgeführt haben und die die Flugnummer des aktuellen Fluges haben.&quot;
 
-&quot;Schließen Sie Personen mit Elite-Status ein, die in den letzten sechs Monaten dreimal einen Flug durchgeführt haben und die die Flugnummer des aktuellen Fluges haben.&quot;`_instance`
+Die Instanzen werden mit der Schema-ID https://ns.adobe.com/experience/offer-management/eligibility-rule erstellt. Die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren sieht wie folgt aus:
 
 ```json
 {
@@ -830,28 +841,28 @@ Verwalten von Entscheidungsregeln
 }
 ```
 
-Die Instanzen werden mit der Schema-ID https://ns.adobe.com/experience/offer-management/eligibility-rule erstellt. Die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren sieht wie folgt aus:](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/eligibility-rule`
-
 Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/eligibility-rule`sein.
 
-Der Wert in der Eigenschaft &quot;Bedingung&quot;der Regel enthält einen PQL-Ausdruck. Die Kontextdaten werden über den Ausdruck für speziellen Pfad @{schemaID} referenziert.[!DNL Experience Platform]`segmentMembership``segmentMembership`
+Der Wert in der Eigenschaft &quot;Bedingung&quot;der Regel enthält einen PQL-Ausdruck. Die Kontextdaten werden über den Ausdruck für speziellen Pfad @{schemaID} referenziert.
 
-## Regeln richten sich natürlich an Segmente in der Regel aus [!DNL Experience Platform] und oft wird die Segmentabsicht einfach wiederverwendet, indem die `segmentMembership` Eigenschaft eines Profils getestet wird. Die `segmentMembership` Eigenschaft enthält die Ergebnisse der Segmentbedingungen, die bereits bewertet wurden. Auf diese Weise kann eine Organisation ihre domänenspezifischen Audiencen einmal definieren, sie benennen und die Bedingungen einmal auswerten.
+Regeln richten sich natürlich an Segmente in der Regel aus [!DNL Experience Platform] und oft wird die Segmentabsicht einfach wiederverwendet, indem die `segmentMembership` Eigenschaft eines Profils getestet wird. Die `segmentMembership` Eigenschaft enthält die Ergebnisse der Segmentbedingungen, die bereits bewertet wurden. Auf diese Weise kann eine Organisation ihre domänenspezifischen Audiencen einmal definieren, sie benennen und die Bedingungen einmal auswerten.
 
-### Verwalten von Angebot-Sammlungen
+## Verwalten von Angebot-Sammlungen
 
-Erstellen von Tags und Tagging-Angeboten
+### Erstellen von Tags und Tagging-Angeboten
 
-1. Angebot können in Sammlungen organisiert werden, in denen jede Sammlung die anzuwendende Filterbedingung definiert. Derzeit können Filter-Ausdruck in einer Sammlung eine von zwei Formularen haben:`@id`
-2. Der `@id` Parameter des Angebots muss mit einem in einer Liste von Bezeichnern übereinstimmen, damit das Angebot in der Sammlung enthalten ist. Dieser Filter ist lediglich eine Auflistung der URIs der Angebot in der Sammlung.\
-   Ein Angebot kann eine Liste von Tagverweisen haben und der Filter der Sammlung besteht aus einer Liste von Tags. Das Angebot befindet sich in der Sammlung, wenn:\
-   a. eines der Tags des Filters mit einem der Tags des Angebots übereinstimmt
+Angebot können in Sammlungen organisiert werden, in denen jede Sammlung die anzuwendende Filterbedingung definiert. Derzeit können Filter-Ausdruck in einer Sammlung eine von zwei Formularen haben:
 
-b. alle Tags des Filters entsprechen einem der Tags des Angebots
+1. Der `@id` Parameter des Angebots muss mit einem in einer Liste von Bezeichnern übereinstimmen, damit das Angebot in der Sammlung enthalten ist. Dieser Filter ist lediglich eine Auflistung der URIs der Angebot in der Sammlung.
+2. Ein Angebot kann eine Liste von Tagverweisen haben und der Filter der Sammlung besteht aus einer Liste von Tags. Das Angebot befindet sich in der Sammlung, wenn:\
+   a. eines der Tags des Filters mit einem der Tags des Angebots übereinstimmt\
+   b. alle Tags des Filters entsprechen einem der Tags des Angebots
 
 Tags sind einfache Instanzen, mit denen Angebot-Instanzen verknüpft werden können. Es handelt sich dabei um eigenständige Instanzen mit einem Namen, um sie anzuzeigen. Der Name muss in allen Instanzen eindeutig sein, um die Anzeige in der Benutzeroberfläche zu vereinfachen.
 
-Tag-Objekte dienen dazu, eine Kategorisierung der Entscheidungsoptionen (Angebot) festzulegen. Ein Tag kann von vielen Angeboten verknüpft werden und ein Angebot kann viele Tag-Verweise aufweisen. Eine Kategorie von Angeboten wird erstellt, indem auf alle Angebot verwiesen wird, die zu einem bestimmten Satz von Tag-Instanzen gehören.`_instance`
+Tag-Objekte dienen dazu, eine Kategorisierung der Entscheidungsoptionen (Angebot) festzulegen. Ein Tag kann von vielen Angeboten verknüpft werden und ein Angebot kann viele Tag-Verweise aufweisen. Eine Kategorie von Angeboten wird erstellt, indem auf alle Angebot verwiesen wird, die zu einem bestimmten Satz von Tag-Instanzen gehören.
+
+Die Tag-Instanzen werden mit der Schema-ID https://ns.adobe.com/experience/offer-management/tag erstellt. Die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren sieht wie folgt aus:
 
 ```json
 {
@@ -859,10 +870,10 @@ Tag-Objekte dienen dazu, eine Kategorisierung der Entscheidungsoptionen (Angebot
 } 
 ```
 
-Die Tag-Instanzen werden mit der Schema-ID https://ns.adobe.com/experience/offer-management/tag erstellt. Die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren sieht wie folgt aus:](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/tag`
-
-
 Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/tag`sein.
+
+
+Eine Angebot-Instanz kann mit der Liste von Tag-Verweisen wie:
 
 ```json
 {
@@ -874,7 +885,7 @@ Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von In
 }
 ```
 
-Eine Angebot-Instanz kann mit der Liste von Tag-Verweisen wie:
+Alternativ kann ein Angebot gepatcht werden, um die Liste der Tags zu ändern:
 
 ```json
 [
@@ -886,13 +897,13 @@ Eine Angebot-Instanz kann mit der Liste von Tag-Verweisen wie:
 ]' 
 ```
 
-Alternativ kann ein Angebot gepatcht werden, um die Liste der Tags zu ändern:[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
-
 In beiden Fällen finden Sie die vollständige cURL-Syntax unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/personalized-offer`sein.
 
-### Beachten Sie, dass die `xdm:tags` Eigenschaft bereits vorhanden sein muss, damit der Vorgang zum Hinzufügen erfolgreich ist. Es gibt keine Tags in einer Instanz, in der der PATCH-Vorgang zuerst die Array-Eigenschaft hinzufügen und dann einen Tag-Verweis zu diesem Array hinzufügen kann.
+Beachten Sie, dass die `xdm:tags` Eigenschaft bereits vorhanden sein muss, damit der Vorgang zum Hinzufügen erfolgreich ist. Es gibt keine Tags in einer Instanz, in der der PATCH-Vorgang zuerst die Array-Eigenschaft hinzufügen und dann einen Tag-Verweis zu diesem Array hinzufügen kann.
 
-Filter für Angebot-Sammlungen definieren`_instance`
+### Filter für Angebot-Sammlungen definieren
+
+Die Filterinstanzen werden mit der Schema-ID https://ns.adobe.com/experience/offer-management/offer-filter erstellt. Die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren könnte wie folgt aussehen:
 
 ```json
 {
@@ -905,15 +916,15 @@ Filter für Angebot-Sammlungen definieren`_instance`
 }
 ```
 
-Die Filterinstanzen werden mit der Schema-ID https://ns.adobe.com/experience/offer-management/offer-filter erstellt. Die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren könnte wie folgt aussehen:](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/offer-filter`
+Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/offer-filter`sein.
 
-- Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/offer-filter`sein.
-   - **`xdm:filterType`** - Diese Eigenschaft gibt an, ob der Filter mithilfe von Tags eingerichtet wird oder direkt auf Angebot durch ihre IDs verweist. Wenn der Filter so eingerichtet ist, dass Tags verwendet werden, kann der Filtertyp außerdem angeben, ob alle Tags mit den Tags eines bestimmten Angebots übereinstimmen müssen oder ob eines der angegebenen Tags ausreicht, damit das Angebot für den Filter qualifiziert ist. Die gültigen Werte dieser Enum-Eigenschaft sind:
+- **`xdm:filterType`** - Diese Eigenschaft gibt an, ob der Filter mithilfe von Tags eingerichtet wird oder direkt auf Angebot durch ihre IDs verweist. Wenn der Filter so eingerichtet ist, dass Tags verwendet werden, kann der Filtertyp außerdem angeben, ob alle Tags mit den Tags eines bestimmten Angebots übereinstimmen müssen oder ob eines der angegebenen Tags ausreicht, damit das Angebot für den Filter qualifiziert ist. Die gültigen Werte dieser Enum-Eigenschaft sind:
    - `offers`
    - `anyTags`
-- `allTags``xdm:filterType`
+   - `allTags`
+- **`ids`** - Eine Eigenschaft enthält ein Array von URIs, die je nach Wert von Angebot-Instanzen oder Tag-Instanzen referenzieren `xdm:filterType`. .
 
-**`ids`** - Eine Eigenschaft enthält ein Array von URIs, die je nach Wert von Angebot-Instanzen oder Tag-Instanzen referenzieren `xdm:filterType`. .
+Der folgende Aufruf zeigt, wie die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren aussieht, wenn direkt auf Angebot verwiesen wird:
 
 ```json
 {
@@ -933,11 +944,11 @@ Die Filterinstanzen werden mit der Schema-ID https://ns.adobe.com/experience/off
 } 
 ```
 
-## Der folgende Aufruf zeigt, wie die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren aussieht, wenn direkt auf Angebot verwiesen wird:
+## Verwalten von Aktivitäten
 
-Verwalten von Aktivitäten
+Zur Steuerung des Entscheidungsprozesses wird eine Angebot-Aktivität verwendet. Er gibt den auf den Gesamtbestand angewendeten Angebot-Filter an, um Angebot nach Thema/Kategorie einzugrenzen, die Platzierung, um den Bestand auf die Angebot einzugrenzen, die in den reservierten Bereich passen, und eine Ausweichoption an, falls die kombinierten Einschränkungen alle verfügbaren Personalisierungsoptionen (Angebot) deaktivieren.
 
-Zur Steuerung des Entscheidungsprozesses wird eine Angebot-Aktivität verwendet. Er gibt den auf den Gesamtbestand angewendeten Angebot-Filter an, um Angebot nach Thema/Kategorie einzugrenzen, die Platzierung, um den Bestand auf die Angebot einzugrenzen, die in den reservierten Bereich passen, und eine Ausweichoption an, falls die kombinierten Einschränkungen alle verfügbaren Personalisierungsoptionen (Angebot) deaktivieren.`https://ns.adobe.com/experience/offer-management/offer-activity``_instance`
+Die Instanzen der Aktivität werden mit der Schema-ID`https://ns.adobe.com/experience/offer-management/offer-activity`erstellt. Die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren sieht wie folgt aus:
 
 ```json
 {
@@ -951,17 +962,17 @@ Zur Steuerung des Entscheidungsprozesses wird eine Angebot-Aktivität verwendet.
 }
 ```
 
-Die Instanzen der Aktivität werden mit der Schema-ID`https://ns.adobe.com/experience/offer-management/offer-activity`erstellt. Die `_instance` Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren sieht wie folgt aus:`schemaId``https://ns.adobe.com/experience/offer-management/offer-activity`
+Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/offer-activity`sein.
 
-- Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/offer-activity`sein.
 - **`xdm:name`** - Diese obligatorische Eigenschaft enthält den Namen der Aktivität. Der Name wird in verschiedenen Benutzeroberflächen angezeigt.
-- **`xdm:status`** - Diese Eigenschaft wird für das Lebenszyklusmanagement der Instanz verwendet. Der Wert stellt einen Workflow-Status dar, der angibt, ob die Aktivität noch im Aufbau ist (value = draft), allgemein von der Laufzeit berücksichtigt werden kann (value = live) oder ob sie nicht mehr verwendet werden sollte (value = archived).`@id`
+- **`xdm:status`** - Diese Eigenschaft wird für das Lebenszyklusmanagement der Instanz verwendet. Der Wert stellt einen Workflow-Status dar, der angibt, ob die Aktivität noch im Aufbau ist (value = draft), allgemein von der Laufzeit berücksichtigt werden kann (value = live) oder ob sie nicht mehr verwendet werden sollte (value = archived).
 - **`xdm:placement`** - Eine obligatorische Eigenschaft, die einen Verweis auf eine Platzierung eines Angebots enthält, die auf das Inventar angewendet wird, wenn eine Entscheidung im Kontext dieser Aktivität getroffen wird. Der Wert ist der URI (`@id`) der verwendeten Platzierung des Angebots.
 - **`xdm:filter`** - Eine obligatorische Eigenschaft, die einen Verweis auf einen Angebot-Filter enthält, der auf das Inventar angewendet wird, wenn im Rahmen dieser Aktivität eine Entscheidung getroffen wird. Der Wert ist der URI (`@id`) des verwendeten Angebot-Filters.
+- **`xdm:fallback`** - Eine obligatorische Eigenschaft, die einen Verweis auf ein Fallback-Angebot enthält. Ein Ausweichmanöver-Angebot wird verwendet, wenn die Entscheidung für diese Aktivität keines der personalisierbaren Angebot qualifiziert. Der Wert ist der URI (`@id`) einer Fallback-Angebot-Instanz.
 
-### **`xdm:fallback`** - Eine obligatorische Eigenschaft, die einen Verweis auf ein Fallback-Angebot enthält. Ein Ausweichmanöver-Angebot wird verwendet, wenn die Entscheidung für diese Aktivität keines der personalisierbaren Angebot qualifiziert. Der Wert ist der URI (`@id`) einer Fallback-Angebot-Instanz.
+### Verwalten von Fallback-Angeboten
 
-Verwalten von Fallback-Angeboten`https://ns.adobe.com/experience/offer-management/fallback-offer``_instance`
+Bevor Instanzen der Aktivität erstellt werden können, muss ein Ausweichmanöver-Angebot vorhanden sein, das für die Platzierung der Aktivität geeignet ist. Die Fallback-Angebot-Instanzen werden mit der Schema-ID`https://ns.adobe.com/experience/offer-management/fallback-offer`erstellt. Die `_instance` Eigenschaft des Erstellungs- oder Aktualisierungsaufrufs enthält dieselben allgemeinen Eigenschaften wie ein Personalisierungs-Angebot, kann jedoch keine anderen Einschränkungen aufweisen.
 
 ```json
 {
@@ -982,5 +993,5 @@ Verwalten von Fallback-Angeboten`https://ns.adobe.com/experience/offer-managemen
 }  
 ```
 
-Bevor Instanzen der Aktivität erstellt werden können, muss ein Ausweichmanöver-Angebot vorhanden sein, das für die Platzierung der Aktivität geeignet ist. Die Fallback-Angebot-Instanzen werden mit der Schema-ID`https://ns.adobe.com/experience/offer-management/fallback-offer`erstellt. Die `_instance` Eigenschaft des Erstellungs- oder Aktualisierungsaufrufs enthält dieselben allgemeinen Eigenschaften wie ein Personalisierungs-Angebot, kann jedoch keine anderen Einschränkungen aufweisen.`schemaId``https://ns.adobe.com/experience/offer-management/fallback-offer`
+Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von Instanzen](#updating-and-patching-instances) . Der `schemaId` Parameter muss `https://ns.adobe.com/experience/offer-management/fallback-offer`sein.
 
