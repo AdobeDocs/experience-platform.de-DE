@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Spark-SQL-Funktionen
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '4903'
 ht-degree: 6%
@@ -18,7 +18,9 @@ Die SQL-Helfer von Spark bieten integrierte Spark-SQL-Funktionen, um die SQL-Fun
 
 Referenz: [Dokumentation zu Spark-SQL-Funktionen](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
->[!NOTE] Nicht alle Funktionen in der externen Dokumentation werden unterstützt.
+>[!NOTE]
+>
+>Nicht alle Funktionen in der externen Dokumentation werden unterstützt.
 
 ## Kategorien
 
@@ -58,7 +60,7 @@ Beispiel:
  6
 ```
 
-#### Neue
+#### Add
 
 `expr1 + expr2`: Rückgabe `expr1`+`expr2`.
 
@@ -576,7 +578,9 @@ Beispiele:
  0.8446490682263027
 ```
 
->[!NOTE] Diese Funktion ist im Allgemeinen nicht deterministisch.
+>[!NOTE]
+>
+>Diese Funktion ist im Allgemeinen nicht deterministisch.
 
 #### randn
 
@@ -593,7 +597,9 @@ Beispiele:
  1.1164209726833079
 ```
 
->[!NOTE] Diese Funktion ist im Allgemeinen nicht deterministisch.
+>[!NOTE]
+>
+>Diese Funktion ist im Allgemeinen nicht deterministisch.
 
 #### rint
 
@@ -1090,7 +1096,7 @@ Beispiele:
 
 Seit: 1.5.0
 
-#### day
+####  Tag
 
 `day(date)`: Gibt den Tag des Monats des Datums/Zeitstempels zurück.
 
@@ -1207,7 +1213,7 @@ Beispiel:
 
 Seit: 1.5.0
 
-#### month
+####  Monat
 
 `month(date)` Gibt die Komponente Monat des Datums/Zeitstempels zurück.
 
@@ -1406,7 +1412,7 @@ Beispiele:
  NULL
 ```
 
-#### year
+#### Jahr
 
 `year(date)`: Gibt die Komponente Jahr des Datums/Zeitstempels zurück.
 
@@ -1738,7 +1744,9 @@ Beispiele:
 ```
 
 Seit: 1.5.0
->[!NOTE] rse logic for arrays ist seit 2.4.0 verfügbar.
+>[!NOTE]
+>
+>rse logic for arrays ist seit 2.4.0 verfügbar.
 
 #### Shuffle
 
@@ -1754,7 +1762,9 @@ Beispiele:
 ```
 
 Seit: 2.4.0
->[!NOTE] ist nicht deterministisch.
+>[!NOTE]
+>
+>ist nicht deterministisch.
 
 #### slice
 
@@ -1872,7 +1882,7 @@ Beispiele:
  map("a":null)
 ```
 
-#### Zeichenfolge
+#### string
 
 `string(expr)`: Stellt den Wert `expr` auf den Datentyp &quot;Zielgruppe&quot; `string`.
 
@@ -2389,7 +2399,9 @@ Beispiel:
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
 
->[!NOTE] Funktion ist nicht deterministisch.
+>[!NOTE]
+>
+>Funktion ist nicht deterministisch.
 
 ### Datenauswertung
 
@@ -2425,7 +2437,9 @@ Beispiele:
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] `concat` Logik für Arrays ist seit 2.4.0 verfügbar.
+>[!NOTE]
+>
+>`concat` Logik für Arrays ist seit 2.4.0 verfügbar.
 
 #### concat_ws
 
