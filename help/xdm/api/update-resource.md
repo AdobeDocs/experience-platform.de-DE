@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ressource aktualisieren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 2%
@@ -18,7 +18,9 @@ Sie können Ressourcen im Mandanten-Container mit einer PATCH-Anforderung änder
 
 Weitere Informationen zum JSON Patch, einschließlich der verfügbaren Operationen, finden Sie in der offiziellen [JSON Patch-Dokumentation](http://jsonpatch.com/).
 
->[!NOTE] Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie das Dokument zum [Ersetzen einer Ressource mit einem PUT-Vorgang](replace-resource.md).
+>[!NOTE]
+>
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie das Dokument zum [Ersetzen einer Ressource mit einem PUT-Vorgang](replace-resource.md).
 
 ## Hinzufügen von Mixins mit einem Schema
 
