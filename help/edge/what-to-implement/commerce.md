@@ -4,7 +4,7 @@ seo-title: Unterstützen von Produkten mit Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
 seo-description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 100%
@@ -19,6 +19,8 @@ Wenn Sie Produkte auf Ihrer Site haben, ist dies ein Standardsatz, den Sie mögl
 Dieses Dokument verwendet das Mixin [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md). Das `commerce`-Mixin wird in zwei Teile aufgeteilt: das `commerce`-Objekt und das `productListItems`-Array. Mit dem `commerce`-Objekt können Sie angeben, welche Aktionen auf das `productListItems`-Array angewendet werden.
 
 >[!Tip]
+>
+>
 >Wenn Sie mit Adobe Analytics vertraut sind, ist `commerce` am ehesten mit der `events`-Variablen vergleichbar. `productListItems` ist eher mit der `products`-Variablen vergleichbar.
 
 ## Aktionen im Zusammenhang mit Produkten
@@ -26,6 +28,8 @@ Dieses Dokument verwendet das Mixin [ExperienceEvent Commerce Details](https://g
 Nachstehend finden Sie eine Liste der Maßnahmen (`measures`), die im `commerce`-Objekt verfügbar sind.
 
 >[!Tip]
+>
+>
 >Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. In den meisten Fällen verwenden Sie nur das `value`-Feld (z. B. `'value':1`). Mit dem `id`-Feld können Sie eine eindeutige Kennung festlegen, mit der Sie verfolgen können, wann die Maßnahme gesendet wurde. Siehe XDM-Dokumentation für [Maßnahme](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
 | **Maßnahme** | **Empfehlung** | **Beschreibung** |
