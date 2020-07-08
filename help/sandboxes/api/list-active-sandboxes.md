@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Liste aktiver Sandboxen für den aktuellen Benutzer
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 982764ae7807e40cbca5ca60c70bf363a271e3c2
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 1%
@@ -14,7 +14,9 @@ ht-degree: 1%
 
 # Liste aktiver Sandboxen für den aktuellen Benutzer
 
->[!NOTE] Im Gegensatz zu anderen Endpunkten, die in der Sandbox-API bereitgestellt werden, steht dieser Endpunkt allen Benutzern zur Verfügung, auch solchen ohne Sandbox-Administratorzugriffsberechtigung.
+>[!NOTE]
+>
+>Im Gegensatz zu anderen Endpunkten, die in der Sandbox-API bereitgestellt werden, steht dieser Endpunkt allen Benutzern zur Verfügung, auch solchen ohne Sandbox-Administratorzugriffsberechtigung.
 
 Sie können die für den aktuellen Benutzer aktiven Sandboxen durch eine GET-Anforderung an den Stamm-Endpunkt (`/`) Liste werden.
 
