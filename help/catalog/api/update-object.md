@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Objekt aktualisieren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 3%
@@ -19,7 +19,9 @@ Sie können einen Teil eines Katalogobjekts aktualisieren, indem Sie dessen ID i
 * Felder verwenden
 * Verwenden der JSON-Patch-Notation
 
->[!NOTE] PATCH-Vorgänge an einem Objekt können seine erweiterbaren Felder, die miteinander verknüpfte Objekte darstellen, nicht ändern.  Änderungen an verknüpften Objekten müssen direkt vorgenommen werden.
+>[!NOTE]
+>
+>PATCH-Vorgänge an einem Objekt können seine erweiterbaren Felder, die miteinander verknüpfte Objekte darstellen, nicht ändern.  Änderungen an verknüpften Objekten müssen direkt vorgenommen werden.
 
 ## Aktualisieren mit Feldern
 
