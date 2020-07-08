@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Entwicklerhandbuch für Customer Profil-API in Echtzeit
+title: Richtlinien zusammenführen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '2052'
+source-wordcount: '2053'
 ht-degree: 3%
 
 ---
 
 
-# Zusammenführungsrichtlinien
+# Endpunkt der Richtlinien zusammenführen
 
 Adobe Experience Platform ermöglicht Ihnen, Daten aus mehreren Quellen zusammenzuführen und zu kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche finden Sie im [Benutzerhandbuch](../ui/merge-policies.md)zu Zusammenführungsrichtlinien.
 
@@ -55,7 +55,7 @@ Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von
 | `id` | Der vom System erzeugte eindeutige Bezeichner, der zur Erstellungszeit zugewiesen wurde |
 | `name` | Benutzerfreundlicher Name, unter dem die Richtlinie zum Zusammenführen in Ansichten der Liste identifiziert werden kann. |
 | `imsOrgId` | Organisations-ID, zu der diese Richtlinie gehört |
-| `identityGraph` | [Identitätsdiagramm](#identity-graph) -Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profil-Fragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
+| `identityGraph` | [Identitätsdiagramm](#identity-graph) -Objekt, das das Identitätsdiagramm angibt, aus dem die entsprechenden Identitäten abgerufen werden. Profil-Fragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
 | `attributeMerge` | [Attributzusammenführungs](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie bei Datenkonflikten Profil-Attributwerte priorisiert. |
 | `schema` | Das [Schema](#schema) -Objekt, für das die Zusammenführungsrichtlinie verwendet werden kann. |
 | `default` | Boolescher Wert, der angibt, ob diese Richtlinie für das angegebene Schema standardmäßig verwendet wird. |
