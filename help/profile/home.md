@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Übersicht über das Echtzeit-Kundenprofil
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 2%
@@ -67,7 +67,7 @@ In diesem Abschnitt werden die Komponenten vorgestellt, mit denen Echtzeit-Kunde
 
 ### Streaming-Erfassung und Streaming-Segmentierung
 
-Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Infolgedessen können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst die Qualitätsübersicht [zur](../ingestion/quality/overview.md)Datenerfassung.
+Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Dadurch können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst die Qualitätsübersicht [zur](../ingestion/quality/overview.md)Datenerfassung.
 
 ### Edge-Projektionskonfigurationen und -ziele
 
@@ -129,6 +129,8 @@ Die Experience Platform hat eine Reihe von Leitlinien zu beachten, um Profil eff
 --->
 
 >[!NOTE]
+>
+>
 >Eine Nicht-Person-Entität bezieht sich auf jede XDM-Klasse, die **nicht** zum Profil gehört.
 
 ## Nächste Schritte und zusätzliche Ressourcen
