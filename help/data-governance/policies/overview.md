@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Datenverwendungsrichtlinien
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 1%
@@ -27,11 +27,15 @@ Dieses Dokument bietet einen allgemeinen Überblick über die Richtlinien zur Da
 
 Ein Beispiel für eine Marketingaktion könnte der Wunsch sein, einen Datensatz in einen Drittanbieter-Service zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. &quot;Persönlich identifizierbare Informationen&quot;(PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine &quot;I&quot;-Beschriftung (Identitätsdaten) enthält, erhalten Sie eine Antwort der [!DNL Policy Service] Ihnen mitteilenden Person, dass eine Datenverwendungsrichtlinie verletzt wurde.
 
->[!NOTE] Marketingaktionen allein schränken die Datenverwendung nicht ein. Sie müssen in aktivierte Datenverwendungsrichtlinien eingeschlossen werden, damit diese Aktionen auf Richtlinienverletzungen hin bewertet werden können.
+>[!NOTE]
+>
+>Marketingaktionen allein schränken die Datenverwendung nicht ein. Sie müssen in aktivierte Datenverwendungsrichtlinien eingeschlossen werden, damit diese Aktionen auf Richtlinienverletzungen hin bewertet werden können.
 
 Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten relevante Marketingaktionen angezeigt werden, damit Richtlinienverletzungen festgestellt werden können. Anschließend können Sie die API [für den](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DUL-Richtliniendienst verwenden, um Richtlinienverletzungen in Ihrer Integration zu prüfen.
 
->[!NOTE] Wenn Sie die Echtzeit-Platform von Kundendaten verwenden, können Sie Marketingverwendungsfälle für Ziele einrichten, um die Durchsetzung von Richtlinien zu automatisieren. Weitere Informationen finden Sie im Dokument zur [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md) .
+>[!NOTE]
+>
+>Wenn Sie die Echtzeit-Platform von Kundendaten verwenden, können Sie Marketingverwendungsfälle für Ziele einrichten, um die Durchsetzung von Richtlinien zu automatisieren. Weitere Informationen finden Sie im Dokument zur [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md) .
 
 Eine Liste der [verfügbaren, von Adobe definierten Marketingaktionen](#core-actions)finden Sie im Anhang zu diesem Dokument. Sie können auch eigene benutzerspezifische Marketingaktionen mit der API des DULE Policy Service oder der Benutzeroberfläche der Experience Platform definieren. Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
 
@@ -47,7 +51,9 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenverwaltungen die DULE Policy Service API oder die Benutzeroberfläche für die Experience Platform verwenden, um Richtlinien zu verwalten und auszuwerten, die sich auf Marketingaktionen beziehen, die für Daten mit Datenverwendungsbeschriftungen durchgeführt werden. Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketingaktionen arbeiten, um zu bewerten, ob eine bestimmte Aktion eine Datenverwendungsrichtlinie verletzt.
 
->[!IMPORTANT] Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
+>[!IMPORTANT]
+>
+>Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
 
 Eine schrittweise Anleitung zum Arbeiten mit Marketingaktionen und Datenverwendungsrichtlinien in der API finden Sie im Lernprogramm zum [Erstellen und Auswerten von Datenverwendungsrichtlinien](create.md). Weitere Informationen zu den Schlüsselvorgängen, die von der Policy Service API bereitgestellt werden, finden Sie im Entwicklerhandbuch für den [Policy-Dienst](../api/getting-started.md).
 
@@ -65,7 +71,9 @@ Im folgenden Abschnitt finden Sie weitere Informationen zu Datenverwendungsricht
 
 In der folgenden Tabelle werden die wichtigsten Marketingaktionen beschrieben, die von Adobe standardmäßig bereitgestellt werden.
 
->[!NOTE] Die wichtigsten Marketingaktionen sollten als Ausgangspunkt zur Identifizierung der zu erstellenden und auf Verstöße hin zu prüfenden Nutzungsrichtlinien dienen. Die Definitionen und Interpretationen hängen von den Anforderungen und Richtlinien Ihres Unternehmens ab.
+>[!NOTE]
+>
+>Die wichtigsten Marketingaktionen sollten als Ausgangspunkt zur Identifizierung der zu erstellenden und auf Verstöße hin zu prüfenden Nutzungsrichtlinien dienen. Die Definitionen und Interpretationen hängen von den Anforderungen und Richtlinien Ihres Unternehmens ab.
 
 | Marketingaktion | Beschreibung |
 | --- | --- |
