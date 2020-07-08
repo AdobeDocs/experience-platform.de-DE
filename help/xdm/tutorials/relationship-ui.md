@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema Schema Editor
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors
 
-Die Fähigkeit, die Beziehungen zwischen Ihren Kunden und ihre Interaktionen mit Ihrer Marke über verschiedene Kanal hinweg zu verstehen, ist ein wichtiger Bestandteil der Adobe Experience Platform. Die Definition dieser Beziehungen innerhalb der Struktur Ihrer Experience Data Model (XDM)-Schema ermöglicht Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
+Die Fähigkeit, die Beziehungen zwischen Ihren Kunden und ihre Interaktionen mit Ihrer Marke über verschiedene Kanäle hinweg zu verstehen, ist ein wichtiger Bestandteil der Adobe Experience Platform. Die Definition dieser Beziehungen innerhalb der Struktur Ihrer Experience Data Model (XDM)-Schema ermöglicht Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
 
-Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrem Unternehmen mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche definiert werden. Anweisungen zum Definieren von Schema-Beziehungen mithilfe der API finden Sie im Lernprogramm zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
+Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrem Unternehmen mithilfe des Schema-Editors in der Benutzeroberfläche der Experience Platform definiert werden. Anweisungen zum Definieren von Schema-Beziehungen mithilfe der API finden Sie im Lernprogramm zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis des XDM-Systems und des Schema-Editors in der Experience Platform-Benutzeroberfläche. Bevor Sie dieses Lernprogramm beginnen, lesen Sie bitte die folgende Dokumentation:
+Dieses Lernprogramm erfordert ein Verständnis des XDM-Systems und des Schema-Editors in der Benutzeroberfläche der Experience Platform. Bevor Sie dieses Lernprogramm beginnen, lesen Sie bitte die folgende Dokumentation:
 
 * [XDM-System in Experience Platform](../home.md): Eine Übersicht über XDM und seine Implementierung in Experience Platform.
 * [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Einführung in die Bausteine von XDM-Schemas.
@@ -48,7 +48,9 @@ Das Schema &quot;Hotels&quot;enthält Hotelfelder, die die Adresse, die Markenbe
 
 ## Erstellen eines Beziehungsmixins
 
->[!NOTE] Dieser Schritt ist nur erforderlich, wenn Ihr Quell-Schema über kein dediziertes Zeichenfolgenfeld verfügt, das als Verweis auf ein anderes Schema verwendet werden kann. Wenn dieses Schema bereits im Quellfeld definiert ist, gehen Sie zum nächsten Schritt zum [Definieren eines Beziehungsfelds](#relationship-field)über.
+>[!NOTE]
+>
+>Dieser Schritt ist nur erforderlich, wenn Ihr Quell-Schema über kein dediziertes Zeichenfolgenfeld verfügt, das als Verweis auf ein anderes Schema verwendet werden kann. Wenn dieses Schema bereits im Quellfeld definiert ist, gehen Sie zum nächsten Schritt zum [Definieren eines Beziehungsfelds](#relationship-field)über.
 
 Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quell-Schema über ein dediziertes Feld verfügen, das als Verweis auf das Ziel-Schema verwendet werden soll. Sie können dieses Feld dem Quellfeld hinzufügen, indem Sie eine neue Mischung erstellen.
 
@@ -68,7 +70,7 @@ Ein neues Feld wird auf der Arbeitsfläche unter dem Namensraum &quot;\_tenantId
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Klicken Sie abschließend auf **Übernehmen**.
+When finished, click **Apply**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
