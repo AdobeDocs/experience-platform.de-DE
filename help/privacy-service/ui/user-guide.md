@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Benutzerhandbuch zum Datenschutzdienst
+title: Benutzerhandbuch für Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -12,19 +12,19 @@ ht-degree: 0%
 ---
 
 
-# Benutzerhandbuch zum Datenschutzdienst
+# Benutzerhandbuch für Privacy Service
 
-In diesem Dokument werden Schritte zum Erstellen und Verwalten von Datenschutzanforderungen mithilfe der Benutzeroberfläche des Datenschutzdienstes beschrieben.
+In diesem Dokument werden Schritte zum Erstellen und Verwalten von Datenschutzanforderungen mithilfe der Benutzeroberfläche von Privacy Service beschrieben.
 
-## Dashboard der Benutzeroberfläche des Datenschutzdienstes
+## Privacy Service-UI-Dashboard durchsuchen
 
-Das Dashboard für die Benutzeroberfläche des Datenschutzdienstes enthält zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge Ansicht haben: **Statusbericht** und **Auftragsanforderungen**. Das Dashboard zeigt auch die aktuell ausgewählte Regel für die angezeigten Aufträge an.
+Das Dashboard für die Benutzeroberfläche des Privacy Service enthält zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge Ansicht haben: **Statusbericht** und **Auftragsanforderungen**. Das Dashboard zeigt auch die aktuell ausgewählte Regel für die angezeigten Aufträge an.
 
 ![UI-Dashboard](../images/user-guide/dashboard.png)
 
 ### Regeltyp
 
-Der Datenschutzdienst unterstützt Auftragsanforderungen für drei Regeltypen:
+Privacy Service unterstützt Aufträge für drei Regeltypen:
 
 * Allgemeine Datenschutzverordnung der Europäischen Vereinigung
 * The California Consumer Privacy Act (CCPA)
@@ -54,13 +54,17 @@ Um weitere Details zu einem bestimmten Datenpunkt Ansicht, klicken Sie auf den b
 
 ![Angewandter Filter aus Widget](../images/user-guide/apply-filter.png)
 
->[!NOTE] Wenn ein Filter auf das Widget &quot;Auftragsanforderungen&quot;angewendet wurde, können Sie den Filter entfernen, indem Sie auf das **X** in der Filtertablette klicken. Auftragsanforderungen kehren dann zur standardmäßigen Tracking-Liste zurück.
+>[!NOTE]
+>
+>Wenn ein Filter auf das Widget &quot;Auftragsanforderungen&quot;angewendet wurde, können Sie den Filter entfernen, indem Sie auf das **X** in der Filtertablette klicken. Auftragsanforderungen kehren dann zur standardmäßigen Tracking-Liste zurück.
 
 ### Auftragsanforderungen
 
 Das Widget &quot;Auftragsanforderungen&quot;Liste alle in Ihrem Unternehmen verfügbaren Auftragsanforderungen, einschließlich Angaben zum Anforderungstyp, aktuellen Status, Fälligkeitsdatum und E-Mail-Anfrage.
 
->[!NOTE] Die Daten für zuvor erstellte Aufträge sind erst 30 Tage nach dem Abschlussdatum verfügbar.
+>[!NOTE]
+>
+>Die Daten für zuvor erstellte Aufträge sind erst 30 Tage nach dem Abschlussdatum verfügbar.
 
 Sie können die Liste filtern, indem Sie Suchbegriffe in die Suchleiste unterhalb des Titels &quot;Auftragsanforderungen&quot;eingeben. Die Liste wird beim Eingeben automatisch Filter und zeigt Anforderungen mit Werten an, die mit Ihren Suchbegriffen übereinstimmen. Sie können auch im Dropdown-Menü &quot; **Angefordert am** &quot;einen Zeitraum für die aufgelisteten Aufträge auswählen.
 
@@ -70,7 +74,7 @@ Um die Details einer bestimmten Auftragsanforderung Ansicht, klicken Sie in der 
 
 ![GDPR-UI-Auftragsdetails](../images/user-guide/job-details.png)
 
-Dieses Dialogfeld enthält Statusinformationen zu den einzelnen Experience Cloud-Lösungen und ihren aktuellen Status im Verhältnis zum Gesamtauftrag. Da jeder Datenschutzauftrag asynchron ausgeführt wird, zeigt die Seite das aktuelle Kommunikationsdatum und die aktuelle Uhrzeit (GMT) jeder Lösung an, da einige mehr Zeit benötigen als andere, um die Anforderung zu verarbeiten.
+Dieser Dialog enthält Statusinformationen zu den einzelnen Experience Cloud-Lösungen und ihren aktuellen Status im Verhältnis zum Gesamtauftrag. Da jeder Datenschutzauftrag asynchron ausgeführt wird, zeigt die Seite das aktuelle Kommunikationsdatum und die aktuelle Uhrzeit (GMT) jeder Lösung an, da einige mehr Zeit benötigen als andere, um die Anforderung zu verarbeiten.
 
 Wenn eine Lösung zusätzliche Daten bereitgestellt hat, ist sie in diesem Dialogfeld sichtbar. Sie können diese Daten durch Klicken auf die einzelnen Produktzeilen Ansicht.
 
@@ -78,9 +82,11 @@ Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, klicken Sie o
 
 ## Neue Datenschutzauftragsanforderung erstellen
 
->[!NOTE] Um eine Datenschutzauftragsanforderung zu erstellen, müssen Sie Identitätsinformationen für bestimmte Kunden bereitstellen, deren Daten abgerufen oder gelöscht werden sollen. Bitte lesen Sie das Dokument zu [Identitätsdaten für Datenschutzanforderungen](../identity-data.md) , bevor Sie mit diesem Abschnitt fortfahren.
+>[!NOTE]
+>
+>Um eine Datenschutzauftragsanforderung zu erstellen, müssen Sie Identitätsinformationen für bestimmte Kunden bereitstellen, deren Daten abgerufen oder gelöscht werden sollen. Bitte lesen Sie das Dokument zu [Identitätsdaten für Datenschutzanforderungen](../identity-data.md) , bevor Sie mit diesem Abschnitt fortfahren.
 
-Die Benutzeroberfläche des Datenschutzdienstes bietet zwei Methoden zum Erstellen neuer Auftragsanforderungen:
+Die Benutzeroberfläche des Privacy Service bietet zwei Methoden zum Erstellen neuer Auftragsanforderungen:
 
 * [Anforderungs-Builder verwenden](#request-builder)
 * [JSON-Datei hochladen](#json)
@@ -103,7 +109,7 @@ Wählen Sie den **Auftragstyp** der Anforderung (&quot;Löschen&quot;oder &quot;
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Wählen Sie unter *Namensraum-Typ* den entsprechenden Namensraum-Typ für die Kunden-IDs aus, die an den Datenschutzdienst gesendet werden.
+Wählen Sie unter *Namensraum-Typ* den entsprechenden Namensraum-Typ für die Kunden-IDs aus, die an Privacy Service gesendet werden.
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -115,7 +121,7 @@ Bei Verwendung des _benutzerdefinierten_ Namensraums müssen Sie den Namensraum 
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Klicken Sie abschließend auf **Erstellen**.
+When finished, click **Create**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -141,10 +147,10 @@ Wenn Sie keine JSON-Datei zum Hochladen haben, klicken Sie auf &quot;Adobe-GDPR-
 
 Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfeld. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können bei Bedarf weitere JSON-Dateien hinzufügen, indem Sie sie in das Dialogfeld ziehen und dort ablegen.
 
-Klicken Sie abschließend auf **Erstellen**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird zusammen mit dem aktuellen Verarbeitungsstatus im Widget &quot; _Auftragsanforderungen_ &quot;aufgeführt.
+When finished, click **Create**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird zusammen mit dem aktuellen Verarbeitungsstatus im Widget &quot; _Auftragsanforderungen_ &quot;aufgeführt.
 
 ### Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie mithilfe der Benutzeroberfläche des Datenschutzdienstes einen Datenschutzauftrag erstellen, die Details eines Auftrags Ansicht geben und dessen Verarbeitungsstatus überwachen und die Ergebnisse nach Abschluss des Vorgangs herunterladen können.
+Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie mithilfe der Benutzeroberfläche des Privacy Service einen Datenschutzauftrag erstellen, die Details eines Auftrags Ansicht geben und dessen Verarbeitungsstatus überwachen und die Ergebnisse nach Abschluss des Vorgangs herunterladen können.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit der Datenschutzdienst-API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit der Privacy Service-API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
