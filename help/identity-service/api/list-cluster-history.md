@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abrufen des Clusterverlaufs einer Identität
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 1%
@@ -68,7 +68,9 @@ curl -X GET \
 
 Verwenden Sie die `POST` Methode als Batch-Entsprechung der oben beschriebenen `GET` Methode, um die Cluster-Historien mehrerer Identitäten zurückzugeben.
 
->[!NOTE] Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
+>[!NOTE]
+>
+>Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
 
 **API-Format**
 
@@ -210,7 +212,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] Die Antwort enthält immer einen Eintrag für jede XID, die in der Anforderung bereitgestellt wird, unabhängig davon, ob die XIDs einer Anforderung demselben Cluster angehören oder ob einem oder mehreren Clustern überhaupt zugeordnet sind.
+>[!NOTE]
+>
+>Die Antwort enthält immer einen Eintrag für jede XID, die in der Anforderung bereitgestellt wird, unabhängig davon, ob die XIDs einer Anforderung demselben Cluster angehören oder ob einem oder mehreren Clustern überhaupt zugeordnet sind.
 
 ## Nächste Schritte
 
