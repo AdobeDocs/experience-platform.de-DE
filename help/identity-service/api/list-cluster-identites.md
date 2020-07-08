@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Liste-Cluster-Identitäten
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 1%
@@ -70,7 +70,9 @@ curl -X GET \
 
 Verwenden Sie `POST` als Batch-Entsprechung der oben beschriebenen `GET` Methode, um die Identitäten in den Clustern mehrerer Identitäten zurückzugeben.
 
->[!NOTE] Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
+>[!NOTE]
+>
+>Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
 
 **API-Format**
 
@@ -234,7 +236,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] Die Antwort enthält immer einen Eintrag für jede XID, die in der Anforderung bereitgestellt wird, unabhängig davon, ob die XIDs einer Anforderung demselben Cluster angehören oder ob einem oder mehreren Clustern überhaupt zugeordnet sind.
+>[!NOTE]
+>
+>Die Antwort enthält immer einen Eintrag für jede XID, die in der Anforderung bereitgestellt wird, unabhängig davon, ob die XIDs einer Anforderung demselben Cluster angehören oder ob einem oder mehreren Clustern überhaupt zugeordnet sind.
 
 ## Nächste Schritte
 
