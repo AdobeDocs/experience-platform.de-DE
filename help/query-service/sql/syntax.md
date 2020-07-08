@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL-Syntax
 topic: syntax
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 1%
@@ -320,7 +320,9 @@ where option can be one of:
 - `FORMAT`: Geben Sie das Ausgabeformat an, das TEXT, XML, JSON oder YAML sein kann. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT`.
 - `statement`: Jede `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`oder `CREATE MATERIALIZED VIEW AS` Anweisung, deren Ausführungsplan Sie sehen möchten.
 
->[!IMPORTANT] Denken Sie daran, dass die Anweisung tatsächlich ausgeführt wird, wenn die `ANALYZE` Option verwendet wird. Obwohl `EXPLAIN` alle Ausgaben, die eine `SELECT` Rückgabe, verworfen werden, geschehen andere Nebenwirkungen der Anweisung wie gewohnt.
+>[!IMPORTANT]
+>
+>Denken Sie daran, dass die Anweisung tatsächlich ausgeführt wird, wenn die `ANALYZE` Option verwendet wird. Obwohl `EXPLAIN` alle Ausgaben, die eine `SELECT` Rückgabe, verworfen werden, geschehen andere Nebenwirkungen der Anweisung wie gewohnt.
 
 #### Beispiel
 
@@ -356,7 +358,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 Zubereitete Anweisungen können Parameter annehmen, Werte, die bei der Ausführung der Anweisung ersetzt werden. Beim Erstellen der vorbereiteten Anweisung beziehen Sie sich auf Parameter nach Position, unter Verwendung von $1, $2 usw. Eine entsprechende Liste von Parameterdatentypen kann optional angegeben werden. Wenn der Datentyp eines Parameters nicht angegeben ist oder als unbekannt deklariert wird, wird der Typ aus dem Kontext abgeleitet, in dem der Parameter zuerst referenziert wird, wenn möglich. Geben Sie beim Ausführen der Anweisung die tatsächlichen Werte für diese Parameter in der `EXECUTE` Anweisung an.
 
-Vorbereitete Anweisungen dauern nur für die Dauer der aktuellen Datenbanksitzung. Wenn die Sitzung beendet wird, wird die vorbereitete Anweisung vergessen. Daher muss sie neu erstellt werden, bevor sie erneut verwendet wird. Dies bedeutet auch, dass eine einzelne vorbereitete Anweisung nicht von mehreren gleichzeitigen Datenbankclients verwendet werden kann. Jeder Kunde kann jedoch eine eigene vorbereitete Anweisung erstellen, die verwendet werden soll. Zubereitete Anweisungen können manuell mithilfe des `DEALLOCATE` Befehls bereinigt werden.
+Zubereitete Anweisungen dauern nur für die Dauer der aktuellen Datenbanksitzung. Wenn die Sitzung beendet wird, wird die vorbereitete Anweisung vergessen. Daher muss sie neu erstellt werden, bevor sie erneut verwendet wird. Dies bedeutet auch, dass eine einzelne vorbereitete Anweisung nicht von mehreren gleichzeitigen Datenbankclients verwendet werden kann. Jeder Kunde kann jedoch eine eigene vorbereitete Anweisung erstellen, die verwendet werden soll. Zubereitete Anweisungen können manuell mithilfe des `DEALLOCATE` Befehls bereinigt werden.
 
 Zubereitete Anweisungen haben möglicherweise den größten Leistungsvorteil, wenn eine einzelne Sitzung verwendet wird, um eine große Anzahl ähnlicher Anweisungen auszuführen. Der Leistungsunterschied ist besonders dann von Bedeutung, wenn die Anweisungen komplex zu planen oder umzuschreiben sind, wenn die Abfrage beispielsweise mehrere Tabellen umfasst oder mehrere Regeln erfordert. Wenn die Anweisung relativ einfach zu planen und umzuschreiben, aber relativ teuer auszuführen ist, ist der Leistungsvorteil von vorbereiteten Anweisungen weniger bemerkbar.
 
