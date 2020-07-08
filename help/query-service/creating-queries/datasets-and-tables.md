@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datenbestände vs. Tabellen und Schema
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 1%
@@ -14,8 +14,10 @@ ht-degree: 1%
 
 # Datenbestände vs. Tabellen und Schema
 
-Überprüfen Sie die Liste der in der Benutzeroberfläche [der](https://platform.adobe.com/datasets)Adobe Experience Platform verfügbaren Datensätze, und achten Sie darauf, dass Sie die Datasetnamen beachten.
->[!NOTE] Einige Dataset-Namen haben Leerzeichen und sind sonst nicht SQL-sicher.
+Überprüfen Sie die Liste der in der Benutzeroberfläche [der](https://platform.adobe.com/datasets)Adobe Experience Platform verfügbaren Datensätze, und achten Sie darauf, dass Sie die Datensatznamen beachten.
+>[!NOTE]
+>
+>Einige Dataset-Namen haben Leerzeichen und sind sonst nicht SQL-sicher.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -28,7 +30,7 @@ ht-degree: 1%
 
 ![](../images/clients/psql/connect-bi.png)
 
-Zur Ansicht der verfügbaren Tabellen auf der Plattform mit SQL können Sie entweder `\d` oder `SHOW TABLES;`verwenden.
+Zur Ansicht der verfügbaren Tabellen auf der Platform mit SQL können Sie entweder `\d` oder `SHOW TABLES;`verwenden.
 
 
 `\d` zeigt die standardmäßige PostgreSQL-Ansicht an
@@ -42,7 +44,7 @@ Zur Ansicht der verfügbaren Tabellen auf der Plattform mit SQL können Sie entw
 (2 rows)
 ```
 
-`SHOW TABLES;` ist ein benutzerdefinierter Befehl, der eine detailliertere Ansicht bietet und die Tabelle sowie den Dataset-Namen in der Plattform-Benutzeroberfläche darstellt.
+`SHOW TABLES;` ist ein benutzerdefinierter Befehl, der eine detailliertere Ansicht bietet und die Tabelle sowie den Dataset-Namen in der Benutzeroberfläche der Platform darstellt.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -54,7 +56,9 @@ Zur Ansicht der verfügbaren Tabellen auf der Plattform mit SQL können Sie entw
 
 Um das Stamm-Schema einer Tabelle Ansicht, verwenden Sie den `\d table_name` Befehl.
 
->[!NOTE] Das präsentierte Schema zeigt die Stammfelder, die zumeist komplex sind und auf einen Objekttyp in der Benutzeroberfläche des DataSet-Schemas verweisen.
+>[!NOTE]
+>
+>Das präsentierte Schema zeigt die Stammfelder, die zumeist komplex sind und auf einen Objekttyp in der Benutzeroberfläche des DataSet-Schemas verweisen.
 
 `\d luma_midvalues`
 
