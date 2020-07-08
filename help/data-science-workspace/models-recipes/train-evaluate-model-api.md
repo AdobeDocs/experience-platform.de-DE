@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen und Auswerten eines Modells (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 1%
@@ -26,8 +26,8 @@ Befolgen Sie diese [Übung](../../tutorials/authentication.md) zur Autorisierung
 In der Übung sollten Sie nun die folgenden Werte haben:
 
 - `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.
-- `{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.
-- `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.
+- `{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.
+- `{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.
 
 - Link zu einem Dockerbild eines intelligenten Dienstes
 
@@ -37,7 +37,9 @@ Wir werden die APIs verwenden, um einen Experimentlauf zur Schulung zu erstellen
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
->[!NOTE] Die Begriffe &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot;und &quot;Modell&quot;werden in der Benutzeroberfläche als unterschiedliche Begriffe bezeichnet. Wenn Sie von der Benutzeroberfläche kommen, werden die Unterschiede in der folgenden Tabelle zugeordnet.
+>[!NOTE]
+>
+>Die Begriffe &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot;und &quot;Modell&quot;werden in der Benutzeroberfläche als unterschiedliche Begriffe bezeichnet. Wenn Sie von der Benutzeroberfläche kommen, werden die Unterschiede in der folgenden Tabelle zugeordnet.
 > 
 > | Begriff der Benutzeroberfläche | API-Begriff |
 > --- | ---
@@ -65,8 +67,8 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.\
 `{JSON_PAYLOAD}`: Die Konfiguration unserer MLInstance. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
 ```JSON
@@ -120,7 +122,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] Im `{JSON_PAYLOAD}`Array definieren wir Parameter, die für Schulungen und Scoring im `tasks` Array verwendet werden. Die `{ENGINE_ID}` ID der Engine, die Sie verwenden möchten, und das `tag` Feld ist ein optionaler Parameter, der zur Identifizierung der Instanz verwendet wird.
+>[!NOTE]
+>
+>Im `{JSON_PAYLOAD}`Array definieren wir Parameter, die für Schulungen und Scoring im `tasks` Array verwendet werden. Die `{ENGINE_ID}` ID der Engine, die Sie verwenden möchten, und das `tag` Feld ist ein optionaler Parameter, der zur Identifizierung der Instanz verwendet wird.
 
 Die Antwort enthält die `{INSTANCE_ID}` , die die erstellte MLInstanz darstellt. Es können mehrere MLInstances mit verschiedenen Konfigurationen erstellt werden.
 
@@ -174,9 +178,9 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.\
 `{JSON_PAYLOAD}`: Erstelltes Experimentobjekt. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
 ```JSON
@@ -230,9 +234,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.\
 `{JSON_PAYLOAD}`: Zu veröffentlichender Datensatz. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
 ```JSON
@@ -318,9 +322,9 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: Die ID für das zu Zielgruppe Experiment. Dies finden Sie in der Antwort beim Erstellen Ihres Experiments.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.\
 `{JSON_PAYLOAD}`: Um einen Schulungslauf zu erstellen, müssen Sie Folgendes in den Text einschließen:
 
 ```JSON
@@ -389,8 +393,8 @@ curl -X GET \
 `{EXPERIMENT_ID}`: Die ID, die das Experiment darstellt.\
 `{EXPERIMENT_RUN_ID}`: Die ID, die den Experimentlauf darstellt.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.
 
 **Antwort**
 
@@ -452,7 +456,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: Die ID, die dem Experimentlauf entspricht, der Zielgruppe werden soll. Dies finden Sie in der Antwort beim Erstellen des Experimentlaufs.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.
 
 Die Antwort stellt das geschulte Modell dar, das erstellt wurde.
 
@@ -499,9 +503,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  Die ID, die dem Experiment entspricht.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.
 
->[!NOTE] Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentläufe wird jedoch nicht beendet.
+>[!NOTE]
+>
+>Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentläufe wird jedoch nicht beendet.
 
 Im Folgenden finden Sie die Antwort, die darauf hinweist, dass das Experiment erfolgreich gelöscht wurde.
 
