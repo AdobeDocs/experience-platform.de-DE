@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Einblicke in die Kundentechnik
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 5%
@@ -30,7 +30,9 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 Die Seite zum Kundendienst wird angezeigt. Auf dieser Seite werden Dienstinstanzen der Kunden-API Liste und Informationen zu diesen Instanzen, einschließlich Instanzname, Tendenztyp, Häufigkeit der Ausführung der Instanz und Status der letzten Aktualisierung, angezeigt.
 
->[!NOTE] Nur Dienstinstanzen, die erfolgreiche Testläufe abgeschlossen haben, haben Einblicke.
+>[!NOTE]
+>
+>Nur Dienstinstanzen, die erfolgreiche Testläufe abgeschlossen haben, haben Einblicke.
 
 ![Instanz erstellen](../images/insights/dashboard.png)
 
@@ -51,7 +53,9 @@ Klicken Sie zur Ansicht von Details innerhalb des Dashboards auf einen Dienstins
 
 ![rechte Schiene](../images/insights/success-run.png)
 
->[!NOTE] In dem Ereignis, dass eine Bewertungsausführung fehlschlägt, wird eine Fehlermeldung angezeigt. Die Fehlermeldung wird unter *Letzte Ausführung Details* in der rechten Leiste aufgeführt, die nur für fehlgeschlagene Ausführung sichtbar ist.
+>[!NOTE]
+>
+>In dem Ereignis, dass eine Bewertungsausführung fehlschlägt, wird eine Fehlermeldung angezeigt. Die Fehlermeldung wird unter *Letzte Ausführung Details* in der rechten Leiste aufgeführt, die nur für fehlgeschlagene Ausführung sichtbar ist.
 
 ![fehlgeschlagene Ausführungsmeldung](../images/insights/failed-run.png)
 
@@ -85,7 +89,9 @@ Die Schaltfläche &quot; **[!UICONTROL Mehr Aktionen]** &quot;befindet sich in d
 
 Die Bewertungszusammenfassung zeigt die Gesamtanzahl der bewerteten Profil an und kategorisiert sie in Behälter mit hoher, mittlerer und niedriger Tendenz. Die Tendenzbehälter werden basierend auf dem Ergebnisbereich bestimmt, niedrig ist weniger als 24, mittel ist 25 bis 74 und hoch ist über 74. Jeder Behälter hat eine Farbe, die der Legende entspricht.
 
->[!NOTE] Wenn es sich um einen Umrechnungsneigungswert handelt, werden die hohen Werte grün und die niedrigen Werte rot angezeigt. Wenn Sie die Kürbisneigung vorhersagen, wird diese umgedreht, die hohen Werte sind in Rot und die niedrigen Werte sind grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
+>[!NOTE]
+>
+>Wenn es sich um einen Umrechnungsneigungswert handelt, werden die hohen Werte grün und die niedrigen Werte rot angezeigt. Wenn Sie die Kürbisneigung vorhersagen, wird diese umgedreht, die hohen Werte sind in Rot und die niedrigen Werte sind grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
 
 ![Bewertungszusammenfassung](../images/insights/scoring-summary.png)
 
@@ -118,7 +124,7 @@ Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;E
 
 ![Segmentfüllung](../images/insights/segment-saving.png)
 
-Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Die Seite &quot; *Durchsuchen* &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
+Um Ihr neues Segment in der Benutzeroberfläche &quot;Platform&quot;Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Die Seite &quot; *Durchsuchen* &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
 
 ![Alle Segmente](../images/insights/Segments-dashboard.png)
 
