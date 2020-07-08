@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Listen-Identitätszuordnungen
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -65,7 +65,9 @@ curl -X GET \
 
 Verwenden Sie die `POST` Methode als Batch-Entsprechung der oben beschriebenen `GET` Methode, um Zuordnungen für mehrere Identitäten abzurufen.
 
->[!NOTE] Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
+>[!NOTE]
+>
+>Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
 
 **API-Format**
 
