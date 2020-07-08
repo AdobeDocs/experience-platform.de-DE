@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erfassen von Daten aus einer Drittanbieter-Datenbank über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 2%
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
 | `connectionSpec.id` | Die Verbindungs-Spezifikations-ID der Drittanbieter-Datenbank. |
 
->[!NOTE] Achten Sie beim Erstellen einer Zielgruppe darauf, den Datenbasisverbindungswert für die Basisverbindung `id` im Gegensatz zur Basisverbindung des Drittanbieter-Quell-Connectors zu verwenden.
+>[!NOTE]
+>
+>Achten Sie beim Erstellen einer Zielgruppe darauf, den Datenbasisverbindungswert für die Basisverbindung `id` im Gegensatz zur Basisverbindung des Drittanbieter-Quell-Connectors zu verwenden.
 
 **Antwort**
 
