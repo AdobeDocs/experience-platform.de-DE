@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datenverwaltung durch Adobe Experience Platformen
 topic: overview
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 3%
@@ -64,7 +64,9 @@ Das DULE-Framework enthält vordefinierte Datenverwendungsbeschriftungen, mit de
 * **Identitäts-&quot;I&quot;-Datenbezeichnungen:** Kennzeichnen und Kategorisieren von Daten, die eine bestimmte Person identifizieren oder kontaktieren können.
 * **Sensible &quot;S&quot;-Datenbezeichnungen:** Beschriften und Kategorisieren von Daten, die mit sensiblen Daten wie geografischen Daten zusammenhängen.
 
->[!NOTE] Eine vollständige Liste der verfügbaren Beschriftungen sowie Definitionen für jeden Beschriftungstyp finden Sie im Handbuch zu den [unterstützten Datenverwendungsbezeichnungen](labels/reference.md) .
+>[!NOTE]
+>
+>Eine vollständige Liste der verfügbaren Beschriftungen sowie Definitionen für jeden Beschriftungstyp finden Sie im Handbuch zu den [unterstützten Datenverwendungsbezeichnungen](labels/reference.md) .
 
 Bezeichnungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practice fördert die Kennzeichnung von Daten, sobald diese in [!DNL Experience Platform]aufgenommen werden oder sobald Daten in verfügbar sind [!DNL Platform].
 
@@ -78,7 +80,9 @@ Ein Beispiel für eine Marketingaktion könnte der Wunsch sein, einen Datensatz 
 
 Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenmanager Richtlinien mit der API für den DUL-Policy-Dienst oder der [!DNL Experience Platform] Benutzeroberfläche erstellen.
 
->[!IMPORTANT] Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren.
+>[!IMPORTANT]
+>
+>Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren.
 
 Weitere Informationen zu Datenverwendungsrichtlinien und Marketingaktionen finden Sie in der [Richtlinienübersicht](./policies/overview.md).
 
