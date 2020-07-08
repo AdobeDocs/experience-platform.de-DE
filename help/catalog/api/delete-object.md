@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Löschen eines Objekts
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Sie können ein Katalogobjekt löschen, indem Sie dessen ID im Pfad einer DELETE-Anforderung angeben.
 
->[!WARNING] Gehen Sie beim Löschen von Objekten besonders vorsichtig vor, da dies nicht rückgängig gemacht werden kann und andernorts in der Experience Platform zu Umbrüchen führen kann.
+>[!WARNING]
+>
+>Gehen Sie beim Löschen von Objekten besonders vorsichtig vor, da dies nicht rückgängig gemacht werden kann und andernorts in der Experience Platform zu Umbrüchen führen kann.
 
 **API-Format**
 
@@ -56,4 +58,6 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein Array mit der ID des
 ]
 ```
 
->[!NOTE] Wenn keine Katalogobjekte mit der in Ihrer Anforderung angegebenen ID übereinstimmen, erhalten Sie möglicherweise trotzdem einen HTTP-Statuscode 200, aber das Antwortarray ist leer.
+>[!NOTE]
+>
+>Wenn keine Katalogobjekte mit der in Ihrer Anforderung angegebenen ID übereinstimmen, erhalten Sie möglicherweise trotzdem einen HTTP-Statuscode 200, aber das Antwortarray ist leer.
