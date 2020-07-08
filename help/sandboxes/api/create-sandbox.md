@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sandbox erstellen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 2%
@@ -44,7 +44,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Bezeichner, der für den Zugriff auf die Sandbox in zukünftigen Anforderungen verwendet wird. Dieser Wert muss eindeutig sein, und die beste Methode besteht darin, ihn so beschreibend wie möglich zu machen. Darf keine Leerzeichen oder Großbuchstaben enthalten. |
-| `title` | Ein für Menschen lesbarer Name, der für Anzeigezwecke in der Benutzeroberfläche der Plattform verwendet wird. |
+| `title` | Ein für Menschen lesbarer Name, der für Anzeigezwecke in der Benutzeroberfläche der Platform verwendet wird. |
 | `type` | Der Typ der zu erstellenden Sandbox. Derzeit können nur Sandboxen vom Typ &quot;Entwicklung&quot;von einem Unternehmen erstellt werden. |
 
 **Antwort**
@@ -61,4 +61,6 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Sandbox zurück un
 }
 ```
 
->[!NOTE] Die Bereitstellung von Sandboxen durch das System dauert etwa 15 Minuten, danach `state` werden sie &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
+>[!NOTE]
+>
+>Die Bereitstellung von Sandboxen durch das System dauert etwa 15 Minuten, danach `state` werden sie &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
