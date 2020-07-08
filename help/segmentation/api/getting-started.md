@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch für Segmentdienst
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
@@ -14,36 +14,38 @@ ht-degree: 0%
 
 # Entwicklerhandbuch für Segmentdienst
 
-Mit der Segmentierung können Sie Segmente erstellen und Audiencen in Adobe Experience Platform aus Ihren Echtzeitdaten zum Profil von Kunden generieren.
+Mit der Segmentierung können Sie Segmente erstellen und Audiencen in Adobe Experience Platform aus Ihren Echtzeit-Daten zum Profil von Kunden generieren.
 
 ## Erste Schritte
 
-Dieses Handbuch erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die mit der Segmentierung verbunden sind.
+Dieser Leitfaden erfordert ein Verständnis der verschiedenen Adobe Experience Platformen, die mit der Segmentierung verbunden sind.
 
 - [Segmentierung](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus Echtzeitdaten zum Profil von Kunden.
 - [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
 - [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Segmentierung mithilfe der API erfolgreich zu verwenden.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-Die Dokumentation zur Segmentierungsdienst-API enthält Beispiele für API-Aufrufe, die zeigen, wie Ihre Anforderungen formatiert werden. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+Die Dokumentation zur Segmentierungsdienst-API enthält Beispiele für API-Aufrufe, die zeigen, wie Ihre Anforderungen formatiert werden. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Erforderliche Kopfzeilen
 
-Die API-Dokumentation erfordert auch, dass Sie das [Authentifizierungstraining](../../tutorials/authentication.md) abgeschlossen haben, um Platform-Endpunkte erfolgreich aufrufen zu können. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Header in Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Die API-Dokumentation erfordert auch, dass Sie das [Authentifizierungstraining](../../tutorials/authentication.md) abgeschlossen haben, um Platform-Endpunkte erfolgreich aufzurufen. Wenn Sie das Authentifizierungstraining abschließen, werden die Werte für die einzelnen erforderlichen Kopfzeilen in Experience Platform API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Genehmigung: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zum Arbeiten mit Sandboxen in Experience Platform finden Sie in der Übersicht über [Sandboxes](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zum Arbeiten mit Sandboxen in der Experience Platform finden Sie in der Übersicht über [Sandboxen](../../sandboxes/home.md).
 
 <!-- ## Estimates
 
@@ -93,4 +95,4 @@ Die Segmentsuche wird verwendet, um konfigurierbare Felder, die in verschiedenen
 
 ## Nächste Schritte
 
-Um mit dem Aufrufen mithilfe der Segmentierungs-API zu beginnen, wählen Sie eines der Unterleitfäden aus, um zu erfahren, wie bestimmte segmentierungsbezogene Endpunkte verwendet werden. Weitere Informationen zum Arbeiten mit Segmenten mithilfe der Plattform-Benutzeroberfläche finden Sie im Benutzerhandbuch [zur Segmentierung](../ui/overview.md).
+Um mit dem Aufrufen mithilfe der Segmentierungs-API zu beginnen, wählen Sie eines der Unterleitfäden aus, um zu erfahren, wie bestimmte segmentierungsbezogene Endpunkte verwendet werden. Weitere Informationen zum Arbeiten mit Segmenten mithilfe der Benutzeroberfläche &quot;Platform&quot;finden Sie im Benutzerhandbuch [zur Segmentierung](../ui/overview.md).
