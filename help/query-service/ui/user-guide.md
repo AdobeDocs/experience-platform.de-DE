@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Handbuch zu Adobe Experience Platform Abfrage Service Abfrage Editor
+title: Handbuch zur Adobe Experience Platform Abfrage Service Abfrage Editor
 topic: query editor
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Abfrage Editor-Benutzerhandbuch
 
-Abfrage Editor ist ein interaktives Tool des Adobe Experience Platform Abfrage Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, überprüfen und ausführen können. Abfrage Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenforschung und ermöglicht Ihnen, interaktive Abfragen zu Entwicklungszwecken sowie nicht interaktive Abfragen zum Ausfüllen von Datensätzen in Experience Platform auszuführen.
+Abfrage Editor ist ein interaktives Tool des Adobe Experience Platform Abfrage Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Benutzeroberfläche der Experience Platform schreiben, validieren und ausführen können. Abfrage Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenforschung und ermöglicht Ihnen, interaktive Abfragen zu Entwicklungszwecken sowie nicht interaktive Abfragen zum Ausfüllen von Datensätzen in der Experience Platform auszuführen.
 
-Weitere Informationen zu Konzepten und Funktionen von Abfrage Service finden Sie in der Übersicht über den [Abfrage Service][query-service-overview]. Weitere Informationen zum Navigieren in der Benutzeroberfläche des Abfrage-Diensts auf der Plattform finden Sie in der Übersicht über die Benutzeroberfläche des [Abfrage-Diensts][query-service-ui].
+Weitere Informationen zu Konzepten und Funktionen von Abfrage Service finden Sie in der Übersicht über den [Abfrage Service][query-service-overview]. Weitere Informationen zum Navigieren in der Benutzeroberfläche des Abfrage Service auf Platform finden Sie in der Übersicht über die Benutzeroberfläche des [Abfrage-Dienstes][query-service-ui].
 
 ## Erste Schritte
 
@@ -38,7 +38,7 @@ Mit dem Abfrage Editor können Sie Abfragen für Kundenerlebnisdaten schreiben, 
 
 ### Zugriff auf Abfrage Editor
 
-Klicken Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsmenü auf **Abfragen** , um den Arbeitsbereich &quot;Abfrage-Dienst&quot;zu öffnen. Klicken Sie dann oben rechts auf dem Bildschirm auf Abfrage **** erstellen, um Abfragen zu schreiben. Dieser Link ist auf allen Seiten des Arbeitsbereichs &quot;Abfrage-Dienst&quot;verfügbar.
+Klicken Sie in der Benutzeroberfläche &quot;Experience Platform&quot;im linken Navigationsmenü auf **Abfragen** , um den Arbeitsbereich &quot;Abfrage-Dienst&quot;zu öffnen. Klicken Sie dann oben rechts auf dem Bildschirm auf Abfrage **** erstellen, um Abfragen zu schreiben. Dieser Link ist auf allen Seiten des Arbeitsbereichs &quot;Abfrage-Dienst&quot;verfügbar.
 
 ![Bild](../images/queries/query-editor-overview/create-query.png)
 
@@ -80,7 +80,7 @@ Während Sie eine Abfrage im Abfragen-Editor anzeigen, stehen Ihnen im Bedienfel
 
 ![Bild](../images/queries/query-editor-overview/query-details.png)
 
-In diesem Bedienfeld können Sie ein Ausgabedataset direkt aus der Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und den SQL-Code auf der Registerkarte &quot; *SQL-Abfrage* &quot;in einem leicht zu kopierenden Format Ansicht geben. In diesem Bedienfeld werden auch nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie ggf. geändert hat. Um einen Datensatz zu erstellen, klicken Sie auf **Ausgabedatensatz**. Das Dialogfeld &quot; *Ausgabedatensatz* &quot;wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und klicken Sie dann auf Abfrage **ausführen**. Der neue Datensatz wird in der Benutzeroberfläche des Abfrage-Dienstes auf der Plattform auf der Registerkarte &quot; *Datensätze* &quot;angezeigt.
+In diesem Bedienfeld können Sie ein Ausgabedataset direkt aus der Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und den SQL-Code auf der Registerkarte &quot; *SQL-Abfrage* &quot;in einem leicht zu kopierenden Format Ansicht geben. In diesem Bedienfeld werden auch nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie ggf. geändert hat. Um einen Datensatz zu erstellen, klicken Sie auf **Ausgabedatensatz**. Das Dialogfeld &quot; *Ausgabedatensatz* &quot;wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und klicken Sie dann auf Abfrage **ausführen**. Der neue Datensatz wird in der Benutzeroberfläche des Abfrage-Dienstes auf der Platform auf der Registerkarte &quot; *Datensätze* &quot;angezeigt.
 
 ### Speichern von Abfragen
 
@@ -92,7 +92,9 @@ Alle vom Abfrage Editor ausgeführten Abfragen werden in der Tabelle &quot;Proto
 
 Weitere Informationen finden Sie in der Übersicht über die Benutzeroberfläche des [Abfrage-Dienstes][query-service-ui] .
 
->[!NOTE] Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage im Abfrage-Dienst verfügbar ist, muss sie im Abfrage-Editor ausgeführt oder gespeichert werden.
+>[!NOTE]
+>
+>Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage im Abfrage-Dienst verfügbar ist, muss sie im Abfrage-Editor ausgeführt oder gespeichert werden.
 
 ## Ausführen von Abfragen mit dem Abfrage Editor
 
@@ -104,7 +106,9 @@ Die Konsole bietet Informationen zum Status und zum Betrieb des Abfrage Service.
 
 ![Bild](../images/queries/query-editor-overview/console.png)
 
->[!NOTE] Die Konsole zeigt nur Fehler an, die beim Ausführen einer Abfrage aufgetreten sind. Es werden keine Fehler bei der Überprüfung der Abfrage angezeigt, bevor eine Abfrage ausgeführt wird.
+>[!NOTE]
+>
+>Die Konsole zeigt nur Fehler an, die beim Ausführen einer Abfrage aufgetreten sind. Es werden keine Fehler bei der Überprüfung der Abfrage angezeigt, bevor eine Abfrage ausgeführt wird.
 
 ### Abfragen
 
@@ -114,7 +118,7 @@ Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte &quot; 
 
 ## Nächste Schritte
 
-Nachdem Sie wissen, welche Funktionen im Abfrage Editor verfügbar sind und wie Sie in der Anwendung navigieren, können Sie Beginn erstellen, Ihre eigenen Abfragen direkt in Platform. Weitere Informationen zum Ausführen von SQL-Abfragen für Datasets in Data Lake finden Sie im Handbuch zu [laufenden Abfragen][query-service-running-queries]. Beispiele für SQL-Abfragen für die Verwendung von Adobe Analytics- und Adobe-Zielgruppen finden Sie im [Beispiel für Abfragen-Referenz][query-service-sample-queries].
+Nachdem Sie wissen, welche Funktionen im Abfrage Editor zur Verfügung stehen und wie Sie in der Anwendung navigieren, können Sie Beginn erstellen, die Ihre eigenen Abfragen direkt in der Platform erstellen. Weitere Informationen zum Ausführen von SQL-Abfragen für Datasets in Data Lake finden Sie im Handbuch zu [laufenden Abfragen][query-service-running-queries]. Beispiel-SQL-Abfragen für die Verwendung von Adobe Analytics- und Adobe Target-Daten finden Sie in der [Abfragen-Referenz][query-service-sample-queries].
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
