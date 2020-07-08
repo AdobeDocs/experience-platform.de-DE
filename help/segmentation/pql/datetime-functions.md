@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datums- und Uhrzeitfunktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 4%
@@ -147,7 +147,9 @@ Die `occurs` Funktion kann in einem der folgenden Formate geschrieben werden:
 | `{DIRECTION}` | Eine Präposition, die beschreibt, wann das Datum mit dem Datum zu vergleichen ist. Kann eines der folgenden Wörter sein: `before`, `after`, `from`. |
 | `{TIME}` | Kann ein Zeitstempelliteral (`today`, `now`, `yesterday`, `tomorrow`), eine relative Zeiteinheit (eine von `this`, `last`oder `next` gefolgt von einer Zeiteinheit) oder ein Zeitstempelattribut sein. |
 
->[!NOTE] Die Verwendung des Wortes `on` ist optional. Es ist da, um die Lesbarkeit für einige Kombinationen zu verbessern, wie `timestamp occurs on date(2019,12,31)`.
+>[!NOTE]
+>
+>Die Verwendung des Wortes `on` ist optional. Es ist da, um die Lesbarkeit für einige Kombinationen zu verbessern, wie `timestamp occurs on date(2019,12,31)`.
 
 **Beispiel**
 
