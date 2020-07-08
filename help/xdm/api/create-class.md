@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Klasse erstellen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -16,9 +16,11 @@ ht-degree: 0%
 
 Der Hauptbaustein eines Schemas ist eine Klasse. Die Klasse enthält den Mindestfeldsatz, der definiert werden muss, um die Kerndaten eines Schemas zu erfassen. Wenn Sie beispielsweise ein Schema für Pkw und Lkw entwerfen, würden sie höchstwahrscheinlich eine Klasse namens &quot;Vehicle&quot;verwenden, die die grundlegenden gemeinsamen Eigenschaften aller Fahrzeuge beschreibt.
 
-Es gibt mehrere Standardklassen, die von Adobe und anderen Experience Platform-Partnern bereitgestellt werden. Sie können jedoch auch eigene Klassen definieren und diese in der Schema-Registrierung speichern. Anschließend können Sie ein Schema zusammenstellen, das die von Ihnen erstellte Klasse implementiert, und Mixins definieren, die mit Ihrer neu definierten Klasse kompatibel sind.
+Es gibt mehrere Standardklassen, die von Adobe und anderen Experience Platformen-Partnern bereitgestellt werden. Sie können jedoch auch eigene Klassen definieren und diese in der Schema-Registrierung speichern. Anschließend können Sie ein Schema zusammenstellen, das die von Ihnen erstellte Klasse implementiert, und Mixins definieren, die mit Ihrer neu definierten Klasse kompatibel sind.
 
->[!NOTE] Beim Erstellen eines Schemas, das auf einer von Ihnen definierten Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jede Mixin definiert die Klassen, mit denen sie in ihrem `meta:intendedToExtend` Attribut kompatibel sind. Sobald Sie beginnen, Mixins zu definieren, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung `$id` der neuen Klasse im `meta:intendedToExtend` Bereich des mixins), können Sie diese Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten zum [Erstellen von Mixins](create-mixin.md) und [Erstellen von Schemas](create-schema.md) .
+>[!NOTE]
+>
+>Beim Erstellen eines Schemas, das auf einer von Ihnen definierten Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jede Mixin definiert die Klassen, mit denen sie in ihrem `meta:intendedToExtend` Attribut kompatibel sind. Sobald Sie beginnen, Mixins zu definieren, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung `$id` der neuen Klasse im `meta:intendedToExtend` Bereich des mixins), können Sie diese Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten zum [Erstellen von Mixins](create-mixin.md) und [Erstellen von Schemas](create-schema.md) .
 
 **API-Format**
 
