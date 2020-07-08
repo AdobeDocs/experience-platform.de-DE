@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motoren
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,6 +44,8 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihrer Docker-Registrierung einschließlich der Docker-URL (`host`), dem Benutzernamen (`username`) und dem Kennwort (`password`) enthält.
 
 >[!NOTE]
+>
+>
 >Ihr Docker-Kennwort ändert sich, sobald Ihr `{ACCESS_TOKEN}` aktualisiert wird.
 
 ```json
@@ -383,7 +385,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details der gewünschten En
 
 Sie können eine vorhandene Engine ändern und aktualisieren, indem Sie ihre Eigenschaften durch eine PUT-Anforderung überschreiben, die die ID der Zielgruppe Engine im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
 
->[!NOTE] Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum [Abrufen der Engine nach ID](#retrieve-specific)auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
+>[!NOTE]
+>
+>Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum [Abrufen der Engine nach ID](#retrieve-specific)auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen und die Beschreibung einer Engine, während diese Eigenschaften zunächst verwendet werden:
 
