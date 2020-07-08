@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zuordnungsfeld für Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Zuordnungsfelder für Audience Manager
 
-Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in Adobe Audience Manager-Daten (Echtzeit-, Onboarded- und Profil-Daten) und den zugehörigen XDM-Feldern.
+Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Adobe Audience Manager-Daten (Echtzeit-, Onboarded- und Profil-Daten) und den zugehörigen XDM-Feldern.
 
 Weitere Informationen zu den einzelnen XDM-Feldern finden Sie im [XDM-Feldwörterbuch](../../../../xdm/schema/field-dictionary.md) .
 
@@ -50,7 +50,9 @@ Typ: ExperienceEvent
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] Eingehende Felder werden in einer zukünftigen Version als veraltet geplant.
+>[!NOTE]
+>
+>Eingehende Felder werden in einer zukünftigen Version als veraltet geplant.
 
 ## Profil
 
