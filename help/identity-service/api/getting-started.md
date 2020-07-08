@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erste Schritte
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 1%
@@ -42,7 +42,9 @@ Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sand
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -61,7 +63,9 @@ Die nachstehende Tabelle zeigt Beispielpfade mit Regionen:
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
->[!NOTE] Anforderungen, die ohne Angabe einer Region ausgeführt werden, können dazu führen, dass Routing an die falsche Region gesendet werden oder dass Aufrufe unerwartet fehlschlagen.
+>[!NOTE]
+>
+>Anforderungen, die ohne Angabe einer Region ausgeführt werden, können dazu führen, dass Routing an die falsche Region gesendet werden oder dass Aufrufe unerwartet fehlschlagen.
 
 Wenn Sie die Region nicht in Ihrem IMS Org-Profil finden können, wenden Sie sich bitte an Ihren Systemadministrator.
 
@@ -77,7 +81,9 @@ Um die Nutzlast in Antworten zu begrenzen, passen APIs ihre Antworten an den ver
 
 Die Beispiele in diesem Dokument decken nicht die gesamte Funktionalität der [!DNL Identity Service] API ab. Die vollständige API finden Sie in der [Swagger API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
 
->[!NOTE] Alle zurückgegebenen Identitäten werden im nativen XID-Formular zurückgegeben, wenn in der Anforderung native XID verwendet wird. Es wird empfohlen, das Formular ID/Namensraum zu verwenden. Weitere Informationen finden Sie im Abschnitt zum [Abrufen der XID für eine Identität](./create-custom-namespace.md).
+>[!NOTE]
+>
+>Alle zurückgegebenen Identitäten werden im nativen XID-Formular zurückgegeben, wenn in der Anforderung native XID verwendet wird. Es wird empfohlen, das Formular ID/Namensraum zu verwenden. Weitere Informationen finden Sie im Abschnitt zum [Abrufen der XID für eine Identität](./create-custom-namespace.md).
 
 ## Nächste Schritte
 
