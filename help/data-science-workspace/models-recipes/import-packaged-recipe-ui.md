@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verpacktes Rezept importieren (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -35,7 +35,9 @@ Der Arbeitsablauf zum Importieren eines Paketrezepts besteht aus den folgenden S
 
 Jede Rezept-Instanz in [!DNL Data Science Workspace] wird mit einer Reihe von Konfigurationen begleitet, die die Rezept-Instanz an einen bestimmten Anwendungsfall anpassen. Konfigurationsdateien definieren die standardmäßigen Schulungs- und Bewertungsmethoden eines mit dieser Skriptinstanz erstellten Modells.
 
->[!NOTE] Konfigurationsdateien sind Rezept- und Fallspezifisch.
+>[!NOTE]
+>
+>Konfigurationsdateien sind Rezept- und Fallspezifisch.
 
 Im Folgenden finden Sie eine Beispielkonfigurationsdatei mit standardmäßigen Trainings- und Bewertungsverhaltensweisen für das Rezept Einzelhandel.
 
@@ -148,7 +150,7 @@ Klicken Sie im Abschnitt *Funktionsverwaltung* auf Ihre Pachtnummer im Schema-Vi
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, wie Sie ein Modell mit dem neu erstellten Vertriebsrezept [!DNL Data Science Workspace] erstellen.
+Fahren Sie mit den [nächsten Schritten](#next-steps) fort, um herauszufinden, wie ein Modell mit dem neu erstellten Vertriebsrezept [!DNL Data Science Workspace] für Einzelhändler erstellt wird.
 
 ### Dockerbasiertes Rezept importieren - R {#r}
 
