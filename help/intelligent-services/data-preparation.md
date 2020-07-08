@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 1%
@@ -82,7 +82,9 @@ Dieses Feld gibt den Zeitpunkt an, zu dem das Ereignis aufgetreten ist. Dieser W
 
 #### xdm:Kanal {#channel}
 
->[!NOTE] Dieses Feld ist nur bei Verwendung von Attribution AI obligatorisch.
+>[!NOTE]
+>
+>Dieses Feld ist nur bei Verwendung von Attribution AI obligatorisch.
 
 Dieses Feld stellt den Marketing-Kanal im Zusammenhang mit dem ExperienceEvent dar. Das Feld enthält Informationen zum Typ des Kanals, Medientyp und Standort.
 
@@ -110,7 +112,7 @@ Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem `xd
 | Paid Search | https:/<span>/ns.adobe.com/xdm/Kanal-types/search | bezahlt | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/Kanal-types/social | verdient | clicks |
 | Anzeigen | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | clicks |
-| E-Mail  | https:/<span>/ns.adobe.com/xdm/Kanal-types/email | bezahlt | clicks |
+| E-Mail | https:/<span>/ns.adobe.com/xdm/Kanal-types/email | bezahlt | clicks |
 | Interner Werber | https:/<span>/ns.adobe.com/xdm/Kanal-types/direct | besetzt | clicks |
 | Display ViewThrough | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | impressions |
 | QR-Codeumleitung | https:/<span>/ns.adobe.com/xdm/Kanal-types/direct | besetzt | clicks |
@@ -245,7 +247,9 @@ Wenn Sie ein [!DNL Adobe Experience Platform] Abonnement haben und die Daten sel
 
 ### Adobe Experience Platform verwenden
 
->[!NOTE] Die folgenden Schritte erfordern ein Abonnement zur Experience Platform. Wenn Sie keinen Zugriff auf die Platform haben, fahren Sie mit den [nächsten Schritten](#next-steps) fort.
+>[!NOTE]
+>
+>Die folgenden Schritte erfordern ein Abonnement zur Experience Platform. Wenn Sie keinen Zugriff auf die Platform haben, fahren Sie mit den [nächsten Schritten](#next-steps) fort.
 
 In diesem Abschnitt wird der Arbeitsablauf für die Zuordnung und Erfassung von Daten zur Experience Platform für die Verwendung in Intelligent Services beschrieben, einschließlich Links zu Schulungen für detaillierte Schritte.
 
@@ -256,7 +260,9 @@ Wenn Sie bereit sind, Ihre Daten für die Erfassung vorzubereiten, müssen Sie z
 * [Erstellen eines Schemas in der Benutzeroberfläche](../xdm/tutorials/create-schema-ui.md)
 * [Erstellen eines Schemas in der API](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] Die oben stehenden Lernprogramme folgen einem allgemeinen Arbeitsablauf zum Erstellen eines Schemas. Bei der Auswahl einer Klasse für das Schema müssen Sie die **XDM ExperienceEvent-Klasse** verwenden. Nachdem diese Klasse ausgewählt wurde, können Sie das CEE-Mixin dem Schema hinzufügen.
+>[!IMPORTANT]
+>
+>Die oben stehenden Lernprogramme folgen einem allgemeinen Arbeitsablauf zum Erstellen eines Schemas. Bei der Auswahl einer Klasse für das Schema müssen Sie die **XDM ExperienceEvent-Klasse** verwenden. Nachdem diese Klasse ausgewählt wurde, können Sie das CEE-Mixin dem Schema hinzufügen.
 
 Nachdem Sie das CEE-Mixin zum Schema hinzugefügt haben, können Sie je nach Bedarf weitere Mixins in Ihre Daten einfügen.
 
@@ -271,7 +277,9 @@ Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche
 
 #### Hinzufügen eines primären Identitäts-Namensraum-Tags zum Dataset
 
->[!NOTE] In zukünftigen Versionen von Intelligent Services wird der Identitätsdienst für [Adobe Experience Platformen](../identity-service/home.md) in die Kundenidentifizierungsfunktionen integriert. Die unten aufgeführten Schritte können sich daher ändern.
+>[!NOTE]
+>
+>In zukünftigen Versionen von Intelligent Services wird der Identitätsdienst für [Adobe Experience Platformen](../identity-service/home.md) in die Kundenidentifizierungsfunktionen integriert. Die unten aufgeführten Schritte können sich daher ändern.
 
 Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]oder einer anderen externen Quelle einreichen, müssen Sie dem Datensatz ein `primaryIdentityNameSpace` -Tag hinzufügen. Dies kann durch eine PATCH-Anforderung an die Katalogdienst-API erfolgen.
 
@@ -329,7 +337,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in der Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+>[!NOTE]
+>
+>Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in der Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
 
 **Antwort**
 
