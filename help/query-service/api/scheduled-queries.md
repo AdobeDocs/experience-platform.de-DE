@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch für Abfrage Service
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 3%
@@ -217,7 +217,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer
 }
 ```
 
->[!NOTE] Sie können den Wert von verwenden, `_links.delete` um Ihre erstellte geplante Abfrage [zu](#delete-a-specified-scheduled-query)löschen.
+>[!NOTE]
+>
+>Sie können den Wert von verwenden, `_links.delete` um Ihre erstellte geplante Abfrage [zu](#delete-a-specified-scheduled-query)löschen.
 
 ### Details zu einer bestimmten geplanten Abfrage anfordern
 
@@ -298,7 +300,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur angegebenen gepla
 }
 ```
 
->[!NOTE] Sie können den Wert von verwenden, `_links.delete` um Ihre erstellte geplante Abfrage [zu](#delete-a-specified-scheduled-query)löschen.
+>[!NOTE]
+>
+>Sie können den Wert von verwenden, `_links.delete` um Ihre erstellte geplante Abfrage [zu](#delete-a-specified-scheduled-query)löschen.
 
 ### Details zu einer bestimmten geplanten Abfrage aktualisieren
 
@@ -413,7 +417,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit der folgenden Me
 
 Sie können eine angegebene geplante Abfrage löschen, indem Sie eine DELETE-Anforderung an den `/schedules` Endpunkt senden und die ID der geplanten Abfrage angeben, die Sie im Anforderungspfad löschen möchten.
 
->[!NOTE] Der Zeitplan **muss** vor dem Löschen deaktiviert werden.
+>[!NOTE]
+>
+>Der Zeitplan **muss** vor dem Löschen deaktiviert werden.
 
 **API-Format**
 
