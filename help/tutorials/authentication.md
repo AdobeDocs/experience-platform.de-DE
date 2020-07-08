@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Authentifizierung und Zugriff auf Experience Platform-APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 280456e68f54f49ce4a0134e226af89ad1f849a4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '877'
 ht-degree: 3%
@@ -69,7 +69,9 @@ Ihr Produktadministrator muss Sie auch als Admin Console hinzufügen.
 
 ## Erstellen von Zugriffsberechtigungen in der Adobe Developer Console
 
->[!NOTE] Wenn Sie diesem Dokument im [Privacy Service-Entwicklerhandbuch](../privacy-service/api/getting-started.md)folgen, können Sie jetzt zu diesem Handbuch zurückkehren, um die Zugriffsberechtigungen für Privacy Service zu generieren.
+>[!NOTE]
+>
+>Wenn Sie diesem Dokument im [Privacy Service-Entwicklerhandbuch](../privacy-service/api/getting-started.md)folgen, können Sie jetzt zu diesem Handbuch zurückkehren, um die Zugriffsberechtigungen für Privacy Service zu generieren.
 
 Mit Adobe Developer Console müssen Sie die folgenden drei Zugriffsberechtigungen generieren:
 
@@ -83,7 +85,7 @@ Die Schritte werden nachfolgend detailliert beschrieben.
 
 ### Einmalige Einrichtung
 
-Wechseln Sie zur [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) und melden Sie sich bei Ihrer Adobe ID an. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
+Rufen Sie die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) auf und melden Sie sich bei Ihrer Adobe ID an. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
 
 Nachdem Sie ein neues Projekt erstellt haben, klicken Sie im Bildschirm &quot; **[!UICONTROL Projektübersicht]** &quot;auf _Hinzufügen API_ .
 
