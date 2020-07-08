@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Daten mit APIs exportieren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 1%
@@ -20,26 +20,28 @@ Neben der Erstellung eines Exportauftrags können Sie auch über die Profil Acce
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die beim Arbeiten mit Profil-Daten erforderlich sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Adobe Experience Platformen, die mit der Arbeit mit Profil-Daten befasst sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [Adobe Experience Platform Segmentation Service](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus Echtzeitdaten zum Profil von Kunden.
-- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
-- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ### Erforderliche Kopfzeilen
 
-Für dieses Lernprogramm müssen Sie außerdem das [Authentifizierungstraining](../../tutorials/authentication.md) abgeschlossen haben, um Platform-APIs erfolgreich aufzurufen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Für dieses Lernprogramm müssen Sie außerdem das [Authentifizierungstraining](../../tutorials/authentication.md) abgeschlossen haben, um erfolgreich Platform-APIs aufzurufen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Anforderungen an Plattform-APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang stattfindet:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Anforderungen an Platform-APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle POST-, PUT- und PATCH-Anforderungen ist ein zusätzlicher Header erforderlich:
 
@@ -47,7 +49,7 @@ Für alle POST-, PUT- und PATCH-Anforderungen ist ein zusätzlicher Header erfor
 
 ## Erstellen eines Exportauftrags
 
-Für das Exportieren von Profil-Daten muss zunächst ein Datensatz erstellt werden, in den die Daten exportiert werden, und dann ein neuer Exportauftrag initiiert werden. Beide Schritte können mit Experience Platform-APIs durchgeführt werden, wobei erstere die Catalog Service API und letztere die Real-time Customer Profil API verwenden. Detaillierte Anweisungen zum Abschluss der einzelnen Schritte finden Sie in den folgenden Abschnitten.
+Für das Exportieren von Profil-Daten muss zunächst ein Datensatz erstellt werden, in den die Daten exportiert werden, und dann ein neuer Exportauftrag initiiert werden. Beide Schritte können mit Experience Platform-APIs durchgeführt werden, wobei erstere die Katalogdienst-API und letztere die Echtzeit-Customer-Profil-API verwenden. Detaillierte Anweisungen zum Abschluss der einzelnen Schritte finden Sie in den folgenden Abschnitten.
 
 - [Zielgruppe-Datensatz](#create-a-target-dataset) erstellen - Erstellen Sie einen Datensatz, der exportierte Daten enthält.
 - [Einen neuen Exportauftrag](#initiate-export-job) starten: Füllen Sie den Datensatz mit den Daten des individuellen XDM-Profils.
@@ -58,7 +60,7 @@ Beim Exportieren von Profil-Daten muss zunächst ein Zielgruppe-Datensatz erstel
 
 Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der unten stehenden API-Musteranforderung). Um ein Segment zu exportieren, muss der Datensatz auf dem XDM Individual Profil Vereinigung Schema (`https://ns.adobe.com/xdm/context/profile__union`) basieren. Ein Vereinigung-Schema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas, die dieselbe Klasse besitzen, Aggregat gibt, in diesem Fall die XDM-Klasse Individuelles Profil. Weitere Informationen zu Schemas der Vereinigung Ansicht finden Sie im Abschnitt zum [Echtzeit-Kundenmanagement im Schema Registry-Entwicklerhandbuch](../../xdm/schema/composition.md#union).
 
-In den folgenden Schritten wird beschrieben, wie Sie ein Dataset erstellen, das auf das Schema zur Vereinigung einzelner XDM-Profil mithilfe der Katalog-API verweist. Sie können auch die Benutzeroberfläche von Adobe Experience Platform verwenden, um einen Datensatz zu erstellen, der auf das Schema der Vereinigung verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden in [diesem UI-Lernprogramm zum Exportieren von Segmenten](./create-dataset-export-segment.md) beschrieben, aber auch hier. Nach Abschluss können Sie zu diesem Lernprogramm zurückkehren, um mit den Schritten zum [Starten eines neuen Exportauftrags](#initiate-export-job)fortzufahren.
+In den folgenden Schritten wird beschrieben, wie Sie ein Dataset erstellen, das auf das Schema zur Vereinigung einzelner XDM-Profil mithilfe der Katalog-API verweist. Sie können auch die Benutzeroberfläche &quot;Adobe Experience Platform&quot;verwenden, um einen Datensatz zu erstellen, der auf das Schema &quot;Vereinigung&quot;verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden in [diesem UI-Lernprogramm zum Exportieren von Segmenten](./create-dataset-export-segment.md) beschrieben, aber auch hier. Nach Abschluss können Sie zu diesem Lernprogramm zurückkehren, um mit den Schritten zum [Starten eines neuen Exportauftrags](#initiate-export-job)fortzufahren.
 
 Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen ID kennen, können Sie direkt mit dem Schritt zum [Initiieren eines neuen Exportauftrags](#initiate-export-job)fortfahren.
 
@@ -197,7 +199,9 @@ curl -X POST \
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
 | `evaluationInfo.segmentation` | *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig auf `false`. Der Wert `true` gibt an, dass die Segmentierung für den Exportauftrag durchgeführt werden muss. |
 
->[!NOTE] Um nur Profil-Daten zu exportieren und keine zugehörigen ExperienceEvent-Daten einzuschließen, entfernen Sie das Objekt &quot;additionalFields&quot;aus der Anforderung.
+>[!NOTE]
+>
+>Um nur Profil-Daten zu exportieren und keine zugehörigen ExperienceEvent-Daten einzuschließen, entfernen Sie das Objekt &quot;additionalFields&quot;aus der Anforderung.
 
 **Antwort**
 
@@ -529,7 +533,7 @@ curl -X GET \
 
 ## Abbrechen eines Exportauftrags
 
-Mit Experience Platform können Sie einen vorhandenen Exportauftrag stornieren. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Exportauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängen geblieben ist. Um einen Exportauftrag abzubrechen, können Sie eine DELETE-Anforderung an den `/export/jobs` Endpunkt ausführen und die Angabe `id` des Exportauftrags, den Sie abbrechen möchten, in den Anforderungspfad einschließen.
+Mit der Experience Platform können Sie einen vorhandenen Exportauftrag stornieren. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Exportauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängen geblieben ist. Um einen Exportauftrag zu stornieren, können Sie eine DELETE-Anforderung an den `/export/jobs` Endpunkt ausführen und die Angabe `id` des Exportauftrags, den Sie stornieren möchten, in den Anforderungspfad aufnehmen.
 
 **API-Format**
 
@@ -558,7 +562,7 @@ Bei einer erfolgreichen Löschanforderung werden HTTP-Status 204 (Kein Inhalt) u
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Exports sind Ihre Daten in der Experience Platform &quot;Data Lake in Experience Platform&quot;verfügbar. Sie können dann mit der [Datenzugriff-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` Datei verwenden. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
+Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake in der Experience Platform verfügbar. Sie können dann mit der [Datenzugriff-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` Datei verwenden. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Zugriff auf und Herunterladen von Stapeldateien mit der Datenzugriff-API finden Sie im Lernprogramm [Datenzugriff](../../data-access/tutorials/dataset-data.md).
 
