@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Kundensegmente mit prognostizierten Werten erstellen
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 52%
@@ -16,7 +16,9 @@ ht-degree: 52%
 
 Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Die Anreicherung von Profilen mit Kundentreuewerten ermöglicht die Erstellung von Kundensegmenten, um Audiencen anhand ihrer Tendenzwerte zu finden. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit Segment Builder beschrieben. Eine genauere Anleitung zum Erstellen von Segmenten finden Sie im [Segment Builder-Benutzerhandbuch](../../../segmentation/tutorials/create-a-segment.md).
 
->[!IMPORTANT] Um diese Methode verwenden zu können, muss Echtzeit-Kundendaten-Profil für den Datensatz aktiviert werden.
+>[!IMPORTANT]
+>
+>Um diese Methode verwenden zu können, muss Echtzeit-Kundendaten-Profil für den Datensatz aktiviert werden.
 
 Klicken Sie in der Benutzeroberfläche von Platform im linken Navigationsbereich auf **[!UICONTROL Segmente]** und dann auf **[!UICONTROL Segment erstellen]**.
 
