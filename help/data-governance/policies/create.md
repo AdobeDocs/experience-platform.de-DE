@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Eine Datenverwendungsrichtlinie erstellen
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 3%
@@ -217,7 +217,9 @@ Dieser Ausdruck wird als **Policy-Ausdruck** bezeichnet und ist ein Objekt, das 
 }
 ```
 
->[!NOTE] Nur OR- und AND-Operatoren werden unterstützt.
+>[!NOTE]
+>
+>Nur OR- und AND-Operatoren werden unterstützt.
 
 Nachdem Sie Ihren Policy Ausdruck konfiguriert haben, können Sie eine neue DULE-Richtlinie erstellen, indem Sie eine POST-Anforderung an den `/policies/custom` Endpunkt senden.
 
@@ -322,7 +324,9 @@ Zeichnen Sie die URI-ID der neu erstellten DUL-Richtlinie auf, wie sie im nächs
 
 ## DULE-Richtlinie aktivieren
 
->[!NOTE] Dieser Schritt ist zwar optional, wenn Sie Ihre DULE-Richtlinie im `DRAFT` Status belassen möchten, beachten Sie jedoch, dass für eine Richtlinie der Status standardmäßig auf festgelegt sein muss, damit sie an der Auswertung teilnimmt. `ENABLED` Informationen zum Ausnehmen von Ausnahmen für Richtlinien im [Status finden Sie im Lernprogramm zum](../enforcement/api-enforcement.md) Erzwingen von DULE-Richtlinien `DRAFT` .
+>[!NOTE]
+>
+>Dieser Schritt ist zwar optional, wenn Sie Ihre DULE-Richtlinie im `DRAFT` Status belassen möchten, beachten Sie jedoch, dass für eine Richtlinie der Status standardmäßig auf festgelegt sein muss, damit sie an der Auswertung teilnimmt. `ENABLED` Informationen zum Ausnehmen von Ausnahmen für Richtlinien im [Status finden Sie im Lernprogramm zum](../enforcement/api-enforcement.md) Erzwingen von DULE-Richtlinien `DRAFT` .
 
 Standardmäßig beteiligen sich DULE-Richtlinien, deren `status` Eigenschaft auf &quot; `DRAFT` nicht bewerten&quot;eingestellt ist. Sie können Ihre Richtlinie zur Evaluierung aktivieren, indem Sie eine PATCH-Anforderung an den `/policies/custom/` Endpunkt senden und die eindeutige Kennung für die Richtlinie am Ende des Anforderungspfads angeben.
 
