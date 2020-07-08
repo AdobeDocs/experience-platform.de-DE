@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLab-Benutzerhandbuch
 topic: Overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3647'
 ht-degree: 11%
@@ -33,7 +33,9 @@ In der folgenden Liste werden einige der Funktionen erläutert, die für Jupyter
 | **Entwicklungsbibliotheken** | In [!DNL Experience Platform]bietet [!DNL JupyterLab] vorinstallierte Bibliotheken für [!DNL Python], R und PySpark. Eine vollständige Liste der unterstützten Bibliotheken finden Sie im [Anhang](#supported-libraries) . |
 | **Bibliothekscontroller** | Wenn die vorinstallierten Bibliotheken Ihren Anforderungen nicht entsprechen, können zusätzliche Bibliotheken für Python und R installiert und vorübergehend in isolierten Containern gespeichert werden, um die Datenintegrität zu wahren [!DNL Platform] und die Datensicherheit zu gewährleisten. Weitere Informationen finden Sie im Abschnitt [Kernels](#kernels) . |
 
->[!NOTE] Zusätzliche Bibliotheken sind nur für die Sitzung verfügbar, in der sie installiert wurden. Sie müssen alle zusätzlichen Bibliotheken, die Sie benötigen, neu installieren, wenn Sie neue Sitzungen starten.
+>[!NOTE]
+>
+>Zusätzliche Bibliotheken sind nur für die Sitzung verfügbar, in der sie installiert wurden. Sie müssen alle zusätzlichen Bibliotheken, die Sie benötigen, neu installieren, wenn Sie neue Sitzungen starten.
 
 ## Integration in andere [!DNL Platform] Dienste {#service-integration}
 
@@ -44,7 +46,9 @@ Normung und Interoperabilität sind Schlüsselkonzepte [!DNL Experience Platform
 * **[!DNL Sensei ML Framework]:**Modellentwicklung mit der Möglichkeit, Daten zu trainieren und zu bewerten, sowie Rezepterstellung mit einem Klick.
 * **[!DNL Experience Data Model (XDM)]:**Normung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform.[Das von Adobe unterstützte Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en)ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
->[!NOTE] Einige [!DNL Platform] Dienstintegrationen auf [!DNL JupyterLab] sind auf bestimmte Kernels beschränkt. Weitere Informationen finden Sie im Abschnitt zu [Kerneln](#kernels) .
+>[!NOTE]
+>
+>Einige [!DNL Platform] Dienstintegrationen auf [!DNL JupyterLab] sind auf bestimmte Kernels beschränkt. Weitere Informationen finden Sie im Abschnitt zu [Kerneln](#kernels) .
 
 ## Wichtige Funktionen und allgemeine Vorgänge
 
@@ -598,6 +602,8 @@ timedf.show()
 ```
 
 >[!TIP]
+>
+>
 >In Scala können Sie einen Wert deklarieren und `sys.env()` von innen zurückgeben `option`. Dadurch müssen Variablen nicht mehr definiert werden, wenn Sie wissen, dass sie nur einmal verwendet werden. Das folgende Beispiel nimmt `val userToken` das oben stehende Beispiel und deklariert es als Alternative in &quot;in&quot; `option` :
 > 
 ```scala
