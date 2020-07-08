@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbindung mit Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Verbindung mit Aqua Data Studio
 
-In diesem Dokument werden die Schritte zum Verbinden von Aqua Data Studio mit dem Adobe Experience Platform Abfrage Service beschrieben.
+Dieses Dokument führt Sie durch die Schritte zum Verbinden von Aqua Data Studio mit Adobe Experience Platform Abfrage Service.
 
 Nach der Installation von Aqua Data Studio müssen Sie zunächst den Server registrieren. Klicken Sie im Hauptmenü auf **Server** und dann auf Server **registrieren**.
 
@@ -27,7 +27,9 @@ Das Dialogfeld Server *registrieren* wird angezeigt. Wählen Sie auf der Registe
 - **Host und Anschluss**: Der Host-Endpunkt und sein Anschluss für den Abfrage-Dienst.
 - **Datenbank:** Die zu verwendende Datenbank.
 
->[!NOTE] Weitere Informationen zum Auffinden Ihrer Anmeldeinformationen, des Host-, Port- und Datenbanknamens finden Sie auf der Seite &quot; [Anmeldeinformationen&quot;auf der Plattform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei Platform an, klicken Sie auf **Abfragen** und dann auf **Anmeldeinformationen**.
+>[!NOTE]
+>
+>Weitere Informationen zum Auffinden Ihrer Anmeldeinformationen, des Host-, Port- und Datenbanknamens finden Sie auf der Seite &quot; [Anmeldeinformationen&quot;in der Platform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei der Platform an, klicken Sie auf **Abfragen** und dann auf **Anmeldeinformationen**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
