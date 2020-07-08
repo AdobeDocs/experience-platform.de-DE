@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Array-, Liste- und Set-Funktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 5%
@@ -38,7 +38,9 @@ person.birthMonth in [3, 6, 9]
 
 Mit der `notIn` Funktion wird bestimmt, ob ein Element kein Mitglied eines Arrays oder einer Liste ist.
 
->[!NOTE] Die `notIn` Funktion stellt *auch* sicher, dass keiner der Werte null ist. Die Ergebnisse sind daher keine exakte Negation der `in` Funktion.
+>[!NOTE]
+>
+>Die `notIn` Funktion stellt *auch* sicher, dass keiner der Werte null ist. Die Ergebnisse sind daher keine exakte Negation der `in` Funktion.
 
 **Format**
 
