@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
@@ -120,7 +120,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 
 ## Erstellen eines ML-Dienstes aus einer vorhandenen ML-Instanz
 
-Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Dienstes mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Lernprogramm werden die spezifischen Fälle behandelt, in denen:
+Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Diensts mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Lernprogramm werden die spezifischen Fälle behandelt, in denen:
 
 - [Sie benötigen keine geplante Schulung, sondern eine geplante Bewertung.](#ml-service-with-scheduled-experiment-for-scoring)
 - [Sie benötigen geplante Experimentabläufe sowohl für Schulungen als auch für Punktbewertungen.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
@@ -338,7 +338,9 @@ Eine erfolgreiche Antwort gibt die Details des ML-Dienstes zurück.
 }
 ```
 
->[!NOTE] Beim Abrufen verschiedener ML-Dienste kann eine Antwort mit mehr oder weniger Schlüssel/Wert-Paaren zurückgegeben werden. Die obige Antwort ist eine Darstellung eines [ML-Dienstes mit geplanten Schulungs- und BewertungsexperimentLAUFEN](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>[!NOTE]
+>
+>Beim Abrufen verschiedener ML-Dienste kann eine Antwort mit mehr oder weniger Schlüssel/Wert-Paaren zurückgegeben werden. Die obige Antwort ist eine Darstellung eines [ML-Dienstes mit geplanten Schulungs- und BewertungsexperimentLAUFEN](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Planen von Schulungen oder Bewertungen
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] Versuchen Sie nicht, die `startTime` bei vorhandenen geplanten Schulungs- und Bewertungsaufträgen zu ändern. Wenn das Modell geändert werden `startTime` muss, sollten Sie dasselbe Modell veröffentlichen und Schulungs- und Bewertungsaufträge umplanen.
+>[!WARNING]
+>
+>Versuchen Sie nicht, die `startTime` bei vorhandenen geplanten Schulungs- und Bewertungsaufträgen zu ändern. Wenn das Modell geändert werden `startTime` muss, sollten Sie dasselbe Modell veröffentlichen und Schulungs- und Bewertungsaufträge umplanen.
 
 **Antwort**
 
