@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 2%
@@ -14,20 +14,24 @@ ht-degree: 2%
 
 # Datenschutzaufträge
 
-In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mit dem `/jobs` Endpunkt in der Datenschutzdienst-API durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranforderung mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des `/jobs` Endpunkts in der Privacy Service-API durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranforderung mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ## Erstellen eines Datenschutzauftrags {#create-job}
 
 Bevor Sie eine neue Auftragsanforderung erstellen, müssen Sie zunächst identifizierende Informationen zu den betroffenen Personen erfassen, deren Daten Sie aufrufen, löschen oder Opt-out verkaufen möchten. Sobald Sie über die erforderlichen Daten verfügen, müssen diese in der Payload einer POST-Anforderung an den Stamm-Endpunkt bereitgestellt werden.
 
->[!NOTE] Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von Datensubjekten. Weitere Informationen zu den erforderlichen Bezeichnern für Ihre Anwendungen finden Sie im Handbuch zu [Datenschutzdiensten und Experience Cloud-Anwendungen](../experience-cloud-apps.md) .
+>[!NOTE]
+>
+>Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von Datensubjekten. Weitere Informationen zu den erforderlichen Bezeichnern für Ihre Anwendungen finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md) .
 
-Die Datenschutzdienst-API unterstützt zwei Arten von Auftragsanforderungen für persönliche Daten:
+Die Privacy Service-API unterstützt zwei Arten von Auftragsanforderungen für personenbezogene Daten:
 
 * [Zugriff und/oder Löschen](#access-delete): Zugriff (lesen) oder Löschen personenbezogener Daten.
 * [Opt-out:](#opt-out)Markieren Sie persönliche Daten als nicht zu verkaufen.
 
->[!IMPORTANT] Während Zugriff- und Löschanforderungen als ein einziger API-Aufruf kombiniert werden können, müssen Abmeldeanforderungen separat gestellt werden.
+>[!IMPORTANT]
+>
+>Während Zugriff- und Löschanforderungen als ein einziger API-Aufruf kombiniert werden können, müssen Abmeldeanforderungen separat gestellt werden.
 
 ### Erstellen/Löschen eines Auftrags {#access-delete}
 
@@ -107,7 +111,7 @@ curl -X POST \
 | `include` **(Erforderlich)** | Eine Reihe von Adobe-Produkten, die in Ihre Verarbeitung einbezogen werden sollen. Wenn dieser Wert fehlt oder auf andere Weise leer ist, wird die Anforderung zurückgewiesen. Schließen Sie nur Produkte ein, mit denen Ihr Unternehmen eine Integration hat. Weitere Informationen finden Sie im Abschnitt zu den [anerkannten Produktwerten](appendix.md) im Anhang. |
 | `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true`eine Optimierung für die Verarbeitung der IDs in den Anwendungen darstellt (derzeit nur von Analytics unterstützt). If omitted, this value defaults to `false`. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anforderungen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn `priority` kein Wert angegeben wird, lautet das Standardverhalten `normal`. |
-| `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` kein Wert angegeben wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
+| `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics die personenbezogenen Daten handhaben soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` kein Wert angegeben wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
 | `regulation` **(Erforderlich)** | Die Verordnung für den Antrag. muss einer der folgenden drei Werte sein: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Antwort**
@@ -240,7 +244,7 @@ curl -X POST \
 | `include` **(Erforderlich)** | Eine Reihe von Adobe-Produkten, die in Ihre Verarbeitung einbezogen werden sollen. Wenn dieser Wert fehlt oder auf andere Weise leer ist, wird die Anforderung zurückgewiesen. Schließen Sie nur Produkte ein, mit denen Ihr Unternehmen eine Integration hat. Weitere Informationen finden Sie im Abschnitt zu den [anerkannten Produktwerten](appendix.md) im Anhang. |
 | `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true`eine Optimierung für die Verarbeitung der IDs in den Anwendungen darstellt (derzeit nur von Analytics unterstützt). If omitted, this value defaults to `false`. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anforderungen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn `priority` kein Wert angegeben wird, lautet das Standardverhalten `normal`. |
-| `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` kein Wert angegeben wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
+| `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics die personenbezogenen Daten handhaben soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` kein Wert angegeben wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
 | `regulation` **(Erforderlich)** | Die Verordnung für den Antrag. muss einer der folgenden drei Werte sein: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Antwort**
@@ -288,7 +292,9 @@ Nachdem Sie die Auftragsanforderung erfolgreich gesendet haben, können Sie mit 
 
 Mithilfe eines der im vorherigen Schritt zurückgegebenen `jobId` Werte können Sie Informationen zu diesem Auftrag abrufen, z. B. den aktuellen Verarbeitungsstatus.
 
->[!IMPORTANT] Daten zu zuvor erstellten Aufträgen stehen nur innerhalb von 30 Tagen nach Abschluss des Auftrags zum Abruf bereit.
+>[!IMPORTANT]
+>
+>Daten zu zuvor erstellten Aufträgen stehen nur innerhalb von 30 Tagen nach Abschluss des Auftrags zum Abruf bereit.
 
 **API-Format**
 
@@ -370,7 +376,7 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `productStatusResponse` | Der aktuelle Status des Auftrags. Details zu jedem möglichen Status finden Sie in der unten stehenden Tabelle. |
-| `downloadURL` | Ist der Auftragsstatus `complete`vorhanden, stellt dieses Attribut eine URL bereit, um die Auftragsergebnisse als ZIP-Datei herunterzuladen. Diese Datei kann 60 Tage nach Abschluss des Auftrags heruntergeladen werden. |
+| `downloadURL` | Ist der Auftragsstatus `complete`vorhanden, stellt dieses Attribut eine URL zum Herunterladen der Auftragsergebnisse als ZIP-Datei bereit. Diese Datei kann 60 Tage nach Abschluss des Auftrags heruntergeladen werden. |
 
 ### Auftragsstatus-Antworten
 
@@ -383,7 +389,9 @@ In der folgenden Tabelle werden die verschiedenen möglichen Auftragsstatus und 
 | 3 | Gesendet | Der Auftrag wird bei jedem Antrag eingereicht. |
 | 4 | Fehler | Bei der Verarbeitung des Auftrags ist etwas fehlgeschlagen - spezifischere Informationen können Sie durch Abrufen einzelner Auftragsdetails erhalten. |
 
->[!NOTE] Ein gesendeter Auftrag kann sich im Verarbeitungsstatus befinden, wenn er einen abhängigen untergeordneten Auftrag hat, der noch verarbeitet wird.
+>[!NOTE]
+>
+>Ein gesendeter Auftrag kann sich im Verarbeitungsstatus befinden, wenn er einen abhängigen untergeordneten Auftrag hat, der noch verarbeitet wird.
 
 ## Liste aller Aufträge
 
@@ -428,4 +436,4 @@ Um den nächsten Ergebnissatz in einer paginierten Antwort abzurufen, müssen Si
 
 ## Nächste Schritte
 
-Sie wissen jetzt, wie Sie mit der Datenschutzdienst-API Datenschutzaufträge erstellen und überwachen. Informationen zum Ausführen derselben Aufgaben über die Benutzeroberfläche finden Sie in der Übersicht über die Benutzeroberfläche des [Datenschutzdienstes](../ui/overview.md).
+Sie wissen jetzt, wie Sie mit der Privacy Service-API Datenschutzaufträge erstellen und überwachen. Informationen zum Ausführen derselben Aufgaben mithilfe der Benutzeroberfläche finden Sie in der Übersicht über die Benutzeroberfläche des [Privacy Service](../ui/overview.md).
