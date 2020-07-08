@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experimente
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -20,7 +20,9 @@ Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Exper
 
 Sie können ein Experiment erstellen, indem Sie eine POST-Anforderung ausführen und gleichzeitig einen Namen und eine gültige MLInstance-ID in der Anforderungs-Nutzlast angeben.
 
->[!NOTE] Im Gegensatz zur Modellschulung in der Benutzeroberfläche wird beim Erstellen eines Experiments durch einen expliziten API-Aufruf nicht automatisch ein Schulungslauf erstellt und ausgeführt.
+>[!NOTE]
+>
+>Im Gegensatz zur Modellschulung in der Benutzeroberfläche wird beim Erstellen eines Experiments durch einen expliziten API-Aufruf nicht automatisch ein Schulungslauf erstellt und ausgeführt.
 
 **API-Format**
 
@@ -242,7 +244,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details des angeforderten E
 
 Sie können eine Liste von Schulungs- oder Bewertungsabläufen abrufen, die zu einem bestimmten Experiment gehören, indem Sie eine GET-Anforderung ausführen und eine gültige Experiment-ID angeben. Um die Ergebnisse zu filtern, können Sie die Parameter für die Abfrage im Anforderungspfad angeben. Eine vollständige Liste der verfügbaren Parameter für die Abfrage finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
 
->[!NOTE] Beim Kombinieren mehrerer Abfragen-Parameter müssen diese durch das kaufmännische Und (&amp;) getrennt werden.
+>[!NOTE]
+>
+>Beim Kombinieren mehrerer Abfragen-Parameter müssen diese durch das kaufmännische Und (&amp;) getrennt werden.
 
 **API-Format**
 
@@ -301,7 +305,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die eine Liste der ausgef�
 
 Sie können ein vorhandenes Experiment aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anforderung überschreiben, die die ID des Experiments &quot;Zielgruppe&quot;im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
 
->[!TIP] Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum [Abrufen des Experiments nach ID](#retrieve-specific)auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
+>[!TIP]
+>
+>Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum [Abrufen des Experiments nach ID](#retrieve-specific)auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen eines Experiments, während diese Eigenschaften zunächst verwendet werden:
 
