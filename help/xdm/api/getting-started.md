@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch zur Schema Registry API
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1246'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Entwicklerhandbuch zur Schema Registry API
 
-Die Schema-Registrierung wird verwendet, um auf die Schema-Bibliothek in Adobe Experience Platform zuzugreifen und eine Benutzeroberfläche und RESTful-API bereitzustellen, über die alle verfügbaren Bibliotheksressourcen zugänglich sind.
+Die Schema-Registrierung wird verwendet, um innerhalb der Adobe Experience Platform auf die Schema-Bibliothek zuzugreifen, und stellt eine Benutzeroberfläche und RESTful-API bereit, über die alle verfügbaren Bibliotheksressourcen zugänglich sind.
 
-Mithilfe der Schema Registry API können Sie grundlegende CRUD-Vorgänge durchführen, um alle Schema und zugehörigen Ressourcen, die Ihnen in der Adobe Experience Platform zur Verfügung stehen, Ansicht und zu verwalten. Dies umfasst die von Adobe, Experience Platform-Partnern und Anbietern, deren Anwendungen Sie verwenden, definierten Werte. Sie können auch API-Aufrufe verwenden, um neue Schema und Ressourcen für Ihr Unternehmen zu erstellen sowie bereits definierte Ansichten- und Bearbeitungsressourcen zu erstellen.
+Mithilfe der Schema Registry API können Sie grundlegende CRUD-Vorgänge durchführen, um alle Schema und zugehörigen Ressourcen, die Ihnen in der Adobe Experience Platform zur Verfügung stehen, zu Ansicht und Verwaltung zu nutzen. Dazu gehören die von Adobe, Experience Platform-Partnern und Anbietern definierten Anwendungen, deren Anwendungen Sie verwenden. Sie können auch API-Aufrufe verwenden, um neue Schema und Ressourcen für Ihr Unternehmen zu erstellen sowie bereits definierte Ansichten- und Bearbeitungsressourcen zu erstellen.
 
 In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der Schema-Registrierungs-API Beginn ausführen können. Das Handbuch enthält dann Beispiel-API-Aufrufe für die Ausführung wichtiger Vorgänge mithilfe der Schema-Registrierung.
 
@@ -27,27 +27,29 @@ Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe E
 * [Erlebnis-Datenmodell (XDM)-System](../home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas.
 * [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry API erfolgreich aufrufen zu können.
 
 ## Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ## Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 * Genehmigung: Träger `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform, einschließlich derjenigen, die zur Schema Registry gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle in der Experience Platform befindlichen Ressourcen, einschließlich derjenigen, die zum Schema-Register gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Alle GET-Anfragen an die Schema Registry erfordern einen zusätzlichen Accept-Header, dessen Wert das Format der von der API zurückgegebenen Informationen bestimmt. Weitere Informationen finden Sie im Abschnitt [Accept-Kopfzeile](#accept) .
 
@@ -163,11 +165,11 @@ Für Aufrufe der Schema Registry-API muss eine `CONTAINER_ID`Variable verwendet 
 
 ### Globaler Container
 
-Der globale Container umfasst alle standardmäßigen Adobe- und Experience Platform-Partnerklassen, -mixins, -Datentypen und -Schema. Sie können nur Listen- und Nachschlagetforderungen (GET) für den globalen Container ausführen.
+Der globale Container umfasst alle standardmäßigen Adobe- und Experience Platform-Partner, die Klassen, Mixins, Datentypen und Schema bereitstellen. Sie können nur Listen- und Nachschlagetforderungen (GET) für den globalen Container ausführen.
 
 ### Mandanten-Container
 
-Der Mieter-Container enthält alle Klassen, Mixins, Datentypen, Schema und Deskriptoren, die von einer IMS-Organisation definiert werden, `TENANT_ID`und ist nicht mit Ihrer Unikalität zu verwechseln. Sie sind für jede Organisation individuell, d. h. sie sind nicht sichtbar oder von anderen IMS-Orgs zu verwalten. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für die Ressourcen ausführen, die Sie im Mieter-Container erstellen.
+Der Mieter-Container enthält alle Klassen, Mixins, Datentypen, Schema und Deskriptoren, die von einer IMS-Organisation definiert werden, `TENANT_ID`und ist nicht mit Ihrer Unikalität zu verwechseln. Sie sind für jede Organisation individuell, d. h. sie sind nicht sichtbar oder von anderen IMS-Orgs zu verwalten. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für Ressourcen ausführen, die Sie im Container des Mieters erstellen.
 
 Wenn Sie eine Klasse, ein Mixin, ein Schema oder einen Datentyp im Mieter-Container erstellen, wird diese in der Schema-Registrierung gespeichert und eine `$id` URI zugewiesen, die Ihre `TENANT_ID`ID enthält. Dies `$id` wird in der gesamten API verwendet, um auf bestimmte Ressourcen zu verweisen. Beispiele für `$id` Werte finden Sie im nächsten Abschnitt.
 
@@ -201,7 +203,9 @@ Die folgende Tabelle enthält Listen, die mit den Accept-Header-Werten kompatibe
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` Attribute und `allOf` gelöst. Keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` Attribute und `allOf` gelöst. Deskriptoren sind enthalten. |
 
->[!NOTE] Wenn Sie nur die `major` Version (z.B. 1, 2, 3) angeben, gibt die Registrierung die neueste `minor` Version (z.B. .1, .2, .3) automatisch.
+>[!NOTE]
+>
+>Wenn Sie nur die `major` Version (z.B. 1, 2, 3) angeben, gibt die Registrierung die neueste `minor` Version (z.B. .1, .2, .3) automatisch.
 
 ## XDM-Feldbeschränkungen und bewährte Verfahren
 
