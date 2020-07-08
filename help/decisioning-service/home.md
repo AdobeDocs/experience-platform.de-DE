@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entscheidungsdienst
 topic: overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 0%
@@ -68,7 +68,9 @@ Sie können den Interaktionsmodus für [!DNL Decisioning Service] eine synchrone
 
 Die Verwendung von [!DNL Decisioning Service] ist optional und erfordert nur einige Schritte zusätzlich zu den typischen Schritten, die zum Erstellen und Verwalten von [!DNL Profile] Entitäten erforderlich sind.
 
->[!NOTE] Um das Beste aus dem zu machen, [!DNL Real-time Customer Profile]wird der [!DNL Decisioning Service] direkt in den Profil Store integriert. Die API-Aufrufe müssen nur eine der Identitäten für ein bestimmtes Profil angeben.
+>[!NOTE]
+>
+>Um das Beste aus dem zu machen, [!DNL Real-time Customer Profile]wird der [!DNL Decisioning Service] direkt in den Profil Store integriert. Die API-Aufrufe müssen nur eine der Identitäten für ein bestimmtes Profil angeben.
 
 Die typische Abfolge von Beginn mit dem Erstellen von Profilen:
 
