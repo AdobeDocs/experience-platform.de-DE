@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zum Entwickler von Katalogdiensten
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 0%
@@ -108,7 +108,9 @@ Die folgende Anforderung erstellt einen neuen Datensatz und erstellt dann zugeh�
 
 Wenn Sie beispielsweise auf einen Wert verweisen möchten, der von einer vorherigen Unteranforderung zurückgegeben wurde, können Sie einen Verweis im folgenden Format erstellen: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (dabei `{REQUEST_ID}` ist die vom Benutzer angegebene ID für die Unteranforderung, wie unten dargestellt). Mithilfe dieser Vorlagen können Sie auf jedes Attribut verweisen, das im Hauptteil des Antwortobjekts einer vorherigen Unteranforderung verfügbar ist.
 
->[!NOTE] Wenn eine ausgeführte Unteranforderung nur den Verweis auf ein Objekt zurückgibt (wie dies bei den meisten POST- und PUT-Anforderungen in der Katalog-API der Standard ist), wird dieser Verweis als Alias für den Wert verwendet `id` und kann als `<<{OBJECT_ID}.id>>`verwendet werden.
+>[!NOTE]
+>
+>Wenn eine ausgeführte Unteranforderung nur den Verweis auf ein Objekt zurückgibt (wie dies bei den meisten POST- und PUT-Anforderungen in der Katalog-API der Standard ist), wird dieser Verweis als Alias für den Wert verwendet `id` und kann als `<<{OBJECT_ID}.id>>`verwendet werden.
 
 ```shell
 curl -X POST \
@@ -143,7 +145,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `id` | Vom Benutzer bereitgestellte ID, die an das Antwortobjekt angehängt wird, damit Sie Anforderungen an Antworten zuordnen können. Katalog speichert diesen Wert nicht und gibt ihn lediglich zu Referenzzwecken in der Antwort zurück. |
-| `resource` | Der Ressourcenpfad relativ zum Stammordner der Katalog-API. Das Protokoll und die Domäne sollten nicht Teil dieses Werts sein und mit &quot;/&quot;versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranforderung verwenden, `method`fügen Sie die Objekt-ID in den Ressourcenpfad ein. Dieser Ressourcenpfad ist nicht mit dem vom Benutzer bereitgestellten zu verwechseln `id`, sondern verwendet die ID des Katalogobjekts selbst (z. B. `resource: "/dataSets/1234567890"`). |
+| `resource` | Der Ressourcenpfad relativ zum Stammordner der Katalog-API. Das Protokoll und die Domäne sollten nicht Teil dieses Werts sein und mit &quot;/&quot;versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranforderung verwenden `method`, fügen Sie die Objekt-ID in den Ressourcenpfad ein. Dieser Ressourcenpfad ist nicht mit dem vom Benutzer bereitgestellten zu verwechseln `id`, sondern verwendet die ID des Katalogobjekts selbst (z. B. `resource: "/dataSets/1234567890"`). |
 | `method` | Der Name der Methode (GET, PUT, POST, PATCH oder DELETE), die sich auf die in der Anforderung stattfindende Aktion bezieht. |
 | `body` | Das JSON-Dokument, das normalerweise als Payload in einer POST-, PUT- oder PATCH-Anforderung übergeben wird. Diese Eigenschaft ist für GET- oder DELETE-Anforderungen nicht erforderlich. |
 
