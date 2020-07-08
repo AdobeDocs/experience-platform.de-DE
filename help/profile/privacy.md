@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 0%
@@ -14,31 +14,33 @@ ht-degree: 0%
 
 # Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
 
-Der Adobe Experience Platform Privacy Service verarbeitet Anfragen von Kunden zum Zugriff auf ihre personenbezogenen Daten, zu Opt-out oder zu löschen, wie sie in Datenschutzbestimmungen wie der Allgemeinen Datenschutzverordnung (GDPR) und dem California Consumer Privacy Act (CCPA) definiert sind.
+Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die auf ihre personenbezogenen Daten zugreifen, sie Opt-out verkaufen oder löschen, wie in Datenschutzbestimmungen wie der Allgemeinen Datenschutzverordnung (GDPR) und dem California Consumer Privacy Act (CCPA) definiert.
 
 In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanforderungen für Echtzeit-Kundendaten-Profile behandelt.
 
 ## Erste Schritte
 
-Es wird empfohlen, die folgenden Experience Platform-Dienste zu verstehen, bevor Sie dieses Handbuch lesen:
+Es wird empfohlen, die folgenden Experience Platformen zu verstehen, bevor Sie dieses Handbuch lesen:
 
-* [Datenschutzdienst](home.md): Verwaltet Kundenanforderungen für den Zugriff auf, die Einstellung des Verkaufs oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
+* [Privacy Service](home.md): Verwaltet Kundenanforderungen für den Zugriff auf, die Einstellung des Verkaufs oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
 * [Identitätsdienst](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 * [Echtzeit-Profil](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Identitäts-Namensräume {#namespaces}
 
-Der Identitätsdienst für Adobe Experience Platform verbindet Daten zur Kundenidentität über Systeme und Geräte hinweg. Der Identitätsdienst nutzt **Identitätskennungen** , um einen Kontext für Identitätswerte bereitzustellen, indem er sie mit ihrem System der Herkunft verknüpft. Ein Namensraum kann ein allgemeines Konzept wie eine E-Mail-Adresse (&quot;E-Mail&quot;) oder die Identität einer bestimmten Anwendung zuordnen, z. B. einer Adobe Advertising Cloud ID (&quot;AdCloud&quot;) oder einer Adobe-Zielgruppe-ID (&quot;TNTID&quot;).
+Der Identitätsdienst für Adobe Experience Platformen überbrückt Identitätsdaten von Kunden über Systeme und Geräte hinweg. Der Identitätsdienst nutzt **Identitätskennungen** , um einen Kontext für Identitätswerte bereitzustellen, indem er sie mit ihrem System der Herkunft verknüpft. Ein Namensraum kann ein allgemeines Konzept wie eine E-Mail-Adresse (&quot;E-Mail&quot;) oder die Identität einer bestimmten Anwendung zuordnen, z. B. einer Adobe-Advertising Cloud-ID (&quot;AdCloud&quot;) oder einer Adobe Target-ID (&quot;TNTID&quot;).
 
 Der Identitätsdienst verwaltet einen Store von global definierten (Standard-) und benutzerdefinierten (benutzerdefinierten) Identitäts-Namensräumen. Standardmäßige Namensraum stehen für alle Unternehmen zur Verfügung (z. B. &quot;E-Mail&quot;und &quot;ECID&quot;), während Ihr Unternehmen benutzerdefinierte Namensraum erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
-Weitere Informationen zu Identitäts-Namensräumen in Experience Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+Weitere Informationen zu Identitäts-Namensräumen in der Experience Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
 
 ## Einreichen von Anträgen {#submit}
 
->[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Profil-Datenspeicher erstellen. Es wird dringend empfohlen, die Dokumentation der [Datenschutzdienst-API](../privacy-service/api/getting-started.md) oder der Benutzeroberfläche [des](../privacy-service/ui/overview.md) Datenschutzdienstes zu lesen, um die vollständigen Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
+>[!NOTE]
+>
+>In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Profil-Datenspeicher erstellen. Es wird dringend empfohlen, dass Sie die Dokumentation zur [Privacy Service-API](../privacy-service/api/getting-started.md) oder zur Benutzeroberfläche [des](../privacy-service/ui/overview.md) Privacy Service lesen, um alle Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
 
-Im folgenden Abschnitt wird beschrieben, wie Sie mithilfe der Datenschutzdienst-API oder der Benutzeroberfläche Datenschutzanforderungen für Echtzeit-Kundendaten und den Data Lake erstellen.
+Im folgenden Abschnitt wird beschrieben, wie Sie mit der Privacy Service-API oder der Benutzeroberfläche Datenschutzanforderungen für Echtzeit-Kundendaten und den Data Lake erstellen.
 
 ### Verwenden der API
 
@@ -97,12 +99,12 @@ Wählen Sie beim Erstellen von Auftragsanforderungen in der Benutzeroberfläche 
 
 ## Anforderungsverarbeitung löschen
 
-Wenn Experience Platform eine Löschanforderung vom Datenschutzdienst erhält, sendet Platform eine Bestätigung an den Datenschutzdienst, dass die Anforderung empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake oder dem Data Profil Store entfernt. Während dieses siebentägigen Fensters werden die Daten weich gelöscht und stehen daher keinem Plattformdienst zur Verfügung.
+Wenn die Experience Platform eine Löschanfrage von Privacy Service erhält, sendet die Platform eine Bestätigung an den Privacy Service, dass die Anforderung eingegangen ist und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake oder dem Data Profil Store entfernt. Während dieses siebentägigen Fensters werden die Daten weich gelöscht und stehen daher keinem Platform-Dienst zur Verfügung.
 
-In zukünftigen Versionen sendet Platform eine Bestätigung an den Datenschutzdienst, nachdem die Daten physisch gelöscht wurden.
+In zukünftigen Versionen sendet Platform eine Bestätigung an Privacy Service, nachdem die Daten physisch gelöscht wurden.
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments wurden Sie mit den wichtigen Konzepten zur Verarbeitung von Datenschutzanforderungen in Experience Platform vertraut gemacht. Es wird empfohlen, die Dokumentation in diesem Handbuch weiter zu lesen, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
+Durch das Lesen dieses Dokuments wurden Sie zu den wichtigen Konzepten der Verarbeitung von Datenschutzanforderungen in der Experience Platform vorgestellt. Es wird empfohlen, die Dokumentation in diesem Handbuch weiter zu lesen, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Informationen zur Verarbeitung von Datenschutzanforderungen für Plattformressourcen, die nicht von Profil verwendet werden, finden Sie im Dokument zur Verarbeitung von [Datenschutzanfragen im Data Lake](../catalog/privacy.md).
+Informationen zur Verarbeitung von Datenschutzanforderungen für nicht von Profil verwendete Platformen finden Sie im Dokument zur Verarbeitung von [Datenschutzanfragen im Data Lake](../catalog/privacy.md).
