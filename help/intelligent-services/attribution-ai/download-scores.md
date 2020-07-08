@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zugreifen auf Ergebnisse in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 2%
@@ -223,7 +223,9 @@ Kopieren Sie den `href` Wert für ein beliebiges Dateiobjekt im `data` Array und
 
 Um Ihre Dateidaten herunterzuladen, stellen Sie eine GET-Anforderung an den `"href"` Wert, den Sie im vorherigen Schritt beim [Abrufen Ihrer Dateien](#retrieving-your-files)kopiert haben.
 
->[!NOTE] Wenn Sie diese Anforderung direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Anforderungsheader hinzuzufügen. Im folgenden Anforderungsbeispiel wird `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Wenn Sie diese Anforderung direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Anforderungsheader hinzuzufügen. Im folgenden Anforderungsbeispiel wird `--output {FILENAME.FILETYPE}`.
 
 **API-Format**
 
@@ -247,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] Vergewissern Sie sich, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET-Anforderung senden.
+>[!TIP]
+>
+>Vergewissern Sie sich, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET-Anforderung senden.
 
 **Antwort**
 
@@ -261,7 +265,9 @@ In diesem Dokument werden die zum Herunterladen von Attribution AI-Scores erford
 
 ## Zugreifen auf Ergebnisse mit Snowflake
 
->[!IMPORTANT] Weitere Informationen zum Zugriff auf Ergebnisse mit SnowFlake erhalten Sie unter attributionai-support@adobe.com.
+>[!IMPORTANT]
+>
+>Weitere Informationen zum Zugriff auf Ergebnisse mit SnowFlake erhalten Sie unter attributionai-support@adobe.com.
 
 Sie können über Snowflake auf aggregierte Attribution AI-Ergebnisse zugreifen. Derzeit müssen Sie den Adobe-Support unter attributionai-support@adobe.com per E-Mail senden, um die Anmeldeinformationen für Ihr Reader-Konto für Snowflake einzurichten und zu erhalten.
 
@@ -271,7 +277,9 @@ Nachdem der Adobe-Support Ihre Anforderung verarbeitet hat, erhalten Sie eine UR
 - Benutzername
 - Passwort
 
->[!NOTE] Das Reader-Konto dient zum Abfragen der Daten mit SQL-Clients, Arbeitsblatt- und BI-Lösungen, die JDBC Connector unterstützen.
+>[!NOTE]
+>
+>Das Reader-Konto dient zum Abfragen der Daten mit SQL-Clients, Arbeitsblatt- und BI-Lösungen, die JDBC Connector unterstützen.
 
 Sobald Sie über Ihre Anmeldeinformationen und Ihre URL verfügen, können Sie die Modelltabellen nach Touchpoint-Datum oder Konvertierungsdatum aggregieren.
 
