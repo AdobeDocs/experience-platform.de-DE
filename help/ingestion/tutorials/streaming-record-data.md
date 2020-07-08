@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Streaming von Datensatzdaten
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 2%
@@ -12,15 +12,15 @@ ht-degree: 2%
 ---
 
 
-# Streamen von Datensatzdaten an Adobe Experience Platform
+# Streamen von Datensatzdaten in die Adobe Experience Platform
 
-In diesem Lernprogramm erfahren Sie, wie Sie mit der Verwendung von Streaming-APIs beginnen können, die Teil der Data Ingestion Service APIs der Adobe Experience Plattform sind.
+In diesem Lernprogramm erfahren Sie, wie Sie mit der Verwendung von Streaming-Ingestion-APIs, die Teil der Data Ingestion Service-APIs der Adobe Experience Platform sind, beginnen können.
 
 ## Erste Schritte
 
-Für dieses Lernprogramm sind Kenntnisse zu verschiedenen Adobe Experience Platform-Diensten erforderlich. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Tutorial erfordert ein Arbeitswissen zu verschiedenen Adobe Experience Platformen-Services. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Der standardisierte Rahmen, nach dem Plattform Erlebnisdaten organisiert.
+- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Der standardisierte Rahmen, nach dem Platform Erlebnisdaten organisiert.
 - [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [Entwicklerhandbuch](../../xdm/api/getting-started.md)zur Schema-Registrierung: Ein umfassender Leitfaden, der alle verfügbaren Endpunkte der Schema Registry API und Anweisungen zum Aufrufen an diese Endpunkte enthält. Dies umfasst das Wissen über Ihre `{TENANT_ID}`Daten, die in den Aufrufen während dieses Lernprogramms angezeigt werden, sowie das Erstellen von Schemas, die zum Erstellen eines Datensatzes für die Erfassung verwendet werden.
 
@@ -30,21 +30,23 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen m�
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -185,7 +187,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | Die `$id` Informationen, die Sie zuvor bei der Erstellung des Schemas erhalten haben. Es sollte ungefähr so aussehen: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] &#x200B; &#x200B;**Identitäts-Namensraum**
+>[!NOTE]
+>
+>&#x200B; &#x200B;**Identitäts-Namensraum**
 >
 > Bitte stellen Sie sicher, dass die Codes gültig sind - im obigen Beispiel wird &quot;email&quot; verwendet, ein standardmäßiger Identitäts-Namensraum. Weitere häufig verwendete Standard-Identitäts-Namensraum finden Sie in den häufig gestellten Fragen zum [Identitätsdienst](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
@@ -215,7 +219,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Informationen zum neu erstell
 
 Nachdem Sie Ihr Schema erstellt haben, müssen Sie einen Datensatz erstellen, um Datensatzdaten zu erfassen.
 
->[!NOTE] Dieser Datensatz wird für **Echtzeit-Kundendienst** und **Identitätsdienst** aktiviert.
+>[!NOTE]
+>
+>Dieser Datensatz wird für **Echtzeit-Kundendienst** und **Identitätsdienst** aktiviert.
 
 **API-Format**
 
@@ -258,7 +264,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 und ein Array zurück, das die ID
 
 ## Erfassen von Datensatzdaten zur Streaming-Verbindung
 
-Mit der vorhandenen Dataset- und Streaming-Verbindung können Sie XDM-formatierte JSON-Datensätze erfassen, um Datensatzdaten in Platform zu erfassen.
+Mit der vorhandenen Dataset- und Streaming-Verbindung können Sie XDM-formatierte JSON-Datensätze erfassen, um Datensatzdaten in die Platform zu erfassen.
 
 **API-Format**
 
@@ -273,7 +279,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Anfrage**
 
->[!NOTE] Für den folgenden API-Aufruf sind **keine** Authentifizierungsheader erforderlich.
+>[!NOTE]
+>
+>Für den folgenden API-Aufruf sind **keine** Authentifizierungsheader erforderlich.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -345,7 +353,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum neu gestreamen Pr
 
 Zur Validierung der zuvor erfassten Datensätze können Sie die Datensatzdaten mit der [Profil Access API](../../profile/api/entities.md) abrufen.
 
->[!NOTE] Wenn die Richtlinie zum Zusammenführen nicht definiert ist und das Schema.</span>name oder relatedSchema</span>.name ist `_xdm.context.profile`, ruft Profil Access **alle** zugehörigen Identitäten ab.
+>[!NOTE]
+>
+>Wenn die Richtlinie zum Zusammenführen nicht definiert ist und das Schema.</span>name oder relatedSchema</span>.name ist `_xdm.context.profile`, ruft Profil Access **alle** zugehörigen Identitäten ab.
 
 **API-Format**
 
@@ -424,7 +434,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zu den angeforderten 
 
 ## Nächste Schritte
 
-Indem Sie dieses Dokument lesen, verstehen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in Plattform erfassen. Sie können versuchen, mehr Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie Beginn zur Überwachung der erfassten Daten über die Plattform-Benutzeroberfläche verwenden. Weitere Informationen finden Sie im Handbuch zur Erfassung der [Überwachungsdaten](../quality/monitor-data-flows.md) .
+Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in die Platform aufnehmen können. Sie können versuchen, mehr Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie Beginn zur Überwachung der erfassten Daten über die Benutzeroberfläche der Platform verwenden. Weitere Informationen finden Sie im Handbuch zur Erfassung der [Überwachungsdaten](../quality/monitor-data-flows.md) .
 
 Weitere Informationen zur Streaming-Erfassung im Allgemeinen finden Sie in der [Streaming-Übersicht](../streaming-ingestion/overview.md).
 
