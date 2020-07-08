@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Ad-hoc-Schemas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 2%
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # Erstellen eines Ad-hoc-Schemas
 
-Unter bestimmten Umständen kann es erforderlich sein, ein XDM-Schema (Experience Data Model) mit Feldern zu erstellen, die nur für die Verwendung durch einen einzigen Datensatz benannt werden. Dies wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schema werden in verschiedenen Datenerfassungs-Workflows für Experience Platform verwendet, einschließlich der Erfassung von CSV-Dateien und der Erstellung bestimmter Quell-Verbindungen.
+Unter bestimmten Umständen kann es erforderlich sein, ein XDM-Schema (Experience Data Model) mit Feldern zu erstellen, die nur für die Verwendung durch einen einzigen Datensatz benannt werden. Dies wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schema werden für die Experience Platform in verschiedenen Workflows zur Datenerfassung verwendet, einschließlich der Erfassung von CSV-Dateien und der Erstellung bestimmter Quell-Verbindungen.
 
-In diesem Dokument werden allgemeine Schritte zum Erstellen eines Ad-hoc-Schemas mithilfe der [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)beschrieben. Es soll in Verbindung mit anderen Experience Platform-Tutorials verwendet werden, für die im Rahmen ihres Workflows ein Ad-hoc-Schema erstellt werden muss. Jedes dieser Dokumente enthält detaillierte Informationen zur ordnungsgemäßen Konfiguration eines Ad-hoc-Schemas für den jeweiligen Verwendungsfall.
+In diesem Dokument werden allgemeine Schritte zum Erstellen eines Ad-hoc-Schemas mithilfe der [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)beschrieben. Es soll zusammen mit anderen Experience Platformen-Tutorials verwendet werden, für die im Rahmen ihres Workflows ein Ad-hoc-Schema erstellt werden muss. Jedes dieser Dokumente enthält detaillierte Informationen zur ordnungsgemäßen Konfiguration eines Ad-hoc-Schemas für den jeweiligen Verwendungsfall.
 
 ## Erste Schritte
 
 Dieses Lernprogramm erfordert ein funktionierendes Verständnis des XDM-Systems (Experience Data Model). Bevor Sie dieses Lernprogramm starten, lesen Sie bitte die folgende XDM-Dokumentation:
 
-- [XDM-System - Übersicht](../home.md): Eine allgemeine Übersicht über XDM und seine Implementierung in Experience Platform.
+- [XDM-System - Übersicht](../home.md): Ein Überblick über XDM und seine Implementierung in Experience Platform.
 - [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Übersicht über die Grundkomponenten von XDM-Schemas.
 
 Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
@@ -41,7 +41,9 @@ POST /tenant/classes
 
 Die folgende Anforderung erstellt eine neue XDM-Klasse, die von den in der Payload bereitgestellten Attributen konfiguriert wird. Durch die Bereitstellung einer `$ref` Eigenschaft, die auf `https://ns.adobe.com/xdm/data/adhoc` im `allOf` Array festgelegt ist, übernimmt diese Klasse das `adhoc` Verhalten. Die Anforderung definiert auch ein `_adhoc` Objekt, das die benutzerdefinierten Felder für die Klasse enthält.
 
->[!NOTE] Die unter definierten benutzerdefinierten Felder `_adhoc` variieren je nach Anwendungsfall des Ad-hoc-Schemas. Bitte lesen Sie den jeweiligen Arbeitsablauf im entsprechenden Lernprogramm für erforderliche benutzerdefinierte Felder, je nach Anwendungsfall.
+>[!NOTE]
+>
+>Die unter definierten benutzerdefinierten Felder `_adhoc` variieren je nach Anwendungsfall des Ad-hoc-Schemas. Bitte lesen Sie den jeweiligen Arbeitsablauf im entsprechenden Lernprogramm für erforderliche benutzerdefinierte Felder, je nach Anwendungsfall.
 
 ```shell
 curl -X POST \
@@ -219,7 +221,9 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Schemas zurück, e
 
 ## Ansicht des vollständigen Ad-hoc-Schemas
 
->[!NOTE] Dieser Schritt ist optional. Wenn Sie die Feldstruktur Ihres Ad-hoc-Schemas nicht überprüfen möchten, können Sie am Ende dieses Lernprogramms zum Abschnitt &quot; [Nächste Schritte](#next-steps) &quot;wechseln.
+>[!NOTE]
+>
+>Dieser Schritt ist optional. Wenn Sie die Feldstruktur Ihres Ad-hoc-Schemas nicht überprüfen möchten, können Sie am Ende dieses Lernprogramms zum Abschnitt &quot; [Nächste Schritte](#next-steps) &quot;wechseln.
 
 Nachdem das Ad-hoc-Schema erstellt wurde, können Sie eine GET-Anforderung (Lookup) erstellen, um das Schema in seinem erweiterten Formular Ansicht. Dies geschieht mit dem entsprechenden Accept-Header in der GET-Anforderung, wie nachfolgend gezeigt.
 
@@ -299,6 +303,6 @@ Bei einer erfolgreichen Antwort werden die Details des Schemas einschließlich a
 
 ## Nächste Schritte {#next-steps}
 
-Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie im Rahmen eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
+Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie als Teil eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
 
 Weitere Informationen zum Arbeiten mit der Schema Registry API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
