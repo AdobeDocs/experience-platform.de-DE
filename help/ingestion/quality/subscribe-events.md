@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ereignisse zur Datenerfassung abonnieren
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '851'
 ht-degree: 2%
@@ -14,19 +14,21 @@ ht-degree: 2%
 
 # Benachrichtigungen zur Datenaufnahme
 
-Der Prozess der Dateneingabe in Adobe Experience Platform besteht aus mehreren Schritten. Sobald Sie Datendateien identifiziert haben, die in die Plattform aufgenommen werden müssen, beginnt der Erfassungsvorgang und jeder Schritt erfolgt nacheinander, bis die Daten erfolgreich erfasst wurden oder fehlschlagen. Der Erfassungsvorgang kann mit der [Adobe Experience Platform Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) oder über die Experience Platform-Benutzeroberfläche eingeleitet werden.
+Die Datenerfassung in die Adobe Experience Platform erfolgt in mehreren Schritten. Sobald Sie Datendateien identifiziert haben, die in die Platform aufgenommen werden müssen, beginnt der Erfassungsvorgang und jeder Schritt erfolgt nacheinander, bis die Daten erfolgreich erfasst wurden oder fehlschlagen. Der Erfassungsvorgang kann über die Dateneinbetungs-API der [Adobe Experience Platform oder über die Experience Platform-Benutzeroberfläche](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) eingeleitet werden.
 
-Daten, die in die Plattform geladen werden, müssen mehrere Schritte durchlaufen, um ihr Ziel, den Data Lake oder den Echtzeit-Kundendatenspeicher, zu erreichen. Jeder Schritt umfasst die Verarbeitung der Daten, die Validierung der Daten und dann die Speicherung der Daten, bevor sie an den nächsten Schritt weitergeleitet werden. Je nachdem, wie viele Daten erfasst werden, kann dies ein zeitaufwendiger Prozess werden, und es besteht immer die Möglichkeit, dass der Prozess aufgrund von Validierungs-, Semantik- oder Verarbeitungsfehlern fehlschlägt. Im Ereignis eines Fehlers müssen die Datenprobleme behoben werden, und dann muss der gesamte Erfassungsvorgang mit den korrigierten Datendateien neu gestartet werden.
+Daten, die in die Platform geladen werden, müssen mehrere Schritte ausführen, um ihren Zielort, den Data Lake oder den Echtzeit-Kundendatenspeicher zu erreichen. Jeder Schritt umfasst die Verarbeitung der Daten, die Validierung der Daten und dann die Speicherung der Daten, bevor sie an den nächsten Schritt weitergeleitet werden. Je nachdem, wie viele Daten erfasst werden, kann dies ein zeitaufwendiger Prozess werden, und es besteht immer die Möglichkeit, dass der Prozess aufgrund von Validierungs-, Semantik- oder Verarbeitungsfehlern fehlschlägt. Im Ereignis eines Fehlers müssen die Datenprobleme behoben werden, und dann muss der gesamte Erfassungsvorgang mit den korrigierten Datendateien neu gestartet werden.
 
-Um den Erfassungsvorgang zu überwachen, können Sie mit Experience Platform eine Reihe von Ereignissen abonnieren, die von jedem Prozessschritt veröffentlicht werden, und Sie über den Status der erfassten Daten und eventuelle Fehler informieren.
+Um die Überwachung des Erfassungsvorgangs zu unterstützen, ermöglicht es die Experience Platform, eine Reihe von Ereignissen zu abonnieren, die von jedem Prozessschritt veröffentlicht werden, und Sie über den Status der erfassten Daten und eventuelle Fehler zu informieren.
 
 ## Verfügbare Statusbenachrichtigungs-Ereignisse
 
 Im Folgenden finden Sie eine Liste der verfügbaren Statusbenachrichtigungen zur Datenerfassung, die Sie abonnieren können.
 
->[!NOTE] Es wird nur ein Ereignis-Thema für alle Datenerfassungsbenachrichtigungen bereitgestellt. Zur Unterscheidung zwischen verschiedenen Status kann der Ereignis-Code verwendet werden.
+>[!NOTE]
+>
+>Es wird nur ein Ereignis-Thema für alle Datenerfassungsbenachrichtigungen bereitgestellt. Zur Unterscheidung zwischen verschiedenen Status kann der Ereignis-Code verwendet werden.
 
-| Plattformdienst | Status | Ereignisbeschreibung | Ereignis-Code |
+| Platform | Status | Ereignisbeschreibung | Ereignis-Code |
 | ---------------- | ------ | ----------------- | ---------- |
 | Dateneingabe | success | Aufschluss - Batch erfolgreich | ing_load_success |
 | Dateneingabe | Fehler | Einbettung - Batch fehlgeschlagen | ing_load_failure |
@@ -41,19 +43,19 @@ Das Ereignis für die Datenerfassungsbenachrichtigung ist ein XDM-Schema (Experi
 
 ## Statusbenachrichtigungen zur Datenaufnahme abonnieren
 
-Über [Adobe-E/A-Ereignisse](https://www.adobe.io/apis/experienceplatform/events.html)können Sie mehrere Benachrichtigungstypen über Webhooks abonnieren. In den folgenden Abschnitten werden die Schritte zum Abonnieren von Plattformbenachrichtigungen für Datenverarbeitungs-Ereignis mit der Adobe Developer Console beschrieben.
+Über [Adobe-E/A-Ereignisse](https://www.adobe.io/apis/experienceplatform/events.html)können Sie mehrere Benachrichtigungstypen über Webhooks abonnieren. In den folgenden Abschnitten werden die Schritte zum Abonnieren von Platformen-Benachrichtigungen für Datenverarbeitungs-Ereignis mit der Adobe Developer Console beschrieben.
 
 ### Neues Projekt in der Adobe Developer Console erstellen
 
-Wechseln Sie zur [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
+Rufen Sie die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) auf und melden Sie sich bei Ihrer Adobe ID an. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
 
-### Hinzufügen Ereignisse der Experience Platform zum Projekt
+### Ereignisse zur Experience Platform Hinzufügen Projekts
 
 Nachdem Sie ein neues Projekt erstellt haben, navigieren Sie zum Übersichtsbildschirm dieses Projekts. Klicken Sie von hier auf **[!UICONTROL Hinzufügen Ereignis]**.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-Das Dialogfeld _[!UICONTROL Hinzufügen Ereignis]_wird angezeigt. Klicken Sie auf**[!UICONTROL  Erlebnisplattform ]**, um die Liste der verfügbaren Optionen zu filtern, und klicken Sie dann auf**[!UICONTROL  Plattformbenachrichtigungen ]**, bevor Sie auf**[!UICONTROL  Weiter ]**klicken.
+Das Dialogfeld _[!UICONTROL Hinzufügen Ereignis]_wird angezeigt. Klicken Sie auf**[!UICONTROL  Experience Platform ]**, um die Liste der verfügbaren Optionen zu filtern, und klicken Sie dann auf**[!UICONTROL  Platformen-Benachrichtigungen ]**, bevor Sie auf**[!UICONTROL  Weiter ]**klicken.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
@@ -89,4 +91,4 @@ Die Detailseite für die neu erstellte Ereignis-Registrierung wird angezeigt, au
 
 ## Nächste Schritte
 
-Nachdem Sie Plattformbenachrichtigungen für Ihr Projekt registriert haben, können Sie Ereignis aus dem Dashboard des Projekts Ansicht haben. Detaillierte Anweisungen zur Verfolgung Ihrer Ereignis finden Sie im Handbuch [Rückverfolgung von Adobe-E/A-Ereignissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
+Nachdem Sie Projektbenachrichtigungen registriert haben, können Sie Ansichten mit Ereignissen aus dem Dashboard des Projekts erstellen. Detaillierte Anweisungen zur Verfolgung Ihrer Ereignis finden Sie im Handbuch [Rückverfolgung von Adobe-E/A-Ereignissen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
