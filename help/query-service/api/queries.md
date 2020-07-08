@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch für Abfrage Service
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 2%
@@ -196,7 +196,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer
 }
 ```
 
->[!NOTE] Mit dem Wert von können Sie Ihre erstellte Abfrage `_links.cancel`[abbrechen](#cancel-a-query).
+>[!NOTE]
+>
+>Mit dem Wert von können Sie Ihre erstellte Abfrage `_links.cancel`[abbrechen](#cancel-a-query).
 
 ### Abrufen einer Abfrage nach ID
 
@@ -265,7 +267,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 }
 ```
 
->[!NOTE] Mit dem Wert von können Sie Ihre erstellte Abfrage `_links.cancel`[abbrechen](#cancel-a-query).
+>[!NOTE]
+>
+>Mit dem Wert von können Sie Ihre erstellte Abfrage `_links.cancel`[abbrechen](#cancel-a-query).
 
 ### Abfrage abbrechen
 
