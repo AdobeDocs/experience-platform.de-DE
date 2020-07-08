@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen von ETL-Integrationen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '4227'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 ---
 
 
-# Entwickeln von ETL-Integrationen für Adobe Experience Platform
+# Entwicklung von ETL-Integrationen für die Adobe Experience Platform
 
-Das Handbuch zur ETL-Integration beschreibt allgemeine Schritte zum Erstellen von leistungsstarken, sicheren Connectors für Experience Platform und zum Integrieren von Daten in die Plattform.
+Das ETL-Integrationsleitfaden beschreibt die allgemeinen Schritte zum Erstellen von leistungsstarken, sicheren Connectors für die Experience Platform und zum Einbinden von Daten in die Platform.
 
 
 - [Katalog](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
@@ -23,28 +23,28 @@ Das Handbuch zur ETL-Integration beschreibt allgemeine Schritte zum Erstellen vo
 - [Authentication and Authorization APIs](../tutorials/authentication.md)
 - [Schema-Registrierung](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
-Dieses Handbuch enthält auch Beispiel-API-Aufrufe, die beim Entwerfen eines ETL-Connectors verwendet werden, sowie Links zur Dokumentation, in der die einzelnen Experience Platform-Dienste skizziert werden, und die Verwendung seiner API im Detail.
+Dieses Handbuch enthält auch Beispiel-API-Aufrufe, die beim Entwerfen eines ETL-Connectors verwendet werden, sowie Links zur Dokumentation, die die einzelnen Experience Platformen-Dienste umreißt, und die Verwendung seiner API im Detail.
 
 Eine Beispielintegration ist auf GitHub über den [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) unter der Apache License Version 2.0 verfügbar.
 
 ## Arbeitsablauf
 
-Das folgende Workflow-Diagramm bietet eine allgemeine Übersicht zur Integration von Adobe Experience Platform-Komponenten mit einer ETL-Anwendung und einem Connector.
+Das folgende Workflow-Diagramm bietet einen Überblick über die Integration von Adobe Experience Platform-Komponenten mit einer ETL-Anwendung und einem Connector.
 
 ![](images/etl.png)
 
-## Adobe Experience Platform-Komponenten
+## Adobe Experience Platformen
 
-An ETL-Connector-Integrationen sind mehrere Experience Platform-Komponenten beteiligt. In der folgenden Liste werden mehrere Schlüsselkomponenten und -funktionen vorgestellt:
+An ETL-Connector-Integrationen sind mehrere Experience Platformen beteiligt. In der folgenden Liste werden mehrere Schlüsselkomponenten und -funktionen vorgestellt:
 
 - **Adobe Identity Management System (IMS)** - Bietet ein Framework für die Authentifizierung von Adobe-Diensten.
 - **IMS-Organisation** - Eine Unternehmenseinheit, die Produkte und Dienstleistungen besitzen oder lizenzieren und Zugriff auf ihre Mitglieder gewähren kann.
 - **IMS-Benutzer** - Mitglieder einer IMS-Organisation. Die Beziehung zwischen Organisation und Benutzer ist viele zu viele.
-- **Sandbox** - Eine virtuelle Partition eine einzige Plattform-Instanz, die bei der Entwicklung und Entwicklung digitaler Erlebnisanwendungen hilft.
-- **Data Discovery** - zeichnet die Metadaten von erfassten und transformierten Daten in Experience Platform auf.
+- **Sandbox** - Eine virtuelle Partition eine Instanz einer Platform, die bei der Entwicklung und Entwicklung digitaler Erlebnisanwendungen hilft.
+- **Data Discovery** - Zeichnet die Metadaten von erfassten und transformierten Daten in der Experience Platform auf.
 - **Datenzugriff** - Bietet Benutzern eine Oberfläche, auf die sie in Experience Platform zugreifen können.
-- **Dateneinbettung** - Übergibt Daten an Experience Platform mit Data Ingestion-APIs.
-- **Schema Registry** - Definiert und speichert Schema, das die Struktur der in Experience Platform zu verwendenden Daten beschreibt.
+- **Dateneinfügung** - Überträgt Daten in die Experience Platform mit Dateneinschluss-APIs.
+- **Schema Registry** - Definiert und speichert Schema, das die Struktur der in der Experience Platform zu verwendenden Daten beschreibt.
 
 ## Erste Schritte mit Experience Platform-APIs
 
@@ -52,21 +52,23 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Aufrufe an Plattform-APIs durchführen zu können, müssen Sie zunächst das [Authentifizierungslehrgang](../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../sandboxes/home.md).
+>[!NOTE]
+>
+>Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../sandboxes/home.md).
 
 Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
 
@@ -74,15 +76,17 @@ Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlich
 
 ## Allgemeiner Benutzerfluss
 
-Zunächst meldet sich ein ETL-Benutzer bei der Benutzeroberfläche von Experience Platform an und erstellt Datensätze für die Erfassung mit einem Standard-Connector oder einem Push-Service-Connector.
+Zunächst meldet sich ein ETL-Benutzer bei der Benutzeroberfläche der Experience Platform an und erstellt Datensätze für die Erfassung mit einem Standard-Connector oder einem Push-Service-Connector.
 
-In der Benutzeroberfläche erstellt der Benutzer den Ausgabedatensatz, indem er ein DataSet-Schema auswählt. Die Auswahl des Schemas hängt davon ab, welche Art von Daten (Datensatz oder Zeitreihen) in die Plattform aufgenommen werden. Durch Klicken auf die Registerkarte &quot;Schema&quot;in der Benutzeroberfläche können alle verfügbaren Schema einschließlich des vom Schema unterstützten Verhaltenstyps Ansicht werden.
+In der Benutzeroberfläche erstellt der Benutzer den Ausgabedatensatz, indem er ein DataSet-Schema auswählt. Die Auswahl des Schemas hängt davon ab, welche Daten (Datensatz oder Zeitreihen) in die Platform aufgenommen werden. Durch Klicken auf die Registerkarte &quot;Schema&quot;in der Benutzeroberfläche können alle verfügbaren Schema einschließlich des vom Schema unterstützten Verhaltenstyps Ansicht werden.
 
-Im ETL-Tool entwirft der Beginn die Zuordnungstransformationen nach der Konfiguration der entsprechenden Verbindung (unter Verwendung seiner Anmeldeinformationen). Für das ETL-Tool werden bereits Experience Platform-Connectors installiert (Prozess, der in diesem Integrationsleitfaden nicht definiert ist).
+Im ETL-Tool entwirft der Beginn die Zuordnungstransformationen nach der Konfiguration der entsprechenden Verbindung (unter Verwendung seiner Anmeldeinformationen). Es wird davon ausgegangen, dass das ETL-Tool bereits über installierte Experience Platform-Connectors verfügt (Prozess, der in diesem Integrationsleitfaden nicht definiert ist).
 
 Im [ETL-Arbeitsablauf](./workflow.md)wurden die Modelle für ein Beispiel-ETL-Tool und einen Workflow bereitgestellt. Die ETL-Werkzeuge unterscheiden sich zwar im Format, aber die meisten bieten ähnliche Funktionen.
 
->[!NOTE] Der ETL-Connector muss einen Zeitstempelfilter angeben, der das Datum zum Erfassen von Daten und zum Versatz kennzeichnet (d. h. das Fenster, für das Daten gelesen werden sollen). Das ETL-Tool sollte die Verwendung dieser beiden Parameter in dieser oder einer anderen relevanten Benutzeroberfläche unterstützen. In Adobe Experience Platform werden diese Parameter entweder den verfügbaren Daten (sofern vorhanden) oder dem erfassten Datum im Stapelobjekt des Datensatzes zugeordnet.
+>[!NOTE]
+>
+>Der ETL-Connector muss einen Zeitstempelfilter angeben, der das Datum zum Erfassen von Daten und zum Versatz kennzeichnet (d. h. das Fenster, für das Daten gelesen werden sollen). Das ETL-Tool sollte die Verwendung dieser beiden Parameter in dieser oder einer anderen relevanten Benutzeroberfläche unterstützen. In Adobe Experience Platform werden diese Parameter entweder den verfügbaren Daten (sofern vorhanden) oder dem erfassten Datum im Stapelobjekt des Datensatzes zugeordnet.
 
 ### Liste der Ansicht von Datensätzen
 
@@ -166,7 +170,9 @@ Das XDM-Schema ist das Schema, das Sie verwenden, wenn Sie dem Benutzer eine Lis
 
 Der erste &quot;schemaRef.id&quot;-Wert im vorherigen Antwortobjekt (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) ist ein URI, der auf ein bestimmtes XDM-Schema in der Schema-Registrierung verweist. Das Schema kann abgerufen werden, indem eine GET-Anforderung an die Schema Registry-API gesendet wird.
 
->[!NOTE] Die Eigenschaft &quot;schemaRef&quot;ersetzt die jetzt nicht mehr unterstützte Eigenschaft &quot;Schema&quot;. Wenn &quot;schemaRef&quot;im Datensatz fehlt oder keinen Wert enthält, müssen Sie prüfen, ob eine &quot;Schema&quot;-Eigenschaft vorhanden ist. Dies kann durch Ersetzen von &quot;schemaRef&quot;durch &quot;Schema&quot;im Parameter &quot; `properties` Abfrage&quot;im vorherigen Aufruf erfolgen. Weitere Informationen zur Eigenschaft &quot;Schema&quot;finden Sie im folgenden Abschnitt zur Eigenschaft &quot; [Schema&quot;des Datasets](#dataset-schema-property-deprecated---eol-2019-05-30) .
+>[!NOTE]
+>
+>Die Eigenschaft &quot;schemaRef&quot;ersetzt die jetzt nicht mehr unterstützte Eigenschaft &quot;Schema&quot;. Wenn &quot;schemaRef&quot;im Datensatz fehlt oder keinen Wert enthält, müssen Sie prüfen, ob eine &quot;Schema&quot;-Eigenschaft vorhanden ist. Dies kann durch Ersetzen von &quot;schemaRef&quot;durch &quot;Schema&quot;im Parameter &quot; `properties` Abfrage&quot;im vorherigen Aufruf erfolgen. Weitere Informationen zur Eigenschaft &quot;Schema&quot;finden Sie im folgenden Abschnitt zur Eigenschaft &quot; [Schema&quot;des Datasets](#dataset-schema-property-deprecated---eol-2019-05-30) .
 
 **API-Format**
 
@@ -199,7 +205,9 @@ Das Antwortformat hängt vom Typ des Accept-Headers ab, der in der Anforderung g
 | `application/vnd.adobe.xed-full-notext+json; version={major version}` | $refs und allOf aufgelöst, keine Titel oder Beschreibungen |
 | `application/vnd.adobe.xed-full-desc+json; version={major version}` | $refs und allOf resolved, Deskriptoren enthalten |
 
->[!NOTE] `application/vnd.adobe.xed-id+json` und `application/vnd.adobe.xed-full+json; version={major version}` sind die am häufigsten verwendeten Accept-Header. `application/vnd.adobe.xed-id+json` wird für die Auflistung von Ressourcen in der Schema-Registrierung bevorzugt, da nur &quot;title&quot;, &quot;id&quot;und &quot;version&quot;zurückgegeben werden. `application/vnd.adobe.xed-full+json; version={major version}` wird empfohlen, eine bestimmte Ressource (durch ihre &quot;ID&quot;) anzuzeigen, da alle Felder (verschachtelt unter &quot;Eigenschaften&quot;) sowie Titel und Beschreibungen zurückgegeben werden.
+>[!NOTE]
+>
+>`application/vnd.adobe.xed-id+json` und `application/vnd.adobe.xed-full+json; version={major version}` sind die am häufigsten verwendeten Accept-Header. `application/vnd.adobe.xed-id+json` wird für die Auflistung von Ressourcen in der Schema-Registrierung bevorzugt, da nur &quot;title&quot;, &quot;id&quot;und &quot;version&quot;zurückgegeben werden. `application/vnd.adobe.xed-full+json; version={major version}` wird empfohlen, eine bestimmte Ressource (durch ihre &quot;ID&quot;) anzuzeigen, da alle Felder (verschachtelt unter &quot;Eigenschaften&quot;) sowie Titel und Beschreibungen zurückgegeben werden.
 
 **Antwort**
 
@@ -239,17 +247,21 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
   -H "x-api-key: {API_KEY}"
 ```
 
->[!NOTE] Ein optionaler Parameter für die Abfrage `expansion=xdm`weist die API an, alle referenzierten Schema vollständig zu erweitern und einzubinden. Dies sollten Sie tun, wenn Sie dem Benutzer eine Liste aller potenziellen Felder präsentieren.
+>[!NOTE]
+>
+>Ein optionaler Parameter für die Abfrage `expansion=xdm`weist die API an, alle referenzierten Schema vollständig zu erweitern und einzubinden. Dies sollten Sie tun, wenn Sie dem Benutzer eine Liste aller potenziellen Felder präsentieren.
 
 **Antwort**
 
 Ähnlich wie bei der [Anzeige des DataSet-Schemas](#view-dataset-schema)enthält die Antwort ein JSON-Schema, das die Struktur und die Informationen auf Feldebene der Daten beschreibt, serialisiert als JSON.
 
->[!NOTE] Wenn das Feld &quot;Schema&quot;leer ist oder nicht vollständig vorhanden ist, sollte der Connector das Feld &quot;schemaRef&quot;lesen und die [Schema-Registrierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) wie in den vorherigen Schritten zur [Ansicht eines Schemas](#view-dataset-schema)verwenden.
+>[!NOTE]
+>
+>Wenn das Feld &quot;Schema&quot;leer ist oder nicht vollständig vorhanden ist, sollte der Connector das Feld &quot;schemaRef&quot;lesen und die [Schema-Registrierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) wie in den vorherigen Schritten zur [Ansicht eines Schemas](#view-dataset-schema)verwenden.
 
 ### Die Eigenschaft &quot;beobachtableSchema&quot;
 
-Die Eigenschaft &quot;beobachtableSchema&quot;eines Datensatzes hat eine JSON-Struktur, die mit der JSON-Struktur des XDM-Schemas übereinstimmt. Das &quot;beobachtableSchema&quot;enthält die Felder, die in den eingehenden Eingabedateien vorhanden waren. Beim Schreiben von Daten in Experience Platform ist es nicht erforderlich, dass ein Benutzer alle Felder aus dem Zielgruppe-Schema verwendet. Stattdessen sollten sie nur die verwendeten Felder bereitstellen.
+Die Eigenschaft &quot;beobachtableSchema&quot;eines Datensatzes hat eine JSON-Struktur, die mit der JSON-Struktur des XDM-Schemas übereinstimmt. Das &quot;beobachtableSchema&quot;enthält die Felder, die in den eingehenden Eingabedateien vorhanden waren. Beim Schreiben von Daten in die Experience Platform muss der Benutzer nicht jedes Feld aus dem Schema Zielgruppe verwenden. Stattdessen sollten sie nur die verwendeten Felder bereitstellen.
 
 Das beobachtbare Schema ist das Schema, das Sie verwenden würden, wenn Sie die Daten lesen oder eine Liste von Feldern präsentieren, die zum Lesen/Verordnen verfügbar sind.
 
@@ -479,13 +491,13 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Daten werden mithilfe der [Dateneinbetungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)in Experience Platform geschrieben.  Das Schreiben von Daten ist ein asynchroner Prozess. Wenn Daten in Adobe Experience Platform geschrieben werden, wird ein Stapel erst dann erstellt und als Erfolg markiert, wenn die Daten vollständig geschrieben sind.
+Die Daten werden mithilfe der [Dateneinbetungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)in die Experience Platform geschrieben.  Das Schreiben von Daten ist ein asynchroner Prozess. Beim Schreiben von Daten in die Adobe Experience Platform wird ein Stapel erst dann erstellt und als Erfolg markiert, wenn die Daten vollständig geschrieben sind.
 
 Daten in Experience Platform sollten in Form von Parkettdateien geschrieben werden.
 
 ## Ausführungsphase
 
-Als Beginn der Ausführung liest der Connector (wie in der Quellkomponente definiert) die Daten aus Experience Platform mithilfe der [Datenzugriff-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). Der Umwandlungsprozess liest die Daten für einen bestimmten Zeitraum. Intern werden Abfragen von Quelldatasets erstellt. Bei der Abfrage werden ein parametrisiertes Datumsformat (rollierend für Zeitreihendaten oder inkrementelle Daten) und Datendatensatzdateien für diese Beginn sowie Datenanforderungen für Beginn für diese Datenmenge verwendet.
+Als Beginn der Ausführung liest der Connector (wie in der Quellkomponente definiert) die Daten aus der Experience Platform mithilfe der [Datenzugriff-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). Der Umwandlungsprozess liest die Daten für einen bestimmten Zeitraum. Intern werden Abfragen von Quelldatasets erstellt. Bei der Abfrage werden ein parametrisiertes Datumsformat (rollierend für Zeitreihendaten oder inkrementelle Daten) und Datendatensatzdateien für diese Beginn sowie Datenanforderungen für Beginn für diese Datenmenge verwendet.
 
 ### Beispieltransformationen
 
@@ -562,11 +574,13 @@ Wenn Sie die Referenzimplementierung von [GitHub](https://github.com/adobe/exper
 
 Die Validierung kann für logische XDM-Typen durchgeführt werden, mit Attributen wie `minLength` und `maxlength` für Zeichenfolgen, `minimum` und `maximum` für Ganzzahlen usw. Das Entwicklerhandbuch für die [Schema Registry API enthält](../xdm/api/getting-started.md) eine Tabelle mit den XDM-Typen und den Eigenschaften, die für die Überprüfung verwendet werden können.
 
->[!NOTE] Die MIN- und MAX-Werte, die vom Typ unterstützt werden können, sind die MIN- und Maximalwerte für verschiedene `integer` Typen. Diese Werte können jedoch auf die Minimalwerte und die Maximierung Ihrer Wahl beschränkt werden.
+>[!NOTE]
+>
+>Die MIN- und MAX-Werte, die vom Typ unterstützt werden können, sind die MIN- und Maximalwerte für verschiedene `integer` Typen. Diese Werte können jedoch auf die Minimalwerte und die Maximierung Ihrer Wahl beschränkt werden.
 
 ### Stapel erstellen
 
-Nach der Verarbeitung der Daten schreibt das ETL-Tool die Daten mithilfe der [Stapeleinbetungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)zurück an Experience Platform. Bevor Daten zu einem Datensatz hinzugefügt werden können, müssen sie mit einem Stapel verknüpft werden, der später in einen bestimmten Datensatz hochgeladen wird.
+Nach der Verarbeitung der Daten schreibt das ETL-Tool die Daten mithilfe der [Stapeleinbetungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)zurück in die Experience Platform. Bevor Daten zu einem Datensatz hinzugefügt werden können, müssen sie mit einem Stapel verknüpft werden, der später in einen bestimmten Datensatz hochgeladen wird.
 
 **Anfrage**
 
@@ -606,7 +620,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Nachdem alle Dateien in den Stapel hochgeladen wurden, kann der Stapel zur Fertigstellung signalisiert werden. Auf diese Weise werden die Einträge &quot;DataSetFile&quot;des Katalogs für die abgeschlossenen Dateien erstellt und mit dem generierten Stapel verknüpft. Der Katalogstapel wird dann als erfolgreich markiert, wodurch nachgelagerte Flüsse zur Erfassung der verfügbaren Daten ausgelöst werden.
 
-Die Daten landen zunächst am Staging-Speicherort auf der Adobe Experience Platform und werden dann nach der Katalogisierung und Validierung an den endgültigen Speicherort verschoben. Stapel werden als erfolgreich markiert, sobald alle Daten an einen dauerhaften Speicherort verschoben wurden.
+Die Daten landen zunächst an der Staging-Position auf der Adobe Experience Platform und werden dann nach der Katalogisierung und Validierung an den endgültigen Speicherort verschoben. Stapel werden als erfolgreich markiert, sobald alle Daten an einen dauerhaften Speicherort verschoben wurden.
 
 **Anfrage**
 
@@ -745,13 +759,13 @@ Wenn Snapshot-Profil verwendet werden, muss das ETL-Tool den letzten Stapel der 
 
 Die erneute Wiedergabe von Stapeln und die erneute Verarbeitung von Daten können erforderlich sein, wenn ein Kunde feststellt, dass in den letzten &#39;n&#39; Tagen die verarbeiteten Daten nicht erwartungsgemäß aufgetreten sind oder die Quelldaten selbst möglicherweise nicht korrekt waren.
 
-Dazu verwenden die Datenadministratoren des Clients die Plattform-Benutzeroberfläche, um die Stapel mit beschädigten Daten zu entfernen. Dann wird das ETL wahrscheinlich erneut ausgeführt werden müssen und somit mit korrekten Daten repliziert werden müssen. Wenn die Quelle selbst beschädigte Daten aufwies, muss der Dateningenieur/Administrator die Quellstapel berichtigen und die Daten neu erfassen (entweder über Adobe Experience Platform oder über ETL-Connectors).
+Dazu verwenden die Datenadministratoren des Clients die Benutzeroberfläche der Platform, um die Stapel mit beschädigten Daten zu entfernen. Dann wird das ETL wahrscheinlich erneut ausgeführt werden müssen und somit mit korrekten Daten repliziert werden müssen. Wenn die Quelle selbst beschädigte Daten aufwies, muss der Dateningenieur/Administrator die Quellstapel korrigieren und die Daten neu erfassen (entweder in die Adobe Experience Platform oder über ETL-Connectors).
 
-Je nach Typ der zu generierenden Daten kann der Dateningenieur einen einzelnen Stapel oder alle Stapel aus bestimmten Datensätzen entfernen. Daten werden gemäß den Richtlinien der Experience Platform entfernt/archiviert.
+Je nach Typ der zu generierenden Daten kann der Dateningenieur einen einzelnen Stapel oder alle Stapel aus bestimmten Datensätzen entfernen. Die Daten werden gemäß den Richtlinien für die Experience Platform entfernt/archiviert.
 
 Es ist ein wahrscheinliches Szenario, dass die ETL-Funktion zum Bereinigen von Daten wichtig sein wird.
 
-Nach Abschluss der Bereinigung müssen die Clientadministratoren Adobe Experience Platform neu konfigurieren, um die Verarbeitung für die Hauptdienste ab dem Zeitpunkt des Löschens der Stapel neu zu starten.
+Nach Abschluss der Bereinigung müssen die Clientadministratoren die Adobe Experience Platform neu konfigurieren, um die Verarbeitung für die Hauptdienste ab dem Zeitpunkt des Löschens der Stapel neu zu starten.
 
 ## Stapelverarbeitung gleichzeitig
 
@@ -767,7 +781,7 @@ Bei Quell-Batches hängt es erneut von der Kundenpräferenz und der Kundenbeschr
 
 Bei der Aufschiebung handelt es sich um einen Prozess, bei dem Eingabedaten noch nicht vollständig genug sind, um an nachgelagerte Prozesse gesendet zu werden, aber in Zukunft verwendbar sein können. Die Kunden bestimmen ihre individuelle Toleranz für die Datenfenster für zukünftige Abgleich und die Verarbeitungskosten, um ihre Entscheidung, Daten beiseite zu legen und sie bei der nächsten Konvertierungsausführung neu zu verarbeiten, in der Hoffnung, dass sie zu einem späteren Zeitpunkt innerhalb des Retentionsfensters bereichert und miteinander abgeglichen bzw. zusammengeführt werden können, zu informieren. Dieser Zyklus dauert an, bis die Zeile ausreichend verarbeitet ist oder bis sie für eine weitere Investition als zu stabil gilt. Bei jeder Iteration werden verzögerte Daten generiert, was eine Übermenge aller verzögerten Daten in vorherigen Iterationen darstellt.
 
-Die Adobe Experience Platform erkennt derzeit keine verzögerten Daten. Daher müssen Client-Implementierungen auf den Konfigurationen von ETL und Dataset-Handbuch zurückgreifen, um einen weiteren Datensatz in der Plattform zu erstellen, der den Quelldataset spiegelt, der zur Aufbewahrung verzögerter Daten verwendet werden kann. In diesem Fall sind verzögerte Daten ähnlich wie Snapshot-Daten. Bei jeder Ausführung der ETL-Transformation werden die Quelldaten mit verzögerten Daten verbunden und zur Verarbeitung gesendet.
+Die Adobe Experience Platform identifiziert derzeit keine verzögerten Daten. Daher müssen Client-Implementierungen auf den Konfigurationen von ETL und Dataset-Handbuch zurückgreifen, um einen weiteren Datensatz in der Platform zu erstellen, der den Quelldataset spiegelt, der zur Speicherung von verzögerten Daten verwendet werden kann. In diesem Fall sind verzögerte Daten ähnlich wie Snapshot-Daten. Bei jeder Ausführung der ETL-Transformation werden die Quelldaten mit verzögerten Daten verbunden und zur Verarbeitung gesendet.
 
 ## Changelog
 
