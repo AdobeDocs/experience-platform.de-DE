@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Schreiben von Abfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 1%
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Allgemeine Anleitung für die Ausführung von Abfragen im Abfragen-Dienst
 
-In diesem Dokument werden wichtige Informationen zum Erstellen von Abfragen im Adobe Experience Platform Abfrage Service beschrieben.
+In diesem Dokument werden wichtige Informationen erläutert, die beim Schreiben von Abfragen im Adobe Experience Platform Abfrage Service zu beachten sind.
 
 Ausführliche Informationen zur SQL-Syntax, die im Abfrage Service verwendet wird, finden Sie in der [SQL-Syntaxdokumentation](../sql/syntax.md).
 
 ## Ausführungsmodelle für Abfragen
 
-Adobe Experience Platform Abfrage Service verfügt über zwei Modelle zur Ausführung von Abfragen: interaktiv und nicht interaktiv. Die interaktive Ausführung wird für die Entwicklung von Abfragen und die Erstellung von Berichten in Business Intelligence-Tools verwendet, während nicht interaktive Anwendungen für größere Aufträge und operative Abfragen als Teil eines Datenverarbeitungs-Workflows verwendet werden.
+Adobe Experience Platform Abfrage Service verfügt über zwei Ausführungsmodelle für Abfragen: interaktiv und nicht interaktiv. Die interaktive Ausführung wird für die Entwicklung von Abfragen und die Erstellung von Berichten in Business Intelligence-Tools verwendet, während nicht interaktive Anwendungen für größere Aufträge und operative Abfragen als Teil eines Datenverarbeitungs-Workflows verwendet werden.
 
 ### Ausführung interaktiver Abfragen
 
@@ -34,13 +34,15 @@ Die Ausführung interaktiver Abfragen unterliegt folgenden Einschränkungen:
 | Maximale Zeilenanzahl | 50,000 |
 | Maximale gleichzeitige Abfragen | 5 |
 
->[!NOTE] Um die maximale Zeilenzahl zu überschreiben, nehmen Sie `LIMIT 0` in Ihre Abfrage auf. Die Zeitüberschreitung der Abfrage von 10 Minuten ist weiterhin gültig.
+>[!NOTE]
+>
+>Um die maximale Zeilenzahl zu überschreiben, nehmen Sie `LIMIT 0` in Ihre Abfrage auf. Die Zeitüberschreitung der Abfrage von 10 Minuten ist weiterhin gültig.
 
-Standardmäßig werden die Ergebnisse interaktiver Abfragen an den Client zurückgegeben und **nicht** beibehalten. Um die Ergebnisse als Datensatz in Experience Platform zu erhalten, muss die Abfrage die `CREATE TABLE AS SELECT` Syntax verwenden.
+Standardmäßig werden die Ergebnisse interaktiver Abfragen an den Client zurückgegeben und **nicht** beibehalten. Um die Ergebnisse als Datensatz in der Experience Platform zu erhalten, muss die Abfrage die `CREATE TABLE AS SELECT` Syntax verwenden.
 
 ### Ausführung nicht interaktiver Abfragen
 
-Abfragen, die über die Abfrage Service API gesendet werden, werden nicht interaktiv ausgeführt. Die nicht interaktive Ausführung bedeutet, dass Abfrage Service den API-Aufruf erhält und die Abfrage in der Reihenfolge ausführt, in der sie empfangen wird. Nicht interaktive Abfragen führen immer dazu, dass entweder ein neuer Datensatz in Experience Platform erstellt wird, um die Ergebnisse zu erhalten, oder dass neue Zeilen in einen vorhandenen Datensatz eingefügt werden.
+Abfragen, die über die Abfrage Service API gesendet werden, werden nicht interaktiv ausgeführt. Die nicht interaktive Ausführung bedeutet, dass Abfrage Service den API-Aufruf erhält und die Abfrage in der Reihenfolge ausführt, in der sie empfangen wird. Nicht interaktive Abfragen führen immer dazu, dass entweder ein neuer Datensatz in der Experience Platform generiert wird, um die Ergebnisse zu erhalten, oder dass neue Zeilen in einen vorhandenen Datensatz eingefügt werden.
 
 ## Zugreifen auf ein bestimmtes Feld in einem Objekt
 
@@ -70,7 +72,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | Der Name der Analysetabelle. |
 
->[!NOTE] Da jeder Notationstyp die gleichen Ergebnisse zurückgibt, haben Sie die Wahl, das Ergebnis zu verwenden.
+>[!NOTE]
+>
+>Da jeder Notationstyp die gleichen Ergebnisse zurückgibt, haben Sie die Wahl, das zu verwendende zu verwenden.
 
 Beide obigen Beispielwerte geben ein reduziertes Objekt anstelle eines einzelnen Abfrage zurück:
 
@@ -150,7 +154,9 @@ FROM
 )
 ```
 
->[!NOTE] Dubletten-Anführungszeichen **können nicht** mit Punktnotation-Feldzugriff verwendet werden.
+>[!NOTE]
+>
+>Dubletten-Anführungszeichen **können nicht** mit Punktnotation-Feldzugriff verwendet werden.
 
 ### Rücke Anführungszeichen
 
