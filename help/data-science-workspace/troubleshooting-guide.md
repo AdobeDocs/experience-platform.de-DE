@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace - Anleitung zur Fehlerbehebung
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -18,7 +18,9 @@ Dieses Dokument beantwortet häufig gestellte Fragen zur Adobe Experience Platfo
 
 ## [!DNL JupyterLab] Umgebung wird nicht geladen in [!DNL Google Chrome]
 
->[!IMPORTANT] Dieses Problem wurde behoben, könnte aber weiterhin im Browser Google Chrome 80.x vorhanden sein. Stellen Sie sicher, dass Ihr Chrome-Browser auf dem neuesten Stand ist.
+>[!IMPORTANT]
+>
+>Dieses Problem wurde behoben, könnte aber weiterhin im Browser Google Chrome 80.x vorhanden sein. Stellen Sie sicher, dass Ihr Chrome-Browser auf dem neuesten Stand ist.
 
 Mit der [!DNL Google Chrome] Browser-Version 80.x werden alle Drittanbieter-Cookies standardmäßig blockiert. Diese Richtlinie kann das Laden [!DNL JupyterLab] innerhalb der Adobe Experience Platform verhindern.
 
@@ -38,7 +40,9 @@ Schalten Sie schließlich &quot;Drittanbieter-Cookies blockieren&quot;auf &quot;
 
 ![Chrome Advanced](./images/faq/toggle-off.png)
 
->[!NOTE] Alternativ können Sie Drittanbieter-Cookies deaktivieren und [* hinzufügen.]ds.adobe.net zum zulassungsliste.
+>[!NOTE]
+>
+>Alternativ können Sie Drittanbieter-Cookies deaktivieren und [* hinzufügen.]ds.adobe.net zum zulassungsliste.
 
 Navigieren Sie in Ihrer Adressleiste zu &quot;chrome://flags/&quot;. Suchen und deaktivieren Sie das Flag *&quot;SameSite by default cookies&quot;* über das Dropdown-Menü rechts.
 
