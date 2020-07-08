@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Deskriptoren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Deskriptoren
 
-Schema definieren eine statische Ansicht von Datenentitäten, geben jedoch keine spezifischen Informationen darüber an, wie sich Daten, die auf diesen Schemas basieren (z. B. Datensätze), zueinander verhalten können. Mit Adobe Experience Platform können Sie diese Beziehungen und andere interpretative Metadaten zu einem Schema mithilfe von Deskriptoren beschreiben.
+Schema definieren eine statische Ansicht von Datenentitäten, geben jedoch keine spezifischen Informationen darüber an, wie sich Daten, die auf diesen Schemas basieren (z. B. Datensätze), zueinander verhalten können. Mit Adobe Experience Platform können Sie diese Beziehungen und andere interpretierende Metadaten zu einem Schema mithilfe von Deskriptoren beschreiben.
 
 Schema-Deskriptoren sind Metadaten auf Pächter-Ebene, d. h. sie sind für Ihre IMS-Organisation eindeutig und alle Deskriptorvorgänge finden im Pächter-Container statt.
 
@@ -22,7 +22,9 @@ Auf jedes Schema können eine oder mehrere Schema-Deskriptorentitäten angewende
 
 Dieses Dokument enthält Beispiel-API-Aufrufe für Deskriptoren sowie eine vollständige Liste der verfügbaren Deskriptoren und der für die Definition der einzelnen Typen erforderlichen Felder.
 
->[!NOTE] Deskriptoren erfordern eindeutige Accept-Header, die `xed` `xdm`durch ersetzt werden, aber ansonsten sehr ähnlich aussehen wie Accept-Header, die andernorts in der Schema-Registrierung verwendet werden. Die folgenden Beispielaufrufe enthalten die richtigen Accept-Header. Achten Sie jedoch besonders darauf, dass die richtigen Header verwendet werden.
+>[!NOTE]
+>
+>Deskriptoren erfordern eindeutige Accept-Header, die `xed` `xdm`durch ersetzt werden, aber ansonsten sehr ähnlich aussehen wie Accept-Header, die andernorts in der Schema-Registrierung verwendet werden. Die folgenden Beispielaufrufe enthalten die richtigen Accept-Header. Achten Sie jedoch besonders darauf, dass die richtigen Header verwendet werden.
 
 ## Deskriptoren für Listen
 
@@ -141,7 +143,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anforderung definiert einen Identitätsdeskriptor für ein &quot;E-Mail-Adresse&quot;-Feld in einem Beispiel-Schema. Dadurch wird Experience Platform angewiesen, die E-Mail-Adresse als ID zu verwenden, um Informationen über die Person zusammenzufügen.
+Die folgende Anforderung definiert einen Identitätsdeskriptor für ein &quot;E-Mail-Adresse&quot;-Feld in einem Beispiel-Schema. Dies weist die Experience Platform an, die E-Mail-Adresse als Kennung zu verwenden, um Informationen über die Person zusammenzufügen.
 
 ```SHELL
 curl -X POST \
@@ -277,7 +279,7 @@ Die folgenden Abschnitte enthalten eine Übersicht der verfügbaren Deskriptorty
 
 #### Identitätsdeskriptor
 
-Ein Identitätsdeskriptor signalisiert, dass &quot;sourceProperty&quot;des &quot;sourceSchema&quot;ein Identitätsfeld ist, wie vom [Adobe Experience Platform-Identitätsdienst](../../identity-service/home.md)beschrieben.
+Ein Identitätsdeskriptor signalisiert, dass &quot;sourceProperty&quot;des &quot;sourceSchema&quot;ein Identitätsfeld ist, wie vom Identitätsdienst der [Adobe Experience Platform beschrieben](../../identity-service/home.md).
 
 ```json
 {
