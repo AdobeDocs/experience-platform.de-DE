@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Schema Registry Developer-Anhang
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 4%
@@ -20,7 +20,7 @@ Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema 
 
 Das Experience Data Model (XDM) ist eine öffentlich dokumentierte Spezifikation, die von Adobe zur Verbesserung der Interoperabilität, Ausdrucksfähigkeit und Leistungsfähigkeit digitaler Erlebnisse unterstützt wird. Adobe verwaltet den Quellcode und formale XDM-Definitionen in einem [Open-Source-Projekt auf GitHub](https://github.com/adobe/xdm/). Diese Definitionen werden in XDM Standard Notation geschrieben, wobei JSON-LD (JavaScript Object Notation for Linked Data) und JSON-Schema als Grammatik zur Definition von XDM-Schemas verwendet werden.
 
-Wenn Sie sich die formalen XDM-Definitionen im öffentlichen Repository ansehen, können Sie erkennen, dass sich der Standard-XDM von dem unterscheidet, was Sie in Adobe Experience Platform sehen. Was Sie in Experience Platform sehen, wird als &quot;Kompatibilitätsmodus&quot;bezeichnet und bietet eine einfache Zuordnung zwischen Standard-XDM und der Art und Weise, wie es in der Plattform verwendet wird.
+Wenn Sie sich die formalen XDM-Definitionen im öffentlichen Repository ansehen, können Sie sehen, dass sich der Standard-XDM von dem unterscheidet, was Sie in der Adobe Experience Platform sehen. Was Sie in der Experience Platform sehen, heißt &quot;Kompatibilitätsmodus&quot;, und es bietet eine einfache Zuordnung zwischen Standard-XDM und der Art und Weise, wie es in der Platform verwendet wird.
 
 ### Funktionsweise des Kompatibilitätsmodus
 
@@ -49,21 +49,23 @@ Im Folgenden finden Sie einen Vergleich, der sowohl im Standard-XDM- als auch im
 
 ### Warum ist der Kompatibilitätsmodus erforderlich?
 
-Adobe Experience Platform ist für die Verwendung mit mehreren Lösungen und Diensten konzipiert, die jeweils eigene technische Herausforderungen und Einschränkungen aufweisen (z. B. wie bestimmte Technologien Sonderzeichen handhaben). Um diese Einschränkungen zu überwinden, wurde der Kompatibilitätsmodus entwickelt.
+Adobe Experience Platform ist so konzipiert, dass sie mit mehreren Lösungen und Diensten arbeitet, die jeweils eigene technische Herausforderungen und Einschränkungen aufweisen (z. B. wie bestimmte Technologien Sonderzeichen handhaben). Um diese Einschränkungen zu überwinden, wurde der Kompatibilitätsmodus entwickelt.
 
-Die meisten Experience Platform-Dienste, einschließlich Catalog, Data Lake und Echtzeit-Kundendaten, verwenden den Kompatibilitätsmodus anstelle des Standard-XDM. Die Schema Registry API verwendet auch den Kompatibilitätsmodus. Die Beispiele in diesem Dokument werden alle mithilfe des Kompatibilitätsmodus angezeigt.
+Die meisten Experience Platform-Services, einschließlich Catalog, Data Lake und Echtzeit-Kundenservice, verwenden den Kompatibilitätsmodus anstelle des Standard-XDM. Die Schema Registry API verwendet auch den Kompatibilitätsmodus. Die Beispiele in diesem Dokument werden alle mithilfe des Kompatibilitätsmodus angezeigt.
 
-Es lohnt sich zu wissen, dass eine Zuordnung zwischen Standard-XDM und der Art und Weise erfolgt, wie sie in Experience Platform operalisiert wird, sollte jedoch nicht Ihre Verwendung von Platform-Diensten beeinträchtigen.
+Es lohnt sich zu wissen, dass eine Zuordnung zwischen Standard-XDM und die Art und Weise, wie sie in der Experience Platform operalisiert wird, stattfindet, sollte aber nicht Ihre Nutzung der Platform-Services beeinträchtigen.
 
 Das Open-Source-Projekt steht Ihnen zur Verfügung, aber wenn es darum geht, mit Ressourcen über die Schema-Registrierung zu interagieren, bieten die API-Beispiele in diesem Dokument die Best Practices, die Sie kennen und befolgen sollten.
 
 ## Definieren von XDM-Feldtypen in der API {#field-types}
 
-XDM-Schema werden mithilfe von JSON-Schema-Standards und einfachen Feldtypen definiert, mit zusätzlichen Einschränkungen für Feldnamen, die von Experience Platform erzwungen werden. Mit XDM können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. Die XDM-Feldtypen werden durch das Attribut auf Feldebene offen gelegt, `meta:xdmType`.
+XDM-Schema werden mithilfe von JSON-Schema-Standards und einfachen Feldtypen definiert, mit zusätzlichen Einschränkungen für Feldnamen, die durch die Experience Platform erzwungen werden. Mit XDM können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. Die XDM-Feldtypen werden durch das Attribut auf Feldebene verfügbar gemacht, `meta:xdmType`.
 
->[!NOTE] `meta:xdmType` ist ein systemgenerierter Wert. Daher müssen Sie diese Eigenschaft nicht zum JSON für Ihr Feld hinzufügen. Es empfiehlt sich, JSON-Schema-Typen (z. B. String und Ganzzahl) mit den entsprechenden Min/Max-Einschränkungen zu verwenden, wie in der folgenden Tabelle definiert.
+>[!NOTE]
+>
+>`meta:xdmType` ist ein systemgenerierter Wert. Daher müssen Sie diese Eigenschaft nicht zum JSON für Ihr Feld hinzufügen. Es empfiehlt sich, JSON-Schema-Typen (z. B. String und Ganzzahl) mit den entsprechenden Min/Max-Einschränkungen zu verwenden, wie in der folgenden Tabelle definiert.
 
-In der folgenden Tabelle sind die entsprechenden Formatierungen zur Definition von skalaren Feldtypen und spezifischeren Feldtypen mit optionalen Eigenschaften aufgeführt. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
+In der folgenden Tabelle werden die entsprechenden Formatierungen zur Definition von skalaren Feldtypen und spezifischeren Feldtypen mit optionalen Eigenschaften beschrieben. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
 
 Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung bereitgestellt wird.
 
@@ -74,7 +76,7 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
     <th>Codebeispiel</th>
   </tr>
   <tr>
-    <td>Zeichenfolge</td>
+    <td>string</td>
     <td>type:<br/><br/><strong>stringOptional-Eigenschaften:</strong><br/>
       <ul>
         <li>pattern</li>
@@ -111,7 +113,7 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
     </td>
   </tr>
   <tr>
-    <td>number</td>
+    <td>Anzahl</td>
     <td>type:<br/>numerminimum: ±2,23×10^308<br/>Maximal: ±1,80×10^308</td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -243,8 +245,8 @@ Die folgende Tabelle beschreibt die Zuordnung zwischen &quot;meta:xdmType&quot;u
 
 | XDM-Typ<br>(meta:xdmType) | JSON<br>(JSON-Schema) | Parquet<br>(type/annotation) | Spark SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protokoll 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Zeichenfolge | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Zeichenfolge | System.String | Zeichenfolge | Zeichenfolge | Zeichenfolge | Zeichenfolge |
-| number | type:number | DUBLETTE | DoubleType | java.lang.Double | Doppelt | System.Double | Zahl | Dublette | Doppelt | Dublette |
+| string | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Zeichenfolge | System.String | Zeichenfolge | string | Zeichenfolge | string |
+| Anzahl | type:number | DUBLETTE | DoubleType | java.lang.Double | Doppelt | System.Double | Zahl | Dublette | Doppelt | Dublette |
 | long | type:<br>integerMaximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.Long | lang | System.Int64 | Zahl | long | Ganzzahl | int64 |
 | int | type:<br>integerMaximum:2^31<br>minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Zahl | int | Ganzzahl | int32 |
 | short | type:<br>integerMaximum:2^15<br>minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Short | System.Int16 | Zahl | int | Ganzzahl | int32 |
