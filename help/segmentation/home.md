@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2386'
 ht-degree: 3%
@@ -40,7 +40,9 @@ Informationen zum Erstellen und Verwenden von Segmenten im Segmentaufbau (die Im
 
 Informationen zum Erstellen von Segmentdefinitionen mit der API finden Sie im Lernprogramm zum [Erstellen von Segmenten mit der API](./tutorials/create-a-segment.md).
 
->[!NOTE] In dem Ereignis, in dem ein Schema erweitert wird, müssen alle zukünftigen Uploads neu hinzugefügte Felder entsprechend aktualisieren. Weitere Informationen zum Anpassen des Erlebnisdatenmodells (XDM) finden Sie im [Schema-Editor-Lernprogramm](../xdm/tutorials/create-schema-ui.md).
+>[!NOTE]
+>
+>In dem Ereignis, in dem ein Schema erweitert wird, müssen alle zukünftigen Uploads neu hinzugefügte Felder entsprechend aktualisieren. Weitere Informationen zum Anpassen des Erlebnisdatenmodells (XDM) finden Sie im [Schema-Editor-Lernprogramm](../xdm/tutorials/create-schema-ui.md).
 
 ## Segmente bewerten
 
@@ -70,14 +72,18 @@ Zum Erstellen Ihrer Segmente (entweder über die API oder den Segmentaufbau) mü
 
 Beim Erstellen eines neuen Segments müssen Sie einen Segmentnamen angeben. Der Segmentname wird verwendet, um ein bestimmtes Segment in der vom Segmentierungsdienst erstellten Sammlung zu identifizieren. Segmentnamen sollten daher beschreibend, knapp und eindeutig sein.
 
->[!NOTE] Denken Sie beim Planen eines Segments daran, dass Segmente aus einem beliebigen anderen Segment referenziert und mit diesem kombiniert werden können. Berücksichtigen Sie bei der Auswahl eines Namens die Möglichkeit, dass Ihr Segment wiederverwendbare Teile enthalten kann.
+>[!NOTE]
+>
+>Denken Sie beim Planen eines Segments daran, dass Segmente aus einem beliebigen anderen Segment referenziert und mit diesem kombiniert werden können. Berücksichtigen Sie bei der Auswahl eines Namens die Möglichkeit, dass Ihr Segment wiederverwendbare Teile enthalten kann.
 
 ### Zusammenführungsrichtlinien
 
 Zusammenführungsrichtlinien sind Regeln, die von Profil verwendet werden, um zu bestimmen, wie Daten priorisiert und unter bestimmten Voraussetzungen zu einer einheitlichen Ansicht kombiniert werden.
 Wenn keine Richtlinie zum Zusammenführen definiert ist, wird die Standardrichtlinie zum Zusammenführen von Platformen verwendet. Wenn Sie lieber eine für Ihr Unternehmen spezifische Richtlinie zum Zusammenführen verwenden möchten, können Sie eine eigene Richtlinie erstellen und diese als Standard Ihres Unternehmens markieren.
 
->[!NOTE] Die Schätzung der Audience basiert auf der standardmäßigen Profil-Zusammenführungs-Richtlinie des Unternehmens.
+>[!NOTE]
+>
+>Die Schätzung der Audience basiert auf der standardmäßigen Profil-Zusammenführungs-Richtlinie des Unternehmens.
 
 ### Andere Segmentmetadaten
 
@@ -138,7 +144,9 @@ Zu den Ressourcen des Datenarchitekten gehören der Zugriff auf Webdaten aus dem
 
 **Die Lösung**
 
->[!NOTE] In diesem Beispiel gehen wir davon aus, dass der Datenarchitekt bereits einen ID-Namensraum eingerichtet hat.
+>[!NOTE]
+>
+>In diesem Beispiel gehen wir davon aus, dass der Datenarchitekt bereits einen ID-Namensraum eingerichtet hat.
 
 Mithilfe der API verknüpft der Datenarchitekt den Schlüssel aus dem ExperienceEvent-Schema mit der Produktklasse. Auf diese Weise kann der Datenarchitekt die zusätzlichen Felder der &quot;products&quot;-Klasse so nutzen, als wären sie nativ für das ExperienceEvent-Schema. Als letzter Schritt der Konfiguration muss der Datenarchitekt die entsprechenden Daten in das Echtzeit-Customer-Profil einbringen. Dies geschieht, indem der &quot;products&quot;-Datensatz für die Verwendung mit Profil aktiviert wird. Nachdem die Konfiguration abgeschlossen ist, kann entweder der Datenarchitekt oder der Marketingspezialist das Segmentsegment Zielgruppe im Segmentaufbau erstellen.
 
@@ -188,7 +196,7 @@ Alle XDM-Datentypen werden im Segmentierungsdienst unterstützt. Die Regeln, die
 
 ### Zeichenfolgendaten
 
-Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht-numerische Beschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuhandstufe&quot;für Programme.
+Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht numerische Einschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuestufe auf Programm-Ebene&quot;.
 
 Stringdaten werden in Segmentdefinitionen mit logischen, einschließlich-/ausschließlichen und Vergleichsanweisungen eingeschlossen. Nachdem Sie Ihrer Segmentdefinition ein Zeichenfolgenattribut hinzugefügt haben, können Sie mit Zeichenfolgen-relevanten Anweisungen das Attribut mit anderen Zeichenfolgenfeldern vergleichen.
 
