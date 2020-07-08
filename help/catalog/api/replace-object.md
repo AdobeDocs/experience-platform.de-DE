@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Objekt ersetzen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Sie können den Inhalt eines Katalogobjekts mit einer PUT-Anforderung überschreiben, bei der die gesamte Ressource durch die Anforderungs-Nutzlast ersetzt wird.
 
->[!NOTE] Wenn Sie nur einige bestimmte Felder innerhalb eines Katalogobjekts aktualisieren müssen, kann die Verwendung einer PATCH-Anforderung effizienter sein.
+>[!NOTE]
+>
+>Wenn Sie nur einige bestimmte Felder innerhalb eines Katalogobjekts aktualisieren müssen, kann die Verwendung einer PATCH-Anforderung effizienter sein.
 
 **API-Format**
 
