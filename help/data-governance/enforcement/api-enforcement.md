@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erzwingen von Datenverwendungsrichtlinien mithilfe der Policy Service API
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 3%
@@ -16,7 +16,9 @@ ht-degree: 3%
 
 Nachdem Sie Datenverwendungsbeschriftungen für Ihre Daten erstellt und Nutzungsrichtlinien für Marketingaktionen für diese Beschriftungen erstellt haben, können Sie mit der API [für den](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DUL-Policy-Dienst bewerten, ob eine Marketingaktion, die für einen Datensatz oder eine beliebige Gruppe von Beschriftungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann Ihre eigenen internen Protokolle einrichten, um Richtlinienverletzungen basierend auf der API-Antwort zu behandeln.
 
->[!NOTE] Standardmäßig `ENABLED` können nur Richtlinien, deren Status auf &quot;Testen&quot;festgelegt ist, an der Evaluierung teilnehmen. Damit `DRAFT` Richtlinien an der Auswertung teilnehmen können, müssen Sie den Parameter &quot;Abfrage&quot; `includeDraft=true` in den Anforderungspfad einbeziehen.
+>[!NOTE]
+>
+>Standardmäßig `ENABLED` können nur Richtlinien, deren Status auf &quot;Testen&quot;festgelegt ist, an der Evaluierung teilnehmen. Damit `DRAFT` Richtlinien an der Auswertung teilnehmen können, müssen Sie den Parameter &quot;Abfrage&quot; `includeDraft=true` in den Anforderungspfad einbeziehen.
 
 In diesem Dokument wird beschrieben, wie Sie die [!DNL Policy Service] API verwenden, um in verschiedenen Szenarien nach Richtlinienverletzungen zu suchen.
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 Die folgende Anforderung testet die `exportToThirdParty` Marketingmaßnahme gegen Etiketten `C1` und `C3`. Da die zuvor in diesem Lernprogramm erstellte Datenverwendungsrichtlinie die `C1` Bezeichnung als eine der `deny` Bedingungen in ihrem Policy-Ausdruck definiert, sollte die Marketingaktion eine Richtlinienverletzung auslösen.
 
->[!NOTE] Bei den Beschriftungen für die Datenverwendung wird zwischen Groß- und Kleinschreibung unterschieden. Richtlinienverletzungen treten nur dann auf, wenn die in ihren Richtlinien-Ausdrücken definierten Bezeichnungen exakt übereinstimmen. In diesem Beispiel würde eine `C1` Beschriftung eine Verletzung auslösen, eine `c1` Bezeichnung hingegen nicht.
+>[!NOTE]
+>
+>Bei den Beschriftungen für die Datenverwendung wird zwischen Groß- und Kleinschreibung unterschieden. Richtlinienverletzungen treten nur dann auf, wenn die in ihren Richtlinien-Ausdrücken definierten Bezeichnungen exakt übereinstimmen. In diesem Beispiel würde eine `C1` Beschriftung eine Verletzung auslösen, eine `c1` Bezeichnung hingegen nicht.
 
 ```shell
 curl -X GET \
