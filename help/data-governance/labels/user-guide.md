@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zur Datenverwendung
 topic: labels
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 0%
@@ -26,7 +26,9 @@ Im nächsten Abschnitt finden Sie Schritte zum Erstellen eines neuen Datensatzes
 
 ### Erstellen eines neuen Datensatzes
 
->[!NOTE] In diesem Beispiel wird ein Datensatz mit einem vorkonfigurierten XDM-Schema (Experience Data Model) erstellt. Weitere Informationen zu XDM-Schemas finden Sie in der [XDM-Systemübersicht](../../xdm/home.md) und den [Grundlagen der Schema-Komposition](../../xdm/schema/composition.md).
+>[!NOTE]
+>
+>In diesem Beispiel wird ein Datensatz mit einem vorkonfigurierten XDM-Schema (Experience Data Model) erstellt. Weitere Informationen zu XDM-Schemas finden Sie in der [XDM-Systemübersicht](../../xdm/home.md) und den [Grundlagen der Schema-Komposition](../../xdm/schema/composition.md).
 
 Um einen neuen Datensatz zu erstellen, klicken Sie in der rechten oberen Ecke des Arbeitsbereichs &quot; **[!UICONTROL Datenbestände]** &quot;auf &quot;Datensatz _[!UICONTROL erstellen&quot;]_.
 
