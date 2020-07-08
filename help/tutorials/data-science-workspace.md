@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übungen zum Arbeitsbereich für Datenwissenschaften
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -60,6 +60,8 @@ Um mehr zu erfahren, folgen Sie den Quelldateien des [Pakets in einem Rezept-Ler
 ## Rezept importieren
 
 >[!NOTE]
+>
+>
 >Für dieses Lernprogramm ist eine Docker-URL für die Quelldatei erforderlich. Besuchen Sie die Quelldateien des [Pakets in einem Rezept-Lernprogramm](../data-science-workspace/models-recipes/package-source-files-recipe.md) , wenn Sie keine Docker-Quelldatei-URL haben.
 
 Die Importrezeptschulungen bieten Einblicke in die Konfiguration und den Import eines gepackten Rezepts. Am Ende dieses Lernprogramms können Sie ein Modell in Adobe Experience Platform Data Science Workspace erstellen, ausbilden und auswerten.
