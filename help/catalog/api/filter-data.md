@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Filtern von Katalogdaten mithilfe von Abfrage-Parametern
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 1%
@@ -579,7 +579,7 @@ Der `property` Parameterwert unterstützt mehrere verschiedene Typen von bedingt
 
 | Symbol(e) | Beschreibung | Beispiel |
 | --- | --- | --- |
-| (Keine) | Wenn Sie den Eigenschaftsnamen ohne Operator festlegen, werden nur Objekte zurückgegeben, bei denen die Eigenschaft vorhanden ist, unabhängig von ihrem Wert. | `property=name` |
+| (None) | Wenn Sie den Eigenschaftsnamen ohne Operator festlegen, werden nur Objekte zurückgegeben, bei denen die Eigenschaft vorhanden ist, unabhängig von ihrem Wert. | `property=name` |
 | ! | Wenn Sie dem Wert eines`!`Parameters ein &quot; `property` &quot;voranstellen, werden nur Objekte zurückgegeben, für die die Eigenschaft **nicht** vorhanden ist. | `property=!name` |
 | ~ | Gibt nur Objekte zurück, deren Eigenschaftswerte (Zeichenfolge) mit einem regulären Ausdruck übereinstimmen, der nach dem Tilde-Symbol (`~`) angegeben wurde. | `property=name~^example` |
 | == | Gibt nur Objekte zurück, deren Eigenschaftswerte exakt mit der Zeichenfolge übereinstimmen, die nach dem Dublette-gleich-Symbol (`==`) angegeben wurde. | `property=name==exampleName` |
@@ -589,7 +589,9 @@ Der `property` Parameterwert unterstützt mehrere verschiedene Typen von bedingt
 | > | Gibt nur Objekte zurück, deren Eigenschaftswerte einen angegebenen Betrag überschreiten (jedoch nicht gleich). | `property=version>1.0.0` |
 | >= | Gibt nur Objekte zurück, deren Eigenschaftswerte größer als (oder gleich) ein angegebener Betrag sind. | `property=version>=1.0.0` |
 
->[!NOTE] Die `name` Eigenschaft unterstützt die Verwendung eines Platzhalters `*`, entweder als gesamte Suchzeichenfolge oder als Teil davon. Platzhalter entsprechen leeren Zeichen, sodass die Suchzeichenfolge mit dem Wert &quot;test&quot;übereinstimmt. `te*st` Sterbliche Risiken werden durch Verdopplung entkommen (`**`). Ein Dublette-Sternchen in einer Suchzeichenfolge stellt ein einzelnes Sternchen als Zeichenfolge dar.
+>[!NOTE]
+>
+>Die `name` Eigenschaft unterstützt die Verwendung eines Platzhalters `*`, entweder als gesamte Suchzeichenfolge oder als Teil davon. Platzhalter entsprechen leeren Zeichen, sodass die Suchzeichenfolge mit dem Wert &quot;test&quot;übereinstimmt. `te*st` Sterbliche Risiken werden durch Verdopplung entkommen (`**`). Ein Dublette-Sternchen in einer Suchzeichenfolge stellt ein einzelnes Sternchen als Zeichenfolge dar.
 
 **Anfrage**
 
