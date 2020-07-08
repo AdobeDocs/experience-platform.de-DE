@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Deduplizierung-Duplikate
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Data Deduplizierung-Duplikate im Abfrage-Dienst
 
-Der Adobe Experience Platform Abfrage Service unterstützt Data Deduplizierung-Duplikate, wenn möglicherweise eine ganze Zeile aus einer Berechnung entfernt oder ein bestimmter Feldsatz ignoriert werden muss, da nur ein Teil der Daten in der Zeile ein Duplikat ist. Das gängige Deduplizierung-Duplikate besteht darin, die `ROW_NUMBER()` Funktion für eine ID oder mehrere IDs über einen bestimmten Zeitraum hinweg (unter Verwendung des XDM-Felds (Experience Data Model)) zu verwenden, um ein neues Feld zurückzugeben, das angibt, wie oft ein Duplikat erkannt wurde. `timestamp` Ist dieser Wert `1`der Wert, bezieht sich dies auf die ursprüngliche Instanz und in den meisten Fällen auf die Instanz, die Sie verwenden möchten, wobei jede andere Instanz ignoriert wird. Dies erfolgt meist innerhalb einer Unterauswahl, bei der das Deduplizierung-Duplikate in einer höheren Ebene wie der Durchführung einer Aggregat-Anzahl durchgeführt wird. `SELECT`
+Der Adobe Experience Platform Abfrage Service unterstützt das Deduplizierung-Duplikate von Daten, wenn möglicherweise eine ganze Zeile aus einer Berechnung entfernt oder ein bestimmter Feldsatz ignoriert werden muss, da nur ein Teil der Daten in der Zeile ein Duplikat ist. Das gängige Deduplizierung-Duplikate besteht darin, die `ROW_NUMBER()` Funktion für eine ID oder mehrere IDs über einen bestimmten Zeitraum hinweg (unter Verwendung des XDM-Felds (Experience Data Model)) zu verwenden, um ein neues Feld zurückzugeben, das angibt, wie oft ein Duplikat erkannt wurde. `timestamp` Ist dieser Wert `1`der Wert, bezieht sich dies auf die ursprüngliche Instanz und in den meisten Fällen auf die Instanz, die Sie verwenden möchten, wobei jede andere Instanz ignoriert wird. Dies erfolgt meist innerhalb einer Unterauswahl, bei der das Deduplizierung-Duplikate in einer höheren Ebene wie der Durchführung einer Aggregat-Anzahl durchgeführt wird. `SELECT`
 
 ## Anwendungsbeispiele
 
@@ -29,7 +29,9 @@ In diesem Dokument werden Beispiele für die Unterauswahl und die vollständige 
 
 Bei Duplikat ExperienceEvents sollten Sie die gesamte Zeile ignorieren.
 
->[!CAUTION] Für viele DataSets in Experience Platform, einschließlich der vom Adobe Analytics Data Connector erstellten, wurde bereits ein Deduplizierung-Duplikate auf ExperienceEvent-Ebene angewendet. Daher ist eine erneute Anwendung dieser Deduplizierung-Duplikate-Ebene nicht erforderlich und wird Ihre Abfrage verlangsamen. Es ist wichtig, die Quelle Ihrer DataSets zu verstehen und zu wissen, ob Deduplizierung-Duplikate auf ExperienceEvent-Ebene bereits angewendet wurde. Für alle Streaming-DataSets (z. B. von Adobe Zielgruppe) müssen Sie Deduplizierung-Duplikate auf ExperienceEvent-Ebene anwenden, da diese Datenquellen eine Semantik von &quot;mindestens einmal&quot;aufweisen.
+>[!CAUTION]
+>
+>Für viele DataSets in Experience Platform, einschließlich der vom Adobe Analytics Data Connector erstellten, wurde bereits ein Deduplizierung-Duplikate auf ExperienceEvent-Ebene angewendet. Daher ist eine erneute Anwendung dieser Deduplizierung-Duplikate-Ebene nicht erforderlich und wird Ihre Abfrage verlangsamen. Es ist wichtig, die Quelle Ihrer DataSets zu verstehen und zu wissen, ob Deduplizierung-Duplikate auf ExperienceEvent-Ebene bereits angewendet wurde. Für alle Streaming-DataSets (z. B. solche aus Adobe Target) müssen Sie Deduplizierung-Duplikate auf ExperienceEvent-Ebene anwenden, da diese Datenquellen eine Semantik von &quot;mindestens einmal&quot;aufweisen.
 
 **Anwendungsbereich:** Global
 
