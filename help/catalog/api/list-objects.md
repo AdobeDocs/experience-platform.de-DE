@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Liste, Objekte
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 1%
@@ -45,7 +45,9 @@ curl -X GET \
 
 Eine erfolgreiche Antwort gibt eine Liste von Katalogobjekten in Form von Schlüssel-Wert-Paaren zurück, gefiltert nach den in der Anforderung bereitgestellten Abfragen. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel einen eindeutigen Bezeichner für das betreffende Katalogobjekt dar, der dann in einem anderen Aufruf zur [Ansicht dieses bestimmten Objekts](look-up-object.md) verwendet werden kann.
 
->[!NOTE] Wenn ein zurückgegebenes Objekt keine oder mehrere der angeforderten Eigenschaften enthält, die von der `properties` Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie unten unter &quot;Beispiel-Datensatz 3&quot;und &quot;Beispiel-Datensatz 4&quot;dargestellt.
+>[!NOTE]
+>
+>Wenn ein zurückgegebenes Objekt keine oder mehrere der angeforderten Eigenschaften enthält, die von der `properties` Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie unten unter &quot;Beispiel-Datensatz 3&quot;und &quot;Beispiel-Datensatz 4&quot;dargestellt.
 
 ```json
 {
