@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbindung mit Suchmaschine
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Verbindung mit Suchmaschine
 
-Gehen Sie wie folgt vor, um Looker mit dem Adobe Abfrage Service auf der Adobe Experience Platform zu verbinden:
+Gehen Sie wie folgt vor, um Looker mit dem Adobe Abfrage Service auf Adobe Experience Platform zu verbinden:
 
 Klicken Sie nach der Anmeldung bei Looker auf **Admin**, gefolgt von **Verbindungen**.
 
@@ -34,7 +34,9 @@ Von hier aus können Sie die Details zu den Verbindungseinstellungen ausfüllen.
 - **Datenbank:** Die zu verwendende Datenbank.
 - **Benutzername und Kennwort:** Die Anmeldeinformationen, die verwendet werden. Der Benutzername wird in Form von `ORG_ID@AdobeOrg`.
 
->[!NOTE] Weitere Informationen zum Auffinden von Host- und Anschluss-, Datenbank- und Anmeldedaten finden Sie auf der Seite &quot; [Anmeldeinformationen&quot;auf der Plattform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei Platform an, klicken Sie auf **Abfragen** und dann auf **Anmeldeinformationen**.
+>[!NOTE]
+>
+>Weitere Informationen zum Auffinden von Host- und Anschluss-, Datenbanknamen- und Anmeldedaten finden Sie auf der Seite &quot; [Anmeldeinformationen&quot;in der Platform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei der Platform an, klicken Sie auf **Abfragen** und dann auf **Anmeldeinformationen**.
 
 Klicken Sie nach Eingabe der Verbindungsdetails auf **Diese Einstellungen** testen, um sicherzustellen, dass Ihre Anmeldedaten ordnungsgemäß funktionieren. Wenn dies der Fall ist, wird unten eine Meldung angezeigt, die Ihnen mitteilt, dass Sie eine Verbindung herstellen können. Wenn Ihre Verbindung wirklich erfolgreich ist, klicken Sie auf **Hinzufügen Verbindung** , um Ihre Verbindung zu erstellen.
 
