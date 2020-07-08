@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modellbewertung (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 1%
@@ -34,9 +34,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.\
 `{JSON_PAYLOAD}`: Experimentlaufobjekt, das gesendet werden soll. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
 ```JSON
@@ -122,9 +122,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.\
 `{EXPERIMENT_ID}`: Die ID für das zu Zielgruppe Experiment. Dies finden Sie in der Antwort beim Erstellen Ihres Experiments.\
 `{JSON_PAYLOAD}`: Zu veröffentlichende Daten. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier:
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`:  Die ID, die dem Experiment entspricht, unter dem die Ausführung läuft.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.
 
 Da es mehrere Experiment-ausgeführt werden, verfügt die zurückgegebene Antwort über ein Array von Ausführen-IDs.
 
@@ -230,9 +230,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  Die ID, die dem Experiment entspricht.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen finden Sie in Ihrer einzigartigen Adobe Experience Platform-Integration.
+`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.
 
->[!NOTE] Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentläufe wird jedoch nicht beendet.
+>[!NOTE]
+>
+>Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentläufe wird jedoch nicht beendet.
 
 Im Folgenden finden Sie die Antwort, die darauf hinweist, dass das Experiment erfolgreich gelöscht wurde.
 
