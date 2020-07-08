@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verfügbare Namensraum zur Liste
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 5%
@@ -35,7 +35,9 @@ curl -X GET \
 
 Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namensraum mit dem Wert &quot;[!UICONTROL custom]&quot;[!UICONTROL false]sind Standard-Namensraum, während solche mit dem Wert &quot;[!UICONTROL custom]&quot;von &quot;[!UICONTROL true]&quot;Namensraum sind, die von Ihrem Unternehmen erstellt wurden.
 
->[!NOTE] Diese Antwort wurde für den Weltraum abgeschnitten.
+>[!NOTE]
+>
+>Diese Antwort wurde für den Weltraum abgeschnitten.
 
 ```json
 [
