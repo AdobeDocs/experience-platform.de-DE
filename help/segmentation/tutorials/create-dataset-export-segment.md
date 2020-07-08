@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Datensatzes zum Exportieren eines Segments für eine Audience
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 0%
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Mit der Adobe Experience Platform können Sie Kundenattribute ganz einfach in Audiencen segmentieren. Nachdem Segmente erstellt wurden, können Sie diese Audience in ein Dataset exportieren, in dem sie aufgerufen und bearbeitet werden kann. Damit der Export erfolgreich sein kann, muss der Datensatz ordnungsgemäß konfiguriert werden.
 
-In diesem Lernprogramm werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Segments für Audiencen mithilfe der Experience Platform-Benutzeroberfläche verwendet werden kann.
+In diesem Lernprogramm werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Segments für Audiencen mithilfe der Benutzeroberfläche für Experience Platformen verwendet werden kann.
 
-Dieses Tutorial steht in direktem Zusammenhang zu den Schritten, die im Tutorial zur [Auswertung und zum Zugriff auf Segmentergebnisse](./evaluate-a-segment.md)beschrieben werden. In der Übung zum Auswerten eines Segments werden Schritte zum Erstellen eines Datensatzes mithilfe der Katalog-API beschrieben, während in dieser Übung die Schritte zum Erstellen eines Datensatzes mithilfe der Benutzeroberfläche der Experience Platform beschrieben werden.
+Dieses Tutorial steht in direktem Zusammenhang zu den Schritten, die im Tutorial zur [Auswertung und zum Zugriff auf Segmentergebnisse](./evaluate-a-segment.md)beschrieben werden. Das Lernprogramm zum Auswerten eines Segments beschreibt die Schritte zum Erstellen eines Datensatzes mithilfe der Katalog-API, während dieses Lernprogramm die Schritte zum Erstellen eines Datensatzes mithilfe der Benutzeroberfläche &quot;Experience Platform&quot;beschreibt.
 
 ## Erste Schritte
 
@@ -26,16 +26,18 @@ Um ein Segment zu exportieren, muss der Datensatz auf dem Schema XDM Individuell
 
 Klicken Sie zur Ansicht der Schemas der Vereinigung in der Benutzeroberfläche auf **Profile** in der linken Navigation und dann auf die Registerkarte *Vereinigung Schema* , wie unten dargestellt.
 
-![Registerkarte &quot;Vereinigung Schema&quot;in der Experience Platform-Benutzeroberfläche](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Registerkarte &quot;Vereinigung Schema&quot;in der Benutzeroberfläche der Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Datenarbeitsbereich
 
-Der Arbeitsbereich &quot;Datensätze&quot;in der Benutzeroberfläche der Experience Platform ermöglicht die Ansicht und Verwaltung aller Datensätze, die Ihr IMS-Unternehmen erstellt hat, sowie die Erstellung neuer Datensätze.
+Der Arbeitsbereich &quot;Datensätze&quot;in der Benutzeroberfläche &quot;Experience Platform&quot;ermöglicht die Ansicht und Verwaltung aller Datensätze, die Ihr IMS-Unternehmen erstellt hat, sowie die Erstellung neuer Datensätze.
 
 Klicken Sie zur Ansicht des Datensatzarbeitsbereichs in der linken Navigation auf **Datensätze** und dann auf die Registerkarte *Durchsuchen* . The datasets workspace contains a list of datasets, including columns showing *Name*, *Created* (date and time), *Source*, *Schema*, and *Last Batch Status*, as well as the date and time the dataset was *Last Updated*. Je nach Breite der einzelnen Spalten müssen Sie ggf. nach links oder rechts blättern, um alle Spalten anzuzeigen.
 
->[!NOTE] Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen zu verwenden, um nur die für das Echtzeit-Kundenkonto aktivierten Datensätze Ansicht.
+>[!NOTE]
+>
+>Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen zu verwenden, um nur die für das Echtzeit-Kundenkonto aktivierten Datensätze Ansicht.
 
 ![Ansicht aller Datensätze](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
