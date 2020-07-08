@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segmentaufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 3%
@@ -22,7 +22,7 @@ Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentauft
 
 Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Segmentierungs-API. Bevor Sie fortfahren, lesen Sie bitte das Entwicklerhandbuch für die [Segmentierung](./getting-started.md).
 
-Insbesondere enthält der [Abschnitt](./getting-started.md#getting-started) &quot;Erste Schritte&quot;des Segmentierungsentwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe im Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer Experience Platform-API erforderlich sind.
+Insbesondere enthält der [Abschnitt](./getting-started.md#getting-started) &quot;Erste Schritte&quot;des Segmentierungsentwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe im Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer Experience Platformen-API erforderlich sind.
 
 ## Eine Liste von Segmentaufträgen abrufen
 
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Segmentaufträgen für das angegebene IMS-Unternehmen als JSON zurück. Die folgende Antwort gibt eine Liste aller erfolgreichen Segmentaufträge für das IMS-Unternehmen zurück.
 
->[!NOTE] Die folgende Antwort wurde für Leerzeichen abgeschnitten und zeigt nur den ersten zurückgegebenen Auftrag an.
+>[!NOTE]
+>
+>Die folgende Antwort wurde für Leerzeichen abgeschnitten und zeigt nur den ersten zurückgegebenen Auftrag an.
 
 ```json
 {
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 Eine erfolgreiche Antwort gibt HTTP-Status 207 mit den angeforderten Segmentaufträgen zurück.
 
->[!NOTE] Die folgende Antwort wurde für Leerzeichen abgeschnitten und zeigt nur Teildetails der einzelnen Segmentaufträge an. Bei der vollständigen Antwort werden alle Details zu den angeforderten Segmentaufträgen Liste.
+>[!NOTE]
+>
+>Die folgende Antwort wurde für Leerzeichen abgeschnitten und zeigt nur Teildetails der einzelnen Segmentaufträge an. Bei der vollständigen Antwort werden alle Details zu den angeforderten Segmentaufträgen Liste.
 
 ```json
 {
@@ -424,7 +428,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 207 mit den angeforderten Segmentauft
 
 ## Abbrechen oder Löschen eines bestimmten Segmentauftrags
 
-Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anforderung an den `/segment/jobs` Endpunkt senden und den `id` Wert des Segmentauftrags im Anforderungspfad angeben.
+Sie können den Löschvorgang für einen bestimmten Segmentauftrag anfordern, indem Sie eine DELETE-Anforderung an den `/segment/jobs` Endpunkt senden und den `id` Wert des Segmentauftrags im Anforderungspfad angeben.
 
 **API-Format**
 
