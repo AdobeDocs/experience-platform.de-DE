@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Adobe Privacy JavaScript Library
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b916ac5529db6ca383bf8bad56961bb1b8a0b0c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 5%
@@ -14,25 +14,29 @@ ht-degree: 5%
 
 # Übersicht über die Adobe Privacy JavaScript Library
 
-Als Datenverarbeiter verarbeitet Adobe personenbezogene Daten gemäß den Anweisungen und Genehmigungen Ihrer Firma. Als Datenverantwortlicher legen Sie fest, welche personenbezogenen Daten Adobe in Ihrem Namen verarbeitet und speichert. Je nach den Informationen, die Sie über Adobe Experience Cloud-Lösungen senden, kann Adobe private Informationen speichern, die für Datenschutzbestimmungen wie die Allgemeine Datenschutzverordnung (GDPR) und das California Consumer Privacy Act (CCPA) gelten. Weitere Informationen zur Datenerfassung durch Experience Cloud-Lösungen finden Sie im Dokument zum [Datenschutz in Adobe Experience Cloud](https://www.adobe.com/de/privacy/marketing-cloud.html) .
+Als Datenverarbeiter verarbeitet Adobe personenbezogene Daten gemäß den Anweisungen und Genehmigungen Ihrer Firma. Als Datenverantwortlicher legen Sie fest, welche personenbezogenen Daten Adobe in Ihrem Namen verarbeitet und speichert. Je nach den Informationen, die Sie über Adobe Experience Cloud-Lösungen senden, kann Adobe private Informationen speichern, die für Datenschutzbestimmungen wie die Allgemeine Datenschutzverordnung (GDPR) und das California Consumer Privacy Act (CCPA) gelten. Weitere Informationen zur Datenerfassung durch Experience Cloud-Lösungen finden Sie im Dokument zum [Datenschutz in der Adobe Experience Cloud](https://www.adobe.com/de/privacy/marketing-cloud.html) .
 
-Die JavaScript-Bibliothek **zum Schutz der Privatsphäre in** Adobe ermöglicht es Datenverarbeitungs-Controllern, den Abruf aller von Experience Cloud-Lösungen generierten Identitäten der betroffenen Personen für eine bestimmte Domäne zu automatisieren. Mithilfe der vom [Adobe Experience Platform Privacy Service](home.md)bereitgestellten API können diese Identitäten dann zum Erstellen und Löschen von Anforderungen für private Daten dieser betroffenen Personen verwendet werden.
+Die JavaScript-Bibliothek **zum Schutz der Privatsphäre in** Adobe ermöglicht es Datenverarbeitungs-Controllern, den Abruf aller von Experience Cloud-Lösungen für eine bestimmte Domäne generierten Identitäten zu automatisieren. Mithilfe der von [Adobe Experience Platform Privacy Service](home.md)bereitgestellten API können diese Identitäten dann zum Erstellen und Löschen von Anforderungen für Privatdaten dieser betroffenen Personen verwendet werden.
 
->[!NOTE] Die JS-Datenschutzbibliothek muss in der Regel nur auf datenschutzrelevanten Seiten installiert werden und muss nicht auf allen Seiten einer Website oder Domäne installiert werden.
+>[!NOTE]
+>
+>Die JS-Datenschutzbibliothek muss in der Regel nur auf datenschutzrelevanten Seiten installiert werden und muss nicht auf allen Seiten einer Website oder Domäne installiert werden.
 
 ## Funktionen
 
-Die Privacy JS Library bietet verschiedene Funktionen zum Verwalten von Identitäten im Datenschutzdienst. Diese Funktionen können nur zur Verwaltung der Identitäten verwendet werden, die im Browser für einen bestimmten Besucher gespeichert werden. Sie können nicht verwendet werden, um Informationen direkt an den Experience Cloud Central-Dienst zu senden.
+Die Privacy JS Library bietet verschiedene Funktionen zum Verwalten von Identitäten in Privacy Service. Diese Funktionen können nur zur Verwaltung der Identitäten verwendet werden, die im Browser für einen bestimmten Besucher gespeichert werden. Sie können nicht verwendet werden, um Informationen direkt an den Experience Cloud Central Service zu senden.
 
 In der folgenden Tabelle sind die verschiedenen Funktionen der Bibliothek aufgeführt:
 
 | Funktion | Beschreibung |
 | --- | --- |
-| `retrieveIdentities` | Gibt ein Array mit übereinstimmenden Identitäten (`validIds`) zurück, die vom Datenschutzdienst abgerufen wurden, sowie ein Array mit nicht gefundenen Identitäten (`failedIds`). |
+| `retrieveIdentities` | Gibt ein Array mit übereinstimmenden Identitäten (`validIds`) zurück, die aus Privacy Service abgerufen wurden, sowie ein Array mit nicht gefundenen Identitäten (`failedIds`). |
 | `removeIdentities` | Entfernt jede übereinstimmende (gültige) Identität aus dem Browser. Gibt ein Array mit übereinstimmenden Identitäten (`validIds`) zurück, wobei jede Identität einen `isDeleteClientSide` booleschen Wert enthält, der angibt, ob diese ID gelöscht wurde. |
 | `retrieveThenRemoveIdentities` | Ruft ein Array mit übereinstimmenden Identitäten (`validIds`) ab und entfernt diese dann aus dem Browser. Diese Funktion ähnelt zwar der Funktion, `removeIdentities`wird jedoch am besten verwendet, wenn die von Ihnen verwendete Adobe-Lösung eine Zugriffsanfrage erfordert, bevor das Löschen möglich ist (z. B. wenn eine eindeutige ID abgerufen werden muss, bevor sie in einer Löschanforderung bereitgestellt wird). |
 
->[!NOTE] `removeIdentities` und entfernen Sie `retrieveThenRemoveIdentities` nur Identitäten aus dem Browser für bestimmte Adobe-Lösungen, die diese unterstützen. Adobe Audience Manager löscht beispielsweise nicht die demdex-IDs, die in Drittanbieter-Cookies gespeichert sind, während Adobe Zielgruppe alle Cookies löscht, die ihre IDs speichern.
+>[!NOTE]
+>
+>`removeIdentities` und entfernen Sie `retrieveThenRemoveIdentities` nur Identitäten aus dem Browser für bestimmte Adobe-Lösungen, die diese unterstützen. Adobe Audience Manager löscht beispielsweise nicht die demdex-IDs, die in Drittanbieter-Cookies gespeichert sind, während Adobe Target alle Cookies löscht, die ihre IDs speichern.
 
 Da alle drei Funktionen asynchrone Prozesse darstellen, müssen alle abgerufenen Identitäten mit Rückrufen oder Versprechungen behandelt werden.
 
@@ -89,7 +93,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | Variable | Beschreibung |
 | --- | --- |
 | `validIds` | Ein JSON-Objekt, das alle IDs enthält, die erfolgreich abgerufen wurden. |
-| `failedIDs` | Ein JSON-Objekt, das alle IDs enthält, die nicht vom Datenschutzdienst abgerufen wurden oder anderweitig nicht gefunden werden konnten. |
+| `failedIDs` | Ein JSON-Objekt, das alle IDs enthält, die nicht von Privacy Service abgerufen wurden oder anderweitig nicht gefunden werden konnten. |
 
 #### Ergebnis
 
@@ -138,7 +142,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | Variable | Beschreibung |
 | --- | --- |
 | `validIds` | Ein JSON-Objekt, das alle IDs enthält, die erfolgreich abgerufen wurden. |
-| `failedIDs` | Ein JSON-Objekt, das alle IDs enthält, die nicht vom Datenschutzdienst abgerufen wurden oder anderweitig nicht gefunden werden konnten. |
+| `failedIDs` | Ein JSON-Objekt, das alle IDs enthält, die nicht von Privacy Service abgerufen wurden oder anderweitig nicht gefunden werden konnten. |
 
 #### Ergebnis
 
@@ -167,7 +171,7 @@ Wird der Code erfolgreich ausgeführt, `validIDs` wird eine Liste der abgerufene
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments wurden Sie mit den Kernfunktionen der Privacy JS Library vertraut gemacht. Nachdem Sie die Bibliothek zum Abrufen einer Liste von Identitäten verwendet haben, können Sie mit diesen Identitäten Datenzugriff erstellen und Anforderungen an die Datenschutzdienst-API löschen. Weitere Informationen finden Sie im Entwicklerhandbuch für den [Datenschutzdienst](api/getting-started.md) .
+Durch das Lesen dieses Dokuments wurden Sie mit den Kernfunktionen der Privacy JS Library vertraut gemacht. Nachdem Sie die Bibliothek zum Abrufen einer Liste von Identitäten verwendet haben, können Sie mit diesen Identitäten Datenzugriff erstellen und Anforderungen an die Privacy Service-API löschen. Weitere Informationen finden Sie im [Privacy Service Developer Guide](api/getting-started.md) .
 
 ## Anhang
 
@@ -192,7 +196,7 @@ Im Folgenden finden Sie eine Liste der zulässigen Konfigurationsparameter für 
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `clientCode` | Client-Code, der einen Client im Adobe Zielgruppe System identifiziert. |
+| `clientCode` | Client-Code, der einen Client im Adobe Target System identifiziert. |
 
 **Adobe Audience Manager**
 
@@ -200,7 +204,7 @@ Im Folgenden finden Sie eine Liste der zulässigen Konfigurationsparameter für 
 | --- | --- |
 | `aamUUIDCookieName` | Name des Erstanbieter-Cookies mit der eindeutigen Benutzer-ID, die von Adobe Audience Manager zurückgegeben wird. |
 
-**Adobe ID-Dienst (ECID)**
+**Adobe ID Service (ECID)**
 
 | Parameter | Beschreibung |
 | --- | --- |
