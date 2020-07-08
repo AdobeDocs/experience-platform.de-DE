@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ressourcen suchen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 2%
@@ -50,7 +50,9 @@ Ressourcenabfrageanforderungen müssen in den Accept-Header aufgenommen `version
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` und `allOf` gelöst, keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` und `allOf` gelöst, einschließlich Deskriptoren. |
 
->[!NOTE] Wenn Sie nur die `major` Version (1, 2, 3 usw.) angeben, gibt die Registrierung automatisch die neueste `minor` Version (.1, .2, .3 usw.) zurück.
+>[!NOTE]
+>
+>Wenn Sie nur die `major` Version (1, 2, 3 usw.) angeben, gibt die Registrierung automatisch die neueste `minor` Version (.1, .2, .3 usw.) zurück.
 
 **Antwort**
 
