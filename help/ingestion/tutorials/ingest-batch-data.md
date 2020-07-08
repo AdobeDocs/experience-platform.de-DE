@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Daten in die Adobe Experience Platform integrieren
+title: Daten in Adobe Experience Platform einbeziehen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 3%
@@ -12,13 +12,13 @@ ht-degree: 3%
 ---
 
 
-# Daten in die Adobe Experience Platform integrieren
+# Daten in Adobe Experience Platform einbeziehen
 
-Mit Adobe Experience Platform können Sie Daten ganz einfach als Batch-Dateien in die Plattform importieren. Zu den zu erfassenden Daten zählen beispielsweise Profil-Daten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parkettdatei) oder Daten, die einem bekannten XDM-Schema (Experience Data Model) in der Schema-Registrierung entsprechen.
+Mit der Adobe Experience Platform können Sie problemlos Daten als Stapeldateien in die Platform importieren. Zu den zu erfassenden Daten zählen beispielsweise Profil-Daten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parkettdatei) oder Daten, die einem bekannten XDM-Schema (Experience Data Model) in der Schema-Registrierung entsprechen.
 
 ## Erste Schritte
 
-Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf die Erlebnisplattform haben. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf die Experience Platform haben. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Wenn Sie Daten lieber mit Data Ingestion APIs erfassen möchten, lesen Sie zunächst das Entwicklerhandbuch für [Batch Ingestion](../batch-ingestion/api-overview.md).
 
@@ -28,7 +28,9 @@ Im Arbeitsbereich „Datensätze“ von Experience Platform können Sie alle Dat
 
 Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **Datensätze** klicken. The Datasets workspace contains a list of datasets, including columns showing _Name_, _Created_ (date and time), _Source_, _Schema_, and _Last Batch Status_, as well as the date and time the dataset was _Last Updated_.
 
->[!NOTE] Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen zu verwenden, um nur die zum Profil aktivierten Datensätze Ansicht.
+>[!NOTE]
+>
+>Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen zu verwenden, um nur die zum Profil aktivierten Datensätze Ansicht.
 
 ![Ansicht aller Datensätze](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
@@ -76,7 +78,7 @@ Auf der Registerkarte &quot;Info&quot;befindet sich auch ein _Profil_ -Umschalte
 
 ## Datensatz für Echtzeit-Kundendaten aktivieren
 
-Datasets werden für die Erfassung von Daten in die Experience Platform verwendet, und diese Daten werden letztendlich zur Identifizierung von Einzelpersonen und zum Zusammenführen von Informationen aus mehreren Quellen verwendet. Diese zusammengeführten Informationen werden als Echtzeit-Profil des Kunden bezeichnet. Damit die Plattform wissen kann, welche Informationen in das Echtzeit-Profil aufgenommen werden sollen, können Datensätze mit dem **Profil** -Umschalter zur Aufnahme markiert werden.
+Datasets werden für die Erfassung von Daten in die Experience Platform verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzuführen. Diese zusammengeführten Informationen werden als Echtzeit-Profil des Kunden bezeichnet. Damit die Platform wissen kann, welche Informationen in das Echtzeit-Profil aufgenommen werden sollen, können Datensätze mit dem **Profil** -Umschalter zur Aufnahme markiert werden.
 
 Standardmäßig ist dieser Umschalter deaktiviert. Wenn Sie das Profil aktivieren, werden alle Daten, die in den Datensatz aufgenommen werden, zur Identifizierung einer Person und zum Zusammenfügen ihres Echtzeit-Profils verwendet.
 
@@ -100,13 +102,15 @@ Daten können auf verschiedene Weise in einen Datensatz eingefügt werden. Sie k
 
 Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **Hinzufügen Daten** . Sie können jetzt Dateien per Drag &amp; Drop verschieben oder auf Ihrem Computer nach den Dateien suchen, die Sie hinzufügen möchten.
 
->[!NOTE] Plattform unterstützt zwei Dateitypen für die Datenerfassung, Parkett oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße pro Datei 10 GB beträgt.
+>[!NOTE]
+>
+>Platform unterstützt zwei Dateitypen für die Datenerfassung, Parkett oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße pro Datei 10 GB beträgt.
 
 ![Registerkarte &quot;Hinzufügen&quot;](../images/tutorials/ingest-batch-data/add_data.png)
 
 ## Hochladen einer Datei
 
-Wenn Sie eine Datei per Drag &amp; Drop (oder durch Durchsuchen und Auswählen) hochladen, beginnt die Verarbeitung der Datei sofort mit der Verarbeitung durch die Plattform, und auf der Registerkarte &quot;Daten **&quot;wird ein Dialogfeld zum** Hochladen **angezeigt, in dem der Fortschritt des Datei-Uploads** Hinzufügen angezeigt wird.
+Wenn Sie eine Datei per Drag &amp; Drop (oder durch Durchsuchen und Auswählen) hochladen, beginnt die Platform sofort mit der Verarbeitung der Datei, und auf der Registerkarte &quot;Daten **&quot;wird ein Dialogfeld zum** Hochladen **angezeigt, in dem der Fortschritt des Datei-Uploads** Hinzufügen angezeigt wird.
 
 ![Dialogfeld &quot;Hochladen&quot;](../images/tutorials/ingest-batch-data/uploading.png)
 
@@ -138,6 +142,6 @@ Klicken Sie auf **Vorschau DataSet** , um ein Dialogfeld mit Beispieldaten aus d
 
 ## Nächste Schritte
 
-Nachdem Sie nun einen Datensatz erstellt und erfolgreich Daten in Experience Platform gesammelt haben, können Sie diese Schritte wiederholen, um einen neuen Datensatz zu erstellen oder weitere Daten in den vorhandenen Datensatz zu erfassen.
+Nachdem Sie nun einen Datensatz erstellt und Daten erfolgreich in die Experience Platform aufgenommen haben, können Sie diese Schritte wiederholen, um einen neuen Datensatz zu erstellen oder weitere Daten in den vorhandenen Datensatz zu erfassen.
 
 Weitere Informationen zur Stapelverarbeitung finden Sie in der Übersicht über die [Stapeleinbettung](../batch-ingestion/overview.md).
