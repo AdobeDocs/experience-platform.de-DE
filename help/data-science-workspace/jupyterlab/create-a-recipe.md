@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Skripts mit Jupyter-Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,6 +30,8 @@ Das Erstellen eines Rezeptes von Grund auf kann innerhalb von [!DNL Data Science
 Mit dem [!UICONTROL Rezept Builder] Notebook können Sie Trainings- und Scoring-Runs im Notebook ausführen. Dadurch erhalten Sie die Flexibilität, Änderungen an ihren `train()` und `score()` Methoden zwischen laufenden Experimenten mit den Schulungs- und Bewertungsdaten vorzunehmen. Sobald Sie mit den Ausgaben der Schulung und Bewertung zufrieden sind, können Sie ein Rezept erstellen, das bei der [!DNL Data Science Workspace] Verwendung des Notebooks verwendet werden kann, um Funktionen zu rezeptieren, die in das Rezept Builder-Notebook integriert sind.
 
 >[!NOTE]
+>
+>
 >Das Rezept Builder-Notebook unterstützt alle Dateiformate, aber derzeit unterstützt die Funktion Rezept erstellen nur [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -46,7 +48,9 @@ Um Änderungen an den Skriptdateien vorzunehmen, navigieren Sie zu der Zelle im 
 
 Beginn, die die erforderlichen Änderungen an der Zelle vornehmen, führen Sie die Zelle nach Abschluss einfach aus. Der `%%writefile filename.py` Befehl schreibt den Inhalt der Zelle in die `filename.py`. Sie müssen die Zelle für jede Datei mit Änderungen manuell ausführen.
 
->[!NOTE] Sie sollten die Zellen gegebenenfalls manuell ausführen.
+>[!NOTE]
+>
+>Sie sollten die Zellen gegebenenfalls manuell ausführen.
 
 ## Erste Schritte mit dem Rezept Builder-Notebook
 
@@ -73,6 +77,8 @@ data_access_sdk_python
 ```
 
 >[!NOTE]
+>
+>
 >Bibliotheken oder spezifische Versionen, die Sie hinzufügen, sind möglicherweise nicht mit den oben genannten Bibliotheken kompatibel.
 
 ### Konfigurationsdateien {#configuration-files}
@@ -115,6 +121,8 @@ In diesem Schritt wird das [Pandas-Dataframe](https://pandas.pydata.org/pandas-d
 - [Externe Quellen](#external-sources)
 
 >[!NOTE]
+>
+>
 >Im Recipe Builder-Notebook werden Daten über den `platform_sdk` Datenlader geladen.
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -144,6 +152,8 @@ Jetzt befinden sich Ihre Daten im DataFrame-Objekt und können im [nächsten Abs
 ### Von Data Access SDK (nicht mehr unterstützt)
 
 >[!CAUTION]
+>
+>
 > `data_access_sdk_python` wird nicht mehr empfohlen. Eine Anleitung zur Verwendung des Datenladeprogramms finden Sie unter [Datenzugriffscode in Platform-SDK](../authoring/platform-sdk.md) konvertieren `platform_sdk` .
 
 Benutzer können Daten mit dem Data Access SDK laden. Die Bibliothek kann oben auf der Seite importiert werden, indem die folgende Zeile eingefügt wird:
@@ -162,6 +172,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
+>
+>
 >Wie im Abschnitt [Konfigurationsdatei](#configuration-files)erwähnt, werden die folgenden Konfigurationsparameter für Sie festgelegt, wenn Sie Daten aus [!DNL Experience Platform]den folgenden Quellen aufrufen:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
@@ -262,7 +274,7 @@ return df
 
 Da der Zweck unseres Modells darin besteht, zukünftige wöchentliche Verkäufe vorherzusagen, müssen Sie einen Bewertungsdatensatz erstellen, mit dem bewertet wird, wie gut die Vorhersage des Modells funktioniert.
 
-Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Speicher gemessen werden, sodass Sie die `weeklySales` Werte 45 Datensätze vorwärts in eine neue Spalte namens `weeklySalesAhead`verschieben können.
+Dieses Recipe Builder-Notebook macht dies, indem wir unseren wöchentlichen Umsatz 7 Tage vorwärts verrechnen. Beachten Sie, dass wöchentlich 45 Datenspeicher gemessen werden, damit Sie die `weeklySales` Werte 45 vorwärts in eine neue Spalte namens `weeklySalesAhead`.
 
 ```PYTHON
 df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
@@ -291,7 +303,9 @@ Die `pipeline.py` Datei enthält eine Logik für Schulung und Bewertung.
 
 Der Zweck der Schulung besteht darin, ein Modell mithilfe von Funktionen und Beschriftungen in Ihrem Schulungsdatensatz zu erstellen.
 
->[!NOTE]\
+>[!NOTE]
+>
+> 
 >_Funktionen_ beziehen sich auf die Eingabevariable, die vom maschinellen Lernmodell zur Vorhersage der _Beschriftungen_ verwendet wird.
 
 Die `train()` Funktion sollte das Schulungsmodell enthalten und das geschulte Modell zurückgeben. Einige Beispiele für verschiedene Modelle finden Sie in der Dokumentation [des](https://scikit-learn.org/stable/user_guide.html)Benutzerhandbuchszum Scikit-Lernen.
