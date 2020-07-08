@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Segmentaufbau-Benutzeroberfläche
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2683'
 ht-degree: 0%
@@ -69,7 +69,9 @@ Sie können nicht nur nach [!DNL ExperienceEvent] Elementen suchen, sondern auch
 
 Sie können nach beliebigen Komponenten suchen, indem Sie deren Namen in die Suchleiste eingeben, die die Suchsyntax von [Lucene verwendet](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Die Suchergebnisse beginnen mit der Eingabe ganzer Wörter zu füllen. Wenn Sie beispielsweise eine Regel auf Grundlage des XDM-Felds erstellen möchten, geben Sie `ExperienceEvent.commerce.productViews`im Suchfeld Beginn &quot;product Ansichten&quot;ein. Sobald das Wort &quot;Produkt&quot;eingegeben wurde, werden die Suchergebnisse angezeigt. Jedes Ergebnis enthält die Objekthierarchie, zu der es gehört.
 
->[!NOTE] Die Anzeige benutzerdefinierter Schema-Felder, die von Ihrem Unternehmen definiert wurden, kann bis zu 24 Stunden dauern und zur Verwendung bei der Erstellung von Regeln verfügbar werden.
+>[!NOTE]
+>
+>Die Anzeige von benutzerdefinierten Schema-Feldern, die von Ihrem Unternehmen definiert wurden, kann bis zu 24 Stunden in Anspruch nehmen und steht für die Verwendung bei der Erstellung von Regeln zur Verfügung.
 
 Sie können dann einfach per Drag &amp; Drop [!DNL ExperienceEvents] und [!UICONTROL Ereignistyp] in Ihre Segmentdefinition ziehen.
 
@@ -105,7 +107,9 @@ Sie können eine Audience per Drag &amp; Drop von der Registerkarte &quot; *[!UI
 
 Bei [!DNL Platform] Audiencen, die mit dem [!UICONTROL Segmentaufbau]erstellt wurden, können Sie die Audience in den Regelsatz konvertieren, der in der Segmentdefinition für diese Audience verwendet wurde. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition geändert werden kann. Vergewissern Sie sich, dass Sie alle Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in Regellogik konvertieren.
 
->[!NOTE] Beim Hinzufügen einer Audience aus einer externen Quelle wird nur auf die Audience-Mitgliedschaft verwiesen. Sie können die Audience nicht in Regeln konvertieren. Daher können die zum Erstellen der ursprünglichen Audience verwendeten Regeln in der neuen Segmentdefinition nicht geändert werden.
+>[!NOTE]
+>
+>Beim Hinzufügen einer Audience aus einer externen Quelle wird nur auf die Audience-Mitgliedschaft verwiesen. Sie können die Audience nicht in Regeln konvertieren. Daher können die zum Erstellen der ursprünglichen Audience verwendeten Regeln in der neuen Segmentdefinition nicht geändert werden.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -137,7 +141,9 @@ Ein untergeordneter Container kann auch extrahiert und inline zum übergeordnete
 
 Wenn Sie auf Container **[!UICONTROL aufheben]** klicken, wird der untergeordnete Container entfernt und die Kriterien werden inline angezeigt.
 
->[!NOTE] Achten Sie beim Entpacken von Containern darauf, dass die Logik weiterhin der gewünschten Segmentdefinition entspricht.
+>[!NOTE]
+>
+>Achten Sie beim Entpacken von Containern darauf, dass die Logik weiterhin der gewünschten Segmentdefinition entspricht.
 
 ![](../images/segment-builder/unwrapped-container-inline.png)
 
@@ -161,7 +167,9 @@ Wenn Sie Ihre Segmentdefinition weiter erstellen, können Sie eine paginierte Vo
 
 ![](../images/segment-builder/segment-properties.png)
 
->[!NOTE] Die Schätzungen der Audience werden anhand einer Stichprobengröße der Stichprobendaten dieses Tages erstellt. Wenn sich in Ihrem Profil-Store weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. für zwischen 1 und 20 Millionen Unternehmen werden 1 Million Einheiten verwendet; und für mehr als 20 Millionen Unternehmen werden 5 % der Gesamteinheiten verwendet. Weitere Informationen zum Generieren von Segmentschätzungen finden Sie im Abschnitt zur [Schätzung der Generierung](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) des Lernprogramms zur Segmenterstellung.
+>[!NOTE]
+>
+>Die Schätzungen der Audience werden anhand einer Stichprobengröße der Stichprobendaten dieses Tages erstellt. Wenn sich in Ihrem Profil-Store weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. für zwischen 1 und 20 Millionen Unternehmen werden 1 Million Einheiten verwendet; und für mehr als 20 Millionen Unternehmen werden 5 % der Gesamteinheiten verwendet. Weitere Informationen zum Generieren von Segmentschätzungen finden Sie im Abschnitt zur [Schätzung der Generierung](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) des Lernprogramms zur Segmenterstellung.
 
 ## Geplante Segmentierung aktivieren {#enable-scheduled-segmentation}
 
@@ -171,7 +179,9 @@ Bei der On-Demand-Bewertung wird die API zur Durchführung von Evaluierungen und
 
 Die Aktivierung Ihrer Segmentdefinitionen für die geplante Evaluierung kann über die Benutzeroberfläche oder die API erfolgen. Kehren Sie in der Benutzeroberfläche zur Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;innerhalb von **[!UICONTROL Segmenten]** zurück und schalten Sie auf Alle Segmente **[!UICONTROL auswerten]** um. Dadurch werden alle Segmente basierend auf dem von Ihrer Organisation festgelegten Zeitplan bewertet.
 
->[!NOTE] Geplante Evaluierung kann für Sandboxen mit maximal fünf (5) Zusammenführungsrichtlinien aktiviert werden, für die [!DNL XDM Individual Profile]die Funktion aktiviert ist. Wenn Ihr Unternehmen über mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] eine einzige Sandbox-Umgebung verfügt, können Sie keine geplante Auswertung verwenden.
+>[!NOTE]
+>
+>Geplante Evaluierung kann für Sandboxen mit maximal fünf (5) Zusammenführungsrichtlinien aktiviert werden, für die [!DNL XDM Individual Profile]die Funktion aktiviert ist. Wenn Ihr Unternehmen über mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] eine einzige Sandbox-Umgebung verfügt, können Sie keine geplante Auswertung verwenden.
 
 Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweisungen zum Erstellen, Bearbeiten und Arbeiten mit Zeitplänen mithilfe der API finden Sie im Tutorial zur Evaluierung und zum Zugriff auf Segmentergebnisse, insbesondere im Abschnitt zur [geplanten Auswertung mithilfe der API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -179,7 +189,9 @@ Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweis
 
 ## Streaming-Segmentierung {#streaming-segmentation}
 
->[!NOTE] Damit Streaming-Segmentierung funktioniert, muss der Kunde die geplante Segmentierung für das Unternehmen aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie im vorherigen Abschnitt [dieses Benutzerhandbuchs](#enable-scheduled-segmentation).
+>[!NOTE]
+>
+>Damit Streaming-Segmentierung funktioniert, muss der Kunde die geplante Segmentierung für das Unternehmen aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie im vorherigen Abschnitt [dieses Benutzerhandbuchs](#enable-scheduled-segmentation).
 
 Eine Abfrage wird automatisch mit Streaming-Segmentierung bewertet, wenn sie eines der folgenden Kriterien erfüllt:
 
@@ -223,7 +235,9 @@ Weitere Informationen zur letzten Segmentauswertung erhalten Sie, wenn Sie auf d
 
 ## Verstöße gegen DULE-Richtlinien
 
->[!NOTE] Verstöße gegen DULE-Richtlinien gelten nur, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
+>[!NOTE]
+>
+>Verstöße gegen DULE-Richtlinien gelten nur, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
 
 Nachdem Sie Ihr Segment erstellt haben, wird das Segment analysiert, [!DNL Data Governance] um sicherzustellen, dass es keine Richtlinienverletzungen innerhalb des Segments gibt. Weitere Informationen zu DUL- und Richtlinienverletzungen finden Sie in der Übersicht über die [Datenverwendung](../../data-governance/labels/overview.md).
 
