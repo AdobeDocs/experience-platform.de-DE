@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entwicklerhandbuch für Abfrage Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 3%
@@ -105,7 +105,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Abfragen-Vorl
 }
 ```
 
->[!NOTE] Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
+>[!NOTE]
+>
+>Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
 
 ### Erstellen einer Vorlage für eine Abfrage
 
@@ -166,7 +168,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zur neu 
 }
 ```
 
->[!NOTE] Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
+>[!NOTE]
+>
+>Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
 
 ### Abrufen einer angegebenen Vorlage für Abfragen
 
@@ -222,7 +226,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur Vorlage der angeg
 }
 ```
 
->[!NOTE] Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
+>[!NOTE]
+>
+>Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
 
 ### Aktualisieren einer bestimmten Vorlage für eine Abfrage
 
@@ -240,7 +246,9 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **Anfrage**
 
->[!NOTE] Für die PUT-Anforderung müssen sowohl das Feld &quot;sql&quot;als auch das Feld &quot;name&quot;ausgefüllt werden. Der aktuelle Inhalt dieser Abfrage-Vorlage wird **überschrieben** .
+>[!NOTE]
+>
+>Für die PUT-Anforderung müssen sowohl das Feld &quot;sql&quot;als auch das Feld &quot;name&quot;ausgefüllt werden. Der aktuelle Inhalt dieser Abfrage-Vorlage wird **überschrieben** .
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -290,11 +298,13 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit den aktualisiert
 }
 ```
 
->[!NOTE] Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
+>[!NOTE]
+>
+>Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
 
 ### Eine angegebene Vorlage für eine Abfrage löschen
 
-Sie können eine bestimmte Vorlage für Abfragen löschen, indem Sie eine DELETE-Anforderung an die Adresse senden `/query-templates/{TEMPLATE_ID}` und die ID der Vorlage für die Abfrage im Anforderungspfad angeben.
+Sie können eine bestimmte Vorlage für die Abfrage löschen, indem Sie eine DELETE-Anforderung an die Gruppe senden `/query-templates/{TEMPLATE_ID}` und die ID der Abfrage-Vorlage im Anforderungspfad angeben.
 
 **API-Format**
 
