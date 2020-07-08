@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 1%
@@ -14,22 +14,22 @@ ht-degree: 1%
 
 # Benutzerhandbuch zu Datensätzen
 
-Dieses Benutzerhandbuch enthält Anweisungen zur Durchführung allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Benutzeroberfläche von Adobe Experience Platform.
+Dieses Benutzerhandbuch enthält Anleitungen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Benutzeroberfläche der Adobe Experience Platform.
 
 ## Erste Schritte
 
-Dieses Benutzerhandbuch erfordert ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
+Dieses Benutzerhandbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
 
-* [Datensätze](overview.md): Das Datenspeicherung- und Verwaltungskonstrukt für die Datenpersistenz in Experience Platform.
+* [Datensätze](overview.md): Das Datenspeicherung- und Verwaltungskonstrukt für die Datenpersistenz in der Experience Platform.
 * [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Zusammensetzung](../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
-   * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mithilfe des Schema-Editors in der Plattform-Benutzeroberfläche eigene benutzerdefinierte XDM-Schema erstellen.
+   * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mithilfe des Schema-Editors in der Benutzeroberfläche der Platform eigene benutzerdefinierte XDM-Schema erstellen.
 * [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Datenverwaltung](../../data-governance/home.md): Gewährleisten Sie die Einhaltung von Vorschriften, Einschränkungen und Richtlinien zur Nutzung von Kundendaten.
 
 ## Ansichten-Datensätze
 
-Klicken Sie in der Benutzeroberfläche der Erlebnisplattform im linken Navigationsbereich auf **Datensätze** , um das Dashboard &quot; *Datasets* &quot;zu öffnen. Das Dashboard Liste alle verfügbaren Datensätze für Ihr Unternehmen. Details zu jedem aufgelisteten Datensatz werden angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status der letzten Erfassungsausführung.
+Klicken Sie in der Benutzeroberfläche &quot;Experience Platform&quot;auf **Datasets** in der linken Navigation, um das Dashboard &quot; *Datasets* &quot;zu öffnen. Das Dashboard Liste alle verfügbaren Datensätze für Ihr Unternehmen. Details zu jedem aufgelisteten Datensatz werden angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status der letzten Erfassungsausführung.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -48,7 +48,7 @@ Im Fenster &quot;Vorschau&quot;wird die hierarchische Ansicht des Schemas für d
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-Für stabilere Methoden zum Zugriff auf Ihre Daten bietet Experience Platform nachgelagerte Dienste wie Abfrage Service und JupyterLab zur Untersuchung und Analyse von Daten. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Für stabilere Methoden zum Zugriff auf Ihre Daten bietet Experience Platform nachgelagerte Dienste wie Abfrage Service und JupyterLab, um Daten zu untersuchen und zu analysieren. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über den Abfrage Service](../../query-service/home.md)
 * [JupyterLab-Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md)
@@ -90,7 +90,9 @@ The *Configure* step appears. Geben Sie dem Datensatz einen Namen und eine optio
 
 Der *Hinzufügen Datenschritt* wird angezeigt. Laden Sie die CSV-Datei hoch, indem Sie sie entweder in die Mitte Ihres Bildschirms ziehen und dort ablegen, oder klicken Sie auf **Durchsuchen** , um das Dateiverzeichnis zu durchsuchen. Die Datei kann bis zu zehn Gigabyte groß sein. Klicken Sie nach dem Hochladen der CSV-Datei auf **Speichern** , um den Datensatz zu erstellen.
 
->[!NOTE] CSV-Spaltennamen müssen mit alphanumerischen Zeichen Beginn haben und dürfen nur Buchstaben, Ziffern und Unterstriche enthalten.
+>[!NOTE]
+>
+>CSV-Spaltennamen müssen mit alphanumerischen Zeichen Beginn haben und dürfen nur Buchstaben, Ziffern und Unterstriche enthalten.
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
@@ -111,13 +113,15 @@ Wenn ein Datensatz bereits Daten enthält und dann zum Profil aktiviert ist, wer
 
 ## Verwalten und Erzwingen der Datenverwaltung in einem Datensatz
 
-Datennutzungskennzeichnung und -durchsetzung (DULE) ist der zentrale Datenverwaltungs-Mechanismus für Experience Platform. Mit den DULE-Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weitere Informationen zu Beschriftungen finden Sie in der Übersicht [zur](../../data-governance/home.md) Datenverwaltung oder im Benutzerhandbuch [zu den](../../data-governance/labels/overview.md) Datenverwendungsbeschriftungen, in dem beschrieben wird, wie Sie Beschriftungen auf Datensätze anwenden.
+Datennutzungskennzeichnung und -durchsetzung (DULE) ist der zentrale Datenverwaltungsmechanismus für die Experience Platform. Mit den DULE-Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weitere Informationen zu Beschriftungen finden Sie in der Übersicht [zur](../../data-governance/home.md) Datenverwaltung oder im Benutzerhandbuch [zu den](../../data-governance/labels/overview.md) Datenverwendungsbeschriftungen, in dem beschrieben wird, wie Sie Beschriftungen auf Datensätze anwenden.
 
 ## Löschen eines Datensatzes
 
 Sie können einen Datensatz löschen, indem Sie zunächst auf den Anzeigebereich &quot; *DataSet-Aktivität* &quot;zugreifen. Klicken Sie dann auf &quot;Datensatz **löschen&quot;** , um ihn zu löschen.
 
->[!NOTE] Datasets, die von Adobe-Anwendungen und -Diensten erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder Entscheidungsdienst), können nicht gelöscht werden.
+>[!NOTE]
+>
+>Datasets, die von Adobe-Anwendungen und -Diensten erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder Entscheidungsdienst), können nicht gelöscht werden.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -131,7 +135,7 @@ Wenn ein Datensatz zum Profil aktiviert ist, wird beim Löschen über die Benutz
 
 ## Überwachung der Datenaufnahme
 
-Klicken Sie in der Benutzeroberfläche der Experience Platform im linken Navigationsbereich auf **Überwachung** . Mit dem *Überwachungs* -Dashboard können Sie den Status von Eingangsdaten aus der Batch- oder Streaming-Erfassung Ansicht werden. Um den Status der einzelnen Stapel Ansicht, klicken Sie entweder auf *Stapel von Ende zu Ende* oder auf *Streaming von Ende zu Ende*. Die Dashboards führen alle Batch- oder Streaming-Aufrufe aus, einschließlich solcher, die erfolgreich sind, fehlgeschlagen sind oder noch ausgeführt werden. Jede Auflistung enthält Details zum Stapel, einschließlich der Stapel-ID, dem Namen des Datensatzes zur Zielgruppe und der Anzahl der erfassten Datensätze. Wenn der Zielgruppe-Datensatz zum Profil aktiviert ist, wird auch die Anzahl der erfassten Identitäts- und Profil-Datensätze angezeigt.
+Klicken Sie in der Benutzeroberfläche &quot;Experience Platform&quot;im linken Navigationsbereich auf **Überwachung** . Mit dem *Überwachungs* -Dashboard können Sie den Status von Eingangsdaten aus der Batch- oder Streaming-Erfassung Ansicht werden. Um den Status der einzelnen Stapel Ansicht, klicken Sie entweder auf *Stapel von Ende zu Ende* oder auf *Streaming von Ende zu Ende*. Die Dashboards führen alle Batch- oder Streaming-Aufrufe aus, einschließlich solcher, die erfolgreich sind, fehlgeschlagen sind oder noch ausgeführt werden. Jede Auflistung enthält Details zum Stapel, einschließlich der Stapel-ID, dem Namen des Datensatzes zur Zielgruppe und der Anzahl der erfassten Datensätze. Wenn der Zielgruppe-Datensatz zum Profil aktiviert ist, wird auch die Anzahl der erfassten Identitäts- und Profil-Datensätze angezeigt.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
@@ -145,7 +149,7 @@ Wenn Sie den Stapel löschen möchten, klicken Sie dazu auf Stapel **löschen** 
 
 ## Nächste Schritte
 
-Dieses Benutzerhandbuch enthält Anweisungen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Benutzeroberfläche von Experience Platform. Schritte zum Ausführen gemeinsamer Plattform-Workflows mit Datensätzen finden Sie in den folgenden Lernprogrammen:
+Dieses Benutzerhandbuch enthält Anleitungen zum Ausführen häufiger Aktionen beim Arbeiten mit Datensätzen in der Benutzeroberfläche der Experience Platform. Anweisungen zum Durchführen allgemeiner Workflows mit Datensätzen finden Sie in den folgenden Lernprogrammen:
 
 * [Erstellen eines Datensatzes mit APIs](create.md)
 * [Abfrage von Datensatzdaten mit der Datenzugriffs-API](../../data-access/home.md)
