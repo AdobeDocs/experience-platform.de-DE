@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ressource ersetzen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 1%
@@ -18,7 +18,9 @@ Mit der Schema-Registrierung können Sie eine gesamte Ressource durch einen PUT-
 
 Diese Methode ist besonders hilfreich, wenn Sie eine Menge Informationen in der Ressource gleichzeitig aktualisieren möchten.
 
->[!NOTE] Wenn Sie nur einen Teil einer Ressource aktualisieren möchten, anstatt sie vollständig zu ersetzen, lesen Sie das Dokument zum [Aktualisieren einer Ressource mit einem PATCH-Vorgang](update-resource.md).
+>[!NOTE]
+>
+>Wenn Sie nur einen Teil einer Ressource aktualisieren möchten, anstatt sie vollständig zu ersetzen, lesen Sie das Dokument zum [Aktualisieren einer Ressource mit einem PATCH-Vorgang](update-resource.md).
 
 **API-Format**
 
