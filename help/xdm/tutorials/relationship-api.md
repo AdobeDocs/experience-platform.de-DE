@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Registry API
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1504'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Registry API
 
 
-Die Fähigkeit, die Beziehungen zwischen Ihren Kunden und ihre Interaktionen mit Ihrer Marke über verschiedene Kanal hinweg zu verstehen, ist ein wichtiger Bestandteil der Adobe Experience Platform. Die Definition dieser Beziehungen innerhalb der Struktur Ihrer Experience Data Model (XDM)-Schema ermöglicht Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
+Die Fähigkeit, die Beziehungen zwischen Ihren Kunden und ihre Interaktionen mit Ihrer Marke über verschiedene Kanäle hinweg zu verstehen, ist ein wichtiger Bestandteil der Adobe Experience Platform. Die Definition dieser Beziehungen innerhalb der Struktur Ihrer Experience Data Model (XDM)-Schema ermöglicht Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
 
 Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrem Unternehmen mithilfe der [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)definiert werden.
 
@@ -26,7 +26,7 @@ Dieses Lernprogramm erfordert ein funktionierendes Verständnis von Experience D
 * [XDM-System in Experience Platform](../home.md): Eine Übersicht über XDM und seine Implementierung in Experience Platform.
    * [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Einführung in die Bausteine von XDM-Schemas.
 * [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
 
@@ -56,7 +56,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] Die Kopfzeile &quot;Akzeptieren&quot; `application/vnd.adobe.xed-id+json` gibt nur die Titel, IDs und Versionen der resultierenden Schema zurück.
+>[!NOTE]
+>
+>Die Kopfzeile &quot;Akzeptieren&quot; `application/vnd.adobe.xed-id+json` gibt nur die Titel, IDs und Versionen der resultierenden Schema zurück.
 
 **Antwort**
 
@@ -104,7 +106,9 @@ Notieren Sie die `$id` Werte der beiden Schema, zwischen denen Sie eine Beziehun
 
 Innerhalb der Schema Registry funktionieren Beziehungsdeskriptoren ähnlich wie Fremdschlüssel in SQL-Tabellen: Ein Feld im Quell-Schema dient als Verweis auf ein Schema eines Ziels. Beim Definieren einer Beziehung muss jedes Schema über ein dediziertes Feld verfügen, das als Verweis auf das andere Schema verwendet werden soll.
 
->[!IMPORTANT] Wenn die Schema für die Verwendung im [Echtzeit-Kundenkonto](../../profile/home.md)aktiviert werden sollen, muss das Referenzfeld für das Ziel-Schema seine **primäre Identität** sein. Dies wird später in diesem Tutorial ausführlicher erläutert.
+>[!IMPORTANT]
+>
+>Wenn die Schema für die Verwendung im [Echtzeit-Kundenkonto](../../profile/home.md)aktiviert werden sollen, muss das Referenzfeld für das Ziel-Schema seine **primäre Identität** sein. Dies wird später in diesem Tutorial ausführlicher erläutert.
 
 Wenn eines der Schemas zu diesem Zweck über kein Feld verfügt, müssen Sie eventuell eine Mischung mit dem neuen Feld erstellen und es dem Schema hinzufügen. Dieses neue Feld muss den `type` Wert &quot;string&quot;haben.
 
@@ -326,7 +330,9 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, d
 
 ## Definieren Sie primäre Identitätsfelder für beide Schema.
 
->[!NOTE] Dieser Schritt ist nur für Schema erforderlich, die für die Verwendung im [Echtzeit-Profil](../../profile/home.md)aktiviert werden. Wenn Sie nicht möchten, dass Schema an einer Vereinigung teilnimmt oder wenn Ihre Schema bereits über primäre Identitäten verfügen, können Sie mit dem nächsten Schritt zur [Erstellung eines Referenz-Identitätsdeskriptors](#create-descriptor) für das Ziel-Schema fortfahren.
+>[!NOTE]
+>
+>Dieser Schritt ist nur für Schema erforderlich, die für die Verwendung im [Echtzeit-Profil](../../profile/home.md)aktiviert werden. Wenn Sie nicht möchten, dass Schema an einer Vereinigung teilnimmt oder wenn Ihre Schema bereits über primäre Identitäten verfügen, können Sie mit dem nächsten Schritt zur [Erstellung eines Referenz-Identitätsdeskriptors](#create-descriptor) für das Ziel-Schema fortfahren.
 
 Damit Schema für die Verwendung im Echtzeit-Profil aktiviert werden können, muss eine primäre Identität definiert sein. Darüber hinaus muss das Ziel-Schema einer Beziehung seine primäre Identität als Referenzfeld verwenden.
 
@@ -364,7 +370,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --- | --- |
 | `@type` | Der Typ des zu erstellenden Deskriptors. Der `@type` Wert für Identitätsdeskriptoren ist `xdm:descriptorIdentity`. |
-| `xdm:sourceSchema` | Der `$id` Wert des im [vorherigen Schema](#define-schemas)erhaltenen Zielwerts. |
+| `xdm:sourceSchema` | Der `$id` Wert des im [vorherigen Schritt](#define-schemas)erhaltenen Zielwerts. |
 | `xdm:sourceVersion` | Die Versionsnummer des Schemas. |
 | `sourceProperty` | Der Pfad zum jeweiligen Feld, das als primäre Identität des Schemas dient. Dieser Pfad sollte mit einem &quot;/&quot;beginnen und nicht mit einem &quot;/&quot;enden, während auch alle &quot;properties&quot;-Namensraum ausgeschlossen werden. Die oben aufgeführte Anforderung verwendet zum Beispiel `/_{TENANT_ID}/hotelId` anstelle von `/properties/_{TENANT_ID}/properties/hotelId`. |
 | `xdm:namespace` | Der Identitäts-Namensraum für das Identitätsfeld. `hotelId` in diesem Beispiel ein ECID-Wert ist, daher wird der Namensraum &quot;ECID&quot;verwendet. Eine Liste der verfügbaren Namensraum finden Sie in der Übersicht über den [Identitäts-Namensraum](../../identity-service/home.md) . |
