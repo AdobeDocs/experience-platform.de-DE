@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Berechtigungen für ein Produkt-Profil verwalten
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 2%
@@ -32,7 +32,9 @@ Um eine Berechtigung hinzuzufügen, klicken Sie auf das **Pluszeichen (+)** nebe
 
 ![add-permissions](../images/add-permissions.png)
 
->[!NOTE] In der Liste &quot; *Einbezogene Berechtigungselemente* &quot;werden nur zusätzliche Berechtigungen aus der aktuell ausgewählten Kategorie angezeigt.
+>[!NOTE]
+>
+>In der Liste &quot; *Einbezogene Berechtigungselemente* &quot;werden nur zusätzliche Berechtigungen aus der aktuell ausgewählten Kategorie angezeigt.
 
 Um eine Berechtigung zu entfernen, klicken Sie auf das **X** -Symbol neben dem Berechtigungsnamen oder wählen Sie Alle **entfernen, um alle Berechtigungen unter der aktuellen Kategorie zu entfernen** . Entfernte Berechtigungen werden unter *Verfügbare Berechtigungselemente* wieder angezeigt.
 
