@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Schemas mit der Schema Registry API
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe E
 
 Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
 
-In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas für Treuemitglieder beschrieben, in dem die Daten zu den Mitgliedern eines Programms zur Treue von Kunden beschrieben werden. Bevor Sie beginnen, möchten Sie vielleicht das Schema [](#complete-schema) zu den Treuemitgliedern im Anhang Vorschau haben.
+In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas für Treuemitglieder beschrieben, in dem die Daten zu den Mitgliedern eines Programms zur Treue von Kunden beschrieben werden. Bevor Sie beginnen, sollten Sie das Schema [](#complete-schema) zu den Treuemitgliedern im Anhang Vorschau haben.
 
 ## Erstellen eines Schemas mit einer Standardklasse
 
@@ -256,7 +256,9 @@ Die Antwort zeigt das neu hinzugefügte mixin im `meta:extends` Array und enthä
 
 Sie können jetzt ein anderes Standard-Mixin hinzufügen, indem Sie die Schritte mit einem anderen Mixin wiederholen.
 
->[!TIP] Es lohnt sich, alle verfügbaren Mixins zu überprüfen, um sich mit den Feldern, die in den jeweiligen Mixins enthalten sind, vertraut zu machen. Sie können alle für eine bestimmte Liste verfügbaren Mixins (GET) mit einer bestimmten Klasse ausführen, indem Sie eine Anforderung für jeden der Container &quot;global&quot;und &quot;tenant&quot;ausführen und nur die Mixins zurückgeben, bei denen das Feld &quot;meta:intentedToExtend&quot;mit der verwendeten Klasse übereinstimmt. In diesem Fall ist es die XDM Individual Profil-Klasse, sodass das XDM Individual-Profil verwendet `$id` wird:
+>[!TIP]
+>
+>Es lohnt sich, alle verfügbaren Mixins zu überprüfen, um sich mit den Feldern, die in den jeweiligen Mixins enthalten sind, vertraut zu machen. Sie können alle für eine bestimmte Liste verfügbaren Mixins (GET) mit einer bestimmten Klasse ausführen, indem Sie eine Anforderung für jeden der Container &quot;global&quot;und &quot;tenant&quot;ausführen und nur die Mixins zurückgeben, bei denen das Feld &quot;meta:intentedToExtend&quot;mit der verwendeten Klasse übereinstimmt. In diesem Fall ist es die XDM Individual Profil-Klasse, sodass das XDM Individual-Profil verwendet `$id` wird:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -991,7 +993,9 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] Sie können mit der [Identitätsdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)verfügbare &quot;xdm:Namensraum&quot;-Werte oder neue Listen erstellen. Der Wert für &quot;xdm:property&quot;kann entweder &quot;xdm:code&quot;oder &quot;xdm:id&quot;sein, je nachdem, welcher &quot;xdm:Namensraum&quot;verwendet wird.
+>[!NOTE]
+>
+>Sie können mit der [Identitätsdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)verfügbare &quot;xdm:Namensraum&quot;-Werte oder neue Listen erstellen. Der Wert für &quot;xdm:property&quot;kann entweder &quot;xdm:code&quot;oder &quot;xdm:id&quot;sein, je nachdem, welcher &quot;xdm:Namensraum&quot;verwendet wird.
 
 **Antwort**
 
