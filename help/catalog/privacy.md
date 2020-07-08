@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -39,7 +39,9 @@ Weitere Informationen zu Identitäts-Namensräumen in der Experience Platform fi
 
 Beim Erstellen von Datenschutzanforderungen für den Data Lake müssen für jeden einzelnen Kunden gültige Identitätswerte (und die zugehörigen Namensraum) angegeben werden, um die Daten zu finden und entsprechend zu verarbeiten. Daher müssen alle Datensätze, die Datenschutzanforderungen unterliegen, einen **Identitätsdeskriptor** in ihrem zugehörigen XDM-Schema enthalten.
 
->[!NOTE] Datensätze, die auf Schemas basieren, die keine Identitätsdeskriptordaten unterstützen (z. B. Ad-hoc-Datensätze), können derzeit nicht in Datenschutzanforderungen verarbeitet werden.
+>[!NOTE]
+>
+>Datensätze, die auf Schemas basieren, die keine Identitätsdeskriptordaten unterstützen (z. B. Ad-hoc-Datensätze), können derzeit nicht in Datenschutzanforderungen verarbeitet werden.
 
 In diesem Abschnitt werden die Schritte zum Hinzufügen eines Identitätsdeskriptors zum XDM-Schema eines vorhandenen Datensatzes beschrieben. Wenn Sie bereits über einen Datensatz mit einem Identitätsdeskriptor verfügen, können Sie mit dem [nächsten Abschnitt](#nested-maps)fortfahren.
 
@@ -60,7 +62,9 @@ Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt
 
 ### Verwenden der API {#identity-api}
 
->[!NOTE] In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mithilfe der Katalogdienst-API abrufen. Nachdem Sie den [Abschnitt &quot;Erste Schritte](./api/getting-started.md) &quot;im Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die unter zur [Auflistung](./api/list-objects.md) oder [Suche](./api/look-up-object.md) von Katalogobjekten nach dem Datensatz beschrieben werden. Die Schema-ID finden Sie unter `schemaRef.id`
+>[!NOTE]
+>
+>In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mithilfe der Katalogdienst-API abrufen. Nachdem Sie den [Abschnitt &quot;Erste Schritte](./api/getting-started.md) &quot;im Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die unter zur [Auflistung](./api/list-objects.md) oder [Suche](./api/look-up-object.md) von Katalogobjekten nach dem Datensatz beschrieben werden. Die Schema-ID finden Sie unter `schemaRef.id`
 >
 > Dieser Abschnitt enthält Aufrufe der Schema Registry API. Wichtige Informationen zur Verwendung der API, einschließlich der Kenntnisse über Ihre `{TENANT_ID}` und das Konzept der Container, finden Sie im Abschnitt [Erste Schritte](../xdm/api/getting-started.md) im Entwicklerhandbuch.
 
@@ -126,7 +130,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und die Details des ne
 
 ## Einreichen von Anträgen {#submit}
 
->[!NOTE] In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Data Lake formatieren. Es wird dringend empfohlen, die Dokumentation zur Benutzeroberfläche [des](../privacy-service/ui/overview.md) Privacy Service oder zur [Privacy Service-API](../privacy-service/api/getting-started.md) zu lesen, um die Grundlagen zum Senden eines Datenschutzauftrags zu erläutern, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
+>[!NOTE]
+>
+>In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Data Lake formatieren. Es wird dringend empfohlen, die Dokumentation zur Benutzeroberfläche [des](../privacy-service/ui/overview.md) Privacy Service oder zur [Privacy Service-API](../privacy-service/api/getting-started.md) zu lesen, um die Grundlagen zum Senden eines Datenschutzauftrags zu erläutern, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
 
 Im folgenden Abschnitt wird beschrieben, wie Sie mithilfe der Benutzeroberfläche oder API des Privacy Service Datenschutzanforderungen für den Data Lake durchführen.
 
@@ -193,7 +199,7 @@ In zukünftigen Versionen sendet Platform eine Bestätigung an Privacy Service, 
 
 Durch das Lesen dieses Dokuments wurden Sie zu den wichtigen Konzepten der Verarbeitung von Datenschutzanforderungen für den Data Lake vorgestellt. Es wird empfohlen, die Dokumentation in diesem Handbuch weiter zu lesen, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Anweisungen zur Verarbeitung von Datenschutzanforderungen für den Profil Store finden Sie im Dokument zur Verarbeitung von [Datenschutzanfragen für Echtzeit-Kundendaten](../profile/privacy.md) .
+Anweisungen zur Verarbeitung von Datenschutzanforderungen für den Profil Store finden Sie im Dokument zur Verarbeitung von [Datenschutzanforderungen für Echtzeit-Kundendaten](../profile/privacy.md) .
 
 ## Anhang
 
