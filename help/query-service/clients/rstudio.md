@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verbindung mit RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Verbindung mit RStudio
 
-In diesem Dokument werden die Schritte zum Verbinden von R Studio mit dem Adobe Experience Platform Abfrage Service beschrieben.
+Dieses Dokument führt Sie durch die Schritte, um R Studio mit Adobe Experience Platform Abfrage Service zu verbinden.
 
 Nach der Installation von RStudio müssen Sie zunächst auf dem angezeigten *Konsolenbildschirm* Ihr R-Skript für die Verwendung von PostgreSQL vorbereiten.
 
@@ -43,7 +43,9 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` und `{PORT_NUMBER}` | Der Host-Endpunkt und sein Anschluss für den Abfrage-Dienst. |
 | `{USERNAME}` und `{PASSWORD}` | Die Anmeldeinformationen, die verwendet werden. Der Benutzername hat die Form `ORG_ID@AdobeOrg`. |
 
->[!NOTE] Weitere Informationen zum Auffinden der Anmeldeinformationen für Datenbankname, Host, Anschluss und Anmeldung finden Sie auf der Seite [Anmeldeinformationen auf der Plattform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei Platform an, klicken Sie auf **Abfragen** und dann auf **Anmeldeinformationen**.
+>[!NOTE]
+>
+>Weitere Informationen zum Auffinden der Anmeldeinformationen für Datenbankname, Host, Anschluss und Anmeldung finden Sie auf der Seite &quot; [Anmeldeinformationen&quot;in der Platform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei der Platform an, klicken Sie auf **Abfragen** und dann auf **Anmeldeinformationen**.
 
 ## Nächste Schritte
 
