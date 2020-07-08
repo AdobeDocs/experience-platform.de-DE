@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über den Data Science Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Daten sind der Eckpfeiler von KI und maschinellem Lernen.
 
 [//]: # (The built-in recipe gallery offers recommendations for prebuilt recipes based on your business needs.)
 
-Wenn Sie es bevorzugen, können Sie ein vorgefertigtes Rezept an Ihre Anforderungen anpassen, ein Rezept importieren oder einen Beginn von Grund auf neu erstellen, um ein benutzerdefiniertes Rezept zu erstellen. Sobald Sie jedoch ein Rezept trainieren und überarbeiten, ist für die Erstellung eines benutzerdefinierten intelligenten Dienstes kein Entwickler erforderlich - nur wenige Klicks und Sie sind bereit, ein zielgerichtetes, personalisiertes digitales Erlebnis zu entwickeln.
+Wenn Sie es bevorzugen, können Sie ein vorgefertigtes Rezept an Ihre Anforderungen anpassen, ein Rezept importieren oder einen Beginn von Grund auf neu erstellen, um ein benutzerdefiniertes Rezept zu erstellen. Sobald Sie jedoch ein Rezept trainieren und überarbeiten, ist für die Erstellung eines benutzerdefinierten intelligenten Dienstes kein Entwickler erforderlich - nur ein paar Klicks und Sie sind bereit, ein zielgerichtetes, personalisiertes digitales Erlebnis zu entwickeln.
 
 ### Arbeitsablauf, der auf den Datenwissenschaftler ausgerichtet ist
 
@@ -123,7 +123,9 @@ Datenwissenschaftler können neue Technologien und Datensätze nutzen, sobald si
 
 Access control for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). Diese Funktion nutzt Profil in der Admin Console, die Benutzer mit Berechtigungen und Sandboxen verknüpfen. See the [access control overview](../access-control/home.md) for more information.
 
->[!IMPORTANT] Zur Verwendung [!DNL Data Science Workspace]muss die Berechtigung [!UICONTROL &quot;Data Science Workspace verwalten&quot;] aktiviert sein.
+>[!IMPORTANT]
+>
+>Zur Verwendung [!DNL Data Science Workspace]muss die Berechtigung [!UICONTROL &quot;Data Science Workspace verwalten&quot;] aktiviert sein.
 
 Die folgende Tabelle zeigt die Auswirkungen, die eine Aktivierung oder Deaktivierung dieser Berechtigung hat:
 
