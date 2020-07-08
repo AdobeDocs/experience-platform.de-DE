@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Überwachen der Datenerfassung
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Überwachen der Datenerfassung
 
-Mit der Datenerfassung können Sie Ihre Daten in Adobe Experience Platform erfassen. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie Ihre Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder Streaming, mit dem Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit an die Plattform übertragen können.
+Durch die Datenerfassung können Sie Ihre Daten in Adobe Experience Platform erfassen. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie Ihre Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder Streaming, mit dem Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit an die Platform erfassen können.
 
-Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe-ID und Zugriff auf die Adobe Experience Platform.
+In diesem Benutzerhandbuch wird beschrieben, wie Sie Ihre Daten in der Benutzeroberfläche der Adobe Experience Platform überwachen. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf die Adobe Experience Platform.
 
 ## Überwachen der End-to-End-Datenerfassung
 
@@ -24,7 +24,7 @@ Klicken Sie in der Benutzeroberfläche [der](https://platform.adobe.com)Experien
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Die Seite zur *Streaming-End-to-End* -Überwachung wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der Streaming-Ereignis anzeigt, die von der Plattform empfangen werden, ein Diagramm, das die Rate der Streaming-Ereignis anzeigt, die erfolgreich vom [Echtzeit-Kundenkonto](../../profile/home.md)verarbeitet wurden, sowie eine detaillierte Liste der eingehenden Daten.
+Die Seite zur *Streaming-End-to-End* -Überwachung wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der Streaming-Ereignis anzeigt, die bei der Platform empfangen werden. Es zeigt die Rate der Streaming-Ereignis an, die erfolgreich vom [Echtzeit-Kundendienst](../../profile/home.md)verarbeitet wurden, sowie eine detaillierte Liste der eingehenden Daten.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -34,7 +34,9 @@ Standardmäßig zeigt das obere Diagramm die Rate der Aufnahme in den letzten si
 
 Das untere Diagramm zeigt die Rate der erfolgreich verarbeiteten Streaming-Ereignis nach Profil in den letzten sieben Tagen. Dieser Datumsbereich kann angepasst werden, um verschiedene Zeiträume anzuzeigen, indem Sie auf die hervorgehobene Schaltfläche klicken.
 
-> [!NOTE] Damit Daten in diesem Diagramm angezeigt werden, müssen sie zum Profil **explizit** aktiviert werden. Informationen zum Aktivieren von Streaming-Daten für Profil finden Sie im Benutzerhandbuch zu [Datensätzen](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>[!NOTE]
+>
+>Damit Daten in diesem Diagramm angezeigt werden, müssen sie zum Profil **explizit** aktiviert werden. Informationen zum Aktivieren von Streaming-Daten für Profil finden Sie im Benutzerhandbuch zu [Datensätzen](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
