@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Schemas mit dem Schema-Editor.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -239,7 +239,7 @@ In einem zukünftigen Schema können Sie nun einem Feld den **Typ** &quot;Loyali
 
 Schema werden für die Erfassung von Daten in die Experience Platform verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzuführen. Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identitätsfelder&quot;markiert werden.
 
-Mit Experience Platform können Sie ein Identitätsfeld ganz einfach durch das Kontrollkästchen &quot; **Identität** &quot;im Schema-Editor kennzeichnen.
+Mit Experience Platform können Sie ein Identitätsfeld ganz einfach über das Kontrollkästchen &quot; **Identität** &quot;im Schema-Editor kennzeichnen.
 
 So kann es beispielsweise Tausende von Mitgliedern des Treuebereichs geben, die derselben &quot;Ebene&quot;angehören, aber jedes Mitglied des Treuebereichs-Programms hat eine eindeutige &quot;loyaltyId&quot;(E-Mail-Adresse des jeweiligen Mitglieds). Die Tatsache, dass &quot;loyaltyId&quot;eine eindeutige Kennung für jedes Mitglied ist, macht es zu einem guten Kandidaten für ein Identitätsfeld, während &quot;level&quot;dies nicht tut.
 
@@ -289,13 +289,25 @@ Klicken Sie auf **Profil** , und es wird ein Popup angezeigt, in dem Sie aufgefo
 >
 >Nachdem ein Schema für Echtzeit-Kundendaten aktiviert und gespeichert wurde, kann es nicht deaktiviert werden.
 
-## Nächste Schritte
+## Nächste Schritte und zusätzliche Ressourcen
 
 Nachdem Sie das Schema &quot;Treuemitglieder&quot;fertig gestellt haben, können Sie das vollständige Schema im Bereich &quot; *Struktur* &quot;des Editors sehen. Klicken Sie auf **Speichern** , und das Schema wird in der Schema-Bibliothek gespeichert, damit es von der Schema-Registrierung aufgerufen werden kann.
 
 Ihr neues Schema kann jetzt verwendet werden, um Daten in die Platform zu erfassen. Denken Sie daran, dass nach Verwendung des Schemas zur Datenerfassung nur noch zusätzliche Änderungen vorgenommen werden dürfen. Weitere Informationen zur Schema-Versionierung finden Sie in den [Grundlagen der Schema-Komposition](../schema/composition.md) .
 
 Das Schema &quot;Treuemitglieder&quot;steht auch zur Ansicht und Verwaltung mit der Schema Registry-API zur Verfügung. Um mit der API zu arbeiten, lesen Sie Beginn im Entwicklerhandbuch für die [Schema-Registrierungs-API](../api/getting-started.md).
+
+>[!WARNING]
+>
+>Die in den folgenden Videos dargestellte [!DNL Platform] Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+
+Das folgende Video zeigt, wie Sie ein einfaches Schema in der [!DNL Platform] Benutzeroberfläche erstellen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+Das folgende Video soll Ihnen die Arbeit mit Mixins und Klassen erleichtern.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Anhang
 
