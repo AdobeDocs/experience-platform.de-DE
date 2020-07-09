@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Übersicht über die partielle Batchaufnahme der Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 2%
+source-wordcount: '1243'
+ht-degree: 1%
 
 ---
 
 
 
-# Partielle Batch-Erfassung (Beta)
+# Partielle Batch-Erfassung
 
 Partielle Stapelverarbeitung ist die Fähigkeit, Daten mit Fehlern bis zu einem bestimmten Schwellenwert zu erfassen. Mit dieser Funktion können Benutzer alle korrekten Daten erfolgreich in Adobe Experience Platform aufnehmen, während alle fehlerhaften Daten separat in Batches aufgenommen werden, zusammen mit Details, warum sie ungültig sind.
 
@@ -21,102 +21,117 @@ Dieses Dokument bietet eine Anleitung zum Verwalten der partiellen Stapelverarbe
 
 Darüber hinaus bietet der [Anhang](#appendix) zu diesem Lernprogramm eine Referenz zu Fehlertypen bei der Partiellen Stapelverarbeitung.
 
->[!IMPORTANT]
->
->Diese Funktion existiert nur mit der API. Wenden Sie sich an Ihr Team, um Zugriff auf diese Funktion zu erhalten.
-
 ## Erste Schritte
 
 Dieses Tutorial erfordert ein Arbeitswissen der verschiedenen Adobe Experience Platformen-Services, die mit der teilweisen Stapelverarbeitung verbunden sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [Stapelverarbeitung](./overview.md): Die Methode, mit der Platform Daten aus Datendateien wie CSV und Parquet erfasst und speichert.
+- [Stapelverarbeitung](./overview.md): Die Methode, mit der Daten aus Datendateien wie CSV und Parquet [!DNL Platform] erfasst und gespeichert werden.
 - [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Platformen-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Platform] APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
+In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur [!DNL Experience Platform] Fehlerbehebung.
 
 ### Werte für erforderliche Kopfzeilen sammeln
 
-Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+Um [!DNL Platform] APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufen bereit, wie unten dargestellt:
 
 - Genehmigung: Träger `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
-## Aktivieren eines Datensatzes für die teilweise Stapelverarbeitung in der API
+## Aktivieren eines Stapels für die teilweise Stapelverarbeitung in der API {#enable-api}
 
-<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
+>[!NOTE]
+>
+>In diesem Abschnitt wird die Aktivierung eines Stapels für die teilweise Stapelverarbeitung mithilfe der API beschrieben. Anweisungen zur Verwendung der Benutzeroberfläche finden Sie im Schritt Benutzeroberfläche [im Abschnitt Stapel zur teilweisen Stapelverarbeitung](#enable-ui) aktivieren.
 
-Sie können einen neuen Datensatz erstellen oder einen vorhandenen Datensatz mit aktivierter teilweiser Erfassung ändern.
+Sie können einen neuen Stapel mit aktivierter teilweiser Erfassung erstellen.
 
-Um einen neuen Datensatz zu erstellen, führen Sie die Schritte im Lernprogramm zum [Erstellen eines Datensatzes](../../catalog/api/create-dataset.md)aus. Nachdem Sie den Schritt zum *Erstellen eines Datensatzes* erreicht haben, fügen Sie das folgende Feld im Anforderungstext hinzu:
+Um einen neuen Stapel zu erstellen, führen Sie die Schritte im Entwicklerhandbuch für die [Stapelverarbeitung](./api-overview.md)aus. Nachdem Sie den Schritt Stapel *erstellen* erreicht haben, fügen Sie das folgende Feld im Anforderungstext hinzu:
 
 ```json
 {
     ...
-    "tags" : {
-        "partialBatchIngestion":["errorThresholdPercentage:5"]
-    },
+    "enableErrorDiagnostics": true,
+    "partialIngestionPercentage": 5
     ...
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `errorThresholdPercentage` | Der Prozentsatz der akzeptablen Fehler, bevor der gesamte Stapel fehlschlägt. |
+| `enableErrorDiagnostics` | Ein Flag, mit dem detaillierte Fehlermeldungen zum Stapel generiert [!DNL Platform] werden können. |
+| `partialIngestionPercentage` | Der Prozentsatz der akzeptablen Fehler, bevor der gesamte Stapel fehlschlägt. In diesem Beispiel können also maximal 5 % des Stapels Fehler sein, bevor er fehlschlägt. |
 
-Um einen vorhandenen Datensatz zu ändern, führen Sie die Schritte im Entwicklerhandbuch für den [Katalog durch](../../catalog/api/update-object.md).
 
-Innerhalb des Datensatzes müssen Sie das oben beschriebene Tag hinzufügen.
-
-<!-- ## Enable a dataset for partial batch ingestion in the UI
+## Aktivieren eines Stapels für die teilweise Stapelverarbeitung in der Benutzeroberfläche {#enable-ui}
 
 >[!NOTE]
 >
->This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>In diesem Abschnitt wird beschrieben, wie Sie einen Stapel für die teilweise Stapelverarbeitung mithilfe der Benutzeroberfläche aktivieren. Wenn Sie bereits einen Stapel für die teilweise Stapelverarbeitung mithilfe der API aktiviert haben, können Sie mit dem nächsten Abschnitt fortfahren.
 
-To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+Um einen Stapel für die teilweise Erfassung über die [!DNL Platform] Benutzeroberfläche zu aktivieren, können Sie einen neuen Stapel über Quellverbindungen erstellen, einen neuen Stapel in einem vorhandenen Datensatz erstellen oder einen neuen Stapel über den Fluss[!UICONTROL &quot;CSV zu XDM zuordnen&quot;erstellen].
 
-### Create a new dataset with partial batch ingestion enabled
+### Neue Quellverbindung erstellen {#new-source}
 
-To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
+Um eine neue Quellverbindung zu erstellen, befolgen Sie die aufgelisteten Schritte in der Übersicht über die [Quellen](../../sources/home.md). Nachdem Sie den Schritt für die *[!UICONTROL Datenfelddetails]* erreicht haben, beachten Sie die Felder *[!UICONTROL Partielle Erfassung]* und *[!UICONTROL Fehlerdiagnose]* .
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
 
-The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
+Der Umschalter für die *[!UICONTROL Fehlerdiagnose]* wird nur angezeigt, wenn der Umschalter für die *[!UICONTROL partielle Erfassung]* deaktiviert ist. Mit dieser Funktion können Sie detaillierte Fehlermeldungen [!DNL Platform] zu den erfassten Stapeln generieren. Wenn der Umschalter *[!UICONTROL für die teilweise Erfassung]* aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
 
-### Modify an existing dataset to enable partial batch ingestion
+### Vorhandenen Datensatz verwenden {#existing-dataset}
 
-To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
+Um einen vorhandenen Datensatz zu verwenden, wählen Sie einen Beginn aus, indem Sie einen Datensatz auswählen. Die Seitenleiste auf der rechten Seite enthält Informationen zum Datensatz.
 
-![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+Mit dem Umschalter [!UICONTROL *[!UICONTROL Partielle Erfassung]*] können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
+Der Umschalter für die *[!UICONTROL Fehlerdiagnose]* wird nur angezeigt, wenn der Umschalter für die *[!UICONTROL partielle Erfassung]* deaktiviert ist. Mit dieser Funktion können Sie detaillierte Fehlermeldungen [!DNL Platform] zu den erfassten Stapeln generieren. Wenn der Umschalter *[!UICONTROL für die teilweise Erfassung]* aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
-## Abrufen von Fehlern bei der partiellen Stapelverarbeitung
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
+
+Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+
+Jetzt können Sie Daten mit der Schaltfläche **Hinzufügen Daten** hochladen, die dann mit einer teilweisen Erfassung erfasst werden.
+
+### Verwenden Sie den Fluss &quot;CSV[!UICONTROL zu XDM-Schema]zuordnen&quot; {#map-flow}
+
+Um den Fluss &quot;CSV[!UICONTROL zu XDM-Schema]zuordnen&quot;zu verwenden, führen Sie die im Lernprogramm [CSV-Datei](../tutorials/map-a-csv-file.md)zuordnen aufgeführten Schritte aus. Nachdem Sie den *HinzufügenDatenschritt* erreicht haben, beachten Sie die Felder *[!UICONTROL Partielle Erfassung]* und *[!UICONTROL Fehlerdiagnose]* .
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
+
+Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
+
+Der Umschalter für die *[!UICONTROL Fehlerdiagnose]* wird nur angezeigt, wenn der Umschalter für die *[!UICONTROL partielle Erfassung]* deaktiviert ist. Mit dieser Funktion können Sie detaillierte Fehlermeldungen [!DNL Platform] zu den erfassten Stapeln generieren. Wenn der Umschalter *[!UICONTROL für die teilweise Erfassung]* aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
+
+Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+
+## Abrufen von Fehlern bei der partiellen Stapelverarbeitung {#retrieve-errors}
 
 Wenn Stapel Fehler enthalten, müssen Sie Fehlerinformationen zu diesen Fehlern abrufen, damit Sie die Daten erneut erfassen können.
 
-### Status prüfen
+### Status prüfen {#check-status}
 
 Um den Status des erfassten Stapels zu überprüfen, müssen Sie die ID des Stapels im Pfad einer GET-Anforderung angeben.
 
@@ -149,6 +164,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
+            ...
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
             ...
         },
         "relatedObjects": [
@@ -183,7 +201,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 Wenn der Stapel einen Fehler aufweist und die Fehlerdiagnose aktiviert ist, lautet der Status &quot;success&quot;mit weiteren Informationen zum Fehler, der in einer herunterladbaren Fehlerdatei bereitgestellt wird.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 In diesem Lernprogramm wurde beschrieben, wie Sie einen Datensatz erstellen oder ändern, um die teilweise Stapelverarbeitung zu aktivieren. Weitere Informationen zur Stapelverarbeitung finden Sie im [Entwicklerhandbuch](./api-overview.md)zur Stapelverarbeitung.
 
