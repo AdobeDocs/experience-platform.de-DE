@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Hilfe zum Adobe Experience Platform-Datenschutzdienst
+user-guide-title: Adobe Experience Platform Privacy Service-Hilfe
 translation-type: tm+mt
-source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
+source-git-commit: 8c617631f2c1eb58871ed5eb0c9218cd943764cb
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 11%
@@ -11,20 +11,20 @@ ht-degree: 11%
 ---
 
 
-# Datenschutzdienst für Adobe Experience Platform {#privacy}
+# Adobe Experience Platform Privacy Service {#privacy}
 
-* [Übersicht über den Datenschutzdienst](home.md)
-* [Datenschutzdienst und Experience Cloud-Anwendungen](experience-cloud-apps.md)
+* [Übersicht über Privacy Service](home.md)
+* [Privacy Service- und Experience Cloud-Anwendungen](experience-cloud-apps.md)
+* [Identitätsdaten für Datenschutzanforderungen](identity-data.md)
 * [Übersicht zur JS-Datenschutzbibliothek](js-library.md)
 * Privacy Service API {#api}
    * [Erste Schritte](api/getting-started.md)
    * [Datenschutzaufträge](api/privacy-jobs.md)
    * [Zustimmung](api/consent.md)
    * [Anhang](api/appendix.md)
-* Benutzeroberfläche des Datenschutzdienstes {#ui}
-   * [Übersicht über die Benutzeroberfläche des Datenschutzdienstes](ui/overview.md)
-   * [Benutzerhandbuch zum Datenschutzdienst](ui/user-guide.md)
-* [Identitätsdaten für Datenschutzanforderungen](identity-data.md)
+* Benutzeroberfläche des Privacy Service {#ui}
+   * [Übersicht über die Benutzeroberfläche des Privacy Service](ui/overview.md)
+   * [Benutzerhandbuch für Privacy Service](ui/user-guide.md)
 * [Ereignisse zum Schutz der Privatsphäre abonnieren](privacy-events.md)
 * GDPR-Guides {#gdpr}
    * [Häufig gestellte Fragen zur DSGVO](gdpr/faq.md)
