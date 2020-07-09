@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die partielle Batchaufnahme der Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
+source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 1%
@@ -85,7 +85,7 @@ Um einen Stapel für die teilweise Erfassung über die [!DNL Platform] Benutzero
 
 ### Neue Quellverbindung erstellen {#new-source}
 
-Um eine neue Quellverbindung zu erstellen, befolgen Sie die aufgelisteten Schritte in der Übersicht über die [Quellen](../../sources/home.md). Nachdem Sie den Schritt für die *[!UICONTROL Datenfelddetails]* erreicht haben, beachten Sie die Felder *[!UICONTROL Partielle Erfassung]* und *[!UICONTROL Fehlerdiagnose]* .
+Um eine neue Quellverbindung zu erstellen, führen Sie die in der Übersicht über die [Quellen](../../sources/home.md)aufgeführten Schritte aus. Nachdem Sie den Schritt für die *[!UICONTROL Datenfelddetails]* erreicht haben, beachten Sie die Felder *[!UICONTROL Partielle Erfassung]* und *[!UICONTROL Fehlerdiagnose]* .
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
@@ -103,7 +103,7 @@ Um einen vorhandenen Datensatz zu verwenden, wählen Sie einen Beginn aus, indem
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-Mit dem Umschalter [!UICONTROL *[!UICONTROL Partielle Erfassung]*] können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
+Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
 
 Der Umschalter für die *[!UICONTROL Fehlerdiagnose]* wird nur angezeigt, wenn der Umschalter für die *[!UICONTROL partielle Erfassung]* deaktiviert ist. Mit dieser Funktion können Sie detaillierte Fehlermeldungen [!DNL Platform] zu den erfassten Stapeln generieren. Wenn der Umschalter *[!UICONTROL für die teilweise Erfassung]* aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
 
