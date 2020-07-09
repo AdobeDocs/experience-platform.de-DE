@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erlebnis-Datenmodell (XDM)-System
 topic: overview
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: 8ea3b09f86fe11ce7043f22c56ff9756b909e716
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1777'
 ht-degree: 0%
 
 ---
@@ -14,31 +14,31 @@ ht-degree: 0%
 
 # XDM-System - Übersicht
 
-Standardisierung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform. Das von Adobe unterstützte Experience Data Model (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
+Normung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform. Das von Adobe unterstützte Experience Data Model (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
-XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für jede Anwendung bereit, die zur Kommunikation mit Plattformdiensten verwendet werden kann. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Audiencen durch Segmente definieren und Kundenattribute zu Personalisierungszwecken ausdrücken.
+XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für alle Anwendungen bereit, die zur Kommunikation mit Platformen-Diensten verwendet werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Audiencen durch Segmente definieren und Kundenattribute zu Personalisierungszwecken ausdrücken.
 
-XDM ist das grundlegende Framework, mit dem Adobe Experience Cloud, powered by Experience Platform, die richtige Botschaft an die richtige Person im richtigen Kanal und genau zum richtigen Zeitpunkt senden kann. Die Methodik, auf der Experience Platform aufgebaut ist, **XDM-System**, operalisiert Experience Data Model-Schema für die Verwendung durch Plattformdienste.
+XDM ist das grundlegende Framework, mit dem Adobe Experience Cloud, powered by Experience Platform, die richtige Botschaft an die richtige Person, am richtigen Kanal und genau zum richtigen Zeitpunkt senden kann. Die Methode, auf der Experience Platform aufgebaut ist, **XDM-System**, operalisiert Experience Data Model-Schema für die Verwendung durch Platform-Services.
 
-Dieses Dokument gibt einen Überblick über die Rolle des XDM-Systems in Experience Platform.
+Dieses Dokument gibt einen Überblick über die Rolle des XDM-Systems in der Experience Platform.
 
 ## XDM-Schemas
 
 Experience Platform verwendet Schema, um die Datenstruktur konsistent und wiederverwendbar zu beschreiben. Durch die systemübergreifende Definition von Daten wird es einfacher, ihre Bedeutung beizubehalten und dadurch wertvolle Daten zu erhalten.
 
-Bevor Daten in eine Plattform aufgenommen werden können, muss ein Schema zusammengestellt werden, das die Datenstruktur beschreibt und Einschränkungen für den Datentyp bereitstellt, der in den einzelnen Feldern enthalten sein kann. Schema bestehen aus einer Basisklasse und Null oder mehr Mixins.
+Bevor Daten in die Platform aufgenommen werden können, muss ein Schema zusammengestellt werden, das die Datenstruktur beschreibt und Einschränkungen für den Datentyp bereitstellt, der in den einzelnen Feldern enthalten sein kann. Schema bestehen aus einer Basisklasse und Null oder mehr Mixins.
 
 Weitere Informationen zum Schema-Kompositionsmodell, einschließlich Entwurfsprinzipien und Best Practices, finden Sie in den [Grundlagen der Schema-Komposition](schema/composition.md).
 
 ### Schema-Registrierung und Schema-Bibliothek
 
-Die **Schema-Registrierung** bietet eine Benutzeroberfläche und eine RESTful-API, über die Sie alle Schema-bezogenen Ressourcen in der Adobe Experience Platform- **Schema-Bibliothek** Ansicht und verwalten können. Die Schema Library enthält branchenübliche Ressourcen, die Ihnen von Adobe zur Verfügung gestellt werden, sowie Ressourcen von Experience Platform-Partnern und -Anbietern, deren Anwendungen Sie verwenden. Die Benutzeroberfläche und die API der Schema-Registrierung können auch verwendet werden, um neue Schema und Ressourcen zu erstellen und zu verwalten, die für Ihr Unternehmen eindeutig sind.
+Die **Schema-Registrierung** bietet eine Benutzeroberfläche und eine RESTful-API, über die Sie alle Schema-bezogenen Ressourcen in der Adobe Experience Platform- **Schema-Bibliothek** Ansicht und verwalten können. Die Schema-Bibliothek enthält branchenübliche Ressourcen, die Ihnen von Adobe zur Verfügung gestellt werden, sowie Ressourcen von Experience Platformen- und Anbietern, deren Anwendungen Sie verwenden. Die Benutzeroberfläche und die API der Schema-Registrierung können auch verwendet werden, um neue Schema und Ressourcen zu erstellen und zu verwalten, die für Ihr Unternehmen eindeutig sind.
 
 Eine ausführliche Anleitung zu den wichtigsten in der Schema-Registrierung verfügbaren Vorgängen finden Sie im [Schema Registry-Entwicklerhandbuch](api/getting-started.md).
 
 ## Datenverhalten im XDM-System {#data-behaviors}
 
-Daten, die in Experience Platform verwendet werden sollen, sind in zwei Verhaltenstypen unterteilt:
+Daten, die zur Verwendung in der Experience Platform vorgesehen sind, werden in zwei Verhaltenstypen unterteilt:
 
 * **Daten** aufzeichnen: Stellt Informationen zu den Attributen eines Betreffs bereit. Ein Thema könnte eine Organisation oder eine Einzelperson sein.
 * **Zeitreihendaten**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt dar, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
@@ -65,23 +65,23 @@ Auch wenn nicht alle Ereignis leicht in alle Datenquellen eingeordnet werden kö
 
 ![ExperienceEvent Customer Journey](images/overview/experience-event-journey.png)
 
-## XDM-Schema und Experience Platform-Dienste
+## XDM-Schemas und Experience Platformen
 
-Experience Platform ist ein Schema-Agnostiker, d. h. jedes Schema, das dem XDM-Standard entspricht, steht für Plattformdienste zur Verfügung. Wie verschiedene Plattformdienste Schema verwenden, wird nachfolgend genauer erläutert.
+Experience Platform ist ein Schema-Agnostiker, d. h. jedes Schema, das dem XDM-Standard entspricht, steht für Platform-Services zur Verfügung. Die Nutzung von Schemas durch verschiedene Platformen-Services wird nachfolgend genauer erläutert.
 
 ### Katalogdienst, Dateneinbettung und Datensee
 
-Der Katalogdienst ist das Datensatzsystem für Experience Platform-Assets und zugehörige Schema. Katalog sind nicht die eigentlichen Dateien oder Verzeichnisse, die Daten enthalten, sondern enthält die Metadaten und Beschreibungen dieser Dateien und Ordner.
+Der Katalogdienst ist das Datensatzsystem für Experience Platformen-Assets und zugehörige Schema. Katalog sind nicht die eigentlichen Dateien oder Verzeichnisse, die Daten enthalten, sondern enthält die Metadaten und Beschreibungen dieser Dateien und Ordner.
 
-Katalogdaten werden im Data Lake gespeichert, einem hochgradig granulären Datenspeicher mit allen von Platform verwalteten Daten, unabhängig von der Herkunft oder dem Dateiformat.
+Katalogdaten werden im Data Lake gespeichert, einem hochgradig granulären Datenspeicher mit allen von der Platform verwalteten Daten, unabhängig von der Herkunft oder dem Dateiformat.
 
-Um Daten in die Experience Platform zu integrieren, wird ein Datensatz mithilfe des Katalogdienstes erstellt. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der zu ingetierenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, leitet Experience Platform ein &quot;beobachtetes Schema&quot;ab, indem Art und Inhalt der erfassten Datenfelder geprüft werden. Die Datensätze werden dann im Katalog nachverfolgt und im Data Lake neben den Schemas und beobachteten Schemas, auf denen sie basieren, gespeichert.
+Um Daten in die Experience Platform einzufügen, wird ein Datensatz mithilfe des Katalogdienstes erstellt. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der zu ingetierenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, leitet die Experience Platform ein &quot;beobachtetes Schema&quot;ab, indem Art und Inhalt der erfassten Datenfelder geprüft werden. Die Datensätze werden dann im Katalog nachverfolgt und im Data Lake neben den Schemas und beobachteten Schemas, auf denen sie basieren, gespeichert.
 
-Weitere Informationen zum Katalog finden Sie in der Übersicht über den [Katalogdienst](../catalog/home.md). Weitere Informationen zur Dateneinbettung in Adobe Experience Platform finden Sie in der Übersicht über die [Dateneinbettung](../ingestion/home.md).
+Weitere Informationen zum Katalog finden Sie in der Übersicht über den [Katalogdienst](../catalog/home.md). Weitere Informationen zur Dateneinbettung in der Adobe Experience Platform finden Sie in der Übersicht über die [Dateneinbettung](../ingestion/home.md).
 
 ### Abfrage
 
-Mit dem Adobe Experience Platform Abfrage Service können Sie SQL-Standarddaten für Abfrage Experience Platform verwenden, um viele verschiedene Anwendungsfälle zu unterstützen.
+Mit dem Adobe Experience Platform Abfrage Service können Sie standardmäßige SQL-Daten zur Abfrage von Experience Platformen verwenden, um viele verschiedene Anwendungsfälle zu unterstützen.
 
 Nachdem ein Schema erstellt und ein Datensatz erstellt wurde, der auf dieses Schema verweist, werden die Daten in den Data Lake aufgenommen und gespeichert. Mit dem Abfrage Service können Sie alle Datensätze in den Data Lake einbinden und die Abfragen als neuen Datensatz erfassen, der im Berichte, maschinellem Lernen oder zur Erfassung in Echtzeit-Kundendaten verwendet werden kann.
 
@@ -89,7 +89,7 @@ Weitere Informationen zu Abfrage Service finden Sie in der Einführung zum [Abfr
 
 ### Echtzeit-Kundenprofil
 
-Echtzeit-Customer-Profil bietet ein zentrales Profil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die über alle Systeme aggregiert werden, sowie umsetzbare Zeitstempelkonten von Ereignissen, an denen die Einzelperson beteiligt ist, die in einem der mit Experience Platform verwendeten Systeme aufgetreten sind.
+Echtzeit-Customer-Profil bietet ein zentrales Profil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die über alle Systeme aggregiert werden, sowie umsetzbare Zeitstempelkonten von Ereignissen, an denen die Einzelperson beteiligt ist, die in einem der mit der Experience Platform verwendeten Systeme aufgetreten sind.
 
 Echtzeit-Kundendaten werden vom Schema-Profil basierend auf den XDM Individual Profil- oder XDM ExperienceEvent-Klassen verarbeitet und reagieren auf Abfragen, die auf diesen Daten basieren. Profil unterstützt nicht die Verwendung von Schemas, die auf anderen Klassen basieren.
 
@@ -103,22 +103,27 @@ Weitere Informationen finden Sie in der Übersicht [zum](../profile/home.md) Ech
 
 ### Data Science-Arbeitsbereich
 
-Der Data Science Workspace der Adobe Experience Platform nutzt maschinelles Lernen und künstliche Intelligenz, um Einblicke aus den in Experience Platform gespeicherten Daten zu gewinnen. Data Science Workspace ermöglicht es Datenwissenschaftlern, Rezepte zu erstellen, die auf XDM Individual Profil- und XDM ExperienceEvent-Daten über Kunden und deren Aktivitäten basieren. Dies erleichtert Prognosen wie Kaufneigung und empfohlene Angebot, die die Einzelperson schätzen und nutzen kann.
+Adobe Experience Platform Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz, um Einblicke aus in der Experience Platform gespeicherten Daten zu gewinnen. Data Science Workspace ermöglicht es Datenwissenschaftlern, Rezepte zu erstellen, die auf XDM Individual Profil- und XDM ExperienceEvent-Daten über Kunden und deren Aktivitäten basieren. Dies erleichtert Prognosen wie Kaufneigung und empfohlene Angebot, die die Einzelperson schätzen und nutzen kann.
 
-Mit Data Science Workspace können Datenwissenschaftler auf einfache Weise intelligente Services-APIs erstellen, die auf maschinellem Lernen basieren. Diese Dienste arbeiten mit anderen Adobe-Lösungen zusammen, einschließlich Adobe Zielgruppe und Adobe Analytics Cloud, um Ihnen bei der Automatisierung personalisierter, zielgerichteter digitaler Erlebnisse zu helfen.
+Mit Data Science Workspace können Datenwissenschaftler auf einfache Weise intelligente Services-APIs erstellen, die auf maschinellem Lernen basieren. Diese Dienste arbeiten mit anderen Adobe-Lösungen zusammen, einschließlich Adobe Target und Adobe Analytics Cloud, um Ihnen bei der Automatisierung personalisierter, gezielter digitaler Erlebnisse zu helfen.
 
-Weitere Informationen zur Verwendung von Experience Platform-Daten zur Erzielung von Einblicken finden Sie in der Übersicht über den [Data Science Workspace](../data-science-workspace/home.md).
+Weitere Informationen zur Verwendung von Daten zur Experience Platform von Einblicken finden Sie in der Übersicht über den [Data Science Workspace](../data-science-workspace/home.md).
 
 ### Entscheidungsdienst
 
-Der Entscheidungsdienst bietet die Möglichkeit, personalisierte Angebot-Entscheidungsfindungen in plattformintegrierten Anwendungen zu konfigurieren. Angebot können Produktempfehlungen, Inhaltskomponenten für ein Web-Erlebnis, Konversationsskripte und zu ergreifende Aktionen sein.
+Der Entscheidungsdienst bietet die Möglichkeit, personalisierte Angebot-Entscheidungsfindungen in Platform-integrierten Anwendungen zu konfigurieren. Angebot können Produktempfehlungen, Inhaltskomponenten für ein Web-Erlebnis, Konversationsskripte und zu ergreifende Aktionen sein.
 
 Der Entscheidungsdienst nutzt Echtzeit-Kundendaten und ist daher nur mit Datensätzen kompatibel, die auf Schemas basieren, die das XDM Individual-Profil oder die XDM ExperienceEvent-Klasse implementieren.
 
 See the [Decisioning Service overview](../decisioning-service/home.md) for more information.
 
-## Nächste Schritte
+## Nächste Schritte und zusätzliche Ressourcen
 
-Jetzt, da Sie die Rolle von Schemas in der gesamten Experience Platform besser verstehen, sind Sie bereit, Beginn zu erstellen, die Ihre eigenen.
+Jetzt, da Sie die Rolle von Schemas in der ganzen Experience Platform besser verstehen, sind Sie bereit, Beginn zu erstellen, die Ihre eigenen. Um Ihre Lernerfahrung weiter zu ergänzen, lesen Sie die Beginn der vorgeschlagenen Dokumentation und sehen Sie sich das Video unten an.
 
-Um Designgrundsätze und Best Practices für das Erstellen von Schemas zu lernen, die mit Experience Platform verwendet werden, sollten Sie zunächst die [Grundlagen der Schema-Komposition](schema/composition.md)lesen. Eine schrittweise Anleitung zum Erstellen eines Schemas finden Sie in den Lernprogrammen zum Erstellen eines Schemas [mit der API](tutorials/create-schema-api.md) oder [mithilfe der Benutzeroberfläche](tutorials/create-schema-ui.md).
+Um Designprinzipien und Best Practices für das Erstellen von Schemas zu lernen, die mit der Experience Platform verwendet werden, beginnen Sie mit dem Lesen der [Grundlagen der Schema-Komposition](schema/composition.md). Eine schrittweise Anleitung zum Erstellen eines Schemas finden Sie in den Lernprogrammen zum Erstellen eines Schemas [mit der API](tutorials/create-schema-api.md) oder [mithilfe der Benutzeroberfläche](tutorials/create-schema-ui.md).
+
+Sehen Sie sich das folgende Video an, um Ihr Verständnis von XDM-System in Experience Platform zu vertiefen:
+
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+
