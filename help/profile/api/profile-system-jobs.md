@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Profil-Systemaufträge - Echtzeit-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Endpunkt &quot;Systemaufträge&quot;(Anforderungen löschen)
 
-Mit Adobe Experience Platform können Sie Daten aus mehreren Quellen erfassen und stabile Profil für einzelne Kunden erstellen. Daten, die in die Platform aufgenommen werden, werden im Data Lake sowie im Echtzeit-Kundendatenspeicher gespeichert. Gelegentlich kann es erforderlich sein, einen Datensatz oder Stapel aus dem Profil Store zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dies erfordert die Verwendung der Echtzeit-Client-Profil-API zum Erstellen eines Profil-Systemauftrags (auch als &quot;Löschanforderung&quot;bezeichnet), der bei Bedarf auch modifiziert, überwacht oder entfernt werden kann.
+Mit Adobe Experience Platform können Sie Daten aus mehreren Quellen erfassen und stabile Profil für einzelne Kunden erstellen. Daten, die in Platform aufgenommen werden, werden im Data Lake sowie im Echtzeit-Kundendatenspeicher gespeichert. Gelegentlich kann es erforderlich sein, einen Datensatz oder Stapel aus dem Profil Store zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dies erfordert die Verwendung der Echtzeit-Client-Profil-API zum Erstellen eines Profil-Systemauftrags (auch als &quot;Löschanforderung&quot;bezeichnet), der bei Bedarf auch modifiziert, überwacht oder entfernt werden kann.
 
 >[!NOTE]
 >Wenn Sie versuchen, Datasets oder Stapel aus dem Data Lake zu löschen, finden Sie Anweisungen in der Übersicht über den [Katalogdienst](../../catalog/home.md) .
@@ -38,10 +38,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Parameter | Beschreibung |
 |---|---|
-| `start` | Versetzen Sie die Seite der zurückgegebenen Ergebnisse gemäß der Erstellungszeit der Anforderung. Beispiel: `start=4` |
-| `limit` | Schränken Sie die Anzahl der zurückgegebenen Ergebnisse ein. Beispiel: `limit=10` |
-| `page` | Gibt eine bestimmte Ergebnisseite gemäß der Erstellungszeit der Anforderung zurück. Beispiel: `page=2` |
-| `sort` | Sortieren Sie die Ergebnisse nach einem bestimmten Feld in aufsteigender (`asc`) oder absteigender (`desc`) Reihenfolge. Der Sortierparameter funktioniert nicht, wenn mehrere Ergebnisseiten zurückgegeben werden. Beispiel: `sort=batchId:asc` |
+| `start` | Versetzen Sie die Seite der zurückgegebenen Ergebnisse gemäß der Erstellungszeit der Anforderung. Beispiel: *`start=4`* |
+| `limit` | Schränken Sie die Anzahl der zurückgegebenen Ergebnisse ein. Beispiel: *`limit=10`* |
+| `page` | Gibt eine bestimmte Ergebnisseite gemäß der Erstellungszeit der Anforderung zurück. Beispiel: ***`page=2`*** |
+| `sort` | Sortieren Sie die Ergebnisse nach einem bestimmten Feld in aufsteigender (*`asc`*) oder absteigender (**`desc`**) Reihenfolge. Der Sortierparameter funktioniert nicht, wenn mehrere Ergebnisseiten zurückgegeben werden. Beispiel: `sort=batchId:asc` |
 
 **Anfrage**
 
@@ -91,11 +91,11 @@ Die Antwort enthält ein Array mit den untergeordneten Elementen mit einem Objek
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| _page.count | Die Gesamtanzahl der Anforderungen. Diese Antwort wurde für den Weltraum abgeschnitten. |
-| _page.next | Wenn eine zusätzliche Ergebnisseite vorhanden ist, wird die nächste Ergebnisseite Ansicht, indem der ID-Wert in einer [Suchanfrage](#view-a-specific-delete-request) durch den bereitgestellten Wert &quot;next&quot;ersetzt wird. |
-| jobType | Der Typ des zu erstellenden Auftrags. In diesem Fall wird immer &quot;DELETE&quot;zurückgegeben. |
-| status | Der Status der Löschanforderung. Mögliche Werte sind &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
-| Metriken | Ein Objekt, das die Anzahl der verarbeiteten Datensätze (&quot;recordsProcessing&quot;) und die Zeit in Sekunden, die die Anforderung verarbeitet wurde, oder die Dauer der Anforderung (&quot;timeTakenInSec&quot;) enthält. |
+| `_page.count` | Die Gesamtanzahl der Anforderungen. Diese Antwort wurde für den Weltraum abgeschnitten. |
+| `_page.next` | Wenn eine zusätzliche Ergebnisseite vorhanden ist, wird die nächste Ergebnisseite Ansicht, indem der ID-Wert in einer [Suchanfrage](#view-a-specific-delete-request) durch den bereitgestellten `"next"` Wert ersetzt wird. |
+| `jobType` | Der Typ des zu erstellenden Auftrags. In diesem Fall wird es immer zurückgegeben `"DELETE"`. |
+| `status` | Der Status der Löschanforderung. Mögliche Werte `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Ein Objekt, das die Anzahl der verarbeiteten Datensätze (`"recordsProcessed"`) und die Verarbeitungszeit (in Sekunden) der Anforderung enthält oder wie lange die Anforderung abgeschlossen wurde (`"timeTakenInSec"`). |
 
 ## Create a delete request {#create-a-delete-request}
 
@@ -131,11 +131,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| dataSetId | **(Erforderlich)** Die ID des Datensatzes, den Sie löschen möchten. |
+| `dataSetId` | **(Erforderlich)** Die ID des Datensatzes, den Sie löschen möchten. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanforderung zurück, einschließlich einer eindeutigen, systemgenerierten schreibgeschützten ID für die Anforderung. Dies kann zum Nachschlagen der Anforderung und zum Überprüfen ihres Status verwendet werden. Die `status` Anforderung wird zum Zeitpunkt der Erstellung `"NEW"` bis zur Verarbeitung ausgeführt. Die `dataSetId` in der Antwort sollte mit der in der Anforderung gesendeten `dataSetId` übereinstimmen.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanforderung zurück, einschließlich einer eindeutigen, systemgenerierten schreibgeschützten ID für die Anforderung. Dies kann zum Nachschlagen der Anforderung und zum Überprüfen ihres Status verwendet werden. Die **`status`** Anforderung wird zum Zeitpunkt der Erstellung *`"NEW"`* bis zur Verarbeitung ausgeführt. Die **`dataSetId`** in der Antwort sollte mit der in der Anforderung gesendeten ***`dataSetId`*** übereinstimmen.
 
 ```json
 {
@@ -151,15 +151,15 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanforderung 
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| id | Die eindeutige, systemgenerierte schreibgeschützte ID der Löschanforderung. |
-| dataSetId | Die ID des Datensatzes, wie in der POST-Anforderung angegeben. |
+| `id` | Die eindeutige, systemgenerierte schreibgeschützte ID der Löschanforderung. |
+| `dataSetId` | Die ID des Datensatzes, wie in der POST-Anforderung angegeben. |
 
 ### Stapel löschen
 
 Um einen Stapel zu löschen, muss die Stapel-ID im Hauptteil der POST-Anforderung enthalten sein. Es wird darauf hingewiesen, dass Sie keine Stapel für Datensätze löschen können, die auf Schemas basieren. Nur Stapel für Datensätze, die auf Zeitreihen-Schemas basieren, können gelöscht werden.
 
 >[!NOTE]
-> Stapel für Datensätze, die auf Datensatztypen basieren, können nicht gelöscht werden, weil Datensatztypen vorherige Datensätze überschreiben und daher nicht rückgängig gemacht oder gelöscht werden können. Die einzige Möglichkeit, die Auswirkungen fehlerhafter Stapel für Datensätze zu entfernen, die auf Datensatzdaten basieren, besteht darin, den Stapel mit den richtigen Daten zu erfassen, um die falschen Schema zu überschreiben.
+> Stapel für Datensätze, die auf Datensatztypen basieren, können nicht gelöscht werden, weil Datensatztypen vorherige Datensätze überschreiben und daher nicht rückgängig gemacht oder gelöscht werden können. Die einzige Möglichkeit, die Auswirkungen fehlerhafter Stapel für Datensätze zu entfernen, die auf Datensatzdaten basieren, besteht darin, den Stapel mit den richtigen Daten erneut zu erfassen, um die falschen Schema zu überschreiben.
 
 Weitere Informationen zum Verhalten von Datensätzen und Zeitreihen finden Sie im [Abschnitt zu XDM-Datenverhalten](../../xdm/home.md#data-behaviors) in der XDM-Systemübersicht.
 
@@ -186,11 +186,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| batchId | **(Erforderlich)** Die ID des Stapels, den Sie löschen möchten. |
+| `batchId` | **(Erforderlich)** Die ID des Stapels, den Sie löschen möchten. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanforderung zurück, einschließlich einer eindeutigen, systemgenerierten schreibgeschützten ID für die Anforderung. Dies kann zum Nachschlagen der Anforderung und zum Überprüfen ihres Status verwendet werden. Der &quot;Status&quot;für die Anforderung zum Zeitpunkt der Erstellung lautet &quot;NEU&quot;, bis die Verarbeitung beginnt. Die &quot;batchId&quot;in der Antwort sollte mit der &quot;batchId&quot;übereinstimmen, die in der Anforderung gesendet wurde.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanforderung zurück, einschließlich einer eindeutigen, systemgenerierten schreibgeschützten ID für die Anforderung. Dies kann zum Nachschlagen der Anforderung und zum Überprüfen ihres Status verwendet werden. Die `"status"` Anforderung wird zum Zeitpunkt der Erstellung `"NEW"` bis zur Verarbeitung ausgeführt. Die `"batchId"` in der Antwort sollte mit der in der Anforderung gesendeten `"batchId"` übereinstimmen.
 
 ```json
 {
@@ -206,8 +206,8 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanforderung 
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| id | Die eindeutige, systemgenerierte schreibgeschützte ID der Löschanforderung. |
-| batchId | Die ID des Stapels, wie in der POST-Anforderung angegeben. |
+| `id` | Die eindeutige, systemgenerierte schreibgeschützte ID der Löschanforderung. |
+| `batchId` | Die ID des Stapels, wie in der POST-Anforderung angegeben. |
 
 Wenn Sie versuchen, eine Löschanforderung für einen Datensatzdataset-Stapel zu starten, tritt ein Fehler auf 400-Ebene auf, ähnlich dem Folgenden:
 
@@ -237,7 +237,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | Parameter | Beschreibung |
 |---|---|
-| {DELETE_REQUEST_ID} | **(Erforderlich)** Die ID der zu Ansicht Löschanforderung. |
+| `{DELETE_REQUEST_ID}` | **(Erforderlich)** Die ID der zu Ansicht Löschanforderung. |
 
 **Anfrage**
 
@@ -269,11 +269,11 @@ Die Antwort enthält die Details der Löschanforderung, einschließlich des aktu
 
 | Eigenschaften | Beschreibung |
 |---|---|
-| jobType | Der Typ des zu erstellenden Auftrags, in diesem Fall wird immer &quot;DELETE&quot;zurückgegeben. |
-| status | Der Status der Löschanforderung. Mögliche Werte: &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;FEHLER&quot;. |
-| Metriken | Ein Array, das die Anzahl der verarbeiteten Datensätze (&quot;recordsProcessing&quot;) und die Zeit in Sekunden, in der die Anforderung verarbeitet wurde, oder die Dauer der Anforderung (&quot;timeTakenInSec&quot;) enthält. |
+| `jobType` | Der Typ des zu erstellenden Auftrags, in diesem Fall wird er immer zurückgegeben `"DELETE"`. |
+| `status` | Der Status der Löschanforderung. Mögliche Werte: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Ein Array, das die Anzahl der verarbeiteten Datensätze (`"recordsProcessed"`) und die Verarbeitungszeit (in Sekunden) der Anforderung enthält oder wie lange die Anforderung gedauert hat (`"timeTakenInSec"`). |
 
-Sobald der Löschanforderungsstatus &quot;ABGESCHLOSSEN&quot;ist, können Sie bestätigen, dass die Daten gelöscht wurden, indem Sie versuchen, mithilfe der Datenzugriff-API auf die gelöschten Daten zuzugreifen. Anweisungen zum Zugriff auf Datensätze und Stapel mit der Datenzugriff-API finden Sie in der Dokumentation zum [Datenzugriff](../../data-access/home.md).
+Sobald der Status der Anforderung zum Löschen vorliegt, können `"COMPLETED"` Sie bestätigen, dass die Daten gelöscht wurden, indem Sie versuchen, mithilfe der Datenzugriff-API auf die gelöschten Daten zuzugreifen. Anweisungen zum Zugriff auf Datensätze und Stapel mit der Datenzugriff-API finden Sie in der Dokumentation zum [Datenzugriff](../../data-access/home.md).
 
 ## Löschen einer Anforderung
 
@@ -314,7 +314,7 @@ Die folgenden Informationen ergänzen den Vorgang des Löschens eines Datensatze
 
 ### Löschen eines Datensatzes mithilfe der Benutzeroberfläche &quot;Experience Platform&quot;
 
-Wenn Sie mit der Benutzeroberfläche &quot;Experience Platform&quot;einen zum Profil aktivierten Datensatz löschen, wird ein Dialogfeld mit der Frage angezeigt: &quot;Sind Sie sicher, dass Sie diesen Datensatz aus dem Experience Data Lake löschen möchten? Verwenden Sie die API &quot;Profil systems jobs&quot;, um diesen Datensatz aus dem Profil Service zu löschen.&quot;
+Wenn Sie mit der Benutzeroberfläche &quot;Experience Platform&quot;einen zum Profil aktivierten Datensatz löschen, wird ein Dialogfeld mit der Frage angezeigt: &quot;Sind Sie sicher, dass Sie diesen Datensatz aus dem Experience Data Lake löschen möchten? Verwenden Sie die API &quot;Profil-Systemaufträge&quot;, um diesen Datensatz aus dem Profil-Dienst zu löschen.&quot;
 
 Wenn Sie in der Benutzeroberfläche auf &quot; **Löschen** &quot;klicken, wird der Datensatz zur Erfassung deaktiviert. Der Datensatz wird jedoch NICHT automatisch im Backend gelöscht. Um den Datensatz dauerhaft zu löschen, muss eine Löschanforderung manuell mithilfe der Schritte in diesem Handbuch zum [Erstellen einer Löschanforderung](#create-a-delete-request)erstellt werden.
 
