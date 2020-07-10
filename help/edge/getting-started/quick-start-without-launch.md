@@ -1,23 +1,23 @@
 ---
 title: Schneller Beginn mit einfachem Javascript
-seo-title: 'Adobe Experience Platform Web SDK - schneller Beginn '
-description: Kurzanleitung zum Einsatz des Experience Platform Web SDK zur Datenerfassung
-seo-description: Kurzanleitung zum Einsatz des Experience Platform Web SDK zur Datenerfassung
+seo-title: 'Adobe Experience Platform Web SDK - SchnellBeginn '
+description: Kurzanleitung zum Verwenden des Experience Platform Web SDK zum Erfassen von Daten
+seo-description: Kurzanleitung zum Verwenden des Experience Platform Web SDK zum Erfassen von Daten
 translation-type: tm+mt
-source-git-commit: f401780aa6b11f230506bfca1a747839fc6ae389
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 14%
+source-wordcount: '537'
+ht-degree: 15%
 
 ---
 
 
 # Willkommen
 
-Dieser Leitfaden führt Sie durch die verschiedenen Methoden zum Einrichten des Adobe Experience Platform Web SDK. Um diese Funktion nutzen zu können, müssen Sie auf der Liste &quot;Zulassen&quot;stehen. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
+Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Web SDK für die Adobe Experience Platform einzurichten. Um diese Funktion nutzen zu können, müssen Sie auf der zulassungsliste sein. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
 
 - Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über eine CNAME für Analytics verfügen, sollten Sie diese verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen
-- Sie haben die Berechtigung zur Adobe Experience Platform-Datenplattform.  Wenn Sie keine Plattform erworben haben, stellen wir Ihnen die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK kostenlos zur Verfügung.
+- Sie haben die Berechtigung zur Platform von Adobe Experience Platformen-Daten.  Wenn Sie keine Platform erworben haben, stellen wir Ihnen die Experience Platform Data Services Foundation zur Verfügung, die Sie mit dem SDK in begrenzter Weise nutzen können.
 - Verwenden Sie die neueste Version des Besucher-ID-Diensts
 
 ## Erstellen einer Konfigurations-ID
@@ -26,14 +26,18 @@ Sie können eine Konfigurations-ID mit dem [Edge-Konfigurationstool](../fundamen
 
 >[!NOTE]
 >
->Ihre Organisation muss die Liste für die Funktion zulassen haben. Wenden Sie sich an Ihren CSM, um die Liste zu übernehmen.
+>Ihre Organisation muss für die Funktion auf der zulassungsliste sein. Wenden Sie sich an Ihren CSM, um sich auf die zulassungsliste zu setzen.
 
 ## Schemas vorbereiten
 
-Das Experience Platform Edge Network verwendet Daten als XDM. XDM ist ein Datenformat, mit dem Sie Schema definieren können. Das Schema definiert, wie das Edge-Netzwerk erwartet, dass die Daten formatiert werden. Um Daten zu senden, müssen Sie Ihr Schema definieren.
+Das Experience Platform Edge Network nimmt Daten als XDM. XDM ist ein Datenformat, mit dem Sie Schema definieren können. Das Schema definiert, wie das Edge-Netzwerk erwartet, dass die Daten formatiert werden. Um Daten zu senden, müssen Sie Ihr Schema definieren.
 
 - [Schema erstellen](../../xdm/tutorials/create-schema-ui.md)
 - Fügen Sie dem erstellten Schema das Adobe Experience Platform Web SDK-Mixin hinzu
+
+Das folgende Video soll Sie beim Erstellen eines Schemas, eines Datensatzes und eines Streaming-Quellconnectors für Ihre Web-SDK-Daten unterstützen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## SDK installieren
 
@@ -92,7 +96,7 @@ Weitere Informationen zur Verfolgung von Ereignissen finden Sie unter [Verfolgen
 
 Nachdem die Daten gesendet wurden, haben Sie folgende Möglichkeiten:
 
-- [Erstellen Sie Ihr Schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [Erstellen Sie Ihr Schema](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/schema/composition.html)
 - [Informationen zum Debugging](../fundamentals/debugging.md)
 - Erfahren Sie, wie Sie das Erlebnis [personalisieren.](../fundamentals/rendering-personalization-content.md)
 - Informationen zum Senden von Daten an mehrere Lösungen
