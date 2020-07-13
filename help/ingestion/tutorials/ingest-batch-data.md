@@ -1,147 +1,153 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Daten in Adobe Experience Platform einbeziehen
+title: Daten in Adobe Experience Platform erfassen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 3%
+source-wordcount: '1284'
+ht-degree: 69%
 
 ---
 
 
-# Daten in Adobe Experience Platform einbeziehen
+# Daten in Adobe Experience Platform erfassen
 
-Mit der Adobe Experience Platform können Sie problemlos Daten als Stapeldateien in die Platform importieren. Zu den zu erfassenden Daten zählen beispielsweise Profil-Daten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parkettdatei) oder Daten, die einem bekannten XDM-Schema (Experience Data Model) in der Schema-Registrierung entsprechen.
+Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry.
 
 ## Erste Schritte
 
-Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf die Experience Platform haben. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Zum Absolvieren dieses Tutorials benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
-Wenn Sie Daten lieber mit Data Ingestion APIs erfassen möchten, lesen Sie zunächst das Entwicklerhandbuch für [Batch Ingestion](../batch-ingestion/api-overview.md).
+Wenn Sie Daten lieber mit Data Ingestion-APIs erfassen möchten, lesen Sie zunächst das [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
 
-## Datenarbeitsbereich
+## Arbeitsbereich „Datensätze“
 
-Im Arbeitsbereich „Datensätze“ von Experience Platform können Sie alle Datensätze, die Ihr IMS-Team erstellt hat, anzeigen und verwalten sowie neue Datensätze erstellen.
+The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **Datensätze** klicken. The Datasets workspace contains a list of datasets, including columns showing _Name_, _Created_ (date and time), _Source_, _Schema_, and _Last Batch Status_, as well as the date and time the dataset was _Last Updated_.
+Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **[!UICONTROL Datensätze]** klicken. Der Arbeitsbereich „Datensätze“ enthält eine Liste von Datensätzen, einschließlich der Spalten für _Name_, _Erstellung_ (Datum und Uhrzeit), _Quelle_, _Schema_ und _letzten Batch-Status_, sowie Datum und Uhrzeit der _letzten Aktualisierung_ des Datensatzes.
 
 >[!NOTE]
 >
->Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen zu verwenden, um nur die zum Profil aktivierten Datensätze Ansicht.
+>Click on the filter icon next to the Search bar to use filtering capabilities to view only those datasets enabled for [!DNL Profile].
 
-![Ansicht aller Datensätze](../images/tutorials/ingest-batch-data/datasets_workspace.png)
+![Alle Datensätze anzeigen](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
 ## Datensatz erstellen
 
-Um einen Datensatz zu erstellen, klicken Sie in der oberen rechten Ecke des Datensatzarbeitsbereichs auf &quot;Datensatz **erstellen&quot;** .
+Um einen Datensatz zu erstellen, klicken Sie in der oberen rechten Ecke des Arbeitsbereichs „Datensätze“ auf **[!UICONTROL Datensatz erstellen]**.
 
-Wählen Sie im Bildschirm &quot;Datensatz **erstellen** &quot;aus, ob Sie &quot;Datensatz aus Schema erstellen&quot;oder &quot;Datensatz aus CSV-Datei erstellen&quot;verwenden möchten.
+On the **[!UICONTROL Create Dataset]** screen, select whether you would like to &quot;[!UICONTROL Create Dataset from Schema]&quot; or &quot;[!UICONTROL Create Dataset from CSV File]&quot;.
 
-Für dieses Lernprogramm wird ein Schema zum Erstellen des Datensatzes verwendet. Klicken Sie auf **Datensatz aus Schema** erstellen, um fortzufahren.
+In dieser Anleitung verwenden wir zum Erstellen des Datensatzes ein Schema. Klicken Sie auf **[!UICONTROL Datensatz aus Schema erstellen]**, um fortzufahren.
 
 ![Datenquelle auswählen](../images/tutorials/ingest-batch-data/create_dataset.png)
 
-## Schema des Datensatzes auswählen
+## Datensatzschema auswählen
 
-Wählen Sie im Bildschirm &quot;Schema **** auswählen&quot;ein Schema aus, indem Sie auf das Optionsfeld neben dem Schema klicken, das Sie verwenden möchten. Für dieses Lernprogramm wird der Datensatz mithilfe des Schemas &quot;Treuemitglieder&quot;erstellt. Die Verwendung der Suchleiste zum Filtern von Schemas ist eine hilfreiche Methode, um genau das Schema zu finden, nach dem Sie suchen.
+Wählen Sie im Bildschirm **[!UICONTROL Schema auswählen]** ein Schema aus, indem Sie auf das Optionsfeld neben dem Schema klicken, das Sie nutzen möchten. In dieser Anleitung wird der Datensatz mithilfe des Schemas „Mitglieder des Treueprogramms“ erstellt. Die Verwendung der Suchleiste zum Filtern von Schemas ist eine hilfreich, um genau das Schema zu finden, nach dem Sie suchen.
 
-Nachdem Sie das Optionsfeld neben dem Schema ausgewählt haben, das Sie verwenden möchten, klicken Sie auf **Weiter**.
+Nachdem Sie das Optionsfeld neben dem Schema ausgewählt haben, das Sie verwenden möchten, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![Schema auswählen](../images/tutorials/ingest-batch-data/select_schema.png)
 
-## Dataset konfigurieren
+## Datensatz konfigurieren
 
-Im Bildschirm &quot;Datensatz **konfigurieren** &quot;müssen Sie dem Datensatz einen **Namen** geben und möglicherweise auch eine **Beschreibung** des Datensatzes angeben.
+Im Bildschirm **[!UICONTROL Datensatz konfigurieren]** müssen Sie dem Datensatz einen **[!UICONTROL Namen]** geben und möglicherweise auch eine **[!UICONTROL Beschreibung]** des Datensatzes hinzufügen.
 
-**Hinweise zu Dataset-Namen:**
+**Hinweise zu Datensatznamen:**
 
-- Dataset-Namen sollten kurz und beschreibend sein, damit der Datensatz später leicht in der Bibliothek gefunden werden kann.
-- Dataset-Namen müssen eindeutig sein, d. h. sie sollten auch so spezifisch sein, dass sie in Zukunft nicht wiederverwendet werden.
-- Es empfiehlt sich, zusätzliche Informationen über den Datensatz mithilfe des Beschreibungsfelds bereitzustellen, da dies anderen Benutzern helfen kann, in Zukunft zwischen Datensätzen zu unterscheiden.
+- Datensatznamen sollten kurz und beschreibend sein, damit sich der Datensatz in der Bibliothek später leicht finden lässt.
+- Datensatznamen müssen eindeutig sein, d. h. sie müssen spezifisch genug sein, damit sie in Zukunft nicht wiederverwendet werden.
+- Es empfiehlt sich, mithilfe des Beschreibungsfelds zusätzliche Informationen zum Datensatz anzugeben, um anderen Benutzern in Zukunft dabei zu helfen, zwischen Datensätzen zu unterscheiden.
 
-Sobald der Datensatz einen Namen und eine Beschreibung enthält, klicken Sie auf **Fertig stellen**.
+Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf **[!UICONTROL Fertig stellen]**.
 
-![Dataset konfigurieren](../images/tutorials/ingest-batch-data/configure_dataset.png)
+![Datensatz konfigurieren](../images/tutorials/ingest-batch-data/configure_dataset.png)
 
-## Datenbestand-Aktivität
+## Datensatzaktivität
 
-Es wurde jetzt ein leerer Datensatz erstellt und Sie wurden zur Registerkarte &quot; **Datenaset-Aktivität** &quot;im Arbeitsbereich &quot;Datasets&quot;zurückgeleitet. Sie sollten den Namen des Datensatzes in der oberen linken Ecke des Arbeitsbereichs sowie die Benachrichtigung anzeigen, dass keine Stapel hinzugefügt wurden. Dies ist zu erwarten, da Sie diesem Datensatz noch keine Stapel hinzugefügt haben.
+Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte **[!UICONTROL Datensatzaktivität]** im Arbeitsbereich „Datensätze“. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
-Auf der rechten Seite des Datensatzarbeitsbereichs finden Sie die Registerkarte &quot; **Info** &quot;mit Informationen zu Ihrem neuen Datensatz, wie z. B. _DataSet-ID_, _Name_, _Beschreibung_, _Tabellenname_,Schema,Streaming- _Brief, DirektübertragungSource-_ Archiv ____. Die Registerkarte &quot;Info&quot;enthält außerdem Informationen zum Zeitpunkt der _Erstellung_ des Datensatzes und zum _Datum seiner letzten Änderung_ .
+Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. _Datensatz-ID_, _Name_, _Beschreibung_, _Tabellenname_, _Schema_, _Streaming_ und _Quelle_. Die Registerkarte „Informationen“ enthält außerdem Informationen zum Zeitpunkt der _Erstellung_ des Datensatzes und zum _Datum der letzten Änderung_.
 
-Auf der Registerkarte &quot;Info&quot;befindet sich auch ein _Profil_ -Umschalter, mit dem Sie Ihren Datensatz für die Verwendung mit dem Echtzeit-Kundendaten-Profil aktivieren können. Die Verwendung dieses Umschalters und des Echtzeit-Kunden-Profils wird im folgenden Abschnitt ausführlicher erläutert.
+Also in the Info tab is a  _Profile_ toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
-![Datenbestand-Aktivität](../images/tutorials/ingest-batch-data/dataset_activity.png)
+![Datensatzaktivität](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
-## Datensatz für Echtzeit-Kundendaten aktivieren
+## Datensatz aktivieren für [!DNL Real-time Customer Profile]
 
-Datasets werden für die Erfassung von Daten in die Experience Platform verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzuführen. Diese zusammengeführten Informationen werden als Echtzeit-Profil des Kunden bezeichnet. Damit die Platform wissen kann, welche Informationen in das Echtzeit-Profil aufgenommen werden sollen, können Datensätze mit dem **Profil** -Umschalter zur Aufnahme markiert werden.
+Datasets are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. Die zusammengeheftete Information wird als [!DNL Real-Time Customer Profile]. In order for [!DNL Platform] to know which information should be included in the [!DNL Real-Time Profile], datasets can be marked for inclusion using the **[!UICONTROL Profile]** toggle.
 
-Standardmäßig ist dieser Umschalter deaktiviert. Wenn Sie das Profil aktivieren, werden alle Daten, die in den Datensatz aufgenommen werden, zur Identifizierung einer Person und zum Zusammenfügen ihres Echtzeit-Profils verwendet.
+Standardmäßig ist der Umschalter deaktiviert. If you choose to toggle on [!DNL Profile], all data ingested into the dataset will be used to help identify an individual and stitch together their [!DNL Real-Time Profile].
 
-Weitere Informationen zum Echtzeit-Profil von Kunden und zum Arbeiten mit Identitäten finden Sie in der Dokumentation zum [Identitätsdienst](../../identity-service/home.md) .
+To learn more about [!DNL Real-time Customer Profile] and working with identities, please review the [Identity Service](../../identity-service/home.md) documentation.
 
-Um den Datensatz für Echtzeit-Kundendaten zu aktivieren, klicken Sie auf der Registerkarte &quot; **Profil** &quot;auf das Umschalten zwischen **Informationen** .
+To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab.
 
 ![Profil-Umschalter](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
 
-Daraufhin wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, zu bestätigen, dass Sie den Datensatz für das Echtzeit-Profil des Kunden aktivieren möchten.
+Daraufhin wird ein Dialog angezeigt, in dem Sie bestätigen müssen, dass Sie den Datensatz für das Echtzeit-Kundenprofil aktivieren möchten.
 
-![Dialogfeld &quot;Profil aktivieren&quot;](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
+![Dialog „Profil aktivieren“](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
 
-Klicken Sie auf **Aktivieren** , und der Umschalter wird blau und zeigt an, dass er aktiviert ist.
+Klicken Sie auf **[!UICONTROL Aktivieren]**; daraufhin wird der Umschalter blau und zeigt an, dass das Profil aktiviert ist.
 
-![Aktiviert für Profil](../images/tutorials/ingest-batch-data/dataset_enabled.png)
+![Für Profil aktiviert](../images/tutorials/ingest-batch-data/dataset_enabled.png)
 
-## Daten in den Datensatz Hinzufügen
+## Daten in Datensatz hinzufügen
 
-Daten können auf verschiedene Weise in einen Datensatz eingefügt werden. Sie können Dateneinschluss-APIs oder einen ETL-Partner wie Unifi oder Informatica verwenden. Für dieses Lernprogramm werden dem Datensatz Daten über die Registerkarte &quot; **Hinzufügen Daten** &quot;in der Benutzeroberfläche hinzugefügt.
+Daten können auf verschiedene Weise in einen Datensatz eingefügt werden. So können Sie Data Ingestion-APIs oder einen ETL-Partner wie Unifi oder Informatica nutzen. In dieser Anleitung werden dem Datensatz Daten in der Benutzeroberfläche über die Registerkarte **[!UICONTROL Daten hinzufügen]** hinzugefügt.
 
-Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **Hinzufügen Daten** . Sie können jetzt Dateien per Drag &amp; Drop verschieben oder auf Ihrem Computer nach den Dateien suchen, die Sie hinzufügen möchten.
+Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **[!UICONTROL Daten hinzufügen]**. Jetzt können Sie Dateien per Drag-and-Drop verschieben oder auf Ihrem Computer nach Dateien suchen, die Sie hinzufügen möchten.
 
 >[!NOTE]
 >
->Platform unterstützt zwei Dateitypen für die Datenerfassung, Parkett oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße pro Datei 10 GB beträgt.
+>[!DNL Platform] unterstützt zwei Dateitypen zur Datenerfassung: Parquet oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße 10 GB pro Datei beträgt.
 
-![Registerkarte &quot;Hinzufügen&quot;](../images/tutorials/ingest-batch-data/add_data.png)
+![Registerkarte „Daten hinzufügen“](../images/tutorials/ingest-batch-data/add_data.png)
 
-## Hochladen einer Datei
+## Datei hochladen
 
-Wenn Sie eine Datei per Drag &amp; Drop (oder durch Durchsuchen und Auswählen) hochladen, beginnt die Platform sofort mit der Verarbeitung der Datei, und auf der Registerkarte &quot;Daten **&quot;wird ein Dialogfeld zum** Hochladen **angezeigt, in dem der Fortschritt des Datei-Uploads** Hinzufügen angezeigt wird.
+Once you drag and drop (or browse and select) a parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
 
-![Dialogfeld &quot;Hochladen&quot;](../images/tutorials/ingest-batch-data/uploading.png)
+![Dialog „Upload läuft“](../images/tutorials/ingest-batch-data/uploading.png)
 
 ## Datensatzmetriken
 
-Nach dem Hochladen der Datei wird auf der Registerkarte &quot; **Datenbestand-Aktivität** &quot;nicht mehr angezeigt, dass keine Stapel hinzugefügt wurden. Stattdessen werden auf der Registerkarte &quot;Aktivität des Datensatzes&quot;jetzt die Metriken des Datensatzes angezeigt. In allen Metriken wird zu diesem Zeitpunkt &quot;0&quot;angezeigt, da der Stapel noch nicht geladen wurde.
+Nach dem Hochladen der Datei steht auf der Registerkarte **[!UICONTROL Datensatzaktivität]** nicht mehr, dass keine Batches hinzugefügt wurden. Stattdessen werden auf der Registerkarte „Datensatzaktivität“ jetzt Datensatzmetriken angezeigt. Bei allen Metriken wird zu diesem Zeitpunkt „0“ angezeigt, da der Batch noch nicht geladen wurde.
 
-Am unteren Rand des Registers befindet sich eine Liste, die die _Stapel-ID_ der Daten anzeigt, die gerade über den [&quot;Hinzufügen data to dataset&quot;](#add-data-to-dataset) -Prozess erfasst wurden. Dazu gehören auch Informationen zum Stapel, einschließlich _Ingested_ -Datum, Anzahl der _Ingested_-Datensätze und der aktuelle Batch- _Status_.
+Am unteren Rand der Registerkarte befindet sich eine Liste, in der die _Batch-Kennung_ der Daten angezeigt wird, die gerade mit dem Prozess [Daten zu Datensatz hinzufügen](#add-data-to-dataset) erfasst wurden. Dazu gehören auch Informationen über den Batch, einschließlich Datum der _Erfassung_, Anzahl der _erfassten Datensätze_ und des aktuellen Batch-_Status_.
 
 ![Datensatzmetriken](../images/tutorials/ingest-batch-data/batch_loading.png)
 
-## Stapeldetails
+## Batch-Details
 
-Klicken Sie auf die _Stapel-ID_ , um eine **Stapelübersicht** mit weiteren Details zum Stapel Ansicht. Sobald der Stapel vollständig geladen wurde, werden die Informationen zum Stapel aktualisiert, um die Anzahl der erfassten _Datensätze_ und die _Dateigröße_ anzuzeigen. Der _Status_ ändert sich auch in &quot;Erfolg&quot;oder &quot;Fehlgeschlagen&quot;. Wenn der Stapel fehlschlägt, enthält der Abschnitt _Fehlercode_ Details zu Fehlern während der Erfassung.
+Klicken Sie auf die _Batch-Kennung_, um eine **[!UICONTROL Batch-Übersicht]** mit weiteren Details zum Batch anzuzeigen. Sobald der Batch vollständig geladen wurde, werden die Informationen über den Batch aktualisiert, um die Anzahl der _erfassten Datensätze_ und die _Dateigröße_ anzuzeigen. Außerdem ändert sich der _Status_ in „Erfolg“ oder „Fehlgeschlagen“. Wenn der Batch fehlschlägt, enthält der Abschnitt _Fehler-Code_ Details zu Fehlern, die bei der Erfassung aufgetreten sind.
 
-Weitere Informationen und häufig gestellte Fragen zur Stapelverarbeitung finden Sie im Handbuch zur Fehlerbehebung bei der [Stapeleinbettung](../batch-ingestion/troubleshooting.md).
+Weiterführende Informationen und häufig gestellte Fragen zur Batch-Erfassung finden Sie im [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](../batch-ingestion/troubleshooting.md).
 
-Um zum Bildschirm &quot; **Datenbestand-Aktivität** &quot;zurückzukehren, klicken Sie im Breadcrumb auf den Namen des Datensatzes (_Treuedetails_).
+Um zum Bildschirm **Datensatzaktivität** zurückzukehren, klicken Sie im Breadcrumb auf den Namen des Datensatzes (_Details zum Treueprogramm_).
 
-![Stapelübersicht](../images/tutorials/ingest-batch-data/batch_overview.png)
+![Batch-Übersicht](../images/tutorials/ingest-batch-data/batch_overview.png)
 
-## Vorschau DataSet
+## Vorschau von Datensatz anzeigen
 
-Sobald der Datensatz fertig ist, wird eine Option zur **Vorschau des Datensatzes** oben auf der Registerkarte &quot;Aktivität **des** Datensatzes&quot;angezeigt.
+Sobald der Datensatz bereit ist, wird oben auf der Registerkarte **[!UICONTROL Datensatzaktivität]** eine Option zur **[!UICONTROL Vorschau des Datensatzes]** angezeigt.
 
-Klicken Sie auf **Vorschau DataSet** , um ein Dialogfeld mit Beispieldaten aus dem Datensatz zu öffnen. Wenn der Datensatz mit einem Schema erstellt wurde, werden die Details zum DataSet-Schema auf der linken Seite der Vorschau angezeigt. Sie können das Schema mithilfe der Pfeile erweitern, um die Schema-Struktur anzuzeigen. Jede Spaltenüberschrift in den Daten der Vorschau stellt ein Feld im Datensatz dar.
+Klicken Sie auf **[!UICONTROL Vorschau von Datensatz anzeigen]**, um einen Dialog mit Beispieldaten aus dem Datensatz zu öffnen. Wenn der Datensatz mit einem Schema erstellt wurde, werden auf der linken Seite der Vorschau Details zum Datensatzschema angezeigt. Sie können das Schema mithilfe der Pfeile erweitern, um die Schemastruktur anzuzeigen. Jede Spaltenüberschrift in den Vorschaudaten repräsentiert ein Feld im Datensatz.
 
-![Datenbestand-Details](../images/tutorials/ingest-batch-data/dataset_details.png)
+![Datensatzdetails](../images/tutorials/ingest-batch-data/dataset_details.png)
 
-## Nächste Schritte
+## Nächste Schritte und zusätzliche Ressourcen
 
-Nachdem Sie nun einen Datensatz erstellt und Daten erfolgreich in die Experience Platform aufgenommen haben, können Sie diese Schritte wiederholen, um einen neuen Datensatz zu erstellen oder weitere Daten in den vorhandenen Datensatz zu erfassen.
+Now that you have created a dataset and successfully ingested data into [!DNL Experience Platform], you can repeat these steps to create a new dataset or ingest more data into the existing dataset.
 
-Weitere Informationen zur Stapelverarbeitung finden Sie in der Übersicht über die [Stapeleinbettung](../batch-ingestion/overview.md).
+Um mehr über die Batch-Erfassung zu erfahren, lesen Sie bitte die Übersicht über die [Batch-Einbindung](../batch-ingestion/overview.md) und ergänzen Sie Ihr Lernen durch das Video unten.
+
+>[!WARNING]
+>
+> Die im folgenden Video dargestellte [!DNL Platform] Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
