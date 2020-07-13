@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Von Adobe definierte Funktionen
+title: Adobe-definierte Funktionen
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 6%
+source-wordcount: '292'
+ht-degree: 85%
 
 ---
 
 
-# Verwenden von von Adobe definierten Funktionen
+# Verwenden von Adobe-definierten Funktionen
 
-Einer der Hauptvorteile von Adobe besteht darin, dass sie die Erlebnisdaten verstehen und wissen, was Kunden mit diesen Daten machen müssen. Mit diesem Verständnis können Sie Hilfsfunktionen aufbauen, die Ihnen die Arbeit erleichtern.
+Einer der Hauptvorteile von Adobe besteht darin, dass Adobe Erlebnisdaten genau kennt und weiß, was Kunden mit diesen Daten machen wollen. So können Sie Hilfsfunktionen entwickeln, die Ihnen die Arbeit erleichtern.
 
-Dieses Dokument umfasst von Adobe definierte Funktionen (ADFs) zur Unterstützung von drei wichtigen Analytics-Aktivitäten:
-- [Sessionierung](#sessionization)
+Das vorliegende Dokument deckt Adobe-definierte Funktionen (ADFs) zur Unterstützung von drei wichtigen Analyseaktivitäten ab:
+- [Sessionization](#sessionization)
 - [Attribution](#attribution)
 - [Pathing](#pathing)
 
-## Sessionierung
+## Sessionization
 
-Die `SESS_TIMEOUT()` Reproduktion der mit Adobe Analytics gefundenen Besuchergruppen. Es führt eine ähnliche zeitbasierte Gruppierung durch, jedoch mit anpassbaren Parametern.
+Der `SESS_TIMEOUT()` reproduziert die in Adobe Analytics gefundenen Besuchergruppen. Er führt eine ähnliche zeitbasierte Gruppierung durch, jedoch mit anpassbaren Parametern.
 
 **Syntax:**
 
@@ -33,7 +33,7 @@ Die `SESS_TIMEOUT()` Reproduktion der mit Adobe Analytics gefundenen Besuchergru
 
 Struktur mit Feldern `(timestamp_diff, num, is_new, depth)`
 
-### Überprüfen Sie die Zeilenebene `SESS_TIMEOUT()` und -ausgabe
+### `SESS_TIMEOUT()` auf der Zeilenebene und Ausgabe prüfen
 
 ```sql
 SELECT analyticsVisitor,
@@ -56,7 +56,7 @@ LIMIT 100;
 
 ![Bild](../images/queries/adobe-functions/sess-timeout.png)
 
-### Erstellen eines neuen Trendberichts mit Besuchern, Sitzungen und Ansichten
+### Neuen Trendbericht mit Besuchern, Sitzungen und Seitenansichten erstellen
 
 ```sql
 SELECT
@@ -87,17 +87,17 @@ LIMIT 31;
 
 ## Attribution
 
-Bei der Zuordnung werden Metriken oder Konversionen wie Umsatz, Bestellung oder Anmeldungen Ihren Marketingbemühungen zugeordnet.
+Bei der Attribution werden Metriken oder Konversionen wie Umsätze, Bestellungen oder Anmeldungen Ihren Marketing-Bemühungen zugeordnet.
 
-In Adobe Analytics werden die Zuordnungseinstellungen mithilfe von Variablen wie eVars konfiguriert und beim Erfassen von Daten generiert.
+In Adobe Analytics werden Attributionseinstellungen mithilfe von Variablen wie eVars konfiguriert und bei der Erfassung von Daten generiert.
 
-Die Zuordnungs-ADFs, die im Abfrage Service gefunden werden, ermöglichen es, diese Zuordnungen zur Abfrage zu definieren und zu generieren.
+Die Attribution-ADFs, die in Query Service vorhanden sind, ermöglichen das Definieren und Generieren dieser Zuordnungen zur Abfragezeit.
 
-Dieses Beispiel konzentriert sich auf die Last Touch-Zuordnung, aber auch auf die First Touch-Zuordnung von Adobe.
+In diesem Beispiel geht es um „Last Touch“-Attribution; Adobe unterstützt aber auch „First Touch“-Attribution.
 
 >[!NOTE]
 >
->Andere Optionen mit Timeouts und Ereignis-basiertem Ablauf stehen in zukünftigen Versionen von Abfrage Service zur Verfügung.
+>Andere Optionen mit Timeouts und ereignisbasiertem Ablaufen werden in zukünftigen Versionen von Query Service zur Verfügung stehen.
 
 **Syntax:**
 
@@ -107,7 +107,7 @@ Dieses Beispiel konzentriert sich auf die Last Touch-Zuordnung, aber auch auf di
 
 Struktur mit Feld `(value)`
 
-### Kennenlernen der Zuordnung auf Zeilenebene
+### Attribution auf der Zeilenebene erkunden
 
 ```sql
 SELECT
@@ -126,7 +126,7 @@ LIMIT 50;
 
 ![Bild](../images/queries/adobe-functions/row-level-attribution.png)
 
-### Erstellen Sie eine Aufschlüsselung der Bestellungen nach der Ebene der letzten Mitglieder (eVar10)
+### Aufschlüsselung von Bestellungen nach letzter Mitgliederebene erstellen (eVar10)
 
 ```sql
 SELECT
@@ -152,7 +152,7 @@ LIMIT 25;
 
 ## Pathing
 
-Pfade helfen zu verstehen, wie Kunden durch Ihre Site navigieren. Die `NEXT()` und `PREVIOUS()` ADF ermöglichen dies.
+Pathing hilft zu verstehen, wie Kunden durch Ihre Site navigieren. Die ADFs `NEXT()` und `PREVIOUS()` machen dies möglich.
 
 **Syntax:**
 
@@ -165,7 +165,7 @@ PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 
 Struktur mit Feld `(value)`
 
-### Wählen Sie die aktuelle Seite und die nächste Seite aus
+### Aktuelle Seite und nächste Seite auswählen
 
 ```sql
 SELECT 
@@ -184,7 +184,7 @@ LIMIT 10;
 
 ![Bild](../images/queries/adobe-functions/select-current-page.png)
 
-### Erstellen eines Unterteilungsberichts für die fünf Seitennamen am Anfang der Sitzung
+### Detailbericht für die fünf häufigsten Seitennamen bei Anfang der Sitzung erstellen
 
 ```sql
   SELECT 
@@ -240,4 +240,10 @@ LIMIT 10;
 ```
 
 ![Bild](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## Zusätzliche Ressourcen
+
+Das folgende Video zeigt, wie Abfragen in der Benutzeroberfläche der Adobe Experience Platform und in einem PSQL-Client ausgeführt werden. Darüber hinaus verwendet das Video Beispiele für einzelne Eigenschaften in einem XDM-Objekt, unter Verwendung von von Adobe definierten Funktionen und unter Verwendung von CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
