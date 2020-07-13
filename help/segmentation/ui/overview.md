@@ -1,115 +1,115 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Handbuch zur Segmentaufbau-Benutzeroberfläche
+title: Handbuch zur Benutzeroberfläche von Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2683'
-ht-degree: 0%
+source-wordcount: '2766'
+ht-degree: 57%
 
 ---
 
 
-# Segment Builder-Benutzerhandbuch
+# [!UICONTROL Segment Builder-Benutzerhandbuch]
 
 [!DNL Adobe Experience Platform Segmentation Service] stellt eine RESTful-API und eine Benutzeroberfläche zum Erstellen von Segmentdefinitionen aus [!DNL Real-time Customer Profile] Daten bereit.
 
 ## Erste Schritte
 
-Das Arbeiten mit Segmentdefinitionen erfordert ein Verständnis der verschiedenen mit der Segmentierung verbundenen [!DNL Experience Platform] Dienste. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-- [!DNL Segmentation Service](../home.md): Mit dem Segmentierungsdienst können Sie Daten, [!DNL Experience Platform] die zu Einzelpersonen (z. B. Kunden, Potenzieller Kunden, Benutzer oder Organisationen) gespeichert wurden, in kleinere Gruppen unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
+- [!DNL Segmentation Service](../home.md)[!DNL Experience Platform]: Mit Segmentation Service können Sie in gespeicherte Daten, die sich auf Einzelanwender (z. B. Kunden, potenzielle Kunden, User oder Organisationen) beziehen, in kleinere Gruppen unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in die Platform aufgenommen werden.
+- [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Plattform erfasst werden.
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
-Es ist außerdem wichtig, zwei Schlüsselbegriffe zu kennen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen zu verstehen:
-- **Segmentdefinition**: Der Regelsatz, der zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Zielgruppe-Audience verwendet wird.
-- **Audience**: Der resultierende Satz von Profilen, die die Kriterien einer Segmentdefinition erfüllen.
+Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen verstehen:
+- **Segmentdefinition**: Der Regelsatz, der zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Ziel-Audience verwendet wird.
+- **Audience**: Der resultierende Satz von Profilen, die den Kriterien einer Segmentdefinition entsprechen.
 
-## Zugriff auf Segmentdefinitionen
+## Auf Segmentdefinitionen zugreifen
 
-Um mit der Arbeit mit Segmentdefinitionen in zu beginnen, [!DNL Adobe Experience Platform]klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Um alle Segmentdefinitionen für Ihr Unternehmen anzuzeigen, klicken Sie auf die Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;. Diese Ansicht Liste Informationen zur Segmentdefinition, einschließlich der Bewertungsmethode, des erstellten Datums und des zuletzt geänderten Datums.
+To begin working with segment definitions in [!DNL Adobe Experience Platform], click **[!UICONTROL Segments]** in the left navigation. Um alle Segmentdefinitionen für Ihre Organisation anzuzeigen, klicken Sie auf den Tab *[!UICONTROL Durchsuchen]*. Diese Ansicht listet Daten zur Segmentdefinition auf, einschließlich der Auswertungsmethode, des Erstellungsdatums und des Datums der letzten Änderung.
 
-Die Bewertungsmethode kann entweder Streaming oder Batch sein. Streaming-Segmente werden ständig ausgewertet, wenn Daten in das System gelangen. Stapelsegmente werden gemäß einem festgelegten Zeitplan ausgewertet.
+Die Auswertungsmethode kann entweder Streaming oder Batch sein. Streaming-Segmente werden konstant ausgewertet, sobald Daten in das System strömen. Batch-Segmente werden gemäß einem festgelegten Zeitplan ausgewertet.
 
-Für Stapelsegmente werden zusätzliche Informationen angezeigt, die sowohl das letzte Bewertungsdatum als auch das nächste Bewertungsdatum für den Stapel anzeigen.
+Bei Batch-Segmenten werden zusätzliche Daten angezeigt, die sowohl das letzte Auswertungsdatum als auch das nächste Auswertungsdatum für den Batch umfassen.
 
-Durch Klicken auf Segment **** erstellen in der oberen rechten Ecke wird der Segment Builder-Arbeitsbereich geöffnet, in dem Sie mit der Erstellung einer Segmentdefinition beginnen können.
+Durch Klicken auf **[!UICONTROL Segment erstellen]** in der oberen rechten Ecke wird der Segment Builder-Arbeitsbereich geöffnet, in dem Sie mit der Erstellung einer Segmentdefinition beginnen können.
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL Segmentaufbau] -Arbeitsbereich
+## [!UICONTROL Arbeitsbereich von Segment Builder]
 
-[!UICONTROL Der Segmentaufbau] bietet eine umfangreiche Arbeitsfläche, mit der Sie mit [!DNL Profile] Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag &amp; Drop-Kacheln, die zur Darstellung von Dateneigenschaften verwendet werden.
+[!UICONTROL Der Segmentaufbau] bietet eine umfangreiche Arbeitsfläche, mit der Sie mit [!DNL Profile] Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 
 ![](../images/segment-builder/segment-builder.png)
 
-## Bausteine für die Segmentdefinition
+## Bausteine einer Segmentdefinition
 
-Die grundlegenden Bausteine der Segmentdefinitionen sind **[!UICONTROL Attribute]** und **[!UICONTROL Ereignis]**. Darüber hinaus können die in bestehenden **[!UICONTROL Audiencen]** enthaltenen Attribute und Ereignis auch als Komponenten für neue Definitionen verwendet werden.
+Die grundlegenden Bausteine von Segmentdefinitionen sind **[!UICONTROL Attribute]** und **[!UICONTROL Ereignisse]**. Darüber hinaus können die in bestehenden **[!UICONTROL Audiences]** enthaltenen Attribute und Ereignisse auch als Komponenten für neue Definitionen verwendet werden.
 
-Sie können diese Bausteine im Abschnitt &quot; *Felder* &quot;auf der linken Seite des [!UICONTROL Segmentaufbaus] sehen. *[!UICONTROL Felder]* enthalten eine Registerkarte für jeden der Hauptbausteine: **[!UICONTROL Attribute]**, **[!UICONTROL Ereignis]** und **[!UICONTROL Audiencen]**.
+Sie können diese Bausteine im Abschnitt *Felder* links im Arbeitsbereich von Segment Builder sehen.  *[!UICONTROL Felder]* enthält einen Tab für jeden der Hauptbausteine: **[!UICONTROL Attribute]**, **[!UICONTROL Ereignisse]** und **[!UICONTROL Audiences]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
 ### Attribute
 
-Auf der Registerkarte &quot; **[!UICONTROL Attribute]** &quot;können Sie nach [!DNL Profile] Attributen suchen, die zur [!DNL XDM Individual Profile] Klasse gehören. Jeder Ordner kann erweitert werden, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in die Arbeitsfläche des Regelaufbaus in der Mitte des Arbeitsbereichs gezogen werden kann. Die Arbeitsfläche [des](#rule-builder-canvas) Regelaufbaus wird weiter unten in diesem Handbuch erläutert.
+The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. Jeder Ordner lässt sich erweitern, um zusätzliche Attribute anzuzeigen. Jedes Attribut ist eine Kachel, die in der Mitte des Arbeitsbereichs in die Arbeitsfläche des Regel-Builders gezogen werden kann. Die [Arbeitsfläche des Regel-Builders](#rule-builder-canvas) wird weiter unten in diesem Handbuch erläutert.
 
 ![](../images/segment-builder/attributes.png)
 
 ### Ereignisse
 
-Auf der Registerkarte &quot; **[!UICONTROL Ereignis]** &quot;können Sie eine Audience erstellen, die auf Ereignissen oder Aktionen basiert, die mit XDM ExperienceEvent-Datenelementen durchgeführt wurden. Sie finden Ereignistyp auch auf der Registerkarte &quot; **[!UICONTROL Ereignis]** &quot;, bei denen es sich um eine Sammlung häufig verwendeter Ereignis handelt, mit denen Sie Ihre Segmente schneller erstellen können.
+Auf dem Tab **[!UICONTROL Ereignisse]** können Sie mit XDM ExperienceEvent-Datenelementen eine Audience erstellen, die auf stattgefundenen Ereignissen oder Aktionen basiert. Sie finden Ereignistypen auch auf dem Tab **[!UICONTROL Ereignisse]**; dabei handelt es sich um eine Kollektion häufig verwendeter Ereignisse, mit denen Sie Segmente schneller erstellen können.
 
-Sie können nicht nur nach [!DNL ExperienceEvent] Elementen suchen, sondern auch nach Ereignistypen suchen. Ereignistyp verwenden dieselbe Kodierungslogik wie [!DNL ExperienceEvents], ohne dass Sie nach dem richtigen Ereignis suchen müssen, um die [!DNL XDM ExperienceEvent] Klasse zu durchsuchen. Wenn Sie z. B. in der Suchleiste nach &quot;Warenkorb&quot;suchen, werden die Ereignistyp &quot;[!UICONTROL Warenkorb]&quot;und &quot;[!UICONTROL Warenkorb]&quot;zurückgegeben, bei denen es sich um zwei sehr häufig verwendete Warenkorbaktionen beim Erstellen von Segmentdefinitionen handelt.
+In addition to being able to browse for [!DNL ExperienceEvent] elements, you can also search for Event Types. Event Types use the same coding logic as [!DNL ExperienceEvents], without requiring you to search through the [!DNL XDM ExperienceEvent] class looking for the correct event. For example, using the search bar to search &quot;cart&quot; returns the Event Types &quot;[!UICONTROL AddCart]&quot; and &quot;[!UICONTROL RemoveCart]&quot;, which are two very commonly used cart actions when building segment definitions.
 
-Sie können nach beliebigen Komponenten suchen, indem Sie deren Namen in die Suchleiste eingeben, die die Suchsyntax von [Lucene verwendet](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Die Suchergebnisse beginnen mit der Eingabe ganzer Wörter zu füllen. Wenn Sie beispielsweise eine Regel auf Grundlage des XDM-Felds erstellen möchten, geben Sie `ExperienceEvent.commerce.productViews`im Suchfeld Beginn &quot;product Ansichten&quot;ein. Sobald das Wort &quot;Produkt&quot;eingegeben wurde, werden die Suchergebnisse angezeigt. Jedes Ergebnis enthält die Objekthierarchie, zu der es gehört.
+Sie können nach beliebigen Komponenten suchen, indem Sie ihren Namen in die Suchleiste eingeben; diese verwendet die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Die Suchergebnisse beginnen sich mit der Eingabe ganzer Wörter zu füllen. Wenn Sie beispielsweise eine Regel auf Grundlage des XDM-Felds `ExperienceEvent.commerce.productViews` erstellen möchten, beginnen Sie im Suchfeld mit der Eingabe von „product views“. Sobald Sie das Wort „product“ eingegeben haben, werden Suchergebnisse angezeigt. Jedes Ergebnis enthält die Objekthierarchie, zu der es gehört.
 
 >[!NOTE]
 >
->Die Anzeige von benutzerdefinierten Schema-Feldern, die von Ihrem Unternehmen definiert wurden, kann bis zu 24 Stunden in Anspruch nehmen und steht für die Verwendung bei der Erstellung von Regeln zur Verfügung.
+>Es kann bis zu 24 Stunden dauern, bis benutzerdefinierte Schemafelder, die von Ihrer Organisation definiert wurden, angezeigt und zum Erstellen von Regeln verfügbar werden.
 
-Sie können dann einfach per Drag &amp; Drop [!DNL ExperienceEvents] und [!UICONTROL Ereignistyp] in Ihre Segmentdefinition ziehen.
+You can then easily drag and drop [!DNL ExperienceEvents] and [!UICONTROL Event Types] into your segment definition.
 
 ![](../images/segment-builder/events-eventTypes.png)
 
-Standardmäßig werden nur ausgefüllte Schema-Felder aus Ihrem Datenspeicher angezeigt. Dies schließt [!UICONTROL Ereignistyp]ein. Wenn die Liste &quot; [!UICONTROL Ereignistyp] &quot;nicht sichtbar ist oder Sie nur &quot;[!UICONTROL Beliebig]&quot;als [!UICONTROL Ereignistyp]auswählen können, klicken Sie auf das Zahnradsymbol neben &quot; *[!UICONTROL Felder]*&quot;und wählen Sie dann unter &quot;Verfügbare Felder&quot;die Option &quot;Vollständiges XDM-Schema **** ** anzeigen&quot;unter &quot; verfügbare Felder&quot;aus. Klicken Sie erneut auf das Zahnradsymbol, um zur Registerkarte &quot; *[!UICONTROL Felder]* &quot;zurückzukehren, und Sie sollten jetzt mehrere [!UICONTROL Ereignistyp] - und Schema-Felder unabhängig davon, ob sie Daten enthalten oder nicht, Ansicht werden können.
+Standardmäßig werden nur ausgefüllte Schemafelder aus Ihrem Datenspeicher angezeigt. This includes [!UICONTROL Event Types]. If the [!UICONTROL Event Types] list is not visible, or you are only able to select &quot;[!UICONTROL Any]&quot; as an [!UICONTROL Event Type], click the gear icon next to *[!UICONTROL Fields]*, then select **[!UICONTROL Show full XDM schema]** under *[!UICONTROL Available Fields]*. Klicken Sie erneut auf das Zahnradsymbol, um zum Tab *[!UICONTROL Felder]* zurückzukehren. Jetzt sollten Sie mehrere Ereignistypen und Schemafelder sehen, unabhängig davon, ob diese Daten enthalten oder nicht.
 
 ![](../images/segment-builder/show-populated.png)
 
-### Zielgruppen
+### Audiences
 
-Auf der Registerkarte &quot; **[!UICONTROL Audiencen]** &quot;werden alle Audiencen, die aus externen Quellen importiert wurden (z. B. Adobe Audience Manager), sowie alle darin erstellten Audiencen Liste [!DNL Experience Platform].
+The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
 
-Auf der Registerkarte &quot; [!UICONTROL Audiencen] &quot;können Sie alle verfügbaren Quellen als Ordnergruppe anzeigen. Wenn Sie in diese Ordner klicken, werden verfügbare Unterordner und Audiencen angezeigt. Außerdem können Sie auf das Ordnersymbol klicken (wie im Bild ganz rechts), um die Ordnerstruktur (ein Häkchen gibt den Ordner an, in dem Sie sich befinden) Ansicht und einfach durch Klicken auf den Ordnernamen im Baum durch die Ordnerstruktur zurück zu navigieren.
+On the [!UICONTROL Audiences] tab, you can see all of the available sources as a group of folders. Wenn Sie in diese Ordner klicken, werden verfügbare Unterordner und Audiences angezeigt. Außerdem können Sie auf das Ordnersymbol klicken (wie im Bild ganz rechts), um die Ordnerstruktur anzuzeigen (ein Häkchen gibt den Ordner an, in dem Sie sich befinden), und durch einfaches Klicken auf den Namen eines Ordners im Baum durch die Ordnerstruktur zurück navigieren.
 
-Wenn Sie den Mauszeiger über das ⓘ neben einer Audience halten, können Sie Informationen zur Ansicht der Audience einschließlich ID, Beschreibung und Ordnerhierarchie aufrufen, um die Audience zu suchen.
+Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Audience fahren, können Sie Informationen zur Audience anzeigen, einschließlich Kennung, Beschreibung und Ordnerhierarchie zum Auffinden der Audience.
 
 ![](../images/segment-builder/audience-folder-structure.png)
 
-Sie können auch über die Suchleiste nach [!UICONTROL Audiencen] suchen, die die Suchsyntax [von](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene verwendet. Wenn Sie auf der Registerkarte &quot; *[!UICONTROL Audiencen]* &quot;einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Die Suchergebnisse beginnen erst dann zu füllen, wenn die gesamten Wörter eingegeben wurden. Wenn Sie beispielsweise eine [!UICONTROL Audience] mit dem Namen `Online Shoppers`suchen möchten, geben Sie in der Suchleiste Beginn &quot;Online&quot;ein. Sobald das Wort &quot;Online&quot; vollständig eingegeben wurde, erscheinen die Suchergebnisse mit dem Wort &quot;Online&quot;.
+You can also search for [!UICONTROL Audiences] using the search bar, which utilizes [Lucene&#39;s search syntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn Sie auf dem Tab *[!UICONTROL Audiences]* einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. For example, to find an [!UICONTROL Audience] named `Online Shoppers`, start typing &quot;Online&quot; in the search bar. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
 
-## Arbeitsfläche Regelaufbau {#rule-builder-canvas}
+## Arbeitsfläche des Regel-Builders {#rule-builder-canvas}
 
-Eine Segmentdefinition ist eine Auflistung von Regeln, die zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe-Audience verwendet werden. Diese Regeln werden mithilfe der Arbeitsfläche *[!UICONTROL des]* Regelaufbaus im Zentrum des [!UICONTROL Segmentaufbaus]erstellt.
+Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der Hauptmerkmale oder Verhaltensweisen einer Ziel-Audience dienen. Diese Regeln werden mithilfe der *[!UICONTROL Arbeitsfläche des Regel-Builders]*[!UICONTROL  in der Mitte von Segment Builder erstellt].
 
-Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus der Registerkarte &quot; *[!UICONTROL Felder]* &quot;und legen Sie sie auf der Arbeitsfläche des Regelaufbaus ab. Anschließend werden Ihnen kontextspezifische Optionen entsprechend der Art der hinzugefügten Daten angezeigt. Zu den verfügbaren Datentypen gehören: Zeichenfolgen, Datumsangaben, [!DNL ExperienceEvents]Ereignistyp [!UICONTROL und]Audiencen .
+Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus dem Tab *[!UICONTROL Felder]* und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab. Anschließend werden Ihnen je nach Art der hinzugefügten Daten kontextspezifische Optionen angezeigt. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences].
 
 ![](../images/segment-builder/rule-builder-canvas.png)
 
-### Hinzufügen von Audiencen
+### Hinzufügen von Audiences
 
-Sie können eine Audience per Drag &amp; Drop von der Registerkarte &quot; *[!UICONTROL Audience]* &quot;auf die Arbeitsfläche &quot;Rule Builder&quot;ziehen, um auf die Mitgliedschaft in der Audience in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie die Audiencen-Mitgliedschaft als Attribut in der neuen Segmentregel ein- oder ausschließen.
+Sie können eine Audience per Drag-and-Drop vom Tab *[!UICONTROL Audience]* auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Audience-Zugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie Audience-Zugehörigkeit als Attribut in der neuen Segmentregel ein- oder ausschließen.
 
-Bei [!DNL Platform] Audiencen, die mit dem [!UICONTROL Segmentaufbau]erstellt wurden, können Sie die Audience in den Regelsatz konvertieren, der in der Segmentdefinition für diese Audience verwendet wurde. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition geändert werden kann. Vergewissern Sie sich, dass Sie alle Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in Regellogik konvertieren.
+For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition verändert werden kann. Vergewissern Sie sich, dass Sie alle Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in Regellogik konvertieren.
 
 >[!NOTE]
 >
->Beim Hinzufügen einer Audience aus einer externen Quelle wird nur auf die Audience-Mitgliedschaft verwiesen. Sie können die Audience nicht in Regeln konvertieren. Daher können die zum Erstellen der ursprünglichen Audience verwendeten Regeln in der neuen Segmentdefinition nicht geändert werden.
+>Beim Hinzufügen einer Audience aus einer externen Quelle wird nur auf die Audience-Zugehörigkeit verwiesen. Sie können die Audience nicht in Regeln konvertieren. Daher können die zum Erstellen der ursprünglichen Audience verwendeten Regeln in der neuen Segmentdefinition auch nicht geändert werden.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -125,21 +125,21 @@ Die Code-Ansicht bietet eine Schaltfläche, mit der Sie den Segmentwert kopieren
 
 ![](../images/segment-builder/copy-code.png)
 
-## Behälter
+## Container
 
-Segmentregeln werden in der Reihenfolge bewertet, in der sie aufgeführt sind. Container ermöglichen die Steuerung der Ausführungsreihenfolge durch die Verwendung verschachtelter Abfragen.
+Segmentregeln werden in der Reihenfolge ausgewertet, in der sie aufgelistet sind. Container ermöglichen eine Steuerung der Ausführungsreihenfolge durch Verwendung verschachtelter Abfragen.
 
-Nachdem Sie der Regelaufbauarbeitsfläche mindestens eine Kachel hinzugefügt haben, können Sie beginnen, Container hinzuzufügen. Um einen neuen Container zu erstellen, klicken Sie auf die Ellipsen (...) in der oberen rechten Ecke der Kachel und dann auf **[!UICONTROL Hinzufügen Container]**.
+Nachdem Sie der Arbeitsfläche des Regel-Builders mindestens eine Kachel hinzugefügt haben, können Sie beginnen, Container hinzuzufügen. Um einen neuen Container zu erstellen, klicken Sie auf die Auslassungszeichen (...) in der oberen rechten Ecke der Kachel und dann auf **[!UICONTROL Container hinzufügen]**.
 
 ![](../images/segment-builder/add-container.png)
 
-Ein neuer Container wird als untergeordnetes Element des ersten Containers angezeigt. Sie können die Hierarchie jedoch durch Ziehen und Verschieben der Container anpassen. Das Standardverhalten eines Containers besteht darin, das angegebene Attribut, Ereignis oder die bereitgestellte Audience mit &quot;[!UICONTROL Einschließen]&quot;zu versehen. Sie können die Regel auf Profil[!UICONTROL ausschließen]einstellen, die den Kriterien des Containers entsprechen, indem Sie in der oberen linken Ecke der Kachel auf **[!UICONTROL Einschließen]** klicken und &quot;[!UICONTROL Ausschließen]&quot;wählen.
+Ein neuer Container wird als untergeordnetes Element des ersten Containers angezeigt. Sie können die Hierarchie jedoch durch Ziehen und Verschieben der Container anpassen. The default behavior of a container is to &quot;[!UICONTROL Include]&quot; the attribute, event, or audience provided. You can set the rule to &quot;[!UICONTROL Exclude]&quot; profiles that match the container criteria by clicking **[!UICONTROL Include]** in the top-left corner of the tile and selecting &quot;[!UICONTROL Exclude]&quot;.
 
-Ein untergeordneter Container kann auch extrahiert und inline zum übergeordneten Container hinzugefügt werden, indem auf &quot;Container aufheben&quot;im untergeordneten Container geklickt wird. Klicken Sie auf die Auslassungspunkte (...) in der oberen rechten Ecke des untergeordneten Containers, um auf diese Option zuzugreifen.
+Ein untergeordneter Container kann auch extrahiert und inline zum übergeordneten Container hinzugefügt werden, indem Sie im untergeordneten Container auf „Container entpacken“ klicken. Klicken Sie auf die Auslassungszeichen (...) in der oberen rechten Ecke des untergeordneten Containers, um auf diese Option zuzugreifen.
 
 ![](../images/segment-builder/include-exclude.png)
 
-Wenn Sie auf Container **[!UICONTROL aufheben]** klicken, wird der untergeordnete Container entfernt und die Kriterien werden inline angezeigt.
+Wenn Sie auf **[!UICONTROL Container entpacken]** klicken, wird der untergeordnete Container entfernt und die Kriterien erscheinen inline.
 
 >[!NOTE]
 >
@@ -149,41 +149,41 @@ Wenn Sie auf Container **[!UICONTROL aufheben]** klicken, wird der untergeordnet
 
 ## Zusammenführungsrichtlinien
 
-[!DNL Experience Platform] ermöglicht es Ihnen, Daten aus mehreren Quellen zusammenzuführen und zu kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile.
+[!DNL Experience Platform]Mit können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile.
 
-Sie können eine Zusammenführungsrichtlinie auswählen, die Ihrem Marketingzweck für diese Audience entspricht, oder die standardmäßige Zusammenführungsrichtlinie verwenden, die von [!DNL Platform]bereitgestellt wird. Sie können mehrere, für Ihr Unternehmen spezifische Zusammenführungsrichtlinien erstellen, einschließlich der Erstellung Ihrer eigenen Standardrichtlinie für die Zusammenführung. Eine schrittweise Anleitung zum Erstellen von Richtlinien zum Zusammenführen für Ihr Unternehmen finden Sie im Lernprogramm zum [Arbeiten mit Richtlinien zum Zusammenführen mithilfe der Benutzeroberfläche](../../profile/ui/merge-policies.md).
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. Sie können verschiedene, für Ihre Organisation spezifische Zusammenführungsrichtlinien erstellen, einschließlich einer eigenen standardmäßigen Zusammenführungsrichtlinie. Eine schrittweise Anleitung zum Erstellen von Zusammenführungsrichtlinien für Ihre Organisation finden Sie in der Anleitung zum [Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche](../../profile/ui/merge-policies.md).
 
-Um eine Richtlinie zum Zusammenführen für Ihre Segmentdefinition auszuwählen, klicken Sie auf das Zahnradsymbol auf der Registerkarte &quot; *[!UICONTROL Felder]* &quot;und wählen Sie dann im Dropdownmenü &quot; *[!UICONTROL Richtlinie]zusammenführen&quot;die gewünschte Richtlinie aus *.
+Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, klicken Sie auf dem Tab *[!UICONTROL Felder]* auf das Zahnradsymbol und wählen Sie dann im *Dropdown-Menü „Zusammenführungsrichtlinie“*die gewünschte Zusammenführungsrichtlinie aus.
 
 ![](../images/segment-builder/merge-policy-selector.png)
 
 ## Segmenteigenschaften
 
-Beim Erstellen einer Segmentdefinition zeigt der Abschnitt *[!UICONTROL Segmenteigenschaften]* auf der rechten Seite des Arbeitsbereichs eine Schätzung der Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die Audience selbst erstellen.
+Beim Erstellen einer Segmentdefinition zeigt der Abschnitt *[!UICONTROL Segmenteigenschaften]* auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Audience erstellen.
 
-Im Abschnitt *[!UICONTROL Segmenteigenschaften]* können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich *[!UICONTROL Name]* und *[!UICONTROL Beschreibung]*. Segmentdefinitionsnamen werden verwendet, um Ihr Segment unter den von Ihrer Organisation definierten zu identifizieren. Daher sollten sie beschreibend, knapp und eindeutig sein.
+Im Abschnitt *[!UICONTROL Segmenteigenschaften]* können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich *[!UICONTROL Name]* und *[!UICONTROL Beschreibung]*. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmenten zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
 
-Wenn Sie Ihre Segmentdefinition weiter erstellen, können Sie eine paginierte Vorschau der Audience durch Auswahl der Profil für die **[!UICONTROL Ansicht]** Ansicht erstellen.
+Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Audience anzeigen.
 
 ![](../images/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->Die Schätzungen der Audience werden anhand einer Stichprobengröße der Stichprobendaten dieses Tages erstellt. Wenn sich in Ihrem Profil-Store weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. für zwischen 1 und 20 Millionen Unternehmen werden 1 Million Einheiten verwendet; und für mehr als 20 Millionen Unternehmen werden 5 % der Gesamteinheiten verwendet. Weitere Informationen zum Generieren von Segmentschätzungen finden Sie im Abschnitt zur [Schätzung der Generierung](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) des Lernprogramms zur Segmenterstellung.
+>Audience-Schätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet; bei mehr als 20 Millionen Entitäten werden 5 % der Gesamtentitäten genutzt. Weiterführende Informationen zum Generieren von Segmentschätzungen finden Sie in der Anleitung zur Segmenterstellung im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
 
 ## Geplante Segmentierung aktivieren {#enable-scheduled-segmentation}
 
-Nachdem Sie Segmentdefinitionen erstellt haben, können Sie diese dann durch On-Demand- oder geplante (kontinuierliche) Evaluierung bewerten. Bewertung bedeutet, dass [!DNL Real-time Customer Profile] Daten durch Segmentdefinitionen verschoben werden, um entsprechende Audiencen zu erhalten. Nach der Erstellung werden die Audiencen gespeichert und gespeichert, damit sie mit [!DNL Experience Platform] APIs exportiert werden können.
+Nachdem Sie Segmentdefinitionen erstellt haben, können Sie diese durch eine On-Demand- oder geplante (kontinuierliche) Auswertung auswerten. Evaluation means moving [!DNL Real-time Customer Profile] data through segment definitions in order to produce corresponding audiences. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs.
 
-Bei der On-Demand-Bewertung wird die API zur Durchführung von Evaluierungen und zum Aufbau von Audiencen nach Bedarf verwendet. Bei der geplanten Auswertung (auch als &quot;geplante Segmentierung&quot;bezeichnet) können Sie jedoch einen Zeitplan erstellen, um die Segmentdefinitionen zu einem bestimmten Zeitpunkt (maximal einmal täglich) zu bewerten.
+Bei der On-Demand-Auswertung wird die API zur Durchführung von Auswertungen und zum Aufbau von Audiences nach Bedarf verwendet. Bei der geplanten Auswertung (auch „geplante Segmentierung“ genannt) können Sie hingegen einen Zeitplan erstellen, um die Segmentdefinitionen zu einem bestimmten Zeitpunkt (maximal einmal täglich) auszuwerten.
 
-Die Aktivierung Ihrer Segmentdefinitionen für die geplante Evaluierung kann über die Benutzeroberfläche oder die API erfolgen. Kehren Sie in der Benutzeroberfläche zur Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;innerhalb von **[!UICONTROL Segmenten]** zurück und schalten Sie auf Alle Segmente **[!UICONTROL auswerten]** um. Dadurch werden alle Segmente basierend auf dem von Ihrer Organisation festgelegten Zeitplan bewertet.
+Die Aktivierung Ihrer Segmentdefinitionen für eine geplante Auswertung kann über die Benutzeroberfläche oder die API erfolgen. Kehren Sie in der Benutzeroberfläche zum Tab *[!UICONTROL Durchsuchen]* in **[!UICONTROL Segmente]** zurück und schalten Sie **[!UICONTROL Alle Segmente auswerten]** ein. Dadurch werden alle Segmente anhand des von Ihrer Organisation festgelegten Zeitplans evaluiert.
 
 >[!NOTE]
 >
->Geplante Evaluierung kann für Sandboxen mit maximal fünf (5) Zusammenführungsrichtlinien aktiviert werden, für die [!DNL XDM Individual Profile]die Funktion aktiviert ist. Wenn Ihr Unternehmen über mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] eine einzige Sandbox-Umgebung verfügt, können Sie keine geplante Auswertung verwenden.
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
 
-Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweisungen zum Erstellen, Bearbeiten und Arbeiten mit Zeitplänen mithilfe der API finden Sie im Tutorial zur Evaluierung und zum Zugriff auf Segmentergebnisse, insbesondere im Abschnitt zur [geplanten Auswertung mithilfe der API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
+Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweisungen zum Erstellen, Bearbeiten und Verwenden von Zeitplänen mithilfe der API finden Sie im Tutorial zum Auswerten und Aufrufen von Segmentergebnissen, insbesondere im Abschnitt zur [geplanten Auswertung mithilfe der API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
@@ -191,11 +191,11 @@ Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweis
 
 >[!NOTE]
 >
->Damit Streaming-Segmentierung funktioniert, muss der Kunde die geplante Segmentierung für das Unternehmen aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie im vorherigen Abschnitt [dieses Benutzerhandbuchs](#enable-scheduled-segmentation).
+>Damit Streaming-Segmentierung funktioniert, muss der Kunde die geplante Segmentierung für das Unternehmen aktivieren. Weiterführende Informationen zur Aktivierung der geplanten Segmentierung finden Sie [im vorherigen Abschnitt dieses Benutzerhandbuchs](#enable-scheduled-segmentation).
 
 Eine Abfrage wird automatisch mit Streaming-Segmentierung bewertet, wenn sie eines der folgenden Kriterien erfüllt:
 
-| Abfrage | Details | Beispiel |
+| Abfragetyp | Details | Beispiel |
 | ---------- | ------- | ------- |
 | Eingehender Treffer | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | ![](../images/segment-builder/incoming-hit.png) |
 | Eingehender Treffer innerhalb eines relativen Zeitfensters | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis **innerhalb der letzten sieben Tage** verweist. | ![](../images/segment-builder/relative-hit-success.png) |
@@ -205,7 +205,7 @@ Eine Abfrage wird automatisch mit Streaming-Segmentierung bewertet, wenn sie ein
 
 Im folgenden Abschnitt werden Segmentdefinitionsbeispiele Liste, die für die Streaming-Segmentierung **nicht** aktiviert werden.
 
-| Abfrage | Details |
+| Abfragetyp | Details |
 | ---------- | ------- | 
 | Eingehender Treffer innerhalb eines relativen Zeitfensters | Wenn sich die Segmentdefinition auf ein eingehendes Ereignis bezieht, das **nicht** innerhalb der **letzten sieben Tage** liegt. Zum Beispiel innerhalb der **letzten zwei Wochen**. | ![](../images/segment-builder/relative-hit-failure.png) |
 | Eingehender Treffer, der sich auf ein Profil in einem relativen Fenster bezieht | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein eingehendes Ereignis **nicht** innerhalb der **letzten sieben Tage**.</li><li>Eine Segmentdefinition, die [!DNL Adobe Audience Manager (AAM)] Segmente oder Eigenschaften enthält.</li></ul> | ![](../images/segment-builder/profile-relative-failure.png) |
@@ -214,7 +214,7 @@ Im folgenden Abschnitt werden Segmentdefinitionsbeispiele Liste, die für die St
 
 Darüber hinaus gelten einige Richtlinien für die Streaming-Segmentierung:
 
-| Abfrage | Leitlinie |
+| Abfragetyp | Leitlinie |
 | ---------- | -------- |
 | Abfrage mit einem Ereignis | Das Rückblickfenster ist auf **sieben Tage** begrenzt. |
 | Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen **muss** eine strikte Zeitbestellbedingung bestehen.</li><li>Nur einfache Zeitreihenfolgen (vor und nach) zwischen den Ereignissen sind zulässig.</li><li>Die einzelnen Ereignis **können nicht** negiert werden. Die gesamte Abfrage **kann** jedoch negiert werden.</li></ul> |
@@ -233,24 +233,42 @@ Weitere Informationen zur letzten Segmentauswertung erhalten Sie, wenn Sie auf d
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Videodemo zur Streaming-Segmentierung
+
+Das folgende Video soll Ihr Verständnis von Streaming-Segmentierung unterstützen. Es zeigt ein Beispiel für eine Kundenerfahrung, gefolgt von einem kurzen Überblick über die wichtigsten Funktionen der [!DNL Platform] Oberfläche.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## Verstöße gegen DULE-Richtlinien
 
 >[!NOTE]
 >
->Verstöße gegen DULE-Richtlinien gelten nur, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
+>Verstöße gegen DULE-Richtlinien finden nur dann Anwendung, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
 
-Nachdem Sie Ihr Segment erstellt haben, wird das Segment analysiert, [!DNL Data Governance] um sicherzustellen, dass es keine Richtlinienverletzungen innerhalb des Segments gibt. Weitere Informationen zu DUL- und Richtlinienverletzungen finden Sie in der Übersicht über die [Datenverwendung](../../data-governance/labels/overview.md).
+Once you are done creating your segment, the segment will be analyzed by [!DNL Data Governance] to ensure there are no policy violations within the segment. Weiterführende Informationen zu DULE und Richtlinienverletzungen finden Sie in der [Übersicht über die Datennutzungsbezeichnungen](../../data-governance/labels/overview.md).
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Nächste Schritte
+## Nächste Schritte und zusätzliche Ressourcen {#next-steps}
 
-Der Segmentaufbau bietet einen umfassenden Arbeitsablauf, mit dem Sie marktfähige Audiencen von [!DNL Real-time Customer Profile] Daten isolieren können. Nach dem Lesen dieses Handbuchs sollten Sie jetzt in der Lage sein:
+Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. Nach dem Lesen dieses Handbuchs sollten Sie jetzt Folgendes können:
 
-- Erstellen Sie Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Audiencen als Bausteine.
-- Verwenden Sie die Arbeitsfläche und Container des Regelaufbaus, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
-- Ansicht schätzt die voraussichtliche Audience, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
-- Aktivieren Sie alle Segmentdefinitionen für die geplante Segmentierung.
-- Aktivieren Sie die angegebenen Segmentdefinitionen für die Streaming-Segmentierung.
+- Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Audiences als Bausteinen erstellen.
+- Die Arbeitsfläche des Regel-Builders und Container verwenden, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
+- Schätzungen der voraussichtlichen Audience anzeigen, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
+- Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
+- Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
 
-Eine schrittweise Anleitung zum Arbeiten mit [!DNL Segmentation Service] der [!DNL Segmentation Service] API finden Sie im Lernprogramm zum [Erstellen von Segmenten mit APIs](../tutorials/create-a-segment.md) .
+Um mehr darüber zu erfahren, lesen Sie [!DNL Segmentation Service]bitte weiterhin die Dokumentation und ergänzen Sie Ihre Lernerfahrung durch die Videos unten. For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial.
+
+>[!WARNING]
+>
+> Die in den folgenden Videos dargestellte [!DNL Platform] Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+
+**Erstellen eines Segments:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**Erstellen Sie ein dynamisches Segment:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
