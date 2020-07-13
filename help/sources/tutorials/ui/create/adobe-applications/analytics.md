@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen eines Adobe Analytics-Quellconnectors in der Benutzeroberfläche
+title: Erstellen eines Quell-Connectors für Adobe Analytics über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 3%
+source-wordcount: '769'
+ht-degree: 15%
 
 ---
 
 
-# Erstellen eines Adobe Analytics-Quellconnectors in der Benutzeroberfläche
+# Erstellen eines Quell-Connectors für Adobe Analytics über die Benutzeroberfläche
 
 In diesem Lernprogramm wird beschrieben, wie Sie einen Adobe Analytics-Quellanschluss in der Benutzeroberfläche erstellen, um Verbraucherdaten in die Adobe Experience Platform zu bringen.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Erlebnis-Datenmodell (XDM)-System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Echtzeit-Profil](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Sandboxen](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [Sandbox-Umgebungen](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen für die Entwicklung und Erweiterung von Anwendungen für digitale Erlebnisse unterteilen.
 
 ## Erstellen einer Quellverbindung mit Adobe Analytics
 
@@ -46,7 +46,7 @@ Der *Adobe Analytics* -Schritt wird angezeigt. In diesem Anzeigebereich werden z
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-Wählen Sie in der Liste der verfügbaren Report Suites die Report Suites aus, die Sie in die Platform aufnehmen möchten, und klicken Sie auf **[!UICONTROL Weiter]**.
+Wählen Sie in der Liste der verfügbaren Report Suites die Report Suites aus, die Sie in die Plattform aufnehmen möchten, und klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
@@ -95,11 +95,20 @@ Weitere Informationen zur Beschriftung von Daten aus Analytics finden Sie im Han
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
-## Nächste Schritte
+## Nächste Schritte und zusätzliche Ressourcen
 
-Nachdem die Verbindung erstellt wurde, wird automatisch ein Zielgruppe-Schema und ein Datenfluss erstellt, der die eingehenden Daten enthält. Darüber hinaus werden bis zu 13 Monate historischer Daten aufgefüllt und erfasst. Nach Abschluss der anfänglichen Erfassung werden Analytics-Daten verwendet und von Diensten der nachgeschalteten Platform wie dem Echtzeit-Kundendienst und dem Segmentierungsdienst verwendet. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Nachdem die Verbindung erstellt wurde, wird automatisch ein Zielgruppe-Schema und ein Datenfluss erstellt, der die eingehenden Daten enthält. Darüber hinaus werden bis zu 13 Monate historischer Daten aufgefüllt und erfasst. Nach Abschluss der anfänglichen Erfassung werden Analytics-Daten verwendet und von nachgeschalteten Plattformdiensten wie Echtzeit-Kundendienst und Segmentierungsdienst verwendet. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../../profile/home.md)
 * [Übersicht über den Segmentierungsdienst](../../../../../segmentation/home.md)
 * [Übersicht über den Data Science Workspace](../../../../../data-science-workspace/home.md)
-* [Übersicht über den Abfrage Service](../../../../../query-service/home.md)
+* [Übersicht über Query Service](../../../../../query-service/home.md)
+
+Das folgende Video soll Ihnen beim Erfassen von Daten mithilfe des Adobe Analytics Source Connectors helfen:
+
+>[!WARNING]
+>
+> Die im folgenden Video dargestellte [!DNL Platform] Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
