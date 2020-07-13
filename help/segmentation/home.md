@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2386'
-ht-degree: 3%
+source-wordcount: '2408'
+ht-degree: 7%
 
 ---
 
 
 # Übersicht über den Segmentierungsdienst
 
-Der Segmentierungsdienst für Adobe Experience Platformen bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren Echtzeit-Daten zum Profil von Kunden generieren können. Diese Segmente werden auf Platform zentral konfiguriert und gepflegt und stehen für jede Adobe-Lösung zur Verfügung.
+Der Adobe Experience Platform Segmentation Service stellt eine Benutzeroberfläche und RESTful-API bereit, mit der Sie Segmente erstellen und aus Ihren Echtzeit-Kundenprofildaten Zielgruppen generieren können. Diese Segmente werden zentral auf Platform konfiguriert und gepflegt und stehen für jede Adobe-Lösung zur Verfügung.
 
 Dieses Dokument bietet einen Überblick über den Segmentierungsdienst und die Rolle, die dieser bei der Adobe Experience Platform spielt.
 
@@ -23,18 +23,18 @@ Dieses Dokument bietet einen Überblick über den Segmentierungsdienst und die R
 Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dokument verwendet werden:
 
 - **Segmentierung**: Die Unterteilung einer großen Gruppe von Einzelpersonen (z. B. Kunden, Potenzieller Kunde, Benutzer oder Organisationen) in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
-- **Segmentdefinition**: Der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe-Audience verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Segmentmitglieder für eine Audience zu bestimmen.
-- **Audience**: Der resultierende Satz von Profilen, die die Kriterien einer Segmentdefinition erfüllen.
+- **Segmentdefinition**: Der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe-Audience verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Zielgruppenmitglieder für ein Segment zu bestimmen.
+- **Audience**: Der resultierende Satz von Profilen, die den Kriterien einer Segmentdefinition entsprechen.
 
 ## Funktionsweise der Segmentierung
 
 Bei Segmentierung handelt es sich um den Prozess der Definition spezifischer Attribute oder Verhaltensweisen, die von einer Untergruppe von Profilen in Ihrem Profilspeicher geteilt werden, sodass Sie eine vermarktbare Gruppe von Personen aus Ihrem Kundenstamm ermitteln können. In einer E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Schuhe zu kaufen?“ wollen Sie möglicherweise eine Zielgruppe aller Anwender auswählen, die in den letzten 30 Tagen nach Laufschuhen gesucht haben, den Kauf jedoch nicht abgeschlossen haben.
 
-Sobald ein Segment konzeptionell definiert wurde, ist es in Experience Platform integriert. In der Regel werden Segmente vom Marketingspezialisten oder Audiencen-Spezialisten erstellt, obwohl einige Unternehmen es vorziehen, dass sie in Zusammenarbeit mit ihren Datenanalysten von ihrer Marketingabteilung erstellt werden. Bei der Prüfung der an die Platform gesendeten Daten erstellt der Datenanalyst die Segmentdefinition, indem er bestimmt, welche Felder und Werte zum Aufbau der Segmentregeln oder -bedingungen verwendet werden. Dies erfolgt entweder über die Benutzeroberfläche oder die API.
+Sobald ein Segment konzeptionell definiert wurde, ist es in Experience Platform integriert. In der Regel werden Segmente vom Marketingspezialisten oder Audiencen-Spezialisten erstellt, obwohl einige Unternehmen es vorziehen, dass sie in Zusammenarbeit mit ihren Datenanalysten von ihrer Marketingabteilung erstellt werden. Bei der Prüfung der an die Plattform gesendeten Daten erstellt der Datenanalyst die Segmentdefinition, indem er bestimmt, welche Felder und Werte zum Aufbau der Regeln oder Bedingungen des Segments verwendet werden. Dies erfolgt entweder über die Benutzeroberfläche oder die API.
 
 ## Segmente erstellen
 
-Unabhängig davon, ob sie mit der API oder mit dem Segmentaufbau erstellt wurden, werden die Segmente letztendlich mithilfe der Profil Abfrage Language (PQL) definiert. Hier wird die Definition des konzeptionellen Segments in der Sprache beschrieben, die zum Abrufen von Profilen erstellt wurde, die den Kriterien entsprechen. Weitere Informationen finden Sie in der [PQL-Übersicht](./pql/overview.md).
+Unabhängig davon, ob sie mit der API oder mit dem Segmentaufbau erstellt wurden, werden die Segmente letztendlich mithilfe der Profil Abfrage Language (PQL) definiert. Hier wird die Definition des konzeptionellen Segments in der Sprache beschrieben, die zum Abrufen von Profilen erstellt wurde, die den Kriterien entsprechen. For more information, see the [PQL overview](./pql/overview.md).
 
 Informationen zum Erstellen und Verwenden von Segmenten im Segmentaufbau (die Implementierung des Segmentierungsdiensts in der Benutzeroberfläche) finden Sie im Handbuch [Segmentaufbau](./ui/overview.md).
 
@@ -48,7 +48,7 @@ Informationen zum Erstellen von Segmentdefinitionen mit der API finden Sie im Le
 
 ### Streaming-Segmentierung
 
-Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente entsprechend der Aktivität des Benutzers aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf eingehende Daten im Echtzeit-Kundensegment angewendet. Segmentzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Audience der Zielgruppe relevant bleibt.
+Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente entsprechend der Aktivität des Benutzers aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf eingehende Daten im Echtzeit-Kundensegment angewendet. Segmentzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Audience der Zielgruppe relevant bleibt.
 
 Weitere Informationen zur Streaming-Segmentierung finden Sie in der Dokumentation zur [Streaming-Segmentierung](./api/streaming-segmentation.md).
 
@@ -79,7 +79,7 @@ Beim Erstellen eines neuen Segments müssen Sie einen Segmentnamen angeben. Der 
 ### Zusammenführungsrichtlinien
 
 Zusammenführungsrichtlinien sind Regeln, die von Profil verwendet werden, um zu bestimmen, wie Daten priorisiert und unter bestimmten Voraussetzungen zu einer einheitlichen Ansicht kombiniert werden.
-Wenn keine Richtlinie zum Zusammenführen definiert ist, wird die Standardrichtlinie zum Zusammenführen von Platformen verwendet. Wenn Sie lieber eine für Ihr Unternehmen spezifische Richtlinie zum Zusammenführen verwenden möchten, können Sie eine eigene Richtlinie erstellen und diese als Standard Ihres Unternehmens markieren.
+Wenn keine Richtlinie zum Zusammenführen definiert ist, wird die standardmäßige Richtlinie zum Zusammenführen von Plattformen verwendet. Wenn Sie lieber eine für Ihr Unternehmen spezifische Richtlinie zum Zusammenführen verwenden möchten, können Sie eine eigene Richtlinie erstellen und diese als Standard Ihres Unternehmens markieren.
 
 >[!NOTE]
 >
@@ -129,6 +129,10 @@ Indem Sie dem Attribut &quot;Kaufstatus&quot;eine Variable zuweisen, wird Ihr dy
 Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie Segmente mit mehreren XDM-Klassen erstellen und damit Erweiterungen zu persönlichen Schemas hinzufügen. Daher kann der Segmentdienst während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie nativ im Profil-Datenspeicher.
 
 Die Segmentierung mehrerer Entitäten bietet die erforderliche Flexibilität, um Audiencen anhand von Daten zu identifizieren, die für Ihre Geschäftsanforderungen relevant sind. Dieser Vorgang kann schnell und einfach durchgeführt werden, ohne dass Fachwissen in der Abfrage von Datenbanken erforderlich ist. Auf diese Weise können Sie wichtige Daten zu Ihren Segmenten hinzufügen, ohne kostspielige Änderungen an den Datenströmen vornehmen zu müssen oder auf eine Back-End-Datenzusammenführung zu warten.
+
+Das folgende Video soll Ihr Verständnis der Segmentierung mehrerer Entitäten unterstützen und erläutert sowohl die Segmentierung mehrerer Entitäten als auch den Segmentkontext (Segmentnutzlast).
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ### Verwendungsfall: Preisorientierte Werbung
 
@@ -196,7 +200,7 @@ Alle XDM-Datentypen werden im Segmentierungsdienst unterstützt. Die Regeln, die
 
 ### Zeichenfolgendaten
 
-Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht numerische Einschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuestufe auf Programm-Ebene&quot;.
+Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht-numerische Beschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuhandstufe&quot;für Programme.
 
 Stringdaten werden in Segmentdefinitionen mit logischen, einschließlich-/ausschließlichen und Vergleichsanweisungen eingeschlossen. Nachdem Sie Ihrer Segmentdefinition ein Zeichenfolgenattribut hinzugefügt haben, können Sie mit Zeichenfolgen-relevanten Anweisungen das Attribut mit anderen Zeichenfolgenfeldern vergleichen.
 
@@ -218,7 +222,7 @@ Mit den Datumsdaten können Sie Ihren Segmentdefinitionen zeitbasierten Kontext 
 
 ### Experience Ereignisses
 
-Als Adobe Experience Platform-Schema zeichnet XDM Experienceevents explizite und implizite Kundeninteraktionen mit Platform-integrierten Anwendungen auf, einschließlich einer Momentaufnahme des Systems zum Zeitpunkt der Interaktion. ExperienceEvents sind Faktendatensätze. Sie sind daher eine Datenquelle, die Ihnen während der Segmentdefinition zur Verfügung steht.
+Als Adobe Experience Platform-Schema zeichnet XDM Experienceevents explizite und implizite Kundeninteraktionen mit plattformintegrierten Anwendungen auf, einschließlich einer Momentaufnahme des Systems zum Zeitpunkt der Interaktion. ExperienceEvents sind Faktendatensätze. Sie sind daher eine Datenquelle, die Sie während der Segmentdefinition erhalten.
 
 Wie in der unten stehenden Tabelle dargestellt, werden die Ereignis-Daten mit Suchbegriffen wiedergegeben, die das Verhalten von Ereignissen verfeinern und Ereignis-Attribute angeben.
 
@@ -233,7 +237,7 @@ Wie in der unten stehenden Tabelle dargestellt, werden die Ereignis-Daten mit Su
 
 Bestehende Segmentdefinitionen können auch als Komponenten einer neuen Segmentdefinition verwendet werden, wobei ihre Attribut- und Ereignis-basierten Regeln dem neuen Segment hinzugefügt werden.
 
-### Zielgruppen
+### Audiences
 
 Externe Audiencen können auch als Komponenten einer neuen Segmentdefinition verwendet werden, wobei ihre Attributregeln dem neuen Segment hinzugefügt werden.
 
@@ -246,16 +250,16 @@ Zusätzlich zu den oben genannten umfasst die Liste unterstützter Datentypen au
 - Einheitliche Ressourcenkennung
 - Enum
 - Zahl
-- lang
+- Lang
 - Ganzzahl
-- Short
+- Kurz
 - Byte
 - Boolesch
 - Datum
-- Datum/Uhrzeit
+- Datum-Uhrzeit
 - Array
 - Objekt
-- Landkarte
+- Zuordnung
 - Ereignisse
 
 ## Nächste Schritte
@@ -265,6 +269,6 @@ Der Segmentierungsdienst bietet einen konsolidierten Arbeitsablauf zum Erstellen
 - Bei der Segmentierung wird eine Untergruppe von Profilen aus Ihrem Profil-Store definiert, sodass Sie Verhalten oder Attribute einer gewünschten marktfähigen Gruppe charakterisieren können. Der Segmentierungsdienst ermöglicht diesen Vorgang.
 - Denken Sie beim Planen eines Segments daran, dass ein Segment aus einem beliebigen anderen Segment referenziert und mit diesem kombiniert werden kann.
 - Ein Profil kann anhand von Regeln erstellt werden, die auf den Daten der zugehörigen Zeitreihen oder beidem basieren.
-- Segmente können entweder bei Bedarf oder kontinuierlich ausgewertet werden. Bei einer bedarfsgerechten Bewertung werden alle Profil-Daten gleichzeitig durch die Segmentdefinitionen weitergeleitet. Bei kontinuierlicher Auswertung fließen die Daten durch Segmentdefinitionen, sobald sie in die Platform gelangen.
+- Segmente können entweder bei Bedarf oder kontinuierlich ausgewertet werden. Bei einer bedarfsgerechten Bewertung werden alle Profil-Daten gleichzeitig durch die Segmentdefinitionen weitergeleitet. Bei kontinuierlicher Auswertung werden Daten durch Segmentdefinitionen gestreamt, sobald sie in die Plattform gelangen.
 
 Informationen zum Definieren von Segmenten in der Benutzeroberfläche finden Sie im Handbuch [Segmentaufbau](./ui/overview.md). Informationen zum Erstellen von Segmentdefinitionen mit der API finden Sie im Lernprogramm zum [Erstellen von Segmenten mit der API](./tutorials/create-a-segment.md).
