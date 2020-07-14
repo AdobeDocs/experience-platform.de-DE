@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK-Hilfe
 translation-type: tm+mt
-source-git-commit: 73e0c245191c88025e59cf226ec5b07a55064b97
+source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 62%
+source-wordcount: '94'
+ht-degree: 67%
 
 ---
 
@@ -34,13 +34,14 @@ ht-degree: 62%
 * Lösungsspezifische Aspekte {#solutions}
    * Analytics {#analytics}
       * [Übersicht über Analytics](solution-specific/analytics/analytics-overview.md)
+      * [Manuelles Zuordnen von Variablen in Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Automatisch zugeordnete Variablen](solution-specific/analytics/automatically-mapped-vars.md)
    * Audience Manager {#aam}
-      * [Übersicht über Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
+      * [Audience Manager – Überblick](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
       * [Übersicht über Target](solution-specific/target/target-overview.md)
       * [Flimmern-Management](solution-specific/target/flicker-management.md)
 * Referenz {#ref}
    * [Automatisch erfasste Informationen](reference/automatic-information.md)
    * [Abrufen von Bibliotheksinformationen](reference/retrieving-library-information.md)
-* [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
+* [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
