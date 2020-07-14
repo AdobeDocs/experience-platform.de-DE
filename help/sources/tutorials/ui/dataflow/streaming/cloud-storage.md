@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Streaming-Connector in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 1%
+source-wordcount: '676'
+ht-degree: 11%
 
 ---
 
@@ -18,12 +18,12 @@ Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abge
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Erlebnis-Datenmodell (XDM)-System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-   - [Grundlagen der Zusammensetzung](../../../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
+- [XDM-System (Experience-Datenmodell)](../../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, nach dem Daten zum Kundenerlebnis in organisiert werden.
+   - [Grundlagen zum Aufbau von Schemas](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    - [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-- [Echtzeit-Profil](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Echtzeit-Kundenprofil](../../../../../profile/home.md): Ein durch die Zusammenführung von Daten aus verschiedenen Quellen erstelltes Profil, das eine zentrale Echtzeit-Sicht auf Kunden liefert.
 
 Darüber hinaus müssen Sie bei diesem Lernprogramm bereits einen Cloud-Datenspeicherung-Connector erstellt haben. Eine Liste von Übungen zum Erstellen verschiedener Cloud-Datenspeicherung-Connectors in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../../home.md).
 
@@ -45,7 +45,7 @@ Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot;Vorhanden
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-existing-data.png)
 
-Das Dialogfeld &quot;Datensatz _auswählen_ &quot;wird angezeigt. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+The _Select dataset_ dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-existing-data.png)
 
@@ -68,15 +68,15 @@ Geben Sie Werte für den Datenfluss ein und klicken Sie auf **[!UICONTROL Weiter
 Der *Schritt zum Überprüfen* wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
 
 - *[!UICONTROL Quelldetails]*: Zeigt den Quelltyp und andere relevante Details zur Quelle an.
-- *[!UICONTROL Angaben zum Target]*: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
+- *[!UICONTROL Angaben]* zur Zielgruppe: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
 
 Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen]** und lassen Sie die Erstellung des Datenflusses etwas Zeit.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
-## Überwachen des Datenflusses
+## Überwachen und Löschen Ihres Datenflusses
 
-Nachdem Sie den DataFlow für die Cloud-Datenspeicherung erstellt haben, können Sie die Daten überwachen, die über den Datenfluss aufgenommen werden. Weitere Informationen zur Überwachung von Datensätzen finden Sie im Lernprogramm zur [Überwachung von Streaming-Datenflüssen](../../../../../ingestion/quality/monitor-data-flows.md).
+Nachdem Sie den DataFlow für die Cloud-Datenspeicherung erstellt haben, können Sie die Daten überwachen, die über den Datenfluss aufgenommen werden. Weitere Informationen zum Überwachen und Löschen von Datenflüssen finden Sie im Lernprogramm zum [Überwachen von Datenflüssen](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## Nächste Schritte
 
