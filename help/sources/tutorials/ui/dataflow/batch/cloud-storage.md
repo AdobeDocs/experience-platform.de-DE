@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Batch-Connector für eine Cloud-Datenspeicherung in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1226'
 ht-degree: 6%
 
 ---
@@ -123,9 +123,9 @@ Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## Überwachen des Datenflusses
+## Überwachen und Löschen Ihres Datenflusses
 
-Nachdem Sie den DataFlow für die Cloud-Datenspeicherung erstellt haben, können Sie die Daten überwachen, die über den Datenfluss aufgenommen werden. Weitere Informationen zur Überwachung von Datensätzen finden Sie im Lernprogramm zur [Überwachung von Streaming-Datenflüssen](../../../../../ingestion/quality/monitor-data-flows.md).
+Nachdem Sie den DataFlow für die Cloud-Datenspeicherung erstellt haben, können Sie die Daten überwachen, die über den Datenfluss aufgenommen werden. Weitere Informationen zum Überwachen und Löschen von Datenflüssen finden Sie im Lernprogramm zum [Überwachen von Datenflüssen](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## Nächste Schritte
 
