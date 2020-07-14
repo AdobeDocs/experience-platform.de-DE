@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Zahlungsanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 1%
+source-wordcount: '1071'
+ht-degree: 7%
 
 ---
 
@@ -18,12 +18,12 @@ Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Adobe Exper
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Erlebnis-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-   - [Grundlagen der Zusammensetzung](../../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
+- [XDM-System (Experience-Datenmodell)](../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, nach dem Daten zum Kundenerlebnis in organisiert werden.
+   - [Grundlagen zum Aufbau von Schemas](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    - [Schema-Editor-Lernprogramm](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-- [Echtzeit-Profil](../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Echtzeit-Kundenprofil](../../../../profile/home.md): Ein durch die Zusammenführung von Daten aus verschiedenen Quellen erstelltes Profil, das eine zentrale Echtzeit-Sicht auf Kunden liefert.
 
 Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits ein Zahlungskonto erstellt haben. Eine Liste von Übungen zum Erstellen verschiedener Zahlungsschnittstellen in der Benutzeroberfläche finden Sie in der Übersicht über die [Quell-Connectors](../../../home.md).
 
@@ -50,7 +50,7 @@ Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot;Vorhanden
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/payments/existing-dataset.png)
 
-Das Dialogfeld &quot;Datensatz *[!UICONTROL auswählen]* &quot;wird angezeigt. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+The *[!UICONTROL Select dataset]* dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/payments/select-dataset.png)
 
@@ -64,7 +64,7 @@ Klicken Sie abschließend auf das Symbol Schema.
 
 ![create-new-dataset](../../../images/tutorials/dataflow/payments/new-dataset.png)
 
-Das Dialogfeld &quot;Schema *[!UICONTROL auswählen]* &quot;wird angezeigt. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
+The *[!UICONTROL Select schema]* dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
 
 ![select-Schema](../../../images/tutorials/dataflow/payments/select-schema.png)
 
@@ -95,11 +95,11 @@ Geben Sie Werte für den Zeitplan ein und klicken Sie auf **[!UICONTROL Weiter]*
 
 ## Benennen des Datenflusses
 
-Der Schritt für die Details *[!UICONTROL des]* Datenflusses wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Wählen Sie **[!UICONTROL Weiter]** , wenn Sie fertig sind.
+Der Schritt für die Details *[!UICONTROL des]* Datenflusses wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Select **[!UICONTROL Next]** when finished.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
-## Überprüfen des Datenflusses
+## Überprüfen Sie Ihren Datenfluss
 
 Der *[!UICONTROL Schritt zum Überprüfen]* wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
 
@@ -111,9 +111,9 @@ Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen
 
 ![überprüfen](../../../images/tutorials/dataflow/payments/review.png)
 
-## Überwachen des Datenflusses
+## Überwachen und Löschen Ihres Datenflusses
 
-Nachdem Sie den Datenfluss erstellt haben, können Sie die Daten überwachen, die über den Dataset aufgenommen werden. Weitere Informationen zur Überwachung der Datenflüsse finden Sie im Lernprogramm zu [Konten und Datenflüssen](../monitor.md).
+Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Weitere Informationen zum Überwachen und Löschen Ihres Datenflusses finden Sie im Lernprogramm zum [Überwachen und Löschen von Datenflüssen](../monitor.md).
 
 ## Nächste Schritte
 
