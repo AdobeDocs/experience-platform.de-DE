@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1024'
 ht-degree: 8%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 # Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche
 
-Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen [!DNL Platform] Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Basisanschluss.
+Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen [!DNL Platform] Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Connector.
 
 ## Erste Schritte
 
@@ -103,23 +103,9 @@ Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen
 
 ![überprüfen](../../../images/tutorials/dataflow/crm/review.png)
 
-## Überwachen des Datenflusses
+## Überwachen und Löschen Ihres Datenflusses
 
-Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Gehen Sie wie folgt vor, um auf den DataSet-Monitor eines Datenflusses zuzugreifen.
-
-Wählen Sie im _Sources_ -Arbeitsbereich die CRM-Quelle aus, die Sie unter der *[!UICONTROL CRM]* -Kategorie Ansicht wünschen. Wählen Sie *[!UICONTROL Quelle]* verbinden, um die Authentifizierungsoberfläche zu starten. Um einen vorhandenen Datenpfad Ansicht, wählen Sie &quot; *Vorhandenes Konto* &quot;und wählen Sie das Konto aus, auf das Sie zugreifen möchten.
-
-![monitor](../../../images/tutorials/dataflow/crm/monitor.png)
-
-Der Bildschirm &quot; *[!UICONTROL Quell-Aktivität]* &quot;wird angezeigt. Klicken Sie von hier auf den Namen des Datensatzes, dessen Aktivität Sie überwachen möchten.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/crm/select-dataflow-dataset.png)
-
-Der Bildschirm &quot; *[!UICONTROL Aktivität]* des Datensatzes&quot;wird angezeigt. Diese Seite zeigt die Rate der Nachrichten an, die in Form eines Diagramms konsumiert werden.
-
-![dataset-Aktivität](../../../images/tutorials/dataflow/crm/dataset-activity.png)
-
-Weitere Informationen zur Überwachung von Datensätzen und zur Erfassung finden Sie im Lernprogramm zur [Überwachung von Streaming-Datenflüssen](../../../../ingestion/quality/monitor-data-flows.md).
+Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Weitere Informationen zum Überwachen und Löschen Ihres Datenflusses finden Sie im Lernprogramm zum [Überwachen und Löschen von Datenflüssen](../monitor.md).
 
 ## Nächste Schritte
 
