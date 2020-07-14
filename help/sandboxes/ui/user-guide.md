@@ -4,75 +4,79 @@ solution: Experience Platform
 title: Sandbox-Benutzerhandbuch
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 0%
+source-wordcount: '527'
+ht-degree: 97%
 
 ---
 
 
 # Sandbox-Benutzerhandbuch
 
-In diesem Dokument wird beschrieben, wie Sie verschiedene Vorgänge im Zusammenhang mit Sandboxen in der Benutzeroberfläche der Adobe Experience Platform durchführen.
+In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 
-## Ansicht-Sandboxen
+## Sandboxes anzeigen
 
-Klicken Sie in der Benutzeroberfläche &quot;Experience Platform&quot;auf **Sandboxen** in der linken Navigation, um das Dashboard &quot; _Sandboxes_ &quot;zu öffnen. Das Dashboard Liste alle für Ihr Unternehmen verfügbaren Sandboxen, einschließlich Sandbox-Typ (Produktion oder Entwicklung) und Status (aktiv, erstellen, gelöscht oder fehlgeschlagen).
+Klicken Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich auf **Sandboxes**, um das Dashboard _Sandboxes_ zu öffnen. Im Dashboard werden alle für Ihre Organisation verfügbaren Sandboxes aufgeführt, einschließlich Sandbox-Typ (Produktion oder Entwicklung) und Status (aktiv, wird erstellt, gelöscht oder fehlgeschlagen).
 
 ![](../images/ui/sandboxes-tab.png)
 
-## Zwischen Sandboxen wechseln
+## Zwischen Sandboxes wechseln
 
-Das **Sandbox-Umschalter** oben links auf dem Bildschirm zeigt die derzeit aktive Sandbox an.
+Das Steuerelement **Sandbox-Umschalter** oben links im Bildschirm zeigt die derzeit aktive Sandbox an.
 
 ![](../images/ui/sandbox-selector.png)
 
-Um zwischen Sandboxen zu wechseln, klicken Sie auf den Sandbox-Umschalter und wählen Sie die gewünschte Sandbox aus der Dropdown-Liste aus.
+Um zwischen Sandboxes zu wechseln, klicken Sie auf den Sandbox-Umschalter und wählen Sie die gewünschte Sandbox aus der Dropdown-Liste aus.
 
 ![](../images/ui/switch-sandbox.png)
 
-Sobald eine Sandbox ausgewählt ist, wird der Bildschirm aktualisiert, wobei die ausgewählte Sandbox jetzt im Sandbox-Umschalter angezeigt wird.
+Sobald eine Sandbox ausgewählt ist, wird der Bildschirm aktualisiert; die ausgewählte Sandbox wird jetzt im Sandbox-Umschalter angezeigt.
 
 ![](../images/ui/sandbox-switched.png)
 
 ## Neue Sandbox erstellen
 
-Um eine neue Sandbox in der Benutzeroberfläche zu erstellen, klicken Sie auf **Sandboxen** in der linken Navigationsleiste und dann auf Sandbox **erstellen**.
+Im folgenden Video erhalten Sie einen schnellen Überblick über die Verwendung [!DNL Sandboxes] in [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+
+Um in der Benutzeroberfläche eine neue Sandbox zu erstellen, klicken Sie im linken Navigationsbereich auf **Sandboxes** und dann auf **Sandbox erstellen**.
 
 ![](../images/ui/create-sandbox-button.png)
 
-Das Dialogfeld &quot;Sandbox _erstellen_ &quot;wird angezeigt, in dem Sie aufgefordert werden, einen Anzeigentitel und einen Namen für die Sandbox anzugeben. Der **Anzeigentitel** soll für Menschen lesbar sein und sollte so beschreibend sein, dass er leicht zu identifizieren ist. Der **Name** der Sandbox ist ein in Kleinbuchstaben geschriebener Bezeichner für die Verwendung in API-Aufrufen und sollte daher eindeutig und knapp sein.
+Der Dialog _Sandbox erstellen_ wird angezeigt, in dem Sie aufgefordert werden, einen Anzeigetitel und einen Namen für die Sandbox anzugeben. Der **Anzeigetitel** sollte für Menschen lesbar und deskriptiv genug sein, damit er leicht zu erkennen ist. Der **Name** der Sandbox ist eine in Kleinbuchstaben verfasste Kennung zur Verwendung in API-Aufrufen und sollte daher eindeutig und kurz sein.
 
-When finished, click **Create**.
+Klicken Sie abschließend auf **Erstellen**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
 >[!NOTE]
 >
->Da Sie nur auf das Erstellen von Nicht-Produktions-Sandbox-Typen beschränkt sind, ist die **Typoption** bei &quot;Nicht-Produktion&quot;gesperrt und kann nicht bearbeitet werden.
+>Da Sie nur Nicht-Produktions-Sandboxes erstellen können, ist die Option **Typ** bei „Nicht-Produktion“ gesperrt und kann nicht bearbeitet werden.
 
-Nachdem Sie die Sandbox erstellt haben, aktualisieren Sie die Seite und die neue Sandbox wird im _Sandbox_ -Dashboard mit dem Status &quot;Erstellen&quot;angezeigt. Neue Sandboxen benötigen ca. 15 Minuten, um vom System bereitgestellt zu werden. Danach ändert sich ihr Status in &quot;Aktiv&quot;.
+Nachdem Sie die Sandbox fertig eingerichtet haben, aktualisieren Sie die Seite; die neue Sandbox wird im Dashboard _Sandboxes_ mit dem Status „Wird erstellt“ angezeigt. Bei neuen Sandboxes dauert es etwa 15 Minuten, bis sie vom System bereitgestellt werden. Danach ändert sich ihr Status in „Aktiv“.
 
 ![](../images/ui/sandbox-created.png)
 
-## Zurücksetzen einer Sandbox
+## Sandbox zurücksetzen
 
 >[!NOTE]
 >
->Diese Funktion ist nur für Nicht-Produktions-Sandboxen verfügbar. Produktions-Sandboxes können nicht zurückgesetzt werden.
+>Diese Funktion ist nur bei Nicht-Produktions-Sandboxes verfügbar. Produktions-Sandboxes können nicht zurückgesetzt werden.
 
-Beim Zurücksetzen einer Nicht-Produktions-Sandbox werden alle mit dieser Sandbox verbundenen Ressourcen (Schema, Datensätze usw.) gelöscht, wobei der Name der Sandbox und die zugehörigen Berechtigungen beibehalten werden. Diese &quot;saubere&quot;Sandbox ist weiterhin unter demselben Namen für Benutzer verfügbar, die Zugriff darauf haben.
+Beim Zurücksetzen einer Nicht-Produktions-Sandbox werden alle mit dieser Sandbox verbundenen Ressourcen (Schemas, Datensätze usw.) gelöscht, wobei der Name der Sandbox und die zugehörigen Berechtigungen beibehalten werden. Diese „saubere“ Sandbox ist für Benutzer, die Zugriff darauf haben, unter demselben Namen weiter verfügbar.
 
-Um eine Sandbox in der Benutzeroberfläche zurückzusetzen, klicken Sie im linken Navigationsbereich auf **Sandboxen** und dann auf die Sandbox, die Sie zurücksetzen möchten. Klicken Sie im Dialogfeld auf der rechten Seite des Bildschirms auf **Sandbox zurücksetzen**.
+Um eine Sandbox in der Benutzeroberfläche zurückzusetzen, klicken Sie im linken Navigationsbereich auf **Sandboxes** und dann auf die Sandbox, die Sie zurücksetzen möchten. Klicken Sie im Dialog auf der rechten Seite des Bildschirms auf **Sandbox zurücksetzen**.
 
 ![](../images/ui/reset-sandbox-button.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Click **Reset** to continue.
+Es wird ein Dialog angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Klicken Sie auf **Zurücksetzen**, um fortzufahren.
 
 <img src="../images/ui/reset-are-you-sure.png" width="350"><br>
 
-Eine Bestätigungsmeldung wird angezeigt und der Status der Sandbox ändert sich in &quot;Zurücksetzen&quot;. Sobald das System es bereitgestellt hat, wird sein Status auf &quot;Aktiv&quot;oder &quot;Fehlgeschlagen&quot;aktualisiert.
+Eine Bestätigungsmeldung wird angezeigt und der Status der Sandbox ändert sich in „Wird zurückgesetzt“. Sobald sie vom System bereitgestellt wurde, aktualisiert sich der Status der Sandbox in „Aktiv“ oder „Fehlgeschlagen“.
 
 ![](../images/ui/sandbox-resetting.png)
 
@@ -80,20 +84,20 @@ Eine Bestätigungsmeldung wird angezeigt und der Status der Sandbox ändert sich
 
 >[!NOTE]
 >
->Diese Funktion ist nur für Nicht-Produktions-Sandboxen verfügbar. Produktions-Sandboxes können nicht gelöscht werden.
+>Diese Funktion ist nur bei Nicht-Produktions-Sandboxes verfügbar. Produktions-Sandboxes können nicht gelöscht werden.
 
-Wenn Sie eine Sandbox ohne Produktionscharakter löschen, werden alle mit dieser Sandbox verbundenen Ressourcen, einschließlich Berechtigungen, endgültig entfernt.
+Wenn Sie eine Nicht-Produktions-Sandbox löschen, werden alle mit dieser Sandbox verbundenen Ressourcen (einschließlich Berechtigungen) endgültig gelöscht.
 
-Um eine Sandbox in der Benutzeroberfläche zu löschen, klicken Sie im linken Navigationsbereich auf **Sandboxen** und dann auf die zu löschende Sandbox. Klicken Sie im Dialogfeld auf der rechten Seite des Bildschirms auf Sandbox **löschen**.
+Um eine Sandbox in der Benutzeroberfläche zu löschen, klicken Sie im linken Navigationsbereich auf **Sandboxes** und dann auf die Sandbox, die Sie löschen möchten. Klicken Sie im Dialog auf der rechten Seite des Bildschirms auf **Sandbox löschen**.
 
 ![](../images/ui/delete-sandbox-button.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Click **Delete** to continue.
+Es wird ein Dialog angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Klicken Sie auf **Löschen**, um fortzufahren.
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Eine Bestätigungsmeldung wird angezeigt und die Sandbox wird aus dem _Sandbox_ -Arbeitsbereich entfernt.
+Eine Bestätigungsmeldung wird angezeigt und die Sandbox wird aus dem Arbeitsbereich _Sandboxes_ entfernt.
 
 ## Nächste Schritte
 
-In diesem Dokument wurde gezeigt, wie Sandboxen in der Benutzeroberfläche der Experience Platform verwaltet werden. Informationen zum Verwalten von Sandboxen mit der Sandbox-API finden Sie im [Sandbox-Entwicklerhandbuch](../api/getting-started.md).
+In diesem Dokument haben Sie erfahren, wie Sie Sandboxes in der Benutzeroberfläche von Experience Platform verwalten können. Informationen zum Verwalten von Sandboxes mithilfe der Sandbox-API finden Sie im [Sandbox-Entwicklerhandbuch](../api/getting-started.md).
