@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 1%
+source-wordcount: '1048'
+ht-degree: 8%
 
 ---
 
 
 # Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 
-Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Platform abgerufen und in einen Dataset aufgenommen werden. In diesem Lernprogramm werden Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Datenbankanschluss beschrieben.
+Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Datenbankanschluss beschrieben.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Erlebnis-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   - [Grundlagen der Zusammensetzung](../../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
+- [XDM-System (Experience-Datenmodell)](../../../../xdm/home.md): Das standardisierte Framework, nach dem Daten zum Kundenerlebnis in Experience Platform organisiert werden.
+   - [Grundlagen zum Aufbau von Schemas](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    - [Schema-Editor-Lernprogramm](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-- [Echtzeit-Profil](../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Echtzeit-Kundenprofil](../../../../profile/home.md): Ein durch die Zusammenführung von Daten aus verschiedenen Quellen erstelltes Profil, das eine zentrale Echtzeit-Sicht auf Kunden liefert.
 
 Außerdem müssen Sie bei diesem Lernprogramm bereits einen Datenbankanschluss erstellt haben. Eine Liste von Übungen zum Erstellen verschiedener Datenbankschnittstellen in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../home.md).
 
@@ -40,7 +40,7 @@ Wählen Sie die gewünschte Datenbank aus und klicken Sie auf **[!UICONTROL Weit
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Der *Zuordnungsschritt* wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem Platform-Datensatz zuzuordnen.
+Der Schritt *Zuordnung* wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem Plattformdatensatz zuzuordnen.
 
 Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen.
 
@@ -50,7 +50,7 @@ Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot; **[!UICO
 
 ![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-Das Dialogfeld &quot;Datensatz *[!UICONTROL auswählen]* &quot;wird angezeigt. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+The *[!UICONTROL Select dataset]* dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
@@ -62,7 +62,7 @@ Sie können ein Schema anhängen, indem Sie in der Suchleiste &quot;Schema **[!U
 
 ![](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-Das Dialogfeld &quot;Schema[!UICONTROL auswählen] &quot;wird angezeigt. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
+The *[!UICONTROL Select schema] dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
@@ -92,7 +92,7 @@ Geben Sie Werte für den Zeitplan ein und wählen Sie **[!UICONTROL Weiter]**.
 
 ## Benennen des Datenflusses
 
-Der Schritt *[!UICONTROL für die Datenflug-Details]* wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenflug angeben müssen. Wählen Sie **[!UICONTROL Weiter]** , wenn Sie fertig sind.
+Der Schritt *[!UICONTROL für die Datenflug-Details]* wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenflug angeben müssen. Select **[!UICONTROL Next]** when finished.
 
 ![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
@@ -108,13 +108,13 @@ Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## Überwachen des Datenflusses
+## Überwachen und Löschen Ihres Datenflusses
 
-Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Weitere Informationen zur Überwachung der Datenflüsse finden Sie im Lernprogramm zu [Konten und Datenflüssen](../monitor.md).
+Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Weitere Informationen zum Überwachen und Löschen Ihres Datenflusses finden Sie im Lernprogramm zum [Überwachen und Löschen von Datenflüssen](../monitor.md).
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie erfolgreich einen Datenbogen erstellt, um Daten aus einer externen Datenbank einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Eingehende Daten können jetzt von Diensten der nachgelagerten Platform wie dem Echtzeit-Profil von Kunden und dem Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Lernprogramm haben Sie erfolgreich einen Datenbogen erstellt, um Daten aus einer externen Datenbank einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 - [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
