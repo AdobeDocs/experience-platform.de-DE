@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: c3d85485d0c4a910e7ba777858e2f6cf7185ef54
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 8%
+source-wordcount: '1060'
+ht-degree: 7%
 
 ---
 
@@ -80,7 +80,7 @@ Der Schritt *[!UICONTROL Planung]* wird angezeigt, mit dem Sie einen Erfassungsz
 | --- | --- |
 | Häufigkeit | Zu den auswählbaren Frequenzen gehören Minute, Stunde, Tag und Woche. |
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Frequenz festlegt. |
-| Beginn | Ein UTC-Zeitstempel, bei dem die erste Erfassung erfolgt. |
+| Beginn | Ein UTC-Zeitstempel, bei dem die erste Erfassung erfolgt. Der Zeitwert des Beginns muss in Sekunden in Epochenzeit eingestellt werden. |
 | Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die *Aufstockung* aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die *Aufstockung* deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der *Beginn* geladen wurden. Dateien, die vor dem *Beginn* geladen wurden, werden nicht erfasst. |
 | Delta-Spalte | Eine Option mit gefilterten Quelldatumsfeldern vom Typ, Schema oder Uhrzeit. Dieses Feld wird verwendet, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
 
