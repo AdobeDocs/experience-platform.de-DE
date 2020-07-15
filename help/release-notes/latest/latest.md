@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 2bbd62fc53d304ff05250688733f1b18dfd18007
+source-git-commit: e864073c27ba20ce32c962c469aed52608f199ac
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 46%
+source-wordcount: '686'
+ht-degree: 31%
 
 ---
 
@@ -19,36 +19,34 @@ ht-degree: 46%
 
 Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
 
-<!-- - [Data Governance](#governance) -->
-<!-- - [Real-time Customer Profile](#profile) -->
+- [Data Governance](#governance)
+- [Echtzeit-Kundenprofil](#profile)
 - [Segmentierungsdienst](#segmentation)
 - [Quellen](#sources)
 
-<!-- ## [!DNL Data Governance] {#governance}
+## [!DNL Data Governance] {#governance}
 
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten und Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Richtlinien, die für die Datennutzung gelten. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
-**New features**
+**Neue Funktionen**
 
-| Feature    | Description  |
+| Funktion | Beschreibung |
 | -----------| ---------- |
-| Automatic policy enforcement in [!DNL Real-time Customer Data Platform] | Data usage policies are now automatically enforced in [!DNL Real-time CDP] when violating actions occur, including activating segments to destinations. When a policy violation is triggered, users get real-time visibility into usage restrictions within the activation workflow, indicating what data they cannot use and why.<br><br>See the section on [enforcing data usage compliance](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) within the overview on [!DNL Data Governance] in [!DNL Real-time CDP] for more information. |
-| Adobe Audience Manager integration | Any segments that are shared with [!DNL Audience Manager] from [!DNL Platform] inherit any applied data usage labels as [!DNL Data Export Controls], and vice versa. See the [!DNL Audience Manager] documentation for specific [mappings between usage labels and Data Export Controls](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
-| Custom data usage labels | You can now create custom data usage labels using the Policy Service API or in the UI. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
+| Automatische Durchsetzung der Richtlinie in [!DNL Real-time Customer Data Platform] | Datenverwendungsrichtlinien werden jetzt automatisch erzwungen, [!DNL Real-time CDP] wenn Verstöße auftreten, einschließlich der Aktivierung von Segmenten an Ziele. Wenn eine Richtlinienverletzung ausgelöst wird, erhalten Benutzer eine Echtzeit-Übersicht über Nutzungsbeschränkungen im Arbeitsablauf für die Aktivierung, wobei angegeben wird, welche Daten sie nicht verwenden können und warum.<br><br>Weitere Informationen finden Sie im Abschnitt zur [Erzwingung der Datenverwendungskonformität](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) in der Übersicht [!DNL Data Governance] unter [!DNL Real-time CDP] . |
+| Integration von Adobe Audience Managern | Alle Segmente, für die [!DNL Audience Manager] von [!DNL Platform] geteilt wird, übernehmen alle angewendeten Datenverwendungsbeschriftungen als [!DNL Data Export Controls]und umgekehrt. In der [!DNL Audience Manager] Dokumentation finden Sie spezifische [Zuordnungen zwischen Gebrauchsbeschriftungen und Datenexportkontrollen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
+| Benutzerdefinierte Datenverwendungsbeschriftungen | Sie können jetzt benutzerdefinierte Datenverwendungsbeschriftungen mit der Policy Service API oder in der Benutzeroberfläche erstellen. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
 
-See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
+Weitere Informationen zum Dienst finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md) .
 
 ## [!DNL Real-time Customer Profile] {#profile}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten zu einer einheitlichen Ansicht zusammenzuführen, die Ihnen einen umsetzbaren Zeitstempel für jede Kundeninteraktion bietet.
 
-**New features**
+**Neue Funktionen**
 
-| Feature | Description |
+| Funktion | Beschreibung |
 | ------- | ----------- |
-| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Profile] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | 
-
--->
+| Durchsetzung von Datenverwendungsrichtlinien | In [!DNL Real-time Customer Data Platform]diesem Fall werden Verstöße gegen die Richtlinie zur Datenverwendung automatisch aufgedeckt, wenn eine Verletzung im Arbeitsbereich [!UICONTROL Profil] versucht wird. Weitere Informationen zur automatischen Durchsetzung von Richtlinien finden Sie in den [Versionshinweisen zur Datenverwaltung](#governance) . |
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -61,8 +59,7 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Streaming-Segmentierung | Streaming-Segmentierung kann jetzt als Benutzer in ein Segment eingeordnet werden, wenn Daten eingehen, [!DNL Platform]wodurch die Segmentqualifizierungszeit erheblich verkürzt wird. Durch Streaming-Segmentierung wird auch die manuelle Ausführung von Segmentierungsaufträgen erleichtert. |
-
-<!-- | Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Segments] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | -->
+| Durchsetzung von Datenverwendungsrichtlinien | In [!DNL Real-time Customer Data Platform]diesem Fall werden Verstöße gegen die Richtlinie zur Datenverwendung automatisch aufgedeckt, wenn eine Verletzung im Arbeitsbereich &quot; [!UICONTROL Segmente] &quot;versucht wird. Weitere Informationen zur automatischen Durchsetzung von Richtlinien finden Sie in den [Versionshinweisen zur Datenverwaltung](#governance) . |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
 
