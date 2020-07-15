@@ -4,17 +4,17 @@ seo-title: Adobe Experience Platform Web SDK – Schnellstart mit Launch
 description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
 seo-description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 26%
+source-wordcount: '560'
+ht-degree: 24%
 
 ---
 
 
 # Willkommen
 
-In diesem Handbuch werden die verschiedenen Schritte zum Einrichten des Adobe Experience Platform Web SDK in Adobe Launch beschrieben. Sie müssen über Berechtigungen verfügen und auf der zulassungsliste sein, um diese Funktion zu verwenden. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM. Um diese Funktion nutzen zu können, müssen Sie außerdem:
+In diesem Handbuch werden die verschiedenen Schritte zum Einrichten des Adobe Experience Platform Web SDK in Adobe Launch beschrieben. Sie müssen über Berechtigungen verfügen und auf der Zulassungsliste sein, um diese Funktion verwenden zu können. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM. Um diese Funktion nutzen zu können, müssen Sie außerdem:
 
 - Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über einen CNAME für Adobe Analytics verfügen, sollten Sie diesen verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen
 - Verwenden Sie die neueste Version des Besucher-ID-Diensts
@@ -25,14 +25,15 @@ Sie können eine Konfigurations-ID mit dem [Edge-Konfigurationstool](../fundamen
 
 >[!NOTE]
 >
->Ihre Organisation muss für die Funktion auf der zulassungsliste sein. Wenden Sie sich an Ihren CSM, um zur zulassungsliste hinzugefügt zu werden.
+>Ihr Unternehmen muss für diese Funktion auf der Zulassungsliste stehen. Wenden Sie sich an Ihren CSM, um der Zulassungsliste hinzugefügt zu werden.
 
 ## Schemas vorbereiten
 
 Das Experience Platform Edge Network nimmt Daten als XDM. XDM ist ein Datenformat, mit dem Sie Schema definieren können. Das Schema definiert, wie das Edge-Netzwerk erwartet, dass die Daten formatiert werden. Um Daten zu senden, müssen Sie Ihr Schema definieren. Vergewissern Sie sich, dass Sie Folgendes abgeschlossen haben:
 
-- [Schema erstellen](../../xdm/tutorials/create-schema-ui.md)
-- Fügen Sie dem erstellten Schema das Adobe Experience Platform Web SDK-Mixin hinzu
+1. [Erstellen eines Schemas](../../xdm/tutorials/create-schema-ui.md)
+2. Hinzufügen Sie das AEP Web SDK ExperienceEvent Mixin mit dem von Ihnen erstellten Schema.
+3. Erstellen Sie einen Datensatz aus dem erstellten Schema.
 
 Das folgende Video soll Sie beim Erstellen eines Schemas, eines Datensatzes und eines Streaming-Quellconnectors für Ihre Web-SDK-Daten unterstützen.
 
