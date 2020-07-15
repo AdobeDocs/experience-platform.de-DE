@@ -4,9 +4,9 @@ seo-title: Edge-Konfiguration für das Web SDK der Experience Platform
 description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 seo-description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 4%
 
 ---
@@ -26,9 +26,9 @@ Edge-Konfigurations-IDs können in Adobe [!DNL Launch] mit dem Edge-Konfiguratio
 >
 >
 >
->Das Edge-Konfigurationstool steht Kunden auf der zulassungsliste zur Verfügung, unabhängig davon, ob sie [!DNL Launch] als Tag-Manager verwendet werden. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der [!DNL Launch] Dokumentation.
+>Das Edge-Konfigurationstool steht Kunden auf der Zulassungsliste unabhängig davon zur Verfügung, ob sie [!DNL Launch] als Tag-Manager arbeiten. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der [!DNL Launch] Dokumentation.
 
-Sie können eine Edge-Konfiguration erstellen, indem Sie oben rechts im Bildschirm auf **[UICONTROL New Edge Configuration]** klicken. Nachdem Sie einen Namen und eine Beschreibung angegeben haben, werden Sie nach den Standardeinstellungen für jede Umgebung gefragt.
+Sie können eine Edge-Konfiguration erstellen, indem Sie im oberen rechten Bereich des Bildschirms auf **[!UICONTROL Neue Edge-Konfiguration]** klicken. Nachdem Sie einen Namen und eine Beschreibung angegeben haben, werden Sie nach den Standardeinstellungen für jede Umgebung gefragt.
 
 ### Standardeinstellungen für Umgebung
 
@@ -90,11 +90,11 @@ Die eindeutige ID für ein Zielgruppen-Konto. Um dies zu finden, navigieren Sie 
 
 ##### [!UICONTROL Eigenschafts-Token]
 
-Mit Target können Kunden Berechtigungen mithilfe von Eigenschaften steuern. Einzelheiten finden Sie im Abschnitt [Enterprise Permissions (Berechtigungen](https://docs.adobe.com/content/help/de-DE/target/using/administer/manage-users/enterprise/properties-overview.html) für Unternehmen) in der Dokumentation zum Target.
+Mit der Zielgruppe können Kunden Berechtigungen mithilfe von Eigenschaften steuern. Weitere Informationen finden Sie im Abschnitt [Enterprise Permissions (Berechtigungen](https://docs.adobe.com/content/help/de-DE/target/using/administer/manage-users/enterprise/properties-overview.html) für Unternehmen) in der Dokumentation zur Zielgruppe.
 
 Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL-Eigenschaften]
 
-##### [!UICONTROL Target-Umgebung-ID]
+##### [!UICONTROL Zielgruppe-Umgebung-ID]
 
 [Umgebung](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target helfen Ihnen, Ihre Implementierung in allen Entwicklungsstadien zu verwalten. Diese Einstellung gibt an, welche Umgebung Sie für jede Umgebung verwenden möchten.
 
