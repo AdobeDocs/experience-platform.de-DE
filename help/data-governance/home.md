@@ -1,84 +1,84 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Datenverwaltung durch Adobe Experience Platformen
+title: Adobe Experience Platform Data Governance
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 3%
+source-wordcount: '1434'
+ht-degree: 84%
 
 ---
 
 
 # Data Governance – Übersicht
 
-Eine der Kernfunktionen der Adobe Experience Platform besteht darin, Daten aus mehreren Unternehmenssystemen zusammenzuführen, um es Marketingexperten zu ermöglichen, Kunden besser zu identifizieren, zu verstehen und einzubinden. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Es ist daher wichtig sicherzustellen, dass Ihre Datenvorgänge in Übereinstimmung mit den Datenverwendungsrichtlinien ausgeführt [!DNL Platform] werden.
+Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen definiert werden. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies.
 
-Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Es spielt eine Schlüsselrolle auf verschiedenen [!DNL Experience Platform] Ebenen, wie z.B. Katalogisierung, Datenlineage, Datenverwendungsbeschriftung, Datenverwendungsrichtlinien und Steuerung der Nutzung von Daten für Marketingaktionen.
+Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
-## Datenverwaltungsfunktionen
+## Data Governance-Rollen
 
-Das Konzept der Datenverwaltung ist weder automatisch, noch tritt sie in einem Vakuum auf. Was als eine Rolle für eine Einzelperson begann, die normalerweise als **Datenverwalter** anerkannt wird, ist mit der Erweiterung des Ökosystems zur Datenverwaltung erheblich gewachsen. Die Datenverwaltung erfordert eine kontinuierliche Verwaltung und Überwachung, um erfolgreich zu sein, und setzt darauf, dass Datenmanager über Werkzeuge verfügen, mit denen Daten ordnungsgemäß gekennzeichnet werden können, Nutzungsrichtlinien erstellt werden können und die Einhaltung dieser Richtlinien erzwungen werden kann.
+Als Konzept ist Data Governance weder automatisch, noch wird die Aufgabe in einem Vakuum erledigt. Was als Rolle für eine Person begann (meist als **Data Steward** bezeichnet), ist mit Erweiterung des Data Governance-Ökosystems erheblich gewachsen. Data Governance erfordert heute eine kontinuierliche Verwaltung und Überwachung, um effektiv zu sein, und basiert auf Data Stewards, die über Tools verfügen, mit denen sie Daten ordnungsgemäß kennzeichnen, Nutzungsrichtlinien erstellen und die Einhaltung dieser Richtlinien erzwingen können.
 
-Während die Datenverwaltung in die Verantwortung jedes Einzelnen in der Organisation fallen sollte, sind hier einige der wesentlichen Rollen innerhalb des Datenmanagementzyklus:
+Zwar sollte sich jeder Einzelne in der Organisation für Data Governance verantwortlich fühlen, doch werden im Folgenden einige der zentralen Rollen im Data Governance-Zyklus aufgeführt:
 
-![Datenverwaltungsrollen](./images/overview/roles.png)
+![Data Governance-Rollen](./images/overview/roles.png)
 
-### Datenstatus
+### Data Steward
 
-Datenmanager sind das Herzstück der Datenverwaltung. Diese Rolle ist verantwortlich für die Interpretation von Regulierungen, vertraglichen Beschränkungen und Richtlinien und deren direkte Anwendung auf die Daten. Indem sie diese Regeln, Einschränkungen und Richtlinien verstehen, beinhaltet die Rolle eines Datenführers Folgendes:
+Data Stewards stehen im Mittelpunkt von Data Governance. Diese Rolle ist zuständig für die Interpretation von Vorschriften, vertraglichen Beschränkungen und Richtlinien sowie für deren direkte Anwendung auf Daten. Unter Beachtung der Kenntnisse dieser Vorschriften, Beschränkungen und Richtlinien beinhaltet die Rolle eines Data Stewards Folgendes:
 
-* Überprüfen von Daten, Datensätzen und Datenmustern, um die Beschriftung zur Verwendung von Metadaten anzuwenden und zu verwalten.
-* Erstellen von Datenrichtlinien und Anwenden auf Datensätze und Felder.
-* Übermittlung von Datenrichtlinien an das Unternehmen.
+* Überprüfen von Daten, Datensätzen und Datenmustern, um die Nutzungsbezeichnung durch Metadaten anzuwenden und zu verwalten
+* Erstellen von Datenrichtlinien und Anwenden der Richtlinien auf Datensätze und Felder
+* Übermitteln von Datenrichtlinien an die Organisation
 
 ### Marketer
 
-Marketingexperten sind der Endpunkt der Datenverwaltung. Sie fordern Daten von der Infrastruktur zur Datenverwaltung an, die von Datenführern, Wissenschaftlern und Ingenieuren geschaffen wurde. Marketingexperten bieten unter dem Marketing-Schirm eine Reihe unterschiedlicher Spezialitäten, darunter:
+Marketer befinden sich am Endpunkt von Data Governance. Sie fordern Daten von der Data Governance-Infrastruktur an, die von Data Stewards, Data Scientists und Data Engineers eingerichtet wurde. Marketer decken unter dem Marketing-Schirm eine Reihe unterschiedlicher Bereiche ab, darunter:
 
-* Marketing-Analysten fordern Daten an, um ein Verständnis der Kunden sowohl als Einzelpersonen als auch in Gruppen (auch als Segmente bezeichnet) zu ermöglichen.
-* Marketing-Spezialisten und Experience Designer verwenden Daten, um neue Kundenerlebnisse zu entwerfen.
+* Marketing-Analysten fordern Daten an, um sich Informationen über Kunden sowohl einzeln als auch in Gruppen (als Segmente bezeichnet) zu verschaffen.
+* Marketing-Spezialisten und Erlebnis-Designer nutzen Daten, um neue Kundenerlebnisse zu gestalten.
 
 
 ## DULE-Framework
 
-Datennutzungskennzeichnung und -durchsetzung (DULE) ist das Kernframework für [!DNL Experience Platform] Datenverwaltung. DULE vereinfacht und optimiert den Prozess der Kategorisierung von Daten und Erstellung von Datenverwendungsrichtlinien. Sobald Datenbeschriftungen angewendet und Datenverwendungsrichtlinien eingeführt wurden, können Marketingaktionen ausgewertet werden, um die korrekte Verwendung der Daten sicherzustellen.
+Data Usage Labeling and Enforcement (DULE) is the core framework for [!DNL Experience Platform] Data Governance. DULE vereinfacht und optimiert die Kategorisierung von Daten und Erstellung von Datennutzungsrichtlinien. Sobald Datenbezeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
 
-Das DUL-Framework umfasst drei Kernelemente: Bezeichnungen, Richtlinien und Durchsetzung.
+Das DULE-Framework beinhaltet drei Kernelemente: Bezeichnungen, Richtlinien und Durchsetzung.
 
-1. **Beschriftungen:** Klassifizieren Sie Daten, die datenschutzbezogene Erwägungen und Vertragsbedingungen widerspiegeln, entsprechend den Vorschriften und den Richtlinien der Organisation.
-1. **Richtlinien:** Beschreiben Sie, welche Art(en) von Marketingaktionen für bestimmte Daten zulässig oder nicht zulässig sind.
-1. **Durchsetzung:** Verwendet den Richtlinienrahmen, um Richtlinien über verschiedene Datenzugriffsmuster hinweg zu beraten und durchzusetzen.
+1. **Bezeichnungen:** Klassifizieren Sie Daten anhand datenschutzbezogener Aspekte und vertraglicher Bestimmungen, sodass sie Vorschriften und Richtlinien der Organisation einhalten.
+1. **Richtlinien:** Beschreiben Sie, welche Arten von Marketing-Aktionen für welche Daten zulässig sind oder auch nicht.
+1. **Durchsetzung:** Nutzen Sie das Richtlinien-Framework, um Richtlinien über verschiedene Datenzugriffsmuster hinweg zu empfehlen und durchzusetzen.
 
-## Datenverwendungsbeschriftungen
+## Datennutzungsbezeichnungen
 
-Die Datenverwaltung ermöglicht es Datenführern, Nutzungsbezeichnungen auf der Dataset- und Feldebene anzuwenden, um Daten entsprechend den jeweiligen Richtlinien zu kategorisieren.
+Data Governance ermöglicht es Data Stewards, Nutzungsbezeichnungen auf der Datensatz- und Feldebene anzuwenden, um Daten anhand der gültigen Richtlinien zu kategorisieren.
 
 Das DULE-Framework enthält vordefinierte Datenverwendungsbeschriftungen, mit denen Daten auf drei Arten kategorisiert werden können:
 
-![Kategorien zur Bezeichnung der Datenverwendung](./images/overview/label-categories.png)
+![Kategorien an Datennutzungsbezeichnungen](./images/overview/label-categories.png)
 
-* **Vertragsdatenbezeichnungen &quot;C&quot;:** Kennzeichnen und Kategorisieren von Daten, die vertragliche Verpflichtungen haben oder mit den Richtlinien zur Verwaltung von Kundendaten in Zusammenhang stehen.
-* **Identitäts-&quot;I&quot;-Datenbezeichnungen:** Kennzeichnen und Kategorisieren von Daten, die eine bestimmte Person identifizieren oder kontaktieren können.
-* **Sensible &quot;S&quot;-Datenbezeichnungen:** Beschriften und Kategorisieren von Daten, die mit sensiblen Daten wie geografischen Daten zusammenhängen.
+* **Datenbezeichnungen „C“ (Contract):** Kennzeichnen und kategorisieren Sie Daten, die vertragliche Bestimmungen aufweisen oder mit den Richtlinien zur Verwaltung von Kundendaten in Zusammenhang stehen.
+* **Datenbezeichnungen „I“ (Identity):** Kennzeichnen und kategorisieren Sie Daten, die zum Identifizieren oder Kontaktieren einer bestimmten Person dienen können.
+* **Datenbezeichnungen „S“ (Sensitive):** Kennzeichnen und kategorisieren Sie Daten, die mit vertraulichen Daten (wie geografischen Daten) verbunden sind.
 
 >[!NOTE]
 >
->Eine vollständige Liste der verfügbaren Beschriftungen sowie Definitionen für jeden Beschriftungstyp finden Sie im Handbuch zu den [unterstützten Datenverwendungsbezeichnungen](labels/reference.md) .
+>Eine vollständige Liste der verfügbaren Bezeichnungen sowie Definitionen für jeden Bezeichnungstyp finden Sie im Handbuch zu [unterstützten Datennutzungsbezeichnungen](labels/reference.md).
 
-Bezeichnungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practice fördert die Kennzeichnung von Daten, sobald diese in [!DNL Experience Platform]aufgenommen werden oder sobald Daten in verfügbar sind [!DNL Platform].
+Bezeichnungen können jederzeit angewendet werden, was eine flexible Datenverwaltung ermöglicht. Best practice encourages labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available in [!DNL Platform].
 
 Weitere Informationen finden Sie in der Übersicht über die Beschriftungen [zur](./labels/overview.md) Datenverwendung.
 
-## Datenverwendungsrichtlinien
+## Datennutzungsrichtlinien
 
-Damit Datenverwendungsbeschriftungen die Datenkonformität effektiv unterstützen können, müssen Datenverwendungsrichtlinien implementiert werden. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
-Ein Beispiel für eine Marketingaktion könnte der Wunsch sein, einen Datensatz in einen Drittanbieter-Service zu exportieren. Wenn eine Richtlinie besagt, dass bestimmte Datentypen, wie z. B. persönliche identifizierbare Informationen (PII), nicht exportiert werden können und eine &quot;I&quot;-Beschriftung (Identitätsdaten) auf den Datensatz angewendet wurde, erhalten Sie eine Antwort des Policy Service, in der Sie darauf hingewiesen werden, dass eine Datenverwendungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. Wenn eine Richtlinie besagt, dass bestimmte Datentypen, wie z. B. personenbezogene Daten (PII), nicht exportiert werden dürfen und auf den Datensatz eine „I“-Bezeichnung (Identitätsdaten) angewendet wurde, weist Sie Policy Service in einer Antwort darauf hin, dass eine Datennutzungsrichtlinie verletzt wurde.
 
-Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenmanager Richtlinien mit der API für den DUL-Policy-Dienst oder der [!DNL Experience Platform] Benutzeroberfläche erstellen.
+Once data usage labels have been applied, data stewards can create policies using the DULE Policy Service API or the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -88,45 +88,44 @@ Weitere Informationen zu Datenverwendungsrichtlinien und Marketingaktionen finde
 
 ## Zukünftige Versionen
 
-Die Datenverwaltung unterstützt derzeit die DULE-Kennzeichnung auf zwei Ebenen (Datensatz und Feld). Die Datenverwaltung unterstützt auch die Erstellung und Verwaltung von Datenverwendungsrichtlinien und Marketingaktionen über die DUL Policy Service API.
+Data Governance unterstützt derzeit eine DULE-Kennzeichnung auf zwei Ebenen (Datensatz und Feld). Außerdem unterstützt Data Governance die Erstellung und Verwaltung von Datennutzungsrichtlinien und Marketing-Aktionen über die DULE Policy Service-API.
 
-Nachfolgende Versionen bieten die folgenden Funktionen:
+Nachfolgende Versionen werden die folgenden Funktionen bieten:
 
-* Benutzerdefinierte Datenverwendungsbeschriftungen: Erstellen Sie neue Beschriftungen und Definitionen entsprechend den Anforderungen Ihres Unternehmens.
-* Durchsetzung der Politik: Verwenden Sie den Richtlinienrahmen, um Richtlinien über verschiedene Datenzugriffsmuster hinweg zu beraten und durchzusetzen.
-* Prüfung: Überwachen Sie die Aktivitäten des Datenzugriffs und identifizieren Sie Compliance-Probleme und erstellen Sie Berichte zu diesen Problemen.
+* Durchsetzung von Richtlinien: Verwenden Sie das Richtlinien-Framework, um Richtlinien über verschiedene Datenzugriffsmuster hinweg zu empfehlen und durchzusetzen.
+* Auditing: Überwachen Sie Datenzugriffsaktivitäten, ermitteln Sie Compliance-Probleme und erstellen Sie Berichte zu den Problemen.
 
 ## Nächste Schritte
 
-Dieses Dokument bot eine Einführung in die Datenverwaltung und das DUL-Framework auf hoher Ebene. Sie können nun mit dem Benutzerhandbuch [zur](labels/user-guide.md) Datenverwendung fortfahren und Ihren Erlebnisdaten Gebrauchsbeschriftungen hinzufügen.
+In diesem Dokument haben Sie eine Einführung in Data Governance und das DULE-Framework erhalten. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie weitere Informationen zur Datenverwaltung.
+Im folgenden Abschnitt finden Sie weitere Informationen zu Data Governance.
 
-### Terminologie der Datenverwaltung
+### Begriffe in Data Governance
 
-In der folgenden Tabelle sind die Schlüsselbegriffe im Zusammenhang mit der Datenverwaltung und dem DUL-Rahmen aufgeführt.
+In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit Data Governance und dem DULE-Framework aufgeführt.
 
 | Begriff | Definition |
 |---|---|
-| **Vertragsbezeichnungen** | Die &quot;C&quot;-Beschriftungen des Vertrags werden zur Kategorisierung von Daten verwendet, die vertragliche Verpflichtungen haben oder mit den Datenschutzrichtlinien Ihres Unternehmens in Zusammenhang stehen. |
-| **Site-übergreifende Daten** | Site-übergreifende Daten sind die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort-Daten und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen. |
-| **Datenverwaltung** | Die Datenverwaltung umfasst die Strategien und Technologien, mit denen sichergestellt werden soll, dass die Daten in Übereinstimmung mit den Vorschriften und Unternehmensrichtlinien zur Datenverwendung stehen. |
-| **Datenstatus** | Der Datenverwalter ist die Person, die für die Verwaltung, Überwachung und Durchsetzung der Datenbestände einer Organisation verantwortlich ist. Ein Datenmanager stellt außerdem sicher, dass die Datenschutzrichtlinien geschützt und so aufrechterhalten werden, dass sie mit den Regierungs- und Organisationspolitiken im Einklang stehen. |
-| **Datenverwendungsbeschriftungen** | Datenverwendungsbeschriftungen bieten Benutzern die Möglichkeit, Daten zu kategorisieren, die datenschutzbezogene Erwägungen und Vertragsbedingungen widerspiegeln, damit sie mit Vorschriften und Unternehmensrichtlinien übereinstimmen. |
-| **Datenbeschriftungen** | Bezeichnungen können einem Datensatz hinzugefügt werden. Alle Felder in einem Datensatz übernehmen die Beschriftungen des Datensatzes. |
-| **DULE** | DULE ist ein Akronym für &quot;Datenverwendung - Kennzeichnung und Durchsetzung&quot;. DULE ist ein wichtiger Bestandteil der Datenverwaltung und bietet Funktionen, die eine Datenverwendungskennzeichnung und die Anwendung von Datenzugriffsrichtlinien für Governance-Anforderungen in einem Unternehmen ermöglichen. |
-| **Feldbeschriftungen** | Feldbezeichnungen sind Bezeichnungen zur Datenverwaltung, die entweder von einem Datensatz übernommen oder direkt auf ein Feld angewendet werden.  Auf ein Feld angewendete Datenverwaltungs-Beschriftungen werden nicht bis zu einem Datensatz geerbt. |
-| **Geofence** | Eine Geofence ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und die Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet betritt oder verlässt. |
-| **Beschriftungen** | Identitäts-&quot;I&quot;-Beschriftungen werden zur Kategorisierung von Daten verwendet, die eine bestimmte Person identifizieren oder kontaktieren können. |
-| **Interessensbasiertes Targeting** | Interessensbasiertes Targeting, auch Personalisierung genannt, tritt auf, wenn die folgenden drei Bedingungen erfüllt sind: Daten, die vor Ort gesammelt werden, werden verwendet, um Rückschlüsse auf das Interesse eines Benutzers zu ziehen, werden in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder App (außerhalb der Site), und werden verwendet, um festzulegen, welche Inhalte oder Anzeigen auf der Grundlage dieser Schlussfolgerungen bereitgestellt werden. |
-| **Marketingaktion** | Eine Marketingaktion im Rahmen des Data Governance-Rahmens ist eine Aktion, die ein [!DNL Experience Platform] Datenkonsument unternimmt und bei der überprüft werden muss, ob gegen die Datenverwendungsrichtlinien verstoßen wurde |
-| **Richtlinie** | Im Rahmen der Datenverwaltung ist eine Richtlinie eine Regel, die beschreibt, welche Marketingaktionen für bestimmte Daten zulässig oder nicht zulässig sind. |
-| **Sensible Beschriftungen** | Sensible &quot;S&quot;-Beschriftungen werden verwendet, um Daten zu kategorisieren, die Sie und Ihr Unternehmen als vertraulich betrachten. |
+| **Vertragsbezeichnungen** | Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen. |
+| **Site-übergreifende Daten** | Site-übergreifende Daten stellen eine Kombination von Daten aus verschiedenen Sites dar, einschließlich einer Kombination aus Onsite-Daten und Offsite-Daten oder einer Kombination aus Daten, die von verschiedenen Offsite-Quellen stammen. |
+| **Data Governance** | Data Governance umfasst die Strategien und Technologien, die sicherstellen, dass Daten mit Vorschriften und Unternehmensrichtlinien zur Datennutzung in Einklang stehen. |
+| **Data Steward** | Der Data Steward ist eine Person, die für die Verwaltung, Überwachung und Durchsetzung von Daten-Assets in einer Organisation verantwortlich ist. Außerdem stellt ein Data Steward sicher, dass Data Governance-Richtlinien so geschützt und gepflegt werden, dass staatliche Vorschriften und Unternehmensrichtlinien erfüllt werden. |
+| **Datennutzungsbezeichnungen** | Mit Datennutzungsbezeichnungen können Benutzer Daten kategorisieren, die datenschutzbezogene Aspekte und vertragliche Bedingungen beinhalten, um Vorschriften und Unternehmensrichtlinien einzuhalten. |
+| **Datensatzbezeichnungen** | Einem Datensatz können Bezeichnungen hinzugefügt werden. Alle Felder in einem Datensatz übernehmen die Bezeichnungen des Datensatzes. |
+| **DULE** | DULE ist eine Abkürzung für „Data Usage Labeling and Enforcement“. DULE ist ein wichtiger Bestandteil von Data Governance und bietet verschiedene Funktionen, die in einer Organisation eine Datennutzungsbezeichnung und Anwendung von Datenzugriffsrichtlinien für Governance-Anforderungen ermöglichen. |
+| **Feldtitel** | Feldtitel sind Data Governance-Bezeichnungen, die entweder von einem Datensatz übernommen oder direkt auf ein Feld angewendet werden.  Auf ein Feld angewendete Data Governance-Beschriftungen werden nicht bis zu einem Datensatz vererbt. |
+| **Geofence** | Eine „Geofence“ ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet erreicht oder verlässt. |
+| **Identitätsbezeichnungen** | Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt. |
+| **Interessenbasiertes Targeting** | Interessenbasiertes Targeting, auch Personalisierung genannt, findet statt, wenn die folgenden drei Bedingungen erfüllt sind: Daten, die vor Ort erfasst werden, dienen dazu, Rückschlüsse über das Interesse eines Benutzers zu ziehen, werden in einem anderen Kontext verwendet (z. B. in einer anderen Site oder App, also „offsite“) und dienen dazu festzulegen, welche Inhalte oder Anzeigen auf Grundlage der Rückschlüsse bereitgestellt werden. |
+| **Marketing-Aktion** | A marketing action, in the context of the data governance framework, is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies |
+| **Richtlinie** | Im Data Governance-Framework ist eine Richtlinie eine Regel, die beschreibt, welche Marketing-Aktionen für bestimmte Daten zulässig oder nicht. |
+| **Bezeichnungen für vertrauliche Daten** | Vertrauliche „S“-Bezeichnungen (sensitive) dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als vertraulich betrachten. |
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video soll Ihnen dabei helfen, die Datenverwaltung zu verstehen, und zeigt die wichtigsten Aspekte des Rahmenwerks zur Datenbenennung und -durchsetzung (DULE) auf.
+Das folgende Video liefert Ihnen Informationen zum Verständnis von Data Governance und zeigt Ihnen die wichtigsten Aspekte des Data Usage Labeling and Enforcement (DULE)-Frameworks auf.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
