@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Benutzerhandbuch zur Datenverwendung
+title: Benutzerhandbuch zu den Datennutzungsbezeichnungen
 topic: labels
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 0%
+source-wordcount: '1112'
+ht-degree: 1%
 
 ---
 
 
-# Benutzerhandbuch zur Datenverwendung
+# Benutzerhandbuch zu den Datennutzungsbezeichnungen
 
 Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen (auch als DULE-Beschriftungen bezeichnet) in der [!DNL Experience Platform] Benutzeroberfläche. Bevor Sie den Leitfaden verwenden, lesen Sie bitte die Übersicht über die [Datenverwaltung](../home.md) , um eine solidere Einführung in das DUL-Framework zu erhalten.
 
@@ -24,13 +24,13 @@ Zur Verwaltung der Datenverwendungsbeschriftungen auf Datensatzebene müssen Sie
 
 Im nächsten Abschnitt finden Sie Schritte zum Erstellen eines neuen Datensatzes, auf den Beschriftungen angewendet werden sollen. Wenn Sie die Beschriftungen eines vorhandenen Datensatzes bearbeiten möchten, wählen Sie den Datensatz aus der Liste und überspringen Sie mit dem [Hinzufügen von Beschriftungen für die Datenverwendung zum Datensatz](#add-labels).
 
-### Erstellen eines neuen Datensatzes
+### Neuen Datensatz erstellen
 
 >[!NOTE]
 >
 >In diesem Beispiel wird ein Datensatz mit einem vorkonfigurierten XDM-Schema (Experience Data Model) erstellt. Weitere Informationen zu XDM-Schemas finden Sie in der [XDM-Systemübersicht](../../xdm/home.md) und den [Grundlagen der Schema-Komposition](../../xdm/schema/composition.md).
 
-Um einen neuen Datensatz zu erstellen, klicken Sie in der rechten oberen Ecke des Arbeitsbereichs &quot; **[!UICONTROL Datenbestände]** &quot;auf &quot;Datensatz _[!UICONTROL erstellen&quot;]_.
+To create a new dataset, click **[!UICONTROL Create Dataset]** in the top-right corner of the _[!UICONTROL Datasets]_workspace.
 
 ![](../images/labels/create_dataset.png)
 
@@ -42,7 +42,7 @@ Der Bildschirm &quot;Schema __auswählen&quot;wird angezeigt, in dem alle verfü
 
 ![Datenbestand-Schema auswählen](../images/labels/dataset_schema.png)
 
-Der Bildschirm &quot;Datensatz _konfigurieren&quot;_ wird angezeigt. Geben Sie einen **Namen** (erforderlich) und eine **Beschreibung** (optional, aber empfohlen) für den neuen Datensatz ein und klicken Sie dann auf **[!UICONTROL Fertig stellen]**.
+The _Configure Dataset_ screen appears. Geben Sie einen **Namen** (erforderlich) und eine **Beschreibung** (optional, aber empfohlen) für den neuen Datensatz ein und klicken Sie dann auf **[!UICONTROL Fertig stellen]**.
 
 ![Datensatz mit Namen und Beschreibung konfigurieren](../images/labels/dataset_configure.png)
 
@@ -99,6 +99,30 @@ Sie können diese Schritte wiederholen, um weiterhin Beschriftungen auf Feldeben
 ![Wählen Sie mehrere Felder aus, um Beschriftungen auf Feldebene gleichzeitig anzuwenden.](../images/labels/fields_select_multiple.png)
 
 Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene nach unten verschoben wird (Dataset → Felder), d. h. dass auf Feldebene angewendete Beschriftungen nicht in andere Felder oder Datensätze übertragen werden.
+
+## Verwalten benutzerdefinierter Beschriftungen
+
+Sie können Ihre eigenen benutzerdefinierten Nutzungsbezeichnungen im Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;in der [!DNL Experience Platform] Benutzeroberfläche erstellen. Klicken Sie im linken Navigationsbereich auf **[!UICONTROL Richtlinien]** und dann auf **[!UICONTROL Bezeichnungen]** , um eine Liste der vorhandenen Bezeichnungen Ansicht. Klicken Sie von hier auf Bezeichnung **[!UICONTROL erstellen]**.
+
+![](../images/labels/create-label-btn.png)
+
+Das Dialogfeld &quot;Beschriftung *[!UICONTROL erstellen]* &quot;wird angezeigt. Geben Sie von hier aus die folgenden Informationen für die neue Beschriftung ein:
+
+* **[!UICONTROL Bezeichner]**: Eine eindeutige Kennung für die Bezeichnung. Dieser Wert wird für Nachschlagezwecke verwendet und sollte daher kurz und knapp sein.
+* **[!UICONTROL Name]**: Ein Anzeigename für die Beschriftung.
+* **[!UICONTROL Beschreibung]**: (Optional) Eine Beschreibung für die Bezeichnung, um weiteren Kontext bereitzustellen.
+
+Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
+
+![](../images/labels/create-label.png)
+
+Das Dialogfeld wird geschlossen und die neu erstellte benutzerdefinierte Bezeichnung wird in der Liste auf der Registerkarte &quot; *[!UICONTROL Bezeichnungen]* &quot;angezeigt.
+
+![](../images/labels/label-created.png)
+
+Die Beschriftung kann jetzt unter &quot; *[!UICONTROL Benutzerdefinierte Beschriftungen]* &quot;ausgewählt werden, wenn die Beschriftungen für Datensätze und Felder bearbeitet oder Datenverwendungsrichtlinien erstellt werden.
+
+<img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## Nächste Schritte
 
