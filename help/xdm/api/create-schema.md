@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Schema erstellen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 162316c3b908ffa87d8df4dff72e26ba237993db
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 1%
+source-wordcount: '235'
+ht-degree: 88%
 
 ---
 
 
 # Schema erstellen
 
-Ein Schema kann als Entwurf für die Daten betrachtet werden, die Sie in Experience Platform erfassen möchten. Jedes Schema besteht aus einer Klasse und null oder mehr Mixins. Das heißt, Sie müssen kein Mixin hinzufügen, um ein Schema zu definieren, aber in den meisten Fällen wird mindestens ein Mixin verwendet.
+A schema can be thought of as the blueprint for the data you wish to ingest into [!DNL Experience Platform]. Jedes Schema besteht aus einer Klasse und null oder mehr Mixins. Das heißt, Sie müssen kein Mixin hinzufügen, um ein Schema zu definieren; in den meisten Fällen wird aber mindestens ein Mixin verwendet.
 
-Der Prozess der Schema-Komposition beginnt mit der Zuweisung einer Klasse. Die Klasse definiert wichtige verhaltensbezogene Aspekte der Daten (Datensatz oder Zeitreihen) sowie die Mindestfelder, die erforderlich sind, um die erfassten Daten zu beschreiben.
+Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Klasse definiert wichtige verhaltensbezogene Aspekte der Daten (Datensatz oder Zeitreihen) sowie die Mindestfelder, die erforderlich sind, um die zu erfassenden Daten zu beschreiben.
 
 **API-Format**
 
@@ -26,7 +26,7 @@ POST /tenant/schemas
 
 **Anfrage**
 
-Die Anforderung muss ein `allOf` Attribut enthalten, das auf den Wert `$id` einer Klasse verweist. Dieses Attribut definiert die &quot;Basisklasse&quot;, die vom Schema implementiert wird. In diesem Beispiel ist die Basisklasse eine Klasse mit dem Namen &quot;Eigenschaftsinformationen&quot;, die zuvor erstellt wurde.
+Die Anfrage muss ein `allOf`-Attribut enthalten, das auf die `$id` einer Klasse verweist. Dieses Attribut definiert die „Basisklasse“, die vom Schema implementiert wird. In diesem Beispiel ist die Basisklasse eine Klasse vom Typ „Eigenschaftsinformationen“, die zuvor erstellt wurde.
 
 ```SHELL
 curl -X POST \
@@ -50,11 +50,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `allOf > $ref` | Der `$id` Wert der Klasse, die vom neuen Schema implementiert wird. |
+| `allOf > $ref` | Der `$id`-Wert der Klasse, die vom neuen Schema implementiert wird. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und eine Nutzlast mit den Details des neu erstellten Schemas zurück, einschließlich der Variablen `$id`, `meta:altId`und `version`. Diese Werte sind schreibgeschützt und werden von der Schema Registry zugewiesen.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details zum neu erstellten Schema zurück, einschließlich `$id`, `meta:altId` und `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -89,4 +89,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und eine Nutzlast mit 
 }
 ```
 
-Wenn Sie eine GET-Anforderung zur Liste aller Schema im Pächter-Container ausführen, ist jetzt das Schema Eigenschafteninformationen enthalten. Alternativ können Sie eine GET-Anforderung mit dem URL-kodierten `$id` URI ausführen, um das neue Schema direkt Ansicht. Denken Sie daran, die `version` in den Accept-Header für alle Nachschlageanforderungen einzuschließen.
+Wenn Sie eine GET-Anfrage zum Auflisten aller Schemas im Mandanten-Container ausführen, wäre jetzt das Schema „Eigenschaftsinformationen“ enthalten. Alternativ können Sie eine GET-Anfrage (Nachschlagen) mit dem URL-kodierten `$id` URI ausführen, um das neue Schema direkt anzuzeigen. Denken Sie daran, bei allen Anfragen zum Nachschlagen die `version` in die Accept-Kopfzeile einzuschließen.
