@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Übersicht über die Datenverwendungsrichtlinien
+title: Datennutzungsrichtlinien – Übersicht
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 1%
+source-wordcount: '964'
+ht-degree: 6%
 
 ---
 
 
-# Übersicht über die Datenverwendungsrichtlinien
+# Datennutzungsrichtlinien – Übersicht
 
-Damit Datenverwendungsbeschriftungen die Datenkonformität effektiv unterstützen können, müssen Datenverwendungsrichtlinien implementiert werden. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 Dieses Dokument bietet einen allgemeinen Überblick über die Richtlinien zur Datenverwendung und enthält Links zu weiteren Dokumentationen zum Arbeiten mit Richtlinien in der Benutzeroberfläche oder API.
 
-## Marketingaktionen {#marketing-actions}
+## Marketing-Aktionen {#marketing-actions}
 
 **Marketingaktionen**(auch als **Marketing-Nutzungsszenarien** bezeichnet) im Rahmen des Data Governance-Rahmens sind Aktionen, die ein [!DNL Experience Platform] Datenkonsument durchführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Daher wird eine Datenverwendungsrichtlinie wie folgt definiert:
 
 1. Eine bestimmte Marketingaktion
 2. Die Datenverwendungs-Beschriftungen, die für diese Aktion eingeschränkt sind, gegen
 
-Ein Beispiel für eine Marketingaktion könnte der Wunsch sein, einen Datensatz in einen Drittanbieter-Service zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. &quot;Persönlich identifizierbare Informationen&quot;(PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine &quot;I&quot;-Beschriftung (Identitätsdaten) enthält, erhalten Sie eine Antwort der [!DNL Policy Service] Ihnen mitteilenden Person, dass eine Datenverwendungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. &quot;Persönlich identifizierbare Informationen&quot;(PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine &quot;I&quot;-Beschriftung (Identitätsdaten) enthält, erhalten Sie eine Antwort der [!DNL Policy Service] Ihnen mitteilenden Person, dass eine Datenverwendungsrichtlinie verletzt wurde.
 
 >[!NOTE]
 >
@@ -35,9 +35,9 @@ Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten re
 
 >[!NOTE]
 >
->Wenn Sie die Echtzeit-Platform von Kundendaten verwenden, können Sie Marketingverwendungsfälle für Ziele einrichten, um die Durchsetzung von Richtlinien zu automatisieren. Weitere Informationen finden Sie im Dokument zur [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md) .
+>Wenn Sie [!DNL Real-time Customer Data Platform]diese verwenden, können Sie Marketingverwendungsfälle für Ziele einrichten, um die Durchsetzung der Richtlinie zu automatisieren. Weitere Informationen finden Sie im Dokument zur [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md) .
 
-Eine Liste der [verfügbaren, von Adobe definierten Marketingaktionen](#core-actions)finden Sie im Anhang zu diesem Dokument. Sie können auch eigene benutzerspezifische Marketingaktionen mit der API des DULE Policy Service oder der Benutzeroberfläche der Experience Platform definieren. Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
+Eine Liste der [verfügbaren, von Adobe definierten Marketingaktionen](#core-actions)finden Sie im Anhang zu diesem Dokument. Sie können auch eigene benutzerspezifische Marketingaktionen mit der DULE [!DNL Policy Service] API oder der [!DNL Experience Platform ]Benutzeroberfläche definieren. Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -47,17 +47,17 @@ Experience Platform has the ability to share segments with Adobe Audience Manage
 For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
-## Verwalten von Datenverwendungsrichtlinien {#manage}
+## Managing data usage policies {#manage}
 
-Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenverwaltungen die DULE Policy Service API oder die Benutzeroberfläche für die Experience Platform verwenden, um Richtlinien zu verwalten und auszuwerten, die sich auf Marketingaktionen beziehen, die für Daten mit Datenverwendungsbeschriftungen durchgeführt werden. Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketingaktionen arbeiten, um zu bewerten, ob eine bestimmte Aktion eine Datenverwendungsrichtlinie verletzt.
+Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenverwaltungen die DULE [!DNL Policy Service] -API oder die [!DNL Experience Platform] Benutzeroberfläche verwenden, um Richtlinien zu verwalten und auszuwerten, die sich auf Marketingaktionen beziehen, die für Daten mit Datenverwendungsbeschriftungen durchgeführt werden. Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketingaktionen arbeiten, um zu bewerten, ob eine bestimmte Aktion eine Datenverwendungsrichtlinie verletzt.
 
 >[!IMPORTANT]
 >
 >Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
 
-Eine schrittweise Anleitung zum Arbeiten mit Marketingaktionen und Datenverwendungsrichtlinien in der API finden Sie im Lernprogramm zum [Erstellen und Auswerten von Datenverwendungsrichtlinien](create.md). Weitere Informationen zu den Schlüsselvorgängen, die von der Policy Service API bereitgestellt werden, finden Sie im Entwicklerhandbuch für den [Policy-Dienst](../api/getting-started.md).
+Eine schrittweise Anleitung zum Arbeiten mit Marketingaktionen und Datenverwendungsrichtlinien in der API finden Sie im Lernprogramm zum [Erstellen und Auswerten von Datenverwendungsrichtlinien](create.md). For more information the key operations provided by the [!DNL Policy Service] API, see the [Policy Service developer guide](../api/getting-started.md).
 
-Weitere Informationen zum Arbeiten mit Marketingaktionen und Richtlinien in der Benutzeroberfläche der Platform finden Sie im Benutzerhandbuch für die [Datenverwendungsrichtlinie](./user-guide.md).
+Weitere Informationen zum Arbeiten mit Marketingaktionen und Richtlinien in der [!DNL Platform] Benutzeroberfläche finden Sie im Benutzerhandbuch [zu](./user-guide.md)Datenverwendungsrichtlinien.
 
 ## Nächste Schritte
 
@@ -75,7 +75,7 @@ In der folgenden Tabelle werden die wichtigsten Marketingaktionen beschrieben, d
 >
 >Die wichtigsten Marketingaktionen sollten als Ausgangspunkt zur Identifizierung der zu erstellenden und auf Verstöße hin zu prüfenden Nutzungsrichtlinien dienen. Die Definitionen und Interpretationen hängen von den Anforderungen und Richtlinien Ihres Unternehmens ab.
 
-| Marketingaktion | Beschreibung |
+| Marketing-Aktion | Beschreibung |
 | --- | --- |
 | Analytics  | Eine Aktion, die Daten zu Analysezwecken verwendet, z. B. zur Messung, Analyse und zum Berichte der Nutzung der Sites oder Apps Ihres Unternehmens durch Kunden. |
 | Kombination mit PII | Eine Aktion, die alle persönlichen identifizierbaren Informationen (PII) mit anonymen Daten kombiniert. Verträge über Daten, die aus Werbenetzwerken, Werbeservern und Drittanbietern von Daten bezogen werden, beinhalten häufig spezifische vertragliche Verbote der Verwendung solcher Daten mit direkt identifizierbaren Daten. |
