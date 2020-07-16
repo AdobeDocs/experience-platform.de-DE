@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zu den Datennutzungsbezeichnungen
 topic: labels
 translation-type: tm+mt
-source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1109'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Im nächsten Abschnitt finden Sie Schritte zum Erstellen eines neuen Datensatzes
 
 >[!NOTE]
 >
->In diesem Beispiel wird ein Datensatz mit einem vorkonfigurierten XDM-Schema (Experience Data Model) erstellt. Weitere Informationen zu XDM-Schemas finden Sie in der [XDM-Systemübersicht](../../xdm/home.md) und den [Grundlagen der Schema-Komposition](../../xdm/schema/composition.md).
+>In diesem Beispiel wird ein Datensatz mit einem vorkonfigurierten [!DNL Experience Data Model] (XDM-)Schema erstellt. Weitere Informationen zu XDM-Schemas finden Sie in der [XDM-Systemübersicht](../../xdm/home.md) und den [Grundlagen der Schema-Komposition](../../xdm/schema/composition.md).
 
 To create a new dataset, click **[!UICONTROL Create Dataset]** in the top-right corner of the _[!UICONTROL Datasets]_workspace.
 
