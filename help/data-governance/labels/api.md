@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Verwalten von Datenverwendungsbeschriftungen mit APIs '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '967'
 ht-degree: 5%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 5%
 
 # Verwalten von Datenverwendungsbeschriftungen mit APIs
 
-In diesem Dokument wird beschrieben, wie Datenverwendungsbeschriftungen mithilfe der Policy Service API und der DataSet Service API verwaltet werden.
+In diesem Dokument wird beschrieben, wie Sie Datenverwendungsbeschriftungen mit der [!DNL Policy Service] API und der [!DNL Dataset Service] API verwalten.
 
-Die [Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) bietet mehrere Endpunkte, mit denen Sie Datenverwendungsbeschriftungen für Ihr Unternehmen erstellen und verwalten können.
+Das [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) enthält mehrere Endpunkte, mit denen Sie Datenverwendungsbeschriftungen für Ihr Unternehmen erstellen und verwalten können.
 
-Mit der DataSet-Dienst-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Datenkatalogfunktionen der Adobe Experience Platform, ist jedoch von der Katalogdienst-API getrennt, die Datensatzmetadaten verwaltet.
+Mit der [!DNL Dataset Service] API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Datenkatalogfunktionen der Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service] API, die DataSet-Metadaten verwaltet, getrennt.
 
 ## Erste Schritte
 
 Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [&quot;](../../catalog/api/getting-started.md) Erste Schritte&quot;im Handbuch für den Katalogentwickler beschrieben sind, um die erforderlichen Anmeldeinformationen für Aufrufe von [!DNL Platform] APIs zu sammeln.
 
-Um die in diesem Dokument beschriebenen Datenaset-Dienstendpunkte aufrufen zu können, müssen Sie über den eindeutigen `id` Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch zur [Auflistung von Katalogobjekten](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
+Um die in diesem Dokument beschriebenen [!DNL Dataset Service] Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id` Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch zur [Auflistung von Katalogobjekten](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
 
 ## Liste aller Bezeichnungen {#list-labels}
 
@@ -110,7 +110,7 @@ Eine erfolgreiche Antwort gibt eine Liste von benutzerdefinierten Beschriftungen
 
 ## Eine Beschriftung nachschlagen {#look-up-label}
 
-Sie können eine bestimmte Beschriftung nachschlagen, indem Sie die `name` Eigenschaft dieser Beschriftung in den Pfad einer GET-Anforderung zur Policy Service-API aufnehmen.
+Sie können eine bestimmte Beschriftung nachschlagen, indem Sie die `name` Eigenschaft dieser Beschriftung in den Pfad einer GET-Anforderung zur [!DNL Policy Service] API aufnehmen.
 
 **API-Format**
 
@@ -164,7 +164,7 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 
 ## Erstellen oder Aktualisieren einer benutzerdefinierten Bezeichnung {#create-update-label}
 
-Um eine benutzerdefinierte Bezeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT-Anforderung an die Policy Service API richten.
+Um eine benutzerdefinierte Bezeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT-Anforderung an die [!DNL Policy Service] API senden.
 
 **API-Format**
 
@@ -230,7 +230,7 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 
 ## Suchen von Beschriftungen für einen Datensatz {#look-up-dataset-labels}
 
-Sie können die Datenverwendungsbeschriftungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET-Anforderung an die DataSet-Dienst-API stellen.
+Sie können die Datenverwendungsbeschriftungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET-Anforderung an die [!DNL Dataset Service] API senden.
 
 **API-Format**
 
@@ -283,7 +283,7 @@ Eine erfolgreiche Antwort gibt die Datenverwendungsbeschriftungen zurück, die a
 
 ## Anwenden von Beschriftungen auf einen Datensatz {#apply-dataset-labels}
 
-Sie können einen Satz von Bezeichnungen für einen Datensatz erstellen, indem Sie diese in der Nutzlast einer POST- oder PUT-Anforderung an die DataSet-Dienst-API bereitstellen. Wenn Sie eine dieser Methoden verwenden, werden vorhandene Beschriftungen überschrieben und durch die in der Payload bereitgestellten ersetzt.
+Sie können einen Satz von Bezeichnungen für ein Dataset erstellen, indem Sie sie in der Nutzlast einer POST- oder PUT-Anforderung an die [!DNL Dataset Service] API bereitstellen. Wenn Sie eine dieser Methoden verwenden, werden vorhandene Beschriftungen überschrieben und durch die in der Payload bereitgestellten ersetzt.
 
 **API-Format**
 
@@ -326,7 +326,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `labels` | Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Datensatz hinzufügen möchten. |
-| `optionalLabels` | Eine Liste der einzelnen Felder im Datensatz, denen Sie Beschriftungen hinzufügen möchten. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen: <br/><br/>`option`: Ein Objekt, das die XDM-Attribute (Experience Data Model) des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li>id</code>: Der URI $id</code> -Wert des Schemas, das dem Feld zugeordnet ist.</li><li>contentType</code>: Der Inhaltstyp und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/look-up-resource.md">Accept-Header</a> für eine XDM-Suchanfrage erfolgen.</li><li>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Feld hinzufügen möchten. |
+| `optionalLabels` | Eine Liste der einzelnen Felder im Datensatz, denen Sie Beschriftungen hinzufügen möchten. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen: <br/><br/>`option`: Ein Objekt, das die [!DNL Experience Data Model] (XDM-)Attribute des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li>id</code>: Der URI $id</code> -Wert des Schemas, das dem Feld zugeordnet ist.</li><li>contentType</code>: Der Inhaltstyp und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/look-up-resource.md">Accept-Header</a> für eine XDM-Suchanfrage erfolgen.</li><li>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Feld hinzufügen möchten. |
 
 **Antwort**
 
@@ -350,7 +350,7 @@ Eine erfolgreiche Antwort gibt die Beschriftungen zurück, die dem Datensatz hin
 
 ## Entfernen von Bezeichnungen aus einem Datensatz {#remove-dataset-labels}
 
-Sie können die auf einen Datensatz angewendeten Beschriftungen entfernen, indem Sie eine DELETE-Anforderung an die DataSet-Dienst-API senden.
+Sie können die auf einen Datensatz angewendeten Beschriftungen entfernen, indem Sie eine DELETE-Anforderung an die [!DNL Dataset Service] API senden.
 
 **API-Format**
 
@@ -381,7 +381,7 @@ Ein erfolgreicher HTTP-Status 200 (OK), der angibt, dass die Beschriftungen entf
 
 Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Datenverwendungsbeschriftungen mithilfe von APIs verwalten können.
 
-Nachdem Sie Datenverwendungsbeschriftungen auf der Dataset- und Feldebene hinzugefügt haben, können Sie beginnen, Daten in die Experience Platform zu erfassen. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
+Nachdem Sie Datenverwendungsbeschriftungen auf der Dataset- und Feldebene hinzugefügt haben, können Sie beginnen, Daten zu erfassen [!DNL Experience Platform]. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
 
 Sie können jetzt auch Datenverwendungsrichtlinien auf Basis der von Ihnen angewendeten Beschriftungen definieren. Weitere Informationen finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](../policies/overview.md).
 
