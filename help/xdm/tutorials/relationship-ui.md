@@ -1,99 +1,99 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema Schema Editor
+title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 0%
+source-wordcount: '811'
+ht-degree: 58%
 
 ---
 
 
-# Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors
+# Define a relationship between two schemas using the [!DNL Schema Editor]
 
-Die Fähigkeit, die Beziehungen zwischen Ihren Kunden und ihre Interaktionen mit Ihrer Marke über verschiedene Kanäle hinweg zu verstehen, ist ein wichtiger Bestandteil der Adobe Experience Platform. Die Definition dieser Beziehungen innerhalb der Struktur Ihrer Experience Data Model (XDM)-Schema ermöglicht Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
+Die Fähigkeit, Beziehungen zwischen Ihren Kunden und ihren Interaktionen mit Ihrer Marke über verschiedene Kanäle hinweg zu verstehen, ist ein wichtiger Bestandteil von Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrem Unternehmen mithilfe des Schema-Editors in der Benutzeroberfläche der Experience Platform definiert werden. Anweisungen zum Definieren von Schema-Beziehungen mithilfe der API finden Sie im Lernprogramm zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
+This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [!DNL Schema Editor] in the [!DNL Experience Platform] user interface. Anweisungen zum Definieren von Schemabeziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis des XDM-Systems und des Schema-Editors in der Benutzeroberfläche der Experience Platform. Bevor Sie dieses Lernprogramm beginnen, lesen Sie bitte die folgende Dokumentation:
+Dieses Tutorial erfordert ein Arbeitsverständnis [!DNL XDM System] und die [!DNL Schema Editor] in der [!DNL Experience Platform] Benutzeroberfläche. Bevor Sie mit dieser Anleitung beginnen, lesen Sie folgende Dokumente:
 
 * [XDM-System in Experience Platform](../home.md): Eine Übersicht über XDM und seine Implementierung in Experience Platform.
-* [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Einführung in die Bausteine von XDM-Schemas.
-* [Erstellen Sie ein Schema mit dem Schema-Editor](create-schema-ui.md): Ein Lernprogramm, das die Grundlagen der Arbeit mit dem Schema-Editor behandelt.
+* [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemas.
+* [Erstellen Sie ein Schema mit dem Schema-Editor](create-schema-ui.md): Ein Tutorial, das die Grundlagen der Arbeit mit dem [!DNL Schema Editor].
 
-## Definieren eines Schemas für Quelle und Ziel
+## Quell- und Zielschemas definieren
 
-Es wird erwartet, dass Sie die beiden Schema, die in der Beziehung definiert werden, bereits erstellt haben. Zu Demonstrationszwecken wird in diesem Tutorial eine Beziehung zwischen den Mitgliedern des Loyalitätshotels (definiert im Schema &quot;Treuemitglieder&quot;) und ihren Lieblingshotels (definiert in einem &quot;Hotels&quot;-Schema) hergestellt.
+Es wird vorausgesetzt, dass Sie die beiden Schemas, die in der Beziehung definiert werden, bereits erstellt haben. For demonstration purposes, this tutorial creates a relationship between members of an organization&#39;s loyalty program (defined in a &quot;[!UICONTROL Loyalty Members]&quot; schema) and their favorite hotels (defined in a &quot;Hotels&quot; schema).
 
-Schema-Beziehungen werden durch ein **Quell-Schema** mit einem Feld dargestellt, das auf ein anderes Feld innerhalb eines **Ziel-Schemas** verweist. In den folgenden Schritten wird &quot;Treuemitglieder&quot;das Schema der Quelle sein, während &quot;Hotels&quot;als Schema des Zielortes fungieren.
+Schemabeziehungen werden durch ein **[!UICONTROL Quellschema]** mit einem Feld dargestellt, das auf ein anderes Feld innerhalb eines **[!UICONTROL Zielschemas]** verweist. In the steps that follow, &quot;[!UICONTROL Loyalty Members]&quot; will be the source schema, while &quot;Hotels&quot; will act as the destination schema.
 
-Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen Schema beschrieben, die in diesem Lernprogramm verwendet werden, bevor eine Beziehung definiert wurde.
+Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen Schemas beschrieben, die in dieser Anleitung verwendet werden, bevor eine Beziehung definiert wird.
 
-### Schema von Treuemitgliedern
+### [!UICONTROL Schema „Mitglieder des Treueprogramms“]
 
-Das Quell-Schema &quot;Treuemitglieder&quot;ist das Schema, das im Lernprogramm zum [Erstellen eines Schemas in der Benutzeroberfläche](create-schema-ui.md)erstellt wurde. Es enthält ein &quot;Treueobjekt&quot;unter dem Namensraum &quot;\_tenantId&quot;, das mehrere treuespezifische Felder enthält. Eines dieser Felder, &quot;loyaltyId&quot;, dient als primäre Identität für das Schema unter dem Namensraum &quot;E-Mail&quot;. Wie unter _Schema-Eigenschaften_ dargestellt, wurde dieses Schema für die Verwendung im [Echtzeit-Kundendienstprogramm](../../profile/home.md)aktiviert.
+The source schema &quot;[!UICONTROL Loyalty Members]&quot; is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;[!UICONTROL \_tenantId]&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;[!UICONTROL loyaltyId]&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under _Schema Properties_, this schema has been enabled for use in [!DNL Real-time Customer Profile](../../profile/home.md).
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
-### Hotels Schema
+### Schema „Hotels“
 
-Das Schema &quot;Hotels&quot;enthält Hotelfelder, die die Adresse, die Markenbezeichnung, die Anzahl der Zimmer und die Sterneneinstufung beschreiben. Das Feld &quot;hotelId&quot;dient als primäre ID für das Schema unter dem Namensraum &quot;ECID&quot;. Im Gegensatz zu &quot;Treuemitgliedern&quot;wurde dieses Schema nicht für Echtzeit-Kundendaten-Profil aktiviert.
+The destination schema &quot;[!UICONTROL Hotels]&quot; contains fields that describe a hotel, include its address, brand, number of rooms, and star rating. The &quot;[!UICONTROL hotelId]&quot; field serves as the primary identity for the schema under the &quot;ECID&quot; namespace. Anders als &quot;[!UICONTROL Treueanwärter]&quot; wurde dieses Schema nicht aktiviert [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## Erstellen eines Beziehungsmixins
+## Beziehungs-Mixin erstellen
 
 >[!NOTE]
 >
->Dieser Schritt ist nur erforderlich, wenn Ihr Quell-Schema über kein dediziertes Zeichenfolgenfeld verfügt, das als Verweis auf ein anderes Schema verwendet werden kann. Wenn dieses Schema bereits im Quellfeld definiert ist, gehen Sie zum nächsten Schritt zum [Definieren eines Beziehungsfelds](#relationship-field)über.
+>Dieser Schritt ist nur erforderlich, wenn Ihr Quellschema über kein dediziertes Zeichenfolgenfeld verfügt, das als Verweis auf ein anderes Schema verwendet werden kann. Wenn das Feld in Ihrem Quellschema bereits definiert ist, fahren Sie mit dem nächsten Schritt zum [Definieren eines Beziehungsfelds](#relationship-field) fort.
 
-Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quell-Schema über ein dediziertes Feld verfügen, das als Verweis auf das Ziel-Schema verwendet werden soll. Sie können dieses Feld dem Quellfeld hinzufügen, indem Sie eine neue Mischung erstellen.
+Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das als Verweis auf das Zielschema dient. Sie können dem Quellschema ein solches Feld hinzufügen, indem Sie ein neues Mixin erstellen.
 
-Beginn durch Klicken auf **Hinzufügen** im Abschnitt _Mixins_ .
+Klicken Sie zunächst auf **[!UICONTROL Hinzufügen]** im Abschnitt _Mixins_.
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-Das Dialogfeld _Hinzufügen Mixin_ wird angezeigt. Klicken Sie von hier auf Neues Mixin **erstellen**. Geben Sie in die angezeigten Textfelder einen Anzeigenamen und eine Beschreibung für das neue Mixin ein. Klicken Sie auf **Hinzufügen Mixin** , wenn Sie fertig sind.
+Der Dialog [!UICONTROL _Mixin hinzufügen _]wird angezeigt. Klicken Sie hier auf**[!UICONTROL  Neues Mixin erstellen ]**. Geben Sie in den angezeigten Textfeldern einen Anzeigenamen und eine Beschreibung für das neue Mixin ein. Klicken Sie auf**[!UICONTROL  Mixin hinzufügen ]**, wenn Sie damit fertig sind.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Die Arbeitsfläche wird mit &quot;Treuebeziehung&quot;im Abschnitt _Mixins_ wieder angezeigt. Klicken Sie auf den Namen des Mixins und dann auf **Hinzufügen Feld** neben dem Stammfeld &quot;Treuemitglieder&quot;.
+The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the _Mixins_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Ein neues Feld wird auf der Arbeitsfläche unter dem Namensraum &quot;\_tenantId&quot;angezeigt. Geben Sie unter _Feldeigenschaften_ einen Feldnamen und einen Anzeigenamen für das Feld ein und legen Sie dessen Typ auf &quot;String&quot;fest.
+A new field appears in the canvas under the &quot;[!UICONTROL \_tenantId]&quot; namespace. Under [!UICONTROL _Field Properties _], provide a field name and display name for the field, and set its type to &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-When finished, click **Apply**.
+Klicken Sie abschließend auf **[!UICONTROL Übernehmen]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-Das aktualisierte Feld &quot;loyaltyRelationship&quot;wird auf der Arbeitsfläche angezeigt. Klicken Sie auf **Speichern** , um die Änderungen am Schema abzuschließen.
+The updated &quot;[!UICONTROL loyaltyRelationship]&quot; field appears in the canvas. Klicken Sie auf **[!UICONTROL Speichern]**, um die Änderungen am Schema abzuschließen.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## Definieren eines Beziehungsfelds für das Quell-Schema {#relationship-field}
+## Beziehungsfeld für das Quellschema definieren {#relationship-field}
 
-Sobald in Ihrem Quellcode-Schema ein dediziertes Referenzfeld definiert ist, können Sie es als Beziehungsfeld festlegen.
+Sobald in Ihrem Quellschema ein dediziertes Referenzfeld definiert ist, können Sie es als Beziehungsfeld festlegen.
 
-Klicken Sie auf das Referenzfeld auf der Arbeitsfläche und blättern Sie dann unter _Feldeigenschaften_ nach unten, bis das Kontrollkästchen **Beziehung** angezeigt wird. Aktivieren Sie das Kontrollkästchen, um die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds anzuzeigen.
+Klicken Sie in der Arbeitsfläche auf das Referenzfeld und scrollen Sie dann unter _[!UICONTROL Feldeigenschaften]_nach unten, bis das Kontrollkästchen**[!UICONTROL  Beziehung ]**erscheint. Aktivieren Sie das Kontrollkästchen, um die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds anzuzeigen.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Klicken Sie auf die Dropdown-Liste für das **Referenz-Schema** und wählen Sie das Ziel-Schema für die Beziehung (&quot;Hotels&quot; in diesem Beispiel). Wenn das Ziel-Schema für die Vereinigung aktiviert ist, wird das Feld &quot; **Referenz-Identitäts-Namensraum** &quot;automatisch auf den Namensraum der primären Identität des Schemas eingestellt. Wenn für das Schema keine primäre Identität definiert ist, müssen Sie den zu verwendenden Namensraum manuell aus dem Dropdown-Menü auswählen. Click **Apply** when finished.
+Click the dropdown for **[!UICONTROL Reference Schema]** and select the destination schema for the relationship (&quot;[!UICONTROL Hotels]&quot; in this example). Wenn das Zielschema für Vereinigungen aktiviert ist, wird das Feld **[!UICONTROL Referenz-Identitäts-Namespace]** automatisch auf den Namespace der primären Identität des Zielschemas festgelegt. Wenn für das Schema keine primäre Identität definiert ist, müssen Sie den zu verwendenden Namespace manuell aus dem Dropdown-Menü auswählen. Klicken Sie auf **[!UICONTROL Übernehmen]**, wenn Sie damit fertig sind.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-Das Feld wird als Beziehung auf der Arbeitsfläche angezeigt und zeigt den Namensraum der Namen- und Referenzidentität des Schemas an. Klicken Sie auf **Speichern** , um Ihre Änderungen zu speichern und den Workflow abzuschließen.
+Das Feld wird in der Arbeitsfläche als Beziehung angezeigt und gibt den Namen und den Referenz-Identitäts-Namespace des Zielschemas an. Klicken Sie auf **[!UICONTROL Speichern]**, um Ihre Änderungen zu speichern und den Workflow zu beenden.
 
 ![](../images/tutorials/relationship/relationship-save.png)
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie mit dem Schema-Editor eine 1-zu-1-Beziehung zwischen zwei Schemas erstellt. Anweisungen zum Definieren von Beziehungen mithilfe der API finden Sie im Lernprogramm zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
+By following this tutorial, you have successfully created a one-to-one relationship between two schemas using the [!DNL Schema Editor]. Anweisungen zum Definieren von Beziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
