@@ -4,9 +4,9 @@ solution: Experience Platform
 title: DSGVO-Terminologie
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 39d5446c04fcceaf9d75db91ecb2c136986de098
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1066'
 ht-degree: 5%
 
 ---
@@ -64,7 +64,7 @@ __Füllsystem:__ Jeder spezifische Satz personenbezogener Daten, auf den nach be
 
 ## G
 
-__GDPR:__ Die Allgemeine Datenschutzverordnung (GDPR) ist ein Rechtsrahmen, der Leitlinien für die Erhebung und Verarbeitung personenbezogener Daten innerhalb der Europäischen Vereinigung (EU) festlegt. Der GDPR legt die Grundsätze für das Data Management und die Rechte des Einzelnen fest und verhängt auch Geldbußen, die einnahmenbasiert sein können. Das GDPR deckt alle Firmen ab, die mit den Daten der EU-Bürger zu tun haben. Daher ist es eine wichtige Regelung für die Compliance von Unternehmen bei Banken, Versicherern und anderen finanziellen Firmen. Das GDPR wird am 25. Mai 2018 in der gesamten EU in Kraft treten.
+__GDPR:__ Der [!DNL General Data Protection Regulation] (GDPR) ist ein Rechtsrahmen, der Leitlinien für die Erhebung und Verarbeitung personenbezogener Daten innerhalb der Europäischen Vereinigung (EU) festlegt. Der GDPR legt die Grundsätze für das Data Management und die Rechte des Einzelnen fest und verhängt auch Geldbußen, die einnahmenbasiert sein können. Das GDPR deckt alle Firmen ab, die mit den Daten der EU-Bürger zu tun haben. Daher ist es eine wichtige Regelung für die Compliance von Unternehmen bei Banken, Versicherern und anderen finanziellen Firmen. Das GDPR wird am 25. Mai 2018 in der gesamten EU in Kraft treten.
 
 __Genetische Daten:__ Daten über die Merkmale einer Person, die geerbt oder erworben werden und die eindeutige Informationen über die Gesundheit oder Physiologie der Person geben.
 
@@ -74,7 +74,7 @@ __Unternehmensgruppe:__ Ein herrschendes Unternehmen und seine kontrollierten Un
 
 ## I
 
-__Identitätsverwaltungsdienste (IMS):__ Die Adobe-Implementierung von Federated ID und OAuth 2.0 für die Authentifizierung von Adobe ID-Benutzern und die Autorisierung von Adobe-Ressourcen. Sie müssen IMS in Ihre Adobe-Anwendung oder Ihren -Service integrieren, damit sich Ihre Benutzer bei den Adobe-Services anmelden und diese nutzen können. Benutzer können sich direkt bei Renga (dem Adobe-Identitätsanbieter) anmelden oder sich über eine vertrauenswürdige Drittanbieter-Authentifizierungsdomäne (z. B. Google, Facebook oder ein Unternehmens-/OrganisationsLDAP) anmelden.
+__Identity Management Services (IMS):__ Die Adobe-Implementierung von Federated ID und OAuth 2.0 für die Authentifizierung von Benutzern der Adobe ID und die Autorisierung von Adobe-Ressourcen. Sie müssen IMS in Ihre Adobe-Anwendung oder Ihren -Service integrieren, damit sich Ihre Benutzer bei den Adobe-Services anmelden und diese nutzen können. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __IMS-Organisations-ID:__ Bezieht sich auf ein Adobe-Autorisierungstoken für die Service-to-Service-Authentifizierung, für das keine Benutzeranmeldung erforderlich ist. Es wird an einen IMS-Client ausgegeben und hat keinen zugehörigen Benutzer. Ein IMS-Client benötigt ein Service-Token, um Back-Kanal-Anfragen zwischen Diensten zu autorisieren. (Gelegentlich wird für Servicetoken auch der Begriff „Systemtoken“ verwendet.)
 
