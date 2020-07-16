@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Löschen von Ressourcen
+title: Ressource löschen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 7%
+source-wordcount: '133'
+ht-degree: 63%
 
 ---
 
 
-# Löschen von Ressourcen
+# Ressource löschen
 
-Es kann gelegentlich erforderlich sein, eine Ressource aus der Schema-Registrierung zu entfernen (LÖSCHEN). Es können nur die Ressourcen gelöscht werden, die Sie im Pächter-Container erstellen. Dies geschieht durch eine DELETE-Anforderung mit der Ressource, `$id` die Sie löschen möchten.
+It may occasionally be necessary to remove (DELETE) a resource from the [!DNL Schema Registry]. Es können nur Ressourcen gelöscht werden, die Sie im Mandanten-Container erstellt haben. Dies geschieht durch Ausführung einer DELETE-Anfrage mit der `$id` der Ressource, die Sie löschen möchten.
 
 **API-Format**
 
@@ -24,12 +24,12 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Der Typ der Ressource, die aus der Schema-Bibliothek gelöscht werden soll. Gültige Typen sind `datatypes`, `mixins`, `schemas`und `classes`. |
-| `{RESOURCE_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` die Ressource. |
+| `{RESOURCE_TYPE}` | The type of resource to be deleted from the [!DNL Schema Library]. Gültige Typen sind `datatypes`, `mixins`, `schemas` und `classes`. |
+| `{RESOURCE_ID}` | Der URL-codierte `$id`-URI oder `meta:altId` der Ressource. |
 
 **Anfrage**
 
-Zum LÖSCHEN von Anforderungen sind keine Accept-Header erforderlich.
+Für DELETE-Anfragen sind keine Accept-Kopfzeilen erforderlich.
 
 ```SHELL
 curl -X DELETE \
@@ -42,6 +42,6 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 204 (Kein Inhalt) und einen leeren Text zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine GET-Anforderung (Lookup) an die Ressource senden. Sie müssen einen Accept-Header in die Anforderung einbeziehen, sollten jedoch den HTTP-Status 404 (Nicht gefunden) erhalten, da die Ressource aus der Schema-Registrierung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine GET-Anfrage (Nachschlagen) an die Ressource senden. You will need to include an Accept header in the request, but should receive an HTTP status 404 (Not Found) because the resource has been removed from the [!DNL Schema Registry].
