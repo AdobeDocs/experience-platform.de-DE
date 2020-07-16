@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Datentyp erstellen
+title: Erstellen eines Datentyps
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0d8c8ee4df11d601d8feb122c70a9cd5d7d5b77
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 0%
+source-wordcount: '200'
+ht-degree: 95%
 
 ---
 
 
-# Datentyp erstellen
+# Erstellen eines Datentyps
 
-Wenn es gemeinsame Datenstrukturen gibt, die Ihr Unternehmen auf verschiedene Weise verwenden möchte, sollten Sie eventuell einen Datentyp definieren. Datentypen ermöglichen den konsistenten Einsatz von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als Mixins, da sie an jeder beliebigen Stelle in einem Schema enthalten sein können, indem sie als Feldelement `type` hinzugefügt werden.
+Bestehen allgemeine Datenstrukturen, die Ihr Unternehmen auf verschiedene Weise verwenden möchte, kann die Definition eines Datentyps von Vorteil sein. Datentypen stellen die konsistente Verwendung von Mehrfeld-Strukturen sicher und sind flexibler als Mixins, da sie an jeder beliebigen Stelle in einem Schema enthalten sein können, indem sie als `type` eines Felds hinzugefügt werden.
 
-Mit anderen Worten, Datentypen ermöglichen es Ihnen, eine Objekthierarchie einmal zu definieren und auf sie in einem Feld zu verweisen, genau wie jeder andere Skalartyp.
+Anders ausgedrückt muss bei Datentypen eine Objekthierarchie nur einmal definiert werden. Anschließend kann sie, ganz ähnlich wie bei jedem anderen Typ von Skalar, in einem Feld darauf verweisen.
 
 **API-Format**
 
@@ -26,7 +26,7 @@ POST /tenant/datatypes
 
 **Anfrage**
 
-Für die Definition eines Datentyps sind weder `meta:extends` noch `meta:intendedToExtend` Felder erforderlich, noch müssen Felder verschachtelt sein, um Kollisionen zu vermeiden.
+Für die Definition von Datentypen sind weder die Felder `meta:extends` und `meta:intendedToExtend` erforderlich, noch müssen Felder zur Vermeidung verschachtelt sein, um Konflikte zu vermeiden.
 
 ```SHELL
 curl -X POST \
@@ -67,7 +67,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und eine Nutzlast mit den Details des neu erstellten Datentyps zurück, einschließlich der Variablen `$id`, `meta:altId`und `version`. Diese drei Werte sind schreibgeschützt und werden von der Schema Registry zugewiesen.
+Bei erfolgreicher Antwort wird der HTTP-Statuscode 201 (Erstellung bestätigt) und eine Payload zurückgegeben, die Details zum neu erstellten Datentyp einschließlich `$id`, `meta:altId` und `version` enthält. These three values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -116,4 +116,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und eine Nutzlast mit 
 }
 ```
 
-Wenn Sie eine GET-Anforderung zur Liste aller Datentypen im Mieter-Container ausführen, wird jetzt der Datentyp &quot;Eigenschaftenaufbau&quot;einbezogen. Sie können auch eine GET-Anfrage (Lookup) mit dem URL-kodierten `$id` URI ausführen, um den neuen Datentyp direkt Ansicht. Stellen Sie sicher, dass Sie die `version` in Ihren Accept-Header für eine Suchanfrage aufnehmen.
+Eine GET-Anfrage zum Auflisten aller Datentypen im Mandanten-Container würde jetzt den Datentyp „Property Construction“ (Datentyp-Erstellung) umfassen. Auch können Sie mittels Anfrage zum Nachschlagen (GET) unter Angabe der URL-codierten `$id`-URI des Schemas den neuen Datentyp direkt anzeigen. Stellen Sie sicher, dass Ihre Anfrage zum Nachschlagen in der Accept-Kopfzeile die `version` enthält.
