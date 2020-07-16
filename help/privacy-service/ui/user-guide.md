@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Benutzerhandbuch für Privacy Service
+title: Benutzerhandbuch zum Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 0%
+source-wordcount: '1056'
+ht-degree: 1%
 
 ---
 
 
-# Benutzerhandbuch für Privacy Service
+# [!DNL Privacy Service] Benutzerhandbuch
 
-In diesem Dokument werden Schritte zum Erstellen und Verwalten von Datenschutzanforderungen mithilfe der Benutzeroberfläche von Privacy Service beschrieben.
+In diesem Dokument werden Schritte zum Erstellen und Verwalten von Datenschutzanforderungen mithilfe der [!DNL Privacy Service] Benutzeroberfläche beschrieben.
 
-## Privacy Service-UI-Dashboard durchsuchen
+## Dashboard der [!DNL Privacy Service] Benutzeroberfläche
 
-Das Dashboard für die Benutzeroberfläche des Privacy Service enthält zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge Ansicht haben: **Statusbericht** und **Auftragsanforderungen**. Das Dashboard zeigt auch die aktuell ausgewählte Regel für die angezeigten Aufträge an.
+Das Dashboard für die [!DNL Privacy Service] Benutzeroberfläche enthält zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge Ansicht haben: **[!UICONTROL Statusbericht]** und **[!UICONTROL Auftragsanforderungen]**. Das Dashboard zeigt auch die aktuell ausgewählte Regel für die angezeigten Aufträge an.
 
 ![UI-Dashboard](../images/user-guide/dashboard.png)
 
 ### Regeltyp
 
-Privacy Service unterstützt Aufträge für drei Regeltypen:
+[!DNL Privacy Service] unterstützt Aufträge für drei Regeltypen:
 
-* Allgemeine Datenschutzverordnung der Europäischen Vereinigung
-* The California Consumer Privacy Act (CCPA)
-* Thailands Gesetz zum Schutz personenbezogener Daten (PDPA_THA)
+* Die Europäische Vereinigung [!DNL General Data Protection Regulation] (GDPR)
+* Die [!DNL California Consumer Privacy Act] (CCPA)
+* Thailands [!DNL Personal Data Protection Act] (PDPA_THA)
 
-Aufträge für jeden Regelungstyp werden separat verfolgt. Um zwischen Regelungstypen zu wechseln, klicken Sie auf das Dropdown-Menü **Regelungstyp** und wählen Sie die gewünschte Regelart aus der Liste aus.
+Aufträge für jeden Regelungstyp werden separat verfolgt. Um zwischen Regelungstypen zu wechseln, klicken Sie auf das Dropdown-Menü **[!UICONTROL Regelungstyp]** und wählen Sie die gewünschte Regelart aus der Liste aus.
 
 ![Dropdownliste Regeltyp](../images/user-guide/regulation.png)
 
@@ -56,7 +56,7 @@ Um weitere Details zu einem bestimmten Datenpunkt Ansicht, klicken Sie auf den b
 
 >[!NOTE]
 >
->Wenn ein Filter auf das Widget &quot;Auftragsanforderungen&quot;angewendet wurde, können Sie den Filter entfernen, indem Sie auf das **X** in der Filtertablette klicken. Auftragsanforderungen kehren dann zur standardmäßigen Tracking-Liste zurück.
+>Wenn ein Filter auf das Widget &quot;Auftragsanforderungen&quot;angewendet wurde, können Sie den Filter entfernen, indem Sie auf das **[!UICONTROL X]** in der Filtertablette klicken. Auftragsanforderungen kehren dann zur standardmäßigen Tracking-Liste zurück.
 
 ### Auftragsanforderungen
 
@@ -66,15 +66,15 @@ Das Widget &quot;Auftragsanforderungen&quot;Liste alle in Ihrem Unternehmen verf
 >
 >Die Daten für zuvor erstellte Aufträge sind erst 30 Tage nach dem Abschlussdatum verfügbar.
 
-Sie können die Liste filtern, indem Sie Suchbegriffe in die Suchleiste unterhalb des Titels &quot;Auftragsanforderungen&quot;eingeben. Die Liste wird beim Eingeben automatisch Filter und zeigt Anforderungen mit Werten an, die mit Ihren Suchbegriffen übereinstimmen. Sie können auch im Dropdown-Menü &quot; **Angefordert am** &quot;einen Zeitraum für die aufgelisteten Aufträge auswählen.
+Sie können die Liste filtern, indem Sie Suchbegriffe in die Suchleiste unterhalb des Titels &quot;Auftragsanforderungen&quot;eingeben. Die Liste wird beim Eingeben automatisch Filter und zeigt Anforderungen mit Werten an, die mit Ihren Suchbegriffen übereinstimmen. Sie können auch im Dropdown-Menü &quot; **[!UICONTROL Angefordert am]** &quot;einen Zeitraum für die aufgelisteten Aufträge auswählen.
 
 ![Suchoptionen für Auftragsanfragen](../images/user-guide/job-search.png)
 
-Um die Details einer bestimmten Auftragsanforderung Ansicht, klicken Sie in der Liste auf die Auftrags-ID der Anforderung, um die Seite &quot; *Auftragsdetails* &quot;zu öffnen.
+Um die Details einer bestimmten Auftragsanforderung Ansicht, klicken Sie in der Liste auf die Auftrags-ID der Anforderung, um die Seite &quot; *[!UICONTROL Auftragsdetails]* &quot;zu öffnen.
 
 ![GDPR-UI-Auftragsdetails](../images/user-guide/job-details.png)
 
-Dieser Dialog enthält Statusinformationen zu den einzelnen Experience Cloud-Lösungen und ihren aktuellen Status im Verhältnis zum Gesamtauftrag. Da jeder Datenschutzauftrag asynchron ausgeführt wird, zeigt die Seite das aktuelle Kommunikationsdatum und die aktuelle Uhrzeit (GMT) jeder Lösung an, da einige mehr Zeit benötigen als andere, um die Anforderung zu verarbeiten.
+Dieser Dialog enthält Statusinformationen zu den einzelnen [!DNL Experience Cloud] Lösungen und ihren aktuellen Status im Verhältnis zum Gesamtauftrag. Da jeder Datenschutzauftrag asynchron ausgeführt wird, zeigt die Seite das aktuelle Kommunikationsdatum und die aktuelle Uhrzeit (GMT) jeder Lösung an, da einige mehr Zeit benötigen als andere, um die Anforderung zu verarbeiten.
 
 Wenn eine Lösung zusätzliche Daten bereitgestellt hat, ist sie in diesem Dialogfeld sichtbar. Sie können diese Daten durch Klicken auf die einzelnen Produktzeilen Ansicht.
 
@@ -86,7 +86,7 @@ Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, klicken Sie o
 >
 >Um eine Datenschutzauftragsanforderung zu erstellen, müssen Sie Identitätsinformationen für bestimmte Kunden bereitstellen, deren Daten abgerufen oder gelöscht werden sollen. Bitte lesen Sie das Dokument zu [Identitätsdaten für Datenschutzanforderungen](../identity-data.md) , bevor Sie mit diesem Abschnitt fortfahren.
 
-Die Benutzeroberfläche des Privacy Service bietet zwei Methoden zum Erstellen neuer Auftragsanforderungen:
+Die [!DNL Privacy Service] Benutzeroberfläche bietet zwei Methoden zum Erstellen neuer Auftragsanforderungen:
 
 * [Anforderungs-Builder verwenden](#request-builder)
 * [JSON-Datei hochladen](#json)
@@ -97,19 +97,19 @@ Die Schritte zur Verwendung dieser Methoden sind in den folgenden Abschnitten be
 
 Mit dem Anforderungs-Builder können Sie in der Benutzeroberfläche manuell eine neue Datenschutzauftragsanforderung erstellen. Der Anforderungs-Builder eignet sich am besten für einfachere und kleinere Anforderungsgruppen, da der Anforderungs-Builder die Anforderungen auf den ID-Typ pro Benutzer beschränkt. Bei komplizierteren Anforderungen ist es möglicherweise besser, stattdessen eine JSON-Datei [hochzuladen](#json) .
 
-Um Beginn mit dem Anforderungs-Builder zu verwenden, klicken Sie auf Anforderung **erstellen** unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms.
+Um Beginn mit dem Anforderungs-Builder zu verwenden, klicken Sie auf Anforderung **[!UICONTROL erstellen]** unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms.
 
 ![Klicken Sie auf Anforderung erstellen](../images/user-guide/create-request.png)
 
-Das Dialogfeld Anforderung *erstellen* wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Anforderung zum Schutz der Privatsphäre für den derzeit ausgewählten Regeltyp an.
+Das Dialogfeld Anforderung *[!UICONTROL erstellen]* wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Anforderung zum Schutz der Privatsphäre für den derzeit ausgewählten Regeltyp an.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Wählen Sie den **Auftragstyp** der Anforderung (&quot;Löschen&quot;oder &quot;Zugriff&quot;) und eines oder mehrere verfügbare **Produkte** aus der Liste.
+Wählen Sie den **[!UICONTROL Auftragstyp]** der Anforderung (&quot;Löschen&quot;oder &quot;Zugriff&quot;) und eines oder mehrere verfügbare **[!UICONTROL Produkte]** aus der Liste.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Wählen Sie unter *Namensraum-Typ* den entsprechenden Namensraum-Typ für die Kunden-IDs aus, die an Privacy Service gesendet werden.
+Wählen Sie unter &quot; *[!UICONTROL Namensraum-Typ]*&quot;den entsprechenden Namensraum-Typ für die Kunden-IDs aus, an die gesendet wird [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -121,7 +121,7 @@ Bei Verwendung des _benutzerdefinierten_ Namensraums müssen Sie den Namensraum 
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-When finished, click **Create**.
+Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -131,7 +131,7 @@ Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge)
 
 Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für jede verarbeitete Person verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
-Klicken Sie auf den Pfeil neben Anforderung **erstellen**, unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms. Wählen Sie in der Liste der angezeigten Optionen die Option JSON **hochladen**.
+Klicken Sie auf den Pfeil neben Anforderung **[!UICONTROL erstellen]**, unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms. Wählen Sie in der Liste der angezeigten Optionen die Option JSON **[!UICONTROL hochladen]**.
 
 ![Optionen zur Anforderungserstellung](../images/user-guide/create-options.png)
 
@@ -147,10 +147,10 @@ Wenn Sie keine JSON-Datei zum Hochladen haben, klicken Sie auf &quot;Adobe-GDPR-
 
 Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfeld. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können bei Bedarf weitere JSON-Dateien hinzufügen, indem Sie sie in das Dialogfeld ziehen und dort ablegen.
 
-When finished, click **Create**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird zusammen mit dem aktuellen Verarbeitungsstatus im Widget &quot; _Auftragsanforderungen_ &quot;aufgeführt.
+Klicken Sie abschließend auf **[!UICONTROL Erstellen]**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird zusammen mit dem aktuellen Verarbeitungsstatus im Widget &quot; _Auftragsanforderungen_ &quot;aufgeführt.
 
 ### Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie mithilfe der Benutzeroberfläche des Privacy Service einen Datenschutzauftrag erstellen, die Details eines Auftrags Ansicht geben und dessen Verarbeitungsstatus überwachen und die Ergebnisse nach Abschluss des Vorgangs herunterladen können.
+Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie mithilfe der [!DNL Privacy Service] Benutzeroberfläche einen Datenschutzauftrag erstellen, die Details eines Auftrags Ansicht geben und dessen Verarbeitungsstatus überwachen und die Ergebnisse nach Abschluss des Vorgangs herunterladen können.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit der Privacy Service-API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit der [!DNL Privacy Service] API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
