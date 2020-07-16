@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Ressourcen suchen
+title: Ressource nachschlagen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 2%
+source-wordcount: '174'
+ht-degree: 95%
 
 ---
 
 
-# Ressourcen suchen
+# Ressource nachschlagen
 
-Sie können bestimmte Ressourcen nachschlagen, indem Sie eine GET-Anforderung ausführen, die den `$id` (URL-kodierten URI) der Ressource im Anforderungspfad enthält.
+Sie können einzelne Ressourcen nachschlagen, indem Sie eine GET-Anfrage ausführen, die die `$id` (URL-kodierten URI) der Ressource im Anfragepfad enthält.
 
 **API-Format**
 
@@ -24,9 +24,9 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, in dem sich die Ressourcen befinden (&quot;global&quot;oder &quot;mieter&quot;). |
-| `{RESOURCE_TYPE}` | Der Typ der Ressource, die aus der Schema-Bibliothek abgerufen werden soll. Gültige Typen sind `datatypes`, `mixins`, `schemas`und `classes`. |
-| `{RESOURCE_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` die Ressource. |
+| `{CONTAINER_ID}` | Der Container, in dem sich die Ressourcen befinden („global“oder „tenant“). |
+| `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Gültige Typen sind `datatypes`, `mixins`, `schemas` und `classes`. |
+| `{RESOURCE_ID}` | Der URL-codierte `$id`-URI oder `meta:altId` der Ressource. |
 
 **Anfrage**
 
@@ -40,15 +40,15 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Ressourcenabfrageanforderungen müssen in den Accept-Header aufgenommen `version` werden. Die folgenden Accept-Header stehen für Suchvorgänge zur Verfügung:
+Bei Anfragen zum Nachschlagen von Ressourcen muss in die Accept-Kopfzeile eine `version` aufgenommen werden. Folgende Accept-Kopfzeilen stehen für Nachschlagevorgänge zur Verfügung:
 
 | Accept | Beschreibung |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Roh mit `$ref` und `allOf`, hat Titel und Beschreibungen. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` und `allOf` gelöst, enthält Titel und Beschreibungen. |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Roh mit `$ref` und `allOf`, verfügt über Titel und Beschreibungen. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` und `allOf` aufgelöst, verfügt über Titel und Beschreibungen. |
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Roh mit `$ref` und `allOf`, keine Titel oder Beschreibungen. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` und `allOf` gelöst, keine Titel oder Beschreibungen. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` und `allOf` gelöst, einschließlich Deskriptoren. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` und `allOf` aufgelöst, keine Titel oder Beschreibungen. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Ressourcenabfrageanforderungen müssen in den Accept-Header aufgenommen `version
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Ressource zurück. Die zurückgegebenen Felder hängen von der Überschrift &quot;Akzeptieren&quot;ab, die in der Anforderung gesendet wird. Experimentieren Sie mit verschiedenen Accept-Kopfzeilen, um die Antworten zu vergleichen und festzustellen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
+Eine erfolgreiche Antwort gibt die Details der Ressource zurück. Die zurückgegebenen Felder hängen von der Accept-Kopfzeile ab, die in der Anfrage gesendet wurde. Experimentieren Sie mit verschiedenen Accept-Kopfzeilen, um die Antworten zu vergleichen und zu ermitteln, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```JSON
 {
