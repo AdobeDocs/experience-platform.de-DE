@@ -1,261 +1,261 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen eines Schemas mit dem Schema-Editor.
+title: Erstellen eines Schemas mit dem Schema Editor
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d55dc9776968099901325c58506c5e322449368e
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '3462'
-ht-degree: 0%
+source-wordcount: '3376'
+ht-degree: 57%
 
 ---
 
 
-# Erstellen eines Schemas mit dem Schema-Editor.
+# Create a schema using the [!DNL Schema Editor]
 
-Die Schema Registry bietet eine Benutzeroberfläche und RESTful-API, über die Sie alle Ressourcen in der Adobe Experience Platform Schema Library Ansicht und verwalten können. Die Schema-Bibliothek enthält Ressourcen, die Ihnen von Adobe, Experience Platform-Partnern und Anbietern, deren Anwendungen Sie verwenden, zur Verfügung gestellt werden, sowie Ressourcen, die Sie definieren und in der Schema-Registrierung speichern.
+The [!DNL Schema Registry] provides a user interface and RESTful API from which you can view and manage all resources in the Adobe Experience Platform [!DNL Schema Library]. The [!DNL Schema Library] contains resources made available to you by Adobe, Experience Platform partners, and vendors whose applications you use, as well as resources that you define and save to the [!DNL Schema Registry].
 
-In diesem Lernprogramm werden die Schritte zum Erstellen eines Schemas mit dem Schema-Editor in der Experience Platform beschrieben. Wenn Sie lieber ein Schema mit der Schema Registry-API erstellen möchten, lesen Sie zunächst das Entwicklerhandbuch [für die](../api/getting-started.md) Schema-Registrierung, bevor Sie versuchen, ein Schema mithilfe der API [zu](create-schema-api.md)erstellen.
+This tutorial covers the steps for creating a schema using the Schema Editor within [!DNL Experience Platform]. Wenn Sie lieber ein Schema mit der Schema Registry-API erstellen möchten, lesen Sie zunächst das [Entwicklerhandbuch für die Schema Registry](../api/getting-started.md), bevor Sie versuchen, [ein Schema mithilfe der API zu erstellen](create-schema-api.md).
 
-Dieses Lernprogramm enthält außerdem Schritte zum [Definieren einer neuen Klasse](#create-new-class) , die Sie dann zum Erstellen eines Schemas verwenden können.
+Dieses Tutorial enthält außerdem Schritte zum [Definieren einer neuen Klasse](#create-new-class), die Sie dann zum Erstellen eines Schemas verwenden können.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Aspekte der Adobe Experience Platform, die mit der Verwendung des Schema-Editors verbunden sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Konzepte:
+Dieses Tutorial erfordert ein Verständnis der verschiedenen Aspekte von Adobe Experience Platform, die mit der Verwendung des Schema Editors verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie die Dokumentation für die folgenden Konzepte:
 
-* [Erlebnisdatenmodell (XDM)](../home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
-* [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Übersicht über XDM-Schema und ihre Bausteine, einschließlich Klassen, Mixins, Datentypen und Felder.
-* [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [!DNL Experience Data Model (XDM)](../home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+* [Grundlagen der Schema-Zusammensetzung](../schema/composition.md): Eine Übersicht über XDM-Schemas und ihre Bausteine, einschließlich Klassen, Mixins, Datentypen und Feldern.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Für dieses Lernprogramm benötigen Sie Zugriff auf die Experience Platform. Wenn Sie keinen Zugriff auf eine IMS-Organisation in Experience Platform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Für dieses Tutorial benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
-## Vorhandene Schema im Arbeitsbereich &quot;Schemas&quot;durchsuchen {#browse}
+## Vorhandene Schemas im Arbeitsbereich „Schemas“ durchsuchen {#browse}
 
-Der Arbeitsbereich &quot;Schemas&quot;in der Experience Platform bietet eine Visualisierung der Schema-Bibliothek, mit der Sie alle verfügbaren Schema Ansicht und verwalten sowie neue erstellen können. Der Arbeitsbereich umfasst auch den Schema-Editor, die Arbeitsfläche, auf der Sie ein Schema während dieses Lernprogramms erstellen werden.
+The Schemas workspace within [!DNL Experience Platform] provides a visualization of the [!DNL Schema Library], allowing you to view and manage all of the schemas available to you, as well as compose new ones. Der Arbeitsbereich umfasst auch den Schema Editor, die Arbeitsfläche, auf der Sie während dieses Tutorials ein Schema erstellen.
 
-Nachdem Sie sich bei der Experience Platform angemeldet haben, klicken Sie im linken Navigationsbereich auf **Schemas** und Sie gelangen zum Arbeitsbereich &quot;Schemas&quot;. Daraufhin wird eine Liste von Schemas angezeigt (eine Darstellung der Schema-Bibliothek), in denen Sie alle verfügbaren Schema Ansicht, Verwaltung und Anpassung vornehmen können. Die Liste umfasst den Namen, den Typ, die Klasse und das Verhalten (Datensatz oder Zeitreihen), auf dem das Schema basiert, sowie das Datum und die Uhrzeit der letzten Änderung des Schemas.
+After logging into [!DNL Experience Platform], click **[!UICONTROL Schemas]** in the left-hand navigation and you will be taken to the Schemas workspace. You will see a list of schemas (a representation of the [!DNL Schema Library]) where you can view, manage, and customize all schemas available to you. Die Liste umfasst den Namen, den Typ, die Klasse und das Verhalten (Datensatz oder Zeitreihen), auf denen das Schema basiert, sowie das Datum und die Uhrzeit der letzten Änderung des Schemas.
 
-Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen für alle Ressourcen in der Registrierung zu verwenden, einschließlich Klassen, Mixins und Datentypen.
+Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen für alle Ressourcen in der Registry zu verwenden, einschließlich Klassen, Mixins und Datentypen.
 
-![Ansicht der Schema-Bibliothek](../images/tutorials/create-schema/schemas_filter.png)
+![Anzeigen der Schema Library](../images/tutorials/create-schema/schemas_filter.png)
 
 ## Erstellen und Benennen eines Schemas {#create}
 
-Um mit dem Erstellen eines Schemas zu beginnen, klicken Sie rechts oben im Arbeitsbereich &quot;Schemas&quot;auf Schema **** erstellen.
+Um mit dem Erstellen eines Schemas zu beginnen, klicken Sie rechts oben im Arbeitsbereich „Schemas“ auf **[!UICONTROL Schema erstellen]**.
 
-![Schaltfläche &quot;Schema erstellen&quot;](../images/tutorials/create-schema/create_schema_button.png)
+![Schaltfläche „Schema erstellen“](../images/tutorials/create-schema/create_schema_button.png)
 
-Der *Schema-Editor* wird angezeigt. Dies ist die Arbeitsfläche, auf der Sie Ihr Schema zusammenstellen werden. Wenn Sie zum Editor gelangen, wird automatisch ein &quot;Unbenanntes Schema&quot;im Bereich &quot; *Struktur* &quot;der Arbeitsfläche erstellt, damit Sie mit der Anpassung beginnen können.
+Der *Schema Editor* wird angezeigt. Dies ist die Arbeitsfläche, auf der Sie Ihr Schema zusammenstellen. Wenn Sie zum Editor gelangen, wird im Bereich *Struktur* der Arbeitsfläche automatisch ein „Unbenanntes Schema“ erstellt, das Sie bearbeiten können.
 
-![Schema-Editor](../images/tutorials/create-schema/schema_editor.png)
+![Schema Editor](../images/tutorials/create-schema/schema_editor.png)
 
-Auf der rechten Seite des Editors befinden sich die *Schema-Eigenschaften* , in denen Sie einen Namen für das Schema angeben können (mithilfe des Felds **Anzeigename** ). Sobald ein Name eingegeben wurde, wird die Arbeitsfläche aktualisiert, um den neuen Namen des Schemas wiederzugeben.
+Auf der rechten Seite des Editors befinden sich die *Schema-Eigenschaften*, in denen Sie einen Namen für das Schema angeben können (mithilfe des Felds **[!UICONTROL Anzeigename]**). Sobald ein Name eingegeben wurde, wird die Arbeitsfläche aktualisiert und gibt den neuen Namen des Schemas wieder.
 
 ![Schema-Arbeitsfläche](../images/tutorials/create-schema/name_schema.png)
 
 Bei der Entscheidung über einen Namen für Ihr Schema sind einige wichtige Aspekte zu beachten:
 
-* Schema-Namen sollten kurz und beschreibend sein, damit das Schema später leicht in der Bibliothek gefunden werden kann.
-* Die Namen der Schemas müssen eindeutig sein, d. h. sie sollten so spezifisch sein, dass sie in Zukunft nicht wiederverwendet werden. Wenn Ihr Unternehmen z. B. über separate Programme zur Treue für verschiedene Marken verfügt, wäre es ratsam, Ihr Schema mit &quot;Markenmitglieder einer Treue&quot;zu benennen, damit Sie leicht von anderen treuhänderischen Schemas unterscheiden können, die Sie später definieren.
-* Optional können Sie im Feld **Beschreibung** weitere Informationen zum Schema angeben.
+* Schemanamen sollten kurz und beschreibend sein, damit das Schema später leicht in der Bibliothek gefunden werden kann.
+* Die Namen der Schemas müssen eindeutig sein, d. h. sie sollten so spezifisch sein, dass sie in Zukunft nicht wiederverwendet werden. Wenn Ihr Unternehmen z. B. über separate Loyalitätsprogramme für verschiedene Marken verfügt, wäre es ratsam, Ihr Schema mit „Loyalitätsmitglieder, Marke A“ zu benennen, damit Sie dieses leicht von anderen Loyalitätsschemas unterscheiden können, die Sie u. U. später definieren.
+* Optional können Sie im Feld **[!UICONTROL Beschreibung]** weitere Informationen zum Schema angeben.
 
-Dieses Tutorial stellt ein Schema zum Erfassen von Daten über die Mitglieder eines Treueanschlusses vor, daher heißt das Schema &quot;Treueanwärter&quot;.
+Dieses Tutorial stellt ein Schema zur Aufnahme von Daten über die Mitglieder eines Loyalitätsprogramms zusammen, daher heißt das Schema „Loyalitätsmitglieder“.
 
-## Klasse zuweisen {#class}
+## Zuweisen einer Klasse {#class}
 
-Auf der linken Seite des Editors befindet sich der Abschnitt &quot; *Komposition* &quot;. Es enthält derzeit zwei Unterabschnitte: *Schema* und *Klasse*.
+Auf der linken Seite des Editors befindet sich der Abschnitt *Komposition*. Dieser enthält derzeit zwei Unterabschnitte: *[!UICONTROL Schema]* und *[!UICONTROL Klasse]*.
 
-Da das Schema nun einen Namen hat, ist es an der Zeit, die Klasse zuzuweisen, die vom Schema implementiert wird. Klicken Sie auf **Zuweisen** neben *Klasse*.
+Da das Schema nun einen Namen hat, können Sie jetzt die Klasse zuweisen, die vom Schema implementiert wird. Klicken Sie auf **[!UICONTROL Zuweisen]** neben *[!UICONTROL Klasse]*.
 
 ![](../images/tutorials/create-schema/assign_class_button.png)
 
-Das Dialogfeld &quot;Klasse *zuweisen* &quot;wird angezeigt. In diesem Fenster wird eine Liste aller verfügbaren Klassen angezeigt, einschließlich aller von Ihrem Unternehmen definierten Klassen (der Inhaber ist &quot;Kunde&quot;) sowie der von Adobe definierten Standardklassen.
+Das Dialogfeld *[!UICONTROL Klasse zuweisen]* wird angezeigt. In diesem Fenster wird eine Liste aller verfügbaren Klassen angezeigt, einschließlich aller von Ihrem Unternehmen definierten Klassen (der Inhaber ist „Kunde“) sowie der von Adobe definierten Standardklassen.
 
-Klicken Sie auf den Klassennamen, um die Beschreibung der Klasse anzuzeigen. Sie können auch die **Klassenstruktur** auswählen, um die mit der Klasse verknüpften Felder und Metadaten anzuzeigen.
+Klicken Sie auf den Klassennamen, um die Beschreibung der Klasse anzuzeigen. Sie können auch die **[!UICONTROL Vorschau der Klassenstruktur]** auswählen, um die mit der Klasse verknüpften Felder und Metadaten anzuzeigen.
 
-Dieses Lernprogramm verwendet die XDM Individual Profil-Klasse. Klicken Sie auf das Optionsfeld neben der Klasse, um sie auszuwählen, und klicken Sie dann auf Klasse **zuweisen**.
+This tutorial uses the [!DNL XDM Individual Profile] class. Klicken Sie auf das Optionsfeld neben der Klasse, um sie auszuwählen, und klicken Sie dann auf **[!UICONTROL Klasse zuweisen]**.
 
-![Dialogfeld &quot;Klasse zuweisen&quot;](../images/tutorials/create-schema/assign_class.png)
+![Dialogfeld „Klasse zuweisen“](../images/tutorials/create-schema/assign_class.png)
 
-Die Arbeitsfläche wird wieder angezeigt. Der *Klassenabschnitt* enthält nun die von Ihnen ausgewählte Klasse (XDM Individuelles Profil) und die von der XDM Individual Profil-Klasse hinzugefügten Felder sind jetzt im Abschnitt *Struktur* sichtbar.
+Die Arbeitsfläche wird wieder angezeigt. The *[!UICONTROL Class]* section now contains the class you selected ([!DNL XDM Individual Profile]) and the fields contributed by the [!DNL XDM Individual Profile] class are now visible within the *[!UICONTROL Structure]* section.
 
-![Zugewiesene XDM-Profil-Klasse](../images/tutorials/create-schema/class_assigned_structure.png)
+![Zugewiesene Klasse „XDM Individual Profile“](../images/tutorials/create-schema/class_assigned_structure.png)
 
-Die Felder werden im Format &quot;fieldName&quot;angezeigt | Datentyp&quot;. Die Schritte zum Definieren von Schema-Feldern in der Benutzeroberfläche finden Sie weiter unten in diesem Lernprogramm.
+Die Felder werden im Format „Feldname | Datentyp“ angezeigt. Die Schritte zum Definieren von Schemafeldern in der Benutzeroberfläche finden Sie weiter unten in diesem Tutorial.
 
 >[!NOTE]
 >
->Sie können die Klasse eines Schemas [jederzeit während des anfänglichen Kompositionsprozesses](#change-class) ändern, bevor das Schema gespeichert wurde. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Daher wird die Arbeitsfläche und alle hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
+>Sie können [die Klasse eines Schemas](#change-class) jederzeit während des anfänglichen Kompositionsprozesses ändern, bevor das Schema gespeichert wird. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Daher werden die Arbeitsfläche und alle von Ihnen hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
 
-## Hinzufügen einer Mischung {#mixin}
+## Hinzufügen eines Mixins {#mixin}
 
-Nachdem eine Klasse zugewiesen wurde, enthält der Abschnitt &quot; *Komposition* &quot;einen dritten Unterabschnitt: *Mixins*.
+Nachdem nun eine Klasse zugewiesen wurde, enthält der Abschnitt *Komposition* einen dritten Unterabschnitt: *[!UICONTROL Mixins]*.
 
-Sie können nun beginnen, Ihrem Schema Felder hinzuzufügen, indem Sie Mixins hinzufügen. Ein Mixin ist eine Gruppe aus einem oder mehreren Feldern, die ein bestimmtes Konzept beschreiben. In diesem Lernprogramm werden Mixins verwendet, um die Mitglieder des Programms zu beschreiben und wichtige Informationen wie Name, Geburtstag, Telefonnummer, Adresse und mehr zu erfassen.
+Sie können nun beginnen, Ihrem Schema Felder hinzuzufügen, indem Sie Mixins hinzufügen. Ein Mixin ist eine Gruppe aus einem oder mehreren Feldern, die ein bestimmtes Konzept beschreiben. In diesem Tutorial werden Mixins verwendet, um die Mitglieder des Loyalitätsprogramms zu beschreiben und wichtige Informationen wie Name, Geburtstag, Telefonnummer, Adresse und mehr zu erfassen.
 
-Um ein Mixin hinzuzufügen, klicken Sie auf **Hinzufügen** im Unterabschnitt &quot; *Mixins* &quot;.
+Um ein Mixin hinzuzufügen, klicken Sie auf **Hinzufügen** im Unterabschnitt *Mixins*.
 
 ![](../images/tutorials/create-schema/add_mixin_button.png)
 
-Das Dialogfeld *Hinzufügen Mixin* wird angezeigt. Mixins sind nur für bestimmte Klassen vorgesehen. Daher zeigt die Liste von Mixins nur die Mixins an, die mit der von Ihnen gewählten Profil-Klasse kompatibel sind (in diesem Fall die XDM Individual-Klasse).
+Das Dialogfeld *[!UICONTROL Mixin hinzufügen]* wird angezeigt. Mixins are only intended for use with specific classes, therefore the list of mixins shows only those compatible with the class you selected (in this case, the [!DNL XDM Individual Profile] class).
 
-Wenn Sie das Optionsfeld neben einem Mixin wählen, können Sie die **Vorschau Mixin Structure** wählen. Wählen Sie das Mixin &quot;Profil Person Details&quot; und klicken Sie dann auf **Hinzufügen Mixin**.
+Wenn Sie das Optionsfeld neben einem Mixin auswählen, haben Sie die Möglichkeit, eine **[!UICONTROL Vorschau der Mixin-Struktur]** anzuzeigen. Wählen Sie das Mixin „Persönliche Daten des Profils“ und klicken Sie dann auf **[!UICONTROL Mixin hinzufügen]**.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
-Die Arbeitsfläche des Schemas wird wieder angezeigt. Im Bereich *Mixins* wird nun das Mixin &quot;Profil Person Details&quot;Liste und im Abschnitt *Struktur* werden die vom Mixin hinzugefügten Felder angezeigt.
+Die Arbeitsfläche des Schemas wird wieder angezeigt. The *[!UICONTROL Mixins]* section now lists the &quot;[!UICONTROL Profile Person Details]&quot; mixin and the *[!UICONTROL Structure]* section includes the fields contributed by the mixin.
 
 ![](../images/tutorials/create-schema/person_details_structure.png)
 
-Diese Mischung trägt mehrere Felder unter dem Namen der obersten Ebene &quot;Person&quot;mit dem Datentyp &quot;Person&quot;ein. Diese Gruppe von Feldern beschreibt Informationen zu einer Person, einschließlich Name, Geburtsdatum und Geschlecht.
+Dieses Mixin trägt mehrere Felder unter dem Namen der obersten Ebene „Person“ mit dem Datentyp „Person“ ein. Diese Gruppe von Feldern beschreibt Informationen zu einer Person, einschließlich Name, Geburtsdatum und Geschlecht.
 
 >[!NOTE]
 >
->Denken Sie daran, dass Felder skalare Typen (z. B. String, Ganzzahl, Array oder Datum) als Datentyp sowie alle &quot;Datentypen&quot;(eine Feldgruppe, die ein gemeinsames Konzept darstellt) in der Schema-Registrierung verwenden können.
+>Remember that fields may use scalar types (such as string, integer, array, or date) as their data type, as well as any &quot;data type&quot; (a group of fields representing a common concept) in the [!DNL Schema Registry].
 
-Beachten Sie, dass das Feld &quot;Name&quot;einen Datentyp von &quot;Personenname&quot;hat, d. h., es beschreibt auch ein gemeinsames Konzept und enthält namensbezogene Unterfelder wie Vorname, Nachname und vollständiger Name.
+Notice that the &quot;[!UICONTROL name]&quot; field has a data type of &quot;[!UICONTROL Person Name]&quot;, meaning it too describes a common concept and contains name-related sub-fields such as first name, last name, and full name.
 
 Klicken Sie auf verschiedene Felder auf der Arbeitsfläche, um weitere Felder anzuzeigen, die sie zur Schema-Struktur beitragen.
 
-## Hinzufügen einer anderen Mischung {#mixin-2}
+## Hinzufügen eines weiteren Mixins {#mixin-2}
 
-Sie können jetzt dieselben Schritte wiederholen, um eine weitere Mixin hinzuzufügen. Wenn Sie dieses Mal das *Hinzufügen Mixin* -Dialogfeld Ansicht haben, beachten Sie, dass das Mixin &quot;Profil-Personendetails&quot;ausgegraut wurde und das Optionsfeld daneben nicht ausgewählt werden kann. Dadurch wird verhindert, dass Mixins, die Sie bereits im aktuellen Schema enthalten haben, versehentlich dupliziert werden.
+Sie können jetzt dieselben Schritte wiederholen, um ein weiteres Mixin hinzuzufügen. When you view the *[!UICONTROL Add Mixin]* dialog this time, notice that the &quot;[!UICONTROL Profile Person Details]&quot; mixin has been greyed out and the radio button next to it cannot be selected. Dadurch wird verhindert, dass Mixins, die bereits in Ihrem aktuellen Schema enthalten sind, versehentlich dupliziert werden.
 
-Sie können nun das Mixin &quot;Profil Persönliche Details&quot;aus dem *Hinzufügen Mixin* hinzufügen.
+Sie können nun das &quot;[!DNL Profile Personal Details" mixin] aus dem *[!UICONTROL Hinzufügen Mixin]* Dialog hinzufügen.
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. Die &quot;Profil Persönliche Daten&quot;sind jetzt unter *Mixins* im Bereich *Komposition* aufgelistet, und die Felder für die Hausanschrift, das Handy und mehr wurden unter *Struktur* hinzugefügt.
+Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. The &quot;[!UICONTROL Profile Personal Details]&quot; is now listed under *[!UICONTROL Mixins]* in the *[!UICONTROL Composition]* section, and fields for home address, mobile phone, and more have been added under *[!UICONTROL Structure]*.
 
-Ähnlich wie beim Feld &quot;Name&quot;stellen die soeben hinzugefügten Felder Konzepte für mehrere Felder dar. Beispielsweise hat &quot;homeAddress&quot;den Datentyp &quot;Address&quot;und &quot;mobilePhone&quot;den Datentyp &quot;Phone Number&quot;. Sie können auf jedes dieser Felder klicken, um sie zu erweitern und die zusätzlichen Felder im Datentyp anzuzeigen.
+Similar to the &quot;[!UICONTROL name]&quot; field, the fields you just added represent multi-field concepts. For example, &quot;[!UICONTROL homeAddress]&quot; has a data type of &quot;[!UICONTROL Address]&quot; and &quot;[!UICONTROL mobilePhone]&quot; has a data type of &quot;[!UICONTROL Phone Number]&quot;. Sie können auf jedes dieser Felder klicken, um sie zu erweitern und die zusätzlichen Felder im Datentyp anzuzeigen.
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
 ## Definieren eines neuen Mixins {#define-mixin}
 
-Das Schema &quot;Treueanwärter&quot;ist dazu gedacht, Daten über die Mitglieder eines Treueanschlusses zu erfassen, sodass es einige spezifische treuebezogene Programme erfordert. Es gibt keine standardmäßigen Mixins, die die erforderlichen Felder enthalten. Daher müssen Sie ein neues Mixin definieren.
+The &quot;[!UICONTROL Loyalty Members]&quot; schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. Es gibt keine standardmäßigen Mixins, die die erforderlichen Felder enthalten. Daher müssen Sie ein neues Mixin definieren.
 
-Wenn Sie dieses Mal das Dialogfeld *Hinzufügen Mixin* öffnen, wählen Sie &quot;Neues Mixin **erstellen&quot;**. Sie werden dann aufgefordert, einen **Anzeigenamen** und eine **Beschreibung** für Ihr Mixin anzugeben.
+Wenn Sie dieses Mal das Dialogfeld *[!UICONTROL Mixin hinzufügen]* öffnen, wählen Sie **[!UICONTROL Neues Mixin erstellen]**. Sie werden dann aufgefordert, einen **[!UICONTROL Anzeigenamen]** und eine **[!UICONTROL Beschreibung]** für Ihr Mixin anzugeben.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
-Wie bei Klassennamen sollte der Name des Mixins kurz und einfach sein und beschreiben, was das Mixin zum Schema beitragen wird. Auch diese sind einzigartig, sodass Sie den Namen nicht wiederverwenden können und daher sicherstellen müssen, dass er spezifisch genug ist.
+Wie bei Klassennamen sollte der Name des Mixins kurz und einfach sein und beschreiben, was das Mixin zum Schema beiträgt. Auch diese sind einzigartig, sodass Sie den Namen nicht wiederverwenden können und daher sicherstellen müssen, dass er spezifisch genug ist.
 
-Benennen Sie für dieses Tutorial das neue Mixin &quot;Loyalitätsdetails&quot;.
+For this tutorial, name the new mixin &quot;[!UICONTROL Loyalty Details]&quot;.
 
-Klicken Sie auf **Hinzufügen Mixin** , um zum Schema-Editor zurückzukehren. &quot;Treuedetails&quot;sollten jetzt auf der linken Seite der Arbeitsfläche unter *Mixins* angezeigt werden, es sind jedoch noch keine Felder mit ihr verknüpft und daher werden keine neuen Felder unter *Struktur* angezeigt.
+Klicken Sie auf **[!UICONTROL Mixin hinzufügen]**, um zum Schema Editor zurückzukehren. &quot;[!UICONTROL Loyalty Details]&quot; should now appear under *[!UICONTROL Mixins]* on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under *[!UICONTROL Structure]*.
 
-## Hinzufügen von Feldern zur Mischung {#mixin-fields}
+## Hinzufügen von Feldern zum Mixin {#mixin-fields}
 
-Nachdem Sie jetzt das Mixin &quot;Loyalitätsdetails&quot;erstellt haben, ist es an der Zeit, die Felder zu definieren, die das Mixin zum Schema beitragen wird.
+Now that you have created the &quot;[!UICONTROL Loyalty Details]&quot; mixin, it is time to define the fields that the mixin will contribute to the schema.
 
-Klicken Sie zunächst auf den Namen des Mixins im Abschnitt *Mixins* . Danach werden die *Mixin-Eigenschaften* auf der rechten Seite des Editors angezeigt. Neben dem Namen des Schemas wird eine Schaltfläche &quot; **Hinzufügen Feld** &quot;unter &quot; *Struktur*&quot;angezeigt.
+Klicken Sie zunächst auf den Namen des Mixins im Abschnitt *[!UICONTROL Mixins]*. Danach werden die *[!UICONTROL Mixin-Eigenschaften]* auf der rechten Seite des Editors angezeigt. Neben dem Namen des Schemas wird eine Schaltfläche **[!UICONTROL Feld hinzufügen]** unter *[!UICONTROL Struktur]* angezeigt.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Klicken Sie auf **Hinzufügen Feld** neben &quot;Treuemitglieder&quot;, um einen neuen Knoten in der Struktur zu erstellen. Dieser Knoten (in diesem Beispiel mit der Bezeichnung &quot;_tenantId&quot;) stellt die Mandant-ID Ihres IMS-Unternehmens dar, der ein Unterstrich vorangestellt ist. Das Vorhandensein der Mandanten-ID zeigt an, dass die Felder, die Sie hinzufügen, im Namensraum Ihres Unternehmens enthalten sind.
+Click **[!UICONTROL Add Field]** next to &quot;[!UICONTROL Loyalty Members]&quot; to create a new node in the structure. Dieser Knoten (in diesem Beispiel mit der Bezeichnung „_tenantId“) stellt die Mandanten-ID Ihrer IMS-Organisation dar, der ein Unterstrich vorangestellt ist. Das Vorhandensein der Mandanten-ID zeigt an, dass die Felder, die Sie hinzufügen, im Namensraum Ihres Unternehmens enthalten sind.
 
-Mit anderen Worten, die von Ihnen hinzugefügten Felder sind für Ihr Unternehmen eindeutig und werden in der Schema-Registrierung in einem bestimmten Bereich gespeichert, der nur für Ihren IMS-Dienst zugänglich ist. Felder, die Sie definieren, müssen Ihrem Namensraum immer hinzugefügt werden, um Kollisionen mit Namen anderer Standardklassen, Mixins, Datentypen und Felder zu verhindern.
+In other words, the fields you are adding are unique to your organization and are going to be saved in the [!DNL Schema Registry] in a specific area accessible only to your IMS Org. Fields you define must always be added to your namespace to prevent collisions with names from other standard classes, mixins, data types, and fields.
 
-Innerhalb dieses Namespaced-Knotens ist ein &quot;Neues Feld&quot;. Dies ist der Anfang des Mixins &quot;Loyalitätsdetails&quot;.
+Inside that namespaced node is a &quot;[!UICONTROL New Field]&quot;. This is the beginning of the &quot;[!UICONTROL Loyalty Details]&quot; mixin.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Mithilfe der *Feldeigenschaften* auf der rechten Seite des Editors erstellen Sie ein Treuefeld mit dem Typ &quot;Objekt&quot;, das zur Speicherung Ihrer treuebezogenen Felder verwendet wird. When finished, click **Apply**.
+Using *[!UICONTROL Field Properties]* on the right-hand side of the editor, start by creating a &quot;[!UICONTROL loyalty]&quot; field with type &quot;[!UICONTROL Object]&quot; that will be used to hold your loyalty-related fields. Klicken Sie abschließend auf **[!UICONTROL Übernehmen]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-Die Änderungen werden angewendet und das neu erstellte Objekt &quot;Treue&quot;wird angezeigt. Klicken Sie auf **Hinzufügen Feld** neben dem Objekt, um weitere treuebezogene Felder hinzuzufügen. Ein &quot;Neues Feld&quot;wird angezeigt und der Abschnitt &quot; *Feldeigenschaften* &quot;ist rechts auf der Arbeitsfläche sichtbar.
+The changes are applied and the newly created &quot;[!UICONTROL loyalty]&quot; object appears. Klicken Sie auf **[!UICONTROL Feld hinzufügen]** neben dem Objekt, um weitere loyalitätsbezogene Felder hinzuzufügen. Ein „Neues Feld“ wird angezeigt und der Abschnitt *[!UICONTROL Feldeigenschaften]* ist rechts auf der Arbeitsfläche sichtbar.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
 Für jedes Feld sind die folgenden Informationen erforderlich:
 
-* **Feldname:** Der Name des Felds, in Kamelschreibweise geschrieben. Beispiel: loyaltyLevel
-* **Anzeigename:** Der Name des Felds, in der Titelschrift geschrieben. Beispiel: Treuestufe
-* **Typ:** Der Datentyp des Felds. Dazu gehören grundlegende Skalartypen und alle Datentypen, die in der Schema-Registrierung definiert sind. Beispiele: Zeichenfolge, Ganzzahl, Boolescher Wert, Person, Adresse, Telefonnummer usw.
-* **Beschreibung:** Es sollte eine optionale Beschreibung des Feldes eingefügt werden, die im Satzfall verfasst ist. (max. 200 Zeichen)
+* **[!UICONTROL Feldname]:**Der Name des Felds, in Kamelschreibweise geschrieben. Beispiel: LoyalitätsStufe
+* **[!UICONTROL Anzeigename]:**Der Name des Felds, in der Titelschrift geschrieben. Beispiel: Loyalitäts-Stufe
+* **[!UICONTROL Typ]:**Der Datentyp des Felds. This includes basic scalar types and any data types defined in the[!DNL Schema Registry]. Beispiele: Zeichenfolge, Ganzzahl, Boolescher Wert, Person, Adresse, Telefonnummer usw.
+* **[!UICONTROL Beschreibung]:**Es sollte eine optionale Beschreibung des Feldes eingefügt werden, die im Satzfall verfasst ist. (max. 200 Zeichen)
 
-Das erste Feld für das Loyalitätsobjekt ist eine Zeichenfolge namens &quot;loyaltyId&quot;. Wenn Sie den Typ des neuen Felds auf &quot;String&quot;einstellen, werden im Fenster &quot; *Feldeigenschaften* &quot;verschiedene Optionen zum Anwenden von Einschränkungen angezeigt, darunter **Standardwert**, **Format** und **Maximale Länge**.
+The first field for the Loyalty object will be a string called &quot;[!UICONTROL loyaltyId]&quot;. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the *[!UICONTROL Field Properties]* window becomes populated with several options for applying constraints, including **[!UICONTROL Default Value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum Length]**.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
-Je nach ausgewähltem Datentyp stehen verschiedene Einschränkungsoptionen zur Verfügung. Da &quot;loyaltyId&quot;eine E-Mail-Adresse sein wird, wählen Sie &quot;email&quot;aus dem Dropdown-Menü &quot; **Format** &quot;aus. Wählen Sie **Übernehmen** , um Ihre Änderungen anzuwenden.
+Je nach ausgewähltem Datentyp stehen verschiedene Einschränkungsoptionen zur Verfügung. Since &quot;[!UICONTROL loyaltyId]&quot; will be an email address, select &quot;[!UICONTROL email]&quot; from the **[!UICONTROL Format]** dropdown menu. Wählen Sie **[!UICONTROL Übernehmen]**, um Ihre Änderungen anzuwenden.
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Hinzufügen von mehr Feldern zum Mixen {#mixin-fields-2}
+## Hinzufügen von mehr Feldern zum Mixin {#mixin-fields-2}
 
-Nachdem Sie jetzt das Feld &quot;loyaltyId&quot;hinzugefügt haben, können Sie zusätzliche Felder hinzufügen, um treuebezogene Informationen zu erfassen, z. B.:
+Now that you have added the &quot;[!UICONTROL loyaltyId]&quot; field, you can add additional fields to capture loyalty-related information such as:
 
-* Punkte (Integer)
+* Punkte (Ganzzahl)
 * Mitglied seit (Datum)
 
-Jedes Feld wird hinzugefügt, indem Sie auf **Hinzufügen Feld** auf dem Treueobjekt klicken und die erforderlichen Informationen eingeben.
+Jedes Feld wird hinzugefügt, indem Sie auf dem Loyalitätsobjekt auf **[!UICONTROL Feld hinzufügen]** klicken und die erforderlichen Informationen eingeben.
 
-Nach Abschluss des Vorgangs enthält das Treueobjekt Felder für: Loyalität-ID, Punkte und Mitglied-seit.
+Nach Abschluss des Vorgangs enthält das Loyalitätsobjekt die Felder: „Loyalitäts-ID“, „Punkte“ und „Mitglied seit“.
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Feld &#39;enum&#39; Hinzufügen mixin {#enum}
+## Hinzufügen des Felds „enum“ zum Mixin {#enum}
 
-Beim Definieren von Feldern im Schema-Editor gibt es einige zusätzliche Optionen, die Sie auf einfache Feldtypen anwenden können, um weitere Einschränkungen für die Daten, die das Feld enthalten kann, bereitzustellen.
+Beim Definieren von Feldern im Schema Editor gibt es einige zusätzliche Optionen, die Sie auf einfache Feldtypen anwenden können, um weitere Einschränkungen für die Daten, die das Feld enthalten kann, bereitzustellen.
 
-Ein Beispiel dafür wäre ein Feld &quot;Treuestufe&quot;, bei dem der Wert nur eine von vier möglichen Optionen sein kann. Um dieses Feld zum Schema hinzuzufügen, klicken Sie auf **Hinzufügen Feld** neben dem Objekt &quot;Loyalität&quot;und füllen Sie die erforderlichen Felder unter *Feldeigenschaften* aus.
+An example of this would be a &quot;[!UICONTROL Loyalty Level]&quot; field, where the value can only be one of four possible options. To add this field to the schema, click **[!UICONTROL Add Field]** beside the &quot;[!UICONTROL loyalty]&quot; object and fill in the required fields under *[!UICONTROL Field Properties]*.
 
-Wählen Sie für **Typ**&quot;Zeichenfolge&quot;und Sie sehen zusätzliche Kontrollkästchen für **Array**, **Enum** und **Identity**.
+Wählen Sie „Zeichenfolge“ für **[!UICONTROL Typ]** und Sie sehen zusätzliche Kontrollkästchen für **[!UICONTROL Array]**, **[!UICONTROL Enum]** und **[!UICONTROL Identität]**.
 
-Aktivieren Sie das Kontrollkästchen **Enum** , um den Abschnitt *Enum Values* zu öffnen. Hier können Sie für jede akzeptable Treuestufe den **Wert** (in camelCase) und das **Label** (einen optionalen, leserfreundlichen Namen im Titel Case) eingeben.
+Aktivieren Sie das Kontrollkästchen **[!UICONTROL Enum]**, um den nachstehenden Abschnitt *[!UICONTROL Enum-Werte]* zu öffnen. Hier können Sie für jede akzeptable Loyalitätsstufe den **[!UICONTROL Wert]** (in Binnenmajuskel-Schreibweise) und die **[!UICONTROL Bezeichnung]** (einen optionalen, leserfreundlichen Namen in der Titelschreibweise) eingeben.
 
-Wenn Sie alle Feldeigenschaften abgeschlossen haben, klicken Sie auf &quot; **Übernehmen** &quot;und das Feld &quot;loyaltyLevel&quot;wird dem Objekt &quot;Loyalität&quot;hinzugefügt.
+When you have completed all field properties, click **[!UICONTROL Apply]** and the &quot;[!UICONTROL loyaltyLevel]&quot; field will be added to the &quot;loyalty&quot; object.
 
 ![](../images/tutorials/create-schema/loyalty_level_enum.png)
 
 Weitere Informationen zu verfügbaren zusätzlichen Einschränkungen:
 
-* **Erforderlich:** Gibt an, dass das Feld für die Datenerfassung erforderlich ist. Daten, die auf Grundlage dieses Schemas in einen Datensatz hochgeladen wurden, der dieses Feld nicht enthält, schlagen bei der Erfassung fehl.
-* **Array:** Gibt an, dass das Feld ein Array von Werten mit jeweils dem angegebenen Datentyp enthält. Wenn Sie beispielsweise den Datentyp &quot;String&quot;auswählen und das Kontrollkästchen &quot;Array&quot;aktivieren, enthält das Feld ein Zeichenfolgen-Array.
-* **Enum:** Gibt an, dass dieses Feld einen der Werte aus einer aufgezählten Liste möglicher Werte enthalten muss.
-* **Identität:** Gibt an, dass dieses Feld ein Identitätsfeld ist. Weitere Informationen zu Identitätsfeldern finden Sie [weiter unten in dieser Übung](#identity-field).
+* **[!UICONTROL Erforderlich]:**Gibt an, dass das Feld für die Datenerfassung erforderlich ist. Daten, die auf Grundlage dieses Schemas in einen Datensatz hochgeladen wurden und dieses Feld nicht enthalten, schlagen bei der Aufnahme fehl.
+* **[!UICONTROL Array]:**Gibt an, dass das Feld ein Array von Werten mit jeweils dem angegebenen Datentyp enthält. Wenn Sie beispielsweise den Datentyp „Zeichenfolge“ auswählen und das Kontrollkästchen „Array“ aktivieren, enthält das Feld ein Zeichenfolgen-Array.
+* **[!UICONTROL Enum]:**Gibt an, dass dieses Feld einen der Werte aus einer aufgezählten Liste möglicher Werte enthalten muss.
+* **[!UICONTROL Identität]:**Gibt an, dass dieses Feld ein Identitätsfeld ist. Weitere Informationen zu Identitätsfeldern finden Sie[weiter unten in diesem Tutorial](#identity-field).
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#datatype}
 
-Nachdem mehrere treuespezifische Felder hinzugefügt wurden, enthält das Objekt &quot;Loyalität&quot;jetzt eine gemeinsame Datenstruktur, die in anderen Schemas nützlich sein könnte.
+After adding several loyalty-specific fields, the &quot;[!UICONTROL loyalty]&quot; object now contains a common data structure that could be useful in other schemas.
 
-Wenn Sie der Meinung sind, dass eine mehrfeldige Struktur wiederverwendbar sein könnte, und Sie die Flexibilität haben möchten, dieselbe Datenstruktur an anderer Stelle zu verwenden, ermöglicht der Schema-Editor die Konvertierung dieser Struktur in einen Datentyp.
+Wenn Sie der Meinung sind, dass eine Struktur mit mehreren Feldern wiederverwendbar sein könnte, und Sie die Flexibilität haben möchten, dieselbe Datenstruktur an anderer Stelle zu verwenden, ermöglicht der Schema Editor die Konvertierung dieser Struktur in einen Datentyp.
 
-Datentypen ermöglichen den konsistenten Einsatz von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als ein Mixin, da sie überall in einem Schema verwendet werden können. Dies geschieht, indem der **Typ** eines Felds in einer Mischung mit dem Datentyp festgelegt wird, der in der Registrierung definiert wurde.
+Datentypen ermöglichen den konsistenten Einsatz von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als ein Mixin, da sie überall in einem Schema verwendet werden können. Dies geschieht, indem der **[!UICONTROL Typ]** eines Felds in einem Mixin mit dem Datentyp festgelegt wird, der in der Registrierung definiert wurde.
 
-Um das Objekt &quot;Loyalität&quot;in einen Datentyp umzuwandeln, klicken Sie auf das Feld &quot;Loyalität&quot;unter &quot; *Struktur* &quot;und wählen Sie **In neuen Datentyp** konvertieren auf der rechten Seite des Editors unter &quot; *Feldeigenschaften*&quot;aus. Es wird ein kleines grünes Popup mit der Bestätigung &quot;In Datentyp konvertiertes Objekt&quot;angezeigt.
+To convert the &quot;[!UICONTROL loyalty]&quot; object to a data type, click on the &quot;loyalty&quot; field under *[!UICONTROL Structure]* and select **[!UICONTROL Convert to New Data Type]** on the right-hand-side of the editor under *[!UICONTROL Field Properties]*. A small green pop-up appears confirming &quot;[!UICONTROL Object Converted to Data Type]&quot;.
 
-Wenn Sie nun unter *Struktur* nachsehen, können Sie sehen, dass das Feld &quot;Loyalität&quot;einen Datentyp von &quot;Loyalität&quot;hat und die Felder über kleine Sperrsymbole verfügen, die darauf hinweisen, dass es sich nicht mehr um einzelne Felder, sondern um Bereiche mit mehreren Feldern handelt.
+Now, when you look under *[!UICONTROL Structure]*, you can see that the &quot;[!UICONTROL loyalty]&quot; field has a data type of &quot;[!UICONTROL Loyalty]&quot; and the fields have small lock icons beside them indicating they are no longer individual fields, but rather part of a multi-field structure.
 
-In einem zukünftigen Schema können Sie nun einem Feld den **Typ** &quot;Loyalität&quot;zuweisen und es enthält automatisch die Felder &quot;Treue-Stufe&quot;, &quot;Punkte&quot;, &quot;Mitglied seit&quot;und &quot;Kundentreue-ID&quot;.
+In a future schema, you could now assign a field the **[!UICONTROL Type]** of &quot;[!UICONTROL Loyalty]&quot; and it would automatically include Loyalty Level, Points, Member Since, and Loyalty ID fields.
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-## Festlegen eines Schema-Felds als Identitätsfeld {#identity-field}
+## Festlegen eines Schemafelds als Identitätsfeld {#identity-field}
 
-Schema werden für die Erfassung von Daten in die Experience Platform verwendet, und diese Daten werden letztendlich verwendet, um Einzelpersonen zu identifizieren und Informationen aus mehreren Quellen zusammenzuführen. Um diesen Prozess zu unterstützen, können Schlüsselfelder als &quot;Identitätsfelder&quot;markiert werden.
+Schemas are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. To help with this process, key fields can be marked as &quot;[!UICONTROL Identity]&quot; fields.
 
-Mit Experience Platform können Sie ein Identitätsfeld ganz einfach über das Kontrollkästchen &quot; **Identität** &quot;im Schema-Editor kennzeichnen.
+[!DNL Experience Platform] erleichtert die Identifizierung eines Identitätsfelds mithilfe eines **[!UICONTROL Identitäts]** -Kontrollkästchens im [!DNL Schema Editor].
 
-So kann es beispielsweise Tausende von Mitgliedern des Treuebereichs geben, die derselben &quot;Ebene&quot;angehören, aber jedes Mitglied des Treuebereichs-Programms hat eine eindeutige &quot;loyaltyId&quot;(E-Mail-Adresse des jeweiligen Mitglieds). Die Tatsache, dass &quot;loyaltyId&quot;eine eindeutige Kennung für jedes Mitglied ist, macht es zu einem guten Kandidaten für ein Identitätsfeld, während &quot;level&quot;dies nicht tut.
+So kann es beispielsweise Tausende von Mitgliedern des Loyalitätsprogramms geben, die derselben „Stufe“ angehören, allerdings hat jedes Mitglied des Loyalitätsprogramms eine eindeutige „loyaltyId“ (E-Mail-Adresse des jeweiligen Mitglieds). Die Tatsache, dass „loyaltyId“ eine eindeutige Kennung für jedes Mitglied ist, macht den Wert zu einem guten Kandidaten für ein Identitätsfeld, während „Stufe“ dies nicht ist.
 
-Klicken Sie im Editor im Bereich *Struktur* auf das von Ihnen erstellte Feld &quot;loyaltyId&quot;. Das Kontrollkästchen **Identität** wird unter *Feldeigenschaften* angezeigt. Markieren Sie das Kästchen und Sie haben die Möglichkeit, dies als **Primär Identity** festzulegen. Markieren Sie auch dieses Kästchen.
+In the *[!UICONTROL Structure]* section of the editor, click on the &quot;[!UICONTROL loyaltyId]&quot; field that you created and you will see the **[!UICONTROL Identity]** checkbox appear under *[!UICONTROL Field Properties]*. Markieren Sie das Kästchen. Sie haben die Option, dies als **[!UICONTROL primäre Identität]** festzulegen. Markieren Sie auch dieses Kästchen.
 
-Als Nächstes müssen Sie einen **Identitätsnamen angeben**. Es gibt mehrere vordefinierte Namensraum. Da &quot;loyaltyId&quot;jedoch die E-Mail-Adresse des Mitglieds ist, wählen Sie &quot;E-Mail&quot;aus der Dropdown-Liste. Sie können jetzt auf **Übernehmen** klicken, um die Aktualisierungen im Feld &quot;loyaltyId&quot;zu bestätigen.
+Als Nächstes müssen Sie einen **[!UICONTROL Identitätsnamensraum]** angeben. There are several pre-defined namespaces, but since the &quot;[!UICONTROL loyaltyId]&quot; is the member&#39;s email address, select &quot;Email&quot; from the dropdown list. You can now click **[!UICONTROL Apply]** to confirm the updates to the &quot;[!UICONTROL loyaltyId]&quot; field.
 
-Jetzt werden alle Daten, die in das Feld &quot;loyaltyId&quot;eingegeben werden, verwendet, um diese Person zu identifizieren und eine Ansicht des Kunden zusammenzufügen.
+Now all data ingested into the &quot;[!UICONTROL loyaltyId]&quot; field will be used to help identify that individual and stitch together a single view of that customer.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
 >[!NOTE]
 >
->Nachdem ein Schema als primäre Identität festgelegt wurde, erhalten Sie eine Fehlermeldung, wenn Sie später versuchen, ein anderes Feld im Schema als primäres Feld festzulegen. Jedes Schema darf nur ein primäres Identitätsfeld enthalten.
+>Nachdem ein Schemafeld als primäre Identität festgelegt wurde, erhalten Sie eine Fehlermeldung, wenn Sie später versuchen, ein anderes Feld im Schema als primäres Feld festzulegen. Jedes Schema darf nur ein primäres Identitätsfeld enthalten.
 
-Weitere Informationen zum Arbeiten mit Identitäten finden Sie in der Dokumentation zum [Identitätsdienst](../../identity-service/home.md) .
+To learn more about working with identities, please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
 
 <!-- ## Relationship
 
@@ -267,35 +267,35 @@ In order to define a relationship, click on the field and check the **Relationsh
 
 More information about relationships and other schema metadata can be found in the [Schema Registry API Developer Guide](../schema_registry_developer_guide.md). -->
 
-## Aktivieren des Schemas zur Verwendung im Echtzeit-Profil {#profile}
+## Schema zur Verwendung in [!DNL Real-time Customer Profile] {#profile}
 
-Der Schema-Editor bietet die Möglichkeit, ein Schema für die Verwendung mit [Echtzeit-Kundendaten](../../profile/home.md)zu aktivieren. Profil bietet eine ganzheitliche Ansicht der einzelnen Kunden, indem es ein robustes, 360°-Profil von Kundenattributen sowie eine zeitgestempelte Übersicht über jede Interaktion erstellt, die der Kunde über ein mit der Experience Platform integriertes System hatte.
+The Schema Editor provides the ability to enable a schema for use with [!DNL Real-time Customer Profile](../../profile/home.md). [!DNL Profile] bietet eine ganzheitliche Ansicht der einzelnen Kunden, indem ein robustes 360°-Profil mit Kundenattributen sowie ein zeitgestempeltes Benutzerkonto für jede Interaktion erstellt wird, die der Kunde über ein in das System integriertes System verfügt [!DNL Experience Platform].
 
-Damit ein Schema für die Verwendung mit Echtzeit-Kundendaten aktiviert werden kann, muss eine primäre Identität definiert sein. Sie erhalten die Fehlermeldung &quot;Fehlende Primär-Identität&quot;, wenn Sie versuchen, ein Schema zu aktivieren, ohne vorher eine primäre Identität zu definieren.
+In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. Sie erhalten die Fehlermeldung „Fehlende primäre Identität“, wenn Sie versuchen, ein Schema zu aktivieren, ohne vorher eine primäre Identität zu definieren.
 
 ![](../images/tutorials/create-schema/missing_primary_identity.png)
 
-Um das Schema &quot;Treueanwärter&quot;für die Verwendung in Profil zu aktivieren, klicken Sie zunächst auf &quot;Treueanwärter&quot;im Bereich &quot; *Struktur* &quot;des Editors.
+To enable the &quot;Loyalty Members&quot; schema for use in [!DNL Profile], begin by clicking on &quot;Loyalty Members&quot; in the *Structure* section of the editor.
 
-Auf der rechten Seite des Editors werden unter *Schema-Eigenschaften* Informationen zum Schema angezeigt, einschließlich Anzeigename, Beschreibung und Typ. Zusätzlich zu diesen Informationen gibt es eine Schaltfläche mit der Bezeichnung &quot; **Profil**&quot;.
+Auf der rechten Seite des Editors werden unter *Schema-Eigenschaften* Informationen zum Schema angezeigt, einschließlich dessen Anzeigename, Beschreibung und Typ. Zusätzlich zu diesen Informationen gibt es eine Schaltfläche mit der Bezeichnung **[!UICONTROL Profil]**.
 
 ![](../images/tutorials/create-schema/unified_profile_toggle.png)
 
-Klicken Sie auf **Profil** , und es wird ein Popup angezeigt, in dem Sie aufgefordert werden zu bestätigen, dass Sie das Schema zum Profil aktivieren möchten.
+Click **[!UICONTROL Profile]** and a pop-up appears, asking you to confirm that you wish to enable the schema for [!DNL Profile].
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
 >[!NOTE]
 >
->Nachdem ein Schema für Echtzeit-Kundendaten aktiviert und gespeichert wurde, kann es nicht deaktiviert werden.
+>Once a schema has been enabled for [!DNL Real-time Customer Profile] and saved, it cannot be disabled.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Nachdem Sie das Schema &quot;Treuemitglieder&quot;fertig gestellt haben, können Sie das vollständige Schema im Bereich &quot; *Struktur* &quot;des Editors sehen. Klicken Sie auf **Speichern** , und das Schema wird in der Schema-Bibliothek gespeichert, damit es von der Schema-Registrierung aufgerufen werden kann.
+Now that you have finished composing a &quot;[!UICONTROL Loyalty Members]&quot; schema, you can see the complete schema in the *Structure* section of the editor. Click **[!UICONTROL Save]** and the schema will be saved to the [!DNL Schema Library], making it accessible by the [!DNL Schema Registry].
 
-Ihr neues Schema kann jetzt verwendet werden, um Daten in die Platform zu erfassen. Denken Sie daran, dass nach Verwendung des Schemas zur Datenerfassung nur noch zusätzliche Änderungen vorgenommen werden dürfen. Weitere Informationen zur Schema-Versionierung finden Sie in den [Grundlagen der Schema-Komposition](../schema/composition.md) .
+Your new schema is now able to be used to ingest data into [!DNL Platform]. Denken Sie daran, dass nach Verwendung des Schemas zur Datenaufnahme nur noch Ergänzungen vorgenommen werden können. Weitere Informationen zur Schemaversionierung finden Sie in den [Grundlagen der Schema-Komposition](../schema/composition.md).
 
-Das Schema &quot;Treuemitglieder&quot;steht auch zur Ansicht und Verwaltung mit der Schema Registry-API zur Verfügung. Um mit der API zu arbeiten, lesen Sie Beginn im Entwicklerhandbuch für die [Schema-Registrierungs-API](../api/getting-started.md).
+The &quot;[!UICONTROL Loyalty Members]&quot; schema is also available to be viewed and managed using the [!DNL Schema Registry] API. Um mit der API zu arbeiten, lesen Sie zunächst das [Entwicklerhandbuch für die Schema Registry-API](../api/getting-started.md).
 
 >[!WARNING]
 >
@@ -311,21 +311,21 @@ Das folgende Video soll Ihnen die Arbeit mit Mixins und Klassen erleichtern.
 
 ## Anhang
 
-Die folgenden Informationen ergänzen das Schema Editor Tutorial.
+Die folgenden Informationen ergänzen das Tutorial zum Schema Editor.
 
-### Create a new class {#create-new-class}
+### Neue Klasse erstellen {#create-new-class}
 
-Experience Platform bietet die Flexibilität, ein Schema auf der Grundlage einer für Ihr Unternehmen spezifischen Klasse zu definieren.
+[!DNL Experience Platform] bietet die Flexibilität, ein Schema auf der Grundlage einer Klasse zu definieren, die spezifisch für Ihr Unternehmen ist.
 
-Öffnen Sie das Dialogfeld *Klasse* zuweisen, indem Sie im Schema-Editor im Abschnitt &quot; **Klasse** &quot;auf *Zuweisen* klicken. Wählen Sie im Dialogfeld &quot;Neue Klasse **erstellen&quot;**.
+Öffnen Sie das Dialogfeld *[!UICONTROL Klasse zuweisen]*, indem Sie im Schema Editor im Abschnitt **[!UICONTROL Klasse]** auf *[!UICONTROL Zuweisen]* klicken. Within the dialog, select **C[!UICONTROL reate New Class ]**.
 
-Anschließend können Sie der neuen Klasse einen **Anzeigenamen** (einen kurzen, beschreibenden, eindeutigen und benutzerfreundlichen Namen für die Klasse), eine **Beschreibung** und ein **Verhalten** (&quot;Datensatz&quot;oder &quot;Zeitreihe&quot;) für die vom Schema definierten Daten geben.
+You can then give your new class a **[!UICONTROL Display Name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
 
 ![Neue Klassendetails](../images/tutorials/create-schema/create_new_class.png)
 
 >[!NOTE]
 >
->Denken Sie beim Erstellen eines Schemas, das eine von Ihrem Unternehmen definierte Klasse implementiert, daran, dass Mixins nur für kompatible Klassen verfügbar sind. Da die von Ihnen definierte Klasse neu ist, sind keine kompatiblen Mixins im Dialogfeld *Hinzufügen Mixin* aufgeführt. Stattdessen müssen Sie &quot;Neues Mixin **erstellen&quot;auswählen** und ein Mixin definieren, das mit dieser Klasse verwendet werden soll. Wenn Sie das nächste Mal ein Schema erstellen, das die neue Klasse implementiert, wird das von Ihnen definierte Mixin aufgelistet und zur Verwendung verfügbar.
+>Denken Sie beim Erstellen eines Schemas, das eine von Ihrem Unternehmen definierte Klasse implementiert, daran, dass Mixins nur für kompatible Klassen verfügbar sind. Da die von Ihnen definierte Klasse neu ist, sind keine kompatiblen Mixins im Dialogfeld *Mixin hinzufügen* aufgeführt. Stattdessen müssen Sie **[!UICONTROL Neues Mixin erstellen]** auswählen und ein Mixin definieren, das mit dieser Klasse verwendet werden soll. Wenn Sie das nächste Mal ein Schema erstellen, das die neue Klasse implementiert, wird das von Ihnen definierte Mixin aufgelistet und ist zur Verwendung verfügbar.
 
 ### Klasse eines Schemas ändern {#change-class}
 
@@ -333,12 +333,12 @@ Sie können jederzeit während der anfänglichen Erstellung des Schemas vor dem 
 
 >[!WARNING]
 >
->Üben Sie bitte Vorsicht, bevor Sie den Unterricht wechseln. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, wird die Arbeitsfläche zurückgesetzt und alle Felder, die Sie zu diesem Punkt hinzugefügt haben, werden entfernt.
+>Gehen Sie beim Ändern der Klasse vorsichtig vor. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, wird die Arbeitsfläche daher zurückgesetzt und alle Felder, die Sie zu diesem Punkt hinzugefügt haben, werden entfernt.
 
-Um die Klasse zu ändern, klicken Sie im Editor im Abschnitt &quot; **Komposition** &quot;neben *Klasse* auf *Zuweisen* .
+Um die Klasse zu ändern, klicken Sie im Editor im Abschnitt **[!UICONTROL Komposition]** neben *[!UICONTROL Klasse]* auf *[!UICONTROL Zuweisen]*.
 
-Wenn das Dialogfeld &quot;Klasse *zuweisen* &quot;geöffnet wird, können Sie eine neue Klasse aus der verfügbaren Liste auswählen. Klicken Sie auf Klasse **zuweisen** . Daraufhin wird ein neues Dialogfeld mit der Aufforderung angezeigt, zu bestätigen, dass Sie eine neue Klasse zuweisen möchten.
+Wenn das Dialogfeld *[!UICONTROL Klasse zuweisen]* geöffnet wird, können Sie eine neue Klasse aus der verfügbaren Liste auswählen. Klicken Sie auf **[!UICONTROL Klasse zuweisen]**. Daraufhin wird ein neues Dialogfeld mit der Aufforderung angezeigt, zu bestätigen, dass Sie eine neue Klasse zuweisen möchten.
 
-![Change-Klasse](../images/tutorials/create-schema/assign_new_class_warning.png)
+![Klasse ändern](../images/tutorials/create-schema/assign_new_class_warning.png)
 
 Wenn Sie die Klassenänderung bestätigen, wird die Arbeitsfläche zurückgesetzt und der gesamte Kompositionsprozess geht verloren.
