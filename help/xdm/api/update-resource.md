@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Ressource aktualisieren
+title: Aktualisieren einer Ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 2%
+source-wordcount: '373'
+ht-degree: 91%
 
 ---
 
 
-# Ressource aktualisieren
+# Aktualisieren einer Ressource
 
-Sie können Ressourcen im Mandanten-Container mit einer PATCH-Anforderung ändern oder aktualisieren. Die Schema Registry unterstützt alle standardmäßigen JSON-Patch-Vorgänge, einschließlich Hinzufügen, Entfernen und Ersetzen.
+Sie können Ressourcen im Mandanten-Container mit einer PATCH-Anfrage ändern oder aktualisieren. The [!DNL Schema Registry] supports all standard JSON Patch operations, including add, remove, and replace.
 
-Weitere Informationen zum JSON Patch, einschließlich der verfügbaren Operationen, finden Sie in der offiziellen [JSON Patch-Dokumentation](http://jsonpatch.com/).
+Weitere Informationen zum JSON Patch, einschließlich der verfügbaren Vorgänge, finden Sie in der offiziellen [JSON Patch-Dokumentation](http://jsonpatch.com/).
 
 >[!NOTE]
 >
 >Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie das Dokument zum [Ersetzen einer Ressource mit einem PUT-Vorgang](replace-resource.md).
 
-## Hinzufügen von Mixins mit einem Schema
+## Hinzufügen von Mixins zu einem Schema
 
 Einer der häufigsten PATCH-Vorgänge besteht darin, einem XDM-Schema zuvor definierte Mixins hinzuzufügen, wie im folgenden Beispiel gezeigt.
 
@@ -34,14 +34,14 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Der Typ der Ressource, die in der Schema-Bibliothek aktualisiert werden soll. Gültige Typen sind `datatypes`, `mixins`, `schemas`und `classes`. |
-| `{RESOURCE_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` die Ressource. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Gültige Typen sind `datatypes`, `mixins`, `schemas` und `classes`. |
+| `{RESOURCE_ID}` | Der URL-codierte `$id`-URI oder `meta:altId` der Ressource. |
 
 **Anfrage**
 
-Mit einem PATCH-Vorgang können Sie ein Schema aktualisieren, um Felder einzuschließen, die in einer zuvor erstellten Mischung definiert sind. Dazu müssen Sie eine PATCH-Anforderung an das Schema mit dessen `meta:altId` oder dem URL-kodierten `$id` URI durchführen.
+Mit einem PATCH-Vorgang können Sie ein Schema aktualisieren, um Felder einzuschließen, die in einem zuvor erstellten Mixin definiert sind. Dazu müssen Sie eine PATCH-Anfrage an das Schema mit dessen `meta:altId` oder dem URL-codierten `$id`-URI durchführen.
 
-Der Anforderungstext enthält den Vorgang (`op`), den Sie ausführen möchten, wo (`path`) Sie den Vorgang ausführen möchten und welche Informationen (`value`) Sie in den Vorgang einbeziehen möchten. In diesem Beispiel wird der `$id` Wert des mixins sowohl den Feldern `meta:extends` als auch den `allOf` Feldern für das Schema Zielgruppe hinzugefügt.
+Der Anfragetext enthält den Vorgang (`op`), den Sie ausführen möchten, wo (`path`) Sie den Vorgang ausführen möchten und welche Informationen (`value`) Sie in den Vorgang einbeziehen möchten. In diesem Beispiel wird der `$id`-Wert des Mixins den Feldern `meta:extends` und `allOf` für das Zielschema hinzugefügt.
 
 ```SHELL
 curl -X PATCH\
@@ -59,7 +59,7 @@ curl -X PATCH\
 
 **Antwort**
 
-Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das mixin `$id` wurde dem `meta:extends` Array hinzugefügt und ein Verweis (`$ref`) auf das mixin wird `$id` jetzt im `allOf` Array angezeigt.
+Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das Mixin `$id` wurde dem Array `meta:extends` hinzugefügt und ein Verweis (`$ref`) auf das Mixin `$id` wird jetzt im Array `allOf` angezeigt.
 
 ```JSON
 {
@@ -100,7 +100,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das mi
 
 ## Aktualisieren einzelner Felder für eine Ressource
 
-Sie können auch PATCH-Anforderungen senden, die mehrere Änderungen an einzelnen Feldern innerhalb einer Schema Registry-Ressource vornehmen.
+Sie können auch PATCH-Anfragen senden, die mehrere Änderungen an einzelnen Feldern innerhalb einer Schema Registry-Ressource vornehmen.
 
 **API-Format**
 
@@ -110,12 +110,12 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Der Typ der Ressource, die in der Schema-Bibliothek aktualisiert werden soll. Gültige Typen sind `datatypes`, `mixins`, `schemas`und `classes`. |
-| `{RESOURCE_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` die Ressource. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Gültige Typen sind `datatypes`, `mixins`, `schemas` und `classes`. |
+| `{RESOURCE_ID}` | Der URL-codierte `$id`-URI oder `meta:altId` der Ressource. |
 
 **Anfrage**
 
-Der Anforderungstext enthält den Vorgang (`op`), den Speicherort (`path`) und die Informationen (`value`), die zum Aktualisieren des Mixins erforderlich sind. Diese Anforderung aktualisiert das Eigenschaftendetails-Mixin, um das Feld &quot;propertyCity&quot;zu entfernen und ein neues Feld &quot;propertyAddress&quot;hinzuzufügen, das auf einen Standarddatentyp mit Adressinformationen verweist. Außerdem wird ein neues Feld &quot;emailAddress&quot;hinzugefügt, das auf einen Standarddatentyp mit E-Mail-Informationen verweist.
+Der Anfragetext enthält den Vorgang (`op`), den Speicherort (`path`) und die Informationen (`value`), die zum Aktualisieren des Mixins erforderlich sind. Diese Anfrage aktualisiert das Eigenschaftsdetails-Mixin, wobei das Feld „propertyCity“ entfernt und ein neues Feld „propertyAddress“ hinzugefügt wird, das auf einen Standarddatentyp mit Adressinformationen verweist. Außerdem wird ein neues Feld „emailAddress“ hinzugefügt, das auf einen Standarddatentyp mit E-Mail-Informationen verweist.
 
 ```SHELL
 curl -X PATCH \
@@ -146,7 +146,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort zeigt, dass die Vorgänge erfolgreich abgeschlossen wurden, da die neuen Felder vorhanden sind und das Feld &quot;propertyCity&quot;entfernt wurde.
+Eine erfolgreiche Antwort zeigt, dass die Vorgänge erfolgreich abgeschlossen wurden, da die neuen Felder vorhanden sind und das Feld „propertyCity“ entfernt wurde.
 
 ```JSON
 {
