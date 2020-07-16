@@ -1,42 +1,42 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Registry API
+title: Beziehung zwischen zwei Schemas mithilfe der Schemaregistrierungs-API definieren
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 1%
+source-wordcount: '1467'
+ht-degree: 84%
 
 ---
 
 
-# Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Registry API
+# Define a relationship between two schemas using the [!DNL Schema Registry] API
 
 
-Die Fähigkeit, die Beziehungen zwischen Ihren Kunden und ihre Interaktionen mit Ihrer Marke über verschiedene Kanäle hinweg zu verstehen, ist ein wichtiger Bestandteil der Adobe Experience Platform. Die Definition dieser Beziehungen innerhalb der Struktur Ihrer Experience Data Model (XDM)-Schema ermöglicht Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
+Die Fähigkeit, Beziehungen zwischen Ihren Kunden und ihren Interaktionen mit Ihrer Marke über verschiedene Kanäle hinweg zu verstehen, ist ein wichtiger Bestandteil von Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrem Unternehmen mithilfe der [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)definiert werden.
+This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein funktionierendes Verständnis von Experience Data Model (XDM) und XDM System. Bevor Sie dieses Lernprogramm beginnen, lesen Sie bitte die folgende Dokumentation:
+Dieses Tutorial erfordert ein funktionierendes Verständnis von [!DNL Experience Data Model] (XDM) und [!DNL XDM System]. Bevor Sie mit dieser Anleitung beginnen, lesen Sie folgende Dokumente:
 
 * [XDM-System in Experience Platform](../home.md): Eine Übersicht über XDM und seine Implementierung in Experience Platform.
-   * [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Einführung in die Bausteine von XDM-Schemas.
-* [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+   * [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemas.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Bevor Sie dieses Tutorial starten, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die Schema Registry API erfolgreich aufzurufen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot; und die erforderlichen Kopfzeilen für Anfragen (mit besonderer Aufmerksamkeit für den Accept-Header und seine möglichen Werte).
+Als Vorbereitung für dieses Tutorial sollten Sie im [Entwicklerhandbuch](../api/getting-started.md) die wichtigsten Themen rund um die konkrete Vorgehensweise für Aufrufe der API durchgehen. [!DNL Schema Registry] Dazu gehören Ihre `{TENANT_ID}`, das Konzept von „Containern“ sowie die erforderlichen Kopfzeilen zum Stellen von Anfragen (mit besonderem Schwerpunkt auf der Accept-Kopfzeile und ihren möglichen Werten).
 
-## Definieren eines Schemas für Quelle und Ziel {#define-schemas}
+## Quell- und Zielschema definieren {#define-schemas}
 
-Es wird erwartet, dass Sie die beiden Schema, die in der Beziehung definiert werden, bereits erstellt haben. Dieses Lernprogramm vermittelt eine Beziehung zwischen Mitgliedern des aktuellen Loyalität-Programms einer Organisation (definiert in einem Schema &quot;Treuemitglieder&quot;) und ihren Lieblingshotels (definiert in einem Schema &quot;Hotels&quot;).
+Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert werden sollen, bereits erstellt haben. In diesem Tutorial wird eine Beziehung zwischen Mitgliedern des aktuellen Treueprogramms einer Organisation (definiert in einem Schema namens „Mitglieder im Treueprogramm“) und ihren Lieblingshotels (definiert in einem Schema namens „Hotels“) eingerichtet.
 
-Schema-Beziehungen werden durch ein **Quell-Schema** mit einem Feld dargestellt, das auf ein anderes Feld innerhalb eines **Ziel-Schemas** verweist. In den folgenden Schritten wird &quot;Treuemitglieder&quot;das Schema der Quelle sein, während &quot;Hotels&quot;als Schema des Zielortes fungieren.
+Schemabeziehungen werden durch ein **[!UICONTROL Quellschema]** mit einem Feld dargestellt, das auf ein anderes Feld innerhalb eines **[!UICONTROL Zielschemas]** verweist. In the steps that follow, &quot;[!UICONTROL Loyalty Members]&quot; will be the source schema, while &quot;[!UICONTROL Hotels]&quot; will act as the destination schema.
 
-Um eine Beziehung zwischen zwei Schemas zu definieren, müssen Sie zunächst die `$id` Werte für beide Schema erfassen. Wenn Sie die Anzeigenamen (`title`) der Schema kennen, können Sie deren `$id` Werte finden, indem Sie eine GET-Anforderung an den `/tenant/schemas` Endpunkt in der Schema-Registrierungs-API stellen.
+Um eine Beziehung zwischen zwei Schemas festzulegen, müssen Sie sich zunächst die `$id`-Werte für beide Schemas verschaffen. If you know the display names (`title`) of the schemas, you can find their `$id` values by making a GET request to the `/tenant/schemas` endpoint in the [!DNL Schema Registry] API.
 
 **API-Format**
 
@@ -58,11 +58,11 @@ curl -X GET \
 
 >[!NOTE]
 >
->Die Kopfzeile &quot;Akzeptieren&quot; `application/vnd.adobe.xed-id+json` gibt nur die Titel, IDs und Versionen der resultierenden Schema zurück.
+>Die Accept-Kopfzeile `application/vnd.adobe.xed-id+json` gibt nur die Bezeichnungen, Kennungen und Versionen der resultierenden Schemas zurück.
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird eine Liste der von Ihrem Unternehmen definierten Schema zurückgegeben, einschließlich ihrer `name`, `$id`, `meta:altId`und `version`.
+Bei einer erfolgreichen Antwort wird eine Liste der von Ihrer Organisation definierten Schemas zurückgegeben, einschließlich der Werte für `name`, `$id`, `meta:altId` und `version`.
 
 ```json
 {
@@ -100,23 +100,23 @@ Bei einer erfolgreichen Antwort wird eine Liste der von Ihrem Unternehmen defini
 }
 ```
 
-Notieren Sie die `$id` Werte der beiden Schema, zwischen denen Sie eine Beziehung definieren möchten. Diese Werte werden in späteren Schritten verwendet.
+Notieren Sie sich die `$id`-Werte der beiden Schemas, für die Sie eine Beziehung definieren möchten. Diese Werte werden in späteren Schritten verwendet.
 
-## Definieren von Referenzfeldern für beide Schemas
+## Referenzfelder für beide Schemas definieren
 
-Innerhalb der Schema Registry funktionieren Beziehungsdeskriptoren ähnlich wie Fremdschlüssel in SQL-Tabellen: Ein Feld im Quell-Schema dient als Verweis auf ein Schema eines Ziels. Beim Definieren einer Beziehung muss jedes Schema über ein dediziertes Feld verfügen, das als Verweis auf das andere Schema verwendet werden soll.
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in SQL tables: a field in the source schema acts as a reference to a field of a destination schema. Beim Definieren einer Beziehung muss jedes Schema über ein dediziertes Feld verfügen, das als Verweis auf das andere Schema dienen soll.
 
 >[!IMPORTANT]
 >
->Wenn die Schema für die Verwendung im [Echtzeit-Kundenkonto](../../profile/home.md)aktiviert werden sollen, muss das Referenzfeld für das Ziel-Schema seine **primäre Identität** sein. Dies wird später in diesem Tutorial ausführlicher erläutert.
+>If the schemas are to be enabled for use in [!DNL Real-time Customer Profile](../../profile/home.md), the reference field for the destination schema must be its **[!UICONTROL primary identity]**. Dieser Aspekt wird im Tutorial später noch ausführlicher erläutert.
 
-Wenn eines der Schemas zu diesem Zweck über kein Feld verfügt, müssen Sie eventuell eine Mischung mit dem neuen Feld erstellen und es dem Schema hinzufügen. Dieses neue Feld muss den `type` Wert &quot;string&quot;haben.
+Wenn eines der Schemas über kein Feld zu diesem Zweck verfügt, müssen Sie eventuell ein Mixin mit dem neuen Feld erstellen und dem Schema hinzufügen. Dieses neue Feld muss den `type`-Wert „string“ (Zeichenfolge) aufweisen.
 
-Im Rahmen dieses Lernprogramms enthält das Schema &quot;Hotels&quot; bereits ein Feld zu diesem Zweck: `hotelId`. Das Quell-Schema &quot;Loyalty Members&quot; hat jedoch kein solches Feld und muss eine neue Mischung erhalten, die ein neues Feld hinzufügt, `favoriteHotel`unter seinem `TENANT_ID` Namensraum.
+Im Rahmen des Tutorials enthält das Zielschema „Hotels“ bereits ein Feld zu diesem Zweck: `hotelId`. Das Quellschema „Mitglieder im Treueprogramm“ hat jedoch kein solches Feld und muss ein neues Mixin erhalten, das ein neues Feld `favoriteHotel` hinzufügt, und zwar unter seinem Namespace `TENANT_ID`.
 
-### Erstellen eines neuen Mixins
+### Neues Mixin erstellen
 
-Um einem Schema ein neues Feld hinzuzufügen, muss es zunächst in einem Mixin definiert werden. Sie können eine neue Mischung erstellen, indem Sie eine POST-Anforderung an den `/tenant/mixins` Endpunkt senden.
+Um einem Schema ein neues Feld hinzuzufügen, muss das Feld zunächst in einem Mixin definiert werden. Sie können ein neues Mixin einrichten, indem Sie eine POST-Anfrage an den `/tenant/mixins`-Endpunkt senden.
 
 **API-Format**
 
@@ -126,7 +126,7 @@ POST /tenant/mixins
 
 **Anfrage**
 
-Die folgende Anforderung erstellt eine neue Mixin, die ein `favoriteHotel` Feld unter dem `TENANT_ID` Namensraum eines Schemas hinzufügt, dem es hinzugefügt wird.
+Die folgende Anfrage erstellt ein neues Mixin, das ein `favoriteHotel`-Feld unter dem Namespace `TENANT_ID` eines beliebigen Schemas hinzufügt, dem es hinzugefügt wird.
 
 ```shell
 curl -X POST\
@@ -220,13 +220,13 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Mixins zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `$id` | Der schreibgeschützte, vom System erzeugte eindeutige Bezeichner des neuen Mixins. Wird in Form eines URIs ausgeführt. |
+| `$id` | Die schreibgeschützte, vom System erzeugte eindeutige Kennung des neuen Mixins. Erhält die Form eines URI. |
 
-Notieren Sie den `$id` URI des Mixins, der im nächsten Schritt beim Hinzufügen des mixins zum source-Schema verwendet werden soll.
+Notieren Sie den `$id`-URI des Mixins, der im nächsten Schritt beim Hinzufügen des Mixins zum Quellschema verwendet werden wird.
 
-### Hinzufügen der Mischung mit dem Quellcode-Schema
+### Mixin dem Quellschema hinzufügen
 
-Nachdem Sie ein Mixin erstellt haben, können Sie es dem Quellcode-Schema hinzufügen, indem Sie eine PATCH-Anforderung an den `/tenant/schemas/{SCHEMA_ID}` Endpunkt senden.
+Nachdem Sie ein Mixin erstellt haben, können Sie es dem Quellschema hinzufügen, indem Sie eine PATCH-Anfrage an den `/tenant/schemas/{SCHEMA_ID}`-Endpunkt senden.
 
 **API-Format**
 
@@ -236,11 +236,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` das Quell-Schema. |
+| `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder die `meta:altId` des Quellschemas. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird das Mixin &quot;Favorite Hotel&quot;zum Schema &quot;Loyalty Members&quot;hinzugefügt.
+Mit der folgenden Anfrage wird das Mixin „Lieblingshotel“ zum Schema „Mitglieder im Treueprogramm“ hinzugefügt.
 
 ```shell
 curl -X PATCH \
@@ -263,13 +263,13 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `op` | Der auszuführende PATCH-Vorgang. Diese Anforderung verwendet den `add` Vorgang. |
-| `path` | Der Pfad zum Schema, in dem die neue Ressource hinzugefügt wird. Beim Hinzufügen von Mixins zu Schemas muss der Wert `/allOf/-`angegeben werden. |
+| `op` | Der auszuführende PATCH-Vorgang. Diese Anfrage verwendet den `add`-Vorgang. |
+| `path` | Der Pfad zum Schemafeld, in dem die neue Ressource hinzugefügt wird. Beim Hinzufügen von Mixins zu Schemas muss der Wert `/allOf/-`lauten. |
 | `value.$ref` | Die `$id` des hinzuzufügenden Mixins. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, das jetzt den `$ref` Wert des hinzugefügten mixins unter seinem `allOf` Array enthält.
+Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, das jetzt den `$ref`-Wert des hinzugefügten Mixins unter seinem `allOf`-Array enthält.
 
 ```json
 {
@@ -328,15 +328,15 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, d
 }
 ```
 
-## Definieren Sie primäre Identitätsfelder für beide Schema.
+## Primäre Identitätsfelder für beide Schemas definieren
 
 >[!NOTE]
 >
->Dieser Schritt ist nur für Schema erforderlich, die für die Verwendung im [Echtzeit-Profil](../../profile/home.md)aktiviert werden. Wenn Sie nicht möchten, dass Schema an einer Vereinigung teilnimmt oder wenn Ihre Schema bereits über primäre Identitäten verfügen, können Sie mit dem nächsten Schritt zur [Erstellung eines Referenz-Identitätsdeskriptors](#create-descriptor) für das Ziel-Schema fortfahren.
+>This step is only required for schemas that will be enabled for use in [!DNL Real-time Customer Profile](../../profile/home.md). Wenn Sie nicht möchten, dass eines der Schemas Teil einer Vereinigung wird, oder Ihre Schemas bereits über primäre Identitäten verfügen, können Sie den nächsten Schritt zum [Erstellen eines Referenzidentitätsdeskriptors](#create-descriptor) für das Zielschema überspringen.
 
-Damit Schema für die Verwendung im Echtzeit-Profil aktiviert werden können, muss eine primäre Identität definiert sein. Darüber hinaus muss das Ziel-Schema einer Beziehung seine primäre Identität als Referenzfeld verwenden.
+In order for schemas to be enabled for use in [!DNL Real-time Customer Profile], they must have a primary identity defined. Darüber hinaus muss das Zielschema einer Beziehung seine primäre Identität als Referenzfeld nutzen.
 
-Für diese Übung ist bereits eine primäre Schema-ID definiert, das Ziel-Schema jedoch nicht. Sie können ein Schema-Feld als primäres Identitätsfeld markieren, indem Sie einen Identitätsdeskriptor erstellen. Dies geschieht, indem eine POST-Anforderung an den `/tenant/descriptors` Endpunkt gesendet wird.
+Für dieses Tutorial verfügt das Quellschema bereits über eine definierte primäre Identität, das Zielschema jedoch noch nicht. Sie können ein Schemafeld als primäres Identitätsfeld markieren, indem Sie einen Identitätsdeskriptor erstellen. Senden Sie dazu eine POST-Anfrage an den `/tenant/descriptors`-Endpunkt.
 
 **API-Format**
 
@@ -346,7 +346,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein neuer Identitätsdeskriptor erstellt, der das `hotelId` Feld des Ziel-Schemas &quot;Hotels&quot;als primäres Identitätsfeld definiert.
+Mit der folgenden Anfrage wird ein neuer Identitätsdeskriptor erstellt, der das `hotelId`-Feld des Zielschemas „Hotels“ als primäres Identitätsfeld festlegt.
 
 ```shell
 curl -X POST \
@@ -369,12 +369,12 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu erstellenden Deskriptors. Der `@type` Wert für Identitätsdeskriptoren ist `xdm:descriptorIdentity`. |
-| `xdm:sourceSchema` | Der `$id` Wert des im [vorherigen Schritt](#define-schemas)erhaltenen Zielwerts. |
+| `@type` | Der Typ des zu erstellenden Deskriptors. Der `@type`-Wert für Identitätsdeskriptoren lautet `xdm:descriptorIdentity`. |
+| `xdm:sourceSchema` | Der `$id`-Wert des Zielschemas, erhalten im [vorherigen Schritt](#define-schemas). |
 | `xdm:sourceVersion` | Die Versionsnummer des Schemas. |
-| `sourceProperty` | Der Pfad zum jeweiligen Feld, das als primäre Identität des Schemas dient. Dieser Pfad sollte mit einem &quot;/&quot;beginnen und nicht mit einem &quot;/&quot;enden, während auch alle &quot;properties&quot;-Namensraum ausgeschlossen werden. Die oben aufgeführte Anforderung verwendet zum Beispiel `/_{TENANT_ID}/hotelId` anstelle von `/properties/_{TENANT_ID}/properties/hotelId`. |
-| `xdm:namespace` | Der Identitäts-Namensraum für das Identitätsfeld. `hotelId` in diesem Beispiel ein ECID-Wert ist, daher wird der Namensraum &quot;ECID&quot;verwendet. Eine Liste der verfügbaren Namensraum finden Sie in der Übersicht über den [Identitäts-Namensraum](../../identity-service/home.md) . |
-| `xdm:isPrimary` | Eine boolesche Eigenschaft, die bestimmt, ob das Identitätsfeld die primäre Identität des Schemas sein soll. Da diese Anforderung eine primäre Identität definiert, wird der Wert auf &quot;true&quot;gesetzt. |
+| `sourceProperty` | Der Pfad zum jeweiligen Feld, das als primäre Identität des Schemas dienen wird. Dieser Pfad muss mit einem „/“-Zeichen beginnen und darf nicht auf ein „/“-Zeichen enden. Außerdem müssen alle „properties“-Namespaces ausgeschlossen werden. Die Anfrage oben nutzt zum Beispiel `/_{TENANT_ID}/hotelId` anstelle von `/properties/_{TENANT_ID}/properties/hotelId`. |
+| `xdm:namespace` | Der Identitäts-Namespace für das Identitätsfeld. `hotelId` ist in diesem Beispiel ein ECID-Wert; daher wird der Namespace „ECID“ verwendet. Eine Liste der verfügbaren Namespaces finden Sie in der [Übersicht zu Identitäts-Namespaces](../../identity-service/home.md). |
+| `xdm:isPrimary` | Eine boolesche Eigenschaft, die darüber bestimmt, ob das Identitätsfeld als primäre Identität für das Schema dienen soll. Da diese Anfrage eine primäre Identität definiert, wird der Wert auf „true“ gesetzt. |
 
 **Antwort**
 
@@ -394,11 +394,11 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Identitätsdeskrip
 }
 ```
 
-## Erstellen eines Referenz-Identitätsdeskriptors
+## Referenzidentitätsdeskriptor erstellen
 
-Bei Schema-Feldern muss ein Referenz-Identitätsdeskriptor angewendet werden, wenn sie als Referenz aus anderen Schemas in einer Beziehung verwendet werden. Da das `favoriteHotel` Feld in &quot;Treueanwärter&quot; auf das `hotelId` Feld in &quot;Hotels&quot; verweisen wird, muss eine Referenz-Identitätsbeschreibung angegeben `hotelId` werden.
+Auf Schemafelder muss ein Referenzidentitätsdeskriptor angewendet werden, wenn sie als Referenz aus anderen Schemas in einer Beziehung verwendet werden. Da das Feld `favoriteHotel` in „Mitglieder im Treueprogramm“ auf das Feld `hotelId` in „Hotels“ verweisen wird, muss `hotelId` einen Referenzidentitätsdeskriptor erhalten.
 
-Erstellen Sie einen Referenz-Deskriptor für das Ziel-Schema, indem Sie eine POST-Anforderung an den `/tenant/descriptors` Endpunkt senden.
+Erstellen Sie einen Referenzdeskriptor für das Zielschema, indem Sie eine POST-Anfrage an den `/tenant/descriptors`-Endpunkt senden.
 
 **API-Format**
 
@@ -408,7 +408,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anforderung erstellt einen Referenz-Deskriptor für das `hotelId` Feld im Ziel-Schema &quot;Hotels&quot;.
+Die folgende Anfrage erstellt einen Referenzdeskriptor für das `hotelId`-Feld im Zielschema „Hotels“.
 
 ```shell
 curl -X POST \
@@ -429,14 +429,14 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `xdm:sourceSchema` | Die `$id` URL des Ziel-Schemas. |
-| `xdm:sourceVersion` | Die Versionsnummer des Ziel-Schemas. |
-| `sourceProperty` | Der Pfad zum primären Identitätsfeld des Schemas. |
-| `xdm:identityNamespace` | Der Identitäts-Namensraum des Referenzfelds. `hotelId` in diesem Beispiel ein ECID-Wert ist, daher wird der Namensraum &quot;ECID&quot;verwendet. Eine Liste der verfügbaren Namensraum finden Sie in der Übersicht über den [Identitäts-Namensraum](../../identity-service/home.md) . |
+| `xdm:sourceSchema` | Die `$id`-URL des Zielschemas. |
+| `xdm:sourceVersion` | Die Versionsnummer des Zielschemas. |
+| `sourceProperty` | Der Pfad zum primären Identitätsfeld des Zielschemas. |
+| `xdm:identityNamespace` | Der Identitäts-Namespace des Referenzfelds. `hotelId` ist in diesem Beispiel ein ECID-Wert; daher wird der Namespace „ECID“ verwendet. Eine Liste der verfügbaren Namespaces finden Sie in der [Übersicht zu Identitäts-Namespaces](../../identity-service/home.md). |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenz-Deskriptors für das Ziel-Schema zurück.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenzdeskriptors für das Zielschema zurück.
 
 ```json
 {
@@ -450,9 +450,9 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenz-Deskripto
 }
 ```
 
-## Erstellen eines Beziehungsdeskriptors {#create-descriptor}
+## Beziehungsdeskriptor erstellen {#create-descriptor}
 
-Beziehungsdeskriptoren stellen eine Eins-zu-Eins-Beziehung zwischen einem Quell-Schema und einem Ziel-Schema her. Sie können einen neuen Beziehungsdeskriptor erstellen, indem Sie eine POST-Anforderung an den `/tenant/descriptors` Endpunkt senden.
+Beziehungsdeskriptoren stellen eine Eins-zu-Eins-Beziehung zwischen einem Quellschema und einem Zielschema her. Sie können einen neuen Beziehungsdeskriptor erstellen, indem Sie eine POST-Anfrage an den `/tenant/descriptors`-Endpunkt senden.
 
 **API-Format**
 
@@ -462,7 +462,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein neuer Beziehungsdeskriptor erstellt, bei dem &quot;Treuemitglieder&quot;als Quell-Schema und &quot;Legacy-Treueanwärter&quot;als Zielland-Schema dienen.
+Mit der folgenden Anfrage wird ein neuer Beziehungsdeskriptor erstellt, wobei „Mitglieder im Treueprogramm“ als Quellschema und „Alte Mitglieder im Treueprogramm“ als Zielschema dienen.
 
 ```shell
 curl -X POST \
@@ -485,13 +485,13 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu erstellenden Deskriptors. Der `@type` Wert für Beziehungsdeskriptoren ist `xdm:descriptorOneToOne`. |
-| `xdm:sourceSchema` | Die `$id` URL des Quell-Schemas. |
-| `xdm:sourceVersion` | Die Versionsnummer des Quell-Schemas. |
-| `sourceProperty`: | Der Pfad zum Referenzfeld im Quell-Schema. |
-| `xdm:destinationSchema` | Die `$id` URL des Ziel-Schemas. |
-| `xdm:destinationVersion` | Die Versionsnummer des Ziel-Schemas. |
-| `destinationProperty`: | Der Pfad zum Referenzfeld im Ziel-Schema. |
+| `@type` | Der Typ des zu erstellenden Deskriptors. Der `@type`-Wert für Beziehungsdeskriptoren lautet `xdm:descriptorOneToOne`. |
+| `xdm:sourceSchema` | Die `$id`-URL des Quellschemas. |
+| `xdm:sourceVersion` | Die Versionsnummer des Quellschemas. |
+| `sourceProperty`: | Der Pfad zum Referenzfeld im Quellschema. |
+| `xdm:destinationSchema` | Die `$id`-URL des Zielschemas. |
+| `xdm:destinationVersion` | Die Versionsnummer des Zielschemas. |
+| `destinationProperty`: | Der Pfad zum Referenzfeld im Zielschema. |
 
 ### Antwort
 
@@ -513,4 +513,4 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Beziehungsdeskript
 
 ## Nächste Schritte
 
-Indem Sie diesem Tutorial folgen, haben Sie erfolgreich eine 1-zu-1-Beziehung zwischen zwei Schemas erstellt. Weitere Informationen zum Arbeiten mit Deskriptoren mit der Schema Registry API finden Sie im Entwicklerhandbuch für die [Schema-Registrierung](../api/getting-started.md). Anweisungen zum Definieren von Schema-Beziehungen in der Benutzeroberfläche finden Sie im Lernprogramm zum [Definieren von Schema-Beziehungen mit dem Schema-Editor](relationship-ui.md).
+Durch Befolgung dieses Tutorials haben Sie erfolgreich eine Eins-zu-Eins-Beziehung zwischen zwei Schemas erstellt. For more information on working with descriptors using the [!DNL Schema Registry] API, see the [Schema Registry developer guide](../api/getting-started.md). Anweisungen zum Definieren von Schemabeziehungen in der Benutzeroberfläche finden Sie im Tutorial zum [Definieren von Schemabeziehungen mit dem Schema-Editor](relationship-ui.md).
