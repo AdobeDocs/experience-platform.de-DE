@@ -1,40 +1,40 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Schulungen zum Echtzeit-Profil von Kunden
+title: Tutorials zum Echtzeit-Kundenprofil
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 6%
+source-wordcount: '450'
+ht-degree: 47%
 
 ---
 
 
-# Echtzeit-Profil- und Identitätsdienst für Kunden konfigurieren
+# Konfigurieren [!DNL Real-time Customer Profile] und [!DNL Identity Service]
 
-Zur Konfiguration des Echtzeit-Profils von Kunden für Ihr Unternehmen müssen Sie mehrere separate Workflows durchführen. In diesem Dokument werden die erforderlichen Schritte beschrieben und Links zu Lernprogrammen für die einzelnen Arbeitsabläufe bereitgestellt. Um mehr über Echtzeit-Kundendaten zu erfahren, lesen Sie zunächst den Überblick über das [Profil](../profile/home.md).
+In order to configure [!DNL Real-time Customer Profile] for your organization, you are required to complete multiple separate workflows. In diesem Dokument werden die erforderlichen Schritte beschrieben und Links zu Tutorials für die einzelnen Workflows bereitgestellt. To learn more about [!DNL Real-time Customer Profile], begin by reading the [Profile overview](../profile/home.md).
 
-## Schema für Profil und Identität aktivieren
+## Schema für [!DNL Profile] und [!DNL Identity]
 
-Bevor Daten in die Adobe Experience Platform aufgenommen und zur Erstellung von Echtzeit-Kundendaten verwendet werden können, muss ein Schema erstellt werden, das die Struktur der Daten bereitstellt, die erfasst werden sollen, und dieses Schema muss für die Verwendung in Profil und dem Adobe Experience Platform Identity Service aktiviert werden. Eine schrittweise Anleitung zum Erstellen eines Schemas, das sowohl für den Profil- als auch für den Identitätsdienst aktiviert ist, finden Sie in den Lernprogrammen zum [Erstellen eines Schemas mit der Schema-Registrierungs-API](../xdm/tutorials/create-schema-api.md) oder zum [Erstellen eines Schemas mithilfe der Schema Builder-Benutzeroberfläche](../xdm/tutorials/create-schema-ui.md).
+Before data can be ingested into Adobe Experience Platform and used in the creation of [!DNL Real-time Customer Profiles], a schema must be created to provide the structure for the data that will be ingested and that schema must be enabled for use in [!DNL Profile] and Adobe Experience Platform [!DNL Identity Service]. For step-by-step instructions on creating a schema that is enabled for both [!DNL Profile] and [!DNL Identity Service], please refer to the tutorials for [creating a schema using the Schema Registry API](../xdm/tutorials/create-schema-api.md) or [creating a schema using the Schema Builder UI](../xdm/tutorials/create-schema-ui.md).
 
-## Dataset für Profil und Identität konfigurieren
+## Konfigurieren eines Datensatzes für [!DNL Profile] und [!DNL Identity]
 
-Um Daten in Profil zu integrieren, müssen Sie über einen Datensatz verfügen, der ordnungsgemäß für die Verwendung mit dem Echtzeit-Kundendienst und dem Identitätsdienst konfiguriert wurde. Um zu beginnen, folgen Sie dem Lernprogramm zum [Konfigurieren eines Datensatzes für Profil und Identität](../profile/tutorials/dataset-configuration.md).
+To begin ingesting data into [!DNL Profile], you must have a dataset that has been properly configured for use with [!DNL Real-time Customer Profile] and [!DNL Identity Service]. Befolgen Sie zunächst das [Tutorial zum Konfigurieren eines Datensatzes für Profil und Identität](../profile/tutorials/dataset-configuration.md).
 
-## Zusammenführungsrichtlinien konfigurieren
+## Konfigurieren von Zusammenführungsrichtlinien
 
-Mit der Adobe Experience Platform können Sie Daten aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Informationen zum Arbeiten mit Zusammenführungsrichtlinien in der Plattform-Benutzeroberfläche finden Sie im [Benutzerhandbuch](../profile/ui/merge-policies.md)zu Zusammenführungsrichtlinien. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Echtzeit-Profil-API finden Sie im Entwicklerhandbuch für [Zusammenführungsrichtlinien](../profile/api/merge-policies.md).
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Mithilfe von RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, bestehende Richtlinien verwalten und eine für Ihr Unternehmen als Standard verwendete Zusammenführungsrichtlinie einrichten. To work with merge policies in the [!DNL Platform] UI, visit the [merge policies user guide](../profile/ui/merge-policies.md). Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Real-time Customer Profile-API finden Sie im [Entwicklerhandbuch für Zusammenführungsrichtlinien](../profile/api/merge-policies.md).
 
-## Edge-Prognosen konfigurieren
+## Konfigurieren von Kantenprojektionen
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und im Zuge von Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten durch die Verwendung von so genannten Kanten. Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht. Die Daten werden durch eine Projektion an eine Kante geleitet, wobei ein Projektionsziel die Kante definiert, an die die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die an der Kante zur Verfügung gestellt werden. Weitere Informationen und die Möglichkeit, mit Kanten zu arbeiten, finden Sie im [Unterhandbuch zur Echtzeit-Kundendaten-API zu Edge-Prognosen](../profile/api/edge-projections.md).
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und bei Änderungen kontinuierlich aktualisiert werden. Adobe [!DNL Experience Platform] enables this real-time access to data through the use of what are known as edges. Eine Kante ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht. Die Daten werden durch eine Projektion an eine Kante geleitet, wobei ein Projektionsziel die Kante definiert, an die die Daten gesendet werden, und eine Projektionskonfiguration die spezifischen Informationen definiert, die an der Kante zur Verfügung gestellt werden. For more information and to begin working with edges, refer to the [!DNL Real-time Customer Profile] API [sub-guide on edge projections](../profile/api/edge-projections.md).
 
 ## Nächste Schritte
 
-Nachdem Sie Echtzeit-Kundendaten für Ihr Unternehmen konfiguriert haben, können Sie Daten zu einzelnen Profilen hinzufügen und Audiencen auf der Grundlage spezifischer Kundenattribute erstellen. Erste Schritte finden Sie in den folgenden Lernprogrammen:
+Once you have configured [!DNL Real-time Customer Profile] for your organization, you can begin adding data to individual customer profiles and creating audience segments based on specific customer attributes. Erste Schritte finden Sie in den folgenden Tutorials:
 
-* [Daten Hinzufügen Echtzeit-Profil](../profile/tutorials/add-profile-data.md)
-* [Segment erstellen](../segmentation/tutorials/create-a-segment.md)
+* [Hinzufügen von Daten zum Echtzeit-Kundenprofil](../profile/tutorials/add-profile-data.md)
+* [Erstellen eines Segments](../segmentation/tutorials/create-a-segment.md)
