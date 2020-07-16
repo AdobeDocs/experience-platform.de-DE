@@ -1,41 +1,41 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erzwingen von Datenverwendungsrichtlinien mithilfe der Policy Service API
+title: Datennutzungsrichtlinien mithilfe der Policy Service-API durchsetzen
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 3%
+source-wordcount: '869'
+ht-degree: 83%
 
 ---
 
 
-# Erzwingen von Datenverwendungsrichtlinien mithilfe der Policy Service API
+# Enforce data usage policies using the [!DNL Policy Service] API
 
-Nachdem Sie Datenverwendungsbeschriftungen für Ihre Daten erstellt und Nutzungsrichtlinien für Marketingaktionen für diese Beschriftungen erstellt haben, können Sie mit der API [für den](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DUL-Policy-Dienst bewerten, ob eine Marketingaktion, die für einen Datensatz oder eine beliebige Gruppe von Beschriftungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann Ihre eigenen internen Protokolle einrichten, um Richtlinienverletzungen basierend auf der API-Antwort zu behandeln.
+Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 
 >[!NOTE]
 >
->Standardmäßig `ENABLED` können nur Richtlinien, deren Status auf &quot;Testen&quot;festgelegt ist, an der Evaluierung teilnehmen. Damit `DRAFT` Richtlinien an der Auswertung teilnehmen können, müssen Sie den Parameter &quot;Abfrage&quot; `includeDraft=true` in den Anforderungspfad einbeziehen.
+>Standardmäßig können nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, an der Bewertung teilnehmen. Damit `DRAFT`-Richtlinien an der Bewertung teilnehmen können, müssen Sie den Abfrageparameter `includeDraft=true` in den Anfragepfad einbeziehen.
 
-In diesem Dokument wird beschrieben, wie Sie die [!DNL Policy Service] API verwenden, um in verschiedenen Szenarien nach Richtlinienverletzungen zu suchen.
+This document provides steps on how to use the [!DNL Policy Service] API to check for policy violations in different scenarios.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Schlüsselkonzepte, die bei der Durchsetzung von DULE-Richtlinien zum Tragen kommen:
+Diese Anleitung setzt ein Verständnis der folgenden Schlüsselkonzepte voraus, die beim Durchsetzen von DULE-Richtlinien gelten:
 
-* [Datenverwaltung](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Platform] erzwungen wird.
-   * [Datenverwendungsbeschriftungen](../labels/overview.md): Datenverwendungsbeschriftungen werden auf Datasets (und/oder einzelne Felder innerhalb dieser Datensätze) angewendet und geben Einschränkungen für die Verwendung dieser Daten an.
-   * [Datenverwendungsrichtlinien](../policies/overview.md): Datenverwendungs-Richtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, die für bestimmte Sätze von DULE-Beschriftungen zulässig oder eingeschränkt sind.
+* [Data Governance](../home.md)[!DNL Platform]: Das Framework, mit dem die Einhaltung der Datennutzungsrichtlinien durchsetzt.
+   * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf Datensätze (und/oder einzelne Felder in diesen Datensätzen) angewendet und geben Einschränkungen für die Verwendungsmöglichkeiten dieser Daten an.
+   * [Datennutzungsrichtlinien](../policies/overview.md): Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die für bestimmte Sätze von DULE-Bezeichnungen zulässig bzw. eingeschränkt sind.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie für die erfolgreiche Durchführung von Aufrufen an die DULE [!DNL Policy Service] -API benötigen, einschließlich erforderlicher Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
 
-## Bewerten Sie die Bewertung mit DULE-Etiketten und einer Marketingaktion.
+## Mit DULE-Bezeichnungen und einer Marketing-Aktion bewerten
 
-Sie können eine Richtlinie bewerten, indem Sie eine Marketingaktion mit einem Satz von DULE-Beschriftungen testen, die hypothetisch in einem Datensatz vorhanden sein würden. Dies geschieht mithilfe des Parameters `duleLabels` Abfrage, bei dem Doppel-Beschriftungen als kommagetrennte Liste von Werten bereitgestellt werden, wie im folgenden Beispiel gezeigt.
+Sie können eine Richtlinie bewerten, indem Sie eine Marketing-Aktion mit einem Satz von DULE-Bezeichnungen testen, die hypothetisch in einem Datensatz vorhanden sein würden. Dies geschieht mithilfe des Abfrageparameters `duleLabels`, bei dem DULE-Bezeichnungen als kommagetrennte Liste von Werten bereitgestellt werden (siehe folgendes Beispiel).
 
 **API-Format**
 
@@ -46,16 +46,16 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die mit der von Ihnen bewerteten DULE-Richtlinie verknüpft ist. |
-| `{LABEL_1}` | Eine Datenverwendungsbeschriftung zum Testen der Marketingaktion. Es muss mindestens ein Etikett angegeben werden. Bei der Bereitstellung mehrerer Beschriftungen müssen diese durch Kommas getrennt werden. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der von Ihnen bewerteten DULE-Richtlinie verknüpft ist. |
+| `{LABEL_1}` | Eine Datennutzungsbezeichnung zum Testen der Marketing-Aktion. Es muss mindestens eine Bezeichnung angegeben werden. Bei der Bereitstellung mehrerer Bezeichnungen müssen diese durch Kommas getrennt werden. |
 
 **Anfrage**
 
-Die folgende Anforderung testet die `exportToThirdParty` Marketingmaßnahme gegen Etiketten `C1` und `C3`. Da die zuvor in diesem Lernprogramm erstellte Datenverwendungsrichtlinie die `C1` Bezeichnung als eine der `deny` Bedingungen in ihrem Policy-Ausdruck definiert, sollte die Marketingaktion eine Richtlinienverletzung auslösen.
+Die folgende Anfrage testet die Marketing-Aktion `exportToThirdParty` hinsichtlich der Bezeichnungen `C1` und `C3`. Da die zuvor in dieser Anleitung erstellte Datennutzungsrichtlinie die `C1`-Bezeichnung als eine der `deny`-Bedingungen in ihrem Richtlinienausdruck definiert, sollte die Marketing-Aktion eine Richtlinienverletzung auslösen.
 
 >[!NOTE]
 >
->Bei den Beschriftungen für die Datenverwendung wird zwischen Groß- und Kleinschreibung unterschieden. Richtlinienverletzungen treten nur dann auf, wenn die in ihren Richtlinien-Ausdrücken definierten Bezeichnungen exakt übereinstimmen. In diesem Beispiel würde eine `C1` Beschriftung eine Verletzung auslösen, eine `c1` Bezeichnung hingegen nicht.
+>Bei Datennutzungsbezeichnungen wird zwischen Groß- und Kleinschreibung unterschieden. Richtlinienverletzungen treten nur dann auf, wenn die in ihren Richtlinienausdrücken definierten Bezeichnungen exakt übereinstimmen. In diesem Beispiel würde eine `C1`-Bezeichnung eine Verletzung auslösen, eine `c1`-Bezeichnung hingegen nicht.
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die URL für die Marketingaktion, die DULE-Beschriftungen, gegen die sie getestet wurde, und eine Liste aller DULE-Richtlinien zurückgegeben, die beim Testen der Aktion gegen diese Beschriftungen verletzt wurden. In diesem Beispiel wird die Richtlinie &quot;Daten an Dritte exportieren&quot;im `violatedPolicies` Array angezeigt, was angibt, dass die Marketingaktion die erwartete Richtlinienverletzung ausgelöst hat.
+Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die DULE-Bezeichnungen, anhand der sie getestet wurde, und eine Liste aller DULE-Richtlinien zurückgegeben, die beim Testen der Aktion hinsichtlich dieser Bezeichnungen verletzt wurden. In diesem Beispiel wird die Richtlinie „Daten an Dritte exportieren“ im `violatedPolicies`-Array angezeigt; dadurch wird angegeben, dass die Marketing-Aktion die erwartete Richtlinienverletzung ausgelöst hat.
 
 ```json
 {
@@ -128,11 +128,11 @@ Bei einer erfolgreichen Antwort werden die URL für die Marketingaktion, die DUL
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `violatedPolicies` | Ein Array, das alle DULE-Richtlinien auflistet, die durch Testen der Marketingaktion (angegeben in `marketingActionRef`) gegen die bereitgestellte `duleLabels`Richtlinie verletzt wurden. |
+| `violatedPolicies` | Ein Array, das alle DULE-Richtlinien auflistet, die durch Testen der Marketing-Aktion (angegeben in `marketingActionRef`) hinsichtlich der angegebenen `duleLabels` verletzt wurden. |
 
-## Mit Datensätzen auswerten
+## Mit Datensätzen bewerten
 
-Sie können eine DULE-Richtlinie bewerten, indem Sie eine Marketingaktion mit einem oder mehreren Datensätzen testen, aus denen Doppel-Etiketten erfasst werden können. Dies geschieht durch eine POST-Anforderung an `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` und die Bereitstellung von DataSet-IDs im Anforderungstext, wie im folgenden Beispiel gezeigt.
+Sie können eine DULE-Richtlinie bewerten, indem Sie eine Marketing-Aktion mit einem oder mehreren Datensätzen testen, aus denen DULE-Bezeichnungen gesammelt werden können. Dies geschieht durch eine POST-Anfrage an `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` und Angabe von Datensatz-IDs im Anfragetext, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -143,11 +143,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die mit der von Ihnen bewerteten DULE-Richtlinie verknüpft ist. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der von Ihnen bewerteten DULE-Richtlinie verknüpft ist. |
 
 **Anfrage**
 
-Die folgende Anforderung testet die `exportToThirdParty` Marketingaktion mit drei verschiedenen Datensätzen. Die Datensätze werden nach Typ und ID in einem Array referenziert, das in der Payload bereitgestellt wird.
+Die folgende Anfrage testet die Marketing-Aktion `exportToThirdParty` mit drei verschiedenen Datensätzen. Die Datensätze werden nach Typ und Kennung in einem Array referenziert, das in der Payload bereitgestellt wird.
 
 ```shell
 curl -X POST \
@@ -175,12 +175,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `entityType` | Jedes Element im Payload-Array muss den Typ der zu definierenden Entität angeben. In diesem Anwendungsfall ist der Wert immer &quot;dataSet&quot;. |
-| `entityId` | Jedes Element im Payload-Array muss die eindeutige ID für einen Datensatz bereitstellen. |
+| `entityType` | Jedes Element im Payload-Array muss den Typ der zu definierenden Entität angeben. In diesem Anwendungsfall ist der Wert immer „dataSet“. |
+| `entityId` | Jedes Element im Payload-Array muss die eindeutige Kennung für einen Datensatz angeben. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die URL für die Marketingaktion, die DULE-Beschriftungen, die aus den bereitgestellten Datensätzen gesammelt wurden, und eine Liste aller DULE-Richtlinien zurückgegeben, die beim Testen der Aktion gegen diese Beschriftungen verletzt wurden. In diesem Beispiel wird die Richtlinie &quot;Daten an Dritte exportieren&quot;im `violatedPolicies` Array angezeigt, was angibt, dass die Marketingaktion die erwartete Richtlinienverletzung ausgelöst hat.
+Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die DULE-Bezeichnungen, die aus den bereitgestellten Datensätzen gesammelt wurden, und eine Liste aller DULE-Richtlinien zurückgegeben, die beim Testen der Aktion hinsichtlich dieser Bezeichnungen verletzt wurden. In diesem Beispiel wird die Richtlinie „Daten an Dritte exportieren“ im `violatedPolicies`-Array angezeigt; dadurch wird angegeben, dass die Marketing-Aktion die erwartete Richtlinienverletzung ausgelöst hat.
 
 ```json
 {
@@ -361,12 +361,12 @@ Bei einer erfolgreichen Antwort werden die URL für die Marketingaktion, die DUL
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `duleLabels` | Eine Liste von DULE-Beschriftungen, die aus den in der Anforderungs-Nutzlast bereitgestellten Datensätzen extrahiert wurden. |
-| `discoveredLabels` | Eine Liste der Datensätze, die in der Anforderungsnutzlast bereitgestellt wurden, mit den in den einzelnen Datensätzen gefundenen DULE-Beschriftungen auf Datensatzebene und Feldebene. |
-| `violatedPolicies` | Ein Array, das alle DULE-Richtlinien auflistet, die durch Testen der Marketingaktion (angegeben in `marketingActionRef`) gegen die bereitgestellte `duleLabels`Richtlinie verletzt wurden. |
+| `duleLabels` | Eine Liste von DULE-Bezeichnungen, die aus den in der Anfrage-Payload angegebenen Datensätzen extrahiert wurden. |
+| `discoveredLabels` | Eine Liste der Datensätze, die in der Anfrage-Payload angegeben wurden; angezeigt werden die in den einzelnen Datensätzen gefundenen DULE-Bezeichnungen auf Datensatzebene und Feldebene. |
+| `violatedPolicies` | Ein Array, das alle DULE-Richtlinien auflistet, die durch Testen der Marketing-Aktion (angegeben in `marketingActionRef`) hinsichtlich der angegebenen `duleLabels`-Richtlinie verletzt wurden. |
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie bei der Durchführung einer Marketingaktion für einen Datensatz oder eine Reihe von DULE-Beschriftungen erfolgreich auf Richtlinienverletzungen überprüft. Mithilfe der in den API-Antworten zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverletzungen bei deren Auftreten angemessen zu erzwingen.
+Durch Befolgen dieses Dokuments haben Sie bei der Ausführung einer Marketing-Aktion für einen Datensatz oder eine Reihe von DULE-Bezeichnungen erfolgreich auf Richtlinienverletzungen geprüft. Mithilfe der in den API-Antworten zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverletzungen bei ihrem Auftreten angemessen durchzusetzen.
 
-Anweisungen zum Erzwingen von Datenverwendungsrichtlinien für Audiencen-Segmente in [!DNL Real-time Customer Profile]finden Sie im folgenden [Lernprogramm](../../segmentation/tutorials/governance.md).
+For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
