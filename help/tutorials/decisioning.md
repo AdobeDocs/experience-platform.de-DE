@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Entscheidungslehrgänge
+title: Tutorials zur Entscheidungsfindung
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 0%
+source-wordcount: '118'
+ht-degree: 41%
 
 ---
 
 
-# Erste Schritte mit dem Entscheidungsdienst
+# Get started with [!DNL Decisioning Service]
 
-Der Entscheidungsdienst bietet die Möglichkeit, personalisierte, optimierte und orchestrierte Erlebnisse in Anwendungen zu erstellen, die auf der Adobe Experience Platform ausgeführt werden. Mithilfe des Entscheidungsdienstes können Sie die beste Option aus einer Reihe verfügbarer Optionen bestimmen. Diese Optionen, auch als Alternativen bezeichnet, könnten Angebot, Produktempfehlungen, Inhaltskomponenten für ein Web-Erlebnis, Gesprächsskripte und zu ergreifende Maßnahmen sein. Weitere Informationen finden Sie in der Übersicht über den [Entscheidungsdienst](../decisioning-service/home.md).
+[!DNL Decisioning Service]Der bietet die Möglichkeit, in Anwendungen, die auf Adobe Experience Platform ausgeführt werden, personalisierte, optimierte und orchestrierte Erlebnisse zu erstellen. Using [!DNL Decisioning Service], you can determine the best option from a set of available choices. Diese Optionen, auch als Alternativen bezeichnet, könnten Angebote, Produktempfehlungen, Inhaltskomponenten für ein Web-Erlebnis, Gesprächsskripte und zu ergreifende Maßnahmen sein. Weitere Informationen finden Sie unter [Entscheidungsdienst – Überblick](../decisioning-service/home.md).
 
-## Arbeiten mit der Laufzeit des Entscheidungsdienstes
+## Arbeiten mit [!DNL Decisioning Service] Laufzeit
 
-Erfahren Sie, wie Sie mit den Laufzeitdiensten des Entscheidungsdienstes mit Adobe Experience Platform-APIs arbeiten, indem Sie die [Arbeit mit dem Training](../decisioning-service/tutorials/runtime.md)zur Entscheidungsdienst-Laufzeit befolgen.
+Learn how to work with the runtime services of [!DNL Decisioning Service] using Adobe Experience Platform APIs by following the [work with Decisioning Service runtime tutorial](../decisioning-service/tutorials/runtime.md).
 
-## Verwalten von Entscheidungsdienststellen
+## Verwalten von [!DNL Decisioning Service] Entitäten
 
-Eine Anleitung zum Arbeiten mit den Geschäftseinheiten des Entscheidungsdienstes mithilfe der Adobe Experience Platform-APIs finden Sie im Lernprogramm [](../decisioning-service/tutorials/entities.md)zum Verwalten von Entscheidungsobjekten und -regeln.
+For a tutorial showing how to work with the business entities of [!DNL Decisioning Service] using Adobe Experience Platform APIs, visit the [manage Decisioning objects and rules tutorial](../decisioning-service/tutorials/entities.md).
