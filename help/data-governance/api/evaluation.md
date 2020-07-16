@@ -4,29 +4,29 @@ solution: Experience Platform
 title: Richtlinien
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 2%
+source-wordcount: '938'
+ht-degree: 95%
 
 ---
 
 
-# Politikbewertung
+# Bewertung von Richtlinien
 
-Nachdem Marketingaktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service API bewerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen haben die Form eines Richtliniensatzes, der durch den Versuch der Marketingaktion für die angegebenen Daten, die Datenverwendungsbeschriftungen enthalten, verletzt wird.
+Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
 
-Standardmäßig nehmen **nur Richtlinien, deren Status auf &quot;AKTIVIERT&quot;festgelegt ist, an der Evaluierung** teil. Sie können jedoch den Parameter &quot;Abfrage&quot;verwenden, um Richtlinien des Typs &quot;ENTWURF&quot;in die Evaluierung `?includeDraft=true` einzubeziehen.
+Standardmäßig nehmen **nur Richtlinien an der Bewertung teil, deren Status auf „AKTIVIERT“ gesetzt ist**. Sie können jedoch den Abfrageparameter `?includeDraft=true` verwenden, um „ENTWURF“-Richtlinien in die Bewertung einzubeziehen.
 
-Die Evaluierungsanträge können auf drei Arten gestellt werden:
+Bewertungsanfragen können auf drei Arten gestellt werden:
 
-1. Verstößt die Aktion in Anbetracht einer Reihe von Beschreibungen zur Datenverwendung und einer Marketingaktion gegen Richtlinien?
-1. Verstößt die Aktion in Anbetracht eines oder mehrerer Datensätze und einer Marketingaktion gegen eine Richtlinie?
-1. Verstößt die Aktion in Anbetracht eines oder mehrerer Datensätze und einer Untergruppe von einem oder mehreren Feldern innerhalb jedes dieser Datensätze gegen irgendeine Richtlinie?
+1. Verstößt die Aktion bei einer Reihe von Datennutzungsbezeichnungen und einer Marketing-Aktion gegen irgendwelche Richtlinien?
+1. Verstößt die Aktion bei einem oder mehreren Datensätzen und einer Marketing-Aktion gegen irgendwelche Richtlinien?
+1. Verstößt die Aktion bei einem oder mehreren Datensätzen und einer Teilmenge eines oder mehrerer Felder in jedem dieser Datensätze gegen Richtlinien?
 
-## Richtlinien mithilfe von Datenverwendungsbeschriftungen und einer Marketingaktion bewerten
+## Bewerten von Richtlinien mithilfe von Datennutzungsbezeichnungen und einer Marketing-Aktion
 
-Zur Bewertung von Richtlinienverstößen auf der Grundlage von Datenverwendungsbeschriftungen müssen Sie die Beschriftungen angeben, die während der Anforderung auf den Daten vorhanden sein sollen. Dies geschieht mithilfe von Abfrage-Parametern, bei denen Datenverwendungsbeschriftungen als kommagetrennte Liste von Werten bereitgestellt werden, wie im folgenden Beispiel gezeigt.
+Zur Bewertung von Richtlinienverstößen auf der Grundlage von vorhandenen Datennutzungsbezeichnungen müssen Sie die Bezeichnungen angeben, die während der Anfrage vorhanden sein sollen. Dies geschieht mithilfe von Abfrageparametern, bei denen Datennutzungsbezeichnungen als kommagetrennte Liste von Werten bereitgestellt werden, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -37,9 +37,9 @@ GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value
 
 **Anfrage**
 
-Die folgende Beispielanforderung bewertet eine Marketingaktion mit den Beschriftungen C1 und C3. Beachten Sie bei der Bewertung von Richtlinien mithilfe von Datenverwendungsbeschriftungen Folgendes:
-* **Bei den Beschriftungen für die Datenverwendung wird zwischen Groß- und Kleinschreibung unterschieden.** Die oben dargestellte Anforderung gibt eine verletzte Richtlinie zurück, während die gleiche Anforderung mit Kleinbuchstaben (z. `"c1,c3"`, `"C1,c3"`, `"c1,C3"`) nicht.
-* **Achten Sie auf die`AND`und`OR`Operatoren in Ihren Policy-Ausdrücken.** Wenn in diesem Beispiel eine Beschriftung (`C1` oder `C3`) in der Anfrage allein erschienen wäre, hätte die Marketingaktion diese Richtlinie nicht verletzt. Es erfordert beide Bezeichnungen (`C1 AND C3`), um die verletzte Richtlinie zurückzugeben. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig bewerten und politische Ausdruck mit gleicher Sorgfalt definieren.
+Die folgende Beispielanfrage bewertet eine Marketing-Aktion mit den Bezeichnungen C1 und C3. Beachten Sie bei der Bewertung von Richtlinien mithilfe von Datennutzungsbezeichnungen Folgendes:
+* **Bei den Datennutzungsbezeichnungen wird zwischen Groß- und Kleinschreibung unterschieden.** Die oben dargestellte Anfrage gibt eine verletzte Richtlinie zurück, während die gleiche Anfrage mit Kleinbuchstaben (z. B. `"c1,c3"`, `"C1,c3"`, `"c1,C3"`) dies nicht tut.
+* **Achten Sie auf`AND`- und`OR`-Operatoren in Ihren Richtlinienausdrücken.** In diesem Beispiel hätte die Marketing-Aktion nicht gegen diese Richtlinie verstoßen, wenn eine der Bezeichnungen (`C1` oder `C3`) in der Anfrage allein erschienen wäre. Es sind beide Bezeichnungen (`C1 AND C3`) erforderlich, um die verletzte Richtlinie zurückzugeben. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig bewerten und die Richtlinienausdrücke mit gleicher Sorgfalt definieren.
 
 ```SHELL
 curl -X GET \
@@ -52,7 +52,7 @@ curl -X GET \
 
 **Antwort**
 
-Das Antwortobjekt enthält ein `duleLabels` Array, das mit den in der Anforderung gesendeten Beschriftungen übereinstimmen sollte. Wenn die Durchführung der angegebenen Marketingaktion gegen die Datenverwendungsbeschriftungen eine Richtlinie verletzt, enthält das `violatedPolicies` Array die Details der betroffenen Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies` Array leer angezeigt (`[]`).
+Das Antwortobjekt enthält ein `duleLabels`-Array, das mit den in der Anfrage gesendeten Bezeichnungen übereinstimmen sollte. Wenn die Durchführung der angegebenen Marketing-Aktion für die Datennutzungsbezeichnungen eine Richtlinie verletzt, enthält das `violatedPolicies`-Array die Details der betroffenen Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies`-Array leer angezeigt (`[]`).
 
 ```JSON
 {
@@ -110,9 +110,9 @@ Das Antwortobjekt enthält ein `duleLabels` Array, das mit den in der Anforderun
 }
 ```
 
-## Richtlinien mithilfe von Datensätzen und einer Marketingaktion bewerten
+## Bewerten von Richtlinien mithilfe von Datensätzen und einer Marketing-Aktion
 
-Sie können auch Richtlinienverletzungen bewerten, indem Sie die ID eines oder mehrerer Datensätze angeben, aus denen Datenverwendungsbeschriftungen erfasst werden können. Dies geschieht, indem eine POST-Anforderung entweder an den Kern- oder benutzerdefinierten `/constraints` Endpunkt für eine Marketingaktion ausgeführt und die DataSet-IDs im Anforderungstext angegeben werden, wie unten dargestellt.
+Sie können auch Richtlinienverstöße bewerten, indem Sie die ID eines oder mehrerer Datensätze angeben, aus denen Datennutzungsbezeichnungen erfasst werden können. Dies erfolgt durch Ausführen einer POST-Anfrage an den Kern- oder den benutzerdefinierten `/constraints`-Endpunkt für eine Marketing-Aktion und Angeben der Datensatz-IDs innerhalb des Anfrageinhalts, wie unten dargestellt.
 
 **API-Format**
 
@@ -123,7 +123,7 @@ POST /marketingActions/custom/{marketingActionName}/constraints
 
 **Anfrage**
 
-Der Anforderungstext enthält ein Array mit einem Objekt für jede DataSet-ID. Da Sie einen Anforderungstext senden, wird der &quot;Content-Type: &quot;application/json&quot;-Anforderungsheader erforderlich ist, wie im folgenden Beispiel gezeigt.
+Der Anfrageinhalt enthält ein Array mit einem Objekt für jede Datensatz-ID. Da Sie einen Anfrageinhalt senden, ist die Anfragekopfzeile „Content-Type: application/json“ erforderlich, wie im folgenden Beispiel gezeigt.
 
 ```SHELL
 curl -X POST \
@@ -151,11 +151,11 @@ curl -X POST \
 
 **Antwort**
 
-Das Antwortobjekt enthält ein `duleLabels` Array, das eine konsolidierte Liste aller in den angegebenen Datensätzen gefundenen Beschriftungen enthält. Diese Liste enthält Beschriftungen auf Datensatzebene und Feldebene für alle Felder im Datensatz.
+Das Antwortobjekt enthält ein `duleLabels`-Array, das eine konsolidierte Liste aller in den angegebenen Datensätzen gefundenen Bezeichnungen enthält. Diese Liste enthält Bezeichnungen auf Datensatz- und Feldebene für alle Felder im Datensatz.
 
-Die Antwort enthält außerdem ein `discoveredLabels` Array, das Objekte für jeden Datensatz enthält und in Beschriftungen auf Dataset- und Feldebene `datasetLabels` unterteilt ist. Jede Beschriftung auf Feldebene zeigt den Pfad zum jeweiligen Feld mit dieser Beschriftung.
+Die Antwort enthält außerdem ein `discoveredLabels`-Array mit Objekten für jeden Datensatz, in dem die `datasetLabels` in Bezeichnungen auf Datensatz- und Feldebene unterteilt sind. Jede Bezeichnung auf Feldebene zeigt den Pfad zum jeweiligen Feld mit dieser Bezeichnung.
 
-Wenn die angegebene Marketingaktion gegen eine Richtlinie verstößt, die die `duleLabels` in den Datensätzen enthaltenen Informationen enthält, enthält das `violatedPolicies` Array die Details der betreffenden Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies` Array leer angezeigt (`[]`).
+Wenn die angegebene Marketing-Aktion gegen eine Richtlinie verstößt, die die `duleLabels` in den Datensätzen betrifft, enthält das `violatedPolicies`-Array die Details der betroffenen Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies`-Array leer angezeigt (`[]`).
 
 ```JSON
 {
@@ -326,14 +326,14 @@ Wenn die angegebene Marketingaktion gegen eine Richtlinie verstößt, die die `d
 }
 ```
 
-## Richtlinien mithilfe von Datensätzen, Feldern und einer Marketingaktion bewerten
+## Bewerten von Richtlinien mithilfe von Datensätzen, Feldern und einer Marketing-Aktion
 
-Neben der Bereitstellung einer oder mehrerer DataSet-IDs kann auch eine Untergruppe von Feldern aus jedem Datensatz angegeben werden, die angibt, dass nur die Datenverwendungsbeschriftungen in diesen Feldern ausgewertet werden sollten. Ähnlich wie bei der POST-Anforderung, die nur Datensätze umfasst, fügt diese Anforderung dem Anforderungstext spezifische Felder für jeden Datensatz hinzu.
+Zusätzlich zur Angabe einer oder mehrerer Datensatz-IDs kann auch eine Teilmenge von Feldern aus jedem Datensatz angegeben werden, die angibt, dass nur die Datennutzungsbezeichnungen für diese Felder ausgewertet werden sollten. Ähnlich wie bei der POST-Anfrage, die nur Datensätze umfasst, fügt diese Anfrage dem Anfrageinhalt spezifische Felder für jeden Datensatz hinzu.
 
-Berücksichtigen Sie bei der Bewertung von Richtlinien mithilfe von DataSet-Feldern Folgendes:
+Beachten Sie bei der Bewertung von Richtlinien mithilfe von Datensatzfeldern Folgendes:
 
-* **Bei Feldnamen wird zwischen Groß- und Kleinschreibung unterschieden.** Bei der Bereitstellung von Feldern müssen sie genau so geschrieben werden, wie sie im Datensatz angezeigt werden (z. B. `firstName` vs `firstname`).
-* **Vererbung der Datenbeschriftung.** Datenverwendungsbeschriftungen können auf mehreren Ebenen angewendet werden und werden nach unten übernommen. Wenn Ihre Richtlinienbewertungen nicht so zurückgegeben werden, wie Sie dachten, sollten Sie die geerbten Beschriftungen von Datensätzen bis zu den Feldern überprüfen, die auf Feldebene angewendet werden.
+* **Bei Feldnamen wird zwischen Groß- und Kleinschreibung unterschieden.** Bei der Bereitstellung von Feldern müssen sie genau so geschrieben werden, wie sie im Datensatz erscheinen (z. B. `firstName` vs. `firstname`).
+* **Vererbung der Datensatzbezeichnungen.** Datennutzungsbezeichnungen können auf mehreren Ebenen angewendet werden und werden nach unten vererbt. Wenn Ihre Richtlinienbewertungen nicht so zurückgegeben werden, wie Sie es sich vorgestellt haben, überprüfen Sie zusätzlich zu den auf Feldebene angewendeten Bezeichnungen die vererbten Bezeichnungen von den Datensätzen bis hin zu den Feldern.
 
 **API-Format**
 
@@ -344,7 +344,7 @@ POST /marketingActions/custom/{marketingActionName}/constraints
 
 **Anfrage**
 
-Der Anforderungstext enthält ein Array mit einem Objekt für jede Datensatzkennung und die Untergruppe der Felder in diesem Datensatz, die für die Auswertung verwendet werden sollen. Da Sie einen Anforderungstext senden, wird der &quot;Content-Type: &quot;application/json&quot;-Anforderungsheader erforderlich ist, wie im folgenden Beispiel gezeigt.
+Der Anfrageinhalt enthält ein Array mit einem Objekt für jede Datensatz-ID und die Teilmenge der Felder in diesem Datensatz, die für die Bewertung verwendet werden sollen. Da Sie einen Anfrageinhalt senden, ist die Anfragekopfzeile „Content-Type: application/json“ erforderlich, wie im folgenden Beispiel gezeigt.
 
 ```SHELL
 curl -X POST \
@@ -389,11 +389,11 @@ curl -X POST \
 
 **Antwort**
 
-Das Antwortobjekt enthält ein `duleLabels` Array, das die konsolidierte Liste der Beschriftungen in den angegebenen Feldern enthält. Denken Sie daran, dass dies auch Datenbezeichnungen enthält, da sie in Felder vererbt werden.
+Das Antwortobjekt enthält ein `duleLabels`-Array, das die konsolidierte Liste der in den angegebenen Feldern gefundenen Bezeichnungen enthält. Denken Sie daran, dass dies auch Datensatzbezeichnungen umfasst, da diese bis zu den Feldern vererbt werden.
 
-Wenn eine Richtlinie durch die Durchführung der angegebenen Marketingaktion für die Daten in den bereitgestellten Feldern verletzt wird, enthält das `violatedPolicies` Array die Details der betreffenden Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies` Array leer angezeigt (`[]`).
+Wenn die Durchführung der angegebenen Marketing-Aktion für die Daten in den abgegebenen Feldern eine Richtlinie verletzt, enthält das `violatedPolicies`-Array die Details der betroffenen Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies`-Array leer angezeigt (`[]`).
 
-In der folgenden Antwort sehen Sie, dass die Liste von jetzt kürzer `duleLabels` ist, ebenso wie die für jeden Datensatz, da sie nur die im Anforderungstext angegebenen Felder enthält `discoveredLabels` . Sie werden auch feststellen, dass die zuvor verletzte Richtlinie &quot;Targeting-Anzeigen oder Inhalte&quot;beide `C4 AND C6` Bezeichnungen erfordert hat, sodass sie nicht mehr verletzt werden und das `violatedPolicies` Array leer erscheint.
+In der folgenden Antwort sehen Sie, dass die Liste der `duleLabels` jetzt kürzer ist, ebenso wie die `discoveredLabels` für jeden Datensatz, da sie nur die im Anfrageinhalt angegebenen Felder enthält. Sie werden auch feststellen, dass die zuvor verletzte Richtlinie „Targeting-Anzeigen oder Inhalte“ beide `C4 AND C6`-Bezeichnungen erforderte. Sie wird also nicht mehr verletzt und das `violatedPolicies`-Array ist leer.
 
 ```JSON
 {
@@ -495,4 +495,4 @@ In der folgenden Antwort sehen Sie, dass die Liste von jetzt kürzer `duleLabels
 
 ## Politikbewertung für [!DNL Real-time Customer Profile]
 
-Die [!DNL Policy Service] API kann auch verwendet werden, um Richtlinienverletzungen zu überprüfen, die die Verwendung von [!DNL Real-time Customer Profile] Segmenten beinhalten. Weiterführende Informationen finden Sie im Tutorial zum [Erzwingen der Einhaltung von Datennutzungsrichtlinien für Zielgruppensegmente](../../segmentation/tutorials/governance.md).
+The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-time Customer Profile] segments. Weiterführende Informationen finden Sie im Tutorial zum [Durchsetzen der Datennutzungskonformität für Zielgruppensegmente](../../segmentation/tutorials/governance.md).
