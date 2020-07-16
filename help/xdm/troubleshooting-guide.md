@@ -4,29 +4,29 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Experience Data Model (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '1826'
 ht-degree: 0%
 
 ---
 
 
-# Handbuch zur Fehlerbehebung bei Experience Data Model (XDM)
+# [!DNL Experience Data Model] (XDM) Handbuch zur Systemfehlerbehebung
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Experience Data Model (XDM) System sowie eine Anleitung zur Fehlerbehebung für häufige Fehler. Fragen und Fehlerbehebung zu anderen Diensten in Adobe Experience Platform finden Sie im Handbuch [Experience Platform zur Fehlerbehebung](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) System, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-**Experience Data Model (XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schema für das Kundenerlebnis-Management definiert. Die Methodik, auf der Experience Platform aufgebaut ist, **XDM-System**, operalisiert Experience Data Model-Schema für die Verwendung durch Plattformdienste. Die **Schema Registry** stellt eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **Schema-Bibliothek** in Experience Platform bereit. See the [XDM documentation](home.md) for more information.
+**[!DNL Experience Data Model](XDM)**ist eine Open-Source-Spezifikation, die standardisierte Schema für das Kundenerlebnis-Management definiert. Die Methode, auf der[!DNL Experience Platform]aufgebaut wird,**XDM System **, operalisiert[!DNL Experience Data Model]Schema für die Verwendung durch[!DNL Platform]Dienste. Die **[!DNL Schema Registry]**bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **[!DNL Schema Library]**Umgebung[!DNL Experience Platform]. See the[XDM documentation](home.md)for more information.
 
 ## FAQs
 
-Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zum XDM-System und zur Verwendung der Schema Registry-API.
+Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zum XDM-System und zur Verwendung der [!DNL Schema Registry] API.
 
 ### Wie füge ich einem Schema Felder hinzu?
 
-Sie können einem Schema Felder mit einem Mixin hinzufügen. Jedes Mixin ist mit einer oder mehreren Klassen kompatibel, sodass das Mixin in jedem Schema verwendet werden kann, das eine dieser kompatiblen Klassen implementiert. Adobe Experience Platform bietet verschiedene Branchenmixins mit eigenen vordefinierten Feldern. Sie können jedoch Ihre eigenen Felder zu einem Schema hinzufügen, indem Sie neue Mixins mit der API oder der Benutzeroberfläche erstellen.
+Sie können einem Schema Felder mit einem Mixin hinzufügen. Jedes Mixin ist mit einer oder mehreren Klassen kompatibel, sodass das Mixin in jedem Schema verwendet werden kann, das eine dieser kompatiblen Klassen implementiert. Während Adobe Experience Platform mehrere Branchenmixins mit eigenen vordefinierten Feldern bereitstellt, können Sie einem Schema eigene Felder hinzufügen, indem Sie neue Mixins mit der API oder der Benutzeroberfläche erstellen.
 
-Weitere Informationen zum Erstellen neuer Mixins in der API finden Sie im Entwicklerhandbuch für die Schema Registry API im Dokument zum [Erstellen eines Mixed](api/create-mixin.md) -. Wenn Sie die Benutzeroberfläche verwenden, finden Sie weitere Informationen im Tutorial zum [Schema-Editor](./tutorials/create-schema-ui.md).
+Weitere Informationen zum Erstellen neuer Mixins in der API finden Sie im API-Entwicklerhandbuch im [Dokument zum Erstellen eines Mixins](api/create-mixin.md) [!DNL Schema Registry] . Wenn Sie die Benutzeroberfläche verwenden, finden Sie weitere Informationen im Tutorial zum [Schema-Editor](./tutorials/create-schema-ui.md).
 
 ### Welches sind die besten Verwendungen für Mixins und Datentypen?
 
@@ -36,23 +36,23 @@ Weitere Informationen zum Erstellen neuer Mixins in der API finden Sie im Entwic
 
 ### Was ist die eindeutige ID für ein Schema?
 
-Alle Schema Registry-Ressourcen (Schema, Mixins, Datentypen, Klassen) verfügen über einen URI, der als eindeutige ID für Referenz- und Suchzwecke dient. Wenn Sie ein Schema in der API anzeigen, finden Sie es in den Attributen der obersten Ebene `$id` und `meta:altId` .
+Alle [!DNL Schema Registry] Ressourcen (Schemas, Mixins, Datentypen, Klassen) verfügen über einen URI, der als eindeutige ID für Referenz- und Suchzwecke dient. Wenn Sie ein Schema in der API anzeigen, finden Sie es in den Attributen der obersten Ebene `$id` und `meta:altId` .
 
-Weitere Informationen finden Sie im Abschnitt zur [Schema-Identifizierung](api/getting-started.md#schema-identification) im Entwicklerhandbuch für die Schema Registry API.
+Weitere Informationen finden Sie im Abschnitt zur [Schema-Identifizierung](api/getting-started.md#schema-identification) im [!DNL Schema Registry] API-Entwicklerhandbuch.
 
 ### Wann verhindert ein Schema-Beginn Umbrüche?
 
-Umbrüchige Änderungen können an einem Schema vorgenommen werden, solange es noch nie zur Erstellung eines Datensatzes verwendet oder für die Verwendung im [Echtzeit-Kundenkonto](../profile/home.md)aktiviert wurde. Sobald ein Schema bei der Erstellung eines Datensatzes verwendet oder für die Verwendung mit Echtzeit-Kundendaten aktiviert wurde, werden die Regeln der [Schema-Evolution](schema/composition.md#evolution) vom System strikt durchgesetzt.
+Umbrüchige Änderungen können an einem Schema vorgenommen werden, solange es noch nie bei der Erstellung eines Datensatzes verwendet oder zur Verwendung in aktiviert wurde [!DNL Real-time Customer Profile](../profile/home.md). Sobald ein Schema bei der Erstellung eines Datensatzes verwendet oder für die Verwendung mit aktiviert wurde, [!DNL Real-time Customer Profile]werden die Regeln der [Schema-Evolution](schema/composition.md#evolution) vom System strikt durchgesetzt.
 
 ### Wie hoch ist die maximale Größe eines langen Feldtyps?
 
 Ein langer Feldtyp ist eine Ganzzahl mit einer maximalen Größe von 53 (+1) Bit, wodurch ein potenzieller Bereich zwischen -9007199254740992 und 9007199254740992 liegt. Dies liegt daran, dass JavaScript-Implementierungen von JSON keine langen Ganzzahlen darstellen.
 
-Weitere Informationen zu Feldtypen finden Sie im Abschnitt [Definieren von XDM-Feldtypen](api/appendix.md#field-types) im Entwicklerhandbuch für die Schema Registry API.
+Weitere Informationen zu Feldtypen finden Sie im Abschnitt [Definieren von XDM-Feldtypen](api/appendix.md#field-types) [!DNL Schema Registry] im API-Entwicklerhandbuch.
 
 ### Wie definiere ich Identitäten für mein Schema?
 
-In Experience Platform werden Identitäten unabhängig von den zu interpretierenden Datenquellen zur Identifizierung eines Subjekts (in der Regel einer einzelnen Person) verwendet. Sie werden in Schemas definiert, indem Sie Schlüsselfelder als &quot;Identität&quot;markieren. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM-ID und andere eindeutige ID-Felder.
+In [!DNL Experience Platform]diesem Fall werden Identitäten unabhängig von den zu interpretierenden Datenquellen zur Identifizierung eines Subjekts (in der Regel einer einzelnen Person) verwendet. Sie werden in Schemas definiert, indem Sie Schlüsselfelder als &quot;Identität&quot;markieren. Häufig verwendete Identitätsfelder umfassen E-Mail-Adresse, Telefonnummer, CRM-ID [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html)und andere eindeutige ID-Felder.
 
 Felder können entweder über die API oder die Benutzeroberfläche als Identitäten gekennzeichnet werden.
 
@@ -62,48 +62,48 @@ In der API werden Identitäten durch Erstellen von Identitätsdeskriptoren festg
 
 Identitätsdeskriptoren werden durch eine POST-Anforderung an den /descriptors-Endpunkt erstellt. Bei erfolgreichem Abschluss erhalten Sie einen HTTP-Status 201 (Erstellt) und ein Antwortobjekt mit den Details des neuen Deskriptors.
 
-Weitere Informationen zum Erstellen von Identitätsdeskriptoren in der API finden Sie im Dokument zu [Deskriptoren](api/descriptors.md) im Schema Registry Developer Guide.
+Weitere Informationen zum Erstellen von Identitätsdeskriptoren in der API finden Sie im Dokument zu [Deskriptoren](api/descriptors.md) im [!DNL Schema Registry] Entwicklerhandbuch.
 
 #### Definieren von Identitäten in der Benutzeroberfläche
 
-Wenn Ihr Schema im Schema-Editor geöffnet ist, klicken Sie auf das Feld im Bereich &quot; **Struktur** &quot;des Editors, das Sie als Identität markieren möchten. Klicken Sie unter **Feldeigenschaften** auf der rechten Seite auf das Kontrollkästchen **Identität** .
+Wenn Ihr Schema im Schema-Editor geöffnet ist, klicken Sie auf das Feld im Bereich &quot; **[!UICONTROL Struktur]** &quot;des Editors, das Sie als Identität markieren möchten. Klicken Sie unter **[!UICONTROL Feldeigenschaften]** auf der rechten Seite auf das Kontrollkästchen **[!UICONTROL Identität]** .
 
 Weitere Informationen zum Verwalten von Identitäten in der Benutzeroberfläche finden Sie im Abschnitt zum [Definieren von Identitätsfeldern](./tutorials/create-schema-ui.md#identity-field) im Schema-Editor-Lernprogramm.
 
 ### Braucht mein Schema eine primäre Identität?
 
-Primäre Identitäten sind optional, da Schema 0 oder 1 davon haben können. Ein Schema muss jedoch über eine primäre Identität verfügen, damit das Schema für die Verwendung im Echtzeit-Kunden-Profil aktiviert werden kann. Weitere Informationen finden Sie im Schema-Editor-Tutorial im [Identitätsbereich](./tutorials/create-schema-ui.md#identity-field) .
+Primär-IDs sind optional, da Schema 0 oder 1 davon haben können. Ein Schema muss jedoch über eine primäre Identität verfügen, damit das Schema zur Verwendung in aktiviert werden kann [!DNL Real-time Customer Profile]. Weitere Informationen finden Sie im Schema-Editor-Tutorial im [Identitätsbereich](./tutorials/create-schema-ui.md#identity-field) .
 
-### Wie aktiviere ich ein Schema für die Verwendung im Echtzeit-Profil?
+### Wie aktiviere ich ein Schema zur Verwendung in [!DNL Real-time Customer Profile]?
 
-Schema können mithilfe eines Tags &quot;Vereinigung&quot;im [Echtzeit-Kundenattribut](../profile/home.md) des Schemas verwendet werden `meta:immutableTags` . Die Aktivierung eines Schemas zur Verwendung mit Profil kann über die API oder die Benutzeroberfläche erfolgen.
+Schema sind für die Verwendung [!DNL Real-time Customer Profile](../profile/home.md) durch das Hinzufügen eines Tags &quot;Vereinigung&quot;aktiviert, das sich im `meta:immutableTags` Attribut des Schemas befindet. Die Aktivierung eines Schemas zur Verwendung mit [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
 
-#### Aktivieren eines vorhandenen Schemas zum Profil mithilfe der API
+#### Aktivieren eines vorhandenen Schemas zur [!DNL Profile] Verwendung der API
 
 Führen Sie eine PATCH-Anforderung durch, um das Schema zu aktualisieren und das `meta:immutableTags` Attribut als Array mit dem Wert &quot;Vereinigung&quot;hinzuzufügen. Wenn die Aktualisierung erfolgreich ist, zeigt die Antwort das aktualisierte Schema an, das jetzt das Vereinigung-Tag enthält.
 
-Weitere Informationen zur Verwendung der API zum Aktivieren eines Schemas für die Verwendung im Echtzeit-Kundencenter finden Sie im Dokument [Vereinigungen](./api/unions.md) im Schema Registry Developer Guide.
+Weitere Informationen zur Verwendung der API zum Aktivieren eines Schemas für die Verwendung in [!DNL Real-time Customer Profile]finden Sie im Dokument [Vereinigungen](./api/unions.md) im Entwicklerhandbuch [!DNL Schema Registry] .
 
-#### Aktivieren eines vorhandenen Schemas für Profil mithilfe der Benutzeroberfläche
+#### Aktivieren eines vorhandenen Schemas zur [!DNL Profile] Verwendung der Benutzeroberfläche
 
-Klicken Sie in Experience Platform im linken Navigationsbereich auf **Schema** und wählen Sie den Namen des Schemas aus, das Sie in der Liste der Schema aktivieren möchten. Klicken Sie dann auf der rechten Seite des Editors unter **Schema Properties** auf **Profil** , um es einzuschalten.
+Klicken Sie [!DNL Experience Platform]im linken Navigationsbereich auf **[!UICONTROL Schema]** und wählen Sie den Namen des Schemas aus, das Sie in der Liste der Schema aktivieren möchten. Klicken Sie dann auf der rechten Seite des Editors unter **[!UICONTROL Schema Properties]** auf **[!UICONTROL Profil]** , um es einzuschalten.
 
 
-Weitere Informationen finden Sie im Schema-Editor-Tutorial im Abschnitt zur [Verwendung im Echtzeit-Kundenkonto](./tutorials/create-schema-ui.md#profile) .
+Weitere Informationen finden Sie im Abschnitt zur [Verwendung im Echtzeit-Profil](./tutorials/create-schema-ui.md#profile) des [!UICONTROL Schema-Editors] .
 
 ### Kann ich ein Vereinigung-Schema direkt bearbeiten?
 
 Vereinigung-Schema sind schreibgeschützt und werden automatisch vom System generiert. Sie können nicht direkt bearbeitet werden. Vereinigung-Schema werden für eine bestimmte Klasse erstellt, wenn dem Schema, das diese Klasse implementiert, ein &quot;Vereinigung&quot;-Tag hinzugefügt wird.
 
-Weitere Informationen zu Vereinigungen in XDM finden Sie im Abschnitt [Vereinigungen](./api/unions.md) im Entwicklerhandbuch für die Schema Registry API.
+Weitere Informationen zu Vereinigungen in XDM finden Sie im Abschnitt zu [Vereinigungen](./api/unions.md) im [!DNL Schema Registry] API-Entwicklerhandbuch.
 
 ### Wie formatiere ich meine Datendatei, um Daten in mein Schema zu erfassen?
 
-Experience Platform akzeptiert Datendateien im Parquet- oder JSON-Format. Der Inhalt dieser Dateien muss mit dem Schema übereinstimmen, auf das der Datensatz verweist. Weitere Informationen zu den Best Practices für die Datafile-Erfassung finden Sie in der Übersicht über die [Stapelverarbeitung](../ingestion/home.md).
+[!DNL Experience Platform] akzeptiert Datendateien im JSON- [!DNL Parquet] oder JSON-Format. Der Inhalt dieser Dateien muss mit dem Schema übereinstimmen, auf das der Datensatz verweist. Weitere Informationen zu den Best Practices für die Datafile-Erfassung finden Sie in der Übersicht über die [Stapelverarbeitung](../ingestion/home.md).
 
 ## Fehler und Fehlerbehebung
 
-Im Folgenden finden Sie eine Liste von Fehlermeldungen, die Sie beim Arbeiten mit der Schema Registry-API erhalten können.
+Im Folgenden finden Sie eine Liste von Fehlermeldungen, auf die Sie bei der Arbeit mit der [!DNL Schema Registry] API stoßen können.
 
 ### Objekt nicht gefunden
 
@@ -119,7 +119,7 @@ Im Folgenden finden Sie eine Liste von Fehlermeldungen, die Sie beim Arbeiten mi
 
 Dieser Fehler wird angezeigt, wenn das System eine bestimmte Ressource nicht finden konnte. Die Ressource wurde möglicherweise gelöscht oder der Pfad im API-Aufruf ist ungültig. Vergewissern Sie sich, dass Sie einen gültigen Pfad für Ihren API-Aufruf eingegeben haben, bevor Sie ihn erneut versuchen. Sie können überprüfen, ob Sie die richtige ID für die Ressource eingegeben haben und ob der Pfad mit dem entsprechenden Container (global oder mieter) richtig benannt wurde.
 
-Weitere Informationen zum Erstellen von Nachschlagetpfaden in der API finden Sie in den Abschnitten zur Identifizierung von [Containern](./api/getting-started.md#container) und [Schemas](api/getting-started.md#schema-identification) im Schema Registry Developer Guide.
+Weitere Informationen zum Erstellen von Nachschlagetpfaden in der API finden Sie in den Abschnitten zur Identifizierung von [Containern](./api/getting-started.md#container) und [Schemas](api/getting-started.md#schema-identification) im Entwicklerhandbuch [!DNL Schema Registry] .
 
 ### Titel muss eindeutig sein
 
@@ -148,12 +148,12 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine Ressource mit einem
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine neue Mischung mit falsch benannten Feldern zu erstellen. Mixins, die von Ihrer IMS-Organisation definiert werden, müssen ihre Felder mit einem Namensraum versehen, `TENANT_ID` um Konflikte mit anderen Branchen- und Händlerressourcen zu vermeiden. Ausführliche Beispiele für die richtige Datenstruktur für mixins finden Sie im Dokument zum [Erstellen eines Mixins](api/create-mixin.md) im Entwicklerhandbuch für die Schema Registry API.
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine neue Mischung mit falsch benannten Feldern zu erstellen. Mixins, die von Ihrer IMS-Organisation definiert werden, müssen ihre Felder mit einem Namensraum versehen, `TENANT_ID` um Konflikte mit anderen Branchen- und Händlerressourcen zu vermeiden. Ausführliche Beispiele für ordnungsgemäße Datenstrukturen für Mixins finden Sie im Dokument zum [Erstellen eines Mixins](api/create-mixin.md) im [!DNL Schema Registry] API-Entwicklerhandbuch.
 
 
-### Profil-Fehler in Echtzeit
+### [!DNL Real-time Customer Profile] Fehler
 
-Die folgenden Fehlermeldungen sind mit Vorgängen verknüpft, die an der Aktivierung von Schemas für das Echtzeit-Profil von Kunden beteiligt sind. Weitere Informationen finden Sie im Abschnitt [Vereinigungen](./api/unions.md) im Entwicklerhandbuch für die Schema Registry API.
+Die folgenden Fehlermeldungen sind mit Vorgängen verknüpft, die an der Aktivierung von Schemas für [!DNL Real-time Customer Profile]. Weitere Informationen finden Sie im Abschnitt [Vereinigungen](./api/unions.md) im Handbuch [!DNL Schema Registry] für API-Entwickler.
 
 #### Um Profil-Datensätze zu aktivieren, sollte das Schema gültig sein
 
@@ -166,7 +166,7 @@ Die folgenden Fehlermeldungen sind mit Vorgängen verknüpft, die an der Aktivie
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, einen Profil-Datensatz für ein Schema zu aktivieren, das nicht für Echtzeit-Kundendaten aktiviert wurde. Stellen Sie sicher, dass das Schema ein Vereinigung-Tag enthält, bevor Sie den Datensatz aktivieren.
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, einen Profil-Datensatz für ein Schema zu aktivieren, für das nicht aktiviert wurde [!DNL Real-time Customer Profile]. Stellen Sie sicher, dass das Schema ein Vereinigung-Tag enthält, bevor Sie den Datensatz aktivieren.
 
 #### Es muss einen Referenz-Identitätsdeskriptor geben
 
@@ -181,7 +181,7 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, einen Profil-Datensatz f
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema für Profil zu aktivieren, und eine seiner Eigenschaften einen Beziehungsdeskriptor ohne Referenz-Identitätsdeskriptor enthält. Hinzufügen Sie einen Identitätsdeskriptor für den Verweis auf das betreffende Schema-Feld, um diesen Fehler zu beheben.
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema für zu aktivieren, [!DNL Profile] und eine seiner Eigenschaften einen Beziehungsdeskriptor ohne Referenz-Identitätsdeskriptor enthält. Hinzufügen Sie einen Identitätsdeskriptor für den Verweis auf das betreffende Schema-Feld, um diesen Fehler zu beheben.
 
 #### Der Namensraum des Schemas für den Identitäts-Deskriptor und das Ziel-Identitätsdeskriptor muss übereinstimmen mit dem
 
@@ -199,13 +199,13 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema für Profil z
 }
 ```
 
-Damit Schema mit Beziehungsdeskriptoren für die Verwendung in Profil aktiviert werden können, müssen der Namensraum des Quellfelds und der primäre Namensraum des Felds Zielgruppe identisch sein. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema zu aktivieren, das einen nicht übereinstimmenden Namensraum für den Identitätsdeskriptor enthält. Stellen Sie sicher, dass der `xdm:namespace` Wert des Identitätsfelds des Ziel-Schemas mit dem Wert der `xdm:identityNamespace` Eigenschaft im Referenz-Identitätsdeskriptor des Quellfelds übereinstimmt, um dieses Problem zu beheben.
+Damit Schema mit Beziehungsdeskriptoren zur Verwendung in aktiviert werden können, müssen [!DNL Profile]der Namensraum des Quellfelds und der primäre Namensraum des Felds &quot;Zielgruppe&quot;identisch sein. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema zu aktivieren, das einen nicht übereinstimmenden Namensraum für den Identitätsdeskriptor enthält. Stellen Sie sicher, dass der `xdm:namespace` Wert des Identitätsfelds des Ziel-Schemas mit dem Wert der `xdm:identityNamespace` Eigenschaft im Referenz-Identitätsdeskriptor des Quellfelds übereinstimmt, um dieses Problem zu beheben.
 
 Eine Liste der unterstützten Identitäts-Namensraum-Codes finden Sie im Abschnitt zu [Standard-Namensräumen](../identity-service/namespaces.md) in der Übersicht über den Identitäts-Namensraum.
 
 ### Kopfzeilenfehler akzeptieren
 
-Die meisten GET-Anforderungen in der Schema Registry API erfordern einen Accept-Header, damit das System festlegt, wie die Antwort formatiert werden soll. Im Folgenden finden Sie eine Liste häufiger Fehler im Zusammenhang mit der Accept-Kopfzeile. Listen kompatibler Accept-Header für verschiedene API-Anforderungen finden Sie in den entsprechenden Abschnitten im [Schema Registry Developer Guide](api/getting-started.md).
+Die meisten GET-Anforderungen in der [!DNL Schema Registry] API erfordern einen Accept-Header, damit das System festlegt, wie die Antwort formatiert werden soll. Im Folgenden finden Sie eine Liste häufiger Fehler im Zusammenhang mit der Accept-Kopfzeile. Listen kompatibler Accept-Header für verschiedene API-Anforderungen finden Sie in den entsprechenden Abschnitten im [Schema Registry Developer Guide](api/getting-started.md).
 
 #### Accept-Header-Parameter erforderlich
 
@@ -264,7 +264,7 @@ Diese Fehlermeldung wird angezeigt, wenn eine Versionsnummer nicht in der Kopfze
 application/vnd.adobe.xed+json; version=1
 ```
 
-Eine Liste der unterstützten Accept-Kopfzeilen finden Sie im Abschnitt [Accept-Kopfzeile](api/getting-started.md#accept) im Schema Registry Developer Guide.
+Eine Liste der unterstützten Accept-Kopfzeilen finden Sie im Abschnitt [Accept-Kopfzeile](api/getting-started.md#accept) im [!DNL Schema Registry] Entwicklerhandbuch.
 
 #### Version darf nicht im Accept-Header bereitgestellt werden
 
