@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Benutzerhandbuch zu Datenverwendungsrichtlinien
+title: Benutzerhandbuch zu Datennutzungsrichtlinien
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 0%
+source-wordcount: '725'
+ht-degree: 39%
 
 ---
 
 
-# Benutzerhandbuch zu Datenverwendungsrichtlinien
+# Benutzerhandbuch zu Datennutzungsrichtlinien
 
-Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. In diesem Dokument erhalten Sie einen Überblick über die Aktionen, die Sie in der Benutzeroberfläche im Arbeitsbereich &quot; _Richtlinien_ &quot;ausführen können [!DNL Experience Platform] .
+Adobe Experience Platform [!DNL Data Governance] provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -22,56 +22,56 @@ Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über
 
 ## Voraussetzungen
 
-Dieser Leitfaden erfordert ein funktionierendes Verständnis der folgenden [!DNL Experience Platform] Konzepte:
+This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
 - [!DNL Data Governance](../home.md)
-- [Datenverwendungsrichtlinien](./overview.md)
+- [Datennutzungsrichtlinien](./overview.md)
 
-## Ansicht-Datenverwendungsrichtlinien {#view-policies}
+## Datennutzungsrichtlinien anzeigen {#view-policies}
 
-Klicken Sie in der [!DNL Experience Platform] Benutzeroberfläche auf **[!UICONTROL Richtlinien]** , um den Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;zu öffnen. Auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;wird eine Liste der verfügbaren Richtlinien angezeigt, einschließlich der zugehörigen Beschriftungen, Marketingaktionen und Status.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. Auf der Registerkarte **[!UICONTROL Durchsuchen]** wird eine Liste der verfügbaren Richtlinien angezeigt, einschließlich der zugehörigen Bezeichnungen, Marketing-Aktionen und Status.
 
 ![](../images/policies/browse-policies.png)
 
-Klicken Sie auf eine aufgelistete Richtlinie, um deren Beschreibung und Typ Ansicht. Wenn eine benutzerdefinierte Richtlinie ausgewählt ist, werden zusätzliche Steuerelemente angezeigt, um die Richtlinie zu bearbeiten, zu löschen oder zu [aktivieren/deaktivieren](#enable).
+Klicken Sie auf eine aufgelistete Richtlinie, um deren Beschreibung und Typ anzuzeigen. Wenn eine benutzerdefinierte Richtlinie ausgewählt ist, werden zusätzliche Steuerelemente zum Bearbeiten, Löschen oder [Aktivieren/Deaktivieren der Richtlinie](#enable) angezeigt.
 
 ![](../images/policies/policy-details.png)
 
-## Benutzerdefinierte Datenverwendungsrichtlinie erstellen {#create-policy}
+## Benutzerdefinierte Datennutzungsrichtlinie erstellen {#create-policy}
 
-Um eine neue Richtlinie zur Verwendung benutzerdefinierter Daten zu erstellen, klicken Sie auf Richtlinie **** erstellen in der oberen rechten Ecke der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;.
+To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the *[!UICONTROL Policies]* workspace.
 
 ![](../images/policies/create-policy-button.png)
 
-Der Arbeitsablauf zum *[!UICONTROL Erstellen von Richtlinien]* wird angezeigt. Beginn durch Angabe eines Namens und einer Beschreibung der neuen Richtlinie.
+Der Workflow *[!UICONTROL Richtlinie erstellen]* wird angezeigt. Geben Sie zunächst einen Namen und eine Beschreibung für die neue Richtlinie an.
 
 ![](../images/policies/create-policy-description.png)
 
-Wählen Sie anschließend die Datenverwendungsbeschriftungen aus, auf denen die Richtlinie basieren soll. Wenn Sie mehrere Bezeichnungen auswählen, können Sie festlegen, ob die Daten alle oder nur eine der Bezeichnungen enthalten sollen, damit die Richtlinie angewendet werden kann. Klicken Sie auf **[!UICONTROL Weiter]**, wenn Sie fertig sind.
+Wählen Sie anschließend die Datennutzungsbezeichnungen aus, auf denen die Richtlinie basieren soll. Wenn Sie mehrere Bezeichnungen auswählen, können Sie entscheiden, ob die Daten alle Bezeichnungen oder nur eine der Bezeichnungen enthalten müssen, damit die Richtlinie angewendet wird. Klicken Sie auf **[!UICONTROL Weiter]**, wenn Sie fertig sind.
 
 ![](../images/policies/add-labels.png)
 
-Der Schritt Marketingaktionen *[!UICONTROL auswählen]* wird angezeigt. Wählen Sie die entsprechenden Marketingaktionen aus der bereitgestellten Liste und klicken Sie dann auf **[!UICONTROL Weiter]** , um fortzufahren.
+Der Schritt *[!UICONTROL Marketing-Aktionen auswählen]* wird angezeigt. Wählen Sie die entsprechenden Marketing-Aktionen aus der bereitgestellten Liste und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 >[!NOTE]
 >
->Bei der Auswahl mehrerer Marketingaktionen interpretiert die Richtlinie diese als &quot;OR&quot;-Regel. Mit anderen Worten, die Richtlinie gilt, wenn _eine_ der ausgewählten Marketingaktionen durchgeführt wird.
+>Bei Auswahl mehrerer Marketing-Aktionen interpretiert die Richtlinie diese als „OR“-Regel. Mit anderen Worten: Die Richtlinie findet Anwendung, wenn _beliebige_ der ausgewählten Marketing-Aktionen ausgeführt werden.
 
 ![](../images/policies/add-marketing-actions.png)
 
-Der Schritt *[!UICONTROL Überprüfung]* wird angezeigt, mit dem Sie die Details der neuen Richtlinie überprüfen können, bevor Sie sie erstellen. Wenn Sie zufrieden sind, klicken Sie auf **[!UICONTROL Fertig stellen]** , um die Richtlinie zu erstellen.
+Der Schritt *[!UICONTROL Überprüfung]* wird angezeigt, in dem Sie die Details der neuen Richtlinie vor der Erstellung überprüfen können. Wenn Sie zufrieden sind, klicken Sie auf **[!UICONTROL Fertig stellen]**, um die Richtlinie zu erstellen.
 
 ![](../images/policies/policy-review.png)
 
-Die Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;wird wieder angezeigt, wodurch die neu erstellte Richtlinie jetzt im Status &quot;Entwurf&quot;Liste wird. Informationen zum Aktivieren der Richtlinie finden Sie im nächsten Abschnitt.
+Die Registerkarte *[!UICONTROL Durchsuchen]* wird erneut angezeigt, wo die neu erstellte Richtlinie jetzt mit dem Status „Entwurf“ aufgelistet wird. Informationen zum Aktivieren der Richtlinie finden Sie im nächsten Abschnitt.
 
 ![](../images/policies/created-policy.png)
 
-## Datenschutzrichtlinien aktivieren oder deaktivieren {#enable}
+## Datennutzungsrichtlinie aktivieren oder deaktivieren {#enable}
 
 Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
 
-Sie können Richtlinien auf der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;im Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;aktivieren oder deaktivieren. Wählen Sie eine benutzerdefinierte Richtlinie aus der Liste, um die Details auf der rechten Seite anzuzeigen. Klicken Sie unter *[!UICONTROL Status]* auf die Schaltfläche zum Umschalten, um die Richtlinie zu aktivieren oder zu deaktivieren.
+You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Wählen Sie eine benutzerdefinierte Richtlinie aus der Liste, um auf der rechten Seite die entsprechenden Details anzuzeigen. Klicken Sie unter *[!UICONTROL Status]* auf die Schaltfläche zum Umschalten, um die Richtlinie zu aktivieren oder zu deaktivieren.
 
 ![](../images/policies/enable-policy.png)
 
@@ -81,7 +81,7 @@ Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;die Regi
 
 ![](../images/policies/marketing-actions.png)
 
-## Erstellen einer Marketingaktion {#create-marketing-action}
+## Create a marketing action {#create-marketing-action}
 
 Um eine neue benutzerdefinierte Marketingaktion zu erstellen, klicken Sie auf Marketingaktion **** erstellen in der oberen rechten Ecke der Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;im Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;.
 
@@ -115,7 +115,7 @@ Wenn die Marketingaktion nicht von vorhandenen Nutzungsrichtlinien verwendet wir
 
 ## Nächste Schritte
 
-Dieses Dokument gab einen Überblick darüber, wie Datenverwendungsrichtlinien in der [!DNL Experience Platform] Benutzeroberfläche verwaltet werden. Anweisungen zum Verwalten von Richtlinien mit der DUL-Richtlinie-API finden Sie im [Entwicklerhandbuch](../api/getting-started.md). Informationen zum Erzwingen von Datenverwendungsrichtlinien finden Sie in der Übersicht über die [Richtliniendurchsetzung](../enforcement/overview.md).
+This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). Informationen zum Erzwingen von Datennutzungsrichtlinien finden Sie in der [Übersicht zur Durchsetzung von Richtlinien](../enforcement/overview.md).
 
 Das folgende Video zeigt, wie mit Nutzungsrichtlinien in der [!DNL Experience Platform] Benutzeroberfläche gearbeitet wird:
 
