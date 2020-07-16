@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datennutzungsbezeichnungen – Übersicht
 topic: labels
 translation-type: tm+mt
-source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '485'
 ht-degree: 23%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 23%
 
 # Datennutzungsbezeichnungen – Übersicht
 
-Data Usage Labeling and Enforcement (DULE) ist der Kernmechanismus von Adobe Experience Platform Data Governance. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
+Data Usage Labeling and Enforcement (DULE) ist der Kernmechanismus von Adobe Experience Platform [!DNL Data Governance]. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
 
 Dieses Dokument bietet eine Übersicht über die Datenverwendungsbeschriftungen in [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, lesen Sie sich die Übersicht über die [Datenverwaltung](../home.md) durch, um eine solidere Einführung in das DUL-Framework zu erhalten.
 
@@ -38,9 +38,9 @@ Weitere Informationen zur Funktionsweise der automatischen Datendurchsetzung in 
 
 ### Vererbung von Adobe Audience Manager Data Export Controls
 
-Experience Platform hat die Möglichkeit, Segmente für Adobe Audience Manager freizugeben. Alle Datenexportsteuerelemente, die auf Audience Manager angewendet wurden, werden in entsprechende Beschriftungen und Marketingaktionen übersetzt, die von der Datenverwaltung der Experience Platform erkannt werden.
+[!DNL Experience Platform] hat die Möglichkeit, Segmente für Adobe Audience Manager freizugeben. Alle Datenexportsteuerelemente, die auf Audience Manager angewendet wurden, werden in entsprechende Beschriftungen und Marketingaktionen übersetzt, die von [!DNL Experience Platform][!DNL Data Governance]erkannt werden.
 
-Eine Referenz dazu, wie bestimmte Datenexportsteuerelemente den Datenverwendungsbeschriftungen in der Plattform zugeordnet werden, finden Sie in der Dokumentation zum [Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Eine Referenz dazu, wie bestimmte Datenexportsteuerelemente den Datenverwendungsbeschriftungen in zugeordnet werden, [!DNL Platform]finden Sie in der Dokumentation zum [Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 
 ## Nächste Schritte
