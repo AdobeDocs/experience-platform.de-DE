@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Klasse erstellen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 0%
+source-wordcount: '477'
+ht-degree: 89%
 
 ---
 
 
 # Klasse erstellen
 
-Der Hauptbaustein eines Schemas ist eine Klasse. Die Klasse enthält den Mindestfeldsatz, der definiert werden muss, um die Kerndaten eines Schemas zu erfassen. Wenn Sie beispielsweise ein Schema für Pkw und Lkw entwerfen, würden sie höchstwahrscheinlich eine Klasse namens &quot;Vehicle&quot;verwenden, die die grundlegenden gemeinsamen Eigenschaften aller Fahrzeuge beschreibt.
+Der Hauptbaustein eines Schemas ist eine Klasse. Die Klasse enthält den Mindestsatz an Feldern, die definiert sein müssen, damit die Kerndaten eines Schemas erfasst werden. Wenn Sie beispielsweise ein Schema für Autos und LKWs entwerfen, würden sie wahrscheinlich eine Klasse namens „Fahrzeug“ nutzen, um die grundlegenden allgemeinen Eigenschaften aller Fahrzeuge zu beschreiben.
 
-Es gibt mehrere Standardklassen, die von Adobe und anderen Experience Platformen-Partnern bereitgestellt werden. Sie können jedoch auch eigene Klassen definieren und diese in der Schema-Registrierung speichern. Anschließend können Sie ein Schema zusammenstellen, das die von Ihnen erstellte Klasse implementiert, und Mixins definieren, die mit Ihrer neu definierten Klasse kompatibel sind.
+There are several standard classes provided by Adobe and other [!DNL Experience Platform] partners, but you may also define your own classes and save them to the [!DNL Schema Registry]. Anschließend können Sie ein Schema komponieren, das die von Ihnen erstellte Klasse implementiert, und Mixins definieren, die mit Ihrer neu definierten Klasse kompatibel sind.
 
 >[!NOTE]
 >
->Beim Erstellen eines Schemas, das auf einer von Ihnen definierten Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jede Mixin definiert die Klassen, mit denen sie in ihrem `meta:intendedToExtend` Attribut kompatibel sind. Sobald Sie beginnen, Mixins zu definieren, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung `$id` der neuen Klasse im `meta:intendedToExtend` Bereich des mixins), können Sie diese Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten zum [Erstellen von Mixins](create-mixin.md) und [Erstellen von Schemas](create-schema.md) .
+>Beim Erstellen eines Schemas, das auf einer von Ihnen definierten Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jedes Mixin definiert die Klassen, mit denen es kompatibel ist, in seinem `meta:intendedToExtend`-Attribut. Sobald Sie Mixins definiert haben, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung der `$id` Ihrer neuen Klasse im `meta:intendedToExtend`-Feld des Mixins), können Sie die Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weiterführende Informationen finden Sie in den Abschnitten zum [Erstellen von Mixins](create-mixin.md) und [Erstellen von Schemas](create-schema.md).
 
 **API-Format**
 
@@ -30,9 +30,9 @@ POST /tenant/classes
 
 **Anfrage**
 
-Die Anforderung zum Erstellen (POST) einer Klasse muss ein `allOf` Attribut enthalten, das einen `$ref` von zwei Werten enthält: `https://ns.adobe.com/xdm/data/record` oder `https://ns.adobe.com/xdm/data/time-series`. Diese Werte stellen das Verhalten dar, auf dem die Klasse basiert (Datensatz oder Zeitreihen). Weitere Informationen zu den Unterschieden zwischen Datensatzdaten und Zeitreihendaten finden Sie im Abschnitt zu Verhaltenstypen innerhalb der [Grundlagen der Schema-Komposition](../schema/composition.md).
+Die Anfrage zum Erstellen einer Klasse (POST) muss ein `allOf`-Attribut enthalten, das eine `$ref` zu einem von zwei Werten enthält: `https://ns.adobe.com/xdm/data/record` oder `https://ns.adobe.com/xdm/data/time-series`. Diese Werte stellen das Verhalten dar, auf dem die Klasse basiert (Datensatz oder Zeitreihe). Weiterführende Informationen zu Unterschieden zwischen Datensatzdaten und Zeitreihendaten finden Sie im Abschnitt zu Verhaltenstypen in den [Grundlagen der Schemakomposition](../schema/composition.md).
 
-Wenn Sie eine Klasse definieren, können Sie auch Mixins oder benutzerdefinierte Felder in die Klassendefinition einschließen. Dies würde dazu führen, dass die hinzugefügten mixins und Felder in allen Schemas enthalten sind, die die Klasse implementieren. Die folgende Beispielanforderung definiert eine Klasse mit der Bezeichnung &quot;Eigenschaft&quot;, die Informationen zu verschiedenen Eigenschaften erfasst, die Eigentum und Betreiber einer Firma sind. Es enthält ein `propertyId` Feld, das bei jeder Verwendung der Klasse eingeschlossen wird.
+Beim Definieren einer Klasse können Sie auch Mixins oder benutzerdefinierte Felder in die Klassendefinition einschließen. Das würde dazu führen, dass die hinzugefügten Mixins und Felder in allen Schemas enthalten sind, die die Klasse implementieren. Folgende Beispielanfrage definiert eine Klasse namens „Eigenschaft“, die Daten zu verschiedenen Eigenschaften erfasst, die von einer Firma besessen und genutzt werden. Sie enthält ein `propertyId`-Feld, das bei jeder Verwendung der Klasse eingeschlossen wird.
 
 ```SHELL
 curl -X POST \
@@ -83,12 +83,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `_{TENANT_ID}` | Der `TENANT_ID` Namensraum für Ihre Organisation. Alle von Ihrer Organisation erstellten Ressourcen müssen diese Eigenschaft enthalten, um Kollisionen mit anderen Ressourcen in der Schema-Registrierung zu vermeiden. |
-| `allOf` | Eine Liste von Ressourcen, deren Eigenschaften von der neuen Klasse geerbt werden sollen. Eines der `$ref` Objekte im Array definiert das Verhalten der Klasse. In diesem Beispiel übernimmt die Klasse das Verhalten &quot;record&quot;. |
+| `_{TENANT_ID}` | Der `TENANT_ID`-Namespace für Ihre Organisation. All resources created by your organization must include this property to avoid collisions with other resources in the [!DNL Schema Registry]. |
+| `allOf` | Eine Liste mit Ressourcen, deren Eigenschaften von der neuen Klasse geerbt werden sollen. Eines der `$ref`-Objekte im Array definiert das Verhalten der Klasse. In diesem Beispiel übernimmt die Klasse das Verhalten „record“. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und eine Nutzlast mit den Details der neu erstellten Klasse zurück, einschließlich der Klassen `$id`, `meta:altId`und `version`. Diese drei Werte sind schreibgeschützt und werden von der Schema Registry zugewiesen.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details der neu erstellten Klasse zurück, einschließlich `$id`, `meta:altId` und `version`. These three values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -152,4 +152,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und eine Nutzlast mit 
 }
 ```
 
-Wenn Sie eine GET-Anforderung zur Liste aller Klassen im Mieter-Container ausführen, wird jetzt die Property-Klasse einbezogen. Sie können auch eine GET-Anfrage (Lookup) mit dem URL-kodierten `$id` URI ausführen, um die neue Klasse direkt Ansicht. Stellen Sie sicher, dass Sie die `version` in den Accept-Header aufnehmen, wenn Sie eine Suchanfrage ausführen.
+Wenn Sie eine GET-Anfrage zum Auflisten aller Klassen im Mandanten-Container ausführen, würde jetzt die Klasse „Eigenschaft“ einbezogen. Sie können mit dem URL-kodierten `$id`-URI auch eine Anfrage zum Nachschlagen (GET) ausführen, um die neue Klasse direkt anzuzeigen. Stellen Sie sicher, dass Sie die `version` in die Accept-Kopfzeile aufnehmen, wenn Sie eine Anfrage zum Nachschlagen ausführen.
