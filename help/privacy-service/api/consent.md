@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Zustimmung
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 1%
+source-wordcount: '220'
+ht-degree: 2%
 
 ---
 
 
 # Zustimmung
 
-Bestimmte Vorschriften bedürfen der ausdrücklichen Zustimmung des Kunden, bevor seine personenbezogenen Daten gesammelt werden können. Der `/consent` Endpunkt in der Privacy Service-API ermöglicht es Ihnen, Anfragen zur Kundengenehmigung zu bearbeiten und sie in Ihren Datenschutzarbeitsablauf zu integrieren.
+Bestimmte Vorschriften bedürfen der ausdrücklichen Zustimmung des Kunden, bevor seine personenbezogenen Daten gesammelt werden können. Der `/consent` Endpunkt in der [!DNL Privacy Service] API ermöglicht es Ihnen, Anfragen zur Kundengenehmigung zu bearbeiten und sie in Ihren Datenschutzarbeitsablauf zu integrieren.
 
 Bevor Sie dieses Handbuch verwenden, lesen Sie bitte den Abschnitt [Erste Schritte](./getting-started.md) , um Informationen zu den erforderlichen Authentifizierungskopfzeilen zu erhalten, die im Beispiel-API-Aufruf unten aufgeführt sind.
 
@@ -68,8 +68,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Weitere Informationen dazu, wie Sie bestimmen, welche Kundenidentitätswerte an Privacy Service gesendet werden sollen, finden Sie im Handbuch zur [Bereitstellung von Identitätsdaten](../identity-data.md).
+>Weitere Informationen dazu, wie Sie bestimmen, an welche Kundenidentitätswerte gesendet werden sollen, finden Sie im Handbuch zur [!DNL Privacy Service]Bereitstellung von Identitätsdaten [](../identity-data.md).
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird HTTP-Status 202 (Akzeptiert) ohne Nutzlast zurückgegeben, was bedeutet, dass die Anforderung von Privacy Service akzeptiert wurde und verarbeitet wird.
+Bei einer erfolgreichen Antwort wird HTTP-Status 202 (Akzeptiert) ohne Nutzlast zurückgegeben, was bedeutet, dass die Anforderung akzeptiert wurde [!DNL Privacy Service] und verarbeitet wird.
