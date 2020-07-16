@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Ressource ersetzen
+title: Ersetzen einer Ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 1%
+source-wordcount: '203'
+ht-degree: 89%
 
 ---
 
 
-# Ressource ersetzen
+# Ersetzen einer Ressource
 
-Mit der Schema-Registrierung können Sie eine gesamte Ressource durch einen PUT-Vorgang ersetzen. Bei diesem Vorgang wird die Ressource im Wesentlichen neu geschrieben. Daher muss der Anforderungstext alle Felder enthalten, die beim Erstellen einer neuen Ressource mit einer POST-Anforderung erforderlich sind.
+The [!DNL Schema Registry] allows you to replace an entire resource through a PUT operation. Bei diesem Vorgang wird die Ressource im Wesentlichen neu geschrieben. Daher muss der Anfrageinhalt alle Felder enthalten, die beim Erstellen einer neuen Ressource mit einer POST-Anfrage erforderlich sind.
 
 Diese Methode ist besonders hilfreich, wenn Sie eine Menge Informationen in der Ressource gleichzeitig aktualisieren möchten.
 
@@ -24,7 +24,7 @@ Diese Methode ist besonders hilfreich, wenn Sie eine Menge Informationen in der 
 
 **API-Format**
 
-Eine PUT-Anforderung kann nur mit den Ressourcen ausgeführt werden, die Sie im Push-Container definieren.
+Eine PUT-Anfrage kann nur für Ressourcen ausgeführt werden, die Sie im Mandanten-Container definieren.
 
 ```http
 PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -32,12 +32,12 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Der Typ der Ressource, die in der Schema-Bibliothek aktualisiert werden soll. Gültige Typen sind `datatypes`, `mixins`, `schemas`und `classes`. |
-| `{RESOURCE_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` die Ressource. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Gültige Typen sind `datatypes`, `mixins`, `schemas` und `classes`. |
+| `{RESOURCE_ID}` | Der URL-codierte `$id`-URI oder `meta:altId` der Ressource. |
 
 **Anfrage**
 
-Diese Musteranforderung ersetzt den Datentyp &quot;Eigenschaftenaufbau&quot;, der in einem vorherigen Beispiel erstellt wurde. Der Anforderungstext sieht ähnlich aus wie die POST-Anforderung, mit der der Datentyp erstellt wurde, allerdings enthält er jetzt einen aktualisierten Satz von Feldern, wobei die zuvor definierten Werte durch neue ersetzt werden.
+Diese Beispielanfrage ersetzt den Datentyp „Property Construction“, der in einem früheren Beispiel erstellt wurde. Der Anfrageinhalt ähnelt der POST-Anfrage, mit der der Datentyp erstellt wurde, allerdings enthält er jetzt einen aktualisierten Satz von Feldern, wobei die zuvor definierten Werte durch neue ersetzt werden.
 
 ```SHELL
 curl -X PUT \
@@ -89,7 +89,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Datentyps zurück und zeigt die aktualisierten Felder und Werte wie in der Anforderung angegeben an.
+Eine erfolgreiche Antwort gibt die Details des Datentyps zurück und zeigt die aktualisierten Felder und Werte wie in der Anfrage angegeben an.
 
 ```JSON
 {
