@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Erstellen eines Mixins
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 0%
+source-wordcount: '303'
+ht-degree: 92%
 
 ---
 
 
 # Erstellen eines Mixins
 
-Mixins sind eine Reihe von Feldern, mit denen ein bestimmtes Konzept beschrieben wird, z. B. &quot;Adresse&quot;oder &quot;Profil-Voreinstellungen&quot;. Es stehen zahlreiche Standard-Mixins zur Verfügung. Sie können auch eigene Mixins definieren, wenn Sie Informationen erfassen möchten, die für Ihr Unternehmen individuell sind. Jedes Mixin enthält ein `meta:intendedToExtend` Feld, mit dem die Klassen, mit denen das Mixin kompatibel ist, Liste werden.
+Mixins sind eine Reihe von Feldern, mit denen ein bestimmtes Konzept beschrieben wird, z. B. „Adresse“ oder „Profil-Voreinstellungen“. Es stehen zahlreiche Standard-Mixins zur Verfügung. Sie können auch eigene Mixins definieren, wenn Sie Informationen erfassen möchten, die für Ihr Unternehmen individuell sind. Jedes Mixin enthält ein `meta:intendedToExtend`-Feld, in dem die Klassen, mit denen das Mixin kompatibel ist, aufgelistet werden.
 
-Es kann hilfreich sein, alle verfügbaren Mixins zu überprüfen, um sich mit den Feldern, die in den jeweiligen Mixins enthalten sind, vertraut zu machen. Sie können alle mit einer bestimmten Liste kompatiblen Mixins (GET) durch eine Anforderung an jeden der Container &quot;global&quot;und &quot;mieter&quot;zurückgeben, wobei nur die Mixins zurückgegeben werden, bei denen das Feld &quot;meta:intentedToExtend&quot;mit der verwendeten Klasse übereinstimmt. Die folgenden Beispiele geben alle Mixins zurück, die mit der XDM Individual Profil-Klasse verwendet werden können:
+Es kann hilfreich sein, alle verfügbaren Mixins zu überprüfen, um sich mit den Feldern vertraut zu machen, die in den jeweiligen Mixins enthalten sind. Sie können alle mit einer bestimmten Klasse kompatiblen Mixins (GET) auflisten, indem Sie eine Anfrage an jeden der Container „global“ und „tentant“ senden, und nur jene Mixins zurückgeben, bei denen das Feld „meta:intendedToExtend“ mit der von Ihnen verwendeten Klasse übereinstimmt. The examples below will return all mixins that can be used with the [!DNL XDM Individual Profile] class:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
-Die unten stehende Beispiel-API-Anforderung erstellt eine neue Mischung im Pächter-Container.
+Die nachstehende Beispiel-API-Anfrage erstellt ein neues Mixin im Mandanten-Container.
 
 **API-Format**
 
@@ -33,7 +33,7 @@ POST /tenant/mixins
 
 **Anfrage**
 
-Beim Definieren eines neuen Mixins muss ein `meta:intendedToExtend` Attribut enthalten sein, in dem die Klassen aufgelistet werden, mit denen das Mixin kompatibel ist, `$id` und zwar In diesem Beispiel ist das mixin mit der zuvor definierten Property-Klasse kompatibel. Benutzerdefinierte Felder müssen unter `_{TENANT_ID}` (wie im Beispiel gezeigt) verschachtelt sein, um Kollisionen mit anderen Mixins oder Feldern aus den Klassen-Schemas zu vermeiden. Beachten Sie, dass das `propertyConstruction` Feld einen Verweis auf den im vorherigen Aufruf erstellten Datentyp darstellt.
+Beim Definieren eines neuen Mixins muss dieses ein `meta:intendedToExtend`-Attribut enthalten, in dem die `$id` der Klassen aufgelistet wird, mit dem das Mixin kompatibel ist. In diesem Beispiel ist das Mixin mit der zuvor von Ihnen definierten Property-Klasse kompatibel. Benutzerdefinierte Felder müssen unter `_{TENANT_ID}` (wie im Beispiel gezeigt) verschachtelt sein, um Kollisionen mit anderen Mixins oder Feldern aus den Klassenschemas zu vermeiden. Beachten Sie, dass das Feld `propertyConstruction` einen Verweis auf den im vorherigen Aufruf erstellten Datentyp darstellt.
 
 ```SHELL
 curl -X POST \
@@ -102,7 +102,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Nutzlast mit den Details des neu erstellten Mixins zurückgegeben, einschließlich der Werte `$id`, `meta:altId`und `version`. Diese Werte sind schreibgeschützt und werden von der Schema Registry zugewiesen.
+Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Payload mit den Details des neu erstellten Mixins zurückgegeben, einschließlich der Werte `$id`, `meta:altId`und `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -186,4 +186,4 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Nutzl
 }
 ```
 
-Wenn Sie eine GET-Anforderung zur Liste aller Mixins im Mieter-Container ausführen, wird jetzt das Mixin &quot;Fahrzeugdetails&quot;enthalten. Alternativ können Sie eine GET-Anfrage (Lookup) mit dem URL-kodierten `$id` URI ausführen, um das neue Mixin direkt Ansicht. Denken Sie daran, die `version` in den Accept-Header für alle Nachschlageanforderungen einzuschließen.
+Eine GET-Anfrage zur Auflistung aller Mixins im Mandanten-Container würde jetzt das Mixin „Fahrzeugdetails“ enthalten. Alternativ können Sie eine GET-Anfrage (Nachschlagen) mit dem URL-codierten `$id`-URI ausführen, um das neue Mixin direkt anzuzeigen. Denken Sie daran, die `version` in die Accept-Kopfzeile für alle Nachschlageanfrage einzuschließen.
