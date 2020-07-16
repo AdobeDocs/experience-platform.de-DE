@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Marketingaktionen
+title: Marketing-Aktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 1%
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
 
-# Marketingaktionen
+# Marketing-Aktionen
 
-Eine Marketingaktion im Rahmen der Adobe Experience Platform Data Governance ist eine Maßnahme, die ein [!DNL Experience Platform] Datenbenutzer ergreift und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
+A marketing action, in the context of the Adobe Experience Platform [!DNL Data Governance], is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
 Zum Arbeiten mit Marketingaktionen in der API müssen Sie den `/marketingActions` Endpunkt verwenden.
 
 ## Liste aller Marketingaktionen
 
-Zur Ansicht einer Liste aller Marketingaktionen kann eine GET-Anforderung an alle Richtlinien für den angegebenen Container gesendet werden `/marketingActions/core` oder `/marketingActions/custom` die alle Richtlinien zurückgibt.
+To view a list of all marketing actions, a GET request can be made to `/marketingActions/core` or `/marketingActions/custom` that returns all policies for the specified container.
 
 **API-Format**
 
@@ -174,7 +174,7 @@ curl -X PUT \
 
 **Antwort**
 
-Bei erfolgreicher Erstellung erhalten Sie einen HTTP-Status 201 (Erstellt) und der Antworttext enthält die Details der neu erstellten Marketingaktion. Die `name` in der Antwort angegebenen Werte sollten mit denen in der Anforderung übereinstimmen.
+Bei erfolgreicher Erstellung erhalten Sie einen HTTP-Status 201 (Erstellt) und der Antworttext enthält die Details der neu erstellten Marketingaktion. The `name` in the response should match what was sent in the request.
 
 ```JSON
 {
