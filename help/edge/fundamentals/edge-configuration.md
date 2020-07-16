@@ -2,11 +2,11 @@
 title: Edge-Konfiguration
 seo-title: Edge-Konfiguration für das Web SDK der Experience Platform
 description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
-seo-description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
+seo-description: 'Learn how to configure the Experience Platform Edge Network. '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 4%
 
 ---
@@ -92,7 +92,7 @@ Die eindeutige ID für ein Zielgruppen-Konto. Um dies zu finden, navigieren Sie 
 
 Mit der Zielgruppe können Kunden Berechtigungen mithilfe von Eigenschaften steuern. Weitere Informationen finden Sie im Abschnitt [Enterprise Permissions (Berechtigungen](https://docs.adobe.com/content/help/de-DE/target/using/administer/manage-users/enterprise/properties-overview.html) für Unternehmen) in der Dokumentation zur Zielgruppe.
 
-Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL-Eigenschaften]
+Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL Setup] > [!UICONTROL Eigenschaften]
 
 ##### [!UICONTROL Zielgruppe-Umgebung-ID]
 
