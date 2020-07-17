@@ -1,47 +1,47 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Hilfe zum Adobe Experience Platform-Segmentdienst
+user-guide-title: Hilfe zu Adobe Experience Platform Segmentation Service
 translation-type: tm+mt
-source-git-commit: 58781fb5622564b29cf250459a9149cf25672bfa
+source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 7%
+source-wordcount: '103'
+ht-degree: 92%
 
 ---
 
 
-# Hilfe zum Adobe Experience Platform-Segmentdienst {#segmentation}
+# Hilfe zu Adobe Experience Platform Segmentation Service {#segmentation}
 
 - [Übersicht](home.md)
-- Segmentierungs-API {#api}
+- [Segmentdatentypen](data-types.md)
+- Segmentation-API {#api}
    - [Erste Schritte](api/getting-started.md)
    - [Segmentdefinitionen](api/segment-definitions.md)
    - [Segmentaufträge](api/segment-jobs.md)
    - [Segmentsuche](api/segment-search.md)
    - [Streaming-Segmentierung](api/streaming-segmentation.md)
-- Segmentierungsoberfläche {#ui}
+- Segmentierungsbenutzeroberfläche {#ui}
    - [Übersicht](ui/overview.md)
-- [Anerkennung von Ausschlussmöglichkeiten](honoring-opt-outs.md)
+- [Anerkennen von Opt-outs](honoring-opt-outs.md)
 - [Segmentierung mehrerer Entitäten](multi-entity-segmentation.md)
-- Profil Abfrage Language {#pql}
+- Profile Query Language {#pql}
    - [Übersicht](pql/overview.md)
    - [Boolesche Funktionen](pql/boolean-functions.md)
    - [Vergleichsfunktionen](pql/comparison-functions.md)
-   - [Array-, Liste- und Set-Funktionen](pql/array-functions.md)
-   - [Funktionen für Imagemaps](pql/map-functions.md)
+   - [Array-, List- und Set-Funktionen](pql/array-functions.md)
+   - [Zuordnungsfunktionen](pql/map-functions.md)
    - [Zeichenfolgen-Funktionen](pql/string-functions.md)
-   - [Arithmetik-Funktionen](pql/arithmetic-functions.md)
+   - [Arithmetische Funktionen](pql/arithmetic-functions.md)
    - [Aggregationsfunktionen](pql/aggregation-functions.md)
    - [Datums- und Uhrzeitfunktionen](pql/datetime-functions.md)
    - [Filterfunktionen](pql/filter-functions.md)
-   - [Logische Quantifizierer](pql/logical-quantifiers.md)
-   - [Verschiedene Funktionen](pql/misc-functions.md)
+   - [Logische Quantoren](pql/logical-quantifiers.md)
+   - [Sonstige Funktionen](pql/misc-functions.md)
 - Tutorials {#tutorials}
-   - [Segment erstellen](tutorials/create-a-segment.md)
-   - [Segment bewerten](tutorials/evaluate-a-segment.md)
-   - [Daten exportieren](tutorials/export-data.md)
+   - [Erstellen eines Segments](tutorials/create-a-segment.md)
+   - [Bewerten eines Segments](tutorials/evaluate-a-segment.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datenverwendungskonformität für Segmente](tutorials/governance.md)
 - [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
+- [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
