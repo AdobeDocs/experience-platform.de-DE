@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '2766'
-ht-degree: 57%
+source-wordcount: '2750'
+ht-degree: 56%
 
 ---
 
 
-# [!UICONTROL Segment Builder-Benutzerhandbuch]
+# [!DNL Segment Builder] Benutzerhandbuch
 
 [!DNL Adobe Experience Platform Segmentation Service] stellt eine RESTful-API und eine Benutzeroberfläche zum Erstellen von Segmentdefinitionen aus [!DNL Real-time Customer Profile] Daten bereit.
 
@@ -41,9 +41,9 @@ Durch Klicken auf **[!UICONTROL Segment erstellen]** in der oberen rechten Ecke 
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL Arbeitsbereich von Segment Builder]
+## [!DNL Segment Builder] Arbeitsbereich
 
-[!UICONTROL Der Segmentaufbau] bietet eine umfangreiche Arbeitsfläche, mit der Sie mit [!DNL Profile] Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
+[!DNL Segment Builder] bietet einen Rich-Workspace, mit dem Sie mit [!DNL Profile] Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -51,7 +51,7 @@ Durch Klicken auf **[!UICONTROL Segment erstellen]** in der oberen rechten Ecke 
 
 Die grundlegenden Bausteine von Segmentdefinitionen sind **[!UICONTROL Attribute]** und **[!UICONTROL Ereignisse]**. Darüber hinaus können die in bestehenden **[!UICONTROL Audiences]** enthaltenen Attribute und Ereignisse auch als Komponenten für neue Definitionen verwendet werden.
 
-Sie können diese Bausteine im Abschnitt *Felder* links im Arbeitsbereich von Segment Builder sehen.  *[!UICONTROL Felder]* enthält einen Tab für jeden der Hauptbausteine: **[!UICONTROL Attribute]**, **[!UICONTROL Ereignisse]** und **[!UICONTROL Audiences]**.
+Sie können diese Bausteine im Abschnitt *[!UICONTROL Felder]* links im Arbeitsbereich von sehen. [!DNL Segment Builder] *[!UICONTROL Felder]* enthält einen Tab für jeden der Hauptbausteine: **[!UICONTROL Attribute]**, **[!UICONTROL Ereignisse]** und **[!UICONTROL Audiences]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -95,7 +95,7 @@ You can also search for [!UICONTROL Audiences] using the search bar, which utili
 
 ## Arbeitsfläche des Regel-Builders {#rule-builder-canvas}
 
-Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der Hauptmerkmale oder Verhaltensweisen einer Ziel-Audience dienen. Diese Regeln werden mithilfe der *[!UICONTROL Arbeitsfläche des Regel-Builders]*[!UICONTROL  in der Mitte von Segment Builder erstellt].
+Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der Hauptmerkmale oder Verhaltensweisen einer Ziel-Audience dienen. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!DNL Segment Builder].
 
 Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus dem Tab *[!UICONTROL Felder]* und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab. Anschließend werden Ihnen je nach Art der hinzugefügten Daten kontextspezifische Optionen angezeigt. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences].
 
@@ -105,7 +105,7 @@ Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel
 
 Sie können eine Audience per Drag-and-Drop vom Tab *[!UICONTROL Audience]* auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Audience-Zugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie Audience-Zugehörigkeit als Attribut in der neuen Segmentregel ein- oder ausschließen.
 
-For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition verändert werden kann. Vergewissern Sie sich, dass Sie alle Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in Regellogik konvertieren.
+For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition verändert werden kann. Vergewissern Sie sich, dass Sie alle Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in Regellogik konvertieren.
 
 >[!NOTE]
 >
@@ -113,11 +113,11 @@ For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you ar
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
-Treten beim Konvertieren von Audiencen in Regeln Konflikte auf, versucht der [!UICONTROL Segmentaufbau] , die vorhandenen Optionen optimal zu erhalten.
+Treten bei der Konvertierung von Audiencen in Regeln Konflikte auf, [!DNL Segment Builder] wird versucht, die vorhandenen Optionen optimal zu erhalten.
 
 ### Code-Ansicht
 
-Alternativ können Sie eine codebasierte Version einer Regel, die im [!UICONTROL Segmentaufbau]erstellt wurde, Ansicht vornehmen. Nachdem Sie Ihre Regel auf der Arbeitsfläche des Regelaufbaus erstellt haben, können Sie die **[!UICONTROL Code-Ansicht]** auswählen, um Ihr Segment als PQL anzuzeigen.
+Alternativ können Sie eine codebasierte Version einer Regel, die in der [!DNL Segment Builder]erstellt wurde, Ansicht vornehmen. Nachdem Sie Ihre Regel auf der Arbeitsfläche des Regelaufbaus erstellt haben, können Sie die **[!UICONTROL Code-Ansicht]** auswählen, um Ihr Segment als PQL anzuzeigen.
 
 ![](../images/segment-builder/code-view.png)
 
