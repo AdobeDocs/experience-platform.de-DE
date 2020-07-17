@@ -4,27 +4,27 @@ solution: Adobe Experience Platform
 title: Entitäten - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1689'
-ht-degree: 1%
+source-wordcount: '1671'
+ht-degree: 89%
 
 ---
 
 
 # Entitätsendpunkt (Profil-Zugriff)
 
-Adobe Experience Platform ermöglicht Ihnen den Zugriff auf Echtzeit-Kundendaten mithilfe von RESTful-APIs oder der Benutzeroberfläche. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten zugreifen, die häufiger als &quot;Profil&quot;bezeichnet werden. Weitere Informationen zum Zugriff auf Profil über die Benutzeroberfläche der Platform finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
+Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile] data using RESTful APIs or the user interface. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. For more information on accessing profiles using the [!DNL Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
-## Zugriff auf Profil-Daten nach Identität
+## Zugriff auf Profildaten nach Identität
 
-Sie können auf eine Entität eines Profils zugreifen, indem Sie eine GET-Anforderung an den `/access/entities` Endpunkt stellen und die Entität als eine Reihe von Abfragen-Parametern angeben. Diese ID besteht aus einem ID-Wert (`entityId`) und dem Identitäts-Namensraum (`entityIdNS`).
+You can access a [!DNL Profile] entity by making a GET request to the `/access/entities` endpoint and providing the entity&#39;s identity as a series of query parameters. Diese Identität besteht aus einem ID-Wert (`entityId`) und dem Identitäts-Namespace (`entityIdNS`).
 
-Die im Anforderungspfad bereitgestellten Abfragen geben an, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, die durch ein kaufmännisches Und (&amp;) getrennt sind. Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrage Parameter](#query-parameters) im Anhang.
+Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
 **API-Format**
 
@@ -34,7 +34,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anforderung ruft die E-Mail-Adresse und den Namen eines Kunden mithilfe einer Identität ab:
+Die folgende Anfrage ruft die E-Mail-Adresse und den Namen eines Kunden mit einer Identität ab:
 
 ```shell
 curl -X GET \
@@ -115,11 +115,11 @@ curl -X GET \
 ```
 
 >[!NOTE]
->Wenn ein verwandtes Diagramm mehr als 50 Identitäten verknüpft, gibt dieser Dienst den HTTP-Status 422 und die Meldung &quot;Zu viele verwandte Identitäten&quot;zurück. Wenn Sie diese Fehlermeldung erhalten, sollten Sie weitere Abfragen hinzufügen, um die Suche einzuschränken.
+>Wenn ein verwandtes Diagramm mehr als 50 Identitäten verknüpft, gibt dieser Dienst den HTTP-Status 422 und die Meldung „Zu viele verwandte Identitäten“ zurück. Wenn Sie diese Fehlermeldung erhalten, sollten Sie weitere Abfrageparameter hinzufügen, um die Suche einzuschränken.
 
-## Zugriff auf Profil-Daten nach Liste von Identitäten
+## Profildaten anhand von Liste mit Identitäten aufrufen
 
-Sie können auf mehrere Profil-Entitäten über ihre Identitäten zugreifen, indem Sie eine POST-Anforderung an den `/access/entities` Endpunkt senden und die Identitäten in der Payload angeben. Diese Identitäten bestehen aus einem ID-Wert (`entityId`) und einem Identitäts-Namensraum (`entityIdNS`).
+Sie können anhand von Identitäten auf verschiedene Profilentitäten zugreifen, indem Sie eine POST-Anfrage an den `/access/entities`-Endpunkt senden und die Identitäten in der Payload angeben. Diese Identitäten bestehen aus einem ID-Wert (`entityId`) und einem Identitäts-Namespace (`entityIdNS`).
 
 **API-Format**
 
@@ -129,7 +129,7 @@ POST /access/entities
 
 **Anfrage**
 
-Mit der folgenden Anforderung werden die Namen und E-Mail-Adressen mehrerer Kunden anhand einer Liste von Identitäten abgerufen:
+Mit der folgenden Anfrage werden die Namen und E-Mail-Adressen mehrerer Kunden anhand einer Liste von Identitäten abgerufen:
 
 ```shell
 curl -X POST \
@@ -181,17 +181,17 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 |---|---|
 | `schema.name` | ***(Erforderlich)*** Der Name des XDM-Schemas, zu dem die Entität gehört. |
-| `fields` | Die XDM-Felder, die als Zeichenfolgen-Array zurückgegeben werden sollen. Standardmäßig werden alle Felder zurückgegeben. |
+| `fields` | Die XDM-Felder, die zurückgegeben werden sollen, als Array von Zeichenfolgen. Standardmäßig werden alle Felder zurückgegeben. |
 | `identities` | ***(Erforderlich)*** Ein Array mit einer Liste von Identitäten für die Entitäten, auf die Sie zugreifen möchten. |
-| `identities.entityId` | Die ID einer Entität, auf die Sie zugreifen möchten. |
-| `identities.entityIdNS.code` | Der Namensraum einer Entitäts-ID, auf die Sie zugreifen möchten. |
-| `timeFilter.startTime` | Beginn des Zeitraumfilters, eingeschlossen. Muss eine Millisekunde-Granularität aufweisen. Die Standardeinstellung ist, falls nicht angegeben, der Beginn der verfügbaren Zeit. |
-| `timeFilter.endTime` | Endzeit des Zeitraumfilters, ausgeschlossen. Muss eine Millisekunde-Granularität aufweisen. Wenn kein Wert angegeben ist, ist der Standardwert das Ende der verfügbaren Zeit. |
-| `limit` | Anzahl der zurückzugebenden Datensätze. Gilt nur für die Anzahl der zurückgegebenen Erlebnis-Ereignis. Standard: 1.000. |
-| `orderby` | Die Sortierreihenfolge der abgerufenen Erlebnis-Ereignis nach Zeitstempel, wie `(+/-)timestamp` bei der Standardeinstellung geschrieben `+timestamp`. |
-| `withCA` | Funktionsmarkierung zur Aktivierung berechneter Attribute für die Suche. Standard: false. |
+| `identities.entityId` | Die Kennung einer Entität, auf die Sie zugreifen möchten. |
+| `identities.entityIdNS.code` | Der Namespace einer Entitätskennung, auf die Sie zugreifen möchten. |
+| `timeFilter.startTime` | Startzeit des Zeitbereichfilters, eingeschlossen. Muss eine Granularität im Millisekundenbereich aufweisen. Die Standardeinstellung ist, falls nicht angegeben, der Beginn der verfügbaren Zeit. |
+| `timeFilter.endTime` | Endzeit des Zeitbereichfilters, ausgeschlossen. Muss eine Granularität im Millisekundenbereich aufweisen. Wenn kein Wert angegeben ist, ist der Standardwert das Ende der verfügbaren Zeit. |
+| `limit` | Anzahl der zurückzugebenden Datensätze. Gilt nur für die Anzahl der zurückgegebenen Erlebnisereignisse. Standardwert: „1.000“. |
+| `orderby` | Die Sortierreihenfolge der abgerufenen Erlebnisereignisse nach Zeitstempel, geschrieben als `(+/-)timestamp`, wobei `+timestamp` die Standardeinstellung ist. |
+| `withCA` | Feature Flag zur Aktivierung berechneter Attribute für das Nachschlagen. Standardwert: „false“. |
 
-**Antwort** Eine erfolgreiche Antwort gibt die angeforderten Felder von Entitäten zurück, die im Anforderungstext angegeben sind.
+**Antwort** Eine erfolgreiche Antwort gibt die angeforderten Felder von Entitäten zurück, die im Anfragentext angegeben sind.
 
 ```json
 {
@@ -330,11 +330,11 @@ curl -X POST \
 }
 ```
 
-## Zugriff auf Zeitreihen-Ereignis für ein Profil nach Identität
+## Auf Zeitreihenereignisse für ein Profil nach Identität zugreifen
 
-Sie können auf Zeitreihen-Ereignis über die Identität der zugehörigen Profil-Entität zugreifen, indem Sie eine GET-Anforderung an den `/access/entities` Endpunkt senden. Diese ID besteht aus einem ID-Wert (`entityId`) und einem Identitäts-Namensraum (`entityIdNS`).
+Sie können auf Zeitreihenereignisse anhand der Identität der zugehörigen Profilentität zugreifen, indem Sie eine GET-Anfrage an den `/access/entities`-Endpunkt senden. Diese Identität besteht aus einem ID-Wert (`entityId`) und einem Identitäts-Namespace (`entityIdNS`).
 
-Die im Anforderungspfad bereitgestellten Abfragen geben an, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, die durch ein kaufmännisches Und (&amp;) getrennt sind. Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrage Parameter](#query-parameters) im Anhang.
+Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
 **API-Format**
 
@@ -344,7 +344,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anforderung findet eine Profil-Entität nach ID und ruft die Werte für die Eigenschaften `endUserIDs`, `web`und `channel` für alle Zeitreihen-Ereignis ab, die der Entität zugeordnet sind.
+Die folgende Anfrage sucht nach einer Profilentität anhand der Kennung und ruft für alle Zeitreihenereignisse, die der Entität zugeordnet sind, die Werte der Eigenschaften `endUserIDs`, `web`und `channel` ab.
 
 ```shell
 curl -X GET \
@@ -357,10 +357,10 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine paginierte Liste von Ereignissen der Zeitreihen und zugehörigen Feldern zurück, die in den Anforderungsparametern für die Abfrage angegeben wurden.
+Eine erfolgreiche Antwort gibt eine paginierte Liste mit Zeitreihenereignissen und zugehörigen Feldern zurück, die in den Abfrageparametern der Anfrage angegeben wurden.
 
 >[!NOTE]
->In der Anforderung wurde eine Grenze von einem (`limit=1`) festgelegt, daher ist der Wert `count` in der Antwort unten 1 und es wird nur eine Entität zurückgegeben.
+>In der Anfrage wurde eine Grenze von 1 (`limit=1`) festgelegt; daher ist der `count`-Wert in der Antwort unten 1 und wird nur eine Entität zurückgegeben.
 
 ```json
 {
@@ -411,10 +411,10 @@ Eine erfolgreiche Antwort gibt eine paginierte Liste von Ereignissen der Zeitrei
 
 ### Auf eine nachfolgende Ergebnisseite zugreifen
 
-Die Ergebnisse werden beim Abrufen von Zeitreihen-Ereignissen paginiert. Wenn sich die Ergebnisse auf den folgenden Seiten befinden, enthält die `_page.next` Eigenschaft eine ID. Darüber hinaus stellt die `_links.next.href` Eigenschaft einen Anforderungs-URI zum Abrufen der nächsten Seite bereit. Um die Ergebnisse abzurufen, stellen Sie eine weitere GET-Anforderung an den `/access/entities` Endpunkt. Sie müssen jedoch sicherstellen, dass Sie `/entities` den Wert des angegebenen URI ersetzen.
+Ergebnisse werden beim Abrufen von Zeitreihenereignissen paginiert. Wenn es weitere Seiten mit Ergebnissen gibt, enthält die `_page.next`-Eigenschaft eine Kennung. Darüber hinaus stellt die `_links.next.href`-Eigenschaft einen Anfrage-URI zum Abrufen der nächsten Seite bereit. Um die Ergebnisse abzurufen, senden Sie eine weitere GET-Anfrage an den `/access/entities`-Endpunkt. Sie müssen jedoch sicherstellen, dass Sie `/entities` durch den Wert des angegebenen URI ersetzen.
 
 >[!NOTE]
->Stellen Sie sicher, dass Sie `/entities/` im Anforderungspfad nicht versehentlich wiederholen. Es sollte nur einmal erscheinen wie: `/access/entities?start=...`
+>Sorgen Sie dafür, dass Sie `/entities/` im Anfragepfad nicht versehentlich wiederholen. Es sollte nur einmal erscheinen, wie hier: `/access/entities?start=...`.
 
 **API-Format**
 
@@ -424,11 +424,11 @@ GET /access/{NEXT_URI}
 
 | Parameter | Beschreibung |
 |---|---|
-| `{NEXT_URI}` | Der URI-Wert, aus dem `_links.next.href`er stammt. |
+| `{NEXT_URI}` | Der URI-Wert, der aus `_links.next.href` stammt. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft die nächste Ergebnisseite ab, indem der `_links.next.href` URI als Anforderungspfad verwendet wird.
+Die folgende Anfrage ruft die nächste Ergebnisseite ab, indem der `_links.next.href`-URI als Anfragepfad verwendet wird.
 
 ```shell
 curl -X GET \
@@ -441,7 +441,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die nächste Ergebnisseite zurück. Diese Antwort enthält keine nachfolgenden Ergebnisseiten, wie durch die leeren Zeichenfolgenwerte von `_page.next` und `_links.next.href`angegeben.
+Eine erfolgreiche Antwort gibt die nächste Ergebnisseite zurück. Diese Antwort enthält keine nachfolgenden Ergebnisseiten, erkennbar an den leeren Zeichenfolgenwerten von `_page.next` und `_links.next.href`.
 
 ```json
 {
@@ -490,9 +490,9 @@ Eine erfolgreiche Antwort gibt die nächste Ergebnisseite zurück. Diese Antwort
 }
 ```
 
-## Zugriff auf Zeitreihen-Ereignis für mehrere Profil nach Identitäten
+## Auf Zeitreihenereignisse für mehrere Profile nach Identitäten zugreifen
 
-Sie können auf Zeitreihen-Ereignis aus mehreren verknüpften Profilen zugreifen, indem Sie eine POST-Anforderung an den `/access/entities` Endpunkt senden und die Profil-ID in der Nutzlast angeben. Diese Identitäten bestehen jeweils aus einem ID-Wert (`entityId`) und einem Identitäts-Namensraum (`entityIdNS`).
+Sie können auf Zeitreihenereignisse aus mehreren verknüpften Profilen zugreifen, indem Sie eine POST-Anfrage an den `/access/entities`-Endpunkt senden und die Profilidentitäten in der Payload angeben. Diese Identitäten bestehen jeweils aus einem ID-Wert (`entityId`) und einem Identitäts-Namespace (`entityIdNS`).
 
 **API-Format**
 
@@ -502,7 +502,7 @@ POST /access/entities
 
 **Anfrage**
 
-Mit der folgenden Anforderung werden Benutzer-IDs, Ortszeiten und Ländercodes für Zeitreihenfolgen-Ereignis abgerufen, die mit einer Liste von Profil-IDs verknüpft sind:
+Mit der folgenden Anfrage werden Benutzerkennungen, Ortszeiten und Ländercodes für Zeitreihenfolgenereignisse abgerufen, die mit einer Liste von Profilidentitäten verknüpft sind:
 
 ```shell
 curl -X POST \
@@ -543,20 +543,20 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `schema.name` | **(ERFORDERLICH)** Das XDM-Schema der Entität, die abgerufen werden soll |
-| `relatedSchema.name` | Wenn `schema.name` dies `_xdm.context.experienceevent` ist, muss dieser Wert das Schema für die Profil-Entität angeben, mit dem die Zeitreihen-Ereignis verwandt sind. |
-| `identities` | **(ERFORDERLICH)** Ein Array, das Profil auflistet, aus denen die Ereignis der zugehörigen Zeitreihen abgerufen werden sollen. Jeder Eintrag im Array ist auf eine der folgenden Weisen eingestellt: 1) Verwendung einer voll qualifizierten ID, bestehend aus ID-Wert und Namensraum, oder 2) Bereitstellung einer XID. |
-| `fields` | Isoliert die Daten, die an einen bestimmten Feldsatz zurückgegeben werden. Mit diesem Filter können Sie filtern, welche Schema-Felder in den abgerufenen Daten enthalten sind. Beispiel: personalEmail,person.name,person.gender |
-| `mergePolicyId` | Identifiziert die Merge Policy, mit der die zurückgegebenen Daten gesteuert werden. Wenn im Dienstaufruf keiner angegeben ist, wird die Standardeinstellung Ihres Unternehmens für dieses Schema verwendet. Wenn keine Merge Policy-Standardeinstellung konfiguriert wurde, ist die Standardeinstellung keine Profil-Zusammenführung und keine Identitätszuordnung. |
-| `orderby` | Die Sortierreihenfolge der abgerufenen Erlebnis-Ereignis nach Zeitstempel, wie `(+/-)timestamp` bei der Standardeinstellung geschrieben `+timestamp`. |
-| `timeFilter.startTime` | Geben Sie die Beginn-Zeit an, um Zeitreihenobjekte zu filtern (in Millisekunden). |
+| `schema.name` | **(ERFORDERLICH)** Das XDM-Schema der Entität, die abgerufen werden soll. |
+| `relatedSchema.name` | Wenn `schema.name` den Wert `_xdm.context.experienceevent` hat, muss dieser Wert das Schema für die Profilentität angeben, mit der die Zeitreihenereignisse verbunden sind. |
+| `identities` | **(ERFORDERLICH)** Ein Array, das Profile auflistet, aus denen zugehörige Zeitreihenereignisse abgerufen werden sollen. Jeder Eintrag im Array ist auf eine der folgenden Weisen eingestellt: 1) Verwendung einer vollqualifizierten Identität, bestehend aus ID-Wert und Namespace oder 2) Bereitstellung einer XID. |
+| `fields` | Isoliert die Daten, die für einen bestimmten Satz von Feldern zurückgegeben werden. Filtern Sie damit, welche Schemafelder in abgerufenen Daten enthalten sind. Beispiel: personalEmail,person.name,person.gender |
+| `mergePolicyId` | Gibt die Zusammenführungsrichtlinie an, die für die zurückgegebenen Daten gelten soll. Wenn im Dienstaufruf keine Zusammenführungsrichtlinie angegeben ist, wird die Standardeinstellung Ihrer Organisation für dieses Schema verwendet. Wenn keine standardmäßige Zusammenführungsrichtlinie konfiguriert wurde, lautet die Standardeinstellung: keine Profilzusammenführung und keine Identitätszuordnung. |
+| `orderby` | Die Sortierreihenfolge der abgerufenen Erlebnisereignisse nach Zeitstempel, geschrieben als `(+/-)timestamp`, wobei `+timestamp` die Standardeinstellung ist. |
+| `timeFilter.startTime` | Geben Sie die Startzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). |
 | `timeFilter.endTime` | Geben Sie die Endzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). |
-| `limit` | Numerischer Wert, der die maximale Anzahl der zurückzugebenden Objekte angibt. Standard: 1000 |
-| `withCA` | Funktionsmarkierung zur Aktivierung berechneter Attribute für die Suche. Standard: false |
+| `limit` | Numerischer Wert, der die maximale Anzahl der zurückzugebenden Objekte angibt. Standardwert: „1000“. |
+| `withCA` | Feature Flag zum Aktivieren berechneter Attribute für das Nachschlagen. Standardwert: „false“. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine paginierte Liste von Zeitreihen-Ereignissen zurück, die mit den in der Anforderung angegebenen mehreren Profilen verknüpft sind.
+Eine erfolgreiche Antwort gibt eine paginierte Liste von Zeitreihenereignissen zurück, die mit den verschiedenen in der Anfrage angegebenen Profilen verknüpft sind.
 
 ```json
 {
@@ -764,19 +764,19 @@ Eine erfolgreiche Antwort gibt eine paginierte Liste von Zeitreihen-Ereignissen 
 }`
 ```
 
-In dieser Beispielantwort liefert das erste aufgelistete Profil (&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;) einen Wert für `_links.next.payload`, d. h. es gibt zusätzliche Ergebnisseiten für dieses Profil. Weitere Informationen zum Zugriff auf diese zusätzlichen Ergebnisse finden Sie im folgenden Abschnitt zum [Zugriff auf zusätzliche Ergebnisse](#access-additional-results) .
+In dieser Beispielantwort stellt das erste aufgelistete Profil („GkouAW-yD9aoRCPhRYROJ-TetAFW“) einen Wert für `_links.next.payload` bereit; es gibt also weitere Ergebnisseiten für dieses Profil. Weiterführende Informationen zum Zugriff auf diese zusätzlichen Ergebnisse finden Sie im folgenden Abschnitt zum [Zugreifen auf weitere Ergebnisse](#access-additional-results).
 
-### Zusätzliche Ergebnisse {#access-additional-results}
+### Weitere Ergebnisse aufrufen {#access-additional-results}
 
-Beim Abrufen von Zeitreihen-Ereignissen werden möglicherweise viele Ergebnisse zurückgegeben, daher werden die Ergebnisse häufig paginiert. Wenn für ein bestimmtes Profil nachfolgende Ergebnisseiten vorhanden sind, enthält der `_links.next.payload` Wert für dieses Profil ein Nutzdatenobjekt.
+Beim Abrufen von Zeitreihenereignissen werden möglicherweise viele Ergebnisse zurückgegeben; daher werden die Ergebnisse oft paginiert. Wenn für ein bestimmtes Profil nachfolgende Ergebnisseiten vorhanden sind, enthält der `_links.next.payload`-Wert für dieses Profil ein Payload-Objekt.
 
-Mithilfe dieser Nutzlast im Anforderungstext können Sie eine zusätzliche POST-Anforderung an den `access/entities` Endpunkt ausführen, um die nachfolgende Seite der Zeitreihendaten für dieses Profil abzurufen.
+Mithilfe dieser Payload im Anfragetext können Sie eine weitere POST-Anfrage an den `access/entities`-Endpunkt senden, um die nachfolgende Seite der Zeitreihendaten für dieses Profil abzurufen.
 
-## Zugriff auf Zeitreihen-Ereignis in mehreren Schemas
+## Zeitreihenereignisse in mehreren Schemaentitäten aufrufen
 
-Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor verbunden sind. Der folgende Beispiel-API-Aufruf geht davon aus, dass zwischen zwei Schemas bereits eine Beziehung definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im Handbuch zur Schema Registry API für Entwickler- [Deskriptoren-Endpunkt-Handbuch](../../xdm/api/descriptors.md).
+Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemas definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im Handbuch [!DNL Schema Registry] API-Entwicklerhandbuch [für Deskriptoren](../../xdm/api/descriptors.md).
 
-Sie können Parameter für die Abfrage in den Anforderungspfad einbeziehen, um anzugeben, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, die durch ein kaufmännisches Und (&amp;) getrennt sind. Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrage Parameter](#query-parameters) im Anhang.
+Sie können in den Anfragepfad Abfrageparameter einbeziehen, um anzugeben, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
 **API-Format**
 
@@ -786,7 +786,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Entität abgerufen, die einen zuvor eingerichteten Beziehungsdeskriptor enthält, um auf Informationen über verschiedene Schema hinweg zuzugreifen.
+Mit der folgenden Anfrage wird eine Entität abgerufen, die einen zuvor eingerichteten Beziehungsdeskriptor enthält, um in verschiedenen Schemas auf Daten zuzugreifen.
 
 ```shell
 curl -X GET \
@@ -799,7 +799,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine paginierte Liste von Zeitreihen-Ereignissen zurück, die mit mehreren Entitäten verknüpft sind.
+Eine erfolgreiche Antwort gibt eine paginierte Liste mit Zeitreihenereignissen zurück, die mit mehreren Entitäten verknüpft sind.
 
 ```json
 {
@@ -880,32 +880,32 @@ Eine erfolgreiche Antwort gibt eine paginierte Liste von Zeitreihen-Ereignissen 
 
 ### Auf eine nachfolgende Ergebnisseite zugreifen
 
-Die Ergebnisse werden beim Abrufen von Zeitreihen-Ereignissen paginiert. Wenn sich die Ergebnisse auf den folgenden Seiten befinden, enthält die `_page.next` Eigenschaft eine ID. Darüber hinaus stellt die `_links.next.href` Eigenschaft eine Anforderungs-URI zum Abrufen der folgenden Seite bereit, indem zusätzliche GET-Anforderungen an den `access/entities` Endpunkt gesendet werden.
+Ergebnisse werden beim Abrufen von Zeitreihenereignissen paginiert. Wenn es weitere Seiten mit Ergebnissen gibt, enthält die `_page.next`-Eigenschaft eine Kennung. Darüber hinaus stellt die `_links.next.href`-Eigenschaft einen Anfrage-URI zum Abrufen der folgenden Seite bereit, indem zusätzliche GET-Anfragen an den `access/entities`-Endpunkt gesendet werden.
 
 ## Nächste Schritte
 
-In diesem Handbuch haben Sie erfolgreich auf die Datenfelder, Profil und Zeitreihendaten zum Echtzeit-Profil von Kunden zugegriffen. Informationen zum Zugriff auf andere in der Platform gespeicherte Datenressourcen finden Sie in der Übersicht über den [Datenzugriff](../../data-access/home.md).
+By following this guide you have successfully accessed [!DNL Real-time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Platform], see the [Data Access overview](../../data-access/home.md).
 
 ## Anhang {#appendix}
 
-Im folgenden Abschnitt finden Sie zusätzliche Informationen zum Zugriff auf Profil-Daten mithilfe der API.
+The following section provides supplemental information regarding accessing [!DNL Profile] data using the API.
 
-### Abfrage {#query-parameters}
+### Abfrageparameter {#query-parameters}
 
-Die folgenden Parameter werden im Pfad für GET-Anforderungen an den `/access/entities` Endpunkt verwendet. Sie dienen dazu, die Profil-Entität zu identifizieren, auf die Sie zugreifen möchten, und die in der Antwort zurückgegebenen Daten zu filtern. Erforderliche Parameter sind beschriftet, während der Rest optional ist.
+Die folgenden Parameter werden im Pfad für GET-Anfragen an den `/access/entities`-Endpunkt verwendet. Sie dienen dazu, die Profilentität anzugeben, auf die Sie zugreifen möchten, und die in der Antwort zurückgegebenen Daten zu filtern. Erforderliche Parameter sind markiert, während der Rest optional ist.
 
 | Parameter | Beschreibung | Beispiel |
 |---|---|---|
-| `schema.name` | **(ERFORDERLICH)** Das XDM-Schema der Entität, die abgerufen werden soll | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | Wenn `schema.name` der Wert &quot;_xdm.context.experience&quot; lautet, muss dieser Wert das Schema für die Profil-Entität angeben, mit dem die Zeitreihen-Ereignis verknüpft sind. | `relatedSchema.name=_xdm.context.profile` |
-| `entityId` | **(ERFORDERLICH)** Die ID der Entität. Wenn der Wert dieses Parameters keine XID ist, muss auch ein Identitäts-Namensraum-Parameter angegeben werden (siehe `entityIdNS` unten). | `entityId=janedoe@example.com` |
-| `entityIdNS` | Wenn `entityId` keine XID angegeben wird, muss dieses Feld den Identitäts-Namensraum angeben. | `entityIdNE=email` |
-| `relatedEntityId` | Wenn `schema.name` der Wert &quot;_xdm.context.experience&quot; lautet, muss dieser Wert den Identitäts-Namensraum der verwandten Profil-Entität angeben. Dieser Wert folgt denselben Regeln wie `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
-| `relatedEntityIdNS` | Wenn `schema.name` der Wert &quot;_xdm.context.experience&quot; lautet, muss dieser Wert den Identitäts-Namensraum für die in `relatedEntityId`angegebene Entität angeben. | `relatedEntityIdNS=CRMID` |
-| `fields` | Filter der in der Antwort zurückgegebenen Daten. Geben Sie hier an, welche Schema-Feldwerte in die abgerufenen Daten einbezogen werden sollen. Trennen Sie bei mehreren Feldern die Werte durch ein Komma ohne Leerzeichen zwischen | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | Identifiziert die Merge Policy, mit der die zurückgegebenen Daten gesteuert werden. Wenn im Aufruf keine Angabe gemacht wird, wird die Standardeinstellung Ihres Unternehmens für dieses Schema verwendet. Wenn keine Merge Policy-Standardeinstellung konfiguriert wurde, ist die Standardeinstellung keine Profil-Zusammenführung und keine Identitätszuordnung. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | Die Sortierreihenfolge der abgerufenen Erlebnis-Ereignis nach Zeitstempel, wie `(+/-)timestamp` bei der Standardeinstellung geschrieben `+timestamp`. | `orderby=-timestamp` |
-| `startTime` | Geben Sie die Beginn-Zeit an, um Zeitreihenobjekte zu filtern (in Millisekunden). | `startTime=1539838505` |
+| `schema.name` | **(ERFORDERLICH)** Das XDM-Schema der Entität, die abgerufen werden soll. | `schema.name=_xdm.context.experienceevent` |
+| `relatedSchema.name` | Wenn `schema.name` den Wert „_xdm.context.experience“ hat, muss dieser Wert das Schema für die Profilentität angeben, mit dem die Zeitreihenereignisse verbunden sind. | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **(ERFORDERLICH)** Die Kennung der Entität. Wenn der Wert dieses Parameters keine XID ist, muss auch ein Identitäts-Namespace-Parameter angegeben werden (siehe `entityIdNS` unten). | `entityId=janedoe@example.com` |
+| `entityIdNS` | Wenn `entityId` nicht als XID angegeben wird, muss dieses Feld den Identitäts-Namespace angeben. | `entityIdNE=email` |
+| `relatedEntityId` | Wenn `schema.name` den Wert „_xdm.context.experience“ hat, muss dieser Wert den Identitäts-Namespace der verwandten Profilentität angeben. Dieser Wert folgt denselben Regeln wie `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
+| `relatedEntityIdNS` | Wenn `schema.name` den Wert „_xdm.context.experience“ hat, muss dieser Wert den Identitäts-Namespace für die in `relatedEntityId` festgelegte Entität angeben. | `relatedEntityIdNS=CRMID` |
+| `fields` | Filtert die in der Antwort zurückgegebenen Daten. Geben Sie hier an, welche Schemafeldwerte in abgerufene Daten einbezogen werden sollen. Trennen Sie bei mehreren Feldern die Werte durch ein Komma ohne Leerzeichen dazwischen. | `fields=personalEmail,person.name,person.gender` |
+| `mergePolicyId` | Gibt die Zusammenführungsrichtlinie an, die für die zurückgegebenen Daten gelten soll. Wenn im Aufruf keine Zusammenführungsrichtlinie angegeben ist, wird die Standardeinstellung Ihrer Organisation für dieses Schema verwendet. Wenn keine standardmäßige Zusammenführungsrichtlinie konfiguriert wurde, lautet die Standardeinstellung: keine Profilzusammenführung und keine Identitätszuordnung. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
+| `orderBy` | Die Sortierreihenfolge der abgerufenen Erlebnisereignisse nach Zeitstempel, geschrieben als `(+/-)timestamp`, wobei `+timestamp` die Standardeinstellung ist. | `orderby=-timestamp` |
+| `startTime` | Geben Sie die Startzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). | `startTime=1539838505` |
 | `endTime` | Geben Sie die Endzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). | `endTime=1539838510` |
-| `limit` | Numerischer Wert, der die maximale Anzahl der zurückzugebenden Objekte angibt. Standard: 1000 | `limit=100` |
-| `withCA` | Funktionsmarkierung zur Aktivierung berechneter Attribute für die Suche. Standard: false | `withCA=true` |
+| `limit` | Numerischer Wert, der die maximale Anzahl der zurückzugebenden Objekte angibt. Standardwert: „1000“. | `limit=100` |
+| `withCA` | Feature Flag zum Aktivieren berechneter Attribute für das Nachschlagen. Standardwert: „false“. | `withCA=true` |
