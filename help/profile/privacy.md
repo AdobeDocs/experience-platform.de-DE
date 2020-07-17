@@ -4,52 +4,52 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 0%
+source-wordcount: '593'
+ht-degree: 31%
 
 ---
 
 
-# Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
+# Verarbeitung von Datenschutzanfragen in [!DNL Real-time Customer Profile]
 
-Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die auf ihre personenbezogenen Daten zugreifen, sie Opt-out verkaufen oder löschen, wie in Datenschutzbestimmungen wie der Allgemeinen Datenschutzverordnung (GDPR) und dem California Consumer Privacy Act (CCPA) definiert.
+Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and [!DNL California Consumer Privacy Act] (CCPA).
 
-In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanforderungen für Echtzeit-Kundendaten-Profile behandelt.
+In diesem Dokument werden wesentliche Konzepte für die Verarbeitung von Datenschutzanforderungen für [!DNL Real-time Customer Profile]Daten behandelt.
 
 ## Erste Schritte
 
-Es wird empfohlen, die folgenden Experience Platformen zu verstehen, bevor Sie dieses Handbuch lesen:
+It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [Privacy Service](home.md): Verwaltet Kundenanforderungen für den Zugriff auf, die Einstellung des Verkaufs oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
-* [Identitätsdienst](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
-* [Echtzeit-Profil](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [!DNL Privacy Service](home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
+* [!DNL Identity Service](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [!DNL Real-time Customer Profile](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-## Identitäts-Namensräume {#namespaces}
+## Identitäts-Namespaces verstehen {#namespaces}
 
-Der Identitätsdienst für Adobe Experience Platformen überbrückt Identitätsdaten von Kunden über Systeme und Geräte hinweg. Der Identitätsdienst nutzt **Identitätskennungen** , um einen Kontext für Identitätswerte bereitzustellen, indem er sie mit ihrem System der Herkunft verknüpft. Ein Namensraum kann ein allgemeines Konzept wie eine E-Mail-Adresse (&quot;E-Mail&quot;) oder die Identität einer bestimmten Anwendung zuordnen, z. B. einer Adobe-Advertising Cloud-ID (&quot;AdCloud&quot;) oder einer Adobe Target-ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] überbrückt Identitätsdaten von Kunden über Systeme und Geräte hinweg. [!DNL Identity Service] verwendet **Identitäts-Namensraum** , um einen Kontext für Identitätswerte bereitzustellen, indem sie sie mit ihrem System der Herkunft verknüpfen. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
 
 Der Identitätsdienst verwaltet einen Store von global definierten (Standard-) und benutzerdefinierten (benutzerdefinierten) Identitäts-Namensräumen. Standardmäßige Namensraum stehen für alle Unternehmen zur Verfügung (z. B. &quot;E-Mail&quot;und &quot;ECID&quot;), während Ihr Unternehmen benutzerdefinierte Namensraum erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
-Weitere Informationen zu Identitäts-Namensräumen in der Experience Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+Weitere Informationen zu Identitäts-Namensräumen [!DNL Experience Platform]finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
 
-## Einreichen von Anträgen {#submit}
+## Übermitteln von Anfragen {#submit}
 
 >[!NOTE]
 >
->In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für den Profil-Datenspeicher erstellen. Es wird dringend empfohlen, dass Sie die Dokumentation zur [Privacy Service-API](../privacy-service/api/getting-started.md) oder zur Benutzeroberfläche [des](../privacy-service/ui/overview.md) Privacy Service lesen, um alle Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
+>This section covers how to create privacy requests for the [!DNL Profile] data store. Es wird dringend empfohlen, die Dokumentation zur [Privacy Service-API](../privacy-service/api/getting-started.md) oder zur [Privacy Service-Benutzeroberfläche](../privacy-service/ui/overview.md) zu lesen, um mehr über alle Schritte beim Übermitteln eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anfrage-Payloads.
 
-Im folgenden Abschnitt wird beschrieben, wie Sie mit der Privacy Service-API oder der Benutzeroberfläche Datenschutzanforderungen für Echtzeit-Kundendaten und den Data Lake erstellen.
+The following section outlines how to make privacy requests for [!DNL Real-time Customer Profile] and the [!DNL Data Lake] using the [!DNL Privacy Service] API or UI.
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanforderungen in der API müssen alle `userIDs` bereitgestellten Aufträge einen bestimmten `namespace` und `type` je nach Datenspeicher verwenden, für den sie gelten. IDs für den Profil-Store müssen entweder &quot;Standard&quot;oder &quot;benutzerdefiniert&quot;für ihren `type` Wert verwenden und einen gültigen [Identitäts-Namensraum](#namespaces) , der vom Identitätsdienst für ihren `namespace` Wert erkannt wird.
+Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für den [!DNL Profile] Store müssen entweder &quot;Standard&quot;oder &quot;benutzerdefiniert&quot;für ihren `type` Wert und einen gültigen [Identitäts-Namensraum](#namespaces) verwenden, der [!DNL Identity Service] für seinen `namespace` Wert erkannt wird.
 
 
-Darüber hinaus muss das `include` Array der Anforderungs-Nutzlast die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anforderung gesendet wird. Bei Anforderungen an den Data Lake muss das Array den Wert &quot;ProfileService&quot;enthalten.
+Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. When making requests to the [!DNL Data Lake], the array must include the value &quot;ProfileService&quot;.
 
-Mit der folgenden Anforderung wird ein neuer Datenschutzauftrag für Echtzeit-Kundendaten erstellt, wobei der standardmäßige Namensraum &quot;E-Mail&quot; verwendet wird. Er enthält außerdem den Produktwert für Profil im `include` Array:
+Mit der folgenden Anforderung wird ein neuer Datenschutzauftrag für beide Seiten [!DNL Real-time Customer Profile]unter Verwendung des standardmäßigen &quot;E-Mail&quot;-Identitäts-Namensraums erstellt. It also includes the product value for [!DNL Profile] in the `include` array:
 
 ```shell
 curl -X POST \
@@ -91,20 +91,20 @@ curl -X POST \
 }'
 ```
 
-### Verwenden der Benutzeroberfläche
+### Verwenden der UI
 
-Wählen Sie beim Erstellen von Auftragsanforderungen in der Benutzeroberfläche **AEP Data Lake** und/oder **Profil** unter _Products_ aus, um Aufträge für Daten zu verarbeiten, die im Data Lake bzw. im Real-Time Customer Profil gespeichert werden.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_in order to process jobs for data stored in the[!DNL Data Lake]or[!DNL Real-time Customer Profile], respectively.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
-## Anforderungsverarbeitung löschen
+## Verarbeitung von Löschanfragen
 
-Wenn die Experience Platform eine Löschanfrage von Privacy Service erhält, sendet die Platform eine Bestätigung an den Privacy Service, dass die Anforderung eingegangen ist und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake oder dem Data Profil Store entfernt. Während dieses siebentägigen Fensters werden die Daten weich gelöscht und stehen daher keinem Platform-Dienst zur Verfügung.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] or [!DNL Profile] store within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
 
-In zukünftigen Versionen sendet Platform eine Bestätigung an Privacy Service, nachdem die Daten physisch gelöscht wurden.
+In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments wurden Sie zu den wichtigen Konzepten der Verarbeitung von Datenschutzanforderungen in der Experience Platform vorgestellt. Es wird empfohlen, die Dokumentation in diesem Handbuch weiter zu lesen, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. Wir empfehlen Ihnen, die Dokumentation in diesem Handbuch weiterzulesen, um Ihr Verständnis hinsichtlich der Verwaltung von Identitätsdaten und Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Informationen zur Verarbeitung von Datenschutzanforderungen für nicht von Profil verwendete Platformen finden Sie im Dokument zur Verarbeitung von [Datenschutzanfragen im Data Lake](../catalog/privacy.md).
+Informationen zur Verarbeitung von Datenschutzanforderungen für nicht von [!DNL Platform] Ihnen verwendete [!DNL Profile]Ressourcen finden Sie im Dokument zur Verarbeitung von [Datenschutzanfragen im Data Lake](../catalog/privacy.md).
