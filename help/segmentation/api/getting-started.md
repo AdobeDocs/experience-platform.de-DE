@@ -1,51 +1,49 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Entwicklerhandbuch für Segmentdienst
+title: Entwicklerhandbuch für Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 0%
+source-wordcount: '462'
+ht-degree: 40%
 
 ---
 
 
-# Entwicklerhandbuch für Segmentdienst
+# Getting started with [!DNL Segmentation Service] {#getting-started}
 
-Mit der Segmentierung können Sie Segmente erstellen und Audiencen in Adobe Experience Platform aus Ihren Echtzeit-Daten zum Profil von Kunden generieren.
+Mit dem Segmentierungsdienst für Adobe Experience Platformen können Sie Segmente erstellen und Audiencen in Adobe Experience Platform aus Ihren [!DNL Real-time Customer Profile] Daten generieren.
 
-## Erste Schritte
+The developer guide requires a working understanding of the various Experience Platform services involved with using [!DNL Segmentation Service].
 
-Dieser Leitfaden erfordert ein Verständnis der verschiedenen Adobe Experience Platformen, die mit der Segmentierung verbunden sind.
+- [!DNL Segmentation](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus Echtzeitdaten zum Profil von Kunden.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Sandbox-Umgebungen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen für die Entwicklung und Erweiterung von Anwendungen für digitale Erlebnisse unterteilen.
 
-- [Segmentierung](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus Echtzeitdaten zum Profil von Kunden.
-- [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-- [Echtzeit-Profil](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+The following sections provide additional information that you will need to know in order to successfully work with the [!DNL Segmentation] API.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Segmentierung mithilfe der API erfolgreich zu verwenden.
+## Lesehilfe für Beispiel-API-Aufrufe
 
-### Lesen von Beispiel-API-Aufrufen
+The [!DNL Segmentation Service] API documentation provides example API calls to demonstrate how to format your requests. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung in Experience Platform.
 
-Die Dokumentation zur Segmentierungsdienst-API enthält Beispiele für API-Aufrufe, die zeigen, wie Ihre Anforderungen formatiert werden. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
+## Erforderliche Kopfzeilen
 
-### Erforderliche Kopfzeilen
+Außerdem setzt die API-Dokumentation voraus, dass Sie das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abgeschlossen haben, um Platform-Endpunkte erfolgreich aufrufen zu können. Wenn Sie das Authentifizierungs-Tutorial absolvieren, erhalten Sie die Werte für jede der erforderlichen Kopfzeilen in Experience Platform-API-Aufrufen, wie unten dargestellt:
 
-Die API-Dokumentation erfordert auch, dass Sie das [Authentifizierungstraining](../../tutorials/authentication.md) abgeschlossen haben, um Platform-Endpunkte erfolgreich aufzurufen. Wenn Sie das Authentifizierungstraining abschließen, werden die Werte für die einzelnen erforderlichen Kopfzeilen in Experience Platform API-Aufrufen bereitgestellt, wie unten dargestellt:
-
-- Genehmigung: `Bearer {ACCESS_TOKEN}`
+- Autorisierung: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox in which the operation will take place:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zum Arbeiten mit Sandboxen in der Experience Platform finden Sie in der Übersicht über [Sandboxen](../../sandboxes/home.md).
+>For more information on working with sandboxes in [!DNL Experience Platform], see the [sandboxes overview documentation](../../sandboxes/home.md).
 
 <!-- ## Estimates
 
@@ -81,13 +79,13 @@ For more information on using this endpoint, please read the [schedules develope
 
 Segmentdefinitionen definieren, welche Profil zu welchen Audiencen gehören. Mit dem `/segment/definitions` Endpunkt können Sie eine Liste von Segmentdefinitionen abrufen, eine neue Segmentdefinition erstellen, Details zu einer bestimmten Segmentdefinition abrufen, eine bestimmte Segmentdefinition löschen oder Details einer bestimmten Segmentdefinition überschreiben.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Entwicklerhandbuch für [Segmentdefinitionen](./segment-definitions.md).
+For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md).
 
 ## Segmentaufträge
 
-Segmentaufträge verarbeiten zuvor festgelegte Segmentdefinitionen, um ein Audiencen-Segment zu erstellen. Mit dem `/segment/jobs` Endpunkt können Sie eine Liste von Segmentaufträgen abrufen, einen neuen Segmentauftrag erstellen, Details zu einem bestimmten Segmentauftrag abrufen oder einen bestimmten Segmentauftrag löschen.
+Segmentaufträge verarbeiten zuvor festgelegte Segmentdefinitionen, um ein Zielgruppensegment zu erstellen. Sie können den `/segment/jobs`-Endpunkt verwenden, um eine Liste von Segmentaufträgen abzurufen, einen neuen Segmentauftrag zu erstellen, Details zu einem bestimmten Segmentauftrag abzurufen oder einen bestimmten Segmentauftrag zu löschen.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Entwicklerhandbuch für [Segmentaufträge](./segment-jobs.md).
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Entwicklerhandbuch für Segmentaufträge](./segment-jobs.md).
 
 ## Segmentsuche
 
@@ -95,4 +93,4 @@ Die Segmentsuche wird verwendet, um konfigurierbare Felder, die in verschiedenen
 
 ## Nächste Schritte
 
-Um mit dem Aufrufen mithilfe der Segmentierungs-API zu beginnen, wählen Sie eines der Unterleitfäden aus, um zu erfahren, wie bestimmte segmentierungsbezogene Endpunkte verwendet werden. Weitere Informationen zum Arbeiten mit Segmenten mithilfe der Benutzeroberfläche &quot;Platform&quot;finden Sie im Benutzerhandbuch [zur Segmentierung](../ui/overview.md).
+Um Aufrufe mithilfe der [!DNL Segmentation Service] API durchzuführen, wählen Sie eine der verfügbaren Endpunkthandbücher entweder über die linke Navigation oder im [Entwicklerhandbuch aus](./overview.md)
