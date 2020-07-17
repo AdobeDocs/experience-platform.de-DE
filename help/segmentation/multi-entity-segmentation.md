@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Segmentierung mit mehreren Entitäten
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 93%
+source-wordcount: '396'
+ht-degree: 65%
 
 ---
 
@@ -34,14 +34,14 @@ Die Definition von Beziehungen mit der Struktur Ihrer Experience-Datenmodell (XD
 
 Dieser Vorgang kann entweder mit der Schema Registry-API oder dem Schema-Editor durchgeführt werden. Eine ausführliche Anleitung zur Nutzung der API für das Definieren einer Beziehung zwischen zwei Schemas finden Sie im Tutorial zum [Definieren einer Beziehung zwischen zwei Schemas mithilfe der API](../xdm/tutorials/relationship-api.md). Eine ausführliche Anleitung zur Nutzung des Schema-Editors für das Definieren einer Beziehung zwischen zwei Schemas finden Sie im Tutorial zum [Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors](../xdm/tutorials/relationship-ui.md).
 
-## So lassen sich Segmente erstellen, die XDM-Beziehungen nutzen
+## Erstellen von Segmenten, die XDM-Beziehungen verwenden
 
-Nach der Definition Ihrer XDM-Beziehungen können Sie die Echtzeit-Kundenprofil-APIs nutzen, um ein Segment zu erstellen.
+Nachdem Sie Ihre XDM-Beziehungen definiert haben, können Sie mit der Segmentierungsdienst-API ein Segment erstellen.
 
-Dieser Vorgang kann entweder mit der Echtzeit-Kundenprofil-API oder dem Segment Builder erledigt werden. Eine ausführliche Anleitung zum Erstellen eines Segments mithilfe der API finden Sie im Tutorial zum [Erstellen eines Segments mithilfe der Echtzeit-Kundenprofil-API](./tutorials/create-a-segment.md). Eine ausführliche Anleitung zum Erstellen eines Segments mit dem Segment Builder finden Sie im [Segment Builder-Benutzerhandbuch](./ui/overview.md).
+Dieser Vorgang kann entweder mit der Segmentierungs-API oder der Segment Builder-Benutzeroberfläche durchgeführt werden. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). Eine ausführliche Anleitung zum Erstellen eines Segments mit dem Segment Builder finden Sie im [Segment Builder-Benutzerhandbuch](./ui/overview.md).
 
 ## So lassen sich Segmente für Segmente mit mehreren Entitäten evaluieren und aufrufen
 
-Nach der Erstellung eines Segments können Sie die Segmentergebnisse mithilfe der Echtzeit-Kundenprofil-APIs auswerten und aufrufen. Die Auswertung eines Segments mit mehreren Entitäten ist der Auswertung eines regulären Segments sehr ähnlich.
+After creating a segment, you can evaluate and access the segment results using the [!DNL Segmentation Service] API. Die Auswertung eines Segments mit mehreren Entitäten ist der Auswertung eines regulären Segments sehr ähnlich.
 
-Dieser Vorgang kann nur mit der Echtzeit-Kundenprofil-API durchgeführt werden. Eine ausführliche Anleitung zur Verwendung der API für das Auswerten und Aufrufen von Segmenten finden Sie im Tutorial zum [Auswerten und Aufrufen von Segmenten](./tutorials/evaluate-a-segment.md).
+This process can only be done using the [!DNL Segmentation Service] API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
