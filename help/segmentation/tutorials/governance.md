@@ -1,65 +1,65 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erzwingen der Datenverwendungskonformität für Audiencen-Segmente
+title: Durchsetzen der Datennutzungskonformität für Zielgruppensegmente
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
 workflow-type: tm+mt
-source-wordcount: '1372'
-ht-degree: 2%
+source-wordcount: '1325'
+ht-degree: 43%
 
 ---
 
 
-# Erzwingen Sie die Einhaltung der Datenauslastung für ein Audiencen-Segment mithilfe von APIs
+# Durchsetzen der Datennutzungskonformität für Zielgruppensegmente mithilfe von APIs
 
-In diesem Lernprogramm werden die Schritte zum Erzwingen der Einhaltung der Datenverwendungskonformität für Kundensegmente in Echtzeit mithilfe von APIs beschrieben.
+This tutorial covers the steps for enforcing data usage compliance for [!DNL Real-time Customer Profile] audience segments using APIs.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [Echtzeit-Profil](../../profile/home.md): Echtzeit-Kundendaten-Profil ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von Erlebnisdatenmodelldaten (XDM) innerhalb der Platform verwendet. Profil führt Daten über verschiedene Unternehmensdaten hinweg zusammen und bietet Zugriff auf diese Daten in einer einheitlichen Darstellung.
-   - [Richtlinien](../../profile/api/merge-policies.md)zusammenführen: Regeln, die vom Echtzeit-Kundenkonto verwendet werden, um zu bestimmen, welche Daten unter bestimmten Bedingungen zu einer einheitlichen Ansicht zusammengeführt werden können. Merge-Richtlinien können für Zwecke der Datenverwaltung konfiguriert werden.
-- [Segmentierung](../home.md): Wie lange Kundendaten in Echtzeit eine große Gruppe von im Profil Store enthaltenen Personen in kleinere Gruppen unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
-- [Datenverwaltung](../../data-governance/home.md): Die Datenverwaltung bietet die Infrastruktur für die Kennzeichnung und Durchsetzung der Datenverwendung (DULE) unter Verwendung der folgenden Komponenten:
-   - [Datenverwendungsbeschriftungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern im Hinblick auf die Empfindlichkeit bei der Verarbeitung ihrer jeweiligen Daten verwendet werden.
-   - [Datenverwendungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketingaktionen für Daten zulässig sind, die durch bestimmte Datenverwendungsbeschriftungen kategorisiert wurden.
+- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von [!DNL Experience Data Model] (XDM-)Daten in [!DNL Platform]. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
+   - [Richtlinien](../../profile/api/merge-policies.md)zusammenführen: Regeln, [!DNL Real-time Customer Profile] mit denen bestimmt wird, welche Daten unter bestimmten Voraussetzungen in einer einheitlichen Ansicht zusammengeführt werden können. Zusammenführungsrichtlinien können für Data Governance-Zwecke konfiguriert werden.
+- [!DNL Segmentation](../home.md): Wie [!DNL Real-time Customer Profile] unterteilt eine große Gruppe von im Profil Store enthaltenen Personen in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
+- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] stellt die Infrastruktur für die Kennzeichnung und Durchsetzung der Datenverwendung (DULE) unter Verwendung der folgenden Komponenten bereit:
+   - [Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern in Bezug auf die Sensibilität, mit der die jeweiligen Daten verarbeitet werden sollen, verwendet werden.
+   - [Datennutzungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketing-Aktionen für Daten zulässig sind, die nach bestimmten Datennutzungsbezeichnungen kategorisiert sind.
    - [Durchsetzung](../../data-governance/enforcement/overview.md)der Politik: Ermöglicht es Ihnen, Datenverwendungsrichtlinien zu erzwingen und Datenvorgänge zu verhindern, die Richtlinienverletzungen darstellen.
-- [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platformen-APIs erfolgreich aufrufen zu können.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
-### Lesen von Beispiel-API-Aufrufen
+### Lesehilfe für Beispiel-API-Aufrufe
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Werte der zu verwendenden Kopfzeilen
 
-Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Genehmigung: Träger `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
+Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
 
 - Content-Type: application/json
 
-## Eine Richtlinie zum Zusammenführen für eine Segmentdefinition suchen {#merge-policy}
+## Look up a merge policy for a segment definition {#merge-policy}
 
-Dieser Arbeitsablauf beginnt mit dem Zugriff auf ein bekanntes Audiencen-Segment. Segmente, die für die Verwendung im Echtzeit-Kundensegment aktiviert sind, enthalten eine Richtlinie-ID zum Zusammenführen innerhalb ihrer Segmentdefinition. Diese Richtlinie zum Zusammenführen enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datenverwendung enthalten.
+Dieser Workflow beginnt mit dem Zugriff auf ein bekanntes Zielgruppensegment. Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment aufgenommen werden sollen, die wiederum alle zutreffenden Datennutzungsbezeichnungen enthalten.
 
-Mithilfe der [Segmentierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)können Sie eine Segmentdefinition anhand ihrer ID nachschlagen, um die zugehörige Mergerichtlinie zu finden.
+Using the [!DNL Segmentation] API, you can look up a segment definition by its ID to find its associated merge policy.
 
 **API-Format**
 
@@ -69,7 +69,7 @@ GET /segment/definitions/{SEGMENT_DEFINITION_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | Die ID der Segmentdefinition, die Sie nachschlagen möchten. |
+| `{SEGMENT_DEFINITION_ID}` | Die Kennung der Segmentdefinition, die Sie nachschlagen möchten. |
 
 **Anfrage**
 
@@ -122,11 +122,11 @@ Eine erfolgreiche Antwort gibt die Details der Segmentdefinition zurück.
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `mergePolicyId` | Die ID der für die Segmentdefinition verwendeten Mergerichtlinie. Dies wird im nächsten Schritt verwendet. |
+| `mergePolicyId` | Die ID der Zusammenführungsrichtlinie, die für die Segmentdefinition verwendet wird. Diese wird im nächsten Schritt verwendet. |
 
-## Suchen Sie die Quelldatasets aus der Richtlinie zum Zusammenführen {#datasets}
+## Suchen nach Quelldatensätzen in der Zusammenführungsrichtlinie {#datasets}
 
-Merge-Richtlinien enthalten Informationen zu ihren Quelldatasets, die wiederum Datenverwendungsbeschriftungen enthalten. Sie können die Details einer Zusammenführungsrichtlinie nachschlagen, indem Sie die ID der Zusammenführungsrichtlinie in einer GET-Anforderung an die Profil-API angeben.
+Merge-Richtlinien enthalten Informationen zu ihren Quelldatasets, die wiederum Datenverwendungsbeschriftungen enthalten. You can lookup the details of a merge policy by providing the merge policy ID in a GET request to the [!DNL Profile] API. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im Endpunkt-Handbuch zu [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md).
 
 **API-Format**
 
@@ -136,7 +136,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | Die ID der im [vorherigen Schritt](#merge-policy)abgerufenen Zusammenführungsrichtlinie. |
+| `{MERGE_POLICY_ID}` | Die ID der im [vorherigen Schritt](#merge-policy) abgerufenen Zusammenführungsrichtlinie. |
 
 **Anfrage**
 
@@ -151,7 +151,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Mergerichtlinie zurück.
+Eine erfolgreiche Antwort gibt die Details der Zusammenführungsrichtlinie zurück.
 
 ```json
 {
@@ -177,9 +177,9 @@ Eine erfolgreiche Antwort gibt die Details der Mergerichtlinie zurück.
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schema.name` | Der Name des Schemas, das mit der Zusammenführungsrichtlinie verknüpft ist. |
-| `attributeMerge.type` | Der Konfigurationstyp für die Datenpriorität für die Zusammenführungsrichtlinie. Wenn der Wert `dataSetPrecedence`angegeben ist, werden die mit dieser Zusammenführungsrichtlinie verknüpften Datensätze unter `attributeMerge > data > order`. Ist der Wert `timestampOrdered`der Wert, werden alle Datensätze, die mit dem Schema verknüpft sind, auf das in der Zusammenführungsrichtlinie verwiesen `schema.name` wird, von der Richtlinie verwendet. |
-| `attributeMerge.data.order` | Ist dies der `attributeMerge.type` Fall `dataSetPrecedence`, ist dieses Attribut ein Array, das die IDs der von dieser Zusammenführungsrichtlinie verwendeten Datensätze enthält. Diese IDs werden im nächsten Schritt verwendet. |
+| `schema.name` | Der Name des Schemas, das der Zusammenführungsrichtlinie zugeordnet ist. |
+| `attributeMerge.type` | Der Konfigurationstyp für die Datenpriorität für die Zusammenführungsrichtlinie. Wenn der Wert `dataSetPrecedence` ist, werden die mit dieser Zusammenführungsrichtlinie verknüpften Datensätze unter `attributeMerge > data > order` aufgelistet. Wenn der Wert `timestampOrdered`ist, werden alle Datensätze, die mit dem in `schema.name` referenzierten Schema verknüpft sind, von der Richtlinie verwendet. |
+| `attributeMerge.data.order` | Wenn `attributeMerge.type` `dataSetPrecedence` ist, ist dieses Attribut ein Array, das die IDs der von dieser Zusammenführungsrichtlinie verwendeten Datensätze enthält. Diese IDs werden im nächsten Schritt verwendet. |
 
 ## Bewerten Sie Datensätze für Richtlinienverletzungen.
 
@@ -228,12 +228,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `entityType` | Jedes Element im Payload-Array muss den Typ der zu definierenden Entität angeben. In diesem Anwendungsfall ist der Wert immer &quot;dataSet&quot;. |
-| `entityID` | Jedes Element im Payload-Array muss die eindeutige ID für einen Datensatz bereitstellen. |
+| `entityType` | Jedes Element im Payload-Array muss den Typ der zu definierenden Entität angeben. In diesem Anwendungsfall ist der Wert immer „dataSet“. |
+| `entityID` | Jedes Element im Payload-Array muss die eindeutige Kennung für einen Datensatz angeben. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den URI für die Marketingaktion, die von den bereitgestellten Datasets erfassten Datenverwendungsbeschriftungen und eine Liste aller Datenverwendungsrichtlinien zurück, die durch das Testen der Aktion gegen diese Beschriftungen verletzt wurden. In diesem Beispiel wird die Richtlinie &quot;Daten an Dritte exportieren&quot;im `violatedPolicies` Array angezeigt, was angibt, dass die Marketingaktion eine Richtlinienverletzung ausgelöst hat.
+Eine erfolgreiche Antwort gibt den URI für die Marketingaktion, die von den bereitgestellten Datasets erfassten Datenverwendungsbeschriftungen und eine Liste aller Datenverwendungsrichtlinien zurück, die durch das Testen der Aktion gegen diese Beschriftungen verletzt wurden. In this example, the &quot;Export Data to Third Party&quot; policy is shown in the `violatedPolicies` array, indicating that the marketing action triggered a policy violation.
 
 ```json
 {
@@ -361,26 +361,26 @@ Eine erfolgreiche Antwort gibt den URI für die Marketingaktion, die von den ber
 | --- | --- |
 | `duleLabels` | Eine Liste von Datenverwendungsbeschriftungen, die aus den bereitgestellten Datensätzen extrahiert wurden. |
 | `discoveredLabels` | Eine Liste der Datensätze, die in der Anforderungsnutzlast bereitgestellt wurden, mit den Beschriftungen auf Datensatzebene und auf Feldebene, die in den einzelnen Datensätzen gefunden wurden. |
-| `violatedPolicies` | Ein Array, das alle Datenverwendungsrichtlinien auflistet, die durch Testen der (in `marketingActionRef`) Marketingaktion gegen die bereitgestellte `duleLabels`Variable verletzt wurden. |
+| `violatedPolicies` | An array listing any data usage policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
 
 Mithilfe der in der API-Antwort zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverstöße bei deren Auftreten angemessen zu erzwingen.
 
-## Datenfelder filtern
+## Filtern von Datenfeldern
 
 Wenn Ihr Segmentsegment die Auswertung nicht bestanden hat, können Sie die im Audience enthaltenen Daten mit einer der beiden folgenden Methoden anpassen.
 
-### Aktualisieren der Richtlinie zum Zusammenführen der Segmentdefinition
+### Aktualisieren der Zusammenführungsrichtlinie der Segmentdefinition
 
-Beim Aktualisieren der Richtlinie zum Zusammenführen einer Segmentdefinition werden die Datensätze und Felder angepasst, die beim Ausführen des Segmentauftrags einbezogen werden. Weitere Informationen finden Sie im Abschnitt zum [Aktualisieren einer vorhandenen Richtlinie](../../profile/api/merge-policies.md#update) für die Zusammenführung der API im Tutorial zur API-Zusammenführung.
+Durch Aktualisieren der Zusammenführungsrichtlinie einer Segmentdefinition werden die Datensätze und Felder angepasst, die beim Ausführen des Segmentauftrags einbezogen sind. See the section on [updating an existing merge policy](../../profile/api/merge-policies.md#update) in the API merge policy tutorial for more information.
 
-### Beim Exportieren des Segments bestimmte Datenfelder beschränken
+### Einschränken bestimmter Datenfelder beim Exportieren des Segments
 
-Beim Exportieren eines Segments in ein Dataset mit der Echtzeit-Kunden-Profil-API können Sie die im Export enthaltenen Daten mithilfe des `fields` Parameters filtern. Alle diesem Parameter hinzugefügten Datenfelder werden in den Export einbezogen, während alle anderen Datenfelder ausgeschlossen werden.
+When exporting a segment to a dataset using the [!DNL Segmentation] API, you can filter the data that is included in the export by using the `fields` parameter. Alle diesem Parameter hinzugefügten Datenfelder werden in den Export einbezogen, während alle anderen Datenfelder ausgeschlossen werden.
 
-Betrachten Sie ein Segment mit Datenfeldern mit den Namen &quot;A&quot;, &quot;B&quot;und &quot;C&quot;. Wenn Sie nur das Feld &quot;C&quot;exportieren möchten, enthält der `fields` Parameter nur das Feld &quot;C&quot;. Dadurch werden die Felder &quot;A&quot;und &quot;B&quot;beim Exportieren des Segments ausgeschlossen.
+Stellen Sie sich ein Segment mit Datenfeldern mit den Namen „A“, „B“ und „C“ vor. Wenn Sie nur das Feld „C“ exportieren möchten, enthält der `fields`-Parameter nur das Feld „C“. Auf diese Weise werden die Felder „A“ und „B“ beim Exportieren des Segments ausgeschlossen.
 
-Weitere Informationen finden Sie im Abschnitt zum [Exportieren eines Segments](./evaluate-a-segment.md#export) im Segmentierungstraining.
+Weitere Informationen finden Sie im Abschnitt [Exportieren eines Segments](./evaluate-a-segment.md#export) im Tutorial zur Segmentierung.
 
 ## Nächste Schritte
 
-Indem Sie diesem Tutorial folgen, haben Sie die mit einem Audiencen-Segment verknüpften Datenverwendungsbeschriftungen nachgeschlagen und sie auf Richtlinienverletzungen gegen bestimmte Marketingaktionen getestet. Weitere Informationen zur Datenverwaltung in der Experience Platform finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md).
+In diesem Tutorial haben Sie nach den mit einem Zielgruppensegment verknüpften Datennutzungsbezeichnungen gesucht und diese auf Richtlinienverstöße bei bestimmten Marketing-Aktionen getestet. Für weitere Informationen zu [!DNL Data Governance] in [!DNL Experience Platform]lesen Sie bitte die Übersicht für [!DNL Data Governance](../../data-governance/home.md).
