@@ -4,55 +4,53 @@ solution: Experience Platform
 title: Segmentdefinitionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b06b2dc72594e13d3f8a5a7b3d6136a5a397acda
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 4%
+source-wordcount: '1042'
+ht-degree: 28%
 
 ---
 
 
-# Entwicklerleitfaden für Segmentdefinitionen
+# Endpunktleitfaden für Segmentdefinitionen
 
-Mit Adobe Experience Platform können Sie Segmente erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren.
+Mit Adobe Experience Platform können Sie Segmente erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage kapselt. Dieses Objekt wird auch als PQL-Vorhersage bezeichnet. PQL-Prädikate definieren die Regeln für das Segment basierend auf Bedingungen, die sich auf die Daten aus Datensatz oder Zeitreihen beziehen, die Sie bereitstellen [!DNL Real-time Customer Profile]. Weitere Informationen zum Schreiben von PQL-Abfragen finden Sie im [PQL-Handbuch](../pql/overview.md) .
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentdefinitionen sowie Beispiele für API-Aufrufe zur Durchführung grundlegender Aktionen mit der API.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Segmentierungs-API. Bevor Sie fortfahren, lesen Sie bitte das Entwicklerhandbuch für die [Segmentierung](./getting-started.md).
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-Insbesondere enthält der [Abschnitt](./getting-started.md#getting-started) &quot;Erste Schritte&quot;des Segmentierungsentwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe im Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer Experience Platform-API erforderlich sind.
+## Abrufen einer Liste von Segmentdefinitionen {#list}
 
-## Eine Liste von Segmentdefinitionen abrufen
-
-Sie können eine Liste aller Segmentdefinitionen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anforderung an den `/segment/definitions` Endpunkt senden.
+Sie können eine Liste aller Segmentdefinitionen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/segment/definitions`-Endpunkt senden.
 
 **API-Format**
+
+Der `/segment/definitions` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Segmentdefinitionen abgerufen. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`).
 
 ```http
 GET /segment/definitions
 GET /segment/definitions?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Optional*) Dem Anforderungspfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, die durch das kaufmännische Und (`&`) voneinander getrennt werden. Die verfügbaren Parameter sind unten aufgeführt.
-
 **Abfrage**
 
-Im Folgenden finden Sie eine Liste der verfügbaren Abfragen für Segmentdefinitionen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Segmentdefinitionen abgerufen.
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `start` | Gibt den Startversatz für die zurückgegebenen Segmentdefinitionen an. |
-| `limit` | Gibt die Anzahl der pro Seite zurückgegebenen Segmentdefinitionen an. |
-| `page` | Gibt an, von welcher Seite die Ergebnisse der Segmentdefinitionen Beginn werden. |
-| `sort` | Gibt an, nach welchem Feld die Ergebnisse sortiert werden sollen. Wird im folgenden Format geschrieben: `[attributeName]:[desc|asc]`. |
-| `evaluationInfo.continuous.enabled` | Gibt an, ob die Segmentdefinition Streaming-fähig ist. |
+| Parameter | Beschreibung | Beispiel |
+| --------- | ----------- | ------- |
+| `start` | Gibt den Startversatz für die zurückgegebenen Segmentdefinitionen an. | `start=4` |
+| `limit` | Gibt die Anzahl der pro Seite zurückgegebenen Segmentdefinitionen an. | `limit=20` |
+| `page` | Gibt an, auf welcher Seite die Ergebnisse der Segmentdefinitionen beginnen. | `page=5` |
+| `sort` | Gibt an, nach welchem Feld die Ergebnisse sortiert werden sollen. Is written in the following format: `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `evaluationInfo.continuous.enabled` | Gibt an, ob die Segmentdefinition Streaming-fähig ist. | `evaluationInfo.continuous.enabled=true` |
 
 **Anfrage**
 
+Die folgende Anforderung ruft die letzten beiden Segmentdefinitionen ab, die in Ihrer IMS-Organisation veröffentlicht wurden.
+
 ```shell
-cur -X GET https://platform.adobe.io/data/core/ups/segment/definitions?QUERY \
+curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -61,7 +59,7 @@ cur -X GET https://platform.adobe.io/data/core/ups/segment/definitions?QUERY \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Segmentdefinitionen für die angegebene IMS-Organisation als JSON zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentdefinitionen für die angegebene IMS-Organisation als JSON zurück.
 
 ```json
 {
@@ -106,7 +104,6 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Segmentdefini
             "updateEpoch": 1575588309,
             "updateTime": 1575588309000
         },
-        ... ,
         {
             "id": "ca763983-5572-4ea4-809c-b7dff7e0d79b",
             "schema": {
@@ -143,20 +140,20 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Segmentdefini
         }
     ],
     "page": {
-        "totalCount": 4,
+        "totalCount": 2,
         "totalPages": 1,
         "sortField": "creationTime",
         "sort": "desc",
-        "pageSize": 4,
+        "pageSize": 2,
         "limit": 100
     },
     "link": {}
 }
 ```
 
-## Neue Segmentdefinition erstellen
+## Erstellen einer neuen Segmentdefinition {#create}
 
-Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anforderung an den `/segment/definitions` Endpunkt senden.
+Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an den `/segment/definitions`-Endpunkt senden.
 
 **API-Format**
 
@@ -190,9 +187,19 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
     }'
 ```
 
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `name` | **Erforderlich.** Ein eindeutiger Name, unter dem auf das Segment verwiesen wird. |
+| `schema` | **Erforderlich.** Das Schema, das den Entitäten im Segment zugeordnet ist. Besteht aus einem `id` oder einem `name` Feld. |
+| `expression` | **Erforderlich.** Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
+| `expression.type` | Gibt den Ausdruck-Typ an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
+| `expression.format` | Gibt die Wertstruktur des Ausdrucks an. Derzeit wird folgendes Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.value` | Ein Ausdruck, der dem unter `expression.format`Angabe angegebenen Typ entspricht. |
+| `description` | Eine für Menschen lesbare Beschreibung der Definition. |
+
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur neu erstellten Segmentdefinition zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Segmentdefinition zurück.
 
 ```json
 {
@@ -236,9 +243,14 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur neu erstellten Se
 }
 ```
 
-## Abrufen einer bestimmten Segmentdefinition
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `id` | Eine systemgenerierte ID der neu erstellten Segmentdefinition. |
+| `evaluationInfo` | Ein systemgeneriertes Objekt, das angibt, welcher Typ von Bewertung die Segmentdefinition durchlaufen soll. Es kann sich um Batch-, Continuous- (auch als Streaming bezeichnet) oder synchrone Segmentierung handeln. |
 
-Sie können detaillierte Informationen zu einer bestimmten Segmentdefinition abrufen, indem Sie eine GET-Anforderung an den `/segment/definitions` Endpunkt senden und den `id` Wert der Segmentdefinition im Anforderungspfad angeben.
+## Abrufen einer bestimmten Segmentdefinition {#get}
+
+You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to retrieve in the request path.
 
 **API-Format**
 
@@ -248,7 +260,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Der `id` Wert der Segmentdefinition, die Sie abrufen möchten. |
+| `{SEGMENT_ID}` | Der `id`-Wert der Segmentdefinition, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -262,7 +274,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen zur angegebenen Segmentdefinition zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zur angegebenen Segmentdefinition zurück.
 
 ```json
 {
@@ -306,7 +318,19 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 }
 ```
 
-## Segmentdefinitionen stapelweise abrufen
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `id` | Eine vom System generierte schreibgeschützte ID der Segmentdefinition. |
+| `name` | Ein eindeutiger Name, unter dem auf das Segment verwiesen wird. |
+| `schema` | Das Schema, das den Entitäten im Segment zugeordnet ist. Besteht aus einem `id` oder einem `name` Feld. |
+| `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
+| `expression.type` | Gibt den Ausdruck-Typ an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
+| `expression.format` | Gibt die Wertstruktur des Ausdrucks an. Derzeit wird folgendes Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.value` | Ein Ausdruck, der dem unter `expression.format`Angabe angegebenen Typ entspricht. |
+| `description` | Eine für Menschen lesbare Beschreibung der Definition. |
+| `evaluationInfo` | Ein systemgeneriertes Objekt, das angibt, welcher Typ von Evaluierung, Stapel, kontinuierlicher (auch als Streaming bezeichnet) oder synchroner Segmentdefinition unterzogen wird. |
+
+## Segmentdefinitionen stapelweise abrufen {#bulk-get}
 
 Sie können detaillierte Informationen zu mehreren angegebenen Segmentdefinitionen abrufen, indem Sie eine POST-Anforderung an den `/segment/definitions/bulk-get` Endpunkt senden und die `id` Werte der Segmentdefinitionen im Anforderungstext angeben.
 
@@ -427,9 +451,21 @@ Eine erfolgreiche Antwort gibt HTTP-Status 207 mit den angeforderten Segmentdefi
 }
 ```
 
-## Eine bestimmte Segmentdefinition löschen
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `id` | Eine vom System generierte schreibgeschützte ID der Segmentdefinition. |
+| `name` | Ein eindeutiger Name, unter dem auf das Segment verwiesen wird. |
+| `schema` | Das Schema, das den Entitäten im Segment zugeordnet ist. Besteht aus einem `id` oder einem `name` Feld. |
+| `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
+| `expression.type` | Gibt den Ausdruck-Typ an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
+| `expression.format` | Gibt die Wertstruktur des Ausdrucks an. Derzeit wird folgendes Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.value` | Ein Ausdruck, der dem unter `expression.format`Angabe angegebenen Typ entspricht. |
+| `description` | Eine für Menschen lesbare Beschreibung der Definition. |
+| `evaluationInfo` | Ein systemgeneriertes Objekt, das angibt, welcher Typ von Evaluierung, Stapel, kontinuierlicher (auch als Streaming bezeichnet) oder synchroner Segmentdefinition unterzogen wird. |
 
-Sie können eine bestimmte Segmentdefinition löschen, indem Sie eine DELETE-Anforderung an den `/segment/definitions` Endpunkt senden und den `id` Wert der Segmentdefinition im Anforderungspfad angeben.
+## Löschen einer bestimmten Segmentdefinition {#delete}
+
+Sie können eine bestimmte Segmentdefinition löschen, indem Sie eine DELETE-Anforderung an den `/segment/definitions` Endpunkt senden und die ID der Segmentdefinition angeben, die Sie im Anforderungspfad löschen möchten.
 
 **API-Format**
 
@@ -439,7 +475,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Der `id` Wert der Segmentdefinition, die Sie löschen möchten. |
+| `{SEGMENT_ID}` | : Der `id`-Wert der Segmentdefinition, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -453,11 +489,11 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 ohne Meldung zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 ohne Meldung zurück.
 
 ## Aktualisieren einer bestimmten Segmentdefinition
 
-Sie können eine bestimmte Segmentdefinition aktualisieren, indem Sie eine PATCH-Anforderung an den `/segment/definitions` Endpunkt senden und den `id` Wert der Segmentdefinition im Anforderungspfad angeben.
+Sie können eine bestimmte Segmentdefinition aktualisieren, indem Sie eine PATCH-Anforderung an den `/segment/definitions` Endpunkt senden und die ID der Segmentdefinition angeben, die Sie im Anforderungspfad aktualisieren möchten.
 
 **API-Format**
 
@@ -467,9 +503,11 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Der `id` Wert der Segmentdefinition, die Sie aktualisieren möchten. |
+| `{SEGMENT_ID}` | Der `id`-Wert der Segmentdefinition, die Sie aktualisieren möchten. |
 
 **Anfrage**
+
+Mit der folgenden Anfrage wird das Land der Arbeitsadresse von den USA nach Kanada aktualisiert.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -487,7 +525,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "workAddress.country = \"US\""
+        "value": "workAddress.country = \"CA\""
     },
     "schema": {
         "name": "_xdm.context.profile"
@@ -497,13 +535,12 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
     "creationTime": 0,
     "updateTime": 0,
     "updateEpoch": 0
-}
-'
+}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zu Ihrer neu aktualisierten Segmentdefinition zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu aktualisierten Segmentdefinition zurück. Beachten Sie, dass das Land der Arbeitsadresse von den USA (USA) bis Kanada (CA) aktualisiert wurde.
 
 ```json
 {
@@ -525,7 +562,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zu Ihrer neu aktualis
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "workAddress.country = \"US\""
+        "value": "workAddress.country = \"CA\""
     },
     "evaluationInfo": {
         "batch": {
@@ -549,4 +586,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zu Ihrer neu aktualis
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis dafür, wie Segmentdefinitionen funktionieren. Weitere Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../home.md).
+Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis dafür, wie Segmentdefinitionen funktionieren. Weitere Informationen zum Erstellen eines Segments finden Sie im Lernprogramm zum [Erstellen eines Segments](../tutorials/create-a-segment.md) .
