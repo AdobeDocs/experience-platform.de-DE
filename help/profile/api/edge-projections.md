@@ -4,24 +4,24 @@ solution: Adobe Experience Platform
 title: Edge-Prognosen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
-ht-degree: 2%
+source-wordcount: '1900'
+ht-degree: 10%
 
 ---
 
 
 # Endpunkte für Edge-Projektionen und Ziele
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und im Zuge von Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten durch die Verwendung von so genannten Rändern. Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht. Adobe-Anwendungen wie Adobe Target und Adobe Campaign verwenden beispielsweise Kanten, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an eine Kante geleitet, wobei ein Projektionsziel die Kante definiert, an die die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die an der Kante zur Verfügung gestellt werden. In diesem Handbuch finden Sie detaillierte Anweisungen zur Verwendung der Echtzeit-API für das Profil von Kunden, um mit Edge-Projektionen, einschließlich Zielen und Konfigurationen, zu arbeiten.
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit umsetzen zu können, müssen die passenden Daten jederzeit verfügbar sein und im Zuge von Veränderungen laufend aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Anwendungen wie etwa Adobe Target und Adobe Campaign nutzen Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. In diesem Handbuch finden Sie detaillierte Anweisungen zur Verwendung der [!DNL Real-time Customer Profile] API für die Verwendung von Edge-Projektionen, einschließlich Zielen und Konfigurationen.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 >[!NOTE]
->Anforderungen, die eine Nutzlast enthalten (POST, PUT, PATCH), erfordern einen `Content-Type` Header. In diesem Dokument `Content-Type` werden mehrere verwendet. Achten Sie besonders auf die Kopfzeilen in den Beispielaufrufen, um sicherzustellen, dass Sie für jede Anforderung die richtige `Content-Type` verwenden.
+>Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. In diesem Dokument `Content-Type` werden mehrere verwendet. Achten Sie besonders auf die Kopfzeilen in den Beispielaufrufen, um sicherzustellen, dass Sie für jede Anforderung die richtige `Content-Type` verwenden.
 
 ## Projektionsziele
 
@@ -292,7 +292,7 @@ Die Antwort enthält die aktualisierten Details zum Ziel, einschließlich der ID
 
 ### Ziel löschen
 
-Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem Sie eine DELETE-Anforderung an den `/config/destinations` Endpunkt richten und die ID des Ziels, das Sie löschen möchten, im Anforderungspfad einschließen.
+Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem eine DELETE-Anforderung an den `/config/destinations` Endpunkt gesendet wird und die ID des Ziels, das Sie löschen möchten, im Anforderungspfad enthalten ist.
 
 >[!CAUTION]
 >Die API-Antwort auf die Löschanforderung erfolgt sofort, die tatsächlichen Änderungen an den Daten an den Rändern werden jedoch asynchron ausgeführt. Das heißt, die Profil-Daten werden von allen Kanten entfernt (die im Projektionsziel `dataCenters` angegeben sind), aber der Vorgang dauert einige Zeit.
@@ -325,7 +325,7 @@ Die Löschanforderung gibt HTTP-Status 204 (Kein Inhalt) und einen leeren Antwor
 
 ## Projektierungskonfigurationen
 
-Projektionskonfigurationen liefern Informationen darüber, welche Daten an jeder Kante verfügbar sein sollten. Statt ein vollständiges Experience Data Model (XDM)-Schema an die Kante zu projizieren, stellt eine Projektion nur bestimmte Daten oder Felder aus dem Schema bereit. Ihr Unternehmen kann mehr als eine Projektionskonfiguration für jedes XDM-Schema definieren.
+Projektionskonfigurationen liefern Informationen darüber, welche Daten an jeder Kante verfügbar sein sollten. Statt ein vollständiges [!DNL Experience Data Model] (XDM-)Schema an die Kante zu projizieren, stellt eine Projektion nur bestimmte Daten oder Felder aus dem Schema bereit. Ihr Unternehmen kann mehr als eine Projektionskonfiguration für jedes XDM-Schema definieren.
 
 ### Liste aller Projektionskonfigurationen
 
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Anfrage**
 
-Die folgende Anforderung Liste alle Projektionskonfigurationen, die mit der Experience Data Model Schema-Klasse, XDM Individuelles Profil, verknüpft sind. Für weitere Informationen über XDM und seine Rolle in der Platform, bitte lesen Sie zunächst die [XDM-Systemübersicht](../../xdm/home.md).
+Die folgende Anforderung Liste alle Projektionskonfigurationen, die mit der [!DNL Experience Data Model] Schema-Klasse verbunden sind, [!DNL XDM Individual Profile]. Für weitere Informationen über XDM und seine Rolle innerhalb [!DNL Platform], bitte beginnen Sie mit dem Lesen der [XDM System Übersicht](../../xdm/home.md).
 
 ```shell
 curl -X GET \
