@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Entwicklerhandbuch zur Segmentierungs-API
+title: Endpunktleitfaden für die Segmentsuche
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 2%
+source-wordcount: '1141'
+ht-degree: 5%
 
 ---
 
 
-# Segmentsuche
+# Endpunktleitfaden zur Segmentsuche
 
-Die Segmentsuche wird verwendet, um konfigurierbare Felder zu suchen und zu indizieren, die in verschiedenen Datenquellen enthalten sind, und sie in Echtzeit zurückzugeben.
+Die Segmentsuche dient zum Durchsuchen von Feldern, die in verschiedenen Datenquellen enthalten sind, und zum Zurückgeben in Echtzeit.
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Segmentierungs-API. Bevor Sie fortfahren, lesen Sie bitte das Entwicklerhandbuch für die [Segmentierung](getting-started.md).
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-Insbesondere enthält der [Abschnitt](getting-started.md) &quot;Erste Schritte&quot;des Segmentierungsentwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für die erfolgreiche Durchführung von Aufrufen der Experience Platform-API erforderlich sind.
-
-Zusätzlich zu den erforderlichen Kopfzeilen, die im Abschnitt &quot;Erste Schritte&quot;beschrieben werden, benötigen alle Anforderungen an die Segmentsuche-API die folgende zusätzliche Kopfzeile:
+Zusätzlich zu den erforderlichen Kopfzeilen, die im Abschnitt &quot;Erste Schritte&quot;beschrieben werden, benötigen alle Anforderungen an den Endpunkt &quot;Segmentsuche&quot;die folgende zusätzliche Kopfzeile:
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -42,7 +40,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Erforderlich)** Dabei stellt {SCHEMA} den Schema-Klassenwert dar, der den Suchobjekten zugeordnet ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage darstellt, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage darstellt, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -59,7 +57,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit den folgenden Informationen zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit folgenden Informationen zurück.
 
 ```json
 {
@@ -103,7 +101,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Erforderlich)** Dabei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schema-Klassenwert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
 | `namespace={NAMESPACE}` | **(Erforderlich)** Dabei enthält {NAMENSRAUM} den Namensraum, in dem Sie suchen möchten. |
-| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 | `entityId={ENTITY_ID}` | *(Optional)* Schränkt Ihre Suche auf den mit {ENTITY_ID} angegebenen Ordner ein. |
 | `limit={LIMIT}` | *(Optional)* Dabei stellt {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse dar. Der Standardwert lautet 50. |
 | `page={PAGE}` | *(Optional)* Dabei steht {PAGE} für die Seitenzahl, die zur Paginierung der Ergebnisse der gesuchten Abfrage verwendet wird. Bitte beachten Sie, dass die Seitenzahl um **0** Beginn ist. |
@@ -223,7 +221,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Strukturinforma
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie die Segmentsuche funktioniert. Weitere Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../home.md).
+Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie die Segmentsuche funktioniert.
 
 ## Anhang {#appendix}
 
@@ -264,4 +262,4 @@ In der folgenden Tabelle werden die Einzelheiten der Funktionsweise von Abfragen
 | &quot;hotel flughafen&quot;\~5 | Eine Suche nach der Nähe. Diese Art der Suche wird verwendet, um Begriffe zu finden, die in einem Dokument nahe beieinander liegen. So `"hotel airport"~5` werden beispielsweise die Begriffe &quot;hotel&quot;und &quot;flughafen&quot;in einem Dokument innerhalb von 5 Wörtern voneinander getrennt. |
 | `/a[0-9]+b$/` | Eine regelmäßige Suche nach Ausdrücken. Dieser Suchtyp findet eine Übereinstimmung basierend auf dem Inhalt zwischen Schrägstrichen &quot;/&quot;, wie in der RegExp-Klasse dokumentiert. Wenn Sie z. B. Dokumente mit &quot;motel&quot;oder &quot;hotel&quot;suchen möchten, geben Sie `/[mh]otel/`an. Regelmäßige Suchvorgänge mit Ausdrücken werden mit einzelnen Wörtern abgeglichen. |
 
-Weitere Informationen zur Syntax der Abfrage finden Sie in der [Lucene-Abfrage-Syntaxdokumentation](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+Weitere Informationen zur Syntax der Abfrage finden Sie in der [Lucene-Abfrage-Syntaxdokumentation](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax).
