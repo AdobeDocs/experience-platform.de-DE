@@ -4,111 +4,111 @@ solution: Adobe Experience Platform
 title: Übersicht über das Echtzeit-Kundenprofil
 topic: guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 2%
+source-wordcount: '1666'
+ht-degree: 46%
 
 ---
 
 
-# Übersicht über das Echtzeit-Kundenprofil
+# [!DNL Real-time Customer Profile]Übersicht
 
-Mit Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden fördern, ganz gleich, wo und wann sie mit Ihrer Marke interagieren. Mit Echtzeit-Kundendaten können Sie eine ganzheitliche Ansicht jedes einzelnen Profils anzeigen, die Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieterdaten, kombiniert. Mit dem Profil können Sie Ihre unterschiedlichen Kundendaten in einer einheitlichen Sicht zusammenfassen, die ein umsetzbares Konto mit Zeitstempel für jede Kundeninteraktion bietet. Diese Übersicht hilft Ihnen, die Rolle und Verwendung von Echtzeit-Kundendaten in der Experience Platform zu verstehen.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten zu einer einheitlichen Ansicht zusammenzuführen, die Ihnen einen umsetzbaren Zeitstempel für jede Kundeninteraktion bietet. Diese Übersicht hilft Ihnen, die Rolle und Verwendung von [!DNL Real-time Customer Profile] in zu verstehen [!DNL Experience Platform].
 
-## Verstehen des Echtzeit-Profils von Kunden
+## Erläuterungen [!DNL Real-time Customer Profile]
 
-Real-time Customer Profil ist ein generischer Lookup-Entitätsspeicher, der Daten aus verschiedenen Unternehmensdaten zusammenführt und dann Zugriff auf diese Daten in Form von individuellen Profilen und zugehörigen Zeitreihen-Ereignissen bietet. Diese Funktion ermöglicht es Marketingexperten, koordinierte, konsistente und relevante Erlebnisse mit ihren Audiencen über mehrere Kanal hinweg zu fördern.
+[!DNL Real-time Customer Profile] ist ein generischer Lookup-Entitätsspeicher, der Daten aus verschiedenen Unternehmensdaten zusammenführt und dann Zugriff auf diese Daten in Form von individuellen Profilen und zugehörigen Zeitreihen-Ereignissen bietet. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 
-### Profil-Datenspeicher
+### [!DNL Profile] Datenspeicher
 
-Obwohl Kundendaten in Echtzeit verarbeitet werden und der Identitätsdienst der Adobe Experience Platform verwendet wird, um verwandte Daten mithilfe der Identitätszuordnung zusammenzuführen, verwaltet das Profil seine eigenen Daten im Profil Store. Das heißt, der Profil-Store ist von den Katalogdaten (Data Lake) und den Identitätsdienstdaten (Identitätsdiagramm) getrennt.
+Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. Das heißt, der [!DNL Profile] Speicher ist getrennt von [!DNL Catalog] Daten ([!DNL Data Lake]) und [!DNL Identity Service] Daten (Identitätsdiagramm).
 
-### Dienstleistungen von Profil und Platform
+### [!DNL Profile] und [!DNL Platform] Dienstleistungen
 
-Die Beziehung zwischen Echtzeit-Kundenservice und anderen Diensten innerhalb der Experience Platform wird im folgenden Diagramm hervorgehoben:
+The relationship between [!DNL Real-time Customer Profile] and other services within [!DNL Experience Platform] is highlighted in the following diagram:
 
-![Die Beziehung zwischen Profil und anderen Experience Platformen-Services.](images/profile-overview/profile-in-platform.png)
+![Zusammenhänge zwischen dem Profil und anderen Experience Platform-Services.](images/profile-overview/profile-in-platform.png)
 
 ### Profile und Datensatzdaten
 
-Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die auch als Datensatzdaten bezeichnet wird. Das Profil eines Produkts kann beispielsweise eine SKU und eine Beschreibung enthalten, während das Profil einer Person Informationen wie Vorname, Nachname und E-Mail-Adresse enthält. Mithilfe der Experience Platform können Sie Profil anpassen, um Datentypen zu verwenden, die für Ihr Unternehmen relevant sind. Die standardmäßige Experience Data Model-(XDM-)Individuelle Profil-Klasse ist die bevorzugte Klasse, auf der ein Schema bei der Beschreibung von Kundendatensätzen erstellt und die Daten bereitgestellt werden, die für viele Interaktionen zwischen Platform-Diensten integriert sind. Weitere Informationen zum Arbeiten mit Schemas in der Experience Platform erhalten Sie zunächst in der [XDM-Systemübersicht](../xdm/home.md).
+Ein Profil ist eine auf sogenannten Datensatzdaten basierende Darstellung eines Subjekts, einer Organisation oder einer Einzelperson. So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. Using [!DNL Experience Platform], you can customize profiles to use types of data relevant to your business. The standard [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] class is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Platform services. For more information on working with schemas in [!DNL Experience Platform], please begin by reading the [XDM System overview](../xdm/home.md).
 
 ### Zeitreihen-Ereignisse
 
-Die Zeitreihendaten liefern eine Momentaufnahme des Systems zum Zeitpunkt, zu dem ein Betreff direkt oder indirekt eine Aktion durchführte, sowie Daten, die das Ereignis selbst detailliert beschreiben. Die Zeitreihendaten, die von der XDM ExperienceEvent-Standardklasse vertreten werden, können Ereignis wie zum Beispiel Elemente beschreiben, die einem Einkaufswagen hinzugefügt werden, Links, auf die geklickt wird, und Videos, die angezeigt werden. Zeitreihendaten können verwendet werden, um Segmentierungsregeln zu nutzen, und Ereignis können einzeln im Kontext eines Profils aufgerufen werden.
+Zeitreihendaten liefern eine Momentaufnahme des Systems zu dem Zeitpunkt, an dem ein Subjekt direkt oder indirekt eine Aktion ausgeführt hat, sowie Daten mit Details zu dem Ereignis selbst. Zeitreihendaten werden im Schema anhand der Standardklasse XDM ExperienceEvent dargestellt. Sie beschreiben Ereignisse wie etwa das Hinzufügen eines Artikels zu einem Warenkorb, das Klicken auf einen Link, das Abspielen eines Videos usw. Auf Grundlage von Zeitreihendaten können Segmentierungsregeln eingerichtet werden. Die einzelnen Ereignisse sind dabei im Kontext eines Profils abrufbar.
 
 ### Identitäten
 
-Jedes Unternehmen möchte mit seinen Kunden in einer Art und Weise kommunizieren, die sich persönlich anfühlt. Eine der Herausforderungen bei der Bereitstellung relevanter digitaler Erlebnisse für die Kunden besteht jedoch darin, zu verstehen, wie die Daten, die nicht miteinander verbunden sind, miteinander verknüpft werden können. Diese Daten werden häufig über verschiedene digitale Kanal wie Tablets, Mobiltelefone und Laptops verteilt. Mit dem Identitätsdienst können Sie das Gesamtbild Ihres Kunden zusammenstellen, indem Sie Identitäten aus mehreren Kanälen verknüpfen und für jeden Kunden ein Identitätsdiagramm erstellen, das Ihnen ein besseres Verständnis ermöglicht. Weitere Informationen finden Sie in der Übersicht über den [Identitätsdienst](../identity-service/home.md) .
+Bei der Kommunikation mit Kunden gilt es, diese in einer auf sie persönlich abgestimmte Weise anzusprechen. Die Umsetzung solcher für Kunden relevanter digitaler Erlebnisse ist jedoch eine Herausforderung. Denn dazu muss nachvollzogen werden, wie die verschiedenen Daten, die sie auf voneinander getrennten digitalen Kanälen wie Tablets, Smartphones und Laptops generieren, zueinander in Zusammenhang stehen. [!DNL Identity Service] ermöglicht es Ihnen, das Gesamtbild Ihres Kunden zusammenzustellen, indem Sie Identitäten aus mehreren Kanälen verknüpfen und ein Identitätsdiagramm für jeden Kunden erstellen, das Ihnen ein besseres Verständnis ermöglicht. Weitere Informationen finden Sie in der [Übersicht über den Identitätsdienst](../identity-service/home.md).
 
 ### Segmentierung
 
-Der Segmentierungsdienst für Adobe Experience Platformen stellt die Audiencen bereit, die erforderlich sind, um Erlebnisse für Ihre individuellen Kunden bereitzustellen. Wenn ein Segmentsegment erstellt wird, wird die ID dieses Segments zur Liste der Segmentmitgliedschaften für alle qualifizierten Profil hinzugefügt. Segmentregeln werden mithilfe von RESTful-APIs und der Segmentaufbau-Benutzeroberfläche erstellt und auf Echtzeitdaten von Kunden-Profilen angewendet. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. Wird ein solches Zielgruppensegment erstellt, wird dessen Segment-ID zur Liste der Segmentmitglieder für alle qualifizierten Profile hinzugefügt. Segment rules are built and applied to [!DNL Real-time Customer Profile] data using RESTful APIs and the Segment Builder user interface. Gehen Sie zum Einstieg in die Segmentierung zunächst die [Übersicht über den Segmentierungsdienst](../segmentation/home.md) durch.
 
-### Profil-Fragmente und Vereinigung-Schemas {#profile-fragments-and-union-schemas}
+### Profilfragmente und Vereinigungsschemas {#profile-fragments-and-union-schemas}
 
-Eines der Hauptmerkmale von Echtzeit-Kundendaten-Profil ist die Fähigkeit, Daten mit mehreren Kanälen zu vereinen. Wenn Kundendaten in Echtzeit für den Zugriff auf eine Entität verwendet werden, können Sie eine zusammengeführte Ansicht aller Profil-Fragmente für diese Entität über Datensätze hinweg bereitstellen, die als Ansicht der Vereinigung bezeichnet und über ein so genanntes Vereinigung-Schema ermöglicht werden. Echtzeit-Kundendaten werden über mehrere Profil hinweg zusammengeführt, wenn eine Entität oder ein Profil durch ihre ID aufgerufen oder als Segment exportiert wird. Weitere Informationen zum Zugriff auf Profil und Vereinigungen-Ansichten mithilfe der Echtzeit-Client-Profil-API finden Sie im [Entitäts-Endpunkthandbuch](api/entities.md).
+One of the key features of [!DNL Real-time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. [!DNL Real-time Customer Profile] Daten werden über mehrere Quellen hinweg zusammengeführt, wenn auf eine Entität oder ein Profil mit ihrer ID zugegriffen oder als Segment exportiert wird. Weitere Informationen zum Zugriff auf Profil und Vereinigungen-Ansichten mithilfe der [!DNL Real-time Customer Profile] API finden Sie im [Entitäts-Endpunkthandbuch](api/entities.md).
 
 ### Zusammenführungsrichtlinien
 
-Wenn Daten aus mehreren Quellen zusammengeführt und kombiniert werden, um eine vollständige Ansicht der einzelnen Kunden zu erhalten, gelten für die Zusammenführung der Richtlinien, die Platform verwendet, um zu bestimmen, wie die Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien mit der Echtzeit-Profil-API finden Sie im Endpunkthandbuch [zu](api/merge-policies.md)Zusammenführungsrichtlinien. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche &quot;Experience Platform&quot;finden Sie im Benutzerhandbuch [zu Zusammenführungsrichtlinien](ui/merge-policies.md).
+When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Mithilfe von RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, bestehende Richtlinien verwalten und eine für Ihr Unternehmen als Standard verwendete Zusammenführungsrichtlinie einrichten. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der [!DNL Real-time Customer Profile] API finden Sie im Handbuch [Zusammenführungsrichtlinien](api/merge-policies.md). To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies user guide](ui/merge-policies.md).
 
 ### (Alpha) Konfigurieren von berechneten Attributen
 
 >[!IMPORTANT]
->Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist alphanumerisch. Dokumentation und Funktionalität können sich ändern.
+>Die nachfolgend beschriebene Funktion für berechnete Attribute befindet sich in der Alpha-Phase. Dokumentation und Funktionalität können sich ändern.
 
-Berechnete Attribute ermöglichen es Ihnen, den Feldwert anhand anderer Werte, Berechnungen und Ausdruck automatisch zu berechnen. Berechnete Attribute werden auf Profil-Ebene ausgeführt, d. h., Sie können Werte über alle Datensätze und Ereignis hinweg Aggregat haben. Jedes berechnete Attribut enthält einen Ausdruck, oder &quot;Regel&quot;, der eingehende Daten auswertet und den sich ergebenden Wert in einem Profil-Attribut oder in einem Ereignis speichert. Diese Berechnungen helfen Ihnen, Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungen einfach zu beantworten, ohne dass Sie bei jeder erforderlichen Information manuell komplexe Berechnungen durchführen müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen mithilfe der Echtzeit-Kunden-Profil-API finden Sie in der Endpunktanleitung zu [berechneten Attributen](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle, die berechnete Attribute innerhalb der Adobe Experience Platform spielen, besser zu verstehen. Es enthält Beispiel-API-Aufrufe zur Durchführung grundlegender CRUD-Vorgänge.
+Berechnete Attribute ermöglichen es, den Wert eines Feldes über andere Werte, Berechnungen und Ausdrücke automatisch zu ermitteln. Berechnete Attribute werden auf Profilebene ausgeführt, mit ihnen können also Werte über alle Datensätze und Ereignisse aggregiert werden. Dazu beinhaltet jedes berechnete Attribut einen Ausdruck bzw. eine „Regel“, nach der eingehende Daten ausgewertet werden und das Ergebnis in einem Profilattribut oder Ereignis festgehalten wird. Diese Berechnungen liefern Aufschluss über Metriken wie Kundenlebenszeitwert, Zeit zwischen Käufen oder der Anzahl der geöffneten Anwendungen, ohne dafür jedes Mal, wenn entsprechende Informationen benötigt werden, komplexe Berechnungen durchführen zu müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen mithilfe der [!DNL Real-time Customer Profile] API finden Sie in der Anleitung zum Endpunkt [berechneter Attribute](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle, die berechnete Attribute innerhalb der Adobe Experience Platform spielen, besser zu verstehen. Es enthält Beispiel-API-Aufrufe zur Durchführung grundlegender CRUD-Vorgänge.
 
 ## Echtzeitkomponenten
 
-In diesem Abschnitt werden die Komponenten vorgestellt, mit denen Echtzeit-Kundendaten in Echtzeit aktualisiert und überwacht werden können.
+This section introduces the components that allow [!DNL Real-time Customer Profile] to update and monitor record and time series data in real-time.
 
-### Streaming-Erfassung und Streaming-Segmentierung
+### Streaming-Aufnahme und Streaming-Segmentierung
 
-Die Echtzeiteingabe wird durch einen Prozess ermöglicht, der als Streaming-Erfassung bezeichnet wird. Während Profil- und Zeitreihendaten erfasst werden, entscheidet sich das Echtzeit-Profil automatisch, diese Daten über einen laufenden Prozess namens Streaming-Segmentierung einzubeziehen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigung-Ansicht aktualisiert wird. Dadurch können Sie sofort Berechnungen durchführen und Entscheidungen treffen, um Kunden bei der Interaktion mit Ihrer Marke erweiterte, individualisierte Erlebnisse bereitzustellen. Während der Erfassung werden die Daten auch überprüft, um sicherzustellen, dass sie ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Für weitere Informationen darüber, was während der Erfassung validiert wird, lesen Sie bitte zunächst die Qualitätsübersicht [zur](../ingestion/quality/overview.md)Datenerfassung.
+Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Aufnahme bezeichnet. As profile and time series data is ingested, [!DNL Real-time Customer Profile] automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen. Im Verlauf der Datenaufnahme wird außerdem validiert, ob die Daten ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Weitere Informationen dazu, welche Validierungen bei der Datenaufnahme vorgenommen werden, finden Sie in der Übersicht über die Datenaufnahme unter [Datenqualität](../ingestion/quality/overview.md).
 
 ### Edge-Projektionskonfigurationen und -ziele
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und im Zuge von Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten durch die Verwendung von so genannten Rändern. Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht. Adobe-Anwendungen wie Adobe Target und Adobe Campaign verwenden beispielsweise Kanten, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an eine Kante geleitet, wobei ein Projektionsziel die Kante definiert, an die die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die an der Kante zur Verfügung gestellt werden. Weitere Informationen und die Arbeit mit Projektionen mithilfe der Echtzeit-Customer Profil API finden Sie im Handbuch [Edge-Projektions-Endpunkte](api/edge-projections.md).
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit umsetzen zu können, müssen die passenden Daten jederzeit verfügbar sein und im Zuge von Veränderungen laufend aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Anwendungen wie etwa Adobe Target und Adobe Campaign nutzen Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. Weitere Informationen und die Arbeit mit Projektionen mithilfe der [!DNL Real-time Customer Profile] API finden Sie im Handbuch [Edge-Projektions-Endpunkte](api/edge-projections.md).
 
-## Daten Hinzufügen Echtzeit-Profil
+## Daten Hinzufügen [!DNL Real-time Customer Profile]
 
-Die Platform kann so konfiguriert werden, dass Daten zu Datensatz und Zeitreihen an Profil gesendet werden. Dies unterstützt Echtzeit-Streaming-Erfassung und Stapelverarbeitung. Weitere Informationen finden Sie in der Übung, in der das [Hinzufügen von Daten zum Echtzeit-Kundenkonto](tutorials/add-profile-data.md)beschrieben wird.
+[!DNL Platform] kann so konfiguriert werden, dass Ihre Daten zu Datensatz und Zeitreihen an gesendet werden. Dies unterstützt die Echtzeit-Streaming-Erfassung und Batch-Erfassung. [!DNL Profile] Weitere Informationen dazu, wie Sie dem Echtzeit-Kundenprofil Daten hinzufügen, finden Sie in [diesem Tutorial](tutorials/add-profile-data.md).
 
 >[!NHinweis]
->Daten, die über Adobe-Lösungen erfasst werden, einschließlich Analytics Cloud, Marketing Cloud und Advertising Cloud, fließen in die Experience Platform und werden in Profil erfasst.
+>Daten, die über Adobe-Lösungen erfasst werden, einschließlich [!DNL Analytics Cloud], [!DNL Marketing Cloud]und [!DNL Advertising Cloud], fließen in [!DNL Experience Platform] die Datenerfassung und werden in diese integriert [!DNL Profile].
 
-### Profil-Erfassungsmetriken
+### [!DNL Profile] Erfassungsmetriken
 
-Mithilfe von &quot;Observability Insights&quot;können Sie wichtige Metriken in der Adobe Experience Platform verfügbar machen. Zusätzlich zu den Nutzungsstatistiken und Leistungsindikatoren für verschiedene Funktionen der Platform gibt es spezifische Profil-bezogene Metriken, mit denen Sie Einblicke in eingehende Anforderungsraten, erfolgreiche Erfassungsraten, erfasste Datensatzgrößen und mehr gewinnen können. Weitere Informationen finden Sie in der Übersicht über die [Beobachtungseinblicke](../observability/home.md). Eine vollständige Liste der Profil-Metriken finden Sie in der Dokumentation zu den [verfügbaren Metriken](../observability/metrics.md).
+Observability Insights ermöglicht die Ermittlung wichtiger Metriken in Adobe Experience Platform. In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of [!DNL Profile] metrics, see the documentation on [available metrics](../observability/metrics.md).
 
-## Datenverwaltung und Datenschutz
+## [!DNL Data governance] und [!DNL Privacy]
 
-Die Datenverwaltung ist eine Reihe von Strategien und Technologien, mit denen Kundendaten verwaltet und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung sichergestellt werden.
+[!DNL Data governance] umfasst eine Reihe von Strategien und Technologien, mittels derer Kundendaten so verwaltet werden können, dass die Einhaltung gesetzlicher Bestimmungen, Einschränkungen und Richtlinien zu ihrer Nutzung gewährleistet bleibt.
 
-Im Hinblick auf den Zugriff auf Daten spielt die Datenverwaltung auf verschiedenen Ebenen eine Schlüsselrolle in der Experience Platform:
-* Beschriftung der Datenverwendung
-* Datenschutzrichtlinien
-* Zugriffskontrolle über Daten zu Marketingaktionen
+As it relates to accessing data, data governance plays a key role within [!DNL Experience Platform] at various levels:
+* Datennutzungsbeschriftungen
+* Datenzugriffsrichtlinien
+* Kontrollmechanismen für den Datenzugriff für Marketing-Aktivitäten
 
-Die Datenverwaltung wird an verschiedenen Punkten verwaltet. Dazu gehört die Entscheidung, welche Daten in die Platform eingebunden werden und welche Daten nach der Erfassung für eine bestimmte Marketingaktion verfügbar sind. Weitere Informationen finden Sie in der Übersicht über die [Datenverwaltung](../data-governance/home.md).
+[!DNL Data governance] an mehreren Stellen verwaltet wird. These include deciding what data is ingested into [!DNL Platform] and what data is accessible after ingestion for a given marketing action. Gehen Sie für weitere Informationen hierzu zunächst die [Übersicht über Data Governance](../data-governance/home.md) durch.
 
-### Bearbeitung von Ausschluss- und Datenschutzanfragen
+### Umgang mit Opt-out- und Datenschutzanfragen
 
-Mit der Experience Platform können Ihre Kunden Abmeldeanfragen im Zusammenhang mit der Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils senden. Weitere Informationen zur Bearbeitung von Opt-out-Anfragen finden Sie in der Dokumentation zur [Berücksichtigung von Opt-out-Anfragen](../segmentation/honoring-opt-outs.md).
+[!DNL Experience Platform] ermöglicht es Ihren Kunden, Abmeldeanfragen im Zusammenhang mit der Nutzung und Datenspeicherung ihrer Daten innerhalb von [!DNL Real-time Customer Profile]zu senden. Weitere Informationen hierzu finden Sie in der Dokumentation zum Thema [Berücksichtigen von Opt-out-Anfragen](../segmentation/honoring-opt-outs.md).
 
-## Profil-Leitlinien
+## [!DNL Profile] Richtlinien
 
-Die Experience Platform hat eine Reihe von Leitlinien zu beachten, um Profil effektiv zu nutzen.
+[!DNL Experience Platform] hat eine Reihe von Leitlinien zu befolgen, um wirksam zu nutzen [!DNL Profile].
 
 | Abschnitt | Grenze |
 | ------- | -------- |
-| Profil Vereinigung Schema | Maximal **20** Datensätze können zum Schema der Profil-Vereinigung beitragen. |
+| [!DNL Profile] Vereinigung Schema | Maximal **20** Datensätze können zum Schema der [!DNL Profile] Vereinigung beitragen. |
 | Beziehungen zwischen mehreren Entitäten | Es können maximal **5** Beziehungen mit mehreren Entitäten erstellt werden. |
 | JSON-Tiefe für mehrere Entitäten | Die maximale JSON-Tiefe beträgt **4**. |
-| Zeitreihendaten | Zeitreihendaten sind im Profil für Nicht-Personen-Entitäten **nicht** zulässig. |
+| Zeitreihendaten | Zeitreihendaten sind **nicht** in [!DNL Profile] für Nicht-Personen-Entitäten zulässig. |
 | Beziehungen zu Nichtpersonen im Schema | Nicht-menschliche Schema-Beziehungen sind **nicht** zulässig. |
 | Profil-Fragment | Die empfohlene Maximalgröße für ein Profil-Fragment ist **10 kB**.<br><br> Die absolute Maximalgröße eines Profil-Fragments ist **1 MB**. |
 | Nicht-personenbezogene Entität | Die maximale Gesamtgröße für eine einzelne Nicht-Person-Entität beträgt **200 MB**. |
@@ -131,13 +131,13 @@ Die Experience Platform hat eine Reihe von Leitlinien zu beachten, um Profil eff
 >[!NOTE]
 >
 >
->Eine Nicht-Person-Entität bezieht sich auf jede XDM-Klasse, die **nicht** zum Profil gehört.
+>Eine Nicht-Person-Entität bezieht sich auf jede XDM-Klasse, die **nicht** Teil von ist [!DNL Profile].
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Um mehr über Echtzeit-Kundensupport zu erfahren, lesen Sie bitte die Dokumentation weiter und ergänzen Sie Ihre Kenntnisse, indem Sie sich das unten stehende Video ansehen oder andere [Experience Platform-Videolehrgänge](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)erkunden.
+To learn more about [!DNL Real-time Customer Profile], please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/de-DE/platform-learn/tutorials/overview.html).
 
 >[!WARNING]
->Die Benutzeroberfläche der Platform, die im folgenden Video gezeigt wird, ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie im Benutzerhandbuch [zum](ui/user-guide.md) Echtzeit-Profil.
+>Die im folgenden Video dargestellte [!DNL Platform] Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie im Benutzerhandbuch [zum](ui/user-guide.md) Echtzeit-Profil.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
