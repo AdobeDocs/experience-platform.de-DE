@@ -1,104 +1,104 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Richtlinien zusammenführen - Benutzerhandbuch
+title: Benutzerhandbuch zu Zusammenführungsrichtlinien
 topic: guide
 translation-type: tm+mt
-source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 3%
+source-wordcount: '1104'
+ht-degree: 83%
 
 ---
 
 
-# Richtlinien zusammenführen - Benutzerhandbuch
+# Benutzerhandbuch zu Zusammenführungsrichtlinien
 
-Mit der Adobe Experience Platform können Sie Daten aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, um sich einen kompletten Überblick über einzelne Kunden zu verschaffen. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
 
-Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Dieses Handbuch enthält schrittweise Anleitungen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche von Adobe Experience Platform.
+Über RESTful-APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation einrichten. Dieses Handbuch enthält schrittweise Anleitungen zum Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche von Adobe Experience Platform.
 
-Wenn Sie es vorziehen, mit Mergerichtlinien mithilfe der Echtzeit-Customer Profil-API zu arbeiten, befolgen Sie die Anweisungen, die im Lernprogramm zur API- [Zusammenführung](../api/merge-policies.md)beschrieben sind.
+If you would prefer to work with merge policies using the [!DNL Real-time Customer Profile] API, please follow the instructions outlined in the [merge policies API tutorial](../api/merge-policies.md).
 
 ## Erste Schritte
 
-Dieses Handbuch erfordert ein Verständnis der verschiedenen Experience Platform-Dienste, die mit Fusionsrichtlinien verknüpft sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+This guide requires a working understanding of the various [!DNL Experience Platform] services involved with merge policies. Bevor Sie mit dem Tutorial beginnen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-* [Echtzeit-Profil](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Identitätsdienst](../../identity-service/home.md): Ermöglicht Kunden-Profil in Echtzeit durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Plattform integriert werden.
-* [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+* [!DNL Real-time Customer Profile](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die Daten eingehen [!DNL Platform].
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
-## Ansicht-Zusammenführungsrichtlinien
+## Zusammenführungsrichtlinien anzeigen
 
-In der Benutzeroberfläche von Experience Platform können Sie mit der Arbeit mit Zusammenführungsrichtlinien beginnen und eine Liste der bestehenden Zusammenführungsrichtlinien Ihres Unternehmens anzeigen, indem Sie auf **Profil** in der linken Leiste klicken und dann die Registerkarte Richtlinien **zusammenführen** auswählen.
+Within the [!DNL Experience Platform] user interface, you can begin to work with merge policies and see a list of your organization&#39;s existing merge policies by clicking **[!UICONTROL Profile]** in the left-rail and then selecting the **[!UICONTROL Merge policies]** tab.
 
-![Landingpage von Richtlinien zusammenführen](../images/merge-policies/landing.png)
+![Landingpage für Zusammenführungsrichtlinien](../images/merge-policies/landing.png)
 
-Details zu den einzelnen für Ihr Unternehmen verfügbaren Mergerichtlinien sind auf der Landingpage sichtbar, einschließlich *Richtlinienname*, *Standardrichtlinie* für die Zusammenführung und *Schema*.
+Details zu einzelnen für Ihre Organisation verfügbaren Zusammenführungsrichtlinien finden Sie auf der Landingpage, einschließlich *[!UICONTROL Richtlinienname]*, *[!UICONTROL standardmäßiger Zusammenführungsrichtlinie]* und *[!UICONTROL Schema]*.
 
-Um auszuwählen, welche Details sichtbar sind, oder um der Anzeige weitere Spalten hinzuzufügen, wählen Sie rechts das Spaltenauswahlsymbol aus und klicken Sie auf den Spaltennamen, um es der Ansicht hinzuzufügen oder zu entfernen.
+Um zu entscheiden, welche Details angezeigt werden sollen, oder um der Anzeige weitere Spalten hinzuzufügen, wählen Sie rechts das Spaltenauswahlsymbol und klicken Sie auf den Spaltennamen, um die gewünschte Spalte der Ansicht hinzuzufügen bzw. zu entfernen.
 
 ![](../images/merge-policies/adjust-view.png)
 
-## Eine Richtlinie zum Zusammenführen erstellen
+## Zusammenführungsrichtlinie erstellen
 
-Um eine neue Richtlinie für die Zusammenführung zu erstellen, klicken Sie oben rechts auf der Registerkarte &quot;Richtlinien **zusammenführen&quot;auf** Richtlinie **erstellen** .
+Um eine neue Zusammenführungsrichtlinie zu erstellen, klicken Sie oben rechts auf dem Tab **[!UICONTROL Zusammenführungsrichtlinien]** auf **[!UICONTROL Zusammenführungsrichtlinie erstellen]**.
 
-![Landingpage von Richtlinien zusammenführen](../images/merge-policies/create-new.png)
+![Landingpage für Zusammenführungsrichtlinien](../images/merge-policies/create-new.png)
 
-Der Bildschirm &quot; **Richtlinie** zum Zusammenführen erstellen&quot;wird angezeigt, in dem Sie wichtige Informationen zu Ihrer neuen Richtlinie zum Zusammenführen bereitstellen können.
+Der Bildschirm **[!UICONTROL Zusammenführungsrichtlinie erstellen]** wird angezeigt, in dem Sie wichtige Daten für Ihre neue Zusammenführungsrichtlinie angeben können.
 
 ![](../images/merge-policies/create.png)
 
-* **Name**: Der Name der Zusammenführungsrichtlinie sollte beschreibend, aber knapp sein.
-* **Schema**: Das Schema, das mit der Zusammenführungsrichtlinie verknüpft ist. Dies gibt das XDM-Schema an, für das diese Zusammenführungsrichtlinie erstellt wird. Organisationen können mehrere Zusammenführungsrichtlinien pro Schema erstellen.
-* **ID-Stich**: In diesem Feld wird definiert, wie die entsprechenden Identitäten eines Kunden ermittelt werden. Es gibt zwei mögliche Werte:
-   * **Keine**: Keine Identitätszuordnung durchführen.
-   * **Privates Diagramm**: Führen Sie Identitätszuordnungen basierend auf Ihrem privaten Identitätsdiagramm durch.
-* **Attributzusammenführung**: Ein Profil-Fragment ist das Profil für nur eine Identität aus der Liste der Identitäten, die für einen einzelnen Kunden vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit kollidierender Profil-Eigenschaftswerte, und die Priorität muss angegeben werden. Mithilfe der *Attributzusammenführung* können Sie festlegen, welche DataSet-Profil-Werte im Falle eines Zusammenführungskonflikts priorisiert werden sollen. Es gibt zwei mögliche Werte:
-   * **Zeitstempel bestellt**: Bei Konflikten ist das zuletzt aktualisierte Profil vorrangig zu behandeln.
-   * **Datensatzpriorität** : Weisen Sie Fragmenten des Profils Priorität auf der Grundlage des Datensatzes zu, aus dem sie stammen. Bei Auswahl dieser Option müssen Sie die zugehörigen Datensätze und deren Reihenfolge auswählen. Weitere Informationen finden Sie in den unten stehenden Details zur [Priorität](#dataset-precedence) des Datensatzes.
-* **Standardrichtlinie für** Zusammenführung: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie für Ihr Unternehmen standardmäßig verwendet werden soll. Wenn der Selektor aktiviert und die neue Richtlinie gespeichert wird, wird Ihre vorherige Standardrichtlinie automatisch aktualisiert, sodass sie nicht mehr die Standardrichtlinie ist.
+* **[!UICONTROL Name]**: Der Name Ihrer Zusammenführungsrichtlinie sollte beschreibend, aber kurz sein.
+* **[!UICONTROL Schema]**: Das mit der Zusammenführungsrichtlinie verknüpfte Schema. Damit wird das XDM-Schema angegeben, für das die Zusammenführungsrichtlinie erstellt wird. Organisationen können mehrere Zusammenführungsrichtlinien pro Schema erstellen.
+* **[!UICONTROL ID-Zusammenfügung]**: In diesem Feld wird definiert, wie die verwandten Identitäten eines Kunden ermittelt werden. Es gibt zwei mögliche Werte:
+   * **[!UICONTROL Keine]**: Keine Identitätszusammenfügung durchführen.
+   * **[!UICONTROL Privates Diagramm]**: Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen.
+* **[!UICONTROL Attributzusammenführung]**: Ein Profilfragment besteht aus den Profildaten für nur eine Identität aus der Liste an Identitäten, die für einen einzelnen Kunden bestehen. Wenn der Typ des Identitätsdiagramms Ergebnisse in mehr als einer Identität genutzt hat, können Profileigenschaftswerte kollidieren. Das heißt, dass eine Priorität angegeben werden muss. Mit der *Attributzusammenführung* können Sie festlegen, welche Datensatzprofilwerte bei einem Zusammenführungskonflikt priorisiert werden sollen. Es gibt zwei mögliche Werte:
+   * **[!UICONTROL Zeitstempel mit Reihenfolge]**: Bei Konflikten ist das zuletzt aktualisierte Profil mit Priorität zu behandeln.
+   * **[!UICONTROL Datensatzpriorität]**: Profilfragmente erhalten anhand des Datensatzes, aus dem sie stammen, Priorität. Bei Auswahl dieser Option müssen Sie die zugehörigen Datensätze und ihre Prioritätsreihenfolge auswählen. Weiterführende Informationen finden Sie unten in den Details zur [Datensatzpriorität](#dataset-precedence).
+* **[!UICONTROL Standardmäßige Zusammenführungsrichtlinie]**: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie der Standard für Ihre Organisation sein soll oder nicht. Wenn der Selektor aktiviert ist und Sie die neue Richtlinie speichern, wird Ihre vorherige Standardrichtlinie automatisch so aktualisiert, dass sie nicht mehr der Standard ist.
 
 ### Datensatzpriorität {#dataset-precedence}
 
-Wenn Sie einen *Attributzusammenführungswert* auswählen, können Sie die *Dataset-Priorität* auswählen, damit Sie Profil-Fragmenten je nach dem Datensatz, aus dem sie stammen, Priorität einräumen können.
+Wenn Sie einen Wert für *[!UICONTROL Attributzusammenführung]* auswählen, können Sie die *[!UICONTROL Datensatzpriorität]* festlegen, um Profilfragmenten je nach dem Datensatz, aus dem sie stammen, Priorität einzuräumen.
 
-Ein Anwendungsfall wäre z. B. dann, wenn in Ihrem Unternehmen Informationen in einem Datensatz vorhanden sind, die bevorzugt oder vertrauenswürdig sind als Daten in einem anderen Datensatz.
+Ein Beispiel bestünde darin, wenn es in Ihrer Organisation Daten in einem Datensatz gibt, die bevorzugt werden oder vertrauenswürdiger sind als Daten in einem anderen Datensatz.
 
-Wenn Sie die *Datensatzpriorität* auswählen, wird ein separates Fenster geöffnet, in dem Sie aus den *verfügbaren Datensätzen* auswählen müssen (oder das Kontrollkästchen verwenden, um alle auszuwählen), welche Datensätze einbezogen werden. Sie können diese Datensätze dann per Drag &amp; Drop in das Bedienfeld &quot; *Ausgewählte Datensätze* &quot;ziehen und sie in die richtige Reihenfolge der Priorität ziehen. Der oberste Datensatz erhält höchste Priorität, der zweite Datensatz wird an zweiter Stelle stehen usw.
+Wenn Sie *[!UICONTROL Datensatzpriorität]* auswählen, wird ein separates Fenster geöffnet, in dem Sie aus *[!UICONTROL verfügbaren Datensätzen]* auswählen müssen (oder das Kontrollkästchen verwenden können, um alle auszuwählen). Dadurch legen Sie fest, welche Datensätze einbezogen werden sollen. Sie können die Datensätze dann per Drag &amp; Drop in das Bedienfeld *[!UICONTROL Ausgewählte Datensätze]* und dann in die richtige Prioritätsreihenfolge ziehen. Der oberste Datensatz erhält die höchste Priorität, der zweite Datensatz erhält die zweithöchste Priorität usw.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Nachdem Sie die Richtlinie zum Zusammenführen erstellt haben, klicken Sie auf **Speichern** , um zur Registerkarte &quot;Richtlinien ** zusammenführen&quot;zurückzukehren, auf der Ihre neue Richtlinie zum Zusammenführen in der Liste der Richtlinien angezeigt wird.
+Nachdem Sie die Zusammenführungsrichtlinie erstellt haben, klicken Sie auf **[!UICONTROL Speichern]**, um zum Tab *[!UICONTROL Zusammenführungsrichtlinien]* zurückzukehren. Hier wird Ihre neue Zusammenführungsrichtlinie in der Liste der Richtlinien angezeigt.
 
-## Eine Richtlinie zum Zusammenführen bearbeiten
+## Zusammenführungsrichtlinie bearbeiten
 
-Sie können eine vorhandene Richtlinie zum Zusammenführen über die Registerkarte &quot;Richtlinien ** zusammenführen&quot;ändern, indem Sie auf den *Richtliniennamen* für die zu bearbeitende Richtlinie klicken.
+Sie können eine vorhandene Zusammenführungsrichtlinie über den Tab *[!UICONTROL Zusammenführungsrichtlinien]* ändern, indem Sie auf den *[!UICONTROL Richtliniennamen]* für die zu bearbeitende Zusammenführungsrichtlinie klicken.
 
-![Landingpage von Richtlinien zusammenführen](../images/merge-policies/select-edit.png)
+![Landingpage für Zusammenführungsrichtlinien](../images/merge-policies/select-edit.png)
 
-Wenn der Bildschirm &quot; *Edit merge policy* &quot;angezeigt wird, können Sie Änderungen am *Namens*-, *Schema*-, *ID-Heftungstyp* - und *Attributzusammenführungstyp* ** vornehmen und festlegen, ob diese Richtlinie für Ihr Unternehmen alsStandard-Zusammenführungsrichtlinie definiert werden soll oder nicht.
+Wenn der Bildschirm *[!UICONTROL Zusammenführungsrichtlinie bearbeiten]* angezeigt wird, können Sie Änderungen am *[!UICONTROL Namen]*, *[!UICONTROL Schema]*, *[!UICONTROL ID-Zusammenfügungstyp]* und *[!UICONTROL Attributzusammenführungstyp]* vornehmen und festlegen, ob die Richtlinie als *[!UICONTROL standardmäßige Zusammenführungsrichtlinie]* für Ihre Organisation dienen soll oder nicht.
 
->[!Note]
->Sie können die Richtlinie-ID zum Zusammenführen nicht bearbeiten, die oben im Bearbeitungsbildschirm angezeigt wird. Dies ist eine schreibgeschützte, systemgenerierte ID, die nicht geändert werden kann.
+>[!NHinweis]
+>Sie können die Kennung der Zusammenführungsrichtlinie, die oben im Bearbeitungsbildschirm angezeigt wird, nicht bearbeiten. Es handelt sich dabei um eine schreibgeschützte, systemgenerierte Kennung, die sich nicht ändern lässt.
 
 ![](../images/merge-policies/edit-screen.png)
 
-Nachdem Sie die erforderlichen Änderungen vorgenommen haben, klicken Sie auf **Speichern** , um zur Registerkarte &quot;Richtlinien ** zusammenführen&quot;zurückzukehren, auf der die aktualisierten Informationen zu den Zusammenführungsrichtlinien jetzt angezeigt werden.
+Nachdem Sie die erforderlichen Änderungen vorgenommen haben, klicken Sie auf **[!UICONTROL Speichern]**, um zum Tab *[!UICONTROL Zusammenführungsrichtlinien]* zurückzukehren. Hier werden die aktualisierten Daten zur Zusammenführungsrichtlinie jetzt angezeigt.
 
 ![](../images/merge-policies/edited.png)
 
-## Verstöße gegen die Datenschutzpolitik
+## Verstöße gegen Data Governance-Richtlinien
 
-Beim Erstellen oder Aktualisieren einer Richtlinie zum Zusammenführen wird geprüft, ob die Richtlinie zum Zusammenführen eine der von Ihrem Unternehmen definierten Datenverwendungsrichtlinien verletzt. Datenverwendungsrichtlinien sind Teil der Datenverwaltung in Adobe Experience Platform und stellen Regeln dar, die die Arten von Marketingaktionen beschreiben, von denen Sie bestimmte Plattformdaten ausführen dürfen oder deren Ausführung eingeschränkt ist. Wenn zum Beispiel eine Richtlinie zum Zusammenführen verwendet wurde, um ein Segment zu erstellen, das an ein Drittanbieterziel aktiviert wurde, und Ihr Unternehmen über eine Datenverwendungsrichtlinie verfügte, die den Export bestimmter Daten an Dritte verhinderte, erhalten Sie beim Versuch, Ihre Fusionsrichtlinie zu speichern, eine Benachrichtigung über die Meldung &quot;Verletzung der Datenschutzrichtlinien erkannt&quot;.
+Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Data usage policies are part of Adobe Experience Platform [!DNL Data Governance] and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Platform] data. Wenn zum Beispiel eine Zusammenführungsrichtlinie zum Erstellen eines Segments verwendet wurde, das für ein Drittanbieterziel aktiviert wurde, und Ihre Organisation eine Datennutzungsrichtlinie aufwiese, die den Export bestimmter Daten an Dritte verhinderte, würden Sie beim Versuch, Ihre Zusammenführungsrichtlinie zu speichern, eine Benachrichtigung erhalten, dass eine „Verletzung der Data Governance-Richtlinie entdeckt“ wurde.
 
-Diese Benachrichtigung enthält eine Liste der Richtlinien zur Datenverwendung, die verletzt wurden, und ermöglicht Ihnen die Ansicht der Details der Verletzung durch Auswahl einer Richtlinie aus der Liste. Bei der Auswahl einer verletzten Richtlinie liefert die Registerkarte &quot; *Datenlinie* &quot;den *Grund für die Verletzung* und die *betroffenen Aktivierungen*, die jeweils detaillierter erläutern, wie die Datenverwendungsrichtlinie verletzt wurde.
+Diese Benachrichtigung enthält eine Liste der Datennutzungsrichtlinien, die verletzt wurden, und ermöglicht Ihnen das Anzeigen von Details zur Verletzung, indem Sie eine Richtlinie aus der Liste auswählen. Bei Auswahl einer verletzten Richtlinie liefert der Tab *Ermittlung der Datenherkunft* den *Grund für die Verletzung* und die *betroffenen Aktivierungen*. So erhalten Sie genauere Details zur Verletzung der jeweiligen Datennutzungsrichtlinie.
 
-Um mehr über die Leistung der Datenverwaltung in Adobe Experience Platform zu erfahren, lesen Sie zunächst den Überblick über die [Datenverwaltung](../../data-governance/home.md).
+Um mehr über Data Governance in Adobe Experience Platform zu erfahren, lesen Sie zunächst den [Überblick zu Data Governance](../../data-governance/home.md).
 
 ![](../images/merge-policies/policy-violation.png)
 
 ## Nächste Schritte
 
-Nachdem Sie die Zusammenführungsrichtlinien für Ihre IMS-Organisation erstellt und konfiguriert haben, können Sie diese verwenden, um Audiencen aus Ihren Profil-Daten zu erstellen. Weitere Informationen zum Erstellen und Arbeiten mit Segmenten mit Experience Platform finden Sie in der Übersicht [zur](../../segmentation/home.md) Segmentierung.
+Nachdem Sie Zusammenführungsrichtlinien für Ihre IMS-Organisation erstellt und konfiguriert haben, können Sie diese nun verwenden, um Zielgruppensegmente aus Ihren Profildaten zu erstellen. See the [Segmentation overview](../../segmentation/home.md) for more information on how to create and work with segments using [!DNL Experience Platform].
