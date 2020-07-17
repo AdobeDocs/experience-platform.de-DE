@@ -4,50 +4,46 @@ solution: Experience Platform
 title: Segmentaufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 3%
+source-wordcount: '994'
+ht-degree: 38%
 
 ---
 
 
-# Entwicklerhandbuch für Segmentaufträge
+# Endpunkt-Handbuch für Segmentaufträge
 
-Ein Segmentauftrag ist ein asynchroner Vorgang, bei dem ein neues Audiencen-Segment erstellt wird. Er verweist auf eine Segmentdefinition sowie auf alle Zusammenführungsrichtlinien, die steuern, wie Echtzeit-Kundenattribute in Ihren Profil-Fragmenten überlappende Attribute zusammenführen. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Segmentinformationen sammeln, z. B. Fehler, die während der Verarbeitung aufgetreten sind, und die endgültige Größe Ihrer Audience.
+Ein Segmentauftrag ist ein asynchroner Vorgang, bei dem ein neues Zielgruppensegment erstellt wird. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
 
-Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentaufträgen und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
+Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentaufträgen und umfasst Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der Segmentierungs-API. Bevor Sie fortfahren, lesen Sie bitte das Entwicklerhandbuch für die [Segmentierung](./getting-started.md).
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-Insbesondere enthält der [Abschnitt](./getting-started.md#getting-started) &quot;Erste Schritte&quot;des Segmentierungsentwicklerhandbuchs Links zu verwandten Themen, eine Anleitung zum Lesen der Beispiel-API-Aufrufe im Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer Experience Platformen-API erforderlich sind.
+## Liste mit Segmentaufträgen abrufen {#retrieve-list}
 
-## Eine Liste von Segmentaufträgen abrufen
-
-Sie können eine Liste aller Segmentaufträge für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anforderung an den `/segment/jobs` Endpunkt senden.
+Sie können eine Liste aller Segmentaufträge für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/segment/jobs`-Endpunkt richten.
 
 **API-Format**
+
+Der `/segment/jobs` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Exportaufträge abgerufen. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`).
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Optional*) Dem Anforderungspfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, die durch das kaufmännische Und (`&`) voneinander getrennt werden. Die verfügbaren Parameter sind unten aufgeführt.
-
 **Abfrage**
 
-Im Folgenden finden Sie eine Liste der verfügbaren Abfragen für die Auflistung von Segmentaufträgen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Segmentaufträge abgerufen.
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `start` | Gibt den Startversatz für die zurückgegebenen Segmentaufträge an. |
-| `limit` | Gibt die Anzahl der pro Seite zurückgegebenen Segmentaufträge an. |
-| `status` | Die Ergebnisse werden auf der Grundlage des Status Filter. Die unterstützten Werte sind &quot;NEU&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;VERARBEITUNG&quot;, &quot;ERFOLGT&quot;, &quot;FEHLGESCHLAGEN&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;ABGESCHLOSSEN&quot; |
-| `sort` | Die zurückgegebenen Segmentaufträge werden bestellt. Ist im Format geschrieben `[attributeName]:[desc|asc]`. |
-| `property` | Filter segmentieren Aufträge und erhalten exakte Übereinstimmungen für den angegebenen Filter. Es kann in einem der folgenden Formate geschrieben werden: <ul><li>`[jsonObjectPath]==[value]` - Filtern nach dem Objektschlüssel</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - Filtern innerhalb des Arrays</li></ul> |
+| Parameter | Beschreibung | Beispiel |
+| --------- | ----------- | ------- |
+| `start` | Gibt den Startversatz für die zurückgegebenen Segmentaufträge an. | `start=1` |
+| `limit` | Gibt die Anzahl der pro Seite zurückgegebenen Segmentaufträge an. | `limit=20` |
+| `status` | Filtert die Ergebnisse anhand ihres Status. Unterstützte Werte sind „NEW“ (neu), „QUEUED“ (in Warteschlange), „PROCESSING“ (in Bearbeitung), „SUCCEEDED“ (erfolgreich abgeschlossen), „FAILED“ (fehlgeschlagen), „CANCELLING“ (wird abgebrochen) und „CANCELLED“ (abgebrochen). | `status=NEW` |
+| `sort` | Ordnet die zurückgegebenen Segmentaufträge. Ist im Format `[attributeName]:[desc|asc]` geschrieben. | `sort=creationTime:desc` |
+| `property` | Filtert Segmentaufträge und erhält genaue Übereinstimmungen für den angegebenen Filter. Das kann in einem der folgenden Formate geschrieben sein: <ul><li>`[jsonObjectPath]==[value]` – Filtern nach dem Objektschlüssel</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` – Filtern innerhalb des Arrays</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Anfrage**
 
@@ -61,11 +57,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Segmentaufträgen für das angegebene IMS-Unternehmen als JSON zurück. Die folgende Antwort gibt eine Liste aller erfolgreichen Segmentaufträge für das IMS-Unternehmen zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentaufträgen für die angegebene IMS-Organisation als JSON zurück. Die folgende Antwort gibt eine Liste aller erfolgreichen Segmentaufträge für die IMS-Organisation zurück.
 
 >[!NOTE]
 >
->Die folgende Antwort wurde für Leerzeichen abgeschnitten und zeigt nur den ersten zurückgegebenen Auftrag an.
+>Die folgende Antwort wurde aus Platzgründen abgeschnitten und zeigt nur den ersten zurückgegebenen Auftrag.
 
 ```json
 {
@@ -157,9 +153,18 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Segmentauftr�
 }
 ```
 
-## Neuen Segmentauftrag erstellen
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `id` | Ein vom System generierter schreibgeschützter Bezeichner für den Segmentauftrag. |
+| `status` | Der aktuelle Status für den Segmentauftrag. Mögliche Werte für den Status sind &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot;und &quot;SUCCEEDED&quot;. |
+| `segments` | Ein Objekt, das Informationen zu den Segmentdefinitionen enthält, die im Segmentauftrag zurückgegeben werden. |
+| `segments.segment.id` | Die ID der Segmentdefinition. |
+| `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
+| `metrics` | Ein Objekt, das diagnostische Informationen zum Segmentauftrag enthält. |
 
-Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anforderung an den `/segment/jobs` Endpunkt senden.
+## Neuen Segmentauftrag erstellen {#create}
+
+Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anforderung an den `/segment/jobs` Endpunkt senden und die ID der Segmentdefinition einschließen, aus der Sie eine neue Audience erstellen möchten.
 
 **API-Format**
 
@@ -181,13 +186,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
   {
     "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
   }
-]
- '
+]'
 ```
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `segmentId` | Die ID der Segmentdefinition, für die Sie einen Segmentauftrag erstellen möchten. Weitere Informationen zu Segmentdefinitionen finden Sie im [Segmentdefinitionsendpunkt-Handbuch](./segment-definitions.md). |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zu Ihrem neu erstellten Segmentauftrag zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erstellten Segmentauftrag zurück.
 
 ```json
 {
@@ -240,9 +248,17 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zu Ihrem neu erstellt
 }
 ```
 
-## Abrufen eines bestimmten Segmentauftrags
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `id` | Ein vom System generierter schreibgeschützter Bezeichner für den neu erstellten Segmentauftrag. |
+| `status` | Der aktuelle Status für den Segmentauftrag. Da der Segmentauftrag neu erstellt wurde, lautet der Status immer &quot;NEU&quot;. |
+| `segments` | Ein Objekt, das Informationen zu den Segmentdefinitionen enthält, für die dieser Segmentauftrag ausgeführt wird. |
+| `segments.segment.id` | Die ID der von Ihnen angegebenen Segmentdefinition. |
+| `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
 
-Sie können detaillierte Informationen zu einem bestimmten Segmentauftrag abrufen, indem Sie eine GET-Anforderung an den `/segment/jobs` Endpunkt senden und den `id` Wert des Segmentauftrags im Anforderungspfad angeben.
+## Bestimmten Segmentauftrag abrufen {#get}
+
+You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to retrieve in the request path.
 
 **API-Format**
 
@@ -252,7 +268,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Der `id` Wert des Segmentauftrags, den Sie abrufen möchten. |
+| `{SEGMENT_JOB_ID}` | Der `id`-Wert des Segmentauftrags, den Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -266,7 +282,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen zum angegebenen Segmentauftrag zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum angegebenen Segmentauftrag zurück.
 
 ```json
 {
@@ -328,9 +344,18 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 }
 ```
 
-## Massenabruf von Segmentaufträgen
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `id` | Ein vom System generierter schreibgeschützter Bezeichner für den Segmentauftrag. |
+| `status` | Der aktuelle Status für den Segmentauftrag. Mögliche Werte für den Status sind &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot;und &quot;SUCCEEDED&quot;. |
+| `segments` | Ein Objekt, das Informationen zu den Segmentdefinitionen enthält, die im Segmentauftrag zurückgegeben werden. |
+| `segments.segment.id` | Die ID der Segmentdefinition. |
+| `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
+| `metrics` | Ein Objekt, das diagnostische Informationen zum Segmentauftrag enthält. |
 
-Sie können detaillierte Informationen zu mehreren angegebenen Segmentaufträgen abrufen, indem Sie eine POST-Anforderung an den `/segment/jobs/bulk-get` Endpunkt senden und die `id` Werte der Segmentaufträge im Anforderungstext angeben.
+## Massenabruf von Segmentaufträgen {#bulk-get}
+
+Sie können detaillierte Informationen zu mehreren Segmentaufträgen abrufen, indem Sie eine POST-Anforderung an den `/segment/jobs/bulk-get` Endpunkt senden und die `id` Werte der Segmentaufträge im Anforderungstext angeben.
 
 **API-Format**
 
@@ -426,9 +451,21 @@ Eine erfolgreiche Antwort gibt HTTP-Status 207 mit den angeforderten Segmentauft
 }
 ```
 
-## Abbrechen oder Löschen eines bestimmten Segmentauftrags
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `id` | Ein vom System generierter schreibgeschützter Bezeichner für den Segmentauftrag. |
+| `status` | Der aktuelle Status für den Segmentauftrag. Mögliche Werte für den Status sind &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot;und &quot;SUCCEEDED&quot;. |
+| `segments` | Ein Objekt, das Informationen zu den Segmentdefinitionen enthält, die im Segmentauftrag zurückgegeben werden. |
+| `segments.segment.id` | Die ID der Segmentdefinition. |
+| `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
 
-Sie können den Löschvorgang für einen bestimmten Segmentauftrag anfordern, indem Sie eine DELETE-Anforderung an den `/segment/jobs` Endpunkt senden und den `id` Wert des Segmentauftrags im Anforderungspfad angeben.
+## Bestimmten Segmentauftrag abbrechen oder löschen {#delete}
+
+Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anforderung an den `/segment/jobs` Endpunkt senden und die ID des Segmentauftrags angeben, den Sie im Anforderungspfad löschen möchten.
+
+>[!NOTE]
+>
+>Die API-Antwort auf die Löschanforderung erfolgt sofort. Der eigentliche Löschvorgang des Segmentauftrags ist jedoch asynchron. Mit anderen Worten, es gibt einen zeitlichen Unterschied zwischen dem Zeitpunkt, zu dem die Anforderung zum Löschen des Segmentauftrags ausgeführt wird, und dem Zeitpunkt, zu dem er angewendet wird.
 
 **API-Format**
 
@@ -438,7 +475,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Der `id` Wert des Segmentauftrags, den Sie löschen möchten. |
+| `{SEGMENT_JOB_ID}` | Der `id`-Wert des Segmentauftrags, den Sie löschen möchten. |
 
 **Anfrage**
 
@@ -452,7 +489,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 204 mit den folgenden Informationen zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 mit folgenden Informationen zurück.
 
 ```json
 {
@@ -463,4 +500,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 204 mit den folgenden Informationen z
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis dafür, wie Segmentaufträge funktionieren. Weitere Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../home.md).
+Nach dem Lesen dieses Handbuchs verstehen Sie nun besser, wie Segmentaufträge funktionieren.
