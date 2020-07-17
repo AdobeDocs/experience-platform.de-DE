@@ -4,31 +4,31 @@ solution: Adobe Experience Platform
 title: Richtlinien zusammenführen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 3%
+source-wordcount: '2035'
+ht-degree: 85%
 
 ---
 
 
 # Endpunkt der Richtlinien zusammenführen
 
-Adobe Experience Platform ermöglicht Ihnen, Daten aus mehreren Quellen zusammenzuführen und zu kombinieren, um eine vollständige Ansicht der einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine Übersicht zu schaffen. Mit RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche finden Sie im [Benutzerhandbuch](../ui/merge-policies.md)zu Zusammenführungsrichtlinien.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Über RESTful-APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation einrichten. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben. Informationen zum Arbeiten mit Zusammenführungsrichtlinien unter Verwendung der Benutzeroberfläche finden Sie im [Benutzerhandbuch für Zusammenführungsrichtlinien](../ui/merge-policies.md).
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
-Merge-Richtlinien sind privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schema auf die gewünschte Weise zusammenzuführen. Für alle API-Zugriffe auf Profil-Daten ist eine Zusammenführungsrichtlinie erforderlich. Eine Standardeinstellung wird verwendet, wenn keine explizite Angabe erfolgt. Platform bietet eine standardmäßige Zusammenführungsrichtlinie oder Sie können eine Zusammenführungsrichtlinie für ein bestimmtes Schema erstellen und als Standard für Ihr Unternehmen markieren. Jedes Unternehmen kann potenziell über mehrere Zusammenführungsrichtlinien pro Schema verfügen, jedoch kann jedes Schema nur eine Standardzusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Schema-Name angegeben wird und eine Zusammenführungsrichtlinie erforderlich, jedoch nicht angegeben ist. Wenn Sie eine Mergerichtlinie als Standard festlegen, werden alle vorhandenen Mergerichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert, sodass sie nicht mehr als Standard verwendet werden.
+Zusammenführungsrichtlinien gelten jeweils privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] bietet eine standardmäßige Zusammenführungsrichtlinie; alternativ können Sie eine Zusammenführungsrichtlinie für ein bestimmtes Schema erstellen und diese dann als Standard für Ihre Organisation markieren. Jede Organisation kann potenziell über mehrere Zusammenführungsrichtlinien pro Schema verfügen, allerdings kann jedes Schema nur eine Standardzusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Schemaname angegeben und eine Zusammenführungsrichtlinie erforderlich, jedoch nicht angegeben ist. Wenn Sie eine Zusammenführungsrichtlinie als Standard festlegen, werden alle vorhandenen Zusammenführungsrichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert, sodass sie nicht mehr als Standard dienen.
 
-### Richtlinienobjekt für Zusammenführung abschließen
+### Komplettes Zusammenführungsrichtlinienobjekt
 
-Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von Voreinstellungen dar, die bestimmte Aspekte des Zusammenführens von Profil-Fragmenten steuern.
+Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinstellungen dar, die bestimmte Aspekte beim Zusammenführen von Profilfragmenten steuern.
 
-**Richtlinienobjekt zusammenführen**
+**Zusammenführungsrichtlinienobjekt**
 
 ```json
     {
@@ -52,17 +52,17 @@ Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `id` | Der vom System erzeugte eindeutige Bezeichner, der zur Erstellungszeit zugewiesen wurde |
-| `name` | Benutzerfreundlicher Name, unter dem die Richtlinie zum Zusammenführen in Ansichten der Liste identifiziert werden kann. |
-| `imsOrgId` | Organisations-ID, zu der diese Richtlinie gehört |
-| `identityGraph` | [Identitätsdiagramm](#identity-graph) -Objekt, das das Identitätsdiagramm angibt, aus dem die entsprechenden Identitäten abgerufen werden. Profil-Fragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
-| `attributeMerge` | [Attributzusammenführungs](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie bei Datenkonflikten Profil-Attributwerte priorisiert. |
-| `schema` | Das [Schema](#schema) -Objekt, für das die Zusammenführungsrichtlinie verwendet werden kann. |
-| `default` | Boolescher Wert, der angibt, ob diese Richtlinie für das angegebene Schema standardmäßig verwendet wird. |
-| `version` | Die Version der Zusammenführungsrichtlinie wurde von der Platform beibehalten. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Mergerichtlinie inkrementiert. |
+| `id` | Die vom System erzeugte eindeutige Kennung, die zur Erstellungszeit zugewiesen wurde |
+| `name` | Anzeigename, anhand dessen die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
+| `imsOrgId` | Organisationskennung, zu der diese Zusammenführungsrichtlinie gehört |
+| `identityGraph` | [Identitätsdiagramm](#identity-graph)-Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profilfragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
+| `attributeMerge` | [Attributzusammenführungs](#attribute-merge)-Objekt, das angibt, wie die Zusammenführungsrichtlinie Profilattributwerte bei Datenkonflikten priorisiert. |
+| `schema` | Das [Schema](#schema)-Objekt, für das die Zusammenführungsrichtlinie verwendet werden kann. |
+| `default` | Boolescher Wert, der angibt, ob diese Zusammenführungsrichtlinie für das angegebene Schema standardmäßig verwendet wird. |
+| `version` | [!DNL Platform]Von gepflegte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Zusammenführungsrichtlinie inkrementiert. |
 | `updateEpoch` | Datum der letzten Aktualisierung der Zusammenführungsrichtlinie. |
 
-**Beispielrichtlinie für die Zusammenführung**
+**Beispielhafte Zusammenführungsrichtlinie**
 
 ```json
     {
@@ -86,7 +86,7 @@ Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von
 
 ### Identitätsdiagramm {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jedes Unternehmen auf der Experience Platform verwendet werden. Das `identityGraph` Attribut der Richtlinie zum Zusammenführen definiert, wie die entsprechenden Identitäten für einen Benutzer bestimmt werden.
+[Der Identitätsdienst](../../identity-service/home.md) für Adobe Experience Platformen verwaltet die weltweit verwendeten Identitätsdiagramme und für jedes Unternehmen auf [!DNL Experience Platform]. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
 
 **identityGraph-Objekt**
 
@@ -96,10 +96,10 @@ Das Objekt für die gesamte Richtlinie zum Zusammenführen stellt einen Satz von
     }
 ```
 
-Dabei `{IDENTITY_GRAPH_TYPE}` ist Folgendes zu beachten:
+Wobei `{IDENTITY_GRAPH_TYPE}` einer der folgenden Werte ist:
 
-* **&quot;none&quot;:** Keine Identitätszuordnung durchführen.
-* **&quot;pdg&quot;:** Führen Sie Identitätszuordnungen basierend auf Ihrem privaten Identitätsdiagramm durch.
+* **„none“:** Keine Identitätszusammenfügung durchführen.
+* **„pdg“:** Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen.
 
 **Beispiel`identityGraph`**
 
@@ -111,7 +111,7 @@ Dabei `{IDENTITY_GRAPH_TYPE}` ist Folgendes zu beachten:
 
 ### Attributzusammenführung {#attribute-merge}
 
-Ein Profil-Fragment ist das Profil für nur eine Identität aus der Liste der Identitäten, die für einen bestimmten Benutzer vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit, dass Werte für die Eigenschaften des Profils miteinander in Konflikt stehen, und die Priorität muss angegeben werden. Mithilfe `attributeMerge`dieser Option können Sie festlegen, welche DataSet-Profil-Werte im Ereignis eines Zusammenführungskonflikts priorisiert werden sollen.
+Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der Liste an Identitäten, die für einen bestimmten Anwender vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp mehr als eine Identität ergibt, kann es sein, dass Werte für Profileigenschaften miteinander in Konflikt stehen und die Priorität angegeben werden muss. Mithilfe von `attributeMerge` können Sie festlegen, welche Datensatzprofilwerte bei einem Zusammenführungskonflikt priorisiert werden sollen.
 
 **attributeMerge-Objekt**
 
@@ -121,13 +121,13 @@ Ein Profil-Fragment ist das Profil für nur eine Identität aus der Liste der Id
     }
 ```
 
-Dabei `{ATTRIBUTE_MERGE_TYPE}` ist Folgendes zu beachten:
+Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
-* **&quot;timestampOrdered&quot;**: (Standard) Geben Sie dem zuletzt aktualisierten Profil im Konfliktfall Priorität. Bei diesem Zusammenführungstyp ist das `data` Attribut nicht erforderlich.
-* **&quot;dataSetPrecedence&quot;** : Weisen Sie Fragmenten des Profils Priorität auf der Grundlage des Datensatzes zu, aus dem sie stammen. Dies kann verwendet werden, wenn in einem Datensatz vorhandene Informationen bevorzugt oder gegenüber Daten in einem anderen Datensatz als vertrauenswürdig eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order` Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität Liste.
-   * **&quot;Reihenfolge&quot;**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, muss ein `order` Array mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Mit anderen Worten, Datensätze müssen explizit aufgeführt werden, um in ein Profil zusammengeführt zu werden. Das `order` Array Liste die IDs der Datensätze in der Reihenfolge ihrer Priorität.
+* **„timestampOrdered“**: (Standard) Räumt dem zuletzt aktualisierten Profil im Konfliktfall Priorität ein. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich.
+* **„dataSetPrecedence“**: Räumt Profilfragmenten je nach dem Datensatz, aus dem sie stammen, Priorität ein. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
+   * **„order“**: Wenn „dataSetPrecedence“ verwendet wird, muss ein `order`-Array mit einer Liste von Datensätzen angegeben werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
-**Beispiel für attributeMerge-Objekt mit dataSetPrecedence-Typ**
+**Beispiel für ein attributeMerge-Objekt mit dataSetPrecedence-Typ**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ Dabei `{ATTRIBUTE_MERGE_TYPE}` ist Folgendes zu beachten:
     }
 ```
 
-**Beispiel für ein attributeMerge-Objekt mit timestampOrderedType**
+**Beispiel für ein attributeMerge-Objekt mit timestampOrdered-Typ**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ Dabei `{ATTRIBUTE_MERGE_TYPE}` ist Folgendes zu beachten:
 
 ### Schema {#schema}
 
-Das Schema-Objekt gibt das XDM-Schema an, für das diese Zusammenführungsrichtlinie erstellt wird.
+Das Schemaobjekt gibt das XDM-Schema an, für das diese Zusammenführungsrichtlinie erstellt wird.
 
-**`schema`object **
+**`schema`-Objekt **
 
 ```json
     "schema": {
@@ -161,7 +161,7 @@ Das Schema-Objekt gibt das XDM-Schema an, für das diese Zusammenführungsrichtl
     }
 ```
 
-Dabei `name` ist der Wert von der XDM-Klasse, auf der das Schema basiert, das der Mergerichtlinie zugeordnet ist.
+Wobei der Wert `name` der Name der XDM-Klasse ist, auf der das der Zusammenführungsrichtlinie zugeordnete Schema basiert.
 
 **Beispiel`schema`**
 
@@ -171,13 +171,13 @@ Dabei `name` ist der Wert von der XDM-Klasse, auf der das Schema basiert, das de
     }
 ```
 
-## Zugriff auf Zusammenführungsrichtlinien {#access-merge-policies}
+## Zusammenführungsrichtlinien aufrufen {#access-merge-policies}
 
-Mithilfe der Echtzeit-Client-Profil-API können Sie mit dem `/config/mergePolicies` Endpunkt eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie mit ihrer ID Ansicht oder auf alle Zusammenführungsrichtlinien in Ihrer IMS-Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können den `/config/mergePolicies/bulk-get` Endpunkt auch verwenden, um mehrere Zusammenführungsrichtlinien nach ihren IDs abzurufen. Die Schritte für die Durchführung dieser Aufrufe sind in den folgenden Abschnitten beschrieben.
+Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. Sie können den `/config/mergePolicies/bulk-get` Endpunkt auch verwenden, um mehrere Zusammenführungsrichtlinien nach ihren IDs abzurufen. Die Schritte für die Durchführung dieser Aufrufe sind in den folgenden Abschnitten beschrieben.
 
-### Zugriff auf eine einzige Zusammenführungsrichtlinie mit ID
+### Auf eine einzelne Zusammenführungsrichtlinie anhand der Kennung zugreifen
 
-Sie können auf eine einzelne Mergerichtlinie mit ihrer ID zugreifen, indem Sie eine GET-Anforderung an den `/config/mergePolicies` Endpunkt senden und die `mergePolicyId` im Anforderungspfad einschließen.
+Sie können auf eine einzelne Zusammenführungsrichtlinie anhand ihrer Kennung zugreifen, indem Sie eine GET-Anfrage an den `/config/mergePolicies`-Endpunkt senden und die `mergePolicyId` im Anfragepfad einschließen.
 
 **API-Format**
 
@@ -187,7 +187,7 @@ GET /config/mergePolicies/{mergePolicyId}
 
 | Parameter | Beschreibung |
 |---|---|
-| `{mergePolicyId}` | Der Bezeichner der zusammenzuführenden Richtlinie, die Sie löschen möchten. |
+| `{mergePolicyId}` | Die Kennung der Zusammenzuführungsrichtlinie, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -202,7 +202,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Mergerichtlinie zurück.
+Eine erfolgreiche Antwort gibt die Details der Zusammenführungsrichtlinie zurück.
 
 ```json
 {
@@ -223,7 +223,7 @@ Eine erfolgreiche Antwort gibt die Details der Mergerichtlinie zurück.
 }
 ```
 
-Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) zu Beginn dieses Dokuments.
+Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten von Zusammenführungsrichtlinien](#components-of-merge-policies) am Anfang dieses Dokuments.
 
 ### Abrufen mehrerer Zusammenführungsrichtlinien nach ihren IDs
 
@@ -320,11 +320,11 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 207 (Multi-Status) und die De
 }
 ```
 
-Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) zu Beginn dieses Dokuments.
+Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten von Zusammenführungsrichtlinien](#components-of-merge-policies) am Anfang dieses Dokuments.
 
-### Liste mehrerer Zusammenführungsrichtlinien nach Kriterien
+### Mehrere Zusammenführungsrichtlinien anhand von Kriterien auflisten
 
-Sie können mehrere Zusammenführungsrichtlinien innerhalb Ihrer IMS-Organisation Liste haben, indem Sie eine GET-Anforderung an den `/config/mergePolicies` Endpunkt ausgeben und optionale Abfragen zum Filtern, Bestellen und Paginieren der Antwort verwenden. Es können mehrere Parameter eingeschlossen werden, die durch das kaufmännische Und (&amp;) getrennt werden. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Zusammenführungsrichtlinien abgerufen.
+Sie können verschiedene Zusammenführungsrichtlinien innerhalb Ihrer IMS-Organisation auflisten, indem Sie eine GET-Anfrage an den `/config/mergePolicies`-Endpunkt richten und optionale Abfrageparameter zum Filtern, Sortieren und Paginieren der Antwort verwenden. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (&amp;). Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
 
 **API-Format**
 
@@ -334,21 +334,21 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 |---|---|
-| `default` | Ein boolescher Wert, der von Filtern bestimmt wird, ob die Zusammenführungsrichtlinien die Standardeinstellung für eine Schema-Klasse sind. |
-| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die in einer Seite enthalten sind. Standardwert: 20 |
-| `orderBy` | Gibt das Feld an, mit dem die Ergebnisse in aufsteigender Reihenfolge sortiert werden `orderBy=name` oder nach Namen sortiert `orderBy=+name` werden oder in absteigender Reihenfolge sortiert werden `orderBy=-name`sollen. Wird dieser Wert nicht angegeben, wird die Standardsortierung in aufsteigender `name` Reihenfolge ausgeführt. |
-| `schema.name` | Name des Schemas, für das die verfügbaren Zusammenführungsrichtlinien abgerufen werden sollen. |
-| `identityGraph.type` | Filter werden nach dem Identitätsdiagrammtyp berechnet. Mögliche Werte sind &quot;none&quot;und &quot;pdg&quot;(privates Diagramm). |
-| `attributeMerge.type` | Filter erhalten die Ergebnisse nach dem verwendeten Attributzusammenführungstyp. Mögliche Werte sind &quot;timestampOrdered&quot;und &quot;dataSetPrecedence&quot;. |
-| `start` | Seitenversatz: Geben Sie die Start-ID für die abzurufenden Daten an. Standardwert: 0 |
-| `version` | Geben Sie dies an, wenn Sie eine bestimmte Version der Zusammenführungsrichtlinie verwenden möchten. Standardmäßig wird die neueste Version verwendet. |
+| `default` | Ein boolescher Wert, der Ergebnisse anhand der Frage filtert, ob die Zusammenführungsrichtlinien Standard für eine Schemaklasse sind oder nicht. |
+| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu begrenzen, die in einer Seite enthalten sind. Standardwert: 20 |
+| `orderBy` | Gibt das Feld an, anhand dessen Ergebnisse sortiert werden sollen (mit `orderBy=name` oder `orderBy=+name`, um anhand der Namen in aufsteigender Reihenfolge zu sortieren, oder mit `orderBy=-name`, um in absteigender Reihenfolge zu sortieren). Wird dieser Wert nicht angegeben, erfolgt die Standardsortierung von `name` in aufsteigender Reihenfolge. |
+| `schema.name` | Name des Schemas, für das verfügbare Zusammenführungsrichtlinien abgerufen werden sollen. |
+| `identityGraph.type` | Filtert Ergebnisse anhand des Identitätsdiagrammtyps. Mögliche Werte sind „none“ (keine) und „pdg“ (privates Diagramm). |
+| `attributeMerge.type` | Filtert Ergebnisse anhand des verwendeten Attributzusammenführungstyps. Mögliche Werte sind „timestampOrdered“ und „dataSetPrecedence“. |
+| `start` | Seitenversatz: Gibt die Startkennung für abzurufende Daten an. Standardwert: 0 |
+| `version` | Legen Sie den Wert fest, wenn Sie eine bestimmte Version der Zusammenführungsrichtlinie verwenden möchten. Standardmäßig kommt die neueste Version zum Einsatz. |
 
-Weitere Informationen zu `schema.name`, `identityGraph.type`und `attributeMerge.type`zu den [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) finden Sie weiter oben in diesem Handbuch.
+Weiterführende Informationen zu `schema.name`, `identityGraph.type` und `attributeMerge.type` finden Sie im Abschnitt [Komponenten von Zusammenführungsrichtlinien](#components-of-merge-policies) weiter oben in diesem Handbuch.
 
 
 **Anfrage**
 
-Die folgende Anforderung Liste alle Zusammenführungsrichtlinien für ein bestimmtes Schema:
+Die folgende Anfrage listet alle Zusammenführungsrichtlinien für ein bestimmtes Schema auf:
 
 ```shell
 curl -X GET \
@@ -361,7 +361,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine paginierte Liste von Zusammenführungsrichtlinien zurück, die die von den in der Anforderung gesendeten Abfragen angegebenen Kriterien erfüllen.
+Eine erfolgreiche Antwort gibt eine paginierte Liste mit Zusammenführungsrichtlinien zurück, die den Kriterien, die mit den in der Anfrage gesendeten Abfrageparametern festgelegt wurden, entsprechen.
 
 ```json
 {
@@ -431,11 +431,11 @@ Eine erfolgreiche Antwort gibt eine paginierte Liste von Zusammenführungsrichtl
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `_links.next.href` | Eine URI-Adresse für die nächste Ergebnisseite. Verwenden Sie diesen URI als Anforderungsparameter für einen anderen API-Aufruf an denselben Endpunkt, um die Seite Ansicht. Wenn keine nächste Seite vorhanden ist, ist dieser Wert eine leere Zeichenfolge. |
+| `_links.next.href` | Eine URI-Adresse für die nächste Ergebnisseite. Verwenden Sie diesen URI als Anfrageparameter für einen anderen API-Aufruf an denselben Endpunkt, um die Seite anzuzeigen. Wenn keine nächste Seite vorhanden ist, ist dieser Wert eine leere Zeichenfolge. |
 
-## Eine Richtlinie zum Zusammenführen erstellen
+## Zusammenführungsrichtlinie erstellen
 
-Sie können eine neue Richtlinie zum Zusammenführen für Ihr Unternehmen erstellen, indem Sie eine POST-Anforderung an den `/config/mergePolicies` Endpunkt senden.
+Sie können eine neue Zusammenführungsrichtlinie für Ihre Organisation erstellen, indem Sie eine POST-Anfrage an den `/config/mergePolicies`-Endpunkt senden.
 
 **API-Format**
 
@@ -443,7 +443,7 @@ Sie können eine neue Richtlinie zum Zusammenführen für Ihr Unternehmen erstel
 POST /config/mergePolicies
 ```
 
-**Anforderung** Die folgende Anforderung erstellt eine neue Richtlinie für die Zusammenführung, die durch die in der Payload bereitgestellten Attributwerte konfiguriert wird:
+**Anfrage** Die folgende Anfrage erstellt eine neue Zusammenführungsrichtlinie, die durch die in der Payload angegebenen Attributwerte konfiguriert wird:
 
 ```shell
 curl -X POST \
@@ -474,17 +474,17 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `name` | Ein benutzerfreundlicher Name, unter dem die Fusionspolitik in Ansichten der Liste identifiziert werden kann. |
-| `identityGraph.type` | Der Identitätsdiagramm-Typ, aus dem zusammengeführte zugehörige Identitäten abgerufen werden sollen. Mögliche Werte: &quot;none&quot;oder &quot;pdg&quot;(privates Diagramm). |
-| `attributeMerge` | Die Art und Weise, wie Profil-Attributwerte bei Datenkonflikten priorisiert werden. |
-| `schema` | Die XDM-Schema-Klasse, die der Mergerichtlinie zugeordnet ist. |
-| `default` | Gibt an, ob diese Zusammenführungsrichtlinie die Standardrichtlinie für das Schema ist. |
+| `name` | Ein verständlicher Name, mit dem die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
+| `identityGraph.type` | Der Identitätsdiagrammtyp, aus dem zusammenzuführende verwandte Identitäten abgerufen werden sollen. Mögliche Werte: „none“ (keine) und „pdg“ (privates Diagramm). |
+| `attributeMerge` | Die Art und Weise, wie Profilattributwerte bei Datenkonflikten priorisiert werden. |
+| `schema` | Die XDM-Schemaklasse, die der Zusammenführungsrichtlinie zugeordnet ist. |
+| `default` | Gibt an, ob diese Zusammenführungsrichtlinie der Standard für das Schema ist. |
 
-Weitere Informationen finden Sie im Abschnitt [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) .
+Weiterführende Informationen finden Sie im Abschnitt [Komponenten von Zusammenführungsrichtlinien](#components-of-merge-policies).
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Mergerichtlinie zurück.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Zusammenführungsrichtlinie zurück.
 
 ```json
 {
@@ -516,15 +516,15 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Mergerichtlinie zu
 }
 ```
 
-Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) zu Beginn dieses Dokuments.
+Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten von Zusammenführungsrichtlinien](#components-of-merge-policies) am Anfang dieses Dokuments.
 
-## Eine Richtlinie zum Zusammenführen aktualisieren {#update}
+## Zusammenführungsrichtlinie aktualisieren {#update}
 
-Sie können eine vorhandene Richtlinie zum Zusammenführen ändern, indem Sie einzelne Attribute (PATCH) bearbeiten oder die gesamte Richtlinie zum Zusammenführen mit neuen Attributen (PUT) überschreiben. Nachfolgend sind Beispiele für die einzelnen Beispiele aufgeführt.
+Sie können eine vorhandene Zusammenführungsrichtlinie ändern, indem Sie einzelne Attribute bearbeiten (PATCH) oder die gesamte Zusammenführungsrichtlinie mit neuen Attributen überschreiben (PUT). Nachfolgend sind entsprechende Beispiele aufgeführt.
 
-### Bearbeiten einzelner Felder mit Richtlinien für die Zusammenführung
+### Einzelne Felder einer Zusammenführungsrichtlinie bearbeiten
 
-Sie können einzelne Felder für eine Richtlinie zum Zusammenführen bearbeiten, indem Sie eine PATCH-Anforderung an den `/config/mergePolicies/{mergePolicyId}` Endpunkt senden:
+Sie können einzelne Felder einer Zusammenführungsrichtlinie bearbeiten, indem Sie eine PATCH-Anfrage an den `/config/mergePolicies/{mergePolicyId}`-Endpunkt senden:
 
 **API-Format**
 
@@ -534,11 +534,11 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 | Parameter | Beschreibung |
 |---|---|
-| `{mergePolicyId}` | Der Bezeichner der zusammenzuführenden Richtlinie, die Sie löschen möchten. |
+| `{mergePolicyId}` | Die Kennung der Zusammenzuführungsrichtlinie, die Sie löschen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine angegebene Merge-Richtlinie aktualisiert, indem der Wert ihrer `default` Eigenschaft in `true`:
+Mit der folgenden Anfrage wird eine angegebene Zusammenführungsrichtlinie aktualisiert, indem der Wert ihrer `default`-Eigenschaft in `true` geändert wird:
 
 ```shell
 curl -X PATCH \
@@ -557,11 +557,11 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `op` | Gibt den zu verwendenden Vorgang an. Beispiele für andere PATCH-Vorgänge finden Sie in der [JSON Patch-Dokumentation.](http://jsonpatch.com) |
-| `path` | Der Pfad des zu aktualisierenden Felds. Akzeptierte Werte sind: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
-| `value` | Der Wert, auf den das angegebene Feld festgelegt werden soll. |
+| `op` | Gibt den zu verwendenden Vorgang an. Beispiele für andere PATCH-Vorgänge finden Sie in der [JSON-Patch-Dokumentation](http://jsonpatch.com). |
+| `path` | Der Pfad des zu aktualisierenden Felds. Zulässige Werte sind: „/name“, „/identityGraph.type“, „/attributeMerge.type“, „/schema.name“, „/version“ und „/default“. |
+| `value` | Der Wert, auf den das angegebene Feld gesetzt werden soll. |
 
-Weitere Informationen finden Sie im Abschnitt [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) .
+Weiterführende Informationen finden Sie im Abschnitt [Komponenten von Zusammenführungsrichtlinien](#components-of-merge-policies).
 
 
 **Antwort**
@@ -598,9 +598,9 @@ Eine erfolgreiche Antwort gibt die Details der neu aktualisierten Zusammenführu
 }
 ```
 
-### Überschreiben einer Richtlinie zum Zusammenführen
+### Zusammenführungsrichtlinie überschreiben
 
-Eine andere Möglichkeit, eine Richtlinie zum Zusammenführen zu ändern, besteht darin, eine PUT-Anforderung zu verwenden, die die gesamte Richtlinie zum Zusammenführen überschreibt.
+Eine andere Möglichkeit zum Ändern einer Zusammenführungsrichtlinie besteht darin, eine PUT-Anfrage zu verwenden, um die gesamte Zusammenführungsrichtlinie zu überschreiben.
 
 **API-Format**
 
@@ -610,11 +610,11 @@ PUT /config/mergePolicies/{mergePolicyId}
 
 | Parameter | Beschreibung |
 |---|---|
-| `{mergePolicyId}` | Der Bezeichner der Mergerichtlinie, die Sie überschreiben möchten. |
+| `{mergePolicyId}` | Die Kennung der Zusammenzuführungsrichtlinie, die Sie überschreiben möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung überschreibt die angegebene Zusammenführungsrichtlinie und ersetzt deren Attributwerte durch die in der Payload bereitgestellten Werte. Da diese Anforderung eine vorhandene Fusionsrichtlinie vollständig ersetzt, müssen Sie alle Felder bereitstellen, die beim Definieren der Richtlinie zum Zusammenführen erforderlich waren. Diesmal stellen Sie jedoch aktualisierte Werte für die Felder bereit, die Sie ändern möchten.
+Die folgende Anfrage überschreibt die angegebene Zusammenführungsrichtlinie und ersetzt ihre Attributwerte durch die in der Payload angegebenen Werte. Da diese Anfrage eine vorhandene Zusammenführungsrichtlinie vollständig ersetzt, müssen Sie alle Felder festlegen, die beim ursprünglichen Definieren der Zusammenführungsrichtlinie erforderlich waren. Hier geben Sie jedoch für die Felder, die Sie ändern möchten, aktualisierte Werte an.
 
 ```shell
 curl -X PUT \
@@ -648,13 +648,13 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `name` | Ein benutzerfreundlicher Name, unter dem die Fusionspolitik in Ansichten der Liste identifiziert werden kann. |
-| `identityGraph` | Das Identitätsdiagramm, aus dem zusammengeführte zugehörige Identitäten abgerufen werden. |
-| `attributeMerge` | Die Art und Weise, wie Profil-Attributwerte bei Datenkonflikten priorisiert werden. |
-| `schema` | Die XDM-Schema-Klasse, die der Mergerichtlinie zugeordnet ist. |
-| `default` | Gibt an, ob diese Zusammenführungsrichtlinie die Standardrichtlinie für das Schema ist. |
+| `name` | Ein anwenderfreundlicher Name, anhand dessen die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
+| `identityGraph` | Das Identitätsdiagramm, aus dem zusammenzuführende verwandte Identitäten abgerufen werden sollen. |
+| `attributeMerge` | Die Art und Weise, wie Profilattributwerte bei Datenkonflikten priorisiert werden. |
+| `schema` | Die XDM-Schemaklasse, die der Zusammenführungsrichtlinie zugeordnet ist. |
+| `default` | Gibt an, ob diese Zusammenführungsrichtlinie der Standard für das Schema ist. |
 
-Weitere Informationen finden Sie im Abschnitt [Komponenten der Zusammenführungsrichtlinien](#components-of-merge-policies) .
+Weiterführende Informationen finden Sie im Abschnitt [Komponenten von Zusammenführungsrichtlinien](#components-of-merge-policies).
 
 
 **Antwort**
@@ -691,9 +691,9 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Zusammenführungsr
 }
 ```
 
-## Eine Richtlinie zum Zusammenführen löschen
+## Zusammenführungsrichtlinie löschen
 
-Eine Richtlinie zum Zusammenführen kann gelöscht werden, indem eine DELETE-Anforderung an den `/config/mergePolicies` Endpunkt gesendet wird und die ID der Zusammenführungsrichtlinie, die Sie löschen möchten, im Anforderungspfad enthalten ist.
+Sie können eine Zusammenführungsrichtlinie löschen, indem Sie eine DELETE-Anfrage an den `/config/mergePolicies`-Endpunkt senden und die Kennung der Zusammenführungsrichtlinie, die Sie löschen möchten, im Anfragepfad einschließen.
 
 **API-Format**
 
@@ -703,11 +703,11 @@ DELETE /config/mergePolicies/{mergePolicyId}
 
 | Parameter | Beschreibung |
 |---|---|
-| `{mergePolicyId}` | Der Bezeichner der zusammenzuführenden Richtlinie, die Sie löschen möchten. |
+| `{mergePolicyId}` | Die Kennung der Zusammenzuführungsrichtlinie, die Sie löschen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Richtlinie zum Zusammenführen gelöscht.
+Mit der folgenden Anfrage wird eine Zusammenführungsrichtlinie gelöscht.
 
 ```shell
 curl -X DELETE \
@@ -720,11 +720,11 @@ curl -X DELETE \
 
 **Antwort**
 
-Bei einer erfolgreichen Löschanforderung werden HTTP-Status 200 (OK) und ein leerer Antworttext zurückgegeben. Um zu bestätigen, dass der Löschvorgang erfolgreich war, können Sie eine GET-Anforderung ausführen, um die Zusammenführungsrichtlinie nach ihrer ID Ansicht. Wenn die Richtlinie zum Zusammenführen gelöscht wurde, erhalten Sie einen HTTP-Status-404-Fehler (nicht gefunden).
+Eine erfolgreiche Löschanfrage gibt den HTTP-Status 200 (OK) und einen leeren Antworttext zurück. Um zu überprüfen, ob der Löschvorgang erfolgreich war, können Sie eine GET-Anfrage ausführen, um die Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen. Wenn die Zusammenführungsrichtlinie gelöscht wurde, erhalten Sie einen Fehler vom Typ HTTP-Status 404 (Nicht gefunden).
 
 ## Nächste Schritte
 
-Da Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihre IMS-Organisation erstellen und konfigurieren, können Sie diese verwenden, um Audiencen-Segmente aus Ihren Echtzeit-Kundendaten zu erstellen. Informationen zum Definieren und Arbeiten mit Segmenten finden Sie in der Dokumentation [zum Segmentierungsdienst für](../../segmentation/home.md) Adobe Experience Platformen.
+Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
 
 
