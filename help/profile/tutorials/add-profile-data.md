@@ -1,41 +1,41 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Daten Hinzufügen Echtzeit-Profil
+title: Hinzufügen von Daten in das Echtzeit-Kundenprofil
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 0%
+source-wordcount: '355'
+ht-degree: 51%
 
 ---
 
 
-# Daten Hinzufügen Echtzeit-Profil
+# Daten Hinzufügen [!DNL Real-time Customer Profile]
 
-In diesem Lernprogramm werden die Schritte beschrieben, die zum Hinzufügen von Daten zum Echtzeit-Kundenkonto erforderlich sind.
+This tutorial outlines the steps necessary to add data to [!DNL Real-time Customer Profile].
 
-## Aktivieren eines Schemas für Echtzeit-Kundendaten-Profil
+## Schema aktivieren für [!DNL Real-time Customer Profile]
 
-Daten, die in Experience Platformen zur Verwendung durch Echtzeit-Kundendaten erfasst werden, müssen einem XDM-Schema (Experience Data Model) entsprechen, das zum Profil aktiviert wurde. Damit ein Schema zum Profil aktiviert werden kann, muss es entweder die XDM Individual Profil- oder die XDM ExperienceEvent-Klasse implementieren.
+Daten, die [!DNL Experience Platform] zur Verwendung durch [!DNL Real-time Customer Profile] verwendet werden, müssen einem [!DNL Experience Data Model] (XDM-)Schema entsprechen, für das aktiviert wurde [!DNL Profile]. In order for a schema to be enabled for Profile, it must implement either the [!DNL XDM Individual Profile] or [!DNL XDM ExperienceEvent] class.
 
-Sie können ein Schema zur Verwendung im Echtzeit-Kundenkonto über die Schema-Registrierungs-API oder die Schema-Editor-Benutzeroberfläche aktivieren. Beginnen Sie zunächst mit den Übungen zum [Erstellen eines Schemas mit APIs](../../xdm/tutorials/create-schema-api.md) oder zum [Erstellen eines Schemas mithilfe der Benutzeroberfläche](../../xdm/tutorials/create-schema-ui.md)des Schema-Editors.
+Sie können ein Schema zur Verwendung [!DNL Real-time Customer Profile] mit der [!DNL Schema Registry] API oder der [!DNL Schema Editor] Benutzeroberfläche aktivieren. Beginnen Sie zunächst mit den Tutorials zum [Erstellen eines Schemas mit APIs](../../xdm/tutorials/create-schema-api.md) oder zum [Erstellen eines Schemas mithilfe der Schema-Editor-UI](../../xdm/tutorials/create-schema-ui.md).
 
-## Hinzufügen von Daten mithilfe der Stapelverarbeitung
+## Hinzufügen von Daten mithilfe der Batch-Aufnahme
 
-Alle Daten, die mit der Stapelverarbeitung in die Platform hochgeladen wurden, werden in einzelne Datensätze hochgeladen. Bevor diese Daten von Echtzeit-Kundendaten verwendet werden können, muss der betreffende Datensatz spezifisch konfiguriert werden. Vollständige Anweisungen finden Sie im Lernprogramm zum [Konfigurieren eines Datensatzes für den Profil- und Identitätsdienst](dataset-configuration.md).
+All data uploaded to [!DNL Platform] using batch ingestion is uploaded to individual datasets. Before this data can be used by [!DNL Real-time Customer Profile], the dataset in question has to be specifically configured. Vollständige Anweisungen finden Sie im Tutorial zum [Konfigurieren eines Datensatzes für den Profil- und Identitätsdienst](dataset-configuration.md).
 
-Nachdem der Datensatz konfiguriert wurde, können Sie Daten in den Datensatz eingeben. Detaillierte Anweisungen zum Hochladen von Dateien in verschiedenen Formaten finden Sie im [Entwicklerhandbuch](../../ingestion/batch-ingestion/api-overview.md) zur Stapelverarbeitung.
+Nachdem der Datensatz konfiguriert wurde, können Sie Daten in den Datensatz eingeben. Detaillierte Anweisungen zum Hochladen von Dateien in verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Batch-Aufnahme](../../ingestion/batch-ingestion/api-overview.md).
 
-## Hinzufügen von Daten mit Streaming-Erfassung
+## Hinzufügen von Daten mit Streaming-Aufnahme
 
-Alle Stream-erfassten Daten, die mit einem Profil-aktivierten XDM-Schema konform sind, werden automatisch den entsprechenden Datensatz in Echtzeit-Kundendaten-Profil hinzufügen oder überschreiben. Wenn mehr als eine Identität im Datensatz bereitgestellt wird oder Zeitreihendaten verwendet werden, werden diese Identitäten im Identitätsdiagramm ohne zusätzliche Konfiguration zugeordnet. Weitere Informationen finden Sie im Entwicklerhandbuch [zur](../../ingestion/tutorials/streaming-record-data.md) Streaming-Erfassung.
+Any stream-ingested data that is compliant with a [!DNL Profile]-enabled XDM schema will automatically add or overwrite the appropriate record in [!DNL Real-time Customer Profile]. Wenn mehr als eine Identität im Datensatz bereitgestellt wird oder Zeitreihendaten verwendet werden, werden diese Identitäten im Identitätsdiagramm ohne zusätzliche Konfiguration zugeordnet. Weitere Informationen hierzu finden Sie im [Entwicklerhandbuch für Streaming-Aufnahme](../../ingestion/tutorials/streaming-record-data.md).
 
-## Überprüfen, ob der Upload erfolgreich war
+## Überprüfen Sie, ob der Upload erfolgreich war
 
 Beim erstmaligen Hochladen von Daten in einen neuen Datensatz oder im Rahmen eines Prozesses mit einer neuen ETL oder Datenquelle wird empfohlen, die Daten sorgfältig zu überprüfen, um sicherzustellen, dass sie korrekt hochgeladen wurden.
 
-Mit der Echtzeit-API für den Zugriff auf Kundendaten können Sie Stapeldaten abrufen, während sie in ein Profil geladen werden. Wenn Sie keine der erwarteten Entitäten abrufen können, ist Ihr Datensatz möglicherweise nicht zum Profil aktiviert. Nachdem Sie bestätigt haben, dass Ihr Datensatz aktiviert wurde, stellen Sie sicher, dass Ihr Quelldatenformat und Ihre Identifikatoren Ihre Erwartungen unterstützen.
+Using the [!DNL Real-time Customer Profile] Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for [!DNL Profile]. Nachdem Sie bestätigt haben, dass Ihr Datensatz aktiviert wurde, stellen Sie sicher, dass Ihr Quelldatenformat und Ihre Identifikatoren Ihre Erwartungen unterstützen.
 
-Detaillierte Anweisungen zum Zugriff auf Entitäten mit der Echtzeit-Client-Profil-API finden Sie im [Entitäts-Endpunkthandbuch](../api/entities.md), auch als &quot;Profil Access API&quot;bezeichnet.
+Detaillierte Anweisungen zum Zugriff auf Entitäten mit der [!DNL Real-time Customer Profile] API finden Sie im [Entitäts-Endpunkthandbuch](../api/entities.md), auch als &quot;[!DNL Profile Access] API&quot;bezeichnet.
