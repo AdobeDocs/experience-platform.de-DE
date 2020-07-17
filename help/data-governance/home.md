@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Data Governance
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 73%
 
 ---
@@ -85,15 +85,6 @@ Once data usage labels have been applied, data stewards can create policies usin
 >Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren.
 
 Weitere Informationen zu Datenverwendungsrichtlinien und Marketingaktionen finden Sie in der [Richtlinienübersicht](./policies/overview.md).
-
-## Zukünftige Versionen
-
-[!DNL Data Governance] unterstützt derzeit eine DULE-Kennzeichnung auf zwei Ebenen (Datensatz und Feld). [!DNL Data Governance] unterstützt auch die Erstellung und Verwaltung von Datenverwendungsrichtlinien und Marketingaktionen über die DULE [!DNL Policy Service] -API.
-
-Nachfolgende Versionen werden die folgenden Funktionen bieten:
-
-* Durchsetzung von Richtlinien: Verwenden Sie das Richtlinien-Framework, um Richtlinien über verschiedene Datenzugriffsmuster hinweg zu empfehlen und durchzusetzen.
-* Auditing: Überwachen Sie Datenzugriffsaktivitäten, ermitteln Sie Compliance-Probleme und erstellen Sie Berichte zu den Problemen.
 
 ## Nächste Schritte
 
