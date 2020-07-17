@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Produktdokumentation zu Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '6594'
-ht-degree: 0%
+source-wordcount: '6593'
+ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Platform Glossar {#adobe-experience-platform-glossary}
+# Adobe Experience Platform Glossary {#adobe-experience-platform-glossary}
 
 ## A
 
 **Zugriffskontrolle:** {#access-control} Zugriffskontrolle für [!DNL Experience Platform] Verknüpfungen von Benutzern mit Zugriffsberechtigungen und Sandbox-Umgebung über Produkt-Profil in Adobe Admin Console.
 
-**Zugriffsschlüssel-ID:** Die Zugriffsschlüssel-ID ist eine eindeutige Kennung, die mit einem geheimen Zugriffsschlüssel für Amazon S3 verknüpft ist. Die Zugriffsschlüssel-ID und der geheime Zugriffsschlüssel werden zusammen verwendet, um AWS-Anforderungen zu signieren.
+**Zugriffsschlüssel-ID:** Die Zugriffsschlüssel-ID ist eine eindeutige Kennung, die mit einem [!DNL Amazon] S3-geheimen Zugriffsschlüssel verknüpft ist. Die Zugriffsschlüssel-ID und der geheime Zugriffsschlüssel werden zusammen verwendet, um AWS-Anforderungen zu signieren.
 
 **Aktion:** Bei einer Aktion handelt es sich [!DNL Experience Platform Launch]um einen bestimmten Typ von Regelkomponente, mit der festgelegt wird, was nach dem Eintreten eines Ereignisses geschehen soll und welche Bedingungen ausgewertet und weitergereicht werden.
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 **Adobe Experience Platform:** Die Adobe Experience Platform standardisiert Daten und Inhalte im gesamten Unternehmen, ermöglicht so Echtzeit-Profile für Verbraucher, ermöglicht Datenwissenschaften und beschleunigt die Inhaltsgeschwindigkeit, um die Personalisierung von Erlebnissen während der gesamten Customer Journey zu fördern.
 
-**Adobe Connectors:** Adobe Connectors sind vorkonfigurierte Verbindungen, die von Adobe erstellt wurden, um Daten ein- und auszuführen [!DNL Experience Platform]. Zu den Connectors gehören [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]und [!DNL Azure Blob].
+**Adobe Connectors:** Adobe Connectors sind vorkonfigurierte Verbindungen, die von Adobe erstellt werden, um Daten ein- und auszuführen [!DNL Experience Platform]. Zu den Connectors gehören [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]und [!DNL Azure Blob].
 
 **Adobe Intelligent Services:** Adobe Sensei ist der intelligente Rahmen, der funktioniert [!DNL Experience Platform]. Es bietet außerdem eine Reihe von AI-Diensten, die Marken in die Lage versetzen, ihre Fähigkeit zur Bereitstellung personalisierter Echtzeit-Kundenerlebnisse zu verbessern.
 
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 **Bedingung:** In Experience Platform Launchs ist eine Bedingung eine Regelkomponente, die eine logische Anweisung auswertet, die zurückgegeben `true` oder `false`zurückgegeben werden muss. Alle Bedingungen müssen ausgewertet werden `true` und alle Ausnahmebedingungen müssen ausgewertet werden, `false` bevor Aktionen für die Regel ausgeführt werden.
 
-**Konsole:** In [!DNL Query Service]der Konsole finden Sie Informationen zum Status und zum Betrieb einer Abfrage. Die Konsole zeigt den Verbindungsstatus an [!DNL Query Service], die ausgeführten Abfragen und alle Fehlermeldungen, die sich aus diesen Abfragen ergeben.
+**Konsole:** In [!DNL Query Service]der Konsole finden Sie Informationen zum Status und zum Betrieb einer Abfrage. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
 **Vertragsdaten &quot;C&quot;-Beschriftungen:** Vertragsbezeichnungen `C` werden verwendet, um Daten zu kategorisieren, die vertragliche Verpflichtungen haben oder mit den Datenschutzrichtlinien eines Kunden in Zusammenhang stehen.
 
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 **C6 Vertragssiegel:** `C6` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nicht für das Targeting von Onsite-Anzeigen verwendet werden können. Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen.  Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über das Interesse der Benutzer, um Anzeigen auszuwählen, Prozessdaten darüber, wann und wo Werbung angezeigt wurde und ob die Benutzer irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, z. B. das Klicken auf eine Anzeige oder einen Kauf.
 
-**C7-Vertragsbezeichnung:** `C7` &quot;Contract Data Governance&quot;-Bezeichnung gibt an, dass Daten nicht für das Targeting von Inhalten auf der Site verwendet werden können.  Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte.  Dazu gehören zuvor erfasste Informationen über das Interesse der Benutzer an der Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, z. B. das Klicken auf Inhalte.
+**C7-Vertragsbezeichnung:** `C7` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nicht für das Targeting von Inhalten auf der Site verwendet werden können.  Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte.  Dazu gehören zuvor erfasste Informationen über das Interesse der Benutzer an der Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, z. B. das Klicken auf Inhalte.
 
 **C8 Vertragssiegel:** `C8` &quot;Contract Data Governance&quot;-Bezeichnung gibt an, dass Daten nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden können. Daten können nicht verwendet werden, um die Nutzung der Sites oder Apps Ihres Unternehmens durch Benutzer zu messen, zu verstehen und Berichte darüber zu erstellen. Dies umfasst nicht das interessensbasierte Targeting, d. h. die Erfassung von Informationen über Ihre Nutzung dieses Dienstes zur späteren Personalisierung von Inhalten und/oder Werbung in anderen Kontexten.
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 **Tabelle als Auswahl erstellen:** &quot;Tabelle als Auswahl erstellen&quot;ist ein SQL-Befehl, der bei Ausführung als Teil einer vollständigen und gültigen SQL-Abfrage die Abfrage anweist, die Ergebnisse in einem Datensatz auf dem Data Lake beizubehalten. [!DNL Query Service] Zu den Optionen gehören: Neu erstellen, Alle vorherigen überschreiben und An Vorherige anhängen.
 
-**Site-übergreifende Daten:** Site-übergreifende Daten sind die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort- und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen.
+**Site-übergreifende Daten:** Site-übergreifende Daten sind die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort-Daten und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen.
 
 **Benutzerdefinierter Identitäts-Namensraum:** Benutzerdefinierte Identitätskennungen sind vom Namensraum erstellte IDs, die zur Darstellung von Identitäten für ein bestimmtes Unternehmen oder eine bestimmte Geschäftsbeziehung verwendet werden.
 
@@ -162,7 +162,7 @@ ht-degree: 0%
 
 **Datenquelle:** Eine Datenquelle ist eine vom Benutzer festgelegte Herkunft von Daten. Beispiele für eine Datenquelle sind mobile App, Profil- und/oder Erlebnis-Ereignis, Website-Profil-Ereignis oder CRM.
 
-**Datenverlauf:** Ein Datenverwalter ist die Person, die für die Verwaltung, Überwachung und Durchsetzung der Datenbestände einer Organisation verantwortlich ist. Ein Datenmanager stellt außerdem sicher, dass die Datenschutzrichtlinien geschützt und so aufrechterhalten werden, dass sie mit den Regierungs- und Organisationspolitiken im Einklang stehen.
+**Datenverlauf:** Ein Datenverwalter ist die Person, die für die Verwaltung, Überwachung und Durchsetzung der Datenbestände einer Organisation verantwortlich ist. Außerdem stellt ein Data Steward sicher, dass Data Governance-Richtlinien so geschützt und gepflegt werden, dass staatliche Vorschriften und Unternehmensrichtlinien erfüllt werden.
 
 **Datentyp:** Der Datentyp ist ein wiederverwendbares Objekt mit Eigenschaften in einer hierarchischen Darstellung.
 
@@ -334,7 +334,7 @@ ht-degree: 0%
 
 **Spalte &quot;Geändertes Datum&quot;:** Die Auswahl einer `Modified Date` Spalte ist eine Option, wenn Daten von Drittanbietern über eine Verbindung angegeben werden. Wenn die `Delta` Speicherstrategie ausgewählt ist und der Datensatz mehrere datumsbezogene Schema enthält, muss der Benutzer aus dem verfügbaren Datums-/Uhrzeittyp-Schema wählen, um die Spalte mit dem geänderten Datumsschlüssel anzugeben. `Modified Date` nicht verfügbar ist, wenn die `Overwrite` Speicherstrategie ausgewählt ist.
 
-**Modul:** Ein Modul ist [!DNL Experience Platform Launch]ein Snippet ausführbaren JavaScript, das von einer Erweiterung bereitgestellt wird und in einer Client-Umgebung Aktionen ausführt, ohne dass der [!DNL Launch] Benutzer eine Regel erstellen muss.
+**Module:** In [!DNL Experience Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without the need for the [!DNL Launch] user to create a rule.
 
 [Zurück zum Anfang](#adobe-experience-platform-glossary)
 
@@ -342,7 +342,7 @@ ht-degree: 0%
 
 **Sandbox ohne Produktion:** Nicht-Produktions-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxen isolieren können und die üblicherweise für Entwicklungsversuche, Tests oder Tests verwendet werden. Nicht-Produktions-Sandboxen können zurückgesetzt und gelöscht werden.
 
-**[!DNL Notebooks]:**[!DNL Notebooks]werden mit einer Beschreibung der Analyse *[!DNL Jupyter Notebook]*und den Ergebnissen erstellt und können zur Analyse der Daten ausgeführt werden.
+**[!DNL Notebooks]:**[!DNL Notebooks]are authored using *[!DNL Jupyter Notebook]*and contain analysis description, results, and can be run to perform data analysis.
 
 [Zurück zum Anfang](#adobe-experience-platform-glossary)
 
@@ -350,11 +350,11 @@ ht-degree: 0%
 
 **Angebot:** Im [!DNL Decisioning Service]Bericht ist ein Angebot eine Marketingmeldung, der möglicherweise Regeln zugeordnet sind, die angeben, wer zum Anzeigen des Angebots berechtigt ist.
 
-**Angebot-Entscheidungsfindung:** Im [!DNL Decisioning Service]Rahmen der Angebot-Entscheidungsfindung kann ein Marketingspezialist die Regeln und geschulten Modelle von Angebotsvorschlägen verwalten, wenn er mit einem Endbenutzer Kontakt aufnimmt, der auf Daten basiert, die über mehrere Kanal und Anwendungen hinweg erfasst wurden.
+**Offer Decisioning:** In the [!DNL Decisioning Service], offer decisioning enables a marketer manage the rules and trained models of offer propositions when engaging with an end-user based on data collected across channels and applications.
 
 **Angebot-Bibliothek:** In der [!DNL Decisioning Service]ist die Angebot-Bibliothek eine zentrale Bibliothek, die zum Verwalten personalisierter und Ausweichmöglichkeiten, von Entscheidungsregeln und Aktivitäten verwendet wird.
 
-**Einrichtung:** Eine Organisation ist der Name, der zur Identifizierung einer Firma oder einer bestimmten Gruppe innerhalb einer Firma in allen Adobe-Produkten verwendet wird. Administratoren können den Zugriff und die Berechtigungen von Funktionen für Benutzer einer Organisation konfigurieren und verwalten.
+**Organization:** An Organization is the name used to identify a company or a specific group within a company across Adobe products. Administratoren können den Zugriff und die Berechtigungen von Funktionen für Benutzer einer Organisation konfigurieren und verwalten.
 
 **Speicherstrategie überschreiben:** `Overwrite` Speicherstrategie ist eine Option zum Erfassen von Daten von Drittanbietern über eine Verbindung, bei der der Benutzer angibt, ob die erfassten Daten nach einem bestimmten Zeitplan überschrieben werden. [!DNL Experience Platform] erfasst den angegebenen Datensatz aus der Drittanbieter-Quelle und überschreibt den Datensatz bei [!DNL Experience Platform].
 
@@ -380,7 +380,7 @@ ht-degree: 0%
 
 **Produkt-Profil:** Mithilfe von Profilen können Administratoren allen oder einer Untergruppe von Diensten, die mit [!DNL Experience Platform]dem Produkt verknüpft sind, Zugriff gewähren.
 
-**Produktions-Sandbox:** Eine Produktions-Sandbox zur Isolierung virtueller Daten auf einer Platform, die nicht zurückgesetzt oder gelöscht werden kann.
+**Produktions-Sandbox:** Eine Produktions-Sandbox zur Isolierung virtueller Daten auf der Plattform, die nicht zurückgesetzt oder gelöscht werden können.
 
 **Profil:** [!DNL Profile] ist ein [!DNL Experience Platform] Standarddatenmodell zur Definition von Verbraucherattributen. Ein Profil kann auch ein Aggregat von Ereignisdaten und -attributen sein, das sich auf eine Person oder ein Gerät bezieht.
 
@@ -406,7 +406,7 @@ ht-degree: 0%
 
 ## R
 
-**Platform von Kundendaten in Echtzeit:** Die von Adobe [!DNL Real-time Customer Data Platform] vereint bekannte und unbekannte Kundendaten, um vertrauenswürdige Profil mit vereinfachter Integration, intelligenter Segmentierung und Echtzeit-Aktivierung während der gesamten Customer Journey zu erstellen.
+**Echtzeit-Kundendatenplattform:** Die von Adobe [!DNL Real-time Customer Data Platform] vereint bekannte und unbekannte Kundendaten, um vertrauenswürdige Profil mit vereinfachter Integration, intelligenter Segmentierung und Echtzeit-Aktivierung während der gesamten Customer Journey zu erstellen.
 
 **Echtzeit-Profil des Kunden:** [!DNL Real-time Customer Profile] ist ein zentralisiertes Profil für zielgerichtetes und personalisiertes Experience Management.
 
@@ -442,7 +442,7 @@ ht-degree: 0%
 
 **Plan:** Plan ist eine benutzerdefinierte Spezifikation zur Häufigkeit oder Häufigkeit der Datenerfassung von einer Datenquelle eines Drittanbieters an Adobe [!DNL Experience Platform].
 
-**Bewertung:** Die Auswertung ist der Prozess, bei dem mithilfe eines geschulten Modells Erkenntnisse aus Daten generiert werden.
+**Scoring:** Beim Scoring werden mithilfe eines trainierten Modells Insights aus Daten generiert.
 
 **Schema:** Schema besteht aus einer Klasse und einem optionalen Mixin und wird zum Erstellen von Datensätzen und Datenströmen verwendet. Ein Schema umfasst Verhaltensattribute, Zeitstempel, Identitäten, Attributdefinitionen und Beziehungen.
 
@@ -454,7 +454,7 @@ ht-degree: 0%
 
 **Segmentaufbau:** [!DNL Segment Builder] ist die visuelle Entwicklungs-Umgebung, die zum Erstellen von Segmentdefinitionen verwendet wird. Sie dient als gemeinsame Komponente aller Anwendungen, die [!DNL Real-time Customer Profile] Segmentierung auf verwenden [!DNL Experience Platform].
 
-**Segmentdefinition:** Die Segmentdefinition ist der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe-Audience verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Segmentmitglieder für eine Audience zu bestimmen.
+**Segmentdefinition:** Die Segmentdefinition ist der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe-Audience verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Zielgruppenmitglieder für ein Segment zu bestimmen.
 
 **Methode zur Segmentbewertung:** Die geplante Segmentauswertung ermöglicht einen regelmäßigen Zeitplan für die Ausführung eines Exportauftrags zu einem bestimmten Zeitpunkt, während die On-Demand-Auswertung die Erstellung eines Segmentauftrags zur sofortigen Erstellung der Audience umfasst.
 
@@ -482,25 +482,25 @@ ht-degree: 0%
 
 **Quelle:** Source ist ein allgemeiner Begriff für jeden Input Connector im [!DNL Real-time Customer Data Platform].
 
-**Quellenattribut:** Ein Quellattribut ist ein Feld im Quelldataset.  Quellattribute werden den Feldern des Schemas Zielgruppe zugeordnet.
+**Quellenattribut:** Ein Quellattribut ist ein Feld im Quelldataset.  Source attributes are mapped to target schema fields.
 
-**Source Connector:** Adobe Experience Platform Source Connectors unterstützen Anwender bei der einfachen Erfassung von Daten aus mehreren Quellen, wodurch Daten strukturiert, gekennzeichnet und erweitert werden können [!DNL Experience Platform Services]. Daten können aus verschiedenen Quellen wie Cloud-basierte Datenspeicherung, Drittanbieter-Software und CRM-Systeme erfasst werden.
+**Source Connector:** Adobe Experience Platform Source connectors help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using [!DNL Experience Platform Services]. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
-**Quell-Kategorie:** Eine Quell-Kategorie ist eine Gruppierung von [!DNL Real-time Customer Data Platform] Quellen mit ähnlichen Eigenschaften.
+**Source Category:** A source category is a grouping of [!DNL Real-time Customer Data Platform] sources that have similar characteristics.
 
-**Quellkatalog:** Ein Quellkatalog ist eine Liste der verfügbaren Quellen im [!DNL Real-time Customer Data Platform].
+**Source Catalog:** A source catalog is a list of available sources in the [!DNL Real-time Customer Data Platform].
 
-**Standard-Identitäts-Namensraum:** Standard-Identitäts-Namensraum sind von Adobe vordefinierte Identifikatoren, einschließlich Adobe- und Branchenstandards zur Identifizierung von Benutzern.
+**Standard Identity Namespace:** Standard identity namespaces are Adobe pre-defined identifiers, including Adobe and industry standard solutions employed to identify users.
 
-**Standard-Schema:** Standardmäßige Schema bestehen aus Klassen und Mixins und sind zur Wiederverwendung bestimmt.
+**Standard Schema:** Standard schemas consist of classes and mixins and are intended for reuse.
 
 **Streaming-Ingestion:** Die Streaming-Erfassung bietet Benutzern eine Methode, Daten von client- und serverseitigen Geräten in Echtzeit zu senden [!DNL Experience Platform] .
 
-**Streaming-Endpunkt-URL:** Eine Streaming-Endpunkt-URL ist ein eindeutiger Endpunkt, der von Adobe bereitgestellt wird und an das IMS-Format eines Kunden gebunden ist, um Daten zu streamen [!DNL Experience Platform].
+**Streaming Endpoint URL:** A streaming endpoint URL is a unique endpoint provided by Adobe and tied to a customer&#39;s IMS org to stream data into [!DNL Experience Platform].
 
-**Streaming-Segmentierung:** Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Segmente entsprechend der Aktivität des Benutzers aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf eingehende Daten angewendet [!DNL Real-time Customer Profile]. Segmentzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Audience der Zielgruppe relevant bleibt.
+**Streaming Segmentation:** Streaming segmentation is an ongoing data selection process that updates segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. Segmentzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Audience der Zielgruppe relevant bleibt.
 
-**Symbol:** Symbol ist eine Abkürzung eines Identitäts-Namensraums, der als Referenz in APIs verwendet werden kann.
+**Symbol:** Symbol is an abbreviation of an identity namespace that can be used as a reference in APIs.
 
 **System-Ansicht:** Die Ansicht des Systems ist eine visuelle Darstellung der Quelldatasets, die bis [!DNL Real-time Customer Profile] zu Zielen fließen.
 
@@ -508,7 +508,7 @@ ht-degree: 0%
 
 ## T
 
-**Target-Funktionen:** Die Funktion Target ist in der Funktionszuordnung angegeben und wird von einem Modell vorhergesagt.
+**Funktionen der Zielgruppe:** Die Funktion Zielgruppe ist in der Funktionszuordnung angegeben und wird von einem Modell vorhergesagt.
 
 **Praktisches Modell:** Ein trainiertes Modell stellt die ausführbare Ausgabe eines Modellschulungsprozesses dar, bei dem eine Reihe von Schulungsdaten auf die Modellinstanz angewendet wurde. Ein ausgebildetes Modell behält einen Verweis auf alle intelligenten Webdienste bei, die daraus erstellt werden. Das geschulte Modell eignet sich für die Bewertung und Erstellung eines intelligenten Webdiensts. Änderungen an einem geschulten Modell können als neue Version nachverfolgt werden.
 
@@ -534,7 +534,7 @@ ht-degree: 0%
 
 ## X
 
-**XDM (Experience Data Model):** XDM (Experience Data Model) ist das Konzept der Verwendung von Standard-Schemas zur Vereinheitlichung von Daten für die Verwendung mit [!DNL Experience Platform] und Adobe Experience Cloud-Anwendungen. XDM ist eine formale Spezifikation, mit der alle Kundenerlebnisdaten in einer Sprache oder einem Standard-Datenmodell dargestellt werden. Mit XDM wird die Struktur von Daten standardisiert und der Prozess der Erlangung von Erkenntnissen aus enormen Datenmengen beschleunigt und vereinfacht.
+**XDM (Experience Data Model):** XDM (Experience Data Model) is the concept of using standard schemas to unify data for use with [!DNL Experience Platform] and Adobe Experience Cloud applications. XDM ist eine formale Spezifikation, mit der alle Kundenerlebnisdaten in einer Sprache oder einem Standard-Datenmodell dargestellt werden. Mit XDM wird die Struktur von Daten standardisiert und der Prozess der Erlangung von Erkenntnissen aus enormen Datenmengen beschleunigt und vereinfacht.
 
 **XDM DecisionEvent:** Ein DecisionEvent wird dazu verwendet, Beobachtungen über das Ergebnis und den Kontext einer Entscheidungs-Aktivität zu erfassen, einschließlich Informationen darüber, wie die Entscheidung getroffen wurde, wann sie stattfand, welche Optionen vorgeschlagen (und gewählt) wurden und welcher kontextuelle Zustand bestand, der die Entscheidung beeinflusste oder während des Entscheidungsprozesses beobachtet werden konnte. DecisionEvents erfasst auch die Proposition-ID, eine weltweit eindeutige ID, mit der die Entscheidung mit anderen Ereignissen korreliert werden kann. DecisionEvents sind nicht nur mit Experience Ereignisses verknüpft, die eine Entscheidung beeinflussten, sondern auch mit ExperienceEvents, die eine direkte Antwort auf einen Vorschlag sind. Es ist die Erwartung, dass Anwendungen in jedem ExperienceEvent auf die Proposition-ID verweisen, die von den Vorschlägen beeinflusst wurde. Der Proposition-Response-Verlauf in einem einzelnen Profil wird mithilfe von Proposition-IDs beibehalten.
 
