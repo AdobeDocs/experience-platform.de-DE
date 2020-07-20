@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Segmentation Service
 translation-type: tm+mt
-source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
+source-git-commit: 82067c3bfa6d80cd5f5dcc6644cdbcacbae85053
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 92%
+source-wordcount: '111'
+ht-degree: 86%
 
 ---
 
@@ -15,8 +15,11 @@ ht-degree: 92%
 
 - [Übersicht](home.md)
 - [Segmentdatentypen](data-types.md)
-- Segmentation-API {#api}
+- Entwicklerhandbuch zur Segmentierungs-API{#api}
+   - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
+   - [Exportaufträge](api/export-jobs.md)
+   - [Vorschauen und Schätzungen](api/previews-and-estimates.md)
    - [Segmentdefinitionen](api/segment-definitions.md)
    - [Segmentaufträge](api/segment-jobs.md)
    - [Segmentsuche](api/segment-search.md)
