@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK – Interagieren mit mehreren Eigen
 description: Erfahren Sie, wie Sie mit mehreren Experience Platform Web SDK-Eigenschaften interagieren
 seo-description: Erfahren Sie, wie Sie mit mehreren Experience Platform Web SDK-Eigenschaften interagieren
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 100%
+source-wordcount: '252'
+ht-degree: 87%
 
 ---
 
@@ -66,4 +66,4 @@ Achten Sie darauf, den `configure`-Befehl für jede Instanz auszuführen, bevor 
 
 ## Einschränkungen
 
-Um Konflikte mit Cookies zu vermeiden, kann nur eine Instanz des Adobe Experience Platform Web SDK auf einer Seite eine bestimmte `edgeConfigId` haben.  Ebenso kann nur eine Instanz des Adobe Experience Platform Web SDK eine bestimmte `orgId` haben.
+To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`.  Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.
