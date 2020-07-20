@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK – Rendern von personalisiertem In
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 24%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 24%
 
 # Übersicht über die Personalisierungsoptionen
 
-Das Adobe Experience Platform Web SDK unterstützt die Abfrage der Personalisierungslösungen bei Adobe, einschließlich Adobe Target. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../../edge/solution-specific/target/flicker-management.md).
+Die Adobe Experience Platform [!DNL Web SDK] unterstützt die Abfrage der Personalisierungslösungen bei Adobe, einschließlich Adobe Target. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../../edge/solution-specific/target/flicker-management.md).
 
 ## Inhalt automatisch wiedergeben
 
@@ -92,7 +92,7 @@ Dadurch wird eine Liste von Entscheidungen als JSON-Objekt für jede Entscheidun
 
 >[!TIP]
 >
-> Wenn Sie Target-Scopes auf dem Server zu mBoxes werden, sind nur diese alle Anfragen gleichzeitig und nicht einzeln. Die globale Mbox wird immer gesendet.
+> Wenn Sie [!DNL Target] Scopes auf dem Server zu mBoxes machen, sind nur diese alle Anforderungen gleichzeitig und nicht einzeln. Die globale Mbox wird immer gesendet.
 
 ### Automatische Inhalte abrufen
 
