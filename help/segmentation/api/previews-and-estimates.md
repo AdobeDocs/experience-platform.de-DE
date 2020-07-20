@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Handbuch zu Vorschauen und Schätzendpunkten
+title: Endpunkte für Vorschauen und Schätzungen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 7%
 
 ---
 
 
-# Handbuch zu Vorschauen und Schätzendpunkten
+# Endpunkte für Vorschauen und Schätzungen
 
 Bei der Entwicklung Ihrer Segmentdefinition können Sie die Tools für Schätzung und Vorschau innerhalb der Informationen auf der Ebene der Ansicht verwenden, um sicherzustellen, dass Sie die erwartete Audience isolieren. [!DNL Adobe Experience Platform] **Vorschauen** bieten paginierte Listen von qualifizierten Profilen für eine Segmentdefinition, mit denen Sie die Ergebnisse mit Ihren Erwartungen vergleichen können. **Schätzungen** liefern statistische Informationen zu einer Segmentdefinition, z. B. die projizierte Audience, das Konfidenzintervall und die Standardabweichung.
 
