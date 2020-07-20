@@ -4,19 +4,19 @@ seo-title: Variablen, die in Analytics automatisch mit dem Adobe Experience Plat
 description: Erfahren Sie, welche Variablen in Analytics mit dem Experience Platform Web SDK automatisch zugeordnet werden
 seo-description: Erfahren Sie, welche Variablen in Analytics mit dem Experience Platform Web SDK automatisch zugeordnet werden
 translation-type: tm+mt
-source-git-commit: a7c8830c5c8152b1f21373a506b2fff97d43c40a
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 58%
+source-wordcount: '543'
+ht-degree: 55%
 
 ---
 
 
-# In Analytics automatisch zugeordnete Variablen
+# In automatisch zugeordnete Variablen[!DNL Analytics]
 
-Nachfolgend finden Sie eine Liste von Variablen, die vom Adobe Experience Platform Edge Network automatisch in Analytics zugeordnet werden.
+Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
 
-| XDM-Feldpfad | Analytics-Abfrage-Zeichenfolge/HTTP-Kopfzeile | Beschreibung |
+| XDM-Feldpfad | [!DNL Analytics Query String] / HTTP-Header | Beschreibung |
 | ---------- | ------------------------- | -------- |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement Abfrageparameter, PURCHASEID-Zuordnung. |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement-Abfrageparameter, CURRENCY-Zuordnung. |
