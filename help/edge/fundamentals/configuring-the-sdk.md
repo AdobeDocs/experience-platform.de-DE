@@ -4,9 +4,9 @@ seo-title: Konfigurieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '737'
 ht-degree: 86%
 
 ---
@@ -74,7 +74,7 @@ Die Domäne, die für die Interaktion mit Adobe-Diensten verwendet wird. Wird nu
 | -------- | ------------ | ----------------- |
 | Zeichenfolge | Ja | Keine |
 
-Ihre zugewiesene Experience Cloud-Organisations-Kennung (ID).  Beim Konfigurieren mehrerer Instanzen innerhalb einer Seite müssen Sie für jede Instanz eine andere `orgId` konfigurieren.
+Your assigned [!DNL Experience Cloud] organization ID.  Beim Konfigurieren mehrerer Instanzen innerhalb einer Seite müssen Sie für jede Instanz eine andere `orgId` konfigurieren.
 
 ## Datenerfassung
 
@@ -134,7 +134,7 @@ Wenn Sie z. B. ein Element auf Ihrer Web-Seite mit einer Kennung von `container`
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | `true` |
 
-Enables Audience Manager [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
+Enables [!DNL Audience Manager] [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
 
 ### `urlDestinationsEnabled`
 
@@ -142,7 +142,7 @@ Enables Audience Manager [!UICONTROL cookie destinations], which allows the sett
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | `true` |
 
-Enables Audience Manager [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
+Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
 
 ## Identitätsoptionen
 
