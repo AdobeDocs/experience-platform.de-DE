@@ -1,43 +1,44 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Sample queries
+title: Beispielabfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 2%
+source-wordcount: '227'
+ht-degree: 82%
 
 ---
 
 
-# Beispieldaten für Abfragen zur Adobe-Zielgruppe
+# Beispielabfragen für Adobe Target-Daten
 
-Daten aus Adobe Zielgruppe werden in Experience Ereignis XDM-Schema umgewandelt und als Datensätze in Experience Platform integriert. There are many use cases for Query Service with this data, and the following sample queries should work with your Adobe Target datasets.
+Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
 
 >[!NOTE]
->In den folgenden Beispielen müssen Sie SQL bearbeiten, um die erwarteten Parameter für Ihre Abfragen basierend auf dem Datensatz, den Variablen oder dem Zeitrahmen, den Sie bewerten möchten, auszufüllen. Geben Sie Parameter an, wo immer Sie `{ }` in SQL sehen.
+>In den folgenden Beispielen müssen Sie die SQL bearbeiten, um die erwarteten Parameter für Ihre Abfragen basierend auf dem Datensatz, den Variablen oder dem Zeitraum, den Sie auswerten möchten, einzugeben. Geben Sie Parameter an, wo immer Sie `{ }` in der SQL sehen.
 
-## Standarddataset-Name für die Zielgruppe der Datenquelle auf der Plattform:
+## Standardmäßiger Datensatzname für die Target-Datenquelle in [!DNL Platform]:
 
-Adobe Zielgruppe Experience Ereignisses (Anzeigename) <br>`adobe_target_experience_events` (in der Abfrage zu verwendender Name)
+Adobe Target-Erlebnisereignisse (Anzeigename) <br>
+`adobe_target_experience_events` (in der Abfrage zu verwendender Name)
 
 ## Partielle XDM-Feldzuordnung auf hoher Ebene
 
-Die Verwendung `[ ]` eines Arrays
+Die Verwendung von `[ ]` bezeichnet ein Array
 
 | Name | XDM-Feld | Anmerkungen |
 | ---- | --------- | ----- |
 | mboxName | `_experience.target.mboxname` |  |
-| Activity ID | `_experience.target.activities.activityID` |  |
+| Aktivitäts-ID | `_experience.target.activities.activityID` |  |
 | Erlebnis-ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
 | Segment-ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
-| Ereignis | `_experience.target.activities[].activityEvents[].eventScope` | Verfolgt neue Besucher und Besuche |
-| Schritt-ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | Benutzerdefinierte Schritt-ID für die Kampagne |
-| Preis gesamt | `commerce.order.priceTotal` |  |
+| Ereignisumfang | `_experience.target.activities[].activityEvents[].eventScope` | Verfolgt neue Besucher und Besuche |
+| Schritt-ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | Benutzerdefinierte Schritt-ID für Campaign |
+| Gesamtpreis | `commerce.order.priceTotal` |  |
 
-## Die stündliche Aktivität zählt für einen bestimmten Tag
+## Stündliche Aktivitätszahlen für einen bestimmten Tag
 
 ```sql
 SELECT
@@ -61,7 +62,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-## Stündliche Details für eine bestimmte Aktivität an einem bestimmten Tag
+## Stündliche Details für eine bestimmte Aktivität für einen bestimmten Tag
 
 ```sql
 SELECT
@@ -113,7 +114,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-## Gibt eine Liste von Ereignis-Scopes (Besucher, Besuch, Impression) nach Instanzen pro Aktivitäten-ID für einen bestimmten Tag zurück
+## Rückgabe einer Liste von Ereignisumfängen (Besucher, Besuch, Impression) nach Instanzen pro Aktivitäten-ID für einen bestimmten Tag
 
 ```sql
 SELECT
@@ -145,7 +146,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-## Rückkehranzahl von Besuchern, Besuchen, Impressionen pro Aktivität an einem bestimmten Tag
+## Anzahl wiederkehrender Besucher, Besuche, Impressionen pro Aktivität für einen bestimmten Tag
 
 ```sql
 SELECT
@@ -171,7 +172,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-## Rückkehrende Besucher, Besuche, Impressionen für Erlebnis-ID, Segment-ID und EventScope für einen bestimmten Tag
+## Wiederkehrende Besucher, Besuche, Impressionen für Erlebnis-ID, Segment-ID und Ereignisumfang für einen bestimmten Tag
 
 ```sql
 SELECT
@@ -218,7 +219,7 @@ ORDER BY Day DESC, Activities.activityID, ExperienceID ASC, SegmentID._id ASC, V
 LIMIT 20
 ```
 
-## Mbox-Namen und Anzahl der Datensätze für einen bestimmten Tag zurückgeben
+## Rückgabe der mbox-Namen und Anzahl der Einträge für einen bestimmten Tag
 
 ```sql
 SELECT
