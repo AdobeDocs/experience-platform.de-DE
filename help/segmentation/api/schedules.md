@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Zeitpläne
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 842f31aac2bdbf7e9f79e4ae7d4c36be1dc92392
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 51%
 
 ---
 
 
-# Endpunktleitfaden für Zeitpläne
+# Endpunkt des Zeitplans
 
 Zeitpläne sind ein Tool, mit dem Stapelsegmentierungsaufträge einmal täglich automatisch ausgeführt werden können. Mit dem `/config/schedules` Endpunkt können Sie eine Liste von Zeitplänen abrufen, einen neuen Zeitplan erstellen, Details zu einem bestimmten Zeitplan abrufen, einen bestimmten Zeitplan aktualisieren oder einen bestimmten Zeitplan löschen.
 
