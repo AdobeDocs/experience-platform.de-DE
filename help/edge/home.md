@@ -4,19 +4,19 @@ seo-title: Adobe Experience Platform Web SDK – Hilfe
 description: Erfahren Sie, was das Adobe Experience Platform Web SDK ist und wie es verwendet werden kann.
 seo-description: Kunden von Adobe Experience Cloud die Interaktion mit den verschiedenen Diensten in der Experience Cloud ermöglichen.
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 31%
+source-wordcount: '429'
+ht-degree: 33%
 
 ---
 
 
 # Was ist das Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK ist eine clientseitige JavaScript-Bibliothek, mit der Kunden der Adobe Experience Cloud über das Edge Network der Adobe Experience Platform mit den verschiedenen Diensten im Experience Cloud interagieren können.
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network].
 
-Das folgende Video gibt einen Überblick über die Adobe Experience Platform Web SDK und Edge Network.
+Das folgende Video gibt einen Überblick über die Adobe Experience Platform [!DNL Web SDK] und [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -29,11 +29,11 @@ Das Adobe Experience Platform Web SDK ersetzt die folgenden SDKs:
 * AT.js
 * DIL.js
 
-Dies ist nicht nur ein Wrapper um vorhandene Bibliotheken. Es ist eine vollständige Umschreibung. Ihr Zweck ist es, Herausforderungen zu beenden, indem Tags in der richtigen Reihenfolge ausgelöst werden müssen, die nicht mit den Versionshinweisen der Bibliothek übereinstimmen und die Abhängigkeitsverwaltung verbessert wird. Es ist eine neue Methode, das Experience Cloud zu implementieren und es ist [Open Source](https://github.com/adobe/alloy).
+Dies ist nicht nur ein Wrapper um vorhandene Bibliotheken. Es ist eine vollständige Umschreibung. Ihr Zweck ist es, Herausforderungen zu beenden, indem Tags in der richtigen Reihenfolge ausgelöst werden müssen, die nicht mit den Versionshinweisen der Bibliothek übereinstimmen und die Abhängigkeitsverwaltung verbessert wird. Es ist eine neue Methode, um die zu implementieren [!DNL Experience Cloud] und es ist [Open Source](https://github.com/adobe/alloy).
 
-Neben einer neuen Bibliothek gibt es einen neuen Endpunkt, der die HTTP-Abfragen an Adobe-Lösungen optimiert. Zuvor sendete Visitor.js einen Sperraufruf an den Besucher-ID-Dienst und dann einen Aufruf an Adobe Target, dann sandte DIL.js einen Aufruf an Adobe Audience Manager und schließlich schickte AppMeasurement.js einen Aufruf an Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to Audience Manager, and pass the data to the Adobe Experience Platform in a single call.
+Neben einer neuen Bibliothek gibt es einen neuen Endpunkt, der die HTTP-Abfragen an Adobe-Lösungen optimiert. Zuvor sendete Visitor.js einen Sperraufruf an den Besucher-ID-Dienst und dann einen Aufruf an Adobe Target, dann sandte DIL.js einen Aufruf an Adobe Audience Manager und schließlich schickte AppMeasurement.js einen Aufruf an Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to the Adobe Experience Platform in a single call.
 
-Das folgende Video zeigt die Adobe Experience Platform Web SDK und Edge Network in Aktion. Das Videobeispiel verwendet einen einzelnen Aufruf an Adobe, der Daten an Experience Platform, Analytics, Audience Manager und Target sendet.
+Das folgende Video zeigt die Adobe Experience Platform [!DNL Web SDK] und die [!DNL Edge Network] Aktion. Im Videobeispiel wird ein einzelner Aufruf an Adobe verwendet, der Daten an [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]und [!DNL Target]sendet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
