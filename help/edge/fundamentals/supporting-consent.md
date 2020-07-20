@@ -4,10 +4,10 @@ seo-title: Unterstützen der Zustimmungseinstellung des Adobe Experience Platfor
 description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
 seo-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
 translation-type: tm+mt
-source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 99%
+source-wordcount: '516'
+ht-degree: 96%
 
 ---
 
@@ -79,7 +79,7 @@ Da der Nutzer sich für eine Abmeldung entschieden hat, werden Promises, die von
 
 >[!NOTE]
 >
->Derzeit unterstützt das SDK nur den `general`-Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, bietet die aktuelle Implementierung nur die Alles-oder-Nichts-Methode zur Teilnahme.  Dies gilt nur für das Adobe Experience Platform Web SDK und NICHT für andere Adobe JavaScript-Bibliotheken.
+>Derzeit unterstützt das SDK nur den `general`-Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, bietet die aktuelle Implementierung nur die Alles-oder-Nichts-Methode zur Teilnahme.  This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
 ## Beständigkeit der Zustimmungseinstellungen
 
