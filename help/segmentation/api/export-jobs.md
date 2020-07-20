@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Endpunkt-Handbuch für Exportaufträge
+title: Endpunkt für Exportaufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1497'
 ht-degree: 16%
 
 ---
 
 
-# Endpunkt-Handbuch für Exportaufträge
+# Endpunkt für Exportaufträge
 
 Exportaufträge sind asynchrone Prozesse, mit denen Segmentmitglieder der Audience zu Datensätzen beibehalten werden. Sie können den `/export/jobs` Endpunkt in der Adobe Experience Platform Segmentation API verwenden, mit dem Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
+
+>[!NOTE]
+>
+>Dieses Handbuch behandelt die Verwendung von Exportaufträgen in der [!DNL Segmentation API]. Informationen zum Verwalten von Exportaufträgen für [!DNL Real-time Customer Profile] Daten finden Sie im Handbuch zu [Exportaufträgen in der Profil-API.](../../profile/api/export-jobs.md)
 
 ## Erste Schritte
 
