@@ -4,34 +4,36 @@ seo-title: Übersicht über die Echtzeit-Kundendatenplattform
 description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Echtzeit-Kundendatenplattform – Übersicht
 translation-type: tm+mt
-source-git-commit: 08b35c862472308fbec282a7727035fb3924d19b
+source-git-commit: c16232179701aa40ae06da45e0581d70d0437191
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 100%
+source-wordcount: '292'
+ht-degree: 29%
 
 ---
 
 
 # Übersicht über die Echtzeit-Kundendatenplattform von Adobe
 
-Die auf Adobe Experience Platform aufbauende Echtzeit-Kundendatenplattform von Adobe hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, sodass sich durch intelligente Entscheidungen während der gesamten Customer Journey Kundenprofile aktivieren lassen. Die Echtzeit-Kundendatenplattform fasst unterschiedliche Unternehmensdatenquellen zusammen, um in Echtzeit einheitliche Profile zu erstellen, die über alle Kanäle und Geräte hinweg ein personalisiertes Kundenerlebnis möglich machen.
+Die auf Adobe Experience Platform aufbauende Adobe Echtzeit-Kundendatenplattform (Echtzeit-CDP) hilft Firmen, bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammenzuführen, um Kundendaten zu erstellen, die dazu verwendet werden können, personalisierte Kundenerlebnisse auf allen Kanälen und Geräten in Echtzeit bereitzustellen.
 
-Die Echtzeit-Kundendatenplattform umfasst Tools für Data Governance, Identitäts-Management, erweiterte Segmentierung und Datenwissenschaft, sodass Sie Profile erstellen und Zielgruppen definieren, umfassende Einblicke gewinnen und gleichzeitig strikte Richtlinien zur Datenverwaltung durchsetzen können.
+Echtzeit-CDP umfasst Tools für Datenverwaltung, Identitätsverwaltung, erweiterte Segmentierung und Datenwissenschaften, mit denen Sie Profil erstellen und Audiencen definieren sowie umfassende Einblicke gewinnen können, während Sie gleichzeitig in der Lage sind, strikte Richtlinien zur Datenverwaltung durchzusetzen.
 
-Adobe bietet Verbindungen zu einem großen Partnernetzwerk sowie native Integrationen mit Adobe Experience Cloud, damit Sie Zielgruppen nahtlos aktivieren und über alle Kanäle hinweg für herausragende Kundenerlebnisse sorgen können – von der Personalisierung vor Ort oder in Apps über E-Mail bis hin zu Paid Media, Callcentern, vernetzten Geräten und mehr.
+Die Adobe-Kundendatenplattform in Echtzeit verbindet sich mit einem großen Partnernetzwerk, ganz zu schweigen von den nativen Integrationen mit Adobe Experience Cloud. So können Sie diese Audiencen nahtlos aktivieren und großartige Kundenerlebnisse für alle Kanal bereitstellen, von der Personalisierung vor Ort oder in der App bis hin zu E-Mails, gebührenpflichtigen Medien, Call-Centern, angeschlossenen Geräten und mehr.
 
-Mit der Echtzeit-Kundendatenplattform profitieren Sie von folgenden Vorteilen:
+Mit der Echtzeit-Kundendatenplattform können Sie:
 
-* Verschaffen Sie sich einen Überblick über Ihre Kunden mit einer Streaming-Sammlung von Kundendaten aus dem gesamten Unternehmen.
-* Sorgen Sie für eine angemessene Verwaltung von Profilen mit vertrauenswürdigen Governance- und Datenschutzkontrollen für bekannte und unbekannte Kennungen.
+* Erzielen Sie eine einzige Ansicht Ihres Kunden, indem Sie Daten aus dem gesamten Unternehmen kombinieren.
+* Verantwortungsvolle Verwaltung von Profilen mit vertrauenswürdiger Verwaltung und Datenschutzkontrollen für bekannte und anonyme Identifikatoren.
 * Erstellen Sie mit KI und maschinellem Lernen auf Basis von Adobe Sensei – entwickelt für Marketer – praktische Einblicke und skalieren Sie Zielgruppen.
 * Schaffen Sie in Echtzeit personalisierte Erlebnisse über alle Kanäle und Ziele hinweg.
 
 ## Weitere Informationen
 
-Wir empfehlen folgende Dokumentationsthemen, wenn Sie beginnen, mit der Echtzeit-Kundendatenplattform von Adobe zu arbeiten:
+Um mehr über Adobe Experience Platform zu erfahren, lesen Sie zunächst den Überblick über die [Experience Platform](../landing/home.md).
 
-* [Erste Schritte](get-started.md)
+Die folgende Dokumentation hilft Ihnen beim Einstieg in die Echtzeit-Kundendatenplattform:
+
+* [Erste Schritte mit CDP in Echtzeit](get-started.md)
 * [So erfassen Sie Daten](sources/sources-overview.md)
 * [So rufen Sie Profile auf](profile/profile-overview.md)
 * [So erstellen Sie Segmente](segmentation/segmentation-overview.md)
