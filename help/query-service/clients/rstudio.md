@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Verbindung mit RStudio
+title: Mit RStudio verbinden
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 2%
+source-wordcount: '209'
+ht-degree: 61%
 
 ---
 
 
-# Verbindung mit RStudio
+# Connect with [!DNL RStudio]
 
-Dieses Dokument führt Sie durch die Schritte, um R Studio mit Adobe Experience Platform Abfrage Service zu verbinden.
+This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
 
-Nach der Installation von RStudio müssen Sie zunächst auf dem angezeigten *Konsolenbildschirm* Ihr R-Skript für die Verwendung von PostgreSQL vorbereiten.
+After installing [!DNL RStudio], on the *Console* screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -25,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Nachdem Sie Ihr R-Skript für die Verwendung von PostgreSQL vorbereitet haben, können Sie jetzt RStudio mit dem Abfrage Service verbinden, indem Sie den PostgreSQL-Treiber laden.
+Once you have prepared your R script to use [!DNL PostgreSQL], you can now connect [!DNL RStudio] to [!DNL Query Service] by loading the [!DNL PostgreSQL] driver.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -40,18 +40,18 @@ con <- dbConnect(drv,
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `{DATABASE_NAME}` | Der Name der zu verwendenden Datenbank. |
-| `{HOST_NUMBER` und `{PORT_NUMBER}` | Der Host-Endpunkt und sein Anschluss für den Abfrage-Dienst. |
-| `{USERNAME}` und `{PASSWORD}` | Die Anmeldeinformationen, die verwendet werden. Der Benutzername hat die Form `ORG_ID@AdobeOrg`. |
+| `{HOST_NUMBER` und `{PORT_NUMBER}` | Der Host-Endpunkt und sein Port für Query Service. |
+| `{USERNAME}` und `{PASSWORD}` | Die Anmeldedaten, die verwendet werden sollen. Der Benutzername hat die Form `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
->Weitere Informationen zum Auffinden der Anmeldeinformationen für Datenbankname, Host, Anschluss und Anmeldung finden Sie auf der Seite &quot; [Anmeldeinformationen&quot;in der Platform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei der Platform an, klicken Sie auf **Abfragen** und dann auf **Anmeldeinformationen**.
+>Weiterführende Informationen zum Finden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie auf der Seite [Anmeldedaten in Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
 
 ## Nächste Schritte
 
-Nachdem Sie nun eine Verbindung zum Abfrage Service hergestellt haben, können Sie Abfragen schreiben, um SQL-Anweisungen auszuführen und zu bearbeiten. Beispielsweise können Sie Abfragen `dbGetQuery(con, sql)` ausführen, bei denen die SQL-Abfrage ausgeführt werden `sql` soll.
+Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. Beispielsweise können Sie `dbGetQuery(con, sql)` zum Durchführen von Abfragen verwenden, bei denen `sql` die SQL-Abfrage ist, die Sie ausführen möchten.
 
-Die folgende Abfrage verwendet einen Datensatz, der [ExperienceEvents](../creating-queries/experience-event-queries.md) enthält, und erstellt ein Histogramm der Ansichten einer Website, je nach Bildschirmhöhe des Geräts.
+Folgende Abfrage nutzt einen Datensatz, der [ExperienceEvents](../creating-queries/experience-event-queries.md) enthält, und erstellt ein Histogramm mit Seitenansichten einer Website, je nach Bildschirmhöhe des jeweiligen Geräts.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -86,4 +86,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Handbuch [laufender Abfragen](../creating-queries/creating-queries.md).
+Weiterführende Informationen zum Verfassen und Ausführen von Abfragen finden Sie im [Handbuch zum Ausführen von Abfragen](../creating-queries/creating-queries.md).
