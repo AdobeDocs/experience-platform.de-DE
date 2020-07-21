@@ -4,27 +4,27 @@ seo-title: Amazon S3-Ziel
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Buckets zu exportieren.
 seo-description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Buckets zu exportieren.
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 82%
+source-wordcount: '164'
+ht-degree: 51%
 
 ---
 
 
-# Amazon S3-Ziel
+# [!DNL Amazon S3] Ziel
 
 ## Übersicht
 
-Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Buckets zu exportieren.
+Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 
 ## Ziel verbinden {#connect-destination}
 
-Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Speicher-Zielen, einschließlich Amazon S3, finden Sie unter [Workflow für Cloud-Speicher-Ziele](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
+See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL Amazon S3].
 
-Geben Sie für Amazon S3-Ziele im Workflow zum Erstellen des Ziels die folgenden Informationen ein:
+For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
 
-* **Amazon S3-Zugriffsschlüssel und Amazon S3-geheimer Schlüssel**: Generieren Sie in Amazon S3 einen Zugriffsschlüssel - das Schlüsselpaar für den geheimen Zugriff, um Adobe Echtzeit-CDP Zugriff auf Ihr Amazon S3-Konto zu gewähren.
+* **[!DNL Amazon S3]Zugriffsschlüssel und[!DNL Amazon S3]geheimer Schlüssel **: Generieren Sie in[!DNL Amazon S3]diesem Fall einen Zugriffsschlüssel - ein Schlüssel-Paar für den geheimen Zugriff, um Adobe CDP-Zugriff auf Ihr[!DNL Amazon S3]Konto zu gewähren.
 
 
 
