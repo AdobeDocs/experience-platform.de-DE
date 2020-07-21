@@ -4,15 +4,15 @@ seo-title: (Beta) Azurblauer Ereignis Hubs-Ziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 6%
+source-wordcount: '467'
+ht-degree: 7%
 
 ---
 
 
-# (Beta) Azurblauer Ereignis Hubs-Ziel
+# (Beta) [!DNL Azure Event Hubs] Ziel
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs] 
 
 ## Nutzungsszenarien {#use-cases}
 
-Durch Streaming-Ziele wie beispielsweise Azurblase-Ereignis-Hubs können Sie hochwertige Segmentierungssysteme und zugehörige Profil-Attribute problemlos in Ihre bevorzugten Ereignis einspeisen.
+Durch die Verwendung von Streaming-Zielen wie [!DNL Azure Event Hubs]z. B. können Sie Segmentierungssysteme mit hohem Wert und zugehörige Profil-Attribute problemlos in Ihre bevorzugten Systeme einspeisen.
 
-Beispielsweise hat ein Potenzieller Kunde ein White Paper heruntergeladen, das sie in ein &quot;hohes Konversionssegment&quot;einordnet. Durch die Zuordnung des Segments, in das der Potenzieller Kunde in das Ereignis Hubs-Ziel des Azurblaus fällt, erhalten Sie dieses Ereignis in den Azurblauen Ereignis Hubs. Dort können Sie einen Do-it-self-Ansatz verwenden und die Geschäftslogik über das Ereignis beschreiben, da Sie denken, dass dies am besten mit Ihren IT-Systemen im Unternehmen funktionieren würde.
+Beispielsweise hat ein Potenzieller Kunde ein White Paper heruntergeladen, das sie in ein &quot;hohes Konversionssegment&quot;einordnet. Durch Zuordnung des Segments, in das der Potenzieller Kunde zum [!DNL Azure Event Hubs] Ziel fällt, erhalten Sie dieses Ereignis in [!DNL Azure Event Hubs]. Dort können Sie einen Do-it-self-Ansatz verwenden und die Geschäftslogik über das Ereignis beschreiben, da Sie denken, dass dies am besten mit Ihren IT-Systemen im Unternehmen funktionieren würde.
 
 ## Ziel verbinden {#connect-destination}
 
@@ -64,7 +64,7 @@ Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile
 
 ## Exportierte Daten {#exported-data}
 
-Ihre exportierten Experience Platformen werden im JSON- [!DNL Azure Event Hubs] Format gespeichert. Das folgende Ereignis enthält beispielsweise das Segmentattribut &quot;E-Mail-Adresse&quot;einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind ECID und E-Mail.
+Ihre exportierten [!DNL Experience Platform] Daten werden im JSON- [!DNL Azure Event Hubs] Format gespeichert. Das folgende Ereignis enthält beispielsweise das Segmentattribut &quot;E-Mail-Adresse&quot;einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind ECID und E-Mail.
 
 ```
 {
