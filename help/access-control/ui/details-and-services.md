@@ -1,39 +1,39 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Details und zusätzliche Dienste für ein Profil verwalten
+title: Details und zusätzliche Dienste für ein Produktprofil verwalten
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c0fd83e5e7a74d3f5ada7340eef9b0fc627f9a16
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 2%
+source-wordcount: '167'
+ht-degree: 79%
 
 ---
 
 
-# Details und zusätzliche Dienste für ein Profil verwalten
+# Details und zusätzliche Dienste für ein Produktprofil verwalten
 
-Sie können die Details eines Profils und den Zugriff auf zusätzliche Dienste über das Menü &quot; *Profil-Einstellungen* &quot;konfigurieren. Um das Menü aufzurufen, klicken Sie auf **Einstellungen** auf der Seite &quot; *Produkt-Profil* &quot;.
+Über das Menü *[!UICONTROL Profileinstellungen]* können Sie die Details eines Profils konfigurieren und auf zusätzliche Dienste zugreifen. Um das Menü aufzurufen, klicken Sie auf die Option **[!UICONTROL Einstellungen]** der Seite *[!UICONTROL Produktprofil]*.
 
-![Profil-Einstellungen](../images/profile-settings.png)
+![profile-settings](../images/profile-settings.png)
 
-Das Menü &quot; *Profil-Einstellungen* &quot;wird auf der Registerkarte &quot; *Details* &quot;angezeigt. Auf dieser Registerkarte können Sie Ihren **Profil-Namen** und Ihre **Beschreibung** eingeben und bearbeiten. Sie können auch Ihren **Anzeigenamen** sowie die E-Mail-Benachrichtigungseinstellungen für Ihr Konto ändern.
+Das Menü *[!UICONTROL Profileinstellungen]* wird auf dem Tab *[!UICONTROL Details]* angezeigt. Auf diesem Tab können Sie Ihren **[!UICONTROL Profilnamen]** und die **[!UICONTROL Beschreibung]** eingeben und bearbeiten. Außerdem können Sie Ihren **[!UICONTROL Anzeigenamen]** sowie die E-Mail-Benachrichtigungseinstellungen für Ihr Konto ändern.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
-Klicken Sie auf **Dienste** , um auf die Seite &quot; *Dienste* &quot;zuzugreifen.
+Klicken Sie auf **[!UICONTROL Dienste]**, um auf die Seite *[!UICONTROL Dienste]* zu gelangen.
 
 ![services-page](../images/services-page.png)
 
-Im Menü &quot; *Dienste* &quot;können Sie den Zugriff eines Profils auf zusätzliche Plattformdienste ändern, die beim Erstellen des Profils ursprünglich konfiguriert wurden. Abhängig von Ihrem Platform-Abonnement können diese Dienste Folgendes umfassen:
+The *[!UICONTROL Services]* menu allows you to modify a profile&#39;s access to additional [!DNL Platform] services that were initially configured when the profile was created. Depending on your [!DNL Platform] subscription, these services can include:
 
-- Data Science-Arbeitsbereich
-- Abfrage
-- Benutzeroberfläche der Echtzeit-Kundendatenplattform (nur für CDP in Echtzeit)
+- [!DNL Data Science Workspace]
+- [!DNL Query Service]
+- [!DNL Real-Time Customer Data Platform] Benutzeroberfläche (nur für CDP in Echtzeit)
 
-Klicken Sie auf der rechten Seite eines bestimmten Dienstes auf den Umschalter, um ihn zu aktivieren oder zu deaktivieren. Sie können auch auf das Kontrollkästchen **Alle auf** klicken, um alle aufgelisteten Dienste zu aktivieren oder zu deaktivieren.
+Klicken Sie auf der rechten Seite eines bestimmten Diensts auf den Umschalter, um ihn zu aktivieren oder zu deaktivieren. Sie können auch auf das Kontrollkästchen **[!UICONTROL Alle ein]** klicken, um alle aufgelisteten Dienste zu aktivieren oder zu deaktivieren.
 
-Klicken Sie abschließend auf **Speichern**.
+Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
 ![edit-additional-services](../images/edit-additional-services.png)
