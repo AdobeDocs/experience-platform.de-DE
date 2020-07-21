@@ -4,75 +4,75 @@ solution: Experience Platform
 title: Fehlerbehebung bei der Streaming-Erfassung
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 0%
+source-wordcount: '993'
+ht-degree: 65%
 
 ---
 
 
 # Handbuch zur Fehlerbehebung bei der Streaming-Erfassung
 
-In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zum Streaming in Adobe Experience Platform. Fragen und Fehlerbehebung zu anderen Plattformdiensten, einschließlich solcher, die in allen Plattform-APIs auftreten, finden Sie im Handbuch zur Fehlerbehebung für [Experience Platform](../../landing/troubleshooting.md).
+In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Erfassung in Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
 
-Adobe Experience Platform Data Ingestion stellt REST-fähige APIs bereit, mit denen Sie Daten in Experience Platform erfassen können. Die erfassten Daten werden verwendet, um individuelle Kundenerlebnisse in Echtzeit zu aktualisieren, sodass Sie personalisierte, relevante Profil über mehrere Kanal hinweg bereitstellen können. Weitere Informationen zum Dienst und zu den verschiedenen Erfassungsmethoden finden Sie in der Übersicht über die [Dateneinbettung](../home.md) . Anweisungen zur Verwendung von Streaming-Inhalten-APIs finden Sie in der [Streaming-Erfassungsübersicht](../streaming-ingestion/overview.md).
+Adobe Experience Platform [!DNL Data Ingestion] provides RESTful APIs that you can use to ingest data into [!DNL Experience Platform]. Die erfassten Daten dienen zur nahezu echtzeitbasierten Aktualisierung einzelner Kundenprofile, sodass Sie kanalübergreifend für personalisierte, relevante Erlebnisse sorgen können. Weiterführende Informationen zu dem Dienst und zu den verschiedenen Erfassungsmethoden finden Sie in der [Übersicht zur Datenerfassung](../home.md). Anweisungen zur Verwendung von Streaming-Erfassungs-APIs finden Sie in der [Übersicht zur Streaming-Erfassung](../streaming-ingestion/overview.md).
 
 ## FAQs
 
 Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zur Streaming-Erfassung.
 
-### Woher weiß ich, dass die Nutzlast, die ich verschicke, korrekt formatiert ist?
+### Wie weiß ich, ob die Payload, die ich versenden möchte, richtig formatiert ist?
 
-Data Ingestion nutzt Experience Data Model-(XDM-)Schema zur Validierung des Formats eingehender Daten. Das Senden von Daten, die nicht der Struktur eines vordefinierten XDM-Schemas entsprechen, führt zu einem Fehler bei der Erfassung. Weitere Informationen zu XDM und seiner Verwendung in Experience Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
+[!DNL Data Ingestion] nutzt [!DNL Experience Data Model] (XDM-)Schema zur Validierung des Formats eingehender Daten. Das Senden von Daten, die nicht mit der Struktur eines vordefinierten XDM-Schemas übereinstimmen, führt dazu, dass die Erfassung fehlschlägt. For more information on XDM and its use in [!DNL Experience Platform], see the [XDM System overview](../../xdm/home.md).
 
-Die Streaming-Erfassung unterstützt zwei Überprüfungsmodi: synchron und asynchron. Bei jeder Überprüfungsmethode werden fehlerhafte Daten unterschiedlich behandelt.
+Die Streaming-Erfassung unterstützt zwei Validierungsmodi: synchron und asynchron. Bei jeder Validierungsmethode werden fehlerhafte Daten anders behandelt.
 
-**Während des Entwicklungsprozesses sollte eine synchrone Validierung** verwendet werden. Datensätze, bei denen die Überprüfung fehlschlägt, werden entfernt und eine Fehlermeldung ausgegeben, warum sie fehlgeschlagen sind (z. B.: &quot;Ungültiges XDM-Nachrichtenformat&quot;).
+**Synchrone Validierung** sollte während der Entwicklung genutzt werden. Datensätze, bei denen die Validierung fehlschlägt, werden entfernt; außerdem wird eine Fehlermeldung mit Informationen dazu ausgegeben, warum sie fehlgeschlagen sind (z. B. „Ungültiges XDM-Nachrichtenformat“).
 
-**Bei der Produktion sollte eine asynchrone Validierung** verwendet werden. Fehlerhafte Daten, die keine Validierung weitergeben, werden als Batchdatei an den Data Lake gesendet, wo sie später zur weiteren Analyse abgerufen werden können.
+**Asynchrone Validierung** sollte in der Produktion verwendet werden. Any malformed data that does not pass validation is sent to the [!DNL Data Lake] as a failed batch file, where it can be retrieved later for further analysis.
 
-Weitere Informationen zur synchronen und asynchronen Validierung finden Sie in der Übersicht zur [Streaming-Validierung](../quality/streaming-validation.md). Anweisungen zur Ansicht von Stapeln mit Fehler bei der Überprüfung finden Sie im Handbuch zum [Abrufen fehlgeschlagener Stapel](../quality/retrieve-failed-batches.md).
+Weiterführende Informationen zur synchronen und asynchronen Validierung finden Sie in der [Übersicht zur Streaming-Validierung](../quality/streaming-validation.md). Anweisungen zum Anzeigen von Batches, die die Validierung nicht bestehen, finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
-### Kann ich eine Anfrage-Nutzlast überprüfen, bevor ich sie an die Plattform schicke?
+### Can I validate a request payload before sending it to [!DNL Platform]?
 
-Nutzdatenanforderungen können nur ausgewertet werden, nachdem sie an die Plattform gesendet wurden. Bei der Durchführung der synchronen Überprüfung geben gültige Nutzdaten ausgefüllte JSON-Objekte zurück, während ungültige Nutzdaten Fehlermeldungen zurückgeben. Während der asynchronen Validierung erkennt und sendet der Dienst fehlerhafte Daten an den Data Lake, wo sie später zur Analyse abgerufen werden können. See the [streaming validation overview](../quality/streaming-validation.md) for more information.
+Request payloads can only be evaluated after they have been sent to [!DNL Platform]. Bei Nutzung der synchronen Validierung geben gültige Payloads ausgefüllte JSON-Objekte zurück, während ungültige Payloads Fehlermeldungen zurückgeben. During asynchronous validation, the service detects and sends any malformed data to the [!DNL Data Lake] where it can later be retrieved for analysis. Weiterführende Informationen dazu finden Sie in der [Übersicht zur Streaming-Validierung](../quality/streaming-validation.md).
 
-### Was passiert, wenn eine synchrone Validierung an einer Kante angefordert wird, die diese nicht unterstützt?
+### Was geschieht, wenn eine synchrone Validierung an einem Edgeserver angefordert wird, der sie nicht unterstützt?
 
-Wenn die synchrone Validierung für den angeforderten Speicherort nicht unterstützt wird, wird eine 501-Fehlerantwort zurückgegeben. Weitere Informationen zur synchronen Validierung finden Sie in der Übersicht über die [Streaming-Validierung](../quality/streaming-validation.md) .
+Wenn synchrone Validierung am angeforderten Ort nicht unterstützt wird, wird eine Fehlerantwort vom Typ 501 zurückgegeben. Weiterführende Informationen zur synchronen Validierung finden Sie in der [Übersicht zur Streaming-Validierung](../quality/streaming-validation.md).
 
 ### Wie stelle ich sicher, dass Daten nur aus vertrauenswürdigen Quellen erfasst werden?
 
-Experience Platform unterstützt die sichere Datenerfassung. Wenn die authentifizierte Datenerfassung aktiviert ist, müssen Clients ein JSON-WebToken (JWT) und ihre IMS-Organisations-ID als Anforderungsheader senden. Weitere Informationen zum Senden authentifizierter Daten an die Plattform finden Sie im Handbuch zur [authentifizierten Datenerfassung](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] unterstützt die sichere Datenerfassung. Wenn authentifizierte Datenerfassung aktiviert ist, müssen Clients ein JSON Web Token (JWT) und ihre IMS-Organisations-Kennung als Anfragekopfzeilen senden. For more information on how to send authenticated data to [!DNL Platform], please see the guide on [authenticated data collection](../tutorials/create-authenticated-streaming-connection.md).
 
-### Wie lange dauert das Streaming von Daten an das Echtzeit-Profil?
+### Wie lange dauert das Streaming von Daten [!DNL Real-time Customer Profile]?
 
-Streaming-Ereignis werden in der Regel in weniger als 60 Sekunden im Echtzeit-Profil des Kunden angezeigt. Die tatsächlichen Latenzen können sich aufgrund des Datenvolumens, der Nachrichtengröße und der Bandbreiteneinschränkungen unterscheiden.
+Streamed events are generally reflected in [!DNL Real-time Customer Profile] in under 60 seconds. Reale Latenzwerte können aber je nach Datenvolumen, Nachrichtengröße und Bandbreiteneinschränkungen davon abweichen.
 
-### Kann ich mehrere Nachrichten in dieselbe API-Anforderung einbeziehen?
+### Kann ich in eine API-Anfrage mehrere Nachrichten einschließen?
 
-Sie können mehrere Nachrichten innerhalb einer einzigen Anforderungsnutzlast gruppieren und an die Plattform streamen. Bei korrekter Verwendung ist die Gruppierung mehrerer Nachrichten in einer einzigen Anforderung eine hervorragende Möglichkeit, Ihre Datenvorgänge zu optimieren. Bitte lesen Sie das Tutorial zum [Senden mehrerer Nachrichten in einer Anfrage](../tutorials/streaming-multiple-messages.md) für weitere Informationen.
+You can group multiple messages within a single request payload and stream them to [!DNL Platform]. Bei richtiger Verwendung stellt das Gruppieren mehrerer Nachrichten in einer Anfrage eine hervorragende Möglichkeit zur Optimierung Ihrer Datenvorgänge dar. Lesen Sie das Tutorial zum [Senden mehrerer Nachrichten in einer Anfrage](../tutorials/streaming-multiple-messages.md), um mehr zu erfahren.
 
-### Woher weiß ich, ob die von mir gesendeten Daten empfangen werden?
+### Wie weiß ich, ob meine gesendeten Daten empfangen werden?
 
-Alle Daten, die (erfolgreich oder anderweitig) an die Plattform gesendet werden, werden als Stapeldateien gespeichert, bevor sie in Datensätzen beibehalten werden. Der Verarbeitungsstatus von Stapeln erscheint im Datensatz, an den sie gesendet wurden.
+All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. Der Verarbeitungsstatus von Batches erscheint in dem Datensatz, an den sie gesendet wurden.
 
-Sie können überprüfen, ob die Daten erfolgreich erfasst wurden, indem Sie die Aktivität des Datensatzes über die [Experience Platform-Benutzeroberfläche](https://platform.adobe.com)überprüfen. Klicken Sie im linken Navigationsbereich auf **Datensätze** , um eine Liste der Datensätze anzuzeigen. Wählen Sie aus der angezeigten Liste den Datensatz, zu dem Sie streamen, aus, um die zugehörige Seite &quot; *Datenbestand-Aktivität* &quot;zu öffnen und alle Stapel anzuzeigen, die während eines bestimmten Zeitraums gesendet wurden. Weitere Informationen zur Verwendung von Experience Platform zur Überwachung von Datenströmen finden Sie im Handbuch zur [Überwachung von Streaming-Datenströmen](../quality/monitor-data-flows.md).
+Sie können überprüfen, ob Daten erfolgreich erfasst wurden, indem Sie die Datensatzaktivität mit der [Benutzeroberfläche von Experience Platform](https://platform.adobe.com) überprüfen. Klicken Sie dazu im linken Navigationsbereich auf **[!UICONTROL Datensätze]**, um eine Liste der Datensätze anzuzeigen. Wählen Sie in der angezeigten Liste den Datensatz aus, an den Sie streamen, um die zugehörige Seite *[!UICONTROL Datensatzaktivität]* zu öffnen und alle Batches anzuzeigen, die in einem bestimmten Zeitraum gesendet wurden. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
 
-Wenn Ihre Daten nicht erfasst werden konnten und Sie sie von der Plattform wiederherstellen möchten, können Sie die fehlgeschlagenen Stapel abrufen, indem Sie ihre IDs an die [Datenzugriff-API][Data Access Service API]senden. Weitere Informationen finden Sie im Handbuch zum [Abrufen fehlgeschlagener Stapel](../quality/retrieve-failed-batches.md) .
+If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. Weiterführende Informationen finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
-### Warum sind meine Streaming-Daten nicht im Data Lake verfügbar?
+### Warum sind meine Streaming-Daten im Data Lake nicht verfügbar?
 
-Es gibt verschiedene Gründe, warum die Stapelverarbeitung möglicherweise nicht zum Data Lake gelangt, z. B. eine ungültige Formatierung, fehlende Daten oder Systemfehler. Um festzustellen, warum der Stapel fehlgeschlagen ist, müssen Sie den Stapel mit der [Data Ingestion Service API][Data Ingestion Service] abrufen und die zugehörigen Details Ansicht geben. Ausführliche Anweisungen zum Abrufen eines fehlgeschlagenen Stapels finden Sie im Handbuch zum [Abrufen fehlgeschlagener Stapel](../quality/retrieve-failed-batches.md).
+There are a variety of reasons why batch ingestion may fail to reach the [!DNL Data Lake], such as invalid formatting, missing data, or system errors. To determine why your batch failed, you must retrieve the batch using the [!DNL Data Ingestion Service API] and view its details. Ausführliche Anweisungen zum Abrufen eines fehlgeschlagenen Batches finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
-### Wie parse ich die für die API-Anforderung zurückgegebene Antwort?
+### Wie analysiere ich die Antwort, die für die API-Anfrage zurückgegeben wurde?
 
-Sie können eine Antwort analysieren, indem Sie zunächst den Server-Antwortcode überprüfen, um festzustellen, ob Ihre Anforderung akzeptiert wurde. Wenn ein erfolgreicher Antwortcode zurückgegeben wird, können Sie das `responses` Array-Objekt überprüfen, um den Status der Erfassungsmethode zu bestimmen.
+Prüfen Sie zunächst den Antwort-Code des Servers, um zu ermitteln, ob Ihre Anfrage akzeptiert wurde. Wenn ein erfolgreicher Antwort-Code zurückgegeben wurde, können Sie als Nächstes das Array-Objekt `responses` prüfen, um den Status der Erfassungsaufgabe zu ermitteln.
 
-Eine erfolgreiche API-Anfrage mit einer einzelnen Meldung gibt den Statuscode 200 zurück. Eine erfolgreiche (oder teilweise erfolgreiche) Batch-Nachrichten-API-Anforderung gibt den Statuscode 207 zurück.
+Eine erfolgreiche API-Anfrage mit einer Nachricht gibt den Status-Code 200 zurück. Eine erfolgreiche (oder teilweise erfolgreiche) API-Anfrage mit Batch-Nachricht gibt den Status-Code 207 zurück.
 
-Die folgende JSON-Datei ist ein Beispielantwortobjekt für eine API-Anforderung mit zwei Meldungen: einer erfolgreich und einer fehlgeschlagen. Meldungen, die erfolgreich streamen, geben eine `xactionId` Eigenschaft zurück. Meldungen, die nicht streamen, geben eine `statusCode` Eigenschaft und eine Antwort `message` mit weiteren Informationen zurück.
+Die folgende JSON ist ein Beispielantwortobjekt für eine API-Anfrage mit zwei Nachrichten: einer erfolgreichen und einer fehlgeschlagenen. Nachrichten, die erfolgreich gestreamt werden, geben eine `xactionId`-Eigenschaft zurück. Nachrichten, die nicht gestreamt werden, geben eine `statusCode`-Eigenschaft und eine Antwort-`message` mit zusätzlichen Informationen zurück.
 
 ```JSON
 {
@@ -94,10 +94,10 @@ Die folgende JSON-Datei ist ein Beispielantwortobjekt für eine API-Anforderung 
 }
 ```
 
-### Warum werden meine gesendeten Nachrichten nicht vom Echtzeit-Kundenservice-Profil empfangen?
+### Warum werden meine gesendeten Nachrichten nicht bei uns empfangen [!DNL Real-time Customer Profile]?
 
-Wenn das Kundenkonto eine Meldung in Echtzeit ablehnt, ist dies höchstwahrscheinlich auf falsche Identitätsinformationen zurückzuführen. Dies kann darauf zurückzuführen sein, dass ein ungültiger Wert oder Namensraum für eine Identität angegeben wurde.
+If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to incorrect identity information. Der Grund dafür kann sein, dass für eine Identität ein ungültiger Wert oder Namespace angegeben wurde.
 
-Es gibt zwei Arten von Identitäts-Namensräumen: Standard und benutzerdefiniert. Wenn Sie benutzerdefinierte Namensraum verwenden, stellen Sie sicher, dass der Namensraum im Identitätsdienst registriert wurde. Weitere Informationen zur Verwendung von Standard- und benutzerdefinierten Namensräumen finden Sie in der Übersicht über den [Identitäts-Namensraum](../../identity-service/namespaces.md) .
+Es gibt zwei Arten von Identitäts-Namespaces: standardmäßige und benutzerdefinierte. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. Weiterführende Informationen zur Verwendung von standardmäßigen und benutzerdefinierten Namespaces finden Sie in der [Übersicht zu Identitäts-Namespaces](../../identity-service/namespaces.md).
 
-Sie können die [Experience Platform-Benutzeroberfläche](https://platform.adobe.com) verwenden, um weitere Informationen darüber anzuzeigen, warum eine Nachricht nicht erfasst werden konnte. Klicken Sie im linken Navigationsbereich auf **Überwachung** und dann auf die Registerkarte _Streaming (Ende-zu-Ende_ -Registerkarte), um die während eines bestimmten Zeitraums gestreamen Meldungsstapel anzuzeigen.
+You can use the [!DNL Experience Platform UI](https://platform.adobe.com) to see more information on why a message failed ingestion. Klicken Sie im linken Navigationsbereich auf **[!UICONTROL Monitoring]** und dann auf den Tab _[!UICONTROL Streaming End-to-End]_, um die in einem bestimmten Zeitraum gestreamten Nachrichten-Batches anzuzeigen.
