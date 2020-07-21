@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Übersicht über die partielle Batchaufnahme der Adobe Experience Platform
+title: Übersicht zur partiellen Batch-Erfassung in Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1243'
-ht-degree: 1%
+source-wordcount: '1237'
+ht-degree: 57%
 
 ---
 
@@ -15,50 +15,50 @@ ht-degree: 1%
 
 # Partielle Batch-Erfassung
 
-Partielle Stapelverarbeitung ist die Fähigkeit, Daten mit Fehlern bis zu einem bestimmten Schwellenwert zu erfassen. Mit dieser Funktion können Benutzer alle korrekten Daten erfolgreich in Adobe Experience Platform aufnehmen, während alle fehlerhaften Daten separat in Batches aufgenommen werden, zusammen mit Details, warum sie ungültig sind.
+Partielle Batch-Erfassung ist die Fähigkeit, Daten zu erfassen, die Fehler enthalten (bis zu einem bestimmten Schwellenwert). Mit dieser Funktion können Benutzer alle korrekten Daten erfolgreich in Adobe Experience Platform erfassen, während alle fehlerhaften Daten in Batches separat verarbeitet werden (zusammen mit Details dazu, warum sie ungültig sind).
 
-Dieses Dokument bietet eine Anleitung zum Verwalten der partiellen Stapelverarbeitung.
+Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfassung.
 
-Darüber hinaus bietet der [Anhang](#appendix) zu diesem Lernprogramm eine Referenz zu Fehlertypen bei der Partiellen Stapelverarbeitung.
+Darüber hinaus beinhaltet der [Anhang](#appendix) zu dieser Anleitung eine Referenz zu Fehlertypen bei der partiellen Batch-Erfassung.
 
 ## Erste Schritte
 
-Dieses Tutorial erfordert ein Arbeitswissen der verschiedenen Adobe Experience Platformen-Services, die mit der teilweisen Stapelverarbeitung verbunden sind. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Diese Anleitung setzt grundlegende Kenntnisse zu den verschiedenen Adobe Experience Platform-Diensten voraus, die mit der partiellen Batch-Erfassung verbunden sind. Bevor Sie mit dieser Anleitung beginnen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-- [Stapelverarbeitung](./overview.md): Die Methode, mit der Daten aus Datendateien wie CSV und Parquet [!DNL Platform] erfasst und gespeichert werden.
-- [Erlebnisdatenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+- [Batch-Erfassung](./overview.md)[!DNL Platform]: Die Methode, mit der Daten aus Datendateien wie CSV und Parquet erfasst und speichert.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Platform] APIs erfolgreich aufrufen zu können.
+The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
-### Lesen von Beispiel-API-Aufrufen
+### Lesehilfe für Beispiel-API-Aufrufe
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur [!DNL Experience Platform] Fehlerbehebung.
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Werte der zu verwendenden Kopfzeilen
 
-Um [!DNL Platform] APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Genehmigung: Träger `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-## Aktivieren eines Stapels für die teilweise Stapelverarbeitung in der API {#enable-api}
+## Enable a batch for partial batch ingestion in the API {#enable-api}
 
 >[!NOTE]
 >
->In diesem Abschnitt wird die Aktivierung eines Stapels für die teilweise Stapelverarbeitung mithilfe der API beschrieben. Anweisungen zur Verwendung der Benutzeroberfläche finden Sie im Schritt Benutzeroberfläche [im Abschnitt Stapel zur teilweisen Stapelverarbeitung](#enable-ui) aktivieren.
+>In diesem Abschnitt wird die Aktivierung eines Stapels für die teilweise Stapelverarbeitung mithilfe der API beschrieben. For instructions on using the UI, please read the [enable a batch for partial batch ingestion in the UI](#enable-ui) step.
 
 Sie können einen neuen Stapel mit aktivierter teilweiser Erfassung erstellen.
 
-Um einen neuen Stapel zu erstellen, führen Sie die Schritte im Entwicklerhandbuch für die [Stapelverarbeitung](./api-overview.md)aus. Nachdem Sie den Schritt Stapel *erstellen* erreicht haben, fügen Sie das folgende Feld im Anforderungstext hinzu:
+Um einen neuen Stapel zu erstellen, führen Sie die Schritte im Entwicklerhandbuch für die [Stapelverarbeitung](./api-overview.md)aus. Once you reach the *Create batch* step, add the following field within the request body:
 
 ```json
 {
@@ -72,10 +72,10 @@ Um einen neuen Stapel zu erstellen, führen Sie die Schritte im Entwicklerhandbu
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `enableErrorDiagnostics` | Ein Flag, mit dem detaillierte Fehlermeldungen zum Stapel generiert [!DNL Platform] werden können. |
-| `partialIngestionPercentage` | Der Prozentsatz der akzeptablen Fehler, bevor der gesamte Stapel fehlschlägt. In diesem Beispiel können also maximal 5 % des Stapels Fehler sein, bevor er fehlschlägt. |
+| `partialIngestionPercentage` | Der Prozentsatz der akzeptablen Fehler, bevor der gesamte Batch fehlschlägt. In diesem Beispiel können also maximal 5 % des Stapels Fehler sein, bevor er fehlschlägt. |
 
 
-## Aktivieren eines Stapels für die teilweise Stapelverarbeitung in der Benutzeroberfläche {#enable-ui}
+## Enable a batch for partial batch ingestion in the UI {#enable-ui}
 
 >[!NOTE]
 >
@@ -85,55 +85,55 @@ Um einen Stapel für die teilweise Erfassung über die [!DNL Platform] Benutzero
 
 ### Neue Quellverbindung erstellen {#new-source}
 
-Um eine neue Quellverbindung zu erstellen, führen Sie die in der Übersicht über die [Quellen](../../sources/home.md)aufgeführten Schritte aus. Nachdem Sie den Schritt für die *[!UICONTROL Datenfelddetails]* erreicht haben, beachten Sie die Felder *[!UICONTROL Partielle Erfassung]* und *[!UICONTROL Fehlerdiagnose]* .
+Um eine neue Quellverbindung zu erstellen, führen Sie die in der Übersicht über die [Quellen](../../sources/home.md)aufgeführten Schritte aus. Once you reach the *[!UICONTROL Dataflow detail]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
+Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
 
-Der Umschalter für die *[!UICONTROL Fehlerdiagnose]* wird nur angezeigt, wenn der Umschalter für die *[!UICONTROL partielle Erfassung]* deaktiviert ist. Mit dieser Funktion können Sie detaillierte Fehlermeldungen [!DNL Platform] zu den erfassten Stapeln generieren. Wenn der Umschalter *[!UICONTROL für die teilweise Erfassung]* aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
 
 ### Vorhandenen Datensatz verwenden {#existing-dataset}
 
-Um einen vorhandenen Datensatz zu verwenden, wählen Sie einen Beginn aus, indem Sie einen Datensatz auswählen. Die Seitenleiste auf der rechten Seite enthält Informationen zum Datensatz.
+Um einen vorhandenen Datensatz zu verwenden, wählen Sie einen Beginn aus, indem Sie einen Datensatz auswählen. Die Seitenleiste rechts enthält Informationen zum Datensatz.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
+Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
 
-Der Umschalter für die *[!UICONTROL Fehlerdiagnose]* wird nur angezeigt, wenn der Umschalter für die *[!UICONTROL partielle Erfassung]* deaktiviert ist. Mit dieser Funktion können Sie detaillierte Fehlermeldungen [!DNL Platform] zu den erfassten Stapeln generieren. Wenn der Umschalter *[!UICONTROL für die teilweise Erfassung]* aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
 
 Jetzt können Sie Daten mit der Schaltfläche **Hinzufügen Daten** hochladen, die dann mit einer teilweisen Erfassung erfasst werden.
 
 ### Verwenden Sie den Fluss &quot;CSV[!UICONTROL zu XDM-Schema]zuordnen&quot; {#map-flow}
 
-Um den Fluss &quot;CSV[!UICONTROL zu XDM-Schema]zuordnen&quot;zu verwenden, führen Sie die im Lernprogramm [CSV-Datei](../tutorials/map-a-csv-file.md)zuordnen aufgeführten Schritte aus. Nachdem Sie den *HinzufügenDatenschritt* erreicht haben, beachten Sie die Felder *[!UICONTROL Partielle Erfassung]* und *[!UICONTROL Fehlerdiagnose]* .
+Um den Fluss &quot;CSV[!UICONTROL zu XDM-Schema]zuordnen&quot;zu verwenden, führen Sie die im Lernprogramm [CSV-Datei](../tutorials/map-a-csv-file.md)zuordnen aufgeführten Schritte aus. Once you reach the *[!UICONTROL Add data]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung einer partiellen Stapelverarbeitung aktivieren oder deaktivieren.
+Mit dem Umschalter *[!UICONTROL Partielle Erfassung]* können Sie die Verwendung der partiellen Batch-Erfassung aktivieren oder deaktivieren.
 
-Der Umschalter für die *[!UICONTROL Fehlerdiagnose]* wird nur angezeigt, wenn der Umschalter für die *[!UICONTROL partielle Erfassung]* deaktiviert ist. Mit dieser Funktion können Sie detaillierte Fehlermeldungen [!DNL Platform] zu den erfassten Stapeln generieren. Wenn der Umschalter *[!UICONTROL für die teilweise Erfassung]* aktiviert ist, wird die erweiterte Fehlerdiagnose automatisch erzwungen.
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+Mit dem *[!UICONTROL Fehlerschwellenwert]* können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
 
-## Abrufen von Fehlern bei der partiellen Stapelverarbeitung {#retrieve-errors}
+## Fehlern bei der partiellen Batch-Erfassung abrufen {#retrieve-errors}
 
-Wenn Stapel Fehler enthalten, müssen Sie Fehlerinformationen zu diesen Fehlern abrufen, damit Sie die Daten erneut erfassen können.
+Wenn Batches Fehler enthalten, müssen Sie Fehlerinformationen zu diesen Fehlern abrufen, um die Daten erneut erfassen zu können.
 
 ### Status prüfen {#check-status}
 
-Um den Status des erfassten Stapels zu überprüfen, müssen Sie die ID des Stapels im Pfad einer GET-Anforderung angeben.
+Um den Status des erfassten Batch zu überprüfen, müssen Sie im Pfad einer GET-Anfrage die Kennung des Batch angeben.
 
 **API-Format**
 
@@ -143,7 +143,7 @@ GET /catalog/batches/{BATCH_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BATCH_ID}` | Der `id` Wert des Stapels, dessen Status Sie überprüfen möchten. |
+| `{BATCH_ID}` | Der `id`-Wert des Batch, dessen Status Sie überprüfen möchten. |
 
 **Anfrage**
 
@@ -157,7 +157,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen zum Status des Stapels zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zum Batch-Status zurück.
 
 ```json
 {
@@ -199,32 +199,32 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 }
 ```
 
-Wenn der Stapel einen Fehler aufweist und die Fehlerdiagnose aktiviert ist, lautet der Status &quot;success&quot;mit weiteren Informationen zum Fehler, der in einer herunterladbaren Fehlerdatei bereitgestellt wird.
+Wenn der Batch einen Fehler aufweist und die Fehlerdiagnose aktiviert ist, lautet der Status „Erfolg“; außerdem werden zusätzliche Informationen zum Fehler in einer herunterladbaren Fehlerdatei bereitgestellt.
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Lernprogramm wurde beschrieben, wie Sie einen Datensatz erstellen oder ändern, um die teilweise Stapelverarbeitung zu aktivieren. Weitere Informationen zur Stapelverarbeitung finden Sie im [Entwicklerhandbuch](./api-overview.md)zur Stapelverarbeitung.
+In dieser Anleitung wurde beschrieben, wie Sie einen Datensatz erstellen oder ändern, um die partielle Batch-Erfassung zu aktivieren. Weiterführende Informationen zur Batch-Erfassung finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](./api-overview.md).
 
-## Fehlertypen bei der Partielle Stapelverarbeitung {#appendix}
+## Fehlertypen bei der partiellen Batch-Erfassung {#appendix}
 
-Bei der Partiellen Stapelverarbeitung gibt es beim Erfassen von Daten vier verschiedene Fehlertypen.
+Die partielle Batch-Erfassung weist beim Erfassen von Daten vier verschiedene Fehlertypen auf.
 
 - [Unlesbare Dateien](#unreadable)
 - [Ungültige Schemas oder Kopfzeilen](#schemas-headers)
-- [Unveränderliche Zeilen](#unparsable)
+- [Nicht analysierbare Zeilen](#unparsable)
 - [Ungültige XDM-Konvertierung](#conversion)
 
 ### Unlesbare Dateien {#unreadable}
 
-Wenn der erfasste Stapel unleserliche Dateien enthält, werden die Fehler des Stapels an den Stapel selbst angehängt. Weitere Informationen zum Abrufen des fehlgeschlagenen Stapels finden Sie im Handbuch zum [Abrufen fehlgeschlagener Stapel](../quality/retrieve-failed-batches.md).
+Wenn der erfasste Batch unlesbare Dateien enthält, werden die Fehler des Batch an den Batch selbst angehängt. Weiterführende Informationen zum Abrufen des fehlgeschlagenen Batch finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
 ### Ungültige Schemas oder Kopfzeilen {#schemas-headers}
 
-Wenn der erfasste Stapel ein ungültiges Schema oder ungültige Header enthält, werden die Stapelfehler auf den Stapel selbst angehängt. Weitere Informationen zum Abrufen des fehlgeschlagenen Stapels finden Sie im Handbuch zum [Abrufen fehlgeschlagener Stapel](../quality/retrieve-failed-batches.md).
+Wenn der erfasste Batch ein ungültiges Schema oder ungültige Kopfzeilen enthält, werden die Fehler des Batch an den Batch selbst angehängt. Weiterführende Informationen zum Abrufen des fehlgeschlagenen Batch finden Sie im Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
-### Unveränderliche Zeilen {#unparsable}
+### Nicht analysierbare Zeilen{#unparsable}
 
-Wenn der erfasste Stapel über nicht trennbare Zeilen verfügt, werden die Fehler des Stapels in einer Datei gespeichert, auf die mithilfe des unten beschriebenen Endpunkts zugegriffen werden kann.
+Wenn der erfasste Batch nicht analysierbare Zeilen aufweist, werden die Fehler des Batch in einer Datei gespeichert, auf die mithilfe des unten beschriebenen Endpunkts zugegriffen werden kann.
 
 **API-Format**
 
@@ -234,7 +234,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BATCH_ID}` | Der `id` Wert des Stapels, aus dem Sie Fehlerinformationen abrufen. |
+| `{BATCH_ID}` | Der `id`-Wert des Batch, aus dem Sie Fehlerdaten abrufen. |
 
 **Anfrage**
 
@@ -248,7 +248,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den nicht trennbaren Zeilen zurückgegeben.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den nicht analysierbaren Zeilen zurückgegeben.
 
 ```json
 {
@@ -263,7 +263,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den nich
 
 ### Ungültige XDM-Konvertierung {#conversion}
 
-Wenn der aufgezeichnete Stapel ungültige XDM-Konvertierungen enthält, werden die Fehler des Stapels in einer Datei gespeichert, auf die über den folgenden Endpunkt zugegriffen werden kann.
+Wenn der erfasste Batch ungültige XDM-Konvertierungen enthält, werden die Fehler des Batch in einer Datei gespeichert, auf die über den folgenden Endpunkt zugegriffen werden kann.
 
 **API-Format**
 
@@ -273,7 +273,7 @@ GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BATCH_ID}` | Der `id` Wert des Stapels, aus dem Sie Fehlerinformationen abrufen. |
+| `{BATCH_ID}` | Der `id`-Wert des Batch, aus dem Sie Fehlerdaten abrufen. |
 
 **Anfrage**
 
@@ -287,7 +287,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zu den Fehlern bei der XDM-Konvertierung zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den Fehlern bei der XDM-Konvertierung zurück.
 
 ```json
 {
