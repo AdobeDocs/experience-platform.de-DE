@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erfüllen von Opt-outs
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 65%
+source-wordcount: '945'
+ht-degree: 62%
 
 ---
 
@@ -68,13 +68,13 @@ Das [!DNL Profile Privacy] Mixin enthält die folgenden Felder:
 
 To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
 
-### Profilvoreinstellungsdetails
+### [!DNL Profile Preferences Details]
 
-Das Profilvoreinstellungsdetails-Mixin enthält mehrere Felder, die Voreinstellungen für Kundenprofile darstellen (z. B. E-Mail-Format, bevorzugte Sprache und Zeitzone). In einem der Felder, die in diesem Mixin enthalten sind, erlaubt „OptInOut“ (`optInOut`) das Festlegen von Opt-out-Werten für einzelne Kanäle.
+The [!DNL Profile Preferences Details] mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). In einem der Felder, die in diesem Mixin enthalten sind, erlaubt „OptInOut“ (`optInOut`) das Festlegen von Opt-out-Werten für einzelne Kanäle.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-Das Profilvoreinstellungsdetails-Mixin enthält die folgenden Felder bezüglich Opt-outs:
+Das [!DNL Profile Preferences Details] Mixin enthält die folgenden Felder zum Ausschluss von der Teilnahme:
 
 - OptInOut (`optInOut`): Ein Objekt, bei dem jeder Schlüssel einen gültigen und bekannten URI für einen Kommunikationskanal und den aktiven Status des Opt-outs für jeden Kanal darstellt. Jeder Kanal kann einen von vier möglichen Werten haben:
    - Nicht angegeben (`not_provided`): Für diesen Kanal wurde keine Opt-out-Anfrage gesendet.
