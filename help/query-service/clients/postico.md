@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Verbindung mit Postico
+title: Mit Postico verbinden
 topic: connect
 translation-type: tm+mt
-source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '24'
-ht-degree: 0%
+source-wordcount: '22'
+ht-degree: 27%
 
 ---
 
 
-# Verbindung mit Postico (Mac)
+# Connect with [!DNL Postico] (Mac)
 
-Als Backup-Client können Mac-Benutzer Post auch von [https://eggerapps.at/postico/](https://eggerapps.at/postico/)installieren.
+As a backup client, Mac users can also install [!DNL Postico] from [https://eggerapps.at/postico/](https://eggerapps.at/postico/).
