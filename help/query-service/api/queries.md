@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Entwicklerhandbuch für Abfrage Service
+title: Entwicklerhandbuch für Query Service
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 2%
+source-wordcount: '645'
+ht-degree: 34%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 ## Beispiel-API-Aufrufe
 
-In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des `/queries` Endpunkts in der Abfrage Service API durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranforderung mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+The following sections walk through calls you can make using the `/queries` endpoint in the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Eine Liste von Abfragen abrufen
 
-Sie können eine Liste aller Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anforderung an den `/queries` Endpunkt senden.
+You can retrieve a list of all queries for your IMS Organization by making a GET request to the `/queries` endpoint.
 
 **API-Format**
 
@@ -29,7 +29,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Optional*) Dem Anforderungspfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, die durch das kaufmännische Und (`&`) voneinander getrennt werden. Die verfügbaren Parameter sind unten aufgeführt.
+- `{QUERY_PARAMETERS}`: (*Optional*) Ergänzende Parameter für den Anfragepfad, die zur Konfiguration der in der Antwort zurückgegebenen Ergebnisse dienen. Die Angabe mehrere Parameter ist ebenfalls möglich. Trennen Sie sie dazu unter Verwendung des kaufmännischen Und-Zeichens (`&`) voneinander. Die verfügbaren Parameter sind unten aufgeführt.
 
 **Abfrage**
 
@@ -37,10 +37,10 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfragen für die Auflistung
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `orderby` | Gibt das Feld an, in dem die Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. Die Ergebnisse `orderby=created` werden beispielsweise in aufsteigender Reihenfolge sortiert. Durch Hinzufügen eines `-` vor dem Erstellen (`orderby=-created`) werden Elemente in absteigender Reihenfolge sortiert. |
-| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die in einer Seite enthalten sind. (*Default value: 20*) |
-| `start` | Verschiebt die Liste der Antwort mit einer nullbasierten Nummerierung. Beispielsweise `start=2` gibt eine Liste ab der dritten aufgelisteten Abfrage zurück. (*Default value: 0*) |
-| `property` | Filtern Sie die Ergebnisse nach Feldern. Die Filter **müssen** HTML-Escape-Zeichen sein. Kommas werden verwendet, um mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state`und `id`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `>=` (größer gleich), `<=` (kleiner gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). Gibt beispielsweise alle Abfragen mit der angegebenen ID zurück. `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` |
+| `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Unterstützte Felder sind `created` und `updated`. `orderby=created` beispielsweise wird Ergebnisse in aufsteigender Reihenfolge sortieren. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente in absteigender Reihenfolge sortiert. |
+| `limit` | Gibt die Seitengrößenbeschränkung an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
+| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste ab der dritten aufgeführten Abfrage zurück. (*Standardwert: 0*) |
+| `property` | Filtern Sie Ergebnisse anhand von Feldern. Die Filter **müssen** HTML-Escape-Zeichen aufweisen. Kommas dienen dazu, um mehrere Filter zu kombinieren. The supported fields are `created`, `updated`, `state`, and `id`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `>=` (größer gleich), `<=` (kleiner gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). Gibt beispielsweise alle Abfragen mit der angegebenen ID zurück. `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` |
 | `excludeSoftDeleted` | Gibt an, ob eine Abfrage, die weich gelöscht wurde, einbezogen werden soll. Beispielsweise `excludeSoftDeleted=false` werden **auch** gelöschte Abfragen einbezogen. (*Boolescher Wert, Standardwert: true*) |
 | `excludeHidden` | Gibt an, ob nicht vom Benutzer gesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, werden nicht vom Benutzer gesteuerte Abfragen wie CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen **einbezogen** . (*Boolescher Wert, Standardwert: true*) |
 
@@ -119,7 +119,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Abfragen für
 
 ### Eine Abfrage erstellen
 
-Sie können eine neue Abfrage erstellen, indem Sie eine POST-Anforderung an den `/queries` Endpunkt senden.
+You can create a new query by making a POST request to the `/queries` endpoint.
 
 **API-Format**
 
@@ -198,11 +198,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer
 
 >[!NOTE]
 >
->Mit dem Wert von können Sie Ihre erstellte Abfrage `_links.cancel`[abbrechen](#cancel-a-query).
+>You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
 ### Abrufen einer Abfrage nach ID
 
-Sie können detaillierte Informationen zu einer bestimmten Abfrage abrufen, indem Sie eine GET-Anforderung an den `/queries` Endpunkt senden und den `id` Wert der Abfrage im Anforderungspfad angeben.
+You can retrieve detailed information about a specific query by making a GET request to the `/queries` endpoint and providing the query&#39;s `id` value in the request path.
 
 **API-Format**
 
@@ -212,7 +212,7 @@ GET /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Der `id` Wert der Abfrage, die Sie abrufen möchten. |
+| `{QUERY_ID}` | The `id` value of the query you want to retrieve. |
 
 **Anfrage**
 
@@ -269,11 +269,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 >[!NOTE]
 >
->Mit dem Wert von können Sie Ihre erstellte Abfrage `_links.cancel`[abbrechen](#cancel-a-query).
+>You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
 ### Abfrage abbrechen
 
-Sie können das Löschen einer bestimmten Abfrage anfordern, indem Sie eine PATCH-Anforderung an den `/queries` Endpunkt senden und den `id` Wert der Abfrage im Anforderungspfad angeben.
+You can request to delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query&#39;s `id` value in the request path.
 
 **API-Format**
 
@@ -283,12 +283,12 @@ PATCH /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Der `id` Wert der Abfrage, die Sie abbrechen möchten. |
+| `{QUERY_ID}` | The `id` value of the query you want to cancel. |
 
 
 **Anfrage**
 
-Diese API-Anforderung verwendet die JSON Patch-Syntax für die Nutzlast. Weitere Informationen zur Funktionsweise von JSON Patch finden Sie im Dokument API-Grundlagen.
+Diese API-Anfrage nutzt für die Payload die JSON Patch-Syntax. Weiterführende Informationen zur Funktionsweise von JSON Patch finden Sie im Dokument zu den API-Grundlagen.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
@@ -308,7 +308,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird der HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurückgegeben:
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurück:
 
 ```json
 {
