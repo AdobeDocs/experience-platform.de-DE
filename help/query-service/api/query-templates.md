@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Entwicklerhandbuch für Abfrage Service
+title: Entwicklerhandbuch für Query Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 3%
+source-wordcount: '639'
+ht-degree: 94%
 
 ---
 
 
-# Abfrage-Vorlagen
+# Abfragevorlagen
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie wissen, welche Header verwendet werden sollen, können Sie mit dem Aufrufen der Abfrage Service API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der Abfrage Service API durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranforderung mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-### Abrufen einer Liste von Vorlagen für Abfragen
+### Liste von Abfragevorlagen abrufen
 
-Sie können eine Liste aller Vorlagen für Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anforderung an den `/query-templates` Endpunkt senden.
+Sie können eine Liste aller Abfragevorlagen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/query-templates`-Endpunkt senden.
 
 **API-Format**
 
@@ -31,22 +31,22 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Optional*) Dem Anforderungspfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, die durch das kaufmännische Und (`&`) voneinander getrennt werden. Die verfügbaren Parameter sind unten aufgeführt. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Dem Anfragepfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`). Die verfügbaren Parameter sind unten aufgeführt. |
 
-**Abfrage**
+**Abfrageparameter**
 
-Im Folgenden finden Sie eine Liste der verfügbaren Abfragen zur Auflistung von Vorlagen für Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Vorlagen zur Abfrage abgerufen.
+Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zum Auflisten von Abfragevorlagen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Abfragevorlagen abgerufen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `orderby` | Gibt das Feld an, in dem die Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. Die Ergebnisse `orderby=created` werden beispielsweise in aufsteigender Reihenfolge sortiert. Durch Hinzufügen eines `-` vor dem Erstellen (`orderby=-created`) werden Elemente in absteigender Reihenfolge sortiert. |
-| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die in einer Seite enthalten sind. (*Default value: 20*) |
-| `start` | Verschiebt die Liste der Antwort mit einer nullbasierten Nummerierung. Beispielsweise `start=2` gibt eine Liste ab der dritten aufgelisteten Abfrage zurück. (*Default value: 0*) |
-| `property` | Filtern Sie die Ergebnisse nach Feldern. Die Filter **müssen** HTML-Escape-Zeichen sein. Kommas werden verwendet, um mehrere Filter zu kombinieren. Die unterstützten Felder sind `name` und `userId`. Der einzige unterstützte Operator ist `==` (gleich). Beispielsweise `name==my_template` werden alle Abfragen-Vorlagen mit dem Namen zurückgegeben `my_template`. |
+| `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Unterstützte Felder sind `created` und `updated`. `orderby=created` beispielsweise wird Ergebnisse in aufsteigender Reihenfolge sortieren. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente in absteigender Reihenfolge sortiert. |
+| `limit` | Gibt die Seitengrößenbeschränkung an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
+| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste ab der dritten aufgeführten Abfrage zurück. (*Standardwert: 0*) |
+| `property` | Filtern Sie Ergebnisse anhand von Feldern. Die Filter **müssen** HTML-Escape-Zeichen aufweisen. Kommas dienen dazu, mehrere Filtersätze miteinander zu kombinieren. Die unterstützten Felder sind `name` und `userId`. Der einzige unterstützte Operator ist `==` (gleich). Beispielsweise gibt `name==my_template` alle Abfragevorlagen mit dem Namen `my_template` zurück. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird die neueste Vorlage für die Abfrage abgerufen, die für Ihr IMS-Unternehmen erstellt wurde.
+Mit der folgenden Anfrage wird die neueste Abfragevorlage abgerufen, die für Ihre IMS-Organisation erstellt wurde.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Abfragen-Vorlagen für die angegebene IMS-Organisation zurück. Die folgende Antwort gibt die neueste Vorlage für die Abfrage zurück, die für Ihr IMS-Unternehmen erstellt wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragevorlagen für die angegebene IMS-Organisation zurück. Die folgende Antwort gibt die neueste Abfragevorlage zurück, die für Ihre IMS-Organisation erstellt wurde.
 
 ```json
 {
@@ -107,11 +107,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Abfragen-Vorl
 
 >[!NOTE]
 >
->Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
+>Sie können den Wert `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
 
-### Erstellen einer Vorlage für eine Abfrage
+### Abfragevorlage erstellen
 
-Sie können eine Vorlage für die Abfrage erstellen, indem Sie eine POST-Anforderung an den `/query-templates` Endpunkt senden.
+Sie können eine Abfragevorlage erstellen, indem Sie eine POST-Anfrage an den `/query-templates`-Endpunkt senden.
 
 **API-Format**
 
@@ -136,11 +136,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `sql` | Die SQL-Abfrage, die Sie erstellen möchten. |
-| `name` | Der Name der Vorlage &quot;Abfrage&quot;. |
+| `name` | Der Name der Abfragevorlage. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zur neu erstellten Vorlage für die Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zur neu erstellten Abfragevorlage zurück.
 
 ```json
 {
@@ -170,11 +170,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zur neu 
 
 >[!NOTE]
 >
->Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
+>Sie können den Wert `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
 
-### Abrufen einer angegebenen Vorlage für Abfragen
+### Bestimmte Abfragevorlage abrufen
 
-Sie können eine bestimmte Vorlage für die Abfrage abrufen, indem Sie eine GET-Anforderung an den `/query-templates/{TEMPLATE_ID}` Endpunkt senden und die ID der Vorlage für die Abfrage im Anforderungspfad angeben.
+Sie können eine bestimmte Abfragevorlage abrufen, indem Sie eine GET-Anfrage an den `/query-templates/{TEMPLATE_ID}`-Endpunkt senden und im Anfragepfad die Kennung der Abfragevorlage angeben.
 
 **API-Format**
 
@@ -184,7 +184,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | Der `id` Wert der Abfrage-Vorlage, die Sie abrufen möchten. |
+| `{TEMPLATE_ID}` | Der `id`-Wert der Abfragevorlage, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -198,7 +198,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur Vorlage der angegebenen Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen Abfragevorlage zurück.
 
 ```json
 {
@@ -228,11 +228,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur Vorlage der angeg
 
 >[!NOTE]
 >
->Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
+>Sie können den Wert `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
 
-### Aktualisieren einer bestimmten Vorlage für eine Abfrage
+### Bestimmte Abfragevorlage aktualisieren
 
-Sie können eine bestimmte Vorlage für Abfragen aktualisieren, indem Sie eine PUT-Anforderung an den `/query-templates/{TEMPLATE_ID}` Endpunkt senden und die ID der Vorlage für die Abfrage im Anforderungspfad angeben.
+Sie können eine bestimmte Abfragevorlage aktualisieren, indem Sie eine PUT-Anfrage an den `/query-templates/{TEMPLATE_ID}`-Endpunkt senden und im Anfragepfad die Kennung der Abfragevorlage angeben.
 
 **API-Format**
 
@@ -242,13 +242,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | Der `id` Wert der Abfrage-Vorlage, die Sie abrufen möchten. |
+| `{TEMPLATE_ID}` | Der `id`-Wert der Abfragevorlage, die Sie abrufen möchten. |
 
 **Anfrage**
 
 >[!NOTE]
 >
->Für die PUT-Anforderung müssen sowohl das Feld &quot;sql&quot;als auch das Feld &quot;name&quot;ausgefüllt werden. Der aktuelle Inhalt dieser Abfrage-Vorlage wird **überschrieben** .
+>Für die PUT-Anfrage müssen Sie sowohl das Feld „sql“ als auch das Feld „name“ ausfüllen. Dadurch wird der aktuelle Inhalt dieser Abfragevorlage **überschrieben**.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -269,7 +269,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit den aktualisierten Informationen für die Vorlage der angegebenen Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit den aktualisierten Daten zur angegebenen Abfragevorlage zurück.
 
 ```json
 {
@@ -300,11 +300,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit den aktualisiert
 
 >[!NOTE]
 >
->Sie können den Wert von verwenden, `_links.delete` um die Vorlage [Ihrer Abfrage zu](#delete-a-specified-query-template)löschen.
+>Sie können den Wert `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
 
-### Eine angegebene Vorlage für eine Abfrage löschen
+### Bestimmte Abfragevorlage löschen
 
-Sie können eine bestimmte Vorlage für die Abfrage löschen, indem Sie eine DELETE-Anforderung an die Gruppe senden `/query-templates/{TEMPLATE_ID}` und die ID der Abfrage-Vorlage im Anforderungspfad angeben.
+Sie können eine bestimmte Abfragevorlage löschen, indem Sie eine DELETE-Anfrage an `/query-templates/{TEMPLATE_ID}` senden und im Anfragepfad die Kennung der Abfragevorlage angeben.
 
 **API-Format**
 
@@ -314,7 +314,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | Der `id` Wert der Abfrage-Vorlage, die Sie abrufen möchten. |
+| `{TEMPLATE_ID}` | Der `id`-Wert der Abfragevorlage, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -328,7 +328,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurück.
 
 ```json
 {
