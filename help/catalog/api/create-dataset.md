@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Datensatz erstellen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 70%
 
 ---
 
 
 # Datensatz erstellen
 
-Um mit der Katalog-API einen Datensatz zu erstellen, müssen Sie den `$id` Wert des XDM-Schemas (Experience Data Model) kennen, auf dem der Datensatz basieren soll. Sobald Sie über die Schema-ID verfügen, können Sie einen Datensatz erstellen, indem Sie eine POST-Anforderung an den `/datasets` Endpunkt in der Katalog-API senden.
+In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
 
 >[!NOTE]
 >
->In diesem Dokument wird nur die Erstellung eines Datensatzobjekts im Katalog behandelt. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Lernprogramm](../datasets/create.md).
+>This document only covers how to create a dataset object in [!DNL Catalog]. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
 
 **API-Format**
 
@@ -28,7 +28,7 @@ POST /dataSets
 
 **Anfrage**
 
-Die folgende Anforderung erstellt einen Datensatz, der auf ein zuvor definiertes Schema verweist.
+Die folgende Anfrage erstellt einen Datensatz, der auf ein zuvor definiertes Schema verweist.
 
 ```SHELL
 curl -X POST \
@@ -55,15 +55,15 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name des zu erstellenden Datensatzes. |
-| `schemaRef.id` | Der URI- `$id` Wert für das XDM-Schema, auf dem der Datensatz basiert. |
+| `schemaRef.id` | Der URI-`$id`-Wert für das XDM-Schema, auf dem der Datensatz basieren soll. |
 
 >[!NOTE]
 >
->In diesem Beispiel wird das [Parquet](https://parquet.apache.org/documentation/latest/) -Dateiformat für seine `containerFormat` Eigenschaft verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im Entwicklerhandbuch für [Stapelverarbeitung](../../ingestion/batch-ingestion/api-overview.md).
+>In diesem Beispiel wird das [Parquet](https://parquet.apache.org/documentation/latest/)-Dateiformat für die Eigenschaft `containerFormat` verwendet. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und ein Antwortobjekt zurück, das aus einem Array mit der ID des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"`besteht. Die DataSet-ID ist eine schreibgeschützte, systemgenerierte Zeichenfolge, mit der auf den Datensatz in API-Aufrufen verwiesen wird.
+Bei erfolgreicher Anfrage wird der HTTP-Statuscode 201 (Erstellung bestätigt) mit einem Antwortobjekt zurückgegeben, das ein Array mit der ID des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` beinhaltet. Die Datensatzkennung ist eine schreibgeschützte, systemgenerierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird.
 
 ```JSON
 [
