@@ -1,34 +1,34 @@
 ---
 title: Facebook-Ziel
 seo-title: Facebook-Ziel
-description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
-seo-description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
+description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
+seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 79aecf4955507622ac7879c148cdcd23e893dd65
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 1%
+source-wordcount: '652'
+ht-degree: 18%
 
 ---
 
 
-# Facebook-Ziel
+# [!DNL Facebook] Ziel
 
 ## Übersicht {#overview}
 
-Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
+Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
 ![Facebook-Ziel in der CDP-Benutzeroberfläche in Echtzeit](/help/rtcdp/destinations/assets/facebook-destination.png)
 
 ## Nutzungsszenarien
 
-Damit Sie besser verstehen können, wie und wann Sie das Facebook-Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Kunden der Adobe Echtzeit-Kundendatenplattform mit dieser Funktion lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook] Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Adobe-Kunden mit der Echtzeit-Kundendatenplattform mithilfe dieser Funktion lösen können.
 
 
 ### Verwendungsfall Nr. 1
 
 
-Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebot auf Basis ihrer bisherigen Bestellungen zeigen. Der Online-Händler kann E-Mail-Adressen aus seinem eigenen CRM an Adobe Echtzeit-CDP erfassen, Segmente aus eigenen Offlinedaten erstellen und diese Segmente an die Facebook-Social-Plattform senden, um ihre Werbeausgaben zu optimieren.
+Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebot auf Basis ihrer bisherigen Bestellungen zeigen. Der Online-Händler kann E-Mail-Adressen von seinem eigenen CRM an Adobe Echtzeit-CDP erfassen, Segmente aus eigenen Offlinedaten erstellen und diese Segmente an die [!DNL Facebook] Social-Plattform senden, um ihre Werbeausgaben zu optimieren.
 
 
 ### Verwendungsfall Nr. 2
@@ -38,35 +38,35 @@ Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silver und Gold) un
 
 Um sie über soziale Netzwerke hinweg Zielgruppe, können sie die Kundendaten aus ihrem CRM-System in Adobe Echtzeit-CDP einbinden und dabei die E-Mail-Adressen als ID verwenden.
 
-Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das Facebook-Ziel Zielgruppe haben.
+Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das [!DNL Facebook] Ziel Zielgruppe haben können.
 
 ## Zielspezifikationen {#destination-specs}
 
-### Datenverwaltung für Facebook-Ziele {#data-governance}
+### Datenverwaltung für [!DNL Facebook] Ziele {#data-governance}
 
 >[!IMPORTANT]
 >
->Daten, die an Facebook gesendet werden, sollten keine zugefügten Identitäten enthalten. Sie sind für die Erfüllung dieser Verpflichtung verantwortlich und können dies tun, indem Sie sicherstellen, dass Segmente, die für die Aktivierung ausgewählt wurden, keine Heftoption in ihrer Fusionsrichtlinie verwenden. Weitere Informationen zu [Zusammenführungsrichtlinien](/help/profile/ui/merge-policies.md).
+>Daten, die an gesendet werden, [!DNL Facebook] sollten keine gehefteten Identitäten enthalten. Sie sind für die Erfüllung dieser Verpflichtung verantwortlich und können dies tun, indem Sie sicherstellen, dass Segmente, die für die Aktivierung ausgewählt wurden, keine Heftoption in ihrer Fusionsrichtlinie verwenden. Weitere Informationen zu [Zusammenführungsrichtlinien](/help/profile/ui/merge-policies.md).
 
-### Aktivierung {#activation-type}
+### Aktivierungstyp {#activation-type}
 
-**Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den Bezeichnern (Name, Telefonnummer usw.) im Facebook-Ziel verwendet.
+**Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den Bezeichnern (Name, Telefonnummer usw.) verwendet im Facebook-Ziel.
 
 ### Voraussetzungen für Facebook-Konten {#facebook-account-prerequisites}
 
-Bevor Sie Ihre Audiencen an senden können, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen: [!DNL Facebook]
+Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sicherstellen, dass Sie die folgenden Voraussetzungen erfüllen:
 
-1. Für Ihr [!DNL Facebook] Benutzerkonto muss die **[!DNL Manage campaigns]** Berechtigung für das Anzeigenkonto aktiviert sein, das Sie verwenden möchten.
-2. Hinzufügen Sie das **Adobe Experience Cloud** -Geschäftskonto als Werbepartner in Ihrem [!DNL Facebook Ad Account]. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Hinzufügen Partner zu Ihrem Business Manager](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
+1. Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
+2. Fügen Sie das **Adobe Experience Cloud**-Geschäftskonto als Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzu. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Hinzufügen Partner zu Ihrem Business Manager](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
    >[!IMPORTANT]
-   > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung &quot;Kampagnen **verwalten** &quot;aktivieren. Dies ist für die [!DNL Adobe Real-time CDP] Integration erforderlich.
-3. Lesen und unterzeichnen Sie die [!DNL Facebook Custom Audiences] Nutzungsbedingungen. Um das zu tun, gehen Sie zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, wo `accountID` ist Ihr [!DNL Facebook Ad Account ID].
+   > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Dies ist für die [!DNL Adobe Real-time CDP]-Integration erforderlich.
+3. Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Rufen Sie dazu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` auf, wobei `accountID` Ihre [!DNL Facebook Ad Account ID] ist.
 
 ### Anforderungen für das E-Mail-Hashing {#email-hashing-requirements}
 
-Facebook verlangt, dass keine personenbezogenen Daten (PII) klar gesendet werden. Daher müssen die für Facebook aktivierten Audiencen von *Hash* -E-Mail-Adressen abgekoppelt werden. Sie können festlegen, dass E-Mail-Adressen Hash-Adressen verwendet werden, bevor Sie sie in Adobe Experience Platform übernehmen, oder Sie können festlegen, dass E-Mail-Adressen in Experience Platform eindeutig verwendet werden und dass unser Algorithmus sie bei der Aktivierung hash.
+[!DNL Facebook] verlangt, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher [!DNL Facebook] müssen die aktivierten Audiencen von *Hash* -E-Mail-Adressen abgekoppelt werden. Sie können E-Mail-Adressen vor der Eingabe in die Adobe Experience Platform hash, oder Sie können wählen, ob Sie mit E-Mail-Adressen in klarer Experience Platform arbeiten möchten und ob unser Algorithmus sie bei der Aktivierung hash.
 
-Weitere Informationen zum Eingeben von E-Mail-Adressen in Experience Platform finden Sie in der Übersicht über die [Stapelverarbeitung](/help/ingestion/batch-ingestion/overview.md) und in der Übersicht über die [Erfassung](/help/ingestion/streaming-ingestion/overview.md)von Streaming-Adressen.
+Weitere Informationen zum Eingeben von E-Mail-Adressen in der Experience Platform finden Sie in der Übersicht über die [Stapelverarbeitung](/help/ingestion/batch-ingestion/overview.md) und in der Übersicht über die [Erfassung](/help/ingestion/streaming-ingestion/overview.md)des Streamings.
 
 Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Sie sicher, dass folgende Anforderungen erfüllt sind:
 
@@ -80,16 +80,16 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
 
 >[!IMPORTANT]
 >
->Wenn Sie sich dafür entscheiden, keine E-Mail-Adressen zu hash, wird dies von Adobe Echtzeit-CDP für Sie ausgeführt, wenn Sie Segmente in Facebook aktivieren. Wählen Sie im Arbeitsablauf für die [Aktivierung](/help/rtcdp/destinations/activate-destinations.md#activate-data) (siehe Schritt 5) die `Email` Option wie unten für *E-Mail-Adressen* und `Email_LC_SHA256` für *Hash-E-Mail-Adressen* gezeigt.
+>Wenn Sie sich dafür entscheiden, keine E-Mail-Adressen zu hash, wird Adobe CDP dies für Sie tun, wenn Sie Segmente aktivieren, für die Sie [!DNL Facebook]keine Hash-E-Mail-Adressen wünschen. Wählen Sie im Arbeitsablauf für die [Aktivierung](/help/rtcdp/destinations/activate-destinations.md#activate-data) (siehe Schritt 5) die `Email` Option wie unten für *E-Mail-Adressen* und `Email_LC_SHA256` für *Hash-E-Mail-Adressen* gezeigt.
 
 
 ![Hashing bei der Aktivierung](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 ## Mit Ziel verbinden {#connect-destination}
 
-Informationen zum Herstellen einer Verbindung mit dem Facebook-Ziel finden Sie unter Authentifizierungsarbeitsablauf für [Social-Netzwerkziele](/help/rtcdp/destinations/social-network-destinations-workflow.md).
+To connect to the [!DNL Facebook] destination, see [Social network destinations authentication workflow](/help/rtcdp/destinations/social-network-destinations-workflow.md).
 
 
-## Aktivieren von Segmenten auf Facebook {#activate-segments}
+## Activate segments to [!DNL Facebook] {#activate-segments}
 
-For instructions on how to activate segments to Facebook, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
