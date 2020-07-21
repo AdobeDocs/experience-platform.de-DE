@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform  – Versionshinweise
-description: Versionshinweise zur Experience Platform vom 11. März 2020
+title: Adobe Experience Platform – Versionshinweise
+description: Versionshinweise zu Experience Platform vom 11. März 2020
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 8%
+source-wordcount: '848'
+ht-degree: 67%
 
 ---
 
@@ -20,105 +20,105 @@ ht-degree: 8%
 
 Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
 
-* [Data Governance](#governance)
-* [Dateneinbindung](#ingestion)
-* [Ziele](#destinations)
-* [Identitätsdienst](#identity)
-* [Quellen](#sources)
+* [!DNL Data Governance](#governance)
+* [!DNL Data Ingestion](#ingestion)
+* [!DNL Destinations](#destinations)
+* [!DNL Identity Service](#identity)
+* [!DNL Sources](#sources)
 
-## Data Governance {#governance}
+## [!DNL Data Governance] {#governance}
 
-Experience Platform ermöglicht es Firmen, Daten aus mehreren Unternehmenssystemen zusammenzuführen, um Marketingexperten die Identifizierung, das Verständnis und die Interaktion mit Kunden zu erleichtern. Die Experience Platform umfasst eine durchgängige Infrastruktur zur Datenverwaltung, einschließlich Datenbenennung und -durchsetzung (DULE), um die ordnungsgemäße Verwendung der Daten innerhalb der Platform und bei der Freigabe zwischen den Systemen sicherzustellen.
+[!DNL Experience Platform]Mit können Firmen Daten aus mehreren Unternehmenssystemen zusammenführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und binden können. [!DNL Experience Platform] umfasst eine durchgängige Data Governance-Infrastruktur, einschließlich DULE (Data Usage Labeling and Enforcement), um die ordnungsgemäße Nutzung von Daten in und bei der gemeinsamen Nutzung durch verschiedene Systeme sicherzustellen.[!DNL Platform]
 
-Adobe Experience Platform Data Governance ist eine Reihe von Strategien und Technologien zur Verwaltung von Kundendaten und zur Gewährleistung der Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung. Es spielt eine Schlüsselrolle in der Experience Platform auf verschiedenen Ebenen, wie z.B. Katalogisierung, Datennutzungskennzeichnung, Datenzugriffsrichtlinien und Zugriffskontrolle von Daten für Marketingaktionen.
+Adobe Experience Platform [!DNL Data Governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
 **Neue Funktionen**
 
 >[!NOTE]
 >
->Einige der folgenden neuen Funktionen befinden sich derzeit in der Betaphase und stehen nicht allen Benutzern zur Verfügung. Beta-Funktionen können geändert werden.
+>Einige der folgenden neuen Funktionen befinden sich derzeit in der Beta-Phase und stehen nicht allen Benutzern zur Verfügung. Beta-Funktionen können sich ändern.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Automatisierte Durchsetzung von Datenverwendungsrichtlinien für die Echtzeit-Platform von Kundendaten | Datenverwendungsrichtlinien werden jetzt im Arbeitsablauf zum Aktivieren von Daten in Ziele erzwungen. Die Datenverwaltung wird auch eingebettet und erzwungen, wenn Änderungen vorgenommen werden, die sich auf bestehende Aktivierungen auswirken (z. B. Änderungen an den Datenbezeichnungen, Zusammenführungsrichtlinien, Segmentdefinitionen usw.). |
-| Datenleitung zur Durchsetzung | Wenn eine Datenverwendungsrichtlinie in CDP in Echtzeit verletzt wird, zeigt die Benutzeroberfläche eine Benachrichtigung an, die Informationen zur Datenreihenbildung enthält, damit der Benutzer besser verstehen kann, warum die Richtlinien verletzt wurden und was er tun kann, um die Verletzung zu beheben. |
+| Automatisierte Durchsetzung von Datenverwendungsrichtlinien für [!DNL Real-time Customer Data Platform] | Datennutzungsrichtlinien werden jetzt im Workflow zum Aktivieren von Daten für Ziele durchgesetzt. [!DNL Data Governance] wird auch eingebettet und durchgesetzt, wenn Änderungen vorgenommen werden, die sich auf bestehende Aktivierungen auswirken (z. B. Änderungen an den Datenbezeichnungen, Zusammenführungsrichtlinien, Segmentdefinitionen usw.). |
+| Datenherkunft zur Durchsetzung | Wenn eine Datennutzungsrichtlinie in der Echtzeit-Kundendatenplattform verletzt wird, zeigt die Benutzeroberfläche eine Benachrichtigung an, die Informationen zur Datenherkunft enthält, damit der Benutzer besser versteht, warum gegen die Richtlinien verstoßen wurde und wie er den Verstoß beheben kann. |
 
 
 **Bekannte Probleme**
 
-* None
+* Keine
 
-Weitere Informationen zur Datenverwaltung finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md).
+For more information about [!DNL Data Governance], see the [Data Governance overview](../../data-governance/home.md).
 
-## Dateneinbindung {#ingestion}
+## Datenerfassung {#ingestion}
 
-Adobe Experience Platform bietet eine umfangreiche Palette an Funktionen, mit denen Sie alle Datentypen und Latenzzeiten erfassen können. Adobe Experience Platform Data Ingestion bietet mehrere Alternativen zum Erfassen von Daten, einschließlich Batch-APIs, Streaming-APIs, nativen Adobe-Connectors, Data Integration-Partnern oder der Benutzeroberfläche der Adobe Experience Platform.
+Adobe Experience Platform bietet eine Vielzahl von Funktionen, mit denen Daten jeder Art und Latenzzeit erfasst werden können. Adobe Experience Platform [!DNL Data Ingestion] provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 |------- | -----------|
-| Partielle Batch-Erfassung | Partielle Stapelverarbeitung ist die Fähigkeit, Daten mit Fehlern bis zu einem bestimmten Schwellenwert zu erfassen. Mit dieser Funktion können Benutzer alle korrekten Daten erfolgreich in Adobe Experience Platform aufnehmen, während alle falschen Daten separat in Batches aufgenommen werden. Details zu nicht erfolgreichen Stapeln werden hinzugefügt, um zu erklären, warum sie die Validierung nicht bestanden haben. Weitere Informationen zur teilweisen Stapelverarbeitung finden Sie in der Dokumentation zur [partiellen Stapelverarbeitung](../../ingestion/batch-ingestion/partial.md). |
+| Partielle Batch-Erfassung | Partielle Batch-Erfassung ist die Fähigkeit, Daten mit Fehlern bis zu einem bestimmten Schwellenwert zu erfassen. Mit dieser Funktion können Benutzer alle korrekten Daten erfolgreich in Adobe Experience Platform erfassen, während alle fehlerhaften Daten separat gestapelt werden. Zu nicht erfolgreichen Batches werden Details hinzugefügt, um zu erklären, warum sie die Validierung nicht bestanden haben. Weitere Informationen zur partiellen Batch-Erfassung finden Sie in der [Dokumentation zur partiellen Batch-Erfassung](../../ingestion/batch-ingestion/partial.md). |
 
 **Bekannte Probleme**
 
-* None
+* Keine
 
-Weitere Informationen zur Dateneinfügung in die Platform finden Sie in der [Dateneinbettungsdokumentation](../../ingestion/home.md).
+Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Datenerfassungsdokumentation](../../ingestion/home.md).
 
 
 ## Ziele {#destinations}
 
-In der [Adobe Echtzeit-Platform](../../rtcdp/overview.md)von Kundendaten sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten nahtlos für diese  aktivieren.
+In der [Adobe Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
 
 **Neue Ziele**
 
-Es stehen neue Ziele zur Verfügung, an denen Sie Ihre Adobe Experience Platformen aktivieren können. Weitere Informationen finden Sie unter:
+Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform-Daten aktivieren können. Weitere Informationen finden Sie hier:
 
 | Ziel | Beschreibung |
 |--- | ---|
-| Cloud-Speicher-Ziele | Adobe Echtzeit-CDP kann Ihre Segmente jetzt als Datendateien an Ihre Amazon S3- oder SFTP-Cloud-Datenspeicherung-Standorte bereitstellen. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV- oder tabulatorgetrennte Dateien an Ihre internen Systeme senden. |
-| Werbeziele | Die Google-Zielkarte ist jetzt in drei Zielkarten für die drei verschiedenen Google-Plattformen aufgeteilt, die derzeit in Adobe Echtzeit-CDP unterstützt werden: Google Ads, Google Ad Manager, Google Display &amp; Video 360. |
+| Cloud-Speicher-Ziele | Adobe Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV- oder tabulatorgetrennte Dateien an Ihre internen Systeme senden. |
+| Werbeziele | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
-Weitere Informationen finden Sie in der Übersicht über die [Ziele](../../rtcdp/destinations/destinations-overview.md)
+Weitere Informationen finden Sie in [Ziele – Übersicht](../../rtcdp/destinations/destinations-overview.md)
 
-## Identity-Dienst {#identity}
+## [!DNL Identity Service] {#identity}
 
-Die Bereitstellung relevanter digitaler Erlebnisse erfordert ein vollständiges Verständnis Ihres Kunden. Dies wird schwieriger, wenn Ihre Kundendaten über verschiedene Systeme verteilt sind, sodass jeder einzelne Kunde mehrere &quot;Identitäten&quot;zu haben scheint.
+Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird erschwert, wenn Ihre Kundendaten über unterschiedliche Systeme hinweg fragmentiert sind, so dass jeder einzelne Kunde mehrere „Identitäten“ zu haben scheint.
 
-Der Identitätsdienst für Adobe Experience Platformen hilft Ihnen, eine bessere Ansicht Ihres Kundenverhaltens zu erzielen, indem Identitäten zwischen Geräten und Systemen überbrückt werden, sodass Sie in Echtzeit wirkungsvolle persönliche digitale Erlebnisse bereitstellen können.
+Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Verbessertes privates Diagramm | Die Funktion für private Diagramme wurde verbessert, um die Wartezeit bei der Diagrammerstellung von einem wöchentlichen Batch-Prozess auf ein täglich aktualisiertes Diagramm zu reduzieren, sodass Identitäts-Service-Kunden auf aktuellere Identitätsdiagramme und Verknüpfungen zugreifen können. |
+| Verbessertes privates Diagramm | Private Graph functionality has been enhanced to reduce graph generation latency from a weekly batch process to a daily refreshed graph, allowing [!DNL Identity Service] customers to access more up-to-date identity graphs and linkages. |
 
 **Bekannte Probleme**
 
-* None
+* Keine
 
-Weitere Informationen zum Identitätsdienst finden Sie in der Übersicht über den [Identitätsdienst](../../identity-service/home.md).
+For more information about [!DNL Identity Service], see the [Identity Service overview](../../identity-service/home.md).
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie diese Daten mithilfe von Platform-Diensten strukturieren, beschriften und erweitern können. Sie können Daten aus einer Vielzahl von Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Drittanbieter-Software und Ihr CRM-System erfassen.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
-Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie ganz einfach Quellverbindungen für verschiedene Datenanbieter einrichten können. Diese Quellverbindungen ermöglichen Ihnen die Authentifizierung und Verbindung zu externen Datenspeicherung- und CRM-Diensten, die Festlegung von Zeiten für die Erfassungsausführung und die Verwaltung des Datenaufkommens.
+[!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, damit Sie für verschiedene Datenanbieter bequem Quellverbindungen einrichten können. Diese Quellverbindungen ermöglichen Ihnen das Authentifizieren und Verbinden mit externen Speichersystemen und CRM-Diensten, das Festlegen von Zeiten für Erfassungsläufe und das Verwalten des Datendurchsatzes bei der Erfassung.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Veraltete Signale für den Adobe Audience Manager-Anschluss | Daten auf Signalebene von Audience Manager werden nicht mehr gesendet. Beachten Sie, dass die Segmentmitgliedschaft für Eigenschaften und Segmente weiterhin einbezogen wird. Infolge dieser Änderung werden keine eingehenden Datensätze mehr generiert. |
-| Umbenannte Datensätze | Von Audience Manager Connector erstellte Datensätze enthalten aktualisierte Namen und Beschreibungen. |
-| Umschalten zwischen Profil und Audience Manager aktivieren | Der Umschalter für Profile kann aktiviert oder deaktiviert werden, um den Datensatz für Echtzeit-Kundendaten-Profil zu bewerben. Umschalten ist standardmäßig aktiviert. |
-| Benutzeroberflächenunterstützung für Cloud-Datenspeicherung-Systeme | Neuer Quell-Connector für Azurblauer Data Lake Datenspeicherung Gen2 in der Benutzeroberfläche. |
-| Benutzeroberflächenunterstützung für CRM-Systeme | Neuer Quell-Connector für HubSpot, Salesforce Service Cloud und ServiceNow in der Benutzeroberfläche. |
-| Benutzeroberflächenunterstützung für Datenbanksysteme | Neuer Quell-Connector für AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server und MySQL in der Benutzeroberfläche. |
+| Veraltete Signale für Adobe Audience Manager-Connector | Daten auf Signalebene von Audience Manager werden nicht mehr gesendet. Beachten Sie, dass die Segmentzugehörigkeit für Eigenschaften und Segmente weiterhin enthalten ist. Infolge dieser Änderung werden keine eingehenden Datensätze mehr generiert. |
+| Umbenannte Datensätze | Vom Audience Manager-Connector erstellte Datensätze erhalten aktualisierte Namen und Beschreibungen. |
+| Enable [!DNL Profile] toggle in Audience Manger | [!DNL Profile] kann aktiviert oder deaktiviert werden, um DataSet zu bewerben [!DNL Real-time Customer Profile]. Die Umschaltung ist standardmäßig aktiviert. |
+| Benutzeroberflächenunterstützung für Cloud-Speichersysteme | New source connector for [!DNL Azure Data Lake Storage Gen2] in the UI. |
+| Benutzeroberflächenunterstützung für CRM-Systeme | New source connector for [!DNL HubSpot], [!DNL Salesforce Service Cloud], and [!DNL ServiceNow] in the UI. |
+| Benutzeroberflächenunterstützung für Datenbanksysteme | New source connector for [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server], and [!DNL MySQL] in the UI. |
 
 **Bekannte Probleme**
 
-* None
+* Keine
 
-Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
