@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Datensatz erstellen
+title: Erstellen eines Datensatzes
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a25ca22fb8ec9eb95f74e4fd76a7f18e87343085
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 4%
+source-wordcount: '86'
+ht-degree: 100%
 
 ---
 
 
-# Stapel erstellen
+# Erstellen eines Batches
 
-Damit ein Datensatz Daten erfassen kann, muss ihm ein Stapel zugeordnet sein. Mithilfe des `id` Werts eines vorhandenen Datensatzes können Sie einen Stapel erstellen, indem Sie eine POST-Anforderung an den `/batches` Endpunkt in der Katalog-API senden.
+Damit in einem Datensatz Daten aufgenommen werden können, muss ihm ein Batch zugeordnet werden. Sie können mithilfe des Werts für `id` eines vorhandenen Datensatzes einen Batch erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/batches` in der Service API senden.[!DNL Catalog]
 
 **API-Format**
 
@@ -39,11 +39,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `datasetId` | Der Datensatz, mit `id` dem der Stapel verknüpft wird. |
+| `datasetId` | Die `id` des Datensatzes, dem der Batch zugeordnet wird. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und ein Antwortobjekt mit Details zum neu erstellten Stapel zurückgegeben, einschließlich einer `id`schreibgeschützten, vom System erstellten Zeichenfolge.
+Bei erfolgreicher Antwort wird der HTTP-Statuscode 201 (Erstellung bestätigt) mit einem Antwortobjekt zurückgegeben, das den neu erstellten Batch einschließlich seiner `id`, einer schreibgeschützten, vom System generierten Zeichenfolge, beinhaltet.
 
 ```JSON
 {
