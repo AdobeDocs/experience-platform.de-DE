@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Verbindung mit Tableau
+title: Verbinden mit Tableau
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 2%
+source-wordcount: '74'
+ht-degree: 31%
 
 ---
 
 
-# Verbindung mit Tableau
+# Connect with [!DNL Tableau]
 
-Installieren Sie Tableau, falls noch nicht installiert.
+Install [!DNL Tableau], if it is not already installed.
 
 >[!NOTE]
 >
->Eine 14-tägige Testversion von &quot;Tableau Desktop&quot; [finden Sie hier](https://www.tableau.com/products/desktop/download).
+>You can get a 14-day trial of &quot;[!DNL Tableau] Desktop&quot; [here](https://www.tableau.com/products/desktop/download).
 >    
-> Die Verbindung mit Abfrage Service `2018.1.2 (20181.18.0615.1128 64 bit)` wurde erfolgreich hergestellt.
+> The version `2018.1.2 (20181.18.0615.1128 64 bit)` has been successful in connecting to [!DNL Query Service].
 
-Führen Sie Tableau aus und klicken Sie im Eröffnungsbildschirm auf , um eine Postgres-Verbindung zu öffnen.
+Run [!DNL Tableau], and on the opening screen click to open a [!DNL Postgres] connection.
 
 ![Bild](../images/clients/tableau/open-connection.png)
 
-Kopieren Sie `Host, Port, Database, Username, Password` von der Seite &quot; **Connect BI Tools** &quot;der Benutzeroberfläche der Platform einzeln in die entsprechenden Tableau-Felder.
+Individually copy `Host, Port, Database, Username, Password` from the [!DNL Platform] UI&#39;s **[!UICONTROL Connect BI Tools]** page into the corresponding Tableau fields.
 
-Vergewissern Sie sich, dass Sie das Feld **SSL Erforderlich** markiert haben, bevor Sie versuchen, eine Verbindung herzustellen.
+Vergewissern Sie sich, dass Sie das Kontrollkästchen **[!UICONTROL SSL erforderlich]** aktiviert haben, bevor Sie versuchen, eine Verbindung herzustellen.
 
 ![Bild](../images/clients/tableau/ssl-required.png)
