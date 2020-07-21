@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Abfragen
+title: Beispielabfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 1%
+source-wordcount: '862'
+ht-degree: 88%
 
 ---
 
 
-# Beispieldaten für Abfragen für Adobe Analytics
+# Beispielabfragen für Adobe Analytics-Daten
 
-Daten aus ausgewählten Adobe Analytics-Report Suites werden in XDM ExperienceEvents umgewandelt und als Datensätze in Adobe Experience Platform integriert. This document outlines a number of use cases where Adobe Experience Platform Query Service makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to XDM ExperienceEvents.
+Data from selected Adobe Analytics report suites is transformed into XDM [!DNL ExperienceEvents] and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform [!DNL Query Service] makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to XDM [!DNL ExperienceEvents].
 
 ## Erste Schritte
 
-The SQL examples throughout this document require you to edit the SQL and fill in the expected parameters for your queries based on the dataset, eVar, event, or time frame you are interested in evaluating. Provide parameters wherever you see `{ }` in the SQL examples that follow.
+Für die SQL-Beispiele in diesem Dokument müssen Sie SQL bearbeiten und die erwarteten Parameter für Ihre Abfragen entsprechend dem Datensatz, der eVar, dem Ereignis oder dem Zeitrahmen ausfüllen, den Sie bewerten möchten. Geben Sie Parameter an, wo immer Sie `{ }` in den folgenden SQL-Beispielen sehen.
 
-## Commonly used SQL examples
+## Häufig verwendete SQL-Beispiele
 
-### Hourly visitor count for a given day
+### Stündliche Besucherzahl für einen bestimmten Tag
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
@@ -36,7 +36,7 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
-### Top 10 viewed pages for a given day
+### Top 10 der angezeigten Seiten für einen bestimmten Tag
 
 ```sql
 SELECT web.webpagedetails.name AS Page_Name, 
@@ -50,7 +50,7 @@ ORDER BY page_views DESC
 LIMIT  10;
 ```
 
-### Top 10 most active users
+### Top 10 der aktivsten Benutzer
 
 ```sql
 SELECT enduserids._experience.aaid.id AS aaid, 
@@ -64,7 +64,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### Top 10 cities by user activity
+### Top 10 der Städte nach Benutzeraktivität
 
 ```sql
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
@@ -78,7 +78,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### Top 10 viewed products
+### Top 10 der angezeigten Produkte
 
 ```sql
 SELECT Product_SKU,
@@ -95,7 +95,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-### Top 10 total order revenue
+### Top 10 des Gesamtbestellumsatzes
 
 ```sql
 SELECT Purchase_ID, 
@@ -112,7 +112,7 @@ ORDER BY total_order_revenue DESC
 LIMIT  10;
 ```
 
-### Ereignis nach Tag
+### Anzahl der Ereignisse nach Tag
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
@@ -129,9 +129,9 @@ ORDER BY Hour;
 
 ## Merchandising-Variablen (Produktsyntax)
 
-In Adobe Analytics können benutzerspezifische Daten auf Produktebene über speziell konfigurierte Variablen namens &quot;Merchandising-Variablen&quot;erfasst werden. Diese basieren entweder auf einer eVar oder einem benutzerspezifischen Ereignis. Der Unterschied zwischen diesen Variablen und ihrer standardmäßigen Verwendung besteht darin, dass sie für jedes Produkt, das beim Treffer gefunden wird, einen separaten Wert darstellen und nicht nur einen einzelnen Wert für den Treffer. Diese Variablen werden als &quot;Produktsyntax-Merchandising-Variablen&quot;bezeichnet. Dies ermöglicht die Erfassung von Informationen, wie z.B. einen &quot;Rabatt Betrag&quot; pro Produkt oder Informationen über die &quot;Position auf der Seite&quot; des Produkts in den Suchergebnissen des Kunden.
+In Adobe Analytics können benutzerdefinierte Daten auf Produktebene über speziell konfigurierte Variablen namens „Merchandising-Variablen“ erfasst werden. Diese basieren entweder auf einer eVar oder einem benutzerspezifischen Ereignis. Der Unterschied zwischen diesen Variablen und ihrer Standardverwendung besteht darin, dass sie einen separaten Wert für jedes über den Treffer gefundene Produkt und nicht nur einen einzelnen Wert für den Treffer darstellen. Diese Variablen werden als Produktsyntax-Merchandising-Variablen bezeichnet. Dies ermöglicht die Erfassung von Informationen, wie z. B. einen „Rabattbetrag“ pro Produkt oder Informationen über die „Position auf der Seite“ des Produkts, in den Suchergebnissen des Kunden.
 
-Im Folgenden finden Sie die XDM-Felder, um auf die Merchandising-Variablen in Ihrem Analytics-Datensatz zuzugreifen:
+Here are the XDM fields to access the merchandising variables in your [!DNL Analytics] dataset:
 
 ### eVars
 
@@ -139,7 +139,7 @@ Im Folgenden finden Sie die XDM-Felder, um auf die Merchandising-Variablen in Ih
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-Dabei `[#]` ist ein Array-Index und `evar#` die spezifische eVar-Variable.
+Dabei ist `[#]` ein Array-Index und `evar#` die spezifische eVar-Variable.
 
 ### Benutzerspezifische Ereignisse
 
@@ -147,11 +147,11 @@ Dabei `[#]` ist ein Array-Index und `evar#` die spezifische eVar-Variable.
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-Hierbei `[#]` handelt es sich um einen Array-Index und `event#` die spezifische Variable für benutzerspezifische Ereignis.
+Dabei ist `[#]` ein Array-Index und `event#` die spezifische Variable für das benutzerspezifische Ereignis.
 
-### Abfragen
+### Beispielabfragen
 
-Im Folgenden finden Sie eine Abfrage, die eine Merchandising-eVar und ein Ereignis für das erste in der `productListItems`.
+Die Beispielabfrage hier gibt eine Merchandising-eVar und ein Ereignis für das erste Produkt zurück, das in `productListItems` gefunden wurde.
 
 ```sql
 SELECT
@@ -165,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-Diese nächste Abfrage &#39;explodiert&#39; die `productListItems` und gibt jede Merchandising eVar und jedes Ereignis pro Produkt zurück. Das `_id` Feld wird einbezogen, um die Beziehung zum ursprünglichen Treffer anzuzeigen. Der `_id` Wert ist ein eindeutiger Primärschlüssel im ExperienceEvent-Datensatz.
+Diese nächste Abfrage schlüsselt die `productListItems` auf und gibt eine Merchandising-eVar und ein Ereignis pro Produkt zurück. Das `_id`-Feld ist enthalten, um die Beziehung zum ursprünglichen Treffer anzuzeigen. The `_id` value is a unique primary key in the [!DNL ExperienceEvent] dataset.
 
 ```sql
 SELECT
@@ -185,38 +185,38 @@ FROM (
 LIMIT 20
 ```
 
-### Allgemeiner Fehler bei der Implementierung der Beispiel-Abfragen
+### Häufige Fehler bei der Implementierung der Beispielabfragen
 
-Der Fehler &quot;Kein solches strukturiertes Feld&quot;wird angezeigt, wenn Sie versuchen, ein Feld abzurufen, das in Ihrem aktuellen Datensatz nicht vorhanden ist. Bewerten Sie den in der Fehlermeldung zurückgegebenen Grund, um ein verfügbares Feld zu identifizieren und aktualisieren Sie dann Ihre Abfrage und führen Sie sie erneut aus.
+Der Fehler „No such struct field“ (Kein solches Strukturfeld) tritt auf, wenn Sie versuchen, ein Feld abzurufen, das in Ihrem aktuellen Datensatz nicht vorhanden ist. Werten Sie den in der Fehlermeldung zurückgegebenen Grund aus, um ein verfügbares Feld zu identifizieren. Aktualisieren Sie dann Ihre Abfrage und führen Sie sie erneut aus.
 
 ```
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
-## Merchandising-Variablen (Konvertierungssyntax)
+## Merchandising-Variablen (Konversionssyntax)
 
-Ein anderer Typ einer Merchandising-Variablen in Adobe Analytics ist die Konvertierungssyntax. With Product Syntax the value is collected at the same time as the product but this requires the data to be present on the same page. Es gibt Szenarien, in denen die Daten auf einer Seite vor der Konvertierung oder dem Ereignis von Interesse für das Produkt auftauchen. Betrachten Sie z. B. den Anwendungsfall des Berichte &quot;Produktsuchmethode&quot;.
+Ein anderer Typ einer Merchandising-Variablen in Adobe Analytics ist die Konversionssyntax. Bei der Produktsyntax wird der Wert gleichzeitig mit dem Produkt erfasst. Dazu müssen die Daten jedoch auf derselben Seite vorhanden sein. Es gibt Szenarien, in denen die Daten auf einer Seite erscheinen, bevor es zu der/dem mit dem Produkt zusammenhängenden Konversion/Ereignis kommt. Betrachten Sie beispielsweise den Anwendungsfall für die Berichte zur Produktsuchmethode.
 
-1. Ein Benutzer führt eine interne Suche nach &quot;Winterhut&quot;durch, wodurch die für die Konversionssyntax aktivierte Merchandising eVar6 auf &quot;Interne Suche:Winterhut&quot;gesetzt wird
-2. Der Benutzer klickt auf &quot;Waffelmütze&quot; und landet auf der Produktdetailseite.\
-   a. Die Landung hier löst ein `Product View` Ereignis für die &quot;Waffelmütze&quot; für $12.99 aus.\
-   b. Da `Product View` das Produkt &quot;Waffelmütze&quot; als Binding-Ereignis konfiguriert ist, ist es nun an den eVar6-Wert von &quot;internal search:winter hat&quot; gebunden. Jedes Mal, wenn das Produkt &quot;Waffelmütze&quot;gesammelt wird, wird es mit &quot;Interne Suche:Winterhut&quot;verknüpft, bis entweder (1) die Ablaufeinstellung erreicht ist oder (2) ein neuer eVar6-Wert festgelegt wird und das Binding-Ereignis mit diesem Produkt erneut auftritt.
-3. Der Benutzer fügt das Produkt zum Warenkorb hinzu und löst das `Cart Add` Ereignis aus.
-4. Der Benutzer führt eine weitere interne Suche nach &quot;Summer Shirt&quot;durch, wodurch die Konversionssyntax für Merchandising eVar6 auf &quot;internal search:Summer shirt&quot;gesetzt wird.
-5. The user click on &quot;sporty t-shirt&quot; and lands on the product detail page.\
-   a. Die Landung hier feuert ein `Product View` Ereignis für &quot;sportliches T-Shirt für $19.99.\
-   b. Das `Product View` Ereignis ist immer noch unser Binding-Ereignis. Das Produkt &quot;sporty t-t-shirt&quot; ist nun an den eVar6-Wert von &quot;internal search:Summer shirt&quot; gebunden und das frühere Produkt &quot;Waffle Bean&quot; ist immer noch an den eVar6-Wert von &quot;internal search:Waffle Bee&quot; gebunden.
-6. The user adds the product to their cart, firing the `Cart Add` event.
+1. Ein Benutzer führt eine interne Suche nach „Wintermütze“ durch, wodurch die für die Konversionssyntax aktivierte Merchandising-eVar6 auf „Interne Suche:Wintermütze“ gesetzt wird.
+2. Der Benutzer klickt auf „Waffelmütze“ und wird zur Produktdetailseite weitergeleitet.\
+   a. Mit dem Öffnen der Seite wird ein `Product View`-Ereignis für die „Waffelmütze“ für $12,99 ausgelöst.\
+   b. Da `Product View` als bindendes Ereignis konfiguriert ist, ist das Produkt „Waffelmütze“ jetzt an den eVar6-Wert von „Interne Suche:Wintermütze“ gebunden. Jedes Mal, wenn das Produkt „Waffelmütze“ gesammelt wird, wird es mit „Interne Suche:Wintermütze“ verknüpft, bis entweder (1) die Ablaufeinstellung erreicht ist oder (2) ein neuer eVar6-Wert festgelegt wird und das Binding-Ereignis mit diesem Produkt erneut auftritt.
+3. Der Benutzer fügt das Produkt zum Warenkorb hinzu und löst das `Cart Add`-Ereignis aus.
+4. Der Benutzer führt eine weitere interne Suche nach „Sommerhemd“ durch, wodurch die Konversionssyntax für Merchandising-eVar6 auf „Interne Suche:Sommerhemd“ gesetzt wird.
+5. Der Benutzer klickt auf „Sportliches T-Shirt“ und wird zur Produktdetailseite weitergeleitet.\
+   a. Mit dem Öffnen der Seite wird ein `Product View`-Ereignis für das „Sportliche T-Shirt“ für $19,99 ausgelöst.\
+   b. Das `Product View`-Ereignis ist immer noch unser Binding-Ereignis. Das Produkt „Sportliches T-Short“ ist nun an den eVar6-Wert von „Interne Suche:Sommerhemd“ gebunden und das frühere Produkt „Waffelmütze“ ist immer noch an den eVar6-Wert von „Interne Suche:Wintermütze“ gebunden.
+6. Der Benutzer fügt das Produkt zum Warenkorb hinzu und löst das `Cart Add`-Ereignis aus.
 7. Der Benutzer checkt mit beiden Produkten aus.
 
-In reporting, the orders, revenue, product views, and cart adds will be reportable against eVar6 and will align to the activity of the bound product.
+Beim Reporting werden Bestellungen, Umsatz, Produktansichten und Hinzufügen zum Warenkorb entsprechend der eVar6 gemeldet und sind an der Aktivität des gebundenen Produkts ausgerichtet.
 
-| eVar6 (Product Finding Method) | Umsatz | Aufträge | Ansichten | cart adds |
+| eVar6 (Produktsuchmethode) | Umsatz | Bestellungen | Produktansichten | Hinzufügen zum Warenkorb |
 |---|---|---|---|---|
-| internal search:summer shirt | 19.99 | 1 | 1 | 1 |
-| internal search:winter hat | 12.99 | 1 | 1 | 1 |
+| Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 1 |
+| Interne Suche:Wintermütze | 12,99 | 1 | 1 | 1 |
 
-Im Folgenden finden Sie die XDM-Felder, um die Konvertierungssyntax in Ihrem Analytics-Datensatz zu erstellen:
+Here are the XDM fields to produce the Conversion Syntax in your [!DNL Analytics] dataset:
 
 ### eVars
 
@@ -224,7 +224,7 @@ Im Folgenden finden Sie die XDM-Felder, um die Konvertierungssyntax in Ihrem Ana
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-Where `evar#` is the specific eVar variable.
+Wobei `evar#` die spezifische eVar-Variable ist.
 
 ### Produkt
 
@@ -232,11 +232,11 @@ Where `evar#` is the specific eVar variable.
 productListItems[#].sku
 ```
 
-Where `[#]` is an array index.
+Wobei `[#]` ein Array-Index ist.
 
-### Abfragen
+### Beispielabfragen
 
-Im Folgenden finden Sie eine Abfrage, die den Wert an das jeweilige Produkt- und Ereignis-Paar bindet, in diesem Fall an das Ereignis zur Ansicht des Produkts.
+Im Folgenden finden Sie eine Beispielabfrage, die den Wert an das jeweilige Produkt- und Ereignispaar bindet, in diesem Fall an das Produktansichtsereignis.
 
 ```sql
 SELECT
@@ -255,7 +255,7 @@ WHERE commerce.productViews.value = 1 OR commerce.purchases.value = 1 OR _experi
 LIMIT 100
 ```
 
-Here is a sample query persisting the bound value to subsequent occurrences of the respective product. Die niedrigste Untergrenze der Abfrage bestimmt die Wertbeziehung zum Produkt auf dem deklarierten Binding-Ereignis. Die nächste Subversion-Abfrage führt die Zuordnung dieses gebundenen Werts für nachfolgende Interaktionen mit dem jeweiligen Produkt aus. Und auf der obersten Ebene wählen Sie die Aggregat die Ergebnisse, um den Berichte zu erzeugen.
+Im Folgenden finden Sie eine Beispielabfrage, die den gebundenen Wert für nachfolgende Vorkommen des jeweiligen Produkts beibehält. Die niedrigste Unterabfrage stellt die Wertebeziehung zum Produkt für das deklarierte Binding-Ereignis her. Die nächste Unterabfrage führt die Attribution dieses gebundenen Werts über nachfolgende Interaktionen mit dem jeweiligen Produkt durch. Die Auswahl der obersten Ebene aggregiert die Ergebnisse, um die Berichte zu erstellen.
 
 ```sql
 SELECT
