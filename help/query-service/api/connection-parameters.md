@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Entwicklerhandbuch für Abfrage Service
+title: Entwicklerhandbuch für Query Service
 topic: connection parameters
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 1%
+source-wordcount: '122'
+ht-degree: 72%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie wissen, welche Header verwendet werden sollen, können Sie mit dem Aufrufen der Abfrage Service API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der Abfrage Service API durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranforderung mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Anfordern von Verbindungsparametern für den interaktiven Dienst
 
-Sie können Ihre Verbindungsparameter für die Verwendung des [interaktiven Dienstes](../creating-queries/writing-queries.md) abrufen, indem Sie eine GET-Anforderung an den `/connection_parameters` Endpunkt senden. Weitere Informationen zu Clients, die Verbindungsparameter für die Verbindung über den interaktiven Dienst verwenden, finden Sie in der Dokumentation zu [Abfrage Service Clients](../clients/overview.md).
+Sie können Ihre Verbindungsparameter für die Verwendung des [interaktiven Dienstes](../creating-queries/writing-queries.md) abrufen, indem Sie eine GET-Anfrage an den `/connection_parameters`-Endpunkt senden. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Dienst herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
 
 **API-Format**
 
@@ -40,7 +40,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameter
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Ihren Verbindungsparametern zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Ihren Verbindungsparametern zurück.
 
 ```json
 {
