@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Boolesche Funktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 6%
+source-wordcount: '223'
+ht-degree: 21%
 
 ---
 
 
 # Boolesche Funktionen
 
-Boolesche Funktionen werden verwendet, um eine Boolesche Logik für verschiedene Elemente in Profil Abfrage Language (PQL) auszuführen.  Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Boolesche Funktionen werden verwendet, um eine boolesche Logik für verschiedene Elemente in [!DNL Profile Query Language] (PQL) durchzuführen.  Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
 
-## und
+## Und
 
 Die `and` Funktion wird verwendet, um eine logische Verbindung zu erstellen.
 
@@ -97,4 +97,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Nächste Schritte
 
-Jetzt, da Sie von booleschen Funktionen erfahren haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Jetzt, da Sie von booleschen Funktionen erfahren haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
