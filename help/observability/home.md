@@ -1,42 +1,42 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Einblicke in die Adobe Experience Platform-Überwachung
+title: Adobe Experience Platform Observability Insights
 topic: overview
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 2%
+source-wordcount: '396'
+ht-degree: 68%
 
 ---
 
 
-# Übersicht über die Beobachtbarkeit von Adobe Experience Platform
+# Übersicht über Adobe Experience Platform Observability Insights
 
-Observability Insights ist eine RESTful-API, mit der Sie wichtige Metriken zur Observability in Adobe Experience Platform bereitstellen können. Diese Metriken bieten Einblicke in die Statistiken zur Plattformnutzung, Gesundheitskontrollen für Plattformdienste, historische Trends und Leistungsindikatoren für verschiedene Plattformfunktionalitäten.
+Observability Insights ist eine RESTful-API, mit der Sie wichtige Beobachtbarkeitsmetriken in Adobe Experience Platform bereitstellen können. These metrics provide insights into [!DNL Platform] usage statistics, health-checks for [!DNL Platform] services, historical trends, and performance indicators for various [!DNL Platform] functionalities.
 
-Dieses Dokument zeigt einen Beispielaufruf der Observability Insights-API. Eine vollständige Liste der Beobachtungs-Endpunkte finden Sie in der [Observability Insights-API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
+Dieses Dokument demonstriert einen Beispielaufruf an die Observability Insights-API. Eine vollständige Liste der Observability-Endpunkte finden Sie in der [Referenz zur Observability Insights-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
 
 ## Erste Schritte
 
-Um Aufrufe an Plattform-APIs durchzuführen, müssen Sie zunächst das [Authentifizierungstraining](../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungstreutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Genehmigung: Träger `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Plattform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird. Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../sandboxes/home.md).
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md).
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-## Abrufen von Beobachtungsmetriken
+## Beobachtbarkeitsmetriken abrufen
 
-Sie können die Beobachtungsmetriken abrufen, indem Sie eine GET-Anforderung an den `/metrics` Endpunkt in der Observability Insights-API stellen.
+Sie können Beobachtbarkeitsmetriken abrufen, indem Sie in der Observability Insights-API eine GET-Anfrage an den `/metrics`-Endpunkt richten.
 
 **API-Format**
 
-Bei Verwendung des `/metrics` Endpunkts muss mindestens ein Metrikanforderungsparameter angegeben werden. Andere Parameter für die Abfrage sind optional für Filterergebnisse.
+Bei Verwendung des `/metrics`-Endpunkts muss mindestens ein Metrikanfrageparameter angegeben werden. Andere Abfrageparameter dienen optional zum Filtern von Ergebnissen.
 
 ```http
 GET /metrics?metric={METRIC}
@@ -48,9 +48,9 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{METRIC}` | Die Metrik, die Sie bereitstellen möchten. Wenn Sie mehrere Metriken in einem einzelnen Aufruf kombinieren, müssen Sie ein kaufmännisches Und (`&`) verwenden, um einzelne Metriken zu trennen. Beispiel: `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | Der Bezeichner für eine bestimmte Plattform-Ressource, deren Metriken Sie bereitstellen möchten. Diese ID kann optional, erforderlich oder je nach verwendeter Metrik nicht anwendbar sein. Eine Liste der verfügbaren Metriken sowie der unterstützten IDs (sowohl erforderlich als auch optional) für jede Metrik finden Sie im Referenz-Dokument zu den [verfügbaren Metriken](metrics.md). |
-| `{DATE_RANGE}` | Der Datumsbereich für die Metriken, die Sie bereitstellen möchten, im ISO 8601-Format (z. B. `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
+| `{METRIC}` | Die Metrik, die Sie verfügbar machen möchten. Wenn Sie mehrere Metriken in einem einzelnen Aufruf kombinieren, müssen Sie kaufmännische Und-Zeichen (`&`) verwenden, um einzelne Metriken voneinander zu trennen. Beispiel: `metric={METRIC_1}&metric={METRIC_2}`. |
+| `{ID}` | The identifier for a particular [!DNL Platform] resource whose metrics you want to expose. Diese Kennung kann je nach verwendeter Metrik optional, erforderlich oder nicht anwendbar sein. Eine Liste der verfügbaren Metriken sowie der unterstützten Kennungen für jede Metrik (sowohl erforderlich als auch optional) finden Sie im Referenzdokument zu [verfügbaren Metriken](metrics.md). |
+| `{DATE_RANGE}` | Der Datumsbereich für die Metriken, die Sie verfügbar machen möchten, im ISO 8601-Format (z. B. `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Anfrage**
 
@@ -65,7 +65,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Objekten zurück, von denen jedes einen Zeitstempel innerhalb der angegebenen Werte `dateRange` und die entsprechenden Werte für die im Anforderungspfad angegebenen Metriken enthält. Wenn der Wert `id` einer Plattformressource im Anforderungspfad enthalten ist, gelten die Ergebnisse nur für diese bestimmte Ressource. Wenn der `id` Wert weggelassen wird, gelten die Ergebnisse für alle in Ihrer IMS-Organisation anwendbaren Ressourcen.
+Eine erfolgreiche Antwort gibt eine Liste von Objekten zurück, jeweils mit einem Zeitstempel innerhalb des angegebenen `dateRange` und den entsprechenden Werten für die im Anfragepfad angegebenen Metriken. If the `id` of a [!DNL Platform] resource is included in the request path, the results will apply only to that particular resource. Wenn die `id` weggelassen wird, gelten die Ergebnisse für alle anwendbaren Ressourcen in Ihrer IMS-Organisation.
 
 ```json
 {
@@ -119,4 +119,4 @@ Eine erfolgreiche Antwort gibt eine Liste von Objekten zurück, von denen jedes 
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick über die Beobachtbarkeitseinblicke-API. Eine vollständige Liste der Metriken, die in der API verwendet werden können, finden Sie im Dokument zu [verfügbaren Metriken](metrics.md) .
+Dieses Dokument bietet einen Überblick über die Observability Insights-API. Eine vollständige Liste der Metriken, die in der API verwendet werden können, finden Sie im Dokument zu [verfügbaren Metriken](metrics.md).
