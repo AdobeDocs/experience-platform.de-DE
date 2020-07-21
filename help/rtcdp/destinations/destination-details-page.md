@@ -4,7 +4,7 @@ seo-title: Zieldetailseite
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 100%
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Zieldetailseite {#destinations-details-page}
 
-Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. Um diese Details anzuzeigen, navigieren Sie zu **Ziele** > **Durchsuchen** und klicken Sie auf den Namen des Ziels, mit dem Sie arbeiten möchten.
+Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. Um diese Details anzuzeigen, navigieren Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und klicken Sie auf den Namen des Ziels, mit dem Sie arbeiten möchten.
 
 Hauptkomponenten eines Ziels sind:
 
@@ -52,8 +52,8 @@ Die rechte Leiste enthält Informationen über Ihr Ziel. Weiterführende Informa
 | Plattform | Die Zielplattform, an die Zielgruppen gesendet werden. Weiterführende Informationen finden Sie unter [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md). |
 | Beschreibung | Sie können die Beschreibung Ihres Zielflusses bearbeiten. |
 | Kategorie | Gibt den Zieltyp an. Weiterführende Informationen finden Sie unter [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md). |
-| Verbindungstyp | Gibt an, in welcher Form Ihre Zielgruppen an das Ziel gesendet werden. Kann **Cookie**- oder **profilbasiert** sein. |
-| Häufigkeit | Gibt an, wie oft die Zielgruppen an das Ziel gesendet werden. Kann **Streaming** oder **Batch** sein. |
+| Verbindungstyp | Gibt an, in welcher Form Ihre Zielgruppen an das Ziel gesendet werden. Kann **[!UICONTROL Cookie]**- oder **[!UICONTROL profilbasiert]** sein. |
+| Häufigkeit | Gibt an, wie oft die Zielgruppen an das Ziel gesendet werden. Kann **[!UICONTROL Streaming]** oder **[!UICONTROL Batch]** sein. |
 | Identität | Stellt den vom Ziel akzeptierten Identitäts-Namespace dar. Das Identitätsfeld kann beispielsweise „GAID“, „IDFA“ oder „E-Mail“ lauten. Für Informationen zu allen akzeptierten Identitäts-Namespaces konsultieren Sie die standardmäßigen Namespaces unter [Identitäts-Namespaces – Übersicht](../../identity-service/namespaces.md). |
 | Erstellt von | Gibt den Anwender an, der diesen Zielfluss erstellt hat. |
 | Erstellt | Gibt Datum und Uhrzeit (UTC) an, zu dem/der dieser Zielfluss erstellt wurde. |
