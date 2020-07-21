@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für die Echtzeit-Kundenprofil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 27%
+source-wordcount: '704'
+ht-degree: 26%
 
 ---
 
@@ -18,7 +18,9 @@ ht-degree: 27%
 
 Die [!DNL Real-time Customer Profile] API enthält mehrere Endpunkte, die nachfolgend beschrieben werden. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern. Weitere Informationen finden Sie im Handbuch [Erste Schritte](getting-started.md) .
 
-Informationen zur Ansicht aller verfügbaren Endpunkte und CRUD-Vorgänge finden Sie im [Echtzeit-Client-Profil-API-Referenzswagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge Ansicht, besuchen Sie den [Echtzeit-Client-Profil-API-Referenz-Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+
+Eine Anleitung zum Arbeiten mit [!DNL Real-time Customer Profile] Daten in der [!DNL Experience Platform] Benutzeroberfläche finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
 
 ## (Alpha) Berechnete Attribute {#computed-attributes}
 
@@ -52,4 +54,4 @@ Daten, die in [!DNL Platform] aufgenommen werden, werden im [!DNL Data Lake] sow
 
 ## Nächste Schritte {#next-steps}
 
-Um mit dem Aufrufen der [!DNL Real-time Customer Profile] API zu beginnen, lesen Sie die [Erste Schritte-Anleitung](getting-started.md) und wählen Sie dann eine der Endpunktanleitungen, um zu erfahren, wie Sie bestimmte [!DNL Profile]Endpunkte verwenden. To learn more about working with [!DNL Profile] data using the [!DNL Platform] UI, see the [Real-time Customer Profile user guide](../ui/user-guide.md).
+Um mit dem Aufrufen der [!DNL Real-time Customer Profile] API zu beginnen, lesen Sie die [Erste Schritte-Anleitung](getting-started.md) und wählen Sie dann eine der Endpunktanleitungen, um zu erfahren, wie Sie bestimmte [!DNL Profile]Endpunkte verwenden. Informationen zum Arbeiten mit [!DNL Profile] Daten über die [!DNL Experience Platform] Benutzeroberfläche finden Sie im [Echtzeit-Kundenbenutzerleitfaden](../ui/user-guide.md).
