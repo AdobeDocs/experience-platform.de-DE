@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Entwicklerhandbuch für Abfrage Service
+title: Entwicklerhandbuch für Query Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 2%
+source-wordcount: '655'
+ht-degree: 94%
 
 ---
 
 
-# Wird für geplante Abfragen ausgeführt
+# Ausführungen für geplante Abfragen
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie wissen, welche Header verwendet werden sollen, können Sie mit dem Aufrufen der Abfrage Service API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der Abfrage Service API durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranforderung mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-### Eine Liste aller ausgeführten Vorgänge für eine bestimmte geplante Abfrage abrufen
+### Liste aller ausgeführten Vorgänge für eine bestimmte geplante Abfrage abrufen
 
-Sie können eine Liste aller ausgeführten Vorgänge für eine bestimmte geplante Abfrage abrufen, unabhängig davon, ob sie aktuell ausgeführt werden oder bereits abgeschlossen sind. Dies geschieht durch eine GET-Anforderung an den `/schedules/{SCHEDULE_ID}/runs` Endpunkt, wobei `{SCHEDULE_ID}` der `id` Wert der geplanten Abfrage, deren Ausführung Sie abrufen möchten, ist.
+Sie können für eine bestimmte geplante Abfrage eine Liste aller ausgeführten Vorgänge abrufen, unabhängig davon, ob diese aktuell ausgeführt werden oder bereits abgeschlossen wurden. Dies ist durch eine GET-Anfrage an den `/schedules/{SCHEDULE_ID}/runs`-Endpunkt möglich, wobei `{SCHEDULE_ID}` der `id`-Wert der geplanten Abfrage ist, deren Ausführungen Sie abrufen möchten.
 
 **API-Format**
 
@@ -31,23 +31,23 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` Wert der geplanten Abfrage, die Sie abrufen möchten. |
-| `{QUERY_PARAMETERS}` | (*Optional*) Dem Anforderungspfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, die durch das kaufmännische Und (`&`) voneinander getrennt werden. Die verfügbaren Parameter sind unten aufgeführt. |
+| `{SCHEDULE_ID}` | Der `id`-Wert der geplanten Abfrage, die Sie abrufen möchten. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Dem Anfragepfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`). Die verfügbaren Parameter sind unten aufgeführt. |
 
 **Abfrage**
 
-Im Folgenden finden Sie eine Liste der verfügbaren Abfrage-Parameter für die Auflistung der Ausführung für eine angegebene geplante Abfrage. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für die angegebene geplante Abfrage verfügbaren Vorgänge abgerufen.
+Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter für die Auflistung der Ausführungen einer angegebenen geplanten Abfrage. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für die angegebene geplante Abfrage verfügbaren Ausführungen abgerufen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `orderby` | Gibt das Feld an, in dem die Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. Die Ergebnisse `orderby=created` werden beispielsweise in aufsteigender Reihenfolge sortiert. Durch Hinzufügen eines `-` vor dem Erstellen (`orderby=-created`) werden Elemente in absteigender Reihenfolge sortiert. |
-| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die in einer Seite enthalten sind. (*Default value: 20*) |
-| `start` | Verschiebt die Liste der Antwort mit einer nullbasierten Nummerierung. Beispielsweise `start=2` gibt eine Liste ab der dritten aufgelisteten Abfrage zurück. (*Default value: 0*) |
-| `property` | Filtern Sie die Ergebnisse nach Feldern. Die Filter **müssen** HTML-Escape-Zeichen sein. Kommas werden verwendet, um mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `state`und `externalTrigger`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `==` (gleich) und `!=` (nicht gleich). Beispielsweise `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` werden alle nach dem 20. April 2019 manuell erstellten, erfolgreichen und erstellten Vorgänge zurückgegeben. |
+| `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Unterstützte Felder sind `created` und `updated`. `orderby=created` beispielsweise wird Ergebnisse in aufsteigender Reihenfolge sortieren. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente in absteigender Reihenfolge sortiert. |
+| `limit` | Gibt die Seitengrößenbeschränkung an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
+| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste ab der dritten aufgeführten Abfrage zurück. (*Standardwert: 0*) |
+| `property` | Filtern Sie Ergebnisse anhand von Feldern. Die Filter **müssen** HTML-Escape-Zeichen aufweisen. Kommas dienen dazu, um mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `state` und `externalTrigger`. Die Liste der unterstützten Operatoren umfasst `>` (größer als), `<` (kleiner als), `==` (gleich) und `!=` (ungleich). Beispielsweise gibt `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` alle manuell erstellten, erfolgreichen und nach dem 20. April 2019 erstellten Ausführungen zurück. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung werden die letzten vier Ausführungen für die angegebene geplante Abfrage abgerufen.
+Mit der folgenden Anfrage werden für die angegebene geplante Abfrage die letzten vier Ausführungen abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs?limit=4
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird HTTP-Status 200 mit einer Liste der Ausführung für die angegebene geplante Abfrage als JSON zurückgegeben. Die folgende Antwort gibt die letzten vier Ausführungen für die angegebene geplante Abfrage zurück.
+Bei einer erfolgreichen Antwort wird für die angegebene geplante Abfrage der HTTP-Status 200 mit einer Liste der Ausführungen als JSON zurückgegeben. Folgende Antwort gibt die letzten vier Ausführungen für die angegebene geplante Abfrage zurück.
 
 ```json
 {
@@ -149,11 +149,11 @@ Bei einer erfolgreichen Antwort wird HTTP-Status 200 mit einer Liste der Ausfüh
 
 >[!NOTE]
 >
->Sie können den Wert von verwenden, `_links.cancel` um eine Ausführung für eine bestimmte geplante Abfrage [zu](#immediately-stop-a-run-for-a-specific-scheduled-query)stoppen.
+>Sie können den Wert von `_links.cancel` nutzen, um [eine Ausführung für eine bestimmte geplante Abfrage zu stoppen](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
-### Sofort einen Run für eine bestimmte geplante Abfrage auslösen
+### Sofort eine Ausführung für eine bestimmte geplante Abfrage auslösen
 
-Sie können einen Run für eine angegebene geplante Abfrage sofort auslösen, indem Sie eine POST-Anforderung an den `/schedules/{SCHEDULE_ID}/runs` Endpunkt senden, wobei `{SCHEDULE_ID}` der `id` Wert der geplanten Abfrage ist, deren Ausführung Sie auslösen möchten.
+Sie können eine Ausführung für eine angegebene geplante Abfrage sofort auslösen, indem Sie eine POST-Anfrage an den `/schedules/{SCHEDULE_ID}/runs`-Endpunkt senden, wobei `{SCHEDULE_ID}` der `id`-Wert der geplanten Abfrage ist, deren Ausführung Sie auslösen möchten.
 
 **API-Format**
 
@@ -173,7 +173,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurück.
 
 ```json
 {
@@ -182,9 +182,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit der folgenden Me
 }
 ```
 
-### Abrufen von Details zu einer Ausführung für eine bestimmte geplante Abfrage
+### Details zu einer Ausführung für eine bestimmte geplante Abfrage abrufen
 
-Sie können Details zu einer Ausführung für eine bestimmte geplante Abfrage abrufen, indem Sie eine GET-Anforderung an den `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` Endpunkt senden und sowohl die ID der geplanten Abfrage als auch die Ausführung im Anforderungspfad angeben.
+Sie können Details über die Ausführung für eine bestimmte geplante Abfrage abrufen, indem Sie eine GET-Anfrage an den `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`-Endpunkt senden und sowohl die Kennung der geplanten Abfrage als auch die Ausführung im Anfragepfad angeben.
 
 **API-Format**
 
@@ -194,8 +194,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` Wert der geplanten Abfrage, deren Ausführung Sie Details abrufen möchten. |
-| `{RUN_ID}` | Der `id` Wert der Ausführung, die Sie abrufen möchten. |
+| `{SCHEDULE_ID}` | Der `id`-Wert der geplanten Abfrage, für deren Ausführung Sie Details abrufen möchten. |
+| `{RUN_ID}` | Der `id`-Wert der Ausführung, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -209,7 +209,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum angegebenen Ausführen zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen Ausführung zurück.
 
 ```json
 {
@@ -243,9 +243,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum angegebenen Ausf�
 }
 ```
 
-### Beenden Sie einen Run für eine bestimmte geplante Abfrage sofort
+### Ausführung für eine bestimmte geplante Abfrage sofort anhalten
 
-Sie können einen Run für eine bestimmte geplante Abfrage sofort beenden, indem Sie eine PATCH-Anforderung an den `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` Endpunkt senden und sowohl die ID der geplanten Abfrage als auch die Ausführung im Anforderungspfad angeben.
+Sie können eine Ausführung für eine bestimmte geplante Abfrage sofort anhalten, indem Sie eine PATCH-Anfrage an den `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`-Endpunkt senden und sowohl die Kennung der geplanten Abfrage als auch die Ausführung im Anfragepfad angeben.
 
 **API-Format**
 
@@ -255,12 +255,12 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` Wert der geplanten Abfrage, deren Ausführung Sie Details abrufen möchten. |
-| `{RUN_ID}` | Der `id` Wert der Ausführung, die Sie abrufen möchten. |
+| `{SCHEDULE_ID}` | Der `id`-Wert der geplanten Abfrage, für deren Ausführung Sie Details abrufen möchten. |
+| `{RUN_ID}` | Der `id`-Wert der Ausführung, die Sie abrufen möchten. |
 
 **Anfrage**
 
-Diese API-Anforderung verwendet die JSON Patch-Syntax für die Nutzlast. Weitere Informationen zur Funktionsweise von JSON Patch finden Sie im Dokument API-Grundlagen.
+Diese API-Anfrage nutzt für die Payload die JSON Patch-Syntax. Weiterführende Informationen zur Funktionsweise von JSON Patch finden Sie im Dokument zu den API-Grundlagen.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
@@ -275,7 +275,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurück.
 
 ```json
 {
