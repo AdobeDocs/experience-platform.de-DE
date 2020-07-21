@@ -1,22 +1,22 @@
 ---
-title: Social-Netzwerkziele
-seo-title: Social-Netzwerkziele
-description: Mit Social-Netzwerk-Zielen können Sie Profil für Ihre Kampagnen aktivieren, um Audiencen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails zu ermöglichen.
-seo-description: Mit Social-Netzwerk-Zielen können Sie Profil für Ihre Kampagnen aktivieren, um Audiencen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails zu ermöglichen.
+title: Social-Network-Ziele
+seo-title: Social-Network-Ziele
+description: Mit Social-Network-Zielen können Sie Profile für Ihre Kampagnen basierend auf Hash-E-Mails für Audience-Targeting, Personalisierung und Unterdrückung aktivieren.
+seo-description: Mit Social-Network-Zielen können Sie Profile für Ihre Kampagnen basierend auf Hash-E-Mails für Audience-Targeting, Personalisierung und Unterdrückung aktivieren.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 1%
+source-wordcount: '87'
+ht-degree: 100%
 
 ---
 
 
-# Social-Netzwerkziele {#social-network-destinations}
+# Social-Network-Ziele {#social-network-destinations}
 
-Mit Social-Netzwerk-Zielen können Sie Profil für Ihre Kampagnen aktivieren, um Audiencen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails zu ermöglichen.
+Mit Social-Network-Zielen können Sie Profile für Ihre Kampagnen basierend auf Hash-E-Mails für Audience-Targeting, Personalisierung und Unterdrückung aktivieren.
 
-Die Adobe Echtzeit-Kundendatenplattform unterstützt derzeit die folgenden Social-Netzwerkziele:
+Die Adobe Echtzeit-Kundendatenplattform unterstützt derzeit folgende Social-Network-Ziele:
 
-* [Adobe Livefyre Extension](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-* [Facebook](/help/rtcdp/destinations/facebook-destination.md)
+* [Adobe Livefyre-Erweiterung](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+* [!DNL Facebook](/help/rtcdp/destinations/facebook-destination.md)
