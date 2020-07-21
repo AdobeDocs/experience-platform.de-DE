@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform  – Versionshinweise
-description: Versionshinweise zur Experience Platform vom 10. September 2019
+title: Adobe Experience Platform – Versionshinweise
+description: Versionshinweise zur Experience Platform, 10. September 2019
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 4%
+source-wordcount: '532'
+ht-degree: 11%
 
 ---
 
@@ -17,56 +17,56 @@ ht-degree: 4%
 
 **Releasedatum: 10. September 2019**
 
-Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
+Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
 
-* [Dateneinbindung](#ingestion)
-* [Data Science-Arbeitsbereich](#dsw)
-* [Abfrage](#query)
+* [!DNL Data Ingestion](#ingestion)
+* [!DNL Data Science Workspace](#dsw)
+* [!DNL Query Service](#query)
 
-## Dateneinbindung {#ingestion}
+## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platform bietet eine Vielzahl von Funktionen, mit denen Daten jeder Art und Latenzzeit erfasst werden können. Adobe Experience Platform Data Ingestion bietet mehrere Alternativen zum Erfassen von Daten, einschließlich Batch-APIs, Streaming-APIs, nativen Adobe-Connectors, Data Integration-Partnern oder der Benutzeroberfläche der Adobe Experience Platform.
+Adobe Experience Platform bietet eine Vielzahl von Funktionen, mit denen Daten jeder Art und Latenzzeit erfasst werden können. Adobe Experience Platform [!DNL Data Ingestion] provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ----------- | ---------- |
-| Neue Domäne für Streaming-Erfassung | Die `dcs.data.adobe.net` Domäne wurde in die neue gemeinsame Datenerfassungsdomäne verschoben `dcs.adobedc.net`. Benutzer müssen ihre Implementierungen entsprechend der überarbeiteten Dokumentation zur Erfassung von Adobe Experience Platform-Streaming aktualisieren. Die gesamte Dokumentation zur Adobe Experience Platform-Streaming-Erfassung wurde aktualisiert und verwendet nun die neue Domäne. |
+| Neue Domäne für Streaming-Erfassung | Die `dcs.data.adobe.net` Domäne wurde in die neue gemeinsame Datenerfassungsdomäne verschoben `dcs.adobedc.net`. Benutzer müssen ihre Implementierungen entsprechend der überarbeiteten Dokumentation zur Streaming-Erfassung von Adobe Experience Platformen aktualisieren. Die Dokumentation zur Adobe Experience Platform-Streaming-Erfassung wurde aktualisiert und verwendet nun die neue Domäne. |
 
 Weitere Informationen finden Sie in der [Datenaufnahmendokumentation](../../ingestion/home.md).
 
-## Data Science-Arbeitsbereich {#dsw}
+## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform Data Science Workspace ist ein vollständig verwalteter Dienst innerhalb der Experience Platform, mit dem Datenwissenschaftler nahtlos Einblicke aus Daten und Inhalten in Adobe-Lösungen und Drittanbietersystemen generieren können, indem sie maschinelle Lernmodelle erstellen und operationalisieren. Data Science Workspace ist eng mit der Plattform integriert und ermöglicht den End-to-End-Data Science-Lebenszyklus, einschließlich der Erforschung und Vorbereitung von XDM-Daten, gefolgt von der Entwicklung und Inbetriebnahme von Modellen, um das Echtzeit-Profil von Kunden automatisch mit Machine Learning Insights zu bereichern.
+Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed service within [!DNL Experience Platform] that enables data scientists to seamlessly generate insights from data and content across Adobe solutions and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] ist eng in den End-to-End-Datenwissenschaftslebenszyklus integriert [!DNL Platform] [!DNL Real-time Customer Profile] und ermöglicht diese, einschließlich der Erforschung und Vorbereitung von XDM-Daten, gefolgt von der Entwicklung und Inbetriebnahme von Modellen, um automatisch mit Machine Learning Insights zu bereichern.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | -----------| ---------- |
-| Einplanen von Diensten über die Benutzeroberfläche | In die Benutzeroberfläche integriert mit Platform Orchestration Service zur Automatisierung der Modellschulung und der Auswertung mit benutzerdefinierten Zeitplänen. |
-| Servicegalerie | Durchsuchen, überwachen und auf die Services für maschinelles Lernen zugreifen mit der Möglichkeit, automatisierte Schulungs- und Bewertungsaufträge zu planen, alles innerhalb der neu gestalteten Service Gallery. |
-| JupyterLab 5.0.0 | Verbesserungen der Benutzeroberfläche von JupyterLab. |
+| Einplanen von Diensten über die Benutzeroberfläche | In [!DNL Platform] Orchestration Service integriert, um Modellschulungen und das Punktieren mit benutzerdefinierten Zeitplänen mithilfe der Benutzeroberfläche zu automatisieren. |
+| [!DNL Service Gallery] | Durchsuchen, Überwachen und Zugreifen auf Services für maschinelles Lernen mit der Möglichkeit, automatisierte Schulungs- und Bewertungsaufträge zu planen, alles innerhalb der neu gestalteten [!DNL Service Gallery]. |
+| [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] Verbesserungen der Benutzeroberfläche. |
 
 **Bekannte Probleme**
 
-* Es gibt derzeit keine barrierefreie Möglichkeit in der Dienstgalerie, einen vorhandenen Dienst zu löschen. In der Zwischenzeit lesen Sie die [Sensei Machine Learning API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) , um einen vorhandenen Dienst über API-Aufrufe zu löschen.
-* Die Service Gallery unterstützt keine Paginierung zum Filtern der Trainings- und Bewertungsläufe eines Dienstes.
-* Wenn die Konfiguration einer geplanten Schulung oder Bewertung in der Service Gallery ausgeführt wird, verhindert das Festlegen der Häufigkeit auf stündlich die Anwendung des Zeitplans.
+* Es gibt derzeit keine barrierefreie Möglichkeit, einen vorhandenen Dienst [!DNL Service Gallery] zu löschen. In der Zwischenzeit lesen Sie die [Sensei Machine Learning API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) , um einen vorhandenen Dienst über API-Aufrufe zu löschen.
+* Der Dienst unterstützt [!DNL Service Gallery] keine Paginierung, um die Schulungs- und Bewertungsläufe eines Dienstes zu filtern.
+* Wenn die Konfiguration einer geplanten Schulung oder Bewertung durch die [!DNL Service Gallery]Variable erfolgt, verhindert das Festlegen der Häufigkeit auf stündlich die Anwendung des Zeitplans.
 
-Weitere Informationen finden Sie unter Übersicht über den [Data Science Workspace](../../data-science-workspace/home.md).
+Weitere Informationen finden Sie unter [Data Science Workspace – Überblick](../../data-science-workspace/home.md).
 
-## Abfrage {#query}
+## [!DNL Query Service] {#query}
 
-Abfrage Service bietet die Möglichkeit, Standarddaten aus SQL zur Abfrage in Adobe Experience Platform zu verwenden, um eine Vielzahl von Anwendungsfällen für Analyse und Data Management zu unterstützen. Es ist ein serverloses Tool, mit dem Sie Datasets aus dem Data Lake zusammenführen und die Abfragen als neuer Datensatz erfassen können, der in Berichte, Data Science Workspace oder zur Erfassung in Echtzeit-Kundendaten verwendet werden kann.
+[!DNL Query Service] bietet die Möglichkeit, Standarddaten von SQL zur Abfrage in Adobe Experience Platform zu verwenden, um eine Vielzahl von Analysen- und Data Management-Anwendungsfällen zu unterstützen. It is a serverless tool that allows you to join datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or for ingestion into [!DNL Real-time Customer Profile].
 
-Mit dem Abfrage Service können Sie Ökosysteme zur Analyse von Daten erstellen und so ein Bild von Kunden über ihre verschiedenen Interaktionskunden hinweg erstellen. Zu diesen Kanälen zählen u. a. Verkaufssysteme, Web-, Mobil- oder CRM-Systeme.
+You can use [!DNL Query Service] to build data analysis ecosystems, creating a picture of customers across their various interaction channels. Zu diesen Kanälen zählen u. a. Verkaufssysteme, Web-, Mobil- oder CRM-Systeme.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | -----------| ---------- |
-| Verbesserungen am Abfragen-Editor | Es wurde eine Speicherfunktion hinzugefügt, mit der Sie eine Abfrage speichern und später daran arbeiten können. Der Benutzeroberfläche des Abfrage Service auf der Adobe Experience Platform wurde die Registerkarte &quot;Durchsuchen&quot;hinzugefügt, auf der die von den Benutzern in Ihrem Unternehmen gespeicherten Abfragen angezeigt werden. Es wurde ein Bedienfeld mit Details zur Abfrage implementiert, in dem nützliche Metadaten zur angezeigten Abfrage angezeigt werden. |
-| Neue Zuordnungsfunktionen | Von Adobe definierte Funktionen im Abfrage Service to Abfrage für die Zuweisung von Kanälen mit Ablaufparametern. |
+| Verbesserungen bei [!DNL Query Editor] | Es wurde eine Speicherfunktion hinzugefügt, mit der Sie eine Abfrage speichern und später daran arbeiten können. Es wurde eine Registerkarte &quot;Durchsuchen&quot;zur [!DNL Query Service] Benutzeroberfläche auf Adobe Experience Platform hinzugefügt, die Abfragen anzeigt, die von Benutzern in Ihrem Unternehmen gespeichert wurden. Es wurde ein Bedienfeld mit Details zur Abfrage implementiert, in dem nützliche Metadaten zur angezeigten Abfrage angezeigt werden. |
+| Neue Zuordnungsfunktionen | Von Adobe definierte Funktionen in [!DNL Query Service] der Abfrage für die Zuordnung von Kanälen mit Ablaufparametern. |
 | Verbesserungen der SQL-Syntax | Unterstützung der &quot;Gefällt mir&quot;-Syntax. |
 | Generieren von Datensätzen mit einem definierten XDM-Schema | Es wurde eine neue Klausel in &quot;Tabelle erstellen&quot;zu den Abfragen &quot;Auswählen&quot;(CTAS) hinzugefügt, mit der Sie ein Zielgruppe-Schema angeben können. |
 
