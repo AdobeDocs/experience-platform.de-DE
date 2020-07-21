@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe-definierte Funktionen
 topic: queries
 translation-type: tm+mt
-source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 85%
+source-wordcount: '287'
+ht-degree: 71%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 85%
 
 Einer der Hauptvorteile von Adobe besteht darin, dass Adobe Erlebnisdaten genau kennt und weiß, was Kunden mit diesen Daten machen wollen. So können Sie Hilfsfunktionen entwickeln, die Ihnen die Arbeit erleichtern.
 
-Das vorliegende Dokument deckt Adobe-definierte Funktionen (ADFs) zur Unterstützung von drei wichtigen Analyseaktivitäten ab:
+This document covers Adobe-defined functions (ADFs) to support three key [!DNL Analytics] activities:
 - [Sessionization](#sessionization)
 - [Attribution](#attribution)
 - [Pathing](#pathing)
@@ -91,13 +91,13 @@ Bei der Attribution werden Metriken oder Konversionen wie Umsätze, Bestellungen
 
 In Adobe Analytics werden Attributionseinstellungen mithilfe von Variablen wie eVars konfiguriert und bei der Erfassung von Daten generiert.
 
-Die Attribution-ADFs, die in Query Service vorhanden sind, ermöglichen das Definieren und Generieren dieser Zuordnungen zur Abfragezeit.
+The Attribution ADFs found in [!DNL Query Service] allow those allocations to be defined and generated at query time.
 
 In diesem Beispiel geht es um „Last Touch“-Attribution; Adobe unterstützt aber auch „First Touch“-Attribution.
 
 >[!NOTE]
 >
->Andere Optionen mit Timeouts und ereignisbasiertem Ablaufen werden in zukünftigen Versionen von Query Service zur Verfügung stehen.
+>Other options with timeouts and event-based expiration will be available in future versions of [!DNL Query Service].
 
 **Syntax:**
 
