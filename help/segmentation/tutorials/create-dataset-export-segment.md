@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Datensatzes zum Exportieren eines Segments für eine Audience
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 32%
+source-wordcount: '733'
+ht-degree: 33%
 
 ---
 
@@ -22,7 +22,7 @@ Dieses Tutorial steht in direktem Zusammenhang zu den Schritten, die im Tutorial
 
 ## Erste Schritte
 
-Um ein Segment zu exportieren, muss der Datensatz auf dem Schema XDM Individuelle Profil-Vereinigung basieren. Ein Vereinigung-Schema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder aller Schema, die dieselbe Klasse besitzen, Aggregat, in diesem Fall die XDM Individual Profil-Klasse. Weitere Informationen zu Schemas der Vereinigung Ansicht finden Sie im Abschnitt zum [Echtzeit-Kundenmanagement im Schema Registry-Entwicklerhandbuch](../../xdm/schema/composition.md#union).
+Um ein Segment zu exportieren, muss der Datensatz auf der Grundlage des [!DNL XDM Individual Profile Union Schema]Segments erstellt werden. Ein Vereinigung-Schema ist ein systemgeneriertes schreibgeschütztes Schema, das die Felder aller Schema, die dieselbe Klasse besitzen, in diesem Fall die [!DNL XDM Individual Profile] Klasse, Aggregat. Weitere Informationen zu Schemas der Vereinigung Ansicht finden Sie im Abschnitt zum [Echtzeit-Kundenmanagement im Schema Registry-Entwicklerhandbuch](../../xdm/schema/composition.md#union).
 
 Klicken Sie zur Ansicht der Schemas der Vereinigung in der Benutzeroberfläche auf **[!UICONTROL Profile]** in der linken Navigation und dann auf die Registerkarte **[!UICONTROL Vereinigung Schema]** , wie unten dargestellt.
 
@@ -53,7 +53,7 @@ Klicken Sie im Bildschirm &quot; *[!UICONTROL Datensatz]* erstellen&quot;auf &qu
 
 ## XDM Individuelles Profil Vereinigung Schema auswählen
 
-Um das XDM Individual Profil Vereinigung Schema zur Verwendung in Ihrem Datensatz auszuwählen, suchen Sie im Bildschirm &quot;Schema[!UICONTROL auswählen]&quot;das Schema &quot;[!UICONTROL XDM Individuelles Profil]&quot;mit dem Typ &quot; *[!UICONTROL Vereinigung]* &quot;.
+Um die [!DNL XDM Individual Profile Union Schema] zur Verwendung in Ihrem Dataset auszuwählen, suchen Sie im Bildschirm &quot;Schema[!UICONTROL auswählen]&quot;das Schema &quot;[!UICONTROL XDM Individuelles Profil]&quot;mit dem Typ &quot; *[!UICONTROL Vereinigung]* &quot;.
 
 Markieren Sie das Optionsfeld neben **[!UICONTROL XDM Individuelles Profil]** und klicken Sie dann oben rechts auf **[!UICONTROL Weiter]** .
 
@@ -84,6 +84,6 @@ Bitte beachten Sie die **[!UICONTROL Dataset-ID]**, da dieser Wert erforderlich 
 
 ## Nächste Schritte
 
-Nachdem Sie nun einen Datensatz auf Grundlage des Schemas XDM Individuelle Profil-Vereinigung erstellt haben, können Sie die **[!UICONTROL Dataset-ID]** verwenden, um das Lernprogramm zum [Auswerten und Zugreifen auf Segmentergebnisse](./evaluate-a-segment.md) fortzusetzen.
+Nachdem Sie nun einen Datensatz basierend auf dem erstellt haben, [!DNL XDM Individual Profile Union Schema]können Sie die **[!UICONTROL Dataset-ID]** verwenden, um das Lernprogramm zum [Auswerten und Zugreifen auf Segmentergebnisse](./evaluate-a-segment.md) fortzusetzen.
 
 Kehren Sie zu diesem Zeitpunkt zum Tutorial zu den ausgewerteten Segmentergebnissen zurück und nehmen Sie die [Generierung von Profilen für Audiencen](./evaluate-a-segment.md#generate-profiles) im Schritt zum Exportieren eines Segmentarbeitsablaufs auf.
