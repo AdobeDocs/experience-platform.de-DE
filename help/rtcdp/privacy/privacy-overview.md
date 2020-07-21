@@ -4,28 +4,28 @@ seo-title: Datenschutz im Echtzeit-Kundendatenprofil
 description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 97%
+source-wordcount: '304'
+ht-degree: 61%
 
 ---
 
 
 # Datenschutz in der Echtzeit-Kundendatenplattform
 
-Mit der Echtzeit-Kundendatenplattform können Marketer Daten aus verschiedenen Unternehmenssystemen zusammenführen, damit sich Kunden besser ermitteln, verstehen und ansprechen lassen. Adobe betrachtet den Schutz von Kundendaten als grundlegendes Design-Prinzip und bietet verschiedene Steuerelemente, mit denen Marketer den Datenschutz von Kunden verwalten können.
+[!DNL Real-time Customer Data Platform] (Echtzeit-CDP) hilft Marketingexperten, Daten aus mehreren Unternehmenssystemen zusammenzubringen, sodass sie ihre Kunden besser identifizieren, verstehen und ansprechen können. Adobe betrachtet den Schutz von Kundendaten als grundlegendes Design-Prinzip und bietet verschiedene Steuerelemente, mit denen Marketer den Datenschutz von Kunden verwalten können.
 
-Die meisten Funktionen der Echtzeit-Kundendatenplattform werden über Adobe Experience Platform bereitgestellt. Das vorliegende Dokument enthält Informationen über die verschiedenen Technologien zur Verbesserung des Datenschutzes, die von der Echtzeit-Kundendatenplattform unterstützt werden, sowie Links zur Experience Platform-Dokumentation, die weiterführende Informationen bieten.
+Die meisten Funktionen der Echtzeit-Kundendatenplattform werden über Adobe Experience Platform bereitgestellt. This document provides information about the various privacy enhancement technologies supported by Real-time CDP, with links to [!DNL Experience Platform] documentation for more information.
 
-## Privacy Service
+## [!DNL Privacy Service]
 
-Mit Adobe Experience Platform Privacy Service können Sie die Einhaltung von Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) und dem California Consumer Privacy Act (CCPA) optimieren. Da die Echtzeit-Kundendatenplattform zur Datenerfassung und -speicherung Experience Platform-Funktionen nutzt, sollten Zugriffs- und Löschanfragen für DSGVO und CCPA innerhalb von Platform verwaltet werden. Eine genauere Einführung in den Dienst finden Sie im Dokument [Privacy Service – Übersicht](../../privacy-service/home.md).
+Adobe Experience Platform [!DNL Privacy Service] allows you to streamline the process of keeping your data operations compliant with privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and the [!DNL California Consumer Privacy Act] (CCPA). Since Real-time CDP leverages [!DNL Experience Platform] capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within [!DNL Platform]. Eine genauere Einführung in den Dienst finden Sie im Dokument [Privacy Service – Übersicht](../../privacy-service/home.md).
 
 Es gibt zwei Methoden für die Übermittlung einzelner DSGVO- und CCPA-Anfragen von Datensubjekten bezüglich des Zugriffs auf und des Löschens von Kundendaten:
 
-* Verwenden Sie die [Benutzeroberfläche von Privacy Service](https://gdprui.cloud.adobe.io/), um Zugriffs- und Löschanfragen in einem visuellen Arbeitsbereich zu erstellen und zu überwachen. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Benutzeroberfläche von Privacy Service](../../privacy-service/ui/overview.md).
-* Verwenden Sie die [Privacy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml), um Zugriffs- und Löschanfragen mit RESTful-API-Aufrufen zu verwalten. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Privacy Service-API](../../privacy-service/api/getting-started.md).
+* Use the [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Benutzeroberfläche von Privacy Service](../../privacy-service/ui/overview.md).
+* Use the [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Privacy Service-API](../../privacy-service/api/getting-started.md).
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
