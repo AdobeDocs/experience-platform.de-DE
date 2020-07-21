@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpunkte für Vorschauen und Schätzungen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '742'
 ht-degree: 7%
 
 ---
@@ -71,7 +71,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | Der PQL-Ausdruck, um die Daten Abfrage. |
 | `predicateType` | Der Vorhersagetyp für den Ausdruck Abfrage unter `predicateExpression`. Derzeit ist der einzige akzeptierte Wert für diese Eigenschaft `pql/text`. |
-| `predicateModel` | Der Name des Experience Data Model (XDM)-Schemas, auf dem die Profil-Daten basieren. |
+| `predicateModel` | Der Name des [!DNL Experience Data Model] (XDM-)Schemas, auf dem die Profil-Daten basieren. |
 
 **Antwort**
 
@@ -167,7 +167,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `results` | Eine Liste von Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können verwendet werden, um die angegebenen Entitäten mithilfe der [Profil Access API](../../profile/api/entities.md)nachzuschlagen. |
+| `results` | Eine Liste von Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können zum Nachschlagen der angegebenen Entitäten verwendet werden, indem die [!DNL Profile Access API](../../profile/api/entities.md). |
 
 ## Abrufen der Ergebnisse eines bestimmten Schätzauftrags {#get-estimate}
 
@@ -226,4 +226,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen Segmentierungsdienst-API-Endpunkten finden Sie im Entwicklerhandbuch für den [Segmentierungsdienst](./overview.md).
+Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen [!DNL Segmentation Service] API-Endpunkten finden Sie im Handbuch [Segmentierungsdienst-Entwickler](./overview.md).
