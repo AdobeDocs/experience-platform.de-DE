@@ -1,32 +1,32 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Filtern von Katalogdaten mithilfe von Abfrage-Parametern
+title: Catalog-Daten mithilfe von Abfrageparametern filtern
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2060'
-ht-degree: 1%
+source-wordcount: '2033'
+ht-degree: 89%
 
 ---
 
 
-# Filtern von Katalogdaten mithilfe von Abfrage-Parametern
+# Filter [!DNL Catalog] data using query parameters
 
-Die Catalog Service API ermöglicht das Filtern von Antwortdaten mithilfe von Anforderungsparametern für die Abfrage. Zu den Best Practices für Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Belastung der API reduzieren und die Gesamtleistung verbessern.
+The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 
-In diesem Dokument werden die am häufigsten verwendeten Methoden zum Filtern von Katalogobjekten in der API beschrieben. Es wird empfohlen, dass Sie dieses Dokument beim Lesen des Entwicklerhandbuchs für [Kataloge](getting-started.md) referenzieren, um mehr über die Interaktion mit der Katalog-API zu erfahren. Allgemeine Informationen zum Katalogdienst finden Sie in der [Katalogübersicht](../home.md).
+This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren. [!DNL Catalog] For more general information on [!DNL Catalog Service], see the [Catalog overview](../home.md).
 
-## Zurückgegebene Objekte beschränken
+## Zurückgegebene Objekte begrenzen
 
-Der Parameter `limit` Abfrage beschränkt die Anzahl der in einer Antwort zurückgegebenen Objekte. Die Katalogantworten werden automatisch nach konfigurierten Beschränkungen gemessen:
+Der Abfrageparameter `limit` begrenzt die Zahl der in einer Antwort zurückgegebenen Objekte. [!DNL Catalog] Antworten werden automatisch entsprechend den konfigurierten Beschränkungen gemessen:
 
-* Wenn kein `limit` Parameter angegeben ist, beträgt die maximale Anzahl von Objekten pro Antwortnutzlast 20.
-* Bei DataSet-Abfragen `observableSchema` beträgt die maximale Anzahl der zurückgegebenen Datensätze 20, wenn der Parameter `properties` Abfrage verwendet wird.
-* Die globale Beschränkung für alle anderen Katalogobjekte beträgt 100 Abfragen.
-* Ungültige `limit` Parameter (einschließlich `limit=0`) führen zu 400-stufigen Fehlerantworten, die die richtigen Bereiche umreißen.
-* Einschränkungen oder Offsets, die als Parameter für die Abfrage übergeben werden, haben Vorrang vor denen, die als Kopfzeilen übergeben werden.
+* Wenn kein `limit`-Parameter angegeben ist, beträgt die maximale Zahl von Objekten pro Antwort-Payload 20.
+* Bei Datensatzabfragen beträgt die maximale Zahl der zurückgegebenen Datensätze 20, wenn `observableSchema` mit dem `properties`-Abfrageparameter angefragt wird.
+* Die globale Begrenzung für alle anderen Catalog-Objekte beträgt 100 Objekte.
+* Ungültige `limit`-Parameter (einschließlich `limit=0`) führen zu Fehlerantworten der Stufe 400, in der richtige Bereiche angegeben werden.
+* Beschränkungen oder Verschiebungen, die als Abfrageparameter übergeben werden, haben Vorrang vor jenen, die als Kopfzeilen übergeben werden.
 
 **API-Format**
 
@@ -36,12 +36,12 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{LIMIT}` | Eine Ganzzahl, die die Anzahl der zurückzugebenden Objekte im Bereich von 1 bis 100 angibt. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{LIMIT}` | Eine Ganzzahl, die die Zahl der zurückzugebenden Objekte angibt (im Bereich von 1 bis 100). |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Liste von Datensätzen abgerufen, während die Antwort auf drei Objekte beschränkt wird.
+Mit der folgenden Anfrage wird eine Liste von Datensätzen abgerufen, während die Antwort auf drei Objekte beschränkt wird.
 
 ```shell
 curl -X GET \
@@ -54,7 +54,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Datensätzen zurück, die auf die vom Parameter &quot; `limit` Abfrage&quot;angegebene Anzahl beschränkt ist.
+Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die auf die vom Abfrageparameter `limit` angegebene Zahl beschränkt ist.
 
 ```json
 {
@@ -74,13 +74,13 @@ Eine erfolgreiche Antwort gibt eine Liste von Datensätzen zurück, die auf die 
 }
 ```
 
-## Anzeigen von Eigenschaften begrenzen
+## Angezeigte Eigenschaften beschränken
 
-Selbst beim Filtern der Anzahl der zurückgegebenen Objekte mithilfe des `limit` Parameters können die zurückgegebenen Objekte häufig mehr Informationen enthalten, als Sie tatsächlich benötigen. Um die Belastung des Systems weiter zu reduzieren, sollten Sie die Antworten so filtern, dass nur die Eigenschaften einbezogen werden, die Sie benötigen.
+Trotz Filterns der Zahl der zurückgegebenen Objekte mithilfe des `limit`-Parameters können die zurückgegebenen Objekte häufig mehr Daten enthalten, als Sie in Wahrheit benötigen. Um die Systemlast weiter zu verringern, sollten Sie Antworten so filtern, dass nur die Eigenschaften einbezogen werden, die Sie tatsächlich brauchen.
 
-Der `properties` Parameter Filters antwortet Objekte, die nur eine Reihe von angegebenen Eigenschaften zurückgeben. Der Parameter kann so eingestellt werden, dass eine oder mehrere Eigenschaften zurückgegeben werden.
+Der `properties`-Parameter filtert Antwortobjekte so, dass nur bestimmte angegebene Eigenschaften zurückgeben werden. Der Parameter kann so eingerichtet werden, dass eine oder mehrere Eigenschaften zurückgegeben werden.
 
-Der `properties` Parameter akzeptiert nur Objekteigenschaften der obersten Ebene, d. h. für das folgende Beispielobjekt können Sie Filter für `name`, `description`und `subItem`, jedoch NICHT für anwenden `sampleKey`.
+Der `properties`-Parameter akzeptiert nur Objekteigenschaften der obersten Ebene. Für das folgende Beispielobjekt können Sie Filter also auf `name`, `description`und `subItem`, NICHT aber auf `sampleKey` anwenden.
 
 ```json
 {
@@ -104,13 +104,13 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | Der Name eines Attributs, das im Antworttext enthalten sein soll. |
-| `{OBJECT_ID}` | Die eindeutige Kennung eines bestimmten Katalogobjekts, das abgerufen wird. |
+| `{OBJECT_ID}` | The unique identifier of a specific [!DNL Catalog] object being retrieved. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine Liste von Datensätzen ab. Die kommagetrennte Liste der Eigenschaftsnamen, die unter dem `properties` Parameter bereitgestellt werden, gibt die Eigenschaften an, die in der Antwort zurückgegeben werden sollen. Es wird auch ein `limit` Parameter einbezogen, der die Anzahl der zurückgegebenen Datensätze begrenzt. Wenn die Anforderung keinen `limit` Parameter enthält, enthält die Antwort maximal 20 Objekte.
+Die folgende Anfrage ruft eine Liste mit Datensätzen ab. Die kommagetrennte Liste mit Eigenschaftsnamen, die unter dem Parameter `properties` zu finden ist, gibt die Eigenschaften an, die in der Antwort zurückgegeben werden sollen. Es wird auch ein `limit`-Parameter einbezogen, der die Zahl der zurückgegebenen Datensätze begrenzt. Wenn die Anfrage keinen `limit`-Parameter beinhaltet, enthält die Antwort maximal 20 Objekte.
 
 ```shell
 curl -X GET \
@@ -123,7 +123,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Katalogobjekten zurück, bei der nur die angeforderten Eigenschaften angezeigt werden.
+A successful response returns a list of [!DNL Catalog] objects with only the requested properties displayed.
 
 ```json
 {
@@ -148,18 +148,18 @@ Eine erfolgreiche Antwort gibt eine Liste von Katalogobjekten zurück, bei der n
 }
 ```
 
-Auf der Grundlage der obigen Antwort kann Folgendes abgeleitet werden:
+Auf Grundlage der obigen Antwort kann Folgendes abgeleitet werden:
 
-* Wenn einem Objekt angeforderte Eigenschaften fehlen, werden nur die angeforderten Eigenschaften angezeigt, die es enthält. (`Dataset1`)
-* Wenn ein Objekt keine der angeforderten Eigenschaften enthält, wird es als leeres Objekt angezeigt. (`Dataset2`)
-* Ein Datensatz gibt möglicherweise eine angeforderte Eigenschaft als leeres Objekt zurück, wenn er die Eigenschaft enthält, aber kein Wert vorhanden ist. (`Dataset3`)
-* Andernfalls zeigt der Datensatz den vollständigen Wert aller angeforderten Eigenschaften an. (`Dataset4`)
+* Wenn bei einem Objekt angefragte Eigenschaften fehlen, werden nur die angefragten Eigenschaften angezeigt, die es tatsächlich enthält. (`Dataset1`)
+* Wenn ein Objekt keine der angefragten Eigenschaften enthält, wird es als leeres Objekt angezeigt. (`Dataset2`)
+* Ein Datensatz kann eine angefragte Eigenschaft als leeres Objekt zurückgeben, wenn er die Eigenschaft enthält, aber kein Wert vorhanden ist. (`Dataset3`)
+* Andernfalls zeigt der Datensatz den ganzen Wert aller angefragten Eigenschaften an. (`Dataset4`)
 
-## Offset-Startindex der Antwort-Liste
+## Startindex von Antwortliste versetzen
 
-Der Parameter `start` &quot;Abfrage&quot;versetzt die Liste der Antwort mit einer angegebenen Anzahl vorwärts, wobei eine Nummerierung mit Null verwendet wird. Beispielsweise `start=2` würde die Antwort auf Beginn auf dem dritten aufgelisteten Objekt versetzt.
+Der Abfrageparameter `start` versetzt die Antwortliste um eine angegebene Zahl vorwärts, wobei Zahlen bei 0 beginnen. Beispielsweise würde `start=2` die Antwort so versetzen, dass mit dem dritten aufgelisteten Objekt begonnen wird.
 
-Wenn der `start` Parameter nicht mit einem `limit` Parameter gepaart wird, beträgt die maximale Anzahl der zurückgegebenen Objekte 20.
+Wenn der `start`-Parameter nicht zusammen mit einem `limit`-Parameter genutzt wird, beträgt die maximale Zahl der zurückgegebenen Objekte 20.
 
 **API-Format**
 
@@ -169,12 +169,12 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OFFSET}` | Eine Ganzzahl, die die Anzahl der Objekte angibt, um die die Antwort versetzt werden soll. |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden Catalog-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OFFSET}` | Eine Ganzzahl, die die Zahl der Objekte angibt, um die die Antwort versetzt werden soll. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Liste von Datensätzen abgerufen, wobei der Vergleich zum fünften Objekt (`start=4`) erfolgt und die Antwort auf zwei zurückgegebene Datensätze beschränkt wird (`limit=2`).
+Mit der folgenden Anfrage wird eine Liste von Datensätzen abgerufen, wobei auf das fünfte Objekt versetzt (`start=4`) und die Antwort auf zwei zurückgegebene Datensätze beschränkt wird (`limit=2`).
 
 ```shell
 curl -X GET \
@@ -187,7 +187,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält ein JSON-Objekt mit zwei Elementen der obersten Ebene (`limit=2`), einem für jeden Datensatz und seinen Details (Details wurden im Beispiel zusammengefasst). Die Antwort wird um vier (`start=4`) verschoben, d. h. die angezeigten Datensätze sind chronologisch die Nummern fünf und sechs.
+Die Antwort enthält ein JSON-Objekt mit zwei Elementen der obersten Ebene (`limit=2`) – eines für jeden Datensatz – und ihren Details (die Details wurden im Beispiel gekürzt). Die Antwort wird um vier (`start=4`) versetzt, d. h. die angezeigten Datensätze sind chronologisch die Nummern 5 und 6.
 
 ```json
 {
@@ -196,20 +196,20 @@ Die Antwort enthält ein JSON-Objekt mit zwei Elementen der obersten Ebene (`lim
 }
 ```
 
-## Nach Tag filtern
+## Anhand von Tag filtern
 
-Einige Katalogobjekte unterstützen die Verwendung eines `tags` Attributs. Tags können Informationen an ein Objekt anhängen und später zum Abrufen dieses Objekts verwendet werden. Welche Tags verwendet und wie sie angewendet werden sollen, hängt von Ihren organisatorischen Prozessen ab.
+Einige Catalog-Objekte unterstützen die Verwendung eines `tags`-Attributs. Tags können Daten an ein Objekt anhängen und später zum Abrufen des Objekts verwendet werden. Welche Tags wie genutzt werden sollten, hängt von den Prozessen in Ihrer Organisation ab.
 
-Bei der Verwendung von Tags sind einige Einschränkungen zu beachten:
+Bei Verwendung von Tags sind einige Einschränkungen zu beachten:
 
-* Die einzigen Katalogobjekte, die Tags derzeit unterstützen, sind Datensätze, Stapel und Verbindungen.
+* Die einzigen Catalog-Objekte, die derzeit Tags unterstützen, sind Datensätze, Batches und Verbindungen.
 * Tag-Namen sind für Ihre IMS-Organisation eindeutig.
-* Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig &quot;adobe&quot;vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
-* Die folgenden Tag-Namen sind für die Verwendung in der gesamten Experience Platform reserviert und können daher nicht als Tag-Name für Ihr Unternehmen deklariert werden:
-   * `unifiedProfile`: Dieser Tag-Name ist für Datasets reserviert, die vom [Echtzeit-Kunden-Profil](../../profile/home.md)erfasst werden sollen.
-   * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die vom [Identitätsdienst](../../identity-service/home.md)erfasst werden sollen.
+* Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig „adobe“ vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
+* The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
+   * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [!DNL Real-time Customer Profile](../../profile/home.md) erfasst werden sollen.
+   * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die von [!DNL Identity Service](../../identity-service/home.md) erfasst werden sollen.
 
-Nachfolgend finden Sie ein Beispiel für einen Datensatz, der eine `tags` Eigenschaft enthält. Die Tags in dieser Eigenschaft haben die Form von Schlüssel-Wert-Paaren, wobei jeder Tag-Wert als Array mit einer einzelnen Zeichenfolge angezeigt wird:
+Nachfolgend finden Sie ein Beispiel für einen Datensatz, der eine `tags`-Eigenschaft enthält. Die Tags in dieser Eigenschaft haben die Form von Schlüssel-Wert-Paaren, wobei jeder Tag-Wert als Array mit einer einzelnen Zeichenfolge angezeigt wird:
 
 ```json
 {
@@ -248,9 +248,9 @@ Nachfolgend finden Sie ein Beispiel für einen Datensatz, der eine `tags` Eigens
 
 **API-Format**
 
-Die Werte für den `tags` Parameter werden in Form von Schlüssel-Wert-Paaren im Format `{TAG_NAME}:{TAG_VALUE}`verwendet. Mehrere Schlüssel/Wert-Paare können in Form einer kommagetrennten Liste bereitgestellt werden. Wenn mehrere Tags bereitgestellt werden, wird eine UND-Beziehung angenommen.
+Werte für den `tags`-Parameter haben die Form von Schlüssel-Wert-Paaren, wobei das Format `{TAG_NAME}:{TAG_VALUE}` zum Einsatz kommt. Mehrere Schlüssel-Wert-Paare können in Form einer kommagetrennten Liste angegeben werden. Wenn verschiedene Tags angegeben werden, wird eine UND-Beziehung angenommen.
 
-Der Parameter unterstützt Platzhalterzeichen (`*`) für Tag-Werte. Eine Suchzeichenfolge von `test*` gibt beispielsweise jedes Objekt zurück, bei dem der Tag-Wert mit &quot;test&quot;beginnt. Eine Suchzeichenfolge, die ausschließlich aus einem Platzhalter besteht, kann verwendet werden, um Objekte unabhängig von ihrem Wert zu filtern, je nachdem, ob sie ein bestimmtes Tag enthalten oder nicht.
+Der Parameter unterstützt Platzhalterzeichen (`*`) für Tag-Werte. Die Suchzeichenfolge `test*` beispielsweise gibt alle Objekte zurück, bei denen der Tag-Wert mit „test“ beginnt. Eine ausschließlich aus einem Platzhalter bestehende Suchzeichenfolge kann dazu dienen, Objekte unabhängig von ihrem Wert danach zu filtern, ob sie ein bestimmtes Tag enthalten oder nicht.
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -261,13 +261,13 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | Der Name des Tags, nach dem gefiltert werden soll. |
 | `{TAG_VALUE}` | Der Wert des Tags, nach dem gefiltert werden soll. Unterstützt Platzhalterzeichen (`*`). |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Liste von Datensätzen abgerufen, die nach einem Tag mit einem bestimmten Wert gefiltert werden, wobei das zweite Tag vorhanden ist.
+Mit der folgenden Anfrage wird eine Liste von Datensätzen abgerufen, wobei danach gefiltert wird, ob ein Tag einen bestimmten Wert hat UND das zweite Tag vorhanden ist.
 
 ```shell
 curl -X GET \
@@ -280,7 +280,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Datensätzen zurück, die `sampleTag` den Wert &quot;123456&quot;und `secondTag` einen beliebigen Wert enthalten. Sofern keine Begrenzung angegeben ist, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleTag` mit einem Wert von „123456“ UND `secondTag` mit einem beliebigen Wert enthalten. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -332,7 +332,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Datensätzen zurück, die `sampleT
 
 ## Nach Datumsbereich filtern
 
-Einige Endpunkte in der Katalog-API verfügen über Abfragen-Parameter, die eine Abfrage in einem bestimmten Bereich zulassen, meist bei Datumsangaben.
+Some endpoints in the [!DNL Catalog] API have query parameters that allow for ranged queries, most often in the case of dates.
 
 **API-Format**
 
@@ -342,11 +342,11 @@ GET /batches?createdAfter={TIMESTAMP_1}&createdBefore={TIMESTAMP_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TIMESTAMP }` | Eine datetime integer in Unix Epoch time. |
+| `{TIMESTAMP }` | Eine Datum/Uhrzeit-Ganzzahl in Unix Epoch-Zeit. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Liste der im April 2019 erstellten Stapel abgerufen.
+Mit der folgenden Anfrage wird eine Liste der im April 2019 erstellten Batches abgerufen.
 
 ```shell
 curl -X GET \
@@ -359,7 +359,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von Katalogobjekten, die innerhalb des angegebenen Datumsbereichs liegen. Sofern keine Begrenzung angegeben ist, enthält die Antwort maximal 20 Objekte.
+A successful response contains a list of [!DNL Catalog] objects that fall within the specified date range. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -392,11 +392,11 @@ Eine erfolgreiche Antwort enthält eine Liste von Katalogobjekten, die innerhalb
 
 ## Nach Eigenschaft sortieren
 
-Mit dem Parameter &quot; `orderBy` Abfrage&quot;können Sie Antwortdaten basierend auf einem angegebenen Eigenschaftswert sortieren. Dieser Parameter erfordert eine &quot;Richtung&quot;(`asc` für aufsteigende oder absteigende Werte), gefolgt von einem Doppelpunkt ( `desc``:`) und dann einer Eigenschaft, nach der die Ergebnisse sortiert werden. Wenn keine Richtung angegeben ist, wird die Standardrichtung aufsteigend festgelegt.
+Mit dem Abfrageparameter `orderBy` können Sie Antwortdaten basierend auf einem angegebenen Eigenschaftswert sortieren (anordnen). Dieser Parameter erfordert eine „Richtung“ (`asc` für aufsteigende oder `desc` für absteigende Werte), gefolgt von einem Doppelpunkt (`:`) und einer Eigenschaft, anhand der die Ergebnisse sortiert werden sollen. Wenn keine Richtung angegeben ist, lautet die Standardrichtung „aufsteigend“.
 
-Mehrere Sortiereigenschaften können in einer kommagetrennten Liste bereitgestellt werden. Wenn die erste Sortiereigenschaft mehrere Objekte erzeugt, die denselben Wert für diese Eigenschaft enthalten, wird die zweite Sortiereigenschaft verwendet, um diese übereinstimmenden Objekte weiter zu sortieren.
+Mehrere Sortiereigenschaften können in einer kommagetrennten Liste angegeben werden. Wenn die erste Sortiereigenschaft mehrere Objekte ergibt, die denselben Wert für diese Eigenschaft enthalten, wird die zweite Sortiereigenschaft genutzt, um die übereinstimmenden Objekte weiter zu sortieren.
 
-Betrachten Sie beispielsweise die folgende Abfrage: `orderBy=name,desc:created`. Die Ergebnisse werden in aufsteigender Reihenfolge nach der ersten Sortiereigenschaft sortiert `name`. In Fällen, in denen mehrere Datensätze dieselbe `name` Eigenschaft haben, werden diese übereinstimmenden Datensätze nach der zweiten Sortiereigenschaft sortiert `created`. Wenn keine zurückgegebenen Datensätze dasselbe aufweisen `name`, wird die Sortierung von der `created` Eigenschaft nicht berücksichtigt.
+Betrachten Sie beispielsweise die folgende Abfrage: `orderBy=name,desc:created`. Ergebnisse werden anhand der ersten Sortiereigenschaft (`name`) in aufsteigender Reihenfolge sortiert. Falls mehrere Datensätze dieselbe `name`-Eigenschaft aufweisen, werden die übereinstimmenden Datensätze dann anhand der zweiten Sortiereigenschaft (`created`) sortiert. Wenn keine der zurückgegebenen Datensätze denselben `name` aufweisen, wird die Eigenschaft `created` bei der Sortierung nicht berücksichtigt.
 
 
 **API-Format**
@@ -409,12 +409,12 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{PROPERTY_NAME}` | Der Name einer Eigenschaft, nach der die Ergebnisse sortiert werden sollen. |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden Catalog-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{PROPERTY_NAME}` | Der Name einer Eigenschaft, anhand der die Ergebnisse sortiert werden sollen. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine Liste von Datensätzen ab, die nach ihrer `name` Eigenschaft sortiert sind. Wenn Datasets dasselbe aufweisen `name`werden diese Datensätze in absteigender Reihenfolge nach ihrer `updated` Eigenschaft sortiert.
+Die folgende Anfrage ruft eine Liste von Datensätzen ab, sortiert anhand ihrer `name`-Eigenschaft. Wenn Datensätze denselben `name` aufweisen, werden diese Datensätze anhand ihrer `updated`-Eigenschaft in absteigender Reihenfolge sortiert.
 
 ```shell
 curl -X GET \
@@ -427,7 +427,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von Katalogobjekten, die gemäß dem `orderBy` Parameter sortiert werden. Sofern keine Begrenzung angegeben ist, enthält die Antwort maximal 20 Objekte.
+A successful response contains a list of [!DNL Catalog] objects that are sorted according to the `orderBy` parameter. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -472,18 +472,18 @@ Eine erfolgreiche Antwort enthält eine Liste von Katalogobjekten, die gemäß d
 
 ## Nach Eigenschaft filtern
 
-Der Katalog bietet zwei Methoden zum Filtern nach Eigenschaft, die in den folgenden Abschnitten näher erläutert werden:
+[!DNL Catalog] bietet zwei Methoden zum Filtern anhand von Eigenschaften, die in den folgenden Abschnitten genauer erläutert werden:
 
-* [Verwenden einfacher Filter](#using-simple-filters): Filtern Sie, ob eine bestimmte Eigenschaft mit einem bestimmten Wert übereinstimmt.
-* [Verwenden des Eigenschaftsparameters](#using-the-property-parameter): Verwenden Sie bedingte Ausdruck, um zu filtern, ob eine Eigenschaft vorhanden ist oder ob der Wert einer Eigenschaft mit einem anderen angegebenen Wert oder einem regulären Ausdruck übereinstimmt, einen Näherungswert erreicht oder mit diesem vergleicht.
+* [Verwenden einfacher Filter](#using-simple-filters): Filtern Sie danach, ob eine bestimmte Eigenschaft mit einem bestimmten Wert übereinstimmt.
+* [Verwenden des Eigenschaftsparameters](#using-the-property-parameter): Nutzen Sie bedingte Ausdrücke, um danach zu filtern, ob eine Eigenschaft vorhanden ist oder ob der Wert einer Eigenschaft mit einem anderen angegebenen Wert oder regulären Ausdruck übereinstimmt bzw. sich diesem nähert oder mit diesem vergleichbar ist.
 
 ### Verwenden einfacher Filter {#using-simple-filters}
 
-Mit einfachen Filtern können Sie Antworten basierend auf bestimmten Eigenschaftswerten filtern. Ein einfacher Filter hat die Form `{PROPERTY_NAME}={VALUE}`.
+Mit einfachen Filtern können Sie Antworten anhand einzelner Eigenschaftswerte filtern. Ein einfacher Filter hat die Form `{PROPERTY_NAME}={VALUE}`.
 
-Beispielsweise `name=exampleName` gibt die Abfrage nur Objekte zurück, deren `name` Eigenschaft den Wert &quot;exampleName&quot;enthält. Im Gegensatz dazu `name=!exampleName` gibt die Abfrage nur Objekte zurück, deren `name` Eigenschaft **nicht** &quot;exampleName&quot;lautet.
+Beispielsweise gibt die Abfrage `name=exampleName` nur Objekte zurück, deren `name`-Eigenschaft den Wert „exampleName“ enthält. Im Gegensatz dazu gibt die Abfrage `name=!exampleName` nur Objekte zurück, deren `name`-Eigenschaft **nicht** „exampleName“ lautet.
 
-Darüber hinaus unterstützen einfache Filter die Möglichkeit, mehrere Werte für eine Eigenschaft Abfrage. Wenn mehrere Werte angegeben sind, gibt die Antwort Objekte zurück, deren Eigenschaft mit **einem** der Werte in der bereitgestellten Liste übereinstimmt. Sie können eine Abfrage mit mehreren Werten umkehren, indem Sie der Liste ein `!` Zeichen voranstellen und nur Objekte zurückgeben, deren Eigenschaftswert **nicht** in der angegebenen Liste enthalten ist (z. B. `name=!exampleName,anotherName`).
+Darüber hinaus erlauben es einfache Filter, verschiedene Werte für eine Eigenschaft abzufragen. Wenn mehrere Werte bereitgestellt werden, gibt die Antwort Objekte zurück, deren Eigenschaft mit **beliebigen** Werten in der angegebenen Liste übereinstimmt. Sie können eine Abfrage mit mehreren Werten umkehren, indem Sie der Liste ein `!`-Zeichen voranstellen. So werden nur Objekte zurückgegeben, deren Eigenschaftswert **nicht** in der angegebenen Liste enthalten ist (z. B. `name=!exampleName,anotherName`).
 
 **API-Format**
 
@@ -496,13 +496,13 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | Der Name der Eigenschaft, nach deren Wert Sie filtern möchten. |
-| `{VALUE}` | Ein Eigenschaftswert, der bestimmt, welche Ergebnisse je nach Abfrage ein- oder ausgeschlossen werden sollen. |
+| `{VALUE}` | Ein Eigenschaftswert, der bestimmt, welche Ergebnisse ein- oder ausgeschlossen werden (je nach Abfrage). |
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine Liste von Datensätzen ab, die gefiltert werden, um nur Datensätze einzuschließen, deren `name` Eigenschaft den Wert &quot;exampleName&quot;oder &quot;anotherName&quot;hat.
+Folgende Anfrage ruft eine Liste von Datensätzen ab, die so gefiltert ist, dass nur Datensätze eingeschlossen werden, deren `name`-Eigenschaft den Wert „exampleName“ oder „anotherName“ hat.
 
 ```shell
 curl -X GET \
@@ -515,7 +515,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Datensätze ausgeschlossen sind, deren Name `name` &quot;exampleName&quot;oder &quot;anotherName&quot;lautet. Sofern keine Begrenzung angegeben ist, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Datensätze ausgeschlossen sind, deren `name` „exampleName“ oder „anotherName“ lautet. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -546,11 +546,11 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Daten
 }
 ```
 
-### Verwenden des `property` Parameters {#using-the-property-parameter}
+### Verwenden des `property`-Parameters {#using-the-property-parameter}
 
-Der Parameter `property` &quot;Abfrage&quot;bietet mehr Flexibilität bei der eigenschaftsbasierten Filterung als einfache Filter. Neben der Filterung, die darauf basiert, ob eine Eigenschaft einen bestimmten Wert hat, kann der `property` Parameter auch andere Vergleichsoperatoren (wie &quot;Größer-als&quot;(`>`) und &quot;Kleiner-als&quot;(`<`)) sowie reguläre Ausdruck verwenden, um nach Eigenschaftswerten zu filtern. Sie kann auch nach dem Vorhandensein oder Nichtvorhandensein einer Eigenschaft filtern, unabhängig vom Wert.
+Der Abfrageparameter `property` bietet bei eigenschaftsbasierter Filterung mehr Flexibilität als einfache Filter. Neben einer Filterung danach, ob eine Eigenschaft einen bestimmten Wert aufweist oder nicht, kann der `property`-Parameter auch andere Vergleichsoperatoren wie „größer als“ (`>`) und „kleiner als“ (`<`) sowie reguläre Ausdrücke verwenden, um anhand von Eigenschaftswerten zu filtern. Es kann auch nach dem Vorhandensein oder Nichtvorhandensein einer Eigenschaft gefiltert werden, unabhängig von ihrem Wert.
 
-Der `property` Parameter akzeptiert nur Objekteigenschaften der obersten Ebene. Das bedeutet, dass Sie für das folgende Beispielobjekt nach Eigenschaften, Eigenschaften `name`und `description`, jedoch NICHT nach `subItem``sampleKey`filtern können.
+Der `property`-Parameter akzeptiert nur Objekteigenschaften der obersten Ebene. Das bedeutet, dass Sie beim folgenden Beispielobjekt anhand der Eigenschaft für `name`, `description` und `subItem`, NICHT aber für `sampleKey` filtern können.
 
 ```json
 {
@@ -572,30 +572,30 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{CONDITION}` | Ein bedingter Ausdruck, der angibt, für welche Eigenschaft eine Abfrage erfolgen soll und wie deren Wert ausgewertet werden soll. Nachfolgend finden Sie Beispiele. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{CONDITION}` | Ein bedingter Ausdruck, der angibt, welche Eigenschaft abgefragt und wie ihr Wert ausgewertet werden soll. Nachfolgend finden Sie verschiedene Beispiele. |
 
-Der `property` Parameterwert unterstützt mehrere verschiedene Typen von bedingten Ausdrücken. Die folgende Tabelle enthält eine grundlegende Syntax für unterstützte Ausdruck:
+Der Wert des `property`-Parameters unterstützt unterschiedliche Typen von bedingten Ausdrücken. Folgende Tabelle enthält die grundlegende Syntax für unterstützte Ausdrücke:
 
 | Symbol(e) | Beschreibung | Beispiel |
 | --- | --- | --- |
-| (None) | Wenn Sie den Eigenschaftsnamen ohne Operator festlegen, werden nur Objekte zurückgegeben, bei denen die Eigenschaft vorhanden ist, unabhängig von ihrem Wert. | `property=name` |
-| ! | Wenn Sie dem Wert eines`!`Parameters ein &quot; `property` &quot;voranstellen, werden nur Objekte zurückgegeben, für die die Eigenschaft **nicht** vorhanden ist. | `property=!name` |
-| ~ | Gibt nur Objekte zurück, deren Eigenschaftswerte (Zeichenfolge) mit einem regulären Ausdruck übereinstimmen, der nach dem Tilde-Symbol (`~`) angegeben wurde. | `property=name~^example` |
-| == | Gibt nur Objekte zurück, deren Eigenschaftswerte exakt mit der Zeichenfolge übereinstimmen, die nach dem Dublette-gleich-Symbol (`==`) angegeben wurde. | `property=name==exampleName` |
-| != | Gibt nur Objekte zurück, deren Eigenschaftswerte **nicht** mit der Zeichenfolge übereinstimmen, die nach dem Symbol nicht gleich angegeben wird (`!=`). | `property=name!=exampleName` |
-| &lt; | Gibt nur Objekte zurück, deren Eigenschaftswerte kleiner als (aber nicht gleich) ein angegebener Betrag sind. | `property=version<1.0.0` |
-| &lt;= | Gibt nur Objekte zurück, deren Eigenschaftswerte kleiner als (oder gleich) ein angegebener Betrag sind. | `property=version<=1.0.0` |
-| > | Gibt nur Objekte zurück, deren Eigenschaftswerte einen angegebenen Betrag überschreiten (jedoch nicht gleich). | `property=version>1.0.0` |
-| >= | Gibt nur Objekte zurück, deren Eigenschaftswerte größer als (oder gleich) ein angegebener Betrag sind. | `property=version>=1.0.0` |
+| (Keine) | Wenn Sie den Eigenschaftsnamen ohne Operator festlegen, werden nur Objekte zurückgegeben, bei denen die Eigenschaft vorhanden ist (unabhängig von ihrem Wert). | `property=name` |
+| ! | Wenn Sie dem Wert eines `property`-Parameters ein „`!`“ voranstellen, werden nur Objekte zurückgegeben, bei denen die Eigenschaft **nicht** vorhanden ist. | `property=!name` |
+| ~ | Gibt nur Objekte zurück, deren Eigenschaftswerte (Zeichenfolge) mit einem regulären Ausdruck übereinstimmen, der nach dem Tilde-Symbol (`~`) angegeben ist. | `property=name~^example` |
+| == | Gibt nur Objekte zurück, deren Eigenschaftswerte genau mit der Zeichenfolge übereinstimmen, die nach dem doppelten Gleichheitszeichen (`==`) angegeben ist. | `property=name==exampleName` |
+| != | Gibt nur Objekte zurück, deren Eigenschaftswerte **nicht** mit der Zeichenfolge übereinstimmen, die nach dem Ungleichheitszeichen (`!=`) angegeben ist. | `property=name!=exampleName` |
+| &lt; | Gibt nur Objekte zurück, deren Eigenschaftswerte kleiner als ein angegebener Betrag sind (aber nicht gleich). | `property=version<1.0.0` |
+| &lt;= | Gibt nur Objekte zurück, deren Eigenschaftswerte kleiner als ein angegebener Betrag sind (oder gleich). | `property=version<=1.0.0` |
+| > | Gibt nur Objekte zurück, deren Eigenschaftswerte größer als ein angegebener Betrag sind (aber nicht gleich). | `property=version>1.0.0` |
+| >= | Gibt nur Objekte zurück, deren Eigenschaftswerte größer als ein angegebener Betrag sind (oder gleich). | `property=version>=1.0.0` |
 
 >[!NOTE]
 >
->Die `name` Eigenschaft unterstützt die Verwendung eines Platzhalters `*`, entweder als gesamte Suchzeichenfolge oder als Teil davon. Platzhalter entsprechen leeren Zeichen, sodass die Suchzeichenfolge mit dem Wert &quot;test&quot;übereinstimmt. `te*st` Sterbliche Risiken werden durch Verdopplung entkommen (`**`). Ein Dublette-Sternchen in einer Suchzeichenfolge stellt ein einzelnes Sternchen als Zeichenfolge dar.
+>Die `name`-Eigenschaft unterstützt die Verwendung eines Platzhalters `*`, entweder als gesamte Suchzeichenfolge oder als Teil davon. Platzhalter entsprechen leeren Zeichen, sodass die Suchzeichenfolge `te*st` mit dem Wert „test“ übereinstimmt. Bei Sternchen muss durch Verdopplung (`**`) ein Escape durchgeführt werden. Ein doppeltes Sternchen in einer Suchzeichenfolge stellt ein einzelnes Sternchen als literale Zeichenfolge dar.
 
 **Anfrage**
 
-Die folgende Anforderung gibt alle Datensätze mit einer Versionsnummer über 1.0.3 zurück.
+Die folgende Anfrage gibt alle Datensätze mit einer Versionsnummer zurück, die über 1.0.3 liegt.
 
 ```shell
 curl -X GET \
@@ -608,7 +608,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnummern größer als 1.0.3 sind. Sofern keine Begrenzung angegeben ist, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnummern höher als 1.0.3 sind. Sofern keine Begrenzung angegeben ist, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -653,7 +653,7 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnu
 
 ## Mehrere Filter kombinieren
 
-Mit einem kaufmännischen kaufmännischen Und (`&`) können Sie mehrere Filter in einer einzigen Anforderung kombinieren. Wenn einer Anforderung zusätzliche Bedingungen hinzugefügt werden, wird eine UND-Beziehung angenommen.
+Mit einem kaufmännischen Und-Zeichen (`&`) können Sie mehrere Filter in einer Anfrage kombinieren. Wenn einer Anfrage zusätzliche Bedingungen hinzugefügt werden, wird eine UND-Beziehung angenommen.
 
 **API-Format**
 
