@@ -4,28 +4,28 @@ seo-title: Segmentierungsdienst in der Echtzeit-Kundendatenplattform von Adobe
 description: Eine Übersicht mit einer Beschreibung des Segmentierungsdiensts.
 seo-description: Eine Übersicht, in der der Segmentierungsdienst und Segmente in der Echtzeit-Kundendatenplattform von Adobe beschrieben werden.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 95%
+source-wordcount: '254'
+ht-degree: 60%
 
 ---
 
 
-# Segmentierungsdienst in der Echtzeit-Kundendatenplattform
+# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
 
-Mit der Echtzeit-Kundendatenplattform können Sie Daten aus verschiedenen Quellen zusammenführen, um für ein koordiniertes und konsistentes Kundenerlebnis zu sorgen. Relevante und personalisierte Marketing-Kampagnen lassen sich mit dem Segmentierungsdienst bereitstellen, der Teil von Adobe Experience Platform ist.
+[!DNL Real-time Customer Data Platform] (Echtzeit-CDP) ermöglicht es Ihnen, Daten aus mehreren Quellen zu importieren, um ein koordiniertes und konsistentes Erlebnis für Ihre Kunden zu schaffen. Delivering relevant personalized marketing campaigns can be achieved using the [!DNL Segmentation Service], part of Adobe Experience Platform.
 
-Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform und nutzt viele Dienste und Funktionen von Experience Platform. Mit dem Segmentierungsdienst können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
+Real-time CDP is built on top of Adobe Experience Platform and utilizes many of the [!DNL Experience Platform] services and functionality. Using the [!DNL Segmentation Service], you can provide tailor-made marketing by dividing your customers into smaller groups with similar traits.
 
 ## Segmentierung
 
 Bei Segmentierung handelt es sich um den Prozess der Definition spezifischer Attribute oder Verhaltensweisen, die von einer Untergruppe von Profilen in Ihrem Profilspeicher geteilt werden, sodass Sie eine vermarktbare Gruppe von Personen aus Ihrem Kundenstamm ermitteln können. In einer E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Schuhe zu kaufen?“ wollen Sie möglicherweise eine Zielgruppe aller Anwender auswählen, die in den letzten 30 Tagen nach Laufschuhen gesucht haben, den Kauf jedoch nicht abgeschlossen haben. Mithilfe unterschiedlicher Segmente können Sie sich auf verschiedene Zielgruppen konzentrieren und so für ein besser angepasstes Marketing-Erlebnis sorgen.
 
-## Segment Builder
+## [!DNL Segment Builder]
 
-Platform ermöglicht Ihnen das einfache Erstellen und Aufrufen von Segmenten sowie eine Verwendung verschiedener Bausteine zur weiteren Charakterisierung Ihrer Segmente. Weiterführende Informationen zur Nutzung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder-guide.md).
+[!DNL Platform] ermöglicht Ihnen das einfache Erstellen und Aufrufen von Segmenten sowie eine Verwendung verschiedener Bausteine zur weiteren Charakterisierung Ihrer Segmente. Weiterführende Informationen zur Nutzung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder-guide.md).
 
 ## Nächste Schritte
 
-Nachdem Sie diese Übersicht gelesen haben, sollten Sie wissen, wie die Echtzeit-Kundendatenplattform den Segmentierungsdienst nutzt, um die Anpassung und Personalisierung von Marketing-Kampagnen zu optimieren. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).
+After reading this overview, you should now understand how Real-time CDP utilizes [!DNL Segmentation Service] to enhance customization and personalization of marketing campaigns. Weitere Informationen zu [!DNL Segmentation Service]dieser Funktion finden Sie in der Dokumentation zur [Segmentierung](../../segmentation/home.md).
