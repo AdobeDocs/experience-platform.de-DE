@@ -4,21 +4,21 @@ seo-title: 'Adobe Experience Platform Web SDK - SchnellBeginn '
 description: Kurzanleitung zum Verwenden des Experience Platform Web SDK zum Erfassen von Daten
 seo-description: Kurzanleitung zum Verwenden des Experience Platform Web SDK zum Erfassen von Daten
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 13%
+source-wordcount: '517'
+ht-degree: 15%
 
 ---
 
 
 # Willkommen
 
-Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, die Adobe Experience Platform einzurichten [!DNL Web SDK]. Um diese Funktion nutzen zu können, müssen Sie auf der Zulassungsliste sein. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
+Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Web SDK für die Adobe Experience Platform einzurichten. Um diese Funktion verwenden zu können, müssen Sie in der Positivliste eingetragen sein. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
 
-- Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). If you already have a CNAME for [!DNL Analytics], you should use that one. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen
-- Berechtigung für Adobe Experience Platform [!DNL Data Platform].  Wenn Sie keine Plattform gekauft haben, stellen wir Ihnen eine begrenzte Verwendung mit dem SDK ohne Aufpreis [!DNL Experience Platform Data Services Foundation] zur Verfügung.
-- Verwenden Sie die neueste Version des Besucher-ID-Diensts
+- Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über eine CNAME für Analytics verfügen, sollten Sie diese verwenden. Testen in der Entwicklung funktioniert ohne CNAME, aber Sie benötigen einen, bevor Sie zur Produktion gehen.
+- Berechtigung für Adobe Experience Platform.  Wenn Sie Platform nicht erworben haben, stellt Adobe Ihnen die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK ohne Aufpreis zur Verfügung.
+- Verwenden Sie die neueste Version des Besucher-ID-Diensts.
 
 ## Erstellen einer Konfigurations-ID
 
