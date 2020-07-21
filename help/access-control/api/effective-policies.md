@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Effektive Ansicht
+title: Anzeigen effektiver Richtlinien
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 1%
+source-wordcount: '265'
+ht-degree: 69%
 
 ---
 
 
-# Effektive Ansicht
+# Anzeigen effektiver Richtlinien
 
-Um effektive Richtlinien für den aktuellen Benutzer Ansicht, erstellen Sie eine POST-Anforderung an den `/acl/effective-policies` Endpunkt in der Zugriffskontrollen-API. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anforderungs-Nutzlast in Form eines Arrays bereitgestellt werden. Dies wird im Beispiel-API-Aufruf unten gezeigt.
+To view effective policies for the current user, make a POST request to the `/acl/effective-policies` endpoint in the [!DNL Access Control] API. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
 
 **API-Format**
 
@@ -24,7 +24,7 @@ POST /acl/effective-policies
 
 **Anfrage**
 
-Die folgenden Anforderungen rufen Informationen über die Berechtigung &quot;Datasets verwalten&quot;und den Zugriff auf den Ressourcentyp &quot;Schema&quot;für den aktuellen Benutzer ab.
+The following requests retrieves information about the &quot;[!UICONTROL Manage Datasets]&quot; permission and access to the &quot;[!UICONTROL schemas]&quot; resource type for the current user.
 
 ```shell
 curl -X POST \
@@ -42,11 +42,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Eine vollständige Liste der Berechtigungen und Ressourcentypen, die im Payload-Array bereitgestellt werden können, finden Sie im Anhang zu [zulässigen Berechtigungen und Ressourcentypen](#accepted-permissions-and-resource-types).
+>Eine vollständige Liste der Berechtigungen und Ressourcentypen, die im Payload-Array bereitgestellt werden können, finden Sie im Anhang im Abschnitt [zu den akzeptierten Berechtigungen und Ressourcentypen](#accepted-permissions-and-resource-types).
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Informationen zu den Berechtigungen und Ressourcentypen zurück, die in der Anforderung bereitgestellt werden. Die Antwort umfasst die aktiven Berechtigungen, die dem aktuellen Benutzer für die in der Anforderung angegebenen Ressourcentypen zugewiesen sind. Wenn in der Anforderungsnutzlast enthaltene Berechtigungen für den aktuellen Benutzer aktiv sind, gibt die API die Berechtigung mit einem Sternchen (`*`) zurück, um anzugeben, dass die Berechtigung aktiv ist. In der Anforderung bereitgestellte Berechtigungen, die für den Benutzer nicht aktiv sind, werden in der Antwortnutzlast weggelassen.
+Eine erfolgreiche Antwort gibt Informationen über die in der Anfrage angegebenen Berechtigungen und Ressourcentypen zurück. Die Antwort enthält die aktiven Berechtigungen, die der aktuelle Benutzer für die in der Anfrage angegebenen Ressourcentypen hat. Wenn eine in der Anfrage-Payload enthaltene Berechtigung für den aktuellen Benutzer aktiv sind, gibt die API die Berechtigung mit einem Asterisk (`*`) zurück, um anzuzeigen, dass die Berechtigung aktiv ist. In der Anfrage angegebene Berechtigungen, die für den Benutzer nicht aktiv sind, werden in der Antwort-Payload weggelassen.
 
 ```json
 {
@@ -65,15 +65,15 @@ Eine erfolgreiche Antwort gibt Informationen zu den Berechtigungen und Ressource
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie Sie die Zugriffskontrollen-API aufrufen, um Informationen über aktive Berechtigungen und zugehörige Richtlinien für Ressourcentypen zurückzugeben. Weitere Informationen zur Zugriffskontrolle der Experience Platform finden Sie in der Übersicht über die [Zugriffskontrolle](../home.md).
+This document covered how to make calls to the [!DNL Access Control] API to return information on active permissions and related policies for resource types. For more information about access control for [!DNL Experience Platform], see the [access control overview](../home.md).
 
 ## Anhang
 
-Dieser Abschnitt enthält zusätzliche Informationen zur Verwendung der Zugriffskontrollen-API.
+This section provides supplemental information for using the [!DNL Access Control] API.
 
 ### Akzeptierte Berechtigungen und Ressourcentypen
 
-Im Folgenden finden Sie eine Liste von Berechtigungen und Ressourcentypen, die Sie in die Nutzlast einer POST-Anforderung an den `/acl/active-permissions` Endpunkt einbeziehen können.
+Im Folgenden finden Sie eine Liste der Berechtigungen und Ressourcentypen, die Sie in die Payload einer POST-Anfrage an den `/acl/active-permissions`-Endpunkt aufnehmen können.
 
 **Berechtigungen**
 
