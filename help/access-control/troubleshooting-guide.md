@@ -1,35 +1,35 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Handbuch zur Fehlerbehebung bei Zugriffskontrollen
+title: Handbuch zur Fehlerbehebung bei der Zugriffskontrolle
 topic: troubleshooting guide
 translation-type: tm+mt
-source-git-commit: c4da32630d3a6476956347b76d611553ef1853fa
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 0%
+source-wordcount: '298'
+ht-degree: 70%
 
 ---
 
 
-# Handbuch zur Fehlerbehebung bei Zugriffskontrollen
+# Handbuch zur Fehlerbehebung bei der Zugriffskontrolle
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in der Adobe Experience Platform. Fragen und Fehlerbehebung zu anderen Plattformdiensten finden Sie im Handbuch [Experience Platform zur Fehlerbehebung](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-Die Experience Platform nutzt die Profil der [Adobe Admin-Konsole](http://adminconsole.adobe.com) , um rollenbasierte **Zugriffskontrollen** bereitzustellen und Benutzer mit Berechtigungen und Sandboxen zu verknüpfen.  See the [access control overview](home.md) for more information.
+[!DNL Experience Platform] nutzt Produktprofile in der [Adobe Admin Console](http://adminconsole.adobe.com), um rollenbasierte **Zugriffskontrolle** bereitzustellen und Anwender mit Berechtigungen und Sandboxes zu verknüpfen.  Weiterführende Informationen dazu finden Sie in der [Übersicht zur Zugriffskontrolle](home.md).
 
 ## Wo finde ich meine aktuellen Zugriffsberechtigungen?
 
-Wenn Sie Systemadministrator, Produktadministrator oder Produktadministrator für Ihre IMS-Organisation sind, können Sie Ihr zugewiesenes Produkt-Profil und die damit verbundenen Berechtigungen in der Adobe Admin-Konsole Ansicht haben. Anweisungen zum Navigieren in der Admin-Konsole zur Ansicht der Berechtigungen eines Profils finden Sie im Benutzerhandbuch für die [Zugriffskontrolle](./ui/overview.md) .
+Wenn Sie Systemadministrator, Produktadministrator oder Produktprofiladministrator für Ihre IMS-Organisation sind, können Sie Ihr zugewiesenes Produktprofil und die damit verbundenen Berechtigungen in der Adobe Admin Console anzeigen. Anweisungen zum Navigieren der für das Anzeigen der Berechtigungen eines Produktprofils finden Sie im [Benutzerhandbuch zur Zugriffskontrolle](./ui/overview.md).[!DNL Admin Console]
 
-Wenn Sie kein Administrator sind, können Sie Ihre aktuellen Zugriffsberechtigungen dennoch Ansicht haben, indem Sie eine Anforderung an den `/acl/effective-policies` Endpunkt in der Zugriffskontrollen-API senden. Weitere Informationen finden Sie im Abschnitt &quot;Ansicht-Richtlinien&quot;im [Zugriffskontrolle-Entwicklerhandbuch](./api/effective-policies.md) .
+Wenn Sie kein Administrator sind, können Sie Ihre aktuellen Zugriffsberechtigungen dennoch anzeigen, indem Sie eine Anfrage an den `/acl/effective-policies`-Endpunkt in der Access Control-API senden. Weiterführende Informationen finden Sie im Abschnitt „Gültige Richtlinien anzeigen“ im [Entwicklerhandbuch zur Zugriffskontrolle](./api/effective-policies.md).
 
-## Einige Funktionen der Plattform-Benutzeroberfläche sind nicht verfügbar. Wie wird der Zugriff auf diese Funktionen durch Berechtigungen gesteuert?
+## Some features in the [!DNL Platform] UI are not available. Wie wird der Zugriff auf diese Funktionen durch Berechtigungen gesteuert?
 
-Wenn Sie keine Zugriffsberechtigungen für eine bestimmte Plattformfunktion haben, wird diese Funktion in der Experience Platform-Benutzeroberfläche ausgeblendet oder ausgegraut dargestellt. Um beispielsweise die Registerkarte &quot;Profil&quot;Ansicht, müssen Sie entweder über die Berechtigungen &quot;Ansicht Profil&quot;oder &quot;Profil verwalten&quot;verfügen. Wenden Sie sich an Ihren Administrator, wenn Sie zusätzliche Berechtigungen für Experience Platform-Funktionen benötigen.
+If you do not have access permissions for a particular [!DNL Platform] feature, that feature will be hidden or greyed-out in the [!DNL Experience Platform] UI. For example, in order to view the &quot;[!UICONTROL Profiles]&quot; tab, you must have either the &quot;[!UICONTROL View Profiles]&quot; or &quot;[!UICONTROL Manage Profiles]&quot; permissions. Contact your administrator if you require additional permissions for [!DNL Experience Platform] capabilities.
 
-## Wie werden Berechtigungen gruppiert und welche Gruppe enthält die Berechtigung, die ich verwenden möchte?
+## Wie werden Berechtigungen angeordnet, und welche Gruppe enthält die Berechtigung, die ich verwenden möchte?
 
-Berechtigungen werden nach Plattformfunktionen gruppiert und kategorisiert, auf die sie angewendet werden (z. B. Data Management- und Profil-Management). Eine vollständige Liste der verfügbaren Berechtigungen und der Gruppen, zu denen sie gehören, finden Sie im Abschnitt &quot; [Berechtigungen&quot;](home.md#permissions) in der Übersicht über die Zugriffskontrolle.
+Berechtigungen werden nach den [!DNL Platform] Funktionen gruppiert und kategorisiert, für die sie gelten (z. B. [!DNL Data Management] und [!DNL Profile Management]). Eine vollständige Liste der verfügbaren Berechtigungen sowie der Gruppen, zu denen sie gehören, finden Sie im Abschnitt [Berechtigungen](home.md#permissions) in der Übersicht zur Zugriffskontrolle.
 
-Weitere Informationen zur rollenbasierten Zugriffskontrolle finden Sie in der Übersicht über die [Zugriffskontrolle](home.md) .
+Weiterführende Informationen zur Bereitstellung rollenbasierter Zugriffskontrolle finden Sie im [Überblick zur Zugriffskontrolle](home.md).
