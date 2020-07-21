@@ -1,77 +1,77 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Übersicht über die Adobe Experience Platform Batch Ingestion
+title: Adobe Experience Platform-Batch-Aufnahme – Übersicht
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1170'
-ht-degree: 2%
+source-wordcount: '1144'
+ht-degree: 83%
 
 ---
 
 
-# Batch Ingestion - Übersicht
+# [!DNL Batch Ingestion]Übersicht
 
-Mit der Stapeleinbetungs-API können Sie Daten als Batch-Dateien in die Adobe Experience Platform aufnehmen. Daten, die erfasst werden, können Profil-Daten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parkettdatei) oder Daten sein, die einem bekannten Schema in der XDM-Registrierung (Experience Data Model) entsprechen.
+The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
-Der [Data Ingestion API-Verweis](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) enthält weitere Informationen zu diesen API-Aufrufen.
+Der [Datenaufnahme-API-Verweis](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) enthält weitere Informationen zu diesen API-Aufrufen.
 
-Das folgende Diagramm zeigt den Vorgang der Stapelverarbeitung:
+Das folgende Diagramm zeigt den Vorgang der Batch-Aufnahme.
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
 ## Verwenden der API
 
-Mit der Dateneinbettungsschnittstelle können Sie Daten als Stapel (eine Dateneinheit, die aus einer oder mehreren Dateien besteht, die als Einheit erfasst werden sollen) in drei Schritten in die Experience Platform aufnehmen:
+The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of data that consists of one or more files to be ingested as a single unit) into [!DNL Experience Platform] in three basic steps:
 
-1. Erstellen Sie einen neuen Stapel.
+1. Erstellen eines neuen Batchs.
 2. Hochladen von Dateien in einen angegebenen Datensatz, der dem XDM-Schema der Daten entspricht.
-3. Signalisieren Sie das Ende des Stapels.
+3. Signalisieren des Batch-Endes.
 
 
-### Voraussetzungen für die Datenauffüllung
+### [!DNL Data Ingestion] Voraussetzungen
 
 - Die hochzuladenden Daten müssen im Parquet- oder JSON-Format vorliegen.
-- Ein in den [Katalogdiensten](../../catalog/home.md)erstellter Datensatz.
-- Der Inhalt der Parkettdatei muss mit einer Untergruppe des Schemas des hochgeladenen Datensatzes übereinstimmen.
+- Ein Datensatz, der in der [!DNL Catalog services](../../catalog/home.md)Datei erstellt wurde.
+- Der Inhalt der Parquet-Datei muss mit einer Untergruppe des Schemas des hochgeladenen Datensatzes übereinstimmen.
 - Lassen Sie sich nach der Authentifizierung Ihr eindeutiges Zugriffstoken anzeigen.
 
-### Best Practices zur Stapelerfassung
+### Best Practices zur Batch-Aufnahme
 
-- Die empfohlene Stapelgröße liegt zwischen 256 MB und 100 GB.
-- Jeder Stapel sollte maximal 1500 Dateien enthalten.
+- Die empfohlene Batch-Größe liegt zwischen 256 MB und 100 GB.
+- Jeder Batch sollte maximal 1500 Dateien enthalten.
 
 Um eine Datei hochzuladen, die größer als 512 MB ist, muss die Datei in kleinere Abschnitte unterteilt werden. Anweisungen zum Hochladen einer großen Datei finden Sie [hier](#large-file-upload---create-file).
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Werte der zu verwendenden Kopfzeilen
 
-Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Genehmigung: Träger `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
+Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
 
 - Content-Type: application/json
 
-### Stapel erstellen
+### Erstellen eines Batchs
 
-Bevor Daten zu einem Datensatz hinzugefügt werden können, müssen sie mit einem Stapel verknüpft werden, der später in einen bestimmten Datensatz hochgeladen wird.
+Bevor Daten zu einem Datensatz hinzugefügt werden können, müssen sie mit einem Batch verknüpft werden, der später in einen bestimmten Datensatz hochgeladen wird.
 
 ```http
 POST /batches
@@ -119,22 +119,22 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `id` | Die ID des soeben erstellten Stapels (in nachfolgenden Anforderungen verwendet). |
+| `id` | Die ID des soeben erstellten Batchs (in nachfolgenden Anfragen verwendet). |
 | `relatedObjects.id` | Die ID des Datensatzes, in den die Dateien hochgeladen werden sollen. |
 
 ## Datei-Upload
 
-Nachdem Sie erfolgreich einen neuen Stapel zum Hochladen erstellt haben, können Dateien in einen bestimmten Datensatz hochgeladen werden.
+Nachdem Sie erfolgreich einen neuen Batch zum Hochladen erstellt haben, können Dateien in einen bestimmten Datensatz hochgeladen werden.
 
-Sie können Dateien mit der **Small File Upload-API** hochladen. Wenn Ihre Dateien jedoch zu groß sind und das Gateway-Limit überschritten wird (z. B. erweiterte Timeouts, Anforderungen für die Körpergröße und andere Einschränkungen), können Sie zur **Large File Upload-API** wechseln. Diese API lädt die Datei in Textbausteinen hoch und ordnet Daten mithilfe des **Aufrufs &quot;Large File Upload Complete API** &quot;zusammen.
+Sie können Dateien mit der **Small File Upload-API** hochladen. Wenn Ihre Dateien jedoch zu groß sind und das Gateway-Limit überschritten wird (z. B. längere Timeouts, Anfragen für überschrittene Dateigröße und andere Einschränkungen), können Sie zur **Large File Upload-API** wechseln. Diese API lädt die Datei in Teilen hoch und fügt die Daten mithilfe des Aufrufs **Large File Upload Complete-API** wieder zusammen.
 
 >[!NOTE]
 >
->Die folgenden Beispiele verwenden das [Parquet](https://parquet.apache.org/documentation/latest/) -Dateiformat. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im Entwicklerhandbuch für [Stapelverarbeitung](./api-overview.md).
+>Die folgenden Beispiele verwenden das [Parquet](https://parquet.apache.org/documentation/latest/)-Dateiformat. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch für Batch-Aufnahme](./api-overview.md).
 
-### Kleine Datei hochladen
+### Hochladen von kleinen Dateien
 
-Nachdem ein Stapel erstellt wurde, können Daten in einen bereits vorhandenen Datensatz hochgeladen werden.  Die hochgeladene Datei muss mit dem referenzierten XDM-Schema übereinstimmen.
+Nachdem ein Batch erstellt wurde, können Daten in einen bereits vorhandenen Datensatz hochgeladen werden.  Die hochgeladene Datei muss mit dem referenzierten XDM-Schema übereinstimmen.
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -142,9 +142,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des Stapels. |
-| `{DATASET_ID}` | Die ID des Datensatzes, in den Dateien hochgeladen werden sollen. |
-| `{FILE_NAME}` | Der Name der Datei, wie er im Datensatz angezeigt wird. |
+| `{BATCH_ID}` | Die Batch-ID. |
+| `{DATASET_ID}` | Die Datensatz-ID, in den Dateien hochgeladen werden sollen. |
+| `{FILE_NAME}` | Der Dateiname, wie er im Datensatz angezeigt wird. |
 
 **Anfrage**
 
@@ -168,9 +168,9 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 #Status 200 OK, with empty response body
 ```
 
-### Hochladen großer Dateien - Datei erstellen
+### Hochladen großer Dateien – Datei erstellen
 
-Um eine große Datei hochzuladen, muss die Datei in kleinere Abschnitte aufgeteilt und einzeln hochgeladen werden.
+Um eine große Datei hochzuladen, muss die Datei in kleinere Abschnitte aufgeteilt und diese Abschnitte müssen einzeln hochgeladen werden.
 
 ```http
 POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initialize
@@ -178,9 +178,9 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des Stapels. |
-| `{DATASET_ID}` | Die ID des Datensatzes, in dem die Dateien enthalten sind. |
-| `{FILE_NAME}` | Der Name der Datei, wie er im Datensatz angezeigt wird. |
+| `{BATCH_ID}` | Die Batch-ID. |
+| `{DATASET_ID}` | Die ID des Datensatzes, in den die Dateien aufgenommen werden. |
+| `{FILE_NAME}` | Der Dateiname, wie er im Datensatz angezeigt wird. |
 
 **Anfrage**
 
@@ -198,9 +198,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 #Status 201 CREATED, with empty response body
 ```
 
-### Hochladen großer Dateien - Laden Sie nachfolgende Teile hoch
+### Hochladen großer Dateien – nachfolgende Teile hochladen
 
-Nachdem die Datei erstellt wurde, können alle nachfolgenden Abschnitte durch wiederholte PATCH-Anfragen hochgeladen werden, jeweils einen für jeden Abschnitt der Datei.
+Nachdem die Datei erstellt wurde, können alle nachfolgenden Teile durch wiederholte PATCH-Anfragen hochgeladen werden, jeweils einen für jeden Abschnitt der Datei.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -208,9 +208,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des Stapels. |
+| `{BATCH_ID}` | Die Batch-ID. |
 | `{DATASET_ID}` | Die ID des Datensatzes, in den die Dateien hochgeladen werden sollen. |
-| `{FILE_NAME}` | Name der Datei, wie sie im Datensatz angezeigt wird. |
+| `{FILE_NAME}` | Dateiname, wie er im Datensatz angezeigt wird. |
 
 **Anfrage**
 
@@ -235,9 +235,9 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 #Status 200 OK, with empty response
 ```
 
-## Batch-Fertigstellung
+## Signalisieren der Batch-Fertigstellung
 
-Nachdem alle Dateien in den Stapel hochgeladen wurden, kann der Stapel zur Fertigstellung signalisiert werden. Auf diese Weise werden die **DataSetFile** -Einträge des Katalogs für die abgeschlossenen Dateien erstellt und mit dem oben generierten Stapel verknüpft. Der Katalogstapel wird dann als erfolgreich markiert, wodurch nachgelagerte Flüsse zur Erfassung der verfügbaren Daten ausgelöst werden.
+Nachdem alle Dateien in den Batch hochgeladen wurden, kann die Fertigstellung des Batchs signalisiert werden. By doing this, the [!DNL Catalog] **DataSetFile** entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **Anfrage**
 
@@ -247,7 +247,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des Stapels, der in den Datensatz hochgeladen werden soll. |
+| `{BATCH_ID}` | Die ID des Batchs, der in den Datensatz hochgeladen werden soll. |
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -263,9 +263,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 #Status 200 OK, with empty response
 ```
 
-## Stapelstatus prüfen
+## Prüfen des Batch-Status
 
-Während darauf gewartet wird, dass die Dateien in den Stapel hochgeladen werden, kann der Status des Stapels überprüft werden, um den Fortschritt zu sehen.
+Während darauf gewartet wird, dass die Dateien in den Batch hochgeladen werden, kann der Status des Stapels überprüft werden, um den Fortschritt zu sehen.
 
 **API-Format**
 
@@ -275,7 +275,7 @@ GET /batch/{BATCH_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des überprüften Stapels. |
+| `{BATCH_ID}` | Die ID des geprüften Batchs. |
 
 **Anfrage**
 
@@ -379,23 +379,23 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{USER_ID}` | Die ID des Benutzers, der den Stapel erstellt oder aktualisiert hat. |
+| `{USER_ID}` | Die ID des Benutzers, der den Batch erstellt oder aktualisiert hat. |
 
-Das `"status"` Feld zeigt den aktuellen Status des angeforderten Stapels an. Die Stapel können einen der folgenden Status haben:
+Das `"status"`-Feld zeigt den aktuellen Status des angeforderten Batchs an. Die Batches können einen der folgenden Status haben:
 
-## Stapelverarbeitungsstatus
+## Batch-Aufnahmestatus
 
 | Status | Beschreibung |
 | ------ | ----------- |
-| Abgebrochen | Der Stapel wurde nicht im erwarteten Zeitrahmen abgeschlossen. |
-| Abgebrochen | Für den angegebenen Stapel wurde **explizit** ein Abbruchvorgang (über die Batch Ingest-API) aufgerufen. Wenn sich der Stapel im **Status &quot;Geladen** &quot;befindet, kann er nicht abgebrochen werden. |
-| Aktiv | Die Charge wurde erfolgreich beworben und steht für den nachgelagerten Verbrauch zur Verfügung. Dieser Status kann synonym mit **Erfolg** verwendet werden. |
-| Gelöscht | Die Daten für den Stapel wurden vollständig entfernt. |
-| Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Stapel werden **nicht** angezeigt. Dieser Status kann synonym mit **Failure** verwendet werden. |
-| Inaktiv | Der Stapel wurde erfolgreich beworben, wurde jedoch zurückgesetzt oder ist abgelaufen. Die Partie ist nicht mehr für den nachgelagerten Verbrauch verfügbar. |
-| geladen | Die Daten für den Stapel sind abgeschlossen und der Stapel kann beworben werden. |
-| Laden | Daten für diesen Stapel werden hochgeladen und der Stapel kann derzeit **nicht** beworben werden. |
-| Wiederholung | Die Daten für diesen Stapel werden verarbeitet. Aufgrund eines System- oder vorübergehenden Fehlers ist der Stapel jedoch fehlgeschlagen. Daher wird dieser Stapel erneut versucht. |
-| Gestaffelt | Die Staging-Phase des Promotion-Prozesses für einen Stapel ist abgeschlossen und der Erfassungsauftrag wurde ausgeführt. |
-| Staging | Die Daten für den Stapel werden verarbeitet. |
-| Angehalten | Die Daten für den Stapel werden verarbeitet. Die Batch-Promotion wurde jedoch nach einigen weiteren Zustellversuchen angehalten. |
+| Abgebrochen | Der Batch wurde nicht im erwarteten Zeitrahmen fertiggestellt. |
+| Unterbrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Wenn sich der Batch im Status **Geladen** befindet, kann er nicht unterbrochen werden. |
+| Aktiv | Der Batch wurde erfolgreich gefördert und steht für den nachgelagerten Verbrauch zur Verfügung. Dieser Status kann synonym mit **Erfolg** verwendet werden. |
+| Gelöscht | Die Daten für den Batch wurden vollständig entfernt. |
+| Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Batch werden **nicht** angezeigt. Dieser Status kann synonym mit **Fehler** verwendet werden. |
+| Inaktiv | Der Batch wurde erfolgreich gefördert, wurde jedoch zurückgesetzt oder ist abgelaufen. Der Batch ist nicht mehr für den nachgelagerten Verbrauch verfügbar. |
+| Geladen | Die Daten für den Batch sind abgeschlossen und der Stapel kann gefördert werden. |
+| Laden | Daten für diesen Batch werden hochgeladen und der Batch kann derzeit noch **nicht** gefördert werden. |
+| Erneuter Versuch | Die Daten für diesen Batch werden verarbeitet. Aufgrund eines System- oder vorübergehenden Fehlers ist der Batch jedoch fehlgeschlagen. Daher wird für diesen Batch ein erneuter Versuch unternommen. |
+| Staging | Die Staging-Phase des Förderungsprozesses für einen Batch ist abgeschlossen und der Aufnahmeauftrag wurde ausgeführt. |
+| Staging | Die Daten für den Batch werden verarbeitet. |
+| Angehalten | Die Daten für den Batch werden verarbeitet. Die Batch-Förderung wurde jedoch nach einigen weiteren erneuten Versuchen angehalten. |
