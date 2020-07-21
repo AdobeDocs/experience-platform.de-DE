@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Liste, Objekte
+title: Objekte auflisten
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 51%
 
 ---
 
 
-# Liste, Objekte
+# Objekte auflisten
 
-Sie können eine Liste aller verfügbaren Objekte eines bestimmten Typs über einen einzigen API-Aufruf abrufen. Es empfiehlt sich, Filter einzubeziehen, die die Größe der Antwort beschränken.
+Sie können über einen einzigen API-Aufruf eine Liste aller verfügbaren Objekte eines bestimmten Typs abrufen. Es empfiehlt sich, Filter einzubeziehen, um die Größe der Antwort beschränken.
 
 **API-Format**
 
@@ -25,12 +25,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des aufzuführenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | Ein Parameter für die Abfrage, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und (`&`) getrennt. Weitere Informationen finden Sie im Handbuch zum [Filtern von Katalogdaten](filter-data.md) . |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be listed. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Katalogdaten](filter-data.md). |
 
 **Anfrage**
 
-Die unten stehende Musteranforderung ruft eine Liste von Datensätzen ab, wobei ein `limit` Filter die Antwort auf fünf Ergebnisse reduziert und ein `properties` Filter, der die für jeden Datensatz angezeigten Eigenschaften einschränkt.
+Die unten stehende Musteranfrage ruft eine Liste von Datensätzen ab, mit einem `limit`-Filter, der die Antwort auf fünf Ergebnisse reduziert, und einem `properties`-Filter, der die für die einzelnen Datensätze angezeigten Eigenschaften begrenzt.
 
 ```shell
 curl -X GET \
@@ -43,11 +43,11 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Katalogobjekten in Form von Schlüssel-Wert-Paaren zurück, gefiltert nach den in der Anforderung bereitgestellten Abfragen. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel einen eindeutigen Bezeichner für das betreffende Katalogobjekt dar, der dann in einem anderen Aufruf zur [Ansicht dieses bestimmten Objekts](look-up-object.md) verwendet werden kann.
+A successful response returns a list of [!DNL Catalog] objects in the form of key-value pairs, filtered by the query parameters provided in the request. For each key-value pair, the key represents a unique identifier for the [!DNL Catalog] object in question, which can then be used in another call to [view that specific object](look-up-object.md) for more details.
 
 >[!NOTE]
 >
->Wenn ein zurückgegebenes Objekt keine oder mehrere der angeforderten Eigenschaften enthält, die von der `properties` Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie unten unter &quot;Beispiel-Datensatz 3&quot;und &quot;Beispiel-Datensatz 4&quot;dargestellt.
+>If a returned object does not contain one or more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in ***`Sample Dataset 3`*** and ***`Sample Dataset 4`*** below.
 
 ```json
 {
