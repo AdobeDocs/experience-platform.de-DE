@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Endpunkt der Segmentsuche
 topic: guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 5%
 
 ---
@@ -225,7 +225,7 @@ Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, 
 
 ## Anhang {#appendix}
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchbegriffe werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einem Segment namens AAM oder Platform zu suchen, würden Sie die folgende Abfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
+Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchbegriffe werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einem Segment namens AAM zu suchen oder [!DNL Platform], würden Sie die folgende Abfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Für Best Practices sollte der Ausdruck für die Suche wie oben gezeigt HTML-kodiert sein.
 
