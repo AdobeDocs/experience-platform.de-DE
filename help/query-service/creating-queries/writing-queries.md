@@ -4,27 +4,27 @@ solution: Experience Platform
 title: Schreiben von Abfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '667'
-ht-degree: 1%
+source-wordcount: '643'
+ht-degree: 2%
 
 ---
 
 
-# Allgemeine Anleitung für die Ausführung von Abfragen im Abfragen-Dienst
+# Allgemeine Leitlinien für die Ausführung von Abfragen in [!DNL Query Service]
 
-In diesem Dokument werden wichtige Informationen erläutert, die beim Schreiben von Abfragen im Adobe Experience Platform Abfrage Service zu beachten sind.
+In diesem Dokument werden wichtige Details erläutert, die beim Schreiben von Abfragen in der Adobe Experience Platform zu beachten sind [!DNL Query Service].
 
-Ausführliche Informationen zur SQL-Syntax, die im Abfrage Service verwendet wird, finden Sie in der [SQL-Syntaxdokumentation](../sql/syntax.md).
+Ausführliche Informationen zur in verwendeten SQL-Syntax [!DNL Query Service]finden Sie in der [SQL-Syntaxdokumentation](../sql/syntax.md).
 
 ## Ausführungsmodelle für Abfragen
 
-Adobe Experience Platform Abfrage Service verfügt über zwei Ausführungsmodelle für Abfragen: interaktiv und nicht interaktiv. Die interaktive Ausführung wird für die Entwicklung von Abfragen und die Erstellung von Berichten in Business Intelligence-Tools verwendet, während nicht interaktive Anwendungen für größere Aufträge und operative Abfragen als Teil eines Datenverarbeitungs-Workflows verwendet werden.
+Adobe Experience Platform [!DNL Query Service] verfügt über zwei Ausführungsmodelle von Abfragen: interaktiv und nicht interaktiv. Die interaktive Ausführung wird für die Entwicklung von Abfragen und die Erstellung von Berichten in Business Intelligence-Tools verwendet, während nicht interaktive Anwendungen für größere Aufträge und operative Abfragen als Teil eines Datenverarbeitungs-Workflows verwendet werden.
 
 ### Ausführung interaktiver Abfragen
 
-Abfragen können interaktiv ausgeführt werden, indem sie über die Benutzeroberfläche des Abfrage-Dienstes oder [über einen angeschlossenen Client](../clients/overview.md)gesendet werden. Beim Ausführen des Abfrage Service über einen angeschlossenen Client wird eine aktive Sitzung zwischen Client und Abfrage Service ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung eintritt.
+Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service] Benutzeroberfläche oder [über einen angeschlossenen Client](../clients/overview.md)gesendet werden. Bei Ausführung [!DNL Query Service] [!DNL Query Service] über einen angeschlossenen Client wird eine aktive Sitzung zwischen dem Client und ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung eintritt.
 
 Die Ausführung interaktiver Abfragen unterliegt folgenden Einschränkungen:
 
@@ -38,11 +38,11 @@ Die Ausführung interaktiver Abfragen unterliegt folgenden Einschränkungen:
 >
 >Um die maximale Zeilenzahl zu überschreiben, nehmen Sie `LIMIT 0` in Ihre Abfrage auf. Die Zeitüberschreitung der Abfrage von 10 Minuten ist weiterhin gültig.
 
-Standardmäßig werden die Ergebnisse interaktiver Abfragen an den Client zurückgegeben und **nicht** beibehalten. Um die Ergebnisse als Datensatz in der Experience Platform zu erhalten, muss die Abfrage die `CREATE TABLE AS SELECT` Syntax verwenden.
+Standardmäßig werden die Ergebnisse interaktiver Abfragen an den Client zurückgegeben und **nicht** beibehalten. Damit die Ergebnisse als Datensatz beibehalten werden können, muss [!DNL Experience Platform]die Abfrage die `CREATE TABLE AS SELECT` Syntax verwenden.
 
 ### Ausführung nicht interaktiver Abfragen
 
-Abfragen, die über die Abfrage Service API gesendet werden, werden nicht interaktiv ausgeführt. Die nicht interaktive Ausführung bedeutet, dass Abfrage Service den API-Aufruf erhält und die Abfrage in der Reihenfolge ausführt, in der sie empfangen wird. Nicht interaktive Abfragen führen immer dazu, dass entweder ein neuer Datensatz in der Experience Platform generiert wird, um die Ergebnisse zu erhalten, oder dass neue Zeilen in einen vorhandenen Datensatz eingefügt werden.
+Abfragen, die über die [!DNL Query Service] API gesendet werden, werden nicht interaktiv ausgeführt. Die nicht interaktive Ausführung bedeutet, dass der API-Aufruf [!DNL Query Service] empfangen und die Abfrage in der Reihenfolge ausgeführt wird, in der sie empfangen wird. Nicht interaktive Abfragen führen immer dazu, dass entweder ein neuer Datensatz generiert wird, um die Ergebnisse [!DNL Experience Platform] zu erhalten, oder dass neue Zeilen in einen vorhandenen Datensatz eingefügt werden.
 
 ## Zugreifen auf ein bestimmtes Feld in einem Objekt
 
@@ -189,4 +189,4 @@ Wenn Sie Klammern verwenden, sind **keine** Backquotes erforderlich.
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments wurden Sie einigen wichtigen Überlegungen beim Schreiben von Abfragen mit dem Abfrage Service vorgestellt. Weitere Informationen zur Verwendung der SQL-Syntax zum Schreiben eigener Abfragen finden Sie in der [SQL-Syntaxdokumentation](../sql/syntax.md).
+Durch das Lesen dieses Dokuments wurden Sie bei der Erstellung von Abfragen mit [!DNL Query Service]einigen wichtigen Aspekten vorgestellt. Weitere Informationen zur Verwendung der SQL-Syntax zum Schreiben eigener Abfragen finden Sie in der [SQL-Syntaxdokumentation](../sql/syntax.md).
