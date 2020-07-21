@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Datenbestände vs. Tabellen und Schema
+title: Datensätze vs. Tabellen und Schemas
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 1%
+source-wordcount: '181'
+ht-degree: 79%
 
 ---
 
 
-# Datenbestände vs. Tabellen und Schema
+# Datensätze vs. Tabellen und Schemas
 
-Überprüfen Sie die Liste der in der Benutzeroberfläche [der](https://platform.adobe.com/datasets)Adobe Experience Platform verfügbaren Datensätze, und achten Sie darauf, dass Sie die Datensatznamen beachten.
+Überprüfen Sie die Liste der verfügbaren Datensätze in der [Benutzeroberfläche von Adobe Experience Platform](https://platform.adobe.com/datasets); achten Sie dabei auf die Namen der Datensätze.
 >[!NOTE]
 >
->Einige Dataset-Namen haben Leerzeichen und sind sonst nicht SQL-sicher.
+>Einige Datensatznamen weisen Leerzeichen auf und sind ggf. anderweitig nicht SQL-sicher.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
 
-Überprüfen Sie die hierarchische Struktur des Dataset-Schemas in der Benutzeroberfläche, indem Sie auf einen Schema in der Datensatztabelle klicken.
+Überprüfen Sie die hierarchische Struktur des Datensatzschemas in der Benutzeroberfläche, indem Sie in der Datensatztabelle auf einen Schemanamen klicken.
 
 ![](../images/queries/datasets-and-tables/schema-information.png)
 
@@ -30,10 +30,10 @@ ht-degree: 1%
 
 ![](../images/clients/psql/connect-bi.png)
 
-Zur Ansicht der verfügbaren Tabellen auf der Platform mit SQL können Sie entweder `\d` oder `SHOW TABLES;`verwenden.
+To view the available tables on [!DNL Platform] with SQL, you can use either `\d` or `SHOW TABLES;`.
 
 
-`\d` zeigt die standardmäßige PostgreSQL-Ansicht an
+`\d` zeigt die standardmäßige PostgreSQL-Ansicht an.
 
 ```
              List of relations
@@ -44,7 +44,7 @@ Zur Ansicht der verfügbaren Tabellen auf der Platform mit SQL können Sie entwe
 (2 rows)
 ```
 
-`SHOW TABLES;` ist ein benutzerdefinierter Befehl, der eine detailliertere Ansicht bietet und die Tabelle sowie den Dataset-Namen in der Benutzeroberfläche der Platform darstellt.
+`SHOW TABLES;` ist ein benutzerdefinierter Befehl, der eine detailliertere Ansicht bietet und die Tabelle sowie den Dataset-Namen in der [!DNL Platform] Benutzeroberfläche darstellt.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -54,11 +54,11 @@ Zur Ansicht der verfügbaren Tabellen auf der Platform mit SQL können Sie entwe
 (2 rows)
 ```
 
-Um das Stamm-Schema einer Tabelle Ansicht, verwenden Sie den `\d table_name` Befehl.
+Um das Stammschema einer Tabelle anzuzeigen, verwenden Sie den Befehl `\d table_name`.
 
 >[!NOTE]
 >
->Das präsentierte Schema zeigt die Stammfelder, die zumeist komplex sind und auf einen Objekttyp in der Benutzeroberfläche des DataSet-Schemas verweisen.
+>Das präsentierte Schema zeigt die Stammfelder an, die meist komplex sind und auf die ein Objekttyp in der Benutzeroberfläche für Datensatzschemas verweist.
 
 `\d luma_midvalues`
 
@@ -83,7 +83,7 @@ Um das Stamm-Schema einer Tabelle Ansicht, verwenden Sie den `\d table_name` Bef
  search            | search                      |           |          | 
 ```
 
-Um weiter in das Schema zu gehen, verwenden Sie Unterstriche (`_`), um die Tabellenspalte zu deklarieren, die Sie beschreiben möchten. Beispiel, `\d table_name_column`
+Um das Schema genauer anzusehen, verwenden Sie Unterstriche (`_`). Dadurch können Sie die Spalte in der Tabelle, die Sie beschreiben möchten, deklarieren. Beispiel: `\d table_name_column`
 
 `\d luma_midvalues_web`
 
