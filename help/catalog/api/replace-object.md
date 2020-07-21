@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Objekt ersetzen
+title: Ersetzen eines Objekts
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 2%
+source-wordcount: '138'
+ht-degree: 18%
 
 ---
 
 
-# Objekt ersetzen
+# Ersetzen eines Objekts
 
-Sie können den Inhalt eines Katalogobjekts mit einer PUT-Anforderung überschreiben, bei der die gesamte Ressource durch die Anforderungs-Nutzlast ersetzt wird.
+Sie können den Inhalt eines [!DNL Catalog] Objekts mit einer PUT-Anforderung überschreiben, bei der die gesamte Ressource durch die Anforderungs-Nutzlast ersetzt wird.
 
 >[!NOTE]
 >
->Wenn Sie nur einige bestimmte Felder innerhalb eines Katalogobjekts aktualisieren müssen, kann die Verwendung einer PATCH-Anforderung effizienter sein.
+>Wenn Sie nur einige bestimmte Felder innerhalb eines [!DNL Catalog] Objekts aktualisieren müssen, kann die Verwendung einer PATCH-Anforderung effizienter sein.
 
 **API-Format**
 
@@ -28,8 +28,8 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu ersetzenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Der Bezeichner des spezifischen Objekts, das Sie aktualisieren möchten. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be replaced. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
