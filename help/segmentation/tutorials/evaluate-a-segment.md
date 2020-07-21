@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Bewerten eines Segments
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 17%
+source-wordcount: '1519'
+ht-degree: 14%
 
 ---
 
@@ -59,7 +59,7 @@ Durch die geplante Auswertung kann Ihr IMS-Org einen wiederkehrenden Zeitplan er
 
 >[!NOTE]
 >
->Geplante Auswertung kann für Sandboxes mit maximal fünf (5) Zusammenführungsrichtlinien für XDM Individual Profile aktiviert werden. Wenn Ihre Organisation innerhalb einer Sandbox-Umgebung über mehr als fünf Zusammenführungsrichtlinien für XDM Individual Profile verfügt, können Sie keine geplante Auswertung verwenden.
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 ### Zeitplan erstellen
 
@@ -157,11 +157,11 @@ Die folgenden Schritte sind erforderlich, um Ihre Audience zu exportieren:
 
 Beim Exportieren einer Audience muss zunächst ein Zielgruppe-Datensatz erstellt werden. Es ist wichtig, dass der Datensatz korrekt konfiguriert wird, um sicherzustellen, dass der Export erfolgreich ist.
 
-Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der unten stehenden API-Musteranforderung). Um ein Segment zu exportieren, muss der Datensatz auf dem XDM Individual Profil Vereinigung Schema (`https://ns.adobe.com/xdm/context/profile__union`) basieren. Ein Vereinigung-Schema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas, die dieselbe Klasse besitzen, Aggregat gibt, in diesem Fall die XDM-Klasse Individuelles Profil. Weitere Informationen zu Schemas der Vereinigung Ansicht finden Sie im Abschnitt zum [Echtzeit-Kundenmanagement im Schema Registry-Entwicklerhandbuch](../../xdm/api/getting-started.md).
+Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der unten stehenden API-Musteranforderung). Um ein Segment zu exportieren, muss der Datensatz auf dem [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`) basieren. Ein Vereinigung-Schema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas, die dieselbe Klasse besitzen, Aggregat gibt, in diesem Fall die XDM-Klasse Individuelles Profil. Weitere Informationen zu Schemas der Vereinigung Ansicht finden Sie im Abschnitt zum [Echtzeit-Kundenmanagement im Schema Registry-Entwicklerhandbuch](../../xdm/api/getting-started.md).
 
 Es gibt zwei Möglichkeiten, den erforderlichen Datensatz zu erstellen:
 
-- **Verwenden von APIs:** In den folgenden Schritten wird beschrieben, wie Sie ein Dataset erstellen, das auf das Schema zur Vereinigung einzelner XDM-Profil mithilfe der Katalog-API verweist.
+- **Verwenden von APIs:** In den folgenden Schritten wird beschrieben, wie Sie einen Datensatz erstellen, der auf die [!DNL XDM Individual Profile Union Schema] mithilfe der [!DNL Catalog] API verweist.
 - **Verwenden der Benutzeroberfläche:** Um mithilfe der [!DNL Adobe Experience Platform] Benutzeroberfläche einen Datensatz zu erstellen, der auf das Schema &quot;Vereinigung&quot;verweist, führen Sie die Schritte im [UI-Lernprogramm](../ui/overview.md) aus und kehren Sie dann zu diesem Lernprogramm zurück, um mit den Schritten zum [Generieren von Profilen](#generate-xdm-profiles-for-audience-members)der Audience fortzufahren.
 
 Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen ID kennen, können Sie direkt mit dem Schritt zum [Generieren von Profilen](#generate-xdm-profiles-for-audience-members)zur Audience fortfahren.
@@ -228,10 +228,10 @@ Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Handb
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake in [!DNL Experience Platform]verfügbar. Sie können dann mit der [Datenzugriff-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` Datei verwenden. Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
+Sobald der Export erfolgreich abgeschlossen wurde, stehen Ihre Daten im [!DNL Data Lake] In zur Verfügung [!DNL Experience Platform]. Sie können dann mit der [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) Methode auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` Datei verwenden. Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Zugriff auf und Herunterladen von Stapeldateien mit der [!DNL Data Access] API finden Sie im [Lernprogramm](../../data-access/tutorials/dataset-data.md)&quot;Datenzugriff&quot;.
 
-Sie können auch auf erfolgreich exportierte Segmentdaten zugreifen [!DNL Adobe Experience Platform Query Service]. Mithilfe der Benutzeroberfläche oder RESTful-API können [!DNL Query Service] Sie Abfragen für Daten im Data Lake schreiben, überprüfen und ausführen.
+Sie können auch auf erfolgreich exportierte Segmentdaten zugreifen [!DNL Adobe Experience Platform Query Service]. Mithilfe der Benutzeroberfläche oder RESTful-API können [!DNL Query Service] Sie Abfragen für Daten innerhalb der [!DNL Data Lake]Benutzeroberfläche schreiben, überprüfen und ausführen.
 
 Weitere Informationen zur Abfrage von Daten zur Audience finden Sie in der Dokumentation zu [!DNL Query Service](../../query-service/home.md).
