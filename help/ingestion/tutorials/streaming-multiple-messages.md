@@ -1,51 +1,51 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Streaming mehrerer Nachrichten in einer einzelnen HTTP-Anforderung
+title: Streaming mehrerer Nachrichten in einer einzelnen HTTP-Anfrage
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
+source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 1%
+source-wordcount: '1459'
+ht-degree: 75%
 
 ---
 
 
-# Senden mehrerer Nachrichten in einer einzelnen HTTP-Anforderung
+# Senden mehrerer Nachrichten in einer einzelnen HTTP-Anfrage
 
-Beim Streaming von Daten an Adobe Experience Platform können zahlreiche HTTP-Aufrufe teuer sein. Anstatt beispielsweise 200 HTTP-Anforderungen mit 1 KB Nutzlasten zu erstellen, ist es viel effizienter, 1 HTTP-Anforderung mit 200 Nachrichten mit jeweils 1 KB und einer Nutzlast von 200 KB zu erstellen. Bei korrekter Verwendung ist die Gruppierung mehrerer Nachrichten in einer einzigen Anforderung eine hervorragende Möglichkeit, Daten zu optimieren, die an Experience Platform gesendet werden.
+Beim Streaming von Daten an Adobe Experience Platform können mehrfache HTTP-Aufrufe teuer sein. Anstatt beispielsweise 200 HTTP-Anfragen mit 1-KB-Payloads zu erstellen, ist es deutlich effizienter, eine HTTP-Anfrage mit 200 jeweils 1 KB großen Nachrichten und einer einzelnen Payload von 200 KB anzulegen. When used correctly, grouping multiple messages within a single request is an excellent way to optimize data being sent to [!DNL Experience Platform].
 
-Dieses Dokument bietet eine Anleitung zum Senden mehrerer Nachrichten an Experience Platform in einer einzigen HTTP-Anforderung mithilfe der Streaming-Erfassung.
+This document provides a tutorial for sending multiple messages to [!DNL Experience Platform] within a single HTTP request using streaming ingestion.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der Adobe Experience Platform Data Ingestion. Bevor Sie dieses Lernprogramm beginnen, lesen Sie bitte die folgende Dokumentation:
+This tutorial requires a working understanding of Adobe Experience Platform [!DNL Data Ingestion]. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
 
-- [Dateneinbettung - Übersicht](../home.md): Behandelt die Kernkonzepte der Experience Platform Data Ingestion, einschließlich Erfassungsmethoden und Data Connectors.
-- [Übersicht](../streaming-ingestion/overview.md)zur Streaming-Erfassung: Der Arbeitsablauf und die Bausteine der Streaming-Erfassung, wie Streaming-Verbindungen, Datasets, XDM-Individuelles Profil und XDM ExperienceEvent.
+- [Dateneinbettung - Übersicht](../home.md): Behandelt die Kernkonzepte von [!DNL Experience Platform Data Ingestion]einschließlich Erfassungsmethoden und Data Connectors.
+- [Übersicht](../streaming-ingestion/overview.md)zur Streaming-Erfassung: Arbeitsablauf und Bausteine der Streaming-Erfassung, wie Streaming-Verbindungen, Datasets [!DNL XDM Individual Profile]und [!DNL XDM ExperienceEvent].
 
-Für dieses Lernprogramm müssen Sie außerdem das Lernprogramm &quot; [Authentifizierung für Adobe Experience Platform](../../tutorials/authentication.md) &quot;abgeschlossen haben, um erfolgreich Aufrufe an Plattform-APIs durchführen zu können. Das Abschließen des Authentifizierungslehrgangs stellt den Wert für den Autorisierungs-Header bereit, der für alle API-Aufrufe in diesem Lernprogramm erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
+Für dieses Tutorial müssen Sie außerdem das Tutorial [Authentifizierung für Adobe Experience ](../../tutorials/authentication.md) abgeschlossen haben, um erfolgreich Aufrufe an Platform-APIs durchführen zu können. [!DNL Platform] Durch Abschließen des Authentifizierungs-Tutorials erhalten Sie den Wert für die Autorisierungs-Kopfzeile, der für alle API-Aufrufe in diesem Tutorial erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
 
-- Genehmigung: Träger `{ACCESS_TOKEN}`
+- Autorisierung: Träger `{ACCESS_TOKEN}`
 
-Für alle POST-Anforderungen ist ein zusätzlicher Header erforderlich:
+Für alle POST-Anfragen ist eine zusätzliche Kopfzeile erforderlich:
 
-- Content-Type: application/json
+- Inhaltstyp: application/json
 
-## Erstellen einer Streaming-Verbindung
+## Aufbauen einer Streaming-Verbindung
 
-Sie müssen zunächst eine Streaming-Verbindung erstellen, bevor Sie Daten an Experience Platform Beginn-Streaming-Daten senden können. Lesen Sie die Anleitung zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md) , um zu erfahren, wie Sie eine Streaming-Verbindung erstellen.
+You must first create a streaming connection before you can start streaming data to [!DNL Experience Platform]. Lesen Sie die Anleitung zum [Aufbauen einer Streaming-Verbindung](./create-streaming-connection.md), um zu erfahren, wie Sie eine Streaming-Verbindung aufbauen.
 
-Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent eine eindeutige URL, die zum Streamen von Daten an die Plattform verwendet werden kann.
+Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent eine eindeutige URL, die zum Streamen von Daten an Platform verwendet werden kann.
 
 ## Streamen in einen Datensatz
 
-Das folgende Beispiel zeigt, wie mehrere Nachrichten an einen bestimmten Datensatz innerhalb einer einzelnen HTTP-Anforderung gesendet werden. Fügen Sie die Datensatzkennnummer in die Kopfzeile der Nachricht ein, damit die Nachricht direkt darin aufgenommen wird.
+Das folgende Beispiel zeigt, wie mehrere Nachrichten an einen bestimmten Datensatz innerhalb einer einzelnen HTTP-Anfrage gesendet werden. Fügen Sie die Datensatz-ID in die Kopfzeile der Nachricht ein, damit die Nachricht direkt darin aufgenommen wird.
 
-Sie können die ID für einen vorhandenen Datensatz über die Plattform-Benutzeroberfläche oder über einen Listingvorgang in der API abrufen. Die Dataset-ID kann auf der [Experience Platform](https://platform.adobe.com) gefunden werden, indem Sie zur Registerkarte &quot; **Datensätze** &quot;auf den Datensatz klicken, für den die ID verwendet werden soll, und die Zeichenfolge aus dem Feld &quot; **Dataset-ID** &quot;auf der Registerkarte &quot; **Info** &quot;kopieren. Informationen zum Abrufen von Datensätzen mithilfe der API finden Sie in der Übersicht über den [Katalogdienst](../../catalog/home.md) .
+You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. Sie können die Datensatz-ID in [Experience Platform](https://platform.adobe.com) auf der Registerkarte **[!UICONTROL Datensätze]** ermitteln, indem Sie auf den Datensatz klicken, für den die ID verwendet werden soll, und die Zeichenfolge aus dem Feld **[!UICONTROL Datensatz-ID]** auf der Registerkarte **[!UICONTROL Info]** kopieren. Informationen zum Abrufen von Datensätzen mithilfe der API finden Sie unter [Katalogdienst – Überblick](../../catalog/home.md).
 
-Anstelle eines vorhandenen Datensatzes können Sie einen neuen Datensatz erstellen. Weitere Informationen zum Erstellen eines Datensatzes mithilfe von APIs [finden Sie im Tutorial zum](../../catalog/api/create-dataset.md) Erstellen eines Datensatzes mit APIs.
+Anstatt einen vorhandenen Datensatz zu verwenden, können Sie einen neuen Datensatz erstellen. Weitere Informationen zum Erstellen eines Datensatzes mithilfe von APIs finden Sie im Tutorial [Erstellen eines Datensatzes mithilfe von APIs](../../catalog/api/create-dataset.md).
 
 **API-Format**
 
@@ -71,9 +71,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -133,9 +130,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -194,7 +188,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt einen HTTP-Status 207 (Multi-Status) zurück. Bei der Überprüfung des Antwortkörpers werden weitere Details zum Erfolg oder Misserfolg der einzelnen in der Anforderung ausgeführten Methoden angezeigt. Für jedes Element des Anforderungsmeldungen-Arrays wird eine Antwort zurückgegeben. Nachfolgend sehen Sie ein Beispiel für eine erfolgreiche Antwort ohne Nachrichtenfehler:
+Eine erfolgreiche Antwort gibt den HTTP-Status 207 (Multi-Status) zurück. Bei der Überprüfung des Antworttextes werden weitere Details zum Erfolg oder Misserfolg der einzelnen in der Anfrage ausgeführten Methoden angezeigt. Für jedes Element des Anfragemeldungs-Arrays wird eine Antwort zurückgegeben. Nachfolgend sehen Sie ein Beispiel für eine erfolgreiche Antwort ohne Nachrichtenfehler:
 
 ```json
 {
@@ -212,22 +206,22 @@ Eine erfolgreiche Antwort gibt einen HTTP-Status 207 (Multi-Status) zurück. Bei
 }
 ```
 
-Weitere Informationen zu Statuscodes finden Sie in der Tabelle zu [Antwortcodes](#response-codes) im Anhang dieses Lernprogramms.
+Weitere Informationen zu Status-Codes finden Sie in der Tabelle zu [Antwort-Codes](#response-codes) im Anhang dieses Tutorials.
 
-## Identifizieren Sie fehlgeschlagene Nachrichten.
+## Identifizieren von fehlgeschlagenen Nachrichten
 
-Im Vergleich zum Senden einer Anforderung mit einer einzelnen Nachricht gibt es beim Senden einer HTTP-Anforderung mit mehreren Nachrichten weitere Faktoren, die in Betracht gezogen werden sollten, z. B.: wie zu identifizieren ist, wann Daten nicht gesendet wurden, welche spezifischen Nachrichten nicht gesendet wurden und wie sie abgerufen werden können und was mit Daten passiert, die erfolgreich sind, wenn andere Nachrichten in derselben Anforderung fehlschlagen.
+Im Vergleich zum Senden einer Anfrage mit einer einzelnen Nachricht gibt es beim Senden einer HTTP-Anfrage mit mehreren Nachrichten weitere Faktoren, die in Betracht gezogen werden sollten, z. B. wie zu identifizieren ist, wann Daten nicht gesendet wurden, welche spezifischen Nachrichten nicht gesendet wurden und wie sie abgerufen werden können und was mit Daten passiert, die erfolgreich sind, wenn andere Nachrichten in derselben Anfrage fehlschlagen.
 
-Bevor Sie mit diesem Tutorial fortfahren, sollten Sie zunächst das Handbuch zum [Abrufen fehlgeschlagener Stapel](../quality/retrieve-failed-batches.md) lesen.
+Bevor Sie mit diesem Tutorial fortfahren, sollten Sie zunächst das Handbuch zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md) lesen.
 
-### Anforderungs-Nutzlast mit gültigen und ungültigen Nachrichten senden
+### Senden von Anfrage-Payload mit gültigen und ungültigen Nachrichten
 
-Das folgende Beispiel zeigt, was passiert, wenn der Stapel gültige und ungültige Meldungen enthält.
+Das folgende Beispiel zeigt, was passiert, wenn der Batch gültige und ungültige Meldungen enthält.
 
-Die Anforderungs-Nutzlast ist ein Array von JSON-Objekten, die das Ereignis im XDM-Schema darstellen. Beachten Sie, dass für eine erfolgreiche Validierung der Nachricht folgende Bedingungen erfüllt sein müssen:
-- Das `imsOrgId` Feld im Nachrichtenkopf muss mit der Einzugsdefinition übereinstimmen. Wenn die Anforderungs-Nutzlast kein `imsOrgId` Feld enthält, fügt der Datenerfassungs-Core-Service (DCCS) das Feld automatisch hinzu.
-- Die Kopfzeile der Nachricht sollte auf ein vorhandenes XDM-Schema verweisen, das in der Plattform-Benutzeroberfläche erstellt wurde.
-- Das `datasetId` Feld muss auf einen vorhandenen Datensatz in der Plattform verweisen und sein Schema muss mit dem Schema übereinstimmen, das im Objekt innerhalb der einzelnen Meldungen im Anforderungstext bereitgestellt `header` wird.
+Die Anfrage-Payload ist ein Array von JSON-Objekten, die das Ereignis im XDM-Schema darstellen. Beachten Sie, dass für eine erfolgreiche Validierung der Nachricht folgende Bedingungen erfüllt sein müssen:
+- Das Feld `imsOrgId` in der Kopfzeile der Nachricht muss mit der Inlet-Definition übereinstimmen. Wenn die Anfrage-Payload das Feld `imsOrgId` nicht enthält, fügt der  (DCCS) das Feld automatisch hinzu.[!DNL Data Collection Core Service]
+- The header of the message should reference an existing XDM schema created in the [!DNL Platform] UI.
+- The `datasetId` field needs to reference an existing dataset in [!DNL Platform], and its schema needs to match the schema provided in the `header` object within each message included in the request body.
 
 **API-Format**
 
@@ -237,7 +231,7 @@ POST /collection/batch/{CONNECTION_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | Die ID des erstellten Dateneingangs. |
+| `{CONNECTION_ID}` | Die ID des erstellten Daten-Inlets. |
 
 **Anfrage**
 
@@ -253,9 +247,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -315,9 +306,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       }
@@ -329,9 +317,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -391,9 +376,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -443,9 +425,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "name": "_xdm.context.experienceevent"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -481,7 +460,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 **Antwort**
 
-Die Antwortnutzlast enthält einen Status für jede Nachricht zusammen mit einer GUID in der , die für die Verfolgung verwendet werden kann `xactionId` .
+Die Antwort-Payload enthält einen Status für jede Nachricht zusammen mit einer GUID in der `xactionId`, die für die Verfolgung verwendet werden kann.
 
 ```JSON
 {
@@ -508,11 +487,11 @@ Die Antwortnutzlast enthält einen Status für jede Nachricht zusammen mit einer
 }
 ```
 
-Die obige Beispielantwort zeigt Fehlermeldungen für die vorherige Anforderung. Wenn Sie diese Antwort mit der vorherigen gültigen Antwort vergleichen, können Sie feststellen, dass die Anforderung teilweise erfolgreich war. Eine Nachricht wurde erfolgreich erfasst und drei Nachrichten führten zu einem Fehler. Beachten Sie, dass beide Antworten den Statuscode &quot;207&quot;zurückgeben. Weitere Informationen zu Statuscodes finden Sie in der Tabelle zu [Antwortcodes](#response-codes) im Anhang dieses Lernprogramms.
+Die obige Beispielantwort zeigt Fehlermeldungen für die vorherige Anfrage. Ein Vergleich dieser Antwort mit der vorherigen gültigen Antwort ergibt, dass die Anfrage teilweise erfolgreich war. Eine Nachricht wurde erfolgreich aufgenommen und drei Nachrichten führten zu einem Fehler. Beachten Sie, dass beide Antworten den Status-Code „207“ zurückgeben. Weitere Informationen zu Status-Codes finden Sie in der Tabelle zu [Antwort-Codes](#response-codes) im Anhang dieses Tutorials.
 
-Die erste Nachricht wurde erfolgreich an Platform gesendet und wird von den Ergebnissen der anderen Nachrichten nicht beeinflusst. Daher müssen Sie diese Meldung nicht erneut einschließen, wenn Sie versuchen, die fehlgeschlagenen Nachrichten erneut zu senden.
+The first message was successfully sent to [!DNL Platform] and is not affected by the results of the other messages. Daher müssen Sie diese Nachricht nicht erneut einschließen, wenn Sie versuchen, die fehlgeschlagenen Nachrichten erneut zu senden.
 
-Die zweite Meldung schlug fehl, weil ihr kein Nachrichtentext fehlte. Die Erfassungsanforderung erwartet, dass Meldungselemente gültige Kopfzeilen- und Textkörperabschnitte haben. Durch Hinzufügen des folgenden Codes nach der Kopfzeile in der zweiten Meldung wird die Anforderung behoben, sodass die zweite Meldung die Überprüfung weiterleiten kann:
+Die zweite Nachricht schlug fehl, weil der Nachrichtentext fehlte. Die Erfassungsanfrage erwartet, dass Nachrichtenelemente gültige Kopfzeilen- und Textabschnitte aufweisen. Durch Hinzufügen des folgenden Codes nach der Kopfzeile in der zweiten Nachricht wird die Anfrage korrigiert, sodass die zweite Nachricht die Überprüfung besteht:
 
 ```JSON
       "body": {
@@ -529,44 +508,44 @@ Die zweite Meldung schlug fehl, weil ihr kein Nachrichtentext fehlte. Die Erfass
     },
 ```
 
-Die dritte Meldung ist fehlgeschlagen, da eine ungültige IMS-Organisations-ID in der Kopfzeile verwendet wird. Die IMS-Organisation muss mit der {CONNECTION_ID} übereinstimmen, die Sie veröffentlichen möchten. Um festzustellen, welche IMS-Organisations-ID mit der verwendeten Streaming-Verbindung übereinstimmt, können Sie eine `GET inlet` Anforderung mithilfe der [Dateneinbetungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)durchführen. Ein Beispiel zum Abrufen zuvor erstellter Streaming-Verbindungen finden Sie unter [Abrufen einer Streaming-Verbindung](./create-streaming-connection.md#get-data-collection-url) .
+Die dritte Meldung ist fehlgeschlagen, da eine ungültige IMS-Organisations-ID in der Kopfzeile verwendet wird. Die IMS-Organisation muss mit der {CONNECTION_ID} übereinstimmen, auf der Sie veröffentlichen möchten. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Ein Beispiel zum Abrufen zuvor erstellter Streaming-Verbindungen finden Sie unter [Abrufen einer Streaming-Verbindung](./create-streaming-connection.md#get-data-collection-url).
 
-Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Die `xdmSchema` in der Kopfzeile und im Hauptteil der Anforderung enthaltenen Elemente stimmen nicht mit dem XDM-Schema des `{DATASET_ID}`Berichts überein. Durch die Korrektur des Schemas im Nachrichtenkopf und -körper kann die DCCS-Überprüfung erfolgreich an die Plattform gesendet werden. Der Nachrichtentext muss auch aktualisiert werden, um mit dem XDM-Schema des zu übereinstimmen, `{DATASET_ID}` damit die Streaming-Validierung auf der Plattform durchgeführt werden kann. Weitere Informationen zu Nachrichten, die erfolgreich an die Plattform gesendet werden, finden Sie im Abschnitt [Bestätigungsmeldungen](#confirm-messages-ingested) zu diesem Lernprogramm.
+Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Das `xdmSchema`, das in der Kopfzeile und im Text der Anfrage enthalten ist, stimmt nicht mit dem XDM-Schema der `{DATASET_ID}` überein. Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to [!DNL Platform]. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on [!DNL Platform]. Weitere Informationen zu Nachrichten, die erfolgreich an Platform gesendet werden, finden Sie im Abschnitt [Bestätigen von aufgenommenen Nachrichten](#confirm-messages-ingested) in diesem Tutorial.
 
-### Fehlermeldungen von der Plattform abrufen
+### Abrufen von Fehlermeldungen von [!DNL Platform]
 
-Fehlgeschlagene Meldungen werden durch einen Fehlerstatuscode im Antwortarray identifiziert.
-Die ungültigen Meldungen werden in einem &quot;Fehler&quot;-Batch innerhalb des von `{DATASET_ID}`angegebenen Datensatzes erfasst und gespeichert.
+Fehlgeschlagene Nachrichten werden durch einen Fehlerstatus-Code im Antwort-Array identifiziert.
+Die ungültigen Nachrichten werden in einem „Fehler“-Batch innerhalb des von der `{DATASET_ID}` angegebenen Datensatzes erfasst und gespeichert.
 
-Weitere Informationen zum Wiederherstellen von fehlgeschlagenen Stapelmeldungen finden Sie im Handbuch zum [Abrufen fehlgeschlagener Stapel](../quality/retrieve-failed-batches.md) .
+Weitere Informationen zum Wiederherstellen von fehlgeschlagenen Batch-Nachrichten finden Sie der Anleitung zum [Abrufen fehlgeschlagener Batches](../quality/retrieve-failed-batches.md).
 
-## Nachrichten bestätigen
+## Bestätigen von aufgenommenen Nachrichten
 
-Meldungen, die die DCCS-Validierung übergeben, werden an die Plattform gestreamt. Auf der Plattform werden die Batch-Nachrichten durch Streaming-Validierung getestet, bevor sie in den Datensee aufgenommen werden. Der Status von Stapeln, ob erfolgreich oder nicht, wird in dem von `{DATASET_ID}`angegebenen Datensatz angezeigt.
+Messages that pass DCCS validation are streamed to [!DNL Platform]. On [!DNL Platform], the batch messages are tested by streaming validation before being ingested into the [!DNL Data Lake]. Der Status von Batches, ob erfolgreich oder nicht, wird in dem von der `{DATASET_ID}` angegebenen Datensatz angezeigt.
 
-Sie können den Status von Batch-Nachrichten, die mit der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com) erfolgreich auf eine Plattform gestreamt werden, über die Registerkarte &quot; **Datasets** &quot;Ansicht, auf den Datensatz, zu dem Sie streamen, klicken und die Registerkarte &quot; **DataSet-Aktivität** &quot;überprüfen.
+You can view the status of batch messages that successfully stream to [!DNL Platform] using the [Experience Platform UI](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you are streaming to, and checking the **[!UICONTROL Dataset Activity]** tab.
 
-Stapelmeldungen, die die Streaming-Validierung auf der Plattform übergeben, werden in den Datensee aufgenommen. Die Meldungen stehen dann für die Analyse oder den Export zur Verfügung.
+Batch messages that pass streaming validation on [!DNL Platform] are ingested into the [!DNL Data Lake]. Die Nachrichten stehen dann für die Analyse oder den Export zur Verfügung.
 
 ## Nächste Schritte
 
-Nachdem Sie jetzt wissen, wie Sie mehrere Nachrichten in einer einzigen Anforderung senden und überprüfen können, ob die Nachrichten erfolgreich in den Dataset der Zielgruppe aufgenommen wurden, können Sie Beginn-Streaming Ihrer eigenen Daten an die Plattform durchführen. Eine Übersicht über die Abfrage und den Abruf von erfassten Daten von der Plattform finden Sie im Handbuch [Datenzugriff](../../data-access/tutorials/dataset-data.md) .
+Now that you know how to send multiple messages in a single request and verify when messages are successfully ingested into the target dataset, you can start streaming your own data to [!DNL Platform]. For an overview of how to query and retrieve ingested data from [!DNL Platform], see the [!DNL Data Access](../../data-access/tutorials/dataset-data.md) guide.
 
 ## Anhang
 
 Dieser Abschnitt enthält zusätzliche Informationen zum Tutorial.
 
-### Antwortcodes
+### Antwort-Codes
 
-Die folgende Tabelle zeigt Statuscodes, die von erfolgreichen und fehlgeschlagenen Antwortmeldungen zurückgegeben werden.
+Die folgende Tabelle zeigt Status-Codes, die von erfolgreichen und fehlgeschlagenen Antwortnachrichten zurückgegeben werden.
 
-| Statuscode | Beschreibung |
+| Status-Code | Beschreibung |
 | :---: | --- |
-| 207 | Obwohl &quot;207&quot;als Gesamt-Antwortstatuscode verwendet wird, muss der Empfänger den Inhalt des Multistatus-Antwortkörpers für weitere Informationen zum Erfolg oder Misserfolg der Methodenausführung konsultieren. Der Antwortcode wird in Erfolgs-, Teil- und auch in Fehlersituationen verwendet. |
-| 400 | Es gab ein Problem mit der Bitte. Im Antworttext finden Sie eine spezifischere Fehlermeldung (z. B. fehlte die Nachrichtennutzlast erforderliche Felder oder die Meldung war unbekanntes xdm-Format). |
-| 401 | Nicht autorisiert: Anforderung fehlender gültiger Autorisierungsheader. Dies wird nur bei Inlets zurückgegeben, für die die Authentifizierung aktiviert ist. |
-| 403 | Nicht autorisiert:  Das angegebene Autorisierungstoken ist ungültig oder abgelaufen. Dies wird nur bei Inlets zurückgegeben, für die die Authentifizierung aktiviert ist. |
-| 413 | Nutzlast zu groß - Wird ausgelöst, wenn die Nutzdatenanforderung insgesamt größer als 1 MB ist. |
+| 207 | Obwohl „207“ als Gesamt-Antwortstatus-Code verwendet wird, muss der Empfänger den Inhalt des Multistatus-Antworttextes für weitere Informationen zum Erfolg oder Misserfolg der Methodenausführung konsultieren. Der Antwort-Code wird in Erfolgs-, Teilerfolgs- wie auch in Fehlersituationen verwendet. |
+| 400 | Es gab ein Problem mit der Anfrage. Im Antworttext finden Sie eine spezifischere Fehlermeldung (z. B. fehlten in der Nachrichten-Payload erforderliche Felder oder die Nachricht hatte ein unbekanntes xdm-Format). |
+| 401 | Nicht autorisiert: Bei der Anfrage fehlt eine gültige Autorisierungskopfzeile. Dies wird nur bei Inlets zurückgegeben, für die die Authentifizierung aktiviert ist. |
+| 403 | Nicht autorisiert: Das angegebene Autorisierungs-Token ist ungültig oder abgelaufen. Dies wird nur bei Inlets zurückgegeben, für die die Authentifizierung aktiviert ist. |
+| 413 | Payload zu groß – Wird ausgelöst, wenn die Payload-Anfrage insgesamt größer als 1 MB ist. |
 | 429 | Zu viele Anfragen innerhalb der angegebenen Zeitdauer. |
-| 500 | Fehler bei der Verarbeitung der Nutzlast. Im Antworttext finden Sie eine spezifischere Fehlermeldung (z. B. das Message Payload-Schema wurde nicht angegeben oder entsprach nicht der XDM-Definition in der Plattform). |
+| 500 | Fehler bei der Verarbeitung der Payload. Im Antworttext finden Sie eine spezifischere Fehlermeldung (z. B. das Nachrichten-Payload-Schema wurde nicht angegeben oder entsprach nicht der XDM-Definition in [!DNL Platform]). |
 | 503 | Der Dienst ist derzeit nicht verfügbar. Kunden sollten es mindestens dreimal mit einer exponentiellen Back-off-Strategie versuchen. |
