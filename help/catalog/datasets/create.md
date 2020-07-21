@@ -1,68 +1,68 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen eines Datensatzes mit APIs
+title: Erstellen eines Datensatzes mithilfe von APIs
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
-ht-degree: 1%
+source-wordcount: '1234'
+ht-degree: 82%
 
 ---
 
 
-# Erstellen eines Datensatzes mit APIs
+# Erstellen eines Datensatzes mithilfe von APIs
 
-In diesem Dokument werden allgemeine Schritte zum Erstellen eines Datensatzes mithilfe von Adobe Experience Platformen-APIs und zum Ausfüllen des Datensatzes mit einer Datei beschrieben.
+In diesem Dokument werden die grundlegenden Schritte für die Erstellung eines Datensatzes mithilfe der Adobe Experience Platform-APIs erläutert und aufgezeigt, wie der Datensatz anhand einer Datei befüllt wird.
 
 ## Erste Schritte
 
-Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Diese Anleitung setzt Grundkenntnisse der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md): Mit der Experience Platform können Sie Daten als Stapeldateien erfassen.
-* [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Sandboxen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine Instanz einer Platform in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] erlaubt Ihnen, Daten als Batch-Dateien zu erfassen.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platformen-APIs erfolgreich aufrufen zu können.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
-### Lesen von Beispiel-API-Aufrufen
+### Lesehilfe für Beispiel-API-Aufrufe
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Werte der zu verwendenden Kopfzeilen
 
-Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Genehmigung: Träger `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
+Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
 
 * Content-Type: application/json
 
 ## Tutorial
 
-Um einen Datensatz zu erstellen, muss zunächst ein Schema definiert werden. Ein Schema ist ein Regelsatz, der die Darstellung von Daten unterstützt. Schema beschreiben nicht nur die Datenstruktur, sondern bieten auch Einschränkungen und Erwartungen, die angewendet und zur Validierung von Daten verwendet werden können, während sie zwischen Systemen verschoben werden.
+Um einen Datensatz zu erstellen, muss zunächst ein Schema definiert werden. Ein Schema ist ein Satz von Regeln für die Darstellung von Daten. Schemas dienen zur Beschreibung der Datenstruktur. Über sie können zugleich auch Einschränkungen und Erwartungen angewendet werden, um Daten bei ihrem Austausch zwischen Systemen zu validieren.
 
-Mit diesen Standarddefinitionen können Daten unabhängig von der Herkunft konsistent interpretiert werden. Zudem entfällt die Notwendigkeit für anwendungsübergreifende Übersetzungen. Weitere Informationen zum Erstellen von Schemas finden Sie im Leitfaden zu den [Grundlagen der Schema-Komposition](../../xdm/schema/composition.md)
+Dank dieser Standarddefinitionen ist eine konsistente Interpretation von Daten unabhängig von ihrer Herkunft möglich, was auch deren Übersetzung für unterschiedliche Anwendungen unnötig macht. Weitere Informationen zur Erstellung von Schemas finden Sie unter [Grundlagen zum Aufbau von Schemas](../../xdm/schema/composition.md)
 
-## Schema des Datensatzes nachschlagen
+## Nachschlagen eines Datensatzschemas
 
-Dieses Tutorial beginnt an der Stelle, an der das [Schema Registry API-Tutorial](../../xdm/tutorials/create-schema-api.md) endet, wobei das Schema der Treuemitglieder verwendet wird, das während dieses Tutorials erstellt wurde.
+Dieses Tutorial setzt das im [Tutorial zur Schema Registry API](../../xdm/tutorials/create-schema-api.md) Gelernte fort und greift dazu das darin erstellte „Loyalty Members“-Schema auf.
 
-Wenn Sie das Lernprogramm zur Registrierung des Schemas noch nicht abgeschlossen haben, Beginn bitte dort und fahren Sie mit diesem Lernprogramm nur fort, nachdem Sie das erforderliche Schema erstellt haben.
+If you have not completed the [!DNL Schema Registry] tutorial, please start there and continue with this dataset tutorial only once you have composed the necessary schema.
 
-Der folgende Aufruf kann zur Ansicht des Schemas &quot;Treuemitglieder&quot;verwendet werden, das Sie im Lernprogramm zur Schema-Registrierung-API erstellt haben:
+The following call can be used to view the Loyalty Members schema you created during the [!DNL Schema Registry] API tutorial:
 
 **API-Format**
 
@@ -84,7 +84,7 @@ curl -X GET \
 
 **Antwort**
 
-Das Format des Antwortobjekts hängt vom Accept-Header ab, der in der Anforderung gesendet wird. Die einzelnen Eigenschaften in dieser Antwort wurden aus Platzgründen minimiert.
+Das Format der Objektausgabe von der in der Anfrage verwendeten Accept-Kopfzeile ab. Die einzelnen Eigenschaften in dieser Antwort wurden aus Platzgründen ausgeblendet.
 
 ```JSON
 {
@@ -178,9 +178,9 @@ Das Format des Antwortobjekts hängt vom Accept-Header ab, der in der Anforderun
 }
 ```
 
-## Datensatz erstellen
+## Erstellen eines Datensatzes
 
-Mit dem Schema &quot;Treuemitglieder&quot;können Sie jetzt einen Datensatz erstellen, der auf das Schema verweist.
+Mit dem vorliegenden „Loyalty Members“-Schema können Sie jetzt einen Datensatz erstellen, der auf das Schema verweist.
 
 **API-Format**
 
@@ -214,11 +214,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->In diesem Tutorial wird das [Parquet](https://parquet.apache.org/documentation/latest/) -Dateiformat für alle Beispiele verwendet. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im Entwicklerhandbuch für die [Stapelverarbeitung](../../ingestion/batch-ingestion/api-overview.md)
+>Für alle Beispiele in diesem Tutorial wird das [Parquet](https://parquet.apache.org/documentation/latest/)-Dateiformat verwendet. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Batch-Aufnahme-Entwicklerhandbuch](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und ein Antwortobjekt zurück, das aus einem Array mit der ID des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"`besteht. Die DataSet-ID ist eine schreibgeschützte, systemgenerierte Zeichenfolge, mit der auf den Datensatz in API-Aufrufen verwiesen wird.
+Bei erfolgreicher Anfrage wird der HTTP-Statuscode 201 (Erstellung bestätigt) mit einem Antwortobjekt zurückgegeben, das ein Array mit der ID des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` beinhaltet. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, die als Verweis auf den Datensatz in API-Aufrufen dient.
 
 ```JSON
 [
@@ -226,9 +226,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und ein Antwortobjekt 
 ]
 ```
 
-## Stapel erstellen
+## Erstellen eines Batches
 
-Bevor Sie Daten zu einem Datensatz hinzufügen können, müssen Sie einen Stapel erstellen, der mit dem Datensatz verknüpft ist. Der Stapel wird dann zum Hochladen verwendet.
+Bevor Sie Daten zu einem Datensatz hinzufügen können, müssen Sie einen Batch erstellen, der dem Datensatz zugeordnet ist. Der Batch wird dann zum Hochladen verwendet.
 
 **API-Format**
 
@@ -238,7 +238,7 @@ POST /batches
 
 **Anfrage**
 
-Der Anforderungstext enthält das Feld &quot;datasetId&quot;, dessen Wert der im vorherigen Schritt `{DATASET_ID}` generierte Wert ist.
+Der Anfragetext umfasst das Feld „datasetId“ mit dem Wert `{DATASET_ID}`, der im vorherigen Schritt generiert wurde.
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
@@ -255,7 +255,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und ein Antwortobjekt mit Details zum neu erstellten Stapel zurückgegeben, einschließlich einer `id`schreibgeschützten, vom System erstellten Zeichenfolge.
+Bei erfolgreicher Anfrage wird der HTTP-Statuscode 201 (Erstellung bestätigt) mit einem Antwortobjekt zurückgegeben, das den neu erstellten Batch einschließlich seiner `id`, einer schreibgeschützten, vom System generierten Zeichenfolge beinhaltet.
 
 ```JSON
 {
@@ -292,13 +292,13 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und ein Antwor
 }
 ```
 
-## Hochladen von Dateien in einen Stapel
+## Hochladen von Dateien in einen Batch
 
-Nachdem Sie erfolgreich einen neuen Stapel zum Hochladen erstellt haben, können Sie jetzt Dateien in den jeweiligen Datensatz hochladen. Beachten Sie, dass Sie bei der Definition des Datensatzes das Dateiformat als Parkett angegeben haben. Daher müssen die hochgeladenen Dateien in diesem Format vorliegen.
+Nachdem der Batch für den Upload erfolgreich erstellt wurde, können Sie Dateien in den jeweiligen Datensatz hochladen. Hierbei ist zu beachten, dass Sie für den Datensatz das Parquet-Dateiformat definiert haben. Demensprechend können sie nur Dateien hochladen, die in diesem Format vorliegen.
 
 >[!NOTE]
 >
->Die größte unterstützte Datei zum Hochladen von Daten ist 512 MB. Wenn Ihre Datendatei größer als diese ist, muss sie in Blöcke mit nicht mehr als 512 MB aufgeteilt werden, die einzeln hochgeladen werden sollen. Sie können jede Datei im selben Stapel hochladen, indem Sie diesen Schritt für jede Datei wiederholen und dieselbe Stapel-ID verwenden. Die Anzahl der hochzuladenden Dateien ist unbegrenzt.
+>Die maximal unterstützte Dateigröße für den Daten-Upload beträgt 512 MB. Wenn Ihre Datendatei diese Größe übersteigt, muss sie in Blöcke von maximal 512 MB unterteilt werden, die nacheinander hochgeladen werden. Um die einzelnen Dateien in den Batch hochzuladen, wiederholen Sie diesen Schritt für jede Datei unter Verwendung derselben Batch-ID. Für die Anzahl der für den Upload in einem Batch enthaltenen Dateien bestehen keine Beschränkungen.
 
 **API-Format**
 
@@ -308,8 +308,8 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BATCH_ID}` | Der `id` Stapel, in den Sie hochladen. |
-| `{DATASET_ID}` | Der `id` Datensatz, in dem der Stapel beibehalten wird. |
+| `{BATCH_ID}` | Die `id` des Batches, in den Sie hochladen. |
+| `{DATASET_ID}` | Die `id` des Datensatzes, in dem der Batch festgehalten wird. |
 | `{FILE_NAME}` | Der Name der Datei, die Sie hochladen. |
 
 **Anfrage**
@@ -325,11 +325,11 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 **Antwort**
 
-Eine erfolgreich hochgeladene Datei gibt einen leeren Antworttext und HTTP-Status 200 (OK) zurück.
+Bei erfolgreichem Upload einer Datei wird für diese ein leerer Antworttext und der HTTP-Statuscode 200 (OK) zurückgegeben.
 
-## Batch-Fertigstellung
+## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem Sie alle Ihre Datendateien in den Stapel hochgeladen haben, können Sie den Stapel zur Fertigstellung signalisieren. Nach Abschluss der Signalisierung erstellt der Dienst Katalogeinträge `DataSetFile` für die hochgeladenen Dateien und verknüpft sie mit dem zuvor erstellten Stapel. Der Katalogstapel ist als erfolgreich markiert, wodurch alle nachgelagerten Flüsse ausgelöst werden, die dann mit den jetzt verfügbaren Daten arbeiten können.
+Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Signaling completion causes the service to create [!DNL Catalog] `DataSetFile` entries for the uploaded files and associate them with the batch generated previously. The [!DNL Catalog] batch is marked successful, which triggers any downstream flows that can then work on the now available data.
 
 **API-Format**
 
@@ -339,7 +339,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BATCH_ID}` | Der `id` Stapel, den Sie als abgeschlossen kennzeichnen. |
+| `{BATCH_ID}` | Die `id` des Batches, den Sie als fertiggestellt markieren. |
 
 **Anfrage**
 
@@ -352,11 +352,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 
 **Antwort**
 
-Ein erfolgreich abgeschlossener Stapel gibt einen leeren Antworttext und HTTP-Status 200 zurück (OK).
+Bei erfolgreicher Fertigstellung eines Batches wird für diesen ein leerer Antworttext und der HTTP-Statuscode 200 (OK) zurückgegeben.
 
-## Überwachen der Erfassung
+## Überwachen der Datenaufnahme
 
-Je nach Datengröße dauert die Erfassung von Stapeln unterschiedlich lange. Sie können den Status eines Stapels überwachen, indem Sie einen `batch` Anforderungsparameter mit der Batch-ID an eine `GET /batches` Anforderung anhängen. Die API fragt den Datensatz nach dem Status des Stapels von der Erfassung ab, bis der `status` in der Antwort angegebene Abschluss (&quot;Erfolg&quot;oder &quot;Fehler&quot;) angezeigt wird.
+Abhängig vom jeweiligen Datenvolumen beansprucht die Batch-Aufnahme unterschiedlich viel Zeit. Sie können den Status eines Batches überwachen, indem Sie den Anfrageparameter `batch` unter Angabe der Batch-ID an eine `GET /batches`-Anfrage anfügen. Die API ruft den Status des im Datensatz aufzunehmenden Batches so lange ab, bis in der Antwort der `status` der Fertigstellung als erfolgreich („success“) bzw. fehlgeschlagen („failure“) angegeben wird.
 
 **API-Format**
 
@@ -366,7 +366,7 @@ GET /batches?batch={BATCH_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BATCH_ID}` | Der `id` zu überwachende Stapel. |
+| `{BATCH_ID}` | Die `id` des Batches, den Sie überwachen möchten. |
 
 **Anfrage**
 
@@ -381,7 +381,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine positive Antwort gibt ein Objekt zurück, dessen `status` Attribut den Wert `success`:
+Eine positive Antwort gibt ein Objekt zurück, dessen Attribut `status` den Wert `success` aufweist:
 
 ```JSON
 {
@@ -413,7 +413,7 @@ Eine positive Antwort gibt ein Objekt zurück, dessen `status` Attribut den Wert
 }
 ```
 
-Eine negative Antwort gibt ein Objekt mit dem Wert `"failed"` in seinem `"status"` Attribut zurück und enthält alle relevanten Fehlermeldungen:
+Eine negative Antwort gibt ein Objekt mit dem Wert `"failed"` im Attribut `"status"` sowie alle zugehörigen Fehlermeldungen zurück:
 
 ```JSON
 {
@@ -457,22 +457,22 @@ Eine negative Antwort gibt ein Objekt mit dem Wert `"failed"` in seinem `"status
 
 >[!NOTE]
 >
->Ein empfohlener Abfrageintervall beträgt zwei Minuten.
+>Als Abrufintervall werden zwei Minuten empfohlen.
 
-## Daten aus dem Datensatz lesen
+## Einlesen von Daten aus dem Datensatz
 
-Mit der Stapel-ID können Sie die Datenzugriff-API verwenden, um alle Dateien, die in den Stapel hochgeladen wurden, zu lesen und zu überprüfen. Die Antwort gibt ein Array mit einer Liste von Datei-IDs zurück, wobei jede Datei im Stapel auf eine Datei verweist.
+Sie können über die Batch-ID die Data Access API aufrufen, um die in einen Batch hochgeladenen Dateien einzulesen und zu überprüfen. Die Antwort gibt ein Array mit einer Liste von Datei-IDs zurück, die jeweils auf eine im Batch enthaltene Datei verweisen.
 
-Sie können die Datenzugriff-API auch verwenden, um den Namen, die Größe in Byte und einen Link zum Herunterladen der Datei oder des Ordners zurückzugeben.
+Sie können die Data Access API auch verwenden, um den Namen, die Größe in Bytes und einen Link zum Herunterladen der Datei oder des Ordners abzurufen.
 
-Ausführliche Anweisungen zum Arbeiten mit der Datenzugriffs-API finden Sie im Entwicklerhandbuch für [Datenzugriff](../../data-access/home.md).
+Einzelheiten zur Arbeit mit der Data Access API finden Sie im [Entwicklerhandbuch zum Thema Datenzugriff](../../data-access/home.md).
 
-## Schema des Datensatzes aktualisieren
+## Aktualisieren des Datensatzschemas
 
-Sie können Felder hinzufügen und zusätzliche Daten in von Ihnen erstellte Datensätze erfassen. Dazu müssen Sie zunächst das Schema aktualisieren, indem Sie zusätzliche Eigenschaften hinzufügen, die die neuen Daten definieren. Dies kann mithilfe von PATCH- und/oder PUT-Vorgängen erfolgen, um das vorhandene Schema zu aktualisieren.
+Sie können Felder hinzufügen und zusätzliche Daten in von Ihnen erstellten Datensätzen aufnehmen. Dazu müssen Sie zunächst das Schema aktualisieren, indem Sie zusätzliche Eigenschaften hinzufügen, die die neuen Daten definieren. Die Aktualisierung eines vorhandenen Schemas erfolgt mittels PATCH- und/oder PUT-Operationen.
 
-Weitere Informationen zum Aktualisieren von Schemas finden Sie im [Schema Registry API Developer Guide](../../xdm/api/getting-started.md).
+Weitere Informationen zur Aktualisierung von Schemas finden Sie im [Schema Registry API-Entwicklerhandbuch](../../xdm/api/getting-started.md).
 
-Nachdem Sie das Schema aktualisiert haben, können Sie die Schritte in diesem Lernprogramm wiederholen, um neue Daten zu erfassen, die dem überarbeiteten Schema entsprechen.
+Nach Aktualisierung des Schemas können Sie neue, mit dem überarbeiteten Schema übereinstimmende Daten aufnehmen, indem Sie die in diesem Tutorial erläuterten Schritte wiederholen.
 
-Es ist wichtig, sich zu merken, dass die Evolution des Schemas rein additiv ist, d. h., dass ein Schema nicht mehr verändert werden darf, sobald es in der Registrierung gespeichert und zur Datenaufnahme verwendet wurde. Weitere Informationen zu Best Practices für das Erstellen von Schema zur Verwendung mit Adobe Experience Platform finden Sie im Handbuch zu den [Grundlagen der Schema-Komposition](../../xdm/schema/composition.md).
+Wichtig dabei: Die Entwicklung von Schemas ist vollständig additiv ausgelegt, d. h., ein Schema kann nicht mehr grundlegend verwendet werden, wenn es einmal in der Registry gespeichert und zur Datenaufnahme verwendet wurde. Weitere Informationen zu Best Practices rund um die Erstellung von Schemas für die Verwendung mit Adobe Experience Platform finden Sie unter [Grundlagen zum Aufbau von Schemas](../../xdm/schema/composition.md).
