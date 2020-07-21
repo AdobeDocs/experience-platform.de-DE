@@ -1,57 +1,57 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Abrufen fehlgeschlagener Stapel
+title: Abrufen fehlgeschlagener Batches
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 1%
+source-wordcount: '598'
+ht-degree: 75%
 
 ---
 
 
-# Abrufen fehlgeschlagener Stapel mit der API
+# Abrufen fehlgeschlagener Batches mithilfe der API
 
-Adobe Experience Platform bietet zwei Methoden zum Hochladen und Erfassen von Daten. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie ihre Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder Streaming, mit dem Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in die Platform einfügen können.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. You can either use batch ingestion, which allows you to insert their data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real-time.
 
-In diesem Lernprogramm werden die Schritte zum Abrufen von Informationen zu einem fehlgeschlagenen Stapel mithilfe von Dateneinschluss-APIs beschrieben.
+This tutorial covers steps for retrieving information about a failed batch using [!DNL Data Ingestion] APIs.
 
 ## Erste Schritte
 
-Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Diese Anleitung setzt Grundkenntnisse der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Erlebnis-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-- [Dateneinbettung](../home.md): Die Methoden, mit denen Daten an die Experience Platform gesendet werden können.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
+- [!DNL Data Ingestion](../home.md): Die Methoden, mit denen Daten gesendet werden können [!DNL Experience Platform].
 
-### Lesen von Beispiel-API-Aufrufen
+### Lesehilfe für Beispiel-API-Aufrufe
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Werte der zu verwendenden Kopfzeilen
 
-Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Genehmigung: Träger `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle in der Experience Platform befindlichen Ressourcen, einschließlich derjenigen, die zum Schema-Register gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
+Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
 
 - Content-Type: `application/json`
 
-### Beispiel für fehlgeschlagenen Stapel
+### Beispiel für fehlgeschlagenen Batch
 
-In diesem Lernprogramm werden Beispieldaten mit einem falsch formatierten Zeitstempel verwendet, der den Monatswert auf **00** setzt, wie unten dargestellt:
+In diesem Tutorial werden Beispieldaten mit einem fehlerhaft formatierten Zeitstempel verwendet, der für den Monat den Wert **00** festlegt, wie unten dargestellt:
 
 ```json
 {
@@ -78,7 +78,7 @@ In diesem Lernprogramm werden Beispieldaten mit einem falsch formatierten Zeitst
 
 Die obige Payload wird aufgrund des fehlerhaften Zeitstempels nicht ordnungsgemäß mit dem XDM-Schema validiert.
 
-## Fehler beim Abrufen des Stapels
+## Abrufen des fehlgeschlagenen Batches
 
 **API-Format**
 
@@ -88,7 +88,7 @@ GET /batches/{BATCH_ID}/failed
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des Stapels, den Sie suchen. |
+| `{BATCH_ID}` | Die ID des Batches, den Sie nachschlagen. |
 
 **Anfrage**
 
@@ -133,11 +133,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-Mit der obigen Antwort können Sie sehen, welche Teile des Stapels erfolgreich waren und fehlgeschlagen sind. Aus dieser Antwort können Sie erkennen, dass die Datei den fehlgeschlagenen Stapel `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` enthält.
+Aus der Antwort oben ist ersichtlich, bei welchen Blöcken aus dem Batch die Aufnahme erfolgreich war und bei welchen sie fehlschlug. Diese Antwort hier zeigt, dass die Datei `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` den fehlgeschlagenen Batch enthält.
 
-## Herunterladen des fehlgeschlagenen Stapels
+## Herunterladen des fehlgeschlagenen Batches
 
-Sobald Sie wissen, welche Datei im Stapel fehlschlug, können Sie die Datei mit dem Fehler herunterladen und die Fehlermeldung anzeigen.
+Sobald Sie wissen, welche Datei aus dem Batch fehlschlug, können Sie die entsprechende Datei herunterladen und sich die Fehlermeldung anzeigen lassen.
 
 **API-Format**
 
@@ -147,12 +147,12 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des Stapels, der die fehlgeschlagene Datei enthält. |
+| `{BATCH_ID}` | Die ID des Batches, der die fehlgeschlagene Datei enthält. |
 | `{FAILED_FILE}` | Der Name der Datei mit der fehlerhaften Formatierung. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung können Sie die Datei herunterladen, bei der Fehler bei der Erfassung aufgetreten sind.
+Mit der nachfolgenden Anfrage können Sie die Datei herunterladen, bei der Fehler bei der Aufnahme aufgetreten sind.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path={FAILED_FILE}' \
@@ -166,7 +166,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 **Antwort**
 
-Da der vorherige erfasste Stapel eine ungültige Datums-Zeit hatte, wird der folgende Validierungsfehler angezeigt.
+Da der zuvor aufgenommene Batch einen ungültigen Wert für Datum/Zeit aufwies, wird der folgende Validierungsfehler angezeigt.
 
 ```json
 {
@@ -184,19 +184,19 @@ Da der vorherige erfasste Stapel eine ungültige Datums-Zeit hatte, wird der fol
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Lernprogramms haben Sie gelernt, wie Fehler aus fehlgeschlagenen Stapeln abgerufen werden. Weitere Informationen zur Stapelverarbeitung finden Sie im [Entwicklerhandbuch](../batch-ingestion/overview.md)zur Stapelverarbeitung. Weitere Informationen zur Streaming-Erfassung finden Sie im Tutorial [Erstellen einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
+Mit Abschluss dieses Tutorials haben Sie gelernt, wie Fehler aus fehlgeschlagenen Batches abgerufen werden. Weitere Informationen finden Sie zur Aufnahme von Batches finden Sie im [Batch-Aufnahme-Entwicklerhandbuch](../batch-ingestion/overview.md). Weitere Informationen zur Streaming-Aufnahme finden Sie im [Tutorial zur Erstellung einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
 
 ## Anhang
 
-Dieser Abschnitt enthält Informationen zu anderen Erfassungsfehlertypen, die auftreten können.
+Dieser Abschnitt enthält Informationen zu anderen möglichen Fehlern bei der Aufnahme.
 
-### Falsch formatiertes XDM
+### Fehlerhaft formatiertes XDM
 
-Wie der Zeitstempelfehler im vorherigen Beispielablauf sind diese Fehler auf falsch formatierte XDM zurückzuführen. Diese Fehlermeldungen variieren je nach Art des Problems. Daher kann kein bestimmtes Fehlerbeispiel angezeigt werden.
+Wie der Zeitstempel-Fehler im Beispiel zuvor sind auch diese Fehler auf ein falsch formatiertes XDM zurückzuführen. Die Fehlermeldungen sind je nach Art des Problems unterschiedlich. Daher kann an dieser Stelle kein Beispiel für einen spezifischen Fehler angegeben werden.
 
-### Fehlende oder ungültige IMS-Organisations-ID
+### Fehlende oder ungültige IMS-Org-ID
 
-Dieser Fehler wird angezeigt, wenn die IMS-Organisations-ID in der Payload fehlt oder ungültig ist.
+Dieser Fehler wird angezeigt, wenn die IMS-Org-ID in der Payload fehlt oder ungültig ist.
 
 ```json
 {
@@ -211,7 +211,7 @@ Dieser Fehler wird angezeigt, wenn die IMS-Organisations-ID in der Payload fehlt
 
 ### Fehlendes XDM-Schema
 
-Dieser Fehler wird angezeigt, wenn die `schemaRef` für die `xdmMeta` Variable fehlt.
+Dieser Fehler wird angezeigt, wenn `schemaRef` für `xdmMeta` fehlt.
 
 ```json
 {
@@ -226,7 +226,7 @@ Dieser Fehler wird angezeigt, wenn die `schemaRef` für die `xdmMeta` Variable f
 
 ### Fehlender Quellname
 
-Dieser Fehler wird angezeigt, wenn die `source` in der Kopfzeile enthaltene Fehlermeldung fehlt `name`.
+Dieser Fehler wird angezeigt, wenn für die `source` in der Kopfzeile der `name` fehlt.
 
 ```json
 {
@@ -242,7 +242,7 @@ Dieser Fehler wird angezeigt, wenn die `source` in der Kopfzeile enthaltene Fehl
 
 ### Fehlende XDM-Entität
 
-Dieser Fehler wird angezeigt, wenn kein `xdmEntity` vorhanden ist.
+Dieser Fehler wird angezeigt, wenn `xdmEntity` nicht vorhanden ist.
 
 ```json
 {
