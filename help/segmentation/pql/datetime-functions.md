@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Datums- und Uhrzeitfunktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 4%
+source-wordcount: '468'
+ht-degree: 12%
 
 ---
 
 
 # Datums- und Uhrzeitfunktionen
 
-Datums- und Uhrzeitfunktionen werden zur Durchführung von Datums- und Uhrzeitvorgängen in Profil Abfrage Language (PQL) verwendet. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Datums- und Uhrzeitfunktionen werden verwendet, um Datums- und Uhrzeitvorgänge für Werte innerhalb [!DNL Profile Query Language] (PQL) durchzuführen. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
 
 ## Aktueller Monat
 
@@ -191,4 +191,4 @@ person.birthday occurs = 3 days before today
 
 ## Nächste Schritte
 
-Jetzt, da Sie Informationen zu Datums- und Uhrzeitfunktionen erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Jetzt, da Sie Informationen zu Datums- und Uhrzeitfunktionen erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
