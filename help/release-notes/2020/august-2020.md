@@ -1,51 +1,51 @@
 ---
-title: Adobe Experience Platform  – Versionshinweise
-description: Versionshinweise zur Experience Platform vom 10. August 2020
+title: Adobe Experience Platform – Versionshinweise
+description: Versionshinweise zur Experience Platform, 10. August 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 7f9d1120ac323c60f899cb1cf855e55db20437ed
+source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 17%
+source-wordcount: '302'
+ht-degree: 47%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Releasedatum: 10. Juni 2020**
+**Veröffentlichungsdatum: 10. Juni 2020**
 
 Neue Funktionen in Adobe Experience Platform:
 
-- [Zugangssteuerung](#access-control)
-- [Sandboxes](#sandboxes)
+- [!DNL Access control](#access-control)
+- [!DNL Sandboxes](#sandboxes)
 
-## Zugangssteuerung {#access-control}
+## [!DNL Access control] {#access-control}
 
-Die Experience Platform nutzt die [Adobe Admin Console](https://adminconsole.adobe.com) -Profil, um Benutzer mit Berechtigungen und Sandboxen zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Plattformfunktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung.
-
-**Wichtigste Funktionen**
-
-| Funktion | Beschreibung |
-|--- | ---|
-| Zugriffsberechtigung | In der Admin-Konsole können Sie mithilfe der Registerkarte &quot; _Berechtigungen_ &quot;in einem Platform-Profil anpassen, welche Plattformfunktionen für die an dieses Profil angeschlossenen Benutzer verfügbar sind. Zu den verfügbaren Kategorien für Berechtigungen gehören: Datenmodellierung, Data Management, Profil-Management, Identitäten, Datenüberwachung, Sandbox-Administration, Ziele, Quellen. |
-| Zugriff auf Sandboxen | Über die Registerkarte _Berechtigungen_ in einem Platform-Profil können Benutzer Zugriff auf bestimmte Sandboxen erhalten. Weitere Informationen finden Sie im Abschnitt zu [Sandboxen](#sandboxes) unten. |
-
-Weitere Informationen finden Sie in der Übersicht über die [Zugriffskontrolle](../../access-control/home.md).
-
-## Sandboxes {#sandboxes}
-
-Die Experience Platform wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene zu bereichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um diese Anforderungen zu erfüllen, stellt Experience Platform Sandboxes bereit, die eine Plattform-Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+[!DNL Experience Platform] nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Produktprofile, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Produktions-Sandbox | Experience Platform bietet eine einzige Produktions-Sandbox, die weder gelöscht noch zurückgesetzt werden kann. |
-| Sandboxen ohne Produktion | Für eine einzige Plattforminstanz können mehrere Sandboxen ohne Produktionscharakter erstellt werden, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktionssandbox zu beeinträchtigen. |
-| Sandbox-Umschalter | In der Benutzeroberfläche von Experience Platform können Sie mit dem Sandbox-Umschalter in der oberen linken Ecke des Bildschirms über ein Dropdown-Menü zwischen verfügbaren Sandboxen wechseln. |
-| `x-sandbox-name` header | Alle Aufrufe von Experience Platform-APIs müssen jetzt die neue `x-sandbox-name` Kopfzeile enthalten, deren Wert auf das `name` Attribut der Sandbox verweist, in der der Vorgang ausgeführt wird. |
+| Berechtigungen | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources]. |
+| Zugriff auf Sandboxen | The [!UICONTROL _Permissions _]tab within a[!DNL Platform]product profile can grant users access to specific sandboxes. Zusätzliche Informationen finden Sie im Abschnitt zu[Sandboxes](#sandboxes)unten. |
 
-Weitere Informationen finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
+Weiterführende Informationen finden Sie in der [Übersicht über die Zugriffskontrolle](../../access-control/home.md).
+
+## [!DNL Sandboxes] {#sandboxes}
+
+[!DNL Experience Platform] wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. In order to address this need, [!DNL Experience Platform] provides sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+
+**Wichtigste Funktionen**
+
+| Funktion | Beschreibung |
+|--- | ---|
+| Produktions-Sandbox | [!DNL Experience Platform] stellt eine einzelne Produktions-Sandbox bereit, die weder gelöscht noch zurückgesetzt werden kann. |
+| Nicht-Produktions-Sandboxes | Multiple non-production sandboxes can be created for a single [!DNL Platform] instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox. |
+| Sandbox-Wechsler | In the [!DNL Experience Platform] user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu. |
+| `x-sandbox-name`-Kopfzeile | All calls to [!DNL Experience Platform] APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in. |
+
+Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
