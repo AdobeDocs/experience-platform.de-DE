@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Arbeitsbereich "Zugriffskontrolle"durchsuchen
+title: Arbeitsbereich „Zugriffskontrolle“ durchsuchen
 topic: user guide
 translation-type: tm+mt
-source-git-commit: d961bad816d37ade5367ab25c19594dc1b625153
+source-git-commit: 6f599c0c6d8b349ebfb8cc0523543904fd628f8d
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 5%
+source-wordcount: '258'
+ht-degree: 78%
 
 ---
 
 
-# Arbeitsbereich &quot;Zugriffskontrolle&quot;durchsuchen
+# Arbeitsbereich „Zugriffskontrolle“ durchsuchen
 
-Um die Zugriffskontrolle für Experience Platform über die Adobe Admin-Konsole zu konfigurieren, müssen Sie Administrator für eine IMS-Organisation sein, die über ein Abonnement zu Experience Platform verfügt. Adobe unterstützt flexible Administrationshierarchien für IMS Orgs. Zur Konfiguration der Zugriffskontrolle benötigen Sie jedoch **Systemadministrator**, **Produktadministrator** oder **Produktadministrator** . Weitere Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. Zwar unterstützt Adobe flexible Administrationshierarchien für IMS-Organisationen, doch benötigen Sie zur Konfiguration der Zugriffskontrolle **[!UICONTROL Systemadministrator]**-, **[!UICONTROL Produktadministrator]**- oder **[!UICONTROL Produktprofiladministrator]**-Berechtigungen. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
 Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten.
 
-Sobald Sie über Administratorrechte verfügen, wechseln Sie zur [Adobe Admin Console](https://adminconsole.adobe.com) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung wird die Seite *Übersicht* für den IMS-Org angezeigt, für den Sie Administratorrechte haben. Diese Seite zeigt die Produkte, die Ihr IMS-Org abonniert, zusammen mit anderen Steuerelementen, um Benutzer und Administratoren zum IMS-Org als Ganzes hinzuzufügen. Klicken Sie auf **Adobe Experience Platform** , um den Arbeitsbereich &quot;Zugriffskontrolle&quot;für Ihre Plattformintegration zu öffnen.
+Sobald Sie über Administratorrechte verfügen, wechseln Sie zur [Adobe Admin Console](https://adminconsole.adobe.com) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung wird die Seite *[!UICONTROL Übersicht]* für die IMS-Org angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihre IMS-Org abonniert hat, zusammen mit anderen Steuerelementen, mit denen sich Benutzer und Administratoren zur IMS-Org als Ganzes hinzufügen lassen. Klicken Sie auf **[!UICONTROL Adobe Experience]**, um den Arbeitsbereich „Zugriffskontrolle“ für Ihre Platform-Integration zu öffnen.[!DNL Platform]
 
 ![overview-page](../images/overview-page.png)
 
-Der Arbeitsbereich &quot;Zugriffskontrolle&quot;für Adobe Experience Platform wird angezeigt und auf der Registerkarte &quot; *Product Profils* &quot;geöffnet. Auf dieser Registerkarte können Sie alle Profil des Produkts Ansicht und verschiedene Einstellungen verwalten, wie in diesem Dokument beschrieben.
+Der Arbeitsbereich „Zugriffskontrolle“ für Adobe Experience Platform wird angezeigt, indem er auf dem Tab *[!UICONTROL Produktprofile]* geöffnet wird. Auf diesem Tab können Sie alle Produktprofile anzeigen und verschiedene Einstellungen verwalten, wie in diesem Dokument beschrieben.
 
 ![platform-access-control](../images/platform-access-control.png)
 
-Dieses Benutzerhandbuch konzentriert sich auf die Verwendung der Admin-Konsole zum Zuweisen von Zugriffsberechtigungen für die Plattform. Weitere allgemeine Informationen zum Navigieren in der Admin-Konsole finden Sie im Benutzerhandbuch [zur](https://helpx.adobe.com/de/enterprise/using/admin-console.html)Admin-Konsole.
+This user guide focuses on how to use the [!DNL Admin Console] to assign access permissions for [!DNL Platform]. For more general information on how to navigate the [!DNL Admin Console], see the [Admin Console user guide](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
 ## Nächste Schritte
 
-Nachdem Sie im Arbeitsbereich &quot;Zugriffskontrolle&quot;navigiert haben, fahren Sie mit dem nächsten Schritt fort, um ein neues Profil zu [erstellen](create-profile.md)
+Nachdem Sie sich mit dem Arbeitsbereich „Zugriffskontrolle“ vertraut gemacht haben, fahren Sie mit dem nächsten Schritt fort, um ein [neues Profil zu erstellen](create-profile.md).
