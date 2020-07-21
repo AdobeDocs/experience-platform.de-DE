@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Arithmetik-Funktionen
+title: Arithmetische Funktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 5%
+source-wordcount: '230'
+ht-degree: 94%
 
 ---
 
 
-# Arithmetik-Funktionen
+# Arithmetische Funktionen
 
-Arithmetische Funktionen werden verwendet, um Basisberechnungen für Profil Abfrage Language (PQL) durchzuführen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Profile Query Language-Übersicht](./overview.md).
 
-## Neue
+## Addieren
 
-Die `+` (Addition)-Funktion wird verwendet, um die Summe von zwei Argument-Ausdrücken zu finden.
+Mit der Funktion `+` (Addition) wird die Summe zweier Argumentausdrücke ermittelt.
 
 **Format**
 
@@ -28,7 +28,7 @@ Die `+` (Addition)-Funktion wird verwendet, um die Summe von zwei Argument-Ausdr
 
 **Beispiel**
 
-Die folgende PQL-Abfrage fasst den Preis von zwei verschiedenen Produkten zusammen.
+Die folgende PQL-Abfrage addiert die Preise von zwei verschiedenen Produkten.
 
 ```sql
 product1.price + product2.price
@@ -36,7 +36,7 @@ product1.price + product2.price
 
 ## Multiplizieren
 
-Die `*` (Multiplikations-)Funktion wird verwendet, um das Produkt zweier Argument-Ausdruck zu finden.
+Mit der Funktion `*` (Multiplikation) wird das Produkt zweier Argumentausdrücke ermittelt.
 
 **Format**
 
@@ -46,7 +46,7 @@ Die `*` (Multiplikations-)Funktion wird verwendet, um das Produkt zweier Argumen
 
 **Beispiel**
 
-Die folgende PQL-Abfrage findet das Produkt des Bestandes und den Produktpreis, um den Bruttowert des Produkts zu ermitteln.
+Die folgende PQL-Abfrage ermittelt das Produkt im Bestand sowie den Preis eines Produkts, um den Bruttowert des Produkts zu berechnen.
 
 ```sql
 product.inventory * product.price
@@ -54,7 +54,7 @@ product.inventory * product.price
 
 ## Subtrahieren
 
-Die `-` (Subtraktion-)Funktion wird verwendet, um den Unterschied von zwei Argument-Ausdrücken zu ermitteln.
+Mit der Funktion `-` (Subtraktion) wird der Unterschied zwischen zwei Argumentausdrücken ermittelt.
 
 **Format**
 
@@ -70,9 +70,9 @@ Die folgende PQL-Abfrage ermittelt den Preisunterschied zwischen zwei verschiede
 product1.price - product2.price
 ```
 
-## Teilung
+## Teilen
 
-Die Funktion `/` (Division) wird verwendet, um den Quotienten zweier Argument-Ausdruck zu finden.
+Mit der Funktion `/` (Division) wird der Quotient zweier Argumentausdrücke ermittelt.
 
 **Format**
 
@@ -82,15 +82,15 @@ Die Funktion `/` (Division) wird verwendet, um den Quotienten zweier Argument-Au
 
 **Beispiel**
 
-Die folgende PQL-Abfrage findet den Quotienten zwischen den insgesamt verkauften Produkten und dem gesamten verdienten Geld, um die durchschnittlichen Kosten pro Artikel zu sehen.
+Die folgende PQL-Abfrage ermittelt den Quotienten zwischen den insgesamt verkauften Produkten und dem insgesamt verdienten Geld, um so die durchschnittlichen Kosten pro Artikel zu berechnen.
 
 ```sql
 totalProduct.price / totalProduct.sold
 ```
 
-## Remainer
+## Rest
 
-Die `%` (Modulo/Rest)-Funktion wird verwendet, um den Rest nach der Teilung der beiden Argument-Ausdruck zu finden.
+Mit der Funktion `%` (Modulo/Rest) wird nach der Division der beiden Argumentausdrücke der Rest ermittelt.
 
 **Format**
 
@@ -108,4 +108,4 @@ person.age % 5 = 0
 
 ## Nächste Schritte
 
-Jetzt, da Sie von Arithmetik-Funktionen gelernt haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Nachdem Sie sich mit arithmetischen Funktionen vertraut gemacht haben, können Sie sie nun in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Profile Query Language-Übersicht](./overview.md).
