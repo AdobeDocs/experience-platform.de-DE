@@ -1,71 +1,71 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ETL-Arbeitsablauf
+title: ETL-Workflow
 topic: overview
 translation-type: tm+mt
-source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 0%
+source-wordcount: '177'
+ht-degree: 88%
 
 ---
 
 
-# ETL-Arbeitsablauf
+# ETL-Workflow
 
-Verschiedene Werkzeuge für Extract, Transform und Load (ETL) können sich im Format unterscheiden, aber die meisten bieten ähnliche Funktionen, um die Kombination mehrerer Datenquellen zu unterstützen.
+Verschiedene Tools für Extract, Transform and Load (ETL) unterscheiden sich im Format, bieten jedoch meist ähnliche Funktionen, um eine Kombination aus mehreren Datenquellen zu unterstützen.
 
-## ETL-Tool-Beispiel
+## Beispiel für ein ETL-Tool
 
-Die folgenden Diagramme bieten Beispiele für gängige ETL-Aktionen und eine allgemeine Benutzererfahrung, die auf Standardinteraktionen basiert. Diese Bilder können einfach an eine bestimmte ETL-Benutzererfahrung angepasst werden.
+Folgende Diagramme stellen Muster für gängige ETL-Aktionen und ein allgemeines Benutzererlebnis bereit, das auf Standardinteraktionen basiert. Diese Bilder können bei Bedarf einfach an ein spezifisches ETL-Benutzererlebnis angepasst werden.
 
-Die folgenden Aktionen werden in den im [ETL-Integrationsleitfaden](home.md)beschriebenen Schritten beschrieben. Einige Schritte verweisen auf bestimmte &quot;Abbildungen&quot;, andere beschreiben ähnliche Aktionen wie der hier dargestellte Arbeitsablauf.
+Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgeführten Schritten beschrieben. Einige Schritte verweisen auf bestimmte „Abbildungen“, andere beschreiben ähnliche Aktionen wie beim hier dargestellten Workflow.
 
-### Abbildung 1: Konfigurieren des neuen Adobe Experience Platform Connector:
+### Abbildung 1 – Neuen Adobe Experience Platform-Connector konfigurieren:
 
 ![](images/image2.png)
 
-### Abbildung 2: Aktivierung des Experience Platform Connector:
+### Abbildung 2: Aktivierter [!DNL Experience Platform] Anschluss:
 
 ![](images/image3.png)
 
-### Abbildung 3: Benutzeroberfläche des ETL Transformation Management:
+### Abbildung 3 – Benutzeroberfläche von ETL Transformation Management:
 
 ![](images/image4.png)
 
-### Abbildung 4: Benutzeroberfläche &quot;Neue Transformation&quot;mit Experience Platform Connection:
+### Figure 4 - New Transformation UI, selecting [!DNL Experience Platform] Connection:
 
 ![](images/image5.png)
 
-### Abbildung 5: Durchsuchen von Quell-Experience-Plattform-Datensätzen:
+### Abbildung 5: Durchsuchen von [!DNL Experience Platform] Quelldatensätzen:
 
 ![](images/image6.png)
 
-### Abbildung 6: Metadaten und Musterdaten aus dem Datensatz in der ETL-Benutzeroberfläche:
+### Abbildung 6 – Metadaten und Musterdaten aus dem Datensatz in der ETL-Benutzeroberfläche:
 
 ![](images/image7.png)
 
-### Abbildung 7: Anzeigen von Feldinformationen aus Datasets im Schema:
+### Abbildung 7 – Feldschemadaten aus Datensätzen anzeigen:
 
 ![](images/image8.png)
 
-### Abbildung 8: Anzeigen einer Vorschau von Daten aus Datasets
+### Abbildung 8 – Vorschau von Daten aus Datensätzen anzeigen
 
 ![](images/image9.png)
 
-### Abbildung 9: Definieren der Parameter für die Datensynchronisierung für den Vorgang der Transformation:
+### Abbildung 9 – Parameter zur Datensynchronisierung für den Transformationsvorgang definieren:
 
 ![](images/image10.png)
 
-### Abbildung 10: Definieren des Datasets zur Zielgruppe des Experience Data Model (XDM):
+### Abbildung 10: Definieren des Datasets für die [!DNL Experience Data Model] (XDM-)Zielgruppe:
 
 ![](images/image11.png)
 
-### Abbildung 11: Anzeigen der hierarchischen XDM-Schema und Metadaten zur Unterstützung von Zuordnungen/Transformationen:
+### Abbildung 11 – Hierarchische XDM-Schemas und Metadaten zur Unterstützung von Mappings/Transformationen anzeigen:
 
 ![](images/image12.png)
 
-### Abbildung 12: Speichern und Ausführen/Planen der Transformationen:
+### Abbildung 12 – Transformationen speichern und ausführen/planen:
 
 ![](images/image13.png)
