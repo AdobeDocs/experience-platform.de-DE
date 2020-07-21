@@ -4,23 +4,23 @@ solution: Experience Platform
 title: ExperienceEvent-Abfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 0%
+source-wordcount: '275'
+ht-degree: 69%
 
 ---
 
 
-# ExperienceEvent-Abfragen
+# [!DNL ExperienceEvent] Abfragen
 
-Zusätzlich zu den standardmäßigen SQL-Abfragen unterstützt Adobe Experience Platform Abfrage Service das Schreiben von Abfragen mit ExperienceEvents. Ein ExperienceEvent ist eine Experience Data Model-Klasse (XDM), die einen unveränderlichen, nicht aggregierten Schnappschuss des Systems darstellt, wenn ein Benutzer mit einer Website oder einem Dienst interagiert und daher für die Analyse der Zeitdomäne verwendet werden kann. Weitere Informationen zu XDM- und Experience Ereignisses finden Sie in der XDM-Systemübersicht. Durch die Kombination von Abfrage Service und ExperienceEvents können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen mit ExperienceEvents.
+In addition to standard SQL queries, Adobe Experience Platform [!DNL Query Service] supports writing queries using [!DNL ExperienceEvents]. An [!DNL ExperienceEvent] is an [!DNL Experience Data Model] (XDM) class that represents an immutable non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [!DNL XDM System] Übersicht. By combining [!DNL Query Service] with [!DNL ExperienceEvents], you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving [!DNL ExperienceEvents].
 
 ## Erstellen eines Trendberichts mit Ereignissen nach Tagen über einen bestimmten Datumsbereich
 
-Im folgenden Beispiel wird ein Trendbericht mit Ereignissen über einen bestimmten Datumsbereich erstellt, der nach Datum gruppiert ist. Insbesondere werden verschiedene Analysewerte als A, B und C zusammengefasst und dann die Anzahl der Wiedergaben von Parkas summiert.
+Im folgenden Beispiel wird ein Trendbericht mit Ereignissen über einen bestimmten Datumsbereich erstellt, der nach Datum gruppiert ist. Insbesondere werden verschiedene Analytics-Werte als A, B und C zusammengefasst und anschließend die Häufigkeit, mit der Parkas angezeigt wurden.
 
-Die Zeitstempelspalte in Experience Ereignis-Datensätzen befindet sich in UTC. Im folgenden Beispiel wird die `from_utc_timestamp()` Funktion verwendet, um den Zeitstempel von UTC in EDT umzuwandeln. Anschließend wird mit der `date_format()` Funktion das Datum vom Rest des Zeitstempels isoliert.
+The timestamp column found in [!DNL Experience Event] datasets is in UTC. Im folgenden Beispiel wird die `from_utc_timestamp()`-Funktion verwendet, um den Zeitstempel von UTC in EDT umzuwandeln. Anschließend wird mit der `date_format()`-Funktion das Datum vom Rest des Zeitstempels getrennt.
 
 ```sql
 SELECT 
@@ -78,9 +78,9 @@ ORDER BY Day ASC, pageViews DESC;
  (31 rows)
 ```
 
-## Abrufen einer Liste von Besuchern, die nach der Anzahl der Ansichten organisiert sind.
+## Abrufen einer Liste von Besuchern, die nach Seitenansichten organisiert sind.
 
-Im folgenden Beispiel wird ein Bericht erstellt, in dem die IDs der Benutzer Liste werden, die die meisten Seiten aufgerufen haben.
+Im folgenden Beispiel wird ein Bericht erstellt, der die IDs der Benutzer auflistet, die die meisten Seiten aufgerufen haben.
 
 ```sql
 SELECT 
@@ -108,9 +108,9 @@ LIMIT 10;
 (10 rows)
 ```
 
-## Wiedergeben von Sitzungen eines Besuchers
+## Wiedergeben der Sitzungen eines Besuchers
 
-Im folgenden Beispiel werden die letzten 100 Seiten Liste, die ein bestimmter Benutzer angezeigt hat.
+Im folgenden Beispiel werden die letzten 100 Seiten aufgelistet, die ein bestimmter Benutzer angezeigt hat.
 
 
 ```sql
@@ -154,9 +154,9 @@ LIMIT 100;
 2019-11-08 20:14:05.0 | typed_bookmark |                                                                    | Seasonal Sale                       |     |     |     |          1.0
 ```
 
-## Ansicht eines Datenaggregationsberichts eines Besuchers
+## Anzeigen eines Datenaggregationsberichts eines Besuchers
 
-Das folgende Beispiel zeigt einen Aggregat-Bericht mit verschiedenen Analysewerten für einen bestimmten Benutzer.
+Das folgende Beispiel zeigt einen Aggregatbericht mit verschiedenen Analytics-Werten für einen bestimmten Benutzer.
 
 ```sql
 SELECT 
@@ -185,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## Nächste Schritte
 
-Weitere Informationen zu Beispielfunktionen mithilfe von Adobe Defined Functions (ADFs) finden Sie im Handbuch Adobe Defined Functions (Adobe Defined Functions-Handbuch). Allgemeine Hinweise zur Ausführung von Abfragen finden Sie im [Handbuch zur Ausführung von Abfragen im Abfrage Service](./writing-queries.md).
+Weitere Informationen zu Beispielabfragen mit Adobe Defined Functions (ADFs) finden Sie im Handbuch für Adobe Defined Functions. Allgemeine Hinweise zur Ausführung von Abfragen finden Sie im [Handbuch zum Ausführen von Abfragen in Query Service](./writing-queries.md).
 
