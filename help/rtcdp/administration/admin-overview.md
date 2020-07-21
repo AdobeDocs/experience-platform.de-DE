@@ -4,27 +4,27 @@ seo-title: Übersicht über die Administration der Echtzeit-Kundendatenplattform
 description: Beschreibung
 seo-description: SEO-Beschreibung
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 100%
+source-wordcount: '259'
+ht-degree: 57%
 
 ---
 
 
 # Übersicht über die Administration der Echtzeit-Kundendatenplattform
 
-Das vorliegende Dokument bietet Ihnen einen Überblick über die Verwaltungsfunktionen der Echtzeit-Kundendatenplattform, die auf Adobe Experience Platform basiert.
+This document provides an overview of the administration capabilities of [!DNL Real-time Customer Data Platform], powered by Adobe Experience Platform.
 
-Mit Experience Platform können Administratoren rollenbasierte Zugangssteuerung für Anwender sowie virtuelle Sandboxes für die Anwendungsentwicklung verwalten.
+[!DNL Experience Platform]Mit können Administratoren rollenbasierte Zugangssteuerung für Anwender sowie virtuelle Sandboxes für die Anwendungsentwicklung verwalten.
 
-Die folgenden Abschnitte enthalten eine Einführung in die zentralen Komponenten der Experience Platform-Verwaltungsfunktionen sowie Links zur Experience Platform-Dokumentation, in der Sie genauere Informationen finden.
+The following sections provide introductions to the central components of [!DNL Experience Platform] administration capabilities, and includes links to [!DNL Experience Platform] documentation where more detailed information is provided.
 
-## Zugangssteuerung
+## Zugriffskontrolle
 
-Die Zugangssteuerung wird über [Adobe Admin Console](http://adminconsole.adobe.com) verwaltet. Diese Funktion nutzt Produktprofile in Admin Console, damit Sie Anwender mit Berechtigungen und Sandboxes verknüpfen können. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf einzelne Funktionen der Echtzeit-Kundendatenplattform gewähren oder vorenthalten.
+Die Zugangssteuerung wird über [Adobe Admin Console](http://adminconsole.adobe.com) verwaltet. This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf einzelne Funktionen der Echtzeit-Kundendatenplattform gewähren oder vorenthalten.
 
-Weitere Informationen zur Zugangssteuerung finden Sie unter [Zugangssteuerung – Übersicht](../../access-control/home.md) in der Experience Platform-Dokumentation.
+To learn more about access control, see the [access control overview](../../access-control/home.md) in the [!DNL Experience Platform] documentation.
 
 >[!IMPORTANT]
 >Befolgen Sie die im [Benutzerhandbuch für die Zugangssteuerung](../../access-control/ui/overview.md) angegebenen Schritte, um eine ausführliche Anleitung zur Gewährung des Zugriffs auf Funktionen der Echtzeit-Kundendatenplattform zu erhalten. Achten Sie dabei insbesondere auf die Anleitungen zum Verwalten von Details und zusätzlichen Diensten für ein Produktprofil.
@@ -33,6 +33,6 @@ Weitere Informationen zur Zugangssteuerung finden Sie unter [Zugangssteuerung �
 
 Adobe Experience Platform (und somit auch die Echtzeit-Kundendatenplattform) wurde entwickelt, um Programme für digitale Erlebnisse global zu erweitern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
 
-Um diese Anforderungen zu erfüllen, stellt Adobe Experience Platform „Sandboxes“ bereit, mit denen Sie eine Plattforminstanz in separate virtuelle Umgebungen unterteilen können, die zur Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse verwendet werden können.
+To address this need, Adobe Experience Platform provides &quot;sandboxes&quot;, enabling you to partition a single [!DNL Platform] instance into separate virtual environments that can be used to develop and evolve digital experience applications.
 
-Weiterführende Informationen zu Sandboxes finden Sie unter [Sandboxes – Übersicht](../../sandboxes/home.md) in der Experience Platform-Dokumentation.
+For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md) in the [!DNL Experience Platform] documentation.
