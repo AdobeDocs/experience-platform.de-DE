@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Objektfunktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 5%
+source-wordcount: '111'
+ht-degree: 91%
 
 ---
 
 
 # Objektfunktionen
 
-Profil Abfrage Language (PQL)-Angebote erleichtern die Interaktion mit Objekten. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+[!DNL Profile Query Language] (PQL) Angebot-Funktionen, um die Interaktion mit Objekten zu vereinfachen. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
 
-## Ist null
+## Is null
 
-Die `isNull` Funktion bestimmt, ob eine Objektreferenz nicht vorhanden ist.
+Die `isNull`-Funktion ermittelt, ob eine Objektreferenz nicht vorhanden ist.
 
 **Format**
 
@@ -34,9 +34,9 @@ Die folgende PQL-Abfrage prüft, ob die Privatadresse der Person nicht vorhanden
 person.homeAddress.isNull()
 ```
 
-## Ist nicht null
+## Is not null
 
-Die `isNotNull` Funktion bestimmt, ob eine Objektreferenz vorhanden ist.
+Die `isNotNull`-Funktion ermittelt, ob eine Objektreferenz nicht vorhanden ist.
 
 **Format**
 
@@ -54,4 +54,4 @@ person.homeAddress.isNotNull()
 
 ## Nächste Schritte
 
-Jetzt, da Sie von Objektfunktionen erfahren haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Nachdem Sie die Objektfunktionen kennengelernt haben, können Sie sie nun in Ihren PQL-Abfragen nutzen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zur Profil Query Language](./overview.md).
