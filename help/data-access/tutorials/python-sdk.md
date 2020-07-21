@@ -4,32 +4,32 @@ solution: Experience Platform
 title: Secure Python Data Access SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
 
 
-# Secure Python [!DNL Data Access] SDK
+# Sicheres [!DNL Python][!DNL Data Access] SDK
 
-Das Secure Python [!DNL Data Access] SDK ist ein Softwareentwicklungs-Kit, das das Lesen und Schreiben von Datensätzen aus der Adobe Experience Platform ermöglicht.
+Das Secure [!DNL Python][!DNL Data Access] SDK ist ein Softwareentwicklungs-Kit, das das Lesen und Schreiben von Datensätzen aus der Adobe Experience Platform ermöglicht.
 
 ## Erste Schritte
 
-Sie müssen das [Authentifizierungs](../../tutorials/authentication.md) -Tutorial abgeschlossen haben, um Zugriff auf die Werte zu haben, mit denen Sie das Secure Python [!DNL Data Access] -SDK aufrufen können:
+Sie müssen das [Authentifizierungs](../../tutorials/authentication.md) -Tutorial abgeschlossen haben, um Zugriff auf die Werte zu haben, mit denen das sichere [!DNL Python] [!DNL Data Access] SDK aufgerufen werden kann:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sandboxen isoliert. Für die Verwendung des [!DNL Python] SDK sind der Name und die ID der Sandbox erforderlich, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Für die Verwendung des [!DNL Python] SDK sind der Name und die ID der Sandbox erforderlich, in der der Vorgang ausgeführt wird:
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
 
-Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 ## Umgebung einrichten
 
@@ -63,7 +63,7 @@ Alle Pakete werden `./dist` nach dem Erstellen ausgegeben.
 python3 setup.py bdist_wheel --universal
 ```
 
-Laden Sie das Rad aus dem Projektverzeichnis in Ihre Python 3 Umgebung.
+Laden Sie das Rad aus dem Projektverzeichnis in Ihre [!DNL Python] 3 Umgebung.
 
 ```python
 pip3 install ./dist/<name_of_wheel_file>.whl
@@ -148,7 +148,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY-Klausel
 
-Die ORDER BY-Klausel ermöglicht es, die empfangenen Ergebnisse in einer bestimmten Reihenfolge (aufsteigend oder absteigend) nach einer bestimmten Spalte zu sortieren. Im Python SDK erfolgt dies mithilfe der `sort()` Funktion.
+Die ORDER BY-Klausel ermöglicht es, die empfangenen Ergebnisse in einer bestimmten Reihenfolge (aufsteigend oder absteigend) nach einer bestimmten Spalte zu sortieren. Im [!DNL Python] SDK erfolgt dies mithilfe der `sort()` Funktion.
 
 Ein Beispiel für die Verwendung der `sort()` Funktion ist unten aufgeführt:
 
