@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Zeichenfolgen-Funktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 8%
+source-wordcount: '757'
+ht-degree: 13%
 
 ---
 
 
 # Zeichenfolgen-Funktionen
 
-Profil Abfrage Language (PQL)-Angebote erleichtern die Interaktion mit Zeichenfolgen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+[!DNL Profile Query Language] (PQL) Angebot Funktionen, um die Interaktion mit Zeichenfolgen zu vereinfachen. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
 
 ## like
 
@@ -267,5 +267,5 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Nächste Schritte
 
-Nachdem Sie nun von Zeichenfolgen-Funktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Nachdem Sie nun von Zeichenfolgen-Funktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
 
