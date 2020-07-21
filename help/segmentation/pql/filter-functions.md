@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Filterfunktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 4%
+source-wordcount: '191'
+ht-degree: 94%
 
 ---
 
 
 # Filterfunktionen
 
-Filterfunktionen werden zum Filtern von Daten in Arrays in Profil Abfrage Language (PQL) verwendet. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
 
 ## Filter
 
-Mit der Funktion `[]` (filter) können Filter auf ein Array angewendet und eine Untergruppe des Arrays zurückgegeben werden, die der angegebenen Bedingung entspricht.
+Mit der Funktion `[]` (filter) können Filter auf ein Array angewendet und eine Teilmenge des Arrays zurückgegeben werden, die der angegebenen Bedingung entspricht.
 
 **Format**
 
@@ -28,7 +28,7 @@ Mit der Funktion `[]` (filter) können Filter auf ein Array angewendet und eine 
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ruft alle Ereignis ab, bei denen mindestens ein Produktelement mit einer SKU gleich &quot;PS&quot;vorhanden ist.
+Die folgende PQL-Abfrage ruft alle Ereignisse ab, bei denen mindestens ein Produktartikel mit der SKU „PS“ vorhanden ist.
 
 ```sql
 xEvent[productListItems[SKU="PS"]]
@@ -36,7 +36,7 @@ xEvent[productListItems[SKU="PS"]]
 
 ## Up-Operator
 
-Mit dem Operator `^` (up) können Sie auf Eigenschaften in oberen Ebenen von Filtern verweisen.
+Mit dem Operator `^` (up) können Sie auf Eigenschaften in höheren Ebenen von Filtern verweisen.
 
 **Format**
 
@@ -48,12 +48,12 @@ Mit dem Operator `^` (up) können Sie auf Eigenschaften in oberen Ebenen von Fil
 | -------- | ----------- |
 | `{ARRAY}` | Das Array, das gefiltert wird. |
 | `{FILTER_1}` | Die äußere Filterebene. |
-| `{FILTER_2}` | Die innere Filterebene |
-| `^{PROPERTY}` | Die Eigenschaft, auf der ebenfalls gefiltert wird. Aufgrund des `^`Problems prüft es eine Eigenschaft, die auf filter1 basiert. |
+| `{FILTER_2}` | Die innere Filterebene. |
+| `^{PROPERTY}` | Die Eigenschaft, anhand der ebenfalls gefiltert wird. Aufgrund von `^` wird eine Eigenschaft geprüft, die auf „filter1“ basiert. |
 
 **Beispiel**
 
-Die folgende PQL-Abfrage erhält alle Ereignis, die mindestens einen Produktartikel mit einer SKU gleich &quot;PS&quot; **oder** eine Person mit weiblichem Geschlecht haben.
+Folgende PQL-Abfrage ruft alle Ereignisse ab, bei denen mindestens ein Produktartikel mit der SKU „PS“ **oder** eine Person vorhanden ist, deren Geschlecht weiblich ist.
 
 ```sql
 xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
@@ -61,4 +61,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## Nächste Schritte
 
-Jetzt, da Sie von Filterfunktionen erfahren haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Nachdem Sie sich mit Filterfunktionen vertraut gemacht haben, können Sie sie nun in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
