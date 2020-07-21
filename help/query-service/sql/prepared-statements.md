@@ -1,32 +1,32 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Vorgefertigte Anweisungen
+title: Vorbereitete Anweisungen
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 8%
+source-wordcount: '340'
+ht-degree: 96%
 
 ---
 
 
-# Vorgefertigte Anweisungen
+# Vorbereitete Anweisungen
 
-In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen vorzubereiten. Der Adobe Experience Platform Abfrage Service unterstützt vorbereitete Anweisungen mithilfe einer parametrisierten Abfrage. Dies kann zur Leistungsoptimierung verwendet werden, da Sie eine Abfrage nicht mehr immer wieder neu analysieren müssen.
+In SQL dienen vorbereitete Anweisungen dazu, ähnliche Abfragen oder Aktualisierungen als Vorlagen zu erstellen. Adobe Experience Platform [!DNL Query Service] supports prepared statements by using a parameterized query. Dies kann zur Leistungsoptimierung beitragen, da Sie Abfragen nicht mehr immer wieder neu analysieren müssen.
 
-## Zubereitete Anweisungen verwenden
+## Verwenden von vorbereiteten Anweisungen
 
-Bei der Verwendung vorbereiteter Anweisungen werden die folgenden Syntaxen unterstützt:
+Bei Verwendung vorbereiteter Anweisungen werden die folgenden Syntaxen unterstützt:
 
-- [VORBEREITUNG](#prepare)
+- [PREPARE](#prepare)
 - [EXECUTE](#execute)
 - [DEALLOCATE](#deallocate)
 
-### Vorbereitung einer vorbereiteten Erklärung {#prepare}
+### Eine vorbereitete Anweisung vorbereiten {#prepare}
 
-Diese SQL-Abfrage speichert die geschriebene SELECT-Abfrage mit dem angegebenen Namen `PLAN_NAME`. Sie können Variablen verwenden, z. B. `$1` anstelle von tatsächlichen Werten. Diese vorbereitete Erklärung wird während der aktuellen Sitzung gespeichert. Beachten Sie, dass bei den Plannamen **nicht** zwischen Groß- und Kleinschreibung unterschieden wird.
+Diese SQL-Abfrage speichert die geschriebene SELECT-Abfrage mit dem Namen `PLAN_NAME`. Sie können Variablen, z. B. `$1`, anstelle von tatsächlichen Werten nutzen. Diese vorbereitete Erklärung wird während der aktuellen Sitzung gespeichert. Beachten Sie, dass bei den Plannamen **nicht** zwischen Groß- und Kleinschreibung unterschieden wird.
 
 #### SQL-Format
 
@@ -40,7 +40,7 @@ PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 ```
 
-### Eine vorbereitete Anweisung ausführen {#execute}
+### Vorbereitete Anweisung ausführen {#execute}
 
 Diese SQL-Abfrage verwendet die vorbereitete Anweisung, die zuvor erstellt wurde.
 
@@ -56,9 +56,9 @@ EXECUTE {PLAN_NAME}('{PARAMETERS}')
 EXECUTE test('canada', 'vancouver');
 ```
 
-### Zubereitete Anweisung aufheben {#deallocate}
+### Zuweisung einer vorbereiteten Anweisung aufheben {#deallocate}
 
-Diese SQL-Abfrage wird zum Löschen der benannten vorbereiteten Anweisung verwendet.
+Diese SQL-Abfrage dient zum Löschen der benannten vorbereiteten Anweisung.
 
 #### SQL-Format
 
@@ -82,14 +82,14 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 Die obige SQL-Abfrage gibt folgende Antwort zurück:
 
-| id | firstname | lastname | Geburtstag | email | city | country |
+| id | firstname | lastname | birthdate | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | Alexander | davis | 1993-09-15 | example@example.com | Vancouver | Kanada |
-| 10001 | Antoine | dubois | 1967-03-14 | example2@example.com | Paris | Frankreich |
-| 10002 | kyoko | Sakura | 1999-11-26 | example3@example.com | Tokio | Japan |
-| 10003 | Linus | Pettersson | 1982-06-03 | example4@example.com | Stockholm | Schweden |
-| 10004 | aasir | Waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | Farando | Rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Kanada |
+| 10001 | antoine | dubois | 1967-03-14 | example2@example.com | Paris | Frankreich |
+| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japan |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Schweden |
+| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
 Diese SQL-Abfrage kann mithilfe der folgenden vorbereiteten Anweisung parametrisiert werden:
 
@@ -103,18 +103,18 @@ Nun kann die vorbereitete Anweisung mithilfe des folgenden Aufrufs ausgeführt w
 EXECUTE getIdRange(10000, 10005);
 ```
 
-Wenn dies aufgerufen wird, sehen Sie genau die gleichen Ergebnisse wie zuvor:
+Bei diesem Aufruf sehen Sie genau die gleichen Ergebnisse wie zuvor:
 
-| id | firstname | lastname | Geburtstag | email | city | country |
+| id | firstname | lastname | birthdate | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | Alexander | davis | 1993-09-15 | example@example.com | Vancouver | Kanada |
-| 10001 | Antoine | dubois | 1967-03-14 | example2@example.com | Paris | Frankreich |
-| 10002 | kyoko | Sakura | 1999-11-26 | example3@example.com | Tokio | Japan |
-| 10003 | Linus | Pettersson | 1982-06-03 | example4@example.com | Stockholm | Schweden |
-| 10004 | aasir | Waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | Farando | Rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Kanada |
+| 10001 | antoine | dubois | 1967-03-14 | example2@example.com | Paris | Frankreich |
+| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japan |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Schweden |
+| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
 
-Nachdem Sie die vorbereitete Anweisung verwendet haben, können Sie die Zuweisung mithilfe des folgenden Aufrufs aufheben:
+Nachdem Sie die vorbereitete Anweisung fertig verwendet haben, können Sie die Zuweisung mithilfe des folgenden Aufrufs aufheben:
 
 ```sql
 DEALLOCATE getIdRange;
