@@ -4,15 +4,15 @@ seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 97%
+source-wordcount: '634'
+ht-degree: 94%
 
 ---
 
 
-# Übersicht über Metriken der Echtzeit-Kundendatenplattform
+# [!DNL Real-time Customer Data Platform] Metriken - Übersicht
 
 Die Startseite der Echtzeit-Kundendatenplattform von Adobe, die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
 
@@ -43,13 +43,13 @@ Zusätzliche Metriken (z. B. für Profile und Segmente) stehen in anderen Teile
 
 ### Datensätze
 
-Der Zähler für **[!UICONTROL Datensätze]** gibt die Zahl der Datensätze im System und die Menge der Daten in Platform an. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
+The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
-Weitere Informationen zu Datensätzen finden Sie in der Übersicht über [Datensätze](../catalog/datasets/overview.md).
+Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübersicht](../catalog/datasets/overview.md).
 
 ### Profile
 
-Der Zähler für **[!UICONTROL Profile]** zeigt die Gesamtzahl der Personen mit Profilen in Echtzeit-Kundenprofil an. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
+The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-time Customer Profile]. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
 
 Der Zähler nutzt die standardmäßige [Zusammenführungsrichtlinie](profile/merge-policies.md), die in der Konfiguration der Zusammenführungsrichtlinien im einheitlichen Profil festgelegt ist.
 
@@ -109,7 +109,7 @@ Auf der Karte **[!UICONTROL Letzte Datensätze]** werden die fünf letzten Daten
 
 Klicken Sie auf einen Datensatz, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um die Liste der Datensätze anzuzeigen. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
 
-Weitere Informationen zu Datensätzen finden Sie in der Übersicht über [Datensätze](../catalog/datasets/overview.md).
+Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübersicht](../catalog/datasets/overview.md).
 
 ### Letzte Quellen
 
