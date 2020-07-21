@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Entwicklerleitfaden für Datenzugriff
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 5%
+source-wordcount: '485'
+ht-degree: 10%
 
 ---
 
@@ -28,8 +28,8 @@ Eine Beschreibung einiger häufig verwendeter Begriffe in diesem Dokument.
 
 | Begriff | Beschreibung |
 | ----- | ------------ |
-| Datenbestand | Eine Datenerfassung, die Schema und Felder enthält. |
-| Stapel | Eine Gruppe von Daten, die über einen bestimmten Zeitraum gesammelt und als eine Einheit verarbeitet werden. |
+| Datensatz | Eine Datenerfassung, die Schema und Felder enthält. |
+| Batch | Eine Gruppe von Daten, die über einen bestimmten Zeitraum gesammelt und als eine Einheit verarbeitet werden. |
 
 ## Abrufen der Liste von Dateien in einem Stapel
 
@@ -203,7 +203,7 @@ Wenn ein Ordner zurückgegeben wird, enthält er ein Array aller Dateien im Ordn
 
 ## Zugriff auf den Inhalt einer Datei
 
-Die [!DNL Data Access] API kann auch verwendet werden, um auf den Inhalt einer Datei zuzugreifen. Auf diese Weise können Sie den Inhalt in eine externe Quelle herunterladen.
+The [!DNL Data Access] API can also be used to access the contents of a file. Auf diese Weise können Sie den Inhalt in eine externe Quelle herunterladen.
 
 **API-Format**
 
@@ -240,6 +240,6 @@ Contents of the file
 
 Weitere Beispiele finden Sie im [Lernprogramm](tutorials/dataset-data.md)zum Datenzugriff.
 
-## Ereignisse zur Datenerfassung abonnieren
+## Abonnieren von Datenaufnahme-Ereignissen
 
-Platform stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
+[!DNL Platform] stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
