@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Verbindung mit PSQL
+title: Anbinden an PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 1%
+source-wordcount: '170'
+ht-degree: 71%
 
 ---
 
 
-# Verbindung mit PSQL
+# Anbinden an PSQL
 
-PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation von Postgres auf Ihrem Computer verwendet wird. Sie können es installieren, indem Sie diese Anweisungen befolgen.
+PSQL is a command-line interface that comes when you install [!DNL Postgres] on your machine. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen.
 
 ## Installieren von Postgres auf einem Mac
 
-Öffnen Sie ein Terminalfenster und geben Sie die folgenden drei Befehle aus:
+Öffnen Sie ein Terminal-Fenster und geben Sie die folgenden drei Befehle ein:
 
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -32,21 +32,21 @@ brew install postgres
 which psql
 ```
 
-Nachdem Sie diese Befehle ausgegeben haben, sollten Sie Folgendes sehen:
+Diese Befehle sollten folgende Ausgabe liefern:
 
 ```shell
 /usr/local/bin/psql
 ```
 
-## Installieren von Postgres auf einem PC
+## Install [!DNL Postgres] on a PC
 
-Laden Sie Postgres von diesem [Speicherort](https://www.postgresql.org/download/windows/)herunter und installieren Sie es.
+Download and install [!DNL Postgres] from this [location](https://www.postgresql.org/download/windows/).
 
 Bearbeiten Sie die Pfadvariable:
 
 ![Bild](../images/clients/psql/path.png)
 
-Hinzufügen die beiden angezeigten Zeilen, die &quot;Postgres&quot;enthalten.
+Add the two lines shown that include &quot;[!DNL Postgres].&quot;
 
 Speichern Sie Ihre Updates, öffnen Sie eine Eingabeaufforderung und geben Sie Folgendes ein:
 
@@ -54,25 +54,25 @@ Speichern Sie Ihre Updates, öffnen Sie eine Eingabeaufforderung und geben Sie F
 psql -V
 ```
 
-Sie sollten so etwas sehen:
+Die Ausgabe sollte in etwa wie folgt lauten:
 
 ```shell
 psql (PostgreSQL) 9.5.14
 ```
 
-## Connect SQL und Abfrage-Dienst
+## PSQL verbinden und [!DNL Query Service]
 
-Kehren Sie auf der Seite &quot;Connect BI Tools&quot;zur Plattform-Benutzeroberfläche zurück.
+Return to the [!DNL Platform] UI on the *[!UICONTROL Connect BI Tools]* page.
 
-Klicken Sie auf **Kopieren** für &quot;PSQL-Befehl&quot;.
+Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
 
 ![Bild](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]: Wenn Sie sich auf einem PC befinden, verwenden Sie einen Texteditor, um die Zeilenumbrüche in der Befehlszeichenfolge zu entfernen, und kopieren Sie dann die Zeichenfolge.
+>[!IMPORTANT]: Verwenden Sie auf einem PC einen Texteditor, um in der Zeichenfolge des Befehls die Zeilenumbrüche zu entfernen, und kopieren Sie dann die Zeichenfolge.
 
-Fügen Sie die Befehlszeichenfolge in ein Terminal- oder Befehlsfenster ein und drücken Sie die Eingabetaste.
+Fügen Sie die Befehlszeichenfolge in das Fenster eines Terminals bzw. einer Eingabeaufforderung ein und drücken Sie die Eingabetaste.
 
-Das Ergebnis sollte wie folgt aussehen:
+Die Ausgabe sollte in folgt lauten:
 
 ```shell
 psql (10.5, server 0.1.0)
@@ -81,4 +81,4 @@ Type "help" for help.
 all=>
 ```
 
-Wenn Sie nicht mindestens Version 10.5 sehen, müssen Sie diese Version oder neuer herunterladen.
+Wird für die Versionsnummer nicht mindestens 10.5 angegeben, müssen Sie Version 10.5 oder höher herunterladen.
