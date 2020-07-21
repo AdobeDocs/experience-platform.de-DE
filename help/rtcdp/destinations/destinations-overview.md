@@ -4,19 +4,19 @@ seo-title: Ziele – Übersicht
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: a61a2a4d9d51c402bb50153c06a93d255a3613cb
+source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 61%
+source-wordcount: '526'
+ht-degree: 59%
 
 ---
 
 
-# Ziele – Übersicht {#overview}
+# [!DNL Destinations] Übersicht {#overview}
 
 ![Übersichtsbanner Ziele](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**Ziele** sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
+**[!DNL Destinations]** sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
 
 ## Ziele und Quellen {#destinations-and-sources}
 
@@ -38,7 +38,7 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](/help/rtcdp/destinations
 * auswählen, welche Segmente für Ziele aktiviert werden sollen;
 * auswählen, welche [Experience Data Model (XDM)-Felder](../../xdm/home.md) exportiert werden sollen, wenn Segmente für E-Mail-Marketing-Ziele aktiviert werden.
 
-## Destination types and categories {#types-and-categories}
+## Zieltypen und Kategorien {#types-and-categories}
 
 Detaillierte Informationen finden Sie unter [Zieltypen und Kategorien - Übersicht](/help/rtcdp/destinations/destination-types.md).
 
@@ -48,14 +48,14 @@ Die Funktion &quot;Ziele&quot;in Echtzeit-CDP funktioniert mit Berechtigungen f�
 
 Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](../../access-control/ui/overview.md).
 
-## Einschränkungen der Datenverwaltung beim Aktivieren von Daten in Ziele {#data-governance}
+## [!DNL Data Governance] Einschränkungen bei der Datenaktivierung zu Zielen {#data-governance}
 
 Die Datenverwaltung wird für CDP-Ziele in Echtzeit durchgesetzt durch:
 
 * *Anwendungsfälle* für Marketing, die Sie im Arbeitsablauf zum Erstellen von Zielen auswählen können;
 * *Datenverwendungsrichtlinien* , die die Aktivierung von Daten mit bestimmten Verwendungsbeschriftungen auf Ziele mit bestimmten Anwendungsfällen beschränken.
 
-Weitere Informationen zu Anwendungsfällen [im](/help/rtcdp/privacy/data-governance-overview.md#destinations) Marketing und zur [Behebung von Verstößen](/help/rtcdp/privacy/data-governance-overview.md#enforcement)gegen die Datenrichtlinie finden Sie in der Dokumentation zur Datenverwaltung in Echtzeit.
+Weitere Informationen zu Anwendungsfällen [!DNL Data Governance] im [Marketing und zur](/help/rtcdp/privacy/data-governance-overview.md#destinations) Behebung von Verstößen [](/help/rtcdp/privacy/data-governance-overview.md#enforcement)gegen die Datenrichtlinie finden Sie in der CDP-Dokumentation in Echtzeit.
 
 Weitere Informationen zur Auswahl von Anwendungsfällen für Marketingzwecke im Arbeitsablauf zum Erstellen des Ziels finden Sie auf den folgenden Seiten für die verschiedenen Zieltypen in CDP in Echtzeit:
 
@@ -63,7 +63,7 @@ Weitere Informationen zur Auswahl von Anwendungsfällen für Marketingzwecke im 
 * [Werbeziele - Google-Anzeigen](/help/rtcdp/destinations/google-ads-destination.md)
 * [Werbeziele - Google Display &amp; Video 360 ](/help/rtcdp/destinations/google-dv360-destination.md)
 * [ Cloud-Speicher-Ziele](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
-* [E-Mail-Marketing-](/help/rtcdp/destinations/email-marketing-destinations.md)
-* [Social-Netzwerkziele](/help/rtcdp/destinations/social-network-destinations-workflow.md)
+* [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md)
+* [Ziele in sozialen Netzwerken](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
 Weitere Informationen zu Verstößen gegen die Datenrichtlinie im Arbeitsablauf für die SegmentAktivierung finden Sie in Schritt 7 unter Profil und  an ein Ziel [aktivieren](/help/rtcdp/destinations/activate-destinations.md).
