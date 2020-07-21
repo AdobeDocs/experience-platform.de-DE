@@ -4,67 +4,67 @@ solution: Experience Platform
 title: Übersicht über den Datenzugriff
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 2%
+source-wordcount: '1332'
+ht-degree: 14%
 
 ---
 
 
-# Abfrage von Datensatzdaten mit der Datenzugriffs-API
+# Abfrage von Datensatzdaten mit [!DNL Data Access] API
 
-Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Zugreifen und Herunterladen von Daten, die in einem Datensatz mit der Datenzugriff-API in der Adobe Experience Platform gespeichert sind. Außerdem werden Sie mit einigen der einzigartigen Funktionen der Datenzugriff-API, wie z. B. Paging und teilweise Downloads, vorgestellt.
+Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Zugreifen und Herunterladen von Daten, die in einem Datensatz mit der [!DNL Data Access] API in der Adobe Experience Platform gespeichert sind. Außerdem werden Sie mit einigen der einzigartigen Funktionen der [!DNL Data Access] API, wie z. B. dem Paging und Teildownloads, vorgestellt.
 
 ## Erste Schritte
 
 In diesem Lernprogramm erfahren Sie, wie Sie einen Datensatz erstellen und ausfüllen. Weitere Informationen finden Sie im Tutorial [zur Erstellung von](../../catalog/datasets/create.md) Datensätzen.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platformen-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platform-APIs erfolgreich aufrufen zu können.
 
-### Lesen von Beispiel-API-Aufrufen
+### Lesehilfe für Beispiel-API-Aufrufe
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt [zum Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung bei Experience Platformen.
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Werte der zu verwendenden Kopfzeilen
 
-Um Platformen-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Genehmigung: Träger `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in der Experience Platform werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an Platform-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in der Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
+Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
 
 - Content-Type: application/json
 
 ## Sequenzdiagramm
 
-Dieses Tutorial folgt den Schritten, die im folgenden Sequenzdiagramm beschrieben werden, und hebt die Kernfunktionalität der Datenzugriff-API hervor.</br>
+Dieses Tutorial folgt den Schritten, die im folgenden Sequenzdiagramm beschrieben werden, und hebt die Kernfunktionalität der [!DNL Data Access] API hervor.</br>
 ![](../images/sequence_diagram.png)
 
-Mit der Katalog-API können Sie Informationen zu Stapeln und Dateien abrufen. Mit der Datenzugriff-API können Sie je nach Dateigröße entweder als vollständige oder teilweise Downloads über HTTP auf diese Dateien zugreifen und sie herunterladen.
+Mit der [!DNL Catalog] API können Sie Informationen zu Stapeln und Dateien abrufen. Mit der [!DNL Data Access] API können Sie je nach Dateigröße entweder als vollständige oder teilweise Downloads über HTTP auf diese Dateien zugreifen und sie herunterladen.
 
 ## Daten suchen
 
-Bevor Sie mit der Verwendung der Datenzugriffs-API beginnen können, müssen Sie den Speicherort der Daten identifizieren, auf die Sie zugreifen möchten. In der Katalog-API stehen zwei Endpunkte zur Verfügung, mit denen Sie die Metadaten eines Unternehmens durchsuchen und die ID eines Stapels oder einer Datei abrufen können, auf den bzw. die Sie zugreifen möchten:
+Bevor Sie mit der Verwendung der [!DNL Data Access] API beginnen können, müssen Sie den Speicherort der Daten identifizieren, auf die Sie zugreifen möchten. In der [!DNL Catalog] API gibt es zwei Endpunkte, mit denen Sie die Metadaten eines Unternehmens durchsuchen und die ID eines Stapels oder einer Datei abrufen können, auf den Sie zugreifen möchten:
 
 - `GET /batches`: Gibt eine Liste von Stapeln unter Ihrer Organisation zurück
 - `GET /dataSetFiles`: Gibt eine Liste von Dateien in Ihrem Unternehmen zurück
 
-Eine umfassende Liste der Endpunkte in der Katalog-API finden Sie in der [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Eine umfassende Liste der Endpunkte in der [!DNL Catalog] API finden Sie in der [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 ## Abrufen einer Liste von Stapeln unter Ihrer IMS-Organisation
 
-Mithilfe der Katalog-API können Sie eine Liste von Stapeln aus Ihrem Unternehmen zurückgeben:
+Mithilfe der [!DNL Catalog] API können Sie eine Liste von Stapeln aus Ihrem Unternehmen zurückgeben:
 
 **API-Format**
 
@@ -195,7 +195,7 @@ Eine vollständige Liste von Parametern und Filtern finden Sie in der [Katalog-A
 
 ## Abrufen einer Liste aller Dateien eines bestimmten Stapels
 
-Nachdem Sie nun die ID des Stapels haben, auf den Sie zugreifen möchten, können Sie die Datenzugriff-API verwenden, um eine Liste von Dateien zu diesem Stapel abzurufen.
+Nachdem Sie nun die ID des Stapels haben, auf den Sie zugreifen möchten, können Sie die [!DNL Data Access] API verwenden, um eine Liste von Dateien zu diesem Stapel zu erhalten.
 
 **API-Format**
 
@@ -252,7 +252,7 @@ Die Antwort enthält ein Datenarray, das alle Dateien im angegebenen Stapel List
 
 ## Zugriff auf eine Datei mit einer Datei-ID
 
-Sobald Sie über eine eindeutige Datei-ID verfügen, können Sie mit der Datenzugriff-API auf die spezifischen Details zur Datei zugreifen, einschließlich Name, Größe in Byte und Link zum Herunterladen.
+Sobald Sie über eine eindeutige Datei-ID verfügen, können Sie mit der [!DNL Data Access] API auf die spezifischen Details zur Datei zugreifen, einschließlich Name, Größe in Byte und Link zum Herunterladen.
 
 **API-Format**
 
@@ -385,7 +385,7 @@ Die Antwortheader enthalten die Metadaten der abgefragten Datei, darunter:
 
 ## Zugriff auf den Inhalt einer Datei
 
-Sie können auch über die Datenzugriff-API auf den Inhalt einer Datei zugreifen.
+Sie können auch über die [!DNL Data Access] API auf den Inhalt einer Datei zugreifen.
 
 **API-Format**
 
@@ -414,7 +414,7 @@ Eine erfolgreiche Antwort gibt den Inhalt der Datei zurück.
 
 ## Herunterladen von partiellen Inhalten einer Datei
 
-Die Datenzugriff-API ermöglicht das Herunterladen von Dateien in Textbausteinen. Eine Bereichsüberschrift kann während einer `GET /files/{FILE_ID}` Anforderung zum Herunterladen eines bestimmten Bytebereichs aus einer Datei angegeben werden. Wenn der Bereich nicht angegeben ist, lädt die API standardmäßig die gesamte Datei herunter.
+Die [!DNL Data Access] API ermöglicht das Herunterladen von Dateien in Textbausteinen. Eine Bereichsüberschrift kann während einer `GET /files/{FILE_ID}` Anforderung zum Herunterladen eines bestimmten Bytebereichs aus einer Datei angegeben werden. Wenn der Bereich nicht angegeben ist, lädt die API standardmäßig die gesamte Datei herunter.
 
 Das HEAD-Beispiel im [vorherigen Abschnitt](#retrieve-the-metadata-of-a-file) gibt die Größe einer bestimmten Datei in Byte an.
 
@@ -454,7 +454,7 @@ Der Antworttext enthält die ersten 100 Byte der Datei (wie im Header &quot;Rang
 
 ## API-Antwortpaginierung konfigurieren
 
-Antworten innerhalb der Datenzugriffs-API werden paginiert. Standardmäßig beträgt die maximale Anzahl von Einträgen pro Seite 100. Mithilfe von Seitenparametern kann das Standardverhalten geändert werden.
+Antworten innerhalb der [!DNL Data Access] API werden paginiert. Standardmäßig beträgt die maximale Anzahl von Einträgen pro Seite 100. Mithilfe von Seitenparametern kann das Standardverhalten geändert werden.
 
 - `limit`: Mit dem Parameter &quot;limit&quot;können Sie die Anzahl der Einträge pro Seite entsprechend Ihren Anforderungen festlegen.
 - `start`: Der Offset kann durch den Parameter &quot;Beginn&quot; Abfrage festgelegt werden.
