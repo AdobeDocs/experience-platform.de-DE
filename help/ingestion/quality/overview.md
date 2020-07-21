@@ -1,58 +1,58 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Qualität der Datenverarbeitung
+title: Qualität der Datenerfassung
 topic: overview
 translation-type: tm+mt
-source-git-commit: 24df962656706d769a7034020d96a545e8f905ca
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 6%
+source-wordcount: '282'
+ht-degree: 86%
 
 ---
 
 
 # Datenqualität in Adobe Experience Platform
 
-Adobe Experience Platform bietet klar definierte Garantien für Vollständigkeit, Genauigkeit und Konsistenz von Daten, die über Batch- oder Streaming-Vorgänge hochgeladen werden. Das folgende Dokument enthält eine Zusammenfassung der unterstützten Prüf- und Prüfverhaltensweisen für die Batch- und Streaming-Erfassung in Experience Platform.
+Adobe Experience Platform bietet klar definierte Garantien für Vollständigkeit, Genauigkeit und Konsistenz von Daten, die über Batch- oder Streaming-Erfassung hochgeladen werden. Das folgende Dokument enthält eine Zusammenfassung der unterstützten Prüf- und Validierungsverfahren für die Batch- und Streaming-Erfassung in Adobe [!DNL Experience Platform].
 
 ## Unterstützte Prüfungen
 
-|   | Batch Ingestion | Streaming-Ingestion |
+|   | Batch-Erfassung | Streaming-Erfassung |
 | ------ | --------------- | ------------------- |
 | Datentypprüfung | Ja | Ja |
-| Enum-Prüfung | Ja | Ja |
+| Aufzählungsprüfung | Ja | Ja |
 | Bereichsprüfung (min, max.) | Ja | Ja |
-| Erforderliche Feldüberprüfung | Ja | Ja |
-| Musterprüfung | Nein | Ja  |
+| Prüfung auf erforderliche Felder | Ja | Ja |
+| Musterprüfung | Nein | Ja |
 | Formatprüfung | Nein | Ja |
 
-## Unterstützte Überprüfungsverhalten
+## Unterstützte Validierungsverfahren
 
-Sowohl die Batch- als auch die Streaming-Erfassung verhindern, dass Daten mit Fehlern nach unten gelangen, indem fehlerhafte Daten zum Abrufen und zur Analyse in Data Lake verschoben werden. Die Datenerfassung bietet die folgenden Überprüfungen für die Batch- und Streaming-Erfassung.
+Both batch and streaming ingestion prevent failed data from going downstream by moving bad data for retrieval and analysis in [!DNL Data Lake]. Die Datenerfassung bietet die folgenden Validierungen für die Batch- und Streaming-Erfassung.
 
-### Stapelverarbeitung
+### Batch-Erfassung
 
-Die folgenden Überprüfungen werden für die Stapelverarbeitung durchgeführt:
+Die folgenden Validierungen werden für die Batch-Erfassung durchgeführt:
 
-| Überprüfungsbereich | Beschreibung |
+| Validierungsbereich | Beschreibung |
 | --------------- | ----------- |
-| Schema | Stellt sicher, dass das Schema **nicht** leer ist und einen Verweis auf das Schema &quot;Vereinigung&quot;enthält, wie folgt: `"meta:immutableTags": ["union"]` |
+| Schema | Stellt sicher, dass das Schema **nicht** leer ist und wie folgt einen Verweis auf das Schema „Vereinigung“ enthält: `"meta:immutableTags": ["union"]` |
 | `identityField` | Stellt sicher, dass alle gültigen Identitätsdeskriptoren definiert sind. |
-| `createdUser` | Stellt sicher, dass der Benutzer, der den Stapel aufgenommen hat, den Stapel aufnehmen darf. |
+| `createdUser` | Stellt sicher, dass der Benutzer, der den Batch erfasst hat, diesen auch erfassen darf. |
 
 ### Streaming-Erfassung
 
-Die folgenden Überprüfungen werden für die Streaming-Erfassung durchgeführt:
+Die folgenden Validierungen werden für die Streaming-Erfassung durchgeführt:
 
-| Überprüfungsbereich | Beschreibung |
+| Validierungsbereich | Beschreibung |
 | --------------- | ----------- |
-| Schema | Stellt sicher, dass das Schema **nicht** leer ist und einen Verweis auf das Schema &quot;Vereinigung&quot;enthält, wie folgt: `"meta:immutableTags": ["union"]` |
+| Schema | Stellt sicher, dass das Schema **nicht** leer ist und wie folgt einen Verweis auf das Schema „Vereinigung“ enthält: `"meta:immutableTags": ["union"]` |
 | `identityField` | Stellt sicher, dass alle gültigen Identitätsdeskriptoren definiert sind. |
 | JSON | Stellt sicher, dass die JSON gültig ist. |
 | IMS-Organisation | Stellt sicher, dass die aufgelistete IMS-Organisation eine gültige Organisation ist. |
-| Quellname | Stellt sicher, dass der Name der Datenquelle angegeben ist. |
-| Datenbestand | Stellt sicher, dass der Datensatz angegeben, aktiviert und nicht entfernt wurde. |
-| Kopfzeile | Stellt sicher, dass die Kopfzeile angegeben wurde und gültig ist. |
+| Name der Quelle | Stellt sicher, dass der Name der Datenquelle angegeben ist. |
+| Datensatz | Stellt sicher, dass der Datensatz angegeben, aktiviert und nicht entfernt wurde. |
+| Kopfzeile | Stellt sicher, dass die Kopfzeile angegeben und gültig ist. |
 
-Weitere Informationen darüber, wie Daten von der Plattform überwacht und validiert werden, finden Sie in der Dokumentation [zu](./monitor-data-flows.md)Überwachungsdatenströmen.
+More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-flows.md).
