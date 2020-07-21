@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Objekt aktualisieren
+title: Aktualisieren eines Objekts
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 3%
+source-wordcount: '313'
+ht-degree: 89%
 
 ---
 
 
-# Objekt aktualisieren
+# Aktualisieren eines Objekts
 
-Sie können einen Teil eines Katalogobjekts aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anforderung einschließen. Dieses Dokument behandelt die beiden Methoden zum Ausführen von PATCH-Vorgängen für Katalogobjekte:
+You can update part of a [!DNL Catalog] object by including its ID in the path of a PATCH request. In diesem Dokument werden die beiden Methoden zum Ausführen von PATCH-Vorgängen für Katalogobjekte behandelt:
 
-* Felder verwenden
-* Verwenden der JSON-Patch-Notation
+* Verwenden von Feldern
+* Verwenden der JSON Patch-Notation
 
 >[!NOTE]
 >
->PATCH-Vorgänge an einem Objekt können seine erweiterbaren Felder, die miteinander verknüpfte Objekte darstellen, nicht ändern.  Änderungen an verknüpften Objekten müssen direkt vorgenommen werden.
+>PATCH-Vorgänge können die erweiterbaren Felder eines Objekts, die miteinander verknüpfte Objekte darstellen, nicht ändern.  Änderungen an verknüpften Objekten müssen direkt vorgenommen werden.
 
-## Aktualisieren mit Feldern
+## Aktualisieren mithilfe von Feldern
 
 Der folgende Beispielaufruf zeigt, wie ein Objekt mithilfe von Feldern und Werten aktualisiert wird.
 
@@ -35,12 +35,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu aktualisierenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Der Bezeichner des spezifischen Objekts, das Sie aktualisieren möchten. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung aktualisiert die `name` und die `description` Felder eines Datensatzes auf die in der Nutzlast bereitgestellten Werte. Objektfelder, die nicht aktualisiert werden sollen, können aus der Nutzlast ausgeschlossen werden.
+Die folgende Anfrage aktualisiert die `name`- und `description`-Felder eines Datensatzes auf die in der Payload bereitgestellten Werte. Objektfelder, die nicht aktualisiert werden sollen, können von der Payload ausgeschlossen werden.
 
 ```shell
 curl -X PATCH \
@@ -58,7 +58,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten Datensatzes enthält. Diese ID sollte mit der in der PATCH-Anforderung gesendeten ID übereinstimmen. Die Ausführung einer GET-Anforderung für diesen Datensatz zeigt jetzt, dass nur die Werte `name` und aktualisiert wurden, während alle anderen Werte unverändert bleiben, `description` während die Werte aktualisiert wurden.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten Datensatzes enthält. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die Ausführung einer GET-Anfrage für diesen Datensatz zeigt jetzt, dass nur `name` und `description` aktualisiert wurden, während alle anderen Werte unverändert bleiben.
 
 ```json
 [
@@ -66,9 +66,9 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten 
 ]
 ```
 
-## Aktualisieren mit JSON-Patch-Notation
+## Aktualisieren mithilfe der JSON Patch-Notation
 
-Der folgende Beispielaufruf zeigt, wie ein Objekt mit dem JSON-Patch aktualisiert wird, wie in [RFC-6902](https://tools.ietf.org/html/rfc6902)beschrieben.
+Der folgende Beispielaufruf zeigt, wie ein Objekt, wie in [RFC-6902](https://tools.ietf.org/html/rfc6902) beschrieben, mit JSON Patch aktualisiert wird.
 
 <!-- (Include once API fundamentals guide is published) 
 
@@ -84,12 +84,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu aktualisierenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Der Bezeichner des spezifischen Objekts, das Sie aktualisieren möchten. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung werden die Werte `name` und `description` Felder eines Datensatzes auf die Werte der JSON Patch-Objekte aktualisiert. Bei Verwendung von JSON Patch müssen Sie auch die Content-Type-Kopfzeile auf `application/json-patch+json`.
+Die folgende Anfrage aktualisiert die `name`- und `description`-Felder eines Datensatzes auf die Werte, die in jedem JSON Patch-Objekt angegeben sind. Bei Verwendung von JSON Patch müssen Sie auch die Kopfzeile für den Inhaltstyp auf `application/json-patch+json` setzen.
 
 ```shell
 curl -X PATCH \
@@ -107,7 +107,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten Objekts enthält. Diese ID sollte mit der in der PATCH-Anforderung gesendeten ID übereinstimmen. Die Ausführung einer GET-Anforderung für dieses Objekt zeigt jetzt, dass nur die Werte `name` und aktualisiert wurden, während alle anderen Werte unverändert bleiben. `description`
+Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten Objekts enthält. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die Ausführung einer GET-Anfrage für dieses Objekt zeigt jetzt, dass nur `name` und `description` aktualisiert wurden, während alle anderen Werte unverändert bleiben.
 
 ```json
 [
