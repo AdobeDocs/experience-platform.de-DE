@@ -1,80 +1,80 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen einer Streaming-Verbindung über die Benutzeroberfläche
+title: Streaming-Verbindung über die Benutzeroberfläche erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 181719e729748adcde62199c9406a97b7a807182
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 0%
+source-wordcount: '498'
+ht-degree: 77%
 
 ---
 
 
-# Erstellen einer Streaming-Verbindung über die Benutzeroberfläche
+# Streaming-Verbindung über die Benutzeroberfläche erstellen
 
-Diese Anleitung der Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung mit Adobe Experience Platform.
+Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung für Adobe Experience Platform.
 
 ## Erste Schritte
 
-Um Streaming-Daten an Experience Platform Beginn, müssen Sie zunächst eine Streaming-HTTP-Verbindung erstellen. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und angeben, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen.
+In order to start streaming data to [!DNL Experience Platform], you must first create a streaming HTTP connection. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und festlegen, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen.
 
-Nach der Registrierung einer Streaming-Verbindung haben Sie eine eindeutige URL, mit der Daten an die Plattform gestreamt werden können.
+After registering a streaming connection you will have a unique URL which can be used to stream data to [!DNL Platform].
 
-Bitte beachten Sie, dass Sie zum Ausfüllen dieses Handbuchs Zugriff auf die Adobe Experience Platform benötigen. Wenn Sie keinen Zugriff auf die Plattform haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Beachten Sie, dass Sie zum Ausführen dieser Anleitung Zugriff auf Adobe Experience Platform benötigen. If you do not have access to [!DNL Platform], please contact your system administrator before proceeding.
 
-## Erstellen einer Streaming-Verbindung
+## Streaming-Verbindung erstellen
 
-Klicken Sie nach dem Anmelden bei der Experience Platform-Benutzeroberfläche auf **Quellen** , um die Registerkarte &quot; *Katalog* &quot;zu öffnen. Auf dieser Seite werden die verfügbaren Quelltypen als einzelne Karten angezeigt. Jede Karte enthält eine Blase, die die Anzahl der Datenflüsse anzeigt, die aus Streaming-Verbindungen zu Datasets erstellt wurden.
+After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the *[!UICONTROL Catalog]* tab. Auf dieser Seite werden die verfügbaren Quelltypen als einzelne Karten angezeigt. Jede Karte enthält dabei eine Blase, die die Anzahl der Datenflüsse anzeigt, die über Streaming-Verbindungen zu Datensätzen erstellt wurden.
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-Klicken Sie auf der Seite &quot; *Quellen* &quot;auf **HTTP-API** und dann auf **Connect-Quelle**.
+Klicken Sie auf der Seite *[!UICONTROL Quellen]* auf **[!UICONTROL HTTP-API]** und dann auf **[!UICONTROL Quelle verbinden]**.
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-Der Bildschirm &quot; *Verbindung mit HTTP* herstellen&quot;wird angezeigt. Geben Sie unter *Dienstdetails* sowohl den **Namen** als auch eine **Beschreibung** für Ihre neue Streaming-Verbindung ein.
+Der Bildschirm *[!UICONTROL Mit HTTP verbinden]* wird angezeigt. Geben Sie unter *[!UICONTROL Dienstdetails]* sowohl den **[!UICONTROL Namen]** als auch eine **[!UICONTROL Beschreibung]** für Ihre neue Streaming-Verbindung ein.
 
-Wählen Sie unter *Kontoauthentifizierung* die folgenden Konfigurationseigenschaften für Ihre Streaming-Verbindung aus:
+Wählen Sie unter *[!UICONTROL Kontoauthentifizierung]* die folgenden Konfigurationseigenschaften für Ihre Streaming-Verbindung aus:
 
-- **Authentifizierung:** Gibt an, ob die Streaming-Verbindung authentifiziert werden muss. Die Authentifizierung stellt sicher, dass Daten aus vertrauenswürdigen Quellen erfasst werden. Es wird empfohlen, dass diese Option aktiviert ist, wenn es sich um persönliche identifizierbare Informationen (PII) handelt.
-- **XDM-Schema-Kompatibilität:** Ob diese Streaming-Verbindung Ereignis sendet, die mit XDM-Schemas kompatibel sind. Standardmäßig ist diese Eigenschaft **aktiviert**.
+- **[!UICONTROL Authentifizierung]:**Gibt an, ob die Streaming-Verbindung authentifiziert werden muss. Authentifizierung stellt sicher, dass Daten aus vertrauenswürdigen Quellen erfasst werden. Es wird empfohlen, diese Option zu aktivieren, wenn Sie mit personenbezogenen Daten arbeiten.
+- **[!UICONTROL XDM-Schema-Kompatibilität]:**Ob diese Streaming-Verbindung Ereignis sendet, die mit XDM-Schemas kompatibel sind. Standardmäßig ist diese Eigenschaft**aktiviert **.
 
-Nachdem Sie die Konfigurationseigenschaften ausgewählt haben, klicken Sie auf **Verbinden**. Ihre Streaming-HTTP-Verbindung wird jetzt erstellt und kann jetzt auf der Registerkarte &quot; *Durchsuchen* &quot;im Arbeitsbereich &quot; *Quellen* &quot;angezeigt werden.
+Nachdem Sie die Konfigurationseigenschaften ausgewählt haben, klicken Sie auf **[!UICONTROL Verbinden]**. Ihre Streaming-HTTP-Verbindung wird erstellt und kann jetzt auf dem Tab *[!UICONTROL Durchsuchen]* im Arbeitsbereich *[!UICONTROL Quellen]* angezeigt werden.
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-Auf der Registerkarte &quot; *Durchsuchen* &quot;können Sie auf Ihre neu erstellte Streaming-HTTP-Verbindung klicken und die Details zu dieser Verbindung in der Ansicht anzeigen.
+Sie können auf dem Tab *[!UICONTROL Durchsuchen]* auf Ihre neu erstellte Streaming-HTTP-Verbindung klicken, um die Details dieser Verbindung anzuzeigen.
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-Wenn Sie auf den Hyperlink des Verbindungsnamens klicken, können Sie die anzuzeigenden Daten auswählen, indem Sie konfigurieren, welcher Datensatz verbunden ist, indem Sie auf Daten *auswählen* klicken.
+Wenn Sie auf den Hyperlink des Verbindungsnamens klicken, können Sie anzuzeigende Daten auswählen, indem Sie festlegen, welcher Datensatz verbunden wird, indem Sie auf *[!UICONTROL Daten auswählen]* klicken.
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 
-Sie können entweder einen neuen Datensatz [erstellen](#create-a-new-dataset) oder einen vorhandenen Datensatz [verwenden](#use-an-existing-dataset).
+Sie können entweder einen [neuen Datensatz erstellen](#create-a-new-dataset) oder einen [vorhandenen Datensatz verwenden](#use-an-existing-dataset).
 
-### Erstellen eines neuen Datensatzes
+### Neuen Datensatz erstellen
 
-Um einen neuen Datensatz zu erstellen, geben Sie den **Namen**, die **Beschreibung** sowie das Zielgruppe- **Schema** für den Datensatz an.
+Um einen neuen Datensatz zu erstellen, geben Sie den **[!UICONTROL Namen]**, eine **[!UICONTROL Beschreibung]** sowie das **[!UICONTROL Zielschema]** für den Datensatz an.
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
-Wenn Sie alle Details einfügen und auf **Weiter** klicken, können Sie die angegebenen Details überprüfen, bevor Sie auf **Fertig stellen** klicken, um den Datensatz mit Ihrer Streaming-HTTP-Verbindung zu verbinden.
+Nachdem Sie alle Details eingefügt und auf **[!UICONTROL Weiter]** geklickt haben, können Sie die angegebenen Details überprüfen, bevor Sie auf **[!UICONTROL Fertig stellen]** klicken, um den Datensatz mit Ihrer Streaming-HTTP-Verbindung zu verbinden.
 
 ![](../images/streaming-ingestion/ui/review-create-new-dataset.png)
 
 ### Vorhandenen Datensatz verwenden
 
-Um einen vorhandenen Datensatz zu verwenden, wählen Sie den Namen des **Ausgabedatasets** aus.
+Um einen vorhandenen Datensatz zu nutzen, wählen Sie den Namen des **[!UICONTROL Ausgabedatensatzes]** aus.
 
 ![](../images/streaming-ingestion/ui/use-existing-dataset.png)
 
-Nachdem Sie auf **Weiter** geklickt haben, können Sie die Details überprüfen, bevor Sie auf **Fertig stellen** klicken, um den ausgewählten Datensatz mit Ihrer Streaming-HTTP-Verbindung zu verbinden.
+Nachdem Sie auf **[!UICONTROL Weiter]** geklickt haben, können Sie die Details überprüfen, bevor Sie auf **[!UICONTROL Fertig stellen]** klicken, um den ausgewählten Datensatz mit Ihrer Streaming-HTTP-Verbindung zu verbinden.
 
 ![](../images/streaming-ingestion/ui/review-existing-dataset.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie den Streaming-Endpunkt verwenden können, um auf eine Vielzahl von Data Ingestion-APIs zuzugreifen. Anweisungen zum Erstellen einer Streaming-Verbindung in der API finden Sie im Lernprogramm zum [Erstellen einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
+By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to access a variety of [!DNL Data Ingestion] APIs. Anweisungen zum Erstellen einer Streaming-Verbindung in der API finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
