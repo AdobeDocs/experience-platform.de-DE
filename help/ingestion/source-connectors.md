@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 0%
+source-wordcount: '111'
+ht-degree: 19%
 
 ---
 
 
-# Quellenanschlüsse
+# Quellen-Connectoren
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus einer Vielzahl von Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Drittanbieter-Software und CRM erfassen.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Sie können Daten aus einer Vielzahl von Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Drittanbieter-Software und CRM erfassen.
 
-Experience Platform bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie Quellverbindungen zu verschiedenen Datenanbietern einfach einrichten können. Diese Quellverbindungen ermöglichen es Ihnen, Ihre Datenspeicherung- und CRM-Dienste zu authentifizieren,  für die Erfassung festzulegen und den Datendurchsatz zu verwalten.
+[!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Diese Quellverbindungen ermöglichen es Ihnen, Ihre Datenspeicherung- und CRM-Dienste zu authentifizieren,  für die Erfassung festzulegen und den Datendurchsatz zu verwalten.
 
 Weitere Informationen zu diesen Quell-Connectors finden Sie in der Dokumentation zu [Quell-Connectors](../sources/home.md).
