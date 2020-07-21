@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '2750'
-ht-degree: 56%
+source-wordcount: '2745'
+ht-degree: 54%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 56%
 
 Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-- [!DNL Segmentation Service](../home.md)[!DNL Experience Platform]: Mit Segmentation Service können Sie in gespeicherte Daten, die sich auf Einzelanwender (z. B. Kunden, potenzielle Kunden, User oder Organisationen) beziehen, in kleinere Gruppen unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
+- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] ermöglicht Ihnen die Unterteilung von Daten, die in Bezug auf Einzelpersonen gespeichert sind (z. B. Kunden, Potenzieller Kunde, Benutzer oder Organisationen) in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren. [!DNL Experience Platform]
 - [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Plattform erfasst werden.
+- [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die Daten eingehen [!DNL Platform].
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
 Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen verstehen:
@@ -63,7 +63,7 @@ The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attribut
 
 ### Ereignisse
 
-Auf dem Tab **[!UICONTROL Ereignisse]** können Sie mit XDM ExperienceEvent-Datenelementen eine Audience erstellen, die auf stattgefundenen Ereignissen oder Aktionen basiert. Sie finden Ereignistypen auch auf dem Tab **[!UICONTROL Ereignisse]**; dabei handelt es sich um eine Kollektion häufig verwendeter Ereignisse, mit denen Sie Segmente schneller erstellen können.
+The **[!UICONTROL Events]** tab allows you to create an audience based on events or actions that took place using [!DNL XDM ExperienceEvent] data elements. Sie finden Ereignistypen auch auf dem Tab **[!UICONTROL Ereignisse]**; dabei handelt es sich um eine Kollektion häufig verwendeter Ereignisse, mit denen Sie Segmente schneller erstellen können.
 
 In addition to being able to browse for [!DNL ExperienceEvent] elements, you can also search for Event Types. Event Types use the same coding logic as [!DNL ExperienceEvents], without requiring you to search through the [!DNL XDM ExperienceEvent] class looking for the correct event. For example, using the search bar to search &quot;cart&quot; returns the Event Types &quot;[!UICONTROL AddCart]&quot; and &quot;[!UICONTROL RemoveCart]&quot;, which are two very commonly used cart actions when building segment definitions.
 
