@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Daten in Adobe Experience Platform erfassen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 69%
+source-wordcount: '1277'
+ht-degree: 65%
 
 ---
 
@@ -26,7 +26,7 @@ Wenn Sie Daten lieber mit Data Ingestion-APIs erfassen möchten, lesen Sie zunä
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **[!UICONTROL Datensätze]** klicken. Der Arbeitsbereich „Datensätze“ enthält eine Liste von Datensätzen, einschließlich der Spalten für _Name_, _Erstellung_ (Datum und Uhrzeit), _Quelle_, _Schema_ und _letzten Batch-Status_, sowie Datum und Uhrzeit der _letzten Aktualisierung_ des Datensatzes.
+Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **[!UICONTROL Datensätze]** klicken. Der Arbeitsbereich „Datensätze“ enthält eine Liste von Datensätzen, einschließlich der Spalten für _[!UICONTROL Name]_,_[!UICONTROL  Erstellung]_ (Datum und Uhrzeit), _[!UICONTROL Quelle]_,_[!UICONTROL  Schema]_ und _[!UICONTROL letzten Batch-Status]_, sowie Datum und Uhrzeit der_[!UICONTROL  letzten Aktualisierung]_ des Datensatzes.
 
 >[!NOTE]
 >
@@ -70,9 +70,9 @@ Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf
 
 Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte **[!UICONTROL Datensatzaktivität]** im Arbeitsbereich „Datensätze“. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
-Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. _Datensatz-ID_, _Name_, _Beschreibung_, _Tabellenname_, _Schema_, _Streaming_ und _Quelle_. Die Registerkarte „Informationen“ enthält außerdem Informationen zum Zeitpunkt der _Erstellung_ des Datensatzes und zum _Datum der letzten Änderung_.
+Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. _[!UICONTROL Datensatz-ID]_,_[!UICONTROL  Name]_, _[!UICONTROL Beschreibung]_,_[!UICONTROL  Tabellenname]_, _[!UICONTROL Schema]_,_[!UICONTROL  Streaming]_ und _[!UICONTROL Quelle]_. Die Registerkarte „Informationen“ enthält außerdem Informationen zum Zeitpunkt der_[!UICONTROL  Erstellung]_ des Datensatzes und zum _[!UICONTROL Datum der letzten Änderung]_.
 
-Also in the Info tab is a  _Profile_ toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
+Also in the Info tab is a  _[!UICONTROL Profile]_toggle that is used for enabling your dataset for use with[!DNL Real-time Customer Profile]. Use of this toggle, and[!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
 ![Datensatzaktivität](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -88,7 +88,7 @@ To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICON
 
 ![Profil-Umschalter](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
 
-Daraufhin wird ein Dialog angezeigt, in dem Sie bestätigen müssen, dass Sie den Datensatz für das Echtzeit-Kundenprofil aktivieren möchten.
+A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-time Customer Profile].
 
 ![Dialog „Profil aktivieren“](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
 
@@ -98,7 +98,7 @@ Klicken Sie auf **[!UICONTROL Aktivieren]**; daraufhin wird der Umschalter blau 
 
 ## Daten in Datensatz hinzufügen
 
-Daten können auf verschiedene Weise in einen Datensatz eingefügt werden. So können Sie Data Ingestion-APIs oder einen ETL-Partner wie Unifi oder Informatica nutzen. In dieser Anleitung werden dem Datensatz Daten in der Benutzeroberfläche über die Registerkarte **[!UICONTROL Daten hinzufügen]** hinzugefügt.
+Daten können auf verschiedene Weise in einen Datensatz eingefügt werden. You could choose to use [!DNL Data Ingestion] APIs or an ETL partner such as [!DNL Unifi] or [!DNL Informatica]. In dieser Anleitung werden dem Datensatz Daten in der Benutzeroberfläche über die Registerkarte **[!UICONTROL Daten hinzufügen]** hinzugefügt.
 
 Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **[!UICONTROL Daten hinzufügen]**. Jetzt können Sie Dateien per Drag-and-Drop verschieben oder auf Ihrem Computer nach Dateien suchen, die Sie hinzufügen möchten.
 
@@ -116,19 +116,19 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 ## Datensatzmetriken
 
-Nach dem Hochladen der Datei steht auf der Registerkarte **[!UICONTROL Datensatzaktivität]** nicht mehr, dass keine Batches hinzugefügt wurden. Stattdessen werden auf der Registerkarte „Datensatzaktivität“ jetzt Datensatzmetriken angezeigt. Bei allen Metriken wird zu diesem Zeitpunkt „0“ angezeigt, da der Batch noch nicht geladen wurde.
+Nach dem Hochladen der Datei steht auf der Registerkarte **[!UICONTROL Datensatzaktivität]** nicht mehr, dass keine Batches hinzugefügt wurden. Instead, the *[!UICONTROL Dataset Activity]* tab now shows dataset metrics. Bei allen Metriken wird zu diesem Zeitpunkt „0“ angezeigt, da der Batch noch nicht geladen wurde.
 
-Am unteren Rand der Registerkarte befindet sich eine Liste, in der die _Batch-Kennung_ der Daten angezeigt wird, die gerade mit dem Prozess [Daten zu Datensatz hinzufügen](#add-data-to-dataset) erfasst wurden. Dazu gehören auch Informationen über den Batch, einschließlich Datum der _Erfassung_, Anzahl der _erfassten Datensätze_ und des aktuellen Batch-_Status_.
+Am unteren Rand der Registerkarte befindet sich eine Liste, in der die _[!UICONTROL Batch-Kennung]_der Daten angezeigt wird, die gerade mit dem Prozess[Daten zu Datensatz hinzufügen](#add-data-to-dataset)erfasst wurden. Dazu gehören auch Informationen über den Batch, einschließlich Datum der_[!UICONTROL  Erfassung]_, Anzahl der _[!UICONTROL erfassten Datensätze]_und des aktuellen Batch-_[!UICONTROL  Status]_.
 
 ![Datensatzmetriken](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## Batch-Details
 
-Klicken Sie auf die _Batch-Kennung_, um eine **[!UICONTROL Batch-Übersicht]** mit weiteren Details zum Batch anzuzeigen. Sobald der Batch vollständig geladen wurde, werden die Informationen über den Batch aktualisiert, um die Anzahl der _erfassten Datensätze_ und die _Dateigröße_ anzuzeigen. Außerdem ändert sich der _Status_ in „Erfolg“ oder „Fehlgeschlagen“. Wenn der Batch fehlschlägt, enthält der Abschnitt _Fehler-Code_ Details zu Fehlern, die bei der Erfassung aufgetreten sind.
+Klicken Sie auf die _[!UICONTROL Batch-Kennung]_, um eine**[!UICONTROL  Batch-Übersicht ]**mit weiteren Details zum Batch anzuzeigen. Sobald der Batch vollständig geladen wurde, werden die Informationen über den Batch aktualisiert, um die Anzahl der_[!UICONTROL  erfassten Datensätze]_ und die _[!UICONTROL Dateigröße]_anzuzeigen. Außerdem ändert sich der_[!UICONTROL  Status]_ in „Erfolg“ oder „Fehlgeschlagen“. Wenn der Batch fehlschlägt, enthält der Abschnitt _[!UICONTROL Fehler-Code]_Details zu Fehlern, die bei der Erfassung aufgetreten sind.
 
 Weiterführende Informationen und häufig gestellte Fragen zur Batch-Erfassung finden Sie im [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](../batch-ingestion/troubleshooting.md).
 
-Um zum Bildschirm **Datensatzaktivität** zurückzukehren, klicken Sie im Breadcrumb auf den Namen des Datensatzes (_Details zum Treueprogramm_).
+Um zum Bildschirm **[!UICONTROL Datensatzaktivität]** zurückzukehren, klicken Sie im Breadcrumb auf den Namen des Datensatzes (_[!UICONTROL Details zum Treueprogramm]_).
 
 ![Batch-Übersicht](../images/tutorials/ingest-batch-data/batch_overview.png)
 
