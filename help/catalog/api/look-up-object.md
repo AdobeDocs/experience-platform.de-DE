@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Nachschlagen eines Objekts
+title: Objekt nachschlagen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 2%
+source-wordcount: '132'
+ht-degree: 78%
 
 ---
 
 
-# Nachschlagen eines Objekts
+# Objekt nachschlagen
 
-Wenn Sie die eindeutige ID für ein bestimmtes Katalogobjekt kennen, können Sie eine GET-Anforderung ausführen, um die Details dieses Objekts Ansicht.
+If you know the unique identifier for a specific [!DNL Catalog] object, you can perform a GET request to view that object&#39;s details.
 
 >[!NOTE]
 >
->Beim Anzeigen bestimmter Objekte empfiehlt es sich weiterhin, nach Eigenschaften [zu](filter-data.md) filtern und nur die Eigenschaften zurückzugeben, an denen Sie interessiert sind.
+>Beim Anzeigen einzelner Objekte empfiehlt es sich weiterhin, [nach Eigenschaften zu filtern](filter-data.md), um nur die Eigenschaften zurückzugeben, die Sie von Interesse sind.
 
 **API-Format**
 
@@ -29,12 +29,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Der Bezeichner des spezifischen Objekts, das Sie abrufen möchten. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie abrufen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein Datensatz anhand seiner ID abgerufen und die zugehörigen `name`, `description`, `state`, `tags`und `files` Eigenschaften zurückgegeben.
+Mit der folgenden Anfrage wird ein Datensatz anhand seiner Kennung abgerufen und werden die zugehörigen Eigenschaften `name`, `description`, `state`, `tags` und `files` zurückgegeben.
 
 ```shell
 curl -X GET \
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird der angegebene Datensatz nur mit dem angeforderten `properties` im Haupttext zurückgegeben.
+Bei einer erfolgreichen Antwort wird der angegebene Datensatz nur mit den angeforderten `properties` im Text zurückgegeben.
 
 ```json
 {
@@ -67,4 +67,4 @@ Bei einer erfolgreichen Antwort wird der angegebene Datensatz nur mit dem angefo
 
 >[!NOTE]
 >
->Eigenschaften, deren Werte mit einem Präfix versehen sind, `@` stellen miteinander verknüpfte Objekte dar. Anweisungen zur Ansicht dieser Objekte finden Sie im Anhang zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects) .
+>Eigenschaften, deren Werte mit einem `@`-Präfix versehen sind, stellen miteinander verknüpfte Objekte dar. Anweisungen zum Anzeigen dieser Objekte finden Sie im Anhangsbereich zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects).
