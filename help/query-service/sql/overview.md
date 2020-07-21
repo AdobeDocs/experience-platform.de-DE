@@ -4,14 +4,14 @@ solution: Experience Platform
 title: SQL-Referenz
 topic: reference
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 0%
+source-wordcount: '42'
+ht-degree: 42%
 
 ---
 
 
 # SQL-Referenz
 
-Abfrage Service bietet die Möglichkeit, ANSI SQL für `SELECT` Anweisungen und andere eingeschränkte Befehle zu verwenden. Der Abfrage-Dienst enthält keine Funktionen für die Datendefinitionssprache oder die Datenmanipulation. Die über den Dienst abgefragten Daten stammen aus Experience Data Lake, das weitgehend unveränderliche Datensätze enthält.
+[!DNL Query Service]Mit können Sie Standard-ANSI-SQL für `SELECT`-Anweisungen und andere begrenzte Befehle verwenden. [!DNL Query Service] enthält keine Funktionen für die Datendefinitionssprache oder Datenmanipulation. The data queried via the service comes from [!DNL Experience Data Lake], which contains largely immutable datasets.
