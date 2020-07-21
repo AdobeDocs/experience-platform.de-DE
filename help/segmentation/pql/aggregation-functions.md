@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Aggregationsfunktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 7%
+source-wordcount: '208'
+ht-degree: 24%
 
 ---
 
 
 # Aggregationsfunktionen
 
-Aggregationsfunktionen werden verwendet, um mehrere Werte in PQL-Arrays (Profil Abfrage Language) zu gruppieren und so einen Zusammenfassungswert zu bilden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Aggregationsfunktionen werden verwendet, um mehrere Werte innerhalb von [!DNL Profile Query Language] (PQL-)Arrays zu gruppieren und einen einzigen Zusammenfassungswert zu bilden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
 
 ## Anzahl
 
@@ -52,7 +52,7 @@ Die folgende PQL-Abfrage gibt die Summe aller Bestellpreise zurück.
 orders.sum(order.price)
 ```
 
-## Durchschnittlich
+## Durchschnitt
 
 Die `average` Funktion gibt das arithmetische Mittel aller ausgewählten Werte im Array zurück.
 
@@ -108,4 +108,4 @@ orders.max(order.price)
 
 ## Nächste Schritte
 
-Nachdem Sie nun von Aggregationsfunktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Nachdem Sie nun von Aggregationsfunktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
