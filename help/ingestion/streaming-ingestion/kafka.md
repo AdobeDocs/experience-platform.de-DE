@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Kafka-Anschluss
+title: Kafka-Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: f80b2e1d787d1f8d9fe8ac306422aa7744a69cd3
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 0%
+source-wordcount: '146'
+ht-degree: 32%
 
 ---
 
 
-# Kafka Connector for Adobe Experience Platform
+# [!DNL Kafka] Anschluss für Adobe Experience Platform
 
-Der Stream-Connector für Adobe Experience Platform basiert auf Apache Kafka Connect. Diese Bibliothek kann verwendet werden, um JSON-Ereignis von Kafka-Themen in Ihrem Rechenzentrum direkt an Experience Platform in Echtzeit zu streamen.
+The stream connector for Adobe Experience Platform is based on [!DNL Apache Kafka Connect]. This library can be used to stream JSON events from [!DNL Kafka] topics in your data center directly to [!DNL Experience Platform] in real-time.
 
-Der Stream-Connector ist ein Einwegstecker, der Daten von Kafka-Themen an einen registrierten Endpunkt auf Experience Platform liefert. Um diesen Connector zu verwenden, müssen Sie die Bibliothek herunterladen, sie zu Ihrer vorhandenen Kafka-Bereitstellung hinzufügen und die Kafka-Themen zur Adobe Streaming-HTTP-URL konfigurieren. Zusätzlicher Code ist **nicht** erforderlich. Der Connector unterstützt die folgenden Funktionen:
+The stream connector is a sink (one-way) connector, delivering data from [!DNL Kafka] topics to a registered endpoint on [!DNL Experience Platform]. To use this connector, you must download the library, add it to your existing [!DNL Kafka] deployment, and configure the [!DNL Kafka] topic(s) to the Adobe Streaming HTTP URL. Es ist **kein** zusätzlicher Code erforderlich. Der Connector unterstützt die folgenden Funktionen:
 
 - Authentifizierte Datenerfassung
-- Batch-Nachrichten, um Netzwerkaufrufe zu reduzieren und den Durchsatz zu erhöhen
+- Nachrichten-Batches, um Netzwerkaufrufe zu reduzieren und den Durchsatz zu erhöhen
 
-Weitere Informationen zum Kafka-Anschluss, einschließlich Anweisungen zum Einrichten des Connectors, finden Sie im Handbuch [Erste Schritte](https://github.com/adobe/experience-platform-streaming-connect). Für einen detaillierteren Arbeitsablauf lesen Sie bitte das [Entwicklerhandbuch](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md).
+For more information on the [!DNL Kafka] connector, including instructions on how to set up the connector, please read the [getting started guide](https://github.com/adobe/experience-platform-streaming-connect). Einen detaillierteren Workflow finden Sie im [Entwicklerhandbuch](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md).
