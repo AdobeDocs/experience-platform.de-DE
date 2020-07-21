@@ -4,66 +4,66 @@ seo-title: Google Ads-Ziel
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 translation-type: tm+mt
-source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 28%
+source-wordcount: '572'
+ht-degree: 43%
 
 ---
 
 
-# Google Ads-Ziel
+# [!DNL Google Ads] Ziel
 
 ## Übersicht
 
-Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
+[!DNL Google Ads], früher bekannt als [!DNL Google AdWords], ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, grafische Displays, [!DNL YouTube] Videos und mobile In-App-Displays hinweg zu bezahlen.
 
 ## Zielspezifikationen
 
-Beachten Sie die folgenden Details, die sich speziell auf Google Ads-Ziele beziehen:
+Note the following details that are specific to [!DNL Google Ads] destinations:
 
-* Sie können die folgenden [Identitäten](../../identity-service/namespaces.md) an Google Ads-Ziele senden: **Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs, Amazon Fire TV-IDs**.
-* Aktivierte Zielgruppen werden in der Google-Plattform programmgesteuert erstellt.
-* Die Echtzeit-Kundendatenplattform von Adobe umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Lesen Sie die Audiencen in Google, um die Integration zu validieren und die Targeting-Größe der Audience zu verstehen.
+* Sie können die folgenden [Identitäten](../../identity-service/namespaces.md)[!DNL Google Ads] an -Ziele senden: **Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs, Amazon Fire TV-IDs**.
+* Activated audiences are created programmatically in the [!DNL Google] platform.
+* Die Echtzeit-Kundendatenplattform von Adobe umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Konsultieren Sie die Zielgruppenzahlen in Google, um die Integration zu validieren und die Zielgruppengröße der Audience zu verstehen.
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihr erstes Ziel mit Google Ads erstellen möchten und die [ID-Synchronisierungsfunktion](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) im Experience Cloud-ID-Dienst in der Vergangenheit nicht aktiviert haben (mit Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder den Kundendienst, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor Google-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Adobe Echtzeit-CDP übertragen.
+>If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/de-DE/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. Wenn Sie zuvor Google-Integrationen im Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, an die Echtzeit-Kundendatenplattform von Adobe übertragen.
 
 ## Voraussetzungen
 
-### Vorhandenes Google Ads-Konto
+### Vorhandenes [!DNL Google Ads] Konto
 
-Google hat alle neuen Google Ads-Integrationen mit Drittanbietern angehalten. Sie müssen bereits über eine Integration mit Google Ads verfügen, um die zulassungsliste-Schritte im nächsten Abschnitt durchführen und ein Google Ads-Ziel in Adobe Echtzeit-CDP erstellen zu können.
+[!DNL Google] hat alle neuen [!DNL Google Ads] Integrationen mit Drittanbietern angehalten. You must have an existing integration with [!DNL Google Ads] in order to be able to perform the allow list steps in the next section and to create a [!DNL Google Ads] destination in Adobe Real-time CDP.
 
 ### Zulassungsliste
 
 >[!NOTE]
 >
->Die zulassungsliste ist obligatorisch, bevor Sie Ihr erstes Google Ads-Ziel in der Adobe Echtzeit-CDP einrichten. Vergewissern Sie sich bitte, dass der unten beschriebene zulassungsliste-Vorgang von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Zulassungsliste ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Ads] Ziel in Adobe Echtzeit-CDP einrichten. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
 
-Bevor Sie das Google Ads-Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich an Google wenden, damit Adobe die Liste der zulässigen Datenanbieter erhält und Ihr Konto der zulassungsliste hinzugefügt wird. Kontaktieren Sie Google und machen Sie folgende Angaben:
+Bevor Sie das [!DNL Google Ads] [!DNL Google] Ziel in Adobe Echtzeit-CDP erstellen, müssen Sie sich an Adobe wenden, um die Liste der zulässigen Datenanbieter aufzunehmen und Ihr Konto der Zulassungsliste hinzuzufügen. Contact [!DNL Google] and provide the following information:
 
-* **Kontokennung**: Dies ist die Adobe-Kontokennung bei Google. Wenden Sie sich an den Adobe-Kundendienst oder Ihren Adobe-Kundenbetreuer, um diese ID zu erhalten.
-* **Kundenkennung**: Dies ist die Adobe-Kundenkonto-Kennung bei Google. Wenden Sie sich an den Adobe-Kundendienst oder Ihren Adobe-Kundenbetreuer, um diese ID zu erhalten.
+* **Kontokennung**: Dies ist die Adobe-Kontokennung bei [!DNL Google]. Wenden Sie sich an die Kundenunterstützung von Adobe oder Ihren Adobe-Support-Mitarbeiter, um diese Kennung zu erhalten.
+* **Kundenkennung**: Dies ist die Adobe-Kundenkonto-Kennung bei [!DNL Google]. Wenden Sie sich an die Adobe-Kundenunterstützung oder Ihren Adobe-Support-Mitarbeiter, um die Kennung zu erhalten.
 * Ihr Kontotyp: **AdWords**
-* **Google AdWords-ID** : Dies ist Ihre ID bei Google. Das ID-Format ist in der Regel 123-456-7890.
+* **Google AdWords-ID** : Dies ist Ihre ID mit [!DNL Google]. Das Format der Kennung lautet in der Regel 123-456-7890.
 
 ## Ziel erstellen
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
-   ![Google-Anzeigenziel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
+1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Create destination]**.
+   ![Google Ads-Ziel verbinden](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. Geben Sie im Schritt **Einrichten** des Arbeitsablaufs zum Erstellen des Ziels die [!UICONTROL Grundinformationen] für das Ziel ein. <br>
+2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
 
-   ![Grundlegende Informationen Google Ads](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
+   ![Google Ads-Basisinformationen ](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
 * **[!UICONTROL Kontotyp]**: AdWords ist die einzige verfügbare Option.
-* **[!UICONTROL Konto-ID]**: Geben Sie Ihre Konto-ID mit Google Ads ein. Das ID-Format ist in der Regel 123-456-7890.
+* **[!UICONTROL Konto-ID]**: Geben Sie Ihre Konto-ID ein [!DNL Google Ads]. Das Format der Kennung lautet in der Regel 123-456-7890.
 * **[!UICONTROL Anwendungsfall]** für das Marketing: Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Echtzeit-CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Informationen zu den einzelnen von Adobe definierten Anwendungsfällen für Marketing finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](/help/data-governance/policies/overview.md#core-actions).
 
-## Aktivieren von Segmenten in Google-Anzeigen
+## Activate segments to [!DNL Google Ads]
 
-For instructions on how to activate segments to Google Ads, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+For instructions on how to activate segments to [!DNL Google Ads], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
 
