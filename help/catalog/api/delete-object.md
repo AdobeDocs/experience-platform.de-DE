@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Löschen eines Objekts
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 2%
+source-wordcount: '173'
+ht-degree: 50%
 
 ---
 
 
 # Löschen eines Objekts
 
-Sie können ein Katalogobjekt löschen, indem Sie dessen ID im Pfad einer DELETE-Anforderung angeben.
+You can delete a [!DNL Catalog] object by providing its ID in the path of a DELETE request.
 
 >[!WARNING]
 >
->Gehen Sie beim Löschen von Objekten besonders vorsichtig vor, da dies nicht rückgängig gemacht werden kann und andernorts in der Experience Platform zu Umbrüchen führen kann.
+>Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in [!DNL Experience Platform].
 
 **API-Format**
 
@@ -32,12 +32,12 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu löschenden Katalogobjekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Der Bezeichner des spezifischen Objekts, das Sie aktualisieren möchten. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be deleted. Gültige Objekte sind: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein Datensatz gelöscht, dessen ID im Anforderungspfad angegeben ist.
+Mit der folgenden Anfrage wird ein Datensatz gelöscht, dessen ID im Anfragepfad angegeben ist.
 
 ```shell
 curl -X DELETE \
@@ -50,7 +50,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein Array mit der ID des gelöschten Datensatzes zurück. Diese ID sollte mit der ID übereinstimmen, die in der DELETE-Anforderung gesendet wurde. Wenn Sie eine GET-Anforderung für das gelöschte Objekt ausführen, wird der HTTP-Status 404 (Nicht gefunden) zurückgegeben und bestätigt, dass der Datensatz erfolgreich gelöscht wurde.
+Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein Array mit der ID des gelöschten Datensatzes zurück. Diese ID sollte mit der in der DELETE-Anfrage gesendeten ID übereinstimmen. Wenn Sie eine GET-Anfrage für das gelöschte Objekt ausführen, wird der HTTP-Status 404 (Nicht gefunden) zurückgegeben. Damit wird bestätigt, dass der Datensatz erfolgreich gelöscht wurde.
 
 ```json
 [
@@ -60,4 +60,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein Array mit der ID des
 
 >[!NOTE]
 >
->Wenn keine Katalogobjekte mit der in Ihrer Anforderung angegebenen ID übereinstimmen, erhalten Sie möglicherweise trotzdem einen HTTP-Statuscode 200, aber das Antwortarray ist leer.
+>If no [!DNL Catalog] objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
