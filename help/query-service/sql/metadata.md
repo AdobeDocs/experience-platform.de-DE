@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Metadaten, Befehle
 topic: metadata
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -43,5 +43,5 @@ Für Metadaten in Ihrem Datensatz werden derzeit die folgenden PSQL-Befehle zum 
 
 Alle Befehle, mit denen Beginn kombiniert werden `\d` kann. Beispielsweise können Sie eine Liste aller Tabellen, Sequenzen und Schema anzeigen `\dtsn` lassen. `\d` zeigt alle sichtbaren Tabellen, Ansichten, materialisierten Ansichten und Sequenzen an.
 
-Weitere Informationen zu den oben aufgeführten Befehlen finden Sie in der Dokumentation unter [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Beachten Sie jedoch, dass nicht alle in der PostgreSQL-Dokumentation aufgeführten Optionen von der Experience Platform unterstützt werden.
+Weitere Informationen zu den oben aufgeführten Befehlen finden Sie in der Dokumentation unter [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Beachten Sie jedoch, dass nicht alle in der PostgreSQL-Dokumentation angezeigten Optionen von unterstützt werden [!DNL Experience Platform].
 
