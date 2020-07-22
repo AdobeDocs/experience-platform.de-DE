@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service-Datentypen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 4%
+source-wordcount: '456'
+ht-degree: 5%
 
 ---
 
@@ -39,7 +39,7 @@ Mit den Datumsdaten können Sie Ihren Segmentdefinitionen zeitbasierten Kontext 
 
 ## Experience Ereignisses
 
-Zeichnen Sie als Adobe Experience Platform-Schema explizite und implizite Kundeninteraktionen mit [!DNL XDM ExperienceEvents] [!DNL Platform]integrierten Anwendungen auf, einschließlich einer Momentaufnahme des Systems zum Zeitpunkt der Interaktion. [!DNL ExperienceEvents] sind Faktendatensätze. Sie sind daher eine Datenquelle, die Sie während der Segmentdefinition erhalten.
+Zeichnen Sie als Adobe Experience Platform-Schema explizite und implizite Kundeninteraktionen mit [!DNL XDM ExperienceEvents] [!DNL Platform]integrierten Anwendungen auf, einschließlich einer Momentaufnahme des Systems zum Zeitpunkt der Interaktion. [!DNL ExperienceEvents] sind Faktendatensätze. Sie sind daher eine Datenquelle, die Ihnen während der Segmentdefinition zur Verfügung steht.
 
 Wie in der unten stehenden Tabelle dargestellt, werden die Ereignis-Daten mit Suchbegriffen wiedergegeben, die das Verhalten von Ereignissen verfeinern und Ereignis-Attribute angeben.
 
@@ -50,15 +50,15 @@ Wie in der unten stehenden Tabelle dargestellt, werden die Ereignis-Daten mit Su
 | Umschalter &quot;Zeitregel anwenden&quot; | Enthält Datumsdaten. |
 | Gleich, ungleich, Beginn mit, nicht Beginn mit, endet mit, endet nicht mit, enthält, enthält nicht enthält, ist vorhanden, nicht vorhanden | Enthält Zeichenfolgendaten. |
 
-## Segmente
-
-Bestehende Segmentdefinitionen können auch als Komponenten einer neuen Segmentdefinition verwendet werden, wobei ihre Attribut- und Ereignis-basierten Regeln dem neuen Segment hinzugefügt werden.
-
-## Audiences
+### Zielgruppenfreigabe
 
 Externe Audiencen können auch als Komponenten einer neuen Segmentdefinition verwendet werden, wobei ihre Attributregeln dem neuen Segment hinzugefügt werden.
 
-Derzeit wird nur Adobe Audience Manager als Audience unterstützt. Weitere Quellen werden in Zukunft aktiviert.
+Derzeit wird nur Adobe Audience Manager als externe Audience unterstützt, wobei in Zukunft zusätzliche Quellen aktiviert werden. Weitere Informationen zur Verwendung von Adobe Audience Manager-Audiencen mit Platform finden Sie im Handbuch zur Freigabe von [Audiencen in der Dokumentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)des Adobe Audience Managers.
+
+### Segmentfreigabe
+
+In der Plattform erstellte Segmente können in anderen [Adobe Experience Cloud-Hauptdiensten](https://docs.adobe.com/content/help/de-DE/core-services/interface/experience-cloud.html)verwendet werden. Um diese Funktion zu aktivieren, müssen Sie sich an Ihren Lösungsarchitekten oder Ihren Berater wenden.
 
 ## Sonstige Datentypen
 
