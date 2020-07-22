@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Deskriptoren
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1477'
-ht-degree: 83%
+ht-degree: 81%
 
 ---
 
@@ -369,7 +369,7 @@ Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Sc
 
 #### Referenzidentitätsdeskriptor
 
-Referenzidentitätsdeskriptoren stellen einen Referenzkontext für ein Schemafeld bereit, sodass es mit dem primären Identitätsfeld eines Zielschemas verknüpft werden kann. Felder müssen bereits mit einem Identitätsdeskriptor gekennzeichnet sein, bevor ein Referenzdeskriptor auf sie angewendet werden kann.
+Referenz-Identitätsdeskriptoren stellen einen Referenzkontext zur primären Identität eines Schema-Felds bereit, sodass auf dieses durch Felder in anderen Schemas verwiesen werden kann. Felder müssen bereits mit einem Identitätsdeskriptor gekennzeichnet sein, bevor ein Referenzdeskriptor auf sie angewendet werden kann.
 
 ```json
 {
