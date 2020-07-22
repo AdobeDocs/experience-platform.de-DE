@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK – Installieren des SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 72%
+source-wordcount: '583'
+ht-degree: 70%
 
 ---
 
@@ -71,6 +71,10 @@ Wenn Sie festgestellt haben, dass Sie ein `window.Promise`-Polyfill benötigen, 
 ```
 
 Dadurch wird ein Skript geladen, das sicherstellt, dass `window.Promise` eine gültige Implementierung des Promise ist.
+
+>[!NOTE]
+>
+>Wenn Sie sich dafür entscheiden, eine andere Promise-Implementierung zu laden, stellen Sie sicher, dass sie unterstützt `Promise.prototype.finally`.
 
 ## Synchrones Laden der JavaScript-Datei {#loading-javascript-synchronously}
 
