@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
+source-git-commit: 444185df28026bf2045afcdadf29f9255885dafb
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 29%
+source-wordcount: '820'
+ht-degree: 32%
 
 ---
 
@@ -34,34 +34,13 @@ In den folgenden Videos wird erläutert, wie [!DNL Experience Platform] umfangre
 
 ## Browserunterstützung
 
-Die Adobe Experience Platform-Website und zugehörige Websites, wie z. B. die Adobe-Admin Console, sind für die optimale Verwendung in den neuesten Versionen von Google Chrome, Safari, Firefox und Microsoft Edge ausgelegt. Bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern kann es zu Problemen kommen.
+Die Adobe Experience Platform-Website und zugehörige Websites, wie z. B. die Adobe-Admin Console, sind so konzipiert, dass sie in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge optimal funktionieren. Bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern kann es zu Problemen kommen.
 
-<table>
-<tr>
-  <th>Betriebssystem</th>
-  <th>Unterstützte Browser</th>
-  <th></th>
-  <th></th>
-</tr>
-<tr>
-  <td>Mac OS X</td>
-  <td>Neueste Version von Google Chrome</td>
-  <td>Neueste Version von Safari</td>
-  <td>Neueste Version von Firefox</td>
-</tr>
-<tr>
-  <td>Windows 10</td>
-  <td>Neueste Version von Google Chrome</td>
-  <td>Neueste Version von Microsoft Edge</td>
-  <td>Neueste Version von Firefox</td>
-</tr>
-<tr>
-  <td>Windows 7</td>
-  <td>Neueste Version von Google Chrome</td>
-  <td> </td>
-  <td>Neueste Version von Firefox</td>
-</tr>
-</table>
+| Betriebssystem | Unterstützte Browser |  |  |
+|---|---|---|---|
+| Mac OS X | Google Chrome | Safari | Firefox |
+| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
+| Windows 7 | Google Chrome |  | Firefox&lt; |
 
 Nicht unterstützt:
 
