@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
+source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
 workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 32%
+source-wordcount: '844'
+ht-degree: 29%
 
 ---
 
@@ -31,6 +31,43 @@ In den folgenden Videos wird erläutert, wie [!DNL Experience Platform] umfangre
 **Hinter den Kulissen:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+
+## Browserunterstützung
+
+Die Adobe Experience Platform-Website und zugehörige Websites, wie z. B. die Adobe-Admin Console, sind für die optimale Verwendung in den neuesten Versionen von Google Chrome, Safari, Firefox und Microsoft Edge ausgelegt. Bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern kann es zu Problemen kommen.
+
+<table>
+<tr>
+  <th>Betriebssystem</th>
+  <th>Unterstützte Browser</th>
+  <th></th>
+  <th></th>
+</tr>
+<tr>
+  <td>Mac OS X</td>
+  <td>Neueste Version von Google Chrome</td>
+  <td>Neueste Version von Safari</td>
+  <td>Neueste Version von Firefox</td>
+</tr>
+<tr>
+  <td>Windows 10</td>
+  <td>Neueste Version von Google Chrome</td>
+  <td>Neueste Version von Microsoft Edge</td>
+  <td>Neueste Version von Firefox</td>
+</tr>
+<tr>
+  <td>Windows 7</td>
+  <td>Neueste Version von Google Chrome</td>
+  <td> </td>
+  <td>Neueste Version von Firefox</td>
+</tr>
+</table>
+
+Nicht unterstützt:
+
+* Internet Explorer 10
+* Windows 8
+* Opera
 
 ## Sprachunterstützung
 
