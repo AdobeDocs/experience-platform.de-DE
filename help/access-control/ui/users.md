@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Benutzer für ein Profil verwalten
+title: Benutzer für ein Produktprofil verwalten
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 1%
+source-wordcount: '180'
+ht-degree: 7%
 
 ---
 
 
-# Benutzer für ein Profil verwalten
+# Benutzer für ein Produktprofil verwalten
 
-Um Benutzer einem Profil zuzuweisen oder daraus zu entfernen, öffnen Sie die Detailseite des Profils und navigieren Sie zur Registerkarte &quot; *Benutzer* &quot;. Klicken Sie von hier auf **Hinzufügen Benutzer**.
+Um Benutzer einem Profil zuzuweisen oder daraus zu entfernen, öffnen Sie die Detailseite des Profils und navigieren Sie zur Registerkarte &quot; *[!UICONTROL Benutzer]* &quot;. Klicken Sie von hier auf **[!UICONTROL Hinzufügen Benutzer]**.
 
 ![add-users-button](../images/add-users-button.png)
 
-Das Dialogfeld *Hinzufügen Benutzer* wird angezeigt. Mithilfe des Suchfelds können Sie Benutzer suchen, um sie entweder nach Namen oder per E-Mail hinzuzufügen. Während der Eingabe werden übereinstimmende Benutzer in einem Fenster mit automatischer Vervollständigung unterhalb des Textfelds angezeigt.
+The *[!UICONTROL Add User]* dialog appears. Mithilfe des Suchfelds können Sie Benutzer suchen, um sie entweder nach Namen oder per E-Mail hinzuzufügen. Während der Eingabe werden übereinstimmende Benutzer in einem Fenster mit automatischer Vervollständigung unterhalb des Textfelds angezeigt.
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
@@ -26,14 +26,14 @@ Das Dialogfeld *Hinzufügen Benutzer* wird angezeigt. Mithilfe des Suchfelds kö
 >
 >Wenn ein Benutzer nicht im Fenster zur automatischen Vervollständigung angezeigt wird, geben Sie seine vollständige E-Mail-Adresse in der Suchleiste ein. Eine Einladung wird mit Anweisungen zur Einrichtung eines Kontos für die Adobe ID an die E-Mail gesendet.
 
-Nachdem Sie einen Benutzer ausgewählt haben, klicken Sie auf **Speichern** , um ihn dem Profil hinzuzufügen.
+Nachdem Sie einen Benutzer ausgewählt haben, klicken Sie auf **[!UICONTROL Speichern]** , um ihn dem Profil hinzuzufügen.
 
 ![add-user-save](../images/add-user-save.png)
 
-Die Registerkarte &quot; *Benutzer* &quot;für das Produkt-Profil wird erneut angezeigt, wobei der hinzugefügte Benutzer nun aufgeführt wird.
+Die Registerkarte &quot; *[!UICONTROL Benutzer]* &quot;für das Produkt-Profil wird erneut angezeigt, wobei der hinzugefügte Benutzer nun aufgeführt wird.
 
 ![vom Benutzer hinzugefügt](../images/user-added.png)
 
 ## Nächste Schritte
 
-Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf Funktionen der Platform über die Admin Console steuern können, lesen Sie den Anhang im Überblick über die [](../home.md) Zugriffskontrolle, um mehr über die einzelnen Berechtigungen und die Funktionen der Platform zu erfahren, auf die sie Zugriff gewähren.
+Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf [!DNL Platform] Funktionen über das [!DNL Admin Console]steuern können, lesen Sie den Anhang im Überblick [über die](../home.md) Zugriffskontrolle, um mehr über die einzelnen Berechtigungen und die Funktionen zu erfahren, auf die sie Zugriff gewähren [!DNL Platform] .
