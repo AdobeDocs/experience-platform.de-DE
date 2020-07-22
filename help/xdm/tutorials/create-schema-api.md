@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Schemas mithilfe der Schema Registry API
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 83%
@@ -1015,7 +1015,7 @@ Bei erfolgreicher Anfrage wird der HTTP-Statuscode 201 (Erstellung bestätigt) 
 }
 ```
 
-## Schema zur Verwendung in [!DNL Real-time Customer Profile]
+## Schema zur Verwendung in [!DNL Real-time Customer Profile] {#profile}
 
 By adding the &quot;union&quot; tag to the `meta:immutableTags` attribute, you can enable the Loyalty Members schema for use by [!DNL Real-time Customer Profile].
 
