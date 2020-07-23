@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 444185df28026bf2045afcdadf29f9255885dafb
+source-git-commit: 0c4395556a546915df4718a0e812b38b15e04735
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '812'
 ht-degree: 32%
 
 ---
@@ -34,7 +34,7 @@ In den folgenden Videos wird erläutert, wie [!DNL Experience Platform] umfangre
 
 ## Browserunterstützung
 
-Die Adobe Experience Platform-Website und zugehörige Websites, wie z. B. die Adobe-Admin Console, sind so konzipiert, dass sie in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge optimal funktionieren. Bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern kann es zu Problemen kommen.
+Die Adobe Experience Platform ist so konzipiert, dass sie in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge optimal funktioniert. Bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern kann es zu Problemen kommen.
 
 | Betriebssystem | Unterstützte Browser |  |  |
 |---|---|---|---|
@@ -42,7 +42,7 @@ Die Adobe Experience Platform-Website und zugehörige Websites, wie z. B. die Ad
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
 | Windows 7 | Google Chrome |  | Firefox&lt; |
 
-Nicht unterstützt:
+Diese Browser werden nicht unterstützt:
 
 * Internet Explorer 10
 * Windows 8
