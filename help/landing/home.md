@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f86625f2cf9a08b2395f190a50d7fb40c71bc49b
+source-git-commit: c79d9690f5d1f6c199d0c0a74238225c5b6fd2c2
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '815'
 ht-degree: 32%
 
 ---
@@ -42,10 +42,10 @@ Die Adobe Experience Platform ist so konzipiert, dass sie in den **neuesten Vers
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
 | Windows 7 | Google Chrome |  | Firefox |
 
-Diese Browser werden nicht unterstützt:
+Diese Betriebssysteme und Browser werden nicht unterstützt:
 
-* Internet Explorer 10
 * Windows 8
+* Internet Explorer 10
 * Opera
 
 ## Sprachunterstützung
@@ -102,7 +102,7 @@ Get started with [!DNL Platform] quickly and easily by following along with step
 
 ## Videoschulungen
 
-Sehen Sie sich [Video-Tutorials](https://docs.adobe.com/content/help/de-DE/platform-learn/tutorials/overview.html) für eine Vielzahl von [!DNL Experience Platform] Themen an.
+Sehen Sie sich [Video-Tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) für eine Vielzahl von [!DNL Experience Platform] Themen an.
 
 Ein kurzer Überblick über die [!DNL Experience Platform's] Benutzeroberfläche finden Sie in folgendem Video:
 
@@ -112,9 +112,9 @@ Ein kurzer Überblick über die [!DNL Experience Platform's] Benutzeroberfläche
 
 * [**Versionshinweise **](../release-notes/latest/latest.md)<br/>Informationen zur letzten[!DNL Experience Platform]Version und zur Überprüfung früherer Versionen.
 
-* [**Glossar **](glossary.md)<br/>Hier können sie die in Adobe Experience Platform verwendeten Begriffe nachschlagen.
+* [**Glossar **](glossary.md)<br/> Hier können sie die in Adobe Experience Platform verwendeten Begriffe nachschlagen.
 
-* [**Handbuch zur Fehlerbehebung **](troubleshooting.md)<br/>Hier finden Sie Lösungen für häufige Fehler und Antworten auf häufig gestellte Fragen.
+* [**Handbuch zur Fehlerbehebung **](troubleshooting.md)<br/> Hier finden Sie Lösungen für häufige Fehler und Antworten auf häufig gestellte Fragen.
 
 * [**API-Grundlagen **](api-fundamentals.md)<br/>Erfahren Sie mehr über die Grundlagen der Arbeit mit[!DNL Platform]APIs.
 
