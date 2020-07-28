@@ -20,7 +20,7 @@ The following tables list all of the metrics that are exposed by Observability I
 
 The following table outlines metrics for Adobe Experience Platform [!DNL Data Ingestion]. Metriken in **Fettdruck** sind Streaming-Erfassungsmetriken.
 
-| Insights-Metrik  | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Gesamtzahl der erstellten Datensätze. | K. A. |
 | timeseries.ingestion.dataset.size | Kumulative Größe aller Daten, die für einen Datensatz oder für alle Datensätze erfasst werden. | Datensatz-ID (optional) |
@@ -48,7 +48,7 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Data In
 
 The following table outlines metrics for Adobe Experience Platform [!DNL Identity Service].
 
-| Insights-Metrik  | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Identity Service], for one dataset or all datasets. | Datensatz-ID (optional) |
 | timeseries.identity.dataset.recordfailed.count | Number of records failed by [!DNL Identity Service], for one dataset or for all datasets. | Datensatz-ID (optional) |
@@ -64,7 +64,7 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Identit
 
 The following table outlines metrics for Adobe Experience Platform [!DNL Privacy Service].
 
-| Insights-Metrik  | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Gesamtzahl der erstellten Aufträge von DSGVO. | ENV (**erforderlich**) |
 | timeseries.gdpr.jobs.completedjobs.count | Gesamtzahl der abgeschlossenen Aufträge von DSGVO. | ENV (**erforderlich**) |
@@ -74,7 +74,7 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Privacy
 
 The following table outlines metrics for Adobe Experience Platform [!DNL Query Service].
 
-| Insights-Metrik  | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Gesamtanzahl der einmaligen geplanten Abfragen. | K. A. |
 | timeseries.queryservice.query.scheduledrecurring.count | Gesamtanzahl der wiederkehrenden geplanten Abfragen. | K. A. |
@@ -87,7 +87,7 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Query S
 
 The following table outlines metrics for [!DNL Real-time Customer Profile].
 
-| Insights-Metrik  | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Number of records read from the [!DNL Data Lake] by [!DNL Profile], for one dataset or for all datasets. | Datensatz-ID (optional) |
 | timeseries.profiles.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Profile], for one dataset or for all datasets. | Datensatz-ID (optional) |
