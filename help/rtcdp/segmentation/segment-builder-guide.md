@@ -1,8 +1,8 @@
 ---
 title: Segment Builder-Handbuch
-seo-title: Verwenden des Segmentierungsdiensts Segment Builder in der Echtzeit-Kundendatenplattform
+seo-title: Verwenden von Segment Builder von Segmentation Service in der Echtzeit-Kundendatenplattform
 description: Eine Anleitung zur Verwendung von Segment Builder.
-seo-description: Ein Benutzerhandbuch, in dem die Verwendung des Segmentierungsdiensts Segment Builder in der Echtzeit-Kundendatenplattform beschrieben wird.
+seo-description: Ein Benutzerhandbuch, in dem die Verwendung von Segment Builder von Segmentation Service in der Echtzeit-Kundendatenplattform beschrieben wird.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
