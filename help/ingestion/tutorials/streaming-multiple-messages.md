@@ -14,7 +14,7 @@ ht-degree: 75%
 
 # Senden mehrerer Nachrichten in einer einzelnen HTTP-Anfrage
 
-Beim Streaming von Daten an Adobe Experience Platform können mehrfache HTTP-Aufrufe teuer sein. Anstatt beispielsweise 200 HTTP-Anfragen mit 1-KB-Payloads zu erstellen, ist es deutlich effizienter, eine HTTP-Anfrage mit 200 jeweils 1 KB großen Nachrichten und einer einzelnen Payload von 200 KB anzulegen. When used correctly, grouping multiple messages within a single request is an excellent way to optimize data being sent to [!DNL Experience Platform].
+Beim Streaming von Daten an Adobe Experience Platform kann das Ausführen zahlreicher HTTP-Aufrufe teuer werden. Anstatt beispielsweise 200 HTTP-Anfragen mit Payloads von 1 KB zu erstellen, ist es viel effizienter, 1 HTTP-Anfrage mit 200 Nachrichten mit jeweils 1 KB und einer Payload von 200 KB zu erstellen. When used correctly, grouping multiple messages within a single request is an excellent way to optimize data being sent to [!DNL Experience Platform].
 
 This document provides a tutorial for sending multiple messages to [!DNL Experience Platform] within a single HTTP request using streaming ingestion.
 
@@ -25,13 +25,13 @@ This tutorial requires a working understanding of Adobe Experience Platform [!DN
 - [Dateneinbettung - Übersicht](../home.md): Behandelt die Kernkonzepte von [!DNL Experience Platform Data Ingestion]einschließlich Erfassungsmethoden und Data Connectors.
 - [Übersicht](../streaming-ingestion/overview.md)zur Streaming-Erfassung: Arbeitsablauf und Bausteine der Streaming-Erfassung, wie Streaming-Verbindungen, Datasets [!DNL XDM Individual Profile]und [!DNL XDM ExperienceEvent].
 
-Für dieses Tutorial müssen Sie außerdem das Tutorial [Authentifizierung für Adobe Experience ](../../tutorials/authentication.md) abgeschlossen haben, um erfolgreich Aufrufe an Platform-APIs durchführen zu können. [!DNL Platform] Durch Abschließen des Authentifizierungs-Tutorials erhalten Sie den Wert für die Autorisierungs-Kopfzeile, der für alle API-Aufrufe in diesem Tutorial erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
+Für dieses Tutorial müssen Sie außerdem das Tutorial [Authentifizierung für Adobe Experience ](../../tutorials/authentication.md) abgeschlossen haben, um erfolgreich Aufrufe an Platform-APIs durchführen zu können.[!DNL Platform] Durch Abschließen des Authentifizierungs-Tutorials erhalten Sie den Wert für die Autorisierungs-Kopfzeile, der für alle API-Aufrufe in diesem Tutorial erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
 
-- Autorisierung: Träger `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 
 Für alle POST-Anfragen ist eine zusätzliche Kopfzeile erforderlich:
 
-- Inhaltstyp: application/json
+- Content-Type: application/json
 
 ## Aufbauen einer Streaming-Verbindung
 
