@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '1606'
-ht-degree: 8%
+ht-degree: 6%
 
 ---
 
 
 # XDM-System – Übersicht
 
-Normung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform. [!DNL Experience Data Model]Das von Adobe unterstützte  (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Kundenerlebnis-Management zu definieren.
+Normung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für jede Anwendung bereit, die zur Kommunikation mit [!DNL Platform] Diensten verwendet werden kann. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Audiencen durch Segmente definieren und Kundenattribute zu Personalisierungszwecken ausdrücken.
 
@@ -32,7 +32,7 @@ Weitere Informationen zum Schema-Kompositionsmodell, einschließlich Entwurfspri
 
 ### [!DNL Schema Registry] und [!DNL Schema Library]
 
-The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. Der [!DNL Schema Library] enthält branchenübliche Ressourcen, die Ihnen von Adobe zur Verfügung gestellt werden, sowie Ressourcen von [!DNL Experience Platform] Partnern und Anbietern, deren Anwendungen Sie verwenden. Die Benutzeroberfläche und die API der Schema-Registrierung können auch verwendet werden, um neue Schema und Ressourcen zu erstellen und zu verwalten, die für Ihr Unternehmen eindeutig sind.
+The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. Das [!DNL Schema Library] enthält branchenübliche Ressourcen, die Ihnen nach Adobe zur Verfügung gestellt werden, sowie Ressourcen von [!DNL Experience Platform] Partnern und Anbietern, deren Anwendungen Sie verwenden. Die Benutzeroberfläche und die API der Schema-Registrierung können auch verwendet werden, um neue Schema und Ressourcen zu erstellen und zu verwalten, die für Ihr Unternehmen eindeutig sind.
 
 For a comprehensive guide to the major operations available in the [!DNL Schema Registry], see the [Schema Registry developer guide](api/getting-started.md).
 
@@ -77,7 +77,7 @@ Auch wenn nicht alle Ereignis leicht in alle Datenquellen eingeordnet werden kö
 
 Um mit der Erfassung von Daten zu beginnen, [!DNL Experience Platform]wird ein Datensatz mit [!DNL Catalog Service]erstellt. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der zu ingetierenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, [!DNL Experience Platform] wird ein &quot;beobachtetes Schema&quot;abgeleitet, indem Art und Inhalt der erfassten Datenfelder geprüft werden. Die Datensätze werden dann neben den Schemas [!DNL Catalog] und beobachteten Schemas, auf denen sie basieren, in der [!DNL Data Lake] Datenbank nachverfolgt und gespeichert.
 
-For more information on [!DNL Catalog], see the [Catalog Service overview](../catalog/home.md). Weitere Informationen zur Dateneinbettung in der Adobe Experience Platform finden Sie in der Übersicht über die [Dateneinbettung](../ingestion/home.md).
+Weitere Informationen finden Sie [!DNL Catalog]in der Übersicht über den [Katalogdienst](../catalog/home.md). Weitere Informationen zur Dateneinbettung in der Adobe Experience Platform finden Sie in der Übersicht über die [Dateneinbettung](../ingestion/home.md).
 
 ### [!DNL Query Service]
 
@@ -97,7 +97,7 @@ Echtzeit-Customer-Profil bietet ein zentrales Profil für zielgerichtetes und pe
 
 Während [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent] Daten erfasst und verwaltet werden [!DNL Catalog], werden Daten, die für ihre Verwendung aktiviert wurden, [!DNL Real-time Customer Profile] in die Erfassung aufgenommen. Je mehr Interaktionen und Details einbezogen werden, desto robuster werden die einzelnen Profil.
 
-[!DNL XDM Individual Profile] Daten helfen bei der Information und Ermöglichung von Aktionen in allen Kanälen oder bei der Adobe-Lösungsintegration. Wenn Daten zu Verhalten und Interaktion mit einer umfangreichen Geschichte verknüpft werden, werden diese Daten zur Förderung des maschinellen Lernens verwendet. Die [!DNL Real-time Customer Profile] API kann auch verwendet werden, um die Funktionalität von Lösungen von Drittanbietern, CRMs und proprietären Lösungen zu erweitern.
+[!DNL XDM Individual Profile] Daten helfen bei der Information und Ermöglichung von Aktionen in allen Kanal- oder Adoben-Lösungsintegrationen. Wenn diese Daten mit einer umfangreichen Geschichte von Verhaltensdaten und Interaktionsdaten gepaart werden, werden diese Daten zur Förderung des maschinellen Lernens verwendet. Die [!DNL Real-time Customer Profile] API kann auch verwendet werden, um die Funktionalität von Lösungen von Drittanbietern, CRMs und proprietären Lösungen zu erweitern.
 
 Weitere Informationen finden Sie in der Übersicht [zum](../profile/home.md) Echtzeit-Customer-Profil.
 
@@ -105,7 +105,7 @@ Weitere Informationen finden Sie in der Übersicht [zum](../profile/home.md) Ech
 
 Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within [!DNL Experience Platform]. [!DNL Data Science Workspace] ermöglicht es Datenwissenschaftlern, Rezepte auf Basis von XDM Individual [!DNL Profile] und [!DNL XDM ExperienceEvent] Daten über Kunden und ihre Aktivitäten zu erstellen, wodurch Prognosen wie Kaufneigung und empfohlene Angebot erleichtert werden, die der Einzelne schätzen und nutzen kann.
 
-Mithilfe [!DNL Data Science Workspace]von Daten können Wissenschaftler auf einfache Weise intelligente Dienste-APIs erstellen, die auf maschinellem Lernen basieren. Diese Dienste arbeiten mit anderen Adobe-Lösungen zusammen, einschließlich Adobe Target und Adobe Analytics Cloud, um Ihnen bei der Automatisierung personalisierter, gezielter digitaler Erlebnisse zu helfen.
+Mithilfe [!DNL Data Science Workspace]von Daten können Wissenschaftler auf einfache Weise intelligente Dienste-APIs erstellen, die auf maschinellem Lernen basieren. Diese Dienste arbeiten mit anderen Adoben zusammen, einschließlich Adobe Target und Adobe Analytics Cloud, um Ihnen bei der Automatisierung personalisierter, zielgerichteter digitaler Erlebnisse zu helfen.
 
 Weitere Informationen zur Verwendung von [!DNL Experience Platform] Daten zur Erzielung von Einblicken finden Sie in der Übersicht über den [Data Science Workspace](../data-science-workspace/home.md).
 
