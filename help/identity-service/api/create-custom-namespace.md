@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen eines benutzerspezifischen Namensraums
+title: Benutzerdefinierten Namespace erstellen
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 5%
+ht-degree: 13%
 
 ---
 
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Lernprogramm fort, um die native ID einer Identität zu [Liste.](./list-native-id.md)
+Proceed to the next tutorial to [list the native ID of an identity](./list-native-id.md)
