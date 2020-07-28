@@ -14,11 +14,11 @@ ht-degree: 21%
 
 # Zieltypen und Kategorien
 
-Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Adobe Echtzeit-Zielen für die Kundendatenplattform zu verstehen.
+Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Adobe Echtzeit-Ziel-Kundendatenplattform zu verstehen.
 
 ## Zieltypen
 
-In der Adobe Echtzeit-Kundendatenplattform wird zwischen zwei Zieltypen unterschieden: Verbindungen und Erweiterungen. Es gibt zwei Arten von Verbindungszielen: Profil Export-Ziele und Segmentexport-Ziele.
+In Adobe Echtzeit-Kundendatenplattform unterscheiden wir zwischen zwei Zieltypen - Verbindungen und Erweiterungen. Es gibt zwei Arten von Verbindungszielen: Profil Export-Ziele und Segmentexport-Ziele.
 
 ![Zieltypen](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -26,13 +26,13 @@ In der Adobe Echtzeit-Kundendatenplattform wird zwischen zwei Zieltypen untersch
 
 ### Verbindungen
 
-**[!UICONTROL Profil-Export]** - und **[!UICONTROL Segmentexport]** -Ziele in Adobe Echtzeit-Kundendatenplattform erfassen Ereignis-Daten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundendaten-Profil](/help/profile/home.md)zu bilden, Segmentierung anzuwenden und Segmente und qualifizierte Profil an Ziele zu exportieren.
+**[!UICONTROL Profil-Export]** - und **[!UICONTROL Segmentexport]** -Ziele in Adobe Echtzeit-Kundendatenplattform erfassen Ereignis-Daten, kombinieren Sie diese mit anderen Datenquellen, um das [Echtzeit-Kundenkundensegment](/help/profile/home.md)zu bilden, Segmentierung anzuwenden und Segmente und qualifizierte Profil an Ziele zu exportieren.
 
 <br> 
 
 #### Profilexportziele
 
-Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält. Diese Ziele nutzen Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Das Ziel [der](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 Cloud-Datenspeicherung ist ein Beispiel dafür, wo Sie Dateien mit Profil-Exporten hinterlegen können.
+Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält. Diese Ziele nutzen Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Das Ziel [der](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 Cloud-Datenspeicherung ist ein Beispiel dafür, wo Sie Dateien mit Profil-Exporten ablegen können.
 
 #### Segmentexportziele
 
@@ -48,7 +48,7 @@ Das folgende Video führt Sie durch die Besonderheiten der beiden Zieltypen:
 
 ### Erweiterungen
 
-Adobe Echtzeit-CDP nutzt die Leistungsfähigkeit und Flexibilität von Experience Platform Launch, um Launch Extensions in die CDP-Oberfläche von Adobe in Echtzeit einzubinden.
+Adobe Echtzeit-CDP nutzt die Leistungsfähigkeit und Flexibilität von Experience Platform Launch, um Launch-Erweiterungen in die CDP-Benutzeroberfläche der Adobe in Echtzeit einzuschließen.
 
 >[!TIP]
 >
