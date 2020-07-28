@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Streaming-Erfassung für Adobe Experience Platform – Übersicht
+title: Streaming-Erfassung in Adobe Experience Platform – Übersicht
 topic: overview
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
@@ -12,7 +12,7 @@ ht-degree: 32%
 ---
 
 
-# Übersicht über Streaming-Erfassung
+# Streaming-Erfassung – Übersicht
 
 Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real-time.
 
