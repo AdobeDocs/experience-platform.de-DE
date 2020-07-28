@@ -24,11 +24,11 @@ ht-degree: 7%
 
 Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs] Datenspeicherung erstellen, um Daten aus der Adobe Experience Platform zu streamen.
 
-* Weitere Informationen finden Sie [!DNL Azure Event Hubs]in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
+* For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Informationen zum Herstellen einer Verbindung mit [!DNL Azure Event Hubs] API-Aufrufen finden Sie im [Streaming-Ziel-API-Lernprogramm](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
-* Informationen zum Herstellen einer Verbindung mit der [!DNL Azure Event Hubs] CDP-Benutzeroberfläche von Adobe in Echtzeit finden Sie in den folgenden Abschnitten.
+* Informationen zum Herstellen einer Verbindung mit [!DNL Azure Event Hubs] der CDP-Benutzeroberfläche der Adobe in Echtzeit finden Sie in den folgenden Abschnitten.
 
-![AWS-Kinesis in der Benutzeroberfläche](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
+![AWS Kinesis in der Benutzeroberfläche](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
 
 ## Nutzungsszenarien {#use-cases}
 
@@ -108,5 +108,5 @@ Ihre exportierten [!DNL Experience Platform] Daten werden im JSON- [!DNL Azure E
 >[!MORELIKETHIS]
 >
 >* [Verbindung zu Azurblauen Ereignis-Hubs und Aktivierung von Daten mithilfe von API-Aufrufen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
->* [AWS-Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+>* [AWS Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md)
