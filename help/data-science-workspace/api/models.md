@@ -7,18 +7,18 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '821'
-ht-degree: 4%
+ht-degree: 66%
 
 ---
 
 
 # Modelle
 
-Ein Modell ist ein Beispiel für ein maschinelles Lernrezept, das mithilfe von historischen Daten und Konfigurationen für die Lösung eines Geschäftsfalls trainiert wird.
+Ein Modell ist eine Instanz eines Rezepts für maschinelles Lernen, das mithilfe von historischen Daten und Konfigurationen dazu trainiert wird, eine geschäftliche Fragestellung zu lösen.
 
-## Eine Liste von Modellen abrufen
+## Abrufen einer Liste von Modellen
 
-Sie können eine Liste von Modelldetails abrufen, die zu allen Modellen gehören, indem Sie eine GET-Anforderung an /models durchführen. Standardmäßig bestellt sich diese Liste vom ältesten erstellten Modell und beschränkt die Ergebnisse auf 25. Sie können die Abfragen filtern, indem Sie einige Parameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste mit Details zu den verfügbaren Modellen mittels GET-Anfrage an „/models“ abrufen. Standardmäßig wird diese Liste beginnend beim ältesten erstellten Modell sortiert und ist auf 25 Ergebnisse beschränkt. Sie können die Ergebnisse durch Angabe von Abfrageparametern filtern. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihrer Modelle einschließlich der einzelnen eindeutigen Modellkennung (`id`) enthält.
+Bei erfolgreicher Antwort wird eine Payload mit Details zu Ihren Modellen einschließlich der eindeutigen Kennung (`id`) jedes einzelnen Modells zurückgegeben.
 
 ```json
 {
@@ -93,14 +93,14 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihrer Mode
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die dem Modell entsprechende ID. |
-| `modelArtifactUri` | Ein URI, der angibt, wo das Modell gespeichert ist. Der URI endet mit dem `name` Wert für das Modell. |
+| `id` | Die dem Modell zugehörige ID. |
+| `modelArtifactUri` | Ein URI, der angibt, wo das Modell gespeichert ist. Der URI endet mit dem Wert für `name` des Modells. |
 | `experimentId` | Eine gültige Experiment-ID. |
-| `experimentRunId` | Eine gültige Experimentausführung-ID. |
+| `experimentRunId` | Eine gültige Experimentablauf-ID. |
 
-## Abrufen eines bestimmten Modells
+## Abrufen eines einzelnen Modells
 
-Sie können eine Liste von Modelldetails abrufen, die zu einem bestimmten Modell gehören, indem Sie eine GET-Anforderung ausführen und eine gültige Modell-ID im Anforderungspfad angeben. Um die Ergebnisse zu filtern, können Sie die Parameter für die Abfrage im Anforderungspfad angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste mit Details zu einem einzelnen Modell Modelldetails abrufen, indem Sie eine GET-Anfrage unter Angabe einer gültigen Modell-ID im Anfragepfad ausführen. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -112,11 +112,11 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{MODEL_ID}` | Die Kennung des trainierten oder veröffentlichten Modells. |
-| `{EXPERIMENT_RUN_ID}` | Der Bezeichner des Experiments, das ausgeführt wird. |
+| `{EXPERIMENT_RUN_ID}` | Die Kennung des Experiment-Laufs. |
 
 **Anfrage**
 
-Die folgende Anforderung enthält eine Abfrage und ruft eine Liste geschulter Modelle ab, die dieselbe experimentRunID ({EXPERIMENT_RUN_ID}) gemeinsam verwenden.
+Die nachfolgende Anfrage enthält eine Abfrage und ruft eine Liste trainierter Modelle ab, die dieselbe experimentRunID ({EXPERIMENT_RUN_ID}) verwenden.
 
 ```shell
 curl -X GET \
@@ -129,7 +129,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihres Modells einschließlich der eindeutigen Modellkennung (`id`) enthält.
+Bei erfolgreicher Antwort wird eine Payload mit Details zu Ihrem Modell einschließlich der eindeutigen Kennung (`id`) des Modells zurückgegeben.
 
 ```json
 {
@@ -157,14 +157,14 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihres Mode
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die dem Modell entsprechende ID. |
-| `modelArtifactUri` | Ein URI, der angibt, wo das Modell gespeichert ist. Der URI endet mit dem `name` Wert für das Modell. |
+| `id` | Die dem Modell zugehörige ID. |
+| `modelArtifactUri` | Ein URI, der angibt, wo das Modell gespeichert ist. Der URI endet mit dem Wert für `name` des Modells. |
 | `experimentId` | Eine gültige Experiment-ID. |
-| `experimentRunId` | Eine gültige Experimentausführung-ID. |
+| `experimentRunId` | Eine gültige Experimentablauf-ID. |
 
 ## Vorab generiertes Modell registrieren {#register-a-model}
 
-Sie können ein vorab erstelltes Modell registrieren, indem Sie eine POST-Anforderung an den `/models` Endpunkt senden. Um Ihr Modell registrieren zu können, müssen die `modelArtifact` Datei- und `model` Eigenschaftswerte im Hauptteil der Anforderung enthalten sein.
+You can register a pre-generated Model by making a POST request to the `/models` endpoint. Um Ihr Modell registrieren zu können, müssen die `modelArtifact` Datei- und `model` Eigenschaftswerte im Hauptteil der Anforderung enthalten sein.
 
 **API-Format**
 
@@ -174,7 +174,7 @@ POST /models
 
 **Anfrage**
 
-Der folgende POST-Test enthält die erforderlichen `modelArtifact` Datei- und `model` Eigenschaftenwerte. Weitere Informationen zu diesen Werten finden Sie in der unten stehenden Tabelle.
+Die folgende POST enthält die erforderlichen `modelArtifact` Datei- und `model` Eigenschaftenwerte. Weitere Informationen zu diesen Werten finden Sie in der unten stehenden Tabelle.
 
 ```shell
 curl -X POST \
@@ -197,7 +197,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihres Modells einschließlich der eindeutigen Modellkennung (`id`) enthält.
+Bei erfolgreicher Antwort wird eine Payload mit Details zu Ihrem Modell einschließlich der eindeutigen Kennung (`id`) des Modells zurückgegeben.
 
 ```json
 {
@@ -213,16 +213,16 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihres Mode
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die dem Modell entsprechende ID. |
-| `modelArtifactUri` | Ein URI, der angibt, wo das Modell gespeichert ist. Der URI endet mit dem `id` Wert für Ihr Modell. |
+| `id` | Die dem Modell zugehörige ID. |
+| `modelArtifactUri` | Ein URI, der angibt, wo das Modell gespeichert ist. The URI ends with the `id` value for your model. |
 
-## Modell nach ID aktualisieren
+## Aktualisieren des Modells nach ID
 
-Sie können ein vorhandenes Modell aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anforderung überschreiben, die die ID des Zielgruppe-Modells im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
+Sie können ein vorhandenes Modell aktualisieren, indem Sie seine Eigenschaften anhand einer PUT-Anfrage überschreiben, in der Sie die ID des entsprechenden Modells im Anfragepfad sowie eine JSON-Payload mit aktualisierten Eigenschaften angeben.
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum Abrufen des Modells nach ID auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
+> Um sicherzustellen, dass diese PUT-Anfrage erfolgreich ausgeführt wird, wird empfohlen, das Modell zunächst mittels GET-Anfrage über seine ID abzurufen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 **API-Format**
 
@@ -261,7 +261,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast mit den aktualisierten Details des Experiments zurück.
+Bei erfolgreicher Antwort wird eine Payload mit den aktualisierten Details des Experiments zurückgegeben.
 
 ```json
 {
@@ -279,9 +279,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den aktualisierten Details des 
     }
 ```
 
-## Modell nach ID löschen
+## Löschen des Modells nach ID
 
-Sie können ein einzelnes DELETE löschen, indem Sie eine Anforderung ausführen, die die ID des Zielgruppe-Modells im Anforderungspfad enthält.
+Sie können ein einzelnes Modell löschen, indem Sie eine DELETE-Anfrage ausführen, in der Sie die ID des entsprechenden Modells im Anfragepfad angeben.
 
 **API-Format**
 
@@ -306,7 +306,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast mit dem Status 200 zurück, die das Löschen des Modells bestätigt.
+Bei erfolgreicher Antwort wird eine Payload mit Status-Code 200 zurückgegeben, der das Löschen des Modells bestätigt.
 
 ```json
 {
@@ -373,7 +373,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein JSON-Objekt mit de
 
 ## Abrufen einer Liste von Transkodierungen für ein Modell {#retrieve-transcoded-model-list}
 
-Sie können eine Liste von Transkodierungen abrufen, die an einem Modell durchgeführt wurden, indem Sie eine GET-Anforderung mit Ihrem `{MODEL_ID}`Modell durchführen.
+Sie können eine Liste von Transkodierungen abrufen, die auf einem Modell ausgeführt wurden, indem Sie eine GET mit Ihrem `{MODEL_ID}`Modell durchführen.
 
 **API-Format**
 
@@ -431,9 +431,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein JSON-Objekt mit ei
 }
 ```
 
-## Abrufen eines bestimmten transkodierten Modells {#retrieve-transcoded-model}
+## Retrieve a specific transcoded Model {#retrieve-transcoded-model}
 
-Sie können ein bestimmtes transkodiertes Modell abrufen, indem Sie eine GET-Anforderung mit Ihrer ID `{MODEL_ID}` und der ID eines transkodierten Modells ausführen.
+Sie können ein bestimmtes transkodiertes Modell abrufen, indem Sie eine GET mit der ID `{MODEL_ID}` und der ID eines transkodierten Modells durchführen.
 
 **API-Format**
 
