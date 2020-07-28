@@ -31,7 +31,7 @@ Diese Entscheidungen lassen sich wie folgt zusammenfassen:
 1. **Habe ich meine Daten richtig gekennzeichnet?**
    * Die Daten müssen ordnungsgemäß beschriftet werden, damit der Dienst feststellen kann, welche Felder während der Datenschutzaufträge aufgerufen oder gelöscht werden sollen. Weitere Informationen finden Sie im Abschnitt zu [Kennzeichnungsdaten](#label) .
 1. **Weiß ich, an welche IDs ich senden soll[!DNL Privacy Service]?**
-   * Beim Senden von Datenschutzanfragen müssen individuelle Kunden-IDs für bestimmte Adobe-Anwendungen angegeben werden. Weitere Informationen finden Sie in den Abschnitten zur [Bereitstellung von Identitätsdaten](#identity) und [zur Anforderung](#requests) des Datenschutzes.
+   * Beim Senden von Datenschutzanfragen müssen individuelle Kunden-IDs für bestimmte Adoben angegeben werden. Weitere Informationen finden Sie in den Abschnitten zur [Bereitstellung von Identitätsdaten](#identity) und [zur Anforderung](#requests) des Datenschutzes.
 1. **Wie verfolge ich meine Datenschutzaufträge?**
    * Nachdem Sie Datenschutzanforderungen gestellt haben, stehen Ihnen verschiedene Optionen zur Verfolgung ihres Status und ihrer Ergebnisse zur Verfügung. Weitere Informationen finden Sie im Abschnitt zur [Überwachung von Datenschutzaufträgen](#monitor) .
 
@@ -55,15 +55,15 @@ Zusätzlich zu den gesetzlichen Bestimmungen sollten bei diesen Entscheidungen a
 
 ### Label data for privacy requests {#label}
 
-Abhängig von den [!DNL Experience Cloud] Anwendungen, die Sie verwenden, müssen Sie die spezifischen Datenfelder beschriften, auf die bei Datenschutzanforderungen zugegriffen oder gelöscht werden soll. Das Verfahren zur Kennzeichnung von Daten ist je nach Anwendung unterschiedlich. Informationen zum Beschreiben von Daten für jede unterstützte Adobe-Anwendung finden Sie im Dokument zu [Experience Cloud-Anwendungen](./experience-cloud-apps.md).
+Abhängig von den [!DNL Experience Cloud] Anwendungen, die Sie verwenden, müssen Sie die spezifischen Datenfelder beschriften, auf die bei Datenschutzanforderungen zugegriffen oder gelöscht werden soll. Das Verfahren zur Kennzeichnung von Daten ist je nach Anwendung unterschiedlich. Informationen zum Beschreiben von Daten für jede unterstützte Adobe finden Sie im Dokument zu [Experience Cloud-Anwendungen](./experience-cloud-apps.md).
 
 ### Bestimmen Sie die Identitätsdaten, an die gesendet werden soll. [!DNL Privacy Service] {#identity}
 
 Damit eine Datenschutzanforderung eines Kunden verarbeitet [!DNL Privacy Service] werden kann, muss in der Anforderung selbst mindestens ein eindeutiger Identitätswert für diesen Kunden angegeben werden. Ein eindeutiger Identitätswert ist jede Information, die zur Identifizierung einer Person und ihrer in Ihren [!DNL Experience Cloud] Datenspeichern gespeicherten personenbezogenen Daten verwendet werden kann. [!DNL Privacy Service] verwendet diese Identitätsinformationen, um die personenbezogenen Daten des Kunden entsprechend der Art der Anforderung zu finden und zu verarbeiten (Zugriff, Löschen oder Ausschluss).
 
-Je nach den [!DNL Experience Cloud] Anwendungen, die Ihr CRM-System nutzt, variieren die Art und Anzahl der Identitätswerte, die Sie für jeden Kunden angeben müssen. Einige Anwendungen verwenden ihre eigenen internen Kunden-ID-Werte (z. B. Adobe Target-IDs), während andere auf globalen IDs von Adobe [!DNL Experience Cloud Identity Service] (ECID) basieren, die die Aktivität von Kunden in allen [!DNL Experience Cloud] Anwendungen verfolgen. Darüber hinaus können allgemeine persönliche Informationen wie eine E-Mail-Adresse oder Telefonnummer auch als gültige Identitätsdaten dienen.
+Je nach den [!DNL Experience Cloud] Anwendungen, die Ihr CRM-System nutzt, variieren die Art und Anzahl der Identitätswerte, die Sie für jeden Kunden angeben müssen. Einige Anwendungen verwenden ihre eigenen internen Kunden-ID-Werte (z. B. Adobe Target-IDs), während andere auf globalen IDs aus Adobe [!DNL Experience Cloud Identity Service] (ECID) basieren, die die Aktivität von Kunden in allen [!DNL Experience Cloud] Anwendungen verfolgen. Darüber hinaus können allgemeine persönliche Informationen wie eine E-Mail-Adresse oder Telefonnummer auch als gültige Identitätsdaten dienen.
 
-Das Dokument zu [Identitätsdaten für Datenschutzanfragen](./identity-data.md) enthält detailliertere Informationen zu den Arten von Identitätsinformationen, die für [!DNL Privacy Service]die Verwendung zugelassen werden. Das Dokument bietet außerdem Anleitungen dazu, wie Adobe-Technologien genutzt werden können, um bei der Interaktion mit Ihrer Website die entsprechenden Identitätsinformationen von Ihren Kunden abzurufen und diese Daten an [!DNL Privacy Service] API-Anforderungen zu senden.
+Das Dokument zu [Identitätsdaten für Datenschutzanfragen](./identity-data.md) enthält detailliertere Informationen zu den Arten von Identitätsinformationen, die für [!DNL Privacy Service]die Verwendung zugelassen werden. Das Dokument bietet außerdem Anleitungen dazu, wie Adoben genutzt werden können, um die entsprechenden Identitätsinformationen von Ihren Kunden bei der Interaktion mit Ihrer Website effektiv abzurufen und diese Daten an [!DNL Privacy Service] API-Anforderungen zu senden.
 
 ### Beginn, die Datenschutzanforderungen stellen {#requests}
 
@@ -95,7 +95,7 @@ Sobald Sie Datenschutzaufträge abgeschlossen haben, stehen Ihnen verschiedene O
 | --- | --- |
 | [!DNL Privacy Service] Benutzeroberfläche | Die [!DNL Privacy Service] Benutzeroberfläche bietet ein Dashboard zur Überwachung, mit dem Sie eine visuelle Darstellung des Status aller aktiven Anforderungen Ansicht haben. See the [Privacy Service user guide](ui/overview.md) for more information. |
 | [!DNL Privacy Service] API | Sie können den Status von Datenschutzaufträgen programmgesteuert überwachen, indem Sie die von der [!DNL Privacy Service] API bereitgestellten Lookup-Endpunkte verwenden. Ausführliche Anweisungen zur Verwendung der API finden Sie im [Privacy Service Developer Guide](./api/getting-started.md) . |
-| [!DNL Privacy Events] | [!DNL Privacy Events] nutzen Sie Adobe-I/O-Ereignis, die an einen konfigurierten Web-Haken gesendet werden, um eine effiziente Auftragsabwicklungsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenschutzrichtlinien-Ereignissen](./privacy-events.md) . |
+| [!DNL Privacy Events] | [!DNL Privacy Events] nutzen Sie Adobe-I/O-Ereignis, die an einen konfigurierten Webhaken gesendet werden, um eine effiziente Auftragsabwicklungsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenschutzrichtlinien-Ereignissen](./privacy-events.md) . |
 
 ## Nächste Schritte
 
