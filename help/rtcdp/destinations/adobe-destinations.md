@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -19,12 +19,12 @@ Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendat
 * [Adobe Advertising Cloud-Erweiterung](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Adobe Analytics-Erweiterung](/help/rtcdp/destinations/adobe-analytics-extension.md)
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md)
-* [Adobe Livefyre Extension](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+* [Adobe Livefyre-Erweiterung](/help/rtcdp/destinations/adobe-livefyre-extension.md)
 * [Adobe Media Analytics für Audio und Video – Erweiterung](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
 * [Adobe Target-Erweiterung](/help/rtcdp/destinations/adobe-target-extension.md)
 * [Adobe Target v2-Erweiterung](/help/rtcdp/destinations/adobe-target-v2-extension.md)
 * [Audience Manager DIL-Erweiterung](/help/rtcdp/destinations/aam-dil-extension.md)
-* [Experience Cloud ID-Diensterweiterung](/help/rtcdp/destinations/adobe-ecid-extension.md)
+* [Experience Cloud ID Service-Erweiterung](/help/rtcdp/destinations/adobe-ecid-extension.md)
 * [Marketo-Erweiterung](/help/rtcdp/destinations/marketo-extension.md)
 * [Marketo Munchkin-Erweiterung](/help/rtcdp/destinations/marketo-munchkin-extension.md)
-* [Marketo Web Personalization Extension](/help/rtcdp/destinations/marketo-web-personalization-extension.md)
+* [Marketo Web Personalization-Erweiterung](/help/rtcdp/destinations/marketo-web-personalization-extension.md)
