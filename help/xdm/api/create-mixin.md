@@ -102,7 +102,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Payload mit den Details des neu erstellten Mixins zurückgegeben, einschließlich der Werte `$id`, `meta:altId`und `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
+Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Payload mit den Details des neu erstellten Mixins zurückgegeben, einschließlich der Werte `$id`, `meta:altId` und `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
