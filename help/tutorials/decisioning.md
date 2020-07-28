@@ -14,7 +14,7 @@ ht-degree: 41%
 
 # Get started with [!DNL Decisioning Service]
 
-[!DNL Decisioning Service]Der bietet die Möglichkeit, in Anwendungen, die auf Adobe Experience Platform ausgeführt werden, personalisierte, optimierte und orchestrierte Erlebnisse zu erstellen. Using [!DNL Decisioning Service], you can determine the best option from a set of available choices. Diese Optionen, auch als Alternativen bezeichnet, könnten Angebote, Produktempfehlungen, Inhaltskomponenten für ein Web-Erlebnis, Gesprächsskripte und zu ergreifende Maßnahmen sein. Weitere Informationen finden Sie unter [Entscheidungsdienst – Überblick](../decisioning-service/home.md).
+[!DNL Decisioning Service] bietet die Möglichkeit, personalisierte, optimierte und orchestrierte Erlebnisse in Anwendungen zu erstellen, die in Adobe Experience Platform ausgeführt werden. Using [!DNL Decisioning Service], you can determine the best option from a set of available choices. Diese Optionen, auch als Alternativen bezeichnet, könnten Angebote, Produktempfehlungen, Inhaltskomponenten für ein Web-Erlebnis, Gesprächsskripte und zu ergreifende Maßnahmen sein. Weitere Informationen finden Sie unter [Decisioning Service – Übersicht](../decisioning-service/home.md).
 
 ## Arbeiten mit [!DNL Decisioning Service] Laufzeit
 
