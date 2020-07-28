@@ -14,7 +14,7 @@ ht-degree: 12%
 
 # Datums- und Uhrzeitfunktionen
 
-Datums- und Uhrzeitfunktionen werden verwendet, um Datums- und Uhrzeitvorgänge für Werte innerhalb [!DNL Profile Query Language] (PQL) durchzuführen. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
+Datums- und Uhrzeitfunktionen werden verwendet, um Datums- und Uhrzeitvorgänge für Werte innerhalb [!DNL Profile Query Language] (PQL) durchzuführen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
 
 ## Aktueller Monat
 
@@ -191,4 +191,4 @@ person.birthday occurs = 3 days before today
 
 ## Nächste Schritte
 
-Jetzt, da Sie Informationen zu Datums- und Uhrzeitfunktionen erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
+Jetzt, da Sie Informationen zu Datums- und Uhrzeitfunktionen erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
