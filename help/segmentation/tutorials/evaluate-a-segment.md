@@ -18,7 +18,7 @@ In diesem Dokument finden Sie eine Anleitung zur Bewertung von Segmenten und zum
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die beim Erstellen von Segmenten für die Audience erforderlich sind. Bevor Sie mit dem Tutorial beginnen, lesen Sie bitte die Dokumentation für folgende Dienste:
+Dieses Lernprogramm erfordert ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die beim Erstellen von Segmenten für die Audience erforderlich sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [!DNL Adobe Experience Platform Segmentation Service](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus [!DNL Real-time Customer Profile] Daten.
@@ -75,7 +75,7 @@ Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Leitf
 
 ### Zeitplanaktualisierung
 
-Die Zeitplanung kann aktualisiert werden, indem eine PATCH-Anforderung an den `/config/schedules` Endpunkt gesendet wird und die ID des Zeitplans im Pfad enthalten ist.
+Die Zeitplanung kann aktualisiert werden, indem eine PATCH-Anforderung an den `/config/schedules` Endpunkt gesendet und die ID des Zeitplans in den Pfad aufgenommen wird.
 
 Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Leitfaden zum Endpunkt &quot; [Zeitpläne&quot;.](../api/schedules.md#update-schedule)
 
@@ -94,7 +94,7 @@ Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Handb
 
 ### Status des Segmentauftrags suchen
 
-Sie können den `id` für einen bestimmten Segmentauftrag verwenden, um eine Nachschlageanforderung (GET) durchzuführen, um den aktuellen Auftragsstatus Ansicht.
+Sie können den `id` für einen bestimmten Segmentauftrag verwenden, um eine Suchanfrage (GET) durchzuführen, um den aktuellen Auftragsstatus Ansicht.
 
 Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Handbuch [Segmentauftragsendpunkt](../api/segment-jobs.md#get)
 
@@ -216,13 +216,13 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die schreibgeschützte, sy
 
 ### Generieren von Profilen für Audiencen-Mitglieder {#generate-profiles}
 
-Sobald Sie über einen Datensatz mit Vereinigung-Speicherung verfügen, können Sie einen Exportauftrag erstellen, um die Audiencen im Datensatz zu erhalten, indem Sie eine POST-Anforderung an den `/export/jobs` Endpunkt in der [!DNL Real-time Customer Profile] -API senden und die Dataset-ID sowie die Segmentinformationen für die zu exportierenden Segmente angeben.
+Sobald Sie über einen Datensatz mit Vereinigung-Speicherung verfügen, können Sie einen Exportauftrag erstellen, um die Audiencen im Datensatz zu erhalten, indem Sie eine Anforderung an den `/export/jobs` Endpunkt in der [!DNL Real-time Customer Profile] -API stellen und die Dataset-ID sowie die Segmentinformationen für die zu exportierenden Segmente angeben.
 
 Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Handbuch [für Exportaufträge](../api/export-jobs.md#create)
 
 ### Überwachung des Exportfortschritts
 
-Als Exportauftragsprozess können Sie den Status überwachen, indem Sie eine GET-Anforderung an den `/export/jobs` Endpunkt senden und den Pfad `id` des Exportauftrags einschließen. Der Exportauftrag ist abgeschlossen, sobald das `status` Feld den Wert &quot;SUCCEEDED&quot;zurückgibt.
+Als Exportauftragsprozess können Sie den Status überwachen, indem Sie eine GET an den `/export/jobs` Endpunkt anfordern und den Pfad `id` des Exportauftrags einschließen. Der Exportauftrag ist abgeschlossen, sobald das `status` Feld den Wert &quot;SUCCEEDED&quot;zurückgibt.
 
 Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Handbuch [für Exportaufträge](../api/export-jobs.md#get)
 
