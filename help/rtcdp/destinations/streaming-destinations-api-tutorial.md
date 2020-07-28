@@ -12,13 +12,13 @@ ht-degree: 61%
 ---
 
 
-# Stellen Sie eine Verbindung zu Streaming-Zielen her und aktivieren Sie Daten in der Echtzeit-Kundendatenplattform von Adobe mithilfe von APIs
+# Stellen Sie eine Verbindung zu Streaming-Zielen her und aktivieren Sie Daten in der Echtzeit-Kundendatenplattform der Adobe mithilfe von APIs
 
 >[!NOTE]
 >
->Die CDP-Dateien [!DNL Amazon Kinesis] und die [!DNL Azure Event Hubs] Ziele in Adobe Echtzeit sind derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
+>Die [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] Ziele in Adobe Echtzeit-CDP sind derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
 
-Dieses Lernprogramm zeigt, wie Sie mit API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platformen herstellen, eine Verbindung zu einem Streaming Cloud-Datenspeicherung-Ziel herstellen ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) oder [Azurblauer Ereignis-Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten zu Ihrem neu erstellten Ziel aktivieren können.
+In diesem Lernprogramm wird gezeigt, wie Sie mit API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platformen herstellen, eine Verbindung zu einem Streaming Cloud-Datenspeicherung-Ziel herstellen ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) - oder [Azurblauer Ereignis-Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten zu Ihrem neu erstellten Ziel aktivieren können.
 
 Dieses Lernprogramm verwendet das [!DNL Amazon Kinesis] Ziel in allen Beispielen, aber die Schritte sind für [!DNL Azure Event Hubs]identisch.
 
@@ -32,7 +32,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] ist das Datensatzsystem für die Datenposition und -linie innerhalb der Experience Platform.
-* [Sandbox-Umgebungen](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen für die Entwicklung und Erweiterung von Anwendungen für digitale Erlebnisse unterteilen.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie zur Aktivierung von Daten an Streaming-Ziele in Adobe Echtzeit-CDP kennen müssen.
 
@@ -43,13 +43,13 @@ Um die Schritte in dieser Anleitung abzuschließen, benötigen Sie die folgenden
 * Für [!DNL Amazon Kinesis] Verbindungen: `accessKeyId`, `secretKey`oder `region` oder `connectionUrl`
 * Für [!DNL Azure Event Hubs] Verbindungen: `sasKeyName`, `sasKey`, `namespace`
 
-### Lesehilfe für Beispiel-API-Aufrufe {#reading-sample-api-calls}
+### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
 
 ### Werte für erforderliche und optionale Kopfzeilen sammeln {#gather-values}
 
-Machen Sie sich über das [Tutorial zur Authentifizierung](/help/tutorials/authentication.md) zunächst damit vertraut, wie Sie Aufrufe auf Platform-APIs ausführen. Im Rahmen des Tutorials zur Authentifizierung werden die für Aufrufe an alle Experience Platform-APIs zu verwendenden Werte im Einzelnen erläutert. Dazu gehören:
+Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](/help/tutorials/authentication.md) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -60,7 +60,7 @@ Ressourcen in Experience Platform lassen sich in spezifischen virtuellen Sandbox
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NHinweis]
->Weiterführende Informationen zu Sandboxes in Experience Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in Experience Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
@@ -261,12 +261,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID, die Sie im Schritt [Liste der verfügbaren Ziele anfordern](#get-the-list-of-available-destinations) erhalten haben.
 * `{AUTHENTICATION_CREDENTIALS}`: Geben Sie den Namen Ihres Streaming-Ziels ein, z. B.: `Amazon Kinesis authentication credentials` oder `Azure Event Hubs authentication credentials`.
-* `{ACCESS_ID}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Ihre Zugriffs-ID für Ihren Amazon Kinesis Datenspeicherung-Speicherort.
-* `{SECRET_KEY}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Ihr geheimer Schlüssel für Ihre Amazon Kinesis Datenspeicherung.
-* `{REGION}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Die Region in Ihrem [!DNL Amazon Kinesis] Konto, in der Adobe Echtzeit-CDP Ihre Daten streamen wird.
+* `{ACCESS_ID}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Ihre Zugriffs-ID für Ihren Amazon Kinesis Datenspeicherung-Standort.
+* `{SECRET_KEY}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Ihr Geheimschlüssel für Ihre Amazon Kinesis Datenspeicherung Position.
+* `{REGION}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Die Region in Ihrem [!DNL Amazon Kinesis] Konto, in der CDP-Daten in Echtzeit von der Adobe gestreamt werden.
 * `{SAS_KEY_NAME}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie den Namen Ihres SAS-Schlüssels ein. Informationen zur Authentifizierung mit [!DNL Azure Event Hubs] SAS-Schlüsseln finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * `{SAS_KEY}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie Ihren SAS-Schlüssel ein. Informationen zur Authentifizierung mit [!DNL Azure Event Hubs] SAS-Schlüsseln finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{EVENT_HUB_NAMESPACE}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie den [!DNL Azure Event Hubs] Namensraum ein, in dem Adobe Echtzeit-CDP Ihre Daten streamen soll. Weitere Informationen finden Sie unter Ereignis-Hubs-Namensraum [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) erstellen in der [!DNL Microsoft] Dokumentation.
+* `{EVENT_HUB_NAMESPACE}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie den [!DNL Azure Event Hubs] Namensraum ein, in dem die Adobe Echtzeit-CDP Ihre Daten streamen soll. Weitere Informationen finden Sie unter Ereignis-Hubs-Namensraum [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) erstellen in der [!DNL Microsoft] Dokumentation.
 
 **Antwort**
 
@@ -319,7 +319,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikation, die Sie im Schritt [Liste der verfügbaren Ziele abrufen](#get-the-list-of-available-destinations) erhalten haben.
 * `{NAME_OF_DATA_STREAM}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Geben Sie den Namen Ihres vorhandenen Datenstroms in Ihrem [!DNL Amazon Kinesis] Konto an. Adobe Echtzeit-CDP exportiert Daten in diesen Stream.
 * `{REGION}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Die Region in Ihrem Amazon Kinesis-Konto, in der Adobe Echtzeit-CDP Ihre Daten streamen wird.
-* `{EVENT_HUB_NAME}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie den [!DNL Azure Event Hub] Namen ein, unter dem Adobe Echtzeit-CDP Ihre Daten streamen soll. Weitere Informationen finden Sie unter Ereignis-Hub [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) erstellen in der [!DNL Microsoft] Dokumentation.
+* `{EVENT_HUB_NAME}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie den [!DNL Azure Event Hub] Namen ein, unter dem CDP-Daten in Echtzeit von der Adobe gestreamt werden. Weitere Informationen finden Sie unter Ereignis-Hub [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) erstellen in der [!DNL Microsoft] Dokumentation.
 
 **Antwort**
 
