@@ -22,7 +22,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 * [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
 * [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Sandbox-Umgebungen](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen für die Entwicklung und Erweiterung von Anwendungen für digitale Erlebnisse unterteilen.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ## Erstellen einer Quellverbindung mit Adobe Analytics
 
@@ -30,7 +30,7 @@ Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe E
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie &quot; *Adobe-Anwendungen* &quot;die Option &quot; **[!UICONTROL Adobe Analytics]** &quot;, um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um vorhandene Konten Ansicht, wählen Sie **[!UICONTROL Konten]**.
+Wählen Sie unter der Kategorie *Adobe Applications* die Option **[!UICONTROL Adobe Analytics]** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um vorhandene Konten Ansicht, wählen Sie **[!UICONTROL Konten]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -52,7 +52,7 @@ Wählen Sie in der Liste der verfügbaren Report Suites die Report Suites aus, d
 
 ### Benennen des Datenflusses
 
-Der Schritt *Datenfluss* im Detail wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Wählen Sie **[UICONTROL! Als Nächstes]** fertig.
+Der Schritt für die Details *des* Datenflusses wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Wählen Sie **[UICONTROL! Als Nächstes]** fertig.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
@@ -102,7 +102,7 @@ Nachdem die Verbindung erstellt wurde, wird automatisch ein Zielgruppe-Schema un
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../../profile/home.md)
 * [Übersicht über den Segmentierungsdienst](../../../../../segmentation/home.md)
 * [Übersicht über den Data Science Workspace](../../../../../data-science-workspace/home.md)
-* [Übersicht über Query Service](../../../../../query-service/home.md)
+* [Query Service – Übersicht](../../../../../query-service/home.md)
 
 Das folgende Video soll Ihnen beim Erfassen von Daten mithilfe des Adobe Analytics Source Connectors helfen:
 
