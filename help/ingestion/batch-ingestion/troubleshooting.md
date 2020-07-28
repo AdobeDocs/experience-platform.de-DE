@@ -121,9 +121,9 @@ Um alle Datenerfassungsfunktionen zu erhalten, müssen JSON- oder Parquet-Format
 
 Für die Daten werden drei Validierungsstufen ausgeführt:
 
-- Schema – Batch Ingestion stellt sicher, dass das Schema der erfassten Daten mit dem Schema des Datensatzes übereinstimmt.
-- Datentyp – Batch Ingestion stellt sicher, dass der Typ für jedes erfasste Feld mit dem im Schema des Datensatzes definierten Typ übereinstimmt.
-- Begrenzungen – Batch Ingestion stellt sicher, dass Begrenzungen wie „Erforderlich“, „Aufzählung“ und „Format“ in der Schemadefinition richtig definiert sind.
+- Schema – Batch-Erfassung stellt sicher, dass das Schema der erfassten Daten mit dem Schema des Datensatzes übereinstimmt.
+- Datentyp – Batch-Erfassung stellt sicher, dass der Typ für jedes erfasste Feld mit dem im Schema des Datensatzes definierten Typ übereinstimmt.
+- Begrenzungen – Batch-Erfassung stellt sicher, dass Begrenzungen wie „Erforderlich“, „Aufzählung“ und „Format“ in der Schemadefinition richtig definiert sind.
 
 ### Wie kann ein bereits erfasster Batch ersetzt werden?
 
@@ -174,7 +174,7 @@ Ein Batch kann in seinem Lebenszyklus die folgenden Status durchlaufen:
 | Abgebrochen |  | The client has explicitly called, via the [!DNL Batch Data Ingestion] APIs, an abort operation for the specified batch. Sobald sich ein Batch im Status „Geladen“ befindet, kann der Batch nicht mehr abgebrochen werden. |
 | Aktiv/Erfolg | x | Der Batch wurde erfolgreich von „Staging“ zu „Master“ höher gestuft und steht nun für den nachgelagerten Gebrauch zur Verfügung. **Hinweis:** „Aktiv“ und „Erfolg“ werden synonym verwendet. |
 | Archiviert |  | Der Batch wurde in Cold Storage archiviert. |
-| Fehlgeschlagen/Fehler |  | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder fehlerhafte Daten zurückzuführen ist. Zusammen mit dem Batch wird ein eine Aktion erfordernder Fehler aufgezeichnet, um es Clients zu erlauben, die Daten zu korrigieren und erneut zu übermitteln. **Hinweis:** „Fehlgeschlagen“ und „Fehler“ werden synonym verwendet. |
+| Fehlgeschlagen/Fehler |  | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Zusammen mit dem Batch wird ein eine Aktion erfordernder Fehler aufgezeichnet, um es Clients zu erlauben, die Daten zu korrigieren und erneut zu übermitteln. **Hinweis:** „Fehlgeschlagen“ und „Fehler“ werden synonym verwendet. |
 | Inaktiv | x | Der Batch wurde erfolgreich höher gestuft, wurde dann jedoch entweder zurückgesetzt oder ist abgelaufen. Der Batch ist nicht mehr für den nachgelagerten Gebrauch verfügbar, die zugrunde liegenden Daten aber bleiben im Master erhalten, bis sie aufbewahrt, archiviert oder anderweitig gelöscht werden. |
 | Wird geladen |  | Der Client schreibt derzeit Daten für den Batch. Der Batch ist zu diesem Zeitpunkt **nicht** bereit zur Promotion. |
 | Geladen |  | Der Client hat das Schreiben von Daten für den Batch abgeschlossen. Der Batch kann jetzt höher gestuft werden. |
