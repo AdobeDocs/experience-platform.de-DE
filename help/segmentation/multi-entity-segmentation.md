@@ -22,7 +22,7 @@ Um mehr über die Segmentierung mehrerer Entitäten zu erfahren, lesen Sie bitte
 
 ## Erste Schritte
 
-Diese Anleitung setzt grundlegende Kenntnisse der verschiedenen Adobe Experience Platform-Diensten voraus, die mit Segmentierung verbunden sind. Bevor Sie mit dieser Anleitung beginnen, lesen Sie bitte die Dokumentation zu folgenden Diensten:
+Diese Anleitung setzt grundlegende Kenntnisse der verschiedenen Adobe Experience Platform-Diensten voraus, die mit Segmentierung verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Bietet ein einheitliches Verbraucherdatenquellen-Profil in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
 - [Adobe Experience Platform Segmentation Service](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten aus dem Echtzeit-Kundenprofil.
