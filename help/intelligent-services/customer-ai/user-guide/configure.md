@@ -7,18 +7,18 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 59%
+ht-degree: 89%
 
 ---
 
 
 # Konfigurieren einer Customer AI-Instanz
 
-Die Kundentechnik als Teil von Intelligent Services ermöglicht es Ihnen, benutzerspezifische Tendenzwerte zu generieren, ohne sich um maschinelles Lernen kümmern zu müssen.
+Die Customer AI als Teil von Intelligent Services ermöglicht es Ihnen, benutzerspezifische Tendenzwerte zu generieren, ohne sich um Machine Learning kümmern zu müssen.
 
-Intelligent Services bieten Kunden-AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
+Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 
-## Instanz einrichten {#set-up-your-instance}
+## Einrichten Ihrer Instanz {#set-up-your-instance}
 
 Klicken Sie in der Benutzeroberfläche von Platform im linken Navigationsbereich auf **[!UICONTROL Dienste]**. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
 
@@ -30,13 +30,13 @@ Im Bildschirm *Customer AI* werden alle vorhandenen Customer AI-Instanzen angez
 
 Der Workflow für die Instanzerstellung wird angezeigt, beginnend mit dem Schritt *Einrichtung*.
 
-Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie der Instanz bereitstellen müssen:
+Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie für die Instanz angeben müssen:
 
-* Der Name der Instanz wird an allen Stellen verwendet, an denen die Kunden-AI-Bewertung angezeigt wird. Daher sollte man in Namen beschreiben, was die Prognosewerte darstellen, z. B. &quot;Wahrscheinlichkeit, das Abonnement eines Magazins abzubrechen&quot;.
+* Der Name der Instanz wird an allen Stellen verwendet, an denen der Customer KI-Wert angezeigt wird. Daher sollten Namen beschreiben, was die Prognosewerte darstellen, z. B. „Wahrscheinlichkeit einer Kündigung eines Zeitschriftenabonnements“.
 
-* Der Tendenztyp bestimmt den Zweck des Wertes und die Metrikpolarität. Sie können entweder **[!UICONTROL Abwanderung]** oder **[!UICONTROL Konversion]** wählen. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Bewertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
+* Der Tendenztyp bestimmt den Zweck des Wertes und die Metrikpolarität. Sie können entweder **[!UICONTROL Abwanderung]** oder **[!UICONTROL Konversion]** wählen. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Auswertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
 
-* Die Datenquelle befindet sich an der Stelle, an der sich die Daten befinden. Der Datensatz ist der Eingabedatensatz, mit dem Ergebnisse vorhergesagt werden. Standardmäßig nutzt Customer AI Kundenerlebnis-Ereignisdaten, um Tendenzwerte zu berechnen. Wenn Sie einen Datensatz aus der Dropdown-Auswahl auswählen, werden nur die Datensätze aufgelistet, die mit der Kunden-API kompatibel sind.
+* Die Datenquelle befindet sich an der Stelle, an der sich die Daten befinden. Der Datensatz ist der Eingabedatensatz, mit dem Ergebnisse vorhergesagt werden. Standardmäßig nutzt Customer AI Kundenerlebnis-Ereignisdaten, um Tendenzwerte zu berechnen. Wenn Sie einen Datensatz in der Dropdown-Auswahl wählen, werden nur Datensätze aufgelistet, die mit Customer KI kompatibel sind.
 
 * Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es wurde eine qualifizierte Zielgruppe angegeben. Sie können eine qualifizierte Zielgruppe angeben, indem Sie Bedingungen festlegen, um Profile auf Grundlage von Ereignissen ein- oder auszuschließen.
 
@@ -56,7 +56,7 @@ Klicken Sie auf **[!UICONTROL Feldnamen eingeben]** und wählen Sie ein Feld aus
 
 Der Schritt *Erweitert* wird angezeigt. In diesem optionalen Schritt können Sie einen Zeitplan konfigurieren, um die Ausführung von Prognosen zu automatisieren, Prognoseausschlüsse zum Filtern bestimmter Ereignisse definieren oder auf **[!UICONTROL Fertig stellen]** klicken, wenn nichts mehr erforderlich ist.
 
-Richten Sie einen Bewertungszeitplan ein, indem Sie die *Bewertungshäufigkeit* festlegen. Die Ausführung automatisierter Prognosen kann entweder wöchentlich oder monatlich geplant werden.
+Richten Sie einen Auswertungszeitplan ein, indem Sie die *Auswertungshäufigkeit* festlegen. Die Ausführung automatisierter Prognosen kann entweder wöchentlich oder monatlich geplant werden.
 
 ![](../images/user-guide/schedule.png)
 
@@ -70,13 +70,13 @@ Schließen Sie Ereignisse nach Bedarf aus und klicken Sie dann auf **[!UICONTROL
 
 ![](../images/user-guide/advanced.png)
 
-Wenn die Instanz erfolgreich erstellt wurde, wird sofort eine Prognoseausführung ausgelöst und die nachfolgenden Ausläufe werden gemäß Ihrem definierten Zeitplan ausgeführt.
+Wenn die Instanz erfolgreich erstellt wurde, wird sofort eine Prognose ausgeführt; nachfolgende Ausführungen erfolgen dann gemäß Ihrem definierten Zeitplan.
 
 >[!NOTE]
 >
->Je nach Größe der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
+>Je nach Umfang der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
 
-In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine Prognose durchgeführt. Nach erfolgreichem Abschluss des Vorgangs werden die Profil automatisch mit Ergebniswerten gefüllt. Bitte warten Sie bis zu 24 Stunden, bevor Sie mit dem nächsten Abschnitt dieses Tutorials fortfahren.
+In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine Prognose durchgeführt. Nach erfolgreicher Ausführung sorgen Auswertungsdaten für ein automatisches Ausfüllen von Profilen mit Prognosewerten. Warten Sie bis zu 24 Stunden, bevor Sie mit dem nächsten Abschnitt dieses Tutorials fortfahren.
 
 ## Nächste Schritte {#next-steps}
 
