@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
 source-wordcount: '1542'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Tun Sie so, als ob Sie eine Online-Einzelhandelswebsite besitzen. Wenn Ihre Kunden auf Ihrer Retail-Website einkaufen, möchten Sie ihnen personalisierte Produktempfehlungen präsentieren, um eine Reihe anderer Produkte Ihrer geschäftlichen Angebot verfügbar zu machen. Im Laufe der Existenz Ihrer Website haben Sie kontinuierlich Kundendaten gesammelt und möchten diese Daten irgendwie zur Erstellung personalisierter Produktempfehlungen verwenden.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] stellt die Mittel bereit, um Ihr Ziel mit dem vordefinierten [Produktempfehlungsrezept](../pre-built-recipes/product-recommendations.md)zu erreichen. In diesem Tutorial erfahren Sie, wie Sie auf Ihre Einzelhandelsdaten zugreifen und diese verstehen, ein Modell für maschinelles Lernen erstellen und optimieren und Einblicke in dieses Modell generieren können [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] stellt die Mittel bereit, um Ihr Ziel mit dem vorgefertigten [Produkt Recommendations Rezept](../pre-built-recipes/product-recommendations.md)zu erreichen. In diesem Tutorial erfahren Sie, wie Sie auf Ihre Einzelhandelsdaten zugreifen und diese verstehen, ein Modell für maschinelles Lernen erstellen und optimieren und Einblicke in dieses Modell generieren können [!DNL Data Science Workspace].
 
 Dieses Lernprogramm spiegelt den Arbeitsablauf bei [!DNL Data Science Workspace]der Erstellung eines maschinellen Lernmodells wider und behandelt die folgenden Schritte:
 
@@ -29,30 +29,30 @@ Dieses Lernprogramm spiegelt den Arbeitsablauf bei [!DNL Data Science Workspace]
 
 ## Erste Schritte
 
-Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Voraussetzungen verfügen:
+Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
 
-* Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in haben, wenden Sie sich an Ihren Systemadministrator, [!DNL Experience Platform]bevor Sie fortfahren.
+* Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 * Aktivieren von Assets. Wenden Sie sich an Ihren Kundenbetreuer, um die folgenden Punkte für Sie bereitzustellen.
-   * Recommendations-Rezept
-   * Recommendations-Eingabedaten
-   * Recommendations Input-Schema
+   * Recommendations Rezept
+   * Recommendations Input DataSet
+   * Recommendations Input Schema
    * Recommendations Output DataSet
    * Recommendations Output Schema
    * Golden Data Set postValues
    * Goldenes Datenset-Schema
 
-* Laden Sie die drei erforderlichen [!DNL Jupyter Notebook] Dateien aus dem öffentlichen <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe- [!DNL Git] Repository</a>herunter. Anhand dieser Dateien wird der [!DNL JupyterLab] Arbeitsablauf in [!DNL Data Science Workspace].
+* Laden Sie die drei erforderlichen [!DNL Jupyter Notebook] Dateien aus dem öffentlichen <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe- [!DNL Git] Repository</a>herunter. Diese werden verwendet, um den [!DNL JupyterLab] Arbeitsablauf in zu demonstrieren [!DNL Data Science Workspace].
 
-* Ein Arbeitsverständnis mit den folgenden Schlüsselkonzepten, die in diesem Lernprogramm verwendet werden:
-   * [!DNL Experience Data Model](../../xdm/home.md): Die Standardisierungsarbeit, die Adobe zur Definition von Standard-Schemas wie [!DNL Profile] und ExperienceEvent für Customer Experience Management führt.
+* Ein Verständnis der folgenden Schlüsselkonzepte, die in diesem Tutorial verwendet werden:
+   * [!DNL Experience Data Model](../../xdm/home.md): Der durch die Adobe zur Definition von Standard-Schemas wie [!DNL Profile] und ExperienceEvent für Customer Experience Management angeführte Standardisierungsaufwand.
    * Datensätze: Ein Datenspeicherung- und Verwaltungskonstrukt für tatsächliche Daten. Eine physische instanziierte Instanz eines [XDM-Schemas](../../xdm/schema/field-dictionary.md).
    * Stapel: Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird.
    * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist eine Open-Source Web-basierte Schnittstelle für Projekt [!DNL Jupyter] und ist eng in [!DNL Experience Platform].
 
 ## Daten vorbereiten {#prepare-your-data}
 
-Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen zukommen lässt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten [!DNL Platform] durchgängig erfasst werden [!DNL Adobe Analytics]und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden kann.
+Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen vermittelt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten [!DNL Platform] durchgängig erfasst werden [!DNL Adobe Analytics]und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden kann.
 
 ### Daten und Schemas
 
@@ -68,25 +68,25 @@ Die anderen Datensätze wurden zur Vorschau mit Stapeln vorausgefüllt. Sie kön
 | Dataset-Name | Schema | Beschreibung |
 | ----- | ----- | ----- |
 | Golden Data Set postValues | Goldenes Datenset-Schema | [!DNL Analytics] Quelldaten von Ihrer Website |
-| Recommendations-Eingabedaten | Recommendations Input-Schema | Die [!DNL Analytics] Daten werden mithilfe einer Feature-Pipeline in einen Schulungsdatensatz umgewandelt. Diese Daten werden zur Schulung des maschinellen Lernmodells von Produktempfehlungen verwendet. `itemid` und `userid` einem von diesem Kunden erworbenen Produkt entsprechen. |
+| Recommendations Input DataSet | Recommendations Input Schema | Die [!DNL Analytics] Daten werden mithilfe einer Feature-Pipeline in einen Schulungsdatensatz umgewandelt. Diese Daten werden zur Schulung des Product Recommendations Machine Learning Model verwendet. `itemid` und `userid` einem von diesem Kunden erworbenen Produkt entsprechen. |
 | Recommendations Output DataSet | Recommendations Output Schema | Der Datensatz, für den die Bewertungsergebnisse gespeichert werden, enthält die Liste der empfohlenen Produkte für jeden Kunden. |
 
 ## Modell erstellen {#author-your-model}
 
-Die zweite Komponente des [!DNL Data Science Workspace] Lebenszyklus umfasst das Authoring von Rezepten und Modellen. Das Rezept &quot;Produktempfehlungen&quot;wurde entwickelt, um Produktempfehlungen im Maßstab zu generieren, indem alte Kaufdaten und maschinelles Lernen verwendet werden.
+Die zweite Komponente des [!DNL Data Science Workspace] Lebenszyklus umfasst das Authoring von Rezepten und Modellen. Das Produkt Recommendations Rezept wurde entwickelt, um Produktempfehlungen im Maßstab zu generieren, indem alte Kaufdaten und maschinelles Lernen verwendet werden.
 
 Rezepte bilden die Grundlage für ein Modell, da sie maschinelle Lernalgorithmen und Logik zur Lösung spezifischer Probleme enthalten. Wichtiger noch: Rezepte ermöglichen es Ihnen, das maschinelle Lernen in Ihrer gesamten Organisation zu demokratisieren, sodass andere Benutzer auf ein Modell für unterschiedliche Anwendungsfälle zugreifen können, ohne Code schreiben zu müssen.
 
-### Produktempfehlungen-Rezept
+### Recommendations-Rezept
 
 1. Navigieren Sie [!DNL Adobe Experience Platform]in der linken Navigationsspalte zu **[!UICONTROL Modellen]** und klicken Sie dann oben auf **[!UICONTROL Rezepte]** , um eine Liste der verfügbaren Rezepte für Ihr Unternehmen Ansicht.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Suchen und öffnen Sie das bereitgestellte **[!UICONTROL Recommendations-Rezept]** , indem Sie auf seinen Namen klicken.
+2. Suchen und öffnen Sie das angegebene **[!UICONTROL Recommendations-Rezept]** , indem Sie auf seinen Namen klicken.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Klicken Sie in der rechten Leiste auf **[!UICONTROL Recommendations Input Schema]** , um das Schema mit dem Skript zu Ansicht. Die Schema-Felder **[!UICONTROL itemId]** und **[!UICONTROL userId]** entsprechen einem Produkt, das von diesem Kunden zu einem bestimmten Zeitpunkt gekauft wurde (**[!UICONTROL interactionType]**) (**[!UICONTROL timestamp]**). Führen Sie die gleichen Schritte aus, um die Felder für das **[!UICONTROL Recommendations Output-Schema]**zu überprüfen.
+3. Klicken Sie in der rechten Leiste auf **[!UICONTROL Recommendations Input Schema]** , um das Schema mit dem Skript Ansicht. Die Schema-Felder **[!UICONTROL itemId]** und **[!UICONTROL userId]** entsprechen einem Produkt, das von diesem Kunden zu einem bestimmten Zeitpunkt gekauft wurde (**[!UICONTROL interactionType]**) (**[!UICONTROL timestamp]**). Führen Sie die gleichen Schritte aus, um die Felder für das **[!UICONTROL Recommendations Output Schema]**zu überprüfen.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
-Sie haben jetzt die Eingabe- und Ausgabeformate überprüft, die für das Produktempfehlungsrezept erforderlich sind. Sie können nun mit dem nächsten Abschnitt fortfahren, um herauszufinden, wie ein Produktempfehlungsmodell erstellt, trainiert und ausgewertet wird.
+Sie haben jetzt die Eingabe- und Ausgabedateien geprüft, die für das Produkt Recommendations Rezept erforderlich sind. Sie können nun mit dem nächsten Abschnitt fortfahren, um zu erfahren, wie Sie ein Recommendations-Produktmodell erstellen, ausbilden und bewerten.
 
 ## Trainieren und Auswerten Ihres Modells {#train-and-evaluate-your-model}
 
@@ -98,11 +98,11 @@ Ein Modell ist eine Instanz eines Rezeptes, mit dem Sie mit Daten im Maßstab tr
 
 1. Navigieren Sie [!DNL Adobe Experience Platform]in der linken Navigationsspalte zu **[!UICONTROL Modellen]** und klicken Sie dann oben auf der Seite auf **[!UICONTROL Rezepte]** , um eine Liste aller für Ihr Unternehmen verfügbaren Rezepte anzuzeigen.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Suchen und öffnen Sie das bereitgestellte **[!UICONTROL Empfehlungsrezept]** , indem Sie auf seinen Namen klicken und die Übersichtsseite des Rezepts eingeben. Klicken Sie entweder von der Mitte aus (sofern keine vorhandenen Modelle vorhanden sind) oder oben rechts auf der Seite &quot;Rezept-Übersicht&quot;auf &quot;Modell **[!UICONTROL erstellen]** &quot;.
+2. Suchen und öffnen Sie das bereitgestellte **[!UICONTROL Recommendations-Rezept]** , indem Sie auf den Namen klicken und die Übersichtsseite des Rezepts eingeben. Klicken Sie entweder von der Mitte aus (sofern keine vorhandenen Modelle vorhanden sind) oder oben rechts auf der Seite &quot;Rezept-Übersicht&quot;auf &quot;Modell **[!UICONTROL erstellen]** &quot;.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Es wird eine Liste der verfügbaren Eingabedaten für Schulungen angezeigt, wählen Sie &quot; **[!UICONTROL Recommendations-Eingabedatensatz]** &quot;und klicken Sie auf **[!UICONTROL Weiter]**.
+3. Es wird eine Liste der verfügbaren Eingabedaten für Schulungen angezeigt, wählen Sie **[!UICONTROL Recommendations Input DataSet]** und klicken Sie auf **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Geben Sie einen Namen für das Modell ein, z. B. &quot;Produktempfehlungsmodell&quot;. Die verfügbaren Konfigurationen für das Modell werden aufgelistet und enthalten Einstellungen für das Standardschulungs- und Bewertungsverhalten des Modells. Es sind keine Änderungen erforderlich, da diese Konfigurationen für Ihr Unternehmen spezifisch sind. Überprüfen Sie die Konfigurationen und klicken Sie auf **[!UICONTROL Fertig stellen]**.
+4. Geben Sie einen Namen für das Modell ein, z. B. &quot;Recommendations-Produktmodell&quot;. Die verfügbaren Konfigurationen für das Modell werden aufgelistet und enthalten Einstellungen für das Standardschulungs- und Bewertungsverhalten des Modells. Es sind keine Änderungen erforderlich, da diese Konfigurationen für Ihr Unternehmen spezifisch sind. Überprüfen Sie die Konfigurationen und klicken Sie auf **[!UICONTROL Fertig stellen]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. Das Modell wurde jetzt erstellt und die Seite *Übersicht* des Modells wird in einem neu erstellten Schulungslauf angezeigt. Beim Erstellen eines Modells wird standardmäßig ein Schulungslauf generiert.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -141,9 +141,9 @@ Der letzte Schritt im Data Science-Arbeitsablauf besteht darin, Ihr Modell zu op
 
 1. Klicken Sie auf der Seite &quot;Produktempfehlungen - Modellübersicht&quot;auf den Namen des *Schulungslaufs mit den höchsten Rückruf- und Genauigkeitswerten* .
 2. Klicken Sie oben rechts auf der Seite mit den Details zum Schulungslauf auf **[!UICONTROL Ergebnis]**.
-3. Wählen Sie das **[!UICONTROL Recommendations-Eingabedataset]** als Bewertungseingabedataset aus, das mit dem Datensatz identisch ist, den Sie beim Erstellen des Modells und bei der Ausführung der Schulungen verwendet haben. Klicken Sie dann auf **[!UICONTROL Weiter]**.
+3. Wählen Sie das **[!UICONTROL Recommendations-Eingabedataset]** als Scoring-Eingabedataset aus, das mit dem Datensatz identisch ist, den Sie beim Erstellen des Modells und Ausführen der Schulungsausführung verwendet haben. Klicken Sie dann auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Wählen Sie das **[!UICONTROL Recommendations-Ausgabedataset]** als Bewertungsausgabedataset aus. Die Bewertungsergebnisse werden in diesem Datensatz als Stapel gespeichert.
+4. Wählen Sie das **[!UICONTROL Recommendations Output DataSet]** als Scoring-Ausgabedataset aus. Die Bewertungsergebnisse werden in diesem Datensatz als Stapel gespeichert.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
 5. Überprüfen Sie die Bewertungskonfigurationen. Diese Parameter enthalten die zuvor ausgewählten Eingabe- und Ausgabedaten zusammen mit den entsprechenden Schemas. Klicken Sie auf **[!UICONTROL Fertig stellen]** , um mit dem Bewertungsvorgang zu beginnen. Die Ausführung kann mehrere Minuten dauern.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
