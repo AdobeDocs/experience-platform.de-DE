@@ -12,7 +12,7 @@ ht-degree: 81%
 ---
 
 
-# Erstellen Sie E-Mail-Marketing-Ziele und aktivieren Sie Daten in den [!DNL Real-time Customer Data Platform]
+# E-Mail-Marketing-Ziele erstellen und Daten in der Adobe aktivieren [!DNL Real-time Customer Data Platform]
 
 In dieser Anleitung erfahren Sie, wie Sie mithilfe von API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, ein [E-Mail-Marketing-Ziel](../../rtcdp/destinations/email-marketing-destinations.md) erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel einrichten und Daten zu Ihrem neu erstellten Ziel aktivieren können.
 
@@ -41,7 +41,7 @@ Um die Schritte in dieser Anleitung abzuschließen, benötigen Sie die folgenden
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Werte für erforderliche und optionale Kopfzeilen sammeln
 
@@ -287,7 +287,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ![Übersicht über die Zielschritte – Schritt 3](../images/destinations/flow-api-destinations-step3.png)
 
-In diesem Schritt richten Sie eine Verbindung zu Ihrem gewünschten E-Mail-Marketing-Ziel ein. Hier gibt es zwei Unterschritte, die nachfolgend beschrieben werden.
+In diesem Schritt richten Sie eine Verbindung zu Ihrem gewünschten E-Mail-Marketing-Ziel ein. Das umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
 
 1. Sie müssen zunächst einen Aufruf ausführen, um den Zugriff auf den E-Mail-Dienstleister zu autorisieren, indem Sie eine Basisverbindung einrichten.
 2. Mithilfe der Kennung der Basisverbindung führen Sie dann einen weiteren Aufruf aus, mit dem Sie eine Zielverbindung erstellen. In dem Aufruf sind der Ort in Ihrem Speicherkonto, an dem die exportierten Daten bereitgestellt werden, sowie das Format der zu exportierenden Daten angegeben.
