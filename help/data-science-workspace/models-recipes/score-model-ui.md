@@ -1,66 +1,66 @@
 ---
 keywords: Experience Platform;score a model;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Modellbewertung (UI)
+title: Bewerten eines Modells (Benutzeroberfläche)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 0%
+ht-degree: 88%
 
 ---
 
 
-# Modellbewertung (UI)
+# Bewerten eines Modells (Benutzeroberfläche)
 
-Die Bewertung in der Adobe Experience Platform [!DNL Data Science Workspace] lässt sich durch die Einspeisung von Eingabedaten in ein vorhandenes geschultes Modell erzielen. Die Bewertungsergebnisse werden dann als neuer Stapel in einem angegebenen Ausgabedataset gespeichert und angezeigt.
+Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
 
-In diesem Lernprogramm werden die Schritte erläutert, die erforderlich sind, um ein Modell in der [!DNL Data Science Workspace] Benutzeroberfläche zu bewerten.
+This tutorial demonstrates the steps required to score a Model in the [!DNL Data Science Workspace] user interface.
 
 ## Erste Schritte
 
-Um dieses Lernprogramm abzuschließen, müssen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in haben, wenden Sie sich an Ihren Systemadministrator, [!DNL Experience Platform]bevor Sie fortfahren.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
-Dieses Lernprogramm erfordert ein geschultes Modell. Wenn Sie kein ausgebildetes Modell haben, folgen Sie dem [Zug und bewerten Sie ein Modell im UI](./train-evaluate-model-ui.md) -Lernprogramm, bevor Sie fortfahren.
+Diese Anleitung setzt ein trainiertes Modell voraus. Wenn Sie noch kein trainiertes Modell haben, folgen Sie der Anleitung zum [Trainieren und Bewerten eines Modells in der Benutzeroberfläche](./train-evaluate-model-ui.md), bevor Sie fortfahren.
 
-## Erstellen eines neuen Bewertungslaufs
+## Neuen Scoring-Lauf erstellen
 
-Eine Bewertungsausführung wird mithilfe optimierter Konfigurationen aus einem zuvor abgeschlossenen und ausgewerteten Schulungslauf erstellt. Der Satz der optimalen Konfigurationen für ein Modell wird in der Regel durch Überprüfen der Evaluierungsmetriken für Schulungsabbrüche bestimmt.
+Ein Scoring-Lauf wird mithilfe optimierter Konfigurationen aus einem zuvor abgeschlossenen und ausgewerteten Trainings-Lauf erstellt. Der Satz optimaler Konfigurationen für ein Modell wird in der Regel durch Überprüfen der Auswertungsmetriken für Trainings-Läufe bestimmt.
 
-1. Finden Sie den optimalen Schulungsablauf, um seine Konfigurationen für die Bewertung zu verwenden. Öffnen Sie den gewünschten Schulungslauf, indem Sie auf dessen Namen klicken.
+1. Finden Sie den optimalen Training-Lauf, um dessen Konfigurationen für das Scoring zu nutzen. Öffnen Sie den gewünschten Trainings-Lauf, indem Sie auf dessen Namen klicken.
 
-2. Klicken Sie auf der Registerkarte **[!UICONTROL Evaluierung]** der Schulungsausführung auf die Schaltfläche **[!UICONTROL Ergebnis]** oben rechts im Bildschirm. Dadurch wird ein neuer Arbeitsablauf *zum Ausführen der* Auswertung initiiert.
+2. Klicken Sie auf dem Tab **[!UICONTROL Auswertung]** des Trainings-Laufs auf die Schaltfläche **[!UICONTROL Score]** oben rechts im Bildschirm. Dadurch wird ein neuer *Scoring ausführen*-Workflow initiiert.
    ![](../images/models-recipes/score/training_run_overview.png)
 
-3. Wählen Sie den Eingabesortierungsdatensatz aus und klicken Sie auf **[!UICONTROL Weiter]**.
+3. Wählen Sie den Eingabe-Scoring-Datensatz aus und klicken Sie auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/score/scoring_input.png)
 
-4. Wählen Sie den Ergebnisbewertungsdatensatz aus. Hierbei handelt es sich um den dedizierten Ausgabedatensatz, in dem die Bewertungsergebnisse gespeichert werden. Bestätigen Sie Ihre Auswahl und klicken Sie auf **[!UICONTROL Weiter]**.
+4. Wählen Sie den Ergebnis-Scoring-Datensatz aus. Hierbei handelt es sich um den dedizierten Ausgabedatensatz, in dem die Scoring-Ergebnisse gespeichert werden. Bestätigen Sie Ihre Auswahl und klicken Sie auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/score/scoring_results.png)
 
-5. Im letzten Schritt im Workflow werden Sie aufgefordert, Ihre Bewertungsausführung zu konfigurieren. Diese Konfigurationen werden vom Modell für die Bewertungsausführung verwendet.
-Beachten Sie, dass Sie geerbte Parameter, die bei der Modellerstellung festgelegt wurden, nicht entfernen können. Sie können nicht geerbte Parameter bearbeiten oder wiederherstellen, indem Sie die Dublette auf den Wert klicken oder auf das Symbol zum Zurücksetzen klicken, während Sie den Mauszeiger über den Eintrag halten.
+5. Im letzten Schritt des Workflows werden Sie aufgefordert, Ihren Scoring-Lauf zu konfigurieren. Diese Konfigurationen werden vom Modell für den Scoring-Lauf verwendet.
+Beachten Sie, dass Sie geerbte Parameter, die bei der Modellerstellung festgelegt wurden, nicht entfernen können. Sie können nicht geerbte Parameter bearbeiten oder wiederherstellen, indem Sie auf den Wert doppelklicken oder auf das Symbol zum Zurücksetzen klicken, während Sie mit dem Mauszeiger über den Eintrag fahren.
    ![](../images/models-recipes/score/configuration.png)
-Überprüfen Sie die Bewertungskonfigurationen und bestätigen Sie sie und klicken Sie auf **[!UICONTROL Fertig stellen]** , um die Bewertungsausführung zu erstellen und auszuführen. Sie werden auf die Registerkarte *Scoring Runs* weitergeleitet, und der neue Scoring Run zeigt den Status an.
+Überprüfen und bestätigen Sie die Scoring-Konfigurationen und klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Scoring-Lauf zu erstellen und auszuführen. Sie werden zum Tab *Scoring-Läufe* weitergeleitet; für den neuen Scoring-Lauf wird ein Status angezeigt.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
-Bei einer Bewertungsausführung wird einer der vier folgenden Status angezeigt: Ausstehend, Abgeschlossen, Fehlgeschlagen oder Wird ausgeführt und werden automatisch aktualisiert. Fahren Sie mit dem nächsten Schritt fort, wenn der Status &quot;Abgeschlossen&quot;oder &quot;Fehlgeschlagen&quot;lautet.
+Für einen Scoring-Lauf wird einer der vier folgenden Status angezeigt: „Ausstehend“, „Abgeschlossen“, „Fehlgeschlagen“ oder „Wird ausgeführt“. Die Status werden automatisch aktualisiert. Fahren Sie mit dem nächsten Schritt fort, wenn der Status „Abgeschlossen“ oder „Fehlgeschlagen“ lautet.
 
-## Ansichten-Bewertungsergebnisse
+## Scoring-Ergebnisse anzeigen
 
-1. Suchen Sie nach dem Schulungslauf, der für die Bewertungsausführung verwendet wurde, und klicken Sie auf den Namen, um die **[!UICONTROL Evaluierungsseite]** Ansicht.
+1. Suchen Sie nach dem Trainings-Lauf, der für den Scoring-Lauf verwendet wurde, und klicken Sie auf dessen Namen, um die **[!UICONTROL Auswertungsseite]** anzuzeigen.
 
-2. Klicken Sie oben auf der Seite zur Evaluierung der **[!UICONTROL Bewertungslaufzeit auf die Registerkarte &quot;Bewertungsläufe]** &quot;, um eine Liste der vorhandenen Testläufe Ansicht. Klicken Sie auf die Punktliste, um die Ansicht in der rechten Spalte zu erhalten.
+2. Klicken Sie oben auf der Auswertungsseite des Trainings-Laufs auf den Tab **[!UICONTROL Scoring-Läufe]**, um eine Liste der vorhandenen Scoring-Läufe anzuzeigen. Klicken Sie auf die Scoring-Liste, um in der rechten Spalte die entsprechenden Details anzuzeigen.
    ![](../images/models-recipes/score/view_details.png)
 
-3. Wenn der ausgewählte Bewertungslauf entweder den Status &quot;Abgeschlossen&quot;oder &quot;Fehlgeschlagen&quot;hat, ist der Link &quot;Protokolle **[!UICONTROL zur]** Ansicht&quot;in der rechten Spalte aktiv. Klicken Sie auf den Link zur Ansicht oder laden Sie die Ausführungsprotokolle herunter. Wenn eine Bewertungsausführung fehlgeschlagen ist, können die Ausführungsprotokolle nützliche Informationen zur Ermittlung des Fehlerursprungs liefern.
+3. Wenn der ausgewählte Scoring-Lauf den Status „Abgeschlossen“ oder „Fehlgeschlagen“ aufweist, ist der Link **[!UICONTROL Aktivitätsprotokolle anzeigen]** in der rechten Spalte aktiv. Klicken Sie auf den Link, um die Ausführungsprotokolle anzuzeigen und herunterzuladen. Wenn ein Scoring-Lauf fehlgeschlagen ist, können die Ausführungsprotokolle nützliche Daten zur Ermittlung der Fehlerquelle enthalten.
    ![](../images/models-recipes/score/activity_logs.png)
 
-4. Klicken Sie in der rechten Spalte auf den Link **[!UICONTROL Vorschau Scoring Results Dataset]** . Sie können eine Vorschau des Ausgabedatasets aus der Bewertungsausführung sehen.
+4. Klicken Sie in der rechten Spalte auf den Link **[!UICONTROL Vorschau von Datensatz mit Scoring-Ergebnissen anzeigen]**. Sie können eine Vorschau des Ausgabedatensatzes des Scoring-Laufs anzeigen.
    ![](../images/models-recipes/score/preview_results.png)
 
-5. Klicken Sie für den vollständigen Satz der Bewertungsergebnisse auf den Link **[!UICONTROL Ergebnisdatensatz]** in der rechten Spalte.
+5. Klicken Sie für den vollständigen Satz der Scoring-Ergebnisse auf den Link **[!UICONTROL Datensatz mit Scoring-Ergebnissen]** in der rechten Spalte.
 
 ## Nächste Schritte
 
-Dieses Tutorial begleitet Sie durch die Schritte, um Daten mit einem geschulten Modell in zu bewerten [!DNL Data Science Workspace]. Befolgen Sie das Lernprogramm zum [Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche](./publish-model-service-ui.md) , damit Benutzer in Ihrem Unternehmen Daten bewerten können, indem sie einfachen Zugriff auf einen maschinellen Lerndienst bieten.
+This tutorial walked you through the steps to score data using a trained Model in [!DNL Data Science Workspace]. Befolgen Sie die Anleitung zum [Publizieren eines Modells als Dienst in der Benutzeroberfläche](./publish-model-service-ui.md), damit Benutzer in Ihrer Organisation Daten bewerten können, indem sie einfachen Zugriff auf einen maschinellen Lerndienst erhalten.
