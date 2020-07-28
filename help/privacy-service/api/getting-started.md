@@ -25,13 +25,13 @@ This guide requires a working understanding the following [!DNL Experience Platf
 
 * [!DNL Privacy Service](../home.md): Bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie die Zugriffs- und Löschanfragen Ihrer Datensubjekte (Kunden) in allen Adobe Experience Cloud-Anwendungen verwalten können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Privacy Service-API erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Privacy Service-API erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md) erläutert.[!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-## Werte der zu verwendenden Kopfzeilen
+## Sammeln von Werten für erforderliche Kopfzeilen
 
 Um die [!DNL Privacy Service] API aufrufen zu können, müssen Sie zunächst Ihre Zugriffsberechtigungen erfassen, um in den erforderlichen Kopfzeilen verwendet werden zu können:
 
@@ -39,7 +39,7 @@ Um die [!DNL Privacy Service] API aufrufen zu können, müssen Sie zunächst Ihr
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Hierzu gehört das Abrufen von Entwicklerberechtigungen für [!DNL Experience Platform] die Adobe-Admin Console und das Generieren der Anmeldeinformationen in Adobe Developer Console.
+Hierzu gehört das Abrufen von Entwicklerberechtigungen für [!DNL Experience Platform] das Adobe Admin Console und das Generieren der Berechtigungen in der Adobe Developer Console.
 
 ### Entwicklerzugriff erhalten [!DNL Experience Platform]
 
@@ -47,7 +47,7 @@ Um Entwicklern Zugriff auf [!DNL Platform]zu erhalten, führen Sie die ersten Sc
 
 ### Zugriffsberechtigungen generieren
 
-Mit Adobe Developer Console müssen Sie die folgenden drei Zugriffsberechtigungen generieren:
+Mit der Adobe Developer Console müssen Sie die folgenden drei Zugriffsberechtigungen generieren:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -59,7 +59,7 @@ Die Schritte zum Generieren dieser Werte werden nachfolgend detailliert beschrie
 
 #### Einmalige Einrichtung
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
 
 Nachdem Sie ein neues Projekt erstellt haben, klicken Sie im Bildschirm &quot; **[!UICONTROL Projektübersicht]** &quot;auf _[!UICONTROL Hinzufügen API]_.
 
