@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 1%
+ht-degree: 92%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
-Der `/policies` Endpunkt wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Datenverwendungsrichtlinien verwendet.
+Der `/policies`-Endpunkt wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Datennutzungsrichtlinien verwendet.
 
 ## Liste aller Richtlinien
 
-Zur Ansicht einer Liste von Richtlinien kann eine GET-Anforderung an alle Richtlinien für den angegebenen Container gesendet werden `/policies/core` oder `/policies/custom` die alle Richtlinien zurückgibt.
+Um eine Liste von Richtlinien anzuzeigen, kann eine GET-Anfrage an `/policies/core` oder `/policies/custom` gesendet werden, die alle Richtlinien für den angegebenen Container zurückgibt.
 
 **API-Format**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält eine &quot;Anzahl&quot;, die die Gesamtanzahl der Richtlinien im angegebenen Container sowie die Details der einzelnen Richtlinien einschließlich ihrer `id`anzeigt. Das `id` Feld dient zum Durchführen von Suchanfragen zur Ansicht bestimmter Richtlinien sowie zum Durchführen von Aktualisierungs- und Löschvorgängen.
+Die Antwort enthält eine „Anzahl“, die die Gesamtanzahl der Richtlinien im angegebenen Container sowie die Details der einzelnen Richtlinien einschließlich ihrer `id` anzeigt. Das `id`-Feld wird verwendet, um Suchanfragen zur Ansicht bestimmter Richtlinien sowie Aktualisierungs- und Löschvorgänge durchzuführen.
 
 ```JSON
 {
@@ -135,7 +135,7 @@ Die Antwort enthält eine &quot;Anzahl&quot;, die die Gesamtanzahl der Richtlini
 
 ## Eine Richtlinie nachschlagen
 
-Jede Richtlinie enthält ein `id` Feld, mit dem die Details einer bestimmten Richtlinie angefordert werden können. Wenn der Wert `id` einer Richtlinie unbekannt ist, können Sie sie mithilfe der Auflistungsanforderung (GET) finden, um alle Richtlinien in einem bestimmten Container (`core` oder `custom`) wie im vorherigen Schritt dargestellt Liste.
+Jede Richtlinie enthält ein `id`-Feld, mit dem die Details einer bestimmten Richtlinie angefordert werden können. Wenn die `id` einer Richtlinie unbekannt ist, können Sie sie mithilfe der Auflistungsanfrage (GET) finden, die alle Richtlinien in einem bestimmten Container (`core` oder `custom`) auflistet, wie im vorherigen Schritt gezeigt.
 
 **API-Format**
 
@@ -157,7 +157,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält die Details der Richtlinie, einschließlich der Schlüsselfelder `id` (dieses Feld sollte mit der `id` gesendeten Anforderung übereinstimmen), `name`, `status`und `description`sowie einen Verweis auf die Marketingaktion, auf der die Richtlinie basiert (`marketingActionRefs`).
+Die Antwort enthält die Details der Richtlinie, einschließlich der Schlüsselfelder `id` (dieses Feld sollte mit der in der Anfrage gesendeten `id` übereinstimmen), `name`, `status` und `description`, sowie einen Verweis-Link zur Marketing-Aktion, auf der die Richtlinie basiert (`marketingActionRefs`).
 
 ```JSON
 {
@@ -202,11 +202,11 @@ Die Antwort enthält die Details der Richtlinie, einschließlich der Schlüsself
 }
 ```
 
-## Eine Richtlinie erstellen {#create-policy}
+## Erstellen einer Richtlinie {#create-policy}
 
-Die Erstellung einer Richtlinie erfordert die Aufnahme einer Marketingaktion mit einem Ausdruck der DULE-Etiketten, die diese Marketingaktion verbieten. Richtliniendefinitionen müssen eine `deny` Eigenschaft enthalten, bei der es sich um einen booleschen Ausdruck in Bezug auf das Vorhandensein von DULE-Beschriftungen handelt.
+Die Erstellung einer Richtlinie erfordert die Einbeziehung einer Marketing-Aktion mit einem Ausdruck der DULE-Bezeichnung, die diese Marketing-Aktion verbieten. Richtliniendefinitionen müssen eine `deny`-Eigenschaft enthalten, bei der es sich um einen booleschen Ausdruck in Bezug auf das Vorhandensein von DULE-Bezeichnungen handelt.
 
-Dieser Ausdruck wird als Objekt bezeichnet `PolicyExpression` und enthält _entweder_ eine Beschriftung _oder_ einen Operator und Operanden, jedoch nicht beide. Jeder Operand ist wiederum ein `PolicyExpression` Objekt. So könnte beispielsweise eine Richtlinie über den Export von Daten an Dritte verboten werden, wenn `C1 OR (C3 AND C7)` Etiketten vorhanden sind. Dieser Ausdruck würde wie folgt definiert:
+Dieser Ausdruck wird als `PolicyExpression` bezeichnet und ist ein Objekt, das _entweder_ eine Bezeichnung _oder_ einen Operator und Operanden, jedoch nicht beide, enthält. Jeder Operand ist auch ein `PolicyExpression`-Objekt. So könnte beispielsweise eine Richtlinie über den Export von Daten an Dritte verboten werden, wenn `C1 OR (C3 AND C7)`-Bezeichnungen vorhanden sind. Dieser Ausdruck würde wie folgt definiert:
 
 ```JSON
 "deny": {
@@ -310,9 +310,9 @@ Bei erfolgreicher Erstellung erhalten Sie einen HTTP-Status 201 (Erstellt) und d
 }
 ```
 
-## Richtlinie aktualisieren
+## Aktualisieren einer Richtlinie
 
-Möglicherweise müssen Sie eine Datenverwendungsrichtlinie nach deren Erstellung aktualisieren. Dies geschieht durch eine PUT-Anforderung an die Richtlinie `id` mit einer Nutzlast, die das aktualisierte Formular der Richtlinie in seiner Gesamtheit enthält. Mit anderen Worten, die PUT-Anforderung ist im Wesentlichen eine _Neufassung_ der Richtlinie, daher muss der Text alle erforderlichen Informationen enthalten, wie im Beispiel unten dargestellt.
+Möglicherweise müssen Sie eine Datennutzungsrichtlinie nach deren Erstellung aktualisieren. Dies geschieht durch eine PUT-Anfrage an die Richtlinien-`id` mit einer Payload, die das aktualisierte Formular der Richtlinie in seiner Gesamtheit enthält. Mit anderen Worten, die PUT-Anfrage _schreibt die Richtlinie im Wesentlichen neu_. Daher muss der Text alle erforderlichen Informationen enthalten, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -322,7 +322,7 @@ PUT /policies/custom/{id}
 
 **Anfrage**
 
-In diesem Beispiel haben sich die Bedingungen für den Export von Daten an einen Drittanbieter geändert. Jetzt benötigen Sie die von Ihnen erstellte Richtlinie, um diese Marketingaktion zu verweigern, wenn `C1 AND (C3 OR C7)` Datenbeschriftungen vorhanden sind. Mit dem folgenden Aufruf können Sie die vorhandene Richtlinie aktualisieren.
+In diesem Beispiel haben sich die Bedingungen für den Export von Daten an einen Drittanbieter geändert. Daher muss die von Ihnen erstellte Richtlinie diese Marketing-Aktion jetzt ablehnen, wenn `C1 AND (C3 OR C7)`-Datenbezeichnungen vorhanden sind. Mit dem folgenden Aufruf können Sie die vorhandene Richtlinie aktualisieren.
 
 ```SHELL
 curl -X PUT \
@@ -357,7 +357,7 @@ curl -X PUT \
 
 **Antwort**
 
-Bei einer erfolgreichen Updateanforderung wird ein HTTP-Status 200 (OK) zurückgegeben, und der Antworttext zeigt die aktualisierte Richtlinie an. Der Wert `id` sollte mit dem in der Anforderung gesendeten `id` übereinstimmen.
+Bei einer erfolgreichen Aktualisierungsanfrage wird ein HTTP-Status 200 (OK) zurückgegeben, und der Antworttext zeigt die aktualisierte Richtlinie an. Die `id` sollte mit der in der Anfrage gesendeten `id` übereinstimmen.
 
 ```JSON
 {
@@ -402,11 +402,11 @@ Bei einer erfolgreichen Updateanforderung wird ein HTTP-Status 200 (OK) zurückg
 }
 ```
 
-## Einen Teil einer Richtlinie aktualisieren
+## Aktualisieren eines Teils einer Richtlinie
 
-Ein bestimmter Teil einer Richtlinie kann mithilfe einer PATCH-Anforderung aktualisiert werden. Im Gegensatz zu PUT-Anforderungen, die die Richtlinie _umschreiben_ , aktualisieren PATCH-Anforderungen nur den im Anforderungstext angegebenen Pfad. Dies ist besonders hilfreich, wenn Sie eine Richtlinie aktivieren oder deaktivieren möchten, da Sie nur den spezifischen Pfad, den Sie aktualisieren möchten (`/status`), und dessen Wert (`ENABLE` oder `DISABLE`) senden müssen.
+Ein bestimmter Teil einer Richtlinie kann mithilfe einer PATCH-Anfrage aktualisiert werden. Im Gegensatz zu PUT-Anfragen, die die Richtlinie _umschreiben_, aktualisieren PATCH-Anfragen nur den im Anfrageinhalt angegebenen Pfad. Dies ist besonders hilfreich, wenn Sie eine Richtlinie aktivieren oder deaktivieren möchten, da Sie nur den zu aktualisierenden Pfad (`/status`) und dessen Wert (`ENABLE` oder `DISABLE`) senden müssen.
 
-Die [!DNL Policy Service] API unterstützt derzeit PATCH-Vorgänge &quot;Hinzufügen&quot;, &quot;Ersetzen&quot;und &quot;Entfernen&quot;und ermöglicht es Ihnen, mehrere Aktualisierungen zu einem einzigen Aufruf zu kombinieren, indem Sie sie als Objekt im Array hinzufügen, wie in den folgenden Beispielen dargestellt.
+The [!DNL Policy Service] API currently supports &quot;add&quot;, &quot;replace&quot;, and &quot;remove&quot; PATCH operations, and allows you to combine several updates together into a single call by adding each as an object within the array, as shown in the following examples.
 
 **API-Format**
 
@@ -416,7 +416,7 @@ PATCH /policies/custom/{id}
 
 **Anfrage**
 
-In diesem Beispiel verwenden wir den Vorgang &quot;Ersetzen&quot;, um den Richtlinienstatus von &quot;ENTWURF&quot;in &quot;AKTIVIERT&quot;zu ändern und das Beschreibungsfeld mit einer neuen Beschreibung zu aktualisieren. Das Beschreibungsfeld hätte auch aktualisiert werden können, indem der Vorgang &quot;Löschen&quot;zum Entfernen der Richtlinienbeschreibung verwendet und dann der Vorgang &quot;Hinzufügen&quot;verwendet wird, um ein neues Mal hinzuzufügen, z. B.:
+In diesem Beispiel verwenden wir den Vorgang „Ersetzen“, um den Richtlinienstatus von „ENTWURF“ in „AKTIVIERT“ zu ändern und das Beschreibungsfeld mit einer neuen Beschreibung zu aktualisieren. Wir hätten auch das Beschreibungsfeld aktualisieren können, indem wir die Richtlinienbeschreibung mit „Löschen“ entfernen und dann mit „Hinzufügen“ eine neue hinzufügen. Beispiel:
 
 ```SHELL
 [
@@ -432,7 +432,7 @@ In diesem Beispiel verwenden wir den Vorgang &quot;Ersetzen&quot;, um den Richtl
 ]
 ```
 
-Denken Sie beim Senden mehrerer PATCH-Vorgänge in einer einzigen Anforderung daran, dass diese in der Reihenfolge verarbeitet werden, in der sie im Array erscheinen. Achten Sie daher darauf, dass Sie die Anforderungen bei Bedarf in der richtigen Reihenfolge senden.
+Denken Sie beim Senden mehrerer PATCH-Vorgänge in einer einzigen Anfrage daran, dass diese in der Reihenfolge verarbeitet werden, in der sie im Array erscheinen. Achten Sie daher darauf, dass Sie die Anfragen bei Bedarf in der richtigen Reihenfolge senden.
 
 ```SHELL
 curl -X PATCH \
@@ -458,7 +458,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Updateanforderung wird ein HTTP-Status 200 (OK) zurückgegeben, und der Antworttext zeigt die aktualisierte Richtlinie an (&quot;Status&quot;ist jetzt &quot;AKTIVIERT&quot;und &quot;Beschreibung&quot;wurde geändert). Die Richtlinie `id` sollte mit der `id` gesendeten Anforderung übereinstimmen.
+Eine erfolgreiche Aktualisierungsanfrage gibt einen HTTP-Status 200 (OK) zurück und der Antworttext zeigt die aktualisierte Richtlinie an („Status“ ist jetzt „AKTIVIERT“ und „Beschreibung“ wurde geändert). Die `id` der Richtlinie sollte mit der in der Anfrage gesendeten `id` übereinstimmen.
 
 
 ```JSON
@@ -504,9 +504,9 @@ Bei einer erfolgreichen Updateanforderung wird ein HTTP-Status 200 (OK) zurückg
 }
 ```
 
-## Eine Richtlinie löschen
+## Löschen einer Richtlinie
 
-Wenn Sie eine von Ihnen erstellte Richtlinie entfernen müssen, können Sie dazu eine DELETE-Anforderung an die Seite `id` der Richtlinie senden, die Sie löschen möchten. Es empfiehlt sich, zuerst eine GET-Anforderung (Lookup) durchzuführen, um die Richtlinie Ansicht und zu bestätigen, dass sie die richtige Richtlinie ist, die Sie entfernen möchten. **Nach dem Löschen können Richtlinien nicht wiederhergestellt werden.**
+Wenn Sie eine von Ihnen erstellte Richtlinie entfernen müssen, können Sie dazu eine DELETE-Anfrage an die `id` der Richtlinie senden, die Sie löschen möchten. Es empfiehlt sich, zuerst eine Suchanfrage (GET) durchzuführen, um die Richtlinie anzuzeigen und zu bestätigen, dass es sich um die richtige Richtlinie handelt, die Sie entfernen möchten. **Nach dem Löschen können Richtlinien nicht wiederhergestellt werden.**
 
 **API-Format**
 
@@ -529,4 +529,4 @@ curl -X DELETE \
 
 Wenn die Richtlinie erfolgreich gelöscht wurde, ist der Antworttext mit einem HTTP-Status 200 (OK) leer.
 
-Sie können den Löschvorgang bestätigen, indem Sie versuchen, die Richtlinie erneut nachzuschlagen (GET). Sie sollten eine Fehlermeldung zum HTTP-Status 404 (Nicht gefunden) zusammen mit der Fehlermeldung &quot;Nicht gefunden&quot;erhalten, da die Richtlinie entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie erneut versuchen, nach der Richtlinie zu suchen (GET). Sie sollten den HTTP-Status 404 (Nicht gefunden) zusammen mit der Fehlermeldung „Nicht gefunden“ erhalten, da die Richtlinie entfernt wurde.
