@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 2%
+ht-degree: 22%
 
 ---
 
@@ -23,14 +23,14 @@ Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schr
 
 ## Erste Schritte
 
-Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Quellen](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zuzuordnen und zu verbessern.
-- [Sandboxen](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Quellen](https://docs.adobe.com/content/help/de-DE/experience-platform/source-connectors/home.html): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zuzuordnen und zu verbessern.
+- [Sandboxen](https://docs.adobe.com/content/help/de-DE/experience-platform/sandbox/home.html): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung mit HP [!DNL Vertica] mithilfe der [!DNL Flow Service] API herzustellen.
+The following sections provide additional information that you will need to know in order to successfully connect to HP [!DNL Vertica] using the [!DNL Flow Service] API.
 
-### Erforderliche Berechtigungen erfassen
+### Erforderliche Anmeldedaten sammeln
 
 Damit [!DNL Flow Service] [!DNL Vertica]eine Verbindung mit HP hergestellt werden kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
@@ -43,25 +43,25 @@ Weitere Informationen zum Erwerb einer Verbindungszeichenfolge finden Sie in [di
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](https://docs.adobe.com/content/help/en/experience-platform/landing/troubleshooting.html#reading-example-api-calls) im Handbuch zur [!DNL Experience Platform] Fehlerbehebung.
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](https://docs.adobe.com/content/help/en/experience-platform/landing/troubleshooting.html#reading-example-api-calls) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform] APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](https://docs.adobe.com/content/help/en/experience-platform/tutorials/authentication.html)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://docs.adobe.com/content/help/en/experience-platform/tutorials/authentication.html). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Genehmigung: Träger `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform]einschließlich Quellschnittstellen werden zu bestimmten virtuellen Sandboxen isoliert. Alle Anforderungen an [!DNL Platform] APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+Alle Ressourcen in [!DNL Experience Platform]einschließlich Quellschnittstellen werden zu bestimmten virtuellen Sandboxen isoliert. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein zusätzlicher Medientyp-Header erforderlich:
+Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
 - Content-Type: `application/json`
 
-## Verbindung herstellen
+## Verbindung erstellen
 
 Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro HP- [!DNL Vertica] Konto ist nur eine Verbindung erforderlich, da sie zur Erstellung mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Anfrage**
 
-Um eine HP- [!DNL Vertica] Verbindung zu erstellen, muss die eindeutige Verbindungs-spec-ID als Teil der POST-Anforderung angegeben werden. Die Verbindungsspezifikations-ID für HP [!DNL Vertica] ist `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`.
+Um eine HP- [!DNL Vertica] Verbindung zu erstellen, muss die eindeutige Verbindungsspezifikations-ID als Teil der POST-Anfrage angegeben werden. Die Verbindungsspezifikations-ID für HP [!DNL Vertica] ist `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`.
 
 ```shell
 curl -X POST \
