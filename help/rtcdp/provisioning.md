@@ -28,4 +28,4 @@ Erweiterungen
 
 >[!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-Wählen Sie [!UICONTROL Bearbeiten > Verarbeitungsregeln], um etwas zu tun. Verwenden Sie [!DNL Microsoft Visual Code].
+Wählen Sie Bearbeiten > [!UICONTROL Verarbeitungsregeln], um etwas zu tun. Verwenden Sie [!DNL Microsoft Visual Code].
