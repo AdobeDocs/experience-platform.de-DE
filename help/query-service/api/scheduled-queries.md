@@ -31,18 +31,18 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Optional*) Dem Anfragepfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`). Die verfügbaren Parameter sind unten aufgeführt. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Dem Anfragepfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden. Die verfügbaren Parameter sind unten aufgeführt. |
 
-**Abfrage**
+**Abfrageparameter**
 
 Im Folgenden finden Sie eine Liste der verfügbaren Abfrage-Parameter für die Auflistung geplanter Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren geplanten Abfragen abgerufen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Unterstützte Felder sind `created` und `updated`. `orderby=created` beispielsweise wird Ergebnisse in aufsteigender Reihenfolge sortieren. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente in absteigender Reihenfolge sortiert. |
-| `limit` | Gibt die Seitengrößenbeschränkung an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste ab der dritten aufgeführten Abfrage zurück. (*Standardwert: 0*) |
-| `property` | Filtern Sie Ergebnisse anhand von Feldern. Die Filter **müssen** HTML-Escape-Zeichen aufweisen. Kommas dienen dazu, um mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `templateId` und `userId`. The list of supported operators are `>` (greater than), `<` (less than), and `==` (equal to). Gibt beispielsweise alle geplanten Abfragen zurück, bei denen die Benutzer-ID wie angegeben angegeben ist. `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` |
+| `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
+| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
+| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
+| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `templateId` und `userId`. The list of supported operators are `>` (greater than), `<` (less than), and `==` (equal to). Gibt beispielsweise alle geplanten Abfragen zurück, bei denen die Benutzer-ID wie angegeben angegeben ist. `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` |
 
 **Anfrage**
 
@@ -223,7 +223,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer
 
 ### Details zu einer bestimmten geplanten Abfrage anfordern
 
-Sie können Informationen zu einer bestimmten geplanten Abfrage abrufen, indem Sie eine GET-Anforderung an den `/schedules` Endpunkt senden und dessen ID im Anforderungspfad angeben.
+Sie können Informationen zu einer bestimmten geplanten Abfrage abrufen, indem Sie eine GET an den `/schedules` Endpunkt anfordern und dessen ID im Anforderungspfad angeben.
 
 **API-Format**
 
@@ -306,7 +306,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur angegebenen gepla
 
 ### Details zu einer bestimmten geplanten Abfrage aktualisieren
 
-Sie können die Details einer bestimmten geplanten Abfrage aktualisieren, indem Sie eine PATCH-Anforderung an den `/schedules` Endpunkt senden und dessen ID im Anforderungspfad angeben.
+Sie können die Details für eine bestimmte geplante Abfrage aktualisieren, indem Sie eine PATCH-Anforderung an den `/schedules` Endpunkt senden und dessen ID im Anforderungspfad angeben.
 
 Für die PATCH-Anfrage werden zwei Pfade unterstützt: `/state` und `/schedule/schedule`.
 
