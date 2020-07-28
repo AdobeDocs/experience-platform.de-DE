@@ -41,7 +41,7 @@ Klicken Sie zur Ansicht des Datensatzarbeitsbereichs in der linken Navigation au
 
 ![Alle Datensätze anzeigen](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
-## Datensatz erstellen
+## Erstellen eines Datensatzes
 
 Um einen Datensatz zu erstellen, klicken Sie in der oberen rechten Ecke des Arbeitsbereichs „Datensätze“ auf **[!UICONTROL Datensatz erstellen]**.
 
@@ -74,7 +74,7 @@ Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf
 
 ## Datensatzaktivität
 
-Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte *[!UICONTROL Datensatzaktivität]* im Arbeitsbereich „Datensätze“.  Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
+Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte *[!UICONTROL Datensatzaktivität]* im Arbeitsbereich „Datensätze“. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
 Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. *[!UICONTROL Datensatz-ID]*, *[!UICONTROL Name]*, *[!UICONTROL Beschreibung]*, *[!UICONTROL Tabellenname]*, *[!UICONTROL Schema]*, *[!UICONTROL Streaming]* und *[!UICONTROL Quelle]*. The [!UICONTROL Info] tab also includes information about when the dataset was *[!UICONTROL Created]* and its *[!UICONTROL Last Modified]* date.
 
