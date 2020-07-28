@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ Die Leitfäden für Echtzeit-Maschinelles Lernen erfordern ein funktionierendes 
 
 ## Datensätze in Adobe Experience Platform
 
-Um Beginn beim maschinellen Lernen in Echtzeit zu erhalten, müssen Sie Zugriff auf einen Datensatz haben. Sie haben die Möglichkeit, einen externen Datensatz zu verwenden und ihn in Ihre [!DNL JupyterLab] Umgebung hochzuladen oder innerhalb der Platform einen neuen Datensatz zu erstellen, falls Sie dies noch nicht getan haben.
+Um Beginn beim maschinellen Lernen in Echtzeit zu erhalten, müssen Sie Zugriff auf einen Datensatz haben. Sie haben die Möglichkeit, einen externen Datensatz zu verwenden und ihn in Ihre [!DNL JupyterLab] Umgebung hochzuladen oder einen neuen Datensatz in der Plattform zu erstellen, falls Sie dies noch nicht getan haben.
 
 >[!NOTE]
 >Wenn Sie bereits über einen Datensatz verfügen, den Sie verwenden möchten, können Sie zu den [nächsten Schritten](#next-steps)überspringen.
@@ -39,7 +39,7 @@ Um Beginn beim maschinellen Lernen in Echtzeit zu erhalten, müssen Sie Zugriff 
 
 Weitere Informationen zur Verwendung eines externen Datensatzes, z. B. zum Hochladen von Daten in Ihre [!DNL JupyterLab] Umgebung, finden Sie im Lernprogramm zur [Analyse Ihrer Daten mithilfe von Notebooks](../jupyterlab/analyze-your-data.md#external-data).
 
-### Erstellen eines neuen Datensatzes
+### Neuen Datensatz erstellen
 
 Um einen neuen Datensatz für den maschinellen Echtzeitunterricht zu erstellen, benötigen Sie ein Data-Schema für Ihren Datensatz. Als Nächstes müssen Sie Daten mit dem von Ihnen erstellten Schema erfassen. Verwenden Sie die folgenden Lernprogramme, um einen Datensatz zu erstellen und zu füllen für [!DNL Platform]:
 
