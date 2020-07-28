@@ -16,7 +16,7 @@ ht-degree: 57%
 
 Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen  {#prerequisites}
 
 Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbindung zu einem Ziel](/help/rtcdp/destinations/connect-destination.md) hergestellt haben. Wenn Sie das noch nicht getan haben, navigieren Sie zum [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md), durchsuchen Sie die unterstützten Ziele und richten Sie ein oder mehrere Ziele ein.
 
@@ -58,7 +58,7 @@ Wir empfehlen, eines der Attribute aus Ihrem Vereinigungsschema als [eindeutige 
    ![Loyalität-ID als Identität](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Datenerfassung per Hash an E-Mail-Adressen in Adobe Experience Platform gehen, entsprechend den Anforderungen [!DNL Facebook] zum [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)E-Mail-Hashing. <br> Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Adobe Echtzeit-CDP stellt die E-Mail-Adressen mit Hashing zur Erfüllung der [!DNL Facebook] Anforderungen zur Verfügung.
+   Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Datenerfassung per Hash an E-Mail-Adressen in Adobe Experience Platform gehen, entsprechend den Anforderungen [!DNL Facebook] zum [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)E-Mail-Hashing. <br> Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Adobe Echtzeit-CDP-Dateien werden die E-Mail-Adressen mit Hashing versehen, um die [!DNL Facebook] Anforderungen zu erfüllen.
 
    ![Identitätszuordnung nach dem Ausfüllen von Feldern](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -93,9 +93,9 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in der Echtzeit-Kunde
 
 ## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
 
-### E-Mail-Marketing- und Cloud-Speicher-Ziele
+### E-Mail-Marketing-Ziele  und Cloud-Speicher-Ziele
 
-Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt die Adobe-Echtzeit-CDP eine tabulatorgetrennte `.txt`- oder `.csv`-Datei am von Ihnen angegebenen Speicherort. An diesem Speicherort wird täglich eine neue Datei erstellt. Das Dateiformat lautet:
+Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt die Echtzeit-Kundendatenplattform von Adobe eine tabulatorgetrennte `.txt`- oder `.csv`-Datei am von Ihnen angegebenen Speicherort. An diesem Speicherort wird täglich eine neue Datei erstellt. Das Dateiformat lautet:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 Dateien, die Sie an drei aufeinander folgenden Tagen erhalten, könnten wie folgt aussehen:
@@ -118,7 +118,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->Die Integration zwischen Adobe Echtzeit-CDP und [!DNL Facebook] unterstützt historische Audiencen-Backfills. Alle historischen Segmentqualifikationen werden an gesendet, [!DNL Facebook] wenn Sie die Segmente an das Ziel aktivieren.
+>Die Integration zwischen Adobe Real-Time CDP und [!DNL Facebook] unterstützt historische Audiencen-Backfills. Alle historischen Segmentqualifikationen werden an gesendet, [!DNL Facebook] wenn Sie die Segmente an das Ziel aktivieren.
 
 ## Aktivierung deaktivieren {#disable-activation}
 
