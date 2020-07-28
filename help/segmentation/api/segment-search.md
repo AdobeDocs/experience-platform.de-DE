@@ -225,7 +225,7 @@ Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, 
 
 ## Anhang {#appendix}
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchbegriffe werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einem Segment namens AAM zu suchen oder [!DNL Platform], würden Sie die folgende Abfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
+Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchbegriffe werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einem Segment mit dem Namen AAM oder [!DNL Platform]zu suchen, würden Sie die folgende Abfrage der Suche verwenden: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Für Best Practices sollte der Ausdruck für die Suche wie oben gezeigt HTML-kodiert sein.
 
