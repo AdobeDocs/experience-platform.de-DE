@@ -12,7 +12,7 @@ ht-degree: 6%
 ---
 
 
-# Adobe Experience Platform [!DNL Segmentation Service] API developer guide
+# Entwicklerhandbuch für die Adobe Experience Platform [!DNL Segmentation Service] API
 
 [!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Audiencen [!DNL Adobe Experience Platform] aus Ihren [!DNL Real-time Customer Profile] Daten.
 
