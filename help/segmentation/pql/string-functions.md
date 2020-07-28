@@ -14,7 +14,7 @@ ht-degree: 13%
 
 # Zeichenfolgen-Funktionen
 
-[!DNL Profile Query Language] (PQL) Angebot Funktionen, um die Interaktion mit Zeichenfolgen zu vereinfachen. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
+[!DNL Profile Query Language] (PQL) Angebot Funktionen, um die Interaktion mit Zeichenfolgen zu vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
 
 ## like
 
@@ -267,5 +267,5 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Nächste Schritte
 
-Nachdem Sie nun von Zeichenfolgen-Funktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Übersicht zu Profil Query Language](./overview.md).
+Nachdem Sie nun von Zeichenfolgen-Funktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
 
