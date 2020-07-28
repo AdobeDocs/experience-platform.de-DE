@@ -57,7 +57,7 @@ Standardknoten bauen auf Open-Source-Datenwissenschaftsbibliotheken wie Pandas u
 
 ### ModelUpload
 
-Der ModelUpload-Knoten ist ein interner Adobe-Knoten, der einen model_path akzeptiert und das Modell vom lokalen Modellpfad in den Real-time Machine Learning Blob Store hochlädt.
+Der Knoten ModelUpload ist ein interner Knoten für Adoben, der eine model_path akzeptiert und das Modell vom lokalen Modellpfad in den Real-time Machine Learning Blob Store hochlädt.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -121,14 +121,14 @@ msg6 = model_train.process(msg5)
 | Wert | Beschreibung |
 | --- | --- |
 | Funktionen | Eingabefunktionen für das Modell (Liste von Zeichenfolgen). <br> Beispiel: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Spaltenname des Targets (Zeichenfolge). |
+| label | Spaltenname der Zielgruppe (Zeichenfolge). |
 | mode | Zug/Test (Zeichenfolge). |
 | model_path | Pfad zum gespeicherten Modell lokal im Format &quot;onnx&quot;. |
 | params.model | Absoluter Importpfad zum Modell (Zeichenfolge), z. B.: `sklearn.linear_model.LogisticRegression`. |
 | params.model_params | Modell-Hyperparameter finden Sie in der Dokumentation zur [Sklearn-API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) . |
 | node_instance.process(data_message_from_previous_node) | Die Methode `process()` nimmt DataMsg von der vorherigen Node und wendet eine Transformation an. Dies hängt von der aktuell verwendeten Node ab. |
 
-### Aufspaltung
+### Split
 
 Verwenden Sie den folgenden Knoten, um Ihren Dataframe in Zug zu teilen und zu testen, indem Sie ihn bestehen `train_size` oder `test_size`. Dadurch wird ein Dataframe mit einem Multi-Index zurückgegeben. Sie können mithilfe des folgenden Beispiels auf Zug- und Testdataframes zugreifen `msg5.data.xs(“train”)`.
 
