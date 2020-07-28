@@ -7,16 +7,16 @@ translation-type: tm+mt
 source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 0%
+ht-degree: 45%
 
 ---
 
 
 # Connector für Kundenattribute
 
-Mit Adobe Experience Platform können Daten aus externen Quellen erfasst werden, während Sie gleichzeitig die Möglichkeit haben, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Erfassung von Kundenattributdaten-Profil-Daten in Adobe Experience Platform.
+Experience Platform unterstützt die Erfassung von Kundenattributdaten-Profil-Daten in die Adobe Experience Platform.
 
 Die nachstehende Dokumentation enthält Informationen dazu, wie Kundenattribute mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbunden werden können:
 
