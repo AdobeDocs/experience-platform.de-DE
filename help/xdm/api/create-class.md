@@ -20,7 +20,7 @@ There are several standard classes provided by Adobe and other [!DNL Experience 
 
 >[!NOTE]
 >
->Beim Erstellen eines Schemas, das auf einer von Ihnen definierten Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jedes Mixin definiert die Klassen, mit denen es kompatibel ist, in seinem `meta:intendedToExtend`-Attribut. Sobald Sie Mixins definiert haben, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung der `$id` Ihrer neuen Klasse im `meta:intendedToExtend`-Feld des Mixins), können Sie die Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weiterführende Informationen finden Sie in den Abschnitten zum [Erstellen von Mixins](create-mixin.md) und [Erstellen von Schemas](create-schema.md).
+> Beim Erstellen eines Schemas, das auf einer von Ihnen definierten Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jedes Mixin definiert die Klassen, mit denen es kompatibel ist, in seinem `meta:intendedToExtend`-Attribut. Sobald Sie Mixins definiert haben, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung der `$id` Ihrer neuen Klasse im `meta:intendedToExtend`-Feld des Mixins), können Sie die Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weiterführende Informationen finden Sie in den Abschnitten zum [Erstellen von Mixins](create-mixin.md) und [Erstellen von Schemas](create-schema.md).
 
 **API-Format**
 
