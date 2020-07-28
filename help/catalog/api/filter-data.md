@@ -16,7 +16,7 @@ ht-degree: 89%
 
 The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 
-This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren. [!DNL Catalog] For more general information on [!DNL Catalog Service], see the [Catalog overview](../home.md).
+This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren.[!DNL Catalog] For more general information on [!DNL Catalog Service], see the [Catalog overview](../home.md).
 
 ## Zurückgegebene Objekte begrenzen
 
@@ -24,7 +24,7 @@ Der Abfrageparameter `limit` begrenzt die Zahl der in einer Antwort zurückgegeb
 
 * Wenn kein `limit`-Parameter angegeben ist, beträgt die maximale Zahl von Objekten pro Antwort-Payload 20.
 * Bei Datensatzabfragen beträgt die maximale Zahl der zurückgegebenen Datensätze 20, wenn `observableSchema` mit dem `properties`-Abfrageparameter angefragt wird.
-* Die globale Begrenzung für alle anderen Catalog-Objekte beträgt 100 Objekte.
+* Die globale Begrenzung für alle anderen Catalog-Abfragen beträgt 100 Objekte.
 * Ungültige `limit`-Parameter (einschließlich `limit=0`) führen zu Fehlerantworten der Stufe 400, in der richtige Bereiche angegeben werden.
 * Beschränkungen oder Verschiebungen, die als Abfrageparameter übergeben werden, haben Vorrang vor jenen, die als Kopfzeilen übergeben werden.
 
@@ -80,7 +80,7 @@ Trotz Filterns der Zahl der zurückgegebenen Objekte mithilfe des `limit`-Parame
 
 Der `properties`-Parameter filtert Antwortobjekte so, dass nur bestimmte angegebene Eigenschaften zurückgeben werden. Der Parameter kann so eingerichtet werden, dass eine oder mehrere Eigenschaften zurückgegeben werden.
 
-Der `properties`-Parameter akzeptiert nur Objekteigenschaften der obersten Ebene. Für das folgende Beispielobjekt können Sie Filter also auf `name`, `description`und `subItem`, NICHT aber auf `sampleKey` anwenden.
+Der `properties`-Parameter akzeptiert nur Objekteigenschaften der obersten Ebene. Für das folgende Beispielobjekt können Sie Filter also auf `name`, `description` und `subItem`, NICHT aber auf `sampleKey` anwenden.
 
 ```json
 {
@@ -591,7 +591,7 @@ Der Wert des `property`-Parameters unterstützt unterschiedliche Typen von bedin
 
 >[!NOTE]
 >
->Die `name`-Eigenschaft unterstützt die Verwendung eines Platzhalters `*`, entweder als gesamte Suchzeichenfolge oder als Teil davon. Platzhalter entsprechen leeren Zeichen, sodass die Suchzeichenfolge `te*st` mit dem Wert „test“ übereinstimmt. Bei Sternchen muss durch Verdopplung (`**`) ein Escape durchgeführt werden. Ein doppeltes Sternchen in einer Suchzeichenfolge stellt ein einzelnes Sternchen als literale Zeichenfolge dar.
+> Die `name`-Eigenschaft unterstützt die Verwendung eines Platzhalters `*`, entweder als gesamte Suchzeichenfolge oder als Teil davon. Platzhalter entsprechen leeren Zeichen, sodass die Suchzeichenfolge `te*st` mit dem Wert „test“ übereinstimmt. Bei Sternchen muss durch Verdopplung (`**`) ein Escape durchgeführt werden. Ein doppeltes Sternchen in einer Suchzeichenfolge stellt ein einzelnes Sternchen als literale Zeichenfolge dar.
 
 **Anfrage**
 
