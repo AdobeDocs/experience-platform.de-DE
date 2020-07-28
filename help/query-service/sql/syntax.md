@@ -131,7 +131,7 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 Bitte beachten Sie Folgendes für eine CTAS-Abfrage:
 
-1. Die `SELECT`-Anweisung muss einen Alias für die Aggregat-Funktionen wie `COUNT`, `SUM`, `MIN`usw. enthalten.
+1. Die `SELECT`-Anweisung muss einen Alias für die Aggregat-Funktionen wie `COUNT`, `SUM`, `MIN` usw. enthalten.
 2. Die `SELECT`-Anweisung kann mit oder ohne Klammern () angegeben werden.
 
 ## INSERT INTO
@@ -323,7 +323,7 @@ where option can be one of:
 
 >[!IMPORTANT]
 >
->Denken Sie daran, dass die Anweisung genau genommen ausgeführt wird, wenn die `ANALYZE`-Option verwendet wird. Obwohl `EXPLAIN` alle Ausgaben verwirft, die `SELECT` zurückgibt, verworfen werden, treten andere Nebenwirkungen der Anweisung wie gewohnt auf.
+> Denken Sie daran, dass die Anweisung genau genommen ausgeführt wird, wenn die `ANALYZE`-Option verwendet wird. Obwohl `EXPLAIN` alle Ausgaben verwirft, die `SELECT` zurückgibt, verworfen werden, treten andere Nebenwirkungen der Anweisung wie gewohnt auf.
 
 #### Beispiel
 
