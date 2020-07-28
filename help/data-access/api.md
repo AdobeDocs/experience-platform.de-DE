@@ -203,7 +203,7 @@ Wenn ein Ordner zurückgegeben wird, enthält er ein Array aller Dateien im Ordn
 
 ## Zugriff auf den Inhalt einer Datei
 
-The [!DNL Data Access] API can also be used to access the contents of a file. Auf diese Weise können Sie den Inhalt in eine externe Quelle herunterladen.
+The [!DNL Data Access] API can also be used to access the contents of a file. Auf diese Weise können Sie die Inhalte in eine externe Quelle herunterladen.
 
 **API-Format**
 
@@ -240,6 +240,6 @@ Contents of the file
 
 Weitere Beispiele finden Sie im [Lernprogramm](tutorials/dataset-data.md)zum Datenzugriff.
 
-## Abonnieren von Datenaufnahme-Ereignissen
+## Abonnieren von Datenerfassungsereignissen
 
 [!DNL Platform] stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
