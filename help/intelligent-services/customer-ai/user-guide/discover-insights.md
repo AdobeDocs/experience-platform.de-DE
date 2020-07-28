@@ -7,26 +7,26 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1059'
-ht-degree: 5%
+ht-degree: 17%
 
 ---
 
 
 # Einblicke in die Kundentechnik
 
-Die Kundentechnik als Teil von Intelligent Services bietet Marketingexperten die Möglichkeit, Adobe Sensei zu nutzen, um zu bestimmen, was Ihre Kunden als Nächstes tun werden. Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Das ist möglich, ohne dass die geschäftlichen Anforderungen in eine Aufgabe für maschinelles Lernen umgewandelt werden müssen, indem ein Algorithmus, ein Training oder eine Implementierung ausgewählt wird.
+Die Kundentechnik als Teil von Intelligent Services bietet Marketern die Möglichkeit, Adobe Sensei zu nutzen, um vorherzusehen, was Ihre Kunden als Nächstes tun werden. Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Das ist möglich, ohne dass die geschäftlichen Anforderungen in eine Aufgabe für maschinelles Lernen umgewandelt werden müssen, indem ein Algorithmus, ein Training oder eine Implementierung ausgewählt wird.
 
 Dieses Dokument dient als Leitfaden für die Interaktion mit Dienstinstanzinformationen in der Benutzeroberfläche der Intelligent Services Customer AI.
 
 ## Erste Schritte
 
-Um Einblicke in die Kundenaktivität zu erhalten, benötigen Sie eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Kunden-AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und sie weiterhin trainiert und bewertet wird, erlauben Sie bitte 24 Stunden, damit sie ausgeführt werden kann.
+Um Einblicke in die Kundenaktivität zu erhalten, benötigen Sie eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Kunden-AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
 ## Übersicht über die Dienstinstanzen
 
-In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Der *Dienste* -Browser wird angezeigt und zeigt verfügbare intelligente Dienste an. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Der *Dienste*-Browser wird geöffnet und zeigt verfügbare Intelligent Services an. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
 
-![Zugriff auf Ihre Instanz](../images/insights/navigate-to-service.png)
+![Zugreifen auf Ihre Instanz](../images/insights/navigate-to-service.png)
 
 Die Seite zum Kundendienst wird angezeigt. Auf dieser Seite werden Dienstinstanzen der Kunden-API Liste und Informationen zu diesen Instanzen, einschließlich Instanzname, Tendenztyp, Häufigkeit der Ausführung der Instanz und Status der letzten Aktualisierung, angezeigt.
 
@@ -36,7 +36,7 @@ Die Seite zum Kundendienst wird angezeigt. Auf dieser Seite werden Dienstinstanz
 
 ![Instanz erstellen](../images/insights/dashboard.png)
 
-Klicken Sie auf einen Dienstinstanznamen, um zu beginnen.
+Klicken Sie zuerst auf den Namen einer Dienstinstanz.
 
 ![Instanz erstellen](../images/insights/click-the-name.png)
 
@@ -67,23 +67,23 @@ Die zweite Möglichkeit zur Ansicht zusätzlicher Details für eine Dienstinstan
 
 ### Bearbeiten einer Instanz
 
-Um eine Instanz zu bearbeiten, klicken Sie in der Navigation oben rechts auf **[!UICONTROL Bearbeiten]** .
+Um eine Instanz zu bearbeiten, klicken Sie in oben rechts in der Navigation auf **[!UICONTROL Bearbeiten]**.
 
-![Klicken Sie auf die Schaltfläche &quot;Bearbeiten&quot;](../images/insights/edit-button.png)
+![Auf Bearbeiten-Schaltfläche klicken](../images/insights/edit-button.png)
 
-Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie die *Beschreibung* und die *Bewertungshäufigkeit* der Instanz bearbeiten können. Um die Änderungen zu bestätigen und das Dialogfeld zu schließen, klicken Sie unten rechts auf **[!UICONTROL Bearbeiten]** .
+The edit dialog box appears, allowing you to edit the *Description* and *Scoring Frequency* of the instance. Um die Änderungen zu bestätigen und das Dialogfeld zu schließen, klicken Sie unten rechts auf **[!UICONTROL Bearbeiten]**.
 
-![Bearbeiten-Popup](../images/insights/edit-instance.png)
+![Bearbeiten-Popup-Fenster](../images/insights/edit-instance.png)
 
-### Weitere Aktionen
+### Mehr Aktionen
 
-Die Schaltfläche &quot; **[!UICONTROL Mehr Aktionen]** &quot;befindet sich in der oberen rechten Navigation neben **[!UICONTROL Bearbeiten]**. Wenn Sie auf **[!UICONTROL Mehr Aktionen]** klicken, wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
+Die Schaltfläche **[!UICONTROL Mehr Aktionen]** befindet sich in der oberen rechten Navigation neben **[!UICONTROL Bearbeiten]**. Wenn Sie auf **[!UICONTROL Mehr Aktionen]** klicken, wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
 
 - **[!UICONTROL Löschen]**: Löscht die Instanz.
 - **[!UICONTROL Zugangsdaten]**: Durch Klicken auf *Zugriffsergebnisse* wird ein Dialogfeld geöffnet, das einen Link zu den [Download-Ergebnissen für das Tutorial zur Kundenwerbung](./download-scores.md) enthält. Außerdem enthält das Dialogfeld die Dataset-ID, die zum Aufrufen von API-Aufrufen erforderlich ist.
 - **[!UICONTROL Ansicht-Ausführungsverlauf]**: Ein Dialogfeld mit einer Liste aller mit der Dienstinstanz verknüpften Bewertungsläufe wird angezeigt.
 
-![mehr Aktionen](../images/insights/more-actions.png)
+![Mehr Aktionen](../images/insights/more-actions.png)
 
 ## Bewertungszusammenfassung {#scoring-summary}
 
@@ -107,7 +107,7 @@ Für jeden Ergebnisbehälter wird eine Karte generiert, die die 10 wichtigsten E
 
 ![Einflussfaktoren](../images/insights/influential-factors.png)
 
-### Segment erstellen
+### Erstellen eines Segments
 
 Durch Klicken auf die Schaltfläche Segment **** erstellen in einer der Behälter für niedrige, mittlere und hohe Tendenz werden Sie zum Segmentaufbau weitergeleitet.
 
@@ -116,7 +116,7 @@ Durch Klicken auf die Schaltfläche Segment **** erstellen in einer der Behälte
 
 ![Klicken Sie auf Segment erstellen](../images/insights/influential-factors-create-segment.png)
 
-![Segment erstellen](../images/insights/create-segment.png)
+![Erstellen eines Segments](../images/insights/create-segment.png)
 
 Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;Einblicke&quot;die Option Segment **** erstellen auswählen, fügt die Kunden-API dem Segment automatisch die ausgewählten Behälterinformationen hinzu. Füllen Sie zum Abschluss der Segmenterstellung einfach die Container *Name* und *Beschreibung* in der rechten Leiste der Segment Builder-Benutzeroberfläche aus. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, klicken Sie oben rechts auf **[!UICONTROL Speichern]** .
 
@@ -124,13 +124,13 @@ Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;E
 
 ![Segmentfüllung](../images/insights/segment-saving.png)
 
-Um Ihr neues Segment in der Benutzeroberfläche &quot;Platform&quot;Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Die Seite &quot; *Durchsuchen* &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
+Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Die Seite &quot; *Durchsuchen* &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
 
 ![Alle Segmente](../images/insights/Segments-dashboard.png)
 
 ## Nächste Schritte
 
-In diesem Dokument werden die Einblicke einer Instanz des Kundenservice erläutert. Sie können jetzt das Tutorial zum [Herunterladen von Punktzahlen in der Kundenaktivität](./download-scores.md) fortsetzen oder die anderen [Adobe Intelligent Services](../../home.md) -Handbücher durchsuchen, die angeboten werden.
+In diesem Dokument werden die Einblicke einer Instanz des Kundenservice erläutert. Sie können jetzt das Tutorial zum [Herunterladen von Punktzahlen in der Kundenaktivität](./download-scores.md) fortsetzen oder die anderen angebotenen [Adobe Intelligent Services](../../home.md) -Handbücher durchsuchen.
 
 ## Zusätzliche Ressourcen
 
