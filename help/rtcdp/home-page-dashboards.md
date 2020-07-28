@@ -61,7 +61,7 @@ Weiterführende Informationen zu Profilen finden Sie unter [Einheitliche Sicht a
 
 **[!UICONTROL Segmente]** gibt die Gesamtzahl der für das Unternehmen erstellten Segmente an. Diese Zahl wird aktualisiert, sobald neue Segmente erstellt werden.
 
-Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](segmentation/segmentation-overview.md).
+Weitere Informationen zu Segmenten finden Sie unter [Segmentation Service – Übersicht](segmentation/segmentation-overview.md).
 
 ### Ziele
 
@@ -125,7 +125,7 @@ Auf der Metrikkarte **[!UICONTROL Letzte Segmente]** werden die fünf Segmente a
 
 Klicken Sie auf ein Segment, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Segmente zu erhalten.
 
-Weiterführende Informationen zu Segmenten finden Sie unter [Segmentierungsdienst – Übersicht](segmentation/segmentation-overview.md).
+Weitere Informationen zu Segmenten finden Sie unter [Segmentation Service – Übersicht](segmentation/segmentation-overview.md).
 
 ### Letzte Ziele
 
