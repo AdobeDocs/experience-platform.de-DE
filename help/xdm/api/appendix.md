@@ -375,10 +375,10 @@ Die folgende Tabelle beschreibt die Zuordnung zwischen „meta:xdmType“ und an
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | Typ: Zeichenfolge | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Zeichenfolge | System.String | Zeichenfolge | string | Zeichenfolge | string |
 | number | Typ: Zahl | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Zahl | double | Double | double |
-| long | Typ: Ganzzahl<br>Maximum:2^53+1<br>Minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Zahl | long | Ganzzahl | int64 |
-| int | Typ: Ganzzahl<br>Maximum:2^31<br>Minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Zahl | int | Ganzzahl | int32 |
-| short | Typ: Ganzzahl<br>Maximum:2^15<br>Minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Short | System.Int16 | Zahl | int | Ganzzahl | int32 |
-| byte | Typ: Ganzzahl<br>Maximum:2^7<br>Minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Zahl | int | Ganzzahl | int32 |
+| long | Typ: Ganzzahl<br>Maximum:2^53+1<br>Minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Nummer | long | Ganzzahl | int64 |
+| int | Typ: Ganzzahl<br>Maximum:2^31<br>Minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Nummer | int | Ganzzahl | int32 |
+| short | Typ: Ganzzahl<br>Maximum:2^15<br>Minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Short | System.Int16 | Nummer | int | Ganzzahl | int32 |
+| Byte | Typ: Ganzzahl<br>Maximum:2^7<br>Minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Zahl | int | Ganzzahl | int32 |
 | boolean | Typ: Boolescher Wert | BOOLEAN | BooleanType | java.lang.Boolean | Boolesch | System.Boolean | Boolesch | bool | Ganzzahl | Ganzzahl | bool |
 | date | Typ: Zeichenfolge<br>Format: Datum<br>(RFC 3339, Abschnitt 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | date | Ganzzahl<br>(unix millis) | int64<br>(unix millis) |
 | date-time | Typ: Zeichenfolge<br>Format: Datum/Uhrzeit<br>(RFC 3339, Abschnitt 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | timestamp | Ganzzahl<br>(unix millis) | int64<br>(unix millis) |
