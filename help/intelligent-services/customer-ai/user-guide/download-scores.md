@@ -1,45 +1,45 @@
 ---
 keywords: Experience Platform;download scores;customer ai;popular topics
 solution: Experience Platform
-title: Herunterladen von Punktzahlen in der Kunden-API
+title: Herunterladen von Bewertungen in Customer AI
 topic: Downloading scores
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '933'
-ht-degree: 2%
+ht-degree: 90%
 
 ---
 
 
-# Herunterladen von Punktzahlen in der Kunden-API
+# Herunterladen von Bewertungen in Customer AI
 
-Dieses Dokument dient als Anleitung zum Herunterladen von Punktzahlen für Kunden-KI.
+Dieses Dokument dient als Anleitung zum Herunterladen von Ergebnissen für Customer AI.
 
 ## Erste Schritte
 
-Mit der Kunden-API können Sie Ergebnisse im Parquet-Dateiformat herunterladen. Für dieses Lernprogramm müssen Sie den Abschnitt zum Herunterladen von AI-Bewertungen für Kunden im Handbuch [Erste Schritte](../getting-started.md) gelesen und abgeschlossen haben.
+Mit Customer AI können Sie Ergebnisse im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Customer AI-Bewertungen in den [Ersten Schritten](../getting-started.md) gelesen und abgeschlossen haben.
 
-Darüber hinaus müssen Sie eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus zur Verfügung haben, um auf Ergebnisse für Customer AI zugreifen zu können. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Kunden-AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und sie weiterhin trainiert und bewertet wird, erlauben Sie bitte 24 Stunden, damit sie ausgeführt werden kann.
+Um auf Bewertungen für Customer AI zuzugreifen, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Kunden-AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
-Derzeit gibt es zwei Möglichkeiten, Kunden-AI-Bewertungen herunterzuladen:
+Derzeit gibt es zwei Möglichkeiten, Customer AI-Bewertungen herunterzuladen:
 
-1. Wenn Sie die Punktzahlen auf der jeweiligen Ebene herunterladen möchten und/oder das Echtzeit-Profil des Kunden nicht aktiviert ist, klicken Sie zum Beginn auf [Suchen Ihrer DataSet-ID](#dataset-id).
-2. Wenn Sie Profil aktiviert haben und Segmente herunterladen möchten, die Sie mit der Kundenanfrage konfiguriert haben, navigieren Sie bitte zum [Herunterladen eines Segments, das mit der Kundenanfrage](#segment)konfiguriert wurde.
+1. Wenn Sie die Bewertungen auf der jeweiligen Ebene herunterladen möchten und/oder das Echtzeit-Kundenprofil nicht aktiviert ist, gehen Sie zuerst zu [Ermitteln Ihrer Datensatz-ID](#dataset-id).
+2. Wenn Sie Profil aktiviert haben und Segmente herunterladen möchten, die Sie mit Customer AI konfiguriert haben, gehen Sie zu [Herunterladen eines mit Customer AI konfigurierten Segments](#segment).
 
-## Find your dataset ID {#dataset-id}
+## Ermitteln Ihrer Datensatz-ID {#dataset-id}
 
-Klicken Sie in Ihrer Dienstinstanz für Customer AI Insights in der Navigation oben rechts auf das Dropdownmenü *Mehr Aktionen* und wählen Sie **[!UICONTROL Access-Ergebnisse]**.
+Klicken Sie in Ihrer Dienstinstanz für Customer AI-Einblicke auf das Dropdown-Menü *Mehr Aktionen* und wählen Sie **[!UICONTROL Auf Bewertungen zugreifen]** aus.
 
-![mehr Aktionen](../images/insights/more-actions.png)
+![Mehr Aktionen](../images/insights/more-actions.png)
 
-Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen von Punktzahlen und der DataSet-ID für Ihre aktuelle Instanz angezeigt. Kopieren Sie die DataSet-ID in die Zwischenablage und fahren Sie mit dem nächsten Schritt fort.
+Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen von Bewertungen und der Datensatz-ID Ihrer aktuellen Instanz angezeigt. Kopieren Sie die Datensatz-ID in die Zwischenablage und fahren Sie mit dem nächsten Schritt fort.
 
-![Datenbestand-ID](../images/download-scores/access-scores.png)
+![Datensatz-ID](../images/download-scores/access-scores.png)
 
-## Ihre Stapel-ID abrufen {#retrieve-your-batch-id}
+## Abrufen Ihrer Batch-Kennung {#retrieve-your-batch-id}
 
-Wenn Sie Ihre DataSet-ID aus dem vorherigen Schritt verwenden, müssen Sie die Katalog-API aufrufen, um eine Stapel-ID abzurufen. Für diesen API-Aufruf werden zusätzliche Parameter für die Abfrage verwendet, um anstelle einer Liste von Stapeln, die zu Ihrem Unternehmen gehören, den letzten erfolgreichen Batch zurückzugeben. Um weitere Stapel zurückzugeben, erhöhen Sie die Anzahl für den Parameter &quot;Abfrage begrenzen&quot;auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfragen-Parametern](../../../catalog/api/filter-data.md).
+Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Parameter für die Abfrage verwendet, um anstelle einer Liste von Stapeln, die zu Ihrem Unternehmen gehören, den letzten erfolgreichen Batch zurückzugeben. Um weitere Stapel zurückzugeben, erhöhen Sie die Anzahl für den Parameter &quot;Abfrage begrenzen&quot;auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../../catalog/api/filter-data.md).
 
 **API-Format**
 
@@ -49,7 +49,7 @@ GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=succ
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{DATASET_ID}` | Die im Dialogfeld &quot;Zugriffszahlen&quot;verfügbare DataSet-ID. |
+| `{DATASET_ID}` | Die im Dialogfeld „Auf Bewertungen zugreifen“ verfügbare Datensatz-ID. |
 
 **Anfrage**
 
@@ -63,7 +63,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Stapel-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-ID, um sie beim nächsten API-Aufruf zu verwenden.
+Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Stapel-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
 
 ```json
 {
@@ -112,9 +112,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt en
 }
 ```
 
-## Abrufen des nächsten API-Aufrufs mit Ihrer Stapel-ID {#retrieve-the-next-api-call-with-your-batch-id}
+## Abrufen des nächsten API-Aufrufs mit Ihrer Batch-Kennung {#retrieve-the-next-api-call-with-your-batch-id}
 
-Sobald Sie über eine Stapel-ID verfügen, können Sie eine neue GET-Anforderung an `/batches`vornehmen. Die Anforderung gibt einen Link zurück, der als nächste API-Anforderung verwendet wird.
+Sobald Sie über eine Batch-Kennung verfügen, können Sie eine neue GET-Anfrage an `/batches` vornehmen. Die Anfrage gibt einen Link zurück, der als die nächste API-Anfrage verwendet wird.
 
 **API-Format**
 
@@ -124,11 +124,11 @@ GET batches/{BATCH_ID}/files
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BATCH_ID}` | Die im vorherigen Schritt abgerufene Stapel-ID [ruft Ihre Stapel-ID](#retrieve-your-batch-id)ab. |
+| `{BATCH_ID}` | Die im vorherigen Schritt [Abrufen Ihrer Batch-Kennung](#retrieve-your-batch-id) abgerufene Batch-Kennung. |
 
 **Anfrage**
 
-Erstellen Sie mithilfe Ihrer eigenen Stapel-ID die folgende Anforderung.
+Stellen Sie mithilfe Ihrer Batch-Kennung die folgende Anfrage.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5e69-11ea-b624-51evfeba55d1/files' \
@@ -140,7 +140,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein `_links` Objekt enthält. Innerhalb des `_links` Objekts befindet sich ein `href` mit einem neuen API-Aufruf als Wert. Kopieren Sie diesen Wert, um mit dem nächsten Schritt fortzufahren.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein `_links`-Objekt enthält. Innerhalb des `_links`-Objekts befindet sich ein `href` mit einem neuen API-Aufruf als Wert. Kopieren Sie diesen Wert, um mit dem nächsten Schritt fortzufahren.
 
 ```json
 {
@@ -166,9 +166,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein `_links` Objekt en
 }
 ```
 
-## Dateien abrufen {#retrieving-your-files}
+## Abrufen Ihrer Dateien {#retrieving-your-files}
 
-Erstellen Sie eine neue GET-Anforderung, um den `href` Wert, den Sie im vorherigen Schritt als API-Aufruf erhalten haben, zum Abrufen des Dateiverzeichnisses zu verwenden.
+Verwenden Sie den `href`-Wert, den Sie im vorherigen Schritt als API-Aufruf erhalten haben, und stellen Sie eine neue GET-Anfrage, um Ihr Dateiverzeichnis abzurufen.
 
 **API-Format**
 
@@ -178,7 +178,7 @@ GET files/{DATASETFILE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | Die dataSetFile-ID wird im `href` Wert des [vorherigen Schritts](#retrieve-the-next-api-call-with-your-batch-id)zurückgegeben. Es ist auch im `data` Array unter dem Objekttyp verfügbar `dataSetFileId`. |
+| `{DATASETFILE_ID}` | Die dataSetFile-ID wird im `href`-Wert des [vorherigen Schritts](#retrieve-the-next-api-call-with-your-batch-id) zurückgegeben. Sie ist auch im `data`-Array unter dem Objekttyp `dataSetFileId` verfügbar. |
 
 **Anfrage**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 **Antwort**
 
-Die Antwort enthält ein Datenarray, das einen einzelnen Eintrag oder eine Liste von Dateien enthalten kann, die zu diesem Ordner gehören. Das folgende Beispiel enthält eine Liste von Dateien und wurde zur Lesbarkeit komprimiert. In diesem Szenario müssen Sie die URL jeder Datei befolgen, um auf die Datei zuzugreifen.
+Die Antwort enthält ein Daten-Array, das einen einzelnen Eintrag oder eine Liste von Dateien enthalten kann, die zu diesem Verzeichnis gehören. Das folgende Beispiel enthält eine Liste von Dateien und wurde aus Gründen der Lesbarkeit komprimiert. In diesem Szenario müssen Sie der URL jeder Datei folgen, um auf die Datei zugreifen zu können.
 
 ```json
 {
@@ -234,18 +234,18 @@ Die Antwort enthält ein Datenarray, das einen einzelnen Eintrag oder eine Liste
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `_links.self.href` | Die URL der GET-Anforderung, mit der eine Datei in Ihr Verzeichnis heruntergeladen wird. |
+| `_links.self.href` | Die URL der GET-Anfrage, mit der eine Datei in Ihr Verzeichnis heruntergeladen wird. |
 
 
-Kopieren Sie den `href` Wert für ein beliebiges Dateiobjekt im `data` Array und fahren Sie dann mit dem nächsten Schritt fort.
+Kopieren Sie den `href`-Wert für ein beliebiges Dateiobjekt im `data`-Array und fahren Sie dann mit dem nächsten Schritt fort.
 
-## Herunterladen der Dateidaten
+## Herunterladen Ihrer Dateidaten
 
-Um Ihre Dateidaten herunterzuladen, stellen Sie eine GET-Anforderung an den `"href"` Wert, den Sie im vorherigen Schritt beim [Abrufen Ihrer Dateien](#retrieving-your-files)kopiert haben.
+Um Ihre Dateidaten herunterzuladen, stellen Sie eine GET-Anfrage an den `"href"`-Wert, den Sie im vorherigen Schritt [Abrufen Ihrer Dateien](#retrieving-your-files) kopiert haben.
 
 >[!NOTE]
 >
->Wenn Sie diese Anforderung direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Anforderungsheader hinzuzufügen. Im folgenden Anforderungsbeispiel wird `--output {FILENAME.FILETYPE}`.
+> Wenn Sie diese Anfrage direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Kopfzeilen Ihrer Anfrage hinzuzufügen. Im folgenden Anfragebeispiel wird `--output {FILENAME.FILETYPE}` verwendet.
 
 **API-Format**
 
@@ -255,7 +255,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | Die dataSetFile-ID wird im `href` Wert eines [vorherigen Schritts](#retrieve-the-next-api-call-with-your-batch-id)zurückgegeben. |
+| `{DATASETFILE_ID}` | Die dataSetFile-ID wird im `href`-Wert eines [vorherigen Schritts](#retrieve-the-next-api-call-with-your-batch-id) zurückgegeben. |
 | `{FILE_NAME}` | Der Name der Datei. |
 
 **Anfrage**
@@ -271,29 +271,29 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Vergewissern Sie sich, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET-Anforderung senden.
+>Vergewissern Sie sich, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET-Anfrage stellen.
 
 **Antwort**
 
-Die Antwort lädt die Datei herunter, die Sie im aktuellen Verzeichnis angefordert haben. In diesem Beispiel lautet der Dateiname &quot;filename.parquet&quot;.
+Die Antwort lädt die angeforderte Datei in Ihr aktuelles Verzeichnis herunter. In diesem Beispiel lautet der Dateiname „filename.parquet“.
 
-![Terminal](../images/download-scores/response.png)
+![Endgerät](../images/download-scores/response.png)
 
-## Herunterladen eines Segments, das mit der Kunden-API konfiguriert wurde {#segment}
+## Herunterladen eines mit Customer AI konfigurierten Segments {#segment}
 
-Alternativ können Sie Ihre Ergebnisdaten herunterladen, indem Sie Ihre Audience in einen Datensatz exportieren. Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der `status` Attributwert &quot;ERFOLGT&quot;ist), können Sie Ihre Audience in ein Dataset exportieren, in dem darauf zugegriffen und darauf reagiert werden kann. Weitere Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../../../segmentation/home.md).
+Alternativ können Sie Ihre Bewertungsdaten herunterladen, indem Sie Ihre Zielgruppe in einen Datensatz exportieren. Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der Wert des `status`-Attributs lautet „SUCCEEDED“ (GELUNGEN)), können Sie Ihre Zielgruppe in einen Datensatz exportieren. In diesem Datensatz ist die Zielgruppe zugänglich und bearbeitbar. Weitere Informationen zur Segmentierung finden Sie in [Segmentierung – Übersicht](../../../segmentation/home.md).
 
 >[!IMPORTANT]
 >
->Um diese Methode des Exports zu verwenden, muss das Kundenkonto in Echtzeit für den Datensatz aktiviert werden.
+>Um diese Exportmethode zu verwenden, muss Echtzeit-Kundenprofil für den Datensatz aktiviert sein.
 
-Der Abschnitt zum [Exportieren eines Segments](../../../segmentation/tutorials/evaluate-a-segment.md) im Segmentbewertungshandbuch beschreibt die erforderlichen Schritte zum Exportieren eines Segmentdatasets. Der Leitfaden enthält Beispiele für Folgendes:
+Im Abschnitt zum [Exportieren eines Segments](../../../segmentation/tutorials/evaluate-a-segment.md) im Handbuch zur Segmentbewertung werden die erforderlichen Schritte zum Exportieren eines Zielgruppendatensatzes beschrieben. Das Handbuch beschreibt und enthält Beispiele für Folgendes:
 
-- **Erstellen Sie einen Zielgruppe-Datensatz:** Erstellen Sie den Datensatz, der Audiencen enthält.
-- **Generieren von Audience-Profilen im Datensatz:** Füllen Sie den Datensatz mit XDM Individuelle Profil basierend auf den Ergebnissen eines Segmentauftrags.
-- **Überwachung des Exportfortschritts:** Überprüfen Sie den aktuellen Fortschritt des Exportvorgangs.
-- **Audience lesen:** Rufen Sie die resultierenden XDM-Profil für einzelne Mitglieder Ihrer Audience ab.
+- **Erstellen eines Zielgruppendatensatzes:** Erstellen Sie den Datensatz, um Mitglieder der Zielgruppe aufzunehmen.
+- **Generieren von Zielgruppenprofilen im Datensatz:** Füllen Sie den Datensatz mit individuellen XDM-Profilen auf der Grundlage der Ergebnisse eines Segmentauftrags.
+- **Überwachen des Exportfortschritts:** Überprüfen Sie den aktuellen Fortschritt des Exportvorgangs.
+- **Lesen von Zielgruppendaten:** Rufen Sie die resultierenden individuellen XDM-Profile ab, die die Mitglieder Ihrer Zielgruppe repräsentieren.
 
 ## Nächste Schritte
 
-In diesem Dokument werden die Schritte beschrieben, die zum Herunterladen von Kunden-AI-Ergebnissen erforderlich sind. Sie können jetzt auch weiterhin die anderen angebotenen [Intelligent Services](../../home.md) und Handbücher durchsuchen.
+In diesem Dokument wurden die Schritte zum Herunterladen von Customer AI-Bewertungen beschrieben. Sie können sich jetzt die weiteren angebotenen [Intelligent Services](../../home.md) und Handbücher ansehen.
