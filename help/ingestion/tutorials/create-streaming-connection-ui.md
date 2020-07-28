@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Streaming-Verbindung über die Benutzeroberfläche erstellen
+title: Aufbauen einer Streaming-Verbindung über die Benutzeroberfläche
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
@@ -12,7 +12,7 @@ ht-degree: 77%
 ---
 
 
-# Streaming-Verbindung über die Benutzeroberfläche erstellen
+# Aufbauen einer Streaming-Verbindung über die Benutzeroberfläche
 
 Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung für Adobe Experience Platform.
 
@@ -24,7 +24,7 @@ After registering a streaming connection you will have a unique URL which can be
 
 Beachten Sie, dass Sie zum Ausführen dieser Anleitung Zugriff auf Adobe Experience Platform benötigen. If you do not have access to [!DNL Platform], please contact your system administrator before proceeding.
 
-## Streaming-Verbindung erstellen
+## Aufbauen einer Streaming-Verbindung
 
 After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the *[!UICONTROL Catalog]* tab. Auf dieser Seite werden die verfügbaren Quelltypen als einzelne Karten angezeigt. Jede Karte enthält dabei eine Blase, die die Anzahl der Datenflüsse anzeigt, die über Streaming-Verbindungen zu Datensätzen erstellt wurden.
 
