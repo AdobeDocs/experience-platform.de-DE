@@ -49,7 +49,7 @@ Beispiele:
  0.2
 ```
 
-#### Multiplikation
+#### Multiplizieren
 
 `expr1 * expr2`: Gibt `expr1`*`expr2` zurück.
 
@@ -60,7 +60,7 @@ Beispiel:
  6
 ```
 
-#### Addition
+#### Addieren
 
 `expr1 + expr2`: Gibt `expr1`+`expr2` zurück.
 
@@ -71,7 +71,7 @@ Beispiel:
  3
 ```
 
-#### Subtraktion
+#### Subtrahieren
 
 `expr1 - expr2`: Gibt `expr1`-`expr2` zurück.
 
@@ -82,7 +82,7 @@ Beispiel:
  1
 ```
 
-#### Division
+#### Dividieren
 
 `expr1 / expr2`: Gibt `expr1`/`expr2` zurück. Führt immer eine Gleitkommadivision durch.
 
@@ -162,8 +162,8 @@ Beispiel:
 
 Argumente:
 
-`exprY`: Koordinate auf der y-Achse
-`exprX`: Koordinate auf der x-Achse
+`exprY`: Koordinate auf der y-Achse.
+`exprX`: Koordinate auf der x-Achse.
 
 Beispiel:
 
@@ -275,7 +275,7 @@ Beispiel:
 `cot(expr)`: Gibt den Kotangens von `expr` zurück, wie bei der Berechnung durch `1/java.lang.Math.cot`.
 
 Argumente:
-- `expr`: Winkel im Bogenmaß Radiant
+- `expr`: Winkel im Bogenmaß Radiant.
 
 Beispiel:
 
@@ -652,7 +652,7 @@ Beispiel:
 
 Argumente:
 
-- `expr`: Winkel im Bogenmaß Radiant
+- `expr`: Winkel im Bogenmaß Radiant.
 
 Beispiel:
 
@@ -709,7 +709,7 @@ Beispiel:
 
 Argumente:
 
-- `expr`: Winkel im Bogenmaß Radiant
+- `expr`: Winkel im Bogenmaß Radiant.
 
 Beispiel:
 
@@ -1010,7 +1010,7 @@ Beispiel:
 
 ### Funktionen für Datum/Uhrzeit
 
-#### add_month
+#### add_months
 
 `add_months(start_date, num_months)`: Gibt das Datum zurück, das `num_months` nach `start_date` liegt.
 
@@ -1227,7 +1227,7 @@ Beispiel:
 
 Seit: 1.5.0
 
-#### month_between
+#### months_between
 
 `months_between(timestamp1, timestamp2[, roundOff])`: Wenn `timestamp1` nach `timestamp2` liegt, ist das Ergebnis positiv. Wenn `timestamp1` und `timestamp2` am gleichen Tag des Monats liegen oder beide der letzte Tag des Monats sind, wird die Tageszeit ignoriert. Andernfalls wird die Differenz auf Grundlage von 31 Tagen pro Monat berechnet und auf 8 Stellen gerundet, es sei denn `roundOff=false`.
 
@@ -1456,7 +1456,7 @@ Beispiel:
  true
 ```
 
-#### array_different
+#### array_distinct
 
 `array_distinct(array)`: Entfernt doppelte Werte (Duplikate) aus dem Array.
 
@@ -1469,7 +1469,7 @@ Beispiel:
 
 Seit: 2.4.0
 
-#### array_exceptions
+#### array_except
 
 `array_except(array1, array2)`: Gibt ein Array der Elemente in `array1` zurück, jedoch nicht in `array2`, ohne Duplikate zurück.
 
@@ -1843,7 +1843,7 @@ Beispiel:
 
 `decimal(expr)`: Wandelt den Wert `expr` in den Zieldatentyp `decimal` um.
 
-#### Doppelt
+#### double
 
 `double(expr)`: Wandelt den Wert `expr` in den Zieldatentyp `double` um.
 
@@ -2004,7 +2004,7 @@ Beispiel:
 `degrees(expr)`: Wandelt das Bogenmaß Radiant in Grad um.
 
 Argumente:
-- `expr`: Winkel im Bogenmaß Radiant
+- `expr`: Winkel im Bogenmaß Radiant.
 
 Beispiel:
 
@@ -2135,7 +2135,7 @@ Beispiel:
 
 Seit: 2.4.0
 
-#### map_from_tries
+#### map_from_entries
 
 `map_from_entries(arrayOfEntries)`: Gibt eine aus dem angegebenen Array von Einträgen erstellte Zuordnung zurück.
 
@@ -2560,7 +2560,7 @@ Beispiel:
 
 #### last
 
-`last(expr[, isIgnoreNull])`: Gibt den letzten Wert von `expr` für eine Gruppe von Zeilen zurück. Wenn `isIgnoreNull` wahr ist, werden nur Werte zurückgegeben, die nicht null sind.
+`last(expr[, isIgnoreNull])`: Gibt den letzten Wert von `expr` für eine Gruppe von Zeilen zurück. Wenn `isIgnoreNull` „true“ ist, werden nur Werte zurückgegeben, die nicht null sind.
 
 #### last_value
 
