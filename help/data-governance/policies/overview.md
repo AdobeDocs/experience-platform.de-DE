@@ -37,7 +37,7 @@ Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten re
 >
 >Wenn Sie [!DNL Real-time Customer Data Platform]diese verwenden, können Sie Marketingverwendungsfälle für Ziele einrichten, um die Durchsetzung der Richtlinie zu automatisieren. Weitere Informationen finden Sie im Dokument zur [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md) .
 
-Eine Liste der [verfügbaren, von Adobe definierten Marketingaktionen](#core-actions)finden Sie im Anhang zu diesem Dokument. Sie können auch eigene benutzerspezifische Marketingaktionen mit der DULE [!DNL Policy Service] API oder der [!DNL Experience Platform ]Benutzeroberfläche definieren. Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
+Eine Liste der [verfügbaren, von der Adobe definierten Marketingaktionen](#core-actions)finden Sie im Anhang zu diesem Dokument. Sie können auch eigene benutzerspezifische Marketingaktionen mit der DULE [!DNL Policy Service] API oder der [!DNL Experience Platform ]Benutzeroberfläche definieren. Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -53,7 +53,7 @@ Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Da
 
 >[!IMPORTANT]
 >
->Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
+>Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
 
 Eine schrittweise Anleitung zum Arbeiten mit Marketingaktionen und Datenverwendungsrichtlinien in der API finden Sie im Lernprogramm zum [Erstellen und Auswerten von Datenverwendungsrichtlinien](create.md). For more information the key operations provided by the [!DNL Policy Service] API, see the [Policy Service developer guide](../api/getting-started.md).
 
@@ -69,7 +69,7 @@ Im folgenden Abschnitt finden Sie weitere Informationen zu Datenverwendungsricht
 
 ### Adobe-definierte Marketingaktionen {#core-actions}
 
-In der folgenden Tabelle werden die wichtigsten Marketingaktionen beschrieben, die von Adobe standardmäßig bereitgestellt werden.
+Die folgende Tabelle beschreibt die wichtigsten Marketingaktionen, die standardmäßig für jede Adobe bereitgestellt werden.
 
 >[!NOTE]
 >
