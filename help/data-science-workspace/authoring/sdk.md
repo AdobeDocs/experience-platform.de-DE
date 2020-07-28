@@ -7,24 +7,24 @@ translation-type: tm+mt
 source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
 source-wordcount: '930'
-ht-degree: 1%
+ht-degree: 73%
 
 ---
 
 
 # SDK-Entwicklerhandbuch
 
-Das Model Authoring-SDK ermöglicht Ihnen die Entwicklung benutzerdefinierter Rezepte für maschinelles Lernen und von Funktionslinien, die im Data Science Workspace verwendet werden können, und stellt implementierbare Vorlagen in [!DNL Adobe Experience Platform] und [!DNL PySpark] [!DNL Spark (Scala)]bereit.
+The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in [!DNL PySpark] and [!DNL Spark (Scala)].
 
-Dieses Dokument enthält Informationen zu den verschiedenen Klassen im Model Authoring-SDK.
+Dieses Dokument enthält Informationen zu den verschiedenen Klassen im Model Authoring SDK.
 
 ## DataLoader {#dataloader}
 
-Die DataLoader-Klasse enthält alle Daten zum Abrufen, Filtern und Zurückgeben von Rohdaten. Beispiele für Eingabedaten sind Schulungsdaten, Bewertungsdaten oder Funktionstechniken. Datenlader erweitern die abstrakte Klasse `DataLoader` und müssen die abstrakte Methode überschreiben `load`.
+Die DataLoader-Klasse enthält alles, was zum Abrufen, Filtern und Zurückgeben von rohen Eingabedaten benötigt wird. Beispiele für Eingabedaten sind Daten für Training, Scoring oder Funktionsentwicklung. Datenlader erweitern die abstrakte Klasse `DataLoader` und müssen die abstrakte Methode `load` überschreiben.
 
 **PySpark**
 
-In der folgenden Tabelle werden die abstrakten Methoden einer PySpark Data Loader-Klasse beschrieben:
+In der folgenden Tabelle werden die abstrakten Methoden einer PySpark-Datenlader-Klasse beschrieben:
 
 <table>
     <thead>
@@ -37,12 +37,12 @@ In der folgenden Tabelle werden die abstrakten Methoden einer PySpark Data Loade
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>Daten zur Platform als Pandas DataFrame laden und zurückgeben</p>
+                <p>Platform-Daten als Pandas-DataFrame laden und zurückgeben</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
-                    <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften-Map</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
+                    <li><code class=" language-undefined">configProperties</code>: Zuordnung von Konfigurationseigenschaften</li>
                     <li><code class=" language-undefined">spark</code>: Spark-Sitzung</li>
                 </ul>
             </td>
@@ -52,7 +52,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer PySpark Data Loade
 
 **Spark**
 
-In der folgenden Tabelle werden die abstrakten Methoden einer Data [!DNL Spark] Loader-Klasse beschrieben:
+The following table describes the abstract methods of a [!DNL Spark] Data Loader class:
 
 <table>
     <thead>
@@ -65,11 +65,11 @@ In der folgenden Tabelle werden die abstrakten Methoden einer Data [!DNL Spark] 
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>Daten zur Platform als DataFrame laden und zurückgeben</p>
+                <p>Platform-Daten als DataFrame laden und zurückgeben</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften-Map</li>
+                    <li><code class=" language-undefined">configProperties</code>: Zuordnung von Konfigurationseigenschaften</li>
                     <li><code class=" language-undefined">sparkSession</code>: Spark-Sitzung</li>
                 </ul>
             </td>
@@ -77,9 +77,9 @@ In der folgenden Tabelle werden die abstrakten Methoden einer Data [!DNL Spark] 
     </tbody>
 </table>
 
-### Daten aus einem [!DNL Platform] Datensatz laden {#load-data-from-a-platform-dataset}
+### Load data from a [!DNL Platform] dataset {#load-data-from-a-platform-dataset}
 
-Im folgenden Beispiel werden [!DNL Platform] Daten nach ID abgerufen und ein DataFrame zurückgegeben, wobei die DataSet-ID (`datasetId`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
+The following example retrieves [!DNL Platform] data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
 
 **PySpark**
 
@@ -194,11 +194,11 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-Die DataSaver-Klasse kapselt alles, was mit dem Speichern von Ausgabedaten zu tun hat, einschließlich Daten aus der Scoring- oder Funktionstechnik. Datensparer erweitern die abstrakte Klasse `DataSaver` und müssen die abstrakte Methode überschreiben `save`.
+Die DataSaver-Klasse enthält alles, was mit dem Speichern von Ausgabedaten zu tun hat, einschließlich Daten für Scoring oder Funktionsentwicklung. Data Saver erweitern die abstrakte Klasse `DataSaver` und müssen die abstrakte Methode `save` überschreiben.
 
 **PySpark**
 
-In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL PySpark] Data Saver-Klasse beschrieben:
+The following table describes the abstract methods of a [!DNL PySpark] Data Saver class:
 
 <table>
     <thead>
@@ -215,8 +215,8 @@ In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL PySpark] Dat
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
-                    <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften-Map</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
+                    <li><code class=" language-undefined">configProperties</code>: Zuordnung von Konfigurationseigenschaften</li>
                     <li><code class=" language-undefined">dataframe</code>: Daten, die in Form eines DataFrame gespeichert werden sollen</li>
                 </ul>
             </td>
@@ -226,7 +226,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL PySpark] Dat
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL Spark] Data Saver-Klasse beschrieben:
+The following table describes the abstract methods of a [!DNL Spark] Data Saver class:
 
 <table>
     <thead>
@@ -243,7 +243,7 @@ In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL Spark] Data 
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften-Map</li>
+                    <li><code class=" language-undefined">configProperties</code>: Zuordnung von Konfigurationseigenschaften</li>
                     <li><code class=" language-undefined">dataFrame</code>: Daten, die in Form eines DataFrame gespeichert werden sollen</li>
                 </ul>
             </td>
@@ -251,14 +251,14 @@ In der folgenden Tabelle werden die abstrakten Methoden einer [!DNL Spark] Data 
     </tbody>
 </table>
 
-### Daten in einem [!DNL Platform] Datensatz speichern {#save-data-to-a-platform-dataset}
+### Save data to a [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
 
-Um Daten in einem [!DNL Platform] Datensatz zu speichern, müssen die Eigenschaften entweder bereitgestellt oder in der Konfigurationsdatei definiert werden:
+In order to store data onto a [!DNL Platform] dataset, the properties must be either provided or defined in the configuration file:
 
-- Eine gültige [!DNL Platform] DataSet-ID, in der Daten gespeichert werden
+- A valid [!DNL Platform] dataset ID to which data will be stored
 - Die Mandanten-ID in Ihrer Organisation
 
-Die folgenden Beispiele speichern Daten (`prediction`) in einem [!DNL Platform] Datensatz, wobei die Dataset-ID (`datasetId`) und die Mandant-ID (`tenantId`) Eigenschaften in der Konfigurationsdatei sind.
+The following examples store data (`prediction`) onto a [!DNL Platform] dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
 
 
 **PySpark**
@@ -394,13 +394,13 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-Die DatasetTransformer-Klasse ändert und transformiert die Struktur eines Datensatzes. Die Komponente muss [!DNL Sensei Machine Learning Runtime] nicht definiert werden und wird entsprechend Ihren Anforderungen implementiert.
+Die DatasetTransformer-Klasse ändert und transformiert die Struktur eines Datensatzes. The [!DNL Sensei Machine Learning Runtime] does not require this component to be defined, and is implemented based on your requirements.
 
-Im Hinblick auf eine Feature-Pipeline können DataSet-Transformer gemeinsam mit einer Feature-Pipeline-Fabrik zur Vorbereitung von Daten für die Funktionstechnik eingesetzt werden.
+Im Hinblick auf eine Funktions-Pipeline können DataSet Transformer gemeinsam mit einer Feature-Pipeline-Factory zur Vorbereitung von Daten für die Funktionsentwicklung genutzt werden.
 
 **PySpark**
 
-In der folgenden Tabelle werden die Klassenmethoden einer PySpark-DataSet-Transformer-Klasse beschrieben:
+In der folgenden Tabelle werden die Klassenmethoden einer PySpark-DataSet Transformer-Klasse beschrieben:
 
 <table>
     <thead>
@@ -413,13 +413,13 @@ In der folgenden Tabelle werden die Klassenmethoden einer PySpark-DataSet-Transf
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">transform(self, configProperties, dataset)</code></p>
-                <p>Übernimmt einen Datensatz als Eingabe und Ausgabe eines neuen abgeleiteten Datensatzes</p>
+                <p>Nimmt einen Datensatz als Eingabe und gibt einen neuen abgeleiteten Datensatz aus</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
-                    <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften-Map</li>
-                    <li><code class=" language-undefined">dataset</code>: Das Eingabedataset für die Transformation</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
+                    <li><code class=" language-undefined">configProperties</code>: Zuordnung von Konfigurationseigenschaften</li>
+                    <li><code class=" language-undefined">dataset</code>: Der Eingabedatensatz für die Transformation</li>
                 </ul>
             </td>
         </tr>
@@ -428,7 +428,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer PySpark-DataSet-Transf
 
 **Spark (Scala)**
 
-Die folgende Tabelle beschreibt die abstrakten Methoden einer DataSet-Transformer- [!DNL Spark] Klasse:
+The following table describes the abstract methods of a [!DNL Spark] dataset transformer class:
 
 <table>
     <thead>
@@ -441,12 +441,12 @@ Die folgende Tabelle beschreibt die abstrakten Methoden einer DataSet-Transforme
         <tr>
             <td>
                 <p><code class=" language-undefined">transform(configProperties, dataset)</code></p>
-                <p>Übernimmt einen Datensatz als Eingabe und Ausgabe eines neuen abgeleiteten Datensatzes</p>
+                <p>Nimmt einen Datensatz als Eingabe und gibt einen neuen abgeleiteten Datensatz aus</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften-Map</li>
-                    <li><code class=" language-undefined">dataset</code>: Das Eingabedataset für die Transformation</li>
+                    <li><code class=" language-undefined">configProperties</code>: Zuordnung von Konfigurationseigenschaften</li>
+                    <li><code class=" language-undefined">dataset</code>: Der Eingabedatensatz für die Transformation</li>
                 </ul>
             </td>
         </tr>
@@ -455,11 +455,11 @@ Die folgende Tabelle beschreibt die abstrakten Methoden einer DataSet-Transforme
 
 ## FeaturePipelineFactory {#featurepipelinefactory}
 
-Die FeaturePipelineFactory-Klasse enthält Algorithmen zur Extraktion von Funktionen und definiert die Phasen einer Feature Pipeline von Beginn zu Ende.
+Die FeaturePipelineFactory-Klasse enthält Extraktionsalgorithmen für Funktionen und definiert die Phasen einer Funktions-Pipeline von Anfang bis Ende.
 
 **PySpark**
 
-In der folgenden Tabelle werden die Klassenmethoden einer PySpark FeaturePipelineFactory beschrieben:
+In der folgenden Tabelle werden die Klassenmethoden einer PySpark-FeaturePipelineFactory beschrieben:
 
 <table>
     <thead>
@@ -472,23 +472,23 @@ In der folgenden Tabelle werden die Klassenmethoden einer PySpark FeaturePipelin
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
-                <p>Erstellen und Zurückgeben einer Spark-Pipeline, die eine Reihe von Spark-Transformers enthält</p>
+                <p>Spark-Pipeline erstellen und zurückgeben, die eine Reihe von Spark-Transformern enthält</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
-                    <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften-Map</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
+                    <li><code class=" language-undefined">configProperties</code>: Zuordnung von Konfigurationseigenschaften</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>Abrufen und Zurückgeben der Parameterzuordnung aus den Konfigurationseigenschaften</p>
+                <p>Parameter-Mapping aus Konfigurationseigenschaften abrufen und zurückgeben</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
                     <li><code class=" language-undefined">sparkSession</code>: Spark-Sitzung</li>
                 </ul>
@@ -499,7 +499,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer PySpark FeaturePipelin
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] FeaturePipelineFactory beschrieben:
+The following table describes the class methods of a [!DNL Spark] FeaturePipelineFactory:
 
 <table>
     <thead>
@@ -512,18 +512,18 @@ In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] FeaturePi
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
-                <p>Erstellen und Zurückgeben einer Pipeline mit einer Reihe von Transformatoren</p>
+                <p>Pipeline mit einer Reihe von Umwandlern erstellen und zurückgeben</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften-Map</li>
+                    <li><code class=" language-undefined">configProperties</code>: Zuordnung von Konfigurationseigenschaften</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
-                <p>Abrufen und Zurückgeben der Parameterzuordnung aus den Konfigurationseigenschaften</p>
+                <p>Parameter-Mapping aus Konfigurationseigenschaften abrufen und zurückgeben</p>
             </td>
             <td>
                 <ul>
@@ -537,11 +537,11 @@ In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] FeaturePi
 
 ## PipelineFactory {#pipelinefactory}
 
-Die PipelineFactory-Klasse enthält Methoden und Definitionen für Modellschulungen und -bewertungen, wobei Schulungslogik und -algorithmen in Form einer [!DNL Spark] Pipeline definiert werden.
+The PipelineFactory class encapsulates methods and definitions for model training and scoring, where training logic and algorithms are defined in the form of a [!DNL Spark] Pipeline.
 
 **PySpark**
 
-Die folgende Tabelle beschreibt die Klassenmethoden einer PySpark PipelineFactory:
+Die folgende Tabelle beschreibt die Klassenmethoden einer PySpark-PipelineFactory:
 
 <table>
     <thead>
@@ -554,11 +554,11 @@ Die folgende Tabelle beschreibt die Klassenmethoden einer PySpark PipelineFactor
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">apply(self, configProperties)</code></p>
-                <p>Erstellen und Zurückgeben einer Spark-Pipeline, die die Logik und den Algorithmus für Modellschulungen und -bewertungen enthält</p>
+                <p>Spark-Pipeline erstellen und zurückgeben, die die Logik und den Algorithmus für das Trainieren und Bewerten von Modellen enthält</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
                 </ul>
             </td>
@@ -566,38 +566,38 @@ Die folgende Tabelle beschreibt die Klassenmethoden einer PySpark PipelineFactor
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
-                <p>Geben Sie eine benutzerdefinierte Pipeline zurück, die die Logik und den Algorithmus enthält, um ein Modell auszubilden. Diese Methode ist nicht erforderlich, wenn eine Spark-Pipeline verwendet wird</p>
+                <p>Benutzerdefinierte Pipeline zurückgeben, die die Logik und den Algorithmus zum Trainieren eines Modells enthält. Diese Methode ist nicht erforderlich, wenn eine Spark-Pipeline verwendet wird</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
-                    <li><code class=" language-undefined">dataframe</code>: Funktionsdatensatz für Schulungseingaben</li>
+                    <li><code class=" language-undefined">dataframe</code>: Funktionsdatensatz für Trainings-Eingabe</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">score(self, configProperties, dataframe, model)</code></p>
-                <p>Ergebnis mit dem geschulten Modell und Rückgabe der Ergebnisse</p>
+                <p>Mit dem trainierten Modell bewerten und die Ergebnisse zurückgeben</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
-                    <li><code class=" language-undefined">dataframe</code>: Eingabedatensatz für die Bewertung</li>
-                    <li><code class=" language-undefined">model</code>: Ein ausgebildetes Modell, das zur Bewertung verwendet wird</li>
+                    <li><code class=" language-undefined">dataframe</code>: Eingabedatensatz für Scoring</li>
+                    <li><code class=" language-undefined">model</code>: Ein trainiertes Modell, das zum Scoring verwendet wird</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>Abrufen und Zurückgeben der Parameterzuordnung aus den Konfigurationseigenschaften</p>
+                <p>Parameter-Mapping aus Konfigurationseigenschaften abrufen und zurückgeben</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
                     <li><code class=" language-undefined">sparkSession</code>: Spark-Sitzung</li>
                 </ul>
@@ -608,7 +608,7 @@ Die folgende Tabelle beschreibt die Klassenmethoden einer PySpark PipelineFactor
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] PipelineFactory beschrieben:
+The following table describes the class methods of a [!DNL Spark] PipelineFactory:
 
 <table>
     <thead>
@@ -621,7 +621,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] PipelineF
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
-                <p>Erstellen und Zurückgeben einer Pipeline, die die Logik und den Algorithmus für Modellschulungen und -bewertungen enthält</p>
+                <p>Pipeline erstellen und zurückgeben, die die Logik und den Algorithmus für das Trainieren und Bewerten von Modellen enthält</p>
             </td>
             <td>
                 <ul>
@@ -632,7 +632,7 @@ In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] PipelineF
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
-                <p>Abrufen und Zurückgeben der Parameterzuordnung aus den Konfigurationseigenschaften</p>
+                <p>Parameter-Mapping aus Konfigurationseigenschaften abrufen und zurückgeben</p>
             </td>
             <td>
                 <ul>
@@ -646,11 +646,11 @@ In der folgenden Tabelle werden die Klassenmethoden einer [!DNL Spark] PipelineF
 
 ## MLEvaluator {#mlevaluator}
 
-Die MLEvaluator-Klasse stellt Methoden zum Definieren von Bewertungsmetriken und zum Festlegen von Schulungs- und Testdatasets bereit.
+Die MLEvaluator-Klasse stellt Methoden zum Definieren von Bewertungsmetriken und zum Festlegen von Trainings- und Testdatensätzen bereit.
 
 **PySpark**
 
-In der folgenden Tabelle werden die Klassenmethoden eines PySpark MLEvaluators beschrieben:
+In der folgenden Tabelle werden die Klassenmethoden eines PySpark-MLEvaluator beschrieben:
 
 <table>
     <thead>
@@ -663,26 +663,26 @@ In der folgenden Tabelle werden die Klassenmethoden eines PySpark MLEvaluators b
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">split(self, configProperties, dataframe)</code></p>
-                <p>Teilt den Eingabedatensatz in die Untergruppen "Schulung"und "Test".</p>
+                <p>Teilt den Eingabedatensatz in Trainings- und Testuntergruppen</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
-                    <li><code class=" language-undefined">dataframe</code>: Zu teilendes Eingabedataset</li>
+                    <li><code class=" language-undefined">dataframe</code>: Zu teilender Eingabedatensatz</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
-                <p>Wertet ein ausgebildetes Modell aus und gibt die Bewertungsergebnisse zurück</p>
+                <p>Wertet ein trainiertes Modell aus und gibt die Auswertungsergebnisse zurück</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Eigene Referenz</li>
-                    <li><code class=" language-undefined">dataframe</code>: Ein DataFrame, bestehend aus Schulungs- und Testdaten</li>
-                    <li><code class=" language-undefined">model</code>: Ein geschultes Modell</li>
+                    <li><code class=" language-undefined">self</code>: Eigenverweis</li>
+                    <li><code class=" language-undefined">dataframe</code>: Ein DataFrame, bestehend aus Trainings- und Testdaten</li>
+                    <li><code class=" language-undefined">model</code>: Ein trainiertes Modell</li>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
                 </ul>
             </td>
@@ -692,7 +692,7 @@ In der folgenden Tabelle werden die Klassenmethoden eines PySpark MLEvaluators b
 
 **Spark (Scala)**
 
-In der folgenden Tabelle werden die Klassenmethoden eines [!DNL Spark] MLEvaluators beschrieben:
+The following table describes the class methods of a [!DNL Spark] MLEvaluator:
 
 <table>
     <thead>
@@ -705,25 +705,25 @@ In der folgenden Tabelle werden die Klassenmethoden eines [!DNL Spark] MLEvaluat
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">split(configProperties, data)</code></p>
-                <p>Teilt den Eingabedatensatz in die Untergruppen "Schulung"und "Test".</p>
+                <p>Teilt den Eingabedatensatz in Trainings- und Testuntergruppen</p>
             </td>
             <td>
                 <ul>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
-                    <li><code class=" language-undefined">data</code>: Zu teilendes Eingabedataset</li>
+                    <li><code class=" language-undefined">data</code>: Zu teilender Eingabedatensatz</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
-                <p>Wertet ein ausgebildetes Modell aus und gibt die Bewertungsergebnisse zurück</p>
+                <p>Wertet ein trainiertes Modell aus und gibt die Auswertungsergebnisse zurück</p>
             </td>
             <td>
                 <ul>
                     <li><code class=" language-undefined">configProperties</code>: Konfigurationseigenschaften</li>
-                    <li><code class=" language-undefined">model</code>: Ein geschultes Modell</li>
-                    <li><code class=" language-undefined">data</code>: Ein DataFrame, bestehend aus Schulungs- und Testdaten</li>
+                    <li><code class=" language-undefined">model</code>: Ein trainiertes Modell</li>
+                    <li><code class=" language-undefined">data</code>: Ein DataFrame, bestehend aus Trainings- und Testdaten</li>
                 </ul>
             </td>
         </tr>
