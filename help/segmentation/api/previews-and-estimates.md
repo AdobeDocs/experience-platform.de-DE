@@ -171,7 +171,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 ## Abrufen der Ergebnisse eines bestimmten Schätzauftrags {#get-estimate}
 
-Nachdem Sie einen Vorschau-Auftrag erstellt haben, können Sie ihn `previewId` im Pfad einer GET-Anforderung zum `/estimate` Endpunkt verwenden, um statistische Informationen zur Segmentdefinition wie die projizierte Audience, das Konfidenzintervall und die Standardabweichung für Fehler zu erhalten.
+Nachdem Sie einen Vorschau-Auftrag erstellt haben, können Sie ihn `previewId` im Pfad einer GET-Anforderung an den `/estimate` Endpunkt verwenden, um statistische Informationen zur Segmentdefinition, einschließlich projizierter Audience, Konfidenzintervall und standardmäßiger Fehlerabweichung, Ansicht.
 
 **API-Format**
 
