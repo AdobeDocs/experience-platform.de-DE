@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Abfrage-Service
+title: Query Service von Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform nimmt Daten aus einer Vielzahl von Quellen auf. Eine g
 
 ### [!DNL Data Science Workspace]
 
-Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within [!DNL Experience Platform]. [!DNL Data Science Workspace] ermöglicht es Datenwissenschaftlern, Rezepte zu erstellen, die auf Daten zu Kunden und deren Aktivitäten aus Aufzeichnungen und Zeitreihen basieren. Dies erleichtert Prognosen z. B. zu Kaufneigung und empfohlenen Angeboten, die von Einzelpersonen geschätzt und verwendet werden. You can use SQL within [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab], allowing you to explore, transform, and analyze Adobe Analytics data. Weitere Informationen finden Sie in der [!DNL Data Science Workspace] Übersicht [!DNL Data Science Workspace]und im [!DNL Query Service] Integrationsleitfaden für weitere Informationen zur [!DNL Data Science Workspace] Interaktion [!DNL Query Service].
+Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within [!DNL Experience Platform]. [!DNL Data Science Workspace] ermöglicht es Datenwissenschaftlern, Rezepte zu erstellen, die auf Daten zu Kunden und deren Aktivitäten aus Aufzeichnungen und Zeitreihen basieren. Dies erleichtert Prognosen z. B. zu Kaufneigung und empfohlenen Angeboten, die von Einzelpersonen geschätzt und verwendet werden. You can use SQL within [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab], allowing you to explore, transform, and analyze Adobe Analytics data. Please read the [!DNL Data Science Workspace] overview for more information about [!DNL Data Science Workspace], and the [!DNL Query Service] integration guide for more information about how [!DNL Data Science Workspace] interacts with [!DNL Query Service].
 
 ### [!DNL Segmentation Service]
 
