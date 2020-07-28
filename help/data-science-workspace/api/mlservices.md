@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '811'
-ht-degree: 2%
+ht-degree: 10%
 
 ---
 
@@ -20,7 +20,7 @@ Automatisierte Schulungs- und Bewertungszeitpläne werden mit einem Startzeitste
 
 ## Erstellen eines MLService {#create-an-mlservice}
 
-Sie können einen MLService erstellen, indem Sie eine POST-Anforderung und eine Payload ausführen, die einen Namen für den Dienst und eine gültige MLInstance-ID bereitstellt. Die zum Erstellen eines MLService verwendete MLService-Instanz benötigt keine vorhandenen Schulungsexperimente, Sie können jedoch den MLService mit einem vorhandenen geschulten Modell erstellen, indem Sie die entsprechende Experiment-ID und die Schulungslaufs-ID angeben.
+Sie können einen MLService erstellen, indem Sie eine Anforderung zur POST und eine Payload ausführen, die einen Dienstnamen und eine gültige MLInstance-ID bereitstellt. Die zum Erstellen eines MLService verwendete MLService-Instanz benötigt keine vorhandenen Schulungsexperimente, Sie können jedoch den MLService mit einem vorhandenen geschulten Modell erstellen, indem Sie die entsprechende Experiment-ID und die Schulungslaufs-ID angeben.
 
 **API-Format**
 
@@ -106,9 +106,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu er
 }
 ```
 
-## Abrufen einer Liste von MLServices {#retrieve-a-list-of-mlservices}
+## Retrieve a list of MLServices {#retrieve-a-list-of-mlservices}
 
-Sie können eine Liste von MLServices abrufen, indem Sie eine einzige GET-Anforderung ausführen. Um die Ergebnisse zu filtern, können Sie die Parameter für die Abfrage im Anforderungspfad angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste von MLServices abrufen, indem Sie eine einzige GET anfordern. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -165,9 +165,9 @@ Eine erfolgreiche Antwort gibt eine Liste von MLServices und deren Details zurü
 }
 ```
 
-## Abrufen eines bestimmten MLService {#retrieve-a-specific-mlservice}
+## Retrieve a specific MLService {#retrieve-a-specific-mlservice}
 
-Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET-Anforderung ausführen, die die gewünschte MLService-ID im Anforderungspfad enthält.
+Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET durchführen, die die gewünschte MLService-ID im Anforderungspfad enthält.
 
 **API-Format**
 
@@ -211,11 +211,11 @@ Eine erfolgreiche Antwort gibt eine Payload mit den Details des angeforderten ML
 
 ## Aktualisieren eines MLService {#update-an-mlservice}
 
-Sie können einen vorhandenen MLService aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anforderung überschreiben, die die Zielgruppe MLService-ID im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
+Sie können einen vorhandenen MLService aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anforderung überschreiben, die die Zielgruppe-MLService-ID im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum [Abrufen des MLService nach ID](#retrieve-a-specific-mlservice)auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
+>In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the MLService by ID](#retrieve-a-specific-mlservice). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 **API-Format**
 
