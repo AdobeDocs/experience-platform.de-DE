@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzern zur Verfügung. Diese Funktion ist alphanumerisch und wird noch getestet. Dieses Dokument kann sich ändern.
 
-In der folgenden Anleitung werden die Schritte beschrieben, die zum Erstellen einer Echtzeit-Anwendung für maschinelles Lernen erforderlich sind. In diesem Handbuch, das die von Adobe bereitgestellte **[!UICONTROL Echtzeit-ML]** -Python-Notebook-Vorlage verwendet, werden Schulungen für ein Modell, die Erstellung einer DSL, die Veröffentlichung von DSL an Edge und die Bewertung der Anforderung behandelt. Wenn Sie mit der Implementierung Ihres Echtzeit-Modell für maschinelles Lernen fortfahren, müssen Sie die Vorlage entsprechend den Anforderungen Ihres Datensatzes ändern.
+In der folgenden Anleitung werden die Schritte beschrieben, die zum Erstellen einer Echtzeit-Anwendung für maschinelles Lernen erforderlich sind. Dieses Handbuch basiert auf der **[!UICONTROL Echtzeit-Vorlage für das ML]** -Python-Notebook und umfasst das Training eines Modells, das Erstellen einer DSL, das Veröffentlichen von DSL an Edge und das Verfolgen der Anforderung. Wenn Sie mit der Implementierung Ihres Echtzeit-Modell für maschinelles Lernen fortfahren, müssen Sie die Vorlage entsprechend den Anforderungen Ihres Datensatzes ändern.
 
 ## Erstellen eines Notebook-PCs für maschinelles Lernen in Echtzeit
 
@@ -346,7 +346,7 @@ Nach Abschluss des Vorgangs wird ein `edge` Objekt zurückgegeben, das alle Knot
 ## Auf Edge veröffentlichen (Hub)
 
 >[!NOTE]
->Das maschinelle Lernen in Echtzeit wird vorübergehend am Adobe Experience Platform Hub bereitgestellt und von ihm verwaltet. Weitere Informationen finden Sie im Abschnitt Überblick über die Architektur [des maschinellen Lernens in Echtzeit](./home.md#architecture).
+>Das maschinelle Lernen in Echtzeit wird vorübergehend auf dem Adobe Experience Platform Hub bereitgestellt und wird von diesem verwaltet. Weitere Informationen finden Sie im Abschnitt Überblick über die Architektur [des maschinellen Lernens in Echtzeit](./home.md#architecture).
 
 Nachdem Sie ein DSL-Diagramm erstellt haben, können Sie das Diagramm auf der [!DNL Edge]Seite bereitstellen.
 
@@ -397,9 +397,9 @@ Sie erhalten die aktualisierte DSL zurückgegeben.
 
 ![Aktualisierte DSL](../images/rtml/updated-dsl.png)
 
-## Bewertung {#scoring}
+## Scoring {#scoring}
 
-Nach dem Veröffentlichen auf [!DNL Edge]erfolgt die Bewertung durch eine POST-Anforderung eines Clients. Normalerweise kann dies über eine Client-Anwendung erfolgen, die ML-Ergebnisse benötigt. Sie können es auch von Postman aus tun. Die *[!UICONTROL Echtzeit-ML]* -Vorlage verwendet EdgeUtils, um diesen Vorgang zu demonstrieren.
+Nach dem Veröffentlichen auf [!DNL Edge]erfolgt die Bewertung durch eine Client-Anfrage. Normalerweise kann dies über eine Client-Anwendung erfolgen, die ML-Ergebnisse benötigt. Sie können es auch von Postman aus tun. Die *[!UICONTROL Echtzeit-ML]* -Vorlage verwendet EdgeUtils, um diesen Vorgang zu demonstrieren.
 
 >[!NOTE]
 >Vor dem Scoring von Beginn ist eine geringe Verarbeitungszeit erforderlich.
