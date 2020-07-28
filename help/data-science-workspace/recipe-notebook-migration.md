@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3311'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ Bevor Sie das Docker-Bild erstellen, überprüfen Sie die Beispiele zum Lesen un
 
 #### Datensatz lesen
 
-In diesem Abschnitt werden die zum Lesen eines Datensatzes erforderlichen Änderungen beschrieben und das von Adobe bereitgestellte [Beispiel helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) verwendet.
+In diesem Abschnitt werden die zum Lesen eines Datensatzes erforderlichen Änderungen beschrieben und das von der Adobe bereitgestellte [Beispiel helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) verwendet.
 
 **Alte Methode zum Lesen eines Datensatzes**
 
@@ -88,7 +88,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 
 #### Schreiben in einen Datensatz
 
-In diesem Abschnitt werden die zum Schreiben eines Datensatzes erforderlichen Änderungen mithilfe des von Adobe bereitgestellten [Beispiels ScoringDataSaver.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) beschrieben.
+In diesem Abschnitt werden die zum Schreiben eines Datensatzes erforderlichen Änderungen mithilfe des Beispiels [ScoringDataSaver.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) beschrieben, das von der Adobe bereitgestellt wird.
 
 **Alte Art, einen Datensatz zu schreiben**
 
@@ -168,7 +168,7 @@ Die Ordnerstruktur sollte nun dem folgenden Beispiel ähneln (neu hinzugefügte 
 
 Der nächste Schritt besteht darin, die Quelldateien des [Pakets in ein Rezept](./models-recipes/package-source-files-recipe.md) -Tutorial zu übernehmen. Dieses Lernprogramm enthält einen Abschnitt, in dem das Erstellen eines Dockerbilds für ein Scala-(Spark-)Rezept skizziert wird. Nach Abschluss des Vorgangs erhalten Sie das Docker-Container in einer Azurblauer Bildregistrierung zusammen mit der entsprechenden Bild-URL.
 
-### Erstellen eines Rezepts ([!DNL Spark]) {#create-recipe-spark}
+### Rezept erstellen ([!DNL Spark]) {#create-recipe-spark}
 
 Um ein Rezept zu erstellen, müssen Sie zunächst das Tutorial zu [Quelldateien](./models-recipes/package-source-files-recipe.md) für das Paket abschließen und die URL Ihres Dockerbilds bereitstellen. Sie können ein Rezept mit der Benutzeroberfläche oder der API erstellen.
 
@@ -190,7 +190,7 @@ Bevor Sie das Docker-Bild erstellen, überprüfen Sie die Beispiele zum Lesen un
 
 #### Datensatz lesen
 
-In diesem Abschnitt werden die zum Lesen eines Datensatzes erforderlichen Änderungen mithilfe des von Adobe bereitgestellten [Beispiels helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) beschrieben.
+In diesem Abschnitt werden die zum Lesen eines Datensatzes erforderlichen Änderungen mithilfe des Beispiels [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) beschrieben, das von der Adobe bereitgestellt wird.
 
 **Alte Methode zum Lesen eines Datensatzes**
 
@@ -225,7 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 
 #### Schreiben in einen Datensatz
 
-In diesem Abschnitt werden die zum Schreiben eines Datensatzes erforderlichen Änderungen mithilfe des von Adobe bereitgestellten [Beispiels data_save.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) beschrieben.
+In diesem Abschnitt werden die zum Schreiben eines Datensatzes erforderlichen Änderungen mithilfe des von der Adobe bereitgestellten [Beispiels data_save.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) beschrieben.
 
 **Alte Art, einen Datensatz zu schreiben**
 
@@ -629,7 +629,7 @@ Für alle Scala-Notebooks ([!DNL Spark] 2.4) ist es erforderlich, dass Sie die S
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
-import org.apache.spark.sql.{ SparkSession}val spark = SparkSession .builder() .master("local") .getOrCreate()
+import org.apache.spark.sql.{ SparkSession}val spark = SparkSession .builder() .Übergeordnet("local") .getOrCreate()
 </pre>
   </td>
   </tr>
