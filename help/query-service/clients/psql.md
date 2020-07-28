@@ -60,7 +60,7 @@ Die Ausgabe sollte in etwa wie folgt lauten:
 psql (PostgreSQL) 9.5.14
 ```
 
-## PSQL verbinden und [!DNL Query Service]
+## Connect PSQL and [!DNL Query Service]
 
 Return to the [!DNL Platform] UI on the *[!UICONTROL Connect BI Tools]* page.
 
