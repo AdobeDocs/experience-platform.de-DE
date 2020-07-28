@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
 workflow-type: tm+mt
 source-wordcount: '295'
-ht-degree: 10%
+ht-degree: 21%
 
 ---
 
 
 # Vergleichsfunktionen
 
-Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen, zurückzugeben `true` oder `false` entsprechend. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen, zurückzugeben `true` oder `false` entsprechend. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
 
 ## Gleich
 
@@ -88,7 +88,7 @@ Die folgende PQL-Abfrage definiert Personen, deren Geburtstage nicht im Januar o
 person.birthMonth >= 3
 ```
 
-## Niedriger als
+## Kleiner als
 
 Mit der Vergleichsfunktion `<` (kleiner als) wird überprüft, ob der erste Wert kleiner als der zweite ist.
 
@@ -126,4 +126,4 @@ person.birthMonth <= 2
 
 ## Nächste Schritte
 
-Jetzt, da Sie von den Vergleichsfunktionen erfahren haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [Profil Abfrage Language-Übersicht](./overview.md).
+Jetzt, da Sie von den Vergleichsfunktionen erfahren haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
