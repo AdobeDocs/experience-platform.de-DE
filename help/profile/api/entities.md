@@ -18,7 +18,7 @@ Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 ## Zugriff auf Profildaten nach Identität
 
@@ -344,7 +344,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anfrage sucht nach einer Profilentität anhand der Kennung und ruft für alle Zeitreihenereignisse, die der Entität zugeordnet sind, die Werte der Eigenschaften `endUserIDs`, `web`und `channel` ab.
+Die folgende Anfrage sucht nach einer Profilentität anhand der Kennung und ruft für alle Zeitreihenereignisse, die der Entität zugeordnet sind, die Werte der Eigenschaften `endUserIDs`, `web` und `channel` ab.
 
 ```shell
 curl -X GET \
@@ -552,7 +552,7 @@ curl -X POST \
 | `timeFilter.startTime` | Geben Sie die Startzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). |
 | `timeFilter.endTime` | Geben Sie die Endzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). |
 | `limit` | Numerischer Wert, der die maximale Anzahl der zurückzugebenden Objekte angibt. Standardwert: „1000“. |
-| `withCA` | Feature Flag zum Aktivieren berechneter Attribute für das Nachschlagen. Standardwert: „false“. |
+| `withCA` | Feature Flag zur Aktivierung berechneter Attribute für das Nachschlagen. Standardwert: „false“. |
 
 **Antwort**
 
@@ -908,4 +908,4 @@ Die folgenden Parameter werden im Pfad für GET-Anfragen an den `/access/entitie
 | `startTime` | Geben Sie die Startzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). | `startTime=1539838505` |
 | `endTime` | Geben Sie die Endzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). | `endTime=1539838510` |
 | `limit` | Numerischer Wert, der die maximale Anzahl der zurückzugebenden Objekte angibt. Standardwert: „1000“. | `limit=100` |
-| `withCA` | Feature Flag zum Aktivieren berechneter Attribute für das Nachschlagen. Standardwert: „false“. | `withCA=true` |
+| `withCA` | Feature Flag zur Aktivierung berechneter Attribute für das Nachschlagen. Standardwert: „false“. | `withCA=true` |
