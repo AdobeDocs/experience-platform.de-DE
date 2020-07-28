@@ -7,18 +7,18 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
-ht-degree: 4%
+ht-degree: 18%
 
 ---
 
 
 # Experimente
 
-Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Läufen besteht.
+Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Runden besteht.
 
-## Experiment erstellen {#create-an-experiment}
+## Erstellen eines Experiments {#create-an-experiment}
 
-Sie können ein Experiment erstellen, indem Sie eine POST-Anforderung ausführen und gleichzeitig einen Namen und eine gültige MLInstance-ID in der Anforderungs-Nutzlast angeben.
+Sie können ein Experiment erstellen, indem Sie eine Anforderung zur POST ausführen und gleichzeitig einen Namen und eine gültige MLInstance-ID in der Anforderungs-Nutzlast angeben.
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`) enthält.
+A successful response returns a payload containing the details of the newly created Experiment including its unique identifier (`id`).
 
 ```json
 {
@@ -71,7 +71,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu er
 
 ## Erstellen und Ausführen eines Schulungs- oder Bewertungslaufs {#experiment-training-scoring}
 
-Sie können Schulungs- oder Bewertungsabläufe erstellen, indem Sie eine POST-Anforderung ausführen, eine gültige Experiment-ID bereitstellen und die ausgeführte Aufgabe angeben. Bewertungsläufe können nur erstellt werden, wenn das Experiment über einen vorhandenen und erfolgreichen Schulungslauf verfügt. Durch die erfolgreiche Erstellung eines Schulungslaufs wird der Modellschulungsvorgang initialisiert, und der erfolgreiche Abschluss führt zu einem geschulten Modell. Das Generieren geschulter Modelle ersetzt alle bereits vorhandenen Modelle, sodass ein Experiment zu jeder Zeit nur ein einziges trainiertes Modell verwenden kann.
+Sie können Schulungs- oder Bewertungsabläufe erstellen, indem Sie eine POST anfordern, eine gültige Experiment-ID bereitstellen und die ausgeführte Aufgabe angeben. Bewertungsläufe können nur erstellt werden, wenn das Experiment über einen vorhandenen und erfolgreichen Schulungslauf verfügt. Durch die erfolgreiche Erstellung eines Schulungslaufs wird der Modellschulungsvorgang initialisiert, und der erfolgreiche Abschluss führt zu einem geschulten Modell. Das Generieren geschulter Modelle ersetzt alle bereits vorhandenen Modelle, sodass ein Experiment zu jeder Zeit nur ein einziges trainiertes Modell verwenden kann.
 
 **API-Format**
 
@@ -133,7 +133,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu er
 
 ## Abrufen einer Liste von Experimenten
 
-Sie können eine Liste von Experimenten abrufen, die zu einer bestimmten MLInstanz gehören, indem Sie eine GET-Anforderung ausführen und eine gültige MLInstance-ID als Parameter für die Abfrage angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste von Experimenten abrufen, die zu einer bestimmten MLInstanz gehören, indem Sie eine einzige GET anfordern und eine gültige MLInstance-ID als Parameter für die Abfrage angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 
 **API-Format**
@@ -197,9 +197,9 @@ Bei einer erfolgreichen Antwort wird eine Liste von Experimenten mit derselben M
 }
 ```
 
-## Abrufen eines bestimmten Experiments {#retrieve-specific}
+## Retrieve a specific Experiment {#retrieve-specific}
 
-Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET-Anforderung ausführen, die die ID des gewünschten Experiments im Anforderungspfad enthält.
+Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET anfordern, die die ID des gewünschten Experiments im Anforderungspfad enthält.
 
 **API-Format**
 
@@ -242,7 +242,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details des angeforderten E
 
 ## Abrufen einer Liste von Experimentabläufen
 
-Sie können eine Liste von Schulungs- oder Bewertungsabläufen abrufen, die zu einem bestimmten Experiment gehören, indem Sie eine GET-Anforderung ausführen und eine gültige Experiment-ID angeben. Um die Ergebnisse zu filtern, können Sie die Parameter für die Abfrage im Anforderungspfad angeben. Eine vollständige Liste der verfügbaren Parameter für die Abfrage finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste von Schulungs- oder Bewertungsabläufen abrufen, die zu einem bestimmten Experiment gehören, indem Sie eine einzige GET anfordern und eine gültige Experiment-ID angeben. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. For a complete list of available query parameters, see the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -303,11 +303,11 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die eine Liste der ausgef�
 
 ## Experiment aktualisieren
 
-Sie können ein vorhandenes Experiment aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anforderung überschreiben, die die ID des Experiments &quot;Zielgruppe&quot;im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
+Sie können ein vorhandenes Experiment aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anforderung überschreiben, die die ID des Zielgruppen-Experiments im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum [Abrufen des Experiments nach ID](#retrieve-specific)auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
+>In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Experiment by ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen eines Experiments, während diese Eigenschaften zunächst verwendet werden:
 
@@ -356,7 +356,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast mit den aktualisierten Details des Experiments zurück.
+Bei erfolgreicher Antwort wird eine Payload mit den aktualisierten Details des Experiments zurückgegeben.
 
 ```json
 {
