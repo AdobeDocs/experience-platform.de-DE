@@ -18,7 +18,7 @@ Die auf Adobe Experience Platform aufbauende Adobe Echtzeit-Kundendatenplattform
 
 Echtzeit-CDP umfasst Tools für Datenverwaltung, Identitätsverwaltung, erweiterte Segmentierung und Datenwissenschaften, mit denen Sie Profil erstellen und Audiencen definieren sowie umfassende Einblicke gewinnen können, während Sie gleichzeitig in der Lage sind, strikte Richtlinien zur Datenverwaltung durchzusetzen.
 
-Die Adobe-Kundendatenplattform in Echtzeit verbindet sich mit einem großen Partnernetzwerk, ganz zu schweigen von den nativen Integrationen mit Adobe Experience Cloud. So können Sie diese Audiencen nahtlos aktivieren und großartige Kundenerlebnisse für alle Kanal bereitstellen, von der Personalisierung vor Ort oder in der App bis hin zu E-Mails, gebührenpflichtigen Medien, Call-Centern, angeschlossenen Geräten und mehr.
+Adobe Die Echtzeit-Kundendatenplattform verbindet sich mit einem umfangreichen Partnernetzwerk, ganz zu schweigen von den nativen Integrationen mit Adobe Experience Cloud, sodass Sie diese Audiencen nahtlos aktivieren und großartige Kundenerlebnisse für alle Kanal bereitstellen können, von der Personalisierung vor Ort oder in der App bis zu E-Mails, gebührenpflichtigen Medien, Call-Centern, angeschlossenen Geräten und mehr.
 
 Mit der Echtzeit-Kundendatenplattform können Sie:
 
