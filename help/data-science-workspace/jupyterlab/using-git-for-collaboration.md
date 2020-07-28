@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Git] ist ein verteiltes Versionskontrollsystem zur Verfolgung von Änderungen im Quellcode während der Softwareentwicklung. Git wird innerhalb der [!DNL Data Science Workspace JupyterLab] Umgebung vorinstalliert.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 >[!NOTE]
 > Der Git-Server, den Sie verwenden möchten, muss über das Internet zugänglich sein.
