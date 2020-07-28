@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Motoren
+title: Engines
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1118'
-ht-degree: 3%
+ht-degree: 70%
 
 ---
 
 
-# Motoren
+# Engines
 
-Engines sind die Grundlagen für maschinelle Lernmodelle in Data Science Workspace. Sie enthalten maschinelle Lernalgorithmen, die bestimmte Probleme lösen, spezielle Pipelines zur Durchführung von Feature Engineering oder beides.
+Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Workspace. Sie enthalten Algorithmen für maschinelles Lernen, die bestimmte Probleme lösen, Pipelines zur Funktionsentwicklung aufweisen oder beides.
 
-## Suchen Sie Ihre Docker-Registrierung
+## Ihre Docker-Registrierung nachschlagen
 
 >[!TIP]
 >Wenn Sie keine Docker-URL haben, besuchen Sie die Quelldateien des [Pakets in einem Rezept](../models-recipes/package-source-files-recipe.md) -Lernprogramm, um eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL zu erhalten.
 
-Ihre Docker-Registrierungsberechtigungen sind erforderlich, um eine verpackte Rezept-Datei hochzuladen, einschließlich der Docker-Host-URL, des Benutzernamens und des Kennworts. Sie können diese Informationen nachschlagen, indem Sie die folgende GET-Anforderung ausführen:
+Ihre Anmeldedaten für die Docker-Registrierung benötigen Sie, um eine verpackte Rezeptdatei hochladen zu können, einschließlich Ihrer Docker-Host-URL, des Benutzernamens und des Passworts. Sie können diese Daten nachschlagen, indem Sie die folgende GET-Anfrage ausführen:
 
 **API-Format**
 
@@ -41,12 +41,12 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihrer Docker-Registrierung einschließlich der Docker-URL (`host`), dem Benutzernamen (`username`) und dem Kennwort (`password`) enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details Ihrer Docker-Registrierung einschließlich der Docker-URL (`host`), des Benutzernamens (`username`) und des Passworts (`password`) enthält.
 
 >[!NOTE]
 >
 >
->Ihr Docker-Kennwort ändert sich, sobald Ihr `{ACCESS_TOKEN}` aktualisiert wird.
+>Ihr Docker-Passwort ändert sich jedes Mal, wenn Ihr `{ACCESS_TOKEN}` aktualisiert wird.
 
 ```json
 {
@@ -56,9 +56,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details Ihrer Dock
 }
 ```
 
-## Erstellen einer Engine mithilfe von Docker-URLs {#docker-image}
+## Engine mithilfe von Docker-URLs erstellen {#docker-image}
 
-Sie können eine Engine erstellen, indem Sie eine POST-Anforderung ausführen und gleichzeitig die zugehörigen Metadaten und eine Docker-URL bereitstellen, die auf ein Dockerbild in mehrteiligen Formularen verweist.
+Sie können eine Engine erstellen, indem Sie eine POST-Anfrage ausführen und gleichzeitig die zugehörigen Metadaten und eine Docker-URL angeben, die in mehrteiligen Forms auf ein Docker-Image verweist.
 
 **API-Format**
 
@@ -95,12 +95,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Rezeptname angezeigt wird. |
-| `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Beschreibung des Rezepts angezeigt wird. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist, und kann entweder &quot;Python&quot;, &quot;R&quot;oder &quot;Tensorflow&quot;sein. |
-| `algorithm` | Eine Zeichenfolge, die den Typ des maschinellen Lernalgorithmus angibt. Zu den unterstützten Algorithmustypen gehören &quot;Classification&quot;, &quot;Regression&quot;oder &quot;Benutzerdefiniert&quot;. |
-| `artifacts.default.image.location` | Die Position des Dockerbilds, mit dem eine Docker-URL verknüpft ist. |
-| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist, und kann entweder &quot;Python&quot;, &quot;R&quot;oder &quot;Tensorflow&quot;sein. |
+| `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
+| `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
+| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Image beruht, und kann entweder „Python“, „R“ oder „TensorFlow“ lauten. |
+| `algorithm` | Eine Zeichenfolge, die den Typ des maschinellen Lernalgorithmus angibt. Zu den unterstützten Algorithmustypen gehören „Klassifizierung“, „Regression“ oder „Benutzerdefiniert“. |
+| `artifacts.default.image.location` | Der Speicherort des Docker-Images, mit dem eine Docker-URL verknüpft ist. |
+| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Image beruht, und kann entweder „Python“, „R“ oder „TensorFlow“ lauten. |
 
 **Anfrage PySpark/Scala**
 
@@ -134,16 +134,16 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Rezeptname angezeigt wird. |
-| `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Beschreibung des Rezepts angezeigt wird. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
+| `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
+| `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
 | `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Der Wert kann auf Spark oder PySpark eingestellt werden. |
 | `mlLibrary` | Ein Feld, das zum Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
-| `artifacts.default.image.location` | Die Position des Dockerbilds. Es wird nur Azurblauer ACR oder Public (nicht authentifiziert) Dockerhub unterstützt. |
+| `artifacts.default.image.location` | Die Position des Dockerbilds. Nur der ACR oder der öffentliche (nicht authentifizierte) Dockerhub wird unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine Python-Engine. Alle Engine-Antworten haben das folgende Format:
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine Python-Engine. Alle Engine-Antworten haben das folgende Format:
 
 ```json
 {
@@ -172,7 +172,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu er
 
 ## Erstellen einer Feature Pipeline-Engine mit Docker-URLs {#feature-pipeline-docker}
 
-Sie können eine Feature-Pipeline-Engine erstellen, indem Sie eine POST-Anforderung ausführen und gleichzeitig die zugehörigen Metadaten und eine Docker-URL bereitstellen, die auf ein Dockerbild verweist.
+Sie können eine Feature Pipeline-Engine erstellen, indem Sie eine Anforderung zur POST ausführen und gleichzeitig die Metadaten und eine Docker-URL bereitstellen, die auf ein Dockerbild verweist.
 
 **API-Format**
 
@@ -215,17 +215,17 @@ curl -X POST \
 | --- | --- |
 | `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Der Wert kann auf Spark oder PySpark eingestellt werden. |
 | `algorithm` | Der verwendete Algorithmus setzt diesen Wert auf `fp` (Feature-Pipeline). |
-| `name` | Der gewünschte Name für die Feature Pipeline-Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Rezeptname angezeigt wird. |
-| `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Beschreibung des Rezepts angezeigt wird. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
+| `name` | Der gewünschte Name für die Feature Pipeline-Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
+| `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
 | `mlLibrary` | Ein Feld, das zum Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
-| `artifacts.default.image.location` | Die Position des Dockerbilds. Es wird nur Azurblauer ACR oder Public (nicht authentifiziert) Dockerhub unterstützt. |
+| `artifacts.default.image.location` | Die Position des Dockerbilds. Nur der ACR oder der öffentliche (nicht authentifizierte) Dockerhub wird unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
 | `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker`gesetzt werden. |
 | `artifacts.default.defaultMLInstanceConfigs` | Ihre `pipeline.json` Konfigurationsdateiparameter. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten Feature Pipeline Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine PySpark Feature Pipeline Engine.
+A successful response returns a payload containing the details of the newly created feature pipeline Engine including its unique identifier (`id`). Die folgende Beispielantwort bezieht sich auf eine PySpark Feature Pipeline Engine.
 
 ```json
 {
@@ -252,9 +252,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu er
 }
 ```
 
-## Eine Liste von Motoren abrufen
+## Liste von Engines abrufen
 
-Sie können eine Liste von Engines abrufen, indem Sie eine GET-Anforderung ausführen. Um die Ergebnisse zu filtern, können Sie die Parameter für die Abfrage im Anforderungspfad angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste von Engines abrufen, indem Sie eine GET-Anfrage ausführen. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -277,7 +277,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste der Motoren und deren Details zurück.
+Eine erfolgreiche Antwort gibt eine Liste der Engines und ihre Details zurück.
 
 ```json
 {
@@ -327,9 +327,9 @@ Eine erfolgreiche Antwort gibt eine Liste der Motoren und deren Details zurück.
 }
 ```
 
-### Abrufen einer bestimmten Engine {#retrieve-specific}
+### Bestimmte Engine abrufen {#retrieve-specific}
 
-Sie können die Details einer bestimmten Engine abrufen, indem Sie eine GET-Anforderung ausführen, die die ID der gewünschten Engine im Anforderungspfad enthält.
+Sie können die Details einer bestimmten Engine abrufen, indem Sie eine GET-Anfrage ausführen, die im Anfragepfad die Kennung der gewünschten Engine enthält.
 
 **API-Format**
 
@@ -339,7 +339,7 @@ GET /engines/{ENGINE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENGINE_ID}` | Die ID einer vorhandenen Engine. |
+| `{ENGINE_ID}` | Die Kennung einer vorhandenen Engine. |
 
 **Anfrage**
 
@@ -354,7 +354,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details der gewünschten Engine zurück.
+Eine erfolgreiche Antwort gibt eine Payload mit den Details der gewünschten Engine zurück.
 
 ```json
 {
@@ -381,15 +381,15 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details der gewünschten En
 }
 ```
 
-## Aktualisieren einer Engine
+## Engine aktualisieren
 
-Sie können eine vorhandene Engine ändern und aktualisieren, indem Sie ihre Eigenschaften durch eine PUT-Anforderung überschreiben, die die ID der Zielgruppe Engine im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
+Sie können eine vorhandene Engine ändern und aktualisieren, indem Sie ihre Eigenschaften durch eine PUT-Anfrage überschreiben, die die Kennung der Ziel-Engine im Anfragepfad enthält, und eine JSON-Payload mit aktualisierten Eigenschaften angeben.
 
 >[!NOTE]
 >
->Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum [Abrufen der Engine nach ID](#retrieve-specific)auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
+> Um den Erfolg dieser PUT-Anfrage zu gewährleisten, wird empfohlen, zuerst eine GET-Anfrage zum [Abrufen der Engine nach Kennung](#retrieve-specific) auszuführen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
-Der folgende Beispiel-API-Aufruf aktualisiert den Namen und die Beschreibung einer Engine, während diese Eigenschaften zunächst verwendet werden:
+Der folgende Beispiel-API-Aufruf aktualisiert den Namen und die Beschreibung einer Engine und weist zunächst folgende Eigenschaften auf:
 
 ```json
 {
@@ -416,7 +416,7 @@ PUT /engines/{ENGINE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENGINE_ID}` | Die ID einer vorhandenen Engine. |
+| `{ENGINE_ID}` | Die Kennung einer vorhandenen Engine. |
 
 **Anfrage**
 
@@ -446,7 +446,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast mit den aktualisierten Details der Engine zurück.
+Eine erfolgreiche Antwort gibt eine Payload mit den aktualisierten Details der Engine zurück.
 
 ```json
 {
@@ -472,9 +472,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den aktualisierten Details der 
 }
 ```
 
-## Eine Engine löschen
+## Engine löschen
 
-Sie können eine Engine löschen, indem Sie eine DELETE-Anforderung ausführen und gleichzeitig die ID der Zielgruppe Engine im Anforderungspfad angeben. Durch das Löschen einer Engine werden alle MLInstances, die auf diese Engine verweisen, inklusive aller Experimente und Experimentabläufe, die zu diesen MLInstances gehören, kaskadiert.
+Sie können eine Engine löschen, indem Sie eine DELETE-Anfrage ausführen und dabei die Kennung der Ziel-Engine im Anfragepfad angeben. Durch das Löschen einer Engine werden alle MLInstances, die auf diese Engine verweisen, kaskadiert (inklusive aller Experimente und Experimentläufe, die zu diesen MLInstances gehören).
 
 **API-Format**
 
@@ -484,7 +484,7 @@ DELETE /engines/{ENGINE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENGINE_ID}` | Die ID einer vorhandenen Engine. |
+| `{ENGINE_ID}` | Die Kennung einer vorhandenen Engine. |
 
 **Anfrage**
 
