@@ -1,8 +1,8 @@
 ---
-title: Amazon-Kinesis-Ziel
-seo-title: Amazon-Kinesis-Ziel
-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon-Kinesis-Datenspeicherung, um Daten aus der Adobe Experience Platform zu streamen.
-seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon-Kinesis-Datenspeicherung, um Daten aus der Adobe Experience Platform zu streamen.
+title: Amazon Kinesis-Ziel
+seo-title: Amazon Kinesis-Ziel
+description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten aus der Adobe Experience Platform zu streamen.
+seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten aus der Adobe Experience Platform zu streamen.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -25,11 +25,11 @@ Der [!DNL Kinesis Data Streams] Service von [!DNL Amazon Web Services] ermöglic
 
 Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Amazon Kinesis] Datenspeicherung erstellen, um Daten aus der Adobe Experience Platform zu streamen.
 
-* Weitere Informationen finden Sie [!DNL Amazon Kinesis]in der [Amazon-Dokumentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Informationen zum Herstellen einer Verbindung mit [!DNL Amazon Kinesis] API-Aufrufen finden Sie im [Streaming-Ziel-API-Lernprogramm](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
-* Informationen zum Herstellen einer Verbindung mit der [!DNL Amazon Kinesis] CDP-Benutzeroberfläche von Adobe in Echtzeit finden Sie in den folgenden Abschnitten.
+* Informationen zum Herstellen einer Verbindung mit [!DNL Amazon Kinesis] der CDP-Benutzeroberfläche der Adobe in Echtzeit finden Sie in den folgenden Abschnitten.
 
-![Amazon-Kinesis in der Benutzeroberfläche](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
+![Amazon Kinesis in der Benutzeroberfläche](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
 
 
 ## Nutzungsszenarien {#use-cases}
@@ -46,7 +46,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### Im Authentifizierungsschritt {#authentication-step}
 
-* **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel **: Generieren Sie in[!DNL Amazon Web Services]diesem Fall einen Zugriffsschlüssel - ein Schlüssel-Paar für den geheimen Zugriff, um Adobe CDP-Zugriff auf Ihr[!DNL Amazon Kinesis]Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu[Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel **: Generieren Sie in[!DNL Amazon Web Services]diesem Fall einen Zugriffsschlüssel - das Schlüsselpaar für den geheimen Zugriff, um der Adobe Zugriff auf Ihr[!DNL Amazon Kinesis]Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu[Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **Region**: Geben Sie an, zu welcher [!DNL Amazon Web Services] Region Daten gestreamt werden sollen.
 
 ![Eingabefelder im Kontoschritt](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -117,7 +117,7 @@ Ihre exportierten [!DNL Experience Platform] Daten werden im JSON- [!DNL Amazon 
 
 >[!MORELIKETHIS]
 >
->* [Verbindung zur Amazon-Kinesis herstellen und Daten mithilfe von API-Aufrufen aktivieren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+>* [Verbindung mit Amazon Kinesis und Datenaktivierung mithilfe von API-Aufrufen](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Azurblauer Ereignis Hubs Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md)
 
