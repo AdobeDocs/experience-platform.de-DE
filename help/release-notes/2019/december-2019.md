@@ -8,14 +8,14 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '668'
-ht-degree: 72%
+ht-degree: 70%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 11. Dezember 2019**
+**Release-Datum: Mittwoch, 11. Dezember 2019**
 
 Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
 
@@ -34,14 +34,14 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Merged Audiences tab in [!DNL Segment Builder] | Die Registerkarten [!UICONTROL _Segmente _]und[!UICONTROL _Audiences_][!DNL Segment Builder] im wurden zu einer Registerkarte namens [!UICONTROL _Audiences _]zusammengefasst. Auf dieser Registerkarte können Sie nach vorhandenen Audiences suchen, die Sie dann per Drag-and-Drop in die Arbeitsfläche von Rule Builder ziehen können, um eine neue Segmentdefinition zu erstellen. Beim Referenzieren einer Audience kann der neuen Segmentdefinition einer der folgenden Regellogiksätze hinzugefügt werden: Die Audience-Zugehörigkeit als Regel. Der vollständige Satz an Regellogik, der die referenzierte Audience definiert hat. |
+| Merged Audiences tab in [!DNL Segment Builder] | Die Registerkarten [!UICONTROL _Segmente _]und[!UICONTROL _Audiences_][!DNL Segment Builder] im wurden zu einer Registerkarte namens [!UICONTROL _Audiences _]zusammengefasst. Auf dieser Registerkarte können Sie nach vorhandenen Zielgruppen suchen, die Sie dann per Drag-and-Drop in die Arbeitsfläche von Rule Builder ziehen können, um eine neue Segmentdefinition zu erstellen. Beim Referenzieren einer Zielgruppe kann der neuen Segmentdefinition einer der folgenden Regellogiksätze hinzugefügt werden: Die Zielgruppenzugehörigkeit als Regel. Der vollständige Satz an Regellogik, der die referenzierte Zielgruppe definiert hat. |
 | Neuer Ort für die Auswahl von Zusammenführungsrichtlinien | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. Um eine Zusammenführungsrichtlinie für eine Segmentdefinition auszuwählen, klicken Sie auf das Zahnradsymbol auf der Registerkarte [!UICONTROL _Felder _]und wählen Sie dann im Dropdown-Menü_[!UICONTROL  Zusammenführungsrichtlinie]_ die gewünschte Zusammenführungsrichtlinie aus. |
 
 **Bekannte Probleme**
 
 * Keine
 
-Weiterführende Informationen finden Sie in der [Übersicht zum Segmentation Service](../../segmentation/home.md).
+Weitere Informationen finden Sie unter [Segmentation Service – Übersicht](../../segmentation/home.md).
 
 ## [!DNL Decisioning Service] {#decisioning}
 
@@ -57,13 +57,13 @@ Adobe Experience Platform [!DNL Decisioning Service] provides the ability to pro
 
 * Keine.
 
-Eine ausführliche Einführung zu dem Dienst finden Sie in der [Übersicht zum Decisioning Service](../../decisioning-service/home.md).
+Eine ausführliche Einführung in den Dienst finden Sie unter [Decisioning Service – Übersicht](../../decisioning-service/home.md).
 
 ## [!DNL Sources] {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
-[!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, damit Sie für verschiedene Datenanbieter bequem Quellverbindungen einrichten können. Diese Quellverbindungen ermöglichen Ihnen eine Authentifizierung mit Ihren Speichersystemen und CRM-Diensten, die Festlegung von Zeiten für Erfassungsläufe und die Verwaltung des Durchsatzes bei der Datenerfassung.
+[!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Diese Quellverbindungen ermöglichen Ihnen eine Authentifizierung mit Ihren Datenspeichern und CRM-Diensten, die Festlegung von Zeiten für Erfassungsläufe und die Verwaltung des Durchsatzes bei der Datenerfassung.
 
 **Neue Funktionen**
 
@@ -80,7 +80,7 @@ Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](.
 
 ## [!DNL Experience Data Model] (XDM) System {#xdm}
 
-Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model]Das von Adobe unterstützte  (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Kundenerlebnis-Management zu definieren.
+Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten in Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
