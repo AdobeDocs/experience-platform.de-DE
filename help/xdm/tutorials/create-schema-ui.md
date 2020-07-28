@@ -86,7 +86,7 @@ Die Felder werden im Format „Feldname | Datentyp“ angezeigt. Die Schritte zu
 
 >[!NOTE]
 >
->Sie können [die Klasse eines Schemas](#change-class) jederzeit während des anfänglichen Kompositionsprozesses ändern, bevor das Schema gespeichert wird. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Daher werden die Arbeitsfläche und alle von Ihnen hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
+> Sie können [die Klasse eines Schemas](#change-class) jederzeit während des anfänglichen Kompositionsprozesses ändern, bevor das Schema gespeichert wird. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Daher werden die Arbeitsfläche und alle von Ihnen hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
 
 ## Hinzufügen eines Mixins {#mixin}
 
@@ -253,9 +253,9 @@ Now all data ingested into the &quot;[!UICONTROL loyaltyId]&quot; field will be 
 
 >[!NOTE]
 >
->Nachdem ein Schemafeld als primäre Identität festgelegt wurde, erhalten Sie eine Fehlermeldung, wenn Sie später versuchen, ein anderes Feld im Schema als primäres Feld festzulegen. Jedes Schema darf nur ein primäres Identitätsfeld enthalten.
+> Nachdem ein Schemafeld als primäre Identität festgelegt wurde, erhalten Sie eine Fehlermeldung, wenn Sie später versuchen, ein anderes Feld im Schema als primäres Feld festzulegen. Jedes Schema darf nur ein primäres Identitätsfeld enthalten.
 
-To learn more about working with identities, please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
+Weitere Informationen zum Arbeiten mit Identitäten finden Sie in der Dokumentation zu [!DNL Identity Service](../../identity-service/home.md).
 
 <!-- ## Relationship
 
@@ -325,7 +325,7 @@ You can then give your new class a **[!UICONTROL Display Name]** (a short, descr
 
 >[!NOTE]
 >
->Denken Sie beim Erstellen eines Schemas, das eine von Ihrem Unternehmen definierte Klasse implementiert, daran, dass Mixins nur für kompatible Klassen verfügbar sind. Da die von Ihnen definierte Klasse neu ist, sind keine kompatiblen Mixins im Dialogfeld *Mixin hinzufügen* aufgeführt. Stattdessen müssen Sie **[!UICONTROL Neues Mixin erstellen]** auswählen und ein Mixin definieren, das mit dieser Klasse verwendet werden soll. Wenn Sie das nächste Mal ein Schema erstellen, das die neue Klasse implementiert, wird das von Ihnen definierte Mixin aufgelistet und ist zur Verwendung verfügbar.
+> Denken Sie beim Erstellen eines Schemas, das eine von Ihrem Unternehmen definierte Klasse implementiert, daran, dass Mixins nur für kompatible Klassen verfügbar sind. Da die von Ihnen definierte Klasse neu ist, sind keine kompatiblen Mixins im Dialogfeld *Mixin hinzufügen* aufgeführt. Stattdessen müssen Sie **[!UICONTROL Neues Mixin erstellen]** auswählen und ein Mixin definieren, das mit dieser Klasse verwendet werden soll. Wenn Sie das nächste Mal ein Schema erstellen, das die neue Klasse implementiert, wird das von Ihnen definierte Mixin aufgelistet und ist zur Verwendung verfügbar.
 
 ### Klasse eines Schemas ändern {#change-class}
 
@@ -333,7 +333,7 @@ Sie können jederzeit während der anfänglichen Erstellung des Schemas vor dem 
 
 >[!WARNING]
 >
->Gehen Sie beim Ändern der Klasse vorsichtig vor. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, wird die Arbeitsfläche daher zurückgesetzt und alle Felder, die Sie zu diesem Punkt hinzugefügt haben, werden entfernt.
+> Gehen Sie beim Ändern der Klasse vorsichtig vor. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, wird die Arbeitsfläche daher zurückgesetzt und alle Felder, die Sie zu diesem Punkt hinzugefügt haben, werden entfernt.
 
 Um die Klasse zu ändern, klicken Sie im Editor im Abschnitt **[!UICONTROL Komposition]** neben *[!UICONTROL Klasse]* auf *[!UICONTROL Zuweisen]*.
 
