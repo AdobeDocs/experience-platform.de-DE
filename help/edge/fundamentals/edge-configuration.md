@@ -98,13 +98,13 @@ Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL 
 
 [Umgebung](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target helfen Ihnen, Ihre Implementierung in allen Entwicklungsstadien zu verwalten. Diese Einstellung gibt an, welche Umgebung Sie für jede Umgebung verwenden möchten.
 
-Adobe empfiehlt, diese Einstellung für jede Ihrer `dev`-, `stage`- und `prod` Edge-Konfigurationseinstellungen unterschiedlich festzulegen, um die Arbeit zu vereinfachen. Wenn Sie jedoch bereits [!UICONTROL Adobe Target-Umgebung] definiert haben, können Sie diese verwenden.
+Adobe empfiehlt, diese Einstellung für jede Ihrer `dev`-, `stage`- und `prod` Edge-Umgebung anders festzulegen, um die Arbeit zu vereinfachen. Wenn Sie jedoch bereits [!UICONTROL Adobe Target-Umgebung] definiert haben, können Sie diese verwenden.
 
 #### Adobe Audience Manager
 
 Alles, was zum Senden von Daten an Adobe Audience Manager erforderlich ist, ist, diesen Abschnitt zu aktivieren. Die anderen Einstellungen sind optional, werden jedoch empfohlen.
 
-![Adobe Audience - Einstellungsblock verwalten](../../assets/edge_configuration_aam.png)
+![Adobe Audience Einstellungsblock verwalten](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Cookie-Ziele aktiviert]
 
@@ -122,4 +122,4 @@ Steuert, ob Daten an Adobe Analytics gesendet werden. Weitere Informationen find
 
 ##### [!UICONTROL Report Suite-ID]
 
-Die Report Suite finden Sie im Abschnitt Adobe Analytics Admin unter [!UICONTROL Admin > Report Suites]. Wenn mehrere Report Suites angegeben sind, werden die Daten in die einzelnen Report Suites kopiert.
+Die Report Suite finden Sie im Adobe Analytics Admin-Abschnitt unter [!UICONTROL Admin > Report Suites]. Wenn mehrere Report Suites angegeben sind, werden die Daten in die einzelnen Report Suites kopiert.
