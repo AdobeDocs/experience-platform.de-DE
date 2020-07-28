@@ -6,27 +6,27 @@ translation-type: tm+mt
 source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
 workflow-type: tm+mt
 source-wordcount: '594'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
 
-# Quellenanschlüsse {#sources}
+# Quellen-Connectoren {#sources}
 
-- [Übersicht über die Quellenanschlüsse](home.md)
+- [Übersicht über Connectoren für Datenquellen](home.md)
 - Verfügbare Quell-Connectors {#connectors}
-   - Adobe-Programme {#adobe-applications}
-      - [Analytics Data Connector](connectors/adobe-applications/analytics.md)
+   - Adobe-Anwendungen {#adobe-applications}
+      - [Der Data Connector von Analytics](connectors/adobe-applications/analytics.md)
       - [Audience Manager-Anschluss](connectors/adobe-applications/audience-manager.md)
       - [Connector für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
-      - Adobe-Anwendungsfelder zuordnen {#mapping}
+      - Anwendungsfelder für Adoben zuordnen {#mapping}
          - [Analytics-Zuordnungsfelder](connectors/adobe-applications/mapping/analytics.md)
          - [Zuordnungsfelder für Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Zielgruppen-Mapping-Felder](connectors/adobe-applications/mapping/target.md)
    - Werbung {#advertising}
       - [Google AdWords Connector](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
-      - [Amazon Kinesis Connector](connectors/cloud-storage/kinesis.md)
+      - [Amazon Kinesis-Anschluss](connectors/cloud-storage/kinesis.md)
       - [Apache HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
       - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
       - [Azurblauch und Amazon S3-Stecker](connectors/cloud-storage/blob-s3.md)
@@ -44,8 +44,8 @@ ht-degree: 2%
       - [Amazon Redshift Connector](connectors/databases/redshift.md)
       - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
-      - [Blue Data Explorer-Anschluss](connectors/databases/data-explorer.md)
-      - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
+      - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
+      - [Azurblase-Analytics-Stecker](connectors/databases/synapse-analytics.md)
       - [Datenspeicherung-Stecker](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
@@ -58,19 +58,19 @@ ht-degree: 2%
       - [Oracle Connector](connectors/databases/oracle.md)
       - [Phoenix-Anschluss](connectors/databases/phoenix.md)
       - [PostgreSQL Connector](connectors/databases/postgres.md)
-   - Marketing-Automatisierung {#marketing-automation}
+   - Marketing automation {#marketing-automation}
       - [HubSpot-Anschluss](connectors/marketing-automation/hubspot.md)
    - Zahlungen {#payments}
       - [PayPal-Anschluss](connectors/payments/paypal.md)
    - Protokolle {#protocols}
       - [Generischer OData Connector](connectors/protocols/odata.md)
-- API-Lernprogramme {#api-tutorials}
+- API-Tutorials {#api-tutorials}
    - Erstellen eines Quell-Connectors {#create}
       - Werbung {#advertising}
          - [Google AdWords Connector](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Amazon-Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
-         - [Amazon S3 Connector](tutorials/api/create/cloud-storage/s3.md)
+         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
+         - [Amazon S3-Anschluss](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS-Anschluss](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azurblutstecker](tutorials/api/create/cloud-storage/blob.md)
          - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](tutorials/api/create/cloud-storage/adls-gen2.md)
@@ -89,8 +89,8 @@ ht-degree: 2%
          - [Amazon Redshift Connector](tutorials/api/create/databases/redshift.md)
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/api/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
-         - [Blue Data Explorer-Anschluss](tutorials/api/create/databases/data-explorer.md)
-         - [Blue-Synapse-Analytics-Anschluss](tutorials/api/create/databases/synapse-analytics.md)
+         - [Data Explorer-Stecker](tutorials/api/create/databases/data-explorer.md)
+         - [Azurblase-Analytics-Stecker](tutorials/api/create/databases/synapse-analytics.md)
          - [Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
          - [Steckverbinder](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
@@ -103,13 +103,13 @@ ht-degree: 2%
          - [Phoenix-Anschluss](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL Connector](tutorials/api/create/databases/postgres.md)
          - [SQL Server-Anschluss](tutorials/api/create/databases/sql-server.md)
-      - Marketing-Automatisierung {#marketing-automation}
+      - Marketing automation {#marketing-automation}
          - [HubSpot-Anschluss](tutorials/api/create/marketing-automation/hubspot.md)
       - Zahlungen {#payments}
          - [PayPal-Anschluss](tutorials/api/create/payments/paypal.md)
       - Protokolle {#protocols}
          - [Generischer OData Connector](tutorials/api/create/protocols/odata.md)
-   - Daten untersuchen {#explore}
+   - Daten erkunden {#explore}
       - [Werbedaten](tutorials/api/explore/advertising.md)
       - [Daten zur Cloud-Datenspeicherung](tutorials/api/explore/cloud-storage.md)
       - [CRM-Daten untersuchen](tutorials/api/explore/crm.md)
@@ -131,14 +131,14 @@ ht-degree: 2%
    - [Erstellen einer Datenbank-Basisverbindung mit der Flow Service API](tutorials/api/create-dataset-base-connection.md)
 - UI-Lernprogramme {#ui-tutorials}
    - Erstellen eines Quell-Connectors {#create}
-      - Adobe-Programme {#adobe-applications}
-         - [Adobe Analytics Connector](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Audience Manager Connector](tutorials/ui/create/adobe-applications/audience-manager.md)
+      - Adobe-Anwendungen {#adobe-applications}
+         - [Adobe Analytics-Anschluss](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Audience Manager-Anschluss](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connector für Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Werbung {#create}
          - [Google AdWords Connector](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Amazon Kinesis Connector](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Amazon Kinesis-Anschluss](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Apache HDFS-Anschluss](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azurblauch und Amazon S3-Stecker](tutorials/ui/create/cloud-storage/blob-s3.md)
@@ -156,8 +156,8 @@ ht-degree: 2%
          - [Amazon Redshift Connector](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/ui/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/ui/create/databases/spark.md)
-         - [Blue Data Explorer-Anschluss](tutorials/ui/create/databases/data-explorer.md)
-         - [Blue-Synapse-Analytics-Anschluss](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Data Explorer-Stecker](tutorials/ui/create/databases/data-explorer.md)
+         - [Azurblase-Analytics-Stecker](tutorials/ui/create/databases/synapse-analytics.md)
          - [Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
          - [Steckverbinder](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Abfrage Connector](tutorials/ui/create/databases/bigquery.md)
@@ -170,7 +170,7 @@ ht-degree: 2%
          - [Oracle Connector](tutorials/ui/create/databases/oracle.md)
          - [Phoenix-Anschluss](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL Connector](tutorials/ui/create/databases/postgres.md)
-      - Marketing-Automatisierung {#marketing-automation}
+      - Marketing automation {#marketing-automation}
          - [HubSpot-Anschluss](tutorials/ui/create/marketing-automation/hubspot.md)
       - Zahlungen {#payments}
          - [PayPal-Anschluss](tutorials/ui/create/payments/paypal.md)
@@ -188,4 +188,4 @@ ht-degree: 2%
       - [Konfigurieren eines Datenflusses für einen Protokollanschluss](tutorials/ui/dataflow/protocols.md)
    - [Aktivieren von Eingangsdaten zum Ausfüllen von Profilen](tutorials/ui/profile.md)
    - [Überwachen von Konten und Datenflüssen](tutorials/ui/monitor.md)
-- [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
+- [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
