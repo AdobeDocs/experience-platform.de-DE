@@ -60,7 +60,7 @@ Felder können entweder über die API oder die Benutzeroberfläche als Identitä
 
 In der API werden Identitäten durch Erstellen von Identitätsdeskriptoren festgelegt. Identitätsdeskriptoren signalisieren, dass eine bestimmte Eigenschaft für ein Schema ein eindeutiger Bezeichner ist.
 
-Identitätsdeskriptoren werden durch eine POST-Anforderung an den /descriptors-Endpunkt erstellt. Bei erfolgreichem Abschluss erhalten Sie einen HTTP-Status 201 (Erstellt) und ein Antwortobjekt mit den Details des neuen Deskriptors.
+Identitätsdeskriptoren werden durch eine POST an den /descriptors-Endpunkt erstellt. Bei erfolgreichem Abschluss erhalten Sie einen HTTP-Status 201 (Erstellt) und ein Antwortobjekt mit den Details des neuen Deskriptors.
 
 Weitere Informationen zum Erstellen von Identitätsdeskriptoren in der API finden Sie im Dokument zu [Deskriptoren](api/descriptors.md) im [!DNL Schema Registry] Entwicklerhandbuch.
 
@@ -205,7 +205,7 @@ Eine Liste der unterstützten Identitäts-Namensraum-Codes finden Sie im Abschni
 
 ### Kopfzeilenfehler akzeptieren
 
-Die meisten GET-Anforderungen in der [!DNL Schema Registry] API erfordern einen Accept-Header, damit das System festlegt, wie die Antwort formatiert werden soll. Im Folgenden finden Sie eine Liste häufiger Fehler im Zusammenhang mit der Accept-Kopfzeile. Listen kompatibler Accept-Header für verschiedene API-Anforderungen finden Sie in den entsprechenden Abschnitten im [Schema Registry Developer Guide](api/getting-started.md).
+Die meisten GET in der [!DNL Schema Registry] API benötigen einen Accept-Header, damit das System festlegt, wie die Antwort formatiert werden soll. Im Folgenden finden Sie eine Liste häufiger Fehler im Zusammenhang mit der Accept-Kopfzeile. Listen kompatibler Accept-Header für verschiedene API-Anforderungen finden Sie in den entsprechenden Abschnitten im [Schema Registry Developer Guide](api/getting-started.md).
 
 #### Accept-Header-Parameter erforderlich
 
@@ -278,4 +278,4 @@ Eine Liste der unterstützten Accept-Kopfzeilen finden Sie im Abschnitt [Accept-
 }
 ```
 
-Wenn Sie versuchen, beim Auflisten von GET-Ressourcen eine Version in Ihren Accept-Header aufzunehmen, erhalten Sie diesen Fehler. Versionen sind nur erforderlich, wenn eine Suchanfrage für eine einzelne Ressource ausgeführt wird. Entfernen Sie die Version aus dem Accept-Header, um den Fehler zu beheben.
+Wenn Sie versuchen, beim Auflisten von Ressourcen (GET) eine Version in Ihren Accept-Header aufzunehmen, erhalten Sie diese Fehlermeldung. Versionen sind nur erforderlich, wenn eine Suchanfrage für eine einzelne Ressource ausgeführt wird. Entfernen Sie die Version aus dem Accept-Header, um den Fehler zu beheben.
