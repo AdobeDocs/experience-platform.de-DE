@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in der Adobe Experience 
 
 Wenn Ihre Daten außerhalb von gespeichert werden, führen Sie die folgenden Schritte aus [!DNL Experience Platform]:
 
-1. Wenden Sie sich an Adobe Consulting Services, um Zugangsdaten für einen dedizierten Container der Azurblase-Datenspeicherung anzufordern.
+1. Wenden Sie sich an Adobe Consulting Services, um Zugangsdaten für einen dedizierten Azurblase Datenspeicherung Container anzufordern.
 1. Laden Sie Ihre Daten mit Ihren Zugriffsberechtigungen in den Blob-Container hoch.
 1. Arbeiten Sie mit Adobe Consulting Services, um Ihre Daten dem [Consumer ExperienceEvent-Schema](#cee-schema) zuzuordnen und in Intelligent Services zu integrieren.
 
@@ -61,7 +61,7 @@ Die Verwendung aller Schlüsselfelder wird dringend empfohlen, es gibt jedoch zw
 
 * [Ein primäres Identitätsfeld](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:Kanal](#channel) (nur obligatorisch für Attribution AI)
+* [xdm:Kanal](#channel) (nur für Attribution AIS obligatorisch)
 
 #### Primär {#identity}
 
@@ -72,7 +72,7 @@ Sie müssen das beste Feld als primäre Identität basierend auf der Quelle und 
 * &quot;email&quot;
 * &quot;phone&quot;
 * &quot;mcid&quot;(für Adobe Audience Manager-IDs)
-* &quot;aaid&quot;(für Adobe Analytics IDs)
+* &quot;aaid&quot;(für Adobe Analytics-IDs)
 
 Wenn Sie sich nicht sicher sind, welches Feld Sie als primäre Identität verwenden sollten, wenden Sie sich an Adobe Consulting Services, um die beste Lösung zu finden.
 
@@ -80,7 +80,7 @@ Wenn Sie sich nicht sicher sind, welches Feld Sie als primäre Identität verwen
 
 Dieses Feld gibt den Zeitpunkt an, zu dem das Ereignis aufgetreten ist. Dieser Wert muss als Zeichenfolge gemäß ISO 8601 angegeben werden.
 
-#### xdm:Kanal {#channel}
+#### xdm:channel {#channel}
 
 >[!NOTE]
 >
@@ -107,16 +107,16 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:ch
 
 Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem `xdm:channel` Schema zugeordnet sind:
 
-| Channel | `@type` | `mediaType` | `mediaAction` |
+| Kanal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Paid Search | https:/<span>/ns.adobe.com/xdm/Kanal-types/search | bezahlt | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/Kanal-types/social | verdient | clicks |
 | Anzeigen | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | clicks |
-| E-Mail | https:/<span>/ns.adobe.com/xdm/Kanal-types/email | bezahlt | clicks |
+| E-Mail  | https:/<span>/ns.adobe.com/xdm/Kanal-types/email | bezahlt | clicks |
 | Interner Werber | https:/<span>/ns.adobe.com/xdm/Kanal-types/direct | besetzt | clicks |
 | Display ViewThrough | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | impressions |
 | QR-Codeumleitung | https:/<span>/ns.adobe.com/xdm/Kanal-types/direct | besetzt | clicks |
-| Mobil | https:/<span>/ns.adobe.com/xdm/Kanal-types/mobile | besetzt | clicks |
+| Mobile | https:/<span>/ns.adobe.com/xdm/Kanal-types/mobile | besetzt | clicks |
 
 ### Empfohlene Felder
 
@@ -241,7 +241,7 @@ Vollständige Informationen zu jedem der erforderlichen Unterfelder finden Sie `
 
 Sobald Sie festgestellt haben, ob Ihre Marketing-Ereignis-Daten dem CEE-Schema zugeordnet werden können, müssen Sie als Nächstes ermitteln, welche Daten Sie in Intelligent Services einführen möchten. Alle in Intelligent Services verwendeten Verlaufsdaten müssen innerhalb des Mindestzeitraums von vier Monaten an Daten liegen, zuzüglich der Anzahl der Tage, die als Lookback-Zeitraum gedacht sind.
 
-Nachdem Sie den zu sendenden Datenbereich festgelegt haben, wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und sie in den Dienst zu integrieren.
+Wenden Sie sich nach der Entscheidung über den zu sendenden Datenbereich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und sie in den Dienst zu integrieren.
 
 Wenn Sie ein [!DNL Adobe Experience Platform] Abonnement haben und die Daten selbst zuordnen und erfassen möchten, führen Sie die im folgenden Abschnitt beschriebenen Schritte aus.
 
@@ -249,7 +249,7 @@ Wenn Sie ein [!DNL Adobe Experience Platform] Abonnement haben und die Daten sel
 
 >[!NOTE]
 >
->Die folgenden Schritte erfordern ein Abonnement zur Experience Platform. Wenn Sie keinen Zugriff auf die Platform haben, fahren Sie mit den [nächsten Schritten](#next-steps) fort.
+>Die folgenden Schritte erfordern ein Abonnement zur Experience Platform. Wenn Sie keinen Zugriff auf die Plattform haben, fahren Sie mit dem Abschnitt [Nächste Schritte](#next-steps) fort.
 
 In diesem Abschnitt wird der Arbeitsablauf für die Zuordnung und Erfassung von Daten zur Experience Platform für die Verwendung in Intelligent Services beschrieben, einschließlich Links zu Schulungen für detaillierte Schritte.
 
@@ -271,7 +271,7 @@ Nachdem Sie das Schema erstellt und gespeichert haben, können Sie auf der Grund
 * [Erstellen Sie ein Dataset in der Benutzeroberfläche](../catalog/datasets/user-guide.md#create) (zum Verwenden eines vorhandenen Schemas im Workflow)
 * [Erstellen eines Datensatzes in der API](../catalog/datasets/create.md)
 
-Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche &quot;Platform&quot;im Arbeitsbereich &quot; *[!UICONTROL Datensätze]* &quot;finden.
+Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche &quot;Plattform&quot;im Arbeitsbereich &quot; *[!UICONTROL Datensätze]* &quot;finden.
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -339,11 +339,11 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in der Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+>Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten Datensatzes enthält. Diese ID sollte mit der in der PATCH-Anforderung gesendeten ID übereinstimmen.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten Datensatzes enthält. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen.
 
 ```json
 [
@@ -355,7 +355,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten 
 
 Nachdem Sie ein CEE-Schema und einen Dataset erstellt haben, können Sie Ihre Datentabellen dem Schema zuordnen und diese Daten in Platform erfassen. Anweisungen dazu, wie Sie dies in der Benutzeroberfläche durchführen, finden Sie im Lernprogramm zum [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md) . Nachdem ein Datensatz gefüllt wurde, kann derselbe Datensatz zum Erfassen zusätzlicher Datendateien verwendet werden.
 
-Wenn Ihre Daten in einer unterstützten Drittanbieteranwendung gespeichert werden, können Sie auch einen [Quellanschluss](../sources/home.md) erstellen, um Ihre Marketing-Ereignis-Daten in Echtzeit in die Platform zu übernehmen.
+Wenn Ihre Daten in einer unterstützten Drittanbieteranwendung gespeichert werden, können Sie auch einen [Quellanschluss](../sources/home.md) erstellen, um Ihre Marketing-Ereignis-Daten in Echtzeit in Platform zu erfassen.
 
 ## Nächste Schritte {#next-steps}
 
@@ -363,5 +363,5 @@ Dieses Dokument enthält allgemeine Anleitungen zum Vorbereiten Ihrer Daten für
 
 Nachdem Sie einen Datensatz mit Ihren Kundenerlebnisdaten gefüllt haben, können Sie mithilfe von Intelligent Services Erkenntnisse generieren. Die ersten Schritte finden Sie in den folgenden Dokumenten:
 
-* [Übersicht über die Zuordnungs-AI](./attribution-ai/overview.md)
+* [Übersicht über Attribution AIS](./attribution-ai/overview.md)
 * [Customer AI – Übersicht](./customer-ai/overview.md)
