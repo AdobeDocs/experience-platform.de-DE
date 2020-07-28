@@ -28,13 +28,13 @@ Die `identityMap` eines Vereinigungs-Schemas ist eine Darstellung der bekannten 
 
 Weitere Informationen finden Sie in der [Dokumentation für Identity Service](../../identity-service/home.md).
 
-### Zeitreihen-Ereignisse
+### Zeitreihenereignisse
 
 Das `timeSeriesEvents`-Array ist eine Liste von Ereignissen aus Zeitreihen, die sich auf die Schemas beziehen, die der Vereinigung zugeordnet sind. When [!DNL Profile] data is exported to datasets, this array is included for each record. Dies ist in verschiedenen Anwendungsfällen nützlich, z. B. beim Machine Learning, bei dem Modelle zusätzlich zu den Datensatzattributen den gesamten Verhaltensverlauf eines Profils benötigen.
 
-### Segment-Mitgliedschaftszuordnung
+### Segmentzugehörigkeitszuordnung
 
-Die `segmentMembership`-Zuordnung speichert die Ergebnisse der Segmentauswertungen. Wenn Segmentaufträge mit der [Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppensegmente, die in Platform integriert werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können.
+Die `segmentMembership`-Zuordnung speichert die Ergebnisse der Segmentauswertungen. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppensegmente, die in Platform integriert werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können.
 
 Weitere Informationen finden Sie im Tutorial zum [Erstellen von Segmenten mit APIs](../../segmentation/tutorials/create-a-segment.md).
 
@@ -141,7 +141,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein `results`-Array im Antworttext zurück. Wenn Vereinigungen definiert wurden, werden `title`, `$id`, `meta:altId`und `version` für jede Vereinigung als Objekte im Array bereitgestellt. Wenn keine Vereinigungen definiert wurden, wird dennoch der HTTP-Status 200 (OK) zurückgegeben, jedoch das `results`-Array ist leer.
+Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein `results`-Array im Antworttext zurück. Wenn Vereinigungen definiert wurden, werden `title`, `$id`, `meta:altId` und `version` für jede Vereinigung als Objekte im Array bereitgestellt. Wenn keine Vereinigungen definiert wurden, wird dennoch der HTTP-Status 200 (OK) zurückgegeben, jedoch das `results`-Array ist leer.
 
 ```JSON
 {
@@ -206,7 +206,7 @@ Die folgenden Accept-Kopfzeilen stehen für das Nachschlagen von Vereinigungs-Sc
 
 Eine erfolgreiche Antwort gibt die Vereinigungsansicht aller Schemas zurück, die die Klasse implementieren, deren `$id` im Anfragepfad bereitgestellt wurde.
 
-Das Antwortformat hängt von der Accept-Kopfzeile ab, die in der Anfrage gesendet wird. Experimentieren Sie mit verschiedenen Accept-Kopfzeilen, um die Antworten zu vergleichen und festzustellen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
+Das Antwortformat hängt von der Accept-Kopfzeile ab, die in der Anfrage gesendet wird. Experimentieren Sie mit verschiedenen Accept-Kopfzeilen, um die Antworten zu vergleichen und zu ermitteln, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```JSON
 {
@@ -279,7 +279,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine gefilterte Liste von Schemas zurück, die nur jene Schemas enthalten, die beide Anforderungen erfüllen. Denken Sie daran, dass bei der Verwendung mehrerer Abfrageparameter eine UND-Beziehung angenommen wird. Das Format der Antwort hängt von der Accept-Kopfzeile ab, die in der Anfrage gesendet wird.
+Eine erfolgreiche Antwort gibt eine gefilterte Liste von Schemas zurück, die nur jene Schemas enthalten, die beide Anforderungen erfüllen. Beachten Sie, dass bei Abfragen mit mehreren Parametern eine UND-Beziehung impliziert wird. Das Format der Antwort hängt von der Accept-Kopfzeile ab, die in der Anfrage gesendet wird.
 
 ```JSON
 {
