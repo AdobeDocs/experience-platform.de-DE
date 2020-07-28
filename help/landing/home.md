@@ -54,7 +54,7 @@ Die Benutzeroberfläche und Dokumentation der Adobe Experience Platform stehen i
 
 ### Sprachen der Benutzeroberfläche
 
-Die Benutzeroberfläche der Adobe Experience Platform ist aktuell in den folgenden Sprachen verfügbar:
+Die Benutzeroberfläche der Adobe Experience Platform ist derzeit in den folgenden Sprachen verfügbar:
 
 * englisch
 * Französisch
@@ -65,7 +65,7 @@ Die Standardsprache der Benutzeroberfläche wird durch die in Ihrem Profil angeg
 
 >[!NOTE]
 >
-> Die Auswahl einer Region bestimmt Sprache und Inhalt auf Adobe.com.
+> Die Auswahl eines Bereichs bestimmt Sprache und Inhalt auf Adobe.com.
 
 1. Klicken Sie in der Fußzeile der [!DNL Experience Platform] Benutzeroberfläche auf die aktuelle Sprache.
 2. Klicken Sie in den Einstellungen für Ihr Profil auf Region **[!UICONTROL ändern]**.
@@ -83,7 +83,7 @@ Die Adobe Experience Platform ist in mehreren Sprachen verfügbar. Klicken Sie z
 
 >[!NOTE]
 >
->Ab Mai 2020 stellt Adobe Updates für die Domäne und Kopfzeilenleiste bereit, um Ihre Erfahrung in allen Experience Cloud-Anwendungen zu vereinheitlichen und zu verbessern. Dazu gehört ein neues Hilfemenü. Das neue Hilfemenü umfasst Folgendes:
+>Ab Mai 2020 werden in der Adobe Aktualisierungen der Domäne und der Kopfzeilenleiste veröffentlicht, um Ihre Erfahrung in allen Experience Cloud-Anwendungen zu vereinheitlichen und zu verbessern. Dazu gehört ein neues Hilfemenü. Das neue Hilfemenü umfasst Folgendes:
 >
 >* Links zu Artikeln mit besonderen Merkmalen
 >* Kontextrelevante Dokumentationsempfehlungen
@@ -126,7 +126,7 @@ Ein kurzer Überblick über die [!DNL Experience Platform's] Benutzeroberfläche
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Einer der wichtigsten Vorteile von Adobe Experience Platform ist die Integration mit anderen bestehenden Adobe-Diensten. Das folgende Video gibt einen Überblick darüber, wie [!DNL Experience Platform] Dienste in [!DNL Experience Cloud] Anwendungen und Funktionen wie Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager [!DNL Customer Attributes]und [!DNL Audience Library][!DNL Experience Platform Launch].
+Einer der Hauptvorteile der Adobe Experience Platform besteht darin, dass sie in andere bestehende Adoben integriert werden kann. Das folgende Video gibt einen Überblick darüber, wie [!DNL Experience Platform] Dienste mit [!DNL Experience Cloud] Anwendungen und Funktionen wie Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes][!DNL Audience Library]und [!DNL Experience Platform Launch].
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
