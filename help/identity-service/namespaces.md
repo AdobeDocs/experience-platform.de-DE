@@ -7,75 +7,75 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 1%
+ht-degree: 74%
 
 ---
 
 
-# Übersicht über Identitäts-Namensraum
+# Übersicht über Identitäts-Namespaces
 
-Identitäts-Namensraum sind Bestandteile, [!DNL Identity Service](./home.md) die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert &quot;name<span>@email.com&quot;als E-Mail-Adresse oder &quot;443522&quot;als numerische CRM-ID.
+Identitäts-Namespaces sind eine Komponente des [!DNL Identity Service](./home.md), die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRM-ID.
 
 ## Erste Schritte
 
-Die Zusammenarbeit mit Identitäts-Namensräumen erfordert ein Verständnis der verschiedenen beteiligten Adobe Experience Platformen. Bevor Sie mit der Arbeit mit Namensräumen beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Das Verwenden von Identitäts-Namespaces setzt ein Verständnis der verschiedenen beteiligten Adobe Experience Platform-Dienste voraus. Bevor Sie Namespaces nutzen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [!DNL Identity Service](./home.md): Profitieren Sie von einer besseren Ansicht einzelner Kunden und deren Verhalten, indem Sie Identitäten zwischen Geräten und Systemen überbrücken.
-- [!DNL Privacy Service](../privacy-service/home.md): Identitäts-Namensraum werden zur Einhaltung der Allgemeinen Datenschutzverordnung (GDPR) verwendet, in der GDPR-Anfragen für einen Namensraum gestellt werden können.
+- [!DNL Identity Service](./home.md): Sorgt für eine bessere Darstellung einzelner Kunden und deren Verhalten, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+- [!DNL Privacy Service](../privacy-service/home.md): Identitäts-Namespaces werden zur Einhaltung der Datenschutz-Grundverordnung (DSGVO) verwendet, laut der DSGVO-Anfragen für einen Namespace gestellt werden können.
 
-## Identitäts-Namensräume
+## Identitäts-Namespaces verstehen
 
-Eine voll qualifizierte Identität umfasst einen ID-Wert und einen Namensraum. Bei der Zuordnung von Datensatzdaten zu Profil-Fragmenten, z. B. beim [!DNL Real-time Customer Profile] Zusammenführen von Profil-Daten, müssen sowohl der Identitätswert als auch der Namensraum übereinstimmen.
+Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
-Zwei Profil-Fragmente können z. B. unterschiedliche primäre IDs enthalten, für den Namensraum &quot;E-Mail&quot;jedoch denselben Wert verwenden. Daher kann die Platform erkennen, dass diese Fragmente eigentlich dieselbe Person sind und die Daten im Identitätsdiagramm für die Einzelperson zusammenführen.
+Zwei Profilfragmente können z. B. unterschiedliche primäre Kennungen enthalten, für den Namespace „E-Mail“ jedoch denselben Wert nutzen. So kann Platform erkennen, dass die Fragmente in Wahrheit zur gleichen Person gehören und die Daten im Identitätsdiagramm für diese Person zusammenführen.
 
 ![](images/identity-service-stitching.png)
 
 ### Identitätstypen
 
-Daten können mit verschiedenen Identitätstypen identifiziert werden. Der Identitätstyp wird zum Zeitpunkt der Erstellung des Identitäts-Namensraums angegeben und steuert, ob die Daten im Identitätsdiagramm beibehalten werden, sowie spezielle Anleitungen zum Umgang mit diesen Daten.
+Daten können anhand verschiedener Identitätstypen identifiziert werden. Der Identitätstyp wird zum Zeitpunkt der Erstellung des Identitäts-Namespace angegeben und steuert, ob die Daten im Identitätsdiagramm persistiert werden oder nicht. Außerdem gibt es spezielle Anweisungen zum Umgang mit diesen Daten.
 
-Die folgenden Identitätstypen sind innerhalb [!DNL Platform]von verfügbar:
+The following identity types are available within [!DNL Platform]:
 
 | Identitätstyp | Beschreibung |
 | --- | --- |
-| Cookie | Diese Identitäten sind für die Erweiterung von entscheidender Bedeutung und bilden den Großteil des Identitätsdiagramms. Sie verfallen jedoch naturgemäß schnell und verlieren mit der Zeit ihren Wert. Das Löschen von Cookies wird speziell im Identitätsdiagramm behandelt. |
-| Geräteübergreifend | Dies deutet darauf hin, dass dies als eine starke Personennummer betrachtet werden [!DNL Identity Service] sollte und daher für immer erhalten bleiben sollte. Beispiele sind eine Anmelde-ID, CRM-ID, Loyalität-ID usw. |
-| Gerät | Umfasst IDFA-, GAID- und andere IOT-IDs. Diese können auch von Menschen in Haushalten geteilt werden. |
-| E-Mail | Identitäten dieser Art beinhalten persönlich identifizierbare Informationen (PII). Dies ist ein Hinweis [!DNL Identity Service] auf eine sinnvolle Handhabung des Wertes. |
-| Mobil | Zu diesen Identitäten gehören PII. Dies ist ein Hinweis [!DNL Identity Service] auf eine sinnvolle Handhabung des Wertes. |
-| Nichtpersonen | Dient zum Speichern von Identifikatoren, die Namensraum benötigen, aber nicht an einen Personenzusammenschnitt gebunden sind. Diese Bezeichner werden dann aus dem Identitätsdiagramm gefiltert. Mögliche Anwendungsfälle sind Daten zu Produkten, Organisationen, Geschäften usw. (Zum Beispiel eine Produkt-SKU.) |
-| Telefon | Zu diesen Identitäten gehören PII. Dies ist ein Hinweis [!DNL Identity Service] auf eine sinnvolle Handhabung des Werts. |
+| Cookie | Diese Identitäten sind für Erweiterungen von entscheidender Bedeutung und bilden den Großteil des Identitätsdiagramms. Sie verfallen jedoch naturgemäß schnell und verlieren mit der Zeit ihren Wert. Das Löschen von Cookies wird im Identitätsdiagramm speziell behandelt. |
+| Geräteübergreifend | This indicates that [!DNL Identity Service] should consider this to be a strong people identifier and hence preserve it forever. Beispiele dafür sind eine Anmelde-ID, CRM-ID, Loyalitäts-ID usw. |
+| Gerät | Umfasst IDFA-, GAID- und andere IOT-IDs. Diese können von Menschen in einem Haushalt auch geteilt werden. |
+| E-Mail | Identitäten dieser Art beinhalten personenbezogene Daten (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively. |
+| Mobile | Identitäten dieser Art umfassen PII. This is an indication to [!DNL Identity Service] to handle the value sensitively. |
+| Nichtpersonen | Dient zum Speichern von Kennungen, die Namespaces benötigen, aber nicht an einen Personen-Cluster gebunden sind. Diese Kennungen werden dann aus dem Identitätsdiagramm herausgefiltert. Mögliche Anwendungsfälle sind Daten zu Produkten, Organisationen, Geschäften usw. (Zum Beispiel eine Produkt-SKU.) |
+| Telefon | Identitäten dieser Art umfassen PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
-### Standard-Namensraum
+### Standard-Namespaces
 
-Adobe Experience Platform bietet mehrere Identitäts-Namensraum, die für alle Unternehmen verfügbar sind. Diese werden als Standard-Namensraum bezeichnet und sind über die [!DNL Identity Service] API oder die [!DNL Platform] Benutzeroberfläche sichtbar.
+Adobe Experience Platform bietet verschiedene Identitäts-Namespaces, die für alle Organisationen verfügbar sind. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-Klicken Sie auf der linken Leiste auf &quot; **[!UICONTROL Identitäten]** &quot;und dann auf die Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;, um die Namensraum &quot;Ansicht Standard&quot;in der Benutzeroberfläche aufzurufen. Alle Identitätskennungen, auf die Ihr Unternehmen zugreifen kann, werden angezeigt. Bei Namensräumen mit &quot;[!UICONTROL Standard]&quot;als &quot;[!UICONTROL Inhaber]&quot;handelt es sich jedoch um die von Adobe bereitgestellten Standard-Namensraum.
+Klicken Sie in der linken Leiste auf **[!UICONTROL Identitäten]** und dann auf den Tab *[!UICONTROL Durchsuchen]*, um in der Benutzeroberfläche die Standard-Namespaces anzuzeigen. All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
 
-Sie können dann auf einen der Namensraum klicken, die in den Details zur Ansicht aufgeführt sind.
+Sie können dann auf einen der aufgeführten Namespaces klicken, um Details anzuzeigen.
 
 ![](./images/standard-namespace-detail.png)
 
-## Verwalten von Namensräumen in Ihrer Organisation
+## Verwalten von Namespaces für Ihre Organisation
 
-Je nach Ihren Organisationsdaten und Anwendungsfällen benötigen Sie möglicherweise benutzerdefinierte Namensraum.
+Je nach den Daten und Anwendungsfällen in Ihrer Organisation benötigen Sie möglicherweise benutzerdefinierte Namespaces.
 
-Diese werden in der Benutzeroberfläche als Namensraum mit &quot;[!UICONTROL Benutzerdefiniert]&quot;als &quot;[!UICONTROL Inhaber]&quot;angezeigt. Benutzerspezifische Namensraum können mit der [!DNL Identity Service] API oder über die Benutzeroberfläche erstellt werden.
+These are visible in the UI as those namespaces with &quot;[!UICONTROL Custom]&quot; as the &quot;[!UICONTROL Owner]&quot;. Custom namespaces can be created using the [!DNL Identity Service] API or through the user interface.
 
-Um einen benutzerspezifischen Namensraum mithilfe der Benutzeroberfläche zu erstellen, klicken Sie auf **[!UICONTROL Identitäts-Namensraum]** erstellen, füllen Sie das Dialogfeld aus und klicken Sie auf **[!UICONTROL Erstellen]**.
+Um mithilfe der Benutzeroberfläche einen benutzerdefinierten Namespace zu erstellen, klicken Sie auf **[!UICONTROL Identitäts-Namespace erstellen]**, füllen Sie das Dialogfeld aus und klicken Sie auf **[!UICONTROL Erstellen]**.
 
-Namensraum, die Sie definieren, sind für Ihr Unternehmen privat und benötigen ein eindeutiges &quot;[!UICONTROL Identitätssymbol]&quot;(oder &quot;Code&quot;, wenn Sie die API verwenden), um erfolgreich erstellt zu werden.
+Namespaces that you define are private to your organization and require a unique &quot;[!UICONTROL Identity Symbol]&quot; (or &quot;code&quot; if you are using the API) in order to be created successfully.
 
 ![](./images/create-identity-namespace.png)
 
-Ähnlich wie bei Standard-Namensräumen können Sie auf einen benutzerspezifischen Namensraum auf der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;klicken, um dessen Details Ansicht. Bei einem benutzerspezifischen Namensraum können Sie jedoch auch dessen Anzeigenamen und -beschreibung im Detailbereich bearbeiten.
+Ähnlich wie bei Standard-Namespaces können Sie über den Tab *[!UICONTROL Durchsuchen]* auf einen benutzerdefinierten Namespace klicken, um dessen Details anzuzeigen. Bei einem benutzerdefinierten Namespace können Sie im Detailbereich jedoch auch dessen Anzeigenamen und die Beschreibung bearbeiten.
 
 >[!NOTE]
 >
->Nachdem ein Namensraum erstellt wurde, kann er nicht gelöscht werden und sein &quot;Identitätssymbol&quot;(oder &quot;Code&quot; in der API) und &quot;Typ&quot; können nicht mehr geändert werden.
+>Nachdem ein Namespace erstellt wurde, kann er nicht mehr gelöscht werden; außerdem lassen sich sein „Identitätssymbol“ (oder „Code“ in der API) und „Typ“ nicht mehr ändern.
 
-## Namensraum in Identitätsdaten
+## Namespaces in Identitätsdaten
 
-Die Angabe des Namensraums für eine Identität hängt von der Methode ab, mit der Sie Identitätsdaten bereitstellen. Einzelheiten zur Bereitstellung von Daten zur Identität finden Sie im Abschnitt zur [Bereitstellung von Identitätsdaten](./home.md#supplying-identity-data-to-identity-service) in der [!DNL Identity Service] Übersicht.
+Die Angabe des Namespace für eine Identität hängt von der Methode ab, mit der Sie Identitätsdaten bereitstellen. Einzelheiten zur Bereitstellung von Identitätsdaten finden Sie im Abschnitt zum [Bereitstellen von Identitätsdaten](./home.md#supplying-identity-data-to-identity-service) in der Übersicht über den [!DNL Identity Service]
