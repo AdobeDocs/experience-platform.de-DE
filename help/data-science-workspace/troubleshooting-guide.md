@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;troubleshooting;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Data Science Workspace - Anleitung zur Fehlerbehebung
+title: Data Science Workspace – Handbuch zur Fehlerbehebung
 topic: Troubleshooting
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] Handbuch zur Fehlerbehebung
 
-Dieses Dokument beantwortet häufig gestellte Fragen zur Adobe Experience Platform [!DNL Data Science Workspace]. Fragen und Fehlerbehebung zu [!DNL Platform] APIs im Allgemeinen finden Sie im Handbuch zur Fehlerbehebung bei der [Adobe Experience Platform-APIs](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Science Workspace]. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
 ## [!DNL JupyterLab] Umgebung wird nicht geladen in [!DNL Google Chrome]
 
@@ -42,7 +42,7 @@ Schalten Sie schließlich &quot;Drittanbieter-Cookies blockieren&quot;auf &quot;
 
 >[!NOTE]
 >
->Alternativ können Sie Drittanbieter-Cookies deaktivieren und [* hinzufügen.]ds.adobe.net zum zulassungsliste.
+>Alternativ können Sie Drittanbieter-Cookies deaktivieren und [* hinzufügen.]ds.adobe.net zur Zulassungsliste hinzugefügt.
 
 Navigieren Sie in Ihrer Adressleiste zu &quot;chrome://flags/&quot;. Suchen und deaktivieren Sie das Flag *&quot;SameSite by default cookies&quot;* über das Dropdown-Menü rechts.
 
@@ -88,7 +88,7 @@ Eine vollständige Liste der vorinstallierten [!DNL Python] Bibliotheken finden 
 
 ## Kann ich benutzerdefinierte PySpark-Bibliotheken installieren?
 
-Leider können Sie keine zusätzlichen Bibliotheken für den PySpark-Kernel installieren. Sie können sich jedoch an Ihren Adobe-Kundendienstmitarbeiter wenden, um benutzerdefinierte PySpark-Bibliotheken für Sie zu installieren.
+Leider können Sie keine zusätzlichen Bibliotheken für den PySpark-Kernel installieren. Sie können sich jedoch an Ihren Kundenbetreuer wenden, um benutzerdefinierte PySpark-Bibliotheken für Sie zu installieren.
 
 Eine Liste vorinstallierter PySpark-Bibliotheken finden Sie im [Anhang des JupyterLab-Benutzerhandbuchs](./jupyterlab/overview.md#supported-libraries).
 
