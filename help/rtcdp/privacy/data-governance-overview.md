@@ -18,13 +18,13 @@ ht-degree: 56%
 
 Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. Data Governance spielt in der Echtzeit-Kundendatenplattform eine zentrale Rolle und erlaubt es Ihnen, Nutzungsrichtlinien zu definieren, Daten anhand dieser Richtlinien zu kategorisieren und bei Ausführung bestimmter Marketing-Aktionen auf Richtlinienverletzungen zu prüfen.
 
-Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of [!DNL Data Governance] capabilities are covered in the [!DNL Experience Platform] documentation. Dieses Dokument dient als Ergänzung zu [Data Governance – Übersicht](../../data-governance/home.md) für und bietet Informationen zu den Governance-Funktionen, die in der Echtzeit-Kundendatenplattform verfügbar sind. [!DNL Experience Platform] Folgende Themen werden behandelt:
+Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of [!DNL Data Governance] capabilities are covered in the [!DNL Experience Platform] documentation. Dieses Dokument dient als Ergänzung zu [Data Governance – Übersicht](../../data-governance/home.md) für und bietet Informationen zu den Governance-Funktionen, die in der Echtzeit-Kundendatenplattform verfügbar sind.[!DNL Experience Platform] Folgende Themen werden behandelt:
 
 * [Nutzungsbezeichnungen auf Daten anwenden](#labels)
 * [Richtlinien zur Datennutzung verwalten](#policies)
 * [Einhaltung von Datennutzungsrichtlinien durchsetzen](#enforce-data-usage-compliance)
 
-## Nutzungsbezeichnungen auf Daten anwenden {#labels}
+## Nutzungsbezeichnungen auf Daten anwenden  {#labels}
 
 [!DNL Data Governance]Mit können Sie Nutzungsbezeichnungen auf Ihre Daten anwenden, entweder auf der Datensatz- oder der Datensatzfeldebene. Mit Datennutzungsbezeichnungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren.
 
@@ -69,7 +69,7 @@ When a segment is first activated, DULE [!DNL Policy Service] checks for policy 
 >* Die Felder sind als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
 
 
-### Meldungen zu Richtlinienverstößen {#enforcement}
+### Meldungen zu Richtlinienverstößen  {#enforcement}
 
 Wenn ein Richtlinienverstoß beim Versuch auftritt, ein Segment zu aktivieren (oder [ein bereits aktiviertes Segment zu bearbeiten](#policy-enforcement-for-activated-segments)), wird die Aktion verhindert und in einem Popup angezeigt, dass gegen eine oder mehrere Richtlinien verstoßen wurden. Wählen Sie einen Richtlinienverstoß in der linken Spalte des Popups aus, um Details zu diesem Verstoß anzuzeigen.
 
@@ -83,7 +83,7 @@ Klicken Sie auf **[!UICONTROL Datenherkunft]**, um die Ziele, Segmente, Zusammen
 
 Nachdem ein Verstoß ausgelöst wurde, wird die Schaltfläche **[!UICONTROL Speichern]** für die Aktivierung deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden, um den Datennutzungsrichtlinien zu entsprechen.
 
-### Richtliniendurchsetzung für aktivierte Segmente {#policy-enforcement-for-activated-segments}
+### Richtliniendurchsetzung für aktivierte Segmente  {#policy-enforcement-for-activated-segments}
 
 Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einem Richtlinienverstoß führen würden. Aufgrund der zahlreichen Komponenten, die beim Aktivieren von Segmenten zu Zielen beteiligt sind, kann eine der folgenden Aktionen möglicherweise einen Verstoß auslösen:
 
