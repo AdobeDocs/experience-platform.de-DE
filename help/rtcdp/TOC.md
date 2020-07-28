@@ -43,7 +43,7 @@ ht-degree: 89%
          * [Branch-Erweiterung](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight-Erweiterung](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
          * [Facebook-Pixel-Erweiterung](/help/rtcdp/destinations/facebook-pixel-extension.md)
-         * [Flashtalking OneTag-Erweiterung](/help/rtcdp/destinations/flashtalking-extension.md)
+         * [Flashspeak OneTag-Erweiterung](/help/rtcdp/destinations/flashtalking-extension.md)
          * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
          * [Google Ads-Erweiterung](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
@@ -76,7 +76,7 @@ ht-degree: 89%
       * Cloud-Speicher-Ziele {#cloud-storage}
          * [Übersicht über die Cloud-Speicher-Ziele](destinations/cloud-storage-destinations.md)
          * [Workflow zum Erstellen von Cloud-Speicher-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
-         * [Amazon-Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+         * [Amazon Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3-Ziel](destinations/amazon-s3-destination.md)
          * [Azurblauer Ereignis Hubs Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP-Ziel](destinations/sftp-destination.md)
@@ -93,7 +93,7 @@ ht-degree: 89%
          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
          * [PebblePost-Erweiterung](destinations/pebblepost-extension.md)
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
-      * Experience Platform Launch-Erweiterungen{#launch-extensions}
+      * Experience Platform Launch-Erweiterungen {#launch-extensions}
          * [Experience Platform Launch-Erweiterungen – Übersicht](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * Personalisierungsziele {#personalization-destinations}
          * [Personalisierungsziele – Übersicht](/help/rtcdp/destinations/personalization-destinations.md)
@@ -105,7 +105,7 @@ ht-degree: 89%
          * [Gainsight-Erweiterung](/help/rtcdp/destinations/gainsight-extension.md)
          * [Kickfire-Erweiterung](/help/rtcdp/destinations/kickfire-extension.md)
          * [Marketo Web Personalization-Erweiterung](destinations/marketo-web-personalization-extension.md)
-      * Ziele in sozialen Netzwerken{#social-destinations}
+      * Ziele in sozialen Netzwerken {#social-destinations}
          * [Ziele in sozialen Netzwerken – Übersicht](/help/rtcdp/destinations/social-network-destinations.md)
          * [Authentifizierungs-Workflow für Ziele in sozialen Netzwerken](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre-Erweiterung](/help/rtcdp/destinations/adobe-livefyre-extension.md)
@@ -115,7 +115,7 @@ ht-degree: 89%
          * [Foresee-Erweiterung](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment-Erweiterung](/help/rtcdp/destinations/inmoment-extension.md)
          * [Qualtrics Website Feedback-Erweiterung](destinations/qualtrics-extension.md)
-         * [Web Intercept Surveys – QuestionPro-Erweiterung](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
+         * [QuestionPro Web Intercept Surveys-Erweiterung](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
       * Sprache der Kundenziele {#voice-of-customer-destinations}
          * [Sprache der Kundenziele – Übersicht](/help/rtcdp/destinations/voice-of-customer-destinations.md)
          * [Confirmit Digital Feedback-Erweiterung](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)
@@ -126,7 +126,7 @@ ht-degree: 89%
       * [Mit Ziel verbinden](/help/rtcdp/destinations/connect-destination.md)
       * [Profile und Segmente für ein Ziel aktivieren](destinations/activate-destinations.md)
    * Ziel-API-Lernprogramme {#api-tutorials}
-      * [Verbindung zu Streaming-Zielen (AWS Kinesis und Azurblase Ereignis Hubs) und Aktivierung von Daten](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Verbindung zu Streaming-Zielen (AWS Kinesis und Azurblauer Ereignis Hubs) und Aktivierung von Daten](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [Verbindungen zu E-Mail-Marketingzielen herstellen und Daten aktivieren](/help/tutorials/destinations/email-marketing-api.md)
 * Datenschutz und Data Governance {#privacy}
    * [Datenschutz – Übersicht](privacy/privacy-overview.md)
@@ -143,4 +143,4 @@ ht-degree: 89%
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Website-Tags mit Adobe Launch implementieren](sources/launch.md)
 * [Versionshinweise zur Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
-* [Experience Platform Glossar](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.translate.html)
+* [Experience Platform Glossar](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
