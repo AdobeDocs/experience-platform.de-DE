@@ -44,7 +44,7 @@ Informationen zum XDM-System im Allgemeinen finden Sie in der [Übersicht über 
 
 When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for **batch** files. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. [!DNL Catalog] verfolgt die Metadaten für diese Stapeldateien sowie die Datensätze, in denen sie nach der Erfassung beibehalten werden. Batch-Metadaten umfassen Informationen zur Anzahl der erfolgreich aufgenommenen Datensätze sowie zu fehlgeschlagenen Datensätzen und zugehörige Fehlermeldungen.
 
-Weitere Informationen finden Sie in der [Übersicht über die Datenaufnahme](../ingestion/home.md).
+Weitere Informationen finden Sie in der [Datenerfassung – Übersicht](../ingestion/home.md).
 
 ## [!DNL Catalog] Objekte
 
@@ -63,4 +63,4 @@ The following table outlines the different object types supported by [!DNL Catal
 
 ## Nächste Schritte
 
-This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. Die einzelnen Schritte für die Interaktion mit den verschiedenen Endpunkten der zugehörigen Service API finden Sie im [Katalog-Service-Entwicklerhandbuch](api/getting-started.md). [!DNL Catalog] Es wird empfohlen, auch das Handbuch zum Thema [Filtern von Katalogdaten](api/filter-data.md) durchzugehen, da darin Best Practices für die Beschränkung der in API-Antworten zurückgegebenen Daten erläutert werden.
+This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. Die einzelnen Schritte für die Interaktion mit den verschiedenen Endpunkten der zugehörigen Service API finden Sie im [Katalog-Service-Entwicklerhandbuch](api/getting-started.md).[!DNL Catalog] Es wird empfohlen, auch das Handbuch zum Thema [Filtern von Katalogdaten](api/filter-data.md) durchzugehen, da darin Best Practices für die Beschränkung der in API-Antworten zurückgegebenen Daten erläutert werden.
