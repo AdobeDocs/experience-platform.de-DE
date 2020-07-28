@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
-ht-degree: 0%
+ht-degree: 22%
 
 ---
 
@@ -38,11 +38,11 @@ Standardmäßig funktioniert Tensorflow-Rezeptur in einem GPU-Cluster und Python
 
 ### Erstellen eines neuen Notebooks
 
-Klicken Sie in der [!DNL Adobe Experience Platform] Benutzeroberfläche auf die Registerkarte &quot;Datenwissenschaft&quot;im oberen Menü, um zum Data Science Workspace zu gelangen. Klicken Sie auf dieser Seite auf die [!DNL JupyterLab] Registerkarte, die den [!DNL JupyterLab] Starter öffnet. Sie sollten eine ähnliche Seite sehen.
+In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. Sie sollten eine Seite sehen, die der folgenden ähnelt.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
-In unserem Tutorial verwenden wir [!DNL Python] 3 im Jupyter-Notebook, um zu zeigen, wie Sie auf die Daten zugreifen und sie untersuchen können. Auf der Startseite stehen Beispielnotizen zur Verfügung. Wir werden das Retail Sales Rezept für [!DNL Python] 3 verwenden.
+In our tutorial, we will be using [!DNL Python] 3 in the Jupyter Notebook to show how to access and explore the data. Auf der Startseite stehen Beispielnotizen zur Verfügung. We will be using the Retail Sales recipe for [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -52,21 +52,21 @@ Das Rezept für den Einzelhandel ist ein eigenständiges Beispiel, das mit demse
 
 >[!NOTE]
 >
->Das `data_access_sdk_python` wird nicht mehr unterstützt und nicht mehr empfohlen. Informationen zum Konvertieren von Code finden Sie im Tutorial zum [Konvertieren von Datenzugriff-SDK](../authoring/platform-sdk.md) in Platform. Für dieses Lernprogramm gelten weiterhin die folgenden Schritte.
+>Das `data_access_sdk_python` wird nicht mehr unterstützt und nicht mehr empfohlen. Informationen zum Konvertieren Ihres Codes finden Sie im Tutorial zum [Konvertieren von Datenzugriffs-SDK in Platform SDK](../authoring/platform-sdk.md) . Für dieses Lernprogramm gelten weiterhin die folgenden Schritte.
 
 Wir gehen weiter auf Daten intern von [!DNL Adobe Experience Platform] und Daten extern zugreifen. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die Pandas- [!DNL Python] Bibliothek.
 
 #### Externe Daten
 
-Wenn das Notebook für den Einzelhandel geöffnet ist, finden Sie die Kopfzeile &quot;Daten laden&quot;. Der folgende [!DNL Python] Code verwendet die `DataFrame` Datenstruktur des Pandas und die Funktion [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) , um das auf dem DataFrame gehostete CSV zu lesen [!DNL Github] :
+Wenn das Notebook für den Einzelhandel geöffnet ist, finden Sie die Kopfzeile &quot;Daten laden&quot;. The following [!DNL Python] code uses pandas&#39; `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the DataFrame:
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
-Die DataFrame-Datenstruktur von Pandas ist eine zweidimensionale beschriftete Datenstruktur. Um die Dimensionen unserer Daten schnell zu sehen, können wir die verwenden `df.shape`. Dadurch wird ein Tupel zurückgegeben, das die Dimensionalität des DataFrame darstellt:
+Die DataFrame-Datenstruktur von Pandas ist eine zweidimensionale beschriftete Datenstruktur. To quickly see the dimensions of our data, we can use the `df.shape`. Dadurch wird ein Tupel zurückgegeben, das die Dimensionalität des DataFrame darstellt:
 
 ![](../images/jupyterlab/analyze-data/df_shape.png)
 
-Schließlich können wir einen Blick darauf werfen, wie unsere Daten aussehen. Wir können die ersten `df.head(n)` Zeilen des DataFrame `n` zur Ansicht verwenden:
+Schließlich können wir einen Blick darauf werfen, wie unsere Daten aussehen. Wir können `df.head(n)` nutzen, um die ersten `n` Zeilen des DataFrame anzuzeigen:
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
@@ -126,7 +126,7 @@ Da wir nun auf Ihre Daten zugreifen können, konzentrieren wir uns auf die Daten
 
 #### Statistische Zusammenfassung
 
-Wir können die [!DNL Python's] Pandas-Bibliothek nutzen, um den Datentyp jedes Attributs zu erhalten. Die Ausgabe des folgenden Aufrufs gibt uns Informationen über die Anzahl der Einträge und den Datentyp für jede der Spalten:
+We can leverage [!DNL Python's] pandas library to get the data type of each attribute. Die Ausgabe des folgenden Aufrufs liefert uns Informationen über die Anzahl der Einträge und den Datentyp für die einzelnen Spalten:
 
 ```PYTHON
 df.info()
@@ -134,9 +134,9 @@ df.info()
 
 ![](../images/jupyterlab/analyze-data/df_info.png)
 
-Diese Informationen sind nützlich, da wir durch Kenntnis des Datentyps für jede Spalte wissen können, wie die Daten zu behandeln sind.
+Diese Informationen sind hilfreich, da wir durch Kenntnis des Datentyps der einzelnen Spalten wissen, wie die Daten zu behandeln sind.
 
-Schauen wir uns nun die statistische Zusammenfassung an. Nur die numerischen Datentypen werden angezeigt, also `date`, `storeType`und `isHoliday` werden nicht ausgegeben:
+Sehen wir uns nun die statistische Zusammenfassung an. Only the numeric data types will be shown, so `date`, `storeType`, and `isHoliday` will not be outputted:
 
 ```PYTHON
 df.describe()
@@ -144,19 +144,19 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_describe.png)
 
-Damit können wir sehen, dass für jedes Merkmal 6435 Instanzen vorhanden sind. Außerdem werden statistische Daten wie Mittelwert, Standardabweichung (std), Min., Max. und Interquartilen angegeben. Dies gibt uns Informationen über die Abweichung für die Daten. Im nächsten Abschnitt werden wir über Visualisierung gehen, die mit diesen Informationen zusammenarbeitet, um uns ein gutes Verständnis unserer Daten zu verschaffen.
+Damit können wir sehen, dass für jedes Merkmal 6.435 Instanzen vorhanden sind. Außerdem werden statistische Daten wie Mittelwert, Standardabweichung (std), Min., Max. und Interquartilen angegeben. So erfahren wir mehr über die Abweichung der Daten. Im nächsten Abschnitt werden wir über Visualisierung gehen, die mit diesen Informationen zusammenarbeitet, um uns ein gutes Verständnis unserer Daten zu verschaffen.
 
-Wenn wir uns die Mindest- und Höchstwerte ansehen, `store`können wir feststellen, dass 45 verschiedene Datenspeicher vorhanden sind. Es gibt auch `storeTypes` welche unterscheiden, was ein Laden ist. Wir können die Verteilung sehen, `storeTypes` indem wir Folgendes tun:
+Wenn wir uns die Mindest- und Maximalwerte für `store` ansehen, können wir feststellen, dass die Daten 45 verschiedene Geschäfte repräsentieren. Es gibt auch `storeTypes`, die unterscheiden, was ein Geschäft ist. Außerdem können wir die Verteilung von `storeTypes` anzeigen, indem wir Folgendes tun:
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-Das bedeutet, dass 22 Läden sind von `storeType` , `A`17 sind `storeType` und 6 sind `B``storeType` `C`.
+This means 22 stores are of `storeType` `A`, 17 are `storeType` `B`, and 6 are `storeType` `C`.
 
 #### Datenvisualisierung
 
-Jetzt, da wir unsere Datenrahmenwerte kennen, möchten wir dies durch Visualisierungen ergänzen, um die Dinge klarer zu gestalten und Muster leichter zu identifizieren. Diagramme sind auch nützlich, wenn Ergebnisse an eine Audience übermittelt werden. Einige [!DNL Python] Bibliotheken, die für die Visualisierung nützlich sind, sind:
+Da wir unsere Dataframe-Werte nun kennen, möchten wir sie um Visualisierungen ergänzen, damit sich Muster leichter erkennen lassen. Diagramme sind auch nützlich, wenn Ergebnisse an eine Audience übermittelt werden. Einige [!DNL Python] Bibliotheken, die für die Visualisierung nützlich sind, sind:
 - [Matplotlib](https://matplotlib.org/)
-- [Pandas](https://pandas.pydata.org/)
+- [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
 - [ggplot](https://ggplot2.tidyverse.org/)
 
@@ -171,25 +171,25 @@ In diesem Abschnitt werden wir schnell über einige Vorteile für die Verwendung
 [ggplot](https://ggplot2.tidyverse.org/) ist ein Paket auch auf matplotlib gebaut. Der Hauptunterschied ist jedoch, dass das Tool ein Port von ggplot2 für R ist. Ähnlich wie beim Seeschleppen besteht das Ziel darin, sich bei matplotlib zu verbessern. Benutzer, die mit &quot;ggplot2 for R&quot;vertraut sind, sollten diese Bibliothek in Betracht ziehen.
 
 
-##### Einheitliche Diagramme
+##### Eindimensionale Diagramme
 
-Univariate-Diagramme sind Diagramme einer einzelnen Variablen. Ein gemeinsames univariatives Diagramm wird verwendet, um Ihre Daten zu visualisieren ist die Box und Whisker-Plot.
+Eindimensionale Diagramme sind Diagramme mit einer einzelnen Variablen. Ein gemeinsames univariatives Diagramm wird verwendet, um Ihre Daten zu visualisieren ist die Box und Whisker-Plot.
 
-Mit unserem Retail-Datensatz von vorher können wir die Box und Whisker-Plot für jeden der 45 Läden und ihre wöchentlichen Verkäufe generieren. Der Plot wird mithilfe der `seaborn.boxplot` Funktion generiert.
+Mit unserem Datensatz für Einzelhandelsumsätze von oben können wir ein Box- und Whisker-Diagramm für jedes der 45 Geschäfte und ihre wöchentlichen Umsätze generieren. Das Diagramm wird mithilfe der `seaborn.boxplot`-Funktion erstellt.
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
-Eine Box- und Whisker-Plot wird verwendet, um die Verteilung der Daten anzuzeigen. Die äußeren Linien des Grundstücks zeigen den oberen und unteren Quartil, während der Rahmen den interquartilen Bereich umfasst. Die Linie im Feld markiert den Median. Alle Datenpunkte, die mehr als das 1,5-fache des oberen oder unteren Quartil betragen, werden als Kreis markiert. Diese Punkte werden als Ausreißer betrachtet.
+Ein Box- und Whisker-Diagramm dient dazu, die Verteilung von Daten anzuzeigen. Die äußeren Linien des Grundstücks zeigen den oberen und unteren Quartil, während der Rahmen den interquartilen Bereich umfasst. Die Linie im Kasten markiert den Median. Alle Datenpunkte, die mehr als das 1,5-Fache des oberen oder unteren Quartils betragen, werden als Kreis markiert. Diese Punkte werden als Ausreißer betrachtet.
 
-##### Multivarianz-Diagramme
+##### Mehrdimensionale Diagramme
 
-Multivarianz-Diagramme werden verwendet, um die Interaktion zwischen Variablen anzuzeigen. Mit der Visualisierung können Datenwissenschaftler sehen, ob Korrelationen oder Muster zwischen den Variablen bestehen. Ein häufig verwendetes Multivarianz-Diagramm ist eine Korrelationsmatrix. Bei einer Korrelationsmatrix werden Abhängigkeiten zwischen mehreren Variablen mit dem Korrelationskoeffizienten quantifiziert.
+Mehrdimensionale Diagramme dienen dazu, die Interaktion zwischen Variablen anzuzeigen. Dank der Visualisierung können Datenwissenschaftler erkennen, ob Korrelationen oder Muster zwischen den Variablen bestehen. Ein häufig verwendetes mehrdimensionales Diagramm ist eine Korrelationsmatrix. Bei einer Korrelationsmatrix werden Abhängigkeiten zwischen verschiedenen Variablen mit dem Korrelationskoeffizienten quantifiziert.
 
-Mit demselben für den Handel bestimmten Datensatz können wir die Korrelationsmatrix generieren.
+Mit demselben Einzelhandelsdatensatz können wir die Korrelationsmatrix generieren.
 
 ![](../images/jupyterlab/analyze-data/correlation_1.png)
 
-Beachten Sie, dass die Diagonale von 1 in der Mitte unten ist. Dies zeigt, dass eine Variable beim Vergleich mit sich selbst eine vollständige positive Korrelation aufweist. Starke positive Korrelation wird eine Größenordnung näher an 1 liegen, während schwache Korrelationen näher an 0 liegen werden. Negative Korrelation wird mit einem negativen Koeffizienten angezeigt, der einen umgekehrten Trend zeigt.
+Beachten Sie, dass die Diagonale von 1 in der Mitte unten ist. Das bedeutet, dass eine Variable beim Vergleich mit sich selbst eine vollständige positive Korrelation aufweist. Eine starke positive Korrelation wird näher bei 1 liegen, während eine schwache Korrelation näher bei 0 liegt. Negative Korrelation wird durch einen negativen Koeffizienten angezeigt, der auf einen gegenläufigen Trend hinweist.
 
 
 ## Nächste Schritte
