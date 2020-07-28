@@ -7,18 +7,18 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '84'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
 # Sandbox löschen
 
-Sie können eine Sandbox löschen, indem Sie eine DELETE-Anforderung ausführen, die die Sandbox `name` im Anforderungspfad enthält.
+Sie können eine Sandbox löschen, indem Sie eine DELETE-Anfrage ausführen, die den `name` der Sandbox im Anfragepfad enthält.
 
 >[!NOTE]
 >
->Durch diesen API-Aufruf wird die `status` Eigenschaft der Sandbox auf &quot;Gelöscht&quot;aktualisiert und deaktiviert. GET-Anforderungen können weiterhin die Details der Sandbox abrufen, nachdem sie gelöscht wurden.
+> Durch diesen API-Aufruf wird die `status`-Eigenschaft der Sandbox in „Gelöscht“ geändert und deaktiviert. GET-Anfragen können die Details der Sandbox, nachdem sie gelöscht wurde, weiter abrufen.
 
 **API-Format**
 
@@ -28,11 +28,11 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SANDBOX_NAME}` | Die `name` Sandbox, die Sie löschen möchten. |
+| `{SANDBOX_NAME}` | Der `name` der Sandbox, die Sie löschen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung löscht eine Sandbox mit dem Namen &quot;dev-2&quot;.
+Die folgende Anfrage löscht eine Sandbox mit dem Namen „dev-2“.
 
 ```shell
 curl -X DELETE \
@@ -45,7 +45,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die aktualisierten Details der Sandbox zurückgegeben, die zeigen, dass die Sandbox &quot;gelöscht&quot; `state` ist.
+Bei einer erfolgreichen Antwort werden die aktualisierten Details der Sandbox zurückgegeben; sie zeigen, dass der `state` der Sandbox „gelöscht“ lautet.
 
 ```json
 {
