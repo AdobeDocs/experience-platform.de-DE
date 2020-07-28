@@ -19,7 +19,7 @@ ht-degree: 18%
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform ]ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Die Unterstützung von Anbietern von Marketingautomatisierung umfasst [!DNL HubSpot].
+[!DNL Experience Platform ] ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Die Unterstützung von Anbietern von Marketingautomatisierung umfasst [!DNL HubSpot].
 
 ## Zulassungsliste der IP-Adresse
 
