@@ -16,18 +16,18 @@ ht-degree: 57%
 
 This document provides an overview of the administration capabilities of [!DNL Real-time Customer Data Platform], powered by Adobe Experience Platform.
 
-[!DNL Experience Platform]Mit können Administratoren rollenbasierte Zugangssteuerung für Anwender sowie virtuelle Sandboxes für die Anwendungsentwicklung verwalten.
+[!DNL Experience Platform]Mit können Administratoren die rollenbasierte Zugriffskontrolle für Anwender sowie virtuelle Sandboxes für die Anwendungsentwicklung verwalten.
 
 The following sections provide introductions to the central components of [!DNL Experience Platform] administration capabilities, and includes links to [!DNL Experience Platform] documentation where more detailed information is provided.
 
 ## Zugriffskontrolle
 
-Die Zugangssteuerung wird über [Adobe Admin Console](http://adminconsole.adobe.com) verwaltet. This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf einzelne Funktionen der Echtzeit-Kundendatenplattform gewähren oder vorenthalten.
+Die Zugriffskontrolle wird über [Adobe Admin Console](http://adminconsole.adobe.com) verwaltet. This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf einzelne Funktionen der Echtzeit-Kundendatenplattform gewähren oder vorenthalten.
 
 To learn more about access control, see the [access control overview](../../access-control/home.md) in the [!DNL Experience Platform] documentation.
 
 >[!IMPORTANT]
->Befolgen Sie die im [Benutzerhandbuch für die Zugangssteuerung](../../access-control/ui/overview.md) angegebenen Schritte, um eine ausführliche Anleitung zur Gewährung des Zugriffs auf Funktionen der Echtzeit-Kundendatenplattform zu erhalten. Achten Sie dabei insbesondere auf die Anleitungen zum Verwalten von Details und zusätzlichen Diensten für ein Produktprofil.
+>Befolgen Sie die im [Benutzerhandbuch für die Zugriffskontrolle](../../access-control/ui/overview.md) angegebenen Schritte, um eine ausführliche Anleitung zur Gewährung des Zugriffs auf Funktionen der Echtzeit-Kundendatenplattform zu erhalten. Achten Sie dabei insbesondere auf die Anleitungen zum Verwalten von Details und zusätzlichen Diensten für ein Produktprofil.
 
 ## Sandboxes
 
