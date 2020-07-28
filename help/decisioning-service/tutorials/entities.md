@@ -24,7 +24,7 @@ Die Anleitung besteht aus zwei Teilen:
 
 ## Erste Schritte
 
-This tutorial requires a working understanding of the [!DNL Experience Platform] services and the API conventions. The [!DNL Platform] repository is a service used by several other [!DNL Platform] services to store business objects and various types of metadata. Es bietet eine sichere und flexible Möglichkeit, diese Objekte zu verwalten und für unterschiedliche Laufzeitdienste abzufragen. The [!DNL Decisioning Service] is one of those. Bevor Sie mit dieser Anleitung beginnen, lesen Sie bitte die Dokumentation für Folgendes:
+This tutorial requires a working understanding of the [!DNL Experience Platform] services and the API conventions. The [!DNL Platform] repository is a service used by several other [!DNL Platform] services to store business objects and various types of metadata. Es bietet eine sichere und flexible Möglichkeit, diese Objekte zu verwalten und für unterschiedliche Laufzeitdienste abzufragen. The [!DNL Decisioning Service] is one of those. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für Folgendes:
 
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 - [!DNL Decisioning Service](./../home.md): Beschreibt die Konzepte und Komponenten, die für Erlebnisentscheidungen im Allgemeinen und Angebotsentscheidungen im Speziellen verwendet werden. Veranschaulicht die Strategien zur Auswahl der besten Option, die während eines Kundenerlebnisses angezeigt wird.
@@ -32,11 +32,11 @@ This tutorial requires a working understanding of the [!DNL Experience Platform]
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
-### Lesehilfe für Beispiel-API-Aufrufe
+### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte der zu verwendenden Kopfzeilen
+### Sammeln von Werten für erforderliche Kopfzeilen
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
@@ -52,7 +52,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 - Content-Type: application/json
 
@@ -68,7 +68,7 @@ API-Payload-Formate werden mit einer `Accept`- oder `Content-Type`-Kopfzeile aus
 
 | FORMAT-Variante | Beschreibung der Anfrage- oder Antwortentität |
 | --- | --- |
-| <br>, gefolgt von einem Parameter `schema={schemaId}` | Die Nachricht enthält eine Instanz, die von einem JSON-Schema beschrieben wird, das durch das Formatparameterschema angegeben wird. Die Instanz ist in eine JSON-Eigenschaft-`_instance` eingeschlossen. Die anderen Eigenschaften der obersten Ebene in der Antwort-Payload geben Repository-Daten an, die für alle Ressourcen verfügbar sind.  Nachrichten, die dem HAL-Format entsprechen, haben eine `_links`-Eigenschaft, die Verweise im HAL-Format enthält. |
+| <br>, gefolgt von einem Parameter `schema={schemaId}` | Die Nachricht enthält eine Instanz, die von einem JSON-Schema beschrieben wird, das durch das Formatparameterschema angegeben wird. Die Instanz ist in eine JSON-Eigenschaft `_instance` eingeschlossen. Die anderen Eigenschaften der obersten Ebene in der Antwort-Payload geben Repository-Daten an, die für alle Ressourcen verfügbar sind.  Nachrichten, die dem HAL-Format entsprechen, haben eine `_links`-Eigenschaft, die Verweise im HAL-Format enthält. |
 | `patch.hal` | Die Nachricht enthält eine JSON PATCH-Payload unter der Annahme, dass die Instanz, die gepatcht werden soll, HAL-konform ist. Das bedeutet, dass nicht nur die eigenen Instanzeigenschaften der Instanz, sondern auch die HAL-Verknüpfungen der Instanz gepatcht werden können. Beachten Sie, dass beschränkt ist, welche Eigenschaften vom Client aktualisiert werden können. |
 | `home.hal` | Die Nachricht enthält eine JSON-formatierte Darstellung einer Startdokumentressource für das Repository. |
 | xdm.receipt | Die Nachricht enthält eine JSON-formatierte Antwort für einen Vorgang zum Erstellen, Aktualisieren (Voll und Patch) oder Löschen. Receipts enthalten Kontrolldaten, die die Revision der Instanz in Form eines ETag angeben. |
@@ -239,7 +239,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 
 >[!NOTE]
 >
->Obwohl `instanceId` als Pfadparameter angegeben ist, sollten Anwendungen den Pfad nach Möglichkeit nicht selbst erstellen und stattdessen Links zu Instanzen in Auflistungs- und Suchvorgängen folgen. Einzelheiten finden Sie in den Abschnitten ‎6.4.4 und ‎6.4.6.
+> Obwohl `instanceId` als Pfadparameter angegeben ist, sollten Anwendungen den Pfad nach Möglichkeit nicht selbst erstellen und stattdessen Links zu Instanzen in Auflistungs- und Suchvorgängen folgen. Einzelheiten finden Sie in den Abschnitten ‎6.4.4 und ‎6.4.6.
 
 **Antwort**
 
@@ -334,7 +334,7 @@ Die Antwort hängt von der angegebenen `{schemaId}` ab. Bei „https<span></span
 
 >[!NOTE]
 >
->Das Ergebnis enthält die Instanzen für das angegebene Schema oder die erste Seite dieser Liste. Beachten Sie, dass Instanzen mehr als einem Schema entsprechen und daher in mehr als einer Liste angezeigt werden können.
+> Das Ergebnis enthält die Instanzen für das angegebene Schema oder die erste Seite dieser Liste. Beachten Sie, dass Instanzen mehr als einem Schema entsprechen und daher in mehr als einer Liste angezeigt werden können.
 
 Seitenressourcen sind vorübergehend und schreibgeschützt; sie können weder aktualisiert noch gelöscht werden. Das Seitenmodell bietet zufälligen Zugriff auf Teilmengen großer Listen über einen längeren Zeitraum hinweg, ohne dass irgendein Status pro Client beibehalten wird.
 
@@ -565,7 +565,7 @@ Wenn eine Instanz gefunden wird, die auf die zu löschende Instanz verweist, wir
 
 Die im vorherigen Abschnitt beschriebenen APIs gelten einheitlich für alle Typen von Geschäftsobjekten. Der einzige Unterschied zwischen beispielsweise dem Erstellen eines Angebots und einer Aktivität ist die Kopfzeile `content-type`, die das JSON-Schema und die JSON-Payload der Anfrage angibt, die dem Schema entspricht. Daher geht es in den folgenden Abschnitten nur um diese Schemas und die Beziehungen zwischen ihnen.
 
-Bei Verwendung der APIs mit dem Content-Typ `application/vnd.adobe.platform.xcore.hal+json; schema="{SCHEMA_ID}"`werden die eigenen Eigenschaften der Instanz in die `_instance`-Eigenschaft eingebettet, neben der eine `_links`-Eigenschaft vorhanden ist. Dies ist das allgemeine Format, in dem alle Instanzen dargestellt werden:
+Bei Verwendung der APIs mit dem Content-Typ `application/vnd.adobe.platform.xcore.hal+json; schema="{SCHEMA_ID}"` werden die eigenen Eigenschaften der Instanz in die `_instance`-Eigenschaft eingebettet, neben der eine `_links`-Eigenschaft vorhanden ist. Dies ist das allgemeine Format, in dem alle Instanzen dargestellt werden:
 
 ```json
 { 
@@ -652,7 +652,7 @@ Eine **Platzierungsinstanz** kann die folgenden Eigenschaften aufweisen:
 
 - **`xdm:name`** – Enthält den zugewiesenen Namen für die Platzierung, auf den in menschlichen Interaktionen und Benutzeroberflächen verwiesen wird.
 - **`xdm:description`** – Dient zum Vermitteln von visuell lesbaren Absichten dafür, wie Inhalte in dieser Platzierung im übergeordneten Nachrichtenversand verwendet werden sollen. Wenn Versandkanäle neue Platzierungen definieren, können sie weitere Informationen zu dieser Eigenschaft hinzufügen, damit ein Inhaltsersteller den Inhalt entsprechend erstellen oder auswählen kann. Diese Anweisungen werden nicht formell ausgelegt oder durchgesetzt. Diese Eigenschaft dient lediglich als Ort zum Kommunizieren der Absichten.
-- **`xdm:channel`** – Der URI eines Kanals. Der Kanal gibt an, wo der dynamische Content bereitgestellt werden soll. Mit der Kanalbegrenzung wird nicht nur vermittelt, wo das Angebot verwendet werden soll, sondern auch der Content-Editor oder -Validator bestimmt, der für das Erlebnis genutzt wird.
+- **`xdm:channel`** – Der URI eines Kanals. Der Kanal gibt an, wo der dynamische Inhalt bereitgestellt werden soll. Mit der Kanalbegrenzung wird nicht nur vermittelt, wo das Angebot verwendet werden soll, sondern auch der Content-Editor oder -Validator bestimmt, der für das Erlebnis genutzt wird.
 - **`xdm:componentType`** – Eine Modellkennung (d. h. ein URI) für den Inhalt, der an dem von dieser Platzierung beschriebenen Ort angezeigt werden kann. Komponententypen sind: Bild-Link, HTML oder Nur-Text. Jeder Komponententyp kann einen bestimmten Satz von Eigenschaften (ein Modell) beinhalten, den das Inhaltselement aufweisen kann. Die Liste von Komponententypen lässt sich erweitern. Es gibt drei vordefinierte Komponententypwerte:
    - `https://ns.adobe.com/experience/offer-management/content-component-imagelink`
    - `https://ns.adobe.com/experience/offer-management/content-component-text`
@@ -847,7 +847,7 @@ Die vollständige cURL-Syntax finden Sie unter [Aktualisieren und Patchen von In
 
 Der Wert in der Bedingungseigenschaft der Regel enthält einen PQL-Ausdruck. Die Kontextdaten werden über den speziellen Pfadausdruck @{schemaID} referenziert.
 
-Rules naturally align with segments in the [!DNL Experience Platform] and often a rule will simply reuse a segment’s intent by testing a profile’s `segmentMembership` property. Die `segmentMembership`-Eigenschaft enthält die Ergebnisse der Segmentbedingungen, die bereits ausgewertet wurden. Auf diese Weise kann eine Organisation ihre Domain-spezifischen Audiences einmal definieren, benennen und die Bedingungen einmal auswerten.
+Rules naturally align with segments in the [!DNL Experience Platform] and often a rule will simply reuse a segment’s intent by testing a profile’s `segmentMembership` property. Die `segmentMembership`-Eigenschaft enthält die Ergebnisse der Segmentbedingungen, die bereits ausgewertet wurden. Auf diese Weise kann eine Organisation ihre Domain-spezifischen Zielgruppen einmal definieren, benennen und die Bedingungen einmal auswerten.
 
 ## Verwalten von Angebotskollektionen
 
@@ -905,7 +905,7 @@ Beachten Sie, dass die `xdm:tags`-Eigenschaft bereits vorhanden sein muss, damit
 
 ### Filter für Angebotskollektionen definieren
 
-Die Filterinstanzen werden mit der Schemakennung https://ns.adobe.com/experience/offer-management/offer-filter erstellt. Die `_instance`­Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren könnte wie folgt aussehen:
+Die Filterinstanzen werden mit der Schemakennung https://ns.adobe.com/experience/offer-management/offer-filter erstellt. Die `_instance`­ Eigenschaft für den Aufruf zum Erstellen oder Aktualisieren könnte wie folgt aussehen:
 
 ```json
 {
