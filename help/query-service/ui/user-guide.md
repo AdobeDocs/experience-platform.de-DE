@@ -44,7 +44,7 @@ In the [!DNL Experience Platform] UI, click **[!UICONTROL Queries]** in the left
 
 ### Schreiben von Abfragen
 
-[!UICONTROL Der Abfrage-Editor ist so organisiert, dass das Schreiben von Abfragen so einfach wie möglich ist. ] Der folgende Screenshot zeigt, wie der Editor in der Benutzeroberfläche angezeigt wird, wobei die Schaltfläche **Abspielen** und das SQL-Eingabefeld hervorgehoben sind.
+[!UICONTROL Der Abfrage-Editor ist so organisiert, dass das Schreiben von Abfragen so einfach wie möglich ist.] Der folgende Screenshot zeigt, wie der Editor in der Benutzeroberfläche angezeigt wird, wobei die Schaltfläche **Abspielen** und das SQL-Eingabefeld hervorgehoben sind.
 
 ![Bild](../images/queries/query-editor-overview/editor.png)
 
@@ -94,7 +94,7 @@ Weitere Informationen finden Sie in der [Übersicht über die Query Service-Benu
 
 >[!NOTE]
 >
->Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. In order for the query to be available in [!DNL Query Service], it must be run or saved in [!DNL Query Editor].
+> Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. In order for the query to be available in [!DNL Query Service], it must be run or saved in [!DNL Query Editor].
 
 ## Ausführen von Abfragen mit dem Abfrage-Editor
 
@@ -108,7 +108,7 @@ Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Serv
 
 >[!NOTE]
 >
->Die Konsole zeigt nur Fehler an, die beim Ausführen einer Abfrage aufgetreten sind. Es werden keine Fehler bei der Abfragevalidierung angezeigt, bevor eine Abfrage ausgeführt wird.
+> Die Konsole zeigt nur Fehler an, die beim Ausführen einer Abfrage aufgetreten sind. Es werden keine Fehler bei der Abfragevalidierung angezeigt, bevor eine Abfrage ausgeführt wird.
 
 ### Abfrageergebnisse
 
@@ -118,7 +118,7 @@ Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte *[!UICO
 
 ## Abfragen mit [!DNL Query Service] Lernvideo ausführen
 
-Das folgende Video zeigt, wie Abfragen in der Benutzeroberfläche der Adobe Experience Platform und in einem PSQL-Client ausgeführt werden. Zusätzlich werden die Verwendung einzelner Eigenschaften in einem XDM-Objekt, die Verwendung von von Adobe definierten Funktionen und die Verwendung von CREATE TABLE AS SELECT (CTAS) demonstriert.
+Das folgende Video zeigt, wie Abfragen in der Benutzeroberfläche der Adobe Experience Platform und in einem PSQL-Client ausgeführt werden. Darüber hinaus werden die Verwendung einzelner Eigenschaften in einem XDM-Objekt, die Verwendung von Adobe-definierten Funktionen und die Verwendung von CREATE TABLE AS SELECT (CTAS) demonstriert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
