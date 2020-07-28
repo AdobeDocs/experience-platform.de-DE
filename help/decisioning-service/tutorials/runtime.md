@@ -1,53 +1,53 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Arbeiten mit der Laufzeit des Entscheidungsdienstes mithilfe von APIs
+title: Arbeiten mit der Decisioning Service-Laufzeit unter Verwendung von APIs
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
-ht-degree: 0%
+ht-degree: 14%
 
 ---
 
 
-# Arbeiten mit der Laufzeit des Entscheidungsdienstes mithilfe von APIs
+# Arbeiten mit der Decisioning Service-Laufzeit unter Verwendung von APIs
 
-Dieses Dokument bietet eine Anleitung zum Arbeiten mit den Laufzeitdiensten zur [!DNL Decisioning Service] Verwendung von Adobe Experience Platform-APIs.
+This document provides a tutorial for working with the runtime services of [!DNL Decisioning Service] using Adobe Experience Platform APIs.
 
 ## Erste Schritte
 
-Dieses Tutorial erfordert ein Verständnis der [!DNL Experience Platform] Dienste, die bei der Entscheidung und Bestimmung des nächsten besten Angebots für die Kundenerfahrung eine Rolle spielen. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für Folgendes:
+Dieses Tutorial erfordert ein Verständnis der [!DNL Experience Platform] Dienste, die bei der Entscheidung und Bestimmung des nächsten besten Angebots für die Kundenerfahrung eine Rolle spielen. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für Folgendes:
 
 - [!DNL Decisioning Service](./../home.md): Bietet das Framework zum Hinzufügen und Entfernen von Angeboten und zum Erstellen von Algorithmen zur Auswahl der besten, die während des Kundenerlebnisses präsentiert werden sollen.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 - [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL wird zum Definieren von Regeln und Filtern verwendet.
 - [Verwalten von Entscheidungsobjekten und Regeln mithilfe von APIs](./entities.md): Vor der Verwendung der Laufzeit der Entscheidungsdienste müssen Sie die entsprechenden Entitäten einrichten.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform] APIs erfolgreich aufrufen zu können.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur [!DNL Experience Platform] Fehlerbehebung.
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform] APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Genehmigung: Träger `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind zu bestimmten virtuellen Sandboxen isoliert. Alle Anforderungen an [!DNL Platform] APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxes in [!DNL Platform]finden Sie in der [Sandbox-Übersichtsdokumentation](../../tutorials/authentication.md).
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../tutorials/authentication.md).
 
-Für alle Anforderungen mit einer Payload (POST, PUT, PATCH) ist ein zusätzlicher Header erforderlich:
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 - Content-Type: application/json
 
@@ -59,15 +59,15 @@ Wird auch für Laufzeitanforderungen benötigt:
 >
 >`UUID` ist eine Zeichenfolge im UUUID-Format, die global eindeutig ist und nicht für verschiedene API-Aufrufe wiederverwendet werden darf.
 
-[!DNL Decisioning Service] wird von einer Reihe von Geschäftsobjekten gesteuert, die miteinander verbunden sind. Alle Geschäftsobjekte werden im [!DNL Platform’s] Business Object Repository, XDM Core Object Repository, gespeichert. Eine wichtige Funktion dieses Repositorys ist, dass die APIs orthogonal zum Typ des Geschäftsobjekts sind. Statt eine POST-, GET-, PUT-, PATCH- oder DELETE-API zu verwenden, die den Ressourcentyp im API-Endpunkt angibt, gibt es nur 6 generische Endpunkte, die jedoch einen Parameter akzeptieren oder zurückgeben, der den Objekttyp angibt, wenn diese Unterscheidung erforderlich ist. Das Schema muss beim Repository registriert sein, darüber hinaus ist das Repository jedoch für einen Satz von Objekttypen mit offenem Ende einsetzbar.
+[!DNL Decisioning Service] wird von einer Reihe miteinander verbundener Geschäftsobjekte gesteuert. Alle Geschäftsobjekte werden im [!DNL Platform’s] Business Object Repository, XDM Core Object Repository, gespeichert. Ein wichtiges Merkmal dieses Repositorys ist, dass die APIs orthogonal zum Typ des Geschäftsobjekts sind. Statt eine POST-, GET-, PUT-, PATCH- oder DELETE-API zu nutzen, die den Typ der Ressource im API-Endpunkt angibt, gibt es nur sechs generische Endpunkte. Diese akzeptieren oder geben jedoch einen Parameter zurück, der den Typ des Objekts angibt, wenn eine Unterscheidung erforderlich ist. Das Schema muss beim Repository registriert sein; darüber hinaus ist das Repository jedoch für einen beliebigen Satz von Objekttypen einsetzbar.
 
-Die Endpunktpfade für alle XDM Core Object Repository APIs Beginn mit `https://platform.adobe.io/data/core/ode/`.
+The endpoint paths for all XDM Core Object Repository APIs start with `https://platform.adobe.io/data/core/ode/`.
 
 Das erste Pfadelement nach dem Endpunkt ist der `containerId`. Diese Kennung wird über den XDM-Core-Objekt-Repository-Stammendpunkt abgerufen `GET https://platform.adobe.io/data/core/xcore/`.
 
 ## Zusammenstellung von Entscheidungsmodellen
 
-Die Aktivierung der Business-Logik-Entitäten erfolgt automatisch und kontinuierlich. Sobald eine neue Option im Repository gespeichert und als &quot;genehmigt&quot;markiert ist, wird sie als Option zur Einbeziehung der verfügbaren Optionen angezeigt. Sobald eine Entscheidungsregel aktualisiert ist, wird der Regelsatz wieder zusammengestellt und für die Ausführung zur Laufzeit vorbereitet. Bei diesem Schritt der automatischen Aktivierung werden alle von der Geschäftslogik definierten Einschränkungen, die nicht vom Laufzeitkontext abhängen, ausgewertet. Die Ergebnisse dieses Aktivierung-Schritts werden an einen Cache gesendet, wo sie für die [!DNL Decisioning Service] Laufzeit verfügbar sind.
+Die Aktivierung der Geschäftslogikentitäten erfolgt automatisch und kontinuierlich. Sobald eine neue Option im Repository gespeichert und als „genehmigt“ markiert wird, gehört sie zu den Kandidaten für die Einbeziehung den Satz der verfügbaren Optionen. Sobald eine Entscheidungsregel aktualisiert ist, wird der Regelsatz wieder zusammengestellt und für die Ausführung zur Laufzeit vorbereitet. Bei diesem automatischen Aktivierungsschritt werden alle von der Geschäftslogik definierten Begrenzungen, die nicht vom Laufzeitkontext abhängen, ausgewertet. The results of this activation step are sent to a cache where they are available to the [!DNL Decisioning Service] runtime.
 
 ### Auswirkungen von Platzierungen, Filtern und Lebenszyklusstatus
 
@@ -181,7 +181,7 @@ Anwendungen können eine bessere Leistung erzielen, indem sie eine Entscheidung 
 
 Es ist möglich, dass zwei verschiedene Aktivitäten die gleiche Option wie ihre &quot;Besten&quot;haben. Um zu vermeiden, dass sich ein zusammengesetztes Erlebnis wiederholt, werden standardmäßig [!DNL Decisioning Service] Arbitrationen zwischen den Aktivitäten vorgenommen, auf die in derselben Anforderung verwiesen wird. Die Schiedsgerichtsbarkeit bedeutet, dass für jede Aktivität ihre Top-N-Optionen in Betracht gezogen werden, dass aber über diese Aktivitäten hinweg keine Möglichkeit mehr als einmal vorgeschlagen wird. Wenn zwei Aktivitäten die gleiche Option mit der höchsten Rangfolge haben, wird eine von ihnen gewählt, um ihre zweitbeste oder drittbeste Wahl usw. zu verwenden. Diese Deduplizierungsregeln versuchen zu vermeiden, dass eine der Aktivitäten ihre Ausweichmöglichkeit nutzen muss.
 
-Der Entscheidungsantrag enthält die Argumente, die der Hauptteil eines POST-Antrags enthält. Der Haupttext wird als JSON- `Content-Type` Kopfzeilenwert formatiert `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
+Der Entscheidungsantrag enthält die Argumente, die sein Hauptteil eines Antrags auf POST enthält. Der Haupttext wird als JSON- `Content-Type` Kopfzeilenwert formatiert `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
 Das Anforderungs-Schema und die derzeit unterstützte Version werden `https://ns.adobe.com/experience/offer-management/decision-request;version=0.9`unterstützt. Zukünftig werden zusätzliche Anforderungs-Schema oder -Versionen bereitgestellt.
 
