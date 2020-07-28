@@ -7,22 +7,22 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '427'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
 
 # Zielgruppen-Mapping-Felder
 
-Mit der Adobe Experience Platform können Sie Adobe Target-Daten über den Target-Quellanschluss erfassen. Bei Verwendung des Connectors müssen alle Daten aus den Target-Feldern den XDM-Feldern ( [Experience Data Model)](../../../../xdm/home.md) zugeordnet sein, die der XDM ExperienceEvent-Klasse zugeordnet sind.
+Mit der Adobe Experience Platform können Sie Adobe Target-Daten über den Zielgruppen-Quellanschluss erfassen. Bei Verwendung des Connectors müssen alle Daten aus den Feldern der Zielgruppe den XDM-Feldern ( [Experience Data Model)](../../../../xdm/home.md) zugeordnet sein, die der XDM ExperienceEvent-Klasse zugeordnet sind.
 
-In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (Feld *XDM ExperienceEvent) und die entsprechenden Target-Felder, denen sie zugeordnet werden sollen (Feld* für *Target-Anforderung*), aufgeführt. Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
+In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (Feld *XDM ExperienceEvent) und die entsprechenden Felder für die Zielgruppe, denen sie zugeordnet werden sollen (Feld**Zielgruppe anfordern*), aufgeführt. Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
 
 >[!NOTE]
 >
->Bitte blättern Sie nach links/rechts, um den gesamten Tabelleninhalt Ansicht.
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
 
-| XDM ExperienceEvent-Feld | Feld für Target-Anforderung | Anmerkungen |
+| XDM ExperienceEvent-Feld | Feld &quot;Zielgruppe anfordern&quot; | Anmerkungen |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Eine eindeutige Anforderungskennung |
 | **`dataSource`** |  | Für alle Clients auf &quot;1&quot;konfiguriert. |
@@ -51,8 +51,8 @@ In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (Feld
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | Targets interne Zuordnung für benutzerdefinierte Umgebung (wie dev, qa oder prod). |
-| `experience.target.supplementalDataID` | Bezeichner zum Verbinden von Target-Ereignissen mit Analytics-Ereignissen |
+| `experience.target.environmentID` | Interne Zuordnung der Zielgruppe für kundenspezifische Umgebung (wie dev, qa oder prod). |
+| `experience.target.supplementalDataID` | Bezeichner, der zum Verbinden von Zielgruppe-Ereignissen mit Analytics-Ereignissen verwendet wird |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | Liste (Array) der Aktivitäten, für die der Besucher sich qualifiziert hat |
