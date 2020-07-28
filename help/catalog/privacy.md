@@ -68,7 +68,7 @@ Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt
 >
 > Dieser Abschnitt enthält Aufrufe der Schema Registry API. Wichtige Informationen zur Verwendung der API, einschließlich der Kenntnisse über Ihre `{TENANT_ID}` und das Konzept der Container, finden Sie im Abschnitt [Erste Schritte](../xdm/api/getting-started.md) im Entwicklerhandbuch.
 
-Sie können dem XDM-Schema eines Datasets einen Identitätsdeskriptor hinzufügen, indem Sie eine POST-Anforderung an den `/descriptors` Endpunkt in der [!DNL Schema Registry] API senden.
+Sie können dem XDM-Schema eines Datasets einen Identitätsdeskriptor hinzufügen, indem Sie eine POST an den `/descriptors` Endpunkt in der [!DNL Schema Registry] API anfordern.
 
 **API-Format**
 
