@@ -28,7 +28,7 @@ Um die in diesem Dokument beschriebenen [!DNL Dataset Service] Endpunkte aufrufe
 
 ## Liste aller Bezeichnungen {#list-labels}
 
-Mithilfe der [!DNL Policy Service] API können Sie alle `core` bzw. `custom` Bezeichnungen durch eine GET-Anforderung an `/labels/core` bzw. `/labels/custom`anfordern.
+Mithilfe der [!DNL Policy Service] API können Sie alle `core` bzw. `custom` Bezeichnungen durch eine GET an `/labels/core` bzw. `/labels/custom`anfordern.
 
 **API-Format**
 
@@ -164,7 +164,7 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 
 ## Erstellen oder Aktualisieren einer benutzerdefinierten Bezeichnung {#create-update-label}
 
-Um eine benutzerdefinierte Bezeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT-Anforderung an die [!DNL Policy Service] API senden.
+Um eine benutzerdefinierte Bezeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT an die [!DNL Policy Service] API senden.
 
 **API-Format**
 
@@ -230,7 +230,7 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 
 ## Suchen von Beschriftungen für einen Datensatz {#look-up-dataset-labels}
 
-Sie können die Datenverwendungsbeschriftungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET-Anforderung an die [!DNL Dataset Service] API senden.
+Sie können die Datenverwendungsbeschriftungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET an die [!DNL Dataset Service] API anfordern.
 
 **API-Format**
 
@@ -283,7 +283,7 @@ Eine erfolgreiche Antwort gibt die Datenverwendungsbeschriftungen zurück, die a
 
 ## Anwenden von Beschriftungen auf einen Datensatz {#apply-dataset-labels}
 
-Sie können einen Satz von Bezeichnungen für ein Dataset erstellen, indem Sie sie in der Nutzlast einer POST- oder PUT-Anforderung an die [!DNL Dataset Service] API bereitstellen. Wenn Sie eine dieser Methoden verwenden, werden vorhandene Beschriftungen überschrieben und durch die in der Payload bereitgestellten ersetzt.
+Sie können einen Satz von Bezeichnungen für ein Dataset erstellen, indem Sie sie in der Nutzlast einer POST oder einer PUT-Anforderung an die [!DNL Dataset Service] API bereitstellen. Wenn Sie eine dieser Methoden verwenden, werden vorhandene Beschriftungen überschrieben und durch die in der Payload bereitgestellten ersetzt.
 
 **API-Format**
 
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Anfrage**
 
-Mit der folgenden POST-Anforderung wird dem Datensatz eine Reihe von Beschriftungen sowie ein spezifisches Feld in diesem Datensatz hinzugefügt. Die in der Payload bereitgestellten Felder entsprechen den Feldern, die für eine PUT-Anforderung erforderlich sind.
+Mit der folgenden Anforderung zur POST werden dem Datensatz eine Reihe von Bezeichnungen sowie ein bestimmtes Feld in diesem Datensatz hinzugefügt. Die in der Payload bereitgestellten Felder entsprechen den Feldern, die für eine PUT-Anforderung erforderlich sind.
 
 ```shell
 curl -X POST \
