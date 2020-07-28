@@ -25,7 +25,7 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{RESOURCE_TYPE}` | The type of resource to be deleted from the [!DNL Schema Library]. Gültige Typen sind `datatypes`, `mixins`, `schemas` und `classes`. |
-| `{RESOURCE_ID}` | Der URL-codierte `$id`-URI oder `meta:altId` der Ressource. |
+| `{RESOURCE_ID}` | Der URL-kodierte `$id`-URI oder `meta:altId` der Ressource. |
 
 **Anfrage**
 
