@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Unterstützte Beschriftungen für die Datenverwendung
+title: Unterstützte Datennutzungsbezeichnungen
 topic: labels
 translation-type: tm+mt
 source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
 source-wordcount: '1878'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
 
-# Unterstützte Beschriftungen für die Datenverwendung
+# Unterstützte Datennutzungsbezeichnungen
 
 Die Adobe Experience Platform umfasst eine Infrastruktur für die Datenverwaltung mit der Datenverwendungskennzeichnung und -durchsetzung (DULE).  Mit den Funktionen DULE können Datenverwendungsbeschriftungen auf Datensätze und Felder angewendet werden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren.
 
@@ -20,11 +20,11 @@ In diesem Dokument werden alle derzeit von [!DNL Experience Platform]unterstütz
 
 ## Vertragsbezeichnungen
 
-Die &quot;C&quot;-Beschriftungen des Vertrags werden zur Kategorisierung von Daten verwendet, die vertragliche Verpflichtungen haben oder mit den Datenschutzrichtlinien Ihres Unternehmens in Zusammenhang stehen.
+Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen.
 
 | Beschriftung | Definition |
 |---|---|
-| **C1** | Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei einzelne IDs oder Geräte-IDs einbezogen werden. [Weitere Infos...](#c1) |
+| **C1** | Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. [Weitere Infos...](#c1) |
 | **C2** | Daten können nicht in einen Drittanbieter exportiert werden. [Weitere Infos...](#c2) |
 | **C3** | Daten können nicht mit direkt identifizierbaren Informationen kombiniert oder anderweitig verwendet werden. [Weitere Infos...](#c3) |
 | **C4** | Daten können nicht für das Targeting von Anzeigen oder Inhalten verwendet werden, weder auf der Site noch auf der Site. [Weitere Infos...](#c4) |
@@ -35,9 +35,9 @@ Die &quot;C&quot;-Beschriftungen des Vertrags werden zur Kategorisierung von Dat
 | **C9** | Daten können nicht in Data Science Workflows verwendet werden. [Weitere Infos...](#c9) |
 | **C10** | Daten können nicht für die Aktivierung einer gehefteten Identität verwendet werden. [Weitere Infos...](#c10) |
 
-## Beschriftungen
+## Identitätsbezeichnungen
 
-Identitäts-&quot;I&quot;-Beschriftungen werden zur Kategorisierung von Daten verwendet, die eine bestimmte Person identifizieren oder kontaktieren können.
+Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt.
 
 | Beschriftung | Definition |
 |---|---|
@@ -46,7 +46,7 @@ Identitäts-&quot;I&quot;-Beschriftungen werden zur Kategorisierung von Daten ve
 
 ## Sensible Beschriftungen
 
-Sensible &quot;S&quot;-Beschriftungen werden verwendet, um Daten zu kategorisieren, die Sie und Ihr Unternehmen als vertraulich betrachten.
+Vertrauliche „S“-Bezeichnungen (sensitive) dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als vertraulich betrachten.
 
 Eine Art von Daten, die Sie als sensibel betrachten, kann verschiedene Arten geografischer Daten sein; Diese Kategorie ist jedoch nicht auf geografische Daten beschränkt.
 
@@ -65,7 +65,7 @@ Die folgenden Abschnitte enthalten detaillierte Informationen zur Einführung sp
 
 #### C1 {#c1}
 
-Einige Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei einzelne IDs oder Geräte-IDs einbezogen werden. Zum Beispiel Daten, die aus sozialen Netzwerken stammen.
+Manche Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. Zum Beispiel Daten, die aus sozialen Netzwerken stammen.
 
 #### C2 {#c2}
 
