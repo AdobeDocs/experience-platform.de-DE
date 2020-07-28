@@ -11,7 +11,7 @@ ht-degree: 25%
 ---
 
 
-# Adobe Intelligent Services {#intelligent-services}
+# Adobe Intelligente Dienste {#intelligent-services}
 
 * [Intelligent Services – Übersicht](home.md)
 * [Daten für die Verwendung in Intelligent Services vorbereiten](data-preparation.md)
