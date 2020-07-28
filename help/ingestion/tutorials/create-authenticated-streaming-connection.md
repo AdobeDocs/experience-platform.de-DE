@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen Sie eine authentifizierte Streaming-Verbindung
+title: Erstellen einer authentifizierten Streaming-Verbindung
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
@@ -27,13 +27,13 @@ Für dieses Tutorial sind auch Kenntnisse über verschiedene Adobe Experience Pl
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten [!DNL Platform] organisiert werden.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um erfolgreiche Aufrufe an Streaming-Erfassungs-APIs durchführen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die APIs für die Streaming-Erfassung erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte der zu verwendenden Kopfzeilen
+### Sammeln von Werten für erforderliche Kopfzeilen
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
@@ -49,13 +49,13 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 - Content-Type: application/json
 
 ## Verbindung erstellen
 
-Eine Verbindung gibt die Quelle an und enthält die Informationen, die erforderlich sind, um den Fluss mit Streaming-Aufnahme-APIs kompatibel zu machen.
+Eine Verbindung gibt die Quelle an und enthält die Informationen, die erforderlich sind, um den Fluss mit Streaming-Erfassungs-APIs kompatibel zu machen.
 
 **API-Format**
 
@@ -67,7 +67,7 @@ POST /flowservice/connections
 
 >[!NOTE]
 >
->Die Werte für die aufgelistete `providerId` und die `connectionSpec` **müssen** wie im Beispiel gezeigt verwendet werden, da diese der API anzeigen, dass Sie eine Streaming-Verbindung für die Streaming-Aufnahme erstellen.
+>Die Werte für die aufgelistete `providerId` und die `connectionSpec` **müssen** wie im Beispiel gezeigt verwendet werden, da diese der API anzeigen, dass Sie eine Streaming-Verbindung für die Streaming-Erfassung erstellen.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
