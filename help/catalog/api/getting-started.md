@@ -14,11 +14,11 @@ ht-degree: 52%
 
 # [!DNL Catalog Service] Entwicklerhandbuch
 
-[!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Experience Platform. [!DNL Catalog] dient als Metadatenspeicher oder „Katalog“, in dem Sie Informationen über Ihre Daten in finden können, ohne auf die Daten selbst zugreifen zu müssen. [!DNL Experience Platform] Weiterführende Informationen dazu finden Sie unter [Catalog – Übersicht](../home.md).
+[!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Experience Platform. [!DNL Catalog] dient als Metadatenspeicher oder „Katalog“, in dem Sie Informationen über Ihre Daten in finden können, ohne auf die Daten selbst zugreifen zu müssen.[!DNL Experience Platform] Weiterführende Informationen dazu finden Sie unter [Catalog – Übersicht](../home.md).
 
 This developer guide provides steps to help you start using the [!DNL Catalog] API. Dann bietet das Handbuch Beispiel-API-Aufrufe für die Ausführung wichtiger Vorgänge mithilfe von [!DNL Catalog].
 
-## Voraussetzungen
+## Voraussetzungen 
 
 [!DNL Catalog] verfolgt Metadaten für verschiedene Arten von Ressourcen und Vorgängen innerhalb von [!DNL Experience Platform]. This developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with creating and managing these resources:
 
@@ -28,11 +28,11 @@ This developer guide provides steps to help you start using the [!DNL Catalog] A
 
 The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Catalog Service] API.
 
-## Lesehilfe für Beispiel-API-Aufrufe
+## Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-## Werte der zu verwendenden Kopfzeilen
+## Sammeln von Werten für erforderliche Kopfzeilen
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
@@ -48,7 +48,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 * Content-Type: application/json
 
@@ -62,7 +62,7 @@ Since some queries can put a heavy load on the API, global limits have been impl
 
 ## Nächste Schritte
 
-This document covered the prerequisite knowledge required to make calls to the [!DNL Catalog] API. Sie können nun mit den Beispielaufrufen im Entwicklerhandbuch fortfahren und den entsprechenden Anweisungen folgen.
+This document covered the prerequisite knowledge required to make calls to the [!DNL Catalog] API. Sie können nun mit den Beispielaufrufen in diesem Entwicklerhandbuch fortfahren und den entsprechenden Anweisungen folgen.
 
 Most of the examples in this guide use the `/dataSets` endpoint, but the principles can be applied to other endpoints within [!DNL Catalog] (such as `/batches` and `/accounts`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
