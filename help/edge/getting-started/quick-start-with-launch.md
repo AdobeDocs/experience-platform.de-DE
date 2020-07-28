@@ -17,7 +17,7 @@ ht-degree: 28%
 Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Web SDK für Adobe Experience Platformen in Launch einzurichten. Um diese Funktion nutzen zu können, müssen Sie in der Positivliste eingetragen sein. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
 
 - Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über eine CNAME für Analytics verfügen, sollten Sie diese verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen.
-- Berechtigung für Adobe Experience Platform. Wenn Sie Platform nicht erworben haben, stellt Adobe Ihnen die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK ohne Aufpreis zur Verfügung.
+- Berechtigung für Adobe Experience Platform. Wenn Sie Platform nicht erworben haben, stellt Ihnen die Adobe die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK kostenlos zur Verfügung.
 - Verwenden Sie die neueste Version des Besucher-ID-Diensts.
 
 ## Erstellen einer Konfigurations-ID
