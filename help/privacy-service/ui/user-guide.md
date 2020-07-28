@@ -129,7 +129,7 @@ Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge)
 
 ### JSON-Datei hochladen {#json}
 
-Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für jede verarbeitete Person verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
+Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für die einzelnen verarbeiteten Datensubjekte verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
 Klicken Sie auf den Pfeil neben Anforderung **[!UICONTROL erstellen]**, unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms. Wählen Sie in der Liste der angezeigten Optionen die Option JSON **[!UICONTROL hochladen]**.
 
@@ -139,7 +139,7 @@ Das Dialogfeld &quot;JSON ** hochladen&quot;wird angezeigt. Es wird ein Fenster 
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Wenn Sie keine JSON-Datei zum Hochladen haben, klicken Sie auf &quot;Adobe-GDPR-Request.json **** herunterladen&quot;, um eine Vorlage herunterzuladen, die Sie entsprechend den Werten füllen können, die Sie von Ihren betroffenen Personen gesammelt haben.
+Wenn Sie keine JSON-Datei zum Hochladen haben, klicken Sie auf Adobe-GDPR-Request.json **** herunterladen, um eine Vorlage herunterzuladen, die Sie entsprechend den Werten füllen können, die Sie von Ihren betroffenen Personen gesammelt haben.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
