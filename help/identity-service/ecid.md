@@ -7,26 +7,26 @@ translation-type: tm+mt
 source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
 source-wordcount: '162'
-ht-degree: 15%
+ht-degree: 90%
 
 ---
 
 
 # ECID-Übersicht
 
-Das [!DNL Experience Cloud Identifier] (ECID) ist das clientseitige Modul, das Zugriff auf Identitätsverwaltung bietet und drei Hauptfunktionen bietet:
+The [!DNL Experience Cloud Identifier] (ECID) is the client side module providing access to identity management, serving three primary functions:
 
-- Identifizieren Sie jeden Besucher.
-- Synchronisierung mit Partnern bereitstellen
-- Verknüpfungen paarweise hinzufügen, um eine Verbindung mit Offline- oder anderen IDs zum Diagramm herzustellen
+- Jeden Besucher identifizieren
+- Für Synchronisierung mit Partnern sorgen
+- Paarweise Verknüpfungen hinzufügen, um eine Verbindung mit Offline- oder anderen Kennungen zum Diagramm herzustellen
 
-Zur Identifizierung Ihrer Online-Benutzer müssen Sie Ihre Site oder mobile App mit der ECID instrumentieren, die eine universelle und beständige ID bereitstellt, mit der Ihre Besucher lösungsübergreifend in der Adobe Experience Platform identifiziert werden können.
+Zur Identifizierung Ihrer Online-Benutzer müssen Sie Ihre Site oder App mit der ECID instrumentieren, die eine universelle und persistente Kennung bereitstellt, mit der sich Ihre Besucher in allen Lösungen von Adobe Experience Platform erkennen lassen.
 
-Wenn Sie mit einer Website-Implementierung arbeiten, sollten Sie die Ressourcen [hier](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html)entdecken.
+Wenn Sie mit einer Website-Implementierung arbeiten, sollten Sie die Ressourcen [hier](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html) konsultieren.
 
-Wenn Sie mit einer mobilen App arbeiten, sehen Sie, wie die ECID zur [Verfolgung von Besuchern zwischen einer App und einem mobilen Web](https://docs.adobe.com/content/help/de-DE/mobile-services/ios/sdk-reference-ios/hybrid-app.html)verwendet wird.
+Wenn Sie mit einer App arbeiten, sehen Sie, wie die ECID zum [Verfolgen von Besuchern zwischen einer App und dem Mobile Web](https://docs.adobe.com/content/help/de-DE/mobile-services/ios/sdk-reference-ios/hybrid-app.html) verwendet wird.
 
-Die Bereitstellung dieser Werkzeuge kann einfach und leicht zu verwalten sein, wenn Sie [Adobe Launch](https://docs.adobe.com/content/help/de-DE/launch/using/overview.html)verwenden.
+Die Bereitstellung der Tools ist einfach und leicht zu verwalten, wenn Sie [Adobe Launch](https://docs.adobe.com/content/help/de-DE/launch/using/overview.html) verwenden.
 
-Informationen zur Verwendung der ECID für die GDPR-Konformität finden Sie auch in der Dokumentation [zum](../privacy-service/identity-data.md) Privacy Service.
+Weiterführende Informationen zur Verwendung der ECID für DSGVO-Konformität finden Sie in der [Dokumentation zum Privacy Service](../privacy-service/identity-data.md).
 
