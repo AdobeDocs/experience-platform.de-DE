@@ -66,7 +66,7 @@ You can use [!DNL Query Service] to build data analysis ecosystems, creating a p
 | Funktion | Beschreibung |
 | -----------| ---------- |
 | Verbesserungen bei [!DNL Query Editor] | Es wurde eine Speicherfunktion hinzugefügt, mit der Sie eine Abfrage speichern und später daran arbeiten können. Es wurde eine Registerkarte &quot;Durchsuchen&quot;zur [!DNL Query Service] Benutzeroberfläche auf Adobe Experience Platform hinzugefügt, die Abfragen anzeigt, die von Benutzern in Ihrem Unternehmen gespeichert wurden. Es wurde ein Bedienfeld mit Details zur Abfrage implementiert, in dem nützliche Metadaten zur angezeigten Abfrage angezeigt werden. |
-| Neue Zuordnungsfunktionen | Von Adobe definierte Funktionen in [!DNL Query Service] der Abfrage für die Zuordnung von Kanälen mit Ablaufparametern. |
+| Neue Zuordnungsfunktionen | Adobe-definierte Funktionen in [!DNL Query Service] der Abfrage für die Zuordnung von Kanälen mit Ablaufparametern. |
 | Verbesserungen der SQL-Syntax | Unterstützung der &quot;Gefällt mir&quot;-Syntax. |
 | Generieren von Datensätzen mit einem definierten XDM-Schema | Es wurde eine neue Klausel in &quot;Tabelle erstellen&quot;zu den Abfragen &quot;Auswählen&quot;(CTAS) hinzugefügt, mit der Sie ein Zielgruppe-Schema angeben können. |
 
