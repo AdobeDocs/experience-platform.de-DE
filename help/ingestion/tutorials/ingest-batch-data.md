@@ -18,7 +18,7 @@ Adobe Experience Platform allows you to easily import data into [!DNL Platform] 
 
 ## Erste Schritte
 
-Zum Absolvieren dieses Tutorials benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 Wenn Sie Daten lieber mit Data Ingestion-APIs erfassen möchten, lesen Sie zunächst das [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
 
@@ -34,7 +34,7 @@ Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbere
 
 ![Alle Datensätze anzeigen](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
-## Datensatz erstellen
+## Erstellen eines Datensatzes
 
 Um einen Datensatz zu erstellen, klicken Sie in der oberen rechten Ecke des Arbeitsbereichs „Datensätze“ auf **[!UICONTROL Datensatz erstellen]**.
 
