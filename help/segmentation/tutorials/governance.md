@@ -31,11 +31,11 @@ This tutorial requires a working understanding of the following components of [!
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
-### Lesehilfe für Beispiel-API-Aufrufe
+### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte der zu verwendenden Kopfzeilen
+### Sammeln von Werten für erforderliche Kopfzeilen
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
@@ -51,13 +51,13 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 - Content-Type: application/json
 
 ## Look up a merge policy for a segment definition {#merge-policy}
 
-Dieser Workflow beginnt mit dem Zugriff auf ein bekanntes Zielgruppensegment. Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment aufgenommen werden sollen, die wiederum alle zutreffenden Datennutzungsbezeichnungen enthalten.
+Dieser Workflow beginnt mit dem Zugriff auf ein bekanntes Zielgruppensegment. Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datennutzung enthalten.
 
 Using the [!DNL Segmentation] API, you can look up a segment definition by its ID to find its associated merge policy.
 
@@ -178,7 +178,7 @@ Eine erfolgreiche Antwort gibt die Details der Zusammenführungsrichtlinie zurü
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `schema.name` | Der Name des Schemas, das der Zusammenführungsrichtlinie zugeordnet ist. |
-| `attributeMerge.type` | Der Konfigurationstyp für die Datenpriorität für die Zusammenführungsrichtlinie. Wenn der Wert `dataSetPrecedence` ist, werden die mit dieser Zusammenführungsrichtlinie verknüpften Datensätze unter `attributeMerge > data > order` aufgelistet. Wenn der Wert `timestampOrdered`ist, werden alle Datensätze, die mit dem in `schema.name` referenzierten Schema verknüpft sind, von der Richtlinie verwendet. |
+| `attributeMerge.type` | Der Konfigurationstyp für die Datenpriorität für die Zusammenführungsrichtlinie. Wenn der Wert `dataSetPrecedence` ist, werden die mit dieser Zusammenführungsrichtlinie verknüpften Datensätze unter `attributeMerge > data > order` aufgelistet. Wenn der Wert `timestampOrdered` ist, werden alle Datensätze, die mit dem in `schema.name` referenzierten Schema verknüpft sind, von der Richtlinie verwendet. |
 | `attributeMerge.data.order` | Wenn `attributeMerge.type` `dataSetPrecedence` ist, ist dieses Attribut ein Array, das die IDs der von dieser Zusammenführungsrichtlinie verwendeten Datensätze enthält. Diese IDs werden im nächsten Schritt verwendet. |
 
 ## Bewerten Sie Datensätze für Richtlinienverletzungen.
@@ -189,7 +189,7 @@ Eine erfolgreiche Antwort gibt die Details der Zusammenführungsrichtlinie zurü
 
 Nachdem Sie die IDs der Quelldatasets der Richtlinie zur Zusammenführung erhalten haben, können Sie diese Datensätze mit der [DUL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gegen bestimmte Marketingaktionen auswerten, um Verstöße gegen die Datenverwendungsrichtlinie zu prüfen.
 
-Zur Auswertung der Datensätze müssen Sie den Namen der Marketingaktion im Pfad einer POST-Anforderung angeben und gleichzeitig die DataSet-IDs im Anforderungstext bereitstellen, wie im Beispiel unten dargestellt.
+Zur Auswertung der Datensätze müssen Sie den Namen der Marketingaktion im Pfad einer Anforderung zur POST angeben und gleichzeitig die Datensatzkennungen im Anforderungstext bereitstellen, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
