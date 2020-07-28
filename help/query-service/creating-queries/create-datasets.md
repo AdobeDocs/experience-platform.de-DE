@@ -22,7 +22,7 @@ The true power of [!DNL Query Service] is revealed when queries are used to gene
 2. Log in to the [!DNL Platform] UI and go to Queries.
 3. Suchen Sie Ihre Abfrage in der Liste und bewegen Sie den Mauszeiger über die Zeile.
 4. Klicken Sie auf **[!UICONTROL Datensatz erstellen]**. ![Bild](../images/queries/create-datasets/click-create-dataset.png)
-5. Geben Sie einen Namen für den Datensatz, dem Ihre LDAP-ID vorangestellt wird (muss nicht eindeutig oder SQL-sicher sein). Das System erzeugt anhand des hier angegebenen Namens einen „Tabellennamen“).
+5. Geben Sie einen Namen für den Datensatz, dem Ihre LDAP-ID vorangestellt wird (muss nicht eindeutig oder SQL-sicher sein. Das System erzeugt anhand des hier angegebenen Namens einen „Tabellennamen“).
 6. Geben Sie eine Beschreibung für den Datensatz ein und klicken Sie dann auf **[!UICONTROL Abfrage ausführen]**.![Bild](../images/queries/create-datasets/run-query.png)
 7. Warten Sie, bis die Abfrage abgeschlossen ist, und rufen Sie dann die Seite mit der Datensatzliste auf, um den gerade erstellten Datensatz anzuzeigen.
 
