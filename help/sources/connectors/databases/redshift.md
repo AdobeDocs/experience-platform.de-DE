@@ -57,7 +57,7 @@ Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbi
 
 ## Verbindung [!DNL Amazon Redshift] mit [!DNL Platform] APIs
 
-- [Erstellen eines Amazon Redshift-Connectors mithilfe der Flow Service API](../../tutorials/api/create/databases/redshift.md)
+- [Erstellen eines Amazon Redshift-Connectors mit der Flow Service API](../../tutorials/api/create/databases/redshift.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
