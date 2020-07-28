@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -24,8 +24,8 @@ Führen Sie zum Exportieren von Daten die folgenden Schritte aus:
 
 Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Speicher-Zielen, einschließlich SFTP, finden Sie unter [Workflow für Cloud-Speicher-Ziele](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
 
-Geben Sie für SFTP-Ziele im Arbeitsablauf zum Erstellen des Ziels im Schritt **Authentifizierung** die folgenden Informationen ein:
+Geben Sie für SFTP-Ziele im Workflow zur Erstellung eines Ziels im Schritt **Authentifizierung** die folgenden Daten ein:
 
-* **Host**: die Adresse Ihrer SFTP-Datenspeicherung
-* **Benutzername**: der Benutzername, um sich bei Ihrem SFTP-Datenspeicherung-Speicherort anzumelden
-* **Kennwort**: das Kennwort zum Anmelden beim Speicherort der SFTP-Datenspeicherung
+* **Host**: die Adresse Ihres SFTP-Speicherorts
+* **Benutzername**: der Benutzername, mit dem Sie sich bei Ihrem SFTP-Speicherort anmelden
+* **Passwort**: das Passwort, mit dem Sie sich beim SFTP-Speicherort anmelden
