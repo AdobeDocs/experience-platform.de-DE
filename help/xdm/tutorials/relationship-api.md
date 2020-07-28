@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Beziehung zwischen zwei Schemas mithilfe der Schemaregistrierungs-API definieren
+title: Beziehung zwischen zwei Schemas mithilfe der Schema Registry-API definieren
 topic: tutorials
 translation-type: tm+mt
 source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
 workflow-type: tm+mt
 source-wordcount: '1274'
-ht-degree: 49%
+ht-degree: 47%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 49%
 # Define a relationship between two schemas using the [!DNL Schema Registry] API
 
 
-Die Fähigkeit, Beziehungen zwischen Ihren Kunden und ihren Interaktionen mit Ihrer Marke über verschiedene Kanäle hinweg zu verstehen, ist ein wichtiger Bestandteil von Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
+Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
 Während Schema-Beziehungen durch die Verwendung des Vereinigung-Schemas abgeleitet werden können, gilt [!DNL Real-time Customer Profile]dies nur für Schema, die dieselbe Klasse gemeinsam haben. Zur Herstellung einer Beziehung zwischen zwei Schemas, die zu verschiedenen Klassen gehören, muss einem Quell-Schema ein dediziertes **Beziehungsfeld** hinzugefügt werden, das auf die Identität eines Ziel-Schemas verweist.
 
@@ -30,7 +30,7 @@ Dieses Tutorial erfordert ein funktionierendes Verständnis von [!DNL Experience
 * [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Als Vorbereitung für dieses Tutorial sollten Sie im [Entwicklerhandbuch](../api/getting-started.md) die wichtigsten Themen rund um die konkrete Vorgehensweise für Aufrufe der API durchgehen. [!DNL Schema Registry] This includes your `{TENANT_ID}`, the concept of &quot;containers&quot;, and the required headers for making requests (with special attention to the [!DNL Accept] header and its possible values).
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. This includes your `{TENANT_ID}`, the concept of &quot;containers&quot;, and the required headers for making requests (with special attention to the [!DNL Accept] header and its possible values).
 
 ## Quell- und Zielschema definieren {#define-schemas}
 
@@ -240,7 +240,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder die `meta:altId` des Quellschemas. |
+| `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder `meta:altId` des Quellschemas. |
 
 **Anfrage**
 
@@ -391,7 +391,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenzdeskriptor
 
 ## Beziehungsdeskriptor erstellen {#create-descriptor}
 
-Beziehungsdeskriptoren stellen eine Eins-zu-Eins-Beziehung zwischen einem Quellschema und einem Zielschema her. Nachdem Sie einen Referenz-Deskriptor für das Ziel-Schema definiert haben, können Sie einen neuen Beziehungsdeskriptor erstellen, indem Sie eine POST-Anforderung an den `/tenant/descriptors` Endpunkt senden.
+Beziehungsdeskriptoren stellen eine Eins-zu-Eins-Beziehung zwischen einem Quellschema und einem Zielschema her. Nachdem Sie einen Referenz-Deskriptor für das Ziel-Schema definiert haben, können Sie einen neuen Beziehungsdeskriptor erstellen, indem Sie eine POST an den `/tenant/descriptors` Endpunkt anfordern.
 
 **API-Format**
 
