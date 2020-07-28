@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 32%
+ht-degree: 30%
 
 ---
 
 
 # Auflisten von Ressourcen
 
-Sie können eine Liste aller [!DNL Schema Registry] Ressourcen eines bestimmten Typs (Klassen, Mixins, Schema, Datentypen oder Deskriptoren) in einem Container durch eine GET-Anforderung erstellen.
+Sie können eine Liste aller [!DNL Schema Registry] Ressourcen eines bestimmten Typs (Klassen, Mixins, Schemas, Datentypen oder Deskriptoren) in einem Container durch eine einzige GET durchführen.
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Zu den gebräuchlichsten Parametern für die Abfrage von Paging gehören:
 | Parameter | Beschreibung |
 | --- | --- |
 | `start` | Geben Sie an, wo die aufgelisteten Ergebnisse beginnen sollen. Dieser Wert kann aus dem `_page.next` Attribut einer Liste-Antwort abgerufen und für den Zugriff auf die nächste Ergebnisseite verwendet werden. Wenn der `_page.next` Wert null ist, ist keine zusätzliche Seite verfügbar. |
-| `limit` | Beschränken Sie die Anzahl der zurückgegebenen Ressourcen. Beispiel: `limit=5` gibt eine Liste von fünf Ressourcen zurück. |
+| `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Ressourcen zurück. |
 | `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Das Hinzufügen von `-` vor dem Titel (`orderby=-title`) sortiert die Ergebnisse nach Titel in absteigender Reihenfolge (Z-A). |
 
 ### Filter {#filtering}
