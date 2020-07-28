@@ -30,7 +30,7 @@ Sie können eine Liste aller Exportaufträge für Ihre IMS-Organisation abrufen,
 
 **API-Format**
 
-Der `/export/jobs` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Exportaufträge abgerufen. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`).
+Der `/export/jobs` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Exportaufträge abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /export/jobs
@@ -43,7 +43,7 @@ GET /export/jobs?status={STATUS}
 | --------- | ----------- |
 | `{LIMIT}` | Gibt die Zahl der zurückgegebenen Exportaufträge an. |
 | `{OFFSET}` | Gibt den Versatz der Ergebnisseiten an. |
-| `{STATUS}` | Filtert die Ergebnisse auf der Grundlage des Status. Die unterstützten Werte sind &quot;NEW&quot;, &quot;SUCCEEDED&quot;und &quot;FAILED&quot;. |
+| `{STATUS}` | Filtert die Ergebnisse anhand ihres Status. Die unterstützten Werte sind &quot;NEW&quot;, &quot;SUCCEEDED&quot;und &quot;FAILED&quot;. |
 
 **Anfrage**
 
@@ -475,7 +475,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum
 
 ## Bestimmten Exportauftrag abbrechen oder löschen {#delete}
 
-Sie können den angegebenen Exportauftrag löschen, indem Sie eine DELETE-Anforderung an den `/export/jobs` Endpunkt senden und die ID des Exportauftrags angeben, den Sie im Anforderungspfad löschen möchten.
+Sie können anfordern, den angegebenen Exportauftrag zu löschen, indem Sie eine DELETE-Anforderung an den `/export/jobs` Endpunkt senden und die ID des Exportauftrags angeben, den Sie im Anforderungspfad löschen möchten.
 
 **API-Format**
 
