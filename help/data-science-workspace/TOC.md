@@ -1,29 +1,29 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Hilfe zu Adobe Experience Platform Data Science Workspace
+user-guide-title: Adobe Experience Platform Data Science Workspace - Hilfe
 translation-type: tm+mt
 source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 4%
+ht-degree: 52%
 
 ---
 
 
-# Data Science-Arbeitsbereich {#data-science-workspace}
+# Data Science Workspace {#data-science-workspace}
 
 * [Übersicht über den Data Science Workspace](home.md)
-* [Anleitung zum Data Science Workspace](walkthrough.md)
+* [Anleitung für Data Science Workspace](walkthrough.md)
 * JupyterLab-Notebooks {#jupyterlab}
    * [JupyterLab-Benutzerhandbuch](jupyterlab/overview.md)
    * [Analysieren Ihrer Daten mithilfe von Notebooks](jupyterlab/analyze-your-data.md)
-   * [Abfrage-Service für Jupyter-Notebooks](jupyterlab/query-service.md)
-   * [Erstellen eines Skripts mit Jupyter-Notebooks](jupyterlab/create-a-recipe.md)
+   * [Query Service in Jupyter Notebooks](jupyterlab/query-service.md)
+   * [Rezept erstellen mit Jupyter Notebooks](jupyterlab/create-a-recipe.md)
    * [Zusammenarbeit in JupyterLab mit Git](jupyterlab/using-git-for-collaboration.md)
-* Sensei Machine Learning API {#api}
+* Sensei Machine Learning-API {#api}
    * [Erste Schritte](api/getting-started.md)
-   * [Motoren](api/engines.md)
+   * [Engines](api/engines.md)
    * [MLInstances (recipes)](api/mlinstances.md)
    * [Experimente](api/experiments.md)
    * [Modelle](api/models.md)
@@ -39,27 +39,27 @@ ht-degree: 4%
    * [Rezept für Produktempfehlungen](pre-built-recipes/product-recommendations.md)
    * [Prognosen zum Produktkauf](pre-built-recipes/product-purchase-prediction.md)
    * [Rezept für Einzelhandel](pre-built-recipes/retail-sales.md)
-* Modellerstellung {#authoring}
+* Model Authoring {#authoring}
    * [Modell-Authoring-SDK](authoring/sdk.md)
-   * [Funktionsebenen erstellen](authoring/feature-pipeline.md)
+   * [Erstellen einer Feature Pipeline](authoring/feature-pipeline.md)
    * [Platform SDK-Handbuch (Python)](authoring/platform-sdk.md)
 * Modell- und Rezeptutorials {#models-recipes}
    * [Exemplarische Vorgehensweise zum Erstellen und Veröffentlichen eines maschinellen Lernmodells](models-recipes/create-publish-model.md)
    * [Erstellen des Schemas und Datensatzes für den Einzelhandel](models-recipes/create-retails-sales-dataset.md)
-   * [Schema und Datensätze zu Vorschauen](models-recipes/preview-schema-data.md)
+   * [Vorschau auf Schemas und Datensätze](models-recipes/preview-schema-data.md)
    * [Verpacken von Quelldateien in einem Rezept](models-recipes/package-source-files-recipe.md)
-   * [Verpacktes Rezept importieren (UI)](models-recipes/import-packaged-recipe-ui.md)
+   * [Gepacktes Rezept importieren (Benutzeroberfläche)](models-recipes/import-packaged-recipe-ui.md)
    * [Verpacktes Rezept (API) importieren](models-recipes/import-packaged-recipe-api.md)
-   * [Erstellen und Auswerten eines Modells (UI)](models-recipes/train-evaluate-model-ui.md)
-   * [Erstellen und Auswerten eines Modells (API)](models-recipes/train-evaluate-model-api.md)
-   * [Modellbewertung (UI)](models-recipes/score-model-ui.md)
-   * [Modellbewertung (API)](models-recipes/score-model-api.md)
-   * [Optimieren eines Modells](models-recipes/optimize-model.md)
-   * [Steigerung des Echtzeit-Profils von Kunden durch Einblicke in das maschinelle Lernen](models-recipes/enrich-profile.md)
-   * [Veröffentlichen eines Modells als Dienst (Benutzeroberfläche)](models-recipes/publish-model-service-ui.md)
+   * [Modell erstellen und bewerten (UI)](models-recipes/train-evaluate-model-ui.md)
+   * [Schulung und Auswertung eines Modells (API)](models-recipes/train-evaluate-model-api.md)
+   * [Bewerten eines Modells (Benutzeroberfläche)](models-recipes/score-model-ui.md)
+   * [Scoring für ein Modell vornehmen (API)](models-recipes/score-model-api.md)
+   * [Modell optimieren](models-recipes/optimize-model.md)
+   * [Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen anreichern](models-recipes/enrich-profile.md)
+   * [Modell als Service veröffentlichen (Benutzeroberfläche)](models-recipes/publish-model-service-ui.md)
    * [Veröffentlichen eines Modells als Dienst (API)](models-recipes/publish-model-service-api.md)
    * [Planen der automatisierten Schulung und Auswertung eines Dienstes (UI)](models-recipes/schedule-models-ui.md)
 * [Migrationshandbücher für Rezept und Notebooks](recipe-notebook-migration.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
+* [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
