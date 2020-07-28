@@ -14,7 +14,7 @@ ht-degree: 73%
 
 # [!DNL Data Governance]Übersicht
 
-Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen definiert werden. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies.
+Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies.
 
 Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
@@ -68,7 +68,7 @@ Das DULE-Framework enthält vordefinierte Datenverwendungsbeschriftungen, mit de
 >
 >Eine vollständige Liste der verfügbaren Bezeichnungen sowie Definitionen für jeden Bezeichnungstyp finden Sie im Handbuch zu [unterstützten Datennutzungsbezeichnungen](labels/reference.md).
 
-Bezeichnungen können jederzeit angewendet werden, was eine flexible Datenverwaltung ermöglicht. Best practice encourages labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available in [!DNL Platform].
+Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best practice encourages labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available in [!DNL Platform].
 
 Weitere Informationen finden Sie in der Übersicht über die Beschriftungen [zur](./labels/overview.md) Datenverwendung.
 
@@ -82,7 +82,7 @@ Once data usage labels have been applied, data stewards can create policies usin
 
 >[!IMPORTANT]
 >
->Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren.
+>Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren.
 
 Weitere Informationen zu Datenverwendungsrichtlinien und Marketingaktionen finden Sie in der [Richtlinienübersicht](./policies/overview.md).
 
