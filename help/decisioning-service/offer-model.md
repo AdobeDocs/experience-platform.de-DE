@@ -1,153 +1,153 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Angebot-Entscheidungsdomänenmodell
+title: Domain-Modell für Angebotsentscheidungen
 topic: overview
 translation-type: tm+mt
 source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
 source-wordcount: '2614'
-ht-degree: 0%
+ht-degree: 97%
 
 ---
 
 
-# Übersicht über das Angebot-Entscheidungsdomänenmodell
+# Übersicht über das Domain-Modell für Angebotsentscheidungen
 
-Bei der Angebot-Entscheidungsfindung handelt es sich um einen Anwendungsfall, bei dem Sie die Regeln und Prognosen für die Kundenbindung mit Angeboten formalisieren und zentral verwalten [!DNL Decisioning Service] können. Angebot-Entscheidungsfindung wird als eine Art von _**Inhaltsentscheidung**_ betrachtet. In diesem Fall werden die _**Entscheidungsoptionen**_ als _**Angebot**_ bezeichnet und als solche durch den ihnen beigefügten Inhalt gekennzeichnet. Eine Einführung in das Objektmodell, das von der verwendet wird, [!DNL Decisioning Service]finden Sie unter [Entscheidungsdienst-Domänenmodell](experience-model.md).
+Offer decisioning is a use case of [!DNL Decisioning Service] within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. Angebotsentscheidungen werden als eine Art von _**Inhaltsentscheidung**_ betrachtet. In diesem Fall werden die _**Entscheidungsoptionen**_ als _**Angebote**_ bezeichnet und sind als solche durch den ihnen beigefügten Inhalt gekennzeichnet. For an introduction of the object model used by the [!DNL Decisioning Service], please refer to [Decisioning Service Domain Model](experience-model.md).
 
-Ziel ist es, dem Endbenutzer in jedem Kanal ein &quot;bestes Angebot&quot;auf der Grundlage von Targeting-Kriterien, Kosten- und Frequenzbeschränkungen sowie vorherigen Interaktionen zwischen Kanälen, einschließlich der zuvor vorgeschlagenen Angebot, bereitzustellen.
+Ziel ist es, dem Endbenutzer auf Grundlage von Targeting-Kriterien, Kosten- und Frequenzbegrenzungen sowie vorherigen Interaktionen auf verschiedenen Kanälen (einschließlich zuvor vorgeschlagener Angebote) in jedem Kanal ein „bestes Angebot“ zu unterbreiten.
 
-Wie bei allen Entscheidungs-Anwendungsfällen werden die Entscheidungsoptionen (Angebot) in einem Repository verwaltet, das von einer beliebigen Anzahl von Anwendungen gemeinsam genutzt wird. Angebot können von verschiedenen Abteilungen Ihrer Organisation oder von Partnern erstellt werden, und diese Angebot können täglich hinzugefügt und entfernt werden.
+Wie bei allen Entscheidungsfällen werden die Entscheidungsoptionen (Angebote) in einem Repository verwaltet, das von einer beliebigen Anzahl von Anwendungen gemeinsam genutzt wird. Angebote können von verschiedenen Abteilungen Ihrer Organisation oder von Partnern erstellt werden; diese Angebote lassen sich täglich hinzufügen und entfernen.
 
-Angebot werden visuell durch die Anwendung, die das Erlebnis bereitstellt, in größere Erlebnisse eingefügt. _**Platzierungen**_, manchmal auch als Plätze oder Slots bezeichnet, sind wichtige Komponenten für die Erstellung einer Strategie. Die Entwicklung einer Angebot-Strategie führt oft zu Beginn mit der Definition dieser Platzierungen. Ein Angebot verfügt in der Regel über mehrere _**Inhaltsdarstellungen**_ , sodass es korrekt in eine Vielzahl von Erlebnissen integriert werden kann, bei denen jedes unterschiedliche dimensionale oder andere Einschränkungen hat und unterschiedliche Medienformate erfordert.
+Angebote werden von der Anwendung, die das Erlebnis bereitstellt, visuell in größere Erlebnisse eingefügt. _**Platzierungen**_, manchmal auch als Positionen oder Slots bezeichnet, sind wichtige Komponenten bei der Erstellung einer Strategie. Die Entwicklung einer Angebotsstrategie beginnt oft mit der Definition dieser Platzierungen. Ein Angebot verfügt in der Regel über mehrere _**Inhaltsdarstellungen**_, sodass es in verschiedene Erlebnisse richtig integriert werden kann. Jedes von ihnen weist unterschiedliche Dimensions- oder andere Begrenzungen auf und erfordert andere Medienformate.
 
-Angebote haben oft einen Zusammenhang mit Waren oder Dienstleistungen und es geht um eine Kostenberechnung. Eine Organisation muss in der Lage sein, die Ressourcen, die von Angeboten verbraucht werden, zu begrenzen, und muss daher in der Lage sein, die Gesamtanzahl der Vorschläge für ein Angebot zu _**begrenzen**_ .
+Angebote sind häufig mit Waren oder Dienstleistungen verknüpft und es gibt eine Kostenberechnung. Eine Organisation muss in der Lage sein, die Ressourcen, die von Angeboten verbraucht werden, zu beschränken, und muss daher die Möglichkeit haben, die Gesamtanzahl der Vorschläge für ein Angebot zu _**begrenzen**_.
 
-Der prognostizierte Wert eines akzeptierten Angebots für das Unternehmen ist das Optimierungskriterium und steht im Widerspruch zu den Kosten für die Erstellung eines Angebots. Kosten, Annahmewahrscheinlichkeit und voraussichtlicher Wert werden zur Rangordnung der Angebot verwendet. Das beste Angebot ist das mit den höchsten prognostizierten positiven Auswirkungen auf die Ziele Ihrer Angebot-Aktivitäten.
+Der prognostizierte Wert eines akzeptierten Angebots für die Organisation ist das Optimierungskriterium und steht den Kosten für die Abgabe eines Angebots gegenüber. Kosten, Annahmewahrscheinlichkeit und voraussichtlicher Wert werden zur Anordnung der Angebote verwendet. Das beste Angebot ist das mit den höchsten prognostizierten positiven Auswirkungen auf die Ziele Ihrer Angebotsaktivitäten.
 
-Bei der Angebot-Entscheidungsfindung werden die Interaktionen berücksichtigt, die ein Endbenutzer _**über viele Kanal**_ und Anwendungen hinweg hatte, und es werden die Daten des Profil- und Erlebnis-Ereignisses eines Endbenutzers genutzt. Beispielsweise kann eine Call-Center-Anwendung mithilfe der Angebot-Entscheidungsfunktion ein Angebot aktivieren oder unterdrücken, das auf Käufen und Rezensionen basiert, die vom Endbenutzer veröffentlicht wurden. oder eine E-Mail-Management-Anwendung kann sich darauf verlassen, dass Angebot-Entscheidungsfindung das Nächste Beste Angebot in einem wöchentlichen Newsletter auswählt, basierend auf dem Browserverlauf auf einer Website.
+Bei Angebotsentscheidungen werden die Interaktionen, die ein Endbenutzer _**über verschiedene Kanäle**_ und Anwendungen hinweg hatte, sowie die Profil- und Erlebnisereignisdaten des Endbenutzers berücksichtigt. Beispielsweise kann eine Callcenter-Anwendung mithilfe der Angebotsentscheidung ein Angebot aktivieren oder unterdrücken, je nachdem, was der Endbenutzer gekauft und welche Reviews er veröffentlicht hat. Alternativ kann sich eine E-Mail-Verwaltungsanwendung darauf verlassen, dass die Angebotsentscheidung je nach dem Browser-Verlauf auf einer Website das „nächste beste Angebot“ in einem wöchentlichen Newsletter auswählt.
 
-Angebote haben andere interessante Eigenschaften. Häufig gibt es einen definierten _**Zeitplan**_ oder einen Datums- und Zeitbereich, wann das Angebot gültig ist und wann das Angebot ungültig gemacht werden muss.
+Angebote verfügen über andere interessante Eigenschaften. Häufig gibt es einen definierten _**Zeitplan**_ oder Datums- und Zeitbereich, in dem das Angebot gültig ist und bis zu dem das Angebot annulliert werden muss.
 
-Schließlich verschlechtert sich die Attraktivität eines Angebots mit der Häufigkeit seiner Darstellung. Ein Angebot, das nicht akzeptiert wird, nachdem es wiederholt vorgeschlagen wurde, ist eine verlorene Chance, weil ein anderes Angebot hätte vorgelegt werden können. Aus diesem Grund muss die _**Ermüdung**_ der Endbenutzer beherrscht werden.
+Schließlich reduziert sich die Attraktivität eines Angebots mit der Häufigkeit seiner Darstellung. Ein Angebot, das nicht angenommen wird, nachdem es wiederholt vorgeschlagen wurde, ist eine verlorene Chance, weil stattdessen ein anderes Angebot hätte angezeigt werden können. Aus diesem Grund muss die _**Ermüdung**_ von Endbenutzern verwaltet werden.
 
-## Entscheidungsstrategie für Angebote auf einen Blick
+## Strategie für Angebotsentscheidungen auf einen Blick
 
-Der Gesamtansatz besteht darin, die Auswahl der Angebot einzugrenzen, bis alle Einschränkungen erfüllt sind, dann das Rangmodell auf die verbleibenden Optionen anzuwenden und dann mithilfe von Einschränkungen (Deduplizierung und Vermeidung von Ausweichmöglichkeiten) über mehrere Aktivitäten hinweg zu optimieren.
+Der übergeordnete Ansatz besteht darin, die Auswahl der Angebote einzugrenzen, bis alle Begrenzungen erfüllt sind, dann das Ranking-Modell auf die verbleibenden Optionen anzuwenden und schließlich mithilfe von Begrenzungen (Deduplizierung und Vermeidung von Fallback-Optionen) über verschiedene Aktivitäten hinweg zu optimieren.
 
 | Strategiekomponente | Realisiert als |
 | --- | --- |
-| Entscheidungs-Aktivitäten | Angebot-Aktivitäten |
+| Entscheidungsaktivitäten | Angebotsaktivitäten |
 | Entscheidungsoptionen | Angebot mit Inhaltsdarstellungen |
-| Ausweichoptionen | Fallback-Angebot mit Inhaltsdarstellungen |
-| Endgültige Reihe von Entscheidungsoptionen | Angebot-Inventar (auch bekannt als Angebot-Bibliothek) |
-| Topische Kategorien | Angebot-Filter basierend auf Tags und Angebot-IDs |
-| Entscheidungsergebnisse | Vorschlag eines Angebots pro Aktivität für mehrere Aktivitäten gleichzeitig |
-| Entscheidungsergebnisse | Erwartetes Erlebnis-Ereignis mit Verweis auf das Angebot, z. `eventType='opened'` |
+| Fallback-Optionen | Fallback-Angebot mit Inhaltsdarstellungen |
+| Endlicher Satz von Entscheidungsoptionen | Angebotsinventar (auch Angebotsbibliothek genannt) |
+| Topische Kategorien | Angebotsfilter basierend auf Tags und Angebotskennungen |
+| Entscheidungsausgaben | Vorschlagen eines Angebots pro Aktivität für mehrere Aktivitäten auf einmal |
+| Entscheidungsergebnisse | Erwartetes Erlebnisereignis mit Verweis auf das Angebot, z. B. `eventType='opened'` |
 | Entscheidungsalgorithmus | Interne Dienstlogik, parametrisiert |
-| Einschränkungen | Platzierungsbeschränkungen, Kalendereinschränkungen, Einschränkungen für globale und pro Benutzer-Capping, Deduplizierungseinschränkungen |
+| Begrenzungen | Platzierungsbegrenzungen, kalendarische Begrenzungen, globale Begrenzungen und pro Benutzer, Deduplizierungsbegrenzungen |
 | Entscheidungsregeln | Eignungsregeln |
-| Modell für *erwartetes Dienstprogramm* | Angebot-Rang oder -Priorität |
+| Modell für *erwartetes Dienstprogramm* | Angebotsrang oder -priorität |
 
-Die Gesamtzahl der Angebot im Bestand an Optionen ist in der Regel recht groß (in der Größenordnung von 10.000), und jede Angebot-Aktivität kann sich auf Angebot konzentrieren, die in eine andere Kategorie fallen (Thema). Die Angebot-Entscheidungsstrategie ermöglicht das Anhängen eines Angebot-Filters an eine Angebot-Aktivität. Weitere Einschränkungen werden zum Zeitpunkt der Anforderung der Entscheidung bewertet.
-In den folgenden Abschnitten werden die Komponenten für die Angebot-Entscheidungsdomäne detailliert erläutert.
+Die Gesamtzahl der Angebote im Optionsinventar ist in der Regel recht groß (in der Größenordnung von 10.000en); jede Angebotsaktivität kann sich ggf. auf Angebote konzentrieren, die in eine andere Kategorie fallen (Thema). Die Strategie für Angebotsentscheidungen ermöglicht das Beifügen eines Angebotsfilters zu einer Angebotsaktivität. Weitere Begrenzungen werden zum Zeitpunkt der Anforderung der Entscheidung bewertet.
+In den folgenden Abschnitten werden die Komponenten für die Angebotsentscheidungs-Domain detailliert erläutert.
 
 ## Allgemeine Angebote
 
-Allgemeine Angebote, auch als personalisierte Angebote bezeichnet, stehen im Mittelpunkt der Aktivitäten der Angebote. Sie haben Attribute wie Name und Status. Das Statusattribut gibt an, ob die Entität bereit ist, in die Liste aktiver genehmigter Angebot aufgenommen zu werden. Allgemeine Angebote werden mehrere Einschränkungen haben. Mehr dazu in Abschnitt ‎ Einschränkungen [unten](#offer-constraints).
+Allgemeine Angebote, auch als personalisierte Angebote bezeichnet, stehen im Mittelpunkt der Aktivitäten von Angebotsentscheidungen. Sie weisen Attribute wie Name und Status auf. Das Statusattribut gibt an, ob die Entität bereit ist, in die Liste aktiver genehmigter Angebote aufgenommen zu werden. Allgemeinen Angeboten werden unterschiedliche Begrenzungen hinzugefügt. Siehe mehr dazu im Abschnitt ‎[Begrenzungen](#offer-constraints) unten.
 
 ## Inhalt in Angeboten
 
-### Praktika für Angebote
+### Angebotsplatzierungen
 
-Platzierungen definieren Inhaltsbeschränkungen und geben mit einer Aktivität den Ort an, an dem das nächste beste Erlebnis bereitgestellt wird. Dies verringert die Anzahl der Optionen, die in Betracht gezogen werden können, und stellt eine weitere Einschränkung dar, die von der Aktivität auferlegt wird. Dies wird als Platzierungsbeschränkung bezeichnet. Es werden nur Optionen in Betracht gezogen, bei denen Inhalt eine Platzierungseinschränkung erfüllt, z. B. Angebote. Dies wird in den frühen Phasen der Entscheidungsstrategie bewertet. Wenn Optionsobjekte die Platzierungseinschränkungen jeder Aktivität ändern, werden diese neu bewertet und die Option kann für eine oder mehrere Aktivitäten in Betracht gezogen oder ausgeschlossen werden.
+Platzierungen definieren Inhaltsbegrenzungen und werden mit einer Aktivität genutzt, um die Position anzugeben, an der das nächste beste Erlebnis bereitgestellt wird. Dies verringert die Anzahl der Optionen, die in Betracht gezogen werden können, weiter und stellt eine weitere Begrenzung dar, die von der Aktivität auferlegt wird. Dies wird als Platzierungsbegrenzung bezeichnet. Es werden nur Optionen in Betracht gezogen, die Inhalte aufweisen, die eine Platzierungsbegrenzung erfüllen (z. B. Angebote). Dies wird in den frühen Phasen der Entscheidungsstrategie ausgewertet. Wenn sich Optionsobjekte ändern, werden die Platzierungsbegrenzungen der einzelnen Aktivitäten neu bewertet und kann die Option für eine oder mehrere Aktivitäten in Betracht gezogen oder ausgeschlossen werden.
 
-Es liegt nicht in der Verantwortung des [!DNL Decisioning Service] Unternehmens, die komplexen Details der Inhaltsabhängigkeiten zu formalisieren. Stattdessen identifiziert jeder Kunde die Liste der Platzierungen in allen Kanälen und gibt diesen Platzierungen eindeutige Bezeichner und Namen. Durch Verweis auf eine bestimmte Platzierung bestätigt der Designer, dass der angegebene Inhalt in die Platzierung passt.
+It is not the responsibility of the [!DNL Decisioning Service] to formalize the complex details of content dependencies. Stattdessen ermittelt jeder Client die Liste der Platzierungen in allen Kanälen und gibt diesen Platzierungen eindeutige Kennungen und Namen. Durch Verweis auf eine bestimmte Platzierung bestätigt der Designer, dass der angegebene Inhalt in die Platzierung passt.
 
-Wenn Inhalte entwickelt werden, wird der Angebot-Marketingspezialist und der Inhaltsentwickler einfach einen &quot;impliziten Vertrag&quot;vereinbaren, der hinter dem Namen &quot;Startseite Hero Image&quot;oder &quot;Service Call Open Script&quot;steht. Das erste Bild kann als Bild von 600 px Breite und 350 px Höhe vereinbart werden, und das zweite kann den Inhalt auf Text in zwei Sprachvarianten beschränken, die nicht mehr als 50 Wörter in drei oder vier Sätzen mit semantischer Struktur sind. Platzierung, um nicht die gesamte Bedeutung des ausgeblendeten Vertrags zu speichern.
+Bei der Entwicklung von Inhalten müssen der Angebots-Marketer und der Inhalts-Designer einen „impliziten Vertrag“ vereinbaren, der hinter dem Namen „Homepage Hero Image“ oder „Service Call Opening Script“ steht. Das erste Element kann als Bild von 600 px Breite und 350 px Höhe vereinbart werden; das zweite Element kann den Inhalt auf Text in zwei Sprachvarianten begrenzen, die nicht mehr als 50 Wörter in drei oder vier Sätzen mit semantischer Struktur aufweisen. Platzierung, um nicht die gesamte Bedeutung des ausgeblendeten Vertrags zu speichern.
 
 ### Angebotsdarstellungen
 
-Um sicherzustellen, dass ein Angebot in den verschiedenen Parametern der Platzierungen in Ihren Kanälen korrekt dargestellt werden kann, müssen verschiedene Darstellungen dieses Angebots erstellt werden. Der an Angebot angehängte Inhalt wird nach Platzierungen gruppiert. Jedes Angebot kann eine oder mehrere Darstellungen aufweisen, bei denen jede dieser Darstellungen auf eine der definierten Platzierungen verweist. Jede Darstellung in einem Angebot muss eine andere Platzierung verwenden. Je mehr Darstellungen ein Angebot hat, desto mehr Möglichkeiten besteht es, das Angebot in verschiedenen Platzierungs-Kontexten zu verwenden.
+Um sicherzustellen, dass ein Angebot in den verschiedenen Parametern der Platzierungen in Ihren Kanälen korrekt dargestellt werden kann, müssen verschiedene Darstellungen des Angebots erstellt werden. Der Angeboten beigefügte Inhalt wird nach Platzierungen angeordnet. Jedes Angebot kann eine oder mehrere Darstellungen aufweisen, wobei jede dieser Darstellungen auf eine der definierten Platzierungen verweist. Jede Darstellung in einem Angebot muss eine andere Platzierung verwenden. Je mehr Darstellungen ein Angebot hat, desto mehr Möglichkeiten gibt es, das Angebot in verschiedenen Platzierungskontexten zu nutzen.
 
-Eine Platzierung schränkt den Typ der Inhaltselemente ein, die der Präsentation hinzugefügt werden können.
+Eine Platzierung beschränkt den Typ der Inhaltselemente, die der Darstellung hinzugefügt werden können.
 
 ## Fallback-Angebote
 
-Fallback-Angebot sind Entscheidungsoptionen, für die außer den Platzierungsregeln keine zusätzlichen Einschränkungen gelten. Fallback-Angebot haben Inhaltsdarstellungen, die wie jedes andere Angebot an Platzierungen gebunden sind.
+Fallback-Angebote sind Entscheidungsoptionen, die außer den Platzierungsregeln keine anderen Begrenzungen aufweisen. Fallback-Angebote verfügen über Inhaltsdarstellungen, die wie bei jedem anderen Angebot mit Platzierungen verbunden sind.
 
-Fallback-Angebot werden in Aktivitäten angegeben, um ein brauchbares Inhaltserlebnis anzuzeigen, das verwendet werden kann, wenn kombinierte Einschränkungen alle eingeschränkten Optionen deaktivieren. Da die Platzierungsbeschränkung nicht vom Laufzeitkontext oder vom Profil abhängig ist, kann sie bereits im Vorfeld des Zusammenbaus der Aktivität überprüft werden. Mithilfe von Fallback-Angeboten gibt es immer eine Antwort auf die Frage: Welches ist derzeit das beste Angebot?
+Fallback-Angebote werden in Aktivitäten angegeben, um ein sinnvolles Inhaltserlebnis festzulegen, das verwendet werden kann, wenn kombinierte Begrenzungen alle eingeschränkten Optionen disqualifizieren. Da die Platzierungsbegrenzung nicht vom Laufzeitkontext oder vom Profil abhängig ist, kann sie bereits im Vorfeld beim Zusammenstellen der Aktivität geprüft werden. Bei Einsatz von Fallback-Angeboten gibt es immer eine Antwort auf die Frage: Welches ist derzeit das beste Angebot?
 
-## Einschränkungen des Angebots
+## Angebotsbegrenzungen
 
-### Kalendereinschränkungen
+### Kalendarische Begrenzungen
 
-In der Entscheidungsdomäne &quot;Angebot&quot;haben die Angebot eine Gültigkeitsdauer. Das bedeutet, dass das Angebot nicht vor Ablauf des Beginns und der Uhrzeit vorgeschlagen werden kann und nach Ablauf des Enddatums und der Frist nicht mehr vorgeschlagen werden kann. Die Angebot-Entität verfügt über eine einfache Struktur, die diese Kalendereinschränkungen definiert.
+In der Domain für Angebotsentscheidungen haben die Angebote eine Gültigkeitsdauer. Das bedeutet, dass das Angebot erst nach dem Anfangsdatum inklusive Uhrzeit und nicht mehr nach dem Enddatum inklusive Uhrzeit vorgeschlagen werden kann. Die Angebotsentität verfügt über eine einfache Struktur, die diese kalendarischen Begrenzungen definiert.
 
-In regelmäßigen Abständen werden abgelaufene Angebot aus der Liste der betreffenden Optionen entfernt. Der Kalenderfilter wird jedoch zum Zeitpunkt der Anforderung der Entscheidung angewendet, damit die Beschränkungen präzise angewendet werden.
+In regelmäßigen Abständen werden abgelaufene Angebote aus der Liste der berücksichtigten Optionen entfernt. Der Kalenderfilter wird jedoch zum Zeitpunkt der Anforderung der Entscheidung angewendet, damit die Begrenzungen präzise angewendet werden.
 
-### Beschränkungen für die Deckelung
+### Begrenzungen
 
-Angebot können eine optionale Beschränkung zum Kappen haben. Es besteht aus zwei Werten:
+Angebote können eine optionale Begrenzung aufweisen. Diese besteht aus zwei Werten:
 
-- Der globale Grenzwert beschränkt, wie oft ein Angebot im gesamten Profil (gezielte Audience) vorgeschlagen werden kann.
+- Die globale Obergrenze beschränkt, wie oft ein Angebot im gesamten Profilsatz vorgeschlagen werden kann (beabsichtigte Zielgruppe).
 
-- Die Obergrenze pro Profil und legt fest, wie oft das Angebot für dasselbe Profil vorgeschlagen werden kann.
+- Die Obergrenze pro Profil legt fest, wie oft das Angebot demselben Profil vorgeschlagen werden kann.
 
-### Duplizierungsbeschränkungen
+### Duplizierungsbegrenzungen
 
-Wenn eine Entscheidung beantragt wird, kann der Kunde gleichzeitig nach Vorschlägen für mehrere Aktivitäten fragen. Dies ist ein typisches Szenario bei der Inhaltsentscheidung. Jede Aktivität trägt eine oder mehrere Inhaltsoptionen zum Gesamterlebnis bei. Aufgrund der Zusammensetzung müssen Entscheidungen über mehrere Aktivitäten hinweg getroffen werden, um Doppelarbeit zu vermeiden - es sei denn, die Aktivitäten wählen jeweils einen Teil des GesamtOptionsinventars aus. Eine hochrangige Option wird in allen Aktivitäten wahrscheinlich einen hohen Rang einnehmen, und es wäre eine schlechte Erfahrung, wenn alle Aktivitäten dieselbe Option vorschlagen würden. Wenn ein Versand andererseits wissen möchte, was die &quot;Nächste beste Konversion&quot;über alle Kanal hinweg ist und es keine Beschränkung der Deckelung gibt, könnte es in Ordnung sein, dieselbe Option für verschiedene Aktivitäten vorzuschlagen.
+Wenn eine Entscheidung angefordert wird, kann der Client nach Vorschlägen für mehrere Aktivitäten gleichzeitig fragen. Dies ist ein typisches Szenario bei der Inhaltsentscheidung. Jede Aktivität trägt eine oder mehrere Inhaltsoptionen zum Gesamterlebnis bei. Aufgrund des Kompositionsaspekts müssen Entscheidungen über mehrere Aktivitäten hinweg vermittelt werden, um Duplizierung zu vermeiden – es sei denn, die Aktivitäten wählen jeweils aus einem unzusammenhängenden Untersatz des Gesamtoptionsinventars aus. Eine hochplatzierte Option wird wahrscheinlich in allen Aktivitäten einen hohen Rang einnehmen, und das Erlebnis wäre schlecht, wenn alle Aktivitäten dieselbe Option vorschlagen würden. Wenn ein Versandsystem andererseits wissen möchte, was die „nächste beste Konversion“ für alle Kanäle ist und es keine Obergrenze gibt, kann es in Ordnung sein, dieselbe Option bei verschiedenen Aktivitäten vorzuschlagen.
 
-Duplizierungsbeschränkungen werden derzeit nicht in das Repository für Geschäftsobjekte geschrieben. Stattdessen ist die Deduplizierung zur Laufzeit die Standardstrategie. Ein Anforderungsparameter kann das Standardverhalten überschreiben, um Deduplizierungsschritte zu unterdrücken.
+Duplizierungsbegrenzungen sind derzeit nicht in das Repository für Geschäftsobjekte geschrieben. Stattdessen ist Deduplizierung zur Laufzeit die Standardstrategie. Ein Anfrageparameter kann das Standardverhalten überschreiben, um den Deduplizierungsschritt zu unterdrücken.
 
 ### [!DNL Profile] Einschränkungen - Eignungsregeln
 
-Bislang waren die diskutierten Einschränkungen unabhängig davon anwendbar, für wen das Angebot ausgewählt wurde. Die Erfahrungsentscheidung unterstützt auch einen Anwendungsfall, bei dem die Personalisierung von Angeboten auf den Ereignissen der Datensatz- und Zeitreihen des Kunden basiert. Regeln werden pro Profil ausgewertet, um zu entscheiden, ob ein Angebot für diesen Benutzer qualifiziert ist oder unterdrückt werden muss. Dazu kann jedem Angebot eine Eignungsregel zugeordnet werden. Neben den Profil- und Erlebnis-Ereignissen eines Endbenutzers berücksichtigt die Eignungsregel Echtzeitkontextdaten. Diese Daten werden vom Versand-Dienst bereitgestellt und können in Form von Daten vorliegen, die nicht mit einem Profil in Zusammenhang stehen, z. B. Lagerbestände, Wetterbedingungen und Flugpläne.
+Bislang waren die diskutierten Begrenzungen unabhängig davon anwendbar, für wen das Angebot ausgewählt wurde. Erlebnisentscheidungen unterstützen auch einen Anwendungsfall, bei dem Personalisierungsangebote auf Datensatz- und Zeitreihenereignissen des Kunden basieren. Regeln werden pro Profil ausgewertet, um zu entscheiden, ob ein Angebot für diesen Benutzer qualifiziert ist oder unterdrückt werden soll. Dazu kann jedem Angebot eine Eignungsregel zugeordnet werden. Neben den Profil- und Erlebnisereignissen eines Endbenutzers berücksichtigt die Eignungsregel Echtzeit-Kontextdaten. Diese Daten werden vom Versanddienst bereitgestellt und können in Form von Daten vorliegen, die nicht mit einem Profil in Zusammenhang stehen, z. B. Lagerbestände, Wetterbedingungen oder Flugpläne.
 
-Es ist wichtig, zwischen Targeting- und Segmentierungsregeln und zwischen Berechtigungs- und Prioritätsregeln für die Entscheidungsfindung zu unterscheiden. Für das Targeting einer Reihe von Profilen ist die Ausgabe (Auswahl der Audience) für die Berechtigung ein Optionssatz (zulässige Angebot) ist die Ausgabe der Auswertung.
+Es ist wichtig, bei der Entscheidungsfindung zwischen Targeting- und Segmentierungsregeln sowie zwischen Eignungs- und Prioritätsregeln zu unterscheiden. Beim Targeting ist eine Reihe von Profilen die Ausgabe (Auswahl der Zielgruppe), bei der Eignung ist eine Reihe von Optionen (zulässige Angebote) die Ausgabe der Auswertung.
 
-## Angebot-Sammlungen
+## Angebotskollektionen
 
-Die Bestandsaufnahme ist der Gesamtpool der Optionen, die bei der Entscheidungsfindung berücksichtigt werden. Das Inventar kann weiter in Kategorien oder Sammlungen unterteilt werden. Eine Reihe von Optionen wird durch ein gemeinsames Tag dargestellt, über das diese Optionen verfügen. Filter werden zum Testen verwendet, wenn Angebot in eine bestimmte Kategorie fallen oder, genauer gesagt, dieselben Tags oder Tags gemeinsam verwenden.
+Das Inventar ist der Gesamt-Pool der Optionen, die bei Entscheidungen berücksichtigt werden. Das Inventar kann weiter in Kategorien oder Kollektionen unterteilt werden. Eine Kollektion von Optionen wird durch ein gemeinsames Tag dargestellt, das diese Optionen aufweisen. Filter werden zum Testen verwendet, ob Angebote in eine bestimmte Kategorie fallen oder, genauer gesagt, dieselben Tags verwenden.
 
 ### Tags
 
-Tags bieten eine Möglichkeit, auszudrücken, dass eine Gruppe von Optionen zu einer Kategorie gehört.
+Tags bieten eine Möglichkeit, um auszudrücken, dass eine Gruppe von Optionen zu einer Kategorie gehört.
 
-Eine Option kann über mehr als ein Tag verfügen und kann daher gleichzeitig in mehreren Kategorien vorliegen. Kategorien können sich auch überlappen oder andere enthalten. Wenn eine Kategorie &quot;S&quot;von Angeboten mit dem Tag &quot;A&quot;und die Kategorie &quot;R&quot;durch Optionen mit den Tags &quot;A&quot;und &quot;B&quot;definiert wird, wird &quot;S&quot;eine Obermenge von &quot;R&quot;sein.
+Eine Option kann über mehr als ein Tag verfügen und daher mehreren Kategorien gleichzeitig angehören. Kategorien können sich auch überlappen oder gegenseitig enthalten. Wenn eine Kategorie „S“ von Angeboten mit dem Tag „A“ und eine Kategorie „R“ von Optionen mit den Tags „A“ und auch „B“ definiert wird, ist „S“ eine Obermenge von „R“.
 
 ### Filter
 
-Filter werden verwendet, um die Kriterien für einen Optionssatz zu definieren, der zu einer Kategorie gehört. Filter können als Abfragen gegen das Inventar von Angeboten betrachtet werden. Es gibt zwei grundsätzliche Möglichkeiten, einen Filter zu bilden: durch Angabe, dass ein Angebot über ein oder mehrere Tags verfügt, und durch explizite Auswahl der Angebot. Die bisherige Methode kann so konfiguriert werden, dass festgestellt wird, dass ein Angebot in dieser Sammlung alle angegebenen Tags aufweisen muss oder dass eine Option qualifiziert ist, wenn es mindestens eines der angegebenen Tags hat.
+Filter dienen dazu, die Kriterien für einen Satz von Optionen zu definieren, der zu einer Kategorie gehört. Filter können als Abfragen zum Inventar von allgemeinen Angeboten betrachtet werden. Es gibt zwei grundlegende Möglichkeiten, einen Filter zu erstellen: durch Angabe, dass ein Angebot über ein oder mehrere Tags verfügt, und durch explizite Auswahl des Angebotssatzes. Die erste Methode kann so konfiguriert werden, dass festgelegt wird, dass ein Angebot in dieser Kollektion alle angegebenen Tags aufweisen muss, oder dass eine Option qualifiziert ist, wenn sie mindestens eines der angegebenen Tags aufweist.
 
-Wenn Optionen explizit in eine Sammlung platziert werden, wird ihr Tag-Satz für diese Sammlung ignoriert.
+Wenn Optionen explizit in einer Kollektion platziert werden, wird ihr Tag-Satz bei dieser Kollektion ignoriert.
 
-## Angebot-Aktivitäten
+## Angebotsaktivitäten
 
-Aktivitäten konfigurieren und steuern den Entscheidungsprozess. Derzeit ist die Entscheidungsstrategie im Wesentlichen vorab festgelegt, aber künftige Iterationen des Angebot Decision Domain-Modells werden die Auswahl von Modellen, zusätzlichen Regeln und Einschränkungen ermöglichen.
+Aktivitäten konfigurieren und steuern die Entscheidungsfindung. Aktuell ist die Entscheidungsstrategie im Wesentlichen vorab festgelegt, aber künftige Iterationen des Domain-Modells für Angebotsentscheidungen werden eine Auswahl von Modellen, zusätzlichen Regeln und Begrenzungen ermöglichen.
 
-Ein Erlebnis kann mit vielen Aktivitäten gleichzeitig zusammengestellt werden. Derzeit können bis zu 30 Aktivitäten in einer einzigen Entscheidungsanforderung behandelt werden. Wenn mehr als 30 Aktivitäten oder Slots in einem Erlebnis mit Inhalten gefüllt werden müssen, können für dasselbe Profil mehrere Anforderungen gestellt werden. Werden jedoch Aktivitäten in ein und demselben Entscheidungsersuchen aufgenommen, so werden die Angebotsvorschläge zwischen diesen Aktivitäten dedupliziert.
+Ein Erlebnis kann unter Verwendung vieler Aktivitäten gleichzeitig zusammengestellt werden. Derzeit können in einer einzigen Entscheidungsanfrage bis zu 30 Aktivitäten bearbeitet werden. Wenn mehr als 30 Aktivitäten oder Slots in einem Erlebnis mit Inhalten gefüllt werden müssen, können für dasselbe Profil mehrere Anfragen gestellt werden. Werden jedoch Aktivitäten in derselben Entscheidungsanfrage einbezogen, so wird für diese Aktivitäten eine Deduplizierung der Angebotsvorschläge vorgenommen.
 
-Wenn Aktivitäten so definiert werden, dass sie aus unterschiedlichen Angeboten ausgewählt werden, macht es kaum einen Unterschied, ob Aktivitäten in derselben Anforderung kombiniert oder in separate Anforderungen aufgeteilt werden. Allerdings erfordern Netzwerk- und Reaktionszeitbeschränkungen möglicherweise, dass Aktivitäten in derselben Anforderung kombiniert werden. Da verschiedene Anforderungen an verschiedene Dienstknoten weitergeleitet werden, müssen möglicherweise dieselben Profil-Daten in verschiedene Nodes abgerufen werden. Dadurch wird die effektive IO-Bandbreite für andere Anforderungen reduziert.
+Wenn Aktivitäten so definiert sind, dass sie aus unzusammenhängenden Sätzen von Angeboten ausgewählt werden, macht es kaum einen Unterschied, ob Aktivitäten in derselben Anfrage zusammengefasst oder in separate Anfragen aufgeteilt werden. Allerdings erfordern Netzwerk- und Reaktionszeitbegrenzungen möglicherweise, dass Aktivitäten in einer Anfrage kombiniert werden. Da verschiedene Anfragen ggf. an verschiedene Dienstknoten weitergeleitet werden, müssen möglicherweise dieselben Profildaten in verschiedene Knoten abgerufen werden. Dadurch wird die effektive I/O-Bandbreite für andere Anfragen reduziert.
 
-Aktivitäten werden verwendet, um Inhalte in ein Erlebnis einzufügen. Um sicherzustellen, dass die Inhaltselemente korrekt &quot;passen&quot;, verweist eine Aktivität auf eine einzelne Platzierung. Beachten Sie, dass eine Platzierung nicht immer ein konkreter Ort/Steckplatz ist, sondern eher eine Abstraktion dieser Orte/Slots. Beispielsweise könnte jede Kachel auf einer Webseite mit einem Raster aus Kacheln durch die gleiche Platzierung gesteuert werden, vorausgesetzt, sie haben alle eine ähnliche Form und Größe und können ähnliche Inhalte enthalten. Eine einzelne Kachel würde jedoch in der Regel von ihrer eigenen Aktivität bereitgestellt.
+Aktivitäten dienen dazu, Inhalte in ein Erlebnis einzufügen. Um zu erleichtern (nicht um sicherzustellen), dass die Inhaltselemente richtig „passen“, verweist eine Aktivität auf eine einzelne Platzierung. Beachten Sie, dass eine Platzierung nicht immer ein konkreter Ort/Slot ist, sondern eher eine Abstraktion dieser Orte/Slots. Beispielsweise könnte jede Kachel auf einer Web-Seite mit einem Raster aus Kacheln durch die gleiche Platzierung gesteuert werden, vorausgesetzt, sie weisen alle eine ähnliche Form und Größe auf und können ähnliche Inhalte enthalten. Eine einzelne Kachel würde jedoch in der Regel von ihrer eigenen Aktivität bereitgestellt.
 
 Die folgende Abbildung zeigt, wie die Geschäftseinheiten miteinander verbunden sind:
 
 ![](./images/figure-10.png)
 
-Wenn Kunden das Objektdiagramm für Entscheidungen erstellen und verknüpfen, gibt es in der Regel drei verschiedene Arbeitsströme. Folgende sind vorhanden:
+Wenn Kunden das Objektdiagramm für Entscheidungen erstellen und verknüpfen, gibt es in der Regel drei verschiedene Workflows. Das sind Folgende:
 
-- Einrichten der unterstützenden Entitäten wie Tags und Platzierungen. Diese Entitäten werden verwendet, um andere Entitäten zu strukturieren, zu filtern und zu gruppieren. Sie werden auch verwendet, um eine gewisse Koordinierung zwischen dem zweiten und dritten Arbeitsablauf zu gewährleisten. Dieser Arbeitsablauf stellt eine gewisse Vorarbeit dar, kann jedoch jederzeit verfeinert werden. Tags sind relativ einfach, Platzierungen erfordern jedoch etwas mehr Planung. Ein Unternehmen muss mindestens eine Bestandsaufnahme aller Stellen vornehmen, an denen eine Entscheidung getroffen wird.
+- Einrichten der unterstützenden Entitäten wie Tags und Platzierungen. Diese Entitäten dienen dazu, andere Entitäten zu strukturieren, zu filtern und anzuordnen. Außerdem werden sie verwendet, um eine gewisse Koordinierung zwischen dem zweiten und dritten Workflow zu erreichen. Dieser Workflow ist mit einer gewissen Vorarbeit verbunden, kann jedoch jederzeit verfeinert werden. Während Tags relativ einfach sind, erfordern Platzierungen etwas mehr Planung. Unternehmen müssen mindestens eine Bestandsaufnahme aller Positionen vornehmen, an denen eine Entscheidung präsentiert wird.
 
-- Erstellen von Angeboten mit den verschiedenen Darstellungen und Geschäftsregeln (Einschränkungen). Dieser zentrale Arbeitsablauf bietet die Optionen, unter denen wir die besten auswählen müssen. Die Tags des ersten Workflows werden zur Kategorisierung von Angeboten verwendet, und die Platzierungen geben an, welche Optionen und wo angezeigt werden können.
+- Erstellen von Angeboten mit den verschiedenen Darstellungen und Geschäftsregeln (Begrenzungen). Dieser zentrale Workflow stellt die Optionen bereit, unter denen wir die besten auswählen müssen. Die Tags des ersten Workflows werden zur Kategorisierung von Angeboten verwendet, während die Platzierungen angeben, welche Optionen wo angezeigt werden können.
 
-   - Dieser Arbeitsablauf definiert auch absolute Einschränkungen für die Angebot. Sie sind absolut, weil sie immer durchgesetzt werden und sich nicht nur auf die Rangliste einer Reihe von Angeboten auswirken. Wenn beispielsweise eine Kalenderbeschränkung festgelegt wird, wird erzwungen, dass das Angebot nie vor dem festgelegten Beginn (Datum/Uhrzeit) und nie nach dem Enddatum/der Endzeit ausgewählt wird. Die Einschränkungen, die in diesem Workflow festgelegt werden, sind die [Kalendereinschränkungen](#calendar-constraints), [Beschränkungen](#capping-constraints) für die Begrenzung und [Einschränkungen](#profile-constraints---eligibility-rules)der Berechtigung. Ein Unterarbeitsablauf hier ist die Definition zusätzlicher Regeln, die bestimmen, wer für ein bestimmtes Angebot berechtigt ist.
+   - Dieser Workflow definiert für die Angebote auch absolute Begrenzungen. Sie sind absolut, weil sie stets durchgesetzt werden und sich nicht nur auf die Reihenfolge einer Gruppe von Angeboten auswirken. Wenn beispielsweise eine kalendarische Begrenzung festgelegt wird, wird durchgesetzt, dass das Angebot nie vor dem festgelegten Anfangstermin und nie nach dem Endtermin ausgewählt wird. Die Begrenzungen, die in diesem Workflow festgelegt werden, sind die [kalendarischen Begrenzungen](#calendar-constraints), [Begrenzungen](#capping-constraints) und [Eignungsbegrenzungen](#profile-constraints---eligibility-rules). Ein Unter-Workflow besteht hier aus der Definition zusätzlicher Regeln, die bestimmen, wer für ein bestimmtes Angebot geeignet ist.
 
-      - Bei der Erstellung von Einschränkungen für ein Angebot werden dessen Darstellungen ausgewählt. Bei diesem Arbeitsablauf wird davon ausgegangen, dass der Inhalt bereits irgendwo erstellt wurde und einfach in das Inhalts-Repository hochgeladen und dort ausgewählt wird. Hier werden die Platzierungen des ersten Workflows abgespielt. Ein Angebot kann Platzierungen auswählen und den Inhalt unter dieser [Platzierung](#offer-placements)verknüpfen.
+      - Bei der Erstellung von Begrenzungen für ein Angebot werden dessen Darstellungen ausgewählt. Bei diesem Workflow wird davon ausgegangen, dass der Inhalt bereits irgendwo erstellt wurde und einfach in das Inhalts-Repository hochgeladen und dort ausgewählt wird. Hier kommen die Platzierungen aus dem ersten Workflow in Spiel. Ein Angebot kann Platzierungen auswählen und den Inhalt unter dieser [Platzierung](#offer-placements) verknüpfen.
 
-      - Das Erstellen geeigneter Fallback-Angebot ist der letzte Schritt in diesem Arbeitsablauf. Ein Fallback-Angebot ähnelt einem allgemeinen Angebot ohne Einschränkungen.
+      - Das Erstellen geeigneter Fallback-Angebote ist der letzte Schritt in diesem Workflow. Ein Fallback-Angebot ähnelt einem allgemeinen Angebot ohne Begrenzungen.
 
-- Der letzte Arbeitsablauf betrifft die Erstellung von Aktivitäten. Dieser Schritt erfolgt jedoch nicht unbedingt sequenziell nach dem Arbeitsablauf zum Erstellen von Angeboten. Beide Prozesse laufen noch und sind gleichzeitig. Aktivitäten werden dazu verwendet, den Umfang der Optionen nach Thema und Ort der Entscheidungsvorstellung einzugrenzen. Eine Aktivität verweist auf eine [Sammlung](#offer-collections) und eine Platzierung. Es muss auch ein [Ausweich-Angebot](#fallback-offers) angeben, das verwendet wird, wenn ein qualifizierendes Angebot nicht ermittelt werden kann.
+- Der letzte Workflow betrifft die Erstellung von Aktivitäten. Dieser Schritt erfolgt jedoch nicht unbedingt auf den Workflow zum Erstellen von Angeboten. Beide Prozesse sind fortlaufend und gleichzeitig. Aktivitäten dienen dazu, den Umfang der Optionen nach Thema und Ort der Präsentation der Entscheidungen zu begrenzen. Eine Aktivität verweist auf eine [Kollektion](#offer-collections) und eine Platzierung. Es muss auch ein [Fallback-Angebot](#fallback-offers) angeben werden, das zum Einsatz kommt, wenn kein qualifizierendes Angebot ermittelt werden kann.
 
