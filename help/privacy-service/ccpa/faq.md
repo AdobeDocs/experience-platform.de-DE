@@ -22,7 +22,7 @@ The [!DNL California Consumer Privacy Act] (CCPA) is California’s new privacy 
 
 >[!NOTE]
 >
->Zwar ist der CCPA im Januar 2020 formal in Kraft getreten, doch nimmt der Gesetzgeber noch immer Feinabstimmungen vor. Darüber hinaus werden durch Bestimmungen, die von der kalifornischen Regulierungsbehörde noch verfasst werden müssen, wichtige Umsetzungs- und andere Anleitungsdetails angekündigt.
+> Zwar ist der CCPA im Januar 2020 formal in Kraft getreten, doch nimmt der Gesetzgeber noch immer Feinabstimmungen vor. Darüber hinaus werden durch Bestimmungen, die von der kalifornischen Regulierungsbehörde noch verfasst werden müssen, wichtige Umsetzungs- und andere Anleitungsdetails angekündigt.
 
 Der CCPA teilt zwar einige der in der Datenschutz-Grundverordnung (DSGVO) der Europäischen Union enthaltenen Konzepte, wie das Recht einer betroffenen Person auf Zugang zu und Löschung personenbezogener Daten, doch gibt es mehrere wesentliche Unterschiede zwischen dem CCPA und der DSGVO. So bietet der CCPA Verbrauchern beispielsweise ein Opt-out-Recht hinsichtlich bestimmter Datenaustauschaktivitäten, die als „Verkauf“ personenbezogener Daten an eine Drittpartei gelten, anstatt eine vorherige Zustimmung vorauszusetzen.
 
@@ -39,7 +39,7 @@ The following identifiers are commonly used in [!DNL Experience Cloud] applicati
 - Eindeutige personenbezogene Kennung
 - Online-Kennung
 - IP-Adresse
-- E-Mail Adresse
+- E-Mail  Adresse
 - Kontoname
 
 Personenbezogene Daten können auch Informationen über Aktivitäten im Internet oder in anderen elektronischen Netzwerken umfassen. Dazu gehören unter anderem:
@@ -71,7 +71,7 @@ Als Dienstleister sammelt und verarbeitet Adobe personenbezogene Daten im Auftra
 
 Angesichts dieser Beziehung und der Vertragssprache von Adobe fallen Offenlegungen an Adobe unter die gesetzlichen Bestimmungen für Dienstleister und würden wahrscheinlich nicht als „Verkauf“ eingestuft, für den Unternehmen eine Meldung machen und ein Opt-out anbieten müssen.
 
-Adobe-Dienste können verwendet werden, um bestimmte Daten auszutauschen und Übertragungen an Dritte zu ermöglichen. Solche Übertragungen an Dritte können als „Verkauf“ betrachtet werden und erfordern von Rechts wegen eine Meldung und Opt-out-Option.  Kunden sollten mit ihrem Rechtsbeistand zusammenarbeiten, um einzelne Anwendungsfälle hinsichtlich der geltenden Anforderungen zu evaluieren.
+Adobe-Dienste können verwendet werden, um bestimmte Daten auszutauschen und Übertragungen an Dritte zu ermöglichen. Diese Übertragungen an Dritte könnten als „Verkauf“ betrachtet werden und erfordern von Rechts wegen eine Offenlegung und Opt-out-Option.  Kunden sollten mit ihrem Rechtsbeistand zusammenarbeiten, um einzelne Anwendungsfälle hinsichtlich der geltenden Anforderungen zu evaluieren.
 
 ## Wie kann ich die Datenschutzbestimmungen für Verbraucher im Rahmen des CCPA einhalten, wenn ich bestimmte Datentypen verwalte, die von den Anforderungen abgedeckt werden?
 
