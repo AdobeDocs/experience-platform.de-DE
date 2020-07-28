@@ -15,7 +15,7 @@ ht-degree: 47%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 10. Juni 2020**
+**Release-Datum: Freitag, 10. Juni 2020**
 
 Neue Funktionen in Adobe Experience Platform:
 
@@ -31,9 +31,9 @@ Neue Funktionen in Adobe Experience Platform:
 | Funktion | Beschreibung |
 |--- | ---|
 | Berechtigungen | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources]. |
-| Zugriff auf Sandboxen | The [!UICONTROL _Permissions _]tab within a[!DNL Platform]product profile can grant users access to specific sandboxes. Zusätzliche Informationen finden Sie im Abschnitt zu[Sandboxes](#sandboxes)unten. |
+| Zugriff auf Sandboxes | The [!UICONTROL _Permissions _]tab within a[!DNL Platform]product profile can grant users access to specific sandboxes. Zusätzliche Informationen finden Sie im Abschnitt zu[Sandboxes](#sandboxes)unten. |
 
-Weiterführende Informationen finden Sie in der [Übersicht über die Zugriffskontrolle](../../access-control/home.md).
+Weiterführende Informationen finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ## [!DNL Sandboxes] {#sandboxes}
 
