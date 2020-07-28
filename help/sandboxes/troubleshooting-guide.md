@@ -1,56 +1,56 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Handbuch zur Fehlerbehebung bei Sandboxen
+title: Handbuch zur Fehlerbehebung bei Sandboxes
 topic: troubleshooting guide
 translation-type: tm+mt
 source-git-commit: f15049ca917818d325b5783c70faaa53ba669aba
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Handbuch zur Fehlerbehebung bei Sandboxen
+# Handbuch zur Fehlerbehebung bei Sandboxes
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Sandboxen in Adobe Experience Platform. Fragen und Fehlerbehebung zu anderen Plattformdiensten finden Sie im Handbuch [Experience Platform zur Fehlerbehebung](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Sandboxes in Adobe Experience Platform. Fragen und Fehlerbehebungen für andere Platform-Dienste finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
 
-Sandboxes unterteilen eine einzelne Plattform-Instanz in separate virtuelle Umgebung, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln. See the [sandboxes overview](home.md) for more information.
+Sandboxes unterteilen eine einzelne Platform-Instanz in separate virtuelle Umgebungen, damit sich Programme für digitale Erlebnisse entwickeln und weiterentwickeln lassen. Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](home.md).
 
 ## Was ist eine Sandbox?
 
-Sandboxen sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform. Jede Sandbox unterhält eine eigene, unabhängige Bibliothek mit Plattformressourcen (einschließlich Schemas, Datensätzen, Profilen usw.). Alle Inhalte und Aktionen, die innerhalb einer Sandbox durchgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxen aus. See the [sandboxes overview](home.md) for more information.
+Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Experience Platform. Jede Sandbox unterhält eine eigene, unabhängige Bibliothek mit Platform-Ressourcen (einschließlich Schemas, Datensätzen, Profilen usw.). Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](home.md).
 
-## Welche Arten von Sandboxen sind verfügbar und wie unterscheiden sie sich?
+## Welche Arten von Sandboxes gibt es und wie unterscheiden sie sich?
 
-In Experience Platform stehen zwei Sandbox-Typen zur Verfügung:
+In Experience Platform gibt es zwei Arten von Sandboxes:
 
 * Produktions-Sandbox
-* Sandbox ohne Produktion
+* Nicht-Produktions-Sandboxes
 
-Experience Platform bietet eine einzige **Produktions-Sandbox**, die weder gelöscht noch zurückgesetzt werden kann. Es kann nur eine Produktions-Sandbox für eine einzige Plattforminstanz vorhanden sein.
+Experience Platform stellt eine einzelne **Produktions-Sandbox** bereit, die weder gelöscht noch zurückgesetzt werden kann. Es kann nur eine Produktions-Sandbox pro Platform-Instanz geben.
 
-Im Gegensatz dazu können mehrere **Nicht-Produktions-Sandboxen** von Sandbox-Administratoren für eine einzige Plattforminstanz erstellt werden. Mit Sandboxen ohne Produktionsumfang können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktionssandbox zu beeinträchtigen. Darüber hinaus verfügen Sandboxen, die keine Produktion sind, über eine Reset-Funktion, mit der alle vom Kunden erstellten Ressourcen aus der Sandbox entfernt werden. Nicht-produzierende Sandboxen können nicht in Produktions-Sandboxen konvertiert werden.
+Im Gegensatz dazu können Sandbox-Administratoren verschiedene **Nicht-Produktions-Sandboxes** für eine Platform-Instanz erstellen. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden.
 
-See the [sandboxes overview](./home.md) for more information.
+Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](./home.md).
 
-## Kann ich von mehr als einer Sandbox auf eine Ressource zugreifen?
+## Kann ich von verschiedenen Sandboxes aus auf eine bestimmte Ressource zugreifen?
 
-Sandboxen sind isolierte Partitionen einer einzelnen Plattform-Instanz, wobei jede Sandbox ihre eigene unabhängige Ressourcenbibliothek unterhält. Eine Ressource, die in einer Sandbox vorhanden ist, kann unabhängig vom Sandbox-Typ (Produktion oder Nicht-Produktion) nicht von einer anderen Sandbox aus aufgerufen werden.
+Sandboxes sind voneinander isolierte Partitionen einer einzelnen Platform-Instanz, wobei jede Sandbox eine eigene unabhängige Ressourcenbibliothek unterhält. Eine Ressource, die in einer Sandbox vorhanden ist, kann unabhängig vom Sandbox-Typ (Produktion oder Nicht-Produktion) nicht von einer anderen Sandbox aus aufgerufen werden.
 
-## Wie viele Produktionssandboxen kann ich haben?
+## Wie viele Produktions-Sandboxes können wir nutzen?
 
-Experience Platform unterstützt nur eine Produktions-Sandbox pro IMS-Organisation, die standardmäßig bereitgestellt wird. Die Produktions-Sandbox kann zwar umbenannt werden, kann aber nicht gelöscht oder zurückgesetzt werden. Benutzer mit Sandbox-Administratorberechtigungen können nur Sandboxen ohne Produktionscharakter erstellen, zurücksetzen und löschen.
+Experience Platform unterstützt nur eine Produktions-Sandbox pro IMS-Organisation; sie wird standardmäßig bereitgestellt. Die Produktions-Sandbox kann umbenannt, nicht aber gelöscht oder zurückgesetzt werden. Benutzer mit Sandbox-Administratorberechtigungen können ausschließlich Nicht-Produktions-Sandboxes erstellen, zurücksetzen und löschen.
 
-## Wie viele Sandboxen ohne Produktion kann ich haben?
+## Wie viele Nicht-Produktions-Sandboxes können wir nutzen?
 
-Die Experience Platform erlaubt derzeit bis zu 15 nicht produktive Sandboxen, in einer einzigen IMS-Organisation aktiv zu sein.
+Experience Platform unterstützt derzeit bis zu 15 Nicht-Produktions-Sandboxes, die in einer IMS-Organisation aktiv sein können.
 
-## Ich habe gerade eine Sandbox erstellt. Wie stelle ich Berechtigungen für die Benutzer ein, die mit dieser Sandbox arbeiten werden?
+## Ich habe gerade eine Sandbox eingerichtet. Wie lege ich Berechtigungen für Benutzer fest, die mit dieser Sandbox arbeiten sollen?
 
-Die Adobe Admin-Konsole verknüpft Benutzer mithilfe von **Profilen** mit Sandboxen und Berechtigungen. Nachdem Sie eine neue Sandbox erstellt haben, navigieren Sie zur Registerkarte &quot; _Berechtigungen_ &quot;des Profils, auf das Sie Zugriff gewähren möchten, und klicken Sie dann auf **Sandboxes**. Von hier aus können Sie den Zugriff auf die neue Sandbox auf dieselbe Weise wie andere Berechtigungen hinzufügen oder entfernen.
+Adobe Admin Console verknüpft Benutzer über **Profile** mit Sandboxes und Berechtigungen. Nachdem Sie eine neue Sandbox erstellt haben, navigieren Sie zum Tab _Berechtigungen_ des Produktprofils, dem Sie Zugriff gewähren möchten, und klicken Sie dann auf **Sandboxes**. Nun können Sie Zugriff auf die neue Sandbox genauso wie bei anderen Berechtigungen hinzufügen oder entfernen.
 
-Wenn Sie Benutzern einer bestimmten Sandbox eindeutige Berechtigungen hinzufügen möchten, müssen Sie möglicherweise ein neues Profil mit den entsprechenden Sandboxen und Berechtigungen erstellen und diese Benutzer diesem Profil zuweisen.
+Wenn Sie Benutzern einer bestimmten Sandbox eindeutige Berechtigungen hinzufügen möchten, müssen Sie möglicherweise ein neues Produktprofil mit den jeweiligen Sandboxes und Berechtigungen erstellen und die gewünschten Benutzer diesem Profil zuordnen.
 
-Weitere Informationen zum Verwalten von Sandboxen und Berechtigungen in der Admin-Konsole finden Sie im Benutzerhandbuch für die [Zugriffskontrolle](../access-control/ui/overview.md) .
+Weiterführende Informationen zum Verwalten von Sandboxes und Berechtigungen in der Admin Console finden Sie im [Benutzerhandbuch zur Zugriffskontrolle](../access-control/ui/overview.md).
