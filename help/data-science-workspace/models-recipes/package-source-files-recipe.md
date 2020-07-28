@@ -18,10 +18,10 @@ In diesem Lernprogramm wird beschrieben, wie Sie die angegebenen Quelldateien f�
 
 Konzepte zum Verständnis:
 
-- **Rezepte**: Ein Rezept ist der von Adobe verwendete Begriff für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der ein bestimmtes maschinelles Lernen, einen Algorithmus für künstliche Intelligenz oder ein Ensemble von Algorithmen, eine Verarbeitungslogik und eine Konfiguration darstellt, die zum Aufbau und Ausführen eines geschulten Modells erforderlich sind und somit zur Lösung spezifischer Geschäftsprobleme beitragen.
+- **Rezepte**: Ein Rezept ist der Begriff der Adobe für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der ein bestimmtes maschinelles Lernen, einen Algorithmus für künstliche Intelligenz oder ein Ensemble von Algorithmen, Verarbeitungslogik und Konfiguration darstellt, die zum Aufbau und zur Ausführung eines geschulten Modells erforderlich sind und somit zur Lösung spezifischer Geschäftsprobleme beitragen.
 - **Quelldateien**: Einzelne Dateien im Projekt, die die Logik für ein Rezept enthalten.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 - [!DNL Docker](https://docs.docker.com/install/#supported-platforms)
 - [!DNL Python 3 and pip](https://docs.conda.io/en/latest/miniconda.html)
