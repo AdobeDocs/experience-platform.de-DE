@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;attribution ai;overview;popular topics
 solution: Experience Platform
-title: Übersicht über die Zuordnungs-AI
+title: Übersicht über Attribution AIS
 topic: Attribution AI
 translation-type: tm+mt
 source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
 
-# Übersicht über die Zuordnungs-AI
+# Übersicht über Attribution AIS
 
-Attribution AI als Teil von Intelligent Services ist ein algorithmischer Zuordnungsdienst mit mehreren Kanälen, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketingfachleute die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen jeder einzelnen Kundeninteraktion auf die einzelnen Phasen der Customer Journey verstehen.
+Attribution AI als Teil von Intelligent Services ist ein algorithmischer Zuordnungsdienst mit mehreren Kanälen, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketing-Experten die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen einzelner Kundeninteraktionen in einzelnen Phasen der Customer Journey untersuchen.
 
-## Grundlagen der Attribution AI
+## Attribution AIS verstehen
 
-Attribution AI wird verwendet, um Gutschriften auf Touchpoints zuzuordnen, die zu Konversions-Ereignissen führen. Dies kann von Marketingexperten genutzt werden, um die Marketingauswirkungen jedes einzelnen Marketing-Touchpoints über Kundenreisen hinweg zu quantifizieren. Beispiele für Touchpoints sind Display-Anzeigenimpressionen, E-Mail-Senden, E-Mail-Öffnen und Klicks auf gebührenpflichtige Suchen.
+Attribution AI wird verwendet, um Gutschriften Touchpoints zuzuordnen, die zu Konversions-Ereignissen führen. Dies kann von Marketingexperten genutzt werden, um die Marketingauswirkungen jedes einzelnen Marketing-Touchpoints über Kundenreisen hinweg zu quantifizieren. Beispiele für Touchpoints sind Display-Anzeigenimpressionen, E-Mail-Senden, E-Mail-Öffnen und Klicks auf gebührenpflichtige Suchen.
 
-Die Zuordnungs-AI-Ausgaben können über verschiedene Dimensionen getrennt werden und können über verschiedene Phasen der Customer Journey hinweg verwendet werden. Dies erfolgt, ohne dass geschäftliche Anforderungen in maschinelle Lernprobleme, die Auswahl von Algorithmen, Schulungen oder die Bereitstellung von Modellen übersetzt werden müssen.
+Attribution AI-Ausgaben können über verschiedene Dimensionen getrennt werden und können über verschiedene Phasen der Customer Journey hinweg genutzt werden. Dies erfolgt, ohne dass geschäftliche Anforderungen in maschinelle Lernprobleme, die Auswahl von Algorithmen, Schulungen oder die Bereitstellung von Modellen übersetzt werden müssen.
 
-Zuordnungs-AI-Daten können von Adobe stammen (z. [!DNL Analytics]) oder Nicht-Adobe-Datenquellen.
+Attribution AI Daten können aus der Adobe stammen (z. [!DNL Analytics]) oder Datenquellen, die keine Adobe sind.
 
-Attribution AI unterstützt zwei Kategorien von Scores, algorithmisch und regelbasiert. Algorithmische Ergebnisse beinhalten inkrementelle und beeinflusste Werte. Regelbasierte Ergebnisse sind First Touch, Last Touch, Linear, U-förmig und Time-Decay.
+Attribution AI unterstützt zwei Kategorien von Ergebnissen, algorithmisch und regelbasiert. Algorithmische Ergebnisse beinhalten inkrementelle und beeinflusste Werte. Regelbasierte Ergebnisse sind First Touch, Last Touch, Linear, U-förmig und Time-Decay.
 
-Das folgende Video wurde entwickelt, um Ihr Verständnis von Attribution AI zu unterstützen.
+Das folgende Video hilft Ihnen, Attribution AIS besser zu verstehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
 
-## Algorithmische Ergebnisse der Zuordnung
+## Algorithmische Attribution AIS
 
 Attribution AI unterstützt zwei Kategorien von Zuordnungswerten, algorithmische und regelbasierte Werte.
 
@@ -50,7 +50,7 @@ Die nachstehende Tabelle enthält weitere Details zu den einzelnen Zuordnungswer
 
 ## Beispiele für Geschäftsverwendungsfälle
 
-Mithilfe der Attribution AI können Sie die folgenden Anwendungsfälle im Beispiel unterstützen:
+Attribution AI kann zur Unterstützung der folgenden Anwendungsbeispiele verwendet werden:
 
 - **Berichte**: Ermöglichen Sie es Führungskräften, die wahren inkrementellen Auswirkungen des Marketing zu verstehen, sowohl als Ganzes als auch nach Kanal, Region, SKU usw.
 - **Mittelzuweisung**: Informieren Sie die Budgetzuweisungsentscheidungen über den Marketing Kanal.
@@ -60,8 +60,8 @@ Mithilfe der Attribution AI können Sie die folgenden Anwendungsfälle im Beispi
 
 ### Zusätzliche Funktionen
 
-Attribution AI kann auch mit anderen Adobe-Angeboten wie [!DNL Adobe Analytics]z. B. Auf diese Weise können Sie mithilfe dieser Lösungen das anpassbare Algorithmusmodell zur Bewertung der Medienleistung und zur Bereitstellung analytischer Einblicke einsetzen.
+Attribution AI Angebote integrieren sich auch in andere Adoben wie [!DNL Adobe Analytics]. Auf diese Weise können Sie mithilfe dieser Lösungen das anpassbare Algorithmusmodell zur Bewertung der Medienleistung und zur Bereitstellung analytischer Einblicke einsetzen.
 
 ## Nächste Schritte
 
-Beginnen Sie mit der Befolgung des Handbuchs [zu den ersten Schritten](./getting-started.md) . Dieser Leitfaden führt Sie durch die Einrichtung aller erforderlichen Vorabanforderungen für Attribution AI. Wenn Sie bereits über Ihre Anmeldedaten und Daten verfügen, besuchen Sie das [AI Benutzerhandbuch](./user-guide.md). Dieser Leitfaden führt Sie durch das Erstellen einer Instanz und das Einreichen zur Schulung und Bewertung.
+Beginnen Sie mit den [Ersten Schritten](./getting-started.md). Dieser Leitfaden führt Sie durch die Einrichtung aller erforderlichen Voranforderungen für Attribution AI. If you already have your credentials and data ready, visit the [Attribution AI user guide](./user-guide.md). Dieses Handbuch führt Sie durch das Erstellen einer Instanz sowie das Übermitteln der Instanz zum Trainieren und Bewerten.
