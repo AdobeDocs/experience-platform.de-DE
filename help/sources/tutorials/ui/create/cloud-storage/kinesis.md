@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Erstellen eines Amazon Kinesis-Quellconnectors in der Benutzeroberfläche
+title: Amazon Kinesis-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
 source-wordcount: '431'
-ht-degree: 1%
+ht-degree: 17%
 
 ---
 
 
-# Erstellen eines [!DNL Amazon Kinesis] Quellconnectors in der Benutzeroberfläche
+# Create an [!DNL Amazon Kinesis] source connector in the UI
 
 >[!NOTE]
 >Der [!DNL Amazon Kinesis] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
@@ -21,16 +21,16 @@ Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Erlebnis-Datenmodell (XDM)-System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-   - [Grundlagen der Zusammensetzung](../../../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
+- [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
+   - [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    - [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-- [Echtzeit-Profil](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Wenn Sie bereits über ein [!DNL Kinesis] Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zur [Konfiguration eines Datenflusses](../../dataflow/streaming/cloud-storage.md)fortfahren.
 
-### Erforderliche Berechtigungen erfassen
+### Erforderliche Anmeldedaten sammeln
 
 Um den [!DNL Kinesis] Quellanschluss zu authentifizieren, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
@@ -40,7 +40,7 @@ Um den [!DNL Kinesis] Quellanschluss zu authentifizieren, müssen Sie Werte für
 | `Secret access key` | Der geheime Zugriffsschlüssel für Ihr [!DNL Kinesis] Konto. |
 | `region` | Der Bereich Ihres AWS-Servers. |
 
-Weitere Informationen zu diesen Werten finden Sie in [diesem Kinesis Dokument](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
+Weitere Informationen zu diesen Werten finden Sie in [diesem Kinesis-Dokument](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ## Verbinden Sie Ihr [!DNL Kinesis] Konto
 
@@ -48,11 +48,11 @@ Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *Quellarbeitsbereich* zuzugreifen. Auf der Registerkarte &quot; *Katalog* &quot;werden verschiedene Quellen angezeigt, mit denen eine Verbindung hergestellt werden kann [!DNL Platform]. Jede Quelle zeigt die Anzahl der vorhandenen Konten, die ihnen zugeordnet sind.
 
-Wählen Sie unter der Kategorie *[!UICONTROL Cloud-Datenspeicherung]* die Option **[!UICONTROL Amazon-Kinesis]** und klicken Sie **auf das Pluszeichen (+)** , um einen neuen [!DNL Kinesis] Connector zu erstellen.
+Wählen Sie unter der Kategorie *[!UICONTROL Cloud-Datenspeicherung]* die Option **[!UICONTROL Amazon Kinesis]** und klicken Sie **auf das Pluszeichen (+)** , um einen neuen [!DNL Kinesis] Connector zu erstellen.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-Das Dialogfeld &quot; *[!UICONTROL Verbindung mit Amazon-Kinesis]* herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Das Dialogfeld &quot; *[!UICONTROL Verbindung mit Amazon Kinesis]* herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
@@ -68,4 +68,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Kinesis] Konto, mit
 
 ## Nächste Schritte
 
-Indem Sie diesem Tutorial folgen, haben Sie eine Verbindung zu Ihrem [!DNL Kinesis] Konto [!DNL Platform]. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in die Platform](../../dataflow/streaming/cloud-storage.md)zu bringen.
+Indem Sie diesem Tutorial folgen, haben Sie eine Verbindung zu Ihrem [!DNL Kinesis] Konto [!DNL Platform]. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/streaming/cloud-storage.md)zu übertragen.
