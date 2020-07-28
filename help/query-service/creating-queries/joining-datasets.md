@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Zusammenfügen von Datensätzen
+title: Datensätze verknüpfen
 topic: queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 workflow-type: tm+mt
 source-wordcount: '53'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
-# Zusammenfügen von Datensätzen
+# Datensätze verknüpfen
 
-Durch die Verknüpfung von Datensätzen können Sie Daten aus anderen Datensätzen in Ihre Abfrage aufnehmen. In diesem Beispiel wird ein benutzerdefinierter Betriebssystemdataset verwendet, um den Wert `operatingsystemID` dem `operatingsystem` Wert zuzuordnen.
+Durch Verknüpfung von Datensätzen können Sie Daten aus anderen Datensätzen in Ihre Abfrage aufnehmen. In diesem Beispiel wird ein benutzerdefinierter Betriebssystemdatensatz verwendet, um die `operatingsystemID` dem Wert `operatingsystem` zuzuordnen.
 
 Datensätze:
 - your_analytics_table
 - custom_operating_system_lookup
 
-Erstellen Sie eine `SELECT` Anweisung für die 50 wichtigsten Betriebssysteme nach Anzahl der Ansichten.
+Erstellen Sie eine `SELECT`-Anweisung für die 50 wichtigsten Betriebssysteme nach Anzahl der Seitenansichten.
 
 ```sql
 SELECT 
