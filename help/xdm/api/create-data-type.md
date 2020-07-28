@@ -26,7 +26,7 @@ POST /tenant/datatypes
 
 **Anfrage**
 
-Für die Definition von Datentypen sind weder die Felder `meta:extends` und `meta:intendedToExtend` erforderlich, noch müssen Felder zur Vermeidung verschachtelt sein, um Konflikte zu vermeiden.
+Für die Definition von Datentypen sind weder die Felder `meta:extends` und `meta:intendedToExtend` erforderlich, noch müssen Felder zur Vermeidung von Konflikten verschachtelt werden.
 
 ```SHELL
 curl -X POST \
@@ -67,7 +67,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei erfolgreicher Antwort wird der HTTP-Statuscode 201 (Erstellung bestätigt) und eine Payload zurückgegeben, die Details zum neu erstellten Datentyp einschließlich `$id`, `meta:altId` und `version` enthält. These three values are read-only and are assigned by the [!DNL Schema Registry].
+Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt) und eine Payload zurückgegeben, die Details zum neu erstellten Datentyp einschließlich `$id`, `meta:altId` und `version` enthält. These three values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
