@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Handbuch zur Fehlerbehebung beim Adobe Experience Platform Identity Service
+title: Handbuch zur Fehlerbehebung bei Adobe Experience Platform Identity Service
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2225'
-ht-degree: 1%
+ht-degree: 85%
 
 ---
 
 
-# Handbuch zur Fehlerbehebung beim Identitätsdienst
+# Handbuch zur Fehlerbehebung bei Identity Service
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Adobe Experience Platform [!DNL Identity Service]sowie eine Anleitung zur Fehlerbehebung für häufige Fehler. Fragen und Fehlerbehebung zu [!DNL Platform] APIs im Allgemeinen finden Sie im Handbuch zur Fehlerbehebung bei der [Adobe Experience Platform-APIs](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
-Daten, die einen einzelnen Kunden identifizieren, werden häufig über die verschiedenen Geräte und Systeme, die sie zur Interaktion mit Ihrer Marke verwenden, fragmentiert. [!DNL Identity Service] sammelt diese fragmentierten Identitäten zusammen, was ein vollständiges Verständnis des Kundenverhaltens ermöglicht, sodass Sie effektive digitale Erlebnisse in Echtzeit bereitstellen können. Weitere Informationen finden Sie in der Übersicht über den [Identitätsdienst](./home.md).
+Daten, die eine Identifizierung einzelner Kunden erlauben, sind häufig auf die verschiedenen Geräte und Systeme verteilt, die Kunden zur Interaktion mit Ihrer Marke verwenden. [!DNL Identity Service] sammelt diese fragmentierten Identitäten und fasst sie zusammen, um eine vollständige Übersicht über Kundenverhalten zu liefern, sodass Sie in Echtzeit für effektive digitale Erlebnisse sorgen können. Weiterführende Informationen finden Sie in der [Identity Service – Übersicht](./home.md).
 
 ## FAQs
 
@@ -24,96 +24,96 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 ## Was sind Identitätsdaten?
 
-Identitätsdaten sind alle Daten, die zur Identifizierung einer einzelnen Person verwendet werden können. Je nach Kontext, in dem die Daten in Ihrem Unternehmen verwendet werden, können Identitätsdaten Benutzernamen, E-Mail-Adressen und IDs aus CRM-Systemen umfassen. Identitätsdaten sind nicht auf registrierte Benutzer Ihrer Website oder Ihres Dienstes beschränkt, da anonyme Benutzer auch anhand ihrer Geräte- oder Cookie-ID identifiziert werden können.
+Identitätsdaten sind alle Daten, anhand derer sich einzelne Personen identifizieren lassen. Je nach Kontext, in dem solche Daten in Ihrer Organisation genutzt werden, können Identitätsdaten Benutzernamen, E-Mail-Adressen und Kennungen aus CRM-Systemen umfassen. Identitätsdaten sind nicht auf registrierte Benutzer Ihrer Website oder Ihres Dienstes beschränkt, da sich anonyme Benutzer anhand ihrer Geräte- oder Cookie-Kennungen ebenfalls identifizieren lassen.
 
-## Welchen Nutzen hat die Kennzeichnung von Datenfeldern als Identitäten?
+## Welchen Nutzen bietet eine Kennzeichnung von Datenfeldern als Identitäten?
 
-Durch die Kennzeichnung bestimmter Datenfelder als Identitäten in den Daten zu Datensatz und Zeitreihen können Sie Identitätsbeziehungen innerhalb der natürlichen Datenstruktur zuordnen und Duplikat-Daten über Kanäle hinweg miteinander in Einklang zu bringen. See the [Identity Service overview](./home.md) for more information.
+Durch Kennzeichnung bestimmter Datenfelder in Ihren Datensatz- und Zeitreihendaten als Identitäten können Sie innerhalb der natürlichen Struktur Ihrer Daten Identitätsbeziehungen zuordnen und Duplikatdaten kanalübergreifend aufeinander abstimmen. Weiterführende Informationen dazu finden Sie unter [Identity Service – Übersicht](./home.md).
 
 ## Was sind bekannte und anonyme Identitäten?
 
-Eine bekannte Identität bezieht sich auf einen Identitätswert, der allein oder mit anderen Informationen zur Identifizierung, zum Kontakt oder zur Suche einer Person verwendet werden kann. Beispiele für bekannte Identitäten sind E-Mail-Adressen, Telefonnummern und CRM-IDs.
+Eine bekannte Identität bezieht sich auf einen Identitätswert, der allein oder mit anderen Daten zum Identifizieren, Kontaktieren oder Finden einer bestimmten Person verwendet werden kann. Beispiele für bekannte Identitäten sind E-Mail-Adressen, Telefonnummern und CRM-Kennungen.
 
-Eine anonyme Identität bezieht sich auf einen Identitätswert, der nicht allein oder mit anderen Informationen zur Identifizierung, zum Kontakt oder zur Suche einer einzelnen Person (z. B. einer Cookie-ID) verwendet werden kann.
+Eine anonyme Identität bezieht sich auf einen Identitätswert, der sich nicht allein oder mit anderen Daten zum Identifizieren, Kontaktieren oder Finden einer bestimmten Person nutzen lässt (z. B. eine Cookie-Kennung).
 
-## Was ist ein Diagramm für eine private Identität?
+## Was ist ein privates Identitätsdiagramm?
 
-Ein &quot;Private Identity Graph&quot;ist eine private Zuordnung von Beziehungen zwischen verbundenen und verknüpften Identitäten, die nur für Ihr Unternehmen sichtbar ist.
+Ein privates Identitätsdiagramm ist eine private Zuordnung von Beziehungen zwischen zusammengefügten und verknüpften Identitäten, die nur für Ihre Organisation sichtbar ist.
 
-Wenn mehr als eine Identität in Daten enthalten ist, die von einem Streaming-Endpunkt erfasst oder an einen aktivierten Datensatz gesendet werden, [!DNL Identity Service]werden diese Identitäten im Diagramm für die private Identität verknüpft. [!DNL Identity Service] nutzt dieses Diagramm für eine bestimmte Konsumenten- oder Entität, um Identitätsnähte und Profil-Zusammenführung zu ermöglichen.
+When more than one identity is included in any data ingested from a streaming endpoint or sent to a dataset enabled for [!DNL Identity Service], those identities are linked in the Private Identity Graph. [!DNL Identity Service] nutzt dieses Diagramm, um Identitäten für einen bestimmten Verbraucher oder eine bestimmte Entität zu sammeln, damit sich Identitäten zusammenfügen und Profile zusammenführen lassen.
 
-## Wie erstelle ich mehrere Identitätsfelder in einem XDM-Schema?
+## Wie erstelle ich in einem XDM-Schema mehrere Identitätsfelder?
 
-[Experience Data Model (XDM)](../xdm/home.md) -Schema unterstützen mehrere Identitätsfelder. Jedes Datenfeld vom Typ `string` in einem Schema, das das XDM Individual-Profil oder die XDM ExperienceEvent-Klasse implementiert, kann als Identitätsfeld bezeichnet werden. Nach der Beschriftung werden alle in diesen Feldern enthaltenen Daten der Identitätskarte des Profils hinzugefügt.
+[Experience-Datenmodell (XDM)](../xdm/home.md)-Schemas unterstützen die Verwendung mehrerer Identitätsfelder. Jedes Datenfeld vom Typ `string` in einem Schema, das das individuelle XDM-Profil oder die XDM ExperienceEvent-Klasse implementiert, kann als Identitätsfeld gekennzeichnet werden. Nach der Kennzeichnung werden alle in diesen Feldern enthaltenen Daten der Identitätszuordnung des Profils hinzugefügt.
 
-Anweisungen zum Bezeichnen eines XDM-Felds als Identitätsfeld mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Identität](../xdm/tutorials/create-schema-ui.md) im Schema-Editor-Lernprogramm. Wenn Sie die API verwenden, finden Sie weitere Informationen zum [Identitätsdeskriptor](../xdm/tutorials/create-schema-api.md) im Schema Registry API-Lernprogramm.
+Anweisungen zum Kennzeichnen eines XDM-Felds als Identitätsfeld mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Identität](../xdm/tutorials/create-schema-ui.md) im Tutorial zum Schema-Editor. Wenn Sie stattdessen die API nutzen, finden Sie weiterführende Informationen im Abschnitt [Identitätsdeskriptor](../xdm/tutorials/create-schema-api.md) im Tutorial zur Schema Registry-API.
 
-## Gibt es Kontexte, in denen einige Felder nicht als Identitäten gekennzeichnet werden sollten?
+## Gibt es Fälle, in denen Felder nicht als Identitäten gekennzeichnet werden sollten?
 
-Identitätsfelder sollten für Werte reserviert werden, die für jede einzelne Person eindeutig sind. Betrachten Sie beispielsweise einen Datensatz für ein Programm zur Kundentreue. Das Feld &quot;Treuestufe&quot;(Gold, Silber, Bronze) wäre kein nützliches Identitätsfeld, während die Loyalität-ID - ein einzigartiger Wert - dies wäre.
+Identitätsfelder sollten für Werte reserviert bleiben, die für jeden einzelnen Kontakt eindeutig sind. Betrachten Sie beispielsweise einen Datensatz für ein Treueprogramm für Kunden. Das Feld „Treuestufe“ (Gold, Silber, Bronze) wäre kein nützliches Identitätsfeld, die Loyalitätskennung (ein eindeutiger Wert) hingegen schon.
 
-Felder wie Postleitzahlen und IP-Adressen sollten nicht als Identitäten für Einzelpersonen gekennzeichnet werden, da diese Werte für mehrere Personen gelten können. Diese Arten von Feldern sollten nur als Identitäten für Marketingstrategien auf Haushaltsebene gekennzeichnet werden.
+Felder wie Postleitzahlen und IP-Adressen sollten nicht als Identitäten für einzelne Personen gekennzeichnet werden, da diese Werte für mehr als eine Person gültig sein können. Solche Felder sollten nur bei Marketing-Strategien auf der Haushaltsebene als Identitäten gekennzeichnet werden.
 
-## Warum werden meine Identitätsfelder nicht so verknüpft, wie ich es erwartet habe?
+## Warum werden meine Identitätsfelder nicht so miteinander verknüpft, wie ich es erwartet habe?
 
-Mithilfe des [`/cluster/members` Endpunkts](./api/list-cluster-identites.md) in der Identitätsdienst-API können Sie die zugehörigen Identitäten für ein oder mehrere Identitätsfelder Ansicht haben. Wenn die Antwort nicht die erwarteten verknüpften Identitäten zurückgibt, stellen Sie sicher, dass Sie die entsprechenden Identitätsdaten in Ihren XDM-Daten angeben. Weitere Informationen finden Sie im Abschnitt zur [Bereitstellung von XDM-Daten für den Identitätsdienst](./home.md) in der Übersicht über den Identitätsdienst.
+Mit dem [`/cluster/members`Endpunkt](./api/list-cluster-identites.md) in der Identity Service-API können Sie zugehörige Identitäten für ein oder mehrere Identitätsfelder anzeigen. Wenn die Antwort nicht die erwarteten verknüpften Identitäten zurückgibt, stellen Sie sicher, dass Sie in Ihren XDM-Daten die entsprechenden Identitätsdaten angegeben haben. Weiterführende Informationen finden Sie im Abschnitt zum [Bereitstellen von XDM-Daten für Identity Service](./home.md) in der Übersicht zu Identity Service.
 
-## Was ist ein Identitäts-Namensraum?
+## Was ist ein Identitäts-Namespace?
 
-Ein Identitäts-Namensraum gibt Kontext an, wie Identitätsfelder mit der Identität eines Kunden zusammenhängen. Beispielsweise sollten Identitätsfelder im Namensraum &quot;E-Mail&quot;einem standardmäßigen E-Mail-Format entsprechen (name<span>@emailprovider.com), während Felder, die den Namensraum &quot;Phone&quot;verwenden, einer Standardtelefonnummer entsprechen sollten (z. B. 987-555-1234 in Nordamerika).
+Ein Identitäts-Namespace liefert Kontext dazu, wie Identitätsfelder mit der Identität eines Kunden zusammenhängen. Beispielsweise sollten Identitätsfelder unter dem Namespace „E-Mail“ einem standardmäßigen E-Mail-Format entsprechen (name<span>@emailprovider.com), während Felder, die den Namespace „Telefon“ verwenden, einer Standardtelefonnummer entsprechen sollten (in Nordamerika z. B. 987-555-1234).
 
-Namensraum unterscheiden ähnliche Identitätswerte zwischen verschiedenen CRM-Systemen. Angenommen, ein Profil enthält eine numerische Loyalität-ID, die mit dem Belohnungs-Programm Ihrer Firma verknüpft ist. Der Namensraum &quot;Loyalität&quot;würde diesen Wert von einer ähnlichen numerischen ID für Ihr E-Commerce-System trennen, die auch im selben Profil angezeigt wird.
+Namespaces unterscheiden bei verschiedenen CRM-Systemen zwischen ähnlichen Identitätswerten. Nehmen wir an, dass ein Profil eine numerische Kennung für das Treueprogramm enthält, die mit dem Belohnungsprogramm Ihres Unternehmens verknüpft ist. Der Namespace „Treueprogramm“ würde diesen Wert von einer ähnlichen numerischen Kennung für Ihr E-Commerce-System trennen, die im selben Profil ebenfalls angezeigt wird.
 
-See the [identity namespace overview](./home.md) for more information.
+Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./home.md).
 
-## Wie verknüpfe ich eine Identität mit einem Identitäts-Namensraum?
+## Wie verknüpfe ich eine Identität mit einem Identitäts-Namespace?
 
-Identitätsfelder müssen beim Erstellen mit einem vorhandenen Identitäts-Namensraum verknüpft werden. Neue Namensraum müssen mit der API [](#how-do-i-create-a-custom-namespace-for-my-organization) erstellt werden, bevor sie mit Identitätsfeldern verknüpft werden.
+Identitätsfelder müssen beim Erstellen mit einem vorhandenen Identitäts-Namespace verknüpft werden. Neue Namespaces müssen [mit der API erstellt](#how-do-i-create-a-custom-namespace-for-my-organization) werden, bevor sie mit Identitätsfeldern verknüpft werden.
 
-Eine schrittweise Anleitung zum Definieren eines Namensraums beim Erstellen eines Identitätsdeskriptors mit der API finden Sie im Abschnitt zum [Erstellen eines Deskriptors](../xdm/tutorials/create-schema-ui.md) im Schema Registry Developer Guide. Gehen Sie wie im Lernprogramm &quot; [Schema-Editor&quot;beschrieben vor, um ein Schema als eine ID in der Benutzeroberfläche zu kennzeichnen](../xdm/tutorials/create-schema-api.md).
+Eine schrittweise Anleitung zum Definieren eines Namespace beim Erstellen eines Identitätsdeskriptors mit der API finden Sie im Abschnitt zum [Erstellen eines Deskriptors](../xdm/tutorials/create-schema-ui.md) im Entwicklerhandbuch zur Schemaregistrierung. Gehen Sie wie im Tutorial zum [Schema-Editor](../xdm/tutorials/create-schema-api.md) beschrieben vor, um in der Benutzeroberfläche ein Schema als Identität zu kennzeichnen.
 
-## Welches sind die Standardidentitäts-Namensraum, die von der Experience Platform bereitgestellt werden?
+## Welche Identitäts-Namespaces stellt Experience Platform standardmäßig bereit?
 
-Die folgenden Standard-Namensräume stehen allen Organisationen in der Experience Platform zur Verfügung:
+Folgende Standard-Namespaces stehen allen Organisationen in Experience Platform zur Verfügung:
 
 | Anzeigename | ID | Code | Beschreibung |
 | ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | Legacy-Name: &quot;Adobe AudienceManager&quot; |
-| ECID | 4 | ECID | alias: &quot;Adobe Marketing Cloud-ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platformen-ID&quot; |
+| CORE | 0 | CORE | Alter Name: „Adobe AudienceManager“ |
+| ECID | 4 | ECID | alias: „Adobe Marketing Cloud-ID“, „Adobe Experience Cloud-ID“, „Adobe Experience Platform-ID“ |
 | E-Mail | 6 | E-Mail |  |
-| E-Mail (SHA256, Kleinbuchstaben) | 11 | E-Mails | Standard-Namensraum für E-Mail mit einem Hash. Die in diesem Namensraum bereitgestellten Werte werden vor dem Hashing mit SHA-256 in Kleinbuchstaben umgewandelt. |
+| E-Mail (SHA256, in Kleinbuchstaben) | 11 | E-Mails | Standard-Namespace für E-Mail mit Vorab-Hashing. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA-256 in Kleinbuchstaben umgewandelt. |
 | Telefon | 7 | Telefon |  |
-| Windows-BEIHILFE | 8 | WAID |  |
+| Windows AID | 8 | WAID |  |
 | AdCloud | 411 | AdCloud | alias: Ad Cloud |
 | Adobe Target | 9 | TNTID | Target-ID |
-| Google Ad ID | 20914 | GAID | GAID |
-| Apple IDFA | 20915 | IDFA | ID für Werbetreibende |
+| Google Ad-ID | 20914 | GAID | GAID |
+| Apple IDFA | 20915 | IDFA | ID für Advertisers |
 
-## Wo finde ich die Liste der Namensraum für meine Einrichtung?
+## Wo finde ich die Liste der verfügbaren Namespaces für meine Organisation?
 
-Mithilfe der [Identitätsdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)können Sie alle für Ihr Unternehmen verfügbaren Identitäts-Namensraum Liste haben, indem Sie eine GET-Anforderung an den `/idnamespace/identities` Endpunkt senden. Weitere Informationen finden Sie im Abschnitt zur [Auflistung der verfügbaren Namensraum](./api/list-namespaces.md) in der Übersicht über die Identitätsdienst-API.
+Mit der [Identity Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) können Sie alle für Ihre Organisation verfügbaren Identitäts-Namespaces auflisten, indem Sie eine GET-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Auflisten der verfügbaren Namespaces](./api/list-namespaces.md) in der Übersicht zur Identity Service-API.
 
-## Wie erstelle ich einen benutzerspezifischen Namensraum für mein Unternehmen?
+## Wie erstelle ich für meine Organisation einen benutzerspezifischen Namespace?
 
-Mithilfe der [Identitätsdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)können Sie einen benutzerdefinierten Identitäts-Namensraum für Ihr Unternehmen erstellen, indem Sie eine POST-Anforderung an den `/idnamespace/identities` Endpunkt senden. Weitere Informationen finden Sie im Abschnitt zum [Erstellen eines benutzerdefinierten Namensraums](./api/create-custom-namespace.md) in der Übersicht zur Identitätsdienst-API.
+Mit der [Identity Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) können Sie einen benutzerdefinierten Identitäts-Namespace für Ihre Organisation einrichten, indem Sie eine POST-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Erstellen eines benutzerdefinierten Namespace](./api/create-custom-namespace.md) in der Übersicht zur Identity Service-API.
 
-## Was sind Composite-Identitäten und XIDs?
+## Was sind zusammengesetzte Identitäten und XIDs?
 
-Identitäten werden in API-Aufrufen entweder durch ihre zusammengesetzte Identität oder XID referenziert. Eine **zusammengesetzte Identität** ist eine Darstellung einer Identität, die einen ID-Wert und einen Namensraum enthält. Eine **XID** ist eine Kennung mit einem Wert, die dasselbe Konstrukt wie eine zusammengesetzte Identität (eine ID und ein Namensraum) darstellt und automatisch neuen Identitäten zugewiesen wird, wenn sie vom Identitätsdienst beibehalten wird. Weitere Informationen finden Sie in der [Übersicht](./home.md) zur Identitätsdienst-API.
+Identitäten werden in API-Aufrufen entweder anhand ihrer zusammengesetzten Identität oder ihrer XID referenziert. Eine **zusammengesetzte Identität** ist eine Darstellung einer Identität, die einen ID-Wert und einen Namespace enthält. Eine **XID** ist eine Kennung mit einem Wert, die dasselbe Konstrukt wie eine zusammengesetzte Identität (eine Kennung und einen Namespace) darstellt und neuen Identitäten automatisch zugewiesen wird, wenn diese von Identity Service persistiert werden. Weiterführende Informationen finden Sie in der [Übersicht zur Identity Service-API](./home.md).
 
-## Wie behandelt der Identitätsdienst personenbezogene Daten (PII)?
+## Wie geht Identity Service mit personenbezogenen Daten (PII) um?
 
-Der Identitätsdienst erstellt einen starken, einseitigen kryptografischen Hash des PII, bevor Werte beibehalten werden. Identitätsdaten in den Namensräumen &quot;Telefon&quot;und &quot;E-Mail&quot;werden automatisch mit SHA-256 gehasht, wobei &quot;E-Mail&quot;-Werte vor dem Hashing automatisch in Kleinbuchstaben umgewandelt werden.
+Identity Service erzeugt einen starken, kryptografischen Ein-Weg-Hash für personenbezogene Daten, bevor Werte persistiert werden. Identitätsdaten in den Namespaces „Telefon“ und „E-Mail“ werden automatisch mit SHA-256 gehasht, wobei „E-Mail“-Werte vor dem Hashing automatisch in Kleinbuchstaben konvertiert werden.
 
-## Soll ich alle PII verschlüsseln, bevor ich sie an die Platform schicke?
+## Soll ich alle personenbezogenen Daten verschlüsseln, bevor sie an Platform gesendet werden?
 
-PII-Daten müssen nicht manuell verschlüsselt werden, bevor sie in die Platform eingegeben werden. Durch Anwendung der `I1` Datenverwendungsbeschriftung auf alle entsprechenden Datenfelder wandelt Platform diese Felder bei der Erfassung automatisch in Hash-ID-Werte um.
+Personenbezogene Daten müssen vor der Erfassung in Platform nicht manuell verschlüsselt werden. Durch Anwendung der Datennutzungsbezeichnung `I1` auf alle entsprechenden Datenfelder wandelt Platform diese Felder bei der Erfassung automatisch in gehashte ID-Werte um.
 
-Anweisungen zum Anwenden und Verwalten von Bezeichnungen für die Datenverwendung finden Sie im Lernprogramm [mit den Bezeichnungen zur](../data-governance/labels/user-guide.md)Datenverwendung.
+Anweisungen zum Anwenden und Verwalten von Datennutzungsbezeichnungen finden Sie im Tutorial zu [Datennutzungsbezeichnungen](../data-governance/labels/user-guide.md).
 
-## Gibt es Überlegungen beim Hashing von PII-basierten Identitäten?
+## Was gilt es beim Hashing von PII-basierten Identitäten zu beachten?
 
-Wenn Sie Hash-PII-Werte an den Identitätsdienst senden, müssen Sie dieselbe Verschlüsselungsmethode für Ihre Datensätze verwenden. Dadurch wird sichergestellt, dass der gleiche Identitätswert für alle Datensätze dieselben Hash-Werte generiert und im Identitätsdiagramm richtig zugeordnet und verknüpft werden kann.
+Wenn Sie gehashte PII-Werte an den Identity Service senden, müssen Sie für alle Datensätze dieselbe Verschlüsselungsmethode verwenden. Dadurch wird sichergestellt, dass der gleiche Identitätswert bei allen Datensätzen dieselben Hash-Werte generiert und im Identitätsdiagramm richtig zugeordnet und verknüpft werden kann.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
 <!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
@@ -135,13 +135,13 @@ Internal solutions|Preferred|Common
 
 ## Fehlerbehebung
 
-Der folgende Abschnitt enthält Vorschläge zur Fehlerbehebung für bestimmte Fehlercodes und unerwartetes Verhalten, auf das Sie bei der Arbeit mit der [!DNL Identity Service] API stoßen können.
+The following section provides troubleshooting suggestions for specific error codes and unexpected behavior you may encounter while working with the [!DNL Identity Service] API.
 
 ## [!DNL Identity Service] Fehlermeldungen
 
-Im Folgenden finden Sie eine Liste von Fehlermeldungen, die Sie möglicherweise bei der Verwendung der [!DNL Identity Service] API erhalten.
+The following is a list of error messages you may encounter when using the [!DNL Identity Service] API.
 
-### Fehlender erforderlicher Parameter für die Abfrage
+### Erforderlicher Abfrageparameter fehlt
 
 ```json
 {
@@ -151,17 +151,17 @@ Im Folgenden finden Sie eine Liste von Fehlermeldungen, die Sie möglicherweise 
 }
 ```
 
-Dieser Fehler wird angezeigt, wenn kein erforderlicher Parameter für die Abfrage im Anforderungspfad enthalten war. Die `detail` Fehlermeldung enthält den Namen des fehlenden Parameters. Zu den Varianten dieser Fehlermeldung zählen:
+Dieser Fehler wird angezeigt, wenn ein erforderlicher Abfrageparameter im Anfragepfad nicht enthalten war. Das `detail` (Detail) der Fehlermeldung enthält den Namen des fehlenden Parameters. Zu den Varianten dieser Fehlermeldung zählen:
 
-- Fehlender erforderlicher Parameter für die Abfrage - nsId
-- Fehlender erforderlicher Parameter für die Abfrage - id
-- Fehlender erforderlicher Parameter für die Abfrage - xid oder (nsid,id)
-- Fehlender erforderlicher Parameter für die Abfrage - targetNs
-- Fehlender erforderlicher Parameter für die Abfrage - xids oder positeXids
+- Erforderlicher Abfrageparameter fehlt – nsId
+- Erforderlicher Abfrageparameter fehlt – id
+- Erforderlicher Abfrageparameter fehlt – xid oder (nsid,id)
+- Erforderlicher Abfrageparameter fehlt – targetNs
+- Erforderlicher Abfrageparameter fehlt – xids oder compositeXids
 
-Vergewissern Sie sich, dass Sie den angegebenen Parameter ordnungsgemäß in den Anforderungspfad einbeziehen, bevor Sie es erneut versuchen.
+Vergewissern Sie sich, dass Sie den angegebenen Parameter im Anfragepfad ordnungsgemäß eingeschlossen haben, bevor Sie es erneut versuchen.
 
-### Der Zeitstempel sollte innerhalb der letzten 180 Tage liegen.
+### Der Zeitstempel muss aus den letzten 180 Tagen stammen.
 
 ```json
 {
@@ -173,7 +173,7 @@ Vergewissern Sie sich, dass Sie den angegebenen Parameter ordnungsgemäß in den
 
 [!DNL Identity Service] entfernt Daten, die älter als 180 Tage sind. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, auf ältere Daten zuzugreifen.
 
-### Es gibt eine Beschränkung von 1000 XIDs in einem einzelnen Aufruf
+### Es gilt eine Beschränkung von 1.000 XIDs in einem einzelnen Aufruf.
 
 ```json
 {
@@ -183,10 +183,10 @@ Vergewissern Sie sich, dass Sie den angegebenen Parameter ordnungsgemäß in den
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, Identitätsinformationen für mehr als die maximal zulässige Anzahl von [XIDs](#what-are-composite-identities-and-xids) in einem einzelnen API-Aufruf abzurufen. Reduzieren Sie die Anzahl der XIDs in Ihrer Anforderung auf unter die angezeigte Grenze, um dieses Problem zu beheben.
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, Identitätsdaten für mehr als die Zahl von [XIDs](#what-are-composite-identities-and-xids) abzurufen, die in einem einzelnen API-Aufruf maximal zulässig sind. Verringern Sie die Zahl der XIDs in Ihrer Anfrage unter die angegebene Grenze, um das Problem zu beheben.
 
 
-### Es gibt eine Beschränkung für 1000 CompositeXids in einem einzelnen Aufruf
+### Es gilt eine Beschränkung von 1.000 compositeXids in einem einzelnen Aufruf.
 
 ```json
 {
@@ -196,9 +196,9 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, Identitätsinformationen
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, Identitätsinformationen für mehr als die maximal zulässige Anzahl [zusammengesetzter Identitäten](#what-are-composite-identities-and-xids) in einem einzelnen API-Aufruf abzurufen. Reduzieren Sie die Anzahl der zusammengesetzten Identitäten in Ihrer Anforderung auf unter die angezeigte Grenze, um dieses Problem zu beheben.
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, Identitätsdaten für mehr als die Zahl [zusammengesetzter Identitäten](#what-are-composite-identities-and-xids) abzurufen, die in einem einzelnen API-Aufruf zulässig sind. Verringern Sie die Zahl der zusammengesetzten Identitäten in Ihrer Anfrage unter die angegebene Grenze, um das Problem zu beheben.
 
-### Der angegebene Diagrammtyp ist ungültig
+### Der angegebene Diagrammtyp ist ungültig.
 
 ```json
 {
@@ -208,9 +208,9 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, Identitätsinformationen
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn einem `graph-type` Abfrage-Parameter im Anforderungspfad ein ungültiger Wert zugewiesen wird. Im Abschnitt zu [Identitätsdiagrammen](./home.md) in der [!DNL Identity Service] Übersicht erfahren Sie, welche Diagrammtypen unterstützt werden.
+Diese Fehlermeldung wird angezeigt, wenn einem `graph-type`-Abfrageparameter im Anfragepfad ein ungültiger Wert zugewiesen wird. In der Übersicht zu erfahren Sie im Abschnitt über [Identitätsdiagramme](./home.md), welche Diagrammtypen unterstützt werden.[!DNL Identity Service]
 
-### Service-Token hat keinen gültigen Gültigkeitsbereich
+### Dienst-Token hat keinen gültigen Umfang.
 
 ```json
 {
@@ -220,9 +220,9 @@ Diese Fehlermeldung wird angezeigt, wenn einem `graph-type` Abfrage-Parameter im
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Ihre IMS-Organisation nicht über die erforderlichen Berechtigungen verfügt [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um dieses Problem zu beheben.
+This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
 
-### Gateway-Dienst-Token ist nicht gültig
+### Dienst-Token von Gateway ist ungültig.
 
 ```json
 {
@@ -232,9 +232,9 @@ Diese Fehlermeldung wird angezeigt, wenn Ihre IMS-Organisation nicht über die e
 }
 ```
 
-Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, um weiterhin mit [!DNL Platform] APIs arbeiten zu können. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungstraining](../tutorials/authentication.md) .
+Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](../tutorials/authentication.md).
 
-### Autorisierungsdienst-Token ist nicht gültig
+### Token für Autorisierungsdienst ist ungültig.
 
 ```json
 {
@@ -244,9 +244,9 @@ Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 
 }
 ```
 
-Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, um weiterhin mit [!DNL Platform] APIs arbeiten zu können. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungstraining](../tutorials/authentication.md) .
+Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](../tutorials/authentication.md).
 
-### Benutzertoken haben keinen gültigen Produktkontext
+### Anwender-Token weist keinen gültigen Produktkontext auf.
 
 ```json
 {
@@ -256,9 +256,9 @@ Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Ihr Zugriffstoken nicht aus einer [!DNL Experience Platform] Integration generiert wurde. Anweisungen zum Generieren neuer Zugriffstoken für eine [Integration finden Sie im](../tutorials/authentication.md) Authentifizierungstraining [!DNL Experience Platform] .
+This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
 
-### Interner Fehler beim Abrufen der nativen XID aus dem Identitäts- und Namensraum-Code
+### Interner Fehler beim Abrufen der nativen XID aus dem Identitäts- und Namespace-Code.
 
 ```json
 {
@@ -268,9 +268,9 @@ Diese Fehlermeldung wird angezeigt, wenn Ihr Zugriffstoken nicht aus einer [!DNL
 }
 ```
 
-Wenn eine Identität [!DNL Identity Service] beibehalten wird, wird der ID der Identität und der zugehörigen Namensraum-ID eine eindeutige ID zugewiesen, die als XID bezeichnet wird. Diese Meldung wird angezeigt, wenn während des Suchvorgangs der XID für einen angegebenen ID-Wert und Namensraum ein Fehler auftritt.
+When [!DNL Identity Service] persists an identity, the identity&#39;s ID and associated namespace ID are assigned a unique identifier called an XID. Diese Meldung wird angezeigt, wenn bei der Suche nach einer XID für einen angegebenen ID-Wert und Namespace ein Fehler auftritt.
 
-### Das IMS-Org ist nicht zur [!DNL Identity Service] Verwendung vorgesehen
+### The IMS Org is not provisioned for [!DNL Identity Service] usage
 
 ```json
 {
@@ -280,9 +280,9 @@ Wenn eine Identität [!DNL Identity Service] beibehalten wird, wird der ID der I
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Ihre IMS-Organisation nicht über die erforderlichen Berechtigungen verfügt [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um dieses Problem zu beheben.
+This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
 
-### Interner Serverfehler
+### Interner Server-Fehler
 
 ```json
 {
@@ -292,13 +292,13 @@ Diese Fehlermeldung wird angezeigt, wenn Ihre IMS-Organisation nicht über die e
 }
 ```
 
-Dieser Fehler wird angezeigt, wenn bei der Ausführung eines [!DNL Platform] Dienstaufrufs eine unerwartete Ausnahme auftritt. Es empfiehlt sich, Ihre automatisierten Aufrufe so Programm, dass sie ihre Anforderungen in einem bestimmten Zeitintervall wiederholen, wenn sie diesen Fehler erhalten. Wenn das Problem weiterhin besteht, wenden Sie sich an Ihren Systemadministrator.
+This error displays when an unexpected exception occurs in the execution of a [!DNL Platform] service call. Es empfiehlt sich, automatisierte Aufrufe so zu programmieren, dass sie bei Erhalt dieses Fehlers Anfragen in einem bestimmten Zeitintervall mehrfach wiederholen. Wenn das Problem fortbesteht, wenden Sie sich an Ihren Systemadministrator.
 
-## Stapeleingangsfehlercodes
+## Fehler-Codes zur Batch-Erfassung
 
-[!DNL Identity Service] erfasst Identitätsdaten aus Datensatz- und Zeitreihendaten, die mit Batch Ingestion hochgeladen werden [!DNL Platform] sollen. Da die Stapelverarbeitung ein asynchroner Vorgang ist, müssen Sie die Details für einen Batch-zu-Ansicht-Fehler Ansicht haben. Während der Stapelverarbeitung werden Fehler angesammelt, bis der Stapel abgeschlossen ist.
+[!DNL Identity Service] erfasst Identitätsdaten aus Datensatz- und Zeitreihendaten, die mithilfe der Batch-Erfassung in hochgeladen werden.[!DNL Platform] Da die Batch-Erfassung ein asynchroner Vorgang ist, müssen Sie die Details für einen Batch anzeigen, um Fehler zu prüfen. Während der Batch-Verarbeitung werden Fehler gesammelt, bis der Batch abgeschlossen ist.
 
-Im Folgenden finden Sie eine Liste von Fehlermeldungen, die im Zusammenhang mit [!DNL Identity Service] der Verwendung der [Dateneinbetungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)auftreten können.
+The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
 ### Unbekanntes XDM-Schema
 
@@ -310,9 +310,9 @@ Im Folgenden finden Sie eine Liste von Fehlermeldungen, die im Zusammenhang mit 
 }
 ```
 
-[!DNL Identity Service] Verwendet nur Identitäten für Daten aus Datensatz- oder Zeitreihen, die den [!DNL Profile] bzw. [!DNL ExperienceEvent] Klassen entsprechen. Dieser Fehler wird ausgelöst, wenn versucht wird, Daten zu erfassen, [!DNL Identity Service] die keiner der beiden Klassen entsprechen.
+[!DNL Identity Service] Verwendet nur Identitäten für Daten aus Datensatz- oder Zeitreihen, die den [!DNL Profile] bzw. [!DNL ExperienceEvent] Klassen entsprechen. Attempting to ingest data for [!DNL Identity Service] that does not adhere to either class will trigger this error.
 
-### Es gab 0 gültige Identitäten in den ersten 100 Zeilen des verarbeiteten Stapels
+### Es gab 0 gültige Identitäten in den ersten 100 Zeilen des verarbeiteten Batch.
 
 ```json
 {
@@ -322,9 +322,9 @@ Im Folgenden finden Sie eine Liste von Fehlermeldungen, die im Zusammenhang mit 
 }
 ```
 
-Dieser Fehler wird angezeigt, wenn die ersten 100 Zeilen eines Stapels keine Identitäten aufweisen. Dieser Fehler deutet jedoch nicht eindeutig darauf hin, dass in den nachfolgenden Aufzeichnungen keine Identitäten gefunden wurden.
+Dieser Fehler wird angezeigt, wenn die ersten 100 Zeilen eines Batch keine Identitäten aufweisen. Dieser Fehler bedeutet jedoch nicht unbedingt, dass in den nachfolgenden Einträgen keine Identitäten gefunden wurden.
 
-### Übersprungene Datensätze, da sie nur eine Identität pro XDM-Datensatz hatten
+### Einträge übersprungen, da sie nur eine Identität pro XDM-Eintrag aufwiesen.
 
 ```json
 {
@@ -334,9 +334,9 @@ Dieser Fehler wird angezeigt, wenn die ersten 100 Zeilen eines Stapels keine Ide
 }
 ```
 
-[!DNL Identity Service] nur Identitäten verknüpfen, wenn einzelne Datensätze zwei oder mehr Identitätswerte enthalten. Diese Fehlermeldung tritt einmal für jeden erfassten Stapel auf. Sie zeigt die Anzahl der Datensätze an, in denen nur eine Identität gefunden wurde und keine Änderung am Identitätsdiagramm vorgenommen wurde.
+[!DNL Identity Service] verknüpft Identitäten nur dann, wenn einzelne Einträge zwei oder mehr Identitätswerte beinhalten. Diese Fehlermeldung wird bei jedem erfassten Batch einmal angezeigt und gibt die Zahl der Einträge an, in denen nur eine Identität gefunden wurde und keine Änderungen am Identitätsdiagramm vorgenommen wurden.
 
-### Namensraum-Code für dieses IMS-Org nicht registriert
+### Namespace-Code für diese IMS-Organisation ist nicht registriert.
 
 ```json
 {
@@ -346,9 +346,9 @@ Dieser Fehler wird angezeigt, wenn die ersten 100 Zeilen eines Stapels keine Ide
 }
 ```
 
-Dieser Fehler wird angezeigt, wenn ein erfasster Datensatz eine Identität enthält, deren verknüpfter Namensraum nicht vorhanden ist oder für Ihre IMS-Organisation nicht zugänglich ist.
+Dieser Fehler wird angezeigt, wenn ein erfasster Eintrag eine Identität enthält, deren verknüpfter Namespace nicht vorhanden ist oder für Ihre IMS-Organisation nicht zugänglich ist.
 
-### Stapelverarbeitung überspringen, da IMS-Org nicht für das Diagramm für private Identitäten bereitgestellt wird
+### Batch-Erfassung wird übersprungen, da für das private Identitätsdiagramm keine IMS-Organisation angegeben wurde.
 
 ```json
 {
@@ -358,7 +358,7 @@ Dieser Fehler wird angezeigt, wenn ein erfasster Datensatz eine Identität enth�
 }
 ```
 
-Beim Erfassen von Stapeldaten wird diese Fehlermeldung angezeigt, wenn Ihr IMS-Unternehmen nicht über die erforderlichen Berechtigungen verfügt [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um dieses Problem zu beheben.
+When ingesting batch data, this error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
 
 ### Interner Fehler
 
@@ -370,4 +370,4 @@ Beim Erfassen von Stapeldaten wird diese Fehlermeldung angezeigt, wenn Ihr IMS-U
 }
 ```
 
-Dieser Fehler wird angezeigt, wenn während der Stapelverarbeitung eine unerwartete Ausnahme auftritt. Es empfiehlt sich, Ihre automatisierten Aufrufe so Programm, dass sie ihre Anforderungen in einem bestimmten Zeitintervall wiederholen, wenn sie diesen Fehler erhalten. Wenn das Problem weiterhin besteht, wenden Sie sich an Ihren Systemadministrator.
+Dieser Fehler wird angezeigt, wenn bei der Batch-Erfassung eine unerwartete Ausnahme auftritt. Es empfiehlt sich, automatisierte Aufrufe so zu programmieren, dass sie bei Erhalt dieses Fehlers Anfragen in einem bestimmten Zeitintervall mehrfach wiederholen. Wenn das Problem fortbesteht, wenden Sie sich an Ihren Systemadministrator.
