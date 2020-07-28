@@ -1,48 +1,48 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Übersicht über Adobe Experience Platform Source Connectors
+title: Überblick über Adobe Experience Platform Connectoren für Datenquellen
 topic: overview
 translation-type: tm+mt
 source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
 source-wordcount: '800'
-ht-degree: 1%
+ht-degree: 59%
 
 ---
 
 
-# Übersicht über die Quellenanschlüsse
+# Übersicht über Connectoren für Datenquellen
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Sie können Daten aus verschiedenen Quellen wie Adobe-Anwendungen, Cloud-basierte Datenspeicherung, Datenbanken und vielen anderen Quellen erfassen.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie Quellverbindungen zu verschiedenen Datenanbietern einfach einrichten können. Diese Quellverbindungen ermöglichen es Ihnen, Ihre Drittanbietersysteme zu authentifizieren, Zeiten für die Erfassung festzulegen und den Datendurchsatz zu verwalten.
+[!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Diese sogenannten „Quell-Connectoren“ bieten eine Schnittstelle zur Authentifizierung bei Systemen von Drittanbietern und ermöglichen die Einrichtung von Zeitplänen für die Datenaufnahme sowie die Steuerung des Aufnahmedurchsatzes.
 
-Mit [!DNL Experience Platform]dieser Funktion können Sie Daten, die Sie aus unterschiedlichen Quellen erfassen, zentralisieren und die dabei gewonnenen Erkenntnisse nutzen, um mehr zu tun.
+With [!DNL Experience Platform], you can centralize data you collect from disparate sources and use the insights gained from it to do more.
 
-## Arten von Quellen
+## Arten von Datenquellen
 
-Die Quellen in [!DNL Experience Platform] sind in die folgenden Kategorien gruppiert:
+Sources in [!DNL Experience Platform] are grouped into the following categories:
 
-### Adobe-Programme
+### Adobe-Anwendungen
 
-[!DNL Experience Platform] ermöglicht die Erfassung von Daten aus anderen Adobe-Anwendungen, einschließlich Adobe Analytics, Adobe Audience Manager und [!DNL Experience Platform Launch]. Weitere Informationen finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] ermöglicht die Erfassung von Daten aus anderen Anwendungen der Adobe, einschließlich Adobe Analytics, Adobe Audience Manager und [!DNL Experience Platform Launch]. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über den Adobe Audience Manager-Connector](connectors/adobe-applications/audience-manager.md)
-- [Erstellen eines Adobe Audience Manager-Quellconnectors in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Überblick über den Analytics-Datenschnittstellen](connectors/adobe-applications/analytics.md)
-- [Erstellen eines Adobe Analytics-Quellconnectors in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Übersicht über den Adobe Analytics-Connector](connectors/adobe-applications/analytics.md)
+- [Erstellen eines Quell-Connectors für Adobe Analytics über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Erstellen eines Quell-Connectors für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Werbung
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieteranzeigesystem. Weitere Informationen zu bestimmten Quellschnittstellen finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieteranzeigesystem. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [!DNL Google AdWords](connectors/advertising/ads.md) connector
 
 ### Cloud-Speicherplatz
 
-Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in [!DNL Platform] ohne Download, Format oder Upload übertragen. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird über die Benutzeroberfläche in den Sources-Workflow integriert. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Die einzelnen Prozessschritte werden anhand der Benutzeroberfläche in den Datenquellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connector
 - [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) connector
@@ -55,21 +55,21 @@ Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in [!DNL Platform] ohn
 
 ### CRM (Customer Relationship Management)
 
-CRM-Systeme bieten Daten, die dazu beitragen können, Kundenbeziehungen aufzubauen, was wiederum Loyalität schafft und die Kundenbindung fördert. [!DNL Experience Platform] bietet Unterstützung für die Erfassung von CRM-Daten aus [!DNL Microsoft Dynamics 365] und [!DNL Salesforce]. Weitere Informationen finden Sie in den folgenden Dokumenten:
+CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden können, um die Kundentreue und -bindung zu fördern. [!DNL Experience Platform] bietet Unterstützung für die Erfassung von CRM-Daten aus [!DNL Microsoft Dynamics 365] und [!DNL Salesforce]. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [!DNL Microsoft Dynamics](connectors/crm/ms-dynamics.md) connector
 - [!DNL Salesforce](connectors/crm/salesforce.md) connector
 
 ### Kundenerfolg
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einer Drittanbieter-Kundenerfolganwendung. Weitere Informationen finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Drittanbieter-Anwendungen für das Customer Success Management. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) connector
 - [!DNL ServiceNow](connectors/customer-success/servicenow.md) connector
 
 ### Datenbank
 
-[!DNL Experience Platform] unterstützt das Erfassen von Daten aus einer Datenbank eines Drittanbieters. Weitere Informationen zu bestimmten Quellschnittstellen finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [!DNL Amazon Redshift](connectors/databases/redshift.md) connector
 - [!DNL Apache Hive on Azure HDInsights](connectors/databases/hive.md) connector
@@ -89,44 +89,44 @@ CRM-Systeme bieten Daten, die dazu beitragen können, Kundenbeziehungen aufzubau
 - [!DNL Phoenix](connectors/databases/phoenix.md) connector
 - [!DNL PostgreSQL](connectors/databases/postgres.md) connector
 
-### Marketingautomatisierung
+### Marketing-Automatisierung
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Marketingautomatisierungssystem eines Drittanbieters. Weitere Informationen zu bestimmten Quellschnittstellen finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [!DNL HubSpot](connectors/marketing-automation/hubspot.md) connector
 
 ### Zahlungen
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Zahlungssystem eines Drittanbieters. Weitere Informationen zu bestimmten Quellschnittstellen finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Zahlungssystem eines Drittanbieters. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [!DNL PayPal](connectors/payments/paypal.md) connector
 
 ### Protokolle
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieter-Protokollsystem. Weitere Informationen zu bestimmten Quellschnittstellen finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieter-Protokollsystem. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [!DNL Generic OData](connectors/protocols/odata.md) connector
 
-## Zugriffskontrolle für Quellen bei der Datenerfassung
+## Zugriffskontrolle für Quellen zur Datenaufnahme
 
-Berechtigungen für Quellen in der Datenerfassung können innerhalb der Adobe-Admin Console verwaltet werden. Sie können auf Berechtigungen über die Registerkarte &quot; *[!UICONTROL Berechtigungen]* &quot;in einem bestimmten Profil zugreifen. Über den Menüeintrag &quot; **[!UICONTROL Berechtigungen]** bearbeiten&quot;können Sie über den Eintrag im Menü &quot; *[!UICONTROL Dateneingabe]* &quot;auf die Berechtigungen für Quellen zugreifen. Die Berechtigung &quot; **[!UICONTROL Ansichten-Quellen]** &quot;gewährt schreibgeschützten Zugriff auf verfügbare Quellen auf der Registerkarte &quot; *[!UICONTROL Katalog]* &quot;und auf authentifizierte Quellen auf der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;. Die Berechtigung &quot;Quellen **[!UICONTROL verwalten]** &quot;gewährt uneingeschränkten Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen.
+Zugriffsberechtigungen für die zur Datenaufnahme verwendeten Quellen können über Adobe Admin Console verwaltet werden. Der Zugriff auf die Berechtigungen für ein bestimmtes Produktprofil erfolgt über die ihm zugehörige Registerkarte *[!UICONTROL Berechtigungen]*. Im Bereich **[!UICONTROL Berechtigungen bearbeiten]** können Sie über den Menüeintrag *[!UICONTROL Datenaufnahme]* auf die einer Quelle zugehörigen Berechtigungen zugreifen. Die Berechtigung **[!UICONTROL Quellen anzeigen]** gewährt Lesezugriff auf unter der Registerkarte *[!UICONTROL Katalog]* verfügbare Quellen sowie auf authentifizierte Quellen unter der Registerkarte *[!UICONTROL Durchsuchen]*. Mit der Berechtigung **[!UICONTROL Quellen verwalten]** dagegen wird uneingeschränkter Zugriff zum Anzeigen, Erstellen, Bearbeiten und Deaktivieren von Quellen gewährt.
 
-Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche auf der Grundlage verschiedener Kombinationen dieser Berechtigungen verhält:
+Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche bei verschiedenen Kombinationen dieser Berechtigungen verhält:
 
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
-| **[!UICONTROL Ansicht-Quellen]** auf | Gewähren Sie schreibgeschützten Zugriff auf Quellen in jedem Quelltyp auf der Registerkarte &quot; *Katalog* &quot;sowie auf die Registerkarten &quot; *Durchsuchen*&quot;, &quot; *Konten*&quot;und &quot; *DataFlow* &quot;. |
-| **[!UICONTROL Quellen]** verwalten unter | Gewährt zusätzlich zu den Funktionen in den **[!UICONTROL Ansichten-Quellen]** Zugriff auf die Option &quot; *[!UICONTROL Verbindungsquelle]* &quot;im *[!UICONTROL Katalog]* und auf die Option &quot;Daten ** auswählen&quot;in *[!UICONTROL Durchsuchen]*. **[!UICONTROL Mit Quellen]** verwalten können Sie auch *[!UICONTROL DataFlows]* aktivieren oder deaktivieren und deren Zeitpläne bearbeiten. |
-| **[!UICONTROL Ansicht-Quellen]** deaktivieren und Quellen **[!UICONTROL verwalten]** deaktivieren | Sperren Sie den Zugriff auf alle Quellen. |
+| **[!UICONTROL Quellen anzeigen]** aktiviert | Gewährt Lesezugriff auf die unter der Registerkarte *Katalog* aufgeführten Quelltypen sowie auf die Registerkarten *Durchsuchen*, *Konten* und *DataFlow*. |
+| **[!UICONTROL Quellen verwalten]** aktiviert | Gewährt zusätzlich zu in den **[!UICONTROL Quellen verwalten]** enthaltenen Berechtigungen Zugriff auf die Option *[!UICONTROL Quelle verbinden]* unter *[!UICONTROL Katalog]* sowie auf die Option *[!UICONTROL Daten auswählen]* unter *[!UICONTROL Durchsuchen]*. **[!UICONTROL Quellen verwalten]** beinhaltet außerdem die Berechtigung zum Aktivieren und Deaktivieren von *[!UICONTROL DataFlows]* sowie zur Bearbeitung der zugehörigen Zeitpläne. |
+| **[!UICONTROL Quellen anzeigen]** deaktiviert und **[!UICONTROL Quellen verwalten]** deaktiviert | Sperrt den Zugriff auf alle Quellen. |
 
-Weitere Informationen zu den verfügbaren Berechtigungen, die über die Admin Console erteilt wurden, einschließlich dieser vier Quellen, finden Sie in der Übersicht über die [Zugriffskontrolle](../access-control/home.md).
+Weitere Informationen zu den über Admin Console erteilten Berechtigungen einschließlich der vier hier erläuterten Quellen finden Sie unter [Zugriffskontrolle – Übersicht](../access-control/home.md).
 
 ## Geschäftsbedingungen {#terms-and-conditions}
 
 Durch die Verwendung einer der als Beta (&quot;Beta&quot;) gekennzeichneten Quellen bestätigen Sie hiermit, dass die Betaversion ***&quot;wie besehen&quot;ohne Gewährleistung jeglicher Art*** bereitgestellt wird.
 
-Adobe ist nicht verpflichtet, die Beta-Version beizubehalten, zu korrigieren, zu aktualisieren, zu ändern, zu ändern oder anderweitig zu unterstützen. Es wird empfohlen, Vorsicht walten zu lassen und sich nicht auf die richtige Funktionsweise oder Leistung solcher Beta- und/oder Begleitmaterialien zu verlassen. Die Beta-Version wird als vertrauliche Informationen von Adobe betrachtet.
+Die Adobe ist nicht verpflichtet, die Betaversion beizubehalten, zu korrigieren, zu aktualisieren, zu ändern, zu ändern oder anderweitig zu unterstützen. Es wird empfohlen, Vorsicht walten zu lassen und sich nicht auf die richtige Funktionsweise oder Leistung solcher Beta- und/oder Begleitmaterialien zu verlassen. Die Beta wird als vertrauliche Informationen über die Adobe betrachtet.
 
-Alle &quot;Feedback&quot;(Informationen zur Betaversion, einschließlich, aber nicht beschränkt auf Probleme oder Defekte, auf die Sie bei der Verwendung der Beta-Version stoßen, Vorschläge, Verbesserungen und Empfehlungen), die Sie Adobe zur Verfügung stellen, werden Adobe hiermit zugewiesen, einschließlich aller Rechte, Titel und Interessen an und an solchen Feedback.
+Jegliches &quot;Feedback&quot; (Informationen über die Beta einschließlich, aber nicht beschränkt auf Probleme oder Fehler, die Sie bei der Nutzung der Beta, Vorschläge, Verbesserungen und Empfehlungen), die Sie der Adobe zur Verfügung stellen, wird hiermit der Adobe einschließlich aller Rechte, Titel und Interesse an und an solchen Feedback zugewiesen.
 
 Senden Sie Open Feedback oder erstellen Sie ein Support-Ticket, um Ihre Vorschläge freizugeben oder einen Fehler zu melden, eine Funktionsverbesserung zu suchen.
