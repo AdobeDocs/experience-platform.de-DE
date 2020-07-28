@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Modellbewertung (API)
+title: Scoring für ein Modell vornehmen (API)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Modellbewertung (API)
+# Scoring für ein Modell vornehmen (API)
 
-In diesem Lernprogramm erfahren Sie, wie Sie die APIs nutzen, um ein Experiment und einen Experimentlauf zu erstellen. Eine detaillierte Liste der API-Dokumentation finden Sie in [diesem Dokument](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine detaillierte Liste der API-Dokumentationen finden Sie in [diesem Dokument](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
 
-## Planes Experiment zur Bewertung erstellen
+## Geplantes Experiment für Scoring erstellen
 
-Ähnlich wie bei geplanten Experimenten für Schulungen erfolgt die Erstellung eines geplanten Experiments für die Bewertung auch durch Einbeziehung eines `template` Abschnitts in den Body-Parameter. Zusätzlich wird das `name` Feld unter `tasks` dem Körper als `score`.
+Ähnlich wie bei geplanten Experimenten für das Training erfolgt die Erstellung eines geplanten Experiments für das Scoring ebenfalls durch Einbeziehung eines `template`-Abschnitts in den Textparameter. Außerdem wird das `name`-Feld unter `tasks` im Text auf `score` gesetzt.
 
-Im Folgenden finden Sie ein Beispiel zum Erstellen eines Experiments, das alle 20 Minuten beginnt `startTime` und bis zum `endTime`.
+Im Folgenden finden Sie ein Beispiel zum Erstellen eines Experiments, das ab `startTime` (Anfangszeit) alle 20 Minuten und bis `endTime` (Endzeit) ausgeführt.
 
 **Anfrage**
 
@@ -34,10 +34,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
-`{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.\
-`{JSON_PAYLOAD}`: Experimentlaufobjekt, das gesendet werden soll. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{JSON_PAYLOAD}`: Das Objekt für den Experimentlauf, das gesendet werden soll. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
 ```JSON
 {
@@ -67,10 +67,10 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: Die ID, die die MLInstanz darstellt.\
-`{MODEL_ID}`: Die ID, die das trainierte Modell darstellt.
+`{INSTANCE_ID}`: Die ID, die die MLInstance darstellt.\
+`{MODEL_ID}`: Die Kennung, die das trainierte Modell darstellt.
 
-Im Folgenden finden Sie die Antwort nach dem Erstellen des geplanten Experiments.
+Im Folgenden sehen Sie die Antwort nach dem Erstellen des geplanten Experiments.
 
 **Antwort**
 
@@ -103,12 +103,12 @@ Im Folgenden finden Sie die Antwort nach dem Erstellen des geplanten Experiments
 ```
 
 `{EXPERIMENT_ID}`: Die ID, die das Experiment darstellt.\
-`{INSTANCE_ID}`: Die ID, die die MLInstanz darstellt.
+`{INSTANCE_ID}`: Die ID, die die MLInstance darstellt.
 
 
-### Experimentlauf zur Bewertung erstellen
+### Experimentlauf zum Scoring erstellen
 
-Mit dem geschulten Modell können wir einen Experimentlauf zur Bewertung erstellen. Der Wert des `modelId` Parameters ist der `id` Parameter, der in der oben stehenden GET-Modell-Anforderung zurückgegeben wird.
+Mit dem trainierten Modell können wir nun einen Experimentlauf für das Scoring erstellen. Der Wert des `modelId`-Parameters ist der `id`-Parameter, der in der oben stehenden GET Model-Anfrage zurückgegeben wird.
 
 **Anfrage**
 
@@ -122,11 +122,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.\
-`{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert, der in Ihrer Unique Adobe Experience Platform-Integration gefunden wurde.\
-`{EXPERIMENT_ID}`: Die ID für das zu Zielgruppe Experiment. Dies finden Sie in der Antwort beim Erstellen Ihres Experiments.\
-`{JSON_PAYLOAD}`: Zu veröffentlichende Daten. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier:
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{EXPERIMENT_ID}`: Die dem Zielexperiment entsprechende Kennung. Diese finden Sie in der Antwort beim Erstellen Ihres Experiments.\
+`{JSON_PAYLOAD}`: Zu veröffentlichende Daten. Das Beispiel, das wir in unserem Tutorial verwenden, lautet hier:
 
 ```JSON
 {
@@ -145,7 +145,7 @@ curl -X POST \
 }
 ```
 
-`{MODEL_ID}`: Die dem Modell entsprechende ID.
+`{MODEL_ID}`: Die dem Modell entsprechende Kennung.
 
 Die Antwort aus der Erstellung des Experimentlaufs ist unten dargestellt:
 
@@ -168,13 +168,13 @@ Die Antwort aus der Erstellung des Experimentlaufs ist unten dargestellt:
 }
 ```
 
-`{EXPERIMENT_ID}`:  Die ID, die dem Experiment entspricht, unter dem die Ausführung läuft.\
-`{EXPERIMENT_RUN_ID}`: Die ID, die dem soeben erstellten Experimentlauf entspricht.
+`{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht, unter dem der Lauf ausgeführt wird.\
+`{EXPERIMENT_RUN_ID}`: Die Kennung, die dem soeben erstellten Experimentablauf entspricht.
 
 
-### Abrufen des Status &quot;Experimentausführung&quot;für die geplante Experimentausführung
+### Experimentlaufstatus für geplanten Experimentlauf abrufen
 
-Um Experimentabläufe für geplante Experimente abzurufen, wird die Abfrage unten angezeigt:
+Die Abfrage zum Abrufen von Experimentläufen für geplante Experimente wird im Folgenden dargestellt:
 
 **Anfrage**
 
@@ -185,11 +185,11 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  Die ID, die dem Experiment entspricht, unter dem die Ausführung läuft.\
-`{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.
+`{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht, unter dem der Lauf ausgeführt wird.\
+`{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
+`{IMS_ORG}`: Die Anmeldeinformationen für Ihre IMS-Organisation in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
-Da es mehrere Experiment-ausgeführt werden, verfügt die zurückgegebene Antwort über ein Array von Ausführen-IDs.
+Da es mehrere Experimentläufe für ein spezifisches Experiment gibt, verfügt die zurückgegebene Antwort über verschiedene Ausführungskennungen.
 
 **Antwort**
 
@@ -212,12 +212,12 @@ Da es mehrere Experiment-ausgeführt werden, verfügt die zurückgegebene Antwor
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: Die ID, die dem Experimentlauf entspricht.\
-`{EXPERIMENT_ID}`:  Die ID, die dem Experiment entspricht, unter dem die Ausführung läuft.
+`{EXPERIMENT_RUN_ID}`: Die Kennung, die dem Experimentablauf entspricht.\
+`{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht, unter dem der Lauf ausgeführt wird.
 
 ### Beenden und Löschen eines geplanten Experiments
 
-Wenn Sie die Ausführung eines geplanten Experiments vor dessen Ausführung beenden möchten, `endTime`können Sie eine DELETE-Anforderung an die `{EXPERIMENT_ID}`
+Wenn Sie die Ausführung eines geplanten Experiments vor dessen `endTime` abbrechen möchten, können Sie eine DELETE-Anfrage an die `{EXPERIMENT_ID}` senden
 
 **Anfrage**
 
@@ -228,13 +228,13 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  Die ID, die dem Experiment entspricht.\
-`{ACCESS_TOKEN}`: Ihr spezifischer Inhabertoken-Wert wird nach der Authentifizierung bereitgestellt.\
-`{IMS_ORG}`: Ihre IMS-Organisationsdaten, die Sie in Ihrer Unique Adobe Experience Platform-Integration gefunden haben.
+`{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht.\
+`{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.
 
 >[!NOTE]
 >
->Der API-Aufruf deaktiviert die Erstellung neuer Experimentausführungen. Die Ausführung bereits ausgeführter Experimentläufe wird jedoch nicht beendet.
+> Der API-Aufruf deaktiviert die Erstellung neuer Experimentabläufe. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht beendet.
 
 Im Folgenden finden Sie die Antwort, die darauf hinweist, dass das Experiment erfolgreich gelöscht wurde.
 
