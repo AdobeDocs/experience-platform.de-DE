@@ -64,6 +64,6 @@ Weitere Informationen zur Auswahl von Anwendungsfällen für Marketingzwecke im 
 * [Werbeziele - Google Display &amp; Video 360 ](/help/rtcdp/destinations/google-dv360-destination.md)
 * [ Cloud-Speicher-Ziele](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
 * [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md)
-* [Ziele in sozialen Netzwerken](/help/rtcdp/destinations/social-network-destinations-workflow.md)
+* [Ziele in sozialen Netzwerken ](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
 Weitere Informationen zu Verstößen gegen die Datenrichtlinie im Arbeitsablauf für die SegmentAktivierung finden Sie in Schritt 7 unter Profil und  an ein Ziel [aktivieren](/help/rtcdp/destinations/activate-destinations.md).
