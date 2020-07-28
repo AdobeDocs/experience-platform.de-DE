@@ -14,11 +14,11 @@ ht-degree: 85%
 
 # Endpunkt der Richtlinien zusammenführen
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Über RESTful-APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation einrichten. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben. Informationen zum Arbeiten mit Zusammenführungsrichtlinien unter Verwendung der Benutzeroberfläche finden Sie im [Benutzerhandbuch für Zusammenführungsrichtlinien](../ui/merge-policies.md).
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben. Informationen zum Arbeiten mit Zusammenführungsrichtlinien unter Verwendung der Benutzeroberfläche finden Sie im [Benutzerhandbuch für Zusammenführungsrichtlinien](../ui/merge-policies.md).
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
@@ -227,7 +227,7 @@ Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtli
 
 ### Abrufen mehrerer Zusammenführungsrichtlinien nach ihren IDs
 
-Sie können mehrere Zusammenführungsrichtlinien abrufen, indem Sie eine POST-Anforderung an den `/config/mergePolicies/bulk-get` Endpunkt senden und die IDs der Zusammenführungsrichtlinien einschließen, die Sie im Anforderungstext abrufen möchten.
+Sie können mehrere Zusammenführungsrichtlinien abrufen, indem Sie eine POST an den `/config/mergePolicies/bulk-get` Endpunkt anfordern und die IDs der Zusammenführungsrichtlinien einschließen, die Sie im Anforderungstext abrufen möchten.
 
 **API-Format**
 
@@ -261,7 +261,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden HTTP-Status 207 (Multi-Status) und die Details der Zusammenführungsrichtlinien zurückgegeben, deren IDs in der POST-Anforderung bereitgestellt wurden.
+Eine erfolgreiche Antwort gibt HTTP-Status 207 (Multi-Status) und die Details der Zusammenführungsrichtlinien zurück, deren IDs in der POST-Anforderung bereitgestellt wurden.
 
 ```json
 { 
@@ -324,7 +324,7 @@ Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtli
 
 ### Mehrere Zusammenführungsrichtlinien anhand von Kriterien auflisten
 
-Sie können verschiedene Zusammenführungsrichtlinien innerhalb Ihrer IMS-Organisation auflisten, indem Sie eine GET-Anfrage an den `/config/mergePolicies`-Endpunkt richten und optionale Abfrageparameter zum Filtern, Sortieren und Paginieren der Antwort verwenden. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (&amp;). Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
+Sie können verschiedene Zusammenführungsrichtlinien innerhalb Ihrer IMS-Organisation auflisten, indem Sie eine GET-Anfrage an den `/config/mergePolicies`-Endpunkt richten und optionale Abfrageparameter zum Filtern, Sortieren und Paginieren der Antwort verwenden. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
 
 **API-Format**
 
@@ -335,8 +335,8 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | Parameter | Beschreibung |
 |---|---|
 | `default` | Ein boolescher Wert, der Ergebnisse anhand der Frage filtert, ob die Zusammenführungsrichtlinien Standard für eine Schemaklasse sind oder nicht. |
-| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu begrenzen, die in einer Seite enthalten sind. Standardwert: 20 |
-| `orderBy` | Gibt das Feld an, anhand dessen Ergebnisse sortiert werden sollen (mit `orderBy=name` oder `orderBy=+name`, um anhand der Namen in aufsteigender Reihenfolge zu sortieren, oder mit `orderBy=-name`, um in absteigender Reihenfolge zu sortieren). Wird dieser Wert nicht angegeben, erfolgt die Standardsortierung von `name` in aufsteigender Reihenfolge. |
+| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. Standardwert: 20 |
+| `orderBy` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen (mit `orderBy=name` oder `orderBy=+name`, um anhand der Namen in aufsteigender Reihenfolge zu sortieren, oder mit `orderBy=-name`, um in absteigender Reihenfolge zu sortieren). Wird dieser Wert nicht angegeben, erfolgt die Standardsortierung von `name` in aufsteigender Reihenfolge. |
 | `schema.name` | Name des Schemas, für das verfügbare Zusammenführungsrichtlinien abgerufen werden sollen. |
 | `identityGraph.type` | Filtert Ergebnisse anhand des Identitätsdiagrammtyps. Mögliche Werte sind „none“ (keine) und „pdg“ (privates Diagramm). |
 | `attributeMerge.type` | Filtert Ergebnisse anhand des verwendeten Attributzusammenführungstyps. Mögliche Werte sind „timestampOrdered“ und „dataSetPrecedence“. |
@@ -648,7 +648,7 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `name` | Ein anwenderfreundlicher Name, anhand dessen die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
+| `name` | Ein verständlicher Name, mit dem die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
 | `identityGraph` | Das Identitätsdiagramm, aus dem zusammenzuführende verwandte Identitäten abgerufen werden sollen. |
 | `attributeMerge` | Die Art und Weise, wie Profilattributwerte bei Datenkonflikten priorisiert werden. |
 | `schema` | Die XDM-Schemaklasse, die der Zusammenführungsrichtlinie zugeordnet ist. |
@@ -720,7 +720,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Löschanfrage gibt den HTTP-Status 200 (OK) und einen leeren Antworttext zurück. Um zu überprüfen, ob der Löschvorgang erfolgreich war, können Sie eine GET-Anfrage ausführen, um die Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen. Wenn die Zusammenführungsrichtlinie gelöscht wurde, erhalten Sie einen Fehler vom Typ HTTP-Status 404 (Nicht gefunden).
+Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer Antworttext zurückgegeben. Um zu überprüfen, ob der Löschvorgang erfolgreich war, können Sie eine GET-Anfrage ausführen, um die Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen. Wenn die Zusammenführungsrichtlinie gelöscht wurde, erhalten Sie einen Fehler vom Typ HTTP-Status 404 (Nicht gefunden).
 
 ## Nächste Schritte
 
