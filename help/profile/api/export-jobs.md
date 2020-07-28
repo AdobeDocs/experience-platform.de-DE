@@ -92,7 +92,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die schreibgeschützte, sy
 
 ### Exportauftrag starten {#initiate}
 
-Sobald Sie über einen Datensatz mit Vereinigung-Speicherung verfügen, können Sie einen Exportauftrag erstellen, um die Profil-Daten an den Datensatz zu erhalten, indem Sie eine POST-Anforderung an den `/export/jobs` Endpunkt in der Echtzeit-Client-Profil-API senden und die Details der Daten angeben, die Sie im Hauptteil der Anforderung exportieren möchten.
+Sobald Sie über einen Datensatz mit Vereinigung-Speicherung verfügen, können Sie einen Exportauftrag erstellen, um die Profil-Daten an den Datensatz zu erhalten, indem Sie eine POST an den `/export/jobs` Endpunkt in der Echtzeit-Client-Profil-API anfordern und die Details der Daten angeben, die Sie im Hauptteil der Anforderung exportieren möchten.
 
 **API-Format**
 
@@ -331,7 +331,7 @@ Die Antwort enthält ein `records` Objekt, das die von Ihrer IMS-Organisation er
 
 ## Überwachung des Exportfortschritts
 
-Um die Details eines bestimmten Exportauftrags Ansicht oder dessen Status während der Verarbeitung zu überwachen, können Sie eine GET-Anforderung an den `/export/jobs` Endpunkt senden und die Angabe `id` des Exportauftrags in den Pfad einschließen. Der Exportauftrag ist abgeschlossen, sobald das `status` Feld den Wert &quot;SUCCEEDED&quot;zurückgibt.
+Um die Details eines bestimmten Exportauftrags Ansicht oder dessen Status während der Verarbeitung zu überwachen, können Sie eine GET an den `/export/jobs` Endpunkt anfordern und die Angabe `id` des Exportauftrags in den Pfad einschließen. Der Exportauftrag ist abgeschlossen, sobald das `status` Feld den Wert &quot;SUCCEEDED&quot;zurückgibt.
 
 **API-Format**
 
