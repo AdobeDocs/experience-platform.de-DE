@@ -7,32 +7,32 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '447'
-ht-degree: 5%
+ht-degree: 89%
 
 ---
 
 
 # [!DNL Platform] SDK-Handbuch
 
-Dieses Tutorial bietet Informationen zum Konvertieren `data_access_sdk_python` in den neuen Python `platform_sdk` in Python und R. Dieses Lernprogramm enthält Informationen zu den folgenden Vorgängen:
+Diese Anleitung bietet Ihnen Informationen zum Konvertieren von `data_access_sdk_python` in das neue Python `platform_sdk` in sowohl Python als auch R. Diese Anleitung enthält Informationen zu den folgenden Vorgängen:
 
 - [Authentifizierung erstellen](#build-authentication)
-- [Grundlegende Datenauswertung](#basic-reading-of-data)
-- [Grundlegende Datenverarbeitung](#basic-writing-of-data)
+- [Grundlegendes Datenlesen](#basic-reading-of-data)
+- [Grundlegendes Datenschreiben](#basic-writing-of-data)
 
 ## Authentifizierung erstellen {#build-authentication}
 
-Die Authentifizierung ist erforderlich, um Aufrufe an [!DNL Adobe Experience Platform]und besteht aus API-Schlüssel, IMS-Organisations-ID, einem Benutzertoken und einem Service-Token.
+Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
 
 ### Python
 
-Wenn Sie Jupyter-Notebook verwenden, verwenden Sie den folgenden Code, um die `client_context`:
+Wenn Sie Jupyter Notebook verwenden, nutzen Sie den folgenden Code, um den `client_context` zu erstellen:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Wenn Sie kein Jupyter-Notebook verwenden oder das IMS-Org ändern müssen, verwenden Sie bitte das folgende Codebeispiel:
+Wenn Sie kein Jupyter Notebook verwenden oder die IMS-Org ändern müssen, nutzen Sie das folgende Code-Beispiel:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -44,7 +44,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Wenn Sie Jupyter-Notebook verwenden, verwenden Sie den folgenden Code, um die `client_context`:
+Wenn Sie Jupyter Notebook verwenden, nutzen Sie den folgenden Code, um den `client_context` zu erstellen:
 
 ```r
 library(reticulate)
@@ -55,7 +55,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Wenn Sie kein Jupyter-Notebook verwenden oder das IMS-Org ändern müssen, verwenden Sie bitte das folgende Codebeispiel:
+Wenn Sie kein Jupyter Notebook verwenden oder die IMS-Org ändern müssen, nutzen Sie das folgende Code-Beispiel:
 
 ```r
 library(reticulate)
@@ -67,24 +67,24 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Grundlegende Datenauswertung {#basic-reading-of-data}
+## Grundlegendes Datenlesen {#basic-reading-of-data}
 
-Mit dem neuen [!DNL Platform] SDK beträgt die maximale Lesegröße 32 GB mit einer maximalen Lesedauer von 10 Minuten.
+With the new [!DNL Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes.
 
-Wenn Ihre Lesezeit zu lang dauert, können Sie eine der folgenden Filteroptionen verwenden:
+Wenn das Lesen zu lange dauert, können Sie eine der folgenden Filteroptionen verwenden:
 
 - [Filtern von Daten nach Offset und Limit](#filter-by-offset-and-limit)
 - [Filtern von Daten nach Datum](#filter-by-date)
-- [Filtern von Daten nach Spalten](#filter-by-selected-columns)
-- [Sortierte Ergebnisse abrufen](#get-sorted-results)
+- [Filtern von Daten nach Spalte](#filter-by-selected-columns)
+- [Abrufen von sortierten Ergebnissen](#get-sorted-results)
 
 >[!NOTE]
 >
->Das IMS-Org wird innerhalb der `client_context`Variablen festgelegt.
+> Die IMS-Org wird im `client_context` festgelegt.
 
 ### Python
 
-Zum Lesen von Daten in Python verwenden Sie bitte das folgende Codebeispiel:
+Zum Lesen von Daten in Python verwenden Sie bitte das folgende Code-Beispiel:
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -95,7 +95,7 @@ df.head()
 
 ### R
 
-Zum Lesen von Daten in R verwenden Sie bitte das folgende Codebeispiel:
+Zum Lesen von Daten in R verwenden Sie bitte das folgende Code-Beispiel:
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -104,9 +104,9 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filtern nach Offset und Limit {#filter-by-offset-and-limit}
+## Nach Offset und Limit filtern {#filter-by-offset-and-limit}
 
-Da das Filtern nach Batch-ID nicht mehr unterstützt wird, müssen Sie Daten verwenden `offset` `limit`und lesen, um den Umfang zu verändern.
+Da das Filtern nach Batch-Kennung nicht mehr unterstützt wird, müssen Sie zum Begrenzen des Datenlesens `offset` und `limit` verwenden.
 
 ### Python
 
@@ -124,7 +124,7 @@ df
 
 ## Nach Datum filtern {#filter-by-date}
 
-Die Granularität der Datumsfilterung wird jetzt durch den Zeitstempel definiert und nicht durch den Tag festgelegt.
+Die Granularität der Datumsfilterung wird jetzt durch den Zeitstempel definiert und nicht mehr durch den Tag.
 
 ### Python
 
@@ -146,7 +146,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Das neue [!DNL Platform] SDK unterstützt die folgenden Vorgänge:
+The new [!DNL Platform] SDK supports the following operations:
 
 | Vorgang | Funktion |
 | --------- | -------- |
@@ -155,12 +155,12 @@ Das neue [!DNL Platform] SDK unterstützt die folgenden Vorgänge:
 | Größer oder gleich (`>=`) | `ge()` |
 | Niedriger als (`<`) | `lt()` |
 | Kleiner oder gleich (`<=`) | `le()` |
-| And (`&`) | `And()` |
+| Und (`&`) | `And()` |
 | Oder (`|`) | `Or()` |
 
 ## Nach ausgewählten Spalten filtern {#filter-by-selected-columns}
 
-Zur weiteren Verfeinerung des Lesens von Daten können Sie auch nach Spaltennamen filtern.
+Zur weiteren Verfeinerung des Datenlesens können Sie auch nach Spaltennamen filtern.
 
 ### Python
 
@@ -176,9 +176,9 @@ df <- dataset_reader$select(c('column-a','column-b'))$read()
 
 ## Sortierte Ergebnisse abrufen {#get-sorted-results}
 
-Die erhaltenen Ergebnisse können nach bestimmten Spalten des Datensatzes der Zielgruppe und in ihrer Reihenfolge (asc/desc) sortiert werden.
+Die erhaltenen Ergebnisse können nach bestimmten Spalten des Zieldatensatzes und in ihrer Reihenfolge (aufsteigend/absteigend) sortiert werden.
 
-Im folgenden Beispiel wird Dataframe zuerst in aufsteigender Reihenfolge nach &quot;column-a&quot;sortiert. Zeilen mit den gleichen Werten für &quot;column-a&quot;werden dann in absteigender Reihenfolge nach &quot;column-b&quot;sortiert.
+Im folgenden Beispiel wird Dataframe zuerst in aufsteigender Reihenfolge nach „column-a“ sortiert. Zeilen mit den gleichen Werten für „column-a“ werden dann in absteigender Reihenfolge nach „column-b“ sortiert.
 
 ### Python
 
@@ -192,11 +192,11 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Grundlegende Datenverarbeitung {#basic-writing-of-data}
+## Grundlegendes Datenschreiben {#basic-writing-of-data}
 
 >[!NOTE]
 >
->Das IMS-Org wird innerhalb der `client_context`Variablen festgelegt.
+> Die IMS-Org wird im `client_context` festgelegt.
 
 Um Daten in Python und R zu schreiben, verwenden Sie eines der folgenden Beispiele:
 
@@ -221,4 +221,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Nächste Schritte
 
-Nachdem Sie den `platform_sdk` Datenladevorgang konfiguriert haben, werden die Daten vorbereitet und in die Datasets `train` und `val` Datensätze aufgeteilt. Um mehr über die Datenvorbereitung und die Funktionstechnik zu erfahren, besuchen Sie bitte den Abschnitt über die [Datenvorbereitung und die Funktionstechnik](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) im Tutorial zur Erstellung eines Rezeptes mit [!DNL JupyterLab] Notebooks.
+Nachdem Sie den `platform_sdk`-Data-Loader konfiguriert haben, werden die Daten vorbereitet und auf die Datensätze `train` und `val` aufgeteilt. Informationen zur Datenvorbereitung und Funktionsentwicklung finden Sie im Abschnitt zur [Datenvorbereitung und Funktionsentwicklung](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in der Anleitung zum Erstellen eines Rezepts mit Notebooks.[!DNL JupyterLab]
