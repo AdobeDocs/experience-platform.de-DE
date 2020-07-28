@@ -19,7 +19,7 @@ ht-degree: 83%
 
 Mit berechneten Attributen können Sie den Wert von Feldern anhand anderer Werte, Berechnungen und Ausdrücke automatisch berechnen. Berechnete Attribute agieren auf der Profilebene, d. h., Sie können Werte über alle Datensätze und Ereignisse hinweg aggregieren.
 
-Jedes berechnete Attribut enthält einen Ausdruck (oder „Regel“), der eingehende Daten auswertet und den sich ergebenden Wert in einem Profilattribut oder Ereignis speichert. Diese Berechnungen helfen Ihnen dabei, verschiedene Fragen zu beantworten, zum Beispiel zum Lebenszeitkaufwert, zur Zeit zwischen Käufen oder zur Zahl der Anwendungsöffnungen – ohne jedes Mal, wenn Sie bestimmte Informationen benötigen, manuell komplexe Berechnungen durchführen zu müssen.
+Jedes berechnete Attribut enthält einen Ausdruck oder eine „Regel“, der bzw. die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut oder Ereignis speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen.
 
 In diesem Handbuch werden berechnete Attribute in Adobe Experience Platform genauer beschrieben. Außerdem finden Sie Beispiel-API-Aufrufe zur Ausführung grundlegender CRUD-Vorgänge mithilfe des `/config/computedAttributes`-Endpunkts.
 
@@ -66,7 +66,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
-### Mixin erstellen
+### Erstellen eines Mixins
 
 Um ein neues Mixin zu erstellen, klicken Sie im Abschnitt *[!UICONTROL Komposition]* auf der linken Seite des Editors neben *Mixins* auf **[!UICONTROL Hinzufügen]**. Dadurch wird der Dialog **[!UICONTROL Mixin hinzufügen]** geöffnet, in dem vorhandene Mixins angezeigt werden. Klicken Sie auf das Optionsfeld für **[!UICONTROL Neues Mixin erstellen]**, um Ihr neues Mixin zu definieren.
 
