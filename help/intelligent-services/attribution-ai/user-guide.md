@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
-title: Benutzerhandbuch zur Zuordnung von AI
+title: Attribution AI-Benutzerhandbuch
 topic: User guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
 
-# Benutzerhandbuch zur Zuordnung von AI
+# Attribution AI-Benutzerhandbuch
 
-Attribution AI als Teil von Intelligent Services ist ein algorithmischer Zuordnungsdienst mit mehreren Kanälen, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketingfachleute die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen jeder einzelnen Kundeninteraktion auf die einzelnen Phasen der Customer Journey verstehen.
+Attribution AI als Teil von Intelligent Services ist ein algorithmischer Zuordnungsdienst mit mehreren Kanälen, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketing-Experten die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen einzelner Kundeninteraktionen in einzelnen Phasen der Customer Journey untersuchen.
 
-Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
+Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AIS in der Benutzeroberfläche von Intelligent Services.
 
 ## Erstellen einer Instanz
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Der *Dienste* -Browser wird angezeigt und zeigt verfügbare intelligente Adobe-Dienste an. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe intelligent services. Klicken Sie im Container für Attribution AI auf **Öffnen**.
 
-![Zugriff auf Ihre Instanz](./images/user-guide/open_Attribution_ai.png)
+![Zugreifen auf Ihre Instanz](./images/user-guide/open_Attribution_ai.png)
 
-Die Seite des Zuordnungs-API-Dienstes wird angezeigt. Auf dieser Seite werden Dienstinstanzen von Attribution AI Liste und Informationen zu diesen Instanzen, einschließlich des Namens der Instanz, der Konvertierungseinstellungen, der Häufigkeit der Ausführung der Instanz und des Status der letzten Aktualisierung, angezeigt. Klicken Sie auf Instanz **erstellen** , um zu beginnen.
+Die Seite des Attribution AI-Service wird angezeigt. Auf dieser Seite werden Dienstinstanzen von Attribution AI aufgelistet und Informationen zu diesen angezeigt, einschließlich des Namens der Instanz, der Konversionsereignisse, der Häufigkeit der Ausführung der Instanz und des Status der letzten Aktualisierung. Klicken Sie auf Instanz **erstellen** , um zu beginnen.
 
 ![Instanz erstellen](./images/user-guide/landing_page.png)
 
-Als Nächstes wird die Setup-Seite für Attribution AI angezeigt, auf der Sie grundlegende Informationen bereitstellen und einen Datensatz für die Instanz angeben können.
+Als Nächstes wird die Setup-Seite für Attribution AI angezeigt, auf der Sie grundlegende Informationen bereitstellen und ein Datensatz für die Instanz angeben können.
 
 ![Setup-Seite](./images/user-guide/setup_attribution.png)
 
@@ -40,7 +40,7 @@ Geben Sie unter *Grundlegende Informationen* einen Namen und eine optionale Besc
 
 ### Datensatz auswählen
 
-Nachdem Sie die grundlegenden Informationen ausgefüllt haben, klicken Sie auf das Dropdown-Menü **Datensatz** auswählen, um Ihren Datensatz auszuwählen. Der Datensatz wird verwendet, um das Modell zu trainieren und die nachfolgenden Daten zu bewerten, die es erzeugt. Wenn Sie einen Datensatz aus der Dropdown-Auswahl auswählen, werden nur die Daten aufgelistet, die mit Attribution AI kompatibel sind und dem Experience Data Model (XDM)-Schema entsprechen. Nachdem Sie einen Datensatz ausgewählt haben, klicken Sie in der rechten oberen Ecke auf **Weiter** , um mit der Seite &quot;Ereignis definieren&quot;fortzufahren.
+Nachdem Sie die grundlegenden Informationen ausgefüllt haben, klicken Sie auf das Dropdown-Menü **Datensatz** auswählen, um Ihren Datensatz auszuwählen. Der Datensatz wird verwendet, um das Modell zu trainieren und die nachfolgenden Daten zu bewerten, die es erzeugt. Wenn Sie einen Datensatz aus der Dropdown-Auswahl auswählen, werden nur die Datensätze aufgelistet, die mit Attribution AI kompatibel sind und dem XDM-Schema (Experience Data Model) entsprechen. Nachdem Sie einen Datensatz ausgewählt haben, klicken Sie in der rechten oberen Ecke auf **Weiter** , um mit der Seite &quot;Ereignis definieren&quot;fortzufahren.
 
 ![Setup-Seite](./images/user-guide/initial_creation_attribution.png)
 
@@ -132,7 +132,7 @@ Nachdem Sie alle erforderlichen Touchpoints definiert haben, scrollen Sie nach o
 
 ## Erweiterte Schulungs- und Bewertungseinstellungen
 
-Die letzte Seite in Attribution AI ist die *Advanced* Seite, die zum Einrichten von Training und Scoring verwendet wird.
+Die letzte Seite in Attribution AI ist die Seite &quot; *Erweitert* &quot;zum Einrichten von Schulungen und Bewertungen.
 
 ![neue Seite erweitert](./images/user-guide/advanced_settings.png)
 
@@ -168,7 +168,7 @@ Geben Sie abschließend den Ländercode in der Dropdown-Liste *Feldwert* eingebe
 
 >[!NOTE]
 >
->Ländercodes sind zwei Zeichen lang. Eine vollständige Liste finden Sie hier: [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+> Ländercodes sind zwei Zeichen lang. Eine vollständige Liste finden Sie hier: [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![region](./images/user-guide/region-based.png)
 
@@ -188,7 +188,7 @@ Klicken Sie nach Auswahl des Schulungsfensters in der oberen rechten Ecke auf **
 
 ## Nächste Schritte
 
-Indem Sie diesem Tutorial folgen, haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz ihre Bewertung abgeschlossen hat (bis zu 24 Stunden), können Sie [Zuordnungs-AI-Einblicke](./discover-insights.md)entdecken. Wenn Sie außerdem Ihre Ergebnisse herunterladen möchten, lesen Sie die Dokumentation zu den [Downloads von Rohwerten](./download-scores.md) .
+Durch Befolgen dieser Übung haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz ihre Bewertung abgeschlossen hat (bis zu 24 Stunden), können Sie Einblicke [in Attribution AIS](./discover-insights.md)entdecken. Wenn Sie außerdem Ihre Ergebnisse herunterladen möchten, lesen Sie die Dokumentation zu den [Downloads von Rohwerten](./download-scores.md) .
 
 ## Zusätzliche Ressourcen
 
