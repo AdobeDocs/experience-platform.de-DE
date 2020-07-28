@@ -20,7 +20,7 @@ Bevor Sie dieses Handbuch verwenden, lesen Sie bitte den Abschnitt [Erste Schrit
 
 ## Eine Anfrage zur Kundengenehmigung verarbeiten
 
-Zustimmungsanforderungen werden verarbeitet, indem eine POST-Anforderung an den `/consent` Endpunkt gesendet wird.
+Zustimmungsanforderungen werden verarbeitet, indem eine POST an den `/consent` Endpunkt angefordert wird.
 
 **API-Format**
 
