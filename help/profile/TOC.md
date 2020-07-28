@@ -18,7 +18,7 @@ ht-degree: 64%
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [(Alpha) Berechnete Attribute](api/computed-attributes.md)
-   * [Edge-Prognosen](api/edge-projections.md)
+   * [Edge-Projektionen](api/edge-projections.md)
    * [Entitäten ([!DNL-Profil])](api/entities.md)
    * [Exportaufträge ([!DNL-Profil]-Export)](api/export-jobs.md)
    * [Zusammenführungsrichtlinien](api/merge-policies.md)
