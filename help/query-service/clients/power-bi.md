@@ -24,7 +24,7 @@ Nach der [!DNL Power BI] Installation müssen Sie die erforderlichen Komponenten
 
 - Wählen Sie Version 4.0.10 aus (neuere Versionen führen derzeit zu einem Fehler).
 
-- Wählen Sie im Bildschirm &quot;Benutzerdefinierte Einstellungen&quot;unter &quot;Npgsql GAC Installation&quot;die Option **[!UICONTROL Wird auf lokaler Festplatte]** installiert. Wenn Sie die GAC nicht installieren, schlägt Power BI später fehl.
+- Wählen Sie im Bildschirm &quot;Benutzerdefinierte Einstellungen&quot;unter &quot;Npgsql GAC Installation&quot;die Option **[!UICONTROL Wird auf lokaler Festplatte]** installiert. Wenn Sie die GAC nicht installieren, schlägt der Power BI später fehl.
 
 - Starten Sie Windows neu.
 
