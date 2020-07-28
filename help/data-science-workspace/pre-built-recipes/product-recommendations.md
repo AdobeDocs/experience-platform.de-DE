@@ -7,33 +7,33 @@ translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '421'
-ht-degree: 5%
+ht-degree: 93%
 
 ---
 
 
 # Rezept für Produktempfehlungen
 
-Mit dem Rezept &quot;Produktempfehlungen&quot;können Sie personalisierte Produktempfehlungen bereitstellen, die auf die Bedürfnisse und Interessen Ihrer Kunden zugeschnitten sind. Mit einem präzisen Prognosemodell können Sie anhand der Einkaufshistorie eines Kunden feststellen, für welche Produkte Sie sich interessieren.
+Mit dem Rezept „Produktempfehlungen“ können Sie personalisierte Produktempfehlungen bereitstellen, die auf die Bedürfnisse und Interessen Ihrer Kunden zugeschnitten sind. Mit einem präzisen Prognosemodell können Sie anhand der Einkaufshistorie von Kunden feststellen, für welche Produkte sie sich interessieren.
 
-## Für wen ist dieses Rezept gebaut?
+## Für wen ist dieses Rezept gedacht?
 
-Heutzutage kann ein Einzelhändler eine Vielzahl von Angeboten anbieten, was seinen Kunden eine Vielzahl von Möglichkeiten bietet, die auch die Suche nach ihren Kunden behindern können. Aufgrund von Zeit- und Aufwandsbeschränkungen finden Kunden möglicherweise nicht das gewünschte Produkt, was zu Käufen mit einer hohen kognitiven Dissonanz oder gar keinem Kauf führt.
+Heutzutage können Einzelhändler eine Vielzahl von Produkten und Kunden somit eine große Auswahl anbieten, was jedoch auch die Suche erschweren kann. Aufgrund des begrenzten Zeit- und Arbeitsaufwands finden Kunden das gewünschte Produkt möglicherweise gar nicht, was zu Käufen mit hoher kognitiver Dissonanz oder überhaupt keinen Käufen führen kann.
 
 ## Was macht dieses Rezept?
 
-Das Rezept &quot;Produktempfehlungen&quot;verwendet maschinelles Lernen, um die Interaktionen eines Kunden mit Produkten in der Vergangenheit zu analysieren und eine personalisierte Liste von Produktempfehlungen schnell und mühelos zu generieren. Dadurch wird der Produktentdeckungsprozess optimiert und lange, unproduktive, irrelevante Suchvorgänge für Ihre Kunden werden vermieden. Das Rezept &quot;Produktempfehlungen&quot;kann daher die Einkaufserfahrung eines Kunden insgesamt verbessern, was zu einer höheren Interaktion und einer stärkeren Markentreue führt.
+Das Rezept „Produktempfehlungen“ verwendet maschinelles Lernen, um frühere Interaktionen eines Kunden mit Produkten zu analysieren sowie schnell und einfach eine personalisierte Liste mit Produktempfehlungen zu generieren. So wird die Produktsuche optimiert und lassen sich lange, unproduktive, irrelevante Suchen für Ihre Kunden vermeiden. Das Rezept „Produktempfehlungen“ kann daher das Einkaufserlebnis von Kunden insgesamt verbessern, was zu mehr Interaktion und einer höheren Markentreue führt.
 
 ## Wie sehen die ersten Schritte aus?
 
-Beginnen Sie mit dem Tutorial Adobe Experience Platform Lab (siehe Link unten). Dieses Lernprogramm zeigt Ihnen, wie Sie das Rezept &quot;Produktempfehlungen&quot;in einem Jupyter-Notebook erstellen, indem Sie dem Arbeitsablauf [für Rezept](../jupyterlab/create-a-recipe.md) folgen und das Rezept in implementieren [!DNL Experience Platform][!DNL Data Science Workspace].
+Beginnen Sie mit dem Tutorial zum Adobe Experience Platform Lab (siehe Lab-Link unten). This tutorial will show you how to create the Product Recommendations recipe in a Jupyter Notebook by following the [notebook to recipe](../jupyterlab/create-a-recipe.md) workflow, and implementing the recipe in [!DNL Experience Platform] [!DNL Data Science Workspace].
 
-* [Lab: Prognostizieren der Zukunft mit dem Arbeitsbereich für Datenwissenschaften](https://expleague.azureedge.net/labs/L777/index.html)
+* [Lab: Prognostizieren der Zukunft mit Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Lab-Ressourcen](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
-## Data schema
+## Datenschema
 
-Dieses Rezept verwendet benutzerdefinierte [XDM-Schema](../../xdm/schema/field-dictionary.md) , um die Eingabe- und Ausgabedaten zu modellieren:
+Dieses Rezept nutzt benutzerdefinierte [XDM-Schemas](../../xdm/schema/field-dictionary.md) zum Modellieren der Eingabe- und Ausgabedaten:
 
 ### Schema für Eingabedaten
 
@@ -44,17 +44,17 @@ Dieses Rezept verwendet benutzerdefinierte [XDM-Schema](../../xdm/schema/field-d
 | timestamp | Zeichenfolge |
 | userId | Zeichenfolge |
 
-### Schema der Ausgabedaten
+### Schema für Ausgabedaten
 
 | Feldname | Typ |
 --- | ---
-| Empfehlungen | Zeichenfolge |
+| recommendations | Zeichenfolge |
 | userId | Ganzzahl |
 
 ## Algorithmus
 
-Das Rezept &quot;Produktempfehlungen&quot;nutzt die kollaborative Filterung, um eine personalisierte Liste von Produktempfehlungen für Ihre Kunden zu generieren. Die kollaborative Filterung erfordert im Gegensatz zu einem inhaltsbasierten Ansatz keine Informationen über ein bestimmtes Produkt, sondern verwendet die historischen Präferenzen eines Kunden für eine Reihe von Produkten. Diese leistungsstarke Empfehlungstechnik basiert auf zwei einfachen Annahmen:
-* Es gibt Kunden mit ähnlichen Interessen, und sie können gruppiert werden, indem sie ihr Einkaufs- und Browsing-Verhalten vergleichen.
-* Ein Kunde ist eher an einer Empfehlung interessiert, die auf ähnlichen Kunden basiert, was sein Einkaufs- und Browsing-Verhalten betrifft.
+Das Rezept „Produktempfehlungen“ nutzt kollaborative Filterung, um eine personalisierte Liste mit Produktempfehlungen für Ihre Kunden zu generieren. Kollaborative Filterung erfordert im Gegensatz zu einem inhaltsbasierten Ansatz keine Informationen über ein bestimmtes Produkt, sondern nutzt vielmehr die historischen Präferenzen eines Kunden für eine Reihe von Produkten. Dieses leistungsstarke Empfehlungsverfahren basiert auf zwei einfachen Annahmen:
+* Es gibt Kunden mit ähnlichen Interessen; diese lassen sich gruppieren, indem man ihr Einkaufs- und Browsing-Verhalten miteinander vergleicht.
+* Kunden sind eher an Empfehlungen interessiert, an denen auch Kunden mit einem ähnlichen Einkaufs- und Browsing-Verhalten Interesse haben.
 
-Dieser Prozess ist in zwei Hauptschritte unterteilt. Definieren Sie zunächst eine Untergruppe ähnlicher Kunden. Identifizieren Sie dann innerhalb dieses Satzes ähnliche Funktionen unter diesen Kunden, um eine Empfehlung an den Kunden der Zielgruppe zurückzugeben.
+Dieses Verfahren ist in zwei Hauptschritte unterteilt. Zunächst definieren Sie eine Untergruppe ähnlicher Kunden. Dann identifizieren Sie innerhalb dieser Gruppe ähnliche Merkmale bei den Kunden, um eine Empfehlung für den Zielkunden zurückzugeben.
