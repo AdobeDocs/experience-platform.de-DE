@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
 # Sandbox erstellen
 
-Sie können eine neue Sandbox erstellen, indem Sie eine POST-Anforderung an den `/sandboxes` Endpunkt senden.
+Sie können eine neue Sandbox erstellen, indem Sie eine POST-Anfrage an den `/sandboxes`-Endpunkt senden.
 
 **API-Format**
 
@@ -24,7 +24,7 @@ POST /sandboxes
 
 **Anfrage**
 
-Die folgende Anforderung erstellt eine neue Entwicklungs-Sandbox mit dem Namen &quot;dev-3&quot;.
+Die folgende Anfrage erstellt eine neue Entwicklungs-Sandbox mit dem Namen „dev-3“.
 
 ```shell
 curl -X POST \
@@ -43,13 +43,13 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der Bezeichner, der für den Zugriff auf die Sandbox in zukünftigen Anforderungen verwendet wird. Dieser Wert muss eindeutig sein, und die beste Methode besteht darin, ihn so beschreibend wie möglich zu machen. Darf keine Leerzeichen oder Großbuchstaben enthalten. |
-| `title` | Ein für Menschen lesbarer Name, der für Anzeigezwecke in der Benutzeroberfläche der Platform verwendet wird. |
-| `type` | Der Typ der zu erstellenden Sandbox. Derzeit können nur Sandboxen vom Typ &quot;Entwicklung&quot;von einem Unternehmen erstellt werden. |
+| `name` | Die Kennung, die in zukünftigen Anfragen für den Zugriff auf die Sandbox verwendet wird. Dieser Wert muss eindeutig sein; Best Practice ist, ihn so beschreibend wie möglich zu gestalten. Darf keine Leerzeichen oder Großbuchstaben enthalten. |
+| `title` | Ein für Menschen lesbarer Name, der für Anzeigezwecke in der Platform-Benutzeroberfläche verwendet wird. |
+| `type` | Der Typ der zu erstellenden Sandbox. Derzeit können von einer Organisation nur Sandboxes vom Typ „Entwicklung“ erstellt werden. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Sandbox zurück und zeigt an, dass sie &quot;erstellt&quot; `state` ist.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Sandbox zurück und zeigt an, dass ihr `state` „wird erstellt“ lautet.
 
 ```json
 {
@@ -63,4 +63,4 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Sandbox zurück un
 
 >[!NOTE]
 >
->Die Bereitstellung von Sandboxen durch das System dauert etwa 15 Minuten, danach `state` werden sie &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
+> Die Bereitstellung von Sandboxes durch das System dauert etwa 15 Minuten, danach lautet ihr `state` „aktiv“ oder „fehlgeschlagen“.
