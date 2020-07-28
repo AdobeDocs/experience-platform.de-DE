@@ -265,7 +265,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und einen leeren Text zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
 Um sich zu vergewissern, dass der Deskriptor gelöscht wurde, können Sie eine Suchanfrage nach der `@id` des Deskriptors durchführen. The response returns HTTP status 404 (Not Found) because the descriptor has been removed from the [!DNL Schema Registry].
 
@@ -336,7 +336,7 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, die die Identität sein wird. Der Pfad sollte mit einem „/“ beginnen und nicht mit einem enden. Schließen Sie „properties“ nicht in den Pfad ein (verwenden Sie z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
 | `xdm:title` | Der neue Titel, den Sie für dieses Feld anzeigen möchten, geschrieben mit großem Anfangsbuchstaben. |
 | `xdm:description` | Zusammen mit dem Titel kann eine optionale Beschreibung hinzugefügt werden. |
-| `meta:enum` | Wenn das angegebene Feld ein Zeichenfolgenfeld `xdm:sourceProperty` ist, `meta:enum` bestimmt es die Liste der vorgeschlagenen Werte für das Feld in der [!DNL Experience Platform] Benutzeroberfläche. Beachten Sie, dass keine Auflistung deklariert oder eine Datenvalidierung für das XDM-Feld bereitgestellt `meta:enum` wird.<br><br>Dies sollte nur für von Adobe definierte Kern-XDM-Felder verwendet werden. Wenn es sich bei der source-Eigenschaft um ein von Ihrer Organisation definiertes benutzerdefiniertes Feld handelt, sollten Sie stattdessen die `meta:enum` Eigenschaft des Felds direkt über eine [PATCH-Anforderung](./update-resource.md)bearbeiten. |
+| `meta:enum` | Wenn das angegebene Feld ein Zeichenfolgenfeld `xdm:sourceProperty` ist, `meta:enum` bestimmt es die Liste der vorgeschlagenen Werte für das Feld in der [!DNL Experience Platform] Benutzeroberfläche. Beachten Sie, dass keine Auflistung deklariert oder eine Datenvalidierung für das XDM-Feld bereitgestellt `meta:enum` wird.<br><br>Dies sollte nur für Kern-XDM-Felder verwendet werden, die von der Adobe definiert werden. Wenn es sich bei der source-Eigenschaft um ein von Ihrem Unternehmen definiertes benutzerdefiniertes Feld handelt, sollten Sie stattdessen die `meta:enum` Eigenschaft des Felds direkt über eine [PATCH-Anforderung](./update-resource.md)bearbeiten. |
 
 #### Beziehungsdeskriptor
 
