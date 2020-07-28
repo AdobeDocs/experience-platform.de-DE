@@ -14,11 +14,11 @@ ht-degree: 10%
 
 # Endpunkte für Edge-Projektionen und Ziele
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit umsetzen zu können, müssen die passenden Daten jederzeit verfügbar sein und im Zuge von Veränderungen laufend aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Anwendungen wie etwa Adobe Target und Adobe Campaign nutzen Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. In diesem Handbuch finden Sie detaillierte Anweisungen zur Verwendung der [!DNL Real-time Customer Profile] API für die Verwendung von Edge-Projektionen, einschließlich Zielen und Konfigurationen.
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanäle hinweg in Echtzeit umsetzen zu können, müssen die richtigen Daten jederzeit verfügbar sein und bei Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Anwendungen wie etwa Adobe Target und Adobe Campaign nutzen Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. In diesem Handbuch finden Sie detaillierte Anweisungen zur Verwendung der [!DNL Real-time Customer Profile] API für die Verwendung von Edge-Projektionen, einschließlich Zielen und Konfigurationen.
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 >[!NOTE]
 >Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. In diesem Dokument `Content-Type` werden mehrere verwendet. Achten Sie besonders auf die Kopfzeilen in den Beispielaufrufen, um sicherzustellen, dass Sie für jede Anforderung die richtige `Content-Type` verwenden.
@@ -29,7 +29,7 @@ Eine Projektion kann zu einer oder mehreren Kanten geleitet werden, indem die St
 
 ### Liste aller Ziele
 
-Sie können die Edge-Ziele, die für Ihr Unternehmen bereits erstellt wurden, durch eine GET-Anforderung an den `/config/destinations` Endpunkt Liste haben.
+Sie können die Edgeziele, die für Ihr Unternehmen bereits erstellt wurden, durch eine GET an den `/config/destinations` Endpunkt Liste haben.
 
 **API-Format**
 
@@ -102,14 +102,14 @@ Die Antwort enthält ein `projectionDestinations` Array mit den Details für jed
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `_links.self.href` | Entspricht auf der obersten Ebene dem Pfad, der für die GET-Anforderung verwendet wird. Innerhalb jedes einzelnen Zielobjekts kann dieser Pfad in einer GET-Anforderung verwendet werden, um die Details eines bestimmten Ziels direkt zu suchen. |
+| `_links.self.href` | Entspricht auf der obersten Ebene dem Pfad, der für die Anforderung des GET verwendet wird. Innerhalb jedes einzelnen Zielobjekts kann dieser Pfad in einer GET verwendet werden, um die Details eines bestimmten Ziels direkt zu suchen. |
 | `id` | Innerhalb jedes Zielobjekts `"id"` zeigt die Variable die schreibgeschützte, systemgenerierte eindeutige ID für das Ziel an. Diese ID wird beim Referenzieren eines bestimmten Ziels und beim Erstellen von Projektionskonfigurationen verwendet. |
 
 Weitere Informationen zu den Attributen eines einzelnen Ziels finden Sie im Abschnitt zum [Erstellen eines nachfolgenden Ziels](#create-a-destination) .
 
 ### Ziel erstellen {#create-a-destination}
 
-Wenn das gewünschte Ziel noch nicht vorhanden ist, können Sie ein neues Projektionsziel erstellen, indem Sie eine POST-Anforderung an den `/config/destinations` Endpunkt senden.
+Wenn das gewünschte Ziel noch nicht vorhanden ist, können Sie ein neues Projektionsziel erstellen, indem Sie eine POST an den `/config/destinations` Endpunkt anfordern.
 
 **API-Format**
 
@@ -122,7 +122,7 @@ POST /config/destinations
 Mit der folgenden Anforderung wird ein neues Edge-Ziel erstellt.
 
 >[!NOTE]
->Die POST-Anfrage zum Erstellen eines Ziels erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
+>Die POST-Anforderung zum Erstellen eines Ziels erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
 curl -X POST \
@@ -177,7 +177,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Edge-Ziels zurück
 
 ### Ansicht eines Ziels
 
-Wenn Sie die eindeutige ID eines Projektionsziels kennen, können Sie eine Suchanfrage ausführen, um die Details Ansicht. Dies geschieht, indem eine GET-Anforderung an den `/config/destinations` Endpunkt gesendet wird und die ID des Ziels im Anforderungspfad enthalten ist.
+Wenn Sie die eindeutige ID eines Projektionsziels kennen, können Sie eine Suchanfrage ausführen, um die Details Ansicht. Dies geschieht, indem eine GET an den `/config/destinations` Endpunkt angefordert wird und die ID des Ziels im Anforderungspfad enthalten ist.
 
 **API-Format**
 
@@ -244,7 +244,7 @@ PUT /config/destinations/{DESTINATION_ID}
 Die folgende Anforderung aktualisiert das vorhandene Ziel, um einen zweiten Speicherort (`dataCenters`) einzuschließen.
 
 >[!IMPORTANT]
->Die PUT-Anforderung erfordert eine bestimmte `Content-Type` Kopfzeile, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
+>Die PUT-Anforderung erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
 curl -X PUT \
@@ -292,7 +292,7 @@ Die Antwort enthält die aktualisierten Details zum Ziel, einschließlich der ID
 
 ### Ziel löschen
 
-Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem eine DELETE-Anforderung an den `/config/destinations` Endpunkt gesendet wird und die ID des Ziels, das Sie löschen möchten, im Anforderungspfad enthalten ist.
+Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem Sie eine DELETE-Anforderung an den `/config/destinations` Endpunkt richten und die ID des Ziels, das Sie löschen möchten, im Anforderungspfad einschließen.
 
 >[!CAUTION]
 >Die API-Antwort auf die Löschanforderung erfolgt sofort, die tatsächlichen Änderungen an den Daten an den Rändern werden jedoch asynchron ausgeführt. Das heißt, die Profil-Daten werden von allen Kanten entfernt (die im Projektionsziel `dataCenters` angegeben sind), aber der Vorgang dauert einige Zeit.
@@ -329,7 +329,7 @@ Projektionskonfigurationen liefern Informationen darüber, welche Daten an jeder
 
 ### Liste aller Projektionskonfigurationen
 
-Sie können alle Projektionskonfigurationen, die für Ihr Unternehmen erstellt wurden, durch eine GET-Anforderung an den `/config/projections` Endpunkt Liste haben. Sie können dem Anforderungspfad auch optionale Parameter hinzufügen, um auf Projektionskonfigurationen für ein bestimmtes Schema zuzugreifen oder eine einzelne Projektion anhand ihres Namens zu suchen.
+Sie können alle Projektionskonfigurationen, die für Ihr Unternehmen erstellt wurden, durch eine GET an den `/config/projections` Endpunkt Liste haben. Sie können dem Anforderungspfad auch optionale Parameter hinzufügen, um auf Projektionskonfigurationen für ein bestimmtes Schema zuzugreifen oder eine einzelne Projektion anhand ihres Namens zu suchen.
 
 **API-Format**
 
@@ -429,7 +429,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Anfrage**
 
 >[!NOTE]
->Die POST-Anfrage zum Erstellen einer Konfiguration erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
+>Die Konfigurationsanforderung für die POST erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
 curl -X POST \
