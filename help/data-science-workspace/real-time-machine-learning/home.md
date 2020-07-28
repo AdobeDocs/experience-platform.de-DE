@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -35,7 +35,7 @@ Im folgenden Arbeitsablauf werden die typischen Schritte und Ergebnisse beim Ers
 
 ### Datenerfassung und -vorbereitung
 
-Daten werden mit dem [!DNL Experience Data Model] (XDM) auf der Adobe Experience Platform erfasst und transformiert. Diese Daten werden für Modellschulungen verwendet. Weitere Informationen zu XDM finden Sie in der [XDM-Übersicht](../../xdm/home.md).
+Daten werden mit dem [!DNL Experience Data Model] (XDM) auf der Adobe Experience Platform erfasst und transformiert. Diese Daten werden für Modellschulungen verwendet. Weitere Informationen zu XDM finden Sie in [XDM – Übersicht](../../xdm/home.md).
 
 ### Authoring – 
 
@@ -77,5 +77,5 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 
 ## Nächste Schritte
 
-Beginnen Sie mit der Befolgung des Handbuchs [zu den ersten Schritten](./getting-started.md) . Dieser Leitfaden führt Sie durch die Einrichtung aller erforderlichen Voraussetzungen für die Erstellung eines maschinellen Lernmodells in Echtzeit.
+Beginnen Sie mit den [Ersten Schritten](./getting-started.md). Dieser Leitfaden führt Sie durch die Einrichtung aller erforderlichen Voraussetzungen für die Erstellung eines maschinellen Lernmodells in Echtzeit.
 
