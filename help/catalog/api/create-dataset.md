@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Datensatz erstellen
+title: Erstellen eines Datensatzes
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
@@ -12,7 +12,7 @@ ht-degree: 70%
 ---
 
 
-# Datensatz erstellen
+# Erstellen eines Datensatzes
 
 In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
 
@@ -59,11 +59,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->In diesem Beispiel wird das [Parquet](https://parquet.apache.org/documentation/latest/)-Dateiformat für die Eigenschaft `containerFormat` verwendet. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
+> In diesem Beispiel wird das [Parquet](https://parquet.apache.org/documentation/latest/)-Dateiformat für die Eigenschaft `containerFormat` verwendet. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
-Bei erfolgreicher Anfrage wird der HTTP-Statuscode 201 (Erstellung bestätigt) mit einem Antwortobjekt zurückgegeben, das ein Array mit der ID des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` beinhaltet. Die Datensatzkennung ist eine schreibgeschützte, systemgenerierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und ein Antwortobjekt zurück, das aus einem Array mit der Kennung des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` besteht. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird.
 
 ```JSON
 [
