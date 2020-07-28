@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Tutorials zu Data Governance und Datenschutz
+title: Data Governance und Datenschutz – Tutorials
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
@@ -12,7 +12,7 @@ ht-degree: 43%
 ---
 
 
-# [!DNL Data Governance] und [!DNL Privacy] Übungen
+# [!DNL Data Governance] und [!DNL Privacy] Tutorials
 
 [!DNL Data Usage Labeling and Enforcement] (DULE) ist der Kernmechanismus der Adobe Experience Platform [!DNL Data Governanc]e. Mit den Funktionen DULE können Sie Datenverwendungsbeschriftungen auf Datensätze und Felder anwenden und diese entsprechend den entsprechenden Datenverwendungsrichtlinien kategorisieren. Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
 
@@ -28,12 +28,12 @@ The DULE [!DNL Policy Service] API allows you to create and manage DULE policies
 
 ## Durchsetzen von Richtlinien zur Datennutzung
 
-Once you have created Data Usage Labeling and Enforcement (DULE) labels for your data, and have created DULE policies for marketing actions against those labels, you can use the DULE [!DNL Policy Service] API to evaluate whether a marketing action performed on a dataset, or an arbitrary group of DULE labels, constitutes a policy violation. Indem Sie Ihre eigenen internen Protokolle einrichten, können Sie Richtlinienverletzungen dann entsprechend der API-Antwort handhaben. Informationen zum Einstieg ins Thema finden Sie unter [Überblick über Richtliniendurchsetzung](../data-governance/enforcement/overview.md).
+Once you have created Data Usage Labeling and Enforcement (DULE) labels for your data, and have created DULE policies for marketing actions against those labels, you can use the DULE [!DNL Policy Service] API to evaluate whether a marketing action performed on a dataset, or an arbitrary group of DULE labels, constitutes a policy violation. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen. Informationen zum Einstieg ins Thema finden Sie unter [Überblick über Richtliniendurchsetzung](../data-governance/enforcement/overview.md).
 
 ## Durchsetzen von Compliance-Vorgaben zur Datennutzung für ein Zielgruppensegment
 
-Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Diese Zusammenführungsrichtlinie gibt an, welche Datensätze in das Segment aufgenommen werden, für die wiederum über ihre Beschriftungen definiert ist, wie die in ihnen enthaltenen Daten genutzt werden dürfen. Eine schrittweise Anleitung dazu, wie Sie Compliance-Vorgaben zur Datennutzung für ein Zielgruppensegment durchsetzen, finden Sie in diesem [Tutorial](../segmentation/tutorials/governance.md).
+Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datennutzung enthalten. Spezifische Schritte zum Einhalten der Datennutzungs-Compliance für ein Zielgruppensegment finden Sie im [Tutorial zur Datennutzungs-Compliance für Segmente](../segmentation/tutorials/governance.md).
 
 ## Get started with [!DNL Privacy Service]
 
-[!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie die persönlichen Daten Ihrer Betroffenen (Kunden) in allen Adobe Experience Cloud-Anwendungen verwalten können. [!DNL Privacy Service] bietet außerdem einen zentralen Audit- und Protokollierungsmechanismus, mit dem Sie auf den Status und die Ergebnisse von Aufträgen zugreifen können, an denen [!DNL Experience Cloud] Anwendungen beteiligt sind. For instructions showing how to create and monitor [!DNL Privacy Service] jobs, follow the steps provided in the [Privacy Service developer guide](../privacy-service/api/getting-started.md) or the [Privacy Service user guide](../privacy-service/ui/overview.md).
+[!DNL Privacy Service] bietet eine RESTful API und eine Benutzeroberfläche, mit der Sie die personenbezogenen Daten Ihrer Betroffenen (Kunden) in allen Adobe Experience Cloud-Anwendungen verwalten können. [!DNL Privacy Service] bietet außerdem einen zentralen Audit- und Protokollierungsmechanismus, mit dem Sie auf den Status und die Ergebnisse von Aufträgen zugreifen können, an denen [!DNL Experience Cloud] Anwendungen beteiligt sind. For instructions showing how to create and monitor [!DNL Privacy Service] jobs, follow the steps provided in the [Privacy Service developer guide](../privacy-service/api/getting-started.md) or the [Privacy Service user guide](../privacy-service/ui/overview.md).
