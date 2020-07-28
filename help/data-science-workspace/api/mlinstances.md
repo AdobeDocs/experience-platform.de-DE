@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 4%
+ht-degree: 20%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 4%
 
 Eine MLInstance ist eine Paarung einer vorhandenen [Engine](./engines.md) mit einem entsprechenden Satz von Konfigurationen, die alle Schulungsparameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
 
-## Erstellen einer MLInstanz {#create-an-mlinstance}
+## Erstellen einer MLInstance {#create-an-mlinstance}
 
-Sie können eine MLInstanz erstellen, indem Sie eine POST-Anforderung ausführen und gleichzeitig eine Anforderungs-Nutzlast bereitstellen, die aus einer gültigen Engine-ID (`{ENGINE_ID}`) und einem entsprechenden Satz von Standardkonfigurationen besteht.
+Sie können eine MLInstanz erstellen, indem Sie eine Anforderung zur POST ausführen und gleichzeitig eine Anforderungs-Nutzlast bereitstellen, die aus einer gültigen Engine-ID (`{ENGINE_ID}`) und einem entsprechenden Satz von Standardkonfigurationen besteht.
 
 Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, haben Sie die Möglichkeit, die Menge an Rechenressourcen wie die Anzahl der Kerne oder die Speichermenge zu konfigurieren. Wenn auf eine Python-Engine verwiesen wird, können Sie zwischen der Verwendung einer CPU oder einer GPU für Schulungs- und Bewertungszwecke wählen. Weitere Informationen finden Sie in den Anhängen zu [PySpark- und Spark-Ressourcenkonfigurationen](./appendix.md#resource-config) und [Python-CPU- und GPU-Konfigurationen](./appendix.md#cpu-gpu-config) .
 
@@ -78,12 +78,12 @@ curl -X POST \
 | --- | --- |
 | `name` | Der gewünschte Name für die MLInstanz. Das Modell, das dieser MLInstanz entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Modellname angezeigt wird. |
 | `description` | Eine optionale Beschreibung für die MLInstanz. Das Modell, das dieser MLInstance entspricht, übernimmt diesen Wert, der in der Benutzeroberfläche als Beschreibung des Modells angezeigt wird. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `engineId` | Die ID einer vorhandenen Engine. |
+| `engineId` | Die Kennung einer vorhandenen Engine. |
 | `tasks` | Eine Reihe von Konfigurationen für Schulungs-, Scoring- oder Feature-Pipelines. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten MLInstanz einschließlich ihrer eindeutigen Kennung (`id`) enthält.
+A successful response returns a payload containing the details of the newly created MLInstance including its unique identifier (`id`).
 
 ```json
 {
@@ -130,7 +130,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu er
 
 ## Abrufen einer Liste von MLInstances
 
-Sie können eine Liste von MLInstances abrufen, indem Sie eine einzige GET-Anforderung ausführen. Um die Ergebnisse zu filtern, können Sie die Parameter für die Abfrage im Anforderungspfad angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste von MLInstances abrufen, indem Sie eine einzige GET anfordern. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -196,9 +196,9 @@ Eine erfolgreiche Antwort gibt eine Liste von MLInstances und deren Details zur�
 }
 ```
 
-## Abrufen einer bestimmten MLInstanz {#retrieve-specific}
+## Retrieve a specific MLInstance {#retrieve-specific}
 
-Sie können die Details einer bestimmten MLInstanz abrufen, indem Sie eine GET-Anforderung ausführen, die die ID der gewünschten MLInstanz im Anforderungspfad enthält.
+Sie können die Details einer bestimmten MLInstanz abrufen, indem Sie eine GET durchführen, die die ID der gewünschten MLInstanz im Anforderungspfad enthält.
 
 **API-Format**
 
@@ -271,11 +271,11 @@ Eine erfolgreiche Antwort gibt die Details der MLInstanz zurück.
 
 ## Aktualisieren einer MLInstanz
 
-Sie können eine vorhandene MLInstanz aktualisieren, indem Sie ihre Eigenschaften durch eine PUT-Anforderung überschreiben, die die Zielgruppe MLInstance-ID im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
+Sie können eine vorhandene MLInstanz aktualisieren, indem Sie ihre Eigenschaften durch eine PUT-Anforderung überschreiben, die die Zielgruppe-MLInstance-ID im Anforderungspfad enthält, und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellen.
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zuerst eine GET-Anforderung zum [Abrufen der MLInstanz nach ID](#retrieve-specific)auszuführen. Ändern Sie dann das zurückgegebene JSON-Objekt und aktualisieren Sie es und wenden Sie die gesamte Eigenschaft des geänderten JSON-Objekts als Nutzlast für die PUT-Anforderung an.
+>In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the MLInstance by ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert die Trainings- und Scoring-Parameter einer MLInstanz, während diese Eigenschaften zunächst vorhanden sind:
 
