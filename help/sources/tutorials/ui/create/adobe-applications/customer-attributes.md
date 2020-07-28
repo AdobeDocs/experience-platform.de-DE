@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '364'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -34,7 +34,7 @@ Im Bildschirm &quot; *Source-Aktivität* &quot;werden alle zuvor eingerichteten 
 
 ![](../../../../images/tutorials/create/customer-attributes/CA-source_activity.png)
 
-Wählen Sie in der Liste der verfügbaren Kundenattributdatasets die Profile aus, die Sie in die Platform einführen möchten, und klicken Sie auf **Weiter**.
+Wählen Sie in der Liste der verfügbaren Kundenattributdatasets die Profil-Datensätze aus, die Sie in die Plattform aufnehmen möchten, und klicken Sie auf **Weiter**.
 
 >[!NOTE]
 >
@@ -45,13 +45,13 @@ Wählen Sie in der Liste der verfügbaren Kundenattributdatasets die Profile aus
 Der Schritt *Überprüfen* wird angezeigt, mit dem Sie Ihre neue eingehende Verbindung überprüfen können, bevor sie erstellt wird. Die Verbindungsdetails werden nach Kategorien gruppiert, darunter:
 
 * *Quelldetails*: Zeigt den Typ der Quellverbindung und die ausgewählten Quelldaten an.
-* *Angaben zum Target*: Beim Erstellen anderer Quell-Connectors zeigt dieser Container, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält. Kundenattribute Profil-Daten werden automatisch zugeordnet und in Echtzeit-Kundendaten erfasst.
+* *Angaben* zur Zielgruppe: Beim Erstellen anderer Quell-Connectors zeigt dieser Container, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält. Kundenattribute Profil-Daten werden automatisch zugeordnet und in Echtzeit-Kundendaten erfasst.
 
 ![](../../../../images/tutorials/create/customer-attributes/CA-review.png)
 
 ## Nächste Schritte
 
-Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der anfänglichen Erfassung können Kundenattributdaten-Profil-Daten von Diensten der nachgeschalteten Platform wie dem Echtzeit-Kundendienst und dem Segmentierungsdienst verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der anfänglichen Erfassung können Kundenattributdaten-Profil-Daten von den nachgeschalteten Plattformdiensten wie dem Echtzeit-Kundendienst und dem Segmentierungsdienst verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../../profile/home.md)
 * [Übersicht über den Segmentierungsdienst](../../../../../segmentation/home.md)
