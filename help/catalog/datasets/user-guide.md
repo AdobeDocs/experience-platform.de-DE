@@ -22,12 +22,12 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 
 * [Datensätze](overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in [!DNL Experience Platform].
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-   * [Grundlagen zum Aufbau von Schemas](../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
+   * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie Ihre eigenen benutzerdefinierten XDM-Schema mithilfe der [!DNL Schema Editor] in der [!DNL Platform] Benutzeroberfläche erstellen.
 * [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [!DNL Data Governance](../../data-governance/home.md): Sorgen Sie bei der Nutzung von Kundendaten für die Einhaltung von Vorschriften, Begrenzungen und Richtlinien.
 
-## Datensätze anzeigen
+## Anzeigen von Datensätzen
 
 In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the left-navigation to open the *[!UICONTROL Datasets]* dashboard. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
 
@@ -50,10 +50,10 @@ Im Vorschaufenster wird rechts für den Datensatz die hierarchische Ansicht des 
 
 For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [Übersicht über Query Service](../../query-service/home.md)
+* [Query Service – Übersicht](../../query-service/home.md)
 * [JupyterLab-Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md)
 
-## Datensatz erstellen {#create}
+## Erstellen eines Datensatzes {#create}
 
 Um einen neuen Datensatz zu erstellen, klicken Sie zunächst im Dashboard **[!UICONTROL Datensätze]** auf *[!UICONTROL Datensatz erstellen]*.
 
@@ -133,7 +133,7 @@ Ein Bestätigungsdialog wird angezeigt. Klicken Sie auf **[!UICONTROL Löschen]*
 
 If a dataset is enabled for [!DNL Profile], deleting it through the UI disables the dataset for ingestion, but does not automatically delete the dataset in the backend. Damit der Datensatz einschließlich der Profil- und Identitätsdaten, die er enthält, vollständig gelöscht wird, muss eine zusätzliche Löschanfrage gestellt werden. For steps on how to properly delete data from the [!DNL Profile] store, see the [!DNL Real-time Customer Profile] API [sub-guide on profile system jobs, also known as &quot;delete requests&quot;](../../profile/api/profile-system-jobs.md).
 
-## Datenerfassung überwachen
+## Überwachen der Datenerfassung
 
 In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the left-navigation. Mit dem *[!UICONTROL Monitoring]*-Dashboard können Sie die Status von aus der Batch- oder Streaming-Erfassung eingehenden Daten anzeigen. Um die Status einzelner Batches anzuzeigen, klicken Sie entweder auf *[!UICONTROL Batch End-to-End]* oder auf *[!UICONTROL Streaming End-to-End]*. Die Dashboards führen alle Batch- oder Streaming-Erfassungsläufe auf, einschließlich jener, die erfolgreich waren, fehlgeschlagen sind oder noch ausgeführt werden. Jede Auflistung enthält Details zum Batch, einschließlich der Batch-Kennung, dem Namen des Zieldatensatzes und der Zahl der erfassten Einträge. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
 
