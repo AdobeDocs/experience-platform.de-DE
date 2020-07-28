@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
-ht-degree: 1%
+ht-degree: 51%
 
 ---
 
@@ -38,17 +38,17 @@ In der folgenden Tabelle werden einige häufig verwendete Terminologie für dies
 
 | Begriff | Definition |
 --- | ---
-| **Instanz für maschinelles Lernen (ML-Instanz)** | Eine Instanz einer [!DNL Sensei] Engine für einen bestimmten Mandanten, die bestimmte Daten, Parameter und [!DNL Sensei] Code enthält. |
-| **Experiment** | Eine Dacheinheit für die Durchführung von Experimentübungen, Scoring Experiment Runs oder beides. |
-| **Geplantes Experiment** | Ein Begriff, der die Automatisierung von Trainings- oder Bewertungsexperimenten beschreibt und von einem benutzerdefinierten Zeitplan bestimmt wird. |
-| **Experimentausführung** | Eine bestimmte Instanz von Trainings- oder Bewertungsexperimenten. Mehrere Experimentabläufe eines bestimmten Experiments können sich von den für die Schulung oder Auswertung verwendeten Datensatzwerten unterscheiden. |
-| **Auszubildendes Modell** | Ein maschinelles Lernmodell, das durch Experimentierungs- und Funktionstechnik erstellt wurde, bevor ein validiertes, evaluiertes und abgeschlossenes Modell erreicht wird. |
+| **Machine Learning Instance (MLInstance)** | Eine Instanz einer [!DNL Sensei] Engine für einen bestimmten Mandanten, die bestimmte Daten, Parameter und [!DNL Sensei] Code enthält. |
+| **Experiment** | Eine Dachentität für Schulungs-Experimentabläufe, Auswertungs-Experimentabläufe, oder beides. |
+| **Geplantes Experiment** | Ein Begriff, der die Automatisierung von Schulungen oder Auswertungen von Experimentabläufen beschreibt und von einem benutzerdefinierten Zeitplan bestimmt wird. |
+| **Experimentablauf** | Eine bestimmte Instanz von Experimenten-Schulungen oder -Auswertungen. Mehrere Experimentabläufe eines bestimmten Experiments können sich von den für die Schulung oder Auswertung verwendeten Datensatzwerten unterscheiden. |
+| **Schulungsmodell** | Ein Machine Learning-Modell, das durch Experimentierungs- und Funktionstechnik erstellt wurde, bevor ein validiertes, ausgewertetes und abgeschlossenes Modell erreicht wird. |
 | **Veröffentlichtes Modell** | Nach Schulung, Validierung und Auswertung ist ein fertig definiertes und versioniertes Modell entstanden. |
 | **Machine Learning Service (ML-Dienst)** | Eine als Dienst bereitgestellte ML-Instanz, um On-Demand-Anforderungen für Schulungs- und Bewertungsaufgaben mithilfe eines API-Endpunkts zu unterstützen. Ein ML-Dienst kann auch mithilfe vorhandener, geschulter Experimentläufe erstellt werden. |
 
 ## Erstellen eines XML-Dienstes mit einem vorhandenen Schulungsexperiment Ausführen und geplanter Bewertung
 
-Wenn Sie ein Schulungsexperiment mit Ausführung als ML-Dienst veröffentlichen, können Sie die Bewertung planen, indem Sie Details zum Bewertungsexperiment bereitstellen Führen Sie die Nutzlast einer POST-Anforderung aus. Dies führt zur Erstellung einer geplanten Experimententität für die Bewertung.
+Wenn Sie ein Schulungsexperiment mit Ausführung als ML-Dienst veröffentlichen, können Sie die Bewertung planen, indem Sie Details zum Bewertungsexperiment bereitstellen Führen Sie die Nutzlast einer POST-Anforderung aus. Dies führt zur Erstellung einer geplanten Experiment-Entität für die Auswertung.
 
 **API-Format**
 
@@ -82,12 +82,12 @@ curl -X POST
 
 | Eigenschaft | Beschreibung |
 --- | ---
-| `mlInstanceId` | Bestehende ML-Instanzidentifizierung, der zum Erstellen des ML-Diensts verwendete Schulungsexperimentlauf sollte dieser bestimmten ML-Instanz entsprechen. |
-| `trainingExperimentId` | Experimentkennung entsprechend der ML-Instanzkennung. |
-| `trainingExperimentRunId` | Ein bestimmtes Schulungsexperiment Ausführen, das zum Veröffentlichen des ML-Dienstes verwendet wird. |
-| `scoringDataSetId` | Identifikation, die sich auf den spezifischen Datensatz bezieht, der für geplante BewertungsexperimentLAUFEN verwendet werden soll. |
-| `scoringTimeframe` | Ein ganzzahliger Wert, der Minuten für das Filtern von Daten darstellt, die für die Bewertung von Experimentläufen verwendet werden sollen. Beispielsweise wird für jeden geplanten Testlauf ein Wert von `10080` &quot;bedeutet&quot;-Daten aus den letzten 10080 Minuten oder 168 Stunden verwendet. Beachten Sie, dass mit dem Wert von `0` nicht Daten gefiltert werden. Alle Daten im Datensatz werden für die Bewertung verwendet. |
-| `scoringSchedule` | Enthält Details zu geplanten Testläufen. |
+| `mlInstanceId` | Bestehende MLInstance-Identifizierung, der zum Erstellen des ML-Dienstes verwendete Schulungs-Experimentablauf sollte dieser bestimmten MLInstance entsprechen. |
+| `trainingExperimentId` | Experimentidentifizierung entsprechend der MLInstance-Identifizierung. |
+| `trainingExperimentRunId` | Ein bestimmter Schulungs-Experimentablauf, der zum Veröffentlichen des ML-Dienstes verwendet wird. |
+| `scoringDataSetId` | Identifizierung, die sich auf den spezifischen Datensatz bezieht, der für geplante Auswertungs-Experimentabläufe verwendet werden soll. |
+| `scoringTimeframe` | Ein ganzzahliger Wert, der Minuten für das Filtern von Daten darstellt, die für die Auswertungs-Experimentabläufen verwendet werden sollen. Beispielsweise wird für jeden geplanten Auswertungs-Experimentablauf ein Wert von `10080` verwendet, was Daten aus den letzten 10080 Minuten oder 168 Stunden bedeutet. Beachten Sie, dass mit dem Wert von `0` keine Daten gefiltert werden. Alle Daten im Datensatz werden für die Auswertung verwendet. |
+| `scoringSchedule` | Enthält Details zu geplanten Auswertungs-Experimentabläufen. |
 | `scoringSchedule.startTime` | Zeitpunkt, der angibt, wann Beginn bewertet werden. |
 | `scoringSchedule.endTime` | Zeitpunkt, der angibt, wann Beginn bewertet werden. |
 | `scoringSchedule.cron` | Cron-Wert, der das Intervall angibt, in dem Experiment ausgeführt werden soll. |
@@ -120,16 +120,16 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 
 ## Erstellen eines ML-Dienstes aus einer vorhandenen ML-Instanz
 
-Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Diensts mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Lernprogramm werden die spezifischen Fälle behandelt, in denen:
+Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Diensts mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Tutorial werden die spezifischen Fälle behandelt, in denen:
 
-- [Sie benötigen keine geplante Schulung, sondern eine geplante Bewertung.](#ml-service-with-scheduled-experiment-for-scoring)
-- [Sie benötigen geplante Experimentabläufe sowohl für Schulungen als auch für Punktbewertungen.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
+- [Sie keine geplante Schulung benötigen, sondern eine geplante Auswertung.](#ml-service-with-scheduled-experiment-for-scoring)
+- [Sie geplante Experimentabläufe sowohl für Schulungen als auch für Auswertungen benötigen.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
 
 Beachten Sie, dass ein ML-Dienst mit einer ML-Instanz erstellt werden kann, ohne Schulungs- oder Bewertungsexperimente zu planen. Solche ML-Dienste werden normale Experimententitäten und einen einzigen Experimentlauf zur Schulung und Bewertung erstellen.
 
-### ML-Dienst mit geplantem Experiment für die Bewertung {#ml-service-with-scheduled-experiment-for-scoring}
+### ML-Dienst mit geplantem Experiment für die Auswertung {#ml-service-with-scheduled-experiment-for-scoring}
 
-Sie können einen ML-Dienst erstellen, indem Sie eine ML-Instanz mit geplanten Experimentabläufen für die Auswertung veröffentlichen, wodurch eine normale Experimententität für die Schulung erstellt wird. Ein Testlauf für Schulungen wird generiert und für alle geplanten Testläufe verwendet. Vergewissern Sie sich, dass Sie über die für die Erstellung des ML-Diensts erforderlichen Werte verfügen `mlInstanceId`, `trainingDataSetId`und diese `scoringDataSetId` benötigen und dass sie vorhanden sind und gültige Werte sind.
+Sie können einen ML-Dienst erstellen, indem Sie eine ML-Instanz mit geplanten Experimentabläufen für die Auswertung veröffentlichen, wodurch eine normale Experimententität für die Schulung erstellt wird. Ein Testlauf für Schulungen wird generiert und für alle geplanten Testläufe verwendet. Vergewissern Sie sich, dass Sie über `mlInstanceId`, `trainingDataSetId` und `scoringDataSetId` verfügen, die für das Erstellen des ML-Dienstes erforderlich sind und dass diese vorliegen und gültige Werte sind.
 
 **API-Format**
 
@@ -164,12 +164,12 @@ curl -X POST
 
 | JSON-Schlüssel | Beschreibung |
 | --- | --- |
-| `mlInstanceId` | Vorhandene ML-Instanz-ID, die die zur Erstellung des ML-Dienstes verwendete ML-Instanz darstellt. |
-| `trainingDataSetId` | Identifikation, die sich auf den spezifischen Datensatz bezieht, der für das Schulungsexperiment verwendet werden soll. |
-| `trainingTimeframe` | Ein ganzzahliger Wert, der Minuten zum Filtern von Daten darstellt, die für Schulungsexperimente verwendet werden sollen. Beispielsweise wird der Wert `"10080"` &quot;bedeutet&quot;Daten aus den letzten 10080 Minuten oder 168 Stunden für den Testlauf der Schulung verwendet. Beachten Sie, dass mit dem Wert von `"0"` nicht Daten gefiltert werden. Alle Daten im Datensatz werden für Schulungen verwendet. |
-| `scoringDataSetId` | Identifikation, die sich auf den spezifischen Datensatz bezieht, der für geplante BewertungsexperimentLAUFEN verwendet werden soll. |
-| `scoringTimeframe` | Ein ganzzahliger Wert, der Minuten für das Filtern von Daten darstellt, die für die Bewertung von Experimentläufen verwendet werden sollen. Beispielsweise wird für jeden geplanten Testlauf ein Wert von `"10080"` &quot;bedeutet&quot;-Daten aus den letzten 10080 Minuten oder 168 Stunden verwendet. Beachten Sie, dass mit dem Wert von `"0"` nicht Daten gefiltert werden. Alle Daten im Datensatz werden für die Bewertung verwendet. |
-| `scoringSchedule` | Enthält Details zu geplanten Testläufen. |
+| `mlInstanceId` | Vorhandene MLInstance-Identifizierung, die die zur Erstellung des ML-Dienstes verwendete MLInstance darstellt. |
+| `trainingDataSetId` | Identifizierung, die sich auf den spezifischen Datensatz bezieht, der für das Schulungsexperiment verwendet werden soll. |
+| `trainingTimeframe` | Ein ganzzahliger Wert, der Minuten zum Filtern von Daten darstellt, die für Schulungsexperimente verwendet werden sollen. Beispielsweise wird für den Schulungs-Experimentablauf ein Wert von `"10080"` verwendet, was Daten aus den letzten 10080 Minuten oder 168 Stunden bedeutet. Beachten Sie, dass mit dem Wert von `"0"` keine Daten gefiltert werden. Alle Daten im Datensatz werden für die Schulung verwendet. |
+| `scoringDataSetId` | Identifizierung, die sich auf den spezifischen Datensatz bezieht, der für geplante Auswertungs-Experimentabläufe verwendet werden soll. |
+| `scoringTimeframe` | Ein ganzzahliger Wert, der Minuten für das Filtern von Daten darstellt, die für die Auswertungs-Experimentabläufen verwendet werden sollen. Beispielsweise wird für jeden geplanten Auswertungs-Experimentablauf ein Wert von `"10080"` verwendet, was Daten aus den letzten 10080 Minuten oder 168 Stunden bedeutet. Beachten Sie, dass mit dem Wert von `"0"` keine Daten gefiltert werden. Alle Daten im Datensatz werden für die Auswertung verwendet. |
+| `scoringSchedule` | Enthält Details zu geplanten Auswertungs-Experimentabläufen. |
 | `scoringSchedule.startTime` | Zeitpunkt, der angibt, wann Beginn bewertet werden. |
 | `scoringSchedule.endTime` | Zeitpunkt, der angibt, wann Beginn bewertet werden. |
 | `scoringSchedule.cron` | Cron-Wert, der das Intervall angibt, in dem Experiment ausgeführt werden soll. |
@@ -200,9 +200,9 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 }
 ```
 
-### ML-Dienst mit geplanten Experimenten für Schulung und Bewertung {#ml-service-with-scheduled-experiments-for-training-and-scoring}
+### ML-Dienst mit geplanten Experimenten für Schulung und Auswertung {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
-Um eine vorhandene ML-Instanz als XML-Dienst mit geplanten Schulungs- und BewertungsexperimentLAUFEN zu veröffentlichen, müssen Sie Schulungs- und Bewertungszeitpläne bereitstellen. Wenn ein ML-Dienst dieser Konfiguration erstellt wird, werden auch geplante Experimententitäten für Schulung und Bewertung erstellt. Beachten Sie, dass Schulungs- und Bewertungszeitpläne nicht identisch sein müssen. Während der Ausführung eines Bewertungsauftrags wird das neueste geschulte Modell, das von geplanten Testlauf-Schulungen produziert wird, abgerufen und für die geplante Bewertungsausführung verwendet.
+Um eine vorhandene ML-Instanz als XML-Dienst mit geplanten Schulungs- und BewertungsexperimentLAUFEN zu veröffentlichen, müssen Sie Schulungs- und Bewertungszeitpläne bereitstellen. Wenn ein ML-Dienst dieser Konfiguration erstellt wird, werden auch geplante Experimententitäten für Schulung und Bewertung erstellt. Beachten Sie, dass Schulungs- und Auswertungszeitpläne nicht identisch sein müssen. Während der Ausführung eines Auswertungsauftrags wird das neueste geschulte Modell, das von geplanten Schulungs-Experimentabläufen produziert wird, abgerufen und für den geplanten Auswertungsablauf verwendet.
 
 **API-Format**
 
@@ -241,13 +241,13 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 | JSON-Schlüssel | Beschreibung |
 | --- | --- |
-| `mlInstanceId` | Vorhandene ML-Instanz-ID, die die zur Erstellung des ML-Dienstes verwendete ML-Instanz darstellt. |
-| `trainingDataSetId` | Identifikation, die sich auf den spezifischen Datensatz bezieht, der für das Schulungsexperiment verwendet werden soll. |
-| `trainingTimeframe` | Ein ganzzahliger Wert, der Minuten zum Filtern von Daten darstellt, die für Schulungsexperimente verwendet werden sollen. Beispielsweise wird der Wert `"10080"` &quot;bedeutet&quot;Daten aus den letzten 10080 Minuten oder 168 Stunden für den Testlauf der Schulung verwendet. Beachten Sie, dass mit dem Wert von `"0"` nicht Daten gefiltert werden. Alle Daten im Datensatz werden für Schulungen verwendet. |
-| `scoringDataSetId` | Identifikation, die sich auf den spezifischen Datensatz bezieht, der für geplante BewertungsexperimentLAUFEN verwendet werden soll. |
-| `scoringTimeframe` | Ein ganzzahliger Wert, der Minuten für das Filtern von Daten darstellt, die für die Bewertung von Experimentläufen verwendet werden sollen. Beispielsweise wird für jeden geplanten Testlauf ein Wert von `"10080"` &quot;bedeutet&quot;-Daten aus den letzten 10080 Minuten oder 168 Stunden verwendet. Beachten Sie, dass mit dem Wert von `"0"` nicht Daten gefiltert werden. Alle Daten im Datensatz werden für die Bewertung verwendet. |
-| `trainingSchedule` | Enthält Details zu geplanten Testläufen für Schulungen. |
-| `scoringSchedule` | Enthält Details zu geplanten Testläufen. |
+| `mlInstanceId` | Vorhandene MLInstance-Identifizierung, die die zur Erstellung des ML-Dienstes verwendete MLInstance darstellt. |
+| `trainingDataSetId` | Identifizierung, die sich auf den spezifischen Datensatz bezieht, der für das Schulungsexperiment verwendet werden soll. |
+| `trainingTimeframe` | Ein ganzzahliger Wert, der Minuten zum Filtern von Daten darstellt, die für Schulungsexperimente verwendet werden sollen. Beispielsweise wird für den Schulungs-Experimentablauf ein Wert von `"10080"` verwendet, was Daten aus den letzten 10080 Minuten oder 168 Stunden bedeutet. Beachten Sie, dass mit dem Wert von `"0"` keine Daten gefiltert werden. Alle Daten im Datensatz werden für die Schulung verwendet. |
+| `scoringDataSetId` | Identifizierung, die sich auf den spezifischen Datensatz bezieht, der für geplante Auswertungs-Experimentabläufe verwendet werden soll. |
+| `scoringTimeframe` | Ein ganzzahliger Wert, der Minuten für das Filtern von Daten darstellt, die für die Auswertungs-Experimentabläufen verwendet werden sollen. Beispielsweise wird für jeden geplanten Auswertungs-Experimentablauf ein Wert von `"10080"` verwendet, was Daten aus den letzten 10080 Minuten oder 168 Stunden bedeutet. Beachten Sie, dass mit dem Wert von `"0"` keine Daten gefiltert werden. Alle Daten im Datensatz werden für die Auswertung verwendet. |
+| `trainingSchedule` | Enthält Details zu geplanten Schulungs-Experimentabläufen. |
+| `scoringSchedule` | Enthält Details zu geplanten Auswertungs-Experimentabläufen. |
 | `scoringSchedule.startTime` | Zeitpunkt, der angibt, wann Beginn bewertet werden. |
 | `scoringSchedule.endTime` | Zeitpunkt, der angibt, wann Beginn bewertet werden. |
 | `scoringSchedule.cron` | Cron-Wert, der das Intervall angibt, in dem Experiment ausgeführt werden soll. |
@@ -340,12 +340,12 @@ Eine erfolgreiche Antwort gibt die Details des ML-Dienstes zurück.
 
 >[!NOTE]
 >
->Beim Abrufen verschiedener ML-Dienste kann eine Antwort mit mehr oder weniger Schlüssel/Wert-Paaren zurückgegeben werden. Die obige Antwort ist eine Darstellung eines [ML-Dienstes mit geplanten Schulungs- und BewertungsexperimentLAUFEN](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>Beim Abrufen verschiedener ML-Dienste kann eine Antwort mit mehr oder weniger Schlüssel/Wert-Paaren zurückgegeben werden. Die obige Antwort ist eine Darstellung eines [ML-Dienstes mit geplanten Schulungs- und Auswertungs-Experimentabläufen](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
-## Planen von Schulungen oder Bewertungen
+## Planen von Schulungen oder Auswertungen
 
-Wenn Sie die Bewertung und Schulung für einen bereits veröffentlichten ML-Dienst planen möchten, können Sie dies tun, indem Sie den vorhandenen ML-Dienst mit einer `PUT` Anforderung am aktualisieren `/mlServices`.
+If you want to schedule scoring and training on an ML Service that has already been published, you can do so by updating the existing ML Service with a `PUT` request on `/mlServices`.
 
 **API-Format**
 
@@ -392,7 +392,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Versuchen Sie nicht, die `startTime` bei vorhandenen geplanten Schulungs- und Bewertungsaufträgen zu ändern. Wenn das Modell geändert werden `startTime` muss, sollten Sie dasselbe Modell veröffentlichen und Schulungs- und Bewertungsaufträge umplanen.
+>Do not attempt to modify the `startTime` on existing scheduled training and scoring jobs. Wenn die `startTime` geändert werden muss, sollten Sie erwägen, dasselbe Modell zu veröffentlichen und die Schulungs- und Auswertungsaufträge umzuplanen.
 
 **Antwort**
 
