@@ -26,9 +26,9 @@ Using the developer guide requires a working understanding of the various Adobe 
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Profile] API endpoints.
 
-## Lesehilfe für Beispiel-API-Aufrufe
+## Lesen von Beispiel-API-Aufrufen
 
-The [!DNL Real-time Customer Profile] API documentation provides example API calls to demonstrate how to properly format requests. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
+The [!DNL Real-time Customer Profile] API documentation provides example API calls to demonstrate how to properly format requests. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ## Erforderliche Kopfzeilen
 
