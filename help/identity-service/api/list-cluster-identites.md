@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Liste-Cluster-Identitäten
+title: Cluster-Identitäten auflisten
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Liste aller Identitäten in einem Cluster
+# Alle Identitäten in einem Cluster auflisten
 
-Identitäten, die in einem Identitätsdiagramm verwandt sind, werden unabhängig vom Namensraum als Teil desselben &quot;Clusters&quot;in diesem Identitätsdiagramm betrachtet. Die folgenden Optionen bieten die Möglichkeit, auf alle Clustermitglieder zuzugreifen.
+Identitäten, die in einem Identitätsdiagramm miteinander verwandt sind, werden unabhängig vom Namespace als Teil desselben „Clusters“ in dem Identitätsdiagramm betrachtet. Folgende Optionen bieten die Möglichkeit, auf alle Cluster-Mitglieder zuzugreifen.
 
-## Verknüpfte Identitäten für eine einzelne Identität abrufen
+## Verknüpfte Identitäten für eine bestimmte Identität abrufen
 
-Rufen Sie alle Clustermitglieder für eine einzelne Identität ab.
+Rufen Sie alle Cluster-Mitglieder für eine bestimmte Identität ab.
 
-Sie können den optionalen `graph-type` Parameter verwenden, um das Identitätsdiagramm anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
+Sie können den optionalen `graph-type`-Parameter verwenden, um das Identitätsdiagramm anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
 
-- Keine - Keine Identitätszuordnung durchführen.
-- Privates Diagramm - Führen Sie Identitätszuordnungen basierend auf Ihrem privaten Identitätsdiagramm durch. Wenn kein Wert angegeben `graph-type` wird, ist dies der Standardwert.
+- Keine – Keine Identitätszusammenfügung durchführen.
+- Privates Diagramm – Eine Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
 
 **API-Format**
 
@@ -33,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **Anfrage**
 
-Option 1: Geben Sie die Identität als Namensraum (`nsId`nach ID) und ID-Wert (`id`) an.
+Option 1: Geben Sie die Identität als Namespace (`nsId`, nach Kennung) und Kennungswert (`id`) an.
 
 ```shell
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 2: Geben Sie die Identität als Namensraum (`ns`nach Name) und ID-Wert (`id`) an.
+Option 2: Geben Sie die Identität als Namespace (`ns`, nach Name) und Kennungswert (`id`) an.
 
 ```shell
 curl -X GET \
@@ -55,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 3: Geben Sie die Identität als XID an (`xid`). Weitere Informationen zum Abrufen der XID einer Identität finden Sie im Abschnitt dieses Dokuments, in dem beschrieben wird, wie Sie die XID für eine Identität [abrufen](./list-native-id.md).
+Option 3: Geben Sie die Identität als XID (`xid`) an. Weiterführende Informationen zum Abrufen der XID einer Identität finden Sie im Abschnitt dieses Dokuments, in dem es um das [Abrufen der XID für eine Identität](./list-native-id.md) geht.
 
 ```shell
 curl -X GET \
@@ -68,11 +68,11 @@ curl -X GET \
 
 ## Verknüpfte Identitäten für mehrere Identitäten abrufen
 
-Verwenden Sie `POST` als Batch-Entsprechung der oben beschriebenen `GET` Methode, um die Identitäten in den Clustern mehrerer Identitäten zurückzugeben.
+Verwenden Sie `POST` als Batch-Entsprechung der oben beschriebenen `GET`-Methode, um die Identitäten in Clustern mit mehreren Identitäten zurückzugeben.
 
 >[!NOTE]
 >
->Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
+> Die Anfrage darf höchstens 1.000 Identitäten zurückgeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
 
 **API-Format**
 
@@ -82,11 +82,11 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **Anfrage**
 
-Die folgende Anforderung veranschaulicht die Bereitstellung einer Liste von XIDs, für die Clustermitglieder abgerufen werden sollen.
+Die folgende Anfrage veranschaulicht die Bereitstellung einer Liste von XIDs, für die Cluster-Mitglieder abgerufen werden.
 
-**Stufenanfrage**
+**Stub-Anfrage**
 
-Die Verwendung des `x-uis-cst-ctx: stub` Headers gibt eine gestubelte Antwort zurück. Dies ist eine vorübergehende Lösung, um den Fortschritt bei der frühzeitigen Integration zu erleichtern, während die Dienstleistungen fertig gestellt werden. Dies wird veraltet, wenn es nicht mehr benötigt wird.
+Durch Verwendung der Kopfzeile `x-uis-cst-ctx: stub` wird eine Stub-Antwort zurückgegeben. Dies ist eine vorübergehende Lösung, um den Fortschritt bei der frühzeitigen Integration zu unterstützen, während Dienste fertig gestellt werden. Diese Lösung wird veralten, sobald sie nicht mehr benötigt wird.
 
 ```shell
 curl -X POST \
@@ -144,7 +144,7 @@ curl -X POST \
 
 **Antwort**
 
-**&#39;Stubbed&#39;-Antwort**
+**„Stub“-Antwort**
 
 ```json
 {
@@ -238,8 +238,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Die Antwort enthält immer einen Eintrag für jede XID, die in der Anforderung bereitgestellt wird, unabhängig davon, ob die XIDs einer Anforderung demselben Cluster angehören oder ob einem oder mehreren Clustern überhaupt zugeordnet sind.
+>Die Antwort enthält stets einen Eintrag für jede XID, die in der Anfrage angegeben ist, unabhängig davon, ob die XIDs einer Anfrage demselben Cluster angehören oder ob eine bzw. mehrere von ihnen überhaupt einem Cluster zugeordnet sind.
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Lernprogramm fort, um den Cluster-Verlauf einer Identität zu [Liste.](./list-cluster-history.md)
+Fahren Sie mit dem nächsten Tutorial fort, um den [Cluster-Verlauf einer Identität aufzulisten](./list-cluster-history.md).
