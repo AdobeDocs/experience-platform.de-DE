@@ -38,7 +38,7 @@ Schemas lösen dieses Problem, indem sie die Integration von Daten aus mehreren 
 
 ### Schema-based workflows in [!DNL Experience Platform]
 
-Standardization is a key concept behind [!DNL Experience Platform]. XDM, von Adobe gesteuert, ist eine Bestrebung, Kundenerlebnisdaten zu standardisieren und Standard-Schemas für das Customer Experience Management zu definieren.
+Standardization is a key concept behind [!DNL Experience Platform]. Das von Adobe unterstützte XDM-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
 
 Die so genannte [!DNL Experience Platform] Infrastruktur, auf der Schema-basierte Workflows erstellt werden, ermöglicht die Erstellung von [!DNL XDM System][!DNL Schema Registry][!DNL Schema Editor]Schema-Metadaten und die Verwendung von Dienstmustern. Weitere Informationen finden Sie in der [XDM-Systemübersicht](../home.md).
 
@@ -65,7 +65,7 @@ To help with this process, key fields can be marked as &quot;[!UICONTROL Identit
 
 Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
 
-Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass die Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. Siehe [Identitätsdienst – Übersicht](../../identity-service/home.md), um mehr darüber zu erfahren, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
+Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass die Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. Siehe [Identity Service – Übersicht](../../identity-service/home.md), um mehr darüber zu erfahren, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
 
 ### Schema-Evolutionsprinzipien {#evolution}
 
@@ -81,9 +81,9 @@ Since maintaining backwards compatibility is crucial for schema evolution, [!DNL
 >
 >If a schema has not yet been used to ingest data into [!DNL Experience Platform], you may introduce a breaking change to that schema. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
 
-### Schemas und Datenaufnahme
+### Schemas und Datenerfassung
 
-In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [!DNL Catalog Service](../../catalog/home.md), and generally represent tables or files that contain ingested data. Alle Datensätze basieren auf vorhandenen XDM-Schemas, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen hierzu finden Sie in der Übersicht über die [Adobe Experience Platform Datenaufnahme](../../ingestion/home.md).
+In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [!DNL Catalog Service](../../catalog/home.md), and generally represent tables or files that contain ingested data. Alle Datensätze basieren auf vorhandenen XDM-Schemas, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen hierzu finden Sie in der Übersicht über die [Datenerfassung in Adobe Experience Platform](../../ingestion/home.md).
 
 ## Bausteine eines Schemas
 
@@ -93,7 +93,7 @@ Schemas werden nach folgender Formel zusammengestellt:
 
 **Klasse + Mixin&amp;ast; = XDM-Schema**
 
-&amp;ast;Ein Schema besteht aus einer Klasse und _Null oder mehr_ Mixins. Dies bedeutet, dass Sie in Datensatzschema ohne jegliche Verwendung von Mixins erstellen könnten.
+&amp;ast;Ein Schema besteht aus einer Klasse und _null oder mehr_ Mixins. Dies bedeutet, dass Sie in Datensatzschema ohne jegliche Verwendung von Mixins erstellen könnten.
 
 ### Klasse
 
@@ -150,7 +150,7 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 
 >[!NOTE]
 >
->Der Feldtyp „Karte“ ermöglicht Daten für Schlüssel-Wertepaare, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Karten können nur auf Systemebene definiert werden, d. h. Sie können in einem branchen- oder herstellerdefinierten Schema auf eine Karte stoßen, diese steht jedoch nicht für die Verwendung in von Ihnen definierten Feldern zur Verfügung. Das [Entwicklerhandbuch für Schema-Registry-API](../api/getting-started.md) enthält weitere Informationen zum Definieren von Feldtypen.
+> Der Feldtyp „Karte“ ermöglicht Daten für Schlüssel-Wertepaare, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Karten können nur auf Systemebene definiert werden, d. h. Sie können in einem branchen- oder herstellerdefinierten Schema auf eine Karte stoßen, diese steht jedoch nicht für die Verwendung in von Ihnen definierten Feldern zur Verfügung. Das [Entwicklerhandbuch für Schema-Registry-API](../api/getting-started.md) enthält weitere Informationen zum Definieren von Feldtypen.
 
 Einige Datenoperationen, die von nachgeschalteten Diensten und Anwendungen verwendet werden, erzwingen Einschränkungen für bestimmte Feldtypen. Betroffene Dienste sind u. a., aber nicht ausschließlich:
 
