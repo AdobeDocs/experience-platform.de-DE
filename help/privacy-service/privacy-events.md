@@ -14,7 +14,7 @@ ht-degree: 30%
 
 # Abonnieren [!DNL Privacy Events]
 
-[!DNL Privacy Events] sind Meldungen, die von der Adobe Experience Platform bereitgestellt werden [!DNL Privacy Service], die Adobe-I/O-Ereignis nutzen, die an einen konfigurierten WebHook gesendet werden, um eine effiziente Auftragsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Events] sind Meldungen, die von Adobe Experience Platform bereitgestellt werden [!DNL Privacy Service], die Adobe-I/O-Ereignis nutzen, die an einen konfigurierten Webshaken gesendet werden, um eine effiziente Auftragsabwicklungsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 Aktuell gibt es vier Arten von Benachrichtigungen im Lebenszyklus der Anfragen von Datenschutzaufträgen:
 
@@ -74,7 +74,7 @@ Notieren Sie sich die `Forwarding`-URL (`https://212d6cd2.ngrok.io`), da diese d
 
 ## Neues Projekt in der Adobe Developer Console erstellen
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
 
 ## Ereignisse zum Schutz der Privatsphäre im Projekt Hinzufügen
 
