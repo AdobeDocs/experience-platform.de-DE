@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Liste aller Sandboxen
+title: Alle Sandboxes auflisten
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 2%
+ht-degree: 80%
 
 ---
 
 
-# Liste aller Sandboxen
+# Alle Sandboxes auflisten
 
-Um alle Sandboxen Ihrer IMS-Organisation (aktiv oder anderweitig) Liste, stellen Sie eine GET-Anforderung an den `/sandboxes` Endpunkt.
+Um alle Sandboxen Ihrer IMS-Organisation (aktiv oder anderweitig) Liste, stellen Sie eine GET an den `/sandboxes` Endpunkt.
 
 **API-Format**
 
@@ -98,9 +98,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Sandboxen zurück, die zu Ihrem Un
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der Name der Sandbox. Wird für Suchzwecke in API-Aufrufen verwendet. |
+| `name` | Der Name der Sandbox. Dient zum Suchen in API-Aufrufen. |
 | `title` | Der Anzeigename für die Sandbox. |
-| `state` | Der aktuelle Verarbeitungsstatus der Sandbox. Der Status einer Sandbox kann einer der folgenden sein: <br/><ul><li>**Erstellen**: Die Sandbox wurde erstellt, wird jedoch weiterhin vom System bereitgestellt.</li><li>**aktiv**: Die Sandbox wird erstellt und aktiv.</li><li>**fehlgeschlagen**: Aufgrund eines Fehlers konnte die Sandbox nicht vom System bereitgestellt werden und ist deaktiviert.</li><li>**gelöscht**: Die Sandbox wurde manuell deaktiviert.</li></ul> |
-| `type` | Der Sandbox-Typ, entweder &quot;Entwicklung&quot;oder &quot;Produktion&quot;. |
-| `isDefault` | Eine boolesche Eigenschaft, die angibt, ob diese Sandbox die Standard-Sandbox für die Organisation ist. Normalerweise ist dies die Produktions-Sandbox. |
-| `eTag` | Ein Bezeichner für eine bestimmte Version der Sandbox. Dieser Wert wird zur Versionskontrolle und zur Cacheeffizienz verwendet und wird bei jeder Änderung an der Sandbox aktualisiert. |
+| `state` | Der aktuelle Verarbeitungsstatus der Sandbox. Der Status einer Sandbox kann wie folgt lauten: <br/><ul><li>**Erstellen**: Die Sandbox wurde erstellt, wird jedoch weiterhin vom System bereitgestellt.</li><li>**Aktiv**: Die Sandbox ist erstellt und aktiv.</li><li>**Fehlgeschlagen**: Aufgrund eines Fehlers konnte die Sandbox nicht vom System bereitgestellt werden und ist deaktiviert.</li><li>**Gelöscht**: Die Sandbox wurde manuell deaktiviert.</li></ul> |
+| `type` | Der Sandbox-Typ, entweder „Entwicklung“ oder „Produktion“. |
+| `isDefault` | Eine boolesche Eigenschaft, die angibt, ob diese Sandbox die Standard-Sandbox für die Organisation ist. In der Regel ist dies die Produktions-Sandbox. |
+| `eTag` | Eine Kennung für eine bestimmte Version der Sandbox. Dieser Wert erleichtert Versionskontrolle und Caching und wird bei jeder Änderung an der Sandbox aktualisiert. |
