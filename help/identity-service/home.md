@@ -14,7 +14,7 @@ ht-degree: 73%
 
 # [!DNL Identity Service]Übersicht
 
-Die Bereitstellung relevanter digitaler Erlebnisse setzt ein umfassendes Verständnis Ihres Kunden voraus. Das ist schwierig, wenn Ihre Kundendaten auf verschiedene Systeme verteilt sind, sodass jeder Kunde unterschiedliche „Identitäten“ zu haben scheint. Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
+Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird erschwert, wenn Ihre Kundendaten über unterschiedliche Systeme hinweg fragmentiert sind, so dass jeder einzelne Kunde mehrere „Identitäten“ zu haben scheint. Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
 
 ## Erläuterungen [!DNL Identity Service]
 
@@ -92,7 +92,7 @@ This section covers how data provided to Adobe Experience Platform is processed 
 
 ### Identitätsfelder bestimmen
 
-Je nach der Strategie Ihres Unternehmens zur Datenerfassung bestimmen die Datenfelder, die Sie als Identitäten kennzeichnen, darüber, welche Daten in Ihr Identitäts-Mapping aufgenommen werden. Um größtmöglichen Nutzen aus Adobe Experience Platform und den umfassendsten Kundenidentitäten zu ziehen, sollten Sie sowohl Online- als auch Offline-Daten hochladen.
+Je nach der Strategie Ihres Unternehmens zur Datenerfassung bestimmen die Datenfelder, die Sie als Identitäten kennzeichnen, darüber, welche Daten in Ihre Identitätszuordnung aufgenommen werden. Um größtmöglichen Nutzen aus Adobe Experience Platform und den umfassendsten Kundenidentitäten zu ziehen, sollten Sie sowohl Online- als auch Offline-Daten hochladen.
 
 - Online-Daten sind Daten, die die Präsenz und das Verhalten im Internet beschreiben, z. B. Benutzernamen und E-Mail-Adressen.
 
@@ -104,7 +104,7 @@ While [!DNL Experience Platform] offers a variety of standard namespaces, you ma
 
 >[!NOTE]
 >
->Identitäts-Namespaces sind ein Qualifizierer für Identitäten. Nachdem ein Namespace erstellt wurde, kann er daher nicht mehr gelöscht werden.
+> Identitäts-Namespaces sind ein Qualifizierer für Identitäten. Nachdem ein Namespace erstellt wurde, kann er daher nicht mehr gelöscht werden.
 
 ### Identitätsdaten in [!DNL Experience Data Model] (XDM) einschließen
 
