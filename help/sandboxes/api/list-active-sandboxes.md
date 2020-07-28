@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Liste aktiver Sandboxen für den aktuellen Benutzer
+title: Liste aktiver Sandboxes für den aktuellen Benutzer
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Liste aktiver Sandboxen für den aktuellen Benutzer
+# Liste aktiver Sandboxes für den aktuellen Benutzer
 
 >[!NOTE]
 >
->Im Gegensatz zu anderen Endpunkten, die in der Sandbox-API bereitgestellt werden, steht dieser Endpunkt allen Benutzern zur Verfügung, auch solchen ohne Sandbox-Administratorzugriffsberechtigung.
+>Im Gegensatz zu anderen Endpunkten, die in der Sandbox-API bereitgestellt werden, steht dieser Endpunkt allen Benutzern zur Verfügung, auch solchen ohne Sandbox-Administrator-Zugriffsberechtigung.
 
-Sie können die für den aktuellen Benutzer aktiven Sandboxen durch eine GET-Anforderung an den Stamm-Endpunkt (`/`) Liste werden.
+Sie können die für den aktuellen Benutzer aktiven Sandboxes durch eine GET-Anfrage an den Root-Endpunkt (`/`) auflisten.
 
 **API-Format**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Sandboxen zurück, die für den aktuellen Benutzer aktiv sind, einschließlich Details wie `name`, `title`, `state`und `type`.
+Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die für den aktuellen Benutzer aktiv sind, einschließlich Details wie `name`, `title`, `state` und `type`.
 
 ```json
 {
@@ -89,9 +89,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Sandboxen zurück, die für den ak
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der Name der Sandbox. Wird für Suchzwecke in API-Aufrufen verwendet. |
+| `name` | Der Name der Sandbox. Dient zum Suchen in API-Aufrufen. |
 | `title` | Der Anzeigename für die Sandbox. |
-| `state` | Der aktuelle Verarbeitungsstatus der Sandbox. Der Status einer Sandbox kann einer der folgenden sein: <ul><li>**Erstellen**: Die Sandbox wurde erstellt, wird jedoch weiterhin vom System bereitgestellt.</li><li>**aktiv**: Die Sandbox wird erstellt und aktiv.</li><li>**fehlgeschlagen**: Aufgrund eines Fehlers konnte die Sandbox nicht vom System bereitgestellt werden und ist deaktiviert.</li><li>**gelöscht**: Die Sandbox wurde manuell deaktiviert.</li></ul> |
-| `type` | Der Sandbox-Typ, entweder &quot;Entwicklung&quot;oder &quot;Produktion&quot;. |
-| `isDefault` | Eine boolesche Eigenschaft, die angibt, ob diese Sandbox die Standard-Sandbox für die Organisation ist. Normalerweise ist dies die Produktions-Sandbox. |
-| `eTag` | Ein Bezeichner für eine bestimmte Version der Sandbox. Dieser Wert wird zur Versionskontrolle und zur Cacheeffizienz verwendet und wird bei jeder Änderung an der Sandbox aktualisiert. |
+| `state` | Der aktuelle Verarbeitungsstatus der Sandbox. Der Status einer Sandbox kann wie folgt lauten: <ul><li>**Erstellen**: Die Sandbox wurde erstellt, wird jedoch weiterhin vom System bereitgestellt.</li><li>**Aktiv**: Die Sandbox ist erstellt und aktiv.</li><li>**Fehlgeschlagen**: Aufgrund eines Fehlers konnte die Sandbox nicht vom System bereitgestellt werden und ist deaktiviert.</li><li>**Gelöscht**: Die Sandbox wurde manuell deaktiviert.</li></ul> |
+| `type` | Der Sandbox-Typ, entweder „Entwicklung“ oder „Produktion“. |
+| `isDefault` | Eine boolesche Eigenschaft, die angibt, ob diese Sandbox die Standard-Sandbox für die Organisation ist. In der Regel ist dies die Produktions-Sandbox. |
+| `eTag` | Eine Kennung für eine bestimmte Version der Sandbox. Dieser Wert erleichtert Versionskontrolle und Caching und wird bei jeder Änderung an der Sandbox aktualisiert. |
