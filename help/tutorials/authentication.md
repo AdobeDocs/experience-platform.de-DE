@@ -37,7 +37,7 @@ In den folgenden Abschnitten werden die Schritte zum Erstellen einer Adobe ID so
 
 Wenn Sie keine Adobe ID haben, können Sie wie folgt eine erstellen:
 
-1. Zur [Adobe Developer Console wechseln](https://console.adobe.io)
+1. Zu [Adobe Developer Console wechseln](https://console.adobe.io)
 2. Klicken Sie auf **[!UICONTROL Neues Konto erstellen]**.
 3. Schließen Sie den Anmeldevorgang ab.
 
@@ -67,25 +67,25 @@ Your [!DNL Admin Console] administrator must also add you to the product as a us
 
 ![](images/authentication/assign-user-details.png)
 
-## Erstellen von Zugriffsberechtigungen in der Adobe Developer Console
+## Generate access credentials in Adobe Developer Console
 
 >[!NOTE]
 >
->Wenn Sie diesem Dokument aus dem [Privacy Service-Entwicklerhandbuch](../privacy-service/api/getting-started.md)folgen, können Sie jetzt zu diesem Handbuch zurückkehren, um die Zugriffsberechtigungen zu generieren, für die Sie [!DNL Privacy Service]eindeutig sind.
+>If you are following this document from the [Privacy Service developer guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
 
-Mit Adobe Developer Console müssen Sie die folgenden drei Zugriffsberechtigungen generieren:
+Using Adobe Developer Console, you must generate the following three access credentials:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Ihre `{IMS_ORG}` und `{API_KEY}` nur einmal generiert werden müssen und können in zukünftigen [!DNL Platform] API-Aufrufen wiederverwendet werden. Ihre `{ACCESS_TOKEN}` Daten sind jedoch nur vorübergehend und müssen alle 24 Stunden neu generiert werden.
+Ihre `{IMS_ORG}` und `{API_KEY}` nur einmal generiert werden müssen und können in zukünftigen [!DNL Platform] API-Aufrufen wiederverwendet werden. However, your `{ACCESS_TOKEN}` is temporary and must be regenerated every 24 hours.
 
 Die Schritte werden nachfolgend detailliert beschrieben.
 
 ### Einmalige Einrichtung
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
 
 Nachdem Sie ein neues Projekt erstellt haben, klicken Sie im Bildschirm &quot; **[!UICONTROL Projektübersicht]** &quot;auf _Hinzufügen API_ .
 
