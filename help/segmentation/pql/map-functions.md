@@ -28,7 +28,7 @@ Mit der `get`-Funktion wird der Wert einer Zuordnung f체r einen bestimmten Schl�
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ruft den Wert der Identit채tskarte f체r den Schl체ssel `example@example.com` ab.
+Die folgende PQL-Abfrage ruft den Wert der dentit채tszuordnung f체r den Schl체ssel `example@example.com` ab.
 
 ```sql
 identityMap.get("example@example.com")
