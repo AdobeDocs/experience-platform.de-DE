@@ -7,20 +7,20 @@ translation-type: tm+mt
 source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
 
 # Zuordnen einer CSV-Datei zu einem XDM-Schema
 
-Um CSV-Daten zu erfassen, müssen [!DNL Adobe Experience Platform]die Daten einem [!DNL Experience Data Model] (XDM-)Schema zugeordnet werden. In diesem Lernprogramm wird beschrieben, wie Sie eine CSV-Datei einem XDM-Schema mithilfe der [!DNL Platform] Benutzeroberfläche zuordnen.
+In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. In diesem Lernprogramm wird beschrieben, wie Sie eine CSV-Datei einem XDM-Schema mithilfe der [!DNL Platform] Benutzeroberfläche zuordnen.
 
 Darüber hinaus enthält der Anhang zu diesem Lernprogramm weitere Informationen zur Verwendung von [Zuordnungsfunktionen](#mapping-functions).
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten [!DNL Platform]:
+This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
 - [!DNL Experience Data Model (XDM System)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 - [!DNL Batch ingestion](../batch-ingestion/overview.md): Die Methode, mit der Daten aus vom Benutzer bereitgestellten Datendateien [!DNL Platform] erfasst werden.
@@ -49,7 +49,7 @@ Um Ihre CSV-Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen 
 
 ## Hinzufügen
 
-Der *[!UICONTROL Hinzufügen Datenschritt]* wird angezeigt. Ziehen Sie die CSV-Datei in den vorgesehenen Bereich oder wählen Sie &quot;Dateien **[!UICONTROL auswählen]** &quot;, um die CSV-Datei manuell einzugeben.
+Der Schritt *[!UICONTROL Daten hinzufügen]* wird angezeigt. Ziehen Sie die CSV-Datei in den vorgesehenen Bereich oder wählen Sie &quot;Dateien **[!UICONTROL auswählen]** &quot;, um die CSV-Datei manuell einzugeben.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
@@ -59,7 +59,7 @@ Der Abschnitt *[!UICONTROL Beispieldaten]* wird nach dem Hochladen der Datei mit
 
 ## Zuordnen von CSV-Feldern zu XDM-Schema-Feldern
 
-The *[!UICONTROL Mapping]* step appears. Die Spalten der CSV-Datei werden unter &quot; *[!UICONTROL Quellfeld]*&quot;aufgelistet, wobei die entsprechenden XDM-Schema-Felder unter &quot; *[!UICONTROL Target-Feld]*&quot;aufgeführt werden. Die Felder für die nicht ausgewählte Zielgruppe sind rot markiert. Mit der Filterfeldoption können Sie die Liste der verfügbaren Quellfelder einschränken.
+The *[!UICONTROL Mapping]* step appears. Die Spalten der CSV-Datei werden unter &quot; *[!UICONTROL Quellfeld]*&quot;aufgelistet, wobei die entsprechenden XDM-Schema-Felder unter &quot; *[!UICONTROL Zielgruppe-Feld]*&quot;aufgeführt werden. Die Felder für die nicht ausgewählte Zielgruppe sind rot markiert. Mit der Filterfeldoption können Sie die Liste der verfügbaren Quellfelder einschränken.
 
 Um eine CSV-Spalte einem XDM-Feld zuzuordnen, wählen Sie das Symbol Schema neben dem entsprechenden Spaltenfeld Zielgruppe aus.
 
@@ -69,7 +69,7 @@ Das Fenster Schema *[!UICONTROL auswählen]* wird angezeigt. Hier können Sie du
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-Der Bildschirm &quot; *[!UICONTROL Zuordnung]* &quot;wird erneut angezeigt, wobei das ausgewählte XDM-Feld jetzt unter dem *[!UICONTROL Target]* angezeigt wird.
+Der Bildschirm &quot; *[!UICONTROL Zuordnung]* &quot;wird erneut angezeigt, wobei das ausgewählte XDM-Feld jetzt unter &quot;Feld für *[!UICONTROL Zielgruppe&quot;angezeigt wird]*.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -117,7 +117,7 @@ Nachdem die CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten über
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine einfache CSV-Datei erfolgreich einem XDM-Schema zugeordnet und in [!DNL Platform]das sie eingefügt wurde. Diese Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile]z. B. Weitere Informationen finden Sie in der Übersicht [!DNL Real-time Customer Profile](../../profile/home.md) .
+In diesem Tutorial haben Sie eine einfache CSV-Datei erfolgreich einem XDM-Schema zugeordnet und in [!DNL Platform]das sie eingefügt wurde. Diese Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile]z. B. See the overview for [!DNL Real-time Customer Profile](../../profile/home.md) for more information.
 
 ## Anhang
 
@@ -144,7 +144,7 @@ In der folgenden Tabelle werden alle unterstützten Zuordnungsfunktionen, einsch
 | top/<br>ucase | Konvertiert eine Zeichenfolge in Großbuchstaben. | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | split | Teilt eine Eingabezeichenfolge auf einem Trennzeichen. | split(&quot;Hello world&quot;, &quot;&quot;) | `["Hello", "world"]` |
 | join | Verbindet eine Liste von Objekten mit der Trennlinie. | `join(" ", ["Hello", "world"]`) | &quot;Hello world&quot; |
-| Kohle | Gibt das erste Objekt ohne null in einer bestimmten Liste zurück. | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
+| coalesce | Gibt das erste Objekt ohne null in einer bestimmten Liste zurück. | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | decode | Bei einem Schlüssel und einer Liste von Schlüsselwertpaaren, die als Array reduziert sind, gibt die Funktion den Wert zurück, wenn der Schlüssel gefunden wird, oder gibt einen Standardwert zurück, wenn er im Array vorhanden ist. | decode(&quot;k2&quot;, &quot;k1&quot;, &quot;v1&quot;, &quot;k2&quot;, &quot;v2&quot;, &quot;default&quot;) | &quot;v2&quot; |
 | iif | Wertet einen bestimmten booleschen Ausdruck aus und gibt den angegebenen Wert basierend auf dem Ergebnis zurück. | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 | min | Gibt das Minimum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | min(3, 1, 4) | 1 |
