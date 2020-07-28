@@ -1,37 +1,37 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Hilfe zu Katalogen und Datensätzen
+user-guide-title: Hilfe zu Katalog und Datensätzen
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
 workflow-type: tm+mt
 source-wordcount: '93'
-ht-degree: 5%
+ht-degree: 96%
 
 ---
 
 
 # Katalog und Datensätze {#catalog}
 
-* [Übersicht über den Katalogdienst](home.md)
-* Katalogdienst-API {#api}
+* [Catalog Service – Übersicht](home.md)
+* Catalog Service-API {#api}
    * [Erste Schritte](api/getting-started.md)
-   * [Filtern von Katalogdaten mithilfe von Abfrage-Parametern](api/filter-data.md)
-   * [Liste, Objekte](api/list-objects.md)
-   * [Nachschlagen eines Objekts](api/look-up-object.md)
-   * [Mehrere Objekte suchen](api/look-up-multiple-objects.md)
-   * [Objekt aktualisieren](api/update-object.md)
-   * [Objekt ersetzen](api/replace-object.md)
+   * [Filtern von Katalogdaten mithilfe von Abfrageparametern](api/filter-data.md)
+   * [Auflisten von Objekten](api/list-objects.md)
+   * [Suchen nach einem Objekt](api/look-up-object.md)
+   * [Suchen nach mehreren Objekten](api/look-up-multiple-objects.md)
+   * [Aktualisieren eines Objekts](api/update-object.md)
+   * [Ersetzen eines Objekts](api/replace-object.md)
    * [Löschen eines Objekts](api/delete-object.md)
-   * [Datensatz erstellen](api/create-dataset.md)
-   * [Stapel erstellen](api/create-batch.md)
-   * [Datenverwendungsbeschriftungen](api/labels.md)
+   * [Erstellen eines Datensatzes](api/create-dataset.md)
+   * [Erstellen eines Batches](api/create-batch.md)
+   * [Datennutzungsbezeichnungen](api/labels.md)
    * [Anhang](api/appendix.md)
 * Datensätze {#datasets}
-   * [Übersicht über Datasets](datasets/overview.md)
+   * [Datensätze – Übersicht](datasets/overview.md)
    * [Benutzerhandbuch zu Datensätzen](datasets/user-guide.md)
-   * [Erstellen und Ausfüllen eines Datensatzes mit APIs](datasets/create.md)
-* [Verarbeitung von Datenschutzanfragen im Data Lake](privacy.md)
+   * [Erstellen und Ausfüllen eines Datensatzes mithilfe von APIs](datasets/create.md)
+* [Verarbeiten von Datenschutzanfragen im Data Lake](privacy.md)
 * [Datenschutz in Experience Platform](data-protection.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-* [Versionshinweise zur Plattform](https://www.adobe.com/go/platform-release-notes-en)
+* [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
