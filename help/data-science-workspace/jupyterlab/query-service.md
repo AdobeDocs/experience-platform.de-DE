@@ -1,32 +1,32 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Abfrage-Service für Jupyter-Notebooks
+title: Query Service in Jupyter Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 1%
+ht-degree: 70%
 
 ---
 
 
-# Abfrage-Service für Jupyter-Notebooks
+# Query Service in Jupyter Notebooks
 
 [!DNL Adobe Experience Platform] ermöglicht die Verwendung von SQL (Structured Abfrage Language) in [!DNL Data Science Workspace] durch Integration [!DNL Query Service] in [!DNL JupyterLab] eine Standardfunktion.
 
-In diesem Lernprogramm werden Beispiele von SQL-Abfragen für gängige Anwendungsfälle zur Untersuchung, Transformation und Analyse von [!DNL Adobe Analytics] Daten vorgestellt.
+This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze [!DNL Adobe Analytics] data.
 
 ## Erste Schritte
 
-Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Voraussetzungen verfügen:
+Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
 
-- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in haben [!DNL Experience Platform], wenden Sie sich vor dem Fortfahren an Ihren Systemadministrator
+- Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding
 
 - Ein [!DNL Adobe Analytics] Datensatz
 
-- Ein Arbeitsverständnis mit den folgenden Schlüsselkonzepten, die in diesem Lernprogramm verwendet werden:
+- Ein Verständnis der folgenden Schlüsselkonzepte, die in diesem Tutorial verwendet werden:
    - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
    - [!DNL Query Service](../../query-service/home.md)
    - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
@@ -34,37 +34,37 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
 ## Zugriff [!DNL JupyterLab] und [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Navigieren Sie [!DNL Experience Platform](https://platform.adobe.com)in der linken Navigationsspalte zu **[!UICONTROL Notebooks]** . Warten Sie einen Moment, bis JupyterLab geladen ist.
+1. In [!DNL Experience Platform](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Warten Sie einen Moment, bis JupyterLab geladen ist.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Wenn nicht automatisch eine neue Registerkarte &quot;Starter&quot;angezeigt wird, öffnen Sie eine neue Registerkarte &quot;Starter&quot;, indem Sie auf **[!UICONTROL Datei]** klicken und dann **[!UICONTROL Neuer Starter]** auswählen.
+   >[!NOTE] Wenn nicht automatisch eine neue Registerkarte &quot;Starter&quot;angezeigt wird, öffnen Sie eine neue Registerkarte &quot;Starter&quot;, indem Sie auf **[!UICONTROL Datei]** klicken und dann **[!UICONTROL Neuer Starter]** auswählen.
 
-2. Klicken Sie auf der Registerkarte Starter auf das Symbol **[!UICONTROL Leer]** in einer Python 3-Umgebung, um ein leeres Notebook zu öffnen.
+2. Klicken Sie auf der Registerkarte „Launcher“ auf das Symbol **[!UICONTROL Leer]** in einer Python 3-Umgebung, um ein leeres Notebook zu öffnen.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] Python 3 ist derzeit die einzige unterstützte Umgebung für Abfrage Service in Notebooks.
+   >[!NOTE] Python 3 ist derzeit die einzige unterstützte Umgebung für Query Service in Notebooks.
 
-3. Klicken Sie in der linken Auswahlleiste auf das Symbol &quot; **[!UICONTROL Daten]** &quot;und Dublette auf das Verzeichnis &quot; **[!UICONTROL Datensätze]** &quot;, um alle Datensätze Liste.
+3. Klicken Sie in der linken Auswahlleiste auf das Symbol **[!UICONTROL Daten]** und doppelklicken Sie auf das Verzeichnis **[!UICONTROL Datensätze]**, um alle Datensätze aufzulisten.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Suchen Sie einen [!DNL Adobe Analytics] Datensatz zu erkunden und klicken Sie mit der rechten Maustaste auf die Auflistung, klicken Sie auf **[!UICONTROL Abfrage Daten in Notebook]** , um SQL-Abfragen in das leere Notebook zu generieren.
+4. Find an [!DNL Adobe Analytics] dataset to explore and right-click on the listing, click **[!UICONTROL Query Data in Notebook]** to generate SQL queries in the empty notebook.
 
-5. Klicken Sie auf die erste generierte Zelle, die die Funktion enthält, `qs_connect()` und führen Sie sie durch Klicken auf die Wiedergabeschaltfläche aus. Diese Funktion erstellt eine Verbindung zwischen der Notebook-Instanz und der [!DNL Query Service].
+5. Klicken Sie auf die erste generierte Zelle, die die Funktion `qs_connect()` enthält, und führen Sie sie durch Klicken auf die Wiedergabeschaltfläche aus. Diese Funktion erstellt eine Verbindung zwischen Ihrer Notebook-Instanz und [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Kopieren Sie den [!DNL Adobe Analytics] Datasetnamen aus der zweiten generierten SQL-Abfrage herunter. Dieser Wert ist der Wert nach `FROM`.
+6. Copy down the [!DNL Adobe Analytics] dataset name from the second generated SQL query, it will be the value after `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
-7. Fügen Sie eine neue Notebook-Zelle ein, indem Sie auf die **+** -Schaltfläche klicken.
+7. Fügen Sie eine neue Notebook-Zelle ein, indem Sie auf die Schaltfläche **+** klicken.
 
    ![](../images/jupyterlab/query/insert_cell.gif)
 
-8. Kopieren Sie die folgenden Importanweisungen, fügen Sie sie ein und führen Sie sie in einer neuen Zelle aus. Diese Anweisungen werden zur Visualisierung Ihrer Daten verwendet:
+8. Kopieren Sie die folgenden Importerklärungen, fügen Sie sie in eine neue Zelle ein und führen Sie sie aus. Diese Erklärungen werden zur Visualisierung Ihrer Daten verwendet:
 
    ```python
    import plotly.plotly as py
@@ -88,19 +88,19 @@ Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Vorausset
 
    >[!NOTE] Sie können diese Werte jederzeit ändern. Führen Sie dabei die Variablenzelle aus, damit die Änderungen angewendet werden.
 
-## Abfrage der Daten {#query-your-data}
+## Abfragen der Daten {#query-your-data}
 
-Geben Sie die folgenden SQL-Abfragen in die einzelnen Notebook-Zellen ein. Führen Sie eine Abfrage aus, indem Sie auf ihre Zelle klicken und dann auf die Schaltfläche **[!UICONTROL Abspielen]** klicken. Erfolgreiche Abfragen oder Fehlerprotokolle werden unterhalb der ausgeführten Zelle angezeigt.
+Geben Sie die folgenden SQL-Abfragen in die einzelnen Notebook-Zellen ein. Führen Sie eine Abfrage aus, indem Sie auf ihre Zelle und anschließend auf die Schaltfläche **[!UICONTROL Wiedergeben]** klicken. Erfolgreiche Abfrageergebnisse oder Fehlerprotokolle werden unterhalb der ausgeführten Zelle angezeigt.
 
-Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und [!DNL Query Service] beschädigt werden. In solchen Fällen starten Sie den Computer neu, [!DNL JupyterLab] indem Sie auf die **[!UICONTROL Power]** -Schaltfläche in der oberen rechten Ecke klicken.
+When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by clicking the **[!UICONTROL Power]** button located at the top right corner.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-Der Notebook-Kernel wird zurückgesetzt, aber die Zellen bleiben, **[!UICONTROL alle]** Zellen erneut ausführen, um dort weiterzumachen, wo Sie aufgehört haben.
+Der Notebook-Kernel wird zurückgesetzt. Führen Sie **[!UICONTROL alle]** Zellen erneut aus, um dort weiterzumachen, wo Sie aufgehört haben.
 
-### Stündliche Besucher {#hourly-visitor-count}
+### Stündliche Besucherzahl {#hourly-visitor-count}
 
-Die folgende Abfrage gibt die stündliche Besucher-Anzahl für ein bestimmtes Datum zurück:
+Die folgende Abfrage gibt die stündliche Besucherzahl für ein bestimmtes Datum zurück:
 
 #### Abfrage
 
@@ -118,9 +118,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-In der obigen Abfrage ist die Zielgruppe `_acp_year` in der `WHERE` Klausel auf den Wert von `target_year`. Fügen Sie Variablen in SQL-Abfragen ein, indem Sie sie in geschweifte Klammern setzen (`{}`).
+In der obigen Abfrage ist die Zielgruppe `_acp_year` in der `WHERE`-Klausel auf den Wert von `target_year` eingestellt. Fügen Sie Variablen in SQL-Abfragen ein, indem Sie diese in geschweifte Klammern setzen (`{}`).
 
-Die erste Zeile der Abfrage enthält die optionale Variable `hourly_visitor`. Die Ergebnisse der Abfrage werden in dieser Variablen als Pandas-Dataframe gespeichert. Das Speichern von Ergebnissen in einem Datenraum ermöglicht es Ihnen, die Ergebnisse der Abfrage später mithilfe eines gewünschten [!DNL Python] Pakets zu visualisieren. Führen Sie den folgenden [!DNL Python] Code in einer neuen Zelle aus, um ein Balkendiagramm zu generieren:
+Die erste Zeile der Abfrage enthält die optionale Variable `hourly_visitor`. Die Abfrage-Ergebnisse werden in dieser Variablen als Pandas-Dataframe gespeichert. Storing results in a dataframe allows you to later visualize the query results using a desired [!DNL Python] package. Execute the following [!DNL Python] code in a new cell to generate a bar graph:
 
 ```python
 trace = go.Bar(
@@ -139,7 +139,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### stündliche Aktivität {#hourly-activity-count}
+### Stündliche Aktivitätenzahl {#hourly-activity-count}
 
 Die folgende Abfrage gibt die Anzahl der stündlichen Aktionen für ein bestimmtes Datum zurück:
 
@@ -160,13 +160,13 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Die Ausführung der oben genannten Abfrage speichert die Ergebnisse `hourly_actions` als Dataframe. Führen Sie die folgende Funktion in einer neuen Zelle aus, um die Ergebnisse Vorschau:
+Die Ausführung der oben genannten Abfrage speichert die Ergebnisse in `hourly_actions` als Dataframe. Führen Sie die folgende Funktion in einer neuen Zelle aus, um eine Vorschau der Ergebnisse anzuzeigen:
 
 ```python
 hourly_actions.head()
 ```
 
-Die obige Abfrage kann geändert werden, um die Anzahl der stündlichen Aktionen für einen bestimmten Datumsbereich zurückzugeben, indem logische Operatoren in der **WO** -Klausel verwendet werden:
+Die obige Abfrage kann geändert werden, um die Anzahl der stündlichen Aktionen für einen bestimmten Datumsbereich zurückzugeben, indem logische Operatoren in der **WHERE**-Klausel verwendet werden:
 
 #### Abfrage <!-- omit in toc -->
 
@@ -184,15 +184,15 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Die Ausführung der geänderten Abfrage speichert die Ergebnisse `hourly_actions_date_range` als Datenformat. Führen Sie die folgende Funktion in einer neuen Zelle aus, um die Ergebnisse Vorschau:
+Die Ausführung der geänderten Abfrage speichert die Ergebnisse in `hourly_actions_date_range` als Dataframe. Führen Sie die folgende Funktion in einer neuen Zelle aus, um eine Vorschau der Ergebnisse anzuzeigen:
 
 ```python
 hourly_actions_date_rage.head()
 ```
 
-### Anzahl der Ereignis pro Besucher-Sitzung {#number-of-events-per-visitor-session}
+### Anzahl der Ereignisse pro Besuchersitzung {#number-of-events-per-visitor-session}
 
-Die folgende Abfrage gibt die Anzahl der Ereignis pro Besucher-Sitzung für ein bestimmtes Datum zurück:
+Die folgende Abfrage gibt die Anzahl der Ereignisse pro Besuchersitzung für ein bestimmtes Datum zurück:
 
 #### Abfrage <!-- omit in toc -->
 
@@ -210,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Führen Sie den folgenden [!DNL Python] Code aus, um ein Histogramm für die Anzahl der Ereignis pro Besuchssitzung zu generieren:
+Execute the following [!DNL Python] code to generate a histogram for the number of events per visit session:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -225,9 +225,9 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### Beliebte Seiten für einen bestimmten Tag {#popular-pages-for-a-given-day}
+### Beliebte Seiten an einem bestimmten Tag {#popular-pages-for-a-given-day}
 
-Die folgende Abfrage gibt die zehn bevorzugten Seiten für ein bestimmtes Datum zurück:
+Die folgende Abfrage gibt die zehn beliebtesten Seiten an einem festgelegten Datum zurück:
 
 #### Abfrage <!-- omit in toc -->
 
@@ -244,9 +244,9 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### Aktive Benutzer für einen bestimmten Tag {#active-users-for-a-given-day}
+### Aktive Benutzer an einem bestimmten Tag {#active-users-for-a-given-day}
 
-In der folgenden Abfrage werden die zehn aktivsten Benutzer für ein bestimmtes Datum zurückgegeben:
+In der folgenden Abfrage werden die zehn aktivsten Benutzer an einem bestimmten Datum zurückgegeben:
 
 #### Abfrage <!-- omit in toc -->
 
@@ -265,7 +265,7 @@ LIMIT  10;
 
 ### Aktive Städte nach Aktivität des Benutzers {#active-cities-by-user-activity}
 
-In der folgenden Abfrage werden die zehn Städte zurückgegeben, in denen die meisten Aktivitäten für ein bestimmtes Datum generiert werden:
+In der folgenden Abfrage werden die zehn Städte zurückgegeben, in denen die meisten Aktivitäten an einem bestimmten Datum generiert wurden:
 
 #### Abfrage <!-- omit in toc -->
 
@@ -284,4 +284,4 @@ LIMIT  10;
 
 ## Nächste Schritte <!-- omit in toc -->
 
-Dieses Lernprogramm demonstrierte einige Beispielverwendungsfälle für die Verwendung [!DNL Query Service] in [!DNL Jupyter] Notebooks. Folgen Sie dem Lernprogramm [Analysieren Ihrer Daten mithilfe von Jupyter-Notebooks](./analyze-your-data.md) , um zu sehen, wie ähnliche Vorgänge mit dem Data Access-SDK ausgeführt werden.
+This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Folgen Sie dem Tutorial [Analysieren Ihrer Daten mit Jupyter Notebooks](./analyze-your-data.md), um zu sehen, wie ähnliche Vorgänge mit dem Data Access SDK ausgeführt werden.
