@@ -22,13 +22,13 @@ In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitä
 
 | Identitätstyp | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| E-Mail | E-Mail | 6 |
+| E-Mail  | E-Mail | 6 |
 | Telefon | Telefon | 7 |
-| Adobe Advertising Cloud-ID | AdCloud | 411 |
+| Adobe Advertising Cloud ID | AdCloud | 411 |
 | Adobe Audience Manager-UUID | CORE | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
 | Adobe Target-ID | TNTID | 9 |
-| [!DNL Apple] ID for Advertisers | IDFA | 20915 |
+| [!DNL Apple] ID für Advertisers | IDFA | 20915 |
 | [!DNL Google] Anzeigen-ID | GAID | 20914 |
 | [!DNL Windows] BEIHILFE | WAID | 8 |
 
@@ -36,7 +36,7 @@ In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitä
 >
 >Jeder Identitätstyp verfügt auch über einen `namespaceId` ganzzahligen Wert, der anstelle der `namespace` Zeichenfolge verwendet werden kann, wenn die `type` Eigenschaft der Identität auf &quot;namespaceId&quot;gesetzt wird. Weitere Informationen finden Sie im Abschnitt zu [Namensraum-Qualifikatoren](#namespace-qualifiers) .
 
-Sie können eine Liste von Identitäts-Namensräumen abrufen, die in Ihrem Unternehmen verwendet werden, indem Sie eine GET-Anforderung an den `idnamespace/identities` Endpunkt in der [!DNL Identity Service] API stellen. See the [Identity Service developer guide](../../identity-service/api/getting-started.md) for more information.
+Sie können eine Liste von Identitäts-Namensräumen abrufen, die in Ihrem Unternehmen verwendet werden, indem Sie eine GET an den `idnamespace/identities` Endpunkt in der [!DNL Identity Service] API anfordern. See the [Identity Service developer guide](../../identity-service/api/getting-started.md) for more information.
 
 ## Namensraum-Qualifikatoren
 
@@ -54,11 +54,11 @@ Beim Festlegen eines `namespace` Werts in der [!DNL Privacy Service] API muss ei
 
 ## Akzeptierte Produktwerte
 
-In der folgenden Tabelle sind die für die Angabe eines Adobe-Produkts im Attribut einer Anforderung zum Erstellen von `include` Aufträgen zulässigen Werte aufgeführt.
+In der folgenden Tabelle sind die zulässigen Werte für die Angabe eines Adobe-Produkts im `include` Attribut einer Auftragserstellungsanforderung aufgeführt.
 
 | Produkt | Wert für die Verwendung im `include` Attribut |
 --- | ---
-| Adobe Advertizing Cloud | &quot;AdCloud&quot; |
+| Adobe Advertising Cloud | &quot;AdCloud&quot; |
 | Adobe Analytics | &quot;Analytics&quot; |
 | Adobe Audience Manager | &quot;AudienceManager&quot; |
 | Adobe Campaign | &quot;Campaign&quot; |
