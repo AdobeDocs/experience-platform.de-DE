@@ -97,7 +97,7 @@ Das Antwortobjekt stellt die Gesamtanzahl der Marketingaktionen im Container (`c
 
 ## Suchen Sie nach einer bestimmten Marketingaktion
 
-Sie können auch eine GET-Anforderung (Lookup) ausführen, um die Details einer bestimmten Marketingaktion Ansicht. Dies geschieht mithilfe `name` der Marketingaktion. Wenn der Name unbekannt ist, kann er mithilfe der zuvor angezeigten Liste (GET) gefunden werden.
+Sie können auch eine Suchanfrage (GET) durchführen, um die Details einer bestimmten Marketingaktion Ansicht. Dies geschieht mithilfe `name` der Marketingaktion. Wenn der Name unbekannt ist, kann er mithilfe der zuvor angezeigten Listenanfrage (GET) gefunden werden.
 
 **API-Format**
 
@@ -142,7 +142,7 @@ Das Antwortobjekt enthält die Details zur Marketingaktion, einschließlich des 
 
 ## Erstellen oder Aktualisieren einer Marketingaktion
 
-Mit der [!DNL Policy Service] API können Sie Ihre eigenen Marketingaktionen definieren und bestehende aktualisieren. Die Erstellung und Aktualisierung erfolgt jeweils mit einem PUT-Vorgang zum Namen der Marketingaktion.
+Mit der [!DNL Policy Service] API können Sie Ihre eigenen Marketingaktionen definieren und bestehende aktualisieren. Die Erstellung und Aktualisierung erfolgt jeweils mit einem PUT-Vorgang, der dem Namen der Marketingaktion entspricht.
 
 **API-Format**
 
@@ -156,7 +156,7 @@ Beachten Sie in der folgenden Anforderung, dass die `name` in der Anforderungs-N
 
 >[!NOTE]
 >
->Wenn Sie den `{marketingActionName}` im Aufruf nicht angeben, wird ein Fehler von 405 ausgegeben (Methode nicht zulässig), da es Ihnen nicht gestattet ist, direkt eine PUT zum `/marketingActions/custom` Endpunkt durchzuführen. Wenn die `name` in der Nutzlast nicht mit der `{marketingActionName}` im Pfad übereinstimmt, erhalten Sie einen 400-Fehler (Fehlerhafte Anforderung).
+>Wenn Sie den `{marketingActionName}` im Aufruf nicht angeben, wird ein Fehler von 405 ausgegeben (Methode nicht zulässig), da Sie keine direkte PUT zum `/marketingActions/custom` Endpunkt durchführen dürfen. Wenn die `name` in der Nutzlast nicht mit der `{marketingActionName}` im Pfad übereinstimmt, erhalten Sie einen 400-Fehler (Fehlerhafte Anforderung).
 
 ```SHELL
 curl -X PUT \
@@ -224,4 +224,4 @@ curl -X DELETE \
 
 Wenn die Marketingaktion erfolgreich gelöscht wurde, ist der Antworttext mit einem HTTP-Status 200 (OK) leer.
 
-Sie können den Löschvorgang bestätigen, indem Sie versuchen, die Marketingaktion nachzuschlagen (GET). Sie sollten einen HTTP-Status 404 (Nicht gefunden) zusammen mit einer Fehlermeldung &quot;Nicht gefunden&quot;erhalten, da die Marketingaktion entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie versuchen, die Marketingaktion zu suchen (GET). Sie sollten einen HTTP-Status 404 (Nicht gefunden) zusammen mit einer Fehlermeldung &quot;Nicht gefunden&quot;erhalten, da die Marketingaktion entfernt wurde.
