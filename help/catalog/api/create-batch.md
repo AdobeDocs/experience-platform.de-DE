@@ -43,7 +43,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Antwort**
 
-Bei erfolgreicher Antwort wird der HTTP-Statuscode 201 (Erstellung bestätigt) mit einem Antwortobjekt zurückgegeben, das den neu erstellten Batch einschließlich seiner `id`, einer schreibgeschützten, vom System generierten Zeichenfolge, beinhaltet.
+Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt) mit einem Antwortobjekt zurückgegeben, das den neu erstellten Batch einschließlich seiner `id`, einer schreibgeschützten, vom System generierten Zeichenfolge, beinhaltet.
 
 ```JSON
 {
