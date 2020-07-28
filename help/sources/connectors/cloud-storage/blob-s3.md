@@ -61,5 +61,5 @@ In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs o
 
 ## Verbindung [!DNL Blob] und S3 zur [!DNL Platform] Verwendung der Benutzeroberfläche
 
-- [Erstellen eines Quell-Connectors für Amazon S3 über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob-s3.md)
+- [Erstellen eines Quell-Connectors für Azure Blob oder Amazon S3 über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob-s3.md)
 - [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
