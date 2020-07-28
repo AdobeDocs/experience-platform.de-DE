@@ -1,126 +1,126 @@
 ---
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics
 solution: Experience Platform
-title: Steigerung des Echtzeit-Profils von Kunden durch Einblicke in das maschinelle Lernen
+title: Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen anreichern
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
 source-wordcount: '1179'
-ht-degree: 0%
+ht-degree: 72%
 
 ---
 
 
 # Mehr [!DNL Real-time Customer Profile] über maschinelles Lernen
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] bietet die Werkzeuge und Ressourcen zur Erstellung, Auswertung und Nutzung von Modellen für maschinelles Lernen, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke in das maschinelle Lernen in einen [!DNL Profile]aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als [!DNL Profile] Datensätze erfasst, die dann mithilfe von [!DNL Experience Platform Segmentation Service]dieser Funktion in Untergruppen verwandter Elemente segmentiert werden können.
+[!DNL Adobe Experience Platform][!DNL Data Science Workspace] bietet die Tools und Ressourcen, um Modelle für maschinelles Lernen zu erstellen, zu bewerten und zu nutzen und so Datenprognosen und Einblicke zu generieren. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented into subsets of related elements by using [!DNL Experience Platform Segmentation Service].
 
-Dieses Dokument bietet eine schrittweise Anleitung, um Erkenntnisse aus dem maschinellen Lernen [!DNL Real-time Customer Profile] zu erweitern. Die Schritte sind in die folgenden Abschnitte unterteilt:
+This document provides a step-by-step tutorial to enrich [!DNL Real-time Customer Profile] with machine learning insights, steps are broken into the following sections:
 
-1. [Schema und Datensatz für die Ausgabe erstellen](#create-an-output-schema-and-dataset)
-2. [Schema und Datensatz für die Ausgabe konfigurieren](#configure-an-output-schema-and-dataset)
-3. [Erstellen von Segmenten mit dem Segmentaufbau](#create-segments-using-the-segment-builder)
+1. [Ausgabeschema und -datensatz erstellen](#create-an-output-schema-and-dataset)
+2. [Ausgabeschema und -datensatz konfigurieren](#configure-an-output-schema-and-dataset)
+3. [Segmente mit dem Segment Builder erstellen](#create-segments-using-the-segment-builder)
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der verschiedenen Aspekte, die beim Erfassen von [!DNL Adobe Experience Platform] Daten und beim Erstellen von Segmenten [!DNL Profile] auftreten. Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+This tutorial requires a working understanding of the various aspects of [!DNL Adobe Experience Platform] involved in ingesting [!DNL Profile] data and creating segments. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 * [!DNL Real-time Customer Profile](../../rtcdp/overview.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in die Platform aufgenommen werden.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+* [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Plattform erfasst werden.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 
-Neben den oben genannten Dokumenten sollten Sie auch die folgenden Leitfäden zu Schemas und dem Schema-Editor lesen:
+Neben den oben genannten Dokumenten sollten Sie auch folgende Leitfäden zu Schemas und dem Schema-Editor lesen:
 
 * [Grundlagen der Zusammensetzung](../../xdm/schema/composition.md)des Schemas: Beschreibt XDM-Schema, Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in [!DNL Experience Platform]verwendet werden sollen.
-* [Schema-Editor-Lernprogramm](../../xdm/tutorials/create-schema-ui.md): Enthält ausführliche Anweisungen zum Erstellen von Schemas mit dem Schema-Editor in [!DNL Experience Platform].
+* [Anleitung für den Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Enthält ausführliche Anweisungen zum Erstellen von Schemas mit dem Schema-Editor in [!DNL Experience Platform].
 
-## Schema und Datensatz für die Ausgabe erstellen {#create-an-output-schema-and-dataset}
+## Ausgabeschema und Datensatz erstellen {#create-an-output-schema-and-dataset}
 
-Der erste Schritt zur Bereicherung [!DNL Real-time Customer Profile] mit bewerteten Erkenntnissen besteht darin, zu wissen, welches reale Objekt (wie eine Person) Ihre Daten definieren. Wenn Sie Ihre Daten verstehen, können Sie eine Struktur beschreiben und entwerfen, die für Ihre Daten von Bedeutung ist, ähnlich wie beim Entwerfen einer relationalen Datenbank.
+The first step towards enriching [!DNL Real-time Customer Profile] with scoring insights is knowing what real-world object (such as a person) your data defines. Wenn Sie Ihre Daten verstehen, können Sie eine Struktur beschreiben und entwerfen, die für Ihre Daten sinnvoll ist (ähnlich wie beim Entwerfen einer relationalen Datenbank).
 
-Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Dieser Abschnitt enthält grundlegende Anweisungen zum Erstellen eines Schemas mit dem Schema Builder. Ein ausführlicheres Tutorial zum [Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md)finden Sie im Tutorial.
+Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Dieser Abschnitt enthält grundlegende Anweisungen zum Erstellen eines Schemas mit dem Schema-Builder. Eine ausführlichere Anleitung finden Sie im Tutorial zum [Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md).
 
-1. Klicken Sie in der Adobe Experience Platform auf die Registerkarte &quot; **[!UICONTROL Schema]** &quot;, um den Schema-Browser aufzurufen. Klicken Sie auf Schema **** erstellen, um auf den *Schema-Editor*zuzugreifen, in dem Sie interaktiv Schemas erstellen und erstellen können.
+1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Schema]**, um auf den Schema-Browser zuzugreifen. Klicken Sie auf **[!UICONTROL Schema erstellen]**, um den *Schema-Editor* zu öffnen, wo Sie interaktiv Schemas erstellen und einrichten können.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Klicken Sie im Fenster &quot; *Komposition* &quot;auf **[!UICONTROL Zuweisen]** , um die verfügbaren Klassen zu durchsuchen.
-   * Um eine vorhandene Klasse zuzuweisen, markieren Sie die gewünschte Klasse und klicken Sie auf **[!UICONTROL Klasse]**zuweisen.
+2. Klicken Sie im Fenster *Komposition* auf **[!UICONTROL Zuweisen]**, um die verfügbaren Klassen zu durchsuchen.
+   * Um eine vorhandene Klasse zuzuweisen, markieren Sie die gewünschte Klasse und klicken Sie dann auf **[!UICONTROL Klasse zuweisen]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
-   * Um eine benutzerdefinierte Klasse zu erstellen, klicken Sie auf Neue Klasse **** erstellen, die sich in der Mitte des Browserfensters befindet. Geben Sie einen Klassennamen und eine Beschreibung ein und wählen Sie das Verhalten der Klasse aus. Klicken Sie auf Klasse **[!UICONTROL zuweisen]** , sobald Sie fertig sind.
+   * Um eine benutzerdefinierte Klasse zu erstellen, klicken Sie in der Mitte des Browser-Fensters auf **[!UICONTROL Neue Klasse erstellen]**. Geben Sie einen Klassennamen und eine Beschreibung an und wählen Sie das Verhalten der Klasse aus. Klicken Sie auf **[!UICONTROL Klasse zuweisen]**, sobald Sie damit fertig sind.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
 
-   An diesem Punkt sollte die Struktur Ihres Schemas einige Klassenfelder enthalten und Sie können Mixins zuweisen. Ein Mixin ist eine Gruppe aus einem oder mehreren Feldern, die ein bestimmtes Konzept beschreiben.
+   An diesem Punkt sollte die Struktur Ihres Schemas einige Klassenfelder enthalten; jetzt können Sie Mixins zuweisen. Ein Mixin ist eine Gruppe aus einem oder mehreren Feldern, die ein bestimmtes Konzept beschreiben.
 
-3. Klicken Sie im Fenster &quot; *Komposition* &quot;im Unterabschnitt &quot; **[!UICONTROL Mixins]** &quot;auf *Hinzufügen* .
-   * Um ein vorhandenes Mixin zuzuweisen, markieren Sie das gewünschte Mixin und klicken Sie dann auf **[!UICONTROL Hinzufügen Mixin]**. Im Gegensatz zu Klassen können einem einzelnen Schema mehrere Mixins zugewiesen werden, sofern dies angemessen ist.
+3. Klicken Sie im Fenster *Komposition* im Unterabschnitt *Mixins* auf **[!UICONTROL Hinzufügen]**.
+   * Um ein vorhandenes Mixin zuzuweisen, markieren Sie das gewünschte Mixin und klicken Sie auf **[!UICONTROL Mixin hinzufügen]**. Anders als bei Klassen können einem einzelnen Schema mehrere Mixins zugewiesen werden, sofern dies nützlich ist.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
-   * Um ein neues Mixin zu erstellen, klicken Sie auf Neues Mixin **** erstellen, das sich in der Mitte des Browserfensters befindet. Geben Sie einen Namen und eine Beschreibung für das Mixin ein und klicken Sie dann auf Mixin **[!UICONTROL zuweisen]** , sobald Sie fertig sind.
+   * Um ein neues Mixin zu erstellen, klicken Sie in der Mitte des Browser-Fensters auf **[!UICONTROL Neues Mixin erstellen]**. Geben Sie einen Namen und eine Beschreibung für das Mixin ein und klicken Sie auf **[!UICONTROL Mixin zuweisen]**, sobald Sie damit fertig sind.
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Um Mixin-Felder hinzuzufügen, klicken Sie im Fenster &quot; *Komposition* &quot;auf den Namen des Mixins. Sie erhalten dann die Möglichkeit, Mixin-Felder hinzuzufügen, indem Sie im Fenster &quot; **[!UICONTROL Struktur]** &quot;auf *Hinzufügen Feld* klicken. Stellen Sie sicher, dass die mixin-Eigenschaften entsprechend bereitgestellt werden.
+   * Um Mixin-Felder hinzuzufügen, klicken Sie im Fenster *Komposition* auf den Namen des Mixins. Sie erhalten dann die Möglichkeit, Mixin-Felder hinzuzufügen, indem Sie im Fenster *Struktur* auf **[!UICONTROL Feld hinzufügen]** klicken. Stellen Sie sicher, dass Sie die entsprechenden Mixin-Eigenschaften angeben.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. Nachdem Sie das Schema erstellt haben, klicken Sie im Fenster &quot; *Struktur* &quot;auf das Feld auf der obersten Ebene des Schemas, um die Eigenschaften des Schemas im rechten Eigenschaftenfenster anzuzeigen. Geben Sie einen Namen und eine Beschreibung ein und klicken Sie auf **[!UICONTROL Speichern]** , um das Schema zu erstellen.
+4. Nachdem Sie das Schema erstellt haben, klicken Sie im Fenster *Struktur* auf das Feld auf oberster Ebene des Schemas, um im rechten Eigenschaftenfenster die Eigenschaften des Schemas anzuzeigen. Geben Sie einen Namen und eine Beschreibung ein und klicken Sie auf **[!UICONTROL Speichern]**, um das Schema zu erstellen.
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. Erstellen Sie ein Ausgabedataset mit Ihrem neu erstellten Schema, indem Sie in der linken Navigationsspalte auf **[!UICONTROL Datensätze]** klicken und dann auf Datensatz **[!UICONTROL erstellen]** klicken. Wählen Sie im nächsten Bildschirm &quot;Datensatz aus Schema **[!UICONTROL erstellen&quot;]**.
+5. Erzeugen Sie mit Ihrem neu erstellten Schema einen Ausgabedatensatz, indem Sie in der linken Navigationsspalte auf **[!UICONTROL Datensätze]** und dann auf **[!UICONTROL Datensatz erstellen]** klicken. Wählen Sie im nächsten Bildschirm **[!UICONTROL Datensatz aus Schema erstellen]**.
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. Suchen und wählen Sie im Schema-Browser das neu erstellte Schema aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+6. Wählen Sie mit dem Schema-Browser das neu erstellte Schema aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
-7. Geben Sie einen Namen und eine optionale Beschreibung ein und klicken Sie dann auf **[!UICONTROL Fertig stellen]** , um den Datensatz zu erstellen.
+7. Geben Sie einen Namen und eine optionale Beschreibung ein und klicken Sie dann auf **[!UICONTROL Fertig stellen]**, um den Datensatz zu erstellen.
    ![](../images/models-recipes/enrich-rtcdp/configure_dataset.png)
 
-Nachdem Sie einen Output Schema-Datensatz erstellt haben, fahren Sie mit dem nächsten Abschnitt fort, um ihn für die Anreicherung des Profils zu konfigurieren und zu aktivieren.
+Nachdem Sie einen Ausgabeschemadatensatz erstellt haben, fahren Sie mit dem nächsten Abschnitt fort, um den Datensatz für die Profilanreicherung zu konfigurieren und zu aktivieren.
 
-## Schema und Datensatz für die Ausgabe konfigurieren {#configure-an-output-schema-and-dataset}
+## Ausgabeschema und -datensatz konfigurieren {#configure-an-output-schema-and-dataset}
 
-Bevor Sie einen Datensatz aktivieren können, müssen Sie [!DNL Profile]das Schema des Datensatzes so konfigurieren, dass es über ein primäres Identitätsfeld verfügt, und dann das Schema aktivieren [!DNL Profile]. Wenn Sie ein neues Schema erstellen und aktivieren möchten, finden Sie Informationen zum [Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md)im Lernprogramm. Befolgen Sie andernfalls die unten stehenden Anweisungen, um ein vorhandenes Schema und einen vorhandenen Datensatz zu aktivieren.
+Before you can enable a dataset for [!DNL Profile], you need to configure the dataset&#39;s schema to having a primary identity field and then enable the schema for [!DNL Profile]. Wenn Sie ein neues Schema erstellen und aktivieren möchten, konsultieren Sie die Anleitung zum [Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md). Befolgen Sie andernfalls die unten stehenden Anweisungen, um ein vorhandenes Schema und einen vorhandenen Datensatz zu aktivieren.
 
-1. Verwenden Sie bei Adobe Experience Platform den Schema-Browser, um das Output-Schema zu finden, das Sie aktivieren möchten, und klicken Sie auf den Namen, um die Komposition Ansicht. [!DNL Profile]
+1. On Adobe Experience Platform, use the schema browser to find the output schema you wish to enable [!DNL Profile] on and click its name to view its composition.
    ![](../images/models-recipes/enrich-rtcdp/schemas.png)
 
-2. Erweitern Sie die Schema-Struktur und suchen Sie ein geeignetes Feld, das als primärer Bezeichner festgelegt werden soll. Klicken Sie auf das gewünschte Feld, um dessen Eigenschaften anzuzeigen.
+2. Erweitern Sie die Schemastruktur und suchen Sie nach einem geeigneten Feld, das als primäre Kennung dienen soll. Klicken Sie auf das gewünschte Feld, um dessen Eigenschaften anzuzeigen.
    ![](../images/models-recipes/enrich-rtcdp/schema_structure.png)
 
-3. Legen Sie das Feld als primäre Identität fest, indem Sie die **[!UICONTROL Identity]** -Eigenschaft des Felds und die **[!UICONTROL Primär Identity]** -Eigenschaft aktivieren und dann einen entsprechenden **[!UICONTROL Identity-Namensraum]** auswählen. Klicken Sie auf **[!UICONTROL Übernehmen]** , nachdem Sie Ihre Änderungen vorgenommen haben.
+3. Legen Sie das Feld als primäre Identität fest, indem Sie die Eigenschaft **[!UICONTROL Identität]** des Felds sowie die Eigenschaft **[!UICONTROL Primäre Identität]** aktivieren und dann einen entsprechenden **[!UICONTROL Identity-Namespace]** auswählen. Klicken Sie auf **[!UICONTROL Übernehmen]**, nachdem Sie Ihre Änderungen vorgenommen haben.
    ![](../images/models-recipes/enrich-rtcdp/set_identity.png)
 
-4. Klicken Sie auf das Objekt auf der obersten Ebene Ihrer Schema-Struktur, um die Schema-Eigenschaften anzuzeigen und das Schema zum Profil zu aktivieren, indem Sie den **[!UICONTROL Profil]** -Schalter aktivieren. Klicken Sie auf **[!UICONTROL Speichern]** , um die Änderungen abzuschließen. Dataset, die mit diesem Schema erstellt wurden, kann jetzt zum Profil aktiviert werden.
+4. Klicken Sie auf das Objekt auf der obersten Ebene Ihrer Schemastruktur, um die Schemaeigenschaften anzuzeigen und das Schema für das Profil zu aktivieren, indem Sie den **[!UICONTROL Profil]**-Umschalter aktivieren. Klicken Sie auf **[!UICONTROL Speichern]**, um die Änderungen abzuschließen. Datensätze, die mit diesem Schema erstellt wurden, können jetzt für das Profil aktiviert werden.
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
-5. Verwenden Sie den DataSet-Browser, um den Datensatz zu finden, den Sie aktivieren möchten, und klicken Sie auf dessen Namen, um auf die Details zuzugreifen. [!DNL Profile]
+5. Use the dataset browser to find the dataset you wish to enable [!DNL Profile] on and click its name to access its details.
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. Aktivieren Sie den Datensatz, [!DNL Profile] indem Sie den in der rechten Informationsspalte angezeigten **[!UICONTROL Profil]** -Schalter umschalten.
+6. Enable the dataset for [!DNL Profile] by toggling the **[!UICONTROL Profile]** switch found in the right information column.
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
-Wenn Daten in einen [!DNL Profile]aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als [!DNL Profile] Datensätze erfasst. Nachdem Ihr Schema und Ihr Datensatz vorbereitet wurden, generieren Sie einige Daten in den Datensatz, indem Sie mit einem geeigneten Modell Bewertungsläufe durchführen, und fahren Sie mit diesem Lernprogramm fort, um mithilfe des Segmentaufbaus Insight-Segmente zu erstellen.
+When data is ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records. Nach der Vorbereitung Ihres Schemas und Datensatzes generieren Sie einige Daten im Datensatz, indem Sie mit einem geeigneten Modell Scoring-Läufe durchführen. Fahren Sie mit dieser Anleitung fort, um mithilfe von Segment Builder Insight-Segmente zu erstellen.
 
-## Erstellen von Segmenten mit dem Segmentaufbau {#create-segments-using-the-segment-builder}
+## Segmente mit dem Segment Builder erstellen {#create-segments-using-the-segment-builder}
 
-Nachdem Sie nun Einblicke in Ihren [!DNL Profile]aktivierten Datensatz generiert und gesammelt haben, können Sie diese Daten verwalten, indem Sie mithilfe des Segmentaufbaus Untergruppen verwandter Elemente identifizieren. Gehen Sie wie folgt vor, um eigene Segmente zu erstellen.
+Now that you have generated and ingested insights into your [!DNL Profile]-enabled dataset, you can manage that data by identifying subsets of related elements using the Segment Builder. Gehen Sie wie folgt vor, um eigene Segmente zu erstellen.
 
-1. Klicken Sie in der Adobe Experience Platform auf die Registerkarte **[!UICONTROL Segmente]** und anschließend auf Segment **[!UICONTROL erstellen]** , um auf den Segmentaufbau zuzugreifen.
+1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Segmente]** und anschließend auf **[!UICONTROL Segment erstellen]**, um auf den Segment Builder zuzugreifen.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
-2. Im Segmentaufbau bietet die linke Leiste Zugriff auf die wichtigsten Segmentbausteine: Attribute, Ereignis und vorhandene Segmente. Jeder Baustein erscheint auf seiner eigenen Registerkarte. Wählen Sie die Klasse aus, zu der Ihr [!DNL Profile]aktiviertes Schema erweitert, suchen Sie die Bausteine für Ihr Segment und suchen Sie sie.
+2. Im Segment Builder bietet die linke Leiste Zugriff auf die wichtigsten Bausteine von Segmenten: Attribute, Ereignisse und vorhandene Segmente. Jeder Baustein wird auf einer eigenen Registerkarte angezeigt. Select the class to which your [!DNL Profile]-enabled schema extends then browse and find the building blocks for your segment.
    ![](../images/models-recipes/enrich-rtcdp/segment_builder.png)
 
-3. Ziehen Sie Bausteine per Drag &amp; Drop auf die Arbeitsfläche des Rule Builder und ergänzen Sie sie durch Angabe vergleichender Anweisungen.
+3. Ziehen Sie Bausteine per Drag-and-Drop auf die Arbeitsfläche des Rule Builder und ergänzen Sie sie durch Angabe vergleichender Anweisungen.
    ![](../images/models-recipes/enrich-rtcdp/drag_fill.gif)
 
-4. Während Sie Ihr Segment erstellen, können Sie geschätzte Segmentergebnisse unter Beachtung des Bereichs *Segmenteigenschaften* Vorschau haben.
+4. Bei der Erstellung Ihres Segments können Sie geschätzte Segmentergebnisse unter Beachtung des Bereichs *Segmenteigenschaften* als Vorschau anzeigen.
    ![](../images/models-recipes/enrich-rtcdp/preview_segment.gif)
 
-5. Wählen Sie eine entsprechende **[!UICONTROL Merge Policy]**, geben Sie einen Namen und eine optionale Beschreibung ein und klicken Sie dann auf **[!UICONTROL Speichern]** , um Ihr neues Segment abzuschließen.
+5. Wählen Sie eine geeignete **[!UICONTROL Zusammenführungsrichtlinie]**, geben Sie einen Namen und eine optionale Beschreibung ein und klicken Sie dann auf **[!UICONTROL Speichern]**, um Ihr neues Segment abzuschließen.
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Dokument wurden die erforderlichen Schritte zur Aktivierung eines Schemas und eines Datensatzes beschrieben [!DNL Profile]und der Arbeitsablauf zum Erstellen von Insight-Segmenten mithilfe des Segmentaufbaus kurz erläutert. Weitere Informationen zu Segmenten und zum Segmentaufbau finden Sie in der Übersicht über den [Segmentdienst](../../segmentation/home.md).
+This document walked you through the steps required to enable a schema and dataset for [!DNL Profile], and briefly demonstrated the workflow for creating insight segments using the Segment Builder. Weiterführende Informationen zu Segmenten und Segment Builder finden Sie unter [Segmentation Service – Übersicht](../../segmentation/home.md).
