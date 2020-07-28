@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
 source-wordcount: '1666'
-ht-degree: 46%
+ht-degree: 47%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 ### [!DNL Profile] Datenspeicher
 
-Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. Das heißt, der [!DNL Profile] Speicher ist getrennt von [!DNL Catalog] Daten ([!DNL Data Lake]) und [!DNL Identity Service] Daten (Identitätsdiagramm).
+Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. In other words, the [!DNL Profile] store is separate from [!DNL Catalog] data ([!DNL Data Lake]) and [!DNL Identity Service] data (identity graph).
 
 ### [!DNL Profile] und [!DNL Platform] Dienstleistungen
 
@@ -40,11 +40,11 @@ Zeitreihendaten liefern eine Momentaufnahme des Systems zu dem Zeitpunkt, an dem
 
 ### Identitäten
 
-Bei der Kommunikation mit Kunden gilt es, diese in einer auf sie persönlich abgestimmte Weise anzusprechen. Die Umsetzung solcher für Kunden relevanter digitaler Erlebnisse ist jedoch eine Herausforderung. Denn dazu muss nachvollzogen werden, wie die verschiedenen Daten, die sie auf voneinander getrennten digitalen Kanälen wie Tablets, Smartphones und Laptops generieren, zueinander in Zusammenhang stehen. [!DNL Identity Service] ermöglicht es Ihnen, das Gesamtbild Ihres Kunden zusammenzustellen, indem Sie Identitäten aus mehreren Kanälen verknüpfen und ein Identitätsdiagramm für jeden Kunden erstellen, das Ihnen ein besseres Verständnis ermöglicht. Weitere Informationen finden Sie in der [Übersicht über den Identitätsdienst](../identity-service/home.md).
+Bei der Kommunikation mit Kunden gilt es, diese in einer auf sie persönlich abgestimmte Weise anzusprechen. Die Umsetzung solcher für Kunden relevanter digitaler Erlebnisse ist jedoch eine Herausforderung. Denn dazu muss nachvollzogen werden, wie die verschiedenen Daten, die sie auf voneinander getrennten digitalen Kanälen wie Tablets, Smartphones und Laptops generieren, zueinander in Zusammenhang stehen. [!DNL Identity Service] liefert Ihnen ein vollständiges Bild Ihrer Kunden. Denn dieser führt die Identitäten aus verschiedenen Kanälen in einem für jeden Kunden individuellen Identitätsdiagramm zusammen, über das Sie ein klareres Verständnis jedes Einzelnen gewinnen. Weitere Informationen finden Sie in der [Identity Service – Übersicht](../identity-service/home.md).
 
 ### Segmentierung
 
-Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. Wird ein solches Zielgruppensegment erstellt, wird dessen Segment-ID zur Liste der Segmentmitglieder für alle qualifizierten Profile hinzugefügt. Segment rules are built and applied to [!DNL Real-time Customer Profile] data using RESTful APIs and the Segment Builder user interface. Gehen Sie zum Einstieg in die Segmentierung zunächst die [Übersicht über den Segmentierungsdienst](../segmentation/home.md) durch.
+Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. Wird ein solches Zielgruppensegment erstellt, wird dessen Segment-ID zur Liste der Segmentmitglieder für alle qualifizierten Profile hinzugefügt. Segment rules are built and applied to [!DNL Real-time Customer Profile] data using RESTful APIs and the Segment Builder user interface. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die [Segmentation Service – Übersicht](../segmentation/home.md).
 
 ### Profilfragmente und Vereinigungsschemas {#profile-fragments-and-union-schemas}
 
@@ -52,37 +52,37 @@ One of the key features of [!DNL Real-time Customer Profile] is the ability to u
 
 ### Zusammenführungsrichtlinien
 
-When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Mithilfe von RESTful-APIs oder der Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, bestehende Richtlinien verwalten und eine für Ihr Unternehmen als Standard verwendete Zusammenführungsrichtlinie einrichten. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der [!DNL Real-time Customer Profile] API finden Sie im Handbuch [Zusammenführungsrichtlinien](api/merge-policies.md). To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies user guide](ui/merge-policies.md).
+When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der [!DNL Real-time Customer Profile] API finden Sie im Handbuch [Zusammenführungsrichtlinien](api/merge-policies.md). To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies user guide](ui/merge-policies.md).
 
 ### (Alpha) Konfigurieren von berechneten Attributen
 
 >[!IMPORTANT]
 >Die nachfolgend beschriebene Funktion für berechnete Attribute befindet sich in der Alpha-Phase. Dokumentation und Funktionalität können sich ändern.
 
-Berechnete Attribute ermöglichen es, den Wert eines Feldes über andere Werte, Berechnungen und Ausdrücke automatisch zu ermitteln. Berechnete Attribute werden auf Profilebene ausgeführt, mit ihnen können also Werte über alle Datensätze und Ereignisse aggregiert werden. Dazu beinhaltet jedes berechnete Attribut einen Ausdruck bzw. eine „Regel“, nach der eingehende Daten ausgewertet werden und das Ergebnis in einem Profilattribut oder Ereignis festgehalten wird. Diese Berechnungen liefern Aufschluss über Metriken wie Kundenlebenszeitwert, Zeit zwischen Käufen oder der Anzahl der geöffneten Anwendungen, ohne dafür jedes Mal, wenn entsprechende Informationen benötigt werden, komplexe Berechnungen durchführen zu müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen mithilfe der [!DNL Real-time Customer Profile] API finden Sie in der Anleitung zum Endpunkt [berechneter Attribute](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle, die berechnete Attribute innerhalb der Adobe Experience Platform spielen, besser zu verstehen. Es enthält Beispiel-API-Aufrufe zur Durchführung grundlegender CRUD-Vorgänge.
+Mit berechneten Attributen können Sie den Wert von Feldern anhand anderer Werte, Berechnungen und Ausdrücke automatisch berechnen. Berechnete Attribute agieren auf der Profilebene, d. h., Sie können Werte über alle Datensätze und Ereignisse hinweg aggregieren. Jedes berechnete Attribut enthält einen Ausdruck oder eine „Regel“, der bzw. die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut oder Ereignis speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen mithilfe der [!DNL Real-time Customer Profile] API finden Sie in der Anleitung zum Endpunkt [berechneter Attribute](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle, die berechnete Attribute innerhalb der Adobe Experience Platform spielen, besser zu verstehen. Es enthält Beispiel-API-Aufrufe zur Durchführung grundlegender CRUD-Vorgänge.
 
 ## Echtzeitkomponenten
 
 This section introduces the components that allow [!DNL Real-time Customer Profile] to update and monitor record and time series data in real-time.
 
-### Streaming-Aufnahme und Streaming-Segmentierung
+### Streaming-Erfassung und Streaming-Segmentierung
 
-Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Aufnahme bezeichnet. As profile and time series data is ingested, [!DNL Real-time Customer Profile] automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen. Im Verlauf der Datenaufnahme wird außerdem validiert, ob die Daten ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Weitere Informationen dazu, welche Validierungen bei der Datenaufnahme vorgenommen werden, finden Sie in der Übersicht über die Datenaufnahme unter [Datenqualität](../ingestion/quality/overview.md).
+Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Erfassung bezeichnet. As profile and time series data is ingested, [!DNL Real-time Customer Profile] automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen. Im Verlauf der Datenaufnahme wird außerdem validiert, ob die Daten ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Weitere Informationen dazu, welche Validierungen bei der Datenaufnahme vorgenommen werden, finden Sie in der Übersicht über die Datenaufnahme unter [Datenqualität](../ingestion/quality/overview.md).
 
 ### Edge-Projektionskonfigurationen und -ziele
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit umsetzen zu können, müssen die passenden Daten jederzeit verfügbar sein und im Zuge von Veränderungen laufend aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Anwendungen wie etwa Adobe Target und Adobe Campaign nutzen Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. Weitere Informationen und die Arbeit mit Projektionen mithilfe der [!DNL Real-time Customer Profile] API finden Sie im Handbuch [Edge-Projektions-Endpunkte](api/edge-projections.md).
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanäle hinweg in Echtzeit umsetzen zu können, müssen die richtigen Daten jederzeit verfügbar sein und bei Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Anwendungen wie etwa Adobe Target und Adobe Campaign nutzen Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. Weitere Informationen und die Arbeit mit Projektionen mithilfe der [!DNL Real-time Customer Profile] API finden Sie im Handbuch [Edge-Projektions-Endpunkte](api/edge-projections.md).
 
 ## Daten Hinzufügen [!DNL Real-time Customer Profile]
 
 [!DNL Platform] kann so konfiguriert werden, dass Ihre Daten zu Datensatz und Zeitreihen an gesendet werden. Dies unterstützt die Echtzeit-Streaming-Erfassung und Batch-Erfassung. [!DNL Profile] Weitere Informationen dazu, wie Sie dem Echtzeit-Kundenprofil Daten hinzufügen, finden Sie in [diesem Tutorial](tutorials/add-profile-data.md).
 
 >[!NHinweis]
->Daten, die über Adobe-Lösungen erfasst werden, einschließlich [!DNL Analytics Cloud], [!DNL Marketing Cloud]und [!DNL Advertising Cloud], fließen in [!DNL Experience Platform] die Datenerfassung und werden in diese integriert [!DNL Profile].
+>Daten, die über Adoben gesammelt werden, einschließlich [!DNL Analytics Cloud], [!DNL Marketing Cloud]und [!DNL Advertising Cloud], fließen in [!DNL Experience Platform] und werden in [!DNL Profile]erfasst.
 
 ### [!DNL Profile] Erfassungsmetriken
 
-Observability Insights ermöglicht die Ermittlung wichtiger Metriken in Adobe Experience Platform. In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of [!DNL Profile] metrics, see the documentation on [available metrics](../observability/metrics.md).
+Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adobe Experience Platform. In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of [!DNL Profile] metrics, see the documentation on [available metrics](../observability/metrics.md).
 
 ## [!DNL Data governance] und [!DNL Privacy]
 
@@ -135,7 +135,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-To learn more about [!DNL Real-time Customer Profile], please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/de-DE/platform-learn/tutorials/overview.html).
+To learn more about [!DNL Real-time Customer Profile], please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
 >[!WARNING]
 >Die im folgenden Video dargestellte [!DNL Platform] Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie im Benutzerhandbuch [zum](ui/user-guide.md) Echtzeit-Profil.
