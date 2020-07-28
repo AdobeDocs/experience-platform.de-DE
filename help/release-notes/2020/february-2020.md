@@ -23,9 +23,9 @@ Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
 
 ## Quellen {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Daten lassen sich aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
-[!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, damit Sie für verschiedene Datenanbieter bequem Quellverbindungen einrichten können. Diese Quellverbindungen ermöglichen Ihnen das Authentifizieren und Verbinden mit externen Speichersystemen und CRM-Diensten, das Festlegen von Zeiten für Erfassungsläufe und das Verwalten des Datendurchsatzes bei der Erfassung.
+[!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
 **Neue Funktionen**
 
@@ -34,8 +34,8 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | API-Unterstützung für SaaS – Service-Systeme | New source connectors for [!DNL Salesforce Service Cloud] API and [!DNL ServiceNow] API. |
 | API-Unterstützung für SaaS – Marketing-Systeme | New source connectors for [!DNL HubSpot] API. |
 | API support for [!DNL NoSQL] database systems | Neue Quellschnittstellen für [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL MySQL]und [!DNL PostgreSQL]APIs [!DNL SQL Server] . |
-| API-Unterstützung für Cloud-Datenspeicher | New source connectors for [!DNL Azure Data Lake Service Gen 2] API and [!DNL Google Cloud Storage] API. |
-| Unterstützung für Cloud-Datenspeicher via Benutzeroberfläche | New source connector for [!DNL Google Cloud Storage] in the UI. |
+| API-Unterstützung für Cloud-Speicher | New source connectors for [!DNL Azure Data Lake Service Gen 2] API and [!DNL Google Cloud Storage] API. |
+| Unterstützung für Cloud-Speicher via Benutzeroberfläche | New source connector for [!DNL Google Cloud Storage] in the UI. |
 
 **Bekannte Probleme**
 
