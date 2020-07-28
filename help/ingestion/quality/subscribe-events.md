@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Abonnieren von Datenaufnahme-Ereignissen
+title: Abonnieren von Datenerfassungsereignissen
 topic: overview
 translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
@@ -12,9 +12,9 @@ ht-degree: 38%
 ---
 
 
-# Benachrichtigungen zur Datenaufnahme
+# Benachrichtigungen zur Datenerfassung
 
-Der Prozess der Datenaufnahme in Adobe Experience Platform besteht aus mehreren Schritten. Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. Der Aufnahmevorgang kann mit der [Adobe Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) oder über die Experience Platform-Benutzeroberfläche eingeleitet werden.[!DNL Experience Platform]
+Der Prozess der Datenaufnahme in Adobe Experience Platform besteht aus mehreren Schritten. Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. Der Erfassungsvorgang kann mit der [Adobe Data Ingestion-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) oder über die Experience Platform-Benutzeroberfläche eingeleitet werden.[!DNL Experience Platform]
 
 Data loaded into [!DNL Platform] must go through multiple steps in order to reach its destination, the [!DNL Data Lake] or the [!DNL Real-time Customer Profile] data store. Jeder Schritt umfasst die Verarbeitung der Daten, die Validierung der Daten und dann die Speicherung der Daten, bevor sie an den nächsten Schritt weitergeleitet werden. Je nachdem, wie viele Daten aufgenommen werden, kann dies ein zeitaufwendiger Prozess sein und es besteht immer die Möglichkeit, dass der Prozess aufgrund von Validierungs-, Semantik- oder Verarbeitungsfehlern fehlschlägt. Im Fall eines Fehlers müssen die Datenprobleme behoben werden und dann der gesamte Aufnahmevorgang mit den korrigierten Datendateien neu gestartet werden.
 
@@ -22,11 +22,11 @@ To assist in monitoring the ingestion process, [!DNL Experience Platform] makes 
 
 ## Verfügbare Statusbenachrichtigungs-Ereignisse
 
-Im Folgenden finden Sie eine Liste der verfügbaren Statusbenachrichtigungen zur Datenaufnahme, die Sie abonnieren können.
+Im Folgenden finden Sie eine Liste der verfügbaren Statusbenachrichtigungen zur Datenerfassung, die Sie abonnieren können.
 
 >[!NOTE]
 >
->Es wird nur ein Ereignisthema für alle Benachrichtigungen zur Datenaufnahme bereitgestellt. Zur Unterscheidung zwischen verschiedenen Status kann der Ereignis-Code verwendet werden.
+> Es wird nur ein Ereignisthema für alle Benachrichtigungen zur Datenerfassung bereitgestellt. Zur Unterscheidung zwischen verschiedenen Status kann der Ereignis-Code verwendet werden.
 
 | Platform Service | Status | Ereignisbeschreibung | Ereignis-Code |
 | ---------------- | ------ | ----------------- | ---------- |
@@ -43,11 +43,11 @@ The data ingestion notification event schema is an [!DNL Experience Data Model] 
 
 ## Statusbenachrichtigungen zur Datenaufnahme abonnieren
 
-Über [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) können Sie mehrere Benachrichtigungstypen über Webhooks abonnieren. In den folgenden Abschnitten werden die Schritte zum Abonnieren von [!DNL Platform] Benachrichtigungen für Datenerfassungs-Ereignis mit der Adobe Developer Console beschrieben.
+Über [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) können Sie mehrere Benachrichtigungstypen über Webhooks abonnieren. Die folgenden Abschnitte beschreiben die Schritte zum Abonnieren von [!DNL Platform] Benachrichtigungen für Datenverarbeitungs-Ereignis mit der Adobe Developer Console.
 
 ### Neues Projekt in der Adobe Developer Console erstellen
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die Schritte aus, die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschrieben sind.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
 
 ### Hinzufügen von [!DNL Experience Platform] Ereignissen
 
@@ -79,7 +79,7 @@ Geben Sie im nächsten Bildschirm einen Namen und eine Beschreibung für die Reg
 
 ![](../images/quality/subscribe-events/registration-details.png)
 
-Weiter unten auf dem gleichen Bildschirm können Sie optional konfigurieren, wie Ereignis empfangen werden. **[!UICONTROL Mit WebHook]** können Sie eine benutzerdefinierte Webhocker-Adresse für den Empfang von Ereignissen angeben, während die **[!UICONTROL Laufzeitaktion]** es Ihnen ermöglicht, dasselbe mit der [Adobe I/O-Laufzeit](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)zu tun.
+Weiter unten auf dem gleichen Bildschirm können Sie optional konfigurieren, wie Ereignis empfangen werden. **[!UICONTROL Mit WebHook]** können Sie eine benutzerdefinierte Webhook-Adresse für den Empfang von Ereignissen angeben, während die **[!UICONTROL Laufzeitaktion]** es Ihnen ermöglicht, dasselbe mit [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)zu tun.
 
 Dieses Lernprogramm überspringt diesen optionalen Konfigurationsschritt. Nachdem Sie fertig sind, klicken Sie auf **[!UICONTROL Konfigurierte Ereignisse]** speichern, um die Ereignis-Registrierung abzuschließen.
 
