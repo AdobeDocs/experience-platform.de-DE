@@ -22,8 +22,8 @@ Dieser Artikel zeigt die folgenden Beispiel-Transformationen, auf die ein Extrak
 
 Sample CSV and JSON files are available from the public ETL Reference [!DNL GitHub] repo maintained by Adobe:
 
-- [CRM_Profils.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_Profils.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### Beispiel-CSV
 
@@ -40,7 +40,7 @@ Mr  Eugenie Bechley F   1969-05-19  ebechley9r@telegraph.co.uk  b0c76a3f-6526-0a
 Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-15b4d856a204    61747117963243728095047674165570746095  2e33192080007c25-2ec0600000000006   86268258269066295956223980330791223320  865-538-8291    83 Veith Street Knoxville   Tennessee   US  37995   35.95   -84.05
 ```
 
-### Zuordnen
+### Zuordnung
 
 Die Zuordnungsanforderungen für die CRM-Daten sind in der folgenden Tabelle aufgeführt und umfassen die folgenden Transformationen:
 - Identitätsspalten in `identityMap`-Eigenschaften
@@ -49,24 +49,24 @@ Die Zuordnungsanforderungen für die CRM-Daten sind in der folgenden Tabelle auf
 
 | CSV-Spalte | XDM-Pfad | Datenformatierung |
 | ---------- | -------- | --------------- |
-| TITEL | person.name.courtesyTitle | Copy as string |
-| F_NAME | person.name.firstName | Copy as string |
-| L_NAME | person.name.lastName | Copy as string |
+| TITEL | person.name.courtesyTitle | Als Zeichenfolge kopieren |
+| F_NAME | person.name.firstName | Als Zeichenfolge kopieren |
+| L_NAME | person.name.lastName | Als Zeichenfolge kopieren |
 | GESCHLECHT | person.gender | Geschlecht als entsprechenden „person.gender-enum“-Wert transformieren |
-| GEBURTSDATUM | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | Transform birthDayAndMonth as string<br/>Transform  birthDate as string<br/>Transform birthYear as short int |
-| E-MAIL | personalEmail.address | Copy as string |
+| GEBURTSDATUM | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | birthDayAndMonth als Zeichenfolge transformieren<br/>birthDate als Zeichenfolge transformieren<br/>birthyear als “short intr”-Wert transformieren |
+| E-MAIL | personalEmail.address | Als Zeichenfolge kopieren |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Kopieren Sie dies als Zeichenfolge in das CRMID-Array in „identityMap“ und setzen Sie „Primary as false“ |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | Kopieren Sie dies als Zeichenfolge in den ersten Eintrag im ECID-Array in „identityMap“ und setzen Sie „Primary as false“ |
 | LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Kopieren Sie dies als Zeichenfolge in das LOYALTYID-Array in „identityMap“ und setzen Sie „Primary as true“ |
 | ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Kopieren Sie dies als Zeichenfolge in den zweiten Eintrag im ECID-Array in „identityMap“ und setzen Sie „Primary as false“ |
-| TELEFON | homePhone.number | Copy as string |
-| STRASSE | homeAddress.street1 | Copy as string |
-| STADT | homeAddress.city | Copy as string |
-| BUNDESLAND | homeAddress.stateProvince | Copy as string |
-| LAND | homeAddress.country | Copy as string |
-| ZIP CODE | homeAddress.postalCode | Copy as string |
-| BREITENGRAD | homeAddress.latitude | In Dublette konvertieren |
-| LÄNGENGRAD | homeAddress.longitude | In Dublette konvertieren |
+| TELEFON | homePhone.number | Als Zeichenfolge kopieren |
+| STRASSE | homeAddress.street1 | Als Zeichenfolge kopieren |
+| STADT | homeAddress.city | Als Zeichenfolge kopieren |
+| BUNDESLAND | homeAddress.stateProvince | Als Zeichenfolge kopieren |
+| LAND | homeAddress.country | Als Zeichenfolge kopieren |
+| ZIP CODE | homeAddress.postalCode | Als Zeichenfolge kopieren |
+| BREITENGRAD | homeAddress.latitude | In double-Wert konvertieren |
+| LÄNGENGRAD | homeAddress.longitude | In double-Wert konvertieren |
 
 
 ### Ausgabe in XDM
@@ -252,7 +252,7 @@ The structure of the following example dataframe has been mapped to a schema tha
 
 Beim Erstellen eines Dataframes zur Verwendung in Adobe Experience Platform muss sichergestellt werden, dass seine hierarchische Struktur exakt mit der eines vorhandenen XDM-Schemas übereinstimmt, damit die Felder korrekt zugeordnet werden können.
 
-## Identitäten zur Identitätskarte
+## Identitäten zur Identitätszuordnung
 
 ### Array von Identitäten
 
@@ -285,9 +285,9 @@ Die Zuordnungsanforderungen für das Array von Identitäten sind in der folgende
 
 | Identitätsfeld | identityMap-Feld | Datentyp |
 | -------------- | ----------------- | --------- |
-| identities[0].id | identityMap[Email][{"id"}] | copy as string |
-| identities[1].id | identityMap[CRMID][{"id"}] | copy as string |
-| identities[2].id | identityMap[LOYALTYID][{"id"}] | copy as string |
+| identities[0].id | identityMap[Email][{"id"}] | Als Zeichenfolge kopieren |
+| identities[1].id | identityMap[CRMID][{"id"}] | Als Zeichenfolge kopieren |
+| identities[2].id | identityMap[LOYALTYID][{"id"}] | Als Zeichenfolge kopieren |
 
 ### Ausgabe in XDM
 
