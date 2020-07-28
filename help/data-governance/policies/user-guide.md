@@ -18,9 +18,9 @@ Adobe Experience Platform [!DNL Data Governance] provides a user interface that 
 
 >[!IMPORTANT]
 >
->Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren. Anweisungen dazu finden Sie im Abschnitt zum [Aktivieren von Richtlinien](#enable) in der Benutzeroberfläche.
+>Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren. Anweisungen dazu finden Sie im Abschnitt zum [Aktivieren von Richtlinien](#enable) in der Benutzeroberfläche.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
@@ -55,7 +55,7 @@ Der Schritt *[!UICONTROL Marketing-Aktionen auswählen]* wird angezeigt. Wählen
 
 >[!NOTE]
 >
->Bei Auswahl mehrerer Marketing-Aktionen interpretiert die Richtlinie diese als „OR“-Regel. Mit anderen Worten: Die Richtlinie findet Anwendung, wenn _beliebige_ der ausgewählten Marketing-Aktionen ausgeführt werden.
+> Bei Auswahl mehrerer Marketing-Aktionen interpretiert die Richtlinie diese als „OR“-Regel. Mit anderen Worten: Die Richtlinie findet Anwendung, wenn _beliebige_ der ausgewählten Marketing-Aktionen ausgeführt werden.
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -69,7 +69,7 @@ Die Registerkarte *[!UICONTROL Durchsuchen]* wird erneut angezeigt, wo die neu e
 
 ## Datennutzungsrichtlinie aktivieren oder deaktivieren {#enable}
 
-Alle Datenverwendungsrichtlinien (einschließlich der von Adobe bereitgestellten Core-Richtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
+Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
 
 You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Wählen Sie eine benutzerdefinierte Richtlinie aus der Liste, um auf der rechten Seite die entsprechenden Details anzuzeigen. Klicken Sie unter *[!UICONTROL Status]* auf die Schaltfläche zum Umschalten, um die Richtlinie zu aktivieren oder zu deaktivieren.
 
@@ -77,7 +77,7 @@ You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!
 
 ## Marketingaktionen für Ansichten {#view-marketing-actions}
 
-Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;die Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;aus, um eine Liste der verfügbaren Marketingaktionen Ansicht, die von Adobe und Ihrem eigenen Unternehmen definiert wurden.
+Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;die Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;aus, um eine Liste der verfügbaren Marketingaktionen Ansicht, die von der Adobe und Ihrer eigenen Organisation definiert werden.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -99,9 +99,9 @@ Die neu erstellte Aktion wird auf der Registerkarte &quot; *[!UICONTROL Marketin
 
 >[!NOTE]
 >
->Es können nur benutzerdefinierte Marketingaktionen bearbeitet werden, die von Ihrer Organisation definiert wurden. Von Adobe definierte Marketingaktionen können nicht geändert oder gelöscht werden.
+>Es können nur benutzerdefinierte Marketingaktionen bearbeitet werden, die von Ihrer Organisation definiert wurden. Durch Adobe definierte Marketingaktionen können nicht geändert oder gelöscht werden.
 
-Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;die Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;aus, um eine Liste der verfügbaren Marketingaktionen Ansicht, die von Adobe und Ihrem eigenen Unternehmen definiert wurden. Wählen Sie eine benutzerdefinierte Marketingaktion aus der Liste und bearbeiten Sie dann die Details der Marketingaktion mit den entsprechenden Feldern im rechten Bereich.
+Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;die Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;aus, um eine Liste der verfügbaren Marketingaktionen Ansicht, die von der Adobe und Ihrer eigenen Organisation definiert werden. Wählen Sie eine benutzerdefinierte Marketingaktion aus der Liste und bearbeiten Sie dann die Details der Marketingaktion mit den entsprechenden Feldern im rechten Bereich.
 
 ![](../images/policies/edit-marketing-action.png)
 
