@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 1%
+ht-degree: 53%
 
 ---
 
@@ -19,7 +19,7 @@ Identitäten können Cluster über den Verlauf verschiedener Gerätediagramme ve
 Verwenden Sie einen optionalen `graph-type` Parameter, um den Ausgabetyp anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
 
 - `None` - Keine Identitätszuordnung durchführen.
-- `Private Graph` - Führen Sie Identitätszuordnungen auf Basis Ihres persönlichen Identitätsdiagramms durch. Wenn kein Wert angegeben `graph-type` wird, ist dies der Standardwert.
+- `Private Graph` - Führen Sie Identitätszuordnungen auf Basis Ihres persönlichen Identitätsdiagramms durch. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
 
 ## Abrufen des Clusterverlaufs einer einzelnen Identität
 
@@ -31,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Anfrage**
 
-Option 1: Geben Sie die Identität als Namensraum (`nsId`nach ID) und ID-Wert (`id`) an.
+Option 1: Geben Sie die Identität als Namespace (`nsId`, nach Kennung) und Kennungswert (`id`) an.
 
 ```shell
 curl -X GET \
@@ -42,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 2: Geben Sie die Identität als Namensraum (`ns`nach Name) und ID-Wert (`id`) an.
+Option 2: Geben Sie die Identität als Namespace (`ns`, nach Name) und Kennungswert (`id`) an.
 
 ```shell
 curl -X GET \
@@ -53,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 3: Geben Sie die Identität als XID an (`xid`). Weitere Informationen zum Abrufen der XID einer Identität finden Sie im Abschnitt dieses Dokuments, in dem beschrieben wird, wie Sie die XID für eine Identität [abrufen](./list-native-id.md).
+Option 3: Geben Sie die Identität als XID (`xid`) an. Weiterführende Informationen zum Abrufen der XID einer Identität finden Sie im Abschnitt dieses Dokuments, in dem es um das [Abrufen der XID für eine Identität](./list-native-id.md) geht.
 
 ```shell
 curl -X GET \
@@ -66,11 +66,11 @@ curl -X GET \
 
 ## Abrufen des Clusterverlaufs von mehreren Identitäten
 
-Verwenden Sie die `POST` Methode als Batch-Entsprechung der oben beschriebenen `GET` Methode, um die Cluster-Historien mehrerer Identitäten zurückzugeben.
+Use the `POST` method as a batch equivalent of the `GET` method described above to return the cluster histories of multiple identities.
 
 >[!NOTE]
 >
->Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
+> Die Anfrage darf höchstens 1.000 Identitäten zurückgeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
 
 **API-Format**
 
@@ -78,7 +78,7 @@ Verwenden Sie die `POST` Methode als Batch-Entsprechung der oben beschriebenen `
 POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 ```
 
-**Einrichtung anfordern**
+**Anfrageinhalt**
 
 Option 1: Geben Sie eine Liste von XIDs an, für die Clustermitglieder abgerufen werden sollen.
 
@@ -107,9 +107,9 @@ Option 2: Geben Sie eine Liste von Identitäten als Composite-IDs an, wobei jede
 
 **Anfrage**
 
-**Stufenanfrage**
+**Stub-Anfrage**
 
-Die Verwendung des `x-uis-cst-ctx: stub` Headers gibt eine gestubelte Antwort zurück. Dies ist eine vorübergehende Lösung, um den Fortschritt bei der frühzeitigen Integration zu erleichtern, während die Dienstleistungen fertig gestellt werden. Dies wird veraltet, wenn es nicht mehr benötigt wird.
+Durch Verwendung der Kopfzeile `x-uis-cst-ctx: stub` wird eine Stub-Antwort zurückgegeben. Dies ist eine vorübergehende Lösung, um den Fortschritt bei der frühzeitigen Integration zu unterstützen, während Dienste fertig gestellt werden. Diese Lösung wird veralten, sobald sie nicht mehr benötigt wird.
 
 ```shell
 curl -X POST \
@@ -214,8 +214,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Die Antwort enthält immer einen Eintrag für jede XID, die in der Anforderung bereitgestellt wird, unabhängig davon, ob die XIDs einer Anforderung demselben Cluster angehören oder ob einem oder mehreren Clustern überhaupt zugeordnet sind.
+>Die Antwort enthält stets einen Eintrag für jede XID, die in der Anfrage angegeben ist, unabhängig davon, ob die XIDs einer Anfrage demselben Cluster angehören oder ob eine bzw. mehrere von ihnen überhaupt einem Cluster zugeordnet sind.
 
 ## Nächste Schritte
 
-Fahren Sie mit der nächsten Übung zu [Liste-Identitätszuordnungen fort](./list-identity-mappings.md)
+Proceed to the next tutorial to [list identity mappings](./list-identity-mappings.md)
