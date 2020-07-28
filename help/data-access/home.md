@@ -34,6 +34,6 @@ Sie können mit dem [!DNL Spark] SDK Datensätze lesen und schreiben. Ausführli
 
 [!DNL Data Science Workspace] verwendet das [!DNL Spark] SDK in Notebooks und Rezepten. Weitere Informationen zu [!DNL Data Science Workspace]diesem Thema finden Sie im Überblick über den [Data Science Workspace](../data-science-workspace/home.md).
 
-## Abonnieren von Datenaufnahme-Ereignissen
+## Abonnieren von Datenerfassungsereignissen
 
 [!DNL Platform] stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
