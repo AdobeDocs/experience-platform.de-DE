@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ Die [!DNL Sensei Machine Learning] API unterstützt Abfragen beim Abrufen von As
 
 >[!NOTE]
 >
->Beim Kombinieren mehrerer Abfragen müssen diese durch das kaufmännische Und (**&amp;**) getrennt werden.
+>When combining multiple query parameters, they must be separated by ampersands (**&amp;**).
 
 ## Python CPU- und GPU-Konfigurationen {#cpu-gpu-config}
 
@@ -80,8 +80,8 @@ Spark Engines haben die Möglichkeit, zu Schulungs- und Bewertungszwecken Comput
 | -------- | ----------- | ---- |
 | driverMemory | Speicher für Treiber in Megabyte | int |
 | driverCores | Anzahl der vom Fahrer verwendeten Kerne | int |
-| executeMemory | Speicher für Führungskräfte in Megabyte | int |
-| executeCores | Anzahl der vom Prüfer verwendeten Kerne | int |
+| executorMemory | Speicher für Führungskräfte in Megabyte | int |
+| executorCores | Anzahl der vom Executor verwendeten Kerne | int |
 | numExecutors | Anzahl der Führungskräfte | int |
 
 Ressourcen können auf einer [MLInstanz](./mlinstances.md) entweder als (A) individuelle Trainings- oder Scoring-Parameter oder (B) innerhalb eines zusätzlichen Specification-Objekts (`specification`) angegeben werden. Beispielsweise sind die folgenden Ressourcenkonfigurationen für Schulung und Bewertung gleich:
