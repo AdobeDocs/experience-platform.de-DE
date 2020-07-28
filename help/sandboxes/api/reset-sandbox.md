@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
 # Zurücksetzen einer Sandbox
 
-Entwicklungs-Sandboxen verfügen über eine Funktion zum Zurücksetzen der Factory, mit der alle nicht standardmäßigen Ressourcen aus einer Sandbox gelöscht werden. Sie können eine Sandbox zurücksetzen, indem Sie eine PUT-Anforderung erstellen, die die Sandbox `name` im Anforderungspfad enthält.
+Sandboxes, die der Entwicklung dienen, verfügen über eine Funktion zum „Zurücksetzen auf Werkseinstellungen“, mit der alle nicht standardmäßigen Ressourcen aus einer Sandbox gelöscht werden. Sie können eine Sandbox zurücksetzen, indem Sie eine PUT-Anfrage stellen, die im Anfragepfad den Namen (`name`) der Sandbox enthält.
 
 **API-Format**
 
@@ -24,11 +24,11 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SANDBOX_NAME}` | Die `name` Eigenschaft der Sandbox, die Sie zurücksetzen möchten. |
+| `{SANDBOX_NAME}` | Die `name`-Eigenschaft der Sandbox, die Sie zurücksetzen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Sandbox mit dem Namen &quot;dev-2&quot;zurückgesetzt.
+Durch folgende Anfrage wird eine Sandbox mit dem Namen „dev-2“ zurückgesetzt.
 
 ```shell
 curl -X PUT \
@@ -45,11 +45,11 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `action` | Dieser Parameter muss in der Anforderungs-Nutzlast mit dem Wert &quot;reset&quot;angegeben werden, damit die Sandbox zurückgesetzt werden kann. |
+| `action` | Dieser Parameter muss in der Anfrage-Payload mit dem Wert „reset“ angegeben werden, damit die Sandbox zurückgesetzt wird. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück und zeigt an, dass sie &quot;zurückgesetzt&quot; `state` ist.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück und zeigt an, dass ihr Status (`state`) „wird zurückgesetzt“ lautet.
 
 ```json
 {
@@ -64,4 +64,4 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück un
 
 >[!NOTE]
 >
->Sobald eine Sandbox zurückgesetzt wurde, dauert es etwa 15 Minuten, bis sie vom System bereitgestellt wird. Nach der Bereitstellung `state` wird die Sandbox &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
+> Nach dem Zurücksetzen einer Sandbox dauert es etwa 15 Minuten, bis sie vom System bereitgestellt wird. Nach dem Bereitstellen ändert sich der Status (`state`) der Sandbox in „aktiv“ oder „fehlgeschlagen“.
