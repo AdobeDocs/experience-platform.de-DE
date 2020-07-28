@@ -2,7 +2,7 @@
 title: Facebook-Ziel
 seo-title: Facebook-Ziel
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
-seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
+seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -22,13 +22,13 @@ Activate profiles for your [!DNL Facebook] campaigns for audience targeting, per
 
 ## Nutzungsszenarien
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook] Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Adobe-Kunden mit der Echtzeit-Kundendatenplattform mithilfe dieser Funktion lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook] Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Kunden der Adobe Echtzeit-Kundendatenplattform mit dieser Funktion lösen können.
 
 
 ### Verwendungsfall Nr. 1
 
 
-Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebot auf Basis ihrer bisherigen Bestellungen zeigen. Der Online-Händler kann E-Mail-Adressen von seinem eigenen CRM an Adobe Echtzeit-CDP erfassen, Segmente aus eigenen Offlinedaten erstellen und diese Segmente an die [!DNL Facebook] Social-Plattform senden, um ihre Werbeausgaben zu optimieren.
+Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebot auf Basis ihrer bisherigen Bestellungen zeigen. Der Online-Händler kann E-Mail-Adressen von seinem eigenen CRM zur Adobe von Echtzeit-CDP erfassen, Segmente aus eigenen Offlinedaten erstellen und diese Segmente an die [!DNL Facebook] Social-Plattform senden, um ihre Werbeausgaben zu optimieren.
 
 
 ### Verwendungsfall Nr. 2
@@ -80,7 +80,7 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
 
 >[!IMPORTANT]
 >
->Wenn Sie sich dafür entscheiden, keine E-Mail-Adressen zu hash, wird Adobe CDP dies für Sie tun, wenn Sie Segmente aktivieren, für die Sie [!DNL Facebook]keine Hash-E-Mail-Adressen wünschen. Wählen Sie im Arbeitsablauf für die [Aktivierung](/help/rtcdp/destinations/activate-destinations.md#activate-data) (siehe Schritt 5) die `Email` Option wie unten für *E-Mail-Adressen* und `Email_LC_SHA256` für *Hash-E-Mail-Adressen* gezeigt.
+>Wenn Sie sich dafür entscheiden, keine E-Mail-Adressen zu hash, wird dies von Adobe Echtzeit-CDP für Sie ausgeführt, wenn Sie Segmente aktivieren für [!DNL Facebook]. Wählen Sie im Arbeitsablauf für die [Aktivierung](/help/rtcdp/destinations/activate-destinations.md#activate-data) (siehe Schritt 5) die `Email` Option wie unten für *E-Mail-Adressen* und `Email_LC_SHA256` für *Hash-E-Mail-Adressen* gezeigt.
 
 
 ![Hashing bei der Aktivierung](/help/rtcdp/destinations/assets/identity-mapping.png)
