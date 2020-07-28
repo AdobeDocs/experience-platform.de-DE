@@ -87,13 +87,13 @@ LIMIT 31;
 
 ## Attribution
 
-Bei der Attribution werden Metriken oder Konversionen wie Umsätze, Bestellungen oder Anmeldungen Ihren Marketing-Bemühungen zugeordnet.
+Bei der Attribution werden Metriken oder Konversionen wie Umsätze, Bestellungen oder Anmeldungen Ihren Marketing-Maßnahmen zugeordnet.
 
 In Adobe Analytics werden Attributionseinstellungen mithilfe von Variablen wie eVars konfiguriert und bei der Erfassung von Daten generiert.
 
 The Attribution ADFs found in [!DNL Query Service] allow those allocations to be defined and generated at query time.
 
-In diesem Beispiel geht es um „Last Touch“-Attribution; Adobe unterstützt aber auch „First Touch“-Attribution.
+In diesem Beispiel geht es um Letztkontakt-Attribution; Adobe unterstützt aber auch Erstkontakt-Attribution.
 
 >[!NOTE]
 >
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video zeigt, wie Abfragen in der Benutzeroberfläche der Adobe Experience Platform und in einem PSQL-Client ausgeführt werden. Darüber hinaus verwendet das Video Beispiele für einzelne Eigenschaften in einem XDM-Objekt, unter Verwendung von von Adobe definierten Funktionen und unter Verwendung von CREATE TABLE AS SELECT (CTAS).
+Das folgende Video zeigt, wie Abfragen in der Benutzeroberfläche der Adobe Experience Platform und in einem PSQL-Client ausgeführt werden. Darüber hinaus verwendet das Video Beispiele für einzelne Eigenschaften in einem XDM-Objekt, für die Verwendung von Adobe-definierten Funktionen und für die Verwendung von CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
