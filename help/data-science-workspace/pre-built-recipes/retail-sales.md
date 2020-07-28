@@ -7,23 +7,23 @@ translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 workflow-type: tm+mt
 source-wordcount: '523'
-ht-degree: 5%
+ht-degree: 17%
 
 ---
 
 
 # Rezept für Einzelhandel
 
-Mit dem Retail Sales-Rezept können Sie eine Prognose der Verkaufszahlen für alle Läden für einen bestimmten Zeitraum erstellen. Mit einem präzisen Prognosemodell wäre der Einzelhändler in der Lage, das Verhältnis zwischen der Nachfrage- und der Preispolitik zu ermitteln und optimierte Preisentscheidungen zu treffen, um Verkäufe und Umsatz zu maximieren.
+Mit dem Retail Sales-Rezept können Sie eine Prognose der Verkaufszahlen für alle Läden für einen bestimmten Zeitraum erstellen. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 
 Das folgende Dokument beantwortet Fragen wie:
-* Für wen ist dieses Rezept gebaut?
+* Für wen ist dieses Rezept gedacht?
 * Was macht dieses Rezept?
 * Wie sehen die ersten Schritte aus?
 
-## Für wen ist dieses Rezept gebaut?
+## Für wen ist dieses Rezept gedacht?
 
-Ein Einzelhändler steht vor vielen Herausforderungen, um auf dem aktuellen Markt wettbewerbsfähig zu bleiben. Ihre Marke möchte den Jahresumsatz für Ihre Handelsmarke steigern, aber es gibt viele Entscheidungen, um Ihre Betriebskosten zu minimieren. Zu viel Angebot erhöht die Lagerkosten, während zu wenig Angebot das Risiko erhöht, Kunden an andere Marken zu verlieren. Müssen Sie in den kommenden Monaten mehr Angebot bestellen? Wie entscheiden Sie sich für optimale Preise für Ihre Produkte, um die wöchentlichen Verkaufsziele zu erreichen?
+Einem Einzelhändler hat Probleme damit, auf dem aktuellen Markt wettbewerbsfähig zu bleiben. Ihre Marke möchte den Jahresumsatz für Ihre Handelsmarke steigern, aber es gibt viele Entscheidungen, um Ihre Betriebskosten zu minimieren. Zu viel Angebot erhöht die Lagerkosten, während zu wenig Angebot das Risiko erhöht, Kunden an andere Marken zu verlieren. Müssen Sie in den kommenden Monaten mehr Angebot bestellen? Wie entscheiden Sie sich für optimale Preise für Ihre Produkte, um die wöchentlichen Verkaufsziele zu erreichen?
 
 ## Was macht dieses Rezept?
 
@@ -33,9 +33,9 @@ Das Rezept für die Verkaufsvorausschätzung verwendet maschinelles Lernen, um V
 
 Beginnen Sie mit diesem [Tutorial](../jupyterlab/create-a-recipe.md).
 
-In diesem Lernprogramm wird beschrieben, wie Sie das Rezept für den Vertrieb im Einzelhandel in einem Jupyter-Notebook erstellen und mithilfe des Notebooks Arbeitsabläufe für die Skripterstellung in der Adobe Experience Platform erstellen.
+In diesem Lernprogramm wird beschrieben, wie Sie das Rezept für den Einzelhandel in einem Jupyter-Notebook erstellen und mithilfe des Notebooks Arbeitsabläufe für die Rezeptur erstellen, um das Rezept in der Adobe Experience Platform zu erstellen.
 
-## Data schema
+## Datenschema
 
 Dieses Rezept verwendet [XDM-Schema](../../xdm/schema/field-dictionary.md) , um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
 
@@ -44,13 +44,13 @@ Dieses Rezept verwendet [XDM-Schema](../../xdm/schema/field-dictionary.md) , um 
 | date | Zeichenfolge |
 | store | Ganzzahl |
 | storeType | Zeichenfolge |
-| weeklySales | Zahl |
+| weeklySales | Nummer |
 | storeSize | Ganzzahl |
-| Temperatur | Zahl |
-| regionalFuelPrice | Zahl |
-| markdown | Zahl |
-| cpi | Zahl |
-| Arbeitslosigkeit | Zahl |
+| Temperatur | Nummer |
+| regionalFuelPrice | Nummer |
+| markdown | Nummer |
+| cpi | Nummer |
+| Arbeitslosigkeit | Nummer |
 | isHoliday | Boolesch |
 
 
