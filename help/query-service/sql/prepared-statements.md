@@ -84,12 +84,12 @@ Die obige SQL-Abfrage gibt folgende Antwort zurück:
 
 | id | firstname | lastname | birthdate | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Kanada |
-| 10001 | antoine | dubois | 1967-03-14 | example2@example.com | Paris | Frankreich |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japan |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Schweden |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10000 | alexander | davis | 15.09.1993 | example@example.com | Vancouver | Kanada |
+| 10001 | antoine | dubois | 14.03.1967 | example2@example.com | Paris | Frankreich |
+| 10002 | kyoko | sakura | 26.11.1999 | example3@example.com | Tokio | Japan |
+| 10003 | linus | pettersson | 03.06.1982 | example4@example.com | Stockholm | Schweden |
+| 10004 | aasir | waithaka | 17.12.1976 | example5@example.com | Nairobi | Kenia |
+| 10005 | fernando | rios | 30.07.2002 | example6@example.com | Santiago | Chile |
 
 Diese SQL-Abfrage kann mithilfe der folgenden vorbereiteten Anweisung parametrisiert werden:
 
@@ -107,12 +107,12 @@ Bei diesem Aufruf sehen Sie genau die gleichen Ergebnisse wie zuvor:
 
 | id | firstname | lastname | birthdate | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Kanada |
-| 10001 | antoine | dubois | 1967-03-14 | example2@example.com | Paris | Frankreich |
-| 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokio | Japan |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Schweden |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenia |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile |
+| 10000 | alexander | davis | 15.09.1993 | example@example.com | Vancouver | Kanada |
+| 10001 | antoine | dubois | 14.03.1967 | example2@example.com | Paris | Frankreich |
+| 10002 | kyoko | sakura | 26.11.1999 | example3@example.com | Tokio | Japan |
+| 10003 | linus | pettersson | 03.06.1982 | example4@example.com | Stockholm | Schweden |
+| 10004 | aasir | waithaka | 17.12.1976 | example5@example.com | Nairobi | Kenia |
+| 10005 | fernando | rios | 30.07.2002 | example6@example.com | Santiago | Chile |
 
 Nachdem Sie die vorbereitete Anweisung fertig verwendet haben, können Sie die Zuweisung mithilfe des folgenden Aufrufs aufheben:
 
