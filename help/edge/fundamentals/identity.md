@@ -1,8 +1,8 @@
 ---
 title: Abrufen der Experience Cloud-ID
 seo-title: Adobe Experience Platform Web SDK Experience Cloud-ID abrufen
-description: Erfahren Sie, wie Sie die Adobe Experience Cloud ID abrufen.
-seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud ID abrufen.
+description: Erfahren Sie, wie Sie die Adobe Experience Cloud-ID abrufen.
+seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud-ID abrufen.
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 # Identität - Abrufen der Experience Cloud-ID
 
-Die Adobe Experience Platform [!DNL Web SDK] nutzt den [Adobe-Identitätsdienst](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige ID verfügt, die auf dem Gerät beibehalten wird, damit die Aktivität zwischen den Seiten miteinander verknüpft werden kann.
+Die Adobe Experience Platform [!DNL Web SDK] nutzt den Identitätsdienst für die [Adobe](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige ID verfügt, die auf dem Gerät beibehalten wird, damit die Aktivität zwischen den Seiten miteinander verknüpft werden kann.
 
 ## Identität des Ersten
 
