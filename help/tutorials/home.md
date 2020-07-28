@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Abfrage-Service
+title: Query Service von Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
 source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
