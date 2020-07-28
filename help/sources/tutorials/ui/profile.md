@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 0%
+ht-degree: 22%
 
 ---
 
@@ -18,12 +18,12 @@ Eingehende Daten aus Ihrem Quellanschluss können zur Anreicherung und zum Ausf�
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Erlebnis-Datenmodell (XDM)-System](../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-   - [Grundlagen der Zusammensetzung](../../../xdm/schema/composition.md)des Schemas: Erfahren Sie mehr über die grundlegenden Bausteine von XDM-Schemas, einschließlich der wichtigsten Grundsätze und Best Practices bei der Schema-Komposition.
+- [Experience-Datenmodell (XDM)-System](../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
+   - [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    - [Schema-Editor-Lernprogramm](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-- [Echtzeit-Profil](../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Echtzeit-Kundenprofil](../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits einen Quellanschluss erstellt und konfiguriert haben.  Eine Liste von Übungen zum Erstellen verschiedener Connectors in der Benutzeroberfläche finden Sie in der Übersicht über die [Quell-Connectors](../../home.md).
 
@@ -31,8 +31,8 @@ Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits einen Quellansch
 
 Um die Profile von Kunden zu bereichern, muss das Quell-Schema des Zielgruppe-Datensatzes für die Verwendung in [!DNL Real-time Customer Profile]kompatibel sein. Ein kompatibles Schema erfüllt folgende Anforderungen:
 
-- Das Schema hat mindestens ein Attribut, das als Identitätseigenschaft angegeben wurde.
-- Das Schema verfügt über eine Identitätseigenschaft, die als primäre Identität definiert ist.
+- Das Schema weist mindestens ein Attribut auf, das als Identitätseigenschaft definiert wurde.
+- Das Schema verfügt über eine Identitätseigenschaft, die als primäre Identität definiert wurde.
 - Eine Zuordnung innerhalb des Datenflusses ist vorhanden, wobei die primäre Zielgruppe ein Attribut ist.
 
 Klicken Sie im Quellenarbeitsbereich auf die Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;, um Ihre Basisverbindungen Liste. Suchen Sie in der angezeigten Liste die Verbindung, die den Datenfluss enthält, mit dem Sie Profil füllen möchten. Klicken Sie auf den Namen der Verbindung, um deren Details anzuzeigen.
@@ -67,4 +67,4 @@ Wenn sowohl das Schema als auch der Datensatz aktiviert sind, [!DNL Profile]fül
 
 ## Nächste Schritte
 
-Indem Sie diesem Tutorial folgen, haben Sie eingehende Daten für die [!DNL Profile] Population erfolgreich aktiviert. Weitere Informationen finden Sie in der Übersicht über das [Echtzeit-Profil](../../../profile/home.md).
+Indem Sie diesem Tutorial folgen, haben Sie eingehende Daten für die [!DNL Profile] Population erfolgreich aktiviert. Weiterführende Informationen finden Sie in der [Übersicht zu Echtzeit-Kundenprofil](../../../profile/home.md).
