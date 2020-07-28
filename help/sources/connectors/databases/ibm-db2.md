@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 >Der IBM DB2 Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform]importieren.
+Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform]importieren.
 
 Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL oder data warehouse. Die Unterstützung für Datenbankanbieter umfasst IBM DB2.
 
@@ -53,7 +53,7 @@ Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-In der folgenden Dokumentation finden Sie Informationen zum Verbinden von IBM DB2 mit der [!DNL Platform] Verwendung von APIs oder der Benutzeroberfläche:
+The documentation below provides information on how to connect IBM DB2 to [!DNL Platform] using APIs or the user interface:
 
 ## IBM DB2 mit APIs [!DNL Platform] verbinden
 
