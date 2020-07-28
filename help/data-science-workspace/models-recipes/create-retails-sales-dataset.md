@@ -1,49 +1,49 @@
 ---
 keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Schema und Dataset für den Einzelhandel erstellen
+title: Schema und Datensatz für Einzelhandelsumsätze erstellen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 0%
+ht-degree: 64%
 
 ---
 
 
-# Schema und Dataset für den Einzelhandel erstellen
+# Schema und Datensatz für Einzelhandelsumsätze erstellen
 
-Dieses Tutorial bietet Ihnen die Voraussetzungen und Elemente, die für alle anderen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] Tutorials erforderlich sind. Nach Fertigstellung stehen Ihnen und Ihren Mitarbeitern das Retail Sales Schema und die Datensätze zur Verfügung [!DNL Experience Platform].
+This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on [!DNL Experience Platform].
 
 ## Erste Schritte
 
-Bevor Sie dieses Lernprogramm starten, müssen Sie über die folgenden Voraussetzungen verfügen:
-- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in haben, wenden Sie sich an Ihren Systemadministrator, [!DNL Experience Platform]bevor Sie fortfahren.
-- Autorisierung zum Durchführen von [!DNL Experience Platform] API-Aufrufen. Führen Sie das Lernprogramm [zum Authentifizieren und Zugreifen auf Adobe Experience Platformen-APIs](../../tutorials/authentication.md) durch, um die folgenden Werte abzurufen, damit dieses Lernprogramm erfolgreich abgeschlossen werden kann:
-   - Genehmigung: `{ACCESS_TOKEN}`
+Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
+- Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+- Authorization to make [!DNL Experience Platform] API calls. Führen Sie die Anleitung zum [Authentifizieren und Aufrufen von Adobe Experience Platform-APIs](../../tutorials/authentication.md) aus, um die folgenden Werte abzurufen, damit die Anleitung erfolgreich abgeschlossen werden kann:
+   - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
-   - Kundengeheimnis: `{CLIENT_SECRET}`
+   - Client-Geheimnis: `{CLIENT_SECRET}`
    - Client-Zertifikat: `{PRIVATE_KEY}`
-- Beispieldaten und Quelldateien für das [Einzelhandelsverkaufsrezept](../pre-built-recipes/retail-sales.md). Laden Sie die für diese und andere [!DNL Data Science Workspace] Übungen erforderlichen Elemente aus dem öffentlichen [Adobe-Git-Repository](https://github.com/adobe/experience-platform-dsw-reference/)herunter.
-- [Python >= 2.7](https://www.python.org/downloads/) und die folgenden [!DNL Python] Pakete:
+- Beispieldaten und Quelldateien für das [Rezept „Einzelhandelsumsätze“](../pre-built-recipes/retail-sales.md). Download the assets required for this and other [!DNL Data Science Workspace] tutorials from the [Adobe public Git repository](https://github.com/adobe/experience-platform-dsw-reference/).
+- [ >= 2.7](https://www.python.org/downloads/)[!DNL Python] und die folgenden Python-Pakete:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
-- Ein funktionierendes Verständnis der folgenden in diesem Lernprogramm verwendeten Konzepte:
+- Ein grundlegendes Verständnis der folgenden in dieser Anleitung verwendeten Konzepte:
    - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
-   - [Grundlagen der Schema-Komposition](../../xdm/schema/field-dictionary.md)
+   - [Grundlagen der Schemakomposition](../../xdm/schema/field-dictionary.md)
 
-## Schema und Dataset für den Einzelhandel erstellen
+## Schema und Datensatz für Einzelhandelsumsätze erstellen
 
-Das Retail Sales-Schema und die Datensätze werden automatisch mithilfe des bereitgestellten Bootstrap-Skripts erstellt. Gehen Sie wie folgt vor, um die Reihenfolge zu ändern:
+Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des bereitgestellten Bootstrap-Skripts automatisch erstellt. Führen Sie folgende Schritte in der richtigen Reihenfolge aus:
 
 ### Dateien konfigurieren
 
-1. Navigieren Sie im [!DNL Experience Platform] Tutorial-Ressourcenpaket zum Ordner `bootstrap`und öffnen Sie es mit einem entsprechenden Texteditor `config.yaml` .
-2. Geben Sie unter dem `Enterprise` Abschnitt die folgenden Werte ein:
+1. Inside the [!DNL Experience Platform] tutorial resource package, navigate into the directory `bootstrap`, and open `config.yaml` using an appropriate text editor.
+2. Geben Sie unter dem Abschnitt `Enterprise` die folgenden Werte ein:
 
    ```yaml
    Enterprise:
@@ -54,7 +54,7 @@ Das Retail Sales-Schema und die Datensätze werden automatisch mithilfe des bere
        priv_key_filename: {PRIVATE_KEY}
    ```
 
-3. Bearbeiten Sie die Werte unter dem `Platform` Abschnitt, Beispiel unten:
+3. Bearbeiten Sie die Werte, die Sie im Abschnitt `Platform` finden, wie im folgenden Beispiel:
 
    ```yaml
    Platform:
@@ -65,13 +65,13 @@ Das Retail Sales-Schema und die Datensätze werden automatisch mithilfe des bere
        kernel_type: Python
    ```
 
-   - `platform_gateway` : Der Basispfad für API-Aufrufe. Ändern Sie diesen Wert nicht.
-   - `ims_token` : Du `{ACCESS_TOKEN}` gehst hierher.
-   - `ingest_data` : Legen Sie für diese Übung den Wert `"True"` fest, um die Schema und Datensätze für den Einzelhandel zu erstellen. Der Wert `"False"` &quot;von&quot;erstellt nur die Schema.
-   - `build_recipe_artifacts` : Legen Sie für die Zwecke dieses Lernprogramms diesen Wert so fest, dass das Skript kein Rezept-Artefakt generieren `"False"` kann.
-   - `kernel_type` : Der Ausführungstyp des Recipe-Artefakts. Lassen Sie diesen Wert unverändert, `Python` wenn er als `build_recipe_artifacts` Ausführungsart festgelegt `"False"`ist.
+   - `platform_gateway`: Der Basispfad für API-Aufrufe. Ändern Sie diesen Wert nicht.
+   - `ims_token`: Ihr `{ACCESS_TOKEN}` gehört hier hin.
+   - `ingest_data`: Setzen Sie für diese Anleitung den Wert auf `"True"`, um die Schemas und Datensätze für Einzelhandelsumsätze zu erstellen. Beim Wert `"False"` werden nur die Schemas erstellt.
+   - `build_recipe_artifacts`: Setzen Sie für diese Anleitung den Wert auf `"False"`, um zu verhindern, dass das Skript ein Rezeptartefakt generiert.
+   - `kernel_type`: Der Ausführungstyp des Rezeptartefakts. Lassen Sie diesen Wert unverändert bei `Python`, wenn `build_recipe_artifacts` auf `"False"` gesetzt ist; geben Sie andernfalls den entspechenden Ausführungstyp an.
 
-4. Geben Sie unter dem `Titles` Abschnitt die folgenden Informationen entsprechend für die Musterdaten für den Einzelhandel ein, speichern und schließen Sie die Datei, nachdem die Änderungen vorgenommen wurden. Beispiel:
+4. Geben Sie unter dem Abschnitt `Titles` die folgenden Informationen für die Beispieldaten der Einzelhandelsumsätze ein; speichern und schließen Sie die Datei, nachdem Sie die Änderungen vorgenommen haben. Beispiel:
 
    ```yaml
    Titles:
@@ -91,23 +91,23 @@ Das Retail Sales-Schema und die Datensätze werden automatisch mithilfe des bere
 
 ### Bootstrap-Skript ausführen
 
-1. Öffnen Sie die Terminalanwendung und navigieren Sie zum Ordner für [!DNL Experience Platform] Übungsressourcen.
-2. Legen Sie den `bootstrap` Ordner als aktuellen Arbeitspfad fest und führen Sie das `bootstrap.py` [!DNL Python] Skript durch Eingabe des folgenden Befehls aus:
+1. Open your terminal application and navigate to the [!DNL Experience Platform] tutorial resource directory.
+2. Set the `bootstrap` directory as the current working path and run the `bootstrap.py` [!DNL Python] script by entering the following command:
 
    ```bash
    python bootstrap.py
    ```
 
-   > [!NOTE] Das Skript kann mehrere Minuten dauern.
+   >[!NOTE] Das Skript kann mehrere Minuten in Anspruch nehmen.
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Bootstrap-Skripts können die Retail Sales-Eingabe- und -Ausgabe-Schema und -Datensätze angezeigt werden [!DNL Experience Platform]. Weitere Informationen finden Sie im Tutorial [zu Schema-Daten zur](./preview-schema-data.md)Vorschau.
+Upon successful completion of the bootstrap script, the Retail Sales input and output schemas and datasets can be viewed on [!DNL Experience Platform]. Weiterführende Informationen finden Sie in der Anleitung zum [Anzeigen einer Vorschau von Schemadaten](./preview-schema-data.md).
 
-Sie haben außerdem erfolgreich Musterdaten für Einzelhandelsverkäufe mit dem bereitgestellten Bootstrap-Skript erfasst. [!DNL Experience Platform]
+You have also successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
 
-So arbeiten Sie weiter mit den erfassten Daten:
-- [Analysieren Ihrer Daten mit Jupyter-Notebooks](../jupyterlab/analyze-your-data.md)
-   - Verwenden Sie Jupyter-Notebooks in Data Science Workspace, um auf Ihre Daten zuzugreifen, sie zu untersuchen, sie zu visualisieren und zu verstehen.
-- [Verpacken von Quelldateien in einem Rezept](./package-source-files-recipe.md)
-   - In diesem Tutorial erfahren Sie, wie Sie Ihr eigenes Modell in eine [!DNL Data Science Workspace] Datei mit einer wichtigen Rezept-Datei packen können.
+So arbeiten Sie weiter mit den aufgenommenen Daten:
+- [Daten mit Jupyter-Notebooks analysieren](../jupyterlab/analyze-your-data.md)
+   - Verwenden Sie Jupyter Notebooks in Data Science Workspace, um auf Ihre Daten zuzugreifen, sie zu untersuchen, zu visualisieren und zu verstehen.
+- [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md)
+   - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.
