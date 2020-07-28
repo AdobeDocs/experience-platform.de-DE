@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Blue Data Explorer-Anschluss
+title: Data Explorer-Stecker
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
@@ -57,7 +57,7 @@ Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbi
 
 ## Verbindung [!DNL Azure Data Explorer] mit [!DNL Platform] APIs
 
-- [Erstellen eines Azurblauen Data Explorer-Connectors mit der Flow-Dienst-API](../../tutorials/api/create/databases/data-explorer.md)
+- [Erstellen eines Azurblauen Data Explorer-Connectors mit der Flow Service API](../../tutorials/api/create/databases/data-explorer.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
