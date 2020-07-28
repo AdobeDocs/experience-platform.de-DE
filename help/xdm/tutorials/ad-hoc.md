@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 14%
+ht-degree: 10%
 
 ---
 
@@ -25,7 +25,7 @@ Dieses Lernprogramm erfordert ein Verständnis des [!DNL Experience Data Model] 
 - [XDM-System - Übersicht](../home.md): Eine allgemeine Übersicht über XDM und seine Implementierung in [!DNL Experience Platform].
 - [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Übersicht über die Grundkomponenten von XDM-Schemas.
 
-Als Vorbereitung für dieses Tutorial sollten Sie im [Entwicklerhandbuch](../api/getting-started.md) die wichtigsten Themen rund um die konkrete Vorgehensweise für Aufrufe der API durchgehen. [!DNL Schema Registry] Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 
 ## Erstellen einer Ad-hoc-Klasse
 
@@ -148,7 +148,7 @@ Eine erfolgreiche Antwort gibt die Details der neuen Klasse zurück und ersetzt 
 
 ## Erstellen eines Ad-hoc-Schemas
 
-Nachdem Sie eine Ad-hoc-Klasse erstellt haben, können Sie ein neues Schema erstellen, das diese Klasse implementiert, indem Sie eine POST-Anforderung an den `/tenant/schemas` Endpunkt senden.
+Nachdem Sie eine Ad-hoc-Klasse erstellt haben, können Sie ein neues Schema erstellen, das diese Klasse implementiert, indem Sie eine POST an den `/tenant/schemas` Endpunkt anfordern.
 
 **API-Format**
 
@@ -223,9 +223,9 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Schemas zurück, e
 
 >[!NOTE]
 >
->Dieser Schritt ist optional. Wenn Sie die Feldstruktur Ihres Ad-hoc-Schemas nicht überprüfen möchten, können Sie am Ende dieses Lernprogramms zum Abschnitt &quot; [Nächste Schritte](#next-steps) &quot;wechseln.
+> Dieser Schritt ist optional. Wenn Sie die Feldstruktur Ihres Ad-hoc-Schemas nicht überprüfen möchten, können Sie am Ende dieses Lernprogramms zum Abschnitt &quot; [Nächste Schritte](#next-steps) &quot;wechseln.
 
-Nachdem das Ad-hoc-Schema erstellt wurde, können Sie eine GET-Anforderung (Lookup) erstellen, um das Schema in seinem erweiterten Formular Ansicht. Dies geschieht mit dem entsprechenden Accept-Header in der GET-Anforderung, wie nachfolgend gezeigt.
+Nachdem das Ad-hoc-Schema erstellt wurde, können Sie eine Suchanfrage (GET) stellen, um das Schema in seinem erweiterten Formular Ansicht. Dies geschieht mit dem entsprechenden Accept-Header in der GET-Anforderung, wie nachfolgend gezeigt.
 
 **API-Format**
 
@@ -303,6 +303,6 @@ Bei einer erfolgreichen Antwort werden die Details des Schemas einschließlich a
 
 ## Nächste Schritte {#next-steps}
 
-Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie als Teil eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
+Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie im Rahmen eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
 
 Weitere Informationen zum Arbeiten mit der [!DNL Schema Registry] API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
