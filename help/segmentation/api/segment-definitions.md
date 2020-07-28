@@ -28,14 +28,14 @@ Sie können eine Liste aller Segmentdefinitionen für Ihre IMS-Organisation abru
 
 **API-Format**
 
-Der `/segment/definitions` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Segmentdefinitionen abgerufen. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`).
+Der `/segment/definitions` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Segmentdefinitionen abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /segment/definitions
 GET /segment/definitions?{QUERY_PARAMETERS}
 ```
 
-**Abfrage**
+**Abfrageparameter**
 
 | Parameter | Beschreibung | Beispiel |
 | --------- | ----------- | ------- |
@@ -332,7 +332,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 
 ## Segmentdefinitionen stapelweise abrufen {#bulk-get}
 
-Sie können detaillierte Informationen zu mehreren angegebenen Segmentdefinitionen abrufen, indem Sie eine POST-Anforderung an den `/segment/definitions/bulk-get` Endpunkt senden und die `id` Werte der Segmentdefinitionen im Anforderungstext angeben.
+Sie können detaillierte Informationen zu mehreren angegebenen Segmentdefinitionen abrufen, indem Sie eine POST an den `/segment/definitions/bulk-get` Endpunkt anfordern und die `id` Werte der Segmentdefinitionen im Anforderungstext angeben.
 
 **API-Format**
 
@@ -465,7 +465,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 207 mit den angeforderten Segmentdefi
 
 ## Löschen einer bestimmten Segmentdefinition {#delete}
 
-Sie können eine bestimmte Segmentdefinition löschen, indem Sie eine DELETE-Anforderung an den `/segment/definitions` Endpunkt senden und die ID der Segmentdefinition angeben, die Sie im Anforderungspfad löschen möchten.
+Sie können das Löschen einer bestimmten Segmentdefinition anfordern, indem Sie eine DELETE-Anforderung an den `/segment/definitions` Endpunkt senden und die ID der Segmentdefinition angeben, die Sie im Anforderungspfad löschen möchten.
 
 **API-Format**
 
@@ -493,7 +493,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 ohne Meldung zurück.
 
 ## Aktualisieren einer bestimmten Segmentdefinition
 
-Sie können eine bestimmte Segmentdefinition aktualisieren, indem Sie eine PATCH-Anforderung an den `/segment/definitions` Endpunkt senden und die ID der Segmentdefinition angeben, die Sie im Anforderungspfad aktualisieren möchten.
+Sie können eine bestimmte Segmentdefinition aktualisieren, indem Sie eine PATCH an den `/segment/definitions` Endpunkt anfordern und die ID der Segmentdefinition angeben, die Sie im Anforderungspfad aktualisieren möchten.
 
 **API-Format**
 
