@@ -30,7 +30,7 @@ Es gibt einen gestaffelten Ansatz bei den Geldbußen. So kann beispielsweise ein
 
 ## Was sind personenbezogene Daten?
 
-Personenbezogene Daten sind alle Informationen, die eine natürliche Person (das „Datensubjekt“) betreffen und die zur direkten oder indirekten Identifikation dieser Person verwendet werden können. Dabei kann es sich um einen beliebigen Namen, ein Foto, eine E-Mail-Adresse, Bankdaten, Beiträge auf Social-Media-Websites, medizinische Informationen oder eine Computer-IP-Adresse handeln.
+Personenbezogene Daten sind alle Informationen, die eine natürliche Person (das „Datensubjekt“) betreffen und die zur direkten oder indirekten Identifikation dieser Person verwendet werden können. Dabei kann es sich um einen beliebigen Namen, ein Foto, eine E-Mail-Adresse, Bankdaten, Beiträge auf Social-Networking-Websites, medizinische Informationen oder eine Computer-IP-Adresse handeln.
 
 ## Was ist der Unterschied zwischen einem Datenverantwortlichen und einem Datenverarbeiter?
 
