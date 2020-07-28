@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 23%
+ht-degree: 20%
 
 ---
 
 
 # Datennutzungsbezeichnungen – Übersicht
 
-Data Usage Labeling and Enforcement (DULE) ist der Kernmechanismus von Adobe Experience Platform [!DNL Data Governance]. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
 
 Dieses Dokument bietet eine Übersicht über die Datenverwendungsbeschriftungen in [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, lesen Sie sich die Übersicht über die [Datenverwaltung](../home.md) durch, um eine solidere Einführung in das DUL-Framework zu erhalten.
 
@@ -26,7 +26,7 @@ Datennutzungsbeschriftungen, die auf Datensatzebene angewendet werden, werden f�
 
 [!DNL Platform] bietet mehrere standardmäßige &quot;Kern&quot;-Datenverwendungsbezeichnungen, die eine Vielzahl von allgemeinen Einschränkungen für die Datenverwaltung abdecken. Weitere Informationen zu diesen Beschriftungen und den von ihnen dargestellten Nutzungsrichtlinien finden Sie im Handbuch zu den [Gebrauchsbeschriftungen](reference.md)der Kerndaten.
 
-Zusätzlich zu den von Adobe bereitgestellten Beschriftungen können Sie auch eigene benutzerdefinierte Beschriftungen definieren. Anweisungen dazu finden Sie im Benutzerhandbuch [zu den](./user-guide.md)Datenverwendungsbeschriftungen. Anweisungen dazu, wie Sie dies mithilfe von API-Aufrufen durchführen, finden Sie im API-Handbuch [für die](./api.md)Datenverwendung.
+Zusätzlich zu den von der Adobe bereitgestellten Bezeichnungen können Sie auch eigene benutzerdefinierte Bezeichnungen definieren. Anweisungen dazu finden Sie im Benutzerhandbuch [zu den](./user-guide.md)Datenverwendungsbeschriftungen. Anweisungen dazu, wie Sie dies mithilfe von API-Aufrufen durchführen, finden Sie im API-Handbuch [für die](./api.md)Datenverwendung.
 
 ## Beschriftungsvererbung für Audiencen
 
@@ -34,7 +34,7 @@ Alle vom [Adobe Experience Platform Segmentation Service](../../segmentation/hom
 
 Neben der Vererbung von Bezeichnungen auf Datensatzebene übernehmen Segmente standardmäßig alle Bezeichnungen auf Feldebene aus den zugehörigen Datensätzen. Je nachdem, wie Ihre [!DNL Platform]basierte Anwendung Segmente verbraucht, können Sie potenziell angeben, welche Felder verwendet werden, wodurch verhindert wird, dass das Segment Beschriftungen aus ausgeschlossenen Feldern erbt.
 
-Weitere Informationen zur Funktionsweise der automatischen Datendurchsetzung in Echtzeit-CDP finden Sie in der Übersicht [zur](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe Echtzeit-Datenverwaltung.
+Weitere Informationen zur Funktionsweise der automatischen Datendurchsetzung in Echtzeit-CDP finden Sie in der Übersicht zur [Adobe Echtzeit-Datenverwaltung](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
 ### Vererbung von Adobe Audience Manager Data Export Controls
 
