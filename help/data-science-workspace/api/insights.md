@@ -7,18 +7,18 @@ translation-type: tm+mt
 source-git-commit: 7bd6807e620febe134f8c75e67c0f723850e49c1
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
 # Insights
 
-Statistiken enthalten Metriken, mit denen ein Datenwissenschaftler in die Lage versetzt wird, optimale ML-Modelle durch Anzeige relevanter Bewertungsmetriken zu bewerten und auszuwählen.
+Insights bieten Metriken, mit denen Datenwissenschaftler durch Anzeige relevanter Bewertungsmetriken optimale ML-Modelle ermitteln und auswählen können.
 
-## Abrufen einer Liste von Insight
+## Liste mit Insights abrufen
 
-Sie können eine Insight-Liste abrufen, indem Sie eine GET-Anforderung an den Insight-Endpunkt ausführen.  Um die Ergebnisse zu filtern, können Sie die Parameter für die Abfrage im Anforderungspfad angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste mit Insights abrufen, indem Sie eine GET-Anfrage an den Insights-Endpunkt richten.  Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die eine Liste von Erkenntnissen enthält und jeder Einblick einen eindeutigen Bezeichner enthält ( `id` ). Darüber hinaus erhalten Sie `context` die eindeutigen Bezeichner, die nach den Daten zu Insight-Ereignissen und -Metriken mit dieser speziellen Erkenntnis verknüpft sind.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die eine Liste mit Insights enthält, wobei jeder Insight eine eindeutige Kennung (`id`) aufweist. Darüber hinaus erhalten Sie `context` (Kontext), der die eindeutigen Kennungen enthält, die mit diesem bestimmten Insight verknüpft sind, gefolgt von den Insights-Ereignissen und Metrikdaten.
 
 ```json
 {
@@ -101,14 +101,14 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die eine Liste von Erkennt
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID, die dem Insight entspricht. |
+| `id` | Die Kennung, die dem Insight entspricht. |
 | `experimentId` | Eine gültige Experiment-ID. |
-| `experimentRunId` | Eine gültige Experimentausführung-ID. |
-| `modelId` | Eine gültige Modell-ID. |
+| `experimentRunId` | Eine gültige Experimentablauf-ID. |
+| `modelId` | Eine gültige Modellkennung. |
 
-## Abrufen eines bestimmten Insight
+## Bestimmten Insight abrufen
 
-Um einen bestimmten Einblick nachzuschlagen, stellen Sie eine GET-Anforderung und geben Sie eine gültige Angabe `{INSIGHT_ID}` im Anforderungspfad ein. Um die Ergebnisse zu filtern, können Sie die Parameter für die Abfrage im Anforderungspfad angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrage-Parametern für den Asset-Abruf](./appendix.md#query).
+Um einen bestimmten Insight nachzuschlagen, stellen Sie eine GET-Anfrage und geben Sie im Anfragepfad eine gültige `{INSIGHT_ID}` an. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 **API-Format**
 
@@ -118,7 +118,7 @@ GET /insights/{INSIGHT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{INSIGHT_ID}` | Die eindeutige Kennung eines Sensei Insight. |
+| `{INSIGHT_ID}` | Die eindeutige Kennung eines Sensei-Insight. |
 
 **Anfrage**
 
@@ -133,7 +133,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die eindeutige Erkennungskennung (`id`) enthält. Zusätzlich erhalten Sie `context` die eindeutigen Bezeichner, die mit den Insight-Ereignissen und Metrikdaten verknüpft sind.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die eindeutige Kennung (`id`) des Insight umfasst. Darüber hinaus erhalten Sie `context` (Kontext), der die eindeutigen Kennungen enthält, die mit diesem bestimmten Insight verknüpft sind, gefolgt von den Insights-Ereignissen und Metrikdaten.
 
 ```json
 {
@@ -164,14 +164,14 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die eindeutige Erkennu
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID, die dem Insight entspricht. |
+| `id` | Die Kennung, die dem Insight entspricht. |
 | `experimentId` | Eine gültige Experiment-ID. |
-| `experimentRunId` | Eine gültige Experimentausführung-ID. |
-| `modelId` | Eine gültige Modell-ID. |
+| `experimentRunId` | Eine gültige Experimentablauf-ID. |
+| `modelId` | Eine gültige Modellkennung. |
 
-## Hinzufügen eines neuen Model Insight
+## Neuen Modell-Insight hinzufügen
 
-Sie können einen neuen Modellinsight erstellen, indem Sie eine POST-Anforderung und eine Nutzlast ausführen, die Kontext, Ereignis und Metriken für den neuen Modellinsight bereitstellt. Das zum Erstellen eines neuen Modellinsight verwendete Kontextfeld muss nicht mit vorhandenen Diensten verknüpft sein. Sie können jedoch den neuen Modellinsight mit vorhandenen Diensten erstellen, indem Sie eine oder mehrere der entsprechenden IDs bereitstellen:
+Sie können einen neuen Modell-Insight erstellen, indem Sie eine POST-Anfrage und eine Payload ausführen, die Kontext, Ereignisse und Metriken für den neuen Modell-Insight bereitstellt. Das zum Erstellen eines neuen Modell-Insight verwendete Kontextfeld muss nicht mit vorhandenen Diensten verknüpft sein. Sie können den neuen Modell-Insight jedoch mit vorhandenen Diensten erstellen, indem Sie eine oder mehrere der entsprechenden Kennungen angeben:
 
 ```json
 "context": {
@@ -229,7 +229,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die über einen Parameter `{INSIGHT_ID}` und alle Parameter verfügt, die Sie in der ursprünglichen Anforderung angegeben haben.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die über eine `{INSIGHT_ID}` und alle Parameter verfügt, die Sie in der ursprünglichen Anfrage angegeben haben.
 
 ```json
 {
@@ -260,11 +260,11 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die über einen Parameter 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `insightId` | Die eindeutige ID, die für diese spezielle Erkenntnis erstellt wird, wenn eine erfolgreiche POST-Anforderung ausgeführt wird. |
+| `insightId` | Die eindeutige Kennung, die für diesen speziellen Insight erstellt wird, wenn eine erfolgreiche POST-Anfrage ausgeführt wird. |
 
-## Abrufen einer Liste von Standardmetriken für Algorithmen
+## Liste mit Standardmetriken für Algorithmen abrufen
 
-Sie können eine Liste aller Algorithmus- und Standardmetriken abrufen, indem Sie eine GET-Anforderung an den Metrikendpunkt ausführen. Zur Abfrage einer bestimmten Metrik stellen Sie eine GET-Anforderung und geben Sie eine gültige `{ALGORITHM}` im Anforderungspfad an.
+Sie können eine Liste mit allen Ihren Algorithmen und Standardmetriken abrufen, indem Sie eine GET-Anfrage an den Metrikendpunkt richten. Zur Abfrage einer bestimmten Metrik stellen Sie eine GET-Anfrage und geben im Anfragepfad einen gültigen `{ALGORITHM}` an.
 
 **API-Format**
 
@@ -275,11 +275,11 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ALGORITHM}` | Der Bezeichner des Algorithmustyps. |
+| `{ALGORITHM}` | Die Kennung des Algorithmustyps. |
 
 **Anfrage**
 
-Die folgende Anforderung enthält eine Abfrage und ruft mithilfe der Algorithmuskennung eine spezifische Metrik ab `{ALGORITHM}`
+Die folgende Anfrage enthält eine Abfrage und ruft mithilfe der Algorithmuskennung `{ALGORITHM}` eine spezifische Metrik ab.
 
 ```shell
 curl -X GET \
@@ -292,7 +292,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die den `algorithm` eindeutigen Bezeichner und ein Array von Standardmetriken enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die eindeutige Kennung des `algorithm` und eine Gruppe von Standardmetriken enthält.
 
 ```json
 {
