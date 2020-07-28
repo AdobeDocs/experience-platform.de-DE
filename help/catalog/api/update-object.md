@@ -21,7 +21,7 @@ You can update part of a [!DNL Catalog] object by including its ID in the path o
 
 >[!NOTE]
 >
->PATCH-Vorgänge können die erweiterbaren Felder eines Objekts, die miteinander verknüpfte Objekte darstellen, nicht ändern.  Änderungen an verknüpften Objekten müssen direkt vorgenommen werden.
+> PATCH-Vorgänge können die erweiterbaren Felder eines Objekts, die miteinander verknüpfte Objekte darstellen, nicht ändern.  Änderungen an verknüpften Objekten müssen direkt vorgenommen werden.
 
 ## Aktualisieren mithilfe von Feldern
 
