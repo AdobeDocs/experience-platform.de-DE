@@ -58,7 +58,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des überschriebenen Objekts enthält. Diese ID sollte mit der in der PUT-Anforderung gesendeten ID übereinstimmen. Die Ausführung einer GET-Anforderung für dieses Objekt zeigt jetzt, dass seine Details durch die in der Payload der vorherigen PUT-Anforderung angegebenen ersetzt wurden.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des überschriebenen Objekts enthält. Diese ID sollte mit der in der PUT-Anforderung gesendeten ID übereinstimmen. Die Ausführung einer GET-Anforderung für dieses Objekt zeigt jetzt, dass seine Details durch die Angaben in der Payload der vorherigen PUT-Anforderung ersetzt wurden.
 
 ```json
 [
