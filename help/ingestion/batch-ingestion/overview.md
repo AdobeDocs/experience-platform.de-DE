@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform-Batch-Aufnahme – Übersicht
+title: Batch-Erfassung in Adobe Experience Platform – Übersicht
 topic: overview
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
@@ -18,7 +18,7 @@ The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience P
 
 Der [Datenaufnahme-API-Verweis](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) enthält weitere Informationen zu diesen API-Aufrufen.
 
-Das folgende Diagramm zeigt den Vorgang der Batch-Aufnahme.
+Das folgende Diagramm zeigt den Vorgang der Batch-Erfassung.
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
@@ -26,7 +26,7 @@ Das folgende Diagramm zeigt den Vorgang der Batch-Aufnahme.
 
 The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of data that consists of one or more files to be ingested as a single unit) into [!DNL Experience Platform] in three basic steps:
 
-1. Erstellen eines neuen Batchs.
+1. Erstellen eines neuen Batches.
 2. Hochladen von Dateien in einen angegebenen Datensatz, der dem XDM-Schema der Daten entspricht.
 3. Signalisieren des Batch-Endes.
 
@@ -38,7 +38,7 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 - Der Inhalt der Parquet-Datei muss mit einer Untergruppe des Schemas des hochgeladenen Datensatzes übereinstimmen.
 - Lassen Sie sich nach der Authentifizierung Ihr eindeutiges Zugriffstoken anzeigen.
 
-### Best Practices zur Batch-Aufnahme
+### Best Practices zur Batch-Erfassung
 
 - Die empfohlene Batch-Größe liegt zwischen 256 MB und 100 GB.
 - Jeder Batch sollte maximal 1500 Dateien enthalten.
@@ -47,9 +47,9 @@ Um eine Datei hochzuladen, die größer als 512 MB ist, muss die Datei in kleine
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte der zu verwendenden Kopfzeilen
+### Sammeln von Werten für erforderliche Kopfzeilen
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
@@ -65,11 +65,11 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 - Content-Type: application/json
 
-### Erstellen eines Batchs
+### Erstellen eines Batches
 
 Bevor Daten zu einem Datensatz hinzugefügt werden können, müssen sie mit einem Batch verknüpft werden, der später in einen bestimmten Datensatz hochgeladen wird.
 
@@ -119,7 +119,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `id` | Die ID des soeben erstellten Batchs (in nachfolgenden Anfragen verwendet). |
+| `id` | Die ID des soeben erstellten Batches (in nachfolgenden Anfragen verwendet). |
 | `relatedObjects.id` | Die ID des Datensatzes, in den die Dateien hochgeladen werden sollen. |
 
 ## Datei-Upload
@@ -130,7 +130,7 @@ Sie können Dateien mit der **Small File Upload-API** hochladen. Wenn Ihre Datei
 
 >[!NOTE]
 >
->Die folgenden Beispiele verwenden das [Parquet](https://parquet.apache.org/documentation/latest/)-Dateiformat. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch für Batch-Aufnahme](./api-overview.md).
+> Die folgenden Beispiele verwenden das [Parquet](https://parquet.apache.org/documentation/latest/)-Dateiformat. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](./api-overview.md).
 
 ### Hochladen von kleinen Dateien
 
@@ -235,9 +235,9 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 #Status 200 OK, with empty response
 ```
 
-## Signalisieren der Batch-Fertigstellung
+## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem alle Dateien in den Batch hochgeladen wurden, kann die Fertigstellung des Batchs signalisiert werden. By doing this, the [!DNL Catalog] **DataSetFile** entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
+Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. By doing this, the [!DNL Catalog] **DataSetFile** entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **Anfrage**
 
@@ -247,7 +247,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des Batchs, der in den Datensatz hochgeladen werden soll. |
+| `{BATCH_ID}` | Die ID des Batches, der in den Datensatz hochgeladen werden soll. |
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -275,7 +275,7 @@ GET /batch/{BATCH_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{BATCH_ID}` | Die ID des geprüften Batchs. |
+| `{BATCH_ID}` | Die ID des geprüften Batches. |
 
 **Anfrage**
 
@@ -381,21 +381,21 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | Die ID des Benutzers, der den Batch erstellt oder aktualisiert hat. |
 
-Das `"status"`-Feld zeigt den aktuellen Status des angeforderten Batchs an. Die Batches können einen der folgenden Status haben:
+Das `"status"`-Feld zeigt den aktuellen Status des angeforderten Batches an. Die Batches können einen der folgenden Status haben:
 
-## Batch-Aufnahmestatus
+## Batch-Erfassungstatus
 
 | Status | Beschreibung |
 | ------ | ----------- |
-| Abgebrochen | Der Batch wurde nicht im erwarteten Zeitrahmen fertiggestellt. |
-| Unterbrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Wenn sich der Batch im Status **Geladen** befindet, kann er nicht unterbrochen werden. |
+| Vorzeitig beendet | Der Batch wurde nicht im erwarteten Zeitrahmen fertiggestellt. |
+| Abgebrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Sobald sich ein Batch im Status **Geladen** befindet, kann der Batch nicht mehr abgebrochen werden. |
 | Aktiv | Der Batch wurde erfolgreich gefördert und steht für den nachgelagerten Verbrauch zur Verfügung. Dieser Status kann synonym mit **Erfolg** verwendet werden. |
 | Gelöscht | Die Daten für den Batch wurden vollständig entfernt. |
 | Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Batch werden **nicht** angezeigt. Dieser Status kann synonym mit **Fehler** verwendet werden. |
 | Inaktiv | Der Batch wurde erfolgreich gefördert, wurde jedoch zurückgesetzt oder ist abgelaufen. Der Batch ist nicht mehr für den nachgelagerten Verbrauch verfügbar. |
 | Geladen | Die Daten für den Batch sind abgeschlossen und der Stapel kann gefördert werden. |
-| Laden | Daten für diesen Batch werden hochgeladen und der Batch kann derzeit noch **nicht** gefördert werden. |
-| Erneuter Versuch | Die Daten für diesen Batch werden verarbeitet. Aufgrund eines System- oder vorübergehenden Fehlers ist der Batch jedoch fehlgeschlagen. Daher wird für diesen Batch ein erneuter Versuch unternommen. |
+| Wird geladen | Daten für diesen Batch werden hochgeladen und der Batch kann derzeit noch **nicht** gefördert werden. |
+| Wird wiederholt | Die Daten für diesen Batch werden verarbeitet. Aufgrund eines System- oder vorübergehenden Fehlers ist der Batch jedoch fehlgeschlagen. Daher wird für diesen Batch ein erneuter Versuch unternommen. |
 | Staging | Die Staging-Phase des Förderungsprozesses für einen Batch ist abgeschlossen und der Aufnahmeauftrag wurde ausgeführt. |
 | Staging | Die Daten für den Batch werden verarbeitet. |
 | Angehalten | Die Daten für den Batch werden verarbeitet. Die Batch-Förderung wurde jedoch nach einigen weiteren erneuten Versuchen angehalten. |
