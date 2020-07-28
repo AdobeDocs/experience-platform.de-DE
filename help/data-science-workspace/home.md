@@ -7,18 +7,18 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
 
 # Übersicht über den Data Science Workspace
 
-Adobe Experience Platform [!DNL Data Science Workspace] nutzt maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu entfesseln. In die Adobe Experience Platform integriert, [!DNL Data Science Workspace] hilft Ihnen bei der Erstellung von Prognosen mit Ihren Inhalten und Daten-Assets in allen Adobe-Lösungen.
+Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
 
 Datenwissenschaftler aller Qualifikationsstufen finden ausgereifte, einfach zu bedienende Werkzeuge, die die schnelle Entwicklung, Ausbildung und Abstimmung von maschinellen Lernrezepten unterstützen - all die Vorteile der AI-Technologie, ohne die Komplexität.
 
-Mithilfe [!DNL Data Science Workspace]von Daten können Wissenschaftler auf einfache Weise intelligente Services-APIs erstellen - basierend auf maschinellem Lernen. Diese Dienste funktionieren mit anderen Adobe-Diensten, einschließlich Adobe Target und Adobe Analytics Cloud, um Ihnen bei der Automatisierung personalisierter, zielgerichteter digitaler Erlebnisse in Web-, Desktop- und mobilen Apps zu helfen.
+Mithilfe [!DNL Data Science Workspace]von Daten können Wissenschaftler auf einfache Weise intelligente Services-APIs erstellen - basierend auf maschinellem Lernen. Diese Dienste können mit anderen Adoben-Diensten wie Adobe Target und Adobe Analytics Cloud kombiniert werden, um Ihnen bei der Automatisierung personalisierter, zielgerichteter digitaler Erlebnisse in Web-, Desktop- und mobilen Apps zu helfen.
 
 Dieser Leitfaden bietet einen Überblick über die wichtigsten Konzepte in Bezug auf [!DNL Data Science Workspace].
 
@@ -44,18 +44,18 @@ Bevor Sie in die Details zu [!DNL Data Science Workspace]den Themen eintauchen, 
 
 | Begriff | Definition |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] In [!DNL Experience Platform] ermöglicht es Kunden, Modelle für maschinelles Lernen zu erstellen, die Daten aus verschiedenen Bereichen [!DNL Experience Platform] und Adobe-Lösungen verwenden, um intelligente Einblicke und Prognosen zu generieren, um ansprechende digitale Erfahrungen für Endbenutzer zu entwickeln. |
+| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] Innerhalb von [!DNL Experience Platform] ermöglicht es Kunden, maschinelle Lernmodelle zu erstellen, die Daten aus verschiedenen Lösungen [!DNL Experience Platform] und Adoben verwenden, um intelligente Einblicke und Prognosen zu generieren, um ansprechende digitale Erlebnisse für Endbenutzer zu entwickeln. |
 | Künstliche Intelligenz | Künstliche Intelligenz ist eine Theorie und Entwicklung von Computersystemen, die in der Lage sind, Aufgaben auszuführen, die normalerweise menschliche Intelligenz erfordern, wie visuelle Wahrnehmung, Spracherkennung, Entscheidungsfindung und Übersetzung zwischen Sprachen. |
 | Maschinelles Lernen | Maschinelles Lernen ist der Studienbereich, der es Computern ermöglicht, zu lernen, ohne explizit programmiert zu werden. |
-| [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework ist ein einheitliches Framework für maschinelles Lernen in Adobe, das Daten nutzt, [!DNL Experience Platform] um Datenwissenschaftler bei der Entwicklung von intelligenten Diensten mit maschinellem Lernen auf schnellere, skalierbare und wiederverwendbare Weise zu unterstützen. |
-| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) ist der Standardisierungsaufwand, den Adobe zur Definition standardmäßiger Schema wie [!DNL Profile] und [!DNL ExperienceEvent]für Customer Experience Management führt. |
+| [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework ist ein einheitliches maschinelles Lernumfeld für die gesamte Adobe, das Daten nutzt, [!DNL Experience Platform] um Datenwissenschaftler bei der Entwicklung maschinenlerngestützter Intelligenzdienste auf schnellere, skalierbare und wiederverwendbare Weise zu unterstützen. |
+| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) ist der Standardisierungsaufwand, der von der Adobe zur Definition von Standard-Schemas wie [!DNL Profile] und [!DNL ExperienceEvent]für Customer Experience Management führt. |
 | [!DNL JupyterLab] | [!DNL JupyterLab] ist eine Open-Source Web-basierte Schnittstelle für Project Jupyter und ist eng in [!DNL Experience Platform]integriert. |
-| Rezepte | Ein Rezept ist der von Adobe verwendete Begriff für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der ein bestimmtes maschinelles Lernen, einen AI-Algorithmus oder ein Ensemble von Algorithmen, eine Verarbeitungslogik und eine Konfiguration darstellt, die erforderlich sind, um ein geschultes Modell zu erstellen und auszuführen und damit zur Lösung spezifischer Geschäftsprobleme beizutragen. |
-| Modell | Ein Modell ist ein Beispiel für ein maschinelles Lernrezept, das mithilfe von historischen Daten und Konfigurationen für die Lösung eines Geschäftsfalls trainiert wird. |
-| Schulung | Schulung ist der Prozess des Lernens von Mustern und Erkenntnissen aus gekennzeichneten Daten. |
-| Auszubildendes Modell | Ein trainiertes Modell stellt die ausführbare Ausgabe eines Modellschulungsprozesses dar, bei dem eine Reihe von Schulungsdaten auf die Modellinstanz angewendet wurde. Ein ausgebildetes Modell behält einen Verweis auf jeden intelligenten Webdienst bei, der daraus erstellt wird. Das geschulte Modell eignet sich für die Bewertung und Erstellung eines intelligenten Webdiensts. Änderungen an einem geschulten Modell können als neue Version nachverfolgt werden. |
-| Bewertung | Die Auswertung ist der Prozess, bei dem mithilfe eines geschulten Modells Erkenntnisse aus Daten generiert werden. |
-| Service | Ein bereitgestellter Dienst stellt Funktionen einer künstlichen Intelligenz, eines maschinellen Lernmodells oder eines erweiterten Algorithmus über eine API zur Verfügung, sodass sie von anderen Diensten oder Anwendungen genutzt werden können, um intelligente Apps zu erstellen. |
+| Rezepte | Ein Rezept ist der Begriff der Adobe für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der ein bestimmtes maschinelles Lernen, einen AI-Algorithmus oder ein Ensemble von Algorithmen, Verarbeitungslogik und Konfiguration darstellt, die zum Aufbau und Ausführen eines geschulten Modells erforderlich sind und somit zur Lösung spezifischer Geschäftsprobleme beitragen. |
+| Modell | Ein Modell ist eine Instanz eines Rezepts für maschinelles Lernen, das mithilfe von historischen Daten und Konfigurationen dazu trainiert wird, eine geschäftliche Fragestellung zu lösen. |
+| Training | Ein Training besteht aus dem Erlernen von Mustern und Insights auf Grundlage gekennzeichneter Daten. |
+| Schulungsmodell | Ein trainiertes Modell stellt die ausführbare Ausgabe eines Modellschulungsprozesses dar, bei dem eine Reihe von Schulungsdaten auf die Modellinstanz angewendet wurde. Ein ausgebildetes Modell behält einen Verweis auf jeden intelligenten Webdienst bei, der daraus erstellt wird. Das geschulte Modell eignet sich für die Bewertung und Erstellung eines intelligenten Webdiensts. Änderungen an einem geschulten Modell können als neue Version nachverfolgt werden. |
+| Scoring | Beim Scoring werden mithilfe eines trainierten Modells Insights aus Daten generiert. |
+| Dienst | Ein bereitgestellter Dienst stellt Funktionen einer künstlichen Intelligenz, eines maschinellen Lernmodells oder eines erweiterten Algorithmus über eine API zur Verfügung, sodass sie von anderen Diensten oder Anwendungen genutzt werden können, um intelligente Apps zu erstellen. |
 
 Das folgende Diagramm zeigt die hierarchische Beziehung zwischen Rezepten, Modellen, Schulungsübungen und Bewertungsläufen.
 
@@ -63,7 +63,7 @@ Das folgende Diagramm zeigt die hierarchische Beziehung zwischen Rezepten, Model
 
 ## Erläuterungen [!DNL Data Science Workspace]
 
-Mit [!DNL Data Science Workspace]diesen Daten können Ihre Wissenschaftler den umständlichen Prozess der Ermittlung von Erkenntnissen in großen Datensätzen optimieren. Basierend auf einem gemeinsamen Framework für maschinelles Lernen und Laufzeitumgebung [!DNL Data Science Workspace] bietet es ein erweitertes Workflow-Management, eine Modellverwaltung und Skalierbarkeit. Intelligente Dienste unterstützen die Wiederverwendung von Rezepten für maschinelles Lernen, um eine Vielzahl von Anwendungen zu entwickeln, die mit Adobe-Produkten und -Lösungen erstellt wurden.
+Mit [!DNL Data Science Workspace]diesen Daten können Ihre Wissenschaftler den umständlichen Prozess der Ermittlung von Erkenntnissen in großen Datensätzen optimieren. Basierend auf einem gemeinsamen Framework für maschinelles Lernen und Laufzeitumgebung [!DNL Data Science Workspace] bietet es ein erweitertes Workflow-Management, eine Modellverwaltung und Skalierbarkeit. Intelligente Dienste unterstützen die Wiederverwendung von maschinellen Lernrezepten, um eine Vielzahl von Anwendungen zu ermöglichen, die mithilfe von Adobe-Produkten und -Lösungen erstellt wurden.
 
 ### Datenzugriff aus einer Hand
 
@@ -107,7 +107,7 @@ Data Science Workspace bietet eine enorme Flexibilität beim Experimentieren. Be
 
 ### Operationalisierung
 
-Wenn Sie mit Ihrem Rezept zufrieden sind, ist es nur ein paar Klicks, einen intelligenten Dienst zu schaffen. Keine Programmierung erforderlich - Sie können es selbst machen, ohne einen Entwickler oder Ingenieur zu benennen. Veröffentlichen Sie den intelligenten Dienst schließlich bei Adobe IO, damit Ihr Digital Experience Team ihn nutzen kann.
+Wenn Sie mit Ihrem Rezept zufrieden sind, ist es nur ein paar Klicks, einen intelligenten Dienst zu schaffen. Keine Programmierung erforderlich - Sie können es selbst machen, ohne einen Entwickler oder Ingenieur zu benennen. Veröffentlichen Sie den intelligenten Dienst schließlich auf Adobe IO und es ist für Ihr digitales Erlebnis-Team nutzbar.
 
 <!--You can also publish your intelligent service to the Service Gallery, where it's available to specific people, specific organizations, or everyone who develops data solutions on Adobe Experience Platform. You can even share it with your external partners, and they can share their intelligent service with you. And the next time you're starting a new recipe, you can check the Service Gallery to see if there's a similar intelligent service you can use to get started. -->
 
@@ -117,11 +117,11 @@ Wenn Sie mit Ihrem Rezept zufrieden sind, ist es nur ein paar Klicks, einen inte
 
 ### Zugriff auf neue Funktionen und Datensätze
 
-Datenwissenschaftler können neue Technologien und Datensätze nutzen, sobald sie über Adobe-Dienste verfügbar sind. Durch häufige Aktualisierungen machen wir die Arbeit, Datasets und Technologien in die Plattform zu integrieren, sodass Sie nicht müssen.
+Datenwissenschaftler können neue Technologien und Datensätze nutzen, sobald sie über Adoben verfügbar sind. Durch häufige Aktualisierungen machen wir die Arbeit, Datasets und Technologien in die Plattform zu integrieren, sodass Sie nicht müssen.
 
 ### Zugriffskontrolle in [!DNL Data Science Workspace]
 
-Access control for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). Diese Funktion nutzt Profil in der Admin Console, die Benutzer mit Berechtigungen und Sandboxen verknüpfen. See the [access control overview](../access-control/home.md) for more information.
+Access control for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugriffskontrolle – Übersicht](../access-control/home.md).
 
 >[!IMPORTANT]
 >
@@ -135,14 +135,14 @@ Die folgende Tabelle zeigt die Auswirkungen, die eine Aktivierung oder Deaktivie
 
 ### Sicherheit und Seelenfrieden
 
-Die Sicherung Ihrer Daten ist eine der obersten Prioritäten von Adobe. Adobe schützt Ihre Daten durch Sicherheitsprozesse und Steuerelemente, die entwickelt wurden, um branchenübliche Standards, Vorschriften und Zertifizierungen einzuhalten.
+Die Sicherung Ihrer Daten ist eine der obersten Prioritäten für die Adobe. Adobe schützt Ihre Daten mit Sicherheitsvorgängen und -kontrollen, die zur Einhaltung branchenüblicher Normen, Vorschriften und Zertifizierungen entwickelt wurden.
 
-Sicherheit ist Teil des sicheren Produktlebenszyklus von Adobe und ist in Software und Services integriert.
-Weitere Informationen zu Adobe-Daten und -Software-Sicherheit, -Compliance und mehr finden Sie auf der Seite &quot;Sicherheit&quot;unter https://www.adobe.com/security.html.
+Security ist Teil der Adobe Secure Product Lifecycle in Software und Services integriert.
+Weitere Informationen zu Adoben- und Softwaresicherheit, Compliance und mehr finden Sie auf der Seite &quot;Sicherheit&quot;unter https://www.adobe.com/security.html.
 
 ### Sandbox-Unterstützung
 
-Sandboxes sind virtuelle Partitionen innerhalb einer einzigen Instanz von [!DNL Experience Platform]. Jede [!DNL Platform] Instanz unterstützt eine Produktions-Sandbox und mehrere Nicht-Produktions-Sandboxen, wobei jede einzelne eine eigene Bibliothek mit [!DNL Platform] Ressourcen unterhält. Mit Sandboxen ohne Produktionsumfang können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktionssandbox zu beeinträchtigen. Weitere Informationen zu Sandboxes finden Sie in der Übersicht über [Sandboxes](../sandboxes/home.md).
+Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von [!DNL Experience Platform]. Jede [!DNL Platform] Instanz unterstützt eine Produktions-Sandbox und mehrere Nicht-Produktions-Sandboxen, wobei jede einzelne eine eigene Bibliothek mit [!DNL Platform] Ressourcen unterhält. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md).
 
 Zurzeit [!DNL Data Science Workspace] gelten einige Sandbox-Beschränkungen:
 
@@ -207,9 +207,9 @@ Ein veröffentlichter intelligenter Dienst ist konfigurierbar, um sich von Zeit 
 
 [!DNL Data Science Workspace] hilft bei der Straffung und Vereinfachung des Arbeitsablaufs in der Datenwissenschaft, von der Datenerfassung über Algorithmen bis hin zu intelligenten Diensten, für Datenwissenschaftler aller Qualifikationsstufen. Mit den ausgereiften Tools [!DNL Data Science Workspace] können Sie die Zeit von Daten bis zu Erkenntnissen erheblich verkürzen.
 
-Wichtiger ist, dass [!DNL Data Science Workspace] die Datenwissenschaften und die algorithmischen Optimierungsfunktionen der führenden Marketing-Plattform von Adobe in die Hände von Unternehmensdatenwissenschaftlern gelegt werden. Zum ersten Mal können Unternehmen proprietäre Algorithmen auf die Plattform übertragen, indem sie die leistungsstarken Funktionen von Adobe für maschinelles Lernen und KI nutzen, um hochgradig personalisierte Kundenerlebnisse in großem Maßstab bereitzustellen.
+Wichtiger noch ist, dass [!DNL Data Science Workspace] die Datenwissenschaft und die algorithmische Optimierung der führenden Marketingplattform der Adobe in die Hände von Unternehmensdatenwissenschaftlern gelegt werden. Zum ersten Mal können Unternehmen proprietäre Algorithmen auf die Plattform übertragen, indem sie die leistungsstarken maschinellen Lernfunktionen und KI-Funktionen der Adobe nutzen, um hochpersonalisierte Kundenerlebnisse in großem Maßstab zu bieten.
 
-Durch die Verbindung von Markenkompetenz mit dem maschinellen Lernen und der KI-Kompetenz von Adobe haben Unternehmen die Möglichkeit, mehr Geschäftswert und Markentreue zu fördern, indem sie Kunden das geben, was sie möchten, bevor sie danach fragen.
+Durch die Verbindung von Markenwissen und maschinellem Lernen und KI-Fähigkeiten der Adobe können Unternehmen den Geschäftswert und die Markentreue steigern, indem sie ihren Kunden das geben, was sie wollen, bevor sie danach fragen.
 
 Weitere Informationen, z. B. einen kompletten täglichen Arbeitsablauf, finden Sie in der [Data Science Workspace-Dokumentation](./walkthrough.md) .
 
