@@ -28,14 +28,14 @@ Sie können eine Liste aller Segmentaufträge für Ihre IMS-Organisation abrufen
 
 **API-Format**
 
-Der `/segment/jobs` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Exportaufträge abgerufen. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`).
+Der `/segment/jobs` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Exportaufträge abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-**Abfrage**
+**Abfrageparameter**
 
 | Parameter | Beschreibung | Beispiel |
 | --------- | ----------- | ------- |
@@ -164,7 +164,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentau
 
 ## Neuen Segmentauftrag erstellen {#create}
 
-Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anforderung an den `/segment/jobs` Endpunkt senden und die ID der Segmentdefinition einschließen, aus der Sie eine neue Audience erstellen möchten.
+Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST an den `/segment/jobs` Endpunkt anfordern und die ID der Segmentdefinition einschließen, aus der Sie eine neue Audience erstellen möchten.
 
 **API-Format**
 
@@ -355,7 +355,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum
 
 ## Massenabruf von Segmentaufträgen {#bulk-get}
 
-Sie können detaillierte Informationen zu mehreren Segmentaufträgen abrufen, indem Sie eine POST-Anforderung an den `/segment/jobs/bulk-get` Endpunkt senden und die `id` Werte der Segmentaufträge im Anforderungstext angeben.
+Sie können detaillierte Informationen zu mehreren Segmentaufträgen abrufen, indem Sie eine POST an den `/segment/jobs/bulk-get` Endpunkt anfordern und die `id` Werte der Segmentaufträge im Anforderungstext angeben.
 
 **API-Format**
 
