@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Verfügbare Namensraum zur Liste
+title: Verfügbare Namensräume auflisten
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '68'
-ht-degree: 5%
+ht-degree: 63%
 
 ---
 
 
-# Verfügbare Namensraum zur Liste
+# Verfügbare Namensräume auflisten
 
 **API-Format**
 
@@ -33,11 +33,11 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namensraum mit dem Wert &quot;[!UICONTROL custom]&quot;[!UICONTROL false]sind Standard-Namensraum, während solche mit dem Wert &quot;[!UICONTROL custom]&quot;von &quot;[!UICONTROL true]&quot;Namensraum sind, die von Ihrem Unternehmen erstellt wurden.
+Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namespaces with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL false]&quot; are standard namespaces, while those with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL true]&quot; are namespaces that your organization has created.
 
 >[!NOTE]
 >
->Diese Antwort wurde für den Weltraum abgeschnitten.
+>Diese Antwort wurde aus Platzgründen abgeschnitten.
 
 ```json
 [
@@ -79,4 +79,4 @@ Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbar
 
 ## Nächste Schritte
 
-Fahren Sie mit der nächsten Übung fort, um einen benutzerdefinierten Namensraum zu [erstellen](./create-custom-namespace.md)
+Fahren Sie mit dem nächsten Tutorial fort, um einen [benutzerdefinierten Namensraum zu erstellen](./create-custom-namespace.md).
