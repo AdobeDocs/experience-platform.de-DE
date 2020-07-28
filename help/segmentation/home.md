@@ -126,7 +126,7 @@ Infolge der unterschiedlichen Segmentkombinationen, die beim Skalieren unvermeid
 
 Indem Sie dem Attribut &quot;Kaufstatus&quot;eine Variable zuweisen, wird Ihr dynamisches Segment vereinfacht, um &quot;einen Kauf zu finden, bei dem der Status dieses Kaufs nicht dem Herkunftsstatus des Kunden entspricht&quot;. Auf diese Weise können Sie dann 50 statische Segmente zu einem einzigen dynamischen Segment zusammenfassen.
 
-## Segmentierung mehrerer Entitäten {#multi-entity}
+## Segmentierung mit mehreren Entitäten {#multi-entity}
 
 Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie Segmente mit mehreren XDM-Klassen erstellen und damit Erweiterungen zu persönlichen Schemas hinzufügen. Dadurch [!DNL Segmentation Service] können Sie während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie nativ im Profil-Datenspeicher.
 
@@ -203,7 +203,7 @@ Eine weitere traditionelle Herausforderung für Marketingexperten ist die Erstel
 - Zeichenfolge
 - Einheitliche Ressourcenkennung
 - Enum
-- Zahl
+- Nummer
 - Lang
 - Ganzzahl
 - Kurz
