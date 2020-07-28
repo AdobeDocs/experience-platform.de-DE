@@ -146,7 +146,7 @@ Dieser Fehler tritt auf, wenn die in einer Anforderung `destinationId` angegeben
 }
 ```
 
-Dieser Fehler tritt auf, wenn eine POST- oder PUT-Anforderung mit einem ungültigen Content-Type-Header gesendet wird. Überprüfen Sie bei der Dublette, ob Sie einen gültigen Content-Type-Wert für den von Ihnen verwendeten Endpunkt angeben.
+Dieser Fehler tritt auf, wenn eine POST oder eine PUT-Anforderung mit einem ungültigen Content-Type-Header gesendet wird. Überprüfen Sie bei der Dublette, ob Sie einen gültigen Content-Type-Wert für den von Ihnen verwendeten Endpunkt angeben.
 
 Die meisten Profil-Endpunkte akzeptieren &quot;application/json&quot;für ihren Content-Type-Header, mit folgenden Ausnahmen:
 
