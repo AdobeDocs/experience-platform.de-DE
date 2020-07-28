@@ -1,8 +1,8 @@
 ---
 title: Zielkatalog
 seo-title: Zielkatalog
-description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adobe-Lösungen, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen und mehr.
-seo-description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adobe-Lösungen, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen und mehr.
+description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adoben, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen und mehr.
+seo-description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adoben, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen und mehr.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 63%
 
 # [!DNL Destinations Catalog]
 
-The **[!DNL Destinations Catalog]** provides a list of available destination platforms that are ready to receive data. Zu diesen Zielplattformen zählen Adobe-Lösungen, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen, Erweiterungen von Experience Platformen und mehr.
+The **[!DNL Destinations Catalog]** provides a list of available destination platforms that are ready to receive data. Zu diesen Zielplattformen zählen Adoben, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen, Erweiterungen von Experience Platformen und mehr.
 
 Durchsuchen Sie den Katalog, um zu ermitteln, welche Zielplattformen für Ihre Werbe- und Personalisierungsfälle am besten geeignet sind, und richten Sie dann Flüsse ein, um Ihre Segmente für Ziele zu aktivieren.
 
