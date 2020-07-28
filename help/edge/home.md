@@ -33,14 +33,14 @@ Dies ist nicht nur ein Wrapper um vorhandene Bibliotheken. Es ist eine vollstän
 
 Neben einer neuen Bibliothek gibt es einen neuen Endpunkt, der die HTTP-Abfragen an Adobe-Lösungen optimiert. Zuvor sendete Visitor.js einen Sperraufruf an den Besucher-ID-Dienst und dann einen Aufruf an Adobe Target, dann sandte DIL.js einen Aufruf an Adobe Audience Manager und schließlich schickte AppMeasurement.js einen Aufruf an Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to the Adobe Experience Platform in a single call.
 
-Das folgende Video zeigt die Adobe Experience Platform [!DNL Web SDK] und die [!DNL Edge Network] Aktion. Im Videobeispiel wird ein einzelner Aufruf an Adobe verwendet, der Daten an [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]und [!DNL Target]sendet.
+Das folgende Video zeigt die Adobe Experience Platform [!DNL Web SDK] und die [!DNL Edge Network] Aktion. Das Videobeispiel verwendet einen einzigen Aufruf an die Adobe, der Daten an [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]und [!DNL Target]sendet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
 
 ## Erste Schritte
 
-Wir empfehlen Ihnen dringend, sich unsere Anleitung [zu den ersten Schritten mit Adobe Launch](getting-started/quick-start-with-launch.md) anzuschauen.
+Wir empfehlen Ihnen dringend, [sich in unserer Anleitung](getting-started/quick-start-with-launch.md) für die ersten Schritte mit Adobe Launch einen kurzen Überblick zu verschaffen.
 
 Dieses Produkt entwickelt sich ständig und wächst, um immer mehr Anwendungsfälle zu unterstützen. Um auf dem neuesten Stand zu sein, schauen Sie sich unser [unterstütztes Gebrauchsanweisung](https://github.com/adobe/alloy/projects/5)an. Wir halten dies auf dem neuesten Stand mit den derzeit unterstützten Anwendungsfällen und den Fällen, an denen wir arbeiten, damit Sie die bestmöglichen Entscheidungen treffen können.
 
