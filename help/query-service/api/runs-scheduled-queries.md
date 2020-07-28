@@ -16,7 +16,7 @@ ht-degree: 94%
 
 ## Beispiel-API-Aufrufe
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Musteranfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Liste aller ausgeführten Vorgänge für eine bestimmte geplante Abfrage abrufen
 
@@ -32,18 +32,18 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `{SCHEDULE_ID}` | Der `id`-Wert der geplanten Abfrage, die Sie abrufen möchten. |
-| `{QUERY_PARAMETERS}` | (*Optional*) Dem Anfragepfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, getrennt durch das kaufmännische Und-Zeichen (`&`). Die verfügbaren Parameter sind unten aufgeführt. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Dem Anfragepfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden. Die verfügbaren Parameter sind unten aufgeführt. |
 
-**Abfrage**
+**Abfrageparameter**
 
 Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter für die Auflistung der Ausführungen einer angegebenen geplanten Abfrage. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für die angegebene geplante Abfrage verfügbaren Ausführungen abgerufen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Unterstützte Felder sind `created` und `updated`. `orderby=created` beispielsweise wird Ergebnisse in aufsteigender Reihenfolge sortieren. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente in absteigender Reihenfolge sortiert. |
-| `limit` | Gibt die Seitengrößenbeschränkung an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste ab der dritten aufgeführten Abfrage zurück. (*Standardwert: 0*) |
-| `property` | Filtern Sie Ergebnisse anhand von Feldern. Die Filter **müssen** HTML-Escape-Zeichen aufweisen. Kommas dienen dazu, um mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `state` und `externalTrigger`. Die Liste der unterstützten Operatoren umfasst `>` (größer als), `<` (kleiner als), `==` (gleich) und `!=` (ungleich). Beispielsweise gibt `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` alle manuell erstellten, erfolgreichen und nach dem 20. April 2019 erstellten Ausführungen zurück. |
+| `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
+| `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
+| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
+| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `state` und `externalTrigger`. Die Liste der unterstützten Operatoren umfasst `>` (größer als), `<` (kleiner als), `==` (gleich) und `!=` (ungleich). Beispielsweise gibt `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` alle manuell erstellten, erfolgreichen und nach dem 20. April 2019 erstellten Ausführungen zurück. |
 
 **Anfrage**
 
