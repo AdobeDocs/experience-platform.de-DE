@@ -40,7 +40,7 @@ Um auf Ihr [!DNL Data Explorer] Konto zugreifen zu können, müssen Sie die folg
 | `database` | Der Name der [!DNL Data Explorer] Datenbank. |
 | `tenant` | Die eindeutige Mandant-ID, mit der eine Verbindung zur [!DNL Data Explorer] Datenbank hergestellt wird. |
 | `servicePrincipalId` | Die Prinzipal-ID des Unique Service, mit der eine Verbindung zur Data Explorer-Datenbank hergestellt wird. |
-| `servicePrincipalKey` | Der Hauptschlüssel des eindeutigen Dienstes, mit dem eine Verbindung zur Data Explorer-Datenbank hergestellt wird. |
+| `servicePrincipalKey` | Der Hauptschlüssel für den eindeutigen Dienst, mit dem eine Verbindung zur Data Explorer-Datenbank hergestellt wird. |
 
 Weitere Informationen zum Einstieg finden Sie in [diesem Data Explorer-Dokument](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 
@@ -52,11 +52,11 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an u
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option **[!UICONTROL Azurblauer Data Explorer]** und klicken Sie **auf das Pluszeichen (+)** , um einen neuen Data Explorer-Connector zu erstellen.
+Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option &quot; **[!UICONTROL Azurblauer Data Explorer]** &quot;und klicken Sie **auf das Pluszeichen (+)** , um einen neuen Data Explorer-Connector zu erstellen.
 
 ![Katalog](../../../../images/tutorials/create/data-explorer/catalog.png)
 
-Die Seite &quot; *[!UICONTROL Verbindung mit Azurblauer Data Explorer]* herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die Seite &quot; *[!UICONTROL Verbindung mit einem Azurblauen Data Explorer]* &quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
