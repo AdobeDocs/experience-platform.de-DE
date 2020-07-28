@@ -26,7 +26,7 @@ Working with segment definitions requires an understanding of the various [!DNL 
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
 Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen verstehen:
-- **Segmentdefinition**: Der Regelsatz, der zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Ziel-Audience verwendet wird.
+- **Segmentdefinition**: Der Regelsatz, der zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Zielgruppe verwendet wird.
 - **Audience**: Der resultierende Satz von Profilen, die den Kriterien einer Segmentdefinition entsprechen.
 
 ## Auf Segmentdefinitionen zugreifen
@@ -51,7 +51,7 @@ Durch Klicken auf **[!UICONTROL Segment erstellen]** in der oberen rechten Ecke 
 
 Die grundlegenden Bausteine von Segmentdefinitionen sind **[!UICONTROL Attribute]** und **[!UICONTROL Ereignisse]**. Darüber hinaus können die in bestehenden **[!UICONTROL Audiences]** enthaltenen Attribute und Ereignisse auch als Komponenten für neue Definitionen verwendet werden.
 
-Sie können diese Bausteine im Abschnitt *[!UICONTROL Felder]* links im Arbeitsbereich von sehen. [!DNL Segment Builder] *[!UICONTROL Felder]* enthält einen Tab für jeden der Hauptbausteine: **[!UICONTROL Attribute]**, **[!UICONTROL Ereignisse]** und **[!UICONTROL Audiences]**.
+Sie können diese Bausteine im Abschnitt *[!UICONTROL Felder]* links im Arbeitsbereich von sehen.[!DNL Segment Builder] *[!UICONTROL Felder]* enthält einen Tab für jeden der Hauptbausteine: **[!UICONTROL Attribute]**, **[!UICONTROL Ereignisse]** und **[!UICONTROL Audiences]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -85,9 +85,9 @@ Standardmäßig werden nur ausgefüllte Schemafelder aus Ihrem Datenspeicher ang
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
 
-On the [!UICONTROL Audiences] tab, you can see all of the available sources as a group of folders. Wenn Sie in diese Ordner klicken, werden verfügbare Unterordner und Audiences angezeigt. Außerdem können Sie auf das Ordnersymbol klicken (wie im Bild ganz rechts), um die Ordnerstruktur anzuzeigen (ein Häkchen gibt den Ordner an, in dem Sie sich befinden), und durch einfaches Klicken auf den Namen eines Ordners im Baum durch die Ordnerstruktur zurück navigieren.
+On the [!UICONTROL Audiences] tab, you can see all of the available sources as a group of folders. Wenn Sie in diese Ordner klicken, werden verfügbare Unterordner und Zielgruppen angezeigt. Außerdem können Sie auf das Ordnersymbol klicken (wie im Bild ganz rechts), um die Ordnerstruktur anzuzeigen (ein Häkchen gibt den Ordner an, in dem Sie sich befinden), und durch einfaches Klicken auf den Namen eines Ordners im Baum durch die Ordnerstruktur zurück navigieren.
 
-Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Audience fahren, können Sie Informationen zur Audience anzeigen, einschließlich Kennung, Beschreibung und Ordnerhierarchie zum Auffinden der Audience.
+Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können Sie Informationen zur Zielgruppe anzeigen, einschließlich Kennung, Beschreibung und Ordnerhierarchie zum Auffinden der Zielgruppe.
 
 ![](../images/segment-builder/audience-folder-structure.png)
 
@@ -95,21 +95,21 @@ You can also search for [!UICONTROL Audiences] using the search bar, which utili
 
 ## Arbeitsfläche des Regel-Builders {#rule-builder-canvas}
 
-Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der Hauptmerkmale oder Verhaltensweisen einer Ziel-Audience dienen. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!DNL Segment Builder].
+Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der Hauptmerkmale oder Verhaltensweisen einer Zielgruppe dienen. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!DNL Segment Builder].
 
 Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus dem Tab *[!UICONTROL Felder]* und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab. Anschließend werden Ihnen je nach Art der hinzugefügten Daten kontextspezifische Optionen angezeigt. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences].
 
 ![](../images/segment-builder/rule-builder-canvas.png)
 
-### Hinzufügen von Audiences
+### Hinzufügen von Zielgruppen
 
-Sie können eine Audience per Drag-and-Drop vom Tab *[!UICONTROL Audience]* auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Audience-Zugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie Audience-Zugehörigkeit als Attribut in der neuen Segmentregel ein- oder ausschließen.
+Sie können eine Zielgruppe per Drag-and-Drop vom Tab *[!UICONTROL Zielgruppe]* auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Zielgruppenzugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie Zielgruppenzugehörigkeit als Attribut in der neuen Segmentregel ein- oder ausschließen.
 
 For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition verändert werden kann. Vergewissern Sie sich, dass Sie alle Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in Regellogik konvertieren.
 
 >[!NOTE]
 >
->Beim Hinzufügen einer Audience aus einer externen Quelle wird nur auf die Audience-Zugehörigkeit verwiesen. Sie können die Audience nicht in Regeln konvertieren. Daher können die zum Erstellen der ursprünglichen Audience verwendeten Regeln in der neuen Segmentdefinition auch nicht geändert werden.
+> Beim Hinzufügen einer Zielgruppe aus einer externen Quelle wird nur auf die Zielgruppenzugehörigkeit verwiesen. Sie können die Zielgruppe nicht in Regeln konvertieren. Daher können die zum Erstellen der ursprünglichen Zielgruppe verwendeten Regeln in der neuen Segmentdefinition auch nicht geändert werden.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -159,23 +159,23 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, kl
 
 ## Segmenteigenschaften
 
-Beim Erstellen einer Segmentdefinition zeigt der Abschnitt *[!UICONTROL Segmenteigenschaften]* auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Audience erstellen.
+Beim Erstellen einer Segmentdefinition zeigt der Abschnitt *[!UICONTROL Segmenteigenschaften]* auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
 Im Abschnitt *[!UICONTROL Segmenteigenschaften]* können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich *[!UICONTROL Name]* und *[!UICONTROL Beschreibung]*. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmenten zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
 
-Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Audience anzeigen.
+Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Zielgruppe anzeigen.
 
 ![](../images/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->Audience-Schätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet; bei mehr als 20 Millionen Entitäten werden 5 % der Gesamtentitäten genutzt. Weiterführende Informationen zum Generieren von Segmentschätzungen finden Sie in der Anleitung zur Segmenterstellung im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
+> Audience-Schätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet; bei mehr als 20 Millionen Entitäten werden 5 % der Gesamtentitäten genutzt. Weiterführende Informationen zum Generieren von Segmentschätzungen finden Sie in der Anleitung zur Segmenterstellung im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
 
 ## Geplante Segmentierung aktivieren {#enable-scheduled-segmentation}
 
 Nachdem Sie Segmentdefinitionen erstellt haben, können Sie diese durch eine On-Demand- oder geplante (kontinuierliche) Auswertung auswerten. Evaluation means moving [!DNL Real-time Customer Profile] data through segment definitions in order to produce corresponding audiences. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs.
 
-Bei der On-Demand-Auswertung wird die API zur Durchführung von Auswertungen und zum Aufbau von Audiences nach Bedarf verwendet. Bei der geplanten Auswertung (auch „geplante Segmentierung“ genannt) können Sie hingegen einen Zeitplan erstellen, um die Segmentdefinitionen zu einem bestimmten Zeitpunkt (maximal einmal täglich) auszuwerten.
+Bei der On-Demand-Auswertung wird die API zur Durchführung von Auswertungen und zum Aufbau von Zielgruppen nach Bedarf verwendet. Bei der geplanten Auswertung (auch „geplante Segmentierung“ genannt) können Sie hingegen einen Zeitplan erstellen, um die Segmentdefinitionen zu einem bestimmten Zeitpunkt (maximal einmal täglich) auszuwerten.
 
 Die Aktivierung Ihrer Segmentdefinitionen für eine geplante Auswertung kann über die Benutzeroberfläche oder die API erfolgen. Kehren Sie in der Benutzeroberfläche zum Tab *[!UICONTROL Durchsuchen]* in **[!UICONTROL Segmente]** zurück und schalten Sie **[!UICONTROL Alle Segmente auswerten]** ein. Dadurch werden alle Segmente anhand des von Ihrer Organisation festgelegten Zeitplans evaluiert.
 
@@ -209,7 +209,7 @@ Im folgenden Abschnitt werden Segmentdefinitionsbeispiele Liste, die für die St
 | ---------- | ------- | 
 | Eingehender Treffer innerhalb eines relativen Zeitfensters | Wenn sich die Segmentdefinition auf ein eingehendes Ereignis bezieht, das **nicht** innerhalb der **letzten sieben Tage** liegt. Zum Beispiel innerhalb der **letzten zwei Wochen**. | ![](../images/segment-builder/relative-hit-failure.png) |
 | Eingehender Treffer, der sich auf ein Profil in einem relativen Fenster bezieht | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein eingehendes Ereignis **nicht** innerhalb der **letzten sieben Tage**.</li><li>Eine Segmentdefinition, die [!DNL Adobe Audience Manager (AAM)] Segmente oder Eigenschaften enthält.</li></ul> | ![](../images/segment-builder/profile-relative-failure.png) |
-| Mehrere Ereignis, die auf ein Profil verweisen | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein Ereignis, das **nicht** innerhalb **der letzten 24 Stunden** auftritt.</li><li>Eine Segmentdefinition, die Segmente oder Eigenschaften des Adobe Audience Managers (AAM) enthält.</li></ul> | ![](../images/segment-builder/event-history-failure.png) |
+| Mehrere Ereignis, die auf ein Profil verweisen | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein Ereignis, das **nicht** innerhalb **der letzten 24 Stunden** auftritt.</li><li>Eine Segmentdefinition, die Segmente oder Eigenschaften von Adobe Audience Manager (AAM) enthält.</li></ul> | ![](../images/segment-builder/event-history-failure.png) |
 | Abfragen mit mehreren Entitäten | Abfragen mit mehreren Entitäten werden durch Streaming-Segmentierung insgesamt **nicht** unterstützt. |  |
 
 Darüber hinaus gelten einige Richtlinien für die Streaming-Segmentierung:
@@ -253,9 +253,9 @@ Once you are done creating your segment, the segment will be analyzed by [!DNL D
 
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. Nach dem Lesen dieses Handbuchs sollten Sie jetzt Folgendes können:
 
-- Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Audiences als Bausteinen erstellen.
+- Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Zielgruppen als Bausteinen erstellen.
 - Die Arbeitsfläche des Regel-Builders und Container verwenden, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
-- Schätzungen der voraussichtlichen Audience anzeigen, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
+- Schätzungen der voraussichtlichen Zielgruppe anzeigen, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
 - Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
 - Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
 
