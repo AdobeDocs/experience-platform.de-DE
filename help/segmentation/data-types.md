@@ -16,11 +16,11 @@ ht-degree: 5%
 
 Alle XDM-Datentypen werden in [!DNL Segmentation Service]unterstützt. Die Regeln, die eine Segmentdefinition bilden, werden durch die folgenden Datentypen kontextualisiert.
 
-## Zeichenfolgendaten
+## String data
 
-Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht-numerische Beschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuhandstufe&quot;für Programme.
+Segment definitions use string data to define non-numerical constraints for segment audiences, such as &quot;country name&quot; or &quot;loyalty program level&quot;.
 
-Stringdaten werden in Segmentdefinitionen mit logischen, einschließlich-/ausschließlichen und Vergleichsanweisungen eingeschlossen. Nachdem Sie Ihrer Segmentdefinition ein Zeichenfolgenattribut hinzugefügt haben, können Sie mit Zeichenfolgen-relevanten Anweisungen das Attribut mit anderen Zeichenfolgenfeldern vergleichen.
+String data is included in segment definitions using logical, inclusive/exclusive, and comparison statements. Once a string attribute is added to your segment definition, you can use string-relevant statements to evaluate it against other string fields.
 
 | Anweisungstyp | Beispiele |
 | -------------- | -------- |
@@ -39,7 +39,7 @@ Mit den Datumsdaten können Sie Ihren Segmentdefinitionen zeitbasierten Kontext 
 
 ## Experience Ereignisses
 
-Zeichnen Sie als Adobe Experience Platform-Schema explizite und implizite Kundeninteraktionen mit [!DNL XDM ExperienceEvents] [!DNL Platform]integrierten Anwendungen auf, einschließlich einer Momentaufnahme des Systems zum Zeitpunkt der Interaktion. [!DNL ExperienceEvents] sind Faktendatensätze. Sie sind daher eine Datenquelle, die Ihnen während der Segmentdefinition zur Verfügung steht.
+Zeichnen Sie als Adobe Experience Platform-Schema explizite und implizite Kundeninteraktionen mit [!DNL XDM ExperienceEvents] [!DNL Platform]integrierten Anwendungen auf, einschließlich einer Momentaufnahme des Systems zum Zeitpunkt der Interaktion. [!DNL ExperienceEvents] sind Faktendatensätze. Sie sind daher eine Datenquelle, die Sie während der Segmentdefinition erhalten.
 
 Wie in der unten stehenden Tabelle dargestellt, werden die Ereignis-Daten mit Suchbegriffen wiedergegeben, die das Verhalten von Ereignissen verfeinern und Ereignis-Attribute angeben.
 
@@ -58,7 +58,7 @@ Derzeit wird nur Adobe Audience Manager als externe Audience unterstützt, wobei
 
 ### Segmentfreigabe
 
-In der Plattform erstellte Segmente können in anderen [Adobe Experience Cloud-Hauptdiensten](https://docs.adobe.com/content/help/de-DE/core-services/interface/experience-cloud.html)verwendet werden. Um diese Funktion zu aktivieren, müssen Sie sich an Ihren Lösungsarchitekten oder Ihren Berater wenden.
+In Platform erstellte Segmente können in anderen [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/de-DE/core-services/interface/experience-cloud.html)verwendet werden. Um diese Funktion zu aktivieren, müssen Sie sich an Ihren Lösungsarchitekten oder Ihren Berater wenden.
 
 ## Sonstige Datentypen
 
@@ -66,7 +66,7 @@ Zusätzlich zu den oben genannten Datentypen umfasst die Liste unterstützter Da
 
 - Uniform Resource Identifier (URI)
 - Enum
-- Zahl
+- Nummer
 - Lang
 - Ganzzahl
 - Kurz
