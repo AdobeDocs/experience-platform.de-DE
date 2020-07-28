@@ -96,7 +96,7 @@ Für das Verständnis der Faktoren, die sich auf das Kundenerlebnis auswirken, i
 
 Weitere Informationen zur Attribution in Adobe finden Sie im Adobe Analytics-Handbuch unter [Übersicht über Attribution IQ](https://docs.adobe.com/content/help/de-DE/analytics/analyze/analysis-workspace/panels/attribution.html).[!DNL Analytics]
 
-### First-Touch-Attribution
+### Erstkontakt-Attribution
 
 Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
@@ -152,7 +152,7 @@ LIMIT 10
 (10 rows)
 ```
 
-### Last-Touch-Attribution
+### Letztkontakt-Attribution
 
 Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
@@ -207,7 +207,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### First-Touch-Attribution mit bedingter Gültigkeit
+### Erstkontakt-Attribution mit bedingter Gültigkeit
 
 Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset, expiring after or before a condition. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
@@ -263,7 +263,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### First-Touch-Attribution mit Gültigkeits-Timeout
+### Erstkontakt-Attribution mit Gültigkeits-Timeout
 
 Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset for a specified time period. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile. Diese Abfrage hilft dabei nachzuvollziehen, welche Interaktion innerhalb eines bestimmten Zeitraums zu einer Kundenaktion geführt hat. Im nachfolgenden Beispiel stellt der für die einzelnen Kundeninteraktionen zurückgegebene Erstkontakt die früheste Interaktion innerhalb der letzten sieben Tage (`expTimeout = 86400 * 7`) dar.
 
@@ -316,7 +316,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### First-Touch-Attribution mit bedingter Gültigkeit
+### Letztkontakt-Attribution mit bedingter Gültigkeit
 
 Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset, expiring after or before a condition. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile. This query is useful if you want to see the last interaction in a series of customer actions within a portion of the [!DNL ExperienceEvent] dataset determined by a condition of your chosing. Im nachfolgenden Beispiel wird ein Kauf (`commerce.purchases.value IS NOT NULL`) an jedem der vier in den Ergebnissen angezeigten Tage (15., 21., 23. und 29. Juli) festgehalten und dem letzten Trackingcode an jedem Tag ein Anteil von 100 % (`1.0`) am Einfluss auf die Kundenaktionen zugeschrieben.
 
@@ -370,7 +370,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### First-Touch-Attribution mit bedingter Gültigkeit
+### Letztkontakt-Attribution mit Gültigkeits-Timeout
 
 Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset for a specified time period. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile. Diese Abfrage hilft dabei, die letzte Interaktion in einem bestimmten Zeitintervall nachzuvollziehen. Im nachfolgenden Beispiel stellt der für die einzelnen Kundeninteraktionen zurückgegebene letzte Kontakt die finale Interaktion innerhalb der darauffolgenden sieben Tage (`expTimeout = 86400 * 7`) dar.
 
