@@ -26,11 +26,11 @@ This document contains information about new features for Adobe Experience Platf
 
 | Funktion | Beschreibung |
 | --- | --- |
-| PDPA-Unterstützung | [!DNL Privacy] Anfragen können nun im Rahmen des Datenschutzgesetzes (PDPA) in Thailand erstellt und verfolgt werden. Bei Datenschutzanfragen in der API akzeptiert das `regulation`-Array nun den Wert „pdpa_tha“. |
+| Unterstützung für PDPA | [!DNL Privacy] Anfragen können nun im Rahmen des Datenschutzgesetzes (PDPA) in Thailand erstellt und verfolgt werden. Bei Datenschutzanfragen in der API akzeptiert das `regulation`-Array nun den Wert „pdpa_tha“. |
 | Namespace-Typen in der Benutzeroberfläche | You can now specify different namespace types in the Request Builder in the [!DNL Privacy Service] UI. Weiterführende Informationen dazu finden Sie im [Benutzerhandbuch](ui/user-guide.md). |
 | Einstellung des alten Endpunkts | Der alte API-Endpunkt (`data/privacy/gdpr`) wird nicht mehr unterstützt. |
 
-## 14. Januar 2020
+## Dienstag, 14. Januar 2020
 
 ### Neue Funktionen
 
@@ -47,7 +47,7 @@ This document contains information about new features for Adobe Experience Platf
    * Separate Auftragsverfolgungsseiten für DSGVO- und CCPA-Vorschriften.
    * Neue Dropdown-Liste _Vorschriftentyp_, um zwischen den Verfolgungsdaten für DSGVO und CCPA zu wechseln.
 
-## 25. Juli 2019
+## Donnerstag, 25. Juli 2019
 
 ### Neue Funktionen
 
@@ -55,9 +55,9 @@ This document contains information about new features for Adobe Experience Platf
 | --- | --- |
 | Dashboard „Anfragemetriken“ | The new metrics dashboard in the [!DNL Privacy Service] UI provides visibility into submitted, errored, and completed GDPR requests. |
 | Request Builder | Um Unternehmen mit technischen und nicht-technischen Benutzern, die DSGVO-Anfragen senden, zu unterstützen, wurde der Benutzeroberfläche eine Funktion zum Erstellen einer Anfrage hinzugefügt. The JSON file submission capability is still available in the [!DNL Privacy Service] UI for those organizations who prefer to continue using it. |
-| Ereignisbenachrichtigungen für DSGVO-Aufträge | Ereignisbenachrichtigungen über den DSGVO-Auftragsstatus sind für viele Workflows von entscheidender Bedeutung. Während Benachrichtigungen bisher über individuelle E-Mail-Benachrichtigungen zugestellt wurden, handelt es sich bei DSGVO-Ereignisbenachrichtigungen um Nachrichten, die Adobe I/O-Ereignisse nutzen und an einen konfigurierten Webhook gesendet werden, der die Automatisierung von Auftragsanfragen erleichtert. [!DNL Privacy Service] Benutzer der Benutzeroberfläche können Adobe I/O GDPR-Ereignis abonnieren, um Updates zu erhalten, wenn ein Produkt- oder der GDPR-Auftrag abgeschlossen wurde. |
+| Ereignisbenachrichtigungen für DSGVO-Aufträge | Ereignisbenachrichtigungen über den DSGVO-Auftragsstatus sind für viele Workflows von entscheidender Bedeutung. Während Benachrichtigungen bisher über individuelle E-Mail-Benachrichtigungen zugestellt wurden, handelt es sich bei DSGVO-Ereignisbenachrichtigungen um Nachrichten, die Adobe I/O-Ereignisse nutzen und an einen konfigurierten Webhook gesendet werden, der die Automatisierung von Auftragsanfragen erleichtert. [!DNL Privacy Service] Benutzer der Benutzeroberfläche können Adobe-E/A-GDPR-Ereignis abonnieren, um Updates zu erhalten, wenn ein Produkt- oder der GDPR-Auftrag abgeschlossen wurde. |
 
-## 18. April 2019
+## Donnerstag, 18. April 2019
 
 ### Verbesserungen
 
@@ -69,21 +69,21 @@ This document contains information about new features for Adobe Experience Platf
 
 * Added missing logging information for filtered queries for the `GET /` endpoint in the [!DNL Privacy Service] API.
 
-## 11. April 2019
+## Donnerstag, 11. April 2019
 
 ### Verbesserungen
 
 * Die Benutzeroberfläche wurde aktualisiert, um neue Funktionen für Beta-Kunden zu unterstützen
 * Neue Metriken-API zur Unterstützung von Benutzeroberfläche 2.0-Funktionen in der Beta-Version
 
-## 9. April 2019
+## Dienstag, 9. April 2019
 
 ### Verbesserungen
 
 * Aktualisierung aller GET-API-Aufrufe (Suche) auf einen Lookback-Bereich von 30 Tagen
 * Beschränkung der API-Nutzung auf einen maximalen Lookback-Bereich von 45 Tagen
 
-## 14. Februar 2019
+## Donnerstag, 14. Februar 2019
 
 ### Verbesserungen
 
