@@ -14,7 +14,7 @@ ht-degree: 94%
 
 # Arithmetische Funktionen
 
-Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Profile Query Language-Übersicht](./overview.md).
+Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
 
 ## Addieren
 
@@ -70,7 +70,7 @@ Die folgende PQL-Abfrage ermittelt den Preisunterschied zwischen zwei verschiede
 product1.price - product2.price
 ```
 
-## Teilen
+## Dividieren
 
 Mit der Funktion `/` (Division) wird der Quotient zweier Argumentausdrücke ermittelt.
 
@@ -108,4 +108,4 @@ person.age % 5 = 0
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit arithmetischen Funktionen vertraut gemacht haben, können Sie sie nun in Ihren PQL-Abfragen verwenden. Weiterführende Informationen zu anderen PQL-Funktionen finden Sie in der [Profile Query Language-Übersicht](./overview.md).
+Nachdem Sie sich mit arithmetischen Funktionen vertraut gemacht haben, können Sie sie nun in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
