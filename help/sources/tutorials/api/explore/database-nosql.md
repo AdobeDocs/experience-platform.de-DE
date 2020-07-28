@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
 source-wordcount: '567'
-ht-degree: 2%
+ht-degree: 21%
 
 ---
 
@@ -20,40 +20,40 @@ Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Inhalt und Dateist
 
 ## Erste Schritte
 
-Dieses Handbuch erfordert ein Verständnis der folgenden Komponenten der Adobe Experience Platform:
+Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
 * [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, damit Sie mit der [!DNL Flow Service] API eine Verbindung zu einer Datenbank eines Drittanbieters herstellen können.
+The following sections provide additional information that you will need to know in order to successfully connect to a third-party database using the [!DNL Flow Service] API.
 
-### Erforderliche Berechtigungen erfassen
+### Erforderliche Anmeldedaten sammeln
 
 Für dieses Lernprogramm müssen Sie über eine gültige Verbindung mit der Datenbank eines Drittanbieters verfügen, aus der Sie Daten erfassen möchten. Eine gültige Verbindung besteht aus der Verbindungs-ID und der Verbindungs-ID Ihrer Datenbank. Weitere Informationen zum Erstellen einer Datenbankverbindung und zum Abrufen dieser Werte finden Sie in der Übersicht über die [Quell-Connectors](./../../../home.md#database).
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Lernprogramm finden Sie Beispiele für API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anforderungs-Nutzdaten. Beispiel-JSON, die in API-Antworten zurückgegeben wird, wird ebenfalls bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur [!DNL Experience Platform] Fehlerbehebung.
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte für erforderliche Kopfzeilen sammeln
+### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform] APIs aufzurufen, müssen Sie zunächst das [Authentifizierungslehrgang](../../../../tutorials/authentication.md)abschließen. Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Header in allen E[!DNL xperience Platform] API-Aufrufen bereit, wie unten dargestellt:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all E[!DNL xperience Platform] API calls, as shown below:
 
-* Genehmigung: Träger `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Sämtliche Ressourcen in [!DNL Experience Platform]und auch die Ressourcen, die [!DNL Flow Service]gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Alle Anforderungen an [!DNL Platform] APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Für alle Anforderungen, die eine Payload enthalten (POST, PUT, PATCH), ist ein zusätzlicher Medientyp-Header erforderlich:
+Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
 * Content-Type: `application/json`
 
 ## Ihre Datentabellen
 
-Mithilfe der Verbindungs-ID für Ihre Datenbank können Sie Ihre Datentabellen durch GET-Anforderungen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie überprüfen oder in die Sie eingehen möchten [!DNL Platform].
+Mithilfe der Verbindungs-ID für Ihre Datenbank können Sie Ihre Datentabellen durch Ausführen von GET-Anforderungen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie überprüfen oder in die Sie eingehen möchten [!DNL Platform].
 
 **API-Format**
 
@@ -78,7 +78,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Tabellenarray aus Ihrer Datenbank zurück. Suchen Sie nach der Tabelle, die Sie in Ihre [!DNL Platform] Eigenschaft aufnehmen möchten, `path` und notieren Sie sich diese, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Tabellenarray aus Ihrer Datenbank zurück. Suchen Sie nach der Tabelle, die Sie einsetzen möchten, [!DNL Platform] und notieren Sie sich deren `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -99,9 +99,9 @@ Eine erfolgreiche Antwort gibt ein Tabellenarray aus Ihrer Datenbank zurück. Su
 ]
 ```
 
-## Überprüfen der Tabellenstruktur
+## Inspect der Tabellenstruktur
 
-Um die Tabellenstruktur aus Ihrer Datenbank zu überprüfen, führen Sie eine GET-Anforderung aus und geben Sie dabei den Tabellenpfad als Abfrage-Parameter an.
+Um die Tabellenstruktur aus der Datenbank zu überprüfen, führen Sie eine GET durch und geben Sie dabei den Tabellenpfad als Abfrage-Parameter an.
 
 **API-Format**
 
@@ -155,4 +155,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre Datenbank erforscht, den Pfad der Tabelle gefunden, in die Sie eingehen möchten, [!DNL Platform]und Informationen zu ihrer Struktur erhalten. Sie können diese Informationen im nächsten Lernprogramm verwenden, um Daten aus Ihrer Datenbank zu [erfassen und in die Platform](../collect/database-nosql.md)zu bringen.
+In diesem Tutorial haben Sie Ihre Datenbank erforscht, den Pfad der Tabelle gefunden, in die Sie eingehen möchten, [!DNL Platform]und Informationen zu ihrer Struktur erhalten. Sie können diese Informationen im nächsten Lernprogramm verwenden, um Daten aus Ihrer Datenbank zu [erfassen und in die Plattform](../collect/database-nosql.md)zu bringen.
