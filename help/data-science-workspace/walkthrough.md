@@ -1,82 +1,82 @@
 ---
 keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Anleitung zum Data Science Workspace
+title: Anleitung für Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '1638'
-ht-degree: 0%
+ht-degree: 91%
 
 ---
 
 
 # [!DNL Data Science Workspace] exemplarische Vorgehensweise
 
-Dieses Dokument bietet eine exemplarische Vorgehensweise für die Adobe Experience Platform [!DNL Data Science Workspace]. Insbesondere werden wir über den allgemeinen Arbeitsablauf, den ein Datenwissenschaftler durchlaufen würde, hinausgehen, um ein Problem mit maschinellem Lernen zu lösen.
+This document provides a walkthrough for Adobe Experience Platform [!DNL Data Science Workspace]. Insbesondere werden wir uns den allgemeinen Workflow ansehen, den ein Datenwissenschaftler ausführen würde, um ein Problem mit maschinellem Lernen zu lösen.
 
 ## Voraussetzungen
 
-- Ein registriertes Adoben ID-Konto
-   - Das Konto &quot;Adobe ID&quot;muss einer Organisation hinzugefügt worden sein, die Zugriff auf die Adobe Experience Platform und die [!DNL Data Science Workspace]
+- Ein registriertes Adobe ID-Konto
+   - Das Adobe ID-Konto muss einer Organisation mit Zugriff auf Adobe Experience Platform und hinzugefügt worden sein.[!DNL Data Science Workspace]
 
 ## Motivation des Datenwissenschaftlers
 
-Ein Einzelhändler steht vor vielen Herausforderungen, um auf dem aktuellen Markt wettbewerbsfähig zu bleiben. Eines der Hauptanliegen des Einzelhändlers ist es, über die optimale Preisgestaltung seiner Produkte zu entscheiden und die Verkaufsentwicklung vorherzusagen. Mit einem präzisen Prognosemodell wäre der Einzelhändler in der Lage, das Verhältnis zwischen der Nachfrage- und der Preispolitik zu ermitteln und optimierte Preisentscheidungen zu treffen, um Verkäufe und Umsatz zu maximieren.
+Einem Einzelhändler hat Probleme damit, auf dem aktuellen Markt wettbewerbsfähig zu bleiben. Eines der Hauptanliegen des Einzelhändlers ist es, über die optimale Preisgestaltung seiner Produkte zu entscheiden und Verkaufs-Trends vorherzusagen. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 
-## Lösung von Datenwissenschaftlern
+## Lösung des Datenwissenschaftlers
 
-Die Lösung eines Datenwissenschaftlers besteht darin, den Reichtum historischer Daten zu nutzen, auf die ein Einzelhändler Zugriff hat, zukünftige Trends vorherzusagen und Preisentscheidungen zu optimieren. Wir werden frühere Verkaufsdaten verwenden, um unser maschinelles Lernmodell auszubilden und das Modell zur Vorhersage künftiger Verkaufstrends zu verwenden. Damit kann der Einzelhändler Einblicke erhalten, die ihm bei Preisänderungen helfen.
+Die Lösung des Datenwissenschaftlers besteht darin, die Menge historischer Daten zu nutzen, auf die ein Einzelhändler Zugriff hat, um zukünftige Trends vorherzusagen und Preisentscheidungen zu perfektionieren. Wir werden Daten von früheren Verkäufen nutzen, um unser maschinelles Lernmodell zu trainieren und das Modell für die Vorhersage künftiger Verkaufs-Trends zu verwenden. Dadurch kann der Einzelhändler Einblicke erhalten, die ihm beim Vornehmen von Preisänderungen helfen.
 
-In diesem Überblick gehen wir über die Schritte hinaus, die ein Datenwissenschaftler ausführen würde, um einen Datensatz zu erstellen und ein Modell zu erstellen, das die wöchentlichen Verkäufe vorhersagt. Wir werden die folgenden Abschnitte im Beispiel für Einzelhandelsverkäufe auf der Adobe Experience Platform [!DNL Data Science Workspace]:
+In diesem Überblick sehen wir uns die Schritte an, die ein Datenwissenschaftler ergreifen muss, um einen Datensatz zu nutzen und ein Modell zur Vorhersage der wöchentlichen Umsätze zu erstellen. We will go over the following sections in the Sample Retail Sales Notebook on Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Einrichten](#setup)
-- [Daten untersuchen](#exploring-data)
-- [Funktionstechnik](#feature-engineering)
-- [Schulung und Überprüfung](#training-and-verification)
+- [Erkunden von Daten](#exploring-data)
+- [Funktionsentwicklung](#feature-engineering)
+- [Training und Validierung](#training-and-verification)
 
 ### Notebooks in [!DNL Data Science Workspace]
 
-Zunächst möchten wir ein [!DNL JupyterLab] Notebook erstellen, um das Stichprobenfragment &quot;Einzelhandel&quot;zu öffnen. Die Schritte des Datenwissenschaftlers im Notebook werden uns ein Verständnis eines typischen Arbeitsablaufs verschaffen.
+Firstly, we want to create a [!DNL JupyterLab] notebook to open the &quot;Retail Sales&quot; sample notebook. Indem wir die Schritte befolgen, die der Datenwissenschaftler im Notebook vornimmt, werden wir verstehen, wie ein typischer Workflow aussieht.
 
-Klicken Sie in der Benutzeroberfläche &quot;Adobe Experience Platform&quot;auf die Registerkarte &quot;Datenwissenschaft&quot;im oberen Menü, um zum [!DNL Data Science Workspace]Thema zu gelangen. Klicken Sie auf dieser Seite auf die [!DNL JupyterLab] Registerkarte, die den [!DNL JupyterLab] Starter öffnet. Sie sollten eine ähnliche Seite sehen.
+In the Adobe Experience Platform UI, click on the Data Science tab in the top menu to take you to the [!DNL Data Science Workspace]. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. Sie sollten eine Seite sehen, die der folgenden ähnelt.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-In unserem Tutorial werden wir [!DNL Python] [!DNL Jupyter Notebook] 3 in der verwenden, um zu zeigen, wie man auf die Daten zugreifen und zu erkunden. Auf der Startseite stehen Ihnen Beispielnotizen zur Verfügung. Wir werden die Stichprobe &quot;Einzelhandel&quot; für [!DNL Python] 3 verwenden.
+In our tutorial, we will be using [!DNL Python] 3 in the [!DNL Jupyter Notebook] to show how to access and explore the data. Auf der Starter-Seite stehen Ihnen Beispiel-Notebooks zur Verfügung. We will be using the &quot;Retail Sales&quot; sample for [!DNL Python] 3.
 
 ![](./images/walkthrough/retail_sales.png)
 
 ### Einrichten {#setup}
 
-Mit dem geöffneten Retail Sales Notebook laden wir als Erstes die für unseren Workflow erforderlichen Bibliotheken. In der folgenden Liste wird kurz beschrieben, wofür die einzelnen Anwendungen verwendet werden:
-- **numpy** - eine wissenschaftliche Computing-Bibliothek, die Unterstützung für große, multidimensionale Arrays und Matrizen bietet
-- **Pandas** - Bibliothek, die Datenstrukturen und -vorgänge für die Datenverarbeitung und Analyse Angebot
-- **matplotlib.pyplot** - Plotting-Bibliothek, die beim Plotting eine MATLAB-ähnliche Erfahrung bereitstellt
-- **seaborn** - Visualisierungsbibliothek für Daten auf hoher Ebene basierend auf matplotlib
-- **sklearn** - Bibliothek für maschinelles Lernen mit Classification-, Regression-, Support-Vektor- und Cluster-Algorithmen
-- **Warnungen** - Bibliothek, die Warnmeldungen steuert
+Mit dem geöffneten Notebook „Einzelhandelsumsätze“ laden wir zunächst die für unseren Workflow erforderlichen Bibliotheken. In der folgenden Liste wird kurz beschrieben, wofür die einzelnen Bibliotheken verwendet werden:
+- **numpy** – Bibliothek für wissenschaftliche Berechnungen, die Unterstützung für große, multidimensionale Arrays und Matrizen bietet.
+- **pandas** – Bibliothek, die Datenstrukturen und -vorgänge für die Bearbeitung und Analyse von Daten bietet.
+- **matplotlib.pyplot** – Plotting-Bibliothek, die beim Zeichnen für ein MATLAB-ähnliches Erlebnis sorgt.
+- **seaborn** – Bibliothek für die Datenvisualisierung mit übergeordneter Oberfläche auf Grundlage von matplotlib.
+- **sklearn** – Bibliothek für maschinelles Lernen mit Klassifizierungs-, Regressions-, Support-Vektor- und Cluster-Algorithmen.
+- **warnings** – Bibliothek, die Warnmeldungen steuert.
 
-### Daten untersuchen {#exploring-data}
+### Daten erkunden {#exploring-data}
 
-#### Daten laden
+#### Laden von Daten
 
-Nachdem die Bibliotheken geladen wurden, können wir Beginn mit den Daten arbeiten. Der folgende [!DNL Python] Code verwendet die `DataFrame` Datenstruktur des Pandas und die Funktion [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) , um das auf dem Pandas-DataFrame gehostete CSV zu lesen [!DNL Github] :
+Nachdem die Bibliotheken geladen wurden, können wir uns die Daten ansehen. The following [!DNL Python] code uses pandas&#39; `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the pandas DataFrame:
 
 ![](./images/walkthrough/read_csv.png)
 
-Die DataFrame-Datenstruktur von Pandas ist eine zweidimensionale beschriftete Datenstruktur. Um die Dimensionen unserer Daten schnell zu sehen, können wir sie verwenden `df.shape`. Dadurch wird ein Tupel zurückgegeben, das die Dimensionalität des DataFrame darstellt:
+Die DataFrame-Datenstruktur von pandas ist eine zweidimensionale beschriftete Datenstruktur. Um die Dimensionen unserer Daten schnell anzuzeigen, können wir `df.shape` verwenden. Dadurch wird ein Tupel zurückgegeben, das die Dimensionalität des DataFrame darstellt:
 
 ![](./images/walkthrough/df_shape.png)
 
-Schließlich können wir einen Blick darauf werfen, wie unsere Daten aussehen. Wir können die ersten `df.head(n)` Zeilen des DataFrame `n` zur Ansicht verwenden:
+Schließlich können wir einen Blick darauf werfen, wie unsere Daten aussehen. Wir können `df.head(n)` nutzen, um die ersten `n` Zeilen des DataFrame anzuzeigen:
 
 ![](./images/walkthrough/df_head.png)
 
 #### Statistische Zusammenfassung
 
-Wir können die [!DNL Python's] Pandas-Bibliothek nutzen, um den Datentyp jedes Attributs zu erhalten. Die Ausgabe des folgenden Aufrufs gibt uns Informationen über die Anzahl der Einträge und den Datentyp für jede der Spalten:
+We can leverage [!DNL Python's] pandas library to get the data type of each attribute. Die Ausgabe des folgenden Aufrufs liefert uns Informationen über die Anzahl der Einträge und den Datentyp für die einzelnen Spalten:
 
 ```PYTHON
 df.info()
@@ -84,9 +84,9 @@ df.info()
 
 ![](./images/walkthrough/df_info.png)
 
-Diese Informationen sind nützlich, da wir durch Kenntnis des Datentyps für jede Spalte wissen können, wie die Daten zu behandeln sind.
+Diese Informationen sind hilfreich, da wir durch Kenntnis des Datentyps der einzelnen Spalten wissen, wie die Daten zu behandeln sind.
 
-Schauen wir uns nun die statistische Zusammenfassung an. Nur die numerischen Datentypen werden angezeigt `date`, `storeType`und `isHoliday` nicht ausgegeben:
+Sehen wir uns nun die statistische Zusammenfassung an. Nur die numerischen Datentypen werden angezeigt, sodass `date`, `storeType` und `isHoliday` nicht ausgegeben werden:
 
 ```PYTHON
 df.describe()
@@ -94,121 +94,121 @@ df.describe()
 
 ![](./images/walkthrough/df_describe.png)
 
-Damit können wir sehen, dass für jedes Merkmal 6435 Instanzen vorhanden sind. Darüber hinaus werden statistische Daten wie Mittelwert, Standardabweichung (std), Min., Max. und Interquartilien angegeben. Dies gibt uns Informationen über die Abweichung für die Daten. Im nächsten Abschnitt werden wir über Visualisierung gehen, die mit diesen Informationen zusammenarbeitet, um uns ein vollständiges Verständnis unserer Daten zu verschaffen.
+Damit können wir sehen, dass für jedes Merkmal 6.435 Instanzen vorhanden sind. Darüber hinaus werden statistische Daten wie Mittelwert, Standardabweichung (std), Minimum, Maximum und Interquartile angegeben. So erfahren wir mehr über die Abweichung der Daten. Im nächsten Abschnitt werden wir uns Visualisierung ansehen, die mit diesen Daten arbeitet, um uns eine genaue Übersicht über unsere Daten zu bieten.
 
-Wenn wir uns die Mindest- und Höchstwerte ansehen, `store`können wir feststellen, dass 45 verschiedene Datenspeicher vorhanden sind. Es gibt auch `storeTypes` welche unterscheiden, was ein Laden ist. Wir können die Verteilung sehen, `storeTypes` indem wir Folgendes tun:
+Wenn wir uns die Mindest- und Maximalwerte für `store` ansehen, können wir feststellen, dass die Daten 45 verschiedene Geschäfte repräsentieren. Es gibt auch `storeTypes`, die unterscheiden, was ein Geschäft ist. Außerdem können wir die Verteilung von `storeTypes` anzeigen, indem wir Folgendes tun:
 
 ![](./images/walkthrough/df_groupby.png)
 
-Das bedeutet, dass 22 Läden von `storeType A` , 17 sind `storeType B`und 6 sind `storeType C`.
+Das bedeutet, dass 22 Geschäfte `storeType A`, 17 `storeType B` und 6 `storeType C` sind.
 
-#### Visualisieren von Daten
+#### Daten visualisieren
 
-Jetzt, da wir unsere Datenrahmenwerte kennen, möchten wir dies durch Visualisierungen ergänzen, um die Dinge klarer zu gestalten und Muster leichter zu identifizieren. Diese Diagramme sind auch nützlich, wenn Ergebnisse an eine Audience übermittelt werden.
+Da wir unsere Dataframe-Werte nun kennen, möchten wir sie um Visualisierungen ergänzen, damit sich Muster leichter erkennen lassen. Darüber hinaus sind diese Diagramme nützlich, wenn Ergebnisse an eine Zielgruppe übermittelt werden sollen.
 
-#### Einheitliche Diagramme
+#### Eindimensionale Diagramme
 
-Univariate-Diagramme sind Diagramme einer einzelnen Variablen. Ein gängiges univariatives Diagramm, das zur Visualisierung Ihrer Daten verwendet wird, sind Box- und Whiskerplotten.
+Eindimensionale Diagramme sind Diagramme mit einer einzelnen Variablen. Ein gängiges eindimensionales Diagramm, das zur Visualisierung Ihrer Daten dienen kann, sind Box- und Whisker-Diagramme.
 
-Mit unserem Retail-Datensatz von vorher können wir die Box und Whisker-Plot für jeden der 45 Läden und ihre wöchentlichen Verkäufe generieren. Der Plot wird mithilfe der `seaborn.boxplot` Funktion generiert.
+Mit unserem Datensatz für Einzelhandelsumsätze von oben können wir ein Box- und Whisker-Diagramm für jedes der 45 Geschäfte und ihre wöchentlichen Umsätze generieren. Das Diagramm wird mithilfe der `seaborn.boxplot`-Funktion erstellt.
 
 ![](./images/walkthrough/box_whisker.png)
 
-Eine Box- und Whisker-Plot wird verwendet, um die Verteilung der Daten anzuzeigen. Die äußeren Linien des Grundstücks zeigen den oberen und unteren Quartil, während der Rahmen den interquartilen Bereich umfasst. Die Linie im Feld markiert den Median. Alle Datenpunkte, die mehr als das 1,5-fache des oberen oder unteren Quartil betragen, werden als Kreis markiert. Diese Punkte werden als Ausreißer betrachtet.
+Ein Box- und Whisker-Diagramm dient dazu, die Verteilung von Daten anzuzeigen. Die äußeren Linien des Diagramms zeigen die oberen und unteren Quartile an, während der Kasten den Interquartilbereich umfasst. Die Linie im Kasten markiert den Median. Alle Datenpunkte, die mehr als das 1,5-Fache des oberen oder unteren Quartils betragen, werden als Kreis markiert. Diese Punkte werden als Ausreißer betrachtet.
 
-Als Nächstes können wir die wöchentlichen Verkäufe mit der Zeit zeichnen. Wir zeigen nur die Ausgabe des ersten Ladens. Der Code im Notebook erzeugt 6 Parzellen, die 6 der 45 Stores in unserem Datensatz entsprechen.
+Als Nächstes können wir die wöchentlichen Umsätze im Zeitverlauf zeichnen. Wir zeigen nur die Ausgabe des ersten Geschäfts. Der Code im Notebook erzeugt 6 Diagramme, die 6 der 45 Geschäfte in unserem Datensatz entsprechen.
 
 ![](./images/walkthrough/weekly_sales.png)
 
-Mit diesem Diagramm können wir die wöchentlichen Verkäufe über einen Zeitraum von 2 Jahren vergleichen. Mit der Zeit lassen sich Verkaufsspitzen und Talmuster leicht erkennen.
+Mit diesem Diagramm können wir die wöchentlichen Umsätze über einen Zeitraum von 2 Jahren vergleichen. Im Zeitverlauf lassen sich Umsatzspitzen und Talmuster leicht erkennen.
 
-#### Multivarianz-Diagramme
+#### Mehrdimensionale Diagramme
 
-Multivarianz-Diagramme werden verwendet, um die Interaktion zwischen Variablen anzuzeigen. Mit der Visualisierung können Datenwissenschaftler sehen, ob Korrelationen oder Muster zwischen den Variablen bestehen. Ein häufig verwendetes Multivarianz-Diagramm ist eine Korrelationsmatrix. Bei einer Korrelationsmatrix werden Abhängigkeiten zwischen mehreren Variablen mit dem Korrelationskoeffizienten quantifiziert.
+Mehrdimensionale Diagramme dienen dazu, die Interaktion zwischen Variablen anzuzeigen. Dank der Visualisierung können Datenwissenschaftler erkennen, ob Korrelationen oder Muster zwischen den Variablen bestehen. Ein häufig verwendetes mehrdimensionales Diagramm ist eine Korrelationsmatrix. Bei einer Korrelationsmatrix werden Abhängigkeiten zwischen verschiedenen Variablen mit dem Korrelationskoeffizienten quantifiziert.
 
-Mit demselben für den Handel bestimmten Datensatz können wir die Korrelationsmatrix generieren.
+Mit demselben Einzelhandelsdatensatz können wir die Korrelationsmatrix generieren.
 
 ![](./images/walkthrough/correlation_1.png)
 
-Beachten Sie die Diagonale der Diagonalen in der Mitte. Dies zeigt, dass eine Variable beim Vergleich mit sich selbst eine vollständige positive Korrelation aufweist. Starke positive Korrelation wird eine Größenordnung näher an 1 liegen, während schwache Korrelationen näher an 0 liegen werden. Negative Korrelation wird mit einem negativen Koeffizienten angezeigt, der einen umgekehrten Trend zeigt.
+Beachten Sie die Diagonale der Einsen in der Mitte. Das bedeutet, dass eine Variable beim Vergleich mit sich selbst eine vollständige positive Korrelation aufweist. Eine starke positive Korrelation wird näher bei 1 liegen, während eine schwache Korrelation näher bei 0 liegt. Negative Korrelation wird durch einen negativen Koeffizienten angezeigt, der auf einen gegenläufigen Trend hinweist.
 
-### Funktionstechnik {#feature-engineering}
+### Funktionsentwicklung {#feature-engineering}
 
-In diesem Abschnitt werden wir Änderungen an unserem Retail-Datensatz vornehmen. Wir führen die folgenden Vorgänge durch:
+In diesem Abschnitt werden wir Änderungen an unserem Einzelhandelsdatensatz vornehmen. Wir führen die folgenden Vorgänge durch:
 
-- Hinzufügen von Wochen- und Jahresspalten
+- Wochen- und Jahresspalten hinzufügen
 - storeType in eine Indikatorvariable konvertieren
 - isHoliday in eine numerische Variable konvertieren
-- prognostizieren Sie wöchentlichVerkäufe der nächsten Woche
+- weeklySales der nächsten Woche vorhersagen
 
-#### Spalten Hinzufügen Woche und Jahr
+#### Wochen- und Jahresspalten hinzufügen
 
-Das aktuelle Datumsformat (`2010-02-05`) lässt sich kaum unterscheiden, dass die Daten jede Woche gültig sind. Aus diesem Grund werden wir das Datum in die Woche und das Jahr umrechnen.
+Mit dem aktuellen Datumsformat (`2010-02-05`) lässt sich kaum erkennen, dass die Daten für jede Woche gelten. Aus diesem Grund werden wir das Datum in Woche und Jahr umrechnen.
 
 ![](./images/walkthrough/date_to_week_year.png)
 
-Nun sind die Woche und das Datum wie folgt:
+Nun sehen die Woche und das Datum wie folgt aus:
 
 ![](./images/walkthrough/date_week_year.png)
 
 #### storeType in Indikatorvariable konvertieren
 
-Als Nächstes konvertieren wir die Spalte storeType in Spalten, die die einzelnen Spalten darstellen `storeType`. Es gibt 3 Store-Typen (`A`, `B`, `C`), aus denen wir 3 neue Spalten erstellen. Der jeweils eingestellte Wert ist ein boolescher Wert, bei dem je nach dem, was der Wert `storeType` war, und `0` für die anderen beiden Spalten &quot;1&quot;festgelegt wird.
+Als Nächstes konvertieren wir die Spalte „storeType“ in Spalten, die jeweils einen `storeType` darstellen. Es gibt 3 Geschäftstypen (`A`, `B`, `C`), aus denen wir 3 neue Spalten erstellen. Der jeweils festgelegte Wert ist ein boolescher Wert, bei dem je nach dem, was der Wert von `storeType` war, „1“ und `0` für die anderen beiden Spalten festgelegt wird.
 
 ![](./images/walkthrough/storeType.png)
 
-Die aktuelle `storeType` Spalte wird entfernt.
+Die aktuelle `storeType`-Spalte wird entfernt.
 
 #### isHoliday in numerischen Typ konvertieren
 
-Die nächste Änderung besteht darin, den `isHoliday` booleschen in eine numerische Darstellung zu ändern.
+Die nächste Änderung besteht darin, den booleschen `isHoliday`-Wert in eine numerische Darstellung zu ändern.
 
 ![](./images/walkthrough/isHoliday.png)
 
 
-#### Prognostizieren Sie wöchentlichVerkäufe der nächsten Woche
+#### weeklySales der nächsten Woche vorhersagen
 
-Jetzt möchten wir jedem unserer Datensätze vorige und künftige wöchentliche Verkäufe hinzufügen. Wir tun dies, indem wir unsere `weeklySales`ausgleichen. Zusätzlich berechnen wir den `weeklySales` Unterschied. Dies geschieht durch Subtraktion `weeklySales` des Vorwochenberichts `weeklySales`.
+Nun möchten wir jedem unserer Datensätze vorherige und zukünftige Wochenumsätze hinzufügen. Das tun wir, indem wir unsere `weeklySales` versetzen. Außerdem berechnen wir die Differenz von `weeklySales`. Dazu wird `weeklySales` von `weeklySales` der Vorwoche abgezogen.
 
 ![](./images/walkthrough/weekly_past_future.png)
 
-Da wir die `weeklySales` Daten 45 Datensätze vorwärts und 45 Datensätze rückwärts vergleichen, um neue Spalten zu erstellen, haben die ersten und letzten 45 Datenpunkte NaN-Werte. Wir können diese Punkte aus unserem Datensatz entfernen, indem wir die `df.dropna()` Funktion verwenden, die alle Zeilen mit NaN-Werten entfernt.
+Da wir die `weeklySales`-Daten 45 Datensätze vorwärts und 45 Datensätze rückwärts versetzen, um neue Spalten zu erstellen, werden die ersten und letzten 45 Datenpunkte NaN-Werte aufweisen. Wir können diese Punkte aus unserem Datensatz entfernen, indem wir die `df.dropna()`-Funktion nutzen, die alle Zeilen mit NaN-Werten entfernt.
 
 ![](./images/walkthrough/dropna.png)
 
-Eine Zusammenfassung des Datensatzes nach unseren Änderungen ist unten dargestellt:
+Eine Zusammenfassung des Datensatzes nach Vornahme unserer Änderungen finden Sie im Folgenden:
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Schulung und Überprüfung {#training-and-verification}
+### Training und Validierung {#training-and-verification}
 
-Nun ist es an der Zeit, einige Datenmodelle zu erstellen und auszuwählen, welches Modell die beste Leistung für die Vorhersage künftiger Verkäufe ist. Wir werden die folgenden 5 Algorithmen auswerten:
+Nun ist es an der Zeit, verschiedene Datenmodelle zu erstellen und zu entscheiden, welches Modell sich zur Vorhersage künftiger Umsätze am besten eignet. Wir werden die folgenden fünf Algorithmen auswerten:
 
 - Lineare Regression
-- Entscheidungsstruktur
+- Entscheidungsbaum
 - Random Forest
-- Verlaufsverstärkung
-- K Nachbarn
+- Gradient Boosting
+- Nächste Nachbarn
 
-#### Datensatz in Untergruppen für Schulung und Tests aufteilen
+#### Datensatz in Untergruppen für Training und Tests aufteilen
 
-Wir brauchen eine Möglichkeit zu wissen, wie genau unser Modell Werte vorhersagen kann. Diese Bewertung kann durchgeführt werden, indem ein Teil des Datensatzes als Validierung und der Rest als Schulungsdaten zugewiesen wird. Da `weeklySalesAhead` die tatsächlichen zukünftigen Werte von `weeklySales`sind, können wir dies verwenden, um zu bewerten, wie genau das Modell bei der Vorhersage des Werts ist. Die Aufteilung erfolgt unten:
+Wir müssen ermitteln, wie genau unser Modell Werte vorhersagen kann. Diese Bewertung kann durchgeführt werden, indem ein Teil des Datensatzes als Validierungs- und der Rest als Trainings-Daten zugewiesen wird. Da `weeklySalesAhead` die tatsächlichen zukünftigen Werte von `weeklySales` beinhaltet, können wir damit bewerten, wie präzise das Modell bei der Vorhersage des Werts ist. Die Aufteilung sehen Sie im Folgenden:
 
 ![](./images/walkthrough/split_data.png)
 
-Jetzt haben wir die Modelle vorbereitet `X_train` und `y_train` die Modelle vorbereitet `X_test` und werden später bewertet `y_test` werden.
+Jetzt verfügen wir über `X_train` und `y_train` zur Vorbereitung der Modelle sowie über `X_test` und `y_test` zur späteren Auswertung.
 
-#### Spot-Check-Algorithmen
+#### Stichprobenalgorithmen
 
-In diesem Abschnitt erklären wir alle Algorithmen in ein Array namens `model`. Als Nächstes durchlaufen wir dieses Array und geben für jeden Algorithmus unsere Schulungsdaten ein, mit `model.fit()` denen ein Modell erstellt wird `mdl`. Mithilfe dieses Modells werden wir `weeklySalesAhead` mit unseren `X_test` Daten vorhersagen.
+In diesem Abschnitt deklarieren wir alle Algorithmen in einem Array namens `model`. Als Nächstes durchlaufen wir dieses Array und geben mit `model.fit()`, das ein Modell `mdl` erstellt, unsere Trainings-Daten ein. Mithilfe dieses Modells werden wir `weeklySalesAhead` unter Verwendung unserer `X_test`-Daten vorhersagen.
 
 ![](./images/walkthrough/training_scoring.png)
 
-Für die Bewertung nehmen wir die mittlere prozentuale Differenz zwischen den prognostizierten Werten `weeklySalesAhead` und den tatsächlichen Werten in den `y_test` Daten. Da wir den Unterschied zwischen unserer Prognose und dem tatsächlichen reduzieren wollen, ist der Regressor für die Verlaufsverstärkung das leistungsstärkste Modell.
+Für die Bewertung nutzen wir die mittlere prozentuale Differenz zwischen den prognostizierten `weeklySalesAhead` und den tatsächlichen Werten in den `y_test`-Daten. Da wir die Differenz zwischen unserer Prognose und den tatsächlichen Werten minimieren wollen, ist Gradient Boosting Regressor das beste Modell.
 
 #### Prognosen visualisieren
 
-Schließlich werden wir unser Prognosemodell mit den tatsächlichen wöchentlichen Verkaufswerten visualisieren. Die blaue Linie stellt die tatsächlichen Zahlen dar, während das Grün unsere Prognose mit der Verlaufsverstärkung darstellt. Der folgende Code generiert 6 Grundstücke, die 6 der 45 Läden in unserem Datensatz darstellen. Es `Store 1` wird nur hier gezeigt:
+Schließlich visualisieren wir unser Prognosemodell mit den tatsächlichen wöchentlichen Umsatzwerten. Die blaue Linie stellt die tatsächlichen Zahlen dar, während Grün unsere Prognose unter Verwendung von Gradient Boosting darstellt. Der folgende Code generiert 6 Diagramme, die 6 der 45 Geschäfte in unserem Datensatz darstellen. Nur `Store 1` wird hier gezeigt:
 
 ![](./images/walkthrough/visualize_prediction.png)
 
@@ -216,9 +216,9 @@ Schließlich werden wir unser Prognosemodell mit den tatsächlichen wöchentlich
 
 ## Zusammenfassung
 
-Mit dieser Übersicht haben wir den Arbeitsablauf durchlaufen, den ein Datenwissenschaftler durchlaufen würde, um ein Einzelhandelsproblem zu lösen. Im Einzelnen haben wir die folgenden Schritte unternommen, um eine Lösung zu finden, die zukünftige wöchentliche Verkäufe vorhersagt.
+Mit dieser Übersicht haben wir uns den Workflow angesehen, den ein Datenwissenschaftler durchlaufen würde, um ein Problem mit Einzelhandelsumsätzen zu lösen. Im Einzelnen haben wir folgende Schritte betrachtet, um eine Lösung zu finden, die zukünftige Wochenumsätze vorhersagt.
 
 - [Einrichten](#setup)
-- [Daten untersuchen](#exploring-data)
-- [Funktionstechnik](#feature-engineering)
-- [Schulung und Überprüfung](#training-and-verification)
+- [Erkunden von Daten](#exploring-data)
+- [Funktionsentwicklung](#feature-engineering)
+- [Training und Validierung](#training-and-verification)
