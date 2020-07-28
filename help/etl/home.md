@@ -50,11 +50,11 @@ An der Integration mit ETL-Connectoren ist eine Vielzahl der Komponenten von Exp
 
 The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to [!DNL Experience Platform] APIs.
 
-### Lesehilfe für Beispiel-API-Aufrufe
+### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dabei wird auf Pfade ebenso eingegangen wie auf die erforderlichen Kopfzeilen und die für Anfrage-Payloads zu verwendende Formatierung. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Die in der Dokumentation zu Beispielen für API-Aufrufe verwendeten Konventionen werden im Handbuch zur Fehlerbehebung für unter [Lesehilfe für Beispiel-API-Aufrufe](../landing/troubleshooting.md#how-do-i-format-an-api-request) erläutert.[!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte der zu verwendenden Kopfzeilen
+### Sammeln von Werten für erforderliche Kopfzeilen
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
@@ -70,7 +70,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md).
 
-Alle Anfragen, die eine Payload enthalten (also POST-, PUT- und PATCH-Anfragen), erfordern eine zusätzliche Kopfzeile:
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 - Content-Type: application/json
 
@@ -105,7 +105,7 @@ Sie können mehrere Filter für die Antwortausgabe verwenden, indem sie die ents
 - Wenn kein Limit-Parameter angegeben wird, beträgt die maximale Anzahl von Objekten pro Antwort-Payload 20.
 - The global limit for all other [!DNL Catalog] queries is 100 objects.
 - Bei Datensatzabfragen „observableSchema“ unter Angabe des „properties“-Abfrageparameters beträgt die maximale Anzahl der zurückgegebenen Datensätze 20.
-- Bei Angabe ungültiger Parameter für die Begrenzung (einschließlich `limit=0`) wird ein HTTP-Fehler mit dem Statuscode 400 zurückgegeben, in dem die korrekten Bereiche angezeigt werden.
+- Bei Angabe ungültiger Parameter für die Begrenzung (einschließlich `limit=0`) wird ein HTTP-Fehler mit dem Status-Code 400 zurückgegeben, in dem die korrekten Bereiche angezeigt werden.
 - Als Abfrageparameter angegebene Begrenzungen oder Offsets haben Vorrang vor den angegebenen Kopfzeilen.
 
 Einzelheiten zu Abfrageparametern finden Sie unter [Übersicht über Catalog Service](../catalog/home.md).
@@ -249,7 +249,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
->Der optionale Abfrageparameter `expansion=xdm` weist die API an, alle referenzierten Schemas vollständig zu erweitern und einzubinden. Dies empfiehlt sich, wenn Sie eine Liste aller potenziellen Felder anzeigen möchten.
+> Der optionale Abfrageparameter `expansion=xdm` weist die API an, alle referenzierten Schemas vollständig zu erweitern und einzubinden. Dies empfiehlt sich, wenn Sie eine Liste aller potenziellen Felder anzeigen möchten.
 
 **Antwort**
 
@@ -257,7 +257,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
->Wenn das Feld „schema“ leer oder überhaupt nicht vorhanden ist, sollte der Connector das Feld „schemaRef“ lesen und die [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) verwenden, wie in den vorherigen Schritten zum [Anzeigen eines Datensatzschemas](#view-dataset-schema) ausgeführt.
+>Wenn das Feld „schema“ leer oder überhaupt nicht vorhanden ist, sollte der Connector das Feld „schemaRef“ lesen und die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) verwenden, wie in den vorherigen Schritten zum [Anzeigen eines Datensatzschemas](#view-dataset-schema) ausgeführt.
 
 ### Die Eigenschaft „observableSchema“
 
@@ -572,7 +572,7 @@ Beim Schreiben von Daten können Anwender bestimmen, dass Daten entsprechend den
 
 Wenn Sie die auf [!DNL GitHub](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md) bereitgestellte Referenzimplementierung nutzen, können Sie für diese Implementierung die Schemavalidierung mithilfe der Systemeigenschaft `-DenableSchemaValidation=true` aktivieren.
 
-Die Validierung kann für logische XDM-Typen durchgeführt werden, dies unter Verwendung von Attributen wie `minLength` und `maxlength` für Zeichenfolgen, `minimum` und `maximum` für Ganzzahlen und mehr. Eine Tabelle mit den für die Validierung verwendbaren XDM-Typen und Eigenschaften finden Sie im [Schema Registry API-Entwicklerhandbuch](../xdm/api/getting-started.md).
+Die Validierung kann für logische XDM-Typen durchgeführt werden, dies unter Verwendung von Attributen wie `minLength` und `maxlength` für Zeichenfolgen, `minimum` und `maximum` für Ganzzahlen und mehr. Eine Tabelle mit den für die Validierung verwendbaren XDM-Typen und Eigenschaften finden Sie im [Schema Registry-API-Entwicklerhandbuch](../xdm/api/getting-started.md).
 
 >[!NOTE]
 >
@@ -596,11 +596,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
       }'
 ```
 
-Einzelheiten zur Erstellung eines Batches, einschließlich Beispiel-Anfragen und -Antworten, finden Sie unter [Übersicht über die Batch-Aufnahme](../ingestion/batch-ingestion/overview.md).
+Einzelheiten zur Erstellung eines Batches, einschließlich Beispiel-Anfragen und -Antworten, finden Sie unter [Batch-Erfassung – Übersicht](../ingestion/batch-ingestion/overview.md).
 
 ### Schreiben in einen Datensatz
 
-Nach erfolgreicher Erstellung eines neuen Batches können Dateien in einen bestimmten Datensatz hochgeladen werden. In einen Batch können mehrere Dateien aufgenommen werden, dies so lange, bis dieser zur Aufnahme verwendet wird. Dateien können mithilfe der _Small File Upload API_ hochgeladen werden. Überschreitet die Größe Ihrer Dateien jedoch den Grenzwert des Gateways, müssen Sie die _Large File Upload API_ verwenden. Einzelheiten zum Upload kleiner und großer Dateien finden Sie unter [Übersicht über die Batch-Aufnahme](../ingestion/batch-ingestion/overview.md).
+Nach erfolgreicher Erstellung eines neuen Batches können Dateien in einen bestimmten Datensatz hochgeladen werden. In einen Batch können mehrere Dateien aufgenommen werden, dies so lange, bis dieser zur Aufnahme verwendet wird. Dateien können mithilfe der _Small File Upload API_ hochgeladen werden. Überschreitet die Größe Ihrer Dateien jedoch den Grenzwert des Gateways, müssen Sie die _Large File Upload API_ verwenden. Einzelheiten zum Hochladen kleiner und großer Dateien finden Sie unter [Batch-Erfassung – Übersicht](../ingestion/batch-ingestion/overview.md).
 
 **Anfrage**
 
@@ -632,7 +632,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H "x-api-key : {API_KEY}"
 ```
 
-Bei erfolgreicher Ausführung wird der HTTP-Statuscode 200 (OK) zurückgegeben, wobei der Antworttext leer bleibt.
+Bei erfolgreicher Ausführung wird der HTTP-Status-Code 200 (OK) zurückgegeben, wobei der Antworttext leer bleibt.
 
 Das ETL-Tool hält den Zeitstempel der Quelldatensätze beim Lesen der Daten fest.
 
@@ -787,7 +787,7 @@ Adobe Experience Platform does not identify deferred data currently, so client i
 
 | Datum | Aktion | Beschreibung |
 | ---- | ------ | ----------- |
-| 19.01.2019 | Eigenschaft „fields“ aus Datensätzen entfernt | Bislang umfassten Datensätze eine „fields“-Eigenschaft, die eine Kopie des Schemas enthielt. Diese Funktion sollte nicht mehr verwendet werden. Ist die Eigenschaft „fields“ vorhanden, sollte sie ignoriert und stattdessen das Attribut „surveillanceSchema“ oder „schemaRef“ verwendet werden. |
+| 19.01.2019 | Eigenschaft „fields“ aus Datensätzen entfernt | Bislang umfassten Datensätze eine „fields“-Eigenschaft, die eine Kopie des Schemas enthielt. Diese Funktion sollte nicht mehr verwendet werden. Ist die Eigenschaft „fields“ vorhanden, sollte sie ignoriert und stattdessen das Attribut „observedSchema“ oder „schemaRef“ verwendet werden. |
 | 15.03.2019 | Datensätze ergänzt um Eigenschaft „schemaRef“ | Die Eigenschaft „schemaRef“ eines Datensatzes enthält einen URI, der auf das XDM-Schema verweist, auf dem der Datensatz basiert, und der alle vom Datensatz potenziell verwendbaren Felder repräsentiert. |
-| 15.03.2019 | Alle Endbenutzer-IDs der Eigenschaft „identityMap“ zugeordnet | Bei der „identityMap“ handelt es sich um eine Kapselung aller eindeutigen Kennungen eines Subjekts, z. B. CRM-ID, ECID oder Treueprogramm-ID. This map is used by [!DNL Identity Service](../identity-service/home.md) to resolve all known and anonymous identities of a subject, forming a single identity graph for each end-user. |
-| 30.05.2019 | Eigenschaft „Schema“ wurde eingestellt und aus Datensätzen entfernt | Anhand der Eigenschaft „Schema“ des Datensatzes wurde ein Verweis auf das Schema mit dem veralteten Endpunkt `/xdms` in der Service API bereitgestellt. [!DNL Catalog] This has been replaced by a &quot;schemaRef&quot; that provides the &quot;id&quot;, &quot;version&quot;, and &quot;contentType&quot; of the schema as referenced in the new [!DNL Schema Registry] API. |
+| 15.03.2019 | Alle Endbenutzer-IDs der Eigenschaft „identityMap“ zugeordnet | Bei der „identityMap“ handelt es sich um eine Kapselung aller eindeutigen Kennungen eines Subjekts, z. B. CRM-ID, ECID oder Treueprogramm-ID. Diese Zuordnung wird von [!DNL Identity Service](../identity-service/home.md) verwendet, um alle bekannten und anonymen Identitäten eines Subjekts aufzulösen und für jeden Endbenutzer ein individuelles Identitätsdiagramm zu erstellen. |
+| 30.05.2019 | Eigenschaft „Schema“ wurde eingestellt und aus Datensätzen entfernt | Anhand der Eigenschaft „Schema“ des Datensatzes wurde ein Verweis auf das Schema mit dem veralteten Endpunkt `/xdms` in der Service API bereitgestellt.[!DNL Catalog] This has been replaced by a &quot;schemaRef&quot; that provides the &quot;id&quot;, &quot;version&quot;, and &quot;contentType&quot; of the schema as referenced in the new [!DNL Schema Registry] API. |
