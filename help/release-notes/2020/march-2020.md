@@ -28,7 +28,7 @@ Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
 
 ## [!DNL Data Governance] {#governance}
 
-[!DNL Experience Platform]Mit können Firmen Daten aus mehreren Unternehmenssystemen zusammenführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und binden können. [!DNL Experience Platform] umfasst eine durchgängige Data Governance-Infrastruktur, einschließlich DULE (Data Usage Labeling and Enforcement), um die ordnungsgemäße Nutzung von Daten in und bei der gemeinsamen Nutzung durch verschiedene Systeme sicherzustellen.[!DNL Platform]
+[!DNL Experience Platform]In werden Daten aus verschiedensten Unternehmenssystemen in einer Weise zusammengeführt, die es Marketing-Experten ermöglicht, Kunden zu identifizieren, ein besseres Verständnis von Kunden zu gewinnen und diese gezielter anzusprechen. [!DNL Experience Platform] umfasst eine durchgängige Data Governance-Infrastruktur, einschließlich DULE (Data Usage Labeling and Enforcement), um die ordnungsgemäße Nutzung von Daten in und bei der gemeinsamen Nutzung durch verschiedene Systeme sicherzustellen.[!DNL Platform]
 
 Adobe Experience Platform [!DNL Data Governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Data Governance] is a series of strategies and t
 
 >[!NOTE]
 >
->Einige der folgenden neuen Funktionen befinden sich derzeit in der Beta-Phase und stehen nicht allen Benutzern zur Verfügung. Beta-Funktionen können sich ändern.
+> Einige der folgenden neuen Funktionen befinden sich derzeit in der Beta-Phase und stehen nicht allen Benutzern zur Verfügung. Beta-Funktionen können sich ändern.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
@@ -104,7 +104,7 @@ For more information about [!DNL Identity Service], see the [Identity Service ov
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
-[!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, damit Sie für verschiedene Datenanbieter bequem Quellverbindungen einrichten können. Diese Quellverbindungen ermöglichen Ihnen das Authentifizieren und Verbinden mit externen Speichersystemen und CRM-Diensten, das Festlegen von Zeiten für Erfassungsläufe und das Verwalten des Datendurchsatzes bei der Erfassung.
+[!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
 **Neue Funktionen**
 
@@ -113,7 +113,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Veraltete Signale für Adobe Audience Manager-Connector | Daten auf Signalebene von Audience Manager werden nicht mehr gesendet. Beachten Sie, dass die Segmentzugehörigkeit für Eigenschaften und Segmente weiterhin enthalten ist. Infolge dieser Änderung werden keine eingehenden Datensätze mehr generiert. |
 | Umbenannte Datensätze | Vom Audience Manager-Connector erstellte Datensätze erhalten aktualisierte Namen und Beschreibungen. |
 | Enable [!DNL Profile] toggle in Audience Manger | [!DNL Profile] kann aktiviert oder deaktiviert werden, um DataSet zu bewerben [!DNL Real-time Customer Profile]. Die Umschaltung ist standardmäßig aktiviert. |
-| Benutzeroberflächenunterstützung für Cloud-Speichersysteme | New source connector for [!DNL Azure Data Lake Storage Gen2] in the UI. |
+| Unterstützung für Cloud-Speicher via Benutzeroberfläche | New source connector for [!DNL Azure Data Lake Storage Gen2] in the UI. |
 | Benutzeroberflächenunterstützung für CRM-Systeme | New source connector for [!DNL HubSpot], [!DNL Salesforce Service Cloud], and [!DNL ServiceNow] in the UI. |
 | Benutzeroberflächenunterstützung für Datenbanksysteme | New source connector for [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server], and [!DNL MySQL] in the UI. |
 
