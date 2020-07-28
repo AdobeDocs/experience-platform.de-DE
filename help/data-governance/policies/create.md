@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
 source-wordcount: '1186'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
 
 # Datennutzungsrichtlinie erstellen in der API
 
-Data Usage Labeling and Enforcement (DULE) ist der Kernmechanismus von Adobe Experience Platform [!DNL Data Governance]. Mit der [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie DULE-Richtlinien erstellen und verwalten, um festzulegen, welche Marketing-Aktionen für Daten mit bestimmten DULE-Bezeichnungen ausgeführt werden können.
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. Mit der [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie DULE-Richtlinien erstellen und verwalten, um festzulegen, welche Marketing-Aktionen für Daten mit bestimmten DULE-Bezeichnungen ausgeführt werden können.
 
 This document provides a step-by-step tutorial for creating a DULE policy using the [!DNL Policy Service] API. Eine genauere Anleitung zu den verschiedenen in der API verfügbaren Vorgängen finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md).
 
@@ -123,7 +123,7 @@ Eine erfolgreiche Antwort gibt die Gesamtanzahl der gefundenen Marketing-Aktione
 
 Wenn Sie die Marketing-Aktion gefunden haben, die Sie verwenden möchten, notieren Sie sich den Wert seiner `href`-Eigenschaft. Dieser Wert wird im nächsten Schritt zum [Erstellen einer DULE-Richtlinie](#create-policy) benötigt.
 
-### Neue Marketing-Aktion erstellen{#create-new}
+### Neue Marketing-Aktion erstellen {#create-new}
 
 Sie können eine neue Marketing-Aktion erstellen, indem Sie eine PUT-Anfrage an den `/marketingActions/custom/`-Endpunkt senden und am Ende des Anfragepfads einen Namen für die Marketing-Aktion angeben.
 
@@ -326,7 +326,7 @@ Notieren Sie sich die URI-ID der neu erstellten DULE-Richtlinie, da Sie sie im n
 
 >[!NOTE]
 >
->Dieser Schritt ist optional, wenn Sie Ihre DULE-Richtlinie im Status `DRAFT` belassen möchten; beachten Sie jedoch, dass für eine Richtlinie der Status standardmäßig auf `ENABLED` festgelegt sein muss, damit sie Teil der Bewertung wird. Informationen zur Verwendung von Ausnahmen für Richtlinien mit dem Status `DRAFT` finden Sie in der Anleitung zum [Durchsetzen von DULE-Richtlinien](../enforcement/api-enforcement.md).
+> Dieser Schritt ist optional, wenn Sie Ihre DULE-Richtlinie im Status `DRAFT` belassen möchten; beachten Sie jedoch, dass für eine Richtlinie der Status standardmäßig auf `ENABLED` festgelegt sein muss, damit sie Teil der Bewertung wird. Informationen zur Verwendung von Ausnahmen für Richtlinien mit dem Status `DRAFT` finden Sie in der Anleitung zum [Durchsetzen von DULE-Richtlinien](../enforcement/api-enforcement.md).
 
 Standardmäßig sind DULE-Richtlinien, deren `status`-Eigenschaft auf `DRAFT` gesetzt ist, nicht Teil der Bewertung. Sie können Ihre Richtlinie für die Bewertung aktivieren, indem Sie eine PATCH-Anfrage an den `/policies/custom/`-Endpunkt senden und am Ende des Anfragepfads die eindeutige Kennung für die Richtlinie angeben.
 
