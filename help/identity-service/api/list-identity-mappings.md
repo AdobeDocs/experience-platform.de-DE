@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Listen-Identitätszuordnungen
+title: Auflisten von Identitätszuordnungen
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '248'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# Listen-Identitätszuordnungen
+# Auflisten von Identitätszuordnungen
 
-Eine Zuordnung ist eine Sammlung aller Identitäten in einem Cluster für einen bestimmten Namensraum.
+Eine Zuordnung (ein Mapping) ist eine Sammlung aller Identitäten in einem Cluster für einen bestimmten Namespace.
 
 ## Abrufen einer Identitätszuordnung für eine einzelne Identität
 
-Rufen Sie alle verwandten Identitäten aus demselben Namensraum ab, der in der Anforderung durch die Identität dargestellt wird.
+Rufen Sie bei gegebener Identität alle zugehörigen Identitäten aus demselben Namespace ab, der durch die Identität in der Anfrage repräsentiert wird.
 
 **API-Format**
 
@@ -28,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Anfrage**
 
-Option 1: Geben Sie die Identität als Namensraum (`nsId`nach ID) und ID-Wert (`id`) an.
+Option 1: Geben Sie die Identität als Namespace (`nsId`, nach Kennung) und Kennungswert (`id`) an.
 
 ```shell
 curl -X GET \
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 2: Geben Sie die Identität als Namensraum (`ns`nach Name) und ID-Wert (`id`) an.
+Option 2: Geben Sie die Identität als Namespace (`ns`, nach Name) und Kennungswert (`id`) an.
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 3: Geben Sie die Identität als XID an (`xid`). Weitere Informationen zum Abrufen der XID einer Identität finden Sie im Abschnitt dieses Dokuments, in dem beschrieben wird, wie Sie die XID für eine Identität [abrufen](./list-native-id.md).
+Option 3: Geben Sie die Identität als XID (`xid`) an. Weiterführende Informationen zum Abrufen der XID einer Identität finden Sie im Abschnitt dieses Dokuments, in dem es um das [Abrufen der XID für eine Identität](./list-native-id.md) geht.
 
 ```shell
 curl -X GET \
@@ -61,13 +61,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-### Identitätszuordnungen für mehrere Identitäten abrufen
+### Abrufen von Identitätszuordnungen für mehrere Identitäten
 
-Verwenden Sie die `POST` Methode als Batch-Entsprechung der oben beschriebenen `GET` Methode, um Zuordnungen für mehrere Identitäten abzurufen.
+Verwenden Sie die `POST`-Methode als Batch-Äquivalent zu der oben beschriebenen `GET`-Methode, um Zuordnungen für mehrere Identitäten abzurufen.
 
 >[!NOTE]
 >
->Die Anforderung sollte höchstens 1000 Identitäten enthalten. Anfragen mit mehr als 1000 Identitäten führen zu 400 Statuscodes.
+> Die Anfrage darf höchstens 1.000 Identitäten zurückgeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
 
 **API-Format**
 
@@ -75,7 +75,7 @@ Verwenden Sie die `POST` Methode als Batch-Entsprechung der oben beschriebenen `
 POST https://platform.adobe.io/data/core/identity/mappings
 ```
 
-**Einrichtung anfordern**
+**Anfrageinhalt**
 
 Option 1: Geben Sie eine Liste von XIDs an, für die Zuordnungen abgerufen werden sollen.
 
@@ -86,7 +86,7 @@ Option 1: Geben Sie eine Liste von XIDs an, für die Zuordnungen abgerufen werde
 }
 ```
 
-Option 2: Geben Sie eine Liste von Identitäten als Composite-IDs an, wobei jeder den ID-Wert und den Namensraum nach Namensraum-ID benennt. Dieses Beispiel zeigt, wie Sie diese Methode verwenden, während Sie die Standardeinstellung `graph-type` &quot;Privates Diagramm&quot;überschreiben.
+Option 2: Geben Sie eine Liste von Identitäten als zusammengesetzte IDs an, wobei jede den ID-Wert und den Namespace nach Namespace-ID benennt. Dieses Beispiel zeigt, wie Sie diese Methode verwenden, während Sie die Standardeinstellung „Privates Diagramm“ von `graph-type` überschreiben.
 
 ```shell
 {
@@ -145,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Wenn keine verwandten Identitäten mit der bereitgestellten Eingabe gefunden wurden, wird ein `HTTP 204` Antwortcode ohne Inhalt zurückgegeben.
+Wenn mit der bereitgestellten Eingabe keine verwandten Identitäten gefunden wurden, wird ein `HTTP 204`-Antwort-Code ohne Inhalt zurückgegeben.
 
 **Antwort**
 
@@ -183,9 +183,9 @@ Wenn keine verwandten Identitäten mit der bereitgestellten Eingabe gefunden wur
 }
 ```
 
-- `lastAssociationTime`: Der Zeitstempel, zu dem die Eingaberidentität zuletzt mit dieser Identität verknüpft wurde.
-- `regions`: Stellt das `regionId` und `lastAssociationTime` für den Ort bereit, an dem die Identität angezeigt wurde.
+- `lastAssociationTime`: Der Zeitstempel, zu dem die Eingabeidentität zuletzt mit dieser Identität verknüpft wurde.
+- `regions`: Stellt die `regionId` und `lastAssociationTime` für den Ort bereit, an dem die Identität angezeigt wurde.
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Lernprogramm zur [Liste der verfügbaren Namensraum](./list-namespaces.md)fort.
+Fahren Sie mit dem nächsten Tutorial zum [Auflisten der verfügbaren Namespaces](./list-namespaces.md) fort.
