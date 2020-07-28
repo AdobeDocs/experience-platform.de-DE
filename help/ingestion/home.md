@@ -12,13 +12,13 @@ ht-degree: 18%
 ---
 
 
-# Datenaufnahme – Übersicht
+# Datenerfassung – Übersicht
 
 Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Adobe Experience Platform Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
 
 In diesem Dokument werden die drei Hauptwege für die Dateneingabe vorgestellt [!DNL Platform], mit Links zu den jeweiligen Übersichtsdokumenten.
 
-## Batch-Aufnahme
+## Batch-Erfassung
 
 Batch ingestion allows you to ingest data into [!DNL Experience Platform] as batch files. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Nach der Erfassung stellen Batches Metadaten bereit, die die Anzahl der erfolgreich erfassten Datensätze sowie alle fehlgeschlagenen Datensätze und zugehörigen Fehlermeldungen beschreiben.
 
@@ -26,7 +26,7 @@ Manuell hochgeladene Datendateien wie flache CSV-Dateien (XDM-Schemas zugeordnet
 
 See the [batch ingestion overview](./batch-ingestion/overview.md) for more information.
 
-## Streaming-Aufnahme
+## Streaming-Erfassung
 
 Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real-time. [!DNL Platform] unterstützt die Verwendung von Dateneinlässen zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake beibehalten werden. Dateneingänge können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
 
