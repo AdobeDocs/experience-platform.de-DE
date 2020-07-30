@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Batch-Connector für eine Cloud-Datenspeicherung in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
 workflow-type: tm+mt
-source-wordcount: '1226'
-ht-degree: 6%
+source-wordcount: '1482'
+ht-degree: 5%
 
 ---
 
 
 # Konfigurieren eines Datenflusses für einen Batch-Connector für eine Cloud-Datenspeicherung in der Benutzeroberfläche
 
-Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen [!DNL Platform] Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Basisanschluss beschrieben.
+Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen [!DNL Platform] Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 
 ## Erste Schritte
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
 * [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Darüber hinaus müssen Sie bei diesem Lernprogramm bereits einen Cloud-Datenspeicherung-Connector erstellt haben. Eine Liste von Übungen zum Erstellen verschiedener Cloud-Datenspeicherung-Connectors in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../../home.md).
+Darüber hinaus erfordert dieses Lernprogramm, dass Sie über ein Konto für die Cloud-Datenspeicherung verfügen. Eine Liste von Übungen zum Erstellen verschiedener Cloud-Datenspeicherung-Konten in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../../home.md).
 
 ### Unterstützte Dateiformate
 
@@ -37,22 +37,28 @@ Darüber hinaus müssen Sie bei diesem Lernprogramm bereits einen Cloud-Datenspe
 
 ## Daten auswählen
 
-Nachdem Sie den Cloud-Datenspeicherung-Connector erstellt haben, wird der Schritt Daten ** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie die Cloud-Datenspeicherung-Hierarchie untersuchen können.
+Nachdem Sie Ihr Cloud-Datenspeicherung-Konto erstellt haben, wird der Schritt Daten ** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie die Hierarchie Ihrer Cloud-Datenspeicherung untersuchen können.
 
 * Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
 * In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
 
-Durch Klicken auf einen aufgelisteten Ordner können Sie die Ordnerhierarchie in tiefere Ordner durchlaufen. Wenn Sie eine kompatible Datei oder einen kompatiblen Ordner ausgewählt haben, wird das Dropdownmenü Datenformat **[!UICONTROL auswählen]** angezeigt, in dem Sie ein Format auswählen können, in dem die Daten im Fenster Vorschau angezeigt werden.
+Wenn Sie einen aufgelisteten Ordner auswählen, können Sie die Ordnerhierarchie in tiefere Ordner durchlaufen. Wenn Sie eine kompatible Datei oder einen kompatiblen Ordner ausgewählt haben, wird das Dropdownmenü Datenformat **[!UICONTROL auswählen]** angezeigt, in dem Sie ein Format auswählen können, in dem die Daten im Fenster Vorschau angezeigt werden.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Wenn das Fenster &quot;Vorschau&quot;ausgefüllt ist, können Sie auf **[!UICONTROL Weiter]** klicken, um alle Dateien im ausgewählten Ordner hochzuladen. Wenn Sie eine Datei in eine bestimmte Datei hochladen möchten, wählen Sie diese Datei in der Liste aus, bevor Sie auf **[!UICONTROL Weiter]** klicken.
+Nach dem Ausfüllen des Fensters &quot;Vorschau&quot;können Sie &quot; **[!UICONTROL Weiter]** &quot;auswählen, um alle Dateien im ausgewählten Ordner hochzuladen. Wenn Sie eine Datei in eine bestimmte Datei hochladen möchten, wählen Sie diese Datei in der Liste aus, bevor Sie **[!UICONTROL Weiter]** auswählen.
 
->[!NOTE]
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
+
+### Parquet- oder JSON-Dateien aufnehmen
+
+Unterstützte Dateiformate für ein Cloud-Datenspeicherung-Konto umfassen auch JSON und Parquet. JSON- und Parquet-Dateien müssen XDM-kompatibel sein. Um JSON- oder Parquet-Dateien zu erfassen, wählen Sie das entsprechende Dateiformat im Ordnerbrowser aus und wenden Sie auf der rechten Benutzeroberfläche das kompatible Datenformat an. Wählen Sie **[!UICONTROL Weiter]** , um fortzufahren.
+
+>[!IMPORTANT]
 >
->Zu den unterstützten Dateiformaten gehören CSV, JSON und Parquet. JSON- und Parquet-Dateien müssen XDM-kompatibel sein.
+>Im Gegensatz zu getrennten Dateitypen stehen JSON- und Parquet-formatierte Dateien nicht zur Vorschau zur Verfügung.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
@@ -62,27 +68,27 @@ Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. 
 
 **Vorhandenen Datensatz verwenden**
 
-Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot;Vorhandenen Datensatz **[!UICONTROL verwenden]**&quot;und klicken Sie dann auf das Dataset-Symbol.
+Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot; **[!UICONTROL Vorhandener Datensatz]**&quot;und klicken Sie dann auf das Dataset-Symbol.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-The _Select dataset_ dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+The *[!UICONTROL Select dataset]* dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-data.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **Verwenden eines neuen Datensatzes**
 
-Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen Datensatz **[!UICONTROL erstellen]** &quot;und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein. Klicken Sie anschließend auf das Symbol Schema.
+Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot; **[!UICONTROL Neuer Datensatz]** &quot;und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein. Um ein Schema hinzuzufügen, können Sie im Dialogfeld &quot;Schema *[!UICONTROL auswählen]* &quot;einen vorhandenen Schema eingeben. Alternativ dazu können Sie die erweiterte **[!UICONTROL Schema-Suche]** auswählen, um nach einem geeigneten Schema zu suchen.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-schema.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
 
-The _Select schema_ dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
+The *[!UICONTROL Select schema]* dialog appears. Wählen Sie das Schema, das Sie auf den neuen Datensatz anwenden möchten, und wählen Sie dann **[!UICONTROL Fertig]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weitere Informationen zu Funktionen für die Datenzuordnung und -zuordnung finden Sie im Lernprogramm zur [Zuordnung von CSV-Daten zu XDM-Schema-Feldern](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Nachdem Sie die Quelldaten zugeordnet haben, klicken Sie auf **[!UICONTROL Weiter]**.
+Nachdem Sie die Quelldaten zugeordnet haben, wählen Sie **[!UICONTROL Weiter]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -92,32 +98,46 @@ Der Schritt *[!UICONTROL Planung]* wird angezeigt, mit dem Sie einen Erfassungsz
 
 | Feld | Beschreibung |
 | --- | --- |
-| Häufigkeit | Zu den auswählbaren Frequenzen gehören Minute, Stunde, Tag und Woche. |
+| Häufigkeit | Zu den auswählbaren Frequenzen gehören `Once`, `Minute`, `Hour`, `Day`und `Week`. |
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Frequenz festlegt. |
-| Beginn | Ein UTC-Zeitstempel, bei dem die erste Erfassung erfolgt. |
-| Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die *[!UICONTROL Aufstockung]* aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die *[!UICONTROL Aufstockung]* deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der *[!UICONTROL Beginn]* geladen wurden. Dateien, die vor dem *[!UICONTROL Beginn]* geladen wurden, werden nicht erfasst. |
+| Beginn | Ein UTC-Zeitstempel, der angibt, wann die erste Erfassung erfolgen soll. |
+| Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die *[!UICONTROL Aufstockung]* aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die *Aufstockung* deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der *[!UICONTROL Beginn]* geladen wurden. Dateien, die vor dem *[!UICONTROL Beginn]* geladen wurden, werden nicht erfasst. |
 
-Datenflüsse sind so konzipiert, dass Daten auf planmäßiger Basis automatisch erfasst werden. Wenn Sie nur einmal über diesen Arbeitsablauf erfassen möchten, können Sie dies tun, indem Sie die **[!UICONTROL Häufigkeit]** auf &quot;Tag&quot;konfigurieren und eine sehr große Zahl für das **[!UICONTROL Intervall]**, z. B. 10000 oder Ähnliches, anwenden.
+Datenflüsse sind so konzipiert, dass Daten auf planmäßiger Basis automatisch erfasst werden. Beginn durch Auswahl der Aufnahmefrequenz. Legen Sie als Nächstes das Intervall fest, um den Zeitraum zwischen zwei Flussläufen festzulegen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und auf größer oder gleich 15 gesetzt werden.
 
-Geben Sie Werte für den Zeitplan ein und klicken Sie auf **Weiter**.
+Um die Erfassungszeit des Beginns festzulegen, passen Sie das Datum und die Uhrzeit an, die im Feld &quot;Beginn&quot;angezeigt werden. Alternativ können Sie das Kalendersymbol auswählen, um den Zeitwert des Beginns zu bearbeiten. Die Beginn-Zeit muss größer oder gleich der aktuellen Uhrzeit in UTC sein.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling.png)
+Geben Sie Werte für den Zeitplan ein und wählen Sie **[!UICONTROL Weiter]**.
 
-## Benennen des Datenflusses
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
-Der *[!UICONTROL Namensfluss]* -Schritt wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datenpfad geben können.
+### Einrichten eines einmaligen Erfassungsdataflow
 
-Geben Sie Werte für den Datenfluss ein und klicken Sie auf **[!UICONTROL Weiter]**.
+Um eine einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die Häufigkeit aus und klicken Sie auf **[!UICONTROL Einmal]**. Sie können die Bearbeitung eines Datensatzes für eine einmalige Erfassung der Häufigkeit fortsetzen, solange der Beginn in der Zukunft verbleibt. Nach Ablauf des Beginns kann der Wert für die einmalige Häufigkeit nicht mehr bearbeitet werden.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/name-your-dataflow.png)
+>[!TIP] **[!UICONTROL Intervall]** und **[!UICONTROL Aufstockung]** sind während einer einmaligen Erfassung nicht sichtbar.
 
-### Überprüfen Sie Ihren Datenfluss
+Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
+
+## Datennachrichtendetails angeben
+
+Der Schritt *[!UICONTROL Datennachweis]* wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis geben können.
+
+Während dieses Prozesses können Sie auch die *[!UICONTROL teilweise Erfassung]* und *[!UICONTROL Fehlerdiagnose]* aktivieren. Durch Aktivierung der *[!UICONTROL partiellen Erfassung]* können Daten mit Fehlern bis zu einem bestimmten Schwellenwert erfasst werden, den Sie festlegen können. Wenn Sie die *[!UICONTROL Fehlerdiagnose]* aktivieren, werden Details zu fehlerhaften Daten bereitgestellt, die separat gestapelt werden. Weitere Informationen finden Sie in der Übersicht über die [teilweise Stapelverarbeitung](../../../../../ingestion/batch-ingestion/partial.md).
+
+Geben Sie Werte für den Datenflug ein und wählen Sie **[!UICONTROL Weiter]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
+
+## Überprüfen Sie Ihren Datenfluss
 
 Der *[!UICONTROL Schritt zum Überprüfen]* wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
 
-* *[!UICONTROL Quelldetails]*: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
-* *[!UICONTROL Angaben]* zur Zielgruppe: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
-* *[!UICONTROL Details]* planen: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmeplans an.
+* *[!UICONTROL Verbindung]*: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
+* *[!UICONTROL Zuweisen von Dataset- und Zuordnungsfeldern]*: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
+* *[!UICONTROL Planung]*: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmeplans an.
 
 Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen]** und lassen Sie die Erstellung des Datenflusses etwas Zeit.
 
