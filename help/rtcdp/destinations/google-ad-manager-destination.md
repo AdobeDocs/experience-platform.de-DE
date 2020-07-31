@@ -4,10 +4,10 @@ seo-title: Google Ad Manager-Ziel
 description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 seo-description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 51%
+source-wordcount: '636'
+ht-degree: 49%
 
 ---
 
@@ -69,3 +69,7 @@ Bevor Sie das [!DNL Google Ad Manager] Ziel in Adobe Echtzeit-CDP erstellen, mü
 ## Activate segments to [!DNL Google Ad Manager]
 
 For instructions on how to activate segments to [!DNL Google Ad Manager], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## Exportierte Daten
+
+Um zu überprüfen, ob die Daten erfolgreich an das [!DNL Google Ad Manager] Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Google Ad Manager] Konto. Wenn die Aktivierung erfolgreich war, werden Audiencen in Ihrem Konto ausgefüllt.
