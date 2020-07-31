@@ -4,10 +4,10 @@ seo-title: SFTP-Ziel
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 seo-description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 100%
+source-wordcount: '170'
+ht-degree: 77%
 
 ---
 
@@ -29,3 +29,7 @@ Geben Sie für SFTP-Ziele im Workflow zur Erstellung eines Ziels im Schritt **Au
 * **Host**: die Adresse Ihres SFTP-Speicherorts
 * **Benutzername**: der Benutzername, mit dem Sie sich bei Ihrem SFTP-Speicherort anmelden
 * **Passwort**: das Passwort, mit dem Sie sich beim SFTP-Speicherort anmelden
+
+## Exportierte Daten {#exported-data}
+
+For [!SFTP] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Weitere Informationen zu den Dateien finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Aktivierung von Segmenten.
