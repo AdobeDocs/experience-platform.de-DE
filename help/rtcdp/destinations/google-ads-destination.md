@@ -4,10 +4,10 @@ seo-title: Google Ads-Ziel
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 43%
+source-wordcount: '598'
+ht-degree: 41%
 
 ---
 
@@ -67,3 +67,6 @@ Bevor Sie das [!DNL Google Ads] Ziel in Adobe Echtzeit-CDP erstellen, müssen Si
 
 For instructions on how to activate segments to [!DNL Google Ads], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
 
+## Exportierte Daten
+
+Um zu überprüfen, ob die Daten erfolgreich an das [!DNL Google Ads] Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Google Ads] Konto. Wenn die Aktivierung erfolgreich war, werden Audiencen in Ihrem Konto ausgefüllt.
