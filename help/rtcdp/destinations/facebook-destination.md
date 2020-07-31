@@ -4,10 +4,10 @@ seo-title: Facebook-Ziel
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 18%
+source-wordcount: '722'
+ht-degree: 19%
 
 ---
 
@@ -93,3 +93,11 @@ To connect to the [!DNL Facebook] destination, see [Social network destinations 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
 
 For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## Exportierte Daten {#exported-data}
+
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
+
+>[!TIP]
+>
+>Die Integration zwischen Adobe Real-Time CDP und [!DNL Facebook] unterstützt historische Audiencen-Backfills. Alle historischen Segmentqualifikationen werden an gesendet, [!DNL Facebook] wenn Sie die Segmente an das Ziel aktivieren.
