@@ -4,10 +4,10 @@ seo-title: Workflow für Cloud-Speicher-Ziele
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 50%
+ht-degree: 48%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 50%
 
 Auf dieser Seite wird erläutert, wie Sie in der Adobe-Echtzeit-Kundendatenplattform eine Verbindung zu Cloud-Speichern herstellen können.
 
-1. Wählen Sie unter **[!UICONTROL Verbindungen > Ziele]** Ihr bevorzugtes Cloud-Speicher-Ziel und wählen Sie dann **[!UICONTROL Ziel verbinden]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Connect destination]**.
 
    ![Verbindung zum Cloud-Speicher-Ziel herstellen](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
