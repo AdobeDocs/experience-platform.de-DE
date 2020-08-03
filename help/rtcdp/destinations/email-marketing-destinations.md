@@ -4,10 +4,10 @@ seo-title: E-Mail-Marketing-Ziele
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 56%
+ht-degree: 54%
 
 ---
 
@@ -24,7 +24,7 @@ Stellen Sie im Zielverbindungsfluss (wie im Abschnitt unten beschrieben) eine Ve
 
 ## Schritt 1: Ziel verbinden {#connect-destination}
 
-1. Wählen Sie unter **[!UICONTROL Verbindungen > Ziele]** das E-Mail-Marketing-Ziel, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Ziel verbinden]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
    ![Mit Ziel verbinden](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
