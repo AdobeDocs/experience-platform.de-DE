@@ -4,10 +4,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 56%
+source-wordcount: '1039'
+ht-degree: 55%
 
 ---
 
@@ -95,8 +95,8 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in der Echtzeit-Kunde
 
 ### E-Mail-Marketing-Ziele  und Cloud-Speicher-Ziele {#esp-and-cloud-storage}
 
-Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt die Echtzeit-Kundendatenplattform von Adobe eine tabulatorgetrennte `.txt`- oder `.csv`-Datei am von Ihnen angegebenen Speicherort. An diesem Speicherort wird täglich eine neue Datei erstellt. Das Dateiformat lautet:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt die Echtzeit-Kundendatenplattform von Adobe eine tabulatorgetrennte `.csv`- oder `.txt`-Datei am von Ihnen angegebenen Speicherort. An diesem Speicherort wird täglich eine neue Datei erstellt. Das Dateiformat lautet:
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Dateien, die Sie an drei aufeinander folgenden Tagen erhalten, könnten wie folgt aussehen:
 
@@ -110,11 +110,11 @@ Das Vorhandensein dieser Dateien an Ihrem Speicherort bestätigt die erfolgreich
 
 ### Werbeziele
 
-Markieren Sie das entsprechende Werbeziel, für das Sie Ihre Daten aktivieren. Wenn die Aktivierung erfolgreich war, werden in Ihrer Werbeplattform Zielgruppen ausgefüllt.
+Überprüfen Sie Ihr Konto im entsprechenden Werbeziel, an dem Sie Ihre Daten aktivieren. Wenn die Aktivierung erfolgreich war, werden in Ihrer Werbeplattform Zielgruppen ausgefüllt.
 
 ### Ziele in sozialen Netzwerken
 
-For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
 
 >[!TIP]
 >
