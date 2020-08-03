@@ -4,10 +4,10 @@ seo-title: Bizible-Erweiterung
 description: Die Bizible-Erweiterung ist ein E-Mail-Ziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: Die Bizible-Erweiterung ist ein E-Mail-Ziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '529'
-ht-degree: 62%
+ht-degree: 60%
 
 ---
 
@@ -34,7 +34,7 @@ To use this extension, you need access to [!DNL Experience Platform Launch]. [!D
 
 So installieren Sie die [!DNL Bizible] Erweiterung:
 
-1. Wechseln Sie in der [Benutzeroberfläche der Echtzeit-Kundendatenplattform von Adobe](http://platform.adobe.com/) zu **[!UICONTROL Ziele > Katalog]**.
+1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 3. Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann in der rechten Leiste die Option **[!UICONTROL Erweiterung installieren]** aus. Wenn das Feld **[!UICONTROL Erweiterung installieren]** ausgegraut ist, fehlt Ihnen die Berechtigung **[!UICONTROL manage_properties]**. Siehe [Voraussetzungen](#prerequisites).
 4. In the **[!UICONTROL Select available Launch property]** window, select the [!DNL Launch] property in which you want to install the extension. You also have the option of creating a new property in [!DNL Launch]. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html#property-seite) of the [!DNL Launch] documentation.
