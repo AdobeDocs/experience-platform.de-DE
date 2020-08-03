@@ -4,10 +4,10 @@ seo-title: Arbeitsbereich „Ziele“
 description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 seo-description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '609'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -34,7 +34,7 @@ Weiterführende Informationen zu Zielkategorien sowie Informationen zu einzelnen
 
 ## [!UICONTROL Durchsuchen] {#browse}
 
-Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Ziele, bei denen der Umschalter **[!UICONTROL Aktiviert]** aktiviert ist, setzen das Ziel auf „aktiv“ und umgekehrt. Sie können auch jene Ziele, bei denen Daten fließen, anzeigen, indem Sie **[!UICONTROL Segmente > Durchsuchen]** wählen und ein zu prüfendes Segment auswählen. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte „Durchsuchen“ verfügbar sind:
+Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Ziele, bei denen der Umschalter **[!UICONTROL Aktiviert]** aktiviert ist, setzen das Ziel auf „aktiv“ und umgekehrt. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte „Durchsuchen“ verfügbar sind:
 
 ![Registerkarte „Durchsuchen“](/help/rtcdp/destinations/assets/browse-tab.png)
 
