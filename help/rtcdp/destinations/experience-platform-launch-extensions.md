@@ -4,10 +4,10 @@ seo-title: Experience Platform Launch-Erweiterungen
 description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 seo-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '622'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ Eine Einführung in die Funktionen von Experience Platform Launch finden Sie in 
 
 ## So finden Sie die Launch-Erweiterungen in der Benutzeroberfläche der Echtzeit-Kundendatenplattform von Adobe {#how-to-find-extensions-in-interface}
 
-Um die Launch-Erweiterungen in der Benutzeroberfläche der Echtzeit-Kundendatenplattform von Adobe zu finden, navigieren Sie zu **[!UICONTROL Ziele > Katalog]** und wählen Sie **[!UICONTROL Erweiterungen]** im Filter **[!UICONTROL Typen]** aus.
+To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter.
 
 ![Erweiterungsfilter in der Benutzeroberfläche](/help/rtcdp/destinations/assets/extensions-filter.png)
 
