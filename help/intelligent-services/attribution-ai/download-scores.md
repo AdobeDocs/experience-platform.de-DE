@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aufrufen von Bewertungen in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 74%
+source-wordcount: '1028'
+ht-degree: 70%
 
 ---
 
@@ -259,9 +259,11 @@ Die Antwort lädt die angeforderte Datei in Ihr aktuelles Verzeichnis herunter. 
 
 ![Endgerät](./images/download-scores/terminal-output.png)
 
+Die heruntergeladenen Partituren werden im Parkettformat vorliegen und benötigen entweder einen [!DNL Spark]-Shell- oder Parkettleser, um die Punktzahlen Ansicht. Für die Anzeige von Rohwerten können Sie [Parkettwerkzeuge](https://github.com/apache/parquet-mr/tree/master/parquet-tools)verwenden. Mit den Parquet-Werkzeugen können die Daten analysiert [!DNL Spark]werden.
+
 ## Nächste Schritte
 
-In diesem Dokument werden die zum Herunterladen von Attribution AI-Scores erforderlichen Schritte beschrieben. Sie können sich jetzt die weiteren angebotenen [Intelligent Services](../home.md) und Handbücher ansehen.
+In diesem Dokument werden die zum Herunterladen von Attribution AI-Scores erforderlichen Schritte beschrieben. Weitere Informationen zu den Ergebnisausgaben finden Sie in der Dokumentation zur [Attribution AI-Eingabe und -Ausgabe](./input-output.md) .
 
 ## Zugreifen auf Ergebnisse mit Snowflake
 
