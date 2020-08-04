@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Unterstützte Datennutzungsbezeichnungen
+title: Nutzungsbeschreibungen der Kerndaten
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '1878'
-ht-degree: 5%
+source-wordcount: '1869'
+ht-degree: 6%
 
 ---
 
 
-# Unterstützte Datennutzungsbezeichnungen
+# Nutzungsbeschreibungen der Kerndaten
 
-Die Adobe Experience Platform umfasst eine Infrastruktur für die Datenverwaltung mit der Datenverwendungskennzeichnung und -durchsetzung (DULE).  Mit den Funktionen DULE können Datenverwendungsbeschriftungen auf Datensätze und Felder angewendet werden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren.
+Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Adobe Experience Platform Data Governance bietet mehrere gebrauchsfertige Beschriftungen für die Kerndatenverwendung, die Sie zum Kategorisieren Ihrer Daten verwenden können.
 
-In diesem Dokument werden alle derzeit von [!DNL Experience Platform]unterstützten Datenverwendungsbezeichnungen erläutert. Weitere Informationen zu [!DNL Data Governance] und zu DULE finden Sie in der Übersicht über die [Datenverwaltung](../home.md).
+In diesem Dokument werden die derzeit von [!DNL Experience Platform]Ihnen bereitgestellten Bezeichnungen zur Verwendung der Kerndaten erläutert. Weitere Informationen zu [!DNL Data Governance] diesem Thema finden Sie in der Übersicht über die [Datenverwaltung](../home.md).
 
 ## Vertragsbezeichnungen
 
@@ -24,7 +24,7 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 
 | Beschriftung | Definition |
 |---|---|
-| **C1** | Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. [Weitere Infos...](#c1) |
+| **C1** | Die Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. [Weitere Infos...](#c1) |
 | **C2** | Daten können nicht in einen Drittanbieter exportiert werden. [Weitere Infos...](#c2) |
 | **C3** | Daten können nicht mit direkt identifizierbaren Informationen kombiniert oder anderweitig verwendet werden. [Weitere Infos...](#c3) |
 | **C4** | Daten können nicht für das Targeting von Anzeigen oder Inhalten verwendet werden, weder auf der Site noch auf der Site. [Weitere Infos...](#c4) |
