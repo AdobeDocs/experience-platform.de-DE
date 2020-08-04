@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Werbeanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcfbd42f3bba494b708dce2e7a6b4b12bf9035e1
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1225'
 ht-degree: 6%
 
 ---
@@ -58,11 +58,9 @@ The *[!UICONTROL Select dataset]* dialog appears. Suchen Sie den gewünschten Da
 
 Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen Datensatz **[!UICONTROL erstellen]** &quot;und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein.
 
-Während dieses Prozesses können Sie auch die *[!UICONTROL teilweise Erfassung]* und *[!UICONTROL Fehlerdiagnose]* aktivieren. Durch Aktivierung der *[!UICONTROL partiellen Erfassung]* können Daten mit Fehlern bis zu einem bestimmten Schwellenwert erfasst werden, den Sie festlegen können. Durch Aktivierung der [!UICONTROL Fehlerdiagnose] werden Details zu fehlerhaften Daten bereitgestellt, die separat gestapelt werden. Weitere Informationen finden Sie in der Übersicht über die [teilweise Stapelverarbeitung](../../../../ingestion/batch-ingestion/partial.md).
+Sie können ein Schema anhängen, indem Sie in der Suchleiste &quot;Schema **[!UICONTROL auswählen]** &quot;einen Schema eingeben. Sie können auch das Dropdownsymbol auswählen, um eine Liste der vorhandenen Schema anzuzeigen. Alternativ dazu können Sie die Option &quot; **[!UICONTROL Erweiterte Suche]** &quot;auswählen, um auf den Bildschirm der vorhandenen Schema mit den zugehörigen Details zuzugreifen.
 
-Klicken Sie abschließend auf das Symbol Schema.
-
-![create-new-dataset](../../../images/tutorials/dataflow/advertising/new-target-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
 The *[!UICONTROL Select schema]* dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!DNL Done]**.
 
@@ -70,11 +68,9 @@ The *[!UICONTROL Select schema]* dialog appears. Wählen Sie das Schema aus, das
 
 Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weitere Informationen zu Funktionen für die Datenzuordnung und -zuordnung finden Sie im Lernprogramm zur [Zuordnung von CSV-Daten zu XDM-Schema-Feldern](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Im *[!UICONTROL Anzeigebereich &quot;Zuordnung]* &quot;können Sie auch eine *[!UICONTROL Delta-Spalte]* festlegen. Beim Erstellen des Datenflusses können Sie jedes beliebige Zeitstempelfeld als Grundlage für die Entscheidung festlegen, welche Datensätze in geplanten inkrementellen Aufrufen erfasst werden sollen.
-
 Nachdem Sie die Quelldaten zugeordnet haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-![](../../../images/tutorials/dataflow/advertising/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Planen von Erfassungsabläufen
 
@@ -82,10 +78,10 @@ Der Schritt *[!UICONTROL Planung]* wird angezeigt, mit dem Sie einen Erfassungsz
 
 | Feld | Beschreibung |
 | --- | --- |
-| Häufigkeit | Zu den auswählbaren Frequenzen gehören Einmal, Minute, Stunde, Tag und Woche. |
+| Häufigkeit | Zu den auswählbaren Frequenzen gehören `Once`, `Minute`, `Hour`, `Day`und `Week`. |
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Frequenz festlegt. |
-| Beginn | Ein UTC-Zeitstempel, der angibt, wann die erste Erfassung erfolgen soll |
-| Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die *Aufstockung* aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die *Aufstockung* deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der *Beginn* geladen wurden. Dateien, die vor dem *Beginn* geladen wurden, werden nicht erfasst. |
+| Beginn | Ein UTC-Zeitstempel, der angibt, wann die erste Erfassung erfolgen soll. |
+| Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die *[!UICONTROL Aufstockung]* aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die *Aufstockung* deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der *[!UICONTROL Beginn]* geladen wurden. Dateien, die vor dem *[!UICONTROL Beginn]* geladen wurden, werden nicht erfasst. |
 | Delta-Spalte | Eine Option mit gefilterten Quelldatumsfeldern vom Typ, Schema oder Uhrzeit. Dieses Feld wird verwendet, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
 
 Datenflüsse sind so konzipiert, dass Daten auf planmäßiger Basis automatisch erfasst werden. Beginn durch Auswahl der Aufnahmefrequenz. Legen Sie als Nächstes das Intervall fest, um den Zeitraum zwischen zwei Flussläufen festzulegen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und auf größer oder gleich 15 gesetzt werden.
@@ -102,15 +98,18 @@ Um eine einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für di
 
 >[!TIP] **[!UICONTROL Intervall]** und **[!UICONTROL Aufstockung]** sind während einer einmaligen Erfassung nicht sichtbar.
 
-![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]**.
 
-## Benennen des Datenflusses
+![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-Der Schritt *[!UICONTROL Datennachweis]* wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datennachweis angeben müssen. Select **[!UICONTROL Next]** when finished.
+## Datennachrichtendetails angeben
 
-![dataset-flow-details](../../../images/tutorials/dataflow/advertising/dataset-flow-detail.png)
+Der Schritt *[!UICONTROL Datennachweis]* wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis geben können.
+
+Während dieses Prozesses können Sie auch die *[!UICONTROL teilweise Erfassung]* und *[!UICONTROL Fehlerdiagnose]* aktivieren. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Sobald die *[!UICONTROL teilweise Erfassung]* aktiviert ist, ziehen Sie den *[!UICONTROL Fehlerschwellenwert %]* , um den Fehlerschwellenwert des Stapels anzupassen. Alternativ können Sie den Schwellenwert manuell anpassen, indem Sie das Eingabefeld auswählen. Weitere Informationen finden Sie in der Übersicht über die [teilweise Stapelverarbeitung](../../../../ingestion/batch-ingestion/partial.md).
+Geben Sie Werte für den Datenflug ein und wählen Sie **[!UICONTROL Weiter]**.
+
+![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Überprüfen Sie Ihren Datenfluss
 
