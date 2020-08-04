@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Attribution AIS
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 9%
+source-wordcount: '407'
+ht-degree: 13%
 
 ---
 
@@ -29,24 +29,6 @@ Attribution AI unterstützt zwei Kategorien von Ergebnissen, algorithmisch und r
 Das folgende Video hilft Ihnen, Attribution AIS besser zu verstehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
-
-## Algorithmische Attribution AIS
-
-Attribution AI unterstützt zwei Kategorien von Zuordnungswerten, algorithmische und regelbasierte Werte.
-
-Attribution AI produziert zwei verschiedene Arten von algorithmischen Ergebnissen, inkrementell und beeinflusst. Ein beeinflusster Wert ist der Anteil der Konversion, für die jeder Marketing-Touchpoint verantwortlich ist. Ein inkrementelles Ergebnis ist der Betrag der direkt durch den Marketing-Touchpoint verursachten marginalen Auswirkungen. Der Hauptunterschied zwischen dem inkrementellen Ergebnis und dem beeinflussten Ergebnis besteht darin, dass das inkrementelle Ergebnis den Basiseffekt berücksichtigt. Es wird nicht davon ausgegangen, dass eine Konversion ausschließlich durch die vorherigen Marketing-Touchpoints verursacht wird.
-
-Die nachstehende Tabelle enthält weitere Details zu den einzelnen Zuordnungswerten:
-
-| Zuordnungswerte | Beschreibung |
-| ----- | ----------- |
-| Erstkontakt | Regelbasiertes Zuordnungsergebnis, das dem ursprünglichen Touchpoint auf einem Konversionspfad alle Gutschriften zuweist. |
-| Letztkontakt | Regelbasierter Zuordnungswert, der dem Touchpoint die Gutschrift zuweist, der der Konversion am nächsten kommt. |
-| Linear | Regelbasiertes Zuordnungsergebnis, das jedem Touchpoint auf einem Konversionspfad die gleiche Gutschrift zuweist. |
-| U-förmig | Regelbasiertes Zuordnungsergebnis, bei dem 40 % der Gutschrift dem ersten Touchpoint und 40 % der Gutschrift dem letzten Touchpoint zugeordnet werden, während die übrigen 20 % gleichmäßig auf die anderen Touchpoints aufgeteilt werden. |
-| Zeitverfall | Regelbasierter Zuordnungswert, bei dem Touchpoints, die näher an der Konversion liegen, mehr gutgeschrieben werden als Touchpoints, die zeitlich weiter von der Konversion entfernt sind. |
-| Beeinflusst (algorithmisch) | Einflussreiches Ergebnis ist der Anteil der Konversion, für den jeder Marketing-Touchpoint verantwortlich ist. |
-| Inkrementell (algorithmisch) | Inkrementelles Ergebnis ist die Höhe des Grenzeffekts, der direkt durch einen Marketing-Touchpoint verursacht wird. |
 
 ## Beispiele für Geschäftsverwendungsfälle
 
