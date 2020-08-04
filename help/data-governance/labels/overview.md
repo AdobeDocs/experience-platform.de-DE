@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Datennutzungsbezeichnungen – Übersicht
 topic: labels
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 20%
+source-wordcount: '578'
+ht-degree: 15%
 
 ---
 
 
 # Datennutzungsbezeichnungen – Übersicht
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
+Adobe Experience Platform [!DNL Data Governance] allows you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies.
 
-Dieses Dokument bietet eine Übersicht über die Datenverwendungsbeschriftungen in [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, lesen Sie sich die Übersicht über die [Datenverwaltung](../home.md) durch, um eine solidere Einführung in das DUL-Framework zu erhalten.
+Dieses Dokument bietet eine Übersicht über die Beschriftungen für die Datenverwendung in [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, lesen Sie sich die Übersicht über die [Datenverwaltung](../home.md) durch, um eine solidere Einführung in das Data Governance-Framework zu erhalten.
 
 ## Informationen zu den Datenverwendungsbeschreibungen
 
@@ -26,7 +26,7 @@ Datennutzungsbeschriftungen, die auf Datensatzebene angewendet werden, werden f�
 
 [!DNL Platform] bietet mehrere standardmäßige &quot;Kern&quot;-Datenverwendungsbezeichnungen, die eine Vielzahl von allgemeinen Einschränkungen für die Datenverwaltung abdecken. Weitere Informationen zu diesen Beschriftungen und den von ihnen dargestellten Nutzungsrichtlinien finden Sie im Handbuch zu den [Gebrauchsbeschriftungen](reference.md)der Kerndaten.
 
-Zusätzlich zu den von der Adobe bereitgestellten Bezeichnungen können Sie auch eigene benutzerdefinierte Bezeichnungen definieren. Anweisungen dazu finden Sie im Benutzerhandbuch [zu den](./user-guide.md)Datenverwendungsbeschriftungen. Anweisungen dazu, wie Sie dies mithilfe von API-Aufrufen durchführen, finden Sie im API-Handbuch [für die](./api.md)Datenverwendung.
+Zusätzlich zu den von der Adobe bereitgestellten Bezeichnungen können Sie auch eigene benutzerdefinierte Bezeichnungen für Ihr Unternehmen definieren. Weitere Informationen finden Sie im Abschnitt zum [Verwalten von Bezeichnungen](#manage-labels) .
 
 ## Beschriftungsvererbung für Audiencen
 
@@ -34,7 +34,7 @@ Alle vom [Adobe Experience Platform Segmentation Service](../../segmentation/hom
 
 Neben der Vererbung von Bezeichnungen auf Datensatzebene übernehmen Segmente standardmäßig alle Bezeichnungen auf Feldebene aus den zugehörigen Datensätzen. Je nachdem, wie Ihre [!DNL Platform]basierte Anwendung Segmente verbraucht, können Sie potenziell angeben, welche Felder verwendet werden, wodurch verhindert wird, dass das Segment Beschriftungen aus ausgeschlossenen Feldern erbt.
 
-Weitere Informationen zur Funktionsweise der automatischen Datendurchsetzung in Echtzeit-CDP finden Sie in der Übersicht zur [Adobe Echtzeit-Datenverwaltung](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+Weitere Informationen zur Funktionsweise der automatischen Durchsetzung in Echtzeit-CDP finden Sie in der Übersicht zur [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
 ### Vererbung von Adobe Audience Manager Data Export Controls
 
@@ -42,7 +42,20 @@ Weitere Informationen zur Funktionsweise der automatischen Datendurchsetzung in 
 
 Eine Referenz dazu, wie bestimmte Datenexportsteuerelemente den Datenverwendungsbeschriftungen in zugeordnet werden, [!DNL Platform]finden Sie in der Dokumentation zum [Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
+## Verwalten von Datenverwendungsbeschriftungen in [!DNL Experience Platform] {#manage-labels}
+
+Sie können Datenverwendungsbeschriftungen mit [!DNL Experience Platform] APIs oder der Benutzeroberfläche verwalten. Einzelheiten zu den einzelnen Unterabschnitten finden Sie in den folgenden Abschnitten.
+
+### Verwenden der UI
+
+Der Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;in der [!DNL Experience Platform] Benutzeroberfläche ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Im **[!DNL Datasets]** Arbeitsbereich können Sie Beschreibungen auf Datensätze und Felder anwenden. Weitere Informationen finden Sie im Benutzerhandbuch für [Beschriftungen](user-guide.md).
+
+### APIs verwenden
+
+Der `/labels` Endpunkt in der [Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ermöglicht es Ihnen, Datenverwendungsbeschriftungen programmgesteuert zu verwalten, einschließlich der Erstellung benutzerdefinierter Bezeichnungen. Weitere Informationen finden Sie in der [Endpunktanleitung](../api/labels.md) für Beschriftungen.
+
+Die [DataSet-Dienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) wird verwendet, um Beschriftungen für Dataset und Felder zu verwalten. Weitere Informationen finden Sie im Handbuch zur [Verwaltung von Datenbezeichnungen](./dataset-api.md) .
 
 ## Nächste Schritte
 
-Nachdem Sie die Bezeichnungen für die Datenverwendung eingeführt haben, können Sie das [Benutzerhandbuch](user-guide.md) lesen, um zu erfahren, wie Bezeichnungen in der [!DNL Experience Platform] Benutzeroberfläche verwaltet werden. Anweisungen zum Verwalten von Bezeichnungen mithilfe von APIs finden Sie im API-Handbuch [zu Nutzungsbezeichnungen](./api.md).
+In diesem Dokument wurden die Bezeichnungen der Datenverwendung und ihre Rolle im Rahmen der Datenverwaltung vorgestellt. Weitere Informationen zum Verwalten von Etiketten in finden Sie in der Dokumentation, die mit diesem Handbuch verknüpft ist [!DNL Experience Platform].
