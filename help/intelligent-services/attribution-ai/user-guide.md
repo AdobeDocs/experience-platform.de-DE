@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Attribution AI-Benutzerhandbuch
 topic: User guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1432'
 ht-degree: 7%
 
 ---
@@ -82,7 +82,7 @@ Wenn Sie mehr als eine Konvertierung benötigen, klicken Sie auf **Hinzufügen K
 
 ![Konvertierung hinzufügen](./images/user-guide/add_conversion.png)
 
-### Lookback-Fenster definieren
+### Lookback-Fenster definieren {#lookback-window}
 
 Nachdem Sie Ihre Konvertierung definiert haben, müssen Sie Ihr Lookback-Fenster bestätigen. Geben Sie mithilfe der Pfeiltasten oder durch Klicken auf den Standardwert (56) an, wie viele Tage vor dem Konversions-Ereignis Touchpoints eingefügt werden sollen. Touchpoints werden im nächsten Schritt definiert.
 
@@ -172,9 +172,9 @@ Geben Sie abschließend den Ländercode in der Dropdown-Liste *Feldwert* eingebe
 
 ![region](./images/user-guide/region-based.png)
 
-### Schulungsfenster
+### Schulungsfenster {#training-window}
 
-Um sicherzustellen, dass Sie das bestmögliche Modell erhalten, ist es wichtig, Ihr Modell mit historischen Daten auszubilden, die Ihr Geschäft repräsentieren. Standardmäßig wird das Modell mit 2 Quartalen (6 Monate) an Daten trainiert. Wählen Sie das Dropdown-Menü aus, um die Standardeinstellung zu ändern. Sie können zwischen einem und vier Quartalen der Daten (3-12 Monate) trainieren.
+Um sicherzustellen, dass Sie das bestmögliche Modell erhalten, ist es wichtig, Ihr Modell mit historischen Daten auszubilden, die Ihr Geschäft repräsentieren. Standardmäßig wird das Ereignis mit 2 Quartalen (6 Monate) Konversionsdaten trainiert. Wählen Sie das Dropdown-Menü aus, um die Standardeinstellung zu ändern. Sie können zwischen einem und vier Quartalen der Daten (3-12 Monate) trainieren.
 
 >[!NOTE]
 >
