@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datensätze – Übersicht
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 3%
 
 ---
@@ -47,7 +47,7 @@ Datenverwendungsbeschriftungen können auf ganze Datensätze oder einzelne Daten
 Weitere Informationen zum Dienst finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md) . Anweisungen zum Arbeiten mit Nutzungsbeschriftungen finden Sie in [!DNL Platform]den folgenden Handbüchern:
 
 * [Verwalten von Beschriftungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md)
-* [Verwalten von Beschriftungen in der API](../../data-governance/labels/api.md)
+* [Verwalten von Datenbeschriftungen in der API](../../data-governance/labels/dataset-api.md)
 
 ## Datenbestände in nachgelagerten [!DNL Platform] Diensten
 
