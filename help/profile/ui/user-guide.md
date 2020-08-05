@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Benutzerhandbuch zum Echtzeit-Kundenprofil
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 11%
@@ -88,7 +88,7 @@ Nachdem ein Wert eingegeben wurde, wählen Sie &quot;Profil **[!UICONTROL anzeig
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Profil
+### Profil {#profile-detail}
 
 Nach Auswahl der **[!UICONTROL Profil-ID]** wird die Registerkarte &quot; _[!UICONTROL Details]_&quot;geöffnet. Auf dieser Seite finden Sie Informationen zum ausgewählten Profil, einschließlich Basisattribute, verknüpfte Identitäten und verfügbare Kanal. Die angezeigten Profildaten wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen.
 
