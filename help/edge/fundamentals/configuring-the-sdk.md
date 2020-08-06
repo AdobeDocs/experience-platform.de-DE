@@ -4,10 +4,10 @@ seo-title: Konfigurieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 86%
+source-wordcount: '749'
+ht-degree: 78%
 
 ---
 
@@ -146,21 +146,13 @@ Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the 
 
 ## Identitätsoptionen
 
-### `idSyncContainerId`
+### `idMigrationEnabled`
 
 | **Typ** | **Erforderlich** | **Standardwert** |
 | -------- | ------------ | ----------------- |
-| Zahl | Nein | Keine |
+| Boolesch | Nein | wahr |
 
-Die Container-ID, die angibt, welche ID-Synchronisierungen ausgelöst werden. Dies ist eine nicht negative Ganzzahl, die Sie von Ihrem Berater erhalten können.
-
-### `idSyncEnabled`
-
-| **Typ** | **Erforderlich** | **Standardwert** |
-| -------- | ------------ | ----------------- |
-| Boolesch | Nein | `true` |
-
-Aktiviert die ID-Synchronisierungsfunktion, mit der URLs ausgelöst werden können, um die individuelle Adobe-Nutzerkennung mit der individuellen Nutzerkennung einer Drittanbieter-Datenquelle zu synchronisieren.
+Wenn &quot;true&quot;, liest das SDK alte AMCV-Cookies und legt sie fest. Dies hilft bei der Umstellung auf die Verwendung des AEP Web SDK, während einige Teile der Site möglicherweise noch Besucher.js verwenden. Wenn die Besucher-API auf der Seite definiert ist, wird vom SDK außerdem die Besucher-API für die ECID Abfrage. Auf diese Weise können Sie zwei Tags mit dem AEP Web SDK verwenden und immer noch die gleiche ECID haben.
 
 ### `thirdPartyCookiesEnabled`
 
