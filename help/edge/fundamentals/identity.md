@@ -4,17 +4,17 @@ seo-title: Adobe Experience Platform Web SDK Experience Cloud-ID abrufen
 description: Erfahren Sie, wie Sie die Adobe Experience Cloud-ID abrufen.
 seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud-ID abrufen.
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: d2870df230811486c09ae29bf9f600beb24fe4f8
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 10%
+source-wordcount: '730'
+ht-degree: 6%
 
 ---
 
 
 # Identität - Abrufen der Experience Cloud-ID
 
-Die Adobe Experience Platform [!DNL Web SDK] nutzt den Identitätsdienst für die [Adobe](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige ID verfügt, die auf dem Gerät beibehalten wird, damit die Aktivität zwischen den Seiten miteinander verknüpft werden kann.
+Das Adobe Experience Platform [!DNL Web SDK] nutzt den Identitätsdienst für [Adoben](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige ID verfügt, die auf dem Gerät beibehalten wird, damit die Aktivität zwischen den Seiten miteinander verknüpft werden kann.
 
 ## Identität des Ersten
 
@@ -23,6 +23,14 @@ Die [!DNL Identity Service] Identität wird in einem Cookie in einer Erstanbiete
 ## Drittanbieter-Identität
 
 Die [!DNL Identity Service] Gruppe kann eine ID mit einer Drittanbieterdomäne (demdex.net) synchronisieren, um die Verfolgung über mehrere Sites hinweg zu ermöglichen. Wenn dies aktiviert ist, wird die erste Anforderung für einen Besucher (z.B. eine Person ohne ECID) an demdex.net gesendet. Dies geschieht nur in Browsern, die es zulassen (z.B. Chrome) und wird durch den `thirdPartyCookiesEnabled` Parameter in der Konfiguration gesteuert. Wenn Sie diese Funktion vollständig deaktivieren möchten, setzen Sie sie `thirdPartyCookiesEnabled` auf &quot;false&quot;.
+
+## ID-Migration
+
+Bei der Migration von der Besucher-API können Sie auch vorhandene AMCV-Cookies migrieren. Um die ECID-Migration zu aktivieren, legen Sie den `idMigrationEnabled` Parameter in der Konfiguration fest. Die ID-Migration wird eingerichtet, um einige Anwendungsfälle zu aktivieren:
+
+* Wenn einige Seiten einer Domäne die Besucher-API verwenden und andere Seiten dieses SDK verwenden. Um diesen Fall zu unterstützen, liest das SDK vorhandene AMCV-Cookies und schreibt ein neues Cookie mit der vorhandenen ECID. Darüber hinaus schreibt das SDK AMCV-Cookies, sodass nachfolgende Seiten, die mit der Besucher-API instrumentiert wurden, dieselbe ECID haben, wenn die ECID zuerst auf einer mit dem AEP Web SDK instrumentierten Seite abgerufen wird.
+* Wenn das AEP Web SDK auf einer Seite eingerichtet wird, die auch über Besucher-API verfügt. Um diesen Fall zu unterstützen, sucht das SDK, wenn das AMCV-Cookie nicht gesetzt ist, nach der Besucher-API auf der Seite und ruft sie auf, um die ECID abzurufen.
+* Wenn die gesamte Site das AEP Web SDK verwendet und über keine Besucher-API verfügt, ist es sinnvoll, die ECIDs zu migrieren, damit die Informationen zum zurückgegebenen Besucher beibehalten werden. Nachdem das SDK `idMigrationEnabled` für einen bestimmten Zeitraum bereitgestellt wurde, sodass die meisten Besucher-Cookies migriert werden, kann die Einstellung deaktiviert werden.
 
 ## Abrufen der Besucher-ID
 
@@ -45,20 +53,34 @@ alloy("getIdentity")
 
 ## Identitäten synchronisieren
 
+>[!NOTE]
+>
+>Die `syncIdentity` Methode wurde in Version 2.1.0 zusätzlich zur Hashfunktion entfernt. Wenn Sie Version 2.1.0+ verwenden und Identitäten synchronisieren möchten, können Sie diese direkt in der `xdm` Option des `sendEvent` Befehls unter dem `identityMap` Feld senden.
+
 Darüber hinaus [!DNL Identity Service] können Sie mit dem Befehl Ihre eigenen IDs mit der ECID synchronisieren `syncIdentity` .
 
+>[!NOTE]
+>
+>Es wird dringend empfohlen, alle verfügbaren Identitäten an jedem `sendEvent` Befehl weiterzugeben. Dadurch wird eine Reihe von Anwendungsfällen, einschließlich der Personalisierung, freigegeben. Nachdem Sie diese Identitäten nun im `sendEvent` Befehl übergeben können, können sie direkt in DataLayer platziert werden.
+
+Durch die Synchronisierung von Identitäten können Sie ein Gerät/einen Benutzer mit mehreren Identitäten identifizieren, den Authentifizierungsstatus festlegen und entscheiden, welcher Identifikator als der primäre Identifikator gilt. Wenn kein Bezeichner als `primary`festgelegt wurde, ist der primäre Standardwert der `ECID`.
+
 ```javascript
-alloy("syncIdentity",{
-    identity:{
-      "AppNexus":{
-        "id":"123456,
-        "authenticationState":"ambiguous",
-        "primary":false,
-        "hashEnabled": true,
-      }
+alloy("sendEvent", {
+  xdm: {
+    "identityMap": {
+      "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
+        {
+          "id": "1234",
+          "authenticatedState": "ambiguous",
+          "primary": true
+        }
+      ]
     }
+  }
 })
 ```
+
 
 ### Optionen für die Synchronisierung von Identitäten
 
@@ -68,7 +90,7 @@ alloy("syncIdentity",{
 | -------- | ------------ | ----------------- |
 | Zeichenfolge | Ja | Keine |
 
-Der Schlüssel für das Objekt ist das Symbol für den [Identitäts-Namensraum](../../identity-service/namespaces.md) . Sie finden diese in der Benutzeroberfläche der Adobe Experience Platform unter [!UICONTROL Identitäten].
+Der Schlüssel für das Objekt ist das Symbol für den [Identitäts-Namensraum](../../identity-service/namespaces.md) . Sie finden diese in der Adobe Experience Platform-Benutzeroberfläche unter [!UICONTROL Identitäten].
 
 #### `id`
 
