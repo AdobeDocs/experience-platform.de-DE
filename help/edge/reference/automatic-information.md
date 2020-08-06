@@ -4,9 +4,9 @@ seo-title: Informationen, die automatisch vom Adobe Experience Platform Web SDK 
 description: Beschreibung der einzelnen Informationen, die das Adobe Experience Cloud SDK automatisch erfasst
 seo-description: Beschreibung der einzelnen Informationen, die das Adobe Experience Cloud SDK automatisch erfasst
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 100%
 
 ---
@@ -91,6 +91,13 @@ Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen UR
 | **Pfad in Payload:** | **Beispiel:** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### Umgebung
+
+| **Pfad in Payload:** | **Beispiel:** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
 
 ## Ortskontext (`placeContext`)
 
