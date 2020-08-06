@@ -4,10 +4,10 @@ seo-title: Verfolgen von Adobe Experience Platform Web SDK-Ereignissen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 87%
+source-wordcount: '688'
+ht-degree: 79%
 
 ---
 
@@ -79,6 +79,24 @@ alloy("sendEvent", {
   "type": "commerce.purchases"
 });
 ```
+
+### Außerkraftsetzen der DataSet-ID
+
+In einigen Anwendungsfällen möchten Sie möglicherweise ein Ereignis an einen anderen Datensatz als den in der Konfigurationsoberfläche konfigurierten senden. Dazu müssen Sie die `datasetId` Option auf dem `sendEvent` Befehl festlegen:
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### Hinzufügen von Identitätsinformationen
+
+Benutzerspezifische Identitätsinformationen können auch dem Ereignis hinzugefügt werden. Siehe [Abrufen der Experience Cloud-ID](./identity.md)
 
 ## Verwenden der sendBeacon-API
 
