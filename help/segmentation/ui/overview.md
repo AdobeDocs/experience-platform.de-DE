@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zum Segmentdienst
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1365'
 ht-degree: 27%
 
 ---
@@ -47,7 +47,7 @@ Die Auswertungsmethode kann entweder Streaming oder Batch sein. Streaming-Segmen
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-Oben auf der Seite befinden sich Optionen zum **[!UICONTROL Hinzufügen aller Segmente, die geplant]** und **[!UICONTROL erstellt werden]** sollen.
+Oben auf der Seite befinden sich Optionen zum Hinzufügen aller Segmente zu einem Zeitplan und zum Erstellen eines neuen Segments.
 
 Durch Umschalten **[!UICONTROL Hinzufügen alle Segmente zu planen]** wird die geplante Segmentierung aktiviert. Weitere Informationen zur geplanten Segmentierung finden Sie im Abschnitt zur [geplanten Segmentierung dieses Benutzerhandbuchs](#scheduled-segmentation).
 
@@ -73,7 +73,7 @@ Die Seite mit den Segmentdetails wird angezeigt. Oben finden Sie eine Zusammenfa
 
 ### Segmentzusammenfassung
 
-Der Abschnitt *[!UICONTROL Segmentzusammenfassung]* enthält Informationen wie ID, Name, Beschreibung und Details der Attribute.
+Der Abschnitt **[!UICONTROL Segmentzusammenfassung]** enthält Informationen wie ID, Name, Beschreibung und Details der Attribute.
 
 Außerdem haben Sie die Möglichkeit, das Segment zu bearbeiten. Wenn Sie Segment **** bearbeiten auswählen, gelangen Sie zum [!DNL Segment Builder]. Weitere Informationen zur Verwendung des [!DNL Segment Builder] Arbeitsbereichs finden Sie im [[!DNL Segment Builder] Benutzerhandbuch](./segment-builder.md).
 
