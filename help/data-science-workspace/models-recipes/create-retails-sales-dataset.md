@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Schema und Datensatz für Einzelhandelsumsätze erstellen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 64%
@@ -98,7 +98,9 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
    python bootstrap.py
    ```
 
-   >[!NOTE] Das Skript kann mehrere Minuten in Anspruch nehmen.
+   >[!NOTE]
+   >
+   >Das Skript kann mehrere Minuten in Anspruch nehmen.
 
 ## Nächste Schritte
 
