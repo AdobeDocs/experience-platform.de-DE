@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Exportaufträge - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 7%
@@ -20,7 +20,7 @@ Dieses Dokument enthält schrittweise Anweisungen zum Erstellen und Verwalten vo
 
 >[!NOTE]
 >
->Dieses Handbuch behandelt die Verwendung von Exportaufträgen in der [!DNL Profile API]. Informationen zum Verwalten von Exportaufträgen für den Segmentierungsdienst für Adobe Experience Platformen finden Sie im Handbuch zu [Exportaufträgen in der Segmentierungs-API](../../profile/api/export-jobs.md).
+>Dieses Handbuch behandelt die Verwendung von Exportaufträgen in der [!DNL Profile API]. Informationen zum Verwalten von Exportaufträgen für den Adobe Experience Platform Segmentation Service finden Sie im Handbuch zu [Exportaufträgen in der Segmentierungs-API](../../profile/api/export-jobs.md).
 
 Neben der Erstellung eines Exportauftrags können Sie auch über den [!DNL Profile] Endpunkt, auch als &quot; `/entities` &quot;bezeichnet, auf[!DNL Profile Access]Daten zugreifen. See the [entities endpoint guide](./entities.md) for more information. Anweisungen zum Zugriff auf [!DNL Profile] Daten mithilfe der Benutzeroberfläche finden Sie im [Benutzerhandbuch](../ui/user-guide.md).
 
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **(Erforderlich)** Zielinformationen für die exportierten Daten:<ul><li>`destination.datasetId`: **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`destination.segmentPerBatch`: *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig `false`lautet. Beim Wert `false` werden alle Segment-IDs in eine einzige Stapel-ID exportiert. Ein Wert von `true` exportiert eine Segment-ID in eine Stapel-ID. Beachten Sie, dass die Einstellung des Werts sich auf die Exportleistung des Stapels auswirken `true` kann.</li></ul> |
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
 
->[!NOTE] Um nur Profil-Daten zu exportieren und keine zugehörigen Zeitreihendaten einzubeziehen, entfernen Sie das Objekt &quot;additionalFields&quot;aus der Anforderung.
+>[!NOTE]
+>
+>Um nur Profil-Daten zu exportieren und keine zugehörigen Zeitreihendaten einzubeziehen, entfernen Sie das Objekt &quot;additionalFields&quot;aus der Anforderung.
 
 **Antwort**
 
