@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Service in Jupyter Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 70%
@@ -38,13 +38,17 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   >[!NOTE] Wenn nicht automatisch eine neue Registerkarte &quot;Starter&quot;angezeigt wird, öffnen Sie eine neue Registerkarte &quot;Starter&quot;, indem Sie auf **[!UICONTROL Datei]** klicken und dann **[!UICONTROL Neuer Starter]** auswählen.
+   >[!NOTE]
+   >
+   >If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
 
 2. Klicken Sie auf der Registerkarte „Launcher“ auf das Symbol **[!UICONTROL Leer]** in einer Python 3-Umgebung, um ein leeres Notebook zu öffnen.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   >[!NOTE] Python 3 ist derzeit die einzige unterstützte Umgebung für Query Service in Notebooks.
+   >[!NOTE]
+   >
+   >Python 3 ist derzeit die einzige unterstützte Umgebung für Query Service in Notebooks.
 
 3. Klicken Sie in der linken Auswahlleiste auf das Symbol **[!UICONTROL Daten]** und doppelklicken Sie auf das Verzeichnis **[!UICONTROL Datensätze]**, um alle Datensätze aufzulisten.
 
@@ -86,7 +90,9 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
    - `target_month` : Bestimmter Monat, aus dem die Zielgruppe stammt.
    - `target_day` : Bestimmter Tag, von dem die Daten der Zielgruppe stammen.
 
-   >[!NOTE] Sie können diese Werte jederzeit ändern. Führen Sie dabei die Variablenzelle aus, damit die Änderungen angewendet werden.
+   >[!NOTE]
+   >
+   > Sie können diese Werte jederzeit ändern. Führen Sie dabei die Variablenzelle aus, damit die Änderungen angewendet werden.
 
 ## Abfragen der Daten {#query-your-data}
 
