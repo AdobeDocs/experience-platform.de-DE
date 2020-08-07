@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpunkte für Vorschauen und Schätzungen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 7%
@@ -36,13 +36,17 @@ Die Stichprobengröße der Überprüfung hängt von der Gesamtanzahl der Entitä
 | 1 bis 20 Mio. | 1 Mio. |
 | Über 20 Mio. | 5 % des Gesamtbetrags |
 
->[!NOTE] Die Ausführung von Schätzungen dauert in der Regel 10 bis 15 Sekunden, beginnend mit einer groben Schätzung und einer Feinabstimmung, wenn mehr Datensätze gelesen werden.
+>[!NOTE]
+>
+>Die Ausführung von Schätzungen dauert in der Regel 10 bis 15 Sekunden, beginnend mit einer groben Schätzung und einer Feinabstimmung, wenn mehr Datensätze gelesen werden.
 
 ## Create a new preview {#create-preview}
 
 You can create a new preview by making a POST request to the `/preview` endpoint.
 
->[!NOTE] Beim Erstellen eines Auftrags für eine Vorschau wird automatisch ein Schätzauftrag erstellt. Diese beiden Aufträge verwenden dieselbe ID.
+>[!NOTE]
+>
+>Beim Erstellen eines Auftrags für eine Vorschau wird automatisch ein Schätzauftrag erstellt. Diese beiden Aufträge verwenden dieselbe ID.
 
 **API-Format**
 
@@ -226,4 +230,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen [!DNL Segmentation Service] API-Endpunkten finden Sie im Handbuch [Segmentierungsdienst-Entwickler](./overview.md).
+Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen [!DNL Segmentation Service] API-Endpunkten finden Sie im Handbuch [Segmentation Service-Entwickler](./overview.md).
