@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zeitpläne
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 51%
@@ -55,7 +55,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 Bei erfolgreicher Antwort wird der HTTP-Status-Code 200 mit einer Liste der für die angegebene IMS-Organisation abgerufenen Zeitpläne als JSON zurückgegeben.
 
->[!NOTE] Die folgende Antwort wurde für Leerzeichen abgeschnitten und zeigt nur den ersten zurückgegebenen Zeitplan an.
+>[!NOTE]
+>
+>Die folgende Antwort wurde für Leerzeichen abgeschnitten und zeigt nur den ersten zurückgegebenen Zeitplan an.
 
 ```json
 {
