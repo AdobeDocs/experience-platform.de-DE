@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Kunden-Erfolgsstecker in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 6%
@@ -96,7 +96,9 @@ Wählen Sie Inkrementelle Daten **[!UICONTROL laden, indem]** Sie die Delta-Spal
 
 Um eine einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die Häufigkeit aus und klicken Sie auf **[!UICONTROL Einmal]**.
 
->[!TIP] **[!UICONTROL Intervall]** und **[!UICONTROL Aufstockung]** sind während einer einmaligen Erfassung nicht sichtbar.
+>[!TIP]
+>
+>**[!UICONTROL Intervall]** und **[!UICONTROL Aufstockung]** sind während einer einmaligen Erfassung nicht sichtbar.
 
 Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]**.
 
