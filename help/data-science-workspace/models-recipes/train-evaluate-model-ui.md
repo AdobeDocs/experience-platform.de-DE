@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modell erstellen und bewerten (UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 94%
@@ -36,7 +36,10 @@ Das Tutorial setzt ein vorhandenes Rezept voraus. Wenn Sie kein Rezept haben, be
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Geben Sie einen Namen für das Modell ein und überprüfen Sie die standardmäßigen Modellkonfigurationen. Bei der Rezepterstellung wurden Standardkonfigurationen angewendet; um die Konfigurationswerte zu prüfen und zu ändern, doppelklicken Sie auf die jeweiligen Werte. Um einen neuen Konfigurationssatz bereitzustellen, klicken Sie auf **[!UICONTROL Neue Konfiguration hochladen]** und ziehen Sie eine JSON-Datei mit Modellkonfigurationen in das Browser-Fenster. Klicken Sie auf **[!UICONTROL Beenden]**, um das Modell zu erstellen.
-   >[!NOTE]Konfigurationen sind für das beabsichtigte Rezept eindeutig und spezifisch. Das heißt, dass Konfigurationen für das Rezept „Einzelhandelsumsätze“ für das Rezept „Produktempfehlungen“ nicht funktionieren. Eine Liste der Rezeptkonfigurationen für „Einzelhandelsumsätze“ finden Sie im Abschnitt [Referenz](#reference).
+
+   >[!NOTE]
+   >
+   >Konfigurationen sind für das beabsichtigte Rezept eindeutig und spezifisch. Das heißt, dass Konfigurationen für das Rezept „Einzelhandelsumsätze“ für das Rezept „Produktempfehlungen“ nicht funktionieren. Eine Liste der Rezeptkonfigurationen für „Einzelhandelsumsätze“ finden Sie im Abschnitt [Referenz](#reference).
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +58,10 @@ Das Tutorial setzt ein vorhandenes Rezept voraus. Wenn Sie kein Rezept haben, be
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. Bei der Modellerstellung angegebene Standardkonfigurationen werden angezeigt; ändern Sie sie nach Bedarf, indem Sie auf die Werte doppelklicken. Klicken Sie auf **[!UICONTROL Beenden]**, um den Trainings-Lauf zu erstellen und auszuführen.
-   >[!NOTE]Konfigurationen sind für das beabsichtigte Rezept eindeutig und spezifisch. Das heißt, dass Konfigurationen für das Rezept „Einzelhandelsumsätze“ für das Rezept „Produktempfehlungen“ nicht funktionieren. Eine Liste der Rezeptkonfigurationen für „Einzelhandelsumsätze“ finden Sie im Abschnitt [Referenz](#reference).
+
+   >[!NOTE]
+   >
+   >Konfigurationen sind für das beabsichtigte Rezept eindeutig und spezifisch. Das heißt, dass Konfigurationen für das Rezept „Einzelhandelsumsätze“ für das Rezept „Produktempfehlungen“ nicht funktionieren. Eine Liste der Rezeptkonfigurationen für „Einzelhandelsumsätze“ finden Sie im Abschnitt [Referenz](#reference).
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
