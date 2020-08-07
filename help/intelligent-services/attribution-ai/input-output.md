@@ -5,7 +5,7 @@ title: Eingabe und Ausgabe von Attribution AIS
 topic: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
 translation-type: tm+mt
-source-git-commit: 5126ef74330d9cee7234ccd1ee7260b09db9e78c
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '2174'
 ht-degree: 4%
@@ -53,14 +53,14 @@ Die folgenden Spalten sind nicht erforderlich, es wird jedoch empfohlen, sie in 
 
 >[!IMPORTANT]
 >
-> Die Mindestdatenmenge, die erforderlich ist, damit Attribution AI funktionieren kann, lautet:
+> Die Mindestdatenmenge, die erforderlich ist, damit Attribution AI funktionieren kann, lautet wie folgt:
 > - Sie müssen Daten für mindestens 3 Monate (90 Tage) bereitstellen, um ein gutes Modell auszuführen.
 > - Sie benötigen mindestens 1000 Konvertierungen.
 
 
 Attribution AI erfordert historische Daten als Eingabe für Modellschulungen. Die erforderliche Datendauer wird hauptsächlich von zwei Hauptfaktoren bestimmt: Schulungsfenster und Lookback-Fenster. Die Eingabe mit kürzeren Schulungsfenstern ist anfälliger für aktuelle Trends, während längere Schulungsfenster stabilere und genauere Modelle erzeugen. Es ist wichtig, das Ziel mit historischen Daten zu modellieren, die Ihre Geschäftsziele am besten widerspiegeln.
 
-In der Konfiguration [des](./user-guide.md#training-window) Schulungsfensters werden Ereignis zur Konvertierung für Modellschulungen basierend auf der Häufigkeit des Auftretens Filter. Derzeit beträgt das Schulungsfenster mindestens 1 Quartal (90 Tage). Das [Lookback-Fenster](./user-guide.md#lookback-window) bietet einen Zeitraum, der angibt, wie viele Tage vor dem Konversions-Ereignis-Touchpoints im Zusammenhang mit diesem Konversions-Ereignis eingeschlossen werden sollten. Diese beiden Konzepte bestimmen zusammen die Menge der Eingabedaten (gemessen nach Tagen), die für eine Anwendung erforderlich sind.
+In der Konfiguration [des](./user-guide.md#training-window) Schulungsfensters werden Ereignis zur Konvertierung für Modellschulungen basierend auf der Vorkommenszeit Filter. Derzeit beträgt das Schulungsfenster mindestens 1 Quartal (90 Tage). Das [Lookback-Fenster](./user-guide.md#lookback-window) bietet einen Zeitraum, der angibt, wie viele Tage vor dem Konversions-Ereignis-Touchpoints im Zusammenhang mit diesem Konversions-Ereignis eingeschlossen werden sollten. Diese beiden Konzepte bestimmen zusammen die Menge der Eingabedaten (gemessen nach Tagen), die für eine Anwendung erforderlich sind.
 
 Standardmäßig definiert Attribution AI das Schulungsfenster als die letzten 2 Quartale (6 Monate) und das Lookback-Fenster als 56 Tage. Anders ausgedrückt, berücksichtigt das Modell alle definierten Konvertierungsmodelle, die in den letzten zwei Quartalen aufgetreten sind, und sucht nach allen Touchpoints, die innerhalb von 56 Tagen vor dem/den zugehörigen Konversions-Ereignissen aufgetreten sind.
 
@@ -164,7 +164,7 @@ Attribution AI unterstützt zwei Kategorien von Zuordnungswerten, algorithmische
 
 Attribution AI produziert zwei verschiedene Arten von algorithmischen Ergebnissen, inkrementell und beeinflusst. Ein beeinflusster Wert ist der Anteil der Konversion, für die jeder Marketing-Touchpoint verantwortlich ist. Ein inkrementelles Ergebnis ist der Betrag der direkt durch den Marketing-Touchpoint verursachten marginalen Auswirkungen. Der Hauptunterschied zwischen dem inkrementellen Ergebnis und dem beeinflussten Ergebnis besteht darin, dass das inkrementelle Ergebnis den Basiseffekt berücksichtigt. Es wird nicht davon ausgegangen, dass eine Konversion ausschließlich durch die vorherigen Marketing-Touchpoints verursacht wird.
 
-Im Folgenden finden Sie ein Beispiel für die Ausgabe eines Attribution AI-Schemas in der Benutzeroberfläche der Adobe Experience Platform:
+Im Folgenden finden Sie ein Beispiel für die Ausgabe eines Attribution AI-Schemas in der Adobe Experience Platform-Benutzeroberfläche:
 
 ![](./images/input-output/schema_screenshot.png)
 
