@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Anbinden an PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 71%
@@ -68,7 +68,9 @@ Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
 
 ![Bild](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]: Verwenden Sie auf einem PC einen Texteditor, um in der Zeichenfolge des Befehls die Zeilenumbrüche zu entfernen, und kopieren Sie dann die Zeichenfolge.
+>[!IMPORTANT]
+>
+>Verwenden Sie auf einem PC einen Texteditor, um in der Zeichenfolge des Befehls die Zeilenumbrüche zu entfernen, und kopieren Sie dann die Zeichenfolge.
 
 Fügen Sie die Befehlszeichenfolge in das Fenster eines Terminals bzw. einer Eingabeaufforderung ein und drücken Sie die Eingabetaste.
 
