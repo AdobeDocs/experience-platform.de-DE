@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Batch-Connector für eine Cloud-Datenspeicherung in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 5%
@@ -115,7 +115,9 @@ Geben Sie Werte für den Zeitplan ein und wählen Sie **[!UICONTROL Weiter]**.
 
 Um eine einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die Häufigkeit aus und klicken Sie auf **[!UICONTROL Einmal]**. Sie können die Bearbeitung eines Datensatzes für eine einmalige Erfassung der Häufigkeit fortsetzen, solange der Beginn in der Zukunft verbleibt. Nach Ablauf des Beginns kann der Wert für die einmalige Häufigkeit nicht mehr bearbeitet werden.
 
->[!TIP] **[!UICONTROL Intervall]** und **[!UICONTROL Aufstockung]** sind während einer einmaligen Erfassung nicht sichtbar.
+>[!TIP]
+>
+>**[!UICONTROL Intervall]** und **[!UICONTROL Aufstockung]** sind während einer einmaligen Erfassung nicht sichtbar.
 
 Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]**.
 
