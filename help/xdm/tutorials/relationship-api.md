@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beziehung zwischen zwei Schemas mithilfe der Schema Registry-API definieren
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 47%
@@ -38,7 +38,9 @@ Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert
 
 Schemabeziehungen werden durch ein **Quellschema** mit einem Feld dargestellt, das auf ein anderes Feld innerhalb eines **Zielschemas** verweist. In the steps that follow, &quot;[!DNL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
 
->[!IMPORTANT] Um eine Beziehung herzustellen, müssen beide Schema über definierte primäre Identitäten verfügen und für [!DNL Real-time Customer Profile]die sie aktiviert werden. Informationen zum Konfigurieren Ihrer Schema finden Sie im Abschnitt zum [Aktivieren eines Schemas für die Verwendung in Profil](./create-schema-api.md#profile) im Lernprogramm zur Erstellung von Schemas.
+>[!IMPORTANT]
+>
+>Um eine Beziehung herzustellen, müssen beide Schema über definierte primäre Identitäten verfügen und für [!DNL Real-time Customer Profile]die sie aktiviert werden. Informationen zum Konfigurieren Ihrer Schema finden Sie im Abschnitt zum [Aktivieren eines Schemas für die Verwendung in Profil](./create-schema-api.md#profile) im Lernprogramm zur Erstellung von Schemas.
 
 Um eine Beziehung zwischen zwei Schemas festzulegen, müssen Sie sich zunächst die `$id`-Werte für beide Schemas verschaffen. If you know the display names (`title`) of the schemas, you can find their `$id` values by making a GET request to the `/tenant/schemas` endpoint in the [!DNL Schema Registry] API.
 
@@ -116,7 +118,9 @@ Within the [!DNL Schema Registry], relationship descriptors work similarly to fo
 
 In diesem Lernprogramm enthält das Ziel-Schema &quot;[!DNL Hotels]&quot;ein `email` Feld, das als primäre Identität des Schemas dient und daher auch als Referenzfeld fungiert. Das Quellfeld &quot;[!DNL Loyalty Members]&quot;verfügt jedoch nicht über ein dediziertes Schema, das als Referenz verwendet werden soll, und muss eine neue Mischung erhalten, die dem Schema ein neues Feld hinzufügt: `favoriteHotel`.
 
->[!NOTE] Wenn Ihr Quellfeld bereits über ein dediziertes Schema verfügt, das Sie als Referenzfeld verwenden möchten, können Sie den Schritt zum [Erstellen eines Referenzdeskriptors](#reference-identity)überspringen.
+>[!NOTE]
+>
+>Wenn Ihr Quellfeld bereits über ein dediziertes Schema verfügt, das Sie als Referenzfeld verwenden möchten, können Sie den Schritt zum [Erstellen eines Referenzdeskriptors](#reference-identity)überspringen.
 
 ### Neues Mixin erstellen
 
