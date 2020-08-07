@@ -4,20 +4,26 @@ seo-title: Adobe Experience Platform Web SDK – Installieren des SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 translation-type: tm+mt
-source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
+source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 70%
+source-wordcount: '623'
+ht-degree: 66%
 
 ---
 
 
 # Installieren des SDK {#installing-the-sdk}
 
-Die Adobe Experience Platform [!DNL Web SDK] steht Ihnen in einem Content Versand-Netzwerk (CDN) zur Verfügung. Sie können auf diese Datei verweisen oder sie herunterladen und in Ihrer eigenen Infrastruktur hosten. Es ist in einer minimierten und nicht-minimierten Version verfügbar. Die nicht minimierte Version ist hilfreich zum Debugging.
+Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK ist [Launch](http://launch.adobe.com/). Search for the `AEP Web SDK` in the extensions catalog, install then configure the extension.
 
-* Minimierte Version: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* Nicht minimierte Version: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+Das AEP Web SDK steht Ihnen auch auf einem CDN zur Verfügung. You can reference this file or download it and host it on your own infrastructure. It is available in a minified and non-minified version. The non-minified version is helpful for debugging purposes.
+
+URL-Struktur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR metal.js für die nicht minimierte Version.
+
+Beispiel:
+
+* Minimiert: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Nicht minimiert: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Code hinzufügen {#adding-the-code}
 
