@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Exemplarische Vorgehensweise zum Erstellen und Veröffentlichen eines maschinellen Lernmodells
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 2%
@@ -56,7 +56,7 @@ Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalis
 
 ### Daten und Schemas
 
-1. Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com/) an und klicken Sie auf **[!UICONTROL Datasets]** , um alle vorhandenen Datensätze Liste, und wählen Sie den Datensatz aus, den Sie untersuchen möchten. In diesem Fall ist der [!DNL Analytics] Datensatz **Golden Data Set postValues**.
+1. Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com/) an und klicken Sie auf &quot; **[!UICONTROL Datasets]** &quot;, um alle vorhandenen Datensätze Liste, und wählen Sie den Datensatz aus, den Sie untersuchen möchten. In diesem Fall ist der [!DNL Analytics] Datensatz **Golden Data Set postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. Wählen Sie oben rechts die Option &quot; **[!UICONTROL Vorschau-Datensatz]** &quot;, um die Musterdatensätze zu prüfen, und klicken Sie dann auf **[!UICONTROL Schließen]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -117,7 +117,9 @@ Sie können auf den Abschluss des Schulungslaufs warten oder im folgenden Abschn
 
    Hyperparameter können nicht erlernt werden, daher müssen sie vor Schulungsdurchläufen zugewiesen werden. Die Anpassung von Hyperparametern kann die Genauigkeit des eingeübten Modells ändern. Da die Optimierung eines Modells ein iterativer Prozess ist, kann es erforderlich sein, dass mehrere Schulungen durchgeführt werden, bevor eine zufriedenstellende Bewertung erreicht wird.
 
-   >[!TIP] Setzen Sie **[!UICONTROL num_recommendations]** auf 10.
+   >[!TIP]
+   >
+   >Setzen Sie **[!UICONTROL num_recommendations]** auf 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Ein zusätzlicher Datenpunkt wird auf dem Modellbewertungsdiagramm angezeigt, sobald der neue Schulungslauf abgeschlossen ist. Dies kann bis zu mehreren Minuten dauern.
