@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mit Streaming-Zielen verbinden und Daten aktivieren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1809'
 ht-degree: 61%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 61%
 >
 >Die [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] Ziele in Adobe Echtzeit-CDP sind derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
 
-In diesem Lernprogramm wird gezeigt, wie Sie mit API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platformen herstellen, eine Verbindung zu einem Streaming Cloud-Datenspeicherung-Ziel herstellen ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) - oder [Azurblauer Ereignis-Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten zu Ihrem neu erstellten Ziel aktivieren können.
+Dieses Lernprogramm zeigt, wie Sie mit API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, eine Verbindung zu einem Streaming Cloud-Datenspeicherung-Ziel herstellen ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) - oder [Azurblauer Ereignis-Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), einen Datenfluss zu Ihrem neu erstellten Ziel erstellen und Daten zu Ihrem neu erstellten Ziel aktivieren können.
 
 Dieses Lernprogramm verwendet das [!DNL Amazon Kinesis] Ziel in allen Beispielen, aber die Schritte sind für [!DNL Azure Event Hubs]identisch.
 
-![Übersicht - Schritte zum Erstellen eines Streaming-Ziels und Aktivieren von Segmenten](/help/rtcdp/destinations/assets/flow-prelim.png)
+![Overview - the steps to create a streaming destination and activate segments](/help/rtcdp/destinations/assets/flow-prelim.png)
 
 If you prefer to use the user interface in Adobe&#39;s Real-time CDP to connect to a destination and activate data, see the [Connect a destination](../../rtcdp/destinations/connect-destination.md) and [Activate profiles and segments to a destination](../../rtcdp/destinations/activate-destinations.md) tutorials.
 
@@ -59,7 +59,8 @@ Ressourcen in Experience Platform lassen sich in spezifischen virtuellen Sandbox
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NHinweis]
+>[!NOTE]
+>
 >Weitere Informationen zu Sandboxes in Experience Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
@@ -214,7 +215,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstel
 
 ![Übersicht über die Zielschritte – Schritt 3](/help/rtcdp/destinations/assets/step3-create-streaming-destination-api.png)
 
-In diesem Schritt richten Sie eine Verbindung zu Ihrem gewünschten Streaming-Ziel ein. Das umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
+In this step, you are setting up a connection to your desired streaming destination. Das umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
 
 1. Zunächst müssen Sie einen Aufruf ausführen, um den Zugriff auf das Streaming-Ziel zu autorisieren, indem Sie eine Basisverbindung einrichten.
 2. Mithilfe der Kennung der Basisverbindung führen Sie dann einen weiteren Aufruf aus, mit dem Sie eine Zielverbindung erstellen. In dem Aufruf sind der Ort in Ihrem Speicherkonto, an dem die exportierten Daten bereitgestellt werden, sowie das Format der zu exportierenden Daten angegeben.
@@ -265,7 +266,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{SECRET_KEY}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Ihr Geheimschlüssel für Ihre Amazon Kinesis Datenspeicherung Position.
 * `{REGION}`: *Für[!DNL Amazon Kinesis]Verbindungen.* Die Region in Ihrem [!DNL Amazon Kinesis] Konto, in der CDP-Daten in Echtzeit von der Adobe gestreamt werden.
 * `{SAS_KEY_NAME}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie den Namen Ihres SAS-Schlüssels ein. Informationen zur Authentifizierung mit [!DNL Azure Event Hubs] SAS-Schlüsseln finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{SAS_KEY}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie Ihren SAS-Schlüssel ein. Informationen zur Authentifizierung mit [!DNL Azure Event Hubs] SAS-Schlüsseln finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* `{SAS_KEY}`: *For[!DNL Azure Event Hubs]connections.* Fill in your SAS key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * `{EVENT_HUB_NAMESPACE}`: *Für[!DNL Azure Event Hubs]Verbindungen.* Geben Sie den [!DNL Azure Event Hubs] Namensraum ein, in dem die Adobe Echtzeit-CDP Ihre Daten streamen soll. Weitere Informationen finden Sie unter Ereignis-Hubs-Namensraum [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) erstellen in der [!DNL Microsoft] Dokumentation.
 
 **Antwort**
@@ -331,7 +332,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 }
 ```
 
-## Datenfluss erstellen
+## Create a data flow
 
 ![Übersicht über die Zielschritte – Schritt 4](/help/rtcdp/destinations/assets/step4-create-streaming-destination-api.png)
 
@@ -376,7 +377,7 @@ curl -X POST \
 
 * `{FLOW_SPEC_ID}`: Die Flussspec-ID für Profil-basierte Ziele lautet `71471eba-b620-49e4-90fd-23f1fa0174d8`. Verwenden Sie diesen Wert im Aufruf.
 * `{SOURCE_CONNECTION_ID}`: Verwenden Sie die Quellverbindungs-ID, die Sie im Schritt [Verbindung zu Ihren Experience Platform-Daten herstellen](#connect-to-your-experience-platform-data) erhalten haben.
-* `{TARGET_CONNECTION_ID}`: Verwenden Sie die Zielgruppe-Verbindungs-ID, die Sie im Schritt [Verbinden mit Streaming-Ziel](#connect-to-streaming-destination)erhalten haben.
+* `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to streaming destination](#connect-to-streaming-destination).
 
 **Antwort**
 
@@ -551,7 +552,7 @@ Die zurückgegebene Antwort sollte im `transformations`-Parameter die Segmente u
 
 >[!IMPORTANT]
 >
-> Zusätzlich zu den Segmenten und Segmenten im Schritt Daten an Ihr neues Ziel [aktivieren](#activate-data), werden die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] enthalten auch Informationen zur Identitätskarte. Dies stellt die Identitäten der exportierten Profil dar (z. B. [ECID](https://docs.adobe.com/content/help/de-DE/id-service/using/intro/id-request.html), mobile ID, Google-ID, E-Mail-Adresse usw.). Siehe ein Beispiel unten.
+> Zusätzlich zu den Segmenten und Segmenten im Schritt Daten an Ihr neues Ziel [aktivieren](#activate-data), werden die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] enthalten auch Informationen zur Identitätskarte. Dies stellt die Identitäten der exportierten Profil dar (z. B. [ECID](https://docs.adobe.com/content/help/de-DE/id-service/using/intro/id-request.html), mobile ID, Google-ID, E-Mail-Adresse usw.). See an example below.
 
 ```
 {
@@ -593,7 +594,7 @@ Die zurückgegebene Antwort sollte im `transformations`-Parameter die Segmente u
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie CDP in Echtzeit erfolgreich mit einem Ihrer bevorzugten Streaming-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet. Ausgehende Daten können jetzt im Ziel für Kundenanalysen oder andere Datenoperationen verwendet werden, die Sie durchführen möchten. Weiterführende Informationen finden Sie auf den folgenden Seiten:
+In diesem Lernprogramm haben Sie CDP in Echtzeit erfolgreich mit einem Ihrer bevorzugten Streaming-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. Weiterführende Informationen finden Sie auf den folgenden Seiten:
 
 * [Ziele – Übersicht](../../rtcdp/destinations/destinations-overview.md)
 * [Zielkatalog – Übersicht](../../rtcdp/destinations/destinations-catalog.md)
