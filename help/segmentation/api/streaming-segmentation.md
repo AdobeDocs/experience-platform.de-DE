@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Streaming-Segmentierung
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 43%
+source-wordcount: '1377'
+ht-degree: 42%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->Im folgenden Dokument wird erläutert, wie die Streaming-Segmentierung mithilfe der API verwendet wird. Informationen zur Verwendung der Streaming-Segmentierung mithilfe der Benutzeroberfläche finden Sie im UI-Handbuch [zur](../ui/streaming-segmentation.md)Streaming-Segmentierung.
+>Im folgenden Dokument wird erläutert, wie die Streaming-Segmentierung mithilfe der API verwendet wird. For information on using streaming segmentation using the UI, please read the [streaming segmentation UI guide](../ui/streaming-segmentation.md).
 
-Die Streaming-Segmentierung für [!DNL Adobe Experience Platform] ermöglicht es Kunden, die Segmentierung in Echtzeit durchzuführen und sich dabei auf den Datenreichtum zu konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten eingehen, [!DNL Platform]was die Planung und Ausführung von Segmentierungsaufträgen verringert. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to do segmentation in near real-time while focusing on data richness. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten eingehen, [!DNL Platform]was die Planung und Ausführung von Segmentierungsaufträgen verringert. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -26,7 +26,7 @@ Die Streaming-Segmentierung für [!DNL Adobe Experience Platform] ermöglicht es
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches Verbraucherdatenquellen-Profil in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
 - [!DNL Segmentation](../home.md): Ermöglicht das Erstellen von Segmenten und Audiencen aus Ihren [!DNL Real-time Customer Profile] Daten.
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
@@ -70,7 +70,8 @@ Damit ein Segment mithilfe der Streaming-Segmentierung bewertet werden kann, mus
 | ---------- | ------- |
 | Eingehender Treffer | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. |
 | Eingehender Treffer innerhalb eines relativen Zeitfensters | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis **innerhalb der letzten sieben Tage** verweist. |
-| Eingehender Treffer, der sich auf ein Profil bezieht | Eine Segmentdefinition, die sich auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profil-Attribute bezieht. |
+| Profile only | Eine Segmentdefinition, die nur auf ein Profil-Attribut verweist. |
+| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
 | Eingehender Treffer, der sich auf ein Profil innerhalb eines relativen Zeitfensters bezieht | Eine Segmentdefinition, die sich **innerhalb der letzten sieben Tage** auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profil-Attribute bezieht. |
 | Mehrere Ereignis, die auf ein Profil verweisen | Jede Segmentdefinition, die sich **innerhalb der letzten 24 Stunden** auf mehrere Ereignis bezieht und (optional) ein oder mehrere Profil-Attribute besitzt. |
 
@@ -79,11 +80,11 @@ Im folgenden Abschnitt werden Segmentdefinitionsbeispiele Liste, die für die St
 | Abfragetyp | Details |
 | ---------- | ------- | 
 | Eingehender Treffer innerhalb eines relativen Zeitfensters | Wenn sich die Segmentdefinition auf ein eingehendes Ereignis bezieht, das **nicht** innerhalb der **letzten sieben Tage** liegt. Zum Beispiel innerhalb der **letzten zwei Wochen**. |
-| Eingehender Treffer, der sich auf ein Profil in einem relativen Fenster bezieht | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein eingehendes Ereignis **nicht** innerhalb der **letzten sieben Tage**.</li><li>Eine Segmentdefinition, die Segmente oder Eigenschaften von Adobe Audience Manager (AAM) enthält.</li></ul> |
-| Mehrere Ereignis, die auf ein Profil verweisen | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein Ereignis, das **nicht** innerhalb **der letzten 24 Stunden** auftritt.</li><li>Eine Segmentdefinition, die Segmente oder Eigenschaften von Adobe Audience Manager (AAM) enthält.</li></ul> |
+| Eingehender Treffer, der sich auf ein Profil in einem relativen Fenster bezieht | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven-day period**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
+| Multiple events that refer to a profile | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein Ereignis, das **nicht** innerhalb **der letzten 24 Stunden** auftritt.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
 | Abfragen mit mehreren Entitäten | Abfragen mit mehreren Entitäten werden durch Streaming-Segmentierung insgesamt **nicht** unterstützt. |
 
-Darüber hinaus gelten einige Richtlinien für die Streaming-Segmentierung:
+Additionally, some guidelines apply when doing streaming segmentation:
 
 | Abfragetyp | Leitlinie |
 | ---------- | -------- |
