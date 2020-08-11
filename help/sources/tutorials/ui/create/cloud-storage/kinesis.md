@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Amazon Kinesis-Quellanschluss in der Benutzeroberfläche erstellen
+title: Create an Amazon Kinesis source connector in the UI
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '430'
 ht-degree: 17%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 17%
 # Create an [!DNL Amazon Kinesis] source connector in the UI
 
 >[!NOTE]
->Der [!DNL Amazon Kinesis] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+>The [!DNL Amazon Kinesis] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Authentifizieren eines [!DNL Amazon Kinesis] (im Folgenden &quot; [!DNL "Kinesis"]) Quell-Connectors über die [!DNL Platform] Benutzeroberfläche.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. Dieses Lernprogramm enthält Schritte zum Authentifizieren eines [!DNL Amazon Kinesis] (im Folgenden &quot; [!DNL "Kinesis"]) Quell-Connectors über die [!DNL Platform] Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -46,9 +46,9 @@ Weitere Informationen zu diesen Werten finden Sie in [diesem Kinesis-Dokument](h
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL Kinesis] Konto mit [!DNL Platform]zu verknüpfen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *Quellarbeitsbereich* zuzugreifen. Auf der Registerkarte &quot; *Katalog* &quot;werden verschiedene Quellen angezeigt, mit denen eine Verbindung hergestellt werden kann [!DNL Platform]. Jede Quelle zeigt die Anzahl der vorhandenen Konten, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *Quellarbeitsbereich* zuzugreifen. Auf der Registerkarte &quot; *Katalog* &quot;werden verschiedene Quellen angezeigt, mit denen eine Verbindung hergestellt werden kann [!DNL Platform]. Jede Quelle zeigt die Anzahl der vorhandenen Konten, die ihnen zugeordnet sind.
 
-Wählen Sie unter der Kategorie *[!UICONTROL Cloud-Datenspeicherung]* die Option **[!UICONTROL Amazon Kinesis]** und klicken Sie **auf das Pluszeichen (+)** , um einen neuen [!DNL Kinesis] Connector zu erstellen.
+Wählen Sie unter der Kategorie *[!UICONTROL Cloud-Datenspeicherung]* die Option **[!UICONTROL Amazon Kinesis]** , gefolgt von **[!UICONTROL Hinzufügen Daten]** , um einen neuen [!DNL Kinesis] Connector zu erstellen.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
@@ -56,11 +56,11 @@ Das Dialogfeld &quot; *[!UICONTROL Verbindung mit Amazon Kinesis]* herstellen&qu
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung und Ihre [!DNL Kinesis] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
+If you are using new credentials, select **[!UICONTROL New Account]**. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung und Ihre [!DNL Kinesis] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
 
 ![](../../../../images/tutorials/create/kinesis/new.png)
 
-### Vorhandenes Konto
+### Existing account
 
 Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Kinesis] Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** , um fortzufahren.
 
@@ -68,4 +68,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Kinesis] Konto, mit
 
 ## Nächste Schritte
 
-Indem Sie diesem Tutorial folgen, haben Sie eine Verbindung zu Ihrem [!DNL Kinesis] Konto [!DNL Platform]. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/streaming/cloud-storage.md)zu übertragen.
+By following this tutorial, you have connected to your [!DNL Kinesis] account to [!DNL Platform]. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/streaming/cloud-storage.md)zu übertragen.
