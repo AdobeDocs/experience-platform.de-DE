@@ -4,44 +4,55 @@ solution: Experience Platform
 title: Richtlinien
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 95%
+source-wordcount: '1472'
+ht-degree: 14%
 
 ---
 
 
-# Bewertung von Richtlinien
+# Bewertung von Richtlinien endpoints
 
 Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
 
-Standardmäßig nehmen **nur Richtlinien an der Bewertung teil, deren Status auf „AKTIVIERT“ gesetzt ist**. Sie können jedoch den Abfrageparameter `?includeDraft=true` verwenden, um „ENTWURF“-Richtlinien in die Bewertung einzubeziehen.
+By default, only policies whose status is set to `ENABLED` participate in evaluation. Sie können jedoch den Parameter &quot;Abfrage&quot;verwenden, `?includeDraft=true` um `DRAFT` Richtlinien in die Evaluierung einzubeziehen.
 
 Bewertungsanfragen können auf drei Arten gestellt werden:
 
-1. Verstößt die Aktion bei einer Reihe von Datennutzungsbezeichnungen und einer Marketing-Aktion gegen irgendwelche Richtlinien?
-1. Verstößt die Aktion bei einem oder mehreren Datensätzen und einer Marketing-Aktion gegen irgendwelche Richtlinien?
-1. Verstößt die Aktion bei einem oder mehreren Datensätzen und einer Teilmenge eines oder mehrerer Felder in jedem dieser Datensätze gegen Richtlinien?
+1. Verstößt die Aktion angesichts einer Marketingaktion und einer Reihe von Beschreibungen zur Datenverwendung gegen Richtlinien?
+1. Verstößt die Aktion angesichts einer Marketingaktion und eines oder mehrerer Datensätze gegen eine Richtlinie?
+1. Given a marketing action, one or more datasets, and a subset of one or more fields within each of those datasets, does the action violate any policies?
 
-## Bewerten von Richtlinien mithilfe von Datennutzungsbezeichnungen und einer Marketing-Aktion
+## Erste Schritte
 
-Zur Bewertung von Richtlinienverstößen auf der Grundlage von vorhandenen Datennutzungsbezeichnungen müssen Sie die Bezeichnungen angeben, die während der Anfrage vorhanden sein sollen. Dies geschieht mithilfe von Abfrageparametern, bei denen Datennutzungsbezeichnungen als kommagetrennte Liste von Werten bereitgestellt werden, wie im folgenden Beispiel gezeigt.
+The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+
+## Evaluate for policy violations using data usage labels {#labels}
+
+You can evaluate for policy violations based on the presence of a specific set of data usage labels by using the `duleLabels` query parameter in a GET request.
 
 **API-Format**
 
 ```http
-GET /marketingActions/core/{marketingActionName}/constraints?duleLabels={value1},{value2}
-GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value1},{value2}
+GET /marketingActions/core/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
+GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
 ```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action to test against a set of data usage labels. Sie können eine Liste der verfügbaren Marketingaktionen abrufen, indem Sie eine [GET an den Endpunkt](./marketing-actions.md#list)der Marketingaktionen anfordern. |
+| `{LABELS_LIST}` | Eine kommagetrennte Liste von Datenverwendungsbezeichnungen, mit denen die Marketingaktion getestet wird. Beispiel: `duleLabels=C1,C2,C3`<br><br>Beachten Sie, dass bei Beschriftungsnamen die Groß-/Kleinschreibung beachtet wird. Stellen Sie sicher, dass Sie die richtige Groß-/Kleinschreibung verwenden, wenn Sie sie im `duleLabels` Parameter auflisten. |
 
 **Anfrage**
 
-Die folgende Beispielanfrage bewertet eine Marketing-Aktion mit den Bezeichnungen C1 und C3. Beachten Sie bei der Bewertung von Richtlinien mithilfe von Datennutzungsbezeichnungen Folgendes:
-* **Bei den Datennutzungsbezeichnungen wird zwischen Groß- und Kleinschreibung unterschieden.** Die oben dargestellte Anfrage gibt eine verletzte Richtlinie zurück, während die gleiche Anfrage mit Kleinbuchstaben (z. B. `"c1,c3"`, `"C1,c3"`, `"c1,C3"`) dies nicht tut.
-* **Achten Sie auf`AND`- und`OR`-Operatoren in Ihren Richtlinienausdrücken.** In diesem Beispiel hätte die Marketing-Aktion nicht gegen diese Richtlinie verstoßen, wenn eine der Bezeichnungen (`C1` oder `C3`) in der Anfrage allein erschienen wäre. Es sind beide Bezeichnungen (`C1 AND C3`) erforderlich, um die verletzte Richtlinie zurückzugeben. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig bewerten und die Richtlinienausdrücke mit gleicher Sorgfalt definieren.
+Die folgende Beispielanfrage bewertet eine Marketing-Aktion mit den Bezeichnungen C1 und C3.
 
-```SHELL
+>[!IMPORTANT]
+>
+>Achten Sie auf `AND`- und `OR`-Operatoren in Ihren Richtlinienausdrücken. In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig bewerten und die Richtlinienausdrücke mit gleicher Sorgfalt definieren.
+
+```sh
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -52,7 +63,7 @@ curl -X GET \
 
 **Antwort**
 
-Das Antwortobjekt enthält ein `duleLabels`-Array, das mit den in der Anfrage gesendeten Bezeichnungen übereinstimmen sollte. Wenn die Durchführung der angegebenen Marketing-Aktion für die Datennutzungsbezeichnungen eine Richtlinie verletzt, enthält das `violatedPolicies`-Array die Details der betroffenen Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies`-Array leer angezeigt (`[]`).
+A successful response includes a `violatedPolicies` array, which contains the details of the policies that were violated as a result of performing the marketing action against the provided labels. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -110,29 +121,33 @@ Das Antwortobjekt enthält ein `duleLabels`-Array, das mit den in der Anfrage ge
 }
 ```
 
-## Bewerten von Richtlinien mithilfe von Datensätzen und einer Marketing-Aktion
+## Auf Richtlinienverletzungen mithilfe von Datensätzen bewerten {#datasets}
 
-Sie können auch Richtlinienverstöße bewerten, indem Sie die ID eines oder mehrerer Datensätze angeben, aus denen Datennutzungsbezeichnungen erfasst werden können. Dies erfolgt durch Ausführen einer POST-Anfrage an den Kern- oder den benutzerdefinierten `/constraints`-Endpunkt für eine Marketing-Aktion und Angeben der Datensatz-IDs innerhalb des Anfrageinhalts, wie unten dargestellt.
+Sie können anhand eines oder mehrerer Datensätze, aus denen Datenverwendungsbeschriftungen erfasst werden können, eine Bewertung auf Richtlinienverletzungen vornehmen. Dies geschieht, indem eine POST an den `/constraints` Endpunkt für eine bestimmte Marketingaktion angefordert und eine Liste der DataSet-IDs im Anforderungstext bereitgestellt wird.
 
 **API-Format**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die mit einem oder mehreren Datensätzen getestet werden soll. You can retrieve a list of available marketing actions by making a [GET request to the marketing actions endpoint](./marketing-actions.md#list). |
 
 **Anfrage**
 
-Der Anfrageinhalt enthält ein Array mit einem Objekt für jede Datensatz-ID. Da Sie einen Anfrageinhalt senden, ist die Anfragekopfzeile „Content-Type: application/json“ erforderlich, wie im folgenden Beispiel gezeigt.
+Die folgende Anforderung führt die `crossSiteTargeting` Marketingaktion für einen Satz von drei Datensätzen aus, um etwaige Richtlinienverletzungen zu bewerten.
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '[
         {
             "entityType": "dataSet",
@@ -149,13 +164,14 @@ curl -X POST \
       ]'
 ```
 
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `entityType` | Der Typ der Entität, deren ID in der Geschwistereigenschaft angegeben `entityId` ist. Derzeit ist der einzige akzeptierte Wert `dataSet`. |
+| `entityId` | The ID of a dataset to test the marketing action against. Eine Liste der Datensätze und der zugehörigen IDs können Sie erhalten, indem Sie eine GET an den `/dataSets` Endpunkt in der [!DNL Catalog Service] API anfordern. Weitere Informationen finden Sie im Handbuch zu [ [!DNL Catalog] Listenobjekten](../../catalog/api/list-objects.md) . |
+
 **Antwort**
 
-Das Antwortobjekt enthält ein `duleLabels`-Array, das eine konsolidierte Liste aller in den angegebenen Datensätzen gefundenen Bezeichnungen enthält. Diese Liste enthält Bezeichnungen auf Datensatz- und Feldebene für alle Felder im Datensatz.
-
-Die Antwort enthält außerdem ein `discoveredLabels`-Array mit Objekten für jeden Datensatz, in dem die `datasetLabels` in Bezeichnungen auf Datensatz- und Feldebene unterteilt sind. Jede Bezeichnung auf Feldebene zeigt den Pfad zum jeweiligen Feld mit dieser Bezeichnung.
-
-Wenn die angegebene Marketing-Aktion gegen eine Richtlinie verstößt, die die `duleLabels` in den Datensätzen betrifft, enthält das `violatedPolicies`-Array die Details der betroffenen Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies`-Array leer angezeigt (`[]`).
+Eine erfolgreiche Antwort beinhaltet ein `violatedPolicies` Array, das die Details der Richtlinien enthält, die bei der Durchführung der Marketingaktion gegen die bereitgestellten Datensätze verletzt wurden. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -326,27 +342,36 @@ Wenn die angegebene Marketing-Aktion gegen eine Richtlinie verstößt, die die `
 }
 ```
 
-## Bewerten von Richtlinien mithilfe von Datensätzen, Feldern und einer Marketing-Aktion
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `duleLabels` | Das Antwortobjekt enthält ein `duleLabels`-Array, das eine konsolidierte Liste aller in den angegebenen Datensätzen gefundenen Bezeichnungen enthält. Diese Liste enthält Bezeichnungen auf Datensatz- und Feldebene für alle Felder im Datensatz. |
+| `discoveredLabels` | Die Antwort enthält außerdem ein `discoveredLabels`-Array mit Objekten für jeden Datensatz, in dem die `datasetLabels` in Bezeichnungen auf Datensatz- und Feldebene unterteilt sind. Jede Bezeichnung auf Feldebene zeigt den Pfad zum jeweiligen Feld mit dieser Bezeichnung. |
 
-Zusätzlich zur Angabe einer oder mehrerer Datensatz-IDs kann auch eine Teilmenge von Feldern aus jedem Datensatz angegeben werden, die angibt, dass nur die Datennutzungsbezeichnungen für diese Felder ausgewertet werden sollten. Ähnlich wie bei der POST-Anfrage, die nur Datensätze umfasst, fügt diese Anfrage dem Anfrageinhalt spezifische Felder für jeden Datensatz hinzu.
+## Auf Richtlinienverletzungen mithilfe bestimmter Datensatzfelder bewerten {#fields}
+
+Sie können Richtlinienverletzungen anhand einer Untergruppe von Feldern aus einem oder mehreren Datensätzen auswerten, sodass nur die auf diese Felder angewendeten Datenverwendungsbeschriftungen ausgewertet werden.
 
 Beachten Sie bei der Bewertung von Richtlinien mithilfe von Datensatzfeldern Folgendes:
 
-* **Bei Feldnamen wird zwischen Groß- und Kleinschreibung unterschieden.** Bei der Bereitstellung von Feldern müssen sie genau so geschrieben werden, wie sie im Datensatz erscheinen (z. B. `firstName` vs. `firstname`).
-* **Vererbung der Datensatzbezeichnungen.** Datennutzungsbezeichnungen können auf mehreren Ebenen angewendet werden und werden nach unten vererbt. Wenn Ihre Richtlinienbewertungen nicht so zurückgegeben werden, wie Sie es sich vorgestellt haben, überprüfen Sie zusätzlich zu den auf Feldebene angewendeten Bezeichnungen die vererbten Bezeichnungen von den Datensätzen bis hin zu den Feldern.
+* **Bei Feldnamen wird zwischen Groß- und Kleinschreibung unterschieden**: Bei der Bereitstellung von Feldern müssen sie genau so geschrieben werden, wie sie im Datensatz angezeigt werden (z. B. `firstName` vs `firstname`).
+* **Vererbung** der Datenbeschriftung: Einzelne Felder in einem Datensatz übernehmen alle Bezeichnungen, die auf Datensatzebene angewendet wurden. Wenn Ihre Richtlinienbewertungen nicht erwartungsgemäß zurückgegeben werden, überprüfen Sie, ob Sie zusätzlich zu den auf Feldebene angewendeten Beschriftungen auch Beschriftungen finden, die möglicherweise von der Datensatzebene bis zu den Feldern geerbt wurden.
 
 **API-Format**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die mit einer Untergruppe von Datenfeldern getestet werden soll. Sie können eine Liste der verfügbaren Marketingaktionen abrufen, indem Sie eine [GET an den Endpunkt](./marketing-actions.md#list)der Marketingaktionen anfordern. |
 
 **Anfrage**
 
-Der Anfrageinhalt enthält ein Array mit einem Objekt für jede Datensatz-ID und die Teilmenge der Felder in diesem Datensatz, die für die Bewertung verwendet werden sollen. Da Sie einen Anfrageinhalt senden, ist die Anfragekopfzeile „Content-Type: application/json“ erforderlich, wie im folgenden Beispiel gezeigt.
+Die folgende Anforderung testet die Marketingaktion `crossSiteTargeting` für einen bestimmten Satz von Feldern, die zu drei Datensätzen gehören. Die Nutzlast ähnelt einer [Bewertungsanforderung, bei der nur Datensätze](#datasets)einbezogen wurden, und fügt für jeden Datensatz spezifische Felder hinzu, aus denen Beschriftungen gesammelt werden sollen.
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -387,13 +412,17 @@ curl -X POST \
       ]'
 ```
 
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `entityType` | Der Typ der Entität, deren ID in der Geschwistereigenschaft angegeben `entityId` ist. Derzeit ist der einzige akzeptierte Wert `dataSet`. |
+| `entityId` | Die ID eines Datensatzes, dessen Felder mit der Marketingaktion ausgewertet werden sollen. Eine Liste der Datensätze und der zugehörigen IDs können Sie erhalten, indem Sie eine GET an den `/dataSets` Endpunkt in der [!DNL Catalog Service] API anfordern. Weitere Informationen finden Sie im Handbuch zu [ [!DNL Catalog] Listenobjekten](../../catalog/api/list-objects.md) . |
+| `entityMeta.fields` | Ein Array von Pfaden zu bestimmten Feldern im Schema des Datensatzes, bereitgestellt in Form von JSON-Zeigerzeichenfolgen. Einzelheiten zur verwendeten Syntax für diese Zeichenfolgen finden Sie im Abschnitt zu [JSON-Zeiger](../../landing/api-fundamentals.md#json-pointer) im API-Grundlagenhandbuch. |
+
 **Antwort**
 
-Das Antwortobjekt enthält ein `duleLabels`-Array, das die konsolidierte Liste der in den angegebenen Feldern gefundenen Bezeichnungen enthält. Denken Sie daran, dass dies auch Datensatzbezeichnungen umfasst, da diese bis zu den Feldern vererbt werden.
+Eine erfolgreiche Antwort beinhaltet ein `violatedPolicies` Array, das die Details der Richtlinien enthält, die bei der Durchführung der Marketingaktion gegen die bereitgestellten Datensatzfelder verletzt wurden. If no policies are violated, the `violatedPolicies` array will be empty.
 
-Wenn die Durchführung der angegebenen Marketing-Aktion für die Daten in den abgegebenen Feldern eine Richtlinie verletzt, enthält das `violatedPolicies`-Array die Details der betroffenen Richtlinie (oder Richtlinien). Wenn keine Richtlinien verletzt werden, wird das `violatedPolicies`-Array leer angezeigt (`[]`).
-
-In der folgenden Antwort sehen Sie, dass die Liste der `duleLabels` jetzt kürzer ist, ebenso wie die `discoveredLabels` für jeden Datensatz, da sie nur die im Anfrageinhalt angegebenen Felder enthält. Sie werden auch feststellen, dass die zuvor verletzte Richtlinie „Targeting-Anzeigen oder Inhalte“ beide `C4 AND C6`-Bezeichnungen erforderte. Sie wird also nicht mehr verletzt und das `violatedPolicies`-Array ist leer.
+Comparing the example response below to the [response involving only datasets](#datasets), note that the list of collected labels is shorter. Die `discoveredLabels` für die einzelnen Datensätze wurden ebenfalls reduziert, da sie nur die im Anforderungstext angegebenen Felder enthalten. In addition, the previously violated policy `Targeting Ads or Content` requires both `C4 AND C6` labels to present, and is therefore no longer violated as indicated by the empty `violatedPolicies` array.
 
 ```JSON
 {
@@ -491,6 +520,166 @@ In der folgenden Antwort sehen Sie, dass die Liste der `duleLabels` jetzt kürze
     ],
     "violatedPolicies": []
 }
+```
+
+## Richtlinien stapelweise bewerten {#bulk}
+
+Mit dem `/bulk-eval` Endpunkt können Sie mehrere Evaluierungsaufträge in einem einzigen API-Aufruf ausführen.
+
+**API-Format**
+
+```http
+POST /bulk-eval
+```
+
+**Anfrage**
+
+Die Nutzlast einer Massenauswertungsanforderung sollte ein Array von Objekten sein; einen für jeden auszuführenden Bewertungsauftrag. Für Aufträge, die basierend auf Datensätzen und Feldern ausgewertet werden, muss ein `entityList` Array bereitgestellt werden. Für Aufträge, die anhand von Datenverwendungsbeschriftungen ausgewertet werden, muss ein `labels` Array bereitgestellt werden.
+
+>[!WARNING]
+>
+>If any listed evaluation job contains both an `entityList` and a `labels` array, an error will result. Wenn Sie dieselbe Marketingaktion auf Grundlage von Datensätzen und Etiketten bewerten möchten, müssen Sie für diese Marketingaktion separate Bewertungsaufträge einbeziehen.
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "labels": [
+            "C1",
+            "C2",
+            "C3"
+          ]
+        },
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "entityList": [
+            {
+              "entityType": "dataSet",
+              "entityId": "5b67f4dd9f6e710000ea9da4",
+              "entityMeta": {
+                "fields": [
+                  "address"
+                ]
+              }
+            }
+          ]
+        }
+      ]'
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `evalRef` | Der URI der Marketingaktion zum Testen von Beschriftungen oder Datensätzen auf Richtlinienverletzungen. |
+| `includeDraft` | Standardmäßig werden nur aktivierte Richtlinien an der Auswertung beteiligt. Wenn `includeDraft` dies auf `true`festgelegt ist, werden auch Richtlinien, die sich im `DRAFT` Status befinden, teilnehmen. |
+| `labels` | An array of data usage labels to test the marketing action against.<br><br>**IMPORTANT **: When using this property, an`entityList`property must NOT be included in the same object. Um dieselbe Marketingaktion mit Datensätzen und/oder Feldern auszuwerten, müssen Sie ein separates Objekt in die Anforderungsnutzlast aufnehmen, das ein`entityList`Array enthält. |
+| `entityList` | An array of datasets and (optionally) specific fields within those datasets to test the marketing action against.<br><br>**IMPORTANT **: When using this property, a`labels`property must NOT be included in the same object. To evaluate the same marketing action using specific data usage labels, you must include a separate object in the request payload that contains a`labels`array. |
+| `entityType` | Der Typ der Entität, gegen die die Marketingaktion getestet werden soll. Derzeit wird nur `dataSet` unterstützt. |
+| `entityId` | Die ID eines Datensatzes, mit dem die Marketingaktion getestet wird. |
+| `entityMeta.fields` | (Optional) Eine Liste bestimmter Felder im Datensatz, um die Marketingaktion zu testen. |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt eine Reihe von Bewertungsergebnissen zurück. einen für jeden Richtlinienbewertungsauftrag, der in der Anforderung gesendet wird.
+
+```json
+[
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "violatedPolicies": []
+    }
+  },
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2"
+      ],
+      "discoveredLabels": [
+        {
+          "entityType": "dataset",
+          "entityId": "5b67f4dd9f6e710000ea9da4",
+          "dataSetLabels": {
+            "connection": {
+              "labels": [
+
+              ]
+            },
+            "dataset": {
+              "labels": [
+                "C1",
+                "C2"
+              ]
+            },
+            "fields": []
+          }
+        }
+      ],
+      "violatedPolicies": [
+        {
+          "name": "Email Policy",
+          "status": "DRAFT",
+          "marketingActionRefs": [
+            "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting"
+          ],
+          "description": "Conditions under which we won't send marketing-based email",
+          "deny": {
+            "label": "C1",
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C1"
+              },
+              {
+                "label": "C3"
+              }
+            ]
+          },
+          "id": "76131228-7654-11e8-adc0-fa7ae01bbebc",
+          "imsOrg": "{IMS_ORG}",
+          "created": 1529696681413,
+          "createdClient": "{CLIENT_ID}",
+          "createdUser": "{USER_ID}",
+          "updated": 1529697651972,
+          "updatedClient": "{CLIENT_ID}",
+          "updatedUser": "{USER_ID}",
+          "_links": {
+            "self": {
+              "href": "./76131228-7654-11e8-adc0-fa7ae01bbebc"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
 ```
 
 ## Politikbewertung für [!DNL Real-time Customer Profile]
