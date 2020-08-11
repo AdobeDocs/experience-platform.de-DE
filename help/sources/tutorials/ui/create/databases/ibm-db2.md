@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IBM DB2-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 14%
@@ -13,12 +13,12 @@ ht-degree: 14%
 
 
 
-# IBM DB2-Quellanschluss in der Benutzeroberfläche erstellen
+# Create an IBM DB2 source connector in the UI
 
 >[!NOTE]
 > Der IBM DB2 Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines IBM DB2-Quellconnectors (im Folgenden &quot;DB2&quot;) mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines IBM DB2-Quellconnectors (im Folgenden &quot;DB2&quot;) mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -37,9 +37,9 @@ The following sections provide additional information that you will need to know
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `server` | Der Name des DB2-Servers. Sie können die Anschlussnummer nach dem durch einen Doppelpunkt getrennten Servernamen angeben. Beispiel: server:port. |
-| `database` | Der Name der DB2-Datenbank. |
-| `username` | Der Benutzername, mit dem eine Verbindung zur DB2-Datenbank hergestellt wird. |
+| `server` | Der Name des DB2-Servers. Sie können die Anschlussnummer nach dem durch einen Doppelpunkt getrennten Servernamen angeben. For example: server:port. |
+| `database` | The name of the DB2 database. |
+| `username` | The username used to connect to the DB2 database. |
 | `password` | Das Kennwort für das Benutzerkonto, das Sie für den Benutzernamen angegeben haben. |
 
 Weitere Informationen zum Einstieg finden Sie in [diesem DB2-Dokument](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
@@ -48,11 +48,11 @@ Weitere Informationen zum Einstieg finden Sie in [diesem DB2-Dokument](https://w
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues DB2-Konto für die Verbindung zu erstellen [!DNL Platform].
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option **[!UICONTROL IBM DB2]** durch Klicken **auf das Pluszeichen (+)** , um einen neuen DB2-Connector zu erstellen.
+Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot; **[!UICONTROL IBM DB2]** gefolgt von **[!UICONTROL Hinzufügen Daten]** aus, um einen neuen DB2-Connector zu erstellen.
 
 ![Katalog](../../../../images/tutorials/create/ibm-db2/catalog.png)
 
@@ -66,7 +66,7 @@ Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL N
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie das DB2-Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** , um fortzufahren.
+To connect an existing account, select the DB2 account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
 ![existing](../../../../images/tutorials/create/ibm-db2/existing.png)
 
