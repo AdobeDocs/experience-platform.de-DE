@@ -4,23 +4,27 @@ solution: Experience Platform
 title: Marketing-Aktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 3%
+source-wordcount: '681'
+ht-degree: 5%
 
 ---
 
 
-# Marketing-Aktionen
+# Endpunkt der Marketing-Aktionen
 
 A marketing action, in the context of the Adobe Experience Platform [!DNL Data Governance], is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
-Zum Arbeiten mit Marketingaktionen in der API müssen Sie den `/marketingActions` Endpunkt verwenden.
+Sie können Marketingaktionen für Ihr Unternehmen mithilfe des `/marketingActions` Endpunkts in der Policy Service-API verwalten.
 
-## Liste aller Marketingaktionen
+## Erste Schritte
 
-To view a list of all marketing actions, a GET request can be made to `/marketingActions/core` or `/marketingActions/custom` that returns all policies for the specified container.
+The API endpoints used in this guide are part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](./getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+
+## Eine Liste von Marketingaktionen abrufen {#list}
+
+Sie können eine Liste von Kern- oder benutzerspezifischen Marketingaktionen abrufen, indem Sie eine GET-Anforderung an `/marketingActions/core` bzw. `/marketingActions/custom`an diese senden.
 
 **API-Format**
 
@@ -31,9 +35,9 @@ GET /marketingActions/custom
 
 **Anfrage**
 
-Die folgende Anforderung gibt eine Liste aller benutzerdefinierten Marketingaktionen zurück, die von der IMS-Organisation definiert wurden.
+The following request retrieves a list of custom marketing actions maintained by your organization.
 
-```SHELL
+```sh
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -44,12 +48,11 @@ curl -X GET \
 
 **Antwort**
 
-Das Antwortobjekt stellt die Gesamtanzahl der Marketingaktionen im Container (`count`) bereit und das `children` Array enthält die Details zu jeder Marketingaktion, einschließlich der `name` und einer `href` für die Marketingaktion. Dieser Pfad (`_links.self.href`) wird verwendet, um das `marketingActionsRefs` Array beim [Erstellen einer Datenverwendungsrichtlinie](policies.md#create-policy)abzuschließen.
+Eine erfolgreiche Antwort gibt die Details zu jeder abgerufenen Marketingaktion zurück, einschließlich ihrer `name` und `href`. The `href` value is used to identify the marketing action when [creating a data usage policy](policies.md#create-policy).
 
-```JSON
+```json
 {
     "_page": {
-        "start": "sampleMarketingAction",
         "count": 2
     },
     "_links": {
@@ -95,20 +98,33 @@ Das Antwortobjekt stellt die Gesamtanzahl der Marketingaktionen im Container (`c
 }
 ```
 
-## Suchen Sie nach einer bestimmten Marketingaktion
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `_page.count` | The total number of marketing actions returned. |
+| `children` | Ein Array von Objekten, die die Details der abgerufenen Marketingaktionen enthalten. |
+| `name` | The name of the marketing action, which acts as its unique identifier when [looking up a specific marketing action](#lookup). |
+| `_links.self.href` | Eine URI-Referenz für die Marketingaktion, die zum Abschließen des `marketingActionsRefs` Arrays beim [Erstellen einer Datenverwendungsrichtlinie](policies.md#create-policy)verwendet werden kann. |
 
-Sie können auch eine Suchanfrage (GET) durchführen, um die Details einer bestimmten Marketingaktion Ansicht. Dies geschieht mithilfe `name` der Marketingaktion. Wenn der Name unbekannt ist, kann er mithilfe der zuvor angezeigten Listenanfrage (GET) gefunden werden.
+## Suchen Sie nach einer bestimmten Marketingaktion {#lookup}
+
+Sie können die Details einer bestimmten Marketingaktion nachschlagen, indem Sie die `name` Eigenschaft der Marketingaktion in den Pfad einer GET-Anforderung aufnehmen.
 
 **API-Format**
 
 ```http
-GET /marketingActions/core/{marketingActionName}
-GET /marketingActions/custom/{marketingActionName}
+GET /marketingActions/core/{MARKETING_ACTION_NAME}
+GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | The `name` property of the marketing action you want to look up. |
 
 **Anfrage**
 
-```SHELL
+The following request retrieves a custom marketing action named `combineData`.
+
+```sh
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -119,7 +135,7 @@ curl -X GET \
 
 **Antwort**
 
-Das Antwortobjekt enthält die Details zur Marketingaktion, einschließlich des Pfads (`_links.self.href`), der zum Verweisen auf die Marketingaktion beim Definieren einer Datenverwendungsrichtlinie (`marketingActionsRefs`) erforderlich ist.
+Das Antwortobjekt enthält die Details zur Marketingaktion, einschließlich des Pfads (`_links.self.href`), der zum Verweisen auf die Marketingaktion beim [Definieren einer Datenverwendungsrichtlinie](policies.md#create-policy) (`marketingActionsRefs`) erforderlich ist.
 
 ```JSON
 {
@@ -140,41 +156,46 @@ Das Antwortobjekt enthält die Details zur Marketingaktion, einschließlich des 
 }
 ```
 
-## Erstellen oder Aktualisieren einer Marketingaktion
+## Erstellen oder Aktualisieren einer benutzerdefinierten Marketingaktion {#create-update}
 
-Mit der [!DNL Policy Service] API können Sie Ihre eigenen Marketingaktionen definieren und bestehende aktualisieren. Die Erstellung und Aktualisierung erfolgt jeweils mit einem PUT-Vorgang, der dem Namen der Marketingaktion entspricht.
+Sie können eine neue benutzerspezifische Marketingaktion erstellen oder eine vorhandene aktualisieren, indem Sie den vorhandenen oder beabsichtigten Namen der Marketingaktion in den Pfad einer PUT-Anforderung aufnehmen.
 
 **API-Format**
 
 ```http
-PUT /marketingActions/custom/{marketingActionName}
+PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action to be created or updated. Wenn im System bereits eine Marketingaktion mit dem angegebenen Namen vorhanden ist, wird diese Marketingaktion aktualisiert. Wenn keine Marketingaktion vorhanden ist, wird eine neue Marketingaktion für den angegebenen Namen erstellt. |
 
 **Anfrage**
 
-Beachten Sie in der folgenden Anforderung, dass die `name` in der Anforderungs-Nutzlast mit der `{marketingActionName}` im API-Aufruf identisch ist. Anders als bei `id` einer Richtlinie, die schreibgeschützt und systemgeneriert ist, müssen Sie bei der Erstellung einer Marketingaktion den _beabsichtigten_ Namen der Marketingaktion angeben.
+Die folgende Anforderung erstellt eine neue Marketingaktion mit dem Namen `crossSiteTargeting`, sofern im System noch keine Marketingaktion mit demselben Namen vorhanden ist. Wenn eine `crossSiteTargeting` Marketingaktion vorhanden ist, wird diese Marketingaktion stattdessen anhand der in der Nutzlast bereitgestellten Eigenschaften aktualisiert.
 
->[!NOTE]
->
->Wenn Sie den `{marketingActionName}` im Aufruf nicht angeben, wird ein Fehler von 405 ausgegeben (Methode nicht zulässig), da Sie keine direkte PUT zum `/marketingActions/custom` Endpunkt durchführen dürfen. Wenn die `name` in der Nutzlast nicht mit der `{marketingActionName}` im Pfad übereinstimmt, erhalten Sie einen 400-Fehler (Fehlerhafte Anforderung).
-
-```SHELL
+```sh
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '{
         "name": "crossSiteTargeting",
         "description": "Perform targeting on information obtained across multiple web sites."
       }'
 ```
 
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `name` | The name of the marketing action to be created or updated. <br><br>**WICHTIG **: Diese Eigenschaft muss mit dem`{MARKETING_ACTION_NAME}`im Pfad übereinstimmen, andernfalls tritt ein HTTP-400-Fehler (Fehlerhafte Anforderung) auf. Mit anderen Worten, sobald eine Marketingaktion erstellt wurde, kann ihre`name`Eigenschaft nicht mehr geändert werden. |
+| `description` | Eine optionale Beschreibung, um weitere Kontexte für die Marketingaktion anzugeben. |
+
 **Antwort**
 
-Bei erfolgreicher Erstellung erhalten Sie einen HTTP-Status 201 (Erstellt) und der Antworttext enthält die Details der neu erstellten Marketingaktion. The `name` in the response should match what was sent in the request.
+A successful response returns the details of the marketing action. Wenn eine vorhandene Marketingaktion aktualisiert wurde, gibt die Antwort den HTTP-Status 200 (OK) zurück. Wenn eine neue Marketingaktion erstellt wurde, gibt die Antwort den HTTP-Status 201 (Erstellt) zurück.
 
 ```JSON
 {
@@ -195,23 +216,27 @@ Bei erfolgreicher Erstellung erhalten Sie einen HTTP-Status 201 (Erstellt) und d
 }
 ```
 
-## Löschen einer Marketingaktion
+## Löschen einer benutzerdefinierten Marketingaktion {#delete}
 
-Sie können Marketingaktionen löschen, indem Sie eine DELETE-Anfrage an die Stelle `{marketingActionName}` der Marketingaktion senden, die Sie entfernen möchten.
+Sie können eine benutzerspezifische Marketingaktion löschen, indem Sie deren Namen in den Pfad einer DELETE-Anforderung eintragen.
 
 >[!NOTE]
 >
->Sie können keine Marketingaktionen löschen, auf die durch vorhandene Richtlinien verwiesen wird. Der Versuch, dies zu tun, führt zu einem 400-Fehler (Fehlerhafte Anforderung) zusammen mit einer Fehlermeldung, die die `id` (oder mehrere IDs) einer Richtlinie (oder Richtlinien) enthält, die einen Verweis auf die Marketingaktion enthält, die Sie löschen möchten.
+>Marketingaktionen, die von bestehenden Richtlinien referenziert werden, können nicht gelöscht werden. Der Versuch, eine dieser Marketingaktionen zu löschen, führt zu einem HTTP-400-Fehler (Ungültige Anforderung) zusammen mit einer Meldung, die die IDs aller Richtlinien enthält, die auf die Marketingaktion verweisen.
 
 **API-Format**
 
 ```http
-DELETE /marketingActions/custom/{marketingActionName}
+DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action you want to delete. |
 
 **Anfrage**
 
-```SHELL
+```sh
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -222,6 +247,6 @@ curl -X DELETE \
 
 **Antwort**
 
-Wenn die Marketingaktion erfolgreich gelöscht wurde, ist der Antworttext mit einem HTTP-Status 200 (OK) leer.
+Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) mit einem leeren Antworttext zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie versuchen, die Marketingaktion zu suchen (GET). Sie sollten einen HTTP-Status 404 (Nicht gefunden) zusammen mit einer Fehlermeldung &quot;Nicht gefunden&quot;erhalten, da die Marketingaktion entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie versuchen, die Marketingaktion [nachzuschlagen](#look-up). Sie sollten einen HTTP 404-Fehler (nicht gefunden) erhalten, wenn die Marketingaktion aus dem System entfernt wurde.
