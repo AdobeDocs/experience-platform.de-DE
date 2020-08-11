@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform Connectoren für Datenquellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '801'
 ht-degree: 59%
 
 ---
@@ -26,7 +26,7 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 ### Adobe-Anwendungen
 
-[!DNL Experience Platform] ermöglicht die Erfassung von Daten aus anderen Anwendungen der Adobe, einschließlich Adobe Analytics, Adobe Audience Manager und [!DNL Experience Platform Launch]. Näheres hierzu finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] allows data to be ingested from other Adobe applications, including Adobe Analytics, Adobe Audience Manager, and [!DNL Experience Platform Launch]. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über den Adobe Audience Manager-Connector](connectors/adobe-applications/audience-manager.md)
 - [Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -42,11 +42,12 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 ### Cloud-Speicherplatz
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Die einzelnen Prozessschritte werden anhand der Benutzeroberfläche in den Datenquellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Die einzelnen Prozessschritte werden anhand der Benutzeroberfläche in den Datenquellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connector
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) connector
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) connector
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) connector
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) connector
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) connector
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) connector
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) connector
@@ -55,12 +56,12 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 ### CRM (Customer Relationship Management)
 
-CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden können, um die Kundentreue und -bindung zu fördern. [!DNL Experience Platform] bietet Unterstützung für die Erfassung von CRM-Daten aus [!DNL Microsoft Dynamics 365] und [!DNL Salesforce]. Näheres hierzu finden Sie in den folgenden Dokumenten:
+CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden können, um die Kundentreue und -bindung zu fördern. [!DNL Experience Platform] provides support for ingesting CRM data from [!DNL Microsoft Dynamics 365] and [!DNL Salesforce]. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [!DNL Microsoft Dynamics](connectors/crm/ms-dynamics.md) connector
 - [!DNL Salesforce](connectors/crm/salesforce.md) connector
 
-### Kundenerfolg
+### Customer Success
 
 [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Drittanbieter-Anwendungen für das Customer Success Management. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
@@ -95,13 +96,13 @@ CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden kö
 
 - [!DNL HubSpot](connectors/marketing-automation/hubspot.md) connector
 
-### Zahlungen
+### Payments
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Zahlungssystem eines Drittanbieters. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+[!DNL Experience Platform] provides support for ingesting data from a third-party payments system. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [!DNL PayPal](connectors/payments/paypal.md) connector
 
-### Protokolle
+### Protocols
 
 [!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieter-Protokollsystem. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
@@ -123,9 +124,9 @@ Weitere Informationen zu den über Admin Console erteilten Berechtigungen einsch
 
 ## Geschäftsbedingungen {#terms-and-conditions}
 
-Durch die Verwendung einer der als Beta (&quot;Beta&quot;) gekennzeichneten Quellen bestätigen Sie hiermit, dass die Betaversion ***&quot;wie besehen&quot;ohne Gewährleistung jeglicher Art*** bereitgestellt wird.
+By using any of the Sources labeled as beta (“Beta”), You hereby acknowledge that the Beta is provided ***“as is” without warranty of any kind***.
 
-Die Adobe ist nicht verpflichtet, die Betaversion beizubehalten, zu korrigieren, zu aktualisieren, zu ändern, zu ändern oder anderweitig zu unterstützen. Es wird empfohlen, Vorsicht walten zu lassen und sich nicht auf die richtige Funktionsweise oder Leistung solcher Beta- und/oder Begleitmaterialien zu verlassen. Die Beta wird als vertrauliche Informationen über die Adobe betrachtet.
+Adobe shall have no obligation to maintain, correct, update, change, modify, or otherwise support the Beta. Es wird empfohlen, Vorsicht walten zu lassen und sich nicht auf die richtige Funktionsweise oder Leistung solcher Beta- und/oder Begleitmaterialien zu verlassen. Die Beta wird als vertrauliche Informationen über die Adobe betrachtet.
 
 Jegliches &quot;Feedback&quot; (Informationen über die Beta einschließlich, aber nicht beschränkt auf Probleme oder Fehler, die Sie bei der Nutzung der Beta, Vorschläge, Verbesserungen und Empfehlungen), die Sie der Adobe zur Verfügung stellen, wird hiermit der Adobe einschließlich aller Rechte, Titel und Interesse an und an solchen Feedback zugewiesen.
 
