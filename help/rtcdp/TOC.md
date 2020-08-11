@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
+source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 89%
+source-wordcount: '443'
+ht-degree: 88%
 
 ---
 
@@ -47,6 +47,7 @@ ht-degree: 89%
          * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
          * [Google Ads-Erweiterung](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+         * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Google gtag-Erweiterung](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn Insight-Tag-Erweiterung](/help/rtcdp/destinations/linkedin-extension.md)
@@ -142,5 +143,5 @@ ht-degree: 89%
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Website-Tags mit Adobe Launch implementieren](sources/launch.md)
-* [Versionshinweise zur Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Experience Platform Release notes](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Experience Platform Glossar](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
