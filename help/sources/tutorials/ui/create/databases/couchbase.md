@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Couchbase-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 13%
@@ -17,7 +17,7 @@ ht-degree: 13%
 >[!NOTE]
 > Der [!DNL Couchbase] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Source Connectors [!DNL Adobe Experience Platform] bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Couchbase] Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
+Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Couchbase] Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -40,15 +40,15 @@ Um den [!DNL Couchbase] Quellanschluss zu authentifizieren, müssen Sie Werte f�
 
 ## Verbinden Sie Ihr [!DNL Couchbase] Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues [!DNL Couchbase] Konto für die Verbindung zu erstellen [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to create a new [!DNL Couchbase] account to connect to [!DNL Platform].
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die ihnen zugeordnet sind.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataset flows associated with them.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option **[!UICONTROL Couchbase]** durch Klicken **auf das Pluszeichen (+)** , um einen neuen [!DNL Couchbase] Connector zu erstellen.
+Wählen Sie unter der Kategorie *[!UICONTROL Datenbanken]* die Option **[!UICONTROL Couchbase]** gefolgt von **[!UICONTROL Hinzufügen Daten]** , um einen neuen [!DNL Couchbase] Connector zu erstellen.
 
-![Katalog](../../../../images/tutorials/create/couchbase/catalog.png)
+![catalog](../../../../images/tutorials/create/couchbase/catalog.png)
 
 Die Seite *[!UICONTROL Verbindung zu Couchbase]* herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
