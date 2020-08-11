@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '505'
 ht-degree: 15%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 15%
 # Create an [!DNL Azure Data Explorer] source connector in the UI
 
 >[!NOTE]
-> Der [!DNL Azure Data Explorer] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+> Der [!DNL Azure Data Explorer] Anschluss befindet sich in der Betaphase. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Azure Data Explorer] (im Folgenden &quot;[!DNL Data Explorer]&quot;) Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. This tutorial provides steps for creating an [!DNL Azure Data Explorer] (hereinafter referred to as &quot;[!DNL Data Explorer]&quot;) source connector using the [!DNL Platform] user interface.
 
 ## Erste Schritte
 
@@ -28,39 +28,39 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
 * [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine gültige [!DNL Data Explorer] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Lernprogramm zur [Konfiguration eines Datenflusses](../../dataflow/databases.md)fortfahren.
+If you already have a valid [!DNL Data Explorer] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
 
 ### Erforderliche Anmeldedaten sammeln
 
 Um auf Ihr [!DNL Data Explorer] Konto zugreifen zu können, müssen Sie die folgenden Werte angeben [!DNL Platform]:
 
-| Berechtigung | Beschreibung |
+| Credential | Beschreibung |
 | ---------- | ----------- |
 | `endpoint` | Der Endpunkt des [!DNL Data Explorer] Servers. |
 | `database` | Der Name der [!DNL Data Explorer] Datenbank. |
-| `tenant` | Die eindeutige Mandant-ID, mit der eine Verbindung zur [!DNL Data Explorer] Datenbank hergestellt wird. |
-| `servicePrincipalId` | Die Prinzipal-ID des Unique Service, mit der eine Verbindung zur Data Explorer-Datenbank hergestellt wird. |
-| `servicePrincipalKey` | Der Hauptschlüssel für den eindeutigen Dienst, mit dem eine Verbindung zur Data Explorer-Datenbank hergestellt wird. |
+| `tenant` | The unique tenant ID used to connect to the [!DNL Data Explorer] database. |
+| `servicePrincipalId` | The unique service principal ID used to connect to the Data Explorer database. |
+| `servicePrincipalKey` | The unique service principal key used to connect to the Data Explorer database. |
 
 Weitere Informationen zum Einstieg finden Sie in [diesem Data Explorer-Dokument](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 
-## Verbinden Sie Ihr [!DNL Azure Data Explorer] Konto
+## Connect your [!DNL Azure Data Explorer] account
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues [!DNL Data Explorer] Konto für die Verbindung zu erstellen [!DNL Platform].
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *Quellarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein Inbound-Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *Quellarbeitsbereich* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein Inbound-Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option &quot; **[!UICONTROL Azurblauer Data Explorer]** &quot;und klicken Sie **auf das Pluszeichen (+)** , um einen neuen Data Explorer-Connector zu erstellen.
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Azure Data Explorer]** followed by **[!UICONTROL Add data]** to create a new Data Explorer connector.
 
-![Katalog](../../../../images/tutorials/create/data-explorer/catalog.png)
+![catalog](../../../../images/tutorials/create/data-explorer/catalog.png)
 
 Die Seite &quot; *[!UICONTROL Verbindung mit einem Azurblauen Data Explorer]* &quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im angezeigten Eingabedatum einen Namen, eine optionale Beschreibung und Ihre [!DNL Data Explorer] Anmeldeinformationen für die Verbindung ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis das neue Konto eingerichtet ist.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. On the input form that appears, provide the connection with a name, an optional description, and your [!DNL Data Explorer] credentials. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis das neue Konto eingerichtet ist.
 
 ![connect](../../../../images/tutorials/create/data-explorer/new.png)
 
