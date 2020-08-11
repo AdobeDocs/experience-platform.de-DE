@@ -4,10 +4,10 @@ seo-title: Arbeitsbereich „Ziele“
 description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 seo-description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 96%
+source-wordcount: '807'
+ht-degree: 61%
 
 ---
 
@@ -22,15 +22,34 @@ Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: **[!UICONTROL 
 
 ## [!UICONTROL Katalog] {#catalog}
 
-Auf der Registerkarte **[!UICONTROL Katalog]** wird eine Liste aller von Adobe angebotenen Ziele angezeigt, an die Sie Daten senden können.
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Adobe Real-time CDP, that you can send data to.
 
-Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu suchen oder Ziele mithilfe des Steuerelements **[!UICONTROL Kategorien]** zu filtern.
+Die CDP-Benutzeroberfläche &quot;Adobe in Echtzeit&quot;bietet eine Reihe von Such- und Filteroptionen auf der Zielkatalogseite:
 
-Wählen Sie ein Ziel im Katalog aus, um die rechte Leiste zu öffnen. Hier können Sie eine Verbindung zum Ziel herstellen (**[!UICONTROL Ziel verbinden]**), vorhandene Zielverbindungen anzeigen (**[!UICONTROL Ziele durchsuchen]**) oder genauere Informationen zu den einzelnen Zielen erhalten, indem Sie die Dokumentation anzeigen (**[!UICONTROL Dokumentation anzeigen]**).
+* Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu finden.
+* Filtern Sie Ziele mithilfe des Steuerelements **[!UICONTROL Kategorien]** .
+* Toggle between **[!UICONTROL All destinations]** and **[!UICONTROL My destinations]**. Wenn &quot; **[!UICONTROL Alle Ziele]** &quot;ausgewählt ist, werden alle verfügbaren CDP-Ziele für Adoben in Echtzeit angezeigt. Wenn **[!UICONTROL Meine Ziele]** ausgewählt sind, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
+* Select to view **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]**. Informationen zum Unterschied zwischen den beiden Kategorien finden Sie unter [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md).
 
-![Optionen im Zielkatalog](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![Filtern und Suchdemo von Zielen](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-Weiterführende Informationen zu Zielkategorien sowie Informationen zu einzelnen Zielen finden Sie unter [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md).
+Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]** - oder ein **[!UICONTROL Activate]** -Steuerelement und ein sekundäres Steuerelement, das mehr Optionen aufruft. Diese sind alle nachstehend beschrieben:
+
+| Kontrolle | Beschreibung |
+---------|----------
+| [!UICONTROL Konfigurieren] | Ermöglicht Ihnen das Erstellen einer Verbindung mit dem Ziel. |
+| [!UICONTROL Aktivieren] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren. |
+| [!UICONTROL Ansichten-Konto] | Ansicht der Konten, die Sie für ein Ziel verbunden haben. |
+| [!UICONTROL Ansicht DataFlows] | View the data activation flows that exist for a destination |
+| [!UICONTROL Dokumentation zur Ansicht] | Öffnet einen Link zur Dokumentationsseite für dieses spezifische Ziel, um weitere Informationen zu erhalten und die Einrichtung zu erleichtern. |
+
+![Steuerelemente auf der Zielkarte](/help/rtcdp/destinations/assets/destination-card-options.png)
+
+Select a destination card in the catalog to open the right rail.  Hier sehen Sie eine Beschreibung des Ziels. Die rechte Leiste bietet dieselben in der obigen Tabelle beschriebenen Steuerelemente sowie eine Beschreibung des Ziels und eine Angabe der Kategorie und des Typs des Ziels.
+
+![Optionen im Zielkatalog](/help/rtcdp/destinations/assets/destination-right-rail.png)
+
+Weitere Informationen zu den Ziel-Kategorien und Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md) und in den [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md).
 
 ## [!UICONTROL Durchsuchen] {#browse}
 
