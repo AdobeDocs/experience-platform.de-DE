@@ -1,11 +1,11 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
+user-guide-title: Adobe Experience Platform Source Connectors Help
 translation-type: tm+mt
-source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
+source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 5%
 
 ---
@@ -14,38 +14,38 @@ ht-degree: 5%
 # Quellen-Connectoren {#sources}
 
 - [Übersicht über Connectoren für Datenquellen](home.md)
-- Verfügbare Quell-Connectors {#connectors}
+- Available source connectors {#connectors}
    - Adobe-Anwendungen {#adobe-applications}
       - [Der Data Connector von Analytics](connectors/adobe-applications/analytics.md)
-      - [Audience Manager-Anschluss](connectors/adobe-applications/audience-manager.md)
-      - [Connector für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
-      - Anwendungsfelder für Adoben zuordnen {#mapping}
+      - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
+      - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
+      - Mapping Adobe application fields {#mapping}
          - [Analytics-Zuordnungsfelder](connectors/adobe-applications/mapping/analytics.md)
-         - [Zuordnungsfelder für Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Zielgruppen-Mapping-Felder](connectors/adobe-applications/mapping/target.md)
+         - [Audience Manager mapping fields](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Target mapping fields](connectors/adobe-applications/mapping/target.md)
    - Werbung {#advertising}
       - [Google AdWords Connector](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
-      - [Amazon Kinesis-Anschluss](connectors/cloud-storage/kinesis.md)
-      - [Apache HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
-      - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
-      - [Azurblauch und Amazon S3-Stecker](connectors/cloud-storage/blob-s3.md)
+      - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
+      - [Apache HDFS connector](connectors/cloud-storage/hdfs.md)
+      - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
+      - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
       - [Azurblauer Ereignis-Hubs-Anschluss](connectors/cloud-storage/eventhub.md)
-      - [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
+      - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
       - [FTP- und SFTP-Anschluss](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
       - [Microsoft Dynamics Connector](connectors/crm/ms-dynamics.md)
-      - [Salesforce-Anschluss](connectors/crm/salesforce.md)
-   - Kundenerfolg {#customer-success}
+      - [Salesforce connector](connectors/crm/salesforce.md)
+   - Customer success {#customer-success}
       - [Salesforce Service Cloud Connector](connectors/customer-success/salesforce-service-cloud.md)
-      - [ServiceNow Connector](connectors/customer-success/servicenow.md)
+      - [ServiceNow connector](connectors/customer-success/servicenow.md)
    - Datenbanken {#databases}
       - [Amazon Redshift Connector](connectors/databases/redshift.md)
       - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
-      - [Azurblase-Analytics-Stecker](connectors/databases/synapse-analytics.md)
+      - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
       - [Datenspeicherung-Stecker](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
@@ -90,8 +90,8 @@ ht-degree: 5%
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/api/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/api/create/databases/data-explorer.md)
-         - [Azurblase-Analytics-Stecker](tutorials/api/create/databases/synapse-analytics.md)
-         - [Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
+         - [Blue-Synapse-Analytics-Anschluss](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Table Storage connector](tutorials/api/create/databases/ats.md)
          - [Steckverbinder](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/api/create/databases/greenplum.md)
@@ -100,24 +100,24 @@ ht-degree: 5%
          - [MariaDB-Anschluss](tutorials/api/create/databases/mariadb.md)
          - [MySQL Connector](tutorials/api/create/databases/mysql.md)
          - [Oracle Connector](tutorials/api/create/databases/oracle.md)
-         - [Phoenix-Anschluss](tutorials/api/create/databases/phoenix.md)
-         - [PostgreSQL Connector](tutorials/api/create/databases/postgres.md)
-         - [SQL Server-Anschluss](tutorials/api/create/databases/sql-server.md)
+         - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
+         - [PostgreSQL connector](tutorials/api/create/databases/postgres.md)
+         - [SQL Server connector](tutorials/api/create/databases/sql-server.md)
       - Marketing automation {#marketing-automation}
-         - [HubSpot-Anschluss](tutorials/api/create/marketing-automation/hubspot.md)
-      - Zahlungen {#payments}
-         - [PayPal-Anschluss](tutorials/api/create/payments/paypal.md)
+         - [HubSpot connector](tutorials/api/create/marketing-automation/hubspot.md)
+      - Payments {#payments}
+         - [PayPal connector](tutorials/api/create/payments/paypal.md)
       - Protokolle {#protocols}
-         - [Generischer OData Connector](tutorials/api/create/protocols/odata.md)
+         - [Generic OData connector](tutorials/api/create/protocols/odata.md)
    - Daten erkunden {#explore}
-      - [Werbedaten](tutorials/api/explore/advertising.md)
-      - [Daten zur Cloud-Datenspeicherung](tutorials/api/explore/cloud-storage.md)
-      - [CRM-Daten untersuchen](tutorials/api/explore/crm.md)
+      - [Explore advertising data](tutorials/api/explore/advertising.md)
+      - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
+      - [Explore CRM data](tutorials/api/explore/crm.md)
       - [Kundenerfolgsdaten entdecken](tutorials/api/explore/customer-success.md)
-      - [Datenbank- oder NoSQL-Daten überprüfen](tutorials/api/explore/database-nosql.md)
-      - [Marketing-Automatisierungsdaten](tutorials/api/explore/marketing-automation.md)
-      - [Zahlungsdaten überprüfen](tutorials/api/explore/payments.md)
-      - [Protokolldaten überprüfen](tutorials/api/explore/protocols.md)
+      - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+      - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
+      - [Explore payment data](tutorials/api/explore/payments.md)
+      - [Explore protocol data](tutorials/api/explore/protocols.md)
    - Datenerfassung {#collect}
       - [Erfassen von Anzeigendaten](tutorials/api/collect/advertising.md)
       - [Cloud-Datenspeicherung-Daten erfassen](tutorials/api/collect/cloud-storage.md)
@@ -144,20 +144,20 @@ ht-degree: 5%
          - [Azurblauch und Amazon S3-Stecker](tutorials/ui/create/cloud-storage/blob-s3.md)
          - [Azurblauer Ereignis-Hubs-Anschluss](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Adapterkabel für die Datenspeicherung](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [FTP- und SFTP-Anschluss](tutorials/ui/create/cloud-storage/ftp-sftp.md)
-         - [Google Cloud-Datenspeicherung-Connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
          - [Microsoft Dynamics Connector](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce-Anschluss](tutorials/ui/create/crm/salesforce.md)
       - Kundenerfolg {#customer-success}
-         - [Salesforce Service Cloud Connector](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [Salesforce Service Cloud connector](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow Connector](tutorials/ui/create/customer-success/servicenow.md)
       - Datenbanken {#databases}
-         - [Amazon Redshift Connector](tutorials/ui/create/databases/redshift.md)
+         - [Amazon Redshift connector](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/ui/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/ui/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/ui/create/databases/data-explorer.md)
-         - [Azurblase-Analytics-Stecker](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analytics connector](tutorials/ui/create/databases/synapse-analytics.md)
          - [Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
          - [Steckverbinder](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Abfrage Connector](tutorials/ui/create/databases/bigquery.md)
@@ -165,27 +165,28 @@ ht-degree: 5%
          - [HP-Vertikalanschluss](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2 Connector](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDB-Anschluss](tutorials/ui/create/databases/mariadb.md)
-         - [Microsoft SQL Server Connector](tutorials/ui/create/databases/sql-server.md)
+         - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
          - [MySQL Connector](tutorials/ui/create/databases/mysql.md)
          - [Oracle Connector](tutorials/ui/create/databases/oracle.md)
          - [Phoenix-Anschluss](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL Connector](tutorials/ui/create/databases/postgres.md)
       - Marketing automation {#marketing-automation}
-         - [HubSpot-Anschluss](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
       - Zahlungen {#payments}
          - [PayPal-Anschluss](tutorials/ui/create/payments/paypal.md)
       - Protokolle {#protocols}
          - [Generischer OData Connector](tutorials/ui/create/protocols/odata.md)
    - Konfigurieren eines Datenflusses {#dataflow}
-      - [Konfigurieren eines Datenflusses für einen Werbeanschluss](tutorials/ui/dataflow/advertising.md)
-      - [Konfigurieren eines Datenflusses für einen Batch Cloud-Datenspeicherung-Connector](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Konfigurieren eines Datenflusses für einen Streaming Cloud-Datenspeicherung-Connector](tutorials/ui/dataflow/streaming/cloud-storage.md)
-      - [Konfigurieren eines Datenflusses für einen Datenbankanschluss](tutorials/ui/dataflow/databases.md)
+      - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
+      - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage.md)
+      - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
       - [Konfigurieren eines Datenflusses für einen CRM-Connector](tutorials/ui/dataflow/crm.md)
-      - [Konfigurieren eines Datenflusses für einen Kunden-Erfolgsstecker](tutorials/ui/dataflow/customer-success.md)
-      - [Konfigurieren eines Datenflusses für einen Marketingautomatisierungsstecker](tutorials/ui/dataflow/marketing-automation.md)
-      - [Konfigurieren eines Datenflusses für einen Zahlungs-Connector](tutorials/ui/dataflow/payments.md)
-      - [Konfigurieren eines Datenflusses für einen Protokollanschluss](tutorials/ui/dataflow/protocols.md)
-   - [Aktivieren von Eingangsdaten zum Ausfüllen von Profilen](tutorials/ui/profile.md)
-   - [Überwachen von Konten und Datenflüssen](tutorials/ui/monitor.md)
-- [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+      - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
+      - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
+      - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
+      - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
+   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
+   - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
+   - [Delete dataflows](tutorials/ui/delete.md)
+- [Platform release notes](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
