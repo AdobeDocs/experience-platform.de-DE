@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Azure Data Lake Storage Gen2 über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '493'
 ht-degree: 17%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 17%
 
 # Create an [!DNL Azure Data Lake Storage Gen2] source connector in the UI
 
-Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Authentifizieren eines [!DNL Azure Data Lake Storage Gen2] (im Folgenden &quot;ADLS Gen2&quot;) Quellconnectors über die [!DNL Platform] Benutzeroberfläche.
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Authentifizieren eines [!DNL Azure Data Lake Storage Gen2] (im Folgenden &quot;ADLS Gen2&quot;) Quellconnectors über die [!DNL Platform] Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -44,9 +44,9 @@ Weitere Informationen zu diesen Werten finden Sie in [diesem ADLS Gen2-Dokument]
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, mit der Sie Ihr ADLS Gen2-Konto verknüpfen [!DNL Platform].
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe an [!DNL Experience Platform]</a> und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Auf der Registerkarte &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, für die eingehende Basisverbindungen erstellt werden können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Auf der Registerkarte &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, für die eingehende Basisverbindungen erstellt werden können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die ihnen zugeordnet sind.
 
-Wählen Sie unter der Kategorie *[!UICONTROL Cloud-Datenspeicherung]* die Option **[!UICONTROL Azurblauer Data Lake Gen2]** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelldokumentation der Ansicht. Um eine neue eingehende Basisverbindung zu erstellen, klicken Sie auf Quelle **[!UICONTROL verbinden]**.
+Wählen Sie unter der Kategorie *[!UICONTROL Cloud-Datenspeicherung]* die Option **[!UICONTROL Azurblauer Data Lake Gen2]** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelldokumentation der Ansicht. Um eine neue eingehende Basisverbindung zu erstellen, klicken Sie auf **[!UICONTROL Hinzufügen Daten]**.
 
 ![](../../../../images/tutorials/create/adls-gen2/catalog.png)
 
