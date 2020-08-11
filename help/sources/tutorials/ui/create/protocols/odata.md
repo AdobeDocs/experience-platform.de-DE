@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines generischen OData-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 15%
@@ -15,9 +15,9 @@ ht-degree: 15%
 # Create a [!DNL Generic OData] source connector in the UI
 
 >[!NOTE]
-> Der [!DNL Generic OData] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+> Der [!DNL Generic OData] Anschluss befindet sich in der Betaphase. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines Generischen Open Data Protocol (im Folgenden &quot;OData&quot;)-Quellconnectors über die [!DNL Platform] Benutzeroberfläche.
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines Generischen Open Data Protocol (im Folgenden &quot;OData&quot;)-Quellconnectors über die [!DNL Platform] Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -32,7 +32,7 @@ Wenn Sie bereits über eine gültige OData-Verbindung verfügen, können Sie den
 
 ### Erforderliche Anmeldedaten sammeln
 
-Für den Zugriff auf Ihr [!DNL OData] Konto in müssen Sie die folgenden Werte angeben [!DNL Platform]:
+In order to access your [!DNL OData] account in [!DNL Platform], you must provide the following values:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -40,15 +40,15 @@ Für den Zugriff auf Ihr [!DNL OData] Konto in müssen Sie die folgenden Werte a
 
 Weitere Informationen zum Einstieg finden Sie in [diesem OData-Dokument](https://www.odata.org/getting-started/basic-tutorial/).
 
-## Verbinden Sie Ihr [!DNL OData] Konto
+## Connect your [!DNL OData] account
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues [!DNL OData] Konto für die Verbindung zu erstellen [!DNL Platform].
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, für die Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie *[!UICONTROL Protokolle]* die Option **[!UICONTROL Generische OData]** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Verbindung zu erstellen, wählen Sie Quelle **[!UICONTROL verbinden]**.
+Wählen Sie unter der Kategorie *[!UICONTROL Protokolle]* die Option **[!UICONTROL Generische OData]** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Verbindung zu erstellen, wählen Sie **[!UICONTROL Hinzufügen Daten]**.
 
 ![Katalog](../../../../images/tutorials/create/odata/catalog.png)
 
