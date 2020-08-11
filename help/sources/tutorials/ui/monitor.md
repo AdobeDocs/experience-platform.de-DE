@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
+description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the Sources workspace.
 solution: Experience Platform
-title: Datenflüsse überwachen und löschen
+title: Überwachen von Konten und Datenflüssen
 topic: overview
 translation-type: tm+mt
-source-git-commit: f08ad2c9cc48c08bcdc0e278481992e8789000b5
+source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 11%
+source-wordcount: '893'
+ht-degree: 8%
 
 ---
 
 
-# Datenflüsse überwachen und löschen
+# Überwachen von Konten und Datenflüssen in der Benutzeroberfläche
 
-Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Anzeigen vorhandener Konten und Datenflüsse aus dem *[!UICONTROL Sources]* -Arbeitsbereich. Dieses Lernprogramm enthält außerdem Schritte zum Löschen von Datenflüssen aus dem *[!UICONTROL Sources]* -Arbeitsbereich.
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace.
 
 ## Erste Schritte
 
@@ -22,34 +23,30 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 - [Experience-Datenmodell (XDM)-System](../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
    - [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   - [Schema-Editor-Lernprogramm](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
+   - [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 - [Echtzeit-Kundenprofil](../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-## Konten überwachen
+## Monitor accounts
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, für die Sie Konten und Datenflüsse erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, für die Sie Konten und Datenflüsse erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
 
 Wählen Sie *[!UICONTROL Konten]* aus der oberen Kopfzeile zur Ansicht vorhandener Konten.
 
-![Katalog](../../images/tutorials/monitor/catalog.png)
+![Katalog](../../images/tutorials/monitor/catalog-accounts.png)
 
-Die Seiten *[!UICONTROL Konten]* werden angezeigt. Auf dieser Seite finden Sie eine Liste von anzeigbaren Konten, einschließlich Informationen zu deren Quelle, Benutzername, Anzahl der Datenflüsse und Erstellungsdatum.
+The *[!UICONTROL Accounts]* pages appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
 
-Wählen Sie das Trichtersymbol oben links aus, um das Sortierfenster zu starten.
+Select the funnel icon on the top left to launch the sort window.
 
-![Konten](../../images/tutorials/monitor/accounts-list.png)
+![accounts](../../images/tutorials/monitor/accounts-list.png)
 
 Über das Sortierfeld können Sie auf Konten aus einer bestimmten Quelle zugreifen. Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, und wählen Sie das Konto in der Liste auf der rechten Seite aus.
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-Auf der Seite &quot; *[!UICONTROL Konten]* &quot;können Sie eine Liste der vorhandenen Datenflüsse, die mit dem Konto, auf das Sie zugegriffen haben, verknüpft sind, Ansicht haben. Wählen Sie den zu Ansicht Datenfluss aus.
+Auf der Seite &quot; *[!UICONTROL Konten]* &quot;können Sie eine Liste mit vorhandenen Datenflüssen oder Zielgruppen-Datensätzen, die mit dem Konto, auf das Sie zugegriffen haben, verknüpft sind, Ansicht haben.
 
-![accounts-page](../../images/tutorials/monitor/dataflows.png)
-
-Der Bildschirm &quot; *[!UICONTROL Dataflow-Aktivität]* &quot;wird angezeigt. Diese Seite zeigt die Rate der Nachrichten an, die in Form eines Diagramms konsumiert werden.
-
-![dataset-flow-Aktivität](../../images/tutorials/monitor/dataflow-activity.png)
+![Datenflüsse](../../images/tutorials/monitor/dataflows.png)
 
 ## Überwachen von Datenflüssen
 
@@ -65,41 +62,57 @@ Das Sortierfeld wird angezeigt. Wählen Sie im Bildlaufmenü die Quelle aus, auf
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-Der Bildschirm &quot; *[!UICONTROL Dataflow-Aktivität]* &quot;wird angezeigt. Diese Seite zeigt die Rate der Nachrichten an, die in Form eines Diagramms konsumiert werden.
+Auf der Seite &quot; *[!UICONTROL Dataflow-Aktivität]* &quot;finden Sie Angaben zur Anzahl der erfassten und fehlgeschlagenen Datensätze sowie Informationen zum Datenaflow-Status und zur Verarbeitungszeit. Wählen Sie das Kalendersymbol oberhalb des Datenflusses aus, um den Zeitraum Ihrer Erfassungsdatensätze anzupassen.
 
-![dataset-flow-Aktivität](../../images/tutorials/monitor/dataflow-activity.png)
+![datflow-Aktivität](../../images/tutorials/monitor/dataflow-activity.png)
+
+Der Kalender ermöglicht die Ansicht der verschiedenen Zeitrahmen für erfasste Datensätze. You can choose to select one of the two pre-set options *[!UICONTROL Last 7 days]* or *[!UICONTROL Last 30 days]*. Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
+
+![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
+
+Standardmäßig wird in der Aktivität *[!UICONTROL &quot;]* Dataflow&quot;das Bedienfeld &quot; *[!UICONTROL Eigenschaften]* &quot;angezeigt, das mit dem Datenflug verknüpft ist. Wählen Sie den Fluss aus, der von der Liste ausgeführt wird, um die zugehörigen Metadaten einschließlich Informationen zur eindeutigen Ausführen-ID anzuzeigen.
+
+Wählen Sie &quot; **[!UICONTROL Datenaflow-Run-Beginn]** &quot;aus, um auf die *[!UICONTROL Datenaflow-Übersicht]* zuzugreifen.
+
+![runs](../../images/tutorials/monitor/run-metadata.png)
+
+The *[!UICONTROL Dataflow run overview]* displays information on the dataflow including its metadata, *[!UICONTROL Partial ingestion]* status, and assigned *[!UICONTROL Error threshold]*. The upper header also includes an *[!UICONTROL Error summary]*. Die *[!UICONTROL Fehlerzusammenfassung]* enthält den spezifischen Fehler der obersten Ebene, der anzeigt, in welchem Schritt beim Erfassungsvorgang ein Fehler aufgetreten ist.
+
+![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
+
+In der folgenden Tabelle finden Sie Fehlercodes, die in der *[!UICONTROL Fehlerzusammenfassung]* angezeigt werden können.
+
+| Error code | Fehlermeldung |
+| ---------- | ----------- |
+| `CONNECTOR-1001-500` | &quot;Bei der Aktivität zum Kopieren ist ein Problem aufgetreten.&quot; |
+| `CONNECTOR-2001-500` | &quot;Beim Kopieren der Experience Platform in den Datensatz ist ein Problem aufgetreten.&quot; |
+| `CONNECTOR-3001-500` | &quot;Beim Flow-Provider ist beim Erstellen des Stapels mit der Massen-Erfassungsschnittstelle ein Problem aufgetreten.&quot; |
+
+Die untere Hälfte des Bildschirms enthält Informationen zu *[!UICONTROL Dataflow-Ausführungsfehlern]*. Von hier aus können Sie auch die erfassten Dateien Ansicht, die Fehlerdiagnose für Vorschau und Download durchführen oder das Dateimanifest herunterladen.
+
+Im Abschnitt &quot; *[!UICONTROL Datenflussausführungsfehler]* &quot;werden der *[!UICONTROL Fehlercode]*, die Anzahl der fehlgeschlagenen Datensätze und die Informationen zum Fehler angezeigt.
+
+Wählen Sie **[!UICONTROL Fehlerdiagnose]** für Vorschauen aus, um weitere Informationen zum Erfassungsfehler anzuzeigen.
+
+![Datenflusslauffehler](../../images/tutorials/monitor/dataflow-run-errors.png)
+
+The *[!UICONTROL Error diagnostics preview]* panel appears. This screen displays specific information regarding the ingestion failure, including the *[!UICONTROL File name]*, *[!UICONTROL Error code]*, the name of the column in which the error occurred, and a description of the error.
+
+Dieser Abschnitt enthält auch eine Vorschau der Spalte, die den Fehler enthält.
+
+> [!IMPORTANT] Zur Aktivierung der *[!UICONTROL Fehlerdiagnose-Vorschau]* müssen Sie beim Konfigurieren eines Datenflusses die *[!UICONTROL teilweise Erfassung]* und *[!UICONTROL Fehlerdiagnose]* aktivieren. Dadurch kann das System alle während der Ausführung erfassten Datensätze überprüfen.
+
+![Preview-error-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
+
+After previewing the errors, you can select **[!UICONTROL Download]** from within the *[UICONTROL dataflow runs overview]* panel to access full error diagnostics and download the file manifest. See the documents on [error diagnostics](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) and [downloading metadata](../../../ingestion/batch-ingestion/partial.md#download-metadata) for more information.
+
+![Preview-error-diagnostics](../../images/tutorials/monitor/download.png)
 
 Weitere Informationen zur Überwachung von Datenflüssen und zur Erfassung finden Sie im Lernprogramm zur [Überwachung von Streaming-Datenflüssen](../../../ingestion/quality/monitor-data-flows.md).
 
-## Löschen eines Datenflusses
-
-Sie können Datenflüsse löschen, die falsch erstellt wurden oder nicht mehr benötigt werden, indem Sie auf den Datenflug-Bildschirm zugreifen. Suchen Sie den zu löschenden Datenfluss mithilfe des Sortierungstrichtersymbols und wählen Sie den Datenfluss aus, um das **[!UICONTROL Eigenschaftenbedienfeld]** zu öffnen.
-
-Um einen Datendurchlauf zu löschen, wählen Sie oben rechts in den Eigenschaften die Option &quot; **[!UICONTROL Löschen]** &quot;aus.
-
-![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
-
-Eine letzte Bestätigungsmeldung wird angezeigt. Wählen Sie **[!UICONTROL Löschen]** zur Bestätigung.
-
-![verify-delete](../../images/tutorials/monitor/confirm-delete.png)
-
-Nach einigen Augenblicken wird am unteren Bildschirmrand ein grünes Bestätigungsfeld angezeigt, um eine erfolgreiche Löschung zu bestätigen.
-
-![delete-success](../../images/tutorials/monitor/deletion-confirmed.png)
-
-Alternativ können Sie einen Datenflug auch aus dem Bildschirm &quot; *[!UICONTROL Konten]* &quot;löschen. Suchen Sie das Konto, auf das Sie zugreifen möchten, mithilfe des Sortierungstrichtersymbols und wählen Sie das Konto in der Liste aus.
-
-![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
-
-Die Seite &quot; *[!UICONTROL Konten]* &quot;wird angezeigt. Wählen Sie den zu löschenden Datenfluss aus und wählen Sie dann im Eigenschaftenbedienfeld die Option &quot; **[!UICONTROL Löschen]** &quot;, um den Prozess abzuschließen.
-
-![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
-
-Führen Sie die oben genannten Bestätigungsschritte aus, um den Vorgang abzuschließen.
-
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie erfolgreich auf vorhandene Konten und Datenflüsse im *[!UICONTROL Sources]* -Arbeitsbereich zugegriffen. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+By following this tutorial, you have successfully accessed existing accounts and dataflows from the *[!UICONTROL Sources]* workspace. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../profile/home.md)
 - [Übersicht über den Data Science Workspace](../../../data-science-workspace/home.md)
