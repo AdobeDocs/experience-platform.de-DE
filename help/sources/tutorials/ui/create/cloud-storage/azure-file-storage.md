@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Azurblase-Datenspeicherung-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 15%
@@ -15,9 +15,9 @@ ht-degree: 15%
 # Create an [!DNL Azure File Storage] source connector in the UI
 
 >[!NOTE]
->Der [!DNL Azure File Storage] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+>The [!DNL Azure File Storage] connector is in beta. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Authentifizieren eines [!DNL Azure File Storage] Quell-Connectors über die [!DNL Platform] Benutzeroberfläche beschrieben.
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Authentifizieren eines [!DNL Azure File Storage] Quell-Connectors über die [!DNL Platform] Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -38,19 +38,19 @@ Um den [!DNL Azure File Storage] Quellanschluss zu authentifizieren, müssen Sie
 | ---------- | ----------- |
 | `host` | Der Endpunkt der [!DNL Azure File Storage] Instanz, auf die Sie zugreifen. |
 | `userId` | Der Benutzer mit ausreichendem Zugriff auf den [!DNL Azure File Storage] Endpunkt. |
-| `password` | Der [!DNL Azure File Storage] Zugriffsschlüssel. |
+| `password` | The [!DNL Azure File Storage] access key. |
 
-Weitere Informationen zu den ersten Schritten finden Sie in [diesem Dokument](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)der Azurblauen Datei-Datenspeicherung.
+For more information about getting started refer to [this Azure File Storage document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
-## Verbinden Sie Ihr [!DNL Azure File Storage] Konto
+## Connect your [!DNL Azure File Storage] account
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues [!DNL Azure File Storage] Konto für die Verbindung zu erstellen [!DNL Platform].
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die mit ihnen verbunden sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option &quot; **[!UICONTROL Azurblaue Dateidatei-Datenspeicherung]** &quot;aus und klicken Sie **auf das Pluszeichen (+)** , um einen neuen Azurblase-Datenspeicherung-Connector zu erstellen.
+Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option &quot; **[!UICONTROL Azurblaue Datenspeicherung]** der Datei&quot;gefolgt von **[!UICONTROL Hinzufügen Daten]** , um einen neuen Azurblasen-Datenspeicherung-Connector zu erstellen.
 
 ![Katalog](../../../../images/tutorials/create/azure-file-storage/catalog.png)
 
