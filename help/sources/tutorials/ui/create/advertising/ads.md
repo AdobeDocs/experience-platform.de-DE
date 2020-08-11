@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Google AdWords-Quell-Connectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 14%
@@ -15,9 +15,9 @@ ht-degree: 14%
 # Create a [!DNL Google AdWords] source connector in the UI
 
 >[!NOTE]
->Der [!DNL Google AdWords] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+>Der [!DNL Google AdWords] Anschluss befindet sich in der Betaphase. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Quellschnittstellen in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines [!DNL Google AdWords] Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Google AdWords] source connector using the [!DNL Platform] user interface.
 
 ## Erste Schritte
 
@@ -48,17 +48,17 @@ Weitere Informationen zu den ersten Schritten finden Sie in diesem [Google AdWor
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, mit der Sie Ihr [!DNL Google AdWords] Konto verknüpfen [!DNL Platform].
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Quellen]** , um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
 
-Wählen Sie unter der Kategorie *[!UICONTROL Werbung]* die Option **[!UICONTROL Google AdWords]** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Basisverbindung zu erstellen, wählen Sie &quot; **[!UICONTROL Connect source]**&quot;aus.
+Wählen Sie unter der Kategorie *[!UICONTROL Werbung]* die Option **[!UICONTROL Google AdWords]** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um eine neue eingehende Basisverbindung zu erstellen, wählen Sie **[!UICONTROL Hinzufügen Daten]**.
 
 ![Katalog](../../../../images/tutorials/create/ads/catalog.png)
 
-Die Seite *[!UICONTROL Verbindung zu Google AdWords]* herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+The *[!UICONTROL Connect to Google AdWords]* page appears. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im eingeblendeten Eingabebild einen Namen, eine optionale Beschreibung und Ihre [!DNL Google AdWords] Anmeldeinformationen für die Basisverbindung ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. On the input form that appears, provide the base connection with a name, an optional description, and your [!DNL Google AdWords] credentials. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
 
 ![connect](../../../../images/tutorials/create/ads/connect.png)
 
@@ -70,4 +70,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Google AdWords] Kon
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem [!DNL Google AdWords] Konto aufgebaut. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datenbogen [konfigurieren, um Werbedaten in Plattform](../../dataflow/advertising.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem [!DNL Google AdWords] Konto aufgebaut. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into Platform](../../dataflow/advertising.md).
