@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 13%
@@ -14,29 +14,29 @@ ht-degree: 13%
 
 # Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche
 
-Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen von Quell-Connectors für Adobe Audience Manager, um mithilfe der Benutzeroberfläche Consumer Experience Ereignis-Daten in Platform einzubringen.
+Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen von Quell-Connectors für Adobe Audience Manager, um Verbrauchererlebnis-Ereignis-Daten über die Benutzeroberfläche in Platform einzubringen.
 
 ## Erstellen einer Quellverbindung mit Adobe Audience Manager
 
-Melden Sie sich bei <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> an und wählen Sie dann in der linken Navigationsleiste **Quellen** , um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden verschiedene Quellen angezeigt, mit denen Sie Quellverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden verschiedene Quellen angezeigt, mit denen Sie Quellverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind.
 
 Wählen Sie unter der Kategorie *Adobe Applications* die Option **Adobe Audience Manager** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zur Ansicht der Dokumentation oder zur Verbindung mit der Quelle.
 
-Um einen neuen Quell-Connector für Adobe Audience Manager zu erstellen, klicken Sie auf Quelle **verbinden**.
+To create a new source connector for Adobe Audience Manager, click **Add data**.
 
-![](../../../../images/tutorials/create/aam/aam_catalog.png)
+![](../../../../images/tutorials/create/aam/catalog.png)
 
-Das folgende Dialogfeld wird angezeigt. Klicken Sie auf **Verbinden** , um die Verbindung zu erstellen.
+Das folgende Dialogfeld wird angezeigt. Click **Connect** to create the connection.
 
-![](../../../../images/tutorials/create/aam/aam_connect_full.png)
+![](../../../../images/tutorials/create/aam/connect_full.png)
 
-Wenn eine Quellverbindung mit Adobe Audience Manager hergestellt wird, wird die Seite *Quellcode-Aktivität* für Audience Manager-Connector angezeigt.
+If a source connection with Adobe Audience Manager is established, the *Source activity* page for Audience Manager connector be displayed.
 
-![](../../../../images/tutorials/create/aam/aam_flow.png)
+![](../../../../images/tutorials/create/aam/flow.png)
 
 Wenn Sie eingehende Daten des Audience Managers anhalten möchten, können Sie dies tun, indem Sie auf die Dataflow-Liste klicken und deren *Status* in der rechten Spalte &quot; *Eigenschaften* &quot;umschalten.
 
-![](../../../../images/tutorials/create/aam/aam_flow_disable.png)
+![](../../../../images/tutorials/create/aam/flow_disable.png)
 
 ## Nächste Schritte
 
