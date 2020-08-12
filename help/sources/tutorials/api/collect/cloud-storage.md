@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erfassen von Cloud-Datenspeicherung-Daten über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6c6bbfc39b5b17c45d5db53bbec5342430a0941a
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1680'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # Erfassen von Cloud-Datenspeicherung-Daten über Quellschnittstellen und APIs
 
-[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Cloud-Datenspeicherung eines Drittanbieters und zum Übertragen dieser Daten [!DNL Platform] über Quellschnittstellen und APIs beschrieben.
 
@@ -22,7 +22,7 @@ In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Cloud
 
 Für dieses Lernprogramm ist es erforderlich, dass Sie über eine gültige Verbindung Zugriff auf eine Cloud-Datenspeicherung eines Drittanbieters haben und Informationen über die Datei erhalten, die Sie einsetzen möchten, [!DNL Platform]einschließlich des Dateipfads und der Dateistruktur. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung einer Cloud-Datenspeicherung von Drittanbietern mithilfe der Flow Service API](../explore/cloud-storage.md) , bevor Sie dieses Lernprogramm durchführen.
 
-Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten der Adobe Experience Platform verstehen:
+This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 - [Experience-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    - [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
@@ -57,7 +57,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 Um externe Daten [!DNL Platform] über Quell-Connectors zu importieren, müssen eine Ad-hoc-XDM-Klasse und ein Schema für die Rohquellendaten erstellt werden.
 
-Um eine Ad-hoc-Klasse und ein Ad-hoc-Schema zu erstellen, führen Sie die im [Ad-hoc-Schema-Lernprogramm](../../../../xdm/tutorials/ad-hoc.md)beschriebenen Schritte aus. Beim Erstellen einer Ad-hoc-Klasse müssen alle in den Quelldaten gefundenen Felder im Anforderungstext beschrieben werden.
+Um eine Ad-hoc-Klasse und ein Ad-hoc-Schema zu erstellen, führen Sie die im [Ad-hoc-Schema-Lernprogramm](../../../../xdm/tutorials/ad-hoc.md)beschriebenen Schritte aus. When creating an ad-hoc class, all fields found in the source data must be described within the request body.
 
 Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad-hoc-Schema erstellt haben. Die eindeutige Kennung (`$id`) des Ad-hoc-Schemas ist erforderlich, um mit dem nächsten Schritt dieses Lernprogramms fortzufahren.
 
@@ -71,9 +71,9 @@ Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
 
 | Data.format | Enum-Wert |
 | ----------- | ---------- |
-| Getrennte Dateien | `delimited` |
-| JSON-Dateien | `json` |
-| Parkettdateien | `parquet` |
+| Delimited files | `delimited` |
+| JSON files | `json` |
+| Parquet files | `parquet` |
 
 Für alle **tabellenbasierten Connectors** verwenden Sie den Enum-Wert: `tabular`.
 
@@ -117,10 +117,10 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `baseConnectionId` | Die eindeutige Verbindungs-ID des Cloud-Datenspeicherung-Systems eines Drittanbieters, auf das Sie zugreifen. |
+| `baseConnectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
 | `data.schema.id` | Die ID des Ad-hoc-XDM-Schemas. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. |
-| `connectionSpec.id` | Die mit Ihrem Cloud-Datenspeicherung-System eines Drittanbieters verknüpfte Verbindungsspezifikations-ID. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix) . |
+| `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix) . |
 
 **Antwort**
 
@@ -133,11 +133,11 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
-## Zielgruppe XDM-Schema erstellen {#target}
+## Zielgruppe XDM-Schema erstellen {#target-schema}
 
-In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. Damit die Quelldaten in verwendet werden können, [!DNL Platform]muss auch ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform] Datensatz erstellt, in dem die Quelldaten enthalten sind.
+In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained.
 
-Ein Zielgruppe XDM-Schema kann erstellt werden, indem eine POST an die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)angefordert wird.
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
@@ -149,7 +149,7 @@ POST /schemaregistry/tenant/schemas
 
 **Anfrage**
 
-Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM Individual Profil-Klasse erweitert.
+The following example request creates an XDM schema that extends the XDM Individual Profile class.
 
 ```shell
 curl -X POST \
@@ -186,7 +186,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich seiner eindeutigen Kennung (`$id`) zurück. Diese ID ist in späteren Schritten erforderlich, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
+A successful response returns details of the newly created schema including its unique identifier (`$id`). This ID is required in later steps to create a target dataset, mapping, and dataflow.
 
 ```json
 {
@@ -251,7 +251,7 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
 }
 ```
 
-## Zielgruppen-Dataset erstellen
+## Create a target dataset
 
 Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)angefordert wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
 
@@ -282,11 +282,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `schemaRef.id` | Die ID des XDM-Schemas der Zielgruppe. |
+| `schemaRef.id` | The ID of the target XDM schema. |
 
 **Antwort**
 
-A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Die Zielgruppe DataSet-ID ist in späteren Schritten erforderlich, um eine Zielgruppe- und einen Datendurchlauf zu erstellen.
+A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. The target dataset ID is required in later steps to create a target connection and a dataflow.
 
 ```json
 [
@@ -294,11 +294,11 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Erstellen einer Zielgruppe-Verbindung
+## Erstellen einer Zielgruppe-Verbindung {#target-connection}
 
 Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Zielgruppe-Verbindung zu erstellen, müssen Sie die mit dem Datensee verknüpfte feste Verbindungs-spec-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe dieser Bezeichner können Sie mithilfe der [!DNL Flow Service] API eine Verbindung zur Zielgruppe herstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Mithilfe dieser Bezeichner können Sie mithilfe der [!DNL Flow Service] API eine Verbindung zur Zielgruppe herstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -589,9 +589,9 @@ Der letzte Schritt zur Erfassung von Cloud-Datenspeicherung-Daten besteht darin,
 - [Quell-Verbindungs-ID](#source)
 - [Zielgruppen-Verbindungs-ID](#target)
 - [Mapping-ID](#mapping)
-- [Dataflow-Spezifikation-ID](#specs)
+- [Dataflow specification ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
@@ -642,13 +642,13 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `flowSpec.id` | Die Flussspec-ID, die im vorherigen Schritt abgerufen wurde. |
-| `sourceConnectionIds` | Die Quell-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
-| `targetConnectionIds` | Die Zielgruppe-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
-| `transformations.params.mappingId` | Die Zuordnungs-ID, die in einem früheren Schritt abgerufen wurde. |
-| `scheduleParams.startTime` | Die Zeitdauer des Beginns für den Datendurchlauf in Sekunden. |
-| `scheduleParams.frequency` | Die auswählbaren Frequenzwerte umfassen: `once`, `minute`, `hour`, `day`oder `week`. |
-| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit für andere Frequenzwerte festgelegt ist `once` und größer oder gleich `15` sein sollte. |
+| `flowSpec.id` | Die im vorherigen Schritt abgerufene [Flussspec-ID](#specs) . |
+| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) , die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die in einem früheren Schritt abgerufene [Zielgruppe-Verbindungs-ID](#target-connection) . |
+| `transformations.params.mappingId` | Die in einem früheren Schritt abgerufene [Zuordnungs-ID](#mapping) . |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. The interval&#39;s value should be a non-zero integer. Das Intervall ist nicht erforderlich, wenn die Häufigkeit für andere Frequenzwerte festgelegt ist `once` und größer oder gleich `15` sein sollte. |
 
 **Antwort**
 
@@ -660,6 +660,10 @@ A successful response returns the ID (`id`) of the newly created dataflow.
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## Monitor your dataflow
+
+Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die durch ihn erfasst werden, um Informationen zu den Flussläufen, zum Abschlussstatus und zu Fehlern anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Lernprogramm zum [Überwachen von Datenflüssen in der API. ](../monitor.md)
 
 ## Nächste Schritte
 
@@ -674,13 +678,13 @@ Im folgenden Abschnitt werden die verschiedenen Cloud-Datenspeicherung-Quellschn
 
 ### Verbindungsspezifikation
 
-| Connector-Name | Verbindungsspezifikation |
+| Connector name | Connection spec |
 | -------------- | --------------- |
 | [!DNL Amazon S3] (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
 | [!DNL Amazon Kinesis] (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
 | [!DNL Azure Blob] (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 | [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
-| [!DNL Azure Event Hubs] (Ereignis-Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| [!DNL Azure Event Hubs] (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
 | HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
