@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform, 10. August 2020
+description: Experience Platform release notes August 10, 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
+source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '297'
 ht-degree: 33%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 33%
 
 **Releasedatum: 12. August 2020**
 
-Die neuesten Versionshinweise zur Experience Platform
+Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL-Quellen]](#sources)
@@ -30,9 +30,9 @@ Die neuesten Versionshinweise zur Experience Platform
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| VM-Verbesserungen in [!DNL JupyterLab] | Verbesserte Stabilität langlaufender [!DNL JupyterLab notebook] virtueller Maschinen. |
+| VM improvements in [!DNL JupyterLab] | Verbesserte Stabilität langlaufender [!DNL JupyterLab notebook] virtueller Maschinen. |
 
-For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] user guide](../../data-science-workspace/jupyterlab/overview.md).
+Weitere Informationen zu [!DNL JupyterLab]finden Sie im [[!DNL JupyterLab] Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md).
 
 ## Quellen {#sources}
 
@@ -44,9 +44,9 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Flusslaufüberwachung | Die Benutzer können alle Flussläufe überwachen und eine detaillierte Ansicht der einzelnen Vorgänge anzeigen, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und Metriken. Weitere Informationen finden Sie im Dokument [zum Überwachen von Datenflüssen](../../sources/tutorials/ui/monitor.md) . |
+| Flusslaufüberwachung | Die Benutzer können alle Flussläufe überwachen und eine detaillierte Ansicht der einzelnen Vorgänge anzeigen, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und Metriken. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
 | Kontoaktualisierung | Benutzer können die Anmeldeinformationen, den Namen und die Beschreibung eines vorhandenen Kontos aktualisieren, um aussagekräftigere Informationen bereitzustellen und ggf. erstellte Fehler zu berichtigen. |
 | Flusslaufbenachrichtigungen | Benutzer können Ereignis abonnieren und Webhooks registrieren, um Echtzeitbenachrichtigungen über Status, Metriken und Fehler bei der Ausführung von Textfluss zu erhalten. |
-| Verbesserungen am UI-Katalog | Aktualisierungen des Katalogbildschirms für Quellen, um den Zugriff auf primäre Aktionen ausgewählter Objekte zu erleichtern. |
+| UI catalog improvements | Aktualisierungen des Katalogbildschirms für Quellen, um den Zugriff auf primäre Aktionen ausgewählter Objekte zu erleichtern. |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
