@@ -1,12 +1,12 @@
 ---
-title: Google-Kundenübereinstimmungsziel
-seo-title: Google Customer Match Destination
-description: Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
-seo-description: Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
+title: Google Customer Match Destination
+seo-title: Google-Kundenübereinstimmungsziel
+description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
+seo-description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1517'
 ht-degree: 11%
 
 ---
@@ -31,13 +31,13 @@ Eine Sportbekleidungsmarke möchte Bestandskunden erreichen [!DNL Google Search]
 
 ### Verwendungsfall Nr. 2
 
-A prominent technology company has just released a new phone. In an effort to promote this new phone model, they are looking to drive awareness of the new features and functionality of the phone to customers who own previous models of their phones.
+Eine prominente Technologie-Firma hat gerade ein neues Handy veröffentlicht. In dem Bemühen, dieses neue Telefonmodell zu fördern, versuchen sie, das Bewusstsein für die neuen Funktionen des Telefons zu fördern, Kunden, die Inhaber früherer Modelle ihrer Telefone.
 
-To promote the release, they upload email addresses from their CRM database into Adobe Real-time CDP, using the email addresses as identifiers. Segments are created based on customers who own older phone models and sent to [!DNL Google Customer Match] so that they can target current customers, customers who own older phone models, as well as similar customers on [!DNL YouTube].
+Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in Adobe Echtzeit-CDP hoch, wobei sie die E-Mail-Adressen als Bezeichner verwenden. Segmente werden auf der Grundlage von Kunden erstellt, die ältere Telefonmodelle besitzen, und an [!DNL Google Customer Match] die sie gesendet werden, damit sie aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, sowie ähnliche Kunden auf Zielgruppe bringen können [!DNL YouTube].
 
 ## Datenverwaltung für [!DNL Google Customer Match] Ziele {#data-governance}
 
-Die Ziele in Adobe Echtzeit-CDP können bestimmte Regeln und Pflichten für Daten haben, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Tools zur Datenverwaltung, mit denen Sie einige dieser Datenverwendungsverpflichtungen verwalten können. [Learn more](/help/data-governance/labels/overview.md) about data governance tools and policies.
+Die Ziele in Adobe Echtzeit-CDP können bestimmte Regeln und Pflichten für Daten haben, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Tools zur Datenverwaltung, mit denen Sie einige dieser Datenverwendungsverpflichtungen verwalten können. [Erfahren Sie mehr](/help/data-governance/labels/overview.md) über Tools und Richtlinien zur Datenverwaltung.
 
 ## Art und Identität der Aktivierung {#activation-type}
 
@@ -47,18 +47,18 @@ Die Ziele in Adobe Echtzeit-CDP können bestimmte Regeln und Pflichten für Date
 
 ## [!DNL Google Customer Match] Kontovoraussetzungen {#google-account-prerequisites}
 
-Before setting up a [!DNL Google Customer Match] destination in Adobe Real-time CDP, make sure you read and adhere to Google&#39;s policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717).
+Bevor Sie ein [!DNL Google Customer Match] Ziel in Adobe CDP in Echtzeit einrichten, sollten Sie die Google-Nutzungsrichtlinie lesen und beachten, die in der [!DNL Customer Match]Google-Supportdokumentation [](https://support.google.com/google-ads/answer/6299717)beschrieben ist.
 
 ### Zulassungsliste {#allowlist}
 
 >[!NOTE]
 >
->Es ist obligatorisch, zur Zulassungsliste von Google hinzugefügt zu werden, bevor Sie Ihr erstes [!DNL Google Customer Match] Ziel in Adobe Echtzeit CDP einrichten. Vergewissern Sie sich bitte, dass der unten beschriebene Vorgang der Zulassungsliste von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>It is mandatory to be added to Google&#39;s allow list before setting up your first [!DNL Google Customer Match] destination in Adobe Real-time CDP. Vergewissern Sie sich bitte, dass der unten beschriebene Vorgang der Zulassungsliste von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
 
 Bevor Sie das [!DNL Google Customer Match] Ziel in Adobe CDP in Echtzeit erstellen, müssen Sie sich an Google wenden und den Anweisungen zur Zulassungsliste unter Kunden-Match-Partner [verwenden folgen, um Ihre Daten](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) in der Google-Dokumentation hochzuladen.
 
 
-### Email hashing requirements {#hashing-requirements}
+### Anforderungen für das E-Mail-Hashing {#hashing-requirements}
 
 <!--
 
@@ -91,24 +91,24 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
 
 >[!IMPORTANT]
 >
->Wenn Sie sich dafür entscheiden, keine E-Mail-Adressen zu hash, wird dies von Adobe Echtzeit-CDP für Sie ausgeführt, wenn Sie Segmente aktivieren für [!DNL Google Customer Match]. Wählen Sie im Arbeitsablauf für die [Aktivierung](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (siehe Schritt 5) die `Email` Option wie unten für *E-Mail-Adressen* und `Email_LC_SHA256` für *Hash-E-Mail-Adressen* dargestellt.
+>If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to [!DNL Google Customer Match]. In the [activation workflow](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (see step 5), select the `Email` option as shown below for *plain text email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 
-![Hashing bei der Aktivierung](/help/rtcdp/destinations/assets/identity-mapping.png)
+![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 ## Mit Ziel verbinden {#connect-destination}
 
 1. Blättern Sie unter **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** zur **[!UICONTROL Advertising]** -Kategorie. Wählen Sie [!DNL Google Customer Match]und dann **[!UICONTROL Konfigurieren]**.
 
-   ![Verbindung zum Google-Kunden-Übereinstimmungsziel herstellen](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
+   ![Connect to Google Customer Match destination](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
 
-2. In the **Account** step, if you had previously set up a connection to your [!DNL Google Customer Match] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Google Customer Match]. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your [!DNL Google Ad] account.
+2. In the **Account** step, if you had previously set up a connection to your [!DNL Google Customer Match] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Google Customer Match]. Wählen Sie **[!UICONTROL Mit Ziel]** verbinden, um sich anzumelden und Adobe Experience Cloud mit Ihrem [!DNL Google Ad] Konto zu verbinden.
 
    >[!NOTE]
    >
    >Adobe Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Google Ad] account. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldedaten ausführen.
 
-   ![Verbindung zum Google-Kundenübereinstimmungsziel herstellen - Authentifizierungsschritt](/help/rtcdp/destinations/assets/google-customer-match-pre-connect-view.png)
+   ![Connect to Google Customer Match destination - authentication step](/help/rtcdp/destinations/assets/google-customer-match-pre-connect-view.png)
 
 3. Once your credentials are confirmed and Adobe Experience Cloud is connected to your Google account, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
 
@@ -118,9 +118,11 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
 
    >[!IMPORTANT]
    >
-   > Für [!DNL Google Customer Match] Ziele. **[!UICONTROL Account ID]** is your customer client ID with Google. Das Format der ID ist xxx-xxx-xxxx.
+   > * The **[!UICONTROL Combine with PII]** marketing use case is selected by default for the [!DNL Google Customer Match] destination and cannot be removed.
+   > * For [!DNL Google Customer Match] destinations. **[!UICONTROL Account ID]** is your customer client ID with Google. The format of the ID is xxx-xxx-xxxx.
 
-   ![Google-Kundenabgleich - Authentifizierungsschritt](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
+
+   ![Connect Google Customer Match - authentication step](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
 5. Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In either case, see the next section, [Activate segments to [!DNL Google Customer Match]](#activate-segments), for the rest of the workflow.
 
@@ -136,18 +138,18 @@ Beachten Sie, dass sich, wenn für ein Ziel bereits ein Aktivierungsfluss vorhan
 3. Wählen Sie **[!UICONTROL Aktivieren]**.
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Google Customer Match].
    ![Segment an Ziel](/help/rtcdp/destinations/assets/activate-segments-google-customer-match.png)
-5. Wählen Sie im Schritt **[!UICONTROL Identitätszuordnung]** aus, welche Attribute als Identität in dieses Ziel aufgenommen werden sollen. Wählen Sie **[!UICONTROL Hinzufügen neue Zuordnung]** aus und durchsuchen Sie Ihr Schema, wählen Sie E-Mail- und/oder Hash-E-Mail und ordnen Sie sie der entsprechenden Zielgruppen-ID zu.
-   ![Anfangsbildschirm zur Identitätszuordnung](/help/rtcdp/destinations/assets/gcm-identity-mapping.png) <br> 
+5. In the **[!UICONTROL Identity mapping]** step, select which attributes to be included as an identity in this destination. Wählen Sie **[!UICONTROL Hinzufügen neue Zuordnung]** aus und durchsuchen Sie Ihr Schema, wählen Sie E-Mail- und/oder Hash-E-Mail und ordnen Sie sie der entsprechenden Zielgruppen-ID zu.
+   ![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png) <br> 
    *Einfache Text-E-Mail-Adresse als primäre Identität*: Wenn Sie in Ihrem Schema als primäre Identität Nur-Text-E-Mail-Adressen (ohne Hashing) verwenden, wählen Sie das E-Mail-Feld in Ihren **[!UICONTROL Quellattributen]** aus und ordnen Sie es wie unten gezeigt in der rechten Spalte unter &quot; **[!UICONTROL Zielgruppen-IDs]**&quot;dem Feld &quot;E-Mail&quot;zu:
    ![E-Mail-Identität für einfachen Text auswählen](/help/rtcdp/destinations/assets/gcm-raw-email.gif) <br> 
-   *Hashed email address as primary identity*: If you have hashed email addresses as primary identity in your schema, select the hashed email field in your **[!UICONTROL Source Attributes]** and map to the Email_LC_SHA256 field in the right column under **[!UICONTROL Target Identities]**, as shown below:
+   *Hash-E-Mail-Adresse als primäre Identität*: Wenn Sie in Ihrem Schema als primäre Identität Hash-E-Mail-Adressen verwendet haben, wählen Sie das Feld Hash-E-Mail in Ihren **[!UICONTROL Quellattributen]** aus und ordnen Sie es wie unten dargestellt dem Feld Email_LC_SHA256 in der rechten Spalte unter &quot; **[!UICONTROL Zielgruppen-IDs]**&quot;zu:
    ![select hashed emails identity](/help/rtcdp/destinations/assets/gcm-hashed-emails.gif) <br> 
 6. Auf der Seite &quot; **[!UICONTROL Segmentplan]** &quot;können Sie das Datum des Beginns für das Senden der Daten an das Ziel festlegen.
 7. Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 >[!IMPORTANT]
 >
->In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Richtliniendurchsetzung](/help/rtcdp/privacy/data-governance-overview.md#enforcement) im Abschnitt zur Datenverwaltung.
+>In diesem Schritt sucht CDP in Echtzeit nach Verstößen gegen die Datenverwendungsrichtlinie. Unten sehen Sie ein Beispiel, bei dem eine Richtlinie verletzt wird. Sie können den Segmentarbeitsablauf erst dann abschließen, wenn Sie die Aktivierung gelöst haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Richtliniendurchsetzung](/help/rtcdp/privacy/data-governance-overview.md#enforcement) im Abschnitt zur Datenverwaltung.
 
 ![Auswahl bestätigen](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
@@ -171,3 +173,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
 
 Wechseln Sie nach Abschluss der Aktivierung zu Ihrem **[!UICONTROL Google Ads]** -Konto. Die aktivierten Segmente werden jetzt in Ihrem Google-Konto als Listen angezeigt. Beachten Sie, dass je nach Segmentgröße einige Audiencen nur dann gefüllt werden, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
+
+## Zusätzliche Ressourcen {#additional-resources}
+
+* [Google-Kundenabgleich integrieren - Video-Lernprogramm](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
