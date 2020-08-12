@@ -1,67 +1,38 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Die neuesten Versionshinweise zur Experience Platform
+description: Versionshinweise zur Experience Platform, 10. August 2020
 doc-type: release notes
-last-update: July 15, 2020
-author: crhoades, ens25212
+last-update: August 10, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 31%
+source-wordcount: '296'
+ht-degree: 33%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Versionsdatum: 15. Juli 2020**
+**Releasedatum: 12. August 2020**
 
-Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
+Die neuesten Versionshinweise zur Experience Platform
 
-- [Data Governance](#governance)
-- [Echtzeit-Kundenprofil](#profile)
-- [Segmentation Service](#segmentation)
-- [Quellen](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL-Quellen]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten sowie zur Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Datennutzungsrichtlinien. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-| -----------| ---------- |
-| Automatische Durchsetzung der Richtlinie in [!DNL Real-time Customer Data Platform] | Datenverwendungsrichtlinien werden jetzt automatisch erzwungen, [!DNL Real-time CDP] wenn Verstöße auftreten, einschließlich der Aktivierung von Segmenten an Ziele. Wenn eine Richtlinienverletzung ausgelöst wird, erhalten Benutzer eine Echtzeit-Übersicht über Nutzungsbeschränkungen im Arbeitsablauf für die Aktivierung, wobei angegeben wird, welche Daten sie nicht verwenden können und warum.<br><br>Weitere Informationen finden Sie im Abschnitt zur [Erzwingung der Datenverwendungskonformität](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) in der Übersicht [!DNL Data Governance] unter [!DNL Real-time CDP] . |
-| Integration von Adobe Audience Managern | Alle Segmente, für die [!DNL Audience Manager] von [!DNL Platform] geteilt wird, übernehmen alle angewendeten Datenverwendungsbeschriftungen als [!DNL Data Export Controls]und umgekehrt. In der [!DNL Audience Manager] Dokumentation finden Sie spezifische [Zuordnungen zwischen Gebrauchsbeschriftungen und Datenexportkontrollen](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
-| Benutzerdefinierte Datenverwendungsbeschriftungen | Sie können jetzt benutzerdefinierte Datenverwendungsbeschriftungen mit der Policy Service API oder in der Benutzeroberfläche erstellen. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
-
-Weitere Informationen zum Dienst finden Sie in der Übersicht über die [Datenverwaltung](../../data-governance/home.md) .
-
-## [!DNL Real-time Customer Profile] {#profile}
-
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten zu einer einheitlichen Ansicht zusammenzuführen, die Ihnen einen umsetzbaren Zeitstempel für jede Kundeninteraktion bietet.
+[!DNL Data Science Workspace] nutzt maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu entfesseln. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Durchsetzung von Datenverwendungsrichtlinien | In [!DNL Real-time Customer Data Platform]diesem Fall werden Verstöße gegen die Richtlinie zur Datenverwendung automatisch aufgedeckt, wenn eine Verletzung im Arbeitsbereich [!UICONTROL Profil] versucht wird. Weitere Informationen zur automatischen Durchsetzung von Richtlinien finden Sie in den [Versionshinweisen zur Datenverwaltung](#governance) . |
+| VM-Verbesserungen in [!DNL JupyterLab] | Verbesserte Stabilität langlaufender [!DNL JupyterLab notebook] virtueller Maschinen. |
 
-## [!DNL Segmentation Service] {#segmentation}
-
-Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
-
-[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Streaming-Segmentierung | Streaming-Segmentierung kann jetzt als Benutzer in ein Segment eingeordnet werden, wenn Daten eingehen, [!DNL Platform]wodurch die Segmentqualifizierungszeit erheblich verkürzt wird. Durch Streaming-Segmentierung wird auch die manuelle Ausführung von Segmentierungsaufträgen erleichtert. |
-| Durchsetzung von Datenverwendungsrichtlinien | In [!DNL Real-time Customer Data Platform]diesem Fall werden Verstöße gegen die Richtlinie zur Datenverwendung automatisch aufgedeckt, wenn eine Verletzung im Arbeitsbereich &quot; [!UICONTROL Segmente] &quot;versucht wird. Weitere Informationen zur automatischen Durchsetzung von Richtlinien finden Sie in den [Versionshinweisen zur Datenverwaltung](#governance) . |
-
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] user guide](../../data-science-workspace/jupyterlab/overview.md).
 
 ## Quellen {#sources}
 
@@ -73,7 +44,9 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Benutzeroberflächenunterstützung beim Löschen von Datenflüssen | Datenflüsse, die mit Fehlern gemacht wurden oder unnötig geworden sind, können jetzt über die Benutzeroberfläche gelöscht werden. |
-| API- und UI-Unterstützung für einmalige Erfassung | Eine einmalige Erfassung für Datenflüsse, bei der nur das Datum des Beginns angegeben und keine weitere Erfassung geplant ist, kann jetzt über APIs oder über die Benutzeroberfläche ausgeführt werden. |
+| Flusslaufüberwachung | Die Benutzer können alle Flussläufe überwachen und eine detaillierte Ansicht der einzelnen Vorgänge anzeigen, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und Metriken. Weitere Informationen finden Sie im Dokument [zum Überwachen von Datenflüssen](../../sources/tutorials/ui/monitor.md) . |
+| Kontoaktualisierung | Benutzer können die Anmeldeinformationen, den Namen und die Beschreibung eines vorhandenen Kontos aktualisieren, um aussagekräftigere Informationen bereitzustellen und ggf. erstellte Fehler zu berichtigen. |
+| Flusslaufbenachrichtigungen | Benutzer können Ereignis abonnieren und Webhooks registrieren, um Echtzeitbenachrichtigungen über Status, Metriken und Fehler bei der Ausführung von Textfluss zu erhalten. |
+| Verbesserungen am UI-Katalog | Aktualisierungen des Katalogbildschirms für Quellen, um den Zugriff auf primäre Aktionen ausgewählter Objekte zu erleichtern. |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
