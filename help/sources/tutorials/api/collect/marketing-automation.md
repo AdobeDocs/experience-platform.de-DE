@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erfassen von Daten zur Marketingautomatisierung über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1658'
 ht-degree: 15%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 15%
 
 # Erfassen von Daten zur Marketingautomatisierung über Quellschnittstellen und APIs
 
-[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Marketingautomatisierungssystem und zum Einbringen dieser Daten [!DNL Platform] über Quellschnittstellen und APIs beschrieben.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert den Zugriff auf ein Marketingautomatisierungssystem eines Drittanbieters über eine gültige Verbindung und Informationen über die Datei, in die Sie eingehen möchten, [!DNL Platform]einschließlich Pfad und Struktur der Datei. Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zur [Erforschung eines Marketingautomatisierungssystems von Drittanbietern mithilfe der Flow Service API](../explore/marketing-automation.md) , bevor Sie dieses Lernprogramm durchführen.
+Dieses Lernprogramm erfordert den Zugriff auf ein Marketingautomatisierungssystem eines Drittanbieters über eine gültige Verbindung und Informationen über die Datei, in die Sie eingehen möchten, [!DNL Platform]einschließlich Pfad und Struktur der Datei. If you do not have this information, see the tutorial on [exploring a third party marketing automation system using the Flow Service API](../explore/marketing-automation.md) before attempting this tutorial.
 
-Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten der Adobe Experience Platform verstehen:
+Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Adobe Experience Platform kennen:
 
 * [Experience-Datenmodell (XDM)-System](../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
@@ -53,13 +53,13 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * Content-Type: `application/json`
 
-## Erstellen einer Ad-hoc-XDM-Klasse und eines Ad-hoc-Schemas
+## Create an ad-hoc XDM class and schema
 
-Um externe Daten [!DNL Platform] über Quell-Connectors zu importieren, müssen eine Ad-hoc-XDM-Klasse und ein Schema für die Rohquellendaten erstellt werden.
+In order to bring external data into [!DNL Platform] through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
 
-Um eine Ad-hoc-Klasse und ein Ad-hoc-Schema zu erstellen, führen Sie die im [Ad-hoc-Schema-Lernprogramm](../../../../xdm/tutorials/ad-hoc.md)beschriebenen Schritte aus. Beim Erstellen einer Ad-hoc-Klasse müssen alle in den Quelldaten gefundenen Felder im Anforderungstext beschrieben werden.
+To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). Beim Erstellen einer Ad-hoc-Klasse müssen alle in den Quelldaten gefundenen Felder im Anforderungstext beschrieben werden.
 
-Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad-hoc-Schema erstellt haben. Die eindeutige Kennung (`$id`) des Ad-hoc-Schemas ist erforderlich, um mit dem nächsten Schritt dieses Lernprogramms fortzufahren.
+Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. Die eindeutige Kennung (`$id`) des Ad-hoc-Schemas ist erforderlich, um mit dem nächsten Schritt dieses Lernprogramms fortzufahren.
 
 ## Erstellen einer Quellverbindung {#source}
 
@@ -118,7 +118,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | Die eindeutige Verbindungs-ID des Marketingautomatisierungssystems eines Drittanbieters, auf das Sie zugreifen. |
 | `data.schema.id` | Die ID des Ad-hoc-XDM-Schemas. |
-| `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. |
+| `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | Die Verbindungs-Spezifikations-ID Ihres Marketingautomatisierungssystems. |
 
 **Antwort**
@@ -132,11 +132,11 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
-## Zielgruppe XDM-Schema erstellen {#target}
+## Zielgruppe XDM-Schema erstellen {#target-schema}
 
-In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. Damit die Quelldaten in verwendet werden können, [!DNL Platform]muss auch ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform] Datensatz erstellt, in dem die Quelldaten enthalten sind.
+In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained.
 
-Ein Zielgruppe XDM-Schema kann erstellt werden, indem eine POST an die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)angefordert wird.
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
@@ -148,7 +148,7 @@ POST /schemaregistry/tenant/schemas
 
 **Anfrage**
 
-Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM- [!DNL Individual Profile] Klasse erweitert.
+The following example request creates an XDM schema that extends the XDM [!DNL Individual Profile] class.
 
 ```shell
 curl -X POST \
@@ -182,7 +182,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich seiner eindeutigen Kennung (`$id`) zurück. Speichern Sie diese ID so, wie es in späteren Schritten erforderlich ist, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
+A successful response returns details of the newly created schema including its unique identifier (`$id`). Speichern Sie diese ID so, wie es in späteren Schritten erforderlich ist, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -242,9 +242,9 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
 }
 ```
 
-## Zielgruppen-Dataset erstellen
+## Create a target dataset
 
-Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)angefordert wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
+A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
 **API-Format**
 
@@ -273,11 +273,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schemaRef.id` | Die `$id` der Zielgruppe XDM Schema. |
+| `schemaRef.id` | The `$id` of the target XDM schema. |
 
 **Antwort**
 
-A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Zielgruppe-Dataset-ID wie in den späteren Schritten zum Erstellen einer Zielgruppe- und eines Datenflusses erforderlich.
+A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Store the target dataset ID as it is required in later steps to create a target connection and a dataflow.
 
 ```json
 [
@@ -285,7 +285,7 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Erstellen einer Zielgruppe-Verbindung
+## Erstellen einer Zielgruppe-Verbindung {#target-connection}
 
 Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Zielgruppe-Verbindung zu erstellen, müssen Sie die mit dem Datensee verknüpfte feste Verbindungs-spec-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -413,7 +413,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
 
 ## Spezifikationen zum Nachschlagen von Datenblättern {#specs}
 
-Ein Datennachweis ist für das Sammeln und Einfügen von Daten aus Quellen zuständig [!DNL Platform]. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, die für die Erfassung von Daten zur Marketingautomatisierung zuständig sind.
+Ein Datennachweis ist für das Sammeln und Einfügen von Daten aus Quellen zuständig [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting marketing automation data.
 
 **API-Format**
 
@@ -433,7 +433,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Datenaflow-Spezifikation zurück, die für die Datenübertragung von Ihrem Marketingautomatisierungssystem verantwortlich ist [!DNL Platform]. Speichern Sie den Wert des `id` Felds so, wie er im nächsten Schritt zum Erstellen eines neuen Datenflusses erforderlich ist.
+A successful response returns the details of the dataflow specification that is responsible for bringing data from your marketing automation system into [!DNL Platform]. Store the value of the `id` field as it is required in the next step to create a new dataflow.
 
 ```json
 {
@@ -557,14 +557,14 @@ Eine erfolgreiche Antwort gibt die Details der Datenaflow-Spezifikation zurück,
 
 ## Datenfluss erstellen
 
-Der letzte Schritt zur Erfassung von Daten zur Marketingautomatisierung besteht in der Erstellung eines Datenflusses. Jetzt haben Sie die folgenden erforderlichen Werte vorbereitet:
+The last step towards collecting marketing automation data is to create a dataflow. By now, you have the following required values prepared:
 
 * [Quell-Verbindungs-ID](#source)
-* [Zielgruppen-Verbindungs-ID](#target)
+* [Target connection ID](#target)
 * [Mapping-ID](#mapping)
-* [Dataflow-Spezifikation-ID](#specs)
+* [Dataflow specification ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
+A dataflow is responsible for scheduling and collecting data from a source. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
@@ -620,14 +620,16 @@ curl -X POST \
 ```
 
 | Eigenschaft | Beschreibung |
-| --- | --- |
-| `flowSpec.id` | Die Flussspec-ID, die im vorherigen Schritt abgerufen wurde. |
-| `sourceConnectionIds` | Die Quell-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
-| `targetConnectionIds` | Die Zielgruppe-Verbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
-| `transformations.params.mappingId` | Die Zuordnungs-ID, die in einem früheren Schritt abgerufen wurde. |
-| `scheduleParams.startTime` | Die Zeitdauer des Beginns für den Datendurchlauf in Sekunden. |
-| `scheduleParams.frequency` | Die auswählbaren Frequenzwerte umfassen: `once`, `minute`, `hour`, `day`oder `week`. |
-| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit für andere Frequenzwerte festgelegt ist `once` und größer oder gleich `15` sein sollte. |
+| -------- | ----------- |
+| `flowSpec.id` | Die im vorherigen Schritt abgerufene [Flussspec-ID](#specs) . |
+| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) , die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die in einem früheren Schritt abgerufene [Zielgruppe-Verbindungs-ID](#target-connection) . |
+| `transformations.params.mappingId` | Die in einem früheren Schritt abgerufene [Zuordnungs-ID](#mapping) . |
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
+| `transformations.params.mappingId` | Die mit Ihrer Datenbank verknüpfte Zuordnungs-ID. |
+| `scheduleParams.startTime` | Die Beginn-Zeit für den Datenflug in Epochenzeit. |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. The interval&#39;s value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Antwort**
 
@@ -640,9 +642,13 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 }
 ```
 
+## Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+
 ## Nächste Schritte
 
-Mit diesem Lernprogramm haben Sie einen Quell-Connector erstellt, um Daten aus einem Marketingautomatisierungssystem planmäßig zu erfassen. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+By following this tutorial, you have created a source connector to collect data from a marketing automation system on a scheduled basis. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. See the following documents for more details:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
-* [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
+* [Data Science Workspace overview](../../../../data-science-workspace/home.md)
