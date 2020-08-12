@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Experience Platform release notes August 10, 2020
+description: Versionshinweise zur Experience Platform, 10. August 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
+source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 33%
+source-wordcount: '480'
+ht-degree: 31%
 
 ---
 
@@ -17,9 +17,10 @@ ht-degree: 33%
 
 **Releasedatum: 12. August 2020**
 
-Updates to existing features in Adobe Experience Platform:
+Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [!DNL Destinations](#destinations)
 - [[!DNL-Quellen]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -30,9 +31,28 @@ Updates to existing features in Adobe Experience Platform:
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| VM improvements in [!DNL JupyterLab] | Verbesserte Stabilität langlaufender [!DNL JupyterLab notebook] virtueller Maschinen. |
+| VM-Verbesserungen in [!DNL JupyterLab] | Verbesserte Stabilität langlaufender [!DNL JupyterLab notebook] virtueller Maschinen. |
 
 Weitere Informationen zu [!DNL JupyterLab]finden Sie im [[!DNL JupyterLab] Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md).
+
+## Ziele {#destinations}
+
+In der [Adobe Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
+
+**Neue Ziele**
+
+Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform-Daten aktivieren können. Weitere Informationen finden Sie hier:
+
+| Ziel | Beschreibung |
+|--- | ---|
+| [!DNL Google Customer Match] | Mit Google Customer Match können Sie Ihre Online- und Offlinedaten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut zu kontaktieren, z. B.: [!DNL Search], [!DNL Shopping]Gmail und YouTube. Auf der [!DNL Google Customer Match] Seite [](/help/rtcdp/destinations/google-customer-match-destination.md) im Zielkatalog finden Sie weitere Informationen zum Ziel und zur Einrichtung in Adobe Echtzeit-CDP. |
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+|------- | -----------|
+| Benutzerdefinierter Dateinameneditor | Aktualisieren Sie auf den Arbeitsablauf für die Aktivierung von Daten für E-Mail-Marketing-Ziele und Cloud-Datenspeicherung, damit Sie den Dateinamen der exportierten Dateien bearbeiten können. Weitere Informationen finden Sie im Schritt [ &quot;](/help/rtcdp/destinations/activate-destinations.md#configure) Konfigurieren&quot;im Arbeitsablauf für die Aktivierung. |
+| Empfohlene Attribute | Aktualisieren Sie auf den Arbeitsablauf für die Aktivierung von Daten für E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele, das die empfohlenen Attribute enthält, die Sie den exportierten Dateien hinzufügen können. Weitere Informationen finden Sie im Schritt [Attribute auswählen](/help/rtcdp/destinations/activate-destinations.md#select-attributes) im Arbeitsablauf für die Aktivierung. |
 
 ## Quellen {#sources}
 
@@ -44,9 +64,9 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Flusslaufüberwachung | Die Benutzer können alle Flussläufe überwachen und eine detaillierte Ansicht der einzelnen Vorgänge anzeigen, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und Metriken. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
+| Flow run monitoring | Die Benutzer können alle Flussläufe überwachen und eine detaillierte Ansicht der einzelnen Vorgänge anzeigen, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und Metriken. Weitere Informationen finden Sie im Dokument [zum Überwachen von Datenflüssen](../../sources/tutorials/ui/monitor.md) . |
 | Kontoaktualisierung | Benutzer können die Anmeldeinformationen, den Namen und die Beschreibung eines vorhandenen Kontos aktualisieren, um aussagekräftigere Informationen bereitzustellen und ggf. erstellte Fehler zu berichtigen. |
 | Flusslaufbenachrichtigungen | Benutzer können Ereignis abonnieren und Webhooks registrieren, um Echtzeitbenachrichtigungen über Status, Metriken und Fehler bei der Ausführung von Textfluss zu erhalten. |
-| UI catalog improvements | Aktualisierungen des Katalogbildschirms für Quellen, um den Zugriff auf primäre Aktionen ausgewählter Objekte zu erleichtern. |
+| Verbesserungen am UI-Katalog | Aktualisierungen des Katalogbildschirms für Quellen, um den Zugriff auf primäre Aktionen ausgewählter Objekte zu erleichtern. |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
