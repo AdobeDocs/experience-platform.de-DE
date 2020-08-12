@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 6d291ac9a8c194dd63e411e4d064492c38412749
+source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '911'
 ht-degree: 44%
 
 ---
@@ -34,21 +34,21 @@ Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert
 
 >[!IMPORTANT]
 >
->Um eine Beziehung herzustellen, müssen beide Schema über definierte primäre Identitäten verfügen und für [!DNL Real-time Customer Profile]die sie aktiviert werden. See the section on [enabling a schema for use in Profile](./create-schema-ui.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
+>Um eine Beziehung herzustellen, müssen beide Schema über definierte primäre Identitäten verfügen und für [!DNL Real-time Customer Profile]die sie aktiviert werden. Informationen zum Konfigurieren Ihrer Schema finden Sie im Abschnitt zum [Aktivieren eines Schemas für die Verwendung in Profil](./create-schema-ui.md#profile) im Lernprogramm zur Erstellung von Schemas.
 
-Schema relationships are represented by a dedicated field within a **source schema** that refers to another field within a **destination schema**. In the steps that follow, &quot;[!UICONTROL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
+Schema-Beziehungen werden durch ein dediziertes Feld innerhalb eines **Quell-Schemas** dargestellt, das auf ein anderes Feld innerhalb eines **Ziel-Schemas** verweist. In the steps that follow, &quot;[!UICONTROL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
 
 Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen Schemas beschrieben, die in dieser Anleitung verwendet werden, bevor eine Beziehung definiert wird.
 
 ### [!UICONTROL Schema „Mitglieder des Treueprogramms“]
 
-The source schema &quot;[!UICONTROL Loyalty Members]&quot; is based on the XDM [!DNL Individual Profile] class, and is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in[!DNL Real-time Customer Profile].
+Das Quellcode-Schema &quot;[!UICONTROL Treuemitglieder]&quot;basiert auf der XDM- [!DNL Individual Profile] Klasse und ist das Schema, das im Lernprogramm zum [Erstellen eines Schemas in der Benutzeroberfläche](create-schema-ui.md)erstellt wurde. It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in[!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### Schema „Hotels“
 
-Das Ziel-Schema &quot;[!UICONTROL Hotels]&quot; basiert auf einer benutzerspezifischen &quot;[!UICONTROL Hotels]&quot; Klasse und enthält Felder, die ein Hotel beschreiben. The &quot;[!UICONTROL email]&quot; field serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. Wie &quot;[!UICONTROL Treueanwärter]&quot; wurde auch dieses Schema für [!DNL Real-time Customer Profile]Sie aktiviert.
+Das Ziel-Schema &quot;[!UICONTROL Hotels]&quot; basiert auf einer benutzerspezifischen &quot;[!UICONTROL Hotels]&quot; Klasse und enthält Felder, die ein Hotel beschreiben. The &quot;[!DNL hotelId]&quot; field serves as the primary identity for the schema under a custom &quot;[!DNL hotelId]&quot; namespace. Wie &quot;[!UICONTROL Treueanwärter]&quot; wurde auch dieses Schema für [!DNL Real-time Customer Profile]Sie aktiviert.
 
 ![](../images/tutorials/relationship/hotels.png)
 
