@@ -4,7 +4,7 @@ seo-title: Ausführen von Adobe Experience Platform Web SDK-Befehlen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 79%
@@ -28,7 +28,7 @@ alloy("commandName", options);
 
 [Promises](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) sind von grundlegender Bedeutung für die Kommunikation des SDK mit dem Code auf Ihrer Web-Seite. Ein Promise ist eine gängige Programmierstruktur und nicht spezifisch für dieses SDK oder gar JavaScript. Ein Promise fungiert als Proxy für einen Wert, der beim Erstellen des Promise nicht bekannt ist. Sobald der Wert bekannt ist, wird das Promise mit dem Wert „aufgelöst“. Handler-Funktionen können mit einem Promise verknüpft werden, sodass Sie benachrichtigt werden können, wenn das Promise aufgelöst wurde oder ein Fehler im Prozess der Promise-Auflösung aufgetreten ist. Um mehr über Promises zu erfahren, lesen Sie [dieses Tutorial](https://javascript.info/promise-basics) oder andere Ressourcen im Web.
 
-## Umgang mit Erfolg oder Misserfolg
+## Umgang mit Erfolg oder Misserfolg {#handling-success-or-failure}
 
 Jedes Mal, wenn ein Befehl ausgeführt wird, wird ein Promise zurückgegeben. Das Promise steht für den letztendlichen Abschluss des Befehls. Im Beispiel unten können Sie mithilfe der `then`- und `catch`-Methoden bestimmen, wann der Befehl erfolgreich ausgeführt wurde oder fehlgeschlagen ist.
 
@@ -64,9 +64,9 @@ alloy("commandName", options)
   })
 ```
 
-### Antwortobjekte
+### Response objects
 
-Alle von Befehlen zurückgegebenen Versprechungen werden mit einem `result` Objekt gelöst. Das Ergebnisobjekt enthält Daten, die vom Befehl und der Zustimmung des Benutzers abhängen. Bibliotheksinformationen werden beispielsweise im folgenden Befehl als Eigenschaft des results-Objekts übergeben.
+All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user&#39;s consent. For example, library info is passed as a property of the results object in the following command.
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -74,6 +74,6 @@ alloy("getLibraryInfo").then(function(result) {
 });
 ```
 
-### Zustimmung
+### Consent
 
-Hat ein Benutzer für einen bestimmten Zweck seine Einwilligung nicht erteilt, so wird die Zusage weiterhin gelöst; Das Antwortobjekt enthält jedoch nur die Informationen, die im Zusammenhang mit der Zustimmung des Benutzers bereitgestellt werden können.
+If a user has not given their consent for a particular purpose, the promise will still be resolved; however, the response object will only contain the information that can be provided in the context of what the user has consented to.
