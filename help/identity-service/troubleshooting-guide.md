@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Adobe Experience Platform Identity Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 85%
@@ -72,7 +72,7 @@ Identitätsfelder müssen beim Erstellen mit einem vorhandenen Identitäts-Names
 
 Eine schrittweise Anleitung zum Definieren eines Namespace beim Erstellen eines Identitätsdeskriptors mit der API finden Sie im Abschnitt zum [Erstellen eines Deskriptors](../xdm/tutorials/create-schema-ui.md) im Entwicklerhandbuch zur Schemaregistrierung. Gehen Sie wie im Tutorial zum [Schema-Editor](../xdm/tutorials/create-schema-api.md) beschrieben vor, um in der Benutzeroberfläche ein Schema als Identität zu kennzeichnen.
 
-## Welche Identitäts-Namespaces stellt Experience Platform standardmäßig bereit?
+## Welche Identitäts-Namespaces stellt Experience Platform standardmäßig bereit? {#standard-namespaces}
 
 Folgende Standard-Namespaces stehen allen Organisationen in Experience Platform zur Verfügung:
 
@@ -137,7 +137,7 @@ Internal solutions|Preferred|Common
 
 The following section provides troubleshooting suggestions for specific error codes and unexpected behavior you may encounter while working with the [!DNL Identity Service] API.
 
-## [!DNL Identity Service] Fehlermeldungen
+## [!DNL Identity Service] error messages
 
 The following is a list of error messages you may encounter when using the [!DNL Identity Service] API.
 
@@ -171,7 +171,7 @@ Vergewissern Sie sich, dass Sie den angegebenen Parameter im Anfragepfad ordnung
 }
 ```
 
-[!DNL Identity Service] entfernt Daten, die älter als 180 Tage sind. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, auf ältere Daten zuzugreifen.
+[!DNL Identity Service] purges data older than 180 days. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, auf ältere Daten zuzugreifen.
 
 ### Es gilt eine Beschränkung von 1.000 XIDs in einem einzelnen Aufruf.
 
