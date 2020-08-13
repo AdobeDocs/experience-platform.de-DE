@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Grundlagen der Schema-Komposition
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
 workflow-type: tm+mt
-source-wordcount: '2628'
-ht-degree: 60%
+source-wordcount: '2782'
+ht-degree: 56%
 
 ---
 
@@ -59,13 +59,52 @@ Sowohl Schemas der Datensätze als auch der Zeitreihen enthalten eine Zuordnung 
 
 ### [!UICONTROL Identität]
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Therefore, it is important when thinking about schemas to think about &quot;[!UICONTROL Identity]&quot; and which fields can be used to identify a subject regardless of where the data may be coming from.
+Schemas are used for ingesting data into [!DNL Experience Platform]. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es wichtig, bei der Betrachtung von Schemas über Kundenidentitäten nachzudenken und welche Felder zur Identifizierung eines Objekts verwendet werden können, unabhängig davon, woher die Daten stammen.
 
-To help with this process, key fields can be marked as &quot;[!UICONTROL Identity]&quot;. Upon data ingestion, the data in those fields will be inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+Um diesen Vorgang zu unterstützen, können Schlüsselfelder in Ihren Schemas als Identitäten gekennzeichnet werden. Upon data ingestion, the data in those fields is inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
 
 Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
 
-Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass die Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. Siehe [Identity Service – Übersicht](../../identity-service/home.md), um mehr darüber zu erfahren, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
+Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass die Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
+
+#### xdm:identityMap
+
+`xdm:identityMap` ist ein Feld vom Typ &quot;Map&quot;, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namensräumen beschreibt. Mit diesem Feld können Sie Identitätsdaten für Ihre Schema bereitstellen, anstatt Identitätswerte innerhalb der Struktur des Schemas selbst zu definieren.
+
+Ein Beispiel für eine einfache Identitätskarte würde wie folgt aussehen:
+
+```json
+"identityMap": {
+  "email": [
+    {
+      "id": "jsmith@example.com",
+      "primary": false
+    }
+  ],
+  "ECID": [
+    {
+      "id": "87098882279810196101440938110216748923",
+      "primary": false
+    },
+    {
+      "id": "55019962992006103186215643814973128178",
+      "primary": false
+    }
+  ],
+  "loyaltyId": [
+    {
+      "id": "2e33192000007456-0365c00000000000",
+      "primary": true
+    }
+  ]
+}
+```
+
+Wie im Beispiel oben gezeigt, stellt jeder Schlüssel im `identityMap` Objekt einen Identitäts-Namensraum dar. Der Wert für jeden Schlüssel ist ein Array von Objekten, das die Identitätswerte (`id`) des jeweiligen Namensraums darstellt. Eine [!DNL Identity Service] Liste der von Adobe-Anwendungen erkannten Standard-Identitäts-Namensraum [finden Sie in der](../../identity-service/troubleshooting-guide.md#standard-namespaces) Dokumentation.
+
+>[!NOTE]
+>
+>Für jeden Identitätswert kann auch ein boolescher Wert angegeben werden, unabhängig davon, ob der Wert eine primäre Identität ist (`primary`). Primär-Identitäten müssen nur für Schema festgelegt werden, die in [!DNL Real-time Customer Profile]verwendet werden sollen. Weitere Informationen finden Sie im Abschnitt zu Schemas zur [Vereinigung](#union) .
 
 ### Schema-Evolutionsprinzipien {#evolution}
 
@@ -103,7 +142,7 @@ Eine Klasse bestimmt auch, welche Mixins für die Verwendung im Schema zugelasse
 
 There are standard classes provided with every integration of [!DNL Experience Platform], known as &quot;Industry&quot; classes. Branchenklassen sind allgemein anerkannte Industriestandards, die für eine breite Palette von Anwendungsfällen gelten. Examples of Industry classes include the [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] classes provided by Adobe.
 
-[!DNL Experience Platform] ermöglicht auch &quot;Vendor&quot;-Klassen, bei denen es sich um von [!DNL Experience Platform] Partnern definierte Klassen handelt, die allen Kunden zur Verfügung gestellt werden, die den Service oder die Anwendung des Anbieters innerhalb [!DNL Platform]des Unternehmens nutzen.
+[!DNL Experience Platform] also allows for &quot;Vendor&quot; classes, which are classes defined by [!DNL Experience Platform] partners and made available to all customers who use that vendor service or application within [!DNL Platform].
 
 There are also classes used to describe more specific use cases for individual organizations within [!DNL Platform], called &quot;Customer&quot; classes. Kundenklassen werden von einer Organisation definiert, wenn keine Branchen- oder Anbieterklassen zur Verfügung stehen, um einen einzigartigen Verwendungsfall zu beschreiben.
 
