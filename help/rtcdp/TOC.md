@@ -3,17 +3,17 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
+source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 85%
+source-wordcount: '469'
+ht-degree: 83%
 
 ---
 
 
 # Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
 
-* [Real-time CDP overview](overview.md)
+* [Übersicht über CDP in Echtzeit](overview.md)
 * Erste Schritte {#intro}
    * [Erste Schritte](get-started.md)
    * [Metriken – Übersicht](home-page-dashboards.md)
@@ -47,7 +47,7 @@ ht-degree: 85%
          * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
          * [Google Ads-Erweiterung](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-         * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
+         * [Google-Kundenübereinstimmung](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Google gtag-Erweiterung](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn Insight-Tag-Erweiterung](/help/rtcdp/destinations/linkedin-extension.md)
@@ -77,9 +77,9 @@ ht-degree: 85%
       * Cloud-Speicher-Ziele {#cloud-storage}
          * [Übersicht über die Cloud-Speicher-Ziele](destinations/cloud-storage-destinations.md)
          * [Workflow zum Erstellen von Cloud-Speicher-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
-         * [Amazon Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+         * [Amazon Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3-Ziel](destinations/amazon-s3-destination.md)
-         * [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+         * [Azurblauer Ereignis Hubs Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP-Ziel](destinations/sftp-destination.md)
       * Data Management Platform destinations {#dmp-destinations}
          * [Data Management Platform-Ziele – Übersicht](destinations/dmp-destinations.md)
@@ -123,18 +123,18 @@ ht-degree: 85%
          * [Invoca Tags-Erweiterung](/help/rtcdp/destinations/invoca-extension.md)
          * [Medallia-Erweiterung](destinations/medallia-extension.md)
          * [Talk URL Inbox-Erweiterung](destinations/talkurl-extension.md)
-   * Destinations UI tutorials {#dest-tutorials}
+   * Übungen zur Benutzeroberfläche &quot;Ziele&quot; {#dest-tutorials}
       * [Mit Ziel verbinden](/help/rtcdp/destinations/connect-destination.md)
       * [Profile und Segmente für ein Ziel aktivieren](destinations/activate-destinations.md)
-   * Destination API tutorials {#api-tutorials}
-      * [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [Connect to email marketing destinations and activate data](/help/tutorials/destinations/email-marketing-api.md)
+   * Ziel-API-Lernprogramme {#api-tutorials}
+      * [Verbindung zu Streaming-Zielen (AWS Kinesis und Azurblauer Ereignis Hubs) und Aktivierung von Daten](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Verbindungen zu E-Mail-Marketingzielen herstellen und Daten aktivieren](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
 * Datenschutz und Data Governance {#privacy}
    * [Datenschutz – Übersicht](privacy/privacy-overview.md)
    * [Data Governance – Übersicht](privacy/data-governance-overview.md)
-   * IAB TCF 2.0 support {#iab}
-      * [IAB TCF 2.0 support in Real-time CDP](./privacy/iab/overview.md)
-      * [Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten](./privacy/iab/dataset-preparation.md)
+   * IAB TCF 2.0-Unterstützung {#iab}
+      * [Unterstützung von IAB TCF 2.0 in Echtzeit-CDP](privacy/iab/overview.md)
+      * [Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten](privacy/iab/dataset-preparation.md)
 * Profile {#profile}
    * [Profil – Übersicht](profile/profile-overview.md)
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
@@ -147,4 +147,4 @@ ht-degree: 85%
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Website-Tags mit Adobe Launch implementieren](sources/launch.md)
 * [Versionshinweise zur Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
-* [Experience Platform Glossary](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
+* [Experience Platform Glossar](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
