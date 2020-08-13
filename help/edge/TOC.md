@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK-Hilfe
 translation-type: tm+mt
-source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
+source-git-commit: 3a0ef81980910cedcec69a2a53bcf270b8d12d00
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 67%
+source-wordcount: '101'
+ht-degree: 69%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 67%
       * [Übersicht über Analytics](solution-specific/analytics/analytics-overview.md)
       * [Manuelles Zuordnen von Variablen in Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Automatisch zugeordnete Variablen](solution-specific/analytics/automatically-mapped-vars.md)
+      * [Senden von Daten an Adobe Analytics](solution-specific/analytics/link-tracking.md)
    * Audience Manager {#aam}
       * [Audience Manager – Überblick](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
