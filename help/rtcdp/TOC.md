@@ -3,17 +3,17 @@ product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
 translation-type: tm+mt
-source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
+source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 88%
+source-wordcount: '460'
+ht-degree: 85%
 
 ---
 
 
 # Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
 
-* [Übersicht über CDP in Echtzeit](overview.md)
+* [Real-time CDP overview](overview.md)
 * Erste Schritte {#intro}
    * [Erste Schritte](get-started.md)
    * [Metriken – Übersicht](home-page-dashboards.md)
@@ -77,9 +77,9 @@ ht-degree: 88%
       * Cloud-Speicher-Ziele {#cloud-storage}
          * [Übersicht über die Cloud-Speicher-Ziele](destinations/cloud-storage-destinations.md)
          * [Workflow zum Erstellen von Cloud-Speicher-Zielen](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
-         * [Amazon Kinesis-Ziel](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+         * [Amazon Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3-Ziel](destinations/amazon-s3-destination.md)
-         * [Azurblauer Ereignis Hubs Ziel](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+         * [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP-Ziel](destinations/sftp-destination.md)
       * Data Management Platform destinations {#dmp-destinations}
          * [Data Management Platform-Ziele – Übersicht](destinations/dmp-destinations.md)
@@ -123,15 +123,18 @@ ht-degree: 88%
          * [Invoca Tags-Erweiterung](/help/rtcdp/destinations/invoca-extension.md)
          * [Medallia-Erweiterung](destinations/medallia-extension.md)
          * [Talk URL Inbox-Erweiterung](destinations/talkurl-extension.md)
-   * Übungen zur Benutzeroberfläche &quot;Ziele&quot; {#dest-tutorials}
+   * Destinations UI tutorials {#dest-tutorials}
       * [Mit Ziel verbinden](/help/rtcdp/destinations/connect-destination.md)
       * [Profile und Segmente für ein Ziel aktivieren](destinations/activate-destinations.md)
-   * Ziel-API-Lernprogramme {#api-tutorials}
-      * [Verbindung zu Streaming-Zielen (AWS Kinesis und Azurblauer Ereignis Hubs) und Aktivierung von Daten](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [Verbindungen zu E-Mail-Marketingzielen herstellen und Daten aktivieren](/help/tutorials/destinations/email-marketing-api.md)
+   * Destination API tutorials {#api-tutorials}
+      * [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Connect to email marketing destinations and activate data](/help/tutorials/destinations/email-marketing-api.md)
 * Datenschutz und Data Governance {#privacy}
    * [Datenschutz – Übersicht](privacy/privacy-overview.md)
    * [Data Governance – Übersicht](privacy/data-governance-overview.md)
+   * IAB TCF 2.0 support {#iab}
+      * [IAB TCF 2.0 support in Real-time CDP](./privacy/iab/overview.md)
+      * [Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten](./privacy/iab/dataset-preparation.md)
 * Profile {#profile}
    * [Profil – Übersicht](profile/profile-overview.md)
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
@@ -143,5 +146,5 @@ ht-degree: 88%
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Website-Tags mit Adobe Launch implementieren](sources/launch.md)
-* [Experience Platform Release notes](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
-* [Experience Platform Glossar](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
+* [Versionshinweise zur Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Experience Platform Glossary](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
