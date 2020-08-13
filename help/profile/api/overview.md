@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: Entwicklerhandbuch für die Echtzeit-Kundenprofil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 26%
+source-wordcount: '796'
+ht-degree: 23%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] API-Entwicklerleitfaden
 
-[!DNL Real-time Customer Profile] ermöglicht es Ihnen, eine ganzheitliche Ansicht jedes einzelnen Kunden innerhalb der Adobe Experience Platform zu sehen. [!DNL Profile] ermöglicht Ihnen die Konsolidierung unterschiedlicher Kundendaten aus mehreren Kanälen, z. B. Online-, Offline-, CRM- und Drittanbieterdaten, in einer einheitlichen Ansicht, die ein umsetzbares Zeitstempelkonto für jede Kundeninteraktion bietet.
+[!DNL Real-time Customer Profile] ermöglicht es Ihnen, eine ganzheitliche Ansicht Ihrer einzelnen Kunden in Adobe Experience Platform zu sehen. [!DNL Profile] ermöglicht Ihnen die Konsolidierung unterschiedlicher Kundendaten aus mehreren Kanälen, z. B. Online-, Offline-, CRM- und Drittanbieterdaten, in einer einheitlichen Ansicht, die ein umsetzbares Zeitstempelkonto für jede Kundeninteraktion bietet.
 
 Die [!DNL Real-time Customer Profile] API enthält mehrere Endpunkte, die nachfolgend beschrieben werden. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern. Weitere Informationen finden Sie im Handbuch [Erste Schritte](getting-started.md) .
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge Ansicht, besuchen Sie den [Echtzeit-Client-Profil-API-Referenz-Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+To view all available endpoints and CRUD operations, visit the [Real-time Customer Profile API Reference swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
 
 Eine Anleitung zum Arbeiten mit [!DNL Real-time Customer Profile] Daten in der [!DNL Experience Platform] Benutzeroberfläche finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
 
@@ -46,7 +46,11 @@ Through Adobe Experience Platform you can access [!DNL Real-time Customer Profil
 
 When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To learn more about working with merge policies using the API, please visit the [merge policies endpoint guide](merge-policies.md).
 
-For a guide to working with merge policies using the [!DNL Platform] UI, please see the [Merge Policies user guide](../ui/merge-policies.md).
+For a guide to working with merge policies using the [!DNL Platform] UI, please see the [merge policies user guide](../ui/merge-policies.md).
+
+## Musterstatus der Vorschau ([!DNL Profile] Vorschau) {#profile-preview}
+
+Da für Profil aktivierte Daten in die Experience Platform aufgenommen werden, werden sie im Profil-Datenspeicher gespeichert. Wenn die Anzahl der Datensätze im Profil-Store zunimmt oder sinkt, wird ein Musterauftrag ausgeführt, der Informationen darüber enthält, wie viele Profil-Fragmente und zusammengeführte Profil sich im Datenspeicher befinden. Mithilfe der Profil-API können Sie das neueste erfolgreiche Beispiel sowie die Verteilung von Listen-Profilen nach Datensatz und Identitäts-Namensraum Vorschau werden. Informationen zu den ersten Schritten mit dem `/profilepreviewstatus` Endpunkt finden Sie in der [Vorschau-Beispielstatusendpunkt-Anleitung](preview-sample-status.md).
 
 ## Profilsystemaufträge {#profile-system-jobs}
 
