@@ -4,10 +4,10 @@ seo-title: E-Mail-Marketing-Ziele
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 54%
+source-wordcount: '800'
+ht-degree: 48%
 
 ---
 
@@ -47,15 +47,21 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ![Segmente auswählen](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## Schritt 3: Auswählen, welche Schemafelder in Ihren exportierten Dateien als Zielattribute verwendet werden sollen {#destination-attributes}
+## Schritt 3: Konfigurieren von Dateinamen
+
+Weitere Informationen zu den Dateinamenbearbeitungsoptionen finden Sie im Lernprogramm Ziele aktivieren im Schritt [konfigurieren](/help/rtcdp/destinations/activate-destinations.md#configure) .
+
+## Step 4 - Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
 In diesem Schritt wählen Sie die Felder aus, die an E-Mail-Marketing-Ziele exportiert werden sollen.
 
-![Zielattribute](/help/rtcdp/destinations/assets/destination-attributes.png)
+![Zielattribute](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+Weitere Informationen zu diesem Schritt finden Sie im Schritt [Attribute](/help/rtcdp/destinations/activate-destinations.md#select-attributes) auswählen im Lernprogramm Ziele aktivieren.
 
 ### Identität {#identity}
 
-Es wird empfohlen, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Das ist das Feld, aus dem die Identitäten Ihrer Benutzer übernommen werden. In der Regel besteht das Feld aus der E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle finden Sie die gängigsten eindeutigen Bezeichner und deren XDM-Feld im Schema Vereinigung.
+Es wird empfohlen, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Das ist das Feld, aus dem die Identitäten Ihrer Benutzer übernommen werden. In der Regel besteht das Feld aus der E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle finden Sie die gängigsten eindeutigen Bezeichner und deren XDM-Feld im Schema.
 
 | Eindeutige Kennung | XDM-Feld im einheitlichen Schema |
 ---------|----------
@@ -76,8 +82,9 @@ Wählen Sie in der Schemafeldauswahl die anderen Felder aus, die Sie an das E-Ma
 | Adresse Bundesland | `homeAddress.stateProvince` |
 | Adresse Postleitzahl | `homeAddress.postalCode` |
 | Geburtstag | `person.birthDayAndMonth` |
+| Segmentmitgliedschaft | `segmentMembership.status` |
 
-## Schritt 3: Daten aus Ihrem Speicherort in das Ziel importieren
+## Schritt 5: Daten aus Ihrem Speicherort in das Ziel importieren
 
 Informationen zum Importieren von Daten aus Ihrem Speicherort in Ziele finden Sie in den Artikeln zu den einzelnen E-Mail-Marketing-Zielen:
 
@@ -89,3 +96,8 @@ Informationen zum Importieren von Daten aus Ihrem Speicherort in Ziele finden Si
 ## Segmente für E-Mail-Marketing-Ziele aktivieren
 
 Anweisungen zum Aktivieren von Segmenten für E-Mail-Marketing-Ziele finden Sie unter [Daten für Ziele aktivieren](/help/rtcdp/destinations/activate-destinations.md).
+
+## Zusätzliche Ressourcen
+
+* [Aktivieren von Daten an Ziele](/help/rtcdp/destinations/activate-destinations.md)
+* [Erstellen Sie E-Mail-Marketingziele und aktivieren Sie Daten mit der Flow Service API](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
