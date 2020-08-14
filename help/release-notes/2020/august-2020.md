@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Experience Platform release notes August 10, 2020
+description: Versionshinweise zur Experience Platform, 10. August 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
+source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 31%
+source-wordcount: '452'
+ht-degree: 32%
 
 ---
 
@@ -52,7 +52,7 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 | Funktion | Beschreibung |
 |------- | -----------|
 | Benutzerdefinierter Dateinameneditor | Aktualisieren Sie auf den Arbeitsablauf für die Aktivierung von Daten für E-Mail-Marketing-Ziele und Cloud-Datenspeicherung, damit Sie den Dateinamen der exportierten Dateien bearbeiten können. Weitere Informationen finden Sie im Schritt [ &quot;](/help/rtcdp/destinations/activate-destinations.md#configure) Konfigurieren&quot;im Arbeitsablauf für die Aktivierung. |
-| Empfohlene Attribute | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. Weitere Informationen finden Sie im Schritt [Attribute auswählen](/help/rtcdp/destinations/activate-destinations.md#select-attributes) im Arbeitsablauf für die Aktivierung. |
+| Empfohlene Attribute | Aktualisieren Sie auf den Arbeitsablauf für die Aktivierung von Daten für E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele, das die empfohlenen Attribute enthält, die Sie den exportierten Dateien hinzufügen können. Weitere Informationen finden Sie im Schritt [Attribute auswählen](/help/rtcdp/destinations/activate-destinations.md#select-attributes) im Arbeitsablauf für die Aktivierung. |
 
 ## Quellen {#sources}
 
@@ -64,9 +64,8 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Flow run monitoring | Users can monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and metrics. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
-| Account updating | Users can update the credentials, name, and description of any existing account to provide more meaningful information and correct any errors that may have been created. |
-| Flow run notifications | Users can subscribe to events and register webhooks to receive real-time notifications on the status, metrics, and errors regarding flow runs. |
+| Flusslaufüberwachung | Die Benutzer können alle Flussläufe überwachen und eine detaillierte Ansicht der einzelnen Vorgänge anzeigen, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und Metriken. Weitere Informationen finden Sie im Dokument [zum Überwachen von Datenflüssen](../../sources/tutorials/ui/monitor.md) . |
+| Flusslaufbenachrichtigungen | Benutzer können Ereignis abonnieren und Webhooks registrieren, um Echtzeitbenachrichtigungen über Status, Metriken und Fehler bei der Ausführung von Textfluss zu erhalten. |
 | Verbesserungen am UI-Katalog | Aktualisierungen des Katalogbildschirms für Quellen, um den Zugriff auf primäre Aktionen ausgewählter Objekte zu erleichtern. |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
