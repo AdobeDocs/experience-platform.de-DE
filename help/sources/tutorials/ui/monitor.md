@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
-description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the Sources workspace.
+description: Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Anzeigen vorhandener Konten und Datenflüsse aus dem Quellarbeitsbereich.
 solution: Experience Platform
 title: Überwachen von Konten und Datenflüssen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
+source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 8%
@@ -13,9 +13,9 @@ ht-degree: 8%
 ---
 
 
-# Überwachen von Konten und Datenflüssen in der Benutzeroberfläche
+# Monitor accounts and dataflows in the UI
 
-Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace.
 
 ## Erste Schritte
 
@@ -28,11 +28,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ## Monitor accounts
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden verschiedene Quellen angezeigt, für die Sie Konten und Datenflüsse erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create accounts and dataflows with. Each source shows the number of existing accounts and dataflows associated to them.
 
-Wählen Sie *[!UICONTROL Konten]* aus der oberen Kopfzeile zur Ansicht vorhandener Konten.
+Select *[!UICONTROL Accounts]* from the top header to view existing accounts.
 
-![Katalog](../../images/tutorials/monitor/catalog-accounts.png)
+![catalog](../../images/tutorials/monitor/catalog-accounts.png)
 
 The *[!UICONTROL Accounts]* pages appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
 
@@ -40,7 +40,7 @@ Select the funnel icon on the top left to launch the sort window.
 
 ![accounts](../../images/tutorials/monitor/accounts-list.png)
 
-Über das Sortierfeld können Sie auf Konten aus einer bestimmten Quelle zugreifen. Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, und wählen Sie das Konto in der Liste auf der rechten Seite aus.
+The sorting panel allows you to access accounts from a specific source. Select the source you wish to work with and select the account from the list on the right.
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
@@ -66,7 +66,7 @@ Auf der Seite &quot; *[!UICONTROL Dataflow-Aktivität]* &quot;finden Sie Angaben
 
 ![datflow-Aktivität](../../images/tutorials/monitor/dataflow-activity.png)
 
-Der Kalender ermöglicht die Ansicht der verschiedenen Zeitrahmen für erfasste Datensätze. You can choose to select one of the two pre-set options *[!UICONTROL Last 7 days]* or *[!UICONTROL Last 30 days]*. Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
+Der Kalender ermöglicht die Ansicht der verschiedenen Zeitrahmen für erfasste Datensätze. Sie können zwischen den beiden voreingestellten Optionen &quot; *[!UICONTROL Letzte 7 Tage]* &quot;und &quot; *[!UICONTROL Letzte 30 Tage]*&quot;wählen. Alternativ können Sie einen benutzerdefinierten Zeitraum mithilfe des Kalenders festlegen. Wählen Sie den gewünschten Zeitraum aus und wählen Sie &quot; **[!UICONTROL Anwenden]** &quot;, um fortzufahren.
 
 ![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -74,15 +74,15 @@ Standardmäßig wird in der Aktivität *[!UICONTROL &quot;]* Dataflow&quot;das B
 
 Wählen Sie &quot; **[!UICONTROL Datenaflow-Run-Beginn]** &quot;aus, um auf die *[!UICONTROL Datenaflow-Übersicht]* zuzugreifen.
 
-![runs](../../images/tutorials/monitor/run-metadata.png)
+![laufend](../../images/tutorials/monitor/run-metadata.png)
 
-The *[!UICONTROL Dataflow run overview]* displays information on the dataflow including its metadata, *[!UICONTROL Partial ingestion]* status, and assigned *[!UICONTROL Error threshold]*. The upper header also includes an *[!UICONTROL Error summary]*. Die *[!UICONTROL Fehlerzusammenfassung]* enthält den spezifischen Fehler der obersten Ebene, der anzeigt, in welchem Schritt beim Erfassungsvorgang ein Fehler aufgetreten ist.
+Die Übersicht *[!UICONTROL zum Ausführen des]* Datenflusses enthält Informationen zum Datenfluss, einschließlich Metadaten, *[!UICONTROL Teilerfassung]* -Status und zugewiesener *[!UICONTROL Fehlerschwellenwert]*. Die obere Kopfzeile enthält auch eine *[!UICONTROL Fehlerzusammenfassung]*. Die *[!UICONTROL Fehlerzusammenfassung]* enthält den spezifischen Fehler der obersten Ebene, der anzeigt, in welchem Schritt beim Erfassungsvorgang ein Fehler aufgetreten ist.
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
 In der folgenden Tabelle finden Sie Fehlercodes, die in der *[!UICONTROL Fehlerzusammenfassung]* angezeigt werden können.
 
-| Error code | Fehlermeldung |
+| Error code | Error Message |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | &quot;Bei der Aktivität zum Kopieren ist ein Problem aufgetreten.&quot; |
 | `CONNECTOR-2001-500` | &quot;Beim Kopieren der Experience Platform in den Datensatz ist ein Problem aufgetreten.&quot; |
@@ -96,23 +96,25 @@ Wählen Sie **[!UICONTROL Fehlerdiagnose]** für Vorschauen aus, um weitere Info
 
 ![Datenflusslauffehler](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-The *[!UICONTROL Error diagnostics preview]* panel appears. This screen displays specific information regarding the ingestion failure, including the *[!UICONTROL File name]*, *[!UICONTROL Error code]*, the name of the column in which the error occurred, and a description of the error.
+Das Fenster *[!UICONTROL Vorschau]* für die Fehlerdiagnose wird angezeigt. In diesem Bildschirm werden spezifische Informationen zum Erfassungsfehler angezeigt, einschließlich *[!UICONTROL Dateiname]*, *[!UICONTROL Fehlercode]*, Name der Spalte, in der der Fehler aufgetreten ist, und Beschreibung des Fehlers.
 
 Dieser Abschnitt enthält auch eine Vorschau der Spalte, die den Fehler enthält.
 
-> [!IMPORTANT] Zur Aktivierung der *[!UICONTROL Fehlerdiagnose-Vorschau]* müssen Sie beim Konfigurieren eines Datenflusses die *[!UICONTROL teilweise Erfassung]* und *[!UICONTROL Fehlerdiagnose]* aktivieren. Dadurch kann das System alle während der Ausführung erfassten Datensätze überprüfen.
+>[!IMPORTANT]
+>
+>Zur Aktivierung der *[!UICONTROL Fehlerdiagnose-Vorschau]* müssen Sie beim Konfigurieren eines Datenflusses die *[!UICONTROL teilweise Erfassung]* und *[!UICONTROL Fehlerdiagnose]* aktivieren. Dadurch kann das System alle während der Ausführung erfassten Datensätze überprüfen.
 
-![Preview-error-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
+![Vorschau-Fehlerdiagnose](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-After previewing the errors, you can select **[!UICONTROL Download]** from within the *[UICONTROL dataflow runs overview]* panel to access full error diagnostics and download the file manifest. See the documents on [error diagnostics](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) and [downloading metadata](../../../ingestion/batch-ingestion/partial.md#download-metadata) for more information.
+Nach der Vorschau der Fehler können Sie im Übersichtsbedienfeld für den **[!UICONTROL UICONTROL-Datendurchlauf die Option &quot;]** Herunterladen *[&quot;auswählen, um auf die vollständige Fehlerdiagnose zuzugreifen und das Dateimanifest herunterzuladen]* . See the documents on [error diagnostics](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) and [downloading metadata](../../../ingestion/batch-ingestion/partial.md#download-metadata) for more information.
 
 ![Preview-error-diagnostics](../../images/tutorials/monitor/download.png)
 
-Weitere Informationen zur Überwachung von Datenflüssen und zur Erfassung finden Sie im Lernprogramm zur [Überwachung von Streaming-Datenflüssen](../../../ingestion/quality/monitor-data-flows.md).
+For more information on monitoring dataflows and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
 
 ## Nächste Schritte
 
-By following this tutorial, you have successfully accessed existing accounts and dataflows from the *[!UICONTROL Sources]* workspace. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. Weitere Informationen finden Sie in den folgenden Dokumenten:
+By following this tutorial, you have successfully accessed existing accounts and dataflows from the *[!UICONTROL Sources]* workspace. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../profile/home.md)
 - [Übersicht über den Data Science Workspace](../../../data-science-workspace/home.md)
