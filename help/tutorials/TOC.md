@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Tutorials zu Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '41'
 ht-degree: 100%
 
 ---
@@ -19,9 +19,7 @@ ht-degree: 100%
 * [Data Governance und Datenschutz](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
 * [Entscheidungsfindung](decisioning.md)
-* Ziele {#destinations}
-   * [Ziel erstellen und Daten aktivieren (API)](destinations/api-tutorial.md)
-   * [E-Mail-Marketing-Ziel (API)](destinations/email-marketing-api.md)
+* [Ziele](destinations.md)
 * [Daten in Platform erfassen](data-ingestion.md)
 * [Profile und Identitäten](configure-profile.md)
 * [Schemas und Beziehungsdeskriptoren](schemas.md)
