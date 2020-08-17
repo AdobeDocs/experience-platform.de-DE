@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: JupyterLab-Benutzerhandbuch
 topic: Overview
+description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project Jupyter und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '3647'
-ht-degree: 55%
+source-wordcount: '3684'
+ht-degree: 56%
 
 ---
 
 
 # [!DNL JupyterLab] Benutzerhandbuch
 
-[!DNL JupyterLab] ist eine webbasierte Benutzeroberfläche für <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> und ist eng in [!DNL Adobe Experience Platform]integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten.
+[!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [Project Jupyter](https://jupyter.org/) und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten.
 
 This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
@@ -28,7 +29,7 @@ In der folgenden Liste werden einige der Funktionen vorgestellt, die bei Jupyter
 | --- | --- |
 | **Kernels** | Kernels provide notebook and other [!DNL JupyterLab] front-ends the ability to execute and introspect code in different programming languages. [!DNL Experience Platform] bietet zusätzliche Kernel zur Unterstützung der Entwicklung in [!DNL Python], R, PySpark und [!DNL Spark]. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
 | **Datenzugriff** | Access existing datasets directly from within [!DNL JupyterLab] with full support for read and write capabilities. |
-| **[!DNL Platform]Dienstintegration ** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. Eine vollständige Liste der unterstützten Integrationen finden Sie im Abschnitt zur [Integration mit anderen Platform-Diensten](#service-integration). |
+| **[!DNL Platform]Dienstintegration** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. Eine vollständige Liste der unterstützten Integrationen finden Sie im Abschnitt zur [Integration mit anderen Platform-Diensten](#service-integration). |
 | **Authentifizierung** | Zusätzlich zum <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">nativen Sicherheitsmodell von JupyterLab</a> wird jede Interaktion zwischen Ihrer Anwendung und Experience Platform, einschließlich der Kommunikation zwischen Platform-Diensten, über das <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a> verschlüsselt und authentifiziert. |
 | **Entwicklungsbibliotheken** | In [!DNL Experience Platform]bietet [!DNL JupyterLab] vorinstallierte Bibliotheken für [!DNL Python], R und PySpark. Eine vollständige Liste der unterstützten Bibliotheken finden Sie im [Anhang](#supported-libraries). |
 | **Bibliotheks-Controller** | When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
@@ -41,10 +42,10 @@ In der folgenden Liste werden einige der Funktionen vorgestellt, die bei Jupyter
 
 Standardization and interoperability are key concepts behind [!DNL Experience Platform]. The integration of [!DNL JupyterLab] on [!DNL Platform] as an embedded IDE allows it to interact with other [!DNL Platform] services, enabling you to utilize [!DNL Platform] to its full potential. The following [!DNL Platform] services are available in [!DNL JupyterLab]:
 
-* **[!DNL Catalog Service]:**Aufrufen und Erkunden von Datensätzen mit Lese- und Schreibfunktionen.
-* **[!DNL Query Service]:**Aufrufen und Erkunden von Datensätzen mit SQL, wodurch sich beim Datenzugriff bei großen Datenmengen der Overhead verringert.
-* **[!DNL Sensei ML Framework]:**Modellentwicklung mit der Möglichkeit, Daten zu trainieren und zu bewerten, sowie Rezepterstellung mit einem Klick.
-* **[!DNL Experience Data Model (XDM)]:**Normung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform.[Erlebnis-Datenmodell (XDM)](https://www.adobe.com/go/xdm-home-en), angetrieben von Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
+* **[!DNL Catalog Service]:** Aufrufen und Erkunden von Datensätzen mit Lese- und Schreibfunktionen.
+* **[!DNL Query Service]:** Aufrufen und Erkunden von Datensätzen mit SQL, wodurch sich beim Datenzugriff bei großen Datenmengen der Overhead verringert.
+* **[!DNL Sensei ML Framework]:** Modellentwicklung mit der Möglichkeit, Daten zu trainieren und zu bewerten, sowie Rezepterstellung mit einem Klick.
+* **[!DNL Experience Data Model (XDM)]:** Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [Erlebnis-Datenmodell (XDM)](https://www.adobe.com/go/xdm-home-en), angetrieben von Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
 >[!NOTE]
 >
@@ -64,7 +65,7 @@ Information regarding key features of [!DNL JupyterLab] and instructions on perf
 
 ### Access [!DNL JupyterLab] {#access-jupyterlab}
 
-Wählen Sie in [Adobe Experience Platform](https://platform.adobe.com)in der linken Navigationsspalte die Option **Notebooks** . Allow some time for [!DNL JupyterLab] to fully initialize.
+Wählen Sie in [Adobe Experience Platform](https://platform.adobe.com)in der linken Navigationsspalte **Notebooks** aus. Allow some time for [!DNL JupyterLab] to fully initialize.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -136,7 +137,7 @@ Bestimmte Funktionen und Funktionen sind auf bestimmte Kernels beschränkt, wie 
 
 ### Kernel-Sitzungen {#kernel-sessions}
 
-Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session. Alle aktiven Sitzungen finden Sie, indem Sie auf der linken Seitenleiste die Registerkarte **Laufende Terminals und Kernel** erweitern. Typ und Zustand des Kernels eines Notebooks finden Sie in der oberen rechten Ecke der Notebook-Oberfläche. In der Abbildung unten ist der zugehörige Kernel des Notebooks **[!DNL Python]3 **und der aktuelle Status wird durch einen grauen Kreis rechts dargestellt. Ein leerer Kreis impliziert einen Kernel im Leerlauf, während ein ausgefüllter Kreis einen aktiven Kernel darstellt.
+Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session. Alle aktiven Sitzungen finden Sie, indem Sie auf der linken Seitenleiste die Registerkarte **Laufende Terminals und Kernel** erweitern. Typ und Zustand des Kernels eines Notebooks finden Sie in der oberen rechten Ecke der Notebook-Oberfläche. In der Abbildung unten ist der zugehörige Kernel des Notebooks **[!DNL Python]3** und der aktuelle Status wird durch einen grauen Kreis rechts dargestellt. Ein leerer Kreis impliziert einen Kernel im Leerlauf, während ein ausgefüllter Kreis einen aktiven Kernel darstellt.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -452,7 +453,7 @@ Ein benutzerdefinierter [!DNL Data Science Workspace] magischer Befehl zum Lesen
 
 ### Abfragen mit [!DNL Query Service] in [!DNL Python]
 
-[!DNL JupyterLab] auf [!DNL Platform] ermöglicht Ihnen die Verwendung von SQL in einem [!DNL Python] Notebook, um über den Dienst <a href="https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html" target="_blank">für die</a>Adobe Experience Platform-Abfrage auf Daten zuzugreifen. Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
+[!DNL JupyterLab] auf [!DNL Platform] ermöglicht Ihnen die Verwendung von SQL in einem [!DNL Python] Notebook, um über den <a href="https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html" target="_blank">Adobe Experience Platform Abfrage Service</a>auf Daten zuzugreifen. Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
 
 Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the <a href="https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md" target="_blank">[!DNL Query Service] SQL syntax</a>.
 
