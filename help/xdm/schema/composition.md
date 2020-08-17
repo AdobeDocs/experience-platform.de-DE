@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
 solution: Experience Platform
 title: Grundlagen der Schema-Komposition
 topic: overview
+description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '2782'
+source-wordcount: '2811'
 ht-degree: 56%
 
 ---
@@ -142,7 +143,7 @@ Eine Klasse bestimmt auch, welche Mixins für die Verwendung im Schema zugelasse
 
 There are standard classes provided with every integration of [!DNL Experience Platform], known as &quot;Industry&quot; classes. Branchenklassen sind allgemein anerkannte Industriestandards, die für eine breite Palette von Anwendungsfällen gelten. Examples of Industry classes include the [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] classes provided by Adobe.
 
-[!DNL Experience Platform] also allows for &quot;Vendor&quot; classes, which are classes defined by [!DNL Experience Platform] partners and made available to all customers who use that vendor service or application within [!DNL Platform].
+[!DNL Experience Platform] ermöglicht auch &quot;Vendor&quot;-Klassen, bei denen es sich um von [!DNL Experience Platform] Partnern definierte Klassen handelt, die allen Kunden zur Verfügung gestellt werden, die den Service oder die Anwendung des Anbieters innerhalb [!DNL Platform]des Unternehmens nutzen.
 
 There are also classes used to describe more specific use cases for individual organizations within [!DNL Platform], called &quot;Customer&quot; classes. Kundenklassen werden von einer Organisation definiert, wenn keine Branchen- oder Anbieterklassen zur Verfügung stehen, um einen einzigartigen Verwendungsfall zu beschreiben.
 
