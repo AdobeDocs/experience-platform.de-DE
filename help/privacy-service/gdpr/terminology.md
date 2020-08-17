@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: DSGVO-Terminologie
 topic: troubleshooting
+description: Im Folgenden finden Sie eine Liste von Begriffsbestimmungen für Schlüsselbegriffe im Zusammenhang mit der Allgemeinen Datenschutzverordnung (GDPR).
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---
@@ -74,7 +75,7 @@ __Unternehmensgruppe:__ Ein herrschendes Unternehmen und seine kontrollierten Un
 
 ## I
 
-__Identity Management Services (IMS):__ Die Adobe Implementierung von Federated ID und OAuth 2.0 für die Authentifizierung von Adoben ID-Benutzern und die Autorisierung von Adoben-Ressourcen. Sie müssen IMS in Ihre Adobe-Anwendung oder Ihren -Service integrieren, damit sich Ihre Benutzer bei den Adobe-Services anmelden und diese nutzen können. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+__Identity Management Services (IMS):__ Die Adobe Implementierung von Federated ID und OAuth 2.0 für die Authentifizierung von Adobe ID-Benutzern und die Autorisierung von Adoben-Ressourcen. Sie müssen IMS in Ihre Adobe-Anwendung oder Ihren -Service integrieren, damit sich Ihre Benutzer bei den Adobe-Services anmelden und diese nutzen können. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __IMS-Organisations-ID:__ Bezieht sich auf ein Adoben-Autorisierungstoken für die Dienst-zu-Dienst-Authentifizierung, für das keine Benutzeranmeldung erforderlich ist. Es wird an einen IMS-Client ausgegeben und hat keinen zugehörigen Benutzer. Ein IMS-Client benötigt ein Service-Token, um Back-Kanal-Anfragen zwischen Diensten zu autorisieren. (Gelegentlich wird für Servicetoken auch der Begriff „Systemtoken“ verwendet.)
 
