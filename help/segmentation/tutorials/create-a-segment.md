@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;create segment
 solution: Experience Platform
 title: Erstellen eines Segments
 topic: tutorial
+description: Dieses Dokument bietet eine Anleitung zum Entwickeln, Testen, Anzeigen einer Segmentdefinition und zum Speichern einer Segmentdefinition mit der Adobe Experience Platform Segmentation Service API.
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '901'
 ht-degree: 12%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 12%
 
 # Erstellen eines Segments
 
-Dieses Dokument bietet eine Anleitung zum Entwickeln, Testen, Anzeigen einer Segmentdefinition und zum Speichern einer Segmentdefinition mithilfe der [DNL-Adobe Experience Platform-Segmentierungsdienst-API](../api/getting-started.md).
+Dieses Dokument bietet eine Anleitung zum Entwickeln, Testen, Anzeigen einer Segmentdefinition in der Vorschau und Speichern mit der [DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
 
 Informationen zum Erstellen von Segmenten mithilfe der Benutzeroberfläche finden Sie im Handbuch [Segmentaufbau](../ui/overview.md).
 
