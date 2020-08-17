@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
 solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 5%
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 Um eine bessere Kundenerfahrung zu erzielen, müssen Sie die personenbezogenen Daten Ihrer Kunden erfassen und speichern. Bei der Verwendung dieser Daten ist es wichtig, die Privatsphäre Ihrer Kunden zu verstehen und zu respektieren. Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, auf Anfrage auf ihre personenbezogenen Daten zuzugreifen bzw. diese Daten aus Ihren Datenspeichern löschen zu lassen.
 
-Die Adobe Experience Platform [!DNL Privacy Service] wurde als Reaktion auf eine grundlegende Veränderung der Art und Weise entwickelt, wie Unternehmen die personenbezogenen Daten ihrer Kunden verwalten müssen. Das zentrale Ziel von [!DNL Privacy Service] ist es, die Einhaltung der Datenschutzbestimmungen zu automatisieren, die bei Verstößen zu hohen Geldbußen und zu Störungen des Datenbetriebs für Ihr Unternehmen führen können.
+Adobe Experience Platform [!DNL Privacy Service] wurde als Reaktion auf eine grundlegende Änderung der Art und Weise entwickelt, wie Unternehmen die personenbezogenen Daten ihrer Kunden verwalten müssen. Das zentrale Ziel von [!DNL Privacy Service] ist es, die Einhaltung der Datenschutzbestimmungen zu automatisieren, die bei Verstößen zu hohen Geldbußen und zu Störungen des Datenbetriebs für Ihr Unternehmen führen können.
 
 [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, die Sie bei der Verwaltung von Kundendatenanforderungen unterstützen. With [!DNL Privacy Service], you can submit requests to access and delete personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 
@@ -61,7 +61,7 @@ Abhängig von den [!DNL Experience Cloud] Anwendungen, die Sie verwenden, müsse
 
 Damit eine Datenschutzanforderung eines Kunden verarbeitet [!DNL Privacy Service] werden kann, muss in der Anforderung selbst mindestens ein eindeutiger Identitätswert für diesen Kunden angegeben werden. Ein eindeutiger Identitätswert ist jede Information, die zur Identifizierung einer Person und ihrer in Ihren [!DNL Experience Cloud] Datenspeichern gespeicherten personenbezogenen Daten verwendet werden kann. [!DNL Privacy Service] verwendet diese Identitätsinformationen, um die personenbezogenen Daten des Kunden entsprechend der Art der Anforderung zu finden und zu verarbeiten (Zugriff, Löschen oder Ausschluss).
 
-Je nach den [!DNL Experience Cloud] Anwendungen, die Ihr CRM-System nutzt, variieren die Art und Anzahl der Identitätswerte, die Sie für jeden Kunden angeben müssen. Einige Anwendungen verwenden ihre eigenen internen Kunden-ID-Werte (z. B. Adobe Target-IDs), während andere auf globalen IDs aus Adobe [!DNL Experience Cloud Identity Service] (ECID) basieren, die die Aktivität von Kunden in allen [!DNL Experience Cloud] Anwendungen verfolgen. Darüber hinaus können allgemeine persönliche Informationen wie eine E-Mail-Adresse oder Telefonnummer auch als gültige Identitätsdaten dienen.
+Je nach den [!DNL Experience Cloud] Anwendungen, die Ihr CRM-System nutzt, variieren die Art und Anzahl der Identitätswerte, die Sie für jeden Kunden angeben müssen. Einige Anwendungen verwenden ihre eigenen internen Kunden-ID-Werte (z. B. Adobe Target IDs), während andere auf globalen IDs aus Adobe [!DNL Experience Cloud Identity Service] (ECID) basieren, die die Aktivität von Kunden in allen [!DNL Experience Cloud] Anwendungen verfolgen. Darüber hinaus können allgemeine persönliche Informationen wie eine E-Mail-Adresse oder Telefonnummer auch als gültige Identitätsdaten dienen.
 
 Das Dokument zu [Identitätsdaten für Datenschutzanfragen](./identity-data.md) enthält detailliertere Informationen zu den Arten von Identitätsinformationen, die für [!DNL Privacy Service]die Verwendung zugelassen werden. Das Dokument bietet außerdem Anleitungen dazu, wie Adoben genutzt werden können, um die entsprechenden Identitätsinformationen von Ihren Kunden bei der Interaktion mit Ihrer Website effektiv abzurufen und diese Daten an [!DNL Privacy Service] API-Anforderungen zu senden.
 
@@ -77,7 +77,7 @@ Sobald Sie die Datenschutzbedürfnisse Ihres Unternehmens ermittelt und die Iden
 
 #### Verwenden der API
 
-Die [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) bietet mehrere Endpunkte zum Erstellen und Verwalten von Datenschutzaufträgen mithilfe von RESTful-API-Aufrufen, mit denen Sie die Einhaltung der Datenschutzbestimmungen für Ihre [!DNL Experience Cloud] Anwendungen programmatisch angehen können. Ausführliche Anweisungen zur Verwendung der API finden Sie im Entwicklerhandbuch für die [Privacy Service-API](api/getting-started.md).
+Das [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) bietet mehrere Endpunkte zum Erstellen und Verwalten von Datenschutzaufträgen mithilfe von RESTful-API-Aufrufen, mit denen Sie die Einhaltung der Datenschutzvorschriften für Ihre [!DNL Experience Cloud] Anwendungen programmatisch angehen können. Ausführliche Anweisungen zur Verwendung der API finden Sie im Entwicklerhandbuch für die [Privacy Service-API](api/getting-started.md).
 
 #### Verwenden der UI
 
