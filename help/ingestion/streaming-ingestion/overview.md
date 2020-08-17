@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
 solution: Experience Platform
 title: Streaming-Erfassung in Adobe Experience Platform – Übersicht
 topic: overview
+description: Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Methode, um Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 32%
+source-wordcount: '272'
+ht-degree: 38%
 
 ---
 
