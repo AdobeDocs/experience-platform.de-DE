@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Validieren der Streaming-Erfasssung
 topic: overview
+description: Mit der Streaming-Erfassung können Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit nach Adobe Experience Platform hochladen. Die Streaming-Erfassungsmethode-APIs unterstützen zwei Überprüfungsmodi - synchron und asynchron.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '843'
 ht-degree: 18%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 18%
 
 # Validieren der Streaming-Erfasssung
 
-Mit der Streaming-Erfassung können Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in die Adobe Experience Platform hochladen. Die Streaming-Erfassungsmethode-APIs unterstützen zwei Überprüfungsmodi - synchron und asynchron.
+Mit der Streaming-Erfassung können Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit nach Adobe Experience Platform hochladen. Die Streaming-Erfassungsmethode-APIs unterstützen zwei Überprüfungsmodi - synchron und asynchron.
 
 ## Erste Schritte
 
