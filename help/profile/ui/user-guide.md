@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: Benutzerhandbuch zum Echtzeit-Kundenprofil
 topic: guide
+description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 11%
+source-wordcount: '1191'
+ht-degree: 14%
 
 ---
 
