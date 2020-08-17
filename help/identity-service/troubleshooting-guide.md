@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Adobe Experience Platform Identity Service
 topic: troubleshooting
+description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 translation-type: tm+mt
-source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '2225'
-ht-degree: 85%
+source-wordcount: '2248'
+ht-degree: 86%
 
 ---
 
@@ -137,7 +138,7 @@ Internal solutions|Preferred|Common
 
 The following section provides troubleshooting suggestions for specific error codes and unexpected behavior you may encounter while working with the [!DNL Identity Service] API.
 
-## [!DNL Identity Service] error messages
+## [!DNL Identity Service] Fehlermeldungen
 
 The following is a list of error messages you may encounter when using the [!DNL Identity Service] API.
 
@@ -171,7 +172,7 @@ Vergewissern Sie sich, dass Sie den angegebenen Parameter im Anfragepfad ordnung
 }
 ```
 
-[!DNL Identity Service] purges data older than 180 days. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, auf ältere Daten zuzugreifen.
+[!DNL Identity Service] entfernt Daten, die älter als 180 Tage sind. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, auf ältere Daten zuzugreifen.
 
 ### Es gilt eine Beschränkung von 1.000 XIDs in einem einzelnen Aufruf.
 
