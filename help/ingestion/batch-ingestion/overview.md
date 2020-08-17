@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset
 solution: Experience Platform
 title: Batch-Erfassung in Adobe Experience Platform – Übersicht
 topic: overview
+description: Mit der Batch Ingestion-API können Sie Daten als Batch-Dateien in Adobe Experience Platform aufnehmen. Daten, die aufgenommen werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1196'
 ht-degree: 83%
 
 ---
