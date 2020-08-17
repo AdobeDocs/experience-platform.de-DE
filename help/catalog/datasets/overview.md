@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Datensätze – Übersicht
 topic: datasets
+description: Dieses Dokument bietet einen Überblick über Datensätze in der Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '723'
 ht-degree: 3%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 # Datensätze – Übersicht
 
-Alle Daten, die erfolgreich in die Adobe Experience Platform aufgenommen wurden, bleiben im [!DNL Data Lake] Datensatz erhalten. Ein Datensatz ist ein Datenspeicherung- und Verwaltungskonstrukt für eine Datenerfassung, normalerweise eine Tabelle, die ein Schema (Spalten) und Felder (Zeilen) enthält. Datasets enthalten auch Metadaten, die verschiedene Aspekte der von ihnen gespeicherten Daten beschreiben.
+Alle Daten, die erfolgreich in Adobe Experience Platform aufgenommen wurden, bleiben im [!DNL Data Lake] Datensatz erhalten. Ein Datensatz ist ein Datenspeicherung- und Verwaltungskonstrukt für eine Datenerfassung, normalerweise eine Tabelle, die ein Schema (Spalten) und Felder (Zeilen) enthält. Datasets enthalten auch Metadaten, die verschiedene Aspekte der von ihnen gespeicherten Daten beschreiben.
 
 This document provides a high-level overview of datasets in [!DNL Experience Platform].
 
@@ -56,12 +57,12 @@ Sobald Datasets zur Speicherung von erfassten Daten verwendet wurden, werden die
 Im Folgenden finden Sie eine Liste nachgelagerter Dienste, die Datasets für verschiedene Vorgänge verwenden. Weitere Informationen finden Sie in der Dokumentation zu den einzelnen Diensten.
 
 * [!DNL Data Access API](../../data-access/home.md): Ermöglicht Ihnen den Zugriff auf und das Herunterladen der Inhalte von Dateien, die in Datasets gespeichert sind.
-* [Identitätsdienst](../../identity-service/home.md)der Adobe Experience Platform: Überbrückt Identitäten zwischen Geräten und Systemen und verknüpft Datensätze anhand der Identitätsfelder, die von den XDM-Schemas definiert werden, denen sie entsprechen.
+* [Adobe Experience Platform-Identitätsdienst](../../identity-service/home.md): Überbrückt Identitäten zwischen Geräten und Systemen und verknüpft Datensätze anhand der Identitätsfelder, die von den XDM-Schemas definiert werden, denen sie entsprechen.
 * [!DNL Real-time Customer Profile](../../profile/home.md): Ermöglicht [!DNL Identity Service] die Erstellung detaillierter Kundendaten aus Ihren Datensätzen in Echtzeit. [!DNL Real-time Customer Profile] ruft Daten aus dem [!DNL Data Lake] und speichert Kundendaten in einem eigenen separaten Datenspeicher.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Audiencen aus Ihren [!DNL Real-time Customer Profile] Daten. Diese Audiencen können dann in ihre eigenen Datensätze innerhalb des [!DNL Data Lake]Berichts exportiert werden.
+* [Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md): Ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Audiencen aus Ihren [!DNL Real-time Customer Profile] Daten. Diese Audiencen können dann in ihre eigenen Datensätze innerhalb des [!DNL Data Lake]Berichts exportiert werden.
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Verwendet maschinelles Lernen und künstliche Intelligenz, um Einblicke in große Datensätze zu entdecken.
 * [Adobe Experience Platform Abfrage Service](../../query-service/home.md): Ermöglicht Ihnen die Verwendung von SQL zur Abfrage von Daten in [!DNL Experience Platform]Datasets innerhalb der Abfrage [!DNL Data Lake] und die Erfassung der Ergebnisse als neuer Datensatz zur Verwendung in Berichte, [!DNL Data Science Workspace]oder [!DNL Real-time Customer Profile].
-* [Entscheidungsdienst](../../decisioning-service/home.md)für Adobe Experience Platformen: Nutzen Sie diese Optionen, [!DNL Real-time Customer Profile] um die wahrscheinlichste Auswahl zu ermitteln, die ein Kunde anhand von Verhaltensdaten treffen wird, die aus aktivierten Datensätzen [!DNL Profile] abgerufen werden.
+* [Adobe Experience Platform-Entscheidungsdienst](../../decisioning-service/home.md): Nutzen Sie diese Optionen, [!DNL Real-time Customer Profile] um die wahrscheinlichste Auswahl zu ermitteln, die ein Kunde anhand von Verhaltensdaten treffen wird, die aus aktivierten Datensätzen [!DNL Profile] abgerufen werden.
 
 ## Nächste Schritte
 
