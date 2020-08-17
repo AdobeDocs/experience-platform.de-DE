@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
-title: Configure a dataflow for a CRM connector in the UI
+title: Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche
 topic: overview
+description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Konto.
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1356'
 ht-degree: 6%
 
 ---
 
 
-# Configure a dataflow for a CRM connector in the UI
+# Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Konto.
+Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen [!DNL Platform] Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Konto.
 
 ## Erste Schritte
 
@@ -22,27 +23,27 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 * [Experience-Datenmodell (XDM)-System](../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   * [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+   * [Schema-Editor-Lernprogramm](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
 * [Echtzeit-Kundenprofil](../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits ein CRM-Konto erstellt haben. A list of tutorials for creating different CRM connectors in the UI can be found in the [source connectors overview](../../../home.md).
+Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits ein CRM-Konto erstellt haben. Eine Liste von Übungen zum Erstellen verschiedener CRM-Connectors in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../home.md).
 
-## Select data
+## Daten auswählen
 
-After creating your CRM account, the *Select data* step appears, providing an interactive interface for you to explore your file hierarchy.
+Nach der Erstellung Ihres CRM-Kontos wird der Schritt Daten ** auswählen angezeigt und bietet eine interaktive Oberfläche, in der Sie Ihre Dateihierarchie untersuchen können.
 
-* The left half of the interface is a directory browser, displaying your server&#39;s files and directories.
-* The right half of the interface lets you preview up to 100 rows of data from a compatible file.
+* Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
+* In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
 
-Select the directory you wish to use, then click **[!UICONTROL Next]**.
+Wählen Sie den Ordner aus, den Sie verwenden möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
 ![select-data](../../../images/tutorials/dataflow/crm/select-data.png)
 
-## Map data fields to an XDM schema
+## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-The *[!UICONTROL Mapping]* step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset.
+Der Schritt *[!UICONTROL Zuordnung]* wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem [!DNL Platform] Datensatz zuzuordnen.
 
-Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new dataset.
+Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen.
 
 ### Vorhandenen Datensatz verwenden
 
@@ -86,29 +87,29 @@ Der Schritt *[!UICONTROL Planung]* wird angezeigt, mit dem Sie einen Erfassungsz
 
 Datenflüsse sind so konzipiert, dass Daten auf planmäßiger Basis automatisch erfasst werden. Beginn durch Auswahl der Aufnahmefrequenz. Legen Sie als Nächstes das Intervall fest, um den Zeitraum zwischen zwei Flussläufen festzulegen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und auf größer oder gleich 15 gesetzt werden.
 
-Um die Erfassungszeit des Beginns festzulegen, passen Sie das Datum und die Uhrzeit an, die im Feld &quot;Beginn&quot;angezeigt werden. Alternatively, you can select the calendar icon to edit the start time value. Start time must be greater than or equal to your current UTC time.
+Um die Erfassungszeit des Beginns festzulegen, passen Sie das Datum und die Uhrzeit an, die im Feld &quot;Beginn&quot;angezeigt werden. Alternativ können Sie das Kalendersymbol auswählen, um den Zeitwert des Beginns zu bearbeiten. Die Beginn-Zeit muss größer oder gleich der aktuellen UTC-Zeit sein.
 
-Select **[!UICONTROL Load incremental data by]** to assign the delta column. This field provides a distinction between new and existing data.
+Wählen Sie Inkrementelle Daten **[!UICONTROL laden, indem]** Sie die Delta-Spalte zuweisen. In diesem Feld wird zwischen neuen und vorhandenen Daten unterschieden.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
-### Set up a one-time ingestion dataflow
+### Einrichten eines einmaligen Erfassungsdataflow
 
-To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**.
+Um eine einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die Häufigkeit aus und klicken Sie auf **[!UICONTROL Einmal]**.
 
 >[!TIP]
 >
->**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+>**[!UICONTROL Intervall]** und **[!UICONTROL Aufstockung]** sind während einer einmaligen Erfassung nicht sichtbar.
 
-Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
+Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]**.
 
 ![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-## Provide dataflow details
+## Datennachrichtendetails angeben
 
-The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
+Der Schritt *[!UICONTROL Datennachweis]* wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis geben können.
 
-During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Once *[!UICONTROL Partial ingestion]* is enabled, drag the *[!UICONTROL Error threshold %]* dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+Während dieses Prozesses können Sie auch die *[!UICONTROL teilweise Erfassung]* und *[!UICONTROL Fehlerdiagnose]* aktivieren. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Sobald die *[!UICONTROL teilweise Erfassung]* aktiviert ist, ziehen Sie den *[!UICONTROL Fehlerschwellenwert %]* , um den Fehlerschwellenwert des Stapels anzupassen. Alternativ können Sie den Schwellenwert manuell anpassen, indem Sie das Eingabefeld auswählen. Weitere Informationen finden Sie in der Übersicht über die [teilweise Stapelverarbeitung](../../../../ingestion/batch-ingestion/partial.md).
 
 Geben Sie Werte für den Datenflug ein und wählen Sie **[!UICONTROL Weiter]**.
 
