@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Erstellen eines Schemas mit dem Schema Editor
 topic: tutorials
+description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3376'
+source-wordcount: '3392'
 ht-degree: 57%
 
 ---
@@ -172,10 +173,10 @@ The changes are applied and the newly created &quot;[!UICONTROL loyalty]&quot; o
 
 Für jedes Feld sind die folgenden Informationen erforderlich:
 
-* **[!UICONTROL Feldname]:**Der Name des Felds, in Kamelschreibweise geschrieben. Beispiel: LoyalitätsStufe
-* **[!UICONTROL Anzeigename]:**Der Name des Felds, in der Titelschrift geschrieben. Beispiel: Loyalitäts-Stufe
-* **[!UICONTROL Typ]:**Der Datentyp des Felds. This includes basic scalar types and any data types defined in the[!DNL Schema Registry]. Beispiele: Zeichenfolge, Ganzzahl, Boolescher Wert, Person, Adresse, Telefonnummer usw.
-* **[!UICONTROL Beschreibung]:**Es sollte eine optionale Beschreibung des Feldes eingefügt werden, die im Satzfall verfasst ist. (max. 200 Zeichen)
+* **[!UICONTROL Feldname]:** Der Name des Felds, in Kamelschreibweise geschrieben. Beispiel: LoyalitätsStufe
+* **[!UICONTROL Anzeigename]:** Der Name des Felds, in der Titelschrift geschrieben. Beispiel: Loyalitäts-Stufe
+* **[!UICONTROL Typ]:** Der Datentyp des Felds. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Beispiele: Zeichenfolge, Ganzzahl, Boolescher Wert, Person, Adresse, Telefonnummer usw.
+* **[!UICONTROL Beschreibung]:** Es sollte eine optionale Beschreibung des Feldes eingefügt werden, die im Satzfall verfasst ist. (max. 200 Zeichen)
 
 The first field for the Loyalty object will be a string called &quot;[!UICONTROL loyaltyId]&quot;. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the *[!UICONTROL Field Properties]* window becomes populated with several options for applying constraints, including **[!UICONTROL Default Value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum Length]**.
 
@@ -214,10 +215,10 @@ When you have completed all field properties, click **[!UICONTROL Apply]** and t
 
 Weitere Informationen zu verfügbaren zusätzlichen Einschränkungen:
 
-* **[!UICONTROL Erforderlich]:**Gibt an, dass das Feld für die Datenerfassung erforderlich ist. Daten, die auf Grundlage dieses Schemas in einen Datensatz hochgeladen wurden und dieses Feld nicht enthalten, schlagen bei der Aufnahme fehl.
-* **[!UICONTROL Array]:**Gibt an, dass das Feld ein Array von Werten mit jeweils dem angegebenen Datentyp enthält. Wenn Sie beispielsweise den Datentyp „Zeichenfolge“ auswählen und das Kontrollkästchen „Array“ aktivieren, enthält das Feld ein Zeichenfolgen-Array.
-* **[!UICONTROL Enum]:**Gibt an, dass dieses Feld einen der Werte aus einer aufgezählten Liste möglicher Werte enthalten muss.
-* **[!UICONTROL Identität]:**Gibt an, dass dieses Feld ein Identitätsfeld ist. Weitere Informationen zu Identitätsfeldern finden Sie[weiter unten in diesem Tutorial](#identity-field).
+* **[!UICONTROL Erforderlich]:** Gibt an, dass das Feld für die Datenerfassung erforderlich ist. Daten, die auf Grundlage dieses Schemas in einen Datensatz hochgeladen wurden und dieses Feld nicht enthalten, schlagen bei der Aufnahme fehl.
+* **[!UICONTROL Array]:** Gibt an, dass das Feld ein Array von Werten mit jeweils dem angegebenen Datentyp enthält. Wenn Sie beispielsweise den Datentyp „Zeichenfolge“ auswählen und das Kontrollkästchen „Array“ aktivieren, enthält das Feld ein Zeichenfolgen-Array.
+* **[!UICONTROL Enum]:** Gibt an, dass dieses Feld einen der Werte aus einer aufgezählten Liste möglicher Werte enthalten muss.
+* **[!UICONTROL Identität]:** Gibt an, dass dieses Feld ein Identitätsfeld ist. Weitere Informationen zu Identitätsfeldern finden Sie [weiter unten in diesem Tutorial](#identity-field).
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#datatype}
 
@@ -317,7 +318,7 @@ Die folgenden Informationen ergänzen das Tutorial zum Schema Editor.
 
 [!DNL Experience Platform] bietet die Flexibilität, ein Schema auf der Grundlage einer Klasse zu definieren, die spezifisch für Ihr Unternehmen ist.
 
-Öffnen Sie das Dialogfeld *[!UICONTROL Klasse zuweisen]*, indem Sie im Schema Editor im Abschnitt **[!UICONTROL Klasse]** auf *[!UICONTROL Zuweisen]* klicken. Within the dialog, select **C[!UICONTROL reate New Class ]**.
+Öffnen Sie das Dialogfeld *[!UICONTROL Klasse zuweisen]*, indem Sie im Schema Editor im Abschnitt **[!UICONTROL Klasse]** auf *[!UICONTROL Zuweisen]* klicken. Within the dialog, select **C[!UICONTROL reate New Class]**.
 
 You can then give your new class a **[!UICONTROL Display Name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
 
