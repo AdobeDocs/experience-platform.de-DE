@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment evaluation
 solution: Experience Platform
 title: Bewerten eines Segments
 topic: tutorial
+description: In diesem Dokument finden Sie eine Anleitung zur Segmentbewertung und zum Zugriff auf Segmentergebnisse mithilfe der Segmentierungs-API.
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1535'
 ht-degree: 14%
 
 ---
