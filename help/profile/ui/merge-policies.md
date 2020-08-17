@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Benutzerhandbuch zu Zusammenführungsrichtlinien
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 83%
 
 ---
@@ -24,7 +24,7 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 This guide requires a working understanding of the various [!DNL Experience Platform] services involved with merge policies. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [!DNL Real-time Customer Profile](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [!DNL Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die Daten eingehen [!DNL Platform].
 * [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
@@ -80,7 +80,8 @@ Sie können eine vorhandene Zusammenführungsrichtlinie über den Tab *[!UICONTR
 
 Wenn der Bildschirm *[!UICONTROL Zusammenführungsrichtlinie bearbeiten]* angezeigt wird, können Sie Änderungen am *[!UICONTROL Namen]*, *[!UICONTROL Schema]*, *[!UICONTROL ID-Zusammenfügungstyp]* und *[!UICONTROL Attributzusammenführungstyp]* vornehmen und festlegen, ob die Richtlinie als *[!UICONTROL standardmäßige Zusammenführungsrichtlinie]* für Ihre Organisation dienen soll oder nicht.
 
->[!NHinweis]
+>[!NOTE]
+>
 >Sie können die Kennung der Zusammenführungsrichtlinie, die oben im Bearbeitungsbildschirm angezeigt wird, nicht bearbeiten. Es handelt sich dabei um eine schreibgeschützte, systemgenerierte Kennung, die sich nicht ändern lässt.
 
 ![](../images/merge-policies/edit-screen.png)
