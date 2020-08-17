@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: Ziele – Übersicht
 seo-title: Ziele – Übersicht
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 59%
@@ -44,7 +45,7 @@ Detaillierte Informationen finden Sie unter [Zieltypen und Kategorien - Übersic
 
 ## Ziele und Zugangssteuerungen {#access-controls}
 
-Die Funktion &quot;Ziele&quot;in Echtzeit-CDP funktioniert mit Berechtigungen für die Zugriffskontrolle von Adobe Experience Platformen. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
+Die Funktion &quot;Ziele&quot;in Echtzeit-CDP funktioniert mit Adobe Experience Platform-Zugriffskontrolle-Berechtigungen. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
 
 Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](../../access-control/ui/overview.md).
 
