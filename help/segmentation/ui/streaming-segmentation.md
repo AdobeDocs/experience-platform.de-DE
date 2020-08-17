@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment evaluation
 solution: Experience Platform
 title: Streaming-Segmentierung
 topic: ui guide
+description: Streaming-Segmentierung Unter Adobe Experience Platform können Sie Segmentierungen in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in die Plattform gelangen, was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Plattform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 translation-type: tm+mt
-source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '737'
 ht-degree: 2%
 
 ---
@@ -37,12 +38,12 @@ Eine Abfrage wird automatisch mit Streaming-Segmentierung bewertet, wenn sie ein
 | Eingehender Treffer, der sich auf ein Profil innerhalb eines relativen Zeitfensters bezieht | Eine Segmentdefinition, die sich **innerhalb der letzten sieben Tage** auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profil-Attribute bezieht. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Mehrere Ereignis, die auf ein Profil verweisen | Jede Segmentdefinition, die sich **innerhalb der letzten 24 Stunden** auf mehrere Ereignis bezieht und (optional) ein oder mehrere Profil-Attribute besitzt. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-The following section lists segment definition examples that will **not** be enabled for streaming segmentation.
+Im folgenden Abschnitt werden Segmentdefinitionsbeispiele Liste, die für die Streaming-Segmentierung **nicht** aktiviert werden.
 
 | Abfragetyp | Details | Beispiel |
 | ---------- | ------- | ------- |
-| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven-day period**. For example, within the **last two weeks**. | ![](../images/ui/streaming-segmentation/relative-hit-failure.png) |
-| Incoming hit that refers to a profile within a relative window | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein eingehendes Ereignis **nicht** innerhalb der **letzten sieben Tage**.</li><li>A segment definition that includes [!DNL Adobe Audience Manager (AAM)] segments or traits.</li></ul> | ![](../images/ui/streaming-segmentation/profile-relative-failure.png) |
+| Eingehender Treffer innerhalb eines relativen Zeitfensters | Wenn sich die Segmentdefinition auf ein eingehendes Ereignis bezieht, das **nicht** innerhalb der **letzten sieben Tage** liegt. Zum Beispiel innerhalb der **letzten zwei Wochen**. | ![](../images/ui/streaming-segmentation/relative-hit-failure.png) |
+| Eingehender Treffer, der sich auf ein Profil in einem relativen Fenster bezieht | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein eingehendes Ereignis **nicht** innerhalb der **letzten sieben Tage**.</li><li>Eine Segmentdefinition, die [!DNL Adobe Audience Manager (AAM)] Segmente oder Eigenschaften enthält.</li></ul> | ![](../images/ui/streaming-segmentation/profile-relative-failure.png) |
 | Mehrere Ereignis, die auf ein Profil verweisen | Die folgenden Optionen unterstützen **keine** Streaming-Segmentierung:<ul><li>Ein Ereignis, das **nicht** innerhalb **der letzten 24 Stunden** auftritt.</li><li>Eine Segmentdefinition, die Segmente oder Eigenschaften von Adobe Audience Manager (AAM) enthält.</li></ul> | ![](../images/ui/streaming-segmentation/event-history-failure.png) |
 | Abfragen mit mehreren Entitäten | Abfragen mit mehreren Entitäten werden durch Streaming-Segmentierung insgesamt **nicht** unterstützt. |  |
 
@@ -50,8 +51,8 @@ Darüber hinaus gelten einige Richtlinien für die Streaming-Segmentierung:
 
 | Abfragetyp | Leitlinie |
 | ---------- | -------- |
-| Abfrage mit einem Ereignis | The look-back window is limited to **seven days**. |
-| Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. Die gesamte Abfrage **kann** jedoch negiert werden.</li></ul> |
+| Abfrage mit einem Ereignis | Das Rückblickfenster ist auf **sieben Tage** begrenzt. |
+| Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen **muss** eine strikte Zeitbestellbedingung bestehen.</li><li>Nur einfache Zeitreihenfolgen (vor und nach) zwischen den Ereignissen sind zulässig.</li><li>Die einzelnen Ereignis **können nicht** negiert werden. Die gesamte Abfrage **kann** jedoch negiert werden.</li></ul> |
 
 ## Details zu Streaming-Segmenten
 
@@ -77,6 +78,6 @@ Das folgende Video soll Ihr Verständnis von Streaming-Segmentierung unterstütz
 
 ## Nächste Schritte
 
-This user guide explains how streaming-enabled segment definitions work on Adobe Experience Platform and how to monitor streaming-enabled segments.
+In diesem Benutzerhandbuch wird erläutert, wie Streaming-fähige Segmentdefinitionen auf Adobe Experience Platform funktionieren und wie Streaming-fähige Segmente überwacht werden.
 
-To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
+Weitere Informationen zur Verwendung der Adobe Experience Platform-Benutzeroberfläche finden Sie im Benutzerhandbuch [zur Segmentierung](./overview.md).
