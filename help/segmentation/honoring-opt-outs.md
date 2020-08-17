@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;opt-out
 solution: Experience Platform
 title: Erfüllen von Opt-outs
 topic: overview
+description: 'Mit der Experience Platform können Ihre Kunden Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils senden.] Diese Opt-out-Anfragen sind Teil des California Consumer Privacy Act (CCPA), der kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem). '
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1006'
 ht-degree: 62%
 
 ---
