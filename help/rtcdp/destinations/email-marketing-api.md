@@ -4,15 +4,15 @@ solution: Experience Platform
 title: E-Mail-Marketing-Ziele erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 81%
 
 ---
 
 
-# E-Mail-Marketing-Ziele erstellen und Daten in der Adobe aktivieren [!DNL Real-time Customer Data Platform]
+# Create email marketing destinations and activate data in Adobe&#39;s [!DNL Real-time Customer Data Platform]
 
 In dieser Anleitung erfahren Sie, wie Sie mithilfe von API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, ein [E-Mail-Marketing-Ziel](../../rtcdp/destinations/email-marketing-destinations.md) erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel einrichten und Daten zu Ihrem neu erstellten Ziel aktivieren können.
 
@@ -26,9 +26,9 @@ Wenn Sie lieber die Benutzeroberfläche der Echtzeit-Kundendatenplattform von Ad
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] ist das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform].
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen sollten, um Daten für E-Mail-Marketing-Ziele in der Echtzeit-Kundendatenplattform von Adobe zu aktivieren.
 
@@ -55,7 +55,8 @@ Resources in [!DNL Experience Platform] can be isolated to specific virtual sand
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NHinweis]
+>[!NOTE]
+>
 >For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
@@ -80,7 +81,7 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 ### Swagger-Dokumentation
 
-Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. Weitere Informationen finden Sie in der Dokumentation zur [Flow Service API unter Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. See the [Flow Service API documentation on Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
 
 ## Liste der verfügbaren Ziele abrufen {#get-the-list-of-available-destinations}
 
@@ -134,7 +135,7 @@ Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre ei
 }
 ```
 
-## Herstellen einer Verbindung zu Ihren [!DNL Experience Platform] Daten {#connect-to-your-experience-platform-data}
+## Connect to your [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
 
 ![Übersicht über die Zielschritte – Schritt 2](/help/rtcdp/destinations/assets/flow-api-destinations-step2.png)
 
@@ -208,7 +209,7 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 }
 ```
 
-### Herstellen einer Verbindung zu Ihren [!DNL Experience Platform] Daten
+### Connect to your [!DNL Experience Platform] data
 
 **API-Format**
 
@@ -270,7 +271,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Verwenden Sie die Kennung, die Sie im vorherigen Schritt erhalten haben.
-* `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID für [!DNL Unified Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Use the connection spec ID for [!DNL Unified Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwort**
 
