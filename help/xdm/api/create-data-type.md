@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
 solution: Experience Platform
 title: Erstellen eines Datentyps
 topic: developer guide
+description: 'Bestehen allgemeine Datenstrukturen, die Ihr Unternehmen auf verschiedene Weise verwenden möchte, kann die Definition eines Datentyps von Vorteil sein. Datentypen ermöglichen die konsistente Verwendung von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als Mixins, da sie an jeder beliebigen Stelle in einem Schema enthalten sein können, indem sie als Feldtyp hinzugefügt werden. '
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 95%
+source-wordcount: '256'
+ht-degree: 83%
 
 ---
 
