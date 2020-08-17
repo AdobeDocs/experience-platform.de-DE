@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 solution: Adobe Experience Platform
 title: Übersicht über das Echtzeit-Kundenprofil
 topic: guide
+description: Das Echtzeit-Kundenprofil ist ein allgemeiner Suchentitäten-Speicher, in dem Informationen aus verschiedensten Datenquellen des Unternehmens zusammengeführt und zum Abruf verfügbar gemacht werden. Diese Daten werden in Form von individuellen Kundenprofilen sowie zugehörigen im Zeitverlauf erfassten, so genannten Zeitreihen-Ereignissen aufbereitet, die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 47%
+source-wordcount: '1718'
+ht-degree: 49%
 
 ---
 
@@ -75,7 +76,7 @@ Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden üb
 
 ## Daten Hinzufügen [!DNL Real-time Customer Profile]
 
-[!DNL Platform] can be configured to send your record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. Weitere Informationen dazu, wie Sie dem Echtzeit-Kundenprofil Daten hinzufügen, finden Sie in [diesem Tutorial](tutorials/add-profile-data.md).
+[!DNL Platform] kann so konfiguriert werden, dass Ihre Daten zu Datensatz und Zeitreihen an gesendet werden. Dies unterstützt die Echtzeit-Streaming-Erfassung und Batch-Erfassung. [!DNL Profile] Weitere Informationen dazu, wie Sie dem Echtzeit-Kundenprofil Daten hinzufügen, finden Sie in [diesem Tutorial](tutorials/add-profile-data.md).
 
 >[!NOTE]
 >
@@ -106,13 +107,13 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 | Abschnitt | Grenze |
 | ------- | -------- |
-| [!DNL Profile] vereinigung Schema | A maximum of **20** datasets can contribute to the [!DNL Profile] union schema. |
-| Multi-entity relationships | Es können maximal **5** Beziehungen mit mehreren Entitäten erstellt werden. |
+| [!DNL Profile] vereinigung Schema | Maximal **20** Datensätze können zum Schema der [!DNL Profile] Vereinigung beitragen. |
+| Beziehungen zwischen mehreren Entitäten | Es können maximal **5** Beziehungen mit mehreren Entitäten erstellt werden. |
 | JSON-Tiefe für mehrere Entitäten | Die maximale JSON-Tiefe beträgt **4**. |
 | Zeitreihendaten | Zeitreihendaten sind **nicht** in [!DNL Profile] für Nicht-Personen-Entitäten zulässig. |
 | Beziehungen zu Nichtpersonen im Schema | Nicht-menschliche Schema-Beziehungen sind **nicht** zulässig. |
 | Profil-Fragment | Die empfohlene Maximalgröße für ein Profil-Fragment ist **10 kB**.<br><br> Die absolute Maximalgröße eines Profil-Fragments ist **1 MB**. |
-| Non-person entity | Die maximale Gesamtgröße für eine einzelne Nicht-Person-Entität beträgt **200 MB**. |
+| Nicht-personenbezogene Entität | Die maximale Gesamtgröße für eine einzelne Nicht-Person-Entität beträgt **200 MB**. |
 | Datensätze pro Nicht-Person-Entität | Eine Nicht-Person-Entität kann maximal **1** Datensatz zugeordnet werden. |
 
 <!--
@@ -132,7 +133,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 >[!NOTE]
 >
 >
->A non-person entity refers to any XDM class that is **not** part of [!DNL Profile].
+>Eine Nicht-Person-Entität bezieht sich auf jede XDM-Klasse, die **nicht** Teil von ist [!DNL Profile].
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
