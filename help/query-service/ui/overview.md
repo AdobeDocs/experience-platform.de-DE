@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
-title: Handbuch zur Benutzeroberfläche der Adobe Experience Platform Abfrage Service
+title: Handbuch zur Benutzeroberfläche des Adobe Experience Platform Abfrage Service
 topic: guide
+description: Der Adobe Experience Platform Abfrage Service stellt eine Benutzeroberfläche bereit, die zum Schreiben und Ausführen von Abfragen, zur Ansicht zuvor ausgeführter Abfragen und zum Zugriff auf Abfragen verwendet werden kann, die von Benutzern in Ihrem IMS-Unternehmen gespeichert wurden.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '617'
 ht-degree: 3%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 # [!DNL Query Service] guide
 
-Die Adobe Experience Platform [!DNL Query Service] bietet eine Benutzeroberfläche, die zum Schreiben und Ausführen von Abfragen, zur Ansicht von zuvor ausgeführten Abfragen und zum Zugriff auf Abfragen verwendet werden kann, die von Benutzern in Ihrem IMS-Unternehmen gespeichert wurden. Um die Benutzeroberfläche innerhalb der [Adobe Experience Platform][platform-ui]aufzurufen, wählen Sie im linken Navigationsbereich die Option &quot; **[!UICONTROL Abfragen]** &quot;aus.
+Das Adobe Experience Platform [!DNL Query Service] bietet eine Benutzeroberfläche, die zum Schreiben und Ausführen von Abfragen, zur Ansicht von zuvor ausgeführten Abfragen und zum Zugriff auf Abfragen verwendet werden kann, die von Benutzern in Ihrem IMS-Unternehmen gespeichert wurden. Um auf die Benutzeroberfläche in [Adobe Experience Platform][platform-ui]zuzugreifen, wählen Sie im linken Navigationsbereich die Option &quot; **[!UICONTROL Abfragen]** &quot;aus.
 
 ## [!DNL Query Editor]
 
