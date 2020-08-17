@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Berechnete Attribute - Echtzeit-Client-Profil-API
+title: Computed attributes - Real-time Customer Profile API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2403'
 ht-degree: 83%
 
 ---
@@ -39,9 +39,9 @@ Berechnete Attribute umfassen das Erstellen eines Ausdrucks (oder „Regel“), 
 
 Anwendungsbeispiele für berechnete Attribute können von einfachen Berechnungen hin zu sehr komplexen Verweisen reichen. Im Folgenden finden Sie einige Anwendungsbeispiele für berechnete Attribute:
 
-1. **[!UICONTROL Prozent]:**Ein einfaches, berechnetes Attribut könnte darin bestehen, zwei numerische Felder in einem Datensatz zu nehmen und sie zu teilen, um einen Prozentwert zu erstellen. Sie könnten beispielsweise die Gesamtzahl der an eine Person gesendeten E-Mails durch die Zahl der von der Person geöffneten E-Mails teilen. Wenn Sie das sich ergebende Feld für berechnete Attribute ansehen, erkennen Sie schnell den Prozentsatz der Gesamt-E-Mails, die von der Person geöffnet wurden.
-1. **[!UICONTROL Anwendungsnutzung]:**Ein weiteres Beispiel ist die Möglichkeit, die Anzahl der Aggregat zu bestimmen, die ein Benutzer zum Öffnen der Anwendung benötigt. Wenn Sie die Gesamtzahl der Anwendungsöffnungen anhand einzelner Öffnungsereignisse verfolgen, können Sie Anwendern bei der 100. Öffnung besondere Angebote oder Nachrichten zukommen lassen, um die Interaktion mit Ihrer Marke zu stärken.
-1. **[!UICONTROL Lebenszeitwerte]:**Die Erfassung laufender Gesamtsummen, z. B. eines Kaufwerts für einen Kunden über die gesamte Lebensdauer, kann sehr schwierig sein. Dafür muss die historische Gesamtsumme bei jedem Auftreten eines neuen Kaufereignisses aktualisiert werden. Mit einem berechneten Attribut können Sie dies wesentlich einfacher tun, indem Sie den Lebenszeitwert in einem einzelnen Feld pflegen, das nach jedem erfolgreichen Kaufereignis, das mit dem Kunden verbunden ist, automatisch aktualisiert wird.
+1. **[!UICONTROL Prozent]:** Ein einfaches, berechnetes Attribut könnte darin bestehen, zwei numerische Felder in einem Datensatz zu nehmen und sie zu teilen, um einen Prozentwert zu erstellen. Sie könnten beispielsweise die Gesamtzahl der an eine Person gesendeten E-Mails durch die Zahl der von der Person geöffneten E-Mails teilen. Wenn Sie das sich ergebende Feld für berechnete Attribute ansehen, erkennen Sie schnell den Prozentsatz der Gesamt-E-Mails, die von der Person geöffnet wurden.
+1. **[!UICONTROL Anwendungsnutzung]:** Ein weiteres Beispiel ist die Möglichkeit, die Anzahl der Aggregat zu bestimmen, die ein Benutzer zum Öffnen der Anwendung benötigt. Wenn Sie die Gesamtzahl der Anwendungsöffnungen anhand einzelner Öffnungsereignisse verfolgen, können Sie Anwendern bei der 100. Öffnung besondere Angebote oder Nachrichten zukommen lassen, um die Interaktion mit Ihrer Marke zu stärken.
+1. **[!UICONTROL Lebenszeitwerte]:** Die Erfassung laufender Gesamtsummen, z. B. eines Kaufwerts für einen Kunden über die gesamte Lebensdauer, kann sehr schwierig sein. Dafür muss die historische Gesamtsumme bei jedem Auftreten eines neuen Kaufereignisses aktualisiert werden. Mit einem berechneten Attribut können Sie dies wesentlich einfacher tun, indem Sie den Lebenszeitwert in einem einzelnen Feld pflegen, das nach jedem erfolgreichen Kaufereignis, das mit dem Kunden verbunden ist, automatisch aktualisiert wird.
 
 ## Berechnetes Attribut konfigurieren
 
@@ -482,8 +482,7 @@ Bei erfolgreicher Aktualisierung werden der HTTP-Status 204 (Kein Inhalt) und ei
 
 Sie können ein berechnetes Attribut mithilfe der API auch löschen. Dies geschieht durch Richten einer DELETE-Anfrage an den `/config/computedAttributes`-Endpunkt und Einschließen der Kennung des berechneten Attributs, das Sie löschen möchten, in den Anfragepfad.
 
->[!NHinweis]
->
+>[!NOTE]
 >
 >Seien Sie beim Löschen eines berechneten Attributs vorsichtig, da es möglicherweise in mehr als einem Schema verwendet wird und der DELETE-Vorgang nicht rückgängig gemacht werden kann.
 
