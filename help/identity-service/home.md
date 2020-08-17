@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
+description: Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für effektive persönliche digitale Erlebnisse sorgen.
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1707'
 ht-degree: 73%
 
 ---
@@ -61,7 +62,7 @@ Ihre Kunden können mit Ihrer Marke über eine Kombination aus Online- und Offli
 
 [!DNL Experience Platform] löst diese Herausforderung mit zwei Konzepten: mit [Identitäts-Namespaces](#identity-namespaces) und [Identitätsdiagrammen](#identity-graphs).
 
-Das folgende Video soll Ihr Verständnis von Identitäten und Identitätsdiagrammen unterstützen. Im folgenden Video werden die drei Funktionen von Identity Collection, Identity Graphs und APIs behandelt. Es beschreibt auch, wie deterministische und probabilistische Algorithmen zum Aufbau von Privatidentitätsdiagrammen verwendet werden, und beschreibt die Rolle von Privatidentitätsdiagrammen, Adobe Experience Platform Identity Service Co-Op Graph und Drittanbieter-Diagrammen.
+Das folgende Video soll Ihr Verständnis von Identitäten und Identitätsdiagrammen unterstützen. Im folgenden Video werden die drei Funktionen von Identity Collection, Identity Graphs und APIs behandelt. Es beschreibt auch, wie deterministische und probabilistische Algorithmen zum Erstellen von Diagrammen für die private Identität verwendet werden, und beschreibt die Rolle von Diagrammen für die private Identität, von Adobe Experience Platform Identity Service Co-Op-Diagrammen und von Grafiken von Drittanbietern.
 
 >[!IMPORTANT]
 >
@@ -131,7 +132,7 @@ During the streaming ingestion process, [!DNL Identity Service ]automatically ex
 
 [!DNL Identity Service] nutzt XDM-konforme Daten, die [!DNL Experience Platform] entweder durch [Stapelverarbeitung](../ingestion/batch-ingestion/overview.md) oder [Streaming-Erfassung](../ingestion/streaming-ingestion/overview.md)gesendet werden.
 
-Das folgende Video soll Ihr Verständnis von Identitätsdienst unterstützen. In diesem Video wird gezeigt, wie Datenfelder als Identitäten gekennzeichnet werden, Identitätsdaten erfasst und anschließend überprüft werden, ob die Daten zum privaten Diagramm des Identitätsdienstes der Adobe Experience Platform hinzugefügt wurden.
+Das folgende Video soll Ihr Verständnis von Identitätsdienst unterstützen. In diesem Video wird gezeigt, wie Datenfelder als Identitäten gekennzeichnet werden, Identitätsdaten erfasst und anschließend überprüft werden, ob die Daten in das Adobe Experience Platform Identity Service Private Graph eingegeben wurden.
 
 >[!WARNING]
 >
