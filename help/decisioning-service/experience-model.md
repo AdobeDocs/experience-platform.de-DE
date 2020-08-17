@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Domain-Modell von Experience Decisioning
 topic: overview
+description: In diesem Abschnitt werden die Komponenten von Decisioning Service erläutert und die Art und Weise, wie diese Komponenten miteinander interagieren, genau beschrieben. Die Konzepte und ihre Beziehungen bilden die *Domäne* des Entscheidungsproblems. Diese grundlegenden Komponenten spielen eine Rolle, unabhängig davon, wie Sie Decisioning Service nutzen].
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 92%
+source-wordcount: '1412'
+ht-degree: 91%
 
 ---
 
@@ -18,9 +19,9 @@ In this section, the components of [!DNL Decisioning Service] are explained and 
 
 ## Entscheidungsoptionen
 
-Eine *Entscheidungsoption* für ein Erlebnis ist ein potenzielles Erlebnis, das einem bestimmten Kunden angezeigt werden kann. Eine Option wird auch als Wahl oder Alternative bezeichnet. When deciding on the next best option for a customer, [!DNL Decisioning Service] considers options ***d<sub>1</sub>***to*** d<sub>N</sub>*** from amongst a finite set of options **`D`**.
+Eine *Entscheidungsoption* für ein Erlebnis ist ein potenzielles Erlebnis, das einem bestimmten Kunden angezeigt werden kann. Eine Option wird auch als Wahl oder Alternative bezeichnet. When deciding on the next best option for a customer, [!DNL Decisioning Service] considers options ***d<sub>1</sub>*** to ***d<sub>N</sub>*** from amongst a finite set of options **`D`**.
 
-Entscheidungen werden getroffen, indem aus einer Reihe verfügbarer Optionen die beste Option ermittelt wird. Eine Möglichkeit besteht darin, *Entscheidungsoptionen* ***d<sub>i</sub>***nacheinander aus Satz*** D ***zu entfernen, bis entweder nur noch eine Option übrig ist oder aus dem verbleibenden Satz ein zufälliger „Gewinner“ ausgewählt wird. Eine weitere Form der Entscheidungsfindung besteht darin, die verbleibenden (qualifizierten) Entscheidungsoptionen hinsichtlich der zu erwartenden Ergebnisse zu bewerten.
+Entscheidungen werden getroffen, indem aus einer Reihe verfügbarer Optionen die beste Option ermittelt wird. Eine Möglichkeit besteht darin, *Entscheidungsoptionen* ***d<sub>i</sub>*** nacheinander aus Satz ***D*** zu entfernen, bis entweder nur noch eine Option übrig ist oder aus dem verbleibenden Satz ein zufälliger „Gewinner“ ausgewählt wird. Eine weitere Form der Entscheidungsfindung besteht darin, die verbleibenden (qualifizierten) Entscheidungsoptionen hinsichtlich der zu erwartenden Ergebnisse zu bewerten.
 
 ### Endlicher Satz von Entscheidungsoptionen
 
