@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
-title: Übersicht über die Dateneinbindung in Adobe Experience Platformen
+title: Übersicht über die Adobe Experience Platform-Dateneinbindung
 topic: overview
+description: In diesem Dokument werden die drei Hauptwege für die Dateneinbindung in die Plattform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten für weitere Informationen.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 18%
+source-wordcount: '442'
+ht-degree: 17%
 
 ---
 
@@ -42,7 +43,7 @@ See the [Sources overview](../sources/home.md) for more information.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Dieses Dokument gab eine kurze Einführung zu den verschiedenen Aspekten von [!DNL Data Ingestion] in [!DNL Experience Platform]. Bitte lesen Sie weiterhin die Übersichtsdokumentation für jede Erfassungsmethode, um sich mit ihren verschiedenen Fähigkeiten, Anwendungsfällen und Best Practices vertraut zu machen. Sie können Ihre Lernerfahrung auch über das unten stehende Video zur Erfassung von Übersichten ergänzen. Weitere Informationen zum [!DNL Experience Platform] Verfolgen der Metadaten für erfasste Datensätze finden Sie in der Übersicht über den [Katalogdienst](../catalog/home.md).
+Dieses Dokument gab eine kurze Einführung zu den verschiedenen Aspekten von [!DNL Data Ingestion] in [!DNL Experience Platform]. Bitte lesen Sie weiterhin die Übersichtsdokumentation für jede Erfassungsmethode, um sich mit ihren verschiedenen Fähigkeiten, Anwendungsfällen und Best Practices vertraut zu machen. Sie können Ihr Lernen auch ergänzen, indem Sie sich das unten stehende Video zur Erfassung ansehen. Weitere Informationen zum [!DNL Experience Platform] Verfolgen der Metadaten für erfasste Datensätze finden Sie in der Übersicht über den [Katalogdienst](../catalog/home.md).
 
 >[!WARNING]
 >
