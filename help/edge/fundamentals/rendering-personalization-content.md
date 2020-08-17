@@ -4,17 +4,17 @@ seo-title: Adobe Experience Platform Web SDK – Rendern von personalisiertem In
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 24%
+source-wordcount: '237'
+ht-degree: 23%
 
 ---
 
 
 # Übersicht über die Personalisierungsoptionen
 
-Die Adobe Experience Platform [!DNL Web SDK] unterstützt die Abfrage der Personalisierungslösungen bei der Adobe, einschließlich Adobe Target. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../../edge/solution-specific/target/flicker-management.md).
+Das Adobe Experience Platform [!DNL Web SDK] unterstützt die Abfrage von Personalisierungslösungen bei der Adobe, einschließlich Adobe Target. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../../edge/solution-specific/target/flicker-management.md).
 
 ## Inhalt automatisch wiedergeben
 
@@ -40,15 +40,15 @@ Das Rendern personalisierter Inhalte erfolgt asynchron. Daher sollte es keine An
 
 ## Manuelles Wiedergeben von Inhalten
 
-Sie können die Liste der Entscheidungen als Versprechen auf dem `event` Befehl anfordern, indem Sie `scopes`. Ein Gültigkeitsbereich ist eine Zeichenfolge, mit der die Personalisierungslösung wissen kann, welche Entscheidung Sie möchten.
+Sie können die Liste der Entscheidungen als Versprechen auf dem `sendEvent` Befehl anfordern, indem Sie die `decisionScopes` Option angeben. Ein Gültigkeitsbereich ist eine Zeichenfolge, mit der die Personalisierungslösung wissen kann, welche Entscheidung Sie möchten.
 
 ```javascript
 alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -92,8 +92,8 @@ Dadurch wird eine Liste von Entscheidungen als JSON-Objekt für jede Entscheidun
 
 >[!TIP]
 >
-> Wenn Sie [!DNL Target] Scopes auf dem Server zu mBoxes machen, sind nur diese alle Anforderungen gleichzeitig und nicht einzeln. Die globale Mbox wird immer gesendet.
+> Wenn Sie Scopes verwenden [!DNL Target], werden sie auf dem Server zu mBoxes, nur sie werden sofort angefordert und nicht einzeln. Die globale Mbox wird immer gesendet.
 
 ### Automatische Inhalte abrufen
 
-Wenn Sie möchten, dass die automatisch renderbaren Entscheidungen `result.decisions` in den Bericht aufgenommen werden, können Sie `renderDecisions` auf &quot;false&quot;setzen und den speziellen Bereich einschließen `__view__`.
+Wenn Sie möchten, dass die automatisch renderbaren Entscheidungen `result.decisions` in die Datei aufgenommen werden und sie NICHT automatisch gerendert werden dürfen, können Sie sie auf `renderDecisions` und den speziellen Bereich einschließen `false``__view__`.
