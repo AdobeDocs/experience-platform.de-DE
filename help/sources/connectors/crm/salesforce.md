@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
 solution: Experience Platform
 title: Salesforce-Anschluss
 topic: overview
+description: Experience Platform unterstützt die Erfassung von Daten aus einem CRM-System eines Drittanbieters. Zu den CRM-Anbietern zählen Salesforce.
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 14%
+source-wordcount: '199'
+ht-degree: 13%
 
 ---
 
@@ -18,7 +19,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem CRM-System eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL Salesforce].
 
-## Zulassungsliste der IP-Adresse
+## ZULASSUNGSLISTE der IP-Adresse
 
 Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
