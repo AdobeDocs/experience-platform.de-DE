@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform;home;Intelligent Services;popular topics
+keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
-title: Prepare data for use in Intelligent Services
+title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
+description: 'Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von Consumer ExperienceEvent (CEE) entsprechen. '
 translation-type: tm+mt
-source-git-commit: 88e4a183422dd1bc625fd842e24c2604fb249c91
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1980'
 ht-degree: 3%
 
 ---
 
 
-# Prepare data for use in [!DNL Intelligent Services]
+# Vorbereiten von Daten zur Verwendung in [!DNL Intelligent Services]
 
-In order for [!DNL Intelligent Services] to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. [!DNL Intelligent Services] leverage [!DNL Experience Data Model] (XDM) schemas in order to achieve this. Specifically, all datasets that are used in [!DNL Intelligent Services] must conform to the **Consumer ExperienceEvent (CEE)** XDM schema.
+Damit Sie Einblicke aus Ihren Marketing-Ereignisse-Daten [!DNL Intelligent Services] erhalten können, müssen die Daten semantisch erweitert und in einer Standardstruktur aufbewahrt werden. [!DNL Intelligent Services] nutzen Sie [!DNL Experience Data Model] (XDM) Schema, um dies zu erreichen. Insbesondere müssen alle in verwendeten Datensätze dem XDM-Schema [!DNL Intelligent Services] Consumer ExperienceEvent (CEE) **** entsprechen.
 
-This document provides general guidance on mapping your marketing events data from multiple channels to this schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
+In diesem Dokument erhalten Sie allgemeine Anleitungen zur Zuordnung Ihrer Marketing-Ereignis-Daten aus mehreren Kanälen zu diesem Schema. In diesen Anleitungen werden Informationen zu wichtigen Feldern im Schema zusammengefasst, die Ihnen bei der Bestimmung helfen, wie Sie Ihre Daten effektiv der Struktur zuordnen können.
 
-## Workflow summary
+## Workflow-Übersicht
 
-The preparation process varies depending on whether your data is stored in Adobe Experience Platform or externally. In diesem Abschnitt werden die notwendigen Schritte zusammengefasst, die Sie in beiden Szenarien unternehmen müssen.
+Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in Adobe Experience Platform oder extern gespeichert werden. In diesem Abschnitt werden die notwendigen Schritte zusammengefasst, die Sie in beiden Szenarien unternehmen müssen.
 
 ### Vorbereitung externer Daten
 
@@ -103,18 +104,18 @@ Dieses Feld stellt den Marketing-Kanal im Zusammenhang mit dem ExperienceEvent d
 
 Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern `xdm:channel`finden Sie in der [Experience Kanal Schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) -Spezifikation. Beispielzuordnungen finden Sie in der [Tabelle unten](#example-channels).
 
-##### Example channel mappings {#example-channels}
+##### Beispielzuordnungen für Kanal {#example-channels}
 
-The following table provides some examples of marketing channels mapped to the `xdm:channel` schema:
+Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem `xdm:channel` Schema zugeordnet sind:
 
 | Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
-| Paid Search | https:/<span>/ns.adobe.com/xdm/Kanal-types/search | paid | clicks |
-| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | earned | clicks |
-| Anzeigen | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | clicks |
-| E-Mail  | https:/<span>/ns.adobe.com/xdm/channel-types/email | paid | clicks |
-| Internal Referrer | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clicks |
-| Display ViewThrough | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | impressions |
+| Paid Search | https:/<span>/ns.adobe.com/xdm/Kanal-types/search | bezahlt | clicks |
+| Social - Marketing | https:/<span>/ns.adobe.com/xdm/Kanal-types/social | verdient | clicks |
+| Anzeigen | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | clicks |
+| E-Mail  | https:/<span>/ns.adobe.com/xdm/Kanal-types/email | bezahlt | clicks |
+| Interner Werber | https:/<span>/ns.adobe.com/xdm/Kanal-types/direct | besetzt | clicks |
+| Display ViewThrough | https:/<span>/ns.adobe.com/xdm/Kanal-types/display | bezahlt | impressions |
 | QR-Codeumleitung | https:/<span>/ns.adobe.com/xdm/Kanal-types/direct | besetzt | clicks |
 | Mobile | https:/<span>/ns.adobe.com/xdm/Kanal-types/mobile | besetzt | clicks |
 
@@ -281,11 +282,11 @@ Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche
 >
 >In zukünftigen Versionen von [!DNL Intelligent Services] wird der [Adobe Experience Platform Identity Service](../identity-service/home.md) in die Kundenidentifizierungsfunktionen integriert. Die unten aufgeführten Schritte können sich daher ändern.
 
-If you are bringing in data from [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], or another external source, then you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
+Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]oder einer anderen externen Quelle einreichen, müssen Sie dem Datensatz ein `primaryIdentityNameSpace` -Tag hinzufügen. Dies kann durch eine PATCH-Anforderung an die Katalogdienst-API erfolgen.
 
 Wenn Sie Daten aus einer lokalen CSV-Datei aufnehmen, können Sie den nächsten Abschnitt über die [Zuordnung und Erfassung von Daten](#ingest)überspringen.
 
-Before following along with the example API call below, see the [getting started section](../catalog/api/getting-started.md) in the Catalog developer guide for important information regarding required headers.
+Bevor Sie dem Beispiel-API-Aufruf unten folgen, finden Sie im Abschnitt [&quot;](../catalog/api/getting-started.md) Erste Schritte&quot;im Katalog-Entwicklerhandbuch wichtige Informationen zu den erforderlichen Kopfzeilen.
 
 **API-Format**
 
@@ -295,13 +296,13 @@ PATCH /dataSets/{DATASET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | The ID of the dataset you created previously. |
+| `{DATASET_ID}` | Die ID des zuvor erstellten Datensatzes. |
 
 **Anfrage**
 
-Depending on which source you are ingesting data from, you must provide appropriate `primaryIdentityNamespace` and `sourceConnectorId` tag values in the request payload.
+Je nachdem, aus welcher Quelle Sie Daten abrufen, müssen Sie entsprechende `primaryIdentityNamespace` und `sourceConnectorId` Tag-Werte in der Anforderungsnutzlast angeben.
 
-The following request adds the appropriate tag values for Audience Manager:
+Die folgende Anforderung fügt die entsprechenden Tag-Werte für Audience Manager hinzu:
 
 ```shell
 curl -X PATCH \
@@ -319,7 +320,7 @@ curl -X PATCH \
       }'
 ```
 
-The following request adds the appropriate tag values for Analytics:
+Die folgende Anforderung fügt die entsprechenden Tag-Werte für Analytics hinzu:
 
 ```shell
 curl -X PATCH \
@@ -339,7 +340,7 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
+>Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
 
 **Antwort**
 
@@ -351,17 +352,17 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten 
 ]
 ```
 
-#### Map and ingest data {#ingest}
+#### Daten zuordnen und erfassen {#ingest}
 
-After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-a-csv-file.md) for steps on how to perform this in the UI. You can use the following [sample JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) to test the ingestion process before using your own data.
+Nachdem Sie ein CEE-Schema und einen Dataset erstellt haben, können Sie Ihre Datentabellen dem Schema zuordnen und diese Daten in Platform erfassen. Anweisungen dazu, wie Sie dies in der Benutzeroberfläche durchführen, finden Sie im Lernprogramm zum [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md) . Sie können die folgende JSON- [Beispieldatei](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) verwenden, um den Erfassungsvorgang zu testen, bevor Sie Ihre eigenen Daten verwenden.
 
-Once a dataset has been populated, the same dataset can be used to ingest additional data files.
+Nachdem ein Datensatz gefüllt wurde, kann derselbe Datensatz zum Erfassen zusätzlicher Datendateien verwendet werden.
 
-If your data is stored in a supported third-party application, you can also choose to create a [source connector](../sources/home.md) to ingest your marketing events data into [!DNL Platform] in real time.
+Wenn Ihre Daten in einer unterstützten Drittanbieteranwendung gespeichert werden, können Sie auch einen [Quellanschluss](../sources/home.md) erstellen, um Ihre Marketing-Ereignis-Daten in Echtzeit zu erfassen [!DNL Platform] .
 
 ## Nächste Schritte {#next-steps}
 
-This document provided general guidance on preparing your data for use in [!DNL Intelligent Services]. Wenn Sie je nach Anwendungsfall weitere Beratung benötigen, wenden Sie sich bitte an den Adobe Consulting Support.
+Dieses Dokument enthielt allgemeine Leitlinien zur Vorbereitung Ihrer Daten für die Verwendung in [!DNL Intelligent Services]. Wenn Sie je nach Anwendungsfall weitere Beratung benötigen, wenden Sie sich bitte an den Adobe Consulting Support.
 
 Nachdem Sie einen Datensatz mit Ihren Kundenerlebnisdaten ausgefüllt haben, können Sie [!DNL Intelligent Services] Einblicke generieren. Die ersten Schritte finden Sie in den folgenden Dokumenten:
 
