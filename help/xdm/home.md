@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet
 solution: Experience Platform
 title: Experience-Datenmodell (XDM)-System
 topic: overview
+description: 'Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. '
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 6%
+source-wordcount: '1638'
+ht-degree: 8%
 
 ---
 
 
 # XDM-System – Übersicht
 
-Normung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
+Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für jede Anwendung bereit, die zur Kommunikation mit [!DNL Platform] Diensten verwendet werden kann. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Audiencen durch Segmente definieren und Kundenattribute zu Personalisierungszwecken ausdrücken.
 
@@ -77,7 +78,7 @@ Auch wenn nicht alle Ereignis leicht in alle Datenquellen eingeordnet werden kö
 
 Um mit der Erfassung von Daten zu beginnen, [!DNL Experience Platform]wird ein Datensatz mit [!DNL Catalog Service]erstellt. Der Datensatz verweist auf ein XDM-Schema, das die Struktur der zu ingetierenden Daten beschreibt. Wenn ein Datensatz ohne Schema erstellt wird, [!DNL Experience Platform] wird ein &quot;beobachtetes Schema&quot;abgeleitet, indem Art und Inhalt der erfassten Datenfelder geprüft werden. Die Datensätze werden dann neben den Schemas [!DNL Catalog] und beobachteten Schemas, auf denen sie basieren, in der [!DNL Data Lake] Datenbank nachverfolgt und gespeichert.
 
-Weitere Informationen finden Sie [!DNL Catalog]in der Übersicht über den [Katalogdienst](../catalog/home.md). Weitere Informationen zur Dateneinbettung in der Adobe Experience Platform finden Sie in der Übersicht über die [Dateneinbettung](../ingestion/home.md).
+Weitere Informationen finden Sie [!DNL Catalog]in der Übersicht über den [Katalogdienst](../catalog/home.md). Weitere Informationen zur Adobe Experience Platform Data Ingestion finden Sie in der Übersicht über die [Dateneinbettung](../ingestion/home.md).
 
 ### [!DNL Query Service]
 
