@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Arbeiten mit der Decisioning Service-Laufzeit unter Verwendung von APIs
 topic: tutorial
+description: 'Dieses Dokument bietet eine Anleitung zum Arbeiten mit den Laufzeitdiensten des Entscheidungsdienstes mit Adobe Experience Platform-APIs. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1985'
-ht-degree: 14%
+source-wordcount: '2004'
+ht-degree: 13%
 
 ---
 
