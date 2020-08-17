@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Übersicht über das Echtzeit-Kundenprofil
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 47%
 
 ---
@@ -59,7 +59,7 @@ When bringing data together from multiple sources and combining it in order to s
 >[!IMPORTANT]
 >Die nachfolgend beschriebene Funktion für berechnete Attribute befindet sich in der Alpha-Phase. Dokumentation und Funktionalität können sich ändern.
 
-Mit berechneten Attributen können Sie den Wert von Feldern anhand anderer Werte, Berechnungen und Ausdrücke automatisch berechnen. Berechnete Attribute agieren auf der Profilebene, d. h., Sie können Werte über alle Datensätze und Ereignisse hinweg aggregieren. Jedes berechnete Attribut enthält einen Ausdruck oder eine „Regel“, der bzw. die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut oder Ereignis speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen mithilfe der [!DNL Real-time Customer Profile] API finden Sie in der Anleitung zum Endpunkt [berechneter Attribute](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle, die berechnete Attribute innerhalb der Adobe Experience Platform spielen, besser zu verstehen. Es enthält Beispiel-API-Aufrufe zur Durchführung grundlegender CRUD-Vorgänge.
+Mit berechneten Attributen können Sie den Wert von Feldern anhand anderer Werte, Berechnungen und Ausdrücke automatisch berechnen. Berechnete Attribute agieren auf der Profilebene, d. h., Sie können Werte über alle Datensätze und Ereignisse hinweg aggregieren. Jedes berechnete Attribut enthält einen Ausdruck oder eine „Regel“, der bzw. die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut oder Ereignis speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Weitere Informationen zu berechneten Attributen und eine schrittweise Anleitung zum Arbeiten mit diesen Attributen mithilfe der [!DNL Real-time Customer Profile] API finden Sie in der Anleitung zum Endpunkt [berechneter Attribute](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle von berechneten Attributen in Adobe Experience Platform besser zu verstehen. Es enthält Beispiel-API-Aufrufe zur Durchführung grundlegender CRUD-Vorgänge.
 
 ## Echtzeitkomponenten
 
@@ -75,9 +75,10 @@ Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden üb
 
 ## Daten Hinzufügen [!DNL Real-time Customer Profile]
 
-[!DNL Platform] kann so konfiguriert werden, dass Ihre Daten zu Datensatz und Zeitreihen an gesendet werden. Dies unterstützt die Echtzeit-Streaming-Erfassung und Batch-Erfassung. [!DNL Profile] Weitere Informationen dazu, wie Sie dem Echtzeit-Kundenprofil Daten hinzufügen, finden Sie in [diesem Tutorial](tutorials/add-profile-data.md).
+[!DNL Platform] can be configured to send your record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. Weitere Informationen dazu, wie Sie dem Echtzeit-Kundenprofil Daten hinzufügen, finden Sie in [diesem Tutorial](tutorials/add-profile-data.md).
 
->[!NHinweis]
+>[!NOTE]
+>
 >Daten, die über Adoben gesammelt werden, einschließlich [!DNL Analytics Cloud], [!DNL Marketing Cloud]und [!DNL Advertising Cloud], fließen in [!DNL Experience Platform] und werden in [!DNL Profile]erfasst.
 
 ### [!DNL Profile] Erfassungsmetriken
@@ -105,13 +106,13 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 | Abschnitt | Grenze |
 | ------- | -------- |
-| [!DNL Profile] Vereinigung Schema | Maximal **20** Datensätze können zum Schema der [!DNL Profile] Vereinigung beitragen. |
-| Beziehungen zwischen mehreren Entitäten | Es können maximal **5** Beziehungen mit mehreren Entitäten erstellt werden. |
+| [!DNL Profile] vereinigung Schema | A maximum of **20** datasets can contribute to the [!DNL Profile] union schema. |
+| Multi-entity relationships | Es können maximal **5** Beziehungen mit mehreren Entitäten erstellt werden. |
 | JSON-Tiefe für mehrere Entitäten | Die maximale JSON-Tiefe beträgt **4**. |
 | Zeitreihendaten | Zeitreihendaten sind **nicht** in [!DNL Profile] für Nicht-Personen-Entitäten zulässig. |
 | Beziehungen zu Nichtpersonen im Schema | Nicht-menschliche Schema-Beziehungen sind **nicht** zulässig. |
 | Profil-Fragment | Die empfohlene Maximalgröße für ein Profil-Fragment ist **10 kB**.<br><br> Die absolute Maximalgröße eines Profil-Fragments ist **1 MB**. |
-| Nicht-personenbezogene Entität | Die maximale Gesamtgröße für eine einzelne Nicht-Person-Entität beträgt **200 MB**. |
+| Non-person entity | Die maximale Gesamtgröße für eine einzelne Nicht-Person-Entität beträgt **200 MB**. |
 | Datensätze pro Nicht-Person-Entität | Eine Nicht-Person-Entität kann maximal **1** Datensatz zugeordnet werden. |
 
 <!--
@@ -131,7 +132,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 >[!NOTE]
 >
 >
->Eine Nicht-Person-Entität bezieht sich auf jede XDM-Klasse, die **nicht** Teil von ist [!DNL Profile].
+>A non-person entity refers to any XDM class that is **not** part of [!DNL Profile].
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
