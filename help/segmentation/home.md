@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
-title: Adobe Experience Platform Segmentation Service
+title: Adobe Experience Platform-Segmentdienst
 topic: overview
+description: Dieses Dokument bietet einen Überblick über den Segmentierungsdienst und die Rolle, die dieser in Adobe Experience Platform spielt.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 6%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 6%
 
 Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution.
 
-Dieses Dokument gibt einen Überblick über [!DNL Segmentation Service] die Rolle, die es in der Adobe Experience Platform spielt.
+Dieses Dokument gibt einen Überblick über [!DNL Segmentation Service] die Rolle, die es in Adobe Experience Platform spielt.
 
 ## Getting started with [!DNL Segmentation Service]
 
@@ -102,7 +103,7 @@ Diese erweiterten Funktionen werden in den folgenden Abschnitten ausführlicher 
 
 ## Sequenzielle Segmentierung {#sequential}
 
-Eine normale Benutzerreise ist sequenziell. Mit der Adobe Experience Platform können Sie eine Reihe von Segmenten definieren, die diese Reise widerspiegeln, und dabei Ereignis während ihres Auftretens erfassen. Sie können die Ereignisse in der gewünschten Reihenfolge anordnen, indem Sie die Zeitleiste des visuellen Ereignisses in der [!DNL Segment Builder].
+Eine normale Benutzerreise ist sequenziell. Mit Adobe Experience Platform können Sie eine geordnete Segmentreihe definieren, die diese Reise widerspiegelt, und dabei Sequenzen von Ereignissen während ihres Auftretens erfassen. Sie können die Ereignisse in der gewünschten Reihenfolge anordnen, indem Sie die Zeitleiste des visuellen Ereignisses in der [!DNL Segment Builder].
 
 Ein Beispiel für eine Customer Journey, die eine sequenzielle Segmentierung erfordern würde, wäre die Ansicht des Produkts > Hinzufügen des Produkts > Kassengang > Kein Kauf.
 
@@ -130,7 +131,7 @@ Indem Sie dem Attribut &quot;Kaufstatus&quot;eine Variable zuweisen, wird Ihr dy
 
 Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie Segmente mit mehreren XDM-Klassen erstellen und damit Erweiterungen zu persönlichen Schemas hinzufügen. Dadurch [!DNL Segmentation Service] können Sie während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie nativ im Profil-Datenspeicher.
 
-Die Segmentierung mehrerer Entitäten bietet die erforderliche Flexibilität, um Audiencen anhand von Daten zu identifizieren, die für Ihre Geschäftsanforderungen relevant sind. Dieser Vorgang kann schnell und einfach durchgeführt werden, ohne dass Fachwissen in der Abfrage von Datenbanken erforderlich ist. Auf diese Weise können Sie wichtige Daten zu Ihren Segmenten hinzufügen, ohne kostspielige Änderungen an den Datenströmen vornehmen zu müssen oder auf eine Back-End-Datenzusammenführung zu warten.
+Die Segmentierung mehrerer Entitäten bietet die erforderliche Flexibilität, um Audiencen anhand von Daten zu identifizieren, die für Ihre geschäftlichen Anforderungen relevant sind. Dieser Vorgang kann schnell und einfach durchgeführt werden, ohne dass Fachwissen in der Abfrage von Datenbanken erforderlich ist. Auf diese Weise können Sie wichtige Daten zu Ihren Segmenten hinzufügen, ohne kostspielige Änderungen an den Datenströmen vornehmen zu müssen oder auf eine Back-End-Datenzusammenführung zu warten.
 
 Das folgende Video soll Ihr Verständnis der Segmentierung mehrerer Entitäten unterstützen und erläutert sowohl die Segmentierung mehrerer Entitäten als auch den Segmentkontext (Segmentnutzlast).
 
