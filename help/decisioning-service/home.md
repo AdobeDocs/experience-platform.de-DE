@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: Decisioning Service
 topic: overview
+description: Decisioning Service bietet die Möglichkeit, personalisierte, optimierte und orchestrierte Erlebnisse in Anwendungen zu erstellen, die in Adobe Experience Platform ausgeführt werden. Mithilfe von Decisioning Service können Sie die beste Option aus einer Reihe verfügbarer Optionen bestimmen. Diese Optionen, auch als Alternativen bezeichnet, könnten Angebote, Produktempfehlungen, Inhaltskomponenten für ein Web-Erlebnis, Gesprächsskripte und zu ergreifende Maßnahmen sein.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
-ht-degree: 79%
+source-wordcount: '1648'
+ht-degree: 80%
 
 ---
 
