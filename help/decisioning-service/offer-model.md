@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
 title: Domain-Modell für Angebotsentscheidungen
 topic: overview
+description: Angebotsentscheidungen sind ein Anwendungsfall von Decisioning Service, bei dem Sie die Regeln und Prognosen, die zur Interaktion mit Kunden mittels Angeboten verwendet werden, formalisieren und zentral verwalten.
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '2614'
+source-wordcount: '2640'
 ht-degree: 97%
 
 ---
