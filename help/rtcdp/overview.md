@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;CDP
 title: Übersicht über die Echtzeit-Kundendatenplattform
 seo-title: Übersicht über die Echtzeit-Kundendatenplattform
 description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Echtzeit-Kundendatenplattform – Übersicht
 translation-type: tm+mt
-source-git-commit: c16232179701aa40ae06da45e0581d70d0437191
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 29%
@@ -14,7 +15,7 @@ ht-degree: 29%
 
 # Übersicht über die Echtzeit-Kundendatenplattform von Adobe
 
-Die auf Adobe Experience Platform aufbauende Adobe Echtzeit-Kundendatenplattform (Echtzeit-CDP) hilft Firmen, bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammenzuführen, um Kundendaten zu erstellen, die dazu verwendet werden können, personalisierte Kundenerlebnisse auf allen Kanälen und Geräten in Echtzeit bereitzustellen.
+Die auf Adobe Experience Platform aufbauende Echtzeit-Kundendatenplattform (Echtzeit-CDP) von Adobe hilft Firmen, bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammenzuführen, um Kundendaten zu erstellen, die dazu verwendet werden können, personalisierte Kundenerlebnisse auf allen Kanälen und Geräten in Echtzeit bereitzustellen.
 
 Echtzeit-CDP umfasst Tools für Datenverwaltung, Identitätsverwaltung, erweiterte Segmentierung und Datenwissenschaften, mit denen Sie Profil erstellen und Audiencen definieren sowie umfassende Einblicke gewinnen können, während Sie gleichzeitig in der Lage sind, strikte Richtlinien zur Datenverwaltung durchzusetzen.
 
