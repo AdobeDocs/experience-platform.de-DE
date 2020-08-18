@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Spark SQL-Funktionen
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 99%
+source-wordcount: '4996'
+ht-degree: 97%
 
 ---
 
@@ -24,17 +24,18 @@ Referenz: [Dokumentation zu SQL-Funktionen](https://spark.apache.org/docs/2.4.0/
 
 ## Kategorien
 
-- [Mathematische und statistische Operatoren und Funktionen](#math-and-statistical-operators-and-functions)
+- [Mathematische und statistische Operatoren und Funktionen](#math)
 - [Logische Operatoren](#logical-operators)
-- [Funktionen für Datum/Uhrzeit](#date/time-functions)
+- [Funktionen für Datum/Uhrzeit](#datetime-functions)
 - [Aggregat-Funktionen](#aggregate-functions)
 - [Arrays](#arrays)
-- [Funktionen zur Umwandlung von Datentypen](#datatype-casting-functions)
-- [Konvertierungs- und Formatierungsfunktionen](#conversion-and-formatting-functions)
+- [Funktionen zur Umwandlung von Datentypen](#datatype-casting)
+- [Konvertierungs- und Formatierungsfunktionen](#conversion)
 - [Datenevaluierung](#data-evaluation)
 - [Aktuelle Informationen](#current-information)
+- [Funktionen für höhere Reihenfolge](#higher-order)
 
-### Mathematische und statistische Operatoren und Funktionen
+### Mathematische und statistische Operatoren und Funktionen {#math}
 
 #### Modulo
 
@@ -745,7 +746,7 @@ Beispiel:
 
 `variance(expr)`: Gibt die aus den Werten einer Gruppe berechnete Varianz der Stichprobe zurück.
 
-### Logische Operatoren
+### Logische Operatoren {#logical-operators}
 
 #### Logisches Nicht
 
@@ -1008,7 +1009,7 @@ Beispiel:
  true
 ```
 
-### Funktionen für Datum/Uhrzeit
+### Funktionen für Datum/Uhrzeit {#datetime-functions}
 
 #### add_months
 
@@ -1426,13 +1427,13 @@ Beispiel:
 
 Seit: 1.5.0
 
-### Aggregat-Funktionen
+### Aggregat-Funktionen {#aggregate-functions}
 
 #### approx_count_distinct
 
 `approx_count_distinct(expr[, relativeSD])`: Gibt die geschätzte Kardinalität nach HyperLogLog++ zurück. `relativeSD` definiert den maximal zulässigen Schätzfehler.
 
-### Arrays
+### Arrays {#arrays}
 
 #### array
 
@@ -1810,7 +1811,7 @@ Beispiele:
 
 Seit: 2.4.0
 
-### Funktionen zur Umwandlung von Datentypen
+### Funktionen zur Umwandlung von Datentypen {#datatype-casting}
 
 #### bigint
 
@@ -1895,7 +1896,7 @@ Beispiele:
 
 `tinyint(expr)`: Wandelt den Wert `expr` in den Zieldatentyp `tinyint` um.
 
-### Konvertierungs- und Formatierungsfunktionen
+### Konvertierungs- und Formatierungsfunktionen {#conversion}
 
 #### ascii
 
@@ -2404,7 +2405,7 @@ Beispiel:
 >
 >Funktion ist nicht deterministisch.
 
-### Datenevaluierung
+### Datenevaluierung {#data-evaluation}
 
 #### coalesce
 
@@ -2997,7 +2998,7 @@ Beispiel:
  cc
 ```
 
-### Aktuelle Informationen
+### Current information {#current-information}
 
 #### current_database
 
@@ -3027,3 +3028,65 @@ Seit: 1.5.0
 `now()`: Gibt den aktuellen Zeitstempel am Beginn der Abfrage-Evaluierung zurück.
 
 Seit: 1.5.0
+
+### Funktionen für höhere Reihenfolge {#higher-order}
+
+#### transform
+
+`transform(array, lambdaExpression): array`
+
+Transformieren Sie Elemente in einem Array mit der Funktion.
+
+Wenn es zwei Argumente für die Lambda-Funktion gibt, bedeutet das zweite Argument die Indexposition des Elements.
+
+Beispiel:
+
+```
+> SELECT transform(array(1, 2, 3), x -> x + 1);
+  [2,3,4]
+> SELECT transform(array(1, 2, 3), (x, i) -> x + i);
+  [1,3,5]
+```
+
+
+#### vorhanden
+
+`exists(array, lambdaExpression returning Boolean): Boolean`
+
+Testen Sie, ob eine Vorhersage für ein oder mehrere Elemente im Array gültig ist.
+
+Beispiel:
+
+```
+> SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
+  true
+```
+
+#### filter
+
+`filter(array, lambdaExpression returning Boolean): array`
+
+Filtern Sie das Eingabe-Array mit der angegebenen Prognose.
+
+Beispiel:
+
+```
+> SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
+ [1,3]
+```
+
+
+#### aggregat
+
+`aggregate(array, <initial accumulator value>, lambdaExpression to accumulate the value): array`
+
+Wenden Sie einen binären Operator auf einen Ausgangszustand und alle Elemente im Array an und reduziert Sie diesen auf einen einzelnen Status. Der finale Status wird durch Anwendung einer Funktion zum Beenden in das Endergebnis konvertiert.
+
+Beispiel:
+
+```
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
+  6
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
+  60
+```
