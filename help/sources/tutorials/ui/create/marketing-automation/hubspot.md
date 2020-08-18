@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für HubSpot über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
+source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 16%
+source-wordcount: '468'
+ht-degree: 11%
 
 ---
 
@@ -23,41 +23,43 @@ Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, exte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
+* [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-* [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Echtzeit-Profil]](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-If you already have a [!DNL HubSpot] base connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a marketing automation dataflow](../../dataflow/marketing-automation.md).
+Wenn Sie bereits über eine [!DNL HubSpot] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Lernprogramm zur [Konfiguration eines Datenflusses](../../dataflow/marketing-automation.md)fortfahren.
 
 ### Erforderliche Anmeldedaten sammeln
 
-In order to access your [!DNL HubSpot] account on [!DNL Platform], you must provide the following values:
+Um auf Ihr [!DNL HubSpot] Konto zugreifen zu können, müssen Sie die folgenden Werte angeben [!DNL Platform]:
 
-| Credential | Beschreibung |
+| Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `clientId` | The client ID associated with your [!DNL HubSpot] application. |
-| `clientSecret` | The client secret associated with your [!DNL HubSpot] application. |
-| `accessToken` | The access token obtained when initially authenticating your OAuth integration. |
+| `clientId` | Die mit Ihrer [!DNL HubSpot] Anwendung verknüpfte Client-ID. |
+| `clientSecret` | Das mit Ihrer [!DNL HubSpot] Anwendung verknüpfte Clientgeheimnis. |
+| `accessToken` | Das Zugriffstoken, das beim erstmaligen Authentifizieren der OAuth-Integration erhalten wurde. |
 | `refreshToken` | Das Aktualisierungstoken, das beim erstmaligen Authentifizieren der OAuth-Integration erhalten wurde. |
 
-For more information about getting started, refer to this [HubSpot document](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
+Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL HubSpot] Dokument](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 
-## Connect your [!DNL HubSpot] account
+## Verbinden Sie Ihr [!DNL HubSpot] Konto
 
-Once you have gathered your required credentials, you can follow the steps below to create a new inbound base connection to link your [!DNL HubSpot] account to [!DNL Platform].
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL HubSpot] Konto mit [!DNL Platform]zu verknüpfen.
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den **[!UICONTROL Quellarbeitsbereich]** zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein Konto erstellen können.
 
-Wählen Sie unter der Kategorie *[!UICONTROL Marketing Automation]* die Option **[!UICONTROL HubSpot]** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **[!UICONTROL Add data]**.
+Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
+
+Wählen Sie unter der Kategorie **[!UICONTROL Marketing-Automatisierung]** die Option **[!UICONTROL HubSpot]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie &quot; **[!UICONTROL Konfigurieren]**&quot;aus. Andernfalls wählen Sie **[!UICONTROL Hinzufügen Daten]** aus, um einen neuen [!DNL HubSpot] Connector zu erstellen.
 
 ![Katalog](../../../../images/tutorials/create/hubspot/catalog.png)
 
-The *[!UICONTROL Connect to HubSpot]* page appears. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die Seite &quot; **[!UICONTROL Verbindung mit HubSpot]** herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im eingeblendeten Eingabebild einen Namen, eine optionale Beschreibung und Ihre [!DNL HubSpot] Anmeldeinformationen für die Basisverbindung ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung und Ihre [!DNL HubSpot] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
 
 ![connect](../../../../images/tutorials/create/hubspot/connect.png)
 
@@ -69,4 +71,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL HubSpot] Konto, mit
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Basisverbindung zu Ihrem [!DNL HubSpot] Konto aufgebaut. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Marketingautomatisierungssystemen in Platform](../../dataflow/marketing-automation.md)zu bringen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL HubSpot] Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus dem Marketingautomatisierungssystem in das Programm [!DNL Platform]](../../dataflow/marketing-automation.md)zu integrieren.
