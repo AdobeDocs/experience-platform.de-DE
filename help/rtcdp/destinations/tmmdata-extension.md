@@ -4,10 +4,10 @@ seo-title: TMMData-Erweiterung
 description: Die TMMData-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: Die TMMData-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 77%
+source-wordcount: '568'
+ht-degree: 72%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 77%
 
 ## Übersicht {#overview}
 
-[!DNL TMMData's] Die Foundation-Plattform für Adobe Marketing Cloud bietet Marketingteams die Werkzeuge, mit denen sie auf alle wichtigen Datenquellen - einschließlich interner/externer und Online-/Offline-Daten - zugreifen und diese miteinander kombinieren können, um eine sichere, umfassende Analyse über Kanal hinweg mit automatisierter Kampagne-Einrichtung und direktem Import zu Adobe und anderen Analytics- und BI-Tools zu ermöglichen.
+[!DNL TMMData's] Die Foundation-Plattform für Adobe Marketing Cloud bietet Marketingteams die Werkzeuge, mit denen sie auf alle wichtigen Datenquellen zugreifen und diese miteinander verknüpfen können - einschließlich interner/externer und Online-/Offline-Daten - für eine sichere, umfassende Analyse über Kanal hinweg mit automatisierter Kampagne-Einrichtung und direktem Import in Adobe und andere Analytics- und BI-Tools.
 
 [!DNL TMMData] ist eine Analyseerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
@@ -36,7 +36,7 @@ So installieren Sie die [!DNL TMMData] Erweiterung:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
-3. Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann in der rechten Leiste die Option **[!UICONTROL Erweiterung installieren]** aus. Wenn das Feld **[!UICONTROL Erweiterung installieren]** ausgegraut ist, fehlt Ihnen die Berechtigung **[!UICONTROL manage_properties]**. Siehe [Voraussetzungen](#prerequisites).
+3. Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. Siehe [Voraussetzungen](#prerequisites).
 4. Wählen Sie im Fenster **[!UICONTROL Verfügbare Launch-Eigenschaft auswählen]** die Launch-Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft in Launch erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Informationen zu Eigenschaften finden Sie im [Eigenschaften-Seitenabschnitt](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html#property-seite) der Launch-Dokumentation.
 5. Der Workflow leitet Sie an Launch weiter, um die Installation abzuschließen.
 
