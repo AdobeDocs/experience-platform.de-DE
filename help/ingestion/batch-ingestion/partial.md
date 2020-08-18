@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht zur partiellen Batch-Erfassung in Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
+source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
 workflow-type: tm+mt
-source-wordcount: '1420'
-ht-degree: 43%
+source-wordcount: '1446'
+ht-degree: 40%
 
 ---
 
@@ -373,7 +373,7 @@ Wenn der erfasste Batch ein ungültiges Schema oder ungültige Kopfzeilen enthä
 
 ### Nicht analysierbare Zeilen {#unparsable}
 
-Wenn der erfasste Batch nicht analysierbare Zeilen aufweist, werden die Fehler des Batch in einer Datei gespeichert, auf die mithilfe des unten beschriebenen Endpunkts zugegriffen werden kann.
+Wenn der von Ihnen erfasste Stapel über nicht trennbare Zeilen verfügt, können Sie den folgenden Endpunkt verwenden, um eine Liste von Dateien mit Fehlermeldungen Ansicht.
 
 **API-Format**
 
@@ -397,15 +397,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den nicht analysierbaren Zeilen zurückgegeben.
+Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste der Dateien zurück, die Fehler aufweisen.
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+Mithilfe des [Metadaten-Abrufendpunkts](#retrieve-metadata)können Sie dann detaillierte Informationen zu den Fehlern abrufen.
+
+Nachstehend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```
