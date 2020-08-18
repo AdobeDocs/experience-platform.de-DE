@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Adobe Analytics über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # Erstellen eines Quell-Connectors für Adobe Analytics über die Benutzeroberfläche
 
-This tutorial provides steps for creating an Adobe Analytics source connector in the UI to bring consumer data into Adobe Experience Platform.
+In diesem Lernprogramm werden Schritte zum Erstellen eines Adobe Analytics-Quell-Connectors in der Benutzeroberfläche beschrieben, um Verbraucherdaten in Adobe Experience Platform zu importieren.
 
 ## Erste Schritte
 
@@ -24,19 +24,19 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-## Create a source connection with Adobe Analytics
+## Erstellen einer Quellverbindung mit Adobe Analytics
 
 Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden verfügbare Quellen zum Erstellen von eingehenden Verbindungen angezeigt. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenströme, die ihnen zugeordnet sind.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie *Adobe Applications* die Option **[!UICONTROL Adobe Analytics]** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um vorhandene Konten Ansicht, wählen Sie **[!UICONTROL Konten]**.
+Wählen Sie unter der Kategorie **[!UICONTROL Adobe Applications]** die Option **[!UICONTROL Adobe Analytics]** , um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zum Herstellen einer Verbindung zur Quelle oder Ansicht der zugehörigen Dokumentation. Um vorhandene Konten Ansicht, wählen Sie **[!UICONTROL Konten]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Daten auswählen
 
-Der *Adobe Analytics* -Schritt wird angezeigt. In diesem Anzeigebereich werden zuvor eingerichtete Datenflüsse für Analytics aufgeführt. Sie können einen neuen Datenfluss erstellen, indem Sie auf Daten **[!UICONTROL auswählen]** klicken.
+Der **[!UICONTROL Adobe Analytics]** -Schritt wird angezeigt. In diesem Anzeigebereich werden zuvor eingerichtete Datenflüsse für Analytics aufgeführt. Sie können einen neuen Datenfluss erstellen, indem Sie auf Daten **[!UICONTROL auswählen]** klicken.
 
 >[!NOTE]
 >
@@ -52,36 +52,36 @@ Wählen Sie in der Liste der verfügbaren Report Suites die Report Suites aus, d
 
 ### Benennen des Datenflusses
 
-Der Schritt *Datenfluss* im Detail wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Wählen Sie **[UICONTROL! Als Nächstes]** fertig.
+Der Schritt für die Details **[!UICONTROL des]** Datenflusses wird angezeigt, in dem Sie einen Namen und eine optionale Beschreibung für den Datenfluss angeben müssen. Select **[!UICONTROL Next]** when finished.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### Überprüfen des Datenflusses
 
-Der *Review* -Schritt wird angezeigt, mit dem Sie Ihren neuen Analytics-In-bound-Datenfluss überprüfen können, bevor er erstellt wird. Die Verbindungsdetails werden nach Kategorien gruppiert, darunter:
+Der **[!UICONTROL Review]** -Schritt wird angezeigt, mit dem Sie Ihren neuen Analytics-In-bound-Datenfluss überprüfen können, bevor er erstellt wird. Die Verbindungsdetails werden nach Kategorien gruppiert, darunter:
 
-* *Verbindung*: Zeigt den Typ der Quellverbindung und die ausgewählte Report Suite an.
-* *Assign dataset &amp; map fields*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. Das Schema und der Datensatz für die Ausgabe werden automatisch für Analytics-Dataset-Datenflüsse konfiguriert.
+* **[!UICONTROL Verbindung]**: Zeigt den Typ der Quellverbindung und die ausgewählte Report Suite an.
+* **[!UICONTROL Zuweisen von Dataset- und Zuordnungsfeldern]**: Beim Erstellen anderer Quell-Connectors zeigt dieser Container, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält. Das Schema und der Datensatz für die Ausgabe werden automatisch für Analytics-Dataset-Datenflüsse konfiguriert.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### Überwachen des Datenflusses
 
-Nachdem Sie den Datenfluss erstellt haben, können Sie die Daten überwachen, die über den Dataset aufgenommen werden. From the *Catalog* screen, select *Dataset flows* to view a list of established flows associated with your Analytics account.
+Nachdem Sie den Datenfluss erstellt haben, können Sie die Daten überwachen, die über den Dataset aufgenommen werden. Wählen Sie im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;die Option &quot; **[!UICONTROL Datenfluss]** zur Ansicht einer Liste der mit Ihrem Analytics-Konto verknüpften etablierten Datenströme&quot;.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-The *Dataset flows* screen appears. Auf dieser Seite finden Sie eine Reihe von Datenströmen, einschließlich Informationen zu ihrem Namen, ihren Quelldaten, ihrer Erstellungszeit und ihrem Status.
+Der Bildschirm &quot; *Datenfluss* &quot;wird angezeigt. Auf dieser Seite finden Sie eine Reihe von Datenströmen, einschließlich Informationen zu ihrem Namen, ihren Quelldaten, ihrer Erstellungszeit und ihrem Status.
 
 Der Connector instanziiert zwei Datenströme. Ein Fluss stellt Aufstockungsdaten dar, der andere für Live-Daten. Aufstockungsdaten werden nicht zum Profil konfiguriert, sondern für analytische und datenwissenschaftliche Anwendungsfälle an den Datensee gesendet.
 
-For more information on backfill, live data, and their respective latencies, see the [Analytics Data Connector overview](../../../../connectors/adobe-applications/analytics.md).
+Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenzen finden Sie in der [Analytics Data Connector-Übersicht](../../../../connectors/adobe-applications/analytics.md).
 
-Select the dataset flow you wish to view from the list.
+Wählen Sie aus der Liste den Datenfluss aus, der Ansicht werden soll.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-Die Seite *Aktivität* des Datensatzes wird angezeigt. This page displays the rate of messages being consumed in the form of a graph. Wählen Sie *Datenverwaltung* in der oberen Kopfzeile, um auf die Beschriftungsfelder zuzugreifen.
+Die Seite *Aktivität* des Datensatzes wird angezeigt. Diese Seite zeigt die Rate der Nachrichten an, die in Form eines Diagramms konsumiert werden. Wählen Sie *Datenverwaltung* in der oberen Kopfzeile, um auf die Beschriftungsfelder zuzugreifen.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -89,9 +89,9 @@ Sie können die geerbten Beschriftungen eines Dataset-Flusses im Anzeigebereich 
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-The *Edit governance labels* panel appears. This screen allows you to access and edit a dataset flow&#39;s contract, identity, and sensitive labels.
+Das Bedienfeld *Governance-Bezeichnungen* bearbeiten wird angezeigt. In diesem Anzeigebereich können Sie auf die Verträge, Identitäten und vertraulichen Beschriftungen eines Datasets zugreifen und diese bearbeiten.
 
-For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
+Weitere Informationen zur Beschriftung von Daten aus Analytics finden Sie im Handbuch [zur Datenverwendung](../../../../../data-governance/labels/user-guide.md).
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
@@ -104,7 +104,7 @@ Nachdem die Verbindung erstellt wurde, wird automatisch ein Zielgruppe-Schema un
 * [Übersicht über den Data Science Workspace](../../../../../data-science-workspace/home.md)
 * [Query Service – Übersicht](../../../../../query-service/home.md)
 
-The following video is intended to support your understanding of ingesting data using the Adobe Analytics Source connector:
+Das folgende Video soll Ihnen beim Erfassen von Daten mithilfe des Adobe Analytics Source Connectors helfen:
 
 >[!WARNING]
 >
