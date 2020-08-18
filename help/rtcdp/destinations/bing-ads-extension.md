@@ -4,10 +4,10 @@ seo-title: Bing Ads Universal Ereignis Tracking (UET)-Erweiterung
 description: Die Erweiterung Bing Ads Universal Ereignis Tracking (UET) ist ein Werbeziel in der Adobe Real-time Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 40%
+source-wordcount: '548'
+ht-degree: 34%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 40%
 
 Dieses Ziel ist eine [!DNL Experience Platform Launch] Erweiterung. For more information about how [!DNL Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Bing Ads Extension](assets/bing-extension.png)
+![Bing Ads Extension](assets/bing-ads-extension.png)
 
 
 ## Voraussetzungen  {#prerequisites}
@@ -37,7 +37,7 @@ To install the [!DNL Bing Ads Universal Event Tracking] (UET) extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
-3. Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann in der rechten Leiste die Option **[!UICONTROL Erweiterung installieren]** aus. Wenn das Feld **[!UICONTROL Erweiterung installieren]** ausgegraut ist, fehlt Ihnen die Berechtigung **[!UICONTROL manage_properties]**. Siehe [Voraussetzungen](#prerequisites).
+3. Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. Siehe [Voraussetzungen](#prerequisites).
 4. In the **[!UICONTROL Select available Launch property]** window, select the [!DNL Launch] property in which you want to install the extension. You also have the option of creating a new property in [!DNL Launch]. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html#property-seite) of the [!DNL Launch] documentation.
 5. The workflow takes you to [!DNL Launch] to complete the installation.
 
