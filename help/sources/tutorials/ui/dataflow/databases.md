@@ -1,60 +1,60 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Configure a dataflow for a database connector in the UI
+title: Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 6%
+source-wordcount: '1251'
+ht-degree: 3%
 
 ---
 
 
-# Configure a dataflow for a database connector in the UI
+# Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Datenbankkonto.
+Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Datenbankkonto.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Experience-Datenmodell (XDM)-System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+- [[!DNL Experience Data Model] (XDM) System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    - [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   - [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-- [Echtzeit-Kundenprofil](../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+   - [Schema-Editor-Lernprogramm](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
+- [[!DNL Echtzeit-Profil]](../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Außerdem müssen Sie bei diesem Lernprogramm bereits ein Datenbankkonto erstellt haben. A list of tutorials for creating different database connectors in the UI can be found in the [source connectors overview](../../../home.md).
+Außerdem müssen Sie bei diesem Lernprogramm bereits ein Datenbankkonto erstellt haben. Eine Liste von Übungen zum Erstellen verschiedener Datenbankschnittstellen in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../home.md).
 
-## Select data
+## Daten auswählen
 
-After creating your database account, the *[!UICONTROL Select data]* step appears, providing an interactive interface for you to explore your database hierarchy.
+Nach dem Erstellen Ihres Datenbankkontos wird der Schritt &quot;Daten **** auswählen&quot;angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Datenbankhierarchie untersuchen können.
 
-- The left half of the interface is a browser, displaying your account&#39;s list of databases.
-- The right half of the interface lets you preview up to 100 rows of data.
+- Die linke Hälfte der Oberfläche ist ein Browser, der die Liste der Datenbanken Ihres Kontos anzeigt.
+- In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen Vorschau werden.
 
-Select the database you wish to use, then click **[!UICONTROL Next]**.
+Wählen Sie die gewünschte Datenbank aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![](../../../images/tutorials/dataflow/databases/add-data.png)
 
-## Map data fields to an XDM schema
+## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-The *Mapping* step appears, providing an interactive interface to map the source data to a Platform dataset.
+Der Schritt *Zuordnung* wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem Plattformdatensatz zuzuordnen.
 
-Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new dataset.
+Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen.
 
 ### Vorhandenen Datensatz verwenden
 
-To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**, then click the dataset icon.
+Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot; **[!UICONTROL Vorhandener Datensatz]**&quot;und klicken Sie dann auf das Dataset-Symbol.
 
 ![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-The *[!UICONTROL Select dataset]* dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+The **[!UICONTROL Select dataset]** dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
-### Use a new dataset
+### Verwenden eines neuen Datensatzes
 
 Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot; **[!UICONTROL Neuer Datensatz]** &quot;und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein.
 
@@ -62,7 +62,7 @@ Sie können ein Schema anhängen, indem Sie in der Suchleiste &quot;Schema **[!U
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-The *[!UICONTROL Select schema]* dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
+The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
@@ -74,54 +74,52 @@ Nachdem Sie die Quelldaten zugeordnet haben, klicken Sie auf **[!UICONTROL Weite
 
 ## Planen von Erfassungsabläufen
 
-Der Schritt *[!UICONTROL Planung]* wird angezeigt, mit dem Sie einen Erfassungszeitplan konfigurieren können, um die ausgewählten Quelldaten automatisch mit den konfigurierten Zuordnungen zu erfassen. In der folgenden Tabelle sind die verschiedenen konfigurierbaren Felder für die Planung aufgeführt:
+Der Schritt **[!UICONTROL Planung]** wird angezeigt, mit dem Sie einen Erfassungszeitplan konfigurieren können, um die ausgewählten Quelldaten automatisch mit den konfigurierten Zuordnungen zu erfassen. In der folgenden Tabelle sind die verschiedenen konfigurierbaren Felder für die Planung aufgeführt:
 
 | Feld | Beschreibung |
 | --- | --- |
 | Häufigkeit | Zu den auswählbaren Frequenzen gehören `Once`, `Minute`, `Hour`, `Day`und `Week`. |
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Frequenz festlegt. |
 | Beginn | Ein UTC-Zeitstempel, der angibt, wann die erste Erfassung erfolgen soll. |
-| Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die *[!UICONTROL Aufstockung]* aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die *Aufstockung* deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der *[!UICONTROL Beginn]* geladen wurden. Dateien, die vor dem *[!UICONTROL Beginn]* geladen wurden, werden nicht erfasst. |
+| Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die **[!UICONTROL Aufstockung]** aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die **[!UICONTROL Aufstockung]** deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der **[!UICONTROL Beginn]** geladen wurden. Dateien, die vor dem **[!UICONTROL Beginn]** geladen wurden, werden nicht erfasst. |
 | Delta-Spalte | Eine Option mit gefilterten Quelldatumsfeldern vom Typ, Schema oder Uhrzeit. Dieses Feld wird verwendet, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
 
 Datenflüsse sind so konzipiert, dass Daten auf planmäßiger Basis automatisch erfasst werden. Beginn durch Auswahl der Aufnahmefrequenz. Legen Sie als Nächstes das Intervall fest, um den Zeitraum zwischen zwei Flussläufen festzulegen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und auf größer oder gleich 15 gesetzt werden.
 
-Um die Erfassungszeit des Beginns festzulegen, passen Sie das Datum und die Uhrzeit an, die im Feld &quot;Beginn&quot;angezeigt werden. Alternativ können Sie das Kalendersymbol auswählen, um den Zeitwert des Beginns zu bearbeiten. Start time must be greater than or equal to your current UTC time.
+Um die Erfassungszeit des Beginns festzulegen, passen Sie das Datum und die Uhrzeit an, die im Feld &quot;Beginn&quot;angezeigt werden. Alternativ können Sie das Kalendersymbol auswählen, um den Zeitwert des Beginns zu bearbeiten. Die Beginn-Zeit muss größer oder gleich der aktuellen UTC-Zeit sein.
 
-Select **[!UICONTROL Load incremental data by]** to assign the delta column. This field provides a distinction between new and existing data.
+Wählen Sie Inkrementelle Daten **[!UICONTROL laden, indem]** Sie die Delta-Spalte zuweisen. In diesem Feld wird zwischen neuen und vorhandenen Daten unterschieden.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
-### Set up a one-time ingestion dataflow
+### Einrichten eines einmaligen Erfassungsdataflow
 
-To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**.
+Um eine einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die Häufigkeit aus und klicken Sie auf **[!UICONTROL Einmal]**.
 
 >[!TIP]
 >
->**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+>**[!UICONTROL Intervall]** und **[!UICONTROL Aufstockung]** sind während einer einmaligen Erfassung nicht sichtbar.
 
-Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
+Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]**.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-## Provide dataflow details
+## Datennachrichtendetails angeben
 
-The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
+Der Schritt **[!UICONTROL Datennachweis]** wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis geben können.
 
-During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Once *[!UICONTROL Partial ingestion]* is enabled, drag the *[!UICONTROL Error threshold %]* dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
-Provide values for the dataflow and select **[!UICONTROL Next]**.
-
-Provide values for the dataflow and select **[!UICONTROL Next]**.
+Während dieses Prozesses können Sie auch die **[!UICONTROL teilweise Erfassung]** und **[!UICONTROL Fehlerdiagnose]** aktivieren. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Sobald die **[!UICONTROL teilweise Erfassung]** aktiviert ist, ziehen Sie den **[!UICONTROL Fehlerschwellenwert %]** , um den Fehlerschwellenwert des Stapels anzupassen. Alternativ können Sie den Schwellenwert manuell anpassen, indem Sie das Eingabefeld auswählen. Weitere Informationen finden Sie in der Übersicht über die [teilweise Stapelverarbeitung](../../../../ingestion/batch-ingestion/partial.md).
+Geben Sie Werte für den Datenflug ein und wählen Sie **[!UICONTROL Weiter]**.
 
 ![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
 ## Überprüfen Sie Ihren Datenfluss
 
-Der *[!UICONTROL Schritt zum Überprüfen]* wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
+Der **[!UICONTROL Schritt zum Überprüfen]** wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
 
-- *[!UICONTROL Verbindung]*: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
-- *[!UICONTROL Zuweisen von Dataset- und Zuordnungsfeldern]*: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
-- *[!UICONTROL Planung]*: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmeplans an.
+- **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
+- **[!UICONTROL Zuweisen von Dataset- und Zuordnungsfeldern]**: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
+- **[!UICONTROL Planung]**: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmeplans an.
 
 Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen]** und lassen Sie die Erstellung des Datenflusses etwas Zeit.
 
@@ -133,14 +131,14 @@ Nachdem Sie Ihren Datenbogen erstellt haben, können Sie die Daten überwachen, 
 
 ## Datenflug löschen
 
-Sie können Datenflüsse löschen, die nicht mehr benötigt werden oder mit der Funktion &quot; *[!UICONTROL Löschen]* &quot;im Arbeitsbereich &quot; *[!UICONTROL Datenflüsse]* &quot;falsch erstellt wurden. Weitere Informationen zum Löschen von Datenflüssen finden Sie im Lernprogramm zum [Löschen von Datenflüssen in der Benutzeroberfläche](../delete.md).
+Sie können Datenflüsse löschen, die nicht mehr benötigt werden oder mit der Funktion &quot; **[!UICONTROL Löschen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Datenflüsse]** &quot;falsch erstellt wurden. Weitere Informationen zum Löschen von Datenflüssen finden Sie im Lernprogramm zum [Löschen von Datenflüssen in der Benutzeroberfläche](../delete.md).
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie erfolgreich einen Datenbogen erstellt, um Daten aus einer externen Datenbank einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie Real-time Customer Profil und Data Science Workspace verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Lernprogramm haben Sie erfolgreich einen Datenbogen erstellt, um Daten aus einer externen Datenbank einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-- [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
-- [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] Übersicht](../../../../profile/home.md)
+- [[!DNL Data Science Workspace] Übersicht](../../../../data-science-workspace/home.md)
 
 ## Anhang
 
@@ -150,11 +148,11 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit Q
 
 Beim Erstellen eines Datenflusses wird dieser sofort aktiv und erfasst Daten gemäß dem festgelegten Zeitplan. Sie können einen aktiven Datenfeed jederzeit deaktivieren, indem Sie die unten stehenden Anweisungen befolgen.
 
-Wählen Sie im Arbeitsbereich &quot; *[!UICONTROL Quellen]* &quot;die Registerkarte &quot; **[!UICONTROL Datenflüsse]** &quot;aus. Wählen Sie als Nächstes den Datenflug aus, den Sie deaktivieren möchten.
+Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Quellen]** &quot;die Registerkarte &quot; **[!UICONTROL Datenflüsse]** &quot;aus. Wählen Sie als Nächstes den Datenflug aus, den Sie deaktivieren möchten.
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-Die Spalte &quot; *[!UICONTROL Eigenschaften]* &quot;wird auf der rechten Seite des Bildschirms angezeigt, einschließlich der Schaltfläche &quot; **[!UICONTROL Aktiviert]** &quot;. Wählen Sie den Umschalter aus, um den Datenflug zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenflug nach dessen Deaktivierung erneut zu aktivieren.
+Die Spalte &quot; **[!UICONTROL Eigenschaften]** &quot;wird auf der rechten Seite des Bildschirms angezeigt, einschließlich der Schaltfläche &quot; **[!UICONTROL Aktiviert]** &quot;. Wählen Sie den Umschalter aus, um den Datenflug zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenflug nach dessen Deaktivierung erneut zu aktivieren.
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
