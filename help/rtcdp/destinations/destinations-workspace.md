@@ -5,7 +5,7 @@ seo-title: Arbeitsbereich „Ziele“
 description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 seo-description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 61%
@@ -41,7 +41,7 @@ Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]** - oder ein **[!
 | [!UICONTROL Konfigurieren] | Ermöglicht Ihnen das Erstellen einer Verbindung mit dem Ziel. |
 | [!UICONTROL Aktivieren] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren. |
 | [!UICONTROL Ansichten-Konto] | Ansicht der Konten, die Sie für ein Ziel verbunden haben. |
-| [!UICONTROL Ansicht DataFlows] | Ansicht der Datenflüsse in der Aktivierung, die für ein Ziel vorhanden sind |
+| [!UICONTROL Ansicht DataFlows] | Ansicht der Datenflüsse, die für ein Ziel vorhanden sind. |
 | [!UICONTROL Dokumentation zur Ansicht] | Öffnet einen Link zur Dokumentationsseite für dieses spezifische Ziel, um weitere Informationen zu erhalten und die Einrichtung zu erleichtern. |
 
 ![Steuerelemente auf der Zielkarte](/help/rtcdp/destinations/assets/destination-card-options.png)
