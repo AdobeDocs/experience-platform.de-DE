@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines HP Vertica-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 15%
+source-wordcount: '478'
+ht-degree: 9%
 
 ---
 
@@ -23,10 +23,10 @@ Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, exte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
+* [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-* [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Echtzeit-Profil]](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 Wenn Sie bereits über eine gültige HP- [!DNL Vertica] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Lernprogramm zur [Konfiguration eines Datenflusses](../../dataflow/databases.md)fortfahren.
 
@@ -38,25 +38,25 @@ The following sections provide additional information that you will need to know
 | ---------- | ----------- |
 | `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu Ihrer HP- [!DNL Vertica] Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für HP [!DNL Vertica] ist `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
-Weitere Informationen zum Einstieg finden Sie in [diesem HP Vertica Dokument](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
+Weitere Informationen zum Einstieg finden Sie in [diesem [!DNL Vertica] HPdocument](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
 ## Verbinden Sie Ihr HP- [!DNL Vertica] Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues HP- [!DNL Vertica] Konto für die Verbindung zu erstellen [!DNL Platform].
+Nachdem Sie Ihre erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr HP- [!DNL Vertica] Konto mit [!DNL Platform]zu verknüpfen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Reihe von Quellen angezeigt, mit denen Sie ein eingehendes Konto erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse an, die ihnen zugeordnet sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den **[!UICONTROL Quellarbeitsbereich]** zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein Konto erstellen können.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie *[!UICONTROL Datenbanken]* die Option **[!UICONTROL HP Vertica]** gefolgt von **[!UICONTROL Hinzufügen Daten]** , um einen neuen HP Vertica Connector zu erstellen.
+Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICONTROL HP Vertica]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie &quot; **[!UICONTROL Konfigurieren]**&quot;aus. Wählen Sie andernfalls **[!UICONTROL Hinzufügen Daten]** aus, um einen neuen HP- [!DNL Vertica] Anschluss zu erstellen.
 
-![catalog](../../../../images/tutorials/create/hp-vertica/catalog.png)
+![Katalog](../../../../images/tutorials/create/hp-vertica/catalog.png)
 
-Die Seite *[!UICONTROL Verbindung mit HP Vertica]* herstellen wird angezeigt. On this page, you can either use new credentials or existing credentials.
+Die Seite **[!UICONTROL Verbindung mit HP Vertica]** herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. On the input form that appears, provide the connection with a name, an optional description, and your HP [!DNL Vertica] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung und Ihre HP- [!DNL Vertica] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
 
 ![connect](../../../../images/tutorials/create/hp-vertica/new.png)
 
@@ -68,4 +68,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das HP- [!DNL Vertica] Konto,
 
 ## Nächste Schritte
 
-By following this tutorial, you have established a connection to your HP [!DNL Vertica] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/databases.md).
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem HP- [!DNL Vertica] Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/databases.md)einzubeziehen.
