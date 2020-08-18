@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für MariaDB über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '409'
 ht-degree: 17%
 
 ---
@@ -23,47 +23,47 @@ Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, exte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
+* [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
 * [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine Maria DB-Basisverbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Lernprogramm zur [Konfiguration eines Datenflusses](../../dataflow/databases.md)fortfahren.
+Wenn Sie bereits über eine [!DNL MariaDB] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Lernprogramm zur [Konfiguration eines Datenflusses](../../dataflow/databases.md)fortfahren.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Um auf Ihr [!DNL Maria DB] Konto zugreifen zu können, müssen Sie [!DNL Platform]den folgenden Wert angeben:
+Um auf Ihr [!DNL MariaDB] Konto zugreifen zu können, müssen Sie [!DNL Platform]den folgenden Wert angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die mit Ihrer MariaDB-Authentifizierung verknüpfte Verbindungszeichenfolge. Das Muster für die MariaDB-Verbindungszeichenfolge lautet: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionString` | Die mit Ihrer MariaDB-Authentifizierung verknüpfte Verbindungszeichenfolge. Das Muster für die [!DNL MariaDB] Verbindungszeichenfolge lautet: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
-Please refer to [this document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) for more information about getting started with MariaDB.
+Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL MariaDB] Dokument](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 ## Verbinden Sie Ihr [!DNL Maria DB] Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um eine neue eingehende Basisverbindung zu erstellen, mit der Sie Ihr [!DNL Maria DB] Konto verknüpfen [!DNL Platform].
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL Maria DB] Konto mit [!DNL Platform]zu verknüpfen.
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. Im Anzeigebereich &quot; *[!UICONTROL Katalog]* &quot;werden eine Vielzahl von Quellen angezeigt, mit denen Sie eingehende Basisverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Basisverbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den **[!UICONTROL Quellarbeitsbereich]** zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein Konto erstellen können.
 
-Wählen Sie unter der Kategorie &quot; *[!UICONTROL Datenbanken]* &quot;die Option &quot; **[!UICONTROL Maria DB]** &quot;, um eine Informationsleiste auf der rechten Seite Ihres Bildschirms anzuzeigen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. Um eine neue eingehende Basisverbindung zu erstellen, wählen Sie **[!UICONTROL Hinzufügen Daten]**.
+Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Maria DB]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie &quot; **[!UICONTROL Konfigurieren]**&quot;aus. Andernfalls wählen Sie **[!UICONTROL Hinzufügen Daten]** aus, um einen neuen [!DNL Maria DB] Connector zu erstellen.
 
 ![](../../../../images/tutorials/create/maria-db/catalog.png)
 
-Die Seite &quot; *[!UICONTROL Verbindung mit Maria DB]* herstellen&quot;wird angezeigt. On this page, you can either use new credentials or existing credentials.
+Die Seite &quot; **[!UICONTROL Verbindung mit Maria DB]** herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. On the input form that appears, provide the base connection with a name, an optional description, and your [!DNL Maria DB] credentials. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Basisverbindung hergestellt ist.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung und Ihre [!DNL MariaDB] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
 
 ![](../../../../images/tutorials/create/maria-db/new.png)
 
-### Existing account
+### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Maria DB] Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** , um fortzufahren.
+Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL MariaDB] Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** , um fortzufahren.
 
 ![](../../../../images/tutorials/create/maria-db/existing.png)
 
 ## Nächste Schritte
 
-By following this tutorial, you have established a base connection to your [!DNL Maria DB] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/databases.md).
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL MariaDB] Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/databases.md)einzubeziehen.
