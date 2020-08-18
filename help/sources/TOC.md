@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '619'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,8 @@ ht-degree: 5%
 - [Übersicht über Connectoren für Datenquellen](home.md)
 - Verfügbare Quell-Connectors {#connectors}
    - Adobe-Anwendungen {#adobe-applications}
-      - [Der Data Connector von Analytics](connectors/adobe-applications/analytics.md)
+      - [Analytics Classifications Data Connector](connectors/adobe-applications/classifications.md)
+      - [Analytics Data Connector](connectors/adobe-applications/analytics.md)
       - [Audience Manager-Anschluss](connectors/adobe-applications/audience-manager.md)
       - [Connector für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
       - Anwendungsfelder für Adoben zuordnen {#mapping}
@@ -133,6 +134,7 @@ ht-degree: 5%
 - UI-Lernprogramme {#ui-tutorials}
    - Erstellen eines Quell-Connectors {#create}
       - Adobe-Anwendungen {#adobe-applications}
+         - [Adobe Analytics Classification Data Connector](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Analytics-Anschluss](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Audience Manager-Anschluss](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connector für Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
