@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen Sie einen Apache Hive auf einem Azurblauen HDInsights-Quellanschluss in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 14%
+source-wordcount: '462'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 14%
 # Create an [!DNL Apache Hive] on [!DNL Azure HDInsights] source connector in the UI
 
 >[!NOTE]
-> The [!DNL Apache Hive] on [!DNL Azure HDInsights] connector is in beta. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+> Der [!DNL Apache Hive] on- [!DNL Azure HDInsights] Anschluss befindet sich in Beta. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Apache Hive] On- [!DNL Azure HDInsights] Source-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
 
@@ -23,16 +23,16 @@ Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, exte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
+* [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-* [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+   * [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
+* [[!DNL Echtzeit-Profil]](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 Wenn Sie bereits über eine gültige [!DNL Hive] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zur [Konfiguration eines Datenflusses fortfahren](../../dataflow/databases.md)
 
 ### Erforderliche Anmeldedaten sammeln
 
-In order to access your [!DNL Hive] account on [!DNL Platform], you must provide the following values:
+Um auf Ihr [!DNL Hive] Konto zugreifen zu können, müssen Sie die folgenden Werte angeben [!DNL Platform]:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -40,34 +40,34 @@ In order to access your [!DNL Hive] account on [!DNL Platform], you must provide
 | `username` | Der Benutzername, mit dem Sie auf den [!DNL Hive] Server zugreifen. |
 | `password` | Das dem Benutzer zugeordnete Kennwort. |
 
-For more information about getting started refer to [this Hive document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
+Weitere Informationen zum Einstieg finden Sie in [ [!DNL Hive] diesem Dokument](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
-## Connect your [!DNL Hive] account
+## Verbinden Sie Ihr [!DNL Hive] Konto
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues [!DNL Hive] Konto für die Verbindung zu erstellen [!DNL Platform].
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL Hive] Konto mit [!DNL Platform]zu verknüpfen.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den *[!UICONTROL Quellarbeitsbereich]* zuzugreifen. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create inbound account, and each source shows the number of existing accounts and dataset flows associated to them.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den **[!UICONTROL Quellarbeitsbereich]** zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein Konto erstellen können.
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Hive]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **[!UICONTROL Connect source]**.
+Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Ausblenden]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie &quot; **[!UICONTROL Konfigurieren]**&quot;aus. Andernfalls wählen Sie **[!UICONTROL Hinzufügen Daten]** aus, um einen neuen [!DNL Hive] Connector zu erstellen.
 
 ![Katalog](../../../../images/tutorials/create/hive/catalog.png)
 
-The *[!UICONTROL Connect to Hive]* page appears. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die Seite &quot; **[!UICONTROL Verbindung mit]** dem Hive-System herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
-### New account
+### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im angezeigten Eingabedatum einen Namen, eine optionale Beschreibung und Ihre [!DNL Hive] Anmeldeinformationen für die Verbindung ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis das neue Konto eingerichtet ist.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung und Ihre [!DNL Hive] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
 
 ![connect](../../../../images/tutorials/create/hive/new.png)
 
 ### Vorhandenes Konto
 
-To connect an existing account, select the [!DNL Hive] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Hive] Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** , um fortzufahren.
 
 ![existing](../../../../images/tutorials/create/hive/existing.png)
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Hive] Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in Plattform](../../dataflow/databases.md)zu übertragen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Hive] Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/databases.md)einzubeziehen.
