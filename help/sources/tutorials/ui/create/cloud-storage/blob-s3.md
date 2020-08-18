@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Azure Blob oder Amazon S3 über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3cee9b2515d833a640b091a90cd2152f0c1b1e64
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 9%
+source-wordcount: '117'
+ht-degree: 10%
 
 ---
 
@@ -18,6 +18,6 @@ Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, exte
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen, Daten aus [!DNL Azure Blob] und [!DNL Amazon S3] durch Stapel zu importieren.
 
-Detaillierte Anweisungen zur Verwendung des Azurblauch-Quellsteckers finden Sie in der [[!DNL Azure Blob] Anleitung](./blob.md)zum Quellanschluss.
+Detaillierte Anweisungen zur Verwendung des [!DNL Azure Blob] Quell-Connectors finden Sie im Handbuch zum [[!DNL Azure Blob] Quell-Connector](./blob.md).
 
-Detaillierte Anweisungen zur Verwendung des Amazon S3-Quell-Connectors finden Sie im Handbuch [[!DNL Amazon S3] Quell-Connector](./blob.md).
+Detaillierte Anweisungen zur Verwendung des [!DNL Amazon S3] Quell-Connectors finden Sie im Handbuch zum [[!DNL Amazon S3] Quell-Connector](./blob.md).
