@@ -1,10 +1,11 @@
 ---
+keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Confirmit Digital Feedback-Erweiterung
 seo-title: Confirmit Digital Feedback-Erweiterung
 description: Die Confirmit Digital Feedback-Erweiterung ist ein „Voice of the Customer“-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 84%
