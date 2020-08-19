@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK – Installieren des SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 translation-type: tm+mt
-source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 66%
@@ -14,9 +14,9 @@ ht-degree: 66%
 
 # Installieren des SDK {#installing-the-sdk}
 
-Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK ist [Launch](http://launch.adobe.com/). Search for the `AEP Web SDK` in the extensions catalog, install then configure the extension.
+Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK ist [Launch](http://launch.adobe.com/). Suchen Sie nach dem `AEP Web SDK` im Erweiterungskatalog, installieren Sie die Erweiterung und konfigurieren Sie sie.
 
-Das AEP Web SDK steht Ihnen auch auf einem CDN zur Verfügung. You can reference this file or download it and host it on your own infrastructure. It is available in a minified and non-minified version. The non-minified version is helpful for debugging purposes.
+Das AEP Web SDK steht Ihnen auch auf einem CDN zur Verfügung. Sie können auf diese Datei verweisen oder sie herunterladen und in Ihrer eigenen Infrastruktur hosten. Es ist in einer minimierten und nicht-minimierten Version verfügbar. Die nicht minimierte Version ist hilfreich zum Debugging.
 
 URL-Struktur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR metal.js für die nicht minimierte Version.
 
@@ -54,6 +54,7 @@ Der Basis-Code erstellt eine globale Funktion namens `alloy`. Verwenden Sie dies
 In diesem Beispiel wird die globale Funktion in `mycustomname` anstatt `alloy` umbenannt.
 
 >[!IMPORTANT]
+>
 >Um potenzielle Probleme zu vermeiden, verwenden Sie einen Namen, der mindestens ein Zeichen enthält, das keine Ziffer ist und nicht mit dem Namen einer Eigenschaft in Konflikt steht, die bereits unter `window` gefunden wurde.
 
 Dieser Basis-Code lädt neben der Erstellung einer globalen Funktion auch zusätzlichen Code, der in einer externen Datei \(`alloy.js`\) enthalten ist, die auf einem Server gehostet wird. Standardmäßig wird dieser Code asynchron geladen, damit Ihre Web-Seite so leistungsfähig wie möglich ist. Dies ist die empfohlene Implementierung.
