@@ -1,10 +1,11 @@
 ---
+keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics-Erweiterung
 seo-title: Parse.ly Analytics-Erweiterung
 description: Die Parse.ly Analytics-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: Die Parse.ly Analytics-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 89%
