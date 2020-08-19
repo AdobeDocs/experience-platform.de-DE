@@ -1,10 +1,11 @@
 ---
+keywords: data quality;rtcdp data quality
 title: Datenqualität in der Echtzeit-Kundendatenplattform
 seo-title: Datenqualität in der Echtzeit-Kundendatenplattform von Adobe
 description: Ein Dokument zur Datenqualität in der Echtzeit-Kundendatenplattform
 seo-description: Ein Dokument, das beschreibt, wie Datenqualität bei Batch- und Datenerfassung in der Echtzeit-Kundendatenplattform von Adobe sichergestellt wird
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 67%
