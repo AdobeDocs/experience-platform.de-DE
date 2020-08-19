@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zugriffskontrolle – Übersicht
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 66%
+source-wordcount: '1103'
+ht-degree: 64%
 
 ---
 
@@ -26,7 +26,7 @@ In order to configure access control for [!DNL Experience Platform], you must ha
 
 Ein Workflow auf hoher Ebene zum Abrufen und Zuweisen von Zugriffsberechtigungen kann wie folgt zusammengefasst werden:
 
-- Nach dem Abonnement für Adobe Experience Platform wird eine E-Mail an den Administrator gesendet, der im Registrierungsformular angegeben ist.
+- Nach der Lizenzierung von Adobe Experience Platform oder einem Anwendungs-/App-Dienst, der Experience Platform verwendet, wird eine E-Mail an den Administrator gesendet, der während der Lizenzierung angegeben wurde.
 - Der Administrator meldet sich bei der [Adobe Admin Console](#adobe-admin-console) an und wählt **Adobe Experience Platform** aus der Liste der Produkte auf der Übersichtsseite aus.
 - Der Administrator kann die standardmäßigen [Produktprofile](#product-profiles) anzeigen oder bei Bedarf neue Kundenproduktprofile erstellen.
 - Der Administrator kann die Berechtigungen und Benutzer für alle vorhandenen Profile bearbeiten.
