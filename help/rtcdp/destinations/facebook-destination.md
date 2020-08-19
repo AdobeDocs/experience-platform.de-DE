@@ -1,10 +1,11 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Facebook-Ziel
 seo-title: Facebook-Ziel
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 19%
@@ -64,7 +65,7 @@ Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sic
 
 ### Anforderungen für das E-Mail-Hashing {#email-hashing-requirements}
 
-[!DNL Facebook] verlangt, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher [!DNL Facebook] müssen die aktivierten Audiencen von *Hash* -E-Mail-Adressen abgekoppelt werden. Sie können E-Mail-Adressen vor der Eingabe in die Adobe Experience Platform hash, oder Sie können wählen, ob Sie mit E-Mail-Adressen in klarer Experience Platform arbeiten möchten und ob unser Algorithmus sie bei der Aktivierung hash.
+[!DNL Facebook] verlangt, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher [!DNL Facebook] müssen die aktivierten Audiencen von *Hash* -E-Mail-Adressen abgekoppelt werden. Sie können E-Mail-Adressen vor der Einbindung in Adobe Experience Platform als Hash-E-Mail-Adressen festlegen oder Sie können in Experience Platform mit E-Mail-Adressen arbeiten und sie von unserem Algorithmus auf Aktivierung hash lassen.
 
 Weitere Informationen zum Eingeben von E-Mail-Adressen in der Experience Platform finden Sie in der Übersicht über die [Stapelverarbeitung](/help/ingestion/batch-ingestion/overview.md) und in der Übersicht über die [Erfassung](/help/ingestion/streaming-ingestion/overview.md)des Streamings.
 
