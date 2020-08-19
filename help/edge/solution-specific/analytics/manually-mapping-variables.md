@@ -1,28 +1,28 @@
 ---
 title: Manuelles Zuordnen von Variablen in Analytics
-seo-title: Manuelles Zuordnen von Variablen in Analytics mit Web SDK
+seo-title: Manuelles Zuordnen von Variablen in Analytics zu Web SDK
 description: Manuelles Zuordnen von Variablen zu Analytics mithilfe von Verarbeitungsregeln
-seo-description: Variablen manuell mit Verarbeitungsregeln mit Web SDK Analytics zuordnen
+seo-description: Variablen manuell Analytics zuordnen mithilfe von Verarbeitungsregeln mit Web SDK
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '371'
-ht-degree: 16%
+ht-degree: 47%
 
 ---
 
 
 # Manuelles Zuordnen von Variablen in Analytics
 
-Die Adobe Experience Platform (AEP) [!DNL Web SDK] kann bestimmte Variablen automatisch zuordnen, benutzerdefinierte Variablen müssen jedoch manuell zugeordnet werden.
+Das Adobe Experience Platform (AEP) [!DNL Web SDK] kann bestimmte Variablen automatisch zuordnen, benutzerdefinierte Variablen müssen jedoch manuell zugeordnet werden.
 
-Bei XDM-Daten, denen nicht automatisch zugeordnet wird, können Sie [!DNL Analytics]mithilfe von [Kontextdaten](https://docs.adobe.com/content/help/de-DE/analytics/implementation/vars/page-vars/contextdata.html) eine Übereinstimmung mit Ihrem [Schema](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/schema/composition.html)herstellen. Anschließend kann sie mithilfe von [!DNL Analytics] Verarbeitungsregeln [](https://docs.adobe.com/content/help/de-DE/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) zugeordnet werden, um [!DNL Analytics] Variablen zu füllen.
+For XDM data that is not automatically mapped to [!DNL Analytics], you can use [context data](https://docs.adobe.com/content/help/de-DE/analytics/implementation/vars/page-vars/contextdata.html) to match your [schema](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/schema/composition.html). Anschließend kann sie mithilfe von [!DNL Analytics] Verarbeitungsregeln [](https://docs.adobe.com/content/help/de-DE/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) zugeordnet werden, um [!DNL Analytics] Variablen zu füllen.
 
-Außerdem können Sie einen Standardsatz von Aktionen und Produkteinstellungen verwenden, um Daten mit AEP zu senden oder abzurufen [!DNL Web SDK]. Siehe dazu [Produkte](https://docs.adobe.com/content/help/en/experience-platform/edge/implement/commerce.html).
+Also, you can use a default set of actions and product lists to send or retrieve data with the AEP [!DNL Web SDK]. Weitere Information finden Sie unter [Produkte](https://docs.adobe.com/content/help/de-DE/experience-platform/edge/implement/commerce.html).
 
 ## Kontextdaten
 
-Zur Verwendung [!DNL Analytics]werden XDM-Daten mit Punktnotation reduziert und als `contextData`verfügbar gemacht. Die folgende Liste von Wertpaaren zeigt ein Beispiel `context data`:
+To be used by [!DNL Analytics], XDM data is flattened using dot notation and made available as `contextData`. Die folgende Liste von Wertpaaren zeigt ein Beispiel für `context data`:
 
 ```javascript
 {
@@ -49,7 +49,7 @@ Zur Verwendung [!DNL Analytics]werden XDM-Daten mit Punktnotation reduziert und 
 
 ## Verarbeitungsregeln
 
-All data collected by the edge network can be accessed via [processing rules](https://docs.adobe.com/content/help/de-DE/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). Sie können [!DNL Analytics]außerdem Verarbeitungsregeln verwenden, um Kontextdaten in [!DNL Analytics] Variablen zu integrieren.
+Auf alle vom Edge Network erfassten Daten kann über [Verarbeitungsregeln](https://docs.adobe.com/content/help/de-DE/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) zugegriffen werden. In [!DNL Analytics], you can use processing rules to incorporate context data into [!DNL Analytics] variables.
 
 In der folgenden Regel wird Analytics beispielsweise so eingestellt, dass **interne Suchbegriffe (eVar2)** mit den Daten gefüllt werden, die mit **a.x_atag.search.term(Kontextdaten)** verknüpft sind.
 
@@ -58,12 +58,12 @@ In der folgenden Regel wird Analytics beispielsweise so eingestellt, dass **inte
 
 ## XDM-Schema
 
-[!DNL Experience Platform] verwendet Schema, um die Datenstruktur konsistent und wiederverwendbar zu beschreiben. Durch die systemübergreifende Definition von Daten wird es einfacher, Bedeutung beizubehalten und somit aus Daten Nutzen zu ziehen. [!DNL Analytics] Kontextdaten funktionieren mit der vom Schema definierten Struktur.
+[!DNL Experience Platform]Schemas dienen in zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende Definition von Daten wird es einfacher, Bedeutung beizubehalten und somit aus Daten Nutzen zu ziehen. [!DNL Analytics] Kontextdaten funktionieren mit der vom Schema definierten Struktur.
 
-Das folgende Beispiel zeigt, wie der [`event` Befehl](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) mit der `xdm` Option zum Senden und Abrufen von Daten mit dem AEP verwendet werden kann [!DNL Web SDK]. In diesem Beispiel stimmt der `event` Befehl mit dem [ExperienceEvent-Commerce-Details-Schema](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) überein, sodass productListItems `name` und `SKU` Werte verfolgt werden:
+The following example shows how the [`event` command](https://docs.adobe.com/content/help/de-DE/experience-platform/edge/fundamentals/tracking-events.html) can be used with the `xdm` option to send and retrieve data with the AEP [!DNL Web SDK]. In diesem Beispiel stimmt der `event`-Befehl mit dem [ExperienceEvent Commerce Details Schema](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) überein, sodass die productListItems-Werte `name` und `SKU` verfolgt werden:
 
 
-```
+```javascript
 alloy("event",{
   "xdm":{
     "commerce":{
@@ -85,4 +85,4 @@ alloy("event",{
 });
 ```
 
-Weitere Informationen zur Verfolgung von Ereignissen mit AEP [!DNL Web SDK]finden Sie unter [Tracking-Ereignis](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html).
+For more information on tracking events with the AEP [!DNL Web SDK], see [Tracking events](https://docs.adobe.com/content/help/de-DE/experience-platform/edge/fundamentals/tracking-events.html).
