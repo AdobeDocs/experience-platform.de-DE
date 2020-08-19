@@ -1,10 +1,11 @@
 ---
+keywords: destinations;experience cloud solutions
 title: Adobe-Ziele
 seo-title: Adobe-Ziele
 description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendatenplattform von Adobe mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
 seo-description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendatenplattform von Adobe mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 100%
