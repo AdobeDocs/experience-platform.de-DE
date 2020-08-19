@@ -1,10 +1,11 @@
 ---
+keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics Website Feedback-Erweiterung
 seo-title: Qualtrics Website Feedback-Erweiterung
 description: Die Qualtrics Website Feedback-Erweiterung ist ein Umfragenziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: Die Qualtrics Website Feedback-Erweiterung ist ein Umfragenziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 85%
