@@ -1,10 +1,11 @@
 ---
+keywords: activate destination;activate destinations;activate data
 title: Profile und Segmente für ein Ziel aktivieren
 seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 5387959496da3b1a6323f173154d769090a1fd40
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 28%
@@ -31,8 +32,7 @@ Gilt für: Alle Ziele
 1. Navigieren Sie in der CDP-Benutzeroberfläche &quot;Adobe in Echtzeit&quot;zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]**und wählen Sie das Ziel aus, an dem Sie Ihre Segmente aktivieren möchten.
    ![zum Ziel navigieren](assets/oracle-eloqua-connect.png)
 2. Klicken Sie auf den Namen des Ziels. Dadurch gelangen Sie zum Arbeitsablauf für die Aktivierung.
-   ![activate-flow](assets/activate-flow.png)
-Note that if an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
+   ![activate-flow](assets/activate-flow.png)Beachten Sie, dass Sie die Aktivierungen sehen können, die derzeit für das Ziel aktiviert werden, wenn für ein Ziel bereits ein Arbeitsablauf vorhanden ist. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
 3. Select **[!UICONTROL Activate]**.
 
 <br> 
@@ -59,18 +59,18 @@ Bei *Social-Zielen* können Sie im Schritt zur **[!UICONTROL Identitätszuordnun
 
 *E-Mail-Adresse als primäre Identität*: Wenn Sie die E-Mail-Adresse als primäre Identität in Ihrem Schema verwenden, können Sie den Schritt für die Identitätszuordnung überspringen, wie nachfolgend gezeigt:
 
-![Email address as identity](assets/email-as-identity.gif)
+![E-Mail-Adresse als Identität](assets/email-as-identity.gif)
 
 <br> 
 
 *Eine weitere ID als primäre Identität*: Wenn Sie eine andere ID wie *Belohnungs-ID* oder *Loyalität-ID* als primäre Identität in Ihrem Schema verwenden, müssen Sie die E-Mail-Adresse aus Ihrem Identitäts-Schema manuell als Zielgruppen-ID im Social-Ziel zuordnen, wie nachfolgend gezeigt:
 
-![Loyalty ID as identity](assets/rewardsid-as-identity.gif)
+![Loyalität-ID als Identität](assets/rewardsid-as-identity.gif)
 
 
-Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Select `Email` as target identity if the email addresses you are using are not hashed. Adobe Echtzeit-CDP-Dateien werden die E-Mail-Adressen mit Hashing versehen, um die [!DNL Facebook] Anforderungen zu erfüllen.
+Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Dateneingabe in Adobe Experience Platform per Hash E-Mail- [!DNL Facebook] Hashing an Ihre E-Mail-Adresse gesendet haben [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Adobe Echtzeit-CDP-Dateien werden die E-Mail-Adressen mit Hashing versehen, um die [!DNL Facebook] Anforderungen zu erfüllen.
 
-![identity mapping after filling in fields](assets/identity-mapping.png)
+![Identitätszuordnung nach dem Ausfüllen von Feldern](assets/identity-mapping.png)
 
 <br> 
 
@@ -102,7 +102,7 @@ Wählen Sie Änderungen **[!UICONTROL anwenden]** , um Ihre Auswahl zu bestätig
 
 <br> 
 
-### **[!UICONTROL Segment Schedule]** step {#segment-schedule}
+### **[!UICONTROL Schritt &quot;Segmentplan]** &quot; {#segment-schedule}
 
 Gilt für: Werbeziele, soziale Ziele
 
@@ -118,30 +118,30 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 
 <br> 
 
-### **[!UICONTROL Scheduling]** step {#scheduling}
+### **[!UICONTROL Planungsschritt]** {#scheduling}
 
-Applies to: email marketing destinations and cloud storage destinations
+Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
-![segment schedule step](assets/scheduling-icon.png)
+![Segmentplanschritt](assets/scheduling-icon.png)
 
-On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. These values cannot be edited.
+On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. Diese Werte können nicht bearbeitet werden.
 
 <br> 
 
-### **[!UICONTROL Select attributes]** step {#select-attributes}
+### **[!UICONTROL Schritt &quot;Attribute]** auswählen&quot; {#select-attributes}
 
-Applies to: email marketing destinations and cloud storage destinations
+Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
-![select attributes step](/help/rtcdp/destinations/assets/select-attributes-icon.png)
+![Schritt zum Auswählen von Attributen](/help/rtcdp/destinations/assets/select-attributes-icon.png)
 
 
 On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
 
 >[!NOTE]
 >
-> Adobe Real-time CDP prefills your selection with four recommended, commonly-used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> Adobe Die CDP-Datei in Echtzeit füllt Ihre Auswahl mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-File exports will vary as follows, depending on whether `segmentMembership.status` is selected:
+Die Dateiexporte variieren wie folgt, je nachdem, ob ausgewählt `segmentMembership.status` ist:
 * Wenn das `segmentMembership.status` Feld ausgewählt ist, enthalten exportierte Dateien **aktive** Mitglieder in den ersten vollständigen Schnappschuss sowie **aktive** und **abgelaufene** Mitglieder in nachfolgenden inkrementellen Exporten.
 * Wenn das `segmentMembership.status` Feld nicht ausgewählt ist, enthalten exportierte Dateien nur **aktive** Mitglieder im ersten vollständigen Schnappschuss und in nachfolgenden inkrementellen Exporten.
 
@@ -207,11 +207,11 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004090
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-Das Vorhandensein dieser Dateien an Ihrem Speicherort bestätigt die erfolgreiche Aktivierung. Um zu verstehen, wie die exportierten Dateien strukturiert sind, können Sie eine .csv-Beispieldatei [herunterladen](assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
+Das Vorhandensein dieser Dateien an Ihrem Speicherort bestätigt die erfolgreiche Aktivierung. Um zu verstehen, wie die exportierten Dateien strukturiert sind, können Sie eine .csv-Beispieldatei [herunterladen](assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). Diese Beispieldatei enthält die Profil-Attribute `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`und `personalEmail.address`.
 
 ### Werbeziele
 
-Check your account in the respective advertising destination that you are activating your data to. Wenn die Aktivierung erfolgreich war, werden in Ihrer Werbeplattform Zielgruppen ausgefüllt.
+Überprüfen Sie Ihr Konto im entsprechenden Werbeziel, an dem Sie Ihre Daten aktivieren. Wenn die Aktivierung erfolgreich war, werden in Ihrer Werbeplattform Zielgruppen ausgefüllt.
 
 ### Ziele in sozialen Netzwerken
 
@@ -219,7 +219,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->The integration between Adobe Real-time CDP and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
+>Die Integration zwischen Adobe Real-Time CDP und [!DNL Facebook] unterstützt historische Audiencen-Backfills. Alle historischen Segmentqualifikationen werden an gesendet, [!DNL Facebook] wenn Sie die Segmente an das Ziel aktivieren.
 
 ## Aktivierung deaktivieren {#disable-activation}
 
