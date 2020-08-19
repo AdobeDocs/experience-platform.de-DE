@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über den Datenzugriff
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1332'
 ht-degree: 14%
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 # Abfrage von Datensatzdaten mit [!DNL Data Access] API
 
-Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Zugreifen und Herunterladen von Daten, die in einem Datensatz mit der [!DNL Data Access] API in der Adobe Experience Platform gespeichert sind. Außerdem werden Sie mit einigen der einzigartigen Funktionen der [!DNL Data Access] API, wie z. B. dem Paging und Teildownloads, vorgestellt.
+Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Zugreifen und Herunterladen von Daten, die in einem Datensatz mit der [!DNL Data Access] API in Adobe Experience Platform gespeichert sind. Außerdem werden Sie mit einigen der einzigartigen Funktionen der [!DNL Data Access] API, wie z. B. dem Paging und Teildownloads, vorgestellt.
 
 ## Erste Schritte
 
@@ -365,7 +365,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `{FILE_ID}` | Die Kennung der Datei. |
-| `{FILE_NAME`} | Der Dateiname (z. B. Profils.parquet) |
+| `{FILE_NAME}` | Der Dateiname (z. B. Profils.parquet) |
 
 **Anfrage**
 
@@ -396,7 +396,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `{FILE_ID}` | Die Kennung der Datei. |
-| `{FILE_NAME`} | Der Dateiname (z. B. Profils.parquet). |
+| `{FILE_NAME}` | Der Dateiname (z. B. Profils.parquet). |
 
 **Anfrage**
 
