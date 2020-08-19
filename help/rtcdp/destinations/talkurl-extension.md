@@ -1,10 +1,11 @@
 ---
+keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;Talk URL;Talk url
 title: Talk URL Inbox-Erweiterung
 seo-title: Sprecher-URL-Posteingang
 description: Die Talk URL Inbox Extension ist eine Stimme des Kundenziels in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: Die Talk URL Inbox Extension ist eine Stimme des Kundenziels in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 75%
