@@ -1,10 +1,11 @@
 ---
+keywords: D&B Visitor Intelligence;D&B;visitor intelligence extension
 title: D&B Visitor Intelligence-Erweiterung
 seo-title: D&B Visitor Intelligence-Erweiterung
 description: Die D&B Visitor Intelligence-Erweiterung ist ein in der Adobe Echtzeit-Kundendatenplattform verfügbares Personalisierungsziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: Die D&B Visitor Intelligence-Erweiterung ist ein in der Adobe Echtzeit-Kundendatenplattform verfügbares Personalisierungsziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 89%
