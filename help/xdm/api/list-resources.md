@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Auflisten von Ressourcen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 30%
@@ -31,7 +31,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | Der Container, in dem sich die Ressourcen befinden („global“oder „tenant“). |
 | `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Valid types are `classes`, `mixins`, `schemas`, `datatypes`, and `descriptors`. |
-| `{QUERY_PARAMS`} | Optionale Abfrage-Parameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu den Parametern für die [Abfrage](#query) . |
+| `{QUERY_PARAMS}` | Optionale Abfrage-Parameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu den Parametern für die [Abfrage](#query) . |
 
 **Anfrage**
 
