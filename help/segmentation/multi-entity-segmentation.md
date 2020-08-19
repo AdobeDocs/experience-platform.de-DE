@@ -5,7 +5,7 @@ title: Segmentierung mit mehreren Entitäten
 topic: overview
 description: Bei der Segmentierung mit mehreren Entitäten können Sie Profildaten um zusätzliche Daten erweitern, die auf Produkten, Geschäften oder anderen nicht-profilbasierten Klassen beruhen. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 39%
@@ -17,7 +17,7 @@ ht-degree: 39%
 
 Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema.
 
-Um mehr über die Segmentierung mehrerer Entitäten zu erfahren, lesen Sie bitte weiterhin die Dokumentation und ergänzen Sie Ihre Lernerfahrung, indem Sie sich das unten stehende Video ansehen oder die Übersicht über die [Segmentierung](./home.md)erkunden.]
+Um mehr über die Segmentierung mehrerer Entitäten zu erfahren, lesen Sie bitte weiterhin die Dokumentation und ergänzen Sie Ihre Lernerfahrung, indem Sie sich das unten stehende Video ansehen oder die Übersicht über die [Segmentierung](./home.md)erkunden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
