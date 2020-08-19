@@ -1,10 +1,11 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (Beta) Azurblauer Ereignis Hubs-Ziel
 seo-title: (Beta) Azurblauer Ereignis Hubs-Ziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -22,7 +23,7 @@ ht-degree: 7%
 
 [!DNL Azure Event Hubs] ist eine große Datenstreaming-Plattform und ein Ereignis-Erfassungsdienst. Es kann Millionen von Ereignissen pro Sekunde empfangen und verarbeiten. Daten, die an einen Ereignis-Hub gesendet werden, können mithilfe eines beliebigen Echtzeitanalyseanbieters oder von Batch-/Datenspeicherung-Adaptern transformiert und gespeichert werden.
 
-Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs] Datenspeicherung erstellen, um Daten aus der Adobe Experience Platform zu streamen.
+Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs] Datenspeicherung erstellen, um Daten von Adobe Experience Platform zu streamen.
 
 * For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Informationen zum Herstellen einer Verbindung mit [!DNL Azure Event Hubs] API-Aufrufen finden Sie im [Streaming-Ziel-API-Lernprogramm](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
