@@ -4,7 +4,7 @@ seo-title: Unterstützen von Produkten mit Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
 seo-description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 100%
@@ -28,7 +28,6 @@ Dieses Dokument verwendet das Mixin [ExperienceEvent Commerce Details](https://g
 Nachstehend finden Sie eine Liste der Maßnahmen (`measures`), die im `commerce`-Objekt verfügbar sind.
 
 >[!Tip]
->
 >
 >Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. In den meisten Fällen verwenden Sie nur das `value`-Feld (z. B. `'value':1`). Mit dem `id`-Feld können Sie eine eindeutige Kennung festlegen, mit der Sie verfolgen können, wann die Maßnahme gesendet wurde. Siehe XDM-Dokumentation für [Maßnahme](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
