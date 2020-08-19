@@ -1,10 +1,11 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis-Ziel
 seo-title: Amazon Kinesis-Ziel
-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten aus der Adobe Experience Platform zu streamen.
-seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten aus der Adobe Experience Platform zu streamen.
+description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
+seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 7%
@@ -23,7 +24,7 @@ ht-degree: 7%
 
 Der [!DNL Kinesis Data Streams] Service von [!DNL Amazon Web Services] ermöglicht Ihnen, große Datenströme in Echtzeit zu erfassen und zu verarbeiten.
 
-Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Amazon Kinesis] Datenspeicherung erstellen, um Daten aus der Adobe Experience Platform zu streamen.
+Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Amazon Kinesis] Datenspeicherung erstellen, um Daten von Adobe Experience Platform zu streamen.
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Informationen zum Herstellen einer Verbindung mit [!DNL Amazon Kinesis] API-Aufrufen finden Sie im [Streaming-Ziel-API-Lernprogramm](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
@@ -46,7 +47,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### Im Authentifizierungsschritt {#authentication-step}
 
-* **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel **: Generieren Sie in[!DNL Amazon Web Services]diesem Fall einen Zugriffsschlüssel - das Schlüsselpaar für den geheimen Zugriff, um der Adobe Zugriff auf Ihr[!DNL Amazon Kinesis]Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu[Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel**: Generieren Sie in [!DNL Amazon Web Services]diesem Fall einen Zugriffsschlüssel - das Schlüsselpaar für den geheimen Zugriff, um der Adobe Zugriff auf Ihr [!DNL Amazon Kinesis] Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu [Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **Region**: Geben Sie an, zu welcher [!DNL Amazon Web Services] Region Daten gestreamt werden sollen.
 
 ![Eingabefelder im Kontoschritt](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
