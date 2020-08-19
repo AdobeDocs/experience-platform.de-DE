@@ -1,10 +1,11 @@
 ---
+keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
 title: Workflow für Ziele in sozialen Netzwerken
 seo-title: Workflow für Ziele in sozialen Netzwerken
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Anzeigenkonten für soziale Netzwerke
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Anzeigenkonten für soziale Netzwerke
 translation-type: tm+mt
-source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 58%
