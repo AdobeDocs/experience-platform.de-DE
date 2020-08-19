@@ -4,7 +4,7 @@ seo-title: Edge-Konfiguration für das Web SDK der Experience Platform
 description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 seo-description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Konfigurieren der Kante
 
-Die Konfiguration für die Adobe Experience Platform [!DNL Web SDK] wird auf zwei Stellen aufgeteilt. Der [Befehl](configuring-the-sdk.md) &quot;configure&quot;im SDK steuert Dinge, die auf dem Client verarbeitet werden müssen, z. B. die `edgeDomain`. Die Edge-Konfiguration verarbeitet alle anderen Konfigurationen für das SDK. Wenn eine Anforderung an die Adobe Experience Platform gesendet wird [!DNL Edge Network], `edgeConfigId` wird die serverseitige Konfiguration referenziert. Dadurch können Sie die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
+Die Konfiguration für das Adobe Experience Platform [!DNL Web SDK] ist an zwei Stellen aufgeteilt. Der [Befehl](configuring-the-sdk.md) &quot;configure&quot;im SDK steuert Dinge, die auf dem Client verarbeitet werden müssen, z. B. die `edgeDomain`. Die Edge-Konfiguration verarbeitet alle anderen Konfigurationen für das SDK. Wenn eine Anforderung an das Adobe Experience Platform gesendet wird [!DNL Edge Network], `edgeConfigId` wird die serverseitige Konfiguration referenziert. Dadurch können Sie die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
 
 ## Erstellen einer Edge-Konfigurations-ID
 
@@ -23,8 +23,6 @@ Edge-Konfigurations-IDs können in Adobe [!DNL Launch] mit dem Edge-Konfiguratio
 ![Edge-Konfigurationstool](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
->
->
 >
 >Das Edge-Konfigurationstool steht Kunden auf der Zulassungsliste unabhängig davon zur Verfügung, ob sie [!DNL Launch] als Tag-Manager arbeiten. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der [!DNL Launch] Dokumentation.
 
@@ -56,17 +54,17 @@ ID-Synchronisierungen können in Container gruppiert werden, damit verschiedene 
 
 #### Adobe Experience Platform
 
-Mit den hier aufgeführten Einstellungen können Sie Daten an die Adobe Experience Platform senden. Sie sollten diesen Abschnitt nur aktivieren, wenn Sie die Adobe Experience Platform erworben haben.
+Mit den hier aufgeführten Einstellungen können Sie Daten an das Adobe Experience Platform senden. Sie sollten diesen Abschnitt nur aktivieren, wenn Sie das Adobe Experience Platform erworben haben.
 
-![Einstellungsblock für Adobe Experience Platformen](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform-Einstellungsblock](../../assets/edge_configuration_aep.png)
 
 ##### [!UICONTROL Sandbox]
 
-Sandboxes sind Orte in der Adobe Experience Platform, an denen Kunden ihre Daten und Implementierungen voneinander isolieren können. Weitere Informationen zur Funktionsweise finden Sie in der [Sandbox-Dokumentation](../../sandboxes/home.md).
+Sandboxen sind Standorte in der Adobe Experience Platform, an denen Kunden ihre Daten und Implementierungen voneinander isolieren können. Weitere Informationen zur Funktionsweise finden Sie in der [Sandbox-Dokumentation](../../sandboxes/home.md).
 
 ##### [!UICONTROL Streaming-Inlet]
 
-Ein Streaming-Einlass ist eine HTTP-Quelle in der Adobe Experience Platform. Diese werden auf der Registerkarte &quot; [!UICONTROL Quellen] &quot;in der Adobe Experience Platform als HTTP-API erstellt.
+Ein Streaming-Einlass ist eine HTTP-Quelle im Adobe Experience Platform. Diese werden auf der Registerkarte &quot; [!UICONTROL Quellen] &quot;im Adobe Experience Platform als HTTP-API erstellt.
 
 ##### [!UICONTROL Ereignis DataSet]
 
@@ -80,8 +78,6 @@ Zum Konfigurieren von Adobe Target müssen Sie einen Clientcode angeben. Die and
 
 >[!NOTE]
 >
->
->
 >Die mit dem Clientcode verknüpfte Organisation muss mit der Organisation übereinstimmen, in der die Konfigurations-ID erstellt wird.
 
 ##### [!UICONTROL Clientcode]
@@ -92,11 +88,11 @@ Die eindeutige ID für ein Zielgruppen-Konto. Um dies zu finden, navigieren Sie 
 
 [!DNL Target] ermöglicht es Kunden, Berechtigungen über die Verwendung von Eigenschaften zu steuern. Details finden Sie im Abschnitt [Enterprise Permissions](https://docs.adobe.com/content/help/de-DE/target/using/administer/manage-users/enterprise/properties-overview.html) in der [!DNL Target] Dokumentation.
 
-Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL Setup] > [!UICONTROL Eigenschaften]
+Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
 ##### [!UICONTROL Zielgruppe-Umgebung-ID]
 
-[Umgebung](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target helfen Ihnen, Ihre Implementierung in allen Entwicklungsstadien zu verwalten. Diese Einstellung gibt an, welche Umgebung Sie für jede Umgebung verwenden möchten.
+[Umgebung](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target unterstützen Sie bei der Verwaltung Ihrer Implementierung in allen Entwicklungsstadien. Diese Einstellung gibt an, welche Umgebung Sie für jede Umgebung verwenden möchten.
 
 Adobe empfiehlt, diese Einstellung für jede Ihrer `dev`-, `stage`- und `prod` Edge-Umgebung anders festzulegen, um die Arbeit zu vereinfachen. Wenn Sie jedoch bereits [!UICONTROL Adobe Target-Umgebung] definiert haben, können Sie diese verwenden.
 
@@ -116,7 +112,7 @@ Ermöglicht dem SDK die Freigabe von Segmentinformationen über [URL-Ziele](http
 
 #### Adobe Analytics
 
-Steuert, ob Daten an Adobe Analytics gesendet werden. Weitere Informationen finden Sie unter [Analytics-Übersicht](../solution-specific/analytics/analytics-overview.md).
+Steuert, ob Daten an Adobe Analytics gesendet werden. Weitere Details finden Sie in der [Analytics-Übersicht](../solution-specific/analytics/analytics-overview.md).
 
 ![Adobe Analytics-Einstellungsblock](../../assets/edge_configuration_aa.png)
 
