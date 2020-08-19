@@ -1,9 +1,10 @@
 ---
+keywords: connect destination;destination connect;how to connect destination
 title: Verbindung zu einem Ziel in der Adobe Echtzeit-Kundendatenplattform
 seo-title: Verbindung zu einem Ziel in der Adobe Echtzeit-Kundendatenplattform
 description: In diesem Tutorial lernen Sie die Schritte zum Verbinden eines Ziels in der Adobe Echtzeit-Kundendatenplattform kennen.
 translation-type: tm+mt
-source-git-commit: b070a8a6eee1c1b95b20468c7067181ec62bdbd0
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 76%
