@@ -1,12 +1,13 @@
 ---
-title: Profilansicht
+keywords: view profiles rtcdp;rtcdp profile view;rtcdp profiles
+title: Anzeigen von Profilen in der Echtzeit-Kundendatenplattform
 seo-title: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 seo-description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '171'
 ht-degree: 60%
 
 ---
