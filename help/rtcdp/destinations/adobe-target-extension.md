@@ -1,10 +1,11 @@
 ---
+keywords: target extension;target
 title: Adobe Target-Erweiterung
 seo-title: Adobe Target-Erweiterung
 description: Die Adobe Target -Erweiterung ist ein Personalisierungsziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 52%
