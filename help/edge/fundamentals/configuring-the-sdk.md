@@ -3,8 +3,9 @@ title: Konfigurieren des SDK
 seo-title: Konfigurieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
+keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: b7b206573a130af70a82c73a3f9b0a0eb28a513a
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -118,7 +119,7 @@ Legt die Standardzustimmung des Nutzers fest. Wird verwendet, wenn für den Nutz
 | -------- | ------------ | ----------------- |
 | Zeichenfolge | Nein | Keine |
 
-Wird verwendet, um eine CSS-Stildefinition zu erstellen, die Inhaltsbereiche Ihrer Web-Seite ausblendet, während personalisierter Inhalt vom Server geladen wird. If this option is not provided, the SDK does not attempt to hide any content areas while personalized content is loaded, potentially resulting in &quot;flicker&quot;.
+Wird verwendet, um eine CSS-Stildefinition zu erstellen, die Inhaltsbereiche Ihrer Web-Seite ausblendet, während personalisierter Inhalt vom Server geladen wird. Wenn diese Option nicht bereitgestellt wird, versucht das SDK nicht, Inhaltsbereiche auszublenden, während personalisierte Inhalte geladen werden, was möglicherweise zu einem Flackern führt.
 
 Wenn Sie z. B. ein Element auf Ihrer Web-Seite mit einer Kennung von `container` haben, dessen Standardinhalt Sie ausblenden möchten, während personalisierter Inhalt vom Server geladen wird, wäre ein Beispiel für einen Vorabausblendungsstil wie folgt:
 
