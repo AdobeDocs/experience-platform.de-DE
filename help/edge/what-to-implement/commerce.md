@@ -3,10 +3,11 @@ title: Produkte
 seo-title: Unterstützen von Produkten mit Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
 seo-description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
+keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1312'
 ht-degree: 100%
 
 ---
@@ -18,8 +19,7 @@ Wenn Sie Produkte auf Ihrer Site haben, ist dies ein Standardsatz, den Sie mögl
 
 Dieses Dokument verwendet das Mixin [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md). Das `commerce`-Mixin wird in zwei Teile aufgeteilt: das `commerce`-Objekt und das `productListItems`-Array. Mit dem `commerce`-Objekt können Sie angeben, welche Aktionen auf das `productListItems`-Array angewendet werden.
 
->[!Tip]
->
+>[!TIP]
 >
 >Wenn Sie mit Adobe Analytics vertraut sind, ist `commerce` am ehesten mit der `events`-Variablen vergleichbar. `productListItems` ist eher mit der `products`-Variablen vergleichbar.
 
@@ -27,7 +27,7 @@ Dieses Dokument verwendet das Mixin [ExperienceEvent Commerce Details](https://g
 
 Nachstehend finden Sie eine Liste der Maßnahmen (`measures`), die im `commerce`-Objekt verfügbar sind.
 
->[!Tip]
+>[!TIP]
 >
 >Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. In den meisten Fällen verwenden Sie nur das `value`-Feld (z. B. `'value':1`). Mit dem `id`-Feld können Sie eine eindeutige Kennung festlegen, mit der Sie verfolgen können, wann die Maßnahme gesendet wurde. Siehe XDM-Dokumentation für [Maßnahme](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
