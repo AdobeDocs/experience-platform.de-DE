@@ -1,10 +1,11 @@
 ---
-title: 'Adobe Target und Adobe Experience Platform Web SDK. '
+title: 'Adobe Target und das Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK und Verwendung von Adobe Target
-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target rendern
-seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target rendern
+description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
+seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 5%
@@ -14,23 +15,23 @@ ht-degree: 5%
 
 # [!DNL Target] Übersicht
 
-Die Adobe Experience Platform [!DNL Web SDK] kann personalisierte Erlebnisse bereitstellen und rendern, die in Adobe Target für den Web-Kanal verwaltet werden. Sie können einen WYSIWYG-Editor, den so genannten [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), oder eine nicht visuelle Schnittstelle, den [Form-Based Experience Composer](https://docs.adobe.com/content/help/de-DE/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
+Die Adobe Experience Platform [!DNL Web SDK] kann personalisierte Erlebnisse, die in Adobe Target verwaltet werden, an den Web-Kanal bereitstellen und rendern. Sie können einen WYSIWYG-Editor, den so genannten [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), oder eine nicht visuelle Schnittstelle, den [Form-Based Experience Composer](https://docs.adobe.com/content/help/de-DE/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
 
-## Adobe Target aktivieren
+## Aktivieren von Adobe Target
 
 Zur Aktivierung [!DNL Target]müssen Sie folgende Schritte ausführen:
 
 1. Aktivieren Sie die Aktivität.id- und Experience.id-Antwort-Token in der [!DNL Target] Benutzeroberfläche.
 
-![Zielgruppe_Antwort_Token](../../solution-specific/target/assets/target_response_token.png)
+![zielgruppe_Antwort_Token](../../solution-specific/target/assets/target_response_token.png)
 
 1. Aktivieren Sie die Zielgruppe in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) mit dem entsprechenden Clientcode.
-1. Hinzufügen Sie die `renderDecisions` Option auf Ihre Ereignis.
+1. hinzufügen Sie die `renderDecisions` Option auf Ihre Ereignis.
 
 Dann können Sie optional auch:
 
-* Hinzufügen Sie `decisionScopes` Ihre Ereignis an, um bestimmte Aktivitäten abzurufen (nützlich für Aktivitäten, die mit dem formularbasierten Composer erstellt wurden).
-* Hinzufügen Sie das [Ausblendungsfragment](../../solution-specific/target/flicker-management.md) , um nur bestimmte Teile der Seite auszublenden.
+* hinzufügen Sie `decisionScopes` Ihre Ereignis an, um bestimmte Aktivitäten abzurufen (nützlich für Aktivitäten, die mit dem formularbasierten Composer erstellt wurden).
+* hinzufügen Sie das [Ausblendungsfragment](../../solution-specific/target/flicker-management.md) , um nur bestimmte Teile der Seite auszublenden.
 
 ## Verwenden des Adobe Target VEC
 
@@ -38,7 +39,7 @@ Mit dem SDK können Sie VEC normalerweise mit einer Ausnahme verwenden: Sie ben�
 
 ## VEC-Aktivitäten automatisch rendern
 
-Das AEP Web SDK ist befugt, Ihre Erlebnisse, die über den VEC von Adobe Target im Web definiert werden, automatisch für Ihre Benutzer darzustellen. Um dem AEP Web SDK anzuzeigen, dass VEC-Aktivitäten automatisch gerendert werden sollen, senden Sie ein Ereignis mit `renderDecisions = true`:
+Das AEP Web SDK ist befugt, Ihre Erlebnisse automatisch zu rendern, die über Adobe Target’s VEC im Web für Ihre Benutzer definiert werden. Um dem AEP Web SDK anzuzeigen, dass VEC-Aktivitäten automatisch gerendert werden sollen, senden Sie ein Ereignis mit `renderDecisions = true`:
 
 ```javascript
 alloy
@@ -86,7 +87,7 @@ alloy
 
 `decisionScopes` definiert Abschnitte, Orte oder Teile Ihrer Seiten, in denen Sie ein personalisiertes Erlebnis darstellen möchten. Diese `decisionScopes` sind benutzerdefiniert und anpassbar. Für aktuelle [!DNL Target] Kunden `decisionScopes` werden auch &quot;mboxes&quot;genannt. In der [!DNL Target] Benutzeroberfläche wird `decisionScopes` &quot;Speicherorte&quot;angezeigt.
 
-## __Ansicht__ - Anwendungsbereich
+## __ansicht__ - Anwendungsbereich
 
 AEP [!DNL Web SDK] bietet eine Funktion, mit der Sie VEC-Aktionen abrufen können, ohne sich auf AEP verlassen zu müssen, um die VEC-Aktionen für Sie [!DNL Web SDK] zu rendern. Senden Sie ein Ereignis mit der `__view__` Definition als `decisionScopes`.
 
