@@ -3,8 +3,9 @@ title: Interagieren mit mehreren Eigenschaften
 seo-title: Adobe Experience Platform Web SDK – Interagieren mit mehreren Eigenschaften
 description: Erfahren Sie, wie Sie mit mehreren Experience Platform Web SDK-Eigenschaften interagieren
 seo-description: Erfahren Sie, wie Sie mit mehreren Experience Platform Web SDK-Eigenschaften interagieren
+keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 87%
