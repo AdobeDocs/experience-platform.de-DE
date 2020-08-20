@@ -3,8 +3,9 @@ title: Ausführen von Befehlen
 seo-title: Ausführen von Adobe Experience Platform Web SDK-Befehlen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 79%
@@ -64,9 +65,9 @@ alloy("commandName", options)
   })
 ```
 
-### Response objects
+### Antwortobjekte
 
-All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user&#39;s consent. For example, library info is passed as a property of the results object in the following command.
+Alle von Befehlen zurückgegebenen Versprechungen werden mit einem `result` Objekt gelöst. Das Ergebnisobjekt enthält Daten, die vom Befehl und der Zustimmung des Benutzers abhängen. Bibliotheksinformationen werden beispielsweise im folgenden Befehl als Eigenschaft des results-Objekts übergeben.
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -74,6 +75,6 @@ alloy("getLibraryInfo").then(function(result) {
 });
 ```
 
-### Consent
+### Zustimmung
 
-If a user has not given their consent for a particular purpose, the promise will still be resolved; however, the response object will only contain the information that can be provided in the context of what the user has consented to.
+Hat ein Benutzer für einen bestimmten Zweck seine Einwilligung nicht erteilt, so wird die Zusage weiterhin gelöst; Das Antwortobjekt enthält jedoch nur die Informationen, die im Zusammenhang mit der Zustimmung des Benutzers bereitgestellt werden können.
