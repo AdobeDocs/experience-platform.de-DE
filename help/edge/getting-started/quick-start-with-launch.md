@@ -3,8 +3,9 @@ title: Schnellstart mit Launch
 seo-title: Adobe Experience Platform Web SDK – Schnellstart mit Launch
 description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
 seo-description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
+keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 28%
@@ -14,7 +15,7 @@ ht-degree: 28%
 
 # Willkommen
 
-Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Web SDK für Adobe Experience Platformen in Launch einzurichten. Um diese Funktion nutzen zu können, müssen Sie in der Positivliste eingetragen sein. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
+Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Adobe Experience Platform Web SDK in Launch einzurichten. Um diese Funktion nutzen zu können, müssen Sie in der Positivliste eingetragen sein. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
 
 - Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über eine CNAME für Analytics verfügen, sollten Sie diese verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen.
 - Berechtigung für Adobe Experience Platform. Wenn Sie Platform nicht erworben haben, stellt Ihnen die Adobe die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK kostenlos zur Verfügung.
@@ -25,7 +26,7 @@ Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Web SDK 
 Das Experience Platform Edge Network nimmt Daten als XDM. XDM ist ein Datenformat, mit dem Sie Schema definieren können. Das Schema definiert, wie das Edge-Netzwerk erwartet, dass die Daten formatiert werden. Um Daten zu senden, müssen Sie Ihr Schema definieren.
 
 1. [Erstellen eines Schemas](../../xdm/tutorials/create-schema-ui.md)
-2. Hinzufügen Sie das AEP [!DNL Web SDK ExperienceEvent] Mixin mit dem von Ihnen erstellten Schema.
+2. hinzufügen Sie das AEP [!DNL Web SDK ExperienceEvent] Mixin mit dem von Ihnen erstellten Schema.
 3. Erstellen Sie einen Datensatz aus dem erstellten Schema.
 
 Das folgende Video soll Sie beim Erstellen eines Schema-, Datasets- und Streaming-Quell-Connectors für Ihre [!DNL Web SDK] Daten unterstützen.
@@ -54,7 +55,7 @@ Erstellen Sie in Launch ein Datenelement, das auf das Schema verweist, indem Sie
 
 ## Ereignis senden
 
-After the extension is installed, start sending events by adding a `sendEvent` action from the AEP Web SDK extension to a rule. Hinzufügen Sie das soeben erstellte Datenelement als XDM-Daten an das Ereignis. Adobe empfiehlt, dass Sie jedes Mal, wenn eine Seite geladen wird, mindestens ein Ereignis senden.
+After the extension is installed, start sending events by adding a `sendEvent` action from the AEP Web SDK extension to a rule. hinzufügen Sie das soeben erstellte Datenelement als XDM-Daten an das Ereignis. Adobe empfiehlt, dass Sie jedes Mal, wenn eine Seite geladen wird, mindestens ein Ereignis senden.
 
 Weitere Informationen zur Verfolgung von Ereignissen finden Sie unter [Verfolgen von Ereignissen](../fundamentals/tracking-events.md).
 
