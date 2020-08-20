@@ -3,8 +3,9 @@ title: In Analytics automatisch zugeordnete Variablen
 seo-title: Variablen, die in Analytics automatisch mit dem Adobe Experience Platform Web SDK zugeordnet werden
 description: Erfahren Sie, welche Variablen in Analytics mit dem Experience Platform Web SDK automatisch zugeordnet werden
 seo-description: Erfahren Sie, welche Variablen in Analytics mit dem Experience Platform Web SDK automatisch zugeordnet werden
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 55%
