@@ -3,8 +3,9 @@ title: Abrufen von Bibliotheksinformationen
 seo-title: Abrufen von Bibliotheksinformationen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Informationen über die auf der Website geladene Bibliothek abrufen können
 seo-description: Erfahren Sie, wie Sie Informationen zur Bibliothek abrufen, die in die Website geladen wird, die vom Adobe Experience Cloud SDK automatisch erfasst werden
+keywords: library; library information;getLibraryInfo;libraryInfo;
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 100%
