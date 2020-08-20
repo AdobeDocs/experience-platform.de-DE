@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Batch-Erfassung in Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 91%
+source-wordcount: '1389'
+ht-degree: 88%
 
 ---
 
@@ -56,6 +56,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
                 "format": "json"
            }
     }'
+```
+
+### Warum werden die hochgeladenen Daten nicht im Datensatz angezeigt?
+
+Damit Daten im Datensatz angezeigt werden, muss der Stapel als abgeschlossen markiert werden. Alle Dateien, die Sie erfassen möchten, müssen hochgeladen werden, bevor der Stapel als abgeschlossen markiert werden kann. Ein Beispiel für die Kennzeichnung eines Stapels als abgeschlossen ist unten aufgeführt:
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### Wie wird mehrzeilige JSON erfasst?
