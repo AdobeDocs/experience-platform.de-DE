@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Entwicklerhandbuch zur Batch-Erfassung von Adobe Experience Platform
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 94%
+source-wordcount: '2670'
+ht-degree: 89%
 
 ---
 
@@ -27,8 +27,8 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [Batch-Erfassung](./overview.md): Erlaubt Ihnen das Erfassen von Daten in Adobe Experience Platform in Form von Batch-Dateien.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [[!DNL Experience Data Model] (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -38,22 +38,19 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Anfragen, die eine Payload enthalten (POST, PUT, PATCH), erfordern möglicherweise eine zusätzliche `Content-Type`-Kopfzeile. Die für einzelne Aufrufe zulässigen Werte werden in den Aufrufparametern angegeben. In diesem Handbuch werden die folgenden Content-Typen verwendet:
-
-- Content-Type: application/json
-- Content-Type: application/octet-stream
+Anfragen, die eine Payload enthalten (POST, PUT, PATCH), erfordern möglicherweise eine zusätzliche `Content-Type`-Kopfzeile. Die für einzelne Aufrufe zulässigen Werte werden in den Aufrufparametern angegeben.
 
 ## Typen
 
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
 
 **Anfrage**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
 
 **Antwort**
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
 
 **Anfrage**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
 
 **Antwort**
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
 
 **Anfrage**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In Ganzzahlen: Anfang und Ende des angeforderten Bereichs. |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
 
 
 **Antwort**
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
 
 **Anfrage**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
 
 
 **Antwort**
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
 
 **Anfrage**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
 
 **Antwort**
 
