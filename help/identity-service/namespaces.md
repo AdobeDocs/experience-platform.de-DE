@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name<span>@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 73%
@@ -49,7 +49,7 @@ The following identity types are available within [!DNL Platform]:
 | Nichtpersonen | Dient zum Speichern von Kennungen, die Namespaces benötigen, aber nicht an einen Personen-Cluster gebunden sind. Diese Kennungen werden dann aus dem Identitätsdiagramm herausgefiltert. Mögliche Anwendungsfälle sind Daten zu Produkten, Organisationen, Geschäften usw. (Zum Beispiel eine Produkt-SKU.) |
 | Telefon | Identitäten dieser Art umfassen PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
-### Standard-Namespaces
+### Standard-Namespaces {#standard}
 
 Adobe Experience Platform bietet verschiedene Identitäts-Namespaces, die für alle Organisationen verfügbar sind. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
