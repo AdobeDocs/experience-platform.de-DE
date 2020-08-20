@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Richtlinien zusammenführen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
 workflow-type: tm+mt
-source-wordcount: '2035'
-ht-degree: 85%
+source-wordcount: '2381'
+ht-degree: 67%
 
 ---
 
@@ -56,7 +56,7 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 | `name` | Anzeigename, anhand dessen die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
 | `imsOrgId` | Organisationskennung, zu der diese Zusammenführungsrichtlinie gehört |
 | `identityGraph` | [Identitätsdiagramm](#identity-graph)-Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profilfragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
-| `attributeMerge` | [Attributzusammenführungs](#attribute-merge)-Objekt, das angibt, wie die Zusammenführungsrichtlinie Profilattributwerte bei Datenkonflikten priorisiert. |
+| `attributeMerge` | [Attributzusammenführungs](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie bei Datenkonflikten Profil-Attributen priorisiert. |
 | `schema` | Das [Schema](#schema)-Objekt, für das die Zusammenführungsrichtlinie verwendet werden kann. |
 | `default` | Boolescher Wert, der angibt, ob diese Zusammenführungsrichtlinie für das angegebene Schema standardmäßig verwendet wird. |
 | `version` | [!DNL Platform]Von gepflegte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Zusammenführungsrichtlinie inkrementiert. |
@@ -86,7 +86,7 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 
 ### Identitätsdiagramm {#identity-graph}
 
-[Der Identitätsdienst](../../identity-service/home.md) für Adobe Experience Platformen verwaltet die weltweit verwendeten Identitätsdiagramme und für jedes Unternehmen auf [!DNL Experience Platform]. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
+[Der Adobe Experience Platform Identity Service](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jedes Unternehmen verwendet werden [!DNL Experience Platform]. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
 
 **identityGraph-Objekt**
 
@@ -111,7 +111,7 @@ Wobei `{IDENTITY_GRAPH_TYPE}` einer der folgenden Werte ist:
 
 ### Attributzusammenführung {#attribute-merge}
 
-Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der Liste an Identitäten, die für einen bestimmten Anwender vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp mehr als eine Identität ergibt, kann es sein, dass Werte für Profileigenschaften miteinander in Konflikt stehen und die Priorität angegeben werden muss. Mithilfe von `attributeMerge` können Sie festlegen, welche Datensatzprofilwerte bei einem Zusammenführungskonflikt priorisiert werden sollen.
+Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der Liste an Identitäten, die für einen bestimmten Anwender vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit kollidierender Profil-Attribute, und die Priorität muss angegeben werden. Mithilfe `attributeMerge`dieser Option können Sie angeben, welche Profil-Attribute im Ereignis eines Zusammenführungskonflikts zwischen Schlüsselwertdatasets (Datensatzdaten) priorisiert werden sollen.
 
 **attributeMerge-Objekt**
 
@@ -123,11 +123,11 @@ Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der List
 
 Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
-* **„timestampOrdered“**: (Standard) Räumt dem zuletzt aktualisierten Profil im Konfliktfall Priorität ein. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich.
-* **„dataSetPrecedence“**: Räumt Profilfragmenten je nach dem Datensatz, aus dem sie stammen, Priorität ein. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
-   * **„order“**: Wenn „dataSetPrecedence“ verwendet wird, muss ein `order`-Array mit einer Liste von Datensätzen angegeben werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
+* **`timestampOrdered`**: (Standard) Geben Sie dem zuletzt aktualisierten Profil im Konfliktfall Priorität. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich. `timestampOrdered` unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Profil-Fragmenten innerhalb von oder über Datensätze Vorrang haben. Weitere Informationen finden Sie im Abschnitt &quot;Anhang&quot;zur [Verwendung benutzerdefinierter Zeitstempel](#custom-timestamps).
+* **`dataSetPrecedence`** : Weisen Sie Fragmenten des Profils Priorität auf der Grundlage des Datensatzes zu, aus dem sie stammen. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
+   * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, muss ein `order` Array mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
-**Beispiel für ein attributeMerge-Objekt mit dataSetPrecedence-Typ**
+**Beispiel für ein attributeMerge-Objekt mit`dataSetPrecedence`Typ**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
     }
 ```
 
-**Beispiel für ein attributeMerge-Objekt mit timestampOrdered-Typ**
+**Beispiel für ein attributeMerge-Objekt mit`timestampOrdered`Typ**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
 ### Schema {#schema}
 
-Das Schemaobjekt gibt das XDM-Schema an, für das diese Zusammenführungsrichtlinie erstellt wird.
+Das Schema-Objekt gibt das Experience Data Model (XDM)-Schema an, für das diese Zusammenführungsrichtlinie erstellt wird.
 
-**`schema`-Objekt **
+**`schema`-Objekt**
 
 ```json
     "schema": {
@@ -170,6 +170,8 @@ Wobei der Wert `name` der Name der XDM-Klasse ist, auf der das der Zusammenführ
         "name": "_xdm.context.profile"
     }
 ```
+
+Um mehr über XDM zu erfahren und mit Schemas in der Experience Platform zu arbeiten, lesen Sie zunächst die [XDM-Systemübersicht](../../xdm/home.md).
 
 ## Zusammenführungsrichtlinien aufrufen {#access-merge-policies}
 
@@ -725,6 +727,41 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 ## Nächste Schritte
 
 Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+
+## Anhang
+
+### Verwenden benutzerdefinierter Zeitstempel {#custom-timestamps}
+
+Während Profil-Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und dem Datensatz hinzugefügt. Wenn `timestampOrdered` als `attributeMerge` Typ für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profil basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf der Grundlage des Zeitstempels für den Zeitpunkt, zu dem der Datensatz in die Plattform aufgenommen wurde.
+
+Gelegentlich kann es zu Anwendungsfällen kommen, z. B. zum Aufstocken von Daten oder zum Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn Datensätze nicht in der richtigen Reihenfolge aufgenommen werden, wenn ein benutzerdefinierter Zeitstempel angegeben werden muss und die Richtlinie zum Zusammenführen den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen muss.
+
+Um einen benutzerdefinierten Zeitstempel zu verwenden, muss das [externe Quellsystem-Audit-Details-Mixin](#mixin-details) Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des `xdm:lastUpdatedDate` Felds ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten `xdm:lastUpdatedDate` Feld erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze oder Profil-Fragmente innerhalb und zwischen Datensätzen zusammenzuführen. Wenn `xdm:lastUpdatedDate` kein oder kein Ausfüllen erfolgt, verwendet Platform weiterhin den Systemzeitstempel.
+
+>[!NOTE]
+>
+>Sie müssen sicherstellen, dass der `xdm:lastUpdatedDate` Zeitstempel aufgefüllt wird, wenn Sie eine PATCH in demselben Datensatz senden.
+
+Eine schrittweise Anleitung zum Arbeiten mit Schemas mithilfe der Schema-Registrierungs-API, einschließlich des Hinzufügens von Mixins zu Schemas, finden Sie im [Lernprogramm zum Erstellen eines Schemas mit der API](../../xdm/tutorials/create-schema-api.md).
+
+Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der Benutzeroberfläche finden Sie im Abschnitt zur [Verwendung benutzerdefinierter Zeitstempel](../ui/merge-policies.md#custom-timestamps) im Benutzerhandbuch [zu](../ui/merge-policies.md)Zusammenführungsrichtlinien.
+
+#### Details zum externen Quellsystem-Audit-Details-Mixer {#mixin-details}
+
+Das folgende Beispiel zeigt die ordnungsgemäß ausgefüllten Felder im Auditdetails des externen Quellsystems. Die komplette Mix-JSON kann auch im [öffentlichen Experience Data Model (XDM) Repo](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) auf GitHub angezeigt werden.
+
+```json
+{
+  "xdm:createdBy": "{CREATED_BY}",
+  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
+  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
+ }
+```
+
 
 
 
