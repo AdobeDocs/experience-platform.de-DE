@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Adobe Analytics Classifications Data Connector in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: abb15e3daac4aebd46012822c790b056d0b3d2c1
+source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 5%
+source-wordcount: '624'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ In diesem Lernprogramm werden Schritte zum Erstellen eines Adobe Analytics Class
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
 * [[!DNL Echtzeit-Profil]](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine einzelne Plattforminstanz in separate virtuelle Umgebung aufteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
@@ -57,7 +57,7 @@ Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## Überwachen und Löschen Ihrer Classification-Daten
+## Überwachen Sie Ihren Classification-Datenfluss.
 
 Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Wählen Sie im Bildschirm &quot; **[!UICONTROL Katalog]** &quot;die Option &quot; **[!UICONTROL Datenflüsse]** &quot;, um eine Liste der mit Ihrem [!DNL Classifications] Konto verknüpften Abläufe Ansicht.
 
@@ -69,13 +69,13 @@ Wählen Sie den **[!UICONTROL Zielgruppe-Datensatz]** aus, auf den Sie zugreifen
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-Auf der Seite &quot; **[!UICONTROL Datensatzdataset-Aktivität]** &quot;werden Informationen über den ausgewählten Dataset angezeigt, einschließlich Informationen zum Stapelstatus, zur Dataset-ID und zum Schema. Wählen Sie **[!UICONTROL Zu löschenden Datensatz]** löschen.
+Auf der Seite &quot; **[!UICONTROL Datensatzdataset-Aktivität]** &quot;werden Informationen über den ausgewählten Dataset angezeigt, einschließlich Informationen zum Stapelstatus, zur Dataset-ID und zum Schema.
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>Das Löschen von Datensätzen ist zwar für andere Quell-Connectors möglich, wird aber derzeit nicht für den Analytics Classifications Data Connector unterstützt. Wenn Sie einen Datensatz versehentlich löschen, wenden Sie sich bitte an die Kundenunterstützung der Adobe.
 
-Es wird ein Dialogfeld angezeigt, das den Löschvorgang bestätigt. Wählen Sie **[!UICONTROL Löschen]** , um den Vorgang abzuschließen.
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## Nächste Schritte
 
