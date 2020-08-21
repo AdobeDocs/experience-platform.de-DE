@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erfassen von Zahlungsdaten über Quell-Connectors und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 14%
+source-wordcount: '1702'
+ht-degree: 15%
 
 ---
 
@@ -28,7 +28,7 @@ Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Ado
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Entwicklerhandbuch](../../../../xdm/api/getting-started.md)zur Schema-Registrierung: Enthält wichtige Informationen, die Sie zur erfolgreichen Durchführung von Aufrufen der Schema Registry API kennen müssen. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 * [Catalog Service](../../../../catalog/home.md): Catalog ist „System of Record“ für die Position und Herkunft von Daten in [!DNL Experience Platform].
-* [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
+* [Stapelverarbeitung](../../../../ingestion/batch-ingestion/overview.md): Mit der Stapeleinbetungs-API können Sie Daten [!DNL Experience Platform] als Batch-Dateien erfassen.
 * [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a payments application using the [!DNL Flow Service] API.
@@ -69,7 +69,7 @@ Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das 
 
 Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
 
-| Data.format | Enum value |
+| Data.format | Enum-Wert |
 | ----------- | ---------- |
 | Getrennte Dateien | `delimited` |
 | JSON-Dateien | `json` |
@@ -118,12 +118,12 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | Die eindeutige Verbindungs-ID der Zahlungsanwendung eines Drittanbieters, auf die Sie zugreifen. |
 | `data.schema.id` | Die `$id` des Ad-hoc-XDM-Schemas. |
-| `params.path` | The path of the source file. |
+| `params.path` | Der Pfad der Quelldatei. |
 | `connectionSpec.id` | Die Verbindungs-Spezifikations-ID Ihres Zahlungsantrags. |
 
 **Antwort**
 
-A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in later steps to create a target connection.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in späteren Schritten erforderlich, um eine Zielgruppe zu erstellen.
 
 ```json
 {
@@ -132,11 +132,11 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-## Create a target XDM schema {#target-schema}
+## Zielgruppe XDM-Schema erstellen {#target-schema}
 
-In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
+In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. Damit die Quelldaten in verwendet werden können, [!DNL Platform]muss auch ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform] Datensatz erstellt, in dem die Quelldaten enthalten sind. Diese Zielgruppe XDM Schema erweitert auch die XDM [!DNL Individual Profile] -Klasse.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) provides step-by-step instructions for performing similar actions in the Schema Editor.
+Ein Zielgruppe XDM-Schema kann erstellt werden, indem eine POST an die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)angefordert wird. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/tutorials/create-schema-ui.translate.html) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **API-Format**
 
@@ -146,7 +146,7 @@ POST /tenant/schemas
 
 **Anfrage**
 
-The following example request creates an XDM schema that extends the XDM [!DNL Individual Profile] class.
+Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM- [!DNL Individual Profile] Klasse erweitert.
 
 ```shell
 curl -X POST \
@@ -183,7 +183,7 @@ curl -X POST \
 
 **Antwort**
 
-A successful response returns details of the newly created schema including its unique identifier (`$id`). This ID is required in later steps to create a target dataset, mapping, and dataflow.
+Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich seiner eindeutigen Kennung (`$id`) zurück. Diese ID ist in späteren Schritten erforderlich, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -278,7 +278,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.id` | Die `$id` der Zielgruppe XDM Schema. |
 
 **Antwort**
 
@@ -290,11 +290,11 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Create a target connection {#target-connection}
+## Erstellen einer Zielgruppe-Verbindung {#target-connection}
 
 Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Zielgruppe-Verbindung zu erstellen, müssen Sie die mit dem Datensee verknüpfte feste Verbindungs-spec-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Mithilfe dieser Bezeichner können Sie mithilfe der [!DNL Flow Service] API eine Verbindung zur Zielgruppe herstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
+Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe dieser Bezeichner können Sie mithilfe der [!DNL Flow Service] API eine Verbindung zur Zielgruppe herstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -584,7 +584,7 @@ Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstelle
 
 Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
-Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. For all other frequencies, the interval value must be set to equal or greater than `15`.
+Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
 **API-Format**
 
@@ -647,11 +647,11 @@ curl -X POST \
 | `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) , die in einem früheren Schritt abgerufen wurde. |
 | `targetConnectionIds` | Die in einem früheren Schritt abgerufene [Zielgruppe-Verbindungs-ID](#target-connection) . |
 | `transformations.params.mappingId` | Die in einem früheren Schritt abgerufene [Zuordnungs-ID](#mapping) . |
-| `transformations.params.deltaColum` | Die angegebene Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
+| `transformations.params.deltaColum` | Die angegebene Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. Das unterstützte Datumsformat für `deltaColumn` ist `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | Die mit Ihrer Datenbank verknüpfte Zuordnungs-ID. |
-| `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
-| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. The interval&#39;s value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
+| `scheduleParams.startTime` | Die Beginn-Zeit für den Datenflug in Epochenzeit. |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zu den zulässigen Werten gehören: `once`, `minute`, `hour`, `day`oder `week`. |
+| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit für andere Frequenzwerte festgelegt ist `once` und größer oder gleich `15` sein sollte. |
 
 **Antwort**
 
@@ -664,14 +664,14 @@ A successful response returns the ID `id` of the newly created dataflow.
 }
 ```
 
-## Monitor your dataflow
+## Überwachen des Datenflusses
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die durch ihn erfasst werden, um Informationen zu den Flussläufen, zum Abschlussstatus und zu Fehlern anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Lernprogramm zum [Überwachen von Datenflüssen in der API. ](../monitor.md)
 
 
 ## Nächste Schritte
 
-By following this tutorial, you have created a source connector to collect data from a payments application on a scheduled basis. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Lernprogramm haben Sie einen Quell-Connector erstellt, um Daten aus einer Zahlungsanwendung planmäßig zu erfassen. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
