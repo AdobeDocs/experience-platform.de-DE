@@ -5,10 +5,10 @@ title: Extraktion
 topic: Developer guide
 description: Der Dienst für Extraktion von Farben kann, wenn ein Bild gegeben wird, das Histogramm der Pixelfarben berechnen und durch vorherrschende Farben in Behältern sortieren.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 3%
+source-wordcount: '689'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ Diese Methode verwendet einen tief lernenden Vordergrundextraktor, um Objekte im
 
 In dem in diesem Dokument gezeigten Beispiel wurde folgende Abbildung verwendet:
 
-![Testbild](../images/test_image.jpeg)
+![Testbild](../images/QQAsset1.jpg)
 
 **API-Format**
 
@@ -47,7 +47,7 @@ Die folgende Anforderung extrahiert Farben aus einem Bild basierend auf den in d
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten.
+>`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten. Für den Extraktion-Dienst lautet die `analyzer_id` ID: `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -86,7 +86,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `analyzer_id` | Die [!DNL Sensei] Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Mit dieser ID wird festgelegt, welche der Variablen verwendet [!DNL Sensei Content Frameworks] werden. | Ja |
+| `analyzer_id` | Die [!DNL Sensei] Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Mit dieser ID wird festgelegt, welche der Variablen verwendet [!DNL Sensei Content Frameworks] werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
 | `application-id` | Die ID der erstellten Anwendung. | Ja |
 | `data` | Ein Array, das JSON-Objekte enthält. Jedes Objekt im Array stellt ein Bild dar. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem `data` Array außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können von innen aus überschrieben werden `data`. | Ja |
 | `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
@@ -106,7 +106,7 @@ Eine erfolgreiche Antwort gibt die Details der extrahierten Farben zurück. Jede
 - Der Prozentsatz, in dem diese Farbe im Verhältnis zum Bild angezeigt wird
 - Der RGB-Wert der Farbe
 
-Im ersten Beispielobjekt unten ist der Wert `feature_value` von `White,0.82,239,239,239` bedeutet, dass die gefundene Farbe weiß ist, Weiß in 82 % des Bildes und hat einen RGB-Wert von 239.239.239.
+Im ersten Beispielobjekt unten ist der Wert `feature_value` von `White,0.59,251,251,243` bedeutet, dass die gefundene Farbe weiß ist, Weiß in 59 % des Bildes und hat einen RGB-Wert von 251.251.243.
 
 ```json
 {
@@ -124,15 +124,19 @@ Im ersten Beispielobjekt unten ist der Wert `feature_value` von `White,0.82,239,
             "feature_value": [
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "White,0.82,239,239,239"
+                "feature_value": "White,0.59,251,251,243"
               },
               {
-                "feature_value": "Dark_Blue,0.11,41,60,86",
+                "feature_value": "Orange,0.30,248,169,48",
                 "feature_name": "color_name_and_rgb"
               },
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "Royal_Blue,0.08,63,91,123"
+                "feature_value": "Mustard,0.08,251,199,77"
+              },
+              {
+                "feature_name": "color_name_and_rgb",
+                "feature_value": "Gold,0.02,250,191,55"
               }
             ],
             "feature_name": "color"
