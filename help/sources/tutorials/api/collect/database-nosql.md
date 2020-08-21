@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erfassen von Daten aus einer Drittanbieter-Datenbank über Quellschnittstellen und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1733'
 ht-degree: 14%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 14%
 
 # Erfassen von Daten aus einer Drittanbieter-Datenbank über Quellschnittstellen und APIs
 
-[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-This tutorial covers the steps for retrieving data from a third-party database and ingesting it into [!DNL Platform] through source connectors and APIs.
+In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank eines Drittanbieters und zum Einbinden dieser Daten [!DNL Platform] über Quellschnittstellen und APIs beschrieben.
 
 ## Erste Schritte
 
@@ -29,7 +29,7 @@ Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Ado
    * [Entwicklerhandbuch](../../../../xdm/api/getting-started.md)zur Schema-Registrierung: Enthält wichtige Informationen, die Sie zur erfolgreichen Durchführung von Aufrufen der Schema Registry API kennen müssen. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 * [Catalog Service](../../../../catalog/home.md): Catalog ist „System of Record“ für die Position und Herkunft von Daten in [!DNL Experience Platform].
 * [Stapelverarbeitung](../../../../ingestion/batch-ingestion/overview.md): Mit der Stapeleinbetungs-API können Sie Daten [!DNL Experience Platform] als Batch-Dateien erfassen.
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a third-parry database using the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
@@ -53,23 +53,23 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * Content-Type: `application/json`
 
-## Create an ad-hoc XDM class and schema
+## Erstellen einer Ad-hoc-XDM-Klasse und eines Ad-hoc-Schemas
 
-In order to bring external data into [!DNL Platform] through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
+Um externe Daten [!DNL Platform] über Quell-Connectors zu importieren, müssen eine Ad-hoc-XDM-Klasse und ein Schema für die Rohquellendaten erstellt werden.
 
-To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
+Um eine Ad-hoc-Klasse und ein Ad-hoc-Schema zu erstellen, führen Sie die im [Ad-hoc-Schema-Lernprogramm](../../../../xdm/tutorials/ad-hoc.md)beschriebenen Schritte aus. Beim Erstellen einer Ad-hoc-Klasse müssen alle in den Quelldaten gefundenen Felder im Anforderungstext beschrieben werden.
 
-Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. Obtain and store the unique identifier (`$id`) of the ad-hoc schema and then proceed to the next step of this tutorial.
+Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie ein Ad-hoc-Schema erstellt haben. Rufen Sie die eindeutige Kennung (`$id`) des Ad-hoc-Schemas ab und speichern Sie sie und fahren Sie dann mit dem nächsten Schritt dieses Lernprogramms fort.
 
-## Create a source connection {#source}
+## Erstellen einer Quellverbindung {#source}
 
-Mit einem Ad-hoc-XDM-Schema kann jetzt eine Quellverbindung mit einer POST an die [!DNL Flow Service] API erstellt werden. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
+Mit einem Ad-hoc-XDM-Schema kann jetzt eine Quellverbindung mit einer POST an die [!DNL Flow Service] API erstellt werden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einer Quelldatendatei und einem Verweis auf das Schema, das die Quelldaten beschreibt.
 
-To create a source connection, you must also define an enum value for the data format attribute.
+Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformatattribut definieren.
 
-Use the following the enum values for **file-based connectors**:
+Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
 
-| Data.format | Enum value |
+| Data.format | Enum-Wert |
 | ----------- | ---------- |
 | Getrennte Dateien | `delimited` |
 | JSON-Dateien | `json` |
@@ -240,7 +240,7 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
 }
 ```
 
-## Create a target dataset
+## Zielgruppen-Dataset erstellen
 
 Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)angefordert wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
 
@@ -330,7 +330,7 @@ curl -X POST \
 
 **Antwort**
 
-A successful response returns the new target connection&#39;s unique identifier (`id`). Dieser Wert ist in einem späteren Schritt erforderlich, um einen Datenflug zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbindung zurück (`id`). Dieser Wert ist in einem späteren Schritt erforderlich, um einen Datenflug zu erstellen.
 
 ```json
 {
@@ -341,7 +341,7 @@ A successful response returns the new target connection&#39;s unique identifier 
 
 ## Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zielgruppe-Datensatz aufgenommen werden können, müssen sie zunächst dem Zielgruppe-Schema zugeordnet werden, dem der Zielgruppe-Datensatz entspricht. This is achieved by performing a POST request to the [!DNL Conversion Service] API with data mappings defined within the request payload.
+Damit die Quelldaten in einen Zielgruppe-Datensatz aufgenommen werden können, müssen sie zunächst dem Zielgruppe-Schema zugeordnet werden, dem der Zielgruppe-Datensatz entspricht. Dies wird erreicht, indem eine POST an die [!DNL Conversion Service] API mit Datenzuordnungen ausgeführt wird, die innerhalb der Anforderungsnutzlast definiert sind.
 
 **API-Format**
 
@@ -395,11 +395,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `xdmSchema` | The `$id` of the target XDM schema. |
+| `xdmSchema` | Die `$id` der Zielgruppe XDM Schema. |
 
 **Antwort**
 
-A successful response returns details of the newly created mapping including its unique identifier (`id`). Diese ID ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Diese ID ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
 
 ```json
 {
@@ -414,7 +414,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Datennachrichtenspezifikationen abrufen {#specs}
 
-Ein Datennachweis ist für das Sammeln von Daten aus Quellen und deren Umsetzung zuständig [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API. Dataflow specifications are responsible for collecting data from an external database or NoSQL system.
+Ein Datennachweis ist für das Sammeln von Daten aus Quellen und deren Umsetzung zuständig [!DNL Platform]. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET an die [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API senden. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System verantwortlich.
 
 **API-Format**
 
@@ -434,7 +434,7 @@ curl -X GET \
 
 **Antwort**
 
-A successful response returns the details of the dataflow specification that is responsible for bringing data from your database or NoSQL system into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
+Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für das Übertragen von Daten aus Ihrer Datenbank oder Ihrem NoSQL-System in [!DNL Platform]verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -558,16 +558,16 @@ A successful response returns the details of the dataflow specification that is 
 
 ## Datenfluss erstellen
 
-The last step towards collecting data is to create a dataflow. At this point, you should have the following required values prepared:
+Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstellen. An dieser Stelle sollten die folgenden erforderlichen Werte vorbereitet sein:
 
-* [Source connection ID](#source)
-* [Target connection ID](#target)
+* [Quell-Verbindungs-ID](#source)
+* [Zielgruppen-Verbindungs-ID](#target)
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
-To schedule an ingestion, you must first set the start time value to epoch time in seconds. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
+Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
 **API-Format**
 
@@ -601,7 +601,11 @@ curl -X POST \
             {
                 "name": "Copy",
                 "params": {
-                    "deltaColumn": "date-time"
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
                 }
             },
             {
@@ -627,7 +631,7 @@ curl -X POST \
 | `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) , die in einem früheren Schritt abgerufen wurde. |
 | `targetConnectionIds` | Die in einem früheren Schritt abgerufene [Zielgruppe-Verbindungs-ID](#target-connection) . |
 | `transformations.params.mappingId` | Die in einem früheren Schritt abgerufene [Zuordnungs-ID](#mapping) . |
-| `transformations.params.deltaColum` | Die angegebene Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
+| `transformations.params.deltaColum` | Die angegebene Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. Das unterstützte Datumsformat für `deltaColumn` ist `yyyy-MM-dd HH:mm:ss`. Wenn Sie die Datenspeicherung &quot;Blaue Tabelle&quot;verwenden, `deltaColumn` wird das unterstützte Format `yyyy-MM-ddTHH:mm:ssZ`verwendet. |
 | `transformations.params.mappingId` | Die mit Ihrer Datenbank verknüpfte Zuordnungs-ID. |
 | `scheduleParams.startTime` | Die Beginn-Zeit für den Datenflug in Epochenzeit. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zu den zulässigen Werten gehören: `once`, `minute`, `hour`, `day`oder `week`. |
@@ -654,7 +658,7 @@ Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die du
 In diesem Tutorial haben Sie einen Quell-Connector erstellt, mit dem Daten aus einer Datenbank eines Drittanbieters planmäßig erfasst werden. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
-* [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+* [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
 
 ## Anhang
 
