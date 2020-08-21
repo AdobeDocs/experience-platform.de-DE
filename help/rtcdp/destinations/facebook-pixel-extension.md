@@ -3,12 +3,12 @@ keywords: facebook pixel extensions;facebook pixel extension;facebook pixel dest
 title: Facebook-Pixel-Erweiterung
 seo-title: Facebook-Pixel-Erweiterung
 description: Die Facebook-Pixel-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: null
+seo-description: Die Facebook-Pixel-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 83%
+source-wordcount: '530'
+ht-degree: 84%
 
 ---
 
