@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erfassen von Anzeigendaten über Quell-Connectors und APIs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1632'
 ht-degree: 13%
 
 ---
@@ -69,7 +69,7 @@ Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das 
 
 Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
 
-| Data.format | Enum value |
+| Data.format | Enum-Wert |
 | ----------- | ---------- |
 | Getrennte Dateien | `delimited` |
 | JSON-Dateien | `json` |
@@ -132,9 +132,9 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
-## Create a target XDM schema {#target-schema}
+## Zielgruppe XDM-Schema erstellen {#target-schema}
 
-In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform] Datensatz erstellt, in dem die Quelldaten enthalten sind.
+In früheren Schritten wurde ein Ad-hoc-XDM-Schema zur Strukturierung der Quelldaten erstellt. Damit die Quelldaten in verwendet werden können, [!DNL Platform]muss auch ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform] Datensatz erstellt, in dem die Quelldaten enthalten sind.
 
 Ein Zielgruppe XDM-Schema kann erstellt werden, indem eine POST an die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)angefordert wird. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
@@ -146,7 +146,7 @@ POST /schemaregistry/tenant/schemas
 
 **Anfrage**
 
-The following example request creates an XDM schema that extends the XDM Individual Profile class.
+Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM Individual Profil-Klasse erweitert.
 
 ```shell
 curl -X POST \
@@ -183,7 +183,7 @@ curl -X POST \
 
 **Antwort**
 
-A successful response returns details of the newly created schema including its unique identifier (`$id`). Speichern Sie diese ID so, wie es in späteren Schritten erforderlich ist, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
+Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich seiner eindeutigen Kennung (`$id`) zurück. Speichern Sie diese ID so, wie es in späteren Schritten erforderlich ist, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -249,7 +249,7 @@ A successful response returns details of the newly created schema including its 
 
 ## Zielgruppen-Dataset erstellen
 
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
+Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)angefordert wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
 
 **API-Format**
 
@@ -278,11 +278,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.id` | Die `$id` der Zielgruppe XDM Schema. |
 
 **Antwort**
 
-A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Store the target dataset ID as it is required in later steps to create a target connection and a dataflow.
+A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Zielgruppe-Dataset-ID wie in den späteren Schritten zum Erstellen einer Zielgruppe- und eines Datenflusses erforderlich.
 
 ```json
 [
@@ -290,9 +290,9 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Create a target connection {#target-connection}
+## Erstellen einer Zielgruppe-Verbindung {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Zielgruppe-Verbindung zu erstellen, müssen Sie die mit dem Datensee verknüpfte feste Verbindungs-spec-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe dieser Bezeichner können Sie mithilfe der [!DNL Flow Service] API eine Verbindung zur Zielgruppe herstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
 
@@ -333,7 +333,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `data.schema.id` | The `$id` of the target XDM schema. |
+| `data.schema.id` | Die `$id` der Zielgruppe XDM Schema. |
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
 | `connectionSpec.id` | Die feste Verbindungs-spec-ID zum Datensee. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
@@ -346,7 +346,7 @@ curl -X POST \
 
 ## Erstellen einer Zuordnung {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. Dies wird erreicht, indem eine POST an die [!DNL Conversion Service] API mit Datenzuordnungen ausgeführt wird, die in der Anforderungsnutzlast definiert sind.
+Damit die Quelldaten in einen Zielgruppe-Datensatz aufgenommen werden können, müssen sie zunächst dem Zielgruppe-Schema zugeordnet werden, dem der Zielgruppe-Datensatz entspricht. Dies wird erreicht, indem eine POST an die [!DNL Conversion Service] API mit Datenzuordnungen ausgeführt wird, die in der Anforderungsnutzlast definiert sind.
 
 **API-Format**
 
@@ -604,6 +604,16 @@ curl -X POST \
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
+                }
+            },
+            {
             "name": "Mapping",
             "params": {
                 "mappingId": "febec6a6785e45ea9ed594422cc483d7",
@@ -623,9 +633,9 @@ curl -X POST \
 | -------- | ----------- |
 | `flowSpec.id` | Die im vorherigen Schritt abgerufene [Flussspec-ID](#specs) . |
 | `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) , die in einem früheren Schritt abgerufen wurde. |
-| `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
+| `targetConnectionIds` | Die in einem früheren Schritt abgerufene [Zielgruppe-Verbindungs-ID](#target-connection) . |
 | `transformations.params.mappingId` | Die in einem früheren Schritt abgerufene [Zuordnungs-ID](#mapping) . |
-| `transformations.params.deltaColum` | Die angegebene Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
+| `transformations.params.deltaColum` | Die angegebene Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. Das unterstützte Datumsformat für `deltaColumn` ist `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | Die mit Ihrer Datenbank verknüpfte Zuordnungs-ID. |
 | `scheduleParams.startTime` | Die Beginn-Zeit für den Datenflug in Epochenzeit. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zu den zulässigen Werten gehören: `once`, `minute`, `hour`, `day`oder `week`. |
@@ -642,9 +652,9 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 }
 ```
 
-## Monitor your dataflow
+## Überwachen des Datenflusses
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die durch ihn erfasst werden, um Informationen zu den Flussläufen, zum Abschlussstatus und zu Fehlern anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Lernprogramm zum [Überwachen von Datenflüssen in der API. ](../monitor.md)
 
 ## Nächste Schritte
 
