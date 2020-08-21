@@ -5,9 +5,9 @@ title: Streaming-Segmentierung
 topic: ui guide
 description: Streaming-Segmentierung Unter Adobe Experience Platform können Sie Segmentierungen in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in die Plattform gelangen, was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Plattform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '767'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,9 @@ Nachdem Sie ein Streaming-fähiges Segment erstellt haben, können Sie Details z
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Insbesondere werden Details zur Größe der **[!UICONTROL gesamten qualifizierten Audience]** angezeigt. Wenn ein Auftrag innerhalb der letzten 24 Stunden ausgeführt wurde, wird neben einem Liniendiagramm für die hinzugefügte Audience die **[!UICONTROL Gesamtgröße]** der qualifizierten Audience angezeigt. Andernfalls wird die geschätzte **[!UICONTROL Gesamtgröße]** der Audience neben einer Visualisierungstrends-Linie angezeigt.
+Insbesondere werden Details zur Größe der **[!UICONTROL gesamten qualifizierten Audience]** angezeigt. Die **[!UICONTROL Gesamtgröße]** der qualifizierten Audience zeigt die Gesamtanzahl der qualifizierten Audiencen aus der zuletzt ausgeführten Segmentausführung an. Wenn ein Segmentauftrag nicht innerhalb der letzten 24 Stunden abgeschlossen wurde, wird stattdessen die Anzahl der Audiencen einer Schätzung entnommen.
+
+Darunter befindet sich ein Liniendiagramm, das die Anzahl der Segmente anzeigt, die in den letzten 24 Stunden qualifiziert und disqualifiziert wurden. Die Dropdownliste kann angepasst werden, um die letzten 24 Stunden, letzte Woche oder letzten 30 Tage anzuzeigen.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
