@@ -5,10 +5,10 @@ description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an 
 seo-description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: ef01c258cb9ac72f0912d17dcd113c1baa2a5b5e
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 2%
+source-wordcount: '361'
+ht-degree: 4%
 
 ---
 
@@ -38,7 +38,7 @@ Obwohl Analytics eine Seitenvariable technisch aufzeichnet, auch wenn diese nich
 
 ## Tracking-Links
 
-Die Links können durch Hinzufügen der Details unter dem `web.webInteraction` Schema eingestellt werden. Es gibt drei erforderliche Variablen: `web.webInteraction.name`, `web.webInteraction.type` und `web.webInteraction.linkClicks.value`.
+Links können manuell eingestellt oder [automatisch](#automaticLinkTracking)verfolgt werden. Die manuelle Verfolgung erfolgt durch Hinzufügen der Details unter dem `web.webInteraction` Schema. Es gibt drei erforderliche Variablen: `web.webInteraction.name`, `web.webInteraction.type` und `web.webInteraction.linkClicks.value`.
 
 ```javascript
 alloy("sendEvent", {
@@ -59,11 +59,31 @@ alloy("sendEvent", {
 Der Linktyp kann einer von drei Werten sein:
 
 * **`other`:** Ein benutzerspezifischer Link
-* **`download`:** Link zum Herunterladen (diese können automatisch von der Bibliothek verfolgt werden)
+* **`download`:** Link zum Herunterladen
 * **`exit`:** Ein Ausstiegslink
 
-### Automatische Linkverfolgung
+### Automatische Linkverfolgung {#automaticLinkTracking}
 
-Das Web SDK kann automatisch alle Link-Klicks verfolgen, indem [clickCollection](../../fundamentals/configuring-the-sdk.md#clickCollectionEnabled)aktiviert wird.
+Standardmäßig erfasst das Web SDK [Beschriftungen](#labelingLinks)und [zeichnet](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) Klicks auf [qualifizierte](#qualifyingLinks) Link-Tags auf. Klicks werden mit einem [Capture](https://www.w3.org/TR/uievents/#capture-phase) Click-Ereignis-Listener erfasst, der mit dem Dokument verbunden ist.
 
-Downloadlinks werden automatisch anhand der gängigen Dateitypen erkannt. Die Logik für die Klassifizierung von Downloads ist konfigurierbar.
+Die Deaktivierung der automatischen Linktracking kann durch die [Konfiguration](../../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) des Web SDK erfolgen.
+
+```javascript
+clickCollectionEnabled: false
+```
+
+#### Welche Tags sind für die Linktracking geeignet?{#qualifyingLinks}
+
+Die automatische Linkverfolgung erfolgt für Anker- `A` und `AREA` -Tags. Diese Tags werden jedoch nicht für die Linktracking berücksichtigt, wenn sie über einen angehängten `onclick` Handler verfügen.
+
+#### Wie werden Links beschriftet?{#labelingLinks}
+
+Links werden als Downloadlink bezeichnet, wenn das Anker-Tag ein Downloadattribut enthält oder wenn der Link mit einer beliebten Dateierweiterung endet. Der Qualifikator für Downloadlinks kann mit einem regulären Ausdruck [konfiguriert](../../fundamentals/configuring-the-sdk.md) werden:
+
+```javascript
+downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
+```
+
+Links werden als Ausstiegslink bezeichnet, wenn sich die Domäne der Zielgruppe des Links von der aktuellen Domäne unterscheidet `window.location.hostname`.
+
+Links, die sich nicht als Download- oder Exitlink qualifizieren, werden als &quot;sonstige&quot;bezeichnet.
