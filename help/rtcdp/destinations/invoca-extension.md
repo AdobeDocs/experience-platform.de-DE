@@ -3,11 +3,11 @@ keywords: Invoca;invoca
 title: Invoca Tags-Erweiterung
 seo-title: Invoca Tags-Erweiterung
 description: Die Invoca Tags-Erweiterung ist ein „Voice of the Customer“-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: null
+seo-description: Die Invoca Tags-Erweiterung ist ein „Voice of the Customer“-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '569'
 ht-degree: 85%
 
 ---
