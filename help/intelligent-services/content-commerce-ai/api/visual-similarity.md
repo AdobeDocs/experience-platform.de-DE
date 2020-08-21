@@ -5,9 +5,9 @@ title: Visuelle Ähnlichkeit
 topic: Developer guide
 description: Der Dienst für visuelle Ähnlichkeit findet bei einem gegebenen Bild automatisch visuell ähnliche Bilder aus einem Katalog.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '497'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Der Dienst für visuelle Ähnlichkeit findet bei einem gegebenen Bild automatisc
 
 Die folgende Abbildung wurde in der Beispielanforderung in diesem Dokument verwendet:
 
-![Testbild](../images/test_image.jpeg)
+![Testbild](../images/Query_Image.jpeg)
 
 **API-Format**
 
@@ -37,7 +37,7 @@ Die folgende Anforderung ruft visuell ähnliche Bilder aus einem Katalog ab, bas
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten.
+>`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten. Wenden Sie sich an das AI Beta-Team von Content and Commerce, um Ihren `analyzer_id` Service zu erhalten.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,7 +76,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `analyzer_id` | Die [!DNL Sensei] Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Mit dieser ID wird festgelegt, welche der Variablen verwendet [!DNL Sensei Content Frameworks] werden. | Ja |
+| `analyzer_id` | Die [!DNL Sensei] Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Mit dieser ID wird festgelegt, welche der Variablen verwendet [!DNL Sensei Content Frameworks] werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
 | `application-id` | Die ID der erstellten Anwendung. | Ja |
 | `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Bild darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem `data` Array außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können von innen aus überschrieben werden `data`. | Ja |
 | `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
@@ -91,6 +91,10 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 **Antwort**
 
 Eine erfolgreiche Antwort gibt ein `response` Array zurück, das ein `feature_value` und `feature_name` für jedes der visuell ähnlichen Bilder im Katalog enthält.
+
+Die folgenden visuell ähnlichen Bilder wurden in der folgenden Beispielantwort zurückgegeben:
+
+![ähnliche Bilder](../images/results.jpg)
 
 ```json
 {
@@ -156,3 +160,4 @@ Eine erfolgreiche Antwort gibt ein `response` Array zurück, das ein `feature_va
   "error": []
 }
 ```
+
