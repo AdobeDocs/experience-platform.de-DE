@@ -5,9 +5,9 @@ title: Profil Abfrage Language (PQL) - Übersicht
 topic: developer guide
 description: Dieser Leitfaden bietet einen allgemeinen Überblick über PQL, der Formatierungsrichtlinien enthält und PQL-Ausdrücke anzeigt.
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '705'
 ht-degree: 3%
 
 ---
@@ -81,6 +81,7 @@ In der folgenden Tabelle sind die verschiedenen Kategorien unterstützter PQL-Fu
 | Array, Liste und Satz | Wird für die Interaktion mit Arrays, Listen und Sets verwendet. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [zu](./array-functions.md)Array-, Liste- und Set-Funktionen. |
 | Zuordnung | Wird verwendet, um mit Karten zu interagieren. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [Kartenfunktionen](./map-functions.md). |
 | Zeichenfolge | Wird verwendet, um mit Zeichenfolgen zu interagieren. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [Zeichenfolgen-Funktionen](./string-functions.md). |
+| Objekt | Wird zur Interaktion mit Objekten verwendet. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [Objektfunktionen](./object-functions.md). |
 | Arithmetisch | Dient zum Durchführen einer einfachen Arithmetik für PQL-Elemente. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [Arithmetik-Funktionen](./arithmetic-functions.md) |
 | Aggregation | Wird verwendet, um Ergebnisse eines Arrays zu einem einzelnen Ergebnis zu kombinieren. Weitere Informationen zu Aggregationsfunktionen finden Sie im Dokument [zu Aggregationsfunktionen](./aggregation-functions.md). |
 | Datum und Uhrzeit | Wird in Verbindung mit Datums-, Uhrzeit- und Datenzeitobjekten verwendet. Weitere Informationen zu diesen Funktionen finden Sie im Dokument [zu Datums-/Uhrzeitfunktionen](./datetime-functions.md). |
