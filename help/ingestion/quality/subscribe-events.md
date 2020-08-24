@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Abonnieren von Datenerfassungsereignissen
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 38%
 
 ---
@@ -39,7 +39,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Statusbenachrichtigungen zur
 
 ## Benachrichtigungs-Payload-Schema
 
-The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json).
+The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## Statusbenachrichtigungen zur Datenaufnahme abonnieren
 
@@ -49,13 +49,13 @@ The data ingestion notification event schema is an [!DNL Experience Data Model] 
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
 
-### Hinzufügen von [!DNL Experience Platform] Ereignissen
+### hinzufügen von [!DNL Experience Platform] Ereignissen
 
 Nachdem Sie ein neues Projekt erstellt haben, navigieren Sie zum Übersichtsbildschirm dieses Projekts. Klicken Sie von hier auf **[!UICONTROL Hinzufügen Ereignis]**.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-The _[!UICONTROL Add events]_dialog appears. Klicken Sie auf**[!UICONTROL  Experience Platform ]**, um die Liste der verfügbaren Optionen zu filtern, und klicken Sie dann auf**[!UICONTROL  Plattformbenachrichtigungen ]**, bevor Sie auf**[!UICONTROL  Weiter ]**klicken.
+The _[!UICONTROL Add events]_ dialog appears. Klicken Sie auf **[!UICONTROL Experience Platform]** , um die Liste der verfügbaren Optionen zu filtern, und klicken Sie dann auf **[!UICONTROL Plattformbenachrichtigungen]** , bevor Sie auf **[!UICONTROL Weiter]** klicken.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
