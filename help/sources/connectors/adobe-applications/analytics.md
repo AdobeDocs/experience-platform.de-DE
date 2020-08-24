@@ -4,33 +4,33 @@ solution: Experience Platform
 title: Der Data Connector von Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 97%
+source-wordcount: '471'
+ht-degree: 42%
 
 ---
 
 
 # Der Data Connector von Analytics
 
-Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über den Analytics Data Connector (ADC) erfassen. ADC streamt Daten, die von Adobe Analytics gesammelt wurden, in Echtzeit an Platform, wobei SCDS-formatierte Analytics-Daten in XDM-Felder (Experience-Datenmodell) umgewandelt werden, um sie für Platform zu nutzen.
+Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über den Analytics Data Connector (ADC) erfassen. ADC speichert Daten, die von [!DNL Analytics] zu [!DNL Platform] in Echtzeit gesammelt werden, und konvertiert SCDS-formatierte [!DNL Analytics] Daten in [!DNL Experience Data Model] (XDM-)Felder, um sie für den Gebrauch durch [!DNL Platform]die Benutzer zu verwenden.
 
-Dieses Dokument bietet Ihnen einen Überblick über Adobe Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
+This document provides an overview of [!DNL Analytics] and describes the use-cases for [!DNL Analytics] data.
 
 ## Adobe Analytics und Analytics-Daten
 
-Adobe Analytics ist eine leistungsstarke Engine, mit der Sie mehr über Ihre Kunden erfahren und herausfinden können, wie sie mit Ihren Web-Eigenschaften interagieren, wo Ihre Ausgaben für digitales Marketing effektiv sind und welche Verbesserungsmöglichkeiten es gibt. Adobe Analytics verarbeitet jährlich mehrere Billionen von Web-Transaktionen. Mit ADC können Sie diese umfangreichen Verhaltensdaten ganz einfach nutzen und das Echtzeit-Kundenprofil in Minutenschnelle anreichern.
+[!DNL Analytics] ist eine leistungsstarke Engine, mit der Sie mehr über Ihre Kunden erfahren und herausfinden können, wie sie mit Ihren Web-Eigenschaften interagieren, wo Ihre Ausgaben für digitales Marketing effektiv sind und welche Verbesserungsmöglichkeiten es gibt. [!DNL Analytics] verwaltet Billionen von Web-Transaktionen pro Jahr und ADC ermöglicht es Ihnen, diese umfassenden Verhaltensdaten einfach zu nutzen und die [!DNL Real-time Customer Profile] in wenigen Minuten zu bereichern.
 
 ![](./images/analytics-data-experience-platform.png)
 
-Adobe Analytics sammelt Daten aus verschiedenen digitalen Kanälen und Rechenzentren auf der ganzen Welt. Nachdem die Daten erfasst wurden, werden VISTA-Regeln (für Besucheridentifikation, Segmentierung und Umwandlungsarchitektur) sowie Verarbeitungsregeln angewendet, um die eingehenden Daten zu formen. Nachdem Rohdaten diese kleine Verarbeitung durchlaufen haben, werden sie vom Echtzeit-Kundenprofil als konsumbereit betrachtet. In einem Verfahren, das zu dem oben genannten parallel ist, werden dieselben verarbeiteten Daten in Mikro-Batches gepackt und in Platform-Datensätzen erfasst, die von Data Science Workspace, Query Service und anderen Anwendungen zur Datenerkennung verwendet werden können.
+At a high level, [!DNL Analytics] collects data from various digital channels and multiple data centers around the world. Nachdem die Daten erfasst wurden, werden VISTA-Regeln (für Besucheridentifikation, Segmentierung und Umwandlungsarchitektur) sowie Verarbeitungsregeln angewendet, um die eingehenden Daten zu formen. After raw data has gone through this lightweight processing, it is then considered ready for consumption by [!DNL Real-time Customer Profile]. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Platform datasets for consumption by [!DNL Data Science Workspace], [!DNL Query Service], and other data-discovery applications.
 
 Weitere Informationen zu Verarbeitungsregeln finden Sie unter Übersicht über die [Verarbeitungsregeln](https://docs.adobe.com/content/help/de-DE/analytics/admin/admin-tools/processing-rules/processing-rules.html) .
 
 ## Experience-Datenmodell (XDM)
 
-XDM ist eine öffentlich dokumentierte Spezifikation, die einheitliche Strukturen und Definitionen für eine Anwendung bereitstellt, damit diese mit Diensten in Adobe Experience Platform kommunizieren kann.
+XDM is a publicly documented specification that provides common structures and definitions for an application to use to communicate with services on [!DNL Experience Platform].
 
 Durch Einhaltung von XDM-Standards können Daten einheitlich integriert werden, was die Bereitstellung von Daten und das Sammeln von Informationen erleichtert.
 
@@ -38,19 +38,21 @@ Weiterführende Informationen zu XDM finden Sie in der [XDM-Systemübersicht](..
 
 ## Wie werden Felder von Adobe Analytics XDM zugeordnet?
 
-Wenn über die Platform-Benutzeroberfläche eine Quellverbindung zum Übertragen von Analytics-Daten in Experience Platform hergestellt wird, werden Datenfelder automatisch zugeordnet und innerhalb von Minuten in das Echtzeit-Kundenprofil aufgenommen. Anweisungen zum Erstellen einer Quellverbindung mit Adobe Analytics unter Einsatz der Platform-Benutzeroberfläche finden Sie in der Anleitung zum [Data Connector von Analytics](../../tutorials/ui/create/adobe-applications/analytics.md).
+When a source connection is established for bringing [!DNL Analytics] data into [!DNL Experience Platform] using the [!DNL Platform] user interface, data fields are automatically mapped and ingested into [!DNL Real-time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Analytics] using the [!DNL Platform] UI, see the [Analytics data connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-Detaillierte Informationen zum Feld-Mapping zwischen Analytics und Experience Platform finden Sie im Handbuch zum [Mapping von Adobe Analytics-Feldern](./mapping/analytics.md).
+For detailed information on the field mapping that occurs between [!DNL Analytics] and [!DNL Experience Platform], please visit the [Adobe Analytics field mapping](./mapping/analytics.md) guide.
 
 ## Wie hoch ist die erwartete Latenz für Analytics-Daten in Platform?
 
 | Analytics-Daten | Erwartete Latenz |
 | -------------- | ---------------- |
-| Neue Daten an Echtzeit-Kundenprofil (A4T **nicht** aktiviert) | &lt; 2 Minuten |
-| Neue Daten an Echtzeit-Kundenprofil (A4T **ist** aktiviert) | &lt; 15 Minuten |
+| Neue Daten zu [!DNL Real-time Customer Profile] (A4T **nicht** aktiviert) | &lt; 2 Minuten |
+| Neue Daten zu [!DNL Real-time Customer Profile] (A4T **ist** aktiviert) | &lt; 15 Minuten |
 | Neue Daten an Data Lake | &lt; 45 Minuten |
 | Aufstockungsdaten (13 Monate Daten oder 10 Milliarden Ereignisse, je nachdem, welcher Wert niedriger ist) | &lt; 4 Wochen |
 
->[!NOTE]
->
-> Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Verbraucheranwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
+>[!NOTE] Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Verbraucheranwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
+
+## Primär-IDs in Analytics-Daten
+
+Jeder Treffer aus dem Analytics-Data Connector enthält einen primären Bezeichner, der davon abhängt, ob eine ECID oder eine AAID vorhanden ist. Wenn eine ECID vorhanden ist, wird die ECID als primärer Identifikator bezeichnet. Wenn eine AAID vorhanden ist, wird die AAID als Primär bezeichnet.
