@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpunkt für Exportaufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 6ddb420ad3c4df3096dac456c58afc7a4916ce51
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1521'
 ht-degree: 16%
 
 ---
@@ -268,6 +268,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     },
     "schema":{
         "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
 }'
 ```
@@ -286,6 +289,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `additionalFields.eventList` | Steuert die Zeitreihenfelder für Ereignisse, die für untergeordnete oder verknüpfte Objekte exportiert werden, indem eine oder mehrere der folgenden Einstellungen bereitgestellt werden:<ul><li>`fields`: Steuerung der zu exportierenden Felder.</li><li>`filter`: Gibt Kriterien an, die die Ergebnisse verknüpfter Objekte einschränken. Erwartet einen für den Export erforderlichen Mindestwert, normalerweise ein Datum.</li><li>`filter.fromIngestTimestamp`: Filter der Zeitreihen-Ereignis zu denen, die nach dem bereitgestellten Zeitstempel erfasst wurden. Dies ist nicht die Ereignis-Zeit selbst, sondern die Aufnahmezeit für die Ereignisse.</li><li>`filter.toIngestTimestamp`: Filter des Zeitstempels zu den Zeitstempeln, die vor dem angegebenen Zeitstempel erfasst wurden. Dies ist nicht die Ereignis-Zeit selbst, sondern die Aufnahmezeit für die Ereignisse.</li></ul> |
 | `destination` | **(Erforderlich)** Informationen zu den exportierten Daten:<ul><li>`datasetId`: **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`segmentPerBatch`: *(Optional)* Ein boolescher Wert, der standardmäßig auf &quot;false&quot;gesetzt ist, wenn er nicht angegeben wird. Der Wert &quot;false&quot;exportiert alle Segment-IDs in eine einzelne Stapel-ID. Der Wert &quot;true&quot;exportiert eine Segment-ID in eine Stapel-ID. Beachten Sie, dass die Einstellung des Werts auf &quot;true&quot;die Exportleistung des Stapels beeinträchtigen kann.</li></ul> |
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
+| `evaluationInfo.segmentation` | *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig auf `false`. Der Wert `true` gibt an, dass die Segmentierung für den Exportauftrag durchgeführt werden muss. |
 
 **Antwort**
 
