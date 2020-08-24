@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Vergleichsfunktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 21%
+source-wordcount: '292'
+ht-degree: 16%
 
 ---
 
 
 # Vergleichsfunktionen
 
-Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen, zurückzugeben `true` oder `false` entsprechend. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen, zurückzugeben `true` oder `false` entsprechend. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Gleich
 
