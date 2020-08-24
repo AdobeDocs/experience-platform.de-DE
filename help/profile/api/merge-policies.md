@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Richtlinien zusammenführen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
+source-git-commit: 2c83e282a7674ed6f36c8608035ddf19d88f0433
 workflow-type: tm+mt
-source-wordcount: '2381'
-ht-degree: 67%
+source-wordcount: '2392'
+ht-degree: 66%
 
 ---
 
@@ -729,6 +729,8 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
 ## Anhang
+
+Dieser Abschnitt enthält zusätzliche Informationen zum Arbeiten mit Zusammenführungsrichtlinien.
 
 ### Verwenden benutzerdefinierter Zeitstempel {#custom-timestamps}
 
