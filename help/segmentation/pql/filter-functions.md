@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Filterfunktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 94%
+source-wordcount: '188'
+ht-degree: 87%
 
 ---
 
 
 # Filterfunktionen
 
-Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Filter
 
