@@ -4,17 +4,17 @@ solution: Experience Platform
 title: array-, list- und set-Funktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 98%
+source-wordcount: '734'
+ht-degree: 96%
 
 ---
 
 
 # array-, list- und set-Funktionen
 
-[!DNL Profile Query Language] (PQL) Angebot-Funktionen, um die Interaktion mit Arrays, Listen und Zeichenfolgen zu vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+[!DNL Profile Query Language] (PQL) Angebot-Funktionen, um die Interaktion mit Arrays, Listen und Zeichenfolgen zu vereinfachen. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Enthalten
 
@@ -228,7 +228,7 @@ Mit der folgenden PQL-Abfrage wird ein neues Array mit Zahlen erstellt und der W
 numbers.map(square)
 ```
 
-## Erste `n` in Array
+## Erste `n` in Array {#first-n}
 
 Die `topN`-Funktion gibt die ersten `N` Elemente in einem Array zurück, wenn sie anhand des angegebenen numerischen Ausdrucks in aufsteigender Reihenfolge sortiert werden.
 
@@ -288,7 +288,7 @@ Mit der `head`-Funktion wird das erste Element im Array oder in der Liste zurüc
 
 **Beispiel**
 
-Die folgende PQL-Abfrage gibt die erste der fünf häufigsten Bestellungen mit dem höchsten Preis zurück. Weiterführende Informationen zur `topN`-Funktion finden Sie im Abschnitt [Erste `n` in Array](#first-n-in-array).
+Die folgende PQL-Abfrage gibt die erste der fünf häufigsten Bestellungen mit dem höchsten Preis zurück. Weiterführende Informationen zur `topN`-Funktion finden Sie im Abschnitt [Erste `n` in Array](#first-n).
 
 ```sql
 orders.topN(price, 5).head()
