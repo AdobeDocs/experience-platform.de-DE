@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Sonstige Funktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 91%
+source-wordcount: '102'
+ht-degree: 79%
 
 ---
 
 
 # Sonstige Funktionen
 
-The following function is a miscellaneous function for [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+The following function is a miscellaneous function for [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Let
 
