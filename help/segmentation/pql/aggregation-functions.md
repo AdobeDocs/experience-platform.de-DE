@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Aggregationsfunktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 24%
+source-wordcount: '205'
+ht-degree: 17%
 
 ---
 
 
 # Aggregationsfunktionen
 
-Aggregationsfunktionen werden verwendet, um mehrere Werte innerhalb von [!DNL Profile Query Language] (PQL-)Arrays zu gruppieren und einen einzigen Zusammenfassungswert zu bilden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Aggregationsfunktionen werden verwendet, um mehrere Werte innerhalb von [!DNL Profile Query Language] (PQL-)Arrays zu gruppieren und einen einzigen Zusammenfassungswert zu bilden. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Anzahl
 
