@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Überwachen von Konten und Datenflüssen
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 5%
 
 ---
@@ -106,7 +106,7 @@ Dieser Abschnitt enthält auch eine Vorschau der Spalte, die den Fehler enthält
 
 ![Vorschau-Fehlerdiagnose](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-Nach der Vorschau der Fehler können Sie im Übersichtsbedienfeld für den **[!UICONTROL UICONTROL-Datendurchlauf die Option &quot;]** Herunterladen **[&quot;auswählen, um auf die vollständige Fehlerdiagnose zuzugreifen und das Dateimanifest herunterzuladen]** . Weitere Informationen finden Sie in den Dokumenten zur [Fehlerdiagnose](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) und zum [Herunterladen von Metadaten](../../../ingestion/batch-ingestion/partial.md#download-metadata) .
+Nach der Vorschau der Fehler können Sie im Übersichtsbedienfeld für **[!UICONTROL Datenfelder]** , auf die Sie zugreifen möchten, die Option &quot; **[!UICONTROL Herunterladen]** &quot;wählen, um die Fehlerdiagnose vollständig aufzurufen und das Dateimanifest herunterzuladen. Weitere Informationen finden Sie in den Dokumenten zur [Fehlerdiagnose](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) und zum [Herunterladen von Metadaten](../../../ingestion/batch-ingestion/partial.md#download-metadata) .
 
 ![Vorschau-Fehlerdiagnose](../../images/tutorials/monitor/download.png)
 
