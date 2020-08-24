@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Der Data Connector von Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 42%
@@ -51,7 +51,9 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 | Neue Daten an Data Lake | &lt; 45 Minuten |
 | Aufstockungsdaten (13 Monate Daten oder 10 Milliarden Ereignisse, je nachdem, welcher Wert niedriger ist) | &lt; 4 Wochen |
 
->[!NOTE] Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Verbraucheranwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
+>[!NOTE]
+>
+> Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Verbraucheranwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
 
 ## Primär-IDs in Analytics-Daten
 
