@@ -5,7 +5,7 @@ title: Erfüllen von Opt-outs
 topic: overview
 description: 'Mit der Experience Platform können Ihre Kunden Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils senden.] Diese Opt-out-Anfragen sind Teil des California Consumer Privacy Act (CCPA), der kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 62%
@@ -45,7 +45,7 @@ Im Folgenden finden Sie ein Beispielbild mit den Opt-out-Mixins, die einem Schem
 
 Die Struktur der einzelnen Mixins sowie eine Beschreibung der Felder, die sie zum Schema beitragen, sind in den folgenden Abschnitten detaillierter dargestellt.
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 The [!DNL Profile Privacy] mixin allows you to capture two kinds of CCPA opt-out requests from customers:
 
@@ -69,7 +69,7 @@ Das [!DNL Profile Privacy] Mixin enthält die folgenden Felder:
 
 To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 The [!DNL Profile Preferences Details] mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). In einem der Felder, die in diesem Mixin enthalten sind, erlaubt „OptInOut“ (`optInOut`) das Festlegen von Opt-out-Werten für einzelne Kanäle.
 
