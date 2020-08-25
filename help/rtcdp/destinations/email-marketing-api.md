@@ -4,7 +4,7 @@ solution: Experience Platform
 title: E-Mail-Marketing-Ziele erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1610'
 ht-degree: 81%
@@ -12,7 +12,7 @@ ht-degree: 81%
 ---
 
 
-# Create email marketing destinations and activate data in Adobe&#39;s [!DNL Real-time Customer Data Platform]
+# E-Mail-Marketing-Ziele erstellen und Daten in der Adobe aktivieren [!DNL Real-time Customer Data Platform]
 
 In dieser Anleitung erfahren Sie, wie Sie mithilfe von API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, ein [E-Mail-Marketing-Ziel](../../rtcdp/destinations/email-marketing-destinations.md) erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel einrichten und Daten zu Ihrem neu erstellten Ziel aktivieren können.
 
@@ -26,7 +26,7 @@ Wenn Sie lieber die Benutzeroberfläche der Echtzeit-Kundendatenplattform von Ad
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] ist das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform].
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
@@ -81,7 +81,7 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 ### Swagger-Dokumentation
 
-Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. See the [Flow Service API documentation on Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. Weitere Informationen finden Sie in der Dokumentation zur [Flow Service API unter Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
 
 ## Liste der verfügbaren Ziele abrufen {#get-the-list-of-available-destinations}
 
@@ -112,7 +112,7 @@ curl -X GET \
 
 -->
 
-```
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -135,7 +135,7 @@ Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre ei
 }
 ```
 
-## Connect to your [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
+## Herstellen einer Verbindung zu Ihren [!DNL Experience Platform] Daten {#connect-to-your-experience-platform-data}
 
 ![Übersicht über die Zielschritte – Schritt 2](/help/rtcdp/destinations/assets/flow-api-destinations-step2.png)
 
@@ -179,7 +179,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -209,7 +209,7 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 }
 ```
 
-### Connect to your [!DNL Experience Platform] data
+### Herstellen einer Verbindung zu Ihren [!DNL Experience Platform] Daten
 
 **API-Format**
 
@@ -247,7 +247,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -271,7 +271,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Verwenden Sie die Kennung, die Sie im vorherigen Schritt erhalten haben.
-* `{CONNECTION_SPEC_ID}`: Use the connection spec ID for [!DNL Unified Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID für [!DNL Unified Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwort**
 
@@ -334,7 +334,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -417,7 +417,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -550,7 +550,7 @@ PATCH /flows
 
 **Anfrage**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -622,7 +622,7 @@ GET /flows
 
 **Anfrage**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -639,7 +639,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 Die zurückgegebene Antwort sollte im `transformations`-Parameter die Segmente und Profilattribute enthalten, die Sie im vorherigen Schritt gesendet haben. Ein Beispielparameter `transformations` in der Antwort könnte wie folgt aussehen:
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",
