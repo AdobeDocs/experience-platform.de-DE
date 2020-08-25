@@ -5,7 +5,7 @@ seo-title: Erste Schritte mit der Echtzeit-Kundendatenplattform von Adobe
 description: Beispielszenario für die Echtzeit-Kundendatenplattform von Adobe
 seo-description: Beispielszenario für die Echtzeit-Kundendatenplattform von Adobe
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 87%
@@ -216,7 +216,7 @@ Das Data-Science-Team von Luma hat Modelle zur Kauftendenz entwickelt. Ein Model
 
 Ändern oder erstellen Sie ein Segment, das Warenkorb-Abbrecher repräsentiert, die vermutlich gerade ein Geschenk kaufen:
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
