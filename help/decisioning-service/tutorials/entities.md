@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verwalten von Decisioning Service-Entitäten mithilfe von APIs
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 96%
@@ -94,7 +94,7 @@ Die Liste zugänglicher Container wird mit einer HTTP GET-Anfrage durch Aufruf d
 
 ## Zugriff auf Container verwalten
 
-Ein Administrator kann ähnliche Prinzipale, Ressourcen und Zugriffsberechtigungen in Profilen gruppieren. Dies verringert den Verwaltungsaufwand und wird von der [Benutzeroberfläche von Adobe Admin Console](https://adminconsole.adobe.com) unterstützt. Sie müssen Produktadministrator für die Adobe Experience Platform in Ihrem Unternehmen sein, um Profil zu erstellen und ihnen Benutzer zuzuweisen.
+Ein Administrator kann ähnliche Prinzipale, Ressourcen und Zugriffsberechtigungen in Profilen gruppieren. Dies verringert den Verwaltungsaufwand und wird von der [Benutzeroberfläche von Adobe Admin Console](https://adminconsole.adobe.com) unterstützt. Sie müssen Produktadministrator für Adobe Experience Platform in Ihrem Unternehmen sein, um Profile zu erstellen und Benutzer zuzuweisen.
 
 Es reicht aus, in einem einmaligen Schritt Produktprofile einzurichten, die bestimmten Berechtigungen entsprechen, und diesen Profilen dann einfach Benutzer hinzuzufügen. Profile dienen als Gruppen, denen Berechtigungen erteilt wurden; alle echten Benutzer oder technischen Benutzer in dieser Gruppe erben diese Berechtigungen.
 
@@ -776,7 +776,7 @@ Der Verweis auf die Regel ist in die Eigenschaft `xdm:selectionConstraint` einge
 
 Das Hinzufügen und Löschen einer Regel lässt sich auch mit einem PATCH-Vorgang erreichen:
 
-```
+```json
 [
   {
     "op":   "replace",
