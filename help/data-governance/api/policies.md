@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Richtlinien
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7bc7050d64727f09d3a13d803d532a9a3ba5d1a7
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1756'
 ht-degree: 8%
@@ -18,7 +18,7 @@ Data usage policies are rules that describe the kinds of marketing actions that 
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 ## Retrieve a list of policies {#list}
 
@@ -35,7 +35,7 @@ GET /policies/custom
 
 Die folgende Anforderung ruft eine Liste von benutzerdefinierten Richtlinien ab, die von Ihrem Unternehmen definiert wurden.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -141,12 +141,12 @@ Eine erfolgreiche Antwort enthält ein `children` Array, das die Details der ein
 | --- | --- |
 | `_page.count` | Die Gesamtzahl der abgerufenen Richtlinien. |
 | `name` | Der Anzeigename für eine Richtlinie. |
-| `status` | Der aktuelle Status einer Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED`oder `DISABLED`. By default, only `ENABLED` policies participate in evaluation. See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
-| `marketingActionRefs` | An array that lists the URIs of all applicable marketing actions for a policy. |
+| `status` | Der aktuelle Status einer Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED`oder `DISABLED`. By default, only `ENABLED` policies participate in evaluation. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienbewertung](../enforcement/overview.md) . |
+| `marketingActionRefs` | Ein Array, das die URIs aller für eine Richtlinie geltenden Marketingaktionen Liste. |
 | `description` | Eine optionale Beschreibung, die weiteren Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | An object which describes the specific data usage labels that a policy&#39;s associated marketing action is restricted from being performed on. See the section on [creating a policy](#create-policy) for more information on this property. |
+| `deny` | Ein Objekt, das die spezifischen Datenverwendungsbeschriftungen beschreibt, an denen die zugeordnete Marketingaktion einer Richtlinie nicht ausgeführt werden kann. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt zum [Erstellen einer Richtlinie](#create-policy) . |
 
-## Look up a policy {#look-up}
+## Eine Richtlinie nachschlagen {#look-up}
 
 Sie können eine bestimmte Richtlinie nachschlagen, indem Sie die `id` Eigenschaft dieser Richtlinie in den Pfad einer GET-Anforderung aufnehmen.
 
@@ -163,7 +163,7 @@ GET /policies/custom/{POLICY_ID}
 
 **Anfrage**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -225,16 +225,16 @@ Eine erfolgreiche Antwort gibt die Details der Richtlinie zurück.
 | `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED`oder `DISABLED`. By default, only `ENABLED` policies participate in evaluation. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienbewertung](../enforcement/overview.md) . |
 | `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketingaktionen Liste. |
 | `description` | Eine optionale Beschreibung, die weiteren Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | Ein Objekt, das die spezifischen Datenverwendungsbeschriftungen beschreibt, an denen die zugeordnete Marketingaktion der Richtlinie nicht ausgeführt werden darf. See the section on [creating a policy](#create-policy) for more information on this property. |
+| `deny` | Ein Objekt, das die spezifischen Datenverwendungsbeschriftungen beschreibt, an denen die zugeordnete Marketingaktion der Richtlinie nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt zum [Erstellen einer Richtlinie](#create-policy) . |
 
 ## Create a custom policy {#create-policy}
 
-In the [!DNL Policy Service] API, a policy is defined by the following:
+In der [!DNL Policy Service] API wird eine Richtlinie wie folgt definiert:
 
 * Ein Verweis auf eine bestimmte Marketingaktion
-* An expression describing the data usage labels that the marketing action is restricted from being performed against
+* Ein Ausdruck, der die Datenverwendungsbeschriftungen beschreibt, die die Marketingaktion von der Ausführung gegen
 
-Um diese Anforderung zu erfüllen, müssen Richtliniendefinitionen einen booleschen Ausdruck zum Vorhandensein von Datenverwendungsbeschriftungen enthalten. This expression is called a **policy expression**.
+Um diese Anforderung zu erfüllen, müssen Richtliniendefinitionen einen booleschen Ausdruck zum Vorhandensein von Datenverwendungsbeschriftungen enthalten. Dieser Ausdruck wird als **Ausdruck** bezeichnet.
 
 Richtlinien-Ausdruck werden in jeder Richtliniendefinition in Form einer `deny` Eigenschaft bereitgestellt. Ein Beispiel für ein einfaches `deny` Objekt, das nur das Vorhandensein einer einzelnen Beschriftung überprüft, würde wie folgt aussehen:
 
@@ -244,7 +244,7 @@ Richtlinien-Ausdruck werden in jeder Richtliniendefinition in Form einer `deny` 
 }
 ```
 
-However, many policies specify more complex conditions regarding the presence of data usage labels. Um diese Anwendungsfälle zu unterstützen, können Sie auch boolesche Vorgänge zur Beschreibung Ihrer Richtlinien-Ausdruck einschließen. Das policy Ausdruck-Objekt muss _entweder_ eine Beschriftung __ oder einen Operator und Operanden enthalten, jedoch nicht beides. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt.
+In vielen Richtlinien werden jedoch komplexere Bedingungen für das Vorhandensein von Datenverwendungsbeschriftungen festgelegt. Um diese Anwendungsfälle zu unterstützen, können Sie auch boolesche Vorgänge zur Beschreibung Ihrer Richtlinien-Ausdruck einschließen. Das policy Ausdruck-Objekt muss _entweder_ eine Beschriftung __ oder einen Operator und Operanden enthalten, jedoch nicht beides. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt.
 
 Um beispielsweise eine Richtlinie zu definieren, die verhindert, dass eine Marketingaktion für Daten ausgeführt wird, in denen `C1 OR (C3 AND C7)` Beschriftungen vorhanden sind, wird die Eigenschaft der Richtlinie `deny` wie folgt angegeben:
 
@@ -266,7 +266,7 @@ Um beispielsweise eine Richtlinie zu definieren, die verhindert, dass eine Marke
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `operator` | Indicates the conditional relationship between the labels provided in the sibling `operands` array. Akzeptierte Werte sind: <ul><li>`OR`: Der Ausdruck wird in &quot;true&quot;aufgelöst, wenn eine der Beschriftungen im `operands` Array vorhanden ist.</li><li>`AND`: The expression only resolves to true if all of the labels in the `operands` array are present.</li></ul> |
+| `operator` | Gibt die bedingte Beziehung zwischen den im Geschwisterarray bereitgestellten Beschriftungen `operands` an. Akzeptierte Werte sind: <ul><li>`OR`: Der Ausdruck wird in &quot;true&quot;aufgelöst, wenn eine der Beschriftungen im `operands` Array vorhanden ist.</li><li>`AND`: Der Ausdruck wird nur dann auf &quot;true&quot;aufgelöst, wenn alle Beschriftungen im `operands` Array vorhanden sind.</li></ul> |
 | `operands` | Ein Array von Objekten, wobei jedes Objekt entweder eine einzelne Beschriftung oder ein zusätzliches Paar `operator` und `operands` Eigenschaften darstellt. Das Vorhandensein der Beschriftungen und/oder Vorgänge in einem `operands` Array wird basierend auf dem Wert der zugehörigen `operator` Eigenschaft &quot;Geschwister&quot;zu &quot;true&quot;oder &quot;false&quot;aufgelöst. |
 | `label` | Der Name einer einzelnen Datenverwendungsbeschriftung, die für die Richtlinie gilt. |
 
@@ -282,7 +282,7 @@ POST /policies/custom
 
 Die folgende Anforderung erstellt eine neue Richtlinie, die die Ausführung der Marketingaktion `exportToThirdParty` auf Daten mit Beschriftungen einschränkt `C1 OR (C3 AND C7)`.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -374,7 +374,7 @@ A successful response returns the details of the newly created policy, including
 >
 >Sie können nur benutzerdefinierte Richtlinien aktualisieren. Wenn Sie die Kernrichtlinien aktivieren oder deaktivieren möchten, lesen Sie den Abschnitt zur [Aktualisierung der Liste der aktivierten Hauptrichtlinien](#update-enabled-core).
 
-Sie können eine vorhandene benutzerdefinierte Richtlinie aktualisieren, indem Sie ihre ID im Pfad einer PUT-Anforderung mit einer Nutzlast angeben, die das aktualisierte Formular der Richtlinie vollständig enthält. In other words, the PUT request essentially _rewrites_ the policy.
+Sie können eine vorhandene benutzerdefinierte Richtlinie aktualisieren, indem Sie ihre ID im Pfad einer PUT-Anforderung mit einer Nutzlast angeben, die das aktualisierte Formular der Richtlinie vollständig enthält. Mit anderen Worten, die PUT-Anforderung _schreibt_ die Richtlinie im Wesentlichen um.
 
 >[!NOTE]
 >
@@ -396,7 +396,7 @@ In diesem Beispiel haben sich die Bedingungen für den Export von Daten an einen
 
 Mit der folgenden Anforderung wird die vorhandene Richtlinie aktualisiert und der neue Richtlinien-Ausdruck eingefügt. Beachten Sie, dass, da diese Anforderung die Richtlinie im Wesentlichen umschreibt, alle Felder in die Nutzlast einbezogen werden müssen, auch wenn einige ihrer Werte nicht aktualisiert werden.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -423,11 +423,11 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | The display name for the policy. |
+| `name` | Der Anzeigename für die Richtlinie. |
 | `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED`oder `DISABLED`. By default, only `ENABLED` policies participate in evaluation. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienbewertung](../enforcement/overview.md) . |
-| `marketingActionRefs` | An array that lists the URIs of all applicable marketing actions for the policy. Der URI für eine Marketingaktion wird `_links.self.href` in der Antwort für die [Suche nach einer Marketingaktion](./marketing-actions.md#look-up)bereitgestellt. |
+| `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketingaktionen Liste. Der URI für eine Marketingaktion wird `_links.self.href` in der Antwort für die [Suche nach einer Marketingaktion](./marketing-actions.md#look-up)bereitgestellt. |
 | `description` | Eine optionale Beschreibung, die weiteren Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | The policy expression that describes the specific data usage labels the policy&#39;s associated marketing action is restricted from being performed on. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt zum [Erstellen einer Richtlinie](#create-policy) . |
+| `deny` | Der Ausdruck der Richtlinie, der die spezifischen Datenverwendungsbeschriftungen beschreibt, mit denen die verknüpfte Marketingaktion der Richtlinie gekennzeichnet ist, ist von der Ausführung ausgeschlossen. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt zum [Erstellen einer Richtlinie](#create-policy) . |
 
 **Antwort**
 
@@ -474,7 +474,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Richtlinie zurück
 >
 >Sie können nur benutzerdefinierte Richtlinien aktualisieren. Wenn Sie die Kernrichtlinien aktivieren oder deaktivieren möchten, lesen Sie den Abschnitt zur [Aktualisierung der Liste der aktivierten Hauptrichtlinien](#update-enabled-core).
 
-Ein bestimmter Teil einer Richtlinie kann mithilfe einer PATCH-Anfrage aktualisiert werden. Unlike PUT requests that rewrite the policy, PATCH requests update only the properties specified in the request body. Dies ist besonders hilfreich, wenn Sie eine Richtlinie aktivieren oder deaktivieren möchten, da Sie nur den Pfad zur entsprechenden Eigenschaft (`/status`) und deren Wert (`ENABLED` oder `DISABLED`) angeben müssen.
+Ein bestimmter Teil einer Richtlinie kann mithilfe einer PATCH-Anfrage aktualisiert werden. Im Gegensatz zu PUT-Anforderungen, die die Richtlinie umschreiben, aktualisieren PATCH-Anfragen nur die im Anforderungstext angegebenen Eigenschaften. Dies ist besonders hilfreich, wenn Sie eine Richtlinie aktivieren oder deaktivieren möchten, da Sie nur den Pfad zur entsprechenden Eigenschaft (`/status`) und deren Wert (`ENABLED` oder `DISABLED`) angeben müssen.
 
 >[!NOTE]
 >
@@ -494,11 +494,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Anfrage**
 
-The following request uses two `replace` operations to change the policy status from `DRAFT` to `ENABLED`, and to update the `description` field with a new description.
+Die folgende Anforderung verwendet zwei `replace` Vorgänge, um den Richtlinienstatus von `DRAFT` in zu ändern `ENABLED`und das `description` Feld mit einer neuen Beschreibung zu aktualisieren.
 
 >[!IMPORTANT]
 >
->When sending multiple PATCH operations in a single request, they will be processed in the order in which they appear in the array. Vergewissern Sie sich, dass Sie die Anfragen bei Bedarf in der richtigen Reihenfolge senden.
+>Wenn mehrere PATCH-Vorgänge in einer einzigen Anforderung gesendet werden, werden sie in der Reihenfolge verarbeitet, in der sie im Array angezeigt werden. Vergewissern Sie sich, dass Sie die Anfragen bei Bedarf in der richtigen Reihenfolge senden.
 
 ```SHELL
 curl -X PATCH \
@@ -570,7 +570,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Richtlinie zurück
 }
 ```
 
-## Delete a custom policy {#delete}
+## Eine benutzerdefinierte Richtlinie löschen {#delete}
 
 You can delete a custom policy by including its `id` in the path of a DELETE request.
 
@@ -590,7 +590,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 **Anfrage**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -601,7 +601,7 @@ curl -X DELETE \
 
 **Antwort**
 
-A successful response returns HTTP status 200 (OK) with a blank body.
+Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) mit einem leeren Text zurück.
 
 Sie können den Löschvorgang bestätigen, indem Sie versuchen, die Richtlinie erneut nachzuschlagen (GET). Sie sollten den HTTP 404-Fehler (Nicht gefunden) erhalten, wenn die Richtlinie erfolgreich gelöscht wurde.
 
@@ -617,7 +617,7 @@ GET /enabledCorePolicies
 
 **Anfrage**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -659,11 +659,11 @@ Eine erfolgreiche Antwort gibt die Liste der aktivierten Core-Richtlinien unter 
 
 ## Liste der aktivierten Hauptrichtlinien aktualisieren {#update-enabled-core}
 
-By default, only enabled data usage policies participate in evaluation. By making a PUT request to the `/enabledCorePolicies` endpoint, you can update the list of enabled core policies for your organization using a single call.
+Standardmäßig werden nur aktivierte Datenverwendungsrichtlinien an der Auswertung beteiligt. Wenn Sie eine PUT-Anforderung an den `/enabledCorePolicies` Endpunkt stellen, können Sie die Liste der aktivierten Core-Richtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
 
 >[!NOTE]
 >
->Only core policies can be enabled or disabled by this endpoint. To enable or disable custom policies, see the section on [updating a portion of a policy](#patch).
+>Nur Kernrichtlinien können von diesem Endpunkt aktiviert oder deaktiviert werden. Informationen zum Aktivieren oder Deaktivieren benutzerdefinierter Richtlinien finden Sie im Abschnitt zum [Aktualisieren eines Teils einer Richtlinie](#patch).
 
 **API-Format**
 
@@ -675,7 +675,7 @@ PUT /enabledCorePolicies
 
 Die folgende Anforderung aktualisiert die Liste der aktivierten Core-Richtlinien auf der Grundlage der in der Nutzlast bereitgestellten IDs.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -694,7 +694,7 @@ curl -X GET \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `policyIds` | Eine Liste der zu aktivierenden Hauptrichtlinien-IDs. Any core policies that are not included are set to `DISABLED` status and will not participate in evaluation. |
+| `policyIds` | Eine Liste der zu aktivierenden Hauptrichtlinien-IDs. Sämtliche nicht einbezogenen Kernrichtlinien sind auf den `DISABLED` Status eingestellt und werden nicht an der Evaluierung teilnehmen. |
 
 **Antwort**
 
