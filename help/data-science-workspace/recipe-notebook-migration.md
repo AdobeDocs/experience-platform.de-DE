@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 1%
@@ -29,14 +29,14 @@ Jüngste Änderungen [!DNL Data Science Workspace] erfordern, dass bestehende [!
 - [Spark-Migrationshandbuch](#spark-migration-guide)
    - [Lesen und Schreiben von Datensätzen ändern](#read-write-recipe-spark)
    - [Beispielrezept herunterladen](#download-sample-spark)
-   - [Hinzufügen der Dockerdatei](#add-dockerfile-spark)
+   - [hinzufügen der Dockerdatei](#add-dockerfile-spark)
    - [Abhängigkeiten überprüfen](#change-dependencies-spark)
    - [Vorbereiten von Dockerskripten](#prepare-docker-spark)
    - [Rezept mit Docker erstellen](#create-recipe-spark)
 - [Migrationshandbuch für PySpark](#pyspark-migration-guide)
    - [Lesen und Schreiben von Datensätzen ändern](#pyspark-read-write)
    - [Beispielrezept herunterladen](#pyspark-download-sample)
-   - [Hinzufügen der Dockerdatei](#pyspark-add-dockerfile)
+   - [hinzufügen der Dockerdatei](#pyspark-add-dockerfile)
    - [Vorbereiten von Dockerskripten](#pyspark-prepare-docker)
    - [Rezept mit Docker erstellen](#pyspark-create-recipe)
 
@@ -132,7 +132,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 Das Scala-Rezept befindet sich im folgenden Verzeichnis `experience-platform-dsw-reference/recipes/scala/retail`.
 
-### Hinzufügen der Dockerdatei ([!DNL Spark]) {#add-dockerfile-spark}
+### hinzufügen der Dockerdatei ([!DNL Spark]) {#add-dockerfile-spark}
 
 Eine neue Datei wird im Skriptordner benötigt, um den dockerbasierten Workflow verwenden zu können. Kopieren Sie die Dockerdatei aus dem Ordner recipes unter `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Optional können Sie auch den unten stehenden Code kopieren und in eine neue Datei namens `Dockerfile`.
 
@@ -269,7 +269,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 Das PySpark-Rezept befindet sich im folgenden Verzeichnis `experience-platform-dsw-reference/recipes/pyspark`.
 
-### Hinzufügen der Dockerfile (PySpark) {#pyspark-add-dockerfile}
+### hinzufügen der Dockerfile (PySpark) {#pyspark-add-dockerfile}
 
 Eine neue Datei wird im Skriptordner benötigt, um den dockerbasierten Workflow verwenden zu können. Kopieren Sie die Dockerdatei aus dem Ordner recipes unter `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Optional können Sie auch den unten stehenden Code kopieren und einfügen und eine neue Datei namens `Dockerfile`.
 
@@ -769,6 +769,7 @@ Das Scala-Notebook ([!DNL Spark] 2.4) verwendet den Scala-Kernel, der bei der Ei
 >[!TIP]
 >
 >In Scala können Sie einen Wert deklarieren und `sys.env()` von innen zurückgeben `option`. Dadurch müssen Variablen nicht mehr definiert werden, wenn Sie wissen, dass sie nur einmal verwendet werden. Das folgende Beispiel nimmt `val userToken` das oben stehende Beispiel und deklariert es in Zeile `option`:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
