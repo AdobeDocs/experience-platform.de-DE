@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Beispielabfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 88%
@@ -135,7 +135,7 @@ Here are the XDM fields to access the merchandising variables in your [!DNL Anal
 
 ### eVars
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -143,7 +143,7 @@ Dabei ist `[#]` ein Array-Index und `evar#` die spezifische eVar-Variable.
 
 ### Benutzerspezifische Ereignisse
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
@@ -189,7 +189,7 @@ LIMIT 20
 
 Der Fehler „No such struct field“ (Kein solches Strukturfeld) tritt auf, wenn Sie versuchen, ein Feld abzurufen, das in Ihrem aktuellen Datensatz nicht vorhanden ist. Werten Sie den in der Fehlermeldung zurückgegebenen Grund aus, um ein verfügbares Feld zu identifizieren. Aktualisieren Sie dann Ihre Abfrage und führen Sie sie erneut aus.
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -220,7 +220,7 @@ Here are the XDM fields to produce the Conversion Syntax in your [!DNL Analytics
 
 ### eVars
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -228,7 +228,7 @@ Wobei `evar#` die spezifische eVar-Variable ist.
 
 ### Produkt
 
-```
+```console
 productListItems[#].sku
 ```
 
