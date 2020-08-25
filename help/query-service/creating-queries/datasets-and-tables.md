@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datensätze vs. Tabellen und Schemas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 79%
@@ -35,7 +35,7 @@ To view the available tables on [!DNL Platform] with SQL, you can use either `\d
 
 `\d` zeigt die standardmäßige PostgreSQL-Ansicht an.
 
-```
+```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
@@ -46,7 +46,7 @@ To view the available tables on [!DNL Platform] with SQL, you can use either `\d
 
 `SHOW TABLES;` ist ein benutzerdefinierter Befehl, der eine detailliertere Ansicht bietet und die Tabelle sowie den Dataset-Namen in der [!DNL Platform] Benutzeroberfläche darstellt.
 
-```
+```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
 -----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
@@ -62,7 +62,7 @@ Um das Stammschema einer Tabelle anzuzeigen, verwenden Sie den Befehl `\d table_
 
 `\d luma_midvalues`
 
-```
+```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 -------------------+-----------------------------+-----------+----------+---------
@@ -87,7 +87,7 @@ Um das Schema genauer anzusehen, verwenden Sie Unterstriche (`_`). Dadurch könn
 
 `\d luma_midvalues_web`
 
-```
+```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 ----------------+-----------------------------------+-----------+----------+---------
