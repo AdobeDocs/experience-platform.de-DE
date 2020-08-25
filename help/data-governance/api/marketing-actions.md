@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Marketing-Aktionen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 5%
@@ -35,9 +35,9 @@ GET /marketingActions/custom
 
 **Anfrage**
 
-The following request retrieves a list of custom marketing actions maintained by your organization.
+Die folgende Anforderung ruft eine Liste von benutzerspezifischen Marketingaktionen ab, die von Ihrem Unternehmen verwaltet werden.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details zu jeder abgerufenen Marketingaktion zurück, einschließlich ihrer `name` und `href`. The `href` value is used to identify the marketing action when [creating a data usage policy](policies.md#create-policy).
+Eine erfolgreiche Antwort gibt die Details zu jeder abgerufenen Marketingaktion zurück, einschließlich ihrer `name` und `href`. Der `href` Wert wird zur Identifizierung der Marketingaktion verwendet, wenn eine Datenverwendungsrichtlinie [erstellt wird](policies.md#create-policy).
 
 ```json
 {
@@ -100,9 +100,9 @@ Eine erfolgreiche Antwort gibt die Details zu jeder abgerufenen Marketingaktion 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `_page.count` | The total number of marketing actions returned. |
+| `_page.count` | Die Gesamtzahl der zurückgegebenen Marketingaktionen. |
 | `children` | Ein Array von Objekten, die die Details der abgerufenen Marketingaktionen enthalten. |
-| `name` | The name of the marketing action, which acts as its unique identifier when [looking up a specific marketing action](#lookup). |
+| `name` | Der Name der Marketingaktion, die bei der [Suche nach einer bestimmten Marketingaktion](#lookup)als eindeutige Kennung dient. |
 | `_links.self.href` | Eine URI-Referenz für die Marketingaktion, die zum Abschließen des `marketingActionsRefs` Arrays beim [Erstellen einer Datenverwendungsrichtlinie](policies.md#create-policy)verwendet werden kann. |
 
 ## Suchen Sie nach einer bestimmten Marketingaktion {#lookup}
@@ -122,9 +122,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Anfrage**
 
-The following request retrieves a custom marketing action named `combineData`.
+Die folgende Anforderung ruft eine benutzerdefinierte Marketingaktion mit dem Namen `combineData`ab.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -168,13 +168,13 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | The name of the marketing action to be created or updated. Wenn im System bereits eine Marketingaktion mit dem angegebenen Namen vorhanden ist, wird diese Marketingaktion aktualisiert. Wenn keine Marketingaktion vorhanden ist, wird eine neue Marketingaktion für den angegebenen Namen erstellt. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die erstellt oder aktualisiert werden soll. Wenn im System bereits eine Marketingaktion mit dem angegebenen Namen vorhanden ist, wird diese Marketingaktion aktualisiert. Wenn keine Marketingaktion vorhanden ist, wird eine neue Marketingaktion für den angegebenen Namen erstellt. |
 
 **Anfrage**
 
 Die folgende Anforderung erstellt eine neue Marketingaktion mit dem Namen `crossSiteTargeting`, sofern im System noch keine Marketingaktion mit demselben Namen vorhanden ist. Wenn eine `crossSiteTargeting` Marketingaktion vorhanden ist, wird diese Marketingaktion stattdessen anhand der in der Nutzlast bereitgestellten Eigenschaften aktualisiert.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -190,12 +190,12 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | The name of the marketing action to be created or updated. <br><br>**WICHTIG **: Diese Eigenschaft muss mit dem`{MARKETING_ACTION_NAME}`im Pfad übereinstimmen, andernfalls tritt ein HTTP-400-Fehler (Fehlerhafte Anforderung) auf. Mit anderen Worten, sobald eine Marketingaktion erstellt wurde, kann ihre`name`Eigenschaft nicht mehr geändert werden. |
+| `name` | Der Name der Marketingaktion, die erstellt oder aktualisiert werden soll. <br><br>**WICHTIG**: Diese Eigenschaft muss mit dem `{MARKETING_ACTION_NAME}` im Pfad übereinstimmen, andernfalls tritt ein HTTP-400-Fehler (Fehlerhafte Anforderung) auf. Mit anderen Worten, sobald eine Marketingaktion erstellt wurde, kann ihre `name` Eigenschaft nicht mehr geändert werden. |
 | `description` | Eine optionale Beschreibung, um weitere Kontexte für die Marketingaktion anzugeben. |
 
 **Antwort**
 
-A successful response returns the details of the marketing action. Wenn eine vorhandene Marketingaktion aktualisiert wurde, gibt die Antwort den HTTP-Status 200 (OK) zurück. Wenn eine neue Marketingaktion erstellt wurde, gibt die Antwort den HTTP-Status 201 (Erstellt) zurück.
+Eine erfolgreiche Antwort gibt die Details der Marketingaktion zurück. Wenn eine vorhandene Marketingaktion aktualisiert wurde, gibt die Antwort den HTTP-Status 200 (OK) zurück. Wenn eine neue Marketingaktion erstellt wurde, gibt die Antwort den HTTP-Status 201 (Erstellt) zurück.
 
 ```JSON
 {
@@ -232,11 +232,11 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | The name of the marketing action you want to delete. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die Sie löschen möchten. |
 
 **Anfrage**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
