@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Richtlinien
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 14%
@@ -22,15 +22,15 @@ Bewertungsanfragen können auf drei Arten gestellt werden:
 
 1. Verstößt die Aktion angesichts einer Marketingaktion und einer Reihe von Beschreibungen zur Datenverwendung gegen Richtlinien?
 1. Verstößt die Aktion angesichts einer Marketingaktion und eines oder mehrerer Datensätze gegen eine Richtlinie?
-1. Given a marketing action, one or more datasets, and a subset of one or more fields within each of those datasets, does the action violate any policies?
+1. Verstößt die Aktion angesichts einer Marketingaktion, eines oder mehrerer Datensätze und einer Untergruppe von einem oder mehreren Feldern innerhalb jedes dieser Datensätze gegen eine Richtlinie?
 
 ## Erste Schritte
 
-The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](./getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
-## Evaluate for policy violations using data usage labels {#labels}
+## Auf Richtlinienverletzungen mithilfe von Datenverwendungsbeschriftungen bewerten {#labels}
 
-You can evaluate for policy violations based on the presence of a specific set of data usage labels by using the `duleLabels` query parameter in a GET request.
+Sie können anhand des Parameters `duleLabels` Abfrage in einer GET-Anforderung bewerten, ob eine Richtlinie verletzt wurde.
 
 **API-Format**
 
@@ -41,7 +41,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | The name of the marketing action to test against a set of data usage labels. Sie können eine Liste der verfügbaren Marketingaktionen abrufen, indem Sie eine [GET an den Endpunkt](./marketing-actions.md#list)der Marketingaktionen anfordern. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die mit einer Reihe von Beschriftungen für die Datenverwendung getestet werden soll. Sie können eine Liste der verfügbaren Marketingaktionen abrufen, indem Sie eine [GET an den Endpunkt](./marketing-actions.md#list)der Marketingaktionen anfordern. |
 | `{LABELS_LIST}` | Eine kommagetrennte Liste von Datenverwendungsbezeichnungen, mit denen die Marketingaktion getestet wird. Beispiel: `duleLabels=C1,C2,C3`<br><br>Beachten Sie, dass bei Beschriftungsnamen die Groß-/Kleinschreibung beachtet wird. Stellen Sie sicher, dass Sie die richtige Groß-/Kleinschreibung verwenden, wenn Sie sie im `duleLabels` Parameter auflisten. |
 
 **Anfrage**
@@ -52,7 +52,7 @@ Die folgende Beispielanfrage bewertet eine Marketing-Aktion mit den Bezeichnunge
 >
 >Achten Sie auf `AND`- und `OR`-Operatoren in Ihren Richtlinienausdrücken. In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig bewerten und die Richtlinienausdrücke mit gleicher Sorgfalt definieren.
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -63,7 +63,7 @@ curl -X GET \
 
 **Antwort**
 
-A successful response includes a `violatedPolicies` array, which contains the details of the policies that were violated as a result of performing the marketing action against the provided labels. If no policies are violated, the `violatedPolicies` array will be empty.
+Eine erfolgreiche Antwort beinhaltet ein `violatedPolicies` Array, das die Details der Richtlinien enthält, die bei der Durchführung der Marketingaktion gegen die angegebenen Beschriftungen verletzt wurden. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -134,13 +134,13 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die mit einem oder mehreren Datensätzen getestet werden soll. You can retrieve a list of available marketing actions by making a [GET request to the marketing actions endpoint](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die mit einem oder mehreren Datensätzen getestet werden soll. Sie können eine Liste der verfügbaren Marketingaktionen abrufen, indem Sie eine [GET an den Endpunkt](./marketing-actions.md#list)der Marketingaktionen anfordern. |
 
 **Anfrage**
 
 Die folgende Anforderung führt die `crossSiteTargeting` Marketingaktion für einen Satz von drei Datensätzen aus, um etwaige Richtlinienverletzungen zu bewerten.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -167,7 +167,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `entityType` | Der Typ der Entität, deren ID in der Geschwistereigenschaft angegeben `entityId` ist. Derzeit ist der einzige akzeptierte Wert `dataSet`. |
-| `entityId` | The ID of a dataset to test the marketing action against. Eine Liste der Datensätze und der zugehörigen IDs können Sie erhalten, indem Sie eine GET an den `/dataSets` Endpunkt in der [!DNL Catalog Service] API anfordern. Weitere Informationen finden Sie im Handbuch zu [ [!DNL Catalog] Listenobjekten](../../catalog/api/list-objects.md) . |
+| `entityId` | Die ID eines Datensatzes, mit dem die Marketingaktion getestet wird. Eine Liste der Datensätze und der zugehörigen IDs können Sie erhalten, indem Sie eine GET an den `/dataSets` Endpunkt in der [!DNL Catalog Service] API anfordern. Weitere Informationen finden Sie im Handbuch zu [ [!DNL Catalog] Listenobjekten](../../catalog/api/list-objects.md) . |
 
 **Antwort**
 
@@ -371,7 +371,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 Die folgende Anforderung testet die Marketingaktion `crossSiteTargeting` für einen bestimmten Satz von Feldern, die zu drei Datensätzen gehören. Die Nutzlast ähnelt einer [Bewertungsanforderung, bei der nur Datensätze](#datasets)einbezogen wurden, und fügt für jeden Datensatz spezifische Felder hinzu, aus denen Beschriftungen gesammelt werden sollen.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -422,7 +422,7 @@ curl -X POST \
 
 Eine erfolgreiche Antwort beinhaltet ein `violatedPolicies` Array, das die Details der Richtlinien enthält, die bei der Durchführung der Marketingaktion gegen die bereitgestellten Datensatzfelder verletzt wurden. If no policies are violated, the `violatedPolicies` array will be empty.
 
-Comparing the example response below to the [response involving only datasets](#datasets), note that the list of collected labels is shorter. Die `discoveredLabels` für die einzelnen Datensätze wurden ebenfalls reduziert, da sie nur die im Anforderungstext angegebenen Felder enthalten. In addition, the previously violated policy `Targeting Ads or Content` requires both `C4 AND C6` labels to present, and is therefore no longer violated as indicated by the empty `violatedPolicies` array.
+Beim Vergleich der unten stehenden Beispielantwort mit der [Antwort, die nur Datasets](#datasets)umfasst, beachten Sie, dass die Liste der erfassten Beschriftungen kürzer ist. Die `discoveredLabels` für die einzelnen Datensätze wurden ebenfalls reduziert, da sie nur die im Anforderungstext angegebenen Felder enthalten. Darüber hinaus `Targeting Ads or Content` erfordert die zuvor verletzte Richtlinie, dass beide `C4 AND C6` Bezeichnungen vorhanden sind, und wird daher nicht mehr verletzt, wie durch das leere `violatedPolicies` Array angegeben.
 
 ```JSON
 {
@@ -538,9 +538,9 @@ Die Nutzlast einer Massenauswertungsanforderung sollte ein Array von Objekten se
 
 >[!WARNING]
 >
->If any listed evaluation job contains both an `entityList` and a `labels` array, an error will result. Wenn Sie dieselbe Marketingaktion auf Grundlage von Datensätzen und Etiketten bewerten möchten, müssen Sie für diese Marketingaktion separate Bewertungsaufträge einbeziehen.
+>Wenn ein aufgelisteter Bewertungsauftrag sowohl ein `entityList` als auch ein `labels` Array enthält, wird ein Fehler ausgegeben. Wenn Sie dieselbe Marketingaktion auf Grundlage von Datensätzen und Etiketten bewerten möchten, müssen Sie für diese Marketingaktion separate Bewertungsaufträge einbeziehen.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -580,8 +580,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | Der URI der Marketingaktion zum Testen von Beschriftungen oder Datensätzen auf Richtlinienverletzungen. |
 | `includeDraft` | Standardmäßig werden nur aktivierte Richtlinien an der Auswertung beteiligt. Wenn `includeDraft` dies auf `true`festgelegt ist, werden auch Richtlinien, die sich im `DRAFT` Status befinden, teilnehmen. |
-| `labels` | An array of data usage labels to test the marketing action against.<br><br>**IMPORTANT **: When using this property, an`entityList`property must NOT be included in the same object. Um dieselbe Marketingaktion mit Datensätzen und/oder Feldern auszuwerten, müssen Sie ein separates Objekt in die Anforderungsnutzlast aufnehmen, das ein`entityList`Array enthält. |
-| `entityList` | An array of datasets and (optionally) specific fields within those datasets to test the marketing action against.<br><br>**IMPORTANT **: When using this property, a`labels`property must NOT be included in the same object. To evaluate the same marketing action using specific data usage labels, you must include a separate object in the request payload that contains a`labels`array. |
+| `labels` | Ein Array von Datenverwendungsbeschriftungen zum Testen der Marketingaktion.<br><br>**WICHTIG**: Bei Verwendung dieser Eigenschaft darf eine `entityList` Eigenschaft NICHT im selben Objekt enthalten sein. Um dieselbe Marketingaktion mit Datensätzen und/oder Feldern auszuwerten, müssen Sie ein separates Objekt in die Anforderungsnutzlast aufnehmen, das ein `entityList` Array enthält. |
+| `entityList` | Ein Array von Datensätzen und (optional) spezifischen Feldern in diesen Datensätzen, um die Marketingaktion zu testen.<br><br>**WICHTIG**: Bei Verwendung dieser Eigenschaft darf eine `labels` Eigenschaft NICHT im selben Objekt enthalten sein. Um dieselbe Marketingaktion mit bestimmten Datenverwendungsbeschriftungen auszuwerten, müssen Sie ein separates Objekt in die Anforderungsnutzlast aufnehmen, das ein `labels` Array enthält. |
 | `entityType` | Der Typ der Entität, gegen die die Marketingaktion getestet werden soll. Derzeit wird nur `dataSet` unterstützt. |
 | `entityId` | Die ID eines Datensatzes, mit dem die Marketingaktion getestet wird. |
 | `entityMeta.fields` | (Optional) Eine Liste bestimmter Felder im Datensatz, um die Marketingaktion zu testen. |
