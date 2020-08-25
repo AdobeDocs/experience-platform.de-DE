@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Edge-Prognosen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 10%
@@ -231,7 +231,7 @@ Ein vorhandenes Ziel kann aktualisiert werden, indem eine PUT-Anforderung an den
 
 **API-Format**
 
-```
+```http
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
@@ -299,7 +299,7 @@ Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werd
 
 **API-Format**
 
-```
+```http
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 
