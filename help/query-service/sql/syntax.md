@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL-Syntax
 topic: syntax
 translation-type: tm+mt
-source-git-commit: a10508770a862621403bad94c14db4529051020c
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 95%
@@ -20,7 +20,7 @@ ht-degree: 95%
 
 The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
 
-```
+```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
@@ -37,7 +37,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
 
 wobei `from_item` eines der Folgenden sein kann:
 
-```
+```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
     [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
     with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -46,7 +46,7 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 
 und `grouping_element` eines der Folgenden:
 
-```
+```sql
 ( )
     expression
     ( expression [, ...] )
@@ -57,7 +57,7 @@ und `grouping_element` eines der Folgenden:
 
 und `with_query`:
 
-```
+```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
  
 TABLE [ ONLY ] table_name [ * ]
@@ -67,7 +67,7 @@ TABLE [ ONLY ] table_name [ * ]
 
 Das Schlüsselwort ILIKE kann anstelle von LIKE verwendet werden, um Übereinstimmungen mit der WHERE-Klausel der SELECT-Abfrage zu finden, ohne die Groß-/Kleinschreibung zu berücksichtigen.
 
-```
+```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
@@ -80,7 +80,7 @@ Hier die Logik der LIKE- und ILIKE-Klauseln:
 
 #### Beispiel
 
-```
+```sql
 SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
@@ -91,7 +91,7 @@ Gibt Kunden zurück, deren Namen mit „A“ oder „a“ beginnen.
 
 Eine `SELECT`-Abfrage mit JOINS hat die folgende Syntax:
 
-```
+```sql
 SELECT statement
 FROM statement
 [JOIN | INNER JOIN | LEFT JOIN | LEFT OUTER JOIN | RIGHT JOIN | RIGHT OUTER JOIN | FULL JOIN | FULL OUTER JOIN]
@@ -103,7 +103,7 @@ ON join condition
 
 Die `UNION`-, `INTERSECT`- und `EXCEPT`-Klauseln werden unterstützt, um gleichartige Zeilen aus zwei oder mehr Tabellen zu kombinieren oder auszuschließen:
 
-```
+```sql
 SELECT statement 1
 [UNION | UNION ALL | UNION DISTINCT | INTERSECT | EXCEPT | MINUS]
 SELECT statement 2
@@ -113,7 +113,7 @@ SELECT statement 2
 
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
-```
+```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
 ```
 
@@ -124,7 +124,7 @@ und `select_query` ist eine `SELECT`-Anweisung, deren Syntax oben in diesem Doku
 
 ### Beispiel
 
-```
+```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 ```
@@ -138,7 +138,7 @@ Bitte beachten Sie Folgendes für eine CTAS-Abfrage:
 
 The following syntax defines an `INSERT INTO` query supported by [!DNL Query Service]:
 
-```
+```sql
 INSERT INTO table_name select_query
 ```
 
@@ -146,7 +146,7 @@ wobei `select_query` eine `SELECT`-Anweisung ist, deren Syntax oben in diesem Do
 
 ### Beispiel
 
-```
+```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 ```
 
@@ -159,7 +159,7 @@ Bitte beachten Sie Folgendes für eine INSERT INTO-Abfrage:
 
 Löscht eine Tabelle und löscht das mit der Tabelle verknüpfte Verzeichnis aus dem Dateisystem, wenn es sich nicht um eine EXTERNE Tabelle handelt. Wenn die zu löschende Tabelle nicht vorhanden ist, tritt ein Fehler (Ausnahmebedingung) auf.
 
-```
+```sql
 DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 ```
 
@@ -172,7 +172,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 The following syntax defines a `CREATE VIEW` query supported by [!DNL Query Service]:
 
-```
+```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
 ```
 
@@ -181,7 +181,7 @@ und `select_query` eine `SELECT`-Anweisung ist, deren Syntax oben in diesem Doku
 
 Beispiel:
 
-```
+```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
@@ -190,7 +190,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 The following syntax defines a `DROP VIEW` query supported by [!DNL Query Service]:
 
-```
+```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
@@ -198,7 +198,7 @@ wobei `view_name` der Name der zu löschenden Ansicht ist
 
 Beispiel:
 
-```
+```sql
 DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
@@ -209,7 +209,7 @@ DROP VIEW IF EXISTS v1
 
 Legen Sie eine Eigenschaft fest, geben Sie den Wert einer vorhandenen Eigenschaft zurück oder listen Sie alle vorhandenen Eigenschaften auf. Wenn für einen vorhandenen Eigenschaftenschlüssel ein Wert angegeben wird, wird der alte Wert überschrieben.
 
-```
+```sql
 SET property_key [ To | =] property_value
 ```
 
@@ -221,7 +221,7 @@ Um den Wert einer Einstellung zurückzugeben, verwenden Sie `SHOW [setting name]
 
 Dieser Befehl wird geparst, und der abgeschlossene Befehl wird an den Client zurückgesendet. Dies entspricht dem `START TRANSACTION`-Befehl.
 
-```
+```sql
 BEGIN [ TRANSACTION ]
 ```
 
@@ -233,7 +233,7 @@ BEGIN [ TRANSACTION ]
 
 `CLOSE` gibt die Ressourcen frei, die mit einem geöffneten Cursor verknüpft sind. Nach dem Schließen des Cursors sind keine weiteren Vorgänge zulässig. Ein Cursor sollte geschlossen werden, wenn er nicht mehr benötigt wird.
 
-```
+```sql
 CLOSE { name }
 ```
 
@@ -245,7 +245,7 @@ CLOSE { name }
 
 No action is taken in [!DNL Query Service] as a response to the commit transaction statement.
 
-```
+```sql
 COMMIT [ WORK | TRANSACTION ]
 ```
 
@@ -258,7 +258,7 @@ COMMIT [ WORK | TRANSACTION ]
 
 Verwenden Sie `DEALLOCATE`, um die Zuordnung einer zuvor vorbereiteten SQL-Anweisung aufzuheben. Wenn Sie die Zuordnung einer vorbereiteten Anweisung nicht explizit aufheben, wird dies am Ende der Sitzung ausgeführt.
 
-```
+```sql
 DEALLOCATE [ PREPARE ] { name | ALL }
 ```
 
@@ -272,7 +272,7 @@ DEALLOCATE [ PREPARE ] { name | ALL }
 
 Mit `DECLARE` kann ein Benutzer Cursor erstellen, mit denen eine kleine Anzahl von Zeilen gleichzeitig aus einer größeren Abfrage abgerufen werden kann. Nachdem der Cursor erstellt wurde, werden Zeilen mit `FETCH` abgerufen.
 
-```
+```sql
 DECLARE name CURSOR [ WITH  HOLD ] FOR query
 ```
 
@@ -288,7 +288,7 @@ DECLARE name CURSOR [ WITH  HOLD ] FOR query
 
 Wenn in der `PREPARE`-Anweisung, mit der die Anweisung erstellt wurde, einige Parameter angegeben wurden, muss ein kompatibler Satz von Parametern an die `EXECUTE`-Anweisung übergeben werden. Andernfalls wird ein Fehler ausgegeben. Beachten Sie, dass vorbereitete Anweisungen (im Gegensatz zu Funktionen) nicht aufgrund des Typs oder der Anzahl ihrer Parameter überladen werden. Der Name einer vorbereiteten Anweisung muss innerhalb einer Datenbanksitzung eindeutig sein.
 
-```
+```sql
 EXECUTE name [ ( parameter [, ...] ) ]
 ```
 
@@ -305,7 +305,7 @@ Der wichtigste Teil der Anzeige sind die geschätzten Anweisungsausführungskost
 
 Die `ANALYZE`-Option bewirkt, dass die Anweisung ausgeführt und nicht nur geplant wird. Anschließend werden der Anzeige die tatsächlichen Laufzeitstatistiken hinzugefügt, einschließlich der insgesamt verstrichenen Zeit, die innerhalb der einzelnen Planknoten verbracht wurde (in Millisekunden), und der Gesamtzahl der zurückgegebenen Zeilen. Damit können Sie sehen, wie genau die Schätzungen des Planers mit der Realität übereinstimmen.
 
-```
+```sql
 EXPLAIN [ ( option [, ...] ) ] statement
 EXPLAIN [ ANALYZE ] statement
 
@@ -329,7 +329,7 @@ where option can be one of:
 
 So zeigen Sie den Plan für eine einfache Abfrage in einer Tabelle mit einer einzelnen `integer`-Spalte und 10000 Zeilen an:
 
-```
+```sql
 EXPLAIN SELECT * FROM foo;
 
                        QUERY PLAN
@@ -344,7 +344,7 @@ EXPLAIN SELECT * FROM foo;
 
 Ein Cursor hat eine verknüpfte Position, die von `FETCH` verwendet wird. Der Cursor kann sich vor der ersten Zeile des Abfrageergebnisses, in einer beliebigen Zeile des Ergebnisses oder nach der letzten Zeile des Ergebnisses befinden. Nach der Erstellung wird ein Cursor vor der ersten Zeile positioniert. Nach dem Abrufen einiger Zeilen wird der Cursor auf der zuletzt abgerufenen Zeile positioniert. Wenn `FETCH` am Ende der verfügbaren Zeilen ausgeführt wird, bleibt der Cursor nach der letzten Zeile positioniert. Wenn keine solche Zeile vorhanden ist, wird ein leeres Ergebnis zurückgegeben und der Cursor wird je nachdem vor der ersten Zeile bzw. nach der letzten Zeile positioniert.
 
-```
+```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
@@ -363,7 +363,7 @@ Vorbereitete Anweisungen gelten nur für die Dauer der aktuellen Datenbanksitzun
 
 Vorbereitete Anweisungen haben potenziell den größten Leistungsvorteil, wenn eine einzelne Sitzung zur Ausführung einer großen Anzahl ähnlicher Anweisungen verwendet wird. Der Leistungsunterschied ist besonders dann von Bedeutung, wenn die Anweisungen komplex zu planen oder umzuschreiben sind, wenn die Abfrage beispielsweise mehrere Tabellen umfasst oder mehrere Regeln erfordert. Wenn die Anweisung relativ einfach zu planen und umzuschreiben, aber relativ teuer in der Ausführung ist, ist der Leistungsvorteil von vorbereiteten Anweisungen weniger bemerkbar.
 
-```
+```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
@@ -377,7 +377,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 `ROLLBACK` setzt die aktuelle Transaktion zurück und bewirkt, dass alle durch die Transaktion vorgenommenen Aktualisierungen verworfen werden.
 
-```
+```sql
 ROLLBACK [ WORK ]
 ```
 
@@ -389,7 +389,7 @@ ROLLBACK [ WORK ]
 
 `SELECT INTO` erstellt eine neue Tabelle und füllt sie mit Daten, die von einer Abfrage berechnet wurden. Die Daten werden nicht wie bei einem normalen `SELECT` an den Client zurückgegeben. Die Spalten der neuen Tabelle haben die Namen und Datentypen, die den Ausgabespalten von `SELECT` zugeordnet sind.
 
-```
+```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
 SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     * | expression [ [ AS ] output_name ] [, ...]
@@ -417,7 +417,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 Erstellen Sie eine neue Tabelle `films_recent`, die nur aus den aktuellen Einträgen der Tabelle `films` besteht:
 
-```
+```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 ```
 
@@ -425,7 +425,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 `SHOW` zeigt die aktuelle Einstellung der Laufzeitparameter an. Diese Variablen können mithilfe der `SET`-Anweisung, durch Bearbeiten der Konfigurationsdatei postgresql.conf, durch die `PGOPTIONS`-Umgebungsvariable (bei Verwendung von libpq oder einer libpq-basierten Anwendung) oder durch Befehlszeilenflags beim Starten des Postgres-Servers eingestellt werden.
 
-```
+```sql
 SHOW name
 ```
 
@@ -443,7 +443,7 @@ SHOW name
 
 Anzeigen der aktuellen Einstellung des Parameters `DateStyle`
 
-```
+```sql
 SHOW DateStyle;
  DateStyle
 -----------
@@ -455,7 +455,7 @@ SHOW DateStyle;
 
 Dieser Befehl wird geparst und sendet den abgeschlossenen Befehl zurück an den Client. Dies entspricht dem `BEGIN`-Befehl.
 
-```
+```sql
 START TRANSACTION [ transaction_mode [, ...] ]
 
 where transaction_mode is one of:
@@ -468,7 +468,7 @@ where transaction_mode is one of:
 
 Mit diesem Befehl wird die Ausgabe einer beliebigen SELECT-Abfrage an einen angegebenen Speicherort ausgegeben. Der Benutzer muss Zugriff auf diesen Speicherort haben, damit dieser Befehl erfolgreich ausgeführt werden kann.
 
-```
+```sql
 COPY  query
     TO '%scratch_space%/folder_location'
     [  WITH FORMAT 'format_name']
