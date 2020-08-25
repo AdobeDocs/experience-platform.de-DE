@@ -5,7 +5,7 @@ seo-title: (Beta) Azurblauer Ereignis Hubs-Ziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -67,7 +67,7 @@ Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile
 
 Ihre exportierten [!DNL Experience Platform] Daten werden im JSON- [!DNL Azure Event Hubs] Format gespeichert. Das folgende Ereignis enthält beispielsweise das Segmentattribut &quot;E-Mail-Adresse&quot;einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind ECID und E-Mail.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
