@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe-definierte Funktionen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 71%
@@ -156,7 +156,7 @@ Pathing hilft zu verstehen, wie Kunden durch Ihre Site navigieren. Die ADFs `NEX
 
 **Syntax:**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video zeigt, wie Abfragen in der Benutzeroberfläche der Adobe Experience Platform und in einem PSQL-Client ausgeführt werden. Darüber hinaus verwendet das Video Beispiele für einzelne Eigenschaften in einem XDM-Objekt, für die Verwendung von Adobe-definierten Funktionen und für die Verwendung von CREATE TABLE AS SELECT (CTAS).
+Das folgende Video zeigt, wie Abfragen auf der Adobe Experience Platform-Oberfläche und in einem PSQL-Client ausgeführt werden. Darüber hinaus verwendet das Video Beispiele für einzelne Eigenschaften in einem XDM-Objekt, für die Verwendung von Adobe-definierten Funktionen und für die Verwendung von CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
