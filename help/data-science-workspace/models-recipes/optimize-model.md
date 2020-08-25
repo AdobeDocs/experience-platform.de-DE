@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modell optimieren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 89%
@@ -95,7 +95,7 @@ Der benutzerdefinierte Auswerter kann angegeben werden, indem Sie die Oberfläch
 
 Nach der Definition im Rezept besteht der nächste Schritt darin, sie in den Rezepten zu aktivieren. Dies erfolgt in der Datei [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) im Ordner `resources` des Projekts. Hier ist `evaluation.class` auf die `Evaluator`-Klasse eingestellt, die in `Evaluator.scala` definiert wurde.
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
