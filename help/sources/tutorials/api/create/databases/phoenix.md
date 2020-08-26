@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Phoenix-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 19%
@@ -15,9 +15,10 @@ ht-degree: 19%
 # Erstellen eines [!DNL Phoenix] Connectors mit der [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Der [!DNL Phoenix] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen Sie eine [!DNL Phoenix] Datenbank mit einer [!DNL Experience Platform]verbinden.
 
@@ -111,7 +112,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.host` | Der Host des [!DNL Phoenix] Servers. |
+| `auth.params.host` | The host of the [!DNL Phoenix] server. |
 | `auth.params.username` | Der mit Ihrer [!DNL Phoenix] Verbindung verknüpfte Benutzername. |
 | `auth.params.password` | Das mit Ihrer [!DNL Phoenix] Verbindung verknüpfte Kennwort. |
 | `auth.params.port` | Der TCP-Anschluss für Ihre [!DNL Phoenix] Verbindung. |
