@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Edge-Prognosen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 10%
@@ -21,6 +21,7 @@ Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden üb
 Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 >[!NOTE]
+>
 >Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. In diesem Dokument `Content-Type` werden mehrere verwendet. Achten Sie besonders auf die Kopfzeilen in den Beispielaufrufen, um sicherzustellen, dass Sie für jede Anforderung die richtige `Content-Type` verwenden.
 
 ## Projektionsziele
@@ -53,6 +54,7 @@ curl -X GET \
 Die Antwort enthält ein `projectionDestinations` Array mit den Details für jedes Ziel, das als einzelnes Objekt im Array angezeigt wird. Wenn keine Prognosen konfiguriert wurden, gibt das `projectionDestinations` Array leer zurück.
 
 >[!NOTE]
+>
 >Diese Antwort wurde für Leerzeichen verkürzt und zeigt nur zwei Ziele an.
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 Mit der folgenden Anforderung wird ein neues Edge-Ziel erstellt.
 
 >[!NOTE]
+>
 >Die POST-Anforderung zum Erstellen eines Ziels erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
@@ -227,6 +230,7 @@ Das Antwortobjekt zeigt die Details des Projektionsziels an. Das `id` Attribut s
 Ein vorhandenes Ziel kann aktualisiert werden, indem eine PUT-Anforderung an den `/config/destinations` Endpunkt gesendet wird und die ID des Ziels, das im Anforderungspfad aktualisiert werden soll, einbezogen wird. Bei diesem Vorgang wird das Ziel im Wesentlichen _umgeschrieben_ , daher müssen im Hauptteil der Anforderung dieselben Attribute bereitgestellt werden, wie bei der Erstellung eines neuen Ziels.
 
 >[!CAUTION]
+>
 >Die API-Antwort auf die Aktualisierungsanforderung ist sofort verfügbar, die Änderungen an den Projektionen werden jedoch asynchron angewendet. Mit anderen Worten, es gibt einen zeitlichen Unterschied zwischen dem Zeitpunkt, zu dem die Definition des Ziels aktualisiert wird, und dem Zeitpunkt, zu dem sie angewendet wird.
 
 **API-Format**
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 Die folgende Anforderung aktualisiert das vorhandene Ziel, um einen zweiten Speicherort (`dataCenters`) einzuschließen.
 
 >[!IMPORTANT]
+>
 >Die PUT-Anforderung erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
@@ -295,6 +300,7 @@ Die Antwort enthält die aktualisierten Details zum Ziel, einschließlich der ID
 Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem Sie eine DELETE-Anforderung an den `/config/destinations` Endpunkt richten und die ID des Ziels, das Sie löschen möchten, im Anforderungspfad einschließen.
 
 >[!CAUTION]
+>
 >Die API-Antwort auf die Löschanforderung erfolgt sofort, die tatsächlichen Änderungen an den Daten an den Rändern werden jedoch asynchron ausgeführt. Das heißt, die Profil-Daten werden von allen Kanten entfernt (die im Projektionsziel `dataCenters` angegeben sind), aber der Vorgang dauert einige Zeit.
 
 **API-Format**
@@ -345,6 +351,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | Der Name der Projektionskonfiguration, auf die Sie zugreifen möchten. |
 
 >[!NOTE]
+>
 >`schemaName` ist bei Verwendung des `name` Parameters erforderlich, da ein Projektionskonfigurationsname nur im Kontext einer Schema-Klasse eindeutig ist.
 
 **Anfrage**
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Anfrage**
 
 >[!NOTE]
+>
 >Die Konfigurationsanforderung für die POST erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
@@ -506,6 +514,7 @@ Ein Selektor ist eine kommagetrennte Liste von XDM-Feldnamen. In einer Projektio
    * Das obige Beispiel entspricht `addresses.type,addresses.city.country`dem Szenario
 
 >[!NOTE]
+>
 >Sowohl die Punktnotation als auch die Klammernnotation werden für das Referenzieren von Unterfeldern unterstützt. Es empfiehlt sich jedoch, die Punktnotation zu verwenden, da sie präziser ist und eine bessere Darstellung der Feldhierarchie bietet.
 
 * Jedes Feld in einem Selektor wird relativ zum Stammverzeichnis der Antwort angegeben.
@@ -610,6 +619,7 @@ Gibt nur das Ortsfeld für alle Elemente im Adressarray zurück.
 ```
 
 >[!NOTE]
+>
 >Wenn ein verschachteltes Feld zurückgegeben wird, enthält die Projektion die zugehörigen übergeordneten Objekte. Die übergeordneten Felder enthalten keine anderen untergeordneten Felder, es sei denn, sie werden explizit ausgewählt.
 
 **address(type,city)**
