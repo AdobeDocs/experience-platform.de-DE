@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Streamen von Zeitreihendaten
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 75%
+source-wordcount: '1126'
+ht-degree: 74%
 
 ---
 
@@ -405,7 +405,7 @@ To validate the previously ingested records, you can use the [!DNL Profile Acces
 
 >[!NOTE]
 >
->Wenn die Zusammenführungsrichtlinienkennung nicht definiert ist und der schema.</span>name oder relatedSchema</span>.name ist `_xdm.context.profile`, [!DNL Profile Access] ruft **alle** verwandten Identitäten ab.
+>Wenn die Richtlinie-ID zum Zusammenführen nicht definiert ist und die ID `schema.name` oder `relatedSchema.name` nicht `_xdm.context.profile`lautet, [!DNL Profile Access] werden **alle** zugehörigen Identitäten abgerufen.
 
 **API-Format**
 
