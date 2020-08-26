@@ -2,8 +2,9 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Hilfe zur Echtzeit-Kundendatenplattform
+user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 85%
@@ -13,7 +14,7 @@ ht-degree: 85%
 
 # Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
 
-* [Real-time CDP overview](overview.md)
+* [Übersicht über CDP in Echtzeit](overview.md)
 * Erste Schritte {#intro}
    * [Erste Schritte](get-started.md)
    * [Metriken – Übersicht](home-page-dashboards.md)
@@ -123,18 +124,18 @@ ht-degree: 85%
          * [Invoca Tags-Erweiterung](/help/rtcdp/destinations/invoca-extension.md)
          * [Medallia-Erweiterung](destinations/medallia-extension.md)
          * [Talk URL Inbox-Erweiterung](destinations/talkurl-extension.md)
-   * Destinations UI tutorials {#dest-tutorials}
+   * Übungen zur Benutzeroberfläche &quot;Ziele&quot; {#dest-tutorials}
       * [Mit Ziel verbinden](/help/rtcdp/destinations/connect-destination.md)
       * [Profile und Segmente für ein Ziel aktivieren](destinations/activate-destinations.md)
-   * Destination API tutorials {#api-tutorials}
-      * [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [Connect to email marketing destinations and activate data](/help/rtcdp/destinations/email-marketing-api.md)
+   * Ziel-API-Lernprogramme {#api-tutorials}
+      * [Verbindung zu Streaming-Zielen (AWS Kinesis und Azurblauer Ereignis Hubs) und Aktivierung von Daten](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Verbindungen zu E-Mail-Marketingzielen herstellen und Daten aktivieren](/help/rtcdp/destinations/email-marketing-api.md)
 * Datenschutz und Data Governance {#privacy}
    * [Datenschutz – Übersicht](privacy/privacy-overview.md)
    * [Data Governance – Übersicht](privacy/data-governance-overview.md)
-   * IAB TCF 2.0 support {#iab}
-      * [IAB TCF 2.0 support in Real-time CDP](privacy/iab/overview.md)
-      * [Create datasets for capturing IAB TCF 2.0 consent data](privacy/iab/dataset-preparation.md)
+   * IAB TCF 2.0-Unterstützung {#iab}
+      * [Unterstützung von IAB TCF 2.0 in Echtzeit-CDP](privacy/iab/overview.md)
+      * [Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten](privacy/iab/dataset-preparation.md)
 * Profile {#profile}
    * [Profil – Übersicht](profile/profile-overview.md)
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
