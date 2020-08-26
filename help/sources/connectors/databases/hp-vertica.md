@@ -4,7 +4,7 @@ solution: Experience Platform
 title: HP-Vertikalanschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 0%
@@ -15,13 +15,14 @@ ht-degree: 0%
 # (Beta) [!DNL HP Vertica] -Anschluss
 
 >[!NOTE]
+>
 >Der [!DNL HP Vertica] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
 Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform]importieren.
 
-Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL oder data warehouse. Die Unterstützung von Datenbankanbietern umfasst [!DNL HP Vertica].
+Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Die Unterstützung von Datenbankanbietern umfasst [!DNL HP Vertica].
 
-## Zulassungsliste der IP-Adresse
+## ZULASSUNGSLISTE der IP-Adresse
 
 Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
