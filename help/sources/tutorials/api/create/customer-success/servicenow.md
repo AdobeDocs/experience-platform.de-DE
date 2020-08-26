@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines ServiceNow-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 18%
@@ -15,9 +15,10 @@ ht-degree: 18%
 # Erstellen eines [!DNL ServiceNow] Connectors mit der [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Der [!DNL ServiceNow] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zur Verbindung [!DNL Experience Platform] mit einem [!DNL ServiceNow] Server zu führen.
 
@@ -36,7 +37,7 @@ Damit eine Verbindung [!DNL Flow Service] zu [!DNL ServiceNow]hergestellt werden
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `endpoint` | Der Endpunkt des [!DNL ServiceNow] Servers. |
+| `endpoint` | The endpoint of the [!DNL ServiceNow] server. |
 | `username` | Der Benutzername, mit dem eine Verbindung zum [!DNL ServiceNow] Server zur Authentifizierung hergestellt wird. |
 | `password` | Das Kennwort, mit dem eine Verbindung zum [!DNL ServiceNow] Server zur Authentifizierung hergestellt werden soll. |
 
@@ -68,7 +69,7 @@ Um eine [!DNL ServiceNow] Verbindung zu erstellen, muss eine Reihe von [!DNL Ser
 
 **API-Format**
 
-Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Beim Senden einer GET an den `/connectionSpecs` Endpunkt werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können auch die Abfrage einschließen, `property=name=="service-now"` Informationen speziell für [!DNL ServiceNow]die Zwecke zu erhalten.
+Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Beim Senden einer GET an den `/connectionSpecs` Endpunkt werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können auch die Abfrage einschließen, `property=name=="service-now"` Informationen speziell für [!DNL ServiceNow]die Zwecke abzurufen.
 
 ```http
 GET /connectionSpecs
