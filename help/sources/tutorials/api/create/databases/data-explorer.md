@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Azurblauen Data Explorer-Connectors mit der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 19%
@@ -15,9 +15,10 @@ ht-degree: 19%
 # Erstellen eines [!DNL Azure Data Explorer] Connectors mit der [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Der [!DNL Azure Data Explorer] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen eine Verbindung hergestellt werden soll [!DNL Azure Data Explorer] (nachstehend &quot;Data Explorer&quot;genannt) [!DNL Experience Platform].
 
@@ -36,8 +37,8 @@ Damit eine Verbindung [!DNL Flow Service] zu [!DNL Data Explorer]hergestellt wer
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `endpoint` | Der Endpunkt des [!DNL Data Explorer] Servers. |
-| `database` | Der Name der [!DNL Data Explorer] Datenbank. |
+| `endpoint` | The endpoint of the [!DNL Data Explorer] server. |
+| `database` | The name of the [!DNL Data Explorer] database. |
 | `tenant` | Die eindeutige Mandant-ID, mit der eine Verbindung zur [!DNL Data Explorer] Datenbank hergestellt wird. |
 | `servicePrincipalId` | Die Prinzipal-ID des Unique Service, mit der eine Verbindung zur [!DNL Data Explorer] Datenbank hergestellt wird. |
 | `servicePrincipalKey` | Der Hauptschlüssel für den eindeutigen Dienst, mit dem eine Verbindung zur [!DNL Data Explorer] Datenbank hergestellt wird. |
@@ -109,8 +110,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.endpoint` | Der Endpunkt des [!DNL Data Explorer] Servers. |
-| `auth.params.database` | Der Name der [!DNL Data Explorer] Datenbank. |
+| `auth.params.endpoint` | The endpoint of the [!DNL Data Explorer] server. |
+| `auth.params.database` | The name of the [!DNL Data Explorer] database. |
 | `auth.params.tenant` | Die eindeutige Mandant-ID, mit der eine Verbindung zur [!DNL Data Explorer] Datenbank hergestellt wird. |
 | `auth.params.servicePrincipalId` | Die Prinzipal-ID des Unique Service, mit der eine Verbindung zur [!DNL Data Explorer] Datenbank hergestellt wird. |
 | `auth.params.servicePrincipalKey` | Der Hauptschlüssel für den eindeutigen Dienst, mit dem eine Verbindung zur [!DNL Data Explorer] Datenbank hergestellt wird. |
