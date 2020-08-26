@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 1%
@@ -769,11 +769,7 @@ Das Scala-Notebook ([!DNL Spark] 2.4) verwendet den Scala-Kernel, der bei der Ei
 >[!TIP]
 >
 >In Scala können Sie einen Wert deklarieren und `sys.env()` von innen zurückgeben `option`. Dadurch müssen Variablen nicht mehr definiert werden, wenn Sie wissen, dass sie nur einmal verwendet werden. Das folgende Beispiel nimmt `val userToken` das oben stehende Beispiel und deklariert es in Zeile `option`:
->
-> 
-```scala
-> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-> ```
+> `.option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))`
 
 ## Schreiben in einen Datensatz
 
