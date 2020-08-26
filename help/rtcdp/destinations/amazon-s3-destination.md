@@ -5,10 +5,10 @@ seo-title: Amazon S3-Ziel
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Buckets zu exportieren.
 seo-description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Buckets zu exportieren.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 42%
+source-wordcount: '213'
+ht-degree: 39%
 
 ---
 
@@ -25,7 +25,7 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
 
-* **[!DNL Amazon S3]Zugriffsschlüssel und[!DNL Amazon S3]geheimer Schlüssel**: Generieren Sie in [!DNL Amazon S3]diesem Fall einen Zugriffsschlüssel - das Schlüsselpaar für den geheimen Zugriff, um der Adobe Zugriff auf Ihr [!DNL Amazon S3] Konto zu gewähren.
+* **[!DNL Amazon S3]Zugriffsschlüssel und[!DNL Amazon S3]geheimer Schlüssel**: Erstellen Sie [!DNL Amazon S3]ein `access key - secret access key` Paar, um der Adobe Echtzeit-CDP-Zugriff auf Ihr [!DNL Amazon S3] Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu [Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 >[!IMPORTANT]
 >
