@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Adobe Analytics Classifications Data Connector in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
@@ -72,6 +72,7 @@ Wählen Sie den **[!UICONTROL Zielgruppe-Datensatz]** aus, auf den Sie zugreifen
 Auf der Seite &quot; **[!UICONTROL Datensatzdataset-Aktivität]** &quot;werden Informationen über den ausgewählten Dataset angezeigt, einschließlich Informationen zum Stapelstatus, zur Dataset-ID und zum Schema.
 
 >[!IMPORTANT]
+>
 >Das Löschen von Datensätzen ist zwar für andere Quell-Connectors möglich, wird aber derzeit nicht für den Analytics Classifications Data Connector unterstützt. Wenn Sie einen Datensatz versehentlich löschen, wenden Sie sich bitte an die Kundenunterstützung der Adobe.
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)
