@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Flusslaufbenachrichtigungen
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 4%
@@ -44,6 +44,7 @@ Um Benachrichtigungen über den Status Ihrer Flusslaufzeit zu erhalten, müssen 
 Nachdem Sie eine eindeutige Webshaken-URL erworben haben, gehen Sie zu den [Adobe-E/A-Ereignissen](https://www.adobe.io/apis/experienceplatform/events.html) und befolgen Sie die Schritte, die im Dokument mit [Dateneingabebenachrichtigungen](../ingestion/quality/subscribe-events.md) beschrieben sind, um Beginn zu kontaktieren, die Ereignis abonnieren.
 
 >[!IMPORTANT]
+>
 >Stellen Sie während des Abonnements sicher, dass Sie Benachrichtigungen als Ereignis-Provider auswählen und die folgenden Ereignis-Abonnement auswählen: [!DNL Platform]
 >
 >* **[!UICONTROL Flusslauf der Experience Platform-Quelle erfolgreich]**
@@ -60,6 +61,7 @@ Wenn Ihr WebHook angeschlossen ist und Ihr Ereignis-Abonnement abgeschlossen ist
 Eine Benachrichtigung gibt Informationen wie die Anzahl der ausgeführten Erfassungsaufträge, die Dateigröße und Fehler zurück. Eine Benachrichtigung gibt auch eine Nutzlast zurück, die mit Ihrer Flussausführung im JSON-Format verknüpft ist. Die Antwortnutzlast kann entweder als `sources_flow_run_success` oder `sources_flow_run_failure`klassifiziert werden.
 
 >[!IMPORTANT]
+>
 >Wenn die teilweise Erfassung während des Prozesses der Flusserstellung aktiviert ist, wird ein Fluss, der sowohl erfolgreiche als auch fehlgeschlagene Einträge enthält, `sources_flow_run_success` nur dann als markiert, wenn die Anzahl der Fehler unter dem Fehlerschwellenprozentsatz liegt, der während des Prozesses der Flusserstellung festgelegt wurde. Wenn eine erfolgreiche Flussausführung Fehler enthält, werden diese Fehler weiterhin als Teil der Rückgabeauslastung einbezogen.
 
 ### Erfolg
@@ -322,6 +324,7 @@ Die folgende Antwort ist ein Beispiel für einen fehlgeschlagenen Fluss, bei dem
 | `fileInfo` | Eine URL, die zu einem Überblick über die Dateien führt, die sowohl erfolgreich als auch erfolglos aufgenommen wurden. |
 
 >[!NOTE]
+>
 >Weitere Informationen zu Fehlermeldungen finden Sie im [Anhang](#errors) .
 
 ## Nächste Schritte
