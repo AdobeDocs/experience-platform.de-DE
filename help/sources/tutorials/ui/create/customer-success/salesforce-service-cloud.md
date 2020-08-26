@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Salesforce Service Cloud über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 11%
@@ -15,6 +15,7 @@ ht-degree: 11%
 # Create a [!DNL Salesforce Service Cloud] source connector in the UI
 
 >[!NOTE]
+>
 >Der [!DNL Salesforce Service Cloud] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Salesforce Service Cloud] (im Folgenden &quot;SSC&quot;) Quellconnectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
