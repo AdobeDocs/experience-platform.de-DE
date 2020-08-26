@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Profil-Systemaufträge - Echtzeit-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 68%
@@ -12,11 +12,12 @@ ht-degree: 68%
 ---
 
 
-# Profile system jobs endpoint (Delete requests)
+# Endpunkt &quot;Systemaufträge&quot;(Anforderungen löschen)
 
 Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. Daten, die in [!DNL Platform] aufgenommen werden, werden im [!DNL Data Lake] sowie im [!DNL Real-time Customer Profile] Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, einen Datensatz oder Stapel aus dem Profil Store zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a &quot;[!DNL delete request]&quot;, that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
+>
 >If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## Erste Schritte
@@ -106,6 +107,7 @@ Die Initiierung einer neuen Löschanfrage erfolgt über eine POST-Anfrage an den
 Um einen Datensatz zu löschen, muss die Datensatzkennung im Text der POST-Anfrage enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. [!DNL Experience Platform]Mit können Sie Datensätze basierend auf Datensatz- und Zeitreihenschemas löschen.
 
 >[!CAUTION]
+>
 > When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. Weiterführende Informationen finden Sie im [Anhang](#appendix) zu diesem Dokument.
 
 **API-Format**
@@ -159,7 +161,8 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zur�
 Um einen Batch zu löschen, muss die Batch-Kennung im Text der POST-Anfrage enthalten sein. Beachten Sie, dass Sie Batches für Datensätze, die auf Datensatzschemas basieren, nicht löschen können. Nur Batches für Datensätze, die auf Zeitreihenschemas basieren, können gelöscht werden.
 
 >[!NOTE]
-> Batches für Datensätze, die auf Datensatzschemas basieren, lassen sich nicht löschen, weil Datensatz-Batches vom Typ Datensatz frühere Datensätze überschreiben und daher nicht „rückgängig gemacht“ oder gelöscht werden können. The only way to remove the impact of erroneous batches for datasets based on record schemas is to re-ingest the batch with the correct data in order to overwrite the incorrect records.
+>
+> Batches für Datensätze, die auf Datensatzschemas basieren, lassen sich nicht löschen, weil Datensatz-Batches vom Typ Datensatz frühere Datensätze überschreiben und daher nicht „rückgängig gemacht“ oder gelöscht werden können. Die einzige Möglichkeit, die Auswirkungen fehlerhafter Stapel für Datensätze zu entfernen, die auf Datensatzdaten basieren, besteht darin, den Stapel mit den richtigen Daten erneut zu erfassen, um die falschen Schema zu überschreiben.
 
 Weiterführende Informationen zum Verhalten von Datensätzen und Zeitreihen finden Sie im Abschnitt [XDM-Datenverhalten](../../xdm/home.md#data-behaviors) in der Übersicht zu [!DNL XDM System]
 
