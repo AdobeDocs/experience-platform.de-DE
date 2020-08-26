@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht zur partiellen Batch-Erfassung in Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 40%
@@ -341,7 +341,6 @@ Wenn der Stapel einen oder mehrere Fehler enthält und die Fehlerdiagnose aktivi
 >[!NOTE]
 >
 >Wenn keine Fehlerdiagnose verfügbar ist, wird stattdessen die folgende Fehlermeldung angezeigt:
->
 > 
 ```json
 > {
