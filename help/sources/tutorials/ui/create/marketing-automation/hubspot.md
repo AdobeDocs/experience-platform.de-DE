@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für HubSpot über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 11%
@@ -15,6 +15,7 @@ ht-degree: 11%
 # Create a [!DNL HubSpot] source connector in the UI
 
 >[!NOTE]
+>
 > Der [!DNL HubSpot] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines [!DNL HubSpot] Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche.
