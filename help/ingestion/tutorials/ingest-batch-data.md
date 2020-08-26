@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Daten in Adobe Experience Platform erfassen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1278'
 ht-degree: 65%
 
 ---
@@ -26,7 +26,7 @@ Wenn Sie Daten lieber mit Data Ingestion-APIs erfassen möchten, lesen Sie zunä
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **[!UICONTROL Datensätze]** klicken. Der Arbeitsbereich „Datensätze“ enthält eine Liste von Datensätzen, einschließlich der Spalten für _[!UICONTROL Name]_,_[!UICONTROL  Erstellung]_ (Datum und Uhrzeit), _[!UICONTROL Quelle]_,_[!UICONTROL  Schema]_ und _[!UICONTROL letzten Batch-Status]_, sowie Datum und Uhrzeit der_[!UICONTROL  letzten Aktualisierung]_ des Datensatzes.
+Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **[!UICONTROL Datensätze]** klicken. Der Arbeitsbereich „Datensätze“ enthält eine Liste von Datensätzen, einschließlich der Spalten für _[!UICONTROL Name]_, _[!UICONTROL Erstellung]_ (Datum und Uhrzeit), _[!UICONTROL Quelle]_, _[!UICONTROL Schema]_ und _[!UICONTROL letzten Batch-Status]_, sowie Datum und Uhrzeit der _[!UICONTROL letzten Aktualisierung]_ des Datensatzes.
 
 >[!NOTE]
 >
@@ -70,9 +70,9 @@ Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf
 
 Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte **[!UICONTROL Datensatzaktivität]** im Arbeitsbereich „Datensätze“. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
-Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. _[!UICONTROL Datensatz-ID]_,_[!UICONTROL  Name]_, _[!UICONTROL Beschreibung]_,_[!UICONTROL  Tabellenname]_, _[!UICONTROL Schema]_,_[!UICONTROL  Streaming]_ und _[!UICONTROL Quelle]_. Die Registerkarte „Informationen“ enthält außerdem Informationen zum Zeitpunkt der_[!UICONTROL  Erstellung]_ des Datensatzes und zum _[!UICONTROL Datum der letzten Änderung]_.
+Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. _[!UICONTROL Datensatz-ID]_, _[!UICONTROL Name]_, _[!UICONTROL Beschreibung]_, _[!UICONTROL Tabellenname]_, _[!UICONTROL Schema]_, _[!UICONTROL Streaming]_ und _[!UICONTROL Quelle]_. Die Registerkarte „Informationen“ enthält außerdem Informationen zum Zeitpunkt der _[!UICONTROL Erstellung]_ des Datensatzes und zum _[!UICONTROL Datum der letzten Änderung]_.
 
-Also in the Info tab is a  _[!UICONTROL Profile]_toggle that is used for enabling your dataset for use with[!DNL Real-time Customer Profile]. Use of this toggle, and[!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
+Also in the Info tab is a  _[!UICONTROL Profile]_ toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
 ![Datensatzaktivität](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -104,7 +104,7 @@ Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **[!UICO
 
 >[!NOTE]
 >
->[!DNL Platform] unterstützt zwei Dateitypen zur Datenerfassung: Parquet oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße 10 GB pro Datei beträgt.
+> Platform unterstützt zwei Dateitypen zur Datenerfassung: Parquet oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße 10 GB pro Datei beträgt.
 
 ![Registerkarte „Daten hinzufügen“](../images/tutorials/ingest-batch-data/add_data.png)
 
@@ -118,13 +118,13 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 Nach dem Hochladen der Datei steht auf der Registerkarte **[!UICONTROL Datensatzaktivität]** nicht mehr, dass keine Batches hinzugefügt wurden. Instead, the *[!UICONTROL Dataset Activity]* tab now shows dataset metrics. Bei allen Metriken wird zu diesem Zeitpunkt „0“ angezeigt, da der Batch noch nicht geladen wurde.
 
-Am unteren Rand der Registerkarte befindet sich eine Liste, in der die _[!UICONTROL Batch-Kennung]_der Daten angezeigt wird, die gerade mit dem Prozess[Daten zu Datensatz hinzufügen](#add-data-to-dataset)erfasst wurden. Dazu gehören auch Informationen über den Batch, einschließlich Datum der_[!UICONTROL  Erfassung]_, Anzahl der _[!UICONTROL erfassten Datensätze]_und des aktuellen Batch-_[!UICONTROL  Status]_.
+Am unteren Rand der Registerkarte befindet sich eine Liste, in der die _[!UICONTROL Batch-Kennung]_ der Daten angezeigt wird, die gerade mit dem Prozess [Daten zu Datensatz hinzufügen](#add-data-to-dataset) erfasst wurden. Dazu gehören auch Informationen über den Batch, einschließlich Datum der _[!UICONTROL Erfassung]_, Anzahl der _[!UICONTROL erfassten Datensätze]_ und des aktuellen Batch-_[!UICONTROL Status]_.
 
 ![Datensatzmetriken](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## Batch-Details
 
-Klicken Sie auf die _[!UICONTROL Batch-Kennung]_, um eine**[!UICONTROL  Batch-Übersicht ]**mit weiteren Details zum Batch anzuzeigen. Sobald der Batch vollständig geladen wurde, werden die Informationen über den Batch aktualisiert, um die Anzahl der_[!UICONTROL  erfassten Datensätze]_ und die _[!UICONTROL Dateigröße]_anzuzeigen. Außerdem ändert sich der_[!UICONTROL  Status]_ in „Erfolg“ oder „Fehlgeschlagen“. Wenn der Batch fehlschlägt, enthält der Abschnitt _[!UICONTROL Fehler-Code]_Details zu Fehlern, die bei der Erfassung aufgetreten sind.
+Klicken Sie auf die _[!UICONTROL Batch-Kennung]_, um eine **[!UICONTROL Batch-Übersicht]** mit weiteren Details zum Batch anzuzeigen. Sobald der Batch vollständig geladen wurde, werden die Informationen über den Batch aktualisiert, um die Anzahl der _[!UICONTROL erfassten Datensätze]_ und die _[!UICONTROL Dateigröße]_ anzuzeigen. Außerdem ändert sich der _[!UICONTROL Status]_ in „Erfolg“ oder „Fehlgeschlagen“. Wenn der Batch fehlschlägt, enthält der Abschnitt _[!UICONTROL Fehler-Code]_ Details zu Fehlern, die bei der Erfassung aufgetreten sind.
 
 Weiterführende Informationen und häufig gestellte Fragen zur Batch-Erfassung finden Sie im [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](../batch-ingestion/troubleshooting.md).
 
