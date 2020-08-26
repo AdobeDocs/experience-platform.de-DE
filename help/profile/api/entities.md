@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entitäten - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 89%
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >Wenn ein verwandtes Diagramm mehr als 50 Identitäten verknüpft, gibt dieser Dienst den HTTP-Status 422 und die Meldung „Zu viele verwandte Identitäten“ zurück. Wenn Sie diese Fehlermeldung erhalten, sollten Sie weitere Abfrageparameter hinzufügen, um die Suche einzuschränken.
 
 ## Profildaten anhand von Liste mit Identitäten aufrufen
@@ -360,6 +361,7 @@ curl -X GET \
 Eine erfolgreiche Antwort gibt eine paginierte Liste mit Zeitreihenereignissen und zugehörigen Feldern zurück, die in den Abfrageparametern der Anfrage angegeben wurden.
 
 >[!NOTE]
+>
 >In der Anfrage wurde eine Grenze von 1 (`limit=1`) festgelegt; daher ist der `count`-Wert in der Antwort unten 1 und wird nur eine Entität zurückgegeben.
 
 ```json
@@ -414,6 +416,7 @@ Eine erfolgreiche Antwort gibt eine paginierte Liste mit Zeitreihenereignissen u
 Ergebnisse werden beim Abrufen von Zeitreihenereignissen paginiert. Wenn es weitere Seiten mit Ergebnissen gibt, enthält die `_page.next`-Eigenschaft eine Kennung. Darüber hinaus stellt die `_links.next.href`-Eigenschaft einen Anfrage-URI zum Abrufen der nächsten Seite bereit. Um die Ergebnisse abzurufen, senden Sie eine weitere GET-Anfrage an den `/access/entities`-Endpunkt. Sie müssen jedoch sicherstellen, dass Sie `/entities` durch den Wert des angegebenen URI ersetzen.
 
 >[!NOTE]
+>
 >Sorgen Sie dafür, dass Sie `/entities/` im Anfragepfad nicht versehentlich wiederholen. Es sollte nur einmal erscheinen, wie hier: `/access/entities?start=...`.
 
 **API-Format**
