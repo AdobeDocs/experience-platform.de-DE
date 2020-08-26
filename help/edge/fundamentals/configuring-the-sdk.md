@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -107,9 +107,9 @@ Legen Sie dies fest, um einen Rückruf zu konfigurieren, der für jedes Ereignis
 
 | **Typ** | **Erforderlich** | **Standardwert** |
 | -------- | ------------ | ----------------- |
-| Objekt | Nein | `{"general": "in"}` |
+| Objekt | Nein | `"in"` |
 
-Legt die Standardzustimmung des Nutzers fest. Wird verwendet, wenn für den Nutzer noch keine Voreinstellung für die Zustimmung gespeichert wurde. Der andere gültige Wert ist `{"general": "pending"}`. Wenn dies festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Nutzer die Zustimmungseinstellungen eingibt. Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit basierend auf den Voreinstellungen des Nutzers entweder fortgesetzt oder abgebrochen. Weitere Informationen finden Sie unter [Unterstützen von Zustimmung](supporting-consent.md).
+Legt die Standardzustimmung des Nutzers fest. Wird verwendet, wenn für den Nutzer noch keine Voreinstellung für die Zustimmung gespeichert wurde. Der andere gültige Wert ist `"pending"`. Wenn dies festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Nutzer die Zustimmungseinstellungen eingibt. Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit basierend auf den Voreinstellungen des Nutzers entweder fortgesetzt oder abgebrochen. Weitere Informationen finden Sie unter [Unterstützen von Zustimmung](supporting-consent.md).
 
 ## Personalisierungsoptionen
 
