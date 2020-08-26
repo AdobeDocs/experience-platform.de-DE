@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Referenzhandbuch zu Nodes für maschinelles Lernen in Echtzeit
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Referenzhandbuch zu Nodes für maschinelles Lernen in Echtzeit (Alpha)
 
 >[!IMPORTANT]
+>
 >Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzern zur Verfügung. Diese Funktion ist alphanumerisch und wird noch getestet. Dieses Dokument kann sich ändern.
 
 Eine Node ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe durch und kann mithilfe von Links miteinander verkettet werden, um ein Diagramm zu bilden, das eine ML-Pipeline darstellt. Die von einer Node ausgeführte Aufgabe stellt einen Vorgang mit Eingabedaten dar, z. B. eine Transformation von Daten oder Schemas oder eine maschinelle Lerninferenz. Die Node gibt den transformierten oder abgeleiteten Wert an die nächste(n) Node(s) aus.
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 ONNXNode ist ein interner Adobe-Knoten, der eine Modell-ID benötigt, um das vorab geschulte ONNX-Modell abzurufen, und es verwendet, um bei eingehenden Daten zu bewerten.
 
 >[!TIP]
+>
 >Geben Sie die Spalten in derselben Reihenfolge an, in der die Daten an das ONNX-Modell gesendet werden sollen.
 
 ```python
