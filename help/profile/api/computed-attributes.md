@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Computed attributes - Real-time Customer Profile API
+title: Berechnete Attribute - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 83%
@@ -15,6 +15,7 @@ ht-degree: 83%
 # (Alpha) Endpunkt &quot;Berechnete Attribute&quot;
 
 >[!IMPORTANT]
+>
 >Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist derzeit als Alphaversion erhältlich und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
 Mit berechneten Attributen können Sie den Wert von Feldern anhand anderer Werte, Berechnungen und Ausdrücke automatisch berechnen. Berechnete Attribute agieren auf der Profilebene, d. h., Sie können Werte über alle Datensätze und Ereignisse hinweg aggregieren.
@@ -48,6 +49,7 @@ Anwendungsbeispiele für berechnete Attribute können von einfachen Berechnungen
 Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mit einem Mixin erstellt werden, um das Feld einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
 
 >[!NOTE]
+>
 >Berechnete Attribute können keinen Feldern in Adobe-definierten Mixins hinzugefügt werden. Das Feld muss sich im `tenant`-Namespace befinden, d. h. es muss ein Feld sein, das Sie definieren und einem Schema hinzufügen.
 
 In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). Außerdem empfehlen wir Ihnen, den [Abschnitt über Vereinigungen](../../xdm/schema/composition.md) in der Grundlagendokumentation zur Schemakomposition zu lesen.
@@ -89,6 +91,7 @@ Nachdem Sie auf **[!UICONTROL Feld hinzufügen]** geklickt haben, wird ein neues
 Geben Sie im Abschnitt *[!UICONTROL Feldeigenschaften]* auf der rechten Seite des Editors die erforderlichen Daten für das neue Feld ein, einschließlich Name, Anzeigename und Typ.
 
 >[!NOTE]
+>
 >Der Typ für das Feld muss mit dem Typ des berechneten Attributwerts übereinstimmen. Wenn der berechnete Attributwert beispielsweise eine Zeichenfolge ist, muss auch das im Schema definierte Feld eine Zeichenfolge sein.
 
 Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Übernehmen]**. Daraufhin werden der Name des Felds sowie der Typ im Abschnitt *[!UICONTROL Struktur]* des Editors angezeigt.
@@ -100,6 +103,7 @@ Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Übernehmen]**. Daraufhin we
 Before continuing, ensure that the schema has been enabled for [!DNL Profile]. Klicken Sie im Bereich *[!UICONTROL Struktur]* des Editors auf den Namen des Schemas, um den Tab *[!UICONTROL Schemaeigenschaften]* anzuzeigen. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
 
 >[!NOTE]
+>
 >Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
 
 ![](../images/computed-attributes/Profile.png)
