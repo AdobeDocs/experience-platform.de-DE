@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erste Schritte mit maschinellem Lernen in Echtzeit
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 1%
@@ -15,9 +15,10 @@ ht-degree: 1%
 # Erste Schritte mit maschinellem Lernen in Echtzeit (Alpha)
 
 >[!IMPORTANT]
+>
 >Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzern zur Verfügung. Diese Funktion ist alphanumerisch und wird noch getestet. Dieses Dokument kann sich ändern.
 
-Um maschinelles Lernen in Echtzeit nutzen zu können, benötigen Sie Zugriff auf eine mit Adobe Experience Platform und [!DNL Data Science Workspace]Funktionalität ausgestattete Organisation. Darüber hinaus benötigen Sie einen vollständigen Datensatz, der für Schulungen und Bewertungen verwendet werden kann.
+Um maschinelles Lernen in Echtzeit nutzen zu können, benötigen Sie Zugriff auf eine mit Adobe Experience Platform und [!DNL Data Science Workspace]ausgestattete Organisation. Darüber hinaus benötigen Sie einen vollständigen Datensatz, der für Schulungen und Bewertungen verwendet werden kann.
 
 Die Leitfäden für Echtzeit-Maschinelles Lernen erfordern ein funktionierendes Verständnis von Python 3, [Jupyter-Notebooks](../jupyterlab/overview.md), Datenwissenschaft und maschinellem Lernen.
 
@@ -25,14 +26,15 @@ Die Leitfäden für Echtzeit-Maschinelles Lernen erfordern ein funktionierendes 
 
 - **DSL:** Domänenspezifische Sprache.
 - **Kante:** Der Dienst für maschinelles Lernen in Echtzeit kann auf Edge-Clustern ausgeführt werden, die näher an Ihren Aktivierungen und Anwendungen liegen.
-- **Hub:** Der aktuelle Alpha-Knoten führt den Echtzeit-Bewertungsdienst für maschinelles Lernen auf dem Adobe Experience Platform Hub aus, während das Experience Edge-Netzwerk in Entwicklung ist.
+- **Hub:** Der aktuelle Alpha-Knoten führt den Echtzeit-Evaluierungsdienst für maschinelles Lernen auf dem Adobe Experience Platform Hub aus, während das Experience Edge-Netzwerk in der Entwicklung ist.
 - **Knoten:** Ein Knoten ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe durch und kann mithilfe von Links miteinander verkettet werden, um ein Diagramm zu bilden, das eine ML-Pipeline darstellt. Die von einer Node ausgeführte Aufgabe stellt einen Vorgang mit Eingabedaten dar, z. B. eine Transformation von Daten oder Schemas oder eine maschinelle Lerninferenz. Die Node gibt den transformierten oder abgeleiteten Wert an die nächste(n) Node(s) aus.
 
-## Datensätze in Adobe Experience Platform
+## Datenbestände in Adobe Experience Platform
 
 Um Beginn beim maschinellen Lernen in Echtzeit zu erhalten, müssen Sie Zugriff auf einen Datensatz haben. Sie haben die Möglichkeit, einen externen Datensatz zu verwenden und ihn in Ihre [!DNL JupyterLab] Umgebung hochzuladen oder einen neuen Datensatz in der Plattform zu erstellen, falls Sie dies noch nicht getan haben.
 
 >[!NOTE]
+>
 >Wenn Sie bereits über einen Datensatz verfügen, den Sie verwenden möchten, können Sie zu den [nächsten Schritten](#next-steps)überspringen.
 
 ### Verwenden eines externen Datensatzes
