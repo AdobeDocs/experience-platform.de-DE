@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Eingabe und Ausgabe von Kunden-AI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 34%
@@ -33,6 +33,7 @@ In den folgenden Beispielen wird eine einfache Formel verwendet, mit der Sie die
 Mindestlänge der erforderlichen Daten = förderfähige Bevölkerung + Ergebnisfenster
 
 >[!NOTE]
+>
 > 30 ist die Mindestanzahl Tage, die für die förderfähige Bevölkerung erforderlich ist. Wenn dies nicht angegeben wird, ist der Standardwert 120 Tage.
 
 Beispiele :
@@ -50,6 +51,7 @@ Zusätzlich zu den erforderlichen Mindestdaten funktioniert die Kundentreueanwei
 Customer AI generiert mehrere Attribute für einzelne Profile, die als geeignet gelten. Es gibt zwei Möglichkeiten, das Ergebnis auf Basis des von Ihnen bereitgestellten Ergebnisses zu konsumieren. Wenn Sie Echtzeit-Kundendaten für Ihr Dataset aktiviert haben, können Sie es über Echtzeit-Kundendaten-Profil nutzen. Wenn Sie kein Echtzeit-Kundendaten-Profil haben, können Sie das Ausgabedataset der Kunden-API herunterladen, das auf dem Datensee verfügbar ist.
 
 >[!NOTE]
+>
 >Ausgabewerte werden vom Echtzeit-Kundensegment verwendet, das zum Erstellen und Definieren von Segmenten verwendet werden kann.
 
 Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe der Customer AI gefunden wurden:
