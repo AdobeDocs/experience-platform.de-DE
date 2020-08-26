@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Einblicke in die Kundentechnik
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 17%
@@ -112,6 +112,7 @@ Für jeden Ergebnisbehälter wird eine Karte generiert, die die 10 wichtigsten E
 Durch Klicken auf die Schaltfläche Segment **** erstellen in einer der Behälter für niedrige, mittlere und hohe Tendenz werden Sie zum Segmentaufbau weitergeleitet.
 
 >[!NOTE]
+>
 >Die Schaltfläche &quot;Segment **** erstellen&quot;ist nur verfügbar, wenn für den Datensatz das Kundenkonto in Echtzeit aktiviert ist. Weitere Informationen zur Aktivierung von Echtzeit-Kundendaten finden Sie in der Übersicht über das [Echtzeit-Profil](../../../rtcdp/overview.md).
 
 ![Klicken Sie auf Segment erstellen](../images/insights/influential-factors-create-segment.png)
