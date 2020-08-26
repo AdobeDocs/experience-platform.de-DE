@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1189'
 ht-degree: 25%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 25%
 
 # Privacy request processing in the [!DNL Data Lake]
 
-Adobe Experience Platform [!DNL Privacy Service] verarbeitet Anfragen von Kunden zum Zugriff, Opt-out oder Löschen ihrer personenbezogenen Daten gemäß den gesetzlichen und organisatorischen Datenschutzbestimmungen.
+Adobe Experience Platform [!DNL Privacy Service] verarbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt.
 
 This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
 
@@ -56,7 +56,7 @@ Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem Data
 
 ### Verwenden der UI {#identity-ui}
 
-In der [!DNL Experience Platform ]Benutzeroberfläche können Sie mit dem Arbeitsbereich &quot; _[!UICONTROL Schemas]_&quot;Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und führen Sie die Schritte zum[Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field)im[!DNL Schema Editor]Lernprogramm aus.
+In der [!DNL Experience Platform ]Benutzeroberfläche können Sie mit dem Arbeitsbereich &quot; _[!UICONTROL Schemas]_ &quot;Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und führen Sie die Schritte zum [Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im [!DNL Schema Editor] Lernprogramm aus.
 
 Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt zum [Senden von Datenschutzanforderungen](#submit)fortfahren.
 
@@ -132,13 +132,13 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und die Details des ne
 
 >[!NOTE]
 >
->This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [!DNL Privacy Service UI](../privacy-service/ui/overview.md) or [!DNL Privacy Service API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für die [!DNL Data Lake] Verwendung der [!DNL Privacy Service] Benutzeroberfläche oder API erstellen.
 
 ### Verwenden der UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_in order to process jobs for data stored in the[!DNL Data Lake]or[!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_ in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
