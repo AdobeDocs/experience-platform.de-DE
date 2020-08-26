@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über maschinelles Lernen in Echtzeit
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 5%
@@ -15,6 +15,7 @@ ht-degree: 5%
 # Übersicht über maschinelles Lernen in Echtzeit (Alpha)
 
 >[!IMPORTANT]
+>
 >Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzern zur Verfügung. Diese Funktion ist alphanumerisch und wird noch getestet. Dieses Dokument kann sich ändern.
 
 Echtzeit-maschinelles Lernen kann die Relevanz Ihrer digitalen Erlebnisinhalte für Ihre Endbenutzer dramatisch erhöhen. Dies wird durch die Nutzung von Echtzeit-Inferencing und kontinuierlichem Lernen am [!DNL Experience Edge].
@@ -35,7 +36,7 @@ Im folgenden Arbeitsablauf werden die typischen Schritte und Ergebnisse beim Ers
 
 ### Datenerfassung und -vorbereitung
 
-Daten werden mit dem [!DNL Experience Data Model] (XDM) auf der Adobe Experience Platform erfasst und transformiert. Diese Daten werden für Modellschulungen verwendet. Weitere Informationen zu XDM finden Sie in [XDM – Übersicht](../../xdm/home.md).
+Daten werden mit dem [!DNL Experience Data Model] (XDM) unter Adobe Experience Platform erfasst und transformiert. Diese Daten werden für Modellschulungen verwendet. Weitere Informationen zu XDM finden Sie in [XDM – Übersicht](../../xdm/home.md).
 
 ### Authoring – 
 
@@ -58,6 +59,7 @@ Marketingexperten können dann Segmente und Regeln definieren, die Echtzeit-masc
 Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die unten beschriebene Funktionalität kann sich ändern, da weitere Funktionen und Knoten verfügbar sind.
 
 >[!NOTE]
+>
 > Alpha-Beschränkungen:
 > - Derzeit werden nur ONNX-basierte Modelle unterstützt.
 > - Funktionen, die in Knoten verwendet werden, können nicht serialisiert werden. Beispielsweise eine Lambda-Funktion, die in einem Pandas-Knoten verwendet wird.
@@ -70,7 +72,7 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 
 |  | Alpha (Mai) |
 | --- | --- |
-| **Funktionen** | - Verwenden der RTML-Notebook-Vorlage, Erstellen, Testen und Bereitstellen eines benutzerdefinierten maschinellen Lernmodells. <br> - Unterstützung für den Import vorab ausgebildeter Modelle für maschinelles Lernen. <br> - SDK für maschinelles Lernen in Echtzeit. <br> - Startersatz von Authoring-Knoten. <br> - In Adobe Experience Platform Hub bereitgestellt. |
+| **Funktionen** | - Verwenden der RTML-Notebook-Vorlage, Erstellen, Testen und Bereitstellen eines benutzerdefinierten maschinellen Lernmodells. <br> - Unterstützung für den Import vorab ausgebildeter Modelle für maschinelles Lernen. <br> - SDK für maschinelles Lernen in Echtzeit. <br> - Startersatz von Authoring-Knoten. <br> - Auf Adobe Experience Platform Hub bereitgestellt. |
 | **Verfügbarkeit** | Nordamerika |
 | **Authoring-Knoten** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **Laufzeit bewerten** | ONNX |
