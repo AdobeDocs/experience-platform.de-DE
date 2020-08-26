@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aufrufen von Bewertungen in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 70%
@@ -61,6 +61,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Stapel-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
 
 >[!NOTE]
+>
 > In der folgenden Antwort wurde das `tags` Objekt zur Lesbarkeit reformiert.
 
 ```json
