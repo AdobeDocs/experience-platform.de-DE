@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen Sie einen Apache Spark auf einem Blue HDInsights-Connector mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 21%
@@ -15,9 +15,10 @@ ht-degree: 21%
 # Erstellen eines [!DNL Apache Spark] auf [!DNL Azure] HDInsights-Connectors mithilfe der [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Der [!DNL Apache Spark] on- [!DNL Azure HDInsights] Anschluss befindet sich in Beta. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen Sie eine Verbindung [!DNL Apache Spark] herstellen können [!DNL Azure HDInsights] (nachstehend &quot;[!DNL Spark]&quot; genannt) zu [!DNL Experience Platform].
 
@@ -105,7 +106,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.host` | Der Host des [!DNL Spark] Servers. |
+| `auth.params.host` | The host of the [!DNL Spark] server. |
 | `auth.params.username` | Der mit Ihrer [!DNL Spark] Verbindung verknüpfte Benutzername. |
 | `auth.params.password` | Das mit Ihrer [!DNL Spark] Verbindung verknüpfte Kennwort. |
 | `connectionSpec.id` | Die [!DNL Spark] Verbindungs-ID: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
