@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Rezept erstellen mit Jupyter Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 86%
@@ -25,12 +25,11 @@ Dieses Tutorial umfasst zwei Hauptabschnitte. First, you will create a machine l
 
 ## Get started with the [!DNL JupyterLab] notebook environment
 
-Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. Navigieren Sie zum Beginn zur [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **[!UICONTROL Notebooks]** . Erstellen Sie ein neues Notebook, indem Sie die Vorlage Rezept-Builder aus dem [!DNL JupyterLab Launcher].
+Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. Navigieren Sie zum Beginn zu [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **[!UICONTROL Notebooks]** . Erstellen Sie ein neues Notebook, indem Sie die Vorlage Rezept-Builder aus dem [!DNL JupyterLab Launcher].
 
 The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring runs inside the notebook. So können Sie zwischen laufenden Experimenten für Trainings- und Scoring-Daten flexibel Änderungen an den `train()`- und `score()`-Methoden vorzunehmen. Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in [!DNL Data Science Workspace] using the notebook to recipe functionality built in to the Recipe Builder notebook.
 
 >[!NOTE]
->
 >
 >Das Recipe Builder-Notebook erlaubt ein Arbeiten mit allen Dateiformaten, die Funktion „Rezept erstellen“ unterstützt derzeit jedoch nur [!DNL Python].
 
@@ -78,7 +77,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >Bibliotheken oder spezifische Versionen, die Sie hinzufügen, sind möglicherweise nicht mit den oben genannten Bibliotheken kompatibel.
 
 ### Konfigurationsdateien {#configuration-files}
@@ -122,7 +120,6 @@ In diesem Schritt wird der [pandas-Dataframe](https://pandas.pydata.org/pandas-d
 
 >[!NOTE]
 >
->
 >Im Recipe Builder-Notebook werden Daten über das Datenladeprogramm `platform_sdk` geladen.
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -153,7 +150,6 @@ Jetzt befinden sich Ihre Daten im Dataframe-Objekt und können im [nächsten Abs
 
 >[!CAUTION]
 >
->
 > `data_access_sdk_python`   wird nicht mehr empfohlen. Unter [Data Access-Code in Platform-SDK konvertieren](../authoring/platform-sdk.md) finden Sie eine Anleitung zur Verwendung des Datenladeprogramms `platform_sdk`.
 
 Anwender können Daten mit dem Data Access-SDK laden. Die Bibliothek kann oben auf der Seite importiert werden, indem die folgende Zeile eingefügt wird:
@@ -172,7 +168,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
@@ -304,7 +299,6 @@ Die `pipeline.py`-Datei enthält Logiken für Training und Scoring.
 Der Zweck von Training besteht darin, mithilfe von Funktionen und Bezeichnungen in Ihrem Trainings-Datensatz ein Modell zu erstellen.
 
 >[!NOTE]
->
 > 
 >_Funktionen_ bezieht sich auf die Eingabevariable, die vom maschinellen Lernmodell zur Vorhersage der _Bezeichnungen_ verwendet wird.
 
