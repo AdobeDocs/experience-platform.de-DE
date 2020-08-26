@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verpacktes Rezept (API) importieren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 30%
@@ -16,7 +16,7 @@ ht-degree: 30%
 
 In diesem Lernprogramm wird [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) eine [Engine](../api/engines.md)erstellt, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
 
-Bevor Sie beginnen, sollten Sie bedenken, dass die Adobe Experience Platform verschiedene Begriffe verwendet, um auf ähnliche Elemente in der API und Benutzeroberfläche zu verweisen. [!DNL Data Science Workspace] Die API-Begriffe werden in diesem Lernprogramm verwendet, und die folgende Tabelle zeigt die entsprechenden Begriffe an:
+Bevor Sie beginnen, sollten Sie bedenken, dass Adobe Experience Platform verschiedene Begriffe verwendet, um auf ähnliche Elemente innerhalb der API und Benutzeroberfläche zu verweisen. [!DNL Data Science Workspace] Die API-Begriffe werden in diesem Lernprogramm verwendet, und die folgende Tabelle zeigt die entsprechenden Begriffe an:
 
 | UI-Begriff | API-Begriff |
 | ---- | ---- |
@@ -50,6 +50,7 @@ Motoren können durch eine POST an den Endpunkt /engine erstellt werden. Die ers
 Um eine Engine mit einer gepackten Rezept-Datei zu erstellen, die in einem Docker-Container gespeichert ist, müssen Sie die Docker-URL zur gepackten Rezeptdatei angeben.
 
 >[!CAUTION]
+>
 > Wenn Sie die unten stehende Anforderung verwenden [!DNL Python] oder R verwenden. Wenn Sie PySpark oder Scala verwenden, verwenden Sie das PySpark/Scala Anforderungsbeispiel, das sich unterhalb des Python/R-Beispiels befindet.
 
 **API-Format**
