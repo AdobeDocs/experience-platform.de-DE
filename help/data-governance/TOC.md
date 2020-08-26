@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Data Governance
+user-guide-description: Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 translation-type: tm+mt
-source-git-commit: de79706be6303f82c6d0e68cdf2c9d389f23d9a8
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 79%
@@ -34,4 +35,4 @@ ht-degree: 79%
    * [Marketing-Aktionen](api/marketing-actions.md)
    * [Auswertung](api/evaluation.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Platform release notes](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
