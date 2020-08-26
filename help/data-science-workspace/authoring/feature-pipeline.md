@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Erstellen einer Feature-Pipeline
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 29%
@@ -15,16 +15,17 @@ ht-degree: 29%
 # Erstellen einer Feature-Pipeline
 
 >[!IMPORTANT]
+>
 > Funktionserweiterungen sind derzeit nur über API verfügbar.
 
-Mit der Adobe Experience Platform können Sie benutzerdefinierte Funktionenpipelines erstellen und erstellen, um die Funktionstechnik im Maßstab über die Sensei Machine Learning Framework Runtime (im Folgenden &quot;Laufzeit&quot; genannt) durchzuführen.
+Mit Adobe Experience Platform können Sie benutzerdefinierte Funktionenpipelines erstellen und erstellen, um durch die Sensei Machine Learning Framework Runtime (im Folgenden &quot;Runtime&quot; genannt) im Maßstab Funktionstechnik durchzuführen.
 
 This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
 
 Der folgende Arbeitsablauf findet statt, wenn eine Feature-Pipeline ausgeführt wird:
 
 1. Das Rezept lädt den Datensatz in eine Pipeline.
-2. Die Merkmalumwandlung erfolgt im Datensatz und wird in die Adobe Experience Platform zurückgeschrieben.
+2. Die Merkmalumwandlung erfolgt auf dem Datensatz und wird an Adobe Experience Platform zurückgeschrieben.
 3. Die transformierten Daten werden zur Schulung geladen.
 4. Die Feature-Pipeline definiert die Schritte mit dem Verlaufsverstärkungs-Regressor als ausgewähltes Modell.
 5. Die Pipeline wird verwendet, um die Schulungsdaten anzupassen und das geschulte Modell wird erstellt.
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 Nachdem Sie Ihre Feature-Pipeline erstellt haben, müssen Sie ein Docker-Bild erstellen, um die Feature-Pipeline-Endpunkte in der [!DNL Sensei Machine Learning] API aufzurufen. Sie benötigen eine Docker-Bild-URL, um die Feature-Pipeline-Endpunkte aufzurufen.
 
 >[!TIP]
+>
 >Wenn Sie keine Docker-URL haben, besuchen Sie die Quelldateien des [Pakets in einem Rezept](../models-recipes/package-source-files-recipe.md) -Lernprogramm, um eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL zu erhalten.
 
 Optional können Sie auch die folgende Postman-Sammlung verwenden, um den Workflow der Feature Pipeline-API abzuschließen:
@@ -423,6 +425,7 @@ Nach Abschluss des Vorgangs fordern Sie eine GET an, den Experimentstatus `/expe
 ### Festlegen der Aufgabe für die Auswertung von Experimenten {#scoring}
 
 >[!NOTE]
+>
 > Um diesen Schritt abzuschließen, müssen Sie mindestens einen erfolgreichen Schulungslauf mit Ihrem Experiment verknüpfen.
 
 Nach einem erfolgreichen Schulungslauf müssen Sie die [Aufgabe](../api/experiments.md#experiment-training-scoring)für die Bewertungsausführung angeben. Machen Sie eine POST auf `experiments/{EXPERIMENT_ID}/runs` und setzen Sie das `mode` Attribut auf &quot;score&quot;. Dies Beginn die Ausführung Ihres Bewertungsexperiments.
