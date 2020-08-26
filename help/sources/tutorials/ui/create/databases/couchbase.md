@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Couchbase-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9995a1d7daae3860783d2b4e4e0d2f1314eaa643
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 7%
@@ -15,6 +15,7 @@ ht-degree: 7%
 # Create a [!DNL Couchbase] source connector in the UI
 
 >[!NOTE]
+>
 > Der [!DNL Couchbase] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
 Source Connectors [!DNL Adobe Experience Platform] bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Couchbase] Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
@@ -66,4 +67,4 @@ Um ein vorhandenes Konto zu verknüpfen, wählen Sie das [!DNL Couchbase] Konto,
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Couchbase] Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/databases.md)einzubringen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Couchbase] Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/databases.md)einzubeziehen.
