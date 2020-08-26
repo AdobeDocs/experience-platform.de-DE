@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Generischer OData Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 52a01c5f90a9643691a25e2d0a5f03a7f0334a7d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 9%
@@ -15,13 +15,14 @@ ht-degree: 9%
 # (Beta) [!DNL Generic OData] -Anschluss
 
 >[!NOTE]
+>
 >Der [!DNL Generic OData] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
 [!DNL Experience Platform] unterstützt das Erfassen von Daten aus einer Protokollanwendung eines Drittanbieters. Zu den Protokollanbietern zählen [!DNL Generic OData].
 
-## Zulassungsliste der IP-Adresse
+## ZULASSUNGSLISTE der IP-Adresse
 
 Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
