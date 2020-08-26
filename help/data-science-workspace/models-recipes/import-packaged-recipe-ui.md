@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gepacktes Rezept importieren (Benutzeroberfläche)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 41%
@@ -131,12 +131,14 @@ Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateie
 ![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > Im Tutorial [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md) wurde nach der Erstellung des Rezepts für Einzelhandelsumsätze mit Python-Quelldateien eine Docker-URL bereitgestellt.
 
 Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit [!DNL Python] Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Wählen Sie **[!UICONTROL Python]** in der Dropdown-Liste *Laufzeit* und **[!UICONTROL Klassifizierung]** in der Dropdown-Liste *Typ* . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
 
 >[!NOTE]
-> *Typ *unterstützt **[!UICONTROL Classification]**und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
+>
+> *Typ* unterstützt **[!UICONTROL Classification]** und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -163,12 +165,14 @@ Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateie
 ![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > Im Tutorial [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md) wurde nach der Erstellung des Rezepts für Einzelhandelsumsätze mit R-Quelldateien eine Docker-URL bereitgestellt.
 
 Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit R-Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Wählen Sie **[!UICONTROL R]** in der Dropdownliste *Laufzeit* und **[!UICONTROL Classification]** in der Dropdownliste *Typ* . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
 
 >[!NOTE]
-> *Typ *unterstützt **[!UICONTROL Classification]**und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
+>
+> *Typ* unterstützt **[!UICONTROL Classification]** und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -195,12 +199,14 @@ Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateie
 ![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using PySpark source files.
 
 Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit PySpark-Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Wählen Sie **[!UICONTROL PySpark]** in der Dropdown-Liste *Laufzeit* . Sobald die PySpark-Laufzeit ausgewählt ist, wird das standardmäßige Artefakt automatisch in **[!UICONTROL Docker]** eingetragen. Wählen Sie anschließend **[!UICONTROL Klassifizierung]** in der Dropdown-Liste *Typ* . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
 
 >[!NOTE]
-> *Typ *unterstützt **[!UICONTROL Classification]**und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
+>
+> *Typ* unterstützt **[!UICONTROL Classification]** und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -227,12 +233,14 @@ Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateie
 ![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Scala ([!DNL Spark]) source files.
 
 Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit Scala-Quelldateien erstellten gepackten Rezept in das Feld *Quell-URL* ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Wählen Sie **[!UICONTROL Spark]** in der Dropdown-Liste *Laufzeit* . Nach Auswahl der [!DNL Spark] Laufzeitumgebung wird das standardmäßige Artefakt automatisch mit **[!UICONTROL Docker]** gefüllt. Wählen Sie dann **[!UICONTROL Regression]** aus der Dropdownliste *Typ* . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
 
 >[!NOTE]
-> *Typ *unterstützt **[!UICONTROL Classification]**und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
+>
+> *Typ* unterstützt **[!UICONTROL Classification]** und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
