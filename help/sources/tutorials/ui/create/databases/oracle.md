@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Oracle DB-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 9%
@@ -15,6 +15,7 @@ ht-degree: 9%
 # Create an [!DNL Oracle DB] source connector in the UI
 
 >[!NOTE]
+>
 > Der [!DNL Oracle DB] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Oracle DB] Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
