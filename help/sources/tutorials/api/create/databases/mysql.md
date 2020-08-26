@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines MySQL-Connectors mithilfe der Flow Service API
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 21%
@@ -15,9 +15,10 @@ ht-degree: 21%
 # Erstellen eines MySQL-Connectors mit der [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Der MySQL Connector befindet sich in der Beta-Version. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
-[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zur Verbindung mit MySQL [!DNL Experience Platform] zu führen.
 
