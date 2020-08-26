@@ -5,7 +5,7 @@ seo-title: Übersicht über die Administration der Echtzeit-Kundendatenplattform
 description: 'Das vorliegende Dokument bietet Ihnen einen Überblick über die Verwaltungsfunktionen der Echtzeit-Kundendatenplattform, die auf Adobe Experience Platform basiert. '
 seo-description: SEO-Beschreibung
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 60%
@@ -28,6 +28,7 @@ Die Zugriffskontrolle wird über [Adobe Admin Console](http://adminconsole.adobe
 To learn more about access control, see the [access control overview](../../access-control/home.md) in the [!DNL Experience Platform] documentation.
 
 >[!IMPORTANT]
+>
 >Befolgen Sie die im [Benutzerhandbuch für die Zugriffskontrolle](../../access-control/ui/overview.md) angegebenen Schritte, um eine ausführliche Anleitung zur Gewährung des Zugriffs auf Funktionen der Echtzeit-Kundendatenplattform zu erhalten. Achten Sie dabei insbesondere auf die Anleitungen zum Verwalten von Details und zusätzlichen Diensten für ein Produktprofil.
 
 ## Sandboxes
