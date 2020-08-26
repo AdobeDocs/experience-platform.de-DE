@@ -20,9 +20,9 @@ ht-degree: 59%
    * [(Alpha) Berechnete Attribute](api/computed-attributes.md)
    * [Edge-Projektionen](api/edge-projections.md)
    * [Entities ([!DNL Profile] access)](api/entities.md)
-   * [Exportaufträge ([!DNL-Profil]-Export)](api/export-jobs.md)
+   * [Exportaufträge ([!DNL -Profil]-Export)](api/export-jobs.md)
    * [Zusammenführungsrichtlinien](api/merge-policies.md)
-   * [Musterstatus der Vorschau ([!DNL-Profil] Vorschau)](api/preview-sample-status.md)
+   * [Musterstatus der Vorschau ([!DNL -Profil] Vorschau)](api/preview-sample-status.md)
    * [[!DNL Profile] Systemaufträge (Anforderungen löschen)](api/profile-system-jobs.md)
 * Benutzeroberflächen-Handbücher {#ui}
    * [[!DNL Profile] user guide](ui/user-guide.md)
