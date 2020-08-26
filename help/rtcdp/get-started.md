@@ -5,7 +5,7 @@ seo-title: Erste Schritte mit der Echtzeit-Kundendatenplattform von Adobe
 description: Beispielszenario für die Echtzeit-Kundendatenplattform von Adobe
 seo-description: Beispielszenario für die Echtzeit-Kundendatenplattform von Adobe
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 87%
@@ -258,6 +258,7 @@ In diesem Szenario möchte Luma die Zielgruppe mit Personalisierung über folgen
 Außerdem können Sie planen, dass das Segment zu einer bestimmten Zeit beginnen oder enden soll. Das Segment wird an den geplanten Daten veröffentlicht und in den konfigurierten Plattformen automatisch aktualisiert.
 
 >[!NOTE]
+>
 >Wenn Sie optional auf das Datumsfeld klicken, wird automatisch für 90 Tage geplant.
 
 Klicken Sie auf **[!UICONTROL Speichern]**, um zur nächsten Seite zu wechseln.
