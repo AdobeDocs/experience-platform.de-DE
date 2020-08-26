@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Quell-Connectors für FTP oder SFTP über die Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9995a1d7daae3860783d2b4e4e0d2f1314eaa643
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 12%
@@ -15,6 +15,7 @@ ht-degree: 12%
 # Erstellen eines Quell-Connectors für FTP oder SFTP über die Benutzeroberfläche
 
 >[!NOTE]
+>
 >Die FTP- und SFTP-Anschlüsse befinden sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines FTP- oder SFTP-Quellconnectors über die [!DNL Platform] Benutzeroberfläche.
