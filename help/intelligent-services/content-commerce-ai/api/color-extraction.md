@@ -5,7 +5,7 @@ title: Extraktion
 topic: Developer guide
 description: Der Dienst für Extraktion von Farben kann, wenn ein Bild gegeben wird, das Histogramm der Pixelfarben berechnen und durch vorherrschende Farben in Behältern sortieren.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
@@ -47,7 +47,8 @@ Die folgende Anforderung extrahiert Farben aus einem Bild basierend auf den in d
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten. Für den Extraktion-Dienst lautet die `analyzer_id` ID: `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
+>`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten. Für den Extraktion-Dienst lautet die `analyzer_id` ID:
+>`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
