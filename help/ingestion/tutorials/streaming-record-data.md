@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Streaming von Datensatzdaten
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 64%
+source-wordcount: '1055'
+ht-degree: 63%
 
 ---
 
 
-# Streamen von Datensatzdaten in die Adobe Experience Platform
+# Streamen von Datensatzdaten an Adobe Experience Platform
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 
@@ -352,7 +352,7 @@ Zur Validierung der zuvor erfassten Datensätze können Sie die verwenden, [!DNL
 
 >[!NOTE]
 >
->Wenn die Zusammenführungsrichtlinienkennung nicht definiert ist und der schema.</span>name oder relatedSchema</span>.name ist `_xdm.context.profile`, [!DNL Profile Access] ruft **alle** verwandten Identitäten ab.
+>Wenn die Richtlinie-ID zum Zusammenführen nicht definiert ist und die ID `schema.name` oder `relatedSchema.name` nicht `_xdm.context.profile`lautet, [!DNL Profile Access] werden **alle** zugehörigen Identitäten abgerufen.
 
 **API-Format**
 
