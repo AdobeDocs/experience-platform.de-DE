@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Engines
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 70%
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details Ihrer Docker-Registrierung einschließlich der Docker-URL (`host`), des Benutzernamens (`username`) und des Passworts (`password`) enthält.
 
 >[!NOTE]
->
 >
 >Ihr Docker-Passwort ändert sich jedes Mal, wenn Ihr `{ACCESS_TOKEN}` aktualisiert wird.
 
