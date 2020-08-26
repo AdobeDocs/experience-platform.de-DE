@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Modell optimieren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1221'
 ht-degree: 89%
 
 ---
@@ -28,7 +28,7 @@ Nach dem Implementieren und Trainieren eines Modells würde ein Data Scientist a
 
 Derzeit unterstützt das Model Insights Framework folgende Laufzeitumgebungen:
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/TensorFlow](#pythontensorflow)
 - [R](#r)
 
 Beispiel-Code für Rezepte finden Sie im Repository [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) unter `recipes`. Auf bestimmte Dateien aus diesem Repository wird in dieser Anleitung verwiesen.
