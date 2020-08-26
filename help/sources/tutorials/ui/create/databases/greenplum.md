@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines GreenPlum-Quellconnectors in der Benutzeroberfläche
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 9%
@@ -15,6 +15,7 @@ ht-degree: 9%
 # Create a [!DNL GreenPlum] source connector in the UI
 
 >[!NOTE]
+>
 > Der [!DNL GreenPlum] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL GreenPlum] Quell-Connectors mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
