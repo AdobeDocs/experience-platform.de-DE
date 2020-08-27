@@ -5,9 +5,9 @@ title: Bewerten eines Segments
 topic: tutorial
 description: In diesem Dokument finden Sie eine Anleitung zur Segmentbewertung und zum Zugriff auf Segmentergebnisse mithilfe der Segmentierungs-API.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1560'
 ht-degree: 14%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 14%
 
 # Segmentergebnisse auswerten und darauf zugreifen
 
-In diesem Dokument finden Sie eine Anleitung zur Bewertung von Segmenten und zum Zugriff auf Segmentergebnisse mit der [!DNL Segmentation API](../api/getting-started.md).
+Dieses Dokument bietet eine Anleitung zum Evaluieren von Segmenten und zum Zugriff auf Segmentergebnisse mithilfe der [[!DNL-Segmentierungs-API]](../api/getting-started.md).
 
 ## Erste Schritte
 
 Dieses Lernprogramm erfordert ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die beim Erstellen von Segmenten für die Audience erforderlich sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus [!DNL Real-time Customer Profile] Daten.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+- [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus [!DNL Real-time Customer Profile] Daten.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ### Erforderliche Kopfzeilen
@@ -229,10 +229,10 @@ Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Handb
 
 ## Nächste Schritte
 
-Sobald der Export erfolgreich abgeschlossen wurde, stehen Ihre Daten im [!DNL Data Lake] In zur Verfügung [!DNL Experience Platform]. Sie können dann mit der [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) Methode auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` Datei verwenden. Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
+Sobald der Export erfolgreich abgeschlossen wurde, stehen Ihre Daten im [!DNL Data Lake] In zur Verfügung [!DNL Experience Platform]. Sie können dann mit der [[!DNL-Datenzugriffs-API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) auf die Daten zugreifen, indem Sie die mit dem Export verknüpften Daten verwenden `batchId` . Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Zugriff auf und Herunterladen von Stapeldateien mit der [!DNL Data Access] API finden Sie im [Lernprogramm](../../data-access/tutorials/dataset-data.md)&quot;Datenzugriff&quot;.
 
 Sie können auch auf erfolgreich exportierte Segmentdaten zugreifen [!DNL Adobe Experience Platform Query Service]. Mithilfe der Benutzeroberfläche oder RESTful-API können [!DNL Query Service] Sie Abfragen für Daten innerhalb der [!DNL Data Lake]Benutzeroberfläche schreiben, überprüfen und ausführen.
 
-Weitere Informationen zur Abfrage von Daten zur Audience finden Sie in der Dokumentation zu [!DNL Query Service](../../query-service/home.md).
+Weitere Informationen zur Abfrage von Audiencen finden Sie in der Dokumentation zum [[!DNL Abfrage Service]](../../query-service/home.md).
