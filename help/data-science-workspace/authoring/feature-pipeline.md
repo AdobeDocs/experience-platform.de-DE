@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Erstellen einer Feature-Pipeline
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1372'
 ht-degree: 29%
 
 ---
@@ -438,4 +438,4 @@ Sobald die Bewertung abgeschlossen ist, sollte Ihre Feature-Pipeline betriebsber
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Durch Lesen dieses Dokuments haben Sie mit dem Modell-Authoring-SDK eine Feature-Pipeline erstellt, ein Docker-Bild erstellt und mit der Docker-Bild-URL ein Feature-Pipeline-Modell mithilfe der [!DNL Sensei Machine Learning] API erstellt. Sie sind jetzt bereit, mit der Transformation von Datensätzen und der Extrahierung von Datenfunktionen im Maßstab fortzufahren [!DNL Sensei Machine Learning API](../api/getting-started.md).
+Durch Lesen dieses Dokuments haben Sie mit dem Modell-Authoring-SDK eine Feature-Pipeline erstellt, ein Docker-Bild erstellt und mit der Docker-Bild-URL ein Feature-Pipeline-Modell mithilfe der [!DNL Sensei Machine Learning] API erstellt. Sie sind jetzt bereit, mit der Transformation von Datensätzen und der Extrahierung von Datenfunktionen im Maßstab mit der [[!DNL Sensei Machine Learning API]](../api/getting-started.md)fortzufahren.
