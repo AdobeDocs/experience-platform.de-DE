@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data usage labels;catalog service
 solution: Experience Platform
 title: Datennutzungsbezeichnungen
 topic: developer guide
+description: Die Katalogdienst-API bietet Endpunkte zum Verwalten von Datenverwendungsbeschriftungen für Datensätze.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 13%
+source-wordcount: '59'
+ht-degree: 10%
 
 ---
 
