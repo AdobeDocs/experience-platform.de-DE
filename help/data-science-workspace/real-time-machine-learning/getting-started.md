@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: Erste Schritte mit maschinellem Lernen in Echtzeit
 topic: Getting started
+description: Im folgenden Dokument werden die erforderlichen Schritte zum Erstellen eines Echtzeit-maschinellen Lernmodells in Adobe Experience Platform beschrieben.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '425'
 ht-degree: 1%
 
 ---
