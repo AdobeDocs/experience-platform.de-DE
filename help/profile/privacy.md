@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
 topic: overview
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 31%
+source-wordcount: '603'
+ht-degree: 27%
 
 ---
 
@@ -22,9 +22,9 @@ In diesem Dokument werden wesentliche Konzepte für die Verarbeitung von Datensc
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [!DNL Privacy Service](home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
-* [!DNL Identity Service](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
-* [!DNL Real-time Customer Profile](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL-Privacy Service]](home.md): Verwaltet Kundenanfragen für den Zugriff auf, die Nichtverkaufsoption oder das Löschen ihrer personenbezogenen Daten in Adobe Experience Cloud-Anwendungen.
+* [[!DNL-Identitätsdienst]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [[!DNL Echtzeit-Profil]](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 
@@ -93,7 +93,7 @@ curl -X POST \
 
 ### Verwenden der UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_in order to process jobs for data stored in the[!DNL Data Lake]or[!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_ in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
