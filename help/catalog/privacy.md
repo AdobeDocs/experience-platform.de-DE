@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 25%
+source-wordcount: '1204'
+ht-degree: 23%
 
 ---
 
@@ -22,10 +22,10 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [!DNL Privacy Service](../privacy-service/home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
-* [!DNL Catalog Service](home.md): Das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform]. Stellt eine API bereit, mit der Metadaten von Datensätzen aktualisiert werden können.
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-* [!DNL Identity Service](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [[!DNL-Privacy Service]](../privacy-service/home.md): Verwaltet Kundenanfragen für den Zugriff auf, die Nichtverkaufsoption oder das Löschen ihrer personenbezogenen Daten in Adobe Experience Cloud-Anwendungen.
+* [[!DNL-Katalogdienst]](home.md): Das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform]. Stellt eine API bereit, mit der Metadaten von Datensätzen aktualisiert werden können.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
+* [[!DNL-Identitätsdienst]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 
