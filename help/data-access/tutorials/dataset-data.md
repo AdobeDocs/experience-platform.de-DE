@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: Übersicht über den Datenzugriff
 topic: tutorial
+description: Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Zugreifen und Herunterladen von Daten, die in einem Datensatz mit der Datenzugriff-API in Adobe Experience Platform gespeichert sind. Außerdem werden Sie mit einigen der einzigartigen Funktionen der Datenzugriff-API, wie z. B. Paging und teilweise Downloads, vorgestellt.
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1332'
-ht-degree: 14%
+source-wordcount: '1384'
+ht-degree: 13%
 
 ---
 
@@ -18,7 +19,7 @@ Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Zugreifen und 
 
 ## Erste Schritte
 
-In diesem Lernprogramm erfahren Sie, wie Sie einen Datensatz erstellen und ausfüllen. Weitere Informationen finden Sie im Tutorial [zur Erstellung von](../../catalog/datasets/create.md) Datensätzen.
+Dieses Lernprogramm erfordert ein grundlegendes Arbeitsverständnis zum Erstellen und Füllen eines Datensatzes. Weitere Informationen finden Sie im Tutorial [zur Erstellung von](../../catalog/datasets/create.md) Datensätzen.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platform-APIs erfolgreich aufrufen zu können.
 
