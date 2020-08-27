@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
 solution: Experience Platform
 title: Übersicht über den Datenzugriff
 topic: overview
+description: Data Access unterstützt Adobe Experience Platform, indem es Benutzerwerkzeuge bereitstellt, die auf die Entdeckung und Zugänglichkeit von erfassten Datensätzen innerhalb der Experience Platform ausgerichtet sind.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 75e1d3c9912e54e925032bbc2ae4e984948a30eb
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '210'
 ht-degree: 7%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 7%
 
 # [!DNL Data Access]Übersicht
 
-[!DNL Data Access] unterstützt die Adobe Experience Platform durch die Bereitstellung von Benutzerwerkzeugen, die sich auf die Entdeckung und Zugänglichkeit von erfassten Datensätzen innerhalb von [!DNL Experience Platform]konzentrieren.
+[!DNL Data Access] unterstützt Adobe Experience Platform durch die Bereitstellung von Benutzerwerkzeugen, die sich auf die Erkennung und Zugänglichkeit von erfassten Datensätzen innerhalb von [!DNL Experience Platform]konzentrieren.
 
 ![Datenzugriff auf Experience Platform](images/Data_Access_Experience_Platform.png)
 
