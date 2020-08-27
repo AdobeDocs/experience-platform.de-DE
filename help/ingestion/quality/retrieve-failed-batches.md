@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Abrufen fehlgeschlagener Batches
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 75%
+source-wordcount: '607'
+ht-degree: 74%
 
 ---
 
@@ -22,8 +22,8 @@ This tutorial covers steps for retrieving information about a failed batch using
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-- [!DNL Data Ingestion](../home.md): Die Methoden, mit denen Daten gesendet werden können [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
+- [[!DNL Data Ingestion]](../home.md): Die Methoden, mit denen Daten gesendet werden können [!DNL Experience Platform].
 
 ### Lesen von Beispiel-API-Aufrufen
 
