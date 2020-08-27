@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Rezept zum Produktkauf
 topic: overview
+description: Mit dem Produktkaufprognostizierungsrezept können Sie die Wahrscheinlichkeit eines bestimmten Ereignisses des Kundenkaufs vorhersagen, z. B. eines Produktkaufs.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 15%
+source-wordcount: '382'
+ht-degree: 14%
 
 ---
 
@@ -45,7 +46,7 @@ Dieses Rezept verwendet [XDM-Schema](../../xdm/home.md) , um die Daten zu modell
 | optinEmail | Boolesch |
 | optinMobile | Boolesch |
 | optinAddress | Boolesch |
-| created | Ganzzahl |
+| Erstellt | Ganzzahl |
 | totalOrders | Nummer |
 | totalItems | Nummer |
 | orderDate1 | Nummer |
