@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
 title: Rezept erstellen mit Jupyter Notebooks
 topic: Tutorial
+description: Dieses Tutorial umfasst zwei Hauptabschnitte. Zuerst erstellen Sie mit einer Vorlage in JupyterLab Notebook ein Modell für maschinelles Lernen. Dann führen Sie den Workflow „Notebook an Rezept“ in JupyterLab aus, um ein Rezept in Data Science Workspace zu erstellen.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '2295'
+source-wordcount: '2336'
 ht-degree: 86%
 
 ---
