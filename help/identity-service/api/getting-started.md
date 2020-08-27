@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erste Schritte
 topic: API guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '726'
 ht-degree: 25%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 25%
 
 # [!DNL Identity Service] API-Entwicklerleitfaden
 
-Adobe Experience Platform [!DNL Identity Service] verwaltet den geräteübergreifenden, geräteübergreifenden Kanal und die Identifikation Ihrer Kunden in Echtzeit in einem so genannten Identitätsdiagramm innerhalb der Adobe Experience Platform.
+Adobe Experience Platform [!DNL Identity Service] verwaltet den geräteübergreifenden, geräteübergreifenden Kanal und die Identifikation Ihrer Kunden in Echtzeit in einem so genannten Identitätsdiagramm innerhalb von Adobe Experience Platform.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [!DNL Identity Service](../home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung der Kundendaten ergibt. Dies geschieht, indem Identitäten zwischen Geräten und Systemen, auf denen Kunden mit Ihrer Marke interagieren, überbrückt werden.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+- [[!DNL-Identitätsdienst]](../home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung der Kundendaten ergibt. Dies geschieht, indem Identitäten zwischen Geräten und Systemen, auf denen Kunden mit Ihrer Marke interagieren, überbrückt werden.
+- [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
 The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Identity Service] API.
 
