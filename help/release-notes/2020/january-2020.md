@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 41%
+source-wordcount: '894'
+ht-degree: 40%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 41%
 
 **Veröffentlichungsdatum: 15. Januar 2020**
 
-Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
+Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
-* [!DNL Destinations](#destinations)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL-Privacy Service]](#privacy)
+* [[!DNL-Quellen]](#sources)
+* [[!DNL-Ziele]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM) System {#xdm}
 
@@ -75,7 +75,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 |--- | ---|
 | Unterstützung für Kundenattributdaten | UI- und API-Unterstützung zum Erstellen von Streaming-Connectors zum Erfassen von Kundenattributdaten. |
 | Zusätzliche Dateiformatunterstützung für Cloud-Datenspeicherung | Die Dateierfassung aus Cloud-Datenspeicherung unterstützt jetzt XDM-konforme Dateiformate wie Parquet und JSON. |
-| Unterstützung für Zugriffskontrollen | Das Zugriffskontrolle-Framework in Adobe Experience Platform bietet die erforderlichen Berechtigungen, um den Zugriff auf Quellen bei der Datenerfassung zu gewähren. Je nach Berechtigungsstufe kann ein Benutzer Ansichten- und Quelldateien ausführen, Quellen verwalten oder den Zugriff ganz verweigern. |
+| Unterstützung für Zugriffskontrollen | Das Zugriffskontrolle-Framework in Adobe Experience Platform bietet die erforderlichen Berechtigungen, um den Zugriff auf Quellen bei der Datenerfassung zu ermöglichen. Je nach Berechtigungsstufe kann ein Benutzer Ansichten- und Quelldateien ausführen, Quellen verwalten oder den Zugriff ganz verweigern. |
 
 **Berechtigungen für Zugriffskontrollen**
 
@@ -105,7 +105,7 @@ In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built in
 | Kategorie | Berechtigung | Beschreibung |
 |--- | --- | ---|
 | Ziele | Verwalten von Zielen | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen. |
-| Ziele | Anzeigen von Zielen | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte [!UICONTROL _Katalog _]und authentifizierte Ziele auf der Registerkarte_ Durchsuchen._ |
+| Ziele | Anzeigen von Zielen | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte [!UICONTROL _Katalog_] und authentifizierte Ziele auf der Registerkarte _Durchsuchen._ |
 | Ziele | Aktivieren von Zielen | Möglichkeit, Daten an Ziele zu aktivieren. Für diese Berechtigung muss dem Profil &quot;Ansicht&quot;entweder &quot;Ziele verwalten&quot;oder &quot;Zielorte verwalten&quot;hinzugefügt werden. |
 
 **Bekannte Probleme**
