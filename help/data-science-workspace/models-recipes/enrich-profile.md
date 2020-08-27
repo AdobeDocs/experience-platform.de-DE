@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen anreichern
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 72%
+source-wordcount: '1191'
+ht-degree: 71%
 
 ---
 
@@ -26,9 +26,9 @@ This document provides a step-by-step tutorial to enrich [!DNL Real-time Custome
 
 This tutorial requires a working understanding of the various aspects of [!DNL Adobe Experience Platform] involved in ingesting [!DNL Profile] data and creating segments. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Plattform erfasst werden.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+* [[!DNL Echtzeit-Profil]](../../rtcdp/overview.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL-Identitätsdienst]](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Plattform erfasst werden.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 
 Neben den oben genannten Dokumenten sollten Sie auch folgende Leitfäden zu Schemas und dem Schema-Editor lesen:
 
