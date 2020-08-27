@@ -5,7 +5,7 @@ title: JupyterLab-Benutzerhandbuch
 topic: Overview
 description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project Jupyter und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten. In diesem Dokument erhalten Sie einen Überblick über JupyterLab und die Funktionen sowie Anleitungen zum Durchführen häufiger Aktionen.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 56%
@@ -155,8 +155,8 @@ Der angepasste *Starter* bietet nützliche Notebook-Vorlagen für die unterstüt
 | --- | --- |
 | Leer | Eine leere Notebook-Datei. |
 | Starter | Ein vorausgefülltes Notebook, das die Datenerfassung anhand von Musterdaten demonstriert. |
-| Einzelhandelsumsätze | Ein vorausgefülltes Notebook mit dem <a href="https://docs.adobe.com/content/help/de-DE/experience-platform/data-science-workspace/home.translate.html#!api-specification/markdown/narrative/technical_overview/data_science_workspace_overview/dsw_prebuilt_recipes/retail_sales_recipe/retail_sales_recipe.md" target="_blank">Rezept für Einzelhandelsumsätze</a>, inklusive Beispieldaten. |
-| Recipe Builder | Eine Notebook-Vorlage zum Erstellen eines Rezepts in [!DNL JupyterLab]. Sie ist mit Code und Kommentaren vorausgefüllt, die die Erstellung von Rezepten demonstrieren und beschreiben. Eine ausführliche Vorgehensweise finden Sie im Tutorial <a href="https://docs.adobe.com/content/help/de-DE/experience-platform/data-science-workspace/jupyterlab/create-a-recipe.html" target="_blank">Notebook an Rezept</a>. |
+| Einzelhandelsumsätze | A pre-filled notebook featuring the [retail sales recipe](https://docs.adobe.com/content/help/de-DE/experience-platform/data-science-workspace/home.translate.html#!api-specification/markdown/narrative/technical_overview/data_science_workspace_overview/dsw_prebuilt_recipes/retail_sales_recipe/retail_sales_recipe.md) using sample data. |
+| Recipe Builder | Eine Notebook-Vorlage zum Erstellen eines Rezepts in [!DNL JupyterLab]. Sie ist mit Code und Kommentaren vorausgefüllt, die die Erstellung von Rezepten demonstrieren und beschreiben. Eine ausführliche Vorgehensweise finden Sie im Tutorial [Notebook an Rezept](https://docs.adobe.com/content/help/de-DE/experience-platform/data-science-workspace/jupyterlab/create-a-recipe.html). |
 | [!DNL Query Service] | A pre-filled notebook demonstrating the usage of [!DNL Query Service] directly in [!DNL JupyterLab] with provided sample workflows that analyzes data at scale. |
 | ExperienceEvents | Ein vorausgefülltes Notebook, das die Datenerkundung bei Nachwertdaten von Erlebnisereignissen demonstriert und sich auf Funktionen konzentriert, die in der ganzen Datenstruktur einheitlich sind. |
 | XDM Queries | Ein vorausgefülltes Notebook, das geschäftliche Beispielabfragen zu Erlebnisereignisdaten veranschaulicht. |
@@ -455,9 +455,9 @@ Ein benutzerdefinierter [!DNL Data Science Workspace] magischer Befehl zum Lesen
 
 ### Abfragen mit [!DNL Query Service] in [!DNL Python]
 
-[!DNL JupyterLab] auf [!DNL Platform] ermöglicht Ihnen die Verwendung von SQL in einem [!DNL Python] Notebook, um über den <a href="https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html" target="_blank">Adobe Experience Platform Abfrage Service</a>auf Daten zuzugreifen. Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
+[!DNL JupyterLab] auf [!DNL Platform] ermöglicht Ihnen die Verwendung von SQL in einem [!DNL Python] Notebook, um über den [Adobe Experience Platform Abfrage Service](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html)auf Daten zuzugreifen. Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
 
-Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the <a href="https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md" target="_blank">[!DNL Query Service] SQL syntax</a>.
+Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the [[!DNL Query Service] SQL syntax](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
 
 Querying data using [!DNL Query Service] requires you to provide the name of the target dataset. Sie können die erforderlichen Code-Zellen generieren, indem Sie den gewünschten Datensatz mit dem **Data Explorer** suchen. Klicken Sie mit der rechten Maustaste auf die Datensatzliste und klicken Sie auf **Daten in Notebook abfragen**, um in Ihrem Notebook die beiden folgenden Code-Zellen zu generieren:
 
