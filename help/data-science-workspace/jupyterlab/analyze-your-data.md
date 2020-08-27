@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analysieren Ihrer Daten mithilfe von Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1710'
 ht-degree: 22%
 
 ---
@@ -18,9 +18,9 @@ Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Wor
 
 Die folgenden Konzepte werden eingeführt:
 
-- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)ist die webbasierte Schnittstelle der nächsten Generation für Project Jupyter und ist eng in[!DNL Adobe Experience Platform]integriert.
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die Web-basierte Schnittstelle der nächsten Generation für Project Jupyter und ist eng in [!DNL Adobe Experience Platform].
 - **Stapel:** Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird. Beim Hinzufügen von Daten zu einem Datensatz werden neue Stapel erstellt.
-- **Data Access SDK (nicht mehr unterstützt):** Das Data Access SDK ist jetzt veraltet. Bitte verwenden Sie das [!DNL Platform SDK](../authoring/platform-sdk.md) Handbuch.
+- **Data Access SDK (nicht mehr unterstützt):** Das Data Access SDK ist jetzt veraltet. Bitte verwenden Sie das Handbuch [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
 
 ## Notebooks im Data Science Workspace
 
@@ -90,7 +90,7 @@ Jetzt können wir mit der rechten Maustaste auf den `Retail-Training-<your-alias
 
 >[!TIP]
 >
->finden Sie in der [!DNL Platform SDK](../authoring/platform-sdk.md) Anleitung zum Konvertieren Ihres Codes.
+>Lesen Sie das Handbuch [[!DNL Platform SDK]](../authoring/platform-sdk.md) , um Ihren Code zu konvertieren.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
