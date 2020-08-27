@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 70%
+source-wordcount: '682'
+ht-degree: 68%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 70%
 
 **Release-Datum: Mittwoch, 11. Dezember 2019**
 
-Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
+Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!DNL-Segmentierungsdienst]](#segmentation)
+* [[!DNL-Entscheidungsdienst]](#decisioning)
+* [[!DNL-Quellen]](#sources)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -34,8 +34,8 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Merged Audiences tab in [!DNL Segment Builder] | Die Registerkarten [!UICONTROL _Segmente _]und[!UICONTROL _Audiences_][!DNL Segment Builder] im wurden zu einer Registerkarte namens [!UICONTROL _Audiences _]zusammengefasst. Auf dieser Registerkarte können Sie nach vorhandenen Zielgruppen suchen, die Sie dann per Drag-and-Drop in die Arbeitsfläche von Rule Builder ziehen können, um eine neue Segmentdefinition zu erstellen. Beim Referenzieren einer Zielgruppe kann der neuen Segmentdefinition einer der folgenden Regellogiksätze hinzugefügt werden: Die Zielgruppenzugehörigkeit als Regel. Der vollständige Satz an Regellogik, der die referenzierte Zielgruppe definiert hat. |
-| Neuer Ort für die Auswahl von Zusammenführungsrichtlinien | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. Um eine Zusammenführungsrichtlinie für eine Segmentdefinition auszuwählen, klicken Sie auf das Zahnradsymbol auf der Registerkarte [!UICONTROL _Felder _]und wählen Sie dann im Dropdown-Menü_[!UICONTROL  Zusammenführungsrichtlinie]_ die gewünschte Zusammenführungsrichtlinie aus. |
+| Merged Audiences tab in [!DNL Segment Builder] | Die Registerkarten [!UICONTROL _Segmente_] und [!UICONTROL _Audiences_][!DNL Segment Builder] im wurden zu einer Registerkarte namens [!UICONTROL _Audiences_] zusammengefasst. Auf dieser Registerkarte können Sie nach vorhandenen Zielgruppen suchen, die Sie dann per Drag-and-Drop in die Arbeitsfläche von Rule Builder ziehen können, um eine neue Segmentdefinition zu erstellen. Beim Referenzieren einer Zielgruppe kann der neuen Segmentdefinition einer der folgenden Regellogiksätze hinzugefügt werden: Die Zielgruppenzugehörigkeit als Regel. Der vollständige Satz an Regellogik, der die referenzierte Zielgruppe definiert hat. |
+| Neuer Ort für die Auswahl von Zusammenführungsrichtlinien | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. Um eine Zusammenführungsrichtlinie für eine Segmentdefinition auszuwählen, klicken Sie auf das Zahnradsymbol auf der Registerkarte [!UICONTROL _Felder_] und wählen Sie dann im Dropdown-Menü _[!UICONTROL Zusammenführungsrichtlinie]_ die gewünschte Zusammenführungsrichtlinie aus. |
 
 **Bekannte Probleme**
 
