@@ -5,7 +5,7 @@ title: Analysieren Ihrer Daten mithilfe von Notebooks
 topic: Tutorial
 description: Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Workspace erstellten Jupyter-Notebooks, um auf Ihre Daten zuzugreifen, sie zu untersuchen und sie zu visualisieren.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 22%
@@ -91,7 +91,7 @@ Jetzt können wir mit der rechten Maustaste auf den `Retail-Training-<your-alias
 
 >[!TIP]
 >
->Lesen Sie das Handbuch [[!DNL Platform SDK]](../authoring/platform-sdk.md) , um Ihren Code zu konvertieren.
+>Weitere Informationen zum Konvertieren des Codes finden Sie im Handbuch zum [[!DNL-Plattform-SDK]](../authoring/platform-sdk.md) .
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
