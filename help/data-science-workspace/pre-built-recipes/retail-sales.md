@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Rezept für Einzelhandel
 topic: overview
+description: Mit dem Retail Sales-Rezept können Sie eine Prognose der Verkaufszahlen für alle Läden für einen bestimmten Zeitraum erstellen. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 17%
+source-wordcount: '571'
+ht-degree: 21%
 
 ---
 
@@ -33,7 +34,7 @@ Das Rezept für die Verkaufsvorausschätzung verwendet maschinelles Lernen, um V
 
 Beginnen Sie mit diesem [Tutorial](../jupyterlab/create-a-recipe.md).
 
-In diesem Lernprogramm wird beschrieben, wie Sie das Rezept für den Einzelhandel in einem Jupyter-Notebook erstellen und mithilfe des Notebooks Arbeitsabläufe für die Rezeptur erstellen, um das Rezept in der Adobe Experience Platform zu erstellen.
+In diesem Lernprogramm wird beschrieben, wie Sie das Rezept für den Einzelhandel in einem Jupyter-Notebook erstellen und mithilfe des Notebooks Arbeitsabläufe für die Rezeptur in Adobe Experience Platform erstellen.
 
 ## Datenschema
 
