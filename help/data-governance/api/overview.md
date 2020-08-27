@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Entwicklerhandbuch für die Policy Service-API
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 16%
 
 ---
 
 
-# [!DNL Policy Service] API developer guide
+# [!DNL Policy Service] API-Entwicklerleitfaden
 
 Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
-The [!DNL Policy Service] API provides several endpoints that allow you to programmatically manage data usage labels and policies, as well as evaluate marketing actions for policy violations. These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
+Die [!DNL Policy Service] API bietet mehrere Endpunkte, mit denen Sie Datenverwendungsbeschriftungen und -richtlinien programmgesteuert verwalten und Marketingaktionen für Richtlinienverletzungen auswerten können. Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern. Weitere Informationen finden Sie im Handbuch [Erste Schritte](./getting-started.md) .
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge Ansicht, besuchen Sie den [Policy Service API-Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge Ansicht, besuchen Sie den [[!DNL Policy Service] API-Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
 
 ## Bezeichnungen
 
@@ -26,7 +26,7 @@ Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten ge
 
 ## Marketing-Aktionen
 
-Marketingaktionen (auch als Marketing-Nutzungsszenarien bezeichnet) im Kontext des [!DNL Data Governance] Frameworks sind Aktionen, die ein [!DNL Experience Platform] Datenkonsument durchführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. For detailed information on working with marketing actions, see the [marketing actions endpoint guide](./marketing-actions.md).
+Marketingaktionen (auch als Marketing-Nutzungsszenarien bezeichnet) im Kontext des [!DNL Data Governance] Frameworks sind Aktionen, die ein [!DNL Experience Platform] Datenkonsument durchführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Ausführliche Informationen zum Arbeiten mit Marketingaktionen finden Sie im Endpunkt-Handbuch zu [Marketingaktionen](./marketing-actions.md).
 
 ## Richtlinien
 
@@ -35,7 +35,7 @@ Data usage policies are rules that describe the kinds of marketing actions that 
 1. Eine bestimmte Marketingaktion
 1. Die Datenverwendungs-Beschriftungen, die für diese Aktion eingeschränkt sind, gegen
 
-To learn how to manage policies in the API, see the [policies endpoint guide](./policies.md)
+Informationen zum Verwalten von Richtlinien in der API finden Sie im [Richtlinien-Endpunkthandbuch](./policies.md)
 
 ## Auswertung
 
