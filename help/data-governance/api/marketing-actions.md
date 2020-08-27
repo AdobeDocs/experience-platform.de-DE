@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;marketing actions api;API-based enforcement;data governance
 solution: Experience Platform
 title: Marketing-Aktionen
 topic: developer guide
+description: Eine Marketingaktion im Rahmen der Adobe Experience Platform-Datenverwaltung ist eine Maßnahme, die ein Datenbenutzer in der Experience Platform ergreift und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '718'
 ht-degree: 5%
 
 ---
