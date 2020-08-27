@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query Service in Jupyter Notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 70%
+source-wordcount: '783'
+ht-degree: 69%
 
 ---
 
@@ -27,14 +27,14 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 - Ein [!DNL Adobe Analytics] Datensatz
 
 - Ein Verständnis der folgenden Schlüsselkonzepte, die in diesem Tutorial verwendet werden:
-   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-   - [!DNL Query Service](../../query-service/home.md)
-   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) und XDM System]](../../xdm/home.md)
+   - [[!DNL Abfrage Service]](../../query-service/home.md)
+   - [[!DNL Abfrage Service SQL Syntax]](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## Zugriff [!DNL JupyterLab] und [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. In [!DNL Experience Platform](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Warten Sie einen Moment, bis JupyterLab geladen ist.
+1. In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Warten Sie einen Moment, bis JupyterLab geladen ist.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
