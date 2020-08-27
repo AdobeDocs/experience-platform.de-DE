@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Entwicklerhandbuch zur Schema Registry-API
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 72%
+source-wordcount: '1237'
+ht-degree: 70%
 
 ---
 
@@ -167,9 +167,21 @@ Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. Es 
 
 The global container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, mixins, data types, and schemas. Sie dürfen nur Listen- und Suchanfragen (GET) für den globalen Container ausführen.
 
+Ein Beispiel für einen Aufruf, der den globalen Container verwendet, würde wie folgt aussehen:
+
+```http
+GET /global/classes
+```
+
 ### Mandanten-Container
 
 Nicht zu verwechseln mit Ihrer eindeutigen `TENANT_ID`, enthält der Mandanten-Container alle Klassen, Mixins, Datentypen, Schemata und Deskriptoren, die von einer IMS-Organisation definiert wurden. Sie sind für jede Organisation eindeutig, d h. sie sind für andere IMS-Organisationen nicht sichtbar oder verwaltbar. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für die Ressourcen ausführen, die Sie im Mandanten-Container erstellen.
+
+Ein Beispiel für einen Aufruf, der den Container des Mandanten verwendet, würde wie folgt aussehen:
+
+```http
+POST /tenant/mixins
+```
 
 When you create a class, mixin, schema or data type in the tenant container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. Diese `$id` wird in der gesamten API verwendet, um auf bestimmte Ressourcen zu verweisen. Beispiele für Werte der `$id` finden Sie im nächsten Abschnitt.
 
