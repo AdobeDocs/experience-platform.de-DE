@@ -5,10 +5,10 @@ seo-title: Datenschutz im Echtzeit-Kundendatenprofil
 description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 61%
+source-wordcount: '312'
+ht-degree: 60%
 
 ---
 
@@ -25,8 +25,8 @@ Adobe Experience Platform [!DNL Privacy Service] allows you to streamline the pr
 
 Es gibt zwei Methoden für die Übermittlung einzelner DSGVO- und CCPA-Anfragen von Datensubjekten bezüglich des Zugriffs auf und des Löschens von Kundendaten:
 
-* Use the [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Benutzeroberfläche von Privacy Service](../../privacy-service/ui/overview.md).
-* Use the [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Privacy Service-API](../../privacy-service/api/getting-started.md).
+* Use the [[!DNL Privacy Service UI]](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Benutzeroberfläche von Privacy Service](../../privacy-service/ui/overview.md).
+* Use the [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Privacy Service-API](../../privacy-service/api/getting-started.md).
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
