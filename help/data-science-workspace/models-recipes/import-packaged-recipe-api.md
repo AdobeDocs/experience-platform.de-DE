@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
 title: Verpacktes Rezept (API) importieren
 topic: Tutorial
+description: 'Dieses Lernprogramm verwendet die Sensei Machine Learning API, um eine Engine zu erstellen, die auch als Rezept in der Benutzeroberfläche bezeichnet wird. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 30%
+source-wordcount: '981'
+ht-degree: 29%
 
 ---
 
