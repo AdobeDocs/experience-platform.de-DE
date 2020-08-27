@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Richtlinien
 topic: developer guide
+description: Datennutzungsrichtlinien sind von Ihrem Unternehmen angewandte Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt /policies wird für alle API-Aufrufe verwendet, die sich auf das Anzeigen, Erstellen, Aktualisieren oder Löschen von Datenverwendungsrichtlinien beziehen.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 8%
+source-wordcount: '1804'
+ht-degree: 9%
 
 ---
 
 
-# Richtlinien endpoint
+# Endpunkt der Richtlinien
 
 Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. Der `/policies` Endpunkt im [!DNL Policy Service API] ermöglicht Ihnen die programmatische Verwaltung von Datenverwendungsrichtlinien für Ihr Unternehmen.
 
