@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 76%
+source-wordcount: '1148'
+ht-degree: 74%
 
 ---
 
@@ -21,11 +21,11 @@ Dieses Benutzerhandbuch enthält Anweisungen zur Ausführung allgemeiner Aktione
 Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Datensätze](overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in [!DNL Experience Platform].
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie Ihre eigenen benutzerdefinierten XDM-Schema mithilfe der [!DNL Schema Editor] in der [!DNL Platform] Benutzeroberfläche erstellen.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [!DNL Data Governance](../../data-governance/home.md): Sorgen Sie bei der Nutzung von Kundendaten für die Einhaltung von Vorschriften, Begrenzungen und Richtlinien.
+* [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL-Datenverwaltung]](../../data-governance/home.md): Gewährleisten Sie die Einhaltung von Vorschriften, Einschränkungen und Richtlinien zur Nutzung von Kundendaten.
 
 ## Anzeigen von Datensätzen
 
