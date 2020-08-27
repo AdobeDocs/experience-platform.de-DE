@@ -5,9 +5,9 @@ title: Arbeiten mit der Decisioning Service-Laufzeit unter Verwendung von APIs
 topic: tutorial
 description: 'Dieses Dokument bietet eine Anleitung zum Arbeiten mit den Laufzeitdiensten des Entscheidungsdienstes mit Adobe Experience Platform-APIs. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2017'
 ht-degree: 13%
 
 ---
@@ -21,9 +21,9 @@ This document provides a tutorial for working with the runtime services of [!DNL
 
 Dieses Tutorial erfordert ein Verständnis der [!DNL Experience Platform] Dienste, die bei der Entscheidung und Bestimmung des nächsten besten Angebots für die Kundenerfahrung eine Rolle spielen. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für Folgendes:
 
-- [!DNL Decisioning Service](./../home.md): Bietet das Framework zum Hinzufügen und Entfernen von Angeboten und zum Erstellen von Algorithmen zur Auswahl der besten, die während des Kundenerlebnisses präsentiert werden sollen.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL wird zum Definieren von Regeln und Filtern verwendet.
+- [[!DNL-Entscheidungsdienst]](./../home.md): Bietet das Framework zum Hinzufügen und Entfernen von Angeboten und zum Erstellen von Algorithmen zur Auswahl der besten, die während des Kundenerlebnisses präsentiert werden sollen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+- [[!DNL Profil Abfrage Language (PQL)]](../../segmentation/pql/overview.md): PQL wird zum Definieren von Regeln und Filtern verwendet.
 - [Verwalten von Entscheidungsobjekten und Regeln mithilfe von APIs](./entities.md): Vor der Verwendung der Laufzeit der Entscheidungsdienste müssen Sie die entsprechenden Entitäten einrichten.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
