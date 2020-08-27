@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Exemplarische Vorgehensweise zum Erstellen und Veröffentlichen eines maschinellen Lernmodells
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1548'
 ht-degree: 2%
 
 ---
@@ -45,10 +45,10 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 * Laden Sie die drei erforderlichen [!DNL Jupyter Notebook] Dateien aus dem öffentlichen <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe- [!DNL Git] Repository</a>herunter. Diese werden verwendet, um den [!DNL JupyterLab] Arbeitsablauf in zu demonstrieren [!DNL Data Science Workspace].
 
 * Ein Verständnis der folgenden Schlüsselkonzepte, die in diesem Tutorial verwendet werden:
-   * [!DNL Experience Data Model](../../xdm/home.md): Der durch die Adobe zur Definition von Standard-Schemas wie [!DNL Profile] und ExperienceEvent für Customer Experience Management angeführte Standardisierungsaufwand.
+   * [[!DNL Experience Data Model]](../../xdm/home.md): Der durch die Adobe zur Definition von Standard-Schemas wie [!DNL Profile] und ExperienceEvent für Customer Experience Management angeführte Standardisierungsaufwand.
    * Datensätze: Ein Datenspeicherung- und Verwaltungskonstrukt für tatsächliche Daten. Eine physische instanziierte Instanz eines [XDM-Schemas](../../xdm/schema/field-dictionary.md).
    * Stapel: Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird.
-   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist eine Open-Source Web-basierte Schnittstelle für Projekt [!DNL Jupyter] und ist eng in [!DNL Experience Platform].
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist eine Open-Source Web-Schnittstelle für Projekt [!DNL Jupyter] und ist eng in [!DNL Experience Platform]integriert.
 
 ## Daten vorbereiten {#prepare-your-data}
 
@@ -65,7 +65,7 @@ Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalis
 
 Die anderen Datensätze wurden zur Vorschau mit Stapeln vorausgefüllt. Sie können diese Datensätze durch Wiederholen der oben genannten Schritte Ansicht werden.
 
-| Dataset-Name | Schema | Beschreibung |
+| Datensatzname | Schema | Beschreibung |
 | ----- | ----- | ----- |
 | Golden Data Set postValues | Goldenes Datenset-Schema | [!DNL Analytics] Quelldaten von Ihrer Website |
 | Recommendations Input DataSet | Recommendations Input Schema | Die [!DNL Analytics] Daten werden mithilfe einer Feature-Pipeline in einen Schulungsdatensatz umgewandelt. Diese Daten werden zur Schulung des Product Recommendations Machine Learning Model verwendet. `itemid` und `userid` einem von diesem Kunden erworbenen Produkt entsprechen. |
