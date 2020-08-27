@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: Benutzer für ein Produktprofil verwalten
 topic: user guide
+description: Dieses Dokument zeigt Ihnen, wie Sie Benutzer für ein Profil in der Benutzeroberfläche von Adobe Experience Platform verwalten.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '199'
 ht-degree: 7%
 
 ---
@@ -24,7 +25,7 @@ The *[!UICONTROL Add User]* dialog appears. Mithilfe des Suchfelds können Sie B
 
 >[!NOTE]
 >
->Wenn ein Benutzer nicht im Fenster zur automatischen Vervollständigung angezeigt wird, geben Sie seine vollständige E-Mail-Adresse in der Suchleiste ein. Eine Einladung wird mit Anweisungen zur Einrichtung eines Kontos für die Adobe ID an die E-Mail gesendet.
+>Wenn ein Benutzer nicht im Fenster zur automatischen Vervollständigung angezeigt wird, geben Sie seine vollständige E-Mail-Adresse in der Suchleiste ein. Eine Einladung wird mit Anweisungen zur Einrichtung eines Adobe ID-Kontos an die E-Mail gesendet.
 
 Nachdem Sie einen Benutzer ausgewählt haben, klicken Sie auf **[!UICONTROL Speichern]** , um ihn dem Profil hinzuzufügen.
 
