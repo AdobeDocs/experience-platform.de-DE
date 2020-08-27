@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fehlerbehebung bei der Streaming-Erfassung
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '997'
 ht-degree: 65%
 
 ---
@@ -100,4 +100,4 @@ If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to
 
 Es gibt zwei Arten von Identitäts-Namespaces: standardmäßige und benutzerdefinierte. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. Weiterführende Informationen zur Verwendung von standardmäßigen und benutzerdefinierten Namespaces finden Sie in der [Übersicht zu Identitäts-Namespaces](../../identity-service/namespaces.md).
 
-You can use the [!DNL Experience Platform UI](https://platform.adobe.com) to see more information on why a message failed ingestion. Klicken Sie im linken Navigationsbereich auf **[!UICONTROL Monitoring]** und dann auf den Tab _[!UICONTROL Streaming End-to-End]_, um die in einem bestimmten Zeitraum gestreamten Nachrichten-Batches anzuzeigen.
+You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Klicken Sie im linken Navigationsbereich auf **[!UICONTROL Monitoring]** und dann auf den Tab _[!UICONTROL Streaming End-to-End]_, um die in einem bestimmten Zeitraum gestreamten Nachrichten-Batches anzuzeigen.
