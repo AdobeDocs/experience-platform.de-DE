@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: Neues Produktprofil erstellen
 topic: user guide
+description: In diesem Dokument werden die erforderlichen Schritte zur Schaffung eines neuen Profils für Produkte in der Adobe Admin Console beschrieben. Um Beginn beim Erstellen eines neuen Profils zu erhalten, navigieren Sie zur Registerkarte "Profil"und klicken Sie auf "Neues Profil".
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 7%
+source-wordcount: '246'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +19,7 @@ Um Beginn beim Erstellen eines neuen Profils zu erhalten, navigieren Sie zur Reg
 
 ![new-Profil-button](../images/new-profile-button.png)
 
-Das Dialogfeld &quot;Neues Profil __erstellen&quot;wird angezeigt, in dem Sie aufgefordert werden, einen**[!UICONTROL  Profil-Namen ]**und eine**[!UICONTROL  Beschreibung ]**für das neue Profil einzugeben. Wenn der Anzeigename des Profils anders lauten soll, deaktivieren Sie die**[!UICONTROL  Option &quot;Dasselbe Profil ]**&quot;und geben Sie den Anzeigenamen in das angezeigte Textfeld ein. Unter &quot;*[!UICONTROL  Benutzerbenachrichtigungen ]*&quot;können Sie einstellen, ob Benutzer per E-Mail benachrichtigt werden, wenn sie hinzugefügt oder aus dem Profil entfernt werden.
+Das Dialogfeld &quot;Neues Profil __ erstellen&quot;wird angezeigt, in dem Sie aufgefordert werden, einen **[!UICONTROL Profil-Namen]** und eine **[!UICONTROL Beschreibung]** für das neue Profil einzugeben. Wenn der Anzeigename des Profils anders lauten soll, deaktivieren Sie die **[!UICONTROL Option &quot;Dasselbe Profil]** &quot;und geben Sie den Anzeigenamen in das angezeigte Textfeld ein. Unter &quot; *[!UICONTROL Benutzerbenachrichtigungen]*&quot;können Sie einstellen, ob Benutzer per E-Mail benachrichtigt werden, wenn sie hinzugefügt oder aus dem Profil entfernt werden.
 
 When finished, click **[!UICONTROL Next]**.
 
