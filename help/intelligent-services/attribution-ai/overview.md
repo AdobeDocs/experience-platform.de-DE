@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;attribution ai;overview;popular topics
+keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 solution: Experience Platform
 title: Übersicht über Attribution AIS
 topic: Attribution AI
+description: Attribution AI wird verwendet, um Gutschriften Touchpoints zuzuordnen, die zu Konversions-Ereignissen führen. Dies kann von Marketingexperten genutzt werden, um die Marketingauswirkungen jedes einzelnen Marketing-Touchpoints über Kundenreisen hinweg zu quantifizieren. Beispiele für Touchpoints sind Display-Anzeigenimpressionen, E-Mail-Senden, E-Mail-Öffnen und Klicks auf gebührenpflichtige Suchen.
 translation-type: tm+mt
-source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 13%
+source-wordcount: '455'
+ht-degree: 11%
 
 ---
 
