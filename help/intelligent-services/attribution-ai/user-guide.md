@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
 title: Attribution AI-Benutzerhandbuch
 topic: User guide
+description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AIS in der Benutzeroberfläche von Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1449'
 ht-degree: 7%
 
 ---
@@ -68,7 +69,7 @@ Nach Auswahl eines Ereignisses wird rechts ein neues Dropdown-Feld angezeigt. Di
 
 Die *Hinzufügen Ereignis* - und *HinzufügenGruppe* -Schaltflächen dienen zur weiteren Definition der Konvertierung. Je nach der von Ihnen definierten Konversion müssen Sie eventuell die Schaltflächen *Hinzufügen Ereignis* und *Hinzufügen Gruppe* verwenden, um weitere Kontexte bereitzustellen.
 
-![Ereignis hinzufügen](./images/user-guide/add_event.png)
+![ereignis hinzufügen](./images/user-guide/add_event.png)
 
 Durch Klicken auf **Hinzufügen Ereignis** werden weitere Felder erstellt, die nach der oben beschriebenen Methode ausgefüllt werden können. Hierdurch wird der Zeichenfolgendefinition unter dem *Konvertierungsnamen eine* AND *-Anweisung hinzugefügt*. Klicken Sie auf das **x** , um ein hinzugefügtes Ereignis zu entfernen.
 
@@ -110,7 +111,7 @@ Mit den *Hinzufügen Ereignis* - und *Hinzufügen Gruppenschaltflächen* können
 
 Durch Klicken auf **Hinzufügen Ereignis** können zusätzliche Felder hinzugefügt werden. Klicken Sie auf das **x** , um ein hinzugefügtes Ereignis zu entfernen.
 
-![Ereignis hinzufügen](./images/user-guide/touchpoint_add_event.png)
+![ereignis hinzufügen](./images/user-guide/touchpoint_add_event.png)
 
 Wenn Sie auf **Hinzufügen Gruppe** klicken, können Sie weitere Felder getrennt vom Original erstellen. Nach dem Hinzufügen von Gruppen wird eine blaue *Und* -Schaltfläche angezeigt. Klicken Sie auf **Und** um den Parameter zu ändern, wird der neue Parameter &quot;Oder&quot;verwendet, um mehrere erfolgreiche Pfade zu definieren. Dieser Touchpoint hat nur einen erfolgreichen Pfad, daher ist &quot;Oder&quot;nicht erforderlich.
 
