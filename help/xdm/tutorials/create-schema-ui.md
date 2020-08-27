@@ -5,9 +5,9 @@ title: Erstellen eines Schemas mit dem Schema Editor
 topic: tutorials
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 translation-type: tm+mt
-source-git-commit: ed100e2acfcfc3dfabef6ccfbe88e98489193567
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '3512'
+source-wordcount: '3528'
 ht-degree: 22%
 
 ---
@@ -27,9 +27,9 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 
 Dieses Tutorial erfordert ein Verständnis der verschiedenen Aspekte der Adobe Experience Platform, die an der Schaffung von Schemas beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie die Dokumentation für die folgenden Konzepte:
 
-* [!DNL Experience Data Model (XDM)](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+* [[!DNL Experience Data Model (XDM)]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
    * [Grundlagen der Schema-Zusammensetzung](../schema/composition.md): Eine Übersicht über XDM-Schemas und ihre Bausteine, einschließlich Klassen, Mixins, Datentypen und Feldern.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Browse existing schemas in the [!UICONTROL Schemas] workspace {#browse}
 
@@ -245,11 +245,11 @@ Now all data ingested into the &quot;[!DNL loyaltyId]&quot; field will be used t
 >
 > Nachdem ein Schemafeld als primäre Identität festgelegt wurde, erhalten Sie eine Fehlermeldung, wenn Sie später versuchen, ein anderes Feld im Schema als primäres Feld festzulegen. Jedes Schema darf nur ein primäres Identitätsfeld enthalten.
 
-To learn more about working with identities in [!DNL Experience Platform], please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
+To learn more about working with identities in [!DNL Experience Platform], please review the [[!DNL Identity Service]](../../identity-service/home.md) documentation.
 
 ## Schema zur Verwendung in [!DNL Real-time Customer Profile] {#profile}
 
-[!DNL Real-time Customer Profile](../../profile/home.md) nutzt Identitätsdaten, um eine ganzheitliche Ansicht der einzelnen Kunden [!DNL Experience Platform] zu ermöglichen. Der Dienst erstellt robuste 360° Profil von Kundenattributen sowie zeitgestempelte Konten für jede Interaktion, die Kunden über ein in [!DNL Experience Platform]das System integriertes System hatten.
+[[!DNL Echtzeit Customer Profil]](../../profile/home.md) nutzt Identitätsdaten, um eine ganzheitliche Ansicht jedes einzelnen Kunden zu ermöglichen [!DNL Experience Platform] . Der Dienst erstellt robuste 360° Profil von Kundenattributen sowie zeitgestempelte Konten für jede Interaktion, die Kunden über ein in [!DNL Experience Platform]das System integriertes System hatten.
 
 In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. Sie erhalten eine Fehlermeldung, wenn Sie versuchen, ein Schema zu aktivieren, ohne vorher eine primäre Identität zu definieren.
 
