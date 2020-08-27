@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
 title: Datennutzungsrichtlinie erstellen
 topic: policies
+description: Data Usage Labeling and Enforcement (DULE) ist der zentrale Mechanismus zur Umsetzung von Data Governance in Adobe Experience Platform. Mit der DULE Policy Service API können Sie DULE-Richtlinien erstellen und verwalten, die bestimmen, welche Marketing-Aktionen auf Daten entsprechend deren DULE-Beschriftungen durchgeführt werden können. Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer DULE-Richtlinie mithilfe der Policy Service-API.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1254'
 ht-degree: 81%
 
 ---
 
 
-# Datennutzungsrichtlinie erstellen in der API
+# Eine Datenverwendungsrichtlinie in der API erstellen
 
 Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. Mit der [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie DULE-Richtlinien erstellen und verwalten, um festzulegen, welche Marketing-Aktionen für Daten mit bestimmten DULE-Bezeichnungen ausgeführt werden können.
 
