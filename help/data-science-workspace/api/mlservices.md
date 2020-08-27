@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
 solution: Experience Platform
 title: Dienste
 topic: Developer guide
+description: Ein MLService ist ein veröffentlichtes, geschultes Modell, das Ihrem Unternehmen die Möglichkeit gibt, auf bereits entwickelte Modelle zuzugreifen und sie wiederzuverwenden. Eine wichtige Funktion von MLServices ist die Möglichkeit, Schulungen und Bewertungen planmäßig zu automatisieren. Terminierte Schulungen können dazu beitragen, die Effizienz und Genauigkeit eines Modells zu erhalten, während geplante Bewertungsläufe sicherstellen können, dass stets neue Erkenntnisse generiert werden.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 10%
+source-wordcount: '872'
+ht-degree: 9%
 
 ---
 
