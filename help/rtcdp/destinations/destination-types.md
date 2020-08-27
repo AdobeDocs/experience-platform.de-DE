@@ -5,9 +5,9 @@ seo-title: Zieltypen und Kategorien
 description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter. '
 seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '587'
 ht-degree: 21%
 
 ---
@@ -37,7 +37,7 @@ Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält
 
 #### Segmentexportziele
 
-Segmentexportziele senden die Profil und Segmente, für die sie qualifiziert sind, an Zielplattformen. Diese Ziele nutzen Segmentkennungen oder Anwenderkennungen. Werbeziele wie [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) oder [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) sind Beispiele für diese Zieltypen.
+Segmentexportziele senden die Profil und Segmente, für die sie qualifiziert sind, an Zielplattformen. Diese Ziele nutzen Segmentkennungen oder Anwenderkennungen. Werbeziele wie [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) oder [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) sind Beispiele für diese Zieltypen.
 
 #### Export- und Segmentziele - Videoübersicht
 
