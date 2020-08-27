@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1371'
 ht-degree: 4%
 
 ---
@@ -22,14 +22,14 @@ Darüber hinaus enthält der Anhang zu diesem Lernprogramm weitere Informationen
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
-- [!DNL Batch ingestion](../batch-ingestion/overview.md): Die Methode, mit der Daten aus vom Benutzer bereitgestellten Datendateien [!DNL Platform] erfasst werden.
+- [[!DNL Experience Data Model (XDM-System)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+- [[!DNL Batch ingestion]](../batch-ingestion/overview.md): Die Methode, mit der Daten aus vom Benutzer bereitgestellten Datendateien [!DNL Platform] erfasst werden.
 
 Für dieses Lernprogramm müssen Sie außerdem bereits einen Datensatz zum Erfassen Ihrer CSV-Daten erstellt haben. Anweisungen zum Erstellen eines Datensatzes in der Benutzeroberfläche finden Sie im Lernprogramm [zur Datenerfassung](./ingest-batch-data.md).
 
 ## Ziel auswählen
 
-Melden Sie sich an [!DNL Adobe Experience Platform](https://platform.adobe.com) und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Workflows]** aus, um auf den *[!UICONTROL Workflows]* Arbeitsbereich zuzugreifen.
+Melden Sie sich bei [[!DNL Adobe Experience Platform]](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Workflows]** aus, um auf den *[!UICONTROL Workflows]* Arbeitsbereich zuzugreifen.
 
 Wählen Sie im **[!UICONTROL Workflows]** -Bildschirm unter &quot; **[!UICONTROL Datenaufnahme]** &quot;die Option &quot;CSV-Datei XDM-Schema **** zuordnen&quot;und wählen Sie dann &quot; **[!UICONTROL Starten]**&quot;aus.
 
@@ -47,7 +47,7 @@ Um Ihre CSV-Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen 
 
 ![](../images/tutorials/map-a-csv-file/create-new-dataset.png)
 
-## Hinzufügen
+## hinzufügen
 
 Der Schritt *[!UICONTROL Daten hinzufügen]* wird angezeigt. Ziehen Sie die CSV-Datei in den vorgesehenen Bereich oder wählen Sie &quot;Dateien **[!UICONTROL auswählen]** &quot;, um die CSV-Datei manuell einzugeben.
 
@@ -83,7 +83,7 @@ Wenn Sie eine neue Zuordnung hinzufügen möchten, wählen Sie **[!UICONTROL Hin
 
 Beim Zuordnen von Feldern können Sie auch Funktionen zur Berechnung von Werten auf der Grundlage von Eingabequellenfeldern einschließen. Weitere Informationen finden Sie im Abschnitt [Zuordnungsfunktionen](#mapping-functions) im Anhang.
 
-### Hinzufügen berechnetes Feld
+### hinzufügen berechnetes Feld
 
 Berechnete Felder ermöglichen die Erstellung von Werten basierend auf den Attributen im Eingabe-Schema. Diese Werte können dann Attributen im Schema &quot;Zielgruppe&quot;zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen.
 
@@ -117,7 +117,7 @@ Nachdem die CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten über
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine einfache CSV-Datei erfolgreich einem XDM-Schema zugeordnet und in [!DNL Platform]das sie eingefügt wurde. Diese Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile]z. B. See the overview for [!DNL Real-time Customer Profile](../../profile/home.md) for more information.
+In diesem Tutorial haben Sie eine einfache CSV-Datei erfolgreich einem XDM-Schema zugeordnet und in [!DNL Platform]das sie eingefügt wurde. Diese Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile]z. B. Weitere Informationen finden Sie in der Übersicht für [[!DNL Echtzeit-Kundendaten]](../../profile/home.md) .
 
 ## Anhang
 
