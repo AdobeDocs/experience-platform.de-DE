@@ -3,10 +3,11 @@ keywords: Experience Platform;troubleshooting;Data Science Workspace;popular top
 solution: Experience Platform
 title: Data Science Workspace – Handbuch zur Fehlerbehebung
 topic: Troubleshooting
+description: Dieses Dokument beantwortet häufig gestellte Fragen zum Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -16,13 +17,13 @@ ht-degree: 0%
 
 This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Science Workspace]. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
-## [!DNL JupyterLab] Umgebung wird nicht geladen in [!DNL Google Chrome]
+## [!DNL JupyterLab] umgebung wird nicht geladen in [!DNL Google Chrome]
 
 >[!IMPORTANT]
 >
 >Dieses Problem wurde behoben, könnte aber weiterhin im Browser Google Chrome 80.x vorhanden sein. Stellen Sie sicher, dass Ihr Chrome-Browser auf dem neuesten Stand ist.
 
-Mit der [!DNL Google Chrome] Browser-Version 80.x werden alle Drittanbieter-Cookies standardmäßig blockiert. Diese Richtlinie kann das Laden [!DNL JupyterLab] innerhalb der Adobe Experience Platform verhindern.
+Mit der [!DNL Google Chrome] Browser-Version 80.x werden alle Drittanbieter-Cookies standardmäßig blockiert. Diese Richtlinie kann das Laden [!DNL JupyterLab] innerhalb von Adobe Experience Platform verhindern.
 
 Gehen Sie wie folgt vor, um dieses Problem zu beheben:
 
@@ -52,7 +53,7 @@ Nach Schritt 2 werden Sie aufgefordert, Ihren Browser neu zu starten. Nach dem N
 
 ## Warum kann ich nicht auf [!DNL JupyterLab] Safari zugreifen?
 
-Safari deaktiviert Cookies von Drittanbietern standardmäßig in Safari &lt; 12. Da sich Ihre [!DNL Jupyter] Virtual Machine-Instanz in einer anderen Domäne als der übergeordnete Frame befindet, erfordert die Adobe Experience Platform derzeit die Aktivierung von Drittanbieter-Cookies. Aktivieren Sie Drittanbieter-Cookies oder wechseln Sie zu einem anderen Browser, z. B. [!DNL Google Chrome].
+Safari deaktiviert Cookies von Drittanbietern standardmäßig in Safari &lt; 12. Da sich Ihre [!DNL Jupyter] Virtual Machine-Instanz in einer anderen Domäne als der ihres übergeordneten Rahmens befindet, erfordert Adobe Experience Platform derzeit die Aktivierung von Drittanbieter-Cookies. Aktivieren Sie Drittanbieter-Cookies oder wechseln Sie zu einem anderen Browser, z. B. [!DNL Google Chrome].
 
 Für Safari 12 müssen Sie Ihren Benutzeragent auf &#39;[!DNL Chrome]&#39; oder &#39;[!DNL Firefox]&#39; umstellen. Um den Benutzeragent zu wechseln, öffnen Sie das *Safari* -Menü und wählen Sie &quot; **Voreinstellungen&quot;**. Das Fenster &quot;Voreinstellungen&quot;wird angezeigt.
 
