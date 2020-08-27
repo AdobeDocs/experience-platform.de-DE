@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;ui;create engine
 solution: Experience Platform
 title: Gepacktes Rezept importieren (Benutzeroberfläche)
 topic: Tutorial
+description: Dieses Tutorial bietet Einblicke in das Konfigurieren und Importieren eines gepackten Rezepts mit dem bereitgestellten Beispiel für Einzelhandelsumsätze. Nach Abschluss dieses Tutorials können Sie ein Modell in Adobe Experience Platform Data Science Workspace erstellen, trainieren und bewerten.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1760'
-ht-degree: 41%
+source-wordcount: '1803'
+ht-degree: 42%
 
 ---
 
