@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '542'
 ht-degree: 11%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 11%
 
 **Releasedatum: 10. September 2019**
 
-Aktualisierungen vorhandener Funktionen in der Adobe Experience Platform:
+Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Query Service](#query)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Abfrage Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
@@ -31,7 +31,7 @@ Adobe Experience Platform bietet eine Vielzahl von Funktionen, mit denen Daten j
 
 | Funktion | Beschreibung |
 | ----------- | ---------- |
-| Neue Domäne für Streaming-Erfassung | Die `dcs.data.adobe.net` Domäne wurde in die neue gemeinsame Datenerfassungsdomäne verschoben `dcs.adobedc.net`. Benutzer müssen ihre Implementierungen entsprechend der überarbeiteten Dokumentation zur Streaming-Erfassung von Adobe Experience Platformen aktualisieren. Die Dokumentation zur Adobe Experience Platform-Streaming-Erfassung wurde aktualisiert und verwendet nun die neue Domäne. |
+| Neue Domäne für Streaming-Erfassung | Die `dcs.data.adobe.net` Domäne wurde in die neue gemeinsame Datenerfassungsdomäne verschoben `dcs.adobedc.net`. Benutzer müssen ihre Implementierungen entsprechend der überarbeiteten Dokumentation zur Adobe Experience Platform-Streaming-Erfassung aktualisieren. Die Dokumentation zur Adobe Experience Platform-Streaming-Erfassung wurde aktualisiert und verwendet nun die neue Domäne. |
 
 Weitere Informationen finden Sie in der [Datenaufnahmendokumentation](../../ingestion/home.md).
 
@@ -65,7 +65,7 @@ You can use [!DNL Query Service] to build data analysis ecosystems, creating a p
 
 | Funktion | Beschreibung |
 | -----------| ---------- |
-| Verbesserungen bei [!DNL Query Editor] | Es wurde eine Speicherfunktion hinzugefügt, mit der Sie eine Abfrage speichern und später daran arbeiten können. Es wurde eine Registerkarte &quot;Durchsuchen&quot;zur [!DNL Query Service] Benutzeroberfläche auf Adobe Experience Platform hinzugefügt, die Abfragen anzeigt, die von Benutzern in Ihrem Unternehmen gespeichert wurden. Es wurde ein Bedienfeld mit Details zur Abfrage implementiert, in dem nützliche Metadaten zur angezeigten Abfrage angezeigt werden. |
+| Verbesserungen bei [!DNL Query Editor] | Es wurde eine Speicherfunktion hinzugefügt, mit der Sie eine Abfrage speichern und später daran arbeiten können. Es wurde eine Registerkarte &quot;Durchsuchen&quot;zur [!DNL Query Service] Benutzeroberfläche auf Adobe Experience Platform hinzugefügt, auf der die von Benutzern in Ihrem Unternehmen gespeicherten Abfragen angezeigt werden. Es wurde ein Bedienfeld mit Details zur Abfrage implementiert, in dem nützliche Metadaten zur angezeigten Abfrage angezeigt werden. |
 | Neue Zuordnungsfunktionen | Adobe-definierte Funktionen in [!DNL Query Service] der Abfrage für die Zuordnung von Kanälen mit Ablaufparametern. |
 | Verbesserungen der SQL-Syntax | Unterstützung der &quot;Gefällt mir&quot;-Syntax. |
 | Generieren von Datensätzen mit einem definierten XDM-Schema | Es wurde eine neue Klausel in &quot;Tabelle erstellen&quot;zu den Abfragen &quot;Auswählen&quot;(CTAS) hinzugefügt, mit der Sie ein Zielgruppe-Schema angeben können. |
