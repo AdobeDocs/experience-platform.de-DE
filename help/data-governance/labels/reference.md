@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
 title: Nutzungsbeschreibungen der Kerndaten
 topic: labels
+description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Beschriftungen zur Datenverwendung beschrieben.
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1882'
 ht-degree: 6%
 
 ---
