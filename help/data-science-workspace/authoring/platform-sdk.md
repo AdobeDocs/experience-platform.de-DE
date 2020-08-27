@@ -3,11 +3,12 @@ keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science W
 solution: Experience Platform
 title: Handbuch zum Platform SDK
 topic: SDK authoring
+description: Dieses Lernprogramm enthält Informationen zum Konvertieren von data_access_sdk_python in das neue Python platform_sdk in Python und R.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 89%
+source-wordcount: '470'
+ht-degree: 84%
 
 ---
 
