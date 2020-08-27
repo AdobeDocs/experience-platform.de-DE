@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mit Streaming-Zielen verbinden und Daten aktivieren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 61%
+source-wordcount: '1818'
+ht-degree: 60%
 
 ---
 
@@ -30,8 +30,8 @@ If you prefer to use the user interface in Adobe&#39;s Real-time CDP to connect 
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] ist das Datensatzsystem für die Datenposition und -linie innerhalb der Experience Platform.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [[!DNL-Katalogdienst]](../../catalog/home.md): [!DNL Catalog] ist das Datensatzsystem für die Datenposition und -linie innerhalb der Experience Platform.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie zur Aktivierung von Daten an Streaming-Ziele in Adobe Echtzeit-CDP kennen müssen.
