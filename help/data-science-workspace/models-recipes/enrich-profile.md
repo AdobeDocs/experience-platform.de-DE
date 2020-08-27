@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics
+keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen anreichern
 topic: Tutorial
+description: Dieses Dokument bietet eine schrittweise Anleitung zur Erweiterung des Echtzeit-Profils durch maschinelles Lernen, zur Unterteilung der Schritte in die folgenden Abschnitte, zum Erstellen eines Output-Schemas/Datensatzes, zum Konfigurieren eines Output-Schemas/Datensatzes und zum Erstellen von Segmenten mithilfe des Segmentaufbaus.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 71%
+source-wordcount: '1230'
+ht-degree: 69%
 
 ---
 
