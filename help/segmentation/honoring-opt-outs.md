@@ -5,10 +5,10 @@ title: Erfüllen von Opt-outs
 topic: overview
 description: 'Mit der Experience Platform können Ihre Kunden Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils senden.] Diese Opt-out-Anfragen sind Teil des California Consumer Privacy Act (CCPA), der kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem). '
 translation-type: tm+mt
-source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 62%
+source-wordcount: '1030'
+ht-degree: 60%
 
 ---
 
@@ -23,10 +23,10 @@ Nachdem ein Kunde sich für ein Opt-out entschieden hat, muss Ihr Unternehmen di
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Bevor Sie mit Opt-out-Anfragen arbeiten, lesen Sie die Dokumentation für die folgenden Dienste:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus [!DNL Real-time Customer Profile] Daten.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Hilft Unternehmen, die Einhaltung von Datenschutzbestimmungen zu automatisieren, die Kundendaten in [!DNL Platform]die Daten einbeziehen.
+- [[!DNL Echtzeit-Profil]](../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus [!DNL Real-time Customer Profile] Daten.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Hilft Unternehmen, die Einhaltung von Datenschutzbestimmungen zu automatisieren, die Kundendaten in [!DNL Platform]die Daten einbeziehen.
 
 ## Opt-out-Mixins
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 Weitere Informationen zur Segmentierung, einschließlich der Arbeit mit Segmentdefinitionen und Zielgruppen über die API und die Benutzeroberfläche, erhalten Sie im [Segmentierungsüberblick](./home.md).
 
-To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [!DNL Privacy Service](../privacy-service/home.md).
+To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [[!DNL Privacy Service]](../privacy-service/home.md).
