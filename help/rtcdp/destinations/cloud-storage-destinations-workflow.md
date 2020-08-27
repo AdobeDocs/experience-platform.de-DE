@@ -5,9 +5,9 @@ seo-title: Workflow für Cloud-Speicher-Ziele
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '537'
 ht-degree: 44%
 
 ---
@@ -27,7 +27,7 @@ Auf dieser Seite wird erläutert, wie Sie in der Adobe-Echtzeit-Kundendatenplatt
    >
    >Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche &quot; **[!UICONTROL Aktivieren]** &quot;angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt &quot; [Katalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) &quot;der Dokumentation zum Zielarbeitsbereich.
 
-2. Wenn Sie im Schritt **[!UICONTROL Authentifizieren]** zuvor eine Verbindung zu Ihrem Cloud-Speicher-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem Cloud-Speicher-Ziel einzurichten. Geben Sie die Anmeldedaten für die Kontoauthentifizierung ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. <br> Weitere Informationen zur Eingabe von Anmeldeinformationen im Schritt [Authentifizierung finden Sie unter](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) -Ziel, [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) Ziel, [Ziel und](/help/rtcdp/destinations/sftp-destination.md) SFTP **-Ziel** .
+2. Wenn Sie im Schritt **[!UICONTROL Authentifizieren]** zuvor eine Verbindung zu Ihrem Cloud-Speicher-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem Cloud-Speicher-Ziel einzurichten. Geben Sie die Anmeldedaten für die Kontoauthentifizierung ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. <br> Weitere Informationen zur Eingabe von Anmeldeinformationen im Schritt &quot; [Authentifizierung&quot;finden Sie unter](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 [-Ziel,](/help/rtcdp/destinations/amazon-kinesis-destination.md) [!DNL Amazon Kinesis] [-Ziel,](/help/rtcdp/destinations/azure-event-hubs-destination.md) [!DNL-Ereignis-Hubs] [-Ziel und](/help/rtcdp/destinations/sftp-destination.md) SFTP **-Ziel** .
 
    >[!NOTE]
    >
