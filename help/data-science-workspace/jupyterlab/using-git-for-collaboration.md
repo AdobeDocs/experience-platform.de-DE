@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zusammenarbeit in JupyterLab mit Git
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '255'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Die [!DNL Data Science Workspace JupyterLab] Umgebung ist eine gehostete Umgebun
 
 ## Verbindung [!DNL Git] zur [!DNL Data Science Workspace JupyterLab Notebooks] Umgebung
 
-Beginn durch Starten [!DNL Adobe Experience Platform] und Navigieren zur [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) Umgebung.
+Beginn durch Starten [!DNL Adobe Experience Platform] und Navigieren zur [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) Umgebung.
 
 Wählen Sie in [!DNL JupyterLab]der **[!UICONTROL Datei]** die Option und halten Sie den Mauszeiger über **[!UICONTROL Neu]**. Wählen Sie aus der Dropdown-Liste **[!UICONTROL Terminal]**.
 
@@ -58,4 +58,4 @@ Anschließend klonen Sie das Repository, das Sie mit dem `git clone` Befehl verw
 
 ## Nächste Schritte
 
-Nachdem Sie das Klonen Ihres Repositorys abgeschlossen haben, können Sie Git wie gewohnt auf Ihrem lokalen Computer verwenden, um mit anderen an Notebooks zusammenzuarbeiten. Weitere Informationen dazu, was Sie in diesem Abschnitt tun können, [!DNL JupyterLab]finden Sie in der [!DNL JupyterLab user guide](./overview.md).
+Nachdem Sie das Klonen Ihres Repositorys abgeschlossen haben, können Sie Git wie gewohnt auf Ihrem lokalen Computer verwenden, um mit anderen an Notebooks zusammenzuarbeiten. Weitere Informationen dazu, was Sie in diesem Handbuch machen können, [!DNL JupyterLab]finden Sie im [[!DNL JupyterLab Benutzerhandbuch]](./overview.md).
