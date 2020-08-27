@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;package source files;Data Science Workspace;popular topics
+keywords: Experience Platform;package source files;Data Science Workspace;popular topics;Docker;docker image
 solution: Experience Platform
 title: Verpacken von Quelldateien in einem Rezept
 topic: Tutorial
+description: In diesem Lernprogramm wird beschrieben, wie Sie die angegebenen Quelldateien für den Einzelhandel in eine Archivdatei packen können, die zum Erstellen eines Rezepts in Adobe Experience Platform Data Science Workspace verwendet werden kann, indem Sie dem Skript-Import-Arbeitsablauf entweder in der Benutzeroberfläche oder mithilfe der API folgen.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
