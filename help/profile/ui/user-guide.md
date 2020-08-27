@@ -5,9 +5,9 @@ title: Benutzerhandbuch zum Echtzeit-Kundenprofil
 topic: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1207'
 ht-degree: 14%
 
 ---
@@ -23,13 +23,13 @@ This document serves as a guide for interacting with [!DNL Real-time Customer Pr
 
 Dieses Benutzerhandbuch erfordert ein Verständnis der verschiedenen mit der Verwaltung verbundenen [!DNL Experience Platform] Dienste [!DNL Real-time Customer Profiles]. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-* [!DNL Real-time Customer Profile](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [!DNL Identity Service](../../identity-service/home.md): Ermöglicht die [!DNL Real-time Customer Profile] Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die sie eingeordnet werden [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+* [[!DNL Echtzeit-Profil]](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL-Identitätsdienst]](../../identity-service/home.md): Ermöglicht die [!DNL Real-time Customer Profile] Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die sie eingeordnet werden [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
 ## Übersicht
 
-Klicken Sie im [!DNL Experience Platform UI](http://platform.adobe.com)linken Navigationsbereich auf **[!UICONTROL Profile]** , um die Registerkarte _[!UICONTROL Übersicht]_zu öffnen. Diese Registerkarte enthält Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
+In the [[!DNL Experience Platform UI]](http://platform.adobe.com), click **[!UICONTROL Profiles]** in the left navigation to open the _[!UICONTROL Overview]_ tab. Diese Registerkarte enthält Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -91,7 +91,7 @@ Nachdem ein Wert eingegeben wurde, wählen Sie &quot;Profil **[!UICONTROL anzeig
 
 ### Profil {#profile-detail}
 
-Nach Auswahl der **[!UICONTROL Profil-ID]** wird die Registerkarte &quot; _[!UICONTROL Details]_&quot;geöffnet. Auf dieser Seite finden Sie Informationen zum ausgewählten Profil, einschließlich Basisattribute, verknüpfte Identitäten und verfügbare Kanal. Die angezeigten Profildaten wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen.
+Nach Auswahl der **[!UICONTROL Profil-ID]** wird die Registerkarte &quot; _[!UICONTROL Details]_ &quot;geöffnet. Auf dieser Seite finden Sie Informationen zum ausgewählten Profil, einschließlich Basisattribute, verknüpfte Identitäten und verfügbare Kanal. Die angezeigten Profildaten wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
