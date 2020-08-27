@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Verwalten von Datenverwendungsbeschriftungen für Datasets mithilfe von APIs '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '916'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Verwalten von Datenverwendungsbeschriftungen für Datasets mithilfe von APIs
 
-Mit dem [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service] API, die DataSet-Metadaten verwaltet, getrennt.
+Mit der [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) können Sie Nutzungsbezeichnungen für Datasets anwenden und bearbeiten. Es gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service] API, die DataSet-Metadaten verwaltet, getrennt.
 
 In diesem Dokument wird beschrieben, wie Sie Beschriftungen für Datasets und Felder mit dem [!DNL Dataset Service API]Operator verwalten. Anweisungen zum Verwalten von Datenverwendungsbeschriftungen selbst mithilfe von API-Aufrufen finden Sie in der [Beschreibungen-Endpunktanleitung](../api/labels.md) für die [!DNL Policy Service API].
 
