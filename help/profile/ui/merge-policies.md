@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Benutzerhandbuch zu Zusammenführungsrichtlinien
 topic: guide
 translation-type: tm+mt
-source-git-commit: 98be95e0a6e0661dcddf2db1cf6993b643d4df2b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1433'
 ht-degree: 44%
 
 ---
@@ -24,9 +24,9 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 This guide requires a working understanding of the various [!DNL Experience Platform] services involved with merge policies. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [!DNL Real-time Customer Profile](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [!DNL Identity Service](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die Daten eingehen [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+* [[!DNL Echtzeit-Profil]](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL-Identitätsdienst]](../../identity-service/home.md): Ermöglicht [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die Daten eingehen [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 
 ## Zusammenführungsrichtlinien anzeigen
 
