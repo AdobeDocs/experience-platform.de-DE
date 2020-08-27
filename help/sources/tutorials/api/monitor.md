@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Monitor flows and runs
+title: Überwachen von Flüssen und Ausgängen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bdc45f6e51f1a140da503ac36355619300cedd2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 19%
+source-wordcount: '597'
+ht-degree: 18%
 
 ---
 
 
-# Monitor dataflows using the Flow Service API
+# Überwachen von Datenflüssen mithilfe der Flow Service API
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+In diesem Lernprogramm werden die Schritte zur Überwachung der Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mithilfe der [[!DNL-Fluss-Service-API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)beschrieben.
 
 ## Erste Schritte
 
-Für dieses Lernprogramm müssen Sie über den ID-Wert eines gültigen Datenflusses verfügen. If you do not have a valid dataflow ID, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
+Für dieses Lernprogramm müssen Sie über den ID-Wert eines gültigen Datenflusses verfügen. Wenn Sie über keine gültige DataFlow-ID verfügen, wählen Sie den gewünschten Connector aus der Übersicht über die [Quellen](../../home.md) aus und führen Sie die Schritte aus, die vor dem Versuch dieses Lernprogramms beschrieben werden.
 
 Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Adobe Experience Platform kennen:
 
@@ -53,7 +53,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Monitorfluss
 
-Once you have made a dataflow, perform a GET request to the [!DNL Flow Service] API.
+Nachdem Sie einen Datenflug durchgeführt haben, führen Sie eine GET an die [!DNL Flow Service] API durch.
 
 **API-Format**
 
@@ -244,7 +244,7 @@ Eine erfolgreiche Antwort gibt Details zu Ihrem Flusslauf zurück, einschließli
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `items` | Contains a single payload of metadata associated with your specific flow run. |
+| `items` | Enthält eine einzige Nutzlast von Metadaten, die mit Ihrer spezifischen Flussausführung verknüpft sind. |
 | `metrics` | Definiert die Eigenschaften der Daten im Fluss. |
 | `activities` | Definiert, wie die Daten transformiert werden. |
 | `durationSummary` | Definiert den Beginn und die Endzeit der Flussausführung. |
