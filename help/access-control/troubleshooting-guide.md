@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;troubleshooting;access control
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Zugriffskontrolle
 topic: troubleshooting guide
+description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 70%
+source-wordcount: '313'
+ht-degree: 71%
 
 ---
 
