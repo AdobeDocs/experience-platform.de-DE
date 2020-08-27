@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Experience Platform-APIs authentifizieren und aufrufen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 42%
+source-wordcount: '853'
+ht-degree: 41%
 
 ---
 
@@ -47,7 +47,7 @@ Vor der Erstellung von Integrationen in Adobe I/O muss Ihr Konto über Entwickle
 
 **Entwicklerzugriff erlangen**
 
-Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [!DNL Admin Console](https://adminconsole.adobe.com/).
+Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -67,19 +67,19 @@ Your [!DNL Admin Console] administrator must also add you to the product as a us
 
 ![](images/authentication/assign-user-details.png)
 
-## Generate access credentials in Adobe Developer Console
+## Erstellen von Zugriffsberechtigungen in der Adobe Developer Console
 
 >[!NOTE]
 >
->If you are following this document from the [Privacy Service developer guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
+>Wenn Sie diesem Dokument aus dem [Privacy Service-Entwicklerhandbuch](../privacy-service/api/getting-started.md)folgen, können Sie jetzt zu diesem Handbuch zurückkehren, um die Zugriffsberechtigungen zu generieren, für die Sie [!DNL Privacy Service]eindeutig sind.
 
-Using Adobe Developer Console, you must generate the following three access credentials:
+Mit der Adobe Developer Console müssen Sie die folgenden drei Zugriffsberechtigungen generieren:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Ihre `{IMS_ORG}` und `{API_KEY}` nur einmal generiert werden müssen und können in zukünftigen [!DNL Platform] API-Aufrufen wiederverwendet werden. However, your `{ACCESS_TOKEN}` is temporary and must be regenerated every 24 hours.
+Ihre `{IMS_ORG}` und `{API_KEY}` nur einmal generiert werden müssen und können in zukünftigen [!DNL Platform] API-Aufrufen wiederverwendet werden. Ihre `{ACCESS_TOKEN}` Daten sind jedoch nur vorübergehend und müssen alle 24 Stunden neu generiert werden.
 
 Die Schritte werden nachfolgend detailliert beschrieben.
 
@@ -91,7 +91,7 @@ Nachdem Sie ein neues Projekt erstellt haben, klicken Sie im Bildschirm &quot; *
 
 ![](images/authentication/add-api-button.png)
 
-Der _Hinzufügen eines API_ -Bildschirms wird angezeigt. Klicken Sie auf das Produktsymbol für die Adobe Experience Platform und wählen Sie dann die **[!UICONTROL Experience Platformen-API]** , bevor Sie auf **[!UICONTROL Weiter]** klicken.
+Der _Hinzufügen eines API_ -Bildschirms wird angezeigt. Klicken Sie auf das Produktsymbol für Adobe Experience Platform und wählen Sie dann die **[!UICONTROL Experience Platformen-API]** , bevor Sie auf **[!UICONTROL Weiter]** klicken.
 
 ![](images/authentication/add-platform-api.png)
 
