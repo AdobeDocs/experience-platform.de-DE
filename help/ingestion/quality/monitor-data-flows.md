@@ -5,10 +5,10 @@ title: Überwachen der Datenaufnahme
 topic: overview
 description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 70%
+source-wordcount: '560'
+ht-degree: 69%
 
 ---
 
@@ -25,7 +25,7 @@ Klicken Sie in der [Experience Platform-Benutzeroberfläche](https://platform.ad
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Die Überwachungsseite *[!UICONTROL End-to-End-Streaming]* wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gesendeten Ereignis anzeigt, [!DNL Platform]ein Diagramm mit der Rate der gestreamen Ereignis, die erfolgreich verarbeitet wurden [!DNL Real-time Customer Profile](../../profile/home.md), sowie eine detaillierte Liste der eingehenden Daten.
+Die Überwachungsseite *[!UICONTROL End-to-End-Streaming]* wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gesendeten Ereignis anzeigt, [!DNL Platform]ein Diagramm mit der Rate der gestreamen Ereignis, die erfolgreich vom [[!DNL-Echtzeit-Kundenkonto]](../../profile/home.md)verarbeitet wurden, sowie eine detaillierte Liste der eingehenden Daten.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ Darüber hinaus geben fehlerhafte Datensätze Details zu den Fehlern an, die wä
 
 ## Überwachen der Batch-End-to-End-Datenaufnahme
 
-In the [!DNL Experience Platform UI](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
+In the [[!DNL Experience Platform UI]](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
