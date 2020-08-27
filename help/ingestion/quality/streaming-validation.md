@@ -5,10 +5,10 @@ title: Validieren der Streaming-Erfasssung
 topic: overview
 description: Mit der Streaming-Erfassung können Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit nach Adobe Experience Platform hochladen. Die Streaming-Erfassungsmethode-APIs unterstützen zwei Überprüfungsmodi - synchron und asynchron.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 18%
+source-wordcount: '852'
+ht-degree: 17%
 
 ---
 
@@ -21,8 +21,8 @@ Mit der Streaming-Erfassung können Sie Ihre Daten mit Streaming-Endpunkten in E
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): Eine der Methoden, mit denen Daten gesendet werden können [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Eine der Methoden, mit denen Daten gesendet werden können [!DNL Experience Platform].
 
 ### Lesen von Beispiel-API-Aufrufen
 
