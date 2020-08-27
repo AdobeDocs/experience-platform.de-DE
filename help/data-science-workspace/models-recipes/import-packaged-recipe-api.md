@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verpacktes Rezept (API) importieren
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '960'
 ht-degree: 30%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 30%
 
 # Verpacktes Rezept (API) importieren
 
-In diesem Lernprogramm wird [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) eine [Engine](../api/engines.md)erstellt, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
+Dieses Lernprogramm verwendet die [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) , um eine [Engine](../api/engines.md)zu erstellen, die auch als Rezept in der Benutzeroberfläche bezeichnet wird.
 
 Bevor Sie beginnen, sollten Sie bedenken, dass Adobe Experience Platform verschiedene Begriffe verwendet, um auf ähnliche Elemente innerhalb der API und Benutzeroberfläche zu verweisen. [!DNL Data Science Workspace] Die API-Begriffe werden in diesem Lernprogramm verwendet, und die folgende Tabelle zeigt die entsprechenden Begriffe an:
 
