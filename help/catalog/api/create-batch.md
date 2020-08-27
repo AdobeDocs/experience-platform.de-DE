@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
 title: Erstellen eines Datensatzes
 topic: developer guide
+description: Damit in einem Datensatz Daten aufgenommen werden können, muss ihm ein Batch zugeordnet werden. Mithilfe des ID-Werts eines vorhandenen Datensatzes können Sie einen Stapel erstellen, indem Sie eine POST an den Endpunkt "/batches"in der Katalog-API anfordern.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 100%
+source-wordcount: '128'
+ht-degree: 79%
 
 ---
 
