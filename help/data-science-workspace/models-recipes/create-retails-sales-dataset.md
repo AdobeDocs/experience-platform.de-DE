@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema und Datensatz für Einzelhandelsumsätze erstellen
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 64%
 
 ---
@@ -33,7 +33,7 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - Ein grundlegendes Verständnis der folgenden in dieser Anleitung verwendeten Konzepte:
-   - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [Grundlagen der Schemakomposition](../../xdm/schema/field-dictionary.md)
 
 ## Schema und Datensatz für Einzelhandelsumsätze erstellen
