@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datennutzungsrichtlinie erstellen
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 82%
+source-wordcount: '1194'
+ht-degree: 81%
 
 ---
 
@@ -22,9 +22,9 @@ This document provides a step-by-step tutorial for creating a DULE policy using 
 
 Diese Anleitung setzt ein Verständnis der folgenden Schlüsselkonzepte voraus, die beim Erstellen und Evaluieren von DULE-Richtlinien zum Einsatz kommen:
 
-* [!DNL Data Governance](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Platform] erzwungen wird.
+* [[!DNL-Datenverwaltung]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Platform] erzwungen wird.
 * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
