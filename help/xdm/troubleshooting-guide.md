@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Experience Data Model (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) System, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)**ist eine Open-Source-Spezifikation, die standardisierte Schema für das Kundenerlebnis-Management definiert. Die Methode, auf der[!DNL Experience Platform]aufgebaut wird,**XDM System **, operalisiert[!DNL Experience Data Model]Schema für die Verwendung durch[!DNL Platform]Dienste. Die **[!DNL Schema Registry]**bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **[!DNL Schema Library]**Umgebung[!DNL Experience Platform]. See the[XDM documentation](home.md)for more information.
+**[!DNL Experience Data Model](XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schema für das Kundenerlebnis-Management definiert. Die Methode, auf der [!DNL Experience Platform] aufgebaut wird, **XDM System**, operalisiert [!DNL Experience Data Model] Schema für die Verwendung durch [!DNL Platform] Dienste. Die **[!DNL Schema Registry]** bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **[!DNL Schema Library]** Umgebung [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
 ## FAQs
 
@@ -24,7 +24,7 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 ### Wie füge ich einem Schema Felder hinzu?
 
-Sie können einem Schema Felder mit einem Mixin hinzufügen. Jedes Mixin ist mit einer oder mehreren Klassen kompatibel, sodass das Mixin in jedem Schema verwendet werden kann, das eine dieser kompatiblen Klassen implementiert. Während Adobe Experience Platform mehrere Branchenmixins mit eigenen vordefinierten Feldern bereitstellt, können Sie einem Schema eigene Felder hinzufügen, indem Sie neue Mixins mit der API oder der Benutzeroberfläche erstellen.
+Sie können einem Schema Felder mit einem Mixin hinzufügen. Jedes Mixin ist mit einer oder mehreren Klassen kompatibel, sodass das Mixin in jedem Schema verwendet werden kann, das eine dieser kompatiblen Klassen implementiert. Adobe Experience Platform stellt verschiedene Branchenmixins mit eigenen vordefinierten Feldern zur Verfügung. Sie können jedoch eigene Felder zu einem Schema hinzufügen, indem Sie neue Mixins mit der API oder der Benutzeroberfläche erstellen.
 
 Weitere Informationen zum Erstellen neuer Mixins in der API finden Sie im API-Entwicklerhandbuch im [Dokument zum Erstellen eines Mixins](api/create-mixin.md) [!DNL Schema Registry] . Wenn Sie die Benutzeroberfläche verwenden, finden Sie weitere Informationen im Tutorial zum [Schema-Editor](./tutorials/create-schema-ui.md).
 
@@ -42,7 +42,7 @@ Weitere Informationen finden Sie im Abschnitt zur [Schema-Identifizierung](api/g
 
 ### Wann verhindert ein Schema-Beginn Umbrüche?
 
-Umbrüchige Änderungen können an einem Schema vorgenommen werden, solange es noch nie bei der Erstellung eines Datensatzes verwendet oder zur Verwendung in aktiviert wurde [!DNL Real-time Customer Profile](../profile/home.md). Sobald ein Schema bei der Erstellung eines Datensatzes verwendet oder für die Verwendung mit aktiviert wurde, [!DNL Real-time Customer Profile]werden die Regeln der [Schema-Evolution](schema/composition.md#evolution) vom System strikt durchgesetzt.
+Umbrüchige Änderungen können an einem Schema vorgenommen werden, solange es noch nie zur Erstellung eines Datensatzes verwendet oder für die Verwendung im [[!DNL Echtzeit-Kundendienstprogramm]](../profile/home.md)aktiviert wurde. Sobald ein Schema bei der Erstellung eines Datensatzes verwendet oder für die Verwendung mit aktiviert wurde, [!DNL Real-time Customer Profile]werden die Regeln der [Schema-Evolution](schema/composition.md#evolution) vom System strikt durchgesetzt.
 
 ### Wie hoch ist die maximale Größe eines langen Feldtyps?
 
@@ -52,7 +52,7 @@ Weitere Informationen zu Feldtypen finden Sie im Abschnitt [Definieren von XDM-F
 
 ### Wie definiere ich Identitäten für mein Schema?
 
-In [!DNL Experience Platform]diesem Fall werden Identitäten unabhängig von den zu interpretierenden Datenquellen zur Identifizierung eines Subjekts (in der Regel einer einzelnen Person) verwendet. Sie werden in Schemas definiert, indem Sie Schlüsselfelder als &quot;Identität&quot;markieren. Häufig verwendete Identitätsfelder umfassen E-Mail-Adresse, Telefonnummer, CRM-ID [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html)und andere eindeutige ID-Felder.
+In [!DNL Experience Platform]diesem Fall werden Identitäten unabhängig von den zu interpretierenden Datenquellen zur Identifizierung eines Subjekts (in der Regel einer einzelnen Person) verwendet. Sie werden in Schemas definiert, indem Sie Schlüsselfelder als &quot;Identität&quot;markieren. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [[!DNL-Experience Cloud-ID (ECID)]](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM-ID und andere eindeutige ID-Felder.
 
 Felder können entweder über die API oder die Benutzeroberfläche als Identitäten gekennzeichnet werden.
 
@@ -76,13 +76,13 @@ Primär-IDs sind optional, da Schema 0 oder 1 davon haben können. Ein Schema mu
 
 ### Wie aktiviere ich ein Schema zur Verwendung in [!DNL Real-time Customer Profile]?
 
-Schema sind für die Verwendung [!DNL Real-time Customer Profile](../profile/home.md) durch das Hinzufügen eines Tags &quot;Vereinigung&quot;aktiviert, das sich im `meta:immutableTags` Attribut des Schemas befindet. Die Aktivierung eines Schemas zur Verwendung mit [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
+Schema sind für die Verwendung im [[!DNL Echtzeit-Kundenkonto]](../profile/home.md) durch das Hinzufügen eines &quot;Vereinigung&quot;-Tags aktiviert, das sich im `meta:immutableTags` Attribut des Schemas befindet. Die Aktivierung eines Schemas zur Verwendung mit [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
 
 #### Aktivieren eines vorhandenen Schemas zur [!DNL Profile] Verwendung der API
 
 Führen Sie eine PATCH-Anforderung durch, um das Schema zu aktualisieren und das `meta:immutableTags` Attribut als Array mit dem Wert &quot;Vereinigung&quot;hinzuzufügen. Wenn die Aktualisierung erfolgreich ist, zeigt die Antwort das aktualisierte Schema an, das jetzt das Vereinigung-Tag enthält.
 
-Weitere Informationen zur Verwendung der API zum Aktivieren eines Schemas für die Verwendung in [!DNL Real-time Customer Profile]finden Sie im Dokument [Vereinigungen](./api/unions.md) im Entwicklerhandbuch [!DNL Schema Registry] .
+Weitere Informationen zur Verwendung der API zum Aktivieren eines Schemas für die Verwendung in [!DNL Real-time Customer Profile]finden Sie im Dokument [Vereinigungen](./api/unions.md) des Entwicklerhandbuchs [!DNL Schema Registry] .
 
 #### Aktivieren eines vorhandenen Schemas zur [!DNL Profile] Verwendung der Benutzeroberfläche
 
@@ -181,7 +181,7 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, einen Profil-Datensatz f
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema für zu aktivieren, [!DNL Profile] und eine seiner Eigenschaften einen Beziehungsdeskriptor ohne Referenz-Identitätsdeskriptor enthält. Hinzufügen Sie einen Identitätsdeskriptor für den Verweis auf das betreffende Schema-Feld, um diesen Fehler zu beheben.
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema für zu aktivieren, [!DNL Profile] und eine seiner Eigenschaften einen Beziehungsdeskriptor ohne Referenz-Identitätsdeskriptor enthält. hinzufügen Sie einen Identitätsdeskriptor für den Verweis auf das betreffende Schema-Feld, um diesen Fehler zu beheben.
 
 #### Der Namensraum des Schemas für den Identitäts-Deskriptor und das Ziel-Identitätsdeskriptor muss übereinstimmen mit dem
 
