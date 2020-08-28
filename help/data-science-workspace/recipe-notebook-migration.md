@@ -5,7 +5,7 @@ title: Migrationshandbücher für Rezept und Notebooks
 topic: Tutorial
 description: Die folgenden Handbücher beschreiben die Schritte und Informationen, die für die Migration vorhandener Rezepte und Notebooks im Data Science Workspace erforderlich sind.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 1%
@@ -16,6 +16,7 @@ ht-degree: 1%
 # Migrationshandbücher für Rezept und Notebooks
 
 >[!NOTE]
+>
 >Notebooks und Rezepte mit [!DNL Python]/R bleiben davon unberührt. Die Migration gilt nur für PySpark/[!DNL Spark] (2.3) Rezepte und Notebooks.
 
 In den folgenden Handbüchern werden die Schritte und Informationen erläutert, die für die Migration vorhandener Rezepte und Notebooks erforderlich sind.
@@ -85,6 +86,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > Im interaktiven Modus wird eine Zeitüberschreitung angezeigt, wenn die Abfragen länger als 10 Minuten laufen. Wenn Sie mehr als ein paar Gigabyte Daten eingeben, wird empfohlen, zum Stapelmodus zu wechseln. Der Stapelmodus dauert zwar länger, kann aber größere Datensätze verarbeiten.
 
 #### Schreiben in einen Datensatz
@@ -138,6 +140,7 @@ Das Scala-Rezept befindet sich im folgenden Verzeichnis `experience-platform-dsw
 Eine neue Datei wird im Skriptordner benötigt, um den dockerbasierten Workflow verwenden zu können. Kopieren Sie die Dockerdatei aus dem Ordner recipes unter `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Optional können Sie auch den unten stehenden Code kopieren und in eine neue Datei namens `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > Die Beispieldatei JAR, die unten gezeigt wird, `ml-retail-sample-spark-*-jar-with-dependencies.jar` sollte durch den Namen der JAR-Datei Ihres Rezepts ersetzt werden.
 
 ```scala
@@ -222,6 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > Im interaktiven Modus wird eine Zeitüberschreitung angezeigt, wenn die Abfragen länger als 10 Minuten laufen. Wenn Sie mehr als ein paar Gigabyte Daten eingeben, wird empfohlen, zum Stapelmodus zu wechseln. Der Stapelmodus dauert zwar länger, kann aber größere Datensätze verarbeiten.
 
 #### Schreiben in einen Datensatz
@@ -275,6 +279,7 @@ Das PySpark-Rezept befindet sich im folgenden Verzeichnis `experience-platform-d
 Eine neue Datei wird im Skriptordner benötigt, um den dockerbasierten Workflow verwenden zu können. Kopieren Sie die Dockerdatei aus dem Ordner recipes unter `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Optional können Sie auch den unten stehenden Code kopieren und einfügen und eine neue Datei namens `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > Die Beispieldatei für das Ei `pysparkretailapp-*.egg` sollte durch den Namen der Eizelldatei ersetzt werden.
 
 ```scala
