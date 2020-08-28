@@ -5,7 +5,7 @@ title: Rezept erstellen mit Jupyter Notebooks
 topic: Tutorial
 description: Dieses Tutorial umfasst zwei Hauptabschnitte. Zuerst erstellen Sie mit einer Vorlage in JupyterLab Notebook ein Modell für maschinelles Lernen. Dann führen Sie den Workflow „Notebook an Rezept“ in JupyterLab aus, um ein Rezept in Data Science Workspace zu erstellen.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 86%
@@ -475,6 +475,7 @@ Sobald der Prozess abgeschlossen ist, sieht das Rezept in etwa wie folgt aus:
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - Löschen Sie keine der Dateizellen.
 > - Bearbeiten Sie nicht die `%%writefile`-Zeile oben in den Dateizellen.
 > - Erstellen Sie nicht gleichzeitig Rezepte in verschiedenen Notebooks.
