@@ -5,7 +5,7 @@ title: Übersicht über die Adobe Experience Platform-Dateneinbindung
 topic: overview
 description: In diesem Dokument werden die drei Hauptwege für die Dateneinbindung in die Plattform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten für weitere Informationen.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 17%
@@ -47,6 +47,6 @@ Dieses Dokument gab eine kurze Einführung zu den verschiedenen Aspekten von [!D
 
 >[!WARNING]
 >
-> Der Begriff &quot;Einheitliches Profil&quot;, der im folgenden Video verwendet wird, ist veraltet. Die Begriffe [!DNL "Profile"] oder [!DNL "Real-time Customer Profile"] sind die richtigen Begriffe, die in der [!DNL Experience Platform] Dokumentation verwendet werden. Die neuesten Funktionen finden Sie in der Dokumentation.
+>Der Begriff &quot;Einheitliches Profil&quot;, der im folgenden Video verwendet wird, ist veraltet. Die Begriffe [!DNL "Profile"] oder [!DNL "Real-time Customer Profile"] sind die richtigen Begriffe, die in der [!DNL Experience Platform] Dokumentation verwendet werden. Die neuesten Funktionen finden Sie in der Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
