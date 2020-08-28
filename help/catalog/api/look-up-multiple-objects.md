@@ -5,9 +5,9 @@ title: Suchen nach mehreren Objekten
 topic: developer guide
 description: Wenn Sie mehrere bestimmte Objekte anzeigen möchten, anstatt eine Anfrage pro Objekt zu stellen, bietet der Katalog eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '225'
 ht-degree: 60%
 
 ---
@@ -28,6 +28,8 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
+| Parameter | Beschreibung |
+| -------- | ----------- |
 | `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Eine Kennung für eines der spezifischen Objekte, die Sie abrufen möchten. |
 
