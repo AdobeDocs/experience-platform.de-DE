@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Streaming-Segmentierung
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 42%
+source-wordcount: '1426'
+ht-degree: 41%
 
 ---
 
@@ -18,9 +18,13 @@ ht-degree: 42%
 >
 >Im folgenden Dokument wird erläutert, wie die Streaming-Segmentierung mithilfe der API verwendet wird. Informationen zur Verwendung der Streaming-Segmentierung mithilfe der Benutzeroberfläche finden Sie im UI-Handbuch [zur](../ui/streaming-segmentation.md)Streaming-Segmentierung.
 
-Die Streaming-Segmentierung für [!DNL Adobe Experience Platform] ermöglicht es Kunden, die Segmentierung in Echtzeit durchzuführen und sich dabei auf den Datenreichtum zu konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten eingehen, [!DNL Platform]was die Planung und Ausführung von Segmentierungsaufträgen verringert. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+Die Streaming-Segmentierung für [!DNL Adobe Experience Platform] ermöglicht es Kunden, die Segmentierung in Echtzeit durchzuführen und sich dabei auf den Datenreichtum zu konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in Streaming übertragen werden, [!DNL Platform]was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
+
+>[!NOTE]
+>
+>Streaming-Segmentierung kann nur zur Auswertung von Daten verwendet werden, die in Plattform gestreamt werden. Mit anderen Worten, Daten, die über die Stapelverarbeitung erfasst werden, werden nicht durch Streaming-Segmentierung ausgewertet und erfordern eine Batchbewertung.
 
 ## Erste Schritte
 
