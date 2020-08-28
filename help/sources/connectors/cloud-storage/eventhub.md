@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azurblauer Ereignis-Hubs-Anschluss
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
@@ -65,4 +65,4 @@ Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbi
 ## Verbindung [!DNL Azure Event Hubs] mit der [!DNL Platform] Benutzeroberfläche
 
 - [Erstellen eines Azurblauen Ereignis-Hubs-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
+- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
