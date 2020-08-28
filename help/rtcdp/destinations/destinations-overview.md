@@ -5,9 +5,9 @@ seo-title: Ziele – Übersicht
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 59%
 
 ---
@@ -67,4 +67,4 @@ Weitere Informationen zur Auswahl von Anwendungsfällen für Marketingzwecke im 
 * [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Ziele in sozialen Netzwerken ](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-Weitere Informationen zu Verstößen gegen die Datenrichtlinie im Arbeitsablauf für die SegmentAktivierung finden Sie in Schritt 7 unter Profil und  an ein Ziel [aktivieren](/help/rtcdp/destinations/activate-destinations.md).
+Weitere Informationen zu Verstößen gegen die Datenrichtlinie im Arbeitsablauf für die Segmentanalyse finden Sie im Schritt &quot;Aktivierung überprüfen&quot;unter [Profil und Segmente an ein Ziel](/help/rtcdp/destinations/activate-destinations.md#review)aktivieren.
