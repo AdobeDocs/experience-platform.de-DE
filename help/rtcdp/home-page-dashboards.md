@@ -5,7 +5,7 @@ seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 94%
@@ -19,7 +19,7 @@ Die Startseite der Echtzeit-Kundendatenplattform von Adobe, die ein Metriken-Das
 
 Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Die Echtzeit-Kundendatenplattform stellt Metrikkarten während des gesamten Erlebnisses bereit. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
 
-![Bild](assets/home2.jpg)
+![Bild](assets/home.png)
 
 Wenn zum Zeitpunkt der Anmeldung bei der Echtzeit-Kundendatenplattform keine Daten im System vorhanden sind, wird das Dashboard auf der Startseite nicht angezeigt. In dem Fall enthält die Startseite Lernmaterial für die erstmalige Nutzung. Im Zuge der Sammlung von Daten, d. h. wenn <!--sources-->Datensätze, Profile, Segmente und Ziele erstellt werden und Daten in das System fließen, wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten anzuzeigen<!-- in metric cards-->.
 
@@ -31,14 +31,14 @@ Das Dashboard ist wie folgt unterteilt<!-- two areas.-->:
 
 * Das **Leaderboard** befindet sich oben im Dashboard. Im Leaderboard wird die Zahl der Datensätze, Profile, Segmente und Ziele im System angezeigt.
 
-   ![Bild](assets/home-leaderboard2.jpg)
+   ![Bild](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * Unter **Letzte Elemente** werden die fünf Datensätze, Quellen, Segmente und Ziele aufgeführt, die dem System zuletzt hinzugefügt wurden.
 
-   ![Bild](assets/home-recent.jpg)
+   ![Bild](assets/recent.png)
 
 Zusätzliche Metriken (z. B. für Profile und Segmente) stehen in anderen Teilen der Echtzeit-Kundendatenplattform zur Verfügung.
 
