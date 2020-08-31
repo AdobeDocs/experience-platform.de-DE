@@ -5,10 +5,10 @@ topic: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffskontrolle für Adobe Experience Platform erfolgt über die Adobe Admin Console. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 64%
+source-wordcount: '1162'
+ht-degree: 61%
 
 ---
 
@@ -57,7 +57,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 ## Sandboxes und Berechtigungen
 
-[!DNL Experience Platform] bietet Zugriff auf eine Produktions-Sandbox und ermöglicht Ihnen das Erstellen von Nicht-Produktion- **Sandboxes**. Nicht-Produktion-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxes isolieren können und die üblicherweise für Entwicklungsexperimente, Tests oder Versuche verwendet werden. A product profile&#39;s **[!UICONTROL permissions]** give the profile&#39;s users access to [!DNL Platform] features within the sandbox environments to which they&#39;ve been granted access to.
+Nicht-Produktion-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxes isolieren können und die üblicherweise für Entwicklungsexperimente, Tests oder Versuche verwendet werden. A product profile&#39;s **[!UICONTROL permissions]** give the profile&#39;s users access to [!DNL Platform] features within the sandbox environments to which they&#39;ve been granted access to. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Nicht-Produktions-Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
 
 For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 
