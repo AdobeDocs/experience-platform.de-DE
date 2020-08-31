@@ -4,15 +4,15 @@ solution: Experience Platform
 title: E-Mail-Marketing-Ziele erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1624'
 ht-degree: 80%
 
 ---
 
 
-# E-Mail-Marketing-Ziele erstellen und Daten in der Adobe aktivieren [!DNL Real-time Customer Data Platform]
+# Erstellen Sie E-Mail-Marketing-Ziele und aktivieren Sie Daten mithilfe von API-Aufrufen in der Adobe [!DNL Real-time Customer Data Platform]
 
 In dieser Anleitung erfahren Sie, wie Sie mithilfe von API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, ein [E-Mail-Marketing-Ziel](../../rtcdp/destinations/email-marketing-destinations.md) erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel einrichten und Daten zu Ihrem neu erstellten Ziel aktivieren können.
 
