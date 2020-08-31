@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Sandboxes
 topic: troubleshooting guide
 translation-type: tm+mt
-source-git-commit: f15049ca917818d325b5783c70faaa53ba669aba
+source-git-commit: d4ae318f43904dd73756985512c303fa7149b678
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 100%
+source-wordcount: '530'
+ht-degree: 91%
 
 ---
 
@@ -31,7 +31,7 @@ In Experience Platform gibt es zwei Arten von Sandboxes:
 
 Experience Platform stellt eine einzelne **Produktions-Sandbox** bereit, die weder gelöscht noch zurückgesetzt werden kann. Es kann nur eine Produktions-Sandbox pro Platform-Instanz geben.
 
-Im Gegensatz dazu können Sandbox-Administratoren verschiedene **Nicht-Produktions-Sandboxes** für eine Platform-Instanz erstellen. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden.
+Im Gegensatz dazu können Sandbox-Administratoren verschiedene **Nicht-Produktions-Sandboxes** für eine Platform-Instanz erstellen. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Nicht-Produktions-Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
 
 Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](./home.md).
 
