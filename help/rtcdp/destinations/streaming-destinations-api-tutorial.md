@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Mit Streaming-Zielen verbinden und Daten aktivieren
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 60%
 
 ---
 
 
-# Stellen Sie eine Verbindung zu Streaming-Zielen her und aktivieren Sie Daten in der Echtzeit-Kundendatenplattform der Adobe mithilfe von APIs
+# Herstellen einer Verbindung zu Streaming-Zielen und Aktivieren von Daten mithilfe von API-Aufrufen in der Echtzeit-Kundendatenplattform der Adobe
 
 >[!NOTE]
 >
