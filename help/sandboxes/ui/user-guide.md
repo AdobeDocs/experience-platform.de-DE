@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sandbox-Benutzerhandbuch
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 80%
@@ -18,7 +18,7 @@ In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Ex
 
 ## Anzeigen von Sandboxes
 
-Klicken Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich auf **[!UICONTROL Sandboxes]**, um das Dashboard _[!UICONTROL Sandboxes]_zu öffnen. Im Dashboard werden alle für Ihre Organisation verfügbaren Sandboxes aufgeführt, einschließlich Sandbox-Typ (Produktion oder Entwicklung) und Status (aktiv, wird erstellt, gelöscht oder fehlgeschlagen).
+Klicken Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich auf **[!UICONTROL Sandboxes]**, um das Dashboard _[!UICONTROL Sandboxes]_ zu öffnen. Im Dashboard werden alle für Ihre Organisation verfügbaren Sandboxes aufgeführt, einschließlich Sandbox-Typ (Produktion oder Entwicklung) und Status (aktiv, wird erstellt, gelöscht oder fehlgeschlagen).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,7 +46,7 @@ Um in der Benutzeroberfläche eine neue Sandbox zu erstellen, klicken Sie im lin
 
 ![](../images/ui/create-sandbox-button.png)
 
-Der Dialog _[!UICONTROL Sandbox erstellen]_wird angezeigt, in dem Sie aufgefordert werden, einen Anzeigetitel und einen Namen für die Sandbox anzugeben. Der **Anzeigetitel**sollte für Menschen lesbar und deskriptiv genug sein, damit er leicht zu erkennen ist. The sandbox**[!UICONTROL  Name ]**is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
+Der Dialog _[!UICONTROL Sandbox erstellen]_ wird angezeigt, in dem Sie aufgefordert werden, einen Anzeigetitel und einen Namen für die Sandbox anzugeben. Der **Anzeigetitel** sollte für Menschen lesbar und deskriptiv genug sein, damit er leicht zu erkennen ist. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
 
 Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
@@ -56,7 +56,7 @@ Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 >
 >Da Sie nur Nicht-Produktions-Sandboxes erstellen können, ist die Option **[!UICONTROL Typ]** bei „Nicht-Produktion“ gesperrt und kann nicht bearbeitet werden.
 
-Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _[!UICONTROL Sandboxes]_dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
+Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _[!UICONTROL Sandboxes]_ dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ Es wird ein Dialog angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu be
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Eine Bestätigungsmeldung wird angezeigt und die Sandbox wird aus dem Arbeitsbereich _[!UICONTROL Sandboxes]_entfernt.
+Eine Bestätigungsmeldung wird angezeigt und die Sandbox wird aus dem Arbeitsbereich _[!UICONTROL Sandboxes]_ entfernt.
 
 ## Nächste Schritte
 
