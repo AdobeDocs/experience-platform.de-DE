@@ -5,9 +5,9 @@ title: Benutzerhandbuch zu Datennutzungsrichtlinien
 topic: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie in der Benutzeroberfläche "Experience Platform"im Arbeitsbereich "Richtlinien"ausführen können.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 39%
 
 ---
@@ -116,7 +116,7 @@ Wenn die Marketingaktion nicht von vorhandenen Nutzungsrichtlinien verwendet wir
 
 ## Nächste Schritte
 
-This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). Informationen zum Erzwingen von Datennutzungsrichtlinien finden Sie in der [Übersicht zur Durchsetzung von Richtlinien](../enforcement/overview.md).
+This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. Anweisungen zum Verwalten von Richtlinien mit dem [!DNL Policy Service API]finden Sie im [Entwicklerhandbuch](../api/getting-started.md). Informationen zum Erzwingen von Datennutzungsrichtlinien finden Sie in der [Übersicht zur Durchsetzung von Richtlinien](../enforcement/overview.md).
 
 Das folgende Video zeigt, wie mit Nutzungsrichtlinien in der [!DNL Experience Platform] Benutzeroberfläche gearbeitet wird:
 
