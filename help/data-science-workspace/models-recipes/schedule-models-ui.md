@@ -5,7 +5,7 @@ title: Modell planen (Benutzeroberfläche)
 topic: Tutorial
 description: Mit dem Adobe Experience Platform Data Science Workspace können Sie planmäßige Scoring- und Schulungsabläufe auf einem maschinellen Lerndienst einrichten. Die Automatisierung des Trainings- und Bewertungsvorgangs kann dazu beitragen, die Effizienz eines Service im Laufe der Zeit zu erhalten und zu verbessern, indem Sie über Muster in Ihren Daten auf dem Laufenden bleiben.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 84%
@@ -17,7 +17,7 @@ ht-degree: 84%
 
 Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning Service. Die Automatisierung des Trainings- und Bewertungsvorgangs kann dazu beitragen, die Effizienz eines Service im Laufe der Zeit zu erhalten und zu verbessern, indem Sie über Muster in Ihren Daten auf dem Laufenden bleiben.
 
-Dieses Tutorial führt Sie durch die Schritte, die Sie zum Konfigurieren von Trainings- und Scoring-Zeitplänen für einen vorhandenen Dienst über die *[!UICONTROL Dienstgalerie]* ausführen müssen. Es ist in die folgenden Hauptabschnitte unterteilt:
+Dieses Tutorial führt Sie durch die Schritte, die Sie zum Konfigurieren von Trainings- und Scoring-Zeitplänen für einen vorhandenen Dienst über die **[!UICONTROL Dienstgalerie]** ausführen müssen. Es ist in die folgenden Hauptabschnitte unterteilt:
 
 - [Geplantes Scoring konfigurieren](#configure-scheduled-scoring)
 - [Geplantes Training konfigurieren](#configure-scheduled-training)
@@ -51,7 +51,7 @@ Durch die Konfiguration geplanter Trainings-Läufe für einen Dienst können Sie
 
 Nach der Erstellung eines Diensts können Sie folgende Schritte ausführen, um einen Trainings-Zeitplan zu konfigurieren und anzuwenden:
 
-1. Klicken Sie in Adobe Experience Platform in der linken Navigationsspalte auf die Registerkarte **[!UICONTROL Dienste]**, um die *[!UICONTROL Dienstgalerie]* aufzurufen. Suchen Sie den Dienst, für den Sie Trainings-Läufe planen möchten, und klicken Sie auf **[!UICONTROL Öffnen]**, um die zugehörige *Übersichtsseite* anzuzeigen.
+1. Klicken Sie in Adobe Experience Platform in der linken Navigationsspalte auf die Registerkarte **[!UICONTROL Dienste]**, um die **[!UICONTROL Dienstgalerie]** aufzurufen. Suchen Sie den Dienst, für den Sie Trainings-Läufe planen möchten, und klicken Sie auf **[!UICONTROL Öffnen]**, um die zugehörige *Übersichtsseite* anzuzeigen.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. Auf der Übersichtsseite werden die Trainings-Informationen des Diensts angezeigt. Klicken Sie auf den Link **[!UICONTROL Zeitplan aktualisieren]**, um einen Trainings-Zeitplan zu konfigurieren.
