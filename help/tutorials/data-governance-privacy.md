@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Governance und Datenschutz – Tutorials
 topic: tutorial
+description: Data Usage Labeling and Enforcement (DULE) ist der zentrale Mechanismus zur Umsetzung von Data Governance in Adobe Experience Platform. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 43%
+source-wordcount: '506'
+ht-degree: 51%
 
 ---
 
 
 # [!DNL Data Governance] und [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) ist der Kernmechanismus der Adobe Experience Platform [!DNL Data Governanc]e. Mit den Funktionen DULE können Sie Datenverwendungsbeschriftungen auf Datensätze und Felder anwenden und diese entsprechend den entsprechenden Datenverwendungsrichtlinien kategorisieren. Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
+[!DNL Data Usage Labeling and Enforcement] (DULE) ist der Kernmechanismus von Adobe Experience Platform [!DNL Data Governance]. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren. Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. Gehen Sie für weitere Informationen hierzu zunächst die [Übersicht über den Datenschutzdienst](../privacy-service/home.md) durch.
 
