@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;segment evaluation
+keywords: Experience Platform;home;popular topics;streaming segmentation;Segmentation;Segmentation Service;segmentation service;ui guide;
 solution: Experience Platform
 title: Streaming-Segmentierung
 topic: ui guide
 description: Streaming-Segmentierung Unter Adobe Experience Platform können Sie Segmentierungen in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in die Plattform gelangen, was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Plattform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 translation-type: tm+mt
-source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 2%
