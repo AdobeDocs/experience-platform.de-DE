@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutorials zur Entscheidungsfindung
 topic: tutorial
+description: Decisioning Service bietet die Möglichkeit, personalisierte, optimierte und orchestrierte Erlebnisse in Anwendungen zu erstellen, die in Adobe Experience Platform ausgeführt werden. Mithilfe von Decisioning Service können Sie die beste Option aus einer Reihe verfügbarer Optionen bestimmen.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 41%
+source-wordcount: '152'
+ht-degree: 54%
 
 ---
 
