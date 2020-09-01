@@ -5,7 +5,7 @@ title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Edit
 description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der Benutzeroberfläche "Experience Platform".
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 43%
@@ -43,7 +43,7 @@ Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen 
 
 ### [!UICONTROL Schema „Mitglieder des Treueprogramms“]
 
-Das Quellcode-Schema &quot;[!UICONTROL Treuemitglieder]&quot;basiert auf der XDM- [!DNL Individual Profile] Klasse und ist das Schema, das im Lernprogramm zum [Erstellen eines Schemas in der Benutzeroberfläche](create-schema-ui.md)erstellt wurde. It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in [!DNL Real-time Customer Profile].
+Das Quellcode-Schema &quot;[!UICONTROL Treuemitglieder]&quot;basiert auf der XDM- [!DNL Individual Profile] Klasse und ist das Schema, das im Lernprogramm zum [Erstellen eines Schemas in der Benutzeroberfläche](create-schema-ui.md)erstellt wurde. It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -61,19 +61,19 @@ Das Ziel-Schema &quot;[!UICONTROL Hotels]&quot; basiert auf einer benutzerspezif
 
 Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das als Verweis auf das Zielschema dient. Sie können dem Quellschema ein solches Feld hinzufügen, indem Sie ein neues Mixin erstellen.
 
-Klicken Sie zunächst auf **[!UICONTROL Hinzufügen]** im Abschnitt _[!UICONTROL Mixins]_.
+Klicken Sie zunächst auf **[!UICONTROL Hinzufügen]** im Abschnitt **[!UICONTROL Mixins]**.
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-Der Dialog _[!UICONTROL Mixin hinzufügen]_ wird angezeigt. Klicken Sie hier auf **[!UICONTROL Neues Mixin erstellen]**. Geben Sie in den angezeigten Textfeldern einen Anzeigenamen und eine Beschreibung für das neue Mixin ein. Klicken Sie auf **[!UICONTROL Mixin hinzufügen]**, wenn Sie damit fertig sind.
+Der Dialog **[!UICONTROL Mixin hinzufügen]** wird angezeigt. Klicken Sie hier auf **[!UICONTROL Neues Mixin erstellen]**. Geben Sie in den angezeigten Textfeldern einen Anzeigenamen und eine Beschreibung für das neue Mixin ein. Klicken Sie auf **[!UICONTROL Mixin hinzufügen]**, wenn Sie damit fertig sind.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the _[!UICONTROL Mixins]_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
+The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the **[!UICONTROL Mixins]** section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Auf der Arbeitsfläche wird unter dem Namespace „\_tenantId“ ein neues Feld angezeigt. Under _[!UICONTROL Field Properties]_, provide a field name and display name for the field, and set its type to &quot;[!UICONTROL String]&quot;.
+Auf der Arbeitsfläche wird unter dem Namespace „\_tenantId“ ein neues Feld angezeigt. Under **[!UICONTROL Field Properties]**, provide a field name and display name for the field, and set its type to &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -89,7 +89,7 @@ The updated &quot;[!UICONTROL favoriteHotel]&quot; field appears in the canvas. 
 
 Sobald in Ihrem Quellschema ein dediziertes Referenzfeld definiert ist, können Sie es als Beziehungsfeld festlegen.
 
-Select the reference field in the canvas, then scroll down under _[!UICONTROL Field Properties]_ until the **[!UICONTROL Relationship]** checkbox appears. Aktivieren Sie das Kontrollkästchen, um die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds anzuzeigen.
+Select the reference field in the canvas, then scroll down under **[!UICONTROL Field Properties]** until the **[!UICONTROL Relationship]** checkbox appears. Aktivieren Sie das Kontrollkästchen, um die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds anzuzeigen.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
