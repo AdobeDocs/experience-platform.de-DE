@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Benutzerhandbuch zum Segmentdienst
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 27%
+source-wordcount: '1359'
+ht-degree: 25%
 
 ---
 
@@ -155,13 +155,13 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie im Benutzerhandbuch
 >
 >Damit Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für das Unternehmen aktivieren. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in this user guide](#scheduled-segmentation).
 
-## Verstöße gegen DULE-Richtlinien
+## Rechtsverletzungen
 
 >[!NOTE]
 >
->Verstöße gegen DULE-Richtlinien finden nur dann Anwendung, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
+>Richtlinienverletzungen gelten nur, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
 
-Once you are done creating your segment, the segment will be analyzed by [!DNL Data Governance] to ensure there are no policy violations within the segment. Weiterführende Informationen zu DULE und Richtlinienverletzungen finden Sie in der [Übersicht über die Datennutzungsbezeichnungen](../../data-governance/labels/overview.md).
+Nachdem Sie Ihr Segment erstellt haben, wird das Segment von Adobe Experience Platform Data Governance analysiert, um sicherzustellen, dass es keine Richtlinienverletzungen innerhalb des Segments gibt. Weitere Informationen finden Sie in der [[!DNL Data Governance] Übersicht über ](../../data-governance/home.md).
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
