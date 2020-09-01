@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zum Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 1%
@@ -70,7 +70,7 @@ Sie können die Liste filtern, indem Sie Suchbegriffe in die Suchleiste unterhal
 
 ![Suchoptionen für Auftragsanfragen](../images/user-guide/job-search.png)
 
-Um die Details einer bestimmten Auftragsanforderung Ansicht, klicken Sie in der Liste auf die Auftrags-ID der Anforderung, um die Seite &quot; *[!UICONTROL Auftragsdetails]* &quot;zu öffnen.
+Um die Details einer bestimmten Auftragsanforderung Ansicht, klicken Sie in der Liste auf die Auftrags-ID der Anforderung, um die Seite &quot; **[!UICONTROL Auftragsdetails]** &quot;zu öffnen.
 
 ![GDPR-UI-Auftragsdetails](../images/user-guide/job-details.png)
 
@@ -101,7 +101,7 @@ Um Beginn mit dem Anforderungs-Builder zu verwenden, klicken Sie auf Anforderung
 
 ![Klicken Sie auf Anforderung erstellen](../images/user-guide/create-request.png)
 
-Das Dialogfeld Anforderung *[!UICONTROL erstellen]* wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Anforderung zum Schutz der Privatsphäre für den derzeit ausgewählten Regeltyp an.
+Das Dialogfeld Anforderung **[!UICONTROL erstellen]** wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Anforderung zum Schutz der Privatsphäre für den derzeit ausgewählten Regeltyp an.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ Wählen Sie den **[!UICONTROL Auftragstyp]** der Anforderung (&quot;Löschen&quo
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Wählen Sie unter &quot; *[!UICONTROL Namensraum-Typ]*&quot;den entsprechenden Namensraum-Typ für die Kunden-IDs aus, an die gesendet wird [!DNL Privacy Service].
+Wählen Sie unter &quot; **[!UICONTROL Namensraum-Typ]**&quot;den entsprechenden Namensraum-Typ für die Kunden-IDs aus, an die gesendet wird [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -129,13 +129,13 @@ Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge)
 
 ### JSON-Datei hochladen {#json}
 
-Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für die einzelnen verarbeiteten Datensubjekte verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
+Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für jede verarbeitete Person verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
 Klicken Sie auf den Pfeil neben Anforderung **[!UICONTROL erstellen]**, unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms. Wählen Sie in der Liste der angezeigten Optionen die Option JSON **[!UICONTROL hochladen]**.
 
 ![Optionen zur Anforderungserstellung](../images/user-guide/create-options.png)
 
-Das Dialogfeld &quot;JSON ** hochladen&quot;wird angezeigt. Es wird ein Fenster angezeigt, in das Sie die JSON-Datei per Drag &amp; Drop verschieben können.
+Das Dialogfeld &quot;JSON **** hochladen&quot;wird angezeigt. Es wird ein Fenster angezeigt, in das Sie die JSON-Datei per Drag &amp; Drop verschieben können.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
