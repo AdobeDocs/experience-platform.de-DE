@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience manager source connector;Audience Manager;audience manager connector
 solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche
 topic: overview
+description: Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen von Quell-Connectors für Adobe Audience Manager, um Verbrauchererlebnis-Ereignis-Daten über die Benutzeroberfläche in Platform einzubringen.
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 13%
+source-wordcount: '298'
+ht-degree: 11%
 
 ---
 
@@ -22,15 +23,15 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an u
 
 Wählen Sie unter der Kategorie *Adobe Applications* die Option **Adobe Audience Manager** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zur Ansicht der Dokumentation oder zur Verbindung mit der Quelle.
 
-To create a new source connector for Adobe Audience Manager, click **Add data**.
+Um einen neuen Quellanschluss für Adobe Audience Manager zu erstellen, klicken Sie auf **Hinzufügen Daten**.
 
 ![](../../../../images/tutorials/create/aam/catalog.png)
 
-Das folgende Dialogfeld wird angezeigt. Click **Connect** to create the connection.
+Das folgende Dialogfeld wird angezeigt. Klicken Sie auf **Verbinden** , um die Verbindung zu erstellen.
 
 ![](../../../../images/tutorials/create/aam/connect_full.png)
 
-If a source connection with Adobe Audience Manager is established, the *Source activity* page for Audience Manager connector be displayed.
+Wird eine Quellverbindung mit Adobe Audience Manager hergestellt, wird die Seite *Quellcode-Aktivität* für den Audience Manager-Connector angezeigt.
 
 ![](../../../../images/tutorials/create/aam/flow.png)
 
