@@ -5,7 +5,7 @@ title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 24%
@@ -57,7 +57,7 @@ Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem Data
 
 ### Verwenden der UI {#identity-ui}
 
-In der [!DNL Experience Platform ]Benutzeroberfläche können Sie mit dem Arbeitsbereich &quot; _[!UICONTROL Schemas]_ &quot;Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und führen Sie die Schritte zum [Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im [!DNL Schema Editor] Lernprogramm aus.
+In der [!DNL Experience Platform ]Benutzeroberfläche können Sie mit dem Arbeitsbereich &quot; **[!UICONTROL Schemas]** &quot;Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und führen Sie die Schritte zum [Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im [!DNL Schema Editor] Lernprogramm aus.
 
 Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt zum [Senden von Datenschutzanforderungen](#submit)fortfahren.
 
@@ -139,7 +139,7 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für d
 
 ### Verwenden der UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_ in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
