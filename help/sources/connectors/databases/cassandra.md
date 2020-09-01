@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
 title: Apache Cassandra-Anschluss
 topic: overview
+description: Die nachstehende Dokumentation enthält Informationen dazu, wie Apache Cassandra mithilfe von APIs mit der Plattform verbunden werden kann.
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 22%
+source-wordcount: '137'
+ht-degree: 20%
 
 ---
 
 
-# [!DNL Apache Cassandra ]connector
+# [!DNL Apache Cassandra] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. [!DNL Platform] kann eine Verbindung zu verschiedenen Datenbanktypen wie relationaler Datenbank, NoSQL oder data warehouse herstellen. Die Unterstützung von Datenbankanbietern umfasst [!DNL Apache Cassandra].
+[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. [!DNL Platform] kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationale Datenbanken, NoSQL oder Data Warehouse herstellen. Die Unterstützung von Datenbankanbietern umfasst [!DNL Apache Cassandra].
 
 Die nachstehende Dokumentation enthält Informationen dazu, wie eine Verbindung [!DNL Apache Cassandra] mit [!DNL Platform] APIs hergestellt werden kann:
 
