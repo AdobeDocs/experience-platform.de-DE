@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abonnieren von Datenerfassungsereignissen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 38%
@@ -55,7 +55,7 @@ Nachdem Sie ein neues Projekt erstellt haben, navigieren Sie zum Übersichtsbild
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-The _[!UICONTROL Add events]_ dialog appears. Klicken Sie auf **[!UICONTROL Experience Platform]** , um die Liste der verfügbaren Optionen zu filtern, und klicken Sie dann auf **[!UICONTROL Plattformbenachrichtigungen]** , bevor Sie auf **[!UICONTROL Weiter]** klicken.
+The **[!UICONTROL Add events]** dialog appears. Klicken Sie auf **[!UICONTROL Experience Platform]** , um die Liste der verfügbaren Optionen zu filtern, und klicken Sie dann auf **[!UICONTROL Plattformbenachrichtigungen]** , bevor Sie auf **[!UICONTROL Weiter]** klicken.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
