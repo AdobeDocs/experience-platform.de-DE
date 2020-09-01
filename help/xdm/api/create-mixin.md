@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
 title: Erstellen eines Mixins
 topic: developer guide
+description: Mixins sind eine Reihe von Feldern, mit denen ein bestimmtes Konzept beschrieben wird, z. B. „Adresse“ oder „Profil-Voreinstellungen“. Es stehen zahlreiche Standard-Mixins zur Verfügung. Sie können auch eigene Mixins definieren, wenn Sie Informationen erfassen möchten, die für Ihr Unternehmen individuell sind.
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 92%
+source-wordcount: '345'
+ht-degree: 93%
 
 ---
 
