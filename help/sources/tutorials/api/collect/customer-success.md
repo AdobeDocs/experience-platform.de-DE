@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; customer success; service now; salesforce service cloud
+keywords: Experience Platform;home;popular topics;collect customer success;customer success
 solution: Experience Platform
 title: Erfassen von Daten aus einem Kundenerfolgssystem über Quellschnittstellen und APIs
 topic: overview
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Erfolgssystem eines Drittanbieters und zum Integrieren in die Plattform über Quellschnittstellen und die Flow Service API beschrieben.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Kundenerfolgssystem und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und APIs erläutert.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1624'
 ht-degree: 13%
 
 ---
