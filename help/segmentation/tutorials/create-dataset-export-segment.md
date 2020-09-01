@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Datensatzes zum Exportieren eines Segments für eine Audience
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 33%
@@ -33,7 +33,7 @@ Klicken Sie zur Ansicht der Schemas der Vereinigung in der Benutzeroberfläche a
 
 The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Klicken Sie zur Ansicht des Datensatzarbeitsbereichs in der linken Navigation auf **[!UICONTROL Datensätze]** und dann auf die Registerkarte *[!UICONTROL Durchsuchen]* . The datasets workspace contains a list of datasets, including columns showing *[!UICONTROL Name]*, *[!UICONTROL Created]* (date and time), *[!UICONTROL Source]*, *[!UICONTROL Schema]*, and *[!UICONTROL Last Batch Status]*, as well as the date and time the dataset was *[!UICONTROL Last Updated]*. Je nach Breite der einzelnen Spalten müssen Sie ggf. nach links oder rechts blättern, um alle Spalten anzuzeigen.
+Klicken Sie zur Ansicht des Datensatzarbeitsbereichs in der linken Navigation auf **[!UICONTROL Datensätze]** und dann auf die Registerkarte **[!UICONTROL Durchsuchen]** . The datasets workspace contains a list of datasets, including columns showing **[!UICONTROL Name]**, **[!UICONTROL Created]** (date and time), **[!UICONTROL Source]**, **[!UICONTROL Schema]**, and **[!UICONTROL Last Batch Status]**, as well as the date and time the dataset was **[!UICONTROL Last Updated]**. Je nach Breite der einzelnen Spalten müssen Sie ggf. nach links oder rechts blättern, um alle Spalten anzuzeigen.
 
 >[!NOTE]
 >
@@ -47,13 +47,13 @@ Um einen Datensatz zu erstellen, klicken Sie in der oberen rechten Ecke des Arbe
 
 ![Klicken Sie auf Datensatz erstellen](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
-Klicken Sie im Bildschirm &quot; *[!UICONTROL Datensatz]* erstellen&quot;auf &quot;Datensatz aus Schema **** erstellen&quot;, um fortzufahren.
+Klicken Sie im Bildschirm &quot; **[!UICONTROL Datensatz]** erstellen&quot;auf &quot;Datensatz aus Schema **** erstellen&quot;, um fortzufahren.
 
 ![Datenquelle auswählen](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 ## XDM Individuelles Profil Vereinigung Schema auswählen
 
-Um die [!DNL XDM Individual Profile Union Schema] zur Verwendung in Ihrem Dataset auszuwählen, suchen Sie im Bildschirm &quot;Schema[!UICONTROL auswählen]&quot;das Schema &quot;[!UICONTROL XDM Individuelles Profil]&quot;mit dem Typ &quot; *[!UICONTROL Vereinigung]* &quot;.
+Um die [!DNL XDM Individual Profile Union Schema] zur Verwendung in Ihrem Dataset auszuwählen, suchen Sie im Bildschirm &quot;Schema[!UICONTROL auswählen]&quot;das Schema &quot;[!UICONTROL XDM Individuelles Profil]&quot;mit dem Typ &quot; **[!UICONTROL Vereinigung]** &quot;.
 
 Markieren Sie das Optionsfeld neben **[!UICONTROL XDM Individuelles Profil]** und klicken Sie dann oben rechts auf **[!UICONTROL Weiter]** .
 
@@ -61,7 +61,7 @@ Markieren Sie das Optionsfeld neben **[!UICONTROL XDM Individuelles Profil]** un
 
 ## Datensatz konfigurieren
 
-Im Bildschirm **[!UICONTROL Datensatz konfigurieren]** müssen Sie dem Datensatz einen *[!UICONTROL Namen]* geben und möglicherweise auch eine *[!UICONTROL Beschreibung]* des Datensatzes hinzufügen.
+Im Bildschirm **[!UICONTROL Datensatz konfigurieren]** müssen Sie dem Datensatz einen **[!UICONTROL Namen]** geben und möglicherweise auch eine **[!UICONTROL Beschreibung]** des Datensatzes hinzufügen.
 
 **Hinweise zu Datensatznamen:**
 - Datensatznamen sollten kurz und beschreibend sein, damit sich der Datensatz in der Bibliothek später leicht finden lässt.
@@ -74,9 +74,9 @@ Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf
 
 ## Datensatzaktivität
 
-Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte *[!UICONTROL Datensatzaktivität]* im Arbeitsbereich „Datensätze“. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
+Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte **[!UICONTROL Datensatzaktivität]** im Arbeitsbereich „Datensätze“. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
-Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. *[!UICONTROL Datensatz-ID]*, *[!UICONTROL Name]*, *[!UICONTROL Beschreibung]*, *[!UICONTROL Tabellenname]*, *[!UICONTROL Schema]*, *[!UICONTROL Streaming]* und *[!UICONTROL Quelle]*. The [!UICONTROL Info] tab also includes information about when the dataset was *[!UICONTROL Created]* and its *[!UICONTROL Last Modified]* date.
+Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. **[!UICONTROL Datensatz-ID]**, **[!UICONTROL Name]**, **[!UICONTROL Beschreibung]**, **[!UICONTROL Tabellenname]**, **[!UICONTROL Schema]**, **[!UICONTROL Streaming]** und **[!UICONTROL Quelle]**. The [!UICONTROL Info] tab also includes information about when the dataset was **[!UICONTROL Created]** and its **[!UICONTROL Last Modified]** date.
 
 Bitte beachten Sie die **[!UICONTROL Dataset-ID]**, da dieser Wert erforderlich ist, um den Arbeitsablauf für den Segmentexport in der Audience abzuschließen.
 
