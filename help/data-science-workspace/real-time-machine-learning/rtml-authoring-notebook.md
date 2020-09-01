@@ -5,7 +5,7 @@ title: Benutzerhandbuch für Notebook-PCs in Echtzeit
 topic: Training and scoring a ML model
 description: In der folgenden Anleitung werden die Schritte erläutert, die zum Erstellen einer Echtzeitanwendung für maschinelles Lernen in Adobe Experience Platform JupyterLab erforderlich sind.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -86,13 +86,13 @@ Beginn durch Laden der Schulungsdaten.
 >
 >In der **Echtzeit-ML** -Vorlage wird der CSV-Datensatz [für die](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) Kfz-Versicherung abgerufen [!DNL Github].
 
-![Laden von Trainingsdaten](../images/rtml/load_training.png)
+![Schulungsdaten laden](../images/rtml/load_training.png)
 
 Wenn Sie einen Datensatz aus Adobe Experience Platform verwenden möchten, heben Sie die Auskommentierung der Zelle unten auf. Als Nächstes müssen Sie `DATASET_ID` den entsprechenden Wert ersetzen.
 
 ![rtml-Datensatz](../images/rtml/rtml-dataset.png)
 
-Um auf ein Dataset in Ihrem [!DNL JupyterLab] Notebook zuzugreifen, wählen Sie die Registerkarte &quot; **Daten** &quot;in der linken Navigation von [!DNL JupyterLab]. Die Ordner *[!UICONTROL Datasets]* und *[!UICONTROL Schemas]* werden angezeigt. Wählen Sie &quot; **[!UICONTROL Datensätze]** &quot;und klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des zu verwendenden Datensatzes die Option &quot;Daten im Notebook **** untersuchen&quot;. Am unteren Rand des Notebooks wird ein ausführbarer Code-Eintrag angezeigt. Diese Zelle hat deine `dataset_id`.
+Um auf ein Dataset in Ihrem [!DNL JupyterLab] Notebook zuzugreifen, wählen Sie die Registerkarte &quot; **Daten** &quot;in der linken Navigation von [!DNL JupyterLab]. Die Ordner **[!UICONTROL Datasets]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie &quot; **[!UICONTROL Datensätze]** &quot;und klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des zu verwendenden Datensatzes die Option &quot;Daten im Notebook **** untersuchen&quot;. Am unteren Rand des Notebooks wird ein ausführbarer Code-Eintrag angezeigt. Diese Zelle hat deine `dataset_id`.
 
 ![Datenzugriff](../images/rtml/access-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### Vorbereiten des Modells
 
-Mit der *[!UICONTROL Echtzeit-ML]* -Vorlage müssen Sie Ihr ML-Modell analysieren, vorbereiten, trainieren und auswerten. Dies geschieht durch die Anwendung von Datentransformationen und den Aufbau einer Schulungspipeline.
+Mit der **[!UICONTROL Echtzeit-ML]** -Vorlage müssen Sie Ihr ML-Modell analysieren, vorbereiten, trainieren und auswerten. Dies geschieht durch die Anwendung von Datentransformationen und den Aufbau einer Schulungspipeline.
 
 **Datentransformationen**
 
-Die Zelle &quot; *[!UICONTROL Echtzeit-ML]* -Vorlagen *Datentransformationen* &quot;muss so geändert werden, dass sie mit Ihrem eigenen Datensatz funktioniert. Dies umfasst in der Regel das Umbenennen von Spalten, die Datenaggregation und die Datenvorbereitung/Funktionstechnik.
+Die Zelle &quot; **[!UICONTROL Echtzeit-ML]** -Vorlagen *Datentransformationen* &quot;muss so geändert werden, dass sie mit Ihrem eigenen Datensatz funktioniert. Dies umfasst in der Regel das Umbenennen von Spalten, die Datenaggregation und die Datenvorbereitung/Funktionstechnik.
 
 >[!NOTE]
 >
@@ -410,7 +410,7 @@ Sie erhalten die aktualisierte DSL zurückgegeben.
 
 ## Scoring {#scoring}
 
-Nach dem Veröffentlichen auf [!DNL Edge]erfolgt die Bewertung durch eine Client-Anfrage. Normalerweise kann dies über eine Client-Anwendung erfolgen, die ML-Ergebnisse benötigt. Sie können es auch von Postman aus tun. Die *[!UICONTROL Echtzeit-ML]* -Vorlage verwendet EdgeUtils, um diesen Vorgang zu demonstrieren.
+Nach dem Veröffentlichen auf [!DNL Edge]erfolgt die Bewertung durch eine Client-Anfrage. Normalerweise kann dies über eine Client-Anwendung erfolgen, die ML-Ergebnisse benötigt. Sie können es auch von Postman aus tun. Die **[!UICONTROL Echtzeit-ML]** -Vorlage verwendet EdgeUtils, um diesen Vorgang zu demonstrieren.
 
 >[!NOTE]
 >
