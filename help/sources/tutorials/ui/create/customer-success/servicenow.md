@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ServiceNow;servicenow
 solution: Experience Platform
 title: Erstellen eines Quell-Connectors für ServiceNow über die Benutzeroberfläche
 topic: overview
+description: In diesem Lernprogramm werden Schritte zum Erstellen eines ServiceNow-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '472'
 ht-degree: 11%
 
 ---
