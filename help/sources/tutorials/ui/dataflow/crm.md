@@ -5,7 +5,7 @@ title: Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzer
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Konto.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1353'
 ht-degree: 3%
@@ -41,7 +41,7 @@ Wählen Sie den Ordner aus, den Sie verwenden möchten, und klicken Sie dann auf
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Der Schritt *[!UICONTROL Zuordnung]* wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem [!DNL Platform] Datensatz zuzuordnen.
+Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem [!DNL Platform] Datensatz zuzuordnen.
 
 Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen.
 
@@ -51,7 +51,7 @@ Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie &quot;Vorhanden
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
 
-The *[!UICONTROL Select dataset]* dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+The **[!UICONTROL Select dataset]** dialog appears. Suchen Sie den gewünschten Datensatz, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
 
@@ -63,7 +63,7 @@ Sie können ein Schema anhängen, indem Sie in der Suchleiste &quot;Schema **[!U
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-The *[!UICONTROL Select schema]* dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
+The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
 
 ![select-Schema](../../../images/tutorials/dataflow/crm/select-schema.png)
 
@@ -75,14 +75,14 @@ Nachdem Sie die Quelldaten zugeordnet haben, klicken Sie auf **[!UICONTROL Weite
 
 ## Planen von Erfassungsabläufen
 
-Der Schritt *[!UICONTROL Planung]* wird angezeigt, mit dem Sie einen Erfassungszeitplan konfigurieren können, um die ausgewählten Quelldaten automatisch mit den konfigurierten Zuordnungen zu erfassen. In der folgenden Tabelle sind die verschiedenen konfigurierbaren Felder für die Planung aufgeführt:
+Der Schritt **[!UICONTROL Planung]** wird angezeigt, mit dem Sie einen Erfassungszeitplan konfigurieren können, um die ausgewählten Quelldaten automatisch mit den konfigurierten Zuordnungen zu erfassen. In der folgenden Tabelle sind die verschiedenen konfigurierbaren Felder für die Planung aufgeführt:
 
 | Feld | Beschreibung |
 | --- | --- |
 | Häufigkeit | Zu den auswählbaren Frequenzen gehören `Once`, `Minute`, `Hour`, `Day`und `Week`. |
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Frequenz festlegt. |
 | Beginn | Ein UTC-Zeitstempel, der angibt, wann die erste Erfassung erfolgen soll. |
-| Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die *[!UICONTROL Aufstockung]* aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die *Aufstockung* deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der *[!UICONTROL Beginn]* geladen wurden. Dateien, die vor dem *[!UICONTROL Beginn]* geladen wurden, werden nicht erfasst. |
+| Aufstockung | Ein boolescher Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die **[!UICONTROL Aufstockung ]*aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die*Aufstockung *deaktiviert ist, werden nur die Dateien aufgenommen, die zwischen der ersten Ausführung der Erfassung und der*[!UICONTROL Beginn ]*geladen wurden. Dateien, die vor dem*[!UICONTROL Beginn]** geladen wurden, werden nicht erfasst. |
 | Delta-Spalte | Eine Option mit gefilterten Quelldatumsfeldern vom Typ, Schema oder Uhrzeit. Dieses Feld wird verwendet, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
 
 Datenflüsse sind so konzipiert, dass Daten auf planmäßiger Basis automatisch erfasst werden. Beginn durch Auswahl der Aufnahmefrequenz. Legen Sie als Nächstes das Intervall fest, um den Zeitraum zwischen zwei Flussläufen festzulegen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und auf größer oder gleich 15 gesetzt werden.
@@ -107,9 +107,9 @@ Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen 
 
 ## Datennachrichtendetails angeben
 
-Der Schritt *[!UICONTROL Datennachweis]* wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis geben können.
+Der Schritt **[!UICONTROL Datennachweis]** wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis geben können.
 
-Während dieses Prozesses können Sie auch die *[!UICONTROL teilweise Erfassung]* und *[!UICONTROL Fehlerdiagnose]* aktivieren. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Sobald die *[!UICONTROL teilweise Erfassung]* aktiviert ist, ziehen Sie den *[!UICONTROL Fehlerschwellenwert %]* , um den Fehlerschwellenwert des Stapels anzupassen. Alternativ können Sie den Schwellenwert manuell anpassen, indem Sie das Eingabefeld auswählen. Weitere Informationen finden Sie in der Übersicht über die [teilweise Stapelverarbeitung](../../../../ingestion/batch-ingestion/partial.md).
+Während dieses Prozesses können Sie auch die **[!UICONTROL teilweise Erfassung]** und **[!UICONTROL Fehlerdiagnose]** aktivieren. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Sobald die **[!UICONTROL teilweise Erfassung]** aktiviert ist, ziehen Sie den **[!UICONTROL Fehlerschwellenwert %]** , um den Fehlerschwellenwert des Stapels anzupassen. Alternativ können Sie den Schwellenwert manuell anpassen, indem Sie das Eingabefeld auswählen. Weitere Informationen finden Sie in der Übersicht über die [teilweise Stapelverarbeitung](../../../../ingestion/batch-ingestion/partial.md).
 
 Geben Sie Werte für den Datenflug ein und wählen Sie **[!UICONTROL Weiter]**.
 
@@ -119,9 +119,9 @@ Geben Sie Werte für den Datenflug ein und wählen Sie **[!UICONTROL Weiter]**.
 
 Der *Schritt zum Überprüfen* wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
 
-* *[!UICONTROL Verbindungsdetails]*: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
-* *[!UICONTROL Zuordnungsdetails]*: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
-* *[!UICONTROL Details]* planen: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmeplans an.
+* **[!UICONTROL Verbindungsdetails]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
+* **[!UICONTROL Zuordnungsdetails]**: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
+* **[!UICONTROL Details]** planen: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmeplans an.
 
 Klicken Sie nach Überprüfung des Datenflusses auf **[!UICONTROL Fertig stellen]** und lassen Sie die Erstellung des Datenflusses etwas Zeit.
 
@@ -133,7 +133,7 @@ Nachdem Sie Ihren Datenbogen erstellt haben, können Sie die Daten überwachen, 
 
 ## Datenflug löschen
 
-Sie können Datenflüsse löschen, die nicht mehr benötigt werden oder mit der Funktion &quot; *[!UICONTROL Löschen]* &quot;im Arbeitsbereich &quot; *[!UICONTROL Datenflüsse]* &quot;falsch erstellt wurden. Weitere Informationen zum Löschen von Datenflüssen finden Sie im Lernprogramm zum [Löschen von Datenflüssen in der Benutzeroberfläche](../delete.md).
+Sie können Datenflüsse löschen, die nicht mehr benötigt werden oder mit der Funktion &quot; **[!UICONTROL Löschen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Datenflüsse]** &quot;falsch erstellt wurden. Weitere Informationen zum Löschen von Datenflüssen finden Sie im Lernprogramm zum [Löschen von Datenflüssen in der Benutzeroberfläche](../delete.md).
 
 ## Nächste Schritte
 
@@ -156,11 +156,11 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit Q
 
 Beim Erstellen eines Datenflusses wird dieser sofort aktiv und erfasst Daten gemäß dem festgelegten Zeitplan. Sie können einen aktiven Datenfeed jederzeit deaktivieren, indem Sie die unten stehenden Anweisungen befolgen.
 
-Wählen Sie im *[!UICONTROL Authentifizierungsbildschirm]* den Namen der Verbindung aus, die mit dem Datendurchlauf, den Sie deaktivieren möchten, verknüpft ist.
+Wählen Sie im **[!UICONTROL Authentifizierungsbildschirm]** den Namen der Verbindung aus, die mit dem Datendurchlauf, den Sie deaktivieren möchten, verknüpft ist.
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
-Die Seite &quot; _Quellseite_ &quot;wird angezeigt. Wählen Sie den aktiven Datenfluss aus der Liste aus, um die Spalte &quot; *[!UICONTROL Eigenschaften]* &quot;auf der rechten Seite des Bildschirms mit der Schaltfläche &quot; **[!UICONTROL Aktiviert]** &quot;zu öffnen. Klicken Sie auf den Umschalter, um den Datenflug zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenflug nach dessen Deaktivierung erneut zu aktivieren.
+Die Seite &quot; **Quellseite** &quot;wird angezeigt. Wählen Sie den aktiven Datenfluss aus der Liste aus, um die Spalte &quot; **[!UICONTROL Eigenschaften]** &quot;auf der rechten Seite des Bildschirms mit der Schaltfläche &quot; **[!UICONTROL Aktiviert]** &quot;zu öffnen. Klicken Sie auf den Umschalter, um den Datenflug zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenflug nach dessen Deaktivierung erneut zu aktivieren.
 
 ![disable](../../../images/tutorials/dataflow/crm/disable.png)
 
