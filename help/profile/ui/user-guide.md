@@ -5,7 +5,7 @@ title: Benutzerhandbuch zum Echtzeit-Kundenprofil
 topic: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 14%
@@ -29,19 +29,19 @@ Dieses Benutzerhandbuch erfordert ein Verständnis der verschiedenen mit der Ver
 
 ## Übersicht
 
-In the [[!DNL Experience Platform UI]](http://platform.adobe.com), click **[!UICONTROL Profiles]** in the left navigation to open the _[!UICONTROL Overview]_ tab. Diese Registerkarte enthält Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
+In the [[!DNL Experience Platform UI]](http://platform.adobe.com), click **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. Diese Registerkarte enthält Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
 
 ![](../images/user-guide/profiles-overview.png)
 
 ## Durchsuchen
 
-Wählen Sie die Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;aus, um nach Profilen anhand ihrer Identität zu suchen.
+Wählen Sie die Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;aus, um nach Profilen anhand ihrer Identität zu suchen.
 
 ![](../images/user-guide/profiles-browse.png)
 
 ### Profil-Metriken {#profile-metrics}
 
-Auf der rechten Seite der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;finden Sie eine Reihe wichtiger Metriken zu Ihren Profil-Daten, darunter die Gesamtzahl der [Profil](#profile-count) sowie eine Auflistung der [Profil nach Namensraum](#profiles-by-namespace).
+Auf der rechten Seite der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;finden Sie eine Reihe wichtiger Metriken zu Ihren Profil-Daten, darunter die Gesamtzahl der [Profil](#profile-count) sowie eine Auflistung der [Profil nach Namensraum](#profiles-by-namespace).
 
 Diese Profil-Metriken werden mit der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens ausgewertet. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien, einschließlich der Definition einer standardmäßigen Zusammenführungsrichtlinie, finden Sie im [Benutzerhandbuch](merge-policies.md)&quot;Richtlinien zusammenführen&quot;.
 
@@ -59,13 +59,13 @@ Wenn die Erfassung von Datensätzen in die [!DNL Profile Store] Anzahl um mehr a
 
 ### Profile nach Namensraum {#profiles-by-namespace}
 
-Die Metrik &quot; *[!UICONTROL Profil nach Namensraum]* &quot;zeigt die Gesamtanzahl und Unterteilung der Namensraum für alle zusammengeführten Profil im Profil Store an. Die Gesamtanzahl der Profil nach Namensraum (d. h. das Addieren der für jeden Namensraum angezeigten Werte) ist immer höher als die Metrik für die Anzahl der Profil, da ein Profil mit mehreren Namensräumen verknüpft sein könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft.
+Die Metrik &quot; **[!UICONTROL Profil nach Namensraum]** &quot;zeigt die Gesamtanzahl und Unterteilung der Namensraum für alle zusammengeführten Profil im Profil Store an. Die Gesamtanzahl der Profil nach Namensraum (d. h. das Addieren der für jeden Namensraum angezeigten Werte) ist immer höher als die Metrik für die Anzahl der Profil, da ein Profil mit mehreren Namensräumen verknüpft sein könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft.
 
 Ähnlich wie bei der Metrik für die [Profil-Zählung](#profile-count) wird ein Auftrag zur Aktualisierung der Namensraum-Metriken ausgelöst, wenn durch die Erfassung von Datensätzen in die [!DNL Profile Store] Metrik die Anzahl um mehr als 5 % erhöht oder verringert wird. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Bericht ein Auftrag zur Aktualisierung der Metriken ausgeführt, [!DNL Profile Store]wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
 
 ### Richtlinie zusammenführen
 
-Mit der **[!UICONTROL Auswahl der Richtlinie]** zusammenführen wird automatisch die standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen ausgewählt. Wenn Sie diese Richtlinie nicht verwenden möchten, können Sie die `X` Option neben der Standardrichtlinie für die Zusammenführung auswählen auswählen, um ein Dialogfeld *[!UICONTROL zur Auswahl der Zusammenführungsrichtlinie]* zu öffnen, in dem Sie eine andere Zusammenführungsrichtlinie auswählen können. Weitere Informationen zu Richtlinien zum Zusammenführen finden Sie im Benutzerhandbuch [](merge-policies.md)&quot;Richtlinien zusammenführen&quot;.
+Mit der **[!UICONTROL Auswahl der Richtlinie]** zusammenführen wird automatisch die standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen ausgewählt. Wenn Sie diese Richtlinie nicht verwenden möchten, können Sie die `X` Option neben der Standardrichtlinie für die Zusammenführung auswählen auswählen, um ein Dialogfeld **[!UICONTROL zur Auswahl der Zusammenführungsrichtlinie]** zu öffnen, in dem Sie eine andere Zusammenführungsrichtlinie auswählen können. Weitere Informationen zu Richtlinien zum Zusammenführen finden Sie im Benutzerhandbuch [](merge-policies.md)&quot;Richtlinien zusammenführen&quot;.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -75,13 +75,13 @@ Mit der **[!UICONTROL Identitäts-Namensraum]** -Auswahl wird ein Dialogfeld ge�
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-Wählen Sie im Dialogfeld &quot;Identitätsnamen ** auswählen&quot;den Namensraum aus, nach dem Sie suchen möchten, oder verwenden Sie die **[!UICONTROL Suchleiste]** im Dialogfeld, um mit der Eingabe des Namens eines Namensraums zu beginnen. Sie können einen Namensraum auswählen, um weitere Details Ansicht. Sobald Sie den Namensraum gefunden haben, den Sie suchen möchten, können Sie das Optionsfeld auswählen und die **[!UICONTROL Auswahl]** drücken, um fortzufahren.
+Wählen Sie im Dialogfeld &quot;Identitätsnamen **** auswählen&quot;den Namensraum aus, nach dem Sie suchen möchten, oder verwenden Sie die **[!UICONTROL Suchleiste]** im Dialogfeld, um mit der Eingabe des Namens eines Namensraums zu beginnen. Sie können einen Namensraum auswählen, um weitere Details Ansicht. Sobald Sie den Namensraum gefunden haben, den Sie suchen möchten, können Sie das Optionsfeld auswählen und die **[!UICONTROL Auswahl]** drücken, um fortzufahren.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
 ### Identitätswert
 
-Nach Auswahl eines **[!UICONTROL Identitäts-Namensraums]** kehren Sie zur Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;zurück, auf der Sie einen **[!UICONTROL Identitätswert]** eingeben können. Dieser Wert ist spezifisch für ein einzelnes Profil und muss ein gültiger Eintrag für den bereitgestellten Namensraum sein. Wenn Sie beispielsweise den **[!UICONTROL Identitäts-Namensraum]** &quot;E-Mail&quot;auswählen, ist ein **[!UICONTROL Identitätswert]** in Form einer gültigen E-Mail-Adresse erforderlich.
+Nach Auswahl eines **[!UICONTROL Identitäts-Namensraums]** kehren Sie zur Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;zurück, auf der Sie einen **[!UICONTROL Identitätswert]** eingeben können. Dieser Wert ist spezifisch für ein einzelnes Profil und muss ein gültiger Eintrag für den bereitgestellten Namensraum sein. Wenn Sie beispielsweise den **[!UICONTROL Identitäts-Namensraum]** &quot;E-Mail&quot;auswählen, ist ein **[!UICONTROL Identitätswert]** in Form einer gültigen E-Mail-Adresse erforderlich.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -91,17 +91,17 @@ Nachdem ein Wert eingegeben wurde, wählen Sie &quot;Profil **[!UICONTROL anzeig
 
 ### Profil {#profile-detail}
 
-Nach Auswahl der **[!UICONTROL Profil-ID]** wird die Registerkarte &quot; _[!UICONTROL Details]_ &quot;geöffnet. Auf dieser Seite finden Sie Informationen zum ausgewählten Profil, einschließlich Basisattribute, verknüpfte Identitäten und verfügbare Kanal. Die angezeigten Profildaten wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen.
+Nach Auswahl der **[!UICONTROL Profil-ID]** wird die Registerkarte &quot; **[!UICONTROL Details]** &quot;geöffnet. Auf dieser Seite finden Sie Informationen zum ausgewählten Profil, einschließlich Basisattribute, verknüpfte Identitäten und verfügbare Kanal. Die angezeigten Profildaten wurden aus mehreren Profilfragmenten zusammengeführt, um eine zentrale Ansicht des jeweiligen Kunden zu erstellen.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Sie können zusätzliche Informationen zum Profil, einschließlich *[!UICONTROL Attribute]*, *[!UICONTROL Ereignis]* und *[!UICONTROL Segmente]* , zu denen das Profil gehört, Ansicht leisten.
+Sie können zusätzliche Informationen zum Profil, einschließlich **[!UICONTROL Attribute]**, **[!UICONTROL Ereignis]** und **[!UICONTROL Segmente]** , zu denen das Profil gehört, Ansicht leisten.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Zusammenführungsrichtlinien
 
-Select the *[!UICONTROL Merge Policies]* tab to view a list of merge policies belonging to your organization. Jede aufgelistete Richtlinie zeigt an: ihren Namen; ob sie die standardmäßige Zusammenführungsrichtlinie ist oder nicht; das Schema, auf das sie angewendet wird.
+Select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Jede aufgelistete Richtlinie zeigt an: ihren Namen; ob sie die standardmäßige Zusammenführungsrichtlinie ist oder nicht; das Schema, auf das sie angewendet wird.
 
 For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
 
