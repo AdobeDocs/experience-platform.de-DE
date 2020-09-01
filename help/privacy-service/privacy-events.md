@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datenschutzereignisse abonnieren
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 30%
@@ -14,7 +14,7 @@ ht-degree: 30%
 
 # Abonnieren [!DNL Privacy Events]
 
-[!DNL Privacy Events] sind Meldungen, die von Adobe Experience Platform bereitgestellt werden [!DNL Privacy Service], die Adobe-I/O-Ereignis nutzen, die an einen konfigurierten Webshaken gesendet werden, um eine effiziente Auftragsabwicklungsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Events] sind Meldungen von Adobe Experience Platform [!DNL Privacy Service], die Adobe-I/O-Ereignis nutzen, die an einen konfigurierten WebHook gesendet werden, um eine effiziente Auftragsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 Aktuell gibt es vier Arten von Benachrichtigungen im Lebenszyklus der Anfragen von Datenschutzaufträgen:
 
@@ -86,7 +86,7 @@ The _Add events_ dialog appears. Wählen Sie **[!UICONTROL Experience Cloud]** a
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-Das Dialogfeld &quot;Registrierung _des Ereignisses_ konfigurieren&quot;wird angezeigt. Wählen Sie die Ereignis aus, die Sie erhalten möchten, indem Sie die entsprechenden Kontrollkästchen aktivieren. Ereignis, die Sie auswählen, werden in der linken Spalte unter &quot; _[!UICONTROL Abonnierte Ereignis]_&quot;angezeigt. When finished, click**[!UICONTROL  Next ]**.
+Das Dialogfeld &quot;Registrierung _des Ereignisses_ konfigurieren&quot;wird angezeigt. Wählen Sie die Ereignis aus, die Sie erhalten möchten, indem Sie die entsprechenden Kontrollkästchen aktivieren. Ereignis, die Sie auswählen, werden in der linken Spalte unter &quot; **[!UICONTROL Abonnierte Ereignis]** &quot;angezeigt. When finished, click **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -106,11 +106,11 @@ Geben Sie im nächsten Bildschirm einen Namen und eine Beschreibung für die Reg
 
 ![](./images/privacy-events/event-details.png)
 
-Weiter unten auf dem gleichen Bildschirm stehen Ihnen zwei Optionen zur Konfiguration des Empfangs von Ereignissen zur Verfügung. Wählen Sie **[!UICONTROL WebHaken]** und geben Sie die `Forwarding` URL für den oben erstellten ngrok-Webhaken unter der _[!UICONTROL WebHook-URL]_ein. Wählen Sie dann den gewünschten Versand-Stil (Einzel- oder Stapelform), bevor Sie auf Konfigurierte Ereignis****speichern klicken, um die Ereignis-Registrierung abzuschließen.
+Weiter unten auf dem gleichen Bildschirm stehen Ihnen zwei Optionen zur Konfiguration des Empfangs von Ereignissen zur Verfügung. Wählen Sie **[!UICONTROL WebHaken]** und geben Sie die `Forwarding` URL für den oben erstellten ngrok-Webhaken unter der **[!UICONTROL WebHook-URL]** ein. Wählen Sie dann den gewünschten Versand-Stil (Einzel- oder Stapelform), bevor Sie auf Konfigurierte Ereignis **** speichern klicken, um die Ereignis-Registrierung abzuschließen.
 
 ![](./images/privacy-events/webhook-details.png)
 
-Die Detailseite für Ihr Projekt wird erneut angezeigt und [!DNL Privacy Events] wird unter den _[!UICONTROL Ereignissen]_im linken Navigationsbereich angezeigt.
+Die Detailseite für Ihr Projekt wird erneut angezeigt und [!DNL Privacy Events] wird unter den **[!UICONTROL Ereignissen]** im linken Navigationsbereich angezeigt.
 
 ## Ereignisdaten anzeigen
 
@@ -126,7 +126,7 @@ Klicken Sie auf die Registerkarte **[!UICONTROL Debug-Verfolgung]** , um eine Li
 
 ![](images/privacy-events/debug-tracing.png)
 
-Der Abschnitt _[!UICONTROL Payload]_enthält Details zum ausgewählten Ereignis, einschließlich dessen Ereignistyp (`com.adobe.platform.gdpr.productcomplete`), wie im Beispiel oben hervorgehoben.
+Der Abschnitt **[!UICONTROL Payload]** enthält Details zum ausgewählten Ereignis, einschließlich dessen Ereignistyp (`com.adobe.platform.gdpr.productcomplete`), wie im Beispiel oben hervorgehoben.
 
 ## Nächste Schritte
 
