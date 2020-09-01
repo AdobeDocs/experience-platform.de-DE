@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
 solution: Experience Platform
 title: Audience Manager-Anschluss
 topic: overview
+description: Der Adobe Audience Manager Data Connector streamt Erstanbieter-Daten, die in Adobe Audience Manager bis Adobe Experience Platform erfasst werden. Der Audience Manager-Connector fasst drei Kategorien Daten in die Plattform ein.
 translation-type: tm+mt
-source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '673'
 ht-degree: 2%
 
 ---
@@ -19,15 +20,15 @@ Der Adobe Audience Manager Data Connector streamt Erstanbieter-Daten, die in Ado
 - **Echtzeitdaten:** Daten, die in Echtzeit auf dem Datenerfassungsserver des Audience Managers erfasst werden. Diese Daten werden in Audience Manager verwendet, um regelbasierte Eigenschaften zu füllen, und treten in kürzester Latenzzeit auf der Plattform auf.
 - **Profil-Daten:** Audience Manager nutzt Echtzeitdaten und Onboard-Daten, um Kundendaten abzuleiten. Diese Profil werden zum Ausfüllen von Identitätsdiagrammen und Eigenschaften bei Segmentrealisierungen verwendet.
 
-The Audience Manager connector maps these data categories to Experience Data Model (XDM) schema and sends them to Platform. Realtime data are sent as XDM ExperienceEvent data, while Profile data is sent as XDM Individual Profiles.
+Der Audience Manager Connector ordnet diese Kategorien dem Experience Data Model (XDM)-Schema zu und sendet sie an die Plattform. Echtzeitdaten werden als XDM ExperienceEvent-Daten gesendet, während Profil-Daten als XDM-Profil gesendet werden.
 
 For instructions on creating a connection with Adobe Audience Manager using the Platform UI, see the [Audience Manager connector tutorial](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
-## What is Experience Data Model (XDM)?
+## Was ist Erlebnisdatenmodell (XDM)?
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die ein standardisiertes Framework bietet, mit dem Plattform Kundenerlebnisdaten organisiert.
 
-Adhering to XDM standards allows customer experience data to be uniformly incorporated, making it easier to deliver data and gather information.
+Durch die Einhaltung der XDM-Standards können Kundenerlebnisdaten einheitlich integriert werden, was die Bereitstellung von Daten und das Sammeln von Informationen erleichtert.
 
 Weitere Informationen zur Verwendung von XDM in der Experience Platform finden Sie in der [XDM-Systemübersicht](../../../xdm/home.md). Weitere Informationen zur Strukturierung von XDM-Schemas wie Profil und ExperienceEvent finden Sie in den [Grundlagen der Schema-Komposition](../../../xdm/schema/composition.md).
 
@@ -58,20 +59,20 @@ Audience Manager-Datasets sind standardmäßig zum Profil deaktiviert, und die B
 | Dataset-Name | Beschreibung |
 | ------------ | ----------- |
 | Audience Manager Echtzeit | Dieser Datensatz enthält Daten, die durch direkte Treffer auf Audience Manager-DCS-Endpunkten erfasst werden, sowie Identitätskarten für Audience Manager-Profil. Lassen Sie diesen Datensatz für die Erfassung von Profilen aktiviert. |
-| Audience Manager Echtzeit-Profil-Updates | Dieser Datensatz ermöglicht Echtzeit-Targeting von Audience Manager-Eigenschaften und Segmenten. It includes information for Edge regional routing, trait, and segment membership. Keep this dataset enabled for Profile ingestion. |
-| Audience Manager Devices Data | Device data with ECIDs and corresponding segment realizations aggregated in Audience Manager. |
-| Audience Manager Device Profile Data | Wird für die Audience Manager-Connector-Diagnose verwendet. |
+| Audience Manager Echtzeit-Profil-Updates | Dieser Datensatz ermöglicht Echtzeit-Targeting von Audience Manager-Eigenschaften und Segmenten. Es enthält Informationen zum regionalen Edge-Routing, zu Eigenschaften und zur Segmentmitgliedschaft. Lassen Sie diesen Datensatz für die Erfassung von Profilen aktiviert. |
+| Audience Manager-Gerätedaten | Gerätedaten mit ECIDs und entsprechenden Segmentzuordnungen, die in Audience Manager aggregiert werden. |
+| Profil-Daten des Audience Managers | Wird für die Audience Manager-Connector-Diagnose verwendet. |
 | Audience Manager-Authentifizierte Profile | Dieser Datensatz enthält vom Audience Manager authentifizierte Profil. |
 | Audience Manager-Authentifizierungsdaten zu Profilen | Wird für die Audience Manager Connector-Diagnose verwendet. |
 
 ### Verbindungen
 
-Adobe Audience Manager erstellt eine Verbindung im Katalog: **Audience Manager Connection**. Catalog is the system of the records for data location and lineage within Adobe Experience Platform. Eine Verbindung ist ein Katalogobjekt, das eine kundenspezifische Instanz von Connectors ist. Please see the [Catalog Service overview](../../../catalog/home.md) for more information on Catalog, connections, and connectors.
+Adobe Audience Manager erstellt eine Verbindung im Katalog: **Audience Manager Connection**. Catalog ist das System der Datensätze für die Datenposition und -reihenfolge in Adobe Experience Platform. Eine Verbindung ist ein Katalogobjekt, das eine kundenspezifische Instanz von Connectors ist. Weitere Informationen zu Katalogen, Verbindungen und Connectors finden Sie in der Übersicht über den [Katalogdienst](../../../catalog/home.md) .
 
 ## Welche Latenz wird für Plattformdaten von Audience Managern erwartet?
 
 | Audience Manager-Daten | Latenz | Anmerkungen |
 | --- | --- | --- |
 | Echtzeitdaten | &lt; 35 Minuten. | Zeit von der Erfassung am Knoten Echtzeit bis zur Anzeige auf dem Plattform Data Lake. |
-| Eingehende Daten | &lt; 13 Stunden | Time from being captured at S3 buckets to appearing on Platform Data Lake. |
-| Profildaten | &lt; 2 Tage | Time from being captured from Realtime/Inbound data to being added to a user profile and finally appearing on Platform Data Lake. |
+| Eingehende Daten | &lt; 13 Stunden | Zeit von der Erfassung in S3-Behältern bis zur Anzeige auf dem Platform Data Lake. |
+| Profildaten | &lt; 2 Tage | Zeit vom Erfassen von Echtzeitdaten/Inbound bis zum Hinzufügen zu einem Profil und schließlich der Anzeige auf dem Platform Data Lake. |
