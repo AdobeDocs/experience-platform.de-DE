@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ATS;ats;Azure table storage
 solution: Experience Platform
 title: Erstellen eines Azurblauen Datenspeicherung-Connectors mit der Flow Service API
 topic: overview
+description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die die Datenspeicherung von Azurblauer Tabelle (im Folgenden "ATS" genannt) mit der Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 21%
+source-wordcount: '587'
+ht-degree: 20%
 
 ---
 
