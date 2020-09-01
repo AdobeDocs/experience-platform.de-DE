@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create;relationship;Relationship;reference;Reference;
 solution: Experience Platform
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors
+description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der Benutzeroberfläche "Experience Platform".
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 44%
+source-wordcount: '933'
+ht-degree: 43%
 
 ---
 
@@ -16,17 +17,17 @@ ht-degree: 44%
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated **relationship field** must be added to a source schema, which references the identity of a destination schema.
+Während Schema-Beziehungen durch die Verwendung des Vereinigung-Schemas abgeleitet werden können, gilt [!DNL Real-time Customer Profile]dies nur für Schema, die dieselbe Klasse gemeinsam haben. Zur Herstellung einer Beziehung zwischen zwei Schemas, die zu verschiedenen Klassen gehören, muss einem Quell-Schema ein dediziertes **Beziehungsfeld** hinzugefügt werden, das auf die Identität eines Ziel-Schemas verweist.
 
-This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the [!DNL Experience Platform] user interface. Anweisungen zum Definieren von Schemabeziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
+Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der [!DNL Experience Platform] Benutzeroberfläche. Anweisungen zum Definieren von Schemabeziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
 
 ## Erste Schritte
 
 This tutorial requires a working understanding of [!DNL XDM System] and the Schema Editor in the [!DNL Experience Platform] UI. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
 
-* [XDM System in Experience Platform](../home.md): An overview of XDM and its implementation in [!DNL Experience Platform].
+* [XDM-System in Experience Platform](../home.md): Eine Übersicht über XDM und seine Implementierung in [!DNL Experience Platform].
 * [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemas.
-* [Create a schema using the Schema Editor](create-schema-ui.md): A tutorial covering the basics of working with the [!DNL Schema Editor].
+* [Erstellen Sie ein Schema mit dem Schema-Editor](create-schema-ui.md): Ein Tutorial, das die Grundlagen der Arbeit mit dem [!DNL Schema Editor].
 
 ## Quell- und Zielschemas definieren
 
@@ -34,15 +35,15 @@ Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert
 
 >[!IMPORTANT]
 >
->In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. See the section on [enabling a schema for use in Profile](./create-schema-ui.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
+>Um eine Beziehung herzustellen, müssen beide Schema über definierte primäre Identitäten verfügen und für [!DNL Real-time Customer Profile]die sie aktiviert werden. Informationen zum Konfigurieren Ihrer Schema finden Sie im Abschnitt zum [Aktivieren eines Schemas für die Verwendung in Profil](./create-schema-ui.md#profile) im Lernprogramm zur Erstellung von Schemas.
 
-Schema relationships are represented by a dedicated field within a **source schema** that refers to another field within a **destination schema**. In the steps that follow, &quot;[!UICONTROL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
+Schema-Beziehungen werden durch ein dediziertes Feld innerhalb eines **Quell-Schemas** dargestellt, das auf ein anderes Feld innerhalb eines **Ziel-Schemas** verweist. In the steps that follow, &quot;[!UICONTROL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
 
 Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen Schemas beschrieben, die in dieser Anleitung verwendet werden, bevor eine Beziehung definiert wird.
 
 ### [!UICONTROL Schema „Mitglieder des Treueprogramms“]
 
-Das Quellcode-Schema &quot;[!UICONTROL Treuemitglieder]&quot;basiert auf der XDM- [!DNL Individual Profile] Klasse und ist das Schema, das im Lernprogramm zum [Erstellen eines Schemas in der Benutzeroberfläche](create-schema-ui.md)erstellt wurde. It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in[!DNL Real-time Customer Profile].
+Das Quellcode-Schema &quot;[!UICONTROL Treuemitglieder]&quot;basiert auf der XDM- [!DNL Individual Profile] Klasse und ist das Schema, das im Lernprogramm zum [Erstellen eines Schemas in der Benutzeroberfläche](create-schema-ui.md)erstellt wurde. It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -64,11 +65,11 @@ Klicken Sie zunächst auf **[!UICONTROL Hinzufügen]** im Abschnitt _[!UICONTROL
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-Der Dialog _[!UICONTROL Mixin hinzufügen]_wird angezeigt. Klicken Sie hier auf**[!UICONTROL  Neues Mixin erstellen ]**. Geben Sie in den angezeigten Textfeldern einen Anzeigenamen und eine Beschreibung für das neue Mixin ein. Klicken Sie auf**[!UICONTROL  Mixin hinzufügen ]**, wenn Sie damit fertig sind.
+Der Dialog _[!UICONTROL Mixin hinzufügen]_ wird angezeigt. Klicken Sie hier auf **[!UICONTROL Neues Mixin erstellen]**. Geben Sie in den angezeigten Textfeldern einen Anzeigenamen und eine Beschreibung für das neue Mixin ein. Klicken Sie auf **[!UICONTROL Mixin hinzufügen]**, wenn Sie damit fertig sind.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the _[!UICONTROL Mixins]_section. Click the mixin name, then click**[!UICONTROL  Add Field ]**next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
+The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the _[!UICONTROL Mixins]_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -88,7 +89,7 @@ The updated &quot;[!UICONTROL favoriteHotel]&quot; field appears in the canvas. 
 
 Sobald in Ihrem Quellschema ein dediziertes Referenzfeld definiert ist, können Sie es als Beziehungsfeld festlegen.
 
-Select the reference field in the canvas, then scroll down under _[!UICONTROL Field Properties]_until the**[!UICONTROL  Relationship ]**checkbox appears. Aktivieren Sie das Kontrollkästchen, um die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds anzuzeigen.
+Select the reference field in the canvas, then scroll down under _[!UICONTROL Field Properties]_ until the **[!UICONTROL Relationship]** checkbox appears. Aktivieren Sie das Kontrollkästchen, um die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds anzuzeigen.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
