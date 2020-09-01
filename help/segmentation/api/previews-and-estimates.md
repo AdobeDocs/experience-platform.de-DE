@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
 solution: Experience Platform
 title: Endpunkte für Vorschauen und Schätzungen
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 7%
@@ -230,4 +230,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen [!DNL Segmentation Service] API-Endpunkten finden Sie im Handbuch [Segmentation Service-Entwickler](./overview.md).
+Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen [!DNL Segmentation Service] API-Endpunkten finden Sie im Handbuch [Segmentierungsdienst-Entwickler](./overview.md).
