@@ -5,7 +5,7 @@ title: Modell als Service veröffentlichen (Benutzeroberfläche)
 topic: Tutorial
 description: Mit dem Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und bewertetes Modell als Service veröffentlichen, damit Benutzer in Ihrer IMS-Organisation Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 95%
@@ -40,7 +40,7 @@ Wenn Sie ein Modell lieber mithilfe von Sensei Machine Learning-APIs veröffentl
 
 ## Mit einem Service bewerten {#access-a-service}
 
-1. Klicken Sie in Adobe Experience Platform in der linken Navigationsspalte auf die Registerkarte **[!UICONTROL Services]**, um auf die *[!UICONTROL Service Gallery]* zuzugreifen. Suchen Sie nach dem gewünschten Service und klicken Sie auf **[!UICONTROL Score]**.
+1. Klicken Sie in Adobe Experience Platform in der linken Navigationsspalte auf die Registerkarte **[!UICONTROL Services]**, um auf die **[!UICONTROL Service Gallery]** zuzugreifen. Suchen Sie nach dem gewünschten Service und klicken Sie auf **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Wählen Sie einen geeigneten Eingabedatensatz für den Scoring-Lauf und klicken Sie dann auf **[!UICONTROL Weiter]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -53,4 +53,4 @@ Wenn Sie ein Modell lieber mithilfe von Sensei Machine Learning-APIs veröffentl
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich ein Modell als aufrufbaren Service veröffentlicht und mithilfe des neuen Services Daten über die *[!UICONTROL Service Gallery]* bewertet. Fahren Sie mit der nächsten Anleitung fort, um zu erfahren, wie Sie [automatisierte Trainings- und Scoring-Läufe für einem Service planen](./schedule-models-ui.md) können.
+In diesem Tutorial haben Sie erfolgreich ein Modell als aufrufbaren Service veröffentlicht und mithilfe des neuen Services Daten über die **[!UICONTROL Service Gallery]** bewertet. Fahren Sie mit der nächsten Anleitung fort, um zu erfahren, wie Sie [automatisierte Trainings- und Scoring-Läufe für einem Service planen](./schedule-models-ui.md) können.
