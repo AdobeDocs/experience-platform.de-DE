@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics Data Connector;analytics;Analytics
 solution: Experience Platform
 title: Der Data Connector von Analytics
 topic: overview
+description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 translation-type: tm+mt
-source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 42%
+source-wordcount: '485'
+ht-degree: 43%
 
 ---
 
