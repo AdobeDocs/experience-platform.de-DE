@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
 title: Erstellen eines ServiceNow-Connectors mit der Flow Service API
 topic: overview
+description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zum Herstellen einer Verbindung zwischen der Experience Platform und einem ServiceNow-Server zu führen.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 18%
+source-wordcount: '667'
+ht-degree: 17%
 
 ---
 
@@ -69,7 +70,7 @@ Um eine [!DNL ServiceNow] Verbindung zu erstellen, muss eine Reihe von [!DNL Ser
 
 **API-Format**
 
-Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Beim Senden einer GET an den `/connectionSpecs` Endpunkt werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können auch die Abfrage einschließen, `property=name=="service-now"` Informationen speziell für [!DNL ServiceNow]die Zwecke abzurufen.
+Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Beim Senden einer GET an den `/connectionSpecs` Endpunkt werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können auch die Abfrage einschließen, `property=name=="service-now"` Informationen speziell für [!DNL ServiceNow]die Zwecke zu erhalten.
 
 ```http
 GET /connectionSpecs
