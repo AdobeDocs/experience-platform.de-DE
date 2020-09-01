@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;FTP;SFTP;ftp;sftp
 solution: Experience Platform
 title: FTP- und SFTP-Anschluss
 topic: overview
+description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie einen FTP- oder STFP-Server mit APIs oder der Benutzeroberfläche mit Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 4%
+source-wordcount: '264'
+ht-degree: 3%
 
 ---
 
