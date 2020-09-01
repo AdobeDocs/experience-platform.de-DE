@@ -5,7 +5,7 @@ title: Benutzerhandbuch zum Segmentaufbau für Segmentierungsdienste
 topic: ui guide
 description: 'Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 55%
@@ -131,7 +131,7 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 ## Segmenteigenschaften
 
-Beim Erstellen einer Segmentdefinition zeigt der Abschnitt *[!UICONTROL Segmenteigenschaften]* auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
+Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Segmenteigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
 Im Abschnitt **[!UICONTROL Segmenteigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich **[!UICONTROL Name]** und **[!UICONTROL Beschreibung]**. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmenten zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
 
