@@ -5,7 +5,7 @@ title: Bewerten eines Modells (Benutzeroberfläche)
 topic: Tutorial
 description: 'Scoring in Adobe Experience Platform Data Science Workspace kann durch Einspeisung von Eingabedaten in ein vorhandenes trainiertes Modell erreicht werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt. '
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 89%
@@ -43,7 +43,7 @@ Ein Scoring-Lauf wird mithilfe optimierter Konfigurationen aus einem zuvor abges
 5. Im letzten Schritt des Workflows werden Sie aufgefordert, Ihren Scoring-Lauf zu konfigurieren. Diese Konfigurationen werden vom Modell für den Scoring-Lauf verwendet.
 Beachten Sie, dass Sie geerbte Parameter, die bei der Modellerstellung festgelegt wurden, nicht entfernen können. Sie können nicht geerbte Parameter bearbeiten oder wiederherstellen, indem Sie auf den Wert doppelklicken oder auf das Symbol zum Zurücksetzen klicken, während Sie mit dem Mauszeiger über den Eintrag fahren.
    ![](../images/models-recipes/score/configuration.png)
-Überprüfen und bestätigen Sie die Scoring-Konfigurationen und klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Scoring-Lauf zu erstellen und auszuführen. Sie werden zum Tab *Scoring-Läufe* weitergeleitet; für den neuen Scoring-Lauf wird ein Status angezeigt.
+Überprüfen und bestätigen Sie die Scoring-Konfigurationen und klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Scoring-Lauf zu erstellen und auszuführen. Sie werden zum Tab **[!UICONTROL Scoring-Läufe]** weitergeleitet; für den neuen Scoring-Lauf wird ein Status angezeigt.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 Für einen Scoring-Lauf wird einer der vier folgenden Status angezeigt: „Ausstehend“, „Abgeschlossen“, „Fehlgeschlagen“ oder „Wird ausgeführt“. Die Status werden automatisch aktualisiert. Fahren Sie mit dem nächsten Schritt fort, wenn der Status „Abgeschlossen“ oder „Fehlgeschlagen“ lautet.
 
