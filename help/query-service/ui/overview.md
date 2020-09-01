@@ -5,7 +5,7 @@ title: Handbuch zur Benutzeroberfläche des Adobe Experience Platform Abfrage Se
 topic: guide
 description: Der Adobe Experience Platform Abfrage Service stellt eine Benutzeroberfläche bereit, die zum Schreiben und Ausführen von Abfragen, zur Ansicht zuvor ausgeführter Abfragen und zum Zugriff auf Abfragen verwendet werden kann, die von Benutzern in Ihrem IMS-Unternehmen gespeichert wurden.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 3%
@@ -19,17 +19,17 @@ Das Adobe Experience Platform [!DNL Query Service] bietet eine Benutzeroberfläc
 
 ## [!DNL Query Editor]
 
-Mit dem [!DNL Query Editor] können Sie Abfragen ohne Verwendung eines externen Clients schreiben und ausführen. Klicken Sie auf Abfrage **** erstellen, um die Datei zu öffnen [!DNL Query Editor] und eine neue Abfrage zu erstellen. Sie können auch auf die [!DNL Query Editor] Seite zugreifen, indem Sie auf den Registerkarten &quot; *[!UICONTROL Protokoll]* &quot;oder &quot; *[!UICONTROL Durchsuchen]* &quot;eine Abfrage auswählen. Wenn Sie eine zuvor ausgeführte oder gespeicherte Abfrage auswählen, wird die Datei geöffnet [!DNL Query Editor] und die SQL-Datei für die ausgewählte Abfrage angezeigt.
+Mit dem [!DNL Query Editor] können Sie Abfragen ohne Verwendung eines externen Clients schreiben und ausführen. Klicken Sie auf Abfrage **** erstellen, um die Datei zu öffnen [!DNL Query Editor] und eine neue Abfrage zu erstellen. Sie können auch auf die [!DNL Query Editor] Seite zugreifen, indem Sie auf den Registerkarten &quot; **[!UICONTROL Protokoll]** &quot;oder &quot; **[!UICONTROL Durchsuchen]** &quot;eine Abfrage auswählen. Wenn Sie eine zuvor ausgeführte oder gespeicherte Abfrage auswählen, wird die Datei geöffnet [!DNL Query Editor] und die SQL-Datei für die ausgewählte Abfrage angezeigt.
 
 ![Bild](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] bietet Bearbeitungsbereich, in dem Sie mit der Eingabe einer Abfrage beginnen können. Während der Eingabe vervollständigt der Editor automatisch SQL-reservierte Wörter, Tabellen und Feldnamen in Tabellen. Wenn Sie Ihre Abfrage fertig geschrieben haben, klicken Sie auf die Schaltfläche **Abspielen** , um die Abfrage auszuführen. Auf der Registerkarte &quot; *[!UICONTROL Konsole]* &quot;unter dem Editor wird angezeigt, was gerade ausgeführt [!DNL Query Service] wird, und es wird angezeigt, wann eine Abfrage zurückgegeben wurde. Auf der Registerkarte &quot; *[!UICONTROL Ergebnis]* &quot;neben der Konsole werden die Ergebnisse der Abfrage angezeigt. Weitere Informationen zur Verwendung des [Abfrage-Editors finden Sie im Handbuch][query-editor] zum [!DNL Query Editor].
+[!DNL Query Editor] bietet Bearbeitungsbereich, in dem Sie mit der Eingabe einer Abfrage beginnen können. Während der Eingabe vervollständigt der Editor automatisch SQL-reservierte Wörter, Tabellen und Feldnamen in Tabellen. Wenn Sie Ihre Abfrage fertig geschrieben haben, klicken Sie auf die Schaltfläche **Abspielen** , um die Abfrage auszuführen. Auf der Registerkarte &quot; **[!UICONTROL Konsole]** &quot;unter dem Editor wird angezeigt, was gerade ausgeführt [!DNL Query Service] wird, und es wird angezeigt, wann eine Abfrage zurückgegeben wurde. Auf der Registerkarte &quot; **[!UICONTROL Ergebnis]** &quot;neben der Konsole werden die Ergebnisse der Abfrage angezeigt. Weitere Informationen zur Verwendung des [Abfrage-Editors finden Sie im Handbuch][query-editor] zum [!DNL Query Editor].
 
 ![Bild](../images/queries/ui-overview/query-editor.png)
 
 ## Durchsuchen
 
-Auf der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;werden Abfragen angezeigt, die von Benutzern in Ihrem Unternehmen gespeichert wurden. Es ist sinnvoll, diese als Abfragen zu betrachten, da die hier gespeicherten Abfragen möglicherweise noch im Bau sind. Abfragen, die auf der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;angezeigt werden, werden auch als ausgeführte Abfragen auf der Registerkarte &quot; *[!UICONTROL Protokoll]* &quot;angezeigt, wenn sie zuvor von ausgeführt wurden [!DNL Query Service].
+Auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;werden Abfragen angezeigt, die von Benutzern in Ihrem Unternehmen gespeichert wurden. Es ist sinnvoll, diese als Abfragen zu betrachten, da die hier gespeicherten Abfragen möglicherweise noch im Bau sind. Abfragen, die auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;angezeigt werden, werden auch als ausgeführte Abfragen auf der Registerkarte &quot; **[!UICONTROL Protokoll]** &quot;angezeigt, wenn sie zuvor von ausgeführt wurden [!DNL Query Service].
 
 ![Bild](../images/queries/ui-overview/browse.png)
 
@@ -42,7 +42,7 @@ Auf der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;werden Abfragen an
 
 ## Protokoll
 
-Auf der Registerkarte &quot; *[!UICONTROL Protokoll]* &quot;finden Sie eine Liste der Abfragen, die zuvor ausgeführt wurden. Standardmäßig werden die Abfragen im Protokoll in umgekehrter Chronologie Liste.
+Auf der Registerkarte &quot; **[!UICONTROL Protokoll]** &quot;finden Sie eine Liste der Abfragen, die zuvor ausgeführt wurden. Standardmäßig werden die Abfragen im Protokoll in umgekehrter Chronologie Liste.
 
 ![Bild](../images/queries/ui-overview/log.png)
 
@@ -58,7 +58,7 @@ Auf der Registerkarte &quot; *[!UICONTROL Protokoll]* &quot;finden Sie eine List
 
 ## Berechtigungen
 
-Auf der Registerkarte &quot; *[!UICONTROL Berechtigungen]* &quot;werden Ihre [!DNL Postgres] Anmeldeinformationen angezeigt. Klicken Sie auf das Symbol &quot; **[!UICONTROL Kopieren]** &quot;neben einem Feld, um dessen Inhalt in Ihrem Tastaturpuffer zu speichern. Weitere Informationen zur Verwendung dieser Anmeldedaten für die Verbindung mit externen Clients finden Sie im [Verbindungshandbuch][connect-clients].
+Auf der Registerkarte &quot; **[!UICONTROL Berechtigungen]** &quot;werden Ihre [!DNL Postgres] Anmeldeinformationen angezeigt. Klicken Sie auf das Symbol &quot; **[!UICONTROL Kopieren]** &quot;neben einem Feld, um dessen Inhalt in Ihrem Tastaturpuffer zu speichern. Weitere Informationen zur Verwendung dieser Anmeldedaten für die Verbindung mit externen Clients finden Sie im [Verbindungshandbuch][connect-clients].
 
 ![Bild](../images/queries/ui-overview/credentials.png)
 
