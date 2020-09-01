@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Vertica;vertica
 solution: Experience Platform
 title: Erstellen eines HP Vertica-Connectors mit der Flow Service API
 topic: overview
+description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die erforderlich sind, um HP Vertica mit der Experience Platform zu verbinden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '610'
 ht-degree: 22%
 
 ---
