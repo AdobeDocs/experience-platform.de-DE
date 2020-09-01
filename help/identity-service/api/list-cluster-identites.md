@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list identities;list cluster
 solution: Experience Platform
 title: Cluster-Identitäten auflisten
 topic: API guide
+description: Identitäten, die in einem Identitätsdiagramm miteinander verwandt sind, werden unabhängig vom Namespace als Teil desselben „Clusters“ in dem Identitätsdiagramm betrachtet. Folgende Optionen bieten die Möglichkeit, auf alle Cluster-Mitglieder zuzugreifen.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '347'
 ht-degree: 100%
 
 ---
