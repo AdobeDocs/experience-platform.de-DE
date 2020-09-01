@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Erstellen eines Phoenix-Quellconnectors in der Benutzeroberfläche
 topic: overview
+description: In diesem Lernprogramm werden Schritte zum Erstellen eines Phoenix-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 9%
+source-wordcount: '519'
+ht-degree: 8%
 
 ---
 
