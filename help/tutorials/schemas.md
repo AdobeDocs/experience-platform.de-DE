@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: XDM-Schema und -Deskriptoren
 topic: tutorial
+description: Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. Schemas sind die Standardmethode zur Beschreibung von Daten in der Experience Platform, so dass alle Daten, die mit Schemas konform sind, ohne Konflikte innerhalb einer Organisation wiederverwendbar sind und sogar zwischen mehreren Organisationen geteilt werden können.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 17%
+source-wordcount: '473'
+ht-degree: 27%
 
 ---
 
 
 # Arbeiten mit [!DNL Experience Data Model] (XDM-)Schemas und Beziehungsdeskriptoren
 
-Normung und Interoperabilität sind Schlüsselkonzepte der Adobe Experience Platform. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren. Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reusable without conflicts across an organization and even to be sharable between multiple organizations. Weitere Informationen zu XDM-Schemas erhalten Sie im Beginn in der [XDM-Systemübersicht](../xdm/home.md).
+Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren. Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reusable without conflicts across an organization and even to be sharable between multiple organizations. Weitere Informationen zu XDM-Schemas erhalten Sie im Beginn in der [XDM-Systemübersicht](../xdm/home.md).
 
 ## Erstellen eines Schemas mithilfe der Schema-Registrierung
 
