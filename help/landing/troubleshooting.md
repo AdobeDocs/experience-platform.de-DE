@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Adobe Experience Platform und Handbuch zur Fehlerbehebung
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1962'
-ht-degree: 77%
+source-wordcount: '1951'
+ht-degree: 74%
 
 ---
 
@@ -22,7 +22,7 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 ## Was sind [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] Angebot mehrerer RESTful-APIs, die HTTP-Anforderungen für den Zugriff auf [!DNL Platform] Ressourcen verwenden. Diese Dienst-APIs machen jeweils verschiedene Endpunkte verfügbar und ermöglichen Ihnen das Auflisten (GET), Nachschlagen (GET), Bearbeiten (PUT und/oder PATCH) und Löschen (DELETE) von Ressourcen. Weiterführende Informationen zu einzelnen Endpunkten und Vorgängen, die bei den jeweiligen Diensten verfügbar sind, finden Sie in der [API-Referenzdokumentation](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) in Adobe I/O.
+[!DNL Experience Platform] angebot mehrerer RESTful-APIs, die HTTP-Anforderungen für den Zugriff auf [!DNL Platform] Ressourcen verwenden. Diese Dienst-APIs machen jeweils verschiedene Endpunkte verfügbar und ermöglichen Ihnen das Auflisten (GET), Nachschlagen (GET), Bearbeiten (PUT und/oder PATCH) und Löschen (DELETE) von Ressourcen. Weiterführende Informationen zu einzelnen Endpunkten und Vorgängen, die bei den jeweiligen Diensten verfügbar sind, finden Sie in der [API-Referenzdokumentation](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) in Adobe I/O.
 
 ## Wie kann ich eine API-Anfrage formatieren? {#how-do-i-format-an-api-request}
 
@@ -238,16 +238,15 @@ Diese Fehlermeldung wird angezeigt, wenn eine POST-, PUT- oder PATCH-Anfrage ein
 The following is a list of troubleshooting guides and API reference documentation for [!DNL Experience Platform] APIs. Each troubleshooting guide provides answers to frequently asked questions and solutions to problems that are specific to individual [!DNL Platform] services. API-Referenzdokumente bieten für jeden Dienst eine komplette Anleitung zu allen verfügbaren Endpunkten und umfassen Beispielanfragetexte, Antworten sowie Fehler-Codes, die Sie möglicherweise erhalten.
 
 | Dienst | API-Referenz | Fehlerbehebung |
---- | --- | ---
+| --- | --- | --- |
 | Zugriffskontrolle | [Access Control-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Handbuch zur Fehlerbehebung bei der Zugriffskontrolle](../access-control/troubleshooting-guide.md) |
-| Catalog | [Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| Datenerfassung (Batch) | [Data Ingestion-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](../ingestion/batch-ingestion/troubleshooting.md) |
-| Datenerfassung (Streaming) | [Data Ingestion-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Handbuch zur Fehlerbehebung bei der Streaming-Erfassung](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Data Science Workspace | [Sensei Machine Learning-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [Data Science Workspace – Handbuch zur Fehlerbehebung](../data-science-workspace/troubleshooting-guide.md) |
-| Data Usage Labeling and Enforcement (DULE) | [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
-| Experience-Datenmodell (XDM) | [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM-System – FAQs und Handbuch zur Fehlerbehebung](../xdm/troubleshooting-guide.md) |
-| Identity Service | [Identity Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Handbuch zur Fehlerbehebung bei Identity Service](../identity-service/troubleshooting-guide.md) |
-| Query Service | [Query Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Handbuch zur Fehlerbehebung bei Query Service](../query-service/troubleshooting-guide.md) |
-| Echtzeit-Kundenprofil | [Echtzeit-Kundenprofil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [Handbuch zur Fehlerbehebung bei Profilen](../profile/troubleshooting.md) |
+| Datenerfassung in Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Fehlerbehebung bei der Batchverarbeitung](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Handbuch Streaming-Erfassung - Fehlerbehebung](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] Handbuch zur Fehlerbehebung](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] Handbuch zur Fehlerbehebung](../identity-service/troubleshooting-guide.md) |
+| Query Service von Adobe Experience Platform | [[!DNL Abfrage Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] Handbuch zur Fehlerbehebung](../query-service/troubleshooting-guide.md) |
+| Adobe Experience Platform-Segmentierung | [[!DNL-Segmentierungs-API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
+| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] FAQ und Handbuch zur Fehlerbehebung](../xdm/troubleshooting-guide.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL Echtzeit-Kunden-Profil-API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] Handbuch zur Fehlerbehebung](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Handbuch zur Fehlerbehebung bei Sandboxes](../sandboxes/troubleshooting-guide.md) |
-| Segmentierung | [Segmentation-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
