@@ -5,7 +5,7 @@ title: Anbinden an PSQL
 topic: connect
 description: 'PSQL ist eine Befehlszeilenschnittstelle, die im Rahmen der Installation von Postgres bereitgestellt wird. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen. '
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 75%
@@ -63,9 +63,9 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL and [!DNL Query Service]
 
-Return to the [!DNL Platform] UI on the *[!UICONTROL Connect BI Tools]* page.
+Return to the [!DNL Platform] UI on the **[!UICONTROL Connect BI Tools]** page.
 
-Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
+Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
 
 ![Bild](../images/clients/psql/connect-bi.png)
 
