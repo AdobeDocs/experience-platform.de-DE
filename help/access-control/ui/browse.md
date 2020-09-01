@@ -5,7 +5,7 @@ title: Arbeitsbereich „Zugriffskontrolle“ durchsuchen
 topic: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs "Zugriffskontrolle"beschrieben. Um die Zugriffskontrolle für Experience Platform über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer IMS-Organisation sein, die über ein Abonnement für Experience Platform verfügt.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 77%
@@ -19,11 +19,11 @@ In order to configure access control for [!DNL Experience Platform] through the 
 
 Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten.
 
-Sobald Sie über Administratorrechte verfügen, wechseln Sie zur [Adobe Admin Console](https://adminconsole.adobe.com) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung wird die Seite *[!UICONTROL Übersicht]* für die IMS-Org angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihre IMS-Org abonniert hat, zusammen mit anderen Steuerelementen, mit denen sich Benutzer und Administratoren zur IMS-Org als Ganzes hinzufügen lassen. Klicken Sie auf **[!UICONTROL Adobe Experience]**, um den Arbeitsbereich „Zugriffskontrolle“ für Ihre Platform-Integration zu öffnen.[!DNL Platform]
+Sobald Sie über Administratorrechte verfügen, wechseln Sie zur [Adobe Admin Console](https://adminconsole.adobe.com) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung wird die Seite **[!UICONTROL Übersicht]** für die IMS-Org angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihre IMS-Org abonniert hat, zusammen mit anderen Steuerelementen, mit denen sich Benutzer und Administratoren zur IMS-Org als Ganzes hinzufügen lassen. Klicken Sie auf **[!UICONTROL Adobe Experience]**, um den Arbeitsbereich „Zugriffskontrolle“ für Ihre Platform-Integration zu öffnen.[!DNL Platform]
 
 ![overview-page](../images/overview-page.png)
 
-Der Arbeitsbereich „Zugriffskontrolle“ für Adobe Experience Platform wird angezeigt, indem er auf dem Tab *[!UICONTROL Produktprofile]* geöffnet wird. Auf diesem Tab können Sie alle Produktprofile anzeigen und verschiedene Einstellungen verwalten, wie in diesem Dokument beschrieben.
+Der Arbeitsbereich „Zugriffskontrolle“ für Adobe Experience Platform wird angezeigt, indem er auf dem Tab **[!UICONTROL Produktprofile]** geöffnet wird. Auf diesem Tab können Sie alle Produktprofile anzeigen und verschiedene Einstellungen verwalten, wie in diesem Dokument beschrieben.
 
 ![platform-access-control](../images/platform-access-control.png)
 
