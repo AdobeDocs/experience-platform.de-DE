@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
 title: ServiceNow Connector
 topic: overview
+description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie ServiceNow mit APIs oder der Benutzeroberfläche mit der Plattform verbinden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 13%
+source-wordcount: '223'
+ht-degree: 12%
 
 ---
 
