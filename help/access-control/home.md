@@ -5,7 +5,7 @@ topic: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffskontrolle für Adobe Experience Platform erfolgt über die Adobe Admin Console. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 61%
@@ -32,7 +32,7 @@ Ein Workflow auf hoher Ebene zum Abrufen und Zuweisen von Zugriffsberechtigungen
 - Der Administrator kann die standardmäßigen [Produktprofile](#product-profiles) anzeigen oder bei Bedarf neue Kundenproduktprofile erstellen.
 - Der Administrator kann die Berechtigungen und Benutzer für alle vorhandenen Profile bearbeiten.
 - When creating or editing a product profile, the administrator adds users to the profile using the **[!UICONTROL users]** tab, and grants permissions to these users (such as &quot;[!UICONTROL Read Datasets]&quot; or &quot;[!UICONTROL Manage Schemas]&quot;) by accessing the **[!UICONTROL permissions]** tab. Ebenso kann der Administrator über die gleiche Registerkarte „ „Berechtigungen“ Zugriff auf Sandboxes zuweisen.
-- When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the &quot;[!UICONTROL View Datasets]&quot; permission, the *[!UICONTROL Datasets]* tab in the side menu will not be visible to that user.
+- When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the &quot;[!UICONTROL View Datasets]&quot; permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.
 
 For more detailed steps on how to manage access control in [!DNL Experience Platform], see the [access control user guide](./ui/overview.md).
 
@@ -95,10 +95,10 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Sandbox Administration] | [!UICONTROL Anzeigen von Sandboxes] | Schreibgeschützter Zugriff für Sandboxes Ihrer Organisation. |
 | [!DNL Sandbox Administration] | [!UICONTROL Zurücksetzen einer Sandbox] | Fähigkeit, eine Sandbox zurückzusetzen. |
 | [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen.* |
-| [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte *[!UICONTROL Katalog]* und authentifizierte Ziele auf der Registerkarte *[!UICONTROL Durchsuchen]*.* |
+| [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]**.* |
 | [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. This permission requires either “View Destinations” or “Manage [!UICONTROL Destinations”] to be granted to the user who will activate destinations.* |
 | [!DNL Data Ingestion] | [!UICONTROL Verwalten von Quellen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
-| [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte *[!UICONTROL Katalog]* und authentifizierte Quellen auf der Registerkarte *[!UICONTROL Durchsuchen]*. |
+| [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 | [!DNL Data Science Workspace] | [!UICONTROL Verwalten des Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
 
 _(*) Für diese Erlaubnis sind Bestimmungen erforderlich, die dies erfordern[!DNL Real-time Customer Data Platform]. Für weitere Informationen zur Echtzeit-Kundendatenplattform lesen Sie bitte zunächst die[Echtzeit-Kundendatenplattform – Übersicht](https://docs.adobe.com/content/help/de-DE/experience-platform/rtcdp/overview.html)._
