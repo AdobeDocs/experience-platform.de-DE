@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; advertising; google adwords
+keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
 solution: Experience Platform
 title: Erfassen von Anzeigendaten über Quell-Connectors und APIs
 topic: overview
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Werbeanwendung eines Drittanbieters und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und die Flow Service API beschrieben.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 13%
