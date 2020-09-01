@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
 solution: Experience Platform
 title: Liste aktiver Sandboxes für den aktuellen Benutzer
 topic: developer guide
+description: Sie können die für den aktuellen Benutzer aktiven Sandboxen Liste werden, indem Sie eine GET an den Stamm-Endpunkt anfordern.
 translation-type: tm+mt
-source-git-commit: 07ff49c74ea05f84d5c7cf9a3f44e7300f0b39b8
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 100%
+source-wordcount: '241'
+ht-degree: 91%
 
 ---
 
