@@ -5,10 +5,10 @@ title: Adobe Experience Platform Data Governance
 topic: overview
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1394'
-ht-degree: 74%
+source-wordcount: '1326'
+ht-degree: 73%
 
 ---
 
@@ -43,11 +43,11 @@ Marketer befinden sich am Endpunkt von Data Governance. Sie fordern Daten von de
 * Marketing-Spezialisten und Erlebnis-Designer nutzen Daten, um neue Kundenerlebnisse zu gestalten.
 
 
-## DULE-Framework
+## [!DNL Data Governance] framework
 
-Data Usage Labeling and Enforcement (DULE) is the core framework for [!DNL Experience Platform] [!DNL Data Governance]. DULE vereinfacht und optimiert die Kategorisierung von Daten und Erstellung von Datennutzungsrichtlinien. Sobald Datenbezeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
+The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies. Sobald Datenbezeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
 
-Das DULE-Framework beinhaltet drei Kernelemente: Bezeichnungen, Richtlinien und Durchsetzung.
+There are three key elements to the [!DNL Data Governance] framework: Labels, Policies, and Enforcement.
 
 1. **Bezeichnungen:** Klassifizieren Sie Daten anhand datenschutzbezogener Aspekte und vertraglicher Bestimmungen, sodass sie Vorschriften und Richtlinien der Organisation einhalten.
 1. **Richtlinien:** Beschreiben Sie, welche Arten von Marketing-Aktionen für welche Daten zulässig sind oder auch nicht.
@@ -57,7 +57,7 @@ Das DULE-Framework beinhaltet drei Kernelemente: Bezeichnungen, Richtlinien und 
 
 [!DNL Data Governance] ermöglicht es Data Stewards, Nutzungsbezeichnungen auf der Datensatz- und Feldebene anzuwenden, um Daten anhand der gültigen Richtlinien zu kategorisieren.
 
-Das DULE-Framework enthält vordefinierte Datenverwendungsbeschriftungen, mit denen Daten auf drei Arten kategorisiert werden können:
+The [!DNL Data Governance] framework includes predefined data usage labels that can be used to categorize data in three ways:
 
 ![Kategorien an Datennutzungsbezeichnungen](./images/overview/label-categories.png)
 
@@ -79,7 +79,7 @@ Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen k�
 
 Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an &quot;I&quot; label (Identity data) has been applied to the dataset, you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
 
-Once data usage labels have been applied, data stewards can create policies using the DULE [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
+Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -89,7 +89,7 @@ Weitere Informationen zu Datenverwendungsrichtlinien und Marketingaktionen finde
 
 ## Nächste Schritte
 
-This document provided a high-level introduction to [!DNL Data Governance] and the DULE framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
+This document provided a high-level introduction to [!DNL Data Governance] and the[!DNL Data Governance] framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
 
 ## Anhang
 
@@ -97,7 +97,7 @@ The following section provides additional information regarding [!DNL Data Gover
 
 ### [!DNL Data Governance] Terminologie
 
-The following table outlines key terms related to [!DNL Data Governance] and the DULE framework.
+The following table outlines key terms related to [!DNL Data Governance] and the[!DNL Data Governance] framework.
 
 | Begriff | Definition |
 |---|---|
@@ -107,7 +107,6 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 | **Data Steward** | Der Data Steward ist eine Person, die für die Verwaltung, Überwachung und Durchsetzung von Daten-Assets in einer Organisation verantwortlich ist. Außerdem stellt ein Data Steward sicher, dass Data Governance-Richtlinien so geschützt und gepflegt werden, dass staatliche Vorschriften und Unternehmensrichtlinien erfüllt werden. |
 | **Datennutzungsbezeichnungen** | Mit Datennutzungsbezeichnungen können Benutzer Daten kategorisieren, die datenschutzbezogene Aspekte und vertragliche Bedingungen beinhalten, um Vorschriften und Unternehmensrichtlinien einzuhalten. |
 | **Datensatzbezeichnungen** | Einem Datensatz können Bezeichnungen hinzugefügt werden. Alle Felder in einem Datensatz übernehmen die Bezeichnungen des Datensatzes. |
-| **DULE** | DULE ist eine Abkürzung für „Data Usage Labeling and Enforcement“. DULE ist ein wichtiger Bestandteil von Data Governance und bietet verschiedene Funktionen, die in einer Organisation eine Datennutzungsbezeichnung und Anwendung von Datenzugriffsrichtlinien für Governance-Anforderungen ermöglichen. |
 | **Feldtitel** | Feldtitel sind Data Governance-Bezeichnungen, die entweder von einem Datensatz übernommen oder direkt auf ein Feld angewendet werden.  Auf ein Feld angewendete Data Governance-Beschriftungen werden nicht bis zu einem Datensatz vererbt. |
 | **Geofence** | Eine „Geofence“ ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet erreicht oder verlässt. |
 | **Identitätsbezeichnungen** | Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt. |
@@ -118,6 +117,6 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 
 ## Zusätzliche Ressourcen
 
-The following video is intended to support your understanding of [!DNL Data Governance], and outlines the key aspects of the Data Usage Labeling and Enforcement (DULE) framework.
+Das folgende Video soll Ihr Verständnis des [!DNL Data Governance] Frameworks unterstützen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
