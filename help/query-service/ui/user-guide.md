@@ -5,7 +5,7 @@ title: Benutzerhandbuch zum Abfrage-Editor
 topic: query editor
 description: Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 59%
@@ -77,19 +77,19 @@ Wenn Fehler erkannt werden, können Sie die spezifischen Fehlermeldungen anzeige
 
 ### Details zur Abfrage
 
-While you are viewing a query in [!DNL Query Editor], the *[!UICONTROL Query Details]* panel provides tools to manage the selected query.
+While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query Details]** panel provides tools to manage the selected query.
 
 ![Bild](../images/queries/query-editor-overview/query-details.png)
 
-In diesem Bedienfeld können Sie ein Ausgabedatensatz direkt über die Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und den SQL-Code in einem einfach zu kopierenden Format auf der Registerkarte *[!UICONTROL SQL-Abfrage]* anzeigen. In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie ggf. geändert hat. Klicken Sie auf **[!UICONTROL Ausgabedatensatz]**, um einen Datensatz zu erstellen. Das Dialogfeld *[!UICONTROL Ausgabedatensatz]* wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und klicken Sie dann auf **[!UICONTROL Abfrage ausführen]**. The new dataset is displayed in the *[!UICONTROL Datasets]* tab on the [!DNL Query Service] user interface on [!DNL Platform].
+In diesem Bedienfeld können Sie ein Ausgabedatensatz direkt über die Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und den SQL-Code in einem einfach zu kopierenden Format auf der Registerkarte **[!UICONTROL SQL-Abfrage]** anzeigen. In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie ggf. geändert hat. Klicken Sie auf **[!UICONTROL Ausgabedatensatz]**, um einen Datensatz zu erstellen. Das Dialogfeld **[!UICONTROL Ausgabedatensatz]** wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und klicken Sie dann auf **[!UICONTROL Abfrage ausführen]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
 
 ### Speichern von Abfragen
 
-[!DNL Query Editor] bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. To save a query, click **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld *[!UICONTROL Details zur Abfrage]* ein Name für die Abfrage angegeben werden.
+[!DNL Query Editor] bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. To save a query, click **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld **[!UICONTROL Details zur Abfrage]** ein Name für die Abfrage angegeben werden.
 
 ### Auffinden früherer Abfragen
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. Sie können die Suchfunktion auf der Registerkarte *[!UICONTROL Protokoll]* verwenden, um Abfrageausführungen zu finden. Gespeicherte Abfragen werden auf der Registerkarte *[!UICONTROL Durchsuchen]* angezeigt.
+All queries executed from [!DNL Query Editor] are captured in the Log table. Sie können die Suchfunktion auf der Registerkarte **[!UICONTROL Protokoll]** verwenden, um Abfrageausführungen zu finden. Gespeicherte Abfragen werden auf der Registerkarte **[!UICONTROL Durchsuchen]** angezeigt.
 
 Weitere Informationen finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche][query-service-ui].
 
@@ -99,7 +99,7 @@ Weitere Informationen finden Sie in der [Übersicht über die Query Service-Benu
 
 ## Ausführen von Abfragen mit dem Abfrage-Editor
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or *[!UICONTROL Browse]* tab, and click **Play**. Der Ausführungsstatus der Abfrage wird auf der Registerkarte *[!UICONTROL Konsole]* angezeigt und die Ausgabedaten werden auf der Registerkarte *[!UICONTROL Ergebnisse]* angezeigt.
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or **[!UICONTROL Browse]** tab, and click **Play**. Der Ausführungsstatus der Abfrage wird auf der Registerkarte **[!UICONTROL Konsole]** angezeigt und die Ausgabedaten werden auf der Registerkarte **[!UICONTROL Ergebnisse]** angezeigt.
 
 ### Konsole
 
@@ -113,7 +113,7 @@ Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Serv
 
 ### Abfrageergebnisse
 
-Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte *[!UICONTROL Ergebnisse]* neben der Registerkarte *[!UICONTROL Konsole]* angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage mit bis zu 100 Zeilen an. Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
+Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Ergebnisse]** neben der Registerkarte **[!UICONTROL Konsole]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage mit bis zu 100 Zeilen an. Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
 
 ![Bild](../images/queries/query-editor-overview/query-results.png)
 
