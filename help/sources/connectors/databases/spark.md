@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Spark;apache spark;Azure HDInsights;azure hdinsights
 solution: Experience Platform
 title: Apache Spark auf dem Azurblauen HDInsights-Connector
 topic: overview
+description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie Apache Spark auf Azurblauen HDInsights mit APIs oder der Benutzeroberfläche mit Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 12%
+source-wordcount: '253'
+ht-degree: 11%
 
 ---
 
