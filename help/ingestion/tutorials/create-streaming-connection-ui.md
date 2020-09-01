@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aufbauen einer Streaming-Verbindung über die Benutzeroberfläche
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 77%
@@ -26,30 +26,30 @@ Beachten Sie, dass Sie zum Ausführen dieser Anleitung Zugriff auf Adobe Experie
 
 ## Aufbauen einer Streaming-Verbindung
 
-After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the *[!UICONTROL Catalog]* tab. Auf dieser Seite werden die verfügbaren Quelltypen als einzelne Karten angezeigt. Jede Karte enthält dabei eine Blase, die die Anzahl der Datenflüsse anzeigt, die über Streaming-Verbindungen zu Datensätzen erstellt wurden.
+After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the **[!UICONTROL Catalog]** tab. Auf dieser Seite werden die verfügbaren Quelltypen als einzelne Karten angezeigt. Jede Karte enthält dabei eine Blase, die die Anzahl der Datenflüsse anzeigt, die über Streaming-Verbindungen zu Datensätzen erstellt wurden.
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-Klicken Sie auf der Seite *[!UICONTROL Quellen]* auf **[!UICONTROL HTTP-API]** und dann auf **[!UICONTROL Quelle verbinden]**.
+Klicken Sie auf der Seite **[!UICONTROL Quellen]** auf **[!UICONTROL HTTP-API]** und dann auf **[!UICONTROL Quelle verbinden]**.
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-Der Bildschirm *[!UICONTROL Mit HTTP verbinden]* wird angezeigt. Geben Sie unter *[!UICONTROL Dienstdetails]* sowohl den **[!UICONTROL Namen]** als auch eine **[!UICONTROL Beschreibung]** für Ihre neue Streaming-Verbindung ein.
+Der Bildschirm **[!UICONTROL Mit HTTP verbinden]** wird angezeigt. Geben Sie unter **[!UICONTROL Dienstdetails]** sowohl den **[!UICONTROL Namen]** als auch eine **[!UICONTROL Beschreibung]** für Ihre neue Streaming-Verbindung ein.
 
-Wählen Sie unter *[!UICONTROL Kontoauthentifizierung]* die folgenden Konfigurationseigenschaften für Ihre Streaming-Verbindung aus:
+Wählen Sie unter **[!UICONTROL Kontoauthentifizierung]** die folgenden Konfigurationseigenschaften für Ihre Streaming-Verbindung aus:
 
-- **[!UICONTROL Authentifizierung]:**Gibt an, ob die Streaming-Verbindung authentifiziert werden muss. Authentifizierung stellt sicher, dass Daten aus vertrauenswürdigen Quellen erfasst werden. Es wird empfohlen, diese Option zu aktivieren, wenn Sie mit personenbezogenen Daten arbeiten.
-- **[!UICONTROL XDM-Schema-Kompatibilität]:**Ob diese Streaming-Verbindung Ereignis sendet, die mit XDM-Schemas kompatibel sind. Standardmäßig ist diese Eigenschaft**aktiviert **.
+- **[!UICONTROL Authentifizierung]:** Gibt an, ob die Streaming-Verbindung authentifiziert werden muss. Authentifizierung stellt sicher, dass Daten aus vertrauenswürdigen Quellen erfasst werden. Es wird empfohlen, diese Option zu aktivieren, wenn Sie mit personenbezogenen Daten arbeiten.
+- **[!UICONTROL XDM-Schema-Kompatibilität]:** Ob diese Streaming-Verbindung Ereignis sendet, die mit XDM-Schemas kompatibel sind. Standardmäßig ist diese Eigenschaft **aktiviert**.
 
-Nachdem Sie die Konfigurationseigenschaften ausgewählt haben, klicken Sie auf **[!UICONTROL Verbinden]**. Ihre Streaming-HTTP-Verbindung wird erstellt und kann jetzt auf dem Tab *[!UICONTROL Durchsuchen]* im Arbeitsbereich *[!UICONTROL Quellen]* angezeigt werden.
+Nachdem Sie die Konfigurationseigenschaften ausgewählt haben, klicken Sie auf **[!UICONTROL Verbinden]**. Ihre Streaming-HTTP-Verbindung wird erstellt und kann jetzt auf dem Tab **[!UICONTROL Durchsuchen]** im Arbeitsbereich **[!UICONTROL Quellen]** angezeigt werden.
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-Sie können auf dem Tab *[!UICONTROL Durchsuchen]* auf Ihre neu erstellte Streaming-HTTP-Verbindung klicken, um die Details dieser Verbindung anzuzeigen.
+Sie können auf dem Tab **[!UICONTROL Durchsuchen]** auf Ihre neu erstellte Streaming-HTTP-Verbindung klicken, um die Details dieser Verbindung anzuzeigen.
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-Wenn Sie auf den Hyperlink des Verbindungsnamens klicken, können Sie anzuzeigende Daten auswählen, indem Sie festlegen, welcher Datensatz verbunden wird, indem Sie auf *[!UICONTROL Daten auswählen]* klicken.
+Wenn Sie auf den Hyperlink des Verbindungsnamens klicken, können Sie anzuzeigende Daten auswählen, indem Sie festlegen, welcher Datensatz verbunden wird, indem Sie auf **[!UICONTROL Daten auswählen]** klicken.
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 
