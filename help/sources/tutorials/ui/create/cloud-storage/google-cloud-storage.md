@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für Google Cloud Storage über die Benutzeroberfläche
+title: Google Cloud-Datenspeicherung-Quellanschluss (Benutzeroberfläche)
 topic: overview
+description: In diesem Lernprogramm werden Schritte zum Erstellen eines Google Cloud-Datenspeicherung-Quellconnectors (im Folgenden "GCS") mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 10%
+source-wordcount: '555'
+ht-degree: 8%
 
 ---
 
