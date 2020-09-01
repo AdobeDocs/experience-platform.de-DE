@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 description: Dieses Benutzerhandbuch zu Datensätzen enthält Anweisungen zur Durchführung allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 73%
+source-wordcount: '1159'
+ht-degree: 72%
 
 ---
 
@@ -26,7 +26,7 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
    * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie Ihre eigenen benutzerdefinierten XDM-Schema mithilfe der [!DNL Schema Editor] in der [!DNL Platform] Benutzeroberfläche erstellen.
 * [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL-Datenverwaltung]](../../data-governance/home.md): Gewährleisten Sie die Einhaltung von Vorschriften, Einschränkungen und Richtlinien zur Nutzung von Kundendaten.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Gewährleisten Sie die Einhaltung von Vorschriften, Einschränkungen und Richtlinien zur Nutzung von Kundendaten.
 
 ## Anzeigen von Datensätzen
 
@@ -114,7 +114,7 @@ If a dataset already contains data and is then enabled for [!DNL Profile], the e
 
 ## Data Governance in einem Datensatz verwalten und durchsetzen
 
-Data Usage Labeling and Enforcement (DULE) ist der zentrale Data Governance-Mechanismus in [!DNL Experience Platform]. Mit DULE-Bezeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weiterführende Informationen zu Bezeichnungen finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md) oder im [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md), wo beschrieben wird, wie Sie Bezeichnungen auf Datensätze anwenden können.
+Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weiterführende Informationen zu Bezeichnungen finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md) oder im [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md), wo beschrieben wird, wie Sie Bezeichnungen auf Datensätze anwenden können.
 
 ## Datensatz löschen
 
