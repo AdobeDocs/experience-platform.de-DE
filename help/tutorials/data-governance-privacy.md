@@ -3,19 +3,19 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Governance und Datenschutz – Tutorials
 topic: tutorial
-description: Data Usage Labeling and Enforcement (DULE) ist der zentrale Mechanismus zur Umsetzung von Data Governance in Adobe Experience Platform. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
+description: Dieses Dokument bietet einen Überblick über die verschiedenen Schulungen zu Adobe Experience Platform Data Governance und Adobe Experience Platform Privacy Service.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 51%
+source-wordcount: '496'
+ht-degree: 41%
 
 ---
 
 
 # [!DNL Data Governance] und [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) ist der Kernmechanismus von Adobe Experience Platform [!DNL Data Governance]. Mit den im Rahmen von DULE bereitgestellten Funktionen lassen sich Datensätze und Felder anhand von Beschriftungen für die Datennutzung entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren. Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
+Mit der Adobe Experience Platform-Datenverwaltung können Sie Datenverwendungsbeschriftungen auf Datensätze und Felder anwenden, diese entsprechend den entsprechenden Datenverwendungsrichtlinien kategorisieren und bei bestimmten Aktionen für diese Datensätze und/oder Felder auf Richtlinienverletzungen hin bewerten. Bevor Sie mit den in diesem Dokument aufgelisteten Tutorials beginnen, finden Sie in der [[!DNL Data Governance] Übersicht](../data-governance/home.md) eine solidere Einführung in das Framework.
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. Gehen Sie für weitere Informationen hierzu zunächst die [Übersicht über den Datenschutzdienst](../privacy-service/home.md) durch.
 
@@ -25,11 +25,11 @@ Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten ge
 
 ## Erstellen von Richtlinien zur Datennutzung
 
-The DULE [!DNL Policy Service] API allows you to create and manage DULE policies to determine what marketing actions can be taken against data that contains certain DULE labels. Gehen Sie zum Einstieg den [Überblick über Richtlinien zur Datennutzung](../data-governance/policies/overview.md) durch.
+The [!DNL Policy Service] API allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain usage labels. Gehen Sie zum Einstieg den [Überblick über Richtlinien zur Datennutzung](../data-governance/policies/overview.md) durch.
 
 ## Durchsetzen von Richtlinien zur Datennutzung
 
-Once you have created Data Usage Labeling and Enforcement (DULE) labels for your data, and have created DULE policies for marketing actions against those labels, you can use the DULE [!DNL Policy Service] API to evaluate whether a marketing action performed on a dataset, or an arbitrary group of DULE labels, constitutes a policy violation. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen. Informationen zum Einstieg ins Thema finden Sie unter [Überblick über Richtliniendurchsetzung](../data-governance/enforcement/overview.md).
+Nachdem Sie Nutzungsbezeichnungen für Ihre Daten hinzugefügt und Richtlinien für Marketingaktionen für diese Bezeichnungen erstellt haben, können Sie mit der [!DNL Policy Service API] bewerten, ob eine Marketingaktion eine Richtlinienverletzung darstellt, wenn sie mit einem Datensatz oder einer beliebigen Gruppe von Gebrauchsbezeichnungen ausgeführt wird. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen. Informationen zum Einstieg ins Thema finden Sie unter [Überblick über Richtliniendurchsetzung](../data-governance/enforcement/overview.md).
 
 ## Durchsetzen von Compliance-Vorgaben zur Datennutzung für ein Zielgruppensegment
 
