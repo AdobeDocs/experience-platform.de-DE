@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Datenspeicherung Gen2-Stecker für den Azurblau-Data-See
 topic: overview
+description: Die nachstehende Dokumentation beschreibt, wie Sie die Datenspeicherung Gen2 mit der Plattform mithilfe von APIs oder der Benutzeroberfläche verbinden können.
 translation-type: tm+mt
-source-git-commit: 4d3899e8a91d15da7e40523a03285f3ccec27191
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '224'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie A
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen, Daten von [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2) durch Stapel einzubringen.
 
-## Zulassungsliste der IP-Adresse
+## ZULASSUNGSLISTE der IP-Adresse
 
 Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
