@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google AdWords;google adwords
 solution: Experience Platform
 title: Google AdWords Connector
 topic: overview
+description: Die nachstehende Dokumentation enthält Informationen dazu, wie Google AdWords mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 9%
+source-wordcount: '219'
+ht-degree: 8%
 
 ---
 
