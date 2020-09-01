@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google Cloud-Datenspeicherung-Connector
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 3%
@@ -18,7 +18,7 @@ Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie A
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen, Daten aus [!DNL Google Cloud Storage] Stapeln einzubringen.
 
-## Zulassungsliste der IP-Adresse
+## ZULASSUNGSLISTE der IP-Adresse
 
 Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
@@ -60,7 +60,7 @@ Die Seite **[!UICONTROL Einstellungen]** wird angezeigt. Von hier aus können Si
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-Die Seite &quot; **[!UICONTROL Interoperabilität]** &quot;enthält Informationen zur Authentifizierung, zu Zugriffsschlüsseln und zum Standardprojekt, das mit Ihrem Benutzerkonto verknüpft ist. Wenn Sie noch kein Standardprojekt für den interoperablen Zugriff eingerichtet haben, können Sie eines im Abschnitt *[!UICONTROL &quot;Standard&quot;für den interoperablen Zugriff]* einrichten. Wenn bereits ein Standardprojekt eingerichtet wurde, wird im Abschnitt eine Bestätigung angezeigt, dass ein Projekt als Standard festgelegt wurde.
+Die Seite &quot; **[!UICONTROL Interoperabilität]** &quot;enthält Informationen zur Authentifizierung, zu Zugriffsschlüsseln und zum Standardprojekt, das mit Ihrem Benutzerkonto verknüpft ist. Wenn Sie noch kein Standardprojekt für den interoperablen Zugriff eingerichtet haben, können Sie eines im Abschnitt **[!UICONTROL &quot;Standard&quot;für den interoperablen Zugriff]** einrichten. Wenn bereits ein Standardprojekt eingerichtet wurde, wird im Abschnitt eine Bestätigung angezeigt, dass ein Projekt als Standard festgelegt wurde.
 
 Um eine neue Zugriffsschlüssel-ID und einen geheimen Zugriffsschlüssel für Ihr Benutzerkonto zu erstellen, wählen Sie &quot;Schlüssel **[!UICONTROL erstellen&quot;]**.
 
