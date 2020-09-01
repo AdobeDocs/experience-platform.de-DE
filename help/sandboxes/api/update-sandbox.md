@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: Sandbox aktualisieren
 topic: developer guide
+description: Sie können ein oder mehrere Felder in einer Sandbox aktualisieren, indem Sie eine PATCH anfordern, die den Namen der Sandbox im Anforderungspfad und die Eigenschaft enthält, die in der Anforderungsnutzlast aktualisiert werden soll.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 13%
+source-wordcount: '120'
+ht-degree: 10%
 
 ---
 
