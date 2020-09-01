@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;activate inbound data;populate profile;populate rtcp;populated unified profile
 solution: Experience Platform
 title: Aktivieren Sie eingehende Quelldaten, um Kundendaten zu füllen.
 topic: overview
+description: Eingehende Daten aus Ihrem Quell-Connector können zur Bereicherung und zum Ausfüllen Ihrer Echtzeit-Kundendaten verwendet werden.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '494'
 ht-degree: 14%
 
 ---
