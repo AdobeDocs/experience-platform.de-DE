@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Benutzerhandbuch zu den Datennutzungsbezeichnungen
 topic: labels
-description: Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen (auch als DULE-Beschriftungen bezeichnet) in der Adobe Experience Platform-Benutzeroberfläche.
+description: In diesem Benutzerhandbuch werden die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1119'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Benutzerhandbuch zu den Datennutzungsbezeichnungen
 
-Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen (auch als DULE-Beschriftungen bezeichnet) in der [!DNL Experience Platform] Benutzeroberfläche. Bevor Sie den Leitfaden verwenden, lesen Sie bitte die Übersicht über die [Datenverwaltung](../home.md) , um eine solidere Einführung in das DUL-Framework zu erhalten.
+Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Beschriftungen für die Datenverwendung in der [!DNL Experience Platform] Benutzeroberfläche. Bevor Sie das Handbuch verwenden, lesen Sie bitte die [[!DNL Data Governance] Übersicht](../home.md) für eine stabilere Einführung in das [!DNL Data Governance] Framework.
 
 ## Verwalten von Datenverwendungsbeschriftungen auf der Datensatzebene
 
