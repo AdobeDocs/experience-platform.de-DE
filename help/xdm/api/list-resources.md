@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;list;List;get;GET
 solution: Experience Platform
 title: Auflisten von Ressourcen
+description: Sie können eine Liste aller Schema-Registrierungsressourcen eines bestimmten Typs (Klassen, Mixins, Schema, Datentypen oder Deskriptoren) in einem Container durch eine einzige GET erstellen.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 30%
+source-wordcount: '538'
+ht-degree: 28%
 
 ---
 
