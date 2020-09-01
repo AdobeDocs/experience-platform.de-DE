@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Customer Attributes connector
 solution: Experience Platform
 title: Connector für Kundenattribute
 topic: overview
+description: Die nachstehende Dokumentation enthält Informationen zum Verbinden von Kundenattributen mit Plattformen mithilfe von APIs oder der Benutzeroberfläche
 translation-type: tm+mt
-source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 45%
+source-wordcount: '121'
+ht-degree: 38%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 45%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Erfassung von Kundenattributdaten-Profil-Daten in die Adobe Experience Platform.
+Experience Platform unterstützt die Erfassung von Kundenattributdaten-Profil-Daten in Adobe Experience Platform.
 
 Die nachstehende Dokumentation enthält Informationen dazu, wie Kundenattribute mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbunden werden können:
 
