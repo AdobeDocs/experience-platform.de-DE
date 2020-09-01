@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Hive;Hive;hive;Azure HDInsights;azure hdinsights;
 solution: Experience Platform
 title: Apache Hive auf der Azurblauen HDInsights-Steckverbindung
 topic: overview
+description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie Apache Hive auf Blue HDInsights mit APIs oder der Benutzeroberfläche mit Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 11%
+source-wordcount: '257'
+ht-degree: 10%
 
 ---
 
