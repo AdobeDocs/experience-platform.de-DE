@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 40%
@@ -82,7 +82,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Kategorie | Berechtigung | Beschreibung |
 |--- | --- | ---|
 | Datenerfassung | Verwalten von Quellen | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
-| Datenerfassung | Anzeigen von Quellen | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte *[!UICONTROL Katalog]* und authentifizierte Quellen auf der Registerkarte *[!UICONTROL Durchsuchen]*. |
+| Datenerfassung | Anzeigen von Quellen | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 
 **Bekannte Probleme**
 
