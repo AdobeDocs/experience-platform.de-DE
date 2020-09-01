@@ -3,45 +3,45 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: Datennutzungsrichtlinie erstellen
 topic: policies
-description: Data Usage Labeling and Enforcement (DULE) ist der zentrale Mechanismus zur Umsetzung von Data Governance in Adobe Experience Platform. Mit der DULE Policy Service API können Sie DULE-Richtlinien erstellen und verwalten, die bestimmen, welche Marketing-Aktionen auf Daten entsprechend deren DULE-Beschriftungen durchgeführt werden können. Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer DULE-Richtlinie mithilfe der Policy Service-API.
+description: Mit der Policy Service-API können Sie Datenverwendungsrichtlinien erstellen und verwalten, um zu bestimmen, welche Marketingaktionen für Daten mit bestimmten Datenverwendungsbeschriftungen durchgeführt werden können. Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer Richtlinie mithilfe der Policy Service API.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 81%
+source-wordcount: '1209'
+ht-degree: 49%
 
 ---
 
 
 # Eine Datenverwendungsrichtlinie in der API erstellen
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. Mit der [DULE Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie DULE-Richtlinien erstellen und verwalten, um festzulegen, welche Marketing-Aktionen für Daten mit bestimmten DULE-Bezeichnungen ausgeführt werden können.
+The [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels.
 
-This document provides a step-by-step tutorial for creating a DULE policy using the [!DNL Policy Service] API. Eine genauere Anleitung zu den verschiedenen in der API verfügbaren Vorgängen finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md).
+This document provides a step-by-step tutorial for creating a policy using the [!DNL Policy Service] API. Eine genauere Anleitung zu den verschiedenen in der API verfügbaren Vorgängen finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md).
 
 ## Erste Schritte
 
-Diese Anleitung setzt ein Verständnis der folgenden Schlüsselkonzepte voraus, die beim Erstellen und Evaluieren von DULE-Richtlinien zum Einsatz kommen:
+Dieses Lernprogramm erfordert ein Verständnis der folgenden Schlüsselkonzepte, die beim Erstellen und Evaluieren von Richtlinien zum Einsatz kommen:
 
 * [[!DNL-Datenverwaltung]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Platform] erzwungen wird.
 * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Policy Service] API, including required headers and how to read example API calls.
 
 ## Marketing-Aktion definieren {#define-action}
 
 In the [!DNL Data Governance] framework, a marketing action is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
-Der erste Schritt bei der Erstellung einer DULE-Richtlinie besteht darin, zu bestimmen, welche Marketing-Aktion die Richtlinie bewerten soll. Dies kann mit einer der folgenden Optionen erledigt werden:
+Der erste Schritt bei der Erstellung einer Datenverwendungsrichtlinie besteht darin, zu bestimmen, welche Marketingaktion die Richtlinie auswerten wird. Dies kann mit einer der folgenden Optionen erledigt werden:
 
 * [Vorhandene Marketing-Aktion nachschlagen](#look-up)
 * [Neue Marketing-Aktion erstellen](#create-new)
 
 ### Vorhandene Marketing-Aktion nachschlagen {#look-up}
 
-Sie können vorhandene Marketing-Aktionen nachschlagen, die von Ihrer DULE-Richtlinie bewertet werden sollen, indem Sie eine GET-Anfrage an einen der `/marketingActions`-Endpunkte senden.
+You can look up existing marketing actions to be evaluated by your policy by making a GET request to one of the `/marketingActions` endpoints.
 
 **API-Format**
 
@@ -122,7 +122,7 @@ Eine erfolgreiche Antwort gibt die Gesamtanzahl der gefundenen Marketing-Aktione
 | --- | --- |
 | `_links.self.href` | Jedes Element im `children`-Array enthält eine URI-ID für die aufgelistete Marketing-Aktion. |
 
-Wenn Sie die Marketing-Aktion gefunden haben, die Sie verwenden möchten, notieren Sie sich den Wert seiner `href`-Eigenschaft. Dieser Wert wird im nächsten Schritt zum [Erstellen einer DULE-Richtlinie](#create-policy) benötigt.
+Wenn Sie die Marketing-Aktion gefunden haben, die Sie verwenden möchten, notieren Sie sich den Wert seiner `href`-Eigenschaft. This value is used during the next step of [creating a policy](#create-policy).
 
 ### Neue Marketing-Aktion erstellen {#create-new}
 
@@ -188,13 +188,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) sowie die Details 
 | --- | --- |
 | `_links.self.href` | Die URI-ID der Marketing-Aktion. |
 
-Notieren Sie sich die URI-ID der neu erstellten Marketing-Aktion, da Sie sie im nächsten Schritt beim Erstellen einer DULE-Richtlinie benötigen werden.
+Zeichnen Sie die URI-ID der neu erstellten Marketingaktion auf, wie sie im nächsten Schritt der Erstellung einer Richtlinie verwendet wird.
 
-## DULE-Richtlinie erstellen {#create-policy}
+## Erstellen einer Richtlinie {#create-policy}
 
-Für das Erstellen einer neuen Richtlinie müssen Sie die URI-ID einer Marketing-Aktion mit einem Ausdruck der DULE-Bezeichnungen angeben, die diese Marketing-Aktion verbieten.
+Zum Erstellen einer neuen Richtlinie müssen Sie die URI-ID einer Marketingaktion mit einem Ausdruck der Gebrauchsbeschriftungen versehen, die diese Marketingaktion verbieten.
 
-Dieser Ausdruck wird als **Richtlinienausdruck** bezeichnet und ist ein Objekt, das entweder (A) eine DULE-Bezeichnung oder (B) einen Operator und Operanden enthält, aber nicht beide. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt. So könnte beispielsweise eine Richtlinie für den Export von Daten an eine Drittpartei verboten werden, wenn `C1 OR (C3 AND C7)`-Kennzeichnungen vorhanden sind. Dieser Ausdruck würde wie folgt definiert:
+This expression is called a **policy expression** and is an object containing either (A) a label, or (B) an operator and operands, but not both. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt. So könnte beispielsweise eine Richtlinie für den Export von Daten an eine Drittpartei verboten werden, wenn `C1 OR (C3 AND C7)`-Kennzeichnungen vorhanden sind. Dieser Ausdruck würde wie folgt definiert:
 
 ```json
 "deny": {
@@ -222,7 +222,7 @@ Dieser Ausdruck wird als **Richtlinienausdruck** bezeichnet und ist ein Objekt, 
 >
 >Nur OR- und AND-Operatoren werden unterstützt.
 
-Nachdem Sie Ihren Richtlinienausdruck konfiguriert haben, können Sie eine neue DULE-Richtlinie erstellen, indem Sie eine POST-Anfrage an den `/policies/custom`-Endpunkt senden.
+Once you have configured your policy expression, you can create a new policy by making a POST request to the `/policies/custom` endpoint.
 
 **API-Format**
 
@@ -232,7 +232,7 @@ POST /policies/custom
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine DULE-Richtlinie mit dem Namen „Daten an Dritte exportieren“ erstellt, indem in der Anfrage-Payload eine Marketing-Aktion und ein Richtlinienausdruck angegeben werden.
+Mit der folgenden Anforderung wird eine Richtlinie mit dem Namen &quot;Daten an Dritte exportieren&quot;erstellt, indem eine Marketingaktion und ein Richtlinien-Ausdruck in der Anforderungs-Nutzlast bereitgestellt werden.
 
 ```shell
 curl -X POST \
@@ -268,7 +268,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `marketingActionRefs` | Ein Array, das den `href`-Wert einer Marketing-Aktion enthält, der im [vorherigen Schritt](#define-action) abgerufen wurde. Im obigen Beispiel wird zwar nur eine Marketing-Aktion aufgelistet, es können aber auch mehrere Aktionen angegeben werden. |
-| `deny` | Das Richtlinienausdrucksobjekt. Definiert die DULE-Bezeichnungen und -Bedingungen, die dazu führen würden, dass die Richtlinie die in `marketingActionRefs` referenzierte Marketing-Aktion ablehnt. |
+| `deny` | Das Richtlinienausdrucksobjekt. Defines the usage labels and conditions that would cause the policy to reject the marketing action referenced in `marketingActionRefs`. |
 
 **Antwort**
 
@@ -319,17 +319,17 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) sowie die Details 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Ein schreibgeschützter, systemgenerierter Wert, der die DULE-Richtlinie eindeutig identifiziert. |
+| `id` | Ein schreibgeschützter, systemgenerierter Wert, der die Richtlinie eindeutig identifiziert. |
 
-Notieren Sie sich die URI-ID der neu erstellten DULE-Richtlinie, da Sie sie im nächsten Schritt zum Aktivieren der Richtlinie benötigen werden.
+Zeichnen Sie die URI-ID der neu erstellten Richtlinie auf, wie sie im nächsten Schritt zum Aktivieren der Richtlinie verwendet wird.
 
-## DULE-Richtlinie aktivieren
+## Richtlinie aktivieren
 
 >[!NOTE]
 >
-> Dieser Schritt ist optional, wenn Sie Ihre DULE-Richtlinie im Status `DRAFT` belassen möchten; beachten Sie jedoch, dass für eine Richtlinie der Status standardmäßig auf `ENABLED` festgelegt sein muss, damit sie Teil der Bewertung wird. Informationen zur Verwendung von Ausnahmen für Richtlinien mit dem Status `DRAFT` finden Sie in der Anleitung zum [Durchsetzen von DULE-Richtlinien](../enforcement/api-enforcement.md).
+>While this step is optional if you wish to leave your policy in `DRAFT` status, please note that by default a policy must have its status set to `ENABLED` in order to participate in evaluation. See the guide on [policy enforcement](../enforcement/api-enforcement.md) for information on how to make exceptions for policies in `DRAFT` status.
 
-Standardmäßig sind DULE-Richtlinien, deren `status`-Eigenschaft auf `DRAFT` gesetzt ist, nicht Teil der Bewertung. Sie können Ihre Richtlinie für die Bewertung aktivieren, indem Sie eine PATCH-Anfrage an den `/policies/custom/`-Endpunkt senden und am Ende des Anfragepfads die eindeutige Kennung für die Richtlinie angeben.
+By default, policies that have their `status` property set to `DRAFT` do not participate in evaluation. Sie können Ihre Richtlinie für die Bewertung aktivieren, indem Sie eine PATCH-Anfrage an den `/policies/custom/`-Endpunkt senden und am Ende des Anfragepfads die eindeutige Kennung für die Richtlinie angeben.
 
 **API-Format**
 
@@ -343,7 +343,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Anfrage**
 
-Die folgende Anfrage führt einen PATCH-Vorgang für die `status`-Eigenschaft der DUL-Richtlinie aus und ändert deren Wert von `DRAFT` in `ENABLED`.
+The following request performs a PATCH operation on the `status` property of the policy, changing its value from `DRAFT` to `ENABLED`.
 
 ```shell
 curl -X PATCH \
