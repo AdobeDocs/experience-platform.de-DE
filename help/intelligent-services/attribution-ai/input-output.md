@@ -5,7 +5,7 @@ title: Eingabe und Ausgabe von Attribution AIS
 topic: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 4%
@@ -136,11 +136,11 @@ Die folgende Tabelle zeigt die Schema-Felder in der Rohwertbeispiel-Ausgabe:
 
 ### Anzeigen von Rohwertpfaden (UI) {#raw-score-path}
 
-Sie können den Pfad zu Ihren Rohwerten in der Benutzeroberfläche Ansicht haben. Beginn durch Auswahl von **[!UICONTROL Schemas]** in der Benutzeroberfläche &quot;Plattform&quot;suchen und wählen Sie dann auf der Registerkarte &quot; *[!UICONTROL Durchsuchen]* &quot;das Schema für die Zuordnungs-AI-Bewertungen aus.
+Sie können den Pfad zu Ihren Rohwerten in der Benutzeroberfläche Ansicht haben. Beginn durch Auswahl von **[!UICONTROL Schemas]** in der Benutzeroberfläche &quot;Plattform&quot;suchen und wählen Sie dann auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;das Schema für die Zuordnungs-AI-Bewertungen aus.
 
 ![Schema auswählen](./images/input-output/schemas_browse.png)
 
-Wählen Sie anschließend im Fenster &quot; *[!UICONTROL Struktur]* &quot;der Benutzeroberfläche ein Feld aus. Die Registerkarte &quot; *[!UICONTROL Feldeigenschaften]* &quot;wird geöffnet. Innerhalb der *[!UICONTROL Feldeigenschaften]* ist das Feld *[!UICONTROL Pfad]* , das Ihren Rohwerten zugeordnet wird.
+Wählen Sie anschließend im Fenster &quot; **[!UICONTROL Struktur]** &quot;der Benutzeroberfläche ein Feld aus. Die Registerkarte &quot; **[!UICONTROL Feldeigenschaften]** &quot;wird geöffnet. Innerhalb der **[!UICONTROL Feldeigenschaften]** ist das Feld **[!UICONTROL Pfad]** , das Ihren Rohwerten zugeordnet wird.
 
 ![Schema auswählen](./images/input-output/field_properties.png)
 
