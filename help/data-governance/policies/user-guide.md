@@ -5,7 +5,7 @@ title: Benutzerhandbuch zu Datennutzungsrichtlinien
 topic: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie in der Benutzeroberfläche "Experience Platform"im Arbeitsbereich "Richtlinien"ausführen können.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 39%
@@ -30,7 +30,7 @@ This guide requires a working understanding of the following [!DNL Experience Pl
 
 ## Datennutzungsrichtlinien anzeigen {#view-policies}
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. Auf der Registerkarte **[!UICONTROL Durchsuchen]** wird eine Liste der verfügbaren Richtlinien angezeigt, einschließlich der zugehörigen Bezeichnungen, Marketing-Aktionen und Status.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the **[!UICONTROL Policies]** workspace. Auf der Registerkarte **[!UICONTROL Durchsuchen]** wird eine Liste der verfügbaren Richtlinien angezeigt, einschließlich der zugehörigen Bezeichnungen, Marketing-Aktionen und Status.
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ Klicken Sie auf eine aufgelistete Richtlinie, um deren Beschreibung und Typ anzu
 
 ## Benutzerdefinierte Datennutzungsrichtlinie erstellen {#create-policy}
 
-To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the *[!UICONTROL Policies]* workspace.
+To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace.
 
 ![](../images/policies/create-policy-button.png)
 
-Der Workflow *[!UICONTROL Richtlinie erstellen]* wird angezeigt. Geben Sie zunächst einen Namen und eine Beschreibung für die neue Richtlinie an.
+Der Workflow **[!UICONTROL Richtlinie erstellen]** wird angezeigt. Geben Sie zunächst einen Namen und eine Beschreibung für die neue Richtlinie an.
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ Wählen Sie anschließend die Datennutzungsbezeichnungen aus, auf denen die Rich
 
 ![](../images/policies/add-labels.png)
 
-Der Schritt *[!UICONTROL Marketing-Aktionen auswählen]* wird angezeigt. Wählen Sie die entsprechenden Marketing-Aktionen aus der bereitgestellten Liste und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+Der Schritt **[!UICONTROL Marketing-Aktionen auswählen]** wird angezeigt. Wählen Sie die entsprechenden Marketing-Aktionen aus der bereitgestellten Liste und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ Der Schritt *[!UICONTROL Marketing-Aktionen auswählen]* wird angezeigt. Wählen
 
 ![](../images/policies/add-marketing-actions.png)
 
-Der Schritt *[!UICONTROL Überprüfung]* wird angezeigt, in dem Sie die Details der neuen Richtlinie vor der Erstellung überprüfen können. Wenn Sie zufrieden sind, klicken Sie auf **[!UICONTROL Fertig stellen]**, um die Richtlinie zu erstellen.
+Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, in dem Sie die Details der neuen Richtlinie vor der Erstellung überprüfen können. Wenn Sie zufrieden sind, klicken Sie auf **[!UICONTROL Fertig stellen]**, um die Richtlinie zu erstellen.
 
 ![](../images/policies/policy-review.png)
 
-Die Registerkarte *[!UICONTROL Durchsuchen]* wird erneut angezeigt, wo die neu erstellte Richtlinie jetzt mit dem Status „Entwurf“ aufgelistet wird. Informationen zum Aktivieren der Richtlinie finden Sie im nächsten Abschnitt.
+Die Registerkarte **[!UICONTROL Durchsuchen]** wird erneut angezeigt, wo die neu erstellte Richtlinie jetzt mit dem Status „Entwurf“ aufgelistet wird. Informationen zum Aktivieren der Richtlinie finden Sie im nächsten Abschnitt.
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ Die Registerkarte *[!UICONTROL Durchsuchen]* wird erneut angezeigt, wo die neu e
 
 Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
 
-You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Wählen Sie eine benutzerdefinierte Richtlinie aus der Liste, um auf der rechten Seite die entsprechenden Details anzuzeigen. Klicken Sie unter *[!UICONTROL Status]* auf die Schaltfläche zum Umschalten, um die Richtlinie zu aktivieren oder zu deaktivieren.
+You can enable or disable policies from the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace. Wählen Sie eine benutzerdefinierte Richtlinie aus der Liste, um auf der rechten Seite die entsprechenden Details anzuzeigen. Klicken Sie unter **[!UICONTROL Status]** auf die Schaltfläche zum Umschalten, um die Richtlinie zu aktivieren oder zu deaktivieren.
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ Wählen Sie im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;die Regi
 
 ## Create a marketing action {#create-marketing-action}
 
-Um eine neue benutzerdefinierte Marketingaktion zu erstellen, klicken Sie auf Marketingaktion **** erstellen in der oberen rechten Ecke der Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;im Arbeitsbereich &quot; *[!UICONTROL Richtlinien]* &quot;.
+Um eine neue benutzerdefinierte Marketingaktion zu erstellen, klicken Sie auf Marketingaktion **** erstellen in der oberen rechten Ecke der Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Richtlinien]** &quot;.
 
 ![](../images/policies/create-marketing-action.png)
 
-Das Dialogfeld *[!UICONTROL Marketingaktion]* erstellen wird angezeigt. Geben Sie einen Namen und eine Beschreibung für die Marketingaktion ein und klicken Sie dann auf **[!UICONTROL Erstellen]**.
+Das Dialogfeld **[!UICONTROL Marketingaktion]** erstellen wird angezeigt. Geben Sie einen Namen und eine Beschreibung für die Marketingaktion ein und klicken Sie dann auf **[!UICONTROL Erstellen]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-Die neu erstellte Aktion wird auf der Registerkarte &quot; *[!UICONTROL Marketingaktionen]* &quot;angezeigt. Sie können die Marketingaktion jetzt beim [Erstellen neuer Datenverwendungsrichtlinien](#create-policy)verwenden.
+Die neu erstellte Aktion wird auf der Registerkarte &quot; **[!UICONTROL Marketingaktionen]** &quot;angezeigt. Sie können die Marketingaktion jetzt beim [Erstellen neuer Datenverwendungsrichtlinien](#create-policy)verwenden.
 
 ![](../images/policies/created-marketing-action.png)
 
