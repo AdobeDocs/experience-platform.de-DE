@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; crm; salesforce; dynamics
+keywords: Experience Platform;home;popular topics;crm;CRM
 solution: Experience Platform
 title: Erfassen von CRM-Daten über Quellschnittstellen und APIs
 topic: overview
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-CRM und zum Integrieren in die Plattform über Quellschnittstellen und die Flow Service API beschrieben.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem CRM-System eines Drittanbieters und deren Integration in die Plattform über Quellschnittstellen und APIs erläutert.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1595'
 ht-degree: 13%
 
 ---
@@ -605,7 +605,7 @@ Der letzte Schritt zur Erfassung von CRM-Daten besteht darin, einen Datendurchla
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
