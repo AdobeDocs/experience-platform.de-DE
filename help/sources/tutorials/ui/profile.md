@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aktivieren Sie eingehende Quelldaten, um Kundendaten zu füllen.
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 14%
@@ -47,7 +47,7 @@ Der Bildschirm &quot; **[!UICONTROL Aktivität]** des Datensatzes&quot;wird ange
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-Der **[!UICONTROL Schema-Editor]** wird angezeigt und zeigt die Struktur des Schemas in der mittleren Arbeitsfläche an. Wählen Sie auf der Arbeitsfläche das Feld aus, das als primäre Identität festgelegt werden soll. Aktivieren Sie unter der angezeigten Registerkarte &quot; *[!UICONTROL Feldeigenschaften]* &quot;das Kontrollkästchen &quot; **[!UICONTROL Identität]** &quot;und wählen Sie anschließend die Option &quot; **[!UICONTROL Primär-Identität]**&quot;. Wählen Sie schließlich einen entsprechenden **[!UICONTROL Identitäts-Namensraum]** und klicken Sie dann auf **[!UICONTROL Übernehmen]**.
+Der **[!UICONTROL Schema-Editor]** wird angezeigt und zeigt die Struktur des Schemas in der mittleren Arbeitsfläche an. Wählen Sie auf der Arbeitsfläche das Feld aus, das als primäre Identität festgelegt werden soll. Aktivieren Sie unter der angezeigten Registerkarte &quot; **[!UICONTROL Feldeigenschaften]** &quot;das Kontrollkästchen &quot; **[!UICONTROL Identität]** &quot;und wählen Sie anschließend die Option &quot; **[!UICONTROL Primär-Identität]**&quot;. Wählen Sie schließlich einen entsprechenden **[!UICONTROL Identitäts-Namensraum]** und klicken Sie dann auf **[!UICONTROL Übernehmen]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
