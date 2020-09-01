@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CRM;crm;crm flow service
 solution: Experience Platform
 title: CRM-System mit der Flow Service API erkunden
 topic: overview
+description: In diesem Lernprogramm wird die Flow Service API verwendet, um CRM-Systeme zu untersuchen.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '583'
 ht-degree: 20%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 20%
 
 # CRM-System mit der [!DNL Flow Service] API
 
-[!DNL Flow Service] dient zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb der Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um CRM-Systeme zu untersuchen.
 
@@ -81,7 +82,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort ist eine Reihe von Tabellen von zu Ihrem CRM-System. Suchen Sie nach der Tabelle, die Sie in Ihre [!DNL Platform] Eigenschaft aufnehmen möchten, `path` und notieren Sie sich diese, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort ist eine Reihe von Tabellen von zu Ihrem CRM-System. Suchen Sie nach der Tabelle, die Sie einsetzen möchten, [!DNL Platform] und notieren Sie sich deren `path` Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
