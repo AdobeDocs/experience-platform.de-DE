@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Durchsetzen der Datennutzungskonformität für Zielgruppensegmente
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 42%
 
 ---
@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the following components of [!
 - [[!DNL Echtzeit-Profil]](../../profile/home.md): [!DNL Real-time Customer Profile] ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von [!DNL Experience Data Model] (XDM-)Daten in [!DNL Platform]. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
    - [Richtlinien](../../profile/api/merge-policies.md)zusammenführen: Regeln, [!DNL Real-time Customer Profile] mit denen bestimmt wird, welche Daten unter bestimmten Voraussetzungen in einer einheitlichen Ansicht zusammengeführt werden können. Merge policies can be configured for [!DNL Data Governance] purposes.
 - [[!DNL-Segmentierung]](../home.md): Wie [!DNL Real-time Customer Profile] unterteilt eine große Gruppe von im Profil Store enthaltenen Personen in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
-- [[!DNL-Datenverwaltung]](../../data-governance/home.md): [!DNL Data Governance] stellt die Infrastruktur für die Kennzeichnung und Durchsetzung der Datenverwendung (DULE) unter Verwendung der folgenden Komponenten bereit:
+- [[!DNL-Datenverwaltung]](../../data-governance/home.md): [!DNL Data Governance] stellt die Infrastruktur für die Kennzeichnung und Durchsetzung von Daten bereit, wobei folgende Komponenten verwendet werden:
    - [Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern in Bezug auf die Sensibilität, mit der die jeweiligen Daten verarbeitet werden sollen, verwendet werden.
    - [Datennutzungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketing-Aktionen für Daten zulässig sind, die nach bestimmten Datennutzungsbezeichnungen kategorisiert sind.
    - [Durchsetzung](../../data-governance/enforcement/overview.md)der Politik: Ermöglicht es Ihnen, Datenverwendungsrichtlinien zu erzwingen und Datenvorgänge zu verhindern, die Richtlinienverletzungen darstellen.
@@ -187,7 +187,7 @@ Eine erfolgreiche Antwort gibt die Details der Zusammenführungsrichtlinie zurü
 >
 > Bei diesem Schritt wird davon ausgegangen, dass Sie über mindestens eine aktive Datenverwendungsrichtlinie verfügen, die verhindert, dass bestimmte Marketingaktionen für Daten mit bestimmten Beschriftungen durchgeführt werden. Wenn Sie keine anwendbaren Nutzungsrichtlinien für die zu evaluierenden Datensätze haben, führen Sie das [Richtlinienerstellungslehrgang](../../data-governance/policies/create.md) durch, um eine zu erstellen, bevor Sie mit diesem Schritt fortfahren.
 
-Nachdem Sie die IDs der Quelldatasets der Richtlinie zur Zusammenführung erhalten haben, können Sie diese Datensätze mit der [DUL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gegen bestimmte Marketingaktionen auswerten, um Verstöße gegen die Datenverwendungsrichtlinie zu prüfen.
+Nachdem Sie die IDs der Quelldatasets der Richtlinie erhalten haben, können Sie diese Datensätze mit der [Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) gegen bestimmte Marketingaktionen auswerten, um Verstöße gegen die Datenschutzrichtlinien zu prüfen.
 
 Zur Auswertung der Datensätze müssen Sie den Namen der Marketingaktion im Pfad einer Anforderung zur POST angeben und gleichzeitig die Datensatzkennungen im Anforderungstext bereitstellen, wie im folgenden Beispiel gezeigt.
 
