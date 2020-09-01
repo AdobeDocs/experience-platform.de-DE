@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Produktdokumentation zu Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 18ea9482b9c6691c6326d91b2d0d3da9a8dc7195
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '7187'
+source-wordcount: '7145'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 **Aktivieren:** Bei &quot;Aktivieren&quot; [!DNL Real-time Customer Data Platform]handelt es sich um die Aktion, die ein Benutzer zum Zuordnen eines Segments oder von Profilen zu einem Ziel wie [!DNL Oracle Eloqua], [!DNL Google]oder [!DNL Salesforce Marketing Cloud].
 
-**Aktivität:** Bei [!DNL Offer Decisioning]einer Aktivität handelt es sich um eine Reihe von Angeboten, aus denen der Marketingexperte das beste Angebot auswählen möchte.
+**Aktivität:** Bei einer Aktivität handelt es sich [!DNL Offer Decisioning]um eine Reihe von Angeboten, aus denen der Marketingexperte das beste Angebot auswählen möchte.
 
 **Administrator:** Eine oder mehrere Personen in Ihrem Unternehmen, die die Berechtigungen für die Experience Platform konfigurieren und anpassen können.
 
@@ -140,7 +140,7 @@ ht-degree: 1%
 
 **C9-Vertragssiegel:** `C9` &quot;Contract Data Governance&quot;-Etikett gibt an, dass Daten in Data Science-Workflows nicht verwendet werden können. Einige Verträge beinhalten explizite Verbote von Daten, die für die Datenwissenschaft verwendet werden.  Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verbieten.
 
-**C10-Vertragssiegel:** `C10` &quot;Contract Data Governance&quot;-Bezeichnung gibt an, dass Datendaten nicht für die Aktivierung von zusammengeführten Identitäten verwendet werden können. Einige Datenverwendungsrichtlinien beschränken die Verwendung von gehefteten Identitätsdaten für die Personalisierung. Die C10-Beschriftung wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option &quot;Privates Diagramm&quot;verwenden.
+**C10-Vertragssiegel:** `C10` &quot;Contract Data Governance&quot;-Bezeichnung gibt an, dass Daten nicht für die Aktivierung von zusammengenähmten Identitäten verwendet werden können. Einige Datenverwendungsrichtlinien beschränken die Verwendung von gehefteten Identitätsdaten für die Personalisierung. Die C10-Beschriftung wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option &quot;Privates Diagramm&quot;verwenden.
 
 **Spalte &quot;Erstellungsdatum&quot;:** Die Auswahl einer `Created Date` Spalte ist eine Option, wenn Daten von Drittanbietern über eine Verbindung angegeben werden. Wenn die Speicherstrategie zum Anhängen ausgewählt ist und der Datensatz ein Schema mit mehreren Daten enthält, muss der Benutzer aus dem verfügbaren Datums-/Uhrzeitfeld wählen, um eine `Created Date` Schlüsselspalte anzugeben. `Created Date` nicht verfügbar ist, wenn die Speicherstrategie überschreiben ausgewählt ist.
 
@@ -217,8 +217,6 @@ ht-degree: 1%
 **Direktaufrufregeln:** in [!DNL Experience Platform Launch]können Sie eine [!UICONTROL Direktaufruf] - [!UICONTROL Regel] einrichten, die ausgeführt wird, wenn sie direkt von der Seite aufgerufen wird. Wenn das Laden Ihrer Seite oder Ihre Aktion auf Ihrer Site sehr einfach ist oder sie eindeutig ist und Sie jedes Mal einen bestimmten Satz von Anweisungen ausführen können ( [!DNL eVar4] auf X eingestellt und [!DNL event2] jedes Mal ausgelöst), können Sie eine [!UICONTROL Direktaufrufregel] - [!UICONTROL Regel]verwenden. Siehe [!DNL Launch] Dokumentation zum Erstellen von [!UICONTROL Direktaufrufregeln] - [!UICONTROL Regeln].
 
 **Anzeigename:** Der Anzeigename ist ein benutzerfreundlicher Name eines Felds, der in der Benutzeroberfläche angezeigt wird.
-
-**DULE:** DULE ist ein Akronym für die *Datenverwendung, die Kennzeichnung und Durchsetzung*. DULE ist ein wichtiger Bestandteil der Datenverwaltung und eine Sammlung von Schlüsselfunktionen, die eine Datenverwendungskennzeichnung und die Anwendung von Datenzugriffsrichtlinien für Governance-Anforderungen in einem Unternehmen ermöglichen.
 
 [Zurück zum Anfang](#adobe-experience-platform-glossary)
 
