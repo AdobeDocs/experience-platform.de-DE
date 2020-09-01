@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics; classifications
+keywords: Experience Platform;home;popular topics; analytics;classifications
 description: In diesem Lernprogramm werden Schritte zum Erstellen eines Adobe Analytics Classifications Data Connectors in der Benutzeroberfläche beschrieben, um Classification-Daten in Adobe Experience Platform zu importieren.
 solution: Experience Platform
 title: Adobe Analytics Classifications Data Connector in der Benutzeroberfläche erstellen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
