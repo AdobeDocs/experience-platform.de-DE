@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: Erstellen eines Quell-Connectors für PostgreSQL über die Benutzeroberfläche
 topic: overview
+description: Dieses Lernprogramm enthält Schritte zum Erstellen eines PostgreSQL-Quellconnectors (im Folgenden "PSQL" genannt) mithilfe der Plattform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '474'
 ht-degree: 11%
 
 ---
