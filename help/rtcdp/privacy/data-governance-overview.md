@@ -5,7 +5,7 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 56%
@@ -76,7 +76,7 @@ Wenn ein Richtlinienverstoß beim Versuch auftritt, ein Segment zu aktivieren (o
 
 ![](assets/violation-popover.png)
 
-Die Registerkarte *[!UICONTROL Details]* des Popup-Fensters zeigt die Aktion an, die den Verstoß ausgelöst hat, den Grund für den Verstoß und Vorschläge, wie das Problem möglicherweise gelöst werden kann.
+Die Registerkarte **[!UICONTROL Details]** des Popup-Fensters zeigt die Aktion an, die den Verstoß ausgelöst hat, den Grund für den Verstoß und Vorschläge, wie das Problem möglicherweise gelöst werden kann.
 
 Klicken Sie auf **[!UICONTROL Datenherkunft]**, um die Ziele, Segmente, Zusammenführungsrichtlinien oder Datensätze zu verfolgen, deren Datenbezeichnungen den Verstoß ausgelöst haben.
 
