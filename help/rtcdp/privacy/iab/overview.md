@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Unterstützung von IAB TCF 2.0 in der Echtzeit-Plattform für Kundendaten
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 2%
@@ -41,11 +41,11 @@ Dieser Leitfaden erfordert auch ein Verständnis der folgenden Adobe Experience 
 * [Experience-Datenmodell (XDM)](../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
 * [Adobe Experience Platform-Identitätsdienst](../../../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 * [Echtzeit-Profil](../../../profile/home.md): Ermöglicht [!DNL Identity Service] die Erstellung detaillierter Kundendaten aus Ihren Datensätzen in Echtzeit. [!DNL Real-time Customer Profile] ruft Daten aus dem Data Lake ab und behält die Profil der Kunden in einem eigenen separaten Datenspeicher bei.
-* [Adobe Experience Platform Web SDK](../../../edge/home.md): A client-side JavaScript library that allows you to integrate various [!DNL Platform] services into your customer-facing website.
-   * [SDK consent commands](../../../edge/fundamentals/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
-* [Adobe Experience Platform Segmentation Service](../../../segmentation/home.md): Allows you to divide [!DNL Real-time Customer Profile] data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
+* [Adobe Experience Platform Web SDK](../../../edge/home.md): Eine clientseitige JavaScript-Bibliothek, mit der Sie verschiedene [!DNL Platform] Dienste in Ihre kundenorientierte Website integrieren können.
+   * [SDK-Zustimmungsbefehle](../../../edge/fundamentals/supporting-consent.md): Eine Gebrauchsanweisung zu den einwilligungsbezogenen SDK-Befehlen, die in diesem Handbuch gezeigt werden.
+* [Adobe Experience Platform-Segmentierungsdienst](../../../segmentation/home.md): Ermöglicht es Ihnen, [!DNL Real-time Customer Profile] Daten in Gruppen von Einzelpersonen zu unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
 
-In addition to the [!DNL Platform] services listed above, you should also be familiar with [destinations](../../destinations/destinations-overview.md) and their use in [!DNL Real-time CDP].
+Neben den oben aufgeführten [!DNL Platform] Diensten sollten Sie auch mit [Zielen](../../destinations/destinations-overview.md) und deren Verwendung in vertraut sein [!DNL Real-time CDP].
 
 ## Übersicht zum Ablauf der Kundengenehmigung {#summary}
 
@@ -56,25 +56,25 @@ In den folgenden Abschnitten wird beschrieben, wie Daten zur Einwilligung erfass
 [!DNL Real-time CDP] ermöglicht Ihnen die Erfassung von Daten zur Kundeneinwilligung durch den folgenden Prozess:
 
 1. Ein Kunde gibt seine Einwilligung in die Datenerfassung durch einen Dialog auf Ihrer Website.
-1. Your CMP detects the consent preference change, and generates IAB consent data accordingly.
+1. Ihr CMP erkennt die Änderung der Einwilligungsvoreinstellung und generiert die IAB-Einwilligungsdaten entsprechend.
 1. Mithilfe der [!DNL Experience Platform Web SDK]werden die (vom CMP zurückgesendeten) Daten zur erteilten Zustimmung an Adobe Experience Platform gesendet.
-1. The collected consent data is ingested into a [!DNL Profile]-enabled dataset whose schema contains IAB consent fields.
+1. Die erfassten Daten zur Einwilligung werden in einen [!DNL Profile]aktivierten Datensatz aufgenommen, dessen Schema die IAB-Einwilligungsfelder enthält.
 
-In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into [!DNL Experience Platform] through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
+Zusätzlich zu den SDK-Befehlen, die durch CMP-Zugriffs-Änderungs-Haken ausgelöst werden, können die Genehmigungsdaten auch [!DNL Experience Platform] durch kundengenerierte XDM-Daten fließen, die direkt in einen [!DNL Profile]aktivierten Datensatz hochgeladen werden.
 
-Any segments shared with [!DNL Platform] by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data, provided that the appropriate fields have been applied to those segments through [!DNL Experience Cloud Identity Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/de-DE/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Alle Segmente, die [!DNL Platform] von Adobe Audience Manager (über den [!DNL Audience Manager] Quell-Connector oder anderweitig) gemeinsam genutzt werden, können auch Zustimmungsdaten enthalten, sofern die entsprechenden Felder über [!DNL Experience Cloud Identity Service]die entsprechenden Felder auf diese Segmente angewendet wurden. Weitere Informationen zum Sammeln von Genehmigungsdaten finden Sie [!DNL Audience Manager]im Dokument zum [Adobe Audience Manager-Plug-in für IAB TCF](https://docs.adobe.com/help/de-DE/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
 ### Durchsetzung von Genehmigungen
 
-Once IAB consent data has successfully been ingested, the following processes take place in downstream [!DNL Real-time CDP] services:
+Nach der erfolgreichen Erfassung der IAB-Genehmigungsdaten werden die folgenden Prozesse in nachgelagerten [!DNL Real-time CDP] Diensten durchgeführt:
 
-1. [!DNL Real-time Customer Profile] updates the stored consent data for that customer&#39;s profile.
-1. [!DNL Real-time CDP] processes customer IDs only if the vendor permission for [!DNL Real-time CDP] (565) is provided for every ID in a cluster.
-1. When exporting segments to destinations belonging to members of the TCF 2.0 vendor list, [!DNL Real-time CDP] only includes profiles if the vendor permissions for both [!DNL Real-time CDP] (565) *and* the destination is provided for every ID in a cluster.
+1. [!DNL Real-time Customer Profile] aktualisiert die gespeicherten Einwilligungsdaten für das Profil des Kunden.
+1. [!DNL Real-time CDP] verarbeitet Kunden-IDs nur, wenn die Herstellerberechtigung für [!DNL Real-time CDP] (565) für jede ID in einem Cluster bereitgestellt wird.
+1. Beim Exportieren von Segmenten in Ziele, die zu Mitgliedern der TCF 2.0-Anbieter-Liste gehören, werden [!DNL Real-time CDP] nur Profil einbezogen, wenn die Herstellerberechtigungen für [!DNL Real-time CDP] (565) *und* das Ziel für jede ID in einem Cluster bereitgestellt werden.
 
-The rest of the sections in this document provide guidance on how to configure [!DNL Real-time CDP] and your data operations to fulfill the collection and enforcement requirements described above.
+Die übrigen Abschnitte in diesem Dokument enthalten Anleitungen zur Konfiguration [!DNL Real-time CDP] und Ausführung Ihrer Datenvorgänge, um die oben beschriebenen Anforderungen an die Erfassung und Durchsetzung zu erfüllen.
 
-## Determine how to generate customer consent data within your CMP {#consent-data}
+## Ermitteln Sie, wie Daten zur Kundengenehmigung in Ihrem CMP generiert werden. {#consent-data}
 
 Da jedes CMP-System einzigartig ist, müssen Sie die beste Methode festlegen, um Ihren Kunden die Zustimmung zu geben, während sie mit Ihrem Service interagieren. Eine gängige Möglichkeit hierfür ist die Verwendung eines Cookie-Einwilligungsdialogs, ähnlich dem folgenden Beispiel:
 
@@ -121,12 +121,12 @@ Nachdem Sie Ihre CMP zur Generierung von Zustimmungszeichenfolgen konfiguriert h
 
 Damit das SDK Daten an senden kann, müssen Sie zunächst eine neue Edge-Konfiguration für [!DNL Experience Platform]In erstellen [!DNL Platform] [!DNL Adobe Experience Platform Launch]. Spezifische Schritte zum Erstellen einer neuen Konfiguration finden Sie in der [SDK-Dokumentation](../../../edge/fundamentals/edge-configuration.md).
 
-Nachdem Sie einen eindeutigen Namen für die Konfiguration angegeben haben, klicken Sie auf die Umschalter neben *[!UICONTROL Adobe Experience Platform]*. Next, use the following values to complete the rest of the form:
+Nachdem Sie einen eindeutigen Namen für die Konfiguration angegeben haben, klicken Sie auf die Umschalter neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie anschließend die folgenden Werte, um den Rest des Formulars auszufüllen:
 
 | Edge-Konfigurationsfeld | Wert |
 | --- | --- |
-| [!UICONTROL Sandbox] | The name of the [!DNL Platform] [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
-| [!UICONTROL Streaming Inlet] | Eine gültige Streaming-Verbindung für [!DNL Experience Platform]. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
+| [!UICONTROL Sandbox] | Der Name der [!DNL Platform] Sandbox [](../../../sandboxes/home.md) , die die erforderliche Streaming-Verbindung und die zum Einrichten der Edge-Konfiguration erforderlichen Datensätze enthält. |
+| [!UICONTROL Streaming-Inlet] | Eine gültige Streaming-Verbindung für [!DNL Experience Platform]. Informationen zum [Erstellen einer Streaming-Verbindung](../../../ingestion/tutorials/create-streaming-connection-ui.md) finden Sie im Lernprogramm, wenn Sie keinen vorhandenen Streaming-Eingang haben. |
 | [!UICONTROL Ereignis DataSet] | Wählen Sie den [!DNL XDM ExperienceEvent] Datensatz aus, der im [vorherigen Schritt](#datasets)erstellt wurde. |
 | [!UICONTROL Profil DataSet] | Wählen Sie den [!DNL XDM Individual Profile] Datensatz aus, der im [vorherigen Schritt](#datasets)erstellt wurde. |
 
@@ -136,17 +136,17 @@ Wenn Sie fertig sind, klicken Sie unten auf dem Bildschirm auf **[!UICONTROL Spe
 
 ### Befehle zum Ändern der Zustimmung
 
-Once you have created the edge configuration described in the previous section, you can start using SDK commands to send consent data to [!DNL Platform]. The sections below provide examples of how each SDK command can be used in different scenarios.
+Nachdem Sie die im vorherigen Abschnitt beschriebene Edge-Konfiguration erstellt haben, können Sie mithilfe von SDK-Befehlen Beginn zum Senden von Genehmigungsdaten an [!DNL Platform]erstellen. Die folgenden Abschnitte enthalten Beispiele dafür, wie jeder SDK-Befehl in verschiedenen Szenarien verwendet werden kann.
 
 >[!NOTE]
 >
->For an introduction to the common syntax for all [!DNL Platform] SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
+>Eine Einführung in die allgemeine Syntax für alle [!DNL Platform] SDK-Befehle finden Sie im Dokument zum [Ausführen von Befehlen](../../../edge/fundamentals/executing-commands.md).
 
-#### Using CMP consent-change hooks
+#### Verwenden von CMP-Haken zum Ändern der Zustimmung
 
-Many CMPs provide out-of-the-box hooks that listen to consent-change events. Wenn diese Ereignis auftreten, können Sie den `setConsent` Befehl verwenden, um die Einwilligungsdaten des Kunden zu aktualisieren.
+Viele CMPs bieten vordefinierte Haken, die auf Ereignisse zur Änderung der Zustimmung hören. Wenn diese Ereignis auftreten, können Sie den `setConsent` Befehl verwenden, um die Einwilligungsdaten des Kunden zu aktualisieren.
 
-The `setConsent` command expects two arguments: (1) a string that indicates the command type (in this case, &quot;setConsent&quot;), and (2) a payload that contains a `consent` array, which must contain at least one object that provides the required consent fields, as shown below:
+Der `setConsent` Befehl erwartet zwei Argumente: (1) eine Zeichenfolge, die den Befehlstyp angibt (in diesem Fall &quot;setConsent&quot;), und (2) eine Nutzlast, die ein `consent` Array enthält, das mindestens ein Objekt enthalten muss, das die erforderlichen Felder für die Zustimmung bereitstellt, wie unten dargestellt:
 
 ```js
 alloy("setConsent", {
@@ -159,10 +159,10 @@ alloy("setConsent", {
 });
 ```
 
-| Payload property | Beschreibung |
+| Payload-Eigenschaft | Beschreibung |
 | --- | --- |
-| `standard` | The consent standard being used. This value must be set to &quot;IAB&quot; for TCF 2.0 consent processing. |
-| `version` | The version number of the consent standard indicated under `standard`. This value must be set to &quot;2.0&quot; for TCF 2.0 consent processing. |
+| `standard` | Der verwendete Zustimmungsstandard. Dieser Wert muss für die Verarbeitung der TCF 2.0-Zustimmung auf &quot;IAB&quot;gesetzt werden. |
+| `version` | Die Versionsnummer des Zustimmungsstandards unter `standard`. Dieser Wert muss für die Verarbeitung der TCF 2.0-Zustimmung auf &quot;2.0&quot;gesetzt werden. |
 | `value` | Die Base-64-kodierte Zustimmungszeichenfolge, die vom CMP generiert wurde. |
 | `gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für den derzeit angemeldeten Kunden gilt. Damit TCF 2.0 für diesen Kunden erzwungen wird, muss der Wert auf &quot;true&quot;gesetzt werden. |
 
@@ -243,11 +243,11 @@ Für TCF 2.0 ist außerdem erforderlich, dass die Datenquelle vor dem Senden der
 
 >[!NOTE]
 >
->Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes and vendor permission are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/de-DE/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
+>Alle Segmente, die für Adobe Audience Manager freigegeben werden, enthalten dieselben TCF 2.0-Zustimmungswerte wie ihre [!DNL Platform] Gegenstücke. Da [!DNL Audience Manager] dieselbe Anbieter-ID wie [!DNL Real-time CDP] (565) verwendet wird, sind dieselben Zwecke und die gleiche Herstellerberechtigung erforderlich. Weitere Informationen finden Sie im Dokument zum [Adobe Audience Manager-Plug-in für IAB TCF](https://docs.adobe.com/help/de-DE/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) .
 
 ## Test your implementation {#test-implementation}
 
-Once you have configured your TCF 2.0 implementation and have exported segments to destinations, any data that does not meet consent requirements will not be exported. Um jedoch festzustellen, ob die richtigen Kundendaten während des Exports gefiltert wurden, müssen Sie die Datenspeicher Ihrer Profil manuell überprüfen, um festzustellen, ob die Zustimmung ordnungsgemäß durchgesetzt wurde.
+Nachdem Sie Ihre TCF 2.0-Implementierung konfiguriert und Segmente an Ziele exportiert haben, werden Daten, die die Anforderungen für die Zustimmung nicht erfüllen, nicht exportiert. Um jedoch festzustellen, ob die richtigen Kundendaten während des Exports gefiltert wurden, müssen Sie die Datenspeicher Ihrer Profil manuell überprüfen, um festzustellen, ob die Zustimmung ordnungsgemäß durchgesetzt wurde.
 
 Beachten Sie, dass bei mehreren IDs, aus denen ein Cluster besteht und bei denen TCF 2.0 angewendet wird, der gesamte Cluster ausgeschlossen wird, wenn selbst eine einzelne ID nicht die richtigen Zwecke und die richtige(n) Herstellerberechtigung(en) enthält.
 
