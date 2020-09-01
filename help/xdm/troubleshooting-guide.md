@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Experience Data Model (XDM)
+description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Experience Data Model (XDM) System sowie eine Anleitung zur Fehlerbehebung für häufige Fehler.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -82,7 +83,7 @@ Schema sind für die Verwendung im [[!DNL Echtzeit-Kundenkonto]](../profile/home
 
 Führen Sie eine PATCH-Anforderung durch, um das Schema zu aktualisieren und das `meta:immutableTags` Attribut als Array mit dem Wert &quot;Vereinigung&quot;hinzuzufügen. Wenn die Aktualisierung erfolgreich ist, zeigt die Antwort das aktualisierte Schema an, das jetzt das Vereinigung-Tag enthält.
 
-Weitere Informationen zur Verwendung der API zum Aktivieren eines Schemas für die Verwendung in [!DNL Real-time Customer Profile]finden Sie im Dokument [Vereinigungen](./api/unions.md) des Entwicklerhandbuchs [!DNL Schema Registry] .
+Weitere Informationen zur Verwendung der API zum Aktivieren eines Schemas für die Verwendung in [!DNL Real-time Customer Profile]finden Sie im Dokument [Vereinigungen](./api/unions.md) im Entwicklerhandbuch [!DNL Schema Registry] .
 
 #### Aktivieren eines vorhandenen Schemas zur [!DNL Profile] Verwendung der Benutzeroberfläche
 
