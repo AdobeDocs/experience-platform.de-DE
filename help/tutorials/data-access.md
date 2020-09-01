@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: Lernprogramme zum Datenzugriff
 topic: tutorial
+description: Adobe Experience Platform ermöglicht es Benutzern, mithilfe der Datenzugriff-API erfasste Datensätze innerhalb der Experience Platform zu ermitteln und darauf zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '121'
 ht-degree: 2%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 2%
 
 # Zugriff auf Experience Platformen
 
-Mit der Adobe Experience Platform können Benutzer [!DNL Experience Platform] mithilfe der Datenzugriff-API erfasste Datensätze erkennen und darauf zugreifen.
+Mit Adobe Experience Platform können Benutzer mithilfe der Datenzugriff-API [!DNL Experience Platform] erfasste Datensätze erkennen und darauf zugreifen.
 
 ## Zugriff auf Daten mithilfe von APIs
 
-Erfahren Sie, wie Sie in einem Datensatz gespeicherte Daten mithilfe der Datenzugriff-API in der Adobe Experience Platform suchen, aufrufen und herunterladen können. Erfahren Sie außerdem, wie Sie einige der einzigartigen Funktionen der Datenzugriff-API, wie z. B. Paging und teilweise Downloads, nutzen können. Beginnen Sie mit dem Lernprogramm zur API für den [Datenzugriff](../data-access/tutorials/dataset-data.md).
+Erfahren Sie, wie Sie mit der Data Access API in Adobe Experience Platform gespeicherte Daten suchen, aufrufen und herunterladen können. Erfahren Sie außerdem, wie Sie mit der Datenzugriff-API einige der einzigartigen Funktionen der Datenzugriff-API, wie z. B. Paging und teilweise Downloads, nutzen können. Beginnen Sie mit dem Lernprogramm zur API für den [Datenzugriff](../data-access/tutorials/dataset-data.md).
 
 ## Erstellen eines Datensatzes
 
