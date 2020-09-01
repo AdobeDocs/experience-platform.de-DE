@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
 solution: Experience Platform
 title: Data Deduplizierung-Duplikate
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Bei Duplikat ExperienceEvents sollten Sie die gesamte Zeile ignorieren.
 
 >[!CAUTION]
 >
->Für viele DataSets in [!DNL Experience Platform], einschließlich der vom Adobe Analytics Data Connector erstellten, wurde bereits ein Deduplizierung-Duplikate auf ExperienceEvent-Ebene angewendet. Daher ist eine erneute Anwendung dieser Deduplizierung-Duplikate-Ebene nicht erforderlich und wird Ihre Abfrage verlangsamen. Es ist wichtig, die Quelle Ihrer DataSets zu verstehen und zu wissen, ob Deduplizierung-Duplikate auf ExperienceEvent-Ebene bereits angewendet wurde. Für alle Streaming-DataSets (z. B. solche aus Adobe Target) müssen Sie Deduplizierung-Duplikate auf ExperienceEvent-Ebene anwenden, da diese Datenquellen eine Semantik von &quot;mindestens einmal&quot;aufweisen.
+>Für viele DataSets in [!DNL Experience Platform], einschließlich der vom Adobe Analytics Data Connector erstellten, wurde bereits ein Deduplizierung-Duplikate auf ExperienceEvent-Ebene angewendet. Daher ist eine erneute Anwendung dieser Deduplizierung-Duplikate-Ebene nicht erforderlich und wird Ihre Abfrage verlangsamen. Es ist wichtig, die Quelle Ihrer DataSets zu verstehen und zu wissen, ob Deduplizierung-Duplikate auf ExperienceEvent-Ebene bereits angewendet wurde. Für alle Streaming-DataSets (z. B. von Adobe Target) müssen Sie Deduplizierung-Duplikate auf ExperienceEvent-Ebene anwenden, da diese Datenquellen eine Semantik von &quot;mindestens einmal&quot;aufweisen.
 
 **Anwendungsbereich:** Global
 
