@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sql server;SQL server
 solution: Experience Platform
 title: Erstellen eines SQL Server-Connectors mithilfe der Flow Service API
 topic: overview
+description: Dieses Lernprogramm verwendet die Flow-Dienst-API, um Sie durch die Schritte zum Herstellen einer Verbindung zwischen Experience Platform und Microsoft SQL Server (nachfolgend "SQL Server"genannt) zu führen.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 20%
+source-wordcount: '607'
+ht-degree: 19%
 
 ---
 
