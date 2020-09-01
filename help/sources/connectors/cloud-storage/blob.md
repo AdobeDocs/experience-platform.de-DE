@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Blob;blob;Azure Blob;azure blob
 solution: Experience Platform
 title: Azurblutstecker
 topic: overview
+description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie Blaus Blob mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbinden.
 translation-type: tm+mt
-source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -16,13 +17,13 @@ ht-degree: 0%
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform]und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform]importieren.
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Azure Blob] through batches.
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen, Daten aus [!DNL Azure Blob] Stapeln einzubringen.
 
-## IP address allow list
+## ZULASSUNGSLISTE der IP-Adresse
 
-The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
+Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
-### East US region
+### Ost-USA-Region
 
 - `20.41.2.0/23`
 - `20.41.4.0/26`
@@ -41,7 +42,7 @@ The following IP addresses must be added to an allow list prior to working with 
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-### Australia East
+### Australien Osten
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -50,15 +51,15 @@ The following IP addresses must be added to an allow list prior to working with 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-The documentation below provides information on how to connect Azure Blob to Platform using APIs or the user interface:
+In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung von Azurblauch mit der Plattform herstellen:
 
-## Connect [!DNL Azure Blob] to [!DNL Platform] using APIs
+## Verbindung [!DNL Azure Blob] mit [!DNL Platform] APIs
 
-- [Create an Azure Blob connector using the Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
+- [Erstellen eines Azurblauch-Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Connect [!DNL Blob] and S3 to [!DNL Platform] using the UI
+## Verbindung [!DNL Blob] und S3 zur [!DNL Platform] Verwendung der Benutzeroberfläche
 
 - [Erstellen eines Azurblauch-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
