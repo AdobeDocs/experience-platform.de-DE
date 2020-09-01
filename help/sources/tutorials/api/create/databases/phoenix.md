@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Erstellen eines Phoenix-Connectors mit der Flow Service API
 topic: overview
+description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, mit denen Sie eine Phoenix-Datenbank mit der Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 19%
+source-wordcount: '646'
+ht-degree: 18%
 
 ---
 
