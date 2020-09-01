@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Amazon Kinesis-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
+description: In diesem Lernprogramm werden Schritte zum Authentifizieren eines Amazon Kinesis (im Folgenden "Kinesis")-Quellconnectors über die Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '482'
 ht-degree: 9%
 
 ---
