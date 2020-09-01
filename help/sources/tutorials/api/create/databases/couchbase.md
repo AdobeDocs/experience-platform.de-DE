@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
 title: Erstellen eines Couchbase-Connectors mit der Flow Service API
 topic: overview
+description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zur Verbindung von Couchbase mit der Experience Platform zu führen.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 23%
+source-wordcount: '535'
+ht-degree: 22%
 
 ---
 
