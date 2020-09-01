@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
 title: Generischer OData Connector
 topic: overview
+description: Die nachstehende Dokumentation enthält Informationen dazu, wie generische OData mit APIs oder der Benutzeroberfläche mit der Plattform verbunden werden.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 9%
+source-wordcount: '223'
+ht-degree: 8%
 
 ---
 
