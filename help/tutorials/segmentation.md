@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutorials für Segmentierung
 topic: tutorial
+description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren Echtzeit-Kundenprofildaten Zielgruppen generieren können. Diese Segmente werden zentral auf Platform konfiguriert und gepflegt und stehen für jede Adobe-Lösung zur Verfügung.
 translation-type: tm+mt
-source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 52%
+source-wordcount: '584'
+ht-degree: 56%
 
 ---
 
@@ -38,7 +39,7 @@ Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a
 
 ## Streaming-Segmentierung
 
-Streaming-Segmentierung ist die Möglichkeit, einen Kunden sofort zu bewerten, sobald ein Ereignis in eine bestimmte Segmentgruppe aufgenommen wird. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Adobe Experience Platform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden. Weitere Informationen finden Sie in der [Streaming-Segmentierungs-Übersicht](../segmentation/api/streaming-segmentation.md).
+Streaming-Segmentierung ist die Möglichkeit, einen Kunden sofort zu bewerten, sobald ein Ereignis in eine bestimmte Segmentgruppe aufgenommen wird. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an Adobe Experience Platform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden. Weitere Informationen finden Sie in der [Streaming-Segmentierungs-Übersicht](../segmentation/api/streaming-segmentation.md).
 
 ## Segmentierung mit mehreren Entitäten
 
