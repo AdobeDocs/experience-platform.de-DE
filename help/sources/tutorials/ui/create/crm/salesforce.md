@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Erstellen eines Salesforce-Quellconnectors in der Benutzeroberfläche
 topic: overview
+description: In diesem Lernprogramm werden Schritte zum Erstellen eines Salesforce-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '452'
 ht-degree: 10%
 
 ---
