@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Berechnete Attribute - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2403'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
@@ -60,7 +60,7 @@ The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows t
 
 In den folgenden Schritten nutzen Sie die Benutzeroberfläche von Adobe Experience Platform, um ein Schema zu suchen, ein Mixin hinzuzufügen und ein Feld zu definieren. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
 
-Klicken Sie in der Benutzeroberfläche in der linken Leiste auf **[!UICONTROL Schemas]** und nutzen Sie die Suchleiste auf dem Tab *[!UICONTROL Durchsuchen]*, um das Schema, das Sie aktualisieren möchten, zu suchen.
+Klicken Sie in der Benutzeroberfläche in der linken Leiste auf **[!UICONTROL Schemas]** und nutzen Sie die Suchleiste auf dem Tab **[!UICONTROL Durchsuchen]**, um das Schema, das Sie aktualisieren möchten, zu suchen.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
@@ -70,7 +70,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ### Erstellen eines Mixins
 
-Um ein neues Mixin zu erstellen, klicken Sie im Abschnitt *[!UICONTROL Komposition]* auf der linken Seite des Editors neben *Mixins* auf **[!UICONTROL Hinzufügen]**. Dadurch wird der Dialog **[!UICONTROL Mixin hinzufügen]** geöffnet, in dem vorhandene Mixins angezeigt werden. Klicken Sie auf das Optionsfeld für **[!UICONTROL Neues Mixin erstellen]**, um Ihr neues Mixin zu definieren.
+Um ein neues Mixin zu erstellen, klicken Sie im Abschnitt **[!UICONTROL Komposition]** auf der linken Seite des Editors neben *Mixins* auf **[!UICONTROL Hinzufügen]**. Dadurch wird der Dialog **[!UICONTROL Mixin hinzufügen]** geöffnet, in dem vorhandene Mixins angezeigt werden. Klicken Sie auf das Optionsfeld für **[!UICONTROL Neues Mixin erstellen]**, um Ihr neues Mixin zu definieren.
 
 Geben Sie dem Mixin einen Namen und eine Beschreibung und klicken Sie anschließend auf **[!UICONTROL Mixin hinzufügen]**.
 
@@ -78,29 +78,29 @@ Geben Sie dem Mixin einen Namen und eine Beschreibung und klicken Sie anschließ
 
 ### Berechnetes Attributfeld für das Schema hinzufügen
 
-Ihr neues Mixin sollte nun im Abschnitt *[!UICONTROL Mixins]* unter *[!UICONTROL Komposition]* angezeigt werden. Klicken Sie auf den Namen des Mixins, woraufhin im Abschnitt *[!UICONTROL Struktur]* des Editors mehrere Schaltflächen vom Typ **[!UICONTROL Feld hinzufügen]** angezeigt werden.
+Ihr neues Mixin sollte nun im Abschnitt **[!UICONTROL Mixins]** unter **[!UICONTROL Komposition]** angezeigt werden. Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the *[!UICONTROL Structure]** section of the editor.
 
 Wählen Sie neben dem Namen des Schemas **[!UICONTROL Feld hinzufügen]**, um ein Feld der obersten Ebene hinzuzufügen. Alternativ können Sie das Feld an einer beliebigen Stelle im gewünschten Schema einfügen.
 
-Nachdem Sie auf **[!UICONTROL Feld hinzufügen]** geklickt haben, wird ein neues Objekt mit dem Namen Ihrer Mandantenkennung geöffnet. Dies zeigt, dass sich das Feld im richtigen Namespace befindet. Innerhalb des Objekts wird ein *[!UICONTROL neues Feld]* angezeigt. Dies ist das Feld, in dem Sie das berechnete Attribut definieren werden.
+Nachdem Sie auf **[!UICONTROL Feld hinzufügen]** geklickt haben, wird ein neues Objekt mit dem Namen Ihrer Mandantenkennung geöffnet. Dies zeigt, dass sich das Feld im richtigen Namespace befindet. Innerhalb des Objekts wird ein **[!UICONTROL neues Feld]** angezeigt. Dies ist das Feld, in dem Sie das berechnete Attribut definieren werden.
 
 ![](../images/computed-attributes/New-field.png)
 
 ### Feld konfigurieren
 
-Geben Sie im Abschnitt *[!UICONTROL Feldeigenschaften]* auf der rechten Seite des Editors die erforderlichen Daten für das neue Feld ein, einschließlich Name, Anzeigename und Typ.
+Geben Sie im Abschnitt **[!UICONTROL Feldeigenschaften]** auf der rechten Seite des Editors die erforderlichen Daten für das neue Feld ein, einschließlich Name, Anzeigename und Typ.
 
 >[!NOTE]
 >
 >Der Typ für das Feld muss mit dem Typ des berechneten Attributwerts übereinstimmen. Wenn der berechnete Attributwert beispielsweise eine Zeichenfolge ist, muss auch das im Schema definierte Feld eine Zeichenfolge sein.
 
-Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Übernehmen]**. Daraufhin werden der Name des Felds sowie der Typ im Abschnitt *[!UICONTROL Struktur]* des Editors angezeigt.
+Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Übernehmen]**. Daraufhin werden der Name des Felds sowie der Typ im Abschnitt **[!UICONTROL Struktur]** des Editors angezeigt.
 
 ![](../images/computed-attributes/Apply.png)
 
 ### Schema aktivieren für [!DNL Profile]
 
-Before continuing, ensure that the schema has been enabled for [!DNL Profile]. Klicken Sie im Bereich *[!UICONTROL Struktur]* des Editors auf den Namen des Schemas, um den Tab *[!UICONTROL Schemaeigenschaften]* anzuzeigen. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
+Before continuing, ensure that the schema has been enabled for [!DNL Profile]. Klicken Sie im Bereich **[!UICONTROL Struktur]** des Editors auf den Namen des Schemas, um den Tab **[!UICONTROL Schemaeigenschaften]** anzuzeigen. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
 
 >[!NOTE]
 >
