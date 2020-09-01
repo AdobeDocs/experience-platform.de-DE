@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;datatype;Datatype;data type;Data type;create
 solution: Experience Platform
 title: Erstellen eines Datentyps
 topic: developer guide
 description: 'Bestehen allgemeine Datenstrukturen, die Ihr Unternehmen auf verschiedene Weise verwenden möchte, kann die Definition eines Datentyps von Vorteil sein. Datentypen ermöglichen die konsistente Verwendung von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als Mixins, da sie an jeder beliebigen Stelle in einem Schema enthalten sein können, indem sie als Feldtyp hinzugefügt werden. '
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 83%
