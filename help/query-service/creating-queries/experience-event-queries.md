@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;ExperienceEvent query;
 solution: Experience Platform
 title: ExperienceEvent-Abfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 69%
@@ -12,7 +12,7 @@ ht-degree: 69%
 ---
 
 
-# [!DNL ExperienceEvent] Abfragen
+# [!DNL ExperienceEvent] abfragen
 
 In addition to standard SQL queries, Adobe Experience Platform [!DNL Query Service] supports writing queries using [!DNL ExperienceEvents]. An [!DNL ExperienceEvent] is an [!DNL Experience Data Model] (XDM) class that represents an immutable non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [!DNL XDM System] Übersicht. By combining [!DNL Query Service] with [!DNL ExperienceEvents], you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving [!DNL ExperienceEvents].
 
