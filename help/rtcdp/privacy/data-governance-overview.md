@@ -5,10 +5,10 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 56%
+source-wordcount: '1021'
+ht-degree: 57%
 
 ---
 
@@ -58,7 +58,7 @@ Das folgende Diagramm zeigt, wie die Richtliniendurchsetzung in den Datenfluss d
 
 ![](assets/enforcement-flow.png)
 
-When a segment is first activated, DULE [!DNL Policy Service] checks for policy violations based on the following factors:
+When a segment is first activated, [!DNL Policy Service] checks for policy violations based on the following factors:
 
 * Die Datennutzungsbezeichnungen, die auf Felder und Datensätze innerhalb des zu aktivierenden Segments angewendet werden.
 * Marketing-Zweck des Ziels.
