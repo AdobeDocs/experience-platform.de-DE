@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Marketingautomatisierungsanschluss in der Benutzeroberfläche
 topic: overview
+description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in [!DNL Platform] ADATASET eingefügt werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Marketing-Automatisierungskonto.
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1315'
 ht-degree: 3%
 
 ---
