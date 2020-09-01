@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: Übersicht über die Datenschutzmischung
+description: Das Mixin "Datenschutz/Marketing-Voreinstellungen"(Consent) ist ein XDM-Mixin (Experience Data Model), das die Erfassung von Benutzerberechtigungen und Voreinstellungen unterstützen soll, die von CMPs und anderen Quellen von Kunden generiert wurden. Dieses Dokument umfasst die Struktur und die vorgesehene Verwendung der verschiedenen Felder, die von der Mischung bereitgestellt werden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
@@ -266,7 +267,7 @@ In der folgenden Tabelle sind die zulässigen Werte für `xdm:basisOfProcessing`
 
 | Wert | Beschreibung |
 | --- | --- |
-| `consent` **(Standard)** | Die Datenerfassung für den angegebenen Zweck ist zulässig, da die Person ausdrücklich ihre Erlaubnis erteilt hat. Dies ist der Standardwert, `xdm:basisOfProcessing` wenn kein anderer Wert angegeben wird. <br><br>**WICHTIG **: Die Werte für`xdm:choice`und`xdm:optOutValue`werden nur berücksichtigt, wenn`xdm:basisOfProcessing`auf`consent`. Wenn`xdm:basisOfProcessing`stattdessen einer der anderen in dieser Tabelle aufgeführten Werte verwendet wird, werden die Einwilligungsentscheidungen des Einzelnen ignoriert. |
+| `consent` **(Standard)** | Die Datenerfassung für den angegebenen Zweck ist zulässig, da die Person ausdrücklich ihre Erlaubnis erteilt hat. Dies ist der Standardwert, `xdm:basisOfProcessing` wenn kein anderer Wert angegeben wird. <br><br>**WICHTIG**: Die Werte für `xdm:choice` und `xdm:optOutValue` werden nur berücksichtigt, wenn `xdm:basisOfProcessing` auf `consent`. Wenn `xdm:basisOfProcessing` stattdessen einer der anderen in dieser Tabelle aufgeführten Werte verwendet wird, werden die Einwilligungsentscheidungen des Einzelnen ignoriert. |
 | `compliance` | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die rechtlichen Verpflichtungen des Unternehmens zu erfüllen. |
 | `contract` | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um vertraglichen Verpflichtungen mit der Einzelperson nachzukommen. |
 | `legitimate_interest` | Das legitime Geschäftsinteresse, diese Daten für den angegebenen Zweck zu erheben und zu verarbeiten, überwiegt den potenziellen Schaden, den sie dem Einzelnen verursachen. |
