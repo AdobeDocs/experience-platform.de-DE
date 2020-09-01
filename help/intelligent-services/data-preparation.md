@@ -5,7 +5,7 @@ title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 description: 'Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von Consumer ExperienceEvent (CEE) entsprechen. '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 3%
@@ -272,7 +272,7 @@ Nachdem Sie das Schema erstellt und gespeichert haben, können Sie auf der Grund
 * [Erstellen Sie ein Dataset in der Benutzeroberfläche](../catalog/datasets/user-guide.md#create) (zum Verwenden eines vorhandenen Schemas im Workflow)
 * [Erstellen eines Datensatzes in der API](../catalog/datasets/create.md)
 
-Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche &quot;Plattform&quot;im Arbeitsbereich &quot; *[!UICONTROL Datensätze]* &quot;finden.
+Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche &quot;Plattform&quot;im Arbeitsbereich &quot; **[!UICONTROL Datensätze]** &quot;finden.
 
 ![](images/data-preparation/dataset-location.png)
 
