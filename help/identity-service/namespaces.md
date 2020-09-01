@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name<span>@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 64%
@@ -53,7 +53,7 @@ The following identity types are available within [!DNL Platform]:
 
 Adobe Experience Platform bietet verschiedene Identitäts-Namespaces, die für alle Organisationen verfügbar sind. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-Klicken Sie in der linken Leiste auf **[!UICONTROL Identitäten]** und dann auf den Tab *[!UICONTROL Durchsuchen]*, um in der Benutzeroberfläche die Standard-Namespaces anzuzeigen. All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
+Klicken Sie in der linken Leiste auf **[!UICONTROL Identitäten]** und dann auf den Tab **[!UICONTROL Durchsuchen]**, um in der Benutzeroberfläche die Standard-Namespaces anzuzeigen. All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
 
 Sie können dann auf einen der aufgeführten Namespaces klicken, um Details anzuzeigen.
 
@@ -71,7 +71,7 @@ Namespaces that you define are private to your organization and require a unique
 
 ![](./images/create-identity-namespace.png)
 
-Ähnlich wie bei Standard-Namespaces können Sie über den Tab *[!UICONTROL Durchsuchen]* auf einen benutzerdefinierten Namespace klicken, um dessen Details anzuzeigen. Bei einem benutzerdefinierten Namespace können Sie im Detailbereich jedoch auch dessen Anzeigenamen und die Beschreibung bearbeiten.
+Ähnlich wie bei Standard-Namespaces können Sie über den Tab **[!UICONTROL Durchsuchen]** auf einen benutzerdefinierten Namespace klicken, um dessen Details anzuzeigen. Bei einem benutzerdefinierten Namespace können Sie im Detailbereich jedoch auch dessen Anzeigenamen und die Beschreibung bearbeiten.
 
 >[!NOTE]
 >
