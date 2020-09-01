@@ -5,9 +5,9 @@ title: Datensätze – Übersicht
 topic: datasets
 description: Dieses Dokument bietet einen Überblick über Datensätze in der Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '722'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ See the [Data Ingestion overview](../../ingestion/home.md) for more information.
 
 ## Anwenden von Nutzungsbezeichnungen auf Datasets
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. Mithilfe der Datenbenennung und -durchsetzung (DULE) als Kernframework [!DNL Data Governance] können Sie Nutzungsbezeichnungen anwenden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren.
+Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. Mit dem [!DNL Data Governance] Framework können Sie Nutzungsbezeichnungen anwenden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren.
 
 Datenverwendungsbeschriftungen können auf ganze Datensätze oder einzelne Datensatzfelder angewendet werden. Auf Datensatzebene hinzugefügte Bezeichnungen werden von allen Feldern in diesem Datensatz übernommen.
 
