@@ -5,7 +5,7 @@ title: Übersicht über den Data Science Workspace
 topic: overview
 description: Dieser Leitfaden bietet einen Überblick über die wichtigsten Konzepte im Zusammenhang mit Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '2584'
 ht-degree: 4%
@@ -132,11 +132,11 @@ Die folgende Tabelle zeigt die Auswirkungen, die eine Aktivierung oder Deaktivie
 
 | Berechtigung | Aktiviert | Deaktiviert |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | Bietet Zugriff auf alle Dienste in [!DNL Data Science Workspace]. | API- und UI-Zugriff auf alle Dienste innerhalb [!DNL Data Science Workspace] sind deaktiviert. Bei Deaktivierung wird das Routing zu den [!DNL Data Science Workspace] Modellen *[!UICONTROL - und]* Dienstseiten ** verhindert. |
+| [!DNL Manage Data Science Workspace] | Bietet Zugriff auf alle Dienste in [!DNL Data Science Workspace]. | API- und UI-Zugriff auf alle Dienste innerhalb [!DNL Data Science Workspace] sind deaktiviert. Bei Deaktivierung wird das Routing zu den [!DNL Data Science Workspace] Modellen **[!UICONTROL - und]** Dienstseiten **** verhindert. |
 
 ### Sicherheit und Seelenfrieden
 
-Die Sicherung Ihrer Daten ist eine der obersten Prioritäten für die Adobe. Adobe schützt Ihre Daten mit Sicherheitsvorgängen und -kontrollen, die zur Einhaltung branchenüblicher Normen, Vorschriften und Zertifizierungen entwickelt wurden.
+Die Sicherung Ihrer Daten ist eine der obersten Prioritäten der Adobe. Adobe schützt Ihre Daten mit Sicherheitsvorgängen und -kontrollen, die zur Einhaltung branchenüblicher Normen, Vorschriften und Zertifizierungen entwickelt wurden.
 
 Security ist Teil der Adobe Secure Product Lifecycle in Software und Services integriert.
 Weitere Informationen zu Adoben- und Softwaresicherheit, Compliance und mehr finden Sie auf der Seite &quot;Sicherheit&quot;unter https://www.adobe.com/security.html.
