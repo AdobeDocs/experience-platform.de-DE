@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 4%
@@ -29,13 +29,13 @@ Für dieses Lernprogramm müssen Sie außerdem bereits einen Datensatz zum Erfas
 
 ## Ziel auswählen
 
-Melden Sie sich bei [[!DNL Adobe Experience Platform]](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Workflows]** aus, um auf den *[!UICONTROL Workflows]* Arbeitsbereich zuzugreifen.
+Melden Sie sich bei [[!DNL Adobe Experience Platform]](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste **[!UICONTROL Workflows]** aus, um auf den **[!UICONTROL Workflows]** Arbeitsbereich zuzugreifen.
 
 Wählen Sie im **[!UICONTROL Workflows]** -Bildschirm unter &quot; **[!UICONTROL Datenaufnahme]** &quot;die Option &quot;CSV-Datei XDM-Schema **** zuordnen&quot;und wählen Sie dann &quot; **[!UICONTROL Starten]**&quot;aus.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-Der Arbeitsablauf *[!UICONTROL CSV zu XDM-Schema]* zuordnen wird angezeigt, beginnend mit dem *[!UICONTROL Zielschritt]* . Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
+Der Arbeitsablauf **[!UICONTROL CSV zu XDM-Schema]** zuordnen wird angezeigt, beginnend mit dem **[!UICONTROL Zielschritt]** . Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
 
 **Vorhandenen Datensatz verwenden**
 
@@ -49,27 +49,27 @@ Um Ihre CSV-Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen 
 
 ## hinzufügen
 
-Der Schritt *[!UICONTROL Daten hinzufügen]* wird angezeigt. Ziehen Sie die CSV-Datei in den vorgesehenen Bereich oder wählen Sie &quot;Dateien **[!UICONTROL auswählen]** &quot;, um die CSV-Datei manuell einzugeben.
+Der Schritt **[!UICONTROL Daten hinzufügen]** wird angezeigt. Ziehen Sie die CSV-Datei in den vorgesehenen Bereich oder wählen Sie &quot;Dateien **[!UICONTROL auswählen]** &quot;, um die CSV-Datei manuell einzugeben.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-Der Abschnitt *[!UICONTROL Beispieldaten]* wird nach dem Hochladen der Datei mit den ersten zehn Datenzeilen angezeigt. Nachdem Sie bestätigt haben, dass die Daten erwartungsgemäß hochgeladen wurden, wählen Sie &quot; **[!UICONTROL Weiter]**&quot;aus.
+Der Abschnitt **[!UICONTROL Beispieldaten]** wird nach dem Hochladen der Datei mit den ersten zehn Datenzeilen angezeigt. Nachdem Sie bestätigt haben, dass die Daten erwartungsgemäß hochgeladen wurden, wählen Sie &quot; **[!UICONTROL Weiter]**&quot;aus.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Zuordnen von CSV-Feldern zu XDM-Schema-Feldern
 
-The *[!UICONTROL Mapping]* step appears. Die Spalten der CSV-Datei werden unter &quot; *[!UICONTROL Quellfeld]*&quot;aufgelistet, wobei die entsprechenden XDM-Schema-Felder unter &quot; *[!UICONTROL Zielgruppe-Feld]*&quot;aufgeführt werden. Die Felder für die nicht ausgewählte Zielgruppe sind rot markiert. Mit der Filterfeldoption können Sie die Liste der verfügbaren Quellfelder einschränken.
+The **[!UICONTROL Mapping]** step appears. Die Spalten der CSV-Datei werden unter &quot; **[!UICONTROL Quellfeld]**&quot;aufgelistet, wobei die entsprechenden XDM-Schema-Felder unter &quot; **[!UICONTROL Zielgruppe-Feld]**&quot;aufgeführt werden. Die Felder für die nicht ausgewählte Zielgruppe sind rot markiert. Mit der Filterfeldoption können Sie die Liste der verfügbaren Quellfelder einschränken.
 
 Um eine CSV-Spalte einem XDM-Feld zuzuordnen, wählen Sie das Symbol Schema neben dem entsprechenden Spaltenfeld Zielgruppe aus.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-Das Fenster Schema *[!UICONTROL auswählen]* wird angezeigt. Hier können Sie durch die Struktur des XDM-Schemas navigieren und das Feld suchen, dem Sie die CSV-Spalte zuordnen möchten. Klicken Sie auf ein XDM-Feld, um es auszuwählen, und klicken Sie dann auf **[!UICONTROL Auswählen]**.
+Das Fenster Schema **[!UICONTROL auswählen]** wird angezeigt. Hier können Sie durch die Struktur des XDM-Schemas navigieren und das Feld suchen, dem Sie die CSV-Spalte zuordnen möchten. Klicken Sie auf ein XDM-Feld, um es auszuwählen, und klicken Sie dann auf **[!UICONTROL Auswählen]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-Der Bildschirm &quot; *[!UICONTROL Zuordnung]* &quot;wird erneut angezeigt, wobei das ausgewählte XDM-Feld jetzt unter &quot;Feld für *[!UICONTROL Zielgruppe&quot;angezeigt wird]*.
+Der Bildschirm &quot; **[!UICONTROL Zuordnung]** &quot;wird erneut angezeigt, wobei das ausgewählte XDM-Feld jetzt unter &quot;Feld für **[!UICONTROL Zielgruppe&quot;angezeigt wird]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ Wenn Sie keine bestimmte CSV-Spalte zuordnen möchten, können Sie die Zuordnung
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-Wenn Sie eine neue Zuordnung hinzufügen möchten, wählen Sie **[!UICONTROL Hinzufügen neue Zuordnung]** oben in der Liste &quot; *[!UICONTROL Quellfeld]* &quot;aus.
+Wenn Sie eine neue Zuordnung hinzufügen möchten, wählen Sie **[!UICONTROL Hinzufügen neue Zuordnung]** oben in der Liste &quot; **[!UICONTROL Quellfeld]** &quot;aus.
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -125,7 +125,7 @@ Im folgenden Abschnitt finden Sie weitere Informationen zum Zuordnen von CSV-Spa
 
 ### Zuordnungsfunktionen
 
-Bestimmte Zuordnungsfunktionen können zum Berechnen und Berechnen von Werten verwendet werden, basierend auf dem, was in die Quellfelder eingegeben wird. Um eine Funktion zu verwenden, geben Sie sie unter &quot; *[!UICONTROL Quellfeld]* &quot;mit entsprechender Syntax und Eingaben ein.
+Bestimmte Zuordnungsfunktionen können zum Berechnen und Berechnen von Werten verwendet werden, basierend auf dem, was in die Quellfelder eingegeben wird. Um eine Funktion zu verwenden, geben Sie sie unter &quot; **[!UICONTROL Quellfeld]** &quot;mit entsprechender Syntax und Eingaben ein.
 
 Um z. B. CSV-Felder für **Stadt** und **Land** zu verknüpfen und sie dem XDM-Feld für **Stadt** zuzuweisen, legen Sie das Quellfeld als `concat(city, ", ", county)`fest.
 
