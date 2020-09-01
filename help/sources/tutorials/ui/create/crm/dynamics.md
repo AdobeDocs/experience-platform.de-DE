@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
 title: Erstellen eines Microsoft Dynamics-Quellconnectors in der Benutzeroberfläche
 topic: overview
+description: In diesem Lernprogramm werden Schritte zum Erstellen eines Microsoft Dynamics-Quellconnectors (nachfolgend "Dynamics") mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: 7cc76eab53adf6a40d16b368854a2e7f178e7244
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '451'
 ht-degree: 10%
 
 ---
