@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: Schreiben von Abfragen
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 2%
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # Allgemeine Leitlinien für die Ausführung von Abfragen in [!DNL Query Service]
 
-In diesem Dokument werden wichtige Details erläutert, die beim Schreiben von Abfragen in der Adobe Experience Platform zu beachten sind [!DNL Query Service].
+In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen in Adobe Experience Platform erläutert [!DNL Query Service].
 
 Ausführliche Informationen zur in verwendeten SQL-Syntax [!DNL Query Service]finden Sie in der [SQL-Syntaxdokumentation](../sql/syntax.md).
 
 ## Ausführungsmodelle für Abfragen
 
-Adobe Experience Platform [!DNL Query Service] verfügt über zwei Ausführungsmodelle von Abfragen: interaktiv und nicht interaktiv. Die interaktive Ausführung wird für die Entwicklung von Abfragen und die Erstellung von Berichten in Business Intelligence-Tools verwendet, während nicht interaktive Anwendungen für größere Aufträge und operative Abfragen als Teil eines Datenverarbeitungs-Workflows verwendet werden.
+Adobe Experience Platform [!DNL Query Service] verfügt über zwei Modelle zur Ausführung von Abfragen: interaktiv und nicht interaktiv. Die interaktive Ausführung wird für die Entwicklung von Abfragen und die Erstellung von Berichten in Business Intelligence-Tools verwendet, während nicht interaktive Anwendungen für größere Aufträge und operative Abfragen als Teil eines Datenverarbeitungs-Workflows verwendet werden.
 
 ### Ausführung interaktiver Abfragen
 
