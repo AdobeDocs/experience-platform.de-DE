@@ -5,10 +5,10 @@ title: Google Cloud-Datenspeicherung-Connector
 topic: overview
 description: Die nachstehende Dokumentation enthält Informationen dazu, wie die Google Cloud-Datenspeicherung mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbunden werden kann.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 3%
+source-wordcount: '554'
+ht-degree: 4%
 
 ---
 
@@ -68,6 +68,17 @@ Um eine neue Zugriffsschlüssel-ID und einen geheimen Zugriffsschlüssel für Ih
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
 Sie können Ihre neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage] Konto mit Ihrem Konto zu verbinden [!DNL Platform].
+
+## Benennungsbeschränkungen für Dateien und Ordner
+
+Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennung der Cloud-Datenspeicherung-Datei bzw. des Verzeichnisses berücksichtigen müssen.
+
+- Name der Verzeichnis- und Dateikomponenten darf 255 Zeichen nicht überschreiten.
+- Ordner- und Dateinamen können nicht mit einem Schrägstrich enden (`/`). Sofern vorhanden, wird sie automatisch entfernt.
+- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
+- Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000`, die in NTFS-Dateinamen gültig sind, sind keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen wie Steuerzeichen (0x00 bis 0x1F, \u0081 usw.) ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie in [RFC 2616, Abschnitt 2.2: Grundregeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punkt (.) und zwei Punkt (..).
 
 ## Verbinden [!DNL Google Cloud Storage] mit [!DNL Platform]
 
