@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Richtlinien zusammenführen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '2397'
-ht-degree: 66%
+source-wordcount: '2382'
+ht-degree: 67%
 
 ---
 
@@ -123,7 +123,7 @@ Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der List
 
 Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
-* **`timestampOrdered`**: (Standard) Geben Sie dem zuletzt aktualisierten Profil im Konfliktfall Priorität. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich. `timestampOrdered` unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Profil-Fragmenten innerhalb von oder über Datensätze Vorrang haben. Weitere Informationen finden Sie im Abschnitt &quot;Anhang&quot;zur [Verwendung benutzerdefinierter Zeitstempel](#custom-timestamps).
+* **`timestampOrdered`**: (Standard) Geben Sie dem zuletzt aktualisierten Profil Priorität. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich. `timestampOrdered` unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Profil-Fragmenten innerhalb von oder über Datensätze Vorrang haben. Weitere Informationen finden Sie im Abschnitt &quot;Anhang&quot;zur [Verwendung benutzerdefinierter Zeitstempel](#custom-timestamps).
 * **`dataSetPrecedence`** : Weisen Sie Fragmenten des Profils Priorität auf der Grundlage des Datensatzes zu, aus dem sie stammen. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
    * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, muss ein `order` Array mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
@@ -734,11 +734,11 @@ Dieser Abschnitt enthält zusätzliche Informationen zum Arbeiten mit Zusammenf�
 
 ### Verwenden benutzerdefinierter Zeitstempel {#custom-timestamps}
 
-Während Profil-Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und dem Datensatz hinzugefügt. Wenn `timestampOrdered` als `attributeMerge` Typ für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profil basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf der Grundlage des Zeitstempels für den Zeitpunkt, zu dem der Datensatz in die Plattform aufgenommen wurde.
+Da Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und dem Datensatz hinzugefügt. Wenn `timestampOrdered` als `attributeMerge` Typ für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profil basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf der Grundlage des Zeitstempels für den Zeitpunkt, zu dem der Datensatz in die Plattform aufgenommen wurde.
 
 Gelegentlich kann es zu Anwendungsfällen kommen, z. B. zum Aufstocken von Daten oder zum Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn Datensätze nicht in der richtigen Reihenfolge aufgenommen werden, wenn ein benutzerdefinierter Zeitstempel angegeben werden muss und die Richtlinie zum Zusammenführen den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen muss.
 
-Um einen benutzerdefinierten Zeitstempel zu verwenden, muss das [externe Quellsystem-Audit-Details-Mixin](#mixin-details) Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des `xdm:lastUpdatedDate` Felds ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten `xdm:lastUpdatedDate` Feld erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze oder Profil-Fragmente innerhalb und zwischen Datensätzen zusammenzuführen. Wenn `xdm:lastUpdatedDate` kein oder kein Ausfüllen erfolgt, verwendet Platform weiterhin den Systemzeitstempel.
+Um einen benutzerspezifischen Zeitstempel zu verwenden, muss das [[!DNL Externe Quellsystem-Prüfdetails-Mixin]](#mixin-details) Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des `xdm:lastUpdatedDate` Felds ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten `xdm:lastUpdatedDate` Feld erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze oder Profil-Fragmente innerhalb und zwischen Datensätzen zusammenzuführen. Wenn `xdm:lastUpdatedDate` kein oder kein Ausfüllen erfolgt, verwendet Platform weiterhin den Systemzeitstempel.
 
 >[!NOTE]
 >
@@ -748,9 +748,9 @@ Eine schrittweise Anleitung zum Arbeiten mit Schemas mithilfe der Schema-Registr
 
 Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der Benutzeroberfläche finden Sie im Abschnitt zur [Verwendung benutzerdefinierter Zeitstempel](../ui/merge-policies.md#custom-timestamps) im Benutzerhandbuch [zu](../ui/merge-policies.md)Zusammenführungsrichtlinien.
 
-#### Details zum externen Quellsystem-Audit-Details-Mixer {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
 
-Das folgende Beispiel zeigt die ordnungsgemäß ausgefüllten Felder im Auditdetails des externen Quellsystems. Die komplette Mix-JSON kann auch im [öffentlichen Experience Data Model (XDM) Repo](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) auf GitHub angezeigt werden.
+Das folgende Beispiel zeigt korrekt ausgefüllte Felder im [!DNL External Source System Audit Details Mixin]. Die komplette Mix-JSON kann auch im [öffentlichen Experience Data Model (XDM) Repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) auf GitHub angezeigt werden.
 
 ```json
 {
