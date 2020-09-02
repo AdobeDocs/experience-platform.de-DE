@@ -5,10 +5,10 @@ title: Amazon Kinesis-Anschluss
 topic: overview
 description: Die nachstehende Dokumentation enthält Informationen dazu, wie Amazon Kinesis mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 0%
+source-wordcount: '231'
+ht-degree: 1%
 
 ---
 
@@ -55,15 +55,17 @@ Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Verbinden [!DNL Amazon Kinesis] mit [!DNL Platform]
+
 Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbindung [!DNL Amazon Kinesis] mit [!DNL Platform] APIs oder der Benutzeroberfläche:
 
-## Verbindung [!DNL Amazon Kinesis] mit [!DNL Platform] APIs
+### APIs verwenden
 
 - [Erstellen eines Amazon Kinesis Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Verbindung [!DNL Amazon Kinesis] mit der [!DNL Platform] Benutzeroberfläche
+### Verwenden der UI
 
 - [Amazon Kinesis-Quellanschluss in der Benutzeroberfläche erstellen](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
