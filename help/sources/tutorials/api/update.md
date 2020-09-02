@@ -5,9 +5,9 @@ title: Aktualisieren von Verbindungsinformationen mithilfe der Flow Service API
 topic: overview
 description: In diesem Lernprogramm werden die Schritte zum Aktualisieren Ihrer Verbindungsinformationen beschrieben, einschließlich Name, Beschreibung und Anmeldeinformationen mithilfe der Flow Service API.
 translation-type: tm+mt
-source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
+source-git-commit: 81ce43bf705bea65b523ac612fae5961e8eeb322
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '713'
 ht-degree: 17%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm werden die Schritte zum Aktualisieren der Verbindungsinformationen einschließlich Name, Beschreibung und Anmeldeinformationen mit dem [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)Handbuch beschrieben.
+In diesem Lernprogramm werden die Schritte zum Aktualisieren von Verbindungsinformationen einschließlich Name, Beschreibung und Anmeldeinformationen mithilfe der [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)beschrieben.
 
 ## Erste Schritte
 
