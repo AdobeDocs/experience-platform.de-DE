@@ -5,10 +5,10 @@ title: Google AdWords Connector
 topic: overview
 description: Die nachstehende Dokumentation enthält Informationen dazu, wie Google AdWords mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: ca3084a9c30cc2dd9e0ebc9cef5ae630cbe47b98
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 8%
+source-wordcount: '217'
+ht-degree: 10%
 
 ---
 
@@ -55,15 +55,17 @@ Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Verbinden [!DNL Google AdWords] mit [!DNL Platform]
+
 Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbindung [!DNL Google AdWords] mit [!DNL Platform] APIs oder der Benutzeroberfläche:
 
-## Verbindung [!DNL Google AdWords] mit [!DNL Platform] APIs
+### APIs verwenden
 
 - [Erstellen eines Google AdWords-Connectors mithilfe der Flow Service API](../../tutorials/api/create/advertising/ads.md)
 - [Kennenlernen eines Werbetrugs mithilfe der Flow Service API](../../tutorials/api/explore/advertising.md)
 - [Erfassen von Anzeigendaten mithilfe der Flow Service API](../../tutorials/api/collect/advertising.md)
 
-## Verbindung [!DNL Google AdWords] mit der [!DNL Platform] Benutzeroberfläche
+### Verwenden der UI
 
 - [Erstellen eines Google AdWords-Quell-Connectors in der Benutzeroberfläche](../../tutorials/ui/create/advertising/ads.md)
 - [Konfigurieren eines Datenflusses für einen Werbeanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/advertising.md)
