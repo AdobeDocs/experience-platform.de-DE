@@ -5,10 +5,10 @@ title: FTP- und SFTP-Anschluss
 topic: overview
 description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie einen FTP- oder STFP-Server mit APIs oder der Benutzeroberfläche mit Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 3%
+source-wordcount: '424'
+ht-degree: 5%
 
 ---
 
@@ -55,15 +55,28 @@ Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie einen FTP- oder STFP-Server mit APIs oder der Benutzeroberfläche verbinden [!DNL Platform] können:
+## Benennungsbeschränkungen für Dateien und Ordner
 
-## Verbinden von FTP und SFTP mit [!DNL Platform] APIs
+Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennung der Cloud-Datenspeicherung-Datei bzw. des Verzeichnisses berücksichtigen müssen.
+
+- Name der Verzeichnis- und Dateikomponenten darf 255 Zeichen nicht überschreiten.
+- Ordner- und Dateinamen können nicht mit einem Schrägstrich enden (`/`). Sofern vorhanden, wird sie automatisch entfernt.
+- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
+- Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000`, die in NTFS-Dateinamen gültig sind, sind keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen wie Steuerzeichen (0x00 bis 0x1F, \u0081 usw.) ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie in [RFC 2616, Abschnitt 2.2: Grundregeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punkt (.) und zwei Punkt (..).
+
+## FTP und SFTP verbinden mit [!DNL Platform]
+
+In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie einen FTP- oder SFTP-Server mit APIs oder der Benutzeroberfläche verbinden [!DNL Platform] können:
+
+### Verwenden der APIs
 
 - [Erstellen eines FTP- oder SFTP-Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Verbinden von FTP oder SFTP mit der [!DNL Platform] Benutzeroberfläche
+### Verwenden der UI
 
 - [Erstellen eines Quell-Connectors für FTP oder SFTP über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
 - [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
