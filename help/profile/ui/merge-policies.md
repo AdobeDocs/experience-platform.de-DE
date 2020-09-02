@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Benutzerhandbuch zu Zusammenführungsrichtlinien
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '1433'
-ht-degree: 44%
+source-wordcount: '1440'
+ht-degree: 36%
 
 ---
 
@@ -55,16 +55,16 @@ Der Bildschirm **[!UICONTROL Zusammenführungsrichtlinie erstellen]** wird angez
 * **[!UICONTROL ID-Zusammenfügung]**: In diesem Feld wird definiert, wie die verwandten Identitäten eines Kunden ermittelt werden. Es gibt zwei mögliche Werte:
    * **[!UICONTROL Keine]**: Keine Identitätszusammenfügung durchführen.
    * **[!UICONTROL Privates Diagramm]**: Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen.
-* **[!UICONTROL Attributzusammenführung]**: Ein Profilfragment besteht aus den Profildaten für nur eine Identität aus der Liste an Identitäten, die für einen einzelnen Kunden bestehen. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit kollidierender Profil-Attribute, und die Priorität muss angegeben werden. Mithilfe der [!UICONTROL Attributzusammenführung] können Sie festlegen, welche DataSet-Profil-Werte priorisiert werden sollen, wenn ein Zusammenführungskonflikt zwischen Schlüsselwertdatasets (Datensatzdaten) auftritt. Es gibt zwei mögliche Werte:
-   * **[!UICONTROL Zeitstempel mit Reihenfolge]**: Bei Konflikten ist das zuletzt aktualisierte Profil mit Priorität zu behandeln. [!UICONTROL Der bestellte] Zeitstempel unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Daten innerhalb desselben Datensatzes (mehrere Identitäten) oder über Datasets hinweg Vorrang vor Systemzeitstempeln haben. Weitere Informationen finden Sie im folgenden Abschnitt mit dem [Zeitstempel](#timestamp-ordered) .
-   * **[!UICONTROL Datensatzpriorität]**: Profilfragmente erhalten anhand des Datensatzes, aus dem sie stammen, Priorität. Bei Auswahl dieser Option müssen Sie die zugehörigen Datensätze und ihre Prioritätsreihenfolge auswählen. Weiterführende Informationen finden Sie unten in den Details zur [Datensatzpriorität](#dataset-precedence).
+* **[!UICONTROL Attributzusammenführung]**: Ein Profil-Fragment enthält Informationen zu nur einer Identität aus der Liste von Identitäten, die für einen einzelnen Kunden vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit kollidierender Profil-Attribute, und die Priorität muss angegeben werden. Using [!UICONTROL Attribute merge] allows you to specify which dataset profile values to prioritize if a merge conflict occurs between key-value (record data) type datasets. Es gibt zwei mögliche Werte:
+   * **[!UICONTROL Zeitstempel bestellt]**: Im Ereignis eines Konflikts wird dem zuletzt aktualisierten Profil Vorrang eingeräumt. [!UICONTROL Der bestellte] Zeitstempel unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Daten innerhalb desselben Datensatzes (mehrere Identitäten) oder über Datasets hinweg Vorrang vor Systemzeitstempeln haben. Weitere Informationen finden Sie im folgenden Abschnitt mit dem [Zeitstempel](#timestamp-ordered) .
+   * **[!UICONTROL Datensatzpriorität]** : Geben Sie im Ereignis eines Konflikts den Fragmenten des Profils Priorität, die auf dem Datensatz basieren, aus dem sie stammen. Bei Auswahl dieser Option müssen Sie die zugehörigen Datensätze und deren Reihenfolge der Priorität auswählen. Weiterführende Informationen finden Sie unten in den Details zur [Datensatzpriorität](#dataset-precedence).
 * **[!UICONTROL Standardmäßige Zusammenführungsrichtlinie]**: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie der Standard für Ihre Organisation sein soll oder nicht. Wenn der Selektor aktiviert ist und Sie die neue Richtlinie speichern, wird Ihre vorherige Standardrichtlinie automatisch so aktualisiert, dass sie nicht mehr der Standard ist.
 
 ### Zeitstempel sortiert {#timestamp-ordered}
 
 Während Profil-Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und dem Datensatz hinzugefügt. Wenn als [!UICONTROL Attributzusammenführungstyp für eine Zusammenführungsrichtlinie der sortierte] [!UICONTROL Zeitstempel] ausgewählt ist, werden die Profil basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf der Grundlage des Zeitstempels für den Zeitpunkt, zu dem der Datensatz in die Plattform aufgenommen wurde.
 
-Gelegentlich kann es zu Anwendungsfällen kommen, z. B. zum Aufstocken von Daten oder zum Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn Datensätze nicht in der richtigen Reihenfolge aufgenommen werden, wenn ein benutzerdefinierter Zeitstempel angegeben werden muss und die Richtlinie zum Zusammenführen den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen muss.
+Gelegentlich kann es zu Anwendungsfällen kommen, bei denen ein benutzerdefinierter Zeitstempel bereitgestellt werden muss und bei denen die Richtlinie zum Zusammenführen den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen muss. Dazu gehören beispielsweise das Aufstocken von Daten oder das Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn die Datensätze nicht mehr in der richtigen Reihenfolge angezeigt werden.
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Im folgenden Screenshot werden die Felder im [!UICONTROL Audit-Details des exter
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
-Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der API finden Sie im Anhang des Endpunktanzeigers [zu](../api/merge-policies.md) Zusammenführungsrichtlinien und im Abschnitt zur [Verwendung benutzerdefinierter Zeitstempel](../api/merge-policies.md#custom-timestamps).
+Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der API finden Sie im Anhang des Endpunktanzeigers [für](../api/merge-policies.md) Zusammenführungsrichtlinien und im Abschnitt zur [Verwendung benutzerdefinierter Zeitstempel](../api/merge-policies.md#custom-timestamps).
 
 ### Datensatzpriorität {#dataset-precedence}
 
@@ -92,7 +92,7 @@ Wenn Sie einen Wert für [!UICONTROL Attributzusammenführung] auswählen, könn
 
 Ein Beispiel bestünde darin, wenn es in Ihrer Organisation Daten in einem Datensatz gibt, die bevorzugt werden oder vertrauenswürdiger sind als Daten in einem anderen Datensatz.
 
-Wenn Sie [!UICONTROL Datensatzpriorität] auswählen, wird ein separates Fenster geöffnet, in dem Sie aus [!UICONTROL verfügbaren Datensätzen] auswählen müssen (oder das Kontrollkästchen verwenden können, um alle auszuwählen). Dadurch legen Sie fest, welche Datensätze einbezogen werden sollen. Sie können die Datensätze dann per Drag &amp; Drop in das Bedienfeld [!UICONTROL Ausgewählte Datensätze] und dann in die richtige Prioritätsreihenfolge ziehen. Der oberste Datensatz erhält die höchste Priorität, der zweite Datensatz erhält die zweithöchste Priorität usw.
+Wenn Sie die [!UICONTROL Datensatzpriorität]auswählen, wird ein separates Fenster geöffnet, in dem Sie aus den [!UICONTROL verfügbaren Datensätzen] auswählen müssen, welche Datensätze einbezogen werden (oder das Kontrollkästchen verwenden, um alle auszuwählen). Sie können die Datensätze dann per Drag &amp; Drop in das Bedienfeld [!UICONTROL Ausgewählte Datensätze] und dann in die richtige Prioritätsreihenfolge ziehen. Der oberste Datensatz erhält die höchste Priorität, der zweite Datensatz wird die zweithöchste sein usw.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -100,11 +100,11 @@ Once you have finished creating the merge policy, select **[!UICONTROL Save]** t
 
 ## Zusammenführungsrichtlinie bearbeiten
 
-You can modify an existing merge policy through the [!UICONTROL Merge policies] tab by clicking on the [!UICONTROL Policy name]* for the merge policy you wish to edit.
+You can modify an existing merge policy through the [!UICONTROL Merge policies] tab by selecting the **[!UICONTROL Policy name]** for the merge policy you wish to edit.
 
 ![Landingpage für Zusammenführungsrichtlinien](../images/merge-policies/select-edit.png)
 
-Wenn der Bildschirm [!UICONTROL Zusammenführungsrichtlinie bearbeiten] angezeigt wird, können Sie Änderungen am [!UICONTROL Namen], [!UICONTROL Schema], [!UICONTROL ID-Zusammenfügungstyp] und [!UICONTROL Attributzusammenführungstyp] vornehmen und festlegen, ob die Richtlinie als [!UICONTROL standardmäßige Zusammenführungsrichtlinie] für Ihre Organisation dienen soll oder nicht.
+Wenn der Bildschirm **[!UICONTROL Zusammenführungsrichtlinie bearbeiten]** angezeigt wird, können Sie Änderungen am [!UICONTROL Namen], [!UICONTROL Schema], [!UICONTROL ID-Zusammenfügungstyp] und [!UICONTROL Attributzusammenführungstyp] vornehmen und festlegen, ob die Richtlinie als [!UICONTROL standardmäßige Zusammenführungsrichtlinie] für Ihre Organisation dienen soll oder nicht.
 
 >[!NOTE]
 >
