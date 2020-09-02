@@ -5,10 +5,10 @@ title: Azurblutstecker
 topic: overview
 description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie Blaus Blob mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbinden.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 0%
+source-wordcount: '383'
+ht-degree: 3%
 
 ---
 
@@ -51,15 +51,28 @@ Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Benennungsbeschränkungen für Dateien und Ordner
+
+Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennung der Cloud-Datenspeicherung-Datei bzw. des Verzeichnisses berücksichtigen müssen.
+
+- Name der Verzeichnis- und Dateikomponenten darf 255 Zeichen nicht überschreiten.
+- Ordner- und Dateinamen können nicht mit einem Schrägstrich enden (`/`). Sofern vorhanden, wird sie automatisch entfernt.
+- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
+- Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000`, die in NTFS-Dateinamen gültig sind, sind keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen wie Steuerzeichen (0x00 bis 0x1F, \u0081 usw.) ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie in [RFC 2616, Abschnitt 2.2: Grundregeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punkt (.) und zwei Punkt (..).
+
+## Verbinden [!DNL Azure Blob] mit [!DNL Platform]
+
 In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung von Azurblauch mit der Plattform herstellen:
 
-## Verbindung [!DNL Azure Blob] mit [!DNL Platform] APIs
+### APIs verwenden
 
 - [Erstellen eines Azurblauch-Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Verbindung [!DNL Blob] und S3 zur [!DNL Platform] Verwendung der Benutzeroberfläche
+### Verwenden der UI
 
 - [Erstellen eines Azurblauch-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob.md)
 - [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
