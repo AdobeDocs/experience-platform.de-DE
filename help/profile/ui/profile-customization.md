@@ -5,9 +5,9 @@ title: Profil-Detailanpassung
 description: 'Dieses Handbuch enthält schrittweise Anleitungen zum Anpassen der Art und Weise, wie Kundendaten in Echtzeit in der Adobe Experience Platform-Benutzeroberfläche angezeigt werden. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: c3076b37d2242fce4fa62e747adeb8b0534e995d
+source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Neben der Größenanpassung und Neuanordnung von Karten können Sie den Inhalt b
 
 >[!NOTE]
 >
->Nicht alle Karten können bearbeitet oder entfernt werden. Dies liegt daran, dass einige Karten schreibgeschützte oder erforderliche Informationen enthalten. Wenn eine Karte keine Auslassungspunkte in der oberen rechten Ecke hat, enthält sie schreibgeschützte UND erforderliche Informationen und kann weder bearbeitet noch entfernt werden. Wenn eine Karte Ellipsen in der Ecke enthält und bei Auswahl dieser Option nur eine Option zum Entfernen der Karte angezeigt wird, sind die Karteninformationen schreibgeschützt und können nicht bearbeitet werden.
+>Nicht alle Karten können bearbeitet oder entfernt werden. Dies liegt daran, dass einige Karten schreibgeschützte oder erforderliche Informationen enthalten. Wenn eine Karte keine Auslassungspunkte in der oberen rechten Ecke hat, enthält sie schreibgeschützte UND erforderliche Informationen und kann weder bearbeitet noch entfernt werden. Wenn eine Karte Ellipsen in der Ecke hat und bei Auswahl dieser Option nur eine Option zum Entfernen der Karte angezeigt wird, sind die Karteninformationen schreibgeschützt und können nicht bearbeitet werden.
 
 ![](../images/profile-customization/profiles-edit-remove-resized.png)
 
@@ -103,7 +103,7 @@ Nach dem Speichern werden Sie zur Registerkarte &quot; [!UICONTROL Details] &quo
 
 ## Standardkarten wiederherstellen
 
-Wenn Sie jederzeit entscheiden, dass Sie Ihre Bearbeitungen entfernen und zur Standard-Ansicht zurückkehren möchten, haben Sie die Möglichkeit, alle Standardkarten und -attribute schnell und einfach wiederherzustellen. Wählen Sie dazu &quot; **[UICONTROL Dashboard]**&#x200B;ändern&quot;und wählen Sie dann &quot; **[UICONTROL Restore default cards]**&quot;. Dadurch werden alle Anpassungen (einschließlich Größenanpassung) entfernt, die Sie vorgenommen haben. Um fortzufahren, wählen Sie &quot; **[UICONTROL-Speichern]** &quot;, um Ihre Änderungen zu speichern, oder wählen Sie, wenn Sie die Option &quot;Fehlerhaft wiederherstellen&quot;gewählt haben, die Option &quot; **[UICONTROL-Abbrechen]** &quot;, um zu vermeiden, dass Ihre Änderungen gespeichert werden, und um die vorgenommenen Änderungen beizubehalten.
+Wenn Sie jederzeit entscheiden, dass Sie Ihre Bearbeitungen entfernen und zur Standard-Ansicht zurückkehren möchten, haben Sie die Möglichkeit, alle Standardkarten und -attribute schnell und einfach wiederherzustellen. Wählen Sie dazu &quot;Dashboard ****&#x200B;ändern&quot;und dann &quot;Standardkarten **[!UICONTROL wiederherstellen&quot;]**. Dadurch werden alle Anpassungen (einschließlich Größenanpassung) entfernt, die Sie vorgenommen haben. Sie können dann **[!UICONTROL Speichern]** auswählen, um Ihre Änderungen zu speichern, oder wenn Sie die Standardeinstellung nicht wiederherstellen möchten, wählen Sie &quot; **[!UICONTROL Abbrechen]** &quot;, um die vorgenommenen Änderungen beizubehalten.
 
 >[!NOTE]
 >
