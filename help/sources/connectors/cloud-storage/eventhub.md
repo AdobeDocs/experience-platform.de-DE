@@ -5,10 +5,10 @@ title: Azurblauer Ereignis-Hubs-Anschluss
 topic: overview
 description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie Azurblase-Ereignis-Hubs mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbinden.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '241'
+ht-degree: 1%
 
 ---
 
@@ -55,15 +55,17 @@ Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bev
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Verbinden [!DNL Azure Event Hubs] mit [!DNL Platform]
+
 Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbindung [!DNL Azure Event Hubs] mit [!DNL Platform] APIs oder der Benutzeroberfläche:
 
-## Verbindung [!DNL Azure Event Hubs] mit [!DNL Platform] APIs
+### APIs verwenden
 
 - [Erstellen eines Azurblauen Ereignis-Hubs-Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Verbindung [!DNL Azure Event Hubs] mit der [!DNL Platform] Benutzeroberfläche
+### Verwenden der UI
 
 - [Erstellen eines Azurblauen Ereignis-Hubs-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
