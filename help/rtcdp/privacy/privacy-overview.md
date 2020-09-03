@@ -5,10 +5,10 @@ seo-title: Datenschutz im Echtzeit-Kundendatenprofil
 description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f9b21ee51d6246dbdae4500aad050b200539ff88
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 60%
+ht-degree: 57%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Platform [!DNL Privacy Service] allows you to streamline the pr
 
 Es gibt zwei Methoden für die Übermittlung einzelner DSGVO- und CCPA-Anfragen von Datensubjekten bezüglich des Zugriffs auf und des Löschens von Kundendaten:
 
-* Use the [[!DNL Privacy Service UI]](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Benutzeroberfläche von Privacy Service](../../privacy-service/ui/overview.md).
+* Use the [[!DNL Privacy Service UI]](https://privacyui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. See the [Privacy Service user guide](../../privacy-service/ui/overview.md) for step-by-step instructions.
 * Use the [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. Eine schrittweise Anleitung dazu finden Sie im [Tutorial zur Privacy Service-API](../../privacy-service/api/getting-started.md).
 
 <!-- (Capability will not be available for November GA) 
