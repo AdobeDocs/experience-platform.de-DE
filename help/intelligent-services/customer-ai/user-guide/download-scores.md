@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics
+keywords: Experience Platform;download scores;customer ai;popular topics;Export;export
 solution: Experience Platform
 title: Herunterladen von Bewertungen in Customer AI
 topic: Downloading scores
 description: Mit Customer AI können Sie Ergebnisse im Parquet-Dateiformat herunterladen.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 91%
