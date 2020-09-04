@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
 solution: Experience Platform
 title: Erste Schritte
 topic: API guide
-description: null
+description: 'Der Adobe Experience Platform Identity Service verwaltet die geräteübergreifende, geräteübergreifende Kanal- und Echtzeitidentifizierung Ihrer Kunden in einem so genannten Identitätsdiagramm in Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 25%
+source-wordcount: '754'
+ht-degree: 24%
 
 ---
 
