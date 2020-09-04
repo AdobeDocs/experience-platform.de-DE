@@ -5,10 +5,10 @@ title: Adobe Experience Platform-Segmentdienst
 topic: overview
 description: Dieses Dokument bietet einen Überblick über den Segmentierungsdienst und die Rolle, die dieser in Adobe Experience Platform spielt.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 6%
+source-wordcount: '1387'
+ht-degree: 8%
 
 ---
 
@@ -129,97 +129,11 @@ Indem Sie dem Attribut &quot;Kaufstatus&quot;eine Variable zuweisen, wird Ihr dy
 
 ## Segmentierung mit mehreren Entitäten {#multi-entity}
 
-Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie Segmente mit mehreren XDM-Klassen erstellen und damit Erweiterungen zu persönlichen Schemas hinzufügen. Dadurch [!DNL Segmentation Service] können Sie während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie nativ im Profil-Datenspeicher.
-
-Die Segmentierung mehrerer Entitäten bietet die erforderliche Flexibilität, um Audiencen anhand von Daten zu identifizieren, die für Ihre geschäftlichen Anforderungen relevant sind. Dieser Vorgang kann schnell und einfach durchgeführt werden, ohne dass Fachwissen in der Abfrage von Datenbanken erforderlich ist. Auf diese Weise können Sie wichtige Daten zu Ihren Segmenten hinzufügen, ohne kostspielige Änderungen an den Datenströmen vornehmen zu müssen oder auf eine Back-End-Datenzusammenführung zu warten.
-
-Das folgende Video soll Ihr Verständnis der Segmentierung mehrerer Entitäten unterstützen und erläutert sowohl die Segmentierung mehrerer Entitäten als auch den Segmentkontext (Segmentnutzlast).
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
-
-### Verwendungsfall: Preisorientierte Werbung
-
-Um den Wert dieser erweiterten Segmentierungsfunktion zu veranschaulichen, sollten Sie einen Datenarchitekten in Betracht ziehen, der mit einem Marketingspezialisten zusammenarbeitet.
-
-In diesem Beispiel verbindet der Datenarchitekt Daten für eine Einzelperson (bestehend aus Schemas mit [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent] als Basisklassen) mit einer anderen Klasse, die einen Schlüssel verwendet. Nach dem Verbinden können der Datenarchitekt oder der Marketingspezialist diese neuen Felder während der Segmentdefinition so verwenden, als wären sie nativ zum Schema der Basisklasse.
-
-**Das Problem**
-
-Sowohl der Datenarchitekt als auch der Vermarkter arbeiten für denselben Bekleidungshändler. Der Einzelhändler verfügt über mehr als 1.000 Geschäfte in Nordamerika und senkt regelmäßig die Produktpreise während ihres gesamten Lebenszyklus. Daher möchte der Vermarkter eine besondere Kampagne durchführen, um Käufern, die für diese Artikel gekauft haben, die Möglichkeit zu geben, diese Artikel zum ermäßigten Preis zu erwerben.
-
-Zu den Ressourcen des Datenarchitekten gehören der Zugriff auf Webdaten aus dem Browsen von Kunden sowie Daten zum Hinzufügen des Einkaufswagens, die Produkt-SKU-IDs enthalten. Sie haben auch Zugang zu einer gesonderten Produktklasse, in der zusätzliche Produktinformationen (einschließlich des Produktpreises) gespeichert werden. Ihre Anleitung besteht darin, sich auf Kunden zu konzentrieren, die in den letzten 14 Tagen ein Produkt in ihren Einkaufswagen gelegt haben, aber den Artikel nicht gekauft haben, dessen Preis jetzt gefallen ist.
-
-**Die Lösung**
-
->[!NOTE]
->
->In diesem Beispiel gehen wir davon aus, dass der Datenarchitekt bereits einen ID-Namensraum eingerichtet hat.
-
-Bei Verwendung der API bezieht sich der Datenarchitekt den Schlüssel aus dem [!DNL ExperienceEvent] Schema mit der Produktklasse. Auf diese Weise kann der Datenarchitekt die zusätzlichen Felder aus der Produktklasse so nutzen, als wären sie nativ für das [!DNL ExperienceEvent] Schema. Als letzter Schritt der Konfiguration muss der Datenarchitekt die entsprechenden Daten einbringen [!DNL Real-time Customer Profile]. Dies geschieht durch Aktivierung des &quot;products&quot;-Datensatzes zur Verwendung mit [!DNL Profile]. Nachdem die Konfiguration abgeschlossen ist, kann entweder der Datenarchitekt oder der Marketingspezialist das Zielgruppen-Segment in erstellen [!DNL Segment Builder].
-
-Informationen zum Definieren von Beziehungen zwischen XDM-Klassen finden Sie in der Übersicht über die [Schema-Komposition](../xdm/schema/composition.md#union) .
-
-<!-- ## Personalization payload
-
-Segments can now carry a payload of contextual details to enable deep personalization of Adobe Solutions as well as external non-Adobe applications. These payloads can be added while defining your target segment.
-
-With contextual data built into the segment itself, this advanced Segmentation Service feature allows you to better connect with your customer.
-
-Segment Payload helps you answer questions surrounding your customer’s frame of reference such as:
-- What: What product was purchased? What product should be recommended next?
-- When: At what time and date did the purchase occur?
-- Where: In which store or city did the customer make their purchase?
-
-While this solution does not change the binary nature of segment membership, it does add additional context to each profile through an associated segment membership object. Each segment membership object has the capacity to include three kinds of contextual data:
-
-- **Identifier**: this is the ID for the segment 
-- **Attributes**: this would include information about the segment ID such as last qualification time, XDM version, status and so on.
-- **Event data**: Specific aspects of experience events which resulted in the profile qualifying for the segment
-
-Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
-
-### Anwendungsbeispiele
-
-Um den Wert dieser erweiterten Segmentierungsfunktion zu illustrieren, sollten Sie drei Standardverwendungsfälle erwägen, die die Herausforderungen illustrieren, die vor der SegmentPayload-Verbesserung in Marketinganwendungen aufgetreten sind:
-- E-Mail-Personalisierung
-- Email-Retargeting
-- AnzeigenreTargeting
-
-**E-Mail-Personalisierung**
-
-Ein Marketingspezialist, der eine E-Mail-Kampagne erstellt hat, hat möglicherweise versucht, ein Segment für eine Audience der Zielgruppe zu erstellen, indem er in den letzten drei Monaten Käufe im Kundenspeicher verwendet hat. Idealerweise würde dieses Segment sowohl den Artikelnamen als auch den Namen des Geschäfts erfordern, in dem der Kauf getätigt wurde. Vor der Verbesserung bestand die Herausforderung darin, die Store-ID aus dem Kauf-Ereignis zu erfassen und sie dem Profil des Kunden zuzuweisen.
-
-**Email-Retargeting**
-
-Es ist häufig schwierig, Segmente für E-Mail-Kampagnen zu erstellen und zu qualifizieren, die auf &quot;Warenkorbabbruch&quot;abzielen. Vor der Verbesserung war es aufgrund der Verfügbarkeit der erforderlichen Daten schwierig, zu wissen, welche Produkte in eine personalisierte Nachricht aufgenommen werden sollten. Die Daten, für die die Produkte aufgegeben wurden, sind an Ereignis gebunden, die früher für die Überwachung und Extraktion von Daten schwierig waren.
-
-**AnzeigenreTargeting**
-
-Eine weitere traditionelle Herausforderung für Marketingexperten ist die Erstellung von Anzeigen, um Kunden mit aufgegebenen Warenkorbartikeln wieder anzusprechen. Während Segmentdefinitionen diese Herausforderung angehen, gab es vor der Verbesserung keine formale Methode, um zwischen gekauften und abgebrochenen Produkten zu unterscheiden. Jetzt können Sie bestimmte Datensätze während der Segmentdefinition Zielgruppe haben.
+Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten haben Sie die Möglichkeit, [!DNL Real-time Customer Profile] Daten um zusätzliche Daten zu erweitern, die auf Produkten, Stores oder anderen Nicht-Personen basieren, die auch als &quot;Dimensionselemente&quot;bezeichnet werden. Daher [!DNL Segmentation Service] können Sie während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie nativ im [!DNL Profile] Datenspeicher. Die Segmentierung mehrerer Entitäten bietet Flexibilität bei der Identifizierung von Audiencen anhand von Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Weitere Informationen, einschließlich Anwendungsfällen und Workflows, finden Sie im [Segmentierungshandbuch](multi-entity-segmentation.md)für mehrere Entitäten.
 
 ## [!DNL Segmentation Service] Datentypen
 
-[!DNL Segmentation Service] unterstützt eine Vielzahl von Datentypen, darunter:
-
-- Zeichenfolge
-- Einheitliche Ressourcenkennung
-- Enum
-- Nummer
-- Lang
-- Ganzzahl
-- Kurz
-- Byte
-- Boolesch
-- Datum
-- Datum-Uhrzeit
-- Array
-- Objekt
-- Zuordnung
-- Ereignisse
-- Externe Audiencen
-- Segmente
-
-Ausführlichere Informationen zu diesen unterstützten Datentypen finden Sie im Dokument [zu](./data-types.md)unterstützten Datentypen.
+[!DNL Segmentation Service] unterstützt eine Vielzahl von primitiven und komplexen Datentypen. Detaillierte Informationen, einschließlich einer Liste der unterstützten Datentypen, finden Sie im Handbuch zu [unterstützten Datentypen](./data-types.md).
 
 ## Nächste Schritte
 
