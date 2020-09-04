@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;
+keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: Unterstützung von IAB TCF 2.0 in der Echtzeit-Plattform für Kundendaten
 topic: privacy events
+description: In diesem Dokument werden Schritte zur Einrichtung der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Genehmigungsdaten beschrieben.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1369'
 ht-degree: 3%
 
 ---
@@ -83,7 +84,7 @@ Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im
 
 ![](../assets/iab/add-mixin-profile.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. Wählen Sie hier in der Liste die Option **[!UICONTROL Profil Privacy]** . Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Klicken Sie nach Auswahl des Mixins auf **[!UICONTROL Hinzufügen Mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. Wählen Sie hier in der Liste die Option **[!UICONTROL Profil Privacy]** . Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Nachdem das Mixin ausgewählt ist, klicken Sie auf **[!UICONTROL Hinzufügen Mixin]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
