@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
 solution: Adobe Experience Platform
 title: Übersicht über die Datenschutzmischung
 description: Das Mixin "Datenschutz/Marketing-Voreinstellungen"(Consent) ist ein XDM-Mixin (Experience Data Model), das die Erfassung von Benutzerberechtigungen und Voreinstellungen unterstützen soll, die von CMPs und anderen Quellen von Kunden generiert wurden. Dieses Dokument umfasst die Struktur und die vorgesehene Verwendung der verschiedenen Felder, die von der Mischung bereitgestellt werden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 1%
