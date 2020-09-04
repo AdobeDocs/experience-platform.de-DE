@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Hilfe zum Echtzeit-Kundenprofil
 user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: 31166ddf8afbe13874be66b29c89501bd6ce1e51
+source-git-commit: 16f2bd7c650c5fbb09066940a730fa9dc768b261
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 58%
+source-wordcount: '89'
+ht-degree: 56%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 58%
 # [!DNL Real-time Customer Profile] {#profile}
 
 * [[!DNL Profile] Übersicht](home.md)
+* [[!DNL Profile] Guardraht](guardrails.md)
 * [!DNL Profile] API-Entwicklerleitfaden {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
@@ -31,7 +32,7 @@ ht-degree: 58%
    * [Benutzerhandbuch zu Zusammenführungsrichtlinien](ui/merge-policies.md)
 * Tutorials {#tutorials}
    * [Daten Hinzufügen [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Datensatz konfigurieren für [!DNL Profile] &amp; [!DNL Identity]](tutorials/dataset-configuration.md)
+   * [DataSet [!DNL Profile] & [!DNL Identity] forService konfigurieren](tutorials/dataset-configuration.md)
    * [Weitere Tutorials](https://docs.adobe.com/content/help/de-DE/experience-platform/tutorials/home.html)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [[!DNL Profile] Handbuch zur Fehlerbehebung](troubleshooting.md)
