@@ -2,28 +2,28 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
 solution: Adobe Experience Platform
 title: Profil-Vorschau - Echtzeit-Client-Profil-API
-description: Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build robust unified profiles for individual customers. As data enabled for Real-time Customer Profile is ingested into Platform, it is stored within the Profile data store. As the number of records in the Profile store increases or decreases, a sample job is run that includes information regarding how many profile fragments and merged profiles are in the data store. Using the Profile API you can preview the latest successful sample, as well as list profile distribution by dataset and by identity namespace.
+description: Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da Daten, die für Echtzeit-Kundendaten aktiviert wurden, in Plattform erfasst werden, werden sie im Profil-Datenspeicher gespeichert. Wenn die Anzahl der Datensätze im Profil-Store zunimmt oder sinkt, wird ein Musterauftrag ausgeführt, der Informationen darüber enthält, wie viele Profil-Fragmente und zusammengeführte Profil sich im Datenspeicher befinden. Mithilfe der Profil-API können Sie das neueste erfolgreiche Beispiel sowie die Verteilung von Listen-Profilen nach Datensatz und Identitäts-Namensraum Vorschau werden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1478'
 ht-degree: 6%
 
 ---
 
 
-# Preview sample status endpoint (Profile preview)
+# Vorschau-Musterstatus-Endpunkt (Profil-Vorschau)
 
-Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store.
+Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da Daten, die für Echtzeit-Kundendaten aktiviert sind, in erfasst werden, werden sie im Profil-Datenspeicher gespeichert [!DNL Platform].
 
-When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+Wenn die Erfassung von Datensätzen im Profil Store die Gesamtanzahl der Profil um mehr als 5 % erhöht oder verringert, wird ein Auftrag zur Aktualisierung der Anzahl ausgelöst. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Zählung zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Mithilfe der Profil-API können Sie den neuesten erfolgreichen Musterauftrag sowie die Verteilung des Liste-Profils nach Datensatz und Identitäts-Namensraum Vorschau werden.
 
-These metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] user guide](../ui/user-guide.md).
+Diese Metriken stehen auch im Bereich &quot; [!UICONTROL Profil] &quot;der Benutzeroberfläche &quot;Experience Platform&quot;zur Verfügung. Informationen zum Zugriff auf Profil-Daten über die Benutzeroberfläche finden Sie im [[!DNL Profile] Benutzerhandbuch](../ui/user-guide.md).
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 ## Letzter Musterstatus der Ansicht {#view-last-sample-status}
 
@@ -59,6 +59,10 @@ Die Antwort enthält die Details zum letzten erfolgreichen Musterauftrag, der f�
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ Die Antwort enthält die Details zum letzten erfolgreichen Musterauftrag, der f�
 | Eigenschaft | Beschreibung |
 |---|---|
 | `numRowsToRead` | Die Gesamtzahl der zusammengeführten Profil im Beispiel. |
+| `sampleJobRunning` | Ein boolescher Wert, der zurückgegeben wird, `true` wenn ein Musterauftrag ausgeführt wird. Bietet Transparenz in Bezug auf die Latenz, die entsteht, wenn eine Stapelverarbeitungsdatei in den Profil-Store hochgeladen wird. |
 | `cosmosDocCount` | Gesamtanzahl der Dokumente in Kosmos. |
 | `totalFragmentCount` | Gesamtanzahl der Profil-Fragmente im Profil Store. |
 | `lastSuccessfulBatchTimestamp` | Letzter erfolgreicher Zeitstempel für die Stapelverarbeitung. |
@@ -88,7 +93,7 @@ Die Antwort enthält die Details zum letzten erfolgreichen Musterauftrag, der f�
 
 ## Verteilung von Liste-Profil nach Datensatz
 
-To see the distribution of profiles by dataset, you can perform a GET request to the `/previewsamplestatus/report/dataset` endpoint.
+Um die Verteilung der Profil nach Datensatz anzuzeigen, können Sie eine GET an den `/previewsamplestatus/report/dataset` Endpunkt anfordern.
 
 **API-Format**
 
@@ -177,7 +182,7 @@ Die Antwort enthält ein `data` Array mit einer Liste von DataSet-Objekten. Die 
 | `value` | Die ID des Datensatzes. |
 | `streamingIngestionEnabled` | Ob der Datensatz für die Streaming-Erfassung aktiviert ist. |
 | `createdUser` | Die Benutzer-ID des Benutzers, der den Datensatz erstellt hat. |
-| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anforderung ein `date` Parameter angegeben wurde, gilt der zurückgegebene Bericht für das angegebene Datum. If no `date` parameter is provided, the most recent report is returned. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anforderung ein `date` Parameter angegeben wurde, gilt der zurückgegebene Bericht für das angegebene Datum. Wenn kein `date` Parameter angegeben ist, wird der letzte Bericht zurückgegeben. |
 
 
 
@@ -198,15 +203,15 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 | Parameter | Beschreibung |
 |---|---|
-| `date` | Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date will be returned. If a report does not exist for the specified date, a 404 error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Beispiel: `date=2024-12-31` |
+| `date` | Geben Sie das Datum des zurückzugebenden Berichts an. Wenn am Datum mehrere Berichte ausgeführt wurden, wird der letzte Bericht für dieses Datum zurückgegeben. Wenn für das angegebene Datum kein Bericht vorhanden ist, wird der Fehler &quot;404&quot;zurückgegeben. Wenn kein Datum angegeben ist, wird der letzte Bericht zurückgegeben. Format: JJJJ-MM-TT. Beispiel: `date=2024-12-31` |
 
 **Anfrage**
 
-The following request does not specify a `date` parameter and will therefore return the most recent report.
+Die folgende Anforderung gibt keinen `date` Parameter an und gibt daher den letzten Bericht zurück.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -215,7 +220,7 @@ curl -X GET \
 
 **Antwort**
 
-The response includes a `data` array, with individual objects containing the details for each namespace. The response shown has been truncated to show four namespaces.
+Die Antwort enthält ein `data` Array mit den einzelnen Objekten, die die Details zu den einzelnen Namensräumen enthalten. Die angezeigte Antwort wurde abgeschnitten und zeigt nun vier Namensräume an.
 
 ```json
 {
@@ -267,10 +272,10 @@ The response includes a `data` array, with individual objects containing the det
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `sampleCount` | The total number of sampled merged profiles in the namespace. |
-| `samplePercentage` | The `sampleCount` as a percentage of sampled merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format. |
-| `reportTimestamp` | Der Zeitstempel des Berichts. If a `date` parameter was provided during the request, the report returned is for the date provided. Wenn kein `date` Parameter angegeben ist, wird der letzte Bericht zurückgegeben. |
-| `fullIDsFragmentCount` | The total number of profile fragments in the namespace. |
+| `sampleCount` | Die Gesamtzahl der zusammengeführten Profil mit Stichproben im Namensraum. |
+| `samplePercentage` | Der `sampleCount` als Prozentsatz der zusammengeführten Profil der Stichprobe (der `numRowsToRead` im [letzten Stichprobenstatus](#view-last-sample-status)zurückgegebene Wert), ausgedrückt als Dezimalformat. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anforderung ein `date` Parameter angegeben wurde, gilt der zurückgegebene Bericht für das angegebene Datum. Wenn kein `date` Parameter angegeben ist, wird der letzte Bericht zurückgegeben. |
+| `fullIDsFragmentCount` | Die Gesamtanzahl der Profil-Fragmente im Namensraum. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profil im Namensraum. |
 | `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der zusammengeführten Profil insgesamt (der `totalRows` im [letzten Musterstatus](#view-last-sample-status)zurückgegebene Wert), ausgedrückt als Dezimalformat. |
 | `code` | Die `code` für den Namensraum. Dies kann bei der Arbeit mit Namensräumen mithilfe der [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) gefunden werden und wird auch als [!UICONTROL Identitätssymbol] in der Benutzeroberfläche der Experience Platform bezeichnet. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md). |
