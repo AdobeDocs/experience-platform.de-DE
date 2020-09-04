@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
+keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
 solution: Experience Platform
 title: Entwicklerleitfaden für Datenzugriff
 topic: developer guide
 description: Die Data Access API unterstützt Adobe Experience Platform, indem sie eine RESTful-Benutzeroberfläche bereitstellt, die auf die Erkennung und Zugänglichkeit von erfassten Datensätzen in der Experience Platform ausgerichtet ist.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 9%
@@ -204,7 +204,7 @@ Wenn ein Ordner zurückgegeben wird, enthält er ein Array aller Dateien im Ordn
 
 ## Zugriff auf den Inhalt einer Datei
 
-The [!DNL Data Access] API can also be used to access the contents of a file. Auf diese Weise können Sie die Inhalte in eine externe Quelle herunterladen.
+The [!DNL Data Access] API can also be used to access the contents of a file. Auf diese Weise können Sie den Inhalt in eine externe Quelle herunterladen.
 
 **API-Format**
 
