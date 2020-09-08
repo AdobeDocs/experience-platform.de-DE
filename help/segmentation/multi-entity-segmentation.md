@@ -5,9 +5,9 @@ title: Segmentierung mit mehreren Entitäten
 topic: overview
 description: Bei der Segmentierung mit mehreren Entitäten können Sie Profildaten um zusätzliche Daten erweitern, die auf Produkten, Geschäften oder anderen nicht-profilbasierten Klassen beruhen. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '620'
 ht-degree: 9%
 
 ---
@@ -21,10 +21,10 @@ Die Segmentierung mehrerer Entitäten ist eine erweiterte Funktion, die als Teil
 
 Die Segmentierung mehrerer Entitäten erfordert ein funktionierendes Verständnis der verschiedenen Adobe Experience Platform-Dienste, die an der Segmentierung beteiligt sind. Bevor Sie mit diesem Handbuch fortfahren, lesen Sie bitte die folgende Dokumentation:
 
-* [!DNL Real-time Customer Profile](../profile/home.md): Bietet ein einheitliches Verbraucherdatenquellen-Profil in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
+* [[!DNL Echtzeit-Profil]](../profile/home.md): Bietet ein einheitliches Verbraucherdatenquellen-Profil in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
    * [Profil-Guardrails](../profile/guardrails.md): Bewährte Verfahren zum Erstellen von Datenmodellen, die von unterstützt werden [!DNL Profile].
-* [!DNL Adobe Experience Platform Segmentation Service](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten aus [!DNL Real-time Customer Profile] Daten.
-* [!DNL Experience Data Model (XDM)](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten aus [!DNL Real-time Customer Profile] Daten.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Zusammensetzung](../xdm/schema/composition.md#union)des Schemas: Hier lernen Sie bewährte Verfahren zum Erstellen von Schemas, die in der Experience Platform verwendet werden sollen.
 
 ## Anwendungsbeispiele
