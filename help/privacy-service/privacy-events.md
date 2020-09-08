@@ -1,133 +1,78 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Datenschutzereignisse abonnieren
+title: Privacy Service-Ereignis abonnieren
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 30%
+source-wordcount: '420'
+ht-degree: 7%
 
 ---
 
 
-# Abonnieren [!DNL Privacy Events]
+# Abonnieren [!DNL Privacy Service Events]
 
-[!DNL Privacy Events] sind Meldungen von Adobe Experience Platform [!DNL Privacy Service], die Adobe-I/O-Ereignis nutzen, die an einen konfigurierten WebHook gesendet werden, um eine effiziente Auftragsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Service Events] sind Meldungen von Adobe Experience Platform [!DNL Privacy Service], die Adobe-I/O-Ereignis nutzen, die an einen konfigurierten WebHook gesendet werden, um eine effiziente Auftragsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 Aktuell gibt es vier Arten von Benachrichtigungen im Lebenszyklus der Anfragen von Datenschutzaufträgen:
 
 | Typ | Beschreibung |
---- | ---
-| Auftrag abgeschlossen | All [!DNL Experience Cloud] solutions have reported back and the overall or global status of the job has been marked as complete. |
-| Auftragsfehler | Bei einer oder mehreren Lösungen wurde bei der Verarbeitung der Anfrage ein Fehler gemeldet. |
-| Produkt abgeschlossen | Eine der Lösungen, die mit diesem Auftrag verbunden ist, hat ihren Auftrag abgeschlossen. |
-| Produktfehler | Eine der Lösungen hat bei der Verarbeitung der Anfrage einen Fehler gemeldet. |
+| --- | --- |
+| Auftrag abgeschlossen | All [!DNL Experience Cloud] applications have reported back and the overall or global status of the job has been marked as complete. |
+| Auftragsfehler | Eine oder mehrere Anwendungen haben während der Verarbeitung der Anforderung einen Fehler gemeldet. |
+| Produkt abgeschlossen | Eine der mit diesem Auftrag verknüpften Anwendungen hat ihre Arbeit abgeschlossen. |
+| Produktfehler | Eine der Anwendungen meldete einen Fehler bei der Verarbeitung der Anforderung. |
 
-This document provides steps for setting up an integration for [!DNL Privacy Service] notifications within Adobe I/O. For a high-level overview of [!DNL Privacy Service] and its features, see the [Privacy Service overview](home.md).
+In diesem Dokument wird beschrieben, wie Sie eine Ereignis-Registrierung für [!DNL Privacy Service] Benachrichtigungen einrichten und wie Sie Benachrichtigungs-Nutzdaten interpretieren.
 
 ## Erste Schritte
 
-Dieses Tutorial verwendet **ngrok**, ein Software-Produkt, das lokale Server über sichere Tunnel dem öffentlichen Internet zugänglich macht. Bitte [installieren Sie ngrok](https://ngrok.com/download), bevor Sie mit diesem Tutorial beginnen, um auf Ihrem lokalen Computer einen Webhook zu erstellen. This guide also requires you to have a GIT repository downloaded that contains a simple [Node.js](https://nodejs.org/) server.
+Lesen Sie die folgende Dokumentation zum Privacy Service, bevor Sie dieses Lernprogramm starten:
 
-## Lokalen Server erstellen
+* [Übersicht über den Privacy Service](./home.md)
+* [Entwicklerhandbuch für die Privacy Service-API](./api/getting-started.md)
 
-Ihr Node.js-Server muss einen `challenge`-Parameter zurückgeben, der von einer Anfrage an den Stammendpunkt (`/`) gesendet wird. Richten Sie Ihre `index.js`-Datei mit folgendem JavaScript ein, um dies zu erreichen:
+## Registrieren Sie einen Webshaken, um [!DNL Privacy Service Events]
 
-```js
-var express = require('express')
-var app = express()
+Für den Empfang müssen Sie Adobe Developer Console verwenden, um einen Webshaken für Ihre [!DNL Privacy Service Events][!DNL Privacy Service] Integration zu registrieren.
 
-app.set('port', (process.env.PORT || 3000))
-app.use(express.static(__dirname + '/public'))
+Folgen Sie dem Tutorial zum [Abonnieren von [!DNL I/O Event] Tonbenachrichtigungen](../observability/notifications/subscribe.md) , um detaillierte Schritte dazu zu erhalten. Stellen Sie sicher, dass Sie **[!UICONTROL Privacy Service-Ereignis]** als Ereignis-Provider auswählen, um auf die oben aufgeführten Ereignis zuzugreifen.
 
-app.get('/', function(request, response) {
-  response.send(request.originalUrl.split('?challenge=')[1]);
-})
+## Benachrichtigungen [!DNL Privacy Service Event] empfangen
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
-```
-
-Navigieren Sie mit der Befehlszeile zum Stammverzeichnis Ihres Node.js-Servers. Geben Sie dann die folgenden Befehle ein:
-
-1. `npm install`
-1. `npm start`
-
-Diese Befehle installieren alle Abhängigkeiten und initialisieren den Server. Bei erfolgreichem Abschluss sehen Sie, dass Ihr Server unter http://localhost:3000/ ausgeführt wird.
-
-## Webhook erstellen mit ngrok
-
-Öffnen Sie ein neues Befehlszeilenfenster und navigieren Sie zu dem Ordner, in dem Sie ngrok zuvor installiert haben. Geben Sie von hier aus den folgenden Befehl ein:
-
-```shell
-./ngrok http -bind-tls=true 3000
-```
-
-Eine erfolgreiche Ausgabe sieht etwa wie folgt aus:
-
-![ngrok-Ausgabe](images/privacy-events/ngrok-output.png)
-
-Notieren Sie sich die `Forwarding`-URL (`https://212d6cd2.ngrok.io`), da diese dazu dient, Ihren Webhook im nächsten Schritt zu identifizieren.
-
-## Neues Projekt in der Adobe Developer Console erstellen
-
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
-
-## Ereignisse zum Schutz der Privatsphäre im Projekt Hinzufügen
-
-Nachdem Sie mit der Erstellung eines neuen Projekts in der Konsole fertig sind, klicken Sie im Bildschirm &quot; **[!UICONTROL Projektübersicht]** &quot;auf _Hinzufügen Ereignis_ .
-
-![](./images/privacy-events/add-event-button.png)
-
-The _Add events_ dialog appears. Wählen Sie **[!UICONTROL Experience Cloud]** aus, um die Liste eines verfügbaren Ereignistyps zu filtern, und wählen Sie dann die Ereignis **[!UICONTROL des]** Privacy Service aus, bevor Sie auf **[!UICONTROL Weiter]** klicken.
-
-![](./images/privacy-events/add-privacy-events.png)
-
-Das Dialogfeld &quot;Registrierung _des Ereignisses_ konfigurieren&quot;wird angezeigt. Wählen Sie die Ereignis aus, die Sie erhalten möchten, indem Sie die entsprechenden Kontrollkästchen aktivieren. Ereignis, die Sie auswählen, werden in der linken Spalte unter &quot; **[!UICONTROL Abonnierte Ereignis]** &quot;angezeigt. When finished, click **[!UICONTROL Next]**.
-
-![](./images/privacy-events/choose-subscriptions.png)
-
-Im nächsten Bildschirm werden Sie aufgefordert, einen öffentlichen Schlüssel für die Registrierung des Ereignisses bereitzustellen. Sie haben die Möglichkeit, automatisch ein Schlüsselpaar zu erstellen oder einen eigenen öffentlichen Schlüssel hochzuladen, der im Terminal generiert wurde.
-
-Für diese Übung wird die erste Option verwendet. Klicken Sie auf das Optionsfeld für **[!UICONTROL Generate a key pair]** und dann unten rechts auf die Schaltfläche **[!UICONTROL Generate keypair]** .
-
-![](./images/privacy-events/generate-key-value.png)
-
-Wenn das Schlüsselpaar generiert wird, wird es automatisch vom Browser heruntergeladen. Sie müssen diese Datei selbst speichern, da sie nicht in der Developer Console beibehalten wird.
-
-Im nächsten Bildschirm können Sie die Details des neu generierten Schlüsselpaars überprüfen. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
-
-![](./images/privacy-events/keypair-generated.png)
-
-Geben Sie im nächsten Bildschirm einen Namen und eine Beschreibung für die Registrierung des Ereignisses ein. Best Practice ist, einen eindeutigen, leicht identifizierbaren Namen zu erstellen, um diese Ereignis-Registrierung von anderen im selben Projekt zu unterscheiden.
-
-![](./images/privacy-events/event-details.png)
-
-Weiter unten auf dem gleichen Bildschirm stehen Ihnen zwei Optionen zur Konfiguration des Empfangs von Ereignissen zur Verfügung. Wählen Sie **[!UICONTROL WebHaken]** und geben Sie die `Forwarding` URL für den oben erstellten ngrok-Webhaken unter der **[!UICONTROL WebHook-URL]** ein. Wählen Sie dann den gewünschten Versand-Stil (Einzel- oder Stapelform), bevor Sie auf Konfigurierte Ereignis **** speichern klicken, um die Ereignis-Registrierung abzuschließen.
-
-![](./images/privacy-events/webhook-details.png)
-
-Die Detailseite für Ihr Projekt wird erneut angezeigt und [!DNL Privacy Events] wird unter den **[!UICONTROL Ereignissen]** im linken Navigationsbereich angezeigt.
-
-## Ereignisdaten anzeigen
-
-Nachdem Sie sich bei [!DNL Privacy Events] Ihrem Projekt registriert haben und Datenschutzaufträge verarbeitet wurden, können Sie alle eingegangenen Benachrichtigungen für diese Registrierung Ansicht haben. Wählen Sie auf der Registerkarte &quot; **[!UICONTROL Projekte]** &quot;in der Developer Console Ihr Projekt aus der Liste aus, um die Seite &quot; _Produktübersicht_ &quot;zu öffnen. Wählen Sie von hier aus im linken Navigationsbereich die Option **[!UICONTROL Datenschutz-Ereignisse]** .
-
-![](./images/privacy-events/events-left-nav.png)
-
-The _Registration Details_ tab appears, allowing you to view more information about the registration, edit its configuration, or view the actual events that were received since activating your webhook.
-
-![](./images/privacy-events/registration-details.png)
-
-Klicken Sie auf die Registerkarte **[!UICONTROL Debug-Verfolgung]** , um eine Liste der empfangenen Ereignis Ansicht. Klicken Sie auf ein aufgelistetes Ereignis, um dessen Details Ansicht.
+Nachdem Sie Ihren Webshaken erfolgreich registriert und Datenschutzaufträge ausgeführt haben, können Sie Beginn mit Ereignis-Benachrichtigungen aufrufen. Diese Ereignisse können mit dem Webshaken selbst oder über die Registerkarte &quot; **[!UICONTROL Debug-Ablaufverfolgung]** &quot;in der Projektregistrierung in der Adobe Developer Console angezeigt werden.
 
 ![](images/privacy-events/debug-tracing.png)
 
-Der Abschnitt **[!UICONTROL Payload]** enthält Details zum ausgewählten Ereignis, einschließlich dessen Ereignistyp (`com.adobe.platform.gdpr.productcomplete`), wie im Beispiel oben hervorgehoben.
+Die folgende JSON-Datei ist ein Beispiel für eine [!DNL Privacy Service Event] Benachrichtigungs-Payload, die an Ihren WebHook gesendet wird, wenn eine der Anwendungen, die mit einem Datenschutzauftrag verknüpft sind, ihre Arbeit abgeschlossen hat:
+
+```json
+{
+  "id":"b472e249-368b-4706-90f3-1d774713f827",
+  "event_id":"b116f797-e50b-432e-9c65-189106a34820",
+  "specversion":"0.2",
+  "type":"com.adobe.platform.gdpr.productcomplete",
+  "source":"https://ns.adobe.com/platform/gdpr",
+  "time":"Wed Oct 23 18:52:32 GMT 2019",
+  "data":{
+    "imsOrg":"{IMS_ORG}",
+    "value":{
+      "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
+      "message":"analytics.access.complete"
+    }
+  }
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `id` | Eine eindeutige, systemgenerierte ID für die Benachrichtigung. |
+| `type` | Die Art der zu sendenden Benachrichtigung unter Angabe des Kontextes zu den unter `data`. Mögliche Werte sind: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `time` | Ein Zeitstempel, der angibt, wann das Ereignis aufgetreten ist. |
+| `data.value` | Enthält zusätzliche Informationen zum Auslöser der Benachrichtigung: <ul><li>`jobId`: Die ID des Datenschutzauftrags, der die Benachrichtigung ausgelöst hat.</li><li>`message`: Eine Meldung zum spezifischen Status des Auftrags. Für `productcomplete` oder `producterror` Benachrichtigungen gibt dieses Feld die betreffende Experience Cloud-Anwendung an.</li></ul> |
 
 ## Nächste Schritte
 
-Sie können die oben beschriebenen Schritte bei Bedarf wiederholen, um für verschiedene Webhook-Adressen neue Integrationen hinzuzufügen.
+In diesem Dokument wurde beschrieben, wie Privacy Service-Ereignis für einen konfigurierten Webhook registriert werden und wie Benachrichtigungs-Nutzdaten interpretiert werden. Informationen zum Verfolgen von Datenschutzaufträgen über die Benutzeroberfläche finden Sie im [Privacy Service-Benutzerhandbuch](./ui/user-guide.md).
