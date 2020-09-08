@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Zahlungsanschluss in der Benu
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Adobe Experience Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Zahlungskonto.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1343'
 ht-degree: 3%
 
 ---
@@ -30,14 +30,20 @@ Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits ein Zahlungskont
 
 ## Daten auswählen
 
-Nach dem Erstellen Ihres Zahlungskontos wird der Schritt Daten **** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
+Nach der Erstellung Ihres Zahlungskontos wird der Schritt Daten **** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
 
 - Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
 - In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
 
-Wählen Sie den Ordner, den Sie verwenden möchten, und wählen Sie dann **[!UICONTROL Weiter]**.
+Mit der Option &quot; **[!UICONTROL Suchen]** &quot;oben auf der Seite können Sie die Quelldaten, die Sie verwenden möchten, schnell identifizieren.
 
-![add-data](../../../images/tutorials/dataflow/payments/add-data.png)
+>[!NOTE]
+>
+>Die Suchquellendaten-Option steht allen tabellarischen Quellschnittstellen mit Ausnahme der Connectors für Analytics, Classifications, Ereignis Hubs und Kinesis zur Verfügung.
+
+Nachdem Sie die Quelldaten gefunden haben, wählen Sie das Verzeichnis aus und klicken Sie auf **[!UICONTROL Weiter]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
