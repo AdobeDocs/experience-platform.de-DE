@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzer
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Konto.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1398'
 ht-degree: 3%
 
 ---
@@ -35,9 +35,15 @@ Nach der Erstellung Ihres CRM-Kontos wird der Schritt Daten ** auswählen angeze
 * Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
 * In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
 
-Wählen Sie den Ordner aus, den Sie verwenden möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
+Mit der Option &quot; **[!UICONTROL Suchen]** &quot;oben auf der Seite können Sie die Quelldaten, die Sie verwenden möchten, schnell identifizieren.
 
-![select-data](../../../images/tutorials/dataflow/crm/select-data.png)
+>[!NOTE]
+>
+>Die Suchquellendaten-Option steht allen tabellarischen Quellschnittstellen mit Ausnahme der Connectors für Analytics, Classifications, Ereignis Hubs und Kinesis zur Verfügung.
+
+Nachdem Sie die Quelldaten gefunden haben, wählen Sie das Verzeichnis aus und klicken Sie auf **[!UICONTROL Weiter]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
