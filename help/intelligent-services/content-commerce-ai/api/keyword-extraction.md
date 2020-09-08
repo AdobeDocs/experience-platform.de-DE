@@ -5,10 +5,10 @@ title: Extraktion
 topic: Developer guide
 description: Der Suchbegriff-Extraktion-Dienst extrahiert automatisch Suchbegriffe oder Schlüsselbegriffe, die das Dokument am besten beschreiben, wenn er ein Textfeld erhält. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Unternehmenserkennung (NER) und unbeaufsichtigten Suchbegriffserkennung (Keyword Extraktion) verwendet.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 3%
+source-wordcount: '625'
+ht-degree: 4%
 
 ---
 
@@ -20,14 +20,6 @@ ht-degree: 3%
 >[!DNL Content and Commerce AI] ist in der Betaphase enthalten. Die Dokumentation kann geändert werden.
 
 Der Suchbegriff-Extraktion-Dienst extrahiert automatisch Suchbegriffe oder Schlüsselbegriffe, die das Dokument am besten beschreiben, wenn er ein Textfeld erhält. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Unternehmenserkennung (NER) und unbeaufsichtigten Suchbegriffserkennung (Keyword Extraktion) verwendet.
-
-**Extraktion von nicht überwachten Suchbegriffen**
-
-Für die Extraktion von nicht überwachten Suchbegriffen wird [[!DNL YAKE]](http://yake.inesctec.pt/) verwendet. [!DNL YAKE] ist eine schnelle und genaue unbeaufsichtigte Extraktion von Suchbegriffen, mit der die wichtigsten Suchbegriffe aus einem Dokument ausgewählt werden. Die Suchbegriffsauszüge [!DNL YAKE] werden dann gefiltert, um nur die Suchbegriffe auszuwählen.
-
-**Benannte Entitätsanerkennung**
-
-Für die benannte Entitätserkennung wird das OntoNotes-Modell von [[!DNL spaCy]](https://spacy.io/)verwendet. Dieses Modell weist kontextspezifische Token-Vektoren, POS-Tags (Part-of-Speech), Abhängigkeitsanalyse und benannte Entitäten zu. Das OntoNotes-Modell ist eines der wichtigsten [!DNL spaCy] Modelle. Weitere Informationen zum OntoNotes-Modell finden Sie [hier](https://spacy.io/models/en).
 
 Die benannten Entitäten, die von erkannt werden, [!DNL Content and Commerce AI] sind in der folgenden Tabelle aufgeführt:
 
@@ -44,8 +36,6 @@ Die benannten Entitäten, die von erkannt werden, [!DNL Content and Commerce AI]
 | WORK_OF_ART | Titel von Büchern, Liedern usw. |
 | GESETZ | Benannte Dokumente, die in Gesetze umgewandelt wurden. |
 | SPRACHE | Jede benannte Sprache. |
-
-Die Ergebnisse von [!DNL OntoNotes] werden mit den Suchbegriffen von kombiniert [!DNL YAKE]und dann in einer Rangfolge nach ihrer Wichtigkeit zurückgegeben.
 
 **API-Format**
 
