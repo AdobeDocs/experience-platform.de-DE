@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zum Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1059'
 ht-degree: 1%
 
 ---
@@ -24,11 +24,12 @@ Das Dashboard für die [!DNL Privacy Service] Benutzeroberfläche enthält zwei 
 
 ### Regeltyp
 
-[!DNL Privacy Service] unterstützt Aufträge für drei Regeltypen:
+[!DNL Privacy Service] unterstützt Aufträge für vier Regeltypen:
 
-* Die Europäische Vereinigung [!DNL General Data Protection Regulation] (GDPR)
-* Die [!DNL California Consumer Privacy Act] (CCPA)
-* Thailands [!DNL Personal Data Protection Act] (PDPA_THA)
+* Die Europäische Vereinigung [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
+* Die [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* Brasiliens [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* Thailands [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 Aufträge für jeden Regelungstyp werden separat verfolgt. Um zwischen Regelungstypen zu wechseln, klicken Sie auf das Dropdown-Menü **[!UICONTROL Regelungstyp]** und wählen Sie die gewünschte Regelart aus der Liste aus.
 
@@ -56,7 +57,7 @@ Um weitere Details zu einem bestimmten Datenpunkt Ansicht, klicken Sie auf den b
 
 >[!NOTE]
 >
->Wenn ein Filter auf das Widget &quot;Auftragsanforderungen&quot;angewendet wurde, können Sie den Filter entfernen, indem Sie auf das **[!UICONTROL X]** in der Filtertablette klicken. Auftragsanforderungen kehren dann zur standardmäßigen Tracking-Liste zurück.
+>Wenn ein Filter auf das Widget &quot;Auftragsanforderungen&quot;angewendet wurde, können Sie den Filter entfernen, indem Sie auf das **X** in der Filtertablette klicken. Auftragsanforderungen kehren dann zur standardmäßigen Tracking-Liste zurück.
 
 ### Auftragsanforderungen
 
@@ -129,7 +130,7 @@ Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge)
 
 ### JSON-Datei hochladen {#json}
 
-Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für jede verarbeitete Person verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
+Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für die einzelnen verarbeiteten Datensubjekte verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
 Klicken Sie auf den Pfeil neben Anforderung **[!UICONTROL erstellen]**, unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms. Wählen Sie in der Liste der angezeigten Optionen die Option JSON **[!UICONTROL hochladen]**.
 
