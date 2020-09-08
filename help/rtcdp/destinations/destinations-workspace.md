@@ -5,10 +5,10 @@ seo-title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 61%
+source-wordcount: '825'
+ht-degree: 56%
 
 ---
 
@@ -52,9 +52,31 @@ Wählen Sie eine Zielkarte im Katalog aus, um die rechte Leiste zu öffnen.  Hie
 
 Weitere Informationen zu den Ziel-Kategorien und Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](/help/rtcdp/destinations/destinations-catalog.md) und in den [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md).
 
+## [!UICONTROL Konten] {#accounts}
+
+Auf der Registerkarte **[!UICONTROL Konten]** erfahren Sie mehr über die Verbindungen, die Sie zu verschiedenen Zielen hergestellt haben. Die nachstehende Tabelle enthält alle Informationen zu den einzelnen Zielen:
+
+>[!TIP]
+>
+>Verwenden Sie die ![Schaltfläche](/help/rtcdp/destinations/assets/add-data-symbol.png) für Hinzufügen Daten in der Spalte &quot; **[!UICONTROL Plattform]** &quot;, um eine neue Zielverbindung für dieses Konto zu erstellen.
+
+![Registerkarte „Konten“](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+| Element | Beschreibung |
+---------|----------
+| [!UICONTROL Plattform] | Das Ziel, für das Sie die Verbindung eingerichtet haben. |
+| [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp zu Ihrem Speicher-Bucket oder Ziel dar. <ul><li>Bei E-Mail-Marketing-Zielen: Kann S3 oder FTP sein.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Amazon S3-Cloud-Speicherzielen: Zugriffsschlüssel. </li><li>Bei SFTP-Cloud-Speicherzielen: Grundlegende Authentifizierung für SFTP.</li></ul> |
+| [!UICONTROL Benutzername] | Der Benutzername, den Sie im [Zielverbindungsassistenten](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination) ausgewählt haben. |
+| [!UICONTROL Ziele] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Zielflüsse mit grundlegenden Informationen an, die für ein Ziel erstellt wurden. |
+| [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
+
 ## [!UICONTROL Durchsuchen] {#browse}
 
-Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Ziele, bei denen der Umschalter **[!UICONTROL Aktiviert]** aktiviert ist, setzen das Ziel auf „aktiv“ und umgekehrt. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte „Durchsuchen“ verfügbar sind:
+Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte „Durchsuchen“ verfügbar sind:
+
+>[!TIP]
+>
+>Verwenden Sie die ![Schaltfläche](/help/rtcdp/destinations/assets/add-data-symbol.png) für Hinzufügen Daten in der Spalte &quot; **[!UICONTROL Name]** &quot;, um weitere Segmente für dieses Ziel zu aktivieren.
 
 ![Registerkarte „Durchsuchen“](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -73,21 +95,6 @@ Klicken Sie auf eine Zielzeile, um weitere Informationen zum Ziel in der rechten
 ![Auf Zielzeile klicken](/help/rtcdp/destinations/assets/click-destination-row.png)
 
 Wählen Sie den Zielnamen aus, um Informationen zu den für dieses Ziel aktivierten Segmenten anzuzeigen. Klicken Sie auf **[!UICONTROL Aktivierung bearbeiten]**, um die Segmente, die an dieses Ziel gesendet werden, zu ändern oder hinzuzufügen.
-
-## [!UICONTROL Konten] {#accounts}
-
-Auf der Registerkarte **[!UICONTROL Konten]** erfahren Sie mehr über die Verbindungen, die Sie zu verschiedenen Zielen hergestellt haben. Die nachstehende Tabelle enthält alle Informationen zu den einzelnen Zielen:
-
-![Registerkarte „Konten“](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-| Element | Beschreibung |
----------|----------
-| [!UICONTROL Plattform] | Das Ziel, für das Sie die Verbindung eingerichtet haben. |
-| [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp zu Ihrem Speicher-Bucket oder Ziel dar. <ul><li>Bei E-Mail-Marketing-Zielen: Kann S3 oder FTP sein.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Amazon S3-Cloud-Speicherzielen: Zugriffsschlüssel. </li><li>Bei SFTP-Cloud-Speicherzielen: Grundlegende Authentifizierung für SFTP.</li></ul> |
-| [!UICONTROL Benutzername] | Der Benutzername, den Sie im [Zielverbindungsassistenten](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination) ausgewählt haben. |
-| [!UICONTROL Datenflüsse] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Zielflüsse mit grundlegenden Informationen an, die für ein Ziel erstellt wurden. |
-| [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
-| [!UICONTROL Status] | `Active` oder `Inactive`. Gibt an, ob für dieses Ziel derzeit Daten aktiviert sind. Informationen zum Bearbeiten des Status finden Sie unter [Aktivierung deaktivieren](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
 
 ## [!UICONTROL Systemansicht] {#system-view}
 
