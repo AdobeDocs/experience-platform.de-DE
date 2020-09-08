@@ -5,10 +5,10 @@ title: Konfigurieren eines Datenflusses für einen Werbeanschluss in der Benutze
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Adobe Experience Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Werbekonto.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1305'
-ht-degree: 4%
+source-wordcount: '1350'
+ht-degree: 3%
 
 ---
 
@@ -35,9 +35,16 @@ Nach der Erstellung Ihres Werbekontos wird der Schritt Daten **** auswählen ang
 - Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
 - In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
 
-Wählen Sie den Ordner, den Sie verwenden möchten, und wählen Sie dann **[!UICONTROL Weiter]**.
+Mit der Option &quot; **[!UICONTROL Suchen]** &quot;oben auf der Seite können Sie die Quelldaten, die Sie verwenden möchten, schnell identifizieren.
 
-![add-data](../../../images/tutorials/dataflow/advertising/add-data.png)
+>[!NOTE]
+>
+>Die Suchquellendaten-Option steht allen tabellarischen Quellschnittstellen mit Ausnahme der Connectors für Analytics, Classifications, Ereignis Hubs und Kinesis zur Verfügung.
+
+Nachdem Sie die Quelldaten gefunden haben, wählen Sie das Verzeichnis aus und klicken Sie auf **[!UICONTROL Weiter]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
+
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
