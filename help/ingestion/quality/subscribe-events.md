@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Abonnieren von Datenerfassungsereignissen
 topic: overview
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 38%
+source-wordcount: '621'
+ht-degree: 32%
 
 ---
 
@@ -20,75 +20,77 @@ Data loaded into [!DNL Platform] must go through multiple steps in order to reac
 
 To assist in monitoring the ingestion process, [!DNL Experience Platform] makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures.
 
-## Verfügbare Statusbenachrichtigungs-Ereignisse
+## Registrieren eines Webhofs für Benachrichtigungen zur Datenaufnahme
 
-Im Folgenden finden Sie eine Liste der verfügbaren Statusbenachrichtigungen zur Datenerfassung, die Sie abonnieren können.
+Um Benachrichtigungen zur Datenerfassung zu erhalten, müssen Sie die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) verwenden, um einen Webshaken für Ihre Experience Platform-Integration zu registrieren.
+
+Folgen Sie dem Tutorial zum [Abonnieren von [!DNL Adobe I/O Event] Tonbenachrichtigungen](../../observability/notifications/subscribe.md) , um detaillierte Schritte dazu zu erhalten.
+
+>[!IMPORTANT]
+>
+>Stellen Sie während des Abonnements sicher, dass Sie **[!UICONTROL Plattformbenachrichtigungen]** als Ereignis-Provider auswählen und bei Aufforderung das Ereignis für **[!UICONTROL Dateneingabebenachrichtigungen]** auswählen.
+
+## Benachrichtigungen zur Datenerfassung erhalten
+
+Nachdem Sie Ihren Webhook erfolgreich registriert und neue Daten erfasst haben, können Sie Beginn mit Ereignis-Benachrichtigungen aufrufen. Diese Ereignisse können mit dem Webshaken selbst oder über die Registerkarte &quot; **[!UICONTROL Debug-Ablaufverfolgung]** &quot;in der Projektregistrierung in der Adobe Developer Console angezeigt werden.
+
+Die folgende JSON-Datei ist ein Beispiel für eine Benachrichtigungs-Nutzlast, die bei einem fehlgeschlagenen Batch-ErfassungsEreignis an Ihren Webhook gesendet wird:
+
+```json
+{
+  "event_id": "93a5b11a-b0e6-4b29-ad82-81b1499cb4f2",
+  "event": {
+    "xdm:ingestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:customerIngestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:imsOrg": "{IMS_ORG}",
+    "xdm:completed": 1598374341560,
+    "xdm:datasetId": "5e55b556c2ae4418a8446037",
+    "xdm:eventCode": "ing_load_failure",
+    "xdm:sandboxName": "prod",
+    "sentTime": "1598374341595",
+    "processStartTime": 1598374342614,
+    "transformedTime": 1598374342621,
+    "header": {
+      "_adobeio": {
+        "imsOrgId": "{IMS_ORG}",
+        "providerMetadata": "aep_observability_catalog_events",
+        "eventCode": "platform_event"
+      }
+    }
+  }
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `event_id` | Eine eindeutige, systemgenerierte ID für die Benachrichtigung. |
+| `event` | Ein Objekt, das die Details des Ereignisses enthält, das die Benachrichtigung ausgelöst hat. |
+| `event.xdm:datasetId` | Die ID des Datensatzes, auf den das Ereignis &quot;Inkraftsetzung&quot;angewendet wird. |
+| `event.xdm:eventCode` | Ein Statuscode, der den Typ des Ereignisses angibt, das für den Datensatz ausgelöst wurde. Spezifische Werte und deren Definitionen finden Sie im [Anhang](#event-codes) . |
+
+Informationen zur Ansicht des vollständigen Schemas für Ereignis-Benachrichtigungen finden Sie im [öffentlichen GitHub-Repository](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
+
+## Nächste Schritte
+
+Nachdem Sie [!DNL Platform] Benachrichtigungen zu Ihrem Projekt registriert haben, können Sie Ereignisse aus der [!UICONTROL Projektübersicht]Ansicht haben. Refer to the guide on [tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) for detailed instructions on how to trace your events.
+
+## Anhang
+
+Der folgende Abschnitt enthält weitere Informationen zur Interpretation der Nutzdaten von Dateneingabebenachrichtigungen.
+
+### Verfügbare Statusbenachrichtigungs-Ereignisse {#event-codes}
+
+In der folgenden Tabelle werden die verfügbaren Statusbenachrichtigungen zur Datenaufnahme Liste, die Sie abonnieren können.
+
+| Ereignis-Code | Platform Service | Status | Ereignisbeschreibung |
+| --- | ---------------- | ------ | ----------------- |
+| `ing_load_success` | [!DNL Data Ingestion] | Erfolgreich | Ein Stapel wurde erfolgreich in einen Datensatz innerhalb des [!DNL Data Lake]Stapels eingefügt. |
+| `ing_load_failure` | [!DNL Data Ingestion] | Fehlgeschlagen | Ein Stapel konnte nicht in einen Datensatz innerhalb des [!DNL Data Lake]Stapels aufgenommen werden. |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | Erfolgreich | Ein Stapel wurde erfolgreich in den [!DNL Profile] Datenspeicher aufgenommen. |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | Fehlgeschlagen | Ein Stapel konnte nicht in den [!DNL Profile] Datenspeicher aufgenommen werden. |
+| `ig_load_success` | [!DNL Identity Service] | Erfolgreich | Daten wurden erfolgreich in das Identitätsdiagramm geladen. |
+| `ig_load_failure` | [!DNL Identity Service] | Fehlgeschlagen | Daten konnten nicht in das Identitätsdiagramm geladen werden. |
 
 >[!NOTE]
 >
 > Es wird nur ein Ereignisthema für alle Benachrichtigungen zur Datenerfassung bereitgestellt. Zur Unterscheidung zwischen verschiedenen Status kann der Ereignis-Code verwendet werden.
-
-| Platform Service | Status | Ereignisbeschreibung | Ereignis-Code |
-| ---------------- | ------ | ----------------- | ---------- |
-| Data Landing | Erfolgreich | Aufnahme – Batch erfolgreich | ing_load_success |
-| Data Landing | Fehlgeschlagen | Aufnahme – Batch fehlgeschlagen | ing_load_failure |
-| Echtzeit-Kundenprofil | Erfolgreich | Profil-Dienst – Datenlade-Batch erfolgreich | ps_load_success |
-| Echtzeit-Kundenprofil | Fehlgeschlagen | Profil-Dienst - Datenlade-Batch fehlgeschlagen | ps_load_failure |
-| Identitätsdiagramm | Erfolgreich | Identitätsdiagramm – Datenlade-Batch erfolgreich | ig_load_success |
-| Identitätsdiagramm | Fehlgeschlagen | Identitätsdiagramm – Datenlade-Batch fehlgeschlagen | ig_load_failure |
-
-## Benachrichtigungs-Payload-Schema
-
-The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
-
-## Statusbenachrichtigungen zur Datenaufnahme abonnieren
-
-Über [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) können Sie mehrere Benachrichtigungstypen über Webhooks abonnieren. Die folgenden Abschnitte beschreiben die Schritte zum Abonnieren von [!DNL Platform] Benachrichtigungen für Datenverarbeitungs-Ereignis mit der Adobe Developer Console.
-
-### Neues Projekt in der Adobe Developer Console erstellen
-
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
-
-### hinzufügen von [!DNL Experience Platform] Ereignissen
-
-Nachdem Sie ein neues Projekt erstellt haben, navigieren Sie zum Übersichtsbildschirm dieses Projekts. Klicken Sie von hier auf **[!UICONTROL Hinzufügen Ereignis]**.
-
-![](../images/quality/subscribe-events/add-event-button.png)
-
-The **[!UICONTROL Add events]** dialog appears. Klicken Sie auf **[!UICONTROL Experience Platform]** , um die Liste der verfügbaren Optionen zu filtern, und klicken Sie dann auf **[!UICONTROL Plattformbenachrichtigungen]** , bevor Sie auf **[!UICONTROL Weiter]** klicken.
-
-![](../images/quality/subscribe-events/select-platform-events.png)
-
-Im nächsten Bildschirm wird eine Liste von Ereignistypen angezeigt, die abonniert werden sollen. Wählen Sie **[!UICONTROL Datenerfassungsbenachrichtigung]** und klicken Sie dann auf **[!UICONTROL Weiter]**.
-
-![](../images/quality/subscribe-events/choose-event-subscriptions.png)
-
-Im nächsten Bildschirm werden Sie aufgefordert, ein JSON-WebToken (JWT) zu erstellen. Sie haben die Möglichkeit, automatisch ein Schlüsselpaar zu erstellen oder einen eigenen öffentlichen Schlüssel hochzuladen, der im Terminal generiert wurde.
-
-Für diese Übung wird die erste Option verwendet. Markieren Sie das Optionsfeld für **[!UICONTROL Generate a key pair]** und klicken Sie dann unten rechts auf die Schaltfläche **[!UICONTROL Generate keypair]** .
-
-![](../images/quality/subscribe-events/generate-keypair.png)
-
-Wenn das Schlüsselpaar generiert wird, wird es automatisch vom Browser heruntergeladen. Sie müssen diese Datei selbst speichern, da sie nicht in der Developer Console beibehalten wird.
-
-Im nächsten Bildschirm können Sie die Details des neu generierten Schlüsselpaars überprüfen. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
-
-![](../images/quality/subscribe-events/keypair-generated.png)
-
-Geben Sie im nächsten Bildschirm einen Namen und eine Beschreibung für die Registrierung des Ereignisses ein. Best Practice ist, einen eindeutigen, leicht identifizierbaren Namen zu erstellen, um diese Ereignis-Registrierung von anderen im selben Projekt zu unterscheiden.
-
-![](../images/quality/subscribe-events/registration-details.png)
-
-Weiter unten auf dem gleichen Bildschirm können Sie optional konfigurieren, wie Ereignis empfangen werden. **[!UICONTROL Mit WebHook]** können Sie eine benutzerdefinierte Webhook-Adresse für den Empfang von Ereignissen angeben, während die **[!UICONTROL Laufzeitaktion]** es Ihnen ermöglicht, dasselbe mit [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)zu tun.
-
-Dieses Lernprogramm überspringt diesen optionalen Konfigurationsschritt. Nachdem Sie fertig sind, klicken Sie auf **[!UICONTROL Konfigurierte Ereignisse]** speichern, um die Ereignis-Registrierung abzuschließen.
-
-![](../images/quality/subscribe-events/receive-events.png)
-
-Die Detailseite für die neu erstellte Ereignis-Registrierung wird angezeigt, auf der Sie die empfangenen Ereignis überprüfen, die Debugging-Verfolgung durchführen und die Konfiguration bearbeiten können.
-
-![](../images/quality/subscribe-events/registration-complete.png)
-
-## Nächste Schritte
-
-Nachdem Sie [!DNL Platform] Benachrichtigungen zu Ihrem Projekt registriert haben, können Sie Ereignisse aus dem Dashboard des Projekts Ansicht haben. Detaillierte Anweisungen zur Verfolgung Ihrer Ereignisse finden Sie in der Anleitung [Verfolgung von Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md).
