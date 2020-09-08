@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Flusslaufbenachrichtigungen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 4%
+source-wordcount: '787'
+ht-degree: 5%
 
 ---
 
@@ -25,34 +25,23 @@ In diesem Dokument wird beschrieben, wie Sie Ereignis abonnieren, Webhooks regis
 
 ## Erste Schritte
 
-Dieses Dokument erfordert ein funktionierendes Verständnis der folgenden Komponenten von Adobe Experience Platform:
+In diesem Lernprogramm wird davon ausgegangen, dass Sie bereits mindestens eine Quellverbindung erstellt haben, deren Fluss überwacht werden soll. Wenn Sie noch keine Quellverbindung konfiguriert haben, sollten Sie den Beginn in der [Quellübersicht](./home.md) aufrufen, um die Quelldatei Ihrer Wahl zu konfigurieren, bevor Sie zu diesem Handbuch zurückkehren.
 
-* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-* [[!DNL Echtzeit-Profil]](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL Adobe Experience Platform-Datenaufnahme]](../ingestion/home.md): [!DNL Data Ingestion] stellt die verschiedenen Methoden dar, mit denen Daten aus diesen Quellen [!DNL Platform] erfasst werden, sowie die Art und Weise, wie diese Daten innerhalb der [!DNL Data Lake] zur Verwendung durch nachgelagerte [!DNL Platform] Dienste beibehalten werden.
+Dieses Dokument erfordert auch ein funktionierendes Verständnis von Webhooks und wie ein Webhaken von einer Anwendung zur anderen verbunden werden kann. Eine Einführung in Webhooks finden Sie in der [[!DNL I/O Events] Dokumentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) .
 
-Dieses Dokument erfordert auch ein funktionierendes Verständnis von Webhooks und wie ein Webhaken von einer Anwendung zur anderen verbunden werden kann. Weitere Informationen zu Webhooks finden Sie in der folgenden [Dokumentation](https://requestbin.com/blog/working-with-webhooks/) .
+## WebHook für Flusslaufbenachrichtigungen registrieren
 
-## Registrieren Sie Ihren Webhaken
+Um Benachrichtigungen über Flusslaufvorgänge zu erhalten, müssen Sie Adobe Developer Console verwenden, um einen Webshaken für Ihre [!DNL Experience Platform] Integration zu registrieren.
 
-Um Benachrichtigungen über den Status Ihrer Flusslaufzeit zu erhalten, müssen Sie einen Webhaken registrieren, indem Sie eine eindeutige WebHook-URL als Teil Ihrer Ereignis-Registrierungsdetails angeben. Um eine Verbindung zu Ihrem [!DNL I/O Events] Abonnement herzustellen, besuchen Sie den [Webgehackdienst](https://webhook.site/) und kopieren Sie die angegebene eindeutige URL.
-
-![Webhaken](./images/notifications/webhook-url.png)
-
-## Ereignisse abonnieren
-
-Nachdem Sie eine eindeutige Webshaken-URL erworben haben, gehen Sie zu den [Adobe-E/A-Ereignissen](https://www.adobe.io/apis/experienceplatform/events.html) und befolgen Sie die Schritte, die im Dokument mit [Dateneingabebenachrichtigungen](../ingestion/quality/subscribe-events.md) beschrieben sind, um Beginn zu kontaktieren, die Ereignis abonnieren.
+Folgen Sie dem Tutorial zum [Abonnieren von [!DNL I/O Event] Tonbenachrichtigungen](../observability/notifications/subscribe.md) , um detaillierte Schritte dazu zu erhalten.
 
 >[!IMPORTANT]
 >
->Stellen Sie während des Abonnements sicher, dass Sie Benachrichtigungen als Ereignis-Provider auswählen und die folgenden Ereignis-Abonnement auswählen: [!DNL Platform]
+>Stellen Sie während des Abonnements sicher, dass Sie **[!UICONTROL Plattformbenachrichtigungen]** als Ereignis-Provider auswählen und die folgenden Ereignis-Abonnement auswählen:
 >
 >* **[!UICONTROL Flusslauf der Experience Platform-Quelle erfolgreich]**
 >* **[!UICONTROL Flusslauf der Experience Platform fehlgeschlagen]**
 
->
->
-Wenn Sie aufgefordert werden, eine Webhook-Adresse anzugeben, verwenden Sie die zuvor erworbene WebHook-URL.
 
 ## Benachrichtigungen über Flusslaufvorgänge empfangen
 
