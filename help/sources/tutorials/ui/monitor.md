@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Überwachen von Konten und Datenflüssen
 topic: overview
 translation-type: tm+mt
-source-git-commit: e5898da7d25a708f3431b251f1cfa620b943e9a5
+source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '971'
 ht-degree: 5%
 
 ---
@@ -42,15 +42,25 @@ Wählen Sie das Trichtersymbol oben links aus, um das Sortierfenster zu starten.
 
 Über das Sortierfeld können Sie auf Konten aus einer bestimmten Quelle zugreifen. Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, und wählen Sie das Konto in der Liste auf der rechten Seite aus.
 
+>[!TIP]
+>
+> Verwenden Sie die ![Schaltfläche zur](../../images/tutorials/monitor/spectrum-control.png) Steuerung des Spektrums in der Spalte **[!UICONTROL Name]** , um einen neuen Datenfluss für das ausgewählte Konto zu erstellen.
+
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-Auf der Seite &quot; **[!UICONTROL Konten]** &quot;können Sie eine Liste mit vorhandenen Datenflüssen oder Zielgruppen-Datensätzen, die mit dem Konto, auf das Sie zugegriffen haben, verknüpft sind, Ansicht haben.
+Auf der Seite &quot; **[!UICONTROL Konten]** &quot;können Sie eine Liste mit vorhandenen Datenflüssen oder Zielgruppen-Datensätzen, die mit dem Konto, auf das Sie zugegriffen haben, verknüpft sind, Ansicht haben. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (`...`), um mehr verfügbare Optionen für den ausgewählten Datendurchlauf anzuzeigen. Die folgenden Optionen werden weiter beschrieben:
+
+| Kontrolle | Beschreibung |
+| ------- | ----------- |
+| [!UICONTROL Zeitplan bearbeiten] | Ermöglicht die Bearbeitung des Erfassungszeitplans des Datenflusses. |
+| [!UICONTROL Datenflug deaktivieren] | Damit können Sie die Datenerfassung für den ausgewählten Datendurchlauf deaktivieren. |
+| [!UICONTROL Löschen] | Ermöglicht das Löschen des ausgewählten Datenflusses. |
 
 ![Datenflüsse](../../images/tutorials/monitor/dataflows.png)
 
 ## Überwachen von Datenflüssen
 
-Datenflüsse können direkt von der Seite &quot; **[!UICONTROL Katalog]** &quot;aus aufgerufen werden, ohne **[!UICONTROL Konten]** anzuzeigen. Wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus, um eine Liste der vorhandenen Datenflüsse Ansicht.
+Datenflüsse können direkt von der Seite &quot; **[!UICONTROL Katalog]** &quot;aus aufgerufen werden, ohne **[!UICONTROL Konten]** anzuzeigen. Wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus, um eine Liste von Datenflüssen Ansicht.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -58,7 +68,7 @@ Eine Liste der vorhandenen Datenflüsse wird angezeigt. Auf dieser Seite finden 
 
 ![dataflows-Liste](../../images/tutorials/monitor/dataflows-list.png)
 
-Das Sortierfeld wird angezeigt. Wählen Sie im Bildlaufmenü die Quelle aus, auf die Sie zugreifen möchten, und wählen Sie dann in der Liste auf der rechten Seite den Datendurchlauf aus.
+Das Sortierfeld wird angezeigt. Wählen Sie im Bildlaufmenü die Quelle aus, auf die Sie zugreifen möchten, und wählen Sie dann in der Liste auf der rechten Seite den Datendurchlauf aus. Sie können auch die Schaltfläche &quot;Ellipsen&quot;(`...`) auswählen, um mehr verfügbare Optionen für den ausgewählten Datendurchlauf anzuzeigen.
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -80,13 +90,12 @@ Die Übersicht **[!UICONTROL zum Ausführen des]** Datenflusses enthält Informa
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
-In der folgenden Tabelle finden Sie Fehlercodes, die in der **[!UICONTROL Fehlerzusammenfassung]** angezeigt werden können.
+In der folgenden Tabelle finden Sie Fehler, die in der **[!UICONTROL Fehlerzusammenfassung]** angezeigt werden können.
 
-| Fehler-Code | Fehlermeldung |
+| Fehler | Beschreibung |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | &quot;Bei der Aktivität zum Kopieren ist ein Problem aufgetreten.&quot; |
-| `CONNECTOR-2001-500` | &quot;Beim Kopieren der Experience Platform in den Datensatz ist ein Problem aufgetreten.&quot; |
-| `CONNECTOR-3001-500` | &quot;Beim Flow-Provider ist beim Erstellen des Stapels mit der Massen-Erfassungsschnittstelle ein Problem aufgetreten.&quot; |
+| `CONNECTOR-1001-500` | Beim Kopieren von Daten aus einer Quelle ist ein Fehler aufgetreten. |
+| `CONNECTOR-2001-500` | Während der Verarbeitung kopierter Daten zu [!DNL Platform]ist ein Fehler aufgetreten. Dieser Fehler kann bei der Analyse, Validierung oder Transformation auftreten. |
 
 Die untere Hälfte des Bildschirms enthält Informationen zu **[!UICONTROL Dataflow-Ausführungsfehlern]**. Von hier aus können Sie auch die erfassten Dateien Ansicht, die Fehlerdiagnose für Vorschau und Download durchführen oder das Dateimanifest herunterladen.
 
