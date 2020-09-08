@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 78%
+source-wordcount: '1782'
+ht-degree: 76%
 
 ---
 
@@ -33,7 +33,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zulässige Werte sind `gdpr`, `ccpa` und `pdpa_tha`. |
+| `{REGULATION}` | Der Regelungstyp für die Abfrage. Accepted values are `gdpr`, `ccpa`, `lgpd_bra`, and `pdpa_tha`. |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `1` und der Maximalwert ist `100`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
 
@@ -153,7 +153,7 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anfragen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn keine `priority` angegeben wird, lautet das Standardverhalten `normal`. |
 | `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` ausgelassen wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
-| `regulation` **(Erforderlich)** | Die Verordnung für die Anfrage. Muss einer der folgenden drei Werte sein: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Erforderlich)** | Die Verordnung für die Anfrage. muss einer der folgenden vier Werte sein: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Antwort**
 
@@ -286,7 +286,7 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anfragen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn keine `priority` angegeben wird, lautet das Standardverhalten `normal`. |
 | `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` ausgelassen wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
-| `regulation` **(Erforderlich)** | Die Verordnung für die Anfrage. Muss einer der folgenden drei Werte sein: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Erforderlich)** | Die Verordnung für die Anfrage. muss einer der folgenden vier Werte sein: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Antwort**
 
@@ -449,14 +449,14 @@ In der folgenden Tabelle werden die verschiedenen Kategorien zum Auftragsstatus 
 
 | Status-Kategorie | Bedeutung |
 | -------------- | -------- |
-| Abgeschlossen | Der Auftrag ist abgeschlossen und (falls erforderlich) werden Dateien von jeder Anwendung hochgeladen. |
-| Verarbeitung | Anwendungen haben den Auftrag bestätigt und sind derzeit bei der Verarbeitung. |
-| Gesendet | Der Auftrag wird bei allen anwendbaren Anwendungen eingereicht. |
-| Fehler | Bei der Verarbeitung des Auftrags ist etwas fehlgeschlagen – spezifischere Informationen können Sie durch Abrufen einzelner Auftragsdetails erhalten. |
+| `complete` | Der Auftrag ist abgeschlossen und (falls erforderlich) werden Dateien von jeder Anwendung hochgeladen. |
+| `processing` | Anwendungen haben den Auftrag bestätigt und sind derzeit bei der Verarbeitung. |
+| `submitted` | Der Auftrag wird bei allen anwendbaren Anwendungen eingereicht. |
+| `error` | Bei der Verarbeitung des Auftrags ist etwas fehlgeschlagen – spezifischere Informationen können Sie durch Abrufen einzelner Auftragsdetails erhalten. |
 
 >[!NOTE]
 >
->Ein gesendeter Auftrag kann sich im Verarbeitungsstatus befinden, wenn er einen abhängigen untergeordneten Auftrag hat, der noch verarbeitet wird.
+>A submitted job might remain in a `processing` state if it has a dependent child job that is still processing.
 
 ## Nächste Schritte
 
