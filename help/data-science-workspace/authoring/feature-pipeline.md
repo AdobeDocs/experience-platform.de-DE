@@ -5,7 +5,7 @@ title: Erstellen einer Feature-Pipeline
 topic: Tutorial
 description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funktionenpipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime umfangreiche Funktionen zu entwickeln. Dieses Dokument beschreibt die verschiedenen Klassen, die in einer Feature-Pipeline gefunden wurden, und bietet eine schrittweise Anleitung zum Erstellen einer benutzerdefinierten Feature-Pipeline mit dem Model Authoring-SDK in PySpark.
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 27%
@@ -397,7 +397,7 @@ Nachdem Sie Ihre Feature-Pipeline erstellt haben, müssen Sie ein Docker-Bild er
 
 Optional können Sie auch die folgende Postman-Sammlung verwenden, um den Workflow der Feature Pipeline-API abzuschließen:
 
-https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
+https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Erstellen einer Feature-Pipeline-Engine {#create-engine-api}
 
