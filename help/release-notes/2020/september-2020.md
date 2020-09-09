@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9a9b1294507986723c1e4d1230a854630131be3a
+source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 31%
+source-wordcount: '883'
+ht-degree: 28%
 
 ---
 
@@ -21,6 +21,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL-Datenverwaltung]](#governance)
 - [[!DNL-Ziele]](#destinations)
+- [[!DNL Observability Insights]](#observability)
 - [[!DNL-Privacy Service]](#privacy)
 - [[!DNL Echtzeit-Profil des Kunden]](#profile)
 - [[!DNL-Segmentierungsdienst]](#segmentation)
@@ -50,6 +51,30 @@ In der [Adobe Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele
 
 Weitere Informationen finden Sie in [Ziele – Übersicht](../../rtcdp/destinations/destinations-overview.md)
 
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] ermöglicht Ihnen die Überwachung von Aktivitäten auf Adobe Experience Platform mithilfe von statistischen Metriken und Ereignis-Benachrichtigungen.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| E/A-Ereignis-Benachrichtigungen der Adobe | [!DNL Observability Insights] nutzt Adobe-I/O-Ereignis, um Ereignis-Benachrichtigungen für mehrere Experience Platformen-Services zu erstellen. Benachrichtigungs-Nutzdaten werden an einen konfigurierten Webhop gesendet, mit dem Sie dann weitere nachgelagerte Prozesse automatisieren können. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+
+Weitere Informationen zum Dienst finden Sie in der [[!DNL Observability Insights] Übersicht](../../observability/home.md) .
+
+## [!DNL Privacy Service] {#privacy}
+
+Verschiedene Rechts- und Verwaltungsvorschriften geben den Nutzern das Recht, auf ihre personenbezogenen Daten von Ihren Datenspeichern auf Anfrage zuzugreifen oder sie zu löschen. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können nun im Rahmen der brasilianischen [!DNL Lei Geral de Proteção de Dados] (LGPD-)Verordnung geschaffen werden. Diese Aufträge werden unter dem Regelungskodex nachverfolgt `lgpd_bra`. |
+
+Weitere Informationen zum Dienst finden Sie in der Übersicht über den [Privacy Service](../../privacy-service/home.md) .
+
 ## Echtzeit-Kundenprofil {#profile}
 
 Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten zu einer einheitlichen Ansicht zusammenzuführen, die Ihnen einen umsetzbaren Zeitstempel für jede Kundeninteraktion bietet.
@@ -74,18 +99,6 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 | Zusammenführungsrichtlinien | Mehrere Zusammenführungsrichtlinien können in einem einzelnen Stapelsegmentierungsauftrag enthalten sein. |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
-
-## [!DNL Privacy Service] {#privacy}
-
-Verschiedene Rechts- und Verwaltungsvorschriften geben den Nutzern das Recht, auf ihre personenbezogenen Daten von Ihren Datenspeichern auf Anfrage zuzugreifen oder sie zu löschen. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können nun im Rahmen der brasilianischen [!DNL Lei Geral de Proteção de Dados] (LGPD-)Verordnung geschaffen werden. Diese Aufträge werden unter dem Regelungskodex nachverfolgt `lgpd_bra`. |
-
-Weitere Informationen zum Dienst finden Sie in der Übersicht über den [Privacy Service](../../privacy-service/home.md) .
 
 ## Quellen {#sources}
 
