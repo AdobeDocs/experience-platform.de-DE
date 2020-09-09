@@ -5,7 +5,7 @@ title: Grundlagen der Schema-Komposition
 topic: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 55%
@@ -173,7 +173,7 @@ Ein Feld ist der grundlegendste Baustein eines Schemas. Felder bieten Einschrän
 
 * Zeichenfolge
 * Ganzzahl
-* Zahl
+* Double
 * Boolesch
 * Array
 * Objekt
