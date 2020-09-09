@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 64b6b59923d549cdcbf35d2e375529aec8cf81b8
+source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 41%
+source-wordcount: '507'
+ht-degree: 33%
 
 ---
 
@@ -21,6 +21,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 * [[!DNL-Datenverwaltung]](#governance)
 * [[!DNL-Ziele]](#destinations)
+* [[!DNL-Privacy Service]](#privacy)
 * [[!DNL-Quellen]](#sources)
 
 ## [!DNL Data Governance] {#governance}
@@ -46,6 +47,18 @@ In der [Adobe Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele
 | UX-Verbesserungen | Benutzer können auf Aktionen für Inline-Tabellen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten zu vereinfachen. See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
 
 Weitere Informationen finden Sie in [Ziele – Übersicht](../../rtcdp/destinations/destinations-overview.md)
+
+## [!DNL Privacy Service] {#privacy}
+
+Verschiedene Rechts- und Verwaltungsvorschriften geben den Nutzern das Recht, auf ihre personenbezogenen Daten von Ihren Datenspeichern auf Anfrage zuzugreifen oder sie zu löschen. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können nun im Rahmen der brasilianischen [!DNL Lei Geral de Proteção de Dados] (LGPD-)Verordnung geschaffen werden. Diese Aufträge werden unter dem Regelungskodex nachverfolgt `lgpd_bra`. |
+
+Weitere Informationen zum Dienst finden Sie in der Übersicht über den [Privacy Service](../../privacy-service/home.md) .
 
 ## Quellen {#sources}
 
