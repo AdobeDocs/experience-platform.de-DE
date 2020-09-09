@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service – Versionshinweise
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 57%
+source-wordcount: '538'
+ht-degree: 55%
 
 ---
 
@@ -19,6 +19,14 @@ This document contains information about new features for Adobe Experience Platf
 >[!NOTE]
 >
 >Die neuesten Versionshinweise zu anderen [!DNL Experience Platform] Diensten finden Sie [hier](../release-notes/latest/latest.md).
+
+## 9. September 2020
+
+### Neue Funktionen
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können nun im Rahmen der brasilianischen [!DNL Lei Geral de Proteção de Dados] (LGPD-)Verordnung geschaffen werden. Diese Aufträge werden unter dem Regelungskodex nachverfolgt `lgpd_bra`. |
 
 ## 8. April 2020
 
