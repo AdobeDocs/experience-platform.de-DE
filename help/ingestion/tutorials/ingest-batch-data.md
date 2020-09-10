@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Daten in Adobe Experience Platform erfassen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1279'
 ht-degree: 65%
 
 ---
@@ -32,17 +32,19 @@ Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbere
 >
 >Click on the filter icon next to the Search bar to use filtering capabilities to view only those datasets enabled for [!DNL Profile].
 
-![Alle Datensätze anzeigen](../images/tutorials/ingest-batch-data/datasets_workspace.png)
+![Alle Datensätze anzeigen](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
 ## Erstellen eines Datensatzes
 
 Um einen Datensatz zu erstellen, klicken Sie in der oberen rechten Ecke des Arbeitsbereichs „Datensätze“ auf **[!UICONTROL Datensatz erstellen]**.
 
+![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
+
 On the **[!UICONTROL Create Dataset]** screen, select whether you would like to &quot;[!UICONTROL Create Dataset from Schema]&quot; or &quot;[!UICONTROL Create Dataset from CSV File]&quot;.
 
 In dieser Anleitung verwenden wir zum Erstellen des Datensatzes ein Schema. Klicken Sie auf **[!UICONTROL Datensatz aus Schema erstellen]**, um fortzufahren.
 
-![Datenquelle auswählen](../images/tutorials/ingest-batch-data/create_dataset.png)
+![Datenquelle auswählen](../images/tutorials/ingest-batch-data/create-dataset.png)
 
 ## Datensatzschema auswählen
 
@@ -50,7 +52,7 @@ Wählen Sie im Bildschirm **[!UICONTROL Schema auswählen]** ein Schema aus, ind
 
 Nachdem Sie das Optionsfeld neben dem Schema ausgewählt haben, das Sie verwenden möchten, klicken Sie auf **[!UICONTROL Weiter]**.
 
-![Schema auswählen](../images/tutorials/ingest-batch-data/select_schema.png)
+![Schema auswählen](../images/tutorials/ingest-batch-data/select-schema.png)
 
 ## Datensatz konfigurieren
 
@@ -64,7 +66,7 @@ Im Bildschirm **[!UICONTROL Datensatz konfigurieren]** müssen Sie dem Datensatz
 
 Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf **[!UICONTROL Fertig stellen]**.
 
-![Datensatz konfigurieren](../images/tutorials/ingest-batch-data/configure_dataset.png)
+![Datensatz konfigurieren](../images/tutorials/ingest-batch-data/configure-dataset.png)
 
 ## Datensatzaktivität
 
@@ -74,7 +76,7 @@ Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Regis
 
 Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
-![Datensatzaktivität](../images/tutorials/ingest-batch-data/dataset_activity.png)
+![Datensatzaktivität](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
 ## Datensatz aktivieren für [!DNL Real-time Customer Profile]
 
@@ -86,15 +88,15 @@ To learn more about [!DNL Real-time Customer Profile] and working with identitie
 
 To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab.
 
-![Profil-Umschalter](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
+![Profil-Umschalter](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
 A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-time Customer Profile].
 
-![Dialog „Profil aktivieren“](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
+![Dialog „Profil aktivieren“](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
 Klicken Sie auf **[!UICONTROL Aktivieren]**; daraufhin wird der Umschalter blau und zeigt an, dass das Profil aktiviert ist.
 
-![Für Profil aktiviert](../images/tutorials/ingest-batch-data/dataset_enabled.png)
+![Für Profil aktiviert](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
 
 ## Daten in Datensatz hinzufügen
 
@@ -106,13 +108,13 @@ Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **[!UICO
 >
 > Platform unterstützt zwei Dateitypen zur Datenerfassung: Parquet oder JSON. Sie können bis zu fünf Dateien gleichzeitig hinzufügen, wobei die maximale Dateigröße 10 GB pro Datei beträgt.
 
-![Registerkarte „Daten hinzufügen“](../images/tutorials/ingest-batch-data/add_data.png)
+![Registerkarte „Daten hinzufügen“](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Datei hochladen
 
 Once you drag and drop (or browse and select) a parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
 
-![Dialog „Upload läuft“](../images/tutorials/ingest-batch-data/uploading.png)
+![Dialog „Upload läuft“](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## Datensatzmetriken
 
@@ -120,7 +122,7 @@ Nach dem Hochladen der Datei steht auf der Registerkarte **[!UICONTROL Datensatz
 
 Am unteren Rand der Registerkarte befindet sich eine Liste, in der die **[!UICONTROL Batch-Kennung]** der Daten angezeigt wird, die gerade mit dem Prozess [Daten zu Datensatz hinzufügen](#add-data-to-dataset) erfasst wurden. Dazu gehören auch Informationen über den Batch, einschließlich Datum der **[!UICONTROL Erfassung]**, Anzahl der **[!UICONTROL erfassten Datensätze]** und des aktuellen Batch-**[!UICONTROL Status]**.
 
-![Datensatzmetriken](../images/tutorials/ingest-batch-data/batch_loading.png)
+![Datensatzmetriken](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Batch-Details
 
@@ -130,7 +132,7 @@ Weiterführende Informationen und häufig gestellte Fragen zur Batch-Erfassung f
 
 Um zum Bildschirm **[!UICONTROL Datensatzaktivität]** zurückzukehren, klicken Sie im Breadcrumb auf den Namen des Datensatzes (**[!UICONTROL Details zum Treueprogramm]**).
 
-![Batch-Übersicht](../images/tutorials/ingest-batch-data/batch_overview.png)
+![Batch-Übersicht](../images/tutorials/ingest-batch-data/batch-details.png)
 
 ## Vorschau von Datensatz anzeigen
 
@@ -138,7 +140,7 @@ Sobald der Datensatz bereit ist, wird oben auf der Registerkarte **[!UICONTROL D
 
 Klicken Sie auf **[!UICONTROL Vorschau von Datensatz anzeigen]**, um einen Dialog mit Beispieldaten aus dem Datensatz zu öffnen. Wenn der Datensatz mit einem Schema erstellt wurde, werden auf der linken Seite der Vorschau Details zum Datensatzschema angezeigt. Sie können das Schema mithilfe der Pfeile erweitern, um die Schemastruktur anzuzeigen. Jede Spaltenüberschrift in den Vorschaudaten repräsentiert ein Feld im Datensatz.
 
-![Datensatzdetails](../images/tutorials/ingest-batch-data/dataset_details.png)
+![Datensatzdetails](../images/tutorials/ingest-batch-data/dataset-preview.png)
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
@@ -151,3 +153,4 @@ Um mehr über die Batch-Erfassung zu erfahren, lesen Sie bitte die Übersicht ü
 >Die im folgenden Video dargestellte [!DNL Platform] Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+ziehen
