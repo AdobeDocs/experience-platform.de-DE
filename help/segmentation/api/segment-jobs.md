@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentaufträge
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1002'
 ht-degree: 38%
 
 ---
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `segmentId` | Die ID der Segmentdefinition, für die Sie einen Segmentauftrag erstellen möchten. Weitere Informationen zu Segmentdefinitionen finden Sie im [Segmentdefinitionsendpunkt-Handbuch](./segment-definitions.md). |
+| `segmentId` | Die ID der Segmentdefinition, für die Sie einen Segmentauftrag erstellen möchten. Diese Segmentdefinitionen können zu verschiedenen Zusammenführungsrichtlinien gehören. Weitere Informationen zu Segmentdefinitionen finden Sie im [Segmentdefinitionsendpunkt-Handbuch](./segment-definitions.md). |
 
 **Antwort**
 
