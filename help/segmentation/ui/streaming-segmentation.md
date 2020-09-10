@@ -5,9 +5,9 @@ title: Streaming-Segmentierung
 topic: ui guide
 description: Streaming-Segmentierung Unter Adobe Experience Platform können Sie Segmentierungen in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in die Plattform gelangen, was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Plattform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: c7e8cf31f4c03eec9b24064c6888e09a7070aaa5
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '831'
 ht-degree: 2%
 
 ---
@@ -57,6 +57,8 @@ Darüber hinaus gelten einige Richtlinien für die Streaming-Segmentierung:
 | ---------- | -------- |
 | Abfrage mit einem Ereignis | Das Rückblickfenster ist auf **sieben Tage** begrenzt. |
 | Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen **muss** eine strikte Zeitbestellbedingung bestehen.</li><li>Nur einfache Zeitreihenfolgen (vor und nach) zwischen den Ereignissen sind zulässig.</li><li>Die einzelnen Ereignis **können nicht** negiert werden. Die gesamte Abfrage **kann** jedoch negiert werden.</li></ul> |
+
+Wenn eine Segmentdefinition so geändert wird, dass sie die Kriterien für die Streaming-Segmentierung nicht mehr erfüllt, wechselt die Segmentdefinition automatisch von &quot;Streaming&quot;zu &quot;Batch&quot;.
 
 ## Details zu Streaming-Segmenten
 
