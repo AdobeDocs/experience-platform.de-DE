@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Überwachen von Konten und Datenflüssen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 5%
+source-wordcount: '1014'
+ht-degree: 4%
 
 ---
 
@@ -47,6 +47,14 @@ Wählen Sie das Trichtersymbol oben links aus, um das Sortierfenster zu starten.
 > Verwenden Sie die ![Schaltfläche zur](../../images/tutorials/monitor/spectrum-control.png) Steuerung des Spektrums in der Spalte **[!UICONTROL Name]** , um einen neuen Datenfluss für das ausgewählte Konto zu erstellen.
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
+
+Darüber hinaus können Sie vorhandene Kontoinformationen bearbeiten und Ihre Kontoanmeldeinformationen aktualisieren. Wählen Sie das Stiftsymbol für die Kontoinformationen aus, die Sie bearbeiten möchten.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+Das Modal **[!UICONTROL Kontodetails]** bearbeiten wird angezeigt. Auf dieser Seite können Sie Ihre vorhandenen Kontodetails und Authentifizierungsdaten aktualisieren.
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 Auf der Seite &quot; **[!UICONTROL Konten]** &quot;können Sie eine Liste mit vorhandenen Datenflüssen oder Zielgruppen-Datensätzen, die mit dem Konto, auf das Sie zugegriffen haben, verknüpft sind, Ansicht haben. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (`...`), um mehr verfügbare Optionen für den ausgewählten Datendurchlauf anzuzeigen. Die folgenden Optionen werden weiter beschrieben:
 
