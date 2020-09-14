@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Leitlinien für Experience Platformen
 topic: guide
 translation-type: tm+mt
-source-git-commit: d9e4812e3506de3082670a8afde5480cd8f865d6
+source-git-commit: 51111b2e831a37949150b107eb76711e2470523c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -96,5 +96,5 @@ Die folgenden Garantien beziehen sich auf die Datengröße und werden empfohlen,
 
 | Guardrail | Maximal | Typ begrenzen | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale Gesamtgröße pro dimensionaler Entität | 1 GB   | Soft | **Die maximal empfohlene Gesamtgröße für eine Dimensionentität beträgt 1 GB.** Die Erfassung von Entitäten mit großer Dimension führt zu einer Beeinträchtigung der Systemleistung. Beispielsweise wird der Versuch, einen 10-GB-Produktkatalog als Dimensionentität zu laden, nicht empfohlen. |
+| Maximale Gesamtgröße für alle dimensionalen Entitäten | 5 GB   | Soft | **Die maximal empfohlene Gesamtgröße für alle dimensionalen Entitäten beträgt 5 GB.** Die Erfassung von Entitäten mit großer Dimension führt zu einer Beeinträchtigung der Systemleistung. Beispielsweise wird der Versuch, einen 10-GB-Produktkatalog als Dimensionentität zu laden, nicht empfohlen. |
 | Datenbestände pro dimensionales Entitäts-Schema | 5 | Soft | **Es werden maximal 5 Datensätze empfohlen, die mit jedem dimensionalen Entitäts-Schema verknüpft sind.** Wenn Sie beispielsweise ein Schema für &quot;products&quot;erstellen und fünf beitragende Datensätze hinzufügen, sollten Sie keinen sechsten Datensatz erstellen, der mit dem Schema &quot;products&quot;verknüpft ist. |
