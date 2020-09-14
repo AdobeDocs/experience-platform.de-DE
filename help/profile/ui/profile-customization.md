@@ -5,9 +5,9 @@ title: Profil-Detailanpassung
 description: 'Dieses Handbuch enthält schrittweise Anleitungen zum Anpassen der Art und Weise, wie Kundendaten in Echtzeit in der Adobe Experience Platform-Benutzeroberfläche angezeigt werden. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
+source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,7 @@ Nach dem Speichern werden Sie zur Registerkarte &quot; [!UICONTROL Details] &quo
 
 ## Standardkarten wiederherstellen
 
-Wenn Sie jederzeit entscheiden, dass Sie Ihre Bearbeitungen entfernen und zur Standard-Ansicht zurückkehren möchten, haben Sie die Möglichkeit, alle Standardkarten und -attribute schnell und einfach wiederherzustellen. Wählen Sie dazu &quot;Dashboard ****&#x200B;ändern&quot;und dann &quot;Standardkarten **[!UICONTROL wiederherstellen&quot;]**. Dadurch werden alle Anpassungen (einschließlich Größenanpassung) entfernt, die Sie vorgenommen haben. Sie können dann **[!UICONTROL Speichern]** auswählen, um Ihre Änderungen zu speichern, oder wenn Sie die Standardeinstellung nicht wiederherstellen möchten, wählen Sie &quot; **[!UICONTROL Abbrechen]** &quot;, um die vorgenommenen Änderungen beizubehalten.
-
->[!NOTE]
->
->Gehen Sie beim Wiederherstellen von Standardkarten und -attributen vorsichtig vor. Sobald die Standardeinstellung wiederhergestellt und gespeichert wurde, können Sie die Ansichten nur noch mit den in diesem Dokument beschriebenen Schritten erneut erstellen.
+Wenn Sie sich jederzeit entscheiden, dass Sie Standardkarten wiederherstellen möchten, die entfernt wurden, haben Sie die Möglichkeit, dies schnell und einfach zu tun. Wählen Sie zunächst &quot;Dashboard ****&#x200B;ändern&quot;und dann &quot;Standardkarten **[!UICONTROL wiederherstellen&quot;]**. Sobald die Standardkarten sichtbar sind, können Sie &quot; **[!UICONTROL Speichern]** &quot;auswählen, um die Änderungen zu speichern, oder auf &quot; **[!UICONTROL Abbrechen]** &quot;klicken, wenn Sie die Standardkarten nicht wiederherstellen möchten.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
