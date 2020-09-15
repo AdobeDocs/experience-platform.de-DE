@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Daten in Adobe Experience Platform erfassen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
+source-git-commit: 2eef47cd4afe8c6dfd71d7b78035861ba1b368f7
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1278'
 ht-degree: 65%
 
 ---
@@ -153,4 +153,3 @@ Um mehr über die Batch-Erfassung zu erfahren, lesen Sie bitte die Übersicht ü
 >Die im folgenden Video dargestellte [!DNL Platform] Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
-ziehen
