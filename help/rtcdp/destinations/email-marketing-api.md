@@ -4,10 +4,10 @@ solution: Experience Platform
 title: E-Mail-Marketing-Ziele erstellen
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
 workflow-type: tm+mt
-source-wordcount: '1624'
-ht-degree: 80%
+source-wordcount: '1636'
+ht-degree: 78%
 
 ---
 
@@ -599,7 +599,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Verwenden Sie den Datenfluss, den Sie im vorherigen Schritt erstellt haben.
 * `{ETAG}`: Verwenden Sie das eTag, das Sie im vorherigen Schritt erhalten haben.
-* `{SEGMENT_ID}`: Geben Sie die Kennung des Segments an, das Sie an dieses Ziel exportieren möchten. Um Segmentkennungen für die Segmente abzurufen, die Sie aktivieren möchten, gehen Sie zu https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/ und suchen Sie nach dem `GET /segment/jobs`-Vorgang.
+* `{SEGMENT_ID}`: Geben Sie die Kennung des Segments an, das Sie an dieses Ziel exportieren möchten. Um Segment-IDs für die Segmente abzurufen, die Sie aktivieren möchten, rufen Sie **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** auf, wählen Sie im linken Navigationsmenü die Option **[!UICONTROL Segmentdienst-API]** und suchen Sie nach dem `GET /segment/definitions` Vorgang unter **[!UICONTROL Segmentdefinitionen]**.
 * `{PROFILE_ATTRIBUTE}`: Beispiel, `"person.lastName"`
 
 **Antwort**
