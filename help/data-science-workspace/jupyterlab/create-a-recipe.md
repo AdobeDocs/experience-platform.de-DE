@@ -5,10 +5,10 @@ title: Rezept erstellen mit Jupyter Notebooks
 topic: Tutorial
 description: Dieses Tutorial umfasst zwei Hauptabschnitte. Zuerst erstellen Sie mit einer Vorlage in JupyterLab Notebook ein Modell für maschinelles Lernen. Dann führen Sie den Workflow „Notebook an Rezept“ in JupyterLab aus, um ein Rezept in Data Science Workspace zu erstellen.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
-source-wordcount: '2336'
-ht-degree: 86%
+source-wordcount: '2335'
+ht-degree: 85%
 
 ---
 
@@ -34,11 +34,11 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 >
 >Das Recipe Builder-Notebook erlaubt ein Arbeiten mit allen Dateiformaten, die Funktion „Rezept erstellen“ unterstützt derzeit jedoch nur [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe-builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-Wenn Sie vom Starter aus auf das Recipe Builder-Notebook klicken, wird das Notebook in der Registerkarte geöffnet. Die im Notebook verwendete Vorlage ist das Rezept „Python Retail Sales Forecasting“, das auch in [diesem öffentlichen Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/) zu finden ist.
+Wenn Sie vom Starter auf das Rezept Builder-Notebook klicken, wird das Notebook in der Registerkarte geöffnet. Die im Notebook verwendete Vorlage ist das Rezept „Python Retail Sales Forecasting“, das auch in [diesem öffentlichen Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/) zu finden ist.
 
-Sie werden feststellen, dass es in der Symbolleiste drei weitere Aktionen gibt, nämlich **[!UICONTROL Training]**, **[!UICONTROL Scoring]** und **[!UICONTROL Rezept erstellen]**. These icons will only appear in the [!UICONTROL Recipe Builder] notebook. Weiterführende Informationen zu diesen Aktionen erhalten Sie im Abschnitt [Training und Scoring](#training-and-scoring), nachdem Sie Ihr Rezept im Notebook erstellt haben.
+Sie werden feststellen, dass es in der Symbolleiste drei weitere Aktionen gibt, nämlich **[!UICONTROL Training]**, **[!UICONTROL Scoring]** und **[!UICONTROL Rezept erstellen]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. Weiterführende Informationen zu diesen Aktionen erhalten Sie im Abschnitt [Training und Scoring](#training-and-scoring), nachdem Sie Ihr Rezept im Notebook erstellt haben.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
