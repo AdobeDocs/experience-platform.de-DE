@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Protokollanschluss in der Ben
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Adobe Experience Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Protokollkonto.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1411'
 ht-degree: 3%
 
 ---
@@ -79,9 +79,15 @@ Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfu
 >
 >[!DNL Platform] bietet intelligente Empfehlungen für automatisch zugeordnete Zielgruppen, die auf dem von Ihnen ausgewählten Schema oder Datensatz basieren. Sie können Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
-Nachdem Sie die Quelldaten zugeordnet haben, wählen Sie **[!UICONTROL Weiter]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Wählen Sie &quot; **[!UICONTROL Vorschauen-Daten]** &quot;, um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Musterdaten aus dem ausgewählten Datensatz anzuzeigen.
+
+Während der Vorschau wird die Identitätsspalte als erstes Feld priorisiert, da sie die wichtigen Informationen darstellt, die bei der Validierung der Zuordnungsergebnisse erforderlich sind.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Nachdem Sie die Quelldaten zugeordnet haben, wählen Sie &quot; **[!UICONTROL Schließen]**&quot;aus.
 
 ## Planen von Erfassungsabläufen
 
@@ -115,7 +121,7 @@ Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen 
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-## Datennachrichtendetails angeben
+## Datenflussinformationen bereitstellen
 
 Der Schritt **[!UICONTROL Datennachweis]** wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis bereitstellen können.
 
