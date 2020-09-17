@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Zahlungsanschluss in der Benu
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Adobe Experience Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Zahlungskonto.
 translation-type: tm+mt
-source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1370'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits ein Zahlungskont
 
 ## Daten auswählen
 
-Nach der Erstellung Ihres Zahlungskontos wird der Schritt Daten **** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
+Nach dem Erstellen Ihres Zahlungskontos wird der Schritt Daten **** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
 
 - Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
 - In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
@@ -75,9 +75,13 @@ The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema aus, d
 
 Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weitere Informationen zu Funktionen für die Datenzuordnung und -zuordnung finden Sie im Lernprogramm zur [Zuordnung von CSV-Daten zu XDM-Schema-Feldern](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Nachdem Sie die Quelldaten zugeordnet haben, klicken Sie auf **[!UICONTROL Weiter]**.
+>[!TIP]
+>
+>[!DNL Platform] bietet intelligente Empfehlungen für automatisch zugeordnete Zielgruppen, die auf dem von Ihnen ausgewählten Schema oder Datensatz basieren. Sie können Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+Nachdem Sie die Quelldaten zugeordnet haben, wählen Sie **[!UICONTROL Weiter]**.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## Planen von Erfassungsabläufen
 
