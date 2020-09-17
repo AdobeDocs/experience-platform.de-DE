@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Batch-Connector für eine Clo
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -93,9 +93,15 @@ Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfu
 >
 >[!DNL Platform] bietet intelligente Empfehlungen für automatisch zugeordnete Zielgruppen, die auf dem von Ihnen ausgewählten Schema oder Datensatz basieren. Sie können Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
-Nachdem Sie die Quelldaten zugeordnet haben, wählen Sie **[!UICONTROL Weiter]**.
-
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Wählen Sie &quot; **[!UICONTROL Vorschauen-Daten]** &quot;, um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Musterdaten aus dem ausgewählten Datensatz anzuzeigen.
+
+Während der Vorschau wird die Identitätsspalte als erstes Feld priorisiert, da sie die wichtigen Informationen darstellt, die bei der Validierung der Zuordnungsergebnisse erforderlich sind.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
+
+Nachdem Sie die Quelldaten zugeordnet haben, wählen Sie &quot; **[!UICONTROL Schließen]**&quot;aus.
 
 ## Planen von Erfassungsabläufen
 
