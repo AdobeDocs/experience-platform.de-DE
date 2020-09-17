@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Kunden-Erfolgsstecker in der 
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in [!DNL Platform] ADATASET eingefügt werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Kundenkonto.
 translation-type: tm+mt
-source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1393'
 ht-degree: 3%
 
 ---
@@ -75,9 +75,13 @@ The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema aus, d
 
 Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weitere Informationen zu Funktionen für die Datenzuordnung und -zuordnung finden Sie im Lernprogramm zur [Zuordnung von CSV-Daten zu XDM-Schema-Feldern](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Nachdem Sie die Quelldaten zugeordnet haben, klicken Sie auf **[!UICONTROL Weiter]**.
+>[!TIP]
+>
+>[!DNL Platform] bietet intelligente Empfehlungen für automatisch zugeordnete Zielgruppen, die auf dem von Ihnen ausgewählten Schema oder Datensatz basieren. Sie können Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+Nachdem Sie die Quelldaten zugeordnet haben, wählen Sie **[!UICONTROL Weiter]**.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## Planen von Erfassungsabläufen
 
