@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Benutzerhandbuch zum Segmentdienst
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 25%
+source-wordcount: '1452'
+ht-degree: 22%
 
 ---
 
@@ -41,7 +41,19 @@ Wählen Sie die Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;, um ein
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Diese Ansicht listet Daten zur Segmentdefinition auf, einschließlich der Auswertungsmethode, des Erstellungsdatums und des Datums der letzten Änderung.
+Diese Ansicht Liste Informationen zur Segmentdefinition, einschließlich Aufschlüsselung, Ruhephase, Profil-Anzahl, Bewertungsmethode, erstelltes Datum und Datum der letzten Änderung.
+
+Die Aufschlüsselung zeigt ein Balkendiagramm mit dem Prozentwert der Profil, die zu den folgenden Statuswerten gehören: [!UICONTROL Einstieg], [!UICONTROL realisiert]und [!UICONTROL Ausstieg].
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| Status | Beschreibung |
+| ------ | ----------- |
+| Eingestiegen | Ein neues Profil innerhalb des Segments. |
+| Realisiert | Ein vorhandenes Profil, das innerhalb des Segments geblieben ist. |
+| Beenden | Ein vorhandenes Profil, das das Segment verlässt. |
+
+Die Umdrehung stellt den Prozentsatz der Profil dar, die sich innerhalb einer Segmentdefinition im Vergleich zum letzten Ausführen des Segmentauftrags ändern, während die Anzahl der Profil die Gesamtanzahl der Profil darstellt, die für das Segment qualifiziert sind.
 
 Die Auswertungsmethode kann entweder Streaming oder Batch sein. Streaming-Segmente werden konstant ausgewertet, sobald Daten in das System strömen. Batch-Segmente werden gemäß einem festgelegten Zeitplan ausgewertet.
 
