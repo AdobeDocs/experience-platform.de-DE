@@ -5,7 +5,7 @@ title: Analysieren Ihrer Daten mithilfe von Notebooks
 topic: Tutorial
 description: Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Workspace erstellten Jupyter-Notebooks, um auf Ihre Daten zuzugreifen, sie zu untersuchen und sie zu visualisieren.
 translation-type: tm+mt
-source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 22%
@@ -41,7 +41,7 @@ Standardmäßig funktioniert Tensorflow-Rezeptur in einem GPU-Cluster und Python
 
 In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. Sie sollten eine Seite sehen, die der folgenden ähnelt.
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 In our tutorial, we will be using [!DNL Python] 3 in the Jupyter Notebook to show how to access and explore the data. Auf der Startseite stehen Beispielnotizen zur Verfügung. We will be using the Retail Sales recipe for [!DNL Python] 3.
 
