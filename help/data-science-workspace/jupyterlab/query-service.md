@@ -5,7 +5,7 @@ title: Query Service in Jupyter Notebooks
 topic: Tutorial
 description: Mit Adobe Experience Platform können Sie SQL (Structured Query Language) in Data Science Workspace verwenden, indem Sie Query Service als Standardfunktion in JupyterLab integrieren. In diesem Lernprogramm werden Beispiele von SQL-Abfragen für gängige Anwendungsfälle zur Untersuchung, Transformation und Analyse von Adobe Analytics-Daten vorgestellt.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 68%
@@ -23,7 +23,7 @@ This tutorial demonstrates sample SQL queries for common use cases to explore, t
 
 Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
 
-- Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding
+- Zugriff auf [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding
 
 - Ein [!DNL Adobe Analytics] Datensatz
 
@@ -37,7 +37,7 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 
 1. In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Warten Sie einen Moment, bis JupyterLab geladen ist.
 
-   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+   ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
@@ -289,6 +289,6 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## Nächste Schritte <!-- omit in toc -->
+## Nächste Schritte
 
 This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Folgen Sie dem Tutorial [Analysieren Ihrer Daten mit Jupyter Notebooks](./analyze-your-data.md), um zu sehen, wie ähnliche Vorgänge mit dem Data Access SDK ausgeführt werden.
