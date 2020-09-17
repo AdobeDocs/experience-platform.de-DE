@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Batch-Connector für eine Clo
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1584'
 ht-degree: 3%
 
 ---
@@ -88,6 +88,10 @@ The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema, das S
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weitere Informationen zu Funktionen für die Datenzuordnung und -zuordnung finden Sie im Lernprogramm zur [Zuordnung von CSV-Daten zu XDM-Schema-Feldern](../../../../../ingestion/tutorials/map-a-csv-file.md).
+
+>[!TIP]
+>
+>[!DNL Platform] bietet intelligente Empfehlungen für automatisch zugeordnete Zielgruppen, die auf dem von Ihnen ausgewählten Schema oder Datensatz basieren. Sie können Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
 Nachdem Sie die Quelldaten zugeordnet haben, wählen Sie **[!UICONTROL Weiter]**.
 
