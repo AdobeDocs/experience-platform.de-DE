@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1350'
 ht-degree: 4%
 
 ---
@@ -61,6 +61,10 @@ Der Abschnitt **[!UICONTROL Beispieldaten]** wird nach dem Hochladen der Datei m
 
 The **[!UICONTROL Mapping]** step appears. Die Spalten der CSV-Datei werden unter &quot; **[!UICONTROL Quellfeld]**&quot;aufgelistet, wobei die entsprechenden XDM-Schema-Felder unter &quot; **[!UICONTROL Zielgruppe-Feld]**&quot;aufgeführt werden. Die Felder für die nicht ausgewählte Zielgruppe sind rot markiert. Mit der Filterfeldoption können Sie die Liste der verfügbaren Quellfelder einschränken.
 
+>[!TIP]
+>
+>[!DNL Platform] bietet intelligente Empfehlungen für automatisch zugeordnete Zielgruppen, die auf dem von Ihnen ausgewählten Schema oder Datensatz basieren. Sie können Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
+
 Um eine CSV-Spalte einem XDM-Feld zuzuordnen, wählen Sie das Symbol Schema neben dem entsprechenden Spaltenfeld Zielgruppe aus.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ Das Fenster Schema **[!UICONTROL auswählen]** wird angezeigt. Hier können Sie 
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-Der Bildschirm &quot; **[!UICONTROL Zuordnung]** &quot;wird erneut angezeigt, wobei das ausgewählte XDM-Feld jetzt unter &quot;Feld für **[!UICONTROL Zielgruppe&quot;angezeigt wird]**.
+Nachdem Sie die Schritte für die verbleibenden nicht zugeordneten Quellfelder ausgeführt haben, wird der Bildschirm &quot; **[!UICONTROL Zuordnung]** &quot;erneut angezeigt, wobei das ausgewählte XDM-Feld nun unter &quot;Feld der **[!UICONTROL Zielgruppe&quot;angezeigt wird]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-Wenn Sie keine bestimmte CSV-Spalte zuordnen möchten, können Sie die Zuordnung entfernen, indem Sie auf das **Entfernen-Symbol** neben dem Feld Zielgruppe klicken. Sie können auch alle Zuordnungen entfernen, indem Sie auf die Schaltfläche &quot;Alle Zuordnungen **[!UICONTROL löschen&quot;klicken]**.
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-Wenn Sie eine neue Zuordnung hinzufügen möchten, wählen Sie **[!UICONTROL Hinzufügen neue Zuordnung]** oben in der Liste &quot; **[!UICONTROL Quellfeld]** &quot;aus.
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 Beim Zuordnen von Feldern können Sie auch Funktionen zur Berechnung von Werten auf der Grundlage von Eingabequellenfeldern einschließen. Weitere Informationen finden Sie im Abschnitt [Zuordnungsfunktionen](#mapping-functions) im Anhang.
 
@@ -89,7 +85,7 @@ Berechnete Felder ermöglichen die Erstellung von Werten basierend auf den Attri
 
 Klicken Sie auf die Schaltfläche **[!UICONTROL HinzufügenFeld]** , um fortzufahren.
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 Das Bedienfeld &quot;Berechnetes Feld **[!UICONTROL erstellen&quot;]** wird angezeigt. Das linke Dialogfeld enthält die Felder, Funktionen und Operatoren, die in berechneten Feldern unterstützt werden. Wählen Sie eine der Registerkarten aus, um Beginn Funktionen, Felder oder Operatoren zum Ausdruck-Editor hinzuzufügen.
 
