@@ -5,9 +5,9 @@ title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 description: 'Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von Consumer ExperienceEvent (CEE) entsprechen. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1979'
 ht-degree: 3%
 
 ---
@@ -238,7 +238,7 @@ Dieses Feld enthält Informationen zu Marketing-Aktivitäten, die mit dem Touchp
 
 Vollständige Informationen zu jedem der erforderlichen Unterfelder finden Sie `xdm:productListItems`in der [Marketing-Sechsfachspezifikation](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) .
 
-## Zuordnung und Erfassung von Daten (#mapping)
+## Zuordnung und Erfassung von Daten {#mapping}
 
 Sobald Sie festgestellt haben, ob Ihre Marketing-Ereignis-Daten dem CEE-Schema zugeordnet werden können, müssen Sie als Nächstes ermitteln, welche Daten Sie in dieses  einbeziehen [!DNL Intelligent Services]. Alle in verwendeten Verlaufsdaten [!DNL Intelligent Services] müssen innerhalb des Mindestzeitraums von vier Monaten an Daten liegen, zuzüglich der Anzahl der Tage, die als Lookback-Zeitraum gedacht sind.
 
