@@ -5,15 +5,15 @@ title: Tutorials zu Data Science Workspace
 topic: tutorial
 description: Adobe Experience Platform Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1297'
 ht-degree: 19%
 
 ---
 
 
-# [!DNL Data Science Workspace] tutorials
+# [!DNL Data Science Workspace] Tutorials
 
 Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions. Datenwissenschaftler aller Qualifikationsstufen verfügen über ausgereifte, benutzerfreundliche Tools, die eine schnelle Entwicklung, Schulung und Abstimmung von Rezepten für maschinelles Lernen unterstützen – all die Vorteile der KI-Technologie, ohne die Komplexität.
 
@@ -41,10 +41,18 @@ Weitere Informationen und die erforderlichen Werte für die Ausführung von CRUD
 - Greifen Sie auf die [!DNL JupyterLab] Benutzeroberfläche zu und verstehen Sie sie.
 - Machen Sie sich mit den Codezellen und den verfügbaren Kerneln in [!DNL JupyterLab]vertraut.
 - Machen Sie sich mit der GPU- und Speicherserverkonfiguration in [!DNL Python]/R vertraut.
-- Lesen und Abfrage von [!DNL Platform] Daten mit Notebooks.
-- Machen Sie sich mit den Einschränkungen für Notebook-Daten vertraut.
 
 Weitere Informationen finden Sie im [JupyterLab-Benutzerhandbuch](../data-science-workspace/jupyterlab/overview.md).
+
+## Datenzugriff in JupyterLab-Notebooks
+
+Derzeit unterstützt JupyterLab in Data Science Workspace Notebooks für [!DNL Python], R, PySpark und Scala. Jeder unterstützte Kernel bietet native Funktionen, mit denen Sie Platform-Daten aus einem Datensatz in einem Notebook lesen können. However, support for paginating data is limited to [!DNL Python] and R notebooks. Dieser Leitfaden konzentriert sich darauf, wie Sie mit JupyterLab-Notebooks auf Ihre Daten zugreifen können.
+
+**Dieses Handbuch hilft Ihnen:**
+- Plattformdaten mit Python-, R-, PySpark- oder Scala-Notebooks lesen, schreiben und schreiben.
+- Machen Sie sich mit den Leseinschränkungen der einzelnen Notebooks vertraut.
+
+Weitere Informationen finden Sie im Entwicklerhandbuch für den Datenzugriff auf [JupyterLab-Notebooks](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## Quelldateien für das Erstellen von [!DNL Docker] Rezepten packen
 
