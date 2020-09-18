@@ -5,9 +5,9 @@ title: Übersicht über den Data Science Workspace
 topic: overview
 description: Dieser Leitfaden bietet einen Überblick über die wichtigsten Konzepte im Zusammenhang mit Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2578'
 ht-degree: 4%
 
 ---
@@ -78,7 +78,7 @@ Daten sind der Eckpfeiler von KI und maschinellem Lernen.
 
 [//]: # (The built-in recipe gallery offers recommendations for prebuilt recipes based on your business needs.)
 
-Wenn Sie es bevorzugen, können Sie ein vorgefertigtes Rezept an Ihre Anforderungen anpassen, ein Rezept importieren oder einen Beginn von Grund auf neu erstellen, um ein benutzerdefiniertes Rezept zu erstellen. Sobald Sie jedoch ein Rezept trainieren und überarbeiten, ist für die Erstellung eines benutzerdefinierten intelligenten Dienstes kein Entwickler erforderlich - nur ein paar Klicks und Sie sind bereit, ein zielgerichtetes, personalisiertes digitales Erlebnis zu entwickeln.
+Wenn Sie es bevorzugen, können Sie ein vorgefertigtes Rezept an Ihre Anforderungen anpassen, ein Rezept importieren oder einen Beginn von Grund auf neu erstellen, um ein benutzerdefiniertes Rezept zu erstellen. Sobald Sie jedoch ein Rezept trainieren und überarbeiten, ist für die Erstellung eines benutzerdefinierten intelligenten Dienstes kein Entwickler erforderlich - nur wenige Klicks und Sie sind bereit, ein zielgerichtetes, personalisiertes digitales Erlebnis zu entwickeln.
 
 ### Arbeitsablauf, der auf den Datenwissenschaftler ausgerichtet ist
 
@@ -94,13 +94,13 @@ Verwenden Sie während des Browsens R, [!DNL Python]oder Scala mit integriertem 
 
 Im Rahmen des Arbeitsablaufs für die Datenforschung können Sie auch neue Daten erfassen oder vorhandene Funktionen zur Datenvorbereitung verwenden.
 
-### Authoring – 
+### Authoring
 
 Mit [!DNL Data Science Workspace]dieser Option entscheiden Sie, wie Sie Rezepte erstellen möchten.
 
 - Sparen Sie Zeit, indem Sie nach einem vorgefertigten Rezept suchen, das Ihren geschäftlichen Anforderungen entspricht und das Sie nach Bedarf verwenden oder konfigurieren können, um Ihre spezifischen Anforderungen zu erfüllen.
 - Erstellen Sie ein Rezept von Grund auf neu, indem Sie die Authoring-Laufzeit in Jupyter Notebook verwenden, um das Rezept zu entwickeln und zu registrieren.
-- Laden Sie ein außerhalb von Adobe Experience Platform erstelltes Rezept in ein Repository hoch [!DNL Data Science Workspace] oder importieren Sie Rezeptcode aus einem Repository, z. B. [!DNL Git]mithilfe der zwischen [!DNL Git] und verfügbaren Authentifizierung und Integration. [!DNL Data Science Workspace]
+- Laden Sie ein außerhalb von Adobe Experience Platform erstelltes Rezept in ein [!DNL Data Science Workspace] oder importieren Sie Rezeptcode aus einem Repository, z. B. [!DNL Git]mit der zwischen- [!DNL Git] und [!DNL Data Science Workspace]verfügbaren Authentifizierung und Integration.
 
 ### Experimentieren
 
@@ -136,7 +136,7 @@ Die folgende Tabelle zeigt die Auswirkungen, die eine Aktivierung oder Deaktivie
 
 ### Sicherheit und Seelenfrieden
 
-Die Sicherung Ihrer Daten ist eine der obersten Prioritäten der Adobe. Adobe schützt Ihre Daten mit Sicherheitsvorgängen und -kontrollen, die zur Einhaltung branchenüblicher Normen, Vorschriften und Zertifizierungen entwickelt wurden.
+Die Sicherung Ihrer Daten ist eine der obersten Prioritäten für die Adobe. Adobe schützt Ihre Daten mit Sicherheitsvorgängen und -kontrollen, die zur Einhaltung branchenüblicher Normen, Vorschriften und Zertifizierungen entwickelt wurden.
 
 Security ist Teil der Adobe Secure Product Lifecycle in Software und Services integriert.
 Weitere Informationen zu Adoben- und Softwaresicherheit, Compliance und mehr finden Sie auf der Seite &quot;Sicherheit&quot;unter https://www.adobe.com/security.html.
@@ -196,7 +196,7 @@ Während Sie Ihre Modelle trainieren, werden Schulungen und Bewertungen generier
 
 ![](./images/home/evaluation_metrics.png)
 
-In [diesem Abschnitt](https://www.adobe.io/apis/experienceplatform/home/tutorials/data-science-workspace/dsw-tutorials/trainmodel.html) finden Sie Übungen zur Schulung und Auswertung von Modellen in [!DNL Data Science Workspace].
+Besuchen Sie entweder das [API](./models-recipes/train-evaluate-model-api.md) - oder [UI](./models-recipes/train-evaluate-model-ui.md) -Lernprogramm, um zu erfahren, wie Sie Modelle trainieren und auswerten können [!DNL Data Science Workspace].
 
 ### Modell operationalisieren
 
@@ -206,7 +206,7 @@ Ein veröffentlichter intelligenter Dienst ist konfigurierbar, um sich von Zeit 
 
 ## Nächste Schritte
 
-[!DNL Data Science Workspace] hilft bei der Straffung und Vereinfachung des Arbeitsablaufs in der Datenwissenschaft, von der Datenerfassung über Algorithmen bis hin zu intelligenten Diensten, für Datenwissenschaftler aller Qualifikationsstufen. Mit den ausgereiften Tools [!DNL Data Science Workspace] können Sie die Zeit von Daten bis zu Erkenntnissen erheblich verkürzen.
+[!DNL Data Science Workspace] hilft bei der Straffung und Vereinfachung des Arbeitsablaufs in der Datenwissenschaft, von der Datenerfassung über Algorithmen bis hin zu intelligenten Diensten für Datenwissenschaftler aller Qualifikationsstufen. Mit den ausgereiften Tools [!DNL Data Science Workspace] können Sie die Zeit von Daten bis zu Erkenntnissen erheblich verkürzen.
 
 Wichtiger noch ist, dass [!DNL Data Science Workspace] die Datenwissenschaft und die algorithmische Optimierung der führenden Marketingplattform der Adobe in die Hände von Unternehmensdatenwissenschaftlern gelegt werden. Zum ersten Mal können Unternehmen proprietäre Algorithmen auf die Plattform übertragen, indem sie die leistungsstarken maschinellen Lernfunktionen und KI-Funktionen der Adobe nutzen, um hochpersonalisierte Kundenerlebnisse in großem Maßstab zu bieten.
 
