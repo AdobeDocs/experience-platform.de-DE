@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Überwachen von Konten und Datenflüssen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
+source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 4%
+source-wordcount: '1097'
+ht-degree: 5%
 
 ---
 
@@ -72,7 +72,18 @@ Datenflüsse können direkt von der Seite &quot; **[!UICONTROL Katalog]** &quot;
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Eine Liste der vorhandenen Datenflüsse wird angezeigt. Auf dieser Seite finden Sie eine Liste mit anzeigbaren Datenflüssen, einschließlich Informationen zu Quelle, Benutzername, Anzahl der Datenflüsse und Status. Wählen Sie das Trichtersymbol oben links, das sortiert werden soll.
+Eine Liste der vorhandenen Datenflüsse wird angezeigt. Auf dieser Seite finden Sie eine Liste mit anzeigbaren Datenflüssen, einschließlich Informationen zu Quelle, Benutzername, Anzahl der Datenflüsse und Status.
+
+Weitere Informationen zu Status finden Sie in der folgenden Tabelle:
+
+| Status | Beschreibung |
+| ------ | ----------- |
+| Aktiviert | Der `Enabled` Status gibt an, dass ein Datendurchlauf aktiv ist und Daten gemäß dem bereitgestellten Zeitplan erfasst. |
+| Deaktiviert | Der `Disabled` Status gibt an, dass ein Dataflow inaktiv ist und keine Daten aufnimmt. |
+| Verarbeitung | Der `Processing` Status gibt an, dass ein Datenflug noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf. |
+| Fehler | Der `Error` Status gibt an, dass die Aktivierung eines Datenflusses unterbrochen wurde. |
+
+Wählen Sie das Trichtersymbol oben links, das sortiert werden soll.
 
 ![dataflows-Liste](../../images/tutorials/monitor/dataflows-list.png)
 
