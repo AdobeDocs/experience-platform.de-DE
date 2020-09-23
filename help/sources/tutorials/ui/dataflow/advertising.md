@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Werbeanschluss in der Benutze
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Adobe Experience Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Werbekonto.
 translation-type: tm+mt
-source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
+source-git-commit: e504e0be465c755a77aa30589731941ca50426d2
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1467'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,11 @@ Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen Datensatz
 
 Sie können ein Schema anhängen, indem Sie in der Suchleiste &quot;Schema **[!UICONTROL auswählen]** &quot;einen Schema eingeben. Sie können auch das Dropdownsymbol auswählen, um eine Liste der vorhandenen Schema anzuzeigen. Alternativ dazu können Sie die Option &quot; **[!UICONTROL Erweiterte Suche]** &quot;auswählen, um auf den Bildschirm der vorhandenen Schema mit den zugehörigen Details zuzugreifen.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+In diesem Schritt können Sie Ihren Datensatz für eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität aktivieren [!DNL Real-time Customer Profile] und erstellen. Daten aus allen aktivierten Datensätzen werden in einbezogen [!DNL Profile] und beim Speichern des Datenflusses werden Änderungen angewendet.
+
+Schalten Sie die **[!UICONTROL Profil-Dataset]** -Schaltfläche um, um den Dataset Ihrer Zielgruppe zu aktivieren [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/advertising/target-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!DNL Done]**.
 
