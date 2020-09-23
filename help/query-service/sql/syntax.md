@@ -5,10 +5,10 @@ title: SQL-Syntax
 topic: syntax
 description: In diesem Dokument finden Sie die von Query Service unterstützte SQL-Syntax.
 translation-type: tm+mt
-source-git-commit: 041165f501d35b811202362b524523b103d18113
+source-git-commit: 2672d0bdf1f34deb715415e7b660a35076edb06b
 workflow-type: tm+mt
-source-wordcount: '1982'
-ht-degree: 95%
+source-wordcount: '2004'
+ht-degree: 92%
 
 ---
 
@@ -115,10 +115,11 @@ SELECT statement 2
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-wobei `target_schema_title` der Titel des XDM-Schemas ist. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage erstellt wurde.
+where,
+`target_schema_title` is the title of XDM schema. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage`rowvalidation` erstellt wurde, um anzugeben, ob der Benutzer die Überprüfung auf Zeilenebene aller neuen Stapel, die für den neu erstellten Datensatz erfasst werden, vornehmen möchte. Standardwert ist &quot;false&quot;
 
 und `select_query` ist eine `SELECT`-Anweisung, deren Syntax oben in diesem Dokument definiert ist.
 
