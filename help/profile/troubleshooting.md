@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Handbuch zur Fehlerbehebung beim Profil in Echtzeit
 topic: guide
 translation-type: tm+mt
-source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 6%
@@ -48,7 +47,7 @@ Es gibt mehrere Methoden zum Anzeigen von Profil-Daten, je nachdem, ob Sie die A
 
 Wenn Sie die IDs der Profil-Entitäten kennen, auf die Sie zugreifen möchten, können Sie den `/entities` (Profil-)Endpunkt in der Profil-API verwenden, um diese Entitäten nachzuschlagen. Weitere Informationen finden Sie im Abschnitt zu [Entitäten](./api/entities.md) im Entwicklerhandbuch.
 
-Sie können auch die Adobe Experience Platform Segmentation Service API verwenden, um auf die individuellen Profil von Kunden zuzugreifen, die sich für eine Segmentmitgliedschaft qualifiziert haben. See the [Segmentation Service overview](../segmentation/home.md) for more information.
+Sie können auch die Adobe Experience Platform Segmentation Service API verwenden, um auf die einzelnen Profil von Kunden zuzugreifen, die sich für eine Segmentmitgliedschaft qualifiziert haben. See the [Segmentation Service overview](../segmentation/home.md) for more information.
 
 #### Verwenden der UI
 
