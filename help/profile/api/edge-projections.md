@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Edge-Prognosen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 10%
@@ -104,7 +103,7 @@ Die Antwort enthält ein `projectionDestinations` Array mit den Details für jed
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `_links.self.href` | Entspricht auf der obersten Ebene dem Pfad, der für die Anforderung des GET verwendet wird. Innerhalb jedes einzelnen Zielobjekts kann dieser Pfad in einer GET verwendet werden, um die Details eines bestimmten Ziels direkt zu suchen. |
+| `_links.self.href` | Entspricht auf der obersten Ebene dem Pfad, der für die Anforderung des GET verwendet wurde. Innerhalb jedes einzelnen Zielobjekts kann dieser Pfad in einer GET verwendet werden, um die Details eines bestimmten Ziels direkt zu suchen. |
 | `id` | Innerhalb jedes Zielobjekts `"id"` zeigt die Variable die schreibgeschützte, systemgenerierte eindeutige ID für das Ziel an. Diese ID wird beim Referenzieren eines bestimmten Ziels und beim Erstellen von Projektionskonfigurationen verwendet. |
 
 Weitere Informationen zu den Attributen eines einzelnen Ziels finden Sie im Abschnitt zum [Erstellen eines nachfolgenden Ziels](#create-a-destination) .
