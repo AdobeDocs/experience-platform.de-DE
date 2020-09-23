@@ -5,10 +5,10 @@ title: Segmentierung mit mehreren Entitäten
 topic: overview
 description: Bei der Segmentierung mit mehreren Entitäten können Sie Profildaten um zusätzliche Daten erweitern, die auf Produkten, Geschäften oder anderen nicht-profilbasierten Klassen beruhen. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden.
 translation-type: tm+mt
-source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
+source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 9%
+source-wordcount: '671'
+ht-degree: 6%
 
 ---
 
@@ -45,14 +45,16 @@ Zum Erstellen eines Segments mit mehreren Entitäten müssen zunächst Beziehung
 
 ### Beziehungen definieren
 
-Die Definition von Beziehungen innerhalb der Struktur Ihrer Experience Data Model-(XDM-)Schema ist ein integraler Bestandteil der Segmenterstellung für mehrere Entitäten. Dieser Vorgang kann entweder mit der Schema Registry-API oder dem Schema-Editor durchgeführt werden. Ausführliche Anweisungen zum Definieren einer Beziehung zwischen zwei Schemas finden Sie in den folgenden Übungen:
+Die Definition von Beziehungen innerhalb der Struktur Ihrer Experience Data Model-(XDM-)Schema ist ein integraler Bestandteil der Segmenterstellung für mehrere Entitäten. Bei Beziehungen muss das Feld im Ziel als primäre Identität des Schemas gekennzeichnet werden. Eine Identität kann nur in Zeichenfolgen markiert werden und kann nicht in Arrays markiert werden. Darüber hinaus müssen Beziehungen nicht unbedingt einzeln sein, da Sie Profil und Erlebnis-Ereignis mit mehreren Zielen verbinden können.
+
+Die Definition von Beziehungen kann entweder mit der Schema Registry API oder dem Schema Editor erfolgen. Ausführliche Anweisungen zum Definieren einer Beziehung zwischen zwei Schemas finden Sie in den folgenden Übungen:
 
 * [Definieren einer Beziehung zwischen zwei Schemas mithilfe der API](../xdm/tutorials/relationship-api.md)
 * [Definieren einer Beziehung zwischen zwei Schemas mithilfe der Benutzeroberfläche des Schema-Editors](../xdm/tutorials/relationship-ui.md)
 
 ### Erstellen eines Segments mit mehreren Entitäten
 
-Nachdem Sie die erforderlichen XDM-Beziehungen definiert haben, können Sie mit der Erstellung eines Segments mit mehreren Entitäten beginnen. Dieser Vorgang kann entweder mit der Segmentierungs-API oder der Segment Builder-Benutzeroberfläche durchgeführt werden. Für weitere Informationen wählen Sie bitte aus den folgenden Handbüchern:
+Nachdem Sie die erforderlichen XDM-Beziehungen definiert haben, können Sie mit der Erstellung eines Segments mit mehreren Entitäten beginnen. Dies kann entweder mit der Segmentierungs-API oder der Segment Builder-Benutzeroberfläche erfolgen. Für weitere Informationen wählen Sie bitte aus den folgenden Handbüchern:
 
 * [Erstellen eines Segments mit der Segmentierungs-API](./tutorials/create-a-segment.md)
 * [Erstellen eines Segments mithilfe der Benutzeroberfläche des Segmentaufbaus](./ui/overview.md)
