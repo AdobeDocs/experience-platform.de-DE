@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Zahlungsanschluss in der Benu
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Adobe Experience Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Zahlungskonto.
 translation-type: tm+mt
-source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1460'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits ein Zahlungskont
 
 ## Daten auswählen
 
-Nach der Erstellung Ihres Zahlungskontos wird der Schritt Daten **** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
+Nach dem Erstellen Ihres Zahlungskontos wird der Schritt Daten **** auswählen angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
 
 - Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
 - In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
@@ -67,7 +67,11 @@ Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen Datensatz
 
 Sie können ein Schema anhängen, indem Sie in der Suchleiste &quot;Schema **[!UICONTROL auswählen]** &quot;einen Schema eingeben. Sie können auch das Dropdownsymbol auswählen, um eine Liste der vorhandenen Schema anzuzeigen. Alternativ dazu können Sie die Option &quot; **[!UICONTROL Erweiterte Suche]** &quot;auswählen, um auf den Bildschirm der vorhandenen Schema mit den zugehörigen Details zuzugreifen.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+In diesem Schritt können Sie Ihren Datensatz für eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität aktivieren [!DNL Real-time Customer Profile] und erstellen. Daten aus allen aktivierten Datensätzen werden in einbezogen [!DNL Profile] und beim Speichern des Datenflusses werden Änderungen angewendet.
+
+Schalten Sie die **[!UICONTROL Profil-Dataset]** -Schaltfläche um, um den Dataset Ihrer Zielgruppe zu aktivieren [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/payments/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
 
