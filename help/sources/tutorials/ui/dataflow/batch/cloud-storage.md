@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Batch-Connector für eine Clo
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 translation-type: tm+mt
-source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1674'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,11 @@ The **[!UICONTROL Select dataset]** dialog appears. Suchen Sie den gewünschten 
 
 Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot; **[!UICONTROL Neuer Datensatz]** &quot;und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein. Um ein Schema hinzuzufügen, können Sie im Dialogfeld &quot;Schema **[!UICONTROL auswählen]** &quot;einen vorhandenen Schema eingeben. Alternativ dazu können Sie die erweiterte **[!UICONTROL Schema-Suche]** auswählen, um nach einem geeigneten Schema zu suchen.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+In diesem Schritt können Sie Ihren Datensatz für eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität aktivieren [!DNL Real-time Customer Profile] und erstellen. Daten aus allen aktivierten Datensätzen werden in einbezogen [!DNL Profile] und beim Speichern des Datenflusses werden Änderungen angewendet.
+
+Schalten Sie die **[!UICONTROL Profil-Dataset]** -Schaltfläche um, um den Dataset Ihrer Zielgruppe zu aktivieren [!DNL Profile].
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema, das Sie auf den neuen Datensatz anwenden möchten, und wählen Sie dann **[!UICONTROL Fertig]**.
 
