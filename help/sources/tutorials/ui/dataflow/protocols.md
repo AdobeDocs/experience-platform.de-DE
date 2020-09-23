@@ -5,9 +5,9 @@ title: Konfigurieren eines Datenflusses für einen Protokollanschluss in der Ben
 topic: overview
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Adobe Experience Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Protokollkonto.
 translation-type: tm+mt
-source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1460'
 ht-degree: 3%
 
 ---
@@ -67,7 +67,11 @@ Um Daten in einen neuen Datensatz zu erfassen, wählen Sie &quot;Neuen Datensatz
 
 Sie können ein Schema anhängen, indem Sie in der Suchleiste &quot;Schema **[!UICONTROL auswählen]** &quot;einen Schema eingeben. Sie können auch das Dropdownsymbol auswählen, um eine Liste der vorhandenen Schema anzuzeigen. Alternativ dazu können Sie die Option &quot; **[!UICONTROL Erweiterte Suche]** &quot;auswählen, um auf den Bildschirm der vorhandenen Schema mit den zugehörigen Details zuzugreifen.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+In diesem Schritt können Sie Ihren Datensatz für eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität aktivieren [!DNL Real-time Customer Profile] und erstellen. Daten aus allen aktivierten Datensätzen werden in einbezogen [!DNL Profile] und beim Speichern des Datenflusses werden Änderungen angewendet.
+
+Schalten Sie die **[!UICONTROL Profil-Dataset]** -Schaltfläche um, um den Dataset Ihrer Zielgruppe zu aktivieren [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/protocols/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und klicken Sie dann auf **[!UICONTROL Fertig]**.
 
@@ -121,7 +125,7 @@ Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen 
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-## Datenflussinformationen bereitstellen
+## Datennachrichtendetails angeben
 
 Der Schritt **[!UICONTROL Datennachweis]** wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis bereitstellen können.
 
