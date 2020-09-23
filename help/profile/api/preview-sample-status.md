@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
-solution: Adobe Experience Platform
 title: Profil-Vorschau - Echtzeit-Client-Profil-API
 description: Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da Daten, die für Echtzeit-Kundendaten aktiviert wurden, in Plattform erfasst werden, werden sie im Profil-Datenspeicher gespeichert. Wenn die Anzahl der Datensätze im Profil-Store zunimmt oder sinkt, wird ein Musterauftrag ausgeführt, der Informationen darüber enthält, wie viele Profil-Fragmente und zusammengeführte Profil sich im Datenspeicher befinden. Mithilfe der Profil-API können Sie das neueste erfolgreiche Beispiel sowie die Verteilung von Listen-Profilen nach Datensatz und Identitäts-Namensraum Vorschau werden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 6%
