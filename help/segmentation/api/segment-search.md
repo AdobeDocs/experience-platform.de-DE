@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
-solution: Adobe Experience Platform
 title: Endpunkt der Segmentsuche
 topic: guide
 description: Die Segmentsuche dient zum Durchsuchen von Feldern, die in verschiedenen Datenquellen enthalten sind, und zum Zurückgeben in Echtzeit. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 5%
@@ -103,7 +102,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | `schema.name={SCHEMA}` | **(Erforderlich)** Dabei enthält {SCHEMA} den mit den Suchobjekten verknüpften Schema-Klassenwert. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
 | `namespace={NAMESPACE}` | **(Erforderlich)** Dabei enthält {NAMENSRAUM} den Namensraum, in dem Sie suchen möchten. |
 | `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der Implementierung der [Lucene-Suchsyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax)durch Microsoft entspricht. Wenn kein Suchbegriff angegeben ist, werden alle damit verbundenen Datensätze zurückgegeben `schema.name` . Eine ausführlichere Erläuterung finden Sie im [Anhang](#appendix) dieses Dokuments. |
-| `entityId={ENTITY_ID}` | *(Optional)* Schränkt Ihre Suche auf den mit {ENTITY_ID} angegebenen Ordner ein. |
+| `entityId={ENTITY_ID}` | *(Optional)* Beschränkt Ihre Suche auf den mit {ENTITY_ID} angegebenen Ordner. |
 | `limit={LIMIT}` | *(Optional)* Dabei stellt {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse dar. Der Standardwert lautet 50. |
 | `page={PAGE}` | *(Optional)* Dabei steht {PAGE} für die Seitenzahl, die zur Paginierung der Ergebnisse der gesuchten Abfrage verwendet wird. Bitte beachten Sie, dass die Seitenzahl um **0** Beginn ist. |
 
