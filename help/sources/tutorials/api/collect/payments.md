@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Collect payment data;payment d
 solution: Experience Platform
 title: Erfassen von Zahlungsdaten über Quell-Connectors und APIs
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Zahlungsanwendung und zum Integrieren in die Plattform über Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 13%
