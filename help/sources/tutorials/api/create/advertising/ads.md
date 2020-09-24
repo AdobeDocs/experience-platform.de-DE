@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;google adwords;Google AdWords;
 solution: Experience Platform
 title: Erstellen eines Google AdWords-Connectors mithilfe der Flow Service API
 topic: overview
+type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die notwendig sind, um die Experience Platform mit Google AdWords zu verbinden.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 19%
