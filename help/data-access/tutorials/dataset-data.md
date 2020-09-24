@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;data access;data access api;qu
 solution: Experience Platform
 title: Übersicht über den Datenzugriff
 topic: tutorial
+type: Tutorial
 description: Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Zugreifen und Herunterladen von Daten, die in einem Datensatz mit der Datenzugriff-API in Adobe Experience Platform gespeichert sind. Außerdem werden Sie mit einigen der einzigartigen Funktionen der Datenzugriff-API, wie z. B. Paging und teilweise Downloads, vorgestellt.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 13%
@@ -108,7 +109,7 @@ Die Antwort enthält ein Objekt, das Listen aller Stapel im Zusammenhang mit der
 
 ### Filtern der Liste von Stapeln
 
-Filter müssen oft einen bestimmten Stapel finden, um relevante Daten für einen bestimmten Verwendungsfall abrufen zu können. Parameter können einer `GET /batches` Anforderung hinzugefügt werden, um die zurückgegebene Antwort zu filtern. Die unten stehende Anforderung gibt alle nach einer bestimmten Zeit erstellten Stapel innerhalb eines bestimmten Datensatzes zurück, sortiert nach dem Zeitpunkt ihrer Erstellung.
+Filter müssen oft einen bestimmten Stapel finden, um relevante Daten für einen bestimmten Anwendungsfall abrufen zu können. Parameter können einer `GET /batches` Anforderung hinzugefügt werden, um die zurückgegebene Antwort zu filtern. Die unten stehende Anforderung gibt alle nach einer bestimmten Zeit erstellten Stapel innerhalb eines bestimmten Datensatzes zurück, sortiert nach dem Zeitpunkt ihrer Erstellung.
 
 **API-Format**
 
