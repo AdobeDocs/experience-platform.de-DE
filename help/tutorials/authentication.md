@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Experience Platform-APIs authentifizieren und aufrufen
 topic: tutorial
+type: Tutorial
 description: 'Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können. '
 translation-type: tm+mt
-source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 43%
