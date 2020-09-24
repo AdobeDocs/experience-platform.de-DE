@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Analytics source connector;Ana
 solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Adobe Analytics über die Benutzeroberfläche
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm werden Schritte zum Erstellen eines Adobe Analytics-Quell-Connectors in der Benutzeroberfläche beschrieben, um Verbraucherdaten in Adobe Experience Platform zu importieren.
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 15%
