@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Apache Spark;apache spark;Azur
 solution: Experience Platform
 title: Erstellen Sie einen Apache Spark auf einem Blue HDInsights-Connector mithilfe der Flow Service API
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die Apache Spark auf Azurblauen HDInsights (im Folgenden "Spark" genannt) mit der Experience Platform zu verbinden.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 20%
