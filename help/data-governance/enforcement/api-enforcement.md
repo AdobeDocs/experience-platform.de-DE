@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic e
 solution: Experience Platform
 title: Datennutzungsrichtlinien mithilfe der Policy Service-API durchsetzen
 topic: enforcement
+type: Tutorial
 description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 translation-type: tm+mt
-source-git-commit: d99a0a9211b5384b96e959d36f414cae47ab5f4e
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 48%
