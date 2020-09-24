@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;MySQL;mysql
 solution: Experience Platform
 title: Erstellen eines MySQL-Connectors mithilfe der Flow Service API
 topic: overview
+type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zur Verbindung der Experience Platform mit MySQL zu führen.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 20%
