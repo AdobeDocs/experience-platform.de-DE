@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Data Explorer;data explo
 solution: Experience Platform
 title: Erstellen eines Azurblauen Data Explorer-Connectors mit der Flow Service API
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die den Azurblauen Data Explorer (im Folgenden "Data Explorer" genannt) mit der Experience Platform zu verbinden.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 18%
