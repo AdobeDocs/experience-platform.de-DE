@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Erstellen eines Schemas mit dem Schema Editor
-topic: tutorials
+topic: tutorial
+type: Tutorials
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 translation-type: tm+mt
-source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '3835'
 ht-degree: 18%
@@ -243,7 +244,7 @@ Wenn Sie nach einem bestimmten Feld in Ihrem Schema suchen, können Sie die Such
 
 ## Festlegen eines Schemafelds als Identitätsfeld {#identity-field}
 
-Die von Schemas bereitgestellte Standarddatenstruktur kann genutzt werden, um Daten zu identifizieren, die über mehrere Quellen hinweg zu einer Person gehören. Dies ermöglicht verschiedene nachgelagerte Anwendungsfälle wie Segmentierung, Berichte, Analyse der Datenwissenschaften und mehr. Um Daten basierend auf individuellen Identitäten zu verknüpfen, müssen Schlüsselfelder innerhalb der jeweiligen Schema als [!UICONTROL Identitätsfelder] gekennzeichnet werden.
+Die Standarddatenstruktur, die Schema bereitstellen, kann genutzt werden, um Daten zu identifizieren, die über mehrere Quellen hinweg zu einer Person gehören. Dies ermöglicht verschiedene nachgelagerte Anwendungsfälle wie Segmentierung, Berichte, Analyse der Datenwissenschaften und mehr. Um Daten basierend auf individuellen Identitäten zu verknüpfen, müssen Schlüsselfelder innerhalb der jeweiligen Schema als [!UICONTROL Identitätsfelder] gekennzeichnet werden.
 
 [!DNL Experience Platform] erleichtert die Identifizierung eines Identitätsfelds mithilfe eines **[!UICONTROL Identitäts]** -Kontrollkästchens im [!DNL Schema Editor]. Sie müssen jedoch festlegen, welches Feld basierend auf der Art Ihrer Daten am besten als Identität verwendet werden soll.
 
