@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;mysql;MySQL
 solution: Experience Platform
 title: Erstellen eines Quell-Connectors für MySQL über die Benutzeroberfläche
 topic: overview
+type: Tutorial
 description: Dieses Lernprogramm enthält Schritte zum Erstellen eines MySQL-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 12%
