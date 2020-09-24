@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;monitor dataflows;flow service
 solution: Experience Platform
 title: Überwachen von Flüssen und Ausgängen
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zur Überwachung von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service API beschrieben.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 18%
@@ -246,7 +247,7 @@ Eine erfolgreiche Antwort gibt Details zu Ihrem Flusslauf zurück, einschließli
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `items` | Enthält eine einzige Nutzlast von Metadaten, die mit Ihrer spezifischen Flussausführung verknüpft sind. |
-| `metrics` | Definiert die Eigenschaften der Daten im Fluss. |
+| `metrics` | Definiert die Eigenschaften der Daten in der Ausführung des Datenflusses. |
 | `activities` | Definiert, wie die Daten transformiert werden. |
 | `durationSummary` | Definiert den Beginn und die Endzeit der Flussausführung. |
 | `sizeSummary` | Definiert die Datenmenge in Byte. |
