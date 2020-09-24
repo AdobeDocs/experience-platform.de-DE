@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;IBM DB2;IBM;ibm db2;db2;DB2
 solution: Experience Platform
 title: IBM DB2 Connector mithilfe der Flow Service API erstellen
 topic: overview
+type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zur Verbindung von IBM DB2 (im Folgenden "DB2" genannt) mit der Experience Platform zu führen.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 19%
