@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics; flow service; update connecti
 solution: Experience Platform
 title: Aktualisieren von Verbindungsinformationen mithilfe der Flow Service API
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Aktualisieren Ihrer Verbindungsinformationen beschrieben, einschließlich Name, Beschreibung und Anmeldeinformationen mithilfe der Flow Service API.
 translation-type: tm+mt
-source-git-commit: 81ce43bf705bea65b523ac612fae5961e8eeb322
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 17%
