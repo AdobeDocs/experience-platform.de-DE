@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Google Big Query;google big qu
 solution: Experience Platform
 title: Erstellen eines Google Big Abfrage-Quellconnectors in der Benutzeroberfläche
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm werden Schritte zum Erstellen eines Google Big-Abfragen-Quellconnectors (im Folgenden "GBQ") mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 9%
