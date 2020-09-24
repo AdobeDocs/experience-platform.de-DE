@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;decision events;decision event
 solution: Experience Platform
 title: Arbeiten mit der Decisioning Service-Laufzeit unter Verwendung von APIs
 topic: tutorial
+type: Tutorial
 description: 'Dieses Dokument bietet eine Anleitung zum Arbeiten mit den Laufzeitdiensten des Entscheidungsdienstes mit Adobe Experience Platform-APIs. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 13%
@@ -228,7 +229,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
 - **`xdm:dryRun`** - Wenn der Wert dieser optionalen Eigenschaft auf &quot;true&quot;gesetzt ist, wird der Entscheidungsantrag Beschränkungen der Deckelung unterliegen, diese Zähler aber nicht wirklich abziehen, ist es die Erwartung, dass der Aufrufer das Angebot nie dem Profil vorlegen will. Das Unternehmen [!DNL Decisioning Service] wird den Vorschlag nicht als offizielles XDM-Entscheidungs-Ereignis aufzeichnen und er wird nicht in Berichte-Datensätzen angezeigt. Der Standardwert dieser Eigenschaft ist &quot;false&quot;. Wenn die Eigenschaft weggelassen wird, gilt die Entscheidung nicht als Testlauf und wird daher dem Endbenutzer vorgelegt.
 - **`xdm:validateContextData`** - Diese optionale Eigenschaft aktiviert bzw. deaktiviert die Überprüfung der Kontextdaten. Wenn die Überprüfung aktiviert ist, wird für jedes angegebene Kontextdatenelement das Schema (basierend auf dem `@type` Feld) aus der XDM-Registrierung abgerufen und das `xdm:data` Objekt wird dafür validiert.
 
-Die Anforderung nach diesem Schema enthält ein Array von URIs, die auf Angebot-Aktivitäten, eine Profil-ID und ein Array mit Kontextdatenelementen verweisen:
+Die Anforderung nach diesem Schema enthält ein Array von URIs, die auf Angebot-Aktivitäten verweisen, eine Profil-ID und ein Array mit Kontextdatenelementen:
 
 - **`xdm:offerActivities`** - Diese obligatorische Eigenschaft ist ein Array von Objekten, bei denen jedes Element Daten zur Angebot-Aktivität enthält. Die Angebot-Aktivität verfügt über die folgenden Eigenschaften:
    - **`xdm:offerActivity`** - Der eindeutige Bezeichner (URI) der Aktivität. Dies ist der Wert der `@id` Eigenschaft der Angebot-Aktivität.
