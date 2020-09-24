@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Anbinden an Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 106d5150371a890e2d4c295bf5d12c110c593568
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 74%
+source-wordcount: '245'
+ht-degree: 72%
 
 ---
 
@@ -24,7 +24,7 @@ Das Dialogfeld **[!UICONTROL Server registrieren]** wird angezeigt. Wählen Sie 
 
 - **[!UICONTROL Name]**: Der Name Ihrer Verbindung.
 - **[!UICONTROL Anmeldename und Passwort]**: Die Anmeldeinformationen, die verwendet werden. Der Benutzername hat die Form `ORG_ID@AdobeOrg`.
-- **[!UICONTROL Host und Port]**: Der Host-Endpunkt und sein Port für [!DNL Query Service].
+- **[!UICONTROL Host und Port]**: Der Host-Endpunkt und sein Port für [!DNL Query Service]. Sie müssen Port 80 verwenden, um eine Verbindung herzustellen [!DNL Query Service].
 - **[!UICONTROL Datenbank]:** Die zu verwendende Datenbank.
 
 >[!NOTE]
