@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Erstellen eines HubSpot-Connectors mit der Flow Service API
 topic: overview
+type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, mit denen Sie die Experience Platform mit HubSpot verbinden.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 17%
@@ -67,7 +68,7 @@ Um eine [!DNL HubSpot] Verbindung zu erstellen, muss eine Reihe von [!DNL HubSpo
 
 **API-Format**
 
-Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Beim Senden einer GET an den `/connectionSpecs` Endpunkt werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können auch die Abfrage einschließen, `property=name=="hubspot"` Informationen speziell für [!DNL HubSpot]die Zwecke abzurufen.
+Jede verfügbare Quelle verfügt über einen eigenen Satz von Verbindungsspezifikationen, um Verbindungseigenschaften wie Authentifizierungsanforderungen zu beschreiben. Beim Senden einer GET an den `/connectionSpecs` Endpunkt werden Verbindungsspezifikationen für alle verfügbaren Quellen zurückgegeben. Sie können auch die Abfrage einschließen, `property=name=="hubspot"` Informationen speziell für [!DNL HubSpot]die Zwecke zu erhalten.
 
 ```http
 GET /connectionSpecs
