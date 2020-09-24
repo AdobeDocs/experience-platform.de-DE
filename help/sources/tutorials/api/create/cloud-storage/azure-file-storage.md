@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure;Azure File Storage;Azure
 solution: Experience Platform
 title: Erstellen Sie einen Azurblase-Datenspeicherung-Connector mit der Flow-Dienst-API
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, um die Datenspeicherung der Azurblauen Datei mit der Experience Platform zu verbinden.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 20%
