@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche
 topic: overview
+type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Datenbankkonto.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1445'
 ht-degree: 3%
@@ -26,7 +27,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    - [Schema-Editor-Lernprogramm](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
 - [[!DNL Echtzeit-Profil]](../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Außerdem müssen Sie bei diesem Lernprogramm bereits ein Datenbankkonto erstellt haben. Eine Liste von Übungen zum Erstellen verschiedener Datenbankschnittstellen in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../home.md).
+Darüber hinaus erfordert dieses Lernprogramm, dass Sie bereits ein Datenbankkonto erstellt haben. Eine Liste von Übungen zum Erstellen verschiedener Datenbankschnittstellen in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../home.md).
 
 ## Daten auswählen
 
@@ -126,7 +127,7 @@ Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen 
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-## Datennachrichtendetails angeben
+## Datenflussinformationen bereitstellen
 
 Der Schritt **[!UICONTROL Datennachweis]** wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datennachweis geben können.
 
