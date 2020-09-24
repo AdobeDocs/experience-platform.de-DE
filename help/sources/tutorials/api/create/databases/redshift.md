@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redsh
 solution: Experience Platform
 title: Erstellen eines Amazon Redshift-Connectors mit der Flow Service API
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, mit denen Sie die Experience Platform mit Amazon Redshift verbinden (im Folgenden "Redshift" genannt).
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 17%
