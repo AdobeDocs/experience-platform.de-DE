@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft d
 solution: Experience Platform
 title: Erstellen eines Microsoft Dynamics-Quellconnectors in der Benutzeroberfläche
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm werden Schritte zum Erstellen eines Microsoft Dynamics-Quellconnectors (nachfolgend "Dynamics") mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 10%
@@ -66,4 +67,4 @@ Um ein vorhandenes Konto zu verknüpfen, wählen Sie das [!DNL Dynamics] Konto, 
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Dynamics] Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/crm.md)einzubeziehen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Dynamics] Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/crm.md)einzubringen.
