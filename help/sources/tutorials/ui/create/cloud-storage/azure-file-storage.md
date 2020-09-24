@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure File Storage;Azure File 
 solution: Experience Platform
 title: Erstellen eines Azurblase-Datenspeicherung-Quellconnectors in der Benutzeroberfläche
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm werden Schritte zum Authentifizieren eines Azurblauen File Datenspeicherung-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 9%
