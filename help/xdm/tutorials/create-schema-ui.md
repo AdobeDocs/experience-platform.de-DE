@@ -5,9 +5,9 @@ title: Erstellen eines Schemas mit dem Schema Editor
 topic: tutorials
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3835'
 ht-degree: 18%
 
 ---
@@ -143,7 +143,7 @@ To begin, select the mixin name in the **[!UICONTROL Mixins]** section. Once you
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Select **[!UICONTROL Add field]** next to &quot;[!DNL Loyalty Members]&quot; to create a new node in the structure. Dieser Knoten (in diesem Beispiel mit der Bezeichnung „_tenantId“) stellt die Mandanten-ID Ihrer IMS-Organisation dar, der ein Unterstrich vorangestellt ist. Das Vorhandensein der Mandanten-ID zeigt an, dass die Felder, die Sie hinzufügen, im Namensraum Ihres Unternehmens enthalten sind.
+Select **[!UICONTROL Add field]** next to &quot;[!DNL Loyalty Members]&quot; to create a new node in the structure. This node (called `_tenantId` in this example) represents your IMS Organization&#39;s tenant ID, preceded by an underscore. Das Vorhandensein der Mandanten-ID zeigt an, dass die Felder, die Sie hinzufügen, im Namensraum Ihres Unternehmens enthalten sind.
 
 Mit anderen Worten, die Felder, die Sie hinzufügen, sind für Ihr Unternehmen eindeutig und werden in einem bestimmten Bereich gespeichert, der nur für Ihr Unternehmen zugänglich ist, [!DNL Schema Registry] . Felder, die Sie definieren, müssen immer Ihrem Pächter-Namensraum hinzugefügt werden, um Kollisionen mit Namen anderer Standardklassen, Mixins, Datentypen und Felder zu verhindern.
 
@@ -236,6 +236,10 @@ Ihr Schema enthält jetzt neben den von der Basisklasse bereitgestellten Feldern
 Wenn Sie nach einem bestimmten Feld in Ihrem Schema suchen, können Sie die Suchleiste auch verwenden, um die angezeigten Felder nach Namen zu filtern, unabhängig davon, unter welcher Mischung sie angezeigt werden.
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>Die Suchfunktion berücksichtigt alle ausgewählten Mix-in-Filter, wenn die passenden Felder angezeigt werden. Wenn eine Abfrage nicht die erwarteten Ergebnisse anzeigt, müssen Sie ggf. die Dublette prüfen, ob Sie keine relevanten Mixins herausfiltern.
 
 ## Festlegen eines Schemafelds als Identitätsfeld {#identity-field}
 
