@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;segment evaluation;Segmentatio
 solution: Experience Platform
 title: Bewerten eines Segments
 topic: tutorial
-description: In diesem Dokument finden Sie eine Anleitung zur Segmentbewertung und zum Zugriff auf Segmentergebnisse mithilfe der Segmentierungs-API.
+type: Tutorial
+description: In diesem Dokument finden Sie eine Anleitung zum Evaluieren von Segmenten und zum Zugriff auf Segmentergebnisse mithilfe der Segmentierungs-API.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 14%
