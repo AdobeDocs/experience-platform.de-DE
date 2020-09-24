@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: Datennutzungsrichtlinie erstellen
 topic: policies
+type: Tutorial
 description: Mit der Policy Service-API können Sie Datenverwendungsrichtlinien erstellen und verwalten, um zu bestimmen, welche Marketingaktionen für Daten mit bestimmten Datenverwendungsbeschriftungen durchgeführt werden können. Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer Richtlinie mithilfe der Policy Service API.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 49%
