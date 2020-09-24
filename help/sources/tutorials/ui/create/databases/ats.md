@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Table Storage;azure tabl
 solution: Experience Platform
 title: Erstellen eines Quellconnectors für die Datenspeicherung eines Blauen Diagramms in der Benutzeroberfläche
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie mit der Plattform-Benutzeroberfläche einen Quellanschluss für eine Datenspeicherung aus dem Bereich "Blaue Tabelle" (im Folgenden "ATS") erstellen können.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 9%
@@ -70,4 +71,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das ATS-Konto, mit dem Sie ei
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem ATS-Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/databases.md)einzubeziehen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem ATS-Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten in dieses Lernprogramm [!DNL Platform]](../../dataflow/databases.md)einzubringen.
