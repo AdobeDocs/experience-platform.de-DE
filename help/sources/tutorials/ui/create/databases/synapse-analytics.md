@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synaps
 solution: Experience Platform
 title: Erstellen eines Azurblase-Synapse-Analytics-Quellconnectors in der Benutzeroberfläche
 topic: overview
+type: Tutorial
 description: In diesem Lernprogramm werden Schritte zum Erstellen eines Azurblauen Synapse Analytics (nachfolgend "Synapse")-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 9%
