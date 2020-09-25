@@ -6,9 +6,9 @@ title: Adobe Analytics Classifications Data Connector in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '661'
 ht-degree: 4%
 
 ---
@@ -25,6 +25,8 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
 * [[!DNL Echtzeit-Profil]](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxen, die eine einzelne Plattforminstanz in separate virtuelle Umgebung aufteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+
+Der Analytics Classifications Data Connector erfordert, dass Ihre Daten vor der Verwendung in die neue [!DNL Classifications] Infrastruktur von Adobe Analytics migriert wurden. Wenden Sie sich zur Bestätigung des Migrationsstatus Ihrer Daten an Ihren Kundenbetreuer für Adobe.
 
 ## Wählen Sie Ihre Klassifizierungen aus
 
