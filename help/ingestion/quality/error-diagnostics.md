@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht zur partiellen Batch-Erfassung in Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
+source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 34%
+source-wordcount: '881'
+ht-degree: 33%
 
 ---
 
@@ -292,7 +292,15 @@ Wenn der Stapel einen oder mehrere Fehler enthält und die Fehlerdiagnose aktivi
 >}
 >```
 
-## Fehlertypen bei der partiellen Batch-Erfassung {#appendix}
+## Nächste Schritte {#next-steps}
+
+In diesem Lernprogramm wurde beschrieben, wie Sie Fehler bei der Partiellen Stapelverarbeitung überwachen. Weiterführende Informationen zur Batch-Erfassung finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
+
+## Anhang {#appendix}
+
+Dieser Abschnitt enthält zusätzliche Informationen zu den Fehlertypen bei der Aufnahme.
+
+### Fehlertypen bei der partiellen Batch-Erfassung {#partial-ingestion-types}
 
 Bei der Partiellen Stapelverarbeitung gibt es beim Erfassen von Daten drei verschiedene Fehlertypen:
 
@@ -379,7 +387,3 @@ Nachstehend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## Nächste Schritte {#next-steps}
-
-In diesem Lernprogramm wurde beschrieben, wie Sie Fehler bei der Partiellen Stapelverarbeitung überwachen. Weiterführende Informationen zur Batch-Erfassung finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
