@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Erstellen von Abfragen
 topic: queries
 type: Tutorial
+description: Dieses Dokument enthält eine Verknüpfung zu der Kerndokumentation, die beim Erstellen und Verstehen von Abfragen in Adobe Experience Platform verwendet wird.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 17%
+source-wordcount: '131'
+ht-degree: 15%
 
 ---
 
