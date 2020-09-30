@@ -2,12 +2,14 @@
 keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
 solution: Experience Platform
 title: Abrufen fehlgeschlagener Batches
-topic: overview
+topic: tutorial
+type: Tutorial
+description: In diesem Tutorial wird erläutert, wie Sie mithilfe von APIs für die Datenaufnahme Informationen aus einem fehlgeschlagenen Batch abrufen.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 74%
+source-wordcount: '622'
+ht-degree: 75%
 
 ---
 
