@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sc
 solution: Experience Platform
 title: Entwicklerhandbuch für Query Service
 topic: scheduled queries
+description: Die folgenden Abschnitte führen Sie durch die verschiedenen API-Aufrufe, die Sie für geplante Abfragen mit der Abfrage Service API durchführen können.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 46%
+source-wordcount: '963'
+ht-degree: 45%
 
 ---
 
