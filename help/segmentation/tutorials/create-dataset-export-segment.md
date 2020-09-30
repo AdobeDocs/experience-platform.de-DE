@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Erstellen eines Datensatzes zum Exportieren eines Segments für eine Audience
 topic: tutorial
 type: Tutorial
+description: In diesem Lernprogramm werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Segments für Audiencen mithilfe der Benutzeroberfläche für Experience Platformen verwendet werden kann.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 33%
+source-wordcount: '758'
+ht-degree: 32%
 
 ---
 
@@ -79,7 +80,7 @@ Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der 
 
 Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. **[!UICONTROL Datensatz-ID]**, **[!UICONTROL Name]**, **[!UICONTROL Beschreibung]**, **[!UICONTROL Tabellenname]**, **[!UICONTROL Schema]**, **[!UICONTROL Streaming]** und **[!UICONTROL Quelle]**. The [!UICONTROL Info] tab also includes information about when the dataset was **[!UICONTROL Created]** and its **[!UICONTROL Last Modified]** date.
 
-Bitte beachten Sie die **[!UICONTROL Dataset-ID]**, da dieser Wert erforderlich ist, um den Arbeitsablauf für den Segmentexport in der Audience abzuschließen.
+Bitte beachten Sie die **[!UICONTROL Dataset-ID]**, da dieser Wert erforderlich ist, um den Audience-Segmentexport-Arbeitsablauf abzuschließen.
 
 ![Datensatzaktivität](../images/tutorials/segment-export-dataset/dataset-activity.png)
 
