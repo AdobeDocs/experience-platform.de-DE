@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Durchsetzen der Datennutzungskonformität für Zielgruppensegmente
 topic: tutorial
 type: Tutorial
+description: In diesem Tutorial werden die Schritte zur Durchsetzung der Datennutzungskonformität für Zielgruppensegmente von Echtzeit-Kundenprofilen mithilfe von APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 42%
+source-wordcount: '1351'
+ht-degree: 43%
 
 ---
 
