@@ -4,18 +4,19 @@ solution: Experience Platform
 title: Erstellen einer authentifizierten Streaming-Verbindung
 topic: tutorial
 type: Tutorial
+description: Die authentifizierte Datenerfassung ermöglicht es Adobe Experience Platform-Diensten, wie z. B. Echtzeit-Kundendaten und -Identitäten, zwischen Datensätzen aus vertrauenswürdigen Quellen und nicht vertrauenswürdigen Quellen zu unterscheiden.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 67%
+source-wordcount: '659'
+ht-degree: 64%
 
 ---
 
 
 # Erstellen einer authentifizierten Streaming-Verbindung
 
-Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and un-trusted sources. Kunden, die persönliche identifizierbare Informationen (PII) senden möchten, können dies tun, indem sie Zugriffstoken als Teil der POST-Anfrage senden.
+Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Kunden, die persönliche identifizierbare Informationen (PII) senden möchten, können dies tun, indem sie Zugriffstoken als Teil der POST-Anfrage senden.
 
 ## Erste Schritte
 
