@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Sonstige Funktionen
 topic: developer guide
+description: Die folgende Funktion ist eine sonstige Funktion für Profil Query Language (PQL).
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 79%
+source-wordcount: '114'
+ht-degree: 81%
 
 ---
 
