@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Segmentaufträge
 topic: developer guide
+description: Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentaufträgen und umfasst Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 translation-type: tm+mt
-source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 38%
+source-wordcount: '1025'
+ht-degree: 39%
 
 ---
 
