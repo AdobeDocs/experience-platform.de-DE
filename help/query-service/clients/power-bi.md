@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Po
 solution: Experience Platform
 title: Verbindung mit Power BI
 topic: connect
+description: Dieses Dokument führt Sie durch die Schritte, um Power BI mit dem Adobe Experience Platform Abfrage Service zu verbinden.
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '349'
 ht-degree: 1%
 
 ---
