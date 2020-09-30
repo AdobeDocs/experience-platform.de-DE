@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Datensätze verknüpfen
 topic: queries
 type: Tutorial
+description: Durch Verknüpfung von Datensätzen können Sie Daten aus anderen Datensätzen in Ihre Abfrage aufnehmen. In diesem Beispiel wird ein benutzerdefinierter Betriebssystemdataset verwendet, um die operationSystemID dem Wert des Betriebssystems zuzuordnen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 100%
+source-wordcount: '82'
+ht-degree: 80%
 
 ---
 
