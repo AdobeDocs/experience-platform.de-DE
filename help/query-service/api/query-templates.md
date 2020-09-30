@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;query templates;
 solution: Experience Platform
 title: Entwicklerhandbuch für Query Service
 topic: query templates
+description: Die folgende Dokumentation führt Sie durch die verschiedenen API-Aufrufe, die Sie mithilfe von Abfragen-Vorlagen für die Abfrage Service API durchführen können.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 94%
+source-wordcount: '659'
+ht-degree: 91%
 
 ---
 
