@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
-description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name<span>@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID. '
+description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '772'
 ht-degree: 64%
 
 ---
