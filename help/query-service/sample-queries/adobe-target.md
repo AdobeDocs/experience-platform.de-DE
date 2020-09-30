@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: Beispielabfragen
 topic: queries
+description: Daten von Adobe Target werden in XDM-Schema für Erlebnisereignisse umgewandelt und als Datensätze in Experience Platform integriert. Dieses Dokument enthält Abfragen zum Verwenden des Abfrage Service mit Ihren Adobe Target-Datensätzen.
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 82%
+source-wordcount: '261'
+ht-degree: 79%
 
 ---
 
