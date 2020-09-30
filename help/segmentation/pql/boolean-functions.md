@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Boolesche Funktionen
 topic: developer guide
+description: Boolesche Funktionen werden verwendet, um eine Boolesche Logik für verschiedene Elemente in Profil Abfrage Language (PQL) auszuführen.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 15%
+source-wordcount: '236'
+ht-degree: 14%
 
 ---
 
@@ -71,7 +72,7 @@ Die folgende PQL-Abfrage gibt alle Menschen zurück, die ihr Heimatland nicht al
 not (homeAddress.countryISO = "CA")
 ```
 
-## Wenn
+## Wenn 
 
 Die `if` Funktion wird zum Auflösen eines Ausdrucks verwendet, je nachdem, ob eine angegebene Bedingung wahr ist.
 
