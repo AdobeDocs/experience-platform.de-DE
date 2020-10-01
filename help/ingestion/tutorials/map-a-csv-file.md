@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie eine CSV-Datei mithilfe der Adobe Experience Platform-Benutzeroberfläche einem XDM-Schema zuordnen.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 4%
+source-wordcount: '886'
+ht-degree: 2%
 
 ---
 
@@ -113,50 +113,16 @@ Der Anzeigebereich &quot;Zuordnung&quot;wird mit dem neu erstellten Quellfeld er
 
 Nachdem die CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten überwachen, die über sie aufgenommen werden. Weitere Informationen zur Überwachung von Datenflüssen finden Sie im Lernprogramm zur [Überwachung von Streaming-Datenflüssen](../../ingestion/quality/monitor-data-flows.md).
 
-## Nächste Schritte
+## Zuordnungsfunktionen verwenden
 
-In diesem Tutorial haben Sie eine einfache CSV-Datei erfolgreich einem XDM-Schema zugeordnet und in [!DNL Platform]das sie eingefügt wurde. Diese Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile]z. B. Weitere Informationen finden Sie in der Übersicht für [[!DNL Echtzeit-Kundendaten]](../../profile/home.md) .
-
-## Anhang
-
-Im folgenden Abschnitt finden Sie weitere Informationen zum Zuordnen von CSV-Spalten zu XDM-Feldern.
-
-### Zuordnungsfunktionen
-
-Bestimmte Zuordnungsfunktionen können zum Berechnen und Berechnen von Werten verwendet werden, basierend auf dem, was in die Quellfelder eingegeben wird. Um eine Funktion zu verwenden, geben Sie sie unter &quot; **[!UICONTROL Quellfeld]** &quot;mit entsprechender Syntax und Eingaben ein.
+Um eine Funktion zu verwenden, geben Sie sie unter &quot; **[!UICONTROL Quellfeld]** &quot;mit entsprechender Syntax und Eingaben ein.
 
 Um z. B. CSV-Felder für **Stadt** und **Land** zu verknüpfen und sie dem XDM-Feld für **Stadt** zuzuweisen, legen Sie das Quellfeld als `concat(city, ", ", county)`fest.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
-In der folgenden Tabelle werden alle unterstützten Zuordnungsfunktionen, einschließlich Beispiel-Ausdruck und deren Ausgabeformate, Liste.
+Weitere Informationen zum Zuordnen von Spalten zu XDM-Feldern finden Sie im Handbuch zur [Verwendung der Funktionen](../../data-prep/functions.md)&quot;Datenvorgabe&quot;(Mapper).
 
-| Funktion | Beschreibung | Beispiel-Ausdruck | Beispielausgabe |
-| -------- | ----------- | ----------------- | ------------- |
-| concat | Verkettet angegebene Zeichenfolgen. | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| explode | Teilt die Zeichenfolge basierend auf einem Regex und gibt ein Array von Teilen zurück. | explode(&quot;Hi, there!&quot;, &quot;&quot;) | `["Hi,", "there"]` |
-| instr | Gibt die Position/den Index einer Unterzeichenfolge zurück. | instr(&quot;adobe<span>.com&quot;, &quot;com&quot;) | 6 |
-| Ersatz | Ersetzt die Suchzeichenfolge, wenn sie in der ursprünglichen Zeichenfolge vorhanden ist. | replace(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;Dies ist ein String-Ersatz-Test&quot; |
-| substr | Gibt eine Teilzeichenfolge einer angegebenen Länge zurück. | substr(&quot;This is a substring test&quot;, 7, 8) | &quot; a subst&quot; |
-| lower/<br>lcase | Konvertiert eine Zeichenfolge in Kleinbuchstaben. | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
-| top/<br>ucase | Konvertiert eine Zeichenfolge in Großbuchstaben. | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
-| split | Teilt eine Eingabezeichenfolge auf einem Trennzeichen. | split(&quot;Hello world&quot;, &quot;&quot;) | `["Hello", "world"]` |
-| join | Verbindet eine Liste von Objekten mit der Trennlinie. | `join(" ", ["Hello", "world"]`) | &quot;Hello world&quot; |
-| coalesce | Gibt das erste Objekt ohne null in einer bestimmten Liste zurück. | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
-| decode | Bei einem Schlüssel und einer Liste von Schlüsselwertpaaren, die als Array reduziert sind, gibt die Funktion den Wert zurück, wenn der Schlüssel gefunden wird, oder gibt einen Standardwert zurück, wenn er im Array vorhanden ist. | decode(&quot;k2&quot;, &quot;k1&quot;, &quot;v1&quot;, &quot;k2&quot;, &quot;v2&quot;, &quot;default&quot;) | &quot;v2&quot; |
-| iif | Wertet einen bestimmten booleschen Ausdruck aus und gibt den angegebenen Wert basierend auf dem Ergebnis zurück. | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| min | Gibt das Minimum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | min(3, 1, 4) | 1 |
-| max | Gibt das Maximum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | max(3, 1, 4) | 4 |
-| first | Ruft das erste angegebene Argument ab. | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
-| last | Ruft das letzte angegebene Argument ab. | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
-| uuid /<br>guid | Erstellt eine pseudo-zufällige ID. | uuid()<br>guid() | {UNIQUE_ID} |
-| now | Ruft die aktuelle Zeit ab. | now() | `2019-10-23T10:10:24.556-07:00[America/Los_Angeles]` |
-| timestamp | Ruft die aktuelle Unix-Zeit ab. | timestamp() | 1571850624571 |
-| format | Formatiert das Eingabedatum nach einem angegebenen Format. | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | Konvertiert einen Zeitstempel in eine Datums-Zeichenfolge in einem angegebenen Format. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23. Oktober 2019 11:24&quot; |
-| date | Konvertiert eine Datums-Zeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | date(&quot;23-Okt-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | Ruft die Teile des Datums ab. Die folgenden Komponentenwerte werden unterstützt: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;&quot;quar&quot;<br>&quot;qq&quot;<br>&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;&quot;y&quot;heute&quot;dd&quot;d&quot;&quot;week&quot;dann&quot;ww&quot;direkt&quot;an&quot;wochentag&quot;dz&quot;wochentag&quot;w&quot;wochentag&quot;dz&quot;ggi&quot;&quot;h&quot;h&quot;hd&quot;hd&quot;h&quot;h&quot;h&quot;d&quot;h&quot;d&quot;h&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;möglicherweise&quot;unden&quot;oder&quot;möglicherweise&quot;oder&quot;b&quot;pause&quot;pause&quot;b&quot;pause&quot;b&quot;b&quot;bzw&quot;g&quot;mit&quot;b&quot;bzw&quot;bzw&quot;bzw&quot;jz&quot;jh&quot;jz&quot;jz&quot;jh&quot;<br>&quot;jz&quot;jz&quot;jz&quot;jz&quot;jz&quot;jz&quot;jh&quot;jz&quot;jh&quot;jz&quot;jz&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;jz&quot;jz&quot;jz&quot;jhh&quot;&quot;hh24&quot;&quot;hh12&quot;Minute&quot;&quot;mi&quot;&quot;&quot;&quot;im&quot;&quot;zweiter&quot;&quot;s&quot;&quot;Millisekunden&quot;&quot;ms&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | Ersetzt eine Komponente in einem bestimmten Datum. Die folgenden Komponenten werden akzeptiert: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br><br><br><br><br><br><br><br><br>&quot;hh&quot;&quot;mi&quot;&quot;&quot;&quot;n&quot;&quot;&quot;&quot;ss&quot;&quot;s&quot;&quot;s&quot;s&quot;s&quot;s&quot;s&quot;) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
-| make_date_time /<br>make_timestamp | Erstellt ein Datum aus Teilen. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
-| current_timestamp | Gibt den aktuellen Zeitstempel zurück. | current_timestamp() | 1571850624571 |
-| current_date | Gibt das aktuelle Datum ohne Zeitkomponente zurück. | current_date() | &quot;18-Nov-2019&quot; |
+## Nächste Schritte
+
+In diesem Tutorial haben Sie eine einfache CSV-Datei erfolgreich einem XDM-Schema zugeordnet und in [!DNL Platform]das sie eingefügt wurde. Diese Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile]z. B. Weitere Informationen finden Sie in der Übersicht für [[!DNL Echtzeit-Kundendaten]](../../profile/home.md) .
