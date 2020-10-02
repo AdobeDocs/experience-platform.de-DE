@@ -4,9 +4,9 @@ seo-title: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
 description: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
 seo-description: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1683'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Häufig gestellte Fragen 
 
-Diese häufig gestellten Fragen beinhalten Fragen zu Adobe Web SDK/
+Diese häufig gestellten Fragen enthalten Fragen zur Adobe Web SDK.
 
 ## Was ist das Adobe Experience Platform Web SDK?
 
@@ -53,7 +53,7 @@ Das neue Web SDK sendet Daten für die folgenden Lösungen an ein einzelnes Ziel
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Target
-* Besucher-ID
+* Visitor ID
 * Adobe Experience Platform
 
 Weitere Lösungen werden im Laufe dieses Jahres folgen.
@@ -105,7 +105,7 @@ Das Adobe Experience Platform Web SDK wurde für folgende Personen entwickelt:
 
 ## Wie erhalte ich Zugriff auf Beginn mit dem Adobe Experience Platform Web SDK?
 
-Das Web SDK steht derzeit der Öffentlichkeit zur Verfügung und kann zum Senden von Daten an Adobe Experience Cloud-Produkte verwendet werden. Die Möglichkeit, Daten an Lösungen von Drittanbietern zu senden, wird demnächst verfügbar sein. Wenn Sie Zugriff auf das Web SDK erhalten möchten, wenden Sie sich an Ihren CSM, um den Anforderungsprozess Beginn.
+Das Web SDK steht derzeit der Öffentlichkeit zur Verfügung und kann zum Senden von Daten an Adobe Experience Cloud-Produkte verwendet werden. Die Möglichkeit, Daten an Lösungen von Drittanbietern zu senden, wird demnächst verfügbar sein. Wenn Sie Zugriff auf das Web SDK erhalten möchten, wenden Sie sich an Ihren zertifizierten Software-Manager (CSM), um den Anforderungsprozess Beginn.
 
 ## Welche Anwendungsfälle werden derzeit vom Web SDK unterstützt?
 
