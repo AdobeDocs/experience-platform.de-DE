@@ -5,10 +5,10 @@ seo-title: Facebook-Ziel
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '758'
-ht-degree: 21%
+ht-degree: 20%
 
 ---
 
@@ -52,7 +52,7 @@ Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mi
 >
 >Daten, die an gesendet werden, [!DNL Facebook] sollten keine gehefteten Identitäten enthalten. Sie sind für die Erfüllung dieser Verpflichtung verantwortlich und können dies tun, indem Sie sicherstellen, dass Segmente, die für die Aktivierung ausgewählt wurden, keine Heftoption in ihrer Fusionsrichtlinie verwenden. Weitere Informationen zu [Zusammenführungsrichtlinien](/help/profile/ui/merge-policies.md).
 
-### Aktivierungstyp {#activation-type}
+### Exporttyp {#export-type}
 
 **Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den Bezeichnern (Name, Telefonnummer usw.) verwendet im Facebook-Ziel.
 
