@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: Zuordnungsfunktionen
+title: Funktionen zur Datenvorbereitung
 topic: overview
 description: In diesem Dokument werden die Zuordnungsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
 workflow-type: tm+mt
-source-wordcount: '3288'
-ht-degree: 6%
+source-wordcount: '3432'
+ht-degree: 8%
 
 ---
 
 
-# Zuordnungsfunktionen
+# Funktionen zur Datenvorbereitung
 
-Zuordnungsfunktionen können verwendet werden, um Werte basierend auf dem, was in die Quellfelder eingegeben wird, zu berechnen und zu berechnen.
+Mithilfe der Funktion &quot;Datenvorgabe&quot;können Werte basierend auf den in die Quellfelder eingegebenen Werten berechnet und berechnet werden.
 
 ## Felder
 
@@ -37,6 +37,10 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 ### Zeichenfolgen-Funktionen
 
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Verkettet die angegebenen Zeichenfolgen. | <ul><li>STRING: Die zu verkettenden Zeichenfolgen.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
@@ -47,7 +51,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | lower/<br>lcase | Konvertiert eine Zeichenfolge in Kleinbuchstaben. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die in Kleinbuchstaben umgewandelt wird.</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | top/<br>ucase | Konvertiert eine Zeichenfolge in Großbuchstaben. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die in Großbuchstaben umgewandelt wird.</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | split | Teilt eine Eingabezeichenfolge auf einem Trennzeichen. | <ul><li>INPUT: **Erforderlich** Die Eingabezeichenfolge, die geteilt werden soll.</li><li>SEPARATOR: **Erforderlich** Die Zeichenfolge, mit der die Eingabe geteilt wird.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot;&quot;) | `["Hello", "world"]` |
-| join | Verbindet eine Liste von Objekten mit der Trennlinie. | <ul><li>SEPARATOR: **Erforderlich** Die Zeichenfolge, die zum Verbinden der Objekte verwendet wird.</li><li>OBJEKTE: **Erforderlich** Ein Array von Zeichenfolgen, die verbunden werden.</li></ul> | join(SEPARATOR, [OBJEKTE]) | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| join | Verbindet eine Liste von Objekten mit der Trennlinie. | <ul><li>SEPARATOR: **Erforderlich** Die Zeichenfolge, die zum Verbinden der Objekte verwendet wird.</li><li>OBJEKTE: **Erforderlich** Ein Array von Zeichenfolgen, die verbunden werden.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
 | lpad | Fügt die linke Seite einer Zeichenfolge mit der anderen angegebenen Zeichenfolge ein. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die entfernt werden soll. Diese Zeichenfolge kann null sein.</li><li>COUNT: **Erforderlich** Die Größe der Zeichenfolge, die entfernt werden soll.</li><li>HINZUFÜGEN: **Erforderlich** Die Zeichenfolge, mit der die Eingabe aufgezeichnet werden soll. Wenn null oder leer, wird es als ein Leerzeichen behandelt.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | Fügt die rechte Seite einer Zeichenfolge mit der anderen angegebenen Zeichenfolge ein. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die entfernt werden soll. Diese Zeichenfolge kann null sein.</li><li>COUNT: **Erforderlich** Die Größe der Zeichenfolge, die entfernt werden soll.</li><li>HINZUFÜGEN: **Erforderlich** Die Zeichenfolge, mit der die Eingabe aufgezeichnet werden soll. Wenn null oder leer, wird es als ein Leerzeichen behandelt.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Ruft die ersten &quot;n&quot;-Zeichen der angegebenen Zeichenfolge ab. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, für die Sie die ersten &quot;n&quot;-Zeichen erhalten.</li><li>COUNT: **** ErforderlichDie &quot;n&quot;-Zeichen, die Sie aus der Zeichenfolge abrufen möchten.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -60,15 +64,23 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 ### Hashfunktionen
 
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | Führt eine Eingabe durch und erzeugt einen Hashwert mit Secure Hash Algorithm 1 (SHA-1). | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | Erstellt einen Hashwert mit Secure Hash Algorithm 256 (SHA-256). | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | Erstellt einen Hashwert mit Secure Hash Algorithm 512 (SHA-512). | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | Erstellt mithilfe von MD5 eine Eingabe und einen Hashwert. | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | Führt eine Eingabe durch und erzeugt einen Hashwert mit Secure Hash Algorithm 1 (SHA-1). | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | Erstellt einen Hashwert mit Secure Hash Algorithm 256 (SHA-256). | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | Erstellt einen Hashwert mit Secure Hash Algorithm 512 (SHA-512). | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd07 a88a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | Erstellt mithilfe von MD5 eine Eingabe und einen Hashwert. | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Eine Eingabe verwendet einen CRC-Algorithmus (zyklische Redundanzprüfung), um einen 32-Bit-zyklischen Code zu erzeugen. | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### URL-Funktionen
+
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
 
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -80,6 +92,10 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 ### Datums- und Uhrzeitfunktionen
 
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Ruft die aktuelle Zeit ab. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
@@ -90,12 +106,16 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | date | Konvertiert eine Datums-Zeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATUM: **Erforderlich** Die Zeichenfolge, die das Datum darstellt.</li><li>FORMAT: **Erforderlich** Die Zeichenfolge, die das Format des Datums darstellt.</li></ul> | date(DATE, FORMAT) | date(&quot;23-Okt-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
 | date | Konvertiert eine Datums-Zeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATUM: **Erforderlich** Die Zeichenfolge, die das Datum darstellt.</li></ul> | date(DATE) | date(&quot;23-Okt-2019 11:24&quot;, &quot;yyyy/MM/dd&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
 | date_part | Ruft die Teile des Datums ab. Die folgenden Komponentenwerte werden unterstützt: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;&quot;quar&quot;<br>&quot;qq&quot;<br>&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;&quot;y&quot;heute&quot;dd&quot;d&quot;&quot;week&quot;dann&quot;ww&quot;direkt&quot;an&quot;wochentag&quot;dz&quot;wochentag&quot;w&quot;wochentag&quot;dz&quot;ggi&quot;&quot;h&quot;h&quot;hd&quot;hd&quot;h&quot;h&quot;h&quot;d&quot;h&quot;d&quot;h&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;d&quot;möglicherweise&quot;unden&quot;oder&quot;möglicherweise&quot;oder&quot;b&quot;pause&quot;pause&quot;b&quot;pause&quot;b&quot;b&quot;bzw&quot;g&quot;mit&quot;b&quot;bzw&quot;bzw&quot;bzw&quot;jz&quot;jh&quot;jz&quot;jz&quot;jh&quot;<br>&quot;jz&quot;jz&quot;jz&quot;jz&quot;jz&quot;jz&quot;jh&quot;jz&quot;jh&quot;jz&quot;jz&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;jz&quot;jz&quot;jz&quot;jhh&quot;&quot;hh24&quot;&quot;hh12&quot;Minute&quot;&quot;mi&quot;&quot;&quot;&quot;im&quot;&quot;zweiter&quot;&quot;s&quot;&quot;Millisekunden&quot;&quot;ms&quot;ms&quot; | <ul><li>KOMPONENTE: **Erforderlich** Eine Zeichenfolge, die den Teil des Datums darstellt. </li><li>DATUM: **Erforderlich** Das Datum in einem Standardformat.</li></ul> | date_part(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
-| set_date_part | Ersetzt eine Komponente in einem bestimmten Datum. Die folgenden Komponenten werden akzeptiert: <br><br>&quot;year&quot;<br>&quot;year&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br><br><br><br><br><br><br><br><br>&quot;hh&quot;&quot;mi&quot;&quot;&quot;n&quot;&quot;&quot;&quot;s&quot;&quot;s&quot;&quot;s&quot;s&quot;s&quot;s&quot;s&quot;s&quot; | <ul><li>KOMPONENTE: **Erforderlich** Eine Zeichenfolge, die den Teil des Datums darstellt. </li><li>WERT: **Erforderlich** Der für die Komponente für ein bestimmtes Datum festzulegende Wert.</li><li>DATUM: **Erforderlich** Das Datum in einem Standardformat.</li></ul> | set_date_part(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| set_date_part | Ersetzt eine Komponente in einem bestimmten Datum. Die folgenden Komponenten werden akzeptiert: <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br><br><br><br><br><br><br><br><br>&quot;hh&quot;&quot;mi&quot;&quot;&quot;&quot;n&quot;&quot;&quot;&quot;ss&quot;&quot;s&quot;&quot;s&quot;s&quot;s&quot;s&quot;s&quot;) | <ul><li>KOMPONENTE: **Erforderlich** Eine Zeichenfolge, die den Teil des Datums darstellt. </li><li>WERT: **Erforderlich** Der für die Komponente für ein bestimmtes Datum festzulegende Wert.</li><li>DATUM: **Erforderlich** Das Datum in einem Standardformat.</li></ul> | set_date_part(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time | Erstellt ein Datum aus Teilen. Diese Funktion kann auch mithilfe von make_timestamp ausgelöst werden. | <ul><li>JAHR: **Erforderlich** Das vierstellige Jahr.</li><li>MONAT: **Erforderlich** der Monat. Die zulässigen Werte sind 1 bis 12.</li><li>TAG: **Erforderlich** der Tag. Die zulässigen Werte sind 1 bis 31.</li><li>STUNDE: **Die Stunde war erforderlich** . Die zulässigen Werte liegen zwischen 0 und 23.</li><li>MINUTE: **Erforderlich** Die Minute. Die zulässigen Werte liegen zwischen 0 und 59.</li><li>NANOSECOND: **Erforderlich** Die nanosekunden Werte. Die zulässigen Werte sind 0 bis 9999999999.</li><li>TIMEZONE: **Erforderlich** Die Zeitzone für die Datumszeit.</li></ul> | make_date_time(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | zone_date_to_utc | Konvertiert ein Datum in einer beliebigen Zeitzone in ein Datum in UTC. | <ul><li>DATUM: **Erforderlich** Das Datum, das konvertiert werden soll.</li></ul> | zone_date_to_utc(DATE) | `zone_date_to_utc(2019-10-17T11:55:12.000000999-07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
 | zone_date_to_zone | Konvertiert ein Datum aus einer Zeitzone in eine andere Zeitzone. | <ul><li>DATUM: **Erforderlich** Das Datum, das konvertiert werden soll.</li><li>ZONE: **Erforderlich** Die Zeitzone, in die Sie das Datum konvertieren möchten.</li></ul> | zone_date_to_zone(DATE, ZONE) | `zone_date_to_utc(2019-10-17T11:55:12.000000999-07:00[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
 
 ### Hierarchien - Objekte
+
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
 
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -108,6 +128,10 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 ### Hierarchien - Arrays
 
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Gibt das erste nicht-Null-Objekt in einem gegebenen Array zurück. | <ul><li>INPUT: **Erforderlich** Das Array, von dem Sie das erste Objekt ohne null suchen möchten.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
@@ -117,6 +141,10 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 ### Logische Operatoren
 
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decode | Bei einem Schlüssel und einer Liste von Schlüsselwertpaaren, die als Array reduziert sind, gibt die Funktion den Wert zurück, wenn der Schlüssel gefunden wird, oder gibt einen Standardwert zurück, wenn er im Array vorhanden ist. | <ul><li>SCHLÜSSEL: **Erforderlich** Der Schlüssel, der übereinstimmen soll.</li><li>OPTIONS: **Erforderlich** Ein reduziertes Array mit Schlüssel/Wert-Paaren. Optional kann ein Standardwert am Ende gesetzt werden.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Lautet der angegebene stateCode &quot;ca&quot;, &quot;California&quot;.<br>Lautet der angegebene stateCode &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Wenn der stateCode nicht mit dem Folgenden übereinstimmt, &quot;K/A&quot;. |
@@ -124,12 +152,20 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 ### Aggregation
 
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Gibt das Minimum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Gibt das Maximum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### Typkonvertierungen
+
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
 
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -140,17 +176,29 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 ### JSON-Funktionen
 
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Deserialisieren Sie den JSON-Inhalt aus der angegebenen Zeichenfolge. | <ul><li>STRING: **Die zu deserialisierende JSON-Zeichenfolge war erforderlich** .</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Ein Objekt, das die JSON darstellt. |
 
 ### Besondere Maßnahmen
 
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Erstellt eine pseudo-zufällige ID. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 ### Benutzeragenten-Funktionen
+
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
 
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
