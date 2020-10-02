@@ -5,10 +5,10 @@ seo-title: Amazon Kinesis-Ziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 8%
+source-wordcount: '475'
+ht-degree: 7%
 
 ---
 
@@ -39,6 +39,10 @@ Durch die Verwendung von Streaming-Zielen wie [!DNL Amazon Kinesis]z. B. können
 
 Beispielsweise hat ein Potenzieller Kunde ein White Paper heruntergeladen, das sie in ein &quot;hohes Konversionssegment&quot;einordnet. Durch Zuordnung des Segments, in das der Potenzieller Kunde zum [!DNL Amazon Kinesis] Ziel fällt, erhalten Sie dieses Ereignis in [!DNL Amazon Kinesis]. Dort können Sie einen Do-it-self-Ansatz verwenden und die Geschäftslogik über das Ereignis beschreiben, da Sie denken, dass dies am besten mit Ihren IT-Systemen im Unternehmen funktionieren würde.
 
+## Exporttyp {#export-type}
+
+**Profil-Export** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die [Ziel-Aktivierung](/help/rtcdp/destinations/activate-destinations.md#select-attributes)ausgewählt.
+
 ## Ziel verbinden {#connect-destination}
 
 See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL Amazon].
@@ -55,7 +59,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 ### Im Setup-Schritt {#setup-step}
 
 * **Name**: Geben Sie einen Namen für Ihre Verbindung ein, um [!DNL Amazon Kinesis]
-* **Beschreibung**: Geben Sie eine Beschreibung für Ihre Verbindung ein [!DNL Amazon Kinesis].
+* **Beschreibung**: Geben Sie eine Beschreibung für Ihre Verbindung mit ein [!DNL Amazon Kinesis].
 * **stream**: Geben Sie den Namen eines vorhandenen Datenstroms in Ihrem [!DNL Amazon Kinesis] Konto an. Adobe Echtzeit-CDP exportiert Daten in diesen Stream.
 
 ![Eingabefelder im Authentifizierungsschritt](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
