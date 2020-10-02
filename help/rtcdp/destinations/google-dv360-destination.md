@@ -5,10 +5,10 @@ seo-title: Google Display & Video 360-Ziel
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 seo-description: 'Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile. '
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 59%
+source-wordcount: '713'
+ht-degree: 58%
 
 ---
 
@@ -30,6 +30,10 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 >[!IMPORTANT]
 >
 >Wenn Sie Ihr erstes Ziel mit Google Display &amp; Video 360 erstellen möchten und die [ID-Synchronisierungsfunktion](https://docs.adobe.com/content/help/de-DE/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in der Vergangenheit nicht aktiviert hatten (mit Adobe Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um die ID-Synchronisierung zu aktivieren. Wenn Sie zuvor Google-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf die Echtzeit-Kundendatenplattform von Adobe übertragen.
+
+### Exporttyp {#export-type}
+
+**Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) in das Google-Ziel.
 
 ## Voraussetzungen
 
