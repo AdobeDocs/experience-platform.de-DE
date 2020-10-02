@@ -5,10 +5,10 @@ seo-title: SFTP-Ziel
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 seo-description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 77%
+source-wordcount: '206'
+ht-degree: 60%
 
 ---
 
@@ -19,7 +19,11 @@ ht-degree: 77%
 
 Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 
-Führen Sie zum Exportieren von Daten die folgenden Schritte aus:
+## Exporttyp {#export-type}
+
+**Profil-Export** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die [Ziel-Aktivierung](/help/rtcdp/destinations/activate-destinations.md#select-attributes)ausgewählt.
+
+![SFTP-Profil-basierter Exporttyp](/help/rtcdp/destinations/assets/sftp-export-type.png)
 
 ## Ziel verbinden {#connect-destination}
 
