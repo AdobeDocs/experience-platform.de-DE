@@ -5,10 +5,10 @@ seo-title: (Beta) Azurblauer Ereignis Hubs-Ziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 7%
+source-wordcount: '505'
+ht-degree: 6%
 
 ---
 
@@ -36,6 +36,10 @@ Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs] 
 Durch die Verwendung von Streaming-Zielen wie [!DNL Azure Event Hubs]z. B. können Sie Segmentierungssysteme mit hohem Wert und zugehörige Profil-Attribute problemlos in Ihre bevorzugten Systeme einspeisen.
 
 Beispielsweise hat ein Potenzieller Kunde ein White Paper heruntergeladen, das sie in ein &quot;hohes Konversionssegment&quot;einordnet. Durch Zuordnung des Segments, in das der Potenzieller Kunde zum [!DNL Azure Event Hubs] Ziel fällt, erhalten Sie dieses Ereignis in [!DNL Azure Event Hubs]. Dort können Sie einen Do-it-self-Ansatz verwenden und die Geschäftslogik über das Ereignis beschreiben, da Sie denken, dass dies am besten mit Ihren IT-Systemen im Unternehmen funktionieren würde.
+
+## Exporttyp {#export-type}
+
+**Profil-Export** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die [Ziel-Aktivierung](/help/rtcdp/destinations/activate-destinations.md#select-attributes)ausgewählt.\
 
 ## Ziel verbinden {#connect-destination}
 
