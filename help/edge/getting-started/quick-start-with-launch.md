@@ -5,17 +5,17 @@ description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiteru
 seo-description: Kurzanleitung zum Einsatz der Experience Platform Web SDK-Erweiterung zur Datenerfassung
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a9c45aed92dc7c7148db7c9383060bbeab763447
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 28%
+source-wordcount: '566'
+ht-degree: 27%
 
 ---
 
 
-# Willkommen
+# Adobe Experience Platform Web SDK - Schnellanleitung zum Beginn
 
-Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Adobe Experience Platform Web SDK in Launch einzurichten. Um diese Funktion nutzen zu können, müssen Sie in der Positivliste eingetragen sein. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren CSM.
+Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Adobe Experience Platform Web SDK in Launch einzurichten. Um diese Funktion verwenden zu können, müssen Sie sich auf der Zulassungsliste befinden. Wenn Sie auf die wartende Liste kommen möchten, wenden Sie sich bitte an Ihren zertifizierten Software-Manager (CSM).
 
 - Sie benötigen eine aktivierte [Erstanbieter-Domäne (CNAME)](https://docs.adobe.com/content/help/de-DE/core-services/interface/ec-cookies/cookies-first-party.html). Wenn Sie bereits über eine CNAME für Analytics verfügen, sollten Sie diese verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen.
 - Berechtigung für Adobe Experience Platform. Wenn Sie Platform nicht erworben haben, stellt Ihnen die Adobe die Experience Platform Data Services Foundation zur begrenzten Verwendung mit dem SDK kostenlos zur Verfügung.
@@ -23,7 +23,7 @@ Dieser Leitfaden führt Sie durch die verschiedenen Möglichkeiten, das Adobe Ex
 
 ## Schemas vorbereiten
 
-Das Experience Platform Edge Network nimmt Daten als XDM. XDM ist ein Datenformat, mit dem Sie Schema definieren können. Das Schema definiert, wie das Edge-Netzwerk erwartet, dass die Daten formatiert werden. Um Daten zu senden, müssen Sie Ihr Schema definieren.
+Das Experience Platform Edge Network verwendet das Experience Data Model (XDM). XDM ist ein Datenformat, mit dem Sie Schema definieren können. Das Schema definiert, wie das Edge-Netzwerk erwartet, dass die Daten formatiert werden. Um Daten zu senden, müssen Sie Ihr Schema definieren.
 
 1. [Erstellen eines Schemas](../../xdm/tutorials/create-schema-ui.md)
 2. hinzufügen Sie das AEP [!DNL Web SDK ExperienceEvent] Mixin mit dem von Ihnen erstellten Schema.
@@ -45,7 +45,7 @@ Sie können eine Konfigurations-ID mit dem [Edge-Konfigurationstool](../fundamen
 
 >[!NOTE]
 >
->Ihre Organisation muss für diese Funktion auf die Positivliste gesetzt werden. Wenden Sie sich an Ihren CSM, um die Liste für eine eventuelle Whitelist zu erhalten.
+>Ihre Organisation muss sich für diese Funktion auf der Zulassungsliste befinden. Wenden Sie sich an Ihren zertifizierten Software-Manager (CSM), um die Zulassungsliste aufzurufen.
 
 ## Datenelement basierend auf Ihrem Schema erstellen
 
@@ -66,6 +66,7 @@ Nachdem die Daten gesendet wurden, können Sie Folgendes tun.
 - [Erstellen Sie Ihr Schema](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/schema/composition.html)
 - [Informationen zum Debugging](../fundamentals/debugging.md)
 - Erfahren Sie, wie Sie das Erlebnis [personalisieren.](../fundamentals/rendering-personalization-content.md)
+- Integrieren Sie das [IAB Transparency &amp; Consent Framework 2.0](../solution-specific/iab-tcf/with-launch.md) in Adobe Experience Platform Launch.
 - Informationen zum Senden von Daten an mehrere Lösungen
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
