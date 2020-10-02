@@ -5,10 +5,10 @@ seo-title: Google-Kundenübereinstimmungsziel
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 seo-description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '1555'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -40,7 +40,7 @@ Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Da
 
 Die Ziele in Adobe Echtzeit-CDP können bestimmte Regeln und Pflichten für Daten haben, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Tools zur Datenverwaltung, mit denen Sie einige dieser Datenverwendungsverpflichtungen verwalten können. [Erfahren Sie mehr](/help/data-governance/labels/overview.md) über Tools und Richtlinien zur Datenverwaltung.
 
-## Art und Identität der Aktivierung {#activation-type}
+## Exporttyp und Identitäten {#export-type}
 
 **Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den Bezeichnern (Name, Telefonnummer usw.) used in the [!DNL Google Customer Match] destination.
 
