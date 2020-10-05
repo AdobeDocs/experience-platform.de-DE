@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an 
 seo-description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
+source-git-commit: 8840e00ec3aa28d43c371b793da4a4b9bfc8d259
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # Senden von Daten an Adobe Analytics
 
-Während in der Vergangenheit verschiedene Funktionen existierten, um zwischen einer Ansicht und einem Link zu unterscheiden (z. B. `s.t(), s.tl()`), gibt es im Web SDK nur den `sendEvent` Befehl. Die Daten, die Sie mit einem Ereignis senden, bestimmen, ob es sich um eine Ansicht oder einen Link handeln soll.
+Während es in der Vergangenheit verschiedene Funktionen gab, um zwischen einer Ansicht und einem Link zu unterscheiden (z. B. `s.t(), s.tl()`), gibt es im Web SDK nur den `sendEvent` Befehl. Die Daten, die Sie mit einem Ereignis senden, bestimmen, ob es sich um eine Ansicht oder einen Link handeln soll.
 
 ## Senden einer Ansicht
 
@@ -35,7 +35,7 @@ alloy("sendEvent", {
 });
 ```
 
-Obwohl Analytics eine Seitenvariable technisch aufzeichnet, auch wenn diese nicht eingestellt ist, empfiehlt es sich, diese Ansicht immer dann einzustellen, wenn Sie eine Ansicht aufzeichnen möchten, die in Ihren Daten explizit aufgeführt ist, und um Ihre Implementierung zukunftssicher zu gestalten.
+Obwohl Analytics eine Seitenvariable technisch aufzeichnet, auch wenn diese nicht eingestellt ist, empfiehlt es sich, diese Ansicht immer dann einzustellen, wenn Sie eine Ansicht aufzeichnen möchten, die explizit in Ihren Daten enthalten ist, und dann Ihre Implementierung in Zukunft Testversand zu nehmen.
 
 ## Tracking-Links
 
