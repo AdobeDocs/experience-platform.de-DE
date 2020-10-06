@@ -5,9 +5,9 @@ title: Extraktion
 topic: Developer guide
 description: Der Suchbegriff-Extraktion-Dienst extrahiert automatisch Suchbegriffe oder Schlüsselbegriffe, die das Dokument am besten beschreiben, wenn er ein Textfeld erhält. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Unternehmenserkennung (NER) und unbeaufsichtigten Suchbegriffserkennung (Keyword Extraktion) verwendet.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '1059'
 ht-degree: 4%
 
 ---
@@ -36,6 +36,10 @@ Die benannten Entitäten, die von erkannt werden, [!DNL Content and Commerce AI]
 | WORK_OF_ART | Titel von Büchern, Liedern usw. |
 | GESETZ | Benannte Dokumente, die in Gesetze umgewandelt wurden. |
 | SPRACHE | Jede benannte Sprache. |
+
+>[!NOTE]
+>
+>Wenn Sie die Verarbeitung von PDF-Dateien planen, gehen Sie in diesem Dokument zu den Anweisungen für die Extraktion [von](#pdf-extraction) PDF-Schlüsselwörtern. Darüber hinaus wird die Unterstützung für weitere Dateitypen wie &quot;docx&quot;, &quot;ppt&quot;und &quot;amd xml&quot;so eingestellt, dass sie zu einem späteren Zeitpunkt veröffentlicht wird.
 
 **API-Format**
 
@@ -119,8 +123,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `threshold` | Der Schwellenwert des Ergebnisses (0 bis 1), ab dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert, `0` um alle Ergebnisse zurückzugeben. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
 | `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert, `0` um alle Ergebnisse zurückzugeben. Bei gleichzeitiger Verwendung `threshold`ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
 | `custom` | Alle benutzerdefinierten Parameter, die übergeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, um zu funktionieren. Weitere Informationen zu den benutzerdefinierten Parametern finden Sie im [Anhang](#appendix) . | Nein |
-| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht übergeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
-| `content` | Der vom Suchbegriff-Extraktion-Dienst verwendete Inhalt. Der Inhalt kann als Rohtext (&quot;inline&quot;-Inhaltstyp) verwendet werden. <br> Wenn es sich bei dem Inhalt um eine Datei unter S3 handelt (&#39;s3-bucket&#39; Content-Typ), übergeben Sie die signierte URL. Wenn der Inhalt Teil des Anforderungskörpers ist, sollte die Liste der Datenelemente nur ein Objekt haben. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
+| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
+| `content` | Der vom Suchbegriff-Extraktion-Dienst verwendete Inhalt. Der Inhalt kann als Rohtext (&quot;inline&quot;-Inhaltstyp) verwendet werden. <br> Wenn es sich bei dem Inhalt um eine Datei unter S3 handelt (&#39;s3-bucket&#39; Content-Typ), übergeben Sie die signierte URL. Wenn der Inhalt Teil des Anforderungskörpers ist, sollte die Liste der Datenelemente nur ein Objekt enthalten. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
 
 **Antwort**
 
@@ -223,6 +227,139 @@ Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Suchbegr
   "error": []
 }
 ```
+
+## PDF-Suchbegriff-Extraktion {#pdf-extraction}
+
+Der Keyword-Extraktion-Dienst unterstützt PDFs. Sie müssen jedoch eine neue AnalyzerID für PDF- verwenden und den Dokument in PDF ändern. Weitere Informationen finden Sie im Beispiel unten.
+
+**API-Format**
+
+```http
+POST /services/v1/predict
+```
+
+**Anfrage**
+
+Die folgende Anforderung extrahiert Suchbegriffe aus einem PDF-Dokument basierend auf den in der Payload bereitgestellten Eingabeparametern.
+
+>[!CAUTION]
+>
+>`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten. Bei der Extraktion des PDF-Suchbegriffs lautet die `analyzer_id` ID:
+>`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
+  -H "Authorization: Bearer {ACCESS_TOKEN}" \
+  -H "Content-Type: multipart/form-data" \
+  -H "cache-control: no-cache,no-cache" \
+  -H "x-api-key: {API_KEY}" \
+  -F file=@TestPDF.pdf \
+  -F 'contentAnalyzerRequests={
+    "enable_diagnostics":"true",
+    "requests":[{
+    "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+    "parameters": {
+      "application-id": "1234",
+      "content-type": "file",
+      "encoding": "pdf",
+      "threshold": "0.01",
+      "top-N": "0",
+      "custom": {},
+      "data": [{
+        "content-id": "abc123",
+        "content": "file",
+        }]
+      }
+    }]
+  }'
+```
+
+| Eigenschaft | Beschreibung | Obligatorisch |
+| --- | --- | --- |
+| `analyzer_id` | Die [!DNL Sensei] Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Mit dieser ID wird festgelegt, welche der Variablen verwendet [!DNL Sensei Content Frameworks] werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
+| `application-id` | Die ID der erstellten Anwendung. | Ja |
+| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Dokument darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem `data` Array außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können von innen aus überschrieben werden `data`. | Ja |
+| `language` | Sprache der Eingabe. The default value is `en` (english). | Nein |
+| `content-type` | Dient zur Angabe des Eingabeinhaltstyps. Dies sollte auf `file`festgelegt werden. | Ja |
+| `encoding` | Das Kodierungsformat der Eingabe. Dies sollte auf `pdf`festgelegt werden. Weitere Kodierungstypen werden zu einem späteren Zeitpunkt unterstützt. | Ja |
+| `threshold` | Der Schwellenwert des Ergebnisses (0 bis 1), ab dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert, `0` um alle Ergebnisse zurückzugeben. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
+| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert, `0` um alle Ergebnisse zurückzugeben. Bei gleichzeitiger Verwendung `threshold`ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
+| `custom` | Alle benutzerdefinierten Parameter, die übergeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, um zu funktionieren. Weitere Informationen zu den benutzerdefinierten Parametern finden Sie im [Anhang](#appendix) . | Nein |
+| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
+| `content` | Dies sollte auf `file`festgelegt werden. | Ja |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Suchbegriffe im `response` Array enthält.
+
+```json
+{
+  "statusCode": 200,
+  "body": {
+    "type": "JSON",
+    "matchType": "strict",
+    "json": {
+      "status": 200,
+      "content_id": "161hw2.pdf",
+      "cas_responses": [
+        {
+          "status": 200,
+          "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+          "content_id": "161hw2.pdf",
+          "result": {
+            "response_type": "feature",
+            "response": [
+              {
+                "feature_value": [
+                  {
+                    "feature_name": "status",
+                    "feature_value": "success"
+                  },
+                  {
+                    "feature_value": [
+                      {
+                        "feature_name": "delbick",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0.03673855028832046
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "KEYWORD"
+                          }
+                        ]
+                      },
+                      {
+                        "feature_name": "Ci",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "PERSON"
+                          }
+                        ]
+                      }
+                    ],
+                    "feature_name": "labels"
+                  }
+                ],
+                "feature_name": "abc123"
+              }
+            ]
+          }
+        }
+      ],
+      "error": []
+    }
+  }
+}
+```
+
+Weitere Informationen und ein Beispiel zur Verwendung der PDF-Extraktion mit Anweisungen zum Einrichten, Bereitstellen und Integrieren des AEM Cloud-Dienstes. Besuchen Sie das [CCAI PDF Extraktion Worker-github-Repository](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
 
 ## Anhang {#appendix}
 
