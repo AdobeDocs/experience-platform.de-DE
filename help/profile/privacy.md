@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
 topic: overview
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 27%
+source-wordcount: '1024'
+ht-degree: 10%
 
 ---
 
@@ -36,20 +36,25 @@ Weitere Informationen zu Identitäts-Namensräumen [!DNL Experience Platform]fin
 
 ## Übermitteln von Anfragen {#submit}
 
->[!NOTE]
->
->This section covers how to create privacy requests for the [!DNL Profile] data store. Es wird dringend empfohlen, die Dokumentation zur [Privacy Service-API](../privacy-service/api/getting-started.md) oder zur [Privacy Service-Benutzeroberfläche](../privacy-service/ui/overview.md) zu lesen, um mehr über alle Schritte beim Übermitteln eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anfrage-Payloads.
+In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanforderungen für die [!DNL Real-time Customer Profile] Verwendung der [!DNL Privacy Service] API oder Benutzeroberfläche stellen. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
-The following section outlines how to make privacy requests for [!DNL Real-time Customer Profile] and the [!DNL Data Lake] using the [!DNL Privacy Service] API or UI.
+>[!IMPORTANT]
+>
+>Privacy Service kann [!DNL Profile] Daten nur mit einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszuordnung vornimmt. Wenn Sie die Benutzeroberfläche verwenden, um zu bestätigen, ob Ihre Datenschutzanforderungen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit &quot;[!DNL None]&quot;als [!UICONTROL ID-Hefttyp] verwenden. Mit anderen Worten: Sie können keine Zusammenführungsrichtlinie verwenden, bei der die [!UICONTROL ID-Suche] auf &quot;[!UICONTROL Privates Diagramm]&quot;eingestellt ist.
+>
+>![](./images/privacy/no-id-stitch.png)
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für den [!DNL Profile] Store müssen entweder &quot;Standard&quot;oder &quot;benutzerdefiniert&quot;für ihren `type` Wert und einen gültigen [Identitäts-Namensraum](#namespaces) verwenden, der [!DNL Identity Service] für seinen `namespace` Wert erkannt wird.
+Beim Erstellen von Auftragsanforderungen in der API `userIDs` müssen alle IDs, die in bereitgestellt werden, eine bestimmte `namespace` und eine bestimmte `type`verwenden. Ein gültiger [Identitätswert](#namespaces) , der von erkannt [!DNL Identity Service] wird, muss für den `namespace` Wert angegeben werden, während der Namensraum entweder `type` oder `standard` `unregistered` (für Standard- bzw. benutzerdefinierte Namensraum) angegeben werden muss.
 
+>[!NOTE]
+>
+>Je nach Identitätsdiagramm und der Verteilung der Fragmente in Plattformdatensätzen müssen Sie für jeden Profil möglicherweise mehr als eine ID angeben. Weitere Informationen finden Sie im nächsten Abschnitt [Profil-Fragmente](#fragments) .
 
 Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. When making requests to the [!DNL Data Lake], the array must include the value &quot;ProfileService&quot;.
 
-Mit der folgenden Anforderung wird ein neuer Datenschutzauftrag für beide Seiten [!DNL Real-time Customer Profile]unter Verwendung des standardmäßigen &quot;E-Mail&quot;-Identitäts-Namensraums erstellt. It also includes the product value for [!DNL Profile] in the `include` array:
+Die folgende Anforderung erstellt einen neuen Datenschutzauftrag für die Daten eines einzelnen Kunden im [!DNL Profile] Store. Für den Kunden werden im `userIDs` Array zwei Identitätswerte bereitgestellt. eine mit dem Standard- `Email` Identitäts-Namensraum und die andere mit einem benutzerdefinierten `Customer_ID` Namensraum. It also includes the product value for [!DNL Profile] (`ProfileService`) in the `include` array:
 
 ```shell
 curl -X POST \
@@ -58,6 +63,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "companyContexts": [
       {
@@ -76,14 +82,14 @@ curl -X POST \
             "type": "standard"
           },
           {
-            "namespace": "email_label",
-            "value": "ajones@acme.com",
+            "namespace": "Customer_ID",
+            "value": "12345678",
             "type": "unregistered"
           }
         ]
       }
     ],
-    "include": ["ProfileService", "aepDataLake"],
+    "include": ["ProfileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
@@ -97,9 +103,35 @@ When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data L
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
+## Fragmente von Profilen in Datenschutzanforderungen {#fragments}
+
+Im [!DNL Profile] Datenspeicher bestehen die personenbezogenen Daten eines einzelnen Kunden oft aus mehreren Profil-Fragmenten, die über das Identitätsdiagramm mit der Person verknüpft sind. Bei Datenschutzanforderungen an den [!DNL Profile] Store ist zu beachten, dass Anforderungen nur auf der Ebene des Profils und nicht des gesamten Profils verarbeitet werden.
+
+Betrachten Sie zum Beispiel eine Situation, in der Sie Kundenattributdaten in drei separaten Datensätzen speichern, die unterschiedliche IDs verwenden, um diese Daten mit einzelnen Kunden zu verknüpfen:
+
+| Datensatzname | Primär-Identitätsfeld | Gespeicherte Attribute |
+| --- | --- | --- |
+| Datensatz 1 | `customer_id` | `address` |
+| Datensatz 2 | `email_id` | `firstName`, `lastName` |
+| Datensatz 3 | `email_id` | `mlScore` |
+
+Einer der Datensätze verwendet `customer_id` den primären Bezeichner, während die anderen beiden verwenden `email_id`. Wenn Sie eine Datenschutzanforderung (Zugriff oder Löschen) nur `email_id` als Benutzer-ID-Wert senden möchten, werden nur die Attribute `firstName`, `lastName`und `mlScore` Attribute verarbeitet, ohne dass dies davon betroffen `address` wäre.
+
+Um sicherzustellen, dass Ihre Datenschutzanforderungen alle relevanten Kundenattribute verarbeiten, müssen Sie die primären Identitätswerte für alle anwendbaren Datensätze angeben, in denen diese Attribute gespeichert werden können (bis zu neun IDs pro Kunde). Weitere Informationen zu Schemas, die häufig als Identitäten gekennzeichnet werden, finden Sie im Abschnitt zu Identitätsfeldern in den [Grundlagen der -Komposition](../xdm/schema/composition.md#identity) .
+
+>[!NOTE]
+>
+>Wenn Sie verschiedene [Sandboxen](../sandboxes/home.md) verwenden, um Ihre [!DNL Profile] Daten zu speichern, müssen Sie für jede Sandbox eine separate Datenschutzanfrage stellen, die den entsprechenden Sandbox-Namen in der `x-sandbox-name` Kopfzeile angibt.
+
 ## Verarbeitung von Löschanfragen
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] or [!DNL Profile] store within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. Sobald der Datenschutzauftrag abgeschlossen ist, werden die Datensätze aus dem [!DNL Data Lake] oder [!DNL Profile] Store entfernt. Während der Löschauftrag noch verarbeitet wird, werden die Daten weich gelöscht und stehen daher keinem [!DNL Platform] Dienst zur Verfügung. Weitere Informationen zum Verfolgen von Auftragsstatus finden Sie in der [[!DNL Privacy Service] Dokumentation](../privacy-service/home.md#monitor) .
+
+>[!IMPORTANT]
+>
+>Bei einer erfolgreichen Löschanforderung werden zwar die erfassten Attributdaten eines Kunden (oder einer Gruppe von Kunden) entfernt, die Anforderung entfernt jedoch nicht die im Identitätsdiagramm festgelegten Verknüpfungen.
+>
+>Eine Löschanforderung, die beispielsweise die eines Kunden verwendet `email_id` und alle unter diesen IDs gespeicherten Attributdaten `customer_id` entfernt. Alle Daten, die danach unter dem gleichen Element aufgenommen werden, `customer_id` werden jedoch weiterhin mit dem entsprechenden verknüpft, `email_id`da die Verbindung noch besteht.
 
 In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
 
