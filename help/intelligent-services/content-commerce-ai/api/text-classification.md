@@ -5,9 +5,9 @@ title: Endpunkt der Textklassifizierungs-API
 topic: Developer guide
 description: Der Text-Classification-Dienst kann ein Textfragment in eine oder mehrere Beschriftungen klassifizieren. Die Klassifizierung kann aus einer einzelnen Bezeichnung, mehreren Beschriftungen oder einer hierarchischen Struktur bestehen.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 5%
 
 ---
@@ -29,7 +29,7 @@ POST /services/v1/predict
 
 **Anfrage**
 
-Die folgende Anforderung klassifiziert Text aus einem Fragment anhand der in der Nutzlast bereitgestellten Eingabeparameter. Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispielpayload.
+Mit der folgenden Anforderung wird Text aus einem Fragment basierend auf den in der Nutzlast bereitgestellten Eingabeparametern klassifiziert. Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispielpayload.
 
 >[!CAUTION]
 >
