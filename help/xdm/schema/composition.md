@@ -5,10 +5,10 @@ title: Grundlagen der Schema-Komposition
 topic: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
 source-wordcount: '2839'
-ht-degree: 55%
+ht-degree: 56%
 
 ---
 
@@ -58,7 +58,7 @@ Alle XDM-Schemas beschreiben Daten, die als Datensatz- oder Zeitreihen kategoris
 
 Sowohl Schemas der Datensätze als auch der Zeitreihen enthalten eine Zuordnung der Identitäten (`xdm:identityMap`). Dieses Feld enthält die Identitätsdarstellung eines Subjekts, die aus den als „Identität“ markierten Feldern gezogen wird, wie im nächsten Abschnitt beschrieben.
 
-### [!UICONTROL Identität]
+### [!UICONTROL Identität] {#identity}
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es wichtig, bei der Betrachtung von Schemas über Kundenidentitäten nachzudenken und welche Felder zur Identifizierung eines Objekts verwendet werden können, unabhängig davon, woher die Daten stammen.
 
@@ -195,7 +195,7 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 Einige Datenoperationen, die von nachgeschalteten Diensten und Anwendungen verwendet werden, erzwingen Einschränkungen für bestimmte Feldtypen. Betroffene Dienste sind u. a., aber nicht ausschließlich:
 
 * [[!DNL Echtzeit-Profil des Kunden]](../../profile/home.md)
-* [[!DNL-Identitätsdienst]](../../identity-service/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
 * [[!DNL-Segmentierung]](../../segmentation/home.md)
 * [[!DNL Abfrage Service]](../../query-service/home.md)
 * [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
