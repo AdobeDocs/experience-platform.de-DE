@@ -5,9 +5,9 @@ seo-title: Amazon Kinesis-Ziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '474'
 ht-degree: 7%
 
 ---
@@ -41,7 +41,7 @@ Beispielsweise hat ein Potenzieller Kunde ein White Paper heruntergeladen, das s
 
 ## Exporttyp {#export-type}
 
-**Profil-Export** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die [Ziel-Aktivierung](/help/rtcdp/destinations/activate-destinations.md#select-attributes)ausgewählt.
+**Profil-basiert** - Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die [Ziel-Aktivierung](/help/rtcdp/destinations/activate-destinations.md#select-attributes)ausgewählt.
 
 ## Ziel verbinden {#connect-destination}
 
@@ -59,7 +59,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 ### Im Setup-Schritt {#setup-step}
 
 * **Name**: Geben Sie einen Namen für Ihre Verbindung ein, um [!DNL Amazon Kinesis]
-* **Beschreibung**: Geben Sie eine Beschreibung für Ihre Verbindung mit ein [!DNL Amazon Kinesis].
+* **Beschreibung**: Geben Sie eine Beschreibung für Ihre Verbindung ein [!DNL Amazon Kinesis].
 * **stream**: Geben Sie den Namen eines vorhandenen Datenstroms in Ihrem [!DNL Amazon Kinesis] Konto an. Adobe Echtzeit-CDP exportiert Daten in diesen Stream.
 
 ![Eingabefelder im Authentifizierungsschritt](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
