@@ -5,7 +5,7 @@ title: Arbeitsbereich „Zugriffskontrolle“ durchsuchen
 topic: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs "Zugriffskontrolle"beschrieben. Um die Zugriffskontrolle für Experience Platform über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer IMS-Organisation sein, die über ein Abonnement für Experience Platform verfügt.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 77%
@@ -15,7 +15,7 @@ ht-degree: 77%
 
 # Arbeitsbereich „Zugriffskontrolle“ durchsuchen
 
-In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. Zwar unterstützt Adobe flexible Administrationshierarchien für IMS-Organisationen, doch benötigen Sie zur Konfiguration der Zugriffskontrolle **[!UICONTROL Systemadministrator]**-, **[!UICONTROL Produktadministrator]**- oder **[!UICONTROL Produktprofiladministrator]**-Berechtigungen. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. Zwar unterstützt Adobe flexible Administrationshierarchien für IMS-Organisationen, doch benötigen Sie zur Konfiguration der Zugriffskontrolle Systemadministrator-, Produktadministrator- oder Produktprofiladministrator-Berechtigungen. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
 Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten.
 
