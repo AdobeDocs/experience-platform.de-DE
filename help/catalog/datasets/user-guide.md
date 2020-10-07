@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 description: Dieses Benutzerhandbuch zu Datensätzen enthält Anweisungen zur Durchführung allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 72%
+source-wordcount: '1162'
+ht-degree: 70%
 
 ---
 
@@ -41,7 +41,7 @@ Klicken Sie auf den Namen eines Datensatzes, um auf seinen **[!UICONTROL Datensa
 
 ## Vorschau für Datensatz anzeigen
 
-Klicken Sie im Bildschirm **[!UICONTROL Datensatzaktivität]** oben rechts im Bildschirm auf **[!UICONTROL Vorschau für Datensatz anzeigen]**, um bis zu 100 Datenzeilen als Vorschau anzuzeigen. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen darauf hingewiesen, dass die **[!UICONTROL Vorschau nicht verfügbar]** ist.
+Klicken Sie im Bildschirm **[!UICONTROL Datensatzaktivität]** oben rechts im Bildschirm auf **[!UICONTROL Vorschau für Datensatz anzeigen]**, um bis zu 100 Datenzeilen als Vorschau anzuzeigen. Wenn der Datensatz leer ist, wird der Link &quot;Vorschau&quot;deaktiviert und stattdessen angegeben, dass die Vorschau nicht verfügbar ist.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
