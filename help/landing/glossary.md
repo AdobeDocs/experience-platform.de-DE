@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Produktdokumentation zu Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '7145'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Adobe Experience Platform Glossary {#adobe-experience-platform-glossary}
 
-## A
+## A 
 
 **Zugriffskontrolle:** {#access-control} Zugriffskontrolle für [!DNL Experience Platform] Verknüpfungen von Benutzern mit Zugriffsberechtigungen und Sandbox-Umgebung über Produkt-Profil in Adobe Admin Console.
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 **Aktivieren:** Bei &quot;Aktivieren&quot; [!DNL Real-time Customer Data Platform]handelt es sich um die Aktion, die ein Benutzer zum Zuordnen eines Segments oder von Profilen zu einem Ziel wie [!DNL Oracle Eloqua], [!DNL Google]oder [!DNL Salesforce Marketing Cloud].
 
-**Aktivität:** Bei einer Aktivität handelt es sich [!DNL Offer Decisioning]um eine Reihe von Angeboten, aus denen der Marketingexperte das beste Angebot auswählen möchte.
+**Aktivität:** Bei [!DNL Offer Decisioning]einer Aktivität handelt es sich um eine Reihe von Angeboten, aus denen der Marketingexperte das beste Angebot auswählen möchte.
 
 **Administrator:** Eine oder mehrere Personen in Ihrem Unternehmen, die die Berechtigungen für die Experience Platform konfigurieren und anpassen können.
 
@@ -94,7 +94,7 @@ ht-degree: 1%
 
 [Zurück zum Anfang](#adobe-experience-platform-glossary)
 
-## C
+## C 
 
 **Deckelung:** In [!DNL Offer Decisioning]den Entscheidungsregeln wird mithilfe der Deckelung festgelegt, wie oft ein Angebot präsentiert wird. Es gibt zwei Arten von Großbuchstaben: wie oft ein Angebot in der kombinierten Zielgruppe-Audience (auch als &quot;globale Obergrenze&quot;bezeichnet) vorgeschlagen werden kann und wie oft ein Angebot demselben Endbenutzer vorgeschlagen werden kann, auch als &quot;Profil Cap&quot;bezeichnet.
 
@@ -134,9 +134,9 @@ ht-degree: 1%
 
 **C6 Vertragssiegel:** `C6` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nicht für das Targeting von Onsite-Anzeigen verwendet werden können. Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen.  Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über das Interesse der Benutzer, um Anzeigen auszuwählen, Prozessdaten darüber, wann und wo Werbung angezeigt wurde und ob die Benutzer irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, z. B. das Klicken auf eine Anzeige oder einen Kauf.
 
-**C7-Vertragsbezeichnung:** `C7` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nicht für das Targeting von Inhalten auf der Site verwendet werden können.  Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte.  Dazu gehören zuvor erfasste Informationen über das Interesse der Benutzer an der Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, z. B. das Klicken auf Inhalte.
+**C7-Vertragsbezeichnung:** `C7` &quot;Contract Data Governance&quot;-Bezeichnung gibt an, dass Daten nicht für das Targeting von Inhalten auf der Site verwendet werden können.  Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte.  Dazu gehören zuvor erfasste Informationen über das Interesse der Benutzer an der Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, z. B. das Klicken auf Inhalte.
 
-**C8 Vertragssiegel:** `C8` &quot;Contract Data Governance&quot;-Bezeichnung gibt an, dass Daten nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden können. Daten können nicht verwendet werden, um die Nutzung der Sites oder Apps Ihres Unternehmens durch Benutzer zu messen, zu verstehen und Berichte darüber zu erstellen. Dies umfasst nicht das interessensbasierte Targeting, d. h. die Erfassung von Informationen über Ihre Nutzung dieses Dienstes zur späteren Personalisierung von Inhalten und/oder Werbung in anderen Kontexten.
+**C8 Vertragssiegel:** `C8` Die Beschriftung zur Verwaltung von Vertragsdaten gibt an, dass Daten nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden können. Daten können nicht verwendet werden, um die Nutzung der Sites oder Apps Ihres Unternehmens durch Benutzer zu messen, zu verstehen und Berichte darüber zu erstellen. Dies umfasst nicht das interessensbasierte Targeting, d. h. die Erfassung von Informationen über Ihre Nutzung dieses Dienstes zur späteren Personalisierung von Inhalten und/oder Werbung in anderen Kontexten.
 
 **C9-Vertragssiegel:** `C9` &quot;Contract Data Governance&quot;-Etikett gibt an, dass Daten in Data Science-Workflows nicht verwendet werden können. Einige Verträge beinhalten explizite Verbote von Daten, die für die Datenwissenschaft verwendet werden.  Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verbieten.
 
@@ -146,7 +146,7 @@ ht-degree: 1%
 
 **Tabelle als Auswahl erstellen:** &quot;Tabelle als Auswahl erstellen&quot;ist ein SQL-Befehl, der bei Ausführung als Teil einer vollständigen und gültigen SQL-Abfrage die Abfrage anweist, die Ergebnisse in einem Datensatz auf dem Data Lake beizubehalten. [!DNL Query Service] Zu den Optionen gehören: Neu erstellen, Alle vorherigen überschreiben und An Vorherige anhängen.
 
-**Site-übergreifende Daten:** Site-übergreifende Daten sind die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort-Daten und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen.
+**Site-übergreifende Daten:** Site-übergreifende Daten sind die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort- und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen.
 
 **Site-übergreifendes Targeting Marketingaktion** verwendet Daten für Site-übergreifendes Anzeigen-Targeting. Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort-Daten und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen, wird als Site-übergreifende Daten bezeichnet. Site-übergreifende Daten werden in der Regel gesammelt und verarbeitet, um Rückschlüsse auf die Interessen der Benutzer zu ziehen.
 
@@ -214,7 +214,7 @@ ht-degree: 1%
 
 **Zielkatalog:** Ein Zielkatalog ist eine Liste der verfügbaren Ziele im [!DNL Real-time Customer Data Platform].
 
-**Direktaufrufregeln:** in [!DNL Experience Platform Launch]können Sie eine [!UICONTROL Direktaufruf] - [!UICONTROL Regel] einrichten, die ausgeführt wird, wenn sie direkt von der Seite aufgerufen wird. Wenn das Laden Ihrer Seite oder Ihre Aktion auf Ihrer Site sehr einfach ist oder sie eindeutig ist und Sie jedes Mal einen bestimmten Satz von Anweisungen ausführen können ( [!DNL eVar4] auf X eingestellt und [!DNL event2] jedes Mal ausgelöst), können Sie eine [!UICONTROL Direktaufrufregel] - [!UICONTROL Regel]verwenden. Siehe [!DNL Launch] Dokumentation zum Erstellen von [!UICONTROL Direktaufrufregeln] - [!UICONTROL Regeln].
+**Direktaufrufregeln:** in [!DNL Experience Platform Launch]können Sie eine Direktaufrufregel einrichten, die ausgeführt wird, wenn sie direkt von der Seite aufgerufen wird. Wenn das Laden Ihrer Seite oder Ihre Aktion auf Ihrer Site sehr einfach ist oder wenn sie eindeutig ist und Sie jedes Mal einen bestimmten Satz von Anweisungen ausführen können ( [!DNL eVar4] auf X eingestellt und jedes Mal ausgelöst [!DNL event2] werden), können Sie eine Direktaufrufregel verwenden. Siehe [!DNL Launch] Dokumentation zum Erstellen von Regeln für Direktaufrufe.
 
 **Anzeigename:** Der Anzeigename ist ein benutzerfreundlicher Name eines Felds, der in der Benutzeroberfläche angezeigt wird.
 
@@ -264,7 +264,7 @@ ht-degree: 1%
 
 **Feldbezeichnungen:** Feldbezeichnungen sind Bezeichnungen zur Datenverwaltung, die entweder von einem Datensatz übernommen oder direkt auf ein Feld angewendet werden.
 
-**Feldname:** &quot;Feld&quot;ist ein Name, der auf das Feld in Abfragen und Diensten verweist.
+**Feldname:** Das Feld ist ein Name, der auf das Feld in Abfragen und Diensten verweist.
 
 **Häufigkeit:** Die Häufigkeit legt fest, wie oft eine wiederkehrende geplante [!DNL Query Service] Abfrage ausgeführt wird.
 
@@ -370,7 +370,7 @@ ht-degree: 1%
 
 **Angebot:** Ein Angebot ist eine Marketingnachricht, der Regeln zugeordnet sein können, die angeben, wer zum Anzeigen des Angebots berechtigt ist.
 
-**Angebot-Entscheidungsfindung:** Die Angebot-Entscheidungsfindung ermöglicht es Marketingexperten, Regeln und geschulte Modelle von Angebotsvorschlägen zu verwalten, wenn sie mit einem Endbenutzer auf der Grundlage von Daten interagieren, die über Kanal und Anwendungen hinweg gesammelt wurden.
+**Offer Decisioning:** Die Angebot-Entscheidungsfindung ermöglicht es Marketingexperten, Regeln und geschulte Modelle von Angebotsvorschlägen zu verwalten, wenn sie mit einem Endbenutzer auf der Grundlage von Daten interagieren, die über Kanal und Anwendungen hinweg gesammelt wurden.
 
 **Angebot-Bibliothek:** Die Angebot-Bibliothek ist eine zentrale Bibliothek, die zum Verwalten von personalisierten Angeboten und Ausweichmanövern, Entscheidungsregeln und Aktivitäten verwendet wird.
 
