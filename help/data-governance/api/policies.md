@@ -5,7 +5,7 @@ title: Richtlinien
 topic: developer guide
 description: Datennutzungsrichtlinien sind von Ihrem Unternehmen angewandte Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt /policies wird für alle API-Aufrufe verwendet, die sich auf das Anzeigen, Erstellen, Aktualisieren oder Löschen von Datenverwendungsrichtlinien beziehen.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 9%
@@ -235,7 +235,7 @@ In der [!DNL Policy Service] API wird eine Richtlinie wie folgt definiert:
 * Ein Verweis auf eine bestimmte Marketingaktion
 * Ein Ausdruck, der die Datenverwendungsbeschriftungen beschreibt, die die Marketingaktion von der Ausführung gegen
 
-Um diese Anforderung zu erfüllen, müssen Richtliniendefinitionen einen booleschen Ausdruck zum Vorhandensein von Datenverwendungsbeschriftungen enthalten. Dieser Ausdruck wird als **Ausdruck** bezeichnet.
+Um diese Anforderung zu erfüllen, müssen Richtliniendefinitionen einen booleschen Ausdruck zum Vorhandensein von Datenverwendungsbeschriftungen enthalten. Dieser Ausdruck wird als Ausdruck für Richtlinien bezeichnet.
 
 Richtlinien-Ausdruck werden in jeder Richtliniendefinition in Form einer `deny` Eigenschaft bereitgestellt. Ein Beispiel für ein einfaches `deny` Objekt, das nur das Vorhandensein einer einzelnen Beschriftung überprüft, würde wie folgt aussehen:
 
@@ -245,7 +245,7 @@ Richtlinien-Ausdruck werden in jeder Richtliniendefinition in Form einer `deny` 
 }
 ```
 
-In vielen Richtlinien werden jedoch komplexere Bedingungen für das Vorhandensein von Datenverwendungsbeschriftungen festgelegt. Um diese Anwendungsfälle zu unterstützen, können Sie auch boolesche Vorgänge zur Beschreibung Ihrer Richtlinien-Ausdruck einschließen. Das policy Ausdruck-Objekt muss _entweder_ eine Beschriftung __ oder einen Operator und Operanden enthalten, jedoch nicht beides. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt.
+In vielen Richtlinien werden jedoch komplexere Bedingungen für das Vorhandensein von Datenverwendungsbeschriftungen festgelegt. Um diese Anwendungsfälle zu unterstützen, können Sie auch boolesche Vorgänge zur Beschreibung Ihrer Richtlinien-Ausdruck einschließen. Das policy Ausdruck-Objekt muss entweder eine Beschriftung oder einen Operator und Operanden enthalten, jedoch nicht beides. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt.
 
 Um beispielsweise eine Richtlinie zu definieren, die verhindert, dass eine Marketingaktion für Daten ausgeführt wird, in denen `C1 OR (C3 AND C7)` Beschriftungen vorhanden sind, wird die Eigenschaft der Richtlinie `deny` wie folgt angegeben:
 
@@ -375,7 +375,7 @@ A successful response returns the details of the newly created policy, including
 >
 >Sie können nur benutzerdefinierte Richtlinien aktualisieren. Wenn Sie die Kernrichtlinien aktivieren oder deaktivieren möchten, lesen Sie den Abschnitt zur [Aktualisierung der Liste der aktivierten Hauptrichtlinien](#update-enabled-core).
 
-Sie können eine vorhandene benutzerdefinierte Richtlinie aktualisieren, indem Sie ihre ID im Pfad einer PUT-Anforderung mit einer Nutzlast angeben, die das aktualisierte Formular der Richtlinie vollständig enthält. Mit anderen Worten, die PUT-Anforderung _schreibt_ die Richtlinie im Wesentlichen um.
+Sie können eine vorhandene benutzerdefinierte Richtlinie aktualisieren, indem Sie ihre ID im Pfad einer PUT-Anforderung mit einer Nutzlast angeben, die das aktualisierte Formular der Richtlinie vollständig enthält. Mit anderen Worten, die PUT-Anforderung schreibt die Richtlinie im Wesentlichen um.
 
 >[!NOTE]
 >
