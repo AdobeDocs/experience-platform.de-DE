@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Dieses Dokument bietet eine Anleitung zum Senden mehrerer Nachrichten an Adobe Experience Platform innerhalb einer einzigen HTTP-Anforderung mithilfe der Streaming-Erfassung.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1487'
-ht-degree: 74%
+ht-degree: 69%
 
 ---
 
@@ -45,7 +45,7 @@ Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent e
 
 Das folgende Beispiel zeigt, wie mehrere Nachrichten an einen bestimmten Datensatz innerhalb einer einzelnen HTTP-Anfrage gesendet werden. Fügen Sie die Datensatz-ID in die Kopfzeile der Nachricht ein, damit die Nachricht direkt darin aufgenommen wird.
 
-You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. Sie können die Datensatz-ID in [Experience Platform](https://platform.adobe.com) auf der Registerkarte **[!UICONTROL Datensätze]** ermitteln, indem Sie auf den Datensatz klicken, für den die ID verwendet werden soll, und die Zeichenfolge aus dem Feld **[!UICONTROL Datensatz-ID]** auf der Registerkarte **[!UICONTROL Info]** kopieren. Informationen zum Abrufen von Datensätzen mithilfe der API finden Sie unter [Katalogdienst – Überblick](../../catalog/home.md).
+You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the dataset ID field on the **[!UICONTROL Info]** tab. Informationen zum Abrufen von Datensätzen mithilfe der API finden Sie unter [Katalogdienst – Überblick](../../catalog/home.md).
 
 Anstatt einen vorhandenen Datensatz zu verwenden, können Sie einen neuen Datensatz erstellen. Weitere Informationen zum Erstellen eines Datensatzes mithilfe von APIs finden Sie im Tutorial [Erstellen eines Datensatzes mithilfe von APIs](../../catalog/api/create-dataset.md).
 
@@ -543,7 +543,7 @@ Die folgende Tabelle zeigt Status-Codes, die von erfolgreichen und fehlgeschlage
 
 | Status-Code | Beschreibung |
 | :---: | --- |
-| 207 | Obwohl „207“ als Gesamt-Antwortstatus-Code verwendet wird, muss der Empfänger den Inhalt des Multistatus-Antworttextes für weitere Informationen zum Erfolg oder Misserfolg der Methodenausführung konsultieren. Der Antwort-Code wird in Erfolgs-, Teilerfolgs- wie auch in Fehlersituationen verwendet. |
+| 207 | Obwohl &quot;207&quot;als Gesamt-Antwortstatuscode verwendet wird, muss der Empfänger den Inhalt des Multi-Status-Antwortkörpers konsultieren, um weitere Informationen zum Erfolg oder Misserfolg der Methodenausführung zu erhalten. Der Antwort-Code wird in Erfolgs-, Teilerfolgs- wie auch in Fehlersituationen verwendet. |
 | 400 | Es gab ein Problem mit der Anfrage. Im Antworttext finden Sie eine spezifischere Fehlermeldung (z. B. fehlten in der Nachrichten-Payload erforderliche Felder oder die Nachricht hatte ein unbekanntes xdm-Format). |
 | 401 | Nicht autorisiert: Bei der Anfrage fehlt eine gültige Autorisierungskopfzeile. Dies wird nur bei Inlets zurückgegeben, für die die Authentifizierung aktiviert ist. |
 | 403 | Nicht autorisiert: Das angegebene Autorisierungs-Token ist ungültig oder abgelaufen. Dies wird nur bei Inlets zurückgegeben, für die die Authentifizierung aktiviert ist. |
