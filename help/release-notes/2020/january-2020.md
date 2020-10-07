@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '894'
-ht-degree: 40%
+ht-degree: 39%
 
 ---
 
@@ -55,7 +55,7 @@ Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, au
 | Neue API-Endpunkte | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`. |
 | Neue erforderliche `regulation`-Eigenschaft | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Die zulässigen Werte sind `gdpr` und `ccpa`. |
 | Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriff-/Löschanforderungen aus der Adobe [!DNL Primetime Authentication]und verwendet `primetimeAuthentication` als Produktwert. |
-| Verbesserungen der Benutzeroberfläche von Privacy Service | Separate Auftragsverfolgungsseiten für DSGVO- und CCPA-Vorschriften. Neue Dropdown-Liste _Vorschriftentyp_, um zwischen den Verfolgungsdaten für DSGVO und CCPA zu wechseln. |
+| Verbesserungen der Benutzeroberfläche von Privacy Service | Separate Auftragsverfolgungsseiten für DSGVO- und CCPA-Vorschriften. Neuer **Regelungstyp **Dropdown-Liste zum Wechseln zwischen Tracking-Daten für GDPR und CCPA. |
 
 **Bekannte Probleme**
 
@@ -105,7 +105,7 @@ In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built in
 | Kategorie | Berechtigung | Beschreibung |
 |--- | --- | ---|
 | Ziele | Verwalten von Zielen | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen. |
-| Ziele | Anzeigen von Zielen | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte [!UICONTROL _Katalog_] und authentifizierte Ziele auf der Registerkarte _Durchsuchen._ |
+| Ziele | Anzeigen von Zielen | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **Durchsuchen.** |
 | Ziele | Aktivieren von Zielen | Möglichkeit, Daten an Ziele zu aktivieren. Für diese Berechtigung muss dem Profil &quot;Ansicht&quot;entweder &quot;Ziele verwalten&quot;oder &quot;Zielorte verwalten&quot;hinzugefügt werden. |
 
 **Bekannte Probleme**
