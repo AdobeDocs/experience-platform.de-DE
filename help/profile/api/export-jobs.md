@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Exportaufträge - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 7%
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 # Endpunkt für Exportaufträge
 
-[!DNL Real-time Customer Profile] ermöglicht Ihnen die Erstellung einer einzelnen Ansicht einzelner Kunden durch Zusammenführen von Daten aus mehreren Quellen, einschließlich Attributdaten und Verhaltensdaten. Daten, die innerhalb des Datenbestands verfügbar sind, [!DNL Profile] können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. So können z. B. Audiencen aus [!DNL Profile] Daten zur Aktivierung exportiert und Profil-Attribute zum Berichte exportiert werden.
+[!DNL Real-time Customer Profile] ermöglicht Ihnen die Erstellung einer einzelnen Ansicht einzelner Kunden durch Zusammenführen von Daten aus mehreren Quellen, einschließlich Attributdaten und Verhaltensdaten. Daten, die innerhalb des Datenbestands verfügbar sind, [!DNL Profile] können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispielsweise können Audiencen aus [!DNL Profile] Daten zur Aktivierung exportiert und Profil-Attribute zum Berichte exportiert werden.
 
 Dieses Dokument enthält schrittweise Anweisungen zum Erstellen und Verwalten von Exportaufträgen mit der [Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
 
