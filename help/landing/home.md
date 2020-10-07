@@ -5,7 +5,7 @@ title: Überblick über Adobe Experience Platform
 topic: getting started
 description: Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. Mit Adobe Experience Platform können Unternehmen Kundendaten und Content aus beliebigen Systemen zentral zusammenführen und standardisieren sowie mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessern.
 translation-type: tm+mt
-source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 34%
@@ -19,7 +19,7 @@ ht-degree: 34%
 >
 >Die Dokumentation zu Adobe Experience Platform wurde kürzlich an einen anderen Ort migriert. Bitte nehmen Sie sich einen Moment Zeit, um sich mit der neuen Navigation vertraut zu machen und Ihre ggf. bestehenden Lesezeichen zu aktualisieren.
 
-Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. [!DNL Experience Platform]Mit Adobe können Unternehmen Kundendaten und Content aus beliebigen Systemen zentral zusammenführen und standardisieren sowie mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessern.
+Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. [!DNL Experience Platform]Mit können Unternehmen Kundendaten und Content aus beliebigen Systemen zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 
 Built on open APIs, [!DNL Experience Platform] exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. [!DNL Experience Platform]Außerdem ist auf die Integration von Produkten und Technologien ausgelegt, die unsere Partner für das System entwickeln. This power and flexibility makes [!DNL Experience Platform] unique in the market. Es liefert Partnern, Kunden und einer Community von Entwicklern das Fundament, auf dem Innovationen für das Experience Business geschaffen werden – durch laufend verbesserte, umfassend personalisierte Erlebnisse gestützt auf eine 360-Grad-Rundumsicht auf jeden einzelnen Kunden und seine individuellen Wünsche und Bedürfnisse.
 
@@ -104,7 +104,7 @@ Von Zeit zu Zeit erhalten Sie möglicherweise eine Umfrage für weitere Feedback
 >
 >Diese Einführung erfolgt allmählich, sodass Sie die Änderungen möglicherweise nicht sofort sehen. Sie können das aktualisierte Erlebnis jederzeit unter [https://experience.adobe.com/platform](https://experience.adobe.com/platform)Ansicht haben.
 
-## [!DNL Experience Platform] tutorials
+## [!DNL Experience Platform] Tutorials
 
 Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. Diese Tutorials dienen als Ergänzung zu den in der [!DNL Experience Platform]Dokumentation zu   enthaltenen Informationen. Die besten Ergebnisse erzielen Sie, wenn Sie diese parat halten, während Sie die Tutorials absolvieren. Besuchen Sie die Website zu [Experience Platform-Tutorials](../tutorials/home.md), um loszulegen.
 
@@ -155,9 +155,6 @@ In den folgenden Videos werden die wichtigsten Funktionen und Anwendungsfälle f
 **Anwendungsbeispiele:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
 
 <!-- 
 ## What's New
