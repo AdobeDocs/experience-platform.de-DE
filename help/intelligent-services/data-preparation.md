@@ -5,7 +5,7 @@ title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 description: 'Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von Consumer ExperienceEvent (CEE) entsprechen. '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # Vorbereiten von Daten zur Verwendung in [!DNL Intelligent Services]
 
-Damit Sie Einblicke aus Ihren Marketing-Ereignisse-Daten [!DNL Intelligent Services] erhalten können, müssen die Daten semantisch erweitert und in einer Standardstruktur aufbewahrt werden. [!DNL Intelligent Services] nutzen Sie [!DNL Experience Data Model] (XDM) Schema, um dies zu erreichen. Insbesondere müssen alle in verwendeten Datensätze dem XDM-Schema [!DNL Intelligent Services] Consumer ExperienceEvent (CEE) **** entsprechen.
+Damit Sie Einblicke aus Ihren Marketing-Ereignisse-Daten [!DNL Intelligent Services] erhalten können, müssen die Daten semantisch erweitert und in einer Standardstruktur aufbewahrt werden. [!DNL Intelligent Services] nutzen Sie [!DNL Experience Data Model] (XDM) Schema, um dies zu erreichen. Insbesondere müssen alle in verwendeten Datensätze mit dem XDM-Schema von Consumer ExperienceEvent (CEE) übereinstimmen. [!DNL Intelligent Services]
 
 In diesem Dokument erhalten Sie allgemeine Anleitungen zur Zuordnung Ihrer Marketing-Ereignis-Daten aus mehreren Kanälen zu diesem Schema. In diesen Anleitungen werden Informationen zu wichtigen Feldern im Schema zusammengefasst, die Ihnen bei der Bestimmung helfen, wie Sie Ihre Daten effektiv der Struktur zuordnen können.
 
