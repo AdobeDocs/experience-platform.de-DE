@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie die angegebenen Quelldateien für den Einzelhandel in eine Archivdatei packen können, die zum Erstellen eines Rezepts in Adobe Experience Platform Data Science Workspace verwendet werden kann, indem Sie dem Skript-Import-Arbeitsablauf entweder in der Benutzeroberfläche oder mithilfe der API folgen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Konzepte zum Verständnis:
 - **Rezepte**: Ein Rezept ist der Begriff der Adobe für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der ein bestimmtes maschinelles Lernen, einen Algorithmus für künstliche Intelligenz oder ein Ensemble von Algorithmen, Verarbeitungslogik und Konfiguration darstellt, die zum Aufbau und zur Ausführung eines geschulten Modells erforderlich sind und somit zur Lösung spezifischer Geschäftsprobleme beitragen.
 - **Quelldateien**: Einzelne Dateien im Projekt, die die Logik für ein Rezept enthalten.
 
-## Voraussetzungen 
+## Voraussetzungen
 
 - [[!DNL Docker]](https://docs.docker.com/install/#supported-platforms)
 - [[!DNL Python 3 und pip]](https://docs.conda.io/en/latest/miniconda.html)
@@ -44,7 +44,7 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com)an, u
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Die Seite &quot; *Konfigurieren* &quot;wird geöffnet. Geben Sie einen entsprechenden *Rezeptnamen* ein, z. B. &quot;Retail Sales recipe&quot;, und geben Sie optional eine Beschreibung oder eine Dokumentations-URL ein. Klicken Sie nach Abschluss des Vorgangs auf **[!UICONTROL Weiter]**.
+Die Seite &quot; **[!UICONTROL Konfigurieren]** &quot;wird geöffnet. Geben Sie einen entsprechenden **[!UICONTROL Rezeptnamen]** ein, z. B. &quot;Retail Sales recipe&quot;, und geben Sie optional eine Beschreibung oder eine Dokumentations-URL ein. Klicken Sie nach Abschluss des Vorgangs auf **[!UICONTROL Weiter]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Wählen Sie die entsprechende *Laufzeitumgebung* und dann eine **[!UICONTROL Kla
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Notieren Sie die Werte für *Docker-Host*, *Benutzername* und *Kennwort*. Diese werden verwendet, um Ihr [!DNL Docker] Bild in der Workflows unten beschrieben zu erstellen und zu verschieben.
+Notieren Sie die Werte für Docker-Host, Benutzername und Kennwort. Diese werden verwendet, um Ihr [!DNL Docker] Bild in der Workflows unten beschrieben zu erstellen und zu verschieben.
 
 >[!NOTE]
 >
