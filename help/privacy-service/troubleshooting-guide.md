@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Privacy Services
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Privacy Service] Handbuch zur Fehlerbehebung
 
-Adobe Experience Platform [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, die Firmen bei der Verwaltung von Datenschutzanforderungen für Kunden unterstützen. Mit [!DNL Privacy Service]dieser Funktion können Sie Anfragen zum Zugriff auf und Löschen von privaten oder persönlichen Kundendaten stellen, wodurch die automatische Einhaltung der gesetzlichen und organisatorischen Datenschutzbestimmungen erleichtert wird.
+Adobe Experience Platform [!DNL Privacy Service] stellt eine RESTful-API und eine Benutzeroberfläche bereit, die Firmen bei der Verwaltung von Datenschutzanfragen unterstützen. Mit [!DNL Privacy Service]dieser Funktion können Sie Anfragen zum Zugriff auf und Löschen von privaten oder persönlichen Kundendaten stellen, wodurch die automatische Einhaltung der gesetzlichen und organisatorischen Datenschutzbestimmungen erleichtert wird.
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu [!DNL Privacy Service]und Informationen zu häufig aufgetretenen Fehlern in der API.
 
@@ -94,7 +94,7 @@ Weitere Informationen finden Sie im Abschnitt zum [Suchen eines Auftrags nach se
 
 ### Verwenden der UI
 
-Suchen Sie im [!DNL Privacy Service] UI-Dashboard den Auftrag, den Sie herunterladen möchten, im Widget **Auftragsanforderungen** . Klicken Sie auf die ID des Auftrags, um die Seite &quot; _Auftragsdetails_ &quot;zu öffnen. Klicken Sie von hier oben rechts auf **Herunterladen** , um die ZIP-Datei herunterzuladen. Detailliertere Anweisungen finden Sie im [Privacy Service-Benutzerhandbuch](ui/user-guide.md) .
+Suchen Sie im [!DNL Privacy Service] UI-Dashboard den Auftrag, den Sie herunterladen möchten, im Widget **Auftragsanforderungen** . Klicken Sie auf die ID des Auftrags, um die Seite &quot;Auftragsdetails&quot;zu öffnen. Klicken Sie von hier oben rechts auf **Herunterladen** , um die ZIP-Datei herunterzuladen. Detailliertere Anweisungen finden Sie im [Privacy Service-Benutzerhandbuch](ui/user-guide.md) .
 
 ## Allgemeine Fehlermeldungen
 
