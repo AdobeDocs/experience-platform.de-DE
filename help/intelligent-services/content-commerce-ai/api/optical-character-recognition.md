@@ -1,13 +1,13 @@
 ---
-keywords: text classification;Text classification
+keywords: OCR;text presence;optical character recognition
 solution: Experience Platform
-title: Endpunkt der Textklassifizierungs-API
+title: Optische Zeichenerkennung
 topic: Developer guide
-description: Der Text-Classification-Dienst kann ein Textfragment in eine oder mehrere Beschriftungen klassifizieren. Die Klassifizierung kann aus einer einzelnen Bezeichnung, mehreren Beschriftungen oder einer hierarchischen Struktur bestehen.
+description: Der Dienst "Texterkennung/Optische Zeichenerkennung"(OCR) kann bei Angabe eines Bildes angeben, ob Text im Bild vorhanden ist. Wenn Text vorhanden ist, kann OCR den Text zurückgeben
 translation-type: tm+mt
-source-git-commit: d57d4412ffd8beccc529681db559007a14ff8120
+source-git-commit: 4d12caf949aeb6619cd27b55855014a61d4e54bb
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '512'
 ht-degree: 4%
 
 ---
