@@ -5,10 +5,10 @@ title: Benutzerhandbuch zum Segmentaufbau für Segmentierungsdienste
 topic: ui guide
 description: 'Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1723'
-ht-degree: 55%
+ht-degree: 51%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 55%
 
 ## Bausteine einer Segmentdefinition
 
-Die grundlegenden Bausteine von Segmentdefinitionen sind **[!UICONTROL Attribute]** und **[!UICONTROL Ereignisse]**. Darüber hinaus können die in bestehenden **[!UICONTROL Audiences]** enthaltenen Attribute und Ereignisse auch als Komponenten für neue Definitionen verwendet werden.
+Die grundlegenden Bausteine der Segmentdefinitionen sind Attribute und Ereignis. Darüber hinaus können die in bestehenden Audiencen enthaltenen Attribute und Ereignis auch als Komponenten für neue Definitionen verwendet werden.
 
-Sie können diese Bausteine im Abschnitt **[!UICONTROL Felder]** links im Arbeitsbereich von sehen.[!DNL Segment Builder] **[!UICONTROL Felder]** enthält einen Tab für jeden der Hauptbausteine: **[!UICONTROL Attribute]**, **[!UICONTROL Ereignisse]** und **[!UICONTROL Audiences]**.
+Sie können diese Bausteine im Abschnitt **[!UICONTROL Felder]** links im Arbeitsbereich von sehen.[!DNL Segment Builder] **[!UICONTROL Felder]** enthalten eine Registerkarte für jeden der Hauptbausteine: &quot;[!UICONTROL Attribute]&quot;, &quot;[!UICONTROL Ereignis]&quot;und &quot;[!UICONTROL Audiencen]&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -45,11 +45,11 @@ Sie können nach beliebigen Komponenten suchen, indem Sie ihren Namen in die Suc
 >
 >Es kann bis zu 24 Stunden dauern, bis benutzerdefinierte Schemafelder, die von Ihrer Organisation definiert wurden, angezeigt und zum Erstellen von Regeln verfügbar werden.
 
-You can then easily drag and drop [!DNL ExperienceEvents] and [!UICONTROL Event Types] into your segment definition.
+You can then easily drag and drop [!DNL ExperienceEvents] and &quot;[!UICONTROL Event Types]&quot; into your segment definition.
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-Standardmäßig werden nur ausgefüllte Schemafelder aus Ihrem Datenspeicher angezeigt. This includes [!UICONTROL Event Types]. If the [!UICONTROL Event Types] list is not visible, or you are only able to select &quot;[!UICONTROL Any]&quot; as an [!UICONTROL Event Type], select the gear icon next to **[!UICONTROL Fields]**, then select **[!UICONTROL Show full XDM schema]** under **[!UICONTROL Available Fields]**. Select the gear icon again to return to the **[!UICONTROL Fields]** tab and you should now be able to view multiple [!UICONTROL Event Types] and schema fields, regardless of whether they contain data or not.
+Standardmäßig werden nur ausgefüllte Schemafelder aus Ihrem Datenspeicher angezeigt. This includes &quot;[!UICONTROL Event Types]&quot;. If the &quot;[!UICONTROL Event Types]&quot; list is not visible, or you are only able to select &quot;[!UICONTROL Any]&quot; as an &quot;[!UICONTROL Event Type]&quot;, select the **gear icon** next to **[!UICONTROL Fields]**, then select **[!UICONTROL Show full XDM schema]** under **[!UICONTROL Available Fields]**. Select the **gear icon** again to return to the **[!UICONTROL Fields]** tab and you should now be able to view multiple &quot;[!UICONTROL Event Types]&quot; and schema fields, regardless of whether they contain data or not.
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -63,13 +63,13 @@ Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können
 
 ![](../images/ui/segment-builder/audience-folder-structure.png)
 
-You can also search for [!UICONTROL Audiences] using the search bar, which utilizes [Lucene&#39;s search syntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn Sie auf dem Tab **[!UICONTROL Audiences]** einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. For example, to find an [!UICONTROL Audience] named `Online Shoppers`, start typing &quot;Online&quot; in the search bar. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
+You can also search for audiences using the search bar, which utilizes [Lucene&#39;s search syntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn Sie auf dem Tab **[!UICONTROL Audiences]** einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. For example, to find an audience named `Online Shoppers`, start typing &quot;Online&quot; in the search bar. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
 
 ## Arbeitsfläche des Regel-Builders {#rule-builder-canvas}
 
 Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der Hauptmerkmale oder Verhaltensweisen einer Zielgruppe dienen. These rules are created using the rule builder canvas, located in the center of [!DNL Segment Builder].
 
-Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus dem Tab **[!UICONTROL Felder]** und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab. Anschließend werden Ihnen je nach Art der hinzugefügten Daten kontextspezifische Optionen angezeigt. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences].
+Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus dem Tab **[!UICONTROL Felder]** und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab. Anschließend werden Ihnen je nach Art der hinzugefügten Daten kontextspezifische Optionen angezeigt. Available data types include: strings, dates, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot;, and audiences.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -133,7 +133,7 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Segmenteigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
-Im Abschnitt **[!UICONTROL Segmenteigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich **[!UICONTROL Name]** und **[!UICONTROL Beschreibung]**. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmenten zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
+The **[!UICONTROL Segment Properties]** section is also where you can specify important information about your segment definition, including its name and description. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmenten zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
 
 Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Zielgruppe anzeigen.
 
