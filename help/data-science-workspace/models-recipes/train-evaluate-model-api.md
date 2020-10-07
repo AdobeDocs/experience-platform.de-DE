@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning API-Aufrufen erstellen, ausbilden und auswerten können.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 98%
@@ -35,7 +35,7 @@ Sie sollten nun die folgenden Werte aus dem Tutorial haben:
 
 ## API-Workflow
 
-Wir verbrauchen die APIs, um einen Experimentablauf zu Schulungszwecken zu erstellen. Für dieses Tutorial konzentrieren wir uns auf die Endpunkte **Engines**, **MLInstances** und **Experiments**. Das folgende Diagramm zeigt die Beziehung zwischen diesen drei Punkten und stellt auch die Idee eines Ablaufs und eines Modells vor.
+Wir verbrauchen die APIs, um einen Experimentablauf zu Schulungszwecken zu erstellen. Für dieses Tutorial konzentrieren wir uns auf die Endpunkte Engines, MLInstances und Experiments. Das folgende Diagramm zeigt die Beziehung zwischen diesen drei Punkten und stellt auch die Idee eines Ablaufs und eines Modells vor.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
