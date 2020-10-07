@@ -5,7 +5,7 @@ title: Audience Manager-Anschluss
 topic: overview
 description: Der Adobe Audience Manager Data Connector streamt Erstanbieter-Daten, die in Adobe Audience Manager bis Adobe Experience Platform erfasst werden. Der Audience Manager-Connector fasst drei Kategorien Daten in die Plattform ein.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 2%
@@ -62,12 +62,12 @@ Audience Manager-Datasets sind standardmäßig zum Profil deaktiviert, und die B
 | Audience Manager Echtzeit-Profil-Updates | Dieser Datensatz ermöglicht Echtzeit-Targeting von Audience Manager-Eigenschaften und Segmenten. Es enthält Informationen zum regionalen Edge-Routing, zu Eigenschaften und zur Segmentmitgliedschaft. Lassen Sie diesen Datensatz für die Erfassung von Profilen aktiviert. |
 | Audience Manager-Gerätedaten | Gerätedaten mit ECIDs und entsprechenden Segmentzuordnungen, die in Audience Manager aggregiert werden. |
 | Profil-Daten des Audience Managers | Wird für die Audience Manager-Connector-Diagnose verwendet. |
-| Audience Manager-Authentifizierte Profile | Dieser Datensatz enthält vom Audience Manager authentifizierte Profil. |
+| Authentifizierte Profile für Audience Manager | Dieser Datensatz enthält vom Audience Manager authentifizierte Profil. |
 | Audience Manager-Authentifizierungsdaten zu Profilen | Wird für die Audience Manager Connector-Diagnose verwendet. |
 
 ### Verbindungen
 
-Adobe Audience Manager erstellt eine Verbindung im Katalog: **Audience Manager Connection**. Catalog ist das System der Datensätze für die Datenposition und -reihenfolge in Adobe Experience Platform. Eine Verbindung ist ein Katalogobjekt, das eine kundenspezifische Instanz von Connectors ist. Weitere Informationen zu Katalogen, Verbindungen und Connectors finden Sie in der Übersicht über den [Katalogdienst](../../../catalog/home.md) .
+Adobe Audience Manager erstellt eine Verbindung im Katalog: Audience Manager Connection. Catalog ist das System der Datensätze für die Datenposition und -reihenfolge in Adobe Experience Platform. Eine Verbindung ist ein Katalogobjekt, das eine kundenspezifische Instanz von Connectors ist. Weitere Informationen zu Katalogen, Verbindungen und Connectors finden Sie in der Übersicht über den [Katalogdienst](../../../catalog/home.md) .
 
 ## Welche Latenz wird für Plattformdaten von Audience Managern erwartet?
 
