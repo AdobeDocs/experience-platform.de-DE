@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Mit dem Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und bewertetes Modell als Service veröffentlichen, damit Benutzer in Ihrer IMS-Organisation Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 95%
+source-wordcount: '456'
+ht-degree: 92%
 
 ---
 
@@ -49,9 +49,9 @@ Wenn Sie ein Modell lieber mithilfe von Sensei Machine Learning-APIs veröffentl
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. Wenn ein Service erstellt wird, übernimmt er die standardmäßigen Scoring-Konfigurationen. Sie können diese Konfigurationen überprüfen und nach Bedarf anpassen, indem Sie auf die Werte doppelklicken. Wenn Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Scoring-Lauf zu starten.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. Auf der Seite *Übersicht* des Services werden Details zum neuen Scoring-Auftrag und zu dessen Fortschritt angezeigt. Nach Abschluss des Auftrags wird der **[!UICONTROL letzte]** Scoring-Auftrag aktualisiert.
+5. Auf der Seite **Übersicht** des Services werden Details zum neuen Scoring-Auftrag und zu dessen Fortschritt angezeigt. Sobald der Auftrag abgeschlossen ist, wird die Kopfzeile **[!UICONTROL Zuletzt]** im **[!UICONTROL Container Bewertung]** aktualisiert.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich ein Modell als aufrufbaren Service veröffentlicht und mithilfe des neuen Services Daten über die **[!UICONTROL Service Gallery]** bewertet. Fahren Sie mit der nächsten Anleitung fort, um zu erfahren, wie Sie [automatisierte Trainings- und Scoring-Läufe für einem Service planen](./schedule-models-ui.md) können.
+In diesem Tutorial haben Sie erfolgreich ein Modell als aufrufbaren Service veröffentlicht und mithilfe des neuen Services Daten über die [!UICONTROL Service Gallery] bewertet. Fahren Sie mit der nächsten Anleitung fort, um zu erfahren, wie Sie [automatisierte Trainings- und Scoring-Läufe für einem Service planen](./schedule-models-ui.md) können.
