@@ -5,9 +5,9 @@ title: Übersicht über den Datenzugriff
 topic: overview
 description: Data Access unterstützt Adobe Experience Platform, indem es Benutzerwerkzeuge bereitstellt, die auf die Entdeckung und Zugänglichkeit von erfassten Datensätzen innerhalb der Experience Platform ausgerichtet sind.
 translation-type: tm+mt
-source-git-commit: 75e1d3c9912e54e925032bbc2ae4e984948a30eb
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '173'
 ht-degree: 7%
 
 ---
@@ -23,17 +23,11 @@ ht-degree: 7%
 
 Ausführliche Informationen zur Verwendung der [!DNL Data Access] API für die Verbindung mit [!DNL Platform] finden Sie im Entwicklerhandbuch für [Datenzugriff](api.md).
 
-## [!DNL Python] SDK
+## Zugriff auf Daten im Data Science Workspace
 
-Sie können mit dem [!DNL Python] SDK Datensätze lesen und schreiben. Ausführlichere Informationen zum [!DNL Python] SDK finden Sie im [Python SDK-Tutorial](./tutorials/python-sdk.md).
+Sie können mit und für die Entwicklung von Rezepten [!DNL Python] [!DNL Spark] und Modellen in Data Science Workspace in Datensätze schreiben. Weitere Informationen zum Zugriff auf Ihre Daten finden Sie in der Dokumentation zum [Python-Datenzugriff](../data-science-workspace/authoring/python.md) oder [Spark-Datenzugriff](../data-science-workspace/authoring/spark.md) .
 
-[!DNL Data Science Workspace] verwendet das [!DNL Python] SDK in Notebooks und Rezepten. Weitere Informationen zu [!DNL Data Science Workspace]diesem Thema finden Sie im Überblick über den [Data Science Workspace](../data-science-workspace/home.md).
-
-## [!DNL Spark] SDK
-
-Sie können mit dem [!DNL Spark] SDK Datensätze lesen und schreiben. Ausführlichere Informationen zum [!DNL Spark] SDK finden Sie im [Spark SDK-Tutorial](./tutorials/spark-sdk.md).
-
-[!DNL Data Science Workspace] verwendet das [!DNL Spark] SDK in Notebooks und Rezepten. Weitere Informationen zu [!DNL Data Science Workspace]diesem Thema finden Sie im Überblick über den [Data Science Workspace](../data-science-workspace/home.md).
+Weitere Informationen finden Sie [!DNL Data Science Workspace]in der Übersicht über den [Data Science Workspace unter Beginn](../data-science-workspace/home.md).
 
 ## Abonnieren von Datenerfassungsereignissen
 
