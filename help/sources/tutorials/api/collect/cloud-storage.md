@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Cloud-Datenspeicherung eines Drittanbieters und deren anschließender Integration in die Plattform über Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1581'
 ht-degree: 13%
@@ -60,7 +60,7 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformatattribut definieren.
 
-Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
+Verwenden Sie die folgenden Enum-Werte für dateibasierte Connectors:
 
 | Data.format | Enum-Wert |
 | ----------- | ---------- |
@@ -68,7 +68,7 @@ Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
 | JSON-Dateien | `json` |
 | Parkettdateien | `parquet` |
 
-Für alle **tabellenbasierten Connectors** verwenden Sie den Enum-Wert: `tabular`.
+Für alle tabellenbasierten Connectors verwenden Sie den Enum-Wert: `tabular`.
 
 **API-Format**
 
