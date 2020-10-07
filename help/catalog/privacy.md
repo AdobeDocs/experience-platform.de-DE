@@ -5,7 +5,7 @@ title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 24%
@@ -30,7 +30,7 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] überbrückt Identitätsdaten von Kunden über Systeme und Geräte hinweg. [!DNL Identity Service] verwendet **[!UICONTROL Identitäts-Namensraum]** , um einen Kontext für Identitätswerte bereitzustellen, indem sie sie mit ihrem System der Herkunft verknüpfen. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
+Adobe Experience Platform [!DNL Identity Service] überbrückt Identitätsdaten von Kunden über Systeme und Geräte hinweg. [!DNL Identity Service] verwendet Identitäts-Namensraum, um einen Kontext zu Identitätswerten bereitzustellen, indem sie sie mit ihrem System der Herkunft verknüpfen. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
 
 [!DNL Identity Service] verwaltet einen Store von global definierten (Standard-) und benutzerdefinierten (benutzerdefinierten) Identitäts-Namensräumen. Standardmäßige Namensraum stehen für alle Unternehmen zur Verfügung (z. B. &quot;E-Mail&quot;und &quot;ECID&quot;), während Ihr Unternehmen benutzerdefinierte Namensraum erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
@@ -38,7 +38,7 @@ Weitere Informationen zu Identitäts-Namensräumen [!DNL Experience Platform]fin
 
 ## Hinzufügen von Identitätsdaten zu Datensätzen
 
-Bei der Erstellung von Datenschutzanforderungen für die [!DNL Data Lake]müssen gültige Identitätswerte (und die zugehörigen Namensraum) für jeden einzelnen Kunden angegeben werden, damit die Daten gefunden und entsprechend verarbeitet werden können. Daher müssen alle Datensätze, die Datenschutzanforderungen unterliegen, einen **[!UICONTROL Identitätsdeskriptor]** in ihrem zugehörigen XDM-Schema enthalten.
+Bei der Erstellung von Datenschutzanforderungen für die [!DNL Data Lake]müssen gültige Identitätswerte (und die zugehörigen Namensraum) für jeden einzelnen Kunden angegeben werden, damit die Daten gefunden und entsprechend verarbeitet werden können. Daher müssen alle Datensätze, die Datenschutzanforderungen unterliegen, einen Identitätsdeskriptor in ihrem zugehörigen XDM-Schema enthalten.
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt
 
 >[!NOTE]
 >
->In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mithilfe der [!DNL Catalog Service] API abrufen. Nachdem Sie den [Abschnitt &quot;Erste Schritte](./api/getting-started.md) &quot;im Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die unter zur [Auflistung](./api/list-objects.md) oder [Suche nach](./api/look-up-object.md) [!DNL Catalog] Objekten beschrieben werden, um Ihren Datensatz zu finden. Die Schema-ID finden Sie unter `schemaRef.id`
+>In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mithilfe der [!DNL Catalog Service] API abrufen. Nachdem Sie den [Abschnitt &quot;Erste Schritte](./api/getting-started.md) &quot;im Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die unter zur [Auflistung](./api/list-objects.md) oder [Suche](./api/look-up-object.md) [!DNL Catalog] von Objekten beschrieben werden, um Ihren Datensatz zu finden. Die Schema-ID finden Sie unter `schemaRef.id`
 >
 > Dieser Abschnitt enthält Aufrufe der Schema Registry API. Wichtige Informationen zur Verwendung der API, einschließlich der Kenntnisse über Ihre `{TENANT_ID}` und das Konzept der Container, finden Sie im Abschnitt [Erste Schritte](../xdm/api/getting-started.md) im Entwicklerhandbuch.
 
