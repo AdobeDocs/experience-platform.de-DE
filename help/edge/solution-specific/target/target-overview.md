@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platfo
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 43a2074d4d1b9f642c3cbfb0c29217eb2fb112c3
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 5%
@@ -87,7 +87,7 @@ alloy
 
 `decisionScopes` definiert Abschnitte, Orte oder Teile Ihrer Seiten, in denen Sie ein personalisiertes Erlebnis darstellen möchten. Diese `decisionScopes` sind benutzerdefiniert und anpassbar. Für aktuelle [!DNL Target] Kunden `decisionScopes` werden auch &quot;mboxes&quot;genannt. In der [!DNL Target] Benutzeroberfläche wird `decisionScopes` &quot;Speicherorte&quot;angezeigt.
 
-## __ansicht__ - Anwendungsbereich
+## Der `__view__` Anwendungsbereich
 
 AEP [!DNL Web SDK] bietet eine Funktion, mit der Sie VEC-Aktionen abrufen können, ohne sich auf AEP verlassen zu müssen, um die VEC-Aktionen für Sie [!DNL Web SDK] zu rendern. Senden Sie ein Ereignis mit der `__view__` Definition als `decisionScopes`.
 
@@ -119,7 +119,7 @@ Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfüge
 * Ziel-Bibliothek
 * Geo
 * Netzwerk
-* Betriebssystem
+* Operating System
 * Seiten der Site
 * Browser
 * Traffic-Quellen
@@ -127,10 +127,10 @@ Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfüge
 
 ## Terminologie
 
-__Entscheidungen__ - Diese entsprechen [!DNL Target]dem Erlebnis, das aus einer Aktivität ausgewählt wurde.
+**Entscheidungen** - Diese entsprechen [!DNL Target]dem Erlebnis, das aus einer Aktivität ausgewählt wurde.
 
-__Anwendungsbereich__ - Der Anwendungsbereich des Beschlusses. Das ist [!DNL Target]die mBox. Die globale mBox ist der `__view__` Anwendungsbereich.
+**Anwendungsbereich** - Der Anwendungsbereich des Beschlusses. Das ist [!DNL Target]die mBox. Die globale mBox ist der `__view__` Anwendungsbereich.
 
-__Schema__ - Das Schema einer Entscheidung ist die Art des Angebots in [!DNL Target].
+**Schema** - Das Schema einer Entscheidung ist die Art des Angebots in [!DNL Target].
 
-__XDM__ - Der XDM wird in Punktnotation serialisiert und dann [!DNL Target] als mBox-Parameter eingefügt.
+**XDM** - Der XDM wird in Punktnotation serialisiert und dann [!DNL Target] als mBox-Parameter eingefügt.
