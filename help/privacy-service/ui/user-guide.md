@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zum Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 1%
@@ -18,7 +18,7 @@ In diesem Dokument werden Schritte zum Erstellen und Verwalten von Datenschutzan
 
 ## Dashboard der [!DNL Privacy Service] Benutzeroberfläche
 
-Das Dashboard für die [!DNL Privacy Service] Benutzeroberfläche enthält zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge Ansicht haben: **[!UICONTROL Statusbericht]** und **[!UICONTROL Auftragsanforderungen]**. Das Dashboard zeigt auch die aktuell ausgewählte Regel für die angezeigten Aufträge an.
+Das Dashboard für die [!DNL Privacy Service] Benutzeroberfläche enthält zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge Ansicht haben: &quot;[!UICONTROL Statusbericht]&quot;und &quot;[!UICONTROL Auftragsanforderungen]&quot;. Das Dashboard zeigt auch die aktuell ausgewählte Regel für die angezeigten Aufträge an.
 
 ![UI-Dashboard](../images/user-guide/dashboard.png)
 
@@ -106,7 +106,7 @@ Das Dialogfeld Anforderung **[!UICONTROL erstellen]** wird geöffnet und zeigt d
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Wählen Sie den **[!UICONTROL Auftragstyp]** der Anforderung (&quot;Löschen&quot;oder &quot;Zugriff&quot;) und eines oder mehrere verfügbare **[!UICONTROL Produkte]** aus der Liste.
+Wählen Sie den **[!UICONTROL Auftragstyp]** der Anforderung (&quot;Löschen&quot;oder &quot;Zugriff&quot;) und eines oder mehrere verfügbare Produkte aus der Liste aus.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ Wählen Sie unter &quot; **[!UICONTROL Namensraum-Typ]**&quot;den entsprechenden
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Wählen Sie bei Verwendung des _standardmäßigen_ Namensraums einen Namensraum aus dem Dropdown-Menü (E-Mail, ECID oder AAID) und geben Sie dann die ID-Werte in das Textfeld rechts ein. Drücken Sie dann **\&lt;enter>** für jede ID, um sie der Liste hinzuzufügen.
+Wählen Sie bei Verwendung des Standardtyps einen Namensraum aus dem Dropdown-Menü (E-Mail, ECID oder AAID) und geben Sie dann die ID-Werte in das Textfeld rechts ein. Drücken Sie **\&lt;enter>** für jede ID, um sie der Liste hinzuzufügen.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Bei Verwendung des _benutzerdefinierten_ Namensraums müssen Sie den Namensraum manuell eingeben, bevor Sie die unten stehenden ID-Werte eingeben.
+Bei Verwendung des benutzerdefinierten Namensraums müssen Sie den Namensraum manuell eingeben, bevor Sie die unten stehenden ID-Werte eingeben.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -130,7 +130,7 @@ Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge)
 
 ### JSON-Datei hochladen {#json}
 
-Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für die einzelnen verarbeiteten Datensubjekte verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
+Wenn Sie komplexere Anforderungen erstellen, z. B. Anforderungen, die mehrere ID-Typen für jede verarbeitete Person verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
 Klicken Sie auf den Pfeil neben Anforderung **[!UICONTROL erstellen]**, unter dem Statusbericht-Widget auf der rechten Seite des Bildschirms. Wählen Sie in der Liste der angezeigten Optionen die Option JSON **[!UICONTROL hochladen]**.
 
@@ -148,7 +148,7 @@ Wenn Sie keine JSON-Datei zum Hochladen haben, klicken Sie auf Adobe-GDPR-Reques
 
 Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfeld. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können bei Bedarf weitere JSON-Dateien hinzufügen, indem Sie sie in das Dialogfeld ziehen und dort ablegen.
 
-Klicken Sie abschließend auf **[!UICONTROL Erstellen]**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird zusammen mit dem aktuellen Verarbeitungsstatus im Widget &quot; _Auftragsanforderungen_ &quot;aufgeführt.
+Klicken Sie abschließend auf **[!UICONTROL Erstellen]**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird zusammen mit dem aktuellen Verarbeitungsstatus im Widget &quot;Auftragsanforderungen&quot;aufgeführt.
 
 ### Nächste Schritte
 
