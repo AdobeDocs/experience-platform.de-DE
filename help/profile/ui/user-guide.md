@@ -4,7 +4,7 @@ title: Benutzerhandbuch zum Echtzeit-Kundenprofil
 topic: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 11%
@@ -40,11 +40,11 @@ Wählen Sie die Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;aus, um 
 
 ### Profil-Metriken {#profile-metrics}
 
-Auf der rechten Seite der Registerkarte &quot; [!UICONTROL Durchsuchen] &quot;finden Sie eine Reihe wichtiger Metriken zu Ihren Profil-Daten, darunter die Gesamtzahl der [Profil](#profile-count) sowie eine Auflistung der [Profil nach Namensraum](#profiles-by-namespace).
+Auf der rechten Seite der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;finden Sie eine Reihe wichtiger Metriken zu Ihren Profil-Daten, darunter die Gesamtzahl der [Profil](#profile-count) sowie eine Auflistung der [Profil nach Namensraum](#profiles-by-namespace).
 
 Diese Profil-Metriken werden mit der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens ausgewertet. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien, einschließlich der Definition einer standardmäßigen Zusammenführungsrichtlinie, finden Sie im [Benutzerhandbuch](merge-policies.md)&quot;Richtlinien zusammenführen&quot;.
 
-Zusätzlich zu diesen Metriken bietet der Bereich &quot;Profil-Metriken&quot;auch das Datum und die Uhrzeit der [!UICONTROL letzten Aktualisierung] , die anzeigen, wann die Metriken zuletzt ausgewertet wurden.
+Zusätzlich zu diesen Metriken bietet der Bereich &quot;Profil-Metriken&quot;auch ein Datum und eine Uhrzeit, die zuletzt aktualisiert wurden und anzeigen, wann die Metriken zuletzt bewertet wurden.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ Wählen Sie im Dialogfeld &quot;Identitätsnamen **** auswählen&quot;den Namens
 
 ### Identitätswert
 
-Nach Auswahl eines [!UICONTROL Identitäts-Namensraums]kehren Sie zur Registerkarte &quot; [!UICONTROL Durchsuchen] &quot;zurück, auf der Sie einen **[!UICONTROL Identitätswert]** eingeben können. Dieser Wert ist spezifisch für ein einzelnes Profil und muss ein gültiger Eintrag für den bereitgestellten Namensraum sein. Wenn Sie beispielsweise den [!UICONTROL Identitäts-Namensraum] &quot;E-Mail&quot;auswählen, ist ein [!UICONTROL Identitätswert] in Form einer gültigen E-Mail-Adresse erforderlich.
+Nach Auswahl eines Identitäts-Namensraums kehren Sie zur Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;zurück, auf der Sie einen **[!UICONTROL Identitätswert]** eingeben können. Dieser Wert ist spezifisch für ein einzelnes Profil und muss ein gültiger Eintrag für den bereitgestellten Namensraum sein. Wenn Sie beispielsweise den Identitäts-Namensraum &quot;E-Mail&quot;auswählen, ist ein Identitätswert in Form einer gültigen E-Mail-Adresse erforderlich.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ Nachdem ein Wert eingegeben wurde, wählen Sie &quot;Profil **[!UICONTROL anzeig
 
 ### Profil {#profile-detail}
 
-Nach Auswahl der [!UICONTROL Profil-ID]wird die Registerkarte &quot; **[!UICONTROL Details]** &quot;geöffnet. The profile information displayed on the [!UICONTROL Detail] tab has been merged together from multiple profile fragments to form a single view of the individual customer. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Voreinstellungen für Kanal. Die angezeigten Standardfelder können auch auf organisatorischer Ebene geändert werden, um bevorzugte Profil-Attribute anzuzeigen. Weitere Informationen zum Anpassen dieser Felder, einschließlich einer schrittweisen Anleitung zum Hinzufügen und Entfernen von Attributen und zum Ändern der Größe von Dashboard-Bedienfeldern, finden Sie im Handbuch zur [Profil-Detailanpassung](profile-customization.md).
+Nach Auswahl der **[!UICONTROL Profil-ID]** wird die Registerkarte &quot; **[!UICONTROL Details]** &quot;geöffnet. The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual customer. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Voreinstellungen für Kanal. Die angezeigten Standardfelder können auch auf organisatorischer Ebene geändert werden, um bevorzugte Profil-Attribute anzuzeigen. Weitere Informationen zum Anpassen dieser Felder, einschließlich einer schrittweisen Anleitung zum Hinzufügen und Entfernen von Attributen und zum Ändern der Größe von Dashboard-Bedienfeldern, finden Sie im Handbuch zur [Profil-Detailanpassung](profile-customization.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Sie können weitere Informationen zum jeweiligen Profil durch Auswahl einer anderen verfügbaren Registerkarte Ansicht werden. Zu diesen Registerkarten gehören [!UICONTROL Attribute], [!UICONTROL Ereignis]und die [!UICONTROL Segmentmitgliedschaft], in der die [!UICONTROL Segmente] angezeigt werden, für die das Profil derzeit qualifiziert ist.
+Sie können weitere Informationen zum jeweiligen Profil durch Auswahl einer anderen verfügbaren Registerkarte Ansicht werden. Zu diesen Registerkarten gehören Attribute, Ereignis und Segmentmitgliedschaften, die die Segmente anzeigen, für die das Profil derzeit qualifiziert ist.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Zusammenführungsrichtlinien
 
-Wählen Sie im Hauptmenü &quot; [!UICONTROL Profile] &quot;die Registerkarte &quot;Richtlinien **[!UICONTROL zusammenführen&quot;]** , um eine Liste der zu Ihrem Unternehmen gehörenden Zusammenführungsrichtlinien Ansicht. Jede aufgelistete Richtlinie zeigt an: ihren Namen; ob sie die standardmäßige Zusammenführungsrichtlinie ist oder nicht; das Schema, auf das sie angewendet wird.
+Wählen Sie im Hauptmenü &quot; **[!UICONTROL Profile]** &quot;die Registerkarte &quot;Richtlinien **[!UICONTROL zusammenführen&quot;]** , um eine Liste der zu Ihrem Unternehmen gehörenden Zusammenführungsrichtlinien Ansicht. Jede aufgelistete Richtlinie zeigt an: ihren Namen; ob sie die standardmäßige Zusammenführungsrichtlinie ist oder nicht; das Schema, auf das sie angewendet wird.
 
 For more information on merge policies, see the [merge policies user guide](merge-policies.md).
 
@@ -108,7 +108,7 @@ For more information on merge policies, see the [merge policies user guide](merg
 
 ## Vereinigungsschema {#union-schema}
 
-Wählen Sie im Hauptmenü &quot; [!UICONTROL Profil] &quot;die Registerkarte &quot;Schema **[!UICONTROL der]** Vereinigung&quot;aus, um die Schema der Vereinigung für Ihre Profil-Daten Ansicht. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. Wenn Sie auf der linken Seite eine Klasse aus der [!UICONTROL Class] -Liste auswählen, können Sie die Struktur des Schemas auf der Arbeitsfläche Ansicht werden. Wenn Sie beispielsweise &quot;[!DNL XDM Profile]&quot;auswählen, wird das Schema &quot;Vereinigung&quot;für die [!DNL XDM Individual Profile] Klasse angezeigt.
+Wählen Sie im Hauptmenü &quot; **[!UICONTROL Profil]** &quot;die Registerkarte &quot;Schema **[!UICONTROL der]** Vereinigung&quot;aus, um die Schema der Vereinigung für Ihre Profil-Daten Ansicht. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. Durch Auswahl einer Klasse aus der Liste &quot;[!UICONTROL Class]&quot;auf der linken Seite können Sie die Struktur des Schemas auf der Arbeitsfläche Ansicht. Wenn Sie beispielsweise &quot;[!DNL XDM Profile]&quot;auswählen, wird das Schema &quot;Vereinigung&quot;für die [!DNL XDM Individual Profile] Klasse angezeigt.
 
 Weitere Informationen zu Schemas der Vereinigung und ihrer Rolle in Adobe Experience Platform finden Sie im Abschnitt zu Schemas der Vereinigung im Handbuch zur [Schema-Zusammensetzung](../../xdm/schema/composition.md).
 
