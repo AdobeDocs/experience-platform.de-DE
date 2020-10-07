@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Dieses Tutorial bietet Einblicke in das Konfigurieren und Importieren eines gepackten Rezepts mit dem bereitgestellten Beispiel für Einzelhandelsumsätze. Nach Abschluss dieses Tutorials können Sie ein Modell in Adobe Experience Platform Data Science Workspace erstellen, trainieren und bewerten.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1803'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 42%
 
 Dieses Tutorial bietet Einblicke in das Konfigurieren und Importieren eines gepackten Rezepts mit dem bereitgestellten Beispiel für Einzelhandelsumsätze. By the end of this tutorial, you will be ready to create, train, and evaluate a Model in Adobe Experience Platform [!DNL Data Science Workspace].
 
-## Voraussetzungen 
+## Voraussetzungen
 
 Dieses Lernprogramm erfordert ein gepacktes Rezept in Form einer Docker-Bild-URL. Weiterführende Informationen finden Sie im Tutorial zum [Verpacken von Quelldateien in einem Rezept](./package-source-files-recipe.md).
 
 ## Workflow in der Benutzeroberfläche
 
-Importing a packaged recipe into [!DNL Data Science Workspace] requires specific recipe configurations, compiled into a single JavaScript Object Notation (JSON) file, this compilation of recipe configurations is referred to as the **configuration file**. Ein gepacktes Rezept mit einem bestimmten Satz von Konfigurationen wird als **Rezeptinstanz** bezeichnet. One recipe can be used to create many recipe instances in [!DNL Data Science Workspace].
+Importing a packaged recipe into [!DNL Data Science Workspace] requires specific recipe configurations, compiled into a single JavaScript Object Notation (JSON) file, this compilation of recipe configurations is referred to as the configuration file. Ein gepacktes Rezept mit einem bestimmten Satz von Konfigurationen wird als Rezeptinstanz bezeichnet. One recipe can be used to create many recipe instances in [!DNL Data Science Workspace].
 
 Der Workflow zum Importieren eines gepackten Rezepts umfasst folgende Schritte:
 - [Rezept konfigurieren](#configure)
@@ -124,11 +124,11 @@ For the purpose of this tutorial, you can leave the default configuration files 
 
 ### Import Docker based recipe - [!DNL Python] {#python}
 
-Beginn durch Navigieren und Auswählen von **[!UICONTROL Workflows]** oben links in der [!DNL Platform] Benutzeroberfläche. Wählen Sie als Nächstes *Rezept* importieren und klicken Sie auf **[!UICONTROL Starten]**.
+Beginn durch Navigieren und Auswählen von **[!UICONTROL Workflows]** oben links in der [!DNL Platform] Benutzeroberfläche. Wählen Sie als Nächstes **Rezept** importieren und klicken Sie auf **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateien* wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **[!UICONTROL Weiter]** .
+Die Seite &quot; **Konfigurieren** &quot;für den Arbeitsablauf für **Skriptdateien** wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **[!UICONTROL Weiter]** .
 
 ![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -136,19 +136,19 @@ Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateie
 >
 > Im Tutorial [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md) wurde nach der Erstellung des Rezepts für Einzelhandelsumsätze mit Python-Quelldateien eine Docker-URL bereitgestellt.
 
-Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit [!DNL Python] Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Wählen Sie **[!UICONTROL Python]** in der Dropdown-Liste *Laufzeit* und **[!UICONTROL Klassifizierung]** in der Dropdown-Liste *Typ* . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
+Sobald Sie sich auf der Seite &quot;Quelle **** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit [!DNL Python] Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Wählen Sie **[!UICONTROL Python]** in der Dropdown-Liste **Laufzeit** und **[!UICONTROL Klassifizierung]** in der Dropdown-Liste **Typ** . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema **verwalten&quot;fortzufahren**.
 
 >[!NOTE]
 >
-> *Typ* unterstützt **[!UICONTROL Classification]** und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
+> Typ unterstützt **[!UICONTROL Klassifizierung]** und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
-Next, select the Retail Sales input and output schemas under the section *Manage Schemas*, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial.
+Next, select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Under the *Feature Management* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und entweder die Option **[!UICONTROL Eingabefunktion]** oder **[!UICONTROL Zielfunktion]** im rechten Fenster **[!UICONTROL Feldeigenschaften]** auswählen. Legen Sie in diesem Tutorial **[!UICONTROL weeklySales]** als **[!UICONTROL Zielfunktion]** und alles andere als **[!UICONTROL Eingabefunktion]** fest. Klicken Sie auf **[!UICONTROL Weiter]**, um Ihr neu konfiguriertes Rezept zu überprüfen.
+Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und entweder die Option **[!UICONTROL Eingabefunktion]** oder **[!UICONTROL Zielfunktion]** im rechten Fenster **[!UICONTROL Feldeigenschaften]** auswählen. Legen Sie in diesem Tutorial **[!UICONTROL weeklySales]** als **[!UICONTROL Zielfunktion]** und alles andere als **[!UICONTROL Eingabefunktion]** fest. Klicken Sie auf **[!UICONTROL Weiter]**, um Ihr neu konfiguriertes Rezept zu überprüfen.
 
 Prüfen Sie das Rezept und fügen Sie je nach Bedarf Konfigurationen hinzu bzw. ändern oder entfernen Sie sie. Klicken Sie auf **[!UICONTROL Beenden]**, um das Rezept zu erstellen.
 
@@ -158,11 +158,11 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 
 ### Docker-basiertes Rezept importieren – R {#r}
 
-Beginn durch Navigieren und Auswählen von **[!UICONTROL Workflows]** oben links in der [!DNL Platform] Benutzeroberfläche. Wählen Sie als Nächstes *Rezept* importieren und klicken Sie auf **[!UICONTROL Starten]**.
+Beginn durch Navigieren und Auswählen von **[!UICONTROL Workflows]** oben links in der [!DNL Platform] Benutzeroberfläche. Wählen Sie als Nächstes **Rezept** importieren und klicken Sie auf **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateien* wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **[!UICONTROL Weiter]** .
+Die Seite &quot; **Konfigurieren** &quot;für den Arbeitsablauf für **Skriptdateien** wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **[!UICONTROL Weiter]** .
 
 ![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -170,7 +170,7 @@ Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateie
 >
 > Im Tutorial [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md) wurde nach der Erstellung des Rezepts für Einzelhandelsumsätze mit R-Quelldateien eine Docker-URL bereitgestellt.
 
-Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit R-Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Wählen Sie **[!UICONTROL R]** in der Dropdownliste *Laufzeit* und **[!UICONTROL Classification]** in der Dropdownliste *Typ* . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
+Sobald Sie sich auf der Seite &quot;Quelle **** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit R-Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Wählen Sie **[!UICONTROL R]** in der Dropdownliste **Laufzeit** und **[!UICONTROL Classification]** in der Dropdownliste **Typ** . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema **verwalten&quot;fortzufahren**.
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen S
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
-Next, select the Retail Sales input and output schemas under the section *Manage Schemas*, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial.
+Next, select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
@@ -192,11 +192,11 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 
 ### Import Docker based recipe - PySpark {#pyspark}
 
-Beginn durch Navigieren und Auswählen von **[!UICONTROL Workflows]** oben links in der [!DNL Platform] Benutzeroberfläche. Wählen Sie als Nächstes *Rezept* importieren und klicken Sie auf **[!UICONTROL Starten]**.
+Beginn durch Navigieren und Auswählen von **[!UICONTROL Workflows]** oben links in der [!DNL Platform] Benutzeroberfläche. Wählen Sie als Nächstes **Rezept** importieren und klicken Sie auf **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateien* wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **[!UICONTROL Weiter]** , um fortzufahren.
+Die Seite &quot; **Konfigurieren** &quot;für den Arbeitsablauf für **Skriptdateien** wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **[!UICONTROL Weiter]** , um fortzufahren.
 
 ![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -204,7 +204,7 @@ Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateie
 >
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using PySpark source files.
 
-Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit PySpark-Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Wählen Sie **[!UICONTROL PySpark]** in der Dropdown-Liste *Laufzeit* . Sobald die PySpark-Laufzeit ausgewählt ist, wird das standardmäßige Artefakt automatisch in **[!UICONTROL Docker]** eingetragen. Wählen Sie anschließend **[!UICONTROL Klassifizierung]** in der Dropdown-Liste *Typ* . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
+Sobald Sie sich auf der Seite &quot;Quelle **** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit PySpark-Quelldateien erstellten gepackten Rezept in das Feld **[!UICONTROL Quell-URL]** ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Wählen Sie **[!UICONTROL PySpark]** in der Dropdown-Liste **Laufzeit** . Sobald die PySpark-Laufzeit ausgewählt ist, wird das standardmäßige Artefakt automatisch in **[!UICONTROL Docker]** eingetragen. Wählen Sie anschließend **[!UICONTROL Klassifizierung]** in der Dropdown-Liste **Typ** . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema **verwalten&quot;fortzufahren**.
 
 >[!NOTE]
 >
@@ -212,11 +212,11 @@ Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen S
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
-Next, select the Retail Sales input and output schemas under the section *Manage Schemas*, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial.
+Next, select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Under the *Feature Management* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und entweder die Option **[!UICONTROL Eingabefunktion]** oder **[!UICONTROL Zielfunktion]** im rechten Fenster **[!UICONTROL Feldeigenschaften]** auswählen. Legen Sie in diesem Tutorial **[!UICONTROL weeklySales]** als **[!UICONTROL Zielfunktion]** und alles andere als **[!UICONTROL Eingabefunktion]** fest. Klicken Sie auf **[!UICONTROL Weiter]**, um Ihr neu konfiguriertes Rezept zu überprüfen.
+Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und entweder die Option **[!UICONTROL Eingabefunktion]** oder **[!UICONTROL Zielfunktion]** im rechten Fenster **[!UICONTROL Feldeigenschaften]** auswählen. Legen Sie in diesem Tutorial **[!UICONTROL weeklySales]** als **[!UICONTROL Zielfunktion]** und alles andere als **[!UICONTROL Eingabefunktion]** fest. Klicken Sie auf **[!UICONTROL Weiter]**, um Ihr neu konfiguriertes Rezept zu überprüfen.
 
 Prüfen Sie das Rezept und fügen Sie je nach Bedarf Konfigurationen hinzu bzw. ändern oder entfernen Sie sie. Klicken Sie auf **[!UICONTROL Beenden]**, um das Rezept zu erstellen.
 
@@ -226,11 +226,11 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 
 ### Import Docker based recipe - Scala {#scala}
 
-Beginn durch Navigieren und Auswählen von **[!UICONTROL Workflows]** oben links in der [!DNL Platform] Benutzeroberfläche. Wählen Sie als Nächstes *Rezept* importieren und klicken Sie auf **[!UICONTROL Starten]**.
+Beginn durch Navigieren und Auswählen von **[!UICONTROL Workflows]** oben links in der [!DNL Platform] Benutzeroberfläche. Wählen Sie als Nächstes **Rezept** importieren und klicken Sie auf **[!UICONTROL Starten]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateien* wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **[!UICONTROL Weiter]** , um fortzufahren.
+Die Seite &quot; **Konfigurieren** &quot;für den Arbeitsablauf für **Skriptdateien** wird angezeigt. Geben Sie einen Namen und eine Beschreibung für das Rezept ein und wählen Sie dann in der oberen rechten Ecke die Option **[!UICONTROL Weiter]** , um fortzufahren.
 
 ![Arbeitsablauf konfigurieren](../images/models-recipes/import-package-ui/configure-workflow.png)
 
@@ -238,19 +238,19 @@ Die Seite &quot; *Konfigurieren* &quot;für den Arbeitsablauf für *Skriptdateie
 >
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Scala ([!DNL Spark]) source files.
 
-Sobald Sie sich auf der Seite &quot;Quelle ** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit Scala-Quelldateien erstellten gepackten Rezept in das Feld *Quell-URL* ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem **Browser** des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Wählen Sie **[!UICONTROL Spark]** in der Dropdown-Liste *Laufzeit* . Nach Auswahl der [!DNL Spark] Laufzeitumgebung wird das standardmäßige Artefakt automatisch mit **[!UICONTROL Docker]** gefüllt. Wählen Sie dann **[!UICONTROL Regression]** aus der Dropdownliste *Typ* . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema *verwalten&quot;fortzufahren*.
+Sobald Sie sich auf der Seite &quot;Quelle **** auswählen&quot;befinden, fügen Sie die Docker-URL entsprechend dem mit Scala-Quelldateien erstellten gepackten Rezept in das Feld &quot;Quell-URL&quot;ein. Importieren Sie anschließend die bereitgestellte Konfigurationsdatei per Drag-and-Drop oder mit dem Browser des Dateisystems. Die bereitgestellte Konfigurationsdatei finden Sie unter `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Wählen Sie **[!UICONTROL Spark]** in der Dropdown-Liste **Laufzeit** . Nach Auswahl der [!DNL Spark] Laufzeitumgebung wird das standardmäßige Artefakt automatisch mit **[!UICONTROL Docker]** gefüllt. Wählen Sie dann **[!UICONTROL Regression]** aus der Dropdownliste **Typ** . Klicken Sie nach dem Ausfüllen auf **[!UICONTROL Weiter]** oben rechts, um mit &quot;Schema **verwalten&quot;fortzufahren**.
 
 >[!NOTE]
 >
-> *Typ* unterstützt **[!UICONTROL Classification]** und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
+> Typ unterstützt **[!UICONTROL Klassifizierung]** und **[!UICONTROL Regression]**. Wenn Ihr Modell nicht unter einen dieser Typen fällt, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
-Next, select the Retail Sales input and output schemas under the section *Manage Schemas*, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial.
+Next, select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Under the *Feature Management* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und entweder die Option **[!UICONTROL Eingabefunktion]** oder **[!UICONTROL Zielfunktion]** im rechten Fenster **[!UICONTROL Feldeigenschaften]** auswählen. Legen Sie in diesem Tutorial **[!UICONTROL weeklySales]** als **[!UICONTROL Zielfunktion]** und alles andere als **[!UICONTROL Eingabefunktion]** fest. Klicken Sie auf **[!UICONTROL Weiter]**, um Ihr neu konfiguriertes Rezept zu überprüfen.
+Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Wählen Sie die Ein- und Ausgabefunktionen aus, indem Sie die gewünschte Funktion markieren und entweder die Option **[!UICONTROL Eingabefunktion]** oder **[!UICONTROL Zielfunktion]** im rechten Fenster **[!UICONTROL Feldeigenschaften]** auswählen. For the purpose of this tutorial, set &quot;[!UICONTROL weeklySales]&quot; as the  **[!UICONTROL Target Feature]** and everything else as **[!UICONTROL Input Feature]**. Klicken Sie auf **[!UICONTROL Weiter]**, um Ihr neu konfiguriertes Rezept zu überprüfen.
 
 Prüfen Sie das Rezept und fügen Sie je nach Bedarf Konfigurationen hinzu bzw. ändern oder entfernen Sie sie. Klicken Sie auf **[!UICONTROL Beenden]**, um das Rezept zu erstellen.
 
