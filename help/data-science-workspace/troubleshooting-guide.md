@@ -5,7 +5,7 @@ title: Data Science Workspace – Handbuch zur Fehlerbehebung
 topic: Troubleshooting
 description: Dieses Dokument beantwortet häufig gestellte Fragen zum Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Navigieren Sie in Ihrem [!DNL Chrome] Browser oben rechts und wählen Sie **Eins
 
 ![Chrome Advanced](./images/faq/chrome-advanced.png)
 
-Der Abschnitt *Datenschutz und Sicherheit* wird angezeigt. Klicken Sie anschließend auf **Site-Einstellungen** , gefolgt von **Cookies und Site-Daten**.
+Der Abschnitt **Datenschutz und Sicherheit** wird angezeigt. Klicken Sie anschließend auf **Site-Einstellungen** , gefolgt von **Cookies und Site-Daten**.
 
 ![Chrome Advanced](./images/faq/privacy-security.png)
 
@@ -63,7 +63,7 @@ Wählen Sie im Fenster &quot;Safari-Voreinstellungen&quot;die Option **Erweitert
 
 ![Safari Advanced](./images/faq/advanced.png)
 
-Wählen Sie dann in der oberen Navigationsleiste das Menü &quot; **Entwicklung** &quot;aus. Bewegen Sie den Mauszeiger über den *Benutzeragent* im Dropdownmenü *Entwickeln*. Sie können die gewünschte Zeichenfolge **[!DNL Chrome]** oder **[!DNL Firefox]** Benutzeragent auswählen.
+Wählen Sie dann in der oberen Navigationsleiste das Menü &quot; **Entwicklung** &quot;aus. Bewegen Sie den Mauszeiger über den **Benutzeragent** im Dropdownmenü **Entwickeln**. Sie können die gewünschte Zeichenfolge **[!DNL Chrome]** oder **[!DNL Firefox]** Benutzeragent auswählen.
 
 ![Entwicklungsmenü](./images/faq/user-agent.png)
 
