@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 61%
@@ -79,7 +79,7 @@ The [!DNL Data Governance] framework simplifies and streamlines the process of c
 
 | Funktion | Beschreibung |
 | -----------| ---------- |
-| Datennutzungsrichtlinien in der Benutzeroberfläche verwalten | Datennutzungsrichtlinien können jetzt im Arbeitsbereich _Richtlinien_ der Benutzeroberfläche von verwaltet werden.[!DNL Experience Platform] Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Richtlinien](../../data-governance/policies/user-guide.md). |
+| Datennutzungsrichtlinien in der Benutzeroberfläche verwalten | Datennutzungsrichtlinien können jetzt im Arbeitsbereich **Richtlinien** der Benutzeroberfläche von verwaltet werden.[!DNL Experience Platform] Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Richtlinien](../../data-governance/policies/user-guide.md). |
 
 **Bekannte Probleme**
 
