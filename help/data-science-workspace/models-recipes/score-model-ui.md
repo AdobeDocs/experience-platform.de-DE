@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Scoring in Adobe Experience Platform Data Science Workspace kann durch Einspeisung von Eingabedaten in ein vorhandenes trainiertes Modell erreicht werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 89%
@@ -32,7 +32,7 @@ Ein Scoring-Lauf wird mithilfe optimierter Konfigurationen aus einem zuvor abges
 
 1. Finden Sie den optimalen Training-Lauf, um dessen Konfigurationen für das Scoring zu nutzen. Öffnen Sie den gewünschten Trainings-Lauf, indem Sie auf dessen Namen klicken.
 
-2. Klicken Sie auf dem Tab **[!UICONTROL Auswertung]** des Trainings-Laufs auf die Schaltfläche **[!UICONTROL Score]** oben rechts im Bildschirm. Dadurch wird ein neuer *Scoring ausführen*-Workflow initiiert.
+2. Klicken Sie auf dem Tab **[!UICONTROL Auswertung]** des Trainings-Laufs auf die Schaltfläche **[!UICONTROL Score]** oben rechts im Bildschirm. Dadurch wird ein neuer **Scoring ausführen**-Workflow initiiert.
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Wählen Sie den Eingabe-Scoring-Datensatz aus und klicken Sie auf **[!UICONTROL Weiter]**.
