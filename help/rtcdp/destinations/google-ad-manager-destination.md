@@ -5,7 +5,7 @@ seo-title: Google Ad Manager-Ziel
 description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 seo-description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 45%
@@ -49,11 +49,11 @@ Bevor Sie das [!DNL Google Ad Manager] Ziel in Adobe Echtzeit-CDP erstellen, mü
 * **Kundenkennung**: Dies ist die Adobe-Kundenkontokennung bei [!DNL Google]. Wenden Sie sich an die Kundenunterstützung von Adobe oder Ihren Adobe-Support-Mitarbeiter, um diese Kennung zu erhalten.
 * **Netzwerkkennung**: Dies ist Ihr Konto bei [!DNL Google Ad Manager]
 * **Zielgruppenverknüpfungskennung**: Dies ist Ihr Konto bei [!DNL Google Ad Manager]
-* Ihr Kontotyp. **DFP von Google** oder **AdX Buyer**.
+* Ihr Kontotyp. DFP von Google oder AdX Buyer.
 
 ## Ziel konfigurieren
 
-1. Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option [!DNL Google Ad Manager]und wählen Sie **[!UICONTROL Konfigurieren]**.
+1. Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option **[!DNL Google Ad Manager]** und wählen Sie **[!UICONTROL Konfigurieren]**.
    ![Mit Google Ad Manager-Ziel verbinden](/help/rtcdp/destinations/assets/google-1-destination.png)
 
    >[!NOTE]
