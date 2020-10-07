@@ -5,7 +5,7 @@ topic: tutorial
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funktionenpipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime umfangreiche Funktionen zu entwickeln. Dieses Dokument beschreibt die verschiedenen Klassen, die in einer Feature-Pipeline gefunden wurden, und bietet eine schrittweise Anleitung zum Erstellen einer benutzerdefinierten Feature-Pipeline mit dem Model Authoring-SDK in PySpark.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 27%
@@ -71,7 +71,7 @@ Die JSON-Konfigurationsdatei besteht aus Schlüsselwert-Paaren und dient zum Ang
 
 Das folgende Beispiel zeigt Schlüssel/Wert-Paare, die in einer Konfigurationsdatei gefunden wurden:
 
-**Beispiel für eine Konfigurations-JSON**
+**Configuration JSON-Beispiel**
 
 ```json
 [
