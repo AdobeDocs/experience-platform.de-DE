@@ -5,7 +5,7 @@ description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigu
 seo-description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 4%
@@ -41,7 +41,7 @@ Nachfolgend sind alle Einstellungen aufgeführt, die für eine Umgebung verfügb
 
 #### [!UICONTROL Identität]
 
-Der Identitätsabschnitt ist der einzige Abschnitt, der immer aktiviert ist. Es stehen zwei Einstellungen zur Verfügung: [!UICONTROL ID-Synchronisierung aktiviert] und [!UICONTROL ID-Synchronisierungs-Container-ID].
+Der Identitätsabschnitt ist der einzige Abschnitt, der immer aktiviert ist. Es stehen zwei Einstellungen zur Verfügung: &quot;[!UICONTROL ID-Synchronisierungen aktiviert]&quot;und &quot;[!UICONTROL ID-Synchronisierungs-Container-ID]&quot;.
 
 ![Identitätsabschnitt der Konfigurationsoberfläche](../../assets/edge_configuration_identity.png)
 
@@ -65,7 +65,7 @@ Sandboxen sind Standorte in der Adobe Experience Platform, an denen Kunden ihre 
 
 ##### [!UICONTROL Streaming-Inlet]
 
-Ein Streaming-Einlass ist eine HTTP-Quelle im Adobe Experience Platform. Diese werden auf der Registerkarte &quot; [!UICONTROL Quellen] &quot;im Adobe Experience Platform als HTTP-API erstellt.
+Ein Streaming-Einlass ist eine HTTP-Quelle im Adobe Experience Platform. Diese werden auf der Registerkarte &quot;[!UICONTROL Quellen]&quot;im Adobe Experience Platform als HTTP-API erstellt.
 
 ##### [!UICONTROL Ereignis DataSet]
 
@@ -95,7 +95,7 @@ Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL 
 
 [Umgebung](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target unterstützen Sie bei der Verwaltung Ihrer Implementierung in allen Entwicklungsstadien. Diese Einstellung gibt an, welche Umgebung Sie für jede Umgebung verwenden möchten.
 
-Adobe empfiehlt, diese Einstellung für jede Ihrer `dev`-, `stage`- und `prod` Edge-Umgebung anders festzulegen, um die Arbeit zu vereinfachen. Wenn Sie jedoch bereits [!UICONTROL Adobe Target-Umgebung] definiert haben, können Sie diese verwenden.
+Adobe empfiehlt, diese Einstellung für jede Ihrer `dev`-, `stage`- und `prod` Edge-Umgebung anders festzulegen, um die Arbeit zu vereinfachen. Wenn Sie jedoch bereits Adobe Target-Umgebung definiert haben, können Sie diese verwenden.
 
 #### Adobe Audience Manager
 
