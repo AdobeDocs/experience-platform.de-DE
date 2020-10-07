@@ -5,7 +5,7 @@ title: Attribution AI-Benutzerhandbuch
 topic: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AIS in der Benutzeroberfläche von Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 7%
@@ -21,7 +21,7 @@ Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AIS in 
 
 ## Erstellen einer Instanz
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe intelligent services. Klicken Sie im Container für Attribution AI auf **Öffnen**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe intelligent services. Klicken Sie im Container für Attribution AI auf **[!UICONTROL Öffnen]**.
 
 ![Zugreifen auf Ihre Instanz](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ Als Nächstes wird die Setup-Seite für Attribution AI angezeigt, auf der Sie gr
 
 ### Benennen der Instanz
 
-Geben Sie unter *Grundlegende Informationen* einen Namen und eine optionale Beschreibung für Ihre Dienstinstanz ein.
+Geben Sie unter **[!UICONTROL Grundlegende Informationen]** einen Namen und eine optionale Beschreibung für Ihre Dienstinstanz ein.
 
 ![Benennen einer Instanz](./images/user-guide/naming_instance.png)
 
@@ -67,15 +67,15 @@ Nach Auswahl eines Ereignisses wird rechts ein neues Dropdown-Feld angezeigt. Di
 
 ![no dropdown](./images/user-guide/conversion_event_1.png)
 
-Die *Hinzufügen Ereignis* - und *HinzufügenGruppe* -Schaltflächen dienen zur weiteren Definition der Konvertierung. Je nach der von Ihnen definierten Konversion müssen Sie eventuell die Schaltflächen *Hinzufügen Ereignis* und *Hinzufügen Gruppe* verwenden, um weitere Kontexte bereitzustellen.
+Die **[!UICONTROL Hinzufügen Ereignis]** - und **[!UICONTROL HinzufügenGruppe]** -Schaltflächen dienen zur weiteren Definition der Konvertierung. Je nach der von Ihnen definierten Konversion müssen Sie eventuell die Schaltflächen **[!UICONTROL Hinzufügen Ereignis]** und **[!UICONTROL Hinzufügen Gruppe]** verwenden, um weitere Kontexte bereitzustellen.
 
 ![ereignis hinzufügen](./images/user-guide/add_event.png)
 
-Durch Klicken auf **Hinzufügen Ereignis** werden weitere Felder erstellt, die nach der oben beschriebenen Methode ausgefüllt werden können. Hierdurch wird der Zeichenfolgendefinition unter dem *Konvertierungsnamen eine* AND *-Anweisung hinzugefügt*. Klicken Sie auf das **x** , um ein hinzugefügtes Ereignis zu entfernen.
+Durch Klicken auf **[!UICONTROL Hinzufügen Ereignis]** werden weitere Felder erstellt, die nach der oben beschriebenen Methode ausgefüllt werden können. Hierdurch wird der Zeichenfolgendefinition unter dem Konvertierungsnamen eine AND-Anweisung hinzugefügt. Klicken Sie auf das **x** , um ein hinzugefügtes Ereignis zu entfernen.
 
 ![Menü &quot;Ereignis hinzufügen&quot;](./images/user-guide/add_event_result.png)
 
-Wenn Sie auf **Hinzufügen Gruppe** klicken, können Sie weitere Felder getrennt vom Original erstellen. Nach dem Hinzufügen von Gruppen wird eine blaue *Und* -Schaltfläche angezeigt. Durch Klicken auf **Und** können Sie den Parameter so ändern, dass er &quot;Oder&quot;enthält. &quot;Oder&quot;wird verwendet, um mehrere erfolgreiche Konvertierungspfade zu definieren. &quot;Und&quot;erweitert den Konvertierungspfad um zusätzliche Bedingungen.
+Wenn Sie auf **[!UICONTROL Hinzufügen Gruppe]** klicken, können Sie weitere Felder getrennt vom Original erstellen. Nach dem Hinzufügen von Gruppen wird eine blaue *Und* -Schaltfläche angezeigt. Durch Klicken auf **Und** können Sie den Parameter so ändern, dass er &quot;Oder&quot;enthält. &quot;Oder&quot;wird verwendet, um mehrere erfolgreiche Konvertierungspfade zu definieren. &quot;Und&quot;erweitert den Konvertierungspfad um zusätzliche Bedingungen.
 
 ![und](./images/user-guide/and_or.png)
 
@@ -157,7 +157,7 @@ Klicken Sie auf das Uhrensymbol, um die Uhrzeit zu ändern, zu der die Bewertung
 
 Das Verhalten Ihrer Kunden kann sich je nach Land und Region erheblich unterscheiden. Für globale Unternehmen kann die Verwendung von länderbasierten oder regionsbasierten Modellen die Genauigkeit der Zuordnung erhöhen. Jede hinzugefügte Region erstellt ein neues Modell mit den Daten dieser Region.
 
-Um einen neuen Bereich zu definieren, klicken Sie auf **Hinzufügen Bereich**. Geben Sie in dem angezeigten Container einen Namen für die Region ein. Nur ein Wert (&quot;placeContext.geo.countryCode&quot;) wird aus der Dropdownliste Feldname *eingeben* ausgefüllt. Wählen Sie diesen Wert aus.
+Um einen neuen Bereich zu definieren, klicken Sie auf **[!UICONTROL Hinzufügen Bereich]**. Geben Sie in dem angezeigten Container einen Namen für die Region ein. Nur ein Wert (&quot;placeContext.geo.countryCode&quot;) wird aus der Dropdownliste Feldname **[!UICONTROL eingeben]** ausgefüllt. Wählen Sie diesen Wert aus.
 
 ![Region auswählen unter](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ Wählen Sie als Nächstes einen Operator aus.
 
 ![Regionsoperator](./images/user-guide/region_operators.png)
 
-Geben Sie abschließend den Ländercode in der Dropdown-Liste *Feldwert* eingeben ein.
+Geben Sie abschließend den Ländercode in der Dropdown-Liste **[!UICONTROL Feldwert]** eingeben ein.
 
 >[!NOTE]
 >
@@ -183,13 +183,13 @@ Um sicherzustellen, dass Sie das bestmögliche Modell erhalten, ist es wichtig, 
 
 ![Schulungsfenster](./images/user-guide/training_window.png)
 
-Klicken Sie nach Auswahl des Schulungsfensters in der oberen rechten Ecke auf **Fertig stellen** . Warten Sie einige Zeit, bis die Daten verarbeitet werden. Nach Abschluss des Vorgangs wird ein Popup-Dialogfeld angezeigt, in dem bestätigt wird, dass die Instanzeinrichtung abgeschlossen ist. Klicken Sie auf **OK** , um zur Seite &quot; *Dienstinstanzen* &quot;umgeleitet zu werden, auf der Sie Ihre Dienstinstanz sehen können.
+Klicken Sie nach Auswahl des Schulungsfensters in der oberen rechten Ecke auf **[!UICONTROL Fertig stellen]** . Warten Sie einige Zeit, bis die Daten verarbeitet werden. Nach Abschluss des Vorgangs wird ein Popup-Dialogfeld angezeigt, in dem bestätigt wird, dass die Instanzeinrichtung abgeschlossen ist. Klicken Sie auf **[!UICONTROL OK]** , um zur Seite &quot; **[!UICONTROL Dienstinstanzen]** &quot;umgeleitet zu werden, auf der Sie Ihre Dienstinstanz sehen können.
 
 ![setup complete](./images/user-guide/instance_setup_complete.png)
 
 ## Nächste Schritte
 
-Durch Befolgen dieser Übung haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz ihre Bewertung abgeschlossen hat (bis zu 24 Stunden), können Sie Einblicke [in Attribution AIS](./discover-insights.md)entdecken. Wenn Sie außerdem Ihre Ergebnisse herunterladen möchten, lesen Sie die Dokumentation zu den [Downloads von Rohwerten](./download-scores.md) .
+Durch Befolgen dieser Übung haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz ihre Bewertung abgeschlossen hat (bis zu 24 Stunden), können Sie Einblicke [in Attribution AIS](./discover-insights.md)entdecken. Wenn Sie außerdem Ihre Bewertungsergebnisse herunterladen möchten, besuchen Sie die Dokumentation zum [Herunterladen von Rohwerten](./download-scores.md) .
 
 ## Zusätzliche Ressourcen
 
