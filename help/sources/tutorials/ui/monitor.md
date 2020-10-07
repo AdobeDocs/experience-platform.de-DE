@@ -6,7 +6,7 @@ title: Überwachen von Konten und Datenflüssen
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 5%
@@ -96,7 +96,7 @@ Auf der Seite &quot; **[!UICONTROL Dataflow-Aktivität]** &quot;finden Sie Angab
 
 ![datflow-Aktivität](../../images/tutorials/monitor/dataflow-activity.png)
 
-Der Kalender ermöglicht die Ansicht der verschiedenen Zeitrahmen für erfasste Datensätze. Sie können zwischen den beiden voreingestellten Optionen &quot; **[!UICONTROL Letzte 7 Tage]** &quot;und &quot; **[!UICONTROL Letzte 30 Tage]**&quot;wählen. Alternativ können Sie einen benutzerdefinierten Zeitraum mithilfe des Kalenders festlegen. Wählen Sie den gewünschten Zeitraum aus und wählen Sie &quot; **[!UICONTROL Anwenden]** &quot;, um fortzufahren.
+Der Kalender ermöglicht die Ansicht der verschiedenen Zeitrahmen für erfasste Datensätze. Sie können zwischen den beiden voreingestellten Optionen &quot;[!UICONTROL Letzte 7 Tage]&quot;und &quot;[!UICONTROL Letzte 30 Tage]&quot;wählen. Alternativ können Sie einen benutzerdefinierten Zeitraum mithilfe des Kalenders festlegen. Wählen Sie den gewünschten Zeitraum aus und wählen Sie &quot; **[!UICONTROL Anwenden]** &quot;, um fortzufahren.
 
 ![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Wählen Sie &quot; **[!UICONTROL Datenaflow-Run-Beginn]** &quot;aus, um auf die 
 
 ![laufend](../../images/tutorials/monitor/run-metadata.png)
 
-Die Übersicht **[!UICONTROL zum Ausführen des]** Datenflusses enthält Informationen zum Datenfluss, einschließlich Metadaten, **[!UICONTROL Teilerfassung]** -Status und zugewiesener **[!UICONTROL Fehlerschwellenwert]**. Die obere Kopfzeile enthält auch eine **[!UICONTROL Fehlerzusammenfassung]**. Die **[!UICONTROL Fehlerzusammenfassung]** enthält den spezifischen Fehler der obersten Ebene, der anzeigt, in welchem Schritt beim Erfassungsvorgang ein Fehler aufgetreten ist.
+Die Übersicht über den **[!UICONTROL Datenfluss]** enthält Informationen zum Datendurchlauf, einschließlich Metadaten, des Teilaufzeichnungsstatus und des zugewiesenen Fehlerschwellenwerts. Die obere Kopfzeile enthält auch eine Fehlerzusammenfassung. Die **[!UICONTROL Fehlerzusammenfassung]** enthält den spezifischen Fehler der obersten Ebene, der anzeigt, in welchem Schritt beim Erfassungsvorgang ein Fehler aufgetreten ist.
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ In der folgenden Tabelle finden Sie Fehler, die in der **[!UICONTROL Fehlerzusam
 
 Die untere Hälfte des Bildschirms enthält Informationen zu **[!UICONTROL Dataflow-Ausführungsfehlern]**. Von hier aus können Sie auch die erfassten Dateien Ansicht, die Fehlerdiagnose für Vorschau und Download durchführen oder das Dateimanifest herunterladen.
 
-Im Abschnitt &quot; **[!UICONTROL Datenflussausführungsfehler]** &quot;werden der **[!UICONTROL Fehlercode]**, die Anzahl der fehlgeschlagenen Datensätze und die Informationen zum Fehler angezeigt.
+Im Abschnitt &quot; **[!UICONTROL Datenflussausführungsfehler]** &quot;werden der Fehlercode, die Anzahl der fehlgeschlagenen Datensätze und die Informationen zum Fehler angezeigt.
 
 Wählen Sie **[!UICONTROL Fehlerdiagnose]** für Vorschauen aus, um weitere Informationen zum Erfassungsfehler anzuzeigen.
 
 ![Datenflusslauffehler](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-Das Fenster **[!UICONTROL Vorschau]** für die Fehlerdiagnose wird angezeigt. In diesem Bildschirm werden spezifische Informationen zum Erfassungsfehler angezeigt, einschließlich **[!UICONTROL Dateiname]**, **[!UICONTROL Fehlercode]**, Name der Spalte, in der der Fehler aufgetreten ist, und Beschreibung des Fehlers.
+Das Fenster **[!UICONTROL Vorschau]** für die Fehlerdiagnose wird angezeigt. In diesem Bildschirm werden spezifische Informationen zum Erfassungsfehler angezeigt, einschließlich Dateiname, Fehlercode, Name der Spalte, in der der Fehler aufgetreten ist, und Beschreibung des Fehlers.
 
 Dieser Abschnitt enthält auch eine Vorschau der Spalte, die den Fehler enthält.
 
