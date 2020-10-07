@@ -5,7 +5,7 @@ title: Deskriptoren
 description: 'Schemas definieren eine statische Ansicht von Datenentitäten, geben jedoch nicht spezifisch an, wie sich Daten, die auf diesen Schemas basieren (z. B. Datensätze), zueinander verhalten. Mit Adobe Experience Platform können Sie diese Beziehungen und andere interpretative Metadaten über ein Schema mithilfe von Deskriptoren beschreiben. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 81%
@@ -200,7 +200,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Anfrage**
 
-Bei dieser Anfrage wird der Deskriptor im Grunde _neu geschrieben_, sodass der Anfragetext alle Felder enthalten muss, die zur Definition eines Deskriptors dieses Typs erforderlich sind. Anders ausgedrückt: Die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors ist mit der Payload zum Erstellen (POST) eines Deskriptors desselben Typs identisch.
+Bei dieser Anfrage wird der Deskriptor im Grunde neu geschrieben, sodass der Anfragetext alle Felder enthalten muss, die zur Definition eines Deskriptors dieses Typs erforderlich sind. Anders ausgedrückt: Die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors ist mit der Payload zum Erstellen (POST) eines Deskriptors desselben Typs identisch.
 
 In diesem Beispiel wird der Identitätsdeskriptor aktualisiert, um auf eine andere `xdm:sourceProperty` („Mobiltelefon“) zu verweisen und den `xdm:namespace` in „Telefon“ zu ändern.
 
