@@ -5,7 +5,7 @@ title: Experience-Datenmodell (XDM)-System
 topic: overview
 description: 'Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. '
 translation-type: tm+mt
-source-git-commit: d49bbc91b67dec0468b46d165521c7d097a801ee
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 10%
@@ -19,7 +19,7 @@ Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Pla
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für jede Anwendung bereit, die zur Kommunikation mit [!DNL Platform] Diensten verwendet werden kann. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Audiencen durch Segmente definieren und Kundenattribute zu Personalisierungszwecken ausdrücken.
 
-XDM is the foundational framework that allows Adobe Experience Cloud, powered by [!DNL Experience Platform], to deliver the right message to the right person, on the right channel, at exactly the right moment. Die Methode, auf der [!DNL Experience Platform] aufgebaut wird, **XDM System**, operalisiert [!DNL Experience Data Model] Schema für die Verwendung durch [!DNL Platform] Dienste.
+XDM is the foundational framework that allows Adobe Experience Cloud, powered by [!DNL Experience Platform], to deliver the right message to the right person, on the right channel, at exactly the right moment. Die Methode, auf der das XDM-System aufgebaut [!DNL Experience Platform] ist, operalisiert [!DNL Experience Data Model] Schema für die Verwendung durch [!DNL Platform] Dienste.
 
 This document provides an overview of the role of XDM System within [!DNL Experience Platform].
 
@@ -29,7 +29,7 @@ This document provides an overview of the role of XDM System within [!DNL Experi
 
 Bevor Daten erfasst werden können, muss ein Schema zusammengestellt werden, [!DNL Platform]um die Datenstruktur zu beschreiben und Beschränkungen für den Datentyp bereitzustellen, der in den einzelnen Feldern enthalten sein kann. Schema bestehen aus einer Basisklasse und Null oder mehr Mixins.
 
-Weitere Informationen zum Schema-Kompositionsmodell, einschließlich Entwurfsprinzipien und Best Practices, finden Sie in den [Grundlagen der Schema-Komposition](schema/composition.md).
+Weitere Informationen zum Schema-Kompositionsmodell, einschließlich Designprinzipien und Best Practices, finden Sie in den [Grundlagen der Schema-Komposition](schema/composition.md).
 
 ### [!DNL Schema Registry] und [!DNL Schema Library]
 
@@ -44,7 +44,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 * **Aufzeichnen von Daten**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt könnte eine Organisation oder eine Einzelperson sein.
 * **Zeitreihendaten**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
 
-Alle XDM-Schemas beschreiben Daten, die als Datensatz- oder Zeitreihen kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die **Klasse** des Schemas definiert, die einem Schema beim ersten Erstellen zugewiesen wird. XDM-Klassen beschreiben die kleinste Anzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten darzustellen.
+Alle XDM-Schemas beschreiben Daten, die als Datensatz- oder Zeitreihen kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema beim ersten Erstellen zugewiesen wird. XDM-Klassen beschreiben die kleinste Anzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten darzustellen.
 
 Obwohl Sie in der Lage sind, Ihre eigenen Klassen innerhalb der [!DNL Schema Registry]zu definieren, wird empfohlen, die bevorzugten Klassen **[!DNL XDM Individual Profile]** bzw. **[!DNL XDM ExperienceEvent]** für die Daten der Datensatz- und Zeitreihen zu verwenden. Diese Klassen werden nachfolgend detaillierter beschrieben.
 
