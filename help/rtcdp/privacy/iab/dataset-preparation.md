@@ -5,7 +5,7 @@ title: Unterstützung von IAB TCF 2.0 in der Echtzeit-Plattform für Kundendaten
 topic: privacy events
 description: In diesem Dokument werden Schritte zur Einrichtung der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Genehmigungsdaten beschrieben.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 3%
@@ -17,14 +17,14 @@ ht-degree: 3%
 
 Damit [!DNL Real-time Customer Data Platform] die Daten zur Kundengenehmigung gemäß IAB [!DNL Transparency & Consent Framework] (TCF) 2.0 verarbeitet werden können, müssen diese Daten an Datensätze gesendet werden, deren Schemas TCF 2.0-Einwilligungsfelder enthalten.
 
-Insbesondere sind zwei Datensätze für die Erfassung von TCF 2.0-Genehmigungsdaten erforderlich:
+Für die Erfassung von TCF 2.0-Genehmigungsdaten sind insbesondere zwei Datensätze erforderlich:
 
 * Ein auf der [!DNL XDM Individual Profile] Klasse basierender Datensatz, der für die Verwendung in aktiviert ist [!DNL Real-time Customer Profile].
 * Ein Datensatz, der auf der [!DNL XDM ExperienceEvent] Klasse basiert.
 
 In diesem Dokument werden Schritte zur Einrichtung dieser beiden Datensätze zur Erhebung der IAB TCF 2.0-Genehmigungsdaten beschrieben. Eine Übersicht über den vollständigen Arbeitsablauf zur Konfiguration [!DNL Real-time CDP] für TCF 2.0 finden Sie in der [IAB TCF 2.0 Compliance-Übersicht](./overview.md).
 
-## Voraussetzungen 
+## Voraussetzungen
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -72,7 +72,7 @@ Während jede Kombination aus Datenschutz und Struktur der darin enthaltenen Fel
 
 ## Schemas zur Kundengenehmigung erstellen {#create-schemas}
 
-In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas]workspace*. Gehen Sie von hier aus wie folgt vor, um jedes erforderliche Schema zu erstellen.
+In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. Gehen Sie von hier aus wie folgt vor, um jedes erforderliche Schema zu erstellen.
 
 >[!NOTE]
 >
@@ -80,11 +80,11 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Erstellen eines Schemas für die Einwilligung in einen Datensatz {#profile-schema}
 
-Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Schemas]&quot;ein neues Schema, das auf der** Klasse **[!DNL XDM Individual Profile]** basiert. Nachdem Sie das Schema im Schema-Editor geöffnet haben, klicken Sie auf der linken Seite der Arbeitsfläche unter dem Abschnitt &quot; **[!UICONTROL Mixins]** &quot;auf **[!UICONTROL Hinzufügen]** .
+Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Schemas]&quot;ein neues Schema, das auf der**[!DNL XDM Individual Profile] Klasse basiert. Nachdem Sie das Schema im Schema-Editor geöffnet haben, klicken Sie auf der linken Seite der Arbeitsfläche unter dem Abschnitt &quot; **[!UICONTROL Mixins]** &quot;auf **[!UICONTROL Hinzufügen]** .
 
 ![](../assets/iab/add-mixin-profile.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. Wählen Sie hier in der Liste die Option **[!UICONTROL Profil Privacy]** . Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Nachdem das Mixin ausgewählt ist, klicken Sie auf **[!UICONTROL Hinzufügen Mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. Wählen Sie hier in der Liste die Option **[!UICONTROL Profil Privacy]** . Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Klicken Sie nach Auswahl des Mixins auf **[!UICONTROL Hinzufügen Mixin]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -109,7 +109,7 @@ Damit die [!DNL Real-time CDP] von ihr erhaltenen Daten mit bestimmten Profilen 
 
 >[!NOTE]
 >
->Das in diesem Schema gezeigte Beispiel verwendet sein `identityMap` Feld als primäre Identität. Wenn Sie ein anderes Feld als primäre Identität festlegen möchten, stellen Sie sicher, dass Sie einen indirekten Bezeichner wie eine Cookie-ID verwenden und nicht ein direkt identifizierbares Feld, das nicht für interessensbasierte Werbung wie eine E-Mail-Adresse verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
+>Das in diesem Schema gezeigte Beispiel verwendet sein `identityMap` Feld als primäre Identität. Wenn Sie ein anderes Feld als primäre Identität festlegen möchten, stellen Sie sicher, dass Sie einen indirekten Bezeichner wie eine Cookie-ID verwenden und nicht ein direkt identifizierbares Feld, das nicht in interessensbasierter Werbung wie einer E-Mail-Adresse verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
 >
 >Schritte zum Festlegen eines primären Identitätsfelds für ein Schema finden Sie im Lernprogramm zur Erstellung von [Schemas](../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
@@ -127,11 +127,11 @@ Klicken Sie abschließend auf **[!UICONTROL Speichern]** , um die Änderungen zu
 
 ### Erstellen eines zeitreihenbasierten Schemas für die Zustimmung {#event-schema}
 
-Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Schemas]&quot;ein neues Schema, das auf der** Klasse **[!DNL XDM ExperienceEvent]** basiert. Nachdem Sie das Schema im Schema-Editor geöffnet haben, klicken Sie auf der linken Seite der Arbeitsfläche unter dem Abschnitt &quot; **[!UICONTROL Mixins]** &quot;auf **[!UICONTROL Hinzufügen]** .
+Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Schemas]** &quot;ein neues Schema, das auf der [!DNL XDM ExperienceEvent] Klasse basiert. Nachdem Sie das Schema im Schema-Editor geöffnet haben, klicken Sie auf der linken Seite der Arbeitsfläche unter dem Abschnitt &quot; **[!UICONTROL Mixins]** &quot;auf **[!UICONTROL Hinzufügen]** .
 
 ![](../assets/iab/add-mixin-event.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. Wählen Sie von hier aus **[!UICONTROL Experience Ereignis Privacy mixin]** der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Nachdem das Mixin ausgewählt ist, klicken Sie auf **[!UICONTROL Hinzufügen Mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. Wählen Sie von hier aus **[!UICONTROL Experience Ereignis Privacy mixin]** der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Klicken Sie nach Auswahl des Mixins auf **[!UICONTROL Hinzufügen Mixin]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
