@@ -5,10 +5,10 @@ title: Überblick über Adobe Experience Platform Connectoren für Datenquellen
 topic: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '866'
-ht-degree: 60%
+ht-degree: 57%
 
 ---
 
@@ -118,7 +118,7 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche bei verschiedenen K
 
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
-| **[!UICONTROL Quellen anzeigen]** aktiviert | Gewährt Lesezugriff auf die unter der Registerkarte *Katalog* aufgeführten Quelltypen sowie auf die Registerkarten *Durchsuchen*, *Konten* und *DataFlow*. |
+| **[!UICONTROL Quellen anzeigen]** aktiviert | Gewähren Sie auf der Registerkarte &quot;Katalog&quot;schreibgeschützten Zugriff auf die Quellen in den einzelnen Quelltypen sowie auf die Registerkarten &quot;Durchsuchen&quot;, &quot;Konten&quot;und &quot;Datenflug&quot;. |
 | **[!UICONTROL Quellen verwalten]** aktiviert | Gewährt zusätzlich zu in den **[!UICONTROL Quellen verwalten]** enthaltenen Berechtigungen Zugriff auf die Option **[!UICONTROL Quelle verbinden]** unter **[!UICONTROL Katalog]** sowie auf die Option **[!UICONTROL Daten auswählen]** unter **[!UICONTROL Durchsuchen]**. **[!UICONTROL Quellen verwalten]** beinhaltet außerdem die Berechtigung zum Aktivieren und Deaktivieren von **[!UICONTROL DataFlows]** sowie zur Bearbeitung der zugehörigen Zeitpläne. |
 | **[!UICONTROL Quellen anzeigen]** deaktiviert und **[!UICONTROL Quellen verwalten]** deaktiviert | Sperrt den Zugriff auf alle Quellen. |
 
