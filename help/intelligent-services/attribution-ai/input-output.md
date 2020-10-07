@@ -5,7 +5,7 @@ title: Eingabe und Ausgabe von Attribution AIS
 topic: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 4%
@@ -37,7 +37,7 @@ Nicht alle Spalten im Schema [!DNL Consumer Experience Event] (CEE) sind für At
 | Marketing.trackingCode | Touchpoint |
 | Marketing.campaignname | Touchpoint |
 | Marketing.campaigngroup | Touchpoint |
-| Handel | Konversion |
+| Handel | Konversion  |
 
 Normalerweise wird die Zuordnung auf Konvertierungsspalten wie Bestellung, Einkäufe und Kassengänge unter &quot;commerce&quot;ausgeführt. Die Spalten &quot;Kanal&quot;und &quot;Marketing&quot;werden dringend empfohlen, Touchpoints für gute Einblicke zu definieren. Sie können jedoch jede weitere Spalte zusammen mit den oben genannten Spalten einschließen, um sie als Konversions- oder Touchpoint-Definition zu konfigurieren.
 
@@ -60,7 +60,7 @@ Die folgenden Spalten sind nicht erforderlich, es wird jedoch empfohlen, sie in 
 
 Attribution AI erfordert historische Daten als Eingabe für Modellschulungen. Die erforderliche Datendauer wird hauptsächlich von zwei Hauptfaktoren bestimmt: Schulungsfenster und Lookback-Fenster. Die Eingabe mit kürzeren Schulungsfenstern ist anfälliger für aktuelle Trends, während längere Schulungsfenster stabilere und genauere Modelle erzeugen. Es ist wichtig, das Ziel mit historischen Daten zu modellieren, die Ihre Geschäftsziele am besten widerspiegeln.
 
-In der Konfiguration [des](./user-guide.md#training-window) Schulungsfensters werden Ereignis zur Konvertierung für Modellschulungen basierend auf der Vorkommenszeit Filter. Derzeit beträgt das Schulungsfenster mindestens 1 Quartal (90 Tage). Das [Lookback-Fenster](./user-guide.md#lookback-window) bietet einen Zeitraum, der angibt, wie viele Tage vor dem Konversions-Ereignis-Touchpoints im Zusammenhang mit diesem Konversions-Ereignis eingeschlossen werden sollten. Diese beiden Konzepte bestimmen zusammen die Menge der Eingabedaten (gemessen nach Tagen), die für eine Anwendung erforderlich sind.
+In der Konfiguration [des](./user-guide.md#training-window) Schulungsfensters werden Ereignis zur Konvertierung für Modellschulungen basierend auf der Häufigkeit des Auftretens Filter. Derzeit beträgt das Schulungsfenster mindestens 1 Quartal (90 Tage). Das [Lookback-Fenster](./user-guide.md#lookback-window) bietet einen Zeitraum, der angibt, wie viele Tage vor dem Konversions-Ereignis-Touchpoints im Zusammenhang mit diesem Konversions-Ereignis eingeschlossen werden sollten. Diese beiden Konzepte bestimmen zusammen die Menge der Eingabedaten (gemessen nach Tagen), die für eine Anwendung erforderlich sind.
 
 Standardmäßig definiert Attribution AI das Schulungsfenster als die letzten 2 Quartale (6 Monate) und das Lookback-Fenster als 56 Tage. Anders ausgedrückt, berücksichtigt das Modell alle definierten Konvertierungsmodelle, die in den letzten zwei Quartalen aufgetreten sind, und sucht nach allen Touchpoints, die innerhalb von 56 Tagen vor dem/den zugehörigen Konversions-Ereignissen aufgetreten sind.
 
@@ -140,7 +140,7 @@ Sie können den Pfad zu Ihren Rohwerten in der Benutzeroberfläche Ansicht haben
 
 ![Schema auswählen](./images/input-output/schemas_browse.png)
 
-Wählen Sie anschließend im Fenster &quot; **[!UICONTROL Struktur]** &quot;der Benutzeroberfläche ein Feld aus. Die Registerkarte &quot; **[!UICONTROL Feldeigenschaften]** &quot;wird geöffnet. Innerhalb der **[!UICONTROL Feldeigenschaften]** ist das Feld **[!UICONTROL Pfad]** , das Ihren Rohwerten zugeordnet wird.
+Wählen Sie anschließend im Fenster &quot; **[!UICONTROL Struktur]** &quot;der Benutzeroberfläche ein Feld aus. Die Registerkarte &quot; **[!UICONTROL Feldeigenschaften]** &quot;wird geöffnet. Innerhalb der **[!UICONTROL Feldeigenschaften]** ist das Pfadfeld, das Ihren Rohwerten zugeordnet ist.
 
 ![Schema auswählen](./images/input-output/field_properties.png)
 
@@ -220,7 +220,7 @@ Die nachstehende Tabelle ordnet die aggregierten Ergebnisse den Rohwerten zu. We
 | geo | _tenantID.your_Schema_name.conversion.geo |
 | ereignis_type | eventType |
 | media_type | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.mediaType |
-| kanal | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
+| channel | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
 | Aktion | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | kampagne_group | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | kampagne_name | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.campaignName |
