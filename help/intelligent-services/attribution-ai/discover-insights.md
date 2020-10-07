@@ -5,10 +5,10 @@ title: Gewinnen von Einblicken in Attribution AI
 topic: Attribution AI insights
 description: Dieses Dokument dient als Handbuch für die Interaktion mit Einblicken der Dienstinstanz in der Benutzeroberfläche von Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1183'
-ht-degree: 97%
+ht-degree: 93%
 
 ---
 
@@ -25,7 +25,7 @@ Um Einblicke für Attribution AI zu verwenden, benötigen Sie eine Dienstinstanz
 
 ## Übersicht über Einblicke von Dienstinstanzen
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Der *Dienste*-Browser wird geöffnet und zeigt verfügbare Adobe Intelligent Services an. Klicken Sie im Container für Attribution AI auf **Öffnen**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Der **[!UICONTROL Dienste]**-Browser wird geöffnet und zeigt verfügbare Adobe Intelligent Services an. Klicken Sie im Container für Attribution AI auf **[!UICONTROL Öffnen]**.
 
 ![Zugreifen auf Ihre Instanz](./images/insights/open_Attribution_ai.png)
 
@@ -43,7 +43,7 @@ Als Nächstes wird die Seite mit den Einblicken für diese Dienstinstanz angezei
 
 ### Details zur Dienstinstanz
 
-Um weitere Details für eine Dienstinstanz anzuzeigen, klicken Sie oben rechts auf **Mehr anzeigen**.
+Um weitere Details für eine Dienstinstanz anzuzeigen, klicken Sie oben rechts auf **[!UICONTROL Mehr anzeigen]**.
 
 ![Mehr anzeigen](./images/insights/show-more.png)
 
@@ -53,20 +53,20 @@ Es wird eine detaillierte Liste angezeigt. Weitere Informationen zu den aufgelis
 
 ### Bearbeiten einer Instanz
 
-Um eine Instanz zu bearbeiten, klicken Sie in oben rechts in der Navigation auf *Bearbeiten*.
+Um eine Instanz zu bearbeiten, klicken Sie in oben rechts in der Navigation auf **[!UICONTROL Bearbeiten]**.
 ![Auf Bearbeiten-Schaltfläche klicken](./images/insights/edit-button.png)
 
-Das Dialogfeld „Bearbeiten“ wird angezeigt, in dem Sie die Beschreibung und die Bewertungshäufigkeit der Instanz bearbeiten können. Um die Änderungen zu bestätigen und das Dialogfeld zu schließen, klicken Sie unten rechts auf *Bearbeiten*.
+Das Dialogfeld „Bearbeiten“ wird angezeigt, in dem Sie die Beschreibung und die Bewertungshäufigkeit der Instanz bearbeiten können. Um die Änderungen zu bestätigen und das Dialogfeld zu schließen, klicken Sie unten rechts auf **[!UICONTROL Bearbeiten]**.
 
 ![Bearbeiten-Popup-Fenster](./images/insights/edit-popover.png)
 
 ### Mehr Aktionen {#more-actions}
 
-Die Schaltfläche *Mehr Aktionen* befindet sich in der oberen rechten Navigation neben *Bearbeiten*. Wenn Sie auf **Mehr Aktionen** klicken, wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
+Die Schaltfläche **[!UICONTROL Mehr Aktionen]** befindet sich in der oberen rechten Navigation neben *Bearbeiten*. Wenn Sie auf **[!UICONTROL Mehr Aktionen]** klicken, wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
 
 - **Löschen**: Löscht die Instanz.
 - **Zusammenfassungsdaten herunterladen**: Lädt eine CSV-Datei mit den Zusammenfassungsdaten herunter.
-- **Auf Bewertungen zugreifen**: Indem Sie auf *Auf Bewertungen zugreifen* klicken, gelangen Sie zum [Tutorial für den Zugriff auf Bewertungen für Attribution AI](./download-scores.md).
+- **Auf Bewertungen zugreifen**: Indem Sie auf **Auf Bewertungen zugreifen** klicken, gelangen Sie zum [Tutorial für den Zugriff auf Bewertungen für Attribution AI](./download-scores.md).
 - **Ausführungsverlauf anzeigen**: Ein Popup-Fenster mit einer Liste aller mit der Dienstinstanz verbundenen Bewertungsläufe wird angezeigt.
 
 ![Mehr Aktionen](./images/insights/more-actions.png)
@@ -77,31 +77,31 @@ Mithilfe von Attribution AI-Einblicken können Sie Ihre Daten filtern und die Vi
 
 >[!NOTE]
 >
-> Standardmäßig ist jeder Filter auf „Alle“ eingestellt, mit Ausnahme des Filters für das *Attributionsmodell*, der auf „Inkrementelle und beeinflusste zugeordnete Konversionen“ eingestellt ist.
+>By default, every filter is set to &quot;All&quot; except the &quot;[!UICONTROL Attribution Model]&quot; filter which is set to &quot;Incremental and Influenced attributed conversions&quot;.
 
 ### Konversionsereignis
 
 Wenn Sie eine neue Instanz in Attribution AI erstellen, ist eines der erforderlichen Felder „Konversionsereignisse“. Konversionsereignisse sind Unternehmensziele, die die Auswirkungen von Marketing-Aktivitäten wie E-Commerce-Bestellungen, In-Store-Käufen und Website-Besuchen ermitteln.
 
-Innerhalb der Instanz können Sie mit dem Dropdown-Menü *Konversionsereignisse* eines der für Ihre Instanz definierten Ereignisse auswählen, um Ihre Daten zu filtern. Wenn Sie bestimmte Ereignisse auswählen, werden die Visualisierungen der Benutzeroberfläche so geändert, dass nur Konversionen aus diesen Ereignissen gefüllt werden.
+Innerhalb der Instanz können Sie mit dem Dropdown-Menü **[!UICONTROL Konversionsereignisse]** eines der für Ihre Instanz definierten Ereignisse auswählen, um Ihre Daten zu filtern. Wenn Sie bestimmte Ereignisse auswählen, werden die Visualisierungen der Benutzeroberfläche so geändert, dass nur Konversionen aus diesen Ereignissen gefüllt werden.
 
 ![Konversionsereignis](./images/insights/conversion-event.png)
 
 ### Attributionsmodell
 
-Durch Klicken auf *Attributionsmodell* wird eine Dropdown-Liste mit allen verfügbaren Attributionsmodellen geöffnet. Sie können mehrere Modelle zum Vergleich der Ergebnisse auswählen. Weitere Informationen zu den verschiedenen Attributionsmodellen und ihrer Funktionsweise finden Sie in der Übersicht über [Attribution AI](./overview.md), die eine Tabelle mit Informationen zu den einzelnen Modellen enthält.
+Clicking **[!UICONTROL Attribution Model]** opens a dropdown with all of the different attribution models available. Sie können mehrere Modelle zum Vergleich der Ergebnisse auswählen. Weitere Informationen zu den verschiedenen Attributionsmodellen und ihrer Funktionsweise finden Sie in der Übersicht über [Attribution AI](./overview.md), die eine Tabelle mit Informationen zu den einzelnen Modellen enthält.
 
 ![Attributionsmodell](./images/insights/attribution-model.png)
 
 ### Produkt
 
-Mit dem Filter *Produkt* können Sie aus allen Produkten auswählen, die ursprünglich bei der Erstellung Ihrer Instanz berücksichtigt wurden. Klicken Sie auf das Dropdown-Feld und wählen Sie mit der Suchfunktion alle Produkte aus, die Sie vergleichen möchten.
+Mit dem Filter **[!UICONTROL Produkt]** können Sie aus allen Produkten auswählen, die ursprünglich bei der Erstellung Ihrer Instanz berücksichtigt wurden. Klicken Sie auf das Dropdown-Feld und wählen Sie mit der Suchfunktion alle Produkte aus, die Sie vergleichen möchten.
 
 ![Produktfilter](./images/insights/product-filter.png)
 
 ### Geografie
 
-Der Filter *Geografie* füllt Ländercodes anhand regionenbasierter Modelle. Je nach Ihren Daten ist dieser Filter möglicherweise nicht vorhanden.
+Der Filter **[!UICONTROL Geografie]** füllt Ländercodes anhand regionenbasierter Modelle. Je nach Ihren Daten ist dieser Filter möglicherweise nicht vorhanden.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ Mit diesem Filter können Sie alle Regionen auswählen, die Sie beim Erstellen d
 
 ### Kanal
 
-Wenn Sie auf den Filter *Kanal* klicken, wird eine Dropdown-Liste mit allen verfügbaren Marketing-Kanälen angezeigt. Sie können mehrere Kanäle zum Vergleich auswählen.
+Wenn Sie auf den Filter **[!UICONTROL Kanal]** klicken, wird eine Dropdown-Liste mit allen verfügbaren Marketing-Kanälen angezeigt. Sie können mehrere Kanäle zum Vergleich auswählen.
 
 ![Kanal](./images/insights/channel.png)
 
@@ -129,13 +129,13 @@ Klicken Sie auf das Kalendersymbol, um das Popup-Fenster für den Datumsbereich 
 
 ## Übersicht über Ihre Daten
 
-Die Karte *Übersicht* zeigt Ihre Konversionen insgesamt nach Attributionsmodell an. Die Gesamtzahl ändert sich je nach Art der Suche anhand der zuvor in diesem Dokument beschriebenen Filter. Durch die Auswahl weiterer Modelle werden der Übersicht zusätzliche Kreise hinzugefügt, jeder mit einer eigenen Farbe entsprechend der Legende.
+Die Karte **[!UICONTROL Übersicht]** zeigt Ihre Konversionen insgesamt nach Attributionsmodell an. Die Gesamtzahl ändert sich je nach Art der Suche anhand der zuvor in diesem Dokument beschriebenen Filter. Durch die Auswahl weiterer Modelle werden der Übersicht zusätzliche Kreise hinzugefügt, jeder mit einer eigenen Farbe entsprechend der Legende.
 
 ![Übersicht](./images/insights/Overview.png)
 
 ## Wöchentliche Trends
 
-Die Karte *Wöchentliche Trends* unterteilt Ihre Konversionen insgesamt nach dem Datumsbereich, den Sie während des Filtervorgangs festgelegt haben.
+Die Karte **[!UICONTROL Wöchentliche Trends]** unterteilt Ihre Konversionen insgesamt nach dem Datumsbereich, den Sie während des Filtervorgangs festgelegt haben.
 
 ![Trends](./images/insights/weekly-trends.png)
 
@@ -147,17 +147,17 @@ Wenn Sie den Mauszeiger über die Datenzeile eines bestimmten Attributionsmodell
 
 ## Aufschlüsselung nach Kanal
 
-Die Karte *Aufschlüsselung nach Kanal* wird verwendet, um die Gesamtanzahl der Konversionen im Verhältnis zu den einzelnen Kanälen zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanäle und die ROI getroffen werden.
+Die Karte **[!UICONTROL Aufschlüsselung nach Kanal]** wird verwendet, um die Gesamtanzahl der Konversionen im Verhältnis zu den einzelnen Kanälen zu ermitteln. Mit dieser Karte können Entscheidungen über die Effektivität der einzelnen Kanäle und die ROI getroffen werden.
 
 ![Aufschlüsseln der Kanäle](./images/insights/channel-breakdown.png)
 
-Wenn Sie auf die drei Punkte oben rechts auf der Karte *Aufschlüsselung nach Kanal* klicken, wird eine Dropdown-Liste geöffnet, in der Sie Daten anhand von Touchpoints füllen können.
+Wenn Sie auf die drei Punkte oben rechts auf der Karte **[!UICONTROL Aufschlüsselung nach Kanal]** klicken, wird eine Dropdown-Liste geöffnet, in der Sie Daten anhand von Touchpoints füllen können.
 
 ![Touchpoints](./images/insights/breakdown-by-touchpoints.png)
 
 ## Topkampagnen
 
-Auf der Karte *Topkampagnen* wird ein Überblick über Ihre Kampagnen und die Leistung der Kampagne in den einzelnen Kanälen angezeigt. Diese Karte kann Ihnen helfen, Ihr Team über die Wirksamkeit einer bestimmten Kampagne für einen bestimmten Kanal zu informieren und Aufschluss darüber zu geben, wo weiter investiert werden sollte.
+Auf der Karte **[!UICONTROL Topkampagnen]** wird ein Überblick über Ihre Kampagnen und die Leistung der Kampagne in den einzelnen Kanälen angezeigt. Diese Karte kann Ihnen helfen, Ihr Team über die Wirksamkeit einer bestimmten Kampagne für einen bestimmten Kanal zu informieren und Aufschluss darüber zu geben, wo weiter investiert werden sollte.
 
 ![Topkampagnen](./images/insights/top-campaigns.png)
 
