@@ -5,7 +5,7 @@ title: Übersicht über den Katalog-Service
 topic: overview
 description: Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. Alle Daten, die in Experience Platform aufgenommen werden, werden als Dateien und Ordner im Data Lake gespeichert. Der Katalog wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 45%
@@ -17,7 +17,7 @@ ht-degree: 45%
 
 [!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Experience Platform. While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
-Simply put, [!DNL Catalog] acts as a metadata store or &quot;[!UICONTROL catalog]&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
+Simply put, [!DNL Catalog] acts as a metadata store or &quot;catalog&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
 
 * Wo befinden sich meine Daten?
 * Auf welcher Stufe der Verarbeitung befinden sich diese Daten?
@@ -35,7 +35,7 @@ Die [!DNL Catalog Service] nachverfolgten Ressourcen werden von mehreren [!DNL E
 
 [!DNL Experience Data Model] (XDM) System ist das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden. [!DNL Experience Platform]XDM-Schemas dienen in zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten.
 
-When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a **dataset**. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to.
+When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a dataset. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to.
 
 Informationen zum XDM-System im Allgemeinen finden Sie in der [Übersicht über das XDM-System](../xdm/home.md).
 
@@ -43,7 +43,7 @@ Informationen zum XDM-System im Allgemeinen finden Sie in der [Übersicht über 
 
 [!DNL Experience Platform] erfasst Daten aus mehreren Quellen und speichert Datensätze als Datensätze innerhalb der [!DNL Data Lake]. [!DNL Catalog] verfolgt die Metadaten für diese Datensätze, unabhängig von ihrer Quelle oder Methode der Erfassung.
 
-When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for **batch** files. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. [!DNL Catalog] verfolgt die Metadaten für diese Stapeldateien sowie die Datensätze, in denen sie nach der Erfassung beibehalten werden. Batch-Metadaten umfassen Informationen zur Anzahl der erfolgreich aufgenommenen Datensätze sowie zu fehlgeschlagenen Datensätzen und zugehörige Fehlermeldungen.
+When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for batch files. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. [!DNL Catalog] verfolgt die Metadaten für diese Stapeldateien sowie die Datensätze, in denen sie nach der Erfassung beibehalten werden. Batch-Metadaten umfassen Informationen zur Anzahl der erfolgreich aufgenommenen Datensätze sowie zu fehlgeschlagenen Datensätzen und zugehörige Fehlermeldungen.
 
 Weitere Informationen finden Sie in der [Datenerfassung – Übersicht](../ingestion/home.md).
 
