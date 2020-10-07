@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Dieses Tutorial umfasst zwei Hauptabschnitte. Zuerst erstellen Sie mit einer Vorlage in JupyterLab Notebook ein Modell für maschinelles Lernen. Dann führen Sie den Workflow „Notebook an Rezept“ in JupyterLab aus, um ein Rezept in Data Science Workspace zu erstellen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 84%
@@ -302,7 +302,7 @@ Der Zweck von Training besteht darin, mithilfe von Funktionen und Bezeichnungen 
 
 >[!NOTE]
 > 
->_Funktionen_ bezieht sich auf die Eingabevariable, die vom maschinellen Lernmodell zur Vorhersage der _Bezeichnungen_ verwendet wird.
+>Funktionen bezieht sich auf die Eingabevariable, die vom maschinellen Lernmodell zur Vorhersage der Bezeichnungen verwendet wird.
 
 Die `train()`-Funktion sollte das Trainings-Modell enthalten und das trainierte Modell zurückgeben. Beispiele für verschiedene Modelle finden Sie in der Dokumentation [Benutzerhandbuch zu scikit-learn](https://scikit-learn.org/stable/user_guide.html).
 
