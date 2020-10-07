@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei Sandboxes
 topic: troubleshooting guide
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Sandboxes in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 92%
@@ -30,9 +30,9 @@ In Experience Platform gibt es zwei Arten von Sandboxes:
 * Produktions-Sandbox
 * Nicht-Produktions-Sandboxes
 
-Experience Platform stellt eine einzelne **Produktions-Sandbox** bereit, die weder gelöscht noch zurückgesetzt werden kann. Es kann nur eine Produktions-Sandbox pro Platform-Instanz geben.
+Experience Platform stellt eine einzige Produktions-Sandbox bereit, die weder gelöscht noch zurückgesetzt werden kann. Es kann nur eine Produktions-Sandbox pro Platform-Instanz geben.
 
-Im Gegensatz dazu können Sandbox-Administratoren verschiedene **Nicht-Produktions-Sandboxes** für eine Platform-Instanz erstellen. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Nicht-Produktions-Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
+Im Gegensatz dazu können Sandbox-Administratoren verschiedene Nicht-Produktions-Sandboxes für eine Platform-Instanz erstellen. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Nicht-Produktions-Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
 
 Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](./home.md).
 
@@ -50,7 +50,7 @@ Experience Platform unterstützt derzeit bis zu 15 Nicht-Produktions-Sandboxes, 
 
 ## Ich habe gerade eine Sandbox eingerichtet. Wie lege ich Berechtigungen für Benutzer fest, die mit dieser Sandbox arbeiten sollen?
 
-Adobe Admin Console verknüpft Benutzer über **Profile** mit Sandboxes und Berechtigungen. Nachdem Sie eine neue Sandbox erstellt haben, navigieren Sie zum Tab _Berechtigungen_ des Produktprofils, dem Sie Zugriff gewähren möchten, und klicken Sie dann auf **Sandboxes**. Nun können Sie Zugriff auf die neue Sandbox genauso wie bei anderen Berechtigungen hinzufügen oder entfernen.
+Adobe Admin Console verknüpft Benutzer über Profile mit Sandboxes und Berechtigungen. Nachdem Sie eine neue Sandbox erstellt haben, navigieren Sie zum Tab **Berechtigungen** des Produktprofils, dem Sie Zugriff gewähren möchten, und klicken Sie dann auf **Sandboxes**. Nun können Sie Zugriff auf die neue Sandbox genauso wie bei anderen Berechtigungen hinzufügen oder entfernen.
 
 Wenn Sie Benutzern einer bestimmten Sandbox eindeutige Berechtigungen hinzufügen möchten, müssen Sie möglicherweise ein neues Produktprofil mit den jeweiligen Sandboxes und Berechtigungen erstellen und die gewünschten Benutzer diesem Profil zuordnen.
 
