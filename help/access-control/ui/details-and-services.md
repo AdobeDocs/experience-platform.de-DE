@@ -5,10 +5,10 @@ title: Details und zusätzliche Dienste für ein Produktprofil verwalten
 topic: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zur Verwaltung von Details und zusätzlichen Dienstleistungen für ein Profil in der Adobe Admin Console beschrieben. Über das Menü Profileinstellungen können Sie die Details eines Profils konfigurieren und auf zusätzliche Dienste zugreifen.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 72%
+ht-degree: 57%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 72%
 
 ![profile-settings](../images/profile-settings.png)
 
-Das Menü **[!UICONTROL Profileinstellungen]** wird auf dem Tab **[!UICONTROL Details]** angezeigt. Auf diesem Tab können Sie Ihren **[!UICONTROL Profilnamen]** und die **[!UICONTROL Beschreibung]** eingeben und bearbeiten. Außerdem können Sie Ihren **[!UICONTROL Anzeigenamen]** sowie die E-Mail-Benachrichtigungseinstellungen für Ihr Konto ändern.
+Das Menü **[!UICONTROL Profileinstellungen]** wird auf dem Tab **[!UICONTROL Details]** angezeigt. Auf dieser Registerkarte können Sie den Namen und die Beschreibung Ihres Profils eingeben und bearbeiten. Sie können auch Ihren Anzeigenamen und die E-Mail-Benachrichtigungseinstellungen für Ihr Konto ändern.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
