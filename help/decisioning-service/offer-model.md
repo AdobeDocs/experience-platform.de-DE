@@ -5,33 +5,33 @@ title: Domain-Modell für Angebotsentscheidungen
 topic: overview
 description: Angebotsentscheidungen sind ein Anwendungsfall von Decisioning Service, bei dem Sie die Regeln und Prognosen, die zur Interaktion mit Kunden mittels Angeboten verwendet werden, formalisieren und zentral verwalten.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '2640'
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
 
 # Übersicht über das Domain-Modell für Angebotsentscheidungen
 
-Offer decisioning is a use case of [!DNL Decisioning Service] within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. Angebotsentscheidungen werden als eine Art von _**Inhaltsentscheidung**_ betrachtet. In diesem Fall werden die _**Entscheidungsoptionen**_ als _**Angebote**_ bezeichnet und sind als solche durch den ihnen beigefügten Inhalt gekennzeichnet. For an introduction of the object model used by the [!DNL Decisioning Service], please refer to [Decisioning Service Domain Model](experience-model.md).
+Offer decisioning is a use case of [!DNL Decisioning Service] within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. Angebotsentscheidungen werden als eine Art von Inhaltsentscheidung betrachtet. In diesem Fall werden die Entscheidungsoptionen als Angebote bezeichnet und sind als solche durch den ihnen beigefügten Inhalt gekennzeichnet. For an introduction of the object model used by the [!DNL Decisioning Service], please refer to [Decisioning Service Domain Model](experience-model.md).
 
 Ziel ist es, dem Endbenutzer auf Grundlage von Targeting-Kriterien, Kosten- und Frequenzbegrenzungen sowie vorherigen Interaktionen auf verschiedenen Kanälen (einschließlich zuvor vorgeschlagener Angebote) in jedem Kanal ein „bestes Angebot“ zu unterbreiten.
 
-Wie bei allen Entscheidungsfällen werden die Entscheidungsoptionen (Angebote) in einem Repository verwaltet, das von einer beliebigen Anzahl von Anwendungen gemeinsam genutzt wird. Angebote können von verschiedenen Abteilungen Ihrer Organisation oder von Partnern erstellt werden; diese Angebote lassen sich täglich hinzufügen und entfernen.
+Wie bei allen Entscheidungs-Anwendungsfällen werden die Entscheidungsoptionen (Angebot) in einem Repository verwaltet, das von einer beliebigen Anwendungsanzahl freigegeben wird. Angebote können von verschiedenen Abteilungen Ihrer Organisation oder von Partnern erstellt werden; diese Angebote lassen sich täglich hinzufügen und entfernen.
 
-Angebote werden von der Anwendung, die das Erlebnis bereitstellt, visuell in größere Erlebnisse eingefügt. _**Platzierungen**_, manchmal auch als Positionen oder Slots bezeichnet, sind wichtige Komponenten bei der Erstellung einer Strategie. Die Entwicklung einer Angebotsstrategie beginnt oft mit der Definition dieser Platzierungen. Ein Angebot verfügt in der Regel über mehrere _**Inhaltsdarstellungen**_, sodass es in verschiedene Erlebnisse richtig integriert werden kann. Jedes von ihnen weist unterschiedliche Dimensions- oder andere Begrenzungen auf und erfordert andere Medienformate.
+Angebote werden von der Anwendung, die das Erlebnis bereitstellt, visuell in größere Erlebnisse eingefügt. Platzierungen, manchmal auch als Positionen oder Slots bezeichnet, sind wichtige Komponenten bei der Erstellung einer Strategie. Die Entwicklung einer Angebotsstrategie beginnt oft mit der Definition dieser Platzierungen. Ein Angebot verfügt in der Regel über mehrere Inhaltsdarstellungen, sodass es in verschiedene Erlebnisse richtig integriert werden kann. Jedes von ihnen weist unterschiedliche Dimensions- oder andere Begrenzungen auf und erfordert andere Medienformate.
 
-Angebote sind häufig mit Waren oder Dienstleistungen verknüpft und es gibt eine Kostenberechnung. Eine Organisation muss in der Lage sein, die Ressourcen, die von Angeboten verbraucht werden, zu beschränken, und muss daher die Möglichkeit haben, die Gesamtanzahl der Vorschläge für ein Angebot zu _**begrenzen**_.
+Angebote sind häufig mit Waren oder Dienstleistungen verknüpft und es gibt eine Kostenberechnung. Eine Organisation muss in der Lage sein, die Ressourcen, die von Angeboten verbraucht werden, zu beschränken, und muss daher die Möglichkeit haben, die Gesamtanzahl der Vorschläge für ein Angebot zu begrenzen.
 
 Der prognostizierte Wert eines akzeptierten Angebots für die Organisation ist das Optimierungskriterium und steht den Kosten für die Abgabe eines Angebots gegenüber. Kosten, Annahmewahrscheinlichkeit und voraussichtlicher Wert werden zur Anordnung der Angebote verwendet. Das beste Angebot ist das mit den höchsten prognostizierten positiven Auswirkungen auf die Ziele Ihrer Angebotsaktivitäten.
 
-Bei Angebotsentscheidungen werden die Interaktionen, die ein Endbenutzer _**über verschiedene Kanäle**_ und Anwendungen hinweg hatte, sowie die Profil- und Erlebnisereignisdaten des Endbenutzers berücksichtigt. Beispielsweise kann eine Callcenter-Anwendung mithilfe der Angebotsentscheidung ein Angebot aktivieren oder unterdrücken, je nachdem, was der Endbenutzer gekauft und welche Reviews er veröffentlicht hat. Alternativ kann sich eine E-Mail-Verwaltungsanwendung darauf verlassen, dass die Angebotsentscheidung je nach dem Browser-Verlauf auf einer Website das „nächste beste Angebot“ in einem wöchentlichen Newsletter auswählt.
+Bei Angebotsentscheidungen werden die Interaktionen, die ein Endbenutzer über verschiedene Kanäle und Anwendungen hinweg hatte, sowie die Profil- und Erlebnisereignisdaten des Endbenutzers berücksichtigt. Beispielsweise kann eine Callcenter-Anwendung mithilfe der Angebotsentscheidung ein Angebot aktivieren oder unterdrücken, je nachdem, was der Endbenutzer gekauft und welche Reviews er veröffentlicht hat. Alternativ kann sich eine E-Mail-Verwaltungsanwendung darauf verlassen, dass die Angebotsentscheidung je nach dem Browser-Verlauf auf einer Website das „nächste beste Angebot“ in einem wöchentlichen Newsletter auswählt.
 
-Angebote verfügen über andere interessante Eigenschaften. Häufig gibt es einen definierten _**Zeitplan**_ oder Datums- und Zeitbereich, in dem das Angebot gültig ist und bis zu dem das Angebot annulliert werden muss.
+Angebote verfügen über andere interessante Eigenschaften. Häufig gibt es einen definierten Zeitplan oder Datums- und Zeitbereich, in dem das Angebot gültig ist und bis zu dem das Angebot annulliert werden muss.
 
-Schließlich reduziert sich die Attraktivität eines Angebots mit der Häufigkeit seiner Darstellung. Ein Angebot, das nicht angenommen wird, nachdem es wiederholt vorgeschlagen wurde, ist eine verlorene Chance, weil stattdessen ein anderes Angebot hätte angezeigt werden können. Aus diesem Grund muss die _**Ermüdung**_ von Endbenutzern verwaltet werden.
+Schließlich reduziert sich die Attraktivität eines Angebots mit der Häufigkeit seiner Darstellung. Ein Angebot, das nicht angenommen wird, nachdem es wiederholt vorgeschlagen wurde, ist eine verlorene Chance, weil stattdessen ein anderes Angebot hätte angezeigt werden können. Aus diesem Grund muss die Ermüdung von Endbenutzern verwaltet werden.
 
 ## Strategie für Angebotsentscheidungen auf einen Blick
 
