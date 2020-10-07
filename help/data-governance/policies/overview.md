@@ -5,7 +5,7 @@ title: Datennutzungsrichtlinien – Übersicht
 topic: policies
 description: Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 10%
@@ -21,7 +21,7 @@ Dieses Dokument bietet einen allgemeinen Überblick über die Richtlinien zur Da
 
 ## Marketing-Aktionen {#marketing-actions}
 
-**Marketingaktionen**(auch als **Marketing-Nutzungsszenarien** bezeichnet) im Rahmen des Data Governance-Rahmens sind Aktionen, die ein [!DNL Experience Platform] Datenkonsument durchführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Daher wird eine Datenverwendungsrichtlinie wie folgt definiert:
+Marketingaktionen (auch als Marketing-Nutzungsszenarien bezeichnet) im Rahmen des Data Governance-Rahmens sind Aktionen, die ein [!DNL Experience Platform] Datenkonsument durchführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Daher wird eine Datenverwendungsrichtlinie wie folgt definiert:
 
 1. Eine bestimmte Marketingaktion
 2. Die Datenverwendungs-Beschriftungen, die für diese Aktion eingeschränkt sind, gegen
@@ -38,7 +38,7 @@ Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten re
 >
 >Wenn Sie [!DNL Real-time Customer Data Platform]diese verwenden, können Sie Marketingverwendungsfälle für Ziele einrichten, um die Durchsetzung der Richtlinie zu automatisieren. Weitere Informationen finden Sie im Dokument zur [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md) .
 
-Eine Liste der [verfügbaren, von der Adobe definierten Marketingaktionen](#core-actions)finden Sie im Anhang zu diesem Dokument. Sie können auch eigene benutzerdefinierte Marketingaktionen mit der [!DNL Policy Service] API oder der [!DNL Experience Platform ]Benutzeroberfläche definieren. Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
+Eine Liste der [verfügbaren, von der Adobe definierten Marketingaktionen](#core-actions)finden Sie im Anhang zu diesem Dokument. Sie können auch eigene benutzerspezifische Marketingaktionen mit der [!DNL Policy Service] API oder der [!DNL Experience Platform ]Benutzeroberfläche definieren. Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
