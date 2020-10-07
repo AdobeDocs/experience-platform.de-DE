@@ -5,10 +5,10 @@ title: Batch-Erfassung – Übersicht
 topic: overview
 description: Mit der Batch Ingestion-API können Sie Daten als Batch-Dateien in Adobe Experience Platform aufnehmen. Daten, die aufgenommen werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1196'
-ht-degree: 83%
+ht-degree: 81%
 
 ---
 
@@ -127,7 +127,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 Nachdem Sie erfolgreich einen neuen Batch zum Hochladen erstellt haben, können Dateien in einen bestimmten Datensatz hochgeladen werden.
 
-Sie können Dateien mit der **Small File Upload-API** hochladen. Wenn Ihre Dateien jedoch zu groß sind und das Gateway-Limit überschritten wird (z. B. längere Timeouts, Anfragen für überschrittene Dateigröße und andere Einschränkungen), können Sie zur **Large File Upload-API** wechseln. Diese API lädt die Datei in Teilen hoch und fügt die Daten mithilfe des Aufrufs **Large File Upload Complete-API** wieder zusammen.
+Sie können Dateien mit der Small File Upload-API hochladen. Wenn Ihre Dateien jedoch zu groß sind und das Gateway-Limit überschritten wird (z. B. längere Timeouts, Anfragen für überschrittene Dateigröße und andere Einschränkungen), können Sie zur Large File Upload-API wechseln. Diese API lädt die Datei in Teilen hoch und fügt die Daten mithilfe des Aufrufs Large File Upload Complete-API wieder zusammen.
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. By doing this, the [!DNL Catalog] **DataSetFile** entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
+Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. By doing this, the [!DNL Catalog] DataSetFile entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **Anfrage**
 
@@ -389,10 +389,10 @@ Das `"status"`-Feld zeigt den aktuellen Status des angeforderten Batches an. Die
 | Status | Beschreibung |
 | ------ | ----------- |
 | Vorzeitig beendet | Der Batch wurde nicht im erwarteten Zeitrahmen fertiggestellt. |
-| Abgebrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Sobald sich ein Batch im Status **Geladen** befindet, kann der Batch nicht mehr abgebrochen werden. |
-| Aktiv | Der Batch wurde erfolgreich gefördert und steht für den nachgelagerten Verbrauch zur Verfügung. Dieser Status kann synonym mit **Erfolg** verwendet werden. |
+| Abgebrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Wenn sich der Stapel im Status &quot;geladen&quot;befindet, kann er nicht abgebrochen werden. |
+| Aktiv | Der Batch wurde erfolgreich gefördert und steht für den nachgelagerten Verbrauch zur Verfügung. Dieser Status kann synonym mit &quot;Erfolg&quot;verwendet werden. |
 | Gelöscht | Die Daten für den Batch wurden vollständig entfernt. |
-| Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Batch werden **nicht** angezeigt. Dieser Status kann synonym mit **Fehler** verwendet werden. |
+| Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Batch werden **nicht** angezeigt. Dieser Status kann synonym mit &quot;Failure&quot;verwendet werden. |
 | Inaktiv | Der Batch wurde erfolgreich gefördert, wurde jedoch zurückgesetzt oder ist abgelaufen. Der Batch ist nicht mehr für den nachgelagerten Verbrauch verfügbar. |
 | Geladen | Die Daten für den Batch sind abgeschlossen und der Stapel kann gefördert werden. |
 | Wird geladen | Daten für diesen Batch werden hochgeladen und der Batch kann derzeit noch **nicht** gefördert werden. |
