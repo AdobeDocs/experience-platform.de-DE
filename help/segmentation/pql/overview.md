@@ -5,7 +5,7 @@ title: Profil Abfrage Language (PQL) - Übersicht
 topic: developer guide
 description: Dieser Leitfaden bietet einen allgemeinen Überblick über PQL, der Formatierungsrichtlinien enthält und PQL-Ausdrücke anzeigt.
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 3%
@@ -29,7 +29,7 @@ PQL-Abfragen haben folgende Unterschrift:
 
 Der Eingabeparameter kann ein einfacher Primitiv sein, z. B. ein boolescher oder ein String, oder ein komplexerer Typ, z. B. ein Objekt, ein Array oder eine Map.
 
-Es gibt **drei** verschiedene Möglichkeiten, auf Eingabeparameter innerhalb eines PQL-Ausdrucks zu verweisen:
+Es gibt drei verschiedene Möglichkeiten, auf Eingabeparameter im Hauptteil eines PQL-Ausdrucks zu verweisen:
 
 ### Impliziter Verweis auf den ersten Parameter
 
