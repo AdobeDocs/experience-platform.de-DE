@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorials
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
 source-wordcount: '3835'
-ht-degree: 18%
+ht-degree: 17%
 
 ---
 
@@ -126,7 +126,7 @@ Similar to the `name` field, the fields you just added represent multi-field con
 
 The &quot;[!UICONTROL Loyalty Members]&quot; schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. Es gibt keine standardmäßigen Mixins, die die erforderlichen Felder enthalten. Daher müssen Sie ein neues Mixin definieren.
 
-Wenn Sie dieses Mal das Dialogfeld **[!UICONTROL Mixin hinzufügen]** öffnen, wählen Sie **[!UICONTROL Neues Mixin erstellen]**. Sie werden dann aufgefordert, einen **[!UICONTROL Anzeigenamen]** und eine **[!UICONTROL Beschreibung]** für Ihr Mixin anzugeben.
+Wenn Sie dieses Mal das Dialogfeld **[!UICONTROL Mixin hinzufügen]** öffnen, wählen Sie **[!UICONTROL Neues Mixin erstellen]**. Sie werden dann aufgefordert, einen Anzeigenamen und eine Beschreibung für Ihr Mixin anzugeben.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -167,7 +167,7 @@ Für jedes Feld sind die folgenden Informationen erforderlich:
 * **[!UICONTROL Typ]:** Der Datentyp des Felds. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
 * **[!UICONTROL Beschreibung]:** Es sollte eine optionale Beschreibung des Felds mit maximal 200 Zeichen in Satzform eingefügt werden.
 
-The first field for the `Loyalty` object will be a string called `loyaltyId`. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including **[!UICONTROL Default value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum length]**.
+The first field for the `Loyalty` object will be a string called `loyaltyId`. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including default value, format, and maximum length.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
@@ -226,7 +226,7 @@ Now, when you look under **[!UICONTROL Structure]**, you can see that the `loyal
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-In einem zukünftigen Schema können Sie nun einem Feld den **[!UICONTROL Typ]** &quot;[!DNL Loyalty]&quot;zuweisen und es enthält automatisch Felder für ID, Treuestufe, Mitglied-Seitennummer und Punkte.
+In einem zukünftigen Schema können Sie nun ein Feld als &quot;[!DNL Loyalty]&quot;Typ zuweisen und es enthält automatisch Felder für ID, Treuestufe, Mitglied seit und Punkte.
 
 ## Suchen und Filtern von Schema-Feldern
 
@@ -336,7 +336,7 @@ Wählen Sie im Arbeitsbereich **[!UICONTROL Schemas]** die Option Schema **** er
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aus einer Liste verfügbarer Klassen auswählen können. Wählen Sie oben im Dialogfeld die Option **[!UICONTROL Neue Klasse]** erstellen. You can then give your new class a **[!UICONTROL Display name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
+Es wird ein Dialogfeld angezeigt, in dem Sie aus einer Liste verfügbarer Klassen auswählen können. Wählen Sie oben im Dialogfeld die Option **[!UICONTROL Neue Klasse]** erstellen. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
