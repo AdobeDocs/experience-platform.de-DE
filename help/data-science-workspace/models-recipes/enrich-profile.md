@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Dieses Dokument bietet eine schrittweise Anleitung zur Erweiterung des Echtzeit-Profils durch maschinelles Lernen, zur Unterteilung der Schritte in die folgenden Abschnitte, zum Erstellen eines Output-Schemas/Datensatzes, zum Konfigurieren eines Output-Schemas/Datensatzes und zum Erstellen von Segmenten mithilfe des Segmentaufbaus.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 69%
@@ -43,10 +43,10 @@ The first step towards enriching [!DNL Real-time Customer Profile] with scoring 
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Dieser Abschnitt enthält grundlegende Anweisungen zum Erstellen eines Schemas mit dem Schema-Builder. Eine ausführlichere Anleitung finden Sie im Tutorial zum [Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md).
 
-1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Schema]**, um auf den Schema-Browser zuzugreifen. Klicken Sie auf **[!UICONTROL Schema erstellen]**, um den *Schema-Editor* zu öffnen, wo Sie interaktiv Schemas erstellen und einrichten können.
+1. Klicken Sie in Adobe Experience Platform auf die Registerkarte **[!UICONTROL Schema]**, um auf den Schema-Browser zuzugreifen. Klicken Sie auf **[!UICONTROL Schema erstellen]**, um den **Schema-Editor** zu öffnen, wo Sie interaktiv Schemas erstellen und einrichten können.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Klicken Sie im Fenster *Komposition* auf **[!UICONTROL Zuweisen]**, um die verfügbaren Klassen zu durchsuchen.
+2. Klicken Sie im Fenster **Komposition** auf **[!UICONTROL Zuweisen]**, um die verfügbaren Klassen zu durchsuchen.
    * Um eine vorhandene Klasse zuzuweisen, markieren Sie die gewünschte Klasse und klicken Sie dann auf **[!UICONTROL Klasse zuweisen]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen defin
 
    An diesem Punkt sollte die Struktur Ihres Schemas einige Klassenfelder enthalten; jetzt können Sie Mixins zuweisen. Ein Mixin ist eine Gruppe aus einem oder mehreren Feldern, die ein bestimmtes Konzept beschreiben.
 
-3. Klicken Sie im Fenster *Komposition* im Unterabschnitt *Mixins* auf **[!UICONTROL Hinzufügen]**.
+3. Klicken Sie im Fenster **Komposition** im Unterabschnitt **Mixins** auf **[!UICONTROL Hinzufügen]**.
    * Um ein vorhandenes Mixin zuzuweisen, markieren Sie das gewünschte Mixin und klicken Sie auf **[!UICONTROL Mixin hinzufügen]**. Anders als bei Klassen können einem einzelnen Schema mehrere Mixins zugewiesen werden, sofern dies nützlich ist.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
