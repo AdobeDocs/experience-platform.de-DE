@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. Schemas sind die Standardmethode zur Beschreibung von Daten in der Experience Platform, so dass alle Daten, die mit Schemas konform sind, ohne Konflikte innerhalb einer Organisation wiederverwendbar sind und sogar zwischen mehreren Organisationen geteilt werden können.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 27%
