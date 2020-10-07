@@ -6,7 +6,7 @@ topic: policies
 type: Tutorial
 description: Mit der Policy Service-API können Sie Datenverwendungsrichtlinien erstellen und verwalten, um zu bestimmen, welche Marketingaktionen für Daten mit bestimmten Datenverwendungsbeschriftungen durchgeführt werden können. Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer Richtlinie mithilfe der Policy Service API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 49%
@@ -195,7 +195,7 @@ Zeichnen Sie die URI-ID der neu erstellten Marketingaktion auf, wie sie im näch
 
 Zum Erstellen einer neuen Richtlinie müssen Sie die URI-ID einer Marketingaktion mit einem Ausdruck der Gebrauchsbeschriftungen versehen, die diese Marketingaktion verbieten.
 
-This expression is called a **policy expression** and is an object containing either (A) a label, or (B) an operator and operands, but not both. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt. So könnte beispielsweise eine Richtlinie für den Export von Daten an eine Drittpartei verboten werden, wenn `C1 OR (C3 AND C7)`-Kennzeichnungen vorhanden sind. Dieser Ausdruck würde wie folgt definiert:
+Dieser Ausdruck wird als Policy-Ausdruck bezeichnet und ist ein Objekt, das entweder (A) eine Beschriftung oder (B) einen Operator und Operanden, aber nicht beides enthält. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt. So könnte beispielsweise eine Richtlinie für den Export von Daten an eine Drittpartei verboten werden, wenn `C1 OR (C3 AND C7)`-Kennzeichnungen vorhanden sind. Dieser Ausdruck würde wie folgt definiert:
 
 ```json
 "deny": {
