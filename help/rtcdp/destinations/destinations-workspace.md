@@ -5,7 +5,7 @@ seo-title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 56%
@@ -17,7 +17,7 @@ ht-degree: 56%
 
 Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option **[!UICONTROL Ziele]**, um auf den Arbeitsbereich [!UICONTROL Ziele] zuzugreifen.
 
-Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: **[!UICONTROL Katalog]**, **[!UICONTROL Durchsuchen]**, **[!UICONTROL Konten]** und **[!UICONTROL Systemansicht]**. Diese werden in den folgenden Abschnitten beschrieben.
+Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: [!UICONTROL Katalog], [!UICONTROL Durchsuchen], [!UICONTROL Konten] und [!UICONTROL Systemansicht]. Diese werden in den folgenden Abschnitten beschrieben.
 
 ![Zielüberblick](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -28,8 +28,8 @@ The **[!UICONTROL Catalog]** tab displays a list of all destinations available i
 Die CDP-Benutzeroberfläche &quot;Adobe in Echtzeit&quot;bietet eine Reihe von Such- und Filteroptionen auf der Zielkatalogseite:
 
 * Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu finden.
-* Filtern Sie Ziele mithilfe des Steuerelements **[!UICONTROL Kategorien]** .
-* Wechsel zwischen **[!UICONTROL Alle Ziele]** und **[!UICONTROL Meine Ziele]**. Wenn &quot; **[!UICONTROL Alle Ziele]** &quot;ausgewählt ist, werden alle verfügbaren CDP-Ziele für Adoben in Echtzeit angezeigt. Wenn **[!UICONTROL Meine Ziele]** ausgewählt sind, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
+* Filtern Sie Ziele mithilfe des Steuerelements [!UICONTROL Kategorien] .
+* Wechsel zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele]. Wenn &quot; **[!UICONTROL Alle Ziele]** &quot;ausgewählt ist, werden alle verfügbaren CDP-Ziele für Adoben in Echtzeit angezeigt. Wenn **[!UICONTROL Meine Ziele]** ausgewählt sind, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
 * Wählen Sie Ansicht **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]**. Informationen zum Unterschied zwischen den beiden Kategorien finden Sie unter [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md).
 
 ![Filtern und Suchdemo von Zielen](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -38,7 +38,7 @@ Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]** - oder ein **[!
 
 | Kontrolle | Beschreibung |
 ---------|----------
-| [!UICONTROL Konfigurieren] | Ermöglicht Ihnen das Erstellen einer Verbindung mit dem Ziel. |
+| [!UICONTROL Konfigurieren von] | Ermöglicht Ihnen das Erstellen einer Verbindung mit dem Ziel. |
 | [!UICONTROL Aktivieren] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren. |
 | [!UICONTROL Ansichten-Konto] | Ansicht der Konten, die Sie für ein Ziel verbunden haben. |
 | [!UICONTROL Ansicht DataFlows] | Ansicht der Datenflüsse, die für ein Ziel vorhanden sind. |
@@ -76,7 +76,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 
 >[!TIP]
 >
->Verwenden Sie die ![Schaltfläche](/help/rtcdp/destinations/assets/add-data-symbol.png) für Hinzufügen Daten in der Spalte &quot; **[!UICONTROL Name]** &quot;, um weitere Segmente für dieses Ziel zu aktivieren.
+>Verwenden Sie die ![Schaltfläche](/help/rtcdp/destinations/assets/add-data-symbol.png) für Hinzufügen Daten in der Spalte **[!UICONTROL Name]** , um weitere Segmente für dieses Ziel zu aktivieren.
 
 ![Registerkarte „Durchsuchen“](/help/rtcdp/destinations/assets/browse-tab.png)
 
