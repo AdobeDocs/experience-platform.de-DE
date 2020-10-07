@@ -5,7 +5,7 @@ title: Decisioning Service
 topic: overview
 description: Decisioning Service bietet die Möglichkeit, personalisierte, optimierte und orchestrierte Erlebnisse in Anwendungen zu erstellen, die in Adobe Experience Platform ausgeführt werden. Mithilfe von Decisioning Service können Sie die beste Option aus einer Reihe verfügbarer Optionen bestimmen. Diese Optionen, auch als Alternativen bezeichnet, könnten Angebote, Produktempfehlungen, Inhaltskomponenten für ein Web-Erlebnis, Gesprächsskripte und zu ergreifende Maßnahmen sein.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 80%
@@ -49,7 +49,7 @@ Alternativ oder zusätzlich könnte eine Strategie auf Ergebnissen basieren, die
 
 ### Entscheidungsstrategie
 
-Entscheidungsstrategien werden mit Objekten konfiguriert, die als _Aktivitäten_ bezeichnet werden. Jede Entscheidungsstrategie ist im Wesentlichen ein Algorithmus oder eine Funktion, der bzw. die N Optionen {o1, o2, ...oN} als Eingabe verwendet und eine geordnete Liste von Optionen erzeugt (o1, o2,...oK), wobei die erste Option in der Liste gemäß einem Optimierungskriterium als die beste Option angesehen wird, die zweite Option in der Ergebnisliste dann als die zweitbeste Option usw.
+Entscheidungsstrategien werden mit Objekten konfiguriert, die als Aktivitäten bezeichnet werden. Jede Entscheidungsstrategie ist im Wesentlichen ein Algorithmus oder eine Funktion, der bzw. die N Optionen {o1, o2, ...oN} als Eingabe verwendet und eine geordnete Liste von Optionen erzeugt (o1, o2,...oK), wobei die erste Option in der Liste gemäß einem Optimierungskriterium als die beste Option angesehen wird, die zweite Option in der Ergebnisliste dann als die zweitbeste Option usw.
 
 An jeder Stelle der Customer Journey wird die beste Option für eine bestimmte Aktivität anhand aktuellster Kontextvariablen, Regeln und Begrenzungen neu ausgewertet. Kontextvariablen enthalten die in gespeicherten Datensätze [!DNL Real Time Customer Profile]. Eine zentrale Datensatzentität ist das Profil eines Kunden, andere Entitäten wie operative Geschäftsdaten stehen der Aktivität aber gleichermaßen zur Verfügung.
 
@@ -57,7 +57,7 @@ Der Algorithmus oder die Funktion, der bzw. die die Liste der Top-K-Optionen erz
 
 ![decision-optimization](./images/decisioning-optimization.png)
 
-## Working with [!DNL Decisioning Service]
+## Arbeiten mit [!DNL Decisioning Service]
 
 The [!DNL Decisioning Service], like other [!DNL Platform] services, adopts an API first philosophy. Das bedeutet, dass die API die primäre Schnittstelle ist, über die alle Funktionen, einschließlich Verwaltungsfunktionen, verfügbar gemacht werden. It also means that other [!DNL Platform] services, Adobe solutions, and 3rd party integrations use the same APIs.
 
