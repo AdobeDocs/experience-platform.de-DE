@@ -5,7 +5,7 @@ title: Einblicke in die Kundentechnik
 topic: Discovering insights
 description: Die Kundentechnik als Teil von Intelligent Services bietet Marketern die Möglichkeit, Adobe Sensei zu nutzen, um vorherzusehen, was Ihre Kunden als Nächstes tun werden. Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Das ist möglich, ohne dass die geschäftlichen Anforderungen in eine Aufgabe für maschinelles Lernen umgewandelt werden müssen, indem ein Algorithmus, ein Training oder eine Implementierung ausgewählt wird.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 20%
@@ -98,7 +98,7 @@ Die Bewertungszusammenfassung zeigt die Gesamtanzahl der bewerteten Profil an un
 
 ## Verteilung der Ergebnisse
 
-Die Karte *Verteilung der Ergebnisse* gibt Ihnen eine visuelle Zusammenfassung der Population, die auf dem Ergebnis basiert. Die Farben, die Sie in der Karte *Verteilung der Ergebnisse* sehen, stellen die Art des generierten Tendenzwerts dar.
+Die Karte **[!UICONTROL Verteilung der Ergebnisse]** gibt Ihnen eine visuelle Zusammenfassung der Population, die auf dem Ergebnis basiert. Die Farben, die Sie in der Karte *Verteilung der Ergebnisse* sehen, stellen die Art des generierten Tendenzwerts dar.
 
 ![Verteilung der Ergebnisse](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;E
 
 ![Segmentfüllung](../images/insights/segment-saving.png)
 
-Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Die Seite &quot; *Durchsuchen* &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
+Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Die Seite &quot; **[!UICONTROL Durchsuchen]** &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
 
 ![Alle Segmente](../images/insights/Segments-dashboard.png)
 
