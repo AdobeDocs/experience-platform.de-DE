@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisdaten zus
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisdaten zusammenführen
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 42%
@@ -19,7 +19,7 @@ ht-degree: 42%
 >
 >Diese Funktion befindet sich noch in der Entwicklung. Nicht alle Lösungen können Ereignis-Daten zusammenführen, wie auf dieser Seite beschrieben.
 
-Manchmal sind nicht alle Daten verfügbar, wenn ein Ereignis auftritt. Möglicherweise möchten Sie die _vorhandenen_ Daten erfassen, damit sie nicht verloren gehen, wenn der Nutzer beispielsweise den Browser schließt. Vielleicht möchten Sie aber auch alle Daten einbeziehen, die später verfügbar werden.
+Manchmal sind nicht alle Daten verfügbar, wenn ein Ereignis auftritt. Möglicherweise möchten Sie die vorhandenen Daten erfassen, damit sie nicht verloren gehen, wenn der Nutzer beispielsweise den Browser schließt. Vielleicht möchten Sie aber auch alle Daten einbeziehen, die später verfügbar werden.
 
 In diesem Fall können Sie Daten mit vorherigen Ereignissen zusammenführen, indem Sie `eventMergeId` wie folgt als Option an `event`-Befehle übergeben:
 
