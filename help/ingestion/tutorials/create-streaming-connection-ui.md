@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung für Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '512'
-ht-degree: 77%
+ht-degree: 74%
 
 ---
 
@@ -36,7 +36,7 @@ Klicken Sie auf der Seite **[!UICONTROL Quellen]** auf **[!UICONTROL HTTP-API]**
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-Der Bildschirm **[!UICONTROL Mit HTTP verbinden]** wird angezeigt. Geben Sie unter **[!UICONTROL Dienstdetails]** sowohl den **[!UICONTROL Namen]** als auch eine **[!UICONTROL Beschreibung]** für Ihre neue Streaming-Verbindung ein.
+Der Bildschirm **[!UICONTROL Mit HTTP verbinden]** wird angezeigt. Geben Sie unter **[!UICONTROL Dienstdetails]** sowohl den Namen als auch eine Beschreibung für Ihre neue Streaming-Verbindung ein.
 
 Wählen Sie unter **[!UICONTROL Kontoauthentifizierung]** die folgenden Konfigurationseigenschaften für Ihre Streaming-Verbindung aus:
 
@@ -59,7 +59,7 @@ Sie können entweder einen [neuen Datensatz erstellen](#create-a-new-dataset) od
 
 ### Neuen Datensatz erstellen
 
-Um einen neuen Datensatz zu erstellen, geben Sie den **[!UICONTROL Namen]**, eine **[!UICONTROL Beschreibung]** sowie das **[!UICONTROL Zielschema]** für den Datensatz an.
+Um einen neuen Datensatz zu erstellen, geben Sie den Namen, die Beschreibung sowie das Schema für die Zielgruppe des Datensatzes ein.
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
