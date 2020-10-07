@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service – Versionshinweise
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 55%
@@ -20,7 +20,7 @@ This document contains information about new features for Adobe Experience Platf
 >
 >Die neuesten Versionshinweise zu anderen [!DNL Experience Platform] Diensten finden Sie [hier](../release-notes/latest/latest.md).
 
-## 9. September 2020
+## 9. September 2020
 
 ### Neue Funktionen
 
@@ -53,7 +53,7 @@ This document contains information about new features for Adobe Experience Platf
 
 * [!DNL Privacy Service] Verbesserungen der Benutzeroberfläche:
    * Separate Auftragsverfolgungsseiten für DSGVO- und CCPA-Vorschriften.
-   * Neue Dropdown-Liste _Vorschriftentyp_, um zwischen den Verfolgungsdaten für DSGVO und CCPA zu wechseln.
+   * Neue Dropdown-Liste *Vorschriftentyp*, um zwischen den Verfolgungsdaten für DSGVO und CCPA zu wechseln.
 
 ## Donnerstag, 25. Juli 2019
 
