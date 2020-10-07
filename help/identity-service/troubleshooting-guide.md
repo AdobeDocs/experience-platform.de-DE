@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei Adobe Experience Platform Identity Servic
 topic: troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 86%
@@ -100,7 +100,7 @@ Mit der [Identity Service-API](https://www.adobe.io/apis/experienceplatform/home
 
 ## Was sind zusammengesetzte Identitäten und XIDs?
 
-Identitäten werden in API-Aufrufen entweder anhand ihrer zusammengesetzten Identität oder ihrer XID referenziert. Eine **zusammengesetzte Identität** ist eine Darstellung einer Identität, die einen ID-Wert und einen Namespace enthält. Eine **XID** ist eine Kennung mit einem Wert, die dasselbe Konstrukt wie eine zusammengesetzte Identität (eine Kennung und einen Namespace) darstellt und neuen Identitäten automatisch zugewiesen wird, wenn diese von Identity Service persistiert werden. Weiterführende Informationen finden Sie in der [Übersicht zur Identity Service-API](./home.md).
+Identitäten werden in API-Aufrufen entweder anhand ihrer zusammengesetzten Identität oder ihrer XID referenziert. Eine zusammengesetzte Identität ist eine Darstellung einer Identität, die einen ID-Wert und einen Namespace enthält. Eine XID ist eine Kennung mit einem Wert, die dasselbe Konstrukt wie eine zusammengesetzte Identität (eine Kennung und einen Namespace) darstellt und neuen Identitäten automatisch zugewiesen wird, wenn diese von Identity Service persistiert werden. Weiterführende Informationen finden Sie in der [Übersicht zur Identity Service-API](./home.md).
 
 ## Wie geht Identity Service mit personenbezogenen Daten (PII) um?
 
