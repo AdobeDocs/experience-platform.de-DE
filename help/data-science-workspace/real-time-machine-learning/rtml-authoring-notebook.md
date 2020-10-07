@@ -5,7 +5,7 @@ title: Benutzerhandbuch für Notebook-PCs in Echtzeit
 topic: Training and scoring a ML model
 description: In der folgenden Anleitung werden die Schritte erläutert, die zum Erstellen einer Echtzeitanwendung für maschinelles Lernen in Adobe Experience Platform JupyterLab erforderlich sind.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -23,7 +23,7 @@ In der folgenden Anleitung werden die Schritte beschrieben, die zum Erstellen ei
 
 ## Erstellen eines Notebook-PCs für maschinelles Lernen in Echtzeit
 
-Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche **[!UICONTROL Notebooks]** in der *Datenwissenschaft* aus. Wählen Sie als Nächstes &quot; **[!UICONTROL JupyterLab]** &quot;aus und lassen Sie die Umgebung etwas länger laden.
+Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche **[!UICONTROL Notebooks]** in der **Datenwissenschaft** aus. Wählen Sie als Nächstes &quot; **[!UICONTROL JupyterLab]** &quot;aus und lassen Sie die Umgebung etwas länger laden.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -117,7 +117,7 @@ Mit der **[!UICONTROL Echtzeit-ML]** -Vorlage müssen Sie Ihr ML-Modell analysie
 
 **Datentransformationen**
 
-Die Zelle &quot; **[!UICONTROL Echtzeit-ML]** -Vorlagen *Datentransformationen* &quot;muss so geändert werden, dass sie mit Ihrem eigenen Datensatz funktioniert. Dies umfasst in der Regel das Umbenennen von Spalten, die Datenaggregation und die Datenvorbereitung/Funktionstechnik.
+Die Zelle &quot; **[!UICONTROL Echtzeit-ML]** -Vorlagen **Datentransformationen** &quot;muss so geändert werden, dass sie mit Ihrem eigenen Datensatz funktioniert. Dies umfasst in der Regel das Umbenennen von Spalten, die Datenaggregation und die Datenvorbereitung/Funktionstechnik.
 
 >[!NOTE]
 >
@@ -306,7 +306,7 @@ leasing_mapper_node = Pandas(params={'import': 'map',
 
 ### DSL-Diagramm erstellen
 
-Bei der Erstellung der Knoten besteht der nächste Schritt darin, die Knoten zu verketten, um ein Diagramm zu erstellen.
+Bei der Erstellung Ihrer Knoten besteht der nächste Schritt darin, die Knoten zu verketten, um ein Diagramm zu erstellen.
 
 Beginn durch Auflisten aller Knoten, die Teil des Diagramms sind, durch Erstellen eines Arrays.
 
@@ -355,7 +355,7 @@ Nach Abschluss des Vorgangs wird ein `edge` Objekt zurückgegeben, das alle Knot
 
 >[!NOTE]
 >
->Das maschinelle Lernen in Echtzeit wird vorübergehend auf dem Adobe Experience Platform Hub bereitgestellt und wird von diesem verwaltet. Weitere Informationen finden Sie im Abschnitt Überblick über die Architektur [des maschinellen Lernens in Echtzeit](./home.md#architecture).
+>Das maschinelle Lernen in Echtzeit wird vorübergehend am Adobe Experience Platform Hub bereitgestellt und von ihm verwaltet. Weitere Informationen finden Sie im Abschnitt Überblick über die Architektur [des maschinellen Lernens in Echtzeit](./home.md#architecture).
 
 Nachdem Sie ein DSL-Diagramm erstellt haben, können Sie das Diagramm auf der [!DNL Edge]Seite bereitstellen.
 
