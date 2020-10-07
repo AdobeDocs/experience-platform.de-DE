@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen von Quell-Connectors für Adobe Audience Manager, um Verbrauchererlebnis-Ereignis-Daten über die Benutzeroberfläche in Platform einzubringen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 11%
@@ -20,9 +20,9 @@ Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen von Quell-Connec
 
 ## Erstellen einer Quellverbindung mit Adobe Audience Manager
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; *Katalog* &quot;werden verschiedene Quellen angezeigt, mit denen Sie Quellverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; **Katalog** &quot;werden verschiedene Quellen angezeigt, mit denen Sie Quellverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind.
 
-Wählen Sie unter der Kategorie *Adobe Applications* die Option **Adobe Audience Manager** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zur Ansicht der Dokumentation oder zur Verbindung mit der Quelle.
+Wählen Sie unter der Kategorie **Adobe Applications** die Option **Adobe Audience Manager** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zur Ansicht der Dokumentation oder zur Verbindung mit der Quelle.
 
 Um einen neuen Quellanschluss für Adobe Audience Manager zu erstellen, klicken Sie auf **Hinzufügen Daten**.
 
@@ -32,7 +32,7 @@ Das folgende Dialogfeld wird angezeigt. Klicken Sie auf **Verbinden** , um die V
 
 ![](../../../../images/tutorials/create/aam/connect_full.png)
 
-Wird eine Quellverbindung mit Adobe Audience Manager hergestellt, wird die Seite *Quellcode-Aktivität* für den Audience Manager-Connector angezeigt.
+Wird eine Quellverbindung mit Adobe Audience Manager hergestellt, wird die Seite **Quellcode-Aktivität** für den Audience Manager-Connector angezeigt.
 
 ![](../../../../images/tutorials/create/aam/flow.png)
 
