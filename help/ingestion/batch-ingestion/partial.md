@@ -5,10 +5,10 @@ title: Überblick über die Partielle Stapelverarbeitung
 topic: overview
 description: Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfassung.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 40%
+source-wordcount: '916'
+ht-degree: 38%
 
 ---
 
@@ -77,11 +77,11 @@ Um einen neuen Stapel zu erstellen, führen Sie die Schritte im Entwicklerhandbu
 >
 >In diesem Abschnitt wird beschrieben, wie Sie einen Stapel für die teilweise Stapelverarbeitung mithilfe der Benutzeroberfläche aktivieren. Wenn Sie bereits einen Stapel für die teilweise Stapelverarbeitung mithilfe der API aktiviert haben, können Sie mit dem nächsten Abschnitt fortfahren.
 
-Um einen Stapel für die teilweise Erfassung über die [!DNL Platform] Benutzeroberfläche zu aktivieren, können Sie einen neuen Stapel über Quellverbindungen erstellen, einen neuen Stapel in einem vorhandenen Datensatz erstellen oder einen neuen Stapel über den Fluss[!UICONTROL &quot;CSV zu XDM zuordnen&quot;erstellen].
+Um einen Stapel für die teilweise Erfassung über die [!DNL Platform] Benutzeroberfläche zu aktivieren, können Sie einen neuen Stapel über Quellverbindungen erstellen, einen neuen Stapel in einem vorhandenen Datensatz erstellen oder einen neuen Stapel über den Fluss[!UICONTROL &quot;CSV zu XDM zuordnen]&quot;erstellen.
 
 ### Neue Quellverbindung erstellen {#new-source}
 
-Um eine neue Quellverbindung zu erstellen, führen Sie die in der Übersicht über die [Quellen](../../sources/home.md)aufgeführten Schritte aus. Once you reach the **[!UICONTROL Dataflow detail]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
+Um eine neue Quellverbindung zu erstellen, befolgen Sie die aufgelisteten Schritte in der Übersicht über die [Quellen](../../sources/home.md). Once you reach the **[!UICONTROL Dataflow detail]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
@@ -121,7 +121,7 @@ The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTRO
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-Mit dem **[!UICONTROL Fehlerschwellenwert]** können Sie den Prozentsatz der zulässigen Fehler festlegen, bevor der gesamte Batch fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
+**[!UICONTROL Der Fehlerschwellenwert]** ermöglicht es Ihnen, den Prozentsatz der zulässigen Fehler festzulegen, bevor der gesamte Stapel fehlschlägt. Standardmäßig ist dieser Wert auf 5 % eingestellt.
 
 ## Nächste Schritte {#next-steps}
 
