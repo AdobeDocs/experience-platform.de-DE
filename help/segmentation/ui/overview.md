@@ -5,7 +5,7 @@ title: Benutzerhandbuch zum Segmentdienst
 topic: ui guide
 description: Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 22%
@@ -13,7 +13,7 @@ ht-degree: 22%
 ---
 
 
-# [!UICONTROL Benutzerhandbuch zum] Segmentdienst
+# Benutzerhandbuch zum Segmentdienst
 
 [!DNL Adobe Experience Platform Segmentation Service] stellt eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen bereit.
 
