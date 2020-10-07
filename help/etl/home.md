@@ -5,7 +5,7 @@ title: Erstellen von ETL-Integrationen
 topic: overview
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '4173'
 ht-degree: 76%
@@ -95,7 +95,7 @@ Using the source of data for mapping, a list of all available datasets can be fe
 
 Sie können zur Auflistung aller verfügbaren Datensätze eine einzelne API-Anfrage (z. B. `GET /dataSets`) ausführen. Dabei empfiehlt sich als Best Practice die Angabe von Abfrageparametern, durch die die Größe der Antwort beschränkt wird.
 
-Werden _vollständige_ Datensatzinformationen angefragt, wächst die Größe der Antwort-Payload unter Umständen auf mehr als 3 GB an, was zu einer insgesamt verlangsamten Leistung führen kann. Therefore, using query parameters to filter only the information needed will make [!DNL Catalog] queries more efficient.
+Werden vollständige Datensatzinformationen angefragt, wächst die Größe der Antwort-Payload unter Umständen auf mehr als 3 GB an, was zu einer insgesamt verlangsamten Leistung führen kann. Therefore, using query parameters to filter only the information needed will make [!DNL Catalog] queries more efficient.
 
 #### Filtern von Listen
 
@@ -165,7 +165,7 @@ Die Antwort umfasst drei (`limit=3`) Datensätze, die dem Abfrageparameter `prop
 
 ### Anzeigen des Datensatzschemas
 
-Die Eigenschaft „schemaRef“ eines Datensatzes enthält einen URI, der auf das XDM-Schema verweist, auf dem der Datensatz basiert. Das XDM-Schema („schemaRef“) umfasst alle vom Datensatz _potenziell_ verwendbaren Felder, also nicht zwingend nur die, die _tatsächlich_ verwendet werden (siehe „observableSchema“ weiter unten).
+Die Eigenschaft „schemaRef“ eines Datensatzes enthält einen URI, der auf das XDM-Schema verweist, auf dem der Datensatz basiert. Das XDM-Schema („schemaRef“) umfasst alle vom Datensatz potenziell verwendbaren Felder, also nicht zwingend nur die, die tatsächlich verwendet werden (siehe „observableSchema“ weiter unten).
 
 Das XDM-Schema ist das Schema, das Sie verwenden, wenn Sie dem Anwender eine Liste aller verfügbaren Felder anzeigen möchten, die ausgefüllt werden können.
 
@@ -601,7 +601,7 @@ Einzelheiten zur Erstellung eines Batches, einschließlich Beispiel-Anfragen und
 
 ### Schreiben in einen Datensatz
 
-Nach erfolgreicher Erstellung eines neuen Batches können Dateien in einen bestimmten Datensatz hochgeladen werden. In einen Batch können mehrere Dateien aufgenommen werden, dies so lange, bis dieser zur Aufnahme verwendet wird. Dateien können mithilfe der _Small File Upload API_ hochgeladen werden. Überschreitet die Größe Ihrer Dateien jedoch den Grenzwert des Gateways, müssen Sie die _Large File Upload API_ verwenden. Einzelheiten zum Hochladen kleiner und großer Dateien finden Sie unter [Batch-Erfassung – Übersicht](../ingestion/batch-ingestion/overview.md).
+Nach erfolgreicher Erstellung eines neuen Batches können Dateien in einen bestimmten Datensatz hochgeladen werden. In einen Batch können mehrere Dateien aufgenommen werden, dies so lange, bis dieser zur Aufnahme verwendet wird. Dateien können mithilfe der Small File Upload API hochgeladen werden. Überschreitet die Größe Ihrer Dateien jedoch den Grenzwert des Gateways, müssen Sie die Large File Upload API verwenden. Einzelheiten zum Hochladen kleiner und großer Dateien finden Sie unter [Batch-Erfassung – Übersicht](../ingestion/batch-ingestion/overview.md).
 
 **Anfrage**
 
