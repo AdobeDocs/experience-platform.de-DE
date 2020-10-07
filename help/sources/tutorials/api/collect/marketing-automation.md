@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Marketingautomatisierungssystem und deren Integration in die Plattform über Quellschnittstellen und APIs erläutert.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1584'
 ht-degree: 13%
@@ -61,7 +61,7 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformatattribut definieren.
 
-Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
+Verwenden Sie die folgenden Enum-Werte für dateibasierte Connectors:
 
 | Data.format | Enum-Wert |
 | ----------- | ---------- |
@@ -69,7 +69,7 @@ Verwenden Sie die folgenden Enum-Werte für **dateibasierte Connectors**:
 | JSON-Dateien | `json` |
 | Parkettdateien | `parquet` |
 
-Für alle **tabellenbasierten Connectors** verwenden Sie den Enum-Wert: `tabular`.
+Für alle tabellenbasierten Connectors verwenden Sie den Enum-Wert: `tabular`.
 
 **API-Format**
 
@@ -553,7 +553,7 @@ Der letzte Schritt zur Erfassung von Daten zur Marketingautomatisierung besteht 
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datennachweis ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
 
