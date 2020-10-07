@@ -5,7 +5,7 @@ title: Übersicht über die Durchsetzung von Richtlinien
 topic: enforcement
 description: Sobald Datenverwendungsbeschriftungen auf Adobe Experience Platform-Datensätze angewendet wurden und für Marketingaktionen mit diesen Bezeichnungen Richtlinien zur Datenverwendung definiert wurden, können Sie diese Richtlinien mithilfe der Datenverwaltungsfunktionen durchsetzen und Datenvorgänge verhindern, die Richtlinienverletzungen darstellen. Es gibt zwei Methoden zur Durchsetzung von Richtlinien, die durch die Datenverwaltungsfunktionen auf Plattform, API-basierte Durchsetzung und automatische Durchsetzung bereitgestellt werden.
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 16%
@@ -17,7 +17,7 @@ ht-degree: 16%
 
 Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, [!DNL Data Governance] capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
-Es gibt zwei Methoden zur Durchsetzung von Richtlinien, die durch [!DNL Data Governance] Funktionen bereitgestellt werden: [!DNL Platform]**API-basierte Durchsetzung** und **automatische Durchsetzung**.
+Es gibt zwei Methoden zur Durchsetzung von Richtlinien, die durch [!DNL Data Governance] Funktionen bereitgestellt werden: [!DNL Platform]API-basierte Durchsetzung und automatische Durchsetzung.
 
 ## API-basierte Durchsetzung
 
