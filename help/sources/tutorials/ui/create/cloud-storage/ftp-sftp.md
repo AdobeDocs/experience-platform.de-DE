@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm enthält Schritte zum Erstellen eines FTP- oder SFTP-Quellconnectors über die Plattform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '701'
 ht-degree: 9%
 
 ---
@@ -43,7 +43,7 @@ Wenn Sie bereits über eine gültige FTP- oder SFTP-Verbindung verfügen, könne
 
 ### Erforderliche Anmeldedaten sammeln
 
-Um auf Ihren FTP- oder SFTP-Server zugreifen zu können, [!DNL Platform]müssen Sie den **Hostnamen** des Servers, einen **Benutzernamen** und ein **Kennwort** angeben.
+Um auf Ihren FTP- oder SFTP-Server zugreifen zu können, müssen [!DNL Platform]Sie den Hostnamen, einen Benutzernamen und ein Kennwort des Servers angeben.
 
 ## Herstellen einer Verbindung mit dem FTP- oder SFTP-Server
 
