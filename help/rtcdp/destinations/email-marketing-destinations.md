@@ -6,9 +6,9 @@ type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '800'
 ht-degree: 47%
 
 ---
@@ -30,7 +30,7 @@ Stellen Sie im Zielverbindungsfluss (wie im Abschnitt unten beschrieben) eine Ve
 
    ![Mit Ziel verbinden](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In der Auswahl **[!UICONTROL Verbindungstyp]** können Sie zwischen **Amazon S3**, **SFTP mit Kennwort**, **SFTP mit SSH-Schlüssel** wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In der Auswahl für den **[!UICONTROL Verbindungstyp]** können Sie zwischen Amazon S3, SFTP mit Kennwort oder SFTP mit SSH-Schlüssel wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
 
    For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key.
 
@@ -38,9 +38,9 @@ Stellen Sie im Zielverbindungsfluss (wie im Abschnitt unten beschrieben) eine Ve
 
    For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
-3. Geben Sie im Schritt **[!UICONTROL Setup]** einen **[!UICONTROL Namen]** und eine **[!UICONTROL Beschreibung]** für Ihr neues Ziel sowie das **[!UICONTROL Dateiformat]** für die exportierten Dateien ein. <br>
-Wenn Sie im vorherigen Schritt die Option &quot;Amazon S3&quot;als Datenspeicherung ausgewählt haben, fügen Sie den **[!UICONTROL Behälternamen]** und den **[!UICONTROL Ordnerpfad]** in das Ziel der Cloud-Datenspeicherung ein, an dem die Dateien bereitgestellt werden sollen. Geben Sie für die Option &quot;SFTP-Datenspeicherung&quot;den **[!UICONTROL Ordnerpfad]** ein, unter dem die Dateien bereitgestellt werden sollen. <br>
-In diesem Schritt können Sie auch einen beliebigen **[!UICONTROL Marketing-Anwendungsfall]** auswählen, der für dieses Ziel gelten soll. Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Echtzeit-CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Informationen zu den einzelnen Anwendungsfällen für Marketingzwecke, die von der Adobe definiert wurden, finden Sie in der Übersicht über [Datenverwendungsrichtlinien](/help/data-governance/policies/overview.md#core-actions). <br>
+3. Geben Sie im Schritt **[!UICONTROL Setup]** einen [!UICONTROL Namen] und eine [!UICONTROL Beschreibung] für Ihr neues Ziel sowie das [!UICONTROL Dateiformat] für die exportierten Dateien ein. <br>
+Wenn Sie im vorherigen Schritt die Option &quot;Amazon S3&quot;als Datenspeicherung ausgewählt haben, fügen Sie den [!UICONTROL Behälternamen] und den [!UICONTROL Ordnerpfad] in das Ziel der Cloud-Datenspeicherung ein, an dem die Dateien bereitgestellt werden sollen. Geben Sie für die Option &quot;SFTP-Datenspeicherung&quot;den [!UICONTROL Ordnerpfad] ein, unter dem die Dateien bereitgestellt werden sollen. <br>
+In diesem Schritt können Sie auch einen beliebigen [!UICONTROL Marketing-Anwendungsfall] auswählen, der für dieses Ziel gelten soll. Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Echtzeit-CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) . Informationen zu den einzelnen Anwendungsfällen für Marketingzwecke, die von der Adobe definiert wurden, finden Sie in der Übersicht über [Datenverwendungsrichtlinien](/help/data-governance/policies/overview.md#core-actions). <br>
    ![Email-Setup](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## Schritt 2: Wählen Sie die Segmentmitglieder aus, die in Ihre Zielexporte einbezogen werden sollen {#select-segments}
