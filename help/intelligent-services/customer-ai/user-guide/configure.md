@@ -5,10 +5,10 @@ title: Konfigurieren einer Customer AI-Instanz
 topic: Instance creation
 description: Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '746'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
@@ -35,7 +35,7 @@ Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie für die Insta
 
 * Der Name der Instanz wird an allen Stellen verwendet, an denen der Customer KI-Wert angezeigt wird. Daher sollten Namen beschreiben, was die Prognosewerte darstellen, z. B. „Wahrscheinlichkeit einer Kündigung eines Zeitschriftenabonnements“.
 
-* Der Tendenztyp bestimmt den Zweck des Wertes und die Metrikpolarität. Sie können entweder **[!UICONTROL Abwanderung]** oder **[!UICONTROL Konversion]** wählen. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Auswertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
+* Der Tendenztyp bestimmt den Zweck des Wertes und die Metrikpolarität. You can either choose &quot;[!UICONTROL Churn]&quot; or &quot;[!UICONTROL Conversion]&quot;. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Auswertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
 
 * Die Datenquelle befindet sich an der Stelle, an der sich die Daten befinden. Der Datensatz ist der Eingabedatensatz, mit dem Ergebnisse vorhergesagt werden. Standardmäßig nutzt Customer AI Kundenerlebnis-Ereignisdaten, um Tendenzwerte zu berechnen. Wenn Sie einen Datensatz in der Dropdown-Auswahl wählen, werden nur Datensätze aufgelistet, die mit Customer KI kompatibel sind.
 
@@ -47,7 +47,7 @@ Geben Sie die erforderlichen Werte ein und klicken Sie auf **[!UICONTROL Weiter]
 
 ### Ziel definieren {#define-a-goal}
 
-Der Schritt *Ziel definieren* wird angezeigt und bietet eine interaktive Umgebung, in der Sie ein Ziel visuell festlegen können. Ein Ziel besteht aus einem oder mehreren Ereignissen, bei denen das Auftreten eines jeden Ereignisses auf der Bedingung basiert, die es enthält. Ziel einer Customer AI-Instanz ist es, die Wahrscheinlichkeit zu bestimmen, mit der ihr Ziel innerhalb eines bestimmten Zeitraums erreicht wird.
+Der Schritt **[!UICONTROL Ziel definieren]** wird angezeigt und bietet eine interaktive Umgebung, in der Sie ein Ziel visuell festlegen können. Ein Ziel besteht aus einem oder mehreren Ereignissen, bei denen das Auftreten eines jeden Ereignisses auf der Bedingung basiert, die es enthält. Ziel einer Customer AI-Instanz ist es, die Wahrscheinlichkeit zu bestimmen, mit der ihr Ziel innerhalb eines bestimmten Zeitraums erreicht wird.
 
 Klicken Sie auf **[!UICONTROL Feldnamen eingeben]** und wählen Sie ein Feld aus der Dropdown-Liste aus. Klicken Sie auf die zweite Eingabe und wählen Sie eine Klausel für die Ereignisbedingung. Geben Sie dann einen Zielwert ein, um das Ereignis fertigzustellen. Weitere Ereignisse können durch Klicken auf **[!UICONTROL Ereignis hinzufügen]** konfiguriert werden. Schließen Sie das Ziel ab, indem Sie einen Prognosezeitrahmen (Zahl der Tage) anwenden, und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
@@ -55,7 +55,7 @@ Klicken Sie auf **[!UICONTROL Feldnamen eingeben]** und wählen Sie ein Feld aus
 
 ### Zeitplan konfigurieren *(optional)* {#configure-a-schedule}
 
-Der Schritt *Erweitert* wird angezeigt. In diesem optionalen Schritt können Sie einen Zeitplan konfigurieren, um die Ausführung von Prognosen zu automatisieren, Prognoseausschlüsse zum Filtern bestimmter Ereignisse definieren oder auf **[!UICONTROL Fertig stellen]** klicken, wenn nichts mehr erforderlich ist.
+The **[!UICONTROL Advanced]** step appears. In diesem optionalen Schritt können Sie einen Zeitplan konfigurieren, um die Ausführung von Prognosen zu automatisieren, Prognoseausschlüsse zum Filtern bestimmter Ereignisse definieren oder auf **[!UICONTROL Fertig stellen]** klicken, wenn nichts mehr erforderlich ist.
 
 Richten Sie einen Auswertungszeitplan ein, indem Sie die *Auswertungshäufigkeit* festlegen. Die Ausführung automatisierter Prognosen kann entweder wöchentlich oder monatlich geplant werden.
 
