@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie problemlos Daten als Stapeldateien in Form von Parkettdateien oder Daten importieren, die einem bekannten XDM-Schema (Experience Data Model) entsprechen.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1308'
-ht-degree: 64%
+ht-degree: 51%
 
 ---
 
@@ -28,7 +28,7 @@ Wenn Sie Daten lieber mit Data Ingestion-APIs erfassen möchten, lesen Sie zunä
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **[!UICONTROL Datensätze]** klicken. Der Arbeitsbereich „Datensätze“ enthält eine Liste von Datensätzen, einschließlich der Spalten für **[!UICONTROL Name]**, **[!UICONTROL Erstellung]** (Datum und Uhrzeit), **[!UICONTROL Quelle]**, **[!UICONTROL Schema]** und **[!UICONTROL letzten Batch-Status]**, sowie Datum und Uhrzeit der **[!UICONTROL letzten Aktualisierung]** des Datensatzes.
+Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **[!UICONTROL Datensätze]** klicken. Der Arbeitsbereich &quot;Datensatz&quot;enthält eine Liste von Datensätzen, einschließlich der Spalten mit dem Namen, dem Erstellungsdatum (Datum und Uhrzeit), der Quelle, dem Schema und dem Status des letzten Stapels sowie dem Datum und der Uhrzeit der letzten Aktualisierung des Datensatzes.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Nachdem Sie das Optionsfeld neben dem Schema ausgewählt haben, das Sie verwende
 
 ## Datensatz konfigurieren
 
-Im Bildschirm **[!UICONTROL Datensatz konfigurieren]** müssen Sie dem Datensatz einen **[!UICONTROL Namen]** geben und möglicherweise auch eine **[!UICONTROL Beschreibung]** des Datensatzes hinzufügen.
+On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset as well.
 
 **Hinweise zu Datensatznamen:**
 
@@ -74,7 +74,7 @@ Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf
 
 Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte **[!UICONTROL Datensatzaktivität]** im Arbeitsbereich „Datensätze“. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
-Auf der rechten Seite des Arbeitsbereichs „Datensätze“ finden Sie die Registerkarte **[!UICONTROL Informationen]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. **[!UICONTROL Datensatz-ID]**, **[!UICONTROL Name]**, **[!UICONTROL Beschreibung]**, **[!UICONTROL Tabellenname]**, **[!UICONTROL Schema]**, **[!UICONTROL Streaming]** und **[!UICONTROL Quelle]**. Die Registerkarte „Informationen“ enthält außerdem Informationen zum Zeitpunkt der **[!UICONTROL Erstellung]** des Datensatzes und zum **[!UICONTROL Datum der letzten Änderung]**.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. Die Registerkarte &quot;Info&quot;enthält auch Informationen zum Zeitpunkt der Erstellung des Datensatzes und zum Datum seiner letzten Änderung.
 
 Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
@@ -122,13 +122,13 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 Nach dem Hochladen der Datei steht auf der Registerkarte **[!UICONTROL Datensatzaktivität]** nicht mehr, dass keine Batches hinzugefügt wurden. Instead, the **[!UICONTROL Dataset Activity]** tab now shows dataset metrics. Bei allen Metriken wird zu diesem Zeitpunkt „0“ angezeigt, da der Batch noch nicht geladen wurde.
 
-Am unteren Rand der Registerkarte befindet sich eine Liste, in der die **[!UICONTROL Batch-Kennung]** der Daten angezeigt wird, die gerade mit dem Prozess [Daten zu Datensatz hinzufügen](#add-data-to-dataset) erfasst wurden. Dazu gehören auch Informationen über den Batch, einschließlich Datum der **[!UICONTROL Erfassung]**, Anzahl der **[!UICONTROL erfassten Datensätze]** und des aktuellen Batch-**[!UICONTROL Status]**.
+Am unteren Rand der Registerkarte befindet sich eine Liste, in der die **[!UICONTROL Batch-Kennung]** der Daten angezeigt wird, die gerade mit dem Prozess [Daten zu Datensatz hinzufügen](#add-data-to-dataset) erfasst wurden. Dazu gehören auch Informationen zum Stapel, einschließlich des erfassten Datums, der Anzahl der erfassten Datensätze und des aktuellen Stapelstatus.
 
 ![Datensatzmetriken](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Batch-Details
 
-Klicken Sie auf die **[!UICONTROL Batch-Kennung]**, um eine **[!UICONTROL Batch-Übersicht]** mit weiteren Details zum Batch anzuzeigen. Sobald der Batch vollständig geladen wurde, werden die Informationen über den Batch aktualisiert, um die Anzahl der **[!UICONTROL erfassten Datensätze]** und die **[!UICONTROL Dateigröße]** anzuzeigen. Außerdem ändert sich der **[!UICONTROL Status]** in „Erfolg“ oder „Fehlgeschlagen“. Wenn der Batch fehlschlägt, enthält der Abschnitt **[!UICONTROL Fehler-Code]** Details zu Fehlern, die bei der Erfassung aufgetreten sind.
+Klicken Sie auf die **[!UICONTROL Batch-Kennung]**, um eine **[!UICONTROL Batch-Übersicht]** mit weiteren Details zum Batch anzuzeigen. Sobald der Stapel geladen wurde, werden die Informationen zum Stapel aktualisiert, um die Anzahl der erfassten Datensätze und die Dateigröße anzuzeigen. Der Status ändert sich auch in &quot;Erfolg&quot;oder &quot;Fehlgeschlagen&quot;. Wenn der Batch fehlschlägt, enthält der Abschnitt **[!UICONTROL Fehler-Code]** Details zu Fehlern, die bei der Erfassung aufgetreten sind.
 
 Weiterführende Informationen und häufig gestellte Fragen zur Batch-Erfassung finden Sie im [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](../batch-ingestion/troubleshooting.md).
 
