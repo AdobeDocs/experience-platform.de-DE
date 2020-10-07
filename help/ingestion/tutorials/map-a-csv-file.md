@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie eine CSV-Datei mithilfe der Adobe Experience Platform-Benutzeroberfläche einem XDM-Schema zuordnen.
 translation-type: tm+mt
-source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 2%
@@ -117,7 +117,7 @@ Nachdem die CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten über
 
 Um eine Funktion zu verwenden, geben Sie sie unter &quot; **[!UICONTROL Quellfeld]** &quot;mit entsprechender Syntax und Eingaben ein.
 
-Um z. B. CSV-Felder für **Stadt** und **Land** zu verknüpfen und sie dem XDM-Feld für **Stadt** zuzuweisen, legen Sie das Quellfeld als `concat(city, ", ", county)`fest.
+Um z. B. CSV-Felder für Stadt und Land zu verknüpfen und sie dem XDM-Feld für Stadt zuzuweisen, stellen Sie das Quellfeld auf `concat(city, ", ", county)`.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
