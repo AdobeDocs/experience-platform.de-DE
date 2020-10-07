@@ -5,7 +5,7 @@ title: Benutzerhandbuch zu den Datennutzungsbezeichnungen
 topic: labels
 description: In diesem Benutzerhandbuch werden die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Beschriftungen 
 
 ## Verwalten von Datenverwendungsbeschriftungen auf der Datensatzebene
 
-Zur Verwaltung der Datenverwendungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Datasets]** , um den Arbeitsbereich &quot; _Datasets_ &quot;zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz Liste.
+Zur Verwaltung der Datenverwendungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Datasets]** , um den Arbeitsbereich &quot; **[!UICONTROL Datasets]** &quot;zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz Liste.
 
 ![Registerkarte &quot;Datenbestand&quot;im Datenbereich](../images/labels/datasets.png)
 
@@ -43,7 +43,7 @@ Der Bildschirm &quot;Schema **** auswählen&quot;wird angezeigt, in dem alle ver
 
 ![Datenbestand-Schema auswählen](../images/labels/dataset_schema.png)
 
-The **[!UICONTROL Configure Dataset]** screen appears. Geben Sie einen **Namen** (erforderlich) und eine **Beschreibung** (optional, aber empfohlen) für den neuen Datensatz ein und klicken Sie dann auf **[!UICONTROL Fertig stellen]**.
+The **[!UICONTROL Configure Dataset]** screen appears. Geben Sie einen Namen (erforderlich) und eine Beschreibung (optional, jedoch empfohlen) für Ihren neuen Datensatz ein und klicken Sie dann auf **[!UICONTROL Fertig stellen]**.
 
 ![Datensatz mit Namen und Beschreibung konfigurieren](../images/labels/dataset_configure.png)
 
