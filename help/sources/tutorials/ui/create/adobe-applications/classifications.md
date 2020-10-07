@@ -6,7 +6,7 @@ title: Adobe Analytics Classifications Data Connector in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 4%
@@ -38,7 +38,7 @@ Wählen Sie unter der Kategorie **[!UICONTROL Adoben-Anwendungen]** die **[!UICO
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-Der Schritt zum Hinzufügen von Daten **[!UICONTROL zur]** Analytics-Quelle wird angezeigt. Wählen Sie **[!UICONTROL Klassifizierungen]** aus der oberen Kopfzeile, um eine Liste der [!DNL Classifications] Datensätze anzuzeigen, einschließlich Informationen zu ihrer **[!UICONTROL Dimensionen-ID]**, ihrem **[!UICONTROL Report Suite-Namen]** und ihrer **[!UICONTROL Report Suite-ID]**.
+Der Schritt zum Hinzufügen von Daten **[!UICONTROL zur]** Analytics-Quelle wird angezeigt. Wählen Sie **[!UICONTROL Klassifizierungen]** in der oberen Kopfzeile aus, um eine Liste der [!DNL Classifications] Datensätze einschließlich Informationen zu ihrer Dimension-ID, ihrem Report Suite-Namen und ihrer Report Suite-ID anzuzeigen.
 
 Jede Seite zeigt bis zu zehn verschiedene [!DNL Classifications] Datensätze an, aus denen Sie auswählen können. Wählen Sie **[!UICONTROL Weiter]** unten auf der Seite, um nach weiteren Optionen zu suchen. Das Bedienfeld auf der rechten Seite zeigt die Gesamtanzahl der ausgewählten [!DNL Classifications] Datensätze sowie deren Namen an. In diesem Bedienfeld können Sie außerdem alle [!DNL Classifications] Datensätze entfernen, die Sie versehentlich ausgewählt haben, oder alle Auswahlen mit einer Aktion löschen.
 
