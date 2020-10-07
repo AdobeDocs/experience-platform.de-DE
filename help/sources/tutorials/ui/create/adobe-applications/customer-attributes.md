@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie in der Benutzeroberfläche einen Quellanschluss für die Erfassung von Kundenattributdaten in Adobe Experience Platform erstellen können.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 8%
@@ -20,7 +20,7 @@ In diesem Lernprogramm wird beschrieben, wie Sie in der Benutzeroberfläche eine
 
 ## Erstellen einer Quellverbindung
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verfügbare Quellen zum Erstellen von eingehenden Verbindungen angezeigt. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind. Wählen Sie die Option für **[!UICONTROL Kundenattribute]** und dann **[!UICONTROL Hinzufügen Daten]**. Warten Sie einige Zeit, bis die Verbindung hergestellt ist. Sie werden umgeleitet, wenn eine Verbindung erfolgreich hergestellt wurde.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verfügbare Quellen angezeigt, mit denen eingehende Verbindungen erstellt werden können. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind. Wählen Sie die Option für **[!UICONTROL Kundenattribute]** und dann **[!UICONTROL Hinzufügen Daten]**. Warten Sie einige Zeit, bis die Verbindung hergestellt ist. Sie werden umgeleitet, wenn eine Verbindung erfolgreich hergestellt wurde.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an u
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-Im Bildschirm &quot; *Source-Aktivität* &quot;werden alle zuvor eingerichteten Verbindungen für Kundenattributdaten Liste. Sie können eine neue Verbindung erstellen, indem Sie auf Daten **auswählen** klicken.
+Im Bildschirm &quot; **Source-Aktivität** &quot;werden alle zuvor eingerichteten Verbindungen für Kundenattributdaten Liste. Sie können eine neue Verbindung erstellen, indem Sie auf Daten **auswählen** klicken.
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ Wählen Sie in der Liste der verfügbaren Kundenattributdatasets die Profil aus,
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-Der Schritt *Überprüfen* wird angezeigt, mit dem Sie Ihre neue eingehende Verbindung überprüfen können, bevor sie erstellt wird. Die Verbindungsdetails werden nach Kategorien gruppiert, darunter:
+Der Schritt **Überprüfen** wird angezeigt, mit dem Sie Ihre neue eingehende Verbindung überprüfen können, bevor sie erstellt wird. Die Verbindungsdetails werden nach Kategorien gruppiert, darunter:
 
-* *Quelldetails*: Zeigt den Typ der Quellverbindung und die ausgewählten Quelldaten an.
-* *Angaben* zur Zielgruppe: Beim Erstellen anderer Quell-Connectors zeigt dieser Container, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält. Kundenattribute Profil-Daten werden automatisch zugeordnet und in Echtzeit-Kundendaten erfasst.
+* **Quelldetails**: Zeigt den Typ der Quellverbindung und die ausgewählten Quelldaten an.
+* **Angaben** zur Zielgruppe: Beim Erstellen anderer Quell-Connectors zeigt dieser Container, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält. Kundenattribute Profil-Daten werden automatisch zugeordnet und in Echtzeit-Kundendaten erfasst.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
