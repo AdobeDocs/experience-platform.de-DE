@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für effektive persönliche digitale Erlebnisse sorgen.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 73%
@@ -35,11 +35,11 @@ The identity relationships that [!DNL Identity Service] defines and maintains ar
 
 ### Identitäten
 
-Eine Identität besteht aus Daten, die für eine Entität (normalerweise eine Person) eindeutig sind. Eine Identität wie z. B. eine Anmeldekennung, eine ECID oder eine Treueprogramm-ID wird als **bekannte Identität** bezeichnet.
+Eine Identität besteht aus Daten, die für eine Entität (normalerweise eine Person) eindeutig sind. Eine Identität wie z. B. eine Anmeldekennung, eine ECID oder eine Treueprogramm-ID wird als bekannte Identität bezeichnet.
 
 Personenbezogene Daten (PII) wie E-Mail-Adresse und Telefonnummer dienen zur direkten Identifizierung eines Kunden. Infolgedessen werden personenbezogene Daten dazu verwendet, um verschiedene Identitäten eines Kunden systemübergreifend abzugleichen.
 
-**Unbekannte oder anonyme Identitäten** identifizieren ein Gerät, ohne dass die Person identifiziert wird, die dieses Gerät nutzt. Diese Kategorie enthält Daten wie die IP-Adresse und Cookie-ID des Besuchers. Während Verhaltensdaten von einem Gerät mithilfe unbekannter Identitäten gesammelt werden können, ist eine Zuordnung dieser Identitäten über verschiedene Geräte oder Medien hinweg begrenzt, bis Ihr Kunde während der Journey personenbezogene Daten angibt.
+Unbekannte oder anonyme Identitäten identifizieren ein Gerät, ohne dass die Person identifiziert wird, die dieses Gerät nutzt. Diese Kategorie enthält Daten wie die IP-Adresse und Cookie-ID des Besuchers. Während Verhaltensdaten von einem Gerät mithilfe unbekannter Identitäten gesammelt werden können, ist eine Zuordnung dieser Identitäten über verschiedene Geräte oder Medien hinweg begrenzt, bis Ihr Kunde während der Journey personenbezogene Daten angibt.
 
 Bekannte und anonyme Identitäten sind (wie in der folgenden Abbildung gezeigt) wichtige Komponenten von [Identitätsdiagrammen](#identity-graphs) und werden später in diesem Dokument genauer besprochen.
 
