@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -135,7 +135,7 @@ Wenn Sie z. B. ein Element auf Ihrer Web-Seite mit einer Kennung von `container`
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | `true` |
 
-Enables [!DNL Audience Manager] [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
+Enables [!DNL Audience Manager] cookie destinations, which allows the setting of cookies based on segment qualification.
 
 ### `urlDestinationsEnabled`
 
@@ -143,7 +143,7 @@ Enables [!DNL Audience Manager] [!UICONTROL cookie destinations], which allows t
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | `true` |
 
-Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
+Enables [!DNL Audience Manager] URL destinations, which allows the firing of URLs based on segment qualification.
 
 ## Identitätsoptionen
 
