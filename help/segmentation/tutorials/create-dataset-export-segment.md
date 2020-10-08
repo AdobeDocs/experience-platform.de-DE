@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Segments für Audiencen mithilfe der Benutzeroberfläche für Experience Platformen verwendet werden kann.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 24%
@@ -78,7 +78,7 @@ Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf
 
 Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte **[!UICONTROL Datensatzaktivität]** im Arbeitsbereich „Datensätze“.**** Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema], streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
 
 Bitte beachten Sie die **[!UICONTROL Dataset-ID]**, da dieser Wert erforderlich ist, um den Audience-Segmentexport-Arbeitsablauf abzuschließen.
 
