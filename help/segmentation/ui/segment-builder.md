@@ -5,10 +5,10 @@ title: Benutzerhandbuch zum Segmentaufbau für Segmentierungsdienste
 topic: ui guide
 description: 'Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 51%
+source-wordcount: '1774'
+ht-degree: 50%
 
 ---
 
@@ -72,6 +72,10 @@ Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der 
 Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel aus dem Tab **[!UICONTROL Felder]** und legen Sie sie auf der Arbeitsfläche des Regel-Builders ab. Anschließend werden Ihnen je nach Art der hinzugefügten Daten kontextspezifische Optionen angezeigt. Available data types include: strings, dates, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot;, and audiences.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>Die neuesten Änderungen an Adobe Experience Platform haben die Verwendung der `OR` und `AND` logischen Operatoren zwischen Ereignissen aktualisiert. Diese Aktualisierungen wirken sich nicht auf vorhandene Segmente aus. Diese Änderungen wirken sich jedoch auf alle nachfolgenden Aktualisierungen vorhandener Segmente und neuer Segmentkreationen aus. Weitere Informationen finden Sie in der [Zeitkonstanten-Aktualisierung](./segment-refactoring.md) .
 
 ### Hinzufügen von Zielgruppen
 
