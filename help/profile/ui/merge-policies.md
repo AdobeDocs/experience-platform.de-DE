@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Benutzerhandbuch zu Zusammenführungsrichtlinien
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1441'
-ht-degree: 31%
+source-wordcount: '1440'
+ht-degree: 33%
 
 ---
 
@@ -61,7 +61,7 @@ Der Bildschirm **[!UICONTROL Zusammenführungsrichtlinie erstellen]** wird angez
 
 ### Zeitstempel sortiert {#timestamp-ordered}
 
-Während Profil-Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und dem Datensatz hinzugefügt. Wenn für eine Zusammenführungsrichtlinie der Typ &quot; **[!UICONTROL Attributzusammenführung]** &quot;als[!UICONTROL bestellter]Zeitstempel ausgewählt ist, werden die Profil basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf der Grundlage des Zeitstempels für den Zeitpunkt, zu dem der Datensatz in die Plattform aufgenommen wurde.
+Während Profil-Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und dem Datensatz hinzugefügt. Wenn als **[!UICONTROL Attributzusammenführungstyp für eine Zusammenführungsrichtlinie der sortierte]** **[!UICONTROL Zeitstempel]** ausgewählt ist, werden die Profil basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf der Grundlage des Zeitstempels für den Zeitpunkt, zu dem der Datensatz in die Plattform aufgenommen wurde.
 
 Gelegentlich kann es zu Anwendungsfällen kommen, bei denen ein benutzerdefinierter Zeitstempel bereitgestellt werden muss und bei denen die Richtlinie zum Zusammenführen den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen muss. Dazu gehören beispielsweise das Aufstocken von Daten oder das Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn die Datensätze nicht mehr in der richtigen Reihenfolge angezeigt werden.
 
@@ -91,7 +91,7 @@ Wenn Sie einen Wert für **[!UICONTROL Attributzusammenführung]** auswählen, k
 
 Ein Beispiel bestünde darin, wenn es in Ihrer Organisation Daten in einem Datensatz gibt, die bevorzugt werden oder vertrauenswürdiger sind als Daten in einem anderen Datensatz.
 
-Wenn Sie die **[!UICONTROL Datensatzpriorität]** auswählen, wird ein separates Fenster geöffnet, in dem Sie aus den **[!UICONTROL verfügbaren Datensätzen]** auswählen müssen, welche Datensätze einbezogen werden (oder das Kontrollkästchen verwenden, um alle auszuwählen). You can then drag and drop those datasets into the [**!UICONTROL Selected Datasets]** panel and drag them into the correct order of priority. Der oberste Datensatz erhält die höchste Priorität, der zweite Datensatz wird die zweithöchste sein usw.
+Wenn Sie die **[!UICONTROL Datensatzpriorität]** auswählen, wird ein separates Fenster geöffnet, in dem Sie aus den **[!UICONTROL verfügbaren Datensätzen]** auswählen müssen, welche Datensätze einbezogen werden (oder das Kontrollkästchen verwenden, um alle auszuwählen). Sie können die Datensätze dann per Drag &amp; Drop in das Bedienfeld **[!UICONTROL Ausgewählte Datensätze]** und dann in die richtige Prioritätsreihenfolge ziehen. Der oberste Datensatz erhält die höchste Priorität, der zweite Datensatz wird die zweithöchste sein usw.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
