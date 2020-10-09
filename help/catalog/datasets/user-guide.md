@@ -5,7 +5,7 @@ title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 description: Dieses Benutzerhandbuch zu Datensätzen enthält Anweisungen zur Durchführung allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 70%
@@ -62,10 +62,10 @@ Um einen neuen Datensatz zu erstellen, klicken Sie zunächst im Dashboard **[!UI
 
 Im folgenden Bildschirm werden Ihnen die folgenden zwei Optionen zum Erstellen eines neuen Datensatzes angezeigt:
 
-* [Datensatz aus Schema erstellen](#create-a-dataset-with-an-existing-schema)
-* [Datensatz aus CSV-Datei erstellen](#create-a-dataset-with-a-csv-file)
+* [Datensatz aus Schema erstellen](#schema)
+* [Datensatz aus CSV-Datei erstellen](#csv)
 
-### Datensatz mit vorhandenem Schema erstellen
+### Datensatz mit vorhandenem Schema erstellen {#schema}
 
 Klicken Sie im Bildschirm **[!UICONTROL Datensatz erstellen]** auf **[!UICONTROL Datensatz aus Schema erstellen]**, um einen neuen leeren Datensatz zu erstellen.
 
@@ -79,7 +79,7 @@ Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie d
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Datensatz mit einer CSV-Datei erstellen
+### Datensatz mit einer CSV-Datei erstellen {#csv}
 
 Wenn Sie einen Datensatz mit einer CSV-Datei erstellen, wird ein Ad-hoc-Schema erstellt, um dem Datensatz eine Struktur zu geben, die mit der bereitgestellten CSV-Datei übereinstimmt. Klicken Sie im Bildschirm **[!UICONTROL Datensatz erstellen]** auf das Feld **[!UICONTROL Datensatz aus CSV-Datei erstellen]**.
 
