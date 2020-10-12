@@ -5,7 +5,7 @@ seo-title: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mi
 description: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
 seo-description: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
 translation-type: tm+mt
-source-git-commit: cf100e8df225a665eade5ee6ddab071707e93f8b
+source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 7%
@@ -23,7 +23,7 @@ ht-degree: 7%
 
 Das [!DNL HTTP] Ziel ist ein [!DNL Adobe Real-Time Customer Data Platform] Streaming-Ziel, mit dem Sie Profil-Daten an [!DNL HTTP] Endpunkte von Drittanbietern senden können.
 
-Um Profil-Daten an [!DNL HTTP] Endpunkte zu senden, müssen Sie zunächst eine Verbindung zum Ziel im [!DNL Adobe Real-Time Customer Data Platform](#connect-destination)Knoten herstellen.
+Um Profil-Daten an [!DNL HTTP] Endpunkte zu senden, müssen Sie zunächst eine Verbindung zum Ziel im [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination)Knoten herstellen.
 
 ## Nutzungsszenarien {#use-cases}
 
@@ -33,14 +33,15 @@ Das [!DNL HTTP] Ziel richtet sich an Kunden, die XDM-Profil- und Audience-Segmen
 
 ## Connect to Destination {#connect-destination}
 
-1. Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option [!DNL  HTTP API]und wählen Sie **[!UICONTROL Konfigurieren]**.
+1. Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option [!DNL HTTP API]und wählen Sie **[!UICONTROL Konfigurieren]**.
 
    ![HTTP-Ziel aktivieren](assets/activate-http-destination.png)
 
    >[!NOTE]
    >
    >Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche &quot; **[!UICONTROL Aktivieren]** &quot;angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt &quot; [Katalog](../destinations/destinations-workspace.md#catalog) &quot;der Dokumentation zum Zielarbeitsbereich.
-   ![HTTP-Ziel aktivieren](assets/connect-http-destination.png)
+   >
+   >![HTTP-Ziel aktivieren](assets/connect-http-destination.png)
 
 2. Im Schritt &quot; [!UICONTROL Konto] &quot;müssen Sie die Verbindungsdetails des HTTP-Endpunkts definieren. Wählen Sie &quot; **[!UICONTROL Neues Konto]** &quot;und geben Sie die Verbindungsdetails für den HTTP-Endpunkt ein, mit dem Sie eine Verbindung herstellen möchten.
    * **[!UICONTROL httpEndpoint]**: der vollständige HTTP-Endpunkt, an [!DNL URL] den Sie die Profil-Daten senden möchten.
