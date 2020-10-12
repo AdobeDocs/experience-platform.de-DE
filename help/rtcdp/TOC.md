@@ -2,12 +2,12 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
-user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundensegmente zu erstellen, Audiencen aus diesen Profilen zu erstellen und diese Profil an Drittanbieter-Ziele zu aktivieren.
 translation-type: tm+mt
-source-git-commit: e3017744bfe35c6a60cf921121135352a1119bdd
+source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 85%
+source-wordcount: '489'
+ht-degree: 81%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 85%
       * [Zieldetailseite](destinations/destination-details-page.md)
    * Zielkatalog {#destinations-cat}
       * [Zielkatalog – Übersicht](destinations/destinations-catalog.md)
+      * [HTTP-Ziel](/help/rtcdp/destinations/http-destination.md)
       * Adobe-Ziele {#adobe-destinations}
          * [Adobe-Ziele – Übersicht](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -148,4 +149,4 @@ ht-degree: 85%
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Website-Tags mit Adobe Launch implementieren](sources/launch.md)
 * [Versionshinweise zur Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
-* [Experience Platform Glossar](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
+* [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
