@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: Zieltypen und Kategorien
 seo-title: Zieltypen und Kategorien
-description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter. '
-seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter.
+description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportländer Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierungen an und exportieren Segmente und qualifizierte Profil in Ziele. Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter. '
+seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportländer Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierungen an und exportieren Segmente und qualifizierte Profil in Ziele. Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '580'
 ht-degree: 21%
 
 ---
@@ -25,7 +25,7 @@ In Adobe Echtzeit-Kundendatenplattform unterscheiden wir zwischen zwei Zieltypen
 
 <br> 
 
-### Verbindungen
+### Verbindungen {#connections}
 
 **[!UICONTROL Profil-Export]** - und **[!UICONTROL Segmentexport]** -Ziele in Adobe Echtzeit-Kundendatenplattform erfassen Ereignis-Daten, kombinieren Sie diese mit anderen Datenquellen, um das [Echtzeit-Kundenkundensegment](/help/profile/home.md)zu bilden, Segmentierung anzuwenden und Segmente und qualifizierte Profil an Ziele zu exportieren.
 
@@ -37,7 +37,7 @@ Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält
 
 #### Segmentexportziele
 
-Segmentexportziele senden die Profil und Segmente, für die sie qualifiziert sind, an Zielplattformen. Diese Ziele nutzen Segmentkennungen oder Anwenderkennungen. Werbeziele wie [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) oder [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) sind Beispiele für diese Zieltypen.
+Segmentexportziele senden die Profil und Segmente, für die sie qualifiziert sind, an Zielplattformen. Diese Ziele nutzen Segmentkennungen oder Anwenderkennungen. Werbeziele wie [[!DNL Google Display & Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) oder [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) sind Beispiele für diese Zieltypen.
 
 #### Export- und Segmentziele - Videoübersicht
 
@@ -47,7 +47,7 @@ Das folgende Video führt Sie durch die Besonderheiten der beiden Zieltypen:
 
 <br> 
 
-### Erweiterungen
+### Erweiterungen {#extensions}
 
 Adobe Echtzeit-CDP nutzt die Leistungsfähigkeit und Flexibilität von Experience Platform Launch, um Launch-Erweiterungen in die CDP-Benutzeroberfläche der Adobe in Echtzeit einzuschließen.
 
