@@ -1,13 +1,13 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; audience manager; audience manager destination
+keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
 title: Adobe-Ziele
 seo-title: Adobe-Ziele
 description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendatenplattform von Adobe mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
 seo-description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendatenplattform von Adobe mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
 translation-type: tm+mt
-source-git-commit: d1b87d696e113d229d69059a3a0f1b7786fa5add
+source-git-commit: e3e01474fcd6874f50b929116eff5bdfd4298f22
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '228'
 ht-degree: 57%
 
 ---
@@ -43,4 +43,4 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 Verwenden Sie die Segmentfreigabefunktion für Experience Platformen, um Ihre Experience Platformen an weitere Adoben freizugeben. Weitere Informationen finden Sie auf der folgenden Seite (wird im Dokumentationsportal zum Audience Manager geöffnet):
 
-* [Segmentfreigabe von Experience Platformen mit Adobe Audience Manager, Ad Cloud und Zielgruppe über die Core Services-Integration](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Segmentfreigabe für Experience Platformen mit Adobe Audience Manager, Adobe Advertising Cloud und Adobe Target über die Core Services-Integration](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
