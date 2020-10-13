@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 translation-type: tm+mt
-source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
+source-git-commit: d9e9440bb8a7735aa8a5d24285c1fb56f32733cb
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 86%
+source-wordcount: '507'
+ht-degree: 83%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 86%
       * Adobe-Ziele {#adobe-destinations}
          * [Adobe-Ziele – Übersicht](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+         * [Freigabe von Experience Platformen-Segmenten (öffnet die Dokumentation zum Audience Manager)](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * Werbeziele {#advertising-destinations}
          * [Werbeziele – Übersicht](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud-Erweiterung](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
