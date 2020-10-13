@@ -2,12 +2,12 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
-user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundensegmente zu erstellen, Audiencen aus diesen Profilen zu erstellen und diese Profil an Drittanbieter-Ziele zu aktivieren.
+user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 translation-type: tm+mt
-source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
+source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 81%
+source-wordcount: '490'
+ht-degree: 86%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 81%
       * [Zieldetailseite](destinations/destination-details-page.md)
    * Zielkatalog {#destinations-cat}
       * [Zielkatalog – Übersicht](destinations/destinations-catalog.md)
-      * [HTTP-Ziel](/help/rtcdp/destinations/http-destination.md)
+      * [ (Alpha) HTTP-Ziel](/help/rtcdp/destinations/http-destination.md)
       * Adobe-Ziele {#adobe-destinations}
          * [Adobe-Ziele – Übersicht](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
