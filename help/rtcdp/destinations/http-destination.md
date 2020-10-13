@@ -5,7 +5,7 @@ seo-title: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mi
 description: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
 seo-description: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
 translation-type: tm+mt
-source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
+source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 7%
