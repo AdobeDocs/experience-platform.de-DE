@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, um die Datenspeicherung der Azurblauen Datei mit der Experience Platform zu verbinden.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 20%
@@ -22,7 +22,7 @@ ht-degree: 20%
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen Sie eine Verbindung herstellen [!DNL Azure File Storage] können [!DNL Experience Platform].
+Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen eine Verbindung hergestellt [!DNL Azure File Storage] werden soll [!DNL Experience Platform].
 
 ## Erste Schritte
 
@@ -42,7 +42,7 @@ Damit eine Verbindung [!DNL Flow Service] zu [!DNL Azure File Storage]hergestell
 | `host` | Der Endpunkt der [!DNL Azure File Storag]Instanz, auf die Sie zugreifen. |
 | `userId` | Der Benutzer mit ausreichendem Zugriff auf den [!DNL Azure File Storage] Endpunkt. |
 | `password` | Das Kennwort für Ihre [!DNL Azure File Storage] Instanz |
-| Verbindungs-ID | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungsspezifikations-ID für [!DNL Azure File Storage] lautet: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| Verbindungs-ID | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spec-ID für [!DNL Azure File Storage] lautet: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 
 Weitere Informationen zu den ersten Schritten finden Sie in [diesem Dokument](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)der Azurblauen Datei-Datenspeicherung.
 
@@ -79,7 +79,6 @@ POST /connections
 **Anfrage**
 
 Die folgende Anforderung erstellt eine neue [!DNL Azure File Storage] Verbindung, die von den in der Payload bereitgestellten Eigenschaften konfiguriert wird:
-
 
 ```shell
 curl -X POST \
