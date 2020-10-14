@@ -5,10 +5,10 @@ title: Datumsfunktionen
 topic: overview
 description: In diesem Dokument werden die Datumsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 17%
+source-wordcount: '384'
+ht-degree: 18%
 
 ---
 
@@ -80,4 +80,4 @@ Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen def
 
 **Beispiel**
 
-Der Ausdruck `date(orderDate, 'yyyy-MM-dd')` konvertiert orderDate, wenn der Wert &quot;31. Dezember 2020&quot;war, in eine Datumsangabe mit dem Wert &quot;2020-12-31&quot;.
+Der Ausdruck `date(orderDate, 'yyyy-MM-dd')` konvertiert den `orderDate` Wert &quot;31. Dezember 2020&quot;in den Zeitwert &quot;2020-12-31&quot;.
