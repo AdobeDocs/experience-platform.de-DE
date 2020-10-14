@@ -5,10 +5,10 @@ title: SQL-Syntax
 topic: syntax
 description: In diesem Dokument finden Sie die von Query Service unterstützte SQL-Syntax.
 translation-type: tm+mt
-source-git-commit: 2672d0bdf1f34deb715415e7b660a35076edb06b
+source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
 workflow-type: tm+mt
-source-wordcount: '2004'
-ht-degree: 92%
+source-wordcount: '2067'
+ht-degree: 89%
 
 ---
 
@@ -484,3 +484,47 @@ where 'format_name' is be one of:
 >[!NOTE]
 >
 >Der vollständige Ausgabepfad lautet `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+
+
+### ALTER
+
+Mit diesem Befehl können Sie Primär- oder Fremdschlüsseleinschränkungen zur Tabelle hinzufügen oder ablegen.
+
+```sql
+Alter TABLE table_name ADD ( column_name Primary key Namespace 'namespace')
+
+Alter TABLE table_name ADD ( column_name Foreign key references referenced_table_name Namespace 'namespace')
+
+Alter TABLE table_name DROP ( column_name Primary key)
+
+Alter TABLE table_name DROP ( column_name Foreign key)
+```
+
+>[!NOTE]
+>Das Schema &quot;Tabelle&quot;sollte eindeutig sein und nicht für mehrere Tabellen freigegeben sein. Darüber hinaus ist der Namensraum obligatorisch.
+
+
+### PRIMÄR-TASTEN ANZEIGEN
+
+Dieser Befehl Liste alle primären Schlüsseleinschränkungen für die jeweilige Datenbank.
+
+```sql
+SHOW PRIMARY KEYS
+    tableName | columnName    | datatype | namespace
+------------------+----------------------+----------+-----------
+ table_name_1 | column_name1  | text     | "ECID"
+ table_name_2 | column_name2  | text     | "AAID"
+```
+
+
+### AUSLÄNDISCHE TASTEN ANZEIGEN
+
+Dieser Befehl Liste alle Fremdschlüsseleinschränkungen für die jeweilige Datenbank.
+
+```sql
+SHOW FOREIGN KEYS
+    tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
+------------------+---------------------+----------+---------------------+----------------------+-----------
+ table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
+ table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
