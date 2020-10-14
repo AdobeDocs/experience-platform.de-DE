@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die Plattform mit einem Microsoft Dynamics-Konto (im Folgenden "Dynamics" genannt) zu verbinden, um CRM-Daten zu erfassen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '703'
 ht-degree: 18%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 18%
 
 Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zur Verbindung [!DNL Platform] mit einem [!DNL Microsoft Dynamics] (nachfolgend &quot;Dynamics&quot;) Konto zur Erfassung von CRM-Daten zu führen.
 
-Wenn Sie lieber die Benutzeroberfläche in verwenden möchten, [!DNL Experience Platform]bietet das [Dynamics source Connector-UI-Tutorial](../../../ui/create/crm/dynamics.md) eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen.
+Wenn Sie lieber die Benutzeroberfläche in verwenden möchten, [!DNL Experience Platform]bietet das [Dynamics source Connector-UI-Lernprogramm](../../../ui/create/crm/dynamics.md) eine schrittweise Anleitung zum Durchführen ähnlicher Aktionen.
 
 ## Erste Schritte
 
@@ -142,11 +142,9 @@ Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für [!DNL Dynamic
 }
 ```
 
-## Basisverbindung erstellen
+## Verbindung für die API erstellen
 
-Eine Basisverbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL Dynamics] Konto ist nur eine Basisverbindung erforderlich, da diese zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
-
-Führen Sie die folgende POST aus, um eine Basisverbindung zu erstellen.
+Eine Verbindung für die API gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL Dynamics] Konto ist nur eine Verbindung für die API erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -158,7 +156,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -202,4 +200,4 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine Basisverbindung für Ihr [!DNL Dynamics] Konto mithilfe von APIs erstellt und eine eindeutige ID als Teil des Antwortkörpers erhalten. Sie können diese Basis-Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie CRM-Systeme mithilfe der Flow Service API [erkunden](../../explore/crm.md).
+In diesem Tutorial haben Sie eine Verbindung für Ihr [!DNL Dynamics] Konto mithilfe von APIs erstellt und eine eindeutige ID als Teil des Antwortkörpers erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie CRM-Systeme mithilfe der Flow Service API [erkunden](../../explore/crm.md).
