@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: ab87cac94ae69acde3be75ae95b11cf003a274e9
+source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 35%
+source-wordcount: '478'
+ht-degree: 27%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 35%
 **Releasedatum: Oktober 2020**
 
 - [Datenvorgabe](#data-prep)
+- [Echtzeit-Kundenprofil](#profile)
 - [Quellen](#sources)
 
 ## Datenvorgabe {#data-prep}
@@ -32,6 +33,17 @@ Data Prep ermöglicht es Datenentwicklern, Daten dem Experience Data Model (XDM)
 | `get_values` durchführen | Die `get_values` Funktion ermöglicht es Ihnen, die Werte aus der Eingabemap für einen beliebigen Schlüssel abzurufen. |
 
 For more information, please read the [Data Prep overview](../../data-prep/home.md).
+
+## Echtzeit-Kundenprofil {#profile}
+
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten zu einer einheitlichen Ansicht zusammenzuführen, die Ihnen einen umsetzbaren Zeitstempel für jede Kundeninteraktion bietet.
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| API-Ergänzungen zur Profil-Vorschau | Die Profil Vorschau API (`/previewsamplestatus`) bietet jetzt die Möglichkeit, eine Aufschlüsselung der gesamten Profil-Fragmente in Ihrer IMS-Organisation Ansicht und die Ansicht der Verteilung von Profil-Fragmenten über Identitäts-Namensraum hinweg. |
+| Updates der Vereinigung Schema Ansicht | In der Benutzeroberfläche &quot;Experience Platform&quot;können Benutzer leichter Informationen zu allen Schemas und Datensätzen finden, die zum Schema der Vereinigung beitragen, sowie zu Oberflächenattributen wie Identitäts- und Beziehungsfeldern. Diese Updates verbessern die Fehlerbehebung und die Überprüfung der ordnungsgemäßen Konfiguration von Profilen, der richtigen Zuordnung von Identitäten und der erfolgreichen Erfassung von Daten. |
+
+Weitere Informationen [!DNL Real-time Customer Profile]einschließlich Übungen und Best Practices für die Arbeit mit [!DNL Profile] Daten finden Sie in der Übersicht über das [Echtzeit-Kundenerlebnis](../../profile/home.md).
 
 ## Quellen {#sources}
 
