@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, mit denen Sie die Plattform mit einem Salesforce-Konto verbinden können, um CRM-Daten zu erfassen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '701'
 ht-degree: 18%
 
 ---
@@ -145,11 +145,9 @@ Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für [!DNL Salesfo
 }
 ```
 
-## Basisverbindung erstellen
+## Verbindung für die API erstellen
 
-Eine Basisverbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL Salesforce] Konto ist nur eine Basisverbindung erforderlich, da diese zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
-
-Führen Sie die folgende POST aus, um eine Basisverbindung zu erstellen.
+Eine Verbindung für die API gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL Salesforce] Konto ist nur eine Verbindung für die API erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -161,7 +159,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -205,4 +203,4 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine Basisverbindung für Ihr [!DNL Salesforce] Konto mithilfe von APIs erstellt und eine eindeutige ID als Teil des Antwortkörpers erhalten. Sie können diese Basis-Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie CRM-Systeme mithilfe der Flow Service API [erkunden](../../explore/crm.md).
+In diesem Tutorial haben Sie eine Verbindung für Ihr [!DNL Salesforce] Konto mithilfe von APIs erstellt und eine eindeutige ID als Teil des Antwortkörpers erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie CRM-Systeme mithilfe der Flow Service API [erkunden](../../explore/crm.md).
