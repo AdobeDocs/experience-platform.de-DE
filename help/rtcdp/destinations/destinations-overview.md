@@ -2,13 +2,13 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: Ziele – Übersicht
 seo-title: Ziele – Übersicht
-description: Aktivieren Sie Plattformdaten für Cross-Kanal-Marketing-Kampagnen, E-Mails, gezielte Werbung und mehr.
+description: Stellen Sie Platform-Daten für kanalübergreifende Marketing-Kampagnen, E-Mails, zielgruppengerechte Werbung und vieles mehr bereit.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele in der Echtzeit-Kundendatenplattform von Adobe nutzen, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '491'
-ht-degree: 53%
+ht-degree: 56%
 
 ---
 
