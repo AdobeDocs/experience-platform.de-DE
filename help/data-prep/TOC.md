@@ -1,18 +1,18 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Handbuch zur Datenvorbereitung
-user-guide-description: Prepare your data for ingestion into Adobe Experience Platform.
+user-guide-title: Datenvorbereitungsanleitung
+user-guide-description: Bereiten Sie Ihre Daten für die Aufnahme in Adobe Experience Platform vor.
 translation-type: tm+mt
 source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
 workflow-type: tm+mt
-source-wordcount: '20'
-ht-degree: 20%
+source-wordcount: '29'
+ht-degree: 62%
 
 ---
 
 
-# Datenvorgabe {#data-prep}
+# Datenvorbereitung {#data-prep}
 
 * [Datenvorgabe - Übersicht](home.md)
 * [Funktionen zur Datenvorbereitung](functions.md)
