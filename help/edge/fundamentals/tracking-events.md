@@ -5,10 +5,10 @@ description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfol
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 71%
+source-wordcount: '1139'
+ht-degree: 69%
 
 ---
 
@@ -54,7 +54,7 @@ Derzeit wird das Senden von Daten, die nicht mit einem XDM-Schema übereinstimme
 
 ### Einstellen von `eventType`
 
-In an XDM experience event, there is an optional `eventType` field. Dies enthält den primären Ereignistyp für den Datensatz. Das Festlegen eines Ereignistyps kann Ihnen helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet mehrere vordefinierte Ereignistyp, die Sie verwenden können, oder Sie erstellen Ihre eigenen benutzerdefinierten Ereignistyp für Ihre Anwendungsfälle. Nachfolgend finden Sie eine Liste aller vordefinierten Ereignistyp, die von XDM bereitgestellt werden.
+In an XDM experience event, there is an optional `eventType` field. Dies enthält den primären Ereignistyp für den Datensatz. Das Festlegen eines Ereignistyps kann Ihnen helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet mehrere vordefinierte Ereignistyp, die Sie verwenden können, oder Sie erstellen Ihre eigenen benutzerdefinierten Ereignistyp für Ihre Anwendungsfälle. Nachfolgend finden Sie eine Liste aller vordefinierten Ereignistyp, die von XDM bereitgestellt werden. [Mehr darüber im öffentlich-rechtlichen XDM-Bericht](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
 
 
 | **Ereignistyp:** | **Definition:** |
@@ -83,7 +83,7 @@ In an XDM experience event, there is an optional `eventType` field. Dies enthäl
 | delivery.feedback | Feedback-Ereignis für einen Versand. Beispiel-Feedback-Ereignisse für einen E-Mail-Versand |
 
 
-Diese Ereignistyp werden in einer Dropdown-Liste angezeigt, wenn Sie die Erweiterung &quot;Launch&quot;verwenden, oder Sie können sie immer ohne Launch einreichen. They can be passed in as part of the `xdm` option.
+Diese Ereignistyp werden in einer Dropdown-Liste angezeigt, wenn Sie die Adobe Experience Platform Launch-Erweiterung verwenden, oder Sie können sie immer ohne Experience Platform Launch weitergeben. They can be passed in as part of the `xdm` option.
 
 
 ```javascript
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### Hinzufügen von Identitätsinformationen
 
-Benutzerspezifische Identitätsinformationen können auch dem Ereignis hinzugefügt werden. Siehe [Abrufen der Experience Cloud-ID](./identity.md)
+Benutzerspezifische Identitätsinformationen können auch dem Ereignis hinzugefügt werden. Siehe [Abrufen der Experience Cloud-ID](../identity/overview.md)
 
 ## Verwenden der sendBeacon-API
 
@@ -205,7 +205,7 @@ alloy("configure", {
 Die `xdm`-Felder werden in der folgenden Reihenfolge festgelegt:
 
 1. Werte, die als Optionen an den Ereignis-Befehl übergeben werden `alloy("sendEvent", { xdm: ... });`
-2. Automatisch erfasste Werte.  (Siehe [Automatische Informationen](../reference/automatic-information.md).)
+2. Automatisch erfasste Werte.  (Siehe [Automatische Informationen](../data-collection/automatic-information.md).)
 3. Die Änderungen, die im `onBeforeEventSend`-Rückruf vorgenommen wurden.
 
 Wenn der `onBeforeEventSend`-Rückruf eine Ausnahme auslöst, wird das Ereignis trotzdem gesendet. jedoch wird keine der im Rückruf vorgenommenen Änderungen auf das endgültige Ereignis angewendet.
