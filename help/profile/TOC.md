@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Handbuch zum Profil von Kunden in Echtzeit
-user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
+user-guide-title: Anleitung zum Echtzeit-Kundenprofil
+user-guide-description: Zusammenführen von Kundendaten, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 51%
+source-wordcount: '96'
+ht-degree: 65%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 51%
    * [Erste Schritte](api/getting-started.md)
    * [(Alpha) Berechnete Attribute](api/computed-attributes.md)
    * [Edge-Projektionen](api/edge-projections.md)
-   * [Entitäten ([!DNL-Profil])](api/entities.md)
-   * [Exportaufträge ([!DNL-Profil]-Export)](api/export-jobs.md)
+   * [Entitäten ([!DNL Profile] Zugriff)](api/entities.md)
+   * [Exportaufträge ([!DNL Profile] Export)](api/export-jobs.md)
    * [Zusammenführungsrichtlinien](api/merge-policies.md)
-   * [Musterstatus der Vorschau ([!DNL-Profil] Vorschau)](api/preview-sample-status.md)
+   * [Musterstatus der Vorschau ([!DNL Profile] Vorschau)](api/preview-sample-status.md)
    * [[!DNL Profile] Systemaufträge (Anforderungen löschen)](api/profile-system-jobs.md)
 * Benutzeroberflächen-Handbücher {#ui}
    * [[!DNL Profile] Benutzerhandbuch](ui/user-guide.md)
