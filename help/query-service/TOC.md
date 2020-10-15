@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Hilfe zum Adobe Experience Platform Abfrage Service
-breadcrumb-title: Query Service Guide
-user-guide-description: Use standard SQL to query data in Platform Data Lake.
+user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
+breadcrumb-title: Anleitung zum Abfragedienst
+user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 67%
+source-wordcount: '147'
+ht-degree: 74%
 
 ---
 
