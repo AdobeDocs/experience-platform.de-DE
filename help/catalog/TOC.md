@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Handbuch zu Katalogen und Datensätzen
-user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake.
+user-guide-title: Anleitung zu Katalog und Datensätzen
+user-guide-description: Informieren Sie sich über Datenlinien, Metadaten, Dateibeschreibungen, Verzeichnissen und Datensätzen im Data Lake.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 92%
+source-wordcount: '106'
+ht-degree: 97%
 
 ---
 
