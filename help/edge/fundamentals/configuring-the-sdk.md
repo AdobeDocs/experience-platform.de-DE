@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -46,7 +46,7 @@ Ihre zugewiesene Konfigurations-ID, die das SDK mit den entsprechenden Konten un
 | ---------------- | ------------ | -------------------------------------------------- |
 | Array von Zeichenfolgen | Nein | `["web", "device", "environment", "placeContext"]` |
 
-Gibt an, welche Kontextkategorien automatisch erfasst werden sollen, wie unter [Automatische Informationen](../reference/automatic-information.md) beschrieben.  Wenn diese Konfiguration nicht angegeben ist, werden standardmäßig alle Kategorien verwendet.
+Gibt an, welche Kontextkategorien automatisch erfasst werden sollen, wie unter [Automatische Informationen](../data-collection/automatic-information.md) beschrieben.  Wenn diese Konfiguration nicht angegeben ist, werden standardmäßig alle Kategorien verwendet.
 
 ### `debugEnabled`
 
@@ -109,7 +109,7 @@ Legen Sie dies fest, um einen Rückruf zu konfigurieren, der für jedes Ereignis
 | -------- | ------------ | ----------------- |
 | Objekt | Nein | `"in"` |
 
-Legt die Standardzustimmung des Nutzers fest. Wird verwendet, wenn für den Nutzer noch keine Voreinstellung für die Zustimmung gespeichert wurde. Der andere gültige Wert ist `"pending"`. Wenn dies festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Nutzer die Zustimmungseinstellungen eingibt. Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit basierend auf den Voreinstellungen des Nutzers entweder fortgesetzt oder abgebrochen. Weitere Informationen finden Sie unter [Unterstützen von Zustimmung](supporting-consent.md).
+Legt die Standardzustimmung des Nutzers fest. Wird verwendet, wenn für den Nutzer noch keine Voreinstellung für die Zustimmung gespeichert wurde. Der andere gültige Wert ist `"pending"`. Wenn dies festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Nutzer die Zustimmungseinstellungen eingibt. Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit basierend auf den Voreinstellungen des Nutzers entweder fortgesetzt oder abgebrochen. Weitere Informationen finden Sie unter [Unterstützen von Zustimmung](../consent/supporting-consent.md).
 
 ## Personalisierungsoptionen
 
