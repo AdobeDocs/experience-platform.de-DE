@@ -5,9 +5,9 @@ description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigu
 seo-description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '891'
 ht-degree: 4%
 
 ---
@@ -17,21 +17,23 @@ ht-degree: 4%
 
 Die Konfiguration für das Adobe Experience Platform [!DNL Web SDK] ist an zwei Stellen aufgeteilt. Der [Befehl](configuring-the-sdk.md) &quot;configure&quot;im SDK steuert Dinge, die auf dem Client verarbeitet werden müssen, z. B. die `edgeDomain`. Die Edge-Konfiguration verarbeitet alle anderen Konfigurationen für das SDK. Wenn eine Anforderung an das Adobe Experience Platform gesendet wird [!DNL Edge Network], `edgeConfigId` wird die serverseitige Konfiguration referenziert. Dadurch können Sie die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
 
+Ihre Organisation muss für diese Funktion freigeschaltet sein. Wenden Sie sich an Ihren zertifizierten Software-Manager (CSM), um die Zulassungsliste aufzurufen.
+
 ## Erstellen einer Edge-Konfigurations-ID
 
-Edge-Konfigurations-IDs können in Adobe [!DNL Launch] mit dem Edge-Konfigurationstool erstellt werden. Mit diesem Tool können Sie sowohl die Edge-Konfiguration als auch Umgebung in diesen Konfigurationen erstellen.
+Edge-Konfigurations-IDs können in Adobe [!DNL Experience Platform Launch] mit dem Edge-Konfigurationstool erstellt werden. Mit diesem Tool können Sie sowohl die Edge-Konfiguration als auch Umgebung in diesen Konfigurationen erstellen.
 
 ![Edge-Konfigurationstool](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->Das Edge-Konfigurationstool steht Kunden auf der Zulassungsliste unabhängig davon zur Verfügung, ob sie [!DNL Launch] als Tag-Manager arbeiten. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der [!DNL Launch] Dokumentation.
+>Das Edge-Konfigurationstool steht Kunden auf der Zulassungsliste unabhängig davon zur Verfügung, ob sie [!DNL Experience Platform Launch] als Tag-Manager arbeiten. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Experience Platform Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der [!DNL Experience Platform Launch] Dokumentation.
 
 Sie können eine Edge-Konfiguration erstellen, indem Sie im oberen rechten Bereich des Bildschirms auf **[!UICONTROL Neue Edge-Konfiguration]** klicken. Nachdem Sie einen Namen und eine Beschreibung angegeben haben, werden Sie nach den Standardeinstellungen für jede Umgebung gefragt.
 
 ### Standardeinstellungen für Umgebung
 
-Mit diesen Standardeinstellungen werden die ersten drei Umgebung mit identischen Einstellungen erstellt. Diese drei Umgebung sind *dev*, *stage* und *prod*. Sie entsprechen den drei Standardeinstellungen in [!DNL Launch]. Wenn Sie eine [!DNL Launch] Bibliothek zu einer dev-Umgebung erstellen, verwendet die Bibliothek automatisch die dev-Umgebung Ihrer Konfiguration. Sie können die Einstellungen in den einzelnen Umgebung beliebig bearbeiten.
+Mit diesen Standardeinstellungen werden die ersten drei Umgebung mit identischen Einstellungen erstellt. Diese drei Umgebung sind *dev*, *stage* und *prod*. Sie entsprechen den drei Standardeinstellungen in [!DNL Experience Platform Launch]. Wenn Sie eine [!DNL Experience Platform Launch] Bibliothek zu einer dev-Umgebung erstellen, verwendet die Bibliothek automatisch die dev-Umgebung Ihrer Konfiguration. Sie können die Einstellungen in den einzelnen Umgebung beliebig bearbeiten.
 
 Die im SDK verwendete ID `edgeConfigId` ist eine Composite-ID, die die Konfiguration und die Umgebung angibt. Wenn keine Umgebung vorhanden ist, wird die Umgebung der Produktion verwendet.
 
@@ -113,7 +115,7 @@ Ermöglicht dem SDK die Freigabe von Segmentinformationen über [URL-Ziele](http
 
 #### Adobe Analytics
 
-Steuert, ob Daten an Adobe Analytics gesendet werden. Weitere Details finden Sie in der [Analytics-Übersicht](../solution-specific/analytics/analytics-overview.md).
+Steuert, ob Daten an Adobe Analytics gesendet werden. Weitere Details finden Sie in der [Analytics-Übersicht](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Adobe Analytics-Einstellungsblock](../../assets/edge_configuration_aa.png)
 
