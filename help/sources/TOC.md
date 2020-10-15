@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Hilfe zu Adobe Experience Platform Source Connectors
-breadcrumb-title: Source Connectors Guide
-user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
+user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
+breadcrumb-title: Source Connectoren-Anleitung
+user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
 source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 5%
+source-wordcount: '645'
+ht-degree: 8%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 5%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
-      - [Datenspeicherung-Stecker](connectors/databases/ats.md)
+      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -95,7 +95,7 @@ ht-degree: 5%
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/api/create/databases/data-explorer.md)
          - [Blue-Synapse-Analytics-Anschluss](tutorials/api/create/databases/synapse-analytics.md)
-         - [Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
+         - [Azurblender Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
          - [Steckverbinder](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/api/create/databases/greenplum.md)
@@ -166,7 +166,7 @@ ht-degree: 5%
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/ui/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/ui/create/databases/data-explorer.md)
          - [Blue-Synapse-Analytics-Anschluss](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
+         - [Azurblender Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
          - [Steckverbinder](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Abfrage Connector](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/ui/create/databases/greenplum.md)
