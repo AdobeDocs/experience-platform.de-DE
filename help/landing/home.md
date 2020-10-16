@@ -5,9 +5,9 @@ title: Überblick über Adobe Experience Platform
 topic: getting started
 description: Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. Mit Adobe Experience Platform können Unternehmen Kundendaten und Content aus beliebigen Systemen zentral zusammenführen und standardisieren sowie mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessern.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 58%
 
 ---
@@ -44,7 +44,7 @@ You can get started with [!DNL Platform] quickly and easily by following along w
 * [**API-Grundlagen**](api-fundamentals.md)\
    Lernen Sie die Grundlagen für die Arbeit mit [!DNL Platform] APIs kennen.
 
-* [**API-Referenz**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
+* [**API-Referenz-Dokumente**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
    Discover- [!DNL Experience Platform] APIs, einschließlich Kopfzeilen, Parameter, Musteranforderungen und Antworten.<br/>*Diese Dokumente stehen auf Adobe I/O zur Verfügung.*
 
 * [**Glossar**](glossary.md)\
