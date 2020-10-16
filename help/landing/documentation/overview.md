@@ -5,7 +5,7 @@ title: Übersicht über die Adobe Experience Platform-Dokumentation
 topic: overview
 description: Die Dokumentation zu Adobe Experience Platform ist in verschiedenen Formaten verfügbar, einschließlich Übersichten, Übungen und Handbüchern für die Benutzeroberfläche und die API. Hier finden Sie eine kurze Beschreibung der am häufigsten verwendeten Dokumentationstypen, die für Experience Platform-Services verfügbar sind.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 12%
@@ -31,7 +31,7 @@ Die Dokumentation zu Adobe Experience Platform ist in verschiedenen Formaten ver
 
 * **Übung:** Ein Tutorial ist eine schrittweise Anleitung durch die Benutzeroberfläche, API oder eine Kombination aus beiden, die zu einem bestimmten Ergebnis führt. Im Gegensatz zu Entwicklerhandbüchern konzentriert sich ein API-Tutorial möglicherweise nur auf einen oder zwei Endpunkte und stellt keine vollständige API-Ressource dar. In ähnlicher Weise konzentrieren sich die Benutzeroberflächen-Tutorials möglicherweise nur auf bestimmte Schritte, nicht auf die vollständige Benutzeroberfläche, die für diesen Dienst verfügbar ist. Tutorials sind oft Teil eines größeren Workflows und enthalten &quot;nächste Schritte&quot;, in denen beschrieben wird, welche Tutorials Sie als Nächstes ausprobieren möchten.
 
-* **Benutzerhandbuch:** Ein Benutzerhandbuch skizziert die Aktionen, die in der [!DNL Platform] Benutzeroberfläche für einen bestimmten Dienst verfügbar sind. Diese Dokumente enthalten Screenshots und Schritte zur Interaktion mit der Plattform über die Benutzeroberfläche. Ähnlich wie bei einem Entwicklerhandbuch werden im Benutzerhandbuch alle verfügbaren Aktionen und Optionen einschließlich der zu vermeidenden &quot;gotchas&quot;beschrieben. Dies ist die detaillierteste Ressource für die Arbeit mit der Benutzeroberfläche.
+* **UI-Handbuch:** In einem UI-Handbuch werden die Aktionen beschrieben, die auf der [!DNL Platform] Benutzeroberfläche für einen bestimmten Dienst verfügbar sind. Diese Dokumente enthalten Screenshots und Schritte, die sich auf die Interaktion mit der Plattform über die Benutzeroberfläche konzentrieren. Ähnlich wie bei einem Entwicklerhandbuch werden im UI-Handbuch alle verfügbaren Aktionen und Optionen einschließlich der zu vermeidenden &quot;gotchas&quot;beschrieben. Dies ist die detaillierteste Ressource für die Arbeit mit der Benutzeroberfläche.
 
 ## Unterstützung von Dokumentationssprachen
 
@@ -63,6 +63,6 @@ Die Dokumentation ist derzeit für die unten aufgeführten Dienste und Funktione
 * **[!DNL Query Service]:** Verwenden Sie SQL-Abfragen, um Daten von Adobe Experience Platform abzurufen, z. B. Lösungsdaten von Adoben, Daten von Erstanbietern oder andere Plattformdaten.
 * **[!DNL Real-time Customer Data Platform]:** Die Echtzeit-Kundendatenplattform fasst unterschiedliche Unternehmensdatenquellen zusammen, um in Echtzeit einheitliche Profile zu erstellen, die über alle Kanäle und Geräte hinweg ein personalisiertes Kundenerlebnis möglich machen.
 * **[!DNL Sandboxes]:** Sandboxes teilen eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung auf, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* **Schemas**: Das Experience Data Model (XDM) basiert auf der Adobe und dient der Standardisierung von Kundenerlebnisdaten und der Definition von Schemas für das Kundenerlebnis-Management. XDM-Schema unterstützen die Interoperabilität von Daten über [!DNL Experience Platform] Komponenten hinweg.
 * **[!DNL Segmentation]:** Erstellen Sie Segmente basierend auf Daten aus dem Echtzeit-Profil von Kunden, um Audiencen zu generieren und die Benutzererfahrung zu steigern.
 * **[!DNL Sources](Verbindungen):** {#sources} Sie können Daten aus verschiedenen Quellen wie Adobe, Cloud-basierte Datenspeicherung, Datenbanken und mehr in Adobe Experience Platform importieren.
-* **Schemas**: Das Experience Data Model (XDM) basiert auf der Adobe und dient der Standardisierung von Kundenerlebnisdaten und der Definition von Schemas für das Kundenerlebnis-Management. XDM-Schema unterstützen die Interoperabilität von Daten über [!DNL Experience Platform] Komponenten hinweg.
