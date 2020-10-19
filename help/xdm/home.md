@@ -5,9 +5,9 @@ title: Experience-Datenmodell (XDM)-System
 topic: overview
 description: 'Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1639'
 ht-degree: 10%
 
 ---
@@ -48,7 +48,7 @@ Alle XDM-Schemas beschreiben Daten, die als Datensatz- oder Zeitreihen kategoris
 
 Obwohl Sie in der Lage sind, Ihre eigenen Klassen innerhalb der [!DNL Schema Registry]zu definieren, wird empfohlen, die bevorzugten Klassen **[!DNL XDM Individual Profile]** bzw. **[!DNL XDM ExperienceEvent]** für die Daten der Datensatz- und Zeitreihen zu verwenden. Diese Klassen werden nachfolgend detaillierter beschrieben.
 
-### [!DNL XDM Individual Profile]
+### [!DNL XDM Individual Profile] (#xdm-single-Profil)
 
 [!DNL XDM Individual Profile] ist eine auf Aufzeichnungen basierende Klasse, die eine einzigartige Darstellung der Attribute sowohl identifizierter als auch nur teilweise identifizierter Subjekte bildet. Profil, die eindeutig identifiziert werden, können für persönliche Kommunikation oder zielgerichtete Interaktionen verwendet werden und detaillierte persönliche Informationen wie Name, Geschlecht, Geburtsdatum, Ort und Kontaktdaten wie Telefonnummern und E-Mail-Adressen enthalten.
 
@@ -94,7 +94,7 @@ Echtzeit-Customer-Profil bietet ein zentrales Profil für zielgerichtetes und pe
 
 [!DNL Real-time Customer Profile] verarbeitet Schema-formatierte Daten basierend auf der [!DNL XDM Individual Profile] oder- [!DNL XDM ExperienceEvent] Klassen und reagiert auf Abfragen, die auf diesen Daten basieren. [!DNL Profile] unterstützt nicht die Verwendung von Schemas, die auf anderen Klassen basieren.
 
-[!DNL Profile] unterhält eine Instanz jedes Profils und führt Daten zusammen, um eine &quot;einzige Wahrheitsquelle&quot;für die Einzelperson zu schaffen. Diese vereinheitlichten Daten werden mithilfe einer so genannten &quot;Vereinigung-Ansicht&quot;dargestellt. Eine Vereinigung-Ansicht Aggregat die Felder aller Schema, die dieselbe Klasse implementieren, in einem Schema.  Wenn Sie ein Schema mithilfe der Benutzeroberfläche oder API erstellen, können Sie das Schema für die Verwendung mit aktivieren [!DNL Real-time Customer Profile] und es für die Aufnahme in die Ansicht &quot;Vereinigung&quot;taggen. Das getaggte Schema nimmt dann an der Schema-Definition teil, an die [!DNL Profile]es gesendet wird.
+[!DNL Profile] unterhält eine Instanz jedes Profils und führt Daten zusammen, um eine &quot;einzige Wahrheitsquelle&quot;für die Einzelperson zu schaffen. Diese vereinheitlichten Daten werden mithilfe einer so genannten &quot;Vereinigung-Ansicht&quot;dargestellt. Eine Vereinigung-Ansicht Aggregat die Felder aller Schema, die dieselbe Klasse implementieren, in einem Schema.  Wenn Sie ein Schema mithilfe der Benutzeroberfläche oder API erstellen, können Sie das Schema für die Verwendung mit aktivieren [!DNL Real-time Customer Profile] und es zur Aufnahme in die Ansicht der Vereinigung taggen. Das getaggte Schema nimmt dann an der Schema-Definition teil, an die [!DNL Profile]es gesendet wird.
 
 Während [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent] Daten erfasst und verwaltet werden [!DNL Catalog], werden Daten, die für ihre Verwendung aktiviert wurden, [!DNL Real-time Customer Profile] in die Erfassung aufgenommen. Je mehr Interaktionen und Details einbezogen werden, desto robuster werden die einzelnen Profil.
 
