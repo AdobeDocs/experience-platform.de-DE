@@ -1,0 +1,36 @@
+---
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;fullName;xdm:fullName;person name;name;datatype;data-type;data type;
+solution: Experience Platform
+title: Datentyp "Person"
+topic: overview
+description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp "Personenname".
+translation-type: tm+mt
+source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 23%
+
+---
+
+
+# [!UICONTROL Datentyp &quot;Personenname] &quot;
+
+[!UICONTROL Der Personenname] ist ein standardmäßiger XDM-Datentyp, der den vollständigen Namen einer Person beschreibt. Da die Konventionen für Namensstrukturen in den Sprachen und Kulturen sehr unterschiedlich sind, sollten Namen immer mit diesem Datentyp modelliert werden.
+
+Darüber hinaus stellt der Datentyp eine Reihe optionaler Eigenschaften bereit, die in Situationen verwendet werden können, in denen nur ein Fragment des vollständigen Namens verwendet werden muss, z. B. das Erstellen eines formellen oder informellen Begrüßens.
+
+<img src="../images/data-types/person-name.png" width="500" /><br />
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `courtesyTitle` | Eine Abkürzung des Titels, der Ehrlichkeit oder der Begrüßung einer Person (z. B. `Mr.`, `Miss.`oder `Dr.`). |
+| `firstName` | Das erste Segment des Namens in der am häufigsten akzeptierten Schreibreihenfolge in der Sprache des Namens. |
+| `fullName` | Der vollständige Name der Person, in der Schreibreihenfolge am häufigsten in der Sprache des Namens akzeptiert. |
+| `lastName` | Das letzte Segment des Namens in der am häufigsten akzeptierten Schreibreihenfolge in der Sprache des Namens. |
+| `middleName` | Zwischen dem Vor- und dem Nachnamen angegebene mittlere, alternative oder zusätzliche Namen. |
+| `suffix` | Eine Gruppe von Briefen, die nach dem Namen einer Person bereitgestellt werden, um zusätzliche Informationen bereitzustellen (z. B. `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II``III`usw.). |
+
+Weitere Informationen zum Datentyp für den Personennamen finden Sie im öffentlichen XDM-Repository:
+
+* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.example.1.json)
+* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.schema.json)
