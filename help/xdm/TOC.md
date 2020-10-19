@@ -5,10 +5,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Anleitung zum XDM-Datenmodell
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 90%
+source-wordcount: '194'
+ht-degree: 71%
 
 ---
 
@@ -16,12 +16,43 @@ ht-degree: 90%
 # Experience-Datenmodell (XDM)-System {#xdm}
 
 * [XDM-System – Übersicht](home.md)
-* XDM-Schemata {#schema}
+* Schemas {#schema}
    * [Grundlagen der Schemakomposition](schema/composition.md)
    * [XDM-Feldtypeinschränkungen](schema/field-constraints.md)
    * [Wörterbuch der XDM-Felder](schema/field-dictionary.md)
    * Anwendungsfälle des Schemas {#use-cases}
       * [Mischung für Datenschutzgenehmigung](schema/privacy-consent.md)
+* Klassen {#classes}
+   * [XDM Individuelles Profil](./classes/individual-profile.md)
+   * [XDM ExperienceEvent](./classes/experienceevent.md)
+* Mixins {#mixins}
+   * Profil mixins {#profile}
+      * [IdentityMap](./mixins/profile/identitymap.md)
+      * [Angaben zur Person des Profils](./mixins/profile/person-details.md)
+      * [Persönliche Angaben zum Profil](./mixins/profile/personal-details.md)
+      * [Segmentierung von Profilen](./mixins/profile/segmentation.md)
+      * [Profil-Arbeitsdetails](./mixins/profile/work-details.md)
+   * Ereignis mixins {#event}
+      * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
+      * [Details zur ExperienceEvent-Umgebung](./mixins/event/environment-details.md)
+* Datentypen {#data-types}
+   * [Beacon](./data-types/beacon.md)
+   * [Browserdetails](./data-types/browser-details.md)
+   * [Gerät](./data-types/device.md)
+   * [E-Mail-Adresse](./data-types/email-address.md)
+   * [Umgebung](./data-types/environment.md)
+   * [Geo](./data-types/geo.md)
+   * [Geo-Kreis](./data-types/geo-circle.md)
+   * [Geo-Koordinaten](./data-types/geo-coordinates.md)
+   * [Details zur Geo-Interaktion](./data-types/geo-interaction-details.md)
+   * [Geo-Form](./data-types/geo-shape.md)
+   * [Identität](./data-types/identity.md)
+   * [Personenname](./data-types/person-name.md)
+   * [Telefonnummer](./data-types/phone-number.md)
+   * [Ortskontext](./data-types/place-context.md)
+   * [POI-Details](./data-types/poi-details.md)
+   * [POI-Interaktion](./data-types/poi-interaction.md)
+   * [Postadresse](./data-types/postal-address.md)
 * Schema Registry-API {#api}
    * [Erste Schritte](api/getting-started.md)
    * [Auflisten von Ressourcen](api/list-resources.md)
