@@ -1,0 +1,30 @@
+---
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;geo shape;datatype;data-type;data type;
+solution: Experience Platform
+title: Geo-Form-Datentyp
+topic: overview
+description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für Geo-Form.
+translation-type: tm+mt
+source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 39%
+
+---
+
+
+# [!UICONTROL Geo-Form] -Datentyp
+
+[!UICONTROL Geo-Form] ist ein standardmäßiger XDM-Datentyp, der die Form eines geografischen Gebiets beschreibt. Dieser Datentyp basiert auf der in [Schema.org](https://schema.org/GeoShape)dokumentierten öffentlichen Spezifikation.
+
+<img src="../images/data-types/geo-shape.png" width="500" /><br />
+
+| Eigenschaft | Datentyp | Beschreibung |
+| --- | --- | --- |
+| `_schema.box` | Array von [[!UICONTROL Geo-Koordinaten]](./geo-coordinates.md) | Beschreibt ein geografisches Gebiet, das von einem Rechteck umgeben ist, das aus zwei Koordinaten besteht. Die erste Koordinate ist die untere Ecke des Rechtecks und die zweite Koordinate die obere Ecke. |
+| `_schema.circle` | Array von [[!UICONTROL Geo-Koordinaten]](./geo-coordinates.md) | Beschreibt einen kreisförmigen Bereich mit einem bestimmten Radius, der auf einer geografischen Koordinate zentriert ist. |
+| `_schema.polygon` | [[!UICONTROL Geo-Kreis]](./geo-circle.md) | Eine Reihe von vier oder mehr Koordinaten, bei denen die ersten und letzten Koordinaten identisch sind. |
+| `_schema.description` | Zeichenfolge | Eine Beschreibung, was die Form definiert. |
+| `_schema.elevation` | Double | Die spezifische oder minimale Höhe der Form. Dieser Wert entspricht dem [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/)-Datum und wird in Metern gemessen. In Kombination mit `ceiling` kann mit dieser Eigenschaft ein dreidimensionaler Begrenzungsrahmen für eine Position angegeben werden. |
+| `_id` | Zeichenfolge | Ein eindeutiger, systemgenerierter Bezeichner für die Form. |
+| `ceiling` | Double | Die maximale Höhe der Form. Diese Eigenschaft ist nur gültig, wenn sie in Verbindung mit `elevation`verwendet wird. The value conforms to the [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/) datum and is measured in meters. In Kombination mit `elevation` kann mit dieser Eigenschaft ein dreidimensionaler Begrenzungsrahmen für eine Position angegeben werden. |
