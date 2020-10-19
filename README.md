@@ -1,9 +1,16 @@
 ---
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: e647db615371f5a153e180e5a0d06fd7439a45c6
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '643'
+ht-degree: 66%
 
 ---
 # Beitrag zum Inhalt
+
+| EXL-PR | EXL | Vorschau | Aktivieren | Veröffentlicht | Hilfe |
+|--- |--- |--- |--- |--- |--- |
+| [![Build-Status](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![Build-Status](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [Vorschauen-URL](https://experienceleague.corp.adobe.com/docs/experience-platform/using/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [Live-URL](https://experienceleague.adobe.com/docs/experience-platform/using/home.html?lang=en) | [Autorenanleitung](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 | Produktion | Staging |
 |---|---|
@@ -16,7 +23,7 @@ Wir freuen uns über Inhaltsbeiträge unserer Community und von Adobe-Mitarbeite
 
 Für dieses Projekt gilt der [Adobe Open Source-Verhaltenskodex](code-of-conduct.md) oder der [.NET Foundation-Verhaltenskodex](https://dotnetfoundation.org/code-of-conduct). Weitere Informationen finden Sie im Artikel [Beitragen](contributing.md).
 
-## Möglichkeiten zum Beitrag zu Adobe-Inhalten
+## Möglichkeiten zum Beitrag zu Adoben
 
 Lesen Sie das [Adobe Docs-Mitarbeiter-Handbuch](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
@@ -40,13 +47,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Wichtige Änderungen oder neue Artikel von Adobe-Mitarbeitern
 
-Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine Adobe Experience Cloud-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. Weitere Informationen finden Sie im Handbuch zur [internen Zusammenarbeit](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) .
+Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine Adobe Experience Cloud-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. See the [Internal Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) for more information.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Kontakt zum Dokumentationsteam der Experience Platform
 
-Wie oben erläutert, können Mitglieder der Adobe-Community eine Ausgabe einreichen, die dem jeweiligen Autor zugewiesen wird. Wenn Sie Adobe-Mitarbeiter sind, können Sie eine Ausgabe senden oder sich direkt an das Experience Platform-Dokumentationsteam wenden. Informationen zum Interessentenautor für einen bestimmten Plattformbereich finden Sie im Wiki [zur](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)Adobe Experience Platform-Dokumentation.
+Wie bereits erwähnt, können Mitglieder der Community eine Ausgabe einreichen, die dem jeweiligen Autor zugewiesen wird. Wenn Sie ein Mitarbeiter der Adobe sind, können Sie eine Ausgabe einreichen oder sich direkt an das Dokumentationsteam der Experience Platform wenden. Informationen zum Interessentenautor für einen bestimmten Plattformbereich finden Sie im Wiki zur [Adobe Experience Platform-Dokumentation](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Werkzeuge und Einrichtung
 
