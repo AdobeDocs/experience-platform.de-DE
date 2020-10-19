@@ -5,7 +5,7 @@ title: Interaktionsdatentyp des Point-Interest
 topic: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp von Point-of-Interest-Interaktion.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `poiDetail` | [!UICONTROL Details zum Interessenbereich](./poi-details.md) | Beschreibt die Details des POI, der das Ereignis verursacht hat. |
+| `poiDetail` | [[!UICONTROL Details zum Interessenbereich]](./poi-details.md) | Beschreibt die Details des POI, der das Ereignis verursacht hat. |
 | `poiEntries` | Objekt | Beschreibt, wie oft eine Person in den POI eingereist ist. Enthält zwei Eigenschaften: <ul><li>`id`: Eine eindeutige ID für die Maßnahme.</li><li>`value`: Der quantifizierbare Wert der Maßnahme.</li></ul> |
 | `poiExits` | Objekt | Beschreibt, wie oft eine Person den POI verlassen hat. Enthält zwei Eigenschaften: <ul><li>`id`: Eine eindeutige ID für die Maßnahme.</li><li>`value`: Der quantifizierbare Wert der Maßnahme.</li></ul> |
 
