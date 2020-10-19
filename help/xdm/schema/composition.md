@@ -5,9 +5,9 @@ title: Grundlagen der Schema-Komposition
 topic: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: '2834'
 ht-degree: 56%
 
 ---
@@ -194,10 +194,10 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 
 Einige Datenoperationen, die von nachgeschalteten Diensten und Anwendungen verwendet werden, erzwingen Einschränkungen für bestimmte Feldtypen. Betroffene Dienste sind u. a., aber nicht ausschließlich:
 
-* [[!DNL Echtzeit-Profil des Kunden]](../../profile/home.md)
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL-Segmentierung]](../../segmentation/home.md)
-* [[!DNL Abfrage Service]](../../query-service/home.md)
+* [[!DNL Segmentation]](../../segmentation/home.md)
+* [[!DNL Query Service]](../../query-service/home.md)
 * [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 Bevor Sie ein Schema für die Verwendung in nachgelagerten Diensten erstellen, lesen Sie bitte die entsprechende Dokumentation für diese Dienste, um die Feldanforderungen und Einschränkungen für die Datenoperationen, für die das Schema bestimmt ist, besser zu verstehen.
@@ -238,7 +238,12 @@ All datafiles that are ingested into [!DNL Experience Platform] must conform to 
 
 ## Nächste Schritte
 
-Now that you understand the basics of schema composition, you are ready to begin building schemas using the [!DNL Schema Registry].
+Now that you understand the basics of schema composition, you are ready to begin exploring and building schemas using the [!DNL Schema Registry].
+
+Informationen zur Übersicht über die Struktur der beiden Core-XDM-Klassen und ihrer häufig verwendeten kompatiblen Mixins finden Sie in der folgenden Referenzdokumentation:
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The [!DNL Schema Library] contains Industry resources defined by Adobe, Vendor resources defined by [!DNL Experience Platform] partners, and classes, mixins, data types, and schemas that have been composed by members of your organization.
 
