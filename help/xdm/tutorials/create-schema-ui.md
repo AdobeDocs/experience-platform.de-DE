@@ -8,7 +8,7 @@ description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas 
 translation-type: tm+mt
 source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3819'
 ht-degree: 17%
 
 ---
@@ -30,7 +30,7 @@ Dieses Tutorial erfordert ein Verständnis der verschiedenen Aspekte der Adobe E
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
    * [Grundlagen der Schema-Zusammensetzung](../schema/composition.md): Eine Übersicht über XDM-Schemas und ihre Bausteine, einschließlich Klassen, Mixins, Datentypen und Feldern.
-* [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Browse existing schemas in the [!UICONTROL Schemas] workspace {#browse}
 
@@ -278,7 +278,7 @@ Now all data ingested into the `loyaltyId` field will be used to help identify t
 
 ## Schema zur Verwendung in [!DNL Real-time Customer Profile] {#profile}
 
-[[!DNL Echtzeit Customer Profil]](../../profile/home.md) nutzt Identitätsdaten, um eine ganzheitliche Ansicht jedes einzelnen Kunden zu ermöglichen [!DNL Experience Platform] . Der Dienst erstellt robuste 360° Profil von Kundenattributen sowie zeitgestempelte Konten für jede Interaktion, die Kunden über ein in [!DNL Experience Platform]das System integriertes System hatten.
+[[!DNL Real-time Customer Profile]](../../profile/home.md) nutzt Identitätsdaten, um eine ganzheitliche Ansicht der einzelnen Kunden [!DNL Experience Platform] zu ermöglichen. Der Dienst erstellt robuste 360° Profil von Kundenattributen sowie zeitgestempelte Konten für jede Interaktion, die Kunden über ein in [!DNL Experience Platform]das System integriertes System hatten.
 
 In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. Sie erhalten eine Fehlermeldung, wenn Sie versuchen, ein Schema zu aktivieren, ohne vorher eine primäre Identität zu definieren.
 
