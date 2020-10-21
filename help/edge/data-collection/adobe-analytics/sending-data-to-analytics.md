@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an 
 seo-description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 9e1ad05285b27a9fc8b56db903609add3fef144e
+source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Daten an Adobe Analytics senden
 
-Während es in der Vergangenheit verschiedene Funktionen gab, um zwischen einer Ansicht und einem Link zu unterscheiden (z. B. `s.t(), s.tl()`), gibt es im Web SDK nur den `sendEvent` Befehl. Die Daten, die Sie mit einem Ereignis senden, bestimmen, ob es sich um eine Ansicht oder einen Link handeln soll. [Weitere Informationen zu Linktracking-Links](../track-links.md)
+Während es in der Vergangenheit verschiedene Funktionen gab, um zwischen einer Ansicht und einem Link zu unterscheiden (z. B. `s.t(), s.tl()`), gibt es im Web SDK nur den `sendEvent` Befehl. Die Daten, die Sie mit einem Ereignis senden, bestimmen, ob es sich um eine Ansicht oder einen Link handeln soll. [Weitere Informationen zur Verfolgung von Links](../track-links.md).
 
 ## Senden einer Ansicht
 
