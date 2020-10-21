@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zusti
 seo-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '753'
 ht-degree: 63%
 
 ---
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-Wenn die Einwilligung auf diese Weise festgelegt wird, wird das Echtzeit-Profil des Kunden mit den Einwilligungsinformationen aktualisiert. Damit dies funktioniert, muss das Profil XDM Schema das [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)enthalten. Beim Senden von Ereignissen müssen die IAB-Einwilligungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das SDK enthält nicht automatisch die Informationen zur Einwilligung in die Ereignis. Um die Einwilligungsinformationen in Ereignissen zu senden, muss das [Experience Ereignis Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) dem Experience Ereignis Schema hinzugefügt werden.
+Wenn die Einwilligung auf diese Weise festgelegt wird, wird das Echtzeit-Profil des Kunden mit den Einwilligungsinformationen aktualisiert. Damit dies funktioniert, muss das Profil XDM Schema das [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)enthalten. Beim Senden von Ereignissen müssen die IAB-Einwilligungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das SDK enthält nicht automatisch die Informationen zur Einwilligung in die Ereignis. Um die Einwilligungsinformationen in Ereignissen zu senden, muss das [Experience Ereignis Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) dem Experience Ereignis Schema hinzugefügt werden.
 
 ## Senden beider Standards in einer Anforderung
 
