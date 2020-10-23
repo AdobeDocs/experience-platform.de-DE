@@ -6,10 +6,10 @@ topic: enforcement
 type: Tutorial
 description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 48%
+source-wordcount: '993'
+ht-degree: 45%
 
 ---
 
@@ -170,7 +170,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -179,6 +185,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Jedes Element im Payload-Array muss den Typ der zu definierenden Entität angeben. In diesem Anwendungsfall ist der Wert immer „dataSet“. |
 | `entityId` | Jedes Element im Payload-Array muss die eindeutige Kennung für einen Datensatz angeben. |
+| `entityMeta.fields` | (Optional) Ein Array mit [JSON-Zeiger](../../landing/api-fundamentals.md#json-pointer) -Zeichenfolgen, das auf bestimmte Felder im Schema des Datensatzes verweist. Wenn dieses Array enthalten ist, nehmen nur die im Array enthaltenen Felder an der Auswertung teil. Alle Schema-Felder, die nicht im Array enthalten sind, werden nicht an der Evaluierung teilnehmen.<br><br>Wenn dieses Feld nicht enthalten ist, werden alle Felder im DataSet-Schema ausgewertet. |
 
 **Antwort**
 
@@ -304,13 +311,13 @@ Eine erfolgreiche Antwort gibt die URL für die Marketingaktion, die von den ber
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
