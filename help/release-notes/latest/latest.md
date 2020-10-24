@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 31%
+source-wordcount: '1025'
+ht-degree: 18%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 31%
 
 **Release-Datum: 14. Oktober 2020**
 
-- [Datenvorgabe](#data-prep)
+- [Datenvorbereitung](#data-prep)
 - [Echtzeit-Kundenprofil](#profile)
 - [Segmentierungsdienst](#segmentation)
 - [Quellen](#sources)
 
-## Datenvorgabe {#data-prep}
+## Datenvorbereitung {#data-prep}
 
 Data Prep ermöglicht es Datenentwicklern, Daten dem Experience Data Model (XDM) zuzuordnen, umzuformen und zu validieren.
 
@@ -75,3 +75,45 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | UX-Verbesserungen | Sie können Ihren Datensatz [!DNL Profile] während der Datenerfassung aktivieren. Weitere Informationen finden Sie im Tutorial zum DataFlow-Arbeitsablauf [für die](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) Cloud-Datenspeicherung. |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
+
+## Zeit bis zum Wert
+
+Adobe Experience Platform ermöglicht es Marketing Operations Teams, eine 360-Grad-Ansicht ihrer Kunden zu entwickeln, ohne dass umfangreiche Daten-Engineering-Kenntnisse erforderlich sind. Ziel ist es, Teams und Werte durch Datengeschwindigkeit zu beschleunigen.
+
+&quot;Time to Value&quot; schneidet über Personas hinweg. Data Engineers können Aufgaben effizient und schnell mit Transparenz in der Aktivität von Daten abschließen, sodass schneller ein robustes, skalierbares Echtzeit-Profil verfügbar ist. Marketingexperten können dann das vollständige, robuste Profil für die Segmentierung und Aktivierung verwenden.
+
+### Funktionsmerkmale
+
+#### Schema
+
+Verbessert die Benutzerfreundlichkeit und den Arbeitsablauf und bietet sofort verfügbare Einblicke, Standardisierung und Transparenz von Schlüsselfeldern in Schema-Kompositionen. Stellt Datenlinien für die Kombination einzelner Datenmodelle, die als &quot;Vereinigung-Schema&quot;dargestellt werden, bereit und bietet so Einblicke in die Struktur und die Inhaltsstoffe des Echtzeit-Kunden-Profils.
+
+- Aktualisierung des Schema-Workflows
+   - Verwenden Sie Tastenkombinationen für die am häufigsten verwendeten XDM-Schema, mit automatisierten Einstellungen im Schema-Editor und Mixin-Empfehlungen, die auf Ihren Zielsetzungen basieren
+   - Erhöhen Sie die Effizienz des Arbeitsablaufs durch Auswahl und Vorschau mehrerer Mixins.
+   - Transparenz bei Schlüsselattributen der Schema-Komposition, einschließlich Identitäts-, Beziehungs- sowie erforderlichen und nicht mehr unterstützten Feldern
+- Vereinigung-Schema-Datenlineare und Schlüsselattribute-Transparenz
+
+#### Dateneinbettung und -erfassung
+
+Bei der Aktualisierung der automatischen Zuordnung, Zuordnungsfunktion und Benutzerfreundlichkeit werden Daten von jeder Plattform oder Quelle zur Verwendung in Profil, nachfolgender Segmentierung und Aktivierung eingefügt. Das System verfügt über die Effizienz und Intelligenz, um diesen Prozess auch für Menschen außerhalb der IT einfacher zu verwenden.
+
+- Einfacherer Zugriff auf Datenquellen mit der Katalogseitenkarte und der Datentabelle Inline-Aktionsmuster-Aktualisierung
+- Berechnete Felder/Ausdruck für die Datenverarbeitung
+- Empfehlungen zur Datenzuordnung beschleunigen den Erfassungsvorgang
+- Vorschau und Überprüfungen zuordnen
+
+#### Profil-Konfiguration
+
+Mit dem marketingfreundlichen Profil-Viewer mit Anpassung können Sie die Zusammensetzung eines Profils für die Segmentierung, Planung und Aktivierung verstehen. Der konsolidierte Arbeitsablauf verbessert das Profil durch einen schrittweisen Arbeitsablauf für die Richtlinie zum Zusammenführen.
+
+- Ansicht jedes einzelnen Profils in einem verbesserten Profil-Viewer, der ein Dashboard mit vollständiger Anpassung anzeigt, sodass gruppierte Daten zu Kanälen basierend auf den Geschäftszielen des Marketingexperten möglich sind.
+- Bearbeiten Sie standardmäßige und benutzerdefinierte Attribute im Widget &quot;Grundlegende Informationen&quot;entsprechend den geschäftlichen Anforderungen.
+- Passen Sie Widgets mit Attributen aus dem Echtzeit-Profil des Kunden mithilfe der Vereinigung-Schema-Auswahl an. Das Vereinigung-Schema wird von den zugrunde liegenden Datenmodellen abgeleitet, die bei der Datenerfassung von Profilen verwendet werden.
+
+
+#### Überwachung
+
+Gewährleistet Transparenz des Datenflusses und gibt Einblick in den Zustand des Datenverkehrs von den Quellschnittstellen in das System, wodurch mehr Selbstbedienung und schnellere Reaktionsfähigkeit bei der Fehlerbehebung gewährleistet sind.
+
+- Überwachen Sie die Ausführung des gesamten Datenflusses und sehen Sie eine detaillierte Ansicht der einzelnen Vorgänge, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und ausführbare Diagnosen.
