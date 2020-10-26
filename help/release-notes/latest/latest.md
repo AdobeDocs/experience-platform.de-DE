@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
+source-git-commit: 8f646c26ce73671ef4e427d8cba51091a8884795
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 18%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 18%
 - [Echtzeit-Kundenprofil](#profile)
 - [Segmentierungsdienst](#segmentation)
 - [Quellen](#sources)
+- [Zeit bis zum Wert](#time-to-value)
 
 ## Datenvorbereitung {#data-prep}
 
@@ -76,7 +77,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
 
-## Zeit bis zum Wert
+## Zeit bis zum Wert {#time-to-value}
 
 Adobe Experience Platform ermöglicht es Marketing Operations Teams, eine 360-Grad-Ansicht ihrer Kunden zu entwickeln, ohne dass umfangreiche Daten-Engineering-Kenntnisse erforderlich sind. Ziel ist es, Teams und Werte durch Datengeschwindigkeit zu beschleunigen.
 
@@ -114,6 +115,6 @@ Mit dem marketingfreundlichen Profil-Viewer mit Anpassung können Sie die Zusamm
 
 #### Überwachung
 
-Gewährleistet Transparenz des Datenflusses und gibt Einblick in den Zustand des Datenverkehrs von den Quellschnittstellen in das System, wodurch mehr Selbstbedienung und schnellere Reaktionsfähigkeit bei der Fehlerbehebung gewährleistet sind.
+Gewährleistet Transparenz des Datenflusses und gibt Einblick in den Zustand des Datenverkehrs von den Quellschnittstellen in das System, wodurch mehr Selbstbedienung und schnellere Reaktionsfähigkeit bei der Fehlerbehebung gewährleistet werden.
 
 - Überwachen Sie die Ausführung des gesamten Datenflusses und sehen Sie eine detaillierte Ansicht der einzelnen Vorgänge, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und ausführbare Diagnosen.
