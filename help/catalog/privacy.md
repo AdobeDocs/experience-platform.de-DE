@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 24%
+source-wordcount: '1272'
+ht-degree: 25%
 
 ---
 
@@ -23,10 +23,10 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [[!DNL-Privacy Service]](../privacy-service/home.md): Verwaltet Kundenanfragen für den Zugriff auf, die Nichtverkaufsoption oder das Löschen ihrer personenbezogenen Daten in Adobe Experience Cloud-Anwendungen.
-* [[!DNL-Katalogdienst]](home.md): Das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform]. Stellt eine API bereit, mit der Metadaten von Datensätzen aktualisiert werden können.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
+* [[!DNL Catalog Service]](home.md): Das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform]. Stellt eine API bereit, mit der Metadaten von Datensätzen aktualisiert werden können.
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-* [[!DNL-Identitätsdienst]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [[!DNL Identity Service]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 
@@ -136,6 +136,10 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und die Details des ne
 >This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für die [!DNL Data Lake] Verwendung der [!DNL Privacy Service] Benutzeroberfläche oder API erstellen.
+
+>[!IMPORTANT]
+>
+>Die Dauer, die eine Datenschutzanforderung dauern kann, kann nicht garantiert werden. Wenn Änderungen im Data Lake während der Verarbeitung einer Anforderung auftreten, kann auch nicht garantiert werden, ob diese Datensätze verarbeitet werden oder nicht.
 
 ### Verwenden der UI
 
