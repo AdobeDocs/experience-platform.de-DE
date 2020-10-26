@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
+source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 5%
+source-wordcount: '1627'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ Diese Entscheidungen lassen sich wie folgt zusammenfassen:
    * Um die Daten optimal zu nutzen, [!DNL Privacy Service]müssen Sie genau wissen, welche Arten von Daten Sie von Ihren Kunden erfassen und welche davon den Datenschutzbestimmungen unterliegen. Weitere Informationen finden Sie im Abschnitt zur [Festlegung der Datenschutzanforderungen](#requirements) .
 1. **Habe ich meine Daten richtig gekennzeichnet?**
    * Die Daten müssen ordnungsgemäß beschriftet werden, damit der Dienst feststellen kann, welche Felder während der Datenschutzaufträge aufgerufen oder gelöscht werden sollen. Weitere Informationen finden Sie im Abschnitt zu [Kennzeichnungsdaten](#label) .
-1. **Weiß ich, an welche IDs ich senden soll[!DNL Privacy Service]?**
+1. **Weiß ich, an welche IDs ich senden soll [!DNL Privacy Service]?**
    * Beim Senden von Datenschutzanfragen müssen individuelle Kunden-IDs für bestimmte Adoben angegeben werden. Weitere Informationen finden Sie in den Abschnitten zur [Bereitstellung von Identitätsdaten](#identity) und [zur Anforderung](#requests) des Datenschutzes.
 1. **Wie verfolge ich meine Datenschutzaufträge?**
    * Nachdem Sie Datenschutzanforderungen gestellt haben, stehen Ihnen verschiedene Optionen zur Verfolgung ihres Status und ihrer Ergebnisse zur Verfügung. Weitere Informationen finden Sie im Abschnitt zur [Überwachung von Datenschutzaufträgen](#monitor) .
@@ -75,10 +75,12 @@ Sobald Sie die Datenschutzbedürfnisse Ihres Unternehmens ermittelt und die Iden
 >Die folgenden Abschnitte enthalten Links zur Dokumentation, in der beschrieben wird, wie allgemeine Datenschutzanforderungen in der API oder Benutzeroberfläche ausgeführt werden. Je nach verwendeter [!DNL Experience Cloud] Anwendung können sich die Felder, die Sie in der Anforderungsnutzlast senden müssen, jedoch von den Beispielen in diesen Handbüchern unterscheiden.
 >
 >Wenn Sie die API- oder UI-Anleitungen befolgen, lesen Sie bitte das Dokument zu [Privacy Service- und Experience Cloud-Anwendungen](./experience-cloud-apps.md) , um weitere Informationen zum Formatieren von Datenschutzanforderungen für Ihre jeweilige(n) [!DNL Experience Cloud] Anwendung(en) zu erhalten.
+>
+>Beachten Sie außerdem, dass Datenschutzanforderungen asynchron in allen Experience Cloud-Anwendungen verarbeitet werden. Sobald eine Anforderung beim Privacy Service eingegangen ist, kann die Bearbeitung der Anfrage innerhalb von Minuten und Wochen erfolgen. Der Zeitraum, der zum Abschließen der einzelnen Anforderungen benötigt wird, hängt von der Anwendung ab, mit der Sie arbeiten, und von der Menge der zu verarbeitenden Daten.
 
 #### Verwenden der API
 
-Die [[!DNL Privacy Service-API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) bietet mehrere Endpunkte zum Erstellen und Verwalten von Datenschutzaufträgen mithilfe von RESTful-API-Aufrufen, mit denen Sie die Einhaltung der Datenschutzbestimmungen für Ihre [!DNL Experience Cloud] Anwendungen programmatisch angehen können. Ausführliche Anweisungen zur Verwendung der API finden Sie im Entwicklerhandbuch für die [Privacy Service-API](api/getting-started.md).
+Das [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) bietet mehrere Endpunkte zum Erstellen und Verwalten von Datenschutzaufträgen mithilfe von RESTful-API-Aufrufen, mit denen Sie die Einhaltung der Datenschutzvorschriften für Ihre [!DNL Experience Cloud] Anwendungen programmatisch angehen können. Ausführliche Anweisungen zur Verwendung der API finden Sie im Entwicklerhandbuch für die [Privacy Service-API](api/getting-started.md).
 
 #### Verwenden der UI
 
