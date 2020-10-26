@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 10%
+source-wordcount: '1058'
+ht-degree: 11%
 
 ---
 
@@ -22,9 +22,9 @@ In diesem Dokument werden wesentliche Konzepte für die Verarbeitung von Datensc
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [[!DNL-Privacy Service]](home.md): Verwaltet Kundenanfragen für den Zugriff auf, die Nichtverkaufsoption oder das Löschen ihrer personenbezogenen Daten in Adobe Experience Cloud-Anwendungen.
-* [[!DNL-Identitätsdienst]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
-* [[!DNL Echtzeit-Profil]](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Privacy Service]](home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
+* [[!DNL Identity Service]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 
@@ -43,6 +43,8 @@ In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanforderungen 
 >Privacy Service kann [!DNL Profile] Daten nur mit einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszuordnung vornimmt. Wenn Sie die Benutzeroberfläche verwenden, um zu bestätigen, ob Ihre Datenschutzanforderungen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit &quot;[!DNL None]&quot;als [!UICONTROL ID-Hefttyp] verwenden. Mit anderen Worten: Sie können keine Zusammenführungsrichtlinie verwenden, bei der die [!UICONTROL ID-Suche] auf &quot;[!UICONTROL Privates Diagramm]&quot;eingestellt ist.
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>Es ist auch wichtig zu beachten, dass die Dauer, die eine Datenschutzanforderung dauern kann, nicht garantiert werden kann. Wenn während der Verarbeitung einer Anforderung Änderungen an Ihren [!DNL Profile] Daten auftreten, kann auch nicht garantiert werden, dass diese Datensätze verarbeitet werden.
 
 ### Verwenden der API
 
@@ -131,7 +133,7 @@ When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Ser
 >
 >Bei einer erfolgreichen Löschanforderung werden zwar die erfassten Attributdaten eines Kunden (oder einer Gruppe von Kunden) entfernt, die Anforderung entfernt jedoch nicht die im Identitätsdiagramm festgelegten Verknüpfungen.
 >
->Eine Löschanforderung, die beispielsweise die eines Kunden verwendet `email_id` und alle unter diesen IDs gespeicherten Attributdaten `customer_id` entfernt. Alle Daten, die danach unter dem gleichen Element aufgenommen werden, `customer_id` werden jedoch weiterhin mit dem entsprechenden verknüpft, `email_id`da die Verbindung noch besteht.
+>Eine Löschanforderung, die beispielsweise die eines Kunden verwendet `email_id` und alle unter diesen IDs gespeicherten Attributdaten `customer_id` entfernt. Alle Daten, die danach unter dem gleichen Element erfasst werden, `customer_id` werden jedoch weiterhin mit dem entsprechenden verknüpft, `email_id`da die Verbindung noch besteht.
 
 In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
 
