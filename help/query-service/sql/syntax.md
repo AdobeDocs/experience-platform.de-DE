@@ -5,7 +5,7 @@ title: SQL-Syntax
 topic: syntax
 description: In diesem Dokument finden Sie die von Query Service unterstützte SQL-Syntax.
 translation-type: tm+mt
-source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
+source-git-commit: c044194ed22b5e6fcd5e2e2102f3cd4eda45aa84
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 89%
@@ -119,7 +119,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 ```
 
 where,
-`target_schema_title` is the title of XDM schema. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage`rowvalidation` erstellt wurde, um anzugeben, ob der Benutzer die Überprüfung auf Zeilenebene aller neuen Stapel, die für den neu erstellten Datensatz erfasst werden, vornehmen möchte. Standardwert ist &quot;false&quot;
+`target_schema_title` is the title of XDM schema. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage`rowvalidation` erstellt wurde, um anzugeben, ob der Benutzer die Überprüfung auf Zeilenebene aller neuen Stapel, die für den neu erstellten Datensatz erfasst werden, vornehmen möchte. Standardwert ist &quot;true&quot;
 
 und `select_query` ist eine `SELECT`-Anweisung, deren Syntax oben in diesem Dokument definiert ist.
 
