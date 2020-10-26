@@ -5,10 +5,10 @@ title: Grundlagen der Schema-Komposition
 topic: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
 workflow-type: tm+mt
-source-wordcount: '2834'
-ht-degree: 56%
+source-wordcount: '3099'
+ht-degree: 47%
 
 ---
 
@@ -29,7 +29,7 @@ Zusätzlich zur Beschreibung der Datenstruktur wenden Schemas Einschränkungen u
 
 Bei der Arbeit mit relationalen Datenbanken bestehen die Best Practices darin, Daten zu normalisieren oder eine Entität in diskrete Teile zu zerlegen, die dann in mehreren Tabellen angezeigt werden. Um die Daten als Ganzes zu lesen oder die Entität zu aktualisieren, müssen Lese- und Schreibvorgänge über viele einzelne Tabellen mit JOIN durchgeführt werden.
 
-Durch den Einsatz von eingebetteten Objekten können XDM-Schemas komplexe Daten direkt darstellen und in eigenständigen Dokumenten mit hierarchischer Struktur speichern. Einer der Hauptvorteile dieser Struktur besteht darin, dass Sie damit die Daten abfragen können, ohne die Entität durch teure Verbindungen zu mehreren denormalisierten Tabellen rekonstruieren zu müssen.
+Durch den Einsatz von eingebetteten Objekten können XDM-Schema komplexe Daten direkt darstellen und in eigenständigen Dokumenten mit einer hierarchischen Struktur speichern. Einer der Hauptvorteile dieser Struktur besteht darin, dass Sie damit die Daten abfragen können, ohne die Entität durch teure Verbindungen zu mehreren denormalisierten Tabellen rekonstruieren zu müssen. Es gibt keine Einschränkungen, wie viele Ebenen Ihre Schema-Hierarchie sein kann.
 
 ### Schemas und Big Data
 
@@ -42,6 +42,8 @@ Schemas lösen dieses Problem, indem sie die Integration von Daten aus mehreren 
 Standardization is a key concept behind [!DNL Experience Platform]. Das von Adobe unterstützte XDM-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
 
 Die so genannte [!DNL Experience Platform] Infrastruktur, auf der Schema-basierte Workflows erstellt werden, ermöglicht die Erstellung von [!DNL XDM System][!DNL Schema Registry][!DNL Schema Editor]Schema-Metadaten und die Verwendung von Dienstmustern. Weitere Informationen finden Sie in der [XDM-Systemübersicht](../home.md).
+
+Der Bau und die Nutzung von Schemas in [!DNL Experience Platform]der Region sind von entscheidender Bedeutung. Erstens ermöglichen Schemas eine bessere Datenverwaltung und eine Minimierung der Daten, was besonders bei Datenschutzbestimmungen wichtig ist. Zweitens ermöglicht das Erstellen von Schemas mit Standardkomponenten der Adobe sofortige Einblicke und die Verwendung von AI/ML-Diensten mit minimalen Anpassungen. Und schließlich bieten Schema eine Infrastruktur für die gemeinsame Nutzung von Daten und eine effiziente Orchestrierung.
 
 ## Planen Ihres Schemas
 
@@ -135,19 +137,13 @@ Schemas werden nach folgender Formel zusammengestellt:
 
 &amp;ast;Ein Schema besteht aus einer Klasse und null oder mehr Mixins. Dies bedeutet, dass Sie in Datensatzschema ohne jegliche Verwendung von Mixins erstellen könnten.
 
-### Klasse
+### Klasse {#class}
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
-Eine Klasse bestimmt auch, welche Mixins für die Verwendung im Schema zugelassen werden. Dies wird im folgenden Abschnitt [Mixin](#mixin) ausführlicher erläutert.
+Die Klasse eines Schemas legt fest, welche Mixins in diesem Schema verwendet werden dürfen. Dies wird im [nächsten Abschnitt](#mixin)ausführlicher erläutert.
 
-There are standard classes provided with every integration of [!DNL Experience Platform], known as &quot;Industry&quot; classes. Branchenklassen sind allgemein anerkannte Industriestandards, die für eine breite Palette von Anwendungsfällen gelten. Examples of Industry classes include the [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] classes provided by Adobe.
-
-[!DNL Experience Platform] ermöglicht auch &quot;Vendor&quot;-Klassen, bei denen es sich um von [!DNL Experience Platform] Partnern definierte Klassen handelt, die allen Kunden zur Verfügung gestellt werden, die den Service oder die Anwendung des Anbieters innerhalb [!DNL Platform]des Unternehmens nutzen.
-
-There are also classes used to describe more specific use cases for individual organizations within [!DNL Platform], called &quot;Customer&quot; classes. Kundenklassen werden von einer Organisation definiert, wenn keine Branchen- oder Anbieterklassen zur Verfügung stehen, um einen einzigartigen Verwendungsfall zu beschreiben.
-
-For example, a schema representing members of a Loyalty program describes record data about an individual and therefore can be based on the [!DNL XDM Individual Profile] class, a standard Industry class defined by Adobe.
+Adobe bietet zwei standardmäßige (&quot;Core&quot;) XDM-Klassen: [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent]. Zusätzlich zu diesen Hauptklassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihr Unternehmen zu beschreiben. Benutzerspezifische Klassen werden von einer Organisation definiert, wenn keine von der Adobe definierten Hauptklassen zur Beschreibung eines individuellen Anwendungsfalls verfügbar sind.
 
 ### Mixin {#mixin}
 
@@ -155,15 +151,21 @@ Ein Mixin ist eine wiederverwendbare Komponente, die ein oder mehrere Felder def
 
 Mixins definieren, mit welcher/n Klasse(n) sie kompatibel sind, basierend auf dem Verhalten der Daten, die sie darstellen (Datensatz- oder Zeitreihen). Das bedeutet, dass nicht alle Mixins für alle Klassen verfügbar sind.
 
-Mixins have the same scope and definition as classes: there are Industry mixins, Vendor mixins, and Customer mixins that are defined by individual organizations using [!DNL Platform]. [!DNL Experience Platform]Die umfasst viele Standardbranchen-Mixins, erlaubt aber auch Anbietern, Mixins für ihre Benutzer und einzelnen Benutzern, Mixins für ihre eigenen spezifischen Konzepte zu definieren.
+[!DNL Experience Platform] enthält viele standardmäßige Mixins für Adoben und ermöglicht es Anbietern, Mixins für ihre Anwender zu definieren, sowie einzelnen Anwendern, Mixins für ihre eigenen spezifischen Konzepte zu definieren.
 
 For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and &quot;[!UICONTROL Home Address]&quot; for your &quot;[!UICONTROL Loyalty Members]&quot; schema, you would be able to use standard mixins that define those common concepts. However, concepts that are specific to less-common use cases (such as &quot;[!UICONTROL Loyalty Program Level]&quot;) often do not have a pre-defined mixin. In diesem Fall müssen Sie einen eigenen Mixin definieren, um diese Informationen zu erfassen.
 
 Denken Sie daran, dass Schemas aus „Null oder mehr“ Mixins bestehen, was bedeutet, dass Sie ein gültiges Schema zusammenstellen können, ohne überhaupt Mixins zu verwenden.
 
+Eine Liste aller aktuellen Standard-Mixins finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/mixins).
+
 ### Datentyp {#data-type}
 
 Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche Weise verwendet wie grundlegende literale Felder. Der wesentliche Unterschied besteht darin, dass Datentypen mehrere Teilfelder definieren können. Ähnlich wie ein Mixin ermöglicht ein Datentyp die konsistente Verwendung einer Mehrfeldstruktur, ist jedoch flexibler als ein Mixin, da ein Datentyp an beliebiger Stelle in ein Schema aufgenommen werden kann, indem er als „Datentyp“ eines Feldes hinzugefügt wird.
+
+>[!NOTE]
+>
+>Weitere Informationen zu den Unterschieden zwischen Mixins und Datentypen sowie zu den Vor- und Nachteile der Verwendung des einen und des anderen für ähnliche Anwendungsfälle finden Sie im [Anhang](#mixins-v-datatypes) .
 
 [!DNL Experience Platform] bietet eine Reihe von gebräuchlichen Datentypen als Teil der [!DNL Schema Registry] zur Unterstützung der Verwendung von Standardmustern zur Beschreibung allgemeiner Datenstrukturen. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become more clear as you walk through the steps to define data types.
 
@@ -177,6 +179,10 @@ Ein Feld ist der grundlegendste Baustein eines Schemas. Felder bieten Einschrän
 * Boolesch
 * Array
 * Objekt
+
+>[!TIP]
+>
+>Informationen zu den Vor- und Nachteile der Verwendung von Freiformfeldern über Objekttypen finden Sie im [Anhang](#objects-v-freeform) .
 
 Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, Formate, Minima/Maxima oder vordefinierte Werte eingeschränkt werden. Mithilfe dieser Einschränkungen kann eine breite Palette speziellerer Feldtypen dargestellt werden, darunter:
 
@@ -250,3 +256,44 @@ The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Ad
 Um mit dem Erstellen von Schemas über die Benutzeroberfläche zu beginnen, folgen Sie dem [Schema-Editor-Tutorial](../tutorials/create-schema-ui.md), um das Schema „Loyalty Members“ zu erstellen, das in diesem Dokument erwähnt wird.
 
 To begin using the [!DNL Schema Registry] API, start by reading the [Schema Registry API developer guide](../api/getting-started.md). Nachdem Sie das Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die im Tutorial zum [Erstellen eines Schemas mit der Schema Registry-API](../tutorials/create-schema-api.md) beschrieben werden.
+
+## Anhang
+
+Der folgende Abschnitt enthält weitere Informationen zu den Grundsätzen der Zusammensetzung des Schemas.
+
+### Objekte im Vergleich zu Freiformfeldern {#objects-v-freeform}
+
+Beim Entwerfen Ihrer Schemas sind einige wichtige Faktoren zu beachten, die bei der Auswahl von Objekten über Freiformfeldern zu beachten sind:
+
+| Objekte | Freiformfelder |
+| --- | --- |
+| Erhöht die Verschachtelung | Weniger oder keine Verschachtelung |
+| Erstellt logische Feldgruppierungen | Felder werden an Ad-hoc-Positionen platziert |
+
+#### Objekte
+
+Die Vor- und Nachteile der Verwendung von Objekten über freien Feldern sind unten aufgeführt.
+
+**Vorteile**:
+
+* Objekte werden am besten verwendet, wenn Sie eine logische Gruppierung bestimmter Felder erstellen möchten.
+* Objekte organisieren das Schema strukturierter.
+* Objekte tragen indirekt zur Erstellung einer guten Menüstruktur in der Segment Builder-Benutzeroberfläche bei. Die gruppierten Felder innerhalb des Schemas werden direkt in der Ordnerstruktur angezeigt, die in der Segmentaufbau-Benutzeroberfläche bereitgestellt wird.
+
+**Nachteile**:
+
+* Felder werden verschachtelter.
+* Bei Verwendung des [Adobe Experience Platform Abfrage Service](../../query-service/home.md)müssen für die Abfrage von Feldern, die in Objekten verschachtelt sind, längere Referenzzeichenfolgen bereitgestellt werden.
+
+#### Freiformfelder
+
+Die Vor- und Nachteile der Verwendung von Freiformfeldern über Objekten sind unten aufgeführt.
+
+**Vorteile**:
+
+* Freiformfelder werden direkt unter dem Stammobjekt des Schemas erstellt (`_tenantId`), wodurch die Sichtbarkeit erhöht wird.
+* Referenzzeichenfolgen für Freiformfelder sind in der Regel kürzer, wenn Abfrage Service verwendet wird.
+
+**Nachteile**:
+
+* Die Position von Freiformfeldern im Schema ist ad-hoc, d. h. sie werden in alphabetischer Reihenfolge im Schema-Editor angezeigt. Dies kann dazu führen, dass Schema weniger strukturiert sind und ähnliche Freiformfelder je nach Name weit voneinander getrennt werden.
