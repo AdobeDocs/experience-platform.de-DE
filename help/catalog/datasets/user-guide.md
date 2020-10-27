@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 description: Dieses Benutzerhandbuch zu Datensätzen enthält Anweisungen zur Durchführung allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 70%
+source-wordcount: '1146'
+ht-degree: 73%
 
 ---
 
@@ -25,8 +25,8 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie Ihre eigenen benutzerdefinierten XDM-Schema mithilfe der [!DNL Schema Editor] in der [!DNL Platform] Benutzeroberfläche erstellen.
-* [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Gewährleisten Sie die Einhaltung von Vorschriften, Einschränkungen und Richtlinien zur Nutzung von Kundendaten.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Sorgen Sie bei der Nutzung von Kundendaten für die Einhaltung von Vorschriften, Begrenzungen und Richtlinien.
 
 ## Anzeigen von Datensätzen
 
@@ -122,7 +122,7 @@ Sie können einen Datensatz löschen, indem Sie zunächst auf den Bildschirm **[
 
 >[!NOTE]
 >
->Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Decisioning Service]) cannot be deleted.
+>Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
