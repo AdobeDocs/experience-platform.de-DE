@@ -1,15 +1,15 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Tutorials zu Adobe Experience Platform
-breadcrumb-title: Platform Tutorials
-user-guide-description: Get started with Platform quickly and easily by following along with step-by-step tutorials, covering everything from preparing your data for ingestion to working with advanced machine learning algorithms.
+user-guide-title: Adobe Experience Platform-Tutorials
+breadcrumb-title: Platform-Tutorials
+user-guide-description: Beginnen Sie schnell und einfach mit Platform, indem Sie sich mit Schritt-für-Schritt-Übungen beschäftigen, die von der Vorbereitung Ihrer Daten für die Erfassung bis zur Arbeit mit fortschrittlichen Algorithmen für maschinelles Lernen reichen.
 type: Tutorials
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 516f5af13df0b96e7995a3079cf2a2ce2146676a
 workflow-type: tm+mt
-source-wordcount: '41'
-ht-degree: 100%
+source-wordcount: '70'
+ht-degree: 60%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 100%
 * [Platform-Daten aufrufen](data-access.md)
 * [Data Governance und Datenschutz](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
-* [Entscheidungsfindung](decisioning.md)
 * [Ziele](destinations-tutorials.md)
 * [Daten in Platform erfassen](data-ingestion.md)
 * [Profile und Identitäten](configure-profile.md)
