@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
-title: Profil-Segmentierungsmischung
+title: Segment-Mitgliedsdetails-Mixin
 topic: overview
-description: Dieses Dokument bietet einen Überblick über die XDM Individual Profil-Klasse.
+description: Dieses Dokument bietet einen Überblick über das Segment-Mitgliedsdetails-Mixin.
 translation-type: tm+mt
-source-git-commit: 53575488c08f73a65a7f1cc5f803f9ead707ae48
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Profil Segmentation] mixen
+# [!UICONTROL Segment-Mitgliedsdetails] -Mixin
 
-[!UICONTROL Die Segmentierung] von Profilen ist eine Standardmischung für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Das Mixin bietet ein Feld für die Zuordnung, in dem Informationen zur Segmentmitgliedschaft erfasst werden, einschließlich der Segmente, zu denen die Person gehört, der letzten Qualifizierungszeit und des Zeitpunkts, zu dem die Mitgliedschaft gültig ist, bis zu dem sie gültig ist.
+>[!NOTE]
+>
+>Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument zu [Mixin-Namensaktualisierungen](../name-updates.md) .
+
+[!UICONTROL Details] zur Segmentmitgliedschaft sind eine Standardmischung für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Das Mixin bietet ein Feld für die Zuordnung, in dem Informationen zur Segmentmitgliedschaft erfasst werden, einschließlich der Segmente, zu denen die Person gehört, der letzten Qualifizierungszeit und des Zeitpunkts, zu dem die Mitgliedschaft gültig ist, bis zu dem sie gültig ist.
 
 >[!WARNING]
 >
