@@ -5,9 +5,9 @@ title: Datensätze – Übersicht
 topic: datasets
 description: Dieses Dokument bietet einen Überblick über Datensätze in der Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '683'
 ht-degree: 3%
 
 ---
@@ -58,11 +58,10 @@ Im Folgenden finden Sie eine Liste nachgelagerter Dienste, die Datasets für ver
 
 * [[!DNL Data Access API]](../../data-access/home.md): Ermöglicht Ihnen den Zugriff auf und das Herunterladen der Inhalte von Dateien, die in Datasets gespeichert sind.
 * [Adobe Experience Platform-Identitätsdienst](../../identity-service/home.md): Überbrückt Identitäten zwischen Geräten und Systemen und verknüpft Datensätze anhand der Identitätsfelder, die von den XDM-Schemas definiert werden, denen sie entsprechen.
-* [[!DNL Echtzeit-Profil]](../../profile/home.md): Ermöglicht [!DNL Identity Service] die Erstellung detaillierter Kundendaten aus Ihren Datensätzen in Echtzeit. [!DNL Real-time Customer Profile] ruft Daten aus dem [!DNL Data Lake] und speichert Kundendaten in einem eigenen separaten Datenspeicher.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Ermöglicht [!DNL Identity Service] die Erstellung detaillierter Kundendaten aus Ihren Datensätzen in Echtzeit. [!DNL Real-time Customer Profile] ruft Daten aus dem [!DNL Data Lake] und speichert Kundendaten in einem eigenen separaten Datenspeicher.
 * [Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md): Ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Audiencen aus Ihren [!DNL Real-time Customer Profile] Daten. Diese Audiencen können dann in ihre eigenen Datensätze innerhalb des [!DNL Data Lake]Berichts exportiert werden.
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Verwendet maschinelles Lernen und künstliche Intelligenz, um Einblicke in große Datensätze zu entdecken.
 * [Adobe Experience Platform Abfrage Service](../../query-service/home.md): Ermöglicht Ihnen die Verwendung von SQL zur Abfrage von Daten in [!DNL Experience Platform]Datasets innerhalb der Abfrage [!DNL Data Lake] und die Erfassung der Ergebnisse als neuer Datensatz zur Verwendung in Berichte, [!DNL Data Science Workspace]oder [!DNL Real-time Customer Profile].
-* [Adobe Experience Platform-Entscheidungsdienst](../../decisioning-service/home.md): Nutzen Sie diese Optionen, [!DNL Real-time Customer Profile] um die wahrscheinlichste Auswahl zu ermitteln, die ein Kunde anhand von Verhaltensdaten treffen wird, die aus aktivierten Datensätzen [!DNL Profile] abgerufen werden.
 
 ## Nächste Schritte
 
