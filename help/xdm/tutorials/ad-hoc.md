@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen eines Ad-hoc-Schemas
 description: Unter bestimmten Umständen kann es erforderlich sein, ein (Experience-Datenmodell) XDM-Schema mit Feldern zu erstellen, deren Namespace nur für die Verwendung durch einen einzigen Datensatz vorgesehen ist. Ein solches Schema wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schema werden für die Experience Platform in verschiedenen Workflows zur Datenerfassung verwendet, einschließlich der Erfassung von CSV-Dateien und der Erstellung bestimmter Quell-Verbindungen.
 topic: tutorial
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 14%
@@ -305,6 +305,6 @@ Bei einer erfolgreichen Antwort werden die Details des Schemas einschließlich a
 
 ## Nächste Schritte {#next-steps}
 
-Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie als Teil eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
+Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie im Rahmen eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
 
 Weitere Informationen zum Arbeiten mit der [!DNL Schema Registry] API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
