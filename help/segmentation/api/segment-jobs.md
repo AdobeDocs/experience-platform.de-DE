@@ -5,10 +5,10 @@ title: Segmentaufträge
 topic: developer guide
 description: Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentaufträgen und umfasst Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 39%
+source-wordcount: '1152'
+ht-degree: 35%
 
 ---
 
@@ -96,9 +96,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentau
                             "format": "pql/json",
                             "value": "{PQL_EXPRESSION}"
                         },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                         "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                             "version": 1
                         }
                     }
@@ -115,14 +115,25 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentau
                     "endTimeInMs": 1573204395655,
                     "totalTimeInMs": 128928
                 },
-                "totalProfiles": 0,
-                "segmentedProfileCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": 0,
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": 0
+                "totalProfiles":13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
                 },
-                "segmentedProfileByNamespaceCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": {},
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": {}
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
                 }
             },
             "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
@@ -162,6 +173,12 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentau
 | `segments.segment.id` | Die ID der Segmentdefinition. |
 | `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
 | `metrics` | Ein Objekt, das diagnostische Informationen zum Segmentauftrag enthält. |
+| `metrics.totalTime` | Ein Objekt, das Informationen über den Start und das Ende des Segmentierungsauftrags sowie die gesamte benötigte Zeit enthält. |
+| `metrics.profileSegmentationTime` | Ein Objekt, das Informationen über den Beginn und das Ende der Segmentierungsauswertung sowie die gesamte benötigte Zeit enthält. |
+| `metrics.segmentProfileCounter` | Die Anzahl der pro Segment qualifizierten Profil. |
+| `metrics.segmentedProfileByNamespaceCounter` | Die Anzahl der Profil, die für jeden Identitäts-Namensraum auf Segmentbasis qualifiziert sind. |
+| `metrics.segmentProfileByStatusCounter` | Die Anzahl der Profil für jeden Status. Die folgenden drei Status werden unterstützt: <ul><li>&quot;realisiert&quot;- Die Anzahl der neuen Profil, die in das Segment eingegeben wurden.</li><li>&quot;existing&quot; - Die Anzahl der Profil, die weiterhin im Segment vorhanden sind.</li><li>&quot;Exited&quot;- Die Anzahl der Segmentsegmente, die im Profil nicht mehr vorhanden sind.</li></ul> |
+| `metrics.totalProfilesByMergePolicy` | Die Gesamtzahl der zusammengeführten Profil auf der Grundlage der Zusammenführungsrichtlinien. |
 
 ## Neuen Segmentauftrag erstellen {#create}
 
