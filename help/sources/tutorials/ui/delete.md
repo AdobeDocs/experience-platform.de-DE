@@ -6,17 +6,17 @@ title: Datenflüsse löschen
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: cbd9b3ed0cf43d582d734098b9ce58fc074fb375
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 10%
+source-wordcount: '448'
+ht-degree: 9%
 
 ---
 
 
 # Datenflüsse löschen
 
-Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Löschen von Datenflüssen aus dem [!UICONTROL Quellarbeitsbereich] .
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Löschen von Datenflüssen aus dem **[!UICONTROL Quellarbeitsbereich]** .
 
 ## Erste Schritte
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 - [[!DNL Experience Data Model] (XDM) System](../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    - [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    - [Schema-Editor-Lernprogramm](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-- [[!DNL Echtzeit-Profil]](../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Löschen von Datenflüssen mithilfe der Benutzeroberfläche
 
@@ -64,7 +64,6 @@ Nach einigen Augenblicken wird am unteren Bildschirmrand ein grünes Bestätigun
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie erfolgreich auf vorhandene Konten und Datenflüsse im **[!UICONTROL Sources]** -Arbeitsbereich zugegriffen. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Lernprogramm haben Sie den Arbeitsbereich &quot; **[!UICONTROL Quellen]** &quot;erfolgreich zum Löschen vorhandener Datenflüsse verwendet.
 
-- [[!DNL Real-time Customer Profile] Übersicht](../../../profile/home.md)
-- [[!DNL Data Science Workspace] Übersicht](../../../data-science-workspace/home.md)
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Flow Service] API finden Sie im Lernprogramm zum [Löschen von Verbindungen mit der Flow Service API](../../tutorials/api/delete.md)
