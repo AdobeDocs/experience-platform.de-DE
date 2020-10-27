@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
 solution: Experience Platform
-title: Profil persönliche Daten mischen
+title: persönliche Kontaktdaten-Mixer
 topic: overview
-description: Dieses Dokument bietet einen Überblick über die XDM Individual Profil-Klasse.
+description: Dieses Dokument gibt einen Überblick über das Mixin Persönliche Kontaktdaten.
 translation-type: tm+mt
-source-git-commit: e58c669b5542453b7fbf6d90deedcd2cf349c0b6
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 11%
+source-wordcount: '133'
+ht-degree: 10%
 
 ---
 
 
-# [!UICONTROL Profil persönliche Daten] mixen
+# [!UICONTROL Mischung von persönlichen Kontaktdetails]
 
-[!UICONTROL Profil persönliche Daten] ist ein Standardmix für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Das Mixin bietet ein Objekt auf der Stammebene, dessen Unterfelder die Kontaktangaben zu einer einzelnen Person beschreiben. `person`
+>[!NOTE]
+>
+>Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument zu [Mixin-Namensaktualisierungen](../name-updates.md) .
+
+[!UICONTROL Persönliche Kontaktdetails] sind ein Standardmix für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md) , in dem die Kontaktdaten für eine Person beschrieben werden.
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
