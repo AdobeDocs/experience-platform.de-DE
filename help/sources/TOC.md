@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '654'
 ht-degree: 8%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 8%
    - [Erstellen einer Datenbank-Basisverbindung mit der Flow Service API](tutorials/api/create-dataset-base-connection.md)
    - [Überwachen von Datenflüssen mithilfe der Flow Service API](tutorials/api/monitor.md)
    - [Aktualisieren von Verbindungsinformationen mithilfe der Flow Service API](tutorials/api/update.md)
+   - [Löschen von Verbindungen mithilfe der Flow Service API](tutorials/api/delete.md)
 - UI-Lernprogramme {#ui-tutorials}
    - Erstellen eines Quell-Connectors {#create}
       - Adobe-Anwendungen {#adobe-applications}
@@ -195,6 +196,7 @@ ht-degree: 8%
       - [Konfigurieren eines Datenflusses für einen Protokollanschluss](tutorials/ui/dataflow/protocols.md)
    - [Aktivieren von Eingangsdaten zum Ausfüllen von Profilen](tutorials/ui/profile.md)
    - [Überwachen von Konten und Datenflüssen](tutorials/ui/monitor.md)
+   - [Konten löschen](tutorials/ui/delete-accounts.md)
    - [Datenflüsse löschen](tutorials/ui/delete.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
