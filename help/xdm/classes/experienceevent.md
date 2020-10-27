@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-Klasse
 topic: overview
 description: Dieses Dokument bietet eine Übersicht über die XDM ExperienceEvent-Klasse.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '784'
 ht-degree: 6%
 
 ---
@@ -33,10 +33,14 @@ Die [!DNL XDM ExperienceEvent] Klasse selbst stellt mehrere zeitreihenbezogene F
 
 ## Kompatible Mixins {#mixins}
 
+>[!NOTE]
+>
+>Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument zu [Mixin-Namensaktualisierungen](../mixins/name-updates.md) .
+
 Adobe bietet verschiedene Standard-Mixins zur Verwendung mit der [!DNL XDM ExperienceEvent] Klasse. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Mixins für die Klasse:
 
-* [[!UICONTROL ExperienceEvent EndUserIDs]](../mixins/event/enduserids.md)
-* [[!UICONTROL Details zur ExperienceEvent-Umgebung]](../mixins/event/environment-details.md)
+* [[!UICONTROL Details zur Endbenutzer-ID]](../mixins/event/enduserids.md)
+* [[!UICONTROL Umgebung]](../mixins/event/environment-details.md)
 
 ## Anhang
 
