@@ -5,10 +5,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Anleitung zum XDM-Datenmodell
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 translation-type: tm+mt
-source-git-commit: a091acf1cfc572df7b300a7be6a673b1e7469be5
+source-git-commit: 6c52998421b6a5d9719f287ec8cb7099780cb1ff
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 70%
+source-wordcount: '198'
+ht-degree: 69%
 
 ---
 
@@ -28,13 +28,13 @@ ht-degree: 70%
 * Mixins {#mixins}
    * Profil mixins {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
-      * [Angaben zur Person des Profils](./mixins/profile/person-details.md)
-      * [Persönliche Angaben zum Profil](./mixins/profile/personal-details.md)
-      * [Segmentierung von Profilen](./mixins/profile/segmentation.md)
-      * [Profil-Arbeitsdetails](./mixins/profile/work-details.md)
+      * [Demografische Details](./mixins/profile/person-details.md)
+      * [Persönliche Kontaktangaben](./mixins/profile/personal-details.md)
+      * [Details zur Segmentmitgliedschaft](./mixins/profile/segmentation.md)
+      * [Kontaktangaben bearbeiten](./mixins/profile/work-details.md)
    * Ereignis mixins {#event}
-      * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
-      * [Details zur ExperienceEvent-Umgebung](./mixins/event/environment-details.md)
+      * [Details zur Endbenutzer-ID](./mixins/event/enduserids.md)
+      * [Umgebung](./mixins/event/environment-details.md)
    * [Aktualisierung von Mischnamen](./mixins/name-updates.md)
 * Datentypen {#data-types}
    * [Beacon](./data-types/beacon.md)
