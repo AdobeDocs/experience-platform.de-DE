@@ -5,10 +5,10 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
+source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
 workflow-type: tm+mt
-source-wordcount: '1021'
-ht-degree: 57%
+source-wordcount: '1588'
+ht-degree: 31%
 
 ---
 
@@ -41,8 +41,7 @@ Sie können Datenverwendungsbeschränkungen für ein Ziel festlegen, indem Sie A
 
 Durch die Definition von Anwendungsfällen für das Marketing an Zielen können Sie sicherstellen, dass alle an diese Ziele gesendeten Profil oder Segmente mit den Datenverwendungsrichtlinien übereinstimmen. Daher sollten Sie Ihren Zielen entsprechend den Anforderungen Ihres Unternehmens, Richtlinienbeschränkungen für die Aktivierung durchzusetzen, geeignete Anwendungsfälle für das Marketing hinzufügen.
 
-Anwendungsfälle für Marketing können nur beim erstmaligen Einrichten eines Ziels ausgewählt werden. Je nach Zieltyp, mit dem Sie arbeiten, wird die Möglichkeit zur Konfiguration von Anwendungsfällen für das Marketing an verschiedenen Punkten im Setup-Arbeitsablauf angezeigt. Anweisungen zum Konfigurieren des jeweiligen Ziels finden Sie in der [Zieldokumentation](../destinations/destinations-overview.md) .
-
+Anwendungsfälle für Marketing können nur beim erstmaligen Einrichten eines Ziels ausgewählt werden. Je nach Zieltyp, mit dem Sie arbeiten, wird die Möglichkeit zur Konfiguration von Anwendungsfällen für das Marketing an verschiedenen Punkten im Setup-Arbeitsablauf angezeigt. Anweisungen zum Konfigurieren des jeweiligen Ziels finden Sie in der Dokumentation [zu](../destinations/destinations-overview.md#data-governance) Zielen.
 
 ## Datennutzungsrichtlinien verwalten {#policies}
 
@@ -56,7 +55,7 @@ Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, könne
 
 Das folgende Diagramm zeigt, wie die Richtliniendurchsetzung in den Datenfluss der Segmentaktivierung integriert wird:
 
-![](assets/enforcement-flow.png)
+<img src="assets/governance/enforcement-flow.png" width="650">
 
 When a segment is first activated, [!DNL Policy Service] checks for policy violations based on the following factors:
 
@@ -70,23 +69,57 @@ When a segment is first activated, [!DNL Policy Service] checks for policy viola
 >* Die Felder sind als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
 
 
+### Datenleitung {#lineage}
+
+Bei CDP in Echtzeit spielt die Datenleitung eine Schlüsselrolle bei der Durchsetzung von Richtlinien. Generell bezieht sich die Datenlineage auf die Herkunft eines Datensatzes und was mit der Zeit geschieht (oder wo sie sich bewegt).
+
+Im Zusammenhang mit [!DNL Data Governance]der ermöglicht die Lineage die Übertragung von Datenverwendungsetiketten von Datasets auf nachgelagerte Dienste, die ihre Daten verbrauchen, wie z. B. Echtzeit-Kundendaten und Zielorte. Dies ermöglicht die Bewertung und Durchsetzung von Richtlinien an mehreren wichtigen Punkten auf der Datenreise durch die Plattform und bietet den Datenverbrauchern einen Kontext darüber, warum eine Richtlinienverletzung aufgetreten ist.
+
+Bei CDP in Echtzeit geht es bei der Durchsetzung von Richtlinien um folgende Linie:
+
+1. Daten werden in Echtzeit-CDP erfasst und in **Datensätzen** gespeichert.
+1. Kunden-Profil werden anhand dieser Datensätze identifiziert und erstellt, indem Datenfragmente gemäß der **Zusammenführungsrichtlinie** zusammengeführt werden.
+1. Gruppen von Profilen werden basierend auf allgemeinen Attributen in **Segmente** unterteilt.
+1. Segmente werden an nachgelagerten **Zielen** aktiviert.
+
+Jede Phase in der oben genannten Zeitschiene stellt eine Entität dar, die, wie in der folgenden Tabelle dargestellt, zu einer verletzten Richtlinie beitragen kann:
+
+| Datenleitungsphase | Rolle bei der Durchsetzung der Vorschriften |
+| --- | --- |
+| Datensatz | Datensätze enthalten Datenverwendungsbeschriftungen (auf Datensatzebene oder Feldebene angewendet), mit denen festgelegt wird, für welche Anwendungsfälle der gesamte Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt. |
+| Richtlinie zusammenführen | Richtlinien zum Zusammenführen sind die Regeln, die Plattform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen finden Sie im Handbuch zu [Zusammenführungsrichtlinien](../../profile/ui/merge-policies.md) . |
+| Segment | Segmentregeln definieren, welche Attribute aus den Profilen der Kunden einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthält, übernimmt das Segment alle angewendeten Nutzungsbezeichnungen für diese Felder. Richtlinienverletzungen treten auf, wenn Sie ein Segment aktivieren, dessen geerbte Beschriftungen aufgrund der jeweiligen Richtlinien des Zielorts der Zielgruppe je nach Anwendungsfall für das Marketing eingeschränkt sind. |
+| Ziel | Beim Einrichten eines Ziels kann eine Marketingaktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Verwendungsfall korreliert mit einer Marketingaktion, wie in einer Datenverwendungsrichtlinie definiert. Mit anderen Worten, der Marketing-Verwendungsfall, den Sie für ein Ziel definieren, bestimmt, welche Datenverwendungsrichtlinien für dieses Ziel gelten. Richtlinienverletzungen treten auf, wenn Sie ein Segment aktivieren, dessen Nutzungsbeschriftungen durch die geltenden Richtlinien des Zielgruppen-Ziels eingeschränkt sind. |
+
+Wenn Richtlinienverletzungen auftreten, bieten die in der Benutzeroberfläche angezeigten Meldungen nützliche Werkzeuge, um die beitragende Datenlinie der Verletzung zu untersuchen und so zur Lösung des Problems beizutragen. Weitere Informationen finden Sie im nächsten Abschnitt.
+
 ### Meldungen zu Richtlinienverstößen  {#enforcement}
 
-Wenn ein Richtlinienverstoß beim Versuch auftritt, ein Segment zu aktivieren (oder [ein bereits aktiviertes Segment zu bearbeiten](#policy-enforcement-for-activated-segments)), wird die Aktion verhindert und in einem Popup angezeigt, dass gegen eine oder mehrere Richtlinien verstoßen wurden. Wählen Sie einen Richtlinienverstoß in der linken Spalte des Popups aus, um Details zu diesem Verstoß anzuzeigen.
+Wenn ein Richtlinienverstoß beim Versuch auftritt, ein Segment zu aktivieren (oder [ein bereits aktiviertes Segment zu bearbeiten](#policy-enforcement-for-activated-segments)), wird die Aktion verhindert und in einem Popup angezeigt, dass gegen eine oder mehrere Richtlinien verstoßen wurden. Once a violation has triggered, the **[!UICONTROL Save]** button is disabled for the entity you are modifying until the appropriate components are updated to comply with data usage policies.
 
-![](assets/violation-popover.png)
+Wählen Sie einen Richtlinienverstoß in der linken Spalte des Popups aus, um Details zu diesem Verstoß anzuzeigen.
 
-Die Registerkarte **[!UICONTROL Details]** des Popup-Fensters zeigt die Aktion an, die den Verstoß ausgelöst hat, den Grund für den Verstoß und Vorschläge, wie das Problem möglicherweise gelöst werden kann.
+![](assets/governance/violation-policy-select.png)
 
-Klicken Sie auf **[!UICONTROL Datenherkunft]**, um die Ziele, Segmente, Zusammenführungsrichtlinien oder Datensätze zu verfolgen, deren Datenbezeichnungen den Verstoß ausgelöst haben.
+Die Meldung &quot;Verletzung&quot;enthält eine Zusammenfassung der verletzten Richtlinie, einschließlich der Bedingungen, nach denen die Richtlinie überprüft werden soll, der spezifischen Aktion, die die Verletzung ausgelöst hat, und eine Liste möglicher Lösungen für das Problem.
 
-![](assets/data-lineage.png)
+![](assets/governance/violation-summary.png)
 
-Nachdem ein Verstoß ausgelöst wurde, wird die Schaltfläche **[!UICONTROL Speichern]** für die Aktivierung deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden, um den Datennutzungsrichtlinien zu entsprechen.
+Unter der Übersicht über die Verletzung wird ein Datenlinien-Diagramm angezeigt, das Ihnen veranschaulicht, welche Datensätze, Zusammenführungsrichtlinien, Segmente und Ziele an der Richtlinienverletzung beteiligt waren. Die Entität, die Sie derzeit ändern, wird im Diagramm hervorgehoben, was angibt, welcher Punkt im Fluss die Verletzung verursacht. Sie können einen Entitätsnamen im Diagramm auswählen, um die Detailseite für die betreffende Entität zu öffnen.
+
+![](assets/governance/data-lineage.png)
+
+Sie können die angezeigten Entitäten auch über das Symbol **[!UICONTROL Filter]** (![](./assets/governance/filter.png)) nach Kategorie filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
+
+![](assets/governance/lineage-filter.png)
+
+Wählen Sie &quot; **[!UICONTROL Liste-Ansicht]** &quot;, um die Datenzeile als Liste anzuzeigen. Um zum visuellen Diagramm zurückzukehren, wählen Sie &quot; **[!UICONTROL Pfad-Ansicht]**&quot;aus.
+
+![](assets/governance/list-view.png)
 
 ### Richtliniendurchsetzung für aktivierte Segmente  {#policy-enforcement-for-activated-segments}
 
-Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einem Richtlinienverstoß führen würden. Aufgrund der zahlreichen Komponenten, die beim Aktivieren von Segmenten zu Zielen beteiligt sind, kann eine der folgenden Aktionen möglicherweise einen Verstoß auslösen:
+Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einem Richtlinienverstoß führen würden. Aufgrund der Funktionsweise der [Datenreihenbildung](#lineage) bei der Durchsetzung von Richtlinien kann eine der folgenden Aktionen möglicherweise eine Verletzung auslösen:
 
 * Aktualisieren von Datennutzungsbezeichnungen
 * Ändern von Datensätzen für ein Segment
