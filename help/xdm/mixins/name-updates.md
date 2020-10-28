@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Aktualisierung von Mischnamen
 topic: overview
 description: Eine Liste der letzten XDM-Mixin-Namen ändert sich.
 translation-type: tm+mt
-source-git-commit: 0f36cf30e94c53aad8cdd11174a3656fda32d961
+source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '251'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,6 @@ In der folgenden Tabelle werden die vorhandenen Mixins, die aktualisiert wurden,
 
 | Vorheriger Name | Aktualisierter Name |
 | --- | --- |
-| [!UICONTROL Consumer ExperienceEvent-Mixin] | [!UICONTROL Inhaltskonsumdetails] |
 | [!UICONTROL Experience Ereignis Privacy mixen] | [!UICONTROL Datenschutzdetails] |
 | [!UICONTROL ExperienceEvent-Anwendungsdetails] | [!UICONTROL Anwendungsdetails] |
 | [!UICONTROL ExperienceEvent Kanal - Details] | [!UICONTROL Kanal-Details] |
@@ -44,7 +43,7 @@ In der folgenden Tabelle werden die vorhandenen Mixins, die aktualisiert wurden,
 | [!UICONTROL Profil Phones] | [!UICONTROL Telefonnummerndetails] |
 | [!UICONTROL Details zu Profil-Voreinstellungen] | [!UICONTROL Voreinstellungsdetails] |
 | [!UICONTROL Datenschutz bei Profilen] | [!UICONTROL Datenschutzdetails] |
-| [!UICONTROL Profil-Push-Details] | [!UICONTROL Details zur Push-Benachrichtigung] |
+| [!UICONTROL Profil-Push-Details] | [!UICONTROL Token-Details für Push-Benachrichtigungen] |
 | [!UICONTROL Segmentierung von Profilen] | [!UICONTROL Details zur Segmentmitgliedschaft] |
 | [!UICONTROL Profil-Abonnement] | [!UICONTROL Abonnement-Details] |
 | [!UICONTROL Profil-Arbeitsdetails] | [!UICONTROL Kontaktangaben bearbeiten] |
