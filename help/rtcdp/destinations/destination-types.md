@@ -2,13 +2,13 @@
 keywords: destinations;destination;destination types
 title: Zieltypen und Kategorien
 seo-title: Zieltypen und Kategorien
-description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportländer Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierungen an und exportieren Segmente und qualifizierte Profil in Ziele. Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter. '
-seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportländer Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierungen an und exportieren Segmente und qualifizierte Profil in Ziele. Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter.
+description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportländer Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierungen an und exportieren Segmente und qualifizierte Profil in Ziele. Experience Platform Launch Extensions leiten Rohdaten aus Ereignissen an verschiedene Zieltypen weiter. '
+seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportländer Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierungen an und exportieren Segmente und qualifizierte Profil in Ziele. Experience Platform Launch Extensions leiten Rohdaten aus Ereignissen an verschiedene Zieltypen weiter.
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 21%
+source-wordcount: '591'
+ht-degree: 15%
 
 ---
 
@@ -49,13 +49,13 @@ Das folgende Video führt Sie durch die Besonderheiten der beiden Zieltypen:
 
 ### Erweiterungen {#extensions}
 
-Adobe Echtzeit-CDP nutzt die Leistungsfähigkeit und Flexibilität von Experience Platform Launch, um Launch-Erweiterungen in die CDP-Benutzeroberfläche der Adobe in Echtzeit einzuschließen.
+Adobe Echtzeit-CDP nutzt die Leistungsfähigkeit und Flexibilität von Adobe Experience Platform Launch, um Plattformstarterweiterungen in die CDP-Benutzeroberfläche der Adobe in Echtzeit einzubinden.
 
 >[!TIP]
 >
->Detaillierte Informationen zu Experience Platform Launch-Erweiterungen, einschließlich Anwendungsfällen und Informationen dazu, wie Sie sie in der Benutzeroberfläche finden, finden Sie in der Übersicht über [Launch Extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+>Detaillierte Informationen zu Adobe Experience Platform Launch-Erweiterungen, einschließlich Anwendungsfällen und Informationen dazu, wie Sie sie in der Benutzeroberfläche finden, finden Sie in der Übersicht über die [Adobe Experience Platform Launch-Erweiterungen](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-Launch-Erweiterungen leiten Rohdaten für Ereignisse an verschiedene Typen von Zielen weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](/help/rtcdp/destinations/gainsight-extension.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
+Plattformstarterweiterungen leiten Rohdaten an verschiedene Ereignis weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](/help/rtcdp/destinations/gainsight-extension.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
 ![Experience Platform Launch-Erweiterungen im Vergleich zu anderen Zielen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
