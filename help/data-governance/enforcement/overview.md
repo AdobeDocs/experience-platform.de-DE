@@ -5,10 +5,10 @@ title: Übersicht über die Durchsetzung von Richtlinien
 topic: enforcement
 description: Sobald Datenverwendungsbeschriftungen auf Adobe Experience Platform-Datensätze angewendet wurden und für Marketingaktionen mit diesen Bezeichnungen Richtlinien zur Datenverwendung definiert wurden, können Sie diese Richtlinien mithilfe der Datenverwaltungsfunktionen durchsetzen und Datenvorgänge verhindern, die Richtlinienverletzungen darstellen. Es gibt zwei Methoden zur Durchsetzung von Richtlinien, die durch die Datenverwaltungsfunktionen auf Plattform, API-basierte Durchsetzung und automatische Durchsetzung bereitgestellt werden.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 83f1392ffab3571ebd91325123fbe7095ad59e28
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 16%
+source-wordcount: '257'
+ht-degree: 17%
 
 ---
 
@@ -29,4 +29,4 @@ Anweisungen zum Auswerten von Richtlinien mit der API finden Sie im Tutorial zur
 
 Bestimmte Anwendungen, die auf [!DNL Experience Platform] (z. B. [!DNL Real-time Customer Data Platform]) aufbauen, bieten eine automatische Durchsetzung von Datenverwendungsrichtlinien. Jede Anwendung behält ihre eigene Methode bei, um Richtlinienverletzungen zu beheben und Schritte zur Problembehebung bereitzustellen.
 
-Weitere Informationen zur Durchsetzung der Richtlinie zur automatischen Datenverwendung finden Sie in der Dokumentation der [!DNL Platform]verwendeten Anwendung. Informationen zur automatischen Richtliniendurchsetzung in Echtzeit-CDP finden Sie in der Übersicht zur [Echtzeit-Datenverwaltung](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+Die automatische Durchsetzung von Richtlinien in Echtzeit-CDP nutzt Datenlinien, Datenklassifizierungen und Funktionen zur Richtlinienverwaltung, um Verstöße gegen Richtlinien zu bewerten und zu untersuchen. Weitere Informationen finden Sie in der Übersicht [zur Datenverwaltung in](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) Echtzeit.
