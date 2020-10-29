@@ -5,10 +5,10 @@ title: Eingabe und Ausgabe von Kunden-AI
 topic: Getting started
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten erläutert, die in der Kundentechnik verwendet werden.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 0f45f12ca4f43de9489eb609fd541aa2be3bae78
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 33%
+source-wordcount: '824'
+ht-degree: 34%
 
 ---
 
@@ -25,7 +25,7 @@ Die Kundentelefonie verwendet Consumer Experience Ereignis-Daten, um Tendenzwert
 
 Für die Kunden-API sind historische Daten für die Modellschulung erforderlich. Die erforderliche Datenmenge basiert jedoch auf zwei Schlüsselelementen: Ergebnisfenster und förderfähige Bevölkerung.
 
-Standardmäßig sucht die Kunden-API, ob ein Benutzer in den letzten 120 Tagen Aktivität hatte, wenn während der Anwendungskonfiguration keine geeignete Populationsdefinition angegeben wurde. Zusätzlich zu der erforderlichen Mindestmenge an Consumer Experience Ereignis-Daten benötigt die Kunden-AI auch eine Mindestanzahl von Erfolgserlebnissen, die auf einer prognostizierten Zieldefinition basieren. Derzeit benötigt die Kundentraining-API mindestens 500 Ereignis.
+Standardmäßig sucht die Kunden-API, ob ein Benutzer in den letzten 120 Tagen Aktivität hatte, wenn während der Anwendungskonfiguration keine geeignete Populationsdefinition angegeben wurde. Darüber hinaus erfordert die KUNDENKUNDENKRANKHEIT mindestens 500 qualifizierte und 500 nicht qualifizierte Ereignisse (insgesamt 1000) historische Daten, die auf einer voraussichtlichen Zieldefinition basieren.
 
 In den folgenden Beispielen wird eine einfache Formel verwendet, mit der Sie die erforderliche Mindestdatenmenge festlegen können. Wenn Sie mehr als die Mindestanforderung haben, liefert Ihr Modell wahrscheinlich genauere Ergebnisse. Wenn Sie weniger als den erforderlichen Mindestwert haben, schlägt das Modell fehl, da für die Modellschulung nicht genügend Daten vorhanden sind.
 
