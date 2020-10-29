@@ -5,10 +5,10 @@ title: Attribution AI-Benutzerhandbuch
 topic: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AIS in der Benutzeroberfläche von Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 7%
+source-wordcount: '1746'
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,29 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![Zugreifen auf Ihre Instanz](./images/user-guide/open_Attribution_ai.png)
 
-Die Seite des Attribution AI-Service wird angezeigt. Auf dieser Seite werden Dienstinstanzen von Attribution AI aufgelistet und Informationen zu diesen angezeigt, einschließlich des Namens der Instanz, der Konversionsereignisse, der Häufigkeit der Ausführung der Instanz und des Status der letzten Aktualisierung. Klicken Sie auf Instanz **erstellen** , um zu beginnen.
+Die Seite des Attribution AI-Service wird angezeigt. Auf dieser Seite werden Dienstinstanzen von Attribution AI aufgelistet und Informationen zu diesen angezeigt, einschließlich des Namens der Instanz, der Konversionsereignisse, der Häufigkeit der Ausführung der Instanz und des Status der letzten Aktualisierung.
+
+Sie finden die Metrik **[!UICONTROL Gesamte Konversionsmetrik]** für Ereignis mit Konvertierung unten rechts im Container Instanz **** erstellen. Diese Metrik verfolgt die Gesamtanzahl der Konversionsdaten, die von Attribution AIS für das aktuelle Kalenderjahr bewertet wurden, einschließlich aller Sandbox-Umgebung und aller gelöschten Dienstinstanzen.
+
+![](./images/user-guide/total_conversions.png)
+
+Dienstinstanzen können mithilfe der Steuerelemente auf der rechten Seite der Benutzeroberfläche bearbeitet, geklont und gelöscht werden. Um diese Steuerelemente anzuzeigen, wählen Sie eine Instanz aus den vorhandenen **[!UICONTROL Dienstinstanzen]** aus. Die Steuerelemente enthalten die folgenden Informationen:
+
+- **[!UICONTROL Bearbeiten]**: Durch Auswahl von **[!UICONTROL Bearbeiten]** können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung, den Status und die Bewertungsfrequenz der Instanz bearbeiten.
+- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird die ausgewählte Dienstinstanz kopiert. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
+- **[!UICONTROL Löschen]**: Sie können eine Dienstinstanz einschließlich aller historischen Ausführung löschen.
+- **[!UICONTROL Datenquelle]**: Ein Link zum Datensatz, der von dieser Instanz verwendet wird.
+- **[!UICONTROL Details]** der letzten Ausführung: Dies wird nur angezeigt, wenn eine Ausführung fehlschlägt. Informationen darüber, warum die Ausführung fehlgeschlagen ist, wie Fehlercodes werden hier angezeigt.
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL Konversions-Ereignis]**: Eine schnelle Übersicht über die für diese Instanz konfigurierten Konvertierungs-Ereignis.
+- **[!UICONTROL Lookback-Fenster]**: Der von Ihnen definierte Zeitraum, der angibt, wie viele Tage vor dem Konversions-Ereignis-Touchpoints eingeschlossen werden.
+- **[!UICONTROL Touchpoints]**: Eine Liste aller Touchpoints, die Sie beim Erstellen dieser Instanz definiert haben.
+
+![](./images/user-guide/side_panel_2.png)
+
+Wählen Sie **[!UICONTROL Instanz]** erstellen, um zu beginnen.
 
 ![Instanz erstellen](./images/user-guide/landing_page.png)
 
@@ -133,7 +155,7 @@ Nachdem Sie alle erforderlichen Touchpoints definiert haben, scrollen Sie nach o
 
 ## Erweiterte Schulungs- und Bewertungseinstellungen
 
-Die letzte Seite in Attribution AI ist die Seite &quot; *Erweitert* &quot;zum Einrichten von Schulungen und Bewertungen.
+Die letzte Seite in Attribution AI ist die Seite &quot; **[!UICONTROL Erweitert]** &quot;zum Einrichten von Schulungen und Bewertungen.
 
 ![neue Seite erweitert](./images/user-guide/advanced_settings.png)
 
@@ -152,6 +174,12 @@ Klicken Sie auf das Uhrensymbol, um die Uhrzeit zu ändern, zu der die Bewertung
 >Es kann bis zu 24 Stunden dauern, bis jeder Bewertungsvorgang abgeschlossen ist.
 
 ![Uhrensymbol](./images/user-guide/time_of_day.png)
+
+### Spalten mit zusätzlichen Ergebnisdatensätzen (optional)
+
+Standardmäßig wird für jede Dienstinstanz in einem Standard-Schema ein Ergebnisdatensatz erstellt. Sie können je nach Konversions- und Touchpoint-Konfigurationen weitere Spalten zur Ergebnisdatenaset-Ausgabe hinzufügen. Beginn, indem Sie Spalten aus Ihrem Eingabedataset auswählen, können Sie sie per Drag &amp; Drop verschieben, um die Reihenfolge zu ändern, indem Sie die linke Maustaste über dem Hamburger-Symbol gedrückt halten.
+
+![Zusatz zur Bewertungsdatasäule](./images/user-guide/Add-score-dataset.png)
 
 ### Regionale Modellierung (optional) {#region-based-modeling-optional}
 
@@ -189,7 +217,7 @@ Klicken Sie nach Auswahl des Schulungsfensters in der oberen rechten Ecke auf **
 
 ## Nächste Schritte
 
-Durch Befolgen dieser Übung haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz ihre Bewertung abgeschlossen hat (bis zu 24 Stunden), können Sie Einblicke [in Attribution AIS](./discover-insights.md)entdecken. Wenn Sie außerdem Ihre Bewertungsergebnisse herunterladen möchten, besuchen Sie die Dokumentation zum [Herunterladen von Rohwerten](./download-scores.md) .
+Durch Befolgen dieser Übung haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz ihre Bewertung abgeschlossen hat (bis zu 24 Stunden), können Sie Einblicke [in Attribution AIS](./discover-insights.md)entdecken. Wenn Sie außerdem Ihre Bewertungsergebnisse herunterladen möchten, lesen Sie die Dokumentation [zum Herunterladen von Ergebnissen](./download-scores.md) .
 
 ## Zusätzliche Ressourcen
 
