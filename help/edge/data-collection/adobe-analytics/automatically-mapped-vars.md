@@ -5,10 +5,10 @@ description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit d
 seo-description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Experience Platform Web SDK zugeordnet werden.
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 8e3bef77b84e40c836a6279a9a3e3901565c9920
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 46%
+source-wordcount: '681'
+ht-degree: 36%
 
 ---
 
@@ -28,11 +28,12 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | `commerce.checkouts.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_CHECKOUT unter Verwendung des Trennzeichens `,`. |
 | `commerce.productListAdds.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_HINZUFÜGEN unter Verwendung des Trennzeichens `,`. |
 | `commerce.productListRemovals.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_REMOVE unter Verwendung des Trennzeichens `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Ereignis-Serialisierung. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Ereignis-Serialisierung. |
-| `commerce.productListViews.id` | `events` | `scView` Ereignis-Serialisierung. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Ereignis-Serialisierung. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Ereignis-Serialisierung. |
+| `commerce.productViews.id` | `events` | (Optional) Serialisierung von `prodView` Ereignissen. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListOpens.id` | `events` | (Optional) Serialisierung von `scOpen` Ereignissen. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListViews.id` | `events` | (Optional) Serialisierung von `scView` Ereignissen. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListAdds.id` | `events` | (Optional) Serialisierung von `scAdd` Ereignissen. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListRemovals.id` | `events` | (Optional) Serialisierung von `scRemove` Ereignissen. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.checkouts.id` | `events` | (Optional) Serialisierung von `scCheckout` Ereignissen. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
 | `commerce.checkouts.id` | `events` | `scCheckout` Ereignis-Serialisierung. |
 | `device.screenHeight` | `s` | AppMeasurement Abfrage-Parameterzuordnung Bildschirmauflösung. |
 | `device.screenWidth` | `s` | AppMeasurement Abfrage-Parameterzuordnung Bildschirmauflösung. |
