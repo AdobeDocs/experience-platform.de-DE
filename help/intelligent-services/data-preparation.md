@@ -5,10 +5,10 @@ title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 description: 'Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von Consumer ExperienceEvent (CEE) entsprechen. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1979'
-ht-degree: 3%
+source-wordcount: '1882'
+ht-degree: 2%
 
 ---
 
@@ -276,81 +276,15 @@ Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche
 
 ![](images/data-preparation/dataset-location.png)
 
-#### hinzufügen eines primären Identitäts-Namensraum-Tags zum Dataset
+#### hinzufügen Identitätsfelder in den Datensatz
 
 >[!NOTE]
 >
 >In zukünftigen Versionen von [!DNL Intelligent Services] wird der [Adobe Experience Platform Identity Service](../identity-service/home.md) in die Kundenidentifizierungsfunktionen integriert. Die unten aufgeführten Schritte können sich daher ändern.
 
-Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]oder einer anderen externen Quelle einreichen, müssen Sie dem Datensatz ein `primaryIdentityNameSpace` -Tag hinzufügen. Dies kann durch eine PATCH-Anforderung an die Katalogdienst-API erfolgen.
+Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]oder einer anderen externen Quelle einreichen, können Sie ein Schema als Identitätsfeld festlegen. Um ein Schema als Identitätsfeld festzulegen, Ansicht Sie den Abschnitt zum Festlegen von Identitätsfeldern im [UI-Lernprogramm](../xdm/tutorials/create-schema-ui.md#identity-field) zum Erstellen eines Schemas mit dem Schema-Editor oder alternativ dem [API-Lernprogramm](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor).
 
 Wenn Sie Daten aus einer lokalen CSV-Datei aufnehmen, können Sie den nächsten Abschnitt über die [Zuordnung und Erfassung von Daten](#ingest)überspringen.
-
-Bevor Sie dem Beispiel-API-Aufruf unten folgen, finden Sie im Abschnitt [&quot;](../catalog/api/getting-started.md) Erste Schritte&quot;im Katalog-Entwicklerhandbuch wichtige Informationen zu den erforderlichen Kopfzeilen.
-
-**API-Format**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| Parameter | Beschreibung |
-| --- | --- |
-| `{DATASET_ID}` | Die ID des zuvor erstellten Datensatzes. |
-
-**Anfrage**
-
-Je nachdem, aus welcher Quelle Sie Daten abrufen, müssen Sie entsprechende `primaryIdentityNamespace` und `sourceConnectorId` Tag-Werte in der Anforderungsnutzlast angeben.
-
-Die folgende Anforderung fügt die entsprechenden Tag-Werte für Audience Manager hinzu:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-Die folgende Anforderung fügt die entsprechenden Tag-Werte für Analytics hinzu:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->Weitere Informationen zum Arbeiten mit Identitäts-Namensräumen in Platform finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten Datensatzes enthält. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen.
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### Daten zuordnen und erfassen {#ingest}
 
@@ -366,5 +300,5 @@ Dieses Dokument enthielt allgemeine Leitlinien zur Vorbereitung Ihrer Daten für
 
 Nachdem Sie einen Datensatz mit Ihren Kundenerlebnisdaten ausgefüllt haben, können Sie [!DNL Intelligent Services] Einblicke generieren. Die ersten Schritte finden Sie in den folgenden Dokumenten:
 
-* [Übersicht über Attribution AIS](./attribution-ai/overview.md)
-* [Customer AI – Übersicht](./customer-ai/overview.md)
+* [Attribution AI – Übersicht](./attribution-ai/overview.md)
+* [Kunden-KI – Übersicht](./customer-ai/overview.md)
