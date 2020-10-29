@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform
 title: Einblicke in die Kundentechnik
 topic: Discovering insights
-description: Die Kundentechnik als Teil von Intelligent Services bietet Marketern die Möglichkeit, Adobe Sensei zu nutzen, um vorherzusehen, was Ihre Kunden als Nächstes tun werden. Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Das ist möglich, ohne dass die geschäftlichen Anforderungen in eine Aufgabe für maschinelles Lernen umgewandelt werden müssen, indem ein Algorithmus, ein Training oder eine Implementierung ausgewählt wird.
+description: Dieses Dokument dient als Leitfaden für die Interaktion mit Dienstinstanzinformationen in der Benutzeroberfläche der Intelligent Services Customer AI.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
 workflow-type: tm+mt
-source-wordcount: '1125'
-ht-degree: 20%
+source-wordcount: '1389'
+ht-degree: 12%
 
 ---
 
@@ -48,15 +48,22 @@ Als Nächstes wird die Einblicke-Seite für diese Dienstinstanz angezeigt, auf d
 
 ### Details zur Dienstinstanz
 
-Es gibt zwei Möglichkeiten, Dienstinstanzdetails Ansicht: Die erste stammt aus dem Dashboard und die zweite aus der Dienstinstanz.
+Es gibt zwei Möglichkeiten, Dienstinstanzdetails Ansicht: aus dem Dashboard oder innerhalb der Dienstinstanz.
 
-Klicken Sie zur Ansicht von Details innerhalb des Dashboards auf einen Dienstinstanz-Container, um den Hyperlink zu vermeiden, der mit dem Namen verknüpft ist. Dadurch wird eine rechte Leiste geöffnet, die zusätzliche Details wie Beschreibung, Bewertungsfrequenz, Prognoseziel und förderfähige Bevölkerung enthält. Darüber hinaus können Sie die Instanz bearbeiten und löschen, indem Sie auf **[!UICONTROL Bearbeiten]** oder **[!UICONTROL Löschen]** klicken.
+Um eine Übersicht über die Details der Dienstinstanz im Dashboard Ansicht, wählen Sie einen Dienstinstanz-Container aus, wobei der mit dem Namen verknüpfte Hyperlink vermieden werden soll. Dadurch wird eine rechte Leiste mit weiteren Details geöffnet. Die Steuerelemente enthalten Folgendes:
 
-![rechte Schiene](../images/insights/success-run.png)
+- **[!UICONTROL Bearbeiten]**: Durch Auswahl von **[!UICONTROL Bearbeiten]** können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten.
+- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird die aktuell ausgewählte Dienstinstanz kopiert, die eingerichtet wurde. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
+- **[!UICONTROL Löschen]**: Sie können eine Dienstinstanz einschließlich aller historischen Ausführung löschen.
+- **[!UICONTROL Datenquelle]**: Ein Link zum Datensatz, der von dieser Instanz verwendet wird.
+- **[!UICONTROL Ausführungsfrequenz]**: Wie oft und wann eine Punktwertung stattfindet.
+- **[!UICONTROL Score-Definition]**: Eine schnelle Übersicht über das Ziel, das Sie für diese Instanz konfiguriert haben.
+
+![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->In dem Ereignis, dass eine Bewertungsausführung fehlschlägt, wird eine Fehlermeldung angezeigt. Die Fehlermeldung wird unter *Letzte Ausführung Details* in der rechten Leiste aufgeführt, die nur für fehlgeschlagene Ausführung sichtbar ist.
+>In dem Ereignis, dass eine Bewertungsausführung fehlschlägt, wird eine Fehlermeldung angezeigt. Die Fehlermeldung wird unter **Letzte Ausführung Details** in der rechten Leiste aufgeführt, die nur für fehlgeschlagene Ausführung sichtbar ist.
 
 ![fehlgeschlagene Ausführungsmeldung](../images/insights/failed-run.png)
 
@@ -72,7 +79,7 @@ Um eine Instanz zu bearbeiten, klicken Sie in oben rechts in der Navigation auf 
 
 ![Auf Bearbeiten-Schaltfläche klicken](../images/insights/edit-button.png)
 
-The edit dialog box appears, allowing you to edit the *Description* and *Scoring Frequency* of the instance. Um die Änderungen zu bestätigen und das Dialogfeld zu schließen, klicken Sie unten rechts auf **[!UICONTROL Bearbeiten]**.
+Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie den Namen, die Beschreibung, den Status und die Bewertungsfrequenz der Instanz bearbeiten können. To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
 
 ![Bearbeiten-Popup-Fenster](../images/insights/edit-instance.png)
 
@@ -80,8 +87,9 @@ The edit dialog box appears, allowing you to edit the *Description* and *Scoring
 
 Die Schaltfläche **[!UICONTROL Mehr Aktionen]** befindet sich in der oberen rechten Navigation neben **[!UICONTROL Bearbeiten]**. Wenn Sie auf **[!UICONTROL Mehr Aktionen]** klicken, wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
 
+- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird die eingerichtete Dienstinstanz kopiert. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
 - **[!UICONTROL Löschen]**: Löscht die Instanz.
-- **[!UICONTROL Zugangsdaten]**: Durch Klicken auf *Zugriffsergebnisse* wird ein Dialogfeld geöffnet, das einen Link zu den [Download-Ergebnissen für das Tutorial zur Kundenwerbung](./download-scores.md) enthält. Außerdem enthält das Dialogfeld die Dataset-ID, die zum Aufrufen von API-Aufrufen erforderlich ist.
+- **[!UICONTROL Zugangsdaten]**: Durch Auswahl von **[!UICONTROL Zugriffsergebnissen]** wird ein Dialogfeld geöffnet, das einen Link zu den [Download-Ergebnissen für das Tutorial zur Kundenwerbung](./download-scores.md) enthält. Außerdem enthält das Dialogfeld die Dataset-ID, die zum Aufrufen von API-Aufrufen erforderlich ist.
 - **[!UICONTROL Ansicht-Ausführungsverlauf]**: Ein Dialogfeld mit einer Liste aller mit der Dienstinstanz verknüpften Bewertungsläufe wird angezeigt.
 
 ![Mehr Aktionen](../images/insights/more-actions.png)
@@ -96,9 +104,13 @@ Die Bewertungszusammenfassung zeigt die Gesamtanzahl der bewerteten Profil an un
 
 ![Bewertungszusammenfassung](../images/insights/scoring-summary.png)
 
+Wenn Sie den Mauszeiger über eine beliebige Farbe auf dem Ring halten, werden zusätzliche Informationen wie die prozentuale und die Gesamtanzahl der Profil, die zu einem Behälter gehören, Ansicht.
+
+![](../images/insights/scoring-ring.png)
+
 ## Verteilung der Ergebnisse
 
-Die Karte **[!UICONTROL Verteilung der Ergebnisse]** gibt Ihnen eine visuelle Zusammenfassung der Population, die auf dem Ergebnis basiert. Die Farben, die Sie in der Karte *Verteilung der Ergebnisse* sehen, stellen die Art des generierten Tendenzwerts dar.
+Die Karte **[!UICONTROL Verteilung der Ergebnisse]** gibt Ihnen eine visuelle Zusammenfassung der Population, die auf dem Ergebnis basiert. Die Farben, die Sie in der Karte [!UICONTROL Verteilung der Ergebnisse] sehen, stellen die Art des generierten Tendenzwerts dar. Wenn Sie den Mauszeiger über eine der Scoring-Distributionen bewegen, erhalten Sie die exakte Anzahl, die zu dieser Distribution gehört.
 
 ![Verteilung der Ergebnisse](../images/insights/distribution-of-scores.png)
 
@@ -108,9 +120,21 @@ Für jeden Ergebnisbehälter wird eine Karte generiert, die die 10 wichtigsten E
 
 ![Einflussfaktoren](../images/insights/influential-factors.png)
 
+### Abdrillen von Einflussfaktoren
+
+Wenn Sie den Mauszeiger über einen der wichtigsten einflussreichsten Faktoren bewegen, werden die Daten weiter aufgeschlüsselt. Sie erhalten einen Überblick darüber, warum bestimmte Profil zu einem Tendenzbehälter gehören. Je nach Faktor können Sie Zahlenwerte, kategorische oder boolesche Werte erhalten. Im folgenden Beispiel werden kategorische Werte nach Region angezeigt.
+
+![Drilldown-Screenshot](../images/insights/drilldown.png)
+
+Darüber hinaus können Sie mithilfe von Drilldowns einen Verteilungsfaktor vergleichen, wenn er in zwei oder mehr Tendenzbehältern auftritt, und spezifischere Segmente mit diesen Werten erstellen. Im folgenden Beispiel wird der erste Verwendungsfall veranschaulicht:
+
+![](../images/insights/drilldown-compare.png)
+
+Sie können sehen, dass Profil mit geringer Tendenz zur Konvertierung weniger häufig die Websites adobe.com besucht haben. Der Faktor &quot;Tage seit dem letzten WebVisit&quot;deckt nur 8% ab, verglichen mit 26% in mittelständischen Profilen. Mithilfe dieser Zahlen können Sie die Verteilung innerhalb der Behälter für den Faktor vergleichen. Diese Informationen können verwendet werden, um zu erkennen, dass die Neuigkeit im Webvisit nicht so einflussreich im Bucket mit niedriger Tendenz ist, wie es in der Gruppe mit mittlerer Tendenz der Fall ist.
+
 ### Erstellen eines Segments
 
-Durch Klicken auf die Schaltfläche Segment **** erstellen in einer der Behälter für niedrige, mittlere und hohe Tendenz werden Sie zum Segmentaufbau weitergeleitet.
+Durch Auswahl der Schaltfläche Segment **** erstellen in einer der Behälter für niedrige, mittlere und hohe Tendenz werden Sie zum Segmentaufbau weitergeleitet.
 
 >[!NOTE]
 >
