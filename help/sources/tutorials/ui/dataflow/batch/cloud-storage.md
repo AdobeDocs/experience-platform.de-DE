@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 52129cbc597c6bef6f858e581edc0db23b06ad67
 workflow-type: tm+mt
-source-wordcount: '1674'
-ht-degree: 3%
+source-wordcount: '1790'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-* [[!DNL Echtzeit-Profil]](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 Darüber hinaus erfordert dieses Lernprogramm, dass Sie über ein Konto für die Cloud-Datenspeicherung verfügen. Eine Liste von Übungen zum Erstellen verschiedener Cloud-Datenspeicherung-Konten in der Benutzeroberfläche finden Sie in der Übersicht über die [Quellschnittstellen](../../../../home.md).
 
@@ -54,17 +54,23 @@ Nach dem Ausfüllen des Fensters &quot;Vorschau&quot;können Sie &quot; **[!UICO
 
 ### Parquet- oder JSON-Dateien aufnehmen
 
-Unterstützte Dateiformate für ein Cloud-Datenspeicherung-Konto umfassen auch JSON und Parquet. JSON- und Parquet-Dateien müssen XDM-kompatibel sein. Um JSON- oder Parquet-Dateien zu erfassen, wählen Sie das entsprechende Dateiformat im Ordnerbrowser aus und wenden Sie auf der rechten Benutzeroberfläche das kompatible Datenformat an. Wählen Sie **[!UICONTROL Weiter]** , um fortzufahren.
+Cloud-Datenspeicherung-Konten unterstützen auch JSON- und Parquet-Dateien. Parquet-Dateien müssen XDM-konform sein, während JSON-Dateien keine XDM-Beschwerde sein müssen. Um JSON- oder Parquet-Dateien zu erfassen, wählen Sie das entsprechende Dateiformat im Ordnerbrowser aus und wenden Sie auf der rechten Benutzeroberfläche das kompatible Datenformat an.
+
+Wenn das Datenformat in JSON vorliegt, wird eine Vorschau mit Informationen zu den Daten in der Datei angezeigt. Im Bildschirm &quot;Vorschau&quot;können Sie mithilfe des **[!UICONTROL XDM-kompatiblen]** Dropdown-Menüs auswählen, ob die JSON XDM-konform ist.
+
+Wählen Sie **[!UICONTROL Weiter]** , um fortzufahren.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
 
 >[!IMPORTANT]
 >
->Im Gegensatz zu getrennten Dateitypen stehen JSON- und Parquet-formatierte Dateien nicht zur Vorschau zur Verfügung.
+>Im Gegensatz zu getrennten und JSON-Dateitypen stehen parquet-formatierte Dateien nicht zur Vorschau zur Verfügung.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem [!DNL Platform] Datensatz zuzuordnen. Quelldateien, die in JSON oder Parquet formatiert sind, müssen XDM-konform sein und müssen nicht manuell konfiguriert werden. Bei CSV-Dateien müssen Sie die Zuordnung explizit konfigurieren. Sie können jedoch festlegen, welche Quelldatenfelder zugeordnet werden sollen.
+Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt und bietet eine interaktive Schnittstelle, um die Quelldaten einem [!DNL Platform] Datensatz zuzuordnen. Quelldateien, die in Parquet formatiert wurden, müssen XDM-konform sein und müssen nicht manuell konfiguriert werden, während für CSV-Dateien explizit die Zuordnung konfiguriert werden muss. Sie müssen jedoch festlegen, welche Quelldatenfelder zugeordnet werden sollen. JSON-Dateien, die als XDM-Beschwerde markiert sind, müssen nicht manuell konfiguriert werden. Wenn es jedoch nicht als XDM-kompatibel markiert ist, müssen Sie die Zuordnung explizit konfigurieren.
 
 Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
 
@@ -94,11 +100,19 @@ The **[!UICONTROL Select schema]** dialog appears. Wählen Sie das Schema, das S
 
 Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weitere Informationen zu Funktionen für die Datenzuordnung und -zuordnung finden Sie im Lernprogramm zur [Zuordnung von CSV-Daten zu XDM-Schema-Feldern](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Bei JSON-Dateien können Sie nicht nur Felder direkt anderen Feldern zuordnen, sondern auch Objekten und Arrays anderen Arrays direkt zuordnen.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+Bitte beachten Sie, dass Sie keine Karten für verschiedene Typen erstellen können. Sie können beispielsweise ein Objekt einem Array oder einem Feld einem Objekt nicht zuordnen.
+
 >[!TIP]
 >
 >[!DNL Platform] bietet intelligente Empfehlungen für automatisch zugeordnete Zielgruppen, die auf dem von Ihnen ausgewählten Schema oder Datensatz basieren. Sie können Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 Wählen Sie &quot; **[!UICONTROL Vorschauen-Daten]** &quot;, um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Musterdaten aus dem ausgewählten Datensatz anzuzeigen.
 
