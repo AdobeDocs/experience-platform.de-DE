@@ -6,7 +6,7 @@ description: Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 47%
@@ -117,7 +117,7 @@ Within the [!DNL Schema Registry], relationship descriptors work similarly to fo
 >
 >Im Gegensatz zum Ziel-Schema kann das source-Schema seine primäre Identität nicht als Referenzfeld verwenden.
 
-In diesem Lernprogramm enthält das Ziel-Schema &quot;[!DNL Hotels]&quot;ein `email` Feld, das als primäre Identität des Schemas dient und daher auch als Referenzfeld fungiert. Das Quellfeld &quot;[!DNL Loyalty Members]&quot;verfügt jedoch nicht über ein dediziertes Schema, das als Referenz verwendet werden soll, und muss eine neue Mischung erhalten, die dem Schema ein neues Feld hinzufügt: `favoriteHotel`.
+In diesem Lernprogramm enthält das Ziel-Schema &quot;[!DNL Hotels]&quot;ein `hotelId` Feld, das als primäre Identität des Schemas dient und daher auch als Referenzfeld fungiert. Das Quellfeld &quot;[!DNL Loyalty Members]&quot;verfügt jedoch nicht über ein dediziertes Schema, das als Referenz verwendet werden soll, und muss eine neue Mischung erhalten, die dem Schema ein neues Feld hinzufügt: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, d
 
 ## Referenzidentitätsdeskriptor erstellen {#reference-identity}
 
-Auf Schemafelder muss ein Referenzidentitätsdeskriptor angewendet werden, wenn sie als Referenz aus anderen Schemas in einer Beziehung verwendet werden. Since the `favoriteHotel` field in &quot;[!DNL Loyalty Members]&quot; will refer to the `email` field in &quot;[!DNL Hotels]&quot;, `email` must be given a reference identity descriptor.
+Auf Schemafelder muss ein Referenzidentitätsdeskriptor angewendet werden, wenn sie als Referenz aus anderen Schemas in einer Beziehung verwendet werden. Since the `favoriteHotel` field in &quot;[!DNL Loyalty Members]&quot; will refer to the `hotelId` field in &quot;[!DNL Hotels]&quot;, `favoriteHotel` must be given a reference identity descriptor.
 
 Erstellen Sie einen Referenzdeskriptor für das Zielschema, indem Sie eine POST-Anfrage an den `/tenant/descriptors`-Endpunkt senden.
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-The following request creates a reference descriptor for the `email` field in the destination schema &quot;[!DNL Hotels]&quot;.
+The following request creates a reference descriptor for the `hotelId` field in the destination schema &quot;[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
@@ -365,8 +365,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -387,8 +387,8 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenzdeskriptor
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -423,7 +423,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 
