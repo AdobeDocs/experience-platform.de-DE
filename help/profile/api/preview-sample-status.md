@@ -4,10 +4,10 @@ title: Profil-Vorschau - Echtzeit-Client-Profil-API
 description: Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da Daten, die für Echtzeit-Kundendaten aktiviert wurden, in Plattform erfasst werden, werden sie im Profil-Datenspeicher gespeichert. Wenn die Anzahl der Datensätze im Profil-Store zunimmt oder sinkt, wird ein Musterauftrag ausgeführt, der Informationen darüber enthält, wie viele Profil-Fragmente und zusammengeführte Profil sich im Datenspeicher befinden. Mithilfe der Profil-API können Sie das neueste erfolgreiche Beispiel sowie die Verteilung von Listen-Profilen nach Datensatz und Identitäts-Namensraum Vorschau werden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 6%
+source-wordcount: '1608'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,12 @@ Diese Metriken stehen auch im Bereich &quot; [!UICONTROL Profil] &quot;der Benut
 ## Erste Schritte
 
 The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+
+## Fragmente im Profil im Vergleich zu zusammengeführten Profilen
+
+In diesem Handbuch werden sowohl &quot;Profil-Fragmente&quot;als auch &quot;zusammengeführte Profile&quot;aufgeführt. Es ist wichtig, den Unterschied zwischen diesen Begriffen zu verstehen, bevor Sie fortfahren.
+
+Jedes einzelne Profil besteht aus mehreren Profil-Fragmenten, die zu einer einzigen Ansicht des Kunden zusammengeführt wurden. Wenn ein Kunde beispielsweise über mehrere Kanal mit Ihrer Marke interagiert, enthält Ihr Unternehmen mehrere Profil-Fragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen angezeigt werden. Wenn diese Fragmente in eine Plattform integriert werden, werden sie (auf der Grundlage der Zusammenführungsrichtlinie) zusammengeführt, um ein einzelnes Profil für diesen Kunden zu erstellen. Daher ist die Gesamtanzahl der Fragmente im Profil wahrscheinlich immer höher als die Gesamtanzahl der zusammengeführten Profile, da jedes Profil aus mehreren Fragmenten besteht.
 
 ## Letzter Musterstatus der Ansicht {#view-last-sample-status}
 
@@ -282,5 +288,5 @@ Die Antwort enthält ein `data` Array mit den einzelnen Objekten, die die Detail
 
 ## Nächste Schritte
 
-Sie können auch ähnliche Schätzungen und Vorschauen für Informationen auf Zusammenfassungsebene der Ansicht zu Ihren Segmentdefinitionen verwenden, um sicherzustellen, dass Sie die erwartete Audience isolieren. Detaillierte Anweisungen zum Arbeiten mit Segmentansätzen und -schätzungen mithilfe der [!DNL Adobe Experience Platform Segmentation Service] API finden Sie im Handbuch [zu](../../segmentation/api/previews-and-estimates.md)Vorschauen und [!DNL Segmentation] Vorschauen und zu den Abschätzungsendpunkten, das Teil des API-Entwicklerhandbuchs ist.
+Sie können auch ähnliche Schätzungen und Vorschauen für Informationen auf Zusammenfassungsebene der Ansicht zu Ihren Segmentdefinitionen verwenden, um sicherzustellen, dass Sie die erwartete Audience isolieren. Detaillierte Anweisungen zum Arbeiten mit Segmentansätzen und -schätzungen mithilfe der [!DNL Adobe Experience Platform Segmentation Service] API finden Sie im Handbuch [zu](../../segmentation/api/previews-and-estimates.md)Vorschauen und [!DNL Segmentation] Vorschauen und zu den Endpunkten, das Teil des API-Entwicklerhandbuchs ist.
 
