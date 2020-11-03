@@ -5,9 +5,9 @@ title: Daten für die Verwendung in Intelligent Services vorbereiten
 topic: Intelligent Services
 description: 'Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von Consumer ExperienceEvent (CEE) entsprechen. '
 translation-type: tm+mt
-source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
+source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -278,11 +278,7 @@ Nachdem der Datensatz erstellt wurde, können Sie ihn in der Benutzeroberfläche
 
 #### hinzufügen Identitätsfelder in den Datensatz
 
->[!NOTE]
->
->In zukünftigen Versionen von [!DNL Intelligent Services] wird der [Adobe Experience Platform Identity Service](../identity-service/home.md) in die Kundenidentifizierungsfunktionen integriert. Die unten aufgeführten Schritte können sich daher ändern.
-
-Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]oder einer anderen externen Quelle einreichen, können Sie ein Schema als Identitätsfeld festlegen. Um ein Schema als Identitätsfeld festzulegen, Ansicht Sie den Abschnitt zum Festlegen von Identitätsfeldern im [UI-Lernprogramm](../xdm/tutorials/create-schema-ui.md#identity-field) zum Erstellen eines Schemas mit dem Schema-Editor oder alternativ dem [API-Lernprogramm](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor).
+Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]oder einer anderen externen Quelle einreichen, können Sie ein Schema als Identitätsfeld festlegen. Um ein Schema als Identitätsfeld festzulegen, Ansicht Sie den Abschnitt zum Festlegen von Identitätsfeldern im [UI-Lernprogramm](../xdm/tutorials/create-schema-ui.md#identity-field) oder [API-Lernprogramm](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) zum Erstellen eines Schemas.
 
 Wenn Sie Daten aus einer lokalen CSV-Datei aufnehmen, können Sie den nächsten Abschnitt über die [Zuordnung und Erfassung von Daten](#ingest)überspringen.
 
