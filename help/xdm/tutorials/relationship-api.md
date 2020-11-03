@@ -6,7 +6,7 @@ description: Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
+source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 47%
@@ -339,7 +339,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, d
 
 ## Referenzidentitätsdeskriptor erstellen {#reference-identity}
 
-Auf Schemafelder muss ein Referenzidentitätsdeskriptor angewendet werden, wenn sie als Referenz aus anderen Schemas in einer Beziehung verwendet werden. Since the `favoriteHotel` field in &quot;[!DNL Loyalty Members]&quot; will refer to the `hotelId` field in &quot;[!DNL Hotels]&quot;, `favoriteHotel` must be given a reference identity descriptor.
+Auf Schemafelder muss ein Referenzidentitätsdeskriptor angewendet werden, wenn sie als Referenz aus anderen Schemas in einer Beziehung verwendet werden. Since the `favoriteHotel` field in &quot;[!DNL Loyalty Members]&quot; will refer to the `hotelId` field in &quot;[!DNL Hotels]&quot;, `hotelId` must be given a reference identity descriptor.
 
 Erstellen Sie einen Referenzdeskriptor für das Zielschema, indem Sie eine POST-Anfrage an den `/tenant/descriptors`-Endpunkt senden.
 
