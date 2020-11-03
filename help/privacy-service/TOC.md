@@ -5,10 +5,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform Privacy Service
 breadcrumb-title: Privacy Service-Anleitung
 user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie DSGVO und CCPA einzuhalten.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 37f07e11abe3c6757edc635153454339118fc45c
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 86%
+source-wordcount: '91'
+ht-degree: 95%
 
 ---
 
@@ -28,14 +28,10 @@ ht-degree: 86%
    * [Übersicht über die Benutzeroberfläche von Privacy Service](ui/overview.md)
    * [Benutzerhandbuch zum Privacy Service](ui/user-guide.md)
 * [Privacy-Ereignisse abonnieren](privacy-events.md)
-* GDPR-Guides {#gdpr}
-   * [Häufig gestellte Fragen zur DSGVO](gdpr/faq.md)
-   * [DSGVO-Terminologie](gdpr/terminology.md)
-* CCPA-Leitfäden {#ccpa}
-   * [Häufig gestellte Fragen zu CCPA](ccpa/faq.md)
-* PDPA (Thailand)-Führer {#pdpa-tha}
-   * [Häufig gestellte Fragen zu PDPA (Thailand)](./pdpa-tha/faq.md)
-   * [PDPA (Thailand)-Terminologie](./pdpa-tha/terminology.md)
+* Leitlinien zur Datenschutzregelung {#regulations}
+   * [Übersicht](regulations/overview.md)
+   * [FAQs](regulations/faq.md)
+   * [Terminologie](regulations/terminology.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [Versionshinweise](release-notes.md)
