@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Zusammenführen von Kundendaten, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 8971d373228099d42249d3ec4af13e711323a0cc
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 65%
+source-wordcount: '100'
+ht-degree: 59%
 
 ---
 
@@ -27,9 +27,10 @@ ht-degree: 65%
    * [Musterstatus der Vorschau ([!DNL Profile] Vorschau)](api/preview-sample-status.md)
    * [[!DNL Profile] Systemaufträge (Anforderungen löschen)](api/profile-system-jobs.md)
 * Benutzeroberflächen-Handbücher {#ui}
-   * [[!DNL Profile] Benutzerhandbuch](ui/user-guide.md)
+   * [[!DNL Profile] UI-Handbuch](ui/user-guide.md)
    * [[!DNL Profile] Detail-Anpassung](ui/profile-customization.md)
-   * [Benutzerhandbuch zu Zusammenführungsrichtlinien](ui/merge-policies.md)
+   * [Leitfaden zur Benutzeroberfläche &quot;Richtlinien zusammenführen&quot;](ui/merge-policies.md)
+   * [Handbuch zur Benutzeroberfläche von Vereinigung Schema](ui/union-schema.md)
 * Tutorials {#tutorials}
    * [Daten Hinzufügen [!DNL Profile]](tutorials/add-profile-data.md)
    * [DataSet [!DNL Profile] & [!DNL Identity] forService konfigurieren](tutorials/dataset-configuration.md)
