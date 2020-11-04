@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Adobe Privacy JavaScript Library
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 6d706b33573e88b2f1ea9d386928dcfdb089a9c5
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '922'
 ht-degree: 70%
 
 ---
@@ -31,7 +31,7 @@ In der folgenden Tabelle sind die verschiedenen Funktionen der Bibliothek aufgef
 | Funktion | Beschreibung |
 | --- | --- |
 | `retrieveIdentities` | Returns an array of matching identities (`validIds`) that were retrieved from [!DNL Privacy Service], as well as an array of identities that were not found (`failedIds`). |
-| `removeIdentities` | Entfernt jede übereinstimmende (gültige) Identität aus dem Browser. Gibt eine Gruppe mit übereinstimmenden Identitäten (`validIds`) zurück, wobei jede Identität einen booleschen `isDeleteClientSide`-Wert enthält, der angibt, ob die Kennung gelöscht wurde. |
+| `removeIdentities` | Entfernt jede übereinstimmende (gültige) Identität aus dem Browser. Gibt eine Gruppe mit übereinstimmenden Identitäten (`validIds`) zurück, wobei jede Identität einen booleschen `isDeletedClientSide`-Wert enthält, der angibt, ob die Kennung gelöscht wurde. |
 | `retrieveThenRemoveIdentities` | Ruft eine Gruppe mit übereinstimmenden Identitäten (`validIds`) ab und entfernt diese dann aus dem Browser. Diese Funktion ähnelt zwar `removeIdentities`, eignet sich jedoch am besten, wenn die von Ihnen verwendete Adobe-Lösung eine Zugriffsanfrage erfordert, bevor Löschen möglich ist (wenn z. B. eine eindeutige Kennung abgerufen werden muss, bevor sie in einer Löschanfrage bereitgestellt wurde). |
 
 >[!NOTE]
@@ -47,7 +47,7 @@ To start using the [!DNL Privacy JS Library], you must install it onto your mach
 
 * Installieren Sie die Software mithilfe von npm, indem Sie den folgenden Befehl ausführen: `npm install @adobe/adobe-privacy`
 * Verwenden Sie die Adobe Launch-Erweiterung unter dem Namen `AdobePrivacy`.
-* Laden Sie herunter von [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy).
+* Herunterladen aus dem [Experience Cloud GitHub-Repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instanziieren der [!DNL Privacy JS Library]
 
@@ -56,7 +56,6 @@ All apps that utilize the [!DNL Privacy JS Library] must instantiate a new `Adob
 ```js
 var adobePrivacy = new AdobePrivacy({
     imsOrgID: "{IMS_ORG}",
-    key: "{DATA_SUBJECT_ID}",
     reportSuite: "{REPORT_SUITE_ID}",
     trackingServer: "{SERVER_URL}",
     clientCode: "{TARGET_CLIENT_CODE}"
