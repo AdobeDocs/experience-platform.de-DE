@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie das Debugging im Experience Platform Web SDK 
 seo-description: Erfahren Sie, wie Sie das Debugging im Experience Platform Web SDK aktivieren
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 92%
@@ -74,8 +74,8 @@ Wenn das Debugging über den `debug`-Befehl oder den Abfragezeichenfolgen-Parame
 Es ist oft hilfreich, auf einige Details hinter der Bibliothek zuzugreifen, die Sie in Ihre Website geladen haben. Führen Sie dazu den `getLibraryInfo`-Befehl wie folgt aus:
 
 ```js
-alloy("getLibraryInfo").then(function(libraryInfo) {
-  console.log(libraryInfo.version);
+alloy("getLibraryInfo").then(function(result) {
+  console.log(result.libraryInfo.version);
 });
 ```
 
