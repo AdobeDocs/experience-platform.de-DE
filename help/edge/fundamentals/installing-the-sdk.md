@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
 
 # Installieren des SDK {#installing-the-sdk}
 
-Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK ist über [Adobe Experience Platform Launch](http://launch.adobe.com/). Suchen Sie nach dem `AEP Web SDK` im Erweiterungskatalog, installieren Sie die Erweiterung und konfigurieren Sie sie.
+Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK ist über [Adobe Experience Platform Launch](http://launch.adobe.com/de). Suchen Sie nach dem `AEP Web SDK` im Erweiterungskatalog, installieren Sie die Erweiterung und konfigurieren Sie sie.
 
 Das AEP Web SDK steht Ihnen auch auf einem CDN zur Verfügung. Sie können auf diese Datei verweisen oder sie herunterladen und in Ihrer eigenen Infrastruktur hosten. Es ist in einer minimierten und nicht-minimierten Version verfügbar. Die nicht minimierte Version ist hilfreich zum Debugging.
 
@@ -23,8 +23,8 @@ URL-Struktur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR me
 
 Beispiel:
 
-* Minimiert: [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js)
-* Nicht minimiert: [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js)
+* Minimiert: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
+* Nicht minimiert: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
 
 ## Code hinzufügen {#adding-the-code}
 
@@ -37,7 +37,7 @@ The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is t
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
 ```
 
 Der Basis-Code erstellt eine globale Funktion namens `alloy`. Verwenden Sie diese Funktion, um mit dem SDK zu interagieren. Wenn Sie der globalen Funktion einen anderen Namen geben möchten, können Sie den `alloy`-Namen wie folgt ändern:
@@ -49,7 +49,7 @@ Der Basis-Code erstellt eine globale Funktion namens `alloy`. Verwenden Sie dies
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
 ```
 
 In diesem Beispiel wird die globale Funktion in `mycustomname` anstatt `alloy` umbenannt.
@@ -99,5 +99,5 @@ Um die Datei synchron statt asynchron zu laden, entfernen Sie das `async`-Attrib
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
 ```
