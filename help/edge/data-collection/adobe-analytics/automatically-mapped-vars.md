@@ -5,9 +5,9 @@ description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit d
 seo-description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Experience Platform Web SDK zugeordnet werden.
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
+source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '674'
 ht-degree: 36%
 
 ---
@@ -91,9 +91,8 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement Abfrageparameter, ZIP-Zuordnung. |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement Abfrageparameter, STATE-Zuordnung. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurement Abfrage-Parameter Produktvermarktungs-Ereignis/eVars-Zuordnung. |
-| `productlistitems.[N].lineitemid` | `products` | AppMeasurement Abfrage-Parameter Produktzuordnung für Kategorien. |
 | `productlistitems.[N].name` | `products` | AppMeasurement Abfrage Parameter Produktnamenzuordnung. |
-| `productlistitems.[N].pricetotal` | `products` | AppMeasurement Abfrage-Parameter Produktpreiszuordnung. |
+| `productlistitems.[N].priceTotal` | `products` | AppMeasurement Abfrage-Parameter Produktpreiszuordnung. |
 | `productlistitems.[N].quantity` | `products` | AppMeasurement Abfrage-Parameter Produktmengenzuordnung. |
 | `web.webInteraction.URL` | `pev1` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS_VAR1-Zuordnung. |
 | `web.webInteraction.name` | `pev2` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS_VAR2-Zuordnung. |
