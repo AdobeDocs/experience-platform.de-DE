@@ -5,10 +5,10 @@ description: Das Adobe Experience Platform Web SDK kann personalisierte Angebot 
 seo-description: Das Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer Decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: b10b930dca504b7672eb05bd88ab44d09d9e5c0a
+source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 11%
+source-wordcount: '839'
+ht-degree: 10%
 
 ---
 
@@ -56,9 +56,9 @@ Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie z
 
    ![](assets/decision-scope-copy.png)
 
-**Edge-Konfiguration:** Weitere Informationen finden Sie in der Dokumentation zur [Edge-Konfiguration](../../fundamentals/edge-configuration.md) .
+* **Edge-Konfiguration:** Weitere Informationen finden Sie in der Dokumentation zur [Edge-Konfiguration](../../fundamentals/edge-configuration.md) .
 
-**Identität**: Weitere Informationen finden Sie in dieser Dokumentation, in der erläutert wird, wie [Platform Web SDK den Identitätsdienst](../../identity/overview.md)nutzt.
+* **Identität**: Weitere Informationen finden Sie in dieser Dokumentation, in der erläutert wird, wie [Platform Web SDK den Identitätsdienst](../../identity/overview.md)nutzt.
 
 ## Aktivieren von Offer Decisioning
 
@@ -66,7 +66,7 @@ Um Offer Decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
 
 1. Adobe Experience Platform in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) aktiviert und das Kontrollkästchen &quot;Offer Decisioning&quot;
    ![angebot-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. Befolgen Sie die Anweisungen zur [Installation des SDK](../../fundamentals/installing-the-sdk.md) (das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de)installiert werden). Hier finden Sie eine [schnelle Anleitung zum Starten](https://docs.adobe.com/content/help/de-DE/launch/using/intro/get-started/quick-start.html)des Beginns.
+2. Befolgen Sie die Anweisungen zur [Installation des SDK](../../fundamentals/installing-the-sdk.md) (das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de)installiert werden). Hier finden Sie eine [schnelle Anleitung zum Plattformstart](https://docs.adobe.com/content/help/de-DE/launch/using/intro/get-started/quick-start.html).
 3. [Konfigurieren Sie das SDK](../../fundamentals/configuring-the-sdk.md) für Offer Decisioning. Weitere Offer Decisioning-spezifische Schritte finden Sie unten.
    * Eigenständiges installiertes SDK
       1. Konfigurieren Sie die Aktion &quot;sendEvent&quot;mit Ihrer `decisionScopes`
@@ -80,19 +80,19 @@ Um Offer Decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
           ]
       })
       ```
-   * Installation des SDK starten
-      1. [Eigenschaft &quot;Launch&quot;erstellen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html)
-      2. [Hinzufügen des eingebetteten Launch-Codes](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installieren und konfigurieren Sie die AEP Web SDK-Erweiterung mit der Edge-Konfiguration, die Sie gerade erstellt haben, indem Sie die Konfiguration aus der Dropdownliste &quot;Edge-Konfiguration&quot;auswählen. Nützliche Dokumentation zu [Erweiterungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html).
+   * Plattformstart installiertes SDK
+      1. [Eigenschaft &quot;Plattformstart&quot;erstellen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html)
+      2. [Einbettungscode für den Plattformstart Hinzufügen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Installieren und konfigurieren Sie die Adobe Experience Platform Web SDK-Erweiterung mit der Edge-Konfiguration, die Sie gerade erstellt haben, indem Sie die Konfiguration aus der Dropdownliste &quot;Edge-Konfiguration&quot;auswählen. Nützliche Dokumentation zu [Erweiterungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Erstellen Sie die erforderlichen [Datenelemente](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/data-elements.html). Sie müssen mindestens eine AEP Web SDK Identity Map und ein AEP Web SDK XDM Object Data Element erstellen. (hoffentlich gibt es weitere Dokumentation zu den AEP Web SDK-Datenelementen, die Sie hier verknüpfen können))
+      4. Erstellen Sie die erforderlichen [Datenelemente](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/data-elements.html). Sie müssen mindestens eine Platform Web SDK Identity Map und ein Platform Web SDK XDM Object-Datenelement erstellen.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. Erstellen Sie Ihre [Regeln](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/rules.html).
-         * hinzufügen einer AEP Web SDK Send-Ereignis-Aktion und fügen Sie die relevante `decisionScopes` zur Konfiguration dieser Aktion hinzu
+         * hinzufügen einer Plattform-Web-SDK-Senden-Ereignis-Aktion und fügen Sie die relevante `decisionScopes` zur Konfiguration dieser Aktion hinzu
             ![send-Ereignis-action-DecisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [Erstellen und veröffentlichen Sie eine Bibliothek](https://docs.adobe.com/content/help/de-DE/launch/using/reference/publish/libraries.html) , die alle von Ihnen konfigurierten Regeln, Datenelemente und Erweiterungen enthält
 
