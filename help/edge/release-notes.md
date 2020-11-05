@@ -1,19 +1,29 @@
 ---
 title: Versionshinweise zum Adobe Experience Platform Web SDK
 seo-title: Versionshinweise zum Adobe Experience Platform Web SDK
-description: Adobe Experience Platform Web SDK - Versionshinweise.
-seo-description: Adobe Experience Platform Web SDK - Versionshinweise.
+description: Versionshinweise zum Adobe Experience Platform Web SDK.
+seo-description: Versionshinweise zum Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
+source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 3%
+source-wordcount: '221'
+ht-degree: 14%
 
 ---
 
 
 # Versionshinweise
+
+## Version 2.3.0
+
+* Neue nonce-Unterstützung, um strengere Sicherheitsrichtlinien für Inhalte zu ermöglichen.
+* Unterstützung der Personalisierung für Einzelseitenanwendungen hinzugefügt.
+* Verbesserte Kompatibilität mit anderen On-Page-JavaScript-Code, der möglicherweise `window.console` APIs überschreibt.
+* Fehlerbehebung: `sendBeacon` wurde nicht verwendet, wenn `documentUnloading` auf `true` oder wenn Link-Klicks automatisch verfolgt wurden.
+* Fehlerbehebung: Ein Link wird nicht automatisch verfolgt, wenn das Ankerelement HTML-Inhalt enthält.
+* Fehlerbehebung: Bestimmte Browser-Fehler, die eine schreibgeschützte `message` Eigenschaft enthalten, wurden nicht ordnungsgemäß behandelt, was dazu führte, dass dem Kunden ein anderer Fehler angezeigt wurde.
+* Fehlerbehebung: Wenn das SDK in einem iframe ausgeführt wird, wird ein Fehler ausgegeben, wenn die HTML-Seite des iframe aus einer anderen Subdomäne stammt als die HTML-Seite des übergeordneten Fensters.
 
 ## Version 2.2.0
 
