@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platfo
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '621'
 ht-degree: 5%
 
 ---
@@ -20,10 +20,6 @@ Die Adobe Experience Platform [!DNL Web SDK] kann personalisierte Erlebnisse, di
 ## Aktivieren von Adobe Target
 
 Zur Aktivierung [!DNL Target]müssen Sie folgende Schritte ausführen:
-
-1. Aktivieren Sie die Aktivität.id- und Experience.id-Antwort-Token in der [!DNL Target] Benutzeroberfläche.
-
-![zielgruppe_Antwort_Token](./assets/target_response_token.png)
 
 1. Aktivieren Sie die Zielgruppe in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) mit dem entsprechenden Clientcode.
 1. hinzufügen Sie die `renderDecisions` Option auf Ihre Ereignis.
