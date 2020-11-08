@@ -5,10 +5,10 @@ title: Alle Sandboxes auflisten
 topic: developer guide
 description: Um alle Sandboxen Ihrer IMS-Organisation (aktiv oder anderweitig) Liste, stellen Sie eine GET an den Endpunkt /sandboxes.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 72%
+source-wordcount: '309'
+ht-degree: 52%
 
 ---
 
@@ -20,14 +20,18 @@ Um alle Sandboxen Ihrer IMS-Organisation (aktiv oder anderweitig) Liste, stellen
 **API-Format**
 
 ```http
-GET /sandboxes
+GET /sandboxes?{QUERY_PARAMS}
 ```
+
+| Parameter | Beschreibung |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Optionale Abfragen-Parameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu den Parametern für die [Abfrage](#query) . |
 
 **Anfrage**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes?&limit=4&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -93,7 +97,25 @@ Eine erfolgreiche Antwort gibt eine Liste von Sandboxen zurück, die zu Ihrem Un
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 4,
+        "count": 4
+    },
+    "_links": {
+        "next": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes/?limit={limit}&offset={offset}",
+            "templated": true
+        },
+        "prev": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=0&limit=1",
+            "templated": null
+        },
+        "page": {
+            "href": "https://platform-int.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=1&limit=1",
+            "templated": null
+        }
+    }
 }
 ```
 
@@ -105,3 +127,16 @@ Eine erfolgreiche Antwort gibt eine Liste von Sandboxen zurück, die zu Ihrem Un
 | `type` | Der Sandbox-Typ, entweder „Entwicklung“ oder „Produktion“. |
 | `isDefault` | Eine boolesche Eigenschaft, die angibt, ob diese Sandbox die Standard-Sandbox für die Organisation ist. In der Regel ist dies die Produktions-Sandbox. |
 | `eTag` | Eine Kennung für eine bestimmte Version der Sandbox. Dieser Wert erleichtert Versionskontrolle und Caching und wird bei jeder Änderung an der Sandbox aktualisiert. |
+
+## Verwenden von Abfrage-Parametern {#query}
+
+Die [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API unterstützt die Verwendung von Abfrage-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Sandboxen.
+
+>[!NOTE]
+>
+>Die Parameter `limit` und `offset` Abfrage müssen zusammen angegeben werden. Wenn Sie nur eine angeben, gibt die API einen Fehler zurück. Wenn Sie none angeben, ist der Standardwert 50 und der Offset 0.
+
+| Parameter | Beschreibung |
+| --------- | ----------- |
+| `limit` | Die maximale Anzahl von Datensätzen, die in der Antwort zurückgegeben werden. |
+| `offset` | Die Anzahl der Entitäten vom ersten Datensatz zum Beginn (Offset) der Antwort-Liste. |
