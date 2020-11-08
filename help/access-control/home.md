@@ -5,10 +5,10 @@ topic: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffskontrolle für Adobe Experience Platform erfolgt über die Adobe Admin Console. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 61%
+source-wordcount: '1299'
+ht-degree: 54%
 
 ---
 
@@ -73,7 +73,7 @@ Die Berechtigung „Sandbox-Verwaltung“ ermöglicht Benutzern das Verwalten, A
 
 Auf der Registerkarte Berechtigungen in einem Produktprofil werden die Sandboxes und Berechtigungen angezeigt, die für dieses Profil aktiv sind:
 
-![](./images/permissions-overview.png)
+![permissions-overview](./images/permissions-overview.png)
 
 Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
 
@@ -83,12 +83,19 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | --- | --- | --- |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Schemas] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schemas und zugehörigen Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Anzeigen von Schemas] | Schreibgeschützter Zugriff auf Schemas und zugehörige Ressourcen. |
+| [!DNL Data Modeling] | [!UICONTROL Beziehungen verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schema-Beziehungen. |
+| [!DNL Data Modeling] | [!UICONTROL Identitätsmetadaten verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Identitätsmetadaten für Schema. |
 | [!DNL Data Management] | [!UICONTROL Datensätze verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Datensätzen. Schreibgeschützter Zugriff auf Schemas. |
 | [!DNL Data Management] | [!UICONTROL Anzeigen von Datensätzen] | Schreibgeschützter Zugriff auf Datensätze und Schemas. |
 | [!DNL Data Management] | [!UICONTROL Datenüberwachung] | Schreibgeschützter Zugriff auf das Monitoring von Datensätzen und Streams. |
 | [!DNL Profile Management] | [!UICONTROL Verwalten von Profilen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datensätzen, die für Kundenprofile verwendet werden. Schreibgeschützter Zugriff auf verfügbare Profile. |
 | [!DNL Profile Management] | [!UICONTROL Anzeigen von Profilen] | Schreibgeschützter Zugriff auf verfügbare Profile. |
+| [!DNL Profile Management] | [!UICONTROL Segmente verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Segmenten. |
+| [!DNL Profile Management] | [!UICONTROL Ansichten-Segmente] | Schreibgeschützter Zugriff auf verfügbare Segmente. |
+| [!DNL Profile Management] | [!UICONTROL Richtlinien zusammenführen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Zusammenführungsrichtlinien. |
+| [!DNL Profile Management] | [!UICONTROL Richtlinien zum Zusammenführen von Ansichten] | Schreibgeschützter Zugriff auf verfügbare Zusammenführungsrichtlinien. |
 | [!DNL Profile Management] | [!UICONTROL Exportieren der Zielgruppe für das Segment] | Fähigkeit, eine ausgewertetes Zielgruppensegment in einen Datensatz zu exportieren. |
+| [!DNL Profile Management] | [!UICONTROL Segmentauswertung für eine Audience] | Möglichkeit, Profil für eine Audience zu generieren, indem eine Segmentdefinition ausgewertet wird. |
 | [!DNL Identities] | [!UICONTROL Verwalten von Identitäts-Namensräumen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Identitäts-Namensräumen. |
 | [!DNL Identities] | [!UICONTROL Anzeigen von Identitäts-Namensräumen] | Schreibgeschützter Zugriff für Identitäts-Namensräume. |
 | [!DNL Sandbox Administration] | [!UICONTROL Verwalten von Sandboxes] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Sandboxes. |
@@ -100,8 +107,12 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Data Ingestion] | [!UICONTROL Verwalten von Quellen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 | [!DNL Data Science Workspace] | [!UICONTROL Verwalten des Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
+| [!DNL Data Governance] | [!UICONTROL Bezeichnungen für die Datenverwendung anwenden] | Zugriff zum Lesen, Erstellen und Löschen von Beschriftungen für die Verwendung. |
+| [!DNL Data Governance] | [!UICONTROL Richtlinien zur Datenverwendung verwalten] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datenverwendungsrichtlinien. |
+| [!DNL Data Governance] | [!UICONTROL Richtlinien zur Ansicht von Daten] | Schreibgeschützter Zugriff für Datenverwendungsrichtlinien Ihres Unternehmens. |
+| [!DNL Query Service] | [!UICONTROL Abfragen verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Plattformdaten. |
 
-_(*) Für diese Erlaubnis sind Bestimmungen erforderlich, die dies erfordern[!DNL Real-time Customer Data Platform]. Für weitere Informationen zur Echtzeit-Kundendatenplattform lesen Sie bitte zunächst die[Echtzeit-Kundendatenplattform – Übersicht](https://docs.adobe.com/content/help/de-DE/experience-platform/rtcdp/overview.html)._
+_(*) Für diese Erlaubnis sind Bestimmungen erforderlich, die dies erfordern [!DNL Real-time Customer Data Platform]. Für weitere Informationen zur Echtzeit-Kundendatenplattform lesen Sie bitte zunächst die [Echtzeit-Kundendatenplattform – Übersicht](https://docs.adobe.com/content/help/de-DE/experience-platform/rtcdp/overview.html)._
 
 ## Nächste Schritte
 
