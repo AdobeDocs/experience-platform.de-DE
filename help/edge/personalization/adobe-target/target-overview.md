@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platfo
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
+source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '626'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,7 @@ Dann können Sie optional auch:
 
 ## Verwenden des Adobe Target VEC
 
-Mit dem SDK können Sie VEC normalerweise mit einer Ausnahme verwenden: Sie benötigen die [Zielgruppe VEC Helper Extension](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) installiert und aktiv.
+Um den VEC mit einer Platform Web SDK-Implementierung zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) - oder [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension installieren und aktivieren.
 
 ## VEC-Aktivitäten automatisch rendern
 
