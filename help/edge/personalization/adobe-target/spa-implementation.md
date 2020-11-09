@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platfo
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 485c2e3b0ad7b38a8e4a482cac49c123a744c47b
+source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1671'
 ht-degree: 14%
 
 ---
@@ -223,7 +223,7 @@ Wenn Sie Ihre XDM-Ansichten definiert und`sendEvent()` mit diesen XDM-Ansichten 
 
 >[!NOTE]
 >
->Um den Visual Experience Composer für Ihre SPA zu verwenden, müssen Sie die [Adobe Target VEC Helper Chrome Extension](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak)installieren.
+>Um VEC für Ihre SPA zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) - oder [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension installieren und aktivieren.
 
 ### Bedienfeld „Änderungen“
 
