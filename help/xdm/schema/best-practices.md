@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Bewährte Verfahren für die Datenmodellierung in Adobe Experience Platform
 topic: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: e15df78978c06da254319d9d394be35c4668caa9
+source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2485'
 ht-degree: 2%
 
 ---
@@ -220,7 +220,7 @@ In diesem Dokument wurden die allgemeinen Richtlinien und Best Practices für da
 
 * Verwenden Sie einen Top-Down-Ansatz, indem Sie Ihre Datentabellen in Profil-, Lookup- und Ereignis-Kategorien sortieren, bevor Sie Ihre Schema erstellen.
 * Es gibt oft mehrere Ansätze und Optionen, wenn es darum geht, Schema für unterschiedliche Zwecke zu gestalten.
-* Ihr Datenmodell sollte Anwendungsfälle für die Segmentierung unterstützen.
+* Ihr Datenmodell sollte Ihre geschäftlichen Nutzungsszenarien wie Segmentierung oder Analyse der Customer Journey unterstützen.
 * Machen Sie Ihre Schemas so einfach wie möglich und fügen Sie nur dann neue Felder hinzu, wenn dies unbedingt erforderlich ist.
 
 Sobald Sie bereit sind, finden Sie in der Übung zum [Erstellen eines Schemas in der Benutzeroberfläche](../tutorials/create-schema-ui.md) schrittweise Anweisungen zum Erstellen eines Schemas, zum Zuweisen der entsprechenden Klasse für die Entität und zum Hinzufügen von Feldern zur Zuordnung Ihrer Daten.
