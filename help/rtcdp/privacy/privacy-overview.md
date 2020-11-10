@@ -5,9 +5,9 @@ seo-title: Datenschutz im Echtzeit-Kundendatenprofil
 description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 translation-type: tm+mt
-source-git-commit: 1eaadb1877cc5221bf6b0b8eed042287e59155bf
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '360'
 ht-degree: 21%
 
 ---
@@ -31,7 +31,7 @@ Weitere Informationen finden Sie im Dokument zur [Erfüllung von Abmeldeanfragen
 
 ## IAB TCF 2.0-Unterstützung
 
-[!DNL Real-time CDP] ist Teil der Liste [des registrierten](https://iabeurope.eu/vendor-list-tcf-v2-0/) Anbieters für die [!DNL Transparency & Consent Framework] (TCF), wie im [!DNL Interactive Advertising Bureau] (IAB) beschrieben. In Übereinstimmung mit den Anforderungen von TCF 2.0 [!DNL Real-time CDP] können Sie detaillierte Daten zur Kundeneinwilligung sammeln und in Ihre gespeicherten Kundendaten integrieren. Diese Daten zur Einwilligung können dann je nach Anwendungsfall in die Segmente der exportierten Audience einbezogen werden.
+[!DNL Real-time CDP] ist Teil der Liste [des registrierten](https://iabeurope.eu/vendor-list-tcf-v2-0/) Anbieters für die [!DNL Transparency & Consent Framework (TCF)]gemäß der [!DNL Interactive Advertising Bureau] (IAB). In Übereinstimmung mit den Anforderungen von TCF 2.0 [!DNL Real-time CDP] können Sie detaillierte Daten zur Kundeneinwilligung sammeln und in Ihre gespeicherten Kundendaten integrieren. Diese Daten zur Einwilligung können dann je nach Anwendungsfall in die Segmente der exportierten Audience einbezogen werden.
 
 Weitere Informationen finden Sie in der Übersicht zur Unterstützung von [IAB TCF 2.0 in [!DNL Real-time CDP]](./iab/overview.md) .
 
