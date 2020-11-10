@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zur Durchsetzung der Datennutzungskonformität für Zielgruppensegmente von Echtzeit-Kundenprofilen mithilfe von APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 43%
+source-wordcount: '1338'
+ht-degree: 46%
 
 ---
 
@@ -22,10 +22,10 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [[!DNL Echtzeit-Profil]](../../profile/home.md): [!DNL Real-time Customer Profile] ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von [!DNL Experience Data Model] (XDM-)Daten in [!DNL Platform]. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] ist ein generischer Lookup-Entitätsspeicher und wird zur Verwaltung von [!DNL Experience Data Model (XDM)] Daten innerhalb von verwendet [!DNL Platform]. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
    - [Richtlinien](../../profile/api/merge-policies.md)zusammenführen: Regeln, [!DNL Real-time Customer Profile] mit denen bestimmt wird, welche Daten unter bestimmten Voraussetzungen in einer einheitlichen Ansicht zusammengeführt werden können. Merge policies can be configured for [!DNL Data Governance] purposes.
-- [[!DNL-Segmentierung]](../home.md): Wie [!DNL Real-time Customer Profile] unterteilt eine große Gruppe von im Profil Store enthaltenen Personen in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
-- [[!DNL-Datenverwaltung]](../../data-governance/home.md): [!DNL Data Governance] stellt die Infrastruktur für die Kennzeichnung und Durchsetzung von Daten bereit, wobei folgende Komponenten verwendet werden:
+- [[!DNL Segmentation]](../home.md): Wie [!DNL Real-time Customer Profile] unterteilt eine große Gruppe von im Profil Store enthaltenen Personen in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] stellt die Infrastruktur für die Kennzeichnung und Durchsetzung von Daten bereit, wobei folgende Komponenten verwendet werden:
    - [Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern in Bezug auf die Sensibilität, mit der die jeweiligen Daten verarbeitet werden sollen, verwendet werden.
    - [Datennutzungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketing-Aktionen für Daten zulässig sind, die nach bestimmten Datennutzungsbezeichnungen kategorisiert sind.
    - [Durchsetzung](../../data-governance/enforcement/overview.md)der Politik: Ermöglicht es Ihnen, Datenverwendungsrichtlinien zu erzwingen und Datenvorgänge zu verhindern, die Richtlinienverletzungen darstellen.
@@ -39,7 +39,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
