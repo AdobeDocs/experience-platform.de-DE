@@ -4,10 +4,10 @@ title: Handbuch zur Benutzeroberfläche des Profils in Echtzeit
 topic: guide
 description: In der Adobe Experience Platform-Benutzeroberfläche können Sie ganz einfach jedes Schema der Vereinigung innerhalb Ihres Unternehmens Ansicht und Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schema für eine bestimmte Klasse durchführen. In diesem Handbuch finden Sie detaillierte Informationen zur Ansicht und Erforschung von Schemas der Vereinigung mithilfe der Plattform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: e1fc20a5f791f7628a19c5440db3741c8be3743a
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1023'
-ht-degree: 0%
+source-wordcount: '1022'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 
 * [[!DNL Real-time Customer Profile]](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [[!DNL Identity Service]](../../identity-service/home.md): Ermöglicht die [!DNL Real-time Customer Profile] Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die sie eingeordnet werden [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 ## Schemas zur Vereinigung
 
