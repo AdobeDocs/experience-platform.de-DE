@@ -5,10 +5,10 @@ title: Sandbox-Benutzerhandbuch
 topic: user guide
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 2d1a9699866bd39de7251731e9f0cd2f753a5083
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 81%
+source-wordcount: '623'
+ht-degree: 50%
 
 ---
 
@@ -19,23 +19,29 @@ In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Ex
 
 ## Anzeigen von Sandboxes
 
-Klicken Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich auf **[!UICONTROL Sandboxes]**, um das Dashboard **[!UICONTROL Sandboxes]** zu öffnen. Im Dashboard werden alle für Ihre Organisation verfügbaren Sandboxes aufgeführt, einschließlich Sandbox-Typ (Produktion oder Entwicklung) und Status (aktiv, wird erstellt, gelöscht oder fehlgeschlagen).
+In the Experience Platform UI, select **[!UICONTROL Sandboxes]** in the left-navigation to open the **[!UICONTROL Sandboxes]** dashboard. Im Dashboard werden alle für Ihre Organisation verfügbaren Sandboxes aufgeführt, einschließlich Sandbox-Typ (Produktion oder Entwicklung) und Status (aktiv, wird erstellt, gelöscht oder fehlgeschlagen).
 
-![](../images/ui/sandboxes-tab.png)
+![](../images/ui/view-sandboxes.png)
 
 ## Zwischen Sandboxes wechseln
 
 Das Steuerelement **Sandbox-Umschalter** oben links im Bildschirm zeigt die derzeit aktive Sandbox an.
 
-![](../images/ui/sandbox-selector.png)
+![](../images/ui/sandbox-switcher.png)
 
-Um zwischen Sandboxes zu wechseln, klicken Sie auf den Sandbox-Umschalter und wählen Sie die gewünschte Sandbox aus der Dropdown-Liste aus.
+Um zwischen Sandboxen zu wechseln, wählen Sie den Sandbox-Umschalter aus und wählen Sie die gewünschte Sandbox aus der Dropdown-Liste aus.
 
-![](../images/ui/switch-sandbox.png)
+![](../images/ui/switcher-menu.png)
 
 Sobald eine Sandbox ausgewählt ist, wird der Bildschirm aktualisiert; die ausgewählte Sandbox wird jetzt im Sandbox-Umschalter angezeigt.
 
-![](../images/ui/sandbox-switched.png)
+![](../images/ui/switched.png)
+
+## Suchen nach einer Sandbox
+
+Sie können über die Suchfunktion im Menü &quot;Sandbox-Umschalter&quot;durch die Liste der Ihnen zur Verfügung stehenden Sandboxen navigieren. Geben Sie den Namen der Sandbox ein, auf die Sie zugreifen möchten, um durch alle für Ihr Unternehmen verfügbaren Sandboxen zu filtern.
+
+![](../images/ui/sandbox-search.png)
 
 ## Neue Sandbox erstellen
 
@@ -43,15 +49,15 @@ Im folgenden Video erhalten Sie einen schnellen Überblick über die Verwendung 
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Um in der Benutzeroberfläche eine neue Sandbox zu erstellen, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Sandboxes]** und dann auf **[!UICONTROL Sandbox erstellen]**.
+Um eine neue Sandbox in der Benutzeroberfläche zu erstellen, klicken Sie oben rechts im Bildschirm auf die Schaltfläche &quot;Sandbox **[!UICONTROL erstellen]** &quot;.
 
-![](../images/ui/create-sandbox-button.png)
+![](../images/ui/create-sandbox.png)
 
-Der Dialog **[!UICONTROL Sandbox erstellen]** wird angezeigt, in dem Sie aufgefordert werden, einen Anzeigetitel und einen Namen für die Sandbox anzugeben. Der **Anzeigetitel** sollte für Menschen lesbar und deskriptiv genug sein, damit er leicht zu erkennen ist. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
+Der Dialog **[!UICONTROL Sandbox erstellen]** wird angezeigt, in dem Sie aufgefordert werden, einen Anzeigetitel und einen Namen für die Sandbox anzugeben. Der **Anzeigetitel** sollte für Menschen lesbar und deskriptiv genug sein, damit er leicht zu erkennen ist. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise. Der **[!UICONTROL Name]** der Sandbox darf nur aus alphanumerischen Zeichen und Bindestrichen **(-)** bestehen, muss mit einem Buchstaben beginnen und darf nicht länger als 256 Zeichen sein.
 
-Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
+When finished, select **[!UICONTROL Create]**.
 
-![](../images/ui/create-sandbox-dialog.png)
+![](../images/ui/create-dialog.png)
 
 >[!NOTE]
 >
@@ -59,7 +65,7 @@ Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
 Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
 
-![](../images/ui/sandbox-created.png)
+![](../images/ui/creating.png)
 
 ## Zurücksetzen einer Sandbox
 
@@ -69,17 +75,17 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 Beim Zurücksetzen einer Nicht-Produktions-Sandbox werden alle mit dieser Sandbox verbundenen Ressourcen (Schemas, Datensätze usw.) gelöscht, wobei der Name der Sandbox und die zugehörigen Berechtigungen beibehalten werden. Diese „saubere“ Sandbox ist für Benutzer, die Zugriff darauf haben, unter demselben Namen weiter verfügbar.
 
-Um eine Sandbox in der Benutzeroberfläche zurückzusetzen, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Sandboxes]** und dann auf die Sandbox, die Sie zurücksetzen möchten. Klicken Sie im Dialog auf der rechten Seite des Bildschirms auf **[!UICONTROL Sandbox zurücksetzen]**.
+To reset a sandbox in the UI, select **[!UICONTROL Sandboxes]** in the left-nav, then select the sandbox you want to reset. In the dialog that appears on the right-hand side of the screen, select **[!UICONTROL Reset Sandbox]**.
 
-![](../images/ui/reset-sandbox-button.png)
+![](../images/ui/reset-sandbox.png)
 
-Es wird ein Dialog angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Klicken Sie auf **[!UICONTROL Zurücksetzen]**, um fortzufahren.
+Es wird ein Dialog angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Select **[!UICONTROL Reset]** to continue.
 
-<img src="../images/ui/reset-are-you-sure.png" width="350"><br>
+![](../images/ui/reset-confirm.png)
 
-A confirmation message appears and the sandbox&#39;s state changes to &quot;[!UICONTROL Resetting]&quot;. Once it has been provisioned by the system, its state will update to &quot;[!UICONTROL Active]&quot; or &quot;[!UICONTROL Failed]&quot;.
+A confirmation message appears and the sandbox&#39;s state changes to &quot;**[!UICONTROL Resetting]&quot;**. Once it has been provisioned by the system, its state will update to **&quot;[!UICONTROL Active]&quot;** or **&quot;[!UICONTROL Failed]&quot;**.
 
-![](../images/ui/sandbox-resetting.png)
+![](../images/ui/resetting.png)
 
 ## Sandbox löschen
 
@@ -89,13 +95,13 @@ A confirmation message appears and the sandbox&#39;s state changes to &quot;[!UI
 
 Wenn Sie eine Nicht-Produktions-Sandbox löschen, werden alle mit dieser Sandbox verbundenen Ressourcen (einschließlich Berechtigungen) endgültig gelöscht.
 
-Um eine Sandbox in der Benutzeroberfläche zu löschen, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Sandboxes]** und dann auf die Sandbox, die Sie löschen möchten. Klicken Sie im Dialog auf der rechten Seite des Bildschirms auf **[!UICONTROL Sandbox löschen]**.
+To delete a sandbox in the UI, select **[!UICONTROL Sandboxes]** in the left-nav, then select the sandbox you want to delete. In the dialog that appears on the right-hand side of the screen, select **[!UICONTROL Delete Sandbox]**.
 
-![](../images/ui/delete-sandbox-button.png)
+![](../images/ui/delete-sandbox.png)
 
-Es wird ein Dialog angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Klicken Sie auf **[!UICONTROL Löschen]**, um fortzufahren.
+Es wird ein Dialog angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Select **[!UICONTROL Delete]** to continue.
 
-<img src="../images/ui/delete-are-you-sure.png" width="350"><br>
+![](../images/ui/delete-confirm.png)
 
 Eine Bestätigungsmeldung wird angezeigt und die Sandbox wird aus dem Arbeitsbereich **[!UICONTROL Sandboxes]** entfernt.
 
