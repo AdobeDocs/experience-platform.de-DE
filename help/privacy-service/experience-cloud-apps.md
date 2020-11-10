@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service und Experience Cloud-Anwendungen
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4cd7b9d3ca542c2fba83d066197b92775c053729
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 25%
+source-wordcount: '555'
+ht-degree: 23%
 
 ---
 
@@ -27,9 +27,9 @@ Lesen Sie die Dokumentation für Ihre [!DNL Experience Cloud] Anwendungen, um zu
 
 Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud] Anwendungen, mit denen [!DNL Privacy Service]die [!DNL Privacy Service] Funktionen, mit denen sie kompatibel sind, integriert sind, sowie Links zur Dokumentation für weitere Informationen.
 
-| Anwendung | Zugriff/Löschen | Ausschluss vom Verkauf | Dokumentation und Überlegungen |
+| Anwendung | Zugriff/Löschen | Ausschluss des Verkaufs | Dokumentation und Überlegungen |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>[!DNL Advertising Cloud] nutzt die bestehenden Möglichkeiten zum globalen Ausschluss, die vom Datenschutzzentrum der Adobe bereitgestellt werden. Weitere Informationen finden Sie im Handbuch zum [Erstellen von Datenschutzanforderungen](https://docs.adobe.com/content/help/de-DE/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) .</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Dokumentation für GDPR aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Verkaufsabmeldedokumentation für CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] verarbeitet Abmeldeanfragen mithilfe von [Privacy Berichte-Variablen](https://docs.adobe.com/content/help/de-DE/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Dokumentation zur Abmeldung](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.campaign.adobe.com/doc/standard/getting_started/de/ACS_GDPR.html)</li><li>[Dokumentation zur Abmeldung](../segmentation/honoring-opt-outs.md)</li></ul> |
