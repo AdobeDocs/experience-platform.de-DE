@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie die IAB TCF 2.0-Voreinstellungen für die Zus
 seo-description: Erfahren Sie, wie Sie die IAB TCF 2.0-Voreinstellungen für die Zustimmung mit Experience Platform Web SDK unterstützen.
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: b82ee2508558f76e3ad56cbb8405abe9bfb235f6
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Darüber hinaus stehen die folgenden Handbücher zur Verfügung, um zu lernen, w
 
 Um das AEP Web SDK mit IAB TCF 2.0 zu implementieren, müssen Sie über ein funktionierendes Verständnis des Experience Data Model (XDM) und Experience Ereignisses verfügen. Bevor Sie den Beginn ausführen, lesen Sie bitte das folgende Dokument:
 
-- [Systemübersicht](../../../xdm/home.md)zum Erlebnis-Datenmodell (XDM): Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
+- [Systemübersicht](../../../xdm/home.md)zum Erlebnis-Datenmodell (XDM): Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [!DNL Experience Data Model (XDM)]auf der Grundlage der Adobe eine Standardisierung der Kundenerlebnisdaten und die Definition von Schemas für das Kundenerlebnis-Management.
 
 ## Integration der Kundendatenplattform in Echtzeit
 
