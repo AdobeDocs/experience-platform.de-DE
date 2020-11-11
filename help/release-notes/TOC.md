@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform – Versionshinweise
 breadcrumb-title: Platform – Versionshinweise
 user-guide-description: Monatliche Versionshinweise für Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
+source-git-commit: cfa939f759e114be14da89070a491de9d71f8528
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '38'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,8 @@ ht-degree: 100%
 
 # Adobe Experience Platform – Versionshinweise {#release-notes}
 
-* [Oktober 2020](latest/latest.md)
+* [November 2020](latest/latest.md)
+* [Oktober 2020](2020/october-2020.md)
 * [September 2020](2020/september-2020.md)
 * [August 2020](2020/august-2020.md)
 * [Juli 2020](2020/july-2020.md)
