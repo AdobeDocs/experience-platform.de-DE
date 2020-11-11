@@ -4,10 +4,10 @@ title: Handbuch zur Benutzeroberfläche des Profils in Echtzeit
 topic: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
 workflow-type: tm+mt
-source-wordcount: '1244'
-ht-degree: 11%
+source-wordcount: '1245'
+ht-degree: 9%
 
 ---
 
@@ -62,7 +62,7 @@ Die Metrik &quot; **[!UICONTROL Profil nach Namensraum]** &quot;zeigt die Gesamt
 
 ### Richtlinie zusammenführen
 
-Mit der **[!UICONTROL Auswahl der Richtlinie]** zusammenführen wird automatisch die standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen ausgewählt. Wenn Sie diese Richtlinie nicht verwenden möchten, können Sie das `X` Kontrollkästchen neben der standardmäßigen Zusammenführungsrichtlinie auswählen, um das Dialogfeld &quot; **[!UICONTROL Zusammenführungsrichtlinie]** auswählen&quot;zu öffnen, in dem Sie eine andere Richtlinie für die Zusammenführung auswählen können. Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle innerhalb der Plattform finden Sie im Benutzerhandbuch zu [Zusammenführungsrichtlinien](merge-policies.md).
+Mit der **[!UICONTROL Auswahl der Richtlinie]** zusammenführen wird automatisch die standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen ausgewählt. Wenn Sie diese Richtlinie nicht verwenden möchten, können Sie das `X` Kontrollkästchen neben der standardmäßigen Zusammenführungsrichtlinie auswählen, um das Dialogfeld &quot; **[!UICONTROL Zusammenführungsrichtlinie]** auswählen&quot;zu öffnen, in dem Sie eine andere Richtlinie für die Zusammenführung auswählen können. Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle innerhalb der Plattform finden Sie im Handbuch zur Benutzeroberfläche [der Zusammenführungsrichtlinien](merge-policies.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -98,7 +98,7 @@ Sie können weitere Informationen zum jeweiligen Profil durch Auswahl einer ande
 
 ## Zusammenführungsrichtlinien
 
-Wählen Sie im Hauptmenü &quot; **[!UICONTROL Profile]** &quot;die Registerkarte &quot;Richtlinien **[!UICONTROL zusammenführen&quot;]** , um eine Liste der zu Ihrem Unternehmen gehörenden Zusammenführungsrichtlinien Ansicht. Jede aufgelistete Richtlinie zeigt an: ihren Namen; ob sie die standardmäßige Zusammenführungsrichtlinie ist oder nicht; das Schema, auf das sie angewendet wird.
+Wählen Sie im Hauptmenü &quot; **[!UICONTROL Profile]** &quot;die Registerkarte &quot;Richtlinien **[!UICONTROL zusammenführen&quot;]** , um eine Liste der zu Ihrem Unternehmen gehörenden Zusammenführungsrichtlinien Ansicht. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, sowie die Schema-Klasse, für die sie gilt.
 
 For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
 
