@@ -3,20 +3,20 @@ keywords: activate destination;activate destinations;activate data
 title: Profile und Segmente für ein Ziel aktivieren
 type: Tutorial
 seo-title: Profile und Segmente für ein Ziel aktivieren
-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
-seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
+description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
+seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 28%
+source-wordcount: '1583'
+ht-degree: 25%
 
 ---
 
 
 # Profile und Segmente für ein Ziel aktivieren
 
-Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von Adobe vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
+Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 
 ## Voraussetzungen  {#prerequisites}
 
@@ -24,74 +24,73 @@ Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbin
 
 ## Daten aktivieren {#activate-data}
 
-Die Schritte im Arbeitsablauf zum Aktivieren unterscheiden sich geringfügig von den Zieltypen. Der vollständige Arbeitsablauf für alle Zieltypen wird nachfolgend beschrieben.
+Die Schritte im Arbeitsablauf für die Aktivierung unterscheiden sich geringfügig von den Zieltypen. Der vollständige Arbeitsablauf für alle Zieltypen wird nachfolgend beschrieben.
 
 ### Wählen Sie das Ziel aus, für das die Daten aktiviert werden sollen {#select-destination}
 
 Gilt für: Alle Ziele
 
-1. Navigieren Sie in der CDP-Benutzeroberfläche &quot;Adobe in Echtzeit&quot;zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]**und wählen Sie das Ziel aus, an dem Sie Ihre Segmente aktivieren möchten.
-   ![zum Ziel navigieren](assets/oracle-eloqua-connect.png)
-2. Klicken Sie auf den Namen des Ziels. Dadurch gelangen Sie zum Arbeitsablauf für die Aktivierung.
-   ![activate-flow](assets/activate-flow.png)Beachten Sie, dass Sie die Aktivierungen sehen können, die derzeit für das Ziel aktiviert werden, wenn für ein Ziel bereits ein Arbeitsablauf vorhanden ist. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
-3. Select **[!UICONTROL Activate]**.
+Navigieren Sie in der Echtzeit-CDP-Benutzeroberfläche zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]**und wählen Sie das Ziel aus, an dem Sie Ihre Segmente aktivieren möchten.
+![zum Ziel navigieren](assets/oracle-eloqua-connect.png)
 
-<br> 
+Wählen Sie den Namen des Ziels aus, um zum Arbeitsablauf für die Aktivierung zu navigieren.
 
-### **[!UICONTROL Schritt Segmente]** auswählen {#select-segments}
+![activate-flow](assets/activate-flow.png)
+
+Beachten Sie, dass Sie, wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, die derzeit aktivierten Segmente für das Ziel sehen können. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
+
+Nachdem Sie ein Ziel ausgewählt haben, wählen Sie **[!UICONTROL Aktivieren]**.
+
+### [!UICONTROL Schritt Segmente] auswählen {#select-segments}
 
 Gilt für: Alle Ziele
 
-![Segmentschritt auswählen](/help/rtcdp/destinations/assets/select-segments-icon.png)
+![Segmentschritt auswählen](./assets/select-segments-icon.png)
 
-
-In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select one or more segments to activate to the destination. Klicken Sie auf **[!UICONTROL Weiter]** , um mit dem nächsten Schritt fortzufahren.
+In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select one or more segments to activate to the destination. Wählen Sie **[!UICONTROL Weiter]** , um mit dem nächsten Schritt fortzufahren.
 ![Segment an Ziel](assets/email-select-segments.png)
 
-<br> 
-
-### **[!UICONTROL Schritt zur]** Identitätszuordnung {#identity-mapping}
+### [!UICONTROL Schritt zur] Identitätszuordnung {#identity-mapping}
 
 Gilt für: Social-Ziele und Werbeziel Google-Kunden-Übereinstimmung
 
-![Identitätszuordnungsschritt](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
+![Identitätszuordnungsschritt](./assets/identity-mapping-icon.png)
 
-Bei *Social-Zielen* können Sie im Schritt zur **[!UICONTROL Identitätszuordnung]** Quellattribute auswählen, die als Zielgruppen-Identitäten im Ziel zugeordnet werden sollen. Dieser Schritt ist entweder optional oder obligatorisch, je nachdem, welche primäre Identität Sie im Schema verwenden. <br> 
+Bei Social-Zielen können Sie Quellattribute auswählen, die als Zielgruppen-ID im Ziel zugeordnet werden sollen. Dieser Schritt ist entweder optional oder obligatorisch, je nachdem, welche primäre Identität Sie im Schema verwenden.
 
-*E-Mail-Adresse als primäre Identität*: Wenn Sie die E-Mail-Adresse als primäre Identität in Ihrem Schema verwenden, können Sie den Schritt für die Identitätszuordnung überspringen, wie nachfolgend gezeigt:
+Wenn Sie die E-Mail-Adresse als primäre Identität in Ihrem Schema verwenden, können Sie den Schritt für die Identitätszuordnung überspringen, wie nachfolgend gezeigt:
 
 ![E-Mail-Adresse als Identität](assets/email-as-identity.gif)
 
-<br> 
-
-*Eine weitere ID als primäre Identität*: Wenn Sie eine andere ID wie *Belohnungs-ID* oder *Loyalität-ID* als primäre Identität in Ihrem Schema verwenden, müssen Sie die E-Mail-Adresse aus Ihrem Identitäts-Schema manuell als Zielgruppen-ID im Social-Ziel zuordnen, wie nachfolgend gezeigt:
+Wenn Sie eine andere ID wie &quot;Belohnungs-ID&quot;oder &quot;Loyalität-ID&quot;als primäre Identität in Ihrem Schema verwenden, müssen Sie die E-Mail-Adresse aus Ihrem Identitäts-Schema manuell als Zielgruppe-ID im Social-Ziel zuordnen, wie nachfolgend gezeigt:
 
 ![Loyalität-ID als Identität](assets/rewardsid-as-identity.gif)
 
+Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Dateneingabe in Adobe Experience Platform per Hash E-Mail- [!DNL Facebook] Hashing an Ihre E-Mail-Adresse gesendet haben [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements).
 
-Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Dateneingabe in Adobe Experience Platform per Hash E-Mail- [!DNL Facebook] Hashing an Ihre E-Mail-Adresse gesendet haben [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Adobe Echtzeit-CDP-Dateien werden die E-Mail-Adressen mit Hashing versehen, um die [!DNL Facebook] Anforderungen zu erfüllen.
+Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Echtzeit-CDP wird die E-Mail-Adressen zur Erfüllung der [!DNL Facebook] Anforderungen hacken.
 
 ![Identitätszuordnung nach dem Ausfüllen von Feldern](assets/identity-mapping.png)
-
-<br> 
 
 ### **[!UICONTROL Konfigurieren]** des Schritts {#configure}
 
 Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
-![Schritt konfigurieren](/help/rtcdp/destinations/assets/configure-icon.png)
+![Schritt konfigurieren](./assets/configure-icon.png)
 
- Dieser Schritt ist optional. Im Schritt **[!UICONTROL Konfigurieren]** können Sie die Dateinamen für jedes Segment konfigurieren, das Sie exportieren. Die Standarddateinamen bestehen aus dem Zielnamen, der Segment-ID und einer Datums- und Zeitanzeige. Sie können beispielsweise die Namen der exportierten Dateien bearbeiten, um zwischen verschiedenen Kampagnen zu unterscheiden, oder um die Datenexportzeit an die Dateien anhängen zu lassen.
+Im Schritt **[!UICONTROL Konfigurieren]** können Sie die Dateinamen für jedes Segment konfigurieren, das Sie exportieren. Die Konfiguration des Dateinamens ist optional.
 
-Wählen Sie **[!UICONTROL Weiter]** , um die Standarddateinamen zu verwenden, oder klicken Sie auf das Stiftsymbol, um ein modales Fenster zu öffnen und die Dateinamen zu bearbeiten. Beachten Sie, dass Dateinamen auf 255 Zeichen begrenzt sind.
+Die Standarddateinamen bestehen aus dem Zielnamen, der Segment-ID und einer Datums- und Zeitanzeige. Sie können beispielsweise die Namen der exportierten Dateien bearbeiten, um zwischen verschiedenen Kampagnen zu unterscheiden, oder um die Datenexportzeit an die Dateien anhängen zu lassen.
 
-![Dateinamen konfigurieren](assets/activation-workflow-configure-step.png)
+Wählen Sie das Stiftsymbol aus, um ein modales Fenster zu öffnen und die Dateinamen zu bearbeiten. Beachten Sie, dass Dateinamen auf 255 Zeichen begrenzt sind.
+
+![Dateinamen konfigurieren](./assets/activate-destinations/configure-name.png)
 
 Im Dateinameneditor können Sie verschiedene Komponenten auswählen, die dem Dateinamen hinzugefügt werden sollen. Der Zielname und die Segment-ID können nicht aus den Dateinamen entfernt werden. Darüber hinaus können Sie Folgendes hinzufügen:
 
-* **[!UICONTROL Segmentname]**: Sie können den Segmentnamen an den Dateinamen anhängen.
-* **[!UICONTROL Datum und Uhrzeit]**: Wählen Sie zwischen dem Hinzufügen eines `MMDDYYYY_HHMMSS` Formats oder eines 10-stelligen Unix-Zeitstempels für den Zeitpunkt der Erstellung der Dateien. Wählen Sie eine dieser Optionen aus, wenn für Ihre Dateien bei jedem inkrementellen Export ein dynamischer Dateiname generiert werden soll.
-* **[!UICONTROL Benutzerdefinierter Text]**: hinzufügen benutzerdefinierter Text in die Dateinamen.
+- **[!UICONTROL Segmentname]**: Sie können den Segmentnamen an den Dateinamen anhängen.
+- **[!UICONTROL Datum und Uhrzeit]**: Wählen Sie zwischen dem Hinzufügen eines `MMDDYYYY_HHMMSS` Formats oder eines 10-stelligen Unix-Zeitstempels für den Zeitpunkt der Erstellung der Dateien. Wählen Sie eine der folgenden Optionen, wenn für Ihre Dateien bei jedem inkrementellen Export ein dynamischer Dateiname generiert werden soll.
+- **[!UICONTROL Benutzerdefinierter Text]**: hinzufügen benutzerdefinierter Text in die Dateinamen.
 
 Wählen Sie Änderungen **[!UICONTROL anwenden]** , um Ihre Auswahl zu bestätigen.
 
@@ -99,15 +98,15 @@ Wählen Sie Änderungen **[!UICONTROL anwenden]** , um Ihre Auswahl zu bestätig
 > 
 >Wenn Sie die **[!UICONTROL Datums- und Uhrzeitkomponente]** nicht auswählen, sind die Dateinamen statisch und die neue Exportdatei überschreibt bei jedem Export die vorherige Datenspeicherung im Speicherort. Bei der Ausführung eines wiederkehrenden Importauftrags von einer Datenspeicherung in eine E-Mail-Marketingplattform wird diese Option empfohlen.
 
-![Dateinamenoptionen bearbeiten](assets/activate-workflow-configure-step-2.png)
+![Dateinamenoptionen bearbeiten](./assets/activate-workflow-configure-step-2.png)
 
-<br> 
+Nachdem Sie alle Segmente konfiguriert haben, wählen Sie **[!UICONTROL Weiter]** , um fortzufahren.
 
-### **[!UICONTROL Schritt &quot;Segmentplan]** &quot; {#segment-schedule}
+### **[!UICONTROL Segmentplanschritt]** {#segment-schedule}
 
 Gilt für: Werbeziele, soziale Ziele
 
-![Segmentplanschritt](/help/rtcdp/destinations/assets/segment-schedule-icon.png)
+![Segmentplanschritt](./assets/segment-schedule-icon.png)
 
 On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
@@ -115,61 +114,53 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >
 >Für Ziele in sozialen Netzwerken müssen Sie in diesem Schritt die Herkunft Ihrer Zielgruppe auswählen. Sie können mit dem nächsten Schritt erst fortfahren, nachdem Sie eine der Optionen in der folgenden Abbildung ausgewählt haben.
 
-![Datenherkunft auswählen](assets/choose-data-origin.png)
-
-<br> 
+![Datenherkunft auswählen](./assets/choose-data-origin.png)
 
 ### **[!UICONTROL Planungsschritt]** {#scheduling}
 
 Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
-![Segmentplanschritt](assets/scheduling-icon.png)
+![Segmentplanschritt](./assets/scheduling-icon.png)
 
 On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. Diese Werte können nicht bearbeitet werden.
-
-<br> 
 
 ### **[!UICONTROL Schritt &quot;Attribute]** auswählen&quot; {#select-attributes}
 
 Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
-![Schritt zum Auswählen von Attributen](/help/rtcdp/destinations/assets/select-attributes-icon.png)
+![Schritt zum Auswählen von Attributen](./assets/select-attributes-icon.png)
 
-
-On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
+On the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]** and choose the attributes that you want to send to the destination.
 
 >[!NOTE]
 >
-> Adobe Die CDP-Datei in Echtzeit füllt Ihre Auswahl mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> Die CDP-Datei in Echtzeit füllt Ihre Auswahl mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-Die Dateiexporte variieren wie folgt, je nachdem, ob ausgewählt `segmentMembership.status` ist:
-* Wenn das `segmentMembership.status` Feld ausgewählt ist, enthalten exportierte Dateien **aktive** Mitglieder in den ersten vollständigen Schnappschuss sowie **aktive** und **abgelaufene** Mitglieder in nachfolgenden inkrementellen Exporten.
-* Wenn das `segmentMembership.status` Feld nicht ausgewählt ist, enthalten exportierte Dateien nur **aktive** Mitglieder im ersten vollständigen Schnappschuss und in nachfolgenden inkrementellen Exporten.
+Dateiexporte variieren auf folgende Weise, je nachdem, ob ausgewählt `segmentMembership.status` ist:
+- Wenn das `segmentMembership.status` Feld ausgewählt ist, enthalten exportierte Dateien **[!UICONTROL aktive]** Mitglieder in den ersten vollständigen Schnappschuss sowie **[!UICONTROL aktive]** und **[!UICONTROL abgelaufene]** Mitglieder in nachfolgenden inkrementellen Exporten.
+- Wenn das `segmentMembership.status` Feld nicht ausgewählt ist, enthalten exportierte Dateien nur **[!UICONTROL aktive]** Mitglieder im ersten vollständigen Schnappschuss und in nachfolgenden inkrementellen Exporten.
 
-![Empfohlene Attribute](/help/rtcdp/destinations/assets/recommended-attributes.png)
+![Empfohlene Attribute](./assets/activate-destinations/mark-mandatory.png)
 
+Darüber hinaus können Sie verschiedene Attribute als obligatorisch markieren. Wenn Sie ein Attribut als obligatorisch markieren, muss es im exportierten Segment dieses Attribut enthalten. Dadurch kann sie als zusätzliche Filterform verwendet werden. Die obligatorische Kennzeichnung eines Attributs ist **nicht** erforderlich.
 
-We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your schema. Weiterführende Informationen zu obligatorischen Attributen finden Sie unter „Identität“ im Artikel [E-Mail-Marketing-Ziele](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
+Es wird empfohlen, dass eines der Attribute eine [eindeutige Kennung](/help/rtcdp/destinations/email-marketing-destinations.md#identity) Ihres Schemas ist. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) documentation.
 
 >[!NOTE]
 > 
 >Wenn Datenverwendungsbeschriftungen auf bestimmte Felder in einem Datensatz angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Beschriftungen auf Feldebene bei der Aktivierung unter folgenden Bedingungen:
->* Die Felder werden in der Segmentdefinition verwendet.
->* Die Felder sind als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
+>- Die Felder werden in der Segmentdefinition verwendet.
+>- Die Felder sind als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
 
 >
 > 
-Betrachten Sie den Screenshot unten. Wenn das Feld beispielsweise bestimmte Beschriftungen für die Datenverwendung enthält, die mit dem Marketing-Verwendungsfall des Ziels kollidieren, wird Ihnen im Review-Schritt (Schritt 9) eine Verletzung der Datenverwendungsrichtlinie angezeigt. `person.name.firstName` Weitere Informationen finden Sie unter [Datenverwaltung in Echtzeit-CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
-
-![Zielattribute](assets/select-attributes-step.png)
-
-<br> 
+Wenn das Feld beispielsweise bestimmte Beschriftungen für die Datenverwendung enthält, die mit dem Marketing-Verwendungsfall des Ziels kollidieren, wird Ihnen im Review-Schritt eine Verletzung der Datenverwendungsrichtlinie angezeigt. `person.name.firstName` Weitere Informationen finden Sie unter [Datenverwaltung in Echtzeit-CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Schritt überprüfen]** {#review}
 
 Gilt für: alle Ziele
 
-![Review](/help/rtcdp/destinations/assets/review-icon.png)
+![Review](./assets/review-icon.png)
 
 Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
@@ -183,7 +174,6 @@ Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTRO
 
 ![Auswahl bestätigen](assets/confirm-selection.png)
 
-
 ## Aktivierung bearbeiten {#edit-activation}
 
 Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in der Echtzeit-Kundendatenplattform zu bearbeiten:
@@ -195,7 +185,7 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in der Echtzeit-Kunde
 
 ### E-Mail-Marketing-Ziele  und Cloud-Speicher-Ziele {#esp-and-cloud-storage}
 
-Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt die Echtzeit-Kundendatenplattform von Adobe eine tabulatorgetrennte `.csv`- oder `.txt`-Datei am von Ihnen angegebenen Speicherort. An diesem Speicherort wird täglich eine neue Datei erstellt. The default file format is:
+For email marketing destinations and cloud storage destinations, Real-time CDP creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. An diesem Speicherort wird täglich eine neue Datei erstellt. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Beachten Sie, dass Sie das Dateiformat bearbeiten können. Weitere Informationen finden Sie unter Ziele für Cloud-Datenspeicherung und E-Mail-Marketing-Ziele [konfigurieren](/help/rtcdp/destinations/activate-destinations.md#configure) .
@@ -220,7 +210,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->Die Integration zwischen Adobe Real-Time CDP und [!DNL Facebook] unterstützt historische Audiencen-Backfills. Alle historischen Segmentqualifikationen werden an gesendet, [!DNL Facebook] wenn Sie die Segmente an das Ziel aktivieren.
+>Die Integration zwischen Echtzeit-CDP und [!DNL Facebook] unterstützt historische Audiencen-Backfills. Alle historischen Segmentqualifikationen werden an gesendet, [!DNL Facebook] wenn Sie die Segmente an das Ziel aktivieren.
 
 ## Aktivierung deaktivieren {#disable-activation}
 
