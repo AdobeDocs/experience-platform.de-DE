@@ -5,9 +5,9 @@ title: Überblick über Adobe Experience Platform Connectoren für Datenquellen
 topic: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '886'
 ht-degree: 57%
 
 ---
@@ -41,7 +41,7 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 [!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieteranzeigesystem. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) Connector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
 ### Cloud-Speicherplatz
 
@@ -91,6 +91,12 @@ CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden kö
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
 - [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
+
+### eCommerce
+
+[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieter-E-Commerce-System. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### Marketing-Automatisierung
 
