@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Richtlinien zusammenführen - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
-ht-degree: 63%
+source-wordcount: '2494'
+ht-degree: 57%
 
 ---
 
@@ -27,7 +27,13 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Real-time Cus
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
-Zusammenführungsrichtlinien gelten jeweils privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] bietet eine standardmäßige Zusammenführungsrichtlinie; alternativ können Sie eine Zusammenführungsrichtlinie für ein bestimmtes Schema erstellen und diese dann als Standard für Ihre Organisation markieren. Jede Organisation kann potenziell über mehrere Zusammenführungsrichtlinien pro Schema verfügen, allerdings kann jedes Schema nur eine Standardzusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Schemaname angegeben und eine Zusammenführungsrichtlinie erforderlich, jedoch nicht angegeben ist. Wenn Sie eine Zusammenführungsrichtlinie als Standard festlegen, werden alle vorhandenen Zusammenführungsrichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert, sodass sie nicht mehr als Standard dienen.
+Merge-Richtlinien sind privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schema auf die von Ihnen gewünschte Weise zusammenzuführen. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] stellt Unternehmen eine standardmäßige Zusammenführungsrichtlinie zur Verfügung oder Sie können eine Zusammenführungsrichtlinie für eine bestimmte Experience Data Model (XDM)-Schema-Klasse erstellen und diese als Standard für Ihr Unternehmen markieren.
+
+Während jedes Unternehmen potenziell über mehrere Zusammenführungsrichtlinien pro Schema-Klasse verfügen kann, kann jede Klasse nur eine Standardzusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Name der Schema-Klasse angegeben ist und eine Zusammenführungsrichtlinie erforderlich ist, jedoch nicht angegeben.
+
+>[!NOTE]
+>
+>Wenn Sie eine neue Mergerichtlinie als Standard festlegen, werden alle vorhandenen Mergerichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert und nicht mehr als Standard verwendet.
 
 ### Komplettes Zusammenführungsrichtlinienobjekt
 
@@ -41,7 +47,7 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 | `imsOrgId` | Organisationskennung, zu der diese Zusammenführungsrichtlinie gehört |
 | `identityGraph` | [Identitätsdiagramm](#identity-graph)-Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profilfragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
 | `attributeMerge` | [Attributzusammenführungs](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie bei Datenkonflikten Profil-Attributen priorisiert. |
-| `schema` | Das [Schema](#schema)-Objekt, für das die Zusammenführungsrichtlinie verwendet werden kann. |
+| `schema.name` | Als Teil des [`schema`](#schema) Objekts enthält das `name` Feld die XDM-Schema-Klasse, auf die sich die Zusammenführungsrichtlinie bezieht. Weitere Informationen zu Schemas und Klassen finden Sie in der [XDM-Dokumentation](../../xdm/home.md). |
 | `default` | Boolescher Wert, der angibt, ob diese Zusammenführungsrichtlinie für das angegebene Schema standardmäßig verwendet wird. |
 | `version` | [!DNL Platform]Von gepflegte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Zusammenführungsrichtlinie inkrementiert. |
 | `updateEpoch` | Datum der letzten Aktualisierung der Zusammenführungsrichtlinie. |
@@ -132,7 +138,7 @@ Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 * **`dataSetPrecedence`** : Weisen Sie Fragmenten des Profils Priorität auf der Grundlage des Datensatzes zu, aus dem sie stammen. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
    * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, muss ein `order` Array mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
-**Beispiel für ein attributeMerge-Objekt mit `dataSetPrecedence` Typ**
+#### Beispielobjekt `attributeMerge` mit `dataSetPrecedence` Typ
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
     }
 ```
 
-**Beispiel für ein attributeMerge-Objekt mit `timestampOrdered` Typ**
+#### Beispielobjekt `attributeMerge` mit `timestampOrdered` Typ
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
 ### Schema {#schema}
 
-Das Schema-Objekt gibt das Experience Data Model (XDM)-Schema an, für das diese Zusammenführungsrichtlinie erstellt wird.
+Das Schema-Objekt gibt die Experience Data Model (XDM)-Schema-Klasse an, für die diese Zusammenführungsrichtlinie erstellt wird.
 
 **`schema`-Objekt**
 
@@ -731,7 +737,7 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+Nachdem Sie wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Profilen innerhalb der Plattform anzupassen und Audiencen aus Ihren [!DNL Real-time Customer Profile] Daten zu erstellen. Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
 ## Anhang
 
