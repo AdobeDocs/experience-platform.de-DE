@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
+source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '676'
 ht-degree: 8%
 
 ---
@@ -62,6 +62,8 @@ ht-degree: 8%
       - [Oracle Connector](connectors/databases/oracle.md)
       - [Phoenix-Anschluss](connectors/databases/phoenix.md)
       - [PostgreSQL Connector](connectors/databases/postgres.md)
+   - eCommerce {#ecommerce}
+      - [Shopify Connector](connectors/ecommerce/shopify.md)
    - Marketing automation {#marketing-automation}
       - [HubSpot-Anschluss](connectors/marketing-automation/hubspot.md)
    - Zahlungen {#payments}
@@ -106,6 +108,8 @@ ht-degree: 8%
          - [Phoenix-Anschluss](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL Connector](tutorials/api/create/databases/postgres.md)
          - [SQL Server-Anschluss](tutorials/api/create/databases/sql-server.md)
+      - eCommerce {#ecommerce}
+         - [Shopify Connector](tutorials/api/create/ecommerce/shopify.md)
       - Marketing automation {#marketing-automation}
          - [HubSpot-Anschluss](tutorials/api/create/marketing-automation/hubspot.md)
       - Zahlungen {#payments}
@@ -118,6 +122,7 @@ ht-degree: 8%
       - [CRM-Daten untersuchen](tutorials/api/explore/crm.md)
       - [Kundenerfolgsdaten entdecken](tutorials/api/explore/customer-success.md)
       - [Datenbank- oder NoSQL-Daten überprüfen](tutorials/api/explore/database-nosql.md)
+      - [eCommerce-Daten untersuchen](tutorials/api/explore/ecommerce.md)
       - [Marketing-Automatisierungsdaten](tutorials/api/explore/marketing-automation.md)
       - [Zahlungsdaten überprüfen](tutorials/api/explore/payments.md)
       - [Protokolldaten überprüfen](tutorials/api/explore/protocols.md)
@@ -127,6 +132,7 @@ ht-degree: 8%
       - [CRM-Daten erfassen](tutorials/api/collect/crm.md)
       - [Erfassen von Kundenerfolgdaten](tutorials/api/collect/customer-success.md)
       - [Datenbank- oder NoSQL-Daten erfassen](tutorials/api/collect/database-nosql.md)
+      - [Erfassen von eCommerce-Daten](tutorials/api/collect/ecommerce.md)
       - [Erfassen von Daten zur Marketingautomatisierung](tutorials/api/collect/marketing-automation.md)
       - [Zahlungsdaten erfassen](tutorials/api/collect/payments.md)
       - [Protokolldaten erfassen](tutorials/api/collect/protocols.md)
@@ -167,7 +173,7 @@ ht-degree: 8%
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/ui/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/ui/create/databases/data-explorer.md)
          - [Blue-Synapse-Analytics-Anschluss](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azurblender Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
+         - [Azurblauer Tischstecker, Datenspeicherung](tutorials/ui/create/databases/ats.md)
          - [Steckverbinder](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Abfrage Connector](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/ui/create/databases/greenplum.md)
@@ -178,6 +184,8 @@ ht-degree: 8%
          - [Oracle Connector](tutorials/ui/create/databases/oracle.md)
          - [Phoenix-Anschluss](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL Connector](tutorials/ui/create/databases/postgres.md)
+      - eCommerce {#ecommerce}
+         - [Shopify Connector](tutorials/ui/create/ecommerce/shopify.md)
       - Marketing automation {#marketing-automation}
          - [HubSpot-Anschluss](tutorials/ui/create/marketing-automation/hubspot.md)
       - Zahlungen {#payments}
@@ -188,9 +196,10 @@ ht-degree: 8%
       - [Konfigurieren eines Datenflusses für einen Werbeanschluss](tutorials/ui/dataflow/advertising.md)
       - [Konfigurieren eines Datenflusses für einen Batch Cloud-Datenspeicherung-Connector](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Konfigurieren eines Datenflusses für einen Streaming Cloud-Datenspeicherung-Connector](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [Konfigurieren eines Datenflusses für einen Datenbankanschluss](tutorials/ui/dataflow/databases.md)
       - [Konfigurieren eines Datenflusses für einen CRM-Connector](tutorials/ui/dataflow/crm.md)
       - [Konfigurieren eines Datenflusses für einen Kunden-Erfolgsstecker](tutorials/ui/dataflow/customer-success.md)
+      - [Konfigurieren eines Datenflusses für einen Datenbankanschluss](tutorials/ui/dataflow/databases.md)
+      - [Konfigurieren eines Datenflusses für einen eCommerce-Connector](tutorials/ui/dataflow/ecommerce.md)
       - [Konfigurieren eines Datenflusses für einen Marketingautomatisierungsstecker](tutorials/ui/dataflow/marketing-automation.md)
       - [Konfigurieren eines Datenflusses für einen Zahlungs-Connector](tutorials/ui/dataflow/payments.md)
       - [Konfigurieren eines Datenflusses für einen Protokollanschluss](tutorials/ui/dataflow/protocols.md)
