@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
+source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '680'
 ht-degree: 8%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 8%
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/api/create/databases/data-explorer.md)
          - [Blue-Synapse-Analytics-Anschluss](tutorials/api/create/databases/synapse-analytics.md)
-         - [Azurblender Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
+         - [Azurblauer Tischstecker, Datenspeicherung](tutorials/api/create/databases/ats.md)
          - [Steckverbinder](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/api/create/databases/greenplum.md)
@@ -208,4 +208,5 @@ ht-degree: 8%
    - [Konten löschen](tutorials/ui/delete-accounts.md)
    - [Datenflüsse löschen](tutorials/ui/delete.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
+- [ZULASSUNGSLISTE der IP-Adresse](ip-address-allow-list.md)
 - [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
