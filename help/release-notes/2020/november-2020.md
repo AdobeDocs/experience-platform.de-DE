@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5f184de8c20001f7d9a78dab17130ccadb918dfb
+source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
 workflow-type: tm+mt
-source-wordcount: '2049'
-ht-degree: 25%
+source-wordcount: '2086'
+ht-degree: 24%
 
 ---
 
@@ -211,6 +211,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | ------- | ----------- |
 | Verbindungsinformationen aktualisieren | Sie können nun die Namen, Beschreibungen und Anmeldeinformationen vorhandener Batch-Verbindungen mit der [!DNL Flow Service] API und der Benutzeroberfläche aktualisieren. Weitere Informationen finden Sie im Lernprogramm zum [Aktualisieren von Verbindungen mithilfe der Flow Service API](../../sources/tutorials/api/update.md) und zum [Bearbeiten von Kontodetails mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/monitor.md). |
 | Verbindungen löschen | Stapelverbindungen, die Fehler enthalten oder unnötig geworden sind, können jetzt mit der [!DNL Flow Service] API und der Benutzeroberfläche gelöscht werden. Weitere Informationen finden Sie im Lernprogramm zum [Löschen von Verbindungen mithilfe der Flow Service API](../../sources/tutorials/api/delete.md) und zum [Löschen von Konten über die Benutzeroberfläche](../../sources/tutorials/ui/delete-accounts.md). |
+| Hierarchische Zuordnung | Sie können eine hierarchische Quelldatei, wie JSON oder Parquet, während des Datenerfassungsprozesses Vorschau haben. Weitere Informationen finden Sie im Lernprogramm zum [Konfigurieren eines Datenflusses für Cloud-Datenspeicherung-Connectors in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
 | API-Unterstützung für die Zuordnung in Streaming-Quellen | Sie können jetzt APIs verwenden, um Zuordnungsfunktionen mit Streaming-Quellen auszuführen. |
 | API-Unterstützung für benutzerdefinierte Trennzeichen für Cloud-Datenspeicherung-Quellen | Sie können jetzt nicht CSV-getrennte Datenspeicherung mit Cloud-Quellen erfassen. Sie können beliebige Trennzeichen für einzelne Spalten verwenden, z. B. Tabulatoren, Kommas, Senkrechtstriche oder Hashwerte, um einfache Dateien in einem beliebigen Format zu erfassen. Der Standardwert ist Komma, wenn keine Angabe gemacht wird. |
 | Sandbox-Unterstützung für Adobe Audience Manager Connector | Der Audience Manager-Anschluss ist jetzt sandbox-fähig. Benutzer können den Connector aktivieren, um Audience Manager-Datensätze an die Sandbox ihrer Wahl zu leiten (einschließlich Nicht-Produktions-Sandboxes). Die Konfiguration ist auf eine Sandbox pro IMS Org beschränkt. |
