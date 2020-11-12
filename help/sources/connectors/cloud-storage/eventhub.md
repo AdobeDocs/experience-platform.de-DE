@@ -5,9 +5,9 @@ title: Azurblauer Ereignis-Hubs-Anschluss
 topic: overview
 description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie Azurblase-Ereignis-Hubs mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbinden.
 translation-type: tm+mt
-source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
+source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 1%
 
 ---
@@ -25,35 +25,7 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 ## ZULASSUNGSLISTE der IP-Adresse
 
-Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
-
-### Ost-USA-Region
-
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
-
-### Westeuropa
-
-- `13.69.67.192/28`
-- `13.69.107.112/28`
-- `13.69.112.128/28`
-- `40.74.24.192/26`
-- `40.74.26.0/23`
-- `40.113.176.232/29`
-- `52.236.187.112/28`
-
-### Australien Osten
-
-- `13.70.74.144/28`
-- `20.37.193.0/25`
-- `20.37.193.128/26`
-- `20.37.198.224/29`
-- `40.79.163.80/28`
-- `40.79.171.160/28`
+Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite zur Zulassungsliste [der](../../ip-address-allow-list.md) IP-Adresse.
 
 ## Verbinden [!DNL Azure Event Hubs] mit [!DNL Platform]
 
