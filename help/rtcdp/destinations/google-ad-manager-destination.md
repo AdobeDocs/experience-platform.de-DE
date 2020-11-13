@@ -5,9 +5,9 @@ seo-title: Google Ad Manager-Ziel
 description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 seo-description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 485c4b1c3c68755396da087d4b5864c8a36e64df
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '688'
 ht-degree: 45%
 
 ---
@@ -33,9 +33,9 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 ### Exporttyp {#export-type}
 
-**Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) in das Google-Ziel.
+**[!DNL Segment Export]** - Sie exportieren alle Mitglieder eines Segments (Audience) in das Google-Ziel.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 ### Zulassungsliste
 
