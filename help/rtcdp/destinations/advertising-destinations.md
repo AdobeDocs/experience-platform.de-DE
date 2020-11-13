@@ -5,10 +5,10 @@ seo-title: Werbeziele
 description: Verbinden Sie Ihre Echtzeit-Kundendatenplattform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 seo-description: Verbinden Sie Ihre Echtzeit-Kundendatenplattform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 75%
+source-wordcount: '222'
+ht-degree: 74%
 
 ---
 
@@ -30,6 +30,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Google-Kundenabgleich](/help/rtcdp/destinations/google-customer-match-destination.md)
+* [The Trade Desk](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 ## Erweiterungen
