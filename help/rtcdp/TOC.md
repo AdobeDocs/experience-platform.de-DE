@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 translation-type: tm+mt
-source-git-commit: 308b07dc32cd2d3ad105f171d57145bbb1952df7
+source-git-commit: 2a4d55b2d429fbeb1459a6bd095b0bc39d52917d
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 82%
@@ -57,7 +57,7 @@ ht-degree: 82%
          * [LinkedIn Insight-Tag-Erweiterung](/help/rtcdp/destinations/linkedin-extension.md)
          * [Microsoft Bing](/help/rtcdp/destinations/bing-destination.md)
          * [Pinterest Conversion Tracking-Erweiterung](destinations/pinterest-extension.md)
-         * [Ziel des Trade Desk](destinations/tradedesk-destination.md)
+         * [Ziel des Trade Desk](/help/rtcdp/destinations/tradedesk-destination.md)
          * [Twitter Universal Website Tag-Erweiterung](destinations/twitter-uwt-extension.md)
       * Analyseziele {#analytics-destinations}
          * [Analyseziele – Übersicht](destinations/analytics-destinations.md)
