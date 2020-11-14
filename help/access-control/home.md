@@ -5,9 +5,9 @@ topic: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffskontrolle für Adobe Experience Platform erfolgt über die Adobe Admin Console. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 translation-type: tm+mt
-source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
+source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 54%
 
 ---
@@ -52,8 +52,8 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 | Produktprofile | Sandbox-Zugriff | Berechtigungen |
 | --- | --- | --- |
-| Standardproduktion – Zugriff auf alles | Produktion | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
-| Standard-Sandbox-Administration | K. A. | Bietet nur Zugriff auf Sandbox-Administratorberechtigungen. |
+| Standardproduktion mit Zugriff | Produktion | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
+| Sandbox-Administratoren | K. A. | Bietet nur Zugriff auf Sandbox-Administratorberechtigungen. |
 
 ## Sandboxes und Berechtigungen
 
