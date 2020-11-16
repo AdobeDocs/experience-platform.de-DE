@@ -5,7 +5,7 @@ seo-title: Das Microsoft Bing-Ziel unterstützt Sie beim Senden von Profil-Daten
 description: Mit dem Microsoft Bing-Ziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen in der gesamten Microsoft Display-Werbung durchführen.
 seo-description: Mit dem Microsoft Bing-Ziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen in der gesamten Microsoft Display-Werbung durchführen.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 6%
@@ -50,8 +50,8 @@ Beim Konfigurieren des Ziels werden Sie gebeten, die folgenden Informationen anz
    >[!NOTE]
    >
    >Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche &quot; **[!UICONTROL Aktivieren]** &quot;angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt &quot; [Katalog](../destinations/destinations-workspace.md#catalog) &quot;der Dokumentation zum Zielarbeitsbereich.
-
-   ![Microsoft Bing-Ziel aktivieren](assets/bing-destination-activate.png)
+   >
+   >![Microsoft Bing-Ziel aktivieren](assets/bing-destination-activate.png)
 
 1. Im Schritt [!UICONTROL Authentifizierung] müssen Sie die Details der Zielverbindung eingeben:
 
