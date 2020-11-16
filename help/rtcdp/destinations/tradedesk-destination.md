@@ -5,9 +5,9 @@ seo-title: Ziel des Trade Desk
 description: 'Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, um zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg auszuführen. '
 seo-description: Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, um zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg auszuführen.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 5%
 
 ---
@@ -46,9 +46,9 @@ Als Marketingspezialist möchte ich Segmente verwenden können, die aus [!DNL Tr
    >[!NOTE]
    >
    >Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche &quot; **[!UICONTROL Aktivieren]** &quot;angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt &quot; [Katalog](../destinations/destinations-workspace.md#catalog) &quot;der Dokumentation zum Zielarbeitsbereich.
+   >
+   >![Handelsdatenträger-Ziel aktivieren](assets/tradedesk-destination-activate.png)
 
-       ![Handelsbestätigungsziel aktivieren](assets/tradedesk-destination-activate.png)
-   
 2. Im Schritt [!UICONTROL Authentifizierung] müssen Sie die [!DNL The Trade Desk] Verbindungsdetails eingeben:
 
    * **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in Zukunft erkennen werden.
