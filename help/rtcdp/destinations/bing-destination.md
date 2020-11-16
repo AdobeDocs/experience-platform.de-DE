@@ -5,7 +5,7 @@ seo-title: Das Microsoft Bing-Ziel unterstützt Sie beim Senden von Profil-Daten
 description: Mit dem Microsoft Bing-Ziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen in der gesamten Microsoft Display-Werbung durchführen.
 seo-description: Mit dem Microsoft Bing-Ziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen in der gesamten Microsoft Display-Werbung durchführen.
 translation-type: tm+mt
-source-git-commit: 979256ea975dcc0c1f6c59792b70d6899ee11376
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 6%
@@ -50,8 +50,8 @@ Beim Konfigurieren des Ziels werden Sie gebeten, die folgenden Informationen anz
    >[!NOTE]
    >
    >Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche &quot; **[!UICONTROL Aktivieren]** &quot;angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt &quot; [Katalog](../destinations/destinations-workspace.md#catalog) &quot;der Dokumentation zum Zielarbeitsbereich.
-   >
-   >![Microsoft Bing-Ziel aktivieren](assets/bing-destination-activate.png)
+
+   ![Microsoft Bing-Ziel aktivieren](assets/bing-destination-activate.png)
 
 1. Im Schritt [!UICONTROL Authentifizierung] müssen Sie die Details der Zielverbindung eingeben:
 
@@ -68,7 +68,7 @@ Beim Konfigurieren des Ziels werden Sie gebeten, die folgenden Informationen anz
 
 Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile und Segmente für ein Ziel aktivieren](activate-destinations.md#select-attributes).
 
-Während des Zeitplanschritts für [Segmente](activate-destinations.md#segment-schedule) müssen Sie Ihre Segmente manuell der entsprechenden ID oder dem Anzeigenamen im Ziel zuordnen.
+Im Schritt [Segmentplan](activate-destinations.md#segment-schedule) müssen Sie Ihre Segmente manuell ihrer entsprechenden ID oder ihrem Anzeigenamen im Ziel zuordnen.
 
 Beim Zuordnen von Segmenten sollten Sie den [!DNL Platform] Segmentnamen oder eine kürzere Form verwenden, um die Verwendung zu vereinfachen. Die Segment-ID oder der Name in Ihrem Ziel muss jedoch nicht mit der in Ihrem [!DNL Platform] Konto übereinstimmen. Jeder Wert, den Sie in das Zuordnungsfeld einfügen, wird vom Ziel übernommen.
 
