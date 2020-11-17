@@ -3,19 +3,19 @@ keywords: RTCDP;rtcdp
 title: Arbeitsbereich „Ziele“
 seo-title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
-seo-description: Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
+seo-description: Wählen Sie in der Echtzeit-Kundendatenplattform von in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: a3e35dee98b7b2758a4246a63bb0e1bde6b2f165
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 56%
+source-wordcount: '905'
+ht-degree: 51%
 
 ---
 
 
 # Arbeitsbereich „Ziele“ {#destinations-workspace}
 
-Wählen Sie in der Echtzeit-Kundendatenplattform von Adobe in der linken Navigationsleiste die Option **[!UICONTROL Ziele]**, um auf den Arbeitsbereich [!UICONTROL Ziele] zuzugreifen.
+Wählen Sie in der Echtzeit-Kundendatenplattform von in der linken Navigationsleiste die Option **[!UICONTROL Ziele]**, um auf den Arbeitsbereich [!UICONTROL Ziele] zuzugreifen.
 
 Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: [!UICONTROL Katalog], [!UICONTROL Durchsuchen], [!UICONTROL Konten] und [!UICONTROL Systemansicht]. Diese werden in den folgenden Abschnitten beschrieben.
 
@@ -23,13 +23,13 @@ Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: [!UICONTROL Ka
 
 ## [!UICONTROL Katalog] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Adobe Real-time CDP, that you can send data to.
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Real-time CDP, that you can send data to.
 
-Die CDP-Benutzeroberfläche &quot;Adobe in Echtzeit&quot;bietet eine Reihe von Such- und Filteroptionen auf der Zielkatalogseite:
+Die CDP-Benutzeroberfläche in Echtzeit bietet eine Reihe von Such- und Filteroptionen auf der Zielkatalogseite:
 
 * Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu finden.
 * Filtern Sie Ziele mithilfe des Steuerelements [!UICONTROL Kategorien] .
-* Wechsel zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele]. Wenn &quot; **[!UICONTROL Alle Ziele]** &quot;ausgewählt ist, werden alle verfügbaren CDP-Ziele für Adoben in Echtzeit angezeigt. Wenn **[!UICONTROL Meine Ziele]** ausgewählt sind, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
+* Wechsel zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele]. Wenn **[!UICONTROL Alle Ziele]** ausgewählt sind, werden alle verfügbaren CDP-Ziele in Echtzeit angezeigt. Wenn **[!UICONTROL Meine Ziele]** ausgewählt sind, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
 * Wählen Sie Ansicht **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]**. Informationen zum Unterschied zwischen den beiden Kategorien finden Sie unter [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md).
 
 ![Filtern und Suchdemo von Zielen](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -60,7 +60,7 @@ Auf der Registerkarte **[!UICONTROL Konten]** erfahren Sie mehr über die Verbin
 >
 >Verwenden Sie die ![Schaltfläche](/help/rtcdp/destinations/assets/add-data-symbol.png) für Hinzufügen Daten in der Spalte &quot; **[!UICONTROL Plattform]** &quot;, um eine neue Zielverbindung für dieses Konto zu erstellen.
 
-![Registerkarte „Konten“](/help/rtcdp/destinations/assets/accounts-tab.png)
+![Registerkarte „Konten“](./assets/workspace/edit-account-destinations.png)
 
 | Element | Beschreibung |
 ---------|----------
@@ -70,13 +70,25 @@ Auf der Registerkarte **[!UICONTROL Konten]** erfahren Sie mehr über die Verbin
 | [!UICONTROL Ziele] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Zielflüsse mit grundlegenden Informationen an, die für ein Ziel erstellt wurden. |
 | [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
 
+Darüber hinaus können Sie Ihre Kontoinformationen bearbeiten oder aktualisieren. Klicken Sie in der Spalte &quot; ![Plattform](./assets/workspace/pencil-icon.png) &quot;auf die Schaltfläche &quot;Konto **[!UICONTROL bearbeiten&quot;]** , um die Kontoinformationen zu bearbeiten.
+
+Bei Konten, die einen `OAuth2` Verbindungstyp verwenden, können Sie &quot;OAuth **[!UICONTROL erneut verbinden&quot;auswählen, um Ihre Kontoanmeldeinformationen zu verlängern]** .
+
+![Oauth-Bild](./assets/workspace/reconnect-oauth.png)
+
+Bei Konten, die einen `Access Key` oder einen `ConnectionString` Verbindungstyp verwenden, können Sie Ihre Kontoauthentifizierungsinformationen bearbeiten, einschließlich Informationen wie Zugriffs-ID, geheime Schlüssel oder Verbindungszeichenfolgen.
+
+![Bild zu Kontoinformationen](./assets/workspace/edit-account-details.png)
+
+Nachdem Sie die Bearbeitung Ihrer Kontodetails abgeschlossen haben, wählen Sie **[!UICONTROL Speichern]** , um die Aktualisierung abzuschließen.
+
 ## [!UICONTROL Durchsuchen] {#browse}
 
 Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte „Durchsuchen“ verfügbar sind:
 
 >[!TIP]
 >
->Verwenden Sie die ![Schaltfläche](/help/rtcdp/destinations/assets/add-data-symbol.png) für Hinzufügen Daten in der Spalte **[!UICONTROL Name]** , um weitere Segmente für dieses Ziel zu aktivieren.
+>Verwenden Sie die ![Schaltfläche](/help/rtcdp/destinations/assets/add-data-symbol.png) für Hinzufügen Daten in der Spalte &quot; **[!UICONTROL Name]** &quot;, um weitere Segmente für dieses Ziel zu aktivieren.
 
 ![Registerkarte „Durchsuchen“](/help/rtcdp/destinations/assets/browse-tab.png)
 
