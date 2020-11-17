@@ -6,10 +6,10 @@ type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
+source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 44%
+source-wordcount: '835'
+ht-degree: 42%
 
 ---
 
@@ -35,6 +35,8 @@ In the **[!UICONTROL Authentication]** step, if you had previously set up a conn
 - For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key.
 - For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 - For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
+
+Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Verschlüsselung zu den exportierten Dateien im Abschnitt **[!UICONTROL Schlüssel]** hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel als Base64-kodierte Zeichenfolge geschrieben werden **muss** .
 
 Geben Sie im Schritt **[!UICONTROL Setup]** einen Namen und eine Beschreibung für Ihr neues Ziel sowie das Dateiformat für die exportierten Dateien ein.
 
