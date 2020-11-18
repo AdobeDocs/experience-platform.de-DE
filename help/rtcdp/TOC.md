@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 translation-type: tm+mt
-source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
+source-git-commit: 97a4e335314d23a436817d46f9d218a2532acfe5
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 81%
+source-wordcount: '525'
+ht-degree: 80%
 
 ---
 
@@ -102,9 +102,11 @@ ht-degree: 81%
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch-Erweiterungen {#launch-extensions}
          * [Experience Platform Launch-Erweiterungen – Übersicht](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
-      * Mobilgeräte-Ziele {#mobile}
-         * [Übersicht über mobile Ziele](destinations/mobile-destinations.md)
-         * [Ziel abbremsen](destinations/braze-destination.md)
+      * Ziele für mobile Interaktionen {#mobile}
+         * [Ziele für die mobile Interaktion - Übersicht](destinations/mobile-destinations.md)
+         * [Luftverkehrsattribute](destinations/airship-attributes-destination.md)
+         * [Airship Tags](destinations/airship-tags-destination.md)
+         * [Klammern](destinations/braze-destination.md)
       * Personalisierungsziele {#personalization-destinations}
          * [Personalisierungsziele – Übersicht](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target-Erweiterung](/help/rtcdp/destinations/adobe-target-extension.md)
