@@ -1,11 +1,11 @@
 ---
 keywords: mobile; braze; messaging;
-title: Ziel löschen
-seo-title: Ziel löschen
+title: Ziel abbremsen
+seo-title: Ziel abbremsen
 description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 seo-description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 5%
@@ -57,6 +57,7 @@ Als Marketingspezialist möchte ich Benutzer in einem Ziel für die Interaktion 
    >![Ziel der Fixierung aktivieren](assets/braze-destination-activate.png)
 
 1. Im Schritt [!UICONTROL Konto] müssen Sie Ihr [!DNL Braze] Konto-Token angeben. Das ist dein [!DNL Braze][!DNL API] Schlüssel. Ausführliche Anweisungen zum Abrufen des [!DNL API] Schlüssels finden Sie hier: [REST-API-Schlüssel - Übersicht](https://www.braze.com/docs/api/api_key/). Geben Sie das Token ein und klicken Sie auf Mit Ziel **[!UICONTROL verbinden]**.
+
    ![Endkontoschritt festhalten](assets/braze-destination-account.png)
 
 1. Klicken Sie auf **[!UICONTROL Weiter]**.
