@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-Klasse
 topic: overview
 description: Dieses Dokument bietet eine Übersicht über die XDM ExperienceEvent-Klasse.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: 4d109244e57799c7e3837ceee3e2f5d17fbf0a18
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '797'
 ht-degree: 6%
 
 ---
@@ -29,7 +29,7 @@ Die [!DNL XDM ExperienceEvent] Klasse selbst stellt mehrere zeitreihenbezogene F
 | `eventMergeId` | Die ID des erfassten Stapels, die zur Erstellung des Datensatzes geführt hat. Dieses Feld wird beim Erfassen von Daten automatisch vom System ausgefüllt. |
 | `eventType` | Eine Zeichenfolge, die den primären Ereignistyp für den Datensatz angibt. Akzeptierte Werte und ihre Definitionen finden Sie im [Anhang](#eventType). |
 | `identityMap` | Ein Zuordnungsfeld, das einen Satz namensbezogener Identitäten für die einzelne Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, wenn Identitätsdaten erfasst werden. Um dieses Feld für [Echtzeit-Kundendaten](../../profile/home.md)richtig zu verwenden, sollten Sie nicht versuchen, den Feldinhalt in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Weitere Informationen zum Anwendungsfall finden Sie im Abschnitt zu Identitätskarten in den [Grundlagen der Schema-Komposition](../schema/composition.md#identityMap) . |
-| `timestamp` | Der Zeitpunkt, zu dem das Ereignis oder die Beobachtung erfolgte. |
+| `timestamp` | Der Zeitpunkt, zu dem das Ereignis oder die Beobachtung erfolgte. Alle Datenzeitwerte müssen im [RFC 3339](https://tools.ietf.org/html/rfc3339) -Format angegeben werden. |
 
 ## Kompatible Mixins {#mixins}
 
