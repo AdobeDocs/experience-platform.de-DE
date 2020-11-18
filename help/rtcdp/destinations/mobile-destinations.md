@@ -1,23 +1,22 @@
 ---
 keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: Mobilgeräte-Ziele
-seo-title: Mobilgeräte-Ziele
-description: Anwendungsfall für mobile Ziele einfügen
-seo-description: Anwendungsfall für mobile Ziele einfügen
+title: Ziele für mobile Interaktionen
+seo-title: Ziele für mobile Interaktionen
+description: Adobe Experience Platform unterstützt die unten aufgeführten Ziele für die Interaktion mit Mobilgeräten
+seo-description: Adobe Experience Platform unterstützt die unten aufgeführten Ziele für die Interaktion mit Mobilgeräten
 translation-type: tm+mt
-source-git-commit: 6c8084f35c4981b41a5beecd57ce5b3ef4e409d6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
 
 
-# Mobilgeräte-Ziele {#mobile-destinations}
+# Ziele für mobile Interaktionen {#mobile-destinations}
 
-Beschreibung für mobile Ziele einfügen
+[!DNL Adobe Experience Platform] unterstützt derzeit die folgenden Ziele für die Interaktion mit Mobilgeräten:
 
-[!DNL Adobe Experience Platform] unterstützt derzeit die folgenden Mobilziele:
-
-* Luftschiff: Link zur Seite mit der Airship-Dokumentation einfügen
+* [Luftverkehrsattribute](airship-attributes-destination.md)
+* [Airship Tags](airship-tags-destination.md)
 * [Klammern](braze-destination.md)
