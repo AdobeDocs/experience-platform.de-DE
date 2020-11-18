@@ -1,11 +1,11 @@
 ---
 keywords: airship tags;airship destination
 title: Ziel der Airship Tags
-seo-title: Ziel der Airship Tags
+seo-title: Ziel der Luftschiff-Tags
 description: Übergeben Sie nahtlos Daten zur Audience der Adobe als Audience-Tags für das Targeting innerhalb von Airship an Airship.
 seo-description: Übergeben Sie nahtlos Daten zur Audience der Adobe als Audience-Tags für das Targeting innerhalb von Airship an Airship.
 translation-type: tm+mt
-source-git-commit: f08b90531455cdbeb73deb83eed05ba7a9b19df6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 12%
@@ -63,7 +63,7 @@ Anweisungen zum Erstellen der Tag-Gruppe finden Sie unter Tag-Gruppen [verwalten
 1. Klicken Sie auf &quot;Token **[!UICONTROL erstellen]** &quot;und speichern Sie die Details als vertraulich.
 
 
-## Nutzungsszenarien
+## Anwendungsbeispiele
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL Airship Tags] Ziel verwenden sollten, finden Sie hier Beispiele für Anwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
