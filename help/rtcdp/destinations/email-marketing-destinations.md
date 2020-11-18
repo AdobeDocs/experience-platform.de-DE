@@ -6,9 +6,9 @@ type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '838'
 ht-degree: 42%
 
 ---
@@ -54,7 +54,7 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ## Dateinamen konfigurieren
 
-Weitere Informationen zu den Dateinamenbearbeitungsoptionen finden Sie im Lernprogramm Ziele aktivieren im Schritt [konfigurieren](/help/rtcdp/destinations/activate-destinations.md#configure) .
+Weitere Informationen zu den Optionen für den Segmentplan und die Bearbeitung von Dateinamen finden Sie im Lernprogramm Ziele aktivieren im Schritt [konfigurieren](/help/rtcdp/destinations/activate-destinations.md#configure) .
 
 ## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
