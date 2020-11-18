@@ -6,10 +6,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
+source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 25%
+source-wordcount: '1768'
+ht-degree: 22%
 
 ---
 
@@ -78,7 +78,19 @@ Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
 ![Schritt konfigurieren](./assets/configure-icon.png)
 
-Im Schritt **[!UICONTROL Konfigurieren]** können Sie die Dateinamen für jedes Segment konfigurieren, das Sie exportieren. Die Konfiguration des Dateinamens ist optional.
+Im Schritt **[!UICONTROL Konfigurieren]** können Sie den Zeitplan und die Dateinamen für jedes Segment konfigurieren, das Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
+
+Um einen Zeitplan für das Segment hinzuzufügen, wählen Sie &quot;Zeitplan **[!UICONTROL erstellen&quot;]**.
+
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+Es wird ein Popup mit Optionen zum Erstellen des Segmentplans angezeigt.
+
+- **Dateiexport**: Sie haben die Möglichkeit, entweder vollständige oder inkrementelle Dateien zu exportieren. Beim Exportieren einer vollständigen Datei wird eine vollständige Momentaufnahme aller Profil veröffentlicht, die für dieses Segment qualifiziert sind. Beim Exportieren einer inkrementellen Datei wird das Delta der Profil veröffentlicht, die seit dem letzten Export für dieses Segment qualifiziert sind.
+- **Häufigkeit**: Wenn &quot; **[!UICONTROL Vollständige Dateien]** exportieren&quot;aktiviert ist, haben Sie die Möglichkeit, **[!UICONTROL einmal]** oder **[!UICONTROL täglich]** zu exportieren. Wenn &quot;Inkrementelle Dateien **[!UICONTROL exportieren]** &quot;aktiviert ist, können Sie nur **[!UICONTROL täglich]** exportieren. Beim Exportieren einer Datei **[!UICONTROL einmal]** wird die Datei einmal exportiert. Beim Exportieren einer Datei **[!UICONTROL täglich]** wird die Datei jeden Tag vom Beginn bis zum Enddatum um 12:00 Uhr UTC (19:00 Uhr EST) exportiert, wenn vollständige Dateien ausgewählt sind, und um 22:00 Uhr UTC (7:00 Uhr EST), wenn inkrementelle Dateien ausgewählt wurden.
+- **Datum**: Wenn &quot; **[!UICONTROL Einmal]** &quot;aktiviert ist, können Sie das Datum für den einmaligen Export auswählen. Wenn &quot; **[!UICONTROL Täglich]** &quot;ausgewählt ist, können Sie die Beginns- und Enddaten für die Exporte auswählen.
+
+![](./assets/activate-destinations/export-full-file.png)
 
 Die Standarddateinamen bestehen aus dem Zielnamen, der Segment-ID und einer Datums- und Zeitanzeige. Sie können beispielsweise die Namen der exportierten Dateien bearbeiten, um zwischen verschiedenen Kampagnen zu unterscheiden, oder um die Datenexportzeit an die Dateien anhängen zu lassen.
 
