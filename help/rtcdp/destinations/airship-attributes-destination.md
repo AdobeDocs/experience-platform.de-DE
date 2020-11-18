@@ -5,9 +5,9 @@ seo-title: Ziel der Luftverkehrsattribute
 description: Übermitteln Sie die Daten zur Audience der Adobe nahtlos an Airship als Audiencen-Attribute für das Targeting innerhalb von Airship.
 seo-description: Übermitteln Sie die Daten zur Audience der Adobe nahtlos an Airship als Audiencen-Attribute für das Targeting innerhalb von Airship.
 translation-type: tm+mt
-source-git-commit: 0e065bbc0917d5009738b4cae890ffd13c0ab154
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 12%
 
 ---
@@ -57,7 +57,7 @@ Adobe Experience Platform-Profil-Attribute ähneln den [!DNL Airship] Attributen
 1. Klicken Sie auf &quot;Token **[!UICONTROL erstellen]** &quot;und speichern Sie die Details als vertraulich.
 
 
-## Nutzungsszenarien {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das [!DNL Airship Attributes] Ziel verwenden sollten, finden Sie hier Beispiele für Anwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
@@ -69,7 +69,7 @@ Nutzen Sie die in Adobe Experience Platform erfassten Profil-Daten zur Personali
 
 Nutzen Sie Attribute von Adobe Experience Platform, um [!DNL Airship] Profil noch weiter zu bereichern und mit SDK- oder [!DNL Airship] Vorhersagedaten zu kombinieren. Ein Einzelhändler kann beispielsweise ein Segment mit Treuestatus- und Standortdaten (Attribute von Plattform) erstellen und Daten abgeben, um hochgradig zielgerichtete Nachrichten an Benutzer im Goldloyalitätsstatus zu senden, die in Las Vegas, NV leben und eine hohe Wahrscheinlichkeit haben, gerettet zu werden. [!DNL Airship]
 
-## Verbindung zu [!DNL Airship] Attributen {#connect-airship-attributes}
+## Connect to [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. Blättern Sie unter **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** zur Kategorie **[!UICONTROL Mobile Interaktion]** . Wählen Sie **[!DNL Airship Attributes]** und dann **[!UICONTROL Konfigurieren]**.
 
