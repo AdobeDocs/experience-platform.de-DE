@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 translation-type: tm+mt
-source-git-commit: 2a4d55b2d429fbeb1459a6bd095b0bc39d52917d
+source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 82%
+source-wordcount: '520'
+ht-degree: 81%
 
 ---
 
@@ -102,6 +102,9 @@ ht-degree: 82%
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch-Erweiterungen {#launch-extensions}
          * [Experience Platform Launch-Erweiterungen – Übersicht](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+      * Mobilgeräte-Ziele {#mobile}
+         * [Übersicht über mobile Ziele](destinations/mobile-destinations.md)
+         * [Ziel abbremsen](destinations/braze-destination.md)
       * Personalisierungsziele {#personalization-destinations}
          * [Personalisierungsziele – Übersicht](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target-Erweiterung](/help/rtcdp/destinations/adobe-target-extension.md)
