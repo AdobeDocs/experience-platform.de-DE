@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1908'
-ht-degree: 28%
+source-wordcount: '1878'
+ht-degree: 29%
 
 ---
 
@@ -18,19 +18,19 @@ ht-degree: 28%
 **Releasedatum: 18. November 2019**
 
 Neue Funktionen in Adobe Experience Platform:
-* [[!DNL Echtzeit-Kundendatenplattform]](#rtcdp)
-* [[!DNL-Ziele]](#destinations)
-* [[!DNL-Quellen]](#sources)
+* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Sources]](#sources)
 
 Aktualisierungen vorhandener Funktionen:
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
-* [[!DNL Echtzeit-Profil des Kunden]](#profile)
-* [[!DNL-Segmentierungsdienst]](#segmentation)
+* [[!DNL Real-time Customer Profile]](#profile)
+* [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Die auf Adobe Experience Platform aufbauende Echtzeit-Kundendatenplattform (Echtzeit-CDP) von Adobe hilft Firmen, bekannte und unbekannte Daten zusammenzuführen, um ihre Profil während der gesamten Customer Journey mit intelligenten Entscheidungen zu aktivieren. Die Echtzeit-Kundendatenplattform fasst unterschiedliche Unternehmensdatenquellen zusammen, um in Echtzeit einheitliche Profile zu erstellen, die über alle Kanäle und Geräte hinweg ein personalisiertes Kundenerlebnis möglich machen.
+Die auf Adobe Experience Platform aufbauende Echtzeit-Kundendatenplattform (Echtzeit-CDP) hilft Firmen, bekannte und unbekannte Daten zusammenzuführen, um Profil während der gesamten Customer Journey mit intelligenten Entscheidungen zu aktivieren. Die Echtzeit-Kundendatenplattform fasst unterschiedliche Unternehmensdatenquellen zusammen, um in Echtzeit einheitliche Profile zu erstellen, die über alle Kanäle und Geräte hinweg ein personalisiertes Kundenerlebnis möglich machen.
 
 [!DNL Real-time Customer Data Platform] umfasst Tools für die Datenverwaltung, Identitätsverwaltung, erweiterte Segmentierung und Datenwissenschaften, damit Sie Profil erstellen und Audiencen definieren sowie umfassende Einblicke gewinnen können, während Sie strikte Datenverwaltungs-Richtlinien durchsetzen können.
 
@@ -43,19 +43,19 @@ Mit der Echtzeit-Kundendatenplattform profitieren Sie von folgenden Vorteilen:
 * Erstellen Sie mit KI und maschinellem Lernen auf Basis von Adobe Sensei – entwickelt für Marketer – praktische Einblicke und skalieren Sie Zielgruppen.
 * Schaffen Sie in Echtzeit personalisierte Erlebnisse über alle Kanäle und Ziele hinweg.
 
-Weitere Informationen finden Sie in der Dokumentation [zur](../../rtcdp/overview.md)Adobe Echtzeit-Kundendatenplattform.
+Weitere Informationen finden Sie in der Dokumentation [zur](../../rtcdp/overview.md)Echtzeit-Kundendatenplattform.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 |---|---|
 | Ziele | Vordefinierte Integrationen mit Zielplattformen, die von Adoben unterstützt werden, [!DNL Real-time Customer Data Platform] die Daten nahtlos an diese Partner aktivieren. See [Destinations](#destinations) below for more information. |
-| Dashboard zu Startseiten-Metriken | Die Adobe Real-time Customer Data Platform-(Echtzeit-CDP-)Startseite beinhaltet ein Metriken-Dashboard, das Informationen zu Profilen und Segmenten anzeigt. Die Startseite enthält auch Links zu Lernmaterialien. Siehe den Abschnitt zu den Metriken [der](#real-time-customer-data-platform-metrics) Echtzeit-Kundendatenplattform. |
+| Dashboard zu Startseiten-Metriken | Die Startseite zur Echtzeit- der Kundendatenplattform (Echtzeit-CDP) enthält ein Dashboard mit Metriken, in dem Informationen zu Profilen und Segmenten angezeigt werden. Die Startseite enthält auch Links zu Lernmaterialien. Siehe den Abschnitt zu den Metriken [der](#real-time-customer-data-platform-metrics) Echtzeit-Kundendatenplattform. |
 | Quellen | Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System. Weitere Informationen finden Sie im Abschnitt [Quellen](#sources) . |
 
 **[!DNL Real-time Customer Data Platform]Metriken**
 
-Die Startseite der Echtzeit-Kundendatenplattform von Adobe, die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
+Die Startseite der Echtzeit-Kundendatenplattform von , die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
 
 Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Die Echtzeit-Kundendatenplattform stellt Metrikkarten während des gesamten Erlebnisses bereit. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
 
