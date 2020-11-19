@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Entitäten - Echtzeit-Client-Profil-API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
 workflow-type: tm+mt
-source-wordcount: '1676'
-ht-degree: 89%
+source-wordcount: '1695'
+ht-degree: 88%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 ## Zugriff auf Profildaten nach Identität
 
@@ -776,7 +776,7 @@ Mithilfe dieser Payload im Anfragetext können Sie eine weitere POST-Anfrage an 
 
 ## Zeitreihenereignisse in mehreren Schemaentitäten aufrufen
 
-Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemas definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im Handbuch [!DNL Schema Registry] API-Entwicklerhandbuch [für Deskriptoren](../../xdm/api/descriptors.md).
+Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemas definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [!DNL Schema Registry] API-Entwicklerhandbuch [für Deskriptoren-Endpunkte](../../xdm/api/descriptors.md).
 
 Sie können in den Anfragepfad Abfrageparameter einbeziehen, um anzugeben, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
@@ -910,4 +910,5 @@ Die folgenden Parameter werden im Pfad für GET-Anfragen an den `/access/entitie
 | `startTime` | Geben Sie die Startzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). | `startTime=1539838505` |
 | `endTime` | Geben Sie die Endzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). | `endTime=1539838510` |
 | `limit` | Numerischer Wert, der die maximale Anzahl der zurückzugebenden Objekte angibt. Standardwert: „1000“. | `limit=100` |
+| `property` | Filter nach dem Eigenschaftswert. Unterstützt die folgenden Bewerter: =, !=, &lt;, &lt;=, >, >=. Kann nur mit Erlebnis-Ereignissen verwendet werden, wobei maximal drei Eigenschaften unterstützt werden. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | Feature Flag zur Aktivierung berechneter Attribute für das Nachschlagen. Standardwert: „false“. | `withCA=true` |
