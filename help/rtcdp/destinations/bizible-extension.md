@@ -2,13 +2,13 @@
 keywords: bizible;bizible extension;bizible destination
 title: Bizible-Erweiterung
 seo-title: Bizible-Erweiterung
-description: Die Bizible-Erweiterung ist ein E-Mail-Ziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Bizible-Erweiterung ist ein E-Mail-Ziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Bizible-Erweiterung ist ein E-Mail-Ziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Bizible-Erweiterung ist ein E-Mail-Ziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 52%
+source-wordcount: '526'
+ht-degree: 51%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 52%
 
 [!DNL Bizible] ist die branchenführende B2B-Attributionslösung, die für unvergleichliche Sichtbarkeit Ihrer Daten sorgt, sodass Sie intelligente Entscheidungen für mehr Wachstum treffen können.
 
-[!DNL Bizible] ist eine E-Mail-Erweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] ist eine E-Mail-Erweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 Dieses Ziel ist eine [!DNL Adobe Experience Platform Launch] Erweiterung. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
