@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an 
 seo-description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ Der Linktyp kann einer von drei Werten sein:
 
 ## Automatische Linktracking {#automaticLinkTracking}
 
-Standardmäßig erfasst das Web SDK [Beschriftungen](#labelingLinks)und [zeichnet](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) Klicks auf [qualifizierte](#qualifyingLinks) Link-Tags auf. Klicks werden mit einem [Capture](https://www.w3.org/TR/uievents/#capture-phase) Click-Ereignis-Listener erfasst, der mit dem Dokument verbunden ist.
+Standardmäßig erfasst, kennzeichnet und zeichnet das Web SDK Klicks auf geeignete Link-Tags auf. Klicks werden mit einem [Capture](https://www.w3.org/TR/uievents/#capture-phase) Click-Ereignis-Listener erfasst, der mit dem Dokument verbunden ist.
 
-Die Deaktivierung der automatischen Linktracking kann durch die [Konfiguration](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) des Web SDK erfolgen.
+Die automatische Linktracking kann durch [Konfiguration](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) des Web SDK deaktiviert werden.
 
 ```javascript
 clickCollectionEnabled: false
