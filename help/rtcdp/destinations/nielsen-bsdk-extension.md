@@ -2,12 +2,12 @@
 keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
 title: Nielsen BSDK-Erweiterung
 seo-title: Nielsen BSDK-Erweiterung
-description: Die Nielsen BSDK-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Nielsen BSDK Extension ist ein Analyseziel in der Adobe Real-time Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Nielsen BSDK-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Nielsen BSDK-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '630'
 ht-degree: 44%
 
 ---
@@ -23,7 +23,7 @@ DCR: Eine Messlösung, die eine tägliche Messung von nicht-linearen digitalen I
 
 DTVR: Dies ermöglicht teilnehmenden Programmierquellen eine lineare Fernsehwiedergabe auf Desktop- und Mobilgeräten. Das ist die erste Lösung, die eine Akkreditierung des MRC für ihren Beitrag zur Messung der Zuschauerzahlen von auf Computern und Mobilgeräten angesehenen Programmen erhalten hat.
 
-[!DNL Nielsen BSDK] ist eine Analyseerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
+[!DNL Nielsen BSDK] ist eine Analyseerweiterung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
