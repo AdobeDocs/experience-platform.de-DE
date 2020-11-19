@@ -6,10 +6,10 @@ type: Tutorial
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 translation-type: tm+mt
-source-git-commit: d72f392bc3b47bb23ed36b3d1d218373f62b4679
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 42%
+source-wordcount: '557'
+ht-degree: 39%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 42%
 
 ## Übersicht
 
-Auf dieser Seite wird erläutert, wie Sie in der Adobe-Echtzeit-Kundendatenplattform eine Verbindung zu Cloud-Speichern herstellen können.
+Auf dieser Seite wird erläutert, wie Sie eine Verbindung zu Cloud-Datenspeicherung in der Echtzeit-Kundendatenplattform herstellen können.
 
 1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Configure]**.
 
