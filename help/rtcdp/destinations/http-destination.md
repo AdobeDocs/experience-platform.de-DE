@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
-seo-title: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
-description: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
-seo-description: Das HTTP-Ziel ist ein Adobe Real-Time Customer Data Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
+title: Das HTTP-Ziel ist ein Echtzeit-Ziel der Kundendatenplattform, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
+seo-title: Das HTTP-Ziel ist ein Echtzeit-Ziel der Kundendatenplattform, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
+description: Das HTTP-Ziel ist ein Echtzeit-Ziel der Kundendatenplattform, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
+seo-description: Das HTTP-Ziel ist ein Echtzeit-Ziel der Kundendatenplattform, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 7%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Das [!DNL HTTP] Ziel in Adobe Echtzeit-CDP befindet sich derzeit in Alpha. Dokumentation und Funktionalität können sich ändern.
+>Das [!DNL HTTP] Ziel in Adobe Echtzeit-CDP befindet sich derzeit in Alpha. Die Dokumentation und Funktionalität können sich ändern.
 
 ## Übersicht {#overview}
 
-Das [!DNL HTTP] Ziel ist ein [!DNL Adobe Real-Time Customer Data Platform] Streaming-Ziel, mit dem Sie Profil-Daten an [!DNL HTTP] Endpunkte von Drittanbietern senden können.
+Das [!DNL HTTP] Ziel ist ein [!DNL Real-time Customer Data Platform] Streaming-Ziel, mit dem Sie Profil-Daten an [!DNL HTTP] Endpunkte von Drittanbietern senden können.
 
-Um Profil-Daten an [!DNL HTTP] Endpunkte zu senden, müssen Sie zunächst eine Verbindung zum Ziel im [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination)Knoten herstellen.
+Um Profil-Daten an [!DNL HTTP] Endpunkte zu senden, müssen Sie zunächst eine Verbindung zum Ziel im [[!DNL Real-time Customer Data Platform]](#connect-destination)Knoten herstellen.
 
 ## Nutzungsszenarien {#use-cases}
 
