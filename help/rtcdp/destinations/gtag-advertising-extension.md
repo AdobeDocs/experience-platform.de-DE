@@ -2,12 +2,12 @@
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google gtag-Erweiterung
 seo-title: Google gtag-Erweiterung
-description: Die Google-Tag-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Google-Tag-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Google-Tag-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Google-Tag-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '589'
 ht-degree: 32%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 32%
 
 Laden Sie Google&#39;s `gtag.js` in Ihre Website, um Ereignis-Daten an [!DNL Google Analytics], Google Ads und [!DNL Google Marketing Platform]. Diese Erweiterung fügt nur den gtag-Code zu Ihrer Site hinzu. Sie müssen andere Google-Erweiterungen verwenden, um Ereignis und Aktionen hinzuzufügen, die gtag verwenden.
 
-Google gtag ist eine Anzeigenerweiterung in Adobe Real-time Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
+Google gtag ist eine Anzeigenerweiterung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
