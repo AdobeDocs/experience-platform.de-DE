@@ -2,12 +2,12 @@
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Awin Advertiser Conversion Tag Extension
 seo-title: Awin Advertiser Conversion Tag Extension
-description: Die Erweiterung Awin Advertiser Conversion Tag ist ein Werbeziel in der Adobe Real-time Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Erweiterung Awin Advertiser Conversion Tag ist ein Werbeziel in der Adobe Real-time Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Erweiterung Awin Advertiser Conversion Tag ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Erweiterung Awin Advertiser Conversion Tag ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '568'
 ht-degree: 35%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 35%
 
 Das Konversions-Tag ist die Deklaration des JavaScript-Objekts AWIN.Tracking.Sale, das auf der Bestätigungsseite ausgeführt wird, um dem Mastertag mitzuteilen, dass eine Konvertierung stattgefunden hat. Anschließend werden die erforderlichen Verfolgungsanforderungen ausgeführt.
 
-Awin Advertiser Conversion Tag ist eine Werbeerweiterung in der Adobe Real-time Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
+Awin Advertiser Conversion Tag ist eine Werbeerweiterung in der Echtzeit Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
 Dieses Ziel ist eine [!DNL Adobe Experience Platform Launch] Erweiterung. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
