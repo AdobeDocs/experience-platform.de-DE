@@ -2,13 +2,13 @@
 keywords: Medallia;medallia
 title: Medallia-Erweiterung
 seo-title: Medallia-Erweiterung
-description: Die Medallia-Erweiterung ist eine Stimme des Kundenziels in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Medallia-Erweiterung ist eine Stimme des Kundenziels in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Medallia-Erweiterung ist eine Stimme des Kundenziels in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Medallia-Erweiterung ist eine Stimme des Kundenziels in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 33%
+source-wordcount: '586'
+ht-degree: 31%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 33%
 
 Stellen Sie Ihre Webeigenschaften [!DNL Medallia] schnell und nahtlos bereit. Mit der Erweiterung können Sie auch Ereignis der Umfrage erkennen, Kundenfeedback in Echtzeit über Datenelemente erfassen, das Kundenerlebnis in Regeln gestalten und Daten mit Adobe Analytics austauschen.
 
-[!DNL Medallia] ist eine „Voice of the Customer“-Erweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+[!DNL Medallia] ist eine Stimme der Kundenerweiterung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
