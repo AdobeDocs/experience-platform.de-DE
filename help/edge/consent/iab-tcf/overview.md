@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie die IAB TCF 2.0-Voreinstellungen für die Zus
 seo-description: Erfahren Sie, wie Sie die IAB TCF 2.0-Voreinstellungen für die Zustimmung mit Experience Platform Web SDK unterstützen.
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Um das AEP Web SDK mit IAB TCF 2.0 zu implementieren, müssen Sie über ein funk
 
 ## Integration der Kundendatenplattform in Echtzeit
 
-Die auf Adobe Experience Platform aufbauende Adobe Echtzeit-Kundendatenplattform (Echtzeit-CDP) hilft Ihnen, bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammenzuführen. Auf diese Weise können Sie Kundendaten erstellen, die dazu verwendet werden können, personalisierte Kundenerlebnisse auf allen Kanälen und Geräten in Echtzeit bereitzustellen. Zum Senden von Genehmigungsdaten an Echtzeit-CDP über das AEP Web SDK ist Folgendes erforderlich:
+Basierend auf Adobe Experience Platform können Sie mit der Echtzeit-Kundendatenplattform (Echtzeit-CDP) bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammenführen. Auf diese Weise können Sie Kundendaten erstellen, die dazu verwendet werden können, personalisierte Kundenerlebnisse auf allen Kanälen und Geräten in Echtzeit bereitzustellen. Zum Senden von Genehmigungsdaten an Echtzeit-CDP über das AEP Web SDK ist Folgendes erforderlich:
 
 - Ein auf der [!DNL XDM Individual Profile] Klasse basierender Datensatz, der für die Verwendung in aktiviert ist, [!DNL Real-time Customer Profile]mit dem Profil Privacy mixin.
 - Eine Edge-Konfiguration mit Echtzeit-CDP und dem oben erwähnten Profil-Datensatz.
