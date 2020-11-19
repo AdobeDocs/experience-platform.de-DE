@@ -2,13 +2,13 @@
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics-Erweiterung
 seo-title: Parse.ly Analytics-Erweiterung
-description: Die Parse.ly Analytics-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Parse.ly Analytics-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Parse.ly Analytics-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Parse.ly Analytics-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 46%
+source-wordcount: '541'
+ht-degree: 45%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 [!DNL Parse.ly Analytics]Unter Verwendung von nutzen mehr als 2.500 Unternehmen Daten, um ihre Online-Zielgruppen besser zu verstehen. Mit dieser Erweiterung wird ein JavaScript-Snippet installiert, das verfolgt, wie Besucher mit Inhalten auf Ihrer Site interagieren.
 
-Parse.ly ist eine Analyseerweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [Parse.ly Analytics](https://www.parse.ly/).
+Parse.ly ist eine Analyseerweiterung in der Echtzeit-Kundendatenplattform von Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [Parse.ly Analytics](https://www.parse.ly/).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
