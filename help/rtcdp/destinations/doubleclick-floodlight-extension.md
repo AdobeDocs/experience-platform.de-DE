@@ -2,12 +2,12 @@
 keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
 title: DoubleClick Floodlight (Beta)-Erweiterung
 seo-title: DoubleClick Floodlight (Beta)-Erweiterung
-description: Die DoubleClick Floodlight (Beta) Extension ist ein Werbeziel in der Adobe Real-time Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die DoubleClick Floodlight (Beta) Extension ist ein Werbeziel in der Adobe Real-time Customer Data Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die DoubleClick Floodlight (Beta)-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die DoubleClick Floodlight (Beta)-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '557'
 ht-degree: 29%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 29%
 
 Diese Erweiterung ermöglicht eine schnelle und einfache Bereitstellung von [!DNL DoubleClick Floodlight] Tags im herkömmlichen Floodlight-Format (nicht im globalen Site-Tag). Hinweis: Diese Erweiterung befindet sich in der Betaphase.
 
-[!DNL DoubleClick Floodlight] (Beta) ist eine Werbeerweiterung in der Adobe Real-time Customer Data Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie in der [!DNL Google] Support-Dokumentation für [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
+[!DNL DoubleClick Floodlight] (Beta) ist eine Werbeerweiterung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktion finden Sie in der [!DNL Google] Support-Dokumentation für [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
