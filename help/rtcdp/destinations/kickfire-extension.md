@@ -2,13 +2,13 @@
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
 title: KickFire-Erweiterung
 seo-title: KickFire-Erweiterung
-description: Die KickFire-Erweiterung ist ein Ziel der Personalisierung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die KickFire-Erweiterung ist ein Ziel der Personalisierung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die KickFire-Erweiterung ist ein Ziel der Personalisierung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die KickFire-Erweiterung ist ein Ziel der Personalisierung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 40%
+source-wordcount: '544'
+ht-degree: 39%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 40%
 
 [!DNL KickFire's] IP-Adressenintelligenz &amp; B2B-firmographische Daten ermöglichen es Ihnen, IP-Adressen in Firmen zu übersetzen, anonyme Web-Besucher zu identifizieren und Kontodaten in Ihren Technologiestapel zu integrieren - alles basierend auf der IP-Adresse einer Firma.
 
-[!DNL KickFire] ist eine Personalisierungserweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Erweiterungsfunktion finden Sie auf der [Kickfire-Website](https://www.kickfire.com/).
+[!DNL KickFire] ist eine Personalisierungserweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Erweiterungsfunktion finden Sie auf der [Kickfire-Website](https://www.kickfire.com/).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
