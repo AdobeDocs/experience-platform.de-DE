@@ -5,9 +5,9 @@ seo-title: Experience Platform Launch-Erweiterungen
 description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 seo-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 60%
 
 ---
@@ -32,7 +32,7 @@ To find the Platform Launch extensions in the Adobe Real-time CDP interface, bro
 
 Plattformstarterweiterungen leiten Rohdaten an verschiedene Ereignis weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](/help/rtcdp/destinations/gainsight-extension.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
-**Profil-/Segmentexport-Ziele** in der Echtzeit-Kundendatenplattform von Adobe erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profile in Ziele. Beispiele hierfür sind das [Amazon S3 Cloud-Speicher-Ziel](/help/rtcdp/destinations/amazon-s3-destination.md) oder das [Google Display &amp; Video 360-Werbeziel](/help/rtcdp/destinations/google-dv360-destination.md).
+**Profil-/Segmentexport-Ziele** in der Echtzeit-Kundendatenplattform von erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profile in Ziele. Beispiele hierfür sind das [Amazon S3 Cloud-Speicher-Ziel](/help/rtcdp/destinations/amazon-s3-destination.md) oder das [Google Display &amp; Video 360-Werbeziel](/help/rtcdp/destinations/google-dv360-destination.md).
 
 ![Experience Platform Launch-Erweiterungen im Vergleich zu anderen Zielen](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
