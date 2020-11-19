@@ -2,12 +2,12 @@
 keywords: Nielsen VideoJS Player Handler;nielsen video js player;nielsen videojs player;Nielsen;nielsen;Nielsen videojs player;Nielsen Digital SDK;nielsen digital sdk
 title: Nielsen VideoJS Player Handler-Erweiterung
 seo-title: Nielsen VideoJS Player Handler-Erweiterung
-description: Die Nielsen VideoJS Player Handler-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Nielsen VideoJS Player Handler-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Nielsen VideoJS Player Handler-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Nielsen VideoJS Player Handler-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '641'
 ht-degree: 52%
 
 ---
@@ -23,7 +23,7 @@ DCR: Eine Messlösung, die eine tägliche Messung von nicht-linearen digitalen I
 
 DTVR: Dies ermöglicht teilnehmenden Programmierquellen eine lineare Fernsehwiedergabe auf Desktop- und Mobilgeräten. Das ist die erste Lösung, die eine Akkreditierung des MRC für ihren Beitrag zur Messung der Zuschauerzahlen von auf Computern und Mobilgeräten angesehenen Programmen erhalten hat.
 
-[!DNL Nielsen VideoJS Player Handler] ist eine Analyseerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
+[!DNL Nielsen VideoJS Player Handler] ist eine Analyseerweiterung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
