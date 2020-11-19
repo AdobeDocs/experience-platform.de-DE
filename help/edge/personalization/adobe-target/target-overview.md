@@ -1,13 +1,13 @@
 ---
-title: 'Adobe Target und das Adobe Experience Platform Web SDK. '
+title: 'Adobe Target und Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK und Verwendung von Adobe Target
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '629'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 # [!DNL Target] Übersicht
 
-Die Adobe Experience Platform [!DNL Web SDK] kann personalisierte Erlebnisse, die in Adobe Target verwaltet werden, an den Web-Kanal bereitstellen und rendern. Sie können einen WYSIWYG-Editor, den so genannten [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), oder eine nicht visuelle Schnittstelle, den [Form-Based Experience Composer](https://docs.adobe.com/content/help/de-DE/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
+Adobe Experience Platform [!DNL Web SDK] kann personalisierte Erlebnisse, die in Adobe Target verwaltet werden, für den Web-Kanal bereitstellen und rendern. Sie können einen WYSIWYG-Editor, den so genannten [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), oder eine nicht visuelle Schnittstelle, den [Form-Based Experience Composer](https://docs.adobe.com/content/help/de-DE/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
 
 ## Aktivieren von Adobe Target
 
@@ -35,7 +35,7 @@ Um den VEC mit einer Platform Web SDK-Implementierung zu verwenden, müssen Sie 
 
 ## VEC-Aktivitäten automatisch rendern
 
-Das AEP Web SDK ist befugt, Ihre Erlebnisse automatisch zu rendern, die über Adobe Target’s VEC im Web für Ihre Benutzer definiert werden. Um dem AEP Web SDK anzuzeigen, dass VEC-Aktivitäten automatisch gerendert werden sollen, senden Sie ein Ereignis mit `renderDecisions = true`:
+Adobe Experience Platform Web SDK ist befugt, Ihre Erlebnisse, die über Adobe Target’s VEC im Web definiert werden, automatisch für Ihre Benutzer darzustellen. Um Adobe Experience Platform Web SDK anzuzeigen, dass VEC-Aktivitäten automatisch gerendert werden, senden Sie ein Ereignis mit `renderDecisions = true`:
 
 ```javascript
 alloy
@@ -85,32 +85,33 @@ alloy
 
 ## Der `__view__` Anwendungsbereich
 
-AEP [!DNL Web SDK] bietet eine Funktion, mit der Sie VEC-Aktionen abrufen können, ohne sich auf AEP verlassen zu müssen, um die VEC-Aktionen für Sie [!DNL Web SDK] zu rendern. Senden Sie ein Ereignis mit der `__view__` Definition als `decisionScopes`.
+Adobe Experience Platform Web SDK bietet Funktionen, mit denen Sie VEC-Aktionen abrufen können, ohne dabei auf das SDK zurückgreifen zu müssen, um die VEC-Aktionen für Sie wiederzugeben. Senden Sie ein Ereignis mit der `__view__` Definition als `decisionScopes`.
 
 ```javascript
 alloy("sendEvent", {
-  decisionScopes: [“__view__”,"foo", "bar"], 
-  "xdm": { 
-    "web": { 
-      "webPageDetails": { 
-        "name": "Home Page"
-       }
-      } 
-     }
+      "decisionScopes": ["__view__", "foo", "bar"], 
+      "xdm": { 
+        "web": { 
+          "webPageDetails": { 
+            "name": "Home Page"
+          }
+        } 
+      }
     }
-   ).then(results){
-  for (decision of results.decisions){
-     if(decision.decisionScope == "__view__")
-       console.log(decision.content)
-}
-};
+  ).then(function(results) {
+    for (decision of results.decisions) {
+      if (decision.decisionScope === "__view__") {
+        console.log(decision.content)
+      }
+    }
+  });
 ```
 
 ## Audiencen in XDM
 
-Beim Definieren von Audiencen für Ihre Zielgruppe-Aktivitäten, die über das AEP Web SDK bereitgestellt werden, muss [XDM](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/home.html) definiert und verwendet werden. Nachdem Sie XDM-Schema, -Klassen und -Mixins definiert haben, können Sie eine Zielgruppe-Audience erstellen, die von XDM-Daten für das Targeting definiert wird. Innerhalb der Zielgruppe werden XDM-Daten im Audience Builder als benutzerdefinierter Parameter angezeigt. Das XDM wird mit der Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
+Beim Definieren von Audiencen für Ihre Zielgruppe-Aktivitäten, die über Adobe Experience Platform Web SDK bereitgestellt werden, muss [XDM](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/home.html) definiert und verwendet werden. Nachdem Sie XDM-Schema, -Klassen und -Mixins definiert haben, können Sie eine Zielgruppe-Audience erstellen, die von XDM-Daten für das Targeting definiert wird. Innerhalb der Zielgruppe werden XDM-Daten im Audience Builder als benutzerdefinierter Parameter angezeigt. Das XDM wird mit der Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
 
-Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfügen, die benutzerdefinierte Parameter oder ein Profil verwenden, beachten Sie, dass diese nicht korrekt über das AEP Web SDK bereitgestellt werden. Anstatt benutzerdefinierte Parameter oder das Profil zu verwenden, müssen Sie stattdessen XDM verwenden. Es gibt jedoch vordefinierte Audiencen-Targeting-Felder, die über das AEP Web SDK unterstützt werden und keine XDM-Datei erfordern. Diese Felder stehen in der Benutzeroberfläche der Zielgruppe zur Verfügung, für die kein XDM erforderlich ist:
+Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfügen, die benutzerdefinierte Parameter oder ein benutzerdefiniertes Profil verwenden, beachten Sie, dass diese nicht korrekt über das SDK bereitgestellt werden. Anstatt benutzerdefinierte Parameter oder das Profil zu verwenden, müssen Sie stattdessen XDM verwenden. Es gibt jedoch vordefinierte Audiencen-Targeting-Felder, die über das Adobe Experience Platform Web SDK unterstützt werden und keine XDM-Datei erfordern. Diese Felder stehen in der Benutzeroberfläche der Zielgruppe zur Verfügung, für die kein XDM erforderlich ist:
 
 * Ziel-Bibliothek
 * Geo
