@@ -5,9 +5,9 @@ seo-title: Zieldetailseite
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 translation-type: tm+mt
-source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
+source-git-commit: ff36899f455848584ab2f5e236812795d2c81681
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '680'
 ht-degree: 18%
 
 ---
@@ -21,7 +21,7 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie die Attribute u
 >
 >Die Seite mit den Details zu Zielen ist Teil des Arbeitsbereichs &quot; [!UICONTROL Ziele] &quot;in der Plattform-Benutzeroberfläche. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
-Navigieren Sie im Arbeitsbereich &quot; **[!UICONTROL Ziele]** &quot;der Plattform-Benutzeroberfläche zur Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;und wählen Sie den Namen des zu Ansicht Stapelziels aus.
+Navigieren Sie im Arbeitsbereich &quot; **[!UICONTROL Ziele]** &quot;in der Benutzeroberfläche &quot;Plattform&quot;zur Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;und wählen Sie den Namen des Ziels aus, das Sie Ansicht haben möchten.
 
 ![](./assets/details-page/select-destination.png)
 
