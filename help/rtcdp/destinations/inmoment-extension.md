@@ -2,12 +2,12 @@
 keywords: InMoment;inmoment;Inmoment;launch integration
 title: InMoment-Erweiterung
 seo-title: InMoment-Erweiterung
-description: Die InMoment-Erweiterung ist ein Ziel der Umfrage in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die InMoment-Erweiterung ist ein Ziel der Umfrage in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die InMoment-Erweiterung ist ein Ziel der Umfrage in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die InMoment-Erweiterung ist ein Ziel der Umfrage in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '576'
 ht-degree: 36%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 36%
 
 Mit der [!DNL InMoment] Launch Integration können Sie Online-Feedback schnell und einfach über das Digital Intercept-Produkt aktivieren. In der App können Abfangen über den CXI Cloud-Admin konfiguriert und verwaltet werden, sodass CX-Manager ihre Programme besser steuern können.
 
-[!DNL InMoment] ist eine Erweiterung der Umfrage in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
+[!DNL InMoment] ist eine Erweiterung der Umfrage in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
