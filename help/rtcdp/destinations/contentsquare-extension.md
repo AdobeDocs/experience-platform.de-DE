@@ -2,13 +2,13 @@
 keywords: contentsquare extension;contentsquare destination;contentsquare
 title: Contentsquare-Erweiterung
 seo-title: Contentsquare-Erweiterung
-description: Die ContentSquare-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die ContentSquare-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die ContentSquare-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die ContentSquare-Erweiterung ist ein Analyseziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 34%
+source-wordcount: '580'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 34%
 
 Visualisieren Sie das Verhalten von Inpage, siehe WARUM Kunden abbrechen und wie Sie Verbesserungen vornehmen können. Ordnen Sie Umsatz für jeden Analytics-Segment- und -Zielgruppen-Test UX- und Inhaltselemente zu. Installieren Sie das [!DNL Contentsquare] -Tag, richten Sie benutzerdefinierte Variablen und Ereignis ein. Beginn sammeln Daten für Ihre UX-Analyse in wenigen Klicks.
 
-[!DNL Contentsquare] ist eine Analyseerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
+[!DNL Contentsquare] ist eine Analyseerweiterung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
