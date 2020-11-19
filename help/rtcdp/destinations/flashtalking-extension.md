@@ -2,12 +2,12 @@
 keywords: Flashtalking OneTag extensions;Flashtalking OneTag extension;Flashtalking OneTag destinations;Flashtalking OneTag;flashtalking onetag
 title: Flashspeak OneTag-Erweiterung
 seo-title: Flashspeak OneTag-Erweiterung
-description: Die flashsprechende OneTag-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die flashsprechende OneTag-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die flashsprechende OneTag-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die flashsprechende OneTag-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '570'
 ht-degree: 34%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 34%
 
 Die [!DNL Flashtalking OneTag] Erweiterung für Experience Platform Launch erleichtert die Zuweisung von Site-Aktionen zur Anzeige, Video und mobilen Aktivität von Anzeigen. Stellen Sie die [!DNL Flashtalking OneTag] Variable mithilfe von Launch für Ihre Webeigenschaften bereit.
 
-[!DNL Flashtalking OneTag] ist eine Werbeerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
+[!DNL Flashtalking OneTag] ist eine Werbeerweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
