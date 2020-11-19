@@ -5,10 +5,10 @@ seo-title: Umfrageziele
 description: Umfrageplattformen erkennen Umfrageereignisse, erfassen über Datenelemente Kunden-Feedback in Echtzeit und teilen Daten mit der Echtzeit-Kundendatenplattform von Adobe.
 seo-description: Umfrageplattformen erkennen Umfrageereignisse, erfassen über Datenelemente Kunden-Feedback in Echtzeit und teilen Daten mit der Echtzeit-Kundendatenplattform von Adobe.
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 100%
+source-wordcount: '103'
+ht-degree: 89%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Umfrageplattformen erkennen Umfrageereignisse, erfassen über Datenelemente Kunden-Feedback in Echtzeit und teilen Daten mit der Echtzeit-Kundendatenplattform von Adobe.
 
-Die Echtzeit-Kundendatenplattform von Adobe unterstützt derzeit die unten aufgeführten Umfrageziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Die Echtzeit-Kundendatenplattform unterstützt derzeit die unten aufgeführten Umfragen. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 * [Foresee-Erweiterung](/help/rtcdp/destinations/foresee-extension.md)
 * [InMoment-Erweiterung](/help/rtcdp/destinations/inmoment-extension.md)
