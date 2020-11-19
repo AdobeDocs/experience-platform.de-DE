@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK kann personalisierte Angebot bere
 seo-description: Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer Decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
+source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '831'
 ht-degree: 13%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 13%
 
 Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebot bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer Decisioning-Benutzeroberfläche (UI) oder APIs erstellen.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 * IMS-Organisation für die Edge-Entscheidungsfindung aktiviert
 * Angebote, erstellte Aktivitäten
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebot bereitstel
 
 ## Terminologie
 
-Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie zu verstehen. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
+Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und die Ansicht zusätzlicher Begriffe finden Sie im [Offer Decisioning Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **Container:** Ein Container ist ein Isolationsmechanismus, der unterschiedliche Anliegen voneinander trennt. Die Container-ID ist das erste Pfadelement für alle Repository-APIs. Alle Entscheidungsobjekte befinden sich in einem Container.
 
