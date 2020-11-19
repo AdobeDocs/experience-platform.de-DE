@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfol
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 14b10aeeb382e9d638cf9fdf62deddbee3e72600
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1139'
-ht-degree: 69%
+source-wordcount: '1138'
+ht-degree: 68%
 
 ---
 
 
 # Verfolgen von Ereignissen
 
-Verwenden Sie den `sendEvent`-Befehl, um Ereignisdaten an Adobe Experience Cloud zu senden. Der `sendEvent`-Befehl ist die wichtigste Methode zum Senden von Daten an und zum Abrufen von personalisierten Inhalten, Identitäten und Zielgruppenzielen.[!DNL Experience Cloud]
+To send event data to Adobe Experience Cloud, use the `sendEvent` command. Der `sendEvent`-Befehl ist die wichtigste Methode zum Senden von Daten an und zum Abrufen von personalisierten Inhalten, Identitäten und Zielgruppenzielen.[!DNL Experience Cloud]
 
 An Adobe Experience Cloud gesendete Daten gehören zwei Kategorien an:
 
