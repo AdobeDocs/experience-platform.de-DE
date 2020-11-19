@@ -2,12 +2,12 @@
 keywords: branch;branch extension;branch destination
 title: Branch-Erweiterung
 seo-title: Branch-Erweiterung
-description: Die Branch-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Branch-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Branch-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Branch-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '536'
 ht-degree: 45%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 45%
 
 Branch bietet leistungsstarke Links und Lösungen, die Ihnen beim Erwerb, der Interaktion und der Messung auf allen Geräten, Kanälen und Plattformen helfen.
 
-Branch ist eine Werbeerweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der [Funktionsseite](https://branch.io/features/) der Branch-Website.
+Branch ist eine Werbeerweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Erweiterungsfunktionalität finden Sie auf der [Funktionsseite](https://branch.io/features/) der Branch-Website.
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
