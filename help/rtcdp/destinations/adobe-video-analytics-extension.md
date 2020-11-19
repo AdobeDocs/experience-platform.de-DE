@@ -2,13 +2,13 @@
 keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics für Audio und Video-Erweiterung
 seo-title: Adobe Media Analytics für Audio und Video-Erweiterung
-description: Die Adobe Media Analytics für Audio und Video-Erweiterung ist ein Analytics-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Adobe Media Analytics für Video-Erweiterung ist ein Analytics-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Media Analytics für Audio und Video-Erweiterung ist ein Analytics-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Media Analytics für Video-Erweiterung ist ein Analytics-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 54%
+source-wordcount: '584'
+ht-degree: 53%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 54%
 
 Adobe Media Analytics für Audio und Video ist ein Add-on zum Analytics-Basisangebot, mit dem Kunden zuverlässige Messwerte für Video, Audio und Werbung erhalten.
 
-Adobe Media Analytics für Audio und Video ist eine Analytics-Erweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
+ Media Analytics für Audio und Video ist eine Analytics-Erweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
 
 Dieses Ziel ist eine [!DNL Adobe Experience Platform Launch] Erweiterung. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
