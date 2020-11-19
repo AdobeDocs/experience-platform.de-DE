@@ -2,13 +2,13 @@
 keywords: Analytics extension;analytics extension;destination analytics
 title: Adobe Analytics-Erweiterung
 seo-title: Adobe Analytics-Erweiterung
-description: Die Adobe Analytics-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Adobe Analytics-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Analytics-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Analytics-Erweiterung ist ein Analyseziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 54%
+source-wordcount: '540'
+ht-degree: 53%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 54%
 
 Adobe Analytics ist eine branchenführende Lösung, mit der Sie Ihre Kunden besser verstehen und Ihr Geschäft mit Customer Intelligence steuern können.
 
-Adobe Analytics ist eine Erweiterung der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100156.html).
+ Analytics ist eine Erweiterung der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100156.html).
 
 Dieses Ziel ist eine [!DNL Adobe Experience Platform Launch] Erweiterung. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
