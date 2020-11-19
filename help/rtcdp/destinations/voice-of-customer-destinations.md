@@ -5,9 +5,9 @@ seo-title: Stimme der Kundenziele
 description: Voice-Plattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Call-Daten und Chat-Konversationen. Die erfassten Informationen können gefiltert und analysiert werden, damit Firmen ihre Website entsprechend ihren Anforderungen optimieren können.
 seo-description: Voice-Plattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Call-Daten und Chat-Konversationen. Die erfassten Informationen können gefiltert und analysiert werden, damit Firmen ihre Website entsprechend ihren Anforderungen optimieren können.
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '163'
 ht-degree: 15%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 15%
 
 Voice-Plattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Call-Daten und Chat-Konversationen. Die erfassten Informationen können gefiltert und analysiert werden, damit Firmen ihre Website entsprechend ihren Anforderungen optimieren können.
 
-Die Adobe Echtzeit-Kundendatenplattform unterstützt derzeit die unten aufgeführten Kundenziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Die Echtzeit-Kundendatenplattform unterstützt derzeit die unten aufgeführten Kundenziele mit der Stimme. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 * [Confirmit Digital Feedback-Erweiterung](confirmit-digital-feedback-extension.md)
 * [Invoca Tags-Erweiterung](/help/rtcdp/destinations/invoca-extension.md)
