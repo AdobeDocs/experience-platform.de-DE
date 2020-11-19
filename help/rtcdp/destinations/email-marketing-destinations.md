@@ -6,9 +6,9 @@ type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '837'
 ht-degree: 42%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 42%
 
 # E-Mail-Marketing-Ziele {#email-marketing-destinations}
 
-E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen. Die Echtzeit-Kundendatenplattform von Adobe arbeitet mit ESPs zusammen und bietet Ihnen die Möglichkeit, Segmente für E-Mail-Marketing-Ziele zu aktivieren.
+E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen. Die Echtzeit-Kundendatenplattform von arbeitet mit ESPs zusammen und bietet Ihnen die Möglichkeit, Segmente für E-Mail-Marketing-Ziele zu aktivieren.
 
 Um für Ihre Kampagnen Segmente an E-Mail-Marketing-Ziele senden zu können, muss die Echtzeit-Kundendatenplattform von Adobe zunächst eine Verbindung mit dem Ziel herstellen.
 
