@@ -2,13 +2,13 @@
 keywords: Invoca;invoca
 title: Invoca Tags-Erweiterung
 seo-title: Invoca Tags-Erweiterung
-description: Die Invoca Tags-Erweiterung ist ein „Voice of the Customer“-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Invoca Tags-Erweiterung ist ein „Voice of the Customer“-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Invoca Tags-Erweiterung ist ein „Voice of the Customer“-Ziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Invoca Tags-Erweiterung ist ein „Voice of the Customer“-Ziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 46%
+source-wordcount: '582'
+ht-degree: 43%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 [!DNL Invoca] sorgt für die Einbeziehung von Anrufdaten und Spracheinblicken in die digitale Customer Journey. With [!DNL Invoca’s] call intelligence platform, marketers finally have analytics to measure call outcomes and tie offline conversions back to digital spend.
 
-[!DNL Invoca Tags] ist eine „Voice of the Customer“-Erweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
+[!DNL Invoca Tags] ist eine Stimme der Kundenerweiterung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
