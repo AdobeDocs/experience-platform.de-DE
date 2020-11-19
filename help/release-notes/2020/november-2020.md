@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: d6b603e2918b502635b11fb1aa693a4b4311c125
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2126'
 ht-degree: 24%
 
 ---
@@ -122,6 +122,7 @@ In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vord
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
+| UX-Updates zu Zieldetails | Der CDP-Zielarbeitsablauf in Echtzeit umfasst jetzt die Inline-Überwachung, damit Sie sehen können, welche Batch-Aktivierungen erfolgreich waren. Diese Funktion ermöglicht es Benutzern, Probleme direkt im Arbeitsablauf für Batch-Ziele über Warnungen und ein Dashboard zur Überwachung von Fehlern in der Verarbeitungspipeline zu beheben. |
 | Obligatorische Felder | Benutzer können Felder als Pflichtfelder markieren, wobei sichergestellt wird, dass nur Felder exportiert werden, die das Pflichtfeld enthalten. |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
