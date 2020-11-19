@@ -5,9 +5,9 @@ seo-title: Google-Kundenübereinstimmungsziel
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 seo-description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1554'
 ht-degree: 12%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 12%
 
 ## Nutzungsszenarien
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Google Customer Match] Ziel verwenden sollten, finden Sie hier einige Verwendungsbeispiele, die Kunden der Adobe Echtzeit-Kundendatenplattform mit dieser Funktion lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Google Customer Match] Ziel verwenden sollten, finden Sie hier Beispiele für Verwendungsfälle, die Kunden mit der Echtzeit-Datenplattform mithilfe dieser Funktion lösen können.
 
 
 ### Verwendungsfall Nr. 1
