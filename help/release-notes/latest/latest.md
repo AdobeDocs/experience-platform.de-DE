@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
+source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
 workflow-type: tm+mt
-source-wordcount: '2126'
-ht-degree: 24%
+source-wordcount: '2180'
+ht-degree: 23%
 
 ---
 
@@ -113,20 +113,18 @@ In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vord
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
+| Klammern | Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht. |
 | Microsoft Bing | Das Microsoft Bing-Ziel unterstützt Sie beim Ausführen von Retargeting und der Audience zielgerichteter digitaler Kampagnen in der Microsoft Display-Werbung. |
 | The Trade Desk | Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, mit der sie zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg ausführen können. |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | UX-Updates zu Zieldetails | Der CDP-Zielarbeitsablauf in Echtzeit umfasst jetzt die Inline-Überwachung, damit Sie sehen können, welche Batch-Aktivierungen erfolgreich waren. Diese Funktion ermöglicht es Benutzern, Probleme direkt im Arbeitsablauf für Batch-Ziele über Warnungen und ein Dashboard zur Überwachung von Fehlern in der Verarbeitungspipeline zu beheben. |
+| Dateiverschlüsselung | Bei dateibasierten Zielen können Benutzer ihren exportierten Dateien nun Verschlüsselung hinzufügen. |
+| Dateiplanung | Sowohl für E-Mail- als auch für Cloud-Datenspeicherung-Ziele können Benutzer einen einmaligen Export erstellen oder tägliche Schnappschüsse erstellen. |
 | Obligatorische Felder | Benutzer können Felder als Pflichtfelder markieren, wobei sichergestellt wird, dass nur Felder exportiert werden, die das Pflichtfeld enthalten. |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 Weiterführende Informationen finden Sie in der [Übersicht zu Zielen](../../rtcdp/destinations/destinations-overview.md).
 
@@ -202,8 +200,9 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 [!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
 **Neue Quellen**
+
 | Funktion | Beschreibung |
-| — | — |
+| ------- | ----------- |
 | [!DNL Shopify] | Sie können jetzt eine Verbindung [!DNL Shopify] mit [!DNL Experience Platform] der [!DNL Flow Service] API oder der Benutzeroberfläche herstellen. See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
 
 **Wichtigste Funktionen**
