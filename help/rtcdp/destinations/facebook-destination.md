@@ -5,10 +5,10 @@ seo-title: Facebook-Ziel
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 20%
+source-wordcount: '753'
+ht-degree: 21%
 
 ---
 
@@ -26,7 +26,7 @@ Sie können dieses Ziel für das Targeting von Audiencen in [!DNL Facebook’s] 
 
 ## Nutzungsszenarien
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook] Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Kunden der Adobe Echtzeit-Kundendatenplattform mit dieser Funktion lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook] Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Kunden der Echtzeit-Kundendatenplattform mit dieser Funktion lösen können.
 
 
 ### Verwendungsfall Nr. 1
