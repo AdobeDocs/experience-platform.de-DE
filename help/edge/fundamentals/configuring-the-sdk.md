@@ -1,14 +1,14 @@
 ---
 title: Konfigurieren des SDK
-seo-title: Konfigurieren des Adobe Experience Platform Web SDK
+seo-title: Adobe Experience Platform Web SDK konfigurieren
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 76%
+source-wordcount: '710'
+ht-degree: 74%
 
 ---
 
@@ -85,13 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Beim Konfigurieren mehre
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | `true` |
 
-Gibt an, ob mit Link-Klicks verbundene Daten automatisch erfasst werden sollen. Für Klicks, die als Link-Klicks gelten, werden die folgenden [Web-Interaktionsdaten](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) erfasst:
-
-| **Eigenschaft** | **Beschreibung** |
-| ------------ | ----------------------------------- |
-| Link-Name | Durch den Link-Kontext bestimmter Name |
-| Link-URL | Normalisierte URL |
-| Link-Typ | Auf Herunterladen, Beenden oder Sonstiges festlegen |
+Gibt an, ob mit Link-Klicks verbundene Daten automatisch erfasst werden sollen. Weitere Informationen finden Sie unter [Automatische Linkverfolgung](../data-collection/track-links.md#automaticLinkTracking) .
 
 ### `onBeforeEventSend`
 
@@ -153,7 +147,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | wahr |
 
-Wenn &quot;true&quot;, liest das SDK alte AMCV-Cookies und legt sie fest. Dies hilft bei der Umstellung auf die Verwendung des AEP Web SDK, während einige Teile der Site möglicherweise noch Besucher.js verwenden. Wenn die Besucher-API auf der Seite definiert ist, wird vom SDK außerdem die Besucher-API für die ECID Abfrage. Auf diese Weise können Sie zwei Tags mit dem AEP Web SDK verwenden und immer noch die gleiche ECID haben.
+Wenn &quot;true&quot;, liest das SDK alte AMCV-Cookies und legt sie fest. Dies hilft beim Übergang zur Verwendung des Adobe Experience Platform Web SDK, während einige Teile der Site möglicherweise noch Besucher.js verwenden. Wenn die Besucher-API auf der Seite definiert ist, wird vom SDK außerdem die Besucher-API für die ECID Abfrage. Auf diese Weise können Sie zwei Tags mit dem AEP Web SDK verwenden und immer noch die gleiche ECID haben.
 
 ### `thirdPartyCookiesEnabled`
 
