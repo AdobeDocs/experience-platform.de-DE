@@ -2,12 +2,12 @@
 keywords: Pinterest;pinterest;Pinterest Conversion Tracking;pintrest conversion tracking
 title: Pinterest Conversion Tracking-Erweiterung
 seo-title: Pinterest Conversion Tracking-Erweiterung
-description: Die Pinterest Conversion Tracking-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Pinterest Conversion Tracking-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Pinterest Conversion Tracking-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Pinterest Conversion Tracking-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '575'
 ht-degree: 49%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 49%
 
 Verfolgen Sie Besucheraktionen auf Ihrer Website nach Ansichten Ihrer Promoted Pin. Messen Sie die Rendite auf Werbeausgaben und erstellen Sie zielgerichtete Zielgruppen. [Weitere Informationen](https://ads.pinterest.com/).
 
-[!DNL Pinterest Conversion Tracking] ist eine Werbeerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
+[!DNL Pinterest Conversion Tracking] ist eine Werbeerweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
