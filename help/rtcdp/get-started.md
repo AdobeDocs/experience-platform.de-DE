@@ -1,23 +1,23 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Erste Schritte mit der Echtzeit-Kundendatenplattform von Adobe
-seo-title: Erste Schritte mit der Echtzeit-Kundendatenplattform von Adobe
-description: Beispielszenario für die Echtzeit-Kundendatenplattform von Adobe
-seo-description: Beispielszenario für die Echtzeit-Kundendatenplattform von Adobe
+title: 'Erste Schritte mit der Echtzeit-Kundendatenplattform von '
+seo-title: 'Erste Schritte mit der Echtzeit-Kundendatenplattform von '
+description: 'Beispielszenario für die Echtzeit-Kundendatenplattform von '
+seo-description: 'Beispielszenario für die Echtzeit-Kundendatenplattform von '
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2318'
 ht-degree: 87%
 
 ---
 
 
-# Erste Schritte mit der Echtzeit-Kundendatenplattform von Adobe
+# Erste Schritte mit der Echtzeit-Kundendatenplattform von 
 
-Die ersten Schritte führen Sie durch eine Beispielimplementierung der Echtzeit-Kundendatenplattform von Adobe. Sie können sie bei der Einrichtung einer eigenen Implementierung als Muster verwenden. Zwar enthält das vorliegende Handbuch spezifische Beispiele, doch gibt es auch Links zu weiteren Informationen, die Sie bei der Einrichtung nutzen können.
+Die ersten Schritte führen Sie durch eine Beispielimplementierung der Echtzeit-Kundendatenplattform von Sie können sie bei der Einrichtung einer eigenen Implementierung als Muster verwenden. Zwar enthält das vorliegende Handbuch spezifische Beispiele, doch gibt es auch Links zu weiteren Informationen, die Sie bei der Einrichtung nutzen können.
 
-Dieses Beispiel macht deutlich, welche Funktionen die Echtzeit-Kundendatenplattform von Adobe bietet, die auf Adobe Experience Platform basiert:
+Dieses Beispiel macht deutlich, welche Funktionen die Echtzeit-Kundendatenplattform von bietet, die auf Adobe Experience Platform basiert:
 
 * Daten aus verschiedenen Quellen erfassen
 * Zusammenführen zu einem [!DNL real-time customer profile]
@@ -121,7 +121,7 @@ Diese personalisierten Inhalte helfen Sarah dabei, rasch passende Artikel zu fin
 
 Sarah wird abgelenkt und verlässt die Site, wodurch ihre Sitzung beendet wird. Luma kann ihre Daten in Adobe Experience Platform verwenden, um sie zurück auf die Site zu holen.
 
-Die Echtzeit-Kundendatenplattform von Adobe, die auf Adobe Experience Platform basiert, wurde für das Customer Experience Management konzipiert. Mit ihrer Hilfe können Unternehmen folgende Aufgaben erledigen:
+Die Echtzeit-Kundendatenplattform von , die auf Adobe Experience Platform basiert, wurde für das Customer Experience Management konzipiert. Mit ihrer Hilfe können Unternehmen folgende Aufgaben erledigen:
 
 * Datenintegration und -aktivierung vereinfachen
 * Nutzung bekannter und unbekannter Daten steuern
