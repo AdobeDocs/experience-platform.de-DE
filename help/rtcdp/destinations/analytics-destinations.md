@@ -5,10 +5,10 @@ seo-title: Analyseziele
 description: Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Zielgruppe zu untersuchen. Diese Plattformen liefern einzigartige Einblicke in Interaktion und Konversion Ihrer wertvollsten Besucher.
 seo-description: Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Zielgruppe zu untersuchen. Diese Plattformen liefern einzigartige Einblicke in Interaktion und Konversion Ihrer wertvollsten Besucher.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 100%
+source-wordcount: '201'
+ht-degree: 94%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Zielgruppe zu untersuchen. Diese Plattformen liefern einzigartige Einblicke in Interaktion und Konversion Ihrer wertvollsten Besucher.
 
-Derzeit unterstützt die Adobe Echtzeit-Kundendatenplattform die unten aufgeführten Analyseziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Die Echtzeit-Kundendatenplattform unterstützt derzeit die unten aufgeführten Analytics-Ziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 * [Adform Website Tracking-Erweiterung](/help/rtcdp/destinations/adform-extension.md)
 * [Adobe Analytics-Erweiterung](/help/rtcdp/destinations/adobe-analytics-extension.md)
