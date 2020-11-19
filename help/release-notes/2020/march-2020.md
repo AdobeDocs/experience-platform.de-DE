@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 63%
+source-wordcount: '840'
+ht-degree: 65%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 63%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-* [[!DNL-Datenverwaltung]](#governance)
+* [[!DNL Data Governance]](#governance)
 * [[!DNL Data Ingestion]](#ingestion)
-* [[!DNL-Ziele]](#destinations)
-* [[!DNL-Identitätsdienst]](#identity)
-* [[!DNL-Quellen]](#sources)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Identity Service]](#identity)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -50,7 +50,7 @@ Adobe Experience Platform [!DNL Data Governance] is a series of strategies and t
 
 For more information about [!DNL Data Governance], see the [Data Governance overview](../../data-governance/home.md).
 
-## Datenerfassung {#ingestion}
+## Datenaufnahme {#ingestion}
 
 Adobe Experience Platform bietet eine Vielzahl von Funktionen, mit denen Daten jeder Art und Latenzzeit erfasst werden können. Adobe Experience Platform [!DNL Data Ingestion] provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
@@ -69,7 +69,7 @@ Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Dat
 
 ## Ziele {#destinations}
 
-In der [Adobe Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
+In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
 
 **Neue Ziele**
 
