@@ -1,12 +1,12 @@
 ---
 keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: Übersicht über den Segmentierungsdienst
-seo-title: Segmentierungsdienst in der Echtzeit-Kundendatenplattform von Adobe
+seo-title: Segmentierungsdienst in der Echtzeit-Kundendatenplattform
 description: Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform und nutzt viele Dienste und Funktionen von Experience Platform. Mit dem Segmentierungsdienst können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '274'
 ht-degree: 63%
 
 ---
