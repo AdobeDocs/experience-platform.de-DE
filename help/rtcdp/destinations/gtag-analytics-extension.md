@@ -2,12 +2,12 @@
 keywords: Google Global Site Tag;gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google Global Site Tag-Erweiterung
 seo-title: Google Global Site Tag-Erweiterung
-description: Die Google Global Site Tag-Erweiterung ist ein in der Adobe Echtzeit-Kundendatenplattform verfügbares Analyseziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Google Global Site Tag-Erweiterung ist ein in der Adobe Echtzeit-Kundendatenplattform verfügbares Analyseziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Google Global Site Tag-Erweiterung ist ein in der Echtzeit-Kundendatenplattform verfügbares Analyseziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Google Global Site Tag-Erweiterung ist ein in der Echtzeit-Kundendatenplattform verfügbares Analyseziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '563'
 ht-degree: 46%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 Senden Sie Daten an [!DNL Google Analytics], [!DNL Google Ads]und die [!DNL Google Marketing Platform] Datei über [!DNL Google's Global Site Tag]oder gtag.js. Für die einzelnen Produkte können jeweils mehrere Konten konfiguriert werden.
 
-[!DNL Google Global Site Tag] ist eine Analyseerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
+[!DNL Google Global Site Tag] ist eine Analyseerweiterung in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
