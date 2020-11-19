@@ -2,12 +2,12 @@
 keywords: D&B Visitor Intelligence;D&B;visitor intelligence extension
 title: D&B Visitor Intelligence-Erweiterung
 seo-title: D&B Visitor Intelligence-Erweiterung
-description: Die D&B Visitor Intelligence-Erweiterung ist ein in der Adobe Echtzeit-Kundendatenplattform verfügbares Personalisierungsziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die D&B Visitor Intelligence-Erweiterung ist ein in der Adobe Echtzeit-Kundendatenplattform verfügbares Personalisierungsziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die D&B Visitor Intelligence-Erweiterung ist ein in der Echtzeit-Kundendatenplattform verfügbares Personalisierungsziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die D&B Visitor Intelligence-Erweiterung ist ein in der Echtzeit-Kundendatenplattform verfügbares Personalisierungsziel. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 46%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 Analysieren Sie Ihre unbekannten Besucher und erreichen Sie deren Konversion in Leads.
 
-[!DNL D&B Visitor Intelligence] ist eine Personalisierungserweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zu den Funktionen dieser Erweiterung finden Sie auf der [D&amp;B-Website](https://www.dnb.com/).
+[!DNL D&B Visitor Intelligence] ist eine Personalisierungserweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zu den Funktionen dieser Erweiterung finden Sie auf der [D&amp;B-Website](https://www.dnb.com/).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
