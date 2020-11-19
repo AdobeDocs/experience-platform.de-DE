@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;merge policies;
 title: Leitfaden zur Benutzeroberfläche "Richtlinien zusammenführen"
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e865bf254a9a3190fcfc053bd83e9968b1a4f7f1
 workflow-type: tm+mt
-source-wordcount: '2667'
-ht-degree: 8%
+source-wordcount: '2673'
+ht-degree: 9%
 
 ---
 
@@ -25,9 +25,9 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 Dieser Leitfaden erfordert ein funktionierendes Verständnis einiger wichtiger [!DNL Experience Platform] Funktionen. Bevor Sie diesem Handbuch folgen oder Profil-APIs verwenden, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Adobe Experience Platform-Identitätsdienst](../../identity-service/home.md): Ermöglicht Kunden-Profil in Echtzeit durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die Daten eingehen [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+* [Experience-Datenmodell (XDM)](../../xdm/home.md)[!DNL Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
 
 ## Methoden zusammenführen {#merge-methods}
 
