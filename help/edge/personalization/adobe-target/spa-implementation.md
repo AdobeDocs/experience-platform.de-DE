@@ -1,13 +1,13 @@
 ---
-title: 'Adobe Target und das Adobe Experience Platform Web SDK. '
+title: 'Adobe Target und Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK und Verwendung von Adobe Target
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 14%
 
 ---
@@ -63,20 +63,20 @@ Das Konzept der Ansichten kann noch viel weiter ausgebaut werden. Dies sind nur 
 
 XDM-Ansichten können in Adobe Target genutzt werden, um Marketern die Möglichkeit zu geben, A/B- und XT-Tests über den Visual Experience Composer SPA durchzuführen. Dies erfordert die folgenden Schritte, um eine einmalige Entwicklereinrichtung abzuschließen:
 
-1. Installieren des [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
+1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
 2. Bestimmen Sie alle XDM-Ansichten in Ihrer Einzelseitenanwendung, die Sie personalisieren möchten.
 3. Nachdem Sie die XDM-Ansichten definiert haben, implementieren Sie zur Bereitstellung von AB- oder XT VEC-Aktivitäten die `sendEvent()` Funktion mit `renderDecisions` der Einstellung `true` und der entsprechenden XDM-Ansicht in Ihrer Einzelseitenanwendung. Die XDM-Ansicht muss übergeben werden `xdm.web.webPageDetails.viewName`. Dieser Schritt ermöglicht es Marketingexperten, den Visual Experience Composer zu nutzen, um A/B- und XT-Tests für diese XDM zu starten.
 
    ```javascript
-   alloy("sendEvent",  { 
-     "renderDecisions": true, 
-     "xdm": { 
-       "web": { 
-         "webPageDetails": { 
-            "viewName":"home" 
-         }      
+   alloy("sendEvent", { 
+     "renderDecisions": true, 
+     "xdm": { 
+       "web": { 
+         "webPageDetails": { 
+         "viewName":"home" 
+         }
        } 
-     } 
+     } 
    });
    ```
 
@@ -96,7 +96,7 @@ Das Marketingteam möchte A/B-Tests für die gesamte Startseite durchführen.
 
 Um A/B-Tests auf der gesamten Website auszuführen, `sendEvent()` muss der XDM aufgerufen werden, `viewName` auf `home`:
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -109,14 +109,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -137,18 +138,18 @@ Das Marketing-Team möchte die zweite Produktreihe personalisieren, indem die Fa
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -177,17 +178,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 Um den Inhalt auf der Site je nach ausgewählter Versand-Voreinstellung zu personalisieren, kann für jede Versand-Voreinstellung eine Ansicht erstellt werden. Wenn &quot; **Normaler Versand** &quot;ausgewählt ist, kann die Ansicht als &quot;Checkout-normal&quot;bezeichnet werden. If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -219,7 +219,7 @@ class Checkout extends Component {
 
 ## Verwenden des Visual Experience Composer für eine SPA
 
-Wenn Sie Ihre XDM-Ansichten definiert und`sendEvent()` mit diesen XDM-Ansichten implementiert haben, kann der VEC diese Ansichten erkennen und es Benutzern ermöglichen, Aktionen und Änderungen für A/B- oder XT-Aktivitäten zu erstellen.
+Wenn Sie Ihre XDM-Ansichten definiert und `sendEvent()` mit diesen XDM-Ansichten implementiert haben, kann der VEC diese Ansichten erkennen und es Benutzern ermöglichen, Aktionen und Änderungen für A/B- oder XT-Aktivitäten zu erstellen.
 
 >[!NOTE]
 >
