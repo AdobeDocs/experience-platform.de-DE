@@ -2,13 +2,13 @@
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
 title: LinkedIn Insight-Tag-Erweiterung
 seo-title: LinkedIn Insight-Tag-Erweiterung
-description: Die LinkedIn Insight-Tag-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die LinkedIn Insight-Tag-Erweiterung ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die LinkedIn Insight-Tag-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die LinkedIn Insight-Tag-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 45%
+source-wordcount: '552'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 45%
 
 Install the [!DNL LinkedIn Insight Tag] to use conversion tracking, retargeting and website demographics features.
 
-[!DNL LinkedIn Insight Tag] ist eine Werbeerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [LinkedIn Insight-Tag](https://business.linkedin.com/de-de/marketing-solutions/insight-tag).
+[!DNL LinkedIn Insight Tag] ist eine Werbeerweiterung in der Echtzeit-Kundendatenplattform von Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [LinkedIn Insight-Tag](https://business.linkedin.com/de-de/marketing-solutions/insight-tag).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
