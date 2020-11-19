@@ -2,24 +2,24 @@
 keywords: destinations;destination;destination types
 title: Zieltypen und Kategorien
 seo-title: Zieltypen und Kategorien
-description: 'In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportländer Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierungen an und exportieren Segmente und qualifizierte Profil in Ziele. Experience Platform Launch Extensions leiten Rohdaten aus Ereignissen an verschiedene Zieltypen weiter. '
-seo-description: In der Adobe Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportländer Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierungen an und exportieren Segmente und qualifizierte Profil in Ziele. Experience Platform Launch Extensions leiten Rohdaten aus Ereignissen an verschiedene Zieltypen weiter.
+description: 'In der Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Experience Platform Launch Extensions leiten Rohdaten aus Ereignissen an verschiedene Zieltypen weiter. '
+seo-description: In der Echtzeit-Kundendatenplattform erfassen Profil-/Segmentexportziele Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Experience Platform Launch Extensions leiten Rohdaten aus Ereignissen an verschiedene Zieltypen weiter.
 translation-type: tm+mt
-source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 15%
+source-wordcount: '586'
+ht-degree: 16%
 
 ---
 
 
 # Zieltypen und Kategorien
 
-Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Adobe Echtzeit-Ziel-Kundendatenplattform zu verstehen.
+Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Zielen der Echtzeit-Kundendatenplattform zu verstehen.
 
 ## Zieltypen
 
-In Adobe Echtzeit-Kundendatenplattform unterscheiden wir zwischen zwei Zieltypen - Verbindungen und Erweiterungen. Es gibt zwei Arten von Verbindungszielen: Profil Export-Ziele und Segmentexport-Ziele.
+In der Echtzeit-Kundendatenplattform wird zwischen zwei Zieltypen unterschieden: Verbindungen und Erweiterungen. Es gibt zwei Arten von Verbindungszielen: Profil Export-Ziele und Segmentexport-Ziele.
 
 ![Zieltypen](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -27,7 +27,7 @@ In Adobe Echtzeit-Kundendatenplattform unterscheiden wir zwischen zwei Zieltypen
 
 ### Verbindungen {#connections}
 
-**[!UICONTROL Profil-Export]** - und **[!UICONTROL Segmentexport]** -Ziele in Adobe Echtzeit-Kundendatenplattform erfassen Ereignis-Daten, kombinieren Sie diese mit anderen Datenquellen, um das [Echtzeit-Kundenkundensegment](/help/profile/home.md)zu bilden, Segmentierung anzuwenden und Segmente und qualifizierte Profil an Ziele zu exportieren.
+**[!UICONTROL Profil-Export]** - und **[!UICONTROL Segmentexport]** -Ziele in Echtzeit-Daten zur Kundendatenplattform erfassen Ereignis-Daten, kombinieren Sie diese mit anderen Datenquellen, um das [Echtzeit-Kundendaten-Profil](/help/profile/home.md)zu bilden, Segmentierung anzuwenden und Segmente und qualifizierte Profil an Ziele zu exportieren.
 
 <br> 
 
