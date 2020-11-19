@@ -2,13 +2,13 @@
 keywords: Marketo;marketo;Marketo extension;marketo extension
 title: Marketo-Erweiterung
 seo-title: Marketo-Erweiterung
-description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 44%
+source-wordcount: '555'
+ht-degree: 43%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 44%
 
 [!DNL Marketo's] leistungsstarke Software zur Marketingautomatisierung hilft Marketingfachleuten, die Kunst und Wissenschaft des digitalen Marketings Übergeordnet zu machen, um Kunden und Potenzieller Kunden zu binden.
 
-[!DNL Marketo] ist eine E-Mail-Erweiterung in der Echtzeit-Kundendatenplattform von Adobe. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der [Seite der Erweiterung auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+[!DNL Marketo] ist eine E-Mail-Erweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der [Seite der Erweiterung auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
