@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführe
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 79%
+source-wordcount: '420'
+ht-degree: 75%
 
 ---
 
 
 # Ausführen von Befehlen
 
-Nachdem der Basis-Code auf Ihrer Web-Seite implementiert wurde, können Sie mit der Ausführung von Befehlen mit dem SDK beginnen. Sie müssen nicht warten, bis die externe Datei \(`alloy.js`\) vom Server geladen wird, damit Befehle ausgeführt werden können. Wenn das SDK noch nicht fertig geladen wurde, werden Befehle in die Warteschlange gestellt und so bald wie möglich vom SDK verarbeitet.
+Nachdem der Basis-Code auf Ihrer Web-Seite implementiert wurde, können Sie mit der Ausführung von Befehlen mit dem SDK beginnen. Sie müssen nicht warten, bis die externe Datei (legierte.js) vom Server geladen wird, bevor Sie Befehle ausführen. Wenn das SDK noch nicht fertig geladen wurde, werden Befehle in die Warteschlange gestellt und so bald wie möglich vom SDK verarbeitet.
 
 Befehle werden mit der folgenden Syntax ausgeführt.
 
@@ -42,7 +42,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 Wenn es für Sie unwichtig ist, wann der Befehl erfolgreich ist, können Sie den `then`-Abruf entfernen.
@@ -52,7 +52,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 Ebenso können Sie den `catch`-Abruf entfernen, wenn es für Sie unwichtig ist, wann der Befehl fehlschlägt.
@@ -62,7 +62,7 @@ alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
-  })
+  });
 ```
 
 ### Antwortobjekte
@@ -70,9 +70,10 @@ alloy("commandName", options)
 Alle von Befehlen zurückgegebenen Versprechungen werden mit einem `result` Objekt gelöst. Das Ergebnisobjekt enthält Daten, die vom Befehl und der Zustimmung des Benutzers abhängen. Bibliotheksinformationen werden beispielsweise im folgenden Befehl als Eigenschaft des results-Objekts übergeben.
 
 ```js
-alloy("getLibraryInfo").then(function(result) {
-  console.log(results.libraryInfo.version);
-});
+alloy("getLibraryInfo")
+  .then(function(result) {
+    console.log(results.libraryInfo.version);
+  });
 ```
 
 ### Zustimmung
