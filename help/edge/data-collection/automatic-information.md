@@ -1,21 +1,21 @@
 ---
 title: Automatisch erfasste Informationen
 seo-title: Informationen, die automatisch vom Adobe Experience Platform Web SDK erfasst werden
-description: Beschreibung der einzelnen Informationen, die das Adobe Experience Cloud SDK automatisch erfasst
-seo-description: Beschreibung der einzelnen Informationen, die das Adobe Experience Cloud SDK automatisch erfasst
+description: Beschreibung der von Adobe Experience Cloud SDK automatisch erfassten Informationen
+seo-description: Beschreibung der von Adobe Experience Cloud SDK automatisch erfassten Informationen
 keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 100%
+source-wordcount: '385'
+ht-degree: 84%
 
 ---
 
 
 # Automatisch erfasste Informationen
 
-Das Adobe Experience Cloud SDK sammelt eine Reihe von Informationen automatisch ohne spezielle Konfiguration. Diese Informationen können jedoch bei Bedarf mit der `context`-Option im `configure`-Befehl deaktiviert werden. Siehe [Konfigurieren des SDK](../fundamentals/configuring-the-sdk.md). Nachstehend eine Liste dieser Informationen. Der Name in Klammern gibt die Zeichenfolge an, die beim Konfigurieren des Kontexts verwendet wird.
+Adobe Experience Platform Web SDK sammelt eine Reihe von Informationen automatisch ohne spezielle Konfiguration. Diese Informationen können jedoch bei Bedarf mit der `context`-Option im `configure`-Befehl deaktiviert werden. Siehe [Konfigurieren des SDK](../fundamentals/configuring-the-sdk.md). Nachstehend eine Liste dieser Informationen. Der Name in Klammern gibt die Zeichenfolge an, die beim Konfigurieren des Kontexts verwendet wird.
 
 ## Gerät (`device`)
 
@@ -57,7 +57,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-Die Art der Umgebung, in der das Erlebnis auftauchte. Das Adobe Experience Platform SDK für JavaScript stellt immer `browser` ein.
+Die Art der Umgebung, durch die das Erlebnis auftrat. Adobe Experience Platform Web SDK setzt dies immer auf `browser`.
 
 ### Viewport-Höhe
 
