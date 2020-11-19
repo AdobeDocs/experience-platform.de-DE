@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Pl
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '236'
 ht-degree: 23%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 # Übersicht über die Optionen zur Personalisierung
 
-Das Adobe Experience Platform [!DNL Web SDK] unterstützt die Abfrage von Personalisierungslösungen bei der Adobe, einschließlich Adobe Target. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] unterstützt die Abfrage von Personalisierungslösungen bei der Adobe, einschließlich Adobe Target. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen zum [Verwalten von Flackern](../personalization/manage-flicker.md).
 
 ## Automatisches Wiedergeben von Inhalten
 
@@ -51,12 +51,12 @@ alloy("sendEvent",{
     if (result.decisions){
       // Do something with the decisions.
     }
-  })
+  });
 ```
 
 Dadurch wird eine Liste von Entscheidungen als JSON-Objekt für jede Entscheidung zurückgegeben.
 
-```javascript
+```json
 {
   "decisions": [
     {
