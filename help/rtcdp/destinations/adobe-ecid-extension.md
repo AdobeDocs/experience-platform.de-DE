@@ -2,13 +2,13 @@
 Keywords: ECID;ecid
 title: Experience Cloud ID-Diensterweiterung
 seo-title: Experience Cloud ID-Diensterweiterung
-description: Die Experience Cloud ID Service-Erweiterung ist ein Personalisierungsziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Experience Cloud ID Service-Erweiterung ist ein Personalisierungsziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Experience Cloud ID Service-Erweiterung ist ein Personalisierungsziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Experience Cloud ID Service-Erweiterung ist ein Personalisierungsziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 47%
+source-wordcount: '554'
+ht-degree: 45%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 47%
 
 This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
 
-[!DNL Experience Cloud]Der ID Service ist eine Personalisierungserweiterung in der Adobe Echtzeit-Kundendatenplattform. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](https://docs.adobe.com/content/help/de-DE/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) in [!DNL Experience Platform Launch] documentation.
+[!DNL Experience Cloud] Der ID-Dienst ist eine Erweiterung der Kundendatenplattform in Echtzeit. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](https://docs.adobe.com/content/help/de-DE/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) in [!DNL Experience Platform Launch] documentation.
 
 Dieses Ziel ist eine [!DNL Adobe Experience Platform Launch] Erweiterung. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
