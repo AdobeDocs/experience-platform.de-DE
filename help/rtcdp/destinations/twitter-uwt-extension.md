@@ -2,12 +2,12 @@
 keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Twitter Universal Website Tag-Erweiterung
 seo-title: Twitter Universal Website Tag-Erweiterung
-description: Die Erweiterung des universellen Twitter-Website-Tags ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Erweiterung des universellen Twitter-Website-Tags ist ein Werbeziel in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Erweiterung des universellen Twitter-Website-Tags ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Erweiterung des universellen Twitter-Website-Tags ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 34%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 34%
 
 [!DNL Twitter Universal Website Tag] stellt Aktionen zum Senden von Beacons an das Twitter-UWT-Tag bereit.
 
-[!DNL Twitter Universal Website Tag] ist eine Werbeerweiterung in der Adobe Echtzeit-Kundendatenplattform. Weitere Informationen zur Erweiterungsfunktion finden Sie unter [Erweiterte Konvertierungsverfolgung](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
+[!DNL Twitter Universal Website Tag] ist eine Werbeerweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Erweiterungsfunktion finden Sie unter [Erweiterte Konvertierungsverfolgung](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
 
 Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
