@@ -5,9 +5,9 @@ title: Amazon Kinesis-Anschluss
 topic: overview
 description: Die nachstehende Dokumentation enthält Informationen dazu, wie Amazon Kinesis mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '223'
 ht-degree: 1%
 
 ---
@@ -34,8 +34,7 @@ Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbi
 ### APIs verwenden
 
 - [Erstellen eines Amazon Kinesis Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
-- [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Erfassen von Streaming-Daten mithilfe der Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### Verwenden der UI
 
