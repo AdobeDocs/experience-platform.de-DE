@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-E-Commerce-System und zum Einbinden dieser Daten in die Plattform über Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: a9d6c6dda560ec401bdf41319994153e7f2c0572
 workflow-type: tm+mt
 source-wordcount: '1509'
 ht-degree: 16%
@@ -14,7 +14,7 @@ ht-degree: 16%
 ---
 
 
-# Erfassen von E-Commerce-Daten über Quellschnittstellen und APIs
+# Erfassen von eCommerce-Daten über Quellschnittstellen und APIs
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
