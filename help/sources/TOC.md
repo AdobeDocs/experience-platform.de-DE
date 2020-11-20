@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
+source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '683'
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 8%
       - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
-      - [Blue-Synapse-Analytics-Anschluss](connectors/databases/synapse-analytics.md)
+      - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
       - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
@@ -59,7 +59,7 @@ ht-degree: 8%
       - [IBM DB2 Connector](connectors/databases/ibm-db2.md)
       - [Microsoft SQL Server Connector](connectors/databases/sql-server.md)
       - [MySQL Connector](connectors/databases/mysql.md)
-      - [Oracle Connector](connectors/databases/oracle.md)
+      - [Oracle-Anschluss](connectors/databases/oracle.md)
       - [Phoenix-Anschluss](connectors/databases/phoenix.md)
       - [PostgreSQL Connector](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
@@ -96,7 +96,7 @@ ht-degree: 8%
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/api/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/api/create/databases/data-explorer.md)
-         - [Blue-Synapse-Analytics-Anschluss](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics Connector](tutorials/api/create/databases/synapse-analytics.md)
          - [Azurblauer Tischstecker, Datenspeicherung](tutorials/api/create/databases/ats.md)
          - [Steckverbinder](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
@@ -104,7 +104,7 @@ ht-degree: 8%
          - [HP-Vertikalanschluss](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2 Connector](tutorials/api/create/databases/ibm-db2.md)
          - [MySQL Connector](tutorials/api/create/databases/mysql.md)
-         - [Oracle Connector](tutorials/api/create/databases/oracle.md)
+         - [Oracle-Anschluss](tutorials/api/create/databases/oracle.md)
          - [Phoenix-Anschluss](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL Connector](tutorials/api/create/databases/postgres.md)
          - [SQL Server-Anschluss](tutorials/api/create/databases/sql-server.md)
@@ -136,6 +136,7 @@ ht-degree: 8%
       - [Erfassen von Daten zur Marketingautomatisierung](tutorials/api/collect/marketing-automation.md)
       - [Zahlungsdaten erfassen](tutorials/api/collect/payments.md)
       - [Protokolldaten erfassen](tutorials/api/collect/protocols.md)
+      - [Streaming-Daten erfassen](tutorials/api/collect/streaming.md)
    - [Erfassen von Parketdaten aus einem Cloud-Datenspeicherung-System eines Drittanbieters](tutorials/api/cloud-storage-parquet.md)
    - [Erstellen einer Datenbank-Basisverbindung mit der Flow Service API](tutorials/api/create-dataset-base-connection.md)
    - [Überwachen von Datenflüssen mithilfe der Flow Service API](tutorials/api/monitor.md)
@@ -172,8 +173,8 @@ ht-degree: 8%
          - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](tutorials/ui/create/databases/hive.md)
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/ui/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/ui/create/databases/data-explorer.md)
-         - [Blue-Synapse-Analytics-Anschluss](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azurblauer Tischstecker, Datenspeicherung](tutorials/ui/create/databases/ats.md)
+         - [azure synapse Analytics Connector](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azurblender Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
          - [Steckverbinder](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Abfrage Connector](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/ui/create/databases/greenplum.md)
@@ -181,7 +182,7 @@ ht-degree: 8%
          - [IBM DB2 Connector](tutorials/ui/create/databases/ibm-db2.md)
          - [Microsoft SQL Server Connector](tutorials/ui/create/databases/sql-server.md)
          - [MySQL Connector](tutorials/ui/create/databases/mysql.md)
-         - [Oracle Connector](tutorials/ui/create/databases/oracle.md)
+         - [Oracle-Anschluss](tutorials/ui/create/databases/oracle.md)
          - [Phoenix-Anschluss](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL Connector](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
