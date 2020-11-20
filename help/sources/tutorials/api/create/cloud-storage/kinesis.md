@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zum Herstellen einer Verbindung zwischen der Experience Platform und einem Amazon Kinesis-Konto zu führen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 22%
+source-wordcount: '534'
+ht-degree: 27%
 
 ---
 
@@ -41,7 +41,7 @@ Damit Sie [!DNL Flow Service] eine Verbindung mit Ihrem [!DNL Amazon Kinesis] Ko
 | ---------- | ----------- |
 | `accessKeyId` | Die Zugriffsschlüssel-ID für Ihr [!DNL Kinesis] Konto. |
 | `secretKey` | Der geheime Zugriffsschlüssel für Ihr [!DNL Kinesis] Konto. |
-| `region` |  | Die Region für Ihr [!DNL Kinesis] Konto. |
+| `region` | Die Region für Ihr [!DNL Kinesis] Konto. |
 | `connectionSpec.id` | Die [!DNL Kinesis] Verbindungs-ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 Weitere Informationen zu diesen Werten finden Sie in [diesem Kinesis-Dokument](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
@@ -52,19 +52,19 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Verbindung erstellen
 
@@ -123,4 +123,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine [!DNL Amazon Kinesis] Verbindung mit APIs erstellt und eine eindeutige ID als Teil des Antwortkörpers erhalten. Mit dieser Verbindungs-ID können Sie Cloud-Datenspeicherung mithilfe der Flow Service API [untersuchen](../../explore/cloud-storage.md).
+In diesem Lernprogramm haben Sie eine [!DNL Amazon Kinesis] Verbindung mit APIs erstellt und eine eindeutige ID als Teil des Antwortkörpers erhalten. Mit dieser Verbindungs-ID können Sie Streaming-Daten mithilfe der Flow Service API [erfassen](../../collect/streaming.md).
