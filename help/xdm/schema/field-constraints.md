@@ -5,7 +5,7 @@ title: XDM-Feldtypeinschränkungen
 topic: overview
 description: Eine Referenz für XDM-Feldtypeinschränkungen, einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren.
 translation-type: tm+mt
-source-git-commit: 19167f58fae6fac7d938deb74182d2e19960beb3
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 74%
@@ -40,7 +40,7 @@ The table below describes the mapping between each XDM type (`meta:xdmType`) and
 | date-time | Typ: Zeichenfolge<br>Format: Datum/Uhrzeit<br>(RFC 3339, Abschnitt 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | timestamp | Ganzzahl<br>(unix millis) | int64<br>(unix millis) |
 | map | object | ZUORDNEN kommentierter Gruppe<br><br>&lt;<span>key_type</span>> MUSS ZEICHENFOLGE sein<br><br>&lt;<span>value_type</span>> Typ der Zuordnungwerte | MapType<br><br>&quot;keyType&quot; MUSS StringType sein<br><br>&quot;valueType&quot; ist Typ der Zuordnungwerte. | java.util.Map | Map | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
 
-## Definieren von XDM-Feldtypen in der API
+## Definieren von XDM-Feldtypen in der API {#define-fields}
 
 XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards and basic field types, with additional constraints for field names which are enforced by [!DNL Experience Platform]. The [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) allows you to define additional field types through the use of formats and optional constraints. XDM field types are exposed by the field-level attribute, `meta:xdmType`.
 
@@ -50,7 +50,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
 
 In der folgenden Tabelle sind die entsprechenden Formatierungen zur Definition von skalaren Feldtypen und spezifischeren Feldtypen mit optionalen Eigenschaften aufgeführt. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung zum [Erstellen einer Mischung](../api/create-mixin.md) oder zum [Erstellen eines Datentyps](../api/create-data-type.md)bereitgestellt wird.
+Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung zum [Erstellen einer Mischung](../api/mixins.md#create) oder zum [Erstellen eines Datentyps](../api/data-types.md#create)bereitgestellt wird.
 
 <table>
   <tr>
