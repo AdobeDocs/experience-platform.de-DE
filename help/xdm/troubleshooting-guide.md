@@ -5,9 +5,9 @@ title: Handbuch zur Fehlerbehebung bei Experience Data Model (XDM)
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Experience Data Model (XDM) System sowie eine Anleitung zur Fehlerbehebung für häufige Fehler.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 Sie können einem Schema Felder mit einem Mixin hinzufügen. Jedes Mixin ist mit einer oder mehreren Klassen kompatibel, sodass das Mixin in jedem Schema verwendet werden kann, das eine dieser kompatiblen Klassen implementiert. Adobe Experience Platform stellt verschiedene Branchenmixins mit eigenen vordefinierten Feldern zur Verfügung. Sie können jedoch eigene Felder zu einem Schema hinzufügen, indem Sie neue Mixins mit der API oder der Benutzeroberfläche erstellen.
 
-Weitere Informationen zum Erstellen neuer Mixins in der API finden Sie im API-Entwicklerhandbuch im [Dokument zum Erstellen eines Mixins](api/create-mixin.md) [!DNL Schema Registry] . Wenn Sie die Benutzeroberfläche verwenden, finden Sie weitere Informationen im Tutorial zum [Schema-Editor](./tutorials/create-schema-ui.md).
+Weitere Informationen zum Erstellen neuer Mixins in der [!DNL Schema Registry] API finden Sie im Handbuch zum [mixin-Endpunkt](api/mixins.md#create). Wenn Sie die Benutzeroberfläche verwenden, finden Sie weitere Informationen im Tutorial zum [Schema-Editor](./tutorials/create-schema-ui.md).
 
 ### Welches sind die besten Verwendungen für Mixins und Datentypen?
 
@@ -39,21 +39,21 @@ Weitere Informationen zum Erstellen neuer Mixins in der API finden Sie im API-En
 
 Alle [!DNL Schema Registry] Ressourcen (Schemas, Mixins, Datentypen, Klassen) verfügen über einen URI, der als eindeutige ID für Referenz- und Suchzwecke dient. Wenn Sie ein Schema in der API anzeigen, finden Sie es in den Attributen der obersten Ebene `$id` und `meta:altId` .
 
-Weitere Informationen finden Sie im Abschnitt zur [Schema-Identifizierung](api/getting-started.md#schema-identification) im [!DNL Schema Registry] API-Entwicklerhandbuch.
+Weitere Informationen finden Sie im Abschnitt zur [Ressourcenidentifizierung](api/getting-started.md#resource-identification) im [!DNL Schema Registry] API-Entwicklerhandbuch.
 
 ### Wann verhindert ein Schema-Beginn Umbrüche?
 
-Umbrüchige Änderungen können an einem Schema vorgenommen werden, solange es noch nie zur Erstellung eines Datensatzes verwendet oder für die Verwendung im [[!DNL Echtzeit-Kundendienstprogramm]](../profile/home.md)aktiviert wurde. Sobald ein Schema bei der Erstellung eines Datensatzes verwendet oder für die Verwendung mit aktiviert wurde, [!DNL Real-time Customer Profile]werden die Regeln der [Schema-Evolution](schema/composition.md#evolution) vom System strikt durchgesetzt.
+Umbrüchige Änderungen können an einem Schema vorgenommen werden, solange es noch nie bei der Erstellung eines Datensatzes verwendet oder zur Verwendung in aktiviert wurde [[!DNL Real-time Customer Profile]](../profile/home.md). Sobald ein Schema bei der Erstellung eines Datensatzes verwendet oder für die Verwendung mit aktiviert wurde, [!DNL Real-time Customer Profile]werden die Regeln der [Schema-Evolution](schema/composition.md#evolution) vom System strikt durchgesetzt.
 
 ### Wie hoch ist die maximale Größe eines langen Feldtyps?
 
 Ein langer Feldtyp ist eine Ganzzahl mit einer maximalen Größe von 53 (+1) Bit, wodurch ein potenzieller Bereich zwischen -9007199254740992 und 9007199254740992 liegt. Dies liegt daran, dass JavaScript-Implementierungen von JSON keine langen Ganzzahlen darstellen.
 
-Weitere Informationen zu Feldtypen finden Sie im Abschnitt [Definieren von XDM-Feldtypen](api/appendix.md#field-types) [!DNL Schema Registry] im API-Entwicklerhandbuch.
+Weitere Informationen zu Feldtypen finden Sie im Dokument zu [XDM-Feldtypbeschränkungen](./schema/field-constraints.md).
 
 ### Wie definiere ich Identitäten für mein Schema?
 
-In [!DNL Experience Platform]diesem Fall werden Identitäten unabhängig von den zu interpretierenden Datenquellen zur Identifizierung eines Subjekts (in der Regel einer einzelnen Person) verwendet. Sie werden in Schemas definiert, indem Sie Schlüsselfelder als &quot;Identität&quot;markieren. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [[!DNL-Experience Cloud-ID (ECID)]](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM-ID und andere eindeutige ID-Felder.
+In [!DNL Experience Platform]diesem Fall werden Identitäten unabhängig von den zu interpretierenden Datenquellen zur Identifizierung eines Subjekts (in der Regel einer einzelnen Person) verwendet. Sie werden in Schemas definiert, indem Sie Schlüsselfelder als &quot;Identität&quot;markieren. Häufig verwendete Identitätsfelder umfassen E-Mail-Adresse, Telefonnummer, CRM-ID [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html)und andere eindeutige ID-Felder.
 
 Felder können entweder über die API oder die Benutzeroberfläche als Identitäten gekennzeichnet werden.
 
@@ -77,7 +77,7 @@ Primär-IDs sind optional, da Schema 0 oder 1 davon haben können. Ein Schema mu
 
 ### Wie aktiviere ich ein Schema zur Verwendung in [!DNL Real-time Customer Profile]?
 
-Schema sind für die Verwendung im [[!DNL Echtzeit-Kundenkonto]](../profile/home.md) durch das Hinzufügen eines &quot;Vereinigung&quot;-Tags aktiviert, das sich im `meta:immutableTags` Attribut des Schemas befindet. Die Aktivierung eines Schemas zur Verwendung mit [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
+Schema sind für die Verwendung [[!DNL Real-time Customer Profile]](../profile/home.md) durch das Hinzufügen eines Tags &quot;Vereinigung&quot;aktiviert, das sich im `meta:immutableTags` Attribut des Schemas befindet. Die Aktivierung eines Schemas zur Verwendung mit [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
 
 #### Aktivieren eines vorhandenen Schemas zur [!DNL Profile] Verwendung der API
 
@@ -120,7 +120,7 @@ Im Folgenden finden Sie eine Liste von Fehlermeldungen, auf die Sie bei der Arbe
 
 Dieser Fehler wird angezeigt, wenn das System eine bestimmte Ressource nicht finden konnte. Die Ressource wurde möglicherweise gelöscht oder der Pfad im API-Aufruf ist ungültig. Vergewissern Sie sich, dass Sie einen gültigen Pfad für Ihren API-Aufruf eingegeben haben, bevor Sie ihn erneut versuchen. Sie können überprüfen, ob Sie die richtige ID für die Ressource eingegeben haben und ob der Pfad mit dem entsprechenden Container (global oder mieter) richtig benannt wurde.
 
-Weitere Informationen zum Erstellen von Nachschlagetpfaden in der API finden Sie in den Abschnitten zur Identifizierung von [Containern](./api/getting-started.md#container) und [Schemas](api/getting-started.md#schema-identification) im Entwicklerhandbuch [!DNL Schema Registry] .
+Weitere Informationen zum Erstellen von Nachschlagetpfaden in der API finden Sie in den Abschnitten zur [Container](./api/getting-started.md#container) - und [Ressourcenidentifizierung](api/getting-started.md#resource-identification) im Entwicklerhandbuch [!DNL Schema Registry] .
 
 ### Titel muss eindeutig sein
 
@@ -149,7 +149,7 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine Ressource mit einem
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine neue Mischung mit falsch benannten Feldern zu erstellen. Mixins, die von Ihrer IMS-Organisation definiert werden, müssen ihre Felder mit einem Namensraum versehen, `TENANT_ID` um Konflikte mit anderen Branchen- und Händlerressourcen zu vermeiden. Ausführliche Beispiele für ordnungsgemäße Datenstrukturen für Mixins finden Sie im Dokument zum [Erstellen eines Mixins](api/create-mixin.md) im [!DNL Schema Registry] API-Entwicklerhandbuch.
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine neue Mischung mit falsch benannten Feldern zu erstellen. Mixins, die von Ihrer IMS-Organisation definiert werden, müssen ihre Felder mit einem Namensraum versehen, `TENANT_ID` um Konflikte mit anderen Branchen- und Händlerressourcen zu vermeiden. Ausführliche Beispiele für ordnungsgemäße Datenstrukturen für Mixins finden Sie im [mixins-Endpunkthandbuch](./api/mixins.md#create).
 
 
 ### [!DNL Real-time Customer Profile] Fehler
