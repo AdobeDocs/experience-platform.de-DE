@@ -5,10 +5,10 @@ title: Entwickleranhang für Schema Registry
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 42d3bed14c5f926892467baeeea09ee7a140ebdc
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 73%
+source-wordcount: '730'
+ht-degree: 53%
 
 ---
 
@@ -16,6 +16,43 @@ ht-degree: 73%
 # Anhang
 
 This document provides supplemental information related to working with the [!DNL Schema Registry] API.
+
+## Verwenden von Abfrageparametern {#query}
+
+Die [!DNL Schema Registry] unterstützt die Verwendung von Abfrage-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Ressourcen.
+
+>[!NOTE]
+>
+>Wenn mehrere Abfrageparameter kombiniert werden, müssen diese durch Und-Zeichen (`&`) getrennt werden.
+
+### Paging {#paging}
+
+Zu den häufigsten Abfrageparametern für das Paging gehören:
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `start` | Geben Sie an, wo die aufgelisteten Ergebnisse beginnen sollen. Dieser Wert kann aus dem `_page.next` Attribut einer Liste-Antwort abgerufen und für den Zugriff auf die nächste Ergebnisseite verwendet werden. Wenn der `_page.next` Wert null ist, ist keine zusätzliche Seite verfügbar. |
+| `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Ressourcen zurück. |
+| `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Adding a `-` before the parameter value (`orderby=-title`) will sort items by title in descending order (Z-A). |
+
+### Filter {#filtering}
+
+Sie können die Ergebnisse mithilfe des `property` Parameters filtern, der verwendet wird, um einen bestimmten Operator auf eine bestimmte JSON-Eigenschaft in den abgerufenen Ressourcen anzuwenden. Zu den unterstützten Operatoren gehören:
+
+| Operator | Beschreibung | Beispiel |
+| --- | --- | --- |
+| `==` | Filter, ob die Eigenschaft dem bereitgestellten Wert entspricht. | `property=title==test` |
+| `!=` | Filter, ob die Eigenschaft nicht mit dem bereitgestellten Wert übereinstimmt. | `property=title!=test` |
+| `<` | Filter, ob die Eigenschaft kleiner als der angegebene Wert ist. | `property=version<5` |
+| `>` | Filter, ob die Eigenschaft größer als der angegebene Wert ist. | `property=version>5` |
+| `<=` | Filter, ob die Eigenschaft kleiner als oder gleich dem bereitgestellten Wert ist. | `property=version<=5` |
+| `>=` | Filter, ob die Eigenschaft größer oder gleich dem bereitgestellten Wert ist. | `property=version>=5` |
+| `~` | Filter, ob die Eigenschaft mit einem bereitgestellten regulären Ausdruck übereinstimmt. | `property=title~test$` |
+| (Keine) | Wenn nur der Eigenschaftsname angegeben wird, werden nur Einträge zurückgegeben, bei denen die Eigenschaft vorhanden ist. | `property=title` |
+
+>[!TIP]
+>
+>Sie können den `property` Parameter verwenden, um Mixins nach ihrer kompatiblen Klasse zu filtern. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
 
 ## Kompatibilitätsmodus
 
