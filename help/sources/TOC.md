@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
+source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '663'
 ht-degree: 8%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 8%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
+      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -97,7 +97,7 @@ ht-degree: 8%
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/api/create/databases/data-explorer.md)
          - [azure synapse Analytics Connector](tutorials/api/create/databases/synapse-analytics.md)
-         - [Azurblauer Tischstecker, Datenspeicherung](tutorials/api/create/databases/ats.md)
+         - [Azurblender Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
          - [Steckverbinder](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/api/create/databases/greenplum.md)
@@ -138,10 +138,11 @@ ht-degree: 8%
       - [Protokolldaten erfassen](tutorials/api/collect/protocols.md)
       - [Streaming-Daten erfassen](tutorials/api/collect/streaming.md)
    - [Erfassen von Parketdaten aus einem Cloud-Datenspeicherung-System eines Drittanbieters](tutorials/api/cloud-storage-parquet.md)
-   - [Erstellen einer Datenbank-Basisverbindung mit der Flow Service API](tutorials/api/create-dataset-base-connection.md)
-   - [Überwachen von Datenflüssen mithilfe der Flow Service API](tutorials/api/monitor.md)
-   - [Aktualisieren von Verbindungsinformationen mithilfe der Flow Service API](tutorials/api/update.md)
-   - [Löschen von Verbindungen mithilfe der Flow Service API](tutorials/api/delete.md)
+   - [Eine Datensatzverbindung erstellen](tutorials/api/create-dataset-base-connection.md)
+   - [Überwachen von Datenflüssen](tutorials/api/monitor.md)
+   - [Aktualisieren von Verbindungen](tutorials/api/update.md)
+   - [Verbindungen löschen](tutorials/api/delete.md)
+   - [Datenflüsse löschen](tutorials/api/delete-dataflows.md)
 - UI-Lernprogramme {#ui-tutorials}
    - Erstellen eines Quell-Connectors {#create}
       - Adobe-Anwendungen {#adobe-applications}
