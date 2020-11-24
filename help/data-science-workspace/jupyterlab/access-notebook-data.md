@@ -5,7 +5,7 @@ title: Datenzugriff auf Jupyterlab-Notebooks
 topic: Developer Guide
 description: Dieser Leitfaden konzentriert sich auf die Verwendung von Jupyter-Notebooks, die in Data Science Workspace erstellt wurden, um auf Ihre Daten zuzugreifen.
 translation-type: tm+mt
-source-git-commit: a9d65c107d0490910239ed73ac5c19881206c189
+source-git-commit: 645a0f595d268fb08ebfa5652f77a4b1628afcd3
 workflow-type: tm+mt
 source-wordcount: '3078'
 ht-degree: 25%
@@ -116,7 +116,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 Die nachstehende Python-Dokumentation beschreibt die folgenden Konzepte:
 
 - [Aus Datensatz lesen](#python-read-dataset)
-- [Schreiben in einen Datensatz](#write-python)
+- [In einen Datensatz schreiben](#write-python)
 - [Abfragen](#query-data-python)
 - [Erlebnis-Daten filtern](#python-filter)
 
@@ -129,9 +129,8 @@ Wenn Sie den folgenden Code ausführen, wird der gesamte Datensatz gelesen. Bei 
 ```python
 # Python
 
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
 from platform_sdk.dataset_reader import DatasetReader
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
 df = dataset_reader.read()
 df.head()
 ```
@@ -143,10 +142,9 @@ Wenn Sie folgenden Code ausführen, werden Daten aus dem angegebenen Datensatz g
 ```python
 # Python
 
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
 from platform_sdk.dataset_reader import DatasetReader
 
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
 df = dataset_reader.limit(100).offset(10).read()
 ```
 
@@ -158,7 +156,7 @@ Um in ein Dataset in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie in der 
 
 - Verwenden Sie **[!UICONTROL Daten in Notebook]** schreiben, um eine Schreibzelle mit dem ausgewählten Datensatz zu erstellen.
 - Verwenden Sie **[!UICONTROL Daten im Notebook]** durchsuchen, um eine Lesezelle mit dem ausgewählten Datensatz zu erstellen.
-- Verwenden Sie die **[!UICONTROL Abfragen-Daten im Notebook]** , um eine Basiszelle mit der Abfrage Ihres ausgewählten Datensatzes zu erstellen.
+- Verwenden Sie die **[!UICONTROL Abfragen-Daten im Notebook]** , um eine Basiszelle für die Abfrage mit Ihrem ausgewählten Datensatz zu erstellen.
 
 Alternativ können Sie die folgende Codezelle kopieren und einfügen. Ersetzen Sie sowohl die `{DATASET_ID}` als auch `{PANDA_DATAFRAME}`.
 
@@ -166,8 +164,8 @@ Alternativ können Sie die folgende Codezelle kopieren und einfügen. Ersetzen S
 from platform_sdk.models import Dataset
 from platform_sdk.dataset_writer import DatasetWriter
 
-dataset = Dataset(client_context).get_by_id("{DATASET_ID}")
-dataset_writer = DatasetWriter(client_context, dataset)
+dataset = Dataset(get_platform_sdk_client_context()).get_by_id(dataset_id="{DATASET_ID}")
+dataset_writer = DatasetWriter(get_platform_sdk_client_context(), dataset)
 write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 ```
 
@@ -229,10 +227,9 @@ The following cell filters an [!DNL ExperienceEvent] dataset to data existing ex
 ```python
 # Python
 
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
 from platform_sdk.dataset_reader import DatasetReader
 
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
 df = dataset_reader.\
     where(dataset_reader["timestamp"].gt("2019-01-01 00:00:00").\
     And(dataset_reader["timestamp"].lt("2019-12-31 23:59:59"))\
@@ -246,7 +243,7 @@ Mit R-Notebooks können Sie Daten beim Zugriff auf Datensätze paginieren. Nachs
 Die nachstehende R-Dokumentation enthält folgende Konzepte:
 
 - [Aus Datensatz lesen](#r-read-dataset)
-- [Schreiben in einen Datensatz](#write-r)
+- [In einen Datensatz schreiben](#write-r)
 - [Erlebnis-Daten filtern](#r-filter)
 
 ### Read from a dataset in R {#r-read-dataset}
@@ -261,6 +258,7 @@ Wenn Sie den folgenden Code ausführen, wird der gesamte Datensatz gelesen. Bei 
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
+datetime <- import("datetime", convert = FALSE)
 py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 DatasetReader <- psdk$dataset_reader$DatasetReader
 dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
@@ -278,6 +276,7 @@ Wenn Sie folgenden Code ausführen, werden Daten aus dem angegebenen Datensatz g
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
+datetime <- import("datetime", convert = FALSE)
 py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -325,6 +324,7 @@ The following cell filters an [!DNL ExperienceEvent] dataset to data existing ex
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
+datetime <- import("datetime", convert = FALSE)
 py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
@@ -456,7 +456,7 @@ Die nachstehende Dokumentation enthält Beispiele für die folgenden Konzepte:
 
 - [Initialisieren von sparkSession](#scala-initialize)
 - [Datensatz lesen](#read-scala-dataset)
-- [Schreiben in einen Datensatz](#scala-write-dataset)
+- [In einen Datensatz schreiben](#scala-write-dataset)
 - [Lokales Datenwörterbuch erstellen](#scala-create-dataframe)
 - [Erlebnis-Daten filtern](#scala-experienceevent)
 
@@ -487,6 +487,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
+  .option("sandbox-name", clientContext.getSandboxName())
   .option("mode", "interactive")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
@@ -516,7 +517,7 @@ Und
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
-### Schreiben in einen Datensatz {#scala-write-dataset}
+### In einen Datensatz schreiben {#scala-write-dataset}
 
 In Scala können Sie `clientContext` zum Abrufen und Zurückgeben von Plattformwerten importieren, sodass Variablen wie `var userToken`z. B. nicht definiert werden müssen. Im unten stehenden Beispiel zur Skala `clientContext` werden alle erforderlichen Werte definiert und an einen Datensatz zurückgegeben.
 
@@ -531,6 +532,7 @@ df1.write.format("com.adobe.platform.query")
   .option("service-token", clientContext.getServiceToken())
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
+  .option("sandbox-name", clientContext.getSandboxName())
   .option("mode", "interactive")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
