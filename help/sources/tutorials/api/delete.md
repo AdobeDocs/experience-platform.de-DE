@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
 title: Eine Verbindung mit der Flow Service API löschen
 topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Löschen einer Verbindung mithilfe der Flow Service API beschrieben.
 translation-type: tm+mt
-source-git-commit: 9c807270181084a94f288c248a678821ca58e194
+source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 22%
+source-wordcount: '580'
+ht-degree: 28%
 
 ---
 
@@ -31,7 +31,7 @@ Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Ado
 * [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
 * [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully update your connection&#39;s information using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully delete a connection using the [!DNL Flow Service] API.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -39,7 +39,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Der eindeutige `id` Wert für die Verbindung, die Sie aktualisieren möchten. |
+| `{CONNECTION_ID}` | Der eindeutige `id` Wert für die Verbindung, die Sie löschen möchten. |
 
 **Anfrage**
 
