@@ -6,7 +6,7 @@ title: Datenflüsse löschen
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 9%
@@ -66,4 +66,4 @@ Nach einigen Augenblicken wird am unteren Bildschirmrand ein grünes Bestätigun
 
 In diesem Lernprogramm haben Sie den Arbeitsbereich &quot; **[!UICONTROL Quellen]** &quot;erfolgreich zum Löschen vorhandener Datenflüsse verwendet.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Flow Service] API finden Sie im Lernprogramm zum [Löschen von Verbindungen mit der Flow Service API](../../tutorials/api/delete.md)
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Flow Service] API finden Sie im Lernprogramm zum [Löschen von Datenflüssen mithilfe der Flow Service API.](../../tutorials/api/delete-dataflows.md)
