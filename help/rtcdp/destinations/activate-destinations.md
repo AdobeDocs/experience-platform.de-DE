@@ -6,10 +6,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 22%
+source-wordcount: '1722'
+ht-degree: 23%
 
 ---
 
@@ -127,14 +127,6 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >Für Ziele in sozialen Netzwerken müssen Sie in diesem Schritt die Herkunft Ihrer Zielgruppe auswählen. Sie können mit dem nächsten Schritt erst fortfahren, nachdem Sie eine der Optionen in der folgenden Abbildung ausgewählt haben.
 
 ![Datenherkunft auswählen](./assets/choose-data-origin.png)
-
-### **[!UICONTROL Planungsschritt]** {#scheduling}
-
-Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
-
-![Segmentplanschritt](./assets/scheduling-icon.png)
-
-On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. Diese Werte können nicht bearbeitet werden.
 
 ### **[!UICONTROL Schritt &quot;Attribute]** auswählen&quot; {#select-attributes}
 
