@@ -6,10 +6,10 @@ type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 42%
+source-wordcount: '846'
+ht-degree: 41%
 
 ---
 
@@ -36,7 +36,7 @@ In the **[!UICONTROL Authentication]** step, if you had previously set up a conn
 - For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 - For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
-Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Verschlüsselung zu den exportierten Dateien im Abschnitt **[!UICONTROL Schlüssel]** hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel als Base64-kodierte Zeichenfolge geschrieben werden **muss** .
+Optional können Sie im Abschnitt **[!UICONTROL Encryption PGP/GPG]** Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um eine Verschlüsselung mit PGP/GPG zu Ihren exportierten Dateien unter dem Abschnitt **[!UICONTROL Key]** hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel als Base64-kodierte Zeichenfolge geschrieben werden **muss** .
 
 Geben Sie im Schritt **[!UICONTROL Setup]** einen Namen und eine Beschreibung für Ihr neues Ziel sowie das Dateiformat für die exportierten Dateien ein.
 
