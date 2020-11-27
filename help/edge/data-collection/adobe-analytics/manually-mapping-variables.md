@@ -2,10 +2,10 @@
 title: Manuelles Zuordnen von Variablen in Adobe Analytics
 seo-title: Manuelles Zuordnen von Variablen in Adobe Analytics mit Web SDK
 description: Manuelles Zuordnen von Variablen zu Adobe Analytics mithilfe von Verarbeitungsregeln
-seo-description: Variablen manuell mit Verarbeitungsregeln mit Web SDK Adobe Analytics zuordnen
+seo-description: Manuelles Zuordnen von Variablen zu Adobe Analytics mithilfe von Verarbeitungsregeln mit Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 206b5addd6baf5a120b469b21313ee86ac1fe53b
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 35%
@@ -52,7 +52,7 @@ To be used by [!DNL Analytics], XDM data is flattened using dot notation and mad
 
 Auf alle vom Edge Network erfassten Daten kann über [Verarbeitungsregeln](https://docs.adobe.com/content/help/de-DE/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) zugegriffen werden. In [!DNL Analytics], you can use processing rules to incorporate context data into [!DNL Analytics] variables.
 
-For example, in the following rule, Adobe Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x_atag.search.term(Context Data)**.
+For example, in the following rule, Adobe Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x._atag.search.term(Context Data)**.
 
 ![](assets/examplerule.png)
 
