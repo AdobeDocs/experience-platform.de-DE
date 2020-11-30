@@ -5,10 +5,10 @@ description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfol
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 68%
+source-wordcount: '1331'
+ht-degree: 59%
 
 ---
 
@@ -43,6 +43,35 @@ alloy("sendEvent", {
   }
 });
 ```
+
+Zwischen der Ausführung des `sendEvent` Befehls und dem Senden der Daten an den Server kann eine gewisse Zeit vergehen (z. B. wenn die Web SDK-Bibliothek noch nicht vollständig geladen wurde oder die Zustimmung noch nicht eingegangen ist). Wenn Sie einen Teil des `xdm` Objekts nach dem Ausführen des `sendEvent` Befehls ändern möchten, sollten Sie das `xdm` Objekt unbedingt klonen, _bevor_ Sie den `sendEvent` Befehl ausführen. Beispiel:
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+In diesem Beispiel wird die Datenschicht geklont, indem sie in JSON serialisiert und anschließend deserialisiert wird. Als Nächstes wird das geklonte Ergebnis an den `sendEvent` Befehl übergeben. Dadurch wird sichergestellt, dass der `sendEvent` Befehl über eine Momentaufnahme der Datenschicht verfügt, wie sie bei Ausführung des `sendEvent` Befehls bestand, sodass spätere Änderungen am ursprünglichen Datenschichtobjekt nicht in den an den Server gesendeten Daten übernommen werden. Wenn Sie eine Ereignis-basierte Datenschicht verwenden, wird das Klonen der Daten wahrscheinlich bereits automatisch durchgeführt. Wenn Sie beispielsweise die [Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)verwenden, stellt die `getState()` Methode einen berechneten, geklonten Schnappschuss aller vorherigen Änderungen bereit. Dies wird auch automatisch für Sie verarbeitet, wenn Sie die AEP Web SDK Launch Extension verwenden.
 
 >[!NOTE]
 >
