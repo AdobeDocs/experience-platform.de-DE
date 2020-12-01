@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
 translation-type: tm+mt
-source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
+source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '847'
 ht-degree: 3%
 
 ---
@@ -98,6 +98,7 @@ Wenn die folgenden Voraussetzungen nicht erfüllt sind, gibt der Diagramm-Viewer
 - Der Identitätswert ist im ausgewählten Namensraum nicht vorhanden.
 - Das Diagramm hat weniger als zwei Identitäten.
 - Das Diagramm überschreitet die maximale Anzahl von 400 Identitäten.
+- Sie befinden sich in einer Nicht-Produktions-Sandbox-Umgebung.
 
 ![Großcluster](../images/identity-graph-viewer/error-screen.png)
 
