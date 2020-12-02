@@ -5,10 +5,10 @@ title: Audience Manager-Anschluss
 topic: overview
 description: Der Adobe Audience Manager Data Connector streamt Erstanbieter-Daten, die in Adobe Audience Manager bis Adobe Experience Platform erfasst werden. Der Audience Manager-Connector fasst drei Kategorien Daten in die Plattform ein.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 2%
+source-wordcount: '798'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Der Adobe Audience Manager Data Connector streamt Erstanbieter-Daten, die in Ado
 - **Echtzeitdaten:** Daten, die in Echtzeit auf dem Datenerfassungsserver des Audience Managers erfasst werden. Diese Daten werden in Audience Manager verwendet, um regelbasierte Eigenschaften zu füllen, und treten in kürzester Latenzzeit auf der Plattform auf.
 - **Profil-Daten:** Audience Manager nutzt Echtzeitdaten und Onboard-Daten, um Kundendaten abzuleiten. Diese Profil werden zum Ausfüllen von Identitätsdiagrammen und Eigenschaften bei Segmentrealisierungen verwendet.
 
-Der Audience Manager Connector ordnet diese Kategorien dem Experience Data Model (XDM)-Schema zu und sendet sie an die Plattform. Echtzeitdaten werden als XDM ExperienceEvent-Daten gesendet, während Profil-Daten als XDM-Profil gesendet werden.
+Der Audience Manager Connector ordnet diese Kategorien dem Experience Data Model (XDM)-Schema zu und sendet sie an die Plattform. Echtzeit-Daten werden als XDM ExperienceEvent-Daten gesendet, während Profil-Daten als XDM Individuelle Profil gesendet werden.
 
 For instructions on creating a connection with Adobe Audience Manager using the Platform UI, see the [Audience Manager connector tutorial](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
@@ -58,12 +58,12 @@ Audience Manager-Datasets sind standardmäßig zum Profil deaktiviert, und die B
 
 | Dataset-Name | Beschreibung |
 | ------------ | ----------- |
-| Audience Manager Echtzeit | Dieser Datensatz enthält Daten, die durch direkte Treffer auf Audience Manager-DCS-Endpunkten erfasst werden, sowie Identitätskarten für Audience Manager-Profil. Lassen Sie diesen Datensatz für die Erfassung von Profilen aktiviert. |
-| Audience Manager Echtzeit-Profil-Updates | Dieser Datensatz ermöglicht Echtzeit-Targeting von Audience Manager-Eigenschaften und Segmenten. Es enthält Informationen zum regionalen Edge-Routing, zu Eigenschaften und zur Segmentmitgliedschaft. Lassen Sie diesen Datensatz für die Erfassung von Profilen aktiviert. |
-| Audience Manager-Gerätedaten | Gerätedaten mit ECIDs und entsprechenden Segmentzuordnungen, die in Audience Manager aggregiert werden. |
-| Profil-Daten des Audience Managers | Wird für die Audience Manager-Connector-Diagnose verwendet. |
-| Authentifizierte Profile für Audience Manager | Dieser Datensatz enthält vom Audience Manager authentifizierte Profil. |
-| Audience Manager-Authentifizierungsdaten zu Profilen | Wird für die Audience Manager Connector-Diagnose verwendet. |
+| Audience Manager in Echtzeit | Dieser Datensatz enthält Daten, die durch direkte Treffer auf Audience Manager-DCS-Endpunkten erfasst werden, sowie Identitätskarten für Audience Manager-Profil. Lassen Sie diesen Datensatz für die Erfassung von Profilen aktiviert. |
+| Audience Manager-Aktualisierungen des Profils in Echtzeit | Dieser Datensatz ermöglicht Echtzeit-Targeting von Audience Manager-Eigenschaften und Segmenten. Es enthält Informationen zum regionalen Edge-Routing, zu Eigenschaften und zur Segmentmitgliedschaft. Lassen Sie diesen Datensatz für die Erfassung von Profilen aktiviert. Daten sind nicht als Stapel im Datensatz sichtbar. Sie können den Profil-Umschalter aktivieren, um die Daten direkt in Profil zu erfassen. |
+| Audience Manager-Gerätedaten | Gerätedaten mit ECIDs und entsprechenden Segmentzuordnungen, die in Audience Manager aggregiert werden. Daten sind nicht als Stapel im Datensatz sichtbar. Sie können den Profil-Umschalter aktivieren, um die Daten direkt in Profil zu erfassen. |
+| Profil-Daten des Audience Managers | Wird für die Audience Manager-Connector-Diagnose verwendet. Daten sind nicht als Stapel im Datensatz sichtbar. Sie können den Profil-Umschalter aktivieren, um die Daten direkt in Profil zu erfassen. |
+| Authentifizierte Profile für Audience Manager | Dieser Datensatz enthält vom Audience Manager authentifizierte Profil. Daten sind nicht als Stapel im Datensatz sichtbar. Sie können den Profil-Umschalter aktivieren, um die Daten direkt in Profil zu erfassen. |
+| Audience Manager-Authentifizierungsdaten zu Profilen | Wird für die Audience Manager Connector-Diagnose verwendet. Daten sind nicht als Stapel im Datensatz sichtbar. Sie können den Profil-Umschalter aktivieren, um die Daten direkt in Profil zu erfassen. |
 
 ### Verbindungen
 
@@ -73,6 +73,5 @@ Adobe Audience Manager erstellt eine Verbindung im Katalog: Audience Manager Con
 
 | Audience Manager-Daten | Latenz | Anmerkungen |
 | --- | --- | --- |
-| Echtzeitdaten | &lt; 35 Minuten. | Zeit von der Erfassung am Knoten Echtzeit bis zur Anzeige auf dem Plattform Data Lake. |
-| Eingehende Daten | &lt; 13 Stunden | Zeit von der Erfassung in S3-Behältern bis zur Anzeige auf dem Platform Data Lake. |
-| Profildaten | &lt; 2 Tage | Zeit vom Erfassen von Echtzeitdaten/Inbound bis zum Hinzufügen zu einem Profil und schließlich der Anzeige auf dem Platform Data Lake. |
+| Echtzeitdaten | &lt; 35 Minuten. | Zeit vom Erfassen am Edge-Knoten des Audience Managers bis zum Anzeigen im Platform Data Lake. |
+| Profildaten | &lt; 2 Tage | Die Zeit reicht von der Erfassung über DCS/PCS-Edge-Daten und Daten an Bord, die zu einem Profil verarbeitet werden, bis zur Anzeige im Profil. Diese Daten landen heute nicht direkt auf dem Platform Data Lake. Der Profil-Umschalter kann in Audience Manager-Profil-Datensätzen aktiviert werden, um diese Daten direkt in Profil zu erfassen. |
