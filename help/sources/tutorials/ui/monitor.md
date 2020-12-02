@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Anzeigen vorhandener Konten und Datenflüsse aus dem Quellarbeitsbereich.
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Anzeigen vorhandener Datenflüsse aus dem Quellarbeitsbereich.
 solution: Experience Platform
-title: Überwachen von Konten und Datenflüssen
+title: Überwachen von Datenflüssen
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 5%
+source-wordcount: '822'
+ht-degree: 6%
 
 ---
 
 
-# Überwachen von Konten und Datenflüssen in der Benutzeroberfläche
+# Überwachen von Datenflüssen in der Benutzeroberfläche
 
-Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Anzeigen vorhandener Konten und Datenflüsse aus dem [!UICONTROL Sources] -Arbeitsbereich.
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Anzeigen vorhandener Datenflüsse aus dem [!UICONTROL Sources] -Arbeitsbereich.
 
 ## Erste Schritte
 
@@ -27,53 +27,9 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    - [Schema-Editor-Lernprogramm](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-## Konten überwachen
-
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den **[!UICONTROL Quellarbeitsbereich]** zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verschiedene Quellen angezeigt, für die Sie Konten und Datenflüsse erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
-
-Wählen Sie **[!UICONTROL Konten]** aus der oberen Kopfzeile zur Ansicht vorhandener Konten.
-
-![Katalog](../../images/tutorials/monitor/catalog-accounts.png)
-
-Die Seiten **[!UICONTROL Konten]** werden angezeigt. Auf dieser Seite finden Sie eine Liste von anzeigbaren Konten, einschließlich Informationen zu deren Quelle, Benutzername, Anzahl der Datenflüsse und Erstellungsdatum.
-
-Wählen Sie das Trichtersymbol oben links aus, um das Sortierfenster zu starten.
-
-![Konten](../../images/tutorials/monitor/accounts-list.png)
-
-Über das Sortierfeld können Sie auf Konten aus einer bestimmten Quelle zugreifen. Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, und wählen Sie das Konto in der Liste auf der rechten Seite aus.
-
->[!TIP]
->
-> Verwenden Sie die ![Schaltfläche zur](../../images/tutorials/monitor/spectrum-control.png) Steuerung des Spektrums in der Spalte **[!UICONTROL Name]** , um einen neuen Datenfluss für das ausgewählte Konto zu erstellen.
-
-![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
-
-Darüber hinaus können Sie vorhandene Kontoinformationen bearbeiten und Ihre Kontoanmeldeinformationen aktualisieren. Wählen Sie das Stiftsymbol für die Kontoinformationen aus, die Sie bearbeiten möchten.
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-Das Modal **[!UICONTROL Kontodetails]** bearbeiten wird angezeigt. Auf dieser Seite können Sie Ihre vorhandenen Kontodetails und Authentifizierungsdaten aktualisieren.
-
->[!NOTE]
->
-> Die Bearbeitung der Kontodetails ist auf allen Batch-Quell-Connectors verfügbar.
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-Auf der Seite &quot; **[!UICONTROL Konten]** &quot;können Sie eine Liste mit vorhandenen Datenflüssen oder Zielgruppen-Datensätzen, die mit dem Konto, auf das Sie zugegriffen haben, verknüpft sind, Ansicht haben. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (`...`), um mehr verfügbare Optionen für den ausgewählten Datendurchlauf anzuzeigen. Die folgenden Optionen werden weiter beschrieben:
-
-| Kontrolle | Beschreibung |
-| ------- | ----------- |
-| [!UICONTROL Zeitplan bearbeiten] | Ermöglicht die Bearbeitung des Erfassungszeitplans des Datenflusses. |
-| [!UICONTROL Datenflug deaktivieren] | Damit können Sie die Datenerfassung für den ausgewählten Datendurchlauf deaktivieren. |
-| [!UICONTROL Löschen] | Ermöglicht das Löschen des ausgewählten Datenflusses. |
-
-![Datenflüsse](../../images/tutorials/monitor/dataflows.png)
-
 ## Überwachen von Datenflüssen
 
-Datenflüsse können direkt von der Seite &quot; **[!UICONTROL Katalog]** &quot;aus aufgerufen werden, ohne **[!UICONTROL Konten]** anzuzeigen. Wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus, um eine Liste von Datenflüssen Ansicht.
+Melden Sie sich bei der Benutzeroberfläche [der](https://platform.adobe.com) Experience Platform an und wählen Sie dann im linken Navigationsbereich die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den Arbeitsbereich &quot; [!UICONTROL Quellen] &quot;zuzugreifen. Wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile zur Ansicht vorhandener Datenflüsse.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
