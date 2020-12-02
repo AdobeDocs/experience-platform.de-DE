@@ -5,10 +5,10 @@ title: Mit Streaming-Zielen verbinden und Daten aktivieren
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
+source-git-commit: f12b400ca95e23d8e6ac282fafa8f4bb141d703a
 workflow-type: tm+mt
-source-wordcount: '1870'
-ht-degree: 59%
+source-wordcount: '2012'
+ht-degree: 55%
 
 ---
 
@@ -592,6 +592,31 @@ Die zurückgegebene Antwort sollte im `transformations`-Parameter die Segmente u
   }
 }
 ```
+
+## Verwenden von Postman-Sammlungen zur Verbindung mit Streaming-Zielen  {#collections}
+
+Um eine Verbindung zu den Streaming-Zielen herzustellen, die in diesem Lernprogramm beschrieben werden, können Sie diese auf eine optimierte Weise nutzen [[!DNL Postman]](https://www.postman.com/).
+
+[!DNL Postman] ist ein Tool, mit dem Sie API-Aufrufe durchführen und Bibliotheken mit vordefinierten Aufrufen und Umgebung verwalten können.
+
+Für dieses spezielle Tutorial haben wir die folgenden [!DNL Postman] Sammlungen im Anhang zu diesem Artikel aufgenommen:
+
+* [!DNL AWS Kinesis] [!DNL Postman] collection
+* [!DNL Azure Event Hubs] [!DNL Postman] collection
+
+Klicken Sie [hier](assets/DestinationPostmanCollection.zip) , um das Sammlungsarchiv herunterzuladen.
+
+Jede Sammlung enthält die erforderlichen Anforderungs- und Umgebung-Variablen für [!DNL AWS Kinesis]bzw. [!DNL Azure Event Hub]für.
+
+### Verwendung der Postman-Sammlungen
+
+Gehen Sie wie folgt vor, um mit den angehängten [!DNL Postman] Sammlungen erfolgreich eine Verbindung zu den Zielen herzustellen:
+
+* Download and install [!DNL Postman];
+* [Herunterladen](assets/DestinationPostmanCollection.zip) und Entpacken der angehängten Sammlungen;
+* Importieren Sie die Sammlungen aus den entsprechenden Ordnern in Postman.
+* Füllen Sie die Umgebung gemäß den Anweisungen in diesem Artikel aus.
+* Führen Sie die [!DNL API] Anfragen von Postman entsprechend den Anweisungen in diesem Artikel aus.
 
 ## Nächste Schritte
 
