@@ -5,7 +5,7 @@ title: Adobe Experience Platform UI-Handbuch
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Der Abschnitt **[!UICONTROL Profil]** zeigt die Gesamtzahl der Personen mit Prof
 
 Der Abschnitt **[!UICONTROL Segmente]** zeigt die Gesamtzahl der Segmente, die innerhalb Ihrer IMS-Organisation erstellt wurden. Diese Nummer wird aktualisiert, wenn ein neues Segment erstellt wird. Weitere Informationen zu Segmenten finden Sie in der Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
 
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. Diese Nummer wird aktualisiert, wenn ein neues Ziel erstellt wird. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../rtcdp/destinations/destinations-overview.md).
+The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. Diese Nummer wird aktualisiert, wenn ein neues Ziel erstellt wird. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../destinations/home.md).
 
 ### Letzte Daten
 
@@ -51,7 +51,7 @@ Im Abschnitt **[!UICONTROL Zuletzt verwendete Quellen]** werden die fünf zuletz
 
 Im Abschnitt **[!UICONTROL Letzte Segmente]** werden die fünf zuletzt erstellten Segmentdefinitionen in Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn eine neue Segmentdefinition erstellt wird. Sie können eine Segmentdefinition aus der Liste auswählen, um weitere Informationen zur angegebenen Segmentdefinition Ansicht, oder Sie können &quot; **[!UICONTROL Ansicht alle]** &quot;auswählen, um eine Liste aller erstellten Segmentdefinitionen anzuzeigen. Weitere Informationen zu Segmenten finden Sie in der Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
 
-Im Abschnitt **[!UICONTROL Zuletzt verwendete Ziele]** werden die fünf zuletzt erstellten Ziele innerhalb Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen zum angegebenen Ziel Ansicht, oder Sie können die Option &quot; **[!UICONTROL Ansicht alle]** &quot;auswählen, um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../rtcdp/destinations/destinations-overview.md).
+Im Abschnitt **[!UICONTROL Zuletzt verwendete Ziele]** werden die fünf zuletzt erstellten Ziele innerhalb Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen zum angegebenen Ziel Ansicht, oder Sie können die Option &quot; **[!UICONTROL Ansicht alle]** &quot;auswählen, um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../destinations/home.md).
 
 ### Empfohlenes Lernen
 
@@ -117,7 +117,7 @@ Der **[!UICONTROL Workflows]** Abschnitt zeigt eine Liste mehrstufiger Workflows
 
 Im Abschnitt **[!UICONTROL Quellen]** können Sie Quellverbindungen erstellen, aktualisieren und löschen, sodass Sie Daten aus externen Quellen in die Plattform aufnehmen können. Weitere Informationen zu den Quellen finden Sie in der [Quellenübersicht](../sources/home.md).
 
-Im Abschnitt &quot; **[!UICONTROL Ziele]** &quot;können Sie Ziele erstellen, aktualisieren und löschen, sodass Sie Daten von der Plattform in viele externe Ziele exportieren können. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../rtcdp/destinations/destinations-overview.md).
+Im Abschnitt &quot; **[!UICONTROL Ziele]** &quot;können Sie Ziele erstellen, aktualisieren und löschen, sodass Sie Daten von der Plattform in viele externe Ziele exportieren können. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../destinations/home.md).
 
 ### [!UICONTROL Customer ]
 
