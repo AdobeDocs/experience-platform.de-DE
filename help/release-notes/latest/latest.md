@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 23%
@@ -126,7 +126,7 @@ In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vord
 | Dateiplanung | Sowohl für E-Mail- als auch für Cloud-Datenspeicherung-Ziele können Benutzer einen einmaligen Export erstellen oder tägliche Schnappschüsse erstellen. |
 | Obligatorische Felder | Benutzer können Felder als Pflichtfelder markieren, wobei sichergestellt wird, dass nur Felder exportiert werden, die das Pflichtfeld enthalten. |
 
-Weiterführende Informationen finden Sie in der [Übersicht zu Zielen](../../rtcdp/destinations/destinations-overview.md).
+Weiterführende Informationen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Intelligent Services {#intelligent-services}
 
