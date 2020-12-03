@@ -5,10 +5,10 @@ title: Benutzerhandbuch zum Segmentdienst
 topic: ui guide
 description: Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 translation-type: tm+mt
-source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1449'
-ht-degree: 22%
+ht-degree: 23%
 
 ---
 
@@ -24,7 +24,7 @@ Working with segment definitions requires an understanding of the various [!DNL 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] ermöglicht es Ihnen, Daten, die in Bezug auf Einzelpersonen gespeichert sind (z. B. Kunden, Potenzieller Kunde, Benutzer oder Organisationen), in kleinere Gruppen zu unterteilen. [!DNL Experience Platform]
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Ermöglicht die Erstellung von Profilen von Kunden durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die [!DNL Platform]eingegriffen wird.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen verstehen:
 - **Segmentdefinition**: Der Regelsatz, der zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Zielgruppe verwendet wird.
@@ -102,7 +102,7 @@ Der Abschnitt **[!UICONTROL Aktivierte Ziele]** zeigt die Ziele an, für die die
 
 >[!NOTE]
 >
-> Ziele sind eine Funktion mit [!DNL Real-time Customer Data Platform]der Sie Daten auf externe Plattformen exportieren können. For more information on destinations, please read the [destinations overview](../../rtcdp/destinations/destinations-overview.md). Um zu erfahren, wie Sie ein Segment an ein Ziel aktivieren, lesen Sie bitte das [Handbuch zur Aktivierung von Segmenten an ein Ziel](../../rtcdp/destinations/activate-destinations.md).
+> Ziele sind eine Funktion mit [!DNL Real-time Customer Data Platform]der Sie Daten auf externe Plattformen exportieren können. For more information on destinations, please read the [destinations overview](../../destinations/home.md). Um zu erfahren, wie Sie ein Segment an ein Ziel aktivieren, lesen Sie bitte das [Handbuch zur Aktivierung von Segmenten an ein Ziel](../../destinations/ui/activate-destinations.md).
 
 ### Profil-Beispiele
 
