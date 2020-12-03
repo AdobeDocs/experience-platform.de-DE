@@ -5,7 +5,7 @@ title: Audience Manager-Anschluss
 topic: overview
 description: Der Adobe Audience Manager Data Connector streamt Erstanbieter-Daten, die in Adobe Audience Manager bis Adobe Experience Platform erfasst werden. Der Audience Manager-Connector fasst drei Kategorien Daten in die Plattform ein.
 translation-type: tm+mt
-source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
+source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 1%
@@ -74,4 +74,4 @@ Adobe Audience Manager erstellt eine Verbindung im Katalog: Audience Manager Con
 | Audience Manager-Daten | Latenz | Anmerkungen |
 | --- | --- | --- |
 | Echtzeitdaten | &lt; 35 Minuten. | Zeit vom Erfassen am Edge-Knoten des Audience Managers bis zum Anzeigen im Platform Data Lake. |
-| Profildaten | &lt; 2 Tage | Die Zeit reicht von der Erfassung über DCS/PCS-Edge-Daten und Daten an Bord, die zu einem Profil verarbeitet werden, bis zur Anzeige im Profil. Diese Daten landen heute nicht direkt auf dem Platform Data Lake. Der Profil-Umschalter kann in Audience Manager-Profil-Datensätzen aktiviert werden, um diese Daten direkt in Profil zu erfassen. |
+| Profildaten | &lt; 2 Tage | Die Zeit reicht von der Erfassung über DCS/PCS-Edge-Daten und Daten an Bord, die zu einem Profil verarbeitet werden, bis zur Anzeige im Profil. Diese Daten landen heute nicht direkt auf dem Platform Data Lake. Der Profil-Umschalter kann aktiviert werden, damit Audience Manager-Profil-Datasets diese Daten direkt in Profil erfassen können. |
