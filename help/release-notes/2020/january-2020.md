@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 39%
+source-wordcount: '880'
+ht-degree: 40%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 39%
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
-* [[!DNL-Privacy Service]](#privacy)
-* [[!DNL-Quellen]](#sources)
-* [[!DNL-Ziele]](#destinations)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM) System {#xdm}
 
@@ -92,7 +92,7 @@ Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](.
 
 ## Ziele {#destinations}
 
-In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **Neue Funktionen**
 
@@ -112,4 +112,4 @@ In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built in
 
 * Keine
 
-Weiterführende Informationen dazu finden Sie unter [Ziele – Übersicht](../../rtcdp/destinations/destinations-overview.md).
+Weiterführende Informationen dazu finden Sie unter [Ziele – Übersicht](../../destinations/home.md).
