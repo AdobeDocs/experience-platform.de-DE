@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 30%
@@ -47,9 +47,9 @@ In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vord
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| UX-Verbesserungen | Benutzer können auf Aktionen für Inline-Tabellen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten zu vereinfachen. See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
+| UX-Verbesserungen | Benutzer können auf Aktionen für Inline-Tabellen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, das Bearbeiten von Zeitplänen und das Hinzufügen von Segmenten zu vereinfachen. See the [destinations workspace](../../destinations/ui/destinations-workspace.md) document for more information. |
 
-Weitere Informationen finden Sie in [Ziele – Übersicht](../../rtcdp/destinations/destinations-overview.md)
+Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 
@@ -59,7 +59,7 @@ Weitere Informationen finden Sie in [Ziele – Übersicht](../../rtcdp/destinati
 
 | Funktion | Beschreibung |
 | --- | --- |
-| E/A-Ereignis-Benachrichtigungen der Adobe | [!DNL Observability Insights] nutzt Adobe-I/O-Ereignis, um Ereignis-Benachrichtigungen für mehrere Experience Platformen-Services zu erstellen. Benachrichtigungs-Nutzdaten werden an einen konfigurierten Webhop gesendet, mit dem Sie dann weitere nachgelagerte Prozesse automatisieren können. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+| Adobe I/O-Ereignis-Benachrichtigungen | [!DNL Observability Insights] nutzt Adobe I/O-Ereignis, um Ereignis-Benachrichtigungen für verschiedene Experience Platformen-Services zu erstellen. Benachrichtigungs-Nutzdaten werden an einen konfigurierten Webhop gesendet, mit dem Sie dann weitere nachgelagerte Prozesse automatisieren können. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
 
 Weitere Informationen zum Dienst finden Sie in der [[!DNL Observability Insights] Übersicht](../../observability/home.md) .
 
