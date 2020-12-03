@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Hier erfahren Sie, wie Sie verschiedene Zieltypen erstellen und Daten aktivieren.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 85%
@@ -20,8 +20,8 @@ Hier erfahren Sie, wie Sie verschiedene Zieltypen erstellen und Daten aktivieren
 
 ## E-Mail-Marketing-Ziele {#email-destinations}
 
-* [Erstellen eines E-Mail-Marketing-Ziels und Aktivieren von Daten](/help/rtcdp/destinations/email-marketing-api.md)
+* [Erstellen eines E-Mail-Marketing-Ziels und Aktivieren von Daten](../destinations/api/email-marketing.md)
 
 ## Cloud storage streaming destinations {#streaming-destinations}
 
-* [Mit Streaming-Zielen verbinden und Daten aktivieren](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+* [Mit Streaming-Zielen verbinden und Daten aktivieren](../destinations/api/streaming-destinations.md)
