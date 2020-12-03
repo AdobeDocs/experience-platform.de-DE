@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 29%
@@ -65,7 +65,7 @@ Weitere Informationen finden Sie in der Übersicht über die Metriken der [Echtz
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sind vorgefertigte Integrationen mit Zielplattformen, die von der Echtzeit-Kundendatenplattform der Adobe unterstützt werden und die Daten nahtlos für diese Partner aktivieren. Weitere Informationen finden Sie im Artikel [Ziele-Übersicht](../../rtcdp/destinations/destinations-overview.md) .
+[!DNL Destinations] sind vorgefertigte Integrationen mit Zielplattformen, die von der Echtzeit-Kundendatenplattform der Adobe unterstützt werden und die Daten nahtlos für diese Partner aktivieren. Weitere Informationen finden Sie im Artikel [Ziele-Übersicht](../../destinations/home.md) .
 
 **Verfügbare Ziele**
 
@@ -74,12 +74,12 @@ Ab der November-Version unterstützt die Echtzeit-Kundendatenplattform der Adobe
 * Werbung: [!DNL Google]
 * E-Mail-Marketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../../rtcdp/destinations/destinations-catalog.md) .
+Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../../destinations/catalog/overview.md) .
 
 **Bekannte Einschränkungen**
 
-* Das Steuerelement zum Zulassen von Zeitplänen für benutzerdefinierte Aktivierungen im [Aktivierungen-Fluss](../../rtcdp/destinations/activate-destinations.md#activate-data) (Planschritt) ist in der ersten Version nicht verfügbar.
-* Es gibt derzeit keine Möglichkeit, eine Zielkonfiguration zu bearbeiten oder zu löschen. Um diese Einschränkung zu umgehen, können Sie das Ziel oben rechts auf der Seite mit den [Zieldetails aktivieren oder deaktivieren](../../rtcdp/destinations/destination-details-page.md).
+* Das Steuerelement zum Zulassen von Zeitplänen für benutzerdefinierte Aktivierungen im [Aktivierungen-Fluss](../../destinations/ui/activate-destinations.md#activate-data) (Planschritt) ist in der ersten Version nicht verfügbar.
+* Es gibt derzeit keine Möglichkeit, eine Zielkonfiguration zu bearbeiten oder zu löschen. Um diese Einschränkung zu umgehen, können Sie das Ziel oben rechts auf der Seite mit den [Zieldetails aktivieren oder deaktivieren](../../destinations/ui/destination-details-page.md).
 * Es gibt derzeit keine Überprüfung für Kontodetails, Pfad oder Anmeldeinformationen, wenn eine Verbindung mit Ihrem Ziel- oder Datenspeicherung-Konto hergestellt wird. Vergewissern Sie sich, dass Sie die richtigen Anmeldeinformationen eingeben und die Dublette auf Rechtschreibfehler oder Tippfehler überprüfen.
 * Mit der ersten Version wurden keine Anmeldeinformationen verlängert. Nachdem ein Konto abgelaufen ist oder aktualisiert werden muss, müssen Sie eine neue Zielverbindung erstellen und Ihre zuvor zugeordneten Segmente neu zuordnen.
 
