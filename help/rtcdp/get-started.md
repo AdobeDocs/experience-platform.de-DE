@@ -5,9 +5,9 @@ seo-title: 'Erste Schritte mit der Echtzeit-Kundendatenplattform von '
 description: 'Beispielszenario für die Echtzeit-Kundendatenplattform von '
 seo-description: 'Beispielszenario für die Echtzeit-Kundendatenplattform von '
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 8369bd517639cc66eeb95a811c3ddf46b8c4c48d
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2317'
 ht-degree: 87%
 
 ---
@@ -237,7 +237,7 @@ Wenn Sie das Segment „Warenkorb-Abbrecher, die ein Geschenk kaufen“ hinzugef
 
 Klicken Sie auf **[!UICONTROL An Ziele senden]**.
 
-In der Echtzeit-Kundendatenplattform von Adobe kann Luma zur Personalisierung nahtlos auf Zielgruppensegmente reagieren.\
+In der Echtzeit-Kundendatenplattform von kann Luma zur Personalisierung nahtlos auf Zielgruppensegmente reagieren.\
 Hier sehen Sie alle Ziele, an die Luma dieses Ziel senden kann, sowohl Adobe- als auch Nicht-Adobe-Lösungen:
 
 ![Bild](assets/luma-dest.png)
