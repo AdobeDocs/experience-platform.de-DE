@@ -5,10 +5,10 @@ user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Experience Platform es ermöglicht, Ihren Kunden personalisierte Erlebnisse in Echtzeit bereitzustellen.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 72%
+source-wordcount: '399'
+ht-degree: 70%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 72%
    * [Data Science Workspace](https://docs.adobe.com/content/help/de-DE/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/de-DE/debugger/using/experience-cloud-debugger.html)
    * [Debugger 2.0 (Beta)](https://docs.adobe.com/content/help/de-DE/debugger/using-v2/experience-cloud-debugger.html)
-   * [Ziele](https://docs.adobe.com/content/help/de-DE/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL (Extract, Transform, Load)](https://docs.adobe.com/content/help/de-DE/experience-platform/etl/home.html)
    * [Identity Service](https://docs.adobe.com/content/help/de-DE/experience-platform/identity/home.html)
    * [Intelligent Services](https://docs.adobe.com/content/help/de-DE/experience-platform/intelligent-services/home.html)
