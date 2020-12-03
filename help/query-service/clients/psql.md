@@ -5,10 +5,10 @@ title: Anbinden an PSQL
 topic: connect
 description: 'PSQL ist eine Befehlszeilenschnittstelle, die im Rahmen der Installation von Postgres bereitgestellt wird. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 75%
+source-wordcount: '209'
+ht-degree: 68%
 
 ---
 
@@ -71,7 +71,7 @@ Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
 
 >[!IMPORTANT]
 >
->Verwenden Sie auf einem PC einen Texteditor, um in der Zeichenfolge des Befehls die Zeilenumbrüche zu entfernen, und kopieren Sie dann die Zeichenfolge.
+>Verwenden Sie auf einem PC einen Texteditor, um in der Zeichenfolge des Befehls die Zeilenumbrüche zu entfernen, und kopieren Sie dann die Zeichenfolge. Wenn Sie außerdem Version 12.0 oder höher verwenden, müssen Sie der Verbindungszeichenfolge `PGGSSENCMODE=disable` hinzufügen.
 
 Fügen Sie die Befehlszeichenfolge in das Fenster eines Terminals bzw. einer Eingabeaufforderung ein und drücken Sie die Eingabetaste.
 
