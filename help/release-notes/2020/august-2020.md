@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 27%
 
 ---
@@ -46,14 +46,14 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 
 | Ziel | Beschreibung |
 |--- | ---|
-| [!DNL Google Customer Match] | Mit Google Customer Match können Sie Ihre Online- und Offlinedaten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut zu kontaktieren, z. B.: [!DNL Search], [!DNL Shopping]Gmail und YouTube. <br><br> Auf der [!DNL Google Customer Match] Seite [](/help/rtcdp/destinations/google-customer-match-destination.md) im Zielkatalog finden Sie weitere Informationen zum Ziel und zur Einrichtung in Adobe Echtzeit-CDP. |
+| [!DNL Google Customer Match] | Mit Google Customer Match können Sie Ihre Online- und Offlinedaten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut zu kontaktieren, z. B.: [!DNL Search], [!DNL Shopping]Gmail und YouTube. <br><br> Auf der [!DNL Google Customer Match] Seite [](../../destinations/catalog/advertising/google-customer-match.md) im Zielkatalog finden Sie weitere Informationen zum Ziel und zur Einrichtung in Echtzeit-CDP. |
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 |------- | -----------|
-| Benutzerdefinierter Dateinameneditor | Aktualisieren Sie auf den Arbeitsablauf für die Aktivierung von Daten für E-Mail-Marketing-Ziele und Cloud-Datenspeicherung, damit Sie den Dateinamen der exportierten Dateien bearbeiten können. Weitere Informationen finden Sie im Schritt [ &quot;](/help/rtcdp/destinations/activate-destinations.md#configure) Konfigurieren&quot;im Arbeitsablauf für die Aktivierung. |
-| Empfohlene Attribute | Aktualisieren Sie auf den Arbeitsablauf für die Aktivierung von Daten für E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele, das die empfohlenen Attribute enthält, die Sie den exportierten Dateien hinzufügen können. Weitere Informationen finden Sie im Schritt [Attribute auswählen](/help/rtcdp/destinations/activate-destinations.md#select-attributes) im Arbeitsablauf für die Aktivierung. |
+| Benutzerdefinierter Dateinameneditor | Aktualisieren Sie auf den Arbeitsablauf für die Aktivierung von Daten für E-Mail-Marketing-Ziele und Cloud-Datenspeicherung, damit Sie den Dateinamen der exportierten Dateien bearbeiten können. Weitere Informationen finden Sie im Schritt [ &quot;](../../destinations/ui/activate-destinations.md#configure) Konfigurieren&quot;im Arbeitsablauf für die Aktivierung. |
+| Empfohlene Attribute | Aktualisieren Sie auf den Arbeitsablauf für die Aktivierung von Daten für E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele, das die empfohlenen Attribute enthält, die Sie den exportierten Dateien hinzufügen können. Weitere Informationen finden Sie im Schritt [Attribute auswählen](../../destinations/ui/activate-destinations.md#select-attributes) im Arbeitsablauf für die Aktivierung. |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
