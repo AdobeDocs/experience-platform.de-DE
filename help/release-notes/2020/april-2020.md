@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '969'
 ht-degree: 65%
 
 ---
@@ -94,14 +94,14 @@ In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vord
 
 **Neue Ziele**
 
-Adobe Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. Weitere Informationen finden Sie hier:
+Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. Weitere Informationen finden Sie hier:
 
 | Dokumentation | Beschreibung |
 |--- | ---|
-| [Zieltypen und Kategorien](/help/rtcdp/destinations/destination-types.md) | In diesem Artikel wird der Unterschied zwischen Verbindungen und Erweiterungen in der Benutzeroberfläche der Echtzeit-Kundendatenplattform von Adobe erläutert und empfohlen, wann die Ziele verwendet werden sollten. |
-| [Experience Platform Launch-Erweiterungen](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Adobe Real-time CDP. |
+| [Zieltypen und Kategorien](../../destinations/destination-types.md) | In diesem Artikel wird der Unterschied zwischen Verbindungen und Erweiterungen in der Benutzeroberfläche der Echtzeit-Kundendatenplattform von erläutert und empfohlen, wann die Ziele verwendet werden sollten. |
+| [Experience Platform Launch-Erweiterungen](../../destinations/catalog/launch-extensions/overview.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Real-time CDP. |
 
-Weiterführende Informationen finden Sie in der [Übersicht zu Zielen](/help/rtcdp/destinations/destinations-overview.md).
+Weiterführende Informationen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
