@@ -18,7 +18,7 @@ ht-degree: 41%
 
 Dieses Tutorial bietet Einblicke in das Konfigurieren und Importieren eines gepackten Rezepts mit dem bereitgestellten Beispiel für Einzelhandelsumsätze. By the end of this tutorial, you will be ready to create, train, and evaluate a Model in Adobe Experience Platform [!DNL Data Science Workspace].
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Dieses Lernprogramm erfordert ein gepacktes Rezept in Form einer Docker-Bild-URL. Weiterführende Informationen finden Sie im Tutorial zum [Verpacken von Quelldateien in einem Rezept](./package-source-files-recipe.md).
 
