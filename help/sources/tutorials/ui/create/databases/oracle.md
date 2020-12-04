@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Oracle DB-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm enthält Schritte zum Erstellen eines Oracle DB-Quellconnectors mithilfe der Plattform-Benutzeroberfläche.
+description: In diesem Lernprogramm werden Schritte zum Erstellen eines Oracle DB-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -42,7 +42,7 @@ Um auf Ihr [!DNL Oracle DB] Konto zugreifen zu können, müssen Sie die folgende
 | `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung hergestellt wird [!DNL Oracle DB]. Das Muster für die [!DNL Oracle DB] Verbindungszeichenfolge lautet: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-ID für [!DNL Oracle DB] lautet `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Weitere Informationen zum Einstieg finden Sie in [diesem Oracle-Dokument](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
+Weitere Informationen zu den ersten Schritten finden Sie in [diesem Oracle-Dokument](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
 ## Verbinden Sie Ihr [!DNL Oracle DB] Konto
 
@@ -56,7 +56,7 @@ Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICO
 
 ![Katalog](../../../../images/tutorials/create/oracle/catalog.png)
 
-Die Seite &quot; **[!UICONTROL Verbindung mit Oracle DB]** herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die Seite **[!UICONTROL Verbindung mit Oracle DB]** herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
