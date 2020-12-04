@@ -16,7 +16,7 @@ ht-degree: 12%
 
 ## Standard-Identitäts-Namensraum {#standard-namespaces}
 
-Alle Identitäten, an die gesendet wird, [!DNL Privacy Service] müssen unter einem bestimmten Identitäts-Namensraum angegeben werden. Identity Namensraums sind eine Komponente des Identitätsdienstes [der](../../identity-service/home.md) Adobe Experience Platform, die den Kontext angibt, auf den sich eine Identität bezieht.
+Alle Identitäten, an die gesendet wird, [!DNL Privacy Service] müssen unter einem bestimmten Identitäts-Namensraum angegeben werden. Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../identity-service/home.md) that indicate the context to which an identity relates.
 
 In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitätstypen aufgeführt, die von [!DNL Experience Platform]zusammen mit den zugehörigen `namespace` Werten bereitgestellt werden:
 
@@ -25,9 +25,9 @@ In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitä
 | E-Mail  | E-Mail | 6 |
 | Telefon | Telefon | 7 |
 | Adobe Advertising Cloud ID | AdCloud | 411 |
-| Adobe Audience Manager-UUID | CORE | 0 |
+| Adobe Audience Manager UUID | CORE | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
-| Adobe Target-ID | TNTID | 9 |
+| Adobe Target ID | TNTID | 9 |
 | [!DNL Apple] ID für Advertisers | IDFA | 20915 |
 | [!DNL Google] Anzeigen-ID | GAID | 20914 |
 | [!DNL Windows] BEIHILFE | WAID | 8 |
