@@ -8,16 +8,16 @@ translation-type: tm+mt
 source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
 
-# [!DNL Sensei Machine Learning] API-Entwicklerleitfaden
+# [!DNL Sensei Machine Learning]-API-Entwicklerhandbuch
 
 Die [!DNL Sensei Machine Learning] API bietet Datenwissenschaftlern einen Mechanismus zur Organisation und Verwaltung von Dienstleistungen für maschinelles Lernen, von der Algorithmusüberwachung über Experimente bis zur Dienstbereitstellung.
 
-In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Beginn ausführen können. Außerdem werden API-Aufrufe für die Ausführung von CRUD-Vorgängen in verschiedenen Data Science Workspace-Ressourcen veranschaulicht.
+In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der [Sensei-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)für maschinelles Lernen Beginn ausführen können. Außerdem werden API-Aufrufe für CRUD-Vorgänge in verschiedenen Data Science Workspace-Ressourcen veranschaulicht.
 
 ## Erste Schritte
 
