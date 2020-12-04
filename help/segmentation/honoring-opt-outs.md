@@ -7,8 +7,8 @@ description: 'Mit der Experience Platform können Ihre Kunden Abmeldeanfragen zu
 translation-type: tm+mt
 source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 60%
+source-wordcount: '1006'
+ht-degree: 62%
 
 ---
 
@@ -23,7 +23,7 @@ Nachdem ein Kunde sich für ein Opt-out entschieden hat, muss Ihr Unternehmen di
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Bevor Sie mit Opt-out-Anfragen arbeiten, lesen Sie die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Echtzeit-Profil]](../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus [!DNL Real-time Customer Profile] Daten.
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Hilft Unternehmen, die Einhaltung von Datenschutzbestimmungen zu automatisieren, die Kundendaten in [!DNL Platform]die Daten einbeziehen.
