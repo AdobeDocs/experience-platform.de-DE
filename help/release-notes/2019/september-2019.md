@@ -1,27 +1,27 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform, 10. September 2019
+description: Versionshinweise zur Experience Platform vom 10. September 2019
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 11%
+source-wordcount: '532'
+ht-degree: 13%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Releasedatum: 10. September 2019**
+**Release-Datum: 10. September 2019**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 * [[!DNL Data Ingestion]](#ingestion)
 * [[!DNL Data Science Workspace]](#dsw)
-* [[!DNL Abfrage Service]](#query)
+* [[!DNL Query Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
