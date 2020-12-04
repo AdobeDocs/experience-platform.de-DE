@@ -8,7 +8,7 @@ description: In diesem Lernprogramm wird beschrieben, wie Sie die angegebenen Qu
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Konzepte zum Verständnis:
 - **Rezepte**: Ein Rezept ist der Begriff der Adobe für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der ein bestimmtes maschinelles Lernen, einen Algorithmus für künstliche Intelligenz oder ein Ensemble von Algorithmen, Verarbeitungslogik und Konfiguration darstellt, die zum Aufbau und zur Ausführung eines geschulten Modells erforderlich sind und somit zur Lösung spezifischer Geschäftsprobleme beitragen.
 - **Quelldateien**: Einzelne Dateien im Projekt, die die Logik für ein Rezept enthalten.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 - [[!DNL Docker]](https://docs.docker.com/install/#supported-platforms)
-- [[!DNL Python 3 und pip]](https://docs.conda.io/en/latest/miniconda.html)
+- [[!DNL Python 3 and pip]](https://docs.conda.io/en/latest/miniconda.html)
 - [[!DNL Scala]](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
 - [[!DNL Maven]](https://maven.apache.org/install.html)
 
