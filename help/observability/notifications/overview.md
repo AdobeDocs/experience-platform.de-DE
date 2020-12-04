@@ -17,6 +17,6 @@ ht-degree: 0%
 
 [!DNL Observability Insights] können Sie Ereignis-Benachrichtigungen zu Adobe Experience Platform-Aktivitäten abonnieren. They reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed or if a certain milestone within a workflow has been reached.
 
-[!DNL Observability] Benachrichtigungen nutzen derzeit Adobe-I/O-Ereignis, die an einen konfigurierten Webhaken gesendet werden können, um eine effiziente Automatisierung der Aktivität-Überwachung zu ermöglichen. Die Benachrichtigungsfunktionen umfassen jedoch auch E-Mail- und Benutzeroberflächenbenachrichtigungen.
+[!DNL Observability] Benachrichtigungen nutzen derzeit Adobe I/O-Ereignis, die an einen konfigurierten Webhaken gesendet werden können, um eine effiziente Automatisierung der Aktivität-Überwachung zu ermöglichen. Die Benachrichtigungsfunktionen umfassen jedoch auch E-Mail- und Benutzeroberflächenbenachrichtigungen.
 
 Um mit [!DNL Observability] Benachrichtigungen zu beginnen, fahren Sie mit dem Tutorial zum [Abonnieren von E/A-Ereignis-Benachrichtigungen](./subscribe.md)fort.
