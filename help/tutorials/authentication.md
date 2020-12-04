@@ -8,7 +8,7 @@ description: 'Dieses Dokument bietet eine schrittweise Anleitung für den Zugrif
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '875'
 ht-degree: 43%
 
 ---
@@ -57,7 +57,7 @@ Der Administrator muss Sie als Entwickler mindestens einem Produktprofil zuweise
 
 ![](images/authentication/add-developer.png)
 
-Nachdem Sie als Entwickler zugewiesen sind, verfügen Sie über Zugriffsberechtigungen und können Integrationen in [Adobe I/O](https://www.adobe.com/go/devs_console_ui) erstellen. Bei diesen Integrationen handelt es sich um eine Pipeline von externen Apps und Diensten zur Adobe-API.
+Nachdem Sie als Entwickler zugewiesen sind, verfügen Sie über Zugriffsberechtigungen und können Integrationen in [Adobe I/O](https://www.adobe.com/go/devs_console_ui_de) erstellen. Bei diesen Integrationen handelt es sich um eine Pipeline von externen Apps und Diensten zur Adobe-API.
 
 **Benutzerzugriff erlangen**
 
@@ -87,7 +87,7 @@ Die Schritte werden nachfolgend detailliert beschrieben.
 
 ### Einmalige Einrichtung
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
 
 Nachdem Sie ein neues Projekt erstellt haben, klicken Sie im Bildschirm &quot; **[!UICONTROL Projektübersicht]** &quot;auf **Hinzufügen API** .
 
