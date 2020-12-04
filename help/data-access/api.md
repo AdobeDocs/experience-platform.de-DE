@@ -241,4 +241,4 @@ Weitere Beispiele finden Sie im [Lernprogramm](tutorials/dataset-data.md)zum Dat
 
 ## Abonnieren von Datenerfassungsereignissen
 
-[!DNL Platform] stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
+[!DNL Platform] stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
