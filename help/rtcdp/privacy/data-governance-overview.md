@@ -5,7 +5,7 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
+source-git-commit: 91b60539010318ea8d545bff4e5cc7e2d0aa70fc
 workflow-type: tm+mt
 source-wordcount: '1588'
 ht-degree: 31%
@@ -41,7 +41,7 @@ Sie können Datenverwendungsbeschränkungen für ein Ziel festlegen, indem Sie A
 
 Durch die Definition von Anwendungsfällen für das Marketing an Zielen können Sie sicherstellen, dass alle an diese Ziele gesendeten Profil oder Segmente mit den Datenverwendungsrichtlinien übereinstimmen. Daher sollten Sie Ihren Zielen entsprechend den Anforderungen Ihres Unternehmens, Richtlinienbeschränkungen für die Aktivierung durchzusetzen, geeignete Anwendungsfälle für das Marketing hinzufügen.
 
-Anwendungsfälle für Marketing können nur beim erstmaligen Einrichten eines Ziels ausgewählt werden. Je nach Zieltyp, mit dem Sie arbeiten, wird die Möglichkeit zur Konfiguration von Anwendungsfällen für das Marketing an verschiedenen Punkten im Setup-Arbeitsablauf angezeigt. Anweisungen zum Konfigurieren des jeweiligen Ziels finden Sie in der Dokumentation [zu](../destinations/destinations-overview.md#data-governance) Zielen.
+Anwendungsfälle für Marketing können nur beim erstmaligen Einrichten eines Ziels ausgewählt werden. Je nach Zieltyp, mit dem Sie arbeiten, wird die Möglichkeit zur Konfiguration von Anwendungsfällen für das Marketing an verschiedenen Punkten im Setup-Arbeitsablauf angezeigt. Anweisungen zum Konfigurieren des jeweiligen Ziels finden Sie in der Dokumentation [zu](../destinations/overview.md) Zielen.
 
 ## Datennutzungsrichtlinien verwalten {#policies}
 
@@ -87,7 +87,7 @@ Jede Phase in der oben genannten Zeitschiene stellt eine Entität dar, die, wie 
 | Datenleitungsphase | Rolle bei der Durchsetzung der Vorschriften |
 | --- | --- |
 | Datensatz | Datensätze enthalten Datenverwendungsbeschriftungen (auf Datensatzebene oder Feldebene angewendet), mit denen festgelegt wird, für welche Anwendungsfälle der gesamte Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt. |
-| Richtlinie zusammenführen | Richtlinien zum Zusammenführen sind die Regeln, die Plattform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen finden Sie im Handbuch zu [Zusammenführungsrichtlinien](../../profile/ui/merge-policies.md) . |
+| Richtlinie zusammenführen | Richtlinien zum Zusammenführen sind die Regeln, die Plattform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. See the guide on [merge policies](../../profile/ui/merge-policies.md) for more information. |
 | Segment | Segmentregeln definieren, welche Attribute aus den Profilen der Kunden einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthält, übernimmt das Segment alle angewendeten Nutzungsbezeichnungen für diese Felder. Richtlinienverletzungen treten auf, wenn Sie ein Segment aktivieren, dessen geerbte Beschriftungen aufgrund der jeweiligen Richtlinien des Zielorts der Zielgruppe je nach Anwendungsfall für das Marketing eingeschränkt sind. |
 | Ziel | Beim Einrichten eines Ziels kann eine Marketingaktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Verwendungsfall korreliert mit einer Marketingaktion, wie in einer Datenverwendungsrichtlinie definiert. Mit anderen Worten, der Marketing-Verwendungsfall, den Sie für ein Ziel definieren, bestimmt, welche Datenverwendungsrichtlinien für dieses Ziel gelten. Richtlinienverletzungen treten auf, wenn Sie ein Segment aktivieren, dessen Nutzungsbeschriftungen durch die geltenden Richtlinien des Zielgruppen-Ziels eingeschränkt sind. |
 
