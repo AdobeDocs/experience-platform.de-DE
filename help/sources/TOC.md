@@ -97,7 +97,7 @@ ht-degree: 8%
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/api/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/api/create/databases/data-explorer.md)
          - [azure synapse Analytics Connector](tutorials/api/create/databases/synapse-analytics.md)
-         - [Azurblender Datenspeicherung-Stecker](tutorials/api/create/databases/ats.md)
+         - [Azurblauer Tischstecker, Datenspeicherung](tutorials/api/create/databases/ats.md)
          - [Steckverbinder](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/api/create/databases/greenplum.md)
