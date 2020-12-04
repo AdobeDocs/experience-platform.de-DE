@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
 
-Datenwissenschaftler aller Qualifikationsstufen finden ausgereifte, einfach zu bedienende Werkzeuge, die die schnelle Entwicklung, Ausbildung und Abstimmung von maschinellen Lernrezepten unterstützen - all die Vorteile der AI-Technologie, ohne die Komplexität.
+Datenwissenschaftler aller Qualifikationsstufen finden ausgereifte, einfach zu bedienende Werkzeuge, die eine schnelle Entwicklung, Ausbildung und Abstimmung von maschinellen Lernrezepten unterstützen - all die Vorteile der AI-Technologie, ohne die Komplexität.
 
 Mithilfe [!DNL Data Science Workspace]von Daten können Wissenschaftler auf einfache Weise intelligente Services-APIs erstellen - basierend auf maschinellem Lernen. Diese Dienste können mit anderen Adoben-Diensten wie Adobe Target und Adobe Analytics Cloud kombiniert werden, um Ihnen bei der Automatisierung personalisierter, gezielter digitaler Erlebnisse in Web-, Desktop- und mobilen Apps zu helfen.
 
@@ -33,7 +33,7 @@ Mit [!DNL Data Science Workspace]Adobe Experience Platform können Sie unternehm
 - Integrierter Zugriff auf Ihre in Adobe Experience Platform gespeicherten Daten
 - Ein auf [!DNL Experience Data Model] (XDM) basierendes einheitliches Data Schema
 - Die Rechenleistung ist unverzichtbar für maschinelles Lernen/AI und die Verwaltung von Big DataSets
-- Vorgefertigte maschinelle Lernrezepte zur Beschleunigung des Abstiegs in durch AI angetriebene Erlebnisse
+- Vorgefertigte maschinelle Lernrezepte zur Beschleunigung des Abstiegs in AI-basierte Erlebnisse
 - Vereinfachtes Authoring, Wiederverwendung und Modifizierung von Rezepten für Datenwissenschaftler mit unterschiedlichem Kenntnisstand
 - Intelligente Veröffentlichung und Freigabe von Diensten in nur wenigen Klicks - ohne Entwickler - sowie Überwachung und Umschulung zur kontinuierlichen Optimierung personalisierter Kundenerlebnisse
 
@@ -108,7 +108,7 @@ Data Science Workspace bietet eine enorme Flexibilität beim Experimentieren. Be
 
 ### Operationalisierung
 
-Wenn Sie mit Ihrem Rezept zufrieden sind, ist es nur ein paar Klicks, einen intelligenten Dienst zu schaffen. Keine Programmierung erforderlich - Sie können es selbst machen, ohne einen Entwickler oder Ingenieur zu benennen. Veröffentlichen Sie den intelligenten Dienst schließlich auf Adobe IO und es ist für Ihr digitales Erlebnis-Team nutzbar.
+Wenn Sie mit Ihrem Rezept zufrieden sind, ist es nur ein paar Klicks, einen intelligenten Dienst zu schaffen. Keine Kodierung erforderlich - Sie können es selbst machen, ohne einen Entwickler oder Ingenieur zu benennen. Veröffentlichen Sie den intelligenten Dienst schließlich auf Adobe IO und es ist für Ihr digitales Erlebnis-Team nutzbar.
 
 <!--You can also publish your intelligent service to the Service Gallery, where it's available to specific people, specific organizations, or everyone who develops data solutions on Adobe Experience Platform. You can even share it with your external partners, and they can share their intelligent service with you. And the next time you're starting a new recipe, you can check the Service Gallery to see if there's a similar intelligent service you can use to get started. -->
 
