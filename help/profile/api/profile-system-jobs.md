@@ -5,8 +5,8 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 67%
+source-wordcount: '1420'
+ht-degree: 68%
 
 ---
 
@@ -21,7 +21,7 @@ Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfass
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 ## Löschanfragen anzeigen
 
@@ -161,7 +161,7 @@ Um einen Batch zu löschen, muss die Batch-Kennung im Text der POST-Anfrage enth
 
 >[!NOTE]
 >
-> Batches für Datensätze, die auf Datensatzschemas basieren, lassen sich nicht löschen, weil Datensatz-Batches vom Typ Datensatz frühere Datensätze überschreiben und daher nicht „rückgängig gemacht“ oder gelöscht werden können. Die einzige Möglichkeit, die Auswirkungen fehlerhafter Stapel für Datensätze zu entfernen, die auf Datensatzdaten basieren, besteht darin, den Stapel mit den richtigen Daten erneut zu erfassen, um die falschen Schema zu überschreiben.
+> Batches für Datensätze, die auf Datensatzschemas basieren, lassen sich nicht löschen, weil Datensatz-Batches vom Typ Datensatz frühere Datensätze überschreiben und daher nicht „rückgängig gemacht“ oder gelöscht werden können. 
 
 Weiterführende Informationen zum Verhalten von Datensätzen und Zeitreihen finden Sie im Abschnitt [XDM-Datenverhalten](../../xdm/home.md#data-behaviors) in der Übersicht zu [!DNL XDM System]
 
