@@ -6,7 +6,7 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die in der Echtzeit-Kundendatenplattform von vorhanden sind, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 22%
@@ -68,7 +68,7 @@ Wenn Sie eine andere ID wie &quot;Belohnungs-ID&quot;oder &quot;Loyalität-ID&qu
 
 ![Loyalität-ID als Identität](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Dateneingabe in Adobe Experience Platform per Hash E-Mail- [!DNL Facebook] Hashing an Ihre E-Mail-Adresse gesendet haben [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements).
+Wählen Sie `Email_LC_SHA256` als Zielgruppen-ID aus, wenn Sie bei der Dateneingabe in Adobe Experience Platform per Hash E-Mail- [!DNL Facebook] Hashing an Ihre E-Mail-Adresse gesendet haben [](../catalog/social/facebook.md#email-hashing-requirements).
 
 Wählen Sie `Email` als Zielgruppen-ID aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht mit Hashing versehen werden. Echtzeit-CDP wird die E-Mail-Adressen zur Erfüllung der [!DNL Facebook] Anforderungen hacken.
 
@@ -158,7 +158,7 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob ausgewählt `segmentMe
 
 Darüber hinaus können Sie verschiedene Attribute als obligatorisch markieren. Wenn Sie ein Attribut als obligatorisch markieren, muss es im exportierten Segment dieses Attribut enthalten. Dadurch kann sie als zusätzliche Filterform verwendet werden. Die obligatorische Kennzeichnung eines Attributs ist **nicht** erforderlich.
 
-Es wird empfohlen, dass eines der Attribute eine [eindeutige Kennung](/help/rtcdp/destinations/email-marketing-destinations.md#identity) Ihres Schemas ist. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) documentation.
+Es wird empfohlen, dass eines der Attribute eine [eindeutige Kennung](../../destinations/catalog/email-marketing/overview.md#identity) Ihres Schemas ist. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation.
 
 >[!NOTE]
 > 
