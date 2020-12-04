@@ -91,7 +91,7 @@ Sobald Sie Datenschutzaufträge abgeschlossen haben, stehen Ihnen verschiedene O
 | --- | --- |
 | [!DNL Privacy Service] Benutzeroberfläche | Die [!DNL Privacy Service] Benutzeroberfläche bietet ein Dashboard zur Überwachung, mit dem Sie eine visuelle Darstellung des Status aller aktiven Anforderungen Ansicht haben. See the [Privacy Service user guide](ui/overview.md) for more information. |
 | [!DNL Privacy Service] API | Sie können den Status von Datenschutzaufträgen programmgesteuert überwachen, indem Sie die von der [!DNL Privacy Service] API bereitgestellten Lookup-Endpunkte verwenden. Ausführliche Anweisungen zur Verwendung der API finden Sie im [Privacy Service Developer Guide](./api/getting-started.md) . |
-| [!DNL Privacy Events] | [!DNL Privacy Events] nutzen Sie Adobe-I/O-Ereignis, die an einen konfigurierten Webhaken gesendet werden, um eine effiziente Auftragsabwicklungsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenschutzrichtlinien-Ereignissen](./privacy-events.md) . |
+| [!DNL Privacy Events] | [!DNL Privacy Events] adobe i/o-Ereignis, die an einen konfigurierten Webhaken gesendet werden, nutzen, um eine effiziente Auftragsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenschutzrichtlinien-Ereignissen](./privacy-events.md) . |
 
 ## Nächste Schritte
 
