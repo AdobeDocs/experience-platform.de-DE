@@ -47,7 +47,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 Weitere Informationen [!DNL Real-time Customer Profile]einschließlich Übungen und Best Practices für die Arbeit mit [!DNL Profile] Daten finden Sie in der Übersicht über das [Echtzeit-Kundenerlebnis](../../profile/home.md).
 
-## Segmentierungsdienst {#segmentation}
+## Segmentierungs-Service {#segmentation}
 
 Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
 
@@ -114,6 +114,6 @@ Mit dem marketingfreundlichen Profil-Viewer mit Anpassung können Sie die Zusamm
 
 #### Überwachung
 
-Gewährleistet Transparenz des Datenflusses und gibt Einblick in den Zustand des Datenverkehrs von den Quellschnittstellen in das System, wodurch mehr Selbstbedienung und schnellere Reaktionsfähigkeit bei der Fehlerbehebung gewährleistet sind.
+Gewährleistet Transparenz des Datenflusses und gibt Einblick in den Zustand des Datenverkehrs von den Quellschnittstellen in das System, wodurch mehr Selbstbedienung und schnellere Reaktionsfähigkeit bei der Fehlerbehebung gewährleistet werden.
 
 - Überwachen Sie die Ausführung des gesamten Datenflusses und sehen Sie eine detaillierte Ansicht der einzelnen Vorgänge, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und ausführbare Diagnosen.
