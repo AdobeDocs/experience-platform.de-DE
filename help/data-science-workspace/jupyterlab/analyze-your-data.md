@@ -8,7 +8,7 @@ description: Dieses Lernprogramm konzentriert sich auf die Verwendung von in Dat
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1723'
 ht-degree: 22%
 
 ---
@@ -20,9 +20,9 @@ Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Wor
 
 Die folgenden Konzepte werden eingeführt:
 
-- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die Web-basierte Schnittstelle der nächsten Generation für Project Jupyter und ist eng in [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist die webbasierte Schnittstelle der nächsten Generation für Project Jupyter und ist eng in [!DNL Adobe Experience Platform]integriert.
 - **Stapel:** Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird. Beim Hinzufügen von Daten zu einem Datensatz werden neue Stapel erstellt.
-- **Data Access SDK (nicht mehr unterstützt):** Das Data Access SDK ist jetzt veraltet. Bitte verwenden Sie das Handbuch [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
+- **Data Access SDK (nicht mehr unterstützt):** Das Data Access SDK ist jetzt veraltet. Bitte verwenden Sie das [[!DNL Platform SDK]](../authoring/platform-sdk.md) Handbuch.
 
 ## Notebooks im Data Science Workspace
 
@@ -56,7 +56,7 @@ Das Rezept für den Einzelhandel ist ein eigenständiges Beispiel, das mit demse
 >
 >Das `data_access_sdk_python` wird nicht mehr unterstützt und nicht mehr empfohlen. Informationen zum Konvertieren Ihres Codes finden Sie im Tutorial zum [Konvertieren von Datenzugriffs-SDK in Platform SDK](../authoring/platform-sdk.md) . Für dieses Lernprogramm gelten weiterhin die folgenden Schritte.
 
-Wir gehen weiter auf Daten intern von [!DNL Adobe Experience Platform] und Daten extern zugreifen. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die Pandas- [!DNL Python] Bibliothek.
+Wir gehen weiter auf Daten intern von [!DNL Adobe Experience Platform] und Daten extern. Wir werden die `data_access_sdk_python` Bibliothek verwenden, um auf interne Daten wie Datensätze und XDM-Schema zuzugreifen. Für externe Daten verwenden wir die Pandas- [!DNL Python] Bibliothek.
 
 #### Externe Daten
 
@@ -92,7 +92,7 @@ Jetzt können wir mit der rechten Maustaste auf den `Retail-Training-<your-alias
 
 >[!TIP]
 >
->Weitere Informationen zum Konvertieren des Codes finden Sie im Handbuch zum [[!DNL-Plattform-SDK]](../authoring/platform-sdk.md) .
+>Lesen Sie das [[!DNL Platform SDK]](../authoring/platform-sdk.md) Handbuch, um Ihren Code zu konvertieren.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
