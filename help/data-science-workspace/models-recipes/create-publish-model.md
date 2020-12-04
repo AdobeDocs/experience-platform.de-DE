@@ -8,7 +8,7 @@ description: Adobe Experience Platform Data Science Workspace bietet die Möglic
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1589'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
    * [[!DNL Experience Data Model]](../../xdm/home.md): Der durch die Adobe zur Definition von Standard-Schemas wie [!DNL Profile] und ExperienceEvent für Customer Experience Management angeführte Standardisierungsaufwand.
    * Datensätze: Ein Datenspeicherung- und Verwaltungskonstrukt für tatsächliche Daten. Eine physische instanziierte Instanz eines [XDM-Schemas](../../xdm/schema/field-dictionary.md).
    * Stapel: Datensätze bestehen aus Stapeln. Ein Stapel ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als eine Einheit verarbeitet wird.
-   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist eine Open-Source Web-Schnittstelle für Projekt [!DNL Jupyter] und ist eng in [!DNL Experience Platform]integriert.
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist eine Open-Source Web-basierte Schnittstelle für Projekt [!DNL Jupyter] und ist eng in [!DNL Experience Platform].
 
 ## Daten vorbereiten {#prepare-your-data}
 
