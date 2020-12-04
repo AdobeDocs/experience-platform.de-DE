@@ -8,28 +8,28 @@ description: In diesem Dokument finden Sie eine Anleitung zum Evaluieren von Seg
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 14%
+source-wordcount: '1535'
+ht-degree: 15%
 
 ---
 
 
 # Segmentergebnisse auswerten und darauf zugreifen
 
-Dieses Dokument bietet eine Anleitung zum Evaluieren von Segmenten und zum Zugriff auf Segmentergebnisse mithilfe der [[!DNL-Segmentierungs-API]](../api/getting-started.md).
+In diesem Dokument finden Sie eine Anleitung zur Bewertung von Segmenten und zum Zugriff auf Segmentergebnisse mit der [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Erste Schritte
 
 Dieses Lernprogramm erfordert ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die beim Erstellen von Segmenten für die Audience erforderlich sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus [!DNL Real-time Customer Profile] Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 - [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ### Erforderliche Kopfzeilen
 
-This tutorial also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+This tutorial also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] APIs. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -67,19 +67,19 @@ Durch die geplante Auswertung kann Ihr IMS-Org einen wiederkehrenden Zeitplan er
 
 Wenn Sie eine POST-Anfrage an den `/config/schedules`-Endpunkt senden, können Sie einen Zeitplan erstellen und die genaue Zeit einschließen, zu der der Zeitplan ausgelöst werden soll.
 
-Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Leitfaden zum Endpunkt &quot; [Zeitpläne&quot;.](../api/schedules.md#create)
+Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Leitfaden zum [Endpunkt &quot;Zeitpläne&quot;.](../api/schedules.md#create)
 
 ### Zeitplan aktivieren
 
 Standardmäßig ist ein Zeitplan bei der Erstellung inaktiv, es sei denn, die `state`-Eigenschaft ist im Text der POST-Anfrage (Erstellen) auf `active` gesetzt. Sie können einen Zeitplan aktivieren (setzen Sie `state` auf `active`), indem Sie eine PATCH-Anfrage an den `/config/schedules`-Endpunkt senden und die Kennung des Zeitplans in den Pfad einschließen.
 
-Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Leitfaden zum Endpunkt &quot; [Zeitpläne&quot;.](../api/schedules.md#update-state)
+Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Leitfaden zum [Endpunkt &quot;Zeitpläne&quot;.](../api/schedules.md#update-state)
 
 ### Zeitplanaktualisierung
 
 Die Zeitplanung kann aktualisiert werden, indem eine PATCH-Anforderung an den `/config/schedules` Endpunkt gesendet und die ID des Zeitplans in den Pfad aufgenommen wird.
 
-Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Leitfaden zum Endpunkt &quot; [Zeitpläne&quot;.](../api/schedules.md#update-schedule)
+Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Leitfaden zum [Endpunkt &quot;Zeitpläne&quot;.](../api/schedules.md#update-schedule)
 
 ## On-Demand-Bewertung
 
@@ -151,7 +151,7 @@ Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der Wert des 
 Die folgenden Schritte sind erforderlich, um Ihre Audience zu exportieren:
 
 - [Erstellen Sie einen Dataset](#create-a-target-dataset) der Zielgruppe - Erstellen Sie den Datensatz, der Audiencen enthält.
-- [Generieren von Profilen zur Audience im Datensatz](#generate-profiles-for-audience-members) - Füllen Sie den Datensatz mit XDM-Profilen auf Basis der Ergebnisse eines Segmentauftrags.
+- [Generieren von Profilen zur Audience im Datensatz](#generate-profiles-for-audience-members) - Füllen Sie den Datensatz mit XDM Individuelle Profil basierend auf den Ergebnissen eines Segmentauftrags.
 - [Überwachung des Exportfortschritts](#monitor-export-progress) - Überprüfen Sie den aktuellen Fortschritt des Exportprozesses.
 - [Lesen Sie die Daten](#next-steps) zur Audience - Rufen Sie die resultierenden XDM-Profil für die Mitglieder Ihrer Audience ab.
 
@@ -230,10 +230,10 @@ Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Handb
 
 ## Nächste Schritte
 
-Sobald der Export erfolgreich abgeschlossen wurde, stehen Ihre Daten im [!DNL Data Lake] In zur Verfügung [!DNL Experience Platform]. Sie können dann mit der [[!DNL-Datenzugriffs-API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) auf die Daten zugreifen, indem Sie die mit dem Export verknüpften Daten verwenden `batchId` . Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
+Sobald der Export erfolgreich abgeschlossen wurde, stehen Ihre Daten im [!DNL Data Lake] In zur Verfügung [!DNL Experience Platform]. Sie können dann mit der [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) Methode auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` Datei verwenden. Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Stapel kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Zugriff auf und Herunterladen von Stapeldateien mit der [!DNL Data Access] API finden Sie im [Lernprogramm](../../data-access/tutorials/dataset-data.md)&quot;Datenzugriff&quot;.
 
 Sie können auch auf erfolgreich exportierte Segmentdaten zugreifen [!DNL Adobe Experience Platform Query Service]. Mithilfe der Benutzeroberfläche oder RESTful-API können [!DNL Query Service] Sie Abfragen für Daten innerhalb der [!DNL Data Lake]Benutzeroberfläche schreiben, überprüfen und ausführen.
 
-Weitere Informationen zur Abfrage von Audiencen finden Sie in der Dokumentation zum [[!DNL Abfrage Service]](../../query-service/home.md).
+Weitere Informationen zur Abfrage von Daten zur Audience finden Sie in der Dokumentation zu [[!DNL Query Service]](../../query-service/home.md).
