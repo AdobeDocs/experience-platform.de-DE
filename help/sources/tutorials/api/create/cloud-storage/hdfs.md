@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Erstellen eines Apache HDFS-Connectors mit der Flow Service API
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die notwendig sind, um ein Apache Hadoop Distributed File System (nachstehend "HDFS" genannt) mit der Experience Platform zu verbinden.
+description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zur Verbindung eines Apache Hadoop Distributed File Systems (im Folgenden "HDFS" genannt) mit der Experience Platform zu führen.
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '561'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 21%
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen verwendet, um sie in Adobe Experience Platform zu importieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen Sie ein Apache Hadoop Distributed File System (nachstehend &quot;HDFS&quot; genannt) mit [!DNL Experience Platform]verbinden.
+Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen Sie ein Apache Hadoop Distributed File System (im Folgenden &quot;HDFS&quot; genannt) mit [!DNL Experience Platform]verbinden.
 
 ## Erste Schritte
 
@@ -46,7 +46,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
