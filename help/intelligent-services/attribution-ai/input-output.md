@@ -161,7 +161,7 @@ Die nachstehende Tabelle enthält weitere Details zu den einzelnen Zuordnungswer
 
 | Zuordnungswerte | Beschreibung |
 | ----- | ----------- |
-| Beeinflusst (algorithmisch) | Einflussreiches Ergebnis ist der Anteil der Konversion, für den jeder Marketing-Touchpoint verantwortlich ist. |
+| Beeinflusst (algorithmisch) | Einflussreiches Ergebnis ist der Anteil der Konversion, für die jeder Marketing-Touchpoint verantwortlich ist. |
 | Inkrementell (algorithmisch) | Inkrementelles Ergebnis ist die Höhe des Grenzeffekts, der direkt durch einen Marketing-Touchpoint verursacht wird. |
 | Erstkontakt | Regelbasiertes Zuordnungsergebnis, das dem ursprünglichen Touchpoint auf einem Konversionspfad alle Gutschriften zuweist. |
 | Letztkontakt | Regelbasierter Zuordnungswert, der dem Touchpoint die Gutschrift zuweist, der der Konversion am nächsten kommt. |
