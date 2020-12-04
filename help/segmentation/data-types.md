@@ -19,7 +19,7 @@ Alle XDM-Datentypen werden in [!DNL Segmentation Service]unterstützt. Die Regel
 
 ## Zeichenfolgendaten
 
-Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht-numerische Beschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuhandstufe&quot;für Programme.
+Segmentdefinitionen verwenden Zeichenfolgendaten, um nicht numerische Einschränkungen für Segmentdefinitionen zu definieren, wie z. B. &quot;Ländername&quot;oder &quot;Treuestufe auf Programm-Ebene&quot;.
 
 Stringdaten werden in Segmentdefinitionen mit logischen, einschließlich-/ausschließlichen und Vergleichsanweisungen eingeschlossen. Nachdem Sie Ihrer Segmentdefinition ein Zeichenfolgenattribut hinzugefügt haben, können Sie mit Zeichenfolgen-relevanten Anweisungen das Attribut mit anderen Zeichenfolgenfeldern vergleichen.
 
@@ -33,7 +33,7 @@ Stringdaten werden in Segmentdefinitionen mit logischen, einschließlich-/aussch
 
 Mit den Datumsdaten können Sie Ihren Segmentdefinitionen zeitbasierten Kontext zuweisen, entweder durch Verwendung spezifischer Beginn-/Enddaten oder durch Verwendung datumsrelevanter Anweisungen, wie in der unten stehenden Tabelle dargestellt. Eine Implementierung könnte eine Audience von Kunden schaffen, die *dieses Jahr* jederzeit mit Ihrer Marke interagiert haben und auch in den letzten Tagen aktiv *gewesen* sind.
 
-| Beispielfeld | Datumsbezogene Aussagen | Timeline |
+| Beispielfeld | Datumsbezogene Aussagen | Zeitleistensegment |
 | ------------- | ------------------------ | --------- |
 | person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant für den Tag, an dem das Segment erstellt wurde. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevant innerhalb einer beliebigen Woche/eines Monats. |
