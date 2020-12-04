@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 22%
+source-wordcount: '759'
+ht-degree: 25%
 
 ---
 
@@ -23,7 +23,7 @@ This guide covers how to use the [!DNL Privacy Service] API. Weitere Information
 
 This guide requires a working understanding the following [!DNL Experience Platform] features:
 
-* [[!DNL-Privacy Service]](../home.md): Bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie Zugriff auf und Löschanforderungen von Ihren Datensubjekten (Kunden) in allen Adobe Experience Cloud-Anwendungen verwalten können.
+* [[!DNL Privacy Service]](../home.md): Bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie die Zugriffs- und Löschanfragen Ihrer Datensubjekte (Kunden) in allen Adobe Experience Cloud-Anwendungen verwalten können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Privacy Service-API erfolgreich aufrufen zu können.
 
@@ -59,7 +59,7 @@ Die Schritte zum Generieren dieser Werte werden nachfolgend detailliert beschrie
 
 #### Einmalige Einrichtung
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
 
 Nachdem Sie ein neues Projekt erstellt haben, klicken Sie im Bildschirm &quot; **[!UICONTROL Projektübersicht]** &quot;auf **[!UICONTROL Hinzufügen API]** .
 
