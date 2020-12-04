@@ -7,7 +7,7 @@ description: Bei der Segmentierung mit mehreren Entitäten können Sie Profildat
 translation-type: tm+mt
 source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '656'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ Die Segmentierung mehrerer Entitäten ist eine erweiterte Funktion, die als Teil
 
 Die Segmentierung mehrerer Entitäten erfordert ein funktionierendes Verständnis der verschiedenen Adobe Experience Platform-Dienste, die an der Segmentierung beteiligt sind. Bevor Sie mit diesem Handbuch fortfahren, lesen Sie bitte die folgende Dokumentation:
 
-* [[!DNL Echtzeit-Profil]](../profile/home.md): Bietet ein einheitliches Verbraucherdatenquellen-Profil in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches Verbraucherdatenquellen-Profil in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
    * [Profil-Guardrails](../profile/guardrails.md): Bewährte Verfahren zum Erstellen von Datenmodellen, die von unterstützt werden [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten aus [!DNL Real-time Customer Profile] Daten.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
@@ -37,7 +37,7 @@ Ein Marketingspezialist, der eine E-Mail-Kampagne erstellt hat, hat möglicherwe
 
 ### E-Mail-Retargeting für Warenkorbabbruch
 
-Es ist häufig komplex, Benutzer zu erstellen und in Segmente einzustufen, die auf den Abbruch des Einkaufswagens abzielen. Um zu wissen, welche Produkte in eine personalisierte Targeting-Kampagne aufgenommen werden sollen, sind Daten darüber erforderlich, welche Produkte von den einzelnen Kunden abgeschafft wurden. Diese Daten sind an kommerzielle Ereignis gebunden, die früher Schwierigkeiten hatten, Daten zu überwachen und zu extrahieren.
+Es ist häufig komplex, Benutzer zu erstellen und in Segmente einzustufen, die auf den Abbruch des Einkaufswagens abzielen. Um zu wissen, welche Produkte in eine personalisierte Targeting-Kampagne aufgenommen werden sollen, müssen Daten darüber vorliegen, welche Produkte von den einzelnen Kunden abgeschafft wurden. Diese Daten sind an kommerzielle Ereignis gebunden, die früher Schwierigkeiten hatten, Daten zu überwachen und zu extrahieren.
 
 ## Erstellen von Segmenten mit mehreren Entitäten
 
