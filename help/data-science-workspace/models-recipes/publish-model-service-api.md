@@ -8,7 +8,7 @@ description: Dieses Lernprogramm beschreibt den Prozess der Veröffentlichung ei
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1496'
 ht-degree: 51%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 51%
 
 # Veröffentlichen eines Modells als Dienst (API)
 
-Dieses Lernprogramm beschreibt den Prozess der Veröffentlichung eines Modells als Dienst mit der [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Dieses Lernprogramm behandelt den Prozess der Veröffentlichung eines Modells als Dienst mit dem [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Erste Schritte
 
@@ -122,7 +122,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 
 ## Erstellen eines ML-Dienstes aus einer vorhandenen ML-Instanz
 
-Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Diensts mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Tutorial werden die spezifischen Fälle behandelt, in denen:
+Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Dienstes mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Tutorial werden die spezifischen Fälle behandelt, in denen:
 
 - [Sie keine geplante Schulung benötigen, sondern eine geplante Auswertung.](#ml-service-with-scheduled-experiment-for-scoring)
 - [Sie geplante Experimentabläufe sowohl für Schulungen als auch für Auswertungen benötigen.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
