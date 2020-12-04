@@ -3,7 +3,7 @@ keywords: Experience Platform;getting started;content ai;commerce ai;content and
 solution: Experience Platform
 title: Erste Schritte mit der Content and Commerce-API
 topic: Getting started
-description: Content and Commerce AI verwendet Adobe-I/O-APIs. Um Aufrufe an Adoben-E/A-APIs und die E/A-Konsolenintegration durchzuführen, müssen Sie zunächst das Authentifizierungstraining absolvieren.
+description: Content and Commerce AI verwendet Adobe I/O APIs. Um Aufrufe an Adobe I/O-APIs und die I/O-Konsolenintegration durchzuführen, müssen Sie zunächst das Authentifizierungslehrgang abschließen.
 translation-type: tm+mt
 source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
@@ -19,13 +19,13 @@ ht-degree: 12%
 >
 >Die AI für Inhalte und Commerce befindet sich in der Betaphase. Die Dokumentation kann geändert werden.
 
-[!DNL Content and Commerce AI] verwendet Adobe-I/O-APIs. Um Aufrufe an Adoben-E/A-APIs und die E/A-Konsolenintegration durchzuführen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen.
+[!DNL Content and Commerce AI] verwendet Adobe I/O-APIs. Um Aufrufe an Adobe I/O-APIs und die I/O-Konsolenintegration durchzuführen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen.
 
 Wenn Sie jedoch zum Schritt **Hinzufügen API** gelangen, befindet sich die API unter Experience Cloud anstelle von Adobe Experience Platform, wie im folgenden Screenshot gezeigt:
 
 ![Hinzufügen von Content- und Commerce-API](./images/add-api.png)
 
-Wenn Sie das Authentifizierungstreutorial abschließen, erhalten Sie die Werte für die einzelnen erforderlichen Kopfzeilen in allen I/O-API-Aufrufen der Adobe, wie unten dargestellt:
+Wenn Sie das Authentifizierungstraining abschließen, werden die Werte für die einzelnen erforderlichen Header in allen Adobe I/O API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -61,9 +61,9 @@ Nach Abschluss sollten Ihre Variablen etwa wie im folgenden Screenshot aussehen.
 
 Sie können Ihre Umgebung jetzt im Dropdown-Menü oben rechts auswählen und alle gespeicherten Werte automatisch ausfüllen. Bearbeiten Sie die Werte einfach jederzeit neu, um alle Ihre API-Aufrufe zu aktualisieren.
 
-![Beispiel](./images/select-environment.png)
+![example](./images/select-environment.png)
 
-Weitere Informationen zum Arbeiten mit Adobe-E/A-APIs mit Postman finden Sie im Beitrag Medium zur [Verwendung von Postman für die JWT-Authentifizierung auf Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Weitere Informationen zum Arbeiten mit Adobe I/O-APIs mit Postman finden Sie im Beitrag &quot;Mittel&quot;zur [Verwendung von Postman für die JWT-Authentifizierung unter Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## Lesen von Beispiel-API-Aufrufen
 
