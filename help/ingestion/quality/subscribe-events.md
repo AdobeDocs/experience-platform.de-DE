@@ -23,7 +23,7 @@ To assist in monitoring the ingestion process, [!DNL Experience Platform] makes 
 
 ## Registrieren eines Webhofs für Benachrichtigungen zur Datenaufnahme
 
-Um Benachrichtigungen zur Datenerfassung zu erhalten, müssen Sie die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) verwenden, um einen Webshaken für Ihre Experience Platform-Integration zu registrieren.
+Um Benachrichtigungen zur Datenerfassung zu erhalten, müssen Sie die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de) verwenden, um einen Webshaken für Ihre Experience Platform-Integration zu registrieren.
 
 Folgen Sie dem Tutorial zum [Abonnieren von [!DNL Adobe I/O Event] Tonbenachrichtigungen](../../observability/notifications/subscribe.md) , um detaillierte Schritte dazu zu erhalten.
 
