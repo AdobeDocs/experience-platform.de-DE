@@ -7,8 +7,8 @@ description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mi
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
-ht-degree: 88%
+source-wordcount: '2077'
+ht-degree: 90%
 
 ---
 
@@ -207,8 +207,8 @@ Bei Verwendung von Tags sind einige Einschränkungen zu beachten:
 * Tag-Namen sind für Ihre IMS-Organisation eindeutig.
 * Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig „adobe“ vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
 * The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
-   * `unifiedProfile`: Dieser Tag-Name ist für Datasets reserviert, die vom [[!DNL-Echtzeit-Profil]](../../profile/home.md)erfasst werden sollen.
-   * `unifiedIdentity`: Dieser Tag-Name ist für Datasets reserviert, die vom [[!DNL-Identitätsdienst]](../../identity-service/home.md)erfasst werden sollen.
+   * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-time Customer Profile]](../../profile/home.md) erfasst werden sollen.
+   * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Identity Service]](../../identity-service/home.md) erfasst werden sollen.
 
 Nachfolgend finden Sie ein Beispiel für einen Datensatz, der eine `tags`-Eigenschaft enthält. Die Tags in dieser Eigenschaft haben die Form von Schlüssel-Wert-Paaren, wobei jeder Tag-Wert als Array mit einer einzelnen Zeichenfolge angezeigt wird:
 
