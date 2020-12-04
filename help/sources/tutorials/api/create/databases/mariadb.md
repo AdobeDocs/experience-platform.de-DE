@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '556'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 21%
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen Sie eine Verbindung herstellen [!DNL Experience Platform] können [!DNL MariaDB].
+Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen eine Verbindung hergestellt [!DNL Experience Platform] werden soll [!DNL MariaDB].
 
 ## Erste Schritte
 
@@ -35,7 +35,7 @@ The following sections provide additional information that you will need to know
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit eine Verbindung [!DNL Flow Service] mit hergestellt werden kann, müssen Sie die folgende Verbindungseigenschaft angeben [!DNL MariaDB]:
+Damit eine Verbindung [!DNL Flow Service] [!DNL MariaDB]mit hergestellt werden kann, müssen Sie die folgende Verbindungseigenschaft angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -50,7 +50,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
