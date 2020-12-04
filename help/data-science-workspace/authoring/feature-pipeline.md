@@ -7,7 +7,7 @@ description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funkti
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1421'
 ht-degree: 27%
 
 ---
@@ -439,4 +439,4 @@ Sobald die Bewertung abgeschlossen ist, sollte Ihre Feature-Pipeline betriebsber
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Durch Lesen dieses Dokuments haben Sie mit dem Modell-Authoring-SDK eine Feature-Pipeline erstellt, ein Docker-Bild erstellt und mit der Docker-Bild-URL ein Feature-Pipeline-Modell mithilfe der [!DNL Sensei Machine Learning] API erstellt. Sie sind jetzt bereit, mit der Transformation von Datensätzen und der Extrahierung von Datenfunktionen im Maßstab mit der [[!DNL Sensei Machine Learning API]](../api/getting-started.md)fortzufahren.
+Durch Lesen dieses Dokuments haben Sie mit dem Modell-Authoring-SDK eine Feature-Pipeline erstellt, ein Docker-Bild erstellt und mit der Docker-Bild-URL ein Feature-Pipeline-Modell mithilfe der [!DNL Sensei Machine Learning] API erstellt. Sie sind jetzt bereit, mit der Transformation von Datensätzen und der Extrahierung von Datenfunktionen im Maßstab fortzufahren [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
