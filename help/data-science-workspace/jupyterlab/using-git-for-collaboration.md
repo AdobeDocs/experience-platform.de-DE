@@ -8,7 +8,7 @@ description: Git ist ein verteiltes Versionsverwaltungssystem zur Verfolgung von
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -60,4 +60,4 @@ Anschließend klonen Sie das Repository, das Sie mit dem `git clone` Befehl verw
 
 ## Nächste Schritte
 
-Nachdem Sie das Klonen Ihres Repositorys abgeschlossen haben, können Sie Git wie gewohnt auf Ihrem lokalen Computer verwenden, um mit anderen an Notebooks zusammenzuarbeiten. Weitere Informationen dazu, was Sie in diesem Handbuch machen können, [!DNL JupyterLab]finden Sie im [[!DNL JupyterLab Benutzerhandbuch]](./overview.md).
+Nachdem Sie das Klonen Ihres Repositorys abgeschlossen haben, können Sie Git wie gewohnt auf Ihrem lokalen Computer verwenden, um mit anderen an Notebooks zusammenzuarbeiten. Weitere Informationen dazu, was Sie in diesem Abschnitt tun können, [!DNL JupyterLab]finden Sie in der [[!DNL JupyterLab user guide]](./overview.md).
