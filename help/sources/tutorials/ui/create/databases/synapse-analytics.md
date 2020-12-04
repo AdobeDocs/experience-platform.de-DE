@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synapse;synapse;azure synapse analytics
 solution: Experience Platform
-title: Erstellen eines Azurblase-Synapse-Analytics-Quellconnectors in der Benutzeroberfläche
+title: Azure synapse Analytics-Quellanschluss in der Benutzeroberfläche erstellen
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines Azurblauen Synapse Analytics (nachfolgend "Synapse")-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: In diesem Lernprogramm werden Schritte zum Erstellen eines Azure synapse Analytics-Quellconnectors (nachfolgend "Synapse"genannt) mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -51,11 +51,11 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an u
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
 
-Wählen Sie unter der Kategorie &quot; **[!UICONTROL Datenbanken]** &quot;die Option **[!UICONTROL Azurblauer Synapse Analytics]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie &quot; **[!UICONTROL Konfigurieren]**&quot;aus. Andernfalls wählen Sie **[!UICONTROL Hinzufügen Daten]** aus, um einen neuen [!DNL Synapse] Connector zu erstellen.
+Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Azure synapse Analytics]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie &quot; **[!UICONTROL Konfigurieren]**&quot;aus. Andernfalls wählen Sie **[!UICONTROL Hinzufügen Daten]** aus, um einen neuen [!DNL Synapse] Connector zu erstellen.
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-Die Seite &quot; **[!UICONTROL Verbindung zu Azurblauer Synapse-Analyse]** &quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die Seite **[!UICONTROL Verbindung mit Azure synapse Analytics]** herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
