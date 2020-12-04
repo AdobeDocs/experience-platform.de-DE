@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen eines Apache HDFS-Quellconnectors in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Authentifizieren eines Apache Hadoop Distributed File System (im Folgenden "HDFS" genannt)-Quellconnectors über die Plattform-Benutzeroberfläche beschrieben.
+description: In diesem Lernprogramm werden Schritte zum Authentifizieren eines Apache Hadoop Distributed File System (im Folgenden "HDFS" genannt) Quellconnectors über die Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
