@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 solution: Experience Platform
-title: Übersicht über Attribution AIS
+title: Attribution AI – Übersicht
 topic: Attribution AI
-description: Attribution AI wird verwendet, um Gutschriften Touchpoints zuzuordnen, die zu Konversions-Ereignissen führen. Dies kann von Marketingexperten genutzt werden, um die Marketingauswirkungen jedes einzelnen Marketing-Touchpoints über Kundenreisen hinweg zu quantifizieren. Beispiele für Touchpoints sind Display-Anzeigenimpressionen, E-Mail-Senden, E-Mail-Öffnen und Klicks auf gebührenpflichtige Suchen.
+description: Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
 translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 11%
+ht-degree: 34%
 
 ---
 
 
-# Übersicht über Attribution AIS
+# Attribution AI – Übersicht
 
 Attribution AI als Teil von Intelligent Services ist ein algorithmischer Zuordnungsdienst mit mehreren Kanälen, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketing-Experten die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen einzelner Kundeninteraktionen in einzelnen Phasen der Customer Journey untersuchen.
 
 ## Attribution AIS verstehen
 
-Attribution AI wird verwendet, um Gutschriften Touchpoints zuzuordnen, die zu Konversions-Ereignissen führen. Dies kann von Marketingexperten genutzt werden, um die Marketingauswirkungen jedes einzelnen Marketing-Touchpoints über Kundenreisen hinweg zu quantifizieren. Beispiele für Touchpoints sind Display-Anzeigenimpressionen, E-Mail-Senden, E-Mail-Öffnen und Klicks auf gebührenpflichtige Suchen.
+Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
 
 Attribution AI-Ausgaben können über verschiedene Dimensionen getrennt werden und können über verschiedene Phasen der Customer Journey hinweg genutzt werden. Dies erfolgt, ohne dass geschäftliche Anforderungen in maschinelle Lernprobleme, die Auswahl von Algorithmen, Schulungen oder die Bereitstellung von Modellen übersetzt werden müssen.
 
