@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '579'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -40,7 +40,7 @@ Damit eine Verbindung [!DNL Flow Service] zu [!DNL PayPal]hergestellt werden kan
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
 | Host | The URL of the [!DNL PayPal] instance. (Standard: api.sandbox.paypal.com). |
-| Client-ID | Die mit Ihrer [!DNL PayPal] Anwendung verknüpfte Client-ID. |
+| Client ID (Client-ID) | Die mit Ihrer [!DNL PayPal] Anwendung verknüpfte Client-ID. |
 | Client-Geheimnis | Das mit Ihrer [!DNL PayPal] Anwendung verknüpfte Clientgeheimnis. |
 | Verbindungs-ID | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für [!DNL PayPal] lautet: `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
@@ -52,7 +52,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
