@@ -19,6 +19,6 @@ Die Adobe Experience Platform-Dokumentation ist in mehreren Sprachen verfügbar.
 
 ![Bild](../images/overview/lang.jpg)
 
-## [!DNL Experience Platform] Dokumentation
+## [!DNL Experience Platform]Dokumentation
 
 Weitere Informationen zu den verfügbaren Dokumentationstypen finden Sie in der Übersicht über die Dokumentationstypen der [Plattform](overview.md). Um mehr über eine bestimmte [!DNL Platform] Funktion oder einen bestimmten Dienst zu erfahren, wählen Sie in der Landingpage [Experience Platform Dokumentation einen Leitfaden aus](https://experienceleague.corp.adobe.com/docs/experience-platform.html?lang=en).
