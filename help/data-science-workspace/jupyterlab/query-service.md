@@ -8,8 +8,8 @@ description: Mit Adobe Experience Platform können Sie SQL (Structured Query Lan
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 66%
+source-wordcount: '807'
+ht-degree: 68%
 
 ---
 
@@ -29,9 +29,9 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 - Ein [!DNL Adobe Analytics] Datensatz
 
 - Ein Verständnis der folgenden Schlüsselkonzepte, die in diesem Tutorial verwendet werden:
-   - [[!DNL Experience Data Model (XDM) und XDM System]](../../xdm/home.md)
-   - [[!DNL Abfrage Service]](../../query-service/home.md)
-   - [[!DNL Abfrage Service SQL Syntax]](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## Zugriff [!DNL JupyterLab] und [!DNL Query Service] {#access-jupyterlab-and-query-service}
