@@ -7,8 +7,8 @@ description: Mit der Policy Service API können Sie verschiedene Ressourcen im Z
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 26%
+source-wordcount: '427'
+ht-degree: 29%
 
 ---
 
@@ -21,9 +21,9 @@ Mit der [!DNL Policy Service] API können Sie verschiedene Ressourcen im Zusamme
 
 Die Verwendung des Entwicklerhandbuchs erfordert ein grundlegendes Verständnis der verschiedenen [!DNL Experience Platform] Dienste, die beim Arbeiten mit Data Governance-Funktionen erforderlich sind. Before beginning to work with the [!DNL Policy Service API], please review the documentation for the following services:
 
-* [[!DNL -Datenverwaltung]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Experience Platform] erzwungen wird.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-* [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Data Governance]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Experience Platform] erzwungen wird.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ## Lesen von Beispiel-API-Aufrufen
