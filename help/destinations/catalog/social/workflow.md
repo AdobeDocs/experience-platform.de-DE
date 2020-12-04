@@ -6,7 +6,7 @@ seo-title: Workflow für Ziele in sozialen Netzwerken
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Anzeigenkonten für soziale Netzwerke
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Anzeigenkonten für soziale Netzwerke
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 58%
@@ -38,7 +38,7 @@ Wenn Sie im Schritt **Authentifizieren** zuvor eine Verbindung zu Ihrem Ziel in 
 
 Nachdem Sie Ihre Anmeldedaten bestätigt haben und Adobe Experience Cloud mit Ihrem sozialen Netzwerk verbunden ist, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem **[!UICONTROL Setup-Schritt]** fortzufahren.
 
-![Anmeldedaten bestätigt](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![Anmeldedaten bestätigt](../../assets/catalog/social/workflow/post-connect.png)
 
 Geben Sie im **[!UICONTROL Setup-Schritt]** einen [!UICONTROL Namen] und eine [!UICONTROL Beschreibung] für die Aktivierung ein und geben Sie die [!UICONTROL Kontokennung] Ihres Anzeigenkontos für das soziale Netzwerk ein.
 
