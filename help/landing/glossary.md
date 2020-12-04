@@ -44,7 +44,7 @@ ht-degree: 1%
 
 **Adobe Intelligent Services:** Adobe Sensei ist der für die Geheimdienste zuständige Rahmen [!DNL Experience Platform]. Es bietet außerdem eine Reihe von AI-Diensten, die Marken in die Lage versetzen, ihre Fähigkeit zur Bereitstellung personalisierter Echtzeit-Kundenerlebnisse zu verbessern.
 
-**Adobe I/O:** Adobe-I/O ist Teil [!DNL Experience Platform] und bietet Zugriff auf alles, was Entwickler zur Integration, Erweiterung und Anpassung von Adobe Experience Platform benötigen, einschließlich APIs, Ereignisse, Entwicklerkonsole und hilfreicher Werkzeuge.
+**Adobe I/O:** Adobe I/O ist Teil [!DNL Experience Platform] und bietet Zugriff auf alles, was Entwickler zur Integration, Erweiterung und Anpassung von Adobe Experience Platform benötigen, einschließlich APIs, Ereignisse, Entwicklerkonsole und hilfreicher Werkzeuge.
 
 **Adobe Sensei:** Adobe Sensei ist der für die Geheimdienste zuständige Rahmen [!DNL Experience Platform]. Es bietet außerdem eine Reihe von AI-Diensten, die Marken in die Lage versetzen, ihre Fähigkeit zur Bereitstellung personalisierter Echtzeit-Kundenerlebnisse zu verbessern.
 
