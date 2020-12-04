@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
-title: Blue-Synapse-Analytics-Anschluss
+title: azure synapse Analytics Connector
 topic: overview
-description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie Azurblase Synapse Analytics mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbinden.
+description: Die nachstehende Dokumentation enthält Informationen dazu, wie Azure synapse Analytics mithilfe von APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
@@ -27,11 +27,11 @@ Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbi
 
 ## Verbindung [!DNL Azure Synapse Analytics] mit [!DNL Platform] APIs
 
-- [Erstellen eines Azurblase-Synapse-Analytics-Connectors mit der Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Erstellen eines Azure synapse Analytics-Connectors mit der Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbindung [!DNL Azure Synapse Analytics] mit der [!DNL Platform] Benutzeroberfläche
 
-- [Erstellen eines Azurblase-Synapse-Analytics-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Azure synapse Analytics-Quellanschluss in der Benutzeroberfläche erstellen](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
