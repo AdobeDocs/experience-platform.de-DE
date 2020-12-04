@@ -5,7 +5,7 @@ title: E-Mail-Marketing-Ziele erstellen
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 81%
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID, die Sie im Schritt [Liste der verfügbaren Ziele anfordern](#get-the-list-of-available-destinations) erhalten haben.
-* `{S3 or SFTP}`: Geben Sie den gewünschten Verbindungstyp für dieses Ziel ein. Blättern Sie im [Zielkatalog](../../rtcdp/destinations/destinations-catalog.md) zu Ihrem bevorzugten Ziel, um zu sehen, ob S3- und/oder SFTP-Verbindungstypen unterstützt werden.
+* `{S3 or SFTP}`: Geben Sie den gewünschten Verbindungstyp für dieses Ziel ein. Blättern Sie im [Zielkatalog](../catalog/overview.md) zu Ihrem bevorzugten Ziel, um zu sehen, ob S3- und/oder SFTP-Verbindungstypen unterstützt werden.
 * `{ACCESS_ID}`[!DNL Amazon]: Ihre Zugriffskennung für Ihren S3-Datenspeicherort.
 * `{SECRET_KEY}`[!DNL Amazon]: Ihr geheimer Schlüssel für Ihren S3-Datenspeicherort.
 
