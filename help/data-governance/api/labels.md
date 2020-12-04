@@ -6,7 +6,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 6%
 
 ---
@@ -22,7 +22,7 @@ Mit Datenverwendungsbeschriftungen können Sie Daten entsprechend den für diese
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
 
 ## Retrieve a list of labels {#list}
 
@@ -202,7 +202,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung zurück, wobei HTTP-Code 200 (OK) bei einer Aktualisierung einer bestehenden Beschriftung oder 201 (Erstellt) bei einer neuen Beschriftung angezeigt wird.
+Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung zurück, wobei HTTP-Code 200 (OK) bei einer Aktualisierung einer bestehenden Beschriftung oder 201 (Erstellt) bei einer neuen Beschriftung.
 
 ```json
 {
@@ -228,4 +228,4 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung des `/labels` Endpunkts in der Policy Service-API behandelt. Anweisungen zum Anwenden von Bezeichnungen auf Datensätze und Felder finden Sie im API-Handbuch [für](../labels/dataset-api.md)Datensatzbeschriftungen.
+In diesem Handbuch wurde die Verwendung des `/labels` Endpunkts in der Policy Service API behandelt. Anweisungen zum Anwenden von Bezeichnungen auf Datensätze und Felder finden Sie im API-Handbuch [für](../labels/dataset-api.md)Datensatzbeschriftungen.
