@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
-title: Oracle Connector
+title: Oracle-Anschluss
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Oracle mit APIs oder der Benutzeroberfläche mit der Plattform verbunden werden kann.
+description: Die nachstehende Dokumentation enthält Informationen dazu, wie Oracle mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbunden werden kann.
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
@@ -31,7 +31,7 @@ Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbi
 
 ## Verbindung [!DNL Oracle] mit [!DNL Platform] APIs
 
-- [Oracle Connector mithilfe der Flow Service API erstellen](../../tutorials/api/create/databases/oracle.md)
+- [Erstellen eines Oracle-Connectors mithilfe der Flow Service API](../../tutorials/api/create/databases/oracle.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
