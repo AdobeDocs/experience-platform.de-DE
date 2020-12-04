@@ -7,8 +7,8 @@ description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihr
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 69%
+source-wordcount: '552'
+ht-degree: 70%
 
 ---
 
@@ -25,7 +25,7 @@ Klicken Sie in der [Experience Platform-Benutzeroberfläche](https://platform.ad
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gesendeten Ereignis anzeigt, [!DNL Platform]ein Diagramm mit der Rate der gestreamen Ereignis, die erfolgreich vom [[!DNL-Echtzeit-Kundenkonto]](../../profile/home.md)verarbeitet wurden, sowie eine detaillierte Liste der eingehenden Daten.
+Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gesendeten Ereignis anzeigt, [!DNL Platform]ein Diagramm mit der Rate der gestreamen Ereignis, die erfolgreich verarbeitet wurden [[!DNL Real-time Customer Profile]](../../profile/home.md), sowie eine detaillierte Liste der eingehenden Daten.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
