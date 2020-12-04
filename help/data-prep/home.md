@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
 workflow-type: tm+mt
 source-wordcount: '304'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Datenvorgabe
+# Datenvorbereitung
 
 Data Prep ermöglicht es Datenentwicklern, Daten dem Experience Data Model (XDM) zuzuordnen, umzuformen und zu validieren. Die Datenvorgabe wird als &quot;Map&quot;-Schritt in den Datenaufnahmemechanismen einschließlich des CSV-Ingestion-Arbeitsablaufs angezeigt. Dateningenieure können Data Prep verwenden, um die folgende Datenbearbeitung während der Erfassung durchzuführen:
 
