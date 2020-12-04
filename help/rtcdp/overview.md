@@ -5,7 +5,7 @@ seo-title: Übersicht über die Echtzeit-Kundendatenplattform
 description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Echtzeit-Kundendatenplattform – Übersicht
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 29%
@@ -38,5 +38,5 @@ Die folgende Dokumentation hilft Ihnen beim Einstieg in die Echtzeit-Kundendaten
 * [So erfassen Sie Daten](sources/sources-overview.md)
 * [So rufen Sie Profile auf](profile/profile-overview.md)
 * [So erstellen Sie Segmente](segmentation/segmentation-overview.md)
-* [So aktivieren Sie Segmente für Ziele](destinations/activate-destinations.md)
+* [So aktivieren Sie Segmente für Ziele](destinations/overview.md)
 * [So definieren und setzen Sie Data Governance-Richtlinien um](privacy/data-governance-overview.md)
