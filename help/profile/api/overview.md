@@ -12,7 +12,7 @@ ht-degree: 23%
 ---
 
 
-# [!DNL Real-time Customer Profile] API-Entwicklerleitfaden
+# [!DNL Real-time Customer Profile]-API-Entwicklerhandbuch
 
 [!DNL Real-time Customer Profile] ermöglicht es Ihnen, eine ganzheitliche Ansicht Ihrer einzelnen Kunden in Adobe Experience Platform zu sehen. [!DNL Profile] ermöglicht Ihnen die Konsolidierung unterschiedlicher Kundendaten aus mehreren Kanälen, z. B. Online-, Offline-, CRM- und Drittanbieterdaten, in einer einheitlichen Ansicht, die ein umsetzbares Zeitstempelkonto für jede Kundeninteraktion bietet.
 
