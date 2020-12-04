@@ -3,7 +3,7 @@ keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;po
 solution: Experience Platform
 title: Experimente
 topic: Developer guide
-description: Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Runden besteht.
+description: Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Läufen besteht.
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 # Experimente
 
-Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Runden besteht.
+Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Läufen besteht.
 
 ## Erstellen eines Experiments {#create-an-experiment}
 
