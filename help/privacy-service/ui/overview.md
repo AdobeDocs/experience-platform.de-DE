@@ -18,9 +18,9 @@ Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user
 
 ## Log in to the [!DNL Privacy Service] UI
 
-Sie müssen über eine Adobe ID verfügen, um sich bei der [!DNL Privacy Service] Benutzeroberfläche authentifizieren zu können. Darüber hinaus müssen Sie über Systemadministrator-Berechtigungen in dem Unternehmen verfügen, mit dem Ihre Adobe ID verbunden ist.
+Sie müssen über ein Adobe ID verfügen, um sich bei der [!DNL Privacy Service] Benutzeroberfläche authentifizieren zu können. Darüber hinaus müssen Sie über Systemadministratorberechtigungen in dem Unternehmen verfügen, mit dem Ihr Adobe ID verbunden ist.
 
-Navigieren Sie zur Adobe Experience Cloud-Anmeldeseite unter https://experience.adobe.com. Klicken Sie auf **[!UICONTROL Anmelden mit einer Adobe ID]** und geben Sie bei Aufforderung Ihre Anmeldeinformationen für die Adobe ID ein.
+Navigieren Sie zur Adobe Experience Cloud-Anmeldeseite unter https://experience.adobe.com. Klicken Sie auf **[!UICONTROL Anmelden mit einem Adobe ID]** und geben Sie bei Aufforderung Ihre Adobe ID-Anmeldedaten ein.
 
 Klicken Sie nach dem Anmelden auf **[!UICONTROL Datenschutz-Benutzeroberfläche]**.
 
@@ -28,7 +28,7 @@ Klicken Sie nach dem Anmelden auf **[!UICONTROL Datenschutz-Benutzeroberfläche]
 
 ### Anmelden von [!DNL Experience Platform]
 
-Wenn Sie Zugriff auf die Benutzeroberfläche der Adobe Experience Platform haben, können Sie auch über die Registerkarte [!DNL Privacy Service] Anforderungen **[!UICONTROL im linken Navigationsbereich auf die]** Benutzeroberfläche zugreifen.
+Wenn Sie Zugriff auf die Adobe Experience Platform-Benutzeroberfläche haben, können Sie auch über die Registerkarte &quot; [!DNL Privacy Service] Anforderungen **** &quot;in der linken Navigation auf die Benutzeroberfläche zugreifen.
 
 ![](../images/ui-overview/platform.png)
 
