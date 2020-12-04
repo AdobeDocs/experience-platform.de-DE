@@ -5,7 +5,7 @@ seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 94%
@@ -68,7 +68,7 @@ Weitere Informationen zu Segmenten finden Sie unter [Segmentation Service – �
 
 **[!UICONTROL Ziele]** gibt die Gesamtzahl der Ziele an, die für das Unternehmen erstellt wurden. Diese Zahl wird aktualisiert, sobald neue Ziele erstellt werden.
 
-Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/destinations-overview.md).
+Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/overview.md).
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ Auf der Metrikkarte **[!UICONTROL Letzte Ziele]** werden die fünf Ziele angezei
 
 Klicken Sie auf ein Ziel, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Ziele zu erhalten.
 
-Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/destinations-overview.md).
+Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/overview.md).
