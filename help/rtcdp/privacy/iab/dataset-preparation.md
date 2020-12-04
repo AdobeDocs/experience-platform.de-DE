@@ -24,7 +24,7 @@ Für die Erfassung von TCF 2.0-Genehmigungsdaten sind insbesondere zwei Datensä
 
 In diesem Dokument werden Schritte zur Einrichtung dieser beiden Datensätze zur Erhebung der IAB TCF 2.0-Genehmigungsdaten beschrieben. Eine Übersicht über den vollständigen Arbeitsablauf zur Konfiguration [!DNL Real-time CDP] für TCF 2.0 finden Sie in der [IAB TCF 2.0 Compliance-Übersicht](./overview.md).
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -80,7 +80,7 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Erstellen eines Schemas für die Einwilligung in einen Datensatz {#profile-schema}
 
-Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Schemas]&quot;ein neues Schema, das auf der**[!DNL XDM Individual Profile] Klasse basiert. Nachdem Sie das Schema im Schema-Editor geöffnet haben, klicken Sie auf der linken Seite der Arbeitsfläche unter dem Abschnitt &quot; **[!UICONTROL Mixins]** &quot;auf **[!UICONTROL Hinzufügen]** .
+Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Schemas] &quot;ein neues Schema, das auf der**[!DNL XDM Individual Profile] Klasse basiert. Nachdem Sie das Schema im Schema-Editor geöffnet haben, klicken Sie auf der linken Seite der Arbeitsfläche unter dem Abschnitt &quot; **[!UICONTROL Mixins]** &quot;auf **[!UICONTROL Hinzufügen]** .
 
 ![](../assets/iab/add-mixin-profile.png)
 
