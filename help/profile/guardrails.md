@@ -5,7 +5,7 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1192'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform bietet eine Reihe von Garantieleistungen, mit denen Si
 
 Es wird empfohlen, die folgende Dokumentation zu Experience Platform Services zu lesen, bevor Sie versuchen, Datenmodelle zur Verwendung in [!DNL Real-time Customer Profile]zu erstellen. Die Arbeit mit Datenmodellen und den in diesem Dokument dargelegten Garantien erfordern ein Verständnis der verschiedenen Experience Platformen, die mit der Verwaltung von [!DNL Real-time Customer Profile] Entitäten verbunden sind:
 
-* [[!DNL Echtzeit-Profil]](home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Real-time Customer Profile]](home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Adobe Experience Platform-Identitätsdienst](../identity-service/home.md): Unterstützt die Erstellung einer &quot;einzigen Ansicht des Kunden&quot;, indem Identitäten aus unterschiedlichen Datenquellen bei der Erfassung überbrückt werden [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Zusammensetzung](../xdm/schema/composition.md)des Schemas: Einführung in Schema und Datenmodellierung in der Experience Platform.
@@ -62,7 +62,7 @@ Es wird empfohlen, beim Erstellen eines Datenmodells für die Verwendung mit den
 
 | Guardrail | Maximal | Typ begrenzen | Beschreibung |
 | --- | --- | --- | --- |
-| Anzahl der empfohlenen Datensätze als Beitrag zum Schema der [!DNL Profile] Vereinigung | 20 | Soft | **Es werden maximal 20[!DNL Profile]aktivierte Datensätze empfohlen.** Um einen anderen Datensatz zu aktivieren, [!DNL Profile]sollte zunächst ein vorhandener Datensatz entfernt oder deaktiviert werden. |
+| Anzahl der empfohlenen Datensätze als Beitrag zum Schema der [!DNL Profile] Vereinigung | 20 | Soft | **Es werden maximal 20 [!DNL Profile]aktivierte Datensätze empfohlen.** Um einen anderen Datensatz zu aktivieren, [!DNL Profile]sollte zunächst ein vorhandener Datensatz entfernt oder deaktiviert werden. |
 | Anzahl der empfohlenen Beziehungen mit mehreren Entitäten | 5 | Soft | **Es wird empfohlen, maximal 5 Beziehungen mit mehreren Entitäten zu definieren, die zwischen primären Entitäten und Dimensionselementen definiert sind.** Zusätzliche Beziehungszuordnungen sollten erst dann vorgenommen werden, wenn eine bestehende Beziehung entfernt oder deaktiviert wurde. |
 | Maximale JSON-Tiefe für ID-Feld, das in einer Beziehung mit mehreren Entitäten verwendet wird | 4 | Soft | **Die empfohlene maximale JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird, ist 4.** Dies bedeutet, dass in einem hochverschachtelten Schema Felder, die mehr als vier Ebenen tief verschachtelt sind, nicht als ID-Feld in einer Beziehung verwendet werden sollten. |
 | Array-Kardinalität in einem Profil-Fragment | &lt;=500 | Soft | **Die optimale Array-Kardinalität in einem Profil-Fragment (zeitunabhängige Daten) ist &lt;=500.** |
@@ -72,8 +72,8 @@ Es wird empfohlen, beim Erstellen eines Datenmodells für die Verwendung mit den
 
 | Guardrail | Maximal | Typ begrenzen | Beschreibung |
 | --- | --- | --- | --- |
-| Keine Zeitreihendaten für Nicht-[!DNL XDM Individual Profile] Entitäten zulässig | 0 | Hard | **Zeitreihendaten sind für Nicht-[!DNL XDM Individual Profile]-Entitäten im Profil Service nicht zulässig.** Wenn ein Dataset einer Zeitreihe mit einer Nicht-[!DNL XDM Individual Profile] -ID verknüpft ist, sollte der Datensatz nicht aktiviert werden [!DNL Profile]. |
-| Keine verschachtelten Beziehungen | 0 | Soft | **Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile]Schemas herstellen.** Die Möglichkeit, Beziehungen zu erstellen, wird nicht für Schema empfohlen, die nicht Teil des Schemas [!DNL Profile] Vereinigung sind. |
+| Keine Zeitreihendaten für Nicht-[!DNL XDM Individual Profile] Entitäten zulässig | 0 | Hard | **Zeitreihendaten sind für Nicht-[!DNL XDM Individual Profile] -Entitäten im Profil Service nicht zulässig.** Wenn ein Dataset einer Zeitreihe mit einer Nicht-[!DNL XDM Individual Profile] -ID verknüpft ist, sollte der Datensatz nicht aktiviert werden [!DNL Profile]. |
+| Keine verschachtelten Beziehungen | 0 | Soft | **Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile] Schemas herstellen.** Die Möglichkeit, Beziehungen zu erstellen, wird nicht für Schema empfohlen, die nicht Teil des Schemas [!DNL Profile] Vereinigung sind. |
 | Maximale JSON-Tiefe für primäres ID-Feld | 4 | Soft | **Die empfohlene maximale JSON-Tiefe für das primäre ID-Feld ist 4.** Das bedeutet, dass Sie in einem hochverschachtelten Schema kein Feld als primäre ID auswählen sollten, wenn es mehr als vier Ebenen tief verschachtelt ist. Ein Feld, das sich auf der vierten verschachtelten Ebene befindet, kann als primäre ID verwendet werden. |
 
 ## Datengröße
