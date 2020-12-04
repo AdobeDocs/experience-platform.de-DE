@@ -7,7 +7,7 @@ description: Adobe Experience Platform Data Governance bietet eine Benutzeroberf
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 39%
 
 ---
@@ -21,11 +21,11 @@ Adobe Experience Platform [!DNL Data Governance] provides a user interface that 
 >
 >Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren. Anweisungen dazu finden Sie im Abschnitt zum [Aktivieren von Richtlinien](#enable) in der Benutzeroberfläche.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [[!DNL-Datenverwaltung]](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [Datennutzungsrichtlinien](./overview.md)
 
 ## Datennutzungsrichtlinien anzeigen {#view-policies}
