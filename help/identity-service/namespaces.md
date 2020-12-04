@@ -7,23 +7,23 @@ description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, 
 translation-type: tm+mt
 source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 64%
+source-wordcount: '759'
+ht-degree: 73%
 
 ---
 
 
 # Übersicht über Identitäts-Namespaces
 
-Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRM-ID.
+Identitäts-Namespaces sind eine Komponente des [[!DNL Identity Service]](./home.md), die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRM-ID.
 
 ## Erste Schritte
 
 Das Verwenden von Identitäts-Namespaces setzt ein Verständnis der verschiedenen beteiligten Adobe Experience Platform-Dienste voraus. Bevor Sie Namespaces nutzen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-- [[!DNL Echtzeit-Profil]](../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [[!DNL-Identitätsdienst]](./home.md): Profitieren Sie von einer besseren Ansicht einzelner Kunden und deren Verhalten, indem Sie Identitäten zwischen Geräten und Systemen überbrücken.
-- [[!DNL-Privacy Service]](../privacy-service/home.md): Identitäts-Namensraum werden zur Einhaltung der Allgemeinen Datenschutzverordnung (GDPR) verwendet, in der GDPR-Anfragen für einen Namensraum gestellt werden können.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Identity Service]](./home.md): Sorgt für eine bessere Darstellung einzelner Kunden und deren Verhalten, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+- [[!DNL Privacy Service]](../privacy-service/home.md): Identitäts-Namespaces werden zur Einhaltung der Datenschutz-Grundverordnung (DSGVO) verwendet, laut der DSGVO-Anfragen für einen Namespace gestellt werden können.
 
 ## Identitäts-Namespaces verstehen
 
