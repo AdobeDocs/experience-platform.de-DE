@@ -8,8 +8,8 @@ description: In diesem Lernprogramm werden die Schritte zum Aktualisieren Ihrer 
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 17%
+source-wordcount: '709'
+ht-degree: 27%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm werden die Schritte zum Aktualisieren von Verbindungsinformationen einschließlich Name, Beschreibung und Anmeldeinformationen mithilfe der [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)beschrieben.
+In diesem Lernprogramm werden die Schritte zum Aktualisieren der Verbindungsinformationen einschließlich Name, Beschreibung und Anmeldeinformationen mit dem [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)Handbuch beschrieben.
 
 ## Erste Schritte
 
@@ -39,7 +39,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -175,7 +175,7 @@ curl -X PATCH \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `op` | Der Vorgangsaufruf, der zum Definieren der zum Aktualisieren der Verbindung erforderlichen Aktion verwendet wird. Die Aktivitäten umfassen: `add`, `replace`und `remove`. |
+| `op` | Der Operationsaufruf, der für die Definition der zum Aktualisieren der Verbindung erforderlichen Aktion verwendet wird. Operationen umfassen: `add`, `replace` und `remove`. |
 | `path` | Der Pfad des zu aktualisierenden Parameters. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
