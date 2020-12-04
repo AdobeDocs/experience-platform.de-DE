@@ -23,7 +23,7 @@ In diesem Video erhalten Sie einen Überblick über die auf der Experience Platf
 
 * Attribution AI
 * Customer AI
-* Customer Journey Analytics
+* Customer Journey Analytics 
 * Journey Orchestration
 * Echtzeit-Kundendatenplattform
 
