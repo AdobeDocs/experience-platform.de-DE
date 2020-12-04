@@ -36,6 +36,6 @@ Nachdem Sie Nutzungsbezeichnungen für Ihre Daten hinzugefügt und Richtlinien f
 
 Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datennutzung enthalten. Spezifische Schritte zum Einhalten der Datennutzungs-Compliance für ein Zielgruppensegment finden Sie im [Tutorial zur Datennutzungs-Compliance für Segmente](../segmentation/tutorials/governance.md).
 
-## Get started with [!DNL Privacy Service]
+## Erste Schritte mit [!DNL Privacy Service]
 
 [!DNL Privacy Service] bietet eine RESTful API und eine Benutzeroberfläche, mit der Sie die personenbezogenen Daten Ihrer Betroffenen (Kunden) in allen Adobe Experience Cloud-Anwendungen verwalten können. [!DNL Privacy Service] bietet außerdem einen zentralen Audit- und Protokollierungsmechanismus, mit dem Sie auf den Status und die Ergebnisse von Aufträgen zugreifen können, an denen [!DNL Experience Cloud] Anwendungen beteiligt sind. For instructions showing how to create and monitor [!DNL Privacy Service] jobs, follow the steps provided in the [Privacy Service developer guide](../privacy-service/api/getting-started.md) or the [Privacy Service user guide](../privacy-service/ui/overview.md).
