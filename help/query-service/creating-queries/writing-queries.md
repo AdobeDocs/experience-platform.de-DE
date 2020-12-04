@@ -76,7 +76,7 @@ LIMIT 1
 
 >[!NOTE]
 >
->Da jeder Notationstyp die gleichen Ergebnisse zurückgibt, haben Sie die Wahl, das zu verwendende zu verwenden.
+>Da jeder Notationstyp die gleichen Ergebnisse zurückgibt, haben Sie die Wahl, das Ergebnis zu verwenden.
 
 Beide obigen Beispielwerte geben ein reduziertes Objekt anstelle eines einzelnen Abfrage zurück:
 
