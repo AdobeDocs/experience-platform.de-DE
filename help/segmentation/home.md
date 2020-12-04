@@ -103,7 +103,7 @@ Diese erweiterten Funktionen werden in den folgenden Abschnitten ausführlicher 
 
 ## Sequenzielle Segmentierung {#sequential}
 
-Eine normale Benutzerreise ist sequenziell. Mit Adobe Experience Platform können Sie eine geordnete Segmentreihe definieren, die diese Reise widerspiegelt, und dabei Sequenzen von Ereignissen während ihres Auftretens erfassen. Sie können die Ereignisse in der gewünschten Reihenfolge anordnen, indem Sie die Zeitleiste des visuellen Ereignisses in der [!DNL Segment Builder].
+Eine normale Benutzerreise ist sequenziell. Mit Adobe Experience Platform können Sie eine geordnete Segmentreihe definieren, die diese Reise widerspiegelt, und dabei Ereignis-Sequenzen erfassen. Sie können die Ereignisse in der gewünschten Reihenfolge anordnen, indem Sie die Zeitleiste des visuellen Ereignisses in der [!DNL Segment Builder].
 
 Ein Beispiel für eine Customer Journey, die eine sequenzielle Segmentierung erfordern würde, wäre die Ansicht des Produkts > Hinzufügen des Produkts > Kassengang > Kein Kauf.
 
