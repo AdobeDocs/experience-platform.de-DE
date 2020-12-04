@@ -8,8 +8,8 @@ description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten au
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1650'
-ht-degree: 13%
+source-wordcount: '1626'
+ht-degree: 15%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 13%
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank eines Drittanbieters und zum Einbinden dieser Daten [!DNL Platform] über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) -API beschrieben.
+In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank eines Drittanbieters und zum Einbinden dieser Daten [!DNL Platform] über Quell-Connectors und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) -API beschrieben.
 
 ## Erste Schritte
 
@@ -29,11 +29,11 @@ Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Ado
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Entwicklerhandbuch](../../../../xdm/api/getting-started.md)zur Schema-Registrierung: Enthält wichtige Informationen, die Sie zur erfolgreichen Durchführung von Aufrufen der Schema Registry API kennen müssen. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
-* [[!DNL-Katalogdienst]](../../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform].
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform].
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Stapeleinbetungs-API können Sie Daten [!DNL Experience Platform] als Batch-Dateien erfassen.
 * [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine Verbindung zu einer Datenbank eines Drittanbieters mithilfe der [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) -API herstellen zu können.
+The following sections provide additional information that you will need to know in order to successfully connect to a third-parry database using the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -41,7 +41,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -274,7 +274,7 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Erstellen einer Zielgruppe-Verbindung {#target-connection}
 
-Sie haben jetzt die eindeutigen Bezeichner für eine Datenbankverbindung, ein Schema für die Zielgruppe und einen Datensatz für die Zielgruppe. Mithilfe dieser Bezeichner können Sie eine Zielgruppe-Verbindung mit der [[!DNL-Fluss-Dienst]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) -API erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
+Sie haben jetzt die eindeutigen Bezeichner für eine Datenbankverbindung, ein Schema für die Zielgruppe und einen Datensatz für die Zielgruppe. Mithilfe dieser Bezeichner können Sie mithilfe der [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API eine Verbindung zur Zielgruppe herstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -403,7 +403,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
 
 ## Datennachrichtenspezifikationen abrufen {#specs}
 
-Ein Datennachweis ist für das Sammeln von Daten aus Quellen und deren Umsetzung zuständig [!DNL Platform]. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET an die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) -API senden. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System verantwortlich.
+Ein Datennachweis ist für das Sammeln von Daten aus Quellen und deren Umsetzung zuständig [!DNL Platform]. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET an die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API senden. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System verantwortlich.
 
 **API-Format**
 
