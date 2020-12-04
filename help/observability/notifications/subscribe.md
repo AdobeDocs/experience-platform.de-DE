@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
-title: E/A-Ereignis-Benachrichtigungen der Adobe abonnieren
+title: Adobe I/O-Ereignis-Benachrichtigungen abonnieren
 topic: developer guide
-description: In diesem Dokument wird beschrieben, wie Sie Adobe-E/A-Ereignis-Benachrichtigungen für Adobe Experience Platform-Dienste abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignis-Daten für jeden [!DNL Platform] anwendbaren Dienst bereitgestellt.
+description: In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignis-Benachrichtigungen für Adobe Experience Platform-Dienste abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignis-Daten für jeden [!DNL Platform] anwendbaren Dienst bereitgestellt.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 3%
 ---
 
 
-# E/A-Ereignis-Benachrichtigungen der Adobe abonnieren
+# Adobe I/O-Ereignis-Benachrichtigungen abonnieren
 
-[!DNL Observability Insights] ermöglicht Ihnen, Adobe-E/A-Ereignis-Benachrichtigungen zu Adobe Experience Platform-Aktivitäten zu abonnieren. Diese Ereignis werden an einen konfigurierten Webshaken gesendet, um eine effiziente Automatisierung der Aktivität-Überwachung zu ermöglichen.
+[!DNL Observability Insights] können Sie Adobe I/O-Ereignis-Benachrichtigungen zu Adobe Experience Platform-Aktivitäten abonnieren. Diese Ereignis werden an einen konfigurierten Webshaken gesendet, um eine effiziente Automatisierung der Aktivität-Überwachung zu ermöglichen.
 
-In diesem Dokument wird beschrieben, wie Sie Adobe-E/A-Ereignis-Benachrichtigungen für Adobe Experience Platform-Dienste abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignis-Daten für jeden einzelnen [!DNL Platform] Dienst bereitgestellt.
+In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignis-Benachrichtigungen für Adobe Experience Platform-Dienste abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignis-Daten für jeden einzelnen [!DNL Platform] Dienst bereitgestellt.
 
 ## Erste Schritte
 
@@ -37,7 +37,7 @@ Während des anfänglichen Validierungsprozesses [!DNL I/O Events] sendet ein Pa
 
 ## Neues Projekt in der Adobe Developer Console erstellen
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de) and sign in with your Adobe ID. Führen Sie anschließend die im Lernprogramm zum [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zur Adobe Developer Console beschriebenen Schritte aus.
 
 ## Ereignisse abonnieren
 
