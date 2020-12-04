@@ -21,7 +21,7 @@ Streaming ingestion for Adobe Experience Platform provides users a method to sen
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences by generating a [!DNL Real-time Customer Profile] for each of your individual customers. Streaming ingestion plays a key role in building these profiles by enabling you to deliver [!DNL Profile] data into the [!DNL Data Lake] with as little latency as possible.
 
-Das folgende Video soll Ihnen helfen, das Streaming-Erlebnis zu verstehen, und beschreibt die oben genannten Konzepte.
+Das folgende Video hilft Ihnen, das Streaming-Erlebnis zu verstehen, und erläutert die oben genannten Konzepte.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
