@@ -39,7 +39,7 @@ Im folgenden Arbeitsablauf werden die typischen Schritte und Ergebnisse beim Ers
 
 Daten werden mit dem [!DNL Experience Data Model] (XDM) unter Adobe Experience Platform erfasst und transformiert. Diese Daten werden für Modellschulungen verwendet. Weitere Informationen zu XDM finden Sie in [XDM – Übersicht](../../xdm/home.md).
 
-### Authoring – 
+### Authoring
 
 Erstellen Sie ein Echtzeit-Modell für maschinelles Lernen, indem Sie es von Grund auf bearbeiten oder als vorab geschultes serialisiertes ONNX-Modell in Adobe Experience Platform Jupyter-Notebooks einführen.
 
@@ -65,7 +65,7 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 > - Derzeit werden nur ONNX-basierte Modelle unterstützt.
 > - Funktionen, die in Knoten verwendet werden, können nicht serialisiert werden. Beispielsweise eine Lambda-Funktion, die in einem Pandas-Knoten verwendet wird.
 > - Nach der manuellen [!DNL Edge] Bereitstellung wird 20 Sekunden lang schlafen.
-> - Für tiefes Lernen müssen Ihre Daten so gesendet werden, dass, wenn sie genannt `df.values` werden, ein Array zurückgegeben wird, das von Ihrem DL-Modell akzeptiert werden kann. Dies liegt daran, dass der ONNX Modell-Scoring-Knoten verwendet `df.values` und sendet die Ausgabe zu Ergebnis mit dem Modell.
+> - Für tiefes Lernen müssen Ihre Daten so gesendet werden, dass, wenn sie genannt `df.values` werden, ein Array zurückgegeben wird, das von Ihrem DL-Modell akzeptiert werden kann. Dies liegt daran, dass der ONNX Modell-Scoring-Knoten verwendet `df.values` und sendet die Ausgabe zum Ergebnis gegen das Modell.
 
 
 
