@@ -7,13 +7,13 @@ description: 'Der Adobe Experience Platform Identity Service verwaltet die gerä
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 24%
+source-wordcount: '742'
+ht-degree: 30%
 
 ---
 
 
-# [!DNL Identity Service] API-Entwicklerleitfaden
+# [!DNL Identity Service]-API-Entwicklerhandbuch
 
 Adobe Experience Platform [!DNL Identity Service] verwaltet den geräteübergreifenden, geräteübergreifenden Kanal und die Identifikation Ihrer Kunden in Echtzeit in einem so genannten Identitätsdiagramm innerhalb von Adobe Experience Platform.
 
@@ -21,9 +21,9 @@ Adobe Experience Platform [!DNL Identity Service] verwaltet den geräteübergrei
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL-Identitätsdienst]](../home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung der Kundendaten ergibt. Dies geschieht, indem Identitäten zwischen Geräten und Systemen, auf denen Kunden mit Ihrer Marke interagieren, überbrückt werden.
-- [[!DNL Echtzeit-Profil]](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Platform] organisiert werden.
+- [[!DNL Identity Service]](../home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung der Kundendaten ergibt. Dies geschieht, indem Identitäten zwischen Geräten und Systemen, auf denen Kunden mit Ihrer Marke interagieren, überbrückt werden.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Identity Service] API.
 
@@ -33,7 +33,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
