@@ -168,7 +168,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `entityType` | Der Typ der Entität, deren ID in der Geschwistereigenschaft angegeben `entityId` ist. Derzeit ist der einzige akzeptierte Wert `dataSet`. |
-| `entityId` | Die ID eines Datensatzes, mit dem die Marketingaktion getestet wird. Eine Liste der Datensätze und der zugehörigen IDs können Sie erhalten, indem Sie eine GET an den `/dataSets` Endpunkt in der [!DNL Catalog Service] API anfordern. Weitere Informationen finden Sie im Handbuch zu [ [!DNL Catalog] Listenobjekten](../../catalog/api/list-objects.md) . |
+| `entityId` | Die ID eines Datensatzes, mit dem die Marketingaktion getestet wird. Eine Liste der Datensätze und der zugehörigen IDs können Sie erhalten, indem Sie eine GET an den `/dataSets` Endpunkt in der [!DNL Catalog Service] API anfordern. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 
 **Antwort**
 
@@ -416,7 +416,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `entityType` | Der Typ der Entität, deren ID in der Geschwistereigenschaft angegeben `entityId` ist. Derzeit ist der einzige akzeptierte Wert `dataSet`. |
-| `entityId` | Die ID eines Datensatzes, dessen Felder mit der Marketingaktion ausgewertet werden sollen. Eine Liste der Datensätze und der zugehörigen IDs können Sie erhalten, indem Sie eine GET an den `/dataSets` Endpunkt in der [!DNL Catalog Service] API anfordern. Weitere Informationen finden Sie im Handbuch zu [ [!DNL Catalog] Listenobjekten](../../catalog/api/list-objects.md) . |
+| `entityId` | Die ID eines Datensatzes, dessen Felder mit der Marketingaktion ausgewertet werden sollen. Eine Liste der Datensätze und der zugehörigen IDs können Sie erhalten, indem Sie eine GET an den `/dataSets` Endpunkt in der [!DNL Catalog Service] API anfordern. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 | `entityMeta.fields` | Ein Array von Pfaden zu bestimmten Feldern im Schema des Datensatzes, bereitgestellt in Form von JSON-Zeigerzeichenfolgen. Einzelheiten zur verwendeten Syntax für diese Zeichenfolgen finden Sie im Abschnitt zu [JSON-Zeiger](../../landing/api-fundamentals.md#json-pointer) im API-Grundlagenhandbuch. |
 
 **Antwort**
