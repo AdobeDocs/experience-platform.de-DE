@@ -5,10 +5,10 @@ title: Streaming-Segmentierung
 topic: developer guide
 description: Dieses Dokument enthält Beispiele zur Verwendung der Streaming-Segmentierung mit der Streaming-Segmentierungs-API.
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 46%
+source-wordcount: '1310'
+ht-degree: 48%
 
 ---
 
@@ -80,20 +80,17 @@ Damit ein Segment mithilfe der Streaming-Segmentierung bewertet werden kann, mus
 | Eingehender Treffer, der sich auf ein Profil innerhalb eines relativen Zeitfensters bezieht | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profil-Attribute verweist. |
 | Mehrere Ereignis, die auf ein Profil verweisen | Eine Segmentdefinition, die sich **innerhalb der letzten 24 Stunden** auf mehrere Ereignis bezieht und (optional) ein oder mehrere Profil-Attribute besitzt. |
 
-Im folgenden Abschnitt werden Segmentdefinitionsbeispiele Liste, die für die Streaming-Segmentierung **nicht** aktiviert werden.
+In den folgenden Szenarien wird eine Segmentdefinition für die Streaming-Segmentierung **nicht** aktiviert:
 
-| Abfragetyp | Details |
-| ---------- | ------- | 
-| Eingehender Treffer, der sich auf ein Profil in einem relativen Fenster bezieht | Eine Segmentdefinition, die Segmente oder Eigenschaften von Adobe Audience Manager (AAM) enthält. |
-| Mehrere Ereignis, die auf ein Profil verweisen | Eine Segmentdefinition, die Segmente oder Eigenschaften von Adobe Audience Manager (AAM) enthält. |
-| Abfragen mit mehreren Entitäten | Abfragen mit mehreren Entitäten werden durch Streaming-Segmentierung insgesamt **nicht** unterstützt. |
+- Die Segmentdefinition umfasst Adobe Audience Manager-Segmente oder -Eigenschaften (AAM).
+- Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
 
 Darüber hinaus gelten einige Richtlinien bei der Streaming-Segmentierung:
 
 | Abfragetyp | Leitlinie |
 | ---------- | -------- |
 | Abfrage mit einem Ereignis | Das Lookback-Fenster unterliegt keinen Einschränkungen. |
-| Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen **muss** eine strikte Zeitbestellbedingung bestehen.</li><li>Nur einfache Zeitreihenfolgen (vor und nach) zwischen den Ereignissen sind zulässig.</li><li>Die einzelnen Ereignis **können nicht** negiert werden. Die gesamte Abfrage **kann** jedoch negiert werden.</li></ul> |
+| Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen **muss** eine strikte Bedingung für die zeitliche Reihenfolge bestehen.</li><li>Abfragen mit mindestens einem negierten Ereignis werden unterstützt. Das gesamte Ereignis **kann jedoch keine** Negation sein.</li></ul> |
 
 ## Rufen Sie alle Segmente ab, die für die Streaming-Segmentierung aktiviert sind.
 
