@@ -5,10 +5,10 @@ title: Streaming-Segmentierung
 topic: ui guide
 description: Streaming-Segmentierung Unter Adobe Experience Platform können Sie Segmentierungen in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in die Plattform gelangen, was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Plattform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 2%
+source-wordcount: '714'
+ht-degree: 1%
 
 ---
 
@@ -42,20 +42,17 @@ Eine Abfrage wird automatisch mit Streaming-Segmentierung bewertet, wenn sie ein
 | Eingehender Treffer, der sich auf ein Profil innerhalb eines relativen Zeitfensters bezieht | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profil-Attribute verweist. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Mehrere Ereignis, die auf ein Profil verweisen | Eine Segmentdefinition, die sich **innerhalb der letzten 24 Stunden** auf mehrere Ereignis bezieht und (optional) ein oder mehrere Profil-Attribute besitzt. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-Im folgenden Abschnitt werden Segmentdefinitionsbeispiele Liste, die für die Streaming-Segmentierung **nicht** aktiviert werden.
+In den folgenden Szenarien wird eine Segmentdefinition für die Streaming-Segmentierung **nicht** aktiviert:
 
-| Abfragetyp | Details |
-| ---------- | ------- |
-| Eingehender Treffer, der sich auf ein Profil in einem relativen Fenster bezieht | Eine Segmentdefinition, die [!DNL Adobe Audience Manager (AAM)] Segmente oder Eigenschaften enthält. |
-| Mehrere Ereignis, die auf ein Profil verweisen | Eine Segmentdefinition, die Segmente oder Eigenschaften von Adobe Audience Manager (AAM) enthält. |
-| Abfragen mit mehreren Entitäten | Abfragen mit mehreren Entitäten werden durch Streaming-Segmentierung insgesamt **nicht** unterstützt. |
+- Die Segmentdefinition umfasst Adobe Audience Manager-Segmente oder -Eigenschaften (AAM).
+- Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
 
 Darüber hinaus gelten einige Richtlinien bei der Streaming-Segmentierung:
 
 | Abfragetyp | Leitlinie |
 | ---------- | -------- |
 | Abfrage mit einem Ereignis | Das Lookback-Fenster unterliegt keinen Einschränkungen. |
-| Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen **muss** eine strikte Zeitbestellbedingung bestehen.</li><li>Nur einfache Zeitreihenfolgen (vor und nach) zwischen den Ereignissen sind zulässig.</li><li>Die einzelnen Ereignis **können nicht** negiert werden. Die gesamte Abfrage **kann** jedoch negiert werden.</li></ul> |
+| Abfrage mit Ereignis-Verlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen **muss** eine strikte Bedingung für die zeitliche Reihenfolge bestehen.</li><li>Abfragen mit mindestens einem negierten Ereignis werden unterstützt. Das gesamte Ereignis **kann jedoch keine** Negation sein.</li></ul> |
 
 Wenn eine Segmentdefinition so geändert wird, dass sie die Kriterien für die Streaming-Segmentierung nicht mehr erfüllt, wechselt die Segmentdefinition automatisch von &quot;Streaming&quot;zu &quot;Batch&quot;.
 
