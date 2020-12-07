@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Zielhandbuch
-user-guide-description: Geben Sie hier eine Beschreibung der Ziele ein.
+user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 translation-type: tm+mt
-source-git-commit: eccf962fd9a24e6b5085f706766693ee7e468aea
+source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 30%
+source-wordcount: '429'
+ht-degree: 29%
 
 ---
 
