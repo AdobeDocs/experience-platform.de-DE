@@ -1,21 +1,12 @@
 ---
-source-git-commit: 87d46c0d813cd31408eaed8331677b74fc42dd38
+source-git-commit: b0cc44b33b399eb64122374251840a4298946d80
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '643'
-ht-degree: 66%
+source-wordcount: '509'
+ht-degree: 81%
 
 ---
 # Beitrag zum Inhalt
-
-| EXL-PR | EXL | Vorschau | Aktivieren | Veröffentlicht | Hilfe |
-|--- |--- |--- |--- |--- |--- |
-| [![Build-Status](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![Build-Status](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [Vorschauen-URL](https://experienceleague.corp.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [Live-URL](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [Autorenanleitung](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
-
-| Produktion | Staging |
-|---|---|
-| [![Build-Status](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![Build-Status](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
-| [Output Prod](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/home.html) | [Output Stg](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
 
 Wir freuen uns über Inhaltsbeiträge unserer Community und von Adobe-Mitarbeitern außerhalb der Dokumentationsteams.
 
@@ -29,7 +20,7 @@ Lesen Sie das [Adobe Docs-Mitarbeiter-Handbuch](https://docs.adobe.com/help/en/c
 
 Wie Sie Beiträge einbringen, hängt davon ab, wer Sie sind und welche Art von Änderungen Sie beitragen möchten:
 
-### Geringfügige Änderungen oder Anfragen
+### Geringfügige Änderungen  oder Anfragen
 
 Um eine Anfrage einzureichen, klicken Sie in einem Artikel auf den Link **Problem protokollieren**, wodurch ein Problem in GitHub geöffnet wird. Geben Sie einen Titel und eine Beschreibung an und klicken Sie dann auf **Neues Problem vorlegen**.
 
