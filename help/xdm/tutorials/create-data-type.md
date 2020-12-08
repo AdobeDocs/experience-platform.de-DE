@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Benutzeroberfläche der Experience Platform, um Sie durch die Schritte zur Erstellung eines benutzerdefinierten Datentyps zu führen.
 translation-type: tm+mt
-source-git-commit: 9008b49e1eb5e32b0f4cda7049bf873c689f6442
+source-git-commit: bfb65743764b454754ca8ebb01bfe4407833b291
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 0%
@@ -26,7 +26,7 @@ In diesem Lernprogramm werden die Schritte zum Erstellen und Bearbeiten benutzer
 
 Dieses Tutorial erfordert ein funktionierendes Verständnis von XDM System. In der [XDM-Übersicht](../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und die [Grundlagen der Schema-Komposition](../schema/composition.md) , wie Datentypen zu XDM-Schemas beitragen.
 
-Es wird empfohlen, das Tutorial zum [Erstellen eines Schemas in der Benutzeroberfläche](./-schema-ui.md) zu befolgen, um sich mit den verschiedenen Funktionen des Tutorials vertraut zu machen, obwohl dies für dieses Tutorial nicht erforderlich ist [!DNL Schema Editor].
+Es wird empfohlen, das Tutorial zum [Erstellen eines Schemas in der Benutzeroberfläche](./create-schema-ui.md) zu befolgen, um sich mit den verschiedenen Funktionen des Tutorials vertraut zu machen, obwohl dies für dieses Tutorial nicht erforderlich ist [!DNL Schema Editor].
 
 ## Öffnen Sie die [!DNL Schema Editor] für einen Datentyp
 
