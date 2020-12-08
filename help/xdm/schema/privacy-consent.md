@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
-title: Übersicht über die Datenschutzmischung
+title: Datentyp "Inhalt und Voreinstellungen"
 description: Der Datentyp "Datenschutz/Marketing-Voreinstellungen (Zustimmung)"soll die Erfassung von Kundenberechtigungen und -einstellungen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: ba045a635f840c62980288a1a3ad5015f54121da
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2023'
 ht-degree: 1%
 
 ---
@@ -18,10 +18,6 @@ Der [!DNL Privacy/Marketing Preferences (Consent)] Datentyp (im Folgenden &quot;
 
 Dieses Dokument umfasst die Struktur und die vorgesehene Verwendung der vom [!DNL Consents & Preferences] Datentyp bereitgestellten Felder.
 
->[!IMPORTANT]
->
->Der [!DNL Consents & Preferences] Datentyp deckt eine Reihe von Anwendungsfällen im Zusammenhang mit der Zustimmung und der Vorzugsverwaltung ab. In diesem Dokument wird daher die Verwendung der Felder des Datentyps allgemein beschrieben und es werden nur Vorschläge zur Interpretation der Verwendung dieser Felder gemacht. Bitte wenden Sie sich an Ihr Datenschutzrechtsteam, um die Struktur des Datentyps an die Interpretation und Präsentation dieser Einwilligung und Präferenz für Ihre Kunden anzupassen.
-
 ## Voraussetzungen  {#prerequisites}
 
 Dieses Dokument erfordert ein funktionierendes Verständnis von XDM und die Verwendung der Schema in [!DNL Experience Platform]. Bitte lesen Sie die folgende Dokumentation, bevor Sie fortfahren:
@@ -30,6 +26,10 @@ Dieses Dokument erfordert ein funktionierendes Verständnis von XDM und die Verw
 * [Grundlagen der Schemakomposition](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Datentypstruktur {#structure}
+
+>[!IMPORTANT]
+>
+>Der [!DNL Consents & Preferences] Datentyp deckt eine Reihe von Anwendungsfällen im Zusammenhang mit der Zustimmung und der Vorzugsverwaltung ab. In diesem Dokument wird daher die Verwendung der Felder des Datentyps allgemein beschrieben und es werden nur Vorschläge zur Interpretation der Verwendung dieser Felder gemacht. Bitte wenden Sie sich an Ihr Datenschutzrechtsteam, um die Struktur des Datentyps an die Interpretation und Präsentation dieser Einwilligung und Präferenz für Ihre Kunden anzupassen.
 
 Der [!DNL Consents & Preferences] Datentyp enthält mehrere Felder, die zur Erfassung von **Informationen zur Einwilligung** und **Präferenz** verwendet werden.
 
