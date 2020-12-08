@@ -5,9 +5,9 @@ seo-title: Ziel abbremsen
 description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 seo-description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 translation-type: tm+mt
-source-git-commit: 9380c9c24267f815b788eb51949da13b8c47558f
+source-git-commit: 6b19cfa3c4a5327b6b7543123f631d0355995f09
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '953'
 ht-degree: 5%
 
 ---
@@ -33,6 +33,10 @@ Note the following details that are specific to the [!DNL Braze] destination:
 
 * Sie können eine beliebige [Identität](../../../identity-service/namespaces.md) an das [!DNL Braze] Ziel senden, solange Sie sie dem [!DNL Braze] Ziel zuordnen [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] Segmente werden [!DNL Braze] unter dem `AdobeExperiencePlatformSegments` Attribut exportiert.
+
+>[!NOTE]
+>
+>Beachten Sie, dass das Senden zusätzlicher benutzerdefinierter Attribute [!DNL Braze] möglicherweise zu einer Erhöhung des [!DNL Braze] Datenpunktverbrauchs führt. Bitte wenden Sie sich an Ihren [!DNL Braze] Kundenbetreuer, bevor Sie zusätzliche benutzerdefinierte Attribute senden.
 
 ## Anwendungsbeispiele {#use-cases}
 
