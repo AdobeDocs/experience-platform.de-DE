@@ -4,7 +4,7 @@ title: Profil-Detailanpassung
 description: 'Dieses Handbuch enthält schrittweise Anleitungen zum Anpassen der Art und Weise, wie Kundendaten in Echtzeit in der Adobe Experience Platform-Benutzeroberfläche angezeigt werden. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9068d12e60da63a6a2a2ff18c016080ea581104f
+source-git-commit: d05884c87445ec16b0ad44f593cf782b8c80d646
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Auf der Adobe Experience Platform-Benutzeroberfläche können Sie Daten in Form von Kundendaten Ansicht und Interaktion mit [!DNL Real-time Customer Profile] Profilen durchführen. Die in der Benutzeroberfläche angezeigten Informationen zum Profil wurden aus mehreren Profil-Fragmenten zusammengeführt, um eine Ansicht des jeweiligen Kunden zu bilden. Dazu gehören Details wie Basisattribute, verknüpfte Identitäten und Voreinstellungen für Kanal. Die in den Profilen angezeigten Standardfelder können auch auf organisatorischer Ebene geändert werden, um bevorzugte [!DNL Profile] Attribute anzuzeigen. Dieses Handbuch enthält schrittweise Anleitungen zum Anpassen der Art und Weise, wie [!DNL Profile] Daten in der Plattform-Benutzeroberfläche angezeigt werden.
 
-Eine vollständige Anleitung zur Benutzeroberfläche für Profile finden Sie im [Profil-Benutzerhandbuch](user-guide.md).
+Eine vollständige Anleitung zur Benutzeroberfläche für Profile finden Sie im Handbuch [Profil-Benutzeroberfläche](user-guide.md).
 
 ## Karten neu anordnen und Größe ändern {#reorder-and-resize-cards}
 
