@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Löschen eines Datenflusses mithilfe der Flow Service API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Löschen eines Datenflusses mithilfe der Flow Service API beschrieben.
+description: In diesem Lernprogramm werden die Schritte zum Löschen von Batch- und Streaming-Datenflüssen mithilfe der Flow Service API beschrieben.
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 30%
+source-wordcount: '467'
+ht-degree: 29%
 
 ---
 
 
 # Löschen eines Datenflusses mithilfe der Flow Service API
 
-In diesem Lernprogramm werden die Schritte zum Löschen von Datenblättern beschrieben, die sowohl mit Batch- als auch mit Streaming-Quellen mithilfe der [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)Funktion durchgeführt werden.
+Sie können Stapel- und Streaming-Datenflüsse löschen, die Fehler enthalten oder mit der [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)veraltet sind.
+
+In diesem Lernprogramm werden die Schritte zum Löschen von Datenblättern beschrieben, die sowohl mit Batch- als auch mit Streaming-Quellen mithilfe von [!DNL Flow Service]vorgenommen werden.
 
 ## Erste Schritte
 
