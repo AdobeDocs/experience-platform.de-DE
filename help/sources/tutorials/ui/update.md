@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts;
-description: null
+keywords: Experience Platform;home;popular topics;update accounts
+description: Unter bestimmten Umständen kann es erforderlich sein, die Details eines Kontos mit vorhandenen Quellen zu aktualisieren. Der Quellenarbeitsbereich bietet Ihnen die Möglichkeit, Details zu einer vorhandenen Stapel- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
 solution: Experience Platform
 title: Kontodetails in der Benutzeroberfläche aktualisieren
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 413687a0d9e790ea3f61a858002e9510216d7c34
+source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 10%
+source-wordcount: '442'
+ht-degree: 4%
 
 ---
 
 
 # Kontodetails in der Benutzeroberfläche aktualisieren
 
-Unter bestimmten Umständen kann es erforderlich sein, die Details eines Kontos mit vorhandenen Quellen zu aktualisieren. Der [!UICONTROL Quellenarbeitsbereich] bietet Ihnen die Möglichkeit, Kontodetails zu bearbeiten, hinzuzufügen und zu löschen, einschließlich der Werte für Namen, Beschreibung und Authentifizierungsdaten.
+Unter bestimmten Umständen kann es erforderlich sein, die Details eines Kontos mit vorhandenen Quellen zu aktualisieren. Der [!UICONTROL Quellenarbeitsbereich] bietet Ihnen die Möglichkeit, Details zu einer vorhandenen Stapel- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
 
 Dieses Lernprogramm enthält Schritte zum Aktualisieren der Details und Anmeldeinformationen eines vorhandenen Kontos im [!UICONTROL Sources] -Arbeitsbereich.
 
@@ -24,14 +24,12 @@ Dieses Lernprogramm enthält Schritte zum Aktualisieren der Details und Anmeldei
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-   - [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   - [Schema-Editor-Lernprogramm](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Quellen](../../home.md): Die DNL-Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern.
+- [Sandboxen](../../../sandboxes/home.md): DNL Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ## Konten aktualisieren
 
-Melden Sie sich bei der Benutzeroberfläche [der](https://platform.adobe.com) Experience Platform an und wählen Sie dann im linken Navigationsbereich die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den Arbeitsbereich &quot; [!UICONTROL Quellen] &quot;zuzugreifen. Wählen Sie **[!UICONTROL Konten]** aus der oberen Kopfzeile zur Ansicht vorhandener Konten.
+Melden Sie sich bei der Benutzeroberfläche [der](https://platform.adobe.com) Experience Platform an und wählen Sie dann im linken Navigationsbereich die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den [!UICONTROL Quellarbeitsbereich] zuzugreifen. Wählen Sie **[!UICONTROL Konten]** aus der oberen Kopfzeile zur Ansicht vorhandener Konten.
 
 ![Katalog](../../images/tutorials/update/catalog.png)
 
