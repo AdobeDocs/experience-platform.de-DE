@@ -5,9 +5,9 @@ title: XDM-System – Übersicht
 topic: overview
 description: 'Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. '
 translation-type: tm+mt
-source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
+source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1581'
 ht-degree: 10%
 
 ---
@@ -46,7 +46,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 
 Alle XDM-Schemas beschreiben Daten, die als Datensatz- oder Zeitreihen kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema beim ersten Erstellen zugewiesen wird. XDM-Klassen beschreiben die kleinste Anzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten darzustellen.
 
-Obwohl Sie in der Lage sind, Ihre eigenen Klassen innerhalb der [!DNL Schema Registry]zu definieren, wird empfohlen, die bevorzugten Klassen **[!DNL XDM Individual Profile]** bzw. **[!DNL XDM ExperienceEvent]** für die Daten der Datensatz- und Zeitreihen zu verwenden. Diese Klassen werden nachfolgend detaillierter beschrieben.
+Obwohl Sie in der Lage sind, Ihre eigenen Klassen innerhalb der [!DNL Schema Registry]zu definieren, wird empfohlen, die bevorzugten Klassen **[!DNL XDM Individual Profile]** bzw. **[!DNL XDM ExperienceEvent]** für Daten aus Datensatz- und Zeitreihen zu verwenden. Diese Klassen werden nachfolgend detaillierter beschrieben.
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -68,7 +68,7 @@ Auch wenn nicht alle Ereignis leicht in alle Datenquellen eingeordnet werden kö
 
 ## XDM-Schema und - [!DNL Experience Platform] Dienste
 
-[!DNL Experience Platform] ist Schema agnostisch, d. h. jedes Schema, das dem XDM-Standard entspricht, ist für die Verwendung durch [!DNL Platform] Dienste verfügbar. Die Nutzung von Schemas durch verschiedene [!DNL Platform] Dienste wird nachfolgend genauer erläutert.
+[!DNL Experience Platform] ist Schema-agnostisch, d. h. jedes Schema, das dem XDM-Standard entspricht, ist für [!DNL Platform] Dienste verfügbar. Die Nutzung von Schemas durch verschiedene [!DNL Platform] Dienste wird nachfolgend genauer erläutert.
 
 ### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
 
