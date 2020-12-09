@@ -5,10 +5,10 @@ seo-title: Zieldetailseite
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 18%
+source-wordcount: '735'
+ht-degree: 16%
 
 ---
 
@@ -29,6 +29,10 @@ Die Detailseite für das Ziel wird mit den verfügbaren Steuerelementen angezeig
 
 ![](../assets/ui/details-page/details.png)
 
+Außerdem können Sie auf der Registerkarte &quot;Durchsuchen&quot;den ausgewählten Datenfluss löschen, indem Sie auf das Symbol &quot; ![Papierkorb](../assets/ui/details-page/trash-icon.png) &quot;klicken. Alle Segmente, die für ein Ziel aktiviert wurden, werden vor dem Löschen des Datenflusses nicht zugeordnet.
+
+![](../assets/ui/details-page/delete-flow.png)
+
 ## Rechte Leiste
 
 Die rechte Leiste zeigt die grundlegenden Informationen zum Ziel an.
@@ -40,6 +44,7 @@ Die folgende Tabelle enthält die Kontrollen und Einzelheiten der rechten Leiste
 | Rechtsschiene | Beschreibung |
 | --- | --- |
 | [!UICONTROL Aktivieren] | Wählen Sie dieses Steuerelement aus, um zu bearbeiten, welche Segmente dem Ziel zugeordnet werden. Weitere Informationen finden Sie im Handbuch zum [Aktivieren von Segmenten in ein Ziel](./activate-destinations.md) . |
+| [!UICONTROL Löschen] | Ermöglicht das Löschen dieses Datenflusses und die Aufhebung der Zuordnung der zuvor aktivierten Segmente, sofern vorhanden. |
 | [!UICONTROL Zielname] | Dieses Feld kann bearbeitet werden, um den Namen des Ziels zu aktualisieren. |
 | [!UICONTROL Beschreibung] | Dieses Feld kann bearbeitet werden, um eine optionale Beschreibung zu aktualisieren oder dem Ziel hinzuzufügen. |
 | [!UICONTROL Ziel] | Die Zielplattform, an die Zielgruppen gesendet werden. See the [destinations catalog](../catalog/overview.md) for more information. |
@@ -75,11 +80,11 @@ Um die Details eines bestimmten Datenflusses Ansicht, wählen Sie die Ausführun
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Segmente]
+## [!UICONTROL Aktivierungen]
 
-Auf der Registerkarte &quot; [!UICONTROL Segmente] &quot;wird eine Liste von Segmenten angezeigt, die dem Ziel zugeordnet wurden, einschließlich des Beginns- und Enddatums (falls zutreffend). Um die Details zu einem bestimmten Segment Ansicht, wählen Sie dessen Namen in der Liste aus.
+Auf der Registerkarte &quot;Daten [!UICONTROL zu] Aktivierungen&quot;wird eine Liste der dem Ziel zugeordneten Segmente angezeigt, einschließlich des Beginns- und Enddatums (falls zutreffend). Um die Details zu einem bestimmten Segment Ansicht, wählen Sie dessen Namen in der Liste aus.
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
