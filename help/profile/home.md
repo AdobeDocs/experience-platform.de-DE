@@ -4,10 +4,10 @@ title: Übersicht über das Echtzeit-Kundenprofil
 topic: guide
 description: Das Echtzeit-Kundenprofil ist ein allgemeiner Suchentitäten-Speicher, in dem Informationen aus verschiedensten Datenquellen des Unternehmens zusammengeführt und zum Abruf verfügbar gemacht werden. Diese Daten werden in Form von individuellen Kundenprofilen sowie zugehörigen im Zeitverlauf erfassten, so genannten Zeitreihen-Ereignissen aufbereitet, die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 43%
+source-wordcount: '1844'
+ht-degree: 42%
 
 ---
 
@@ -24,7 +24,9 @@ Die nachfolgende Abbildung zeigt die Zusammenhänge zwischen dem Echtzeit-Kunden
 
 ### Profil-Datenspeicher
 
-Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. In other words, the [!DNL Profile] store is separate from [!DNL Catalog] data ([!DNL Data Lake]) and [!DNL Identity Service] data (identity graph).
+Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. Der [!DNL Profile] Store ist von den [!DNL Catalog] Daten im Identitätsdiagramm [!DNL Data Lake] und den [!DNL Identity Service] Daten im Identitätsdiagramm getrennt.
+
+Der Profil-Store verwendet eine Microsoft Azurblase Cosmos DB-Infrastruktur und der Platform Data Lake verwendet Microsoft Azurblase Data Lake Datenspeicherung.
 
 ### Profil-Guardraht
 
@@ -34,7 +36,7 @@ Experience Platform bietet eine Reihe von Garantieleistungen, mit denen Sie verm
 
 [!DNL Real-time Customer Profile] führt Daten aus verschiedenen Unternehmenssystemen zusammen und ermöglicht dann den Zugriff auf diese Daten in Form von Profilen mit zugehörigen Zeitreihen-Ereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen. In den folgenden Abschnitten werden einige der Kernkonzepte hervorgehoben, die Sie verstehen müssen, um Profile innerhalb der Plattform effektiv zu erstellen und zu verwalten.
 
-### Fragmente im Profil im Vergleich zu zusammengeführten Profilen
+### Fragmente im Profil im Vergleich zu zusammengeführten Profilen {#profile-fragments-vs-merged-profiles}
 
 Jedes einzelne Profil besteht aus mehreren Profil-Fragmenten, die zu einer einzigen Ansicht des Kunden zusammengeführt wurden. Wenn ein Kunde beispielsweise über mehrere Kanal mit Ihrer Marke interagiert, enthält Ihr Unternehmen mehrere Profil-Fragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen angezeigt werden. Wenn diese Fragmente in eine Plattform integriert werden, werden sie zusammengeführt, um ein einzelnes Profil für diesen Kunden zu erstellen.
 
