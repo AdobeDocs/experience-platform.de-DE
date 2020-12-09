@@ -5,7 +5,7 @@ title: Benutzerhandbuch zum Segmentaufbau für Segmentierungsdienste
 topic: ui guide
 description: 'Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 50%
@@ -13,7 +13,7 @@ ht-degree: 50%
 ---
 
 
-# [!DNL Segment Builder] Benutzerhandbuch
+# [!DNL Segment Builder] UI-Handbuch
 
 [!DNL Segment Builder] bietet einen Rich-Workspace, mit dem Sie mit [!DNL Profile] Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 
