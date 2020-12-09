@@ -5,10 +5,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Erlebnisdatenmodell (XDM)
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 translation-type: tm+mt
-source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
+source-git-commit: fe316123c3e8925edf75d3519c80a7c85f5bc040
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 58%
+source-wordcount: '192'
+ht-degree: 57%
 
 ---
 
@@ -60,6 +60,7 @@ ht-degree: 58%
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [Schemas](api/schemas.md)
+   * [Verhalten](api/behaviors.md)
    * [Klassen](api/classes.md)
    * [Mixins](api/mixins.md)
    * [Datentypen](api/data-types.md)
