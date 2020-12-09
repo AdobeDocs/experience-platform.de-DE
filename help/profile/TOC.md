@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Zusammenführen von Kundendaten, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 translation-type: tm+mt
-source-git-commit: 8971d373228099d42249d3ec4af13e711323a0cc
+source-git-commit: 983b357f2f17aad273f0465dc9250240a062dcd2
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 62%
+source-wordcount: '97'
+ht-degree: 54%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 62%
 
 * [[!DNL Profile] Übersicht](home.md)
 * [[!DNL Profile] Guardraht](guardrails.md)
-* [!DNL Profile]-API-Entwicklerhandbuch{#api}
+* [!DNL Profile] APIs {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [(Alpha) Berechnete Attribute](api/computed-attributes.md)
@@ -28,13 +28,14 @@ ht-degree: 62%
    * [[!DNL Profile] Systemaufträge (Anforderungen löschen)](api/profile-system-jobs.md)
 * Benutzeroberflächen-Handbücher {#ui}
    * [[!DNL Profile] UI-Handbuch](ui/user-guide.md)
+   * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
    * [[!DNL Profile] Detail-Anpassung](ui/profile-customization.md)
    * [Leitfaden zur Benutzeroberfläche &quot;Richtlinien zusammenführen&quot;](ui/merge-policies.md)
    * [Handbuch zur Benutzeroberfläche von Vereinigung Schema](ui/union-schema.md)
 * Tutorials {#tutorials}
    * [Daten Hinzufügen [!DNL Profile]](tutorials/add-profile-data.md)
    * [DataSet [!DNL Profile] & [!DNL Identity] forService konfigurieren](tutorials/dataset-configuration.md)
-   * [Weitere Tutorials](https://docs.adobe.com/content/help/de-DE/experience-platform/tutorials/home.html)
+   * [Weitere Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [[!DNL Profile] Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
