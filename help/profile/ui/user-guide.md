@@ -4,9 +4,9 @@ title: Handbuch zur Benutzeroberfläche des Profils in Echtzeit
 topic: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1304'
 ht-degree: 9%
 
 ---
@@ -26,9 +26,19 @@ Dieses UI-Handbuch erfordert ein Verständnis der verschiedenen mit der Verwaltu
 
 ## Übersicht
 
-Wählen Sie in der [[!DNL Experience Platform] Benutzeroberfläche](http://platform.adobe.com)im linken Navigationsbereich die Option &quot; **[!UICONTROL Profil]** &quot;, um die Registerkarte &quot; **[!UICONTROL Übersicht]** &quot;zu öffnen. Diese Registerkarte enthält Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
+Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;im linken Navigationsbereich die Option &quot; **[!UICONTROL Profil]** &quot;aus, um die Registerkarte &quot; **[!UICONTROL Übersicht]** &quot;zu öffnen. Diese Registerkarte enthält Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
 
 ![](../images/user-guide/profiles-overview.png)
+
+### (Alpha) Profil-Dashboard
+
+>[!IMPORTANT]
+>
+>Die Dashboard-Funktion ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+
+Für einige Benutzer bietet die Auswahl von **[!UICONTROL Profilen]** im linken Navigationsbereich und das Öffnen der Registerkarte &quot; **[!UICONTROL Übersicht]** &quot;ein Dashboard, in dem die Schlüsselmetriken zu Ihren Profil-Daten skizziert werden.
+
+Weitere Informationen finden Sie im Handbuch zum [Profil-Dashboard](profile-dashboard.md).
 
 ## Durchsuchen
 
