@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
 translation-type: tm+mt
-source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
+source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 3%
@@ -55,7 +55,7 @@ Der Identitätsdiagramm-Viewer wird angezeigt. Auf der linken Seite des Bildschi
 
 >[!IMPORTANT]
 >
->Ein Identitätsdiagramm erfordert mindestens zwei verknüpfte Identitäten sowie ein gültiges Namensraum- und ID-Paar. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 400. Weitere Informationen finden Sie im [Anhang](#appendix) .
+>Ein Identitätsdiagramm erfordert mindestens zwei verknüpfte Identitäten sowie ein gültiges Namensraum- und ID-Paar. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 150. Weitere Informationen finden Sie im [Anhang](#appendix) .
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -101,7 +101,7 @@ Fehler können beim Zugriff auf den Identitätsdiagramm-Viewer auftreten. Im Fol
 
 - Im ausgewählten Namensraum muss ein Identitätswert vorhanden sein.
 - Für den Identitätsdiagramm-Viewer sind mindestens zwei verknüpfte Identitäten erforderlich.
-- Der Identitätsdiagramm-Viewer darf maximal 400 Identitäten überschreiten.
+- Der Identitätsdiagramm-Viewer darf nicht länger als 150 Identitäten sein.
 - Der Identitätsdiagramm-Viewer ist derzeit in Nicht-Produktions-Sandboxes nicht verfügbar.
 - Der Identitätsdiagramm-Viewer unterstützt derzeit nur gezählte Daten und zeigt keine Daten an, die mit Streaming-Quellen erfasst wurden.
 
