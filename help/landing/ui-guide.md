@@ -5,10 +5,10 @@ title: Adobe Experience Platform UI-Handbuch
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 0%
+source-wordcount: '1726'
+ht-degree: 3%
 
 ---
 
@@ -143,13 +143,25 @@ Im Bereich &quot; **[!UICONTROL Services]** &quot;können Sie Ihre veröffentlic
 
 ### [!UICONTROL Data management]
 
-Im Abschnitt **[!UICONTROL Schema]** können Sie Schema erstellen und verwalten. Weitere Informationen zur Verwendung des Schemas finden Sie im Tutorial zum [Erstellen eines Schemas](../xdm/tutorials/create-schema-ui.md). Weitere Informationen zum Experience Data Model (XDM) finden Sie in der [XDM-Übersicht](../xdm/home.md).
+Im Abschnitt **[!UICONTROL Schema]** können Sie Erlebnisdatenmodell-Schema (XDM) erstellen und verwalten. Weitere Informationen zu Schemas finden Sie im Tutorial zum [Erstellen eines Schemas](../xdm/tutorials/create-schema-ui.md). More information about XDM can be found in the [XDM System overview](../xdm/home.md).
 
-Im Abschnitt &quot; **[!UICONTROL Datensätze]** &quot;können Sie Datensätze erstellen und verwalten. Weitere Informationen zum Abschnitt &quot;Datensätze&quot;finden Sie im [Benutzerhandbuch](../catalog/datasets/user-guide.md)zu Datensätzen.
+Im Abschnitt &quot; **[!UICONTROL Datensätze]** &quot;können Sie Datensätze erstellen und verwalten. Weitere Informationen zu Datensätzen finden Sie im [Benutzerhandbuch](../catalog/datasets/user-guide.md)zu Datensätzen.
 
-Im Abschnitt &quot; **[!UICONTROL Abfragen]** &quot;können Sie Abfragen erstellen und verwalten, SQL-Abfragen vom Abfrage Service protokollieren und Ihre PostgreSQL-Anmeldeinformationen Ansicht vornehmen. Weitere Informationen zu den Abfragen finden Sie im Benutzerhandbuch zum [Abfrage-Dienst](../query-service/ui/overview.md).
+Im Abschnitt **[!UICONTROL Abfragen]** können Sie Abfragen erstellen und verwalten, SQL-Abfragen protokollieren, die vom Adobe Experience Platform Abfrage Service vorgenommen wurden, und Ihre PostgreSQL-Anmeldeinformationen Ansicht geben. Weitere Informationen zu Abfragen finden Sie im Benutzerhandbuch zum [Abfrage-Dienst](../query-service/ui/overview.md).
 
-Im Abschnitt **[!UICONTROL Überwachung]** können Sie die Batch- und Streaming-Erfassung überwachen. Weitere Informationen zum Abschnitt Überwachung finden Sie im Benutzerhandbuch [zur](../ingestion/quality/monitor-data-flows.md)Überwachung der Datenerfassung.
+Im Abschnitt **[!UICONTROL Überwachung]** können Sie die Batch- und Streaming-Erfassung überwachen. Weitere Informationen zur Überwachung finden Sie im Benutzerhandbuch [zur](../ingestion/quality/monitor-data-flows.md)Überwachung von Daten.
+
+### [!UICONTROL Entscheidungsfindung]
+
+Offer Decisioning ist ein in Adobe Experience Platform integrierter Anwendungsdienst. Damit können Sie Experience Platform nutzen, um Kunden zur richtigen Zeit und an allen Berührungspunkten das optimale Angebot und Erlebnis zu unterbreiten. Weitere Informationen zu Offer Decisioning, einschließlich der Arbeit mit [!UICONTROL Angeboten] und [!UICONTROL Aktivitäten] , finden Sie in der [Offer Decisioning-Dokumentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+
+### [!UICONTROL Administration]
+
+Die Benutzeroberfläche von Platform bietet ein Dashboard, mit dem Sie wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen, wie sie in einem täglichen Schnappschuss erfasst werden, Ansicht haben. Sie können darauf zugreifen, indem Sie in der Navigation die Option **[!UICONTROL Lizenzverwendung]** auswählen. Weitere Informationen zum Dashboard der Lizenznutzung finden Sie im Dashboard zur [Lizenznutzung](license-usage-dashboard.md).
+
+>[!IMPORTANT]
+>
+>Die Lizenzverwendungs-Dashboard-Funktion ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
 ## Nächste Schritte
 
