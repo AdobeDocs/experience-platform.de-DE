@@ -1,69 +1,66 @@
 ---
 keywords: Experience Platform;home;popular topics; delete dataflows
-description: Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Löschen von Datenflüssen aus dem Quellarbeitsbereich.
+description: Der Arbeitsbereich "Quellen"bietet Ihnen die Möglichkeit, vorhandene Batch- und Streaming-Datenflüsse zu löschen, die Fehler enthalten oder veraltet sind.
 solution: Experience Platform
 title: Datenflüsse löschen
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
+source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 9%
+source-wordcount: '358'
+ht-degree: 5%
 
 ---
 
 
-# Datenflüsse löschen
+# Löschen von Datenflüssen in der Benutzeroberfläche
 
-Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Löschen von Datenflüssen aus dem **[!UICONTROL Quellarbeitsbereich]** .
+Im Arbeitsbereich &quot; [!UICONTROL Quellen] &quot;können Sie vorhandene Batch- und Streaming-Datenflüsse löschen, die Fehler enthalten oder veraltet sind.
+
+Dieses Lernprogramm enthält Schritte zum Löschen von Datenflüssen mithilfe des [!UICONTROL Sources] -Arbeitsbereichs.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-   - [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   - [Schema-Editor-Lernprogramm](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
+- [Sandboxen](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-## Löschen von Datenflüssen mithilfe der Benutzeroberfläche
+## Datenflüsse löschen
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den **[!UICONTROL Quellarbeitsbereich]** zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verschiedene Quellen angezeigt, für die Sie Konten und Datenflüsse erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
+Wählen Sie in der Benutzeroberfläche [der](https://platform.adobe.com)Experience Platform im linken Navigationsbereich die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den Arbeitsbereich &quot; [!UICONTROL Quellen] &quot;zuzugreifen, und wählen Sie dann in der oberen Kopfzeile die Option &quot; **[!UICONTROL Datenflüsse]** &quot;aus.
 
-Wählen Sie &quot; **[!UICONTROL Datenflüsse]** &quot;, um auf die Seite &quot; **[!UICONTROL Datenflüsse]** &quot;zuzugreifen.
+![Katalog](../../images/tutorials/delete/catalog.png)
 
-![dataset-flow-Aktivität](../../images/tutorials/delete/dataflows.png)
+Die Seite &quot; **[!UICONTROL Datenflüsse]** &quot;wird angezeigt. Auf dieser Seite finden Sie eine Liste anzeigbarer Datenflüsse, einschließlich Informationen zu ihrem Dataset, ihrer Quelle, ihrem Kontonamen und dem Erstellungsdatum.
 
-Eine Liste der vorhandenen Datenflüsse wird angezeigt. Auf dieser Seite finden Sie eine Liste sortierbarer Informationen zu vorhandenen Datenflüssen wie Quelle, Benutzername, Ausführungsstatus und Datum der letzten Ausführung. Wählen Sie das **Trichtersymbol** oben links, das sortiert werden soll.
+Wählen Sie oben links das Filtersymbol (![Filtersymbol](../../images/tutorials/delete/filter.png)) aus, um das Sortierfeld zu starten.
 
-![dataflows-Liste](../../images/tutorials/delete/dataflows-list.png)
+![Datenflüsse](../../images/tutorials/delete/dataflows.png)
 
-Das Sortierungsbedienfeld wird auf der linken Seite des Bildschirms mit einer Liste der verfügbaren Quellen angezeigt.
-Mit der Sortierfunktion können Sie mehrere Quellen auswählen.
+Der Sortierbereich bietet eine Liste aller Quellen. Sie können mehr als eine Quelle aus der Liste auswählen, um auf eine gefilterte Auswahl von Datenflüssen zuzugreifen, die mit den ausgewählten Quellen verknüpft sind.
 
-Wählen Sie die Quelle aus, auf die Sie zugreifen möchten, und suchen Sie den Datenfluss, den Sie löschen möchten, aus der Liste der Datenflüsse in der Hauptschnittstelle. In diesem Beispiel ist die ausgewählte Quelle **[!DNL Azure Blob Storage]** und der Dataflow-Name der Datenfluss für **[!UICONTROL Kundendaten]**. Wenn Sie mehrere Quellen aus dem Sortierfeld auswählen, werden die zuletzt erstellten Datenflüsse zuerst angezeigt, da die Liste nach dem erstellten Datum sortiert wird.
+Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, um eine Liste der vorhandenen Datenflüsse anzuzeigen. Nachdem Sie den zu löschenden Datendurchlauf identifiziert haben, wählen Sie die Ellipsen (`...`) neben dem Datenfeldnamen aus.
 
-Wählen Sie den zu löschenden Datenfluss aus.
+![dataflows-filter](../../images/tutorials/delete/dataflows-filter.png)
 
-![dataflows-sort](../../images/tutorials/delete/dataflows-sort.png)
+Es wird ein Dropdown-Menü angezeigt, mit Optionen zum Bearbeiten des Zeitplans des Datenflusses, zum Deaktivieren des Datenflusses oder zum vollständigen Löschen.
 
-Das Bedienfeld &quot; **[!UICONTROL Eigenschaften]** &quot;wird auf der rechten Seite des Bildschirms angezeigt und enthält Informationen zum ausgewählten Datenpfad sowie eine Option zum **[!UICONTROL Bearbeiten des Zeitplans]**.
-
-Zum Löschen des Datenflusses wählen Sie &quot; **[!UICONTROL Löschen&quot;]**.
-
-![dataflows-sort](../../images/tutorials/delete/dataflows-properties.png)
-
-Ein abschließendes Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!UICONTROL Löschen]** , um den Vorgang abzuschließen.
+Wählen Sie &quot; **[!UICONTROL Löschen]** &quot;, um den Datendurchlauf zu löschen.
 
 ![Löschen Sie](../../images/tutorials/delete/delete.png)
 
-Nach einigen Augenblicken wird am unteren Bildschirmrand ein grünes Bestätigungsfeld angezeigt, um eine erfolgreiche Löschung zu bestätigen.
+Ein Dialogfeld zur letzten Bestätigung wird angezeigt. Wählen Sie **[!UICONTROL Löschen]** , um den Vorgang abzuschließen.
+
+![bestätigen](../../images/tutorials/delete/confirm.png)
+
+Nach einigen Augenblicken wird unten im Bildschirm ein Bestätigungsfeld angezeigt, um einen erfolgreichen Löschvorgang zu bestätigen.
 
 ![bestätigt](../../images/tutorials/delete/confirmed.png)
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie den Arbeitsbereich &quot; **[!UICONTROL Quellen]** &quot;erfolgreich zum Löschen vorhandener Datenflüsse verwendet.
+In diesem Lernprogramm haben Sie den Arbeitsbereich &quot; [!UICONTROL Quellen] &quot;erfolgreich zum Löschen eines vorhandenen Datenflusses verwendet.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Flow Service] API finden Sie im Lernprogramm zum [Löschen von Datenflüssen mithilfe der Flow Service API.](../../tutorials/api/delete-dataflows.md)
+Anweisungen zum programmatischen Ausführen dieser Vorgänge mithilfe von API-Aufrufen finden Sie im Lernprogramm zum [Löschen von Datenflüssen mithilfe der Flow Service API](../../tutorials/api/delete-dataflows.md) .
