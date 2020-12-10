@@ -5,7 +5,7 @@ title: Adobe Experience Platform UI-Handbuch
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 3%
@@ -149,7 +149,7 @@ Im Abschnitt &quot; **[!UICONTROL Datensätze]** &quot;können Sie Datensätze e
 
 Im Abschnitt **[!UICONTROL Abfragen]** können Sie Abfragen erstellen und verwalten, SQL-Abfragen protokollieren, die vom Adobe Experience Platform Abfrage Service vorgenommen wurden, und Ihre PostgreSQL-Anmeldeinformationen Ansicht geben. Weitere Informationen zu Abfragen finden Sie im Benutzerhandbuch zum [Abfrage-Dienst](../query-service/ui/overview.md).
 
-Im Abschnitt **[!UICONTROL Überwachung]** können Sie die Batch- und Streaming-Erfassung überwachen. Weitere Informationen zur Überwachung finden Sie im Benutzerhandbuch [zur](../ingestion/quality/monitor-data-flows.md)Überwachung von Daten.
+Im Abschnitt **[!UICONTROL Überwachung]** können Sie die Batch- und Streaming-Erfassung überwachen. Weitere Informationen zur Überwachung finden Sie im Benutzerhandbuch [zur](../ingestion/quality/monitor-data-ingestion.md)Überwachung von Daten.
 
 ### [!UICONTROL Entscheidungsfindung]
 
