@@ -5,9 +5,9 @@ title: Adobe Experience Platform Workflows UI-Handbuch
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 068e8270f389ed84cae6ef4b7185259cb5f6dadc
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ Der **[!UICONTROL Workflows]** Abschnitt in der Adobe Experience Platform-Benutz
 
 ## [!UICONTROL Datenerfassung]
 
-Mit dem Arbeitsablauf **[!UICONTROL CSV zu XDM-Schema]** zuordnen können Sie eine CSV-Datei hochladen und in ein XDM-Schema-Format (Experience Data Model) konvertieren. Weitere Informationen zu diesem Arbeitsablauf finden Sie im Lernprogramm zur [Zuordnung einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md).
+Mit dem Arbeitsablauf **[!UICONTROL CSV zu XDM-Schema]** zuordnen können Sie eine CSV-Datei hochladen und in ein XDM-Schema (Experience Data Model) konvertieren. Weitere Informationen zu diesem Arbeitsablauf finden Sie im Lernprogramm zur [Zuordnung einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md).
 
-Mit dem Arbeitsablauf zum **[!UICONTROL Erstellen eines Datensatzes aus Schema]** können Sie einen neuen Datensatz aus einem registrierten XDM-Schema erstellen. Weitere Informationen zu diesem Arbeitsablauf finden Sie im [Benutzerhandbuch](../catalog/datasets/user-guide.md#schema)für Datensätze.
+Mit dem Arbeitsablauf zum **[!UICONTROL Erstellen eines Datensatzes aus Schema]** können Sie einen neuen Datensatz aus einem vorhandenen XDM-Schema erstellen. Weitere Informationen zu diesem Arbeitsablauf finden Sie im [Benutzerhandbuch](../catalog/datasets/user-guide.md#schema)für Datensätze.
 
 Mit dem Arbeitsablauf zum **[!UICONTROL Erstellen eines Datensatzes aus CSV]** können Sie einen neuen Datensatz erstellen, indem Sie eine CSV-Datei hochladen. Weitere Informationen zu diesem Arbeitsablauf finden Sie im [Benutzerhandbuch](../catalog/datasets/user-guide.md#csv)für Datensätze.
 
@@ -37,4 +37,4 @@ Mit dem Arbeitsablauf zum **[!UICONTROL Veröffentlichen eines Modells als Diens
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs wurden Sie auf der Benutzeroberfläche der Experience Platform zur [!UICONTROL Workflows] Seite hinzugefügt. Weitere Informationen zur Plattform-Benutzeroberfläche im Allgemeinen finden Sie im Benutzerhandbuch [Adobe Experience Platform](./ui-guide.md).
+Durch Lesen dieses Handbuchs wurden Sie mit der [!UICONTROL Workflows] in der Benutzeroberfläche der Experience Platform vertraut gemacht. Weitere Informationen zu Funktionen und Funktionen der Benutzeroberfläche der Plattform finden Sie im Handbuch zur [Adobe Experience Platform-Benutzeroberfläche](ui-guide.md).
