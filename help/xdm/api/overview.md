@@ -5,10 +5,10 @@ title: Entwicklerhandbuch zur Schema Registry-API
 description: 'Mit der Schema Registry API können Sie alle Schema und zugehörigen XDM-Ressourcen, die Ihnen in der Experience Platform zur Verfügung stehen, programmatisch verwalten. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0e5865fddcf2592e9b6d8d4b2747bdceee6bda7
+source-git-commit: 33f9ee45e8dd649d23f9b3b4f03ecf00d8e18fd2
 workflow-type: tm+mt
-source-wordcount: '929'
-ht-degree: 6%
+source-wordcount: '961'
+ht-degree: 5%
 
 ---
 
@@ -33,9 +33,13 @@ XDM-Schema stellen die Struktur und das Format der Daten dar, die in Plattform e
 
 Eine schrittweise Anleitung zum Erstellen eines vollständigen Schemas in der Schema Registry-API, einschließlich Erstellen und Hinzufügen von Mixins und Datentypen, finden Sie im Lernprogramm [zur Erstellung von](../tutorials/create-schema-api.md)API-Schemas.
 
+## Verhalten
+
+Verhalten definieren die Art der Daten, die ein Schema beschreibt. Jede XDM-Klasse muss auf ein bestimmtes Verhalten verweisen, das von allen Schemas, die diese Klasse verwenden, übernommen wird. Informationen zur Ansicht der verfügbaren Verhaltensweisen in der API finden Sie im [Endpunkthandbuch](./behaviors.md) &quot;Verhalten&quot;.
+
 ## Klassen
 
-Klassen definieren die Verhaltensaspekte der Daten, die ein Schema enthalten soll (Datensatz oder Zeitreihen). Darüber hinaus bestimmt eine Klasse die Basisstruktur allgemeiner Eigenschaften, die alle auf dieser Klasse basierenden Schema enthalten müssen. Die Klasse eines Schemas legt fest, welche Mixins in diesem Schema verwendet werden dürfen. Weitere Informationen zum Arbeiten mit Klassen in der API finden Sie im [Klassen-Endpunkthandbuch](./classes.md) .
+Eine Klasse definiert die Basisstruktur von allgemeinen Eigenschaften, die alle Schema, die auf dieser Klasse basieren, enthalten müssen, und bestimmt, welche Mixins für die Verwendung in diesen Schemas geeignet sind. Jede Klasse muss mit einem vorhandenen Verhalten verknüpft sein. Weitere Informationen zum Arbeiten mit Klassen in der API finden Sie im [Klassen-Endpunkthandbuch](./classes.md) .
 
 ## Mixins
 
@@ -47,7 +51,7 @@ Datentypen werden in Klassen oder Mixins genauso wie einfache Literalfelder als 
 
 ## Deskriptoren
 
-Deskriptoren Metadaten sind Metadaten, denen bestimmte Felder in einem Schema zugewiesen werden, und bieten verschiedene kontextbezogene Details, wie diese Felder (und das Schema selbst) mit anderen Schemas verwandt sind. Jedes Schema kann eine oder mehrere Deskriptorentitäten anwenden, und es gibt mehrere verschiedene Deskriptortypen, die unterschiedlichen Zwecken dienen. Weitere Informationen zum Arbeiten mit Deskriptoren in der API sowie eine Übersicht über die verschiedenen Deskriptortypen und ihre Anwendungsfälle finden Sie im [Deskriptoren-Endpunkthandbuch](./descriptors.md) .
+Deskriptoren sind Metadaten-Sätze, die bestimmten Feldern in einem Schema zugewiesen werden, und bieten verschiedene kontextbezogene Details, wie diese Felder (und das Schema selbst) mit anderen Schemas verwandt sind. Jedes Schema kann eine oder mehrere Deskriptorentitäten anwenden, und es gibt mehrere verschiedene Deskriptortypen, die unterschiedlichen Zwecken dienen. Weitere Informationen zum Arbeiten mit Deskriptoren in der API sowie eine Übersicht über die verschiedenen Deskriptortypen und ihre Anwendungsfälle finden Sie im [Deskriptoren-Endpunkthandbuch](./descriptors.md) .
 
 ## Vereinigungen
 
