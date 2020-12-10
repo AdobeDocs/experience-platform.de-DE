@@ -9,16 +9,16 @@ doc-type: video
 activity: understand
 thumbnail: 32797.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 9%
+source-wordcount: '53'
+ht-degree: 7%
 
 ---
 
 
 # Überblick über Adobe Experience Platform
 
-In diesem Video erhalten Sie einen schnellen Überblick über die Experience Platform und die damit verbundenen geschäftlichen Herausforderungen.
+In diesem Video erhalten Sie einen schnellen Überblick über die Experience Platform und die damit verbundenen geschäftlichen Herausforderungen. Weitere Informationen finden Sie in der Übersichtsdokumentation zur [Experience Platform](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
