@@ -4,8 +4,9 @@ solution: Experience Platform
 title: Attribution AI – Übersicht
 topic: Attribution AI
 description: Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
+landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 34%
