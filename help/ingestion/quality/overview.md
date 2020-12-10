@@ -5,7 +5,7 @@ title: Qualität der Datenerfassung
 topic: overview
 description: Das folgende Dokument enthält eine Zusammenfassung der unterstützten Prüf- und Prüfverhaltensweisen für die Batch- und Streaming-Erfassung in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 80%
@@ -56,4 +56,4 @@ Die folgenden Validierungen werden für die Streaming-Erfassung durchgeführt:
 | Datensatz | Stellt sicher, dass der Datensatz angegeben, aktiviert und nicht entfernt wurde. |
 | Kopfzeile | Stellt sicher, dass die Kopfzeile angegeben und gültig ist. |
 
-More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-flows.md).
+More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
