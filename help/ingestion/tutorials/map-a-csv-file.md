@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie eine CSV-Datei mithilfe der Adobe Experience Platform-Benutzeroberfläche einem XDM-Schema zuordnen.
 translation-type: tm+mt
-source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
+source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 3%
 
 ---
@@ -113,9 +113,9 @@ Der Anzeigebereich &quot;Zuordnung&quot;wird mit dem neu erstellten Quellfeld er
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## Überwachen des Datenflusses
+## Überwachen der Datenerfassung
 
-Nachdem die CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten überwachen, die über sie aufgenommen werden. Weitere Informationen zur Überwachung von Datenflüssen finden Sie im Lernprogramm zur [Überwachung von Streaming-Datenflüssen](../../ingestion/quality/monitor-data-flows.md).
+Nachdem die CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten überwachen, die über sie aufgenommen werden. Weitere Informationen zur Überwachung der Datenerfassung finden Sie im Tutorial zur [Überwachung der Datenerfassung](../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Nächste Schritte
 
