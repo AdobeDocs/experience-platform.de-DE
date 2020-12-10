@@ -5,7 +5,7 @@ user-guide-title: Hilfe zur Datenerfassung in Adobe Experience Platform
 breadcrumb-title: Anleitung zur Datenaufnahme
 user-guide-description: Implementieren Sie Ihre Daten durch Batch- oder Streaming-Aufnahmen in Platform.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 95%
@@ -36,7 +36,7 @@ ht-degree: 95%
    - [Streaming mehrerer Nachrichten](tutorials/streaming-multiple-messages.md)
 - Qualität und Überwachung der Datenaufnahme {#quality}
    - [Übersicht](quality/overview.md)
-   - [Überwachen von Datenflüssen](quality/monitor-data-flows.md)
+   - [Überwachen der Datenerfassung](quality/monitor-data-ingestion.md)
    - [Fehlerdiagnose abrufen](quality/error-diagnostics.md)
    - [Abrufen fehlgeschlagener Batches](quality/retrieve-failed-batches.md)
    - [Validieren der Streaming-Erfasssung](quality/streaming-validation.md)
