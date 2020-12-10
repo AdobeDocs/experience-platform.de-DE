@@ -5,10 +5,10 @@ seo-title: Google Ads-Ziel
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 33%
+source-wordcount: '663'
+ht-degree: 32%
 
 ---
 
@@ -35,11 +35,13 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 **Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) in das Google-Ziel.
 
-## Voraussetzungen 
+## Voraussetzungen
 
 ### Vorhandenes [!DNL Google Ads] Konto
 
-[!DNL Google] hat alle neuen [!DNL Google Ads] Integrationen mit Drittanbietern angehalten. You must have an existing integration with [!DNL Google Ads] in order to be able to perform the allow list steps in the next section and to create a [!DNL Google Ads] destination in Real-time CDP.
+>[!IMPORTANT]
+>
+> [!DNL Google] hat neue [!DNL Google Ads] Cookie-Integrationen mit Drittanbietern überholt. Um die Zulassungslisten im nächsten Abschnitt ausführen zu können, müssen Sie über eine vorhandene Integration mit verfügen [!DNL Google Ads]. Daher [!DNL Google Ads] wird empfohlen, eine Integration zu [!DNL Google Customer Match] erstellen. Weitere Informationen zum Erstellen einer [!DNL Google Customer Match] Integration finden Sie im Tutorial zum Erstellen einer [[!DNL Google Customer Match]](./google-customer-match.md) Verbindung.
 
 ### Zulassungsliste
 
