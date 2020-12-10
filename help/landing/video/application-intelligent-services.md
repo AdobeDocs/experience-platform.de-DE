@@ -9,22 +9,28 @@ doc-type: video
 activity: understand
 thumbnail: 32554.jpg
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 14%
+source-wordcount: '119'
+ht-degree: 21%
 
 ---
 
 
 # Auf Experience Platform aufbauende Anwendungs- und intelligente Dienste
 
-In diesem Video erhalten Sie einen Überblick über die auf der Experience Platform aufbauenden Anwendungen und intelligenten Dienste:
+In diesem Video erhalten Sie einen Überblick über die auf der Experience Platform aufbauenden Anwendungen und intelligenten Dienste.
 
-* Attribution AI
-* Customer AI
-* Customer Journey Analytics 
-* Journey Orchestration
-* Echtzeit-Kundendatenplattform
+Weitere Informationen finden Sie unter den Links in der Dokumentation zu den einzelnen Anwendungen:
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/de-DE/analytics-platform/using/cja-landing.html)
+* [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/de-DE/journeys/using/journey-orchestration-home.html)
+* [[!DNL Offer Decisioning]](https://docs.adobe.com/content/help/de-DE/offer-decisioning/using/offer-decisioning-home.html)
+* [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
+
+
+
+
