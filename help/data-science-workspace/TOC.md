@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Data Science Workspace-Anleitung
 user-guide-description: Nutzen Sie maschinelles Lernen, um Modelle und Rezepte mit Adobe Sensei- und JupyterLab-Notebooks zu entwickeln, zu trainieren und zu bewerten.
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 9daddc4537d1600773459cc5b3f19a10cb9c41c0
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 58%
+source-wordcount: '237'
+ht-degree: 56%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 58%
 # Data Science Workspace {#data-science-workspace}
 
 * [Übersicht über den Data Science Workspace](home.md)
+* [Zugriff und Bereitstellung auf den Data Science Workspace](access-features-dsw.md)
 * [Anleitung für Data Science Workspace](walkthrough.md)
 * JupyterLab-Notebooks {#jupyterlab}
    * [JupyterLab-Benutzerhandbuch](jupyterlab/overview.md)
