@@ -5,9 +5,9 @@ title: Adobe Experience Platform UI-Handbuch
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
+source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1737'
 ht-degree: 3%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 3%
 
 Dieser Leitfaden dient als Einführung in die Verwendung der Adobe Experience Platform-Benutzeroberfläche, erklärt, wofür die verschiedenen Komponenten verwendet werden, und enthält Links zu weiteren Dokumentationen für weitere Informationen.
 
-Weitere Informationen zu Adobe Experience Platform erhalten Sie in der Übersicht über die [Experience Platform](./home.md).
+Weitere Informationen zu Adobe Experience Platform erhalten Sie in der Übersicht über die [Experience Platform](home.md).
 
 ## Startbildschirm
 
-Nach der Anmeldung bei Adobe Experience Platform gelangen Sie auf die [!UICONTROL Startseite] , die aus dem Metriken-Dashboard, aktuellen Daten und empfohlenen Lernabschnitten besteht.
+Nach dem Anmelden bei Adobe Experience Platform befinden Sie sich auf der [!UICONTROL Startseite] , die aus dem [Metriken-Dashboard](#metrics), den [neuesten Daten](#recent-data)und den [empfohlenen Lernabschnitten](#recommended-learning) besteht.
 
 ![](images/user-guide/homepage.png)
 
-### Metrik-Dashboard
+### Metriken
 
 Das Dashboard &quot;Metriken&quot;enthält Karten, mit denen Sie Informationen zu Datensätzen, Profilen, Segmenten und Zielen in Ihrem Unternehmen erhalten.
 
@@ -63,13 +63,13 @@ Der Abschnitt **[!UICONTROL Empfohlenes Lernen]** enthält Links zu nützlichen 
 
 Die obere Navigationsleiste in der Plattform-Benutzeroberfläche zeigt die IMS-Organisation an, bei der Sie sich gerade angemeldet haben, und stellt mehrere wichtige Steuerelemente bereit.
 
-Auf der linken Seite der Navigationsleiste befindet sich das Adobe Experience Platform-Logo. Wenn Sie diese Option wählen, kehren Sie zum Startbildschirm der Plattform zurück.
+Auf der linken Seite der Navigationsleiste befindet sich das Adobe Experience Platform-Logo. Wenn Sie diese Option jederzeit auswählen, kehren Sie zum Startbildschirm der Plattform-Benutzeroberfläche zurück.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### IMS-Organisationsumschalter
 
-Das erste Element auf der rechten Seite der Navigationsleiste ist der **IMS-Organisationsschalter**.
+Das erste Element auf der rechten Seite der oberen Navigationsleiste ist der **IMS-Organisationsschalter**.
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,7 +79,7 @@ Wenn Sie den Umschalter auswählen, wird ein Dropdown-Menü der IMS-Organisation
 
 ### Wechseln von Anwendungen
 
-Das nächste Element auf der rechten Seite ist der **Anwendungsschalter**, der durch das ![Anwendungswechsler](./images/user-guide/app-switcher-icon.png) -Symbol dargestellt wird. Wenn Sie dieses Symbol auswählen, können Sie zwischen Experience Platform, Assets, Exchange und Launch wechseln.
+Das nächste Element auf der rechten Seite der oberen Navigation ist der **Anwendungsumschalter**, der durch das ![Anwendungsumschalter](./images/user-guide/app-switcher-icon.png) -Symbol dargestellt wird. Wenn Sie dieses Symbol auswählen, können Sie zwischen Adobe-Anwendungen, auf die Ihr IMS-Org Zugriff hat, wie Experience Platform, Analytics, Assets und Start wechseln.
 
 ### Hilfe
 
@@ -89,7 +89,7 @@ Rechts neben dem Anwendungsschalter befindet sich das **Hilfe- und Supportmenü*
 
 ### Benachrichtigungen und Mitteilungen
 
-Nach dem Hilfe- und Supportmenü befindet sich der **Benachrichtigungsabschnitt**, der durch das Symbol &quot; ![Bell/Benachrichtigungen und Mitteilungen](images/user-guide/notification-icon.png) &quot;dargestellt wird. Auf der Registerkarte &quot; **[!UICONTROL Benachrichtigungen]** &quot;werden wichtige Informationen zum Produkt und andere relevante Aktualisierungen angezeigt, während auf der Registerkarte &quot; **[!UICONTROL Mitteilungen]** &quot;Benachrichtigungen zur Dienstwartung angezeigt werden.
+Im Bereich **** Benachrichtigungen, der durch das Symbol ![bell/notifications und ankündigungen](images/user-guide/notification-icon.png) dargestellt wird. Auf der Registerkarte &quot; **[!UICONTROL Benachrichtigungen]** &quot;werden wichtige Informationen zum Produkt und andere relevante Aktualisierungen angezeigt, während auf der Registerkarte &quot; **[!UICONTROL Mitteilungen]** &quot;Informationen zur Dienstwartung angezeigt werden.
 
 ### User Profil
 
