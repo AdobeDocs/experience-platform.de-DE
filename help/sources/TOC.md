@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 8%
 
 ---
@@ -36,8 +36,9 @@ ht-degree: 8%
       - [Azurblutstecker](connectors/cloud-storage/blob.md)
       - [Azurblauer Ereignis-Hubs-Anschluss](connectors/cloud-storage/eventhub.md)
       - [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
-      - [FTP- und SFTP-Anschluss](connectors/cloud-storage/ftp-sftp.md)
+      - [FTP-Anschluss](connectors/cloud-storage/ftp.md)
       - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
+      - [SFTP-Anschluss](connectors/cloud-storage/sftp.md)
       - [Amazon S3- und Azurblase-Stecker](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamics Connector](connectors/crm/ms-dynamics.md)
@@ -51,7 +52,7 @@ ht-degree: 8%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
+      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -82,6 +83,7 @@ ht-degree: 8%
          - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azurblauer Ereignis-Hubs-Anschluss](tutorials/api/create/cloud-storage/eventhub.md)
          - [Adapterkabel für die Datenspeicherung](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [FTP-Anschluss](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud-Datenspeicherung-Connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-Anschluss](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -160,8 +162,9 @@ ht-degree: 8%
          - [Azurblutstecker](tutorials/ui/create/cloud-storage/blob.md)
          - [Azurblauer Ereignis-Hubs-Anschluss](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Adapterkabel für die Datenspeicherung](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [FTP- und SFTP-Anschluss](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [FTP-Anschluss](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud-Datenspeicherung-Connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [SFTP-Anschluss](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3- und Blob-Anschluss](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamics Connector](tutorials/ui/create/crm/dynamics.md)
@@ -175,7 +178,7 @@ ht-degree: 8%
          - [Apache Spark auf dem Azurblauen HDInsights-Connector](tutorials/ui/create/databases/spark.md)
          - [Data Explorer-Stecker](tutorials/ui/create/databases/data-explorer.md)
          - [azure synapse Analytics Connector](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azurblender Datenspeicherung-Stecker](tutorials/ui/create/databases/ats.md)
+         - [Azurblauer Tischstecker, Datenspeicherung](tutorials/ui/create/databases/ats.md)
          - [Steckverbinder](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Abfrage Connector](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum-Anschluss](tutorials/ui/create/databases/greenplum.md)
