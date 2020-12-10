@@ -1,13 +1,11 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: 'Erste Schritte mit der Echtzeit-Kundendatenplattform von '
-seo-title: 'Erste Schritte mit der Echtzeit-Kundendatenplattform von '
-description: 'Beispielszenario für die Echtzeit-Kundendatenplattform von '
-seo-description: 'Beispielszenario für die Echtzeit-Kundendatenplattform von '
+description: Verwenden Sie dieses Beispielszenario als Beispiel, wenn Sie Ihre Implementierung der Echtzeit-Kundendatenplattform einrichten.
 translation-type: tm+mt
-source-git-commit: 8369bd517639cc66eeb95a811c3ddf46b8c4c48d
+source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2313'
 ht-degree: 87%
 
 ---
