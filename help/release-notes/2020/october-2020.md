@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
 source-wordcount: '1009'
 ht-degree: 19%
@@ -71,7 +71,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| SSH-Authentifizierungsunterstützung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Platform] RSA/DSA Open SSH-Schlüsseln verbinden. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| SSH-Authentifizierungsunterstützung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Platform] RSA/DSA Open SSH-Schlüsseln verbinden. See the [SFTP overview](../../sources/connectors/cloud-storage/sftp.md) for more information. |
 | UX-Verbesserungen | Sie können Ihren Datensatz [!DNL Profile] während der Datenerfassung aktivieren. Weitere Informationen finden Sie im Tutorial zum DataFlow-Arbeitsablauf [für die](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) Cloud-Datenspeicherung. |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
