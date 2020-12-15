@@ -4,7 +4,7 @@ title: Datentyp "Inhalt und Voreinstellungen"
 description: Der Datentyp "Datenschutz/Marketing-Voreinstellungen (Zustimmung)"soll die Erfassung von Kundenberechtigungen und -einstellungen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 640f0be8a297fada0eee10ff80fec3b3142c09b9
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Der [!DNL Privacy/Marketing Preferences (Consent)] Datentyp (im Folgenden &quot;
 
 Dieses Dokument umfasst die Struktur und die vorgesehene Verwendung der vom [!DNL Consents & Preferences] Datentyp bereitgestellten Felder.
 
-## Voraussetzungen  {#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Dieses Dokument erfordert ein funktionierendes Verständnis von XDM und die Verwendung der Schema in [!DNL Experience Platform]. Bitte lesen Sie die folgende Dokumentation, bevor Sie fortfahren:
 
@@ -285,7 +285,7 @@ Anweisungen zum Zuweisen von Datentypen zu Feldern finden Sie im Lernprogramm zu
 >
 >Wenn Sie Genehmigungsdaten an senden möchten, müssen Sie ein [!DNL Real-time Customer Profile]aktiviertes Schema erstellen, das auf der [!DNL Profile]Klasse basiert, die den [!DNL XDM Individual Profile] [!DNL Consents & Preferences] Datentyp enthält. Der Datensatz, den Sie auf der Grundlage dieses Schemas erstellen, muss ebenfalls aktiviert werden [!DNL Profile]. Spezifische Schritte zu den [!DNL Real-time Customer Profile] Anforderungen für Schema und Datensätze finden Sie in den oben verlinkten Lernprogrammen.
 >
->Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass die Datasets, die die neuesten Einwilligungs- und Voreinstellungsdaten enthalten, priorisiert werden, damit die Profil der Kunden ordnungsgemäß aktualisiert werden. Weitere Informationen finden Sie in der Übersicht zu [Zusammenführungsrichtlinien](../../rtcdp/profile/merge-policies.md) .
+>Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass die Datasets, die die neuesten Einwilligungs- und Voreinstellungsdaten enthalten, priorisiert werden, damit die Profil der Kunden ordnungsgemäß aktualisiert werden. See the overview on [merge policies](../../rtcdp/profile/merge-policies.md) for more information.
 
 ## Bearbeitung von Änderungen der Zustimmung und der Präferenz
 
@@ -333,4 +333,4 @@ In der folgenden Tabelle sind die zulässigen Werte für `xdm:preferred`die
 
 ### Vollständiges [!DNL Consents & Preferences] Schema {#full-schema}
 
-Um das vollständige Schema für den [!DNL Consents & Preferences] Datentyp Ansicht, rufen Sie das [offizielle XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)auf.
+Um das vollständige Schema für den [!DNL Consents & Preferences] Datentyp Ansicht, rufen Sie das [offizielle XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)auf.
