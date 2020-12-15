@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Erste Schritte mit der Content and Commerce-API
 topic: Getting started
 description: Content and Commerce AI verwendet Adobe I/O APIs. Um Aufrufe an Adobe I/O-APIs und die I/O-Konsolenintegration durchzuführen, müssen Sie zunächst das Authentifizierungslehrgang abschließen.
 translation-type: tm+mt
-source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '576'
-ht-degree: 12%
+ht-degree: 14%
 
 ---
 
@@ -73,6 +73,6 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Sobald Sie alle Ihre Anmeldeinformationen haben, können Sie einen benutzerdefinierten Worker für [!DNL Content and Commerce AI]die Die folgenden Dokumente helfen Ihnen beim Verständnis des Erweiterungs-Frameworks und der Umgebung-Einrichtung.
 
-Um mehr über das Erweiterungs-Framework zu erfahren, lesen Sie den Beginn in der [Einführung zum Dokument Erweiterbarkeit](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) . In diesem Dokument werden die Voraussetzungen und Bereitstellungsanforderungen erläutert.
+Um mehr über das Erweiterungs-Framework zu erfahren, lesen Sie den Beginn in der [Einführung zum Dokument Erweiterbarkeit](https://docs.adobe.com/content/help/de/asset-compute/using/extend/understand-extensibility.html) . In diesem Dokument werden die Voraussetzungen und Bereitstellungsanforderungen erläutert.
 
 Weitere Informationen zum Einrichten einer Umgebung für [!DNL Content and Commerce AI]finden Sie im Beginn im Handbuch zum [Einrichten einer Entwickler-Umgebung](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). Dieses Dokument enthält Setupanweisungen, die Ihnen die Entwicklung für den Asset compute-Dienst ermöglichen.
