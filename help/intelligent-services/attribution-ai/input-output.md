@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Eingabe und Ausgabe von Attribution AIS
 topic: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 4%
@@ -161,7 +161,7 @@ Die nachstehende Tabelle enthält weitere Details zu den einzelnen Zuordnungswer
 
 | Zuordnungswerte | Beschreibung |
 | ----- | ----------- |
-| Beeinflusst (algorithmisch) | Einflussreiches Ergebnis ist der Anteil der Konversion, für die jeder Marketing-Touchpoint verantwortlich ist. |
+| Beeinflusst (algorithmisch) | Einflussreiches Ergebnis ist der Anteil der Konversion, für den jeder Marketing-Touchpoint verantwortlich ist. |
 | Inkrementell (algorithmisch) | Inkrementelles Ergebnis ist die Höhe des Grenzeffekts, der direkt durch einen Marketing-Touchpoint verursacht wird. |
 | Erstkontakt | Regelbasiertes Zuordnungsergebnis, das dem ursprünglichen Touchpoint auf einem Konversionspfad alle Gutschriften zuweist. |
 | Letztkontakt | Regelbasierter Zuordnungswert, der dem Touchpoint die Gutschrift zuweist, der der Konversion am nächsten kommt. |
