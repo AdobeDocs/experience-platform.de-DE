@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
-solution: Experience Platform
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai segments
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Kundensegmente mit prognostizierten Werten erstellen
 topic: Create a segment
 description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit Segment Builder beschrieben.
 translation-type: tm+mt
-source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 88%
