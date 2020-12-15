@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;color extraction;Color extraction
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Extraktion
 topic: Developer guide
 description: Der Dienst für Extraktion von Farben kann, wenn ein Bild gegeben wird, das Histogramm der Pixelfarben berechnen und durch vorherrschende Farben in Behältern sortieren.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] ist in der Betaphase enthalten. Die Dokumentation kann geändert werden.
+>[!DNL Content and Commerce AI] in der Betaphase enthalten. Die Dokumentation kann geändert werden.
 
 Der Dienst für Extraktion von Farben kann ein Histogramm von Pixelfarben berechnen und durch vorherrschende Farben in Behältern sortieren. Die Farben in den Bildpixeln werden zu 40 vorherrschenden Farben zusammengefasst, die für das Farbspektrum repräsentativ sind. Ein Histogramm mit Farbwerten wird dann unter diesen 40 Farben berechnet. Der Dienst hat zwei Varianten:
 
