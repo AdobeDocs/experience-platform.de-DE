@@ -6,34 +6,32 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-E-Commerce-System und zum Einbinden dieser Daten in die Plattform über Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: a9d6c6dda560ec401bdf41319994153e7f2c0572
+source-git-commit: a7a7c52f5b0c57562039883ae8ff48efefbcbbf5
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 16%
+source-wordcount: '1475'
+ht-degree: 17%
 
 ---
 
 
 # Erfassen von eCommerce-Daten über Quellschnittstellen und APIs
 
-[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
-
-In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem **[!UICONTROL eCommerce]** -System eines Drittanbieters und zum Einfügen dieser Daten [!DNL Platform] über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API beschrieben.
+In diesem Lernprogramm werden die Schritte zum Abrufen von Daten von einem Drittanbieter-System **[!UICONTROL eCommerce]** und zum Einfügen in [!DNL Platform] über Quellschnittstellen und die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) beschrieben.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert den Zugriff auf ein **[!UICONTROL eCommerce]** -System über eine gültige Verbindung sowie Informationen über die Datei, die Sie einführen möchten [!DNL Platform] (einschließlich Pfad und Struktur der Datei). Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zum [Ermitteln eines E-Commerce-Systems mithilfe der Flow Service API](../explore/ecommerce.md) , bevor Sie dieses Lernprogramm durchführen.
+Für dieses Lernprogramm ist es erforderlich, dass Sie über eine gültige Verbindung Zugriff auf ein **[!UICONTROL eCommerce]**-System haben, sowie Informationen über die Datei, die Sie in [!DNL Platform] einführen möchten (einschließlich Pfad und Struktur der Datei). Wenn Sie diese Informationen nicht haben, lesen Sie das Lernprogramm zu [Erforschen eines E-Commerce-Systems mit der Flow Service API](../explore/ecommerce.md), bevor Sie dieses Lernprogramm durchführen.
 
 Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Adobe Experience Platform kennen:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
    * [Schema Registry API](../../../../xdm/api/getting-started.md): Erfahren Sie, wie Sie erfolgreich Aufrufe der Schema Registry API durchführen. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform].
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Stapeleinbetungs-API können Sie Daten [!DNL Experience Platform] als Batch-Dateien erfassen.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog ist das Datensatzsystem für die Datenposition und -linie innerhalb  [!DNL Experience Platform].
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Stapeleinbetungs-API können Sie Daten  [!DNL Experience Platform] als Batch-Dateien erfassen.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully connect to an **[!UICONTROL eCommerce]** system using the [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um mit der [!DNL Flow Service]-API eine erfolgreiche Verbindung zu einem **[!UICONTROL eCommerce]**-System herzustellen.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -47,7 +45,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -57,7 +55,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Erstellen einer Quellverbindung {#source}
 
-You can create a source connection by making a POST request to the [!DNL Flow Service] API. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungs-Spec-ID.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST an die API [!DNL Flow Service] anfordern. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungs-Spec-ID.
 
 Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformatattribut definieren.
 
@@ -69,7 +67,7 @@ Verwenden Sie die folgenden Enum-Werte für dateibasierte Connectors:
 | JSON | `json` |
 | Parkett | `parquet` |
 
-Legen Sie für alle tabellenbasierten Connectors den Wert auf `tabular`.
+Legen Sie für alle tabellenbasierten Connectors den Wert auf `tabular` fest.
 
 **API-Format**
 
@@ -88,9 +86,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Shopify Source Connection demo",
+        "name": "Shopify source connection",
         "baseConnectionId": "582f4f8d-71e9-4a5c-a164-9d2056318d6c",
-        "description": "Shopify Source Connection",
+        "description": "Shopify source connection",
         "data": {
             "format": "tabular"
         },
@@ -116,9 +114,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `baseConnectionId` | Die Verbindungs-ID Ihrer **[!UICONTROL E-Commerce]** -Quelle. |
+| `baseConnectionId` | Die Verbindungs-ID Ihrer **[!UICONTROL eCommerce]**-Quelle. |
 | `params.path` | Der Pfad der Quelldatei. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer **[!UICONTROL E-Commerce]** -Quelle. |
+| `connectionSpec.id` | Die Verbindungs-Spezifikations-ID Ihrer **[!UICONTROL eCommerce]**-Quelle. |
 
 **Antwort**
 
@@ -131,11 +129,11 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
-## Zielgruppe XDM-Schema erstellen {#target-schema}
+## Zielgruppe-XDM-Schema {#target-schema} erstellen
 
-Damit die Quelldaten in verwendet werden können, [!DNL Platform]muss ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform] Datensatz erstellt, in dem die Quelldaten enthalten sind. Diese Zielgruppe XDM Schema erweitert auch die XDM [!DNL Individual Profile] -Klasse.
+Damit die Quelldaten in [!DNL Platform] verwendet werden können, muss ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform]-Datensatz erstellt, in dem die Quelldaten enthalten sind. Diese Zielgruppe XDM-Schema erweitert auch die XDM [!DNL Individual Profile]-Klasse.
 
-Ein Zielgruppe XDM-Schema kann erstellt werden, indem eine POST an die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)angefordert wird.
+Ein Zielgruppe-XDM-Schema kann erstellt werden, indem eine POST an die [Schema-Registrierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) angefordert wird.
 
 **API-Format**
 
@@ -145,7 +143,7 @@ POST /tenant/schemas
 
 **Anfrage**
 
-Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM- [!DNL Individual Profile] Klasse erweitert.
+Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM [!DNL Individual Profile]-Klasse erweitert.
 
 ```shell
 curl -X POST \
@@ -157,8 +155,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Test Shopify schema",
-        "description": "",
+        "title": "Shopify target XDM schema",
+        "description": "Shopify target XDM schema",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -187,9 +185,9 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
     "meta:altId": "_{TENANT_ID}.schemas.854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Test shopify demo",
+    "title": "Shopify target XDM schema",
     "type": "object",
-    "description": "",
+    "description": "Shopify target XDM schema",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -212,7 +210,7 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
         "https://ns.adobe.com/xdm/context/profile-personal-details",
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "imsOrg": "7DC732555AECDB4C0A494036@AdobeOrg",
+    "imsOrg": "{IMS_ORG}",
     "meta:extensible": false,
     "meta:abstract": false,
     "meta:extends": [
@@ -241,11 +239,9 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
 }
 ```
 
-
 ## Zielgruppen-Dataset erstellen
 
-Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)angefordert wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
-
+Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) angefordert wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
 
 **API-Format**
 
@@ -264,7 +260,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Test Shopify Target Dataset",
+        "name": "Shopify target dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -274,11 +270,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schemaRef.id` | Die `$id` der Zielgruppe XDM Schema. |
+| `schemaRef.id` | Die `$id` des Zielgruppe XDM-Schemas. |
 
 **Antwort**
 
-A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Zielgruppe-Dataset-ID wie in den späteren Schritten zum Erstellen einer Zielgruppe- und eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` enthält. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Zielgruppe-Dataset-ID wie in den späteren Schritten zum Erstellen einer Zielgruppe- und eines Datenflusses erforderlich.
 
 ```json
 [
@@ -288,9 +284,9 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Erstellen einer Zielgruppe-Verbindung {#target-connection}
 
-Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Zielgruppe zu erstellen, müssen Sie die mit dem Data Lake verknüpfte feste Verbindungs-spec-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Verbindung zur Zielgruppe herzustellen, müssen Sie die mit dem Data Lake verknüpfte eindeutige Verbindungsspezifikations-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe der [!DNL Flow Service] API können Sie eine Zielgruppe erstellen, indem Sie diese IDs zusammen mit dem Datensatz angeben, der die eingehenden Quelldaten enthalten soll.
+Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe der API [!DNL Flow Service] können Sie eine Zielgruppe-Verbindung herstellen, indem Sie diese IDs zusammen mit dem Datensatz angeben, der die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -308,35 +304,35 @@ curl -X POST \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -d '{{
-    "name": "Test Shopify Dataset Target Connection",
-    "description": "Test Shopify Dataset Target Connection",
-    "data": {
-        "format": "parquet_xdm",
-        "schema": {
-            "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
-            "version": "application/vnd.adobe.xed-full-notext+json; version=1"
+    -d '{
+        "name": "Shopify target connection",
+        "description": "Shopify target connection",
+        "data": {
+            "format": "parquet_xdm",
+            "schema": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
+                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
+            }
+        },
+        "params": {
+            "dataSetId": "5fa9c083de62e418dd170b42"
+        },
+        "connectionSpec": {
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+            "version": "1.0"
         }
-    },
-    "params": {
-        "dataSetId": "5fa9c083de62e418dd170b42"
-    },
-    "connectionSpec": {
-        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-        "version": "1.0"
-    }
-}'
+    }'
 ```
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `data.schema.id` | Die `$id` der Zielgruppe XDM Schema. |
+| `data.schema.id` | Die `$id` des Zielgruppe XDM-Schemas. |
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die zum Herstellen einer Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbindung zurück (`id`). Dieser Wert ist in einem späteren Schritt erforderlich, um einen Datenflug zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbindung (`id`) zurück. Dieser Wert ist in einem späteren Schritt erforderlich, um einen Datenflug zu erstellen.
 
 ```json
 {
@@ -367,7 +363,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
@@ -389,7 +385,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `xdmSchema` | Die `$id` der Zielgruppe XDM Schema. |
+| `xdmSchema` | Die `$id` des Zielgruppe XDM-Schemas. |
 
 **Antwort**
 
@@ -401,14 +397,14 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
     "version": 0,
     "createdDate": 1604960750613,
     "modifiedDate": 1604960750613,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
-## Spezifikationen zum Nachschlagen von Datenblättern {#specs}
+## Nachschlagen von Datennachrichtenspezifikationen {#specs}
 
-Ein Datennachweis ist für das Sammeln von Daten aus Quellen und deren Umsetzung zuständig [!DNL Platform]. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET an die [!DNL Flow Service] API senden. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einer **[!UICONTROL eCommerce-Quelle]** zuständig.
+Ein Datenaflow ist für das Sammeln von Daten aus Quellen und deren Einspeisung in [!DNL Platform] verantwortlich. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET an die [!DNL Flow Service]-API senden. Dataflow-Spezifikationen sind für die Datenerfassung aus einer **[!UICONTROL eCommerce]**-Quelle verantwortlich.
 
 **API-Format**
 
@@ -428,7 +424,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer **[!UICONTROL eCommerce]** -Quelle verantwortlich ist [!DNL Platform]. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
+Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für das Übertragen von Daten aus Ihrer Quelle in die Plattform verantwortlich ist. Die Antwort enthält die eindeutige Flussspezifikation `id`, die zum Erstellen eines neuen Datenflusses erforderlich ist.
 
 ```json
 {
@@ -438,6 +434,59 @@ Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation 
             "name": "CRMToAEP",
             "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
             "version": "1.0",
+            "sourceConnectionSpecIds": [
+                "3416976c-a9ca-4bba-901a-1f08f66978ff",
+                "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+                "d771e9c1-4f26-40dc-8617-ce58c4b53702",
+                "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+                "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
+                "3000eb99-cd47-43f3-827c-43caf170f015",
+                "26d738e0-8963-47ea-aadf-c60de735468a",
+                "74a1c565-4e59-48d7-9d67-7c03b8a13137",
+                "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+                "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
+                "cb66ab34-8619-49cb-96d1-39b37ede86ea",
+                "eb13cb25-47ab-407f-ba89-c0125281c563",
+                "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
+                "37b6bf40-d318-4655-90be-5cd6f65d334b",
+                "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+                "221c7626-58f6-4eec-8ee2-042b0226f03b",
+                "a8b6a1a4-5735-42b4-952c-85dce0ac38b5",
+                "6a8d82bc-1caf-45d1-908d-cadabc9d63a6",
+                "aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f",
+                "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
+                "ecde33f2-c56f-46cc-bdea-ad151c16cd69",
+                "102706fb-a5cd-42ee-afe0-bc42f017ff43",
+                "09182899-b429-40c9-a15a-bf3ddbc8ced7",
+                "0479cc14-7651-4354-b233-7480606c2ac3",
+                "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+                "a8f4d393-1a6b-43f3-931f-91a16ed857f4",
+                "1fe283f6-9bec-11ea-bb37-0242ac130002"
+            ],
+            "targetConnectionSpecIds": [
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+            ],
+            "optionSpec": {
+                "name": "OptionSpec",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "errorDiagnosticsEnabled": {
+                            "title": "Error diagnostics.",
+                            "description": "Flag to enable detailed and sample error diagnostics summary.",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "partialIngestionPercent": {
+                            "title": "Partial ingestion threshold.",
+                            "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                        }
+                    }
+                }
+            },
             "transformationSpecs": [
                 {
                     "name": "Copy",
@@ -496,21 +545,18 @@ Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation 
                             "description": "epoch time",
                             "type": "integer"
                         },
-                        "endTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "interval": {
-                            "type": "integer"
-                        },
                         "frequency": {
                             "type": "string",
                             "enum": [
+                                "once",
                                 "minute",
                                 "hour",
                                 "day",
                                 "week"
                             ]
+                        },
+                        "interval": {
+                            "type": "integer"
                         },
                         "backfill": {
                             "type": "boolean",
@@ -519,31 +565,88 @@ Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation 
                     },
                     "required": [
                         "startTime",
-                        "frequency",
-                        "interval"
+                        "frequency"
                     ],
                     "if": {
                         "properties": {
                             "frequency": {
-                                "const": "minute"
+                                "const": "once"
                             }
                         }
                     },
                     "then": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 15
+                        "allOf": [
+                            {
+                                "not": {
+                                    "required": [
+                                        "interval"
+                                    ]
+                                }
+                            },
+                            {
+                                "not": {
+                                    "required": [
+                                        "backfill"
+                                    ]
+                                }
                             }
-                        }
+                        ]
                     },
                     "else": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 1
+                        "required": [
+                            "interval"
+                        ],
+                        "if": {
+                            "properties": {
+                                "frequency": {
+                                    "const": "minute"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 15
+                                }
+                            }
+                        },
+                        "else": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 1
+                                }
                             }
                         }
                     }
                 }
+            },
+            "attributes": {
+                "notification": {
+                    "category": "sources",
+                    "flowRun": {
+                        "enabled": true
+                    }
+                }
+            },
+            "permissionsInfo": {
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ],
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ]
             }
         }
     ]
@@ -559,9 +662,9 @@ Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstelle
 * [Mapping-ID](#mapping)
 * [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Anforderungsnutzlast angeben.
 
-Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day`oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`eingestellt werden.
+Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day` oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf &lt; oder größer als `15` eingestellt werden.
 
 **API-Format**
 
@@ -609,18 +712,18 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `flowSpec.id` | Die im vorherigen Schritt abgerufene [Flussspec-ID](#specs) . |
-| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) , die in einem früheren Schritt abgerufen wurde. |
-| `targetConnectionIds` | Die in einem früheren Schritt abgerufene [Zielgruppe-Verbindungs-ID](#target-connection) . |
-| `transformations.params.mappingId` | Die in einem früheren Schritt abgerufene [Zuordnungs-ID](#mapping) . |
-| `transformations.params.mappingId` | Die Zuordnungs-ID, die mit Ihrer **[!UICONTROL E-Commerce]** -Quelle verknüpft ist. |
+| `flowSpec.id` | Die [Flussspec-ID](#specs), die im vorherigen Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) wurde in einem früheren Schritt abgerufen. |
+| `targetConnectionIds` | Die [Zielgruppe-Verbindungs-ID](#target-connection) wurde in einem früheren Schritt abgerufen. |
+| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping) wurde in einem früheren Schritt abgerufen. |
+| `transformations.params.mappingId` | Die Zuordnungs-ID, die Ihrer **[!UICONTROL eCommerce]**-Quelle zugeordnet ist. |
 | `scheduleParams.startTime` | Die Beginn-Zeit für den Datenflug in Epochenzeit. |
-| `scheduleParams.frequency` | Der `frequency` Dataflow, an dem Daten gesammelt werden. Zu den zulässigen Werten gehören: `once`, `minute`, `hour`, `day`oder `week`. |
-| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Ein Intervall ist nicht erforderlich, wenn `frequency` als `once` und sollte größer oder gleich `15` für andere `frequency` Werte eingestellt werden. |
+| `scheduleParams.frequency` | Die `frequency`, an der der Datenaflow Daten erfassen wird. Zu den zulässigen Werten gehören: `once`, `minute`, `hour`, `day` oder `week`. |
+| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Ein Intervall ist nicht erforderlich, wenn `frequency` als `once` festgelegt ist und für andere `frequency`-Werte größer oder gleich `15` sein sollte. |
 
 **Antwort**
 
-A successful response returns the ID `id` of the newly created dataflow.
+Eine erfolgreiche Antwort gibt die ID `id` des neu erstellten Datenflusses zurück.
 
 ```json
 {
@@ -631,11 +734,11 @@ A successful response returns the ID `id` of the newly created dataflow.
 
 ## Überwachen des Datenflusses
 
-Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die durch ihn erfasst werden, um Informationen zu den Flussläufen, zum Abschlussstatus und zu Fehlern anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Lernprogramm zum [Überwachen von Datenflüssen in der API. ](../monitor.md)
+Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die durch ihn erfasst werden, um Informationen zu den Flussläufen, zum Abschlussstatus und zu Fehlern anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Lernprogramm zu [Überwachungsdataflows in der API ](../monitor.md)
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie einen Quell-Connector zur planmäßigen Erfassung von Daten- **[!UICONTROL eCommerce]** erstellt. Eingehende Daten können nun von nachgelagerten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]genutzt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten **[!UICONTROL eCommerce]** auf planmäßiger Basis zu erfassen. Eingangsdaten können nun von nachgeschalteten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
