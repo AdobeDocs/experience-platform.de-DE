@@ -5,7 +5,7 @@ description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigu
 seo-description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 3%
@@ -15,31 +15,31 @@ ht-degree: 3%
 
 # Konfigurieren der Kante
 
-Die Konfiguration für das Adobe Experience Platform Web SDK ist an zwei Stellen aufgeteilt. Der [Befehl](configuring-the-sdk.md) &quot;configure&quot;im SDK steuert Dinge, die auf dem Client verarbeitet werden müssen, z. B. die `edgeDomain`. Die Edge-Konfiguration verarbeitet alle anderen Konfigurationen für das SDK. Wenn eine Anforderung an das Adobe Experience Platform Edge Network gesendet wird, `edgeConfigId` wird die serverseitige Konfiguration mit dem Operator referenziert. Dadurch können Sie die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
+Die Konfiguration für das Adobe Experience Platform Web SDK ist an zwei Stellen aufgeteilt. Der Befehl [configure](configuring-the-sdk.md) im SDK steuert Elemente, die auf dem Client verarbeitet werden müssen, wie z. B. `edgeDomain`. Die Edge-Konfiguration verarbeitet alle anderen Konfigurationen für das SDK. Wenn eine Anforderung an das Adobe Experience Platform Edge Network gesendet wird, wird `edgeConfigId` verwendet, um auf die serverseitige Konfiguration zu verweisen. Dadurch können Sie die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
 
-Ihre Organisation muss für diese Funktion freigeschaltet sein. Wenden Sie sich an Ihren zertifizierten Software-Manager (CSM), um die Zulassungsliste aufzurufen.
+Ihre Organisation muss für diese Funktion freigeschaltet sein. Wenden Sie sich an Ihren Customer Success Manager (CSM), um die Zulassungsliste aufzurufen.
 
 ## Erstellen einer Edge-Konfiguration
 
-Edge-Konfigurationen können in Adobe [!DNL Experience Platform Launch] mit dem Edge-Konfigurationstool erstellt werden.
+Edge-Konfigurationen können mit dem Edge-Konfigurationstool in Adobe [!DNL Experience Platform Launch] erstellt werden.
 
 ![Edge-Konfigurationstool](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->Das Edge-Konfigurationstool steht Kunden auf der Zulassungsliste unabhängig davon zur Verfügung, ob sie [!DNL Experience Platform Launch] als Tag-Manager arbeiten. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Experience Platform Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der [!DNL Experience Platform Launch] Dokumentation.
+>Das Edge-Konfigurationstool steht Kunden auf der Zulassungsliste unabhängig davon zur Verfügung, ob sie [!DNL Experience Platform Launch] als Tag-Manager verwenden. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Experience Platform Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/user-permissions.html) in der [!DNL Experience Platform Launch]-Dokumentation.
 
 Erstellen Sie eine Edge-Konfiguration, indem Sie oben rechts auf dem Bildschirm auf **[!UICONTROL Neue Edge-Konfiguration]** klicken. Nachdem Sie einen Namen und eine Beschreibung angegeben haben, werden Sie nach den Standardeinstellungen für jede Umgebung gefragt. Die verfügbaren Einstellungen sind nachfolgend beschrieben.
 
-Beim Erstellen einer Edge-Konfiguration werden drei Umgebung automatisch mit identischen Einstellungen erstellt. Diese drei Umgebung sind *dev*, *stage* und *prod*. Sie entsprechen den drei Standardeinstellungen in [!DNL Experience Platform Launch]. Wenn Sie eine [!DNL Experience Platform Launch] Bibliothek zu einer dev-Umgebung erstellen, verwendet die Bibliothek automatisch die dev-Umgebung Ihrer Konfiguration. Sie können die Einstellungen in den einzelnen Umgebung beliebig bearbeiten.
+Beim Erstellen einer Edge-Konfiguration werden drei Umgebung automatisch mit identischen Einstellungen erstellt. Diese drei Umgebung sind *dev*, *stage* und *prod*. Sie entsprechen den drei Standardeinstellungen in [!DNL Experience Platform Launch]. Wenn Sie eine [!DNL Experience Platform Launch]-Bibliothek zu einer dev-Umgebung erstellen, verwendet die Bibliothek automatisch die dev-Umgebung Ihrer Konfiguration. Sie können die Einstellungen in den einzelnen Umgebung beliebig bearbeiten.
 
-Die im SDK verwendete ID `edgeConfigId` ist eine Composite-ID, die die Konfiguration und die Umgebung angibt (z. B. `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Wenn keine Umgebung in der Composite-ID vorhanden ist (z. B. `stage` im vorherigen Beispiel), wird die Umgebung &quot;Produktion&quot;verwendet.
+Die im SDK als `edgeConfigId` verwendete ID ist eine Composite-ID, die die Konfiguration und die Umgebung angibt (z. B. `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Wenn keine Umgebung in der Composite-ID vorhanden ist (im vorherigen Beispiel `stage`), wird die Umgebung &quot;Produktion&quot;verwendet.
 
 Nachfolgend finden Sie die verfügbaren Einstellungen für jede Konfigurationsdatei. Die meisten Abschnitte können aktiviert oder deaktiviert werden. Wenn diese Option deaktiviert ist, werden Ihre Einstellungen gespeichert, sind aber nicht aktiv.
 
-## [!UICONTROL Identitätseinstellungen]
+##  IdentitySettings
 
-Der Identitätsabschnitt ist der einzige Abschnitt, der immer aktiviert ist. Es stehen zwei Einstellungen zur Verfügung: &quot;[!UICONTROL ID-Synchronisierungen aktiviert]&quot;und &quot;[!UICONTROL ID-Synchronisierungs-Container-ID]&quot;.
+Der Identitätsabschnitt ist der einzige Abschnitt, der immer aktiviert ist. Es stehen zwei Einstellungen zur Verfügung: &quot;[!UICONTROL ID-Syncs aktiviert]&quot;und &quot;[!UICONTROL ID-Synchronisierungs-Container-ID]&quot;.
 
 ![Identitätsabschnitt der Konfigurationsoberfläche](../../assets/edge_configuration_identity.png)
 
@@ -67,7 +67,7 @@ Ein Streaming-Einlass ist eine HTTP-Quelle in Adobe Experience Platform. Diese w
 
 ### [!UICONTROL Ereignis DataSet]
 
-Edge-Konfigurationen unterstützen das Senden von Daten an Datasets mit einem Schema der Klasse [!UICONTROL Experience Ereignis].
+Edge-Konfigurationen unterstützen das Senden von Daten an Datasets mit einem Schema der Klasse [!UICONTROL Erlebnis-Ereignis].
 
 ## Adobe Target-Einstellungen
 
@@ -81,19 +81,19 @@ Zum Konfigurieren von Adobe Target müssen Sie einen Clientcode angeben. Die and
 
 ### [!UICONTROL Clientcode]
 
-Die eindeutige ID für ein Zielgruppen-Konto. Um dies zu finden, navigieren Sie zu [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementierung] > [!UICONTROL Bearbeitungseinstellungen] neben der Schaltfläche zum [!UICONTROL Herunterladen]  [!UICONTROL für entwederat.jsodermbox.js]
+Die eindeutige ID für ein Zielgruppen-Konto. Um dies zu finden, navigieren Sie zu [!UICONTROL Adobe Target] > [!UICONTROL Setup] [!UICONTROL Implementierung] > [!UICONTROL Bearbeitungseinstellungen] neben der Schaltfläche [!UICONTROL Download] für [!UICONTROL at.js] oder &lt;a11 2/>mbox.js][!UICONTROL 
 
 ### [!UICONTROL Eigenschafts-Token]
 
-[!DNL Target] ermöglicht es Kunden, Berechtigungen über die Verwendung von Eigenschaften zu steuern. Details finden Sie im Abschnitt [Enterprise Permissions](https://docs.adobe.com/content/help/de-DE/target/using/administer/manage-users/enterprise/properties-overview.html) in der [!DNL Target] Dokumentation.
+[!DNL Target] ermöglicht es Kunden, Berechtigungen über die Verwendung von Eigenschaften zu steuern. Details finden Sie im Abschnitt [Enterprise Permissions](https://docs.adobe.com/content/help/de-DE/target/using/administer/manage-users/enterprise/properties-overview.html) der [!DNL Target]-Dokumentation.
 
-Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
+Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Eigenschaften]
 
 ### [!UICONTROL Zielgruppe-Umgebung-ID]
 
-[Umgebung](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target unterstützen Sie bei der Verwaltung Ihrer Implementierung in allen Entwicklungsstadien. Diese Einstellung gibt an, welche Umgebung Sie für jede Umgebung verwenden möchten.
+[Mit ](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) Umgebungen in Adobe Target können Sie Ihre Implementierung in allen Entwicklungsstadien verwalten. Diese Einstellung gibt an, welche Umgebung Sie für jede Umgebung verwenden möchten.
 
-Adobe empfiehlt, diese Einstellung für jede Ihrer `dev`-, `stage`- und `prod` Edge-Umgebung anders festzulegen, um die Arbeit zu vereinfachen. Wenn Sie jedoch bereits Adobe Target-Umgebung definiert haben, können Sie diese verwenden.
+Adobe empfiehlt, diese Einstellung für jede Ihrer `dev`-, `stage`- und `prod`-Edge-Konfigurations-Umgebung anders festzulegen, um die Dinge einfach zu halten. Wenn Sie jedoch bereits Adobe Target-Umgebung definiert haben, können Sie diese verwenden.
 
 ## Adobe Audience Manager-Einstellungen
 
@@ -103,18 +103,18 @@ Alles, was zum Senden von Daten an Adobe Audience Manager erforderlich ist, ist,
 
 ### [!UICONTROL Cookie-Ziele aktiviert]
 
-Ermöglicht dem SDK die Freigabe von Segmentinformationen über [Cookie-Ziele](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) von [!DNL Audience Manager].
+Ermöglicht dem SDK, Segmentinformationen über [Cookie-Ziele](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) von [!DNL Audience Manager] freizugeben.
 
 ### [!UICONTROL URL-Ziele aktiviert]
 
-Ermöglicht dem SDK die Freigabe von Segmentinformationen über [URL-Ziele](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Diese werden in konfiguriert [!DNL Audience Manager].
+Ermöglicht dem SDK, Segmentinformationen über [URL-Ziele](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) freizugeben. Diese werden in [!DNL Audience Manager] konfiguriert.
 
 ## Adobe Analytics-Einstellungen
 
-Steuert, ob Daten an Adobe Analytics gesendet werden. Weitere Details finden Sie in der [Analytics-Übersicht](../data-collection/adobe-analytics/analytics-overview.md).
+Steuert, ob Daten an Adobe Analytics gesendet werden. Weitere Details finden Sie unter [Analytics-Übersicht](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Adobe Analytics-Einstellungsblock](../../assets/edge_configuration_aa.png)
 
 ### [!UICONTROL Report Suite-ID]
 
-Die Report Suite finden Sie im Adobe Analytics Admin-Abschnitt unter [!UICONTROL Admin > Report Suites]. Wenn mehrere Report Suites angegeben sind, werden die Daten in die einzelnen Report Suites kopiert.
+Die Report Suite finden Sie im Abschnitt &quot;Adobe Analytics Admin&quot;unter [!UICONTROL Admin > ReportSuites]. Wenn mehrere Report Suites angegeben sind, werden die Daten in die einzelnen Report Suites kopiert.
