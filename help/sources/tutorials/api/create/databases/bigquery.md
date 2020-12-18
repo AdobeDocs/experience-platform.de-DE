@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die zur Verbindung der Experience Platform mit Google BigQuery (nachfolgend "BigQuery" genannt) erforderlich sind.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '610'
 ht-degree: 24%
 
 ---
@@ -35,7 +35,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit [!DNL Flow Service] eine Verbindung mit BigQuery herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] BigQuery mit Platform verbinden kann, müssen Sie die folgenden OAuth 2.0-Authentifizierungswerte angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -89,20 +89,22 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "BigQuery base connection",
-        "description": "Base connection for Google BigQuery",
+        "name": "Google BigQuery connection",
+        "description": "Google BigQuery connection",
         "auth": {
             "specName": "Basic Authentication",
+            "type": "OAuth2.0",
             "params": {
-                "project": "{PROJECT}",
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}",
-                "refreshToken": "{REFRESH_TOKEN}"
-            }
+                    "project": "{PROJECT}",
+                    "clientId": "{CLIENT_ID},
+                    "clientSecret": "{CLIENT_SECRET}",
+                    "refreshToken": "{REFRESH_TOKEN}"
+                }
         },
         "connectionSpec": {
             "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
             "version": "1.0"
+        }
     }'
 ```
 
