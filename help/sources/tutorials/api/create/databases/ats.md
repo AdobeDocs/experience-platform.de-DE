@@ -6,41 +6,41 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die die Datenspeicherung von Azurblauer Tabelle (im Folgenden "ATS" genannt) mit der Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 26%
+source-wordcount: '580'
+ht-degree: 25%
 
 ---
 
 
-# Erstellen eines [!DNL Azure Table Storage] Connectors mit der [!DNL Flow Service] API
+# Erstellen Sie einen [!DNL Azure Table Storage]-Connector mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der [!DNL Azure Table Storage] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+>Der [!DNL Azure Table Storage]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen eine Verbindung hergestellt werden soll [!DNL Azure Table Storage] (im Folgenden &quot;ATS&quot; genannt) [!DNL Experience Platform].
+In diesem Lernprogramm wird die API [!DNL Flow Service] verwendet, um Sie durch die Schritte zur Verbindung von [!DNL Azure Table Storage] (im Folgenden &quot;ATS&quot; genannt) mit [!DNL Experience Platform] zu führen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
+* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully connect to ATS using the [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Flow Service]-API eine erfolgreiche Verbindung zu ATS herzustellen.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit eine Verbindung mit ATS hergestellt [!DNL Flow Service] werden kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung mit ATS herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
 | `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einer ATS-Instanz hergestellt wird. Das Verbindungszeichenfolgen-Muster für ATS lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | Die ID, mit der eine Verbindung generiert wird. Die spezifizierte ID für feste Verbindungen für ATS ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`festgelegt. |
+| `connectionSpec.id` | Die ID, mit der eine Verbindung generiert wird. Die feste Verbindungs-spec-ID für ATS ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [diesem ATS-Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
@@ -52,21 +52,21 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Verbindung erstellen
 
-Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro ATS-Konto ist nur ein Connector erforderlich, da er zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro ATS-Konto ist nur ein Connector erforderlich, da er zur Erstellung mehrerer Datenflüsse verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -76,7 +76,7 @@ POST /connections
 
 **Anfrage**
 
-Um eine ATS-Verbindung zu erstellen, muss die eindeutige Verbindungs-Spezial-ID als Teil der POST angegeben werden. Die Verbindungs-spec-ID für ATS ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+Um eine ATS-Verbindung zu erstellen, muss die eindeutige Verbindungs-Spezial-ID als Teil der POST angegeben werden. Die Verbindungs-Spec-ID für ATS ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
@@ -120,4 +120,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine ATS-Verbindung mit der [!DNL Flow Service] API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken mithilfe der Flow Service API [untersuchen](../../explore/database-nosql.md).
+In diesem Lernprogramm haben Sie eine ATS-Verbindung mit der API [!DNL Flow Service] erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken mithilfe der Flow Service API[ untersuchen.](../../explore/database-nosql.md)
