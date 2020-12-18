@@ -6,32 +6,32 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zur Verbindung von IBM DB2 (im Folgenden "DB2" genannt) mit der Experience Platform zu führen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 25%
+source-wordcount: '590'
+ht-degree: 24%
 
 ---
 
 
-# IBM DB2 Connector mithilfe der [!DNL Flow Service] API erstellen
+# Erstellen Sie einen IBM DB2-Connector mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der IBM DB2 Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+>Der IBM DB2 Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen IBM DB2 (im Folgenden &quot;DB2&quot; genannt) verbunden werden [!DNL Experience Platform].
+Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zur Verbindung von IBM DB2 (im Folgenden &quot;DB2&quot; genannt) mit [!DNL Experience Platform] zu führen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
+* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully connect to DB2 using the [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Flow Service]-API eine erfolgreiche Verbindung zu DB2 herzustellen.
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ The following sections provide additional information that you will need to know
 | `database` | Der Name der DB2-Datenbank. |
 | `username` | Der Benutzername, mit dem eine Verbindung zur DB2-Datenbank hergestellt wird. |
 | `password` | Das Kennwort für das Benutzerkonto, das Sie für den Benutzernamen angegeben haben. |
-| `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für DB2 lautet `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für DB2 ist `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 Weitere Informationen zum Einstieg finden Sie in [diesem DB2-Dokument](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
@@ -51,17 +51,17 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Verbindung erstellen
 
@@ -75,7 +75,7 @@ POST /connections
 
 **Anfrage**
 
-Um eine DB2-POST zu erstellen, muss die eindeutige Verbindungs-ID als Teil der Anforderung angegeben werden. Die Verbindungs-Spezifikations-ID für DB2 lautet `09182899-b429-40c9-a15a-bf3ddbc8ced7`.
+Um eine DB2-POST zu erstellen, muss die eindeutige Verbindungs-ID als Teil der Anforderung angegeben werden. Die Verbindungs-Spezifikations-ID für DB2 ist `09182899-b429-40c9-a15a-bf3ddbc8ced7`.
 
 ```shell
 curl -X POST \
@@ -123,4 +123,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine IBM DB2-Verbindung mit der [!DNL Flow Service] API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken mithilfe der Flow Service API [untersuchen](../../explore/database-nosql.md).
+In diesem Lernprogramm haben Sie eine IBM DB2-Verbindung mit der API [!DNL Flow Service] erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken mithilfe der Flow Service API[ untersuchen.](../../explore/database-nosql.md)
