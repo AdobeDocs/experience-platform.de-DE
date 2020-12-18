@@ -6,41 +6,41 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zur Verbindung der Experience Platform mit MySQL zu führen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 26%
+source-wordcount: '572'
+ht-degree: 25%
 
 ---
 
 
-# Erstellen eines MySQL-Connectors mit der [!DNL Flow Service] API
+# Erstellen eines MySQL-Connectors mit der API[!DNL Flow Service]
 
 >[!NOTE]
 >
->Der MySQL Connector befindet sich in der Beta-Version. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+>Der MySQL Connector befindet sich in der Beta-Version. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zur Verbindung mit MySQL [!DNL Experience Platform] zu führen.
+Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zur Verbindung von [!DNL Experience Platform] mit MySQL zu führen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
+* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully connect to MySQL using the [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Flow Service]-API eine erfolgreiche Verbindung zu MySQL herzustellen.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit Sie eine Verbindung [!DNL Flow Service] zu Ihrer MySQL-Datenspeicherung herstellen können, müssen Sie den Wert für die folgende Verbindungseigenschaft angeben:
+Damit [!DNL Flow Service] eine Verbindung zu Ihrer MySQL-Datenspeicherung herstellen kann, müssen Sie den Wert für die folgende Verbindungseigenschaft angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
 | `connectionString` | Die mit Ihrem Konto verknüpfte MySQL-Verbindungszeichenfolge. Das Muster für die Verbindungszeichenfolge lautet: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die ID, mit der eine Verbindung generiert wird. Die Spezial-ID für die Verbindung für MySQL ist `26d738e0-8963-47ea-aadf-c60de735468a`festgelegt. |
+| `connectionSpec.id` | Die ID, mit der eine Verbindung generiert wird. Die feste Verbindungs-spec-ID für MySQL ist `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [diesem MySQL-Dokument](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
@@ -52,17 +52,17 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Verbindung erstellen
 
@@ -120,4 +120,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einsch
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine MySQL-Verbindung mit der [!DNL Flow Service] API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie Datenbanken oder NoSQL-Systeme mit der Flow Service API [erkunden können](../../explore/database-nosql.md).
+In diesem Lernprogramm haben Sie eine MySQL-Verbindung mit der API [!DNL Flow Service] erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie mit der Flow Service API[Datenbanken oder NoSQL-Systeme untersuchen.](../../explore/database-nosql.md)
