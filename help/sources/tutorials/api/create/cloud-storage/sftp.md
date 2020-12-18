@@ -6,21 +6,21 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zum Herstellen einer Verbindung zwischen der Experience Platform und einem SFTP-Server (Secure File Transfer Protocol) zu führen.
 translation-type: tm+mt
-source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 25%
+source-wordcount: '770'
+ht-degree: 24%
 
 ---
 
 
-# Erstellen eines SFTP-Connectors mit der [!DNL Flow Service] API
+# Erstellen Sie einen SFTP-Connector mit der API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Der SFTP-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+>Der SFTP-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zum Herstellen einer Verbindung zwischen der Experience Platform und einem SFTP-Server (Secure File Transfer Protocol) zu führen.
+Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zu führen, mit denen Sie die Experience Platform mit einem SFTP-Server (Secure File Transfer Protocol) verbinden.
 
 ## Erste Schritte
 
@@ -29,11 +29,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu kennzeichnen und zu verbessern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-The following sections provide additional information that you will need to know in order to successfully connect to an SFTP server using the [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der API [!DNL Flow Service] erfolgreich eine Verbindung zu einem SFTP-Server herzustellen.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit eine Verbindung [!DNL Flow Service] zu SFTP hergestellt werden kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung zu SFTP herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
@@ -51,17 +51,17 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Verbindung erstellen
 
@@ -69,7 +69,7 @@ Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für 
 
 ### Erstellen einer SFTP-Verbindung mit einfacher Authentifizierung
 
-Wenn Sie eine SFTP-Verbindung mit einfacher Authentifizierung erstellen möchten, fordern Sie eine POST bei der [!DNL Flow Service] API an, während Sie Werte für die Verbindungen `host`, `userName`und `password`angeben.
+Um eine SFTP-Verbindung mit einfacher Authentifizierung zu erstellen, fordern Sie eine POST an die [!DNL Flow Service]-API an, während Sie Werte für `host`, `userName` und `password` angeben.
 
 **API-Format**
 
@@ -78,6 +78,8 @@ POST /connections
 ```
 
 **Anfrage**
+
+Um eine SFTP-Verbindung zu erstellen, muss die eindeutige Verbindungs-ID als Teil der POST-Anfrage angegeben werden. Die Verbindungs-Spezifikations-ID für SFTP ist `b7bf2577-4520-42c9-bae9-cad01560f7bc`.
 
 ```shell
 curl -X POST \
@@ -125,7 +127,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ### Erstellen einer SFTP-Verbindung mit einer SSH-Authentifizierung mit öffentlichem Schlüssel
 
-Um eine SFTP-Verbindung mit der SSH-Authentifizierung mit öffentlichem Schlüssel zu erstellen, fordern Sie eine POST bei der [!DNL Flow Service] API an und geben Sie Werte für die Verbindungen `host`, `userName`, `privateKeyContent`und `passPhrase`an.
+Um eine SFTP-Verbindung mit der SSH-Authentifizierung mit öffentlichem Schlüssel zu erstellen, fordern Sie eine POST an die [!DNL Flow Service]-API an, während Sie Werte für `host`, `userName`, `privateKeyContent` und `passPhrase` angeben.
 
 **API-Format**
 
@@ -183,4 +185,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine SFTP-Verbindung mit der [!DNL Flow Service] API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um Cloud-Datenspeicherung mithilfe der Flow Service API [zu](../../explore/cloud-storage.md) untersuchen oder Parkettdaten mithilfe der Flow Service API [zu erfassen](../../cloud-storage-parquet.md).
+In diesem Lernprogramm haben Sie eine SFTP-Verbindung mit der API [!DNL Flow Service] erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um Cloud-Datenspeicherung mithilfe der Flow Service API[ oder ](../../explore/cloud-storage.md)zu erfassen, indem Sie die Flussdienst-API[ verwenden.](../../cloud-storage-parquet.md)
