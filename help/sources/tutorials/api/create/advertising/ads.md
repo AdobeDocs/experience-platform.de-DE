@@ -6,44 +6,44 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die notwendig sind, um die Experience Platform mit Google AdWords zu verbinden.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 25%
+source-wordcount: '622'
+ht-degree: 24%
 
 ---
 
 
-# Erstellen eines [!DNL Google AdWords] Connectors mit der [!DNL Flow Service] API
+# Erstellen Sie einen [!DNL Google AdWords]-Connector mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der [!DNL Google AdWords] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../../../home.md#terms-and-conditions) Quellen.
+>Der [!DNL Google AdWords]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Sie durch die Schritte zu führen, mit denen eine Verbindung hergestellt [!DNL Experience Platform] werden soll [!DNL Google AdWords].
+In diesem Lernprogramm wird die API [!DNL Flow Service] verwendet, um Sie durch die Schritte zur Verbindung [!DNL Experience Platform] mit [!DNL Google AdWords] zu führen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
+* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully connect to Ad using the [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Flow Service]-API eine Verbindung zu Anzeigen herstellen zu können.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit Sie [!DNL Flow Service] eine Verbindung mit AdWords herstellen können, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung mit AdWords herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | **Berechtigung** | **Beschreibung** |
 | -------------- | --------------- |
 | Kunden-ID des Kunden | Die Kunden-ID des AdWords-Kontos. |
 | Entwickler-Token | Das mit dem Managerkonto verknüpfte Entwicklertoken. |
-| Token aktualisieren | Das Aktualisierungstoken, das Sie [!DNL Google] zur Autorisierung des Zugriffs auf AdWords erhalten haben. |
-| Client ID (Client-ID) | Die Client-ID der [!DNL Google] Anwendung, mit der das Aktualisierungstoken erfasst wird. |
-| Client-Geheimnis | Das Clientgeheimnis der [!DNL Google] Anwendung, die zum Abrufen des Aktualisierungstokens verwendet wird. |
+| Token aktualisieren | Das Aktualisierungstoken, das von [!DNL Google] für die Autorisierung des Zugriffs auf AdWords erhalten wurde. |
+| Client ID (Client-ID) | Die Client-ID der Anwendung [!DNL Google], die zum Abrufen des Aktualisierungstokens verwendet wird. |
+| Client-Geheimnis | Das Clientgeheimnis der [!DNL Google]-Anwendung, mit der das Aktualisierungstoken erfasst wird. |
 | Verbindungs-ID | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für [!DNL Google AdWords] lautet: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 Weitere Informationen zu diesen Werten finden Sie in diesem [Google AdWords-Dokument](https://developers.google.com/adwords/api/docs/guides/authentication).
@@ -56,21 +56,21 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Verbindung erstellen
 
-Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL Google AdWords] Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL Google AdWords]-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -80,8 +80,7 @@ POST /connections
 
 **Anfrage**
 
-Die folgende Anforderung erstellt eine neue AdWords-Verbindung, die von den in der Nutzlast bereitgestellten Eigenschaften konfiguriert wird:
-
+Um eine [!DNL Google AdWords]-POST zu erstellen, muss die eindeutige Verbindungs-ID als Teil der Verbindungsanforderung angegeben werden. Die Verbindungs-Spezifikations-ID für [!DNL Google AdWords] ist `d771e9c1-4f26-40dc-8617-ce58c4b53702`.
 
 ```shell
 curl -X POST \
@@ -114,12 +113,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | Die Client-Kunden-ID Ihres [!DNL AdWords] Kontos. |
-| `auth.params.developerToken` | Das Entwicklertoken Ihres [!DNL AdWords] Kontos. |
-| `auth.params.refreshToken` | Das Aktualisierungstoken Ihres [!DNL AdWords] Kontos. |
-| `auth.params.clientID` | Die Client-ID Ihres [!DNL AdWords] Kontos. |
-| `auth.params.clientSecret` | Das Kundengeheimnis Ihres [!DNL AdWords] Kontos. |
-| `connectionSpec.id` | Die [!DNL Google AdWords] Verbindungs-ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | Die Client-Kunden-ID Ihres [!DNL AdWords]-Kontos. |
+| `auth.params.developerToken` | Das Entwicklertoken Ihres [!DNL AdWords]-Kontos. |
+| `auth.params.refreshToken` | Das Aktualisierungstoken Ihres [!DNL AdWords]-Kontos. |
+| `auth.params.clientID` | Die Client-ID Ihres [!DNL AdWords]-Kontos. |
+| `auth.params.clientSecret` | Das Clientgeheimnis Ihres [!DNL AdWords]-Kontos. |
+| `connectionSpec.id` | Die Verbindungs-ID [!DNL Google AdWords]: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Antwort**
 
@@ -134,4 +133,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine [!DNL Google AdWords] Verbindung mit der [!DNL Flow Service] API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie mithilfe der Flow Service API [Werbetechnologien](../../explore/advertising.md)untersuchen.
+In diesem Lernprogramm haben Sie eine [!DNL Google AdWords]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu lernen, wie Sie mit der Flow Service API[Werbetechnologien untersuchen.](../../explore/advertising.md)
