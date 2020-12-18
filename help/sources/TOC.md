@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '663'
 ht-degree: 8%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 8%
          - [Zielgruppen-Mapping-Felder](connectors/adobe-applications/mapping/target.md)
    - Werbung {#advertising}
       - [Google AdWords Connector](connectors/advertising/ads.md)
-   - Cloud storage {#cloud-storage}
+   - Cloud-Datenspeicherung {#cloud-storage}
       - [Amazon Kinesis-Anschluss](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-Anschluss](connectors/cloud-storage/s3.md)
       - [Apache HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
@@ -52,7 +52,7 @@ ht-degree: 8%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
+      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -65,7 +65,7 @@ ht-degree: 8%
       - [PostgreSQL Connector](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
       - [Shopify Connector](connectors/ecommerce/shopify.md)
-   - Marketing automation {#marketing-automation}
+   - Marketing-Automatisierung {#marketing-automation}
       - [HubSpot-Anschluss](connectors/marketing-automation/hubspot.md)
    - Zahlungen {#payments}
       - [PayPal-Anschluss](connectors/payments/paypal.md)
@@ -75,7 +75,7 @@ ht-degree: 8%
    - Erstellen eines Quell-Connectors {#create}
       - Werbung {#advertising}
          - [Google AdWords Connector](tutorials/api/create/advertising/ads.md)
-      - Cloud storage {#cloud-storage}
+      - Cloud-Datenspeicherung {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3-Anschluss](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS-Anschluss](tutorials/api/create/cloud-storage/hdfs.md)
@@ -87,7 +87,6 @@ ht-degree: 8%
          - [Google Cloud-Datenspeicherung-Connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-Anschluss](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [HubSpot-Anschluss](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamics Connector](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce-Anschluss](tutorials/api/create/crm/salesforce.md)
       - Kundenerfolg {#customer-success}
@@ -112,7 +111,7 @@ ht-degree: 8%
          - [SQL Server-Anschluss](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify Connector](tutorials/api/create/ecommerce/shopify.md)
-      - Marketing automation {#marketing-automation}
+      - Marketing-Automatisierung {#marketing-automation}
          - [HubSpot-Anschluss](tutorials/api/create/marketing-automation/hubspot.md)
       - Zahlungen {#payments}
          - [PayPal-Anschluss](tutorials/api/create/payments/paypal.md)
@@ -145,7 +144,7 @@ ht-degree: 8%
    - [Aktualisieren von Verbindungen](tutorials/api/update.md)
    - [Verbindungen löschen](tutorials/api/delete.md)
    - [Datenflüsse löschen](tutorials/api/delete-dataflows.md)
-- UI-Lernprogramme {#ui-tutorials}
+- UI-Tutorials {#ui-tutorials}
    - Erstellen eines Quell-Connectors {#create}
       - Adobe-Anwendungen {#adobe-applications}
          - [Adobe Analytics Classification Data Connector](tutorials/ui/create/adobe-applications/classifications.md)
@@ -154,7 +153,7 @@ ht-degree: 8%
          - [Connector für Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Werbung {#create}
          - [Google AdWords Connector](tutorials/ui/create/advertising/ads.md)
-      - Cloud storage {#cloud-storage}
+      - Cloud-Datenspeicherung {#cloud-storage}
          - [Amazon Kinesis-Anschluss](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3-Anschluss](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS-Anschluss](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -191,7 +190,7 @@ ht-degree: 8%
          - [PostgreSQL Connector](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
          - [Shopify Connector](tutorials/ui/create/ecommerce/shopify.md)
-      - Marketing automation {#marketing-automation}
+      - Marketing-Automatisierung {#marketing-automation}
          - [HubSpot-Anschluss](tutorials/ui/create/marketing-automation/hubspot.md)
       - Zahlungen {#payments}
          - [PayPal-Anschluss](tutorials/ui/create/payments/paypal.md)
