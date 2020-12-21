@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Data Governance
 breadcrumb-title: Data Governance-Anleitung
 user-guide-description: Setzen Sie Einschränkungen zur Datennutzung durch die Verwendung von Bezeichnungen, Marketing-Aktionen und Richtlinien durch.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 82%
+source-wordcount: '118'
+ht-degree: 77%
 
 ---
 
@@ -27,7 +27,8 @@ ht-degree: 82%
    * [Erstellen einer Datennutzungsrichtlinien mithilfe der Policy Service-API](policies/create.md)
 * Durchsetzung von Richtlinien {#enforcement}
    * [Durchsetzung von Richtlinien – Übersicht](enforcement/overview.md)
-   * [Durchsetzen von Datennutzungsrichtlinien mithilfe der Policy Service-API](enforcement/api-enforcement.md)
+   * [Automatische Durchsetzung](enforcement/auto-enforcement.md)
+   * [API-basierte Durchsetzung](enforcement/api-enforcement.md)
 * Entwicklerhandbuch für die Policy Service-API{#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
