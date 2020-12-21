@@ -6,23 +6,23 @@ topic: enforcement
 type: Tutorial
 description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 translation-type: tm+mt
-source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
+source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '992'
 ht-degree: 45%
 
 ---
 
 
-# Enforce data usage policies using the [!DNL Policy Service] API
+# Erzwingen Sie Datenverwendungsrichtlinien mit der API [!DNL Policy Service]
 
-Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
+Nachdem Sie Datenverwendungsbeschriftungen für Ihre Daten erstellt und Nutzungsrichtlinien für Marketingaktionen für diese Beschriftungen erstellt haben, können Sie mit dem [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) bewerten, ob eine Marketingaktion, die für einen Datensatz oder eine beliebige Gruppe von Beschriftungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 
 >[!NOTE]
 >
 > Standardmäßig können nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, an der Bewertung teilnehmen. Damit `DRAFT`-Richtlinien an der Bewertung teilnehmen können, müssen Sie den Abfrageparameter `includeDraft=true` in den Anfragepfad einbeziehen.
 
-This document provides steps on how to use the [!DNL Policy Service] API to check for policy violations in different scenarios.
+In diesem Dokument wird beschrieben, wie Sie mit der API [!DNL Policy Service] nach Richtlinienverletzungen in verschiedenen Szenarien suchen.
 
 ## Erste Schritte
 
@@ -31,13 +31,13 @@ Dieses Lernprogramm erfordert ein Verständnis der folgenden Schlüsselkonzepte,
 * [Data Governance](../home.md)[!DNL Platform]: Das Framework, mit dem die Einhaltung der Datennutzungsrichtlinien durchsetzt.
    * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf Datensätze (und/oder einzelne Felder in diesen Datensätzen) angewendet und geben Einschränkungen für die Verwendungsmöglichkeiten dieser Daten an.
    * [Datenverwendungsrichtlinien](../policies/overview.md): Datenverwendungsrichtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, die für bestimmte Gruppen von Datenverwendungsbeschriftungen zulässig oder eingeschränkt sind.
-* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Sandboxen](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Policy Service] API, including required headers and how to read example API calls.
+Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie kennen müssen, damit Sie erfolgreich Aufrufe an die [!DNL Policy Service]-API durchführen können, einschließlich der erforderlichen Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Bewerten Sie die Bewertung mit Beschriftungen und einer Marketingaktion.
 
-Sie können eine Richtlinie bewerten, indem Sie eine Marketingaktion mit einer Reihe von Datenverwendungs-Beschriftungen testen, die hypothetisch in einem Datensatz vorhanden sein würden. This is done through the use of the `duleLabels` query parameter, where labels are provided as a comma-separated list of values, as shown in the example below.
+Sie können eine Richtlinie bewerten, indem Sie eine Marketingaktion mit einer Reihe von Datenverwendungs-Beschriftungen testen, die hypothetisch in einem Datensatz vorhanden sein würden. Dies geschieht mithilfe des Parameters `duleLabels` &quot;Abfrage&quot;, bei dem Beschriftungen als kommagetrennte Liste von Werten bereitgestellt werden, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -130,7 +130,7 @@ Eine erfolgreiche Antwort gibt die URL für die Marketingaktion, die Gebrauchsbe
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `violatedPolicies` | An array listing any policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
+| `violatedPolicies` | Ein Array, das alle Richtlinien auflistet, die durch Testen der Marketingaktion (angegeben in `marketingActionRef`) gegen das bereitgestellte `duleLabels` verletzt wurden. |
 
 ## Mit Datensätzen bewerten
 
@@ -185,7 +185,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Jedes Element im Payload-Array muss den Typ der zu definierenden Entität angeben. In diesem Anwendungsfall ist der Wert immer „dataSet“. |
 | `entityId` | Jedes Element im Payload-Array muss die eindeutige Kennung für einen Datensatz angeben. |
-| `entityMeta.fields` | (Optional) Ein Array mit [JSON-Zeiger](../../landing/api-fundamentals.md#json-pointer) -Zeichenfolgen, das auf bestimmte Felder im Schema des Datensatzes verweist. Wenn dieses Array enthalten ist, nehmen nur die im Array enthaltenen Felder an der Auswertung teil. Alle Schema-Felder, die nicht im Array enthalten sind, werden nicht an der Evaluierung teilnehmen.<br><br>Wenn dieses Feld nicht enthalten ist, werden alle Felder im DataSet-Schema ausgewertet. |
+| `entityMeta.fields` | (Optional) Ein Array von [JSON-Zeiger](../../landing/api-fundamentals.md#json-pointer)-Zeichenfolgen, das auf bestimmte Felder im Schema des Datensatzes verweist. Wenn dieses Array enthalten ist, nehmen nur die im Array enthaltenen Felder an der Auswertung teil. Alle Schema-Felder, die nicht im Array enthalten sind, werden nicht an der Evaluierung teilnehmen.<br><br>Wenn dieses Feld nicht enthalten ist, werden alle Felder im DataSet-Schema ausgewertet. |
 
 **Antwort**
 
@@ -372,10 +372,10 @@ Eine erfolgreiche Antwort gibt die URL für die Marketingaktion, die von den ber
 | --- | --- |
 | `duleLabels` | Eine Liste von Datenverwendungsbeschriftungen, die aus den in der Anforderungs-Payload bereitgestellten Datensätzen extrahiert wurden. |
 | `discoveredLabels` | Eine Liste der Datensätze, die in der Anforderungsnutzlast bereitgestellt wurden, mit den Beschriftungen auf Datensatzebene und auf Feldebene, die in den einzelnen Datensätzen gefunden wurden. |
-| `violatedPolicies` | An array listing any policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
+| `violatedPolicies` | Ein Array, das alle Richtlinien auflistet, die durch Testen der Marketingaktion (angegeben in `marketingActionRef`) gegen das bereitgestellte `duleLabels` verletzt wurden. |
 
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments haben Sie bei der Durchführung einer Marketingaktion für einen Datensatz oder eine Reihe von Beschriftungen zur Datenverwendung erfolgreich auf Richtlinienverletzungen überprüft. Mithilfe der in den API-Antworten zurückgegebenen Daten können Sie Protokolle in Ihrer Erlebnisanwendung einrichten, um Richtlinienverletzungen bei ihrem Auftreten angemessen durchzusetzen.
 
-For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
+Informationen dazu, wie Platform automatisch die Richtliniendurchsetzung für aktivierte Segmente bereitstellt, finden Sie im Handbuch [Automatische Durchsetzung](./auto-enforcement.md).
