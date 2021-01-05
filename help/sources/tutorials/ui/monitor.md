@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen.
 
-Weitere Informationen zum Überwachen von Datenflüssen für Quellschnittstellen finden Sie in der [Übersicht zu Datenflüssen im Quellen](../../../dataflows/ui/monitor-sources.md) -Lernprogramm.
+Weitere Informationen zum Überwachen von Datenflüssen für Quellschnittstellen finden Sie im Lehrgang [Überwachungsdataflows in sources](../../../dataflows/ui/monitor-sources.md).
