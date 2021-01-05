@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
-breadcrumb-title: Handbuch zum Erlebnisdatenmodell (XDM)
+breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 56%
+source-wordcount: '216'
+ht-degree: 57%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 56%
    * [Bewährte Verfahren für die Datenmodellierung](schema/best-practices.md)
    * [XDM-Feldtypeinschränkungen](schema/field-constraints.md)
    * [Wörterbuch der XDM-Felder](schema/field-dictionary.md)
-   * Anwendungsfälle des Schemas {#use-cases}
+   * Anwendungsfälle für Schema {#use-cases}
       * [Datentyp &quot;Inhalt und Voreinstellungen&quot;](schema/privacy-consent.md)
 * Klassen {#classes}
    * [XDM Individuelles Profil](./classes/individual-profile.md)
@@ -56,6 +56,22 @@ ht-degree: 56%
    * [POI-Details](./data-types/poi-details.md)
    * [POI-Interaktion](./data-types/poi-interaction.md)
    * [Postadresse](./data-types/postal-address.md)
+*  SchemasUI  {#ui}
+   * [Übersicht](./ui/overview.md)
+   * [XDM-Ressourcen](./ui/explore.md)
+   * Ressourcen {#resources} erstellen und bearbeiten
+      * [Schemas](./ui/resources/schemas.md)
+      * [Klassen](./ui/resources/classes.md)
+      * [Mixins](./ui/resources/mixins.md)
+      * [Datentypen](./ui/resources/data-types.md)
+   * Felder {#fields} definieren
+      * [Übersicht](./ui/fields/overview.md)
+      * [Erforderliche Felder](./ui/fields/required.md)
+      * [Objektfelder](./ui/fields/object.md)
+      * [Array-Felder](./ui/fields/array.md)
+      * [Enum-Felder](./ui/fields/enum.md)
+      * [Identitätsfelder](./ui/fields/identity.md)
+      * [Beziehungsfelder](./ui/fields/relationship.md)
 * Schema Registry-API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
@@ -69,10 +85,8 @@ ht-degree: 56%
    * [Ad-hoc-Schemata](api/ad-hoc.md)
    * [Anhang](api/appendix.md)
 * Tutorials {#tutorials}
-   * [Ressourcen in der Benutzeroberfläche](./tutorials/explore.md)
    * [Erstellen eines Schemas (API)](tutorials/create-schema-api.md)
    * [Erstellen eines Schemas (Benutzeroberfläche)](tutorials/create-schema-ui.md)
-   * [Datentypen erstellen und bearbeiten (Benutzeroberfläche)](./tutorials/create-data-type.md)
    * [Definieren einer Beziehung zwischen zwei Schemata (API)](tutorials/relationship-api.md)
    * [Definieren einer Beziehung zwischen zwei Schemata (Benutzeroberfläche)](tutorials/relationship-ui.md)
    * [Erstellen eines Ad-hoc-Schemas (API)](tutorials/ad-hoc.md)
