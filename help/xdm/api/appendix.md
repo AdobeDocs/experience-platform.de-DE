@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
 solution: Experience Platform
 title: Entwickleranhang für Schema Registry
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 53%
@@ -15,11 +15,11 @@ ht-degree: 53%
 
 # Anhang
 
-This document provides supplemental information related to working with the [!DNL Schema Registry] API.
+Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der [!DNL Schema Registry]-API.
 
 ## Verwenden von Abfrageparametern {#query}
 
-Die [!DNL Schema Registry] unterstützt die Verwendung von Abfrage-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Ressourcen.
+Die Variable [!DNL Schema Registry] unterstützt die Verwendung von Abfrage-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Ressourcen.
 
 >[!NOTE]
 >
@@ -31,13 +31,13 @@ Zu den häufigsten Abfrageparametern für das Paging gehören:
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `start` | Geben Sie an, wo die aufgelisteten Ergebnisse beginnen sollen. Dieser Wert kann aus dem `_page.next` Attribut einer Liste-Antwort abgerufen und für den Zugriff auf die nächste Ergebnisseite verwendet werden. Wenn der `_page.next` Wert null ist, ist keine zusätzliche Seite verfügbar. |
+| `start` | Geben Sie an, wo die aufgelisteten Ergebnisse beginnen sollen. Dieser Wert kann aus dem `_page.next`-Attribut einer Liste-Antwort abgerufen und für den Zugriff auf die nächste Ergebnisseite verwendet werden. Wenn der Wert `_page.next` null ist, ist keine zusätzliche Seite verfügbar. |
 | `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Ressourcen zurück. |
-| `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Adding a `-` before the parameter value (`orderby=-title`) will sort items by title in descending order (Z-A). |
+| `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Durch Hinzufügen eines `-` vor dem Parameterwert (`orderby=-title`) werden Elemente in absteigender Reihenfolge (Z-A) nach Titel sortiert. |
 
 ### Filter {#filtering}
 
-Sie können die Ergebnisse mithilfe des `property` Parameters filtern, der verwendet wird, um einen bestimmten Operator auf eine bestimmte JSON-Eigenschaft in den abgerufenen Ressourcen anzuwenden. Zu den unterstützten Operatoren gehören:
+Sie können die Ergebnisse mit dem Parameter `property` filtern, mit dem ein bestimmter Operator auf eine bestimmte JSON-Eigenschaft in den abgerufenen Ressourcen angewendet wird. Zu den unterstützten Operatoren gehören:
 
 | Operator | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -52,13 +52,13 @@ Sie können die Ergebnisse mithilfe des `property` Parameters filtern, der verwe
 
 >[!TIP]
 >
->Sie können den `property` Parameter verwenden, um Mixins nach ihrer kompatiblen Klasse zu filtern. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
+>Sie können den Parameter `property` verwenden, um Mixins nach ihrer kompatiblen Klasse zu filtern. Beispiel: `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` gibt nur Mixins zurück, die mit der [!DNL XDM Individual Profile]-Klasse kompatibel sind.
 
 ## Kompatibilitätsmodus
 
 [!DNL Experience Data Model]Das  (XDM) ist eine öffentlich dokumentierte Spezifikation, die von Adobe zur Verbesserung der Interoperabilität, Ausdrucksfähigkeit und Leistungsfähigkeit digitaler Erlebnisse unterstützt wird. Adobe verwaltet den Quell-Code und formale XDM-Definitionen in einem [Open-Source-Projekt auf GitHub](https://github.com/adobe/xdm/). Diese Definitionen werden in XDM Standard Notation geschrieben, wobei JSON-LD (JavaScript Object Notation for Linked Data) und JSON-Schema als Grammatik zur Definition von XDM-Schemas verwendet werden.
 
-Wenn Sie sich die formalen XDM-Definitionen im öffentlichen Repository ansehen, können Sie erkennen, dass sich das Standard-XDM von dem unterscheidet, das Sie in Adobe Experience Platform sehen. What you are seeing in [!DNL Experience Platform] is called Compatibility Mode, and it provides a simple mapping between standard XDM and the way it is used within [!DNL Platform].
+Wenn Sie sich die formalen XDM-Definitionen im öffentlichen Repository ansehen, können Sie erkennen, dass sich das Standard-XDM von dem unterscheidet, das Sie in Adobe Experience Platform sehen. Was Sie in [!DNL Experience Platform] sehen, wird als Kompatibilitätsmodus bezeichnet und bietet eine einfache Zuordnung zwischen Standard-XDM und der Verwendung innerhalb von [!DNL Platform].
 
 ### Funktionsweise des Kompatibilitätsmodus
 
@@ -127,8 +127,8 @@ Im Folgenden finden Sie einen Vergleich, der sowohl im Standard-XDM als auch im 
 
 Adobe Experience Platform ist für die Verwendung mit mehreren Lösungen und Diensten konzipiert, die jeweils eigene technische Herausforderungen und Einschränkungen aufweisen (z. B. wie bestimmte Technologien Sonderzeichen handhaben). Um diese Einschränkungen zu überwinden, wurde der Kompatibilitätsmodus entwickelt.
 
-Die meisten [!DNL Experience Platform] Dienste einschließlich [!DNL Catalog], [!DNL Data Lake]und [!DNL Real-time Customer Profile] Verwendung als Standard-XDM [!DNL Compatibility Mode] . Die [!DNL Schema Registry] API verwendet auch [!DNL Compatibility Mode]und die Beispiele in diesem Dokument werden alle mit verwendet [!DNL Compatibility Mode].
+Die meisten [!DNL Experience Platform]-Dienste einschließlich [!DNL Catalog], [!DNL Data Lake] und [!DNL Real-time Customer Profile] verwenden [!DNL Compatibility Mode] anstelle von Standard-XDM. Die [!DNL Schema Registry]-API verwendet auch [!DNL Compatibility Mode] und die Beispiele in diesem Dokument werden alle mit [!DNL Compatibility Mode] angezeigt.
 
-It is worthwhile to know that a mapping takes place between standard XDM and the way it is operationalized in [!DNL Experience Platform], but it should not affect your use of [!DNL Platform] services.
+Es lohnt sich zu wissen, dass eine Zuordnung zwischen Standard-XDM und der Art und Weise, wie sie in [!DNL Experience Platform] operalisiert wird, stattfindet, sollte jedoch nicht Ihre Verwendung von [!DNL Platform]-Diensten beeinträchtigen.
 
-The open source project is available to you, but when it comes to interacting with resources through the [!DNL Schema Registry], the API examples in this document provide the best practices you should know and follow.
+Das Open-Source-Projekt steht Ihnen zur Verfügung, aber wenn es darum geht, mit Ressourcen über das [!DNL Schema Registry] zu interagieren, bieten die API-Beispiele in diesem Dokument die Best Practices, die Sie kennen und befolgen sollten.
