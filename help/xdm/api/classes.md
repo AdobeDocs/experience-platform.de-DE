@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: Klasse erstellen
 description: Mit dem Endpunkt "/classes"in der Schema Registry API können Sie XDM-Klassen in Ihrer Experience-Anwendung programmgesteuert verwalten.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b79482635d87efd5b79cf4df781fc0a3a6eb1b56
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 24%
@@ -24,19 +24,19 @@ Alle XDM-Schema (Experience Data Model) müssen auf einer Klasse basieren. Eine 
 >
 >Weitere Informationen zu Datenverhaltensklassen hinsichtlich ihrer Auswirkungen auf die Schema-Komposition finden Sie in den [Grundlagen der Schema-Komposition](../schema/composition.md).
 
-Mit dem `/classes` Endpunkt in der [!DNL Schema Registry] API können Sie Klassen in Ihrer Experience-Anwendung programmgesteuert verwalten.
+Mit dem `/classes`-Endpunkt in der [!DNL Schema Registry]-API können Sie Klassen in Ihrer Experience-Anwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](./getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
 
-## Retrieve a list of classes {#list}
+## Abrufen einer Liste von Klassen {#list}
 
-Sie können alle Kurse unter dem `global` Container oder dem  Liste werden, indem Sie eine GET an `tenant` bzw. `/global/classes` `/tenant/classes`anfordern.
+Sie können alle Klassen unter dem Container `global` oder `tenant` Liste haben, indem Sie eine GET an `/global/classes` bzw. `/tenant/classes` anfordern.
 
 >[!NOTE]
 >
->Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfragen zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Dokument zu den Parametern für die [Abfrage](./appendix.md#query) im Anhang.
+>Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfragen zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Dokument unter [Abfrage parameters](./appendix.md#query) im Anhang.
 
 **API-Format**
 
@@ -46,12 +46,12 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, von dem Sie Klassen abrufen möchten: `global` für von der Adobe erstellte Kurse oder `tenant` für Kurse, die im Besitz Ihrer Organisation sind. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [im](./appendix.md#query) Anhang. |
+| `{CONTAINER_ID}` | Der Container, von dem Sie Klassen abrufen möchten: `global` für Adoben-erstellte Klassen oder `tenant` für Klassen, die Ihrem Unternehmen gehören. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query). |
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine Liste von Klassen aus dem `tenant` Container ab, wobei ein `orderby` Abfrage-Parameter verwendet wird, um die Klassen nach ihrem `title` Attribut zu sortieren.
+Mit der folgenden Anforderung wird eine Liste von Klassen aus dem Container `tenant` abgerufen, wobei ein `orderby`-Abfrage-Parameter zum Sortieren der Klassen nach dem Attribut `title` verwendet wird.
 
 ```shell
 curl -X GET \
@@ -63,16 +63,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing classes:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Die folgenden `Accept`-Kopfzeilen stehen für Listingklassen zur Verfügung:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung der einzelnen Ressourcen zurück. Dies ist die empfohlene Kopfzeile für die Auflistung der Ressourcen. (Maximal: 300) |
-| `application/vnd.adobe.xed+json` | Returns full JSON class for each resource, with original `$ref` and `allOf` included. (Maximal: 300) |
+| `application/vnd.adobe.xed+json` | Gibt für jede Ressource die vollständige JSON-Klasse zurück, wobei die ursprünglichen Werte `$ref` und `allOf` enthalten sind. (Maximal: 300) |
 
 **Antwort**
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each class. Mit der anderen `Accept` Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jeder Klasse zurückgegeben. Select the appropriate `Accept` header depending on the information you require in your response.
+Bei der oben genannten Anforderung wurde die Überschrift `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jede Klasse. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jeder Klasse zurückgegeben. Wählen Sie die entsprechende `Accept`-Kopfzeile, je nach den Informationen, die Sie in Ihrer Antwort benötigen.
 
 ```json
 {
@@ -110,7 +110,7 @@ The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, 
 }
 ```
 
-## Klasse nachschlagen {#lookup}
+## Klasse {#lookup} suchen
 
 Sie können eine bestimmte Klasse nachschlagen, indem Sie die ID der Klasse in den Pfad einer GET-Anforderung einschließen.
 
@@ -122,12 +122,12 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, in dem die Klasse enthalten ist, die Sie abrufen möchten: `global` für eine von der Adobe erstellte Klasse oder `tenant` für eine Klasse im Besitz Ihres Unternehmens. |
-| `{CLASS_ID}` | Die `meta:altId` oder URL-kodierte `$id` Klasse, nach der Sie suchen möchten. |
+| `{CONTAINER_ID}` | Der Container, in dem die Klasse enthalten ist, die Sie abrufen möchten: `global` für eine von der Adobe erstellte Klasse oder `tenant` für eine Klasse, die Ihrem Unternehmen gehört. |
+| `{CLASS_ID}` | Die `meta:altId`- oder URL-kodierte `$id` der Klasse, nach der Sie suchen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine Klasse anhand ihres im Pfad angegebenen `meta:altId` Werts ab.
+Die folgende Anforderung ruft eine Klasse mit dem im Pfad angegebenen `meta:altId`-Wert ab.
 
 ```shell
 curl -X GET \
@@ -139,7 +139,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. All lookup requests require a `version` be included in the `Accept` header. The following `Accept` headers are available:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Für alle Nachschlageanforderungen muss eine `version` in die `Accept`-Kopfzeile eingefügt werden. Die folgenden `Accept`-Kopfzeilen stehen zur Verfügung:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | ------- | ------------ |
@@ -151,7 +151,7 @@ The response format depends on the `Accept` header sent in the request. All look
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Klasse zurück. The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
+Eine erfolgreiche Antwort gibt die Details der Klasse zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und festzustellen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```json
 {
@@ -242,13 +242,13 @@ Eine erfolgreiche Antwort gibt die Details der Klasse zurück. The fields that a
 
 ## Erstellen einer Klasse {#create}
 
-Sie können eine benutzerdefinierte Klasse unter dem `tenant` Container definieren, indem Sie eine POST anfordern.
+Sie können eine benutzerdefinierte Klasse unter dem Container `tenant` definieren, indem Sie eine POST anfordern.
 
 >[!IMPORTANT]
 >
->Beim Erstellen eines Schemas, das auf einer von Ihnen definierten benutzerspezifischen Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jedes Mixin definiert die Klassen, mit denen es kompatibel ist, in seinem `meta:intendedToExtend`-Attribut. Sobald Sie Mixins definiert haben, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung der `$id` Ihrer neuen Klasse im `meta:intendedToExtend`-Feld des Mixins), können Sie die Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten zum [Erstellen von Mixins](./mixins.md#create) und [Erstellen von Schemas](./schemas.md#create) in den jeweiligen Endpunkthandbüchern.
+>Beim Erstellen eines Schemas, das auf einer von Ihnen definierten benutzerspezifischen Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jedes Mixin definiert die Klassen, mit denen es kompatibel ist, in seinem `meta:intendedToExtend`-Attribut. Sobald Sie Mixins definiert haben, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung der `$id` Ihrer neuen Klasse im `meta:intendedToExtend`-Feld des Mixins), können Sie die Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten unter [Erstellen von Mixins](./mixins.md#create) und [Erstellen von Schemas](./schemas.md#create) in den jeweiligen Endpunkthandbüchern.
 >
->Wenn Sie planen, Schema auf Basis von benutzerdefinierten Klassen im Echtzeit-Kundencenter zu verwenden, sollten Sie auch bedenken, dass Schema der Vereinigung nur auf Schemas mit derselben Klasse basieren. Wenn Sie ein benutzerdefiniertes Schema in die Vereinigung für eine andere Klasse wie [!UICONTROL XDM Individual Profil] oder [!UICONTROL XDM ExperienceEvent]einbeziehen möchten, müssen Sie eine Beziehung zu einem anderen Schema herstellen, das diese Klasse verwendet. See the tutorial on [establishing a relationship between two schemas in the API](../tutorials/relationship-api.md) for more information.
+>Wenn Sie planen, Schema auf Basis von benutzerdefinierten Klassen im Echtzeit-Kundencenter zu verwenden, sollten Sie auch bedenken, dass Schema der Vereinigung nur auf Schemas mit derselben Klasse basieren. Wenn Sie ein benutzerspezifisches Schema in die Vereinigung für eine andere Klasse wie [!UICONTROL XDM Individuelles Profil] oder [!UICONTROL XDM ExperienceEvent] einbeziehen möchten, müssen Sie eine Beziehung zu einem anderen Schema herstellen, das diese Klasse verwendet. Weitere Informationen finden Sie im Tutorial [Einrichten einer Beziehung zwischen zwei Schemas in der API](../tutorials/relationship-api.md).
 
 **API-Format**
 
@@ -311,12 +311,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `_{TENANT_ID}` | Der `TENANT_ID`-Namespace für Ihre Organisation. All resources created by your organization must include this property to avoid collisions with other resources in the [!DNL Schema Registry]. |
+| `_{TENANT_ID}` | Der `TENANT_ID`-Namespace für Ihre Organisation. Alle von Ihrem Unternehmen erstellten Ressourcen müssen diese Eigenschaft enthalten, um Kollisionen mit anderen Ressourcen im [!DNL Schema Registry] zu vermeiden. |
 | `allOf` | Eine Liste mit Ressourcen, deren Eigenschaften von der neuen Klasse geerbt werden sollen. Eines der `$ref`-Objekte im Array definiert das Verhalten der Klasse. In diesem Beispiel übernimmt die Klasse das Verhalten „record“. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details der neu erstellten Klasse zurück, einschließlich `$id`, `meta:altId` und `version`. These three values are read-only and are assigned by the [!DNL Schema Registry].
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details der neu erstellten Klasse zurück, einschließlich `$id`, `meta:altId` und `version`. Diese drei Werte sind schreibgeschützt und werden durch das [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -380,15 +380,15 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 }
 ```
 
-Performing a GET request to [list all classes](#list) in the `tenant` container would now include the Property class. You can also [perform a lookup (GET) request](#lookup) using the URL-encoded `$id` to view the new class directly.
+Wenn Sie eine GET-Anforderung an [Liste ausführen, enthalten alle Klassen](#list) im `tenant`-Container jetzt die Property-Klasse. Sie können auch [eine Suchanfrage (GET) unter ](#lookup) mit der URL-kodierten `$id` ausführen, um die neue Klasse direkt Ansicht.
 
-## Klasse aktualisieren {#put}
+## Klasse {#put} aktualisieren
 
-Sie können eine ganze Klasse durch einen PUT-Vorgang ersetzen und die Ressource im Grunde neu schreiben. Beim Aktualisieren einer Klasse über eine PUT-Anforderung muss der Textkörper alle Felder enthalten, die beim [Erstellen einer neuen Klasse](#create) in einer POST-Anforderung erforderlich sind.
+Sie können eine ganze Klasse durch einen PUT-Vorgang ersetzen und die Ressource im Grunde neu schreiben. Beim Aktualisieren einer Klasse über eine PUT-Anforderung muss der Haupttext alle erforderlichen Felder enthalten, wenn [eine neue POST](#create) in einer Anforderung erstellt wird.
 
 >[!NOTE]
 >
->If you only want to update part of a class instead of replacing it entirely, see the section on [updating a portion of a class](#patch).
+>Wenn Sie nur einen Teil einer Klasse aktualisieren möchten, anstatt sie vollständig zu ersetzen, lesen Sie den Abschnitt unter [Aktualisieren eines Teils einer Klasse](#patch).
 
 **API-Format**
 
@@ -398,11 +398,11 @@ PUT /tenant/classes/{CLASS_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CLASS_ID}` | Die `meta:altId` oder URL-kodierte `$id` Klasse, die Sie erneut schreiben möchten. |
+| `{CLASS_ID}` | Die `meta:altId`- oder URL-kodierte `$id` der Klasse, die Sie neu schreiben möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine vorhandene Klasse neu geschrieben, wobei deren `description` und die `title` eines ihrer Felder geändert werden.
+Mit der folgenden Anforderung wird eine vorhandene Klasse neu geschrieben, wobei die Werte `description` und `title` eines ihrer Felder geändert werden.
 
 ```SHELL
 curl -X PUT \
@@ -517,13 +517,13 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Klasse zurück.
 }
 ```
 
-## Update a portion of a class {#patch}
+## Einen Teil einer Klasse {#patch} aktualisieren
 
-Sie können einen Teil einer Klasse mit einer PATCH-Anforderung aktualisieren. Der [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge einschließlich `add`, `remove`und `replace`. Weitere Informationen zum JSON-Patch finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil einer Klasse mit einer PATCH-Anforderung aktualisieren. [!DNL Schema Registry] unterstützt alle standardmäßigen JSON-Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zum JSON-Patch finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->If you want to replace an entire resource with new values instead of updating individual fields, see the section on [replacing a class using a PUT operation](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt [Ersetzen einer Klasse mit einem PUT-Vorgang](#put).
 
 **API-Format**
 
@@ -533,13 +533,13 @@ PATCH /tenant/class/{CLASS_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CLASS_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` die Klasse, die aktualisiert werden soll. |
+| `{CLASS_ID}` | Die URL-kodierte `$id`-URI oder `meta:altId` der Klasse, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
 Die folgende Beispielanforderung aktualisiert die `description` einer vorhandenen Klasse und die `title` eines ihrer Felder.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält die auszuführende Operation (`op`), welches Feld für die Operation ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einzuschließen sind (`value`).
+Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -557,7 +557,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Datei `description` wurde zusammen mit dem `title` Feld aktualisiert `propertyId` .
+Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das `description` wurde zusammen mit dem `title`-Feld `propertyId` aktualisiert.
 
 ```JSON
 {
@@ -621,7 +621,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Da
 }
 ```
 
-## Klasse löschen {#delete}
+## Löschen einer Klasse {#delete}
 
 Es kann gelegentlich erforderlich sein, eine Klasse aus der Schema-Registrierung zu entfernen. Dies geschieht durch eine DELETE-Anforderung mit der im Pfad angegebenen Klassen-ID.
 
@@ -633,7 +633,7 @@ DELETE /tenant/classes/{CLASS_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CLASS_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` die Klasse, die gelöscht werden soll. |
+| `{CLASS_ID}` | Die URL-kodierte `$id`-URI oder `meta:altId` der Klasse, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -650,4 +650,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-You can confirm the deletion by attempting a [lookup (GET) request](#lookup) for the class. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the class has been removed from the Schema Registry.
+Sie können den Löschvorgang bestätigen, indem Sie eine [Suchanfrage (GET)](#lookup) für die Klasse versuchen. Sie müssen einen `Accept`-Header in die Anforderung einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da die Schema-Registrierung entfernt wurde.
