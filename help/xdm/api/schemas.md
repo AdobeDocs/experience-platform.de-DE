@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Schema erstellen
 description: Mit dem Endpunkt /Schemas in der Schema Registry API können Sie XDM-Schema in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 19%
@@ -15,19 +15,19 @@ ht-degree: 19%
 
 # Schemas-Endpunkt
 
-Ein Schema kann man sich als Vorlage für die Daten vorstellen, die Sie in Adobe Experience Platform erfassen möchten. Jedes Schema besteht aus einer Klasse und null oder mehr Mixins. Mit dem `/schemas` Endpunkt in der [!DNL Schema Registry] API können Sie Schema in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Ein Schema kann man sich als Vorlage für die Daten vorstellen, die Sie in Adobe Experience Platform erfassen möchten. Jedes Schema besteht aus einer Klasse und null oder mehr Mixins. Mit dem `/schemas`-Endpunkt in der [!DNL Schema Registry]-API können Sie Schema in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](./getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
 
-## Retrieve a list of schemas {#list}
+## Abrufen einer Liste von Schemas {#list}
 
-Sie können alle Schema unter dem `global` bzw. dem `tenant` Container durch eine GET an `/global/schemas` bzw. `/tenant/schemas`anfordern.
+Sie können alle Schema unter dem Container `global` oder `tenant` durch eine GET an `/global/schemas` bzw. `/tenant/schemas` Liste durchführen.
 
 >[!NOTE]
 >
->Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfragen zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Dokument zu den Parametern für die [Abfrage](./appendix.md#query) im Anhang.
+>Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfragen zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Dokument unter [Abfrage parameters](./appendix.md#query) im Anhang.
 
 **API-Format**
 
@@ -37,12 +37,12 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container mit den Schemas, die Sie abrufen möchten: `global` für von der Adobe erstellte Schema oder `tenant` für Schemas im Besitz Ihrer Organisation. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [im](./appendix.md#query) Anhang. |
+| `{CONTAINER_ID}` | Der Container mit den Schemas, die Sie abrufen möchten: `global` für Adoben erstellte Schema oder `tenant` für Schemas, die Ihrem Unternehmen gehören. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query). |
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine Liste von Schemas aus dem `tenant` Container ab, wobei ein `orderby` Parameter &quot;Abfrage&quot;verwendet wird, um die Ergebnisse nach ihrem `title` Attribut zu sortieren.
+Mit der folgenden Anforderung wird eine Liste von Schemas aus dem Container `tenant` abgerufen. Dabei wird ein Parameter `orderby` für die Abfrage verwendet, um die Ergebnisse nach dem Attribut `title` zu sortieren.
 
 ```shell
 curl -X GET \
@@ -54,16 +54,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing schemas:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Die folgenden `Accept`-Kopfzeilen stehen zur Auflistung von Schemas zur Verfügung:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung der einzelnen Ressourcen zurück. Dies ist die empfohlene Kopfzeile für die Auflistung der Ressourcen. (Maximal: 300) |
-| `application/vnd.adobe.xed+json` | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (Maximal: 300) |
+| `application/vnd.adobe.xed+json` | Gibt für jede Ressource das vollständige JSON-Schema zurück, wobei die ursprünglichen Werte `$ref` und `allOf` enthalten sind. (Maximal: 300) |
 
 **Antwort**
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each schema. Mit der anderen `Accept` Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Schemas zurückgegeben. Select the appropriate `Accept` header depending on the information you require in your response.
+Bei der oben genannten Anforderung wurde die Überschrift `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jedes Schema. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Schemas zurückgegeben. Wählen Sie die entsprechende `Accept`-Kopfzeile, je nach den Informationen, die Sie in Ihrer Antwort benötigen.
 
 ```json
 {
@@ -107,12 +107,12 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container mit dem Schema, in dem Sie Folgendes abrufen möchten: `global` für ein von der Adobe erstelltes Schema oder `tenant` für ein Schema im Besitz Ihrer Organisation. |
-| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Schemas, nach dem Sie suchen möchten. |
+| `{CONTAINER_ID}` | Der Container mit dem Schema, in dem Sie Folgendes abrufen möchten: `global` für ein von der Adobe erstelltes Schema oder `tenant` für ein Schema, das Ihrem Unternehmen gehört. |
+| `{SCHEMA_ID}` | Die `meta:altId`- oder URL-kodierte `$id` des Schemas, nach dem Sie suchen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft ein Schema ab, das durch seinen `meta:altId` Wert im Pfad angegeben wird.
+Die folgende Anforderung ruft ein Schema ab, das durch den Wert `meta:altId` im Pfad angegeben wird.
 
 ```shell
 curl -X GET \
@@ -124,7 +124,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. All lookup requests require a `version` be included in the `Accept` header. The following `Accept` headers are available:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Für alle Nachschlageanforderungen muss eine `version` in die `Accept`-Kopfzeile eingefügt werden. Die folgenden `Accept`-Kopfzeilen stehen zur Verfügung:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | ------- | ------------ |
@@ -136,7 +136,7 @@ The response format depends on the `Accept` header sent in the request. All look
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Schemas zurück. The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
+Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und festzustellen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```json
 {
@@ -193,7 +193,7 @@ Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Kl
 
 >[!NOTE]
 >
->Der folgende Beispielaufruf ist nur ein Grundbeispiel dafür, wie ein Schema in der API erstellt wird, mit den minimalen Kompositionserfordernissen einer Klasse und ohne Mixins. Ausführliche Anweisungen zum Erstellen eines Schemas in der API, einschließlich zum Zuweisen von Feldern mit Mixins und Datentypen, finden Sie im Lernprogramm zur Erstellung von [Schemas](../tutorials/create-schema-api.md).
+>Der folgende Beispielaufruf ist nur ein Grundbeispiel dafür, wie ein Schema in der API erstellt wird, mit den minimalen Kompositionserfordernissen einer Klasse und ohne Mixins. Ausführliche Anweisungen zum Erstellen eines Schemas in der API, einschließlich zum Zuweisen von Feldern mit Mixins und Datentypen, finden Sie im Tutorial [Schema-Erstellung](../tutorials/create-schema-api.md).
 
 **API-Format**
 
@@ -227,11 +227,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `allOf` | Ein Array von Objekten, wobei jedes Objekt auf eine Klasse oder Mischung verweist, deren Felder vom Schema implementiert werden. Jedes Objekt enthält eine einzelne Eigenschaft (`$ref`), deren Wert den Wert `$id` der Klasse darstellt oder die vom neuen Schema implementiert wird. Es muss eine Klasse mit null oder mehr zusätzlichen Mixins bereitgestellt werden. Im obigen Beispiel ist das einzelne Objekt im `allOf` Array die Klasse des Schemas. |
+| `allOf` | Ein Array von Objekten, wobei jedes Objekt auf eine Klasse oder Mischung verweist, deren Felder vom Schema implementiert werden. Jedes Objekt enthält eine einzelne Eigenschaft (`$ref`), deren Wert das `$id` der Klasse darstellt oder deren mixin das neue Schema implementiert wird. Es muss eine Klasse mit null oder mehr zusätzlichen Mixins bereitgestellt werden. Im obigen Beispiel ist das einzelne Objekt im Array `allOf` die Klasse des Schemas. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details zum neu erstellten Schema zurück, einschließlich `$id`, `meta:altId` und `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details zum neu erstellten Schema zurück, einschließlich `$id`, `meta:altId` und `version`. Diese Werte sind schreibgeschützt und werden durch das [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -266,17 +266,17 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 }
 ```
 
-Performing a GET request to [list all schemas](#list) in the tenant container would now include the new schema. You can perform a [lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new schema directly.
+Wenn Sie eine GET für [Liste aller Schema](#list) im Pächter-Container durchführen, wird jetzt das neue Schema einbezogen. Sie können eine [Suchanfrage (GET)](#lookup) mit dem URL-kodierten `$id`-URI ausführen, um das neue Schema direkt Ansicht.
 
-Um einem Schema weitere Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um Mixins zu den Schemas `allOf` und `meta:extends` Arrays hinzuzufügen.
+Um einem Schema weitere Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um Mixins zu den Arrays `allOf` und `meta:extends` des Schemas hinzuzufügen.
 
-## Schema aktualisieren {#put}
+## Schema {#put} aktualisieren
 
-Sie können ein ganzes Schema durch eine PUT ersetzen und die Ressource im Grunde neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anforderung muss der Haupttext alle Felder enthalten, die beim [Erstellen eines neuen Schemas](#create) in einer POST-Anforderung erforderlich sind.
+Sie können ein ganzes Schema durch eine PUT ersetzen und die Ressource im Grunde neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anforderung muss der Haupttext alle erforderlichen Felder enthalten, wenn [ein neues Schema](#create) in einer POST erstellt wird.
 
 >[!NOTE]
 >
->If you only want to update part of a schema instead of replacing it entirely, see the section on [updating a portion of a schema](#patch).
+>Wenn Sie nur einen Teil eines Schemas aktualisieren möchten, anstatt es vollständig zu ersetzen, lesen Sie den Abschnitt [Aktualisieren eines Teils eines Schemas](#patch).
 
 **API-Format**
 
@@ -286,11 +286,11 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie neu schreiben möchten. |
+| `{SCHEMA_ID}` | Die `meta:altId`- oder URL-kodierte `$id` des Schemas, das Sie neu schreiben möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung ersetzt ein vorhandenes Schema und ändert dessen `title`, `description`und `allOf` Attribute.
+Die folgende Anforderung ersetzt ein vorhandenes Schema und ändert die Attribute `title`, `description` und `allOf`.
 
 ```SHELL
 curl -X PUT \
@@ -349,13 +349,13 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück.
 }
 ```
 
-## Update a portion of a schema {#patch}
+## Einen Teil eines Schemas {#patch} aktualisieren
 
-Sie können einen Teil eines Schemas mit einer PATCH-Anforderung aktualisieren. Der [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge einschließlich `add`, `remove`und `replace`. Weitere Informationen zum JSON-Patch finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil eines Schemas mit einer PATCH-Anforderung aktualisieren. [!DNL Schema Registry] unterstützt alle standardmäßigen JSON-Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zum JSON-Patch finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->If you want to replace an entire resource with new values instead of updating individual fields, see the section on [replacing a schema using a PUT operation](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen eines Schemas mit einem PUT-Vorgang](#put).
 
 Eine der häufigsten PATCH-Vorgänge besteht darin, einem Schema zuvor definierte Mixins hinzuzufügen, wie im folgenden Beispiel gezeigt.
 
@@ -367,13 +367,13 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` das zu aktualisierende Schema. |
+| `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder `meta:altId` des Schemas, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Beispielanforderung fügt einem Schema eine neue Mischung hinzu, indem der `$id` Wert dieser Mischung sowohl den `meta:extends` als auch den `allOf` Arrays hinzugefügt wird.
+Die folgende Beispielanforderung fügt einem Schema eine neue Mischung hinzu, indem der `$id`-Wert dieser Mischung sowohl den Arrays `meta:extends` als auch `allOf` hinzugefügt wird.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält die auszuführende Operation (`op`), welches Feld für die Operation ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einzuschließen sind (`value`).
+Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
 
 ```SHELL
 curl -X PATCH\
@@ -440,9 +440,9 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das Mi
 }
 ```
 
-## Enable a schema for use in Real-time Customer Profile {#union}
+## Aktivieren eines Schemas zur Verwendung im Echtzeit-Kundenkonto-Profil {#union}
 
-Damit ein Schema an einem [Echtzeit-Customer-Profil](../../profile/home.md)teilnehmen kann, müssen Sie ein `union` -Tag zum `meta:immutableTags` Array des Schemas hinzufügen. Sie können dies erreichen, indem Sie eine PATCH für das betreffende Schema anfordern.
+Damit ein Schema am [Echtzeit-Kundenstamm](../../profile/home.md) teilnimmt, müssen Sie dem `meta:immutableTags`-Array des Schemas ein `union`-Tag hinzufügen. Sie können dies erreichen, indem Sie eine PATCH für das betreffende Schema anfordern.
 
 >[!IMPORTANT]
 >
@@ -456,11 +456,11 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` das Schema, das aktiviert werden soll. |
+| `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder `meta:altId` des Schemas, das aktiviert werden soll. |
 
 **Anfrage**
 
-Die folgende Beispielanforderung fügt einem vorhandenen Schema ein `meta:immutableTags` Array hinzu, wobei dem Array ein einzelner Zeichenfolgenwert zugewiesen wird, der es für die Verwendung in Profil aktivieren `union` soll.
+In der folgenden Beispielanforderung wird einem vorhandenen Schema ein `meta:immutableTags`-Array hinzugefügt, wobei dem Array ein einzelner Zeichenfolgenwert `union` zugewiesen wird, um ihn für die Verwendung in Profil zu aktivieren.
 
 ```SHELL
 curl -X PATCH\
@@ -481,7 +481,7 @@ curl -X PATCH\
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück und zeigt an, dass das `meta:immutableTags` Array hinzugefügt wurde.
+Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück und zeigt an, dass das Array `meta:immutableTags` hinzugefügt wurde.
 
 ```JSON
 {
@@ -523,7 +523,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück un
 }
 ```
 
-Sie können nun die Vereinigung für die Klasse dieses Schemas zur Bestätigung der Anzeige der Felder des Schemas Ansicht haben. See the [unions endpoint guide](./unions.md) for more information.
+Sie können nun die Vereinigung für die Klasse dieses Schemas zur Bestätigung der Anzeige der Felder des Schemas Ansicht haben. Weitere Informationen finden Sie im Endpunktleitfaden [Vereinigungen](./unions.md).
 
 ## Löschen eines Schemas {#delete}
 
@@ -537,7 +537,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` das zu löschende Schema. |
+| `{SCHEMA_ID}` | Die URL-kodierte `$id`-URI oder `meta:altId` des Schemas, das Sie löschen möchten. |
 
 **Anfrage**
 
@@ -554,4 +554,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an das Schema senden. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the schema has been removed from the Schema Registry.
+Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an das Schema senden. Sie müssen einen `Accept`-Header in die Anforderung einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da das Schema aus der Schema-Registrierung entfernt wurde.
