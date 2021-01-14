@@ -5,10 +5,10 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID. '
 translation-type: tm+mt
-source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
+source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 73%
+source-wordcount: '1456'
+ht-degree: 23%
 
 ---
 
@@ -27,9 +27,9 @@ Das Verwenden von Identitäts-Namespaces setzt ein Verständnis der verschiedene
 
 ## Identitäts-Namespaces verstehen
 
-Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
+Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace. Bei der Zuordnung von Datensatzdaten zu Profil-Fragmenten, z. B. wenn [!DNL Real-time Customer Profile] Profil-Daten zusammenführt, müssen sowohl der Identitätswert als auch der Namensraum übereinstimmen.
 
-Zwei Profilfragmente können z. B. unterschiedliche primäre Kennungen enthalten, für den Namespace „E-Mail“ jedoch denselben Wert nutzen. So kann Platform erkennen, dass die Fragmente in Wahrheit zur gleichen Person gehören und die Daten im Identitätsdiagramm für diese Person zusammenführen.
+Zwei Profil-Fragmente können z. B. unterschiedliche primäre IDs enthalten, für den &quot;E-Mail&quot;-Namensraum jedoch denselben Wert verwenden. [!DNL Platform] kann daher erkennen, dass diese Fragmente tatsächlich dieselbe Person sind und die Daten im Identitätsdiagramm für die Einzelperson zusammenführen.
 
 ![](images/identity-service-stitching.png)
 
@@ -37,46 +37,79 @@ Zwei Profilfragmente können z. B. unterschiedliche primäre Kennungen enthalten
 
 Daten können anhand verschiedener Identitätstypen identifiziert werden. Der Identitätstyp wird zum Zeitpunkt der Erstellung des Identitäts-Namespace angegeben und steuert, ob die Daten im Identitätsdiagramm persistiert werden oder nicht. Außerdem gibt es spezielle Anweisungen zum Umgang mit diesen Daten.
 
-The following identity types are available within [!DNL Platform]:
+Die folgenden Identitätstypen sind innerhalb von [!DNL Platform] verfügbar:
 
 | Identitätstyp | Beschreibung |
 | --- | --- |
-| Cookie | Diese Identitäten sind für Erweiterungen von entscheidender Bedeutung und bilden den Großteil des Identitätsdiagramms. Sie verfallen jedoch naturgemäß schnell und verlieren mit der Zeit ihren Wert. Das Löschen von Cookies wird im Identitätsdiagramm speziell behandelt. |
-| Geräteübergreifend | This indicates that [!DNL Identity Service] should consider this to be a strong people identifier and hence preserve it forever. Beispiele dafür sind eine Anmelde-ID, CRM-ID, Loyalitäts-ID usw. |
-| Gerät | Umfasst IDFA-, GAID- und andere IOT-IDs. Diese können von Menschen in einem Haushalt auch geteilt werden. |
-| E-Mail | Identitäten dieser Art beinhalten personenbezogene Daten (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively. |
-| Mobile | Identitäten dieser Art umfassen PII. This is an indication to [!DNL Identity Service] to handle the value sensitively. |
-| Nichtpersonen | Dient zum Speichern von Kennungen, die Namespaces benötigen, aber nicht an einen Personen-Cluster gebunden sind. Diese Kennungen werden dann aus dem Identitätsdiagramm herausgefiltert. Mögliche Anwendungsfälle sind Daten zu Produkten, Organisationen, Geschäften usw. (Zum Beispiel eine Produkt-SKU.) |
-| Telefon | Identitäten dieser Art umfassen PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
+| Cookie ID | Cookie-IDs identifizieren Webbrowser. Diese Identitäten sind für Erweiterungen von entscheidender Bedeutung und bilden den Großteil des Identitätsdiagramms. Sie verfallen jedoch naturgemäß schnell und verlieren mit der Zeit ihren Wert. |
+| Geräteübergreifende ID | Geräteübergreifende IDs identifizieren eine einzelne ID und verbinden normalerweise andere IDs. Beispiele sind eine Anmelde-ID, eine CRM-ID und eine Loyalität-ID. Dies ist ein Hinweis auf [!DNL Identity Service], um den Wert sensibel zu behandeln. |
+| Geräte-ID | Geräte-IDs identifizieren Hardwaregeräte wie IDFA (iPhone und iPad), GAID (Android) und RIDA (Roku) und können von mehreren Personen in Haushalten gemeinsam genutzt werden. |
+| E-Mail  Adresse | E-Mail-Adressen werden oft einer einzelnen Person zugeordnet und können daher für die Identifizierung dieser Person über verschiedene Kanal hinweg verwendet werden. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies ist ein Hinweis auf [!DNL Identity Service], um den Wert sensibel zu behandeln. |
+| Kennung für Nicht-Personen | Nicht-Personen-IDs werden zum Speichern von Identifikatoren verwendet, für die Namensraum erforderlich sind, die jedoch nicht mit einem Personenzentrum verbunden sind. Beispielsweise eine Produkt-SKU, Daten zu Produkten, Organisationen oder Stores. |
+| Telefonnummer | Telefonnummern werden oft mit einer einzigen Person verknüpft und können daher zur Identifizierung dieser Person über verschiedene Kanal hinweg verwendet werden. Identitäten dieser Art umfassen PII. Dies ist ein Hinweis auf [!DNL Identity Service], um den Wert sensibel zu behandeln. |
 
-### Standard-Namespaces {#standard}
+### Standard-Namespaces
 
-Adobe Experience Platform bietet verschiedene Identitäts-Namespaces, die für alle Organisationen verfügbar sind. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
+ Experience Platform bietet verschiedene Identitäts-Namespaces, die für alle Organisationen verfügbar sind. Diese werden als Standard-Namensraum bezeichnet und sind mit der API oder über die Plattform-Benutzeroberfläche sichtbar.[!DNL Identity Service]
 
-Klicken Sie in der linken Leiste auf **[!UICONTROL Identitäten]** und dann auf den Tab **[!UICONTROL Durchsuchen]**, um in der Benutzeroberfläche die Standard-Namespaces anzuzeigen. All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
+Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfügung:
 
-Sie können dann auf einen der aufgeführten Namespaces klicken, um Details anzuzeigen.
+| Anzeigename | Beschreibung |
+| ------------ | ----------- |
+| AdCloud | Ein Namensraum, der die Adobe AdCloud darstellt. |
+| Adobe Analytics (Legacy-ID) | Ein Namensraum, der Adobe Analytics repräsentiert. Weitere Informationen finden Sie im folgenden Dokument unter [Adobe Analytics-Namensraum](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces). |
+| Apple IDFA (ID für Werbetreibende) | Ein Namensraum, der die Apple-ID für Werbetreibende darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Interessensbasierte Anzeigen](https://support.apple.com/en-us/HT202074). |
+| Apple Push-Benachrichtigungsdienst | Ein Namensraum, der Identitäten darstellt, die mit dem Apple Push Notification-Dienst erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument unter [Apple Push Notification service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1). |
+| CORE | Ein Namensraum, der Adobe Audience Manager repräsentiert. Dieser Namensraum kann auch durch seinen Legacy-Namen referenziert werden: &quot;Adobe AudienceManager&quot;. Weitere Informationen finden Sie im folgenden Dokument unter [Audience Manager-IDs](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids). |
+| ECID | Ein Namensraum, der die ECID darstellt. Dieser Namensraum kann auch durch folgende Aliase referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Weitere Informationen finden Sie im folgenden Dokument unter [ECID](./ecid.md). |
+| E-Mail  | Ein Namensraum, der eine E-Mail-Adresse darstellt. Dieser Namensraum wird oft einer einzelnen Person zugeordnet und kann daher für die Identifizierung dieser Person über verschiedene Kanäle hinweg verwendet werden. |
+| E-Mails (SHA256, Kleinbuchstaben) | Ein Namensraum für eine E-Mail-Adresse mit einem Hash-Tag. Die in diesem Namensraum bereitgestellten Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen Leerzeichen am Anfang und Ende abgeschnitten werden. Diese Einstellung kann nicht rückwirkend geändert werden. Weitere Informationen finden Sie im folgenden Dokument unter [SHA256 Hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support). |
+| Firebase Cloud Messaging | Ein Namensraum, der Identitäten darstellt, die mit Google Firebase Cloud Messaging für Push-Benachrichtigungen erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument unter [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging). |
+| Google Ad ID (GAID) | Ein Namensraum, der eine Google Advertising-ID darstellt. Weitere Informationen finden Sie im folgenden Dokument unter [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
+| Google Click-ID | Ein Namensraum, der eine Google Click-ID darstellt. Weitere Informationen finden Sie im folgenden Dokument unter [Klick-Tracking in Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking). |
+| Telefon | Ein Namensraum, der eine Telefonnummer darstellt. Dieser Namensraum wird oft einer einzelnen Person zugeordnet und kann daher für die Identifizierung dieser Person über verschiedene Kanäle hinweg verwendet werden. |
+| Telefon (E.164) | Ein Namensraum, der rohe Telefonnummern darstellt, die im E.164-Format als Hashing verwendet werden müssen. Das E.164-Format enthält ein Pluszeichen (`+`), ein internationales Land, das den Code anruft, einen lokalen Gebietscode und eine Telefonnummer. Beispiel: `(+)(country code)(area code)(phone number)`. |
+| Telefon (SHA256) | Ein Namensraum, der Telefonnummern darstellt, die mit SHA256 als Hash erfolgen müssen. Sie müssen Symbole, Buchstaben und alle führenden Nullen entfernen. Sie müssen auch den Länderaufrufcode als Präfix hinzufügen. |
+| Telefon (SHA256_E.164) | Ein Namensraum, der rohe Telefonnummern darstellt, die im SHA256- und E.164-Format mit Hashing versehen werden müssen. |
+| TNTID | Ein Namensraum, der Adobe Target repräsentiert. Weitere Informationen finden Sie im folgenden Dokument unter [Zielgruppe](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en). |
+| Windows AID | Ein Namensraum, der eine Windows-Anzeigen-ID darstellt. Weitere Informationen finden Sie im folgenden Dokument unter [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041). |
 
-![](./images/standard-namespace-detail.png)
+Um standardmäßige Namensraum in der Benutzeroberfläche Ansicht, wählen Sie im linken Navigationsbereich **[!UICONTROL Identitäten]** aus und klicken Sie dann auf die Registerkarte **[!UICONTROL Durchsuchen]**, um eine Liste der standardmäßigen Identitäts-Namensraum anzuzeigen, auf die Ihr Unternehmen zugreifen kann. Sie können die Namensraum alphabetisch nach **[!UICONTROL Anzeigename]**, **[!UICONTROL Identitätssymbol]** oder **[!UICONTROL Inhaber]** sortieren. Alternativ dazu können Sie die Namensraum chronologisch nach ihrem neuesten Aktualisierungsdatum sortieren.
 
-## Verwalten von Namespaces für Ihre Organisation
-
-Je nach den Daten und Anwendungsfällen in Ihrer Organisation benötigen Sie möglicherweise benutzerdefinierte Namespaces.
-
-These are visible in the UI as those namespaces with &quot;[!UICONTROL Custom]&quot; as the &quot;[!UICONTROL Owner]&quot;. Custom namespaces can be created using the [!DNL Identity Service] API or through the user interface.
-
-Um mithilfe der Benutzeroberfläche einen benutzerdefinierten Namespace zu erstellen, klicken Sie auf **[!UICONTROL Identitäts-Namespace erstellen]**, füllen Sie das Dialogfeld aus und klicken Sie auf **[!UICONTROL Erstellen]**.
-
-Namespaces that you define are private to your organization and require a unique &quot;[!UICONTROL Identity Symbol]&quot; (or &quot;code&quot; if you are using the API) in order to be created successfully.
-
-![](./images/create-identity-namespace.png)
-
-Ähnlich wie bei Standard-Namespaces können Sie über den Tab **[!UICONTROL Durchsuchen]** auf einen benutzerdefinierten Namespace klicken, um dessen Details anzuzeigen. Bei einem benutzerdefinierten Namespace können Sie im Detailbereich jedoch auch dessen Anzeigenamen und die Beschreibung bearbeiten.
+Wählen Sie einen Namensraum aus, um genauere Informationen auf der rechten Leiste anzuzeigen.
 
 >[!NOTE]
 >
->Nachdem ein Namespace erstellt wurde, kann er nicht mehr gelöscht werden; außerdem lassen sich sein „Identitätssymbol“ (oder „Code“ in der API) und „Typ“ nicht mehr ändern.
+>Die Plattform bietet auch Namensraum für Integrationszwecke. Diese Namensraum werden standardmäßig ausgeblendet, da sie zur Verbindung mit anderen Systemen verwendet werden und nicht zum Verbinden von Identitäten verwendet werden. Um Namensraum zur Ansicht-Integration auszuwählen, wählen Sie **[!UICONTROL Ansicht-Integrationsidentitäten]**.
+
+![](./images/browse-namespaces.png)
+
+## Verwalten benutzerdefinierter Namensraum
+
+Je nach den Daten und Anwendungsfällen in Ihrer Organisation benötigen Sie möglicherweise benutzerdefinierte Namespaces. Benutzerdefinierte Namensraum können mit der API oder über die Benutzeroberfläche erstellt werden.[[!DNL Identity Service]](./api/create-custom-namespace.md)
+
+Um einen benutzerspezifischen Namensraum mithilfe der Benutzeroberfläche zu erstellen, navigieren Sie zum Arbeitsbereich **[!UICONTROL Identitäten]**, wählen Sie **[!UICONTROL Durchsuchen]** und dann **[!UICONTROL Identitäts-Namensraum erstellen]**.
+
+![](./images/create.png)
+
+Das Dialogfeld **[!UICONTROL Identität erstellen]** wird angezeigt. Geben Sie ein eindeutiges **[!UICONTROL Anzeigename]** und **[!UICONTROL Identitätssymbol]** an und wählen Sie dann den Identitätstyp, den Sie erstellen möchten. Sie können auch eine optionale Beschreibung zu weiteren Informationen über den Namensraum hinzufügen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Erstellen]**.
+
+>[!IMPORTANT]
+>
+>Namensraum, die Sie definieren, sind für Ihr Unternehmen privat und erfordern ein eindeutiges Identitätssymbol, damit sie erfolgreich erstellt werden können.
+
+![](./images/create-namespace.png)
+
+Ähnlich wie bei standardmäßigen Namensräumen können Sie einen benutzerspezifischen Namensraum auf der Registerkarte **[!UICONTROL Durchsuchen]** auswählen, um die Details Ansicht. Mit einem benutzerdefinierten Namensraum können Sie jedoch auch den Anzeigenamen und die Beschreibung im Detailbereich bearbeiten.
+
+>[!NOTE]
+>
+>Nachdem ein Namensraum erstellt wurde, kann er nicht gelöscht werden und sein Identitätssymbol und Typ können nicht mehr geändert werden.
 
 ## Namespaces in Identitätsdaten
 
 Die Angabe des Namespace für eine Identität hängt von der Methode ab, mit der Sie Identitätsdaten bereitstellen. Einzelheiten zur Bereitstellung von Identitätsdaten finden Sie im Abschnitt zum [Bereitstellen von Identitätsdaten](./home.md#supplying-identity-data-to-identity-service) in der Übersicht über den [!DNL Identity Service]
+
+## Nächste Schritte
+
+Nachdem Sie die Schlüsselkonzepte von Identitätsdiagrammen verstanden haben, können Sie mit dem [Identitätsdiagramm-Viewer](./ui/identity-graph-viewer.md) lernen, wie Sie mit Ihrem Identitätsdiagramm arbeiten.
