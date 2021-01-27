@@ -5,7 +5,7 @@ title: Anbinden an Aqua Data Studio
 topic: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von Aqua Data Studio mit Query Service von Adobe Experience Platform erläutert.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 74%
@@ -13,11 +13,11 @@ ht-degree: 74%
 ---
 
 
-# Connect with [!DNL Aqua Data Studio]
+# Verbinden mit [!DNL Aqua Data Studio]
 
-This document walks through the steps for connecting [!DNL Aqua Data Studio] with Adobe Experience Platform [!DNL Query Service].
+Dieses Dokument führt Sie durch die Schritte zum Verbinden von [!DNL Aqua Data Studio] mit Adobe Experience Platform [!DNL Query Service].
 
-After installing [!DNL Aqua Data Studio], you must first register the server. Klicken Sie im Hauptmenü auf **[!UICONTROL Server]** und dann auf **[!UICONTROL Server registrieren]**.
+Nach der Installation von [!DNL Aqua Data Studio] müssen Sie zunächst den Server registrieren. Klicken Sie im Hauptmenü auf **[!UICONTROL Server]** und dann auf **[!UICONTROL Server registrieren]**.
 
 ![](../images/clients/aqua-data-studio/register-server.png)
 
@@ -25,12 +25,12 @@ Das Dialogfeld **[!UICONTROL Server registrieren]** wird angezeigt. Wählen Sie 
 
 - **[!UICONTROL Name]**: Der Name Ihrer Verbindung.
 - **[!UICONTROL Anmeldename und Passwort]**: Die Anmeldeinformationen, die verwendet werden. Der Benutzername hat die Form `ORG_ID@AdobeOrg`.
-- **[!UICONTROL Host und Port]**: Der Host-Endpunkt und sein Port für [!DNL Query Service]. Sie müssen Port 80 verwenden, um eine Verbindung herzustellen [!DNL Query Service].
+- **[!UICONTROL Host und Port]**: Der Host-Endpunkt und sein Port für [!DNL Query Service]. Sie müssen Port 80 verwenden, um eine Verbindung mit [!DNL Query Service] herzustellen.
 - **[!UICONTROL Datenbank]:** Die zu verwendende Datenbank.
 
 >[!NOTE]
 >
-> Weitere Informationen dazu, wie Sie Ihre Anmeldeinformationen sowie Host, Port und Datenbankname finden, finden Sie auf der [Seite zu Anmeldeinformationen auf Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
+> Weitere Informationen dazu, wie Sie Ihre Anmeldeinformationen sowie Host, Port und Datenbankname finden, finden Sie auf der [Seite zu Anmeldeinformationen auf Platform](https://platform.adobe.com/query/configuration). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an, klicken Sie auf **[!UICONTROL Abfragen]** und dann auf **[!UICONTROL Anmeldeinformationen]**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
@@ -42,4 +42,4 @@ Klicken Sie nach Eingabe der Verbindungsdetails auf **[!UICONTROL Verbindung tes
 
 ## Nächste Schritte
 
-Now that you have connected to [!DNL Query Service], you can use the **[!UICONTROL Query Analyzer]** within [!DNL Aqua Data Studio] to execute and edit SQL statements. Weitere Informationen dazu, wie Sie Abfragen formulieren und ausführen, finden Sie im Handbuch zum Thema [Ausführen von Abfragen](../creating-queries/creating-queries.md).
+Nachdem Sie eine Verbindung zu [!DNL Query Service] hergestellt haben, können Sie den **[!UICONTROL Abfrage Analyzer]** in [!DNL Aqua Data Studio] verwenden, um SQL-Anweisungen auszuführen und zu bearbeiten. Weitere Informationen dazu, wie Sie Abfragen formulieren und ausführen, finden Sie im Handbuch zum Thema [Ausführen von Abfragen](../best-practices/writing-queries.md).
