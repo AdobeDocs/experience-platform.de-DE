@@ -5,10 +5,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 translation-type: tm+mt
-source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
+source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 75%
+source-wordcount: '135'
+ht-degree: 69%
 
 ---
 
@@ -27,14 +27,13 @@ ht-degree: 75%
 - Benutzeroberfläche des Abfrage-Dienstes {#ui}
    - [UI-Übersicht](ui/overview.md)
    - [Benutzerhandbuch zum Abfrage-Editor](ui/user-guide.md)
-- Erstellen von Abfragen {#creating-queries}
-   - [Übersicht über das Erstellen von Abfragen](creating-queries/creating-queries.md)
-   - [Datensätze vs. Tabellen und Schemas](creating-queries/datasets-and-tables.md)
-   - [Allgemeine Leitlinien für die Ausführung von Abfragen](creating-queries/writing-queries.md)
-   - [ExperienceEvent-Abfragen](creating-queries/experience-event-queries.md)
-   - [Zusammenfügen von Datensätzen](creating-queries/joining-datasets.md)
-   - [Data Deduplizierung-Duplikate](creating-queries/deduplication.md)
-- [Generieren von Datensätzen aus Abfragen](creating-queries/create-datasets.md)
+   - [Generieren von Datensätzen aus Abfragen](ui/create-datasets.md)
+- Best Practices {#best-practices}
+   - [Allgemeine Leitlinien für die Ausführung von Abfragen](best-practices/writing-queries.md)
+   - [Data Deduplizierung-Duplikate](best-practices/deduplication.md)
+   - [Beispielerlebnis-Ereignis-Abfragen](best-practices/experience-event-queries.md)
+   - [Adobe Analytics-Abfragen](best-practices/adobe-analytics.md)
+   - [Adobe Target-Abfragen](best-practices/adobe-target.md)
 - SQL-Referenz {#sql}
    - [SQL-Übersicht](sql/overview.md)
    - [SQL-Syntax](sql/syntax.md)
@@ -42,10 +41,6 @@ ht-degree: 75%
    - [Spark SQL-Funktionen](sql/spark-sql-functions.md)
    - [Metadaten, Befehle](sql/metadata.md)
    - [Vorbereitete Anweisungen](sql/prepared-statements.md)
-- Beispielabfragen {#samples}
-   - [Übersicht über die Abfragen](sample-queries/overview.md)
-   - [Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Adobe Target](sample-queries/adobe-target.md)
 - Clients mit Query Service verbinden {#clients}
    - [Überblick über Kundenverbindungen](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
