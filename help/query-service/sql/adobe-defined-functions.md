@@ -5,7 +5,7 @@ title: Adobe-definierte Funktionen
 topic: functions
 description: Nachfolgend finden Sie Informationen zu den in Query Service verfügbaren Adobe-definierten Funktionen.
 translation-type: tm+mt
-source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
+source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 22%
@@ -667,14 +667,14 @@ Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Ab
 **Abfrage**
 
 ```sql
-SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
+SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
     PREVIOUS(web.webPageDetails.name, 3)
-      OVER(PARTITION BY endUserIds._experience.mcid.id, _experience.analytics.session.num
+      OVER(PARTITION BY endUserIds._experience.mcid.id
            ORDER BY timestamp
            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
       AS previous_page
 FROM experience_events
-ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **Ergebnisse**
@@ -723,7 +723,7 @@ SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
       OVER(PARTITION BY endUserIds._experience.aaid.id
            ORDER BY timestamp
            ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
-      AS previous_page
+      AS next_page
 FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
@@ -881,7 +881,7 @@ Für die angegebene Beispielspalte werden die Abfragen in der Spalte `average_mi
 
 ## Nächste Schritte
 
-Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mit [!DNL Query Service] auf Ihre eigenen [!DNL Experience Event]-Datensätze zuzugreifen. Weitere Informationen zu Authoring-Abfragen in [!DNL Query Service] finden Sie in der Dokumentation zu [Erstellen von Abfragen](../creating-queries/creating-queries.md).
+Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mit [!DNL Query Service] auf Ihre eigenen [!DNL Experience Event]-Datensätze zuzugreifen. Weitere Informationen zu Authoring-Abfragen in [!DNL Query Service] finden Sie in der Dokumentation zu [Erstellen von Abfragen](../best-practices/writing-queries.md).
 
 ## Zusätzliche Ressourcen
 
