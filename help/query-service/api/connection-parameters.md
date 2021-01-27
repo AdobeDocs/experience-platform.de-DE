@@ -5,10 +5,10 @@ title: Entwicklerhandbuch für Query Service
 topic: connection parameters
 description: Sie können Ihre Verbindungsparameter für die Verwendung des interaktiven Dienstes abrufen, indem Sie eine GET an den Endpunkt "/connection_parameters"senden.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 62%
+source-wordcount: '134'
+ht-degree: 47%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 62%
 
 ## Beispiel-API-Aufrufe
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie wissen, welche Header verwendet werden sollen, können Sie mit dem Aufrufen der [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der API [!DNL Query Service] durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-### Anfordern von Verbindungsparametern für den interaktiven Dienst
+### Parameter für die Anforderungsverbindung
 
-Sie können Ihre Verbindungsparameter für die Verwendung des [interaktiven Dienstes](../creating-queries/writing-queries.md) abrufen, indem Sie eine GET-Anfrage an den `/connection_parameters`-Endpunkt senden. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Dienst herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
+Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET an den `/connection_parameters`-Endpunkt anfordern. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Dienst herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
 
 **API-Format**
 
