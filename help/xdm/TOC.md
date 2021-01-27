@@ -5,10 +5,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 translation-type: tm+mt
-source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
+source-git-commit: baf39df0e03170d6b2b5a151e753d4ad269a43fa
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 57%
+source-wordcount: '215'
+ht-degree: 58%
 
 ---
 
@@ -21,8 +21,6 @@ ht-degree: 57%
    * [Bewährte Verfahren für die Datenmodellierung](schema/best-practices.md)
    * [XDM-Feldtypeinschränkungen](schema/field-constraints.md)
    * [Wörterbuch der XDM-Felder](schema/field-dictionary.md)
-   * Anwendungsfälle für Schema {#use-cases}
-      * [Datentyp &quot;Inhalt und Voreinstellungen&quot;](schema/privacy-consent.md)
 * Klassen {#classes}
    * [XDM Individuelles Profil](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -82,6 +80,9 @@ ht-degree: 57%
    * [Datentypen](api/data-types.md)
    * [Deskriptoren](api/descriptors.md)
    * [Vereinigungen](api/unions.md)
+   * [Export/Import](api/export-import.md)
+   * [Sample data](api/sample-data.md)
+   * [Auditprotokoll](api/audit-log.md)
    * [Ad-hoc-Schemata](api/ad-hoc.md)
    * [Anhang](api/appendix.md)
 * Tutorials {#tutorials}
