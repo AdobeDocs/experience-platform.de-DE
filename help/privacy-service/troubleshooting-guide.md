@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Häufig gestellte Fragen zu Privacy Services
+title: Handbuch zur Fehlerbehebung bei Privacy Services
 topic: troubleshooting
+description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Privacy Service sowie Informationen zu häufig aufgetretenen Fehlern in der API.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '884'
 ht-degree: 2%
 
 ---
@@ -14,17 +15,17 @@ ht-degree: 2%
 
 # [!DNL Privacy Service] Handbuch zur Fehlerbehebung
 
-Adobe Experience Platform [!DNL Privacy Service] stellt eine RESTful-API und eine Benutzeroberfläche bereit, die Firmen bei der Verwaltung von Datenschutzanfragen unterstützen. Mit [!DNL Privacy Service]dieser Funktion können Sie Anfragen zum Zugriff auf und Löschen von privaten oder persönlichen Kundendaten stellen, wodurch die automatische Einhaltung der gesetzlichen und organisatorischen Datenschutzbestimmungen erleichtert wird.
+Adobe Experience Platform [!DNL Privacy Service] stellt eine RESTful-API und eine Benutzeroberfläche bereit, die Firmen bei der Verwaltung von Datenschutzanforderungen für Kunden unterstützen. Mit [!DNL Privacy Service] können Sie Anfragen zum Zugriff auf und Löschen von privaten oder persönlichen Kundendaten einreichen, was die automatische Einhaltung der Vorschriften zum Schutz der Privatsphäre in Unternehmen und Rechtsordnungen erleichtert.
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu [!DNL Privacy Service]und Informationen zu häufig aufgetretenen Fehlern in der API.
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu [!DNL Privacy Service] sowie Informationen zu häufig aufgetretenen Fehlern in der API.
 
 ## Was ist der Unterschied zwischen einer Benutzer- und einer Benutzer-ID, wenn Sie Datenschutzanforderungen in der API machen? {#user-ids}
 
-Um einen neuen Datenschutzauftrag in der API zu erstellen, muss die JSON-Nutzlast der Anforderung ein `users` Array enthalten, das für jeden Benutzer, für den die Datenschutzanforderung gilt, spezifische Informationen Liste. Jedes Element im `users` Array ist ein Objekt, das einen bestimmten Benutzer darstellt, der durch seinen `key` Wert identifiziert wird.
+Um einen neuen Datenschutzauftrag in der API zu erstellen, muss die JSON-Nutzlast der Anforderung ein `users`-Array enthalten, das für jeden Benutzer, für den die Datenschutzanforderung gilt, spezifische Informationen Liste. Jedes Element im Array `users` ist ein Objekt, das einen bestimmten Benutzer darstellt, der durch seinen `key`-Wert identifiziert wird.
 
-Jedes Benutzerobjekt (oder `key`) enthält wiederum ein eigenes `userIDs` Array. Dieses Array Liste spezifische ID-Werte **für den jeweiligen Benutzer**.
+Jedes Benutzerobjekt (oder `key`) enthält wiederum ein eigenes `userIDs`-Array. Dieses Array Liste spezifische ID-Werte **für den jeweiligen Benutzer**.
 
-Consider the following example `users` array:
+Betrachten Sie das folgende Beispiel `users`-Array:
 
 ```json
 "users": [
@@ -59,54 +60,54 @@ Consider the following example `users` array:
 ]
 ```
 
-Das Array enthält zwei Objekte, die einzelne Benutzer darstellen, die anhand ihrer `key` Werte identifiziert werden (&quot;DavidSmith&quot;und &quot;user12345&quot;). &quot;DavidSmith&quot;hat nur eine ID aufgelistet (ihre E-Mail-Adresse), während &quot;user12345&quot;zwei IDs hat (ihre E-Mail-Adresse und ECID).
+Das Array enthält zwei Objekte, die einzelne Benutzer darstellen, die mit ihren `key`-Werten (&quot;DavidSmith&quot;und &quot;user12345&quot;) identifiziert werden. &quot;DavidSmith&quot;hat nur eine ID aufgelistet (ihre E-Mail-Adresse), während &quot;user12345&quot;zwei IDs hat (ihre E-Mail-Adresse und ECID).
 
-Weitere Informationen zum Bereitstellen von Informationen zur Benutzeridentität finden Sie im Handbuch zu [Identitätsdaten für Datenschutzanforderungen](identity-data.md).
+Weitere Informationen zum Bereitstellen von Informationen zur Benutzeridentität finden Sie im Handbuch [Identitätsdaten für Datenschutzanforderungen](identity-data.md).
 
 
-## Kann ich Daten [!DNL Privacy Service] bereinigen, an die ich versehentlich gesendet wurde [!DNL Platform]?
+## Kann ich [!DNL Privacy Service] verwenden, um Daten zu bereinigen, die versehentlich an [!DNL Platform] gesendet wurden?
 
-Adobe unterstützt nicht die Verwendung [!DNL Privacy Service] zum Löschen von Daten, die versehentlich an ein Produkt gesendet wurden. [!DNL Privacy Service] ist so konzipiert, dass Sie Ihren Verpflichtungen bezüglich des Zugriffs oder Löschens von Anfragen durch betroffene Personen (oder Verbraucher) nachkommen können. Diese Anfragen sind zeitaufwendig und werden im Zusammenhang mit dem geltenden Datenschutzrecht abgeschlossen. Die Übermittlung von Anfragen, die nicht Gegenstand des Datenzugriffs oder der Anfrage des Verbrauchers sind, oder Löschungsanfragen hat Auswirkungen auf alle [!DNL Privacy Service] Kunden und die Möglichkeit, die entsprechenden rechtlichen Fristen zu unterstützen, [!DNL Privacy Service] zu haben.
+Adobe unterstützt nicht die Verwendung von [!DNL Privacy Service] zum Löschen von Daten, die versehentlich an ein Produkt gesendet wurden. [!DNL Privacy Service] ist so konzipiert, dass Sie Ihren Verpflichtungen bezüglich des Zugriffs oder Löschens von Anfragen durch betroffene Personen (oder Verbraucher) nachkommen können. Diese Anfragen sind zeitaufwendig und werden im Zusammenhang mit dem geltenden Datenschutzrecht abgeschlossen. Die Übermittlung von Anfragen, die nicht Gegenstand/Verbraucher sind, oder Löschanforderungen hat Auswirkungen auf alle [!DNL Privacy Service] Kunden und die Fähigkeit von [!DNL Privacy Service], die entsprechenden gesetzlichen Fristen zu unterstützen.
 
 Wenden Sie sich an Ihren Kundenbetreuer (CDM), um PII- oder Datenprobleme zu koordinieren und eine gewisse Anstrengung zu unternehmen.
 
 ## Wie erhalte ich Informationen über den Status meiner Datenschutzanfrage oder meines Auftrags?
 
-Sie können Details zu einem bestimmten Auftrag über die [!DNL Privacy Service] API oder die Benutzeroberfläche abrufen.
+Sie können Details zu einem bestimmten Auftrag über die [!DNL Privacy Service]-API oder -Benutzeroberfläche abrufen.
 
 ### Verwenden der API
 
-Um den Status eines bestimmten Auftrags mithilfe der [!DNL Privacy Service] API abzurufen, fordern Sie mithilfe der Auftrags-ID im Anforderungspfad eine Anforderung an den Stamm-Endpunkt (`GET /`) an. Weitere Informationen finden Sie im Abschnitt zur [Überprüfung des Auftragsstatus](api/privacy-jobs.md#check-the-status-of-a-job) im [!DNL Privacy Service] Entwicklerhandbuch.
+Um den Status eines bestimmten Auftrags mithilfe der API abzurufen, fordern Sie eine Anforderung an den Stammendpunkt (`GET /`) unter Verwendung der Auftragskennung im Anforderungspfad an. [!DNL Privacy Service] Weitere Informationen finden Sie im Abschnitt [Überprüfen des Status eines Auftrags](api/privacy-jobs.md#check-the-status-of-a-job) im [!DNL Privacy Service]-Entwicklerhandbuch.
 
 ### Verwenden der UI
 
-Alle aktiven Auftragsanforderungen werden im Widget &quot; **[!UICONTROL Auftragsanforderungen]** &quot;im Dashboard der [!DNL Privacy Service] Benutzeroberfläche aufgelistet. Der Status für jede Auftragsanforderung wird in der Spalte **[!UICONTROL Status]** angezeigt. Weitere Informationen zum Anzeigen von Auftragsanforderungen in der Benutzeroberfläche finden Sie im [Privacy Service-Benutzerhandbuch](ui/user-guide.md).
+Alle aktiven Auftragsanforderungen werden im Widget **[!UICONTROL Auftragsanforderungen]** im Dashboard [!DNL Privacy Service] der Benutzeroberfläche aufgelistet. Der Status für jede Auftragsanforderung wird unter der Spalte **[!UICONTROL Status]** angezeigt. Weitere Informationen zum Anzeigen von Auftragsanforderungen in der Benutzeroberfläche finden Sie im [Privacy Service-Benutzerhandbuch](ui/user-guide.md).
 
 ## Wie lade ich die Ergebnisse meiner abgeschlossenen Datenschutzaufträge herunter?
 
-Sowohl die [!DNL Privacy Service] API als auch die Benutzeroberfläche bieten Methoden zum Herunterladen der Ergebnisse abgeschlossener Aufträge im ZIP-Format.
+Die API und die Benutzeroberfläche von [!DNL Privacy Service] bieten Methoden zum Herunterladen der Ergebnisse abgeschlossener Aufträge im ZIP-Format.
 
 ### Verwenden der API
 
-Fordern Sie mithilfe der ID des Auftrags, dessen Ergebnisse Sie im Anforderungspfad herunterladen möchten, eine Anforderung an den Stamm-Endpunkt (`GET /`) in der [!DNL Privacy Service] API an. Wenn der Auftragsstatus abgeschlossen ist, enthält die API ein `downloadURL` Attribut im Antworttext. Dieses Attribut enthält eine URL, die Sie in die Adressleiste Ihres Browsers einfügen können, um die ZIP-Datei herunterzuladen.
+Stellen Sie eine Anforderung an den Stammendpunkt (`GET /`) in der [!DNL Privacy Service]-API mit der ID des Auftrags, dessen Ergebnisse Sie im Anforderungspfad herunterladen möchten. Wenn der Auftragsstatus abgeschlossen ist, enthält die API das Attribut `downloadURL` im Antworttext. Dieses Attribut enthält eine URL, die Sie in die Adressleiste Ihres Browsers einfügen können, um die ZIP-Datei herunterzuladen.
 
-Weitere Informationen finden Sie im Abschnitt zum [Suchen eines Auftrags nach seiner ID](api/privacy-jobs.md#check-the-status-of-a-job) im [!DNL Privacy Service] Entwicklerhandbuch.
+Weitere Informationen finden Sie im Abschnitt [Einen Auftrag nach der ID](api/privacy-jobs.md#check-the-status-of-a-job) im [!DNL Privacy Service]-Entwicklerhandbuch suchen.
 
 ### Verwenden der UI
 
-Suchen Sie im [!DNL Privacy Service] UI-Dashboard den Auftrag, den Sie herunterladen möchten, im Widget **Auftragsanforderungen** . Klicken Sie auf die ID des Auftrags, um die Seite &quot;Auftragsdetails&quot;zu öffnen. Klicken Sie von hier oben rechts auf **Herunterladen** , um die ZIP-Datei herunterzuladen. Detailliertere Anweisungen finden Sie im [Privacy Service-Benutzerhandbuch](ui/user-guide.md) .
+Suchen Sie im Dashboard [!DNL Privacy Service] der Benutzeroberfläche den Auftrag, den Sie herunterladen möchten, im Widget **Anforderungen für Aufträge**. Wählen Sie die ID des Auftrags aus, um die Seite &quot;Auftragsdetails&quot;zu öffnen. Wählen Sie **Download** in der oberen rechten Ecke aus, um die ZIP-Datei herunterzuladen. Detailliertere Anweisungen finden Sie im [Privacy Service-Benutzerhandbuch](ui/user-guide.md).
 
 ## Allgemeine Fehlermeldungen
 
-Die folgende Tabelle enthält einige häufige Fehler in [!DNL Privacy Service]mit Beschreibungen, die bei der Lösung der jeweiligen Probleme helfen.
+In der folgenden Tabelle sind einige häufige Fehler in [!DNL Privacy Service] mit Beschreibungen aufgeführt, die bei der Lösung der jeweiligen Probleme hilfreich sind.
 
 | Fehlermeldung | Beschreibung |
 | --- | --- |
-| Benutzer-IDs wurden nicht gefunden. | Einige der in der Anforderung angegebenen Benutzer-IDs konnten nicht gefunden werden und wurden übersprungen. Stellen Sie sicher, dass Sie die richtigen Namensraum- und ID-Werte in der Anforderungs-Nutzlast verwenden. Eine genauere Erläuterung finden Sie im Dokument zur [Bereitstellung von Identitätsdaten](./identity-data.md) . |
-| Ungültiger Namensraum | Ein bereitgestellter Identitäts-Namensraum für eine Benutzer-ID war ungültig. Eine Liste der zulässigen Namensraum finden Sie im Abschnitt zu [Namensräumen](./api/appendix.md#standard-namespaces) der Standardidentität im [!DNL Privacy Service] Entwicklerhandbuch. Wenn Sie einen benutzerspezifischen Namensraum verwenden, stellen Sie sicher, dass Sie die ID- `type` Eigenschaft auf &quot;benutzerspezifisch&quot;setzen. |
+| Benutzer-IDs wurden nicht gefunden. | Einige der in der Anforderung angegebenen Benutzer-IDs konnten nicht gefunden werden und wurden übersprungen. Stellen Sie sicher, dass Sie die richtigen Namensraum- und ID-Werte in der Anforderungs-Nutzlast verwenden. Weitere Informationen finden Sie im Dokument [Identitätsdaten](./identity-data.md) bereitstellen. |
+| Ungültiger Namensraum | Ein bereitgestellter Identitäts-Namensraum für eine Benutzer-ID war ungültig. Eine Liste der zulässigen Namensraum finden Sie im Abschnitt [Standardidentitäts-Namensraum](./api/appendix.md#standard-namespaces) im [!DNL Privacy Service] Entwicklerhandbuch. Wenn Sie einen benutzerspezifischen Namensraum verwenden, stellen Sie sicher, dass Sie die `type`-Eigenschaft der ID auf &quot;custom&quot;setzen. |
 | Teilweise abgeschlossen | Der Auftrag wurde erfolgreich abgeschlossen, einige Daten waren jedoch für die jeweilige Anforderung nicht verfügbar und wurden übersprungen. |
 | Die Daten haben nicht das erforderliche Format. | Einer oder mehrere Datenwerte für die angegebene Anwendung wurden falsch formatiert. Weitere Informationen finden Sie in den Auftragsdetails. |
-| Das IMS-Org wurde nicht bereitgestellt. | Diese Meldung tritt auf, wenn Ihr IMS-Org nicht bereitgestellt wurde [!DNL Privacy Service]. Wenden Sie sich für weitere Informationen an Ihren Administrator. |
-| Zugriff und Berechtigungen sind erforderlich. | Zugriff und Berechtigungen sind erforderlich, um verwendet werden zu können [!DNL Privacy Service]. Wenden Sie sich an Ihren Administrator, um Zugriff zu erhalten. |
+| Das IMS-Org wurde nicht bereitgestellt. | Diese Meldung tritt auf, wenn Ihr IMS-Org nicht für [!DNL Privacy Service] bereitgestellt wurde. Wenden Sie sich für weitere Informationen an Ihren Administrator. |
+| Zugriff und Berechtigungen sind erforderlich. | Zugriff und Berechtigungen sind erforderlich, um [!DNL Privacy Service] verwenden zu können. Wenden Sie sich an Ihren Administrator, um Zugriff zu erhalten. |
 | Beim Hochladen und Archivieren der Zugangsdaten ist ein Problem aufgetreten. | Wenn dieser Fehler auftritt, laden Sie die Zugangsdaten erneut hoch und versuchen Sie es erneut. |
 | Die Arbeitslast wurde für die aktuelle Dokument-Rate überschritten. | Wenn dieser Fehler auftritt, reduzieren Sie die Übermittlungsrate und versuchen Sie es erneut. |
