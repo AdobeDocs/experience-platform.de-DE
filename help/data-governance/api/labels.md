@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Beschriftungen-Endpunkt
 topic: developer guide
+description: Erfahren Sie, wie Sie mit der Policy Service API Datenverwendungsbeschriftungen in Experience Platform verwalten.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '509'
 ht-degree: 6%
 
 ---
@@ -14,19 +15,19 @@ ht-degree: 6%
 
 # Beschriftungen-Endpunkt
 
-Mit Datenverwendungsbeschriftungen können Sie Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Mit dem `/labels` Endpunkt im [!DNL Policy Service API] können Sie Datenverwendungsbeschriftungen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Mit Datenverwendungsbeschriftungen können Sie Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Mit dem `/labels`-Endpunkt in [!DNL Policy Service API] können Sie Datenverwendungsbeschriftungen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 >[!NOTE]
 >
->Der `/labels` Endpunkt wird nur zum Abrufen, Erstellen und Aktualisieren von Beschriftungen für die Datenverwendung verwendet. Anweisungen zum Hinzufügen von Bezeichnungen zu Datensätzen und Feldern mithilfe von API-Aufrufen finden Sie im Handbuch zur [Verwaltung von Datenbezeichnungen](../labels/dataset-api.md).
+>Der `/labels`-Endpunkt wird nur zum Abrufen, Erstellen und Aktualisieren von Datenverwendungsbeschriftungen verwendet. Anweisungen zum Hinzufügen von Bezeichnungen zu Datasets und Feldern mithilfe von API-Aufrufen finden Sie im Handbuch [Verwalten von Datensatzbeschriftungen](../labels/dataset-api.md).
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
-## Retrieve a list of labels {#list}
+## Abrufen einer Liste von Beschriftungen {#list}
 
-Sie können alle `core` bzw. `custom` Bezeichnungen durch eine GET an `/labels/core` bzw. `/labels/custom`anfordern.
+Sie können alle Bezeichnungen `core` oder `custom` durch eine GET an `/labels/core` bzw. `/labels/custom` Liste haben.
 
 **API-Format**
 
@@ -50,7 +51,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von benutzerdefinierten Beschriftungen zurück, die vom System abgerufen werden. Da die obige Beispielanforderung ausgeführt wurde, zeigt `/labels/custom`die unten stehende Antwort nur benutzerdefinierte Beschriftungen an.
+Eine erfolgreiche Antwort gibt eine Liste von benutzerdefinierten Beschriftungen zurück, die vom System abgerufen werden. Da die obige Beispielanforderung an `/labels/custom` erfolgte, zeigt die unten stehende Antwort nur benutzerdefinierte Bezeichnungen an.
 
 ```json
 {
@@ -106,9 +107,9 @@ Eine erfolgreiche Antwort gibt eine Liste von benutzerdefinierten Beschriftungen
 }
 ```
 
-## Eine Beschriftung nachschlagen {#look-up}
+## Suchen Sie eine Beschriftung {#look-up}
 
-Sie können eine bestimmte Beschriftung nachschlagen, indem Sie die `name` Eigenschaft dieser Beschriftung in den Pfad einer GET-Anforderung zur [!DNL Policy Service] API aufnehmen.
+Sie können eine bestimmte Beschriftung nachschlagen, indem Sie die `name`-Eigenschaft dieser Beschriftung in den Pfad einer GET-Anforderung zur [!DNL Policy Service]-API aufnehmen.
 
 **API-Format**
 
@@ -119,11 +120,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{LABEL_NAME}` | The `name` property of the custom label you want to look up. |
+| `{LABEL_NAME}` | Die `name`-Eigenschaft der benutzerdefinierten Beschriftung, die Sie nachschlagen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird die benutzerdefinierte Beschriftung `L2`wie im Pfad angegeben abgerufen.
+Die folgende Anforderung ruft die benutzerdefinierte Beschriftung `L2` ab, wie im Pfad angegeben.
 
 ```shell
 curl -X GET \
@@ -160,9 +161,9 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 }
 ```
 
-## Erstellen oder Aktualisieren einer benutzerdefinierten Bezeichnung {#create-update}
+## Erstellen oder aktualisieren Sie eine benutzerdefinierte Beschriftung {#create-update}
 
-Um eine benutzerdefinierte Bezeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT an die [!DNL Policy Service] API senden.
+Um eine benutzerdefinierte Bezeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT an die [!DNL Policy Service]-API anfordern.
 
 **API-Format**
 
@@ -172,11 +173,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{LABEL_NAME}` | Die `name` Eigenschaft einer benutzerdefinierten Beschriftung. Wenn keine benutzerdefinierte Bezeichnung mit diesem Namen vorhanden ist, wird eine neue Bezeichnung erstellt. Wenn eine vorhanden ist, wird diese Bezeichnung aktualisiert. |
+| `{LABEL_NAME}` | Die `name`-Eigenschaft einer benutzerdefinierten Bezeichnung. Wenn keine benutzerdefinierte Bezeichnung mit diesem Namen vorhanden ist, wird eine neue Bezeichnung erstellt. Wenn eine vorhanden ist, wird diese Bezeichnung aktualisiert. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein neues Etikett erstellt, `L3`das Daten beschreiben soll, die Informationen zu den ausgewählten Zahlungsplänen der Kunden enthalten.
+Mit der folgenden Anforderung wird ein neues Etikett (`L3`) erstellt, das Daten beschreiben soll, die Informationen zu den ausgewählten Zahlungsplänen der Kunden enthalten.
 
 ```shell
 curl -X PUT \
@@ -196,7 +197,7 @@ curl -X PUT \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Eine eindeutige Zeichenfolgenkennung für die Bezeichnung. Dieser Wert wird für Nachschlagezwecke und die Anwendung der Beschriftung auf Datensätze und Felder verwendet. Es wird daher empfohlen, kurz und knapp zu sein. |
-| `category` | Die Kategorie des Etiketts. Sie können zwar eigene Kategorien für benutzerdefinierte Beschriftungen erstellen, es wird jedoch dringend empfohlen, die Beschriftung `Custom` in der Benutzeroberfläche anzuzeigen. |
+| `category` | Die Kategorie des Etiketts. Sie können zwar eigene Kategorien für benutzerdefinierte Beschriftungen erstellen, es wird jedoch dringend empfohlen, `Custom` zu verwenden, wenn die Beschriftung in der Benutzeroberfläche angezeigt werden soll. |
 | `friendlyName` | Ein benutzerfreundlicher Name für die Beschriftung, der zu Anzeigezwecken verwendet wird. |
 | `description` | (Optional) Eine Beschreibung der Beschriftung, um einen weiteren Kontext bereitzustellen. |
 
@@ -228,4 +229,4 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung des `/labels` Endpunkts in der Policy Service API behandelt. Anweisungen zum Anwenden von Bezeichnungen auf Datensätze und Felder finden Sie im API-Handbuch [für](../labels/dataset-api.md)Datensatzbeschriftungen.
+In diesem Handbuch wurde die Verwendung des Endpunkts `/labels` in der Policy Service API behandelt. Anweisungen zum Anwenden von Bezeichnungen auf Datensätze und Felder finden Sie im Handbuch [Datenbezeichnungen-API](../labels/dataset-api.md).
