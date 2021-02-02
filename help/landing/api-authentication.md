@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: Experience Platform;Home;beliebte Themen;Authentifizieren;Zugriff
 solution: Experience Platform
 title: Experience Platform-APIs authentifizieren und aufrufen
 topic: tutorial
@@ -8,7 +8,7 @@ description: 'Dieses Dokument bietet eine schrittweise Anleitung für den Zugrif
 translation-type: tm+mt
 source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '882'
 ht-degree: 42%
 
 ---
