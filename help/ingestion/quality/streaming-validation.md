@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
+keywords: Experience Platform;Home;beliebte Themen;Streaming;Streaming-Erfassung;Streaming-Validierung;Validierung;Streaming-Erfassungsvalidierung;Validierung;Synchrones Validieren;Synchrones Validieren;Asynchrone Validierung;Asynchrone Validierung;asynchrone Validierung;
 solution: Experience Platform
 title: Validieren der Streaming-Erfasssung
 topic: tutorial
 type: Tutorial
 description: Mit der Streaming-Erfassung können Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit nach Adobe Experience Platform hochladen. Die Streaming-Erfassungsmethode-APIs unterstützen zwei Überprüfungsmodi - synchron und asynchron.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 23%
+source-wordcount: '875'
+ht-degree: 22%
 
 ---
 
@@ -23,7 +23,7 @@ Mit der Streaming-Erfassung können Sie Ihre Daten mit Streaming-Endpunkten in E
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Eine der Methoden, mit denen Daten gesendet werden können [!DNL Experience Platform].
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Eine der Methoden, mit denen Daten gesendet werden können  [!DNL Experience Platform].
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -31,19 +31,19 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Schema Registry] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -63,7 +63,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 Die synchrone Validierung ist eine Methode der Validierung, die sofort Rückmeldungen darüber liefert, warum eine Erfassung fehlgeschlagen ist. Bei einem Fehler werden die fehlerhaften Datensätze jedoch abgelegt und können nicht nachgelagert werden. Daher sollte die synchrone Validierung nur während des Entwicklungsprozesses verwendet werden. Bei der synchronen Validierung werden die Aufrufer sowohl über das Ergebnis der XDM-Überprüfung als auch, falls diese fehlgeschlagen ist, über den Grund für den Fehler informiert.
 
-Standardmäßig ist die synchrone Überprüfung nicht aktiviert. Um dies zu aktivieren, müssen Sie den optionalen Parameter &quot;Abfrage&quot; `synchronousValidation=true` bei API-Aufrufen übergeben. Darüber hinaus ist eine synchrone Validierung derzeit nur verfügbar, wenn sich Ihr Stream-Endpunkt im VA7-Rechenzentrum befindet.
+Standardmäßig ist die synchrone Überprüfung nicht aktiviert. Um sie zu aktivieren, müssen Sie den optionalen Parameter für die Abfrage `synchronousValidation=true` bei API-Aufrufen einreichen. Darüber hinaus ist eine synchrone Validierung derzeit nur verfügbar, wenn sich Ihr Stream-Endpunkt im VA7-Rechenzentrum befindet.
 
 Wenn eine Nachricht während der synchronen Überprüfung fehlschlägt, wird die Nachricht nicht in die Ausgabelange geschrieben, was Benutzern sofortige Rückmeldungen gibt.
 
@@ -75,7 +75,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of the streaming connection previously created. |
+| `{CONNECTION_ID}` | Der `id`-Wert der zuvor erstellten Streaming-Verbindung. |
 
 **Anfrage**
 
@@ -138,11 +138,11 @@ Bei aktivierter synchroner Validierung enthält eine erfolgreiche Antwort alle a
 }
 ```
 
-Die oben genannte Antwort Liste, wie viele Verstöße gegen das Schema festgestellt wurden und wie hoch die Verstöße waren. In dieser Antwort heißt es beispielsweise, dass die Schlüssel `workEmail` `person` und Schlüssel nicht im Schema definiert wurden und daher nicht zulässig sind. Er kennzeichnet auch den Wert für `_id` als inkorrekt, da das Schema eine erwartete `string`, aber stattdessen eine `long` eingefügt wurde. Beachten Sie, dass der Überprüfungsdienst die Verarbeitung dieser Meldung **stoppt** , sobald fünf Fehler aufgetreten sind. Andere Nachrichten werden jedoch weiterhin analysiert.
+Die oben genannte Antwort Liste, wie viele Verstöße gegen das Schema festgestellt wurden und wie hoch die Verstöße waren. In dieser Antwort wird beispielsweise angegeben, dass die Schlüssel `workEmail` und `person` im Schema nicht definiert wurden und daher nicht zulässig sind. Er kennzeichnet auch den Wert für `_id` als inkorrekt, da das Schema ein `string` erwartet hat, stattdessen aber ein `long` eingefügt wurde. Beachten Sie, dass der Überprüfungsdienst nach Auftreten von fünf Fehlern **stop** diese Meldung verarbeitet. Andere Nachrichten werden jedoch weiterhin analysiert.
 
 ## Asynchrone Überprüfung
 
-Die asynchrone Validierung ist eine Methode der Validierung, die kein sofortiges Feedback liefert. Stattdessen werden die Daten an einen fehlgeschlagenen Stapel gesendet, [!DNL Data Lake] um Datenverluste zu vermeiden. Diese fehlerhaften Daten können später abgerufen werden, um eine weitere Analyse zu erhalten und erneut abzuspielen. Diese Methode sollte bei der Herstellung verwendet werden. Sofern nicht anders angegeben, funktioniert die Streaming-Erfassung im asynchronen Validierungsmodus.
+Die asynchrone Validierung ist eine Methode der Validierung, die kein sofortiges Feedback liefert. Stattdessen werden die Daten an einen fehlgeschlagenen Stapel in [!DNL Data Lake] gesendet, um Datenverlust zu vermeiden. Diese fehlerhaften Daten können später abgerufen werden, um eine weitere Analyse zu erhalten und erneut abzuspielen. Diese Methode sollte bei der Herstellung verwendet werden. Sofern nicht anders angegeben, funktioniert die Streaming-Erfassung im asynchronen Validierungsmodus.
 
 **API-Format**
 
@@ -152,7 +152,7 @@ POST /collection/{CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of the streaming connection previously created. |
+| `{CONNECTION_ID}` | Der `id`-Wert der zuvor erstellten Streaming-Verbindung. |
 
 **Anfrage**
 
@@ -199,7 +199,7 @@ Dieser Abschnitt enthält Informationen darüber, was die verschiedenen Statusco
 | ----------- | ------------- |
 | 200 | Erfolg. Bei der synchronen Validierung bedeutet dies, dass die Validierungsprüfungen bestanden haben. Bei der asynchronen Validierung bedeutet dies, dass die Nachricht nur erfolgreich empfangen wurde. Die Benutzer können den Status der Nachricht ermitteln, indem sie den Datensatz beobachten. |
 | 400 | Fehler. Es stimmt etwas mit deiner Anfrage nicht. Eine Fehlermeldung mit weiteren Details erhalten Sie von den Streaming Validation Services. |
-| 401 | Fehler. Ihre Anfrage ist nicht autorisiert - Sie müssen sie mit einem Inhabertoken anfordern. Weitere Informationen zur Zugangsanfrage finden Sie in diesem [Tutorial](../../tutorials/authentication.md) oder in diesem [Blog-Beitrag](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Fehler. Ihre Anfrage ist nicht autorisiert - Sie müssen sie mit einem Inhabertoken anfordern. Weitere Informationen zum Anfordern des Zugriffs finden Sie in diesem [Tutorial](https://www.adobe.com/go/platform-api-authentication-en) oder diesem [Blog-Beitrag](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Fehler. Es liegt ein interner Systemfehler vor. |
 | 501 | Fehler. Das bedeutet, dass die synchrone Validierung für diesen Speicherort **nicht** unterstützt wird. |
 | 503 | Fehler. Der Dienst ist derzeit nicht verfügbar. Kunden sollten es mindestens dreimal mit einer exponentiellen Back-off-Strategie versuchen. |
