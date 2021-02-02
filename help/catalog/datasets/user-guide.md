@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
+keywords: Experience Platform;Startseite;beliebte Themen;Datensatz aktivieren;Datensatz;Datensatz;Datensatz
 solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 topic: datasets
 description: Dieses Benutzerhandbuch zu Datensätzen enthält Anweisungen zur Durchführung allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
+source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 73%
+source-wordcount: '1143'
+ht-degree: 72%
 
 ---
 
@@ -24,13 +24,13 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 * [Datensätze](overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie Ihre eigenen benutzerdefinierten XDM-Schema mithilfe der [!DNL Schema Editor] in der [!DNL Platform] Benutzeroberfläche erstellen.
+   * [Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie Ihre eigenen benutzerdefinierten XDM-Schema mithilfe der  [!DNL Schema Editor] in der  [!DNL Platform] Benutzeroberfläche erstellen.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Sorgen Sie bei der Nutzung von Kundendaten für die Einhaltung von Vorschriften, Begrenzungen und Richtlinien.
 
 ## Anzeigen von Datensätzen
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
+Klicken Sie in der Benutzeroberfläche [!DNL Experience Platform] auf **[!UICONTROL Datensätze]** in der linken Navigation, um das Dashboard **[!UICONTROL Datensätze]** zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -49,7 +49,7 @@ Im Vorschaufenster wird rechts für den Datensatz die hierarchische Ansicht des 
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+Für stabilere Methoden zum Zugriff auf Ihre Daten stellt [!DNL Experience Platform] nachgelagerte Dienste wie [!DNL Query Service] und [!DNL JupyterLab] zur Untersuchung und Analyse von Daten bereit. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Query Service – Übersicht](../../query-service/home.md)
 * [JupyterLab-Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md)
@@ -65,7 +65,7 @@ Im folgenden Bildschirm werden Ihnen die folgenden zwei Optionen zum Erstellen e
 * [Datensatz aus Schema erstellen](#schema)
 * [Datensatz aus CSV-Datei erstellen](#csv)
 
-### Datensatz mit vorhandenem Schema erstellen {#schema}
+### Datensatz mit vorhandenem Schema erstellen  {#schema}
 
 Klicken Sie im Bildschirm **[!UICONTROL Datensatz erstellen]** auf **[!UICONTROL Datensatz aus Schema erstellen]**, um einen neuen leeren Datensatz zu erstellen.
 
@@ -79,7 +79,7 @@ Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie d
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Datensatz mit einer CSV-Datei erstellen {#csv}
+### Datensatz mit einer CSV-Datei erstellen  {#csv}
 
 Wenn Sie einen Datensatz mit einer CSV-Datei erstellen, wird ein Ad-hoc-Schema erstellt, um dem Datensatz eine Struktur zu geben, die mit der bereitgestellten CSV-Datei übereinstimmt. Klicken Sie im Bildschirm **[!UICONTROL Datensatz erstellen]** auf das Feld **[!UICONTROL Datensatz aus CSV-Datei erstellen]**.
 
@@ -99,18 +99,20 @@ Der Schritt **[!UICONTROL Daten hinzufügen]** wird angezeigt. Laden Sie die CSV
 
 ## Datensatz für Echtzeit-Kundenprofile aktivieren
 
-Jeder Datensatz bietet die Möglichkeit, Kundenprofile mit den erfassten Daten anzureichern. To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-time Customer Profile]. Ein kompatibles Schema erfüllt folgende Anforderungen:
+Jeder Datensatz bietet die Möglichkeit, Kundenprofile mit den erfassten Daten anzureichern. Zu diesem Zweck muss das Schema, dem der Datensatz entspricht, für die Verwendung in [!DNL Real-time Customer Profile] kompatibel sein. Ein kompatibles Schema erfüllt folgende Anforderungen:
 
 * Das Schema weist mindestens ein Attribut auf, das als Identitätseigenschaft definiert wurde.
 * Das Schema verfügt über eine Identitätseigenschaft, die als primäre Identität definiert wurde.
 
-For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
+Weitere Informationen zum Aktivieren eines Schemas für [!DNL Profile] finden Sie im [Schema-Editor-Benutzerhandbuch](../../xdm/tutorials/create-schema-ui.md).
 
 Um einen Datensatz für Profil zu aktivieren, rufen Sie seinen **[!UICONTROL Datensatzaktivität]**-Bildschirm auf und klicken Sie auf den **[!UICONTROL Profil]**-Umschalter in der Spalte **[!UICONTROL Eigenschaften]**. Nach der Aktivierung werden Daten, die in den Datensatz aufgenommen werden, auch zum Ausfüllen von Kundenprofilen verwendet.
 
-![](../images/datasets/user-guide/enable_dataset_profiles.png)
+>[!NOTE]
+>
+>Wenn ein Datensatz bereits Daten enthält und dann für [!DNL Profile] aktiviert ist, werden die vorhandenen Daten nicht automatisch von [!DNL Profile] genutzt. Nachdem ein Datensatz für [!DNL Profile] aktiviert wurde, sollten Sie alle vorhandenen Daten neu erfassen, damit sie zu den Profilen der Kunden beitragen.
 
-If a dataset already contains data and is then enabled for [!DNL Profile], the existing data is not consumed by [!DNL Profile]. After a dataset is enabled for [!DNL Profile], it is recommended that you re-ingest any existing data to have them populate customer profiles.
+![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
 ## Data Governance in einem Datensatz verwalten und durchsetzen
 
@@ -122,7 +124,7 @@ Sie können einen Datensatz löschen, indem Sie zunächst auf den Bildschirm **[
 
 >[!NOTE]
 >
->Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
+>Datasets, die von Adobe-Anwendungen und -Diensten erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder [!DNL Offer Decisioning]), können nicht gelöscht werden.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -132,11 +134,13 @@ Ein Bestätigungsdialog wird angezeigt. Klicken Sie auf **[!UICONTROL Löschen]*
 
 ## Profil-aktivierten Datensatz löschen
 
-If a dataset is enabled for [!DNL Profile], deleting it through the UI disables the dataset for ingestion, but does not automatically delete the dataset in the backend. Damit der Datensatz einschließlich der Profil- und Identitätsdaten, die er enthält, vollständig gelöscht wird, muss eine zusätzliche Löschanfrage gestellt werden. For steps on how to properly delete data from the [!DNL Profile] store, see the [!DNL Real-time Customer Profile] API [sub-guide on profile system jobs, also known as &quot;delete requests&quot;](../../profile/api/profile-system-jobs.md).
+Wenn ein Datensatz für [!DNL Profile] aktiviert ist, wird er beim Löschen dieses Datensatzes über die Benutzeroberfläche sowohl aus dem Data Lake als auch aus dem Profil-Store in Platform gelöscht.
+
+Sie können einen Datensatz nur aus dem [!DNL Profile]-Speicher löschen (wobei die Daten im Data Lake verbleiben), indem Sie die Echtzeit-Customer Profil-API verwenden. Weitere Informationen finden Sie im Handbuch [API-Endpunkt für Systemaufträge](../../profile/api/profile-system-jobs.md) des Profils.
 
 ## Überwachen der Datenerfassung
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the left-navigation. Mit dem **[!UICONTROL Monitoring]**-Dashboard können Sie die Status von aus der Batch- oder Streaming-Erfassung eingehenden Daten anzeigen. Um die Status einzelner Batches anzuzeigen, klicken Sie entweder auf **[!UICONTROL Batch End-to-End]** oder auf **[!UICONTROL Streaming End-to-End]**. Die Dashboards führen alle Batch- oder Streaming-Erfassungsläufe auf, einschließlich jener, die erfolgreich waren, fehlgeschlagen sind oder noch ausgeführt werden. Jede Auflistung enthält Details zum Batch, einschließlich der Batch-Kennung, dem Namen des Zieldatensatzes und der Zahl der erfassten Einträge. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
+Klicken Sie in der Benutzeroberfläche [!DNL Experience Platform] in der linken Navigation auf **[!UICONTROL Monitoring]**. Mit dem **[!UICONTROL Monitoring]**-Dashboard können Sie die Status von aus der Batch- oder Streaming-Erfassung eingehenden Daten anzeigen. Um die Status einzelner Batches anzuzeigen, klicken Sie entweder auf **[!UICONTROL Batch End-to-End]** oder auf **[!UICONTROL Streaming End-to-End]**. Die Dashboards führen alle Batch- oder Streaming-Erfassungsläufe auf, einschließlich jener, die erfolgreich waren, fehlgeschlagen sind oder noch ausgeführt werden. Jede Auflistung enthält Details zum Batch, einschließlich der Batch-Kennung, dem Namen des Zieldatensatzes und der Zahl der erfassten Einträge. Wenn der Zielgruppe-Datensatz für [!DNL Profile] aktiviert ist, wird auch die Anzahl der erfassten Identitäts- und Profil-Datensätze angezeigt.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
@@ -150,7 +154,7 @@ Wenn Sie den Batch löschen möchten, klicken Sie rechts oben im Dashboard auf *
 
 ## Nächste Schritte
 
-This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Platform] workflows involving datasets, please refer to the following tutorials:
+Dieses Benutzerhandbuch enthält Anweisungen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der [!DNL Experience Platform]-Benutzeroberfläche. Anweisungen zum Durchführen allgemeiner Workflows mit Datensätzen finden Sie in den folgenden Übungen:[!DNL Platform]
 
 * [Datensatz mit APIs erstellen](create.md)
 * [Datensatzdaten mit der Data Access-API abfragen](../../data-access/home.md)
