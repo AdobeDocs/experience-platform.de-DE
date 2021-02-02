@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;dule;DULE
+keywords: Experience Platform;Home;beliebte Themen;Zeitplan;DULE
 solution: Experience Platform
 title: Datennutzungsrichtlinien – Übersicht
 topic: policies
 description: Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen.
 translation-type: tm+mt
-source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1010'
 ht-degree: 10%
 
 ---
@@ -15,54 +15,54 @@ ht-degree: 10%
 
 # Datennutzungsrichtlinien – Übersicht
 
-Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datenverwendungsrichtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, von denen Sie Daten innerhalb von [!DNL Experience Platform] ausführen dürfen oder von denen Sie eingeschränkt sind.
 
 Dieses Dokument bietet einen allgemeinen Überblick über die Richtlinien zur Datenverwendung und enthält Links zu weiteren Dokumentationen zum Arbeiten mit Richtlinien in der Benutzeroberfläche oder API.
 
 ## Marketing-Aktionen {#marketing-actions}
 
-Marketingaktionen (auch als Marketing-Nutzungsszenarien bezeichnet) im Rahmen des Data Governance-Rahmens sind Aktionen, die ein [!DNL Experience Platform] Datenkonsument durchführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Daher wird eine Datenverwendungsrichtlinie wie folgt definiert:
+Marketingaktionen (auch als Marketing-Nutzungsszenarien bezeichnet) im Rahmen des Data Governance-Frameworks sind Aktionen, die ein [!DNL Experience Platform]-Benutzer ausführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Daher wird eine Datenverwendungsrichtlinie wie folgt definiert:
 
 1. Eine bestimmte Marketingaktion
 2. Die Datenverwendungs-Beschriftungen, die für diese Aktion eingeschränkt sind, gegen
 
-Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. &quot;Persönlich identifizierbare Informationen&quot;(PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine &quot;I&quot;-Beschriftung (Identitätsdaten) enthält, erhalten Sie eine Antwort der [!DNL Policy Service] Ihnen mitteilenden Person, dass eine Datenverwendungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. persönliche identifizierbare Informationen (PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine &quot;I&quot;-Beschriftung (Identitätsdaten) enthält, erhalten Sie eine Antwort von [!DNL Policy Service], in der Sie darauf hingewiesen werden, dass eine Datenverwendungsrichtlinie verletzt wurde.
 
 >[!NOTE]
 >
 >Marketingaktionen allein schränken die Datenverwendung nicht ein. Sie müssen in aktivierte Datenverwendungsrichtlinien eingeschlossen werden, damit diese Aktionen auf Richtlinienverletzungen hin bewertet werden können.
 
-Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten relevante Marketingaktionen angezeigt werden, damit Richtlinienverletzungen festgestellt werden können. Anschließend können Sie mit der [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) nach Richtlinienverletzungen in Ihrer Integration suchen.
+Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten relevante Marketingaktionen angezeigt werden, damit Richtlinienverletzungen festgestellt werden können. Anschließend können Sie die [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) verwenden, um Richtlinienverletzungen in Ihrer Integration zu prüfen.
 
 >[!NOTE]
 >
->Wenn Sie [!DNL Real-time Customer Data Platform]diese verwenden, können Sie Marketingverwendungsfälle für Ziele einrichten, um die Durchsetzung der Richtlinie zu automatisieren. Weitere Informationen finden Sie im Dokument zur [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md) .
+>Wenn Sie [!DNL Real-time Customer Data Platform] verwenden, können Sie Anwendungsfälle für das Marketing für Ziele einrichten, um die Durchsetzung der Richtlinie zu automatisieren. Weitere Informationen finden Sie im Dokument [Datenverwaltung in Echtzeit-CDP](../../rtcdp/privacy/data-governance-overview.md).
 
-Eine Liste der [verfügbaren, von der Adobe definierten Marketingaktionen](#core-actions)finden Sie im Anhang zu diesem Dokument. Sie können auch eigene benutzerspezifische Marketingaktionen mit der [!DNL Policy Service] API oder der [!DNL Experience Platform ]Benutzeroberfläche definieren. Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
+Eine Liste von [verfügbaren, von der Adobe definierten Marketingaktionen](#core-actions) finden Sie im Anhang zu diesem Dokument. Sie können Ihre eigenen benutzerspezifischen Marketingaktionen auch mit der API oder der [!DNL Policy Service]-Benutzeroberfläche definieren. [!DNL Experience Platform ] Weitere Informationen zum Arbeiten mit Marketingaktionen und -richtlinien finden Sie im nächsten Abschnitt.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
-## Managing data usage policies {#manage}
+## Verwalten von Datenverwendungsrichtlinien {#manage}
 
-Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenverwaltungen die [!DNL Policy Service] API oder die [!DNL Experience Platform] Benutzeroberfläche verwenden, um Richtlinien zu verwalten und auszuwerten, die mit Marketingaktionen zu tun haben, die für Daten mit Datenverwendungsbeschriftungen durchgeführt werden. Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketingaktionen arbeiten, um zu bewerten, ob eine bestimmte Aktion eine Datenverwendungsrichtlinie verletzt.
+Sobald die Beschriftungen für die Datenverwendung angewendet wurden, können Datenverwaltungen die API oder die Benutzeroberfläche [!DNL Policy Service] verwenden, um Richtlinien zu verwalten und auszuwerten, die mit Marketingaktionen in Verbindung stehen, die Daten mit Datenverwendungsbeschriftungen enthalten. [!DNL Experience Platform] Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketingaktionen arbeiten, um zu bewerten, ob eine bestimmte Aktion eine Datenverwendungsrichtlinie verletzt.
 
 >[!IMPORTANT]
 >
 >Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
 
-Eine schrittweise Anleitung zum Arbeiten mit Marketingaktionen und Datenverwendungsrichtlinien in der API finden Sie im Lernprogramm zum [Erstellen und Auswerten von Datenverwendungsrichtlinien](create.md). For more information the key operations provided by the [!DNL Policy Service] API, see the [Policy Service developer guide](../api/getting-started.md).
+Eine schrittweise Anleitung zum Arbeiten mit Marketingaktionen und Datenverwendungsrichtlinien in der API finden Sie im Lernprogramm [Erstellen und Auswerten von Datenverwendungsrichtlinien](create.md). Weitere Informationen zu den Schlüsselvorgängen, die von der [!DNL Policy Service]-API bereitgestellt werden, finden Sie im [Policy Service-Entwicklerhandbuch](../api/getting-started.md).
 
-Weitere Informationen zum Arbeiten mit Marketingaktionen und Richtlinien in der [!DNL Platform] Benutzeroberfläche finden Sie im Benutzerhandbuch [zu](./user-guide.md)Datenverwendungsrichtlinien.
+Informationen zum Arbeiten mit Marketingaktionen und Richtlinien in der [!DNL Platform]-Benutzeroberfläche finden Sie im Benutzerhandbuch [Datenverwendungsrichtlinie](./user-guide.md).
 
 ## Nächste Schritte
 
-Dieses Dokument bietet eine Einführung in die Richtlinien zur Datenverwendung innerhalb des [!DNL Data Governance] Frameworks. Sie können nun die Prozessdokumentation, die mit diesem Handbuch verknüpft ist, lesen, um mehr über die Arbeit mit Richtlinien in der API und Benutzeroberfläche zu erfahren.
+In diesem Dokument wurde eine Einführung in die Datenverwendungsrichtlinien im [!DNL Data Governance]-Framework bereitgestellt. Sie können nun die Prozessdokumentation, die mit diesem Handbuch verknüpft ist, lesen, um mehr über die Arbeit mit Richtlinien in der API und Benutzeroberfläche zu erfahren.
 
 ## Anhang
 
