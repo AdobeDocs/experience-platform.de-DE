@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
+keywords: Experience Platform;Modell für maschinelles Lernen;Arbeitsbereich für Datenwissenschaften;Echtzeit-Profil für Kunden;beliebte Themen;Einblicke in maschinelles Lernen
 solution: Experience Platform
 title: Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen anreichern
 topic: tutorial
@@ -8,8 +8,8 @@ description: Dieses Dokument bietet einen Leitfaden, wie Sie Ihr Echtzeit-Kunden
 translation-type: tm+mt
 source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '635'
+ht-degree: 26%
 
 ---
 
