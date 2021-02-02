@@ -1,13 +1,13 @@
 ---
-keywords: personalization;Personalization
+keywords: Personalisierung;Personalisierung
 title: Personalisierungsziele
 seo-title: Personalisierungsziele
 description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
 seo-description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
 translation-type: tm+mt
-source-git-commit: 3486aa053be903a3844bbc79a957699b18b30a74
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 94%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
 
-Derzeit unterstützt CDP in Echtzeit die unten aufgeführten Personalisierungsziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Derzeit unterstützt Platform die unten aufgeführten Personalisierungsziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 * [Adobe Target-Erweiterung](./adobe-target.md)
 * [Adobe Target v2-Erweiterung](./adobe-target-v2.md)
