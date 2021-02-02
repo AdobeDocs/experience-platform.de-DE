@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;
+keywords: Experience Platform;Home;beliebte Themen;API;API;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich
 solution: Experience Platform
 title: Übersicht über den Arbeitsbereich für Schemas
 description: Dieser Überblick beschreibt die wichtigsten Funktionen des Schemas Workspace in der Experience Platform.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '292'
 ht-degree: 2%
 
 ---
