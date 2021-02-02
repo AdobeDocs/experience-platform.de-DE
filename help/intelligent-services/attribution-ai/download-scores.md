@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
+keywords: Experience Platform;Zuordnungs-Hilfe;Zugriffszahlen;beliebte Themen;Download-Bewertungen;Zuordnungsai-Bewertungen;Export;Export
 solution: Experience Platform, Intelligent Services
 title: Aufrufen von Bewertungen in Attribution AI
 topic: Accessing scores
 description: Dieses Dokument dient als Anleitung zum Herunterladen von Punktzahlen für Attribution AIS.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 69%
+source-wordcount: '1056'
+ht-degree: 68%
 
 ---
 
@@ -19,13 +19,13 @@ Dieses Dokument dient als Anleitung zum Herunterladen von Punktzahlen für Attri
 
 ## Erste Schritte
 
-Mit Attribution AI können Sie Partituren im Parquet-Dateiformat herunterladen. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
+Mit Attribution AI können Sie Partituren im Parquet-Dateiformat herunterladen. Für dieses Lernprogramm müssen Sie den Abschnitt zum Herunterladen von Attribution AI-Ergebnissen im Handbuch [Erste Schritte](./getting-started.md) gelesen und abgeschlossen haben.
 
-Darüber hinaus benötigen Sie eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus, um auf die Ergebnisse für Attribution AI zugreifen zu können. To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
+Darüber hinaus benötigen Sie eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus, um auf die Ergebnisse für Attribution AI zugreifen zu können. Um eine neue Dienstinstanz zu erstellen, besuchen Sie das [Attribution AI-Benutzerhandbuch](./user-guide.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
 ## Ermitteln Ihrer Datensatz-ID {#dataset-id}
 
-Within your service instance for Attribution AI insights, click the *More actions* dropdown in the top-right navigation then select **[!UICONTROL Access scores]**.
+Klicken Sie in Ihrer Dienstinstanz für Attribution AI-Einblicke auf das Dropdown-Menü *Mehr Aktionen* in der Navigation oben rechts und wählen Sie **[!UICONTROL Zugriffsergebnisse]**.
 
 ![Mehr Aktionen](./images/download-scores/more-actions.png)
 
@@ -35,7 +35,7 @@ Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen 
 
 ## Abrufen Ihrer Batch-Kennung {#retrieve-your-batch-id}
 
-Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Parameter für die Abfrage verwendet, um anstelle einer Liste von Stapeln, die zu Ihrem Unternehmen gehören, den letzten erfolgreichen Batch zurückzugeben. Um weitere Stapel zurückzugeben, erhöhen Sie die Anzahl für den Parameter &quot; `limit` Abfrage&quot;auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../catalog/api/filter-data.md).
+Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Parameter für die Abfrage verwendet, um anstelle einer Liste von Stapeln, die zu Ihrem Unternehmen gehören, den letzten erfolgreichen Batch zurückzugeben. Um weitere Stapel zurückzugeben, erhöhen Sie die Anzahl für den Parameter `limit` Abfrage auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../catalog/api/filter-data.md).
 
 **API-Format**
 
@@ -63,7 +63,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt en
 
 >[!NOTE]
 >
-> In der folgenden Antwort wurde das `tags` Objekt zur Lesbarkeit reformiert.
+> In der folgenden Antwort wurde das `tags`-Objekt zur Lesbarkeit reformiert.
 
 ```json
 {
@@ -166,7 +166,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die ein `_links`-Objekt ent
 }
 ```
 
-## Abrufen Ihrer Dateien {#retrieving-your-files}
+## Abrufen Ihrer Dateien  {#retrieving-your-files}
 
 Verwenden Sie den `href`-Wert, den Sie im vorherigen Schritt als API-Aufruf erhalten haben, und stellen Sie eine neue GET-Anfrage, um Ihr Dateiverzeichnis abzurufen.
 
@@ -261,11 +261,11 @@ Die Antwort lädt die angeforderte Datei in Ihr aktuelles Verzeichnis herunter. 
 
 ![Endgerät](./images/download-scores/terminal-output.png)
 
-Die heruntergeladenen Partituren werden im Parkettformat vorliegen und benötigen entweder einen [!DNL Spark]-Shell- oder Parkettleser, um die Punktzahlen Ansicht. Für die Anzeige von Rohwerten können Sie [Parkettwerkzeuge](https://github.com/apache/parquet-mr/tree/master/parquet-tools)verwenden. Mit den Parquet-Werkzeugen können die Daten analysiert [!DNL Spark]werden.
+Die heruntergeladenen Partituren werden im Parquet-Format vorliegen und benötigen entweder einen [!DNL Spark]-shell- oder Parquet-Reader zur Ansicht der Punktzahlen. Für die Anzeige des Rohwerts können Sie die Werkzeuge [Apache Parquet](https://github.com/apache/parquet-mr/tree/master/parquet-tools) verwenden. Die Parquet-Tools können die Daten mit [!DNL Spark] analysieren.
 
 ## Nächste Schritte
 
-In diesem Dokument werden die zum Herunterladen von Attribution AI-Scores erforderlichen Schritte beschrieben. Weitere Informationen zu den Ergebnisausgaben finden Sie in der Dokumentation zur [Attribution AI-Eingabe und -Ausgabe](./input-output.md) .
+In diesem Dokument werden die zum Herunterladen von Attribution AI-Scores erforderlichen Schritte beschrieben. Weitere Informationen zu den Ergebnisausgaben finden Sie in der Dokumentation [Attribution AI input and output](./input-output.md).
 
 ## Zugreifen auf Ergebnisse mit Snowflake
 
