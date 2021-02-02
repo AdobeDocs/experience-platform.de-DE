@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 translation-type: tm+mt
-source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
+source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 80%
+source-wordcount: '109'
+ht-degree: 93%
 
 ---
 
@@ -29,9 +29,6 @@ ht-degree: 80%
 * Datenschutz und Data Governance {#privacy}
    * [Datenschutz – Übersicht](privacy/privacy-overview.md)
    * [Data Governance – Übersicht](privacy/data-governance-overview.md)
-   * IAB TCF 2.0-Unterstützung {#iab}
-      * [Unterstützung von IAB TCF 2.0 in Echtzeit-CDP](privacy/iab/overview.md)
-      * [Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten](privacy/iab/dataset-preparation.md)
 * Profile {#profile}
    * [Profil – Übersicht](profile/profile-overview.md)
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
