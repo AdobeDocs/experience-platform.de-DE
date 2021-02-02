@@ -1,5 +1,5 @@
 ---
-keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
+keywords: Einblicke;Zuordnungsai;Zuordnungs-ai-Einblicke;AAI-Abfrage-Dienst;Zuordnungs-Abfragen;Zuordnungswerte
 solution: Intelligent Services, Experience Platform
 title: Handbuch zu AAI-Abfragen-Beginn
 topic: Attribution AI queries
@@ -7,7 +7,7 @@ description: Dieses Dokument enthält eine Anleitung und Vorlagen zur Verwendung
 translation-type: tm+mt
 source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
