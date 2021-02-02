@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;
 solution: Experience Platform
 title: Entwicklerhandbuch zur Schema Registry-API
 description: 'Mit der Schema Registry API können Sie alle Schema und zugehörigen XDM-Ressourcen, die Ihnen in der Experience Platform zur Verfügung stehen, programmatisch verwalten. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
@@ -63,19 +63,19 @@ Informationen zum Ansicht von Vereinigungen in der Schema Registry-API finden Si
 
 Mit der Schema Registry API können Sie XDM-Ressourcen zwischen Sandboxen und IMS-Organisationen übertragen und freigeben. Für jedes Schema, jede Mischung oder jeden Datentyp können Sie eine Export-Nutzlast generieren, die die Ressourcenstruktur und alle abhängigen Ressourcen enthält. Diese Payload kann dann verwendet werden, um die Ressource in eine Ziel-Sandbox und IMS-Org zu importieren.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie unter [API-Referenz zur Schema-Registrierung](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Weitere Informationen zur Verwendung dieser Endpunkte finden Sie im Handbuch [export/import endpoints](./export-import.md).
 
 ## Sample data
 
 Sie können Musterdaten für jedes angegebene Schema in der Schema-Bibliothek generieren. Das zurückgegebene Antwortobjekt kann dann als Datenquelle für die Datenerfassung verwendet werden.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie unter [API-Referenz zur Schema-Registrierung](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Handbuch [Beispiel-Datenendpunkt](./sample-data.md).
 
 ## Auditprotokoll
 
 Die Schema-Registrierung führt ein Protokoll aller Änderungen, die zwischen verschiedenen Aktualisierungen an einer Ressource (Klasse, Mixin, Datentyp oder Schema) vorgenommen wurden. Sie können das Protokoll für eine bestimmte Ressource abrufen, indem Sie die `$id` oder `meta:altId` im Pfad einer GET-Anforderung zu diesem Endpunkt angeben.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie unter [API-Referenz zur Schema-Registrierung](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Handbuch [Auditprotokoll-Endpunkt](./audit-log.md).
 
 ## Nächste Schritte
 
