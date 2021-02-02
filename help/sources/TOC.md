@@ -5,7 +5,7 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 8%
@@ -41,7 +41,7 @@ ht-degree: 8%
       - [SFTP-Anschluss](connectors/cloud-storage/sftp.md)
       - [Amazon S3- und Azurblase-Stecker](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
-      - [Microsoft Dynamics Connector](connectors/crm/ms-dynamics.md)
+      - [Microsoft Dynamics-Connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-Anschluss](connectors/crm/salesforce.md)
    - Kundenerfolg {#customer-success}
       - [Salesforce Service Cloud Connector](connectors/customer-success/salesforce-service-cloud.md)
@@ -52,7 +52,7 @@ ht-degree: 8%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
+      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -87,7 +87,7 @@ ht-degree: 8%
          - [Google Cloud-Datenspeicherung-Connector](tutorials/api/create/cloud-storage/google.md)
          - [SFTP-Anschluss](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Microsoft Dynamics Connector](tutorials/api/create/crm/ms-dynamics.md)
+         - [Microsoft Dynamics-Connector](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce-Anschluss](tutorials/api/create/crm/salesforce.md)
       - Kundenerfolg {#customer-success}
          - [Salesforce Service Cloud Connector](tutorials/api/create/customer-success/salesforce-service-cloud.md)
@@ -138,7 +138,7 @@ ht-degree: 8%
       - [Zahlungsdaten erfassen](tutorials/api/collect/payments.md)
       - [Protokolldaten erfassen](tutorials/api/collect/protocols.md)
       - [Streaming-Daten erfassen](tutorials/api/collect/streaming.md)
-   - [Erfassen von Parketdaten aus einem Cloud-Datenspeicherung-System eines Drittanbieters](tutorials/api/cloud-storage-parquet.md)
+   - [Erfassen von Parquet-Daten aus einem Cloud-Datenspeicherung-System eines Drittanbieters](tutorials/api/cloud-storage-parquet.md)
    - [Eine Datensatzverbindung erstellen](tutorials/api/create-dataset-base-connection.md)
    - [Überwachen von Datenflüssen](tutorials/api/monitor.md)
    - [Aktualisieren von Verbindungen](tutorials/api/update.md)
@@ -166,7 +166,7 @@ ht-degree: 8%
          - [SFTP-Anschluss](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3- und Blob-Anschluss](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
-         - [Microsoft Dynamics Connector](tutorials/ui/create/crm/dynamics.md)
+         - [Microsoft Dynamics-Connector](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce-Anschluss](tutorials/ui/create/crm/salesforce.md)
       - Kundenerfolg {#customer-success}
          - [Salesforce Service Cloud Connector](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
