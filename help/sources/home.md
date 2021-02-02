@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
+keywords: Experience Platform;Home;beliebte Themen;Quellverbindungen;Quellanschluss;Quellen;Datenquellen;Datenquelle;Datenquellen;Datenquellenverbindung
 solution: Experience Platform
 title: Überblick über Adobe Experience Platform Connectoren für Datenquellen
 topic: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 translation-type: tm+mt
-source-git-commit: 466cb072537cbf462d2c4d8f3ee4b6eccc0199a0
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 61%
+source-wordcount: '943'
+ht-degree: 60%
 
 ---
 
@@ -45,7 +45,7 @@ Experience Platform unterstützt die Erfassung von Daten aus einem Drittanbieter
 
 ### Cloud-Speicherplatz
 
-Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Die einzelnen Prozessschritte werden anhand der Benutzeroberfläche in den Datenquellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
+Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Ingetierte Daten können als XDM-JSON, XDM-Parquet oder als Trennzeichen formatiert werden. Die einzelnen Prozessschritte werden anhand der Benutzeroberfläche in den Datenquellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [[!DNL Azure Data Lake Storage Gen2] connector](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] connector](connectors/cloud-storage/blob.md)
