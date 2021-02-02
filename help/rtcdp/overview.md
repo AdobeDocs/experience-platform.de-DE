@@ -1,14 +1,14 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp
+keywords: RTCDP;CDP;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;Echtzeit-CDP;cdp;Customer AI
 title: Übersicht über die Echtzeit-Kundendatenplattform
 seo-title: Übersicht über die Echtzeit-Kundendatenplattform
 description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Echtzeit-Kundendatenplattform – Übersicht
 translation-type: tm+mt
-source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
+source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 29%
+source-wordcount: '306'
+ht-degree: 27%
 
 ---
 
@@ -30,7 +30,7 @@ Mit der Echtzeit-Kundendatenplattform können Sie:
 
 ## Weitere Informationen
 
-Um mehr über Adobe Experience Platform zu erfahren, lesen Sie zunächst den Überblick über die [Experience Platform](../landing/home.md).
+Um mehr über Adobe Experience Platform zu erfahren, lesen Sie zunächst den [Überblick über die Experience Platform](../landing/home.md).
 
 Die folgende Dokumentation hilft Ihnen beim Einstieg in die Echtzeit-Kundendatenplattform:
 
