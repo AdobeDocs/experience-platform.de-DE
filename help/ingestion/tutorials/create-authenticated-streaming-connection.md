@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics;authenticated streaming connection;streaming connection;create streaming connection;create authenticated streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform;Home;beliebte Themen;authentifizierte Streaming-Verbindung;Streaming-Verbindung;Streaming-Verbindung erstellen;Authentifizierte Streaming-Verbindung erstellen;Streaming-Verbindung;Erfassung;
 solution: Experience Platform
 title: Erstellen einer authentifizierten Streaming-Verbindung
 topic: tutorial
 type: Tutorial
 description: Die authentifizierte Datenerfassung ermöglicht es Adobe Experience Platform-Diensten, wie z. B. Echtzeit-Kundendaten und -Identitäten, zwischen Datensätzen aus vertrauenswürdigen Quellen und nicht vertrauenswürdigen Quellen zu unterscheiden.
 translation-type: tm+mt
-source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 70%
+source-wordcount: '674'
+ht-degree: 68%
 
 ---
 
 
 # Erstellen einer authentifizierten Streaming-Verbindung
 
-Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Kunden, die persönliche identifizierbare Informationen (PII) senden möchten, können dies tun, indem sie Zugriffstoken als Teil der POST-Anfrage senden.
+Die authentifizierte Datenerfassung ermöglicht es Adobe Experience Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Identity], zwischen Datensätzen aus vertrauenswürdigen Quellen und nicht vertrauenswürdigen Quellen zu unterscheiden. Kunden, die persönliche identifizierbare Informationen (PII) senden möchten, können dies tun, indem sie Zugriffstoken als Teil der POST-Anfrage senden.
 
 ## Erste Schritte
 
 Um mit dem Streamen von Daten an die Adobe Experience Platform zu beginnen, ist eine Registrierung der Streaming-Verbindung erforderlich. Bei der Registrierung einer Streaming-Verbindung müssen Sie einige wichtige Details wie die Quelle der Streaming-Daten angeben.
 
-After registering a streaming connection, you, as the data producer, will have a unique URL which can be used to stream data to [!DNL Platform].
+Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent eine eindeutige URL, die zum Streamen von Daten an [!DNL Platform] verwendet werden kann.
 
 Für dieses Tutorial sind auch Kenntnisse über verschiedene Adobe Experience Platform-Diensten erforderlich. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten [!DNL Platform] organisiert werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die APIs für die Streaming-Erfassung erfolgreich aufrufen zu können.
@@ -37,19 +37,19 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -179,7 +179,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 ## Nächste Schritte
 
-Now that you have created an authenticated streaming connection, you can stream either time series or record data, allowing you to ingest data within [!DNL Platform]. To learn how to stream time series data to [!DNL Platform], go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to [!DNL Platform], go to the [streaming record data tutorial](./streaming-record-data.md).
+Nachdem Sie eine authentifizierte Streaming-Verbindung erstellt haben, können Sie entweder Zeitreihen- oder Datensatzdaten streamen, um Daten innerhalb von [!DNL Platform] zu erfassen. Informationen zum Streamen von Zeitreihendaten auf [!DNL Platform] finden Sie im Datentutorial [Streaming-Zeitreihen](./streaming-time-series-data.md). Informationen zum Streamen von Datensatzdaten auf [!DNL Platform] finden Sie im Tutorial [Streaming-Datensatzdaten](./streaming-record-data.md).
 
 ## Anhang
 
