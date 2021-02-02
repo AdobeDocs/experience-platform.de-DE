@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp segments;segment builder rtcdp;rtcdp segment;customer ai rtcdp
+keywords: rtcdp-Segmente;Segmentaufbau rtcdp;rtcdp-Segment;Kundendienst-rtcdp
 title: Kunden-API in Echtzeit-Plattform für Kundendaten
 description: Ein Überblick über die Kundentoi und wie sie bei der Generierung von Ergebnissen für bestimmte Zwecke wie Konversionen oder Kehren helfen kann.
 translation-type: tm+mt
 source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '304'
 ht-degree: 6%
 
 ---
