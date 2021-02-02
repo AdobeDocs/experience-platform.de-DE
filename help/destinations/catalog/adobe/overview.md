@@ -1,31 +1,31 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: Ziele;Erlebnis-Cloud-Lösungen; zielgruppe;Bestimmungsort der Zielgruppe; Anzeigenwolke; Werbekloud; audience-Manager; Zielort der adobe-Zielgruppe; zielgruppe; Bestimmungsort des Audience-Managers;
 title: Adobe-Ziele
 seo-title: Adobe-Ziele
-description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendatenplattform von mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
-seo-description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendatenplattform von mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden
+description: Verwalten Sie Ihre Kundenerfahrung, indem Sie Ihre Daten in Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
+seo-description: Verwalten Sie Ihre Kundenerfahrung, indem Sie Ihre Daten in Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 57%
+source-wordcount: '243'
+ht-degree: 21%
 
 ---
 
 
 # Adobe-Ziele {#adobe-destinations}
 
-Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in der Echtzeit-Kundendatenplattform von mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
+Verwalten Sie Ihre Kundenerfahrung, indem Sie Ihre Daten in Adobe Experience Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
 
 ## Verbindungen
 
-Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und Kategorien.
+Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite &quot;Zieltypen und Kategorien&quot;.
 
 - [Adobe Campaign](../email-marketing/adobe-campaign.md)
 
 ## Erweiterungen
 
-Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Erweiterungen](../../destination-types.md#extensions) auf der Seite Zieltypen und Kategorien.
+Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Erweiterungen](../../destination-types.md#extensions) auf der Seite &quot;Zieltypen und Kategorien&quot;.
 
 - [Adobe Advertising Cloud-Erweiterung](../advertising/adobe-advertising-cloud.md)
 - [Adobe Analytics-Erweiterung](../analytics/adobe-analytics.md)
