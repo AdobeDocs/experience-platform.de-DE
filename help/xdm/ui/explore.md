@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
+keywords: Experience Platform;Home;beliebte Themen;ui;UI;XDM;XDM-System;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;erkunden;Klasse;mixin;Datentyp;Schema
 solution: Experience Platform
 title: XDM-Ressourcen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie vorhandene Schema, Klassen, Mixins und Datentypen in der Benutzeroberfläche der Experience Platform untersuchen.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
+source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Mit dem Umschalter **[!UICONTROL In Profil]** eingeschlossen können Sie die Erg
 
 ![](../images/ui/explore/filter.png)
 
-Sie können die Suchleiste auch verwenden, um die Ergebnisse auf Ressourcen zu beschränken, deren Namen mit der Abfrage übereinstimmen.
+Sie können die Suchleiste auch verwenden, um die Ergebnisse weiter einzugrenzen. Wenn Sie nach einem Begriff suchen, stellen die obersten Elemente Ressourcen dar, deren Namen mit der Abfrage übereinstimmen. Unter diesen Elementen werden unter **[!UICONTROL Standardfelder]** alle Ressourcen aufgelistet, die Felder enthalten, die der Abfrage entsprechen. Auf diese Weise können Sie nach XDM-Ressourcen basierend auf dem Datentyp suchen, den sie enthalten, ohne vorher den Namen der Ressource kennen zu müssen.
 
 ![](../images/ui/explore/search.png)
 
