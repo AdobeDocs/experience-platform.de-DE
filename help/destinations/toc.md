@@ -2,12 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Zielhandbuch
-user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
+user-guide-description: Aktivieren Sie Ihre bekannten und nicht bekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele weitere Anwendungsfälle.
+description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 translation-type: tm+mt
-source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 29%
+source-wordcount: '443'
+ht-degree: 32%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 29%
 * API-Tutorials {#api}
    * [Verbindung zu Streaming-Zielen (AWS Kinesis und Azurblauer Ereignis Hubs) und Aktivierung von Daten](./api/streaming-destinations.md)
    * [Verbindungen zu E-Mail-Marketingzielen herstellen und Daten aktivieren](./api/email-marketing.md)
-* Benutzeroberflächen-Handbücher {#ui}
+* UI-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Zieldetailseite](./ui/destination-details-page.md)
    * [Mit Ziel verbinden](./ui/connect-destination.md)
@@ -29,7 +30,7 @@ ht-degree: 29%
    * [ (Alpha) HTTP-Ziel](./catalog/http-destination.md)
    * Adobe-Ziele {#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
-      * [Segmentfreigabe für Experience Platformen](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Segmentfreigabe für Experience Platformen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Ziel](./catalog/advertising/adobe-advertising-cloud.md)
@@ -77,9 +78,10 @@ ht-degree: 29%
       * [Workflow zum Erstellen von Cloud-Speicher-Zielen](./catalog/cloud-storage/workflow.md)
       * [Amazon Kinesis-Ziel](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-Ziel](./catalog/cloud-storage/amazon-s3.md)
+      * [Blumenziel](./catalog/cloud-storage/azure-blob.md)
       * [Azurblauer Ereignis Hubs Ziel](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-Ziel](./catalog/cloud-storage/sftp.md)
-   * Data Management Platform destinations {#data-management}
+   * Data Management Platform-Ziele {#data-management}
       * [Data Management Platform-Ziele – Übersicht](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Ziel](./catalog/data-management/aam-dil-extension.md)
    * E-Mail-Ziele {#email}
@@ -95,7 +97,7 @@ ht-degree: 29%
       * [Salesforce-Marketing Cloud-Ziel](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Experience Platform Launch-Erweiterungen {#launch-extensions}
       * [Experience Platform Launch-Erweiterungen – Übersicht](./catalog/launch-extensions/overview.md)
-   * Ziele für mobile Interaktionen {#mobile-engagement}
+   * Ziele für die mobile Interaktion {#mobile-engagement}
       * [Ziele für die mobile Interaktion - Übersicht](./catalog/mobile-engagement/overview.md)
       * [Ziel der Luftverkehrsattribute](./catalog/mobile-engagement/airship-attributes.md)
       * [Ziel der Luftschiff-Tags](./catalog/mobile-engagement/airship-tags.md)
