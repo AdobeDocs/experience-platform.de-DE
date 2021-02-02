@@ -1,29 +1,29 @@
 ---
-keywords: advertising destinations;destinations;rtcdp destinations
+keywords: Werbeziele;Ziele;Plattformziele
 title: Werbeziele
 seo-title: Werbeziele
-description: Verbinden Sie Ihre Echtzeit-Kundendatenplattform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
-seo-description: Verbinden Sie Ihre Echtzeit-Kundendatenplattform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
+description: Verbinden Sie Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) und geben Sie pseudonyme Audiencen für diese Plattformen frei.
+seo-description: Verbinden Sie Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) und geben Sie pseudonyme Audiencen für diese Plattformen frei.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 73%
+source-wordcount: '225'
+ht-degree: 48%
 
 ---
 
 
 # Werbeziele {#advertising-destinations}
 
-Connect your [!DNL Real-time Customer Data Platform] to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
+Verbinden Sie Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) und geben Sie pseudonyme Audiencen für diese Plattformen frei.
 
 Beim Herstellen einer Verbindung zu einem Werbeziel werden Ihre Zielgruppen als Kennungen an die Zielplattform gesendet, wo sie einer der Zielplattform bekannten Kennung zugeordnet werden.
 
-Derzeit unterstützt die Echtzeit-Kundendatenplattform die unten aufgeführten Werbeziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Derzeit unterstützt Platform die unten aufgeführten Werbeziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 ## Verbindungen
 
-Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und Kategorien.
+Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite &quot;Zieltypen und Kategorien&quot;.
 
 - [Google Display &amp; Video 360](./google-dv360.md)
 - [Google Ads](./google-ads-destination.md)
@@ -34,7 +34,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 ## Erweiterungen
 
-Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Erweiterungen](../../destination-types.md#extensions) auf der Seite Zieltypen und Kategorien.
+Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Erweiterungen](../../destination-types.md#extensions) auf der Seite &quot;Zieltypen und Kategorien&quot;.
 
 - [Adobe Advertising Cloud-Erweiterung](./adobe-advertising-cloud.md)
 - [Awin Advertising Conversion Tag-Erweiterung](./awin-conversiontag.md)
