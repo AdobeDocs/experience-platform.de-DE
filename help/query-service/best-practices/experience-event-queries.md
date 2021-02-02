@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
+keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Erlebnisereignis-Abfragen;Erlebnis-Abfrage;Experience Ereignis-Abfrage
 solution: Experience Platform
 title: Experience Ereignis-Abfragen
 topic: queries
@@ -8,8 +8,8 @@ description: Das folgende Dokument enthält Beispiele für Abfragen mit Experien
 translation-type: tm+mt
 source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 63%
+source-wordcount: '310'
+ht-degree: 60%
 
 ---
 
