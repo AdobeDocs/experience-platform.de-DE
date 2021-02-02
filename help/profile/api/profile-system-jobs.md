@@ -1,33 +1,35 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Profil-Systemaufträge - Echtzeit-Profil-API
+keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
+title: API-Endpunkt für Profil-Aufträge
 topic: guide
+type: Documentation
+description: Mit Adobe Experience Platform können Sie einen Datensatz oder Stapel aus dem Profil Store löschen, um nicht mehr benötigte oder fälschlicherweise hinzugefügte Kundendaten in Echtzeit zu entfernen. Dies erfordert die Verwendung der Profil-API zum Erstellen eines Profil-Systemauftrags oder Löschen einer Anforderung.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
 workflow-type: tm+mt
-source-wordcount: '1420'
-ht-degree: 68%
+source-wordcount: '1321'
+ht-degree: 66%
 
 ---
 
 
 # Endpunkt &quot;Systemaufträge&quot;(Anforderungen löschen)
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. Daten, die in [!DNL Platform] aufgenommen werden, werden im [!DNL Data Lake] sowie im [!DNL Real-time Customer Profile] Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, einen Datensatz oder Stapel aus dem Profil Store zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a &quot;[!DNL delete request]&quot;, that can also be modified, monitored, or removed if required.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. In [!DNL Platform] erfasste Daten werden im [!DNL Data Lake] gespeichert. Wenn die Datensätze zum Profil aktiviert wurden, werden diese Daten auch im [!DNL Real-time Customer Profile]-Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, Datensätze oder Batches aus dem Profilspeicher zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder irrtümlich hinzugefügt wurden. Dies erfordert die Verwendung der API [!DNL Real-time Customer Profile], um einen [!DNL Profile]-Systemauftrag oder `delete request` zu erstellen, der bei Bedarf auch geändert, überwacht oder entfernt werden kann.
 
 >[!NOTE]
 >
->If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
+>Wenn Sie versuchen, Datasets oder Stapel aus dem [!DNL Data Lake] zu löschen, besuchen Sie bitte die Übersicht über den [Katalogdienst](../../catalog/home.md), um weitere Informationen zu erhalten.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
 
 ## Löschanfragen anzeigen
 
 Bei einer Löschanfrage handelt es sich um einen langwierigen, asynchronen Prozess, d. h., Ihre Organisation führt möglicherweise mehrere Löschanfragen gleichzeitig aus. Um alle derzeit in Ihrer Organisation ausgeführten Löschanfragen anzuzeigen, können Sie eine GET-Anfrage an den `/system/jobs`-Endpunkt stellen.
 
-Außerdem können Sie optionale Abfrageparameter verwenden, um die Liste der in der Antwort zurückgegebenen Löschanfragen zu filtern. Wenn Sie mehrere Parameter verwenden möchten, trennen Sie die einzelnen Parameter durch ein kaufmännisches Und-Zeichen (&amp;).
+Außerdem können Sie optionale Abfrageparameter verwenden, um die Liste der in der Antwort zurückgegebenen Löschanfragen zu filtern. Wenn Sie mehrere Parameter verwenden möchten, trennen Sie die einzelnen Parameter durch ein kaufmännisches Und-Zeichen (`&`).
 
 **API-Format**
 
@@ -38,10 +40,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Parameter | Beschreibung |
 |---|---|
-| `start` | Versatz der Seite mit den zurückgegebenen Ergebnissen, unter Berücksichtigung der Erstellungszeit der Anfrage. Beispiel: *`start=4`* |
-| `limit` | Schränkt die Anzahl der zurückgegebenen Ergebnisse ein. Beispiel: *`limit=10`* |
-| `page` | Gibt eine bestimmte Seite mit Ergebnissen zurück, unter Berücksichtigung der Erstellungszeit der Anfrage. Beispiel: ***`page=2`*** |
-| `sort` | Sortiert Ergebnisse nach einem bestimmten Feld in aufsteigender (*`asc`*) oder absteigender (**`desc`**) Reihenfolge. Der Sortierparameter funktioniert nicht, wenn mehrere Ergebnisseiten zurückgegeben werden. Beispiel: `sort=batchId:asc` |
+| `start` | Versatz der Seite mit den zurückgegebenen Ergebnissen, unter Berücksichtigung der Erstellungszeit der Anfrage. Beispiel: `start=4` |
+| `limit` | Schränkt die Anzahl der zurückgegebenen Ergebnisse ein. Beispiel: `limit=10` |
+| `page` | Gibt eine bestimmte Seite mit Ergebnissen zurück, unter Berücksichtigung der Erstellungszeit der Anfrage. Beispiel: `page=2` |
+| `sort` | Sortiert Ergebnisse nach einem bestimmten Feld in aufsteigender (`asc`) oder absteigender (`desc`) Reihenfolge. Der Sortierparameter funktioniert nicht, wenn mehrere Ergebnisseiten zurückgegeben werden. Beispiel: `sort=batchId:asc` |
 
 **Anfrage**
 
@@ -92,10 +94,10 @@ Die Antwort enthält ein „untergeordnetes“ Array mit einem Objekt für jede 
 | Eigenschaft | Beschreibung |
 |---|---|
 | `_page.count` | Die Gesamtanzahl der Anfragen. Diese Antwort wurde aus Platzgründen abgeschnitten. |
-| `_page.next` | If an additional page of results exists, view the next page of results by replacing the ID value in a [lookup request](#view-a-specific-delete-request) with the `"next"` value provided. |
-| `jobType` | Der Typ des zu erstellenden Auftrags. In this case, it will always return `"DELETE"`. |
+| `_page.next` | Wenn eine zusätzliche Ergebnisseite vorhanden ist, wird die nächste Ergebnisseite Ansicht, indem der ID-Wert in einer [Suchanfrage](#view-a-specific-delete-request) durch den bereitgestellten `"next"`-Wert ersetzt wird. |
+| `jobType` | Der Typ des zu erstellenden Auftrags. In diesem Fall wird immer `"DELETE"` zurückgegeben. |
 | `status` | Der Status der Löschanfrage. Mögliche Werte `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | An object that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+| `metrics` | Ein Objekt, das die Anzahl der verarbeiteten Datensätze (`"recordsProcessed"`) und die Zeit in Sekunden, in der die Anforderung verarbeitet wurde, oder die Dauer der Anforderung (`"timeTakenInSec"`) enthält. |
 
 ## Löschanfrage erstellen {#create-a-delete-request}
 
@@ -103,11 +105,7 @@ Die Initiierung einer neuen Löschanfrage erfolgt über eine POST-Anfrage an den
 
 ### Datensatz löschen
 
-Um einen Datensatz zu löschen, muss die Datensatzkennung im Text der POST-Anfrage enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. [!DNL Experience Platform]Mit können Sie Datensätze basierend auf Datensatz- und Zeitreihenschemas löschen.
-
->[!CAUTION]
->
-> When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. Weiterführende Informationen finden Sie im [Anhang](#appendix) zu diesem Dokument.
+Um einen Datensatz aus dem Profil-Store zu löschen, muss die DataSet-ID im Hauptteil der Anforderung zur POST enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. [!DNL Experience Platform]Mit können Sie Datensätze basierend auf Datensatz- und Zeitreihenschemas löschen.
 
 **API-Format**
 
@@ -136,7 +134,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zurück, einschließlich einer eindeutigen, vom System generierten und schreibgeschützten Kennung für die Anfrage. Diese kann zum Nachschlagen der Anfrage und Überprüfen ihres Status verwendet werden. Der **`status`** (Status) der Anfrage lautet zum Zeitpunkt der Erstellung *`"NEW"`*, und zwar solange, bis die Verarbeitung beginnt. Die **`dataSetId`** in der Antwort sollte mit der in der Anfrage gesendeten ***`dataSetId`*** übereinstimmen.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zurück, einschließlich einer eindeutigen, vom System generierten und schreibgeschützten Kennung für die Anfrage. Diese kann zum Nachschlagen der Anfrage und Überprüfen ihres Status verwendet werden. Der `status` (Status) der Anfrage lautet zum Zeitpunkt der Erstellung `"NEW"`, und zwar solange, bis die Verarbeitung beginnt. Die `dataSetId` in der Antwort sollte mit der in der Anfrage gesendeten `dataSetId` übereinstimmen.
 
 ```json
 {
@@ -161,7 +159,7 @@ Um einen Batch zu löschen, muss die Batch-Kennung im Text der POST-Anfrage enth
 
 >[!NOTE]
 >
-> Batches für Datensätze, die auf Datensatzschemas basieren, lassen sich nicht löschen, weil Datensatz-Batches vom Typ Datensatz frühere Datensätze überschreiben und daher nicht „rückgängig gemacht“ oder gelöscht werden können. 
+> Batches für Datensätze, die auf Datensatzschemas basieren, lassen sich nicht löschen, weil Datensatz-Batches vom Typ Datensatz frühere Datensätze überschreiben und daher nicht „rückgängig gemacht“ oder gelöscht werden können. Die einzige Möglichkeit, die Auswirkungen fehlerhafter Stapel für Datensätze zu entfernen, die auf Datensatzdaten basieren, besteht darin, den Stapel mit den richtigen Daten erneut zu erfassen, um die falschen Schema zu überschreiben.
 
 Weiterführende Informationen zum Verhalten von Datensätzen und Zeitreihen finden Sie im Abschnitt [XDM-Datenverhalten](../../xdm/home.md#data-behaviors) in der Übersicht zu [!DNL XDM System]
 
@@ -192,7 +190,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zurück, einschließlich einer eindeutigen, vom System generierten und schreibgeschützten Kennung für die Anfrage. Diese kann zum Nachschlagen der Anfrage und Überprüfen ihres Status verwendet werden. Der `"status"` (Status) der Anfrage lautet zum Zeitpunkt der Erstellung `"NEW"`, und zwar solange, bis die Verarbeitung beginnt. Die `"batchId"` in der Antwort sollte mit der in der Anfrage gesendeten `"batchId"` übereinstimmen.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zurück, einschließlich einer eindeutigen, vom System generierten und schreibgeschützten Kennung für die Anfrage. Diese kann zum Nachschlagen der Anfrage und Überprüfen ihres Status verwendet werden. Der `"status"` (Status) der Anfrage lautet zum Zeitpunkt der Erstellung `"NEW"`, und zwar solange, bis die Verarbeitung beginnt. Der Wert `"batchId"` in der Antwort sollte mit dem Wert `"batchId"` übereinstimmen, der in der Anforderung gesendet wurde.
 
 ```json
 {
@@ -254,7 +252,7 @@ curl -X POST \
 
 **Antwort**
 
-Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktualisierten Status. Die Kennung der Löschanfrage in der Antwort sollte mit der Kennung übereinstimmen, die im Anfragepfad gesendet wird.
+Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktualisierten Status. Die ID der Löschanforderung in der Antwort (der Wert `"id"`) sollte mit der im Anforderungspfad gesendeten ID übereinstimmen.
 
 ```json
 {
@@ -271,11 +269,11 @@ Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktual
 
 | Eigenschaften | Beschreibung |
 |---|---|
-| `jobType` | The type of job being created, in this case it will always return `"DELETE"`. |
+| `jobType` | Der Typ des zu erstellenden Auftrags, in diesem Fall wird immer `"DELETE"` zurückgegeben. |
 | `status` | Der Status der Löschanfrage. Mögliche Werte: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+| `metrics` | Ein Array, das die Anzahl der verarbeiteten Datensätze (`"recordsProcessed"`) und die Zeit in Sekunden, in der die Anforderung verarbeitet wurde, oder die Dauer der Anforderung (`"timeTakenInSec"`) enthält. |
 
-Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. Anweisungen zum Zugreifen auf Datensätze und Batches mit der Data Access-API finden Sie in der [Dokumentation zu Data Access](../../data-access/home.md).
+Sobald der Löschanforderungsstatus `"COMPLETED"` ist, können Sie bestätigen, dass die Daten gelöscht wurden, indem Sie versuchen, mithilfe der Datenzugriff-API auf die gelöschten Daten zuzugreifen. Anweisungen zum Zugreifen auf Datensätze und Batches mit der Data Access-API finden Sie in der [Dokumentation zu Data Access](../../data-access/home.md).
 
 ## Löschanfrage entfernen
 
@@ -308,20 +306,4 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Now that you know the steps involved in deleting datasets and batches from the [!DNL Profile Store] within [!DNL Experience Platform], you can safely delete data that has been added erroneously or that your organization no longer needs. Beachten Sie, dass Löschanfragen nicht rückgängig gemacht werden können. Daher sollten Sie Daten nur dann löschen, wenn Sie sicher sind, dass Sie sie jetzt und in Zukunft nicht mehr benötigen werden.
-
-## Anhang {#appendix}
-
-The following information is supplemental to the act of deleting a dataset from the [!DNL Profile Store].
-
-### Deleting a dataset using the [!DNL Experience Platform] UI
-
-When using the [!DNL Experience Platform] user interface to delete a dataset that has been enabled for [!DNL Profile], a dialog opens asking, &quot;Are you sure you want to delete this dataset from the [!DNL Experience Data Lake]? Verwenden Sie die &quot;p[!DNL rofile systems jobs]&quot;-API, um diesen Datensatz aus dem [!DNL Profile Service]zu löschen.&quot;
-
-Wenn Sie in der Benutzeroberfläche auf **[!UICONTROL Löschen]** klicken, wird der Datensatz für die Erfassung deaktiviert. Er wird jedoch NICHT automatisch aus dem Backend gelöscht. Um den Datensatz dauerhaft zu löschen, müssen Sie mithilfe der Schritte in diesem Handbuch zum [Erstellen einer Löschanfrage](#create-a-delete-request) manuell eine Löschanfrage erstellen.
-
-The following image shows the warning when attempting to delete a [!DNL Profile]-enabled dataset using the UI.
-
-![](../images/delete-profile-dataset.png)
-
-Weiterführende Informationen zum Arbeiten mit Datensätzen finden Sie in der [Datensatzübersicht](../../catalog/datasets/overview.md).
+Nachdem Sie die Schritte zum Löschen von Datensätzen und Stapeln aus dem [!DNL Profile Store] innerhalb von [!DNL Experience Platform] kennen, können Sie Daten, die irrtümlicherweise hinzugefügt wurden oder die Ihr Unternehmen nicht mehr benötigt, problemlos löschen. Beachten Sie, dass Löschanfragen nicht rückgängig gemacht werden können. Daher sollten Sie Daten nur dann löschen, wenn Sie sicher sind, dass Sie sie jetzt und in Zukunft nicht mehr benötigen werden.
