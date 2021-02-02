@@ -1,79 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
+keywords: Experience Platform;Home;beliebte Themen;PSQL;psqlconnect to Abfrage Service;Abfrage-Dienst;Abfrage-Dienst
 solution: Experience Platform
 title: Anbinden an PSQL
 topic: connect
-description: 'PSQL ist eine Befehlszeilenschnittstelle, die im Rahmen der Installation von Postgres bereitgestellt wird. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen. '
+description: 'PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation von PostgreSQL auf Ihrem Computer verwendet wird. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen. '
 translation-type: tm+mt
-source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 68%
+source-wordcount: '244'
+ht-degree: 25%
 
 ---
 
 
-# Anbinden an PSQL
+# PSQL
 
-PSQL is a command-line interface that comes when you install [!DNL Postgres] on your machine. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen.
+PSQL ist eine Befehlszeilenschnittstelle, die installiert wird, wenn Sie [!DNL PostgreSQL] auf Ihrem Computer installieren. Dieses Dokument beschreibt die Schritte zum Verbinden von PSQL mit Adobe Experience Platform [!DNL Query Service].
 
-## Installieren von Postgres auf einem Mac
+>[!NOTE]
+>
+> Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL PSQL] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL PSQL] finden Sie in der [offiziellen [!DNL PSQL] Dokumentation](https://www.postgresql.org/docs/current/app-psql.html.
 
-Öffnen Sie ein Terminal-Fenster und geben Sie die folgenden drei Befehle ein:
+## Verbinden Sie PSQL und [!DNL Query Service]
 
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-```shell
-brew install postgres
-```
-
-```shell
-which psql
-```
-
-Diese Befehle sollten folgende Ausgabe liefern:
-
-```shell
-/usr/local/bin/psql
-```
-
-## Install [!DNL Postgres] on a PC
-
-Download and install [!DNL Postgres] from this [location](https://www.postgresql.org/download/windows/).
-
-Bearbeiten Sie die Pfadvariable:
-
-![Bild](../images/clients/psql/path.png)
-
-Add the two lines shown that include &quot;[!DNL Postgres].&quot;
-
-Speichern Sie Ihre Updates, öffnen Sie eine Eingabeaufforderung und geben Sie Folgendes ein:
-
-```shell
-psql -V
-```
-
-Die Ausgabe sollte in etwa wie folgt lauten:
-
-```shell
-psql (PostgreSQL) 9.5.14
-```
-
-## Connect PSQL and [!DNL Query Service]
-
-Return to the [!DNL Platform] UI on the **[!UICONTROL Connect BI Tools]** page.
-
-Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
+Nachdem Sie PSQL auf Ihrem Computer installiert haben, können Sie PSQL mit dem Abfrage Service verbinden. Kehren Sie zur Benutzeroberfläche [!DNL Platform] zurück und wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
 ![Bild](../images/clients/psql/connect-bi.png)
 
+Wählen Sie das Symbol aus, um den Abschnitt mit der Bezeichnung **[!UICONTROL PSQL-Befehl]** zu kopieren, und fügen Sie dann die Befehlszeichenfolge in ein Terminal- oder Befehlszeilenfenster ein, bevor Sie die Eingabetaste drücken.
+
 >[!IMPORTANT]
 >
->Verwenden Sie auf einem PC einen Texteditor, um in der Zeichenfolge des Befehls die Zeilenumbrüche zu entfernen, und kopieren Sie dann die Zeichenfolge. Wenn Sie außerdem Version 12.0 oder höher verwenden, müssen Sie der Verbindungszeichenfolge `PGGSSENCMODE=disable` hinzufügen.
-
-Fügen Sie die Befehlszeichenfolge in das Fenster eines Terminals bzw. einer Eingabeaufforderung ein und drücken Sie die Eingabetaste.
+>Verwenden Sie auf einem PC einen Texteditor, um in der Zeichenfolge des Befehls die Zeilenumbrüche zu entfernen, und kopieren Sie dann die Zeichenfolge. Wenn Sie außerdem Version 12.0 oder höher verwenden, müssen Sie `PGGSSENCMODE=disable` zu Ihrer Verbindungszeichenfolge hinzufügen.
 
 Die Ausgabe sollte in folgt lauten:
 
@@ -85,3 +43,7 @@ all=>
 ```
 
 Wird für die Versionsnummer nicht mindestens 10.5 angegeben, müssen Sie Version 10.5 oder höher herunterladen.
+
+## Nächste Schritte
+
+Nachdem Sie eine Verbindung mit [!DNL Query Service] hergestellt haben, können Sie PSQL verwenden, um Abfragen zu schreiben. Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Leitfaden zu [laufenden Abfragen](../best-practices/writing-queries.md).
