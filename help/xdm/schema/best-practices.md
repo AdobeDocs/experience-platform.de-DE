@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;enum;primäre Identität;primäre Identität;XDM-individuelles Profil;Experience Ereignis;XDM Experience Ereignis;XDM ExperienceEvent;experienceEvent;ExperienceEvent;XDM ExperienceEvent;Schema-Design;Best Practices
 solution: Experience Platform
 title: Bewährte Verfahren für die Datenmodellierung in Adobe Experience Platform
 topic: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2515'
 ht-degree: 2%
 
 ---
@@ -21,39 +21,39 @@ Da XDM sehr vielseitig und von Design aus anpassbar ist, ist es daher wichtig, b
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, lesen Sie bitte die [XDM-Systemübersicht](../home.md) für eine Einführung in XDM und dessen Rolle in der Experience Platform.
+Bevor Sie dieses Handbuch lesen, lesen Sie sich bitte die [XDM Systemübersicht](../home.md) durch, um eine Einführung in XDM und dessen Rolle in der Experience Platform zu erhalten.
 
-Darüber hinaus konzentriert sich dieser Leitfaden ausschließlich auf wichtige Aspekte in Zusammenhang mit dem Schema-Design. Es wird daher dringend empfohlen, die [Grundlagen der Schema-Zusammensetzung](./composition.md) für eine detaillierte Erläuterung der in diesem Handbuch erwähnten Schema-Elemente heranzuziehen.
+Darüber hinaus konzentriert sich dieser Leitfaden ausschließlich auf wichtige Aspekte in Zusammenhang mit dem Schema-Design. Es wird daher dringend empfohlen, die [Grundlagen der Schema-Komposition](./composition.md) für detaillierte Erläuterungen der einzelnen Schema-Elemente, die in diesem Handbuch erwähnt werden, heranzuziehen.
 
 ## Zusammenfassung der Best Practices
 
 Der empfohlene Ansatz zum Entwerfen Ihres Datenmodells für die Verwendung in der Experience Platform lässt sich wie folgt zusammenfassen:
 
 1. Machen Sie sich mit den geschäftlichen Nutzungsszenarien für Ihre Daten vertraut.
-1. Identifizieren Sie die primären Datenquellen, die zur Behandlung dieser Anwendungsfälle herangezogen werden [!DNL Platform] sollten.
-1. Finden Sie alle sekundären Datenquellen heraus, die ebenfalls von Interesse sein könnten. Wenn zum Beispiel derzeit nur eine Geschäftseinheit in Ihrer Organisation daran interessiert ist, ihre Daten an [!DNL Platform]eine ähnliche Geschäftseinheit zu übertragen, könnte eine ähnliche Geschäftseinheit auch daran interessiert sein, ähnliche Daten in Zukunft zu portieren. Die Betrachtung dieser sekundären Quellen hilft, das Datenmodell in Ihrer gesamten Organisation zu standardisieren.
+1. Identifizieren Sie die primären Datenquellen, die in [!DNL Platform] eingebracht werden sollten, um diese Anwendungsfälle zu beheben.
+1. Finden Sie alle sekundären Datenquellen heraus, die ebenfalls von Interesse sein könnten. Wenn zum Beispiel derzeit nur eine Geschäftseinheit in Ihrem Unternehmen daran interessiert ist, ihre Daten an [!DNL Platform] zu übertragen, könnte eine ähnliche Geschäftseinheit auch daran interessiert sein, ähnliche Daten in Zukunft zu portieren. Die Betrachtung dieser sekundären Quellen hilft, das Datenmodell in Ihrer gesamten Organisation zu standardisieren.
 1. Erstellen Sie ein hochrangiges Entitätsbeziehungsdiagramm (ERD) für die identifizierten Datenquellen.
-1. Konvertieren Sie die ERD auf hoher Ebene in eine [!DNL Platform]zentrierte ERD (einschließlich Profilen, Experience Ereignisses und Lookup-Entitäten).
+1. Konvertieren Sie die ERD auf hoher Ebene in eine [!DNL Platform]-zentrierte ERD (einschließlich Profilen, Experience Ereignisses und Lookup-Entitäten).
 
-Die Schritte zur Ermittlung der für die Durchführung Ihrer geschäftlichen Nutzungsszenarien erforderlichen Datenquellen sind von Unternehmen und Organisation zu Organisation unterschiedlich. Während sich die restlichen Abschnitte in diesem Dokument auf die letzten Schritte zur Organisation und zum Aufbau einer ERD nach der Identifizierung der Datenquellen konzentrieren, können die Erläuterungen der verschiedenen Diagrammkomponenten Ihre Entscheidungen darüber informieren, in welche Datenquellen migriert werden soll [!DNL Platform].
+Die Schritte zur Ermittlung der für die Durchführung Ihrer geschäftlichen Nutzungsszenarien erforderlichen Datenquellen sind von Unternehmen und Organisation zu Organisation unterschiedlich. Während sich die restlichen Abschnitte in diesem Dokument auf die letzten Schritte der Organisation und des Aufbaus einer ERD nach der Identifizierung der Datenquellen konzentrieren, können die Erläuterungen der verschiedenen Diagrammkomponenten Ihre Entscheidungen darüber informieren, welche Ihrer Datenquellen nach [!DNL Platform] migriert werden sollen.
 
 ## Erstellen eines EFD auf hoher Ebene
 
-Nachdem Sie die Datenquellen ermittelt haben, die Sie einbeziehen möchten, erstellen Sie [!DNL Platform]eine ERD auf hoher Ebene, die Ihnen bei der Zuordnung Ihrer Daten zu XDM-Schemas hilft.
+Nachdem Sie die Datenquellen ermittelt haben, die Sie in [!DNL Platform] einbinden möchten, erstellen Sie eine ERD auf hoher Ebene, die Ihnen bei der Zuordnung Ihrer Daten zu XDM-Schemas helfen soll.
 
-Das nachstehende Beispiel stellt eine vereinfachte ERD für eine Firma dar, die Daten in [!DNL Platform]die Datenbank aufnehmen möchte. Das Diagramm zeigt die wesentlichen Entitäten an, die in XDM-Klassen, darunter Kundenkonten, Hotels, Adressen und mehrere gängige E-Commerce-Ereignis, sortiert werden sollten.
+Das folgende Beispiel stellt eine vereinfachte ERD für eine Firma dar, die Daten in [!DNL Platform] einbringen möchte. Das Diagramm zeigt die wesentlichen Entitäten an, die in XDM-Klassen, darunter Kundenkonten, Hotels, Adressen und mehrere gängige E-Commerce-Ereignis, sortiert werden sollten.
 
 ![](../images/best-practices/erd.png)
 
 ## Sortieren von Entitäten in Profil-, Lookup- und Ereignis-Kategorien
 
-Nachdem Sie eine ERD erstellt haben, um die wesentlichen Entitäten zu identifizieren, die Sie einbringen möchten, [!DNL Platform]müssen diese Entitäten in Profil-, Lookup- und Ereignis-Kategorien sortiert werden:
+Nachdem Sie eine ERD erstellt haben, um die wesentlichen Entitäten zu identifizieren, die Sie in [!DNL Platform] einbinden möchten, müssen diese Entitäten in Profil-, Lookup- und Ereignis-Kategorien sortiert werden:
 
 | Kategorie | Beschreibung |
 | --- | --- |
-| Profil-Entitäten | Profil-Entitäten stellen Attribute dar, die sich auf eine Einzelperson beziehen, in der Regel auf einen Kunden. Entitäten, die unter diese Kategorie fallen, sollten durch Schema vertreten werden, die auf der **[!DNL XDM Individual Profile]Klasse** basieren. |
-| Suchentitäten | Suchentitäten stellen Konzepte dar, die sich auf eine einzelne Person beziehen können, die aber nicht direkt zur Identifizierung der Person verwendet werden können. Entitäten, die unter diese Kategorie fallen, sollten durch Schema dargestellt werden, die auf **benutzerdefinierten Klassen** basieren. |
-| Ereignis-Entitäten | Ereignis-Entitäten stellen Konzepte dar, die mit Aktionen zusammenhängen, die ein Kunde ausführen kann, Systemkonzepte oder andere Ereignisse, bei denen Sie Änderungen im Laufe der Zeit nachverfolgen möchten. Entitäten, die unter diese Kategorie fallen, sollten durch Schema vertreten werden, die auf der **[!DNL XDM ExperienceEvent]Klasse** basieren. |
+| Profil-Entitäten | Profil-Entitäten stellen Attribute dar, die sich auf eine Einzelperson beziehen, in der Regel auf einen Kunden. Entitäten, die unter diese Kategorie fallen, sollten durch Schema dargestellt werden, die auf der **[!DNL XDM Individual Profile]class** basieren. |
+| Suchentitäten | Suchentitäten stellen Konzepte dar, die sich auf eine einzelne Person beziehen können, die aber nicht direkt zur Identifizierung der Person verwendet werden können. Entitäten, die unter diese Kategorie fallen, sollten durch Schema dargestellt werden, die auf **benutzerspezifischen Klassen** basieren. |
+| Ereignis-Entitäten | Ereignis-Entitäten stellen Konzepte dar, die mit Aktionen zusammenhängen, die ein Kunde ausführen kann, Systemkonzepte oder andere Ereignisse, bei denen Sie Änderungen im Laufe der Zeit nachverfolgen möchten. Entitäten, die unter diese Kategorie fallen, sollten durch Schema dargestellt werden, die auf der **[!DNL XDM ExperienceEvent]class** basieren. |
 
 ### Überlegungen zur Entitätssortierung
 
@@ -69,7 +69,7 @@ Wenn eine Entität Attribute enthält, die sich auf einen einzelnen Kunden bezie
 
 #### Verfolgen von Daten über einen bestimmten Zeitraum
 
-Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Entität im Laufe der Zeit ändern, ist dies höchstwahrscheinlich eine Ereignis-Entität. Das Hinzufügen von Produktelementen zum Einkaufswagen kann beispielsweise als Zusatz-zu-Einkaufswagen-Ereignisse nachverfolgt werden in [!DNL Platform]:
+Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Entität im Laufe der Zeit ändern, ist dies höchstwahrscheinlich eine Ereignis-Entität. So können zum Beispiel Produktelemente zu einem Einkaufswagen als Add-to-cart-Ereignis in [!DNL Platform] nachverfolgt werden:
 
 | Kunden-ID | Typ | Produkt-ID | Menge | Zeitstempel |
 | --- | --- | --- | --- | --- |
@@ -91,7 +91,7 @@ Eine Firma möchte beispielsweise alle &quot;Gold&quot;- oder &quot;Platin&quot;
 
 Zusätzlich zu Überlegungen zu den Anwendungsfällen für die Segmentierung sollten Sie auch die Anwendungsfälle für die Aktivierung dieser Segmente überprüfen, um weitere relevante Attribute zu identifizieren.
 
-Eine Firma hat beispielsweise ein Audiencen-Segment auf der Grundlage dieser Regel erstellt `country = US`. Beim Aktivieren dieses Segments in bestimmten nachgelagerten Zielgruppen möchte die Firma dann alle exportierten Profil auf Grundlage des Heimatstatus filtern. Daher sollte ein `state` Attribut auch in der entsprechenden Entität des Profils erfasst werden.
+Eine Firma hat beispielsweise ein Audiencen-Segment basierend auf der Regel `country = US` erstellt. Beim Aktivieren dieses Segments in bestimmten nachgelagerten Zielgruppen möchte die Firma dann alle exportierten Profil auf Grundlage des Heimatstatus filtern. Daher sollte ein `state`-Attribut auch in der entsprechenden Profil-Entität erfasst werden.
 
 #### Aggregierte Werte
 
@@ -101,7 +101,7 @@ Eine Firma möchte beispielsweise ein Segment basierend auf der Anzahl der Einka
 
 >[!CAUTION]
 >
->Experience Platform führt derzeit keine automatische Wertaggregation durch, obwohl dies für zukünftige Versionen geplant ist. Wenn Sie aggregierte Werte verwenden möchten, müssen Sie die Berechnungen extern durchführen, bevor Sie die Daten an [!DNL Platform]senden.
+>Experience Platform führt derzeit keine automatische Wertaggregation durch, obwohl dies für zukünftige Versionen geplant ist. Wenn Sie aggregierte Werte verwenden möchten, müssen Sie die Berechnungen extern durchführen, bevor Sie die Daten an [!DNL Platform] senden.
 
 #### Kardinalität
 
@@ -109,7 +109,7 @@ Die in Ihrer ERD festgelegten Kardinalitäten können auch Hinweise zur Kategori
 
 >[!NOTE]
 >
->Da es keinen universellen Ansatz gibt, um alle Anwendungsfälle zu berücksichtigen, ist es wichtig, bei der Kategorisierung von Entitäten auf der Grundlage der Kardinalität die Vor- und Nachteile jeder einzelnen Situation zu berücksichtigen. Weitere Informationen finden Sie im [nächsten Abschnitt](#pros-and-cons) .
+>Da es keinen universellen Ansatz gibt, um alle Anwendungsfälle zu berücksichtigen, ist es wichtig, bei der Kategorisierung von Entitäten auf der Grundlage der Kardinalität die Vor- und Nachteile jeder einzelnen Situation zu berücksichtigen. Weitere Informationen finden Sie unter [nächster Abschnitt](#pros-and-cons).
 
 In der folgenden Tabelle sind einige allgemeine Entitätsbeziehungen und die daraus abgeleiteten Kategorien aufgeführt:
 
@@ -130,9 +130,9 @@ In diesem Szenario verfügt die Firma über zwei potenzielle Optionen zur Darste
 1. [Profil-Attribute verwenden](#profile-approach)
 1. [Ereignis-Entitäten verwenden](#event-approach)
 
-#### Ansatz 1: Profil-Attribute verwenden {#profile-approach}
+#### Ansatz 1: Profil-Attribute {#profile-approach} verwenden
 
-Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die Kundenentität des Profils einzuschließen. Objekte in diesem Array enthalten Felder für `category`, `status`, `planName`, `startDate`und `endDate`.
+Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die Kundenentität des Profils einzuschließen. Objekte in diesem Array enthalten Felder für `category`, `status`, `planName`, `startDate` und `endDate`.
 
 <img src="../images/best-practices/profile-schema.png" width="800"><br>
 
@@ -146,7 +146,7 @@ Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die K
 * Das gesamte Array muss bei jeder Änderung an einem Feld im Array neu angegeben werden.
 * Wenn verschiedene Datenquellen oder Geschäftseinheiten Daten in das Array einspeisen, wird es schwierig, das neueste aktualisierte Array über alle Kanal hinweg zu synchronisieren.
 
-#### Ansatz 2: Ereignis-Entitäten verwenden {#event-approach}
+#### Ansatz 2: Ereignis-Entitäten {#event-approach} verwenden
 
 Der zweite Ansatz wäre, Ereignis-Schema zur Darstellung von Abonnements zu verwenden. Hierzu müssen dieselben Abonnement-Felder wie beim ersten Ansatz verwendet werden, wobei eine Abonnement-ID, eine Kunden-ID und ein Zeitstempel zum Zeitpunkt des Ereignisses des Abonnements hinzugefügt werden müssen.
 
@@ -169,29 +169,29 @@ Nachdem Sie Ihre Entitäten in Profil-, Lookup- und Ereignis-Kategorien sortiert
 
 Die Kategorie, unter der eine Entität sortiert wurde, sollte die XDM-Klasse bestimmen, auf der das Schema basiert. Zu wiederholen:
 
-* Profil-Entitäten sollten die [!DNL XDM Individual Profile] Klasse verwenden.
-* Ereignis-Entitäten sollten die [!DNL XDM ExperienceEvent] Klasse verwenden.
+* Profil-Entitäten sollten die [!DNL XDM Individual Profile]-Klasse verwenden.
+* Ereignis-Entitäten sollten die [!DNL XDM ExperienceEvent]-Klasse verwenden.
 * Suchentitäten sollten benutzerdefinierte XDM-Klassen verwenden, die von Ihrem Unternehmen definiert wurden.
 
 >[!NOTE]
 >
 >Während Ereignis-Entitäten fast immer durch separate Schema repräsentiert werden, können Entitäten im Profil oder Lookup-Kategorien in einem einzigen XDM-Schema kombiniert werden, je nach Kardinalität.
 >
->Da die Kundenentität beispielsweise eine Eins-zu-Eins-Beziehung zur LoyaltyAccounts-Entität unterhält, könnte das Schema für die Kundenentität auch ein `LoyaltyAccount` Objekt enthalten, das die entsprechenden Treuefelder für jeden Kunden enthält. Wenn die Beziehung jedoch eine zu viele ist, könnte die Entität, die die &quot;viele&quot;darstellt, je nach Komplexität durch ein separates Schema oder ein Array von Profil-Attributen dargestellt werden.
+>Da die Kundenentität beispielsweise eine Eins-zu-Eins-Beziehung zur LoyaltyAccounts-Entität unterhält, könnte das Schema für die Kundenentität auch ein `LoyaltyAccount`-Objekt enthalten, das die entsprechenden Treuefelder für jeden Kunden enthält. Wenn die Beziehung jedoch eine zu viele ist, könnte die Entität, die die &quot;viele&quot;darstellt, je nach Komplexität durch ein separates Schema oder ein Array von Profil-Attributen dargestellt werden.
 
 Die folgenden Abschnitte enthalten allgemeine Anleitungen zum Aufbau von Schemas auf Basis Ihrer ERD.
 
 ### Anwenden eines iterativen Modellierungsansatzes
 
-Die [Regeln der Schema-Evolution](./composition.md#evolution) schreiben vor, dass Schemas erst dann zerstörungsfrei verändert werden können, wenn sie umgesetzt wurden. Mit anderen Worten, wenn Sie einem Schema ein Feld hinzufügen und Daten für dieses Feld erfasst wurden, kann das Feld nicht mehr entfernt werden. Daher ist es unerlässlich, beim ersten Erstellen Ihrer Schema einen iterativen Modellierungsansatz zu wählen, beginnend mit einer vereinfachten Implementierung, die im Laufe der Zeit immer komplexer wird.
+Die [Regeln der Schema-Evolution](./composition.md#evolution) schreiben vor, dass nur nicht-destruktive Änderungen an Schemas vorgenommen werden können, sobald sie implementiert wurden. Mit anderen Worten, wenn Sie einem Schema ein Feld hinzufügen und Daten für dieses Feld erfasst wurden, kann das Feld nicht mehr entfernt werden. Daher ist es unerlässlich, beim ersten Erstellen Ihrer Schema einen iterativen Modellierungsansatz zu wählen, beginnend mit einer vereinfachten Implementierung, die im Laufe der Zeit immer komplexer wird.
 
 Wenn Sie sich nicht sicher sind, ob ein bestimmtes Feld in ein Schema einbezogen werden muss, sollten Sie es am besten auslassen. Wenn später festgestellt wird, dass das Feld erforderlich ist, kann es immer in der nächsten Iteration des Schemas hinzugefügt werden.
 
 ### Identitätsfelder
 
-In der Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kunden aus mehreren Datenquellen zusammenzuführen. Obwohl ein Schema mehrere Felder als Identitäten kennzeichnen kann, muss eine einzige primäre Identität definiert werden, damit das Schema zur Verwendung in [!DNL Real-time Customer Profile]aktiviert werden kann. Detailliertere Informationen zum Verwendungsfall dieser Schemas finden Sie im Abschnitt zu [Identitätsfeldern](./composition.md#identity) in den Grundlagen der -Erstellung.
+In der Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kunden aus mehreren Datenquellen zusammenzuführen. Obwohl ein Schema mehrere Felder haben kann, die als Identitäten markiert sind, muss eine einzige primäre Identität definiert werden, damit das Schema für die Verwendung in [!DNL Real-time Customer Profile] aktiviert werden kann. Detailliertere Informationen zum Verwendungsfall dieser Schemas finden Sie im Abschnitt [Identitätsfelder](./composition.md#identity) in den Grundlagen der Feldzusammensetzung.
 
-Beim Entwerfen Ihrer Schema sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen wahrscheinlich Kandidaten für primäre Identitäten. Weitere Beispiele für entsprechende Identitätsfelder sind E-Mail-Adressen, Telefonnummern, Konto-IDs und [ECID](../../identity-service/ecid.md).
+Beim Entwerfen Ihrer Schema sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen wahrscheinlich Kandidaten für primäre Identitäten. Weitere Beispiele für anwendbare Identitätsfelder sind E-Mail-Adressen von Kunden, Telefonnummern, Konto-IDs und [ECID](../../identity-service/ecid.md).
 
 ### Adobe-Applikationsmischungen
 
@@ -202,11 +202,11 @@ Experience Platform bietet mehrere vordefinierte XDM-Mixins zur Erfassung von Da
 * Adobe Campaign
 * Adobe Target
 
-Beispielsweise können Sie mit dem [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) Ihre XDM-Schema mit [!DNL Analytics]spezifischen Feldern verknüpfen. Abhängig von den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese mit Adobe bereitgestellten Mixins in Ihren Schemas verwenden.
+Beispielsweise können Sie mit dem [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) [!DNL Analytics]-spezifischen Feldern Ihren XDM-Schemas zuordnen. Abhängig von den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese mit Adobe bereitgestellten Mixins in Ihren Schemas verwenden.
 
 <img src="../images/best-practices/analytics-mixin.png" width="700"><br>
 
-Bei der Adobe-Anwendungs-Mixins wird automatisch eine primäre Standardidentität zugewiesen. Dabei handelt es sich um ein systemgeneriertes schreibgeschütztes Objekt, das Standardidentitätswerte für einen einzelnen Kunden zuordnet. `identityMap`
+Bei Anwendungsanwendung-Mixins wird automatisch eine primäre Standardidentität zugewiesen, indem das Feld `identityMap` verwendet wird. Dabei handelt es sich um ein systemgeneriertes schreibgeschütztes Objekt, das Standardidentitätswerte für einen einzelnen Adobe zuordnet.
 
 Bei Adobe Analytics ist die ECID die primäre Standardidentität. Wenn kein ECID-Wert von einem Kunden bereitgestellt wird, lautet die primäre Identität stattdessen standardmäßig AAID.
 
@@ -220,7 +220,7 @@ In diesem Dokument wurden die allgemeinen Richtlinien und Best Practices für da
 
 * Verwenden Sie einen Top-Down-Ansatz, indem Sie Ihre Datentabellen in Profil-, Lookup- und Ereignis-Kategorien sortieren, bevor Sie Ihre Schema erstellen.
 * Es gibt oft mehrere Ansätze und Optionen, wenn es darum geht, Schema für unterschiedliche Zwecke zu gestalten.
-* Ihr Datenmodell sollte Ihre geschäftlichen Nutzungsszenarien wie Segmentierung oder Analyse der Customer Journey unterstützen.
+* Ihr Datenmodell sollte Ihre geschäftlichen Anwendungsfälle wie Segmentierung oder Journey-Analyse unterstützen.
 * Machen Sie Ihre Schemas so einfach wie möglich und fügen Sie nur dann neue Felder hinzu, wenn dies unbedingt erforderlich ist.
 
-Sobald Sie bereit sind, finden Sie in der Übung zum [Erstellen eines Schemas in der Benutzeroberfläche](../tutorials/create-schema-ui.md) schrittweise Anweisungen zum Erstellen eines Schemas, zum Zuweisen der entsprechenden Klasse für die Entität und zum Hinzufügen von Feldern zur Zuordnung Ihrer Daten.
+Sobald Sie bereit sind, finden Sie im Lernprogramm unter [Erstellen eines Schemas in der Benutzeroberfläche](../tutorials/create-schema-ui.md) schrittweise Anweisungen zum Erstellen eines Schemas, zum Zuweisen der entsprechenden Klasse für die Entität und zum Hinzufügen von Feldern zur Zuordnung Ihrer Daten.
