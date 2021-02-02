@@ -1,23 +1,23 @@
 ---
-keywords: Survey destinations;survey;foresee;inmoment;web intercept surveys;qualtrics
+keywords: Umfragen-Ziele;Umfrage;vorhersehen;Insight;Web-Abfangen-Umfragen;Qualitäten
 title: Umfrageziele
 seo-title: Umfrageziele
-description: 'Umfrageplattformen erkennen Umfrageereignisse, erfassen über Datenelemente Kunden-Feedback in Echtzeit und teilen Daten mit der Echtzeit-Kundendatenplattform von '
-seo-description: 'Umfrageplattformen erkennen Umfrageereignisse, erfassen über Datenelemente Kunden-Feedback in Echtzeit und teilen Daten mit der Echtzeit-Kundendatenplattform von '
+description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit mithilfe von Datenelementen und geben Daten für die Plattform frei.
+seo-description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit mithilfe von Datenelementen und geben Daten für die Plattform frei.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 89%
+source-wordcount: '105'
+ht-degree: 30%
 
 ---
 
 
 # Umfrageziele {#survey-destinations}
 
-Umfrageplattformen erkennen Umfrageereignisse, erfassen über Datenelemente Kunden-Feedback in Echtzeit und teilen Daten mit der Echtzeit-Kundendatenplattform von 
+Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit über Datenelemente und geben Daten mit Adobe Experience Platform frei.
 
-Die Echtzeit-Kundendatenplattform unterstützt derzeit die unten aufgeführten Umfragen. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+Derzeit unterstützt Platform die unten aufgeführten Umfragen-Ziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
 - [Foresee-Erweiterung](./foresee.md)
 - [InMoment-Erweiterung](./inmoment.md)
