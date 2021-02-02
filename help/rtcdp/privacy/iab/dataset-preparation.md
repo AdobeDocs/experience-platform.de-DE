@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
+keywords: Experience Platform;Home;IAB;IAB 2.0;Zustimmung;Zustimmung
 solution: Experience Platform
-title: Unterstützung von IAB TCF 2.0 in der Echtzeit-Plattform für Kundendaten
+title: Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten
 topic: privacy events
 description: In diesem Dokument werden Schritte zur Einrichtung der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Genehmigungsdaten beschrieben.
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: 0fea6c4d215e16941010e59817a2a099d775d2cd
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1653'
 ht-degree: 3%
 
 ---
@@ -15,16 +15,16 @@ ht-degree: 3%
 
 # Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten
 
-Damit [!DNL Real-time Customer Data Platform] die Daten zur Kundengenehmigung gemäß IAB [!DNL Transparency & Consent Framework] (TCF) 2.0 verarbeitet werden können, müssen diese Daten an Datensätze gesendet werden, deren Schemas TCF 2.0-Einwilligungsfelder enthalten.
+Damit [!DNL Real-time Customer Data Platform] Daten zur Kundengenehmigung gemäß IAB [!DNL Transparency & Consent Framework] (TCF) 2.0 verarbeiten kann, müssen diese Daten an Datensätze gesendet werden, deren Schemas TCF 2.0-Einwilligungsfelder enthalten.
 
 Für die Erfassung von TCF 2.0-Genehmigungsdaten sind insbesondere zwei Datensätze erforderlich:
 
-* Ein auf der [!DNL XDM Individual Profile] Klasse basierender Datensatz, der für die Verwendung in aktiviert ist [!DNL Real-time Customer Profile].
-* Ein Datensatz, der auf der [!DNL XDM ExperienceEvent] Klasse basiert.
+* Ein Datensatz, der auf der [!DNL XDM Individual Profile]-Klasse basiert und für die Verwendung in [!DNL Real-time Customer Profile] aktiviert ist.
+* Ein Datensatz, der auf der [!DNL XDM ExperienceEvent]-Klasse basiert.
 
-In diesem Dokument werden Schritte zur Einrichtung dieser beiden Datensätze zur Erhebung der IAB TCF 2.0-Genehmigungsdaten beschrieben. Eine Übersicht über den vollständigen Arbeitsablauf zur Konfiguration [!DNL Real-time CDP] für TCF 2.0 finden Sie in der [IAB TCF 2.0 Compliance-Übersicht](./overview.md).
+In diesem Dokument werden Schritte zur Einrichtung dieser beiden Datensätze zur Erhebung der IAB TCF 2.0-Genehmigungsdaten beschrieben. Eine Übersicht über den vollständigen Arbeitsablauf zum Konfigurieren von [!DNL Real-time CDP] für TCF 2.0 finden Sie in der [IAB TCF 2.0 Compliance-Übersicht](./overview.md).
 
-## Voraussetzungen 
+## Voraussetzungen
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -32,63 +32,110 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemata.
    * [Erstellen Sie ein Schema in der Benutzeroberfläche](../../../xdm/tutorials/create-schema-ui.md): Ein Lernprogramm, das die Grundlagen der Arbeit mit dem Schema-Editor behandelt.
 * [Adobe Experience Platform-Identitätsdienst](../../../identity-service/home.md): Ermöglicht Ihnen, Kunden-Identitäten von unterschiedlichen Datenquellen über Geräte und Systeme hinweg zu überbrücken.
-* [Echtzeit-Profil](../../../profile/home.md): Ermöglicht [!DNL Identity Service] die Erstellung detaillierter Kundendaten aus Ihren Datensätzen in Echtzeit. [!DNL Real-time Customer Profile] ruft Daten aus dem Data Lake ab und behält die Profil der Kunden in einem eigenen separaten Datenspeicher bei.
+   * [Identitäts-Namensraum](../../../identity-service/namespaces.md): Die Daten zur Kundenidentität müssen unter einem bestimmten, vom Identitätsdienst anerkannten Namensraum bereitgestellt werden.
+* [Echtzeit-Profil](../../../profile/home.md): Ermöglicht  [!DNL Identity Service] die Erstellung detaillierter Kundendaten aus Ihren Datensätzen in Echtzeit. [!DNL Real-time Customer Profile] ruft Daten aus dem Data Lake ab und behält die Profil der Kunden in einem eigenen separaten Datenspeicher bei.
 
-## Struktur des Schemas für Zustimmung {#structure}
+## [!UICONTROL Privacy ] DetailsMixin-Struktur  {#structure}
 
-Es gibt zwei XDM-Mixins, die Felder für die Kundengenehmigung bereitstellen, die für die Unterstützung von TCF 2.0 erforderlich sind: eine für Datensatzbasierte Daten ([!DNL XDM Individual Profile]) und eine andere für zeitreihenbasierte Daten ([!DNL XDM ExperienceEvent]):
+Das Mixin [!UICONTROL Datenschutzdetails] enthält die für den TCF 2.0-Support erforderlichen Felder für die Zustimmung des Kunden. Es gibt zwei Versionen dieses Mixins: eine mit der Klasse [!DNL XDM Individual Profile] und die andere mit der Klasse [!DNL XDM ExperienceEvent] kompatibel.
 
-| Schema | Beschreibung |
-| --- | --- |
-| Profil Privacy mixen | Dieses Mixin erfasst die aktuellen Voreinstellungen für die Zustimmung eines Kunden. Bei Verwendung in einem [!DNL Profile]aktivierten Schema werden die in diesem Mixin angegebenen Werte als Wahrheitsquelle für die Art und Weise betrachtet, wie die Durchsetzung der Zustimmung auf die Daten eines Kunden angewendet werden sollte. |
-| [!DNL Experience Event] Datenschutzmischung | Dieses Mixin erfasst die Präferenzen eines Kunden zur Einwilligung zu einem bestimmten Zeitpunkt. Die in diesen Feldern erfassten Daten können verwendet werden, um Änderungen in den Voreinstellungen für die Zustimmung des Kunden im Laufe der Zeit zu verfolgen. |
+Die folgenden Abschnitte erläutern die Struktur der einzelnen Mixins, einschließlich der Daten, die sie während der Aufnahme erwarten.
 
-Während der Anwendungsfall der einzelnen Mixins unterschiedlich ist, sind die angegebenen Felder ungefähr gleich. Diese Felder werden im folgenden Abschnitt näher erläutert.
+### Profil mixin {#profile-mixin}
 
-### Felder für Zustimmungsmixes {#privacy-mixin}
-
-Während jede Kombination aus Datenschutz und Struktur der darin enthaltenen Felder unterschiedlich ist, stellen beide das `xdm:consentString` Attribut bereit, dessen Unterfelder für die TCF 2.0-Durchsetzung erforderlich sind. Die Struktur dieser Felder und die erwarteten Werte sind nachfolgend dargestellt:
+Bei Schemas, die auf [!DNL XDM Individual Profile] basieren, stellt das Mixin [!UICONTROL Datenschutzdetails] ein einzelnes Kartenfeld bereit, `xdm:identityPrivacyInfo`, das die Kundenidentitäten ihren IAB-Zustimmungsvoreinstellungen zuordnet. Die folgende JSON-Datei ist ein Beispiel für die Art von Daten, die `xdm:identityPrivacyInfo` bei der Datenerfassung erwartet:
 
 ```json
 {
-  "xdm:consentString": {
-    "xdm:consentStandard": "IAB TCF",
-    "xdm:consentStandardVersion": "2.0",
-    "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
-    "xdm:gdprApplies": true,
-    "xdm:containsPersonalData": false
-  }
+  "xdm:identityPrivacyInfo": {
+      "ECID": {
+        "13782522493631189": {
+          "xdm:identityIABConsent": {
+            "xdm:consentTimestamp": "2020-04-11T05:05:05Z",
+            "xdm:consentString": {
+              "xdm:consentStandard": "IAB TCF",
+              "xdm:consentStandardVersion": "2.0",
+              "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
+              "xdm:gdprApplies": true,
+              "xdm:containsPersonalData": false
+            }
+          }
+        }
+      }
+    }
 }
 ```
 
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `xdm:consentString` | Enthält die aktualisierten Zustimmungsdaten des Kunden und andere Kontextinformationen. |
-| `xdm:consentStandard` | Der Rahmen für die Zustimmung, für den die Daten gelten. Für die TCF-Konformität sollte der Wert &quot;IAB TCF&quot;lauten. |
-| `xdm:consentStandardVersion` | Die Versionsnummer des Genehmigungsrahmens, angegeben durch `xdm:consentStandard`. Bei TCF 2.0-Kompatibilität sollte der Wert &quot;2.0&quot;lauten. |
-| `xdm:consentStringValue` | Die auf der Grundlage der vom Kunden ausgewählten Einstellungen für die Zustimmung generierte Zeichenfolge. |
-| `xdm:gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für diesen Kunden gilt. Der Wert muss auf &quot;true&quot;gesetzt werden, damit eine TCF 2.0-Durchsetzung erfolgt. Die Standardeinstellung lautet &quot;false&quot;(falsch), wenn sie nicht enthalten ist. |
-| `xdm:containsPersonalData` | Ein boolescher Wert, der angibt, ob die Aktualisierung der Zustimmung personenbezogene Daten enthält. Die Standardeinstellung lautet &quot;false&quot;(falsch), wenn sie nicht enthalten ist. |
-
-## Schemas zur Kundengenehmigung erstellen {#create-schemas}
-
-In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. Gehen Sie von hier aus wie folgt vor, um jedes erforderliche Schema zu erstellen.
+Wie das Beispiel zeigt, entspricht jeder Schlüssel auf der Stammebene von `xdm:identityPrivacyInfo` einem vom Identitätsdienst erkannten Identitäts-Namensraum. Jede Namensraum-Eigenschaft muss wiederum über mindestens eine Untereigenschaft verfügen, deren Schlüssel mit dem entsprechenden Identitätswert des Kunden für diesen Namensraum übereinstimmt. In diesem Beispiel wird der Kunde mit einem Experience Cloud-ID-Wert (`ECID`) von `13782522493631189` identifiziert.
 
 >[!NOTE]
 >
->Wenn Sie vorhandene XDM-Schema haben, die Sie stattdessen zur Erfassung von Genehmigungsdaten verwenden möchten, können Sie diese Schema bearbeiten, anstatt neue zu erstellen. Bei der Bearbeitung vorhandener Schema ist es jedoch wichtig, die [Grundsätze der Schema-Evolution](../../../xdm/schema/composition.md#evolution) zu beachten, um Veränderungen zu vermeiden.
+>Während im obigen Beispiel ein Namensraum/Wert-Paar zur Darstellung der Kundenidentität verwendet wird, können Sie zusätzliche Schlüssel für andere Namensraum hinzufügen. Jeder Namensraum kann über mehrere Identitätswerte verfügen, jeweils mit eigenen IAB-Zustimmungsvoreinstellungen.
 
-### Erstellen eines Schemas für die Einwilligung in einen Datensatz {#profile-schema}
+Innerhalb des Identitätswertobjekts befindet sich ein einzelnes Feld, `xdm:identityIABConsent`. Dieses Objekt erfasst die IAB-Zustimmungswerte des Kunden für den angegebenen Identitäts-Namensraum und den angegebenen Wert. Die in diesem Feld enthaltenen Untereigenschaften sind unten aufgeführt:
 
-Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Schemas] &quot;ein neues Schema, das auf der**[!DNL XDM Individual Profile] Klasse basiert. Nachdem Sie das Schema im Schema-Editor geöffnet haben, klicken Sie auf der linken Seite der Arbeitsfläche unter dem Abschnitt &quot; **[!UICONTROL Mixins]** &quot;auf **[!UICONTROL Hinzufügen]** .
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `xdm:consentTimestamp` | Ein [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt) Zeitstempel, der angibt, wann sich die IAB-Zustimmungswerte geändert haben. |
+| `xdm:consentString` | Ein Objekt, das die aktualisierten Daten zur Zustimmung des Kunden und andere Kontextinformationen enthält. Weitere Informationen zu den erforderlichen Untereigenschaften dieses Objekts finden Sie im Abschnitt [Eigenschaften der Einwilligungszeichenfolge](#consent-string). |
+
+### Ereignis mixin {#event-mixin}
+
+Bei Schemas, die auf [!DNL XDM ExperienceEvent] basieren, stellt das Mixin [!UICONTROL Datenschutzdetails] ein einzelnes Array-Typ-Feld bereit: `xdm:consentStrings`. Jedes Element in diesem Array muss ein Objekt sein, das die erforderlichen Eigenschaften für eine IAB-Zustimmungszeichenfolge enthält, ähnlich dem Feld `xdm:consentString` im Profil-Mixin. Weitere Informationen zu diesen Untereigenschaften finden Sie im [nächsten Abschnitt](#consent-string).
+
+```json
+{
+  "xdm:consentStrings": [
+    {
+      "xdm:consentStandard": "IAB TCF",
+      "xdm:consentStandardVersion": "2.0",
+      "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
+      "xdm:gdprApplies": true,
+      "xdm:containsPersonalData": false
+    }
+  ]
+}
+```
+
+### Eigenschaften von Genehmigungszeichenfolgen {#consent-string}
+
+Beide Versionen des [!UICONTROL Datenschutzdetails]-Mixins erfordern mindestens ein Objekt, das die erforderlichen Felder erfasst, die die IAB-Zustimmungszeichenfolge für den Kunden beschreiben. Die folgenden Eigenschaften werden erläutert:
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `xdm:consentStandard` | Der Rahmen für die Zustimmung, für den die Daten gelten. Für die TCF-Kompatibilität muss der Wert `IAB TCF` sein. |
+| `xdm:consentStandardVersion` | Die Versionsnummer des Genehmigungsrahmens, die durch `xdm:consentStandard` angegeben wird. Für die TCF 2.0-Kompatibilität muss der Wert `2.0` sein. |
+| `xdm:consentStringValue` | Die Zustimmungszeichenfolge, die von der Plattform für das Zustimmungsmanagement (CMP) basierend auf den ausgewählten Einstellungen des Kunden generiert wurde. |
+| `xdm:gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für diesen Kunden gilt. Der Wert muss auf `true` gesetzt werden, damit eine TCF 2.0-Durchsetzung erfolgt. Die Standardeinstellung ist `false`, wenn nicht enthalten. |
+| `xdm:containsPersonalData` | Ein boolescher Wert, der angibt, ob die Aktualisierung der Zustimmung personenbezogene Daten enthält. Die Standardeinstellung ist `false`, wenn nicht enthalten. |
+
+## Schemas zur Kundeneinwilligung {#create-schemas} erstellen
+
+Um Datasets zu erstellen, die Genehmigungsdaten erfassen, müssen Sie zunächst XDM-Schema erstellen, auf denen diese Datensätze basieren.
+
+Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;im linken Navigationsbereich **[!UICONTROL Schema]** aus, um den Arbeitsbereich [!UICONTROL Schemas] zu öffnen. Gehen Sie von hier aus wie folgt vor, um jedes erforderliche Schema zu erstellen.
+
+>[!NOTE]
+>
+>Wenn Sie vorhandene XDM-Schema haben, die Sie stattdessen zur Erfassung von Genehmigungsdaten verwenden möchten, können Sie diese Schema bearbeiten, anstatt neue zu erstellen. Wenn jedoch ein bestehendes Schema für die Verwendung im Echtzeit-Kundendienst aktiviert wurde, kann seine primäre Identität nicht ein direkt identifizierbares Feld sein, das für interessensbasierte Werbung, wie z. B. eine E-Mail-Adresse, nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
+>
+>Darüber hinaus können bei der Bearbeitung vorhandener Schema nur additive (nicht-innovative) Änderungen vorgenommen werden. Weitere Informationen finden Sie im Abschnitt zu den [Grundsätzen der Schema-Evolution](../../../xdm/schema/composition.md#evolution).
+
+### Erstellen Sie ein Schema für die Einwilligung in einen Datensatz {#profile-schema}
+
+Wählen Sie im Arbeitsbereich **[!UICONTROL Schemas]** **[!UICONTROL Schema erstellen]** und wählen Sie dann **[!UICONTROL XDM Individuelles Profil]** aus der Dropdownliste.
+
+![](../assets/iab/create-schema-profile.png)
+
+Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Verwenden Sie die rechte Leiste, um einen Namen und eine Beschreibung für das Schema anzugeben, und wählen Sie dann **[!UICONTROL Hinzufügen]** im Bereich **[!UICONTROL Mixins]** links auf der Arbeitsfläche aus.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. Wählen Sie hier in der Liste die Option **[!UICONTROL Profil Privacy]** . Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Klicken Sie nach Auswahl des Mixins auf **[!UICONTROL Hinzufügen Mixin]**.
+Das Dialogfeld **[!UICONTROL Hinzufügen mixin]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutzdetails]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Wenn das Mixin ausgewählt ist, wählen Sie **[!UICONTROL Hinzufügen mixin]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
-Die Arbeitsfläche des Schema-Editors wird wieder angezeigt, sodass Sie die Struktur der hinzugefügten Felder für die Zustimmungszeichenfolge überprüfen können.
+Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das Feld `identityPrivacyInfo` der Schema-Struktur hinzugefügt wurde.
 
 ![](../assets/iab/profile-privacy-structure.png)
 
@@ -96,81 +143,87 @@ Wiederholen Sie von hier aus die oben genannten Schritte, um dem Schema die folg
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Datenerfassungsregion für Profil]
-* [!UICONTROL Angaben zur Person des Profils]
-* [!UICONTROL Persönliche Angaben zum Profil]
+* [!UICONTROL Demografische Details]
+* [!UICONTROL Persönliche Kontaktangaben]
 
 ![](../assets/iab/profile-all-mixins.png)
 
-Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in aktiviert wurde, klicken Sie auf [!DNL Real-time Customer Profile]&quot; **[!UICONTROL Speichern]** &quot;, um die Änderungen zu bestätigen, bevor Sie mit dem Abschnitt zum [Erstellen eines Datensatzes auf der Grundlage Ihres Schemas](#dataset)für die Zustimmung fortfahren. Wenn Sie ein neues Schema erstellen, führen Sie die im Unterabschnitt unten beschriebenen Schritte aus.
+Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in [!DNL Real-time Customer Profile] aktiviert wurde, wählen Sie **[!UICONTROL Speichern]**, um Ihre Änderungen zu bestätigen, bevor Sie mit dem Abschnitt [Erstellen eines Datensatzes auf der Grundlage Ihres Schemas für die Einwilligung](#dataset) fortfahren. Wenn Sie ein neues Schema erstellen, führen Sie die im Unterabschnitt unten beschriebenen Schritte aus.
 
-#### Schema zur Verwendung in [!DNL Real-time Customer Profile]
+#### Schema zur Verwendung in [!DNL Real-time Customer Profile] aktivieren
 
-Damit die [!DNL Real-time CDP] von ihr erhaltenen Daten mit bestimmten Profilen verknüpft werden können, muss das Schema für die Zustimmung zur Verwendung in diesem Bereich aktiviert werden [!DNL Real-time Customer Profile].
+Damit [!DNL Real-time CDP] die erhaltenen Zustimmungsdaten bestimmten Profilen zuordnen kann, muss das Schema für die Zustimmung für die Verwendung in [!DNL Real-time Customer Profile] aktiviert werden.
 
 >[!NOTE]
 >
->Das in diesem Schema gezeigte Beispiel verwendet sein `identityMap` Feld als primäre Identität. Wenn Sie ein anderes Feld als primäre Identität festlegen möchten, stellen Sie sicher, dass Sie einen indirekten Bezeichner wie eine Cookie-ID verwenden und nicht ein direkt identifizierbares Feld, das nicht in interessensbasierter Werbung wie einer E-Mail-Adresse verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
+>Das in diesem Schema dargestellte Beispiel verwendet das zugehörige `identityMap`-Feld als primäre Identität. Wenn Sie ein anderes Feld als primäre Identität festlegen möchten, stellen Sie sicher, dass Sie einen indirekten Bezeichner wie eine Cookie-ID verwenden und nicht ein direkt identifizierbares Feld, das nicht in interessensbasierter Werbung wie einer E-Mail-Adresse verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
 >
->Schritte zum Festlegen eines primären Identitätsfelds für ein Schema finden Sie im Lernprogramm zur Erstellung von [Schemas](../../../xdm/tutorials/create-schema-ui.md#identity-field).
+>Schritte zum Festlegen eines primären Identitätsfelds für ein Schema finden Sie im Tutorial [Schema-Erstellung](../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
-Um das Schema zu aktivieren, [!DNL Profile]klicken Sie in der linken Leiste auf den Namen des Schemas, um das Dialogfeld &quot; **[!UICONTROL Schema-Eigenschaften]** &quot;in der rechten Leiste zu öffnen. Klicken Sie von hier auf die Schaltfläche zum Umschalten des **[!UICONTROL Profils]** .
+Um das Schema für [!DNL Profile] zu aktivieren, wählen Sie in der linken Leiste den Namen des Schemas aus, um das Dialogfeld **[!UICONTROL Schema properties]** in der rechten Leiste zu öffnen. Wählen Sie von hier die Umschalter-Schaltfläche **[!UICONTROL Profil]**.
 
 ![](../assets/iab/profile-enable-profile.png)
 
-Es wird ein Popup mit einer fehlenden primären Identität angezeigt. Aktivieren Sie das Kontrollkästchen für die Verwendung einer alternativen primären Identität, da die primäre Identität im Feld identityMap enthalten sein wird.
+Es wird ein Popup mit einer fehlenden primären Identität angezeigt. Aktivieren Sie das Kontrollkästchen für die Verwendung einer alternativen primären Identität, da die primäre Identität im Feld `identityMap` enthalten ist.
 
-<img src="../assets/iab/missing-primary-identity.png" width="600" /><br>
+![](../assets/iab/missing-primary-identity.png)
 
-Klicken Sie abschließend auf **[!UICONTROL Speichern]** , um die Änderungen zu bestätigen.
+Wählen Sie **[!UICONTROL Speichern]**, um Ihre Änderungen zu bestätigen.
 
 ![](../assets/iab/profile-save.png)
 
-### Erstellen eines zeitreihenbasierten Schemas für die Zustimmung {#event-schema}
+### Erstellen Sie ein zeitreihenbasiertes Schema für die Zustimmung {#event-schema}
 
-Erstellen Sie auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;im Arbeitsbereich &quot; **[!UICONTROL Schemas]** &quot;ein neues Schema, das auf der [!DNL XDM ExperienceEvent] Klasse basiert. Nachdem Sie das Schema im Schema-Editor geöffnet haben, klicken Sie auf der linken Seite der Arbeitsfläche unter dem Abschnitt &quot; **[!UICONTROL Mixins]** &quot;auf **[!UICONTROL Hinzufügen]** .
+Wählen Sie im Arbeitsbereich **[!UICONTROL Schemas]** **[!UICONTROL Schema erstellen]** und wählen Sie dann **[!UICONTROL XDM ExperienceEvent]** aus der Dropdownliste.
+
+![](../assets/iab/create-schema-event.png)
+
+Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Verwenden Sie die rechte Leiste, um einen Namen und eine Beschreibung für das Schema anzugeben, und wählen Sie dann **[!UICONTROL Hinzufügen]** im Bereich **[!UICONTROL Mixins]** links auf der Arbeitsfläche aus.
 
 ![](../assets/iab/add-mixin-event.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. Wählen Sie von hier aus **[!UICONTROL Experience Ereignis Privacy mixin]** der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Klicken Sie nach Auswahl des Mixins auf **[!UICONTROL Hinzufügen Mixin]**.
+Das Dialogfeld **[!UICONTROL Hinzufügen mixin]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutzdetails]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Wenn Sie ein Mixin ausgewählt haben, wählen Sie **[!UICONTROL Hinzufügen mixin]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
-Die Arbeitsfläche des Schema-Editors wird wieder angezeigt und zeigt die Felder mit der hinzugefügten Zustimmungszeichenfolge an.
+Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das `consentStrings`-Array zur Schema-Struktur hinzugefügt wurde.
 
 ![](../assets/iab/event-privacy-structure.png)
 
 Wiederholen Sie von hier aus die oben genannten Schritte, um dem Schema die folgenden zusätzlichen Mixins hinzuzufügen:
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL Details zur ExperienceEvent-Umgebung]
-* [!UICONTROL ExperienceEvent-Webdetails]
-* [!UICONTROL Details zur ExperienceEvent-Implementierung]
+* [!UICONTROL Umgebung]
+* [!UICONTROL Webdetails]
+* [!UICONTROL Implementierungsdetails]
 
-Nachdem die Mixins hinzugefügt wurden, klicken Sie auf **[!UICONTROL Speichern]**.
+Nachdem die Mixins hinzugefügt wurden, beenden Sie sie durch Auswahl von **[!UICONTROL Speichern]**.
 
 ![](../assets/iab/event-all-mixins.png)
 
-## Erstellen Sie Datensätze basierend auf Ihren Schemas zur Einwilligung {#datasets}
+## Erstellen Sie Datensätze basierend auf Ihren Schemas für die Zustimmung {#datasets}
 
-Für jedes der oben beschriebenen erforderlichen Schema müssen Sie einen Datensatz erstellen, der letztendlich die Daten zur Einwilligung Ihrer Kunden erfasst. Der auf dem [!DNL XDM Individual Profile] Schema basierende Datensatz muss aktiviert werden, [!DNL Real-time Customer Profile]während der auf dem [!DNL XDM ExperienceEvent] Schema basierende Datensatz nicht [!DNL Profile]aktiviert werden sollte.
+Für jedes der oben beschriebenen erforderlichen Schema müssen Sie einen Datensatz erstellen, der letztendlich die Daten zur Einwilligung Ihrer Kunden erfasst. Der Datensatz, der auf dem Schema record basiert, muss für [!DNL Real-time Customer Profile] aktiviert sein, während der Datensatz, der auf dem Schema der Zeitreihe **basiert, nicht** [!DNL Profile]-fähig sein sollte.
 
-Wählen Sie zunächst **[!UICONTROL Datasets]** in der linken Navigation und klicken Sie dann in der oberen rechten Ecke auf Dataset **[!UICONTROL erstellen]** .
+Wählen Sie zunächst **[!UICONTROL Datensätze]** in der linken Navigation und dann **[!UICONTROL Datensatz erstellen]** in der oberen rechten Ecke aus.
 
 ![](../assets/iab/dataset-create.png)
 
-On the next page, select **[!UICONTROL Create dataset from schema]**.
+Wählen Sie auf der nächsten Seite **[!UICONTROL Datensatz aus Schema]** erstellen.
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-Der **[!UICONTROL Arbeitsablauf zum Erstellen eines Datensatzes aus Schema]** wird angezeigt, beginnend mit dem Schritt zum **[!UICONTROL Auswählen des Schemas]** . Suchen Sie in der bereitgestellten Liste nach einem der Schema für die Zustimmung, die Sie zuvor erstellt haben. Sie können die Suche optional verwenden, um die Ergebnisse einzugrenzen und Ihr Schema einfacher zu finden. Klicken Sie auf das Optionsfeld neben dem Schema, um es auszuwählen, und klicken Sie dann auf **[!UICONTROL Weiter]** , um fortzufahren.
+Der Arbeitsablauf **[!UICONTROL Datensatz aus Schema]** erstellen wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Schema auswählen]**. Suchen Sie in der bereitgestellten Liste nach einem der Schema für die Zustimmung, die Sie zuvor erstellt haben. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzugrenzen und Ihr Schema einfacher zu finden. Klicken Sie auf das Optionsfeld neben dem gewünschten Schema und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie einen eindeutigen, leicht identifizierbaren Namen und eine Beschreibung für den Datensatz ein, bevor Sie auf **[!UICONTROL Fertig stellen]** klicken.
+Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie einen eindeutigen, leicht identifizierbaren Namen und eine Beschreibung für den Datensatz ein, bevor Sie **[!UICONTROL Fertigstellen]** auswählen.
 
 ![](../assets/iab/dataset-configure.png)
 
-Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem [!DNL XDM ExperienceEvent] Schema basiert, ist der Vorgang abgeschlossen. Wenn der Datensatz auf Ihrem [!DNL XDM Individual Profile] Schema basiert, besteht der letzte Schritt darin, den Datensatz zur Verwendung in zu aktivieren [!DNL Real-time Customer Profile]. Klicken Sie in der rechten Leiste auf die Schaltfläche zum Umschalten des **[!UICONTROL Profils]** , um den Datensatz zu aktivieren.
+Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem Zeitreihen-Schema basiert, ist der Vorgang abgeschlossen. Wenn der Datensatz auf Ihrem Record-Schema basiert, besteht der letzte Schritt darin, den Datensatz für die Verwendung in [!DNL Real-time Customer Profile] zu aktivieren.
+
+Wählen Sie in der rechten Leiste den Umschalter **[!UICONTROL Profil]** und wählen Sie dann **[!UICONTROL Aktivieren]** im Bestätigungs-Popup, um das Schema für [!DNL Profile] zu aktivieren.
 
 ![](../assets/iab/dataset-enable-profile.png)
 
@@ -180,7 +233,7 @@ Führen Sie die oben genannten Schritte erneut aus, um den anderen erforderliche
 
 In diesem Lernprogramm haben Sie zwei Datensätze erstellt, die jetzt zur Erfassung von Daten zur Kundeneinwilligung verwendet werden können:
 
-* Ein [!DNL Profile]aktivierter Datensatz, der auf Ihrem [!DNL XDM Individual Profile] Schema basiert.
-* Ein auf Ihrem [!DNL XDM ExperienceEvent] Schema basierender Datensatz, für den nicht aktiviert ist [!DNL Profile].
+* Ein Datensatzbasierter Datensatz, der für die Verwendung im Echtzeit-Customer-Profil aktiviert ist.
+* Ein zeitreihenbasierter Datensatz, der nicht für [!DNL Profile] aktiviert ist.
 
-Sie können nun zum [IAB TCF 2.0-Überblick](./overview.md#merge-policies) zurückkehren, um den Prozess der Konfiguration [!DNL Real-time CDP] für TCF 2.0-Compliance fortzusetzen.
+Sie können nun zum IAB TCF 2.0-Überblick [zurückkehren, um den Prozess der Konfiguration von [!DNL Real-time CDP] für TCF 2.0-Kompatibilität fortzusetzen.](./overview.md#merge-policies)
