@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;enum;field;
+keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Workspace;enum;Feld;
 solution: Experience Platform
 title: Definieren eines Enum-Felds in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein Enum-Feld in der Benutzeroberfläche "Experience Platform"definieren.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
