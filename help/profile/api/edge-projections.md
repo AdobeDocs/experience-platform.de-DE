@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Edge-Prognosen - Echtzeit-Client-Profil-API
+keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
+title: Edge Promotion API-Endpunkte
 topic: guide
+type: Documentation
+description: Mit Adobe Experience Platform können Sie koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit bereitstellen, indem Sie die richtigen Daten im Zuge von Änderungen schnell verfügbar machen und kontinuierlich aktualisieren. Dies geschieht durch die Verwendung von Kanten, einem geografisch platzierten Server, der Daten speichert und für Anwendungen leicht zugänglich macht.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1961'
 ht-degree: 10%
 
 ---
@@ -13,15 +15,15 @@ ht-degree: 10%
 
 # Endpunkte für Edge-Projektionen und Ziele
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanäle hinweg in Echtzeit umsetzen zu können, müssen die richtigen Daten jederzeit verfügbar sein und bei Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Anwendungen wie etwa Adobe Target und Adobe Campaign nutzen Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. In diesem Handbuch finden Sie detaillierte Anweisungen zur Verwendung der [!DNL Real-time Customer Profile] API für die Verwendung von Edge-Projektionen, einschließlich Zielen und Konfigurationen.
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanäle hinweg in Echtzeit umsetzen zu können, müssen die richtigen Daten jederzeit verfügbar sein und bei Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Anwendungen wie etwa Adobe Target und Adobe Campaign nutzen Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. In diesem Handbuch finden Sie detaillierte Anweisungen zur Verwendung der API [!DNL Real-time Customer Profile] für die Verwendung von Edge-Projektionen, einschließlich Zielen und Konfigurationen.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 >[!NOTE]
 >
->Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. In diesem Dokument `Content-Type` werden mehrere verwendet. Achten Sie besonders auf die Kopfzeilen in den Beispielaufrufen, um sicherzustellen, dass Sie für jede Anforderung die richtige `Content-Type` verwenden.
+>Anforderungen, die eine Nutzlast (POST, PUT, PATCH) enthalten, erfordern einen `Content-Type`-Header. In diesem Dokument wird mehr als ein `Content-Type` verwendet. Achten Sie besonders auf die Header in den Beispielaufrufen, um sicherzustellen, dass Sie für jede Anforderung die richtige `Content-Type` verwenden.
 
 ## Projektionsziele
 
@@ -29,7 +31,7 @@ Eine Projektion kann zu einer oder mehreren Kanten geleitet werden, indem die St
 
 ### Liste aller Ziele
 
-Sie können die Edgeziele, die für Ihr Unternehmen bereits erstellt wurden, durch eine GET an den `/config/destinations` Endpunkt Liste haben.
+Sie können die Edgeziele, die für Ihr Unternehmen bereits erstellt wurden, durch eine GET an den `/config/destinations`-Endpunkt Liste haben.
 
 **API-Format**
 
@@ -50,7 +52,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält ein `projectionDestinations` Array mit den Details für jedes Ziel, das als einzelnes Objekt im Array angezeigt wird. Wenn keine Prognosen konfiguriert wurden, gibt das `projectionDestinations` Array leer zurück.
+Die Antwort enthält ein `projectionDestinations`-Array mit den Details für jedes Ziel, das als einzelnes Objekt innerhalb des Arrays angezeigt wird. Wenn keine Projektionen konfiguriert wurden, gibt das `projectionDestinations`-Array leer zurück.
 
 >[!NOTE]
 >
@@ -104,13 +106,13 @@ Die Antwort enthält ein `projectionDestinations` Array mit den Details für jed
 | Eigenschaft | Beschreibung |
 |---|---|
 | `_links.self.href` | Entspricht auf der obersten Ebene dem Pfad, der für die Anforderung des GET verwendet wurde. Innerhalb jedes einzelnen Zielobjekts kann dieser Pfad in einer GET verwendet werden, um die Details eines bestimmten Ziels direkt zu suchen. |
-| `id` | Innerhalb jedes Zielobjekts `"id"` zeigt die Variable die schreibgeschützte, systemgenerierte eindeutige ID für das Ziel an. Diese ID wird beim Referenzieren eines bestimmten Ziels und beim Erstellen von Projektionskonfigurationen verwendet. |
+| `id` | Innerhalb jedes Zielobjekts zeigt `"id"` die schreibgeschützte, systemgenerierte eindeutige ID für das Ziel an. Diese ID wird beim Referenzieren eines bestimmten Ziels und beim Erstellen von Projektionskonfigurationen verwendet. |
 
-Weitere Informationen zu den Attributen eines einzelnen Ziels finden Sie im Abschnitt zum [Erstellen eines nachfolgenden Ziels](#create-a-destination) .
+Weitere Informationen zu den Attributen eines einzelnen Ziels finden Sie im folgenden Abschnitt unter [Erstellen eines Ziels](#create-a-destination).
 
-### Ziel erstellen {#create-a-destination}
+### Ziel {#create-a-destination} erstellen
 
-Wenn das gewünschte Ziel noch nicht vorhanden ist, können Sie ein neues Projektionsziel erstellen, indem Sie eine POST an den `/config/destinations` Endpunkt anfordern.
+Wenn das gewünschte Ziel noch nicht vorhanden ist, können Sie ein neues Projektionsziel erstellen, indem Sie eine POST an den `/config/destinations`-Endpunkt anfordern.
 
 **API-Format**
 
@@ -124,7 +126,7 @@ Mit der folgenden Anforderung wird ein neues Edge-Ziel erstellt.
 
 >[!NOTE]
 >
->Die POST-Anforderung zum Erstellen eines Ziels erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
+>Die POST-Anforderung zum Erstellen eines Ziels erfordert eine bestimmte `Content-Type`-Kopfzeile, wie unten dargestellt. Die Verwendung eines falschen `Content-Type`-Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
 curl -X POST \
@@ -179,7 +181,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Edge-Ziels zurück
 
 ### Ansicht eines Ziels
 
-Wenn Sie die eindeutige ID eines Projektionsziels kennen, können Sie eine Suchanfrage ausführen, um die Details Ansicht. Dies geschieht, indem eine GET an den `/config/destinations` Endpunkt angefordert wird und die ID des Ziels im Anforderungspfad enthalten ist.
+Wenn Sie die eindeutige ID eines Projektionsziels kennen, können Sie eine Suchanfrage ausführen, um die Details Ansicht. Dies geschieht, indem eine GET an den `/config/destinations`-Endpunkt und die ID des Ziels im Anforderungspfad angefordert wird.
 
 **API-Format**
 
@@ -206,7 +208,7 @@ curl -X GET \
 
 **Antwort**
 
-Das Antwortobjekt zeigt die Details des Projektionsziels an. Das `id` Attribut sollte mit der ID des Projektionsziels übereinstimmen, das in der Anforderung bereitgestellt wurde.
+Das Antwortobjekt zeigt die Details des Projektionsziels an. Das `id`-Attribut sollte mit der ID des Projektionsziels übereinstimmen, das in der Anforderung bereitgestellt wurde.
 
 ```json
 {
@@ -226,7 +228,7 @@ Das Antwortobjekt zeigt die Details des Projektionsziels an. Das `id` Attribut s
 
 ### Ziel aktualisieren
 
-Ein vorhandenes Ziel kann aktualisiert werden, indem eine PUT-Anforderung an den `/config/destinations` Endpunkt gesendet wird und die ID des Ziels, das im Anforderungspfad aktualisiert werden soll, einbezogen wird. Bei diesem Vorgang wird das Ziel im Wesentlichen umgeschrieben. Daher müssen im Hauptteil der Anforderung dieselben Attribute bereitgestellt werden, wie bei der Erstellung eines neuen Ziels.
+Ein vorhandenes Ziel kann aktualisiert werden, indem eine PUT an den `/config/destinations`-Endpunkt angefordert wird und die ID des Ziels, das im Anforderungspfad aktualisiert werden soll, einbezogen wird. Bei diesem Vorgang wird das Ziel im Wesentlichen umgeschrieben. Daher müssen im Hauptteil der Anforderung dieselben Attribute bereitgestellt werden, wie bei der Erstellung eines neuen Ziels.
 
 >[!CAUTION]
 >
@@ -244,11 +246,11 @@ PUT /config/destinations/{DESTINATION_ID}
 
 **Anfrage**
 
-Die folgende Anforderung aktualisiert das vorhandene Ziel, um einen zweiten Speicherort (`dataCenters`) einzuschließen.
+Mit der folgenden Anforderung wird das vorhandene Ziel aktualisiert und ein zweiter Speicherort (`dataCenters`) hinzugefügt.
 
 >[!IMPORTANT]
 >
->Die PUT-Anforderung erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
+>Die PUT-Anforderung erfordert eine bestimmte `Content-Type`-Kopfzeile, wie unten dargestellt. Die Verwendung eines falschen `Content-Type`-Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
 curl -X PUT \
@@ -271,11 +273,11 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `currentVersion` | Die aktuelle Version des vorhandenen Ziels. Der Wert des `version` Attributs bei einer Suchanfrage für das Ziel. |
+| `currentVersion` | Die aktuelle Version des vorhandenen Ziels. Der Wert des Attributs `version`, wenn eine Suchanfrage für das Ziel ausgeführt wird. |
 
 **Antwort**
 
-Die Antwort enthält die aktualisierten Details zum Ziel, einschließlich der ID und des neuen Ziels `version` .
+Die Antwort enthält die aktualisierten Details zum Ziel, einschließlich der zugehörigen ID und dem neuen `version` des Ziels.
 
 ```json
 {
@@ -296,11 +298,11 @@ Die Antwort enthält die aktualisierten Details zum Ziel, einschließlich der ID
 
 ### Ziel löschen
 
-Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem Sie eine DELETE-Anforderung an den `/config/destinations` Endpunkt richten und die ID des Ziels, das Sie löschen möchten, im Anforderungspfad einschließen.
+Wenn Ihr Unternehmen kein Projektionsziel mehr benötigt, kann es gelöscht werden, indem Sie eine DELETE-Anforderung an den `/config/destinations`-Endpunkt richten und die ID des Ziels einschließen, das Sie im Anforderungspfad löschen möchten.
 
 >[!CAUTION]
 >
->Die API-Antwort auf die Löschanforderung erfolgt sofort, die tatsächlichen Änderungen an den Daten an den Rändern werden jedoch asynchron ausgeführt. Das heißt, die Profil-Daten werden von allen Kanten entfernt (die im Projektionsziel `dataCenters` angegeben sind), aber der Vorgang dauert einige Zeit.
+>Die API-Antwort auf die Löschanforderung erfolgt sofort, die tatsächlichen Änderungen an den Daten an den Rändern werden jedoch asynchron ausgeführt. Das heißt, die Profil-Daten werden von allen Kanten entfernt (das im Projektionsziel angegebene `dataCenters`), aber der Vorgang dauert einige Zeit.
 
 **API-Format**
 
@@ -330,11 +332,11 @@ Die Löschanforderung gibt HTTP-Status 204 (Kein Inhalt) und einen leeren Antwor
 
 ## Projektierungskonfigurationen
 
-Projektionskonfigurationen liefern Informationen darüber, welche Daten an jeder Kante verfügbar sein sollten. Statt ein vollständiges [!DNL Experience Data Model] (XDM-)Schema an die Kante zu projizieren, stellt eine Projektion nur bestimmte Daten oder Felder aus dem Schema bereit. Ihr Unternehmen kann mehr als eine Projektionskonfiguration für jedes XDM-Schema definieren.
+Projektionskonfigurationen liefern Informationen darüber, welche Daten an jeder Kante verfügbar sein sollten. Statt ein vollständiges [!DNL Experience Data Model] (XDM)-Schema an die Kante zu projizieren, stellt eine Projektion nur bestimmte Daten oder Felder aus dem Schema bereit. Ihr Unternehmen kann mehr als eine Projektionskonfiguration für jedes XDM-Schema definieren.
 
 ### Liste aller Projektionskonfigurationen
 
-Sie können alle Projektionskonfigurationen, die für Ihr Unternehmen erstellt wurden, durch eine GET an den `/config/projections` Endpunkt Liste haben. Sie können dem Anforderungspfad auch optionale Parameter hinzufügen, um auf Projektionskonfigurationen für ein bestimmtes Schema zuzugreifen oder eine einzelne Projektion anhand ihres Namens zu suchen.
+Sie können alle Projektionskonfigurationen, die für Ihr Unternehmen erstellt wurden, durch eine GET an den `/config/projections`-Endpunkt Liste haben. Sie können dem Anforderungspfad auch optionale Parameter hinzufügen, um auf Projektionskonfigurationen für ein bestimmtes Schema zuzugreifen oder eine einzelne Projektion anhand ihres Namens zu suchen.
 
 **API-Format**
 
@@ -351,11 +353,11 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 >[!NOTE]
 >
->`schemaName` ist bei Verwendung des `name` Parameters erforderlich, da ein Projektionskonfigurationsname nur im Kontext einer Schema-Klasse eindeutig ist.
+>`schemaName` ist bei Verwendung des  `name` Parameters erforderlich, da ein Projektionskonfigurationsname nur im Kontext einer Schema-Klasse eindeutig ist.
 
 **Anfrage**
 
-Die folgende Anforderung Liste alle Projektionskonfigurationen, die mit der [!DNL Experience Data Model] Schema-Klasse verbunden sind, [!DNL XDM Individual Profile]. Für weitere Informationen über XDM und seine Rolle innerhalb [!DNL Platform], bitte beginnen Sie mit dem Lesen der [XDM System Übersicht](../../xdm/home.md).
+Die folgende Anforderung Liste alle Projektionskonfigurationen, die mit der [!DNL Experience Data Model]-Schema-Klasse, [!DNL XDM Individual Profile] verknüpft sind. Für weitere Informationen zu XDM und seiner Rolle innerhalb von [!DNL Platform], lesen Sie bitte zunächst den [XDM Systemüberblick](../../xdm/home.md).
 
 ```shell
 curl -X GET \
@@ -368,7 +370,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Projektionskonfigurationen im Stammattribut `_embedded` zurück, die im `projectionConfigs` Array enthalten sind. Wenn keine Projektionskonfigurationen für Ihr Unternehmen vorgenommen wurden, ist das `projectionConfigs` Array leer.
+Eine erfolgreiche Antwort gibt eine Liste von Projektionskonfigurationen im Stammattribut `_embedded` zurück, die im Array `projectionConfigs` enthalten ist. Wenn keine Projektionskonfigurationen für Ihr Unternehmen vorgenommen wurden, ist das Array `projectionConfigs` leer.
 
 ```json
 {
@@ -436,7 +438,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->Die Konfigurationsanforderung für die POST erfordert einen bestimmten `Content-Type` Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type` Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
+>Die Konfigurationsanforderung für die POST erfordert einen bestimmten `Content-Type`-Header, wie unten dargestellt. Die Verwendung eines falschen `Content-Type`-Headers führt zu einem HTTP-Status-415-Fehler (nicht unterstützter Medientyp).
 
 ```shell
 curl -X POST \
@@ -501,16 +503,16 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Projektionskonfigu
 
 ## Selektoren {#selectors}
 
-Ein Selektor ist eine kommagetrennte Liste von XDM-Feldnamen. In einer Projektionskonfiguration gibt der Selektor die Eigenschaften an, die in Projektionen einbezogen werden sollen. Das Format des `selector` Parameterwerts basiert lose auf der XPath-Syntax. Die unterstützte Syntax wird unten zusammengefasst, wobei zusätzliche Beispiele als Referenz bereitgestellt werden.
+Ein Selektor ist eine kommagetrennte Liste von XDM-Feldnamen. In einer Projektionskonfiguration gibt der Selektor die Eigenschaften an, die in Projektionen einbezogen werden sollen. Das Format des Parameters `selector` basiert lose auf der XPath-Syntax. Die unterstützte Syntax wird unten zusammengefasst, wobei zusätzliche Beispiele als Referenz bereitgestellt werden.
 
 ### Unterstützte Syntax
 
 * Verwenden Sie Kommas, um mehrere Felder auszuwählen. Verwenden Sie keine Leerzeichen.
 * Verwenden Sie die Punktnotation, um verschachtelte Felder auszuwählen.
-   * Wenn Sie beispielsweise ein Feld mit dem Namen auswählen möchten, `field` das in einem Feld mit dem Namen `foo`verschachtelt ist, verwenden Sie die Auswahl `foo.field`.
-* Wenn Sie ein Feld mit Unterfeldern einbeziehen, werden alle Unterfelder standardmäßig ebenfalls projiziert. Sie können die zurückgegebenen Unterfelder jedoch mit Klammern filtern `"( )"`.
-   * Gibt beispielsweise `addresses(type,city.country)` nur den Adresstyp und das Land zurück, in dem sich die Adresse für jedes `addresses` Array-Element befindet.
-   * Das obige Beispiel entspricht `addresses.type,addresses.city.country`dem Szenario
+   * Wenn Sie beispielsweise ein Feld mit dem Namen `field` auswählen möchten, das in einem Feld mit dem Namen `foo` verschachtelt ist, verwenden Sie den Selektor `foo.field`.
+* Wenn Sie ein Feld mit Unterfeldern einbeziehen, werden alle Unterfelder standardmäßig ebenfalls projiziert. Sie können die zurückgegebenen Unterfelder jedoch mit Klammern `"( )"` filtern.
+   * Beispiel: `addresses(type,city.country)` gibt für jedes `addresses`-Array-Element nur den Adresstyp und das Land zurück, in dem sich der Ort der Adresse befindet.
+   * Das obige Beispiel entspricht `addresses.type,addresses.city.country`.
 
 >[!NOTE]
 >
@@ -523,11 +525,11 @@ Ein Selektor ist eine kommagetrennte Liste von XDM-Feldnamen. In einer Projektio
 
 ### Beispiele für den Parameter &quot;selector&quot;
 
-Die folgenden Beispiele zeigen Beispielparameter, gefolgt von `selector` den strukturierten Werten, die sie darstellen.
+Die folgenden Beispiele zeigen Beispiel-Parameter `selector` gefolgt von den strukturierten Werten, die sie darstellen.
 
 **person.lastName**
 
-Gibt das `lastName` Unterfeld des `person` Objekts in der angeforderten Ressource zurück.
+Gibt das Unterfeld `lastName` des `person`-Objekts in der angeforderten Ressource zurück.
 
 ```json
 {
@@ -539,7 +541,7 @@ Gibt das `lastName` Unterfeld des `person` Objekts in der angeforderten Ressourc
 
 **Adressen**
 
-Gibt alle Elemente im `addresses` Array zurück, einschließlich aller Felder in jedem Element, jedoch keine anderen Felder.
+Gibt alle Elemente im Array `addresses` zurück, einschließlich aller Felder in jedem Element, jedoch keine anderen Felder.
 
 ```json
 {
@@ -566,7 +568,7 @@ Gibt alle Elemente im `addresses` Array zurück, einschließlich aller Felder in
 
 **person.lastName,address**
 
-Gibt das `person.lastName` Feld und alle Elemente im `addresses` Array zurück.
+Gibt das Feld `person.lastName` und alle Elemente im Array `addresses` zurück.
 
 ```json
 {
@@ -623,7 +625,7 @@ Gibt nur das Ortsfeld für alle Elemente im Adressarray zurück.
 
 **address(type,city)**
 
-Gibt nur die Werte der Felder `type` und `city` Felder für jedes Element im `addresses` Array zurück. Alle anderen Unterfelder, die in jedem `addresses` Element enthalten sind, werden herausgefiltert.
+Gibt nur die Werte der Felder `type` und `city` für jedes Element im `addresses`-Array zurück. Alle anderen Unterfelder in jedem `addresses`-Element werden herausgefiltert.
 
 ```json
 {
@@ -648,4 +650,4 @@ Gibt nur die Werte der Felder `type` und `city` Felder für jedes Element im `ad
 
 ## Nächste Schritte
 
-In diesem Handbuch werden die Schritte zum Konfigurieren von Projektionen und Zielen beschrieben, einschließlich der richtigen Formatierung des `selector` Parameters. Sie können jetzt neue Projektionsziele und -konfigurationen erstellen, die den Anforderungen Ihres Unternehmens entsprechen.
+In diesem Handbuch werden die Schritte zum Konfigurieren von Projektionen und Zielen beschrieben, einschließlich der richtigen Formatierung des Parameters `selector`. Sie können jetzt neue Projektionsziele und -konfigurationen erstellen, die den Anforderungen Ihres Unternehmens entsprechen.
