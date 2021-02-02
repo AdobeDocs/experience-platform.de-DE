@@ -1,50 +1,52 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
 title: Erste Schritte mit der Echtzeit-Profil-API
 topic: guide
+type: Documentation
+description: In der Anleitung zum Einstieg in die Profil-API werden die wichtigsten Konzepte und grundlegenden Funktionen erläutert, die Sie kennen müssen, um mit API-Endpunkten für Echtzeit-Kunden-Profile grundlegende CRUD-Vorgänge für Profil-Daten durchzuführen.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 23%
+source-wordcount: '409'
+ht-degree: 20%
 
 ---
 
 
-# Getting started with the [!DNL Real-time Customer Profile] API {#getting-started}
+# Erste Schritte mit der [!DNL Real-time Customer Profile]-API {#getting-started}
 
-Using the [!DNL Real-time Customer Profile] API, you can perform basic CRUD operations against Profile resources, such as configuring computed attributes, accessing entities, exporting Profile data, and deleting unneeded datasets or batches.
+Mithilfe von Echtzeit-API-Endpunkten für Kunden-Profil können Sie grundlegende CRUD-Vorgänge für Profil-Daten durchführen, z. B. die Konfiguration berechneter Attribute, den Zugriff auf Entitäten, den Export von Profil-Daten und das Löschen nicht benötigter Datensätze oder Stapel.
 
-Using the developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with [!DNL Profile] data. Before beginning to work with the [!DNL Real-time Customer Profile] API, please review the documentation for the following services:
+Die Verwendung des Entwicklerhandbuchs erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die mit [!DNL Profile]-Daten arbeiten. Bevor Sie mit der [!DNL Real-time Customer Profile]-API arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 * [[!DNL Real-time Customer Profile]](../home.md): Bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Erhalten Sie eine bessere Ansicht Ihres Kundenverhaltens, indem Sie Identitäten zwischen verschiedenen Geräten und Systemen überbrücken.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Ermöglicht Ihnen das Erstellen von Segmenten für Audiencen aus Echtzeitdaten zum Profil von Kunden.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Profile] API endpoints.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um erfolgreich Aufrufe an [!DNL Profile]-API-Endpunkte durchzuführen.
 
 ## Lesen von Beispiel-API-Aufrufen
 
-The [!DNL Real-time Customer Profile] API documentation provides example API calls to demonstrate how to properly format requests. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+Die API-Dokumentation für [!DNL Real-time Customer Profile] enthält Beispiel-API-Aufrufe, die zeigen, wie Anforderungen korrekt formatiert werden. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ## Erforderliche Kopfzeilen
 
-The API documentation also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+Die API-Dokumentation erfordert auch, dass Sie das [Authentifizierungstraining](https://www.adobe.com/go/platform-api-authentication-en) abgeschlossen haben, um erfolgreich Aufrufe an [!DNL Platform]-Endpunkte durchzuführen. Wenn Sie das Authentifizierungstreutorial abschließen, werden die Werte für die einzelnen erforderlichen Kopfzeilen in [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Anforderungen an [!DNL Platform]-APIs erfordern einen Header, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Alle Anfragen mit einer Payload im Anfragetext (wie POST-, PUT- und PATCH-Aufrufe) müssen eine `Content-Type`-Kopfzeile enthalten. Akzeptierte Werte, die für jeden Aufruf spezifisch sind, werden in den Aufrufparametern angegeben.
 
 ## Nächste Schritte
 
-Um mit dem Aufrufen der [!DNL Real-time Customer Profile] API zu beginnen, wählen Sie eine der verfügbaren Endpunktleitfäden aus.
+Um mit dem Aufrufen der API zu beginnen, wählen Sie eine der verfügbaren Endpunktleitfäden aus.[!DNL Real-time Customer Profile]
