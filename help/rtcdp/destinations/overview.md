@@ -1,20 +1,20 @@
 ---
-keywords: rtcdp destinations;destinations rtcdp;real time customer data platform destinations
+keywords: rtcdp-Ziele;Ziele rtcdp;Echtzeit-Ziel der Kundendatenplattform
 title: Ziele – Übersicht
 seo-title: Ziele in Adobe Experience Platform
-description: Dieses Dokument bietet einen Überblick über Ziele in der Echtzeit-Kundendatenplattform
-seo-description: Dieses Dokument bietet einen Überblick über Ziele in der Echtzeit-Kundendatenplattform
+description: Dieses Dokument bietet einen Überblick über Ziele in Adobe Experience Platform
+seo-description: Dieses Dokument bietet einen Überblick über Ziele in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: cd7b4abe042a822d13e758b25d3a481d5cb6989b
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 24%
+source-wordcount: '106'
+ht-degree: 3%
 
 ---
 
 
 # Ziele – Übersicht
 
-Ziele sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus der Echtzeit-Kundendatenplattform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
+Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
 
-For a more detailed overview of destinations, including a list of available destinations and links to tutorials, please read the [destinations documentation](../../destinations/home.md).
+Einen detaillierteren Überblick über Ziele, einschließlich einer Liste der verfügbaren Ziele und Links zu Tutorials, finden Sie in der [Dokumentation zu Zielen](../../destinations/home.md).
