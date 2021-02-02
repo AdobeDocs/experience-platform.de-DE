@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;streaming multiple messages;multiple messages;
+keywords: Experience Platform;Home;beliebte Themen;Streaming-Erfassung;Erfassung;Streaming mehrerer Nachrichten;Mehrere Nachrichten;
 solution: Experience Platform
 title: Streaming mehrerer Nachrichten in einer einzelnen HTTP-Anfrage
 topic: tutorial
 type: Tutorial
 description: Dieses Dokument bietet eine Anleitung zum Senden mehrerer Nachrichten an Adobe Experience Platform innerhalb einer einzigen HTTP-Anforderung mithilfe der Streaming-Erfassung.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1480'
-ht-degree: 70%
+source-wordcount: '1497'
+ht-degree: 69%
 
 ---
 
 
 # Senden mehrerer Nachrichten in einer einzelnen HTTP-Anfrage
 
-Beim Streaming von Daten an Adobe Experience Platform kann das Ausführen zahlreicher HTTP-Aufrufe teuer werden. Anstatt beispielsweise 200 HTTP-Anfragen mit Payloads von 1 KB zu erstellen, ist es viel effizienter, 1 HTTP-Anfrage mit 200 Nachrichten mit jeweils 1 KB und einer Payload von 200 KB zu erstellen. When used correctly, grouping multiple messages within a single request is an excellent way to optimize data being sent to [!DNL Experience Platform].
+Beim Streaming von Daten an Adobe Experience Platform kann das Ausführen zahlreicher HTTP-Aufrufe teuer werden. Anstatt beispielsweise 200 HTTP-Anfragen mit Payloads von 1 KB zu erstellen, ist es viel effizienter, 1 HTTP-Anfrage mit 200 Nachrichten mit jeweils 1 KB und einer Payload von 200 KB zu erstellen. Bei korrekter Verwendung ist die Gruppierung mehrerer Nachrichten in einer einzigen Anforderung eine hervorragende Möglichkeit, Daten zu optimieren, die an [!DNL Experience Platform] gesendet werden.
 
-This document provides a tutorial for sending multiple messages to [!DNL Experience Platform] within a single HTTP request using streaming ingestion.
+Dieses Dokument bietet eine Übung zum Senden mehrerer Nachrichten an [!DNL Experience Platform] innerhalb einer einzigen HTTP-Anforderung mithilfe von Streaming-Funktionen.
 
 ## Erste Schritte
 
-This tutorial requires a working understanding of Adobe Experience Platform [!DNL Data Ingestion]. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
+Dieses Lernprogramm erfordert ein Arbeitsverständnis mit Adobe Experience Platform [!DNL Data Ingestion]. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
 
-- [Dateneinbettung - Übersicht](../home.md): Behandelt die Kernkonzepte von [!DNL Experience Platform Data Ingestion]einschließlich Erfassungsmethoden und Data Connectors.
-- [Übersicht](../streaming-ingestion/overview.md)zur Streaming-Erfassung: Arbeitsablauf und Bausteine der Streaming-Erfassung, wie Streaming-Verbindungen, Datasets [!DNL XDM Individual Profile]und [!DNL XDM ExperienceEvent].
+- [Dateneinbettung - Übersicht](../home.md): Behandelt die Kernkonzepte von  [!DNL Experience Platform Data Ingestion]einschließlich Erfassungsmethoden und Data Connectors.
+- [Übersicht](../streaming-ingestion/overview.md) zur Streaming-Erfassung: Arbeitsablauf und Bausteine der Streaming-Erfassung, wie Streaming-Verbindungen, Datasets  [!DNL XDM Individual Profile]und  [!DNL XDM ExperienceEvent].
 
-Für dieses Tutorial müssen Sie außerdem das Tutorial [Authentifizierung für Adobe Experience ](../../tutorials/authentication.md) abgeschlossen haben, um erfolgreich Aufrufe an Platform-APIs durchführen zu können.[!DNL Platform] Durch Abschließen des Authentifizierungs-Tutorials erhalten Sie den Wert für die Autorisierungs-Kopfzeile, der für alle API-Aufrufe in diesem Tutorial erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
+Für dieses Tutorial müssen Sie außerdem das Tutorial [Authentifizierung für Adobe Experience ](https://www.adobe.com/go/platform-api-authentication-en) abgeschlossen haben, um erfolgreich Aufrufe an Platform-APIs durchführen zu können.[!DNL Platform] Durch Abschließen des Authentifizierungs-Tutorials erhalten Sie den Wert für die Autorisierungs-Kopfzeile, der für alle API-Aufrufe in diesem Tutorial erforderlich ist. Die Kopfzeile wird in Beispielaufrufen wie folgt angezeigt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -37,7 +37,7 @@ Für alle POST-Anfragen ist eine zusätzliche Kopfzeile erforderlich:
 
 ## Aufbauen einer Streaming-Verbindung
 
-You must first create a streaming connection before you can start streaming data to [!DNL Experience Platform]. Lesen Sie die Anleitung zum [Aufbauen einer Streaming-Verbindung](./create-streaming-connection.md), um zu erfahren, wie Sie eine Streaming-Verbindung aufbauen.
+Sie müssen zunächst eine Streaming-Verbindung erstellen, bevor Sie Streaming-Daten an [!DNL Experience Platform] Beginn senden können. Lesen Sie die Anleitung zum [Aufbauen einer Streaming-Verbindung](./create-streaming-connection.md), um zu erfahren, wie Sie eine Streaming-Verbindung aufbauen.
 
 Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent eine eindeutige URL, die zum Streamen von Daten an Platform verwendet werden kann.
 
@@ -45,7 +45,7 @@ Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent e
 
 Das folgende Beispiel zeigt, wie mehrere Nachrichten an einen bestimmten Datensatz innerhalb einer einzelnen HTTP-Anfrage gesendet werden. Fügen Sie die Datensatz-ID in die Kopfzeile der Nachricht ein, damit die Nachricht direkt darin aufgenommen wird.
 
-You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the dataset ID field on the **[!UICONTROL Info]** tab. Informationen zum Abrufen von Datensätzen mithilfe der API finden Sie unter [Katalogdienst – Überblick](../../catalog/home.md).
+Sie können die ID für einen vorhandenen Datensatz mit der [!DNL Platform]-Benutzeroberfläche oder mit einem Listingvorgang in der API abrufen. Die Dataset-ID kann auf der Registerkarte [Experience Platform](https://platform.adobe.com) gefunden werden, indem Sie auf die Registerkarte **[!UICONTROL Datensätze]** klicken, auf den Datensatz klicken, für den die ID verwendet werden soll, und die Zeichenfolge aus dem Datenset-ID-Feld auf der Registerkarte **[!UICONTROL Info]** kopieren. Informationen zum Abrufen von Datensätzen mithilfe der API finden Sie unter [Katalogdienst – Überblick](../../catalog/home.md).
 
 Anstatt einen vorhandenen Datensatz zu verwenden, können Sie einen neuen Datensatz erstellen. Weitere Informationen zum Erstellen eines Datensatzes mithilfe von APIs finden Sie im Tutorial [Erstellen eines Datensatzes mithilfe von APIs](../../catalog/api/create-dataset.md).
 
@@ -222,8 +222,8 @@ Das folgende Beispiel zeigt, was passiert, wenn der Batch gültige und ungültig
 
 Die Anfrage-Payload ist ein Array von JSON-Objekten, die das Ereignis im XDM-Schema darstellen. Beachten Sie, dass für eine erfolgreiche Validierung der Nachricht folgende Bedingungen erfüllt sein müssen:
 - Das Feld `imsOrgId` in der Kopfzeile der Nachricht muss mit der Inlet-Definition übereinstimmen. Wenn die Anfrage-Payload das Feld `imsOrgId` nicht enthält, fügt der  (DCCS) das Feld automatisch hinzu.[!DNL Data Collection Core Service]
-- The header of the message should reference an existing XDM schema created in the [!DNL Platform] UI.
-- The `datasetId` field needs to reference an existing dataset in [!DNL Platform], and its schema needs to match the schema provided in the `header` object within each message included in the request body.
+- Die Kopfzeile der Nachricht sollte auf ein vorhandenes XDM-Schema verweisen, das in der [!DNL Platform]-Benutzeroberfläche erstellt wurde.
+- Das Feld `datasetId` muss auf einen vorhandenen Datensatz in [!DNL Platform] verweisen und sein Schema muss mit dem Schema übereinstimmen, das im `header`-Objekt in jeder Meldung im Anforderungstext bereitgestellt wird.
 
 **API-Format**
 
@@ -491,7 +491,7 @@ Die Antwort-Payload enthält einen Status für jede Nachricht zusammen mit einer
 
 Die obige Beispielantwort zeigt Fehlermeldungen für die vorherige Anfrage. Ein Vergleich dieser Antwort mit der vorherigen gültigen Antwort ergibt, dass die Anfrage teilweise erfolgreich war. Eine Nachricht wurde erfolgreich aufgenommen und drei Nachrichten führten zu einem Fehler. Beachten Sie, dass beide Antworten den Status-Code „207“ zurückgeben. Weitere Informationen zu Status-Codes finden Sie in der Tabelle zu [Antwort-Codes](#response-codes) im Anhang dieses Tutorials.
 
-The first message was successfully sent to [!DNL Platform] and is not affected by the results of the other messages. Daher müssen Sie diese Nachricht nicht erneut einschließen, wenn Sie versuchen, die fehlgeschlagenen Nachrichten erneut zu senden.
+Die erste Nachricht wurde erfolgreich an [!DNL Platform] gesendet und ist nicht von den Ergebnissen der anderen Nachrichten betroffen. Daher müssen Sie diese Nachricht nicht erneut einschließen, wenn Sie versuchen, die fehlgeschlagenen Nachrichten erneut zu senden.
 
 Die zweite Nachricht schlug fehl, weil der Nachrichtentext fehlte. Die Erfassungsanfrage erwartet, dass Nachrichtenelemente gültige Kopfzeilen- und Textabschnitte aufweisen. Durch Hinzufügen des folgenden Codes nach der Kopfzeile in der zweiten Nachricht wird die Anfrage korrigiert, sodass die zweite Nachricht die Überprüfung besteht:
 
@@ -510,9 +510,9 @@ Die zweite Nachricht schlug fehl, weil der Nachrichtentext fehlte. Die Erfassung
     },
 ```
 
-Die dritte Meldung ist fehlgeschlagen, da eine ungültige IMS-Organisations-ID in der Kopfzeile verwendet wird. Die IMS-Organisation muss mit der {CONNECTION_ID} übereinstimmen, auf der Sie veröffentlichen möchten. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Ein Beispiel zum Abrufen zuvor erstellter Streaming-Verbindungen finden Sie unter [Abrufen einer Streaming-Verbindung](./create-streaming-connection.md#get-data-collection-url).
+Die dritte Meldung ist fehlgeschlagen, da eine ungültige IMS-Organisations-ID in der Kopfzeile verwendet wird. Die IMS-Organisation muss mit der {CONNECTION_ID} übereinstimmen, auf der Sie veröffentlichen möchten. Um festzustellen, welche IMS-Organisations-ID mit der verwendeten Streaming-Verbindung übereinstimmt, können Sie eine `GET inlet`-Anforderung mit der [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) ausführen. Ein Beispiel zum Abrufen zuvor erstellter Streaming-Verbindungen finden Sie unter [Abrufen einer Streaming-Verbindung](./create-streaming-connection.md#get-data-collection-url).
 
-Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Das `xdmSchema`, das in der Kopfzeile und im Text der Anfrage enthalten ist, stimmt nicht mit dem XDM-Schema der `{DATASET_ID}` überein. Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to [!DNL Platform]. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on [!DNL Platform]. Weitere Informationen zu Nachrichten, die erfolgreich an Platform gesendet werden, finden Sie im Abschnitt [Bestätigen von aufgenommenen Nachrichten](#confirm-messages-ingested) in diesem Tutorial.
+Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Das `xdmSchema`, das in der Kopfzeile und im Text der Anfrage enthalten ist, stimmt nicht mit dem XDM-Schema der `{DATASET_ID}` überein. Durch die Korrektur des Schemas im Nachrichtenkopf und -körper kann die DCCS-Überprüfung erfolgreich an [!DNL Platform] gesendet werden. Der Nachrichtentext muss auch aktualisiert werden, um mit dem XDM-Schema von `{DATASET_ID}` übereinstimmen zu können, damit die Streaming-Überprüfung bei [!DNL Platform] weitergeleitet wird. Weitere Informationen zu Nachrichten, die erfolgreich an Platform gesendet werden, finden Sie im Abschnitt [Bestätigen von aufgenommenen Nachrichten](#confirm-messages-ingested) in diesem Tutorial.
 
 ### Abrufen von Fehlermeldungen von [!DNL Platform]
 
@@ -523,15 +523,15 @@ Weitere Informationen zum Wiederherstellen von fehlgeschlagenen Batch-Nachrichte
 
 ## Bestätigen von aufgenommenen Nachrichten
 
-Messages that pass DCCS validation are streamed to [!DNL Platform]. On [!DNL Platform], the batch messages are tested by streaming validation before being ingested into the [!DNL Data Lake]. Der Status von Batches, ob erfolgreich oder nicht, wird in dem von der `{DATASET_ID}` angegebenen Datensatz angezeigt.
+Meldungen, die die DCCS-Überprüfung bestehen, werden an [!DNL Platform] gestreamt. Unter [!DNL Platform] werden die Stapelmeldungen durch Streaming-Validierung getestet, bevor sie in das [!DNL Data Lake]-Element aufgenommen werden. Der Status von Batches, ob erfolgreich oder nicht, wird in dem von der `{DATASET_ID}` angegebenen Datensatz angezeigt.
 
-You can view the status of batch messages that successfully stream to [!DNL Platform] using the [Experience Platform UI](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you are streaming to, and checking the **[!UICONTROL Dataset Activity]** tab.
+Sie können den Status von Batch-Nachrichten, die erfolgreich an [!DNL Platform] streamen, über die [Experience Platform-Benutzeroberfläche](https://platform.adobe.com) Ansicht haben, indem Sie auf die Registerkarte **[!UICONTROL Datasets]** klicken, auf das Dataset klicken, zu dem Sie streamen, und die Registerkarte **[!UICONTROL Dataset-Aktivität]** überprüfen.
 
-Batch messages that pass streaming validation on [!DNL Platform] are ingested into the [!DNL Data Lake]. Die Nachrichten stehen dann für die Analyse oder den Export zur Verfügung.
+Stapelmeldungen, die eine Streaming-Validierung an [!DNL Platform] übergeben, werden in das [!DNL Data Lake]-Element aufgenommen. Die Nachrichten stehen dann für die Analyse oder den Export zur Verfügung.
 
 ## Nächste Schritte
 
-Now that you know how to send multiple messages in a single request and verify when messages are successfully ingested into the target dataset, you can start streaming your own data to [!DNL Platform]. For an overview of how to query and retrieve ingested data from [!DNL Platform], see the [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guide.
+Nachdem Sie jetzt wissen, wie Sie mehrere Nachrichten in einer einzigen Anforderung senden und überprüfen können, wann die Nachrichten erfolgreich in den Dataset der Zielgruppe aufgenommen wurden, können Sie Beginn-Streaming Ihrer eigenen Daten an [!DNL Platform] durchführen. Eine Übersicht über die Abfrage und den Abruf von erfassten Daten von [!DNL Platform] finden Sie im Handbuch [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md).
 
 ## Anhang
 
