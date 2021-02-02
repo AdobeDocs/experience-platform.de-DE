@@ -1,14 +1,14 @@
 ---
-keywords: metrics overview; rtcdp metrics overview
+keywords: Metrikübersicht; Übersicht über rtcdp-Metriken
 title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 94%
+source-wordcount: '636'
+ht-degree: 79%
 
 ---
 
@@ -44,13 +44,13 @@ Zusätzliche Metriken (z. B. für Profile und Segmente) stehen in anderen Teile
 
 ### Datensätze
 
-The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
+Der Zähler **[!UICONTROL Datensätze]** zeigt die Anzahl der Datensätze im System und die Datenmenge in [!DNL Platform] an. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
 Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübersicht](../catalog/datasets/overview.md).
 
 ### Profile
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-time Customer Profile]. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
+Die Anzahl **[!UICONTROL Profil]** zeigt die Gesamtanzahl der Personen mit Profilen in [!DNL Real-time Customer Profile] an. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
 
 Der Zähler nutzt die standardmäßige [Zusammenführungsrichtlinie](profile/merge-policies.md), die in der Konfiguration der Zusammenführungsrichtlinien im einheitlichen Profil festgelegt ist.
 
@@ -74,7 +74,7 @@ Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destin
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
-There is also a metric card that shows the percentage of successful records. Click **[!UICONTROL View datasets]** to see more details about the profile records. Hover over the colored area of the graph to see additional details:
+There is also a metric card that shows the percentage of successful records. Select **[!UICONTROL View datasets]** to see more details about the profile records. Hover over the colored area of the graph to see additional details:
 
 ![image](assets/home-profilerecords-details.PNG)
 
@@ -90,7 +90,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 ![image](assets/home-profile-details.PNG)
 
-Click **[!UICONTROL View profiles]** to see more details about the profile records.
+Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
 For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
 
@@ -100,7 +100,7 @@ For more information about viewing a specific profile, see [Profile viewer](prof
 
 In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile.
 
-The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
+The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
 The number of failed profile records is updated hourly. -->
 
@@ -108,7 +108,7 @@ The number of failed profile records is updated hourly. -->
 
 Auf der Karte **[!UICONTROL Letzte Datensätze]** werden die fünf letzten Datensätze angezeigt, die im Unternehmen erstellt wurden. Diese Liste wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
-Klicken Sie auf einen Datensatz, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um die Liste der Datensätze anzuzeigen. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
+Wählen Sie einen Datensatz zur Ansicht der Details für dieses Element oder **[!UICONTROL Ansicht all]**, um die Liste der Datensätze anzuzeigen. Dort können Sie eine bestimmte Quelle für Details auswählen.
 
 Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübersicht](../catalog/datasets/overview.md).
 
@@ -116,7 +116,7 @@ Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübe
 
 Auf der Metrikkarte **[!UICONTROL Letzte Quellen]** werden die fünf Quellen angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald eine neue Quelle erstellt wird.
 
-Klicken Sie auf eine Quelle, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um die Liste der Quellen anzuzeigen. Hier können Sie auf eine bestimmte Quelle klicken, um weitere Details aufzurufen.
+Wählen Sie eine Quelle zur Ansicht der Details für dieses Element oder **[!UICONTROL Ansicht all]**, um die Liste der Quellen anzuzeigen. Dort können Sie eine bestimmte Quelle für Details auswählen.
 
 Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](sources/sources-overview.md).
 
@@ -124,7 +124,7 @@ Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](s
 
 Auf der Metrikkarte **[!UICONTROL Letzte Segmente]** werden die fünf Segmente angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald ein neues Segment erstellt wird.
 
-Klicken Sie auf ein Segment, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Segmente zu erhalten.
+Wählen Sie ein Segment aus, um die Details für dieses Element Ansicht, oder **[!UICONTROL Ansicht alle]**, um Informationen zu weiteren Segmenten anzuzeigen.
 
 Weitere Informationen zu Segmenten finden Sie unter [Segmentation Service – Übersicht](segmentation/segmentation-overview.md).
 
@@ -132,6 +132,6 @@ Weitere Informationen zu Segmenten finden Sie unter [Segmentation Service – �
 
 Auf der Metrikkarte **[!UICONTROL Letzte Ziele]** werden die fünf Ziele angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald ein neues Ziel erstellt wird.
 
-Klicken Sie auf ein Ziel, um die Details zu diesem Element anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Ziele zu erhalten.
+Wählen Sie ein Ziel zur Ansicht der Details für dieses Element oder **[!UICONTROL Ansicht alle]**, um Informationen zu weiteren Zielen anzuzeigen.
 
 Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/overview.md).
