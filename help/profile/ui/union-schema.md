@@ -1,27 +1,28 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-title: Handbuch zur Benutzeroberfläche des Profils in Echtzeit
+keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Einheitliches Profil;Einheitliches Profil;Einheitliches Profil;RTCP;Profil aktivieren;Profil aktivieren;Vereinigung Schema;VEREINIGUNG PROFIL;Vereinigung Profil
+title: Handbuch zur Benutzeroberfläche von Vereinigung Schema
 topic: guide
+type: Documentation
 description: In der Adobe Experience Platform-Benutzeroberfläche können Sie ganz einfach jedes Schema der Vereinigung innerhalb Ihres Unternehmens Ansicht und Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schema für eine bestimmte Klasse durchführen. In diesem Handbuch finden Sie detaillierte Informationen zur Ansicht und Erforschung von Schemas der Vereinigung mithilfe der Plattform-Benutzeroberfläche.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1044'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Vereinigung Schema] UI-Handbuch
+# [!UICONTROL Vereinigung ] schemaUI-Handbuch
 
 In der Adobe Experience Platform-Benutzeroberfläche können Sie ganz einfach jedes Schema der Vereinigung innerhalb Ihres Unternehmens Ansicht und Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schema für eine bestimmte Klasse durchführen. In diesem Handbuch finden Sie detaillierte Informationen zur Ansicht und Erforschung von Schemas der Vereinigung mithilfe der Plattform-Benutzeroberfläche.
 
 ## Erste Schritte
 
-This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing Real-time Customer Profile data. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses UI-Handbuch erfordert ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste, die mit der Verwaltung von Echtzeit-Daten zum Profil von Kunden verbunden sind. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 * [[!DNL Real-time Customer Profile]](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL Identity Service]](../../identity-service/home.md): Ermöglicht die [!DNL Real-time Customer Profile] Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die sie eingeordnet werden [!DNL Platform].
+* [[!DNL Identity Service]](../../identity-service/home.md): Ermöglicht  [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die sie eingeordnet werden  [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 ## Schemas zur Vereinigung
@@ -34,13 +35,13 @@ Die Arbeit mit Vereinigung-Schemas erfordert ein grundlegendes Verständnis der 
 
 ## Ansicht Vereinigung Schema
 
-Um zu den Schemas der Vereinigung in der Plattform-Benutzeroberfläche zu navigieren, wählen Sie in der linken Navigation die Option &quot; **[!UICONTROL Profil]** &quot;und wählen Sie dann die Registerkarte &quot;Schema **[!UICONTROL der]** Vereinigung&quot;aus. Die Registerkarte &quot; [!UICONTROL Vereinigung-Schema] &quot;wird geöffnet, um das Schema &quot;Vereinigung&quot;für die aktuell ausgewählte Klasse anzuzeigen.
+Um zu Schemas der Vereinigung in der Plattform-Benutzeroberfläche zu navigieren, wählen Sie **[!UICONTROL Profil]** aus der linken Navigation und wählen Sie dann die Registerkarte **[!UICONTROL Vereinigung Schema]**. Die Registerkarte [!UICONTROL Vereinigung Schema] wird geöffnet, um das Schema Vereinigung für die aktuell ausgewählte Klasse anzuzeigen.
 
 ![](../images/union-schema/union-schema-landing.png)
 
 ## Klasse auswählen
 
-Um das Vereinigung-Schema für eine bestimmte XDM-Klasse anzuzeigen, wählen Sie die Klasse aus dem Dropdown-Menü **[!UICONTROL Klasse]** . Da nicht alle Klassen Vereinigungen-Schema haben, sind nur Klassen mit Vereinigung-Schemas (d. h. Klassen mit Schemas, die zum Profil aktiviert wurden) in der Dropdown-Liste verfügbar.
+Um das Vereinigung-Schema für eine bestimmte XDM-Klasse anzuzeigen, wählen Sie die Klasse aus dem Dropdownmenü **[!UICONTROL Class]**. Da nicht alle Klassen Vereinigungen-Schema haben, sind nur Klassen mit Vereinigung-Schemas (d. h. Klassen mit Schemas, die zum Profil aktiviert wurden) in der Dropdown-Liste verfügbar.
 
 Nachdem eine Klasse ausgewählt wurde, wird das angezeigte Schema aktualisiert, um das Schema der Vereinigung für die ausgewählte Klasse wiederzugeben. Sie können beispielsweise **[!UICONTROL XDM Individuelles Profil]** auswählen, um das Vereinigung-Schema für diese Klasse Ansicht.
 
@@ -58,13 +59,13 @@ Wählen Sie ein beliebiges Feld aus, um dessen Details wie Anzeigename, Datentyp
 
 Wenn Sie den Namen eines beitragenden Schemas auswählen, werden die Namen der mit diesem Schema zusammenhängenden Datensätze angezeigt, die Daten in das ausgewählte Feld eintragen. Jeder Dataset-Name wird als Link angezeigt. Wenn Sie einen Dataset-Namen auswählen, wird die Registerkarte &quot;Aktivität&quot;für diesen Datensatz in einem neuen Fenster geöffnet.
 
-Weitere Informationen zu Datensätzen, einschließlich Anzeigen der Aktivität von Datasets und Anzeigen einer Vorschau der Datensatzdaten in der Benutzeroberfläche, finden Sie im Benutzerhandbuch zu [Datensätzen](../../catalog/datasets/user-guide.md).
+Weitere Informationen zu Datensätzen, einschließlich Anzeigen der Aktivität von Datasets und Anzeigen einer Vorschau der Datensatzdaten in der Benutzeroberfläche finden Sie im Handbuch [Datasets UI guide](../../catalog/datasets/user-guide.md).
 
 ![](../images/union-schema/union-schema-field-datasets.png)
 
 ## Ansicht leistende Schemas
 
-Sie können auch Ansichten darüber vornehmen, welche spezifischen Schema zum Schema der Vereinigung beitragen, indem Sie &quot; **[!UICONTROL Alle beitragenden Schema]** &quot;auswählen, um die Liste der Schema zu erweitern. Je nachdem, welche Klasse Sie ausgewählt haben und wie viele Schema Ihr Unternehmen in Platform erstellt hat, kann es sich hierbei um eine kurze Liste mit einem einzigen Schema oder einer langen Liste mit vielen Schemas handeln.
+Sie können auch die Ansicht durchführen, welche spezifischen Schema zum Schema der Vereinigung beitragen, indem Sie **[!UICONTROL Alle beitragenden Schema]** auswählen, um die Liste der Schema zu erweitern. Je nachdem, welche Klasse Sie ausgewählt haben und wie viele Schema Ihr Unternehmen in Platform erstellt hat, kann es sich hierbei um eine kurze Liste mit einem einzigen Schema oder einer langen Liste mit vielen Schemas handeln.
 
 ![](../images/union-schema/union-schema-contributing-schemas.png)
 
@@ -90,7 +91,7 @@ Die Benutzeroberfläche des Vereinigung-Schemas ermöglicht es Ihnen außerdem, 
 
 Wenn Beziehungen für die ausgewählte Klasse eingerichtet wurden, zeigt die Auswahl von **[!UICONTROL Beziehungen]** eine Liste von Feldern an, die zum Erstellen von Beziehungen verwendet werden. Nicht alle Schema verwenden Beziehungen oder benötigen Beziehungen, daher ist es üblich, dass der Abschnitt &quot;Beziehungen&quot;keine Felder enthält.
 
-Weitere Informationen zu Schema-Beziehungen, einschließlich ihrer Definition mithilfe der Benutzeroberfläche, finden Sie in [diesem Dokument zu Schema-Beziehungen](../../xdm/tutorials/relationship-ui.md).
+Weitere Informationen zu Schema-Beziehungen, einschließlich ihrer Definition mithilfe der Benutzeroberfläche, finden Sie in diesem Dokument zu Schema-Beziehungen](../../xdm/tutorials/relationship-ui.md).[
 
 ![](../images/union-schema/union-schema-relationships.png)
 
@@ -100,4 +101,4 @@ Wenn Sie ein Beziehungsfeld aus der Liste auswählen, wird das angezeigte Schema
 
 ## Nächste Schritte
 
-Indem Sie dieses Handbuch lesen, wissen Sie jetzt, wie Vereinigung-Schema mithilfe der [!DNL Experience Platform] Benutzeroberfläche Ansicht und navigiert werden. Für weitere Informationen zu Schemas, einschließlich deren Verwendung auf der gesamten Plattform, lesen Sie bitte zunächst die [XDM-Systemübersicht](../../xdm/home.md).
+Durch Lesen dieses Handbuchs wissen Sie jetzt, wie Vereinigungen mithilfe der [!DNL Experience Platform]-Benutzeroberfläche Ansicht und navigiert werden können. Weitere Informationen zu Schemas, einschließlich deren Verwendung auf der gesamten Plattform, finden Sie unter [XDM Systemübersicht](../../xdm/home.md).
