@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: cf70b21f3a8c02b25e5acd3be8c8feaa3f52a5e3
+source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 40%
+source-wordcount: '478'
+ht-degree: 31%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 40%
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -33,6 +34,18 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 | Regelmäßige Ausdruck-Funktionen | [!DNL Data Prep] Mapper unterstützt jetzt das Abgleichen und Extrahieren eines Teils des Eingabefelds auf Grundlage von regulären Ausdrücken. |
 
 Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## Ziele {#destinations}
+
+[!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Erweiterte ID-Übereinstimmung | Die Funktionen für Übereinstimmungsraten bei Audiencen in [!DNL Facebook Custom Audiences] und [!DNL Google Customer Match] wurden verbessert, indem zusätzliche Identitätszuordnungen wie externe IDs, Telefonnummern und Mobilgeräte-IDs unterstützt werden. Weitere Informationen finden Sie in der folgenden Dokumentation: <ul><li>[Facebook-Ziel](../../destinations/catalog/social/facebook.md)</li><li>[Google-Kundenübereinstimmungsziel](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Profile und Segmente für ein Ziel aktivieren](../../destinations/ui/activate-destinations.md)</li></ul> |
+
+Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -48,5 +61,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | [!DNL Google BigQuery] Verbesserungen am Quellanschluss | Mit dem [!DNL BigQuery]-Quell-Connector können Sie jetzt Dateien mit einer Auflösung von mehr als 10 GB in einem Fluss erfassen. Weitere Informationen finden Sie unter [[!DNL BigQuery] Übersicht über den Quellanschluss](../../sources/connectors/databases/bigquery.md). |
 | Unterstützung komplexer Datentypen für Cloud-Datenspeicherung | Sie können jetzt komplexe Datentypen, wie z. B. Arrays in JSON-Datenspeicherung, erfassen, wenn Sie einen Cloud-Quell-Connector verwenden. Weitere Informationen finden Sie in den Tutorials zum Erstellen eines Cloud-Datenspeicherung-Datenflusses [in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) oder [mit der  [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Unterstützung der Hauptschlüssel-basierten Authentifizierung für [!DNL Microsoft Dynamics]-Quelle | Sie können sich jetzt mit einem Hauptschlüssel als Alternative zur kennwortbasierten Authentifizierung bei Ihrem [!DNL Dynamics]-Konto authentifizieren. Weitere Informationen finden Sie unter [[!DNL Dynamics] Übersicht über den Quellanschluss](../../sources/connectors/crm/ms-dynamics.md). |
+| Benutzeroberflächenunterstützung für benutzerdefinierte Trennzeichen in Cloud-Datenspeicherung-Quellen | Sie können jetzt ein benutzerdefiniertes Spaltentrennzeichen wie ein Komma (`,`), ein Tabulator (`\t`) oder ein Pipe (`|`) festlegen, um durch Trennzeichen getrennte Dateien in der Benutzeroberfläche zu erfassen. Weitere Informationen finden Sie im Tutorial [Erstellen eines Datenflusses mit einem Cloud-Datenspeicherung-Quellanschluss](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
