@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
+keywords: Experience Platform;Home;beliebte Themen;ui;XDM;XDM-System;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Schema;Schema;Schemas;Schemas;Erstellen;Datentyp;Datentypen;
 solution: Experience Platform
 title: Datentypen mithilfe der Benutzeroberfläche erstellen und bearbeiten
 topic: tutorial
@@ -8,7 +8,7 @@ description: Erfahren Sie, wie Sie Datentypen in der Benutzeroberfläche "Experi
 translation-type: tm+mt
 source-git-commit: eca896ca068a02da7ec7379e8ced2105bbca9f2d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
