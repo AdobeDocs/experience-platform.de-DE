@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform;home;popular topics;date range
+keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 solution: Experience Platform
 title: Erste Schritte mit der Observability Insights API
 topic: developer guide
 description: Mit der Observability Insights-API können Sie Metrikdaten zu verschiedenen Adobe Experience Platform-Funktionen abrufen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Observability Insights-API durchführen.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 25%
+source-wordcount: '253'
+ht-degree: 24%
 
 ---
 
 
-# Getting started with the [!DNL Observability Insights] API
+# Erste Schritte mit der API[!DNL Observability Insights]
 
-Mit der [!DNL Observability Insights] API können Sie Metrikdaten zu verschiedenen Adobe Experience Platform-Funktionen abrufen. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Observability Insights] API.
+Mit der API [!DNL Observability Insights] können Sie Metrikdaten zu verschiedenen Adobe Experience Platform-Funktionen abrufen. Dieses Dokument bietet eine Einführung in die Kernkonzepte, die Sie kennen müssen, bevor Sie Aufrufe an die [!DNL Observability Insights]-API durchführen.
 
 ## Lesen von Beispiel-API-Aufrufen
 
-The [!DNL Observability Insights] API documentation provides example API calls to demonstrate how to format your requests. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. For information on the conventions used in documentation for sample API calls, see the section on how to read example API calls in the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
+Die [!DNL Observability Insights]-API-Dokumentation enthält Beispiel-API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum Lesen von Beispiel-API-Aufrufen im Handbuch [Experience Platform Fehlerbehebung](../../landing/troubleshooting.md).
 
 ## Erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird. Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 ## Nächste Schritte
 
-Um mit dem Aufrufen der [!DNL Observability Insights] API zu beginnen, fahren Sie mit der [Metriken-Endpunktanleitung](./metrics.md)fort.
+Um mit dem Aufrufen der API zu beginnen, fahren Sie mit dem [Metriken-Endpunktleitfaden](./metrics.md) fort.[!DNL Observability Insights]
