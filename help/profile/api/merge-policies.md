@@ -1,33 +1,35 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Richtlinien zusammenführen - Echtzeit-Client-Profil-API
+keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
+title: API-Endpunkt "Richtlinien zusammenführen"
 topic: guide
+type: Documentation
+description: 'Mit Adobe Experience Platform können Sie Datenfragmente aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht Ihrer einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die Plattform verwendet, um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu erstellen. '
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2494'
-ht-degree: 57%
+source-wordcount: '2560'
+ht-degree: 54%
 
 ---
 
 
 # Endpunkt der Richtlinien zusammenführen
 
-Mit Adobe Experience Platform können Sie Datenfragmente aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht Ihrer einzelnen Kunden zu erhalten. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
+Mit Adobe Experience Platform können Sie Datenfragmente aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht Ihrer einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die [!DNL Platform] verwenden, um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu erstellen.
 
 Wenn ein Kunde beispielsweise über mehrere Kanal mit Ihrer Marke interagiert, enthält Ihr Unternehmen mehrere Profil-Fragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen angezeigt werden. Wenn diese Fragmente in eine Plattform integriert werden, werden sie zusammengeführt, um ein einzelnes Profil für diesen Kunden zu erstellen. Wenn die Daten aus mehreren Quellen in Konflikt geraten (z. B. ein Fragment als &quot;Single&quot;, während die anderen Listen als &quot;verheiratet&quot;Liste werden), bestimmt die Richtlinie zum Zusammenführen, welche Informationen in das Profil für die betreffende Person aufgenommen werden sollen.
 
 Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben.
 
-Informationen zum Arbeiten mit Zusammenführungsrichtlinien unter Verwendung der Benutzeroberfläche finden Sie im [Benutzerhandbuch für Zusammenführungsrichtlinien](../ui/merge-policies.md).
+Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche finden Sie im Handbuch [Richtlinien zusammenführen](../ui/merge-policies.md).
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
-Merge-Richtlinien sind privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schema auf die von Ihnen gewünschte Weise zusammenzuführen. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] stellt Unternehmen eine standardmäßige Zusammenführungsrichtlinie zur Verfügung oder Sie können eine Zusammenführungsrichtlinie für eine bestimmte Experience Data Model (XDM)-Schema-Klasse erstellen und diese als Standard für Ihr Unternehmen markieren.
+Merge-Richtlinien sind privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schema auf die von Ihnen gewünschte Weise zusammenzuführen. Für alle API-Zugriffe auf [!DNL Profile]-Daten ist eine Zusammenführungsrichtlinie erforderlich. Eine Standardeinstellung wird verwendet, wenn keine explizite Angabe erfolgt. [!DNL Platform] stellt Unternehmen eine standardmäßige Zusammenführungsrichtlinie zur Verfügung oder Sie können eine Zusammenführungsrichtlinie für eine bestimmte Experience Data Model (XDM)-Schema-Klasse erstellen und diese als Standard für Ihr Unternehmen markieren.
 
 Während jedes Unternehmen potenziell über mehrere Zusammenführungsrichtlinien pro Schema-Klasse verfügen kann, kann jede Klasse nur eine Standardzusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Name der Schema-Klasse angegeben ist und eine Zusammenführungsrichtlinie erforderlich ist, jedoch nicht angegeben.
 
@@ -67,8 +69,8 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 | `name` | Anzeigename, anhand dessen die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
 | `imsOrgId` | Organisationskennung, zu der diese Zusammenführungsrichtlinie gehört |
 | `identityGraph` | [Identitätsdiagramm](#identity-graph)-Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profilfragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
-| `attributeMerge` | [Attributzusammenführungs](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie bei Datenkonflikten Profil-Attributen priorisiert. |
-| `schema.name` | Als Teil des [`schema`](#schema) Objekts enthält das `name` Feld die XDM-Schema-Klasse, auf die sich die Zusammenführungsrichtlinie bezieht. Weitere Informationen zu Schemas und Klassen finden Sie in der [XDM-Dokumentation](../../xdm/home.md). |
+| `attributeMerge` | [Attribute ](#attribute-merge) mergeobject, das angibt, wie die Richtlinie zum Zusammenführen bei Datenkonflikten Profil-Attribute priorisiert. |
+| `schema.name` | Als Teil des Objekts [`schema`](#schema) enthält das Feld `name` die XDM-Schema-Klasse, auf die sich die Richtlinie zum Zusammenführen bezieht. Weitere Informationen zu Schemas und Klassen finden Sie in der [XDM-Dokumentation](../../xdm/home.md). |
 | `default` | Boolescher Wert, der angibt, ob diese Zusammenführungsrichtlinie für das angegebene Schema standardmäßig verwendet wird. |
 | `version` | [!DNL Platform]Von gepflegte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Zusammenführungsrichtlinie inkrementiert. |
 | `updateEpoch` | Datum der letzten Aktualisierung der Zusammenführungsrichtlinie. |
@@ -97,7 +99,7 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 
 ### Identitätsdiagramm {#identity-graph}
 
-[Der Adobe Experience Platform Identity Service](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jedes Unternehmen verwendet werden [!DNL Experience Platform]. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
+[Adobe Experience Platform Identity ](../../identity-service/home.md) Servicemanagement verwaltet die weltweit verwendeten Identitätsdiagramme und deren Verwendung für jedes Unternehmen  [!DNL Experience Platform]. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
 
 **identityGraph-Objekt**
 
@@ -122,7 +124,7 @@ Wobei `{IDENTITY_GRAPH_TYPE}` einer der folgenden Werte ist:
 
 ### Attributzusammenführung {#attribute-merge}
 
-Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der Liste an Identitäten, die für einen bestimmten Anwender vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit kollidierender Profil-Attribute, und die Priorität muss angegeben werden. Mithilfe `attributeMerge`dieser Option können Sie angeben, welche Profil-Attribute im Ereignis eines Zusammenführungskonflikts zwischen Schlüsselwertdatasets (Datensatzdaten) priorisiert werden sollen.
+Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der Liste an Identitäten, die für einen bestimmten Anwender vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit kollidierender Profil-Attribute, und die Priorität muss angegeben werden. Mit `attributeMerge` können Sie angeben, welche Profil-Attribute im Ereignis eines Zusammenführungskonflikts zwischen Schlüsselwertdatasets (Datensatzdaten) priorisiert werden sollen.
 
 **attributeMerge-Objekt**
 
@@ -134,11 +136,11 @@ Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der List
 
 Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
-* **`timestampOrdered`**: (Standard) Geben Sie dem zuletzt aktualisierten Profil Priorität. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich. `timestampOrdered` unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Profil-Fragmenten innerhalb von oder über Datensätze Vorrang haben. Weitere Informationen finden Sie im Abschnitt &quot;Anhang&quot;zur [Verwendung benutzerdefinierter Zeitstempel](#custom-timestamps).
+* **`timestampOrdered`**: (Standard) Geben Sie dem zuletzt aktualisierten Profil Priorität. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich. `timestampOrdered` unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Profil-Fragmenten innerhalb von oder über Datensätze Vorrang haben. Weitere Informationen finden Sie im Abschnitt Anhang zu [mit benutzerdefinierten Zeitstempeln](#custom-timestamps).
 * **`dataSetPrecedence`** : Weisen Sie Fragmenten des Profils Priorität auf der Grundlage des Datensatzes zu, aus dem sie stammen. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
-   * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, muss ein `order` Array mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
+   * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, muss ein  `order` Array mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
-#### Beispielobjekt `attributeMerge` mit `dataSetPrecedence` Typ
+#### Beispiel für ein `attributeMerge`-Objekt mit `dataSetPrecedence`-Typ
 
 ```json
     "attributeMerge": {
@@ -152,7 +154,7 @@ Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
     }
 ```
 
-#### Beispielobjekt `attributeMerge` mit `timestampOrdered` Typ
+#### Beispiel für ein `attributeMerge`-Objekt mit `timestampOrdered`-Typ
 
 ```json
     "attributeMerge": {
@@ -182,11 +184,11 @@ Wobei der Wert `name` der Name der XDM-Klasse ist, auf der das der Zusammenführ
     }
 ```
 
-Um mehr über XDM zu erfahren und mit Schemas in der Experience Platform zu arbeiten, lesen Sie zunächst die [XDM-Systemübersicht](../../xdm/home.md).
+Um mehr über XDM zu erfahren und mit Schemas in der Experience Platform zu arbeiten, lesen Sie zunächst den [XDM Systemüberblick](../../xdm/home.md).
 
 ## Zusammenführungsrichtlinien aufrufen {#access-merge-policies}
 
-Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. Sie können den `/config/mergePolicies/bulk-get` Endpunkt auch verwenden, um mehrere Zusammenführungsrichtlinien nach ihren IDs abzurufen. Die Schritte für die Durchführung dieser Aufrufe sind in den folgenden Abschnitten beschrieben.
+Mit der API [!DNL Real-time Customer Profile] können Sie mit dem Endpunkt `/config/mergePolicies` eine Suchanfrage ausführen, um eine bestimmte Richtlinie für die Zusammenführung nach ihrer ID Ansicht oder auf alle Zusammenführungsrichtlinien in Ihrer IMS-Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können auch den Endpunkt `/config/mergePolicies/bulk-get` verwenden, um mehrere Zusammenführungsrichtlinien nach ihren IDs abzurufen. Die Schritte für die Durchführung dieser Aufrufe sind in den folgenden Abschnitten beschrieben.
 
 ### Auf eine einzelne Zusammenführungsrichtlinie anhand der Kennung zugreifen
 
@@ -240,7 +242,7 @@ Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtli
 
 ### Abrufen mehrerer Zusammenführungsrichtlinien nach ihren IDs
 
-Sie können mehrere Zusammenführungsrichtlinien abrufen, indem Sie eine POST an den `/config/mergePolicies/bulk-get` Endpunkt anfordern und die IDs der Zusammenführungsrichtlinien einschließen, die Sie im Anforderungstext abrufen möchten.
+Sie können mehrere Zusammenführungsrichtlinien abrufen, indem Sie eine POST an den `/config/mergePolicies/bulk-get`-Endpunkt anfordern und die IDs der Zusammenführungsrichtlinien einschließen, die Sie im Anforderungstext abrufen möchten.
 
 **API-Format**
 
@@ -737,7 +739,7 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Nachdem Sie wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Profilen innerhalb der Plattform anzupassen und Audiencen aus Ihren [!DNL Real-time Customer Profile] Daten zu erstellen. Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+Da Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Profilen innerhalb der Plattform anzupassen und Audiencen aus Ihren [!DNL Real-time Customer Profile]-Daten zu erstellen. Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
 ## Anhang
 
@@ -745,23 +747,23 @@ Dieser Abschnitt enthält zusätzliche Informationen zum Arbeiten mit Zusammenf�
 
 ### Verwenden benutzerdefinierter Zeitstempel {#custom-timestamps}
 
-Da Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und dem Datensatz hinzugefügt. Wenn `timestampOrdered` als `attributeMerge` Typ für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profil basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf der Grundlage des Zeitstempels für den Zeitpunkt, zu dem der Datensatz in die Plattform aufgenommen wurde.
+Da Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und dem Datensatz hinzugefügt. Wenn `timestampOrdered` als `attributeMerge`-Typ für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profil basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf der Grundlage des Zeitstempels für den Zeitpunkt, zu dem der Datensatz in die Plattform aufgenommen wurde.
 
 Gelegentlich kann es zu Anwendungsfällen kommen, z. B. zum Aufstocken von Daten oder zum Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn Datensätze nicht in der richtigen Reihenfolge aufgenommen werden, wenn ein benutzerdefinierter Zeitstempel angegeben werden muss und die Richtlinie zum Zusammenführen den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen muss.
 
-Um einen benutzerdefinierten Zeitstempel verwenden zu können, [[!DNL External Source System Audit Details Mixin]](#mixin-details) muss der Zeitstempel Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des `xdm:lastUpdatedDate` Felds ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten `xdm:lastUpdatedDate` Feld erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze oder Profil-Fragmente innerhalb und zwischen Datensätzen zusammenzuführen. Wenn `xdm:lastUpdatedDate` kein oder kein Ausfüllen erfolgt, verwendet Platform weiterhin den Systemzeitstempel.
+Um einen benutzerdefinierten Zeitstempel zu verwenden, muss das [[!DNL External Source System Audit Details Mixin]](#mixin-details) Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des Felds `xdm:lastUpdatedDate` ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten Feld `xdm:lastUpdatedDate` erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze oder Profil-Fragmente innerhalb und zwischen Datensätzen zusammenzuführen. Wenn `xdm:lastUpdatedDate` nicht vorhanden oder nicht gefüllt ist, verwendet die Plattform weiterhin den Systemzeitstempel.
 
 >[!NOTE]
 >
->Sie müssen sicherstellen, dass der `xdm:lastUpdatedDate` Zeitstempel aufgefüllt wird, wenn Sie eine PATCH in demselben Datensatz senden.
+>Sie müssen sicherstellen, dass der Zeitstempel `xdm:lastUpdatedDate` aufgefüllt wird, wenn eine PATCH in demselben Datensatz gesendet wird.
 
-Eine schrittweise Anleitung zum Arbeiten mit Schemas mithilfe der Schema-Registrierungs-API, einschließlich des Hinzufügens von Mixins zu Schemas, finden Sie im [Lernprogramm zum Erstellen eines Schemas mit der API](../../xdm/tutorials/create-schema-api.md).
+Eine schrittweise Anleitung zum Arbeiten mit Schemas mithilfe der Schema Registry API, einschließlich des Hinzufügens von Mixins zu Schemas, finden Sie im Lehrgang [zum Erstellen eines Schemas mit der API](../../xdm/tutorials/create-schema-api.md).
 
-Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der Benutzeroberfläche finden Sie im Abschnitt zur [Verwendung benutzerdefinierter Zeitstempel](../ui/merge-policies.md#custom-timestamps) im Benutzerhandbuch [zu](../ui/merge-policies.md)Zusammenführungsrichtlinien.
+Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Verwenden von benutzerdefinierten Zeitstempeln](../ui/merge-policies.md#custom-timestamps) im Benutzerhandbuch [Zusammenführungsrichtlinien](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] details  {#mixin-details}
 
-Das folgende Beispiel zeigt korrekt ausgefüllte Felder im [!DNL External Source System Audit Details Mixin]. Die komplette Mix-JSON kann auch im [öffentlichen Experience Data Model (XDM) Repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) auf GitHub angezeigt werden.
+Das folgende Beispiel zeigt korrekt ausgefüllte Felder im [!DNL External Source System Audit Details Mixin]. Die vollständige Mix-JSON kann auch im [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) auf GitHub angezeigt werden.
 
 ```json
 {
