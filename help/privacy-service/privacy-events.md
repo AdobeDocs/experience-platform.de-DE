@@ -1,31 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Privacy Service-Ereignis abonnieren
 topic: privacy events
+description: Erfahren Sie, wie Sie Privacy Service-Ereignis mit einem vorkonfigurierten Webshaken abonnieren.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: 2b919a3b6cbbd59521874cfd2d11e20de3077740
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '437'
 ht-degree: 7%
 
 ---
 
 
-# Abonnieren [!DNL Privacy Service Events]
+# Abonnieren von [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] sind Nachrichten von Adobe Experience Platform [!DNL Privacy Service], die Adobe I/O-Ereignis nutzen, die an einen konfigurierten Webhaken gesendet werden, um eine effiziente Auftragsabwicklungsautomatisierung zu ermöglichen. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Service Events] sind Nachrichten von Adobe Experience Platform  [!DNL Privacy Service], die Adobe I/O-Ereignis nutzen, die an einen konfigurierten Webhaken gesendet werden, um eine effiziente Auftragsabwicklungsautomatisierung zu ermöglichen. Sie verringern oder beseitigen die Notwendigkeit, die [!DNL Privacy Service]-API abzufragen, um zu prüfen, ob ein Auftrag abgeschlossen ist oder ein bestimmter Meilenstein in einem Workflow erreicht wurde.
 
 Aktuell gibt es vier Arten von Benachrichtigungen im Lebenszyklus der Anfragen von Datenschutzaufträgen:
 
 | Typ | Beschreibung |
 | --- | --- |
-| Auftrag abgeschlossen | All [!DNL Experience Cloud] applications have reported back and the overall or global status of the job has been marked as complete. |
+| Auftrag abgeschlossen | Alle [!DNL Experience Cloud]-Anwendungen wurden zurückgemeldet und der Gesamtstatus des Auftrags bzw. der globale Status wurde als abgeschlossen markiert. |
 | Auftragsfehler | Eine oder mehrere Anwendungen haben während der Verarbeitung der Anforderung einen Fehler gemeldet. |
 | Produkt abgeschlossen | Eine der mit diesem Auftrag verknüpften Anwendungen hat ihre Arbeit abgeschlossen. |
 | Produktfehler | Eine der Anwendungen meldete einen Fehler bei der Verarbeitung der Anforderung. |
 
-In diesem Dokument wird beschrieben, wie Sie eine Ereignis-Registrierung für [!DNL Privacy Service] Benachrichtigungen einrichten und wie Sie Benachrichtigungs-Nutzdaten interpretieren.
+In diesem Dokument wird beschrieben, wie Sie eine Ereignis-Registrierung für [!DNL Privacy Service]-Benachrichtigungen einrichten und wie Sie Benachrichtigungs-Nutzdaten interpretieren.
 
 ## Erste Schritte
 
@@ -34,19 +35,19 @@ Lesen Sie die folgende Dokumentation zum Privacy Service, bevor Sie dieses Lernp
 * [Übersicht über den Privacy Service](./home.md)
 * [Entwicklerhandbuch für die Privacy Service-API](./api/getting-started.md)
 
-## Registrieren Sie einen Webshaken, um [!DNL Privacy Service Events]
+## Registrieren eines Webhosts für [!DNL Privacy Service Events]
 
-Für den Empfang müssen Sie Adobe Developer Console verwenden, um einen Webshaken für Ihre [!DNL Privacy Service Events][!DNL Privacy Service] Integration zu registrieren.
+Um [!DNL Privacy Service Events] zu erhalten, müssen Sie Adobe Developer Console verwenden, um einen Webshaken bei Ihrer [!DNL Privacy Service]-Integration zu registrieren.
 
-Folgen Sie dem Tutorial zum [Abonnieren von [!DNL I/O Event] Tonbenachrichtigungen](../observability/notifications/subscribe.md) , um detaillierte Schritte dazu zu erhalten. Stellen Sie sicher, dass Sie **[!UICONTROL Privacy Service-Ereignis]** als Ereignis-Provider auswählen, um auf die oben aufgeführten Ereignis zuzugreifen.
+Folgen Sie dem Tutorial [Abonnieren von [!DNL I/O Event] Benachrichtigungen](../observability/notifications/subscribe.md), um detaillierte Schritte dazu zu erhalten. Stellen Sie sicher, dass Sie **[!UICONTROL Privacy Service-Ereignis]** als Ereignis-Provider auswählen, um auf die oben aufgeführten Ereignis zuzugreifen.
 
-## Benachrichtigungen [!DNL Privacy Service Event] empfangen
+## [!DNL Privacy Service Event]-Benachrichtigungen empfangen
 
-Nachdem Sie Ihren Webshaken erfolgreich registriert und Datenschutzaufträge ausgeführt haben, können Sie Beginn mit Ereignis-Benachrichtigungen aufrufen. Diese Ereignisse können mit dem Webshaken selbst oder über die Registerkarte &quot; **[!UICONTROL Debug-Ablaufverfolgung]** &quot;in der Projektregistrierung in der Adobe Developer Console angezeigt werden.
+Nachdem Sie Ihren Webshaken erfolgreich registriert und Datenschutzaufträge ausgeführt haben, können Sie Beginn mit Ereignis-Benachrichtigungen aufrufen. Diese Ereignisse können mit dem Webhook selbst oder durch Auswahl der Registerkarte **[!UICONTROL Debugging-Verfolgung]** in der Projektregistrierung in der Adobe Developer Console angezeigt werden.
 
 ![](images/privacy-events/debug-tracing.png)
 
-Die folgende JSON-Datei ist ein Beispiel für eine [!DNL Privacy Service Event] Benachrichtigungs-Payload, die an Ihren WebHook gesendet wird, wenn eine der Anwendungen, die mit einem Datenschutzauftrag verknüpft sind, ihre Arbeit abgeschlossen hat:
+Die folgende JSON-Datei ist ein Beispiel für eine [!DNL Privacy Service Event]-Benachrichtigungs-Payload, die an Ihren WebHook gesendet wird, wenn eine der Anwendungen, die mit einem Datenschutzauftrag verknüpft sind, ihre Arbeit abgeschlossen hat:
 
 ```json
 {
@@ -69,9 +70,9 @@ Die folgende JSON-Datei ist ein Beispiel für eine [!DNL Privacy Service Event] 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `id` | Eine eindeutige, systemgenerierte ID für die Benachrichtigung. |
-| `type` | Die Art der zu sendenden Benachrichtigung unter Angabe des Kontextes zu den unter `data`. Mögliche Werte sind: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `type` | Die Art der gesendeten Benachrichtigung, die den Kontext zu den unter `data` bereitgestellten Informationen enthält. Mögliche Werte sind: <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
 | `time` | Ein Zeitstempel, der angibt, wann das Ereignis aufgetreten ist. |
-| `data.value` | Enthält zusätzliche Informationen zum Auslöser der Benachrichtigung: <ul><li>`jobId`: Die ID des Datenschutzauftrags, der die Benachrichtigung ausgelöst hat.</li><li>`message`: Eine Meldung zum spezifischen Status des Auftrags. Für `productcomplete` oder `producterror` Benachrichtigungen gibt dieses Feld die betreffende Experience Cloud-Anwendung an.</li></ul> |
+| `data.value` | Enthält zusätzliche Informationen zum Auslöser der Benachrichtigung: <ul><li>`jobId`: Die ID des Datenschutzauftrags, der die Benachrichtigung ausgelöst hat.</li><li>`message`: Eine Meldung zum spezifischen Status des Auftrags. Für `productcomplete`- oder `producterror`-Benachrichtigungen gibt dieses Feld die betreffende Experience Cloud-Anwendung an.</li></ul> |
 
 ## Nächste Schritte
 
