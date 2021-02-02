@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Query editor;query editor;Query service;query service;
+keywords: Experience Platform;Home;beliebte Themen;Abfrage-Editor;Abfrage-Editor;Abfrage-Dienst;Abfrage-Dienst;
 solution: Experience Platform
 title: Benutzerhandbuch zum Abfrage-Editor
 topic: query editor
@@ -7,7 +7,7 @@ description: Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platf
 translation-type: tm+mt
 source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1081'
 ht-degree: 58%
 
 ---
