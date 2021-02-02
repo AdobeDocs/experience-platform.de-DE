@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datum;Datumsfunktionen;Datumswerte;
 solution: Experience Platform
 title: Datumsfunktionen
 topic: overview
 description: In diesem Dokument werden die Datumsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 translation-type: tm+mt
-source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
+source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 18%
+source-wordcount: '411'
+ht-degree: 17%
 
 ---
 
@@ -80,4 +80,4 @@ Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen def
 
 **Beispiel**
 
-Der Ausdruck `date(orderDate, 'yyyy-MM-dd')` konvertiert den `orderDate` Wert &quot;31. Dezember 2020&quot;in den Zeitwert &quot;2020-12-31&quot;.
+Der Ausdruck `date(orderDate, "yyyy-MM-dd")` konvertiert den Wert `orderDate` von &quot;31. Dezember 2020&quot;in den Zeitwert &quot;2020-12-31&quot;.
