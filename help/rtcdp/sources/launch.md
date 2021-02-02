@@ -1,14 +1,14 @@
 ---
-keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
+keywords: Start-Web-Tags;Web-Tags starten;Website-Tags;Web-Tags;Start;Start
 title: Tutorial zum Implementieren von Website-Tags mit Adobe Launch
 seo-title: Website-Tags mit Adobe Launch implementieren
 description: Verwenden Sie Adobe Launch, um Website-Tags in Adobe Experience Platform zu implementieren.
 seo-description: Verwenden Sie Adobe Launch, um Website-Tags in Adobe Experience Platform zu implementieren.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 72%
+source-wordcount: '493'
+ht-degree: 68%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Tutorial wird beschrieben, wie Sie mit Adobe Launch Website-Tags imple
 
 ## Voraussetzungen
 
-* The necessary schema and dataset are created in [!DNL Platform].
+* Das erforderliche Schema und der erforderliche Datensatz werden in [!DNL Platform] erstellt.
 * Die erforderliche Konfiguration wurde in Experience Edge bereitgestellt und verfügt über die entsprechende Konfigurationskennung und Edge-Domäne.
 * Das Unternehmens-CMS wurde bereits für die Bereitstellung eines JavaScript-Objekts auf jeder Seite mit den Daten konfiguriert, die Sie an Platform senden möchten.
 
@@ -27,15 +27,15 @@ In diesem Tutorial wird beschrieben, wie Sie mit Adobe Launch Website-Tags imple
 
 Dieses Tutorial umfasst folgende Schritte:
 
-1. Install the Adobe Experience Platform [!DNL Web SDK] extension.
-1. Create a rule to tell [!DNL Launch] what data to send.
+1. Installieren Sie die Adobe Experience Platform [!DNL Web SDK]-Erweiterung.
+1. Erstellen Sie eine Regel, um [!DNL Launch] anzugeben, welche Daten gesendet werden sollen.
 1. Bündeln der Erweiterung und Regel in einer Bibliothek.
 
-## Install the Adobe Experience Platform [!DNL Web SDK] extension
+## Adobe Experience Platform [!DNL Web SDK]-Erweiterung installieren
 
-First, install the Adobe Experience Platform [!DNL Web SDK] extension.
+Installieren Sie zunächst die Adobe Experience Platform [!DNL Web SDK]-Erweiterung.
 
-1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
+1. Öffnen Sie in [!DNL Launch] die Registerkarte **[!UICONTROL Erweiterungen]**.
 
    ![Bild](assets/launch-overview.png)
 
@@ -43,7 +43,7 @@ First, install the Adobe Experience Platform [!DNL Web SDK] extension.
 
    ![Bild](assets/launch-extension-install.png)
 
-   For more information, see [Extensions](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html) in the [!DNL Launch] documentation.
+   Weitere Informationen finden Sie unter [Erweiterungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html) in der [!DNL Launch]-Dokumentation.
 
 1. Konfigurieren Sie die Erweiterung.
 
@@ -52,27 +52,27 @@ First, install the Adobe Experience Platform [!DNL Web SDK] extension.
    * **Konfigurationskennung:** Geben Sie die Konfigurationskennung an, die Sie von Ihrem Adobe-Support-Mitarbeiter erhalten haben.
    * **Edge-Domäne:** Geben Sie die Edge-Domäne an, die Sie von Ihrem Adobe-Support-Mitarbeiter erhalten haben.
 
-1. Klicken Sie auf **[!UICONTROL Speichern]** und fahren Sie mit dem nächsten Schritt fort.
+1. Wählen Sie **[!UICONTROL Speichern]** und fahren Sie mit dem nächsten Schritt fort.
 
-## Create a rule to tell [!DNL Launch] what data to send
+## Regel erstellen, um [!DNL Launch] anzugeben, welche Daten gesendet werden sollen
 
-Next, create a rule to let [!DNL Launch] know what data you want to send to Adobe Experience Platform and when you want to send it.
+Anschließend erstellen Sie eine Regel, die [!DNL Launch] angibt, welche Daten Sie an Adobe Experience Platform senden möchten und wann Sie sie senden möchten.
 
-1. Under the **[!UICONTROL Rules]** tab, configure an event that will trigger on each new page of the website when the [!DNL Launch] library loads.
+1. Konfigurieren Sie unter der Registerkarte **[!UICONTROL Rules]** ein Ereignis, das auf jeder neuen Seite der Website Trigger wird, wenn die [!DNL Launch]-Bibliothek geladen wird.
 
    ![Bild](assets/launch-make-a-rule.png)
 
 1. Fügen Sie eine Aktion hinzu.
 
-   To configure the action, tell [!DNL Launch] where to find your data layer. Die Datenschicht ist ein JavaScript-Objekt, das auf der Seite vorhanden ist und von demselben CMS bereitgestellt wird, das die Web-Seite rendert. Geben Sie den JavaScript-Pfad zum Datenobjekt an.
+   Um die Aktion zu konfigurieren, geben Sie [!DNL Launch] an, wo die Datenschicht zu finden ist. Die Datenschicht ist ein JavaScript-Objekt, das auf der Seite vorhanden ist und von demselben CMS bereitgestellt wird, das die Web-Seite rendert. Geben Sie den JavaScript-Pfad zum Datenobjekt an.
 
    ![Bild](assets/launch-add-aep-action.png)
 
    Das von Ihnen gesendete Datenobjekt muss ein gültiges XDM-Objekt sein, das die Validierung anhand des Schemas übergibt, das vom mit Ihrer Konfigurationskennung verbundenen Datensatz verwendet wird.
 
-1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]**.
+1. Wählen Sie **[!UICONTROL Änderungen beibehalten]**.
 
-For more information, see [Rules](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/rules.html) in the [!DNL Launch] documentation.
+Weitere Informationen finden Sie unter [Regeln](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/rules.html) in der [!DNL Launch]-Dokumentation.
 
 ## Erweiterung und Regel in einer Bibliothek bündeln
 
@@ -84,4 +84,4 @@ Nach Abschluss des Tests können Sie die Bibliothek über den Workflow freigeben
 
 ![Bild](assets/launch-promote-library.png)
 
-For more information, see [Libraries](https://docs.adobe.com/content/help/de-DE/launch/using/reference/publish/libraries.html) in the [!DNL Launch] documentation.
+Weitere Informationen finden Sie unter [Bibliotheken](https://docs.adobe.com/content/help/de-DE/launch/using/reference/publish/libraries.html) in der [!DNL Launch]-Dokumentation.
