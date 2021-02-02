@@ -5,10 +5,10 @@ user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Experience Platform es ermöglicht, Ihren Kunden personalisierte Erlebnisse in Echtzeit bereitzustellen.
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 34%
+source-wordcount: '161'
+ht-degree: 29%
 
 ---
 
@@ -32,13 +32,20 @@ ht-degree: 34%
 * Experience Platform-APIs {#platform-apis}
    * [API-Grundlagen](api-fundamentals.md)
    * [API-Referenz-Dokumente](http://www.adobe.com/go/platform-api-reference-en)
-   * [Bei Experience Platform-APIs authentifizieren](http://www.adobe.com/go/platform-api-authentication-en)
+   * [Übung &quot;APIs für Authentifizierung und Zugriff&quot;](api-authentication.md)
 * Plattformdokumentation {#documentation}
    * [Dokumentationsübersicht](documentation/overview.md)
-* Plattform im Ökosystem der Adobe {#ecosystem}
+   * [Unterstützung von Dokumentationssprachen](documentation/language-support.md)
+* Plattform im Adobe-Ökosystem {#ecosystem}
    * [Anwendungsdienste](application-services.md)
    * [Anwendungen und intelligente Dienste (Video)](video/application-intelligent-services.md)
    * [Plattformintegrationen mit Experience Cloud (Video)](video/experience-cloud-integrations.md)
+* Verwaltung, Datenschutz und Sicherheit {#governance-privacy-security}
+   * [Übersicht](./governance-privacy-security/overview.md)
+   * Einverständnisverwaltung {#consent}
+      * IAB TCF 2.0 {#iab}
+         * [Übersicht](./governance-privacy-security/consent/iab/overview.md)
+         * [Dataset zur Erfassung von Einwilligungs- und Präferenzdaten konfigurieren](./governance-privacy-security/consent/iab/dataset.md)
 * [Dashboard zur Lizenzverwendung](license-usage-dashboard.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [ADLS Gen2 Migration](adls2-gen2-migration.md)
