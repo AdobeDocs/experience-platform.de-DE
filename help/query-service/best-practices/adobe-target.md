@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe target;
+keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Abfragen-Beispiel;Abfrage;adobe-Zielgruppe
 solution: Experience Platform
 title: Beispielabfragen
 topic: queries
@@ -7,8 +7,8 @@ description: Daten von Adobe Target werden in XDM-Schema für Erlebnisereignisse
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 55%
+source-wordcount: '324'
+ht-degree: 52%
 
 ---
 
