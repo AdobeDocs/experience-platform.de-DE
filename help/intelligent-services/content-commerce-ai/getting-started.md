@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
+keywords: Experience Platform;Erste Schritte;Inhaltshilfe;Handelshilfe;Inhalts- und Commerce-Hilfe
 solution: Experience Platform, Intelligent Services
 title: Erste Schritte mit der Content and Commerce-API
 topic: Getting started
 description: Content and Commerce AI verwendet Adobe I/O APIs. Um Aufrufe an Adobe I/O-APIs und die I/O-Konsolenintegration durchzuführen, müssen Sie zunächst das Authentifizierungslehrgang abschließen.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 14%
+source-wordcount: '596'
+ht-degree: 13%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 14%
 >
 >Die AI für Inhalte und Commerce befindet sich in der Betaphase. Die Dokumentation kann geändert werden.
 
-[!DNL Content and Commerce AI] verwendet Adobe I/O-APIs. Um Aufrufe an Adobe I/O-APIs und die I/O-Konsolenintegration durchzuführen, müssen Sie zunächst das [Authentifizierungslehrgang](../../tutorials/authentication.md)abschließen.
+[!DNL Content and Commerce AI] verwendet Adobe I/O-APIs. Um Aufrufe an Adobe I/O-APIs und die I/O-Konsolenintegration durchzuführen, müssen Sie zunächst das [Authentifizierungstutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen.
 
 Wenn Sie jedoch zum Schritt **Hinzufügen API** gelangen, befindet sich die API unter Experience Cloud anstelle von Adobe Experience Platform, wie im folgenden Screenshot gezeigt:
 
@@ -33,29 +33,29 @@ Wenn Sie das Authentifizierungstraining abschließen, werden die Werte für die 
 
 ## Erstellen einer Postman-Umgebung (optional)
 
-Nachdem Sie Ihr Projekt und Ihre API in der Adobe Developer Console eingerichtet haben, können Sie eine Umgebung für Postman herunterladen. Wählen Sie in der linken Leiste Ihres Projekts unter **[!UICONTROL APIs]** die Option **[!UICONTROL Content and Commerce AI]**. Eine neue Registerkarte mit einer Karte mit der Bezeichnung &quot;[!DNL Try it out]&quot;wird geöffnet. Wählen Sie &quot; **Download für Postman** &quot;, um eine JSON-Datei herunterzuladen, die zur Konfiguration Ihrer Postman-Umgebung verwendet wird.
+Nachdem Sie Ihr Projekt und Ihre API in der Adobe Developer Console eingerichtet haben, können Sie eine Umgebung für Postman herunterladen. Wählen Sie unter **[!UICONTROL APIs]** in der linken Leiste Ihres Projekts **[!UICONTROL Content and Commerce AI]**. Eine neue Registerkarte mit einer Karte mit der Bezeichnung &quot;[!DNL Try it out]&quot;wird geöffnet. Wählen Sie **Für Postman herunterladen**, um eine JSON-Datei herunterzuladen, die zur Konfiguration Ihrer Postman-Umgebung verwendet wird.
 
 ![download for postman](./images/add-to-postman.png)
 
-Nachdem Sie die Datei heruntergeladen haben, öffnen Sie Postman und wählen Sie das **Zahnradsymbol** oben rechts, um das Dialogfeld &quot;Umgebung **verwalten** &quot;zu öffnen.
+Nachdem Sie die Datei heruntergeladen haben, öffnen Sie Postman und wählen Sie oben rechts das Zahnradsymbol **aus, um das Dialogfeld** Umgebung verwalten **zu öffnen.**
 
 ![Zahnradsymbol](./images/select-gear-icon.png)
 
-Wählen Sie anschließend im Dialogfeld &quot;Umgebung **verwalten&quot;die Option &quot;** Importieren **&quot;** .
+Wählen Sie anschließend im Dialogfeld **Umgebung verwalten** aus.****
 
 ![import](./images/import.png)
 
-Sie werden umgeleitet und aufgefordert, eine Umgebung auf Ihrem Computer auszuwählen. Wählen Sie die zuvor heruntergeladene JSON-Datei aus und klicken Sie dann auf **Öffnen** , um die Umgebung zu laden.
+Sie werden umgeleitet und aufgefordert, eine Umgebung auf Ihrem Computer auszuwählen. Wählen Sie die JSON-Datei, die Sie zuvor heruntergeladen haben, und klicken Sie dann auf **Öffnen**, um die Umgebung zu laden.
 
 ![](./images/choose-your-file.png)
 
 ![](./images/click-open.png)
 
-Sie werden zurück zur Registerkarte &quot;Umgebung ** verwalten&quot;mit einem neuen Umgebung-Namen geleitet. Wählen Sie den Namen der zu Ansicht Umgebung aus und bearbeiten Sie die in Postman verfügbaren Variablen. Sie müssen weiterhin manuell die Felder `JWT_TOKEN` und `ACCESS_TOKEN`ausfüllen. Diese Werte sollten beim Abschluss des [Authentifizierungslehrgangs](../../tutorials/authentication.md)abgerufen werden.
+Sie werden zurück zum Register *Umgebung verwalten* mit einem neuen Umgebung-Namen geleitet. Wählen Sie den Namen der zu Ansicht Umgebung aus und bearbeiten Sie die in Postman verfügbaren Variablen. Sie müssen die Felder `JWT_TOKEN` und `ACCESS_TOKEN` weiterhin manuell füllen. Diese Werte sollten beim Abschluss des [Authentifizierungslehrgangs](https://www.adobe.com/go/platform-api-authentication-en) abgerufen werden.
 
 ![](./images/re-direct.png)
 
-Nach Abschluss sollten Ihre Variablen etwa wie im folgenden Screenshot aussehen. Wählen Sie **Aktualisieren** , um die Einrichtung der Umgebung abzuschließen.
+Nach Abschluss sollten Ihre Variablen etwa wie im folgenden Screenshot aussehen. Wählen Sie **Aktualisieren**, um die Einrichtung Ihrer Umgebung abzuschließen.
 
 ![](./images/final-environment.png)
 
@@ -63,7 +63,7 @@ Sie können Ihre Umgebung jetzt im Dropdown-Menü oben rechts auswählen und all
 
 ![example](./images/select-environment.png)
 
-Weitere Informationen zum Arbeiten mit Adobe I/O-APIs mit Postman finden Sie im Beitrag &quot;Mittel&quot;zur [Verwendung von Postman für die JWT-Authentifizierung unter Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Weitere Informationen zum Arbeiten mit Adobe I/O-APIs mit Postman finden Sie im Beitrag Medium unter [Verwenden von Postman für die JWT-Authentifizierung unter Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## Lesen von Beispiel-API-Aufrufen
 
@@ -71,8 +71,8 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ## Nächste Schritte {#next-steps}
 
-Sobald Sie alle Ihre Anmeldeinformationen haben, können Sie einen benutzerdefinierten Worker für [!DNL Content and Commerce AI]die Die folgenden Dokumente helfen Ihnen beim Verständnis des Erweiterungs-Frameworks und der Umgebung-Einrichtung.
+Sobald Sie alle Ihre Anmeldedaten haben, können Sie einen benutzerdefinierten Worker für [!DNL Content and Commerce AI] einrichten. Die folgenden Dokumente helfen Ihnen beim Verständnis des Erweiterungs-Frameworks und der Umgebung-Einrichtung.
 
-Um mehr über das Erweiterungs-Framework zu erfahren, lesen Sie den Beginn in der [Einführung zum Dokument Erweiterbarkeit](https://docs.adobe.com/content/help/de/asset-compute/using/extend/understand-extensibility.html) . In diesem Dokument werden die Voraussetzungen und Bereitstellungsanforderungen erläutert.
+Um mehr über das Erweiterungs-Framework zu erfahren, lesen Sie das Dokument [Einführung in die Erweiterbarkeit](https://docs.adobe.com/content/help/de/asset-compute/using/extend/understand-extensibility.html) durch. In diesem Dokument werden die Voraussetzungen und Bereitstellungsanforderungen erläutert.
 
-Weitere Informationen zum Einrichten einer Umgebung für [!DNL Content and Commerce AI]finden Sie im Beginn im Handbuch zum [Einrichten einer Entwickler-Umgebung](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). Dieses Dokument enthält Setupanweisungen, die Ihnen die Entwicklung für den Asset compute-Dienst ermöglichen.
+Weitere Informationen zum Einrichten einer Umgebung für [!DNL Content and Commerce AI] erhalten Sie im Beginn im Handbuch für [Einrichten einer Developer-Umgebung](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). Dieses Dokument enthält Setupanweisungen, die Ihnen die Entwicklung für den Asset compute-Dienst ermöglichen.
