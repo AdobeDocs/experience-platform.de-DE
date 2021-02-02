@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
+keywords: Experience Platform;Home;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Erfassung;Entwicklerhandbuch;API-Handbuch;Hochladen;Parquet erfassen;JSON erfassen;
 solution: Experience Platform
 title: Entwicklerhandbuch für die Batch-Ingestion
 topic: developer guide
 description: Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von APIs für die Batch-Erfassung.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '2675'
-ht-degree: 90%
+source-wordcount: '2698'
+ht-degree: 89%
 
 ---
 
@@ -28,8 +28,8 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [Batch-Erfassung](./overview.md): Erlaubt Ihnen das Erfassen von Daten in Adobe Experience Platform in Form von Batch-Dateien.
-- [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten [!DNL Experience Platform] organisiert werden.
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten  [!DNL Experience Platform] organisiert werden.
+- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -37,25 +37,25 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Anfragen, die eine Payload enthalten (POST, PUT, PATCH), erfordern möglicherweise eine zusätzliche `Content-Type`-Kopfzeile. Die für einzelne Aufrufe zulässigen Werte werden in den Aufrufparametern angegeben.
 
 ## Typen
 
-When ingesting data, it is important to understand how [!DNL Experience Data Model] (XDM) schemas work. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
+Beim Eingeben von Daten ist es wichtig zu verstehen, wie [!DNL Experience Data Model] (XDM)-Schema funktionieren. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
 
 Bei der Erfassung von Daten gibt es eine gewisse Flexibilität. Wenn ein Typ nicht mit dem Zielschema übereinstimmt, werden die Daten in den ausgedrückten Zieltyp konvertiert. Wenn das nicht möglich ist, schlägt der Batch mit einer `TypeCompatibilityException` fehl.
 
@@ -70,7 +70,7 @@ Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterst�
 | Kurz | X | X | X | X | X | X |  |  |  |  |
 | Ganzzahl | X | X | X | X | X | X |  |  |  |  |
 | Lang | X | X | X | X | X | X | X | X |  |  |
-| Double | X | X | X | X | X | X |  |  |  |  |
+| Dublette | X | X | X | X | X | X |  |  |  |  |
 | Datum |  |  |  |  |  |  | X |  |  |  |
 | Datum/Uhrzeit |  |  |  |  |  |  |  | X |  |  |
 | Objekt |  |  |  |  |  |  |  |  | X | X |
@@ -649,7 +649,7 @@ Eine Erläuterung der verschiedenen Teile des Abschnitts „fileDescription“ d
 | `header` | Die hochgeladene Datei **muss** Kopfzeilen enthalten. Da Schemavalidierung durchgeführt wird, muss dieser Wert auf „true“ gesetzt sein. Darüber hinaus dürfen Kopfzeilen **keine** Leerzeichen enthalten. Wenn Ihre Kopfzeile Leerzeichen aufweist, ersetzen Sie diese durch Unterstriche. |
 | `charset` | Ein optionales Feld. Andere unterstützte Zeichensätze sind „US-ASCII“ und „ISO-8869-1“. Bei leer gelassenem Feld wird standardmäßig von UTF-8 ausgegangen. |
 
-Der referenzierte Datensatz muss über den oben aufgeführten Dateibeschreibungsblock verfügen und in der Registrierung auf ein gültiges Schema verweisen. Andernfalls wird die Datei nicht in Parquet gemastert.
+Der referenzierte Datensatz muss über den oben aufgeführten Dateibeschreibungsblock verfügen und in der Registrierung auf ein gültiges Schema verweisen. Andernfalls wird die Datei nicht in Parquet gemeistert.
 
 ### Batch erstellen
 
@@ -1001,7 +1001,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Datenumwandlung für die Batch-Erfassung
 
-In order to ingest a data file into [!DNL Experience Platform], the hierarchical structure of the file must comply with the [Experience Data Model (XDM)](../../xdm/home.md) schema associated with the dataset being uploaded to.
+Um eine Datendatei in [!DNL Experience Platform] zu erfassen, muss die hierarchische Dateistruktur dem Schema [Erlebnisdatenmodell (XDM)](../../xdm/home.md) entsprechen, das mit dem hochgeladenen Datensatz verknüpft ist.
 
 Informationen dazu, wie Sie eine CSV-Datei einem XDM-Schema konform zuordnen, finden Sie im Dokument mit [Beispielumwandlungen](../../etl/transformations.md). Hier finden Sie außerdem ein Beispiel für eine richtig formatierte JSON-Datendatei. Im Dokument bereitgestellte Beispieldateien finden Sie hier:
 
