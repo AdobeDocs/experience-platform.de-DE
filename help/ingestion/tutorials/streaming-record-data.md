@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;record data;stream record data;
+keywords: Experience Platform;Home;beliebte Themen;Streaming-Erfassung;Erfassung;Datensatzdaten;Stream-Datensatzdaten;
 solution: Experience Platform
 title: Streaming von Datensatzdaten
 topic: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 63%
+source-wordcount: '1159'
+ht-degree: 62%
 
 ---
 
 
 # Streamen von Datensatzdaten an Adobe Experience Platform
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
+In diesem Lernprogramm erfahren Sie, wie Sie mit der Verwendung von Streaming-APIs beginnen können, die Teil der Adobe Experience Platform [!DNL Data Ingestion Service]-APIs sind.
 
 ## Erste Schritte
 
 Für dieses Tutorial benötigen Sie Grundkenntnisse zu verschiedenen Adobe Experience Platform-Diensten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten [!DNL Platform] organisiert werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [Entwicklerhandbuch](../../xdm/api/getting-started.md)zur Schema-Registrierung: Ein umfangreiches Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry] API und Anleitungen zum Aufrufen dieser Endpunkte enthält. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
+- [Entwicklerhandbuch](../../xdm/api/getting-started.md) zur Schema-Registrierung: Ein umfangreiches Handbuch, das alle verfügbaren Endpunkte der  [!DNL Schema Registry] API und Anleitungen zum Aufrufen dieser Endpunkte enthält. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
 
 Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Verbindung hergestellt haben. Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
 
@@ -36,27 +36,27 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 - Content-Type: application/json
 
-## Compose a schema based off of the [!DNL XDM Individual Profile] class
+## Erstellen Sie ein Schema, das auf der [!DNL XDM Individual Profile]-Klasse basiert
 
-To create a dataset, you will first need to create a new schema that implements the [!DNL XDM Individual Profile] class. Weiterführende Informationen zum Erstellen von Schemas finden Sie im [Entwicklerhandbuch zur Schema Registry-API](../../xdm/api/getting-started.md).
+Um einen Datensatz zu erstellen, müssen Sie zunächst ein neues Schema erstellen, das die [!DNL XDM Individual Profile]-Klasse implementiert. Weiterführende Informationen zum Erstellen von Schemas finden Sie im [Entwicklerhandbuch zur Schema Registry-API](../../xdm/api/getting-started.md).
 
 **API-Format**
 
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Der Name, den Sie für Ihr Schema verwenden möchten. Dieser Name muss eindeutig sein. |
 | `description` | Eine aussagekräftige Beschreibung des Schemas, das Sie erstellen. |
-| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | In diesem Beispiel wird das `union`-Tag verwendet, um Ihre Daten in [[!DNL Real-time Customer Profile]](../../profile/home.md) zu erhalten. |
 
 **Antwort**
 
@@ -223,7 +223,7 @@ Nachdem Sie Ihr Schema erstellt haben, müssen Sie nun einen Datensatz für die 
 
 >[!NOTE]
 >
->Dieser Datensatz wird für **[!DNL Real-time Customer Profile]** und aktiviert **[!DNL Identity Service]**.
+>Dieser Datensatz wird für **[!DNL Real-time Customer Profile]** und **[!DNL Identity Service]** aktiviert.
 
 **API-Format**
 
@@ -266,7 +266,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 und ein Array zurück, das di
 
 ## Erfassen von Datensatzdaten zur Streaming-Verbindung
 
-With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest record data into [!DNL Platform].
+Mit der vorhandenen Dataset- und Streaming-Verbindung können Sie XDM-formatierte JSON-Datensätze erfassen, um Datensatzdaten in [!DNL Platform] zu erfassen.
 
 **API-Format**
 
@@ -276,7 +276,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of the streaming connection previously created. |
+| `{CONNECTION_ID}` | Der `id`-Wert der zuvor erstellten Streaming-Verbindung. |
 | `synchronousValidation` | Ein optionaler Abfrageparameter, der für Entwicklungszwecke vorgesehen ist. Wenn er auf `true` gesetzt ist, kann er für unmittelbares Feedback verwendet werden, um zu ermitteln, ob die Anfrage erfolgreich gesendet wurde. Standardmäßig ist dieser Wert auf `false` gesetzt. |
 
 **Anfrage**
@@ -287,7 +287,7 @@ In der folgenden Beispielanforderung wird ein Datensatz mit einem fehlenden Quel
 
 >[!NOTE]
 >
->The following API call does **not** require any authentication headers.
+>Für den folgenden API-Aufruf sind keine Authentifizierungskopfzeilen erforderlich.****
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -348,7 +348,7 @@ Wenn Sie einen Quellnamen einbeziehen möchten, zeigt das folgende Beispiel, wie
 
 **Antwort**
 
-A successful response returns HTTP status 200 with details of the newly streamed [!DNL Profile].
+Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum neu gestreamen [!DNL Profile] zurück.
 
 ```json
 {
@@ -370,11 +370,11 @@ A successful response returns HTTP status 200 with details of the newly streamed
 
 ## Abrufen der neu erfassten Datensatzdaten
 
-Zur Validierung der zuvor erfassten Datensätze können Sie die verwenden, [[!DNL Profile Access API]](../../profile/api/entities.md) um die Datensatzdaten abzurufen.
+Zur Validierung der zuvor erfassten Datensätze können Sie die [[!DNL Profile Access API]](../../profile/api/entities.md) verwenden, um die Datensatzdaten abzurufen.
 
 >[!NOTE]
 >
->Wenn die Richtlinie-ID zum Zusammenführen nicht definiert ist und die ID `schema.name` oder `relatedSchema.name` nicht `_xdm.context.profile`lautet, [!DNL Profile Access] werden **alle** zugehörigen Identitäten abgerufen.
+>Wenn die ID der Zusammenführungsrichtlinie nicht definiert ist und `schema.name` oder `relatedSchema.name` `_xdm.context.profile` [!DNL Profile Access] **ist, werden** alle zugehörigen Identitäten abgerufen.
 
 **API-Format**
 
@@ -453,7 +453,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den angeforder
 
 ## Nächste Schritte
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
+Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Platform] erfassen können. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie Beginn zur Überwachung Ihrer erfassten Daten über die [!DNL Platform]-Benutzeroberfläche verwenden. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
 
 Weitere allgemeine Informationen zur Streaming-Erfassung finden Sie in der [Streaming-Erfassung – Übersicht](../streaming-ingestion/overview.md).
 
