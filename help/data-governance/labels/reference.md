@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
+keywords: Experience Platform;Home;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung API;Policy-Dienst-API;Unterstützte Datenverwendungsbeschriftungen;Beschriftungen;Identitätsbeschriftungen;sensible Beschriftungen
 solution: Experience Platform
 title: Nutzungsbeschreibungen der Kerndaten
 topic: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Beschriftungen zur Datenverwendung beschrieben.
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1904'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Adobe Experience Platform Data Governance bietet mehrere gebrauchsfertige Beschriftungen für die Kerndatenverwendung, die Sie zum Kategorisieren Ihrer Daten verwenden können.
 
-In diesem Dokument werden die derzeit von [!DNL Experience Platform]Ihnen bereitgestellten Bezeichnungen zur Verwendung der Kerndaten erläutert. Weitere Informationen zu [!DNL Data Governance] diesem Thema finden Sie in der Übersicht über die [Datenverwaltung](../home.md).
+In diesem Dokument werden die derzeit von [!DNL Experience Platform] bereitgestellten Beschriftungen zur Verwendung der Kerndaten erläutert. Weitere Informationen zu [!DNL Data Governance] finden Sie im [Überblick über die Datenverwaltung](../home.md).
 
 ## Vertragsbezeichnungen
 
@@ -70,7 +70,7 @@ Manche Daten können nur in aggregierter Form aus Adobe Experience Cloud exporti
 
 #### C2 {#c2}
 
-Einige Datenanbieter haben in ihren Verträgen Bedingungen, die den Export von Daten, von denen sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft eingeschränkt. Das C2-Etikett ist restriktiver als [C1](#c1), was nur Aggregation und anonyme Daten erfordert.
+Einige Datenanbieter haben in ihren Verträgen Bedingungen, die den Export von Daten, von denen sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft eingeschränkt. Die C2-Beschriftung ist restriktiver als [C1](#c1), was nur Aggregation und anonyme Daten erfordert.
 
 #### C3 {#c3}
 
@@ -78,7 +78,7 @@ Einige Datenanbieter haben Vertragsbedingungen, die die Kombination oder Verwend
 
 #### C4 {#c4}
 
-C4 ist die restriktivste Bezeichnung - sie umfasst die Etiketten [C5](#c5), [C6](#c6)und [C7](#c7).
+C4 ist die restriktivste Bezeichnung - sie umfasst die Beschriftungen [C5](#c5), [C6](#c6) und [C7](#c7).
 
 #### C5 {#c5}
 
@@ -98,21 +98,21 @@ DAA: Online-verhaltensbasierte Werbung. Erfassen von Daten über das Verhalten v
 
 #### C6 {#c6}
 
-Anzeigen sind Nachrichten oder Benachrichtigungen, einschließlich Text und Bilder, die auf einer Website oder App erscheinen und in erster Linie dazu dienen, den Verkauf von Waren oder Dienstleistungen zu fördern. Es liegt an Ihnen, den Zweck solcher Nachrichten oder Benachrichtigungen zu bestimmen. Anzeigen sind getrennt von Inhalten auf der Site, die unter das Etikett [C7](#c7)fallen. Daten mit einem C6-Etikett können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen. Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über die Interessen der Benutzer bei der Auswahl von Anzeigen, Prozessdaten darüber, wann und wo Werbung angezeigt wurde und ob die Benutzer Aktionen im Zusammenhang mit der Werbung ergriffen haben, z. B. das Klicken auf eine Anzeige oder einen Kauf. In der Regel würden die auf den Aktivitäten der Benutzer vor Ort beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Anzeigen vor Ort nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt würden. *[Diese Anforderungen finden Sie auf dem Etikett C5.](#c5)*
+Anzeigen sind Nachrichten oder Benachrichtigungen, einschließlich Text und Bilder, die auf einer Website oder App erscheinen und in erster Linie dazu dienen, den Verkauf von Waren oder Dienstleistungen zu fördern. Es liegt an Ihnen, den Zweck solcher Nachrichten oder Benachrichtigungen zu bestimmen. Anzeigen sind von Inhalten auf der Site getrennt und werden durch die Beschriftung [C7](#c7) abgedeckt. Daten mit einem C6-Etikett können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen. Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über die Interessen der Benutzer zur Auswahl von Anzeigen, Prozessdaten darüber, wann und wo die Anzeigen angezeigt wurden und ob die Benutzer irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, wie z. B. die Auswahl einer Anzeige oder einen Kauf. In der Regel würden die auf den Aktivitäten der Benutzer vor Ort beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Anzeigen vor Ort nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt würden. *[Diese Anforderungen finden Sie auf dem Etikett C5.](#c5)*
 
 Letztendlich liegt die Interpretation der Beschriftung und die Art und Weise, wie die Nutzung der Daten mit dieser Beschriftung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Rahmenwerke als Referenz aufgeführt:
 
-IAB: 3. Anzeigenauswahl, Versand, Berichte: Die Erfassung von Informationen und die Kombination mit zuvor gesammelten Informationen, um Anzeigen für Sie auszuwählen und zu liefern und den Versand und die Effektivität solcher Anzeigen zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Anzeigen, die Verarbeitung von Daten darüber, welche Anzeigen angezeigt wurden, wie oft sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie irgendwelche Aktionen im Zusammenhang mit der Werbung unternommen haben, z. B. das Klicken auf eine Anzeige oder den Einkauf. Dies umfasst nicht Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Dienstes, um später Werbung und/oder Inhalte für Sie in anderen Kontexten, wie Websites oder Apps, personalisieren zu können.
+IAB: 3. Anzeigenauswahl, Versand, Berichte: Die Erfassung von Informationen und die Kombination mit zuvor gesammelten Informationen, um Anzeigen für Sie auszuwählen und zu liefern und den Versand und die Effektivität solcher Anzeigen zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Anzeigen, die Verarbeitung von Daten darüber, welche Anzeigen angezeigt wurden, wie oft sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie irgendwelche Aktionen im Zusammenhang mit der Werbung unternommen haben, z. B. die Auswahl einer Anzeige oder den Kauf einer Anzeige. Dies umfasst nicht Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Dienstes, um später Werbung und/oder Inhalte für Sie in anderen Kontexten, wie Websites oder Apps, personalisieren zu können.
 
 DAA: Die Online-verhaltensbasierte Werbung umfasst nicht die Aktivitäten von Erstanbietern, Anzeigen-Versand oder Anzeigen-Berichte oder kontextbezogene Werbung (d. h. Werbung, die auf dem Inhalt der besuchten Webseite, dem aktuellen Besuch eines Abfrage auf einer Webseite oder einer Suchseite basiert).
 
 #### C7 {#c7}
 
-Inhalt auf der Site ist Text und Bilder, die zur Information, Ausbildung oder Unterhaltung konzipiert sind und nicht zur Förderung des Verkaufs von Waren oder Dienstleistungen erstellt wurden. Es liegt an Ihnen, den Zweck des Inhalts zu bestimmen, einschließlich der Frage, ob der Inhalt als native Werbung gelten würde. Das C7-Etikett ist nicht für Onsite-Anzeigen vorgesehen, die unter das Etikett [C6](#c6)fallen. Daten mit einer C7-Bezeichnung können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte. Dazu gehören zuvor erfasste Informationen über die Interessen der Benutzer an ausgewählten Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke Aktionen im Zusammenhang mit dem Inhalt, z. B. das Klicken auf den Inhalt, durchgeführt haben. In der Regel würden die auf den Aktivitäten der Benutzer vor Ort beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Inhalten vor Ort nicht als interessenbasiertes Targeting (auch Personalisierung genannt) gelten, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt würden. *[Diese Anforderungen finden Sie auf dem Etikett C5.](#c5)*
+Inhalt auf der Site ist Text und Bilder, die zur Information, Ausbildung oder Unterhaltung konzipiert sind und nicht zur Förderung des Verkaufs von Waren oder Dienstleistungen erstellt wurden. Es liegt an Ihnen, den Zweck des Inhalts zu bestimmen, einschließlich der Frage, ob der Inhalt als native Werbung gelten würde. Das C7-Etikett ist nicht für Onsite-Anzeigen vorgesehen, die mit dem Etikett [C6](#c6) versehen sind. Daten mit einer C7-Bezeichnung können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte. Dazu gehören zuvor erfasste Informationen über die Interessen der Benutzer an ausgewählten Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, beispielsweise die Auswahl von Inhalten. In der Regel würden die auf den Aktivitäten der Benutzer vor Ort beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Inhalten vor Ort nicht als interessenbasiertes Targeting (auch Personalisierung genannt) gelten, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt würden. *[Diese Anforderungen finden Sie auf dem Etikett C5.](#c5)*
 
 Letztendlich liegt die Interpretation der Beschriftung und die Art und Weise, wie die Nutzung der Daten mit dieser Beschriftung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Rahmenwerke als Referenz aufgeführt:
 
-IAB: 4. Inhaltsauswahl, Versand, Berichte: Die Erfassung von Informationen und die Kombination mit zuvor erfassten Informationen, um Inhalte für Sie auszuwählen und bereitzustellen und den Versand und die Effektivität solcher Inhalte zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie im Zusammenhang mit dem Inhalt irgendwelche Aktionen durchgeführt haben, z. B. das Klicken auf Inhalte. Dies umfasst nicht Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Dienstes, um Inhalte und/oder Werbung für Sie in anderen Kontexten, wie Websites oder Apps, im Laufe der Zeit zu personalisieren.
+IAB: 4. Inhaltsauswahl, Versand, Berichte: Die Erfassung von Informationen und die Kombination mit zuvor erfassten Informationen, um Inhalte für Sie auszuwählen und bereitzustellen und den Versand und die Effektivität solcher Inhalte zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie im Zusammenhang mit dem Inhalt irgendwelche Aktionen durchgeführt haben, einschließlich der Auswahl von Inhalten. Dies umfasst nicht Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Dienstes, um Inhalte und/oder Werbung für Sie in anderen Kontexten, wie Websites oder Apps, im Laufe der Zeit zu personalisieren.
 
 DAA: Die Online-verhaltensbasierte Werbung umfasst nicht die Aktivitäten von Erstanbietern, Anzeigen-Versand oder Anzeigen-Berichte oder kontextuelle Werbung (d. h. Werbung, die auf dem Inhalt der Webseite basiert, die gerade besucht wird, dem aktuellen Besuch eines Abfrage auf einer Webseite oder einer Suchseite).
 
