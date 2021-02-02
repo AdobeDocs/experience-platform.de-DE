@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;Home;beliebte Themen;Richtliniendurchsetzung;Automatische Durchsetzung;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
-title: Übersicht über die Durchsetzung von Richtlinien
-topic: enforcement
+title: Automatische Durchsetzung von Richtlinien
+topic: guide
 description: In diesem Dokument wird erläutert, wie Datenverwendungsrichtlinien automatisch erzwungen werden, wenn in der Experience Platform Segmente zu Zielen aktiviert werden.
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1128'
 ht-degree: 19%
 
 ---
@@ -49,7 +49,7 @@ Wenn ein Segment zum ersten Mal aktiviert wird, überprüft [!DNL Policy Service
 
 Die Datenleitung spielt eine Schlüsselrolle bei der Durchsetzung von Richtlinien in der Plattform. Generell bezieht sich die Datenlineage auf die Herkunft eines Datensatzes und was mit der Zeit geschieht (oder wo sie sich bewegt).
 
-Im Kontext von [!DNL Data Governance] ermöglicht die Lineage die Übertragung von Datenverwendungsetiketten von Datasets auf nachgelagerte Dienste, die ihre Daten verbrauchen, wie z. B. Echtzeit-Kundendaten und -Profile. Dies ermöglicht die Bewertung und Durchsetzung von Richtlinien an mehreren wichtigen Punkten auf der Datenreise durch die Plattform und bietet den Datenverbrauchern einen Kontext darüber, warum eine Richtlinienverletzung aufgetreten ist.
+Im Kontext von [!DNL Data Governance] ermöglicht die Lineage die Übertragung von Datenverwendungsetiketten von Datasets auf nachgelagerte Dienste, die ihre Daten verbrauchen, wie z. B. Echtzeit-Kundendaten und -Profile. Dies ermöglicht die Bewertung und Durchsetzung von Richtlinien an verschiedenen wichtigen Punkten der Journey-through-Plattform der Daten und bietet den Datenverbrauchern einen Kontext darüber, warum eine Richtlinienverletzung aufgetreten ist.
 
 Bei der Experience Platform geht es bei der Durchsetzung der Politik um folgende Abfolge:
 
@@ -95,7 +95,7 @@ Wählen Sie **[!UICONTROL Liste Ansicht]** aus, um die Datenzeile als Liste anzu
 
 ## Richtliniendurchsetzung für aktivierte Segmente   {#policy-enforcement-for-activated-segments}
 
-Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einem Richtlinienverstoß führen würden. Aufgrund der Funktionsweise von [Datenlineage](#lineage) bei der Durchsetzung von Richtlinien kann eine der folgenden Aktionen möglicherweise eine Verletzung auslösen:
+Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einem Richtlinienverstoß führen würden. Aufgrund der Funktionsweise von [Datenlineage](#lineage) bei der Durchsetzung von Richtlinien können die folgenden Aktionen möglicherweise eine Verletzung des Triggers verursachen:
 
 * Aktualisieren von Datennutzungsbezeichnungen
 * Ändern von Datensätzen für ein Segment
