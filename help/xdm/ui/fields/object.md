@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;object;field;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Objekt;Feld;
 solution: Experience Platform
 title: Definieren eines Objektfelds in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein Objekttypfeld in der Benutzeroberfläche "Experience Platform"definieren.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
