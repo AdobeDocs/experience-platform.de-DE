@@ -1,31 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
+keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;SQL-Syntax;sql;ctas;CTAS;Tabelle erstellen als Auswahl
 solution: Experience Platform
 title: SQL-Syntax
 topic: syntax
 description: In diesem Dokument finden Sie die von Query Service unterstützte SQL-Syntax.
 translation-type: tm+mt
-source-git-commit: e02028e9808eab3373143aba7bbc4a115c52746b
+source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 89%
+source-wordcount: '2212'
+ht-degree: 84%
 
 ---
 
 
 # SQL-Syntax
 
-[!DNL Query Service]Mit können Sie Standard-ANSI-SQL für `SELECT`-Anweisungen und andere begrenzte Befehle verwenden. This document shows SQL syntax supported by [!DNL Query Service].
+[!DNL Query Service]Mit können Sie Standard-ANSI-SQL für `SELECT`-Anweisungen und andere begrenzte Befehle verwenden. Dieses Dokument zeigt die SQL-Syntax, die von [!DNL Query Service] unterstützt wird.
 
 ## Definieren einer SELECT-Abfrage
 
-The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
+Die folgende Syntax definiert eine `SELECT`-Abfrage, die von [!DNL Query Service] unterstützt wird:
 
 ```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
     [ FROM from_item [, ...] ]
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
     [ WHERE condition ]
     [ GROUP BY grouping_element [, ...] ]
     [ HAVING condition [, ...] ]
@@ -63,6 +64,30 @@ und `with_query`:
  
 TABLE [ ONLY ] table_name [ * ]
 ```
+
+### SNAPSHOT-Klausel
+
+Diese Klausel kann verwendet werden, um Daten in einer Tabelle inkrementell basierend auf Snapshot-IDs zu lesen. Eine Snapshot-ID ist eine Checkpoint-Markierung, die jedes Mal, wenn Daten in eine Datentabelle geschrieben werden, durch eine Zahl vom Typ &quot;Long&quot;identifiziert wird. Die SNAPSHOT-Klausel fügt sich in die Tabellenbeziehung ein, die sie neben der Tabelle verwendet.
+
+```sql
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
+```
+
+#### Beispiel
+
+```sql
+SELECT * FROM Customers SNAPSHOT SINCE 123;
+
+SELECT * FROM Customers SNAPSHOT AS OF 345;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+
+SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+
+SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+```
+
+Bitte beachten Sie, dass eine SNAPSHOT-Klausel mit einem Tabellen- oder Tabellenalias funktioniert, jedoch nicht über einer Unter-Abfrage oder Ansicht. Eine SNAPHOST-Klausel funktioniert überall dort, wo eine SELECT-Abfrage auf einer Tabelle angewendet werden kann.
 
 ### WHERE ILIKE-Klausel
 
@@ -112,14 +137,15 @@ SELECT statement 2
 
 ## CREATE TABLE AS SELECT
 
-The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
+Die folgende Syntax definiert eine `CREATE TABLE AS SELECT` (CTAS)-Abfrage, die von [!DNL Query Service] unterstützt wird:
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-where,
-`target_schema_title` is the title of XDM schema. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage`rowvalidation` erstellt wurde, um anzugeben, ob der Benutzer die Überprüfung auf Zeilenebene aller neuen Stapel, die für den neu erstellten Datensatz erfasst werden, vornehmen möchte. Standardwert ist &quot;true&quot;
+wobei
+`target_schema_title` ist der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von CTAS Abfrage erstellt wurde
+`rowvalidation` gibt an, ob der Benutzer die Überprüfung auf Zeilenebene aller neuen Stapel, die für den neu erstellten Datensatz erfasst werden, vornehmen möchte. Standardwert ist &quot;true&quot;
 
 und `select_query` ist eine `SELECT`-Anweisung, deren Syntax oben in diesem Dokument definiert ist.
 
@@ -135,10 +161,15 @@ Bitte beachten Sie Folgendes für eine CTAS-Abfrage:
 
 1. Die `SELECT`-Anweisung muss einen Alias für die Aggregat-Funktionen wie `COUNT`, `SUM`, `MIN` usw. enthalten.
 2. Die `SELECT`-Anweisung kann mit oder ohne Klammern () angegeben werden.
+3. Die `SELECT`-Anweisung kann mit einer SNAPSHOT-Klausel bereitgestellt werden, um inkrementelle Deltas in die Zielgruppe zu lesen.
+
+```sql
+CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
+```
 
 ## INSERT INTO
 
-The following syntax defines an `INSERT INTO` query supported by [!DNL Query Service]:
+Die folgende Syntax definiert eine `INSERT INTO`-Abfrage, die von [!DNL Query Service] unterstützt wird:
 
 ```sql
 INSERT INTO table_name select_query
@@ -156,6 +187,11 @@ Bitte beachten Sie Folgendes für eine INSERT INTO-Abfrage:
 
 1. Die `SELECT`-Anweisung DARF NICHT in Klammern () gesetzt werden.
 2. Das Schema des Ergebnisses der `SELECT`-Anweisung muss mit dem in der `INSERT INTO`-Anweisung definierten Tabelle übereinstimmen.
+3. Die `SELECT`-Anweisung kann mit einer SNAPSHOT-Klausel bereitgestellt werden, um inkrementelle Deltas in die Zielgruppe zu lesen.
+
+```sql
+INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
+```
 
 ### DROP TABLE
 
@@ -172,7 +208,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREATE VIEW
 
-The following syntax defines a `CREATE VIEW` query supported by [!DNL Query Service]:
+Die folgende Syntax definiert eine `CREATE VIEW`-Abfrage, die von [!DNL Query Service] unterstützt wird:
 
 ```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -190,7 +226,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### DROP VIEW
 
-The following syntax defines a `DROP VIEW` query supported by [!DNL Query Service]:
+Die folgende Syntax definiert eine `DROP VIEW`-Abfrage, die von [!DNL Query Service] unterstützt wird:
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -245,7 +281,7 @@ CLOSE { name }
 
 ### COMMIT
 
-No action is taken in [!DNL Query Service] as a response to the commit transaction statement.
+In [!DNL Query Service] wird keine Aktion als Antwort auf die commit-Anweisung ausgeführt.
 
 ```sql
 COMMIT [ WORK | TRANSACTION ]
