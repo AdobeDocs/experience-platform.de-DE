@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: Profil-Dashboard
+keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Benutzeroberfläche;Anpassung;Profil-Dashboard;Dashboard
+title: Profil Dashboard UI-Handbuch
 description: 'In diesem Handbuch wird das Echtzeit-Dashboard für Kundendaten in der Adobe Experience Platform-Benutzeroberfläche beschrieben. '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 983b357f2f17aad273f0465dc9250240a062dcd2
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '697'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 1%
 >
 >Die in diesem Dokument beschriebene Dashboard-Funktion ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
-Die Adobe Experience Platform-Benutzeroberfläche (UI) bietet ein Dashboard, mit dem Sie wichtige Informationen zu Ihren [!DNL Real-time Customer Profile] Daten, wie sie in einem täglichen Schnappschuss erfasst werden, Ansicht haben. In diesem Handbuch wird beschrieben, wie Sie auf das [!DNL Profile] Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten, und es werden weitere Informationen zu den im Dashboard angezeigten Metriken bereitgestellt.
+Die Adobe Experience Platform-Benutzeroberfläche (UI) bietet ein Dashboard zur Ansicht wichtiger Informationen zu Ihren [!DNL Real-time Customer Profile]-Daten, wie sie während eines täglichen Schnappschusses erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf das [!DNL Profile]-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten, und es werden weitere Informationen zu den im Dashboard angezeigten Metriken bereitgestellt.
 
-Einen Überblick über alle Profil-Funktionen in der Benutzeroberfläche der Experience Platform finden Sie im Handbuch für die Benutzeroberfläche des [Echtzeit-Profils](user-guide.md).
+Einen Überblick über alle Profil-Funktionen in der Benutzeroberfläche der Experience Platform finden Sie im Handbuch [Benutzeroberflächen-Handbuch für Kunden-Profil in Echtzeit](user-guide.md).
 
 ## Profil-Dashboard-Daten
 
@@ -33,11 +33,11 @@ Die Attributdaten im Schnappschuss zeigen die Daten exakt so an, wie sie zu dem 
 >
 >Änderungen oder Aktualisierungen, die seit der Erstellung des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
 
-Die im Profil-Dashboard angezeigten Metriken basieren auf der standardmäßigen Zusammenführungsrichtlinie für Ihr Unternehmen. Weitere Informationen zu Zusammenführungsrichtlinien und dazu, wie Sie Ihre standardmäßige Zusammenführungsrichtlinie auswählen oder ändern können, finden Sie im UI-Handbuch zu [Zusammenführungsrichtlinien](merge-policies.md).
+Die im Profil-Dashboard angezeigten Metriken basieren auf der standardmäßigen Zusammenführungsrichtlinie für Ihr Unternehmen. Weitere Informationen zu Zusammenführungsrichtlinien und dazu, wie Sie Ihre standardmäßige Zusammenführungsrichtlinie auswählen oder ändern, finden Sie im Handbuch [Richtlinien zusammenführen](merge-policies.md).
 
 ## Profil-Dashboard
 
-Um zum Profil-Dashboard in der Plattform-Benutzeroberfläche zu navigieren, wählen Sie in der linken Leiste die Option &quot; **[!UICONTROL Profil]** &quot;und wählen Sie dann die Registerkarte &quot; **[!UICONTROL Übersicht]** &quot;aus, um das Dashboard anzuzeigen.
+Um zum Profil-Dashboard in der Plattform-Benutzeroberfläche zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Profil]** aus und klicken Sie dann auf die Registerkarte **[!UICONTROL Übersicht]**, um das Dashboard anzuzeigen.
 
 ![](../images/profile-dashboard/dashboard-overview.png)
 
@@ -56,17 +56,21 @@ Experience Platform bietet mehrere Widgets, mit denen Sie verschiedene Metriken 
 
 ### [!UICONTROL Audience] {#audience-size}
 
-Das Widget zur Größe **[!UICONTROL der]** Audience zeigt die Gesamtzahl der zusammengeführten Profil im Profil-Datenspeicher zum Zeitpunkt des Snapshots an. Diese Nummer ist das Ergebnis der Anwendung der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens auf Ihre Profil-Daten, um Profil-Fragmente zu einem einzelnen Profil zusammenzuführen.
+Das Widget **[!UICONTROL Audience size]** zeigt die Gesamtzahl der zusammengeführten Profil im Profil-Datenspeicher zum Zeitpunkt des Snapshots an. Diese Nummer ist das Ergebnis der Anwendung der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens auf Ihre Profil-Daten, um Profil-Fragmente zu einem einzelnen Profil zusammenzuführen.
 
-Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie im Abschnitt [Profil-Fragmente und zusammengeführte Profile](../home.md#profile-fragments-vs-merged-profiles) in der Übersicht über das [Profil](../home.md).
+Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie im Abschnitt *Profil-Fragmente vs. zusammengeführte Profil* des [Profil-Überblicks](../home.md).
+
+>[!NOTE]
+>
+>Die zur Berechnung dieser Metrik verwendete Mergerichtlinie ist nicht identisch mit der systemgenerierten Mergerichtlinie, die zur Berechnung von [!UICONTROL Addressable Audiencen] im [!UICONTROL License usage]-Dashboard verwendet wird. Daher ist es unwahrscheinlich, dass die Audience in den Dashboards [!DNL Profile] und [!UICONTROL License usage] genau gleich ist.
 
 ![](../images/profile-dashboard/audience-size.png)
 
 ### [!UICONTROL Profile nach Namensraum] {#profiles-by-namespace}
 
-Das Widget &quot; **[!UICONTROL Profil nach Namensraum]** &quot;zeigt die Aufschlüsselung der Namensraum für alle zusammengeführten Profil in Ihrem Profil-Store an. Die Gesamtanzahl der Profil nach [!UICONTROL ID-Namensraum] (d. h. das Addieren der für jeden Namensraum angezeigten Werte) ist immer höher als die Gesamtanzahl der zusammengeführten Profil, da ein Profil mehrere Namensraum mit diesem verknüpft sein könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft.
+Das Widget **[!UICONTROL Profil nach Namensraum]** zeigt die Aufschlüsselung der Namensraum für alle zusammengeführten Profil in Ihrem Profil-Store an. Die Gesamtanzahl der Profil nach [!UICONTROL ID-Namensraum] (d. h. addieren Sie die für jeden Namensraum angezeigten Werte) ist immer höher als die Gesamtanzahl der zusammengeführten Profil, da einem Profil mehrere Namensraum zugeordnet sein könnten. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft.
 
-Weitere Informationen zu Identitäts-Namensräumen finden Sie in der Dokumentation zum [Adobe Experience Platform-Identitätsdienst](../../identity-service/home.md).
+Weitere Informationen zu Identitäts-Namensräumen finden Sie in der [Adobe Experience Platform Identity Service-Dokumentation](../../identity-service/home.md).
 
 ![](../images/profile-dashboard/profiles-by-namespace.png)
 
@@ -79,4 +83,4 @@ Die Plattform-Benutzeroberfläche bietet zusätzliche Dashboards zum Anzeigen vo
 
 ## Nächste Schritte
 
-Indem Sie diesem Dokument folgen, sollten Sie jetzt in der Lage sein, das Profil-Dashboard zu finden und die Metriken zu verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit [!DNL Profile] Daten in der Benutzeroberfläche der Experience Platform finden Sie im [[!DNL Profile] UI-Handbuch](user-guide.md).
+Indem Sie diesem Dokument folgen, sollten Sie jetzt in der Lage sein, das Profil-Dashboard zu finden und die Metriken zu verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit [!DNL Profile]-Daten in der Benutzeroberfläche der Experience Platform finden Sie im [[!DNL Profile] UI-Handbuch](user-guide.md).
