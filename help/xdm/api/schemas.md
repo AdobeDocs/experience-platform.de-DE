@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Schema;Schema;Schemas;Schemas;Erstellen;Erstellen
 solution: Experience Platform
 title: Schema erstellen
 description: Mit dem Endpunkt /Schemas in der Schema Registry API können Sie XDM-Schema in Ihrer Erlebnisanwendung programmgesteuert verwalten.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1386'
-ht-degree: 19%
+source-wordcount: '1418'
+ht-degree: 18%
 
 ---
 
