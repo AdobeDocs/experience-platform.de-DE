@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;enum;mixin;Mixin;Mixins;Mixins;Datentyp;Datentypen;Datentypen;Datentyp;Primäridentität;Primäridentität;XDM-Profil;XDM-Felder;Enum-Datentyp;Experience-Ereignis;XDM Experience-Ereignis;XDM-ExperienceEvent;ExperienceEvent;XDM-Erlebnis;Schema-Design;class;Class;classes;Classes;datatype;datatype;datatype;Datentyp;Datentyp;Schema;Schema;;Identitätszuordnung;Identitätszuordnung;Schema;;Landkarte;Vereinigung Schema;Vereinigung
 solution: Experience Platform
 title: Grundlagen der Schema-Komposition
 topic: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '3099'
-ht-degree: 47%
+source-wordcount: '3165'
+ht-degree: 46%
 
 ---
 
 
 # Grundlagen der Schema-Komposition
 
-This document provides an introduction to [!DNL Experience Data Model] (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform. For general information on XDM and how it is used within [!DNL Platform], see the [XDM System overview](../home.md).
+Dieses Dokument bietet eine Einführung in [!DNL Experience Data Model] (XDM)-Schema und die Bausteine, Grundsätze und Best Practices für das Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen. Allgemeine Informationen zu XDM und dazu, wie es in [!DNL Platform] verwendet wird, finden Sie unter [XDM-Systemübersicht](../home.md).
 
 ## Verstehen von Schemas
 
@@ -23,7 +23,7 @@ Ein Schema ist ein Regelsatz, der die Datenstruktur und das Datenformat darstell
 
 Zusätzlich zur Beschreibung der Datenstruktur wenden Schemas Einschränkungen und Erwartungen an Daten an, damit diese bei ihren Bewegungen zwischen den Systemen validiert werden können. Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Daten, unabhängig von ihrer Herkunft, und machen eine anwendungsübergreifende Übersetzung überflüssig.
 
-[!DNL Experience Platform]Die erhält diese semantische Normalisierung durch die Verwendung von Schemas aufrecht. Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reusable without conflicts across an organization and even to be sharable between multiple organizations.
+[!DNL Experience Platform]Die erhält diese semantische Normalisierung durch die Verwendung von Schemas aufrecht. Schema sind die Standardmethode zum Beschreiben von Daten in [!DNL Experience Platform], sodass alle Daten, die Schemas entsprechen, innerhalb eines Unternehmens ohne Konflikte wiederverwendet werden können und sogar zwischen mehreren Organisationen freigegeben werden können.
 
 ### Relationale Tabellen versus eingebettete Objekte
 
@@ -37,21 +37,21 @@ Moderne digitale Systeme generieren enorme Mengen von Verhaltenssignalen (Transa
 
 Schemas lösen dieses Problem, indem sie die Integration von Daten aus mehreren Quellen, die Standardisierung durch gemeinsame Strukturen und Definitionen und die lösungsübergreifende gemeinsame Nutzung ermöglichen. Dadurch können nachfolgende Prozesse und Dienste jede Art von Frage beantworten, die von den Daten gestellt wird, und sich von dem herkömmlichen Ansatz zur Datenmodellierung abwenden, bei dem alle Fragen, die an die Daten gestellt werden, im Voraus bekannt sind und die Daten modelliert werden, um diesen Erwartungen zu entsprechen.
 
-### Schema-based workflows in [!DNL Experience Platform]
+### Schema-basierte Workflows in [!DNL Experience Platform]
 
-Standardization is a key concept behind [!DNL Experience Platform]. Das von Adobe unterstützte XDM-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
+Die Standardisierung ist ein Schlüsselkonzept hinter [!DNL Experience Platform]. Das von Adobe unterstützte XDM-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
 
-Die so genannte [!DNL Experience Platform] Infrastruktur, auf der Schema-basierte Workflows erstellt werden, ermöglicht die Erstellung von [!DNL XDM System][!DNL Schema Registry][!DNL Schema Editor]Schema-Metadaten und die Verwendung von Dienstmustern. Weitere Informationen finden Sie in der [XDM-Systemübersicht](../home.md).
+Die als [!DNL XDM System] bekannte Infrastruktur, auf der [!DNL Experience Platform] aufgebaut ist, erleichtert Schema-basierte Workflows und umfasst die Muster [!DNL Schema Registry], [!DNL Schema Editor], Schema-Metadaten und Dienstkonsum. Weitere Informationen finden Sie in der [XDM-Systemübersicht](../home.md).
 
-Der Bau und die Nutzung von Schemas in [!DNL Experience Platform]der Region sind von entscheidender Bedeutung. Erstens ermöglichen Schemas eine bessere Datenverwaltung und eine Minimierung der Daten, was besonders bei Datenschutzbestimmungen wichtig ist. Zweitens ermöglicht das Erstellen von Schemas mit Standardkomponenten der Adobe sofortige Einblicke und die Verwendung von AI/ML-Diensten mit minimalen Anpassungen. Und schließlich bieten Schema eine Infrastruktur für die gemeinsame Nutzung von Daten und eine effiziente Orchestrierung.
+Das Erstellen und Verwenden von Schemas in [!DNL Experience Platform] bietet mehrere wichtige Vorteile. Erstens ermöglichen Schemas eine bessere Datenverwaltung und eine Minimierung der Daten, was besonders bei Datenschutzbestimmungen wichtig ist. Zweitens ermöglicht das Erstellen von Schemas mit Standardkomponenten der Adobe sofortige Einblicke und die Verwendung von AI/ML-Diensten mit minimalen Anpassungen. Und schließlich bieten Schema eine Infrastruktur für die gemeinsame Nutzung von Daten und eine effiziente Orchestrierung.
 
 ## Planen Ihres Schemas
 
 Der erste Schritt beim Erstellen eines Schemas besteht darin, das Konzept oder das Objekt der realen Welt zu bestimmen, das Sie im Schema erfassen möchten. Sobald Sie das Konzept, das Sie beschreiben möchten, identifizieren, können Sie mit der Planung Ihres Schemas beginnen, indem Sie über Dinge wie die Art der Daten, potenzielle Identitätsfelder und wie sich das Schema in Zukunft entwickeln könnte, nachdenken.
 
-### Data behaviors in [!DNL Experience Platform]
+### Datenverhalten in [!DNL Experience Platform]
 
-Data intended for use in [!DNL Experience Platform] is grouped into two behavior types:
+Daten, die in [!DNL Experience Platform] verwendet werden sollen, sind in zwei Verhaltenstypen unterteilt:
 
 * **Aufzeichnen von Daten**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt könnte eine Organisation oder eine Einzelperson sein.
 * **Zeitreihendaten**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
@@ -62,13 +62,13 @@ Sowohl Schemas der Datensätze als auch der Zeitreihen enthalten eine Zuordnung 
 
 ### [!UICONTROL Identität] {#identity}
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es wichtig, bei der Betrachtung von Schemas über Kundenidentitäten nachzudenken und welche Felder zur Identifizierung eines Objekts verwendet werden können, unabhängig davon, woher die Daten stammen.
+Schema werden zum Erfassen von Daten in [!DNL Experience Platform] verwendet. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es wichtig, bei der Betrachtung von Schemas über Kundenidentitäten nachzudenken und welche Felder zur Identifizierung eines Objekts verwendet werden können, unabhängig davon, woher die Daten stammen.
 
-Um diesen Vorgang zu unterstützen, können Schlüsselfelder in Ihren Schemas als Identitäten gekennzeichnet werden. Upon data ingestion, the data in those fields is inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+Um diesen Vorgang zu unterstützen, können Schlüsselfelder in Ihren Schemas als Identitäten gekennzeichnet werden. Bei der Datenerfassung werden die Daten in diesen Feldern in das Identitätsdiagramm &quot;[!UICONTROL a1/>&quot;für diese Person eingefügt. ] Die Diagrammdaten können dann von [[!DNL Real-time Customer Profile]](../../profile/home.md) und anderen [!DNL Experience Platform]-Diensten aufgerufen werden, um eine zusammengeführte Ansicht für jeden einzelnen Kunden bereitzustellen.
 
-Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/de-DE/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
+Zu den Feldern, die häufig als &quot;[!UICONTROL Identity]&quot;gekennzeichnet sind, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)-, CRM-ID oder andere eindeutige ID-Felder. Sie sollten außerdem alle eindeutigen IDs berücksichtigen, die für Ihr Unternehmen spezifisch sind, da sie möglicherweise auch gut in den Feldern &quot;[!UICONTROL Identität]&quot;stehen.
 
-Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass die Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
+Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass die Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. In der Übersicht zu [Adobe Experience Platform Identity Service](../../identity-service/home.md) erfahren Sie mehr darüber, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
 
 #### xdm:identityMap {#identityMap}
 
@@ -103,17 +103,17 @@ Ein Beispiel für eine einfache Identitätskarte würde wie folgt aussehen:
 }
 ```
 
-Wie im Beispiel oben gezeigt, stellt jeder Schlüssel im `identityMap` Objekt einen Identitäts-Namensraum dar. Der Wert für jeden Schlüssel ist ein Array von Objekten, das die Identitätswerte (`id`) des jeweiligen Namensraums darstellt. Eine [!DNL Identity Service] Liste der von Adobe-Anwendungen erkannten Standard-Identitäts-Namensraum [finden Sie in der](../../identity-service/troubleshooting-guide.md#standard-namespaces) Dokumentation.
+Wie im Beispiel oben gezeigt, stellt jeder Schlüssel im `identityMap`-Objekt einen Identitäts-Namensraum dar. Der Wert für jeden Schlüssel ist ein Array von Objekten, das die Identitätswerte (`id`) für den jeweiligen Namensraum darstellt. Eine [Liste von standardmäßigen Identitäts-Namensräumen](../../identity-service/troubleshooting-guide.md#standard-namespaces), die von Adobe-Anwendungen erkannt werden, finden Sie in der [!DNL Identity Service]-Dokumentation.
 
 >[!NOTE]
 >
->Für jeden Identitätswert kann auch ein boolescher Wert angegeben werden, unabhängig davon, ob der Wert eine primäre Identität ist (`primary`). Primär-Identitäten müssen nur für Schema festgelegt werden, die in [!DNL Real-time Customer Profile]verwendet werden sollen. Weitere Informationen finden Sie im Abschnitt zu Schemas zur [Vereinigung](#union) .
+>Für jeden Identitätswert kann auch ein boolescher Wert angegeben werden, unabhängig davon, ob der Wert eine primäre Identität ist (`primary`). Primär-IDs müssen nur für Schema festgelegt werden, die in [!DNL Real-time Customer Profile] verwendet werden sollen. Weitere Informationen finden Sie im Abschnitt zu [Vereinigung-Schemas](#union).
 
 ### Schema-Evolutionsprinzipien {#evolution}
 
 In dem Maße, wie sich die Art der digitalen Erfahrungen weiterentwickelt, müssen sich auch die Schemas, die zu ihrer Darstellung verwendet werden, weiterentwickeln. Ein gut entworfenes Schema ist daher in der Lage, sich bei Bedarf anzupassen und weiterzuentwickeln, ohne destruktive Änderungen an früheren Versionen des Schemas zu verursachen.
 
-Since maintaining backwards compatibility is crucial for schema evolution, [!DNL Experience Platform] enforces a purely additive versioning principle to ensure that any revisions to the schema only result in non-destructive updates and changes. Mit anderen Worten: **brechende Änderungen werden nicht unterstützt.**
+Da die Abwärtskompatibilität für die Entwicklung von Schemas entscheidend ist, setzt [!DNL Experience Platform] ein rein additives Versionsprinzip um, um sicherzustellen, dass Änderungen am Schema nur zu nicht-destruktiven Aktualisierungen und Änderungen führen. Mit anderen Worten: **brechende Änderungen werden nicht unterstützt.**
 
 | Unterstützte Änderungen | Brechende Änderungen (nicht unterstützt) |
 |------------------------------------|---------------------------------|
@@ -121,15 +121,15 @@ Since maintaining backwards compatibility is crucial for schema evolution, [!DNL
 
 >[!NOTE]
 >
->If a schema has not yet been used to ingest data into [!DNL Experience Platform], you may introduce a breaking change to that schema. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
+>Wenn ein Schema noch nicht zum Erfassen von Daten in [!DNL Experience Platform] verwendet wurde, können Sie eine Umbruchänderung an diesem Schema vornehmen. Sobald das Schema jedoch in [!DNL Platform] verwendet wurde, muss es die Richtlinie für die additive Versionierung einhalten.
 
 ### Schemas und Datenerfassung
 
-In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [[!DNL Catalog Service]](../../catalog/home.md), and generally represent tables or files that contain ingested data. Alle Datensätze basieren auf vorhandenen XDM-Schemas, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen hierzu finden Sie in der Übersicht über die [Datenerfassung in Adobe Experience Platform](../../ingestion/home.md).
+Um Daten in [!DNL Experience Platform] zu erfassen, muss zunächst ein Datensatz erstellt werden. Datasets sind die Bausteine für die Datenumwandlung und -verfolgung für [[!DNL Catalog Service]](../../catalog/home.md) und stellen im Allgemeinen Tabellen oder Dateien dar, die erfasste Daten enthalten. Alle Datensätze basieren auf vorhandenen XDM-Schemas, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen hierzu finden Sie in der Übersicht über die [Datenerfassung in Adobe Experience Platform](../../ingestion/home.md).
 
 ## Bausteine eines Schemas
 
-[!DNL Experience Platform]Die verwendet einen Kompositionsansatz, bei dem Standardbausteine kombiniert werden, um Schemas zu erstellen. This approach promotes the reusability of existing components and drives standardization across the industry to support vendor schemas and components in [!DNL Platform].
+[!DNL Experience Platform]Die verwendet einen Kompositionsansatz, bei dem Standardbausteine kombiniert werden, um Schemas zu erstellen. Dieser Ansatz fördert die Wiederverwendbarkeit bestehender Komponenten und treibt die Standardisierung in der gesamten Branche voran, um Schema und Komponenten von Anbietern in [!DNL Platform] zu unterstützen.
 
 Schemas werden nach folgender Formel zusammengestellt:
 
@@ -141,7 +141,7 @@ Schemas werden nach folgender Formel zusammengestellt:
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
-Die Klasse eines Schemas legt fest, welche Mixins in diesem Schema verwendet werden dürfen. Dies wird im [nächsten Abschnitt](#mixin)ausführlicher erläutert.
+Die Klasse eines Schemas legt fest, welche Mixins in diesem Schema verwendet werden dürfen. Dies wird im [nächsten Abschnitt](#mixin) ausführlicher erläutert.
 
 Adobe bietet zwei standardmäßige (&quot;Core&quot;) XDM-Klassen: [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent]. Zusätzlich zu diesen Hauptklassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihr Unternehmen zu beschreiben. Benutzerspezifische Klassen werden von einer Organisation definiert, wenn keine von der Adobe definierten Hauptklassen zur Beschreibung eines individuellen Anwendungsfalls verfügbar sind.
 
@@ -153,7 +153,7 @@ Mixins definieren, mit welcher/n Klasse(n) sie kompatibel sind, basierend auf de
 
 [!DNL Experience Platform] enthält viele standardmäßige Mixins für Adoben und ermöglicht es Anbietern, Mixins für ihre Anwender zu definieren, sowie einzelnen Anwendern, Mixins für ihre eigenen spezifischen Konzepte zu definieren.
 
-For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and &quot;[!UICONTROL Home Address]&quot; for your &quot;[!UICONTROL Loyalty Members]&quot; schema, you would be able to use standard mixins that define those common concepts. However, concepts that are specific to less-common use cases (such as &quot;[!UICONTROL Loyalty Program Level]&quot;) often do not have a pre-defined mixin. In diesem Fall müssen Sie einen eigenen Mixin definieren, um diese Informationen zu erfassen.
+Wenn Sie beispielsweise Details wie &quot;[!UICONTROL Vorname]&quot;und &quot;[!UICONTROL Hausadresse]&quot;für Ihr Schema &quot;[!UICONTROL Treuemitglieder]&quot;erfassen möchten, können Sie Standardmixins verwenden, die diese allgemeinen Begriffe definieren. Konzepte, die für seltener auftretende Anwendungsfälle spezifisch sind (z. B. &quot;[!UICONTROL Kundentreue-Programm-Ebene]&quot;), verfügen jedoch häufig nicht über eine vordefinierte Mischung. In diesem Fall müssen Sie einen eigenen Mixin definieren, um diese Informationen zu erfassen.
 
 Denken Sie daran, dass Schemas aus „Null oder mehr“ Mixins bestehen, was bedeutet, dass Sie ein gültiges Schema zusammenstellen können, ohne überhaupt Mixins zu verwenden.
 
@@ -165,13 +165,13 @@ Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche
 
 >[!NOTE]
 >
->Weitere Informationen zu den Unterschieden zwischen Mixins und Datentypen sowie zu den Vor- und Nachteile der Verwendung des einen und des anderen für ähnliche Anwendungsfälle finden Sie im [Anhang](#mixins-v-datatypes) .
+>Weitere Informationen zu den Unterschieden zwischen Mixins und Datentypen sowie zu den Vor- und Nachteile der Verwendung des einen und des anderen für ähnliche Anwendungsfälle finden Sie im [Anhang](#mixins-v-datatypes).
 
-[!DNL Experience Platform] bietet eine Reihe von gebräuchlichen Datentypen als Teil der [!DNL Schema Registry] zur Unterstützung der Verwendung von Standardmustern zur Beschreibung allgemeiner Datenstrukturen. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become more clear as you walk through the steps to define data types.
+[!DNL Experience Platform] bietet eine Reihe von gebräuchlichen Datentypen als Teil der ,  [!DNL Schema Registry] um die Verwendung von Standardmustern zur Beschreibung allgemeiner Datenstrukturen zu unterstützen. Dies wird in den [!DNL Schema Registry]-Tutorials ausführlicher erklärt, wo es klarer wird, wenn Sie die Schritte zur Definition von Datentypen durchlaufen.
 
 ### Feld
 
-Ein Feld ist der grundlegendste Baustein eines Schemas. Felder bieten Einschränkungen hinsichtlich der Art der Daten, die sie enthalten können, indem sie einen bestimmten Datentyp definieren. Diese grundlegenden Datentypen definieren ein einzelnes Feld, wohingegen die zuvor erwähnten [Datentypen](#data-type) es Ihnen ermöglichen, mehrere Teilfelder zu definieren und dieselbe Mehrfeldstruktur in verschiedenen Schemas wiederzuverwenden. So, in addition to defining a field&#39;s &quot;data type&quot; as one of the data types defined in the registry, [!DNL Experience Platform] supports basic scalar types such as:
+Ein Feld ist der grundlegendste Baustein eines Schemas. Felder bieten Einschränkungen hinsichtlich der Art der Daten, die sie enthalten können, indem sie einen bestimmten Datentyp definieren. Diese grundlegenden Datentypen definieren ein einzelnes Feld, wohingegen die zuvor erwähnten [Datentypen](#data-type) es Ihnen ermöglichen, mehrere Teilfelder zu definieren und dieselbe Mehrfeldstruktur in verschiedenen Schemas wiederzuverwenden. Neben der Definition des &quot;Datentyps&quot;eines Felds als einen der in der Registrierung definierten Datentypen unterstützt [!DNL Experience Platform] grundlegende Skalartypen wie:
 
 * Zeichenfolge
 * Ganzzahl
@@ -182,7 +182,7 @@ Ein Feld ist der grundlegendste Baustein eines Schemas. Felder bieten Einschrän
 
 >[!TIP]
 >
->Informationen zu den Vor- und Nachteile der Verwendung von Freiformfeldern über Objekttypen finden Sie im [Anhang](#objects-v-freeform) .
+>Informationen zu den Vor- und Nachteile der Verwendung von Freiformfeldern über Objekttypen finden Sie im Anhang [Anhang](#objects-v-freeform).
 
 Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, Formate, Minima/Maxima oder vordefinierte Werte eingeschränkt werden. Mithilfe dieser Einschränkungen kann eine breite Palette speziellerer Feldtypen dargestellt werden, darunter:
 
@@ -210,58 +210,58 @@ Bevor Sie ein Schema für die Verwendung in nachgelagerten Diensten erstellen, l
 
 ### XDM-Felder
 
-In addition to basic fields and the ability to define your own data types, XDM provides a standard set of fields and data types that are implicitly understood by [!DNL Experience Platform] services and provide greater consistency when used across [!DNL Platform] components.
+Zusätzlich zu Basisfeldern und der Möglichkeit, eigene Datentypen zu definieren, stellt XDM einen Standardsatz von Feldern und Datentypen bereit, die implizit von [!DNL Experience Platform]-Diensten verstanden werden, und bietet eine größere Konsistenz, wenn sie über [!DNL Platform]-Komponenten hinweg verwendet werden.
 
-These fields, such as &quot;First Name&quot; and &quot;Email Address&quot; contain added connotations beyond basic scalar field types, telling [!DNL Platform] that any fields sharing the same XDM data type will behave in the same way. This behavior can be trusted to be consistent regardless of where the data is coming from, or in which [!DNL Platform] service the data is being used.
+Diese Felder wie &quot;Vorname&quot;und &quot;E-Mail-Adresse&quot;enthalten zusätzliche Verbindungen, die über die grundlegenden Skalarfeldtypen hinausgehen, wobei [!DNL Platform] angegeben wird, dass alle Felder, die denselben XDM-Datentyp verwenden, sich auf dieselbe Weise verhalten. Dieses Verhalten kann als konsistent betrachtet werden, unabhängig davon, woher die Daten stammen oder in welchem [!DNL Platform]-Dienst die Daten verwendet werden.
 
-Eine vollständige Liste der verfügbaren XDM-Felder finden Sie im [XDM-Feldwörterbuch](field-dictionary.md). It is recommended to use XDM fields and data types wherever possible to support consistency and standardization across [!DNL Experience Platform].
+Eine vollständige Liste der verfügbaren XDM-Felder finden Sie im [XDM-Feldwörterbuch](field-dictionary.md). Es wird empfohlen, nach Möglichkeit XDM-Felder und Datentypen zu verwenden, um Konsistenz und Standardisierung über [!DNL Experience Platform] zu unterstützen.
 
 ## Kompositionsbeispiel
 
-Schemas represent the format and structure of data that will be ingested into [!DNL Platform], and are built using a composition model. Wie bereits erwähnt, bestehen diese Schemas aus einer Klasse und Null oder mehr Mixins, die mit dieser Klasse kompatibel sind.
+Schema stellen das Format und die Struktur der Daten dar, die in [!DNL Platform] eingeschlossen und mithilfe eines Kompositionsmodells erstellt werden. Wie bereits erwähnt, bestehen diese Schemas aus einer Klasse und Null oder mehr Mixins, die mit dieser Klasse kompatibel sind.
 
-For example, a schema describing purchases made at a retail store might be called &quot;[!UICONTROL Store Transactions]&quot;. The schema implements the [!DNL XDM ExperienceEvent] class combined with the standard [!UICONTROL Commerce] mixin and a user-defined [!UICONTROL Product Info] mixin.
+Beispielsweise könnte ein Schema, das Käufe in einem Einzelhandelsgeschäft beschreibt, als &quot;[!UICONTROL Geschäfte speichern]&quot;bezeichnet werden. Das Schema implementiert die [!DNL XDM ExperienceEvent]-Klasse in Kombination mit dem standardmäßigen [!UICONTROL Commerce]-Mixin und einem benutzerdefinierten [!UICONTROL Product Info]-Mixin.
 
-Another schema which tracks website traffic might be called &quot;[!UICONTROL Web Visits]&quot;. It also implements the [!DNL XDM ExperienceEvent] class, but this time combines the standard [!UICONTROL Web] mixin.
+Ein anderes Schema, das den Website-Traffic verfolgt, könnte &quot;[!UICONTROL Webbesuche]&quot;heißen. Es implementiert auch die [!DNL XDM ExperienceEvent]-Klasse, kombiniert diesmal jedoch das standardmäßige [!UICONTROL Web]-Mixin.
 
-Das folgende Diagramm zeigt diese Schemas und die von den einzelnen Mixins hinzugefügten Felder. It also contains two schemas based on the [!DNL XDM Individual Profile] class, including the &quot;[!UICONTROL Loyalty Members]&quot; schema mentioned previously in this guide.
+Das folgende Diagramm zeigt diese Schemas und die von den einzelnen Mixins hinzugefügten Felder. Es enthält außerdem zwei Schema, die auf der [!DNL XDM Individual Profile]-Klasse basieren, einschließlich des zuvor in diesem Handbuch erwähnten Schemas &quot;[!UICONTROL Treuemitglieder]&quot;.
 
 ![](../images/schema-composition/composition.png)
 
 ### Vereinigung {#union}
 
-While [!DNL Experience Platform] allows you to compose schemas for particular use cases, it also allows you to see a &quot;union&quot; of schemas for a specific class type. The previous diagram shows two schemas based on the XDM ExperienceEvent class and two schemas based on [!DNL XDM Individual Profile] class. The union, shown below, aggregates the fields of all schemas that share the same class ([!DNL XDM ExperienceEvent] and [!DNL XDM Individual Profile], respectively).
+[!DNL Experience Platform] ermöglicht es Ihnen, Schema für bestimmte Anwendungsfälle zu erstellen, es ermöglicht Ihnen aber auch, eine &quot;Vereinigung&quot;von Schemas für einen bestimmten Klassentyp anzuzeigen. Das vorherige Diagramm zeigt zwei Schema, die auf der XDM ExperienceEvent-Klasse basieren, und zwei Schema, die auf der [!DNL XDM Individual Profile]-Klasse basieren. Die unten dargestellte Vereinigung Aggregat die Felder aller Schema, die dieselbe Klasse besitzen ([!DNL XDM ExperienceEvent] bzw. [!DNL XDM Individual Profile]).
 
 ![](../images/schema-composition/union.png)
 
-By enabling a schema for use with [!DNL Real-time Customer Profile], it will be included in the union for that class type. [!DNL Profile] bietet stabile, zentralisierte Profil von Kundenattributen sowie ein zeitgestempeltes Kundenkonto für jedes Ereignis, das über ein in [!DNL Platform]das System integriertes System verfügt. [!DNL Profile] verwendet die vereinigte Ansicht, um diese Daten zu repräsentieren und eine ganzheitliche Ansicht jedes einzelnen Kunden bereitzustellen.
+Wenn Sie ein Schema zur Verwendung mit [!DNL Real-time Customer Profile] aktivieren, wird es in die Vereinigung für diesen Klassentyp aufgenommen. [!DNL Profile] bietet stabile, zentralisierte Profil von Kundenattributen sowie ein zeitgestempeltes Kundenkonto für jedes Ereignis, das über ein in  [!DNL Platform]das System integriertes System verfügt. [!DNL Profile] verwendet die vereinigte Ansicht, um diese Daten zu repräsentieren und eine ganzheitliche Ansicht jedes einzelnen Kunden bereitzustellen.
 
-For more information on working with [!DNL Profile], see the [Real-time Customer Profile overview](../../profile/home.md).
+Weitere Informationen zum Arbeiten mit [!DNL Profile] finden Sie unter [Übersicht über das Echtzeit-Profil des Kunden](../../profile/home.md).
 
 ## Zuordnen von Datendateien zu XDM-Schemas
 
-All datafiles that are ingested into [!DNL Experience Platform] must conform to the structure of an XDM schema. Weitere Informationen zum Formatieren von Datendateien mit XDM-Hierarchien (einschließlich Beispieldateien) finden Sie im Dokument zu [Beispiel-ETL-Transformationen](../../etl/transformations.md). For general information about ingesting datafiles into [!DNL Experience Platform], see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
+Alle Datendateien, die in [!DNL Experience Platform] eingeschlossen werden, müssen der Struktur eines XDM-Schemas entsprechen. Weitere Informationen zum Formatieren von Datendateien mit XDM-Hierarchien (einschließlich Beispieldateien) finden Sie im Dokument zu [Beispiel-ETL-Transformationen](../../etl/transformations.md). Allgemeine Informationen zum Einfügen von Datendateien in [!DNL Experience Platform] finden Sie unter [Überblick über die Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md).
 
 ## Nächste Schritte
 
-Now that you understand the basics of schema composition, you are ready to begin exploring and building schemas using the [!DNL Schema Registry].
+Jetzt, da Sie die Grundlagen der Schema-Komposition verstehen, können Sie mit dem [!DNL Schema Registry] beginnen, Schema zu erkunden und zu bauen.
 
 Informationen zur Übersicht über die Struktur der beiden Core-XDM-Klassen und ihrer häufig verwendeten kompatiblen Mixins finden Sie in der folgenden Referenzdokumentation:
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The [!DNL Schema Library] contains Industry resources defined by Adobe, Vendor resources defined by [!DNL Experience Platform] partners, and classes, mixins, data types, and schemas that have been composed by members of your organization.
+Das [!DNL Schema Registry] wird verwendet, um auf das [!DNL Schema Library] in Adobe Experience Platform zuzugreifen, und stellt eine Benutzeroberfläche und RESTful-API bereit, über die alle verfügbaren Bibliotheksressourcen zugänglich sind. Das [!DNL Schema Library] enthält Branchenressourcen, die durch Adobe, Händlerressourcen definiert werden, die von [!DNL Experience Platform]-Partnern definiert werden, sowie Klassen, Mixins, Datentypen und Schema, die von Mitgliedern Ihres Unternehmens zusammengestellt wurden.
 
 Um mit dem Erstellen von Schemas über die Benutzeroberfläche zu beginnen, folgen Sie dem [Schema-Editor-Tutorial](../tutorials/create-schema-ui.md), um das Schema „Loyalty Members“ zu erstellen, das in diesem Dokument erwähnt wird.
 
-To begin using the [!DNL Schema Registry] API, start by reading the [Schema Registry API developer guide](../api/getting-started.md). Nachdem Sie das Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die im Tutorial zum [Erstellen eines Schemas mit der Schema Registry-API](../tutorials/create-schema-api.md) beschrieben werden.
+Um mit der [!DNL Schema Registry]-API zu beginnen, lesen Sie den Beginn im [Schema Registry API Developer Guide](../api/getting-started.md). Nachdem Sie das Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die im Tutorial zum [Erstellen eines Schemas mit der Schema Registry-API](../tutorials/create-schema-api.md) beschrieben werden.
 
 ## Anhang
 
 Der folgende Abschnitt enthält weitere Informationen zu den Grundsätzen der Zusammensetzung des Schemas.
 
-### Objekte im Vergleich zu Freiformfeldern {#objects-v-freeform}
+### Objekte gegen Freiformfelder {#objects-v-freeform}
 
 Beim Entwerfen Ihrer Schemas sind einige wichtige Faktoren zu beachten, die bei der Auswahl von Objekten über Freiformfeldern zu beachten sind:
 
@@ -283,7 +283,7 @@ Die Vor- und Nachteile der Verwendung von Objekten über freien Feldern sind unt
 **Nachteile**:
 
 * Felder werden verschachtelter.
-* Bei Verwendung des [Adobe Experience Platform Abfrage Service](../../query-service/home.md)müssen für die Abfrage von Feldern, die in Objekten verschachtelt sind, längere Referenzzeichenfolgen bereitgestellt werden.
+* Bei Verwendung von [Adobe Experience Platform Abfrage Service](../../query-service/home.md) müssen für in Objekten verschachtelte Abfragen längere Referenzzeichenfolgen bereitgestellt werden.
 
 #### Freiformfelder
 
@@ -291,7 +291,7 @@ Die Vor- und Nachteile der Verwendung von Freiformfeldern über Objekten sind un
 
 **Vorteile**:
 
-* Freiformfelder werden direkt unter dem Stammobjekt des Schemas erstellt (`_tenantId`), wodurch die Sichtbarkeit erhöht wird.
+* Freiformfelder werden direkt unter dem Stammobjekt des Schemas (`_tenantId`) erstellt, wodurch die Sichtbarkeit erhöht wird.
 * Referenzzeichenfolgen für Freiformfelder sind in der Regel kürzer, wenn Abfrage Service verwendet wird.
 
 **Nachteile**:
