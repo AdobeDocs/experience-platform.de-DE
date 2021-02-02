@@ -1,23 +1,23 @@
 ---
-keywords: cloud storage destination;cloud storage
+keywords: Ziel der Cloud-Datenspeicherung;Cloud-Datenspeicherung
 title: Cloud-Speicher-Ziele
 seo-title: Cloud-Speicher-Ziele
-description: Mit CDP in Echtzeit können Sie Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, AWS Ereignis-Hubs- oder SFTP-Cloud-Datenspeicherung-Speicherorte senden.
-seo-description: Mit CDP in Echtzeit können Sie Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, AWS Ereignis-Hubs- oder SFTP-Cloud-Datenspeicherung-Speicherorte senden.
+description: Die Plattform kann Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azurblauen Ereignis-Hubs- oder SFTP-Cloud-Datenspeicherung liefern.
+seo-description: Die Plattform kann Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azurblauen Ereignis-Hubs- oder SFTP-Cloud-Datenspeicherung liefern.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 36%
+source-wordcount: '182'
+ht-degree: 32%
 
 ---
 
 
 # Cloud-Speicher-Ziele {#cloud-storage-destinations}
 
-Echtzeit-CDP kann Ihre Segmente als Datendateien an Ihre Cloud-Datenspeicherung-Speicherorte liefern. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for [!DNL Amazon S3] and SFTP. Für [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] Ziele werden Daten im JSON-Format aus der Experience Platform gestreamt.
+Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Cloud-Datenspeicherung-Speicherorte liefern. Auf diese Weise können Sie Audiencen und deren Profil-Attribute über CSV- oder tabulatorgetrennte Dateien für [!DNL Amazon S3] und SFTP an Ihre internen Systeme senden. Bei [!DNL AWS Kinesis]- und [!DNL Azure Event Hubs]-Zielen werden die Daten aus der Experience Platform im JSON-Format gestreamt.
 
-![Adobe-Cloud-Speicher-Ziele](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+![Ziele der Adobe Cloud-Datenspeicherung](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 Informationen zum Herstellen einer Verbindung zu Cloud-Speicher-Zielen finden Sie unter [Workflow zum Erstellen von Cloud-Speicher-Zielen](./workflow.md).
 
@@ -28,6 +28,7 @@ Informationen zum Herstellen einer Verbindung zu Cloud-Speicher-Zielen finden Si
 ## Verfügbare Cloud-Datenspeicherung-Ziele
 
 - [Amazon S3-Ziel](./amazon-s3.md)
+- [Blumenziel](./azure-blob.md)
 - [SFTP-Ziel](./sftp.md)
 
 ## Verfügbare Streaming-Ziele für Cloud-Datenspeicherung
