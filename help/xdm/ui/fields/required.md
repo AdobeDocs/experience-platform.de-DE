@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;required;field;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Erforderlich;Feld;
 solution: Experience Platform
 title: Definieren eines erforderlichen Felds in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein erforderliches XDM-Feld in der Benutzeroberfläche der Experience Platform definieren.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 48025fc11558bf6773ce5c48054483758c7e993f
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '193'
 ht-degree: 1%
 
 ---
