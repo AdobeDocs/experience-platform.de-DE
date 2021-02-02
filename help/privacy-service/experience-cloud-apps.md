@@ -1,47 +1,48 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Privacy Service und Experience Cloud-Anwendungen
 topic: overview
+description: Dieses Dokument bietet eine Referenz zum Konfigurieren verschiedener Experience Cloud-Anwendungen für datenschutzbezogene Vorgänge.
 translation-type: tm+mt
-source-git-commit: 4cd7b9d3ca542c2fba83d066197b92775c053729
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '576'
 ht-degree: 23%
 
 ---
 
 
-# [!DNL Privacy Service] und [!DNL Experience Cloud] Anwendungen
+# [!DNL Privacy Service] und  [!DNL Experience Cloud] Anwendungen
 
-Adobe Experience Platform [!DNL Privacy Service] wurde entwickelt, um Datenschutzanforderungen für verschiedene Adobe Experience Cloud-Anwendungen zu unterstützen. Jede Anwendung unterstützt verschiedene Produktwerte und IDs zur Identifizierung von Datensubjekten.
+Adobe Experience Platform [!DNL Privacy Service] wurde zur Unterstützung von Datenschutzanforderungen für mehrere Adobe Experience Cloud-Anwendungen entwickelt. Jede Anwendung unterstützt verschiedene Produktwerte und IDs zur Identifizierung von Datensubjekten.
 
-Dieses Dokument dient als Referenz für die [!DNL Experience Cloud] Anwendungsdokumentation, in der beschrieben wird, wie Sie diese Anwendung für datenschutzbezogene Vorgänge konfigurieren. Dazu gehört auch die Formatierung und Beschriftung Ihrer Daten. Es werden zwei Kategorien von Anträgen behandelt:
+Dieses Dokument dient als Referenz für die [!DNL Experience Cloud]-Anwendungsdokumentation, in der beschrieben wird, wie Sie diese Anwendung für datenschutzbezogene Vorgänge konfigurieren. Dazu gehört auch die Formatierung und Beschriftung Ihrer Daten. Es werden zwei Kategorien von Anträgen behandelt:
 
-* [In Privacy Service](#integrated)integrierte Anwendungen: Anwendungen, an die Zugriffsanfragen gesendet, gelöscht oder Abmeldeanfragen gesendet werden können [!DNL Privacy Service].
-* [Selbstbedienungsanwendungen](#self-serve): Anwendungen, die ihre Datenschutzanforderungen intern verwalten müssen und nicht mit [!DNL Privacy Service] direkt kommunizieren können.
+* [In Privacy Service](#integrated) integrierte Anwendungen: Anwendungen, an die Zugriffsanfragen gesendet, gelöscht oder Abmeldeanfragen gesendet werden können  [!DNL Privacy Service].
+* [Selbstbedienungsanwendungen](#self-serve): Anwendungen, die ihre Datenschutzanforderungen intern verwalten müssen und mit denen keine  [!DNL Privacy Service] direkte Kommunikation möglich ist.
 
-Lesen Sie die Dokumentation für Ihre [!DNL Experience Cloud] Anwendungen, um zu erfahren, wie Sie Ihre Datenschutzanforderungen formatieren und welche Werte für diese Anforderungen unterstützt werden.
+Lesen Sie die Dokumentation für Ihre [!DNL Experience Cloud]-Anwendungen, um zu erfahren, wie Sie Ihre Datenschutzanforderungen formatieren und welche Werte für diese Anforderungen unterstützt werden.
 
-## In [!DNL Privacy Service] {#integrated}
+## Anwendungen, die mit [!DNL Privacy Service] {#integrated} integriert sind
 
-Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud] Anwendungen, mit denen [!DNL Privacy Service]die [!DNL Privacy Service] Funktionen, mit denen sie kompatibel sind, integriert sind, sowie Links zur Dokumentation für weitere Informationen.
+Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud]-Anwendungen, die mit [!DNL Privacy Service] integriert sind, einschließlich der [!DNL Privacy Service]-Funktionen, mit denen sie kompatibel sind, und Links zur Dokumentation, um weitere Informationen zu erhalten.
 
 | Anwendung | Zugriff/Löschen | Ausschluss des Verkaufs | Dokumentation und Überlegungen |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Dokumentation für GDPR aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Verkaufsabmeldedokumentation für CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
-| Adobe Analytics | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] verarbeitet Abmeldeanfragen mithilfe von [Privacy Berichte-Variablen](https://docs.adobe.com/content/help/de-DE/analytics/admin/data-governance/consent-variables.html)</li></ul> |
-| Adobe Audience Manager | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Dokumentation zur Abmeldung](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
-| Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Dokumentation aufrufen/löschen](https://docs.campaign.adobe.com/doc/standard/getting_started/de/ACS_GDPR.html)</li><li>[Dokumentation zur Abmeldung](../segmentation/honoring-opt-outs.md)</li></ul> |
-| Kundenattribute der Adobe (CRS) | ✓ | K. A. | <ul><li>[Dokumentation für GDPR aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/core-services/interface/customer-attributes/gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/core-services/interface/customer-attributes/ccpa.html)</li><li>Kundenattribute sind nicht in der Lage, Daten zu übertragen. Daher sind Ausschlussanfragen nicht möglich.</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Dokumentation zum Data Lake aufrufen/löschen](../catalog/privacy.md)</li><li>[Dokumentation für Echtzeit-Kundendaten aufrufen/löschen](../profile/privacy.md)</li><li>[!DNL Experience Platform] berücksichtigt [Abmeldeanforderungen für Audiencen-Segmente](../segmentation/honoring-opt-outs.md).</li></ul> |
-| Adobe Primetime-Authentifizierung | ✓ | K. A. | <ul><li>[Dokumentation aufrufen/löschen](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] nicht in der Lage ist, Daten zu übertragen, daher sind Ausschlussanträge nicht anwendbar.</li></ul> |
-| Adobe Target | ✓ | K. A. | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] nicht in der Lage ist, Daten zu übertragen, daher sind Ausschlussanträge nicht anwendbar.</li></ul> |
+| Adobe Advertising Cloud | they | they | <ul><li>[Dokumentation für GDPR aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Verkaufsabmeldedokumentation für CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
+| Adobe Analytics | they | they | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] verarbeitet Abmeldeanfragen mithilfe von  [Privacy Berichte-Variablen](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul> |
+| Adobe Audience Manager | they | they | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Dokumentation zur Abmeldung](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
+| Adobe Campaign Standard | they | they | <ul><li>[Dokumentation aufrufen/löschen](https://docs.campaign.adobe.com/doc/standard/getting_started/de/ACS_GDPR.html)</li><li>[Dokumentation zur Abmeldung](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Kundenattribute der Adobe (CRS) | they | K. A. | <ul><li>[Dokumentation für GDPR aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/core-services/interface/customer-attributes/gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/core-services/interface/customer-attributes/ccpa.html)</li><li>Kundenattribute sind nicht in der Lage, Daten zu übertragen. Daher sind Ausschlussanfragen nicht möglich.</li></ul> |
+| Adobe Experience Platform | they | they | <ul><li>[Dokumentation zum Data Lake aufrufen/löschen](../catalog/privacy.md)</li><li>[Dokumentation für Echtzeit-Kundendaten aufrufen/löschen](../profile/privacy.md)</li><li>[!DNL Experience Platform] berücksichtigt  [Abmeldeanforderungen für Audiencen-Segmente](../segmentation/honoring-opt-outs.md).</li></ul> |
+| Adobe Primetime-Authentifizierung | they | K. A. | <ul><li>[Dokumentation aufrufen/löschen](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] nicht in der Lage ist, Daten zu übertragen, daher sind Ausschlussanträge nicht anwendbar.</li></ul> |
+| Adobe Target | they | K. A. | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] nicht in der Lage ist, Daten zu übertragen, daher sind Ausschlussanträge nicht anwendbar.</li></ul> |
 
 
 ## Selbstbedienungsanwendungen {#self-serve}
 
-Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud] Anwendungen, die nicht in die Datenschutzbestimmungen integriert sind [!DNL Privacy Service] und intern verwaltet werden müssen. Links zur Dokumentation der einzelnen Anwendungen sowie Beschreibungen des Inhalts der Dokumentation werden bereitgestellt.
+Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud]-Anwendungen, die nicht mit [!DNL Privacy Service] integriert sind und ihre Datenschutzbelange intern verwalten müssen. Links zur Dokumentation der einzelnen Anwendungen sowie Beschreibungen des Inhalts der Dokumentation werden bereitgestellt.
 
 | Anwendung | Beschreibung der Dokumentation |
 | ------- | ----------- |
