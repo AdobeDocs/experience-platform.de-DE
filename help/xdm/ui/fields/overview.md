@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Feld;
 solution: Experience Platform
 title: Definieren von XDM-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie XDM-Felder in der Benutzeroberfläche "Experience Platform"definieren.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1311'
 ht-degree: 5%
 
 ---
@@ -86,10 +86,10 @@ Wenn Sie ein neues Feld definieren, werden in der rechten Leiste ggf. zusätzlic
 | [!UICONTROL Format] | [!UICONTROL Zeichenfolge] | Wählen Sie aus einer Liste vordefinierter Formate für Zeichenfolgen, denen der Wert entsprechen muss. Zu den verfügbaren Formaten gehören: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL Hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-zeiger]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Mindestlänge] | [!UICONTROL Zeichenfolge] | Die Mindestanzahl von Zeichen, die die Zeichenfolge enthalten muss, damit der Wert während der Erfassung akzeptiert werden kann. |
 | [!UICONTROL Maximale Länge] | [!UICONTROL Zeichenfolge] | Die maximale Anzahl von Zeichen, die die Zeichenfolge enthalten muss, damit der Wert während der Erfassung akzeptiert werden kann. |
-| [!UICONTROL Mindestwert] | [!UICONTROL Double] | Der Mindestwert für die Dublette, die während der Aufnahme akzeptiert wird. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert akzeptiert. |
-| [!UICONTROL Höchstwert] | [!UICONTROL Dublette] | Der Höchstwert für die Dublette, die während der Erfassung akzeptiert wird. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert akzeptiert. |
-| [!UICONTROL Exklusiver Mindestwert] | [!UICONTROL Dublette] | Der Höchstwert für die Dublette, die während der Erfassung akzeptiert wird. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert zurückgewiesen. |
-| [!UICONTROL Exklusiver Maximalwert] | [!UICONTROL Dublette] | Der Höchstwert für die Dublette, die während der Erfassung akzeptiert wird. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert zurückgewiesen. |
+| [!UICONTROL Mindestwert] | [!UICONTROL Double] | Der Mindestwert für die Dublette, die während der Aufnahme akzeptiert wird. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert akzeptiert. Bei Verwendung dieser Beschränkung muss die Beschränkung &quot;[!UICONTROL Ausschließlicher Mindestwert]&quot;leer gelassen werden. |
+| [!UICONTROL Höchstwert] | [!UICONTROL Dublette] | Der Höchstwert für die Dublette, die während der Erfassung akzeptiert wird. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert akzeptiert. Bei Verwendung dieser Beschränkung muss die Beschränkung &quot;[!UICONTROL Exklusiver Maximalwert]&quot;leer gelassen werden. |
+| [!UICONTROL Exklusiver Mindestwert] | [!UICONTROL Dublette] | Der Höchstwert für die Dublette, die während der Erfassung akzeptiert wird. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert zurückgewiesen. Bei Verwendung dieser Beschränkung muss die Beschränkung &quot;[!UICONTROL Mindestwert]&quot;(nicht exklusiv) leer gelassen werden. |
+| [!UICONTROL Exklusiver Maximalwert] | [!UICONTROL Dublette] | Der Höchstwert für die Dublette, die während der Erfassung akzeptiert wird. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert zurückgewiesen. Bei Verwendung dieser Beschränkung muss die Beschränkung &quot;[!UICONTROL Maximum value]&quot;(nicht exklusiv) leer gelassen werden. |
 
 ## Spezielle Feldtypen {#special}
 
