@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Berechnete Attribute - Echtzeit-Client-Profil-API
+keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
+title: API-Endpunkt für berechnete Attribute
 topic: guide
+type: Documentation
+description: 'Mit berechneten Attributen können Sie den Wert von Feldern anhand anderer Werte, Berechnungen und Ausdrücke automatisch berechnen. Berechnete Attribute arbeiten mit Echtzeit-Kundendaten, d. h., Sie können Werte für alle in Adobe Experience Platform gespeicherten Datensätze und Ereignis mit Aggregaten versehen. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2403'
-ht-degree: 83%
+source-wordcount: '2450'
+ht-degree: 82%
 
 ---
 
@@ -25,13 +27,13 @@ In diesem Handbuch werden berechnete Attribute in Adobe Experience Platform gena
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Berechnete Attribute
 
-Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. Jedes Profil enthält wichtige Daten zu einer Person, wie z. B. ihre Kontaktdaten, Präferenzen und den Kaufverlauf, sodass eine 360-Grad-Ansicht des Kunden entsteht.
+Mit Adobe Experience Platform können Sie einfach Daten aus mehreren Quellen importieren und zusammenführen, um [!DNL Real-time Customer Profiles] zu generieren. Jedes Profil enthält wichtige Daten zu einer Person, wie z. B. ihre Kontaktdaten, Präferenzen und den Kaufverlauf, sodass eine 360-Grad-Ansicht des Kunden entsteht.
 
-Manche der im Profil erfassten Daten sind beim direkten Lesen der Datenfelder leicht verständlich (z. B. „Vorname“), während bei anderen Daten mehrere Berechnungen oder andere Felder und Werte erforderlich sind, um die Daten zu generieren (z. B. „Lebenszeitkaufsumme“). To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
+Manche der im Profil erfassten Daten sind beim direkten Lesen der Datenfelder leicht verständlich (z. B. „Vorname“), während bei anderen Daten mehrere Berechnungen oder andere Felder und Werte erforderlich sind, um die Daten zu generieren (z. B. „Lebenszeitkaufsumme“). Damit diese Daten auf einen Blick leichter zu verstehen sind, können Sie mit [!DNL Platform] berechnete Attribute erstellen, die automatisch diese Verweise und Berechnungen durchführen und den Wert im entsprechenden Feld zurückgeben.
 
 Berechnete Attribute umfassen das Erstellen eines Ausdrucks (oder „Regel“), der auf eingehende Daten angewendet wird und den sich ergebenden Wert in einem Profilattribut oder Ereignis speichert. Ausdrücke können auf unterschiedliche Weise definiert werden. So können Sie festlegen, dass eine Regel nur eingehende Ereignisse, ein eingehendes Ereignis und Profildaten oder ein eingehendes Ereignis, Profildaten und historische Ereignisse auswertet.
 
@@ -39,9 +41,9 @@ Berechnete Attribute umfassen das Erstellen eines Ausdrucks (oder „Regel“), 
 
 Anwendungsbeispiele für berechnete Attribute können von einfachen Berechnungen hin zu sehr komplexen Verweisen reichen. Im Folgenden finden Sie einige Anwendungsbeispiele für berechnete Attribute:
 
-1. **[!UICONTROL Prozent]:** Ein einfaches, berechnetes Attribut könnte darin bestehen, zwei numerische Felder in einem Datensatz zu nehmen und sie zu teilen, um einen Prozentwert zu erstellen. Sie könnten beispielsweise die Gesamtzahl der an eine Person gesendeten E-Mails durch die Zahl der von der Person geöffneten E-Mails teilen. Wenn Sie das sich ergebende Feld für berechnete Attribute ansehen, erkennen Sie schnell den Prozentsatz der Gesamt-E-Mails, die von der Person geöffnet wurden.
-1. **[!UICONTROL Anwendungsnutzung]:** Ein weiteres Beispiel ist die Möglichkeit, die Anzahl der Aggregat zu bestimmen, die ein Benutzer zum Öffnen der Anwendung benötigt. Wenn Sie die Gesamtzahl der Anwendungsöffnungen anhand einzelner Öffnungsereignisse verfolgen, können Sie Anwendern bei der 100. Öffnung besondere Angebote oder Nachrichten zukommen lassen, um die Interaktion mit Ihrer Marke zu stärken.
-1. **[!UICONTROL Lebenszeitwerte]:** Die Erfassung laufender Gesamtsummen, z. B. eines Kaufwerts für einen Kunden über die gesamte Lebensdauer, kann sehr schwierig sein. Dafür muss die historische Gesamtsumme bei jedem Auftreten eines neuen Kaufereignisses aktualisiert werden. Mit einem berechneten Attribut können Sie dies wesentlich einfacher tun, indem Sie den Lebenszeitwert in einem einzelnen Feld pflegen, das nach jedem erfolgreichen Kaufereignis, das mit dem Kunden verbunden ist, automatisch aktualisiert wird.
+1. **[!UICONTROL Prozentwerte]:** Ein einfaches, berechnetes Attribut kann die Entnahme zweier numerischer Felder in einem Datensatz und deren Aufteilung zur Erstellung eines Prozentsatzes sein. Sie könnten beispielsweise die Gesamtzahl der an eine Person gesendeten E-Mails durch die Zahl der von der Person geöffneten E-Mails teilen. Wenn Sie das sich ergebende Feld für berechnete Attribute ansehen, erkennen Sie schnell den Prozentsatz der Gesamt-E-Mails, die von der Person geöffnet wurden.
+1. **[!UICONTROL Anwendungsnutzung]:** Ein weiteres Beispiel ist die Möglichkeit, die Anzahl der Anwendungsstarts durch einen Benutzer Aggregat. Wenn Sie die Gesamtzahl der Anwendungsöffnungen anhand einzelner Öffnungsereignisse verfolgen, können Sie Anwendern bei der 100. Öffnung besondere Angebote oder Nachrichten zukommen lassen, um die Interaktion mit Ihrer Marke zu stärken.
+1. **[!UICONTROL Lebenszeitwerte]: Das** Sammeln von Gesamtwerten, wie z. B. einem Kaufwert für einen Kunden, kann sehr schwierig sein. Dafür muss die historische Gesamtsumme bei jedem Auftreten eines neuen Kaufereignisses aktualisiert werden. Mit einem berechneten Attribut können Sie dies wesentlich einfacher tun, indem Sie den Lebenszeitwert in einem einzelnen Feld pflegen, das nach jedem erfolgreichen Kaufereignis, das mit dem Kunden verbunden ist, automatisch aktualisiert wird.
 
 ## Berechnetes Attribut konfigurieren
 
@@ -51,19 +53,19 @@ Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld erm
 >
 >Berechnete Attribute können keinen Feldern in Adobe-definierten Mixins hinzugefügt werden. Das Feld muss sich im `tenant`-Namespace befinden, d. h. es muss ein Feld sein, das Sie definieren und einem Schema hinzufügen.
 
-In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). Außerdem empfehlen wir Ihnen, den [Abschnitt über Vereinigungen](../../xdm/schema/composition.md) in der Grundlagendokumentation zur Schemakomposition zu lesen.
+Um ein berechnetes Attributfeld erfolgreich zu definieren, muss das Schema für [!DNL Profile] aktiviert sein und als Teil des Vereinigung-Schemas für die Klasse angezeigt werden, auf der das Schema basiert. Weitere Informationen zu [!DNL Profile]-aktivierten Schemas und Vereinigungen finden Sie im Abschnitt [!DNL Schema Registry] Entwicklerhandbuch unter [Aktivieren eines Schemas zum Profil und Anzeigen von Vereinigung-Schemas](../../xdm/api/getting-started.md). Außerdem empfehlen wir Ihnen, den [Abschnitt über Vereinigungen](../../xdm/schema/composition.md) in der Grundlagendokumentation zur Schemakomposition zu lesen.
 
-The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. Wenn Sie bereits über ein Feld verfügen, das sich in einem Profil-aktivierten Schema im richtigen Namespace befindet, können Sie direkt mit dem [Erstellen eines berechneten Attributs](#create-a-computed-attribute) fortfahren.
+Der Arbeitsablauf in diesem Lernprogramm verwendet ein [!DNL Profile]-aktiviertes Schema und führt die Schritte zum Definieren einer neuen Mischung mit dem berechneten Attributfeld und zum Sicherstellen des richtigen Namensraums durch. Wenn Sie bereits über ein Feld verfügen, das sich in einem Profil-aktivierten Schema im richtigen Namespace befindet, können Sie direkt mit dem [Erstellen eines berechneten Attributs](#create-a-computed-attribute) fortfahren.
 
 ### Schema anzeigen
 
-In den folgenden Schritten nutzen Sie die Benutzeroberfläche von Adobe Experience Platform, um ein Schema zu suchen, ein Mixin hinzuzufügen und ein Feld zu definieren. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
+In den folgenden Schritten nutzen Sie die Benutzeroberfläche von Adobe Experience Platform, um ein Schema zu suchen, ein Mixin hinzuzufügen und ein Feld zu definieren. Wenn Sie die [!DNL Schema Registry]-API bevorzugen, lesen Sie bitte das [Schema Registry-Entwicklerhandbuch](../../xdm/api/getting-started.md), um zu erfahren, wie Sie eine Mischung erstellen, eine Mischung zu einem Schema hinzufügen und ein Schema für die Verwendung mit [!DNL Real-time Customer Profile] aktivieren.
 
 Klicken Sie in der Benutzeroberfläche in der linken Leiste auf **[!UICONTROL Schemas]** und nutzen Sie die Suchleiste auf dem Tab **[!UICONTROL Durchsuchen]**, um das Schema, das Sie aktualisieren möchten, zu suchen.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Once you have located the schema, click its name to open the [!DNL Schema Editor] where you can make edits to the schema.
+Nachdem Sie das Schema gefunden haben, klicken Sie auf seinen Namen, um das [!DNL Schema Editor] zu öffnen, in dem Sie Änderungen am Schema vornehmen können.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
@@ -77,7 +79,7 @@ Geben Sie dem Mixin einen Namen und eine Beschreibung und klicken Sie anschließ
 
 ### Berechnetes Attributfeld für das Schema hinzufügen
 
-Your new mixin should now appear in the &quot;[!UICONTROL Mixins]&quot; section under &quot;[!UICONTROL Composition]&quot;. Klicken Sie auf den Namen des Mixins, woraufhin im Abschnitt **[!UICONTROL Struktur]** des Editors mehrere Schaltflächen vom Typ **[!UICONTROL Feld hinzufügen]** angezeigt werden.
+Ihr neues Mixin sollte nun im Abschnitt &quot;[!UICONTROL Mixins]&quot;unter &quot;[!UICONTROL Zusammensetzung]&quot;angezeigt werden. Klicken Sie auf den Namen des Mixins, woraufhin im Abschnitt **[!UICONTROL Struktur]** des Editors mehrere Schaltflächen vom Typ **[!UICONTROL Feld hinzufügen]** angezeigt werden.
 
 Wählen Sie neben dem Namen des Schemas **[!UICONTROL Feld hinzufügen]**, um ein Feld der obersten Ebene hinzuzufügen. Alternativ können Sie das Feld an einer beliebigen Stelle im gewünschten Schema einfügen.
 
@@ -97,13 +99,13 @@ Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Übernehmen]**. Daraufhin we
 
 ![](../images/computed-attributes/Apply.png)
 
-### Schema aktivieren für [!DNL Profile]
+### Schema für [!DNL Profile] aktivieren
 
-Before continuing, ensure that the schema has been enabled for [!DNL Profile]. Klicken Sie im Bereich **[!UICONTROL Struktur]** des Editors auf den Namen des Schemas, um den Tab **[!UICONTROL Schemaeigenschaften]** anzuzeigen. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
+Bevor Sie fortfahren, stellen Sie sicher, dass das Schema für [!DNL Profile] aktiviert wurde. Klicken Sie im Bereich **[!UICONTROL Struktur]** des Editors auf den Namen des Schemas, um den Tab **[!UICONTROL Schemaeigenschaften]** anzuzeigen. Wenn der Schieberegler **[!UICONTROL Profil]** blau ist, wurde das Schema für [!DNL Profile] aktiviert.
 
 >[!NOTE]
 >
->Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
+>Die Aktivierung eines Schemas für [!DNL Profile] kann nicht rückgängig gemacht werden. Wenn Sie also auf den Schieberegler klicken, müssen Sie nicht riskieren, es zu deaktivieren.
 
 ![](../images/computed-attributes/Profile.png)
 
@@ -111,7 +113,7 @@ Jetzt können Sie auf **[!UICONTROL Speichern]** klicken, um das aktualisierte S
 
 ### Berechnetes Attribut erstellen {#create-a-computed-attribute}
 
-With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute.
+Wenn Ihr berechnetes Attributfeld identifiziert und bestätigt wird, dass das Schema für [!DNL Profile] aktiviert ist, können Sie jetzt ein berechnetes Attribut konfigurieren.
 
 Richten Sie zunächst eine POST-Anfrage an den `/config/computedAttributes`-Endpunkt mit einem Anfragetext, der die Details des berechneten Attributs enthält, das Sie erstellen möchten.
 
@@ -154,7 +156,7 @@ curl -X POST \
 | `path` | Pfad zum Feld mit dem berechneten Attribut. Dieser Pfad befindet sich im `properties`-Attribut des Schemas und sollte NICHT den Feldnamen im Pfad beinhalten. Lassen Sie beim Schreiben des Pfads die verschiedenen Ebenen von `properties`-Attributen weg. |
 | `{TENANT_ID}` | Wenn Sie Ihre Mandantenkennung nicht kennen, lesen Sie bitte die Anleitung zum Finden Ihrer Mandantenkennung im [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn verschiedene berechnete Attribute definiert wurden, da sie Kollegen in Ihrer IMS-Organisation hilft, das gewünschte berechnete Attribut zu finden. |
-| `expression.value` | Ein gültiger [!DNL Profile Query Language] (PQL-)Ausdruck. Weiterführende Informationen zu PQL und Links zu unterstützten Abfragen finden Sie in der [PQL-Übersicht](../../segmentation/pql/overview.md). |
+| `expression.value` | Ein gültiger Ausdruck [!DNL Profile Query Language] (PQL). Weiterführende Informationen zu PQL und Links zu unterstützten Abfragen finden Sie in der [PQL-Übersicht](../../segmentation/pql/overview.md). |
 | `schema.name` | Die Klasse, auf der das Schema mit dem berechneten Attributfeld basiert. Beispiel: `_xdm.context.experienceevent` bei einem Schema, das auf der XDM ExperienceEvent-Klasse basiert. |
 
 **Antwort**
@@ -475,7 +477,7 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Ein gültiger [!DNL Profile Query Language] (PQL-)Ausdruck. Weiterführende Informationen zu PQL und Links zu unterstützten Abfragen finden Sie in der [PQL-Übersicht](../../segmentation/pql/overview.md). |
+| `{NEW_EXPRESSION_VALUE}` | Ein gültiger Ausdruck [!DNL Profile Query Language] (PQL). Weiterführende Informationen zu PQL und Links zu unterstützten Abfragen finden Sie in der [PQL-Übersicht](../../segmentation/pql/overview.md). |
 
 **Antwort**
 
