@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: Plattform;Ziele;Ziel-Arbeitsbereich;Arbeitsbereich;Benutzeroberfläche;Ziele ui;Katalog;Zielkatalog; Zielkatalog;
 title: Arbeitsbereich „Ziele“
 seo-title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
-seo-description: Wählen Sie in der Echtzeit-Kundendatenplattform von in der linken Navigationsleiste die Option „Ziele“, um auf den Arbeitsbereich „Ziele“ zuzugreifen.
+seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste "Ziele"aus, um auf den Zielarbeitsbereich zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 51%
+source-wordcount: '910'
+ht-degree: 44%
 
 ---
 
 
 # Arbeitsbereich „Ziele“ {#destinations-workspace}
 
-Wählen Sie in der Echtzeit-Kundendatenplattform von in der linken Navigationsleiste die Option **[!UICONTROL Ziele]**, um auf den Arbeitsbereich [!UICONTROL Ziele] zuzugreifen.
+Wählen Sie in Adobe Experience Platform **[!UICONTROL Ziele]** aus der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Ziele] zuzugreifen.
 
 Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: [!UICONTROL Katalog], [!UICONTROL Durchsuchen], [!UICONTROL Konten] und [!UICONTROL Systemansicht]. Diese werden in den folgenden Abschnitten beschrieben.
 
@@ -23,18 +23,18 @@ Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: [!UICONTROL Ka
 
 ## [!UICONTROL Katalog] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Real-time CDP, that you can send data to.
+Auf der Registerkarte **[!UICONTROL Katalog]** wird eine Liste aller in der Plattform verfügbaren Ziele angezeigt, an die Sie Daten senden können.
 
-Die CDP-Benutzeroberfläche in Echtzeit bietet eine Reihe von Such- und Filteroptionen auf der Zielkatalogseite:
+Die Benutzeroberfläche &quot;Plattform&quot;bietet auf der Katalogseite &quot;Ziele&quot;eine Reihe von Such- und Filteroptionen:
 
 * Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu finden.
-* Filtern Sie Ziele mithilfe des Steuerelements [!UICONTROL Kategorien] .
-* Wechsel zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele]. Wenn **[!UICONTROL Alle Ziele]** ausgewählt sind, werden alle verfügbaren CDP-Ziele in Echtzeit angezeigt. Wenn **[!UICONTROL Meine Ziele]** ausgewählt sind, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
-* Wählen Sie Ansicht **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]**. Informationen zum Unterschied zwischen den beiden Kategorien finden Sie unter [Zieltypen und Kategorien](../destination-types.md).
+* Filtern Sie Ziele mithilfe des Steuerelements [!UICONTROL Kategorien].
+* Wechsel zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele]. Wenn **[!UICONTROL Alle Ziele]** ausgewählt ist, werden alle verfügbaren Plattformziele angezeigt. Wenn **[!UICONTROL Meine Ziele]** ausgewählt ist, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
+* Wählen Sie zur Ansicht **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]**. Informationen zum Unterschied zwischen den beiden Kategorien finden Sie unter [Zieltypen und Kategorien](../destination-types.md).
 
 ![Filtern und Suchdemo von Zielen](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]** - oder ein **[!UICONTROL Activate]** -Steuerelement und ein sekundäres Steuerelement, das mehr Optionen aufruft. Diese sind alle nachstehend beschrieben:
+Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]**- oder ein **[!UICONTROL Activate]**-Steuerelement und ein sekundäres Steuerelement, das weitere Optionen aufruft. Diese sind alle nachstehend beschrieben:
 
 | Kontrolle | Beschreibung |
 ---------|----------
@@ -50,7 +50,7 @@ Wählen Sie eine Zielkarte im Katalog aus, um die rechte Leiste zu öffnen.  Hie
 
 ![Optionen im Zielkatalog](../assets/ui/workspace/destination-right-rail.png)
 
-Weitere Informationen zu den Ziel-Kategorien und Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../catalog/overview.md) und in den [Zieltypen und Kategorien](../destination-types.md).
+Weitere Informationen zu den Ziel-Kategorien und Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../catalog/overview.md) und im [Zieltypen und -Kategorien](../destination-types.md).
 
 ## [!UICONTROL Konten] {#accounts}
 
@@ -58,7 +58,7 @@ Auf der Registerkarte **[!UICONTROL Konten]** erfahren Sie mehr über die Verbin
 
 >[!TIP]
 >
->Verwenden Sie die ![Schaltfläche](../assets/ui/workspace/add-data-symbol.png) für Hinzufügen Daten in der Spalte &quot; **[!UICONTROL Plattform]** &quot;, um eine neue Zielverbindung für dieses Konto zu erstellen.
+>Verwenden Sie die Schaltfläche ![Hinzufügen in der Spalte **[!UICONTROL Plattform]**, um eine neue Zielverbindung für dieses Konto zu erstellen.](../assets/ui/workspace/add-data-symbol.png)
 
 ![Registerkarte „Konten“](../assets/ui/workspace/edit-account-destinations.png)
 
@@ -70,25 +70,25 @@ Auf der Registerkarte **[!UICONTROL Konten]** erfahren Sie mehr über die Verbin
 | [!UICONTROL Ziele] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Zielflüsse mit grundlegenden Informationen an, die für ein Ziel erstellt wurden. |
 | [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
 
-Darüber hinaus können Sie Ihre Kontoinformationen bearbeiten oder aktualisieren. Klicken Sie in der Spalte &quot; ![Plattform](../assets/ui/workspace/pencil-icon.png) &quot;auf die Schaltfläche &quot;Konto **[!UICONTROL bearbeiten&quot;]** , um die Kontoinformationen zu bearbeiten.
+Darüber hinaus können Sie Ihre Kontoinformationen bearbeiten oder aktualisieren. Klicken Sie in der Spalte **[!UICONTROL Plattform]** auf die Schaltfläche Konto bearbeiten, um die Kontoinformationen zu bearbeiten.![](../assets/ui/workspace/pencil-icon.png)
 
-Bei Konten, die einen `OAuth2` Verbindungstyp verwenden, können Sie &quot;OAuth **[!UICONTROL erneut verbinden&quot;auswählen, um Ihre Kontoanmeldeinformationen zu verlängern]** .
+Bei Konten, die einen Verbindungstyp `OAuth2` verwenden, können Sie **[!UICONTROL OAuth]** erneut verbinden auswählen, um Ihre Kontoanmeldeinformationen zu verlängern.
 
 ![Oauth-Bild](../assets/ui/workspace/reconnect-oauth.png)
 
-Bei Konten, die einen `Access Key` oder einen `ConnectionString` Verbindungstyp verwenden, können Sie Ihre Kontoauthentifizierungsinformationen bearbeiten, einschließlich Informationen wie Zugriffs-ID, geheime Schlüssel oder Verbindungszeichenfolgen.
+Bei Konten mit einem Verbindungstyp `Access Key` oder `ConnectionString` können Sie Ihre Kontoauthentifizierungsinformationen bearbeiten, einschließlich Informationen wie Zugriffskennung, geheime Schlüssel oder Verbindungszeichenfolgen.
 
 ![Bild zu Kontoinformationen](../assets/ui/workspace/edit-account-details.png)
 
-Nachdem Sie die Bearbeitung Ihrer Kontodetails abgeschlossen haben, wählen Sie **[!UICONTROL Speichern]** , um die Aktualisierung abzuschließen.
+Nachdem Sie die Bearbeitung Ihrer Kontodetails abgeschlossen haben, wählen Sie **[!UICONTROL Speichern]**, um die Aktualisierung abzuschließen.
 
 ## [!UICONTROL Durchsuchen] {#browse}
 
-Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte „Durchsuchen“ verfügbar sind:
+Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Ziele, bei denen der Umschalter **[!UICONTROL Aktiviert]** aktiviert ist, stellen Sie das Ziel auf &quot;aktiv&quot;und umgekehrt ein. Sie können die Ziele, an denen Daten fließen, auch durch Auswahl von **[!UICONTROL Segmente]** > **[!UICONTROL Durchsuchen]** und Auswahl eines zu prüfenden Segments Ansicht haben. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte „Durchsuchen“ verfügbar sind:
 
 >[!TIP]
 >
->Verwenden Sie die ![Schaltfläche](../assets/ui/workspace/add-data-symbol.png) für Hinzufügen Daten in der Spalte **[!UICONTROL Name]** , um weitere Segmente für dieses Ziel zu aktivieren.
+>Verwenden Sie die Schaltfläche ![Hinzufügen in der Spalte **[!UICONTROL Name]**, um weitere Segmente zu diesem Ziel zu aktivieren.](../assets/ui/workspace/add-data-symbol.png)
 
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
 
@@ -110,7 +110,7 @@ Wählen Sie den Zielnamen aus, um Informationen zu den für dieses Ziel aktivier
 
 ## [!UICONTROL Systemansicht] {#system-view}
 
-Auf der Registerkarte **[!UICONTROL Systemansicht]** wird eine grafische Darstellung der Aktivierungsflüsse angezeigt, die Sie in der Echtzeit-Kundendatenplattform eingerichtet haben.
+Auf der Registerkarte **[!UICONTROL Ansicht des Systems]** wird eine grafische Darstellung der Aktivierungen angezeigt, die Sie in Adobe Experience Platform eingerichtet haben.
 
 ![Datenflüsse1](../assets/ui/workspace/data-flows1.png)
 
