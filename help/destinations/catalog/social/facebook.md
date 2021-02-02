@@ -1,14 +1,14 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
+keywords: Facebook-Erweiterungen;Facebook-Erweiterung;Facebook-Ziele;Facebook;Instagram;Messenger;Facebook-Messenger
 title: Facebook-Ziel
 seo-title: Facebook-Ziel
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: d0b6225a726c13e2b77ea0f61446ea489df81e69
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 19%
+source-wordcount: '939'
+ht-degree: 15%
 
 ---
 
@@ -17,35 +17,35 @@ ht-degree: 19%
 
 ## Übersicht {#overview}
 
-Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
+Aktivieren Sie Profil für Ihre [!DNL Facebook]-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 
-Sie können dieses Ziel für das Targeting von Audiencen in [!DNL Facebook’s] einer Reihe von Apps verwenden, die von [!DNL Custom Audiences], einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] und [!DNL Messenger]unterstützt werden. Die Auswahl der App, für die Sie die Kampagne ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager] angezeigt.
+Sie können dieses Ziel für das Targeting von Audiencen in [!DNL Facebook’s]-Apps verwenden, die von [!DNL Custom Audiences] unterstützt werden, einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] und [!DNL Messenger]. Die Auswahl der App, für die Sie die Kampagne ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager] angezeigt.
 
-![Facebook-Ziel in der CDP-Benutzeroberfläche in Echtzeit](../../assets/catalog/social/facebook/catalog.png)
+![Facebook-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/facebook/catalog.png)
 
 ## Nutzungsszenarien
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook] Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Kunden der Echtzeit-Kundendatenplattform mit dieser Funktion lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook]-Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
 ### Verwendungsfall Nr. 1
 
-Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebot auf Basis ihrer bisherigen Bestellungen zeigen. Der Online-Händler kann E-Mail-Adressen aus seinem eigenen CRM in Echtzeit-CDP erfassen, Segmente aus eigenen Offlinedaten erstellen und diese Segmente an die [!DNL Facebook] Social-Plattform senden, um ihre Werbeausgaben zu optimieren.
+Ein Online-Händler möchte bestehende Kunden über soziale Plattformen erreichen und ihnen personalisierte Angebot auf Basis ihrer bisherigen Bestellungen zeigen. Der Online-Händler kann E-Mail-Adressen aus seinem eigenen CRM-System nach Adobe Experience Platform erfassen, Segmente aus eigenen Offlinedaten erstellen und diese Segmente an die [!DNL Facebook]-Social-Plattform senden, um ihre Werbeausgaben zu optimieren.
 
 ### Verwendungsfall Nr. 2
 
 Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silver und Gold) und möchte jede dieser Stufen mit personalisierten Angeboten über soziale Plattformen versorgen. Nicht alle Kunden verwenden jedoch die mobile App der Fluggesellschaft, und einige von ihnen haben sich noch nicht bei der Website der Firma angemeldet. Die einzigen IDs, die die Firma zu diesen Kunden hat, sind Mitgliedschafts-IDs und E-Mail-Adressen.
 
-Um sie über soziale Netzwerke hinweg Zielgruppe, können sie die Kundendaten aus ihrem CRM-System in Echtzeit-CDP einbinden und dabei die E-Mail-Adressen als Bezeichner verwenden.
+Um sie über soziale Netzwerke hinweg Zielgruppe, können sie die Kundendaten aus ihrem CRM-System in Adobe Experience Platform einbinden und dabei die E-Mail-Adressen als Bezeichner verwenden.
 
-Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das [!DNL Facebook] Ziel Zielgruppe haben können.
+Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das [!DNL Facebook]-Ziel Zielgruppe haben.
 
 ## Zielspezifikationen {#destination-specs}
 
-### Datenverwaltung für [!DNL Facebook] Ziele {#data-governance}
+### Datenverwaltung für [!DNL Facebook]-Ziele {#data-governance}
 
 >[!IMPORTANT]
 >
->Daten, die an gesendet werden, [!DNL Facebook] sollten keine gehefteten Identitäten enthalten. Sie sind für die Erfüllung dieser Verpflichtung verantwortlich und können dies tun, indem Sie sicherstellen, dass Segmente, die für die Aktivierung ausgewählt wurden, keine Heftoption in ihrer Fusionsrichtlinie verwenden. Weitere Informationen zu [Zusammenführungsrichtlinien](/help/profile/ui/merge-policies.md).
+>Daten, die an [!DNL Facebook] gesendet werden, sollten keine gehefteten Identitäten enthalten. Sie sind für die Erfüllung dieser Verpflichtung verantwortlich und können dies tun, indem Sie sicherstellen, dass Segmente, die für die Aktivierung ausgewählt wurden, keine Heftoption in ihrer Fusionsrichtlinie verwenden. Erfahren Sie mehr über [Mergepolicies](/help/profile/ui/merge-policies.md).
 
 ### Exporttyp {#export-type}
 
@@ -55,18 +55,36 @@ Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mi
 
 Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sicherstellen, dass Sie die folgenden Voraussetzungen erfüllen:
 
-- Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
-- The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Hinzufügen Partner zu Ihrem Business Manager](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
+- Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]**-Berechtigung für das Anzeigenkonto aktiviert sein, das Sie verwenden möchten.
+- Das Geschäftskonto **Adobe Experience Cloud** muss als Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Hinzufügen Partner in Ihrem Business Manager](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
    >[!IMPORTANT]
    >
-   > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Dies ist für die [!DNL Real-time CDP]-Integration erforderlich.
+   > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Dies ist für die [!DNL Adobe Experience Platform]-Integration erforderlich.
 - Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Rufen Sie dazu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` auf, wobei `accountID` Ihre [!DNL Facebook Ad Account ID] ist.
 
-### Anforderungen für das E-Mail-Hashing {#email-hashing-requirements}
+### Anforderungen für die ID-Übereinstimmung {#id-matching-requirements}
 
-[!DNL Facebook] verlangt, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher [!DNL Facebook] müssen die aktivierten Audiencen von *Hash* -E-Mail-Adressen abgekoppelt werden. Sie können E-Mail-Adressen vor der Einbindung in Adobe Experience Platform als Hash-E-Mail-Adressen festlegen oder Sie können in Experience Platform mit E-Mail-Adressen arbeiten und sie von unserem Algorithmus auf Aktivierung hash lassen.
+[!DNL Facebook] verlangt, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher können die für [!DNL Facebook] aktivierten Audiencen anhand von *Hash*-IDs wie E-Mail-Adressen oder Telefonnummern ausgewertet werden.
 
-Weitere Informationen zum Eingeben von E-Mail-Adressen in der Experience Platform finden Sie in der Übersicht über die [Stapelverarbeitung](/help/ingestion/batch-ingestion/overview.md) und in der Übersicht über die [Erfassung](/help/ingestion/streaming-ingestion/overview.md)des Streamings.
+Abhängig von der Art der IDs, die Sie in Adobe Experience Platform eingeben, müssen Sie die entsprechenden Anforderungen erfüllen.
+
+#### Hashanforderungen für Telefonnummern {#phone-number-hashing-requirements}
+
+Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
+
+- **Rohe Telefonnummern** eingehen: Sie können rohe Telefonnummern im  [!DNL E.164] Format in  [!DNL Platform]aufnehmen, die bei der Aktivierung automatisch mit Hashing versehen werden. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den `Phone_E.164`-Namensraum einzugeben.
+- **Hash-Telefonnummern** eingehen: Sie können Ihre Telefonnummern vorab hash, bevor Sie  [!DNL Platform]einsteigen. Wenn Sie diese Option wählen, vergewissern Sie sich, dass Sie stets Ihre Hash-Telefonnummern in den `Phone_SHA256`-Namensraum eingeben.
+
+>[!NOTE]
+>
+>Telefonnummern, die in den `Phone`-Namensraum aufgenommen werden, können in [!DNL Facebook] nicht aktiviert werden.
+
+
+#### Anforderungen für das E-Mail-Hashing {#email-hashing-requirements}
+
+Sie können E-Mail-Adressen vor der Einbindung in Adobe Experience Platform als Hash-E-Mail-Adressen festlegen oder Sie können in Experience Platform mit E-Mail-Adressen arbeiten und sie von unserem Algorithmus auf Aktivierung hash lassen.
+
+Weitere Informationen zum Eingeben von E-Mail-Adressen in der Experience Platform finden Sie unter [Überblick über die Batch-Erfassung](/help/ingestion/batch-ingestion/overview.md) und [Übersicht über die Dampfaufnahme](/help/ingestion/streaming-ingestion/overview.md).
 
 Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Sie sicher, dass folgende Anforderungen erfüllt sind:
 
@@ -77,25 +95,31 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
    - Beispiel: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, nicht `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Salt die Zeichenfolge nicht.
 
+Daten von Namensräumen ohne Hash werden bei Aktivierung automatisch durch [!DNL Platform] gehasht.
 
->[!IMPORTANT]
->
->Wenn Sie sich dafür entscheiden, keine E-Mail-Adressen zu hash, wird dies von CDP in Echtzeit für Sie ausgeführt, wenn Sie Segmente aktivieren in [!DNL Facebook]. Wählen Sie im Arbeitsablauf für die [Aktivierung](../../ui/activate-destinations.md#activate-data) (siehe Schritt 5) die `Email` Option wie unten für *E-Mail-Adressen* und `Email_LC_SHA256` für *Hash-E-Mail-Adressen* gezeigt.
+Attributquellendaten werden nicht automatisch mit Hashing versehen. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash.
+![Identitätszuordnungs-Transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-![Hashing bei der Aktivierung](../../assets/common/identity-mapping.png)
+#### Verwenden benutzerdefinierter Namensraum {#custom-namespaces}
+
+Bevor Sie den Namensraum `Extern_ID` verwenden können, um Daten an [!DNL Facebook] zu senden, müssen Sie sicherstellen, dass Sie Ihre eigenen IDs mit [!DNL Facebook Pixel] synchronisieren. Ausführliche Informationen finden Sie in der [offiziellen Dokumentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers).
 
 ## Mit Ziel verbinden {#connect-destination}
 
-To connect to the [!DNL Facebook] destination, see [Social network destinations authentication workflow](./workflow.md).
+Informationen zum Herstellen einer Verbindung mit dem Ziel [!DNL Facebook] finden Sie unter [Authentifizierungsarbeitsablauf für Social-Netzwerkziele](./workflow.md).
 
-## Activate segments to [!DNL Facebook] {#activate-segments}
+## Aktivieren von Segmenten nach [!DNL Facebook] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+Anweisungen zum Aktivieren von Segmenten in [!DNL Facebook] finden Sie unter [Daten in Ziele aktivieren](../../ui/activate-destinations.md).
+
+Im Schritt **[!UICONTROL Segmentplan]** müssen Sie die [!UICONTROL Herkunft der Audience] angeben, wenn Sie Segmente an [!DNL Facebook Custom Audiences] senden.
+
+![Facebook-Herkunft der Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## Exportierte Daten {#exported-data}
 
-For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
+Bei [!DNL Facebook] bedeutet eine erfolgreiche Aktivierung, dass eine [!DNL Facebook] benutzerdefinierte Audience programmgesteuert in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/) erstellt wird. Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
 
 >[!TIP]
 >
->Die Integration zwischen Echtzeit-CDP und [!DNL Facebook] unterstützt historische Audiencen-Backfills. Alle historischen Segmentqualifikationen werden an gesendet, [!DNL Facebook] wenn Sie die Segmente an das Ziel aktivieren.
+>Die Integration zwischen Adobe Experience Platform und [!DNL Facebook] unterstützt Backfills für historische Audiencen. Alle historischen Segmentqualifikationen werden an [!DNL Facebook] gesendet, wenn Sie die Segmente an das Ziel aktivieren.
