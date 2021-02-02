@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;cloud storage data
+keywords: Experience Platform;Home;beliebte Themen;Cloud-Datenspeicherung-Daten
 solution: Experience Platform
 title: Erfassen von Cloud-Datenspeicherung-Daten über Quellschnittstellen und APIs
 topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Cloud-Datenspeicherung eines Drittanbieters und deren anschließender Integration in die Plattform über Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: cab1d65b643b919a6529926cd0856d89c5264d55
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1621'
 ht-degree: 19%
 
 ---
@@ -38,7 +38,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../tutorials/authentication.md) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
