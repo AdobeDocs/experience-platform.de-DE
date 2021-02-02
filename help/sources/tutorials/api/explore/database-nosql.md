@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform;home;popular topics;third party database;database flow service
+keywords: Experience Platform;Startseite;beliebte Themen;Drittanbieter-Datenbank;Datenbankflussdienst
 solution: Experience Platform
 title: Datenbank mithilfe der Flow Service API überprüfen
 topic: overview
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Inhalt und Dateistruktur einer Drittanbieter-Datenbank zu untersuchen.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 23%
+source-wordcount: '600'
+ht-degree: 22%
 
 ---
 
 
-# Datenbank mit der [!DNL Flow Service] API
+# Datenbank mit der API[!DNL Flow Service]
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die [!DNL Flow Service] API, um Inhalt und Dateistruktur einer Datenbank eines Drittanbieters zu untersuchen.
+Dieses Lernprogramm verwendet die API [!DNL Flow Service], um den Inhalt und die Dateistruktur einer Datenbank eines Drittanbieters zu untersuchen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
+* [Sandboxen](../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully connect to a third-party database using the [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um mit der API [!DNL Flow Service] eine Verbindung zu einer Datenbank eines Drittanbieters herstellen zu können.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Für dieses Lernprogramm müssen Sie über eine gültige Verbindung mit der Datenbank eines Drittanbieters verfügen, aus der Sie Daten erfassen möchten. Eine gültige Verbindung besteht aus der Verbindungs-ID und der Verbindungs-ID Ihrer Datenbank. Weitere Informationen zum Erstellen einer Datenbankverbindung und zum Abrufen dieser Werte finden Sie in der Übersicht über die [Quell-Connectors](./../../../home.md#database).
+Für dieses Lernprogramm müssen Sie über eine gültige Verbindung mit der Datenbank eines Drittanbieters verfügen, aus der Sie Daten erfassen möchten. Eine gültige Verbindung besteht aus der Verbindungs-ID und der Verbindungs-ID Ihrer Datenbank. Weitere Informationen zum Erstellen einer Datenbankverbindung und zum Abrufen dieser Werte finden Sie in der [Übersicht über die Quellschnittstellen](./../../../home.md#database).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -38,13 +38,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../tutorials/authentication.md) abschließen. Completing the authentication tutorial provides the values for each of the required headers in all E[!DNL xperience Platform] API calls, as shown below:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Wenn Sie das Authentifizierungstreutorial abschließen, erhalten Sie die Werte für die einzelnen erforderlichen Kopfzeilen in allen E[!DNL xperience Platform]-API-Aufrufen, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Ihre Datentabellen
 
-Mithilfe der Verbindungs-ID für Ihre Datenbank können Sie Ihre Datentabellen durch Ausführen von GET-Anforderungen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie überprüfen oder in die Sie eingehen möchten [!DNL Platform].
+Mithilfe der Verbindungs-ID für Ihre Datenbank können Sie Ihre Datentabellen durch Ausführen von GET-Anforderungen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie überprüfen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Tabellenarray aus Ihrer Datenbank zurück. Suchen Sie nach der Tabelle, die Sie in Ihre [!DNL Platform] Eigenschaft aufnehmen möchten, `path` und notieren Sie sich diese, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt ein Tabellenarray aus Ihrer Datenbank zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] einbinden möchten, und beachten Sie die `path`-Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um die Struktur zu überprüfen.
 
 ```json
 [
@@ -128,7 +128,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Tabellenspalten befinden sich innerhalb der Elemente des `columns` Arrays.
+Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich innerhalb der Elemente des `columns`-Arrays.
 
 ```json
 {
@@ -156,4 +156,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihre Datenbank erforscht, den Pfad der Tabelle gefunden, in die Sie eingehen möchten, [!DNL Platform]und Informationen zu ihrer Struktur erhalten. Sie können diese Informationen im nächsten Lernprogramm verwenden, um Daten aus Ihrer Datenbank zu [erfassen und in die Plattform](../collect/database-nosql.md)zu bringen.
+In diesem Tutorial haben Sie Ihre Datenbank erforscht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen zu ihrer Struktur erhalten. Sie können diese Informationen im nächsten Lernprogramm zu [verwenden, um Daten aus Ihrer Datenbank zu erfassen und in Platform](../collect/database-nosql.md) zu laden.
