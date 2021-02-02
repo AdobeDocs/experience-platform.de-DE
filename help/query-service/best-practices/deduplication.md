@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Daten-Deduplizierung-Duplikate;Deduplizierung-Duplikate
 solution: Experience Platform
 title: Data Deduplizierung-Duplikate
 topic: queries
@@ -8,7 +8,7 @@ description: In diesem Dokument werden Beispiele für die Unter-Auswahl- und vol
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
