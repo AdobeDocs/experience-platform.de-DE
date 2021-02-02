@@ -1,27 +1,29 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Entitäten - Echtzeit-Client-Profil-API
+keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
+title: Entitäten (Profil Access) API-Endpunkt
 topic: guide
+type: Documentation
+description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofil-Daten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen, die häufiger als "Profil"bezeichnet werden.
 translation-type: tm+mt
-source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 88%
+source-wordcount: '1737'
+ht-degree: 87%
 
 ---
 
 
 # Entitätsendpunkt (Profil-Zugriff)
 
-Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile] data using RESTful APIs or the user interface. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. For more information on accessing profiles using the [!DNL Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
+Mit Adobe Experience Platform können Sie mithilfe von RESTful-APIs oder der Benutzeroberfläche auf [!DNL Real-time Customer Profile]-Daten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. Weitere Informationen zum Zugriff auf Profil mit der [!DNL Platform]-Benutzeroberfläche finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil des [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Zugriff auf Profildaten nach Identität
 
-You can access a [!DNL Profile] entity by making a GET request to the `/access/entities` endpoint and providing the entity&#39;s identity as a series of query parameters. Diese Identität besteht aus einem ID-Wert (`entityId`) und dem Identitäts-Namespace (`entityIdNS`).
+Sie können auf eine [!DNL Profile]-Entität zugreifen, indem Sie eine GET an den `/access/entities`-Endpunkt anfordern und die Entität als eine Reihe von Abfragen-Parametern bereitstellen. Diese Identität besteht aus einem ID-Wert (`entityId`) und dem Identitäts-Namespace (`entityIdNS`).
 
 Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
@@ -776,7 +778,7 @@ Mithilfe dieser Payload im Anfragetext können Sie eine weitere POST-Anfrage an 
 
 ## Zeitreihenereignisse in mehreren Schemaentitäten aufrufen
 
-Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemas definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [!DNL Schema Registry] API-Entwicklerhandbuch [für Deskriptoren-Endpunkte](../../xdm/api/descriptors.md).
+Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemas definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [!DNL Schema Registry] API-Entwicklerhandbuch [deskriptors endpoint guide](../../xdm/api/descriptors.md).
 
 Sie können in den Anfragepfad Abfrageparameter einbeziehen, um anzugeben, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
@@ -886,11 +888,11 @@ Ergebnisse werden beim Abrufen von Zeitreihenereignissen paginiert. Wenn es weit
 
 ## Nächste Schritte
 
-By following this guide you have successfully accessed [!DNL Real-time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Platform], see the [Data Access overview](../../data-access/home.md).
+In diesem Handbuch haben Sie erfolgreich auf [!DNL Real-time Customer Profile]-Datenfelder, Profil und Zeitreihendaten zugegriffen. Informationen zum Zugriff auf andere in [!DNL Platform] gespeicherte Datenressourcen finden Sie unter [Übersicht über den Datenzugriff](../../data-access/home.md).
 
 ## Anhang {#appendix}
 
-The following section provides supplemental information regarding accessing [!DNL Profile] data using the API.
+Der folgende Abschnitt enthält zusätzliche Informationen zum Zugriff auf [!DNL Profile]-Daten mithilfe der API.
 
 ### Abfrageparameter {#query-parameters}
 
