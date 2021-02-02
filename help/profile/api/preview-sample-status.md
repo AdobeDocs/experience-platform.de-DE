@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
+keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Vorschau;Beispiel
 title: Profil-Vorschau - Echtzeit-Client-Profil-API
-description: Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da Daten, die für Echtzeit-Kundendaten aktiviert wurden, in Plattform erfasst werden, werden sie im Profil-Datenspeicher gespeichert. Wenn die Anzahl der Datensätze im Profil-Store zunimmt oder sinkt, wird ein Musterauftrag ausgeführt, der Informationen darüber enthält, wie viele Profil-Fragmente und zusammengeführte Profil sich im Datenspeicher befinden. Mithilfe der Profil-API können Sie das neueste erfolgreiche Beispiel sowie die Verteilung von Listen-Profilen nach Datensatz und Identitäts-Namensraum Vorschau werden.
+description: Mithilfe von Echtzeit-API-Endpunkten für Kunden-Profil können Sie die neueste erfolgreiche Vorschau Ihrer Profil-Daten sowie die Verteilung von Listen-Profilen nach Dataset und Identitäts-Namensraum innerhalb von Adobe Experience Platform verwenden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1554'
 ht-degree: 5%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Vorschau-Musterstatus-Endpunkt (Profil-Vorschau)
 
-Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da Daten, die für Echtzeit-Kundendaten aktiviert sind, in erfasst werden, werden sie im Profil-Datenspeicher gespeichert [!DNL Platform].
+Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da für Echtzeit-Kundendaten aktivierte Daten in [!DNL Platform] eingehen, werden sie im Profil-Datenspeicher gespeichert.
 
 Wenn die Erfassung von Datensätzen im Profil Store die Gesamtanzahl der Profil um mehr als 5 % erhöht oder verringert, wird ein Auftrag zur Aktualisierung der Anzahl ausgelöst. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Zählung zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Mithilfe der Profil-API können Sie den neuesten erfolgreichen Musterauftrag sowie die Verteilung des Liste-Profils nach Datensatz und Identitäts-Namensraum Vorschau werden.
 
-Diese Metriken stehen auch im Bereich &quot; [!UICONTROL Profil] &quot;der Benutzeroberfläche &quot;Experience Platform&quot;zur Verfügung. Informationen zum Zugriff auf Profil-Daten über die Benutzeroberfläche finden Sie im [[!DNL Profile] Benutzerhandbuch](../ui/user-guide.md).
+Diese Metriken stehen auch im Bereich [!UICONTROL Profil] der Benutzeroberfläche der Experience Platform zur Verfügung. Informationen zum Zugriff auf Profil-Daten über die Benutzeroberfläche finden Sie im [[!DNL Profile] Benutzerhandbuch](../ui/user-guide.md).
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Fragmente im Profil im Vergleich zu zusammengeführten Profilen
 
@@ -32,7 +32,7 @@ Jedes einzelne Profil besteht aus mehreren Profil-Fragmenten, die zu einer einzi
 
 ## Letzter Musterstatus der Ansicht {#view-last-sample-status}
 
-Sie können eine GET an den `/previewsamplestatus` Endpunkt senden, um die Details zum letzten erfolgreichen Musterauftrag, der für Ihre IMS-Organisation ausgeführt wurde, Ansicht. Dies umfasst die Gesamtzahl der Profil im Beispiel sowie die Metrik zur Anzahl der Profil oder die Gesamtzahl der Profil, die Ihr Unternehmen innerhalb der Experience Platform hat. Die Profil-Anzahl wird nach dem Zusammenführen von Profil-Fragmenten generiert, um für jeden einzelnen Kunden ein Profil zu bilden. Mit anderen Worten: Ihre Organisation hat möglicherweise verschiedene Profilfragmente, die sich auf einen einzelnen Kunden beziehen, der mit Ihrer Marke über unterschiedliche Kanäle interagiert. Diese Fragmente würden jedoch zusammengeführt (gemäß der standardmäßigen Zusammenführungsrichtlinie) und eine Anzahl von „1“ zurückgeben, da sie alle mit derselben Person verbunden sind.
+Sie können eine GET an den `/previewsamplestatus`-Endpunkt senden, um die Details für den letzten erfolgreichen Musterauftrag, der für Ihre IMS-Organisation ausgeführt wurde, Ansicht. Dies umfasst die Gesamtzahl der Profil im Beispiel sowie die Metrik zur Anzahl der Profil oder die Gesamtzahl der Profil, die Ihr Unternehmen innerhalb der Experience Platform hat. Die Profil-Anzahl wird nach dem Zusammenführen von Profil-Fragmenten generiert, um für jeden einzelnen Kunden ein Profil zu bilden. Mit anderen Worten: Ihre Organisation hat möglicherweise verschiedene Profilfragmente, die sich auf einen einzelnen Kunden beziehen, der mit Ihrer Marke über unterschiedliche Kanäle interagiert. Diese Fragmente würden jedoch zusammengeführt (gemäß der standardmäßigen Zusammenführungsrichtlinie) und eine Anzahl von „1“ zurückgeben, da sie alle mit derselben Person verbunden sind.
 
 Die Profil-Anzahl umfasst auch Profil mit Attributen (Datensatzdaten) sowie Profil, die nur Zeitreihendaten (Ereignis) enthalten, wie z. B. Adobe Analytics-Profil. Der Musterauftrag wird regelmäßig aktualisiert, wenn Profil-Daten erfasst werden, um eine aktuelle Gesamtanzahl von Profilen innerhalb der Plattform bereitzustellen.
 
@@ -59,7 +59,7 @@ Die Antwort enthält die Details zum letzten erfolgreichen Musterauftrag, der f�
 
 >[!NOTE]
 >
->In diesem Beispiel antworten `numRowsToRead` und `totalRows` sind gleich. Je nachdem, wie viele Profile Ihr Unternehmen in der Experience Platform hat, kann dies der Fall sein. Im Allgemeinen unterscheiden sich diese beiden Zahlen jedoch, wobei `numRowsToRead` die kleinere Zahl die Stichprobe als Untergruppe der Gesamtanzahl der Profil darstellt (`totalRows`).
+>In dieser Beispielantwort sind `numRowsToRead` und `totalRows` gleich. Je nachdem, wie viele Profile Ihr Unternehmen in der Experience Platform hat, kann dies der Fall sein. Im Allgemeinen unterscheiden sich diese beiden Zahlen jedoch, wobei `numRowsToRead` kleiner ist, da es das Beispiel als Untergruppe der Gesamtanzahl der Profil (`totalRows`) darstellt.
 
 ```json
 {
@@ -84,7 +84,7 @@ Die Antwort enthält die Details zum letzten erfolgreichen Musterauftrag, der f�
 | Eigenschaft | Beschreibung |
 |---|---|
 | `numRowsToRead` | Die Gesamtzahl der zusammengeführten Profil im Beispiel. |
-| `sampleJobRunning` | Ein boolescher Wert, der zurückgegeben wird, `true` wenn ein Musterauftrag ausgeführt wird. Bietet Transparenz in Bezug auf die Latenz, die entsteht, wenn eine Stapelverarbeitungsdatei in den Profil-Store hochgeladen wird. |
+| `sampleJobRunning` | Ein boolescher Wert, der `true` zurückgibt, wenn ein Musterauftrag ausgeführt wird. Bietet Transparenz in Bezug auf die Latenz, die entsteht, wenn eine Stapelverarbeitungsdatei in den Profil-Store hochgeladen wird. |
 | `cosmosDocCount` | Gesamtanzahl der Dokumente in Kosmos. |
 | `totalFragmentCount` | Gesamtanzahl der Profil-Fragmente im Profil Store. |
 | `lastSuccessfulBatchTimestamp` | Letzter erfolgreicher Zeitstempel für die Stapelverarbeitung. |
@@ -92,13 +92,13 @@ Die Antwort enthält die Details zum letzten erfolgreichen Musterauftrag, der f�
 | `totalRows` | Gesamtanzahl der zusammengeführten Profil in der Experience-Plattform, auch als &quot;Profil-Anzahl&quot;bezeichnet. |
 | `lastBatchId` | Letzte Batch-Erfassungskennung. |
 | `status` | Status des letzten Beispiels. |
-| `samplingRatio` | Verhältnis der beprobten (`numRowsToRead`) zusammengeführten Profil zu den zusammengeführten (`totalRows`) Profilen insgesamt, ausgedrückt als Prozentsatz im Dezimalformat. |
+| `samplingRatio` | Verhältnis der gesampelten zusammengeführten Profil (`numRowsToRead`) zu den zusammengeführten Profilen insgesamt (`totalRows`), ausgedrückt als Prozentwert im Dezimalformat. |
 | `mergeStrategy` | In der Stichprobe verwendete Merge-Strategie. |
 | `lastSampledTimestamp` | Letzter erfolgreicher Beispiel-Zeitstempel. |
 
 ## Verteilung von Liste-Profil nach Datensatz
 
-Um die Verteilung der Profil nach Datensatz anzuzeigen, können Sie eine GET an den `/previewsamplestatus/report/dataset` Endpunkt anfordern.
+Um die Verteilung der Profil nach Datensatz anzuzeigen, können Sie eine GET an den `/previewsamplestatus/report/dataset`-Endpunkt anfordern.
 
 **API-Format**
 
@@ -113,7 +113,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anforderung verwendet den `date` Parameter, um den letzten Bericht für das angegebene Datum zurückzugeben.
+Die folgende Anforderung verwendet den Parameter `date`, um den letzten Bericht für das angegebene Datum zurückzugeben.
 
 ```shell
 curl -X GET \
@@ -126,7 +126,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält ein `data` Array mit einer Liste von DataSet-Objekten. Die angezeigte Antwort wurde abgeschnitten und zeigt drei Datensätze an.
+Die Antwort enthält ein `data`-Array, das eine Liste von DataSet-Objekten enthält. Die angezeigte Antwort wurde abgeschnitten und zeigt drei Datensätze an.
 
 >[!NOTE]
 >
@@ -179,21 +179,21 @@ Die Antwort enthält ein `data` Array mit einer Liste von DataSet-Objekten. Die 
 | Eigenschaft | Beschreibung |
 |---|---|
 | `sampleCount` | Die Gesamtzahl der zusammengeführten Profil mit dieser Datensatzkennung, die als Stichprobe erfasst wurden. |
-| `samplePercentage` | Der `sampleCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profil der Stichprobe (der `numRowsToRead` im [letzten Stichprobenstatus](#view-last-sample-status)zurückgegebene Wert), ausgedrückt als Dezimalformat. |
+| `samplePercentage` | Der Wert `sampleCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profil mit Stichprobe (der Wert `numRowsToRead`, wie im [letzten Musterstatus](#view-last-sample-status) zurückgegeben), ausgedrückt als Dezimalformat. |
 | `fullIDsCount` | Die Gesamtanzahl der zusammengeführten Profil mit dieser DataSet-ID. |
-| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profil (der `totalRows` im [letzten Musterstatus](#view-last-sample-status)zurückgegebene Wert), ausgedrückt als Dezimalformat. |
+| `fullIDsPercentage` | Der Wert `fullIDsCount` als Prozentsatz der Gesamtanzahl der zusammengeführten Profil (der Wert `totalRows`, der im [letzten Musterstatus](#view-last-sample-status) zurückgegeben wird), ausgedrückt als Dezimalformat. |
 | `name` | Der Name des Datensatzes, wie er bei der Erstellung des Datensatzes angegeben wird. |
 | `description` | Die Beschreibung des Datensatzes, wie bei der Erstellung des Datensatzes angegeben. |
 | `value` | Die ID des Datensatzes. |
 | `streamingIngestionEnabled` | Ob der Datensatz für die Streaming-Erfassung aktiviert ist. |
 | `createdUser` | Die Benutzer-ID des Benutzers, der den Datensatz erstellt hat. |
-| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anforderung ein `date` Parameter angegeben wurde, gilt der zurückgegebene Bericht für das angegebene Datum. Wenn kein `date` Parameter angegeben ist, wird der letzte Bericht zurückgegeben. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anforderung ein Parameter `date` angegeben wurde, gilt der zurückgegebene Bericht für das angegebene Datum. Wenn kein Parameter `date` angegeben ist, wird der letzte Bericht zurückgegeben. |
 
 
 
 ## Verteilung von Liste-Profil nach Namensraum
 
-Sie können eine GET-Anforderung an den `/previewsamplestatus/report/namespace` Endpunkt ausführen, um die Aufschlüsselung nach Identitäts-Namensraum für alle zusammengeführten Profil in Ihrem Profil Store Ansicht. Identity Namensräume sind eine wichtige Komponente des Adobe Experience Platform Identity Service, die als Indikatoren für den Kontext dient, auf den sich Kundendaten beziehen. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).
+Sie können eine GET an den `/previewsamplestatus/report/namespace`-Endpunkt ausführen, um die Aufschlüsselung nach Identitäts-Namensraum für alle zusammengeführten Profil in Ihrem Profil-Store Ansicht. Identity Namensräume sind eine wichtige Komponente des Adobe Experience Platform Identity Service, die als Indikatoren für den Kontext dient, auf den sich Kundendaten beziehen. Weitere Informationen finden Sie unter [Übersicht über den Identitäts-Namensraum](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -212,7 +212,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anforderung gibt keinen `date` Parameter an und gibt daher den letzten Bericht zurück.
+Die folgende Anforderung gibt keinen Parameter `date` an und gibt daher den letzten Bericht zurück.
 
 ```shell
 curl -X GET \
@@ -225,7 +225,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält ein `data` Array mit den einzelnen Objekten, die die Details zu den einzelnen Namensräumen enthalten. Die angezeigte Antwort wurde abgeschnitten und zeigt nun vier Namensräume an.
+Die Antwort enthält ein Array mit den einzelnen Objekten, die die Details für jeden Namensraum enthalten. `data` Die angezeigte Antwort wurde abgeschnitten und zeigt nun vier Namensräume an.
 
 ```json
 {
@@ -278,15 +278,15 @@ Die Antwort enthält ein `data` Array mit den einzelnen Objekten, die die Detail
 | Eigenschaft | Beschreibung |
 |---|---|
 | `sampleCount` | Die Gesamtzahl der zusammengeführten Profil mit Stichproben im Namensraum. |
-| `samplePercentage` | Der `sampleCount` als Prozentsatz der zusammengeführten Profil der Stichprobe (der `numRowsToRead` im [letzten Stichprobenstatus](#view-last-sample-status)zurückgegebene Wert), ausgedrückt als Dezimalformat. |
-| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anforderung ein `date` Parameter angegeben wurde, gilt der zurückgegebene Bericht für das angegebene Datum. Wenn kein `date` Parameter angegeben ist, wird der letzte Bericht zurückgegeben. |
+| `samplePercentage` | Der Wert `sampleCount` als Prozentwert der zusammengeführten Profil mit Stichprobe (der `numRowsToRead`-Wert, wie im [Letzter Musterstatus](#view-last-sample-status) zurückgegeben), ausgedrückt als Dezimalformat. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anforderung ein Parameter `date` angegeben wurde, gilt der zurückgegebene Bericht für das angegebene Datum. Wenn kein Parameter `date` angegeben ist, wird der letzte Bericht zurückgegeben. |
 | `fullIDsFragmentCount` | Die Gesamtanzahl der Profil-Fragmente im Namensraum. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profil im Namensraum. |
-| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der zusammengeführten Profil insgesamt (der `totalRows` im [letzten Musterstatus](#view-last-sample-status)zurückgegebene Wert), ausgedrückt als Dezimalformat. |
-| `code` | Die `code` für den Namensraum. Dies kann bei der Arbeit mit Namensräumen mithilfe der [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) gefunden werden und wird auch als [!UICONTROL Identitätssymbol] in der Benutzeroberfläche der Experience Platform bezeichnet. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md). |
-| `value` | Der `id` Wert für den Namensraum. Dies kann bei der Arbeit mit Namensräumen mithilfe der [Identitätsdienst-API](../../identity-service/api/list-namespaces.md)gefunden werden. |
+| `fullIDsPercentage` | Der Wert `fullIDsCount` als Prozentsatz des gesamten zusammengeführten Profils (der `totalRows`-Wert, wie im [Letzter Musterstatus](#view-last-sample-status) zurückgegeben), ausgedrückt als Dezimalformat. |
+| `code` | Das `code` für den Namensraum. Dies kann bei der Arbeit mit Namensräumen mit der [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) gefunden werden und wird auch als [!UICONTROL Identitätssymbol] in der Benutzeroberfläche der Experience Platform bezeichnet. Weitere Informationen finden Sie unter [Übersicht über den Identitäts-Namensraum](../../identity-service/namespaces.md). |
+| `value` | Der `id`-Wert für den Namensraum. Dies kann bei der Arbeit mit Namensräumen mit der [Identitätsdienst-API](../../identity-service/api/list-namespaces.md) gefunden werden. |
 
 ## Nächste Schritte
 
-Sie können auch ähnliche Schätzungen und Vorschauen für Informationen auf Zusammenfassungsebene der Ansicht zu Ihren Segmentdefinitionen verwenden, um sicherzustellen, dass Sie die erwartete Audience isolieren. Detaillierte Anweisungen zum Arbeiten mit Segmentansätzen und -schätzungen mithilfe der [!DNL Adobe Experience Platform Segmentation Service] API finden Sie im Handbuch [zu](../../segmentation/api/previews-and-estimates.md)Vorschauen und [!DNL Segmentation] Vorschauen und zu den Endpunkten, das Teil des API-Entwicklerhandbuchs ist.
+Sie können auch ähnliche Schätzungen und Vorschauen für Informationen auf Zusammenfassungsebene der Ansicht zu Ihren Segmentdefinitionen verwenden, um sicherzustellen, dass Sie die erwartete Audience isolieren. Ausführliche Anweisungen für die Arbeit mit Segmentansätzen und -schätzungen mithilfe der [!DNL Adobe Experience Platform Segmentation Service]-API finden Sie im Handbuch [Vorschauen und Schätzendpunkte](../../segmentation/api/previews-and-estimates.md), das Teil des [!DNL Segmentation]-API-Entwicklerhandbuchs ist.
 
