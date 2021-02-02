@@ -1,50 +1,50 @@
 ---
-keywords: Experience Platform;home;popular topics;DULE;dule
+keywords: Experience Platform;Home;beliebte Themen;DULE;Modul
 solution: Experience Platform
 title: Erste Schritte mit der Policy Service API
 topic: developer guide
 description: Mit der Policy Service API können Sie verschiedene Ressourcen im Zusammenhang mit der Adobe Experience Platform-Datenverwaltung erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Policy Service-API durchführen.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '427'
-ht-degree: 29%
+source-wordcount: '438'
+ht-degree: 28%
 
 ---
 
 
-# Getting started with the [!DNL Policy Service] API
+# Erste Schritte mit der API[!DNL Policy Service]
 
-Mit der [!DNL Policy Service] API können Sie verschiedene Ressourcen im Zusammenhang mit Adobe Experience Platform erstellen und verwalten [!DNL Data Governance]. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Policy Service] API.
+Mit der API [!DNL Policy Service] können Sie verschiedene Ressourcen im Zusammenhang mit Adobe Experience Platform [!DNL Data Governance] erstellen und verwalten. Dieses Dokument bietet eine Einführung in die Kernkonzepte, die Sie kennen müssen, bevor Sie Aufrufe an die [!DNL Policy Service]-API durchführen.
 
-## Voraussetzungen 
+## Voraussetzungen
 
-Die Verwendung des Entwicklerhandbuchs erfordert ein grundlegendes Verständnis der verschiedenen [!DNL Experience Platform] Dienste, die beim Arbeiten mit Data Governance-Funktionen erforderlich sind. Before beginning to work with the [!DNL Policy Service API], please review the documentation for the following services:
+Die Verwendung des Entwicklerhandbuchs erfordert ein grundlegendes Verständnis der verschiedenen [!DNL Experience Platform]-Dienste, die in die Arbeit mit Data Governance-Funktionen einbezogen werden. Bevor Sie mit der Arbeit mit [!DNL Policy Service API] beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [[!DNL Data Governance]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Experience Platform] erzwungen wird.
+* [[!DNL Data Governance]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung  [!DNL Experience Platform] erzwungen wird.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Sandboxen](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 ## Lesen von Beispiel-API-Aufrufen
 
-The [!DNL Policy Service] API documentation provides example API calls to demonstrate how to format your requests. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+Die [!DNL Policy Service]-API-Dokumentation enthält Beispiel-API-Aufrufe, die zeigen, wie Sie Ihre Anforderungen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ## Erforderliche Kopfzeilen
 
-The API documentation also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+Die API-Dokumentation erfordert auch, dass Sie das [Authentifizierungstraining](https://www.adobe.com/go/platform-api-authentication-en) abgeschlossen haben, um erfolgreich Aufrufe an [!DNL Platform]-Endpunkte durchzuführen. Wenn Sie das Authentifizierungstreutorial abschließen, werden die Werte für die einzelnen erforderlichen Kopfzeilen in [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Data Governance], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Data Governance] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -52,9 +52,9 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Kernressourcen und benutzerdefinierte Ressourcen
 
-Within the [!DNL Policy Service] API, all policies and marketing actions are referred to as either `core` or `custom` resources.
+Innerhalb der API [!DNL Policy Service] werden alle Richtlinien und Marketingaktionen als `core`- oder `custom`-Ressourcen bezeichnet.
 
-`core` Ressourcen sind die von der Adobe definierten und verwalteten Ressourcen, während `custom` Ressourcen von Ihrer Organisation erstellt und verwaltet werden und daher einmalig und nur für Ihre IMS-Organisation sichtbar sind. Darum sind Auflistungs- und Nachschlagevorgänge (`GET`) die einzigen Vorgänge, die bei `core`-Ressourcen zulässig sind, während bei `custom`-Ressourcen Auflistungs-, Nachschlage- und Aktualisierungsvorgänge (`POST`, `PUT`, `PATCH` und `DELETE`) verfügbar sind.
+`core` Ressourcen sind die von der Adobe definierten und verwalteten Ressourcen, während  `custom` Ressourcen von Ihrer Organisation erstellt und verwaltet werden und daher einmalig und nur für Ihre IMS-Organisation sichtbar sind. Darum sind Auflistungs- und Nachschlagevorgänge (`GET`) die einzigen Vorgänge, die bei `core`-Ressourcen zulässig sind, während bei `custom`-Ressourcen Auflistungs-, Nachschlage- und Aktualisierungsvorgänge (`POST`, `PUT`, `PATCH` und `DELETE`) verfügbar sind.
 
 ## Nächste Schritte
 
