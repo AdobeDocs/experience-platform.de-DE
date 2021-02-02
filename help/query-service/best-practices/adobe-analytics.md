@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Abfragen-Beispiel;Abfrage;Adobe-Analyse;
 solution: Experience Platform
 title: Beispielabfragen
 topic: queries
@@ -7,8 +7,8 @@ description: Die Daten aus ausgewählten Adobe Analytics-Report Suites werden in
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 60%
+source-wordcount: '1017'
+ht-degree: 59%
 
 ---
 
