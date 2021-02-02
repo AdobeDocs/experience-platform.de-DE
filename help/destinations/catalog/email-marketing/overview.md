@@ -1,68 +1,68 @@
 ---
-keywords: email;Email;e-mail;email destinations
+keywords: E-Mail;E-Mail;E-Mail;E-Mail-Ziele
 title: E-Mail-Marketing-Ziele
 seo-title: E-Mail-Marketing-Ziele
 type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 40%
+source-wordcount: '811'
+ht-degree: 35%
 
 ---
 
 
 # E-Mail-Marketing-Ziele {#email-marketing-destinations}
 
-E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen. Die Echtzeit-Kundendatenplattform von arbeitet mit ESPs zusammen und bietet Ihnen die Möglichkeit, Segmente für E-Mail-Marketing-Ziele zu aktivieren.
+E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen. Adobe Experience Platform kann mit ESPs integriert werden, indem Sie Segmente aktivieren können, um E-Mail-Marketing-Ziele zu erreichen.
 
-Um Segmente an E-Mail-Marketing-Ziele für Ihre Kampagnen zu senden, muss sich CDP in Echtzeit zunächst mit dem Ziel verbinden.
+Um Segmente an E-Mail-Marketingziele für Ihre Kampagnen zu senden, muss die Plattform zuerst eine Verbindung zum Ziel herstellen.
 
 Die Herstellung einer Verbindung zu E-Mail-Marketing-Zielen ist ein dreistufiger Prozess. Jeder der Schritte wird auf dieser Seite unten beschrieben.
 
-Stellen Sie im Zielverbindungsfluss (wie im Abschnitt unten beschrieben) eine Verbindung zu Amazon S3 oder SFTP her. Die Echtzeit-Kundendatenplattform von Adobe exportiert Ihre Segmente als `.csv`- oder `.txt`-Dateien und stellt sie an Ihrem gewünschten Speicherort bereit. Planen Sie den Datenimport in Ihre E-Mail-Marketing-Plattform vom Speicherort, der in der Echtzeit-Kundendatenplattform von Adobe aktiviert ist. Das Verfahren zum Importieren von Daten ist je nach Partner unterschiedlich. Weiterführende Informationen finden Sie in den Artikeln zu den einzelnen Zielen.
+Stellen Sie im Zielverbindungsfluss (wie im Abschnitt unten beschrieben) eine Verbindung zu Amazon S3 oder SFTP her. Plattform exportiert Ihre Segmente als `.csv`- oder `.txt`-Dateien und liefert sie an Ihren bevorzugten Speicherort. Planen Sie den Datenimport in Ihre E-Mail-Marketingplattform vom in der Plattform aktivierten Speicherort der Datenspeicherung. Das Verfahren zum Importieren von Daten ist je nach Partner unterschiedlich. Weiterführende Informationen finden Sie in den Artikeln zu den einzelnen Zielen.
 
-## Ziel konfigurieren {#connect-destination}
+## Ziel {#connect-destination} konfigurieren
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Configure]**.
+Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** das E-Mail-Marketingziel, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie **[!UICONTROL Konfigurieren]**.
 
 ![Mit Ziel verbinden](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
 
-In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In der Auswahl für den **[!UICONTROL Verbindungstyp]** können Sie zwischen Amazon S3, SFTP mit Kennwort oder SFTP mit SSH-Schlüssel wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
+Wenn Sie im Schritt **[!UICONTROL Authentifizierung]** zuvor eine Verbindung zu Ihrem E-Mail-Marketingziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem E-Mail-Marketingziel einzurichten. In der Auswahl **[!UICONTROL Verbindungstyp]** können Sie zwischen Amazon S3, SFTP mit Kennwort oder SFTP mit SSH-Schlüssel wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
 
-- For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key.
-- For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
-- For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
+- Für **S3-Verbindungen** müssen Sie Ihre Amazon-Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel angeben.
+- Für Verbindungen mit **SFTP mit Kennwort** müssen Sie Domäne, Port, Benutzername und Kennwort für Ihren SFTP-Server angeben.
+- Für Verbindungen mit **SFTP mit SSH-Schlüssel** müssen Sie Domäne, Port, Benutzername und SSH-Schlüssel für Ihren SFTP-Server angeben.
 
-Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Verschlüsselung zu den exportierten Dateien im Abschnitt **[!UICONTROL Schlüssel]** hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel als Base64-kodierte Zeichenfolge geschrieben werden **muss** .
+Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien unter dem Abschnitt **[!UICONTROL Schlüssel]** Verschlüsselung hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel **als Base64-kodierte Zeichenfolge geschrieben werden muss.**
 
 Geben Sie im Schritt **[!UICONTROL Setup]** einen Namen und eine Beschreibung für Ihr neues Ziel sowie das Dateiformat für die exportierten Dateien ein.
 
 Wenn Sie im vorherigen Schritt die Option &quot;Amazon S3&quot;als Datenspeicherung ausgewählt haben, fügen Sie den Behälternamen und den Ordnerpfad in das Ziel der Cloud-Datenspeicherung ein, an das die Dateien gesendet werden sollen. Geben Sie für die Option &quot;SFTP-Datenspeicherung&quot;den Ordnerpfad ein, unter dem die Dateien bereitgestellt werden sollen.
 
-In diesem Schritt können Sie auch einen beliebigen Anwendungsfall für das Marketing auswählen, der für dieses Ziel gelten soll. Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Echtzeit-CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) . Informationen zu den einzelnen Anwendungsfällen für Marketingzwecke, die von der Adobe definiert wurden, finden Sie in der Übersicht über [Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md#core-actions).
+In diesem Schritt können Sie auch einen beliebigen Anwendungsfall für das Marketing auswählen, der für dieses Ziel gelten soll. Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 ![Email-Setup](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 
-## Wählen Sie die Segmentmitglieder aus, die in die Zielexporte einbezogen werden sollen {#select-segments}
+## Wählen Sie die Segmentmitglieder aus, die Sie in Ihre Zielexporte aufnehmen möchten {#select-segments}
 
-On the **[!UICONTROL Select Segments]** page, select which segments to send to the destination. Weitere Informationen zu den Feldern finden Sie in den folgenden Abschnitten.
+Wählen Sie auf der Seite **[!UICONTROL Segmente]** auswählen, welche Segmente an das Ziel gesendet werden sollen. Weitere Informationen zu den Feldern finden Sie in den folgenden Abschnitten.
 
 ![Segmente auswählen](../../assets/common/email-select-segments.png)
 
 ## Dateinamen konfigurieren
 
-Weitere Informationen zu den Optionen für den Segmentplan und die Bearbeitung von Dateinamen finden Sie im Lernprogramm Ziele aktivieren im Schritt [konfigurieren](../../ui/activate-destinations.md#configure) .
+Weitere Informationen zu den Optionen für den Segmentplan und die Bearbeitung von Dateinamen finden Sie im Schritt [Konfigurieren](../../ui/activate-destinations.md#configure) im Tutorial Ziele aktivieren.
 
-## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
+## Attribute auswählen - Wählen Sie aus, welche Schema-Felder als Zielattribute in den exportierten Dateien verwendet werden sollen.{#destination-attributes}
 
 In diesem Schritt wählen Sie die Felder aus, die in E-Mail-Marketing-Ziele exportiert werden sollen, und markieren, welche Felder obligatorisch sind.
 
 ![Zielattribute](../../assets/catalog/email-marketing/overview/recommended-attributes.png)
 
-Weitere Informationen zu diesem Schritt finden Sie im Schritt [Attribute](../../ui/activate-destinations.md#select-attributes) auswählen im Lernprogramm Ziele aktivieren.
+Weitere Informationen zu diesem Schritt finden Sie im Schritt [Attribute auswählen](../../ui/activate-destinations.md#select-attributes) im Lernprogramm Ziele aktivieren.
 
 ### Identität {#identity}
 
