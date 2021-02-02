@@ -1,14 +1,14 @@
 ---
-keywords: Google ads;google ads;google ads extension;Google Ads extension
+keywords: Google-Anzeigen;Google-Anzeigen;Google-Anzeigen-Erweiterung;Google Ads-Erweiterung
 title: Google Ads-Erweiterung
 seo-title: Google Ads-Erweiterung
-description: Die Google Ads-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Google Ads-Erweiterung ist ein Werbeziel in der Echtzeit-Kundendatenplattform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Google Ads Extension ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+seo-description: Die Google Ads Extension ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 80db19822551883da272787affb6f7dc9dc3a745
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 39%
+source-wordcount: '567'
+ht-degree: 26%
 
 ---
 
@@ -17,37 +17,37 @@ ht-degree: 39%
 
 ## Übersicht {#overview}
 
-This extension tracks conversions from users that click on your [!DNL Google Ads]. You will need to also install the gtag.js extension and add it to your library, as [!DNL Google Ads] depends on it.
+Diese Erweiterung verfolgt Konversionen von Benutzern, die auf [!DNL Google Ads] klicken. Sie müssen auch die Erweiterung gtag.js installieren und der Bibliothek hinzufügen, da [!DNL Google Ads] davon abhängt.
 
-[!DNL Google Ads] ist eine Werbeerweiterung in der Echtzeit-Kundendatenplattform von Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
+[!DNL Google Ads] ist eine Werbeverlängerung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
-Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
+Dieses Ziel ist eine Adobe Experience Platform Launch-Erweiterung. Weitere Informationen zur Funktionsweise von Plattformstarterweiterungen in Platform finden Sie unter [Übersicht über Adobe Experience Platform Launch-Erweiterungen](../launch-extensions/overview.md).
 
 ![Google Ads-Erweiterung](../../assets/catalog/advertising/google-ads-extension/catalog.png)
 
 ## Voraussetzungen  {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für alle Kunden verfügbar, die die Echtzeit-Kundendatenplattform von erworben haben.
+Diese Erweiterung ist im Zielkatalog für alle Kunden verfügbar, die Platform gekauft haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Adobe Experience Platform Launch.  Platform Launch ist für Adobe Experience Cloud-Kunden als integrierte, Mehrwert bietende Funktion verfügbar. Contact your organization administrator to get access to Platform Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Adobe Experience Platform Launch.  Platform Launch ist für Adobe Experience Cloud-Kunden als integrierte, Mehrwert bietende Funktion verfügbar. Wenden Sie sich an Ihren Unternehmensadministrator, um Zugriff auf den Plattformstart zu erhalten, und bitten Sie ihn, Ihnen die **[!UICONTROL manage_properties]**-Berechtigung zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Google Ads] Erweiterung:
+So installieren Sie die Erweiterung [!DNL Google Ads]:
 
-In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Wechseln Sie in der [Plattform-Schnittstelle](http://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. Siehe [Voraussetzungen](#prerequisites).
+Klicken Sie auf das Ziel, um es hervorzuheben, und wählen Sie dann **[!UICONTROL Konfigurieren]** in der rechten Leiste aus. Wenn das Steuerelement **[!UICONTROL Configure]** ausgegraut ist, fehlt Ihnen die Berechtigung **[!UICONTROL manage_properties]**. Siehe [Voraussetzungen](#prerequisites).
 
-In the **[!UICONTROL Select available Platform Launch property]** window, select the Platform Launch property in which you want to install the extension. Sie haben auch die Möglichkeit, eine neue Eigenschaft in Platform Launch zu erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Learn about properties in the [Properties page section](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Platform Launch documentation.
+Wählen Sie im Fenster **[!UICONTROL Select available Platform Launch property]** die Plattformstarteigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie haben auch die Möglichkeit, eine neue Eigenschaft in Platform Launch zu erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Weitere Informationen zu den Eigenschaften finden Sie im Abschnitt [Seite Eigenschaften](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) der Dokumentation zum Plattformstart.
 
 Der Arbeitsablauf führt Sie zum Plattformstart, um die Installation abzuschließen.
 
 Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung von Erweiterungen finden Sie auf der [Google Ads-Seite in Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
-You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) in the Platform Launch documentation.
+Sie können die Erweiterung auch direkt in der [Adobe Experience Platform Launch-Schnittstelle](https://launch.adobe.com/) installieren. Siehe [Hinzufügen einer neuen Erweiterung](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) in der Dokumentation zum Plattformstart.
 
 ## Verwenden der Erweiterung {#how-to-use}
 
@@ -61,9 +61,9 @@ Sie können Erweiterungen in der Benutzeroberfläche &quot;Plattformstart&quot;k
 
 >[!TIP]
 >
->Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Benutzeroberfläche der Echtzeit-Kundendatenplattform von weiterhin **[!UICONTROL Installieren]** für die Erweiterung angezeigt. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
+>Wenn die Erweiterung bereits auf einer Ihrer Eigenschaften installiert ist, zeigt die Plattform-Benutzeroberfläche für die Erweiterung weiterhin **[!UICONTROL Install]** an. Starten Sie den Installationsvorgang wie unter [Erweiterung installieren](#install-extension) beschrieben, um zum Plattformstart zu gelangen und Ihre Erweiterung zu konfigurieren oder zu löschen.
 
-To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Platform Launch documentation.
+Informationen zum Aktualisieren Ihrer Erweiterung finden Sie unter [Extension-Aktualisierung](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in der Dokumentation zum Plattformstart.
 
 
 
