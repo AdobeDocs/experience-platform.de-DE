@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
+keywords: Experience Platform;Download-Punkte;Kundenwerbung;beliebte Themen;Exportieren;Exportieren;Download der Kundenwerbung;Punktzahlen der Kundenwerbung
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Herunterladen von Bewertungen in Customer AI
 topic: Downloading scores
-description: Mit Customer AI können Sie Ergebnisse im Parquet-Dateiformat herunterladen.
+description: Mit der Kunden-API können Sie Ergebnisse im Parquet-Dateiformat herunterladen.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 91%
+source-wordcount: '961'
+ht-degree: 86%
 
 ---
 
@@ -19,7 +19,7 @@ Dieses Dokument dient als Anleitung zum Herunterladen von Ergebnissen für Custo
 
 ## Erste Schritte
 
-Mit Customer AI können Sie Ergebnisse im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Customer AI-Bewertungen in den [Ersten Schritten](../getting-started.md) gelesen und abgeschlossen haben.
+Mit der Kunden-API können Sie Ergebnisse im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Customer AI-Bewertungen in den [Ersten Schritten](../getting-started.md) gelesen und abgeschlossen haben.
 
 Um auf Bewertungen für Customer AI zuzugreifen, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Kunden-AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
@@ -113,7 +113,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt en
 }
 ```
 
-## Abrufen des nächsten API-Aufrufs mit Ihrer Batch-Kennung {#retrieve-the-next-api-call-with-your-batch-id}
+## Abrufen des nächsten API-Aufrufs mit Ihrer Batch-Kennung  {#retrieve-the-next-api-call-with-your-batch-id}
 
 Sobald Sie über eine Batch-Kennung verfügen, können Sie eine neue GET-Anfrage an `/batches` vornehmen. Die Anfrage gibt einen Link zurück, der als die nächste API-Anfrage verwendet wird.
 
@@ -167,7 +167,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die ein `_links`-Objekt ent
 }
 ```
 
-## Abrufen Ihrer Dateien {#retrieving-your-files}
+## Abrufen Ihrer Dateien  {#retrieving-your-files}
 
 Verwenden Sie den `href`-Wert, den Sie im vorherigen Schritt als API-Aufruf erhalten haben, und stellen Sie eine neue GET-Anfrage, um Ihr Dateiverzeichnis abzurufen.
 
