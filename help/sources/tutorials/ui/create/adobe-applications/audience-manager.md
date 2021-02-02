@@ -1,48 +1,64 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience manager source connector;Audience Manager;audience manager connector
+keywords: Experience Platform;Home;beliebte Themen;Audience Manager-Quellanschluss;Audience Manager;Audience-Manager-Anschluss
 solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche
 topic: overview
 type: Tutorial
 description: Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen von Quell-Connectors für Adobe Audience Manager, um Verbrauchererlebnis-Ereignis-Daten über die Benutzeroberfläche in Platform einzubringen.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: bdf95d75bf8db9f3438011f298d17c4259d2c63c
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 11%
+source-wordcount: '466'
+ht-degree: 6%
 
 ---
 
 
 # Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche
 
-Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen von Quell-Connectors für Adobe Audience Manager, um Verbrauchererlebnis-Ereignis-Daten über die Benutzeroberfläche in Platform einzubringen.
+Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen eines Quell-Connectors für Adobe Audience Manager, um Verbrauchererlebnis-Ereignis-Daten über die Benutzeroberfläche in Platform einzubringen.
 
 ## Erstellen einer Quellverbindung mit Adobe Audience Manager
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **Quellen** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; **Katalog** &quot;werden verschiedene Quellen angezeigt, mit denen Sie Quellverbindungen erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Reihe von Quellen an, für die Sie ein Konto erstellen können.
 
-Wählen Sie unter der Kategorie **Adobe Applications** die Option **Adobe Audience Manager** , um eine Informationsleiste auf der rechten Seite des Bildschirms anzuzeigen. Die Informationsleiste enthält eine kurze Beschreibung der ausgewählten Quelle sowie Optionen zur Ansicht der Dokumentation oder zur Verbindung mit der Quelle.
+Wählen Sie unter der Kategorie [!UICONTROL Adobe applications] **[!UICONTROL Adobe Audience Manager]** und dann **[!UICONTROL Configure]**.
 
-Um einen neuen Quellanschluss für Adobe Audience Manager zu erstellen, klicken Sie auf **Hinzufügen Daten**.
+![Katalog](../../../../images/tutorials/create/aam/catalog.png)
 
-![](../../../../images/tutorials/create/aam/catalog.png)
+Der Schritt [!UICONTROL Eigenschaften und Segmente auswählen] wird angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Eigenschaften, Segmente und Daten untersuchen und auswählen können.
 
-Das folgende Dialogfeld wird angezeigt. Klicken Sie auf **Verbinden** , um die Verbindung zu erstellen.
+* Das linke Bedienfeld der Oberfläche enthält die Optionen [!UICONTROL Eigenschaften und Segmente auswählen] sowie ein hierarchisches Verzeichnis aller verfügbaren Segmente.
+* In der rechten Hälfte der Oberfläche können Sie mit ausgewählten Segmenten interagieren und bestimmte Daten aufrufen, die Sie verwenden möchten.
 
-![](../../../../images/tutorials/create/aam/connect_full.png)
+![add-data](../../../../images/tutorials/create/aam/add-data.png)
 
-Wird eine Quellverbindung mit Adobe Audience Manager hergestellt, wird die Seite **Quellcode-Aktivität** für den Audience Manager-Connector angezeigt.
+Um durch verfügbare Segmente zu navigieren, wählen Sie den Ordner aus dem Bedienfeld [!UICONTROL Alle Segmente] aus, auf den Sie zugreifen möchten. Wenn Sie einen Ordner auswählen, können Sie die Ordnerhierarchie durchlaufen und eine Liste von Segmenten zum Durchsuchen bereitstellen.
 
-![](../../../../images/tutorials/create/aam/flow.png)
+![segment-folder](../../../../images/tutorials/create/aam/segment-folder.png)
 
-Wenn Sie eingehende Daten des Audience Managers anhalten möchten, können Sie dies tun, indem Sie auf die Dataflow-Liste klicken und deren *Status* in der rechten Spalte &quot; *Eigenschaften* &quot;umschalten.
+Nachdem Sie die gewünschten Segmente identifiziert und ausgewählt haben, wird auf der rechten Seite ein neuer Bereich mit Ihrer Liste der ausgewählten Elemente angezeigt. Sie können weiterhin auf verschiedene Ordner zugreifen und verschiedene Segmente für Ihre Verbindung auswählen. Wenn Sie weitere Segmente auswählen, wird das Bedienfeld auf der rechten Seite aktualisiert.
 
-![](../../../../images/tutorials/create/aam/flow_disable.png)
+![select-data](../../../../images/tutorials/create/aam/select-data.png)
+
+Alternativ können Sie die Felder **[!UICONTROL Alle Segmente]** und **[!UICONTROL Alle Eigenschaften]** auswählen. Wenn Sie alle Audience Manager auswählen, werden alle Segmente zur Plattform gebracht, während bei Auswahl aller Eigenschaften alle Eigenschaften des Erstanbieters aus dem Audience Manager aktiviert werden.
+
+Sobald Sie fertig sind, wählen Sie **[!UICONTROL Weiter]**
+
+![alle Segmente](../../../../images/tutorials/create/aam/all-segments.png)
+
+Der Schritt [!UICONTROL Überprüfen] wird angezeigt, mit dem Sie die ausgewählten Eigenschaften und Segmente überprüfen können, bevor sie mit der Plattform verbunden sind. Details werden in den folgenden Kategorien gruppiert:
+
+* **[!UICONTROL Verbindung]**: Zeigt die Quellplattform und den Status der Verbindung an.
+* **[!UICONTROL Ausgewählte Daten]**: Zeigt die Anzahl der ausgewählten Segmente und aktivierten Eigenschaften an.
+
+![überprüfen](../../../../images/tutorials/create/aam/review.png)
+
+Nachdem Sie den Datenfluss überprüft haben, wählen Sie **[!UICONTROL Fertig stellen]** und lassen Sie etwas Zeit für die Erstellung des Datenflusses zu.
 
 ## Nächste Schritte
 
 Während ein Audience Manager-Datendurchlauf aktiv ist, werden eingehende Daten automatisch in Echtzeit-Kundendaten erfasst. Sie können diese eingehenden Daten jetzt nutzen und mit dem Plattformsegmentierungsdienst Audiencen erstellen. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-- [Übersicht über das Echtzeit-Kundenprofil](../../../../../profile/home.md)
-- [Übersicht über den Segmentierungsdienst](../../../../../segmentation/home.md)
+* [Übersicht über das Echtzeit-Kundenprofil](../../../../../profile/home.md)
+* [Übersicht über den Segmentierungsdienst](../../../../../segmentation/home.md)
