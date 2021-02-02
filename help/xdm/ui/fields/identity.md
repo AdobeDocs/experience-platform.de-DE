@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;identity;field;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Identitätsfeld;
 solution: Experience Platform
 title: Identitätsfeld in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie ein Identitätsfeld in der Benutzeroberfläche "Experience Platform"definieren.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: f5f507c2e962e2ff9f81376bfe363a6f438056cd
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
