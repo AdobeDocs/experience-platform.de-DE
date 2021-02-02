@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;error diagnostics;retrieve error diagnostics;get error diagnostics;get error;get errors;retrieve errors;
+keywords: Experience Platform;Home;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Partielle Erfassung;Partielle Erfassung;Fehler abrufen;Fehler abrufen;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Erfassung;Ingestion;Fehlerdiagnose;Fehlerdiagnose;Fehlerdiagnose;Fehlerdiagnose;Fehler abruf;Fehler abrufen;
 solution: Experience Platform
 title: Übersicht zur partiellen Batch-Erfassung in Adobe Experience Platform
 topic: overview
 description: Dieses Dokument enthält Informationen zur Überwachung der Stapelverarbeitung, zur Verwaltung von Fehlern bei der Partiellen Stapelverarbeitung sowie eine Referenz für Stapelverarbeitungsarten.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 38%
+source-wordcount: '936'
+ht-degree: 36%
 
 ---
 
 
 # Fehlerdiagnose abrufen
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. You can either use batch ingestion, which allows you to insert data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real time.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder die Streaming-Erfassung, mit der Sie ihre Daten mit Streaming-Endpunkten in Echtzeit an [!DNL Platform] einfügen können.
 
 Dieses Dokument enthält Informationen zur Überwachung der Stapelverarbeitung, zur Verwaltung von Fehlern bei der Partiellen Stapelverarbeitung sowie eine Referenz für Stapelverarbeitungsarten.
 
@@ -24,7 +24,7 @@ Dieses Dokument enthält Informationen zur Überwachung der Stapelverarbeitung, 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Die Methoden, mit denen Daten gesendet werden können [!DNL Experience Platform].
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Die Methoden, mit denen Daten gesendet werden können  [!DNL Experience Platform].
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -32,23 +32,23 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Schema Registry] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Herunterladen der Fehlerdiagnose {#download-diagnostics}
 
-Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird innerhalb von [!DNL Platform] bis zu 30 Tagen aufbewahrt.
+Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird bis zu 30 Tage lang innerhalb von [!DNL Platform] aufbewahrt.
 
 ### Liste-Eingabedateien {#list-files}
 
@@ -134,14 +134,14 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` Objekte enthalten, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path` Objekte im [JSON-Zeilen](https://jsonlines.org/) -Format zurück.
+Bei einer erfolgreichen Antwort werden JSON-Objekte zurückgegeben, die `path`-Objekte enthalten, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die Objekte `path` im Format [JSON-Zeilen](https://jsonlines.org/) zurück.
 
 ```json
 {"path": "F1.json"}
 {"path": "etc/F2.json"}
 ```
 
-## Retrieve batch ingestion errors {#retrieve-errors}
+## Stapelverarbeitungsfehler {#retrieve-errors} abrufen
 
 Wenn Stapel Fehler enthalten, sollten Sie Fehlerinformationen zu diesen Fehlern abrufen, damit Sie die Daten erneut erfassen können.
 
@@ -214,7 +214,7 @@ Eine erfolgreiche Antwort mit detaillierten Informationen zum Status des Stapels
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion des Werts `inputRecordCount` vom Wert `outputRecordCount`abgeleitet werden. Dieser Wert wird für alle Stapel generiert, unabhängig davon, ob er aktiviert `errorDiagnostics` ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion von `inputRecordCount` von `outputRecordCount` abgeleitet werden. Dieser Wert wird für alle Stapel generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
 
 **Antwort mit Fehlern**
 
@@ -277,8 +277,8 @@ Wenn der Stapel einen oder mehrere Fehler enthält und die Fehlerdiagnose aktivi
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion des Werts `inputRecordCount` vom Wert `outputRecordCount`abgeleitet werden. Dieser Wert wird für alle Stapel generiert, unabhängig davon, ob er aktiviert `errorDiagnostics` ist. |
-| `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert wird **nur** generiert, wenn er aktiviert `errorDiagnostics` ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion von `inputRecordCount` von `outputRecordCount` abgeleitet werden. Dieser Wert wird für alle Stapel generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert ist **nur** generiert, wenn `errorDiagnostics` aktiviert ist. |
 
 >[!NOTE]
 >
@@ -374,7 +374,7 @@ Eine erfolgreiche Antwort gibt eine Liste der Dateien mit Fehlern zurück.
 }
 ```
 
-Mithilfe des [Diagnoseabfrageendpunkts](#retrieve-diagnostics)können Sie dann detaillierte Informationen zu den Fehlern abrufen.
+Mithilfe des [Diagnostics-Abrufendpunkts](#retrieve-diagnostics) können Sie dann detaillierte Informationen zu den Fehlern abrufen.
 
 Nachstehend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
 
