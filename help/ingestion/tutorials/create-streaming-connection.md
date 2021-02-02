@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform;Home;beliebte Themen;Streaming-Verbindung;Streaming-Verbindung erstellen;API-Handbuch;Tutorial;Erstellen einer Streaming-Verbindung;Streaming-Verbindung;Erfassung;
 solution: Experience Platform
 title: Erstellen einer Streaming-Verbindung mit der API
 topic: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 62%
+source-wordcount: '677'
+ht-degree: 60%
 
 ---
 
 
 # Erstellen einer Streaming-Verbindung mit der API
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data [!DNL Ingestion Service] APIs.
+In diesem Lernprogramm erfahren Sie, wie Sie mit der Verwendung von Streaming-APIs beginnen können, die Teil der Adobe Experience Platform Data [!DNL Ingestion Service]-APIs sind.
 
 ## Erste Schritte
 
@@ -26,7 +26,7 @@ Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent e
 
 Für dieses Tutorial sind auch Kenntnisse über verschiedene Adobe Experience Platform-Diensten erforderlich. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten [!DNL Platform] organisiert werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die APIs für die Streaming-Erfassung erfolgreich aufrufen zu können.
@@ -37,19 +37,19 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -178,7 +178,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 ## Nächste Schritte
 
-Now that you have created a streaming connection, you can stream either time series or record data, allowing you to ingest data within [!DNL Platform]. To learn how to stream time series data to [!DNL Platform], go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to [!DNL Platform], go to the [streaming record data tutorial](./streaming-record-data.md).
+Nachdem Sie jetzt eine Streaming-Verbindung erstellt haben, können Sie entweder Zeitreihen- oder Datensatzdaten streamen, um Daten innerhalb von [!DNL Platform] zu erfassen. Informationen zum Streamen von Zeitreihendaten auf [!DNL Platform] finden Sie im Datentutorial [Streaming-Zeitreihen](./streaming-time-series-data.md). Informationen zum Streamen von Datensatzdaten auf [!DNL Platform] finden Sie im Tutorial [Streaming-Datensatzdaten](./streaming-record-data.md).
 
 ## Anhang
 
@@ -186,6 +186,6 @@ Dieser Abschnitt enthält zusätzliche Informationen zum Erstellen von Streaming
 
 ### Authentifizierte Streaming-Verbindungen
 
-Authenticated data collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Kunden, die persönliche identifizierbare Informationen (PII) senden möchten, können dies tun, indem sie IMS-Zugriffstoken als Teil der Anforderung der POST senden - wenn das IMS-Token gültig ist, werden die Datensätze als aus vertrauenswürdigen Quellen gesammelt gekennzeichnet.
+Die authentifizierte Datenerfassung ermöglicht es Adobe Experience Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Identity], zwischen Datensätzen aus vertrauenswürdigen Quellen und nicht vertrauenswürdigen Quellen zu unterscheiden. Kunden, die persönliche identifizierbare Informationen (PII) senden möchten, können dies tun, indem sie IMS-Zugriffstoken als Teil der Anforderung der POST senden - wenn das IMS-Token gültig ist, werden die Datensätze als aus vertrauenswürdigen Quellen gesammelt gekennzeichnet.
 
-Weitere Informationen zum Erstellen einer authentifizierten Streaming-Verbindung finden Sie im Lernprogramm zum [Erstellen einer authentifizierten Streaming-Verbindung](create-authenticated-streaming-connection.md).
+Weitere Informationen zum Erstellen einer authentifizierten Streaming-Verbindung finden Sie im Tutorial [Erstellen einer authentifizierten Streaming-Verbindung](create-authenticated-streaming-connection.md).
