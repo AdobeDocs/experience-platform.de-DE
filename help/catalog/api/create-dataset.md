@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
+keywords: Experience Platform;Home;beliebte Themen;Datensatz;Datensatz;Datensatz;Datensatz erstellen;Datensatz erstellen;Datensatz erstellen;Datenbestand aktivieren
 solution: Experience Platform
 title: Erstellen eines Datensatzes
 topic: developer guide
 description: In diesem Dokument wird beschrieben, wie Sie ein Datensatzobjekt im Katalog erstellen.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 66%
+source-wordcount: '223'
+ht-degree: 57%
 
 ---
 
 
 # Erstellen eines Datensatzes
 
-In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
+Zum Erstellen eines Datensatzes mit der API [!DNL Catalog] müssen Sie den `$id`-Wert des [!DNL Experience Data Model] (XDM)-Schemas kennen, auf dem der Datensatz basieren soll. Nachdem Sie die Schema-ID haben, können Sie einen Datensatz erstellen, indem Sie eine POST an den `/datasets`-Endpunkt in der [!DNL Catalog]-API anfordern.
 
 >[!NOTE]
 >
->This document only covers how to create a dataset object in [!DNL Catalog]. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
+>Dieses Dokument beschreibt nur, wie ein Datensatzobjekt in [!DNL Catalog] erstellt wird. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
 
 **API-Format**
 
@@ -60,7 +60,7 @@ curl -X POST \
 
 >[!NOTE]
 >
-> In diesem Beispiel wird das [Parquet](https://parquet.apache.org/documentation/latest/)-Dateiformat für die Eigenschaft `containerFormat` verwendet. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
+>In diesem Beispiel wird das Dateiformat [Apache Parquet](https://parquet.apache.org/documentation/latest/) für die Eigenschaft `containerFormat` verwendet. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
