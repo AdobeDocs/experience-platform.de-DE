@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;access control;adobe admin console
+keywords: Experience Platform;Home;beliebte Themen;Zugriffskontrolle;adobe Admin Console
 solution: Experience Platform
 topic: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffskontrolle für Adobe Experience Platform erfolgt über die Adobe Admin Console. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 translation-type: tm+mt
-source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
+source-git-commit: c277caabe851c81f66b822c07a25f4b94466eef0
 workflow-type: tm+mt
-source-wordcount: '1298'
-ht-degree: 54%
+source-wordcount: '1281'
+ht-degree: 53%
 
 ---
 
 
 # Zugriffskontrolle – Übersicht
 
-Access control for [!DNL Experience Platform] is provided through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in [!DNL Admin Console], which link users with permissions and sandboxes.
+Die Zugriffskontrolle für [!DNL Experience Platform] wird über [Adobe Admin Console](https://adminconsole.adobe.com) bereitgestellt. Diese Funktion nutzt die Profil von Produkten in [!DNL Admin Console], die Benutzer mit Berechtigungen und Sandboxen verknüpfen.
 
 ## Zugriffskontrolle auf Hierarchie und Workflow
 
-In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. Die Mindestrolle, die Berechtigungen erteilt oder entzieht, ist ein Produktprofil-Administrator. Andere Administratorrollen, die Berechtigungen verwalten können, sind Produktadministratoren (kann alle Profile innerhalb eines Produkts verwalten) und Systemadministratoren (keine Einschränkungen). Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+Um die Zugriffskontrolle für [!DNL Experience Platform] zu konfigurieren, müssen Sie über Administratorrechte für ein Unternehmen verfügen, das über eine [!DNL Experience Platform]-Produktintegration verfügt. Die Mindestrolle, die Berechtigungen erteilt oder entzieht, ist ein Produktprofil-Administrator. Andere Administratorrollen, die Berechtigungen verwalten können, sind Produktadministratoren (kann alle Profile innerhalb eines Produkts verwalten) und Systemadministratoren (keine Einschränkungen). Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
 >[!NOTE]
 >
@@ -31,20 +31,20 @@ Ein Workflow auf hoher Ebene zum Abrufen und Zuweisen von Zugriffsberechtigungen
 - Der Administrator meldet sich bei der [Adobe Admin Console](#adobe-admin-console) an und wählt **Adobe Experience Platform** aus der Liste der Produkte auf der Übersichtsseite aus.
 - Der Administrator kann die standardmäßigen [Produktprofile](#product-profiles) anzeigen oder bei Bedarf neue Kundenproduktprofile erstellen.
 - Der Administrator kann die Berechtigungen und Benutzer für alle vorhandenen Profile bearbeiten.
-- When creating or editing a product profile, the administrator adds users to the profile using the **[!UICONTROL users]** tab, and grants permissions to these users (such as &quot;[!UICONTROL Read Datasets]&quot; or &quot;[!UICONTROL Manage Schemas]&quot;) by accessing the **[!UICONTROL permissions]** tab. Ebenso kann der Administrator über die gleiche Registerkarte „ „Berechtigungen“ Zugriff auf Sandboxes zuweisen.
-- When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the &quot;[!UICONTROL View Datasets]&quot; permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.
+- Beim Erstellen oder Bearbeiten eines Profils fügt der Administrator dem Profil Benutzer über die Registerkarte **[!UICONTROL users]** hinzu und erteilt diesen Benutzern Berechtigungen (z. B. &quot;[!UICONTROL Read DataSets]&quot;oder &quot;[!UICONTROL Schema verwalten]&quot;), indem er auf die Registerkarte **[!UICONTROL permissions]** zugreift. Ebenso kann der Administrator über die gleiche Registerkarte „ „Berechtigungen“ Zugriff auf Sandboxes zuweisen.
+- Wenn sich Benutzer bei der [!DNL Experience Platform]-Benutzeroberfläche anmelden, wird ihr Zugriff auf [!DNL Platform]-Funktionen von den Berechtigungen gesteuert, die ihnen aus Schritt 2 erteilt wurden. Wenn ein Benutzer beispielsweise nicht über die Berechtigung &quot;[!UICONTROL Ansicht-Datensätze]&quot;verfügt, ist die Registerkarte **[!UICONTROL Datensätze]** im Seitenmenü für diesen Benutzer nicht sichtbar.
 
-For more detailed steps on how to manage access control in [!DNL Experience Platform], see the [access control user guide](./ui/overview.md).
+Detailliertere Anweisungen zum Verwalten der Zugriffskontrolle in [!DNL Experience Platform] finden Sie im [Zugriffskontrolle-Benutzerhandbuch](./ui/overview.md).
 
-All calls to [!DNL Experience Platform] APIs are validated for permissions, and will return errors if the appropriate permission(s) are not found in the current user context. In der Benutzeroberfläche werden Elemente je nach den dem aktuellen Benutzer zugewiesenen Berechtigungen ausgeblendet oder geändert.
+Alle Aufrufe von [!DNL Experience Platform]-APIs werden auf Berechtigungen überprüft und geben Fehler zurück, wenn die entsprechenden Berechtigungen im aktuellen Benutzerkontext nicht gefunden wurden. In der Benutzeroberfläche werden Elemente je nach den dem aktuellen Benutzer zugewiesenen Berechtigungen ausgeblendet oder geändert.
 
 ## Adobe Admin Console
 
-Die Adobe Admin Console bietet einen zentralen Speicherort für die Verwaltung der Adobe-Produktberechtigungen und den Zugriff für Ihr Unternehmen. Through the console, you can grant groups of users access permissions for various [!DNL Platform] capabilities, such as &quot;[!UICONTROL Manage Datasets]&quot;, &quot;[!UICONTROL View Datasets]&quot;, or &quot;[!UICONTROL Manage Profiles]&quot;.
+Die Adobe Admin Console bietet einen zentralen Speicherort für die Verwaltung der Adobe-Produktberechtigungen und den Zugriff für Ihr Unternehmen. Über die Konsole können Sie Benutzergruppen Zugriffsberechtigungen für verschiedene Funktionen von [!DNL Platform] erteilen, z. B. &quot;[!UICONTROL Datenbestände verwalten]&quot;, &quot;[!UICONTROL Ansichten-Datensätze]&quot;oder &quot;[!UICONTROL Profil verwalten]&quot;.
 
 ### Produktprofile
 
-In the [!DNL Admin Console], permissions are assigned to users through the use of product profiles. Mit den Produktprofilen können Sie einem oder mehreren Benutzern Berechtigungen erteilen und auch deren Zugriff auf den Umfang der Sandboxes einschließen, die ihnen über Produktprofile zugewiesen werden. Benutzer können einem oder mehreren Produktprofilen Ihres Unternehmens zugewiesen werden.
+In [!DNL Admin Console] werden Benutzern Berechtigungen durch die Verwendung von Produkt-Profilen zugewiesen. Mit den Produktprofilen können Sie einem oder mehreren Benutzern Berechtigungen erteilen und auch deren Zugriff auf den Umfang der Sandboxes einschließen, die ihnen über Produktprofile zugewiesen werden. Benutzer können einem oder mehreren Produktprofilen Ihres Unternehmens zugewiesen werden.
 
 ### Standard-Produktprofile
 
@@ -52,14 +52,14 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 | Produktprofile | Sandbox-Zugriff | Berechtigungen |
 | --- | --- | --- |
-| Standardproduktion mit Zugriff | Produktion | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
+| Standardproduktion mit Zugriff | Produktion | Alle Berechtigungen, die auf [!DNL Experience Platform] anwendbar sind, mit Ausnahme der Sandbox-Administratorberechtigungen. |
 | Sandbox-Administratoren | K. A. | Bietet nur Zugriff auf Sandbox-Administratorberechtigungen. |
 
 ## Sandboxes und Berechtigungen
 
-Nicht-Produktion-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxes isolieren können und die üblicherweise für Entwicklungsexperimente, Tests oder Versuche verwendet werden. A product profile&#39;s permissions give the profile&#39;s users access to [!DNL Platform] features within the sandbox environments to which they&#39;ve been granted access to. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Nicht-Produktions-Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
+Nicht-Produktion-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxes isolieren können und die üblicherweise für Entwicklungsexperimente, Tests oder Versuche verwendet werden. Die Berechtigungen eines Profils geben den Benutzern des Profils Zugriff auf [!DNL Platform]-Funktionen innerhalb der Sandbox-Umgebung, auf die sie Zugriff haben. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Nicht-Produktions-Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
 
-For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
+Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Übersicht über Sandboxen](../sandboxes/home.md).
 
 ### Zugriff auf Sandboxes
 
@@ -75,9 +75,9 @@ Auf der Registerkarte Berechtigungen in einem Produktprofil werden die Sandboxes
 
 ![permissions-overview](./images/permissions-overview.png)
 
-Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
+Berechtigungen, die über das [!DNL Admin Console] erteilt werden, werden nach Kategorie sortiert, wobei einige Berechtigungen Zugriff auf mehrere Funktionen auf niedriger Ebene gewähren.
 
-The following table outlines the available permissions for [!DNL Experience Platform] in the [!DNL Admin Console], with descriptions of the specific [!DNL Platform] capabilities they grant access to. Detaillierte Anweisungen zum Hinzufügen von Berechtigungen zu einem Produktprofil finden Sie im [Benutzerhandbuch für die Zugriffskontrolle](./ui/overview.md).
+In der folgenden Tabelle sind die verfügbaren Berechtigungen für [!DNL Experience Platform] in [!DNL Admin Console] mit Beschreibungen der spezifischen [!DNL Platform]-Funktionen, auf die sie Zugriff gewähren, aufgeführt. Detaillierte Anweisungen zum Hinzufügen von Berechtigungen zu einem Produktprofil finden Sie im [Benutzerhandbuch für die Zugriffskontrolle](./ui/overview.md).
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
@@ -101,19 +101,17 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Sandbox Administration] | [!UICONTROL Verwalten von Sandboxes] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL Anzeigen von Sandboxes] | Schreibgeschützter Zugriff für Sandboxes Ihrer Organisation. |
 | [!DNL Sandbox Administration] | [!UICONTROL Zurücksetzen einer Sandbox] | Fähigkeit, eine Sandbox zurückzusetzen. |
-| [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen.* |
-| [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]**.* |
-| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. This permission requires either “View Destinations” or “Manage [!UICONTROL Destinations”] to be granted to the user who will activate destinations.* |
+| [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen. |
+| [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **[!UICONTROL Durchsuchen.]** |
+| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. Für diese Berechtigung ist es erforderlich, dass dem Benutzer, der Ziele aktivieren soll, entweder &quot;Ansichten-Ziele&quot;oder &quot;Ziele verwalten [!UICONTROL &quot;erteilt wird.] |
 | [!DNL Data Ingestion] | [!UICONTROL Verwalten von Quellen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
-| [!DNL Data Science Workspace] | [!UICONTROL Verwalten des Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
+| [!DNL Data Science Workspace] | [!UICONTROL Verwalten des Data Science Workspace] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen in [!DNL Data Science Workspace]. |
 | [!DNL Data Governance] | [!UICONTROL Bezeichnungen für die Datenverwendung anwenden] | Zugriff zum Lesen, Erstellen und Löschen von Beschriftungen für die Verwendung. |
 | [!DNL Data Governance] | [!UICONTROL Richtlinien zur Datenverwendung verwalten] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datenverwendungsrichtlinien. |
 | [!DNL Data Governance] | [!UICONTROL Richtlinien zur Ansicht von Daten] | Schreibgeschützter Zugriff für Datenverwendungsrichtlinien Ihres Unternehmens. |
 | [!DNL Query Service] | [!UICONTROL Abfragen verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Plattformdaten. |
 
-_(*) Für diese Erlaubnis sind Bestimmungen erforderlich, die dies erfordern [!DNL Real-time Customer Data Platform]. Für weitere Informationen zur Echtzeit-Kundendatenplattform lesen Sie bitte zunächst die [Echtzeit-Kundendatenplattform – Übersicht](https://docs.adobe.com/content/help/de-DE/experience-platform/rtcdp/overview.html)._
-
 ## Nächste Schritte
 
-By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](./ui/overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].
+Durch Lesen dieses Handbuchs wurden Sie den Hauptgrundsätzen der Zugriffskontrolle in [!DNL Experience Platform] hinzugefügt. Sie können nun im [Zugriffskontrolle-Benutzerhandbuch](./ui/overview.md) detaillierte Anweisungen zur Verwendung von [!DNL Admin Console] zum Erstellen von Profilen und Zuweisen von Berechtigungen für [!DNL Platform] finden.
