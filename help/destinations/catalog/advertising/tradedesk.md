@@ -1,13 +1,13 @@
 ---
-keywords: advertising; the trade desk;
+keywords: Werbung; die Fachstelle;
 title: Ziel des Trade Desk
 seo-title: Ziel des Trade Desk
 description: 'Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, um zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg auszuführen. '
 seo-description: Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, um zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg auszuführen.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '579'
 ht-degree: 5%
 
 ---
@@ -17,21 +17,21 @@ ht-degree: 5%
 
 ## Übersicht {#overview}
 
-[!DNL The Trade Desk] Mit &quot;target&quot;können Sie Profil-Daten an [!DNL The Trade Desk].
+[!DNL The Trade Desk] Mit &quot;target&quot;können Sie Profil-Daten an  [!DNL The Trade Desk].
 
 [!DNL The Trade Desk] ist eine Selbstbedienungsplattform für Anzeigenkäufer, um Retargeting und Audience zielgerichteter digitaler Kampagnen für Display-, Video- und Mobilgeräte-Inventurquellen durchzuführen.
 
-Um Profil-Daten an [!DNL The Trade Desk]zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
+Um Profil-Daten an [!DNL The Trade Desk] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
 ## Zielspezifikationen {#destination-specs}
 
-Note the following details that are specific to the [!DNL The Trade Desk] destination:
+Beachten Sie die folgenden Details, die für das [!DNL The Trade Desk]-Ziel spezifisch sind:
 
-* Sie können die folgenden [Identitäten](../../../identity-service/namespaces.md) an [!DNL The Trade Desk] Ziele senden: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
+* Sie können die folgenden [Identitäten](../../../identity-service/namespaces.md) an [!DNL The Trade Desk]-Ziele senden: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
 
 ## Anwendungsbeispiele {#use-cases}
 
-Als Marketingspezialist möchte ich Segmente verwenden können, die aus [!DNL Trade Desk IDs] oder Geräte-IDs aufgebaut sind, um Retargeting oder Audience zielgerichteter digitaler Kampagnen zu erstellen.
+Als Marketingspezialist möchte ich Segmente verwenden können, die aus [!DNL Trade Desk IDs] oder Geräte-IDs erstellt wurden, um Retargeting oder Audience zielgerichteter digitaler Kampagnen zu erstellen.
 
 ## Exporttyp {#export-type}
 
@@ -39,23 +39,23 @@ Als Marketingspezialist möchte ich Segmente verwenden können, die aus [!DNL Tr
 
 ## Mit Ziel verbinden {#connect-destination}
 
-Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option [!DNL The Trade Desk]und wählen Sie **[!UICONTROL Konfigurieren]**.
+Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** [!DNL The Trade Desk] aus und wählen Sie **[!UICONTROL Konfigurieren]**.
 
 ![Das Ziel des Trade Desk konfigurieren](../../assets/catalog/advertising/tradedesk/configure.png)
 
 >[!NOTE]
 >
->Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche &quot; **[!UICONTROL Aktivieren]** &quot;angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt &quot; [Katalog](../../ui/destinations-workspace.md#catalog) &quot;der Dokumentation zum Zielarbeitsbereich.
+>Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 >
 >![Handelsdatenträger-Ziel aktivieren](../../assets/catalog/advertising/tradedesk/activate.png)
 
-Im Schritt [!UICONTROL Authentifizierung] müssen Sie die [!DNL The Trade Desk] Verbindungsdetails eingeben:
+Geben Sie im Schritt [!UICONTROL Authentication] die Verbindungsdetails [!DNL The Trade Desk] ein:
 
 * **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, mit der Sie dieses Ziel in Zukunft identifizieren können.
-* **[!UICONTROL Konto-ID]**: Ihre [!DNL Trade Desk] Konto-ID .
-* **[!UICONTROL geheim]**: Der in den `clientSecret` Clientberechtigungen verwendete [!DNL OAuth2] Parameter.
-* **[!UICONTROL Serverort]**: Fragen Sie Ihren [!DNL The Trade Desk] Kundenbetreuer, welchen regionalen Server Sie verwenden sollten. Die folgenden regionalen Server stehen zur Auswahl:
+* **[!UICONTROL Konto-ID]**: Ihre  [!DNL Trade Desk] [!UICONTROL Konto-ID].
+* **[!UICONTROL geheim]**: Der in den  `clientSecret` Clientberechtigungen verwendete  [!DNL OAuth2] Parameter.
+* **[!UICONTROL Serverort]**: Fragen Sie Ihren  [!DNL The Trade Desk] Kundenbetreuer, welchen regionalen Server Sie verwenden sollten. Die folgenden regionalen Server stehen zur Auswahl:
 
    * **[!UICONTROL Europa]**
    * **[!UICONTROL Singapur]**
@@ -64,24 +64,24 @@ Im Schritt [!UICONTROL Authentifizierung] müssen Sie die [!DNL The Trade Desk] 
    * **[!UICONTROL Nordamerika - Westen]**
    * **[!UICONTROL Lateinamerika]**
 
-* **[!UICONTROL Anwendungsfall]** für das Marketing: Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../rtcdp/privacy/data-governance-overview.md#destinations) . Informationen zu den einzelnen Anwendungsfällen für Marketingzwecke, die von der Adobe definiert wurden, finden Sie in der Übersicht über [Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md#core-actions).
+* **[!UICONTROL Anwendungsfall]** für das Marketing: Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../data-governance/policies/overview.md). Informationen zu den einzelnen Anwendungsfällen für Marketingzwecke finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 ![Schritt zur Authentifizierung des Trade Desk](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
-Klicken Sie auf Ziel **[!UICONTROL erstellen]**. Ihr Ziel wird jetzt erstellt. You can click [!UICONTROL Save &amp; Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+Klicken Sie auf **[!UICONTROL Ziel erstellen]**. Ihr Ziel wird jetzt erstellt. Sie können auf [!UICONTROL Speichern und beenden] klicken, wenn Sie Segmente später aktivieren möchten, oder Sie können [!UICONTROL Weiter] auswählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In beiden Fällen finden Sie den Rest des Workflows im nächsten Abschnitt [Segmente aktivieren](#activate-segments).
 
 ## Aktivieren von Segmenten {#activate-segments}
 
 Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile und Segmente für ein Ziel aktivieren](../../ui/activate-destinations.md#select-attributes).
 
-Im Schritt [Segmentplan](../../ui/activate-destinations.md#segment-schedule) müssen Sie Ihre Segmente manuell ihrer entsprechenden ID oder ihrem Anzeigenamen im Ziel zuordnen.
+Im Schritt [Segmentplan](../../ui/activate-destinations.md#segment-schedule) müssen Sie Ihre Segmente manuell der entsprechenden ID oder dem Anzeigenamen im Ziel zuordnen.
 
-Beim Zuordnen von Segmenten sollten Sie den [!DNL Platform] Segmentnamen oder eine kürzere Form verwenden, um die Verwendung zu vereinfachen. Die Segment-ID oder der Name in Ihrem Ziel muss jedoch nicht mit der in Ihrem [!DNL Platform] Konto übereinstimmen. Jeder Wert, den Sie in das Zuordnungsfeld einfügen, wird vom Ziel übernommen.
+Bei der Segmentzuordnung empfehlen wir, den Segmentnamen [!DNL Platform] oder eine kürzere Form zu verwenden, um die Verwendung zu vereinfachen. Die Segment-ID oder der Name in Ihrem Ziel muss jedoch nicht mit der in Ihrem [!DNL Platform]-Konto übereinstimmen. Jeder Wert, den Sie in das Zuordnungsfeld einfügen, wird vom Ziel übernommen.
 
-Wenn Sie mehrere Gerätezuordnungen verwenden (Cookie-IDs, [!DNL IDFA][!DNL GAID]), stellen Sie sicher, dass Sie denselben Zuordnungswert für alle drei Zuordnungen verwenden. [!DNL The Trade Desk] werden alle Elemente in einem Segment mit einer Aufschlüsselung auf Geräteebene Aggregat.
+Wenn Sie mehrere Gerätezuordnungen (Cookie-IDs, [!DNL IDFA], [!DNL GAID]) verwenden, stellen Sie sicher, dass Sie denselben Zuordnungswert für alle drei Zuordnungen verwenden. [!DNL The Trade Desk] werden alle Elemente in einem Segment mit einer Aufschlüsselung auf Geräteebene Aggregat.
 
 ![Segmentzuordnungs-ID](../../assets/common/segment-mapping-id.png)
 
 ## Exportierte Daten {#exported-data}
 
-Überprüfen Sie Ihr [!DNL The Trade Desk] Konto, um zu überprüfen, ob die Daten erfolgreich an [!DNL The Trade Desk] das Ziel exportiert wurden. Wenn die Aktivierung erfolgreich war, werden Audiencen in Ihrem Konto ausgefüllt.
+Um zu überprüfen, ob Daten erfolgreich an das [!DNL The Trade Desk]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL The Trade Desk]-Konto. Wenn die Aktivierung erfolgreich war, werden Audiencen in Ihrem Konto ausgefüllt.
