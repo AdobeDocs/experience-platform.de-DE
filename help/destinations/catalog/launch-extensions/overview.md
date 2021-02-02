@@ -1,14 +1,14 @@
 ---
-keywords: launch extensions;launch extension;launch destinations; platform launch extensions;platform launch extension;platform launch destinations
+keywords: Start-Erweiterungen;Start-Erweiterung;Start-Ziele; Plattformstarterweiterungen;Plattformstarterweiterung;Plattformstartziele
 title: Experience Platform Launch-Erweiterungen
 seo-title: Experience Platform Launch-Erweiterungen
 description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 seo-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 57%
+source-wordcount: '648'
+ht-degree: 52%
 
 ---
 
@@ -19,12 +19,12 @@ Adobe Experience Platform Launch ist die nächste Generation von Tag-Management-
 Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.  Platform Launch ist für Adobe Experience Cloud-Kunden als integrierte, Mehrwert bietende Funktion verfügbar.
 
 Eine Einführung in die Funktionen von Experience Platform Launch finden Sie in den folgenden Ressourcen:
-- Adobe Experience Platform Launch [documentation](https://docs.adobe.com/content/help/de-DE/experience-cloud/user-guides/home.translate.html)
-- Adobe Experience Platform Launch [quick start videos](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Start with [Introduction to Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/de/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts.
+- Adobe Experience Platform Launch [Dokumentation](https://docs.adobe.com/content/help/de-DE/experience-cloud/user-guides/home.translate.html)
+- Adobe Experience Platform Launch [Schnellvideos](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?) für Beginn. Beginn mit [Einführung in Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) und [Übersicht über den Veröffentlichungsprozess](https://helpx.adobe.com/de/analytics/how-to/adobe-launch-publishing-process.html) und fahren Sie dann mit den nächsten Konzepten fort.
 
-## How to find the Platform Launch extensions in the Real-time CDP interface {#how-to-find-extensions-in-interface}
+## Suchen der Plattformstarterweiterungen in der Plattform-Oberfläche {#how-to-find-extensions-in-interface}
 
-To find the Platform Launch extensions in the Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter.
+Um die Plattformstarterweiterungen in der Plattform-Oberfläche zu finden, navigieren Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** und wählen Sie **[!UICONTROL Erweiterungen]** im Filter **[!UICONTROL Typen]** aus.
 
 ![Erweiterungsfilter in der Benutzeroberfläche](../../assets/catalog/launch-extensions/filter.png)
 
@@ -32,11 +32,11 @@ To find the Platform Launch extensions in the Real-time CDP interface, browse to
 
 Plattformstarterweiterungen leiten Rohdaten an verschiedene Ereignis weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](../personalization/gainsight.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](../voice/confirmit-digital-feedback.md).
 
-**Profil-/Segmentexport-Ziele** in der Echtzeit-Kundendatenplattform von erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profile in Ziele. Beispiele hierfür sind das [Amazon S3 Cloud-Speicher-Ziel](../cloud-storage/amazon-s3.md) oder das [Google Display &amp; Video 360-Werbeziel](../advertising/google-dv360.md).
+**Profil-/Segmentexport-** Ziele in Adobe Experience Platform erfassen Ereignis-Daten, kombinieren diese mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Beispiele hierfür sind das [Amazon S3 Cloud-Speicher-Ziel](../cloud-storage/amazon-s3.md) oder das [Google Display &amp; Video 360-Werbeziel](../advertising/google-dv360.md).
 
 ![Experience Platform Launch-Erweiterungen im Vergleich zu anderen Zielen](../../assets/common/launch-and-other-destinations.png)
 
-## Benefits of using Platform Launch extensions {#extensions-benefits}
+## Vorteile der Verwendung von Plattformstarterweiterungen {#extensions-benefits}
 
 Adobe Experience Platform Launch ist für bestehende Experience Cloud-Kunden kostenlos. Plattformstart vereinfacht die Tag-Bereitstellung auf Ihrer Website mithilfe benutzerfreundlicher Erweiterungen, die Sie installieren, konfigurieren, aktualisieren und löschen können. Plattformstart hat einen kleinen Platzbedarf auf Ihrer Website und ermöglicht Ihnen, Ihre Seiten schnell zu laden.
 
@@ -44,9 +44,9 @@ Adobe Experience Platform Launch ist für bestehende Experience Cloud-Kunden kos
 >
 >Sie können zwar keine Segmente für Plattformstarterweiterungen aktivieren, aber Sie können Regeln festlegen, die nur in bestimmten Ereignissen weiterleiten. Weitere Informationen finden Sie unten.
 
-Sie können *Regeln* erstellen, die bestimmen, wann Ereignisdaten an Erweiterungen weitergeleitet werden. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. For more information, read about rules in the [Adobe Experience Platform Launch documentation](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Sie können *Regeln* erstellen, die bestimmen, wann Ereignisdaten an Erweiterungen weitergeleitet werden. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. Weitere Informationen finden Sie unter Regeln in der [Adobe Experience Platform Launch-Dokumentation](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
 
-## Example use cases for Platform Launch extensions {#extensions-use-cases}
+## Anwendungsbeispiele für Plattformstarterweiterungen {#extensions-use-cases}
 
 Plattformstarterweiterungen ermöglichen es Ihnen, verschiedene Anwendungsfälle des Kunden zu befriedigen. Beispiele für Anwendungsfälle für die Verwendung von Plattformstarterweiterungen:
 
@@ -56,7 +56,7 @@ Plattformstarterweiterungen ermöglichen es Ihnen, verschiedene Anwendungsfälle
 
 ## Erweiterungskategorien {#extension-categories}
 
-Plattformstarterweiterungen können in Echtzeit-CDP unter die folgenden Kategorien fallen:
+Plattformstarterweiterungen können unter die folgenden Kategorien in Plattform fallen:
 
 - [Werbung](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
