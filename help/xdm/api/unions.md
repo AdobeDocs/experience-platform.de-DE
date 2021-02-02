@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Vereinigung;Vereinigung;Vereinigungen;Vereinigungen;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Vereinigungen
 description: Mit dem Endpunkt /Vereinigungen in der Schema Registry API können Sie XDM-Vereinigung-Schema in Ihrer Experience-Anwendung programmgesteuert verwalten.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 50%
+source-wordcount: '910'
+ht-degree: 48%
 
 ---
 
