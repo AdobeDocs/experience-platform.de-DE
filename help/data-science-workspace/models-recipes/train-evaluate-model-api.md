@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
+keywords: Experience Platform;Schulung und Auswertung;Data Science Workspace;beliebte Themen;Sensei-Maschinen-Learning-API
 solution: Experience Platform
 title: Schulung und Auswertung eines Modells (API)
 topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning API-Aufrufen erstellen, ausbilden und auswerten können.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 98%
+source-wordcount: '1230'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen er
 
 Folgen Sie dem [Importieren eines verpackten Rezepts mit der API](./import-packaged-recipe-api.md) zum Erstellen einer Engine, die zur Schulung und Auswertung für ein Modell mit der API erforderlich ist.
 
-Befolgen Sie dieses [Tutorial](../../tutorials/authentication.md) zur Autorisierung, um damit zu beginnen, API-Aufrufe auszuführen.
+Folgen Sie dem Tutorial [Experience Platform API authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en), um Beginn API-Aufrufe durchzuführen.
 
 Sie sollten nun die folgenden Werte aus dem Tutorial haben:
 
