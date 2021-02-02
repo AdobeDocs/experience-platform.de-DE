@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
+keywords: Experience Platform;Home;beliebte Themen;Katalogdienst;Katalog;Katalogdienst;Katalog
 solution: Experience Platform
 title: Entwicklerhandbuch zum Catalog Service
 topic: developer guide
 description: In diesem Entwicklerhandbuch finden Sie Anweisungen dazu, wie Sie mit der Verwendung der Catalog-API beginnen können. Dann bietet das Handbuch Beispiel-API-Aufrufe für die Ausführung wichtiger Vorgänge mithilfe von Catalog.
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 64%
+source-wordcount: '598'
+ht-degree: 62%
 
 ---
 
@@ -19,15 +19,15 @@ ht-degree: 64%
 
 In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der Verwendung der [!DNL Catalog]-API beginnen können. Dann bietet das Handbuch Beispiel-API-Aufrufe für die Ausführung wichtiger Vorgänge mithilfe von [!DNL Catalog].
 
-## Voraussetzungen 
+## Voraussetzungen
 
-[!DNL Catalog] verfolgt Metadaten für verschiedene Arten von Ressourcen und Vorgängen innerhalb von [!DNL Experience Platform]. This developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with creating and managing these resources:
+[!DNL Catalog] verfolgt Metadaten für verschiedene Arten von Ressourcen und Vorgängen innerhalb von  [!DNL Experience Platform]. Dieses Entwicklerhandbuch erfordert ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste, die mit der Erstellung und Verwaltung dieser Ressourcen verbunden sind:
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 * [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]: So erfasst und speichert Daten aus Datendateien wie CSV und Parquet.
 * [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform]: So erfasst und speichert Daten von Client- und Server-seitigen Geräten in Echtzeit.
 
-The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Catalog Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Catalog Service]-API erfolgreich aufrufen zu können.
 
 ## Lesen von Beispiel-API-Aufrufen
 
@@ -35,36 +35,36 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ## Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
 * Content-Type: application/json
 
-## Best practices for [!DNL Catalog] API calls
+## Bewährte Verfahren für API-Aufrufe von [!DNL Catalog]
 
-When performing GET requests to the [!DNL Catalog] API, best practice is to include query parameters in your requests in order to return only the objects and properties that you need. Ungefilterte Anfragen können dazu führen, dass Antwort-Payloads größer als 3 GB sind, was die Gesamtleistung verringern kann.
+Beim Durchführen von GET an die API ist es am besten, Abfragen-Parameter in Ihre Anforderungen einzubeziehen, um nur die benötigten Objekte und Eigenschaften zurückzugeben. [!DNL Catalog] Ungefilterte Anfragen können dazu führen, dass Antwort-Payloads größer als 3 GB sind, was die Gesamtleistung verringern kann.
 
 Außerdem können Sie bestimmte Objekte durch Einfügen ihrer Kennung in den Anfragepfad anzeigen oder Abfrageparameter wie `properties` und `limit` zum Filtern von Antworten verwenden. Filter können als Kopfzeilen und Abfrageparameter übergeben werden, wobei Abfrageparameter bei der Übergabe Vorrang erhalten. Weiterführende Informationen finden Sie im Dokument zum [Filtern von Catalog-Daten](filter-data.md).
 
-Since some queries can put a heavy load on the API, global limits have been implemented on [!DNL Catalog] queries to further support best practices.
+Da einige Abfragen die API stark belasten können, wurden globale Beschränkungen für [!DNL Catalog]-Abfragen implementiert, um Best Practices weiter zu unterstützen.
 
 ## Nächste Schritte
 
-This document covered the prerequisite knowledge required to make calls to the [!DNL Catalog] API. Sie können nun mit den Beispielaufrufen in diesem Entwicklerhandbuch fortfahren und den entsprechenden Anweisungen folgen.
+Dieses Dokument deckte die erforderlichen Kenntnisse ab, um Aufrufe an die [!DNL Catalog]-API durchzuführen. Sie können nun mit den Beispielaufrufen in diesem Entwicklerhandbuch fortfahren und den entsprechenden Anweisungen folgen.
 
-Most of the examples in this guide use the `/dataSets` endpoint, but the principles can be applied to other endpoints within [!DNL Catalog] (such as `/batches` and `/accounts`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Die meisten Beispiele in diesem Handbuch verwenden den Endpunkt `/dataSets`, die Prinzipien können jedoch auf andere Endpunkte innerhalb von [!DNL Catalog] angewendet werden (z. B. `/batches` und `/accounts`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
-For a step-by-step workflow that demonstrates how the [!DNL Catalog] API is involved with data ingestion, see the tutorial on [creating a dataset](../datasets/create.md).
+Ein schrittweiser Arbeitsablauf, der zeigt, wie die [!DNL Catalog]-API mit der Datenerfassung verbunden ist, finden Sie im Lernprogramm [Erstellen eines Datensatzes](../datasets/create.md).
