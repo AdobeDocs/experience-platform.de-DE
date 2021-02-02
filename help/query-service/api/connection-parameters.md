@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
+keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;API-Leitfaden;Verbindungsparameter;Abfrage-Dienst
 solution: Experience Platform
 title: Entwicklerhandbuch für Query Service
 topic: connection parameters
@@ -7,8 +7,8 @@ description: Sie können Ihre Verbindungsparameter für die Verwendung des inter
 translation-type: tm+mt
 source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 47%
+source-wordcount: '147'
+ht-degree: 42%
 
 ---
 
