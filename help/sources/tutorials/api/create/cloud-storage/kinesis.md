@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
+keywords: Experience Platform;Home;beliebte Themen;Kinesis;Kininsis;Amazon Kinesis;Amazonaskinese
 solution: Experience Platform
 title: Erstellen eines Amazon Kinesis Connectors mit der Flow Service API
 topic: overview
 type: Tutorial
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zum Herstellen einer Verbindung zwischen der Experience Platform und einem Amazon Kinesis-Konto zu führen.
 translation-type: tm+mt
-source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 27%
+source-wordcount: '549'
+ht-degree: 26%
 
 ---
 
@@ -52,7 +52,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -123,4 +123,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine [!DNL Amazon Kinesis]-Verbindung mit APIs erstellt und eine eindeutige ID als Teil des Antwortkörpers erhalten. Sie können diese Verbindungs-ID verwenden, um Streaming-Daten mit der Flow Service API[ zu erfassen.](../../collect/streaming.md)
+In diesem Lernprogramm haben Sie eine [!DNL Amazon Kinesis]-Verbindung mit APIs erstellt und eine eindeutige ID als Teil des Antwortkörpers erhalten. Sie können diese Verbindungs-ID verwenden, um Streaming-Daten mit der Flow Service API](../../collect/streaming.md) zu erfassen.[
