@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;collect customer success;customer success
+keywords: Experience Platform;Home;beliebte Themen;Kundenerfolg erfassen;Kundenerfolg
 solution: Experience Platform
 title: Erfassen von Daten aus einem Kundenerfolgssystem über Quellschnittstellen und APIs
 topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Kundenerfolgssystem und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und APIs erläutert.
 translation-type: tm+mt
-source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1541'
 ht-degree: 16%
 
 ---
@@ -39,7 +39,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
