@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;customer attributes
+keywords: Experience Platform;Startseite;beliebte Themen;Kundenattribute
 solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Kundenattribute in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie in der Benutzeroberfläche einen Quellanschluss für die Erfassung von Kundenattributdaten in Adobe Experience Platform erstellen können.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 8%
+source-wordcount: '379'
+ht-degree: 6%
 
 ---
 
 
 # Erstellen eines Quell-Connectors für Kundenattribute in der Benutzeroberfläche
 
-In diesem Lernprogramm wird beschrieben, wie Sie in der Benutzeroberfläche einen Quellanschluss für die Erfassung von Kundenattributdaten in Adobe Experience Platform erstellen können. Weitere Informationen zu Kundenattributen finden Sie im Dokument [Überblick](https://docs.adobe.com/content/help/de-DE/core-services/interface/customer-attributes/attributes.html).
+In diesem Lernprogramm wird beschrieben, wie Sie in der Benutzeroberfläche einen Quellanschluss für die Erfassung von Kundenattributdaten in Adobe Experience Platform erstellen können. Weitere Informationen zu Kundenattributen finden Sie im Dokument [overview](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 ## Erstellen einer Quellverbindung
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den Quellarbeitsbereich zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verfügbare Quellen angezeigt, mit denen eingehende Verbindungen erstellt werden können. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind. Wählen Sie die Option für **[!UICONTROL Kundenattribute]** und dann **[!UICONTROL Hinzufügen Daten]**. Warten Sie einige Zeit, bis die Verbindung hergestellt ist. Sie werden umgeleitet, wenn eine Verbindung erfolgreich hergestellt wurde.
+Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Quellarbeitsbereich zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** zeigt verfügbare Quellen zum Erstellen von eingehenden Verbindungen an. Jede Quelle zeigt die Anzahl der vorhandenen Verbindungen an, die mit ihnen verbunden sind. Wählen Sie die Option für **[!UICONTROL Kundenattribute]** und wählen Sie **[!UICONTROL Hinzufügen Daten]**. Warten Sie einige Zeit, bis die Verbindung hergestellt ist. Sie werden umgeleitet, wenn eine Verbindung erfolgreich hergestellt wurde.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an u
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-Im Bildschirm &quot; **Source-Aktivität** &quot;werden alle zuvor eingerichteten Verbindungen für Kundenattributdaten Liste. Sie können eine neue Verbindung erstellen, indem Sie auf Daten **auswählen** klicken.
+Im Bildschirm **Source Aktivität** werden alle zuvor eingerichteten Verbindungen für Kundenattributdaten-Profil-Daten Liste. Sie können eine neue Verbindung erstellen, indem Sie auf **Select data** klicken.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ Im Bildschirm &quot; **Source-Aktivität** &quot;werden alle zuvor eingerichtete
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-Wählen Sie in der Liste der verfügbaren Kundenattributdatasets die Profil aus, die Sie einbeziehen möchten, [!DNL Platform] und klicken Sie auf **Weiter**.
+Wählen Sie in der Liste der verfügbaren Kundenattributdatasets die Profil aus, die Sie in [!DNL Platform] einbinden möchten, und klicken Sie auf **Weiter**.
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Der Schritt **Überprüfen** wird angezeigt, mit dem Sie Ihre neue eingehende Ve
 
 ## Nächste Schritte
 
-Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der anfänglichen Erfassung können Kundenattributdaten-Profil-Daten von nachgeschalteten [!DNL Platform] Diensten wie [!DNL Real-time Customer Profile] und [!DNL Segmentation Service]verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der ersten Erfassung können Kundenattributdaten-Profil-Daten von nachgeschalteten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Segmentation Service] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [[!DNL Real-time Customer Profile] Übersicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] Übersicht](../../../../../segmentation/home.md)
