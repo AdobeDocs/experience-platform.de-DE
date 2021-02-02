@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
+keywords: Experience Platform;Home;beliebte Themen;Cloud-Datenspeicherung;Cloud-Datenspeicherung
 solution: Experience Platform
 title: Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API
 topic: overview
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um ein Cloud-Datenspeicherung-System eines Drittanbieters zu untersuchen.
 translation-type: tm+mt
-source-git-commit: 3d104cdf7c97022fe60feafd3587056d378b56bd
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '759'
 ht-degree: 20%
 
 ---
 
 
-# Entdecken Sie ein Cloud-Datenspeicherung-System mit der [!DNL Flow Service] API
+# Entdecken Sie ein Cloud-Datenspeicherung-System mit der API[!DNL Flow Service]
 
-Dieses Lernprogramm verwendet die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) , um ein Cloud-Datenspeicherung-System eines Drittanbieters zu untersuchen.
+Dieses Lernprogramm verwendet die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml), um ein Cloud-Datenspeicherung-System eines Drittanbieters zu untersuchen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
+* [Sandboxen](../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage system using the [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Flow Service]-API eine erfolgreiche Verbindung zu einem Cloud-Datenspeicherung-System herzustellen.
 
 ### Verbindungs-ID abrufen
 
-Um eine Cloud-Datenspeicherung von Drittanbietern mithilfe von [!DNL Platform] APIs zu untersuchen, müssen Sie über eine gültige Verbindungs-ID verfügen. Wenn Sie noch keine Verbindung zu der Datenspeicherung haben, mit der Sie arbeiten möchten, können Sie eine dieser Übungen erstellen:
+Um eine Drittanbieter-Cloud-Datenspeicherung mithilfe von [!DNL Platform]-APIs zu untersuchen, müssen Sie über eine gültige Verbindungs-ID verfügen. Wenn Sie noch keine Verbindung zu der Datenspeicherung haben, mit der Sie arbeiten möchten, können Sie eine dieser Übungen erstellen:
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure Blob](../create/cloud-storage/blob.md)
@@ -45,13 +45,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -68,7 +68,7 @@ Mithilfe der Verbindungs-ID für Ihre Cloud-Datenspeicherung können Sie Dateien
 | `objectType` | Der Objekttyp, den Sie untersuchen möchten. Legen Sie diesen Wert wie folgt fest: <ul><li>`folder`: Einen bestimmten Ordner durchsuchen</li><li>`root`: Suchen Sie den Stammordner.</li></ul> |
 | `object` | Dieser Parameter ist nur erforderlich, wenn ein bestimmtes Verzeichnis angezeigt wird. Sein Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. |
 
-Verwenden Sie den folgenden Aufruf, um den Pfad der Datei zu finden, die Sie einführen möchten [!DNL Platform]:
+Verwenden Sie den folgenden Aufruf, um den Pfad der Datei zu finden, die Sie in [!DNL Platform] einbinden möchten:
 
 **API-Format**
 
@@ -95,7 +95,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird ein Array von Dateien und Ordnern im abgefragten Ordner zurückgegeben. Notieren Sie sich die `path` Eigenschaft der Datei, die Sie hochladen möchten, da Sie sie im nächsten Schritt bereitstellen müssen, um die Struktur zu überprüfen.
+Bei einer erfolgreichen Antwort wird ein Array von Dateien und Ordnern im abgefragten Ordner zurückgegeben. Beachten Sie die `path`-Eigenschaft der Datei, die Sie hochladen möchten, da Sie sie im nächsten Schritt bereitstellen müssen, um die Struktur zu überprüfen.
 
 ```json
 [
@@ -116,7 +116,7 @@ Bei einer erfolgreichen Antwort wird ein Array von Dateien und Ordnern im abgefr
 
 Um die Struktur der Datendatei in Ihrer Cloud-Datenspeicherung zu überprüfen, führen Sie eine GET durch und geben Sie dabei den Dateipfad und -typ als Abfrage-Parameter an.
 
-Sie können die Struktur einer CSV- oder TSV-Datei überprüfen, indem Sie ein benutzerdefiniertes Trennzeichen als Abfrage-Rahmen angeben. Jeder einzelne Zeichenwert ist ein zulässiges Spaltentrennzeichen. Wenn das Attribut nicht angegeben ist, `(,)` wird als Standardwert ein Komma verwendet.
+Sie können die Struktur einer CSV- oder TSV-Datei überprüfen, indem Sie ein benutzerdefiniertes Trennzeichen als Abfrage-Rahmen angeben. Jeder einzelne Zeichenwert ist ein zulässiges Spaltentrennzeichen. Ist diese Angabe nicht verfügbar, wird ein Komma `(,)` als Standardwert verwendet.
 
 **API-Format**
 
@@ -131,7 +131,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | `{CONNECTION_ID}` | Die Verbindungs-ID des Cloud-Datenspeicherung-Quellconnectors. |
 | `{FILE_PATH}` | Der Pfad zu der Datei, die Sie überprüfen möchten. |
 | `{FILE_TYPE}` | Der Typ der Datei. Folgende Dateitypen werden unterstützt:<ul><li>DELIMITED</code>: Trennzeichen-getrennter Wert. DSV-Dateien müssen kommagetrennt sein.</li><li>JSON</code>: JavaScript-Objektbeschreibung. JSON-Dateien müssen XDM-konform sein</li><li>PARQUET</code>: Apache Parquet. Parquet-Dateien müssen XDM-kompatibel sein.</li></ul> |
-| `columnDelimiter` | Der Wert für ein einzelnes Zeichen, den Sie als Trennzeichen für Spalten angegeben haben, um CSV- oder TSV-Dateien zu überprüfen. Wenn der Parameter nicht angegeben ist, wird als Wert standardmäßig ein Komma verwendet `(,)`. |
+| `columnDelimiter` | Der Wert für ein einzelnes Zeichen, den Sie als Trennzeichen für Spalten angegeben haben, um CSV- oder TSV-Dateien zu überprüfen. Wenn der Parameter nicht angegeben ist, wird als Wert standardmäßig ein Komma `(,)` verwendet. |
 
 **Anfrage**
 
@@ -175,4 +175,4 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei einschließlic
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie Ihr Cloud-Datenspeicherung-System erforscht, den Dateipfad gefunden, den Sie eintragen möchten, [!DNL Platform]und die Dateistruktur angezeigt. Sie können diese Informationen im nächsten Lernprogramm verwenden, um Daten aus Ihrer Cloud-Datenspeicherung zu [erfassen und in Plattform](../collect/cloud-storage.md)zu übertragen.
+In diesem Lernprogramm haben Sie Ihr Cloud-Datenspeicherung-System erforscht, den Dateipfad gefunden, den Sie in [!DNL Platform] einführen möchten, und die Dateistruktur angezeigt. Sie können diese Informationen im nächsten Lernprogramm zu [verwenden, um Daten aus Ihrer Cloud-Datenspeicherung zu erfassen und in Platform](../collect/cloud-storage.md) zu laden.
