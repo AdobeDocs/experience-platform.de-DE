@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;export;import;rpc;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Export;Import;rpc
 solution: Experience Platform
 title: Handbuch zum Exportieren/Importieren von Endpunkten
 description: Die Endpunkte "/export"und "/import"in der Schema Registry-API ermöglichen es Ihnen, XDM-Ressourcen zwischen IMS-Organisationen und Sandboxes freizugeben.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: dfa91e387b6fcd0d528a523a06d2516bc8befc20
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '500'
 ht-degree: 2%
 
 ---
