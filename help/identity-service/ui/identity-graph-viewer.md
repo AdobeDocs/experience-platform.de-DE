@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform;Home;beliebte Themen;Identitätsdiagramm-Viewer;Identitätsdiagramm-Viewer;Diagramm-Viewer;Namensraum;Identitäts-Namensraum;Identität;Identitätsdienst;Identitätsdienst;Identitätsdienst
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
 translation-type: tm+mt
-source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
+source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '905'
 ht-degree: 3%
 
 ---
@@ -31,23 +31,23 @@ Die Arbeit mit dem Identitätsdiagramm-Viewer erfordert ein Verständnis der ver
 
 ### Terminologie
 
-- **Identität (Knoten):** Eine Identität oder eine Node sind Daten, die für eine Entität, normalerweise eine Person, eindeutig sind. Eine Identität besteht aus einem Namensraum und einem Identitätswert.
-- **Link (Kante):** Ein Link oder eine Kante stellt die Verbindung zwischen Identitäten dar.
+- **Identität (Node):** Eine Identität oder eine Node sind Daten, die für eine Entität, normalerweise eine Person, eindeutig sind. Eine Identität besteht aus einem Namensraum und einem Identitätswert.
+- **Verknüpfung (Kante):** Ein Link oder eine Kante stellt die Verbindung zwischen Identitäten dar.
 - **Diagramm (Cluster):** Ein Diagramm oder ein Cluster ist eine Gruppe von Identitäten und Links, die eine Person repräsentieren.
 
 ## Zugriff auf den Identitätsdiagramm-Viewer
 
-Um den Identitätsdiagramm-Viewer in der Benutzeroberfläche zu verwenden, wählen Sie im linken Navigationsbereich die Option &quot; **[!UICONTROL Identitäten]** &quot;und dann die Registerkarte &quot; **[!UICONTROL Identitätsdiagramm]** &quot;aus. Klicken Sie im Bildschirm &quot; **[!UICONTROL Identitäts-Namensraum]** &quot;auf das Symbol Identität **[!UICONTROL auswählen Namensraum]** , um nach dem Namensraum zu suchen, den Sie verwenden möchten.
+Um den Identitätsdiagramm-Viewer in der Benutzeroberfläche zu verwenden, wählen Sie **[!UICONTROL Identities]** in der linken Navigation und dann die Registerkarte **[!UICONTROL Identitätsdiagramm]**. Klicken Sie im Bildschirm **[!UICONTROL Identity Namensraum]** auf das Symbol **[!UICONTROL Identität auswählen]**, um nach dem Namensraum zu suchen, den Sie verwenden möchten.
 
 ![namensraum-Screen](../images/identity-graph-viewer/identity-namespace.png)
 
-Das Bedienfeld **[!UICONTROL Identitäts-Namensraum]** auswählen wird angezeigt. Dieser Bildschirm enthält eine Liste der Namensraum, die für Ihr Unternehmen zur Verfügung stehen, einschließlich Informationen zum **[!UICONTROL Anzeigenamen]**, **[!UICONTROL Identitätssymbol]**, **[!UICONTROL Inhaber]**, **[!UICONTROL Zuletzt aktualisiert]** und **[!UICONTROL Beschreibung]** des Namensraums. Sie können einen beliebigen Namensraum verwenden, sofern ein gültiger Identitätswert mit ihm verbunden ist.
+Das Bedienfeld **[!UICONTROL Identität auswählen]** wird angezeigt. Dieser Bildschirm enthält eine Liste von Namensräumen, die für Ihr Unternehmen zur Verfügung stehen, einschließlich Informationen zu den folgenden Elementen: **[!UICONTROL Anzeigename]**, **[!UICONTROL Identitätssymbol]**, **[!UICONTROL Inhaber]**, **[!UICONTROL Letzte Aktualisierung]** und **[!UICONTROL Beschreibung]**. Sie können einen beliebigen Namensraum verwenden, sofern ein gültiger Identitätswert mit ihm verbunden ist.
 
-Wählen Sie den gewünschten Namensraum aus und klicken Sie auf **[!UICONTROL Auswählen]** , um fortzufahren.
+Wählen Sie den gewünschten Namensraum aus und klicken Sie auf **[!UICONTROL Wählen Sie]**, um fortzufahren.
 
 ![select-identity-Namensraum](../images/identity-graph-viewer/select-identity-namespace.png)
 
-Wenn Sie einen Namensraum ausgewählt haben, geben Sie den entsprechenden Wert für einen bestimmten Kunden in das Textfeld **[!UICONTROL Identitätswert]** ein und wählen Sie **[!UICONTROL Ansicht]** aus.
+Wenn Sie einen Namensraum ausgewählt haben, geben Sie den entsprechenden Kundenwert in das Textfeld **[!UICONTROL Identitätswert]** ein und wählen Sie **[!UICONTROL Ansicht]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
@@ -55,27 +55,27 @@ Der Identitätsdiagramm-Viewer wird angezeigt. Auf der linken Seite des Bildschi
 
 >[!IMPORTANT]
 >
->Ein Identitätsdiagramm erfordert mindestens zwei verknüpfte Identitäten sowie ein gültiges Namensraum- und ID-Paar. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 150. Weitere Informationen finden Sie im [Anhang](#appendix) .
+>Ein Identitätsdiagramm erfordert mindestens zwei verknüpfte Identitäten sowie ein gültiges Namensraum- und ID-Paar. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 150. Weitere Informationen finden Sie im Abschnitt [Anhang](#appendix).
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
-Wählen Sie eine Identität aus, um die hervorgehobene Zeile in der Tabelle &quot; **[!UICONTROL Identitäten]** &quot;zu aktualisieren und die Informationen in der rechten Leiste zu aktualisieren, die den **[!UICONTROL Wert]**, die **[!UICONTROL Stapel-ID]** und das **[!UICONTROL letzte aktualisierte]** Datum einer Identität enthalten.
+Wählen Sie eine Identität aus, um die hervorgehobene Zeile in der Tabelle **[!UICONTROL Identities]** zu aktualisieren und die Informationen in der rechten Leiste zu aktualisieren. Dazu gehören **[!UICONTROL Wert]**, **[!UICONTROL Stapel-ID]** und das **[!UICONTROL Letzte aktualisierte]** Datum.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-Sie können durch ein Diagramm filtern und einen bestimmten Namensraum isolieren, indem Sie die Sortieroption über der Tabelle &quot; **[!UICONTROL Identitäten]** &quot;verwenden. Wählen Sie im Dropdownmenü den Namensraum aus, den Sie markieren möchten.
+Mit der Sortieroption über der Tabelle **[!UICONTROL Identities]** können Sie durch ein Diagramm filtern und einen bestimmten Namensraum isolieren. Wählen Sie im Dropdownmenü den Namensraum aus, den Sie markieren möchten.
 
 ![filter-by-Namensraum](../images/identity-graph-viewer/filter-namespace.png)
 
-Der Diagramm-Viewer gibt den ausgewählten Namensraum wieder. Mit der Filteroption wird auch die Tabelle &quot; **[!UICONTROL Identitäten]** &quot;aktualisiert, sodass nur Informationen für den ausgewählten Namensraum zurückgegeben werden.
+Der Diagramm-Viewer gibt den ausgewählten Namensraum wieder. Mit der Filteroption wird auch die Tabelle **[!UICONTROL Identities]** aktualisiert, sodass nur Informationen für den ausgewählten Namensraum zurückgegeben werden.
 
 ![gefiltert](../images/identity-graph-viewer/filtered.png)
 
-Die obere rechte Ecke des Diagrammansichtsfelds enthält Optionen zur Vergrößerung. Klicken Sie auf das Symbol **(+)** , um in das Diagramm zu zoomen, oder auf das Symbol **(-)** , um es zu verkleinern.
+Die obere rechte Ecke des Diagrammansichtsfelds enthält Optionen zur Vergrößerung. Wählen Sie das Symbol **(+)**, um in das Diagramm zu zoomen, oder das Symbol **(-)**, um es auszuzoomen.
 
 ![zoomen](../images/identity-graph-viewer/zoom.png)
 
-Sie können weitere Informationen zu Stapeln durch Auswahl der **[!UICONTROL Datenquelle]** in der Kopfzeile Ansicht werden. Die **[!UICONTROL Datenquellen]** -Tabelle enthält eine Liste der mit dem Diagramm verknüpften **[!UICONTROL Stapel-IDs]** sowie die zugehörigen **[!UICONTROL verknüpften IDs]**, das Quell-Schema und das Erfassungsdatum.
+Sie können weitere Informationen zu Stapeln durch Auswahl von **[!UICONTROL Datenquelle]** in der Kopfzeile Ansicht haben. Die Tabelle **[!UICONTROL Datenquelle]** zeigt eine Liste von **[!UICONTROL Stapel-IDs]**, die mit dem Diagramm verknüpft sind, sowie deren **[!UICONTROL Verknüpfte IDs]**, Quell-Schema und das Erfassungsdatum.
 
 ![data-source](../images/identity-graph-viewer/data-source-table.png)
 
@@ -102,11 +102,9 @@ Fehler können beim Zugriff auf den Identitätsdiagramm-Viewer auftreten. Im Fol
 - Im ausgewählten Namensraum muss ein Identitätswert vorhanden sein.
 - Für den Identitätsdiagramm-Viewer sind mindestens zwei verknüpfte Identitäten erforderlich.
 - Der Identitätsdiagramm-Viewer darf nicht länger als 150 Identitäten sein.
-- Der Identitätsdiagramm-Viewer ist derzeit in Nicht-Produktions-Sandboxes nicht verfügbar.
-- Der Identitätsdiagramm-Viewer unterstützt derzeit nur gezählte Daten und zeigt keine Daten an, die mit Streaming-Quellen erfasst wurden.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie die Identitätsdiagramme Ihrer Kunden in der Plattform-Benutzeroberfläche erkunden können. Weitere Informationen zu Identitäten in der Plattform finden Sie in der Übersicht über den [Identitätsdienst](../home.md)
+Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie die Identitätsdiagramme Ihrer Kunden in der Plattform-Benutzeroberfläche erkunden können. Weitere Informationen zu Identitäten in der Plattform finden Sie unter [Übersicht über den Identitätsdienst](../home.md)
