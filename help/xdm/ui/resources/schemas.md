@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Schema;Schema;
 solution: Experience Platform
 title: Schemas in der Benutzeroberfläche erstellen und bearbeiten
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche der Experience Platform kennen.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
@@ -65,13 +65,21 @@ Nachdem Sie ein Schema innerhalb von [!DNL Schema Editor] geöffnet haben, könn
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-Im angezeigten Dialogfeld können Sie die gewünschten Mixins aus der Liste auswählen. Sie können mehrere Mixins aus der Liste auswählen, wobei jedes ausgewählte Mixin in der rechten Leiste angezeigt wird.
+Es wird ein Dialogfeld mit einer Liste von Mixins angezeigt, die Sie für das Schema auswählen können. Da Mixins nur mit einer Klasse kompatibel sind, werden nur die Mixins aufgelistet, die mit der ausgewählten Klasse des Schemas verknüpft sind. Standardmäßig werden die aufgelisteten Mixins nach ihrer Beliebtheit bei der Verwendung innerhalb Ihres Unternehmens sortiert.
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+Sie können die Suchleiste verwenden, um die gewünschte Mischung zu finden. Mixins, deren Name mit der Abfrage übereinstimmt, werden oben in der Liste angezeigt. Unter **[!UICONTROL Standardfelder]** werden Mixins angezeigt, die Felder enthalten, die die gewünschten Datenattribute beschreiben.
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+Aktivieren Sie das Kontrollkästchen neben dem Namen der Mischung, die Sie dem Schema hinzufügen möchten. Sie können mehrere Mixins aus der Liste auswählen, wobei jedes ausgewählte Mixin in der rechten Leiste angezeigt wird.
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->Bei allen aufgelisteten Mixins können Sie das Symbol &quot;Vorschau&quot;(![](../../images/ui/resources/schemas/preview-icon.png)) auswählen, um die Feldstruktur, die das Mixin bereitstellt, Ansicht, bevor Sie es dem Schema hinzufügen.
+>Für alle aufgelisteten Mixins können Sie den Mauszeiger über das Informationssymbol (![](../../images/ui/resources/schemas/info-icon.png)) halten oder sich auf das Informationssymbol () konzentrieren, um eine kurze Beschreibung der Art der von dem Mixin erfassten Daten Ansicht. Sie können auch das Symbol &quot;Vorschau&quot;(![](../../images/ui/resources/schemas/preview-icon.png)) auswählen, um die Feldstruktur des Mixins Ansicht, bevor Sie es dem Schema hinzufügen.
 
 Nachdem Sie die Mixin-Auswahl abgeschlossen haben, wählen Sie **[!UICONTROL Hinzufügen mixin]** aus, um sie dem Schema hinzuzufügen.
 
