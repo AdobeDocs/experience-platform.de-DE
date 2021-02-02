@@ -6,10 +6,10 @@ breadcrumb-title: Platform-Tutorials
 user-guide-description: Beginnen Sie schnell und einfach mit Platform, indem Sie sich mit Schritt-für-Schritt-Übungen beschäftigen, die von der Vorbereitung Ihrer Daten für die Erfassung bis zur Arbeit mit fortschrittlichen Algorithmen für maschinelles Lernen reichen.
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 60%
+source-wordcount: '74'
+ht-degree: 56%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 60%
 # Tutorials zu Adobe Experience Platform {#tutorials}
 
 * [Tutorials – Übersicht](home.md)
-* [Bei Experience Platform-APIs authentifizieren](authentication.md)
+* [Bei Experience Platform-APIs authentifizieren](https://www.adobe.com/go/platform-api-authentication-en)
 * [Platform-Daten aufrufen](data-access.md)
 * [Data Governance und Datenschutz](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
