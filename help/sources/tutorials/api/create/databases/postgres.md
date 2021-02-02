@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
+keywords: Experience Platform;Home;beliebte Themen;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Erstellen eines PostgreSQL-Connectors mit der Flow Service API
 topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die zur Verbindung der Experience Platform mit PostgreSQL (im Folgenden "PSQL" genannt) durchgeführt werden.
 translation-type: tm+mt
-source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '584'
 ht-degree: 25%
 
 ---
@@ -50,7 +50,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../../tutorials/authentication.md) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -120,4 +120,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine PSQL-Verbindung mit der API [!DNL Flow Service] erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie mit der Flow Service API[Datenbanken oder NoSQL-Systeme untersuchen.](../../explore/database-nosql.md)
+In diesem Lernprogramm haben Sie eine PSQL-Verbindung mit der API [!DNL Flow Service] erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie mit der Flow Service API](../../explore/database-nosql.md)Datenbanken oder NoSQL-Systeme untersuchen.[
