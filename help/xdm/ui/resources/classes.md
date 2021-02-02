@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;class;classes;
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Workspace;class;Klassen;
 solution: Experience Platform
 title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Klassen in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '850'
 ht-degree: 8%
 
 ---
@@ -95,4 +95,4 @@ Sie können die Klasse des Schemas jederzeit während des ersten Erstellungsproz
 
 In diesem Dokument wurde das Erstellen und Bearbeiten von Klassen mithilfe der Plattform-Benutzeroberfläche behandelt. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schema] finden Sie unter [[!UICONTROL Schema] Arbeitsbereichsübersicht](../overview.md).
 
-Informationen zum Verwalten von Klassen mithilfe der API finden Sie im [!DNL Schema Registry]Klassen-Endpunktleitfaden[.](../../api/classes.md)
+Informationen zum Verwalten von Klassen mithilfe der API finden Sie im [Klassen-Endpunktleitfaden](../../api/classes.md).[!DNL Schema Registry]
