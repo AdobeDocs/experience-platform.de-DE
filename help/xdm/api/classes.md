@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
+keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Klassenregistrierung;Schema-Registrierung;Klasse;Klassen;Klassen;Erstellen
 solution: Experience Platform
 title: Klasse erstellen
 description: Mit dem Endpunkt "/classes"in der Schema Registry API können Sie XDM-Klassen in Ihrer Experience-Anwendung programmgesteuert verwalten.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1502'
 ht-degree: 24%
 
 ---
