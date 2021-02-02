@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
+keywords: Experience Platform;Home;beliebte Themen;Amazon Kinesis;Amazonaskinese;Kinesis;Kininose
 solution: Experience Platform
 title: Amazon Kinesis-Anschluss
 topic: overview
 description: Die nachstehende Dokumentation enthält Informationen dazu, wie Amazon Kinesis mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
 translation-type: tm+mt
-source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Amazon Kinesis] -Anschluss
+# (Beta) [!DNL Amazon Kinesis] Connector
 
 >[!NOTE]
 >
->Der [!DNL Amazon Kinesis] Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie in der Übersicht [zu den](../../home.md#terms-and-conditions) Quellen.
+>Der [!DNL Amazon Kinesis]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform]und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform]importieren.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform] übertragen.
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingetierte Daten können als XDM-JSON-, XDM-Parkett oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. [!DNL Platform] ermöglicht es Ihnen, Daten aus [!DNL Amazon Kinesis] Echtzeit einzubringen.
+Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in [!DNL Platform] übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON, XDM-Parquet oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. [!DNL Platform] ermöglicht es Ihnen, Daten  [!DNL Amazon Kinesis] in Echtzeit einzubringen.
 
 ## ZULASSUNGSLISTE der IP-Adresse
 
-Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite zur Zulassungsliste [der](../../ip-address-allow-list.md) IP-Adresse.
+Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
 
-## Verbinden [!DNL Amazon Kinesis] mit [!DNL Platform]
+## Verbinden Sie [!DNL Amazon Kinesis] mit [!DNL Platform]
 
-Die nachstehende Dokumentation enthält Informationen zum Herstellen einer Verbindung [!DNL Amazon Kinesis] mit [!DNL Platform] APIs oder der Benutzeroberfläche:
+Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Amazon Kinesis] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
 
 ### APIs verwenden
 
