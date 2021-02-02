@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;database database;third party database
+keywords: Experience Platform;Startseite;beliebte Themen;Datenbankdatenbank;Drittanbieterdatenbank
 solution: Experience Platform
 title: Erfassen von Daten aus einer Datenbank über Quellschnittstellen und APIs
 topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank und zum Integrieren in die Plattform über Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 326de658736387ab42cd2348a052c5c5217b6c2e
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1624'
 ht-degree: 19%
 
 ---
@@ -39,7 +39,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](../../../../tutorials/authentication.md) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
