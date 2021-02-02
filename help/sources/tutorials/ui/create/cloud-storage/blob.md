@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure blob connector
+keywords: Experience Platform;Home;beliebte Themen;Azurblübe;Azurblübe;Azurblauch-Stecker
 solution: Experience Platform
 title: Erstellen eines Azurblauch-Quellconnectors in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden Schritte zum Erstellen eines Blaus Blob (im Folgenden "Blob" genannt) mithilfe der Plattform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e22e57e20b985b50e1d29e944fb8f04addc91703
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 9%
+source-wordcount: '649'
+ht-degree: 7%
 
 ---
 
 
-# Create an [!DNL Azure Blob] source connector in the UI
+# Erstellen eines [!DNL Azure Blob]-Quellconnectors in der Benutzeroberfläche
 
-Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Azure Blob] (im Folgenden &quot;[!DNL Blob]&quot;) mithilfe der [!DNL Platform] Benutzeroberfläche beschrieben.
+In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Azure Blob] (nachfolgend als &quot;[!DNL Blob]&quot;bezeichnet) mithilfe der Plattform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -27,7 +27,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    - [Schema-Editor-Lernprogramm](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mit der Benutzeroberfläche des Schema-Editors benutzerdefinierte Schema erstellen.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Wenn Sie bereits über eine gültige [!DNL Blob] Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Lernprogramm zur [Konfiguration eines Datenflusses](../../dataflow/batch/cloud-storage.md)fortfahren.
+Wenn Sie bereits über eine gültige [!DNL Blob]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial [Konfigurieren eines Datenniedrig](../../dataflow/batch/cloud-storage.md) fortfahren.
 
 ### Unterstützte Dateiformate
 
@@ -39,40 +39,51 @@ Wenn Sie bereits über eine gültige [!DNL Blob] Verbindung verfügen, können S
 
 ### Erforderliche Anmeldedaten sammeln
 
-Um auf Ihre [!DNL Blob] [!DNL Platform]Datenspeicherung zugreifen zu können, müssen Sie einen gültigen Wert für die folgende Berechtigung angeben:
+Um auf Ihre [!DNL Blob]-Datenspeicherung auf Plattform zugreifen zu können, müssen Sie einen gültigen Wert für die folgende Berechtigung angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, die für den Zugriff auf Daten in Ihrer Blob-Datenspeicherung erforderlich ist. Das Muster für die [!DNL Blob] Verbindungszeichenfolge lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionString` | Eine Zeichenfolge, die die Autorisierungsinformationen enthält, die zum Authentifizieren von [!DNL Blob] für die Experience Platform erforderlich sind. Das Verbindungszeichenfolgen-Muster [!DNL Blob] lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem [!DNL Blob]-Dokument unter [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `sasUri` | Der URI für die Unterschrift für den gemeinsamen Zugriff, den Sie als alternativen Authentifizierungstyp verwenden können, um Ihr [!DNL Blob]-Konto zu verbinden. Das SAS-URI-Muster ist: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Weitere Informationen finden Sie in diesem [!DNL Blob] Dokument unter [URIs für freigegebene Zugriffssignaturen](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).[!DNL Blob] |
 
-Weitere Informationen zu den ersten Schritten finden Sie in [ [!DNL Azure Blob] diesem Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+## Verbinden Sie Ihr [!DNL Blob]-Konto
 
-## Verbinden Sie Ihr Blob-Konto
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL Blob]-Konto mit der Plattform zu verknüpfen.
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL Blob] Konto mit [!DNL Platform]zu verknüpfen.
+Wählen Sie in der [Plattform-Benutzeroberfläche](https://platform.adobe.com) **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Reihe von Quellen an, für die Sie ein Konto erstellen können.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann in der linken Navigationsleiste die Option &quot; **[!UICONTROL Quellen]** &quot;, um auf den **[!UICONTROL Quellarbeitsbereich]** zuzugreifen. Im Anzeigebereich &quot; **[!UICONTROL Katalog]** &quot;werden verschiedene Quellen angezeigt, mit denen Sie ein Konto erstellen können.
+Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle über die Suchleiste finden.
 
-Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle mit der Suchoption finden.
-
-Wählen Sie unter der Kategorie &quot; **[!UICONTROL Datenbanken]** &quot;die Option &quot; **[!UICONTROL Azurblase-Datenspeicherung]**&quot;aus. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie &quot; **[!UICONTROL Konfigurieren]**&quot;aus. Andernfalls wählen Sie **[!UICONTROL Hinzufügen Daten]** aus, um einen neuen [!DNL Blob]Connector zu erstellen.
+Wählen Sie unter der Kategorie [!UICONTROL Cloud-Datenspeicherung] die Option **[!UICONTROL Azurblase-Datenspeicherung]** und wählen Sie **[!UICONTROL Hinzufügen Daten]**.
 
 ![Katalog](../../../../images/tutorials/create/blob/catalog.png)
 
-Die Seite &quot; **[!UICONTROL Verbindung mit der Blase-Datenspeicherung]** herstellen&quot;wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
-
-### Neues Konto
-
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie &quot; **[!UICONTROL Neues Konto]**&quot;aus. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung und Ihre [!DNL Blob] Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie &quot; **[!UICONTROL Verbinden]** &quot;und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
-
-![connect](../../../../images/tutorials/create/blob/new.png)
+Die Seite **[!UICONTROL Verbindung mit der Azurblauch-Datenspeicherung]** herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Blob] Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** , um fortzufahren.
+Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Blob]-Konto, mit dem Sie einen neuen Datenflug erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 ![existing](../../../../images/tutorials/create/blob/existing.png)
 
-## Nächste Schritte und zusätzliche Ressourcen
+### Neues Konto
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Blob] Konto hergestellt. Sie können jetzt mit dem nächsten Lernprogramm fortfahren und einen Datendurchlauf [konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in [!DNL Platform]](../../dataflow/batch/cloud-storage.md)zu importieren.
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine Optionsbeschreibung für Ihr neues [!DNL Blob]-Konto ein.
+
+**Authentifizieren mit einer Verbindungszeichenfolge**
+
+Der [!DNL Blob]-Connector bietet verschiedene Authentifizierungstypen für den Zugriff. Wählen Sie unter [!UICONTROL Kontoauthentifizierung] **[!UICONTROL ConnectionString]** aus, um die auf einer Verbindungszeichenfolge basierenden Anmeldeinformationen zu verwenden.
+
+![connection string](../../../../images/tutorials/create/blob/connectionstring.png)
+
+**Authentifizieren Sie sich mit einem URI für eine freigegebene Zugriffssignatur**
+
+Eine SAS-URI (shared access signature) ermöglicht eine sichere delegierte Autorisierung für Ihr [!DNL Blob]-Konto. Sie können SAS verwenden, um Authentifizierungsberechtigungen mit unterschiedlichem Zugriffsgrad zu erstellen, da eine SAS-basierte Authentifizierung Ihnen das Festlegen von Berechtigungen, Beginns- und Ablaufdaten sowie von Bestimmungen für bestimmte Ressourcen ermöglicht.
+
+Wählen Sie **[!UICONTROL SasURIAuthentication]** und geben Sie dann Ihren [!DNL Blob] SAS-URI ein. Wählen Sie **[!UICONTROL Mit Quelle verbinden]** verbinden, um fortzufahren.
+
+![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
+
+## Nächste Schritte
+
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Blob]-Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und [einen Datenfluss konfigurieren, um Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/batch/cloud-storage.md) zu übertragen.
