@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;tutorial;Tutorial;create;Create;schema;Schema
+keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Tutorial;Tutorial;Erstellen;Schema;Schema
 solution: Experience Platform
 title: Erstellen eines Ad-hoc-Schemas
 description: Unter bestimmten Umständen kann es erforderlich sein, ein (Experience-Datenmodell) XDM-Schema mit Feldern zu erstellen, deren Namespace nur für die Verwendung durch einen einzigen Datensatz vorgesehen ist. Ein solches Schema wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schema werden für die Experience Platform in verschiedenen Workflows zur Datenerfassung verwendet, einschließlich der Erfassung von CSV-Dateien und der Erstellung bestimmter Quell-Verbindungen.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 14%
+source-wordcount: '823'
+ht-degree: 13%
 
 ---
 
 
 # Erstellen eines Ad-hoc-Schemas
 
-In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. Ein solches Schema wird als Ad-hoc-Schema bezeichnet. Ad-hoc schemas are used in various data ingestion workflows for [!DNL Experience Platform], including ingesting CSV files and creating certain kinds of source connections.
+Unter bestimmten Umständen kann es erforderlich sein, ein [!DNL Experience Data Model] (XDM)-Schema mit Feldern zu erstellen, die nur für die Verwendung durch einen einzigen Datensatz benannt werden. Ein solches Schema wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schema werden in verschiedenen Workflows für [!DNL Experience Platform] verwendet, einschließlich der Erfassung von CSV-Dateien und der Erstellung bestimmter Arten von Quellverbindungen.
 
-In diesem Dokument werden allgemeine Schritte zum Erstellen eines Ad-hoc-Schemas mithilfe der [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)beschrieben. Es soll zusammen mit anderen [!DNL Experience Platform] Lernprogrammen verwendet werden, für die im Rahmen des Workflows ein Ad-hoc-Schema erstellt werden muss. Jedes dieser Dokumente enthält detaillierte Informationen zur ordnungsgemäßen Konfiguration eines Ad-hoc-Schemas für den jeweiligen Verwendungsfall.
+Dieses Dokument enthält allgemeine Schritte zum Erstellen eines Ad-hoc-Schemas mit der [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Es soll in Verbindung mit anderen [!DNL Experience Platform]-Lehrgängen verwendet werden, bei denen im Rahmen des Workflows ein Ad-hoc-Schema erstellt werden muss. Jedes dieser Dokumente enthält detaillierte Informationen zur ordnungsgemäßen Konfiguration eines Ad-hoc-Schemas für den jeweiligen Verwendungsfall.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert ein Verständnis des [!DNL Experience Data Model] (XDM-)Systems. Bevor Sie dieses Lernprogramm starten, lesen Sie bitte die folgende XDM-Dokumentation:
+Dieses Lernprogramm erfordert ein Arbeitsverständnis mit dem [!DNL Experience Data Model] (XDM) System. Bevor Sie dieses Lernprogramm starten, lesen Sie bitte die folgende XDM-Dokumentation:
 
-- [XDM-System - Übersicht](../home.md): Eine allgemeine Übersicht über XDM und seine Implementierung in [!DNL Experience Platform].
-- [Grundlagen der Zusammensetzung](../schema/composition.md)des Schemas: Eine Übersicht über die Grundkomponenten von XDM-Schemas.
+- [XDM-System - Übersicht](../home.md): Eine allgemeine Übersicht über XDM und seine Implementierung in  [!DNL Experience Platform].
+- [Grundlagen der Zusammensetzung](../schema/composition.md) des Schemas: Eine Übersicht über die Grundkomponenten von XDM-Schemas.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
+Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie kennen müssen, damit Sie erfolgreich Aufrufe an die [!DNL Schema Registry]-API tätigen können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 
 ## Erstellen einer Ad-hoc-Klasse
 
-Das Datenverhalten eines XDM-Schemas wird durch seine zugrunde liegende Klasse bestimmt. Der erste Schritt beim Erstellen eines Ad-hoc-Schemas besteht darin, eine Klasse zu erstellen, die auf dem `adhoc` Verhalten basiert. Senden Sie dazu eine POST-Anfrage an den `/tenant/classes`-Endpunkt.
+Das Datenverhalten eines XDM-Schemas wird durch seine zugrunde liegende Klasse bestimmt. Der erste Schritt beim Erstellen eines Ad-hoc-Schemas besteht darin, eine Klasse zu erstellen, die auf dem `adhoc`-Verhalten basiert. Senden Sie dazu eine POST-Anfrage an den `/tenant/classes`-Endpunkt.
 
 **API-Format**
 
@@ -41,11 +41,11 @@ POST /tenant/classes
 
 **Anfrage**
 
-Die folgende Anforderung erstellt eine neue XDM-Klasse, die von den in der Payload bereitgestellten Attributen konfiguriert wird. Durch die Bereitstellung einer `$ref` Eigenschaft, die auf `https://ns.adobe.com/xdm/data/adhoc` im `allOf` Array festgelegt ist, übernimmt diese Klasse das `adhoc` Verhalten. Die Anforderung definiert auch ein `_adhoc` Objekt, das die benutzerdefinierten Felder für die Klasse enthält.
+Die folgende Anforderung erstellt eine neue XDM-Klasse, die von den in der Payload bereitgestellten Attributen konfiguriert wird. Durch Angabe einer `$ref`-Eigenschaft, die auf `https://ns.adobe.com/xdm/data/adhoc` im `allOf`-Array gesetzt ist, übernimmt diese Klasse das `adhoc`-Verhalten. Die Anforderung definiert auch ein `_adhoc`-Objekt, das die benutzerdefinierten Felder für die Klasse enthält.
 
 >[!NOTE]
 >
->Die unter definierten benutzerdefinierten Felder `_adhoc` variieren je nach Anwendungsfall des Ad-hoc-Schemas. Bitte lesen Sie den jeweiligen Arbeitsablauf im entsprechenden Lernprogramm für erforderliche benutzerdefinierte Felder, je nach Anwendungsfall.
+>Die unter `_adhoc` definierten benutzerdefinierten Felder können je nach Anwendungsfall des Ad-hoc-Schemas variieren. Bitte lesen Sie den jeweiligen Arbeitsablauf im entsprechenden Lernprogramm für erforderliche benutzerdefinierte Felder, je nach Anwendungsfall.
 
 ```shell
 curl -X POST \
@@ -84,12 +84,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `$ref` | Das Datenverhalten für die neue Klasse. Für Ad-hoc-Klassen muss dieser Wert auf `https://ns.adobe.com/xdm/data/adhoc`eingestellt sein. |
+| `$ref` | Das Datenverhalten für die neue Klasse. Bei Ad-hoc-Klassen muss dieser Wert auf `https://ns.adobe.com/xdm/data/adhoc` gesetzt werden. |
 | `properties._adhoc` | Ein Objekt, das die benutzerdefinierten Felder für die Klasse enthält, ausgedrückt als Schlüssel-Wert-Paare von Feldnamen und Datentypen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neuen Klasse zurück und ersetzt den Namen des `properties._adhoc` Objekts durch eine GUID, die eine systemgenerierte, schreibgeschützte eindeutige Kennung für die Klasse ist. Das `meta:datasetNamespace` Attribut wird auch automatisch generiert und in die Antwort aufgenommen.
+Eine erfolgreiche Antwort gibt die Details der neuen Klasse zurück und ersetzt den Namen des Objekts `properties._adhoc` durch eine GUID, die eine systemgenerierte, schreibgeschützte eindeutige Kennung für die Klasse ist. Das `meta:datasetNamespace`-Attribut wird ebenfalls automatisch generiert und in die Antwort aufgenommen.
 
 ```json
 {
@@ -150,7 +150,7 @@ Eine erfolgreiche Antwort gibt die Details der neuen Klasse zurück und ersetzt 
 
 ## Erstellen eines Ad-hoc-Schemas
 
-Nachdem Sie eine Ad-hoc-Klasse erstellt haben, können Sie ein neues Schema erstellen, das diese Klasse implementiert, indem Sie eine POST an den `/tenant/schemas` Endpunkt anfordern.
+Nachdem Sie eine Ad-hoc-POST erstellt haben, können Sie ein neues Schema erstellen, das diese Klasse implementiert, indem Sie eine Anforderung an den `/tenant/schemas`-Endpunkt senden.
 
 **API-Format**
 
@@ -160,7 +160,7 @@ POST /tenant/schemas
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein neues Schema erstellt, das einen Verweis (`$ref`) auf die `$id` der zuvor erstellten Ad-hoc-Klasse in ihrer Nutzlast bereitstellt.
+Mit der folgenden Anforderung wird ein neues Schema erstellt, das einen Verweis (`$ref`) auf das `$id` der zuvor erstellten Ad-hoc-Klasse in ihrer Nutzlast bereitstellt.
 
 ```shell
 curl -X POST \
@@ -184,7 +184,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten Schemas zurück, einschließlich des systemgenerierten schreibgeschützten  `$id`.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten Schemas zurück, einschließlich des systemgenerierten schreibgeschützten `$id`.
 
 ```json
 {
@@ -225,7 +225,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Schemas zurück, e
 
 >[!NOTE]
 >
-> Dieser Schritt ist optional. Wenn Sie die Feldstruktur Ihres Ad-hoc-Schemas nicht überprüfen möchten, können Sie am Ende dieses Lernprogramms zum Abschnitt &quot; [Nächste Schritte](#next-steps) &quot;wechseln.
+> Dieser Schritt ist optional. Wenn Sie die Feldstruktur Ihres Ad-hoc-Schemas nicht überprüfen möchten, können Sie am Ende dieses Lernprogramms mit dem Abschnitt [Nächste Schritte](#next-steps) fortfahren.
 
 Nachdem das Ad-hoc-Schema erstellt wurde, können Sie eine Suchanfrage (GET) stellen, um das Schema in seinem erweiterten Formular Ansicht. Dies geschieht mit dem entsprechenden Accept-Header in der GET-Anforderung, wie nachfolgend gezeigt.
 
@@ -237,11 +237,11 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der URL-kodierte `$id` URI oder `meta:altId` das Ad-hoc-Schema, auf das Sie zugreifen möchten. |
+| `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder `meta:altId` des Ad-hoc-Schemas, auf das Sie zugreifen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung verwendet den Accept-Header `application/vnd.adobe.xed-full+json; version=1`, der das erweiterte Formular des Schemas zurückgibt. Beachten Sie, dass beim Abrufen einer bestimmten Ressource aus dem [!DNL Schema Registry]Anforderungsheader &quot;Akzeptieren&quot;die Hauptversion der betreffenden Ressource enthalten sein muss.
+Die folgende Anforderung verwendet den Accept-Header `application/vnd.adobe.xed-full+json; version=1`, der das erweiterte Formular des Schemas zurückgibt. Beachten Sie, dass beim Abrufen einer bestimmten Ressource aus dem [!DNL Schema Registry] der Accept-Header der Anforderung eine Hauptversion der betreffenden Ressource enthalten muss.
 
 ```shell
 curl -X GET \
@@ -255,7 +255,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details des Schemas einschließlich aller verschachtelten Felder zurückgegeben `properties`.
+Eine erfolgreiche Antwort gibt die Details des Schemas zurück, einschließlich aller unter `properties` verschachtelten Felder.
 
 ```json
 {
@@ -305,6 +305,6 @@ Bei einer erfolgreichen Antwort werden die Details des Schemas einschließlich a
 
 ## Nächste Schritte {#next-steps}
 
-Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie im Rahmen eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt die `$id` Funktion Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
+Indem Sie diesem Tutorial folgen, haben Sie erfolgreich ein neues Ad-hoc-Schema erstellt. Wenn Sie als Teil eines anderen Lernprogramms zu diesem Dokument gebracht wurden, können Sie jetzt das `$id` Ihres Ad-hoc-Schemas verwenden, um den Workflow wie gewünscht abzuschließen.
 
-Weitere Informationen zum Arbeiten mit der [!DNL Schema Registry] API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
+Weitere Informationen zum Arbeiten mit der [!DNL Schema Registry]-API finden Sie im [Entwicklerhandbuch](../api/getting-started.md).
