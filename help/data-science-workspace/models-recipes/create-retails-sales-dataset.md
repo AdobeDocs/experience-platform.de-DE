@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
+keywords: Experience Platform;Retail-Vertriebsrezept;Data Science Workspace;beliebte Themen;Rezepte
 solution: Experience Platform
 title: Schema und Datensatz für Einzelhandelsumsätze erstellen
 topic: tutorial
 type: Tutorial
 description: Diese Anleitung beinhaltet Informationen über die Voraussetzungen und Elemente, die bei allen anderen Anleitungen für Adobe Experience Platform Data Science Workspace benötigt werden. Danach stehen Ihnen und den Mitgliedern Ihrer IMS-Organisation in Experience Platform das Schema „Einzelhandelsumsätze“ und entsprechende Datensätze zur Verfügung.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 67%
+source-wordcount: '554'
+ht-degree: 65%
 
 ---
 
 
 # Schema und Datensatz für Einzelhandelsumsätze erstellen
 
-This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on [!DNL Experience Platform].
+Dieses Lernprogramm enthält die Voraussetzungen und Elemente, die für alle anderen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]-Lernprogramme erforderlich sind. Nach Abschluss des Projekts stehen Ihnen und Ihren Mitgliedern Ihres IMS-Unternehmens das Retail Sales Schema und die Datensätze unter [!DNL Experience Platform] zur Verfügung.
 
 ## Erste Schritte
 
 Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
-- Zugriff auf [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
-- Authorization to make [!DNL Experience Platform] API calls. Führen Sie die Anleitung zum [Authentifizieren und Aufrufen von Adobe Experience Platform-APIs](../../tutorials/authentication.md) aus, um die folgenden Werte abzurufen, damit die Anleitung erfolgreich abgeschlossen werden kann:
+- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform] haben, wenden Sie sich bitte an Ihren Systemadministrator, bevor Sie fortfahren.
+- Autorisierung zum Durchführen von API-Aufrufen [!DNL Experience Platform]. Führen Sie die Anleitung zum [Authentifizieren und Aufrufen von Adobe Experience Platform-APIs](https://www.adobe.com/go/platform-api-authentication-en) aus, um die folgenden Werte abzurufen, damit die Anleitung erfolgreich abgeschlossen werden kann:
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Client-Geheimnis: `{CLIENT_SECRET}`
    - Client-Zertifikat: `{PRIVATE_KEY}`
-- Beispieldaten und Quelldateien für das [Rezept „Einzelhandelsumsätze“](../pre-built-recipes/retail-sales.md). Download the assets required for this and other [!DNL Data Science Workspace] tutorials from the [Adobe public Git repository](https://github.com/adobe/experience-platform-dsw-reference/).
+- Beispieldaten und Quelldateien für das [Rezept „Einzelhandelsumsätze“](../pre-built-recipes/retail-sales.md). Laden Sie die für diese und andere [!DNL Data Science Workspace]-Tutorials erforderlichen Elemente aus dem öffentlichen Git-Repository [Adobe](https://github.com/adobe/experience-platform-dsw-reference/) herunter.
 - [ >= 2.7](https://www.python.org/downloads/)[!DNL Python] und die folgenden Python-Pakete:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
@@ -44,7 +44,7 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
 
 ### Dateien konfigurieren
 
-1. Inside the [!DNL Experience Platform] tutorial resource package, navigate into the directory `bootstrap`, and open `config.yaml` using an appropriate text editor.
+1. Navigieren Sie im Ressourcenpaket für [!DNL Experience Platform] zum Verzeichnis `bootstrap` und öffnen Sie `config.yaml` mit einem entsprechenden Texteditor.
 2. Geben Sie unter dem Abschnitt `Enterprise` die folgenden Werte ein:
 
    ```yaml
@@ -93,8 +93,8 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
 
 ### Bootstrap-Skript ausführen
 
-1. Open your terminal application and navigate to the [!DNL Experience Platform] tutorial resource directory.
-2. Set the `bootstrap` directory as the current working path and run the `bootstrap.py` [!DNL Python] script by entering the following command:
+1. Öffnen Sie die Terminalanwendung und navigieren Sie zum Ordner für [!DNL Experience Platform]-Übungsressourcen.
+2. Legen Sie den Ordner `bootstrap` als aktuellen Arbeitspfad fest und führen Sie das Skript `bootstrap.py` [!DNL Python] aus, indem Sie den folgenden Befehl eingeben:
 
    ```bash
    python bootstrap.py
@@ -106,12 +106,12 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
 
 ## Nächste Schritte
 
-Upon successful completion of the bootstrap script, the Retail Sales input and output schemas and datasets can be viewed on [!DNL Experience Platform]. Weiterführende Informationen finden Sie in der Anleitung zum [Anzeigen einer Vorschau von Schemadaten](./preview-schema-data.md).
+Nach erfolgreichem Abschluss des Bootstrap-Skripts können die Retail Sales-Eingabe- und -Ausgabe-Schema und -Datensätze unter [!DNL Experience Platform] angezeigt werden. Weiterführende Informationen finden Sie in der Anleitung zum [Anzeigen einer Vorschau von Schemadaten](./preview-schema-data.md).
 
-You have also successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
+Sie haben auch erfolgreich Musterdaten für Einzelhandelsverkäufe in [!DNL Experience Platform] mit dem bereitgestellten Bootstrap-Skript erfasst.
 
 So arbeiten Sie weiter mit den aufgenommenen Daten:
 - [Daten mit Jupyter-Notebooks analysieren](../jupyterlab/analyze-your-data.md)
    - Verwenden Sie Jupyter Notebooks in Data Science Workspace, um auf Ihre Daten zuzugreifen, sie zu untersuchen, zu visualisieren und zu verstehen.
 - [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md)
-   - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.
+   - Folgen Sie diesem Lernprogramm, um zu erfahren, wie Sie Ihr eigenes Modell in [!DNL Data Science Workspace] durch Verpacken von Quelldateien in einer wichtigen Recipe-Datei bringen.
