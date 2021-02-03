@@ -5,9 +5,9 @@ title: CRM-System mit der Flow Service API erkunden
 topic: overview
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um CRM-Systeme zu untersuchen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '589'
 ht-degree: 25%
 
 ---
@@ -28,9 +28,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Flow Service]-API eine erfolgreiche Verbindung zu einem CRM-System herzustellen.
 
-### Grundverbindung abrufen
+### Erstellen einer Verbindungs-ID
 
-Um Ihr CRM-System mit [!DNL Platform]-APIs zu untersuchen, müssen Sie über eine gültige Basis-Verbindungs-ID verfügen. Wenn Sie noch keine Basisverbindung für das CRM-System haben, mit dem Sie arbeiten möchten, können Sie eine dieser Übungen durchführen:
+Um Ihr CRM-System mit [!DNL Platform]-APIs zu untersuchen, müssen Sie über eine gültige Verbindungs-ID verfügen. Wenn Sie noch keine Verbindung zum CRM-System haben, mit dem Sie arbeiten möchten, können Sie eine dieser Übungen durchführen:
 
 * [Microsoft Dynamics](../create/crm/ms-dynamics.md)
 * [Salesforce](../create/crm/salesforce.md)
@@ -43,21 +43,21 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Ihre Datentabellen
 
-Mithilfe der Basisverbindung für Ihr CRM-System können Sie Ihre Datentabellen untersuchen, indem Sie GET anfordern. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie überprüfen oder in [!DNL Platform] aufnehmen möchten.
+Mithilfe der Verbindungs-ID für Ihr CRM-System können Sie Ihre Datentabellen untersuchen, indem Sie GET anfordern. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie überprüfen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -73,7 +73,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=root' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -129,7 +129,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
