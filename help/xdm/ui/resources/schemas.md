@@ -5,7 +5,7 @@ title: Schemas in der Benutzeroberfläche erstellen und bearbeiten
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche der Experience Platform kennen.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 1%
@@ -81,7 +81,7 @@ Aktivieren Sie das Kontrollkästchen neben dem Namen der Mischung, die Sie dem S
 >
 >Für alle aufgelisteten Mixins können Sie den Mauszeiger über das Informationssymbol (![](../../images/ui/resources/schemas/info-icon.png)) halten oder sich auf das Informationssymbol () konzentrieren, um eine kurze Beschreibung der Art der von dem Mixin erfassten Daten Ansicht. Sie können auch das Symbol &quot;Vorschau&quot;(![](../../images/ui/resources/schemas/preview-icon.png)) auswählen, um die Feldstruktur des Mixins Ansicht, bevor Sie es dem Schema hinzufügen.
 
-Nachdem Sie die Mixin-Auswahl abgeschlossen haben, wählen Sie **[!UICONTROL Hinzufügen mixin]** aus, um sie dem Schema hinzuzufügen.
+Nachdem Sie Ihre Mixins ausgewählt haben, wählen Sie **[!UICONTROL Hinzufügen mixin]** aus, um sie dem Schema hinzuzufügen.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
