@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die notwendig sind, um die Experience Platform mit Google AdWords zu verbinden.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 23%
 
 ---
@@ -39,12 +39,12 @@ Damit [!DNL Flow Service] eine Verbindung mit AdWords herstellen kann, müssen S
 
 | **Berechtigung** | **Beschreibung** |
 | -------------- | --------------- |
-| Kunden-ID des Kunden | Die Kunden-ID des AdWords-Kontos. |
-| Entwickler-Token | Das mit dem Managerkonto verknüpfte Entwicklertoken. |
-| Token aktualisieren | Das Aktualisierungstoken, das von [!DNL Google] für die Autorisierung des Zugriffs auf AdWords erhalten wurde. |
-| Client ID (Client-ID) | Die Client-ID der Anwendung [!DNL Google], die zum Abrufen des Aktualisierungstokens verwendet wird. |
-| Client-Geheimnis | Das Clientgeheimnis der [!DNL Google]-Anwendung, mit der das Aktualisierungstoken erfasst wird. |
-| Verbindungs-ID | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für [!DNL Google AdWords] lautet: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | Die Kunden-ID des AdWords-Kontos. |
+| `developerToken` | Das mit dem Managerkonto verknüpfte Entwicklertoken. |
+| `refreshToken` | Das Aktualisierungstoken, das von [!DNL Google] für die Autorisierung des Zugriffs auf AdWords erhalten wurde. |
+| `clientId` | Die Client-ID der Anwendung [!DNL Google], die zum Abrufen des Aktualisierungstokens verwendet wird. |
+| `clientSecret` | Das Clientgeheimnis der [!DNL Google]-Anwendung, mit der das Aktualisierungstoken erfasst wird. |
+| `connectionSpec` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungs-Spezifikations-ID für [!DNL Google AdWords] lautet: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 Weitere Informationen zu diesen Werten finden Sie in diesem [Google AdWords-Dokument](https://developers.google.com/adwords/api/docs/guides/authentication).
 
