@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Marketingautomatisierungssystem und deren Integration in die Plattform über Quellschnittstellen und APIs erläutert.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 20%
@@ -87,7 +87,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "HubSpot source connection",
-        "connectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
         "description": "HubSpot source connection",
         "data": {
             "format": "tabular",
@@ -104,7 +104,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `connectionId` | Die eindeutige Verbindungs-ID des Marketingautomatisierungssystems eines Drittanbieters, auf das Sie zugreifen. |
+| `baseConnectionId` | Die eindeutige Verbindungs-ID des Marketingautomatisierungssystems eines Drittanbieters, auf das Sie zugreifen. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. |
 | `connectionSpec.id` | Die Verbindungs-Spezifikations-ID Ihres Marketingautomatisierungssystems. |
 
