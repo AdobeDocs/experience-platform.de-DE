@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 translation-type: tm+mt
-source-git-commit: 4e85dc702cda5c6c495a6f7fb70453b7897baa36
+source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1898'
 ht-degree: 2%
 
 ---
@@ -108,7 +108,7 @@ Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe der Zuordnungsfu
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-Bei JSON-Dateien können Sie nicht nur Felder direkt anderen Feldern zuordnen, sondern auch Objekten und Arrays anderen Arrays direkt zuordnen.
+Bei JSON-Datenspeicherung können Sie nicht nur Felder direkt anderen Feldern zuordnen, sondern auch Objekten und Arrays anderen Arrays direkt zuordnen. Komplexe Datentypen wie Arrays in JSON-Dateien können auch über einen Cloud-Quellanschluss Vorschau und zugeordnet werden.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
