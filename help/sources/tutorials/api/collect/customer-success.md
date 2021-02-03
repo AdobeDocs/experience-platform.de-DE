@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Kundenerfolgssystem und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und APIs erläutert.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 16%
@@ -87,24 +87,56 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Source connection for Customer Success",
-        "connectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
         "description": "Source connection for a Customer Success connector",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Account"
+            "tableName": "Account",
+            "columns": [
+                {
+                    "name": "Id",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Phone",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "CreatedDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
         }
-    }}'
+    }'
 ```
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `connectionId` | Die eindeutige Verbindungs-ID des Kundenerfolgssystems eines Drittanbieters, auf das Sie zugreifen. |
+| `baseConnectionId` | Die eindeutige Verbindungs-ID des Kundenerfolgssystems eines Drittanbieters, auf das Sie zugreifen. |
 | `params.path` | Der Pfad der Quelldatei. |
 | `connectionSpec.id` | Die Verbindungs-spec-ID, die mit Ihrem spezifischen Drittanbieter-Kundenerfolgssystem verknüpft ist. Eine Liste der Verbindungs-Spec-IDs finden Sie im Anhang [1.](#appendix) |
 
