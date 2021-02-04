@@ -5,9 +5,9 @@ seo-title: Google-Kundenübereinstimmungsziel
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 seo-description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
+source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1509'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Die Kundenmigration in die neue Zielkonfigurationserfahrung wird derzeit durchgeführt. Es kann vorkommen, dass Sie beim Zugriff auf die Seite mit der Zielkonfiguration Schwierigkeiten haben.
+>Die Kundenmigration zu den neuen Zielversionen wird derzeit durchgeführt. Bis die Migration abgeschlossen ist, sehen Sie nur die verfügbaren Identitäten [!UICONTROL EMAIL] und [!UICONTROL EMAIL_LC_SHA_256] für dieses Ziel.
 
 [Google-Kunden-](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlets verwenden Sie Ihre Online- und Offlinedaten, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut zu kontaktieren, z. B.:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]und  [!DNL YouTube].
 
