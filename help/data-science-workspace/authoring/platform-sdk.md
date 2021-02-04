@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
+keywords: Experience Platform;Entwicklerhandbuch;SDK;Data Access SDK;Data Science Workspace;beliebte Themen
 solution: Experience Platform
 title: Handbuch zum Platform SDK
 topic: SDK authoring
@@ -7,8 +7,8 @@ description: Dieses Lernprogramm enthält Informationen zum Konvertieren von dat
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 84%
+source-wordcount: '483'
+ht-degree: 82%
 
 ---
 
@@ -23,7 +23,7 @@ Diese Anleitung bietet Ihnen Informationen zum Konvertieren von `data_access_sdk
 
 ## Authentifizierung erstellen {#build-authentication}
 
-Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
+Die Authentifizierung ist erforderlich, um Aufrufe an [!DNL Adobe Experience Platform] durchzuführen. Sie besteht aus API-Schlüssel, IMS-Organisations-ID, einem Benutzer-Token und einem Service-Token.
 
 ### Python
 
@@ -68,9 +68,9 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Grundlegendes Datenlesen {#basic-reading-of-data}
+## Grundlegendes Datenlesen  {#basic-reading-of-data}
 
-With the new [!DNL Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes.
+Mit dem neuen SDK [!DNL Platform] beträgt die maximale Lesegröße 32 GB mit einer maximalen Lesedauer von 10 Minuten.
 
 Wenn das Lesen zu lange dauert, können Sie eine der folgenden Filteroptionen verwenden:
 
@@ -105,7 +105,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## Nach Offset und Limit filtern {#filter-by-offset-and-limit}
+## Nach Offset und Limit filtern  {#filter-by-offset-and-limit}
 
 Da das Filtern nach Batch-Kennung nicht mehr unterstützt wird, müssen Sie zum Begrenzen des Datenlesens `offset` und `limit` verwenden.
 
@@ -123,7 +123,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## Nach Datum filtern {#filter-by-date}
+## Nach Datum filtern  {#filter-by-date}
 
 Die Granularität der Datumsfilterung wird jetzt durch den Zeitstempel definiert und nicht mehr durch den Tag.
 
@@ -147,7 +147,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-The new [!DNL Platform] SDK supports the following operations:
+Das neue SDK unterstützt die folgenden Vorgänge:[!DNL Platform]
 
 | Vorgang | Funktion |
 | --------- | -------- |
@@ -159,7 +159,7 @@ The new [!DNL Platform] SDK supports the following operations:
 | Und (`&`) | `And()` |
 | Oder (`|`) | `Or()` |
 
-## Nach ausgewählten Spalten filtern {#filter-by-selected-columns}
+## Nach ausgewählten Spalten filtern  {#filter-by-selected-columns}
 
 Zur weiteren Verfeinerung des Datenlesens können Sie auch nach Spaltennamen filtern.
 
@@ -175,7 +175,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## Sortierte Ergebnisse abrufen {#get-sorted-results}
+## Sortierte Ergebnisse abrufen  {#get-sorted-results}
 
 Die erhaltenen Ergebnisse können nach bestimmten Spalten des Zieldatensatzes und in ihrer Reihenfolge (aufsteigend/absteigend) sortiert werden.
 
@@ -193,7 +193,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Grundlegendes Datenschreiben {#basic-writing-of-data}
+## Grundlegendes Datenschreiben  {#basic-writing-of-data}
 
 >[!NOTE]
 >
