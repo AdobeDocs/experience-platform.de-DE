@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;update an object
+keywords: Experience Platform;Home;beliebte Themen;Katalog;API;Objekt aktualisieren
 solution: Experience Platform
 title: Aktualisieren eines Objekts
 topic: developer guide
@@ -7,15 +7,15 @@ description: 'Sie können einen Teil eines Katalogobjekts aktualisieren, indem S
 translation-type: tm+mt
 source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 85%
+source-wordcount: '359'
+ht-degree: 83%
 
 ---
 
 
 # Aktualisieren eines Objekts
 
-You can update part of a [!DNL Catalog] object by including its ID in the path of a PATCH request. In diesem Dokument werden die beiden Methoden zum Ausführen von PATCH-Vorgängen für Katalogobjekte behandelt:
+Sie können einen Teil eines [!DNL Catalog]-Objekts aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anforderung einschließen. In diesem Dokument werden die beiden Methoden zum Ausführen von PATCH-Vorgängen für Katalogobjekte behandelt:
 
 * Verwenden von Feldern
 * Verwenden der JSON Patch-Notation
@@ -36,7 +36,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu aktualisierenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -85,7 +85,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu aktualisierenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
