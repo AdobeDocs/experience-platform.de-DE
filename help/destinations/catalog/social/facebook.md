@@ -5,9 +5,9 @@ seo-title: Facebook-Ziel
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
+source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '970'
 ht-degree: 15%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
->Die Kundenmigration in die neue Zielkonfigurationserfahrung wird derzeit durchgeführt. Es kann vorkommen, dass Sie beim Zugriff auf die Seite mit der Zielkonfiguration Schwierigkeiten haben.
+>Die Kundenmigration zu den neuen Zielversionen wird derzeit durchgeführt. Bis die Migration abgeschlossen ist, sehen Sie nur die verfügbaren Identitäten [!UICONTROL EMAIL] und [!UICONTROL EMAIL_LC_SHA_256] für dieses Ziel.
 
 Aktivieren Sie Profil für Ihre [!DNL Facebook]-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 
