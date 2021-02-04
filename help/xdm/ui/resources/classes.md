@@ -5,10 +5,10 @@ title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Klassen in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 8%
+source-wordcount: '886'
+ht-degree: 7%
 
 ---
 
@@ -53,9 +53,9 @@ Sie können nun Beginn [hinzufügen, die der Klasse](#add-fields) hinzugefügt w
 
 >[!NOTE]
 >
->Es können nur benutzerdefinierte Klassen bearbeitet werden, die von Ihrem Unternehmen definiert wurden.
+>Nur benutzerdefinierte Klassen, die von Ihrem Unternehmen definiert wurden, können vollständig bearbeitet und angepasst werden. Bei von der Adobe definierten Hauptklassen können nur die Anzeigenamen für ihre Felder im Kontext einzelner Schema bearbeitet werden. Weitere Informationen finden Sie im Abschnitt [Bearbeiten von Anzeigenamen für Schema-Felder](./schemas.md#display-names).
 >
->Sobald eine Klasse gespeichert und bei der Datenerfassung verwendet wurde, können danach nur noch zusätzliche Änderungen daran vorgenommen werden. Weitere Informationen finden Sie unter [Regeln der Schema-Evolution](../../schema/composition.md#evolution).
+>Nachdem eine benutzerspezifische Klasse gespeichert und bei der Datenerfassung verwendet wurde, können danach nur noch zusätzliche Änderungen daran vorgenommen werden. Weitere Informationen finden Sie unter [Regeln der Schema-Evolution](../../schema/composition.md#evolution).
 
 Um eine vorhandene Klasse zu bearbeiten, wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** und wählen Sie dann den Namen des Schemas aus, das die zu bearbeitende Klasse verwendet.
 
