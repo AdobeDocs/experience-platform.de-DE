@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
+keywords: Experience Platform;Home;beliebte Themen;Liste aktiver Sandboxen;Liste-Sandboxen
 solution: Experience Platform
 title: Liste aktiver Sandboxes für den aktuellen Benutzer
 topic: developer guide
@@ -7,8 +7,8 @@ description: Sie können die für den aktuellen Benutzer aktiven Sandboxen Liste
 translation-type: tm+mt
 source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 70%
+source-wordcount: '355'
+ht-degree: 68%
 
 ---
 
@@ -29,7 +29,7 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu den Parametern für die [Abfrage](#query) . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrage parameters](#query). |
 
 **Anfrage**
 
@@ -113,11 +113,11 @@ Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die für den ak
 
 ## Verwenden von Abfrageparametern {#query}
 
-Die [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API unterstützt die Verwendung von Abfrage-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Sandboxen.
+Die [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)-API unterstützt die Verwendung von Abfragen-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Sandboxen.
 
 >[!NOTE]
 >
->Die Parameter `limit` und `offset` Abfrage müssen zusammen angegeben werden. Wenn Sie nur eine angeben, gibt die API einen Fehler zurück. Wenn Sie none angeben, ist der Standardwert 50 und der Offset 0.
+>Die Parameter `limit` und `offset` für die Abfrage müssen zusammen angegeben werden. Wenn Sie nur eine angeben, gibt die API einen Fehler zurück. Wenn Sie none angeben, ist der Standardwert 50 und der Offset 0.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
