@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api;spark recipe;read spark;write spark
+keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Funkk SDK;Datenzugriffs-API;Funkrezept;Lese-Funken;Schreibfunk
 solution: Experience Platform
 title: Zugriff auf Daten mit Spark
 topic: tutorial
@@ -8,7 +8,7 @@ description: Das folgende Dokument enthält Beispiele für den Zugriff auf Daten
 translation-type: tm+mt
 source-git-commit: e1035f3d1ad225a0892c5f97ca51618cd6b47412
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 # Zugriff auf Daten mit Spark
 
-Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Spark zur Verwendung in Data Science Workspace. Informationen zum Zugriff auf Daten mit JupyterLab-Notebooks finden Sie in der Dokumentation zum Datenzugriff auf [JupyterLab-Notebooks](../jupyterlab/access-notebook-data.md) .
+Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Spark zur Verwendung in Data Science Workspace. Informationen zum Zugriff auf Daten mit JupyterLab-Notebooks finden Sie in der Dokumentation [JupyterLab-Notebook-Datenzugriff](../jupyterlab/access-notebook-data.md).
 
 ## Erste Schritte
 
-Für die Verwendung [!DNL Spark] sind Leistungsoptimierungen erforderlich, die dem `SparkSession`hinzugefügt werden müssen. Darüber hinaus können Sie auch `configProperties` für spätere Lese- und Schreibvorgänge in Datasets einrichten.
+Die Verwendung von [!DNL Spark] erfordert Leistungsoptimierungen, die dem `SparkSession` hinzugefügt werden müssen. Zusätzlich können Sie `configProperties` auch für später einrichten, um in Datasets zu lesen und zu schreiben.
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -51,9 +51,9 @@ Class Helper {
 
 Bei Verwendung von Spark haben Sie Zugriff auf zwei Lesemodi: interaktiv und stapelweise.
 
-Im interaktiven Modus wird eine JDBC-Verbindung (Java Database Connectivity) erstellt [!DNL Query Service] und die Ergebnisse werden über eine reguläre JDBC-Verbindung abgerufen, `ResultSet` die automatisch in eine `DataFrame`übersetzt wird. Dieser Modus funktioniert ähnlich wie die integrierte [!DNL Spark] Methode `spark.read.jdbc()`. Dieser Modus ist nur für kleine Datensätze vorgesehen. Wenn Ihr Datensatz 5 Millionen Zeilen überschreitet, sollten Sie in den Stapelmodus wechseln.
+Der interaktive Modus erstellt eine JDBC-Verbindung (Java Database Connectivity) zu [!DNL Query Service] und ruft Ergebnisse über eine reguläre JDBC `ResultSet` ab, die automatisch in ein `DataFrame` übersetzt wird. Dieser Modus funktioniert ähnlich wie die integrierte [!DNL Spark]-Methode `spark.read.jdbc()`. Dieser Modus ist nur für kleine Datensätze vorgesehen. Wenn Ihr Datensatz 5 Millionen Zeilen überschreitet, sollten Sie in den Stapelmodus wechseln.
 
-Der Stapelmodus verwendet [!DNL Query Service]den COPY-Befehl, um Parquet-Ergebnismengen an einem freigegebenen Speicherort zu generieren. Diese Parquet-Dateien können dann weiter verarbeitet werden.
+Der Stapelmodus verwendet den COPY-Befehl von [!DNL Query Service], um Ergebnissätze aus Parquet an einem freigegebenen Speicherort zu generieren. Diese Parquet-Dateien können dann weiter verarbeitet werden.
 
 Nachfolgend sehen Sie ein Beispiel zum Lesen eines Datensatzes im interaktiven Modus:
 
@@ -105,7 +105,7 @@ df = df.select("column-a", "column-b").show()
 
 Mit der DISTINCT-Klausel können Sie alle eindeutigen Werte auf Zeilen-/Spaltenebene abrufen und alle Duplikat-Werte aus der Antwort entfernen.
 
-Ein Beispiel für die Verwendung der `distinct()` Funktion ist unten aufgeführt:
+Ein Beispiel für die Verwendung der Funktion `distinct()` ist unten aufgeführt:
 
 ```scala
 df = df.select("column-a", "column-b").distinct().show()
@@ -113,7 +113,7 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### WO-Klausel
 
-Das [!DNL Spark] SDK ermöglicht zwei Filtermethoden: Verwenden eines SQL-Ausdrucks oder durch Filtern von Bedingungen.
+Das SDK [!DNL Spark] ermöglicht zwei Methoden zum Filtern: Verwenden eines SQL-Ausdrucks oder durch Filtern von Bedingungen.
 
 Nachfolgend sehen Sie ein Beispiel für die Verwendung dieser Filterfunktionen:
 
@@ -131,9 +131,9 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### ORDER BY-Klausel
 
-Die ORDER BY-Klausel ermöglicht es, die empfangenen Ergebnisse in einer bestimmten Reihenfolge (aufsteigend oder absteigend) nach einer bestimmten Spalte zu sortieren. Im [!DNL Spark] SDK erfolgt dies mithilfe der `sort()` Funktion.
+Die ORDER BY-Klausel ermöglicht es, die empfangenen Ergebnisse in einer bestimmten Reihenfolge (aufsteigend oder absteigend) nach einer bestimmten Spalte zu sortieren. Im SDK [!DNL Spark] erfolgt dies mithilfe der Funktion `sort()`.
 
-Ein Beispiel für die Verwendung der `sort()` Funktion ist unten aufgeführt:
+Ein Beispiel für die Verwendung der Funktion `sort()` ist unten aufgeführt:
 
 ```scala
 df = df.sort($"column1", $"column2".desc)
@@ -143,7 +143,7 @@ df = df.sort($"column1", $"column2".desc)
 
 Die LIMIT-Klausel ermöglicht es Ihnen, die Anzahl der vom Datensatz erhaltenen Datensätze zu begrenzen.
 
-Ein Beispiel für die Verwendung der `limit()` Funktion ist unten aufgeführt:
+Ein Beispiel für die Verwendung der Funktion `limit()` ist unten aufgeführt:
 
 ```scala
 df = df.limit(100)
@@ -151,7 +151,7 @@ df = df.limit(100)
 
 ## Schreiben in einen Datensatz
 
-Mithilfe Ihrer `configProperties` Zuordnung können Sie in Experience Platform mit `QSOption`Daten in einen Datensatz schreiben.
+Mit Ihrer `configProperties`-Zuordnung können Sie mit `QSOption` in einen Datensatz in Experience Platform schreiben.
 
 ```scala
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
