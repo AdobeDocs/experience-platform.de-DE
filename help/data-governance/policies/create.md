@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage policy
+keywords: Experience Platform;Home;beliebte Themen;Datenverwaltung;Datenverwendungsrichtlinie
 solution: Experience Platform
 title: Datennutzungsrichtlinie erstellen
 topic: policies
@@ -8,7 +8,7 @@ description: Mit der Policy Service-API können Sie Datenverwendungsrichtlinien 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1211'
 ht-degree: 50%
 
 ---
@@ -16,24 +16,24 @@ ht-degree: 50%
 
 # Eine Datenverwendungsrichtlinie in der API erstellen
 
-The [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels.
+Mit der [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie Datenverwendungsrichtlinien erstellen und verwalten, um festzustellen, welche Marketingaktionen für Daten mit bestimmten Datenverwendungsbeschriftungen durchgeführt werden können.
 
-This document provides a step-by-step tutorial for creating a policy using the [!DNL Policy Service] API. Eine genauere Anleitung zu den verschiedenen in der API verfügbaren Vorgängen finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md).
+Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer Richtlinie mit der API [!DNL Policy Service]. Eine genauere Anleitung zu den verschiedenen in der API verfügbaren Vorgängen finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md).
 
 ## Erste Schritte
 
 Dieses Lernprogramm erfordert ein Verständnis der folgenden Schlüsselkonzepte, die beim Erstellen und Evaluieren von Richtlinien zum Einsatz kommen:
 
-* [[!DNL Data Governance]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung [!DNL Platform] erzwungen wird.
+* [[!DNL Data Governance]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung  [!DNL Platform] erzwungen wird.
 * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
-* [Sandboxen](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Sandboxen](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Policy Service] API, including required headers and how to read example API calls.
+Bevor Sie mit diesem Lernprogramm beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md), um wichtige Informationen zu erhalten, die Sie kennen müssen, damit Sie erfolgreich Aufrufe an die [!DNL Policy Service]-API durchführen können, einschließlich der erforderlichen Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Marketing-Aktion definieren {#define-action}
 
-In the [!DNL Data Governance] framework, a marketing action is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
+Im [!DNL Data Governance]-Framework ist eine Marketingaktion eine Aktion, die von einem [!DNL Experience Platform]-Datenbenutzer ausgeführt wird, für die überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
 
 Der erste Schritt bei der Erstellung einer Datenverwendungsrichtlinie besteht darin, zu bestimmen, welche Marketingaktion die Richtlinie auswerten wird. Dies kann mit einer der folgenden Optionen erledigt werden:
 
@@ -42,11 +42,11 @@ Der erste Schritt bei der Erstellung einer Datenverwendungsrichtlinie besteht da
 
 ### Vorhandene Marketing-Aktion nachschlagen {#look-up}
 
-You can look up existing marketing actions to be evaluated by your policy by making a GET request to one of the `/marketingActions` endpoints.
+Sie können vorhandene Marketingaktionen nachschlagen, die von Ihrer Richtlinie ausgewertet werden sollen, indem Sie eine GET an einen der `/marketingActions`-Endpunkte anfordern.
 
 **API-Format**
 
-Depending on whether you are looking up a marketing action provided by [!DNL Experience Platform] or a custom marketing action created by your organization, use the `marketingActions/core` or `marketingActions/custom` endpoints, respectively.
+Je nachdem, ob Sie eine Marketingaktion von [!DNL Experience Platform] oder eine von Ihrem Unternehmen erstellte benutzerspezifische Marketingaktion nachschlagen, verwenden Sie die Endpunkte `marketingActions/core` bzw. `marketingActions/custom`.
 
 ```http
 GET /marketingActions/core
@@ -123,7 +123,7 @@ Eine erfolgreiche Antwort gibt die Gesamtanzahl der gefundenen Marketing-Aktione
 | --- | --- |
 | `_links.self.href` | Jedes Element im `children`-Array enthält eine URI-ID für die aufgelistete Marketing-Aktion. |
 
-Wenn Sie die Marketing-Aktion gefunden haben, die Sie verwenden möchten, notieren Sie sich den Wert seiner `href`-Eigenschaft. This value is used during the next step of [creating a policy](#create-policy).
+Wenn Sie die Marketing-Aktion gefunden haben, die Sie verwenden möchten, notieren Sie sich den Wert seiner `href`-Eigenschaft. Dieser Wert wird im nächsten Schritt von [verwendet, um eine Richtlinie](#create-policy) zu erstellen.
 
 ### Neue Marketing-Aktion erstellen {#create-new}
 
@@ -223,7 +223,7 @@ Dieser Ausdruck wird als Policy-Ausdruck bezeichnet und ist ein Objekt, das entw
 >
 >Nur OR- und AND-Operatoren werden unterstützt.
 
-Once you have configured your policy expression, you can create a new policy by making a POST request to the `/policies/custom` endpoint.
+Nachdem Sie Ihren Policy-Ausdruck konfiguriert haben, können Sie eine neue Richtlinie erstellen, indem Sie eine POST an den `/policies/custom`-Endpunkt anfordern.
 
 **API-Format**
 
@@ -269,7 +269,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `marketingActionRefs` | Ein Array, das den `href`-Wert einer Marketing-Aktion enthält, der im [vorherigen Schritt](#define-action) abgerufen wurde. Im obigen Beispiel wird zwar nur eine Marketing-Aktion aufgelistet, es können aber auch mehrere Aktionen angegeben werden. |
-| `deny` | Das Richtlinienausdrucksobjekt. Defines the usage labels and conditions that would cause the policy to reject the marketing action referenced in `marketingActionRefs`. |
+| `deny` | Das Richtlinienausdrucksobjekt. Definiert die Gebrauchsbeschriftungen und -bedingungen, die dazu führen würden, dass die Richtlinie die in `marketingActionRefs` referenzierte Marketingaktion ablehnt. |
 
 **Antwort**
 
@@ -328,9 +328,9 @@ Zeichnen Sie die URI-ID der neu erstellten Richtlinie auf, wie sie im nächsten 
 
 >[!NOTE]
 >
->While this step is optional if you wish to leave your policy in `DRAFT` status, please note that by default a policy must have its status set to `ENABLED` in order to participate in evaluation. See the guide on [policy enforcement](../enforcement/api-enforcement.md) for information on how to make exceptions for policies in `DRAFT` status.
+>Dieser Schritt ist zwar optional, wenn Sie Ihre Richtlinie im Status `DRAFT` belassen möchten, beachten Sie jedoch, dass für eine Richtlinie standardmäßig der Status `ENABLED` festgelegt sein muss, damit sie an der Evaluierung teilnehmen kann. Informationen zum Erstellen von Ausnahmen für Richtlinien im Status `DRAFT` finden Sie im Handbuch [Richtliniendurchsetzung](../enforcement/api-enforcement.md).
 
-By default, policies that have their `status` property set to `DRAFT` do not participate in evaluation. Sie können Ihre Richtlinie für die Bewertung aktivieren, indem Sie eine PATCH-Anfrage an den `/policies/custom/`-Endpunkt senden und am Ende des Anfragepfads die eindeutige Kennung für die Richtlinie angeben.
+Richtlinien, deren `status`-Eigenschaft auf `DRAFT` gesetzt ist, beteiligen sich standardmäßig nicht an der Evaluierung. Sie können Ihre Richtlinie für die Bewertung aktivieren, indem Sie eine PATCH-Anfrage an den `/policies/custom/`-Endpunkt senden und am Ende des Anfragepfads die eindeutige Kennung für die Richtlinie angeben.
 
 **API-Format**
 
@@ -344,7 +344,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Anfrage**
 
-The following request performs a PATCH operation on the `status` property of the policy, changing its value from `DRAFT` to `ENABLED`.
+Die folgende Anforderung führt einen PATCH-Vorgang für die `status`-Eigenschaft der Richtlinie durch und ändert deren Wert von `DRAFT` in `ENABLED`.
 
 ```shell
 curl -X PATCH \
@@ -420,6 +420,6 @@ Bei einer erfolgreichen Antwort werden der HTTP-Status 200 (OK) und die Details 
 
 In dieser Anleitung haben Sie für eine Marketing-Aktion erfolgreich eine Datennutzungsrichtlinie erstellt. Sie können nun mit der Anleitung zum [Durchsetzen von Datennutzungsrichtlinien](../enforcement/api-enforcement.md) fortfahren, um zu erfahren, wie Sie in Ihrer Erlebnisanwendung Richtlinienverletzungen erkennen und behandeln können.
 
-For more information on the different available operations in the [!DNL Policy Service] API,  see the [Policy Service developer guide](../api/getting-started.md). For information on how to enforce policies for [!DNL Real-time Customer Profile] data, see the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md).
+Weitere Informationen zu den verschiedenen verfügbaren Vorgängen in der API finden Sie im [!DNL Policy Service]-Handbuch [Policy Service developer guide](../api/getting-started.md). Informationen zum Erzwingen von Richtlinien für [!DNL Real-time Customer Profile]-Daten finden Sie im Lernprogramm [Erzwingen der Datenverwendungskonformität für Audiencen-Segmente](../../segmentation/tutorials/governance.md).
 
-To learn how to manage usage policies in the [!DNL Experience Platform] user interface, see the [policy user guide](user-guide.md).
+Informationen zum Verwalten von Nutzungsrichtlinien in der [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Richtlinien-Benutzerhandbuch](user-guide.md).
