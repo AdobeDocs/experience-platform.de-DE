@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics;access control;sandbox;intelligence pack;dsw features;dsw access;Adobe Experience Platform Intelligence;intelligence;aep intelligence package
+keywords: Experience Platform;Home;Data Science Workspace;beliebte Themen;Zugriffskontrolle;Sandbox;Intelligenzpaket;DSW-Funktionen;DSW-Zugriff;Adobe Experience Platform Intelligence;Intelligenz;aep Intelligence-Paket
 solution: Experience Platform
 title: Zugriff auf den Data Science Workspace und Funktionen
 topic: Access and features for data science workspace
@@ -7,8 +7,8 @@ description: 'Im folgenden Dokument werden die Berechtigungen und der Zugriff au
 translation-type: tm+mt
 source-git-commit: 40181fc9b1b08c2e21f806caae76b8af0ec9e5e6
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 14%
+source-wordcount: '644'
+ht-degree: 13%
 
 ---
 
@@ -19,15 +19,15 @@ Im folgenden Dokument werden die Berechtigungen und der Zugriff auf Funktionen v
 
 ![DSW-Register](./images/access/platform-tabs.png)
 
-- **Notebooks:** Bietet eine interaktive Entwicklungs-Umgebung ([JupyterLab](./jupyterlab/overview.md)) zur Untersuchung, Analyse und Modellierung Ihrer Daten auf Experience Platform.
-- **Modelle:** Bietet Werkzeuge zum Erstellen, Veröffentlichen und Speichern von erweiterten maschinellen Lernrezepten und -modellen. Weitere Informationen finden Sie im Tutorial zum [Erstellen und Veröffentlichen eines maschinellen Lernmodells](./models-recipes/create-publish-model.md) .
-- **Dienste:** Enthält sowohl von der Adobe bereitgestellte Dienste wie [Intelligente Dienste](../intelligent-services/home.md) als auch benutzerdefinierte Dienste, die Sie mit Data Science Workspace erstellt haben.
+- **Notebooks:** Bietet eine interaktive Entwicklungs-Umgebung ([JupyterLab](./jupyterlab/overview.md)), mit der Sie Ihre Daten auf Experience Platform untersuchen, analysieren und modellieren können.
+- **Modelle:** Bietet Werkzeuge zum Erstellen, Veröffentlichen und Speichern erweiterter maschineller Lernrezepte und -modelle. Weitere Informationen finden Sie im Tutorial [Erstellen und Veröffentlichen eines maschinellen Lernmodells](./models-recipes/create-publish-model.md).
+- **Dienste:** Enthält sowohl von der Adobe bereitgestellte Dienste wie  [Intelligente ](../intelligent-services/home.md) Dienste als auch benutzerdefinierte Dienste, die Sie mit Data Science Workspace erstellt haben.
 
 Warum wird nur die Registerkarte &quot;Dienste&quot;angezeigt?
 
 - Ihr Unternehmen hat möglicherweise nur eine Berechtigung auf die Echtzeit-Kundendatenplattform (RTCDP), die die Intelligent Service Customer AI enthält.
 
-Wenn Sie keine der Registerkarten **Data Science** sehen können und die Data Science Workspace-Funktionen nutzen möchten, wenden Sie sich an Ihren Administrator, um zu prüfen, ob Sie über eine Adobe Experience Platform Intelligence-Lizenz verfügen.
+Wenn Sie die Registerkarten **Datenwissenschaft** nicht sehen können und Data Science Workspace-Funktionen nutzen möchten, wenden Sie sich an Ihren Administrator der Firma, um zu prüfen, ob Sie über eine Adobe Experience Platform Intelligence-Lizenz verfügen.
 
 ## Adobe Experience Platform Intelligence-Paket-Addon
 
@@ -58,11 +58,11 @@ Um Data Science Workspace verwenden zu können, muss die Berechtigung &quot;Data
 
 | Berechtigung | Aktiviert | Deaktiviert |
 |---|---|---|
-| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Dienste im Data Science Workspace. | API- und UI-Zugriff auf alle Dienste in Data Science Workspace sind deaktiviert. Bei Deaktivierung wird die Auswahl der Seiten **Notebooks**, **Modelle** und **Dienste** verhindert. <li>Der Zugriff auf **Dienste** ist möglicherweise weiterhin über die Echtzeit-Kundendatenplattform (RTCDP) verfügbar.</li> |
+| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Dienste im Data Science Workspace. | API- und UI-Zugriff auf alle Dienste in Data Science Workspace sind deaktiviert. Bei Deaktivierung werden die Seiten **Notebooks**, **Modelle** und **Dienste** nicht ausgewählt. <li>Der Zugriff auf **Dienste** kann weiterhin über die Echtzeit-Kundendatenplattform (RTCDP) möglich sein.</li> |
 
 ## Sandbox-Unterstützung
 
-Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Experience Platform. Jede Plattforminstanz unterstützt eine Produktions-Sandbox und mehrere Nicht-Produktions-Sandboxen, wobei jede eine eigene Bibliothek mit Plattformressourcen unterhält. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md).
+Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Experience Platform. Jede Plattforminstanz unterstützt eine Produktions-Sandbox und mehrere Nicht-Produktions-Sandboxen, wobei jede eine eigene Bibliothek mit Plattformressourcen unterhält. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Weitere Informationen zu Sandboxes finden Sie unter [Übersicht über Sandboxes](../sandboxes/home.md).
 
 Data Science Workspace unterliegt derzeit der folgenden Sandbox-Beschränkung:
 
@@ -72,4 +72,4 @@ Data Science Workspace unterliegt derzeit der folgenden Sandbox-Beschränkung:
 
 In diesem Dokument werden die verschiedenen Zugriffstypen und Funktionen im Data Science Workspace beschrieben.
 
-Um mehr über den Data Science Workspace zu erfahren, z. B. einen kompletten täglichen Arbeitsablauf, lesen Sie zunächst die exemplarische [Dokumentation zum](./walkthrough.md) Data Science Workspace. For more general information, visit the [Data Science Workspace overview](./home.md).
+Um mehr über den Data Science Workspace zu erfahren, z. B. einen kompletten täglichen Arbeitsablauf, lesen Sie zunächst die [Datenwissenschaftliche Arbeitsfläche - Anleitung](./walkthrough.md). Weitere allgemeine Informationen finden Sie unter [Übersicht über den Data Science Workspace](./home.md).
