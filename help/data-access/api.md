@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
+keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Python-SDK;Spark-SDK;Datenzugriffs-API;Export;Export
 solution: Experience Platform
 title: Entwicklerleitfaden für Datenzugriff
 topic: developer guide
@@ -7,7 +7,7 @@ description: Die Data Access API unterstützt Adobe Experience Platform, indem s
 translation-type: tm+mt
 source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '528'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 # Entwicklerleitfaden für Datenzugriff
 
-Die Data Access API unterstützt Adobe Experience Platform, indem sie Benutzern eine RESTful-Schnittstelle zur Verfügung stellt, die auf die Erkennung und Zugänglichkeit von erfassten Datensätzen innerhalb von [!DNL Experience Platform]Data Warehouse ausgerichtet ist.
+Die Data Access API unterstützt Adobe Experience Platform, indem sie Benutzern eine RESTful-Schnittstelle bereitstellt, die sich auf die Erkennung und Zugänglichkeit von erfassten Datensätzen innerhalb von [!DNL Experience Platform] konzentriert.
 
 ![Datenzugriff auf Experience Platform](images/Data_Access_Experience_Platform.png)
 
@@ -95,7 +95,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-Das `"data"` Array enthält eine Liste aller Dateien im angegebenen Stapel. Jede zurückgegebene Datei verfügt über eine eigene eindeutige ID (`{FILE_ID}`), die im `"dataSetFileId"` Feld enthalten ist. Diese eindeutige ID kann dann verwendet werden, um auf die Datei zuzugreifen oder sie herunterzuladen.
+Das `"data"`-Array enthält eine Liste aller Dateien innerhalb des angegebenen Stapels. Jede zurückgegebene Datei hat ihre eigene eindeutige ID (`{FILE_ID}`), die sich im Feld `"dataSetFileId"` befindet. Diese eindeutige ID kann dann verwendet werden, um auf die Datei zuzugreifen oder sie herunterzuladen.
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
@@ -116,7 +116,7 @@ GET /files/{FILE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{FILE_ID}` | Entspricht der `"dataSetFileId"`ID der Datei, auf die zugegriffen werden soll. |
+| `{FILE_ID}` | Entspricht der `"dataSetFileId"`-ID der Datei, auf die zugegriffen werden soll. |
 
 **Anfrage**
 
@@ -204,7 +204,7 @@ Wenn ein Ordner zurückgegeben wird, enthält er ein Array aller Dateien im Ordn
 
 ## Zugriff auf den Inhalt einer Datei
 
-The [!DNL Data Access] API can also be used to access the contents of a file. Auf diese Weise können Sie den Inhalt in eine externe Quelle herunterladen.
+Die [!DNL Data Access]-API kann auch verwendet werden, um auf den Inhalt einer Datei zuzugreifen. Auf diese Weise können Sie den Inhalt in eine externe Quelle herunterladen.
 
 **API-Format**
 
@@ -237,8 +237,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Zusätzliche Codebeispiele
 
-Weitere Beispiele finden Sie im [Lernprogramm](tutorials/dataset-data.md)zum Datenzugriff.
+Weitere Beispiele finden Sie im Lehrgang [Datenzugriff](tutorials/dataset-data.md).
 
 ## Abonnieren von Datenerfassungsereignissen
 
-[!DNL Platform] stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
+[!DNL Platform] stellt bestimmte hochwertige Ereignis über die  [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de) zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zu [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md).
