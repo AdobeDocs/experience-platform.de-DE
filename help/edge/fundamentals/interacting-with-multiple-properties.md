@@ -7,8 +7,8 @@ keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
 source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 87%
+source-wordcount: '258'
+ht-degree: 85%
 
 ---
 
@@ -67,4 +67,4 @@ Achten Sie darauf, den `configure`-Befehl für jede Instanz auszuführen, bevor 
 
 ## Einschränkungen
 
-To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`.  Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.
+Um Konflikte mit Cookies zu vermeiden, kann nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] innerhalb einer Seite ein bestimmtes `edgeConfigId` aufweisen.  Ebenso kann nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] ein bestimmtes `orgId` haben.
