@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
+keywords: Experience Platform;Benutzerhandbuch;Kundenhilfe;beliebte Themen;Instanz konfigurieren;Instanz erstellen;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Konfigurieren einer Customer AI-Instanz
 topic: Instance creation
@@ -7,7 +7,7 @@ description: Intelligent Services stellen Customer AI als einfach zu verwendende
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1296'
 ht-degree: 35%
 
 ---
@@ -21,20 +21,20 @@ Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sense
 
 ## Einrichten Ihrer Instanz {#set-up-your-instance}
 
-In the Platform UI, select **[!UICONTROL Services]** in the left navigation. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. In the container for Customer AI, select **[!UICONTROL Open]**.
+Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;in der linken Navigation **[!UICONTROL Dienste]**. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. Wählen Sie im Container für Customer AI **[!UICONTROL Open]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
-Die Benutzeroberfläche **für Kunden-API** wird angezeigt und zeigt alle Ihre Dienstinstanzen an.
+Die Benutzeroberfläche **Kunden-AI** wird angezeigt und zeigt alle Ihre Dienstinstanzen an.
 
-- Sie finden die Metrik **[!UICONTROL Gesamtanzahl der bewerteten]** Profil unten rechts im Container Instanz **** erstellen. Diese Metrik verfolgt die Gesamtanzahl der von der Kunden-API für das aktuelle Kalenderjahr bewerteten Profil einschließlich aller Sandbox-Umgebung und aller gelöschten Dienstinstanzen.
+- Sie finden die Metrik **[!UICONTROL Gespeicherte Profil insgesamt]** unten rechts im Container **[!UICONTROL Instanz erstellen]**. Diese Metrik verfolgt die Gesamtanzahl der von der Kunden-API für das aktuelle Kalenderjahr bewerteten Profil einschließlich aller Sandbox-Umgebung und aller gelöschten Dienstinstanzen.
 
 ![](../images/user-guide/total-profiles.png)
 
 Dienstinstanzen können mithilfe der Steuerelemente auf der rechten Seite der Benutzeroberfläche bearbeitet, geklont und gelöscht werden. Um diese Steuerelemente anzuzeigen, wählen Sie eine Instanz aus den vorhandenen **[!UICONTROL Dienstinstanzen]** aus. Die Steuerelemente enthalten Folgendes:
 
-- **[!UICONTROL Bearbeiten]**: Durch Auswahl von **[!UICONTROL Bearbeiten]** können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten.
-- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird die derzeit ausgewählte Dienstinstanzeinrichtung kopiert. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
+- **[!UICONTROL Bearbeiten]**: Durch Auswahl von  **** Bearbeiten können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten.
+- **[!UICONTROL Klonen]**: Durch Auswahl von  **** Clonecopies wird die derzeit ausgewählte Dienstinstanz-Einrichtung kopiert. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
 - **[!UICONTROL Löschen]**: Sie können eine Dienstinstanz einschließlich aller historischen Ausführung löschen.
 - **[!UICONTROL Datenquelle]**: Ein Link zum Datensatz, der von dieser Instanz verwendet wird.
 - **[!UICONTROL Details]** der letzten Ausführung: Dies wird nur angezeigt, wenn eine Ausführung fehlschlägt. Informationen darüber, warum die Ausführung fehlgeschlagen ist, wie Fehlercodes werden hier angezeigt.
@@ -42,7 +42,7 @@ Dienstinstanzen können mithilfe der Steuerelemente auf der rechten Seite der Be
 
 ![](../images/user-guide/service-instance-panel.png)
 
-Um eine neue Instanz zu erstellen, wählen Sie &quot;Instanz **[!UICONTROL erstellen&quot;]**.
+Um eine neue Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]**.
 
 ![](../images/user-guide/dashboard.png)
 
@@ -58,49 +58,49 @@ Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie für die Insta
 
 - Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es wurde eine qualifizierte Zielgruppe angegeben. Sie können eine qualifizierte Zielgruppe angeben, indem Sie Bedingungen festlegen, um Profile auf Grundlage von Ereignissen ein- oder auszuschließen.
 
-Provide the required values and then select **[!UICONTROL Next]**.
+Geben Sie die erforderlichen Werte ein und wählen Sie dann **[!UICONTROL Weiter]**.
 
 ![](../images/user-guide/setup.png)
 
 ### Ziel definieren {#define-a-goal}
 
-The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a prediction goal. Ein Ziel besteht aus einem oder mehreren Ereignissen, bei denen das Auftreten eines jeden Ereignisses auf der Bedingung basiert, die es enthält. Ziel einer Customer AI-Instanz ist es, die Wahrscheinlichkeit zu bestimmen, mit der ihr Ziel innerhalb eines bestimmten Zeitraums erreicht wird.
+Der Schritt **[!UICONTROL Ziel definieren]** wird angezeigt und bietet eine interaktive Umgebung, um ein Prognoseziel visuell zu definieren. Ein Ziel besteht aus einem oder mehreren Ereignissen, bei denen das Auftreten eines jeden Ereignisses auf der Bedingung basiert, die es enthält. Ziel einer Customer AI-Instanz ist es, die Wahrscheinlichkeit zu bestimmen, mit der ihr Ziel innerhalb eines bestimmten Zeitraums erreicht wird.
 
-Um ein Ziel zu erstellen, wählen Sie &quot;Feldnamen **[!UICONTROL eingeben&quot;]** und wählen Sie ein Feld aus der Dropdown-Liste aus. Wählen Sie die zweite Eingabe aus und wählen Sie eine Klausel für die Bedingung des Ereignisses. Geben Sie dann die Zielgruppe ein, um das Ereignis abzuschließen. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
+Um ein Ziel zu erstellen, wählen Sie **[!UICONTROL Feldnamen eingeben]** und wählen Sie ein Feld aus der Dropdown-Liste aus. Wählen Sie die zweite Eingabe aus und wählen Sie eine Klausel für die Bedingung des Ereignisses. Geben Sie dann die Zielgruppe ein, um das Ereignis abzuschließen. Zusätzliche Ereignis können durch Auswahl von **[!UICONTROL Hinzufügen Ereignis]** konfiguriert werden. Schließen Sie schließlich das Ziel ab, indem Sie einen Prognosezeitrahmen in der Anzahl der Tage anwenden und dann **[!UICONTROL Weiter]** wählen.
 
 ![](../images/user-guide/goal.png)
 
 #### Wird ausgeführt und wird nicht ausgeführt
 
-Beim Definieren Ihres Ziels haben Sie die Option **[!UICONTROL Wird auftreten]** oder **[!UICONTROL tritt nicht auf]**. Die Auswahl **[!UICONTROL Wird ausgeführt]** bedeutet, dass die von Ihnen festgelegten Ereignis-Bedingungen erfüllt werden müssen, damit die Ereignis-Daten eines Kunden in die Insight-Benutzeroberfläche aufgenommen werden.
+Beim Definieren Ihres Ziels haben Sie die Möglichkeit, **[!UICONTROL Wird auftreten]** oder **[!UICONTROL Wird nicht ausgeführt]**. Wenn Sie **[!UICONTROL Wird auftreten]** wählen, müssen die von Ihnen definierten Ereignis-Bedingungen erfüllt sein, damit die Ereignis-Daten eines Kunden in die Einblicke-Benutzeroberfläche aufgenommen werden.
 
-Wenn Sie z. B. eine App einrichten möchten, um vorherzusagen, ob ein Kunde einen Kauf tätigt, können Sie &quot; **[!UICONTROL Vorkommen]** &quot;gefolgt von &quot; **[!UICONTROL Alle von]** &quot;auswählen und dann **commerce.purchase.id** eingeben, und als Operator **vorhanden** sein.
+Wenn Sie z. B. eine App einrichten möchten, um vorherzusagen, ob ein Kunde einen Kauf tätigt, können Sie **[!UICONTROL Folgendes auswählen:]**, dann **[!UICONTROL All von]** und **commerce.purchase.id** und **exists** als Operator eingeben.
 
 ![wird](../images/user-guide/occur.png)
 
-Es kann jedoch vorkommen, dass Sie sich für eine Vorhersage interessieren, ob ein Ereignis in einem bestimmten Zeitraum nicht eintritt. Um ein Ziel mit dieser Option zu konfigurieren, wählen Sie **[!UICONTROL Wird nicht auftreten]** aus der Dropdownliste auf der obersten Ebene.
+Es kann jedoch vorkommen, dass Sie sich für eine Vorhersage interessieren, ob ein Ereignis in einem bestimmten Zeitraum nicht eintritt. Um ein Ziel mit dieser Option zu konfigurieren, wählen Sie **[!UICONTROL Wird nicht ausgeführt]** aus der Dropdownliste auf der obersten Ebene.
 
-Wenn Sie z. B. vorhersagen möchten, welche Kunden sich weniger engagieren und Ihre Kontoanmeldung im nächsten Monat nicht besuchen. Wählen Sie **[!UICONTROL Wird nicht auftreten]** gefolgt von **[!UICONTROL All of]** und geben Sie dann **web.webInteraction.URL** ein und **[!UICONTROL entspricht]** dem Operator mit **Kontoanmeldung** als Wert.
+Wenn Sie z. B. vorhersagen möchten, welche Kunden sich weniger engagieren und Ihre Kontoanmeldung im nächsten Monat nicht besuchen. Wählen Sie **[!UICONTROL Wird nicht vorkommen]** gefolgt von **[!UICONTROL All of]** und geben Sie **web.webInteraction.URL** und **[!UICONTROL entspricht]** als Operator mit **account-login** als Wert ein.
 
 ![wird nicht](../images/user-guide/not-occur.png)
 
 #### Alle und beliebige
 
-In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, und in anderen Fällen können Sie das Auftreten eines beliebigen Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen hat, wählen Sie die Option &quot; **[!UICONTROL Alle von]** &quot;aus der Dropdown-Liste &quot;Zweitstufe&quot;auf der Seite &quot;Ziel **[!UICONTROL definieren&quot;]** .
+In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, und in anderen Fällen können Sie das Auftreten eines beliebigen Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen hat, wählen Sie die Option **[!UICONTROL Alle von]** aus der Dropdown-Liste der zweiten Ebene auf der Seite **[!UICONTROL Ziel definieren]**.
 
-Sie können beispielsweise vorhersagen, ob ein Kunde ein bestimmtes Produkt kauft. Dieses Prognoseziel ist durch zwei Bedingungen definiert: a `commerce.order.purchaseID` vorhanden **und der Wert** entspricht `productListItems.SKU` **** einem bestimmten Wert.
+Sie können beispielsweise vorhersagen, ob ein Kunde ein bestimmtes Produkt kauft. Dieses Prognoseziel ist durch zwei Bedingungen definiert: a `commerce.order.purchaseID` **exists** und `productListItems.SKU` **entspricht** einem bestimmten Wert.
 
 ![Alle Beispiele](../images/user-guide/all-of.png)
 
-Um vorherzusagen, ob ein Kunde ein Ereignis aus einem bestimmten Satz hat, können Sie die Option **[!UICONTROL Beliebig]** verwenden.
+Um vorherzusagen, ob ein Kunde ein Ereignis aus einem bestimmten Satz hat, können Sie die Option **[!UICONTROL Beliebig von]** verwenden.
 
-Sie können beispielsweise vorhersagen, ob ein Kunde eine bestimmte URL oder eine Webseite mit einem bestimmten Namen besucht. Dieses Prognoseziel ist durch zwei Bedingungen definiert: `web.webPageDetails.URL` **beginn mit** einem bestimmten Wert und `web.webPageDetails.name` Beginn mit **** einem bestimmten Wert.
+Sie können beispielsweise vorhersagen, ob ein Kunde eine bestimmte URL oder eine Webseite mit einem bestimmten Namen besucht. Dieses Prognoseziel ist durch zwei Bedingungen definiert: `web.webPageDetails.URL` **Beginn mit** einem bestimmten Wert und `web.webPageDetails.name` **Beginn mit** einem bestimmten Wert.
 
 ![Beispiel](../images/user-guide/any-of.png)
 
 ### Zeitplan konfigurieren *(optional)* {#configure-a-schedule}
 
-The **[!UICONTROL Advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed.
+Der Schritt **[!UICONTROL Erweitert]** wird angezeigt. Mit diesem optionalen Schritt können Sie einen Zeitplan konfigurieren, um die Ausführung von Prognosen zu automatisieren, Prognoseausschlüsse zum Filtern bestimmter Ereignis zu definieren oder **[!UICONTROL Fertigstellen]** wählen, wenn nichts erforderlich ist.
 
 Richten Sie einen Auswertungszeitplan ein, indem Sie die **[!UICONTROL Auswertungshäufigkeit]** festlegen. Die Ausführung automatisierter Prognosen kann entweder wöchentlich oder monatlich geplant werden.
 
@@ -108,11 +108,11 @@ Richten Sie einen Auswertungszeitplan ein, indem Sie die **[!UICONTROL Auswertun
 
 Unter der Zeitplankonfiguration können Sie Prognoseausschlüsse definieren, um zu verhindern, dass bei der Generierung von Werten Ereignisse ausgewertet werden, die bestimmte Bedingungen erfüllen. Mit dieser Funktion können irrelevante Dateneingaben herausgefiltert werden.
 
-To exclude certain events, select **[!UICONTROL Add exclusion]** and define the event in the same fashion as to how the goal is defined. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container and then select **[!UICONTROL Remove Container]**.
+Um bestimmte Ereignis auszuschließen, wählen Sie **[!UICONTROL Hinzufügen aus und definieren Sie das Ereignis auf dieselbe Weise wie das Ziel.]** Um einen Ausschluss zu entfernen, wählen Sie die Auslassungspunkte (**[!UICONTROL ...]**) oben rechts im Ereignis-Container und wählen Sie **[!UICONTROL Container entfernen]**.
 
 ![](../images/user-guide/exclusion.png)
 
-Exclude events as needed and then select **[!UICONTROL Finish]** to create the instance.
+Schließen Sie die Ereignis nach Bedarf aus und wählen Sie dann **[!UICONTROL Fertig]**, um die Instanz zu erstellen.
 
 ![](../images/user-guide/advanced.png)
 
@@ -126,7 +126,7 @@ In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Lernprogramm haben Sie erfolgreich eine Instanz der Kunden-API konfiguriert und Tendenzwerte generiert. Sie können jetzt den Segment Builder verwenden, um Kundensegmente mit prognostizierten Ergebnissen zu [erstellen](./create-segment.md) oder Einblicke in die Kundentoftware [zu erhalten](./discover-insights.md).
+In diesem Lernprogramm haben Sie erfolgreich eine Instanz der Kunden-API konfiguriert und Tendenzwerte generiert. Sie können nun den Segmentaufbau verwenden, um Kundensegmente mit prognostizierten Ergebnissen](./create-segment.md) oder [zu erstellen, um Erkenntnisse mit der Kunden-KI](./discover-insights.md) zu ermitteln.[
 
 ## Zusätzliche Ressourcen
 
