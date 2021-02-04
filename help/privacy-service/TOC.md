@@ -28,7 +28,7 @@ ht-degree: 95%
    * [Übersicht über die Benutzeroberfläche von Privacy Service](ui/overview.md)
    * [Benutzerhandbuch zum Privacy Service](ui/user-guide.md)
 * [Privacy-Ereignisse abonnieren](privacy-events.md)
-* Leitlinien zur Datenschutzregelung {#regulations}
+* Leitfäden zur Datenschutzregelung {#regulations}
    * [Übersicht](regulations/overview.md)
    * [FAQs](regulations/faq.md)
    * [Terminologie](regulations/terminology.md)
