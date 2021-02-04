@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;array functions;array;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Array-Funktionen;Array-Funktionen;
 solution: Experience Platform
 title: array-, list- und set-Funktionen
 topic: developer guide
@@ -7,15 +7,15 @@ description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 96%
+source-wordcount: '766'
+ht-degree: 94%
 
 ---
 
 
 # array-, list- und set-Funktionen
 
-[!DNL Profile Query Language] (PQL) Angebot-Funktionen, um die Interaktion mit Arrays, Listen und Zeichenfolgen zu vereinfachen. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) Angebot-Funktionen, um die Interaktion mit Arrays, Listen und Zeichenfolgen zu vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Enthalten
 
