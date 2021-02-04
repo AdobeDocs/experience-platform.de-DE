@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data lake privacy;identity namespaces;privacy;data lake
+keywords: Experience Platform;Home;beliebte Themen;Datenschutz;Identitäts-Namensräume;Privatsphäre;Datensee
 solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic: overview
@@ -7,24 +7,24 @@ description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von K
 translation-type: tm+mt
 source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1272'
-ht-degree: 26%
+source-wordcount: '1285'
+ht-degree: 25%
 
 ---
 
 
-# Privacy request processing in the [!DNL Data Lake]
+# Verarbeitung von Datenschutzanforderungen in [!DNL Data Lake]
 
-Adobe Experience Platform [!DNL Privacy Service] verarbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt.
+Adobe Experience Platform [!DNL Privacy Service] verarbeitet Anfragen von Kunden zum Zugriff, Opt-out oder Löschen ihrer personenbezogenen Daten gemäß den gesetzlichen und organisatorischen Datenschutzbestimmungen.
 
-This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
+Dieses Dokument behandelt wesentliche Konzepte im Zusammenhang mit der Verarbeitung von Datenschutzanforderungen für Kundendaten, die im Ordner [!DNL Data Lake] gespeichert sind.
 
 ## Erste Schritte
 
-It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
+Es wird empfohlen, die folgenden [!DNL Experience Platform]-Dienste zu verstehen, bevor Sie dieses Handbuch lesen:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
-* [[!DNL Catalog Service]](home.md): Das Datensatzsystem für die Datenposition und -linie innerhalb [!DNL Experience Platform]. Stellt eine API bereit, mit der Metadaten von Datensätzen aktualisiert werden können.
+* [[!DNL Catalog Service]](home.md): Das Datensatzsystem für die Datenposition und -linie innerhalb  [!DNL Experience Platform]. Stellt eine API bereit, mit der Metadaten von Datensätzen aktualisiert werden können.
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 * [[!DNL Identity Service]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 
@@ -34,21 +34,21 @@ Adobe Experience Platform [!DNL Identity Service] überbrückt Identitätsdaten 
 
 [!DNL Identity Service] verwaltet einen Store von global definierten (Standard-) und benutzerdefinierten (benutzerdefinierten) Identitäts-Namensräumen. Standardmäßige Namensraum stehen für alle Unternehmen zur Verfügung (z. B. &quot;E-Mail&quot;und &quot;ECID&quot;), während Ihr Unternehmen benutzerdefinierte Namensraum erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
-Weitere Informationen zu Identitäts-Namensräumen [!DNL Experience Platform]finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+Weitere Informationen zu Identitäts-Namensräumen in [!DNL Experience Platform] finden Sie unter [Übersicht über Identitäts-Namensraum](../identity-service/namespaces.md).
 
 ## Hinzufügen von Identitätsdaten zu Datensätzen
 
-Bei der Erstellung von Datenschutzanforderungen für die [!DNL Data Lake]müssen gültige Identitätswerte (und die zugehörigen Namensraum) für jeden einzelnen Kunden angegeben werden, damit die Daten gefunden und entsprechend verarbeitet werden können. Daher müssen alle Datensätze, die Datenschutzanforderungen unterliegen, einen Identitätsdeskriptor in ihrem zugehörigen XDM-Schema enthalten.
+Beim Erstellen von Datenschutzanforderungen für das [!DNL Data Lake] müssen für jeden Kunden gültige Identitätswerte (und die zugehörigen Namensraum) angegeben werden, um die Daten zu finden und sie entsprechend zu verarbeiten. Daher müssen alle Datensätze, die Datenschutzanforderungen unterliegen, einen Identitätsdeskriptor in ihrem zugehörigen XDM-Schema enthalten.
 
 >[!NOTE]
 >
 >Datensätze, die auf Schemas basieren, die keine Identitätsdeskriptordaten unterstützen (z. B. Ad-hoc-Datensätze), können derzeit nicht in Datenschutzanforderungen verarbeitet werden.
 
-In diesem Abschnitt werden die Schritte zum Hinzufügen eines Identitätsdeskriptors zum XDM-Schema eines vorhandenen Datensatzes beschrieben. Wenn Sie bereits über einen Datensatz mit einem Identitätsdeskriptor verfügen, können Sie mit dem [nächsten Abschnitt](#nested-maps)fortfahren.
+In diesem Abschnitt werden die Schritte zum Hinzufügen eines Identitätsdeskriptors zum XDM-Schema eines vorhandenen Datensatzes beschrieben. Wenn Sie bereits über einen Datensatz mit einem Identitätsdeskriptor verfügen, können Sie mit dem [nächsten Abschnitt](#nested-maps) fortfahren.
 
 >[!IMPORTANT]
 >
->Berücksichtigen Sie bei der Entscheidung, welche Schema-Felder als Identitäten festgelegt werden sollen, die [Einschränkungen bei der Verwendung verschachtelter Kartenfelder](#nested-maps).
+>Beachten Sie bei der Entscheidung, welche Schema-Felder als Identitäten festgelegt werden sollen, die [Einschränkungen bei der Verwendung von verschachtelten Kartenfeldern](#nested-maps).
 
 Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem DataSet-Schema:
 
@@ -57,19 +57,19 @@ Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem Data
 
 ### Verwenden der UI {#identity-ui}
 
-In der [!DNL Experience Platform ]Benutzeroberfläche können Sie mit dem Arbeitsbereich &quot; **[!UICONTROL Schemas]** &quot;Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und führen Sie die Schritte zum [Festlegen eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im [!DNL Schema Editor] Lernprogramm aus.
+In der [!DNL Experience Platform ]Benutzeroberfläche können Sie mit dem Arbeitsbereich **[!UICONTROL Schema]** Ihre vorhandenen XDM-Schema bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte für [Einrichten eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im Lehrgang [!DNL Schema Editor].
 
-Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt zum [Senden von Datenschutzanforderungen](#submit)fortfahren.
+Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt [Datenschutzanforderungen senden](#submit) fortfahren.
 
 ### Verwenden der API {#identity-api}
 
 >[!NOTE]
 >
->In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mithilfe der [!DNL Catalog Service] API abrufen. Nachdem Sie den [Abschnitt &quot;Erste Schritte](./api/getting-started.md) &quot;im Entwicklerhandbuch gelesen haben, führen Sie die Schritte aus, die unter zur [Auflistung](./api/list-objects.md) oder [Suche](./api/look-up-object.md) [!DNL Catalog] von Objekten beschrieben werden, um Ihren Datensatz zu finden. Die Schema-ID finden Sie unter `schemaRef.id`
+>In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mit der API [!DNL Catalog Service] abrufen. Nachdem Sie den Abschnitt [Erste Schritte](./api/getting-started.md) des Entwicklerhandbuchs gelesen haben, führen Sie die Schritte aus, die unter [Auflistung](./api/list-objects.md) oder [Suchen](./api/look-up-object.md) [!DNL Catalog]-Objekte beschrieben sind, um Ihren Datensatz zu finden. Die Schema-ID befindet sich unter `schemaRef.id`
 >
-> Dieser Abschnitt enthält Aufrufe der Schema Registry API. Wichtige Informationen zur Verwendung der API, einschließlich der Kenntnisse über Ihre `{TENANT_ID}` und das Konzept der Container, finden Sie im Abschnitt [Erste Schritte](../xdm/api/getting-started.md) im Entwicklerhandbuch.
+> Dieser Abschnitt enthält Aufrufe der Schema Registry API. Wichtige Informationen zur Verwendung der API, einschließlich des Wissens über `{TENANT_ID}` und das Konzept der Container, finden Sie im Abschnitt [Erste Schritte](../xdm/api/getting-started.md) des Entwicklerhandbuchs.
 
-Sie können dem XDM-Schema eines Datasets einen Identitätsdeskriptor hinzufügen, indem Sie eine POST an den `/descriptors` Endpunkt in der [!DNL Schema Registry] API anfordern.
+Sie können dem XDM-Schema eines Datasets einen Identitätsdeskriptor hinzufügen, indem Sie eine POST an den `/descriptors`-Endpunkt in der [!DNL Schema Registry]-API anfordern.
 
 **API-Format**
 
@@ -105,10 +105,10 @@ curl -X POST \
 | --- | --- |
 | `@type` | Der Typ des zu erstellenden Deskriptors. Bei Identitätsdeskriptoren muss der Wert &quot;xdm:descriptorIdentity&quot;lauten. |
 | `xdm:sourceSchema` | Die eindeutige URI-ID des XDM-Schemas Ihres Datensatzes. |
-| `xdm:sourceVersion` | Die Version des XDM-Schemas, die in `xdm:sourceSchema`. |
+| `xdm:sourceVersion` | Die in `xdm:sourceSchema` angegebene Version des XDM-Schemas. |
 | `xdm:sourceProperty` | Der Pfad zum Schema, auf das der Deskriptor angewendet wird. |
-| `xdm:namespace` | Einer der [standardmäßigen Identitäts-Namensraum](../privacy-service/api/appendix.md#standard-namespaces) , der von [!DNL Privacy Service]Ihrem Unternehmen erkannt wird, oder ein benutzerdefinierter Namensraum. |
-| `xdm:property` | Entweder &quot;xdm:id&quot;oder &quot;xdm:code&quot;, je nach Namensraum, der unter `xdm:namespace`verwendet wird. |
+| `xdm:namespace` | Einer der [Standardidentitäts-Namensraum](../privacy-service/api/appendix.md#standard-namespaces), der von [!DNL Privacy Service] erkannt wird, oder ein benutzerdefinierter Namensraum, der von Ihrem Unternehmen definiert wird. |
+| `xdm:property` | Entweder &quot;xdm:id&quot;oder &quot;xdm:code&quot;, je nach Namensraum, der unter `xdm:namespace` verwendet wird. |
 | `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn &quot;true&quot;, bedeutet dies, dass das Feld eine primäre Identität ist. Schemas dürfen nur eine primäre Identität enthalten. Die Standardeinstellung lautet &quot;false&quot;(falsch), wenn sie nicht enthalten ist. |
 
 **Antwort**
@@ -133,9 +133,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und die Details des ne
 
 >[!NOTE]
 >
->This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für [!DNL Data Lake] formatieren. Es wird dringend empfohlen, die Dokumentation [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) oder [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) zu lesen, um die vollständigen Schritte zum Senden eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anforderungs-Nutzdaten.
 
-Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für die [!DNL Data Lake] Verwendung der [!DNL Privacy Service] Benutzeroberfläche oder API erstellen.
+Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für [!DNL Data Lake] mithilfe der [!DNL Privacy Service]-Benutzeroberfläche oder -API durchführen.
 
 >[!IMPORTANT]
 >
@@ -143,17 +143,17 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanforderungen für d
 
 ### Verwenden der UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
+Wählen Sie beim Erstellen von Auftragsanforderungen in der Benutzeroberfläche unter **[!UICONTROL AEP Data Lake]** und/oder **[!UICONTROL Profil]** unter **[!UICONTROL Produkte]** aus, um Aufträge für die in [!DNL Data Lake] oder [!DNL Real-time Customer Profile] gespeicherten Daten zu verarbeiten.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs for the [!DNL Data Lake] must use &quot;unregistered&quot; for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
+Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für [!DNL Data Lake] müssen &quot;nicht registriert&quot;für ihren `type`-Wert und einen `namespace`-Wert verwenden, der mit einer [Datenschutzbeschriftung](#privacy-labels) übereinstimmt, die den entsprechenden Datensätzen hinzugefügt wurde.
 
-Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. When making requests to the [!DNL Data Lake], the array must include the value `aepDataLake`.
+Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Bei Anforderungen an [!DNL Data Lake] muss das Array den Wert `aepDataLake` enthalten.
 
-The following request creates a new privacy job for the [!DNL Data Lake], using the unregistered &quot;email_label&quot; namespace. It also includes the product value for the [!DNL Data Lake] in the `include` array:
+Mit der folgenden Anforderung wird ein neuer Datenschutzauftrag für [!DNL Data Lake] unter Verwendung des nicht registrierten Namensraums &quot;email_label&quot;erstellt. Er enthält außerdem den Produktwert für [!DNL Data Lake] im `include`-Array:
 
 ```shell
 curl -X POST \
@@ -196,19 +196,19 @@ curl -X POST \
 
 ## Verarbeitung von Löschanfragen
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
+Wenn [!DNL Experience Platform] eine Löschanforderung von [!DNL Privacy Service] erhält, sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anforderung empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem [!DNL Data Lake] entfernt. Während dieses siebentägigen Fensters werden die Daten weich gelöscht und stehen daher keinem [!DNL Platform]-Dienst zur Verfügung.
 
-In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
+In zukünftigen Versionen sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], nachdem die Daten physisch gelöscht wurden.
 
 ## Nächste Schritte
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests for the [!DNL Data Lake]. Wir empfehlen Ihnen, die Dokumentation in diesem Handbuch weiterzulesen, um Ihr Verständnis hinsichtlich der Verwaltung von Identitätsdaten und Erstellung von Datenschutzaufträgen zu vertiefen.
+Durch das Lesen dieses Dokuments wurden Sie zu den wichtigen Konzepten der Verarbeitung von Datenschutzanforderungen für das [!DNL Data Lake] hinzugefügt. Wir empfehlen Ihnen, die Dokumentation in diesem Handbuch weiterzulesen, um Ihr Verständnis hinsichtlich der Verwaltung von Identitätsdaten und Erstellung von Datenschutzaufträgen zu vertiefen.
 
-See the document on [privacy request processing for Real-time Customer Profile](../profile/privacy.md) for steps on processing privacy requests for the [!DNL Profile] store.
+Im Dokument [Verarbeitung von Datenschutzanforderungen für Echtzeit-Kundendaten](../profile/privacy.md) finden Sie Anweisungen zur Verarbeitung von Datenschutzanforderungen für den [!DNL Profile]-Speicher.
 
 ## Anhang
 
-Der folgende Abschnitt enthält zusätzliche Informationen zur Verarbeitung von Datenschutzanforderungen im [!DNL Data Lake].
+Der folgende Abschnitt enthält zusätzliche Informationen zur Verarbeitung von Datenschutzanforderungen in der [!DNL Data Lake].
 
 ### Kennzeichnen verschachtelter Felder vom Typ Zuordnung {#nested-maps}
 
