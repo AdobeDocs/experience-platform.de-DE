@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;update sandbox
+keywords: Experience Platform;Home;beliebte Themen;Update-Sandbox
 solution: Experience Platform
 title: Sandbox aktualisieren
 topic: developer guide
@@ -7,19 +7,19 @@ description: Sie können ein oder mehrere Felder in einer Sandbox aktualisieren,
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 10%
+source-wordcount: '127'
+ht-degree: 9%
 
 ---
 
 
 # Sandbox aktualisieren
 
-Sie können ein oder mehrere Felder in einer Sandbox aktualisieren, indem Sie eine PATCH anfordern, die die Sandbox `name` im Anforderungspfad und die Eigenschaft enthält, die in der Anforderungsnutzlast aktualisiert werden soll.
+Sie können ein oder mehrere Felder in einer Sandbox aktualisieren, indem Sie eine PATCH-Anforderung ausführen, die das `name` der Sandbox im Anforderungspfad und die Eigenschaft enthält, die in der Anforderungs-Nutzlast aktualisiert werden soll.
 
 >[!NOTE]
 >
->Derzeit kann nur die `title` Eigenschaft einer Sandbox aktualisiert werden.
+>Derzeit kann nur die `title`-Eigenschaft einer Sandbox aktualisiert werden.
 
 **API-Format**
 
@@ -29,11 +29,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SANDBOX_NAME}` | The `name` property of the sandbox you want to update. |
+| `{SANDBOX_NAME}` | Die `name`-Eigenschaft der Sandbox, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung aktualisiert die `title` Eigenschaft der Sandbox &quot;dev-2&quot;.
+Die folgende Anforderung aktualisiert die `title`-Eigenschaft der Sandbox mit dem Namen &quot;dev-2&quot;.
 
 ```shell
 curl -X PATCH \
