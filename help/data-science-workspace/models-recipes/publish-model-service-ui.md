@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;score a service
+keywords: Experience Platform;Veröffentlichen eines Modells;Arbeitsbereich für Datenwissenschaften;beliebte Themen;Erstellen eines Dienstes
 solution: Experience Platform
 title: Modell als Service veröffentlichen (Benutzeroberfläche)
 topic: tutorial
@@ -8,8 +8,8 @@ description: Mit dem Adobe Experience Platform Data Science Workspace können Si
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 92%
+source-wordcount: '469'
+ht-degree: 89%
 
 ---
 
@@ -20,7 +20,7 @@ Mit dem Adobe Experience Platform Data Science Workspace können Sie Ihr trainie
 
 ## Erste Schritte
 
-Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform] haben, wenden Sie sich bitte an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Diese Anleitung setzt ein vorhandenes Modell mit einem erfolgreichen Trainings-Lauf voraus. Wenn Sie über kein veröffentlichungsfähiges Modell verfügen, führen Sie die Anleitung [Modell in der Benutzeroberfläche trainieren und bewerten](./train-evaluate-model-ui.md) aus, bevor Sie fortfahren.
 
@@ -39,7 +39,7 @@ Wenn Sie ein Modell lieber mithilfe von Sensei Machine Learning-APIs veröffentl
 5. Klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Service zu erstellen und zur **[!UICONTROL Service Gallery]** zur gelangen, wo alle verfügbaren Services einschließlich des neu erstellten Services angezeigt werden.
    ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## Mit einem Service bewerten {#access-a-service}
+## Mit einem Service bewerten  {#access-a-service}
 
 1. Klicken Sie in Adobe Experience Platform in der linken Navigationsspalte auf die Registerkarte **[!UICONTROL Services]**, um auf die **[!UICONTROL Service Gallery]** zuzugreifen. Suchen Sie nach dem gewünschten Service und klicken Sie auf **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
@@ -49,7 +49,7 @@ Wenn Sie ein Modell lieber mithilfe von Sensei Machine Learning-APIs veröffentl
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. Wenn ein Service erstellt wird, übernimmt er die standardmäßigen Scoring-Konfigurationen. Sie können diese Konfigurationen überprüfen und nach Bedarf anpassen, indem Sie auf die Werte doppelklicken. Wenn Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Scoring-Lauf zu starten.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. Auf der Seite **Übersicht** des Services werden Details zum neuen Scoring-Auftrag und zu dessen Fortschritt angezeigt. Sobald der Auftrag abgeschlossen ist, wird die Kopfzeile **[!UICONTROL Zuletzt]** im **[!UICONTROL Container Bewertung]** aktualisiert.
+5. Auf der Seite **Übersicht** des Services werden Details zum neuen Scoring-Auftrag und zu dessen Fortschritt angezeigt. Sobald der Auftrag abgeschlossen ist, wird die Kopfzeile **[!UICONTROL Zuletzt verwendet]** im Container **[!UICONTROL Punktzahl]** aktualisiert.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## Nächste Schritte {#next-steps}
