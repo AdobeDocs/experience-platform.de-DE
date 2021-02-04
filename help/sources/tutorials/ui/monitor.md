@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+keywords: Experience Platform;Home;beliebte Themen;Monitorkonten;Datenflüsse überwachen;Datenflüsse
 description: Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Anzeigen vorhandener Datenflüsse aus dem Quellarbeitsbereich.
 solution: Experience Platform
 title: Überwachen von Datenflüssen
@@ -8,7 +8,7 @@ type: Tutorial
 translation-type: tm+mt
 source-git-commit: cd658a5de08ae16babb016fa158b1f16e94f2009
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
