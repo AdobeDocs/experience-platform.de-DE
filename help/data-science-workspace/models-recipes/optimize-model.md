@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
+keywords: Experience Platform;Optimieren;Modell;Data Science Workspace;beliebte Themen;Modelleinblicke
 solution: Experience Platform
 title: Modell optimieren
 topic: tutorial
@@ -8,15 +8,15 @@ description: Das Model Insights Framework bietet Data Scientists Werkzeuge in Da
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 89%
+source-wordcount: '1260'
+ht-degree: 88%
 
 ---
 
 
 # Optimieren eines Modells mithilfe des Model Insights-Frameworks
 
-The Model Insights Framework provides the data scientist with tools in [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. Das Framework verbessert die Geschwindigkeit und Effektivität des Workflows für maschinelles Lernen und erhöht die Anwenderfreundlichkeit für Data Scientists. Dies geschieht durch Bereitstellung einer Standardvorlage für jeden maschinellen Lernalgorithmustyp, sodass sich Modelle verfeinern lassen. Das Endergebnis ermöglicht es Data Scientists und Citizen Data Scientists, bessere Entscheidungen zur Optimierung von Modellen ihrer Endkunden zu treffen.
+Das Model Insights Framework bietet dem Datenwissenschaftler Werkzeuge in [!DNL Data Science Workspace], um schnelle und fundierte Entscheidungen für optimale Modelle des maschinellen Lernens basierend auf Experimenten zu treffen. Das Framework verbessert die Geschwindigkeit und Effektivität des Workflows für maschinelles Lernen und erhöht die Anwenderfreundlichkeit für Data Scientists. Dies geschieht durch Bereitstellung einer Standardvorlage für jeden maschinellen Lernalgorithmustyp, sodass sich Modelle verfeinern lassen. Das Endergebnis ermöglicht es Data Scientists und Citizen Data Scientists, bessere Entscheidungen zur Optimierung von Modellen ihrer Endkunden zu treffen.
 
 ## Was sind Metriken?
 
@@ -79,7 +79,7 @@ In der folgenden Tabelle sind die Standardmetriken für jede Klasse aufgeführt.
 | `evaluator.class` | Standardmetriken | `evaluation.metric` |
 --- | --- | ---
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | -Precision <br>-recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver-Betriebseigenschaften <br>-Bereich unter den Receiver-Betriebseigenschaften | -`PRECISION`-<br>-`RECALL`-<br>-<br>-`FSCORE`-<br>-`ACCURACY`-<br>-`ROC`-<br>-`AUROC`-`CONFUSION_MATRIX` |
 | `RecommendationsEvaluator` | -Mean Average Precision (MAP) <br>-Normalized Discounted Cumulative Gain <br>-Mean Reciprocal Rank <br>-Metric K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
@@ -101,19 +101,19 @@ Nach der Definition im Rezept besteht der nächste Schritt darin, sie in den Rez
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-In the [!DNL Data Science Workspace], the user would be able to see the insights in the &quot;Evaluation Metrics&quot; tab in the experiment page.
+In [!DNL Data Science Workspace] können die Einblicke in der Registerkarte &quot;Bewertungsmetriken&quot;auf der Seite &quot;Experiment&quot;angezeigt werden.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-As of now, there are no default evaluation metrics for [!DNL Python] or [!DNL Tensorflow]. Thus, to get the evaluation metrics for [!DNL Python] or [!DNL Tensorflow], you will need to create a custom evaluation metric. Dies kann durch Implementierung der `Evaluator`-Klasse erfolgen.
+Derzeit gibt es keine standardmäßigen Evaluierungsmetriken für [!DNL Python] oder [!DNL Tensorflow]. Um die Bewertungsmetriken für [!DNL Python] oder [!DNL Tensorflow] abzurufen, müssen Sie daher eine benutzerspezifische Bewertungsmetrik erstellen. Dies kann durch Implementierung der `Evaluator`-Klasse erfolgen.
 
 #### Benutzerdefinierte Auswertungsmetriken für [!DNL Python]
 
 Für benutzerdefinierte Auswertungsmetriken müssen für den Auswerter zwei Hauptmethoden implementiert werden: `split()` und `evaluate()`.
 
-For [!DNL Python], these methods would be defined in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) for the `Evaluator` class. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
+Für [!DNL Python] würden diese Methoden in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) für die `Evaluator`-Klasse definiert. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
 
-Creating evaluation metrics in [!DNL Python] requires the user to implement the `evaluate()` and `split()` methods.
+Zum Erstellen von Bewertungsmetriken in [!DNL Python] muss der Benutzer die Methoden `evaluate()` und `split()` implementieren.
 
 Die `evaluate()`-Methode gibt das metrische Objekt zurück, das eine Gruppe von Metrikobjekten mit den Eigenschaften `name`, `value` und `valueType` enthält.
 
@@ -123,7 +123,7 @@ Die `split()`-Methode sollte einen Trainings- und Prüf-Dataframe zurückgeben, 
 
 #### Benutzerdefinierte Auswertungsmetriken für TensorFlow
 
-For [!DNL Tensorflow], similar to [!DNL Python], the methods `evaluate()` and `split()` in the `Evaluator` class will need to be implemented. Für `evaluate()` sollten die Metriken zurückgegeben werden, während `split()` die Trainings- und Testdatensätze zurückgibt.
+Für [!DNL Tensorflow] müssen ähnlich wie [!DNL Python] die Methoden `evaluate()` und `split()` in der `Evaluator`-Klasse implementiert werden. Für `evaluate()` sollten die Metriken zurückgegeben werden, während `split()` die Trainings- und Testdatensätze zurückgibt.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -158,7 +158,7 @@ Daten werden zunächst aus einer in [retail.config.json](https://github.com/adob
 
 ## Verwenden von vordefinierten Metriken und Visualisierungsdiagrammen
 
-The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. Die folgende Tabelle beinhaltet allgemeine übergeordnete Klassen für maschinelle Lernalgorithmen und zugehörige Auswertungsmetriken und Visualisierungen.
+[!DNL Sensei Model Insights Framework] unterstützt eine Standardvorlage für jeden Typ des maschinellen Lernalgorithmus. Die folgende Tabelle beinhaltet allgemeine übergeordnete Klassen für maschinelle Lernalgorithmen und zugehörige Auswertungsmetriken und Visualisierungen.
 
 | ML-Algorithmustyp | Auswertungsmetriken | Visualisierungen |
 --- | --- | ---
