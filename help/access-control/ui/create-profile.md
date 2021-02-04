@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: Experience Platform;Home;beliebte Themen;Profil
 solution: Experience Platform
 title: Neues Produktprofil erstellen
 topic: user guide
@@ -7,7 +7,7 @@ description: In diesem Dokument werden die erforderlichen Schritte zur Schaffung
 translation-type: tm+mt
 source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '253'
 ht-degree: 6%
 
 ---
@@ -15,22 +15,22 @@ ht-degree: 6%
 
 # Neues Produktprofil erstellen
 
-Um Beginn beim Erstellen eines neuen Profils zu erhalten, navigieren Sie zur Registerkarte &quot; **[!UICONTROL Product Profils]** &quot;und klicken Sie auf **[!UICONTROL New Profil]**.
+Um einen Beginn zum Erstellen eines neuen Profils zu erstellen, navigieren Sie zur Registerkarte **[!UICONTROL Profil]** und klicken Sie auf **[!UICONTROL Neues Profil]**.
 
 ![new-Profil-button](../images/new-profile-button.png)
 
-Das Dialogfeld &quot;Neues Profil **** erstellen&quot;wird angezeigt, in dem Sie aufgefordert werden, einen Profil und eine Beschreibung für das neue Profil einzugeben. Wenn der Anzeigename des Profils anders lauten soll, deaktivieren Sie die **[!UICONTROL Option &quot;Dasselbe Profil]** &quot;und geben Sie den Anzeigenamen in das angezeigte Textfeld ein. Unter &quot; **[!UICONTROL Benutzerbenachrichtigungen]**&quot;können Sie einstellen, ob Benutzer per E-Mail benachrichtigt werden, wenn sie dem Profil hinzugefügt oder daraus entfernt werden.
+Das Dialogfeld **[!UICONTROL Neues Profil erstellen]** wird angezeigt und Sie werden aufgefordert, einen Profil und eine Beschreibung für das neue Profil einzugeben. Wenn der Anzeigename des Profils anders sein soll, deaktivieren Sie **[!UICONTROL Wie Profil-Name]** und geben Sie den Anzeigenamen in das angezeigte Textfeld ein. Unter **[!UICONTROL Benutzerbenachrichtigungen]** können Sie einstellen, ob Benutzer per E-Mail benachrichtigt werden, wenn sie hinzugefügt oder aus dem Profil entfernt werden.
 
-When finished, click **[!UICONTROL Next]**.
+Klicken Sie abschließend auf **[!UICONTROL Weiter]**.
 
 ![new-Profil-details](../images/new-profile-details.png)
 
-Im nächsten Bildschirm werden Sie aufgefordert, die Dienste auszuwählen, die in das Profil aufgenommen werden sollen. [!DNL Platform] Klicken Sie auf die Schaltfläche zum Umschalten neben einem Dienst, um ihn zu deaktivieren. Wenn ein Dienst deaktiviert ist, stehen Benutzern, die diesem Profil zugewiesen sind, nicht alle mit diesem Dienst verknüpften Funktionen zur Verfügung. Klicken Sie abschließend auf **[!UICONTROL Fertig]**.
+Im nächsten Bildschirm werden Sie aufgefordert, die [!DNL Platform]-Dienste auszuwählen, die in das Profil eingeschlossen werden sollen. Klicken Sie auf die Schaltfläche zum Umschalten neben einem Dienst, um ihn zu deaktivieren. Wenn ein Dienst deaktiviert ist, stehen Benutzern, die diesem Profil zugewiesen sind, nicht alle mit diesem Dienst verknüpften Funktionen zur Verfügung. Klicken Sie abschließend auf **[!UICONTROL Fertig]**.
 
 ![new-Profil-services](../images/new-profile-services.png)
 
-Das neue Profil wurde erfolgreich erstellt und Sie werden zur Seite &quot; [Bearbeitungsberechtigungen&quot;des Profils weitergeleitet](#edit-permissions). Weitere Informationen zum Verwalten von Profilen nach der Erstellung finden Sie in den Abschnitten zum [Verwalten von Berechtigungen](#manage-permissions-for-a-product-profile) und zum [Verwalten von Benutzern](#manage-users-for-a-product-profile) .
+Das neue Profil wurde erfolgreich erstellt und Sie werden auf die Seite [Bearbeitungsberechtigungen des Profils](#edit-permissions) umgeleitet. Weitere Informationen zum Verwalten von Profilen nach der Erstellung finden Sie in den Abschnitten unter [Berechtigungen verwalten](#manage-permissions-for-a-product-profile) und [Verwalten von Benutzern](#manage-users-for-a-product-profile).
 
 ## Nächste Schritte
 
-Nachdem Sie ein neues Profil erstellt haben, können Sie mit dem nächsten Schritt fortfahren, um die Berechtigungen für ein Profil zu [verwalten](permissions.md)
+Nachdem ein neues Profil erstellt wurde, können Sie mit dem nächsten Schritt [Berechtigungen für das Verwalten eines Profils](permissions.md) fortfahren
