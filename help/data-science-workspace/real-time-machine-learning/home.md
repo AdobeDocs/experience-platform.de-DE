@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
+keywords: Experience Platform;Entwicklerhandbuch;Data Science Workspace;beliebte Themen;Echtzeit-maschinelles Lernen
 solution: Experience Platform
 title: Übersicht über maschinelles Lernen in Echtzeit
 topic: Overview
@@ -7,7 +7,7 @@ description: Echtzeit-maschinelles Lernen kann die Relevanz Ihrer digitalen Erle
 translation-type: tm+mt
 source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '548'
 ht-degree: 5%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 5%
 >
 >Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzern zur Verfügung. Diese Funktion ist alphanumerisch und wird noch getestet. Dieses Dokument kann sich ändern.
 
-Echtzeit-maschinelles Lernen kann die Relevanz Ihrer digitalen Erlebnisinhalte für Ihre Endbenutzer dramatisch erhöhen. Dies wird durch die Nutzung von Echtzeit-Inferencing und kontinuierlichem Lernen am [!DNL Experience Edge].
+Echtzeit-maschinelles Lernen kann die Relevanz Ihrer digitalen Erlebnisinhalte für Ihre Endbenutzer dramatisch erhöhen. Dies wird durch die Nutzung von Echtzeit-Inferencing und kontinuierlichem Lernen auf dem [!DNL Experience Edge] ermöglicht.
 
-Eine Kombination aus nahtloser Berechnung auf dem Hub und dem [!DNL Edge] reduziert die Latenz, die traditionell bei der Erzielung übermäßig personalisierter Erlebnisse, die sowohl relevant als auch reaktionsfähig sind, eine entscheidende Rolle spielt. Das maschinelle Lernen in Echtzeit bietet somit eine unglaublich niedrige Latenz für synchrone Entscheidungen. Beispiele sind das Rendern personalisierter Webseiteninhalte oder das Aufdecken eines Angebots oder Rabatt, um die Umrechnung in einem Webstore zu reduzieren und zu erhöhen.
+Eine Kombination aus nahtloser Berechnung auf dem Hub und dem [!DNL Edge] verringert die Latenz, die traditionell an der Bereitstellung hyperpersonalisierter Erlebnisse beteiligt ist, die sowohl relevant als auch reaktionsfähig sind, drastisch. Das maschinelle Lernen in Echtzeit bietet somit eine unglaublich niedrige Latenz für synchrone Entscheidungen. Beispiele sind das Rendern personalisierter Webseiteninhalte oder das Aufdecken eines Angebots oder Rabatt, um die Umrechnung in einem Webstore zu reduzieren und zu erhöhen.
 
 ## Architektur für maschinelles Lernen in Echtzeit {#architecture}
 
@@ -45,7 +45,7 @@ Erstellen Sie ein Echtzeit-Modell für maschinelles Lernen, indem Sie es von Gru
 
 ### Implemenierung
 
-Stellen Sie Ihr Modell bereit, [!DNL Experience Edge] um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Service Gallery] zu erstellen, indem Sie den Endpunkt Prognose-API verwenden.
+Stellen Sie Ihr Modell auf [!DNL Experience Edge] bereit, um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Dienstgalerie] zu erstellen, indem Sie den Endpunkt der Prognose-API verwenden.
 
 ### Folgerung   
 
@@ -64,8 +64,8 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 > Alpha-Beschränkungen:
 > - Derzeit werden nur ONNX-basierte Modelle unterstützt.
 > - Funktionen, die in Knoten verwendet werden, können nicht serialisiert werden. Beispielsweise eine Lambda-Funktion, die in einem Pandas-Knoten verwendet wird.
-> - Nach der manuellen [!DNL Edge] Bereitstellung wird 20 Sekunden lang schlafen.
-> - Für tiefes Lernen müssen Ihre Daten so gesendet werden, dass, wenn sie genannt `df.values` werden, ein Array zurückgegeben wird, das von Ihrem DL-Modell akzeptiert werden kann. Dies liegt daran, dass der ONNX Modell-Scoring-Knoten verwendet `df.values` und sendet die Ausgabe zum Ergebnis gegen das Modell.
+> - Nach der manuellen Bereitstellung von [!DNL Edge] wird ein 20-Sekunden-Schlaf ausgeführt.
+> - Für tiefes Lernen müssen Ihre Daten so gesendet werden, dass `df.values` beim Namen ein Array zurückgibt, das von Ihrem DL-Modell akzeptiert werden kann. Dies liegt daran, dass der ONNX-Modellauswertungsknoten `df.values` verwendet und die Ausgabe an das Modell sendet.
 
 
 
