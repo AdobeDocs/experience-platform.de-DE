@@ -3,11 +3,11 @@ title: Linktracking mit Adobe Analytics
 seo-title: Linktracking mit Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
 seo-description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page-Ansichten;Link-Verfolgung;Links;track-Links;clickCollection;click-Auflistung;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Links verfolgen
 
-Links können manuell eingestellt oder [automatisch](#automaticLinkTracking)verfolgt werden. Die manuelle Verfolgung erfolgt durch Hinzufügen der Details unter dem `web.webInteraction` Schema. Es gibt drei erforderliche Variablen:
+Links können manuell eingestellt oder nachverfolgt werden [automatisch](#automaticLinkTracking). Die manuelle Verfolgung erfolgt durch Hinzufügen der Details im Bereich `web.webInteraction` des Schemas. Es gibt drei erforderliche Variablen:
 
 * `web.webInteraction.name`
 * `web.webInteraction.type`
@@ -40,32 +40,32 @@ alloy("sendEvent", {
 
 Der Linktyp kann einer von drei Werten sein:
 
-* **`other`:** Ein benutzerspezifischer Link
-* **`download`:** Link zum Herunterladen
+* **`other`:** Benutzerspezifischer Link
+* **`download`:** Download-Link
 * **`exit`:** Ein Ausstiegslink
 
 ## Automatische Linktracking {#automaticLinkTracking}
 
-Standardmäßig erfasst, kennzeichnet und zeichnet das Web SDK Klicks auf geeignete Link-Tags auf. Klicks werden mit einem [Capture](https://www.w3.org/TR/uievents/#capture-phase) Click-Ereignis-Listener erfasst, der mit dem Dokument verbunden ist.
+Standardmäßig erfasst, kennzeichnet und zeichnet das Web SDK Klicks auf geeignete Link-Tags auf. Klicks werden mit einem [Capture](https://www.w3.org/TR/uievents/#capture-phase) click-Ereignis-Listener erfasst, der an das Dokument angehängt wird.
 
-Die automatische Linktracking kann durch [Konfiguration](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) des Web SDK deaktiviert werden.
+Die automatische Linktracking kann durch [Konfigurieren](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) des Web SDK deaktiviert werden.
 
 ```javascript
 clickCollectionEnabled: false
 ```
 
-### Welche Tags sind für die Linktracking geeignet?{#qualifyingLinks}
+### Welche Tags eignen sich für die Linktracking?{#qualifyingLinks}
 
-Die automatische Linkverfolgung erfolgt für Anker- `A` und `AREA` -Tags. Diese Tags werden jedoch nicht für die Linktracking berücksichtigt, wenn sie über einen angehängten `onclick` Handler verfügen.
+Die automatische Linkverfolgung erfolgt für die Tags `A` und `AREA`. Diese Tags werden jedoch nicht für die Linktracking berücksichtigt, wenn sie einen `onclick`-Handler haben.
 
 ### Wie werden Links beschriftet?{#labelingLinks}
 
-Links werden als Downloadlink bezeichnet, wenn das Anker-Tag ein Downloadattribut enthält oder wenn der Link mit einer beliebten Dateierweiterung endet. Der Qualifikator für Downloadlinks kann mit einem regulären Ausdruck [konfiguriert](../fundamentals/configuring-the-sdk.md) werden:
+Links werden als Downloadlink bezeichnet, wenn das Anker-Tag ein Downloadattribut enthält oder wenn der Link mit einer beliebten Dateierweiterung endet. Der Qualifikator für den Download-Link kann [konfiguriert](../fundamentals/configuring-the-sdk.md) mit einem regulären Ausdruck sein:
 
 ```javascript
 downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
 ```
 
-Links werden als Ausstiegslink bezeichnet, wenn sich die Domäne der Zielgruppe des Links von der aktuellen Domäne unterscheidet `window.location.hostname`.
+Links werden als Ausstiegslink bezeichnet, wenn die Domäne der Link-Zielgruppe von der aktuellen `window.location.hostname` abweicht.
 
 Links, die sich nicht als Download- oder Exitlink qualifizieren, werden als &quot;sonstige&quot;bezeichnet.
