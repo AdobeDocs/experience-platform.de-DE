@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
+keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;Experimente;sensei-maschinelles Lernen API
 solution: Experience Platform
 title: Experimente
 topic: Developer guide
@@ -7,8 +7,8 @@ description: Modellentwicklung und Schulung erfolgen auf Experimentebene, bei de
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 18%
+source-wordcount: '780'
+ht-degree: 17%
 
 ---
 
@@ -54,7 +54,7 @@ curl -X POST \
 
 **Antwort**
 
-A successful response returns a payload containing the details of the newly created Experiment including its unique identifier (`id`).
+Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`) enthält.
 
 ```json
 {
@@ -70,7 +70,7 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-## Erstellen und Ausführen eines Schulungs- oder Bewertungslaufs {#experiment-training-scoring}
+## Erstellen und Ausführen einer Schulung oder einer Bewertungsausführung {#experiment-training-scoring}
 
 Sie können Schulungs- oder Bewertungsabläufe erstellen, indem Sie eine POST anfordern, eine gültige Experiment-ID bereitstellen und die ausgeführte Aufgabe angeben. Bewertungsläufe können nur erstellt werden, wenn das Experiment über einen vorhandenen und erfolgreichen Schulungslauf verfügt. Durch die erfolgreiche Erstellung eines Schulungslaufs wird der Modellschulungsvorgang initialisiert, und der erfolgreiche Abschluss führt zu einem geschulten Modell. Das Generieren geschulter Modelle ersetzt alle bereits vorhandenen Modelle, sodass ein Experiment zu jeder Zeit nur ein einziges trainiertes Modell verwenden kann.
 
@@ -101,11 +101,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `{TASK}` | Gibt die Aufgabe des Vorgangs an. Legen Sie diesen Wert entweder `train` für Schulungen, `score` Bewertungen oder `featurePipeline` für Feature-Pipeline fest. |
+| `{TASK}` | Gibt die Aufgabe des Vorgangs an. Legen Sie für diesen Wert entweder `train` für die Schulung, `score` für die Bewertung oder `featurePipeline` für die Feature-Pipeline fest. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten Ausführung einschließlich der geerbten Standard-Schulungs- oder Bewertungsparameter und der eindeutigen ID (`{RUN_ID}`) der Ausführung enthält.
+Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten Ausführung einschließlich der geerbten Standard-Schulungs- oder Bewertungsparameter und der eindeutigen ID der Ausführung (`{RUN_ID}`) enthält.
 
 ```json
 {
@@ -161,7 +161,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird eine Liste von Experimenten mit derselben MLInstance-ID (`{MLINSTANCE_ID}`) zurückgegeben.
+Eine erfolgreiche Antwort gibt eine Liste von Experimenten mit derselben MLInstance-ID (`{MLINSTANCE_ID}`) zurück.
 
 ```json
 {
@@ -198,7 +198,7 @@ Bei einer erfolgreichen Antwort wird eine Liste von Experimenten mit derselben M
 }
 ```
 
-## Retrieve a specific Experiment {#retrieve-specific}
+## Abrufen eines bestimmten Experiments {#retrieve-specific}
 
 Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET anfordern, die die ID des gewünschten Experiments im Anforderungspfad enthält.
 
@@ -243,7 +243,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details des angeforderten E
 
 ## Abrufen einer Liste von Experimentabläufen
 
-Sie können eine Liste von Schulungs- oder Bewertungsabläufen abrufen, die zu einem bestimmten Experiment gehören, indem Sie eine einzige GET anfordern und eine gültige Experiment-ID angeben. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. For a complete list of available query parameters, see the appendix section on [query parameters for asset retrieval](./appendix.md#query).
+Sie können eine Liste von Schulungs- oder Bewertungsabläufen abrufen, die zu einem bestimmten Experiment gehören, indem Sie eine einzige GET anfordern und eine gültige Experiment-ID angeben. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine vollständige Liste der verfügbaren Abfrage-Parameter finden Sie im Anhang zu [Abfrage-Parametern für das Abrufen von Assets](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parameter | Beschreibung |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Eine gültige Experiment-ID. |
-| `{QUERY_PARAMETER}` | Einer der [verfügbaren Parameter](./appendix.md#query) für die Abfrage zum Filtern der Ergebnisse. |
+| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrage-Parameter](./appendix.md#query), der zum Filtern der Ergebnisse verwendet wird. |
 | `{VALUE}` | Der Wert für den Parameter der vorherigen Abfrage. |
 
 **Anfrage**
@@ -278,7 +278,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die eine Liste der ausgeführten Vorgänge und deren Details einschließlich der Experiment-Ausführen-ID (`{RUN_ID}`) enthält.
+Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die eine Liste der Ausführung und deren Details einschließlich der Experiment-Ausführen-ID (`{RUN_ID}`) enthält.
 
 ```json
 {
@@ -308,7 +308,7 @@ Sie können ein vorhandenes Experiment aktualisieren, indem Sie seine Eigenschaf
 
 >[!TIP]
 >
->In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Experiment by ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zunächst eine GET an [das Experiment nach ID](#retrieve-specific) abzurufen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen eines Experiments, während diese Eigenschaften zunächst verwendet werden:
 
