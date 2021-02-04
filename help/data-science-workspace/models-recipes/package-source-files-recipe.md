@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;package source files;Data Science Workspace;popular topics;Docker;docker image
+keywords: Experience Platform;Paketquellendateien;Data Science Workspace;beliebte Themen;Docker;Docker-Bild
 solution: Experience Platform
 title: Verpacken von Quelldateien in einem Rezept
 topic: tutorial
@@ -8,7 +8,7 @@ description: In diesem Lernprogramm wird beschrieben, wie Sie die angegebenen Qu
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -16,14 +16,14 @@ ht-degree: 0%
 
 # Verpacken von Quelldateien in einem Rezept
 
-In diesem Lernprogramm wird beschrieben, wie Sie die angegebenen Quelldateien für den Einzelhandel in einer Archivdatei verpacken können, die Sie zum Erstellen eines Rezepts in Adobe Experience Platform verwenden können, [!DNL Data Science Workspace] indem Sie dem Skript-Import-Arbeitsablauf entweder in der Benutzeroberfläche oder mithilfe der API folgen.
+Dieses Lernprogramm enthält Anweisungen dazu, wie Sie die angegebenen Quelldateien für den Einzelhandel in einer Archivdatei verpacken können, die zum Erstellen eines Rezepts in Adobe Experience Platform [!DNL Data Science Workspace] verwendet werden kann, indem Sie dem Skript-Import-Arbeitsablauf entweder in der Benutzeroberfläche oder mithilfe der API folgen.
 
 Konzepte zum Verständnis:
 
 - **Rezepte**: Ein Rezept ist der Begriff der Adobe für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der ein bestimmtes maschinelles Lernen, einen Algorithmus für künstliche Intelligenz oder ein Ensemble von Algorithmen, Verarbeitungslogik und Konfiguration darstellt, die zum Aufbau und zur Ausführung eines geschulten Modells erforderlich sind und somit zur Lösung spezifischer Geschäftsprobleme beitragen.
 - **Quelldateien**: Einzelne Dateien im Projekt, die die Logik für ein Rezept enthalten.
 
-## Voraussetzungen 
+## Voraussetzungen
 
 - [[!DNL Docker]](https://docs.docker.com/install/#supported-platforms)
 - [[!DNL Python 3 and pip]](https://docs.conda.io/en/latest/miniconda.html)
@@ -32,7 +32,7 @@ Konzepte zum Verständnis:
 
 ## Rezepterstellung
 
-Beginn zur Rezepterstellung mit Quelldateien zum Erstellen einer Archivdatei. Quelldateien definieren die Logik des maschinellen Lernens und Algorithmen, die zur Lösung eines bestimmten Problems verwendet werden, und werden entweder in [!DNL Python], R, PySpark oder Scala geschrieben. Die erstellten Archivdateien haben die Form eines Dockerbilds. Nach der Erstellung wird die verpackte Archivdatei in importiert, [!DNL Data Science Workspace] um ein Rezept [in der Benutzeroberfläche](./import-packaged-recipe-ui.md) oder [mithilfe der API](./import-packaged-recipe-api.md)zu erstellen.
+Beginn zur Rezepterstellung mit Quelldateien zum Erstellen einer Archivdatei. Quelldateien definieren die Logik des maschinellen Lernens und Algorithmen, die zur Lösung eines bestimmten Problems verwendet werden, und werden entweder in [!DNL Python], R, PySpark oder Scala geschrieben. Die erstellten Archivdateien haben die Form eines Dockerbilds. Nach der Erstellung wird die verpackte Archivdatei in [!DNL Data Science Workspace] importiert, um ein Rezept [in der Benutzeroberfläche](./import-packaged-recipe-ui.md) oder [mit der API](./import-packaged-recipe-api.md) zu erstellen.
 
 ### Dockerbasiertes Modell-Authoring {#docker-based-model-authoring}
 
@@ -40,54 +40,54 @@ Ein Docker-Bild ermöglicht es einem Entwickler, eine Anwendung mit allen benöt
 
 Das erstellte Docker-Bild wird mit den Anmeldeinformationen, die Sie während des Rezepterstellungsarbeitsablaufs erhalten haben, in die Azurblaue Container-Registrierung verschoben.
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com)an, um Ihre Azurblase Container Registry Anmeldeinformationen zu erhalten. Navigieren Sie in der linken Navigationsspalte zu **[!UICONTROL Workflows]**. Wählen Sie **[!UICONTROL Rezept]** importieren und anschließend **[!UICONTROL Starten]**. Siehe Screenshot unten als Referenz.
+Melden Sie sich zum Abrufen Ihrer Azurblase Container Registry-Anmeldeinformationen bei [Adobe Experience Platform](https://platform.adobe.com) an. Navigieren Sie in der linken Navigationsspalte zu **[!UICONTROL Workflows]**. Wählen Sie **[!UICONTROL Rezept importieren]** und dann **[!UICONTROL Starten]**. Siehe Screenshot unten als Referenz.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Die Seite &quot; **[!UICONTROL Konfigurieren]** &quot;wird geöffnet. Geben Sie einen entsprechenden **[!UICONTROL Rezeptnamen]** ein, z. B. &quot;Retail Sales recipe&quot;, und geben Sie optional eine Beschreibung oder eine Dokumentations-URL ein. Klicken Sie nach Abschluss des Vorgangs auf **[!UICONTROL Weiter]**.
+Die Seite **[!UICONTROL Configure]** wird geöffnet. Geben Sie einen entsprechenden **[!UICONTROL Rezeptnamen]** ein, z. B. &quot;Retail Sales recipe&quot;, und geben Sie optional eine Beschreibung oder eine Dokumentations-URL ein. Klicken Sie nach Abschluss des Vorgangs auf **[!UICONTROL Weiter]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Wählen Sie die entsprechende *Laufzeitumgebung* und dann eine **[!UICONTROL Klassifizierung]** für den *Typ*. Ihre Anmeldedaten für die Azurblase-Container-Registrierung werden nach Abschluss der Überprüfung generiert.
+Wählen Sie die entsprechende *Laufzeitumgebung* und dann **[!UICONTROL Klassifizierung]** für *Typ*. Ihre Anmeldedaten für die Azurblase-Container-Registrierung werden nach Abschluss der Überprüfung generiert.
 
 >[!NOTE]
 >
->*Typ* ist die Klasse des maschinellen Lernproblems, für das das Rezept entwickelt wurde und nach dem Training verwendet wird, um die Beurteilung der Trainingslaufzeit anzupassen.
+>*Die* Art des maschinellen Lernproblems, für das das Rezept entwickelt wurde und nach dem Training verwendet wird, um eine maßgeschneiderte Auswertung des Trainingslaufs zu ermöglichen.
 
 >[!TIP]
 >
->- Wählen Sie für [!DNL Python] Rezepte die **[!UICONTROL Python]** -Laufzeit.
->- Wählen Sie für R-Rezepte die **[!UICONTROL R]** -Laufzeit.
->- Wählen Sie für PySpark-Rezepte die **[!UICONTROL PySpark]** -Laufzeit. Ein Artefakttyp wird automatisch gefüllt.
->- Wählen Sie für Scala-Rezepte die **[!UICONTROL Spark]** -Laufzeit. Ein Artefakttyp wird automatisch gefüllt.
+>- Wählen Sie für [!DNL Python]-Rezepte die Laufzeit **[!UICONTROL Python]** aus.
+>- Wählen Sie für R-Rezepte die Laufzeitumgebung **[!UICONTROL R]**.
+>- Wählen Sie für PySpark-Rezepte die Laufzeitumgebung **[!UICONTROL PySpark]**. Ein Artefakttyp wird automatisch gefüllt.
+>- Wählen Sie für Scala-Rezepte die Laufzeitumgebung **[!UICONTROL Spark]**. Ein Artefakttyp wird automatisch gefüllt.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Notieren Sie die Werte für Docker-Host, Benutzername und Kennwort. Diese werden verwendet, um Ihr [!DNL Docker] Bild in der Workflows unten beschrieben zu erstellen und zu verschieben.
+Notieren Sie die Werte für Docker-Host, Benutzername und Kennwort. Diese werden verwendet, um Ihr [!DNL Docker]-Bild in der Workflows unten beschrieben zu erstellen und zu verschieben.
 
 >[!NOTE]
 >
->Die Quell-URL wird nach Abschluss der unten beschriebenen Schritte bereitgestellt. Die Konfigurationsdatei wird in den nachfolgenden Übungen in den [nächsten Schritten](#next-steps)erläutert.
+>Die Quell-URL wird nach Abschluss der unten beschriebenen Schritte bereitgestellt. Die Konfigurationsdatei wird in nachfolgenden Lernprogrammen unter [Nächste Schritte](#next-steps) erklärt.
 
 ### Verpacken der Quelldateien
 
-Beginn durch Abrufen der Codebasis für Beispieldateien im <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Data Science Workspace-Referenzrepository</a> der Experience Platform.
+Beginn durch Abrufen der Codebasis für Beispieldateien im Repository <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a>.
 
 - [Python-Docker-Bild erstellen](#python-docker)
 - [R-Docker-Bild erstellen](#r-docker)
 - [PySpark Docker-Bild erstellen](#pyspark-docker)
 - [Punktdiagrammbild erstellen (Spark)](#scala-docker)
 
-### Bild [!DNL Python] für Docker erstellen {#python-docker}
+### Erstellen [!DNL Python] Dockerbild {#python-docker}
 
-Wenn Sie dies noch nicht getan haben, klonen Sie das [!DNL GitHub] Repository mit dem folgenden Befehl auf Ihrem lokalen System:
+Falls nicht, klonen Sie das [!DNL GitHub]-Repository mit dem folgenden Befehl auf Ihrem lokalen System:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. Hier finden Sie die Skripte `login.sh` und `build.sh` zur Anmeldung bei Docker und zur Erstellung des [!DNL Python Docker] Bildes. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
+Navigieren Sie zum Ordner `experience-platform-dsw-reference/recipes/python/retail`. Hier finden Sie die Skripte `login.sh` und `build.sh`, die zum Anmelden bei Docker und zum Erstellen des [!DNL Python Docker]-Bildes verwendet werden. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
 
 ```BASH
 # for logging in to Docker
@@ -106,17 +106,17 @@ Nachdem das Build-Skript abgeschlossen ist, erhalten Sie eine Docker-Quelldatei-
 {DOCKER_HOST}/ml-retailsales-python:{VERSION_TAG}
 ```
 
-Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
+Kopieren Sie diese URL und gehen Sie zum [nächsten Schritt](#next-steps).
 
-### R- [!DNL Docker] Bild erstellen {#r-docker}
+### Build R [!DNL Docker] Bild {#r-docker}
 
-Wenn Sie dies noch nicht getan haben, klonen Sie das [!DNL GitHub] Repository mit dem folgenden Befehl auf Ihrem lokalen System:
+Falls nicht, klonen Sie das [!DNL GitHub]-Repository mit dem folgenden Befehl auf Ihrem lokalen System:
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigieren Sie zum Ordner `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` im geklonten Repository. Hier finden Sie die Dateien `login.sh` und `build.sh` die Sie verwenden werden, um sich bei Docker anzumelden und das R Docker-Bild zu erstellen. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
+Navigieren Sie zum Ordner `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` in Ihrem geklonten Repository. Hier finden Sie die Dateien `login.sh` und `build.sh`, die Sie verwenden werden, um sich bei Docker anzumelden und das R Docker-Bild zu erstellen. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
 
 ```BASH
 # for logging in to Docker
@@ -135,17 +135,17 @@ Nachdem das Build-Skript abgeschlossen ist, erhalten Sie eine Docker-Quelldatei-
 {DOCKER_HOST}/ml-retail-r:{VERSION_TAG}
 ```
 
-Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
+Kopieren Sie diese URL und gehen Sie zum [nächsten Schritt](#next-steps).
 
-### PySpark Docker-Bild erstellen {#pyspark-docker}
+### PySpark Docker-Bild {#pyspark-docker} erstellen
 
-Beginn durch Klonen des [!DNL GitHub] Repositorys auf Ihrem lokalen System mit folgendem Befehl:
+Beginn durch Klonen des [!DNL GitHub]-Repositorys auf Ihrem lokalen System mit folgendem Befehl:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/retail`. Die Skripten `login.sh` und `build.sh` sind hier zu finden und zum Anmelden bei Docker und zum Erstellen des Docker-Bildes. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
+Navigieren Sie zum Ordner `experience-platform-dsw-reference/recipes/pyspark/retail`. Die Skripten `login.sh` und `build.sh` befinden sich hier und dienen zum Anmelden bei Docker und zum Erstellen des Dockerbilds. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
 
 ```BASH
 # for logging in to Docker
@@ -164,17 +164,17 @@ Nachdem das Build-Skript abgeschlossen ist, erhalten Sie eine Docker-Quelldatei-
 {DOCKER_HOST}/ml-retailsales-pyspark:{VERSION_TAG}
 ```
 
-Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
+Kopieren Sie diese URL und gehen Sie zum [nächsten Schritt](#next-steps).
 
-### Erstellen eines Skala-Dockerbilds {#scala-docker}
+### Skala-Docker-Bild {#scala-docker} erstellen
 
-Beginn durch Klonen des [!DNL GitHub] Repositorys auf Ihrem lokalen System mit dem folgenden Befehl im Terminal:
+Beginn durch Klonen des [!DNL GitHub]-Repositorys auf Ihrem lokalen System mit dem folgenden Befehl im Terminal:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigieren Sie anschließend zum Ordner, in dem Sie die Skripte `experience-platform-dsw-reference/recipes/scala` und `login.sh` `build.sh`die Skripte finden können. Diese Skripten werden verwendet, um sich bei Docker anzumelden und das Docker-Bild zu erstellen. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der richtigen Reihenfolge ein:
+Navigieren Sie anschließend zum Ordner `experience-platform-dsw-reference/recipes/scala`, in dem Sie die Skripte `login.sh` und `build.sh` finden können. Diese Skripten werden verwendet, um sich bei Docker anzumelden und das Docker-Bild zu erstellen. Wenn Sie Ihre [Docker-Anmeldeinformationen](#docker-based-model-authoring) bereit haben, geben Sie die folgenden Befehle in der Reihenfolge zum Terminal ein:
 
 ```BASH
 # for logging in to Docker
@@ -186,7 +186,7 @@ Navigieren Sie anschließend zum Ordner, in dem Sie die Skripte `experience-plat
 
 >[!TIP]
 >
->Wenn Sie beim Versuch, sich mit dem `login.sh` Skript bei Docker anzumelden, einen Berechtigungsfehler erhalten, versuchen Sie, den Befehl zu verwenden `bash login.sh`.
+>Wenn Sie beim Versuch, sich mit dem Skript `login.sh` bei Docker anzumelden, einen Berechtigungsfehler erhalten, versuchen Sie, den Befehl `bash login.sh` zu verwenden.
 
 Beim Ausführen des Anmeldeskripts müssen Sie den Docker-Host, den Benutzernamen und das Kennwort angeben. Beim Erstellen müssen Sie den Docker-Host und ein Version-Tag für den Build angeben.
 
@@ -197,11 +197,11 @@ Nachdem das Build-Skript abgeschlossen ist, erhalten Sie eine Docker-Quelldatei-
 {DOCKER_HOST}/ml-retailsales-spark:{VERSION_TAG}
 ```
 
-Kopieren Sie diese URL und gehen Sie zu den [nächsten Schritten](#next-steps).
+Kopieren Sie diese URL und gehen Sie zum [nächsten Schritt](#next-steps).
 
 ## Nächste Schritte {#next-steps}
 
-Diese Übung übernahm das Verpacken von Quelldateien in ein Rezept, den notwendigen Schritt zum Importieren eines Rezepts in [!DNL Data Science Workspace]. Sie sollten jetzt ein Docker-Bild in der Azurblauen Container-Registrierung zusammen mit der entsprechenden Bild-URL haben. Sie können jetzt mit dem Tutorial zum Importieren eines gepackten Rezepts in beginnen [!DNL Data Science Workspace]. Wählen Sie einen der folgenden Links zum Einstieg:
+In diesem Lernprogramm wurden Quelldateien in ein Rezept verpackt, das die Voraussetzung für den Import eines Rezepts in [!DNL Data Science Workspace] ist. Sie sollten jetzt ein Docker-Bild in der Azurblauen Container-Registrierung zusammen mit der entsprechenden Bild-URL haben. Sie können jetzt mit dem Tutorial zum Importieren eines gepackten Rezepts in [!DNL Data Science Workspace] beginnen. Wählen Sie einen der folgenden Links zum Einstieg:
 
 - [Verpacktes Rezept in die Benutzeroberfläche importieren](./import-packaged-recipe-ui.md)
 - [Verpacktes Rezept mit der API importieren](./import-packaged-recipe-api.md)
