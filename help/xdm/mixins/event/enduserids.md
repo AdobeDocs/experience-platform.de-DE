@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;ExperienceEvent;Felder;Schemas;Schemas;Schema-Design;mixin;mixin;enduserids;Endbenutzer;Endbenutzer;IDs;
 solution: Experience Platform
 title: Vergleich der Endbenutzer-ID-Details
 topic: overview
@@ -7,19 +7,19 @@ description: Dieses Dokument bietet eine Übersicht über das Mixin "Endbenutzer
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '196'
 ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL Mischung der Endbenutzer-ID-Details]
+# [!UICONTROL Endbenutzer-ID-] DetailMixin
 
 >[!NOTE]
 >
->Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument zu [Mixin-Namensaktualisierungen](../name-updates.md) .
+>Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument [mixin name updates](../name-updates.md).
 
-[!UICONTROL Endbenutzer-ID-Details] sind eine Standardmischung für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/individual-profile.md), mit der die Identitätsinformationen einer Person in mehreren Adoben beschrieben werden. Das mixin stellt ein Stammebene- `endUserIDs` Objekt bereit, das selbst ein schreibgeschütztes `_experience` Feld enthält, dessen Werte automatisch aktualisiert werden, wenn Daten erfasst werden.
+[!UICONTROL Endbenutzer-ID-] Details sind ein Standardmixin für die  [[!DNL XDM ExperienceEvent] Klasse](../../classes/individual-profile.md), mit dem die Identitätsinformationen einer Person in mehreren Adoben beschrieben werden. Das mixin stellt ein `endUserIDs`-Objekt der Stammebene bereit, das wiederum ein schreibgeschütztes `_experience`-Feld enthält, dessen Werte automatisch aktualisiert werden, wenn Daten erfasst werden.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
