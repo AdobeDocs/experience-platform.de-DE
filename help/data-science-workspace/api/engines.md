@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
+keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;Motoren;sensei-API für maschinelles Lernen
 solution: Experience Platform
 title: Engines
 topic: Developer guide
@@ -7,13 +7,13 @@ description: Engines dienen als Grundlage für maschinelle Lernmodelle in Data S
 translation-type: tm+mt
 source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 71%
+source-wordcount: '1162'
+ht-degree: 70%
 
 ---
 
 
-# Engines
+# Motoren
 
 Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Workspace. Sie enthalten Algorithmen für maschinelles Lernen, die bestimmte Probleme lösen, Pipelines zur Funktionsentwicklung aufweisen oder beides.
 
@@ -21,7 +21,7 @@ Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Worksp
 
 >[!TIP]
 >
->Wenn Sie keine Docker-URL haben, besuchen Sie die Quelldateien des [Pakets in einem Rezept](../models-recipes/package-source-files-recipe.md) -Lernprogramm, um eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL zu erhalten.
+>Wenn Sie keine Docker-URL haben, besuchen Sie das Tutorial [Quelldateien in ein Rezept](../models-recipes/package-source-files-recipe.md), um eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL zu erhalten.
 
 Ihre Anmeldedaten für die Docker-Registrierung benötigen Sie, um eine verpackte Rezeptdatei hochladen zu können, einschließlich Ihrer Docker-Host-URL, des Benutzernamens und des Passworts. Sie können diese Daten nachschlagen, indem Sie die folgende GET-Anfrage ausführen:
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Anfrage PySpark/Scala**
 
-Wenn Sie eine Anfrage für PySpark Rezepte, ist der `executionType` und `type` ist &quot;PySpark&quot;. Wenn Sie eine Anforderung für Scala-Rezepte stellen, lautet das `executionType` und `type` &quot;Spark&quot;. Im folgenden Scala-Rezept-Beispiel wird Spark verwendet:
+Bei einer Anforderung für PySpark-Rezepte lautet das `executionType` und das `type` &quot;PySpark&quot;. Bei einer Anforderung für Scala-Rezepte lautet das `executionType`- und das `type`-Zeichen &quot;Spark&quot;. Im folgenden Scala-Rezept-Beispiel wird Spark verwendet:
 
 ```shell
 curl -X POST \
@@ -138,7 +138,7 @@ curl -X POST \
 | `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
 | `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Der Wert kann auf Spark oder PySpark eingestellt werden. |
-| `mlLibrary` | Ein Feld, das zum Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
+| `mlLibrary` | Ein Feld, das zum Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` eingestellt sein. |
 | `artifacts.default.image.location` | Die Position des Dockerbilds. Nur der ACR oder der öffentliche (nicht authentifizierte) Dockerhub wird unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
 
@@ -218,15 +218,15 @@ curl -X POST \
 | `algorithm` | Der verwendete Algorithmus setzt diesen Wert auf `fp` (Feature-Pipeline). |
 | `name` | Der gewünschte Name für die Feature Pipeline-Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `mlLibrary` | Ein Feld, das zum Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
+| `mlLibrary` | Ein Feld, das zum Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` eingestellt sein. |
 | `artifacts.default.image.location` | Die Position des Dockerbilds. Nur der ACR oder der öffentliche (nicht authentifizierte) Dockerhub wird unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
-| `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker`gesetzt werden. |
-| `artifacts.default.defaultMLInstanceConfigs` | Ihre `pipeline.json` Konfigurationsdateiparameter. |
+| `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker` gesetzt werden. |
+| `artifacts.default.defaultMLInstanceConfigs` | Ihre Parameter für die Konfigurationsdatei `pipeline.json`. |
 
 **Antwort**
 
-A successful response returns a payload containing the details of the newly created feature pipeline Engine including its unique identifier (`id`). Die folgende Beispielantwort bezieht sich auf eine PySpark Feature Pipeline Engine.
+Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten Feature Pipeline Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine PySpark Feature Pipeline Engine.
 
 ```json
 {
