@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform;Retail-Vertriebsrezept;Data Science Workspace;beliebte Themen;Rezepte;Prä-Build-Rezept
 solution: Experience Platform
 title: Rezept für Einzelhandel
 topic: overview
@@ -7,8 +7,8 @@ description: Mit dem Retail Sales-Rezept können Sie eine Prognose der Verkaufsz
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 21%
+source-wordcount: '585'
+ht-degree: 20%
 
 ---
 
@@ -38,7 +38,7 @@ In diesem Lernprogramm wird beschrieben, wie Sie das Rezept für den Einzelhande
 
 ## Datenschema
 
-Dieses Rezept verwendet [XDM-Schema](../../xdm/schema/field-dictionary.md) , um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
+Dieses Rezept verwendet [XDM-Schema](../../xdm/schema/field-dictionary.md), um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
 
 | Feldname | Typ |
 --- | ---
@@ -57,7 +57,7 @@ Dieses Rezept verwendet [XDM-Schema](../../xdm/schema/field-dictionary.md) , um 
 
 ## Algorithmus
 
-Zunächst wird der Schulungsdatensatz im *DSWRetailSales* -Schema geladen. Von hier aus wird das Modell mit einem [Steigerungs-Regressoralgorithmus](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)trainiert. Die Verlaufsverstärkung basiert auf der Vorstellung, dass schwache Lernende (die wenigstens etwas besser sind als eine zufällige Chance) eine Reihe von Lernenden bilden können, die sich darauf konzentrieren, die Schwächen des vorherigen Lernenden zu verbessern. Zusammen können sie dazu verwendet werden, ein leistungsfähiges Vorhersagemodell zu schaffen.
+Zunächst wird der Schulungsdatensatz im Schema *DSWRetailSales* geladen. Von hier aus wird das Modell mit einem [Farbverlauf verstärkenden Regressoralgorithmus](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) trainiert. Die Verlaufsverstärkung basiert auf der Vorstellung, dass schwache Lernende (die wenigstens etwas besser sind als eine zufällige Chance) eine Reihe von Lernenden bilden können, die sich darauf konzentrieren, die Schwächen des vorherigen Lernenden zu verbessern. Zusammen können sie dazu verwendet werden, ein leistungsfähiges Vorhersagemodell zu schaffen.
 
 Das Verfahren umfasst drei Elemente: eine Verlustfunktion, ein schwacher Lerner und ein additives Modell.
 
