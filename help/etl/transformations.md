@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
+keywords: Experience Platform;Home;beliebte Themen;ETL;ETL;etl-Transformationen;ETL-Transformationen
 solution: Experience Platform
 title: Beispiel-ETL-Transformationen
 topic: overview
@@ -7,8 +7,8 @@ description: Dieser Artikel zeigt die folgenden Beispiel-Transformationen, auf d
 translation-type: tm+mt
 source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 90%
+source-wordcount: '493'
+ht-degree: 88%
 
 ---
 
@@ -21,7 +21,7 @@ Dieser Artikel zeigt die folgenden Beispiel-Transformationen, auf die ein Extrak
 
 ### Beispieldateien
 
-Sample CSV and JSON files are available from the public ETL Reference [!DNL GitHub] repo maintained by Adobe:
+Beispiele für CSV- und JSON-Dateien sind in der öffentlichen ETL-Referenz [!DNL GitHub] verfügbar, die von der Adobe verwaltet wird:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -178,7 +178,7 @@ Die Hierarchie eines Dataframes (z. B. einer Parquet-Datei) muss mit der des XDM
 
 ### Beispiel-Dataframe
 
-The structure of the following example dataframe has been mapped to a schema that implements the [!DNL XDM Individual Profile] class, and contains the most common fields associated with schemas of that type.
+Die Struktur des folgenden Beispieldataframs wurde einem Schema zugeordnet, das die [!DNL XDM Individual Profile]-Klasse implementiert und die häufigsten Felder enthält, die mit Schemas dieses Typs verknüpft sind.
 
 ```python
 [
