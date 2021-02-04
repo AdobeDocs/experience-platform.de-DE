@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;identity;Identity
+keywords: Experience Platform;Home;beliebte Themen;Identität;Identität
 solution: Experience Platform
 title: Auflisten von Identitätszuordnungen
 topic: API guide
@@ -7,8 +7,8 @@ description: Eine Zuordnung (ein Mapping) ist eine Sammlung aller Identitäten i
 translation-type: tm+mt
 source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 100%
+source-wordcount: '270'
+ht-degree: 97%
 
 ---
 
