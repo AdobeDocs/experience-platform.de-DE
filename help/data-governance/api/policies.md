@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
+keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
 title: Richtlinien
 topic: developer guide
@@ -7,7 +7,7 @@ description: Datennutzungsrichtlinien sind von Ihrem Unternehmen angewandte Rege
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1815'
 ht-degree: 9%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 9%
 
 # Endpunkt der Richtlinien
 
-Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. Der `/policies` Endpunkt im [!DNL Policy Service API] ermöglicht Ihnen die programmatische Verwaltung von Datenverwendungsrichtlinien für Ihr Unternehmen.
+Datenverwendungsrichtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, von denen Sie Daten innerhalb von [!DNL Experience Platform] ausführen dürfen oder von denen Sie eingeschränkt sind. Mit dem `/policies`-Endpunkt in [!DNL Policy Service API] können Sie Datenverwendungsrichtlinien für Ihr Unternehmen programmgesteuert verwalten.
 
 ## Erste Schritte
 
-The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Anleitung](getting-started.md) zu den ersten Schritten für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu den erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer beliebigen [!DNL Experience Platform] API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
-## Retrieve a list of policies {#list}
+## Eine Liste von Richtlinien abrufen {#list}
 
-Sie können alle `core` oder `custom` Richtlinien durch eine GET an `/policies/core` bzw. `/policies/custom`anfordern.
+Sie können alle `core`- oder `custom`-Richtlinien durch eine GET an `/policies/core` bzw. `/policies/custom` Liste durchführen.
 
 **API-Format**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält ein `children` Array, das die Details der einzelnen abgerufenen Richtlinien einschließlich ihrer `id` Werte Liste. Sie können das `id` Feld einer bestimmten Richtlinie verwenden, um [Suchen](#lookup), [Aktualisieren](#update)und [Löschen](#delete) von Anforderungen für diese Richtlinie durchzuführen.
+Eine erfolgreiche Antwort enthält ein `children`-Array, das die Details der einzelnen abgerufenen Richtlinien einschließlich ihrer `id`-Werte Liste. Sie können das Feld `id` einer bestimmten Richtlinie verwenden, um [Suchanfragen](#lookup), [update](#update) und [delete](#delete)-Anforderungen für diese Richtlinie auszuführen.
 
 ```JSON
 {
@@ -142,14 +142,14 @@ Eine erfolgreiche Antwort enthält ein `children` Array, das die Details der ein
 | --- | --- |
 | `_page.count` | Die Gesamtzahl der abgerufenen Richtlinien. |
 | `name` | Der Anzeigename für eine Richtlinie. |
-| `status` | Der aktuelle Status einer Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED`oder `DISABLED`. By default, only `ENABLED` policies participate in evaluation. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienbewertung](../enforcement/overview.md) . |
+| `status` | Der aktuelle Status einer Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED` oder `DISABLED`. Standardmäßig nehmen nur `ENABLED`-Richtlinien an der Evaluierung teil. Weitere Informationen finden Sie unter [Richtlinienbewertung](../enforcement/overview.md). |
 | `marketingActionRefs` | Ein Array, das die URIs aller für eine Richtlinie geltenden Marketingaktionen Liste. |
 | `description` | Eine optionale Beschreibung, die weiteren Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | Ein Objekt, das die spezifischen Datenverwendungsbeschriftungen beschreibt, an denen die zugeordnete Marketingaktion einer Richtlinie nicht ausgeführt werden kann. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt zum [Erstellen einer Richtlinie](#create-policy) . |
+| `deny` | Ein Objekt, das die spezifischen Datenverwendungsbeschriftungen beschreibt, an denen die zugeordnete Marketingaktion einer Richtlinie nicht ausgeführt werden kann. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
 
-## Eine Richtlinie nachschlagen {#look-up}
+## Eine Richtlinie {#look-up} suchen
 
-Sie können eine bestimmte Richtlinie nachschlagen, indem Sie die `id` Eigenschaft dieser Richtlinie in den Pfad einer GET-Anforderung aufnehmen.
+Sie können eine bestimmte Richtlinie nachschlagen, indem Sie die `id`-Eigenschaft dieser Richtlinie in den Pfad einer GET-Anforderung aufnehmen.
 
 **API-Format**
 
@@ -160,7 +160,7 @@ GET /policies/custom/{POLICY_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{POLICY_ID}` | The `id` of the policy you want to look up. |
+| `{POLICY_ID}` | Die `id` der Richtlinie, die Sie nachschlagen möchten. |
 
 **Anfrage**
 
@@ -223,21 +223,21 @@ Eine erfolgreiche Antwort gibt die Details der Richtlinie zurück.
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Anzeigename für die Richtlinie. |
-| `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED`oder `DISABLED`. By default, only `ENABLED` policies participate in evaluation. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienbewertung](../enforcement/overview.md) . |
+| `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED` oder `DISABLED`. Standardmäßig nehmen nur `ENABLED`-Richtlinien an der Evaluierung teil. Weitere Informationen finden Sie unter [Richtlinienbewertung](../enforcement/overview.md). |
 | `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketingaktionen Liste. |
 | `description` | Eine optionale Beschreibung, die weiteren Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | Ein Objekt, das die spezifischen Datenverwendungsbeschriftungen beschreibt, an denen die zugeordnete Marketingaktion der Richtlinie nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt zum [Erstellen einer Richtlinie](#create-policy) . |
+| `deny` | Ein Objekt, das die spezifischen Datenverwendungsbeschriftungen beschreibt, an denen die zugeordnete Marketingaktion der Richtlinie nicht ausgeführt werden darf. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
 
-## Create a custom policy {#create-policy}
+## Erstellen einer benutzerdefinierten Richtlinie {#create-policy}
 
-In der [!DNL Policy Service] API wird eine Richtlinie wie folgt definiert:
+In der API [!DNL Policy Service] wird eine Richtlinie wie folgt definiert:
 
 * Ein Verweis auf eine bestimmte Marketingaktion
 * Ein Ausdruck, der die Datenverwendungsbeschriftungen beschreibt, die die Marketingaktion von der Ausführung gegen
 
 Um diese Anforderung zu erfüllen, müssen Richtliniendefinitionen einen booleschen Ausdruck zum Vorhandensein von Datenverwendungsbeschriftungen enthalten. Dieser Ausdruck wird als Ausdruck für Richtlinien bezeichnet.
 
-Richtlinien-Ausdruck werden in jeder Richtliniendefinition in Form einer `deny` Eigenschaft bereitgestellt. Ein Beispiel für ein einfaches `deny` Objekt, das nur das Vorhandensein einer einzelnen Beschriftung überprüft, würde wie folgt aussehen:
+Richtlinien-Ausdruck werden in jeder Richtliniendefinition in Form einer `deny`-Eigenschaft bereitgestellt. Ein Beispiel für ein einfaches `deny`-Objekt, das nur das Vorhandensein einer einzelnen Beschriftung überprüft, würde wie folgt aussehen:
 
 ```json
 "deny": {
@@ -247,7 +247,7 @@ Richtlinien-Ausdruck werden in jeder Richtliniendefinition in Form einer `deny` 
 
 In vielen Richtlinien werden jedoch komplexere Bedingungen für das Vorhandensein von Datenverwendungsbeschriftungen festgelegt. Um diese Anwendungsfälle zu unterstützen, können Sie auch boolesche Vorgänge zur Beschreibung Ihrer Richtlinien-Ausdruck einschließen. Das policy Ausdruck-Objekt muss entweder eine Beschriftung oder einen Operator und Operanden enthalten, jedoch nicht beides. Jeder Operand ist wiederum ein Richtlinienausdrucksobjekt.
 
-Um beispielsweise eine Richtlinie zu definieren, die verhindert, dass eine Marketingaktion für Daten ausgeführt wird, in denen `C1 OR (C3 AND C7)` Beschriftungen vorhanden sind, wird die Eigenschaft der Richtlinie `deny` wie folgt angegeben:
+Um beispielsweise eine Richtlinie zu definieren, die die Ausführung einer Marketingaktion für Daten, bei denen `C1 OR (C3 AND C7)`-Beschriftungen vorhanden sind, verbietet, wird die `deny`-Eigenschaft der Richtlinie wie folgt angegeben:
 
 ```JSON
 "deny": {
@@ -267,11 +267,11 @@ Um beispielsweise eine Richtlinie zu definieren, die verhindert, dass eine Marke
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `operator` | Gibt die bedingte Beziehung zwischen den im Geschwisterarray bereitgestellten Beschriftungen `operands` an. Akzeptierte Werte sind: <ul><li>`OR`: Der Ausdruck wird in &quot;true&quot;aufgelöst, wenn eine der Beschriftungen im `operands` Array vorhanden ist.</li><li>`AND`: Der Ausdruck wird nur dann auf &quot;true&quot;aufgelöst, wenn alle Beschriftungen im `operands` Array vorhanden sind.</li></ul> |
-| `operands` | Ein Array von Objekten, wobei jedes Objekt entweder eine einzelne Beschriftung oder ein zusätzliches Paar `operator` und `operands` Eigenschaften darstellt. Das Vorhandensein der Beschriftungen und/oder Vorgänge in einem `operands` Array wird basierend auf dem Wert der zugehörigen `operator` Eigenschaft &quot;Geschwister&quot;zu &quot;true&quot;oder &quot;false&quot;aufgelöst. |
+| `operator` | Gibt die bedingte Beziehung zwischen den Beschriftungen an, die im gleichrangigen `operands`-Array bereitgestellt werden. Akzeptierte Werte sind: <ul><li>`OR`: Der Ausdruck wird in &quot;true&quot;aufgelöst, wenn eine der Beschriftungen im  `operands` Array vorhanden ist.</li><li>`AND`: Der Ausdruck wird nur dann auf &quot;true&quot;aufgelöst, wenn alle Beschriftungen im  `operands` Array vorhanden sind.</li></ul> |
+| `operands` | Ein Array von Objekten, wobei jedes Objekt entweder eine einzelne Beschriftung oder ein zusätzliches Paar der Eigenschaften `operator` und `operands` darstellt. Das Vorhandensein der Beschriftungen und/oder Vorgänge in einem `operands`-Array wird basierend auf dem Wert der zugehörigen `operator`-Eigenschaft in &quot;true&quot;oder &quot;false&quot;aufgelöst. |
 | `label` | Der Name einer einzelnen Datenverwendungsbeschriftung, die für die Richtlinie gilt. |
 
-You can create a new custom policy by making a POST request to the `/policies/custom` endpoint.
+Sie können eine neue benutzerdefinierte Richtlinie erstellen, indem Sie eine POST an den Endpunkt `/policies/custom` anfordern.
 
 **API-Format**
 
@@ -281,7 +281,7 @@ POST /policies/custom
 
 **Anfrage**
 
-Die folgende Anforderung erstellt eine neue Richtlinie, die die Ausführung der Marketingaktion `exportToThirdParty` auf Daten mit Beschriftungen einschränkt `C1 OR (C3 AND C7)`.
+Die folgende Anforderung erstellt eine neue Richtlinie, die die Ausführung der Marketingaktion `exportToThirdParty` auf Daten mit den Beschriftungen `C1 OR (C3 AND C7)` einschränkt.
 
 ```shell
 curl -X POST \
@@ -317,14 +317,14 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Anzeigename für die Richtlinie. |
-| `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED`oder `DISABLED`. By default, only `ENABLED` policies participate in evaluation. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienbewertung](../enforcement/overview.md) . |
-| `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketingaktionen Liste. Der URI für eine Marketingaktion wird `_links.self.href` in der Antwort für die [Suche nach einer Marketingaktion](./marketing-actions.md#look-up)bereitgestellt. |
+| `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED` oder `DISABLED`. Standardmäßig nehmen nur `ENABLED`-Richtlinien an der Evaluierung teil. Weitere Informationen finden Sie unter [Richtlinienbewertung](../enforcement/overview.md). |
+| `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketingaktionen Liste. Der URI für eine Marketingaktion wird unter `_links.self.href` in der Antwort für [Suchen einer Marketingaktion](./marketing-actions.md#look-up) bereitgestellt. |
 | `description` | Eine optionale Beschreibung, die weiteren Kontext zum Anwendungsfall der Richtlinie bietet. |
 | `deny` | Der Ausdruck der Richtlinie, der die spezifischen Datenverwendungsbeschriftungen beschreibt, mit denen die verknüpfte Marketingaktion der Richtlinie gekennzeichnet ist, ist von der Ausführung ausgeschlossen. |
 
 **Antwort**
 
-A successful response returns the details of the newly created policy, including its `id`. Dieser Wert ist schreibgeschützt und wird beim Erstellen der Richtlinie automatisch zugewiesen.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Richtlinie zurück, einschließlich `id`. Dieser Wert ist schreibgeschützt und wird beim Erstellen der Richtlinie automatisch zugewiesen.
 
 ```JSON
 {
@@ -369,17 +369,17 @@ A successful response returns the details of the newly created policy, including
 }
 ```
 
-## Eine benutzerdefinierte Richtlinie aktualisieren {#update}
+## Eine benutzerdefinierte Richtlinie {#update} aktualisieren
 
 >[!IMPORTANT]
 >
->Sie können nur benutzerdefinierte Richtlinien aktualisieren. Wenn Sie die Kernrichtlinien aktivieren oder deaktivieren möchten, lesen Sie den Abschnitt zur [Aktualisierung der Liste der aktivierten Hauptrichtlinien](#update-enabled-core).
+>Sie können nur benutzerdefinierte Richtlinien aktualisieren. Wenn Sie Core-Richtlinien aktivieren oder deaktivieren möchten, lesen Sie den Abschnitt [Aktualisieren der Liste der aktivierten Core-Richtlinien](#update-enabled-core).
 
 Sie können eine vorhandene benutzerdefinierte Richtlinie aktualisieren, indem Sie ihre ID im Pfad einer PUT-Anforderung mit einer Nutzlast angeben, die das aktualisierte Formular der Richtlinie vollständig enthält. Mit anderen Worten, die PUT-Anforderung schreibt die Richtlinie im Wesentlichen um.
 
 >[!NOTE]
 >
->Siehe Abschnitt zum [Aktualisieren eines Teils einer benutzerdefinierten Richtlinie](#patch) , wenn Sie nur ein oder mehrere Felder für eine Richtlinie aktualisieren möchten, anstatt sie zu überschreiben.
+>Siehe Abschnitt [Aktualisieren eines Teils einer benutzerdefinierten Richtlinie](#patch), wenn Sie nur ein oder mehrere Felder für eine Richtlinie aktualisieren möchten, anstatt sie zu überschreiben.
 
 **API-Format**
 
@@ -389,7 +389,7 @@ PUT /policies/custom/{POLICY_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{POLICY_ID}` | The `id` of the policy you want to update. |
+| `{POLICY_ID}` | Die `id` der Richtlinie, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -425,10 +425,10 @@ curl -X PUT \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Anzeigename für die Richtlinie. |
-| `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED`oder `DISABLED`. By default, only `ENABLED` policies participate in evaluation. Weitere Informationen finden Sie in der Übersicht zur [Richtlinienbewertung](../enforcement/overview.md) . |
-| `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketingaktionen Liste. Der URI für eine Marketingaktion wird `_links.self.href` in der Antwort für die [Suche nach einer Marketingaktion](./marketing-actions.md#look-up)bereitgestellt. |
+| `status` | Der aktuelle Status der Richtlinie. Es gibt drei mögliche Status: `DRAFT`, `ENABLED` oder `DISABLED`. Standardmäßig nehmen nur `ENABLED`-Richtlinien an der Evaluierung teil. Weitere Informationen finden Sie unter [Richtlinienbewertung](../enforcement/overview.md). |
+| `marketingActionRefs` | Ein Array, das die URIs aller für die Richtlinie geltenden Marketingaktionen Liste. Der URI für eine Marketingaktion wird unter `_links.self.href` in der Antwort für [Suchen einer Marketingaktion](./marketing-actions.md#look-up) bereitgestellt. |
 | `description` | Eine optionale Beschreibung, die weiteren Kontext zum Anwendungsfall der Richtlinie bietet. |
-| `deny` | Der Ausdruck der Richtlinie, der die spezifischen Datenverwendungsbeschriftungen beschreibt, mit denen die verknüpfte Marketingaktion der Richtlinie gekennzeichnet ist, ist von der Ausführung ausgeschlossen. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt zum [Erstellen einer Richtlinie](#create-policy) . |
+| `deny` | Der Ausdruck der Richtlinie, der die spezifischen Datenverwendungsbeschriftungen beschreibt, mit denen die verknüpfte Marketingaktion der Richtlinie gekennzeichnet ist, ist von der Ausführung ausgeschlossen. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt [Erstellen einer Richtlinie](#create-policy). |
 
 **Antwort**
 
@@ -469,19 +469,19 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Richtlinie zurück
 }
 ```
 
-## Update a portion of a custom policy {#patch}
+## Einen Teil einer benutzerdefinierten Richtlinie {#patch} aktualisieren
 
 >[!IMPORTANT]
 >
->Sie können nur benutzerdefinierte Richtlinien aktualisieren. Wenn Sie die Kernrichtlinien aktivieren oder deaktivieren möchten, lesen Sie den Abschnitt zur [Aktualisierung der Liste der aktivierten Hauptrichtlinien](#update-enabled-core).
+>Sie können nur benutzerdefinierte Richtlinien aktualisieren. Wenn Sie Core-Richtlinien aktivieren oder deaktivieren möchten, lesen Sie den Abschnitt [Aktualisieren der Liste der aktivierten Core-Richtlinien](#update-enabled-core).
 
 Ein bestimmter Teil einer Richtlinie kann mithilfe einer PATCH-Anfrage aktualisiert werden. Im Gegensatz zu PUT-Anforderungen, die die Richtlinie umschreiben, aktualisieren PATCH-Anfragen nur die im Anforderungstext angegebenen Eigenschaften. Dies ist besonders hilfreich, wenn Sie eine Richtlinie aktivieren oder deaktivieren möchten, da Sie nur den Pfad zur entsprechenden Eigenschaft (`/status`) und deren Wert (`ENABLED` oder `DISABLED`) angeben müssen.
 
 >[!NOTE]
 >
->Nutzlasten für PATCH-Anfragen folgen der JSON-Patch-Formatierung. Weitere Informationen zur verwendeten Syntax finden Sie im Leitfaden [zu den](../../landing/api-fundamentals.md) API-Grundlagen.
+>Nutzlasten für PATCH-Anfragen folgen der JSON-Patch-Formatierung. Weitere Informationen zur verwendeten Syntax finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md).
 
-Die [!DNL Policy Service] API unterstützt die JSON Patch-Vorgänge `add`, `remove`und `replace`ermöglicht Ihnen, mehrere Updates zu einem einzigen Aufruf zusammenzufassen, wie im folgenden Beispiel gezeigt.
+Die [!DNL Policy Service]-API unterstützt die JSON-Patch-Vorgänge `add`, `remove` und `replace` und ermöglicht Ihnen, mehrere Updates zu einem einzigen Aufruf zusammenzufassen, wie im Beispiel unten dargestellt.
 
 **API-Format**
 
@@ -491,11 +491,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{POLICY_ID}` | Die `id` Richtlinie, deren Eigenschaften Sie aktualisieren möchten. |
+| `{POLICY_ID}` | Die `id` der Richtlinie, deren Eigenschaften Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung verwendet zwei `replace` Vorgänge, um den Richtlinienstatus von `DRAFT` in zu ändern `ENABLED`und das `description` Feld mit einer neuen Beschreibung zu aktualisieren.
+Die folgende Anforderung verwendet zwei Vorgänge `replace`, um den Richtlinienstatus von `DRAFT` in `ENABLED` zu ändern und das `description`-Feld mit einer neuen Beschreibung zu aktualisieren.
 
 >[!IMPORTANT]
 >
@@ -571,13 +571,13 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Richtlinie zurück
 }
 ```
 
-## Eine benutzerdefinierte Richtlinie löschen {#delete}
+## Eine benutzerdefinierte Richtlinie {#delete} löschen
 
-You can delete a custom policy by including its `id` in the path of a DELETE request.
+Sie können eine benutzerdefinierte Richtlinie löschen, indem Sie die `id`-Richtlinie in den Pfad einer DELETE-Anforderung einfügen.
 
 >[!WARNING]
 >
->Nach dem Löschen können Richtlinien nicht wiederhergestellt werden. It is best practice to [perform a lookup (GET) request](#lookup) first to view the policy and confirm it is the correct policy you wish to remove.
+>Nach dem Löschen können Richtlinien nicht wiederhergestellt werden. Es empfiehlt sich, [zuerst eine Suchanfrage (GET) von](#lookup) auszuführen, um die Richtlinie Ansicht und sicherzustellen, dass sie die richtige Richtlinie ist, die Sie entfernen möchten.
 
 **API-Format**
 
@@ -606,9 +606,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) mit einem leeren Text zurüc
 
 Sie können den Löschvorgang bestätigen, indem Sie versuchen, die Richtlinie erneut nachzuschlagen (GET). Sie sollten den HTTP 404-Fehler (Nicht gefunden) erhalten, wenn die Richtlinie erfolgreich gelöscht wurde.
 
-## Eine Liste der aktivierten Hauptrichtlinien abrufen {#list-enabled-core}
+## Eine Liste von aktivierten Core-Richtlinien abrufen {#list-enabled-core}
 
-Standardmäßig werden nur aktivierte Datenverwendungsrichtlinien an der Auswertung beteiligt. Sie können eine Liste der derzeit von Ihrem Unternehmen aktivierten Kernrichtlinien abrufen, indem Sie eine GET an den `/enabledCorePolicies` Endpunkt anfordern.
+Standardmäßig werden nur aktivierte Datenverwendungsrichtlinien an der Auswertung beteiligt. Sie können eine Liste der derzeit von Ihrem Unternehmen aktivierten Kernrichtlinien abrufen, indem Sie eine GET an den `/enabledCorePolicies`-Endpunkt anfordern.
 
 **API-Format**
 
@@ -629,7 +629,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Liste der aktivierten Core-Richtlinien unter einem `policyIds` Array zurück.
+Eine erfolgreiche Antwort gibt die Liste der aktivierten Core-Richtlinien unter einem `policyIds`-Array zurück.
 
 ```json
 {
@@ -658,13 +658,13 @@ Eine erfolgreiche Antwort gibt die Liste der aktivierten Core-Richtlinien unter 
 }
 ```
 
-## Liste der aktivierten Hauptrichtlinien aktualisieren {#update-enabled-core}
+## Liste der aktivierten Kernrichtlinien {#update-enabled-core} aktualisieren
 
-Standardmäßig werden nur aktivierte Datenverwendungsrichtlinien an der Auswertung beteiligt. Wenn Sie eine PUT-Anforderung an den `/enabledCorePolicies` Endpunkt stellen, können Sie die Liste der aktivierten Core-Richtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
+Standardmäßig werden nur aktivierte Datenverwendungsrichtlinien an der Auswertung beteiligt. Wenn Sie eine PUT-Anforderung an den `/enabledCorePolicies`-Endpunkt stellen, können Sie die Liste der aktivierten Core-Richtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
 
 >[!NOTE]
 >
->Nur Kernrichtlinien können von diesem Endpunkt aktiviert oder deaktiviert werden. Informationen zum Aktivieren oder Deaktivieren benutzerdefinierter Richtlinien finden Sie im Abschnitt zum [Aktualisieren eines Teils einer Richtlinie](#patch).
+>Nur Kernrichtlinien können von diesem Endpunkt aktiviert oder deaktiviert werden. Informationen zum Aktivieren oder Deaktivieren benutzerdefinierter Richtlinien finden Sie im Abschnitt [Aktualisieren eines Teils einer Richtlinie](#patch).
 
 **API-Format**
 
@@ -695,11 +695,11 @@ curl -X GET \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `policyIds` | Eine Liste der zu aktivierenden Hauptrichtlinien-IDs. Sämtliche nicht einbezogenen Kernrichtlinien sind auf den `DISABLED` Status eingestellt und werden nicht an der Evaluierung teilnehmen. |
+| `policyIds` | Eine Liste der zu aktivierenden Hauptrichtlinien-IDs. Alle nicht eingeschlossenen Kernrichtlinien sind auf den Status `DISABLED` gesetzt und beteiligen sich nicht an der Evaluierung. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die aktualisierte Liste der aktivierten Core-Richtlinien unter einem `policyIds` Array zurück.
+Eine erfolgreiche Antwort gibt die aktualisierte Liste der aktivierten Core-Richtlinien unter einem `policyIds`-Array zurück.
 
 ```json
 {
@@ -726,4 +726,4 @@ Eine erfolgreiche Antwort gibt die aktualisierte Liste der aktivierten Core-Rich
 
 ## Nächste Schritte
 
-Nachdem Sie neue Richtlinien oder aktualisierte vorhandene Richtlinien definiert haben, können Sie mit der [!DNL Policy Service] API Marketingaktionen für bestimmte Beschriftungen oder Datensätze testen und feststellen, ob Ihre Richtlinien zu erwartenden Verstößen führen. Weitere Informationen finden Sie im Handbuch zu den Endpunkten [der](./evaluation.md) Richtlinienbewertung.
+Nachdem Sie neue Richtlinien oder aktualisierte vorhandene Richtlinien definiert haben, können Sie die [!DNL Policy Service]-API verwenden, um Marketingaktionen mit bestimmten Beschriftungen oder Datensätzen zu testen und festzustellen, ob Ihre Richtlinien zu erwartenden Verstößen führen. Weitere Informationen finden Sie im Handbuch zu den [Endpunkten der Richtlinienbewertung](./evaluation.md).
