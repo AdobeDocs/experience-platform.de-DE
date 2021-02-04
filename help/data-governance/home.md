@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;DULE;dule
+keywords: Experience Platform;Home;beliebte Themen;DULE;Modul
 solution: Experience Platform
 title: Adobe Experience Platform Data Governance
 topic: overview
@@ -7,7 +7,7 @@ description: Mit Data Governance in Adobe Experience Platform können Sie Kunden
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1345'
 ht-degree: 72%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 72%
 
 # [!DNL Data Governance]Übersicht
 
-Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies.
+Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Es ist daher wichtig sicherzustellen, dass Ihre Datenoperationen innerhalb von [!DNL Platform] den Datenverwendungsrichtlinien entsprechen.
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
+Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung sicherstellen. Es spielt eine Schlüsselrolle innerhalb von [!DNL Experience Platform] auf verschiedenen Ebenen, einschließlich Katalogisierung, Datenlineage, Datenverwendungsbeschriftung, Datenverwendungsrichtlinien und Steuerung der Verwendung von Daten für Marketingaktionen.
 
 ## Data Governance-Rollen
 
@@ -45,9 +45,9 @@ Marketer befinden sich am Endpunkt von Data Governance. Sie fordern Daten von de
 
 ## [!DNL Data Governance] framework
 
-The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies. Sobald Datenbezeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
+Das [!DNL Data Governance]-Framework vereinfacht und optimiert den Prozess der Kategorisierung von Daten und Erstellung von Datenverwendungsrichtlinien. Sobald Datenbezeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
 
-There are three key elements to the [!DNL Data Governance] framework: Labels, Policies, and Enforcement.
+Das [!DNL Data Governance]-Framework enthält drei wichtige Elemente: Bezeichnungen, Richtlinien und Durchsetzung.
 
 1. **Bezeichnungen:** Klassifizieren Sie Daten anhand datenschutzbezogener Aspekte und vertraglicher Bestimmungen, sodass sie Vorschriften und Richtlinien der Organisation einhalten.
 1. **Richtlinien:** Beschreiben Sie, welche Arten von Marketing-Aktionen für welche Daten zulässig sind oder auch nicht.
@@ -57,7 +57,7 @@ There are three key elements to the [!DNL Data Governance] framework: Labels, Po
 
 [!DNL Data Governance] ermöglicht es Data Stewards, Nutzungsbezeichnungen auf der Datensatz- und Feldebene anzuwenden, um Daten anhand der gültigen Richtlinien zu kategorisieren.
 
-The [!DNL Data Governance] framework includes predefined data usage labels that can be used to categorize data in three ways:
+Das [!DNL Data Governance]-Framework enthält vordefinierte Beschriftungen für die Datenverwendung, mit denen Daten auf drei Arten kategorisiert werden können:
 
 ![Kategorien an Datennutzungsbezeichnungen](./images/overview/label-categories.png)
 
@@ -69,35 +69,35 @@ The [!DNL Data Governance] framework includes predefined data usage labels that 
 >
 >Eine vollständige Liste der verfügbaren Bezeichnungen sowie Definitionen für jeden Bezeichnungstyp finden Sie im Handbuch zu [unterstützten Datennutzungsbezeichnungen](labels/reference.md).
 
-Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best practice encourages labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available in [!DNL Platform].
+Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practice empfiehlt die Kennzeichnung von Daten, sobald diese in [!DNL Experience Platform] eingeschlossen sind oder sobald Daten in [!DNL Platform] verfügbar sind.
 
-Weitere Informationen finden Sie in der Übersicht über die Beschriftungen [zur](./labels/overview.md) Datenverwendung.
+Weitere Informationen finden Sie in der Übersicht zu [Beschriftungen für die Datenverwendung](./labels/overview.md).
 
 ## Datennutzungsrichtlinien
 
-Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datenverwendungsrichtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, von denen Sie Daten innerhalb von [!DNL Experience Platform] ausführen dürfen oder von denen Sie eingeschränkt sind.
 
-Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an &quot;I&quot; label (Identity data) has been applied to the dataset, you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. Wenn eine Richtlinie besagt, dass bestimmte Datentypen, wie z. B. &quot;Persönliche identifizierbare Informationen&quot;(PII), nicht exportiert werden können und eine &quot;I&quot;-Beschriftung (Identitätsdaten) auf den Datensatz angewendet wurde, erhalten Sie eine Antwort von [!DNL Policy Service], in der Sie darauf hingewiesen werden, dass eine Datenverwendungsrichtlinie verletzt wurde.
 
-Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
+Nachdem die Beschriftungen für die Datenverwendung angewendet wurden, können Datenverwaltungen Richtlinien mit der [!DNL Policy Service]-API oder der [!DNL Experience Platform]-Benutzeroberfläche erstellen.
 
 >[!IMPORTANT]
 >
 >Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren.
 
-Weitere Informationen zu Datenverwendungsrichtlinien und Marketingaktionen finden Sie in der [Richtlinienübersicht](./policies/overview.md).
+Weitere Informationen zu Datenverwendungsrichtlinien und Marketingaktionen finden Sie im [Richtlinienüberblick](./policies/overview.md).
 
 ## Nächste Schritte
 
-This document provided a high-level introduction to [!DNL Data Governance] and the[!DNL Data Governance] framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
+Dieses Dokument bietet eine allgemeine Einführung in das [!DNL Data Governance]- und[!DNL Data Governance]-Framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
 
 ## Anhang
 
-The following section provides additional information regarding [!DNL Data Governance].
+Im folgenden Abschnitt finden Sie weitere Informationen zu [!DNL Data Governance].
 
 ### [!DNL Data Governance] Terminologie
 
-The following table outlines key terms related to [!DNL Data Governance] and the[!DNL Data Governance] framework.
+In der folgenden Tabelle sind wichtige Begriffe im Zusammenhang mit [!DNL Data Governance] und dem[!DNL Data Governance]-Framework aufgeführt.
 
 | Begriff | Definition |
 |---|---|
@@ -111,16 +111,16 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 | **Geofence** | Eine „Geofence“ ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet erreicht oder verlässt. |
 | **Identitätsbezeichnungen** | Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt. |
 | **Interessenbasiertes Targeting** | Interessenbasiertes Targeting, auch Personalisierung genannt, findet statt, wenn die folgenden drei Bedingungen erfüllt sind: Daten, die vor Ort erfasst werden, dienen dazu, Rückschlüsse über das Interesse eines Benutzers zu ziehen, werden in einem anderen Kontext verwendet (z. B. in einer anderen Site oder App, also „offsite“) und dienen dazu festzulegen, welche Inhalte oder Anzeigen auf Grundlage der Rückschlüsse bereitgestellt werden. |
-| **Marketing-Aktion** | A marketing action, in the context of the data governance framework, is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies |
+| **Marketing-Aktion** | Eine Marketingaktion im Kontext des Data Governance Frameworks ist eine Aktion, die ein [!DNL Experience Platform]-Datenbenutzer unternimmt, für die überprüft werden muss, ob gegen die Datenverwendungsrichtlinien verstoßen wurde |
 | **Richtlinie** | Im Data Governance-Framework ist eine Richtlinie eine Regel, die beschreibt, welche Marketing-Aktionen für bestimmte Daten zulässig oder nicht. |
 | **Bezeichnungen für vertrauliche Daten** | Vertrauliche „S“-Bezeichnungen (sensitive) dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als vertraulich betrachten. |
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video soll Ihr Verständnis des [!DNL Data Governance] Frameworks unterstützen.
+Das folgende Video soll Ihr Verständnis des [!DNL Data Governance]-Frameworks unterstützen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-Im folgenden Video werden verschiedene [!DNL Data Governance] Funktionen der Experience Platform vorgestellt.
+Im folgenden Video werden verschiedene [!DNL Data Governance]-Funktionen in der Experience Platform vorgestellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
