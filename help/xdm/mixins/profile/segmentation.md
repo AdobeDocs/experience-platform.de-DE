@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schema;Segment;Segmentmitgliedschaft;Segmentmitgliedschaft;Schema-Design;Landkarte;Landkarte;
 solution: Experience Platform
 title: Segment-Mitgliedsdetails-Mixin
 topic: overview
@@ -7,23 +7,23 @@ description: Dieses Dokument bietet einen Überblick über das Segment-Mitglieds
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '406'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Segment-Mitgliedsdetails] -Mixin
+# [!UICONTROL Details ] zur SegmentmitgliedschaftMixin
 
 >[!NOTE]
 >
->Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument zu [Mixin-Namensaktualisierungen](../name-updates.md) .
+>Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument [mixin name updates](../name-updates.md).
 
-[!UICONTROL Details] zur Segmentmitgliedschaft sind eine Standardmischung für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Das Mixin bietet ein Feld für die Zuordnung, in dem Informationen zur Segmentmitgliedschaft erfasst werden, einschließlich der Segmente, zu denen die Person gehört, der letzten Qualifizierungszeit und des Zeitpunkts, zu dem die Mitgliedschaft gültig ist, bis zu dem sie gültig ist.
+[!UICONTROL Segmentmitgliedsdetails ] sind eine Standardmischung für die  [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Das Mixin bietet ein Feld für die Zuordnung, in dem Informationen zur Segmentmitgliedschaft erfasst werden, einschließlich der Segmente, zu denen die Person gehört, der letzten Qualifizierungszeit und des Zeitpunkts, zu dem die Mitgliedschaft gültig ist, bis zu dem sie gültig ist.
 
 >[!WARNING]
 >
->Während das `segmentMembership` Feld manuell mit dieser Mischung zum Profil-Schema hinzugefügt werden muss, sollten Sie nicht versuchen, dieses Feld manuell zu füllen oder zu aktualisieren. Das System aktualisiert die `segmentMembership` Zuordnung für jedes Profil automatisch, wenn Segmentierungsaufträge ausgeführt werden.
+>Während das Feld `segmentMembership` manuell mit diesem Mixin zu Ihrem Profil-Schema hinzugefügt werden muss, sollten Sie nicht versuchen, dieses Feld manuell zu füllen oder zu aktualisieren. Das System aktualisiert die `segmentMembership`-Zuordnung für jedes Profil automatisch, wenn Segmentierungsaufträge ausgeführt werden.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | `segmentMembership` | Zuordnung | Ein Map-Objekt, das die Segmentmitgliedschaften der jeweiligen Person beschreibt. Die Struktur dieses Objekts wird nachfolgend detailliert beschrieben. |
 
-Im Folgenden finden Sie eine `segmentMembership` Beispielzuordnung, die das System für ein bestimmtes Profil aufgefüllt hat. Segmentmitgliedschaften werden nach Namensraum sortiert, wie durch die Schlüssel auf der Stammebene des Objekts angegeben. Die einzelnen Schlüssel unter jedem Namensraum stellen die IDs der Segmente dar, denen das Profil angehört. Jedes Segmentobjekt enthält mehrere Unterfelder, die weitere Details zur Mitgliedschaft bieten:
+Im Folgenden finden Sie ein Beispiel für die Zuordnung `segmentMembership`, die das System für ein bestimmtes Profil aufgefüllt hat. Segmentmitgliedschaften werden nach Namensraum sortiert, wie durch die Schlüssel auf der Stammebene des Objekts angegeben. Die einzelnen Schlüssel unter jedem Namensraum stellen die IDs der Segmente dar, denen das Profil angehört. Jedes Segmentobjekt enthält mehrere Unterfelder, die weitere Details zur Mitgliedschaft bieten:
 
 ```json
 {
@@ -76,7 +76,7 @@ Im Folgenden finden Sie eine `segmentMembership` Beispielzuordnung, die das Syst
 | `xdm:lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zum letzten Mal für das Segment qualifiziert hat. |
 | `xdm:validUntil` | Ein Zeitstempel, der angibt, wann die Segmentmitgliedschaft nicht mehr als gültig betrachtet werden soll. |
 | `xdm:status` | Gibt an, ob die Segmentmitgliedschaft als Teil der aktuellen Anforderung ausgeführt wurde. Die folgenden Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor dem Antrag Teil des Segments und bleibt weiterhin Mitglied.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment im Rahmen der aktuellen Anforderung.</li></ul> |
-| `xdm:payload` | Einige Segmentmitgliedschaften beinhalten eine Payload, die zusätzliche Werte beschreibt, die direkt mit der Mitgliedschaft zusammenhängen. Für jede Mitgliedschaft kann nur eine Nutzlast eines bestimmten Typs angegeben werden. `xdm:payloadType` gibt den Nutzlasttyp (`boolean`, `number`, `propensity`oder `string`) an, während seine Geschwistereigenschaft den Wert für den Nutzlasttyp bereitstellt. |
+| `xdm:payload` | Einige Segmentmitgliedschaften beinhalten eine Payload, die zusätzliche Werte beschreibt, die direkt mit der Mitgliedschaft zusammenhängen. Für jede Mitgliedschaft kann nur eine Nutzlast eines bestimmten Typs angegeben werden. `xdm:payloadType` gibt den Nutzlasttyp (`boolean`,  `number`,  `propensity`oder  `string`) an, während seine Geschwistereigenschaft den Wert für den Nutzlasttyp bereitstellt. |
 
 Weitere Informationen zum Mixin finden Sie im öffentlichen XDM-Repository:
 
