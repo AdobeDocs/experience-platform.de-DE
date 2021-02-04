@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
+keywords: Experience Platform;Home;beliebte Themen;SFTP;SFTP
 solution: Experience Platform
 title: Erstellen eines SFTP-Quellconnectors in der Benutzeroberfläche
 topic: overview
@@ -8,7 +8,7 @@ description: In diesem Lernprogramm werden Schritte zum Erstellen eines SFTP-Que
 translation-type: tm+mt
 source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '702'
 ht-degree: 6%
 
 ---
