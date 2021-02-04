@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
+keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Profil aktivieren;Profil aktivieren
 title: Hinzufügen von Daten zum Echtzeit-Kundenprofil
 topic: tutorial
 type: Tutorial
@@ -7,36 +7,36 @@ description: In diesem Tutorial werden die Schritte beschrieben, die zum Hinzuf�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 53%
+source-wordcount: '380'
+ht-degree: 51%
 
 ---
 
 
 # Daten Hinzufügen [!DNL Real-time Customer Profile]
 
-This tutorial outlines the steps necessary to add data to [!DNL Real-time Customer Profile].
+In diesem Lernprogramm werden die Schritte beschrieben, die zum Hinzufügen von Daten zu [!DNL Real-time Customer Profile] erforderlich sind.
 
-## Schema aktivieren für [!DNL Real-time Customer Profile]
+## Schema für [!DNL Real-time Customer Profile] aktivieren
 
-Daten, die [!DNL Experience Platform] zur Verwendung durch [!DNL Real-time Customer Profile] verwendet werden, müssen einem [!DNL Experience Data Model] (XDM-)Schema entsprechen, für das aktiviert wurde [!DNL Profile]. In order for a schema to be enabled for Profile, it must implement either the [!DNL XDM Individual Profile] or [!DNL XDM ExperienceEvent] class.
+Daten, die in [!DNL Experience Platform] für die Verwendung von [!DNL Real-time Customer Profile] aufgenommen werden, müssen einem [!DNL Experience Data Model] (XDM)-Schema entsprechen, das für [!DNL Profile] aktiviert ist. Damit ein Schema zum Profil aktiviert werden kann, muss es entweder die [!DNL XDM Individual Profile]- oder [!DNL XDM ExperienceEvent]-Klasse implementieren.
 
-Sie können ein Schema zur Verwendung [!DNL Real-time Customer Profile] mit der [!DNL Schema Registry] API oder der [!DNL Schema Editor] Benutzeroberfläche aktivieren. Beginnen Sie zunächst mit den Tutorials zum [Erstellen eines Schemas mit APIs](../../xdm/tutorials/create-schema-api.md) oder zum [Erstellen eines Schemas mithilfe der Schema-Editor-UI](../../xdm/tutorials/create-schema-ui.md).
+Sie können ein Schema zur Verwendung in [!DNL Real-time Customer Profile] mithilfe der [!DNL Schema Registry]-API oder der [!DNL Schema Editor]-Benutzeroberfläche aktivieren. Beginnen Sie zunächst mit den Tutorials zum [Erstellen eines Schemas mit APIs](../../xdm/tutorials/create-schema-api.md) oder zum [Erstellen eines Schemas mithilfe der Schema-Editor-UI](../../xdm/tutorials/create-schema-ui.md).
 
 ## Hinzufügen von Daten mithilfe der Batch-Erfassung
 
-All data uploaded to [!DNL Platform] using batch ingestion is uploaded to individual datasets. Before this data can be used by [!DNL Real-time Customer Profile], the dataset in question has to be specifically configured. Vollständige Anweisungen finden Sie im Tutorial zum [Konfigurieren eines Datensatzes für den Profile und Identity Service](dataset-configuration.md).
+Alle Daten, die mit der Stapelverarbeitung zu [!DNL Platform] hochgeladen wurden, werden in einzelne Datensätze hochgeladen. Bevor diese Daten von [!DNL Real-time Customer Profile] verwendet werden können, muss der betreffende Datensatz spezifisch konfiguriert werden. Vollständige Anweisungen finden Sie im Tutorial zum [Konfigurieren eines Datensatzes für den Profile und Identity Service](dataset-configuration.md).
 
 Nachdem der Datensatz konfiguriert wurde, können Sie Daten in den Datensatz eingeben. Detaillierte Anweisungen zum Hochladen von Dateien in verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 ## Hinzufügen von Daten mithilfe der Streaming-Erfassung
 
-Any stream-ingested data that is compliant with a [!DNL Profile]-enabled XDM schema will automatically add or overwrite the appropriate record in [!DNL Real-time Customer Profile]. Wenn mehr als eine Identität im Datensatz bereitgestellt wird oder Zeitreihendaten verwendet werden, werden diese Identitäten im Identitätsdiagramm ohne zusätzliche Konfiguration zugeordnet. Weitere Informationen hierzu finden Sie im [Entwicklerhandbuch zur Streaming-Erfassung](../../ingestion/tutorials/streaming-record-data.md).
+Alle Stream-erfassten Daten, die mit einem [!DNL Profile]-aktivierten XDM-Schema konform sind, werden automatisch den entsprechenden Datensatz in [!DNL Real-time Customer Profile] hinzufügen oder überschreiben. Wenn mehr als eine Identität im Datensatz bereitgestellt wird oder Zeitreihendaten verwendet werden, werden diese Identitäten im Identitätsdiagramm ohne zusätzliche Konfiguration zugeordnet. Weitere Informationen hierzu finden Sie im [Entwicklerhandbuch zur Streaming-Erfassung](../../ingestion/tutorials/streaming-record-data.md).
 
 ## Überprüfen Sie, ob der Upload erfolgreich war
 
 Beim erstmaligen Hochladen von Daten in einen neuen Datensatz oder im Rahmen eines Prozesses mit einer neuen ETL oder Datenquelle wird empfohlen, die Daten sorgfältig zu überprüfen, um sicherzustellen, dass sie korrekt hochgeladen wurden.
 
-Using the [!DNL Real-time Customer Profile] Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for [!DNL Profile]. Nachdem Sie bestätigt haben, dass Ihr Datensatz aktiviert wurde, stellen Sie sicher, dass Ihr Quelldatenformat und Ihre Identifikatoren Ihre Erwartungen unterstützen.
+Mit der Zugriffs-API [!DNL Real-time Customer Profile] können Sie Stapeldaten abrufen, während sie in ein Dataset geladen werden. Wenn Sie keine der erwarteten Entitäten abrufen können, ist Ihr Datensatz möglicherweise nicht für [!DNL Profile] aktiviert. Nachdem Sie bestätigt haben, dass Ihr Datensatz aktiviert wurde, stellen Sie sicher, dass Ihr Quelldatenformat und Ihre Identifikatoren Ihre Erwartungen unterstützen.
 
-Detaillierte Anweisungen zum Zugriff auf Entitäten mit der [!DNL Real-time Customer Profile] API finden Sie im [Entitäts-Endpunkthandbuch](../api/entities.md), auch als &quot;[!DNL Profile Access] API&quot;bezeichnet.
+Detaillierte Anweisungen zum Zugriff auf Entitäten mit der [!DNL Real-time Customer Profile]-API finden Sie im [Entitäts-Endpunkthandbuch](../api/entities.md), auch als &quot;API[!DNL Profile Access]&quot;bezeichnet.
