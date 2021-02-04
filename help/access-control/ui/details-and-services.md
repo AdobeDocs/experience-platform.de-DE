@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: Experience Platform;Home;beliebte Themen;Profil
 solution: Experience Platform
 title: Details und zusätzliche Dienste für ein Produktprofil verwalten
 topic: user guide
@@ -7,8 +7,8 @@ description: In diesem Dokument werden die erforderlichen Schritte zur Verwaltun
 translation-type: tm+mt
 source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 57%
+source-wordcount: '213'
+ht-degree: 55%
 
 ---
 
@@ -27,7 +27,7 @@ Klicken Sie auf **[!UICONTROL Dienste]**, um auf die Seite **[!UICONTROL Dienste
 
 ![services-page](../images/services-page.png)
 
-The **[!UICONTROL Services]** menu allows you to modify a profile&#39;s access to additional [!DNL Platform] services that were initially configured when the profile was created. Depending on your [!DNL Platform] subscription, these services can include:
+Mit dem Menü **[!UICONTROL Dienste]** können Sie den Zugriff eines Profils auf weitere [!DNL Platform]-Dienste ändern, die ursprünglich bei der Erstellung des Profils konfiguriert wurden. Abhängig vom [!DNL Platform]-Abonnement können diese Dienste Folgendes umfassen:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
