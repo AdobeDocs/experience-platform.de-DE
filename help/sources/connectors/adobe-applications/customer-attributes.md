@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Customer Attributes connector
+keywords: Experience Platform;Startseite;beliebte Themen;Kundenattributanschluss
 solution: Experience Platform
 title: Connector für Kundenattribute
 topic: overview
@@ -7,8 +7,8 @@ description: Die nachstehende Dokumentation enthält Informationen zum Verbinden
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 38%
+source-wordcount: '129'
+ht-degree: 35%
 
 ---
 
