@@ -3,12 +3,12 @@ title: Unterstützen von Zustimmung
 seo-title: Unterstützen der Zustimmungseinstellung des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
 seo-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
-keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
+keywords: approval;defaultConsent;default approval;setConsent;Profil Privacy Mixin;Experience Ereignis Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 63%
+source-wordcount: '766'
+ht-degree: 62%
 
 ---
 
@@ -80,11 +80,11 @@ Da der Nutzer sich für eine Abmeldung entschieden hat, werden Promises, die von
 
 >[!NOTE]
 >
->Derzeit unterstützt das SDK nur den `general`-Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, bietet die aktuelle Implementierung nur die Alles-oder-Nichts-Methode zur Teilnahme.  This only applies to Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
+>Derzeit unterstützt das SDK nur den `general`-Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, bietet die aktuelle Implementierung nur die Alles-oder-Nichts-Methode zur Teilnahme.  Dies gilt nur für Adobe Experience Platform [!DNL Web SDK]- und NICHT für andere JavaScript-Bibliotheken der Adobe.
 
 ## Übermittlung von Voreinstellungen für die Zustimmung über den IAB-TCF-Standard
 
-Das SDK unterstützt die Aufzeichnung von Voreinstellungen für die Zustimmung eines Benutzers, die über den IAB-Standard (Interactive Advertising Bureau Europe) Transparency and Consent Framework (TCF) bereitgestellt werden. Die Zeichenfolge für die Einwilligung kann mit demselben `setConsent` Befehl wie oben festgelegt werden:
+Das SDK unterstützt die Aufzeichnung von Voreinstellungen für die Zustimmung eines Benutzers, die über den IAB-Standard (Interactive Advertising Bureau Europe) Transparency and Consent Framework (TCF) bereitgestellt werden. Die Zeichenfolge für die Einwilligung kann mit demselben Befehl wie oben festgelegt werden:`setConsent`
 
 ```javascript
 alloy("setConsent", {
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-Wenn die Einwilligung auf diese Weise festgelegt wird, wird das Echtzeit-Profil des Kunden mit den Einwilligungsinformationen aktualisiert. Damit dies funktioniert, muss das Profil XDM Schema das [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)enthalten. Beim Senden von Ereignissen müssen die IAB-Einwilligungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das SDK enthält nicht automatisch die Informationen zur Einwilligung in die Ereignis. Um die Einwilligungsinformationen in Ereignissen zu senden, muss das [Experience Ereignis Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) dem Experience Ereignis Schema hinzugefügt werden.
+Wenn die Einwilligung auf diese Weise festgelegt wird, wird das Echtzeit-Profil des Kunden mit den Einwilligungsinformationen aktualisiert. Damit dies funktioniert, muss das Profil-XDM-Schema das [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) enthalten. Beim Senden von Ereignissen müssen die IAB-Einwilligungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das SDK enthält nicht automatisch die Informationen zur Einwilligung in die Ereignis. Um die Informationen zur Einwilligung in Ereignissen zu senden, muss das [Experience Ereignis Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) dem Experience Ereignis Schema hinzugefügt werden.
 
 ## Senden beider Standards in einer Anforderung
 
@@ -126,5 +126,5 @@ Nachdem Sie dem SDK mithilfe des `setConsent`-Befehls Benutzereinstellungen mitg
 
 ## Synchronisieren von Identitäten während der Einrichtung der Zustimmung
 
-Wenn die Standardgenehmigung aussteht, `setConsent` kann es sich bei der ersten Anforderung um die Identitätsfeststellung handeln. Aus diesem Grund kann es wichtig sein, Identitäten bei der ersten Anforderung zu synchronisieren. Die Identitätskarte kann dem `setConsent` Befehl wie auf dem `sendEvent` Befehl hinzugefügt werden. Siehe [Abrufen der Experience Cloud-ID](../identity/overview.md)
+Wenn die Standardgenehmigung aussteht, kann `setConsent` die erste Anforderung sein, die ausgeht und Identität festlegt. Aus diesem Grund kann es wichtig sein, Identitäten bei der ersten Anforderung zu synchronisieren. Die Identitätskarte kann wie beim Befehl `setConsent` hinzugefügt werden. `sendEvent` Siehe [Abrufen der Experience Cloud-ID](../identity/overview.md)
 
