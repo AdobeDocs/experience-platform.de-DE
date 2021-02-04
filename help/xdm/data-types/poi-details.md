@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;poi details;point of interest;point of interest details;datatype;data-type;data type;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Poi;Poi-Details;Point-of-Interest;Point-of-Interest;Datentyp;Datentyp;
 solution: Experience Platform
 title: Datentyp der Point-Interest-Details
 topic: overview
@@ -7,15 +7,15 @@ description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp "Poin
 translation-type: tm+mt
 source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 16%
+source-wordcount: '200'
+ht-degree: 14%
 
 ---
 
 
-# [!UICONTROL Datentyp der Point-Interest-Details]
+# [!UICONTROL Point-Interest-] Detaildatentyp
 
-[!UICONTROL Point-of-Interest-Details] sind ein standardmäßiger XDM-Datentyp, der die geografischen Daten beschreibt, in denen ein Ereignis beobachtet wurde.
+[!UICONTROL Point-of-Interest-] Details bilden einen Standard-XDM-Datentyp, der die geografischen Daten beschreibt, in denen ein Ereignis beobachtet wurde.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
