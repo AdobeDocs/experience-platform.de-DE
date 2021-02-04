@@ -37,7 +37,7 @@ Aktualisierungen vorhandener Funktionen:
 
 Während die Adobe den Data Lake von Gen1 zu Gen2 migriert, können Benutzer den Data Lake zwar lesen, aber alle Funktionen, die in den Data Lake schreiben, werden beeinträchtigt. Adobe wird sich an Systemadministratoren wenden, um die Auswirkungen der Migration ausführlich zu erörtern und die Migrationsdaten und -zeiten für bestimmte IMS-Organisationen zu bestätigen.
 
-Weitere Informationen finden Sie im Handbuch zur Migration von [Data Lake](../../landing/adls2-gen2-migration.md).
+Weitere Informationen finden Sie im Handbuch [Datensee-Migration](../../landing/adls2-gen2-migration.md).
 
 ## [!DNL Access control] {#access-control}
 
@@ -47,36 +47,36 @@ Weitere Informationen finden Sie im Handbuch zur Migration von [Data Lake](../..
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Berechtigungen | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Zu den verfügbaren Kategorien für Berechtigungen gehören: **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Data Management]**, **[!UICONTROL Profil-Management]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Datenüberwachung]**, **[!UICONTROL Sandbox-Administration]**********************,Data Ingestion, Data Science Workspace,Abfrage Service, und Data Governance. |
-| Zugriff auf Sandboxes | The **[!UICONTROL Permissions]** tab within a [!DNL Platform] product profile can grant users access to specific sandboxes. Zusätzliche Informationen finden Sie im Abschnitt zu [Sandboxes](#sandboxes) unten. |
+| Berechtigungen | Auf der Registerkarte in einem [!DNL Admin Console]-Profil können Sie anpassen, welche [!DNL Platform]-Funktionen für die an dieses Profil angehängten Benutzer verfügbar sind. [!DNL Platform] Zu den verfügbaren Kategorien für Berechtigungen gehören: **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Data Management]**, **[!UICONTROL Profil-Management]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Datenüberwachung]**, **[!UICONTROL Sandbox-Administration]**, **[!UICONTROL Ziele&lt;a1 3/>,**[!UICONTROL  Dateneinbettung ]**,**[!UICONTROL  Data Science Workspace ]**,**[!UICONTROL  Abfrage Service ]**und**[!UICONTROL  Datenverwaltung ]**.]** |
+| Zugriff auf Sandboxes | Die Registerkarte **[!UICONTROL Berechtigungen]** in einem [!DNL Platform]-Profil kann Benutzern Zugriff auf bestimmte Sandboxen gewähren. Zusätzliche Informationen finden Sie im Abschnitt zu [Sandboxes](#sandboxes) unten. |
 
 Weiterführende Informationen finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ## [!DNL Offer Decisioning] {#offer-decisioning}
 
-[!DNL Offer Decisioning] ist ein in [!DNL Experience Platform]integrierte Anwendungsdienst. It allows you to leverage [!DNL Platform] to deliver the best offer and experience to your customers across all touch points at the right time.
+[!DNL Offer Decisioning] ist ein in  [!DNL Experience Platform]integrierte Anwendungsdienst. Damit können Sie [!DNL Platform] nutzen, um Ihren Kunden das beste Angebot und Erlebnis über alle Berührungspunkte zur richtigen Zeit bereitzustellen.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Zentralisierte Angebot-Bibliothek | Die Oberfläche, auf der Sie die verschiedenen Elemente erstellen und verwalten, aus denen Ihre Angebot bestehen, und deren Regeln und Einschränkungen definieren. |
-| Angebot-Entscheidungsmodul | The Offer Decision Engine leverages [!DNL Platform] data and [!DNL Real-time Customer Profiles], along with the Offer Library, in order to select the right time, customers and channels to which offers will be delivered. |
+| Angebot-Entscheidungsmodul | Die Angebot Decision Engine nutzt [!DNL Platform]-Daten und [!DNL Real-time Customer Profiles] zusammen mit der Angebot-Bibliothek, um den richtigen Zeitpunkt, Kunden und Kanal für die Bereitstellung der Angebot festzulegen. |
 
 Weitere Informationen finden Sie in der [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=de) Dokumentation.
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-[!DNL Experience Platform] wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. In order to address this need, [!DNL Experience Platform] provides sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+[!DNL Experience Platform] wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. [!DNL Experience Platform] stellt Sandboxes bereit, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Produktions-Sandbox | [!DNL Experience Platform] stellt eine einzelne Produktions-Sandbox bereit, die weder gelöscht noch zurückgesetzt werden kann. Die Gesamtzahl der verfügbaren Sandboxen, Produktion und Nichtproduktion wird durch die erworbene Lizenz bestimmt. |
-| Nicht-Produktions-Sandboxes | Multiple non-production sandboxes can be created for a single [!DNL Platform] instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox. |
-| Sandbox-Wechsler | In the [!DNL Experience Platform] user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu. Der Sandbox-Umschalter bietet außerdem eine Suchfunktion, mit der Sie durch verfügbare Sandboxen filtern können. |
-| `x-sandbox-name`-Kopfzeile | All calls to [!DNL Experience Platform] APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in. |
+| Nicht-Produktions-Sandboxes | Für eine einzelne [!DNL Platform]-Instanz können mehrere Sandboxen ohne Produktionscharakter erstellt werden, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktionssandbox zu beeinträchtigen. |
+| Sandbox-Wechsler | In der Benutzeroberfläche [!DNL Experience Platform] können Sie mit dem Sandbox-Umschalter in der oberen linken Ecke des Bildschirms über ein Dropdown-Menü zwischen verfügbaren Sandboxen wechseln. Der Sandbox-Umschalter bietet außerdem eine Suchfunktion, mit der Sie durch verfügbare Sandboxen filtern können. |
+| `x-sandbox-name`-Kopfzeile | Alle Aufrufe von APIs für [!DNL Experience Platform] müssen jetzt die neue `x-sandbox-name`-Kopfzeile enthalten, deren Wert auf das `name`-Attribut der Sandbox verweist, in der der Vorgang ausgeführt wird. |
 
 Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
 
@@ -89,21 +89,21 @@ Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../../sandb
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Iterative Operationen | [!DNL Data Prep] Mapper unterstützt jetzt die Durchführung iterativer Vorgänge in einer Hierarchie. |
-| Mapper-Funktion | [!DNL Data Prep] Mapper kann jetzt **kein** Attribut aus der Quelle in die Zielgruppe XDM kopieren. |
+| Mapper-Funktion | [!DNL Data Prep] Mapper hat jetzt die Möglichkeit, ein Attribut aus der Quelle  **** nicht in die Zielgruppe XDM zu kopieren. |
 
-For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## Data Science Workspace {#dsw}
 
-Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen. Data Science Workspace erreicht dies unter anderem durch den Einsatz von [!DNL JupyterLab]. [!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [[!DNL Project Jupyter]](https://jupyter.org/) und ist eng in Adobe Experience Platform integriert. It provides an interactive development environment for data scientists to work with [!DNL Jupyter] notebooks, code, and data.
+Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen. Data Science Workspace erreicht dies unter anderem durch die Verwendung von [!DNL JupyterLab]. [!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [[!DNL Project Jupyter]](https://jupyter.org/) und ist eng in Adobe Experience Platform integriert. Es bietet eine interaktive Entwicklungs-Umgebung für Datenwissenschaftler, mit [!DNL Jupyter]-Notebooks, -Code und -Daten zu arbeiten.
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!DNL JupyterLab] Rezept-Builder-Vorlage | Verwendung der Notebook-zu-Rezept-Anforderungen und Versionen aktualisiert. [!DNL Python] Das ML Runtime-Basisbild wurde aktualisiert und verwendet nun ausschließlich [!DNL Python] 3.6.7 und eine [!DNL Conda] Umgebung. |
+| [!DNL JupyterLab] Rezept-Builder-Vorlage | Verwendung der Notebook-zu-Rezept-Anforderungen und Versionen aktualisiert. [!DNL Python] Das ML Runtime-Basisbild wurde aktualisiert und verwendet nun ausschließlich  [!DNL Python] 3.6.7 und eine  [!DNL Conda] Umgebung. |
 
-Weitere Informationen finden Sie im Dokument zum [Erstellen eines Skripts mit Jupyter-Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+Weitere Informationen finden Sie im Dokument [Erstellen eines Skripts mit Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
 
 ## [!DNL Destinations] Dienst {#destinations}
 
@@ -138,7 +138,7 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 | ------- | ----------- |
 | Dataset Consumer Experience Ereignisses (CEE) | Das Erstellen eines CEE-Datensatzes unterstützt jetzt das Hinzufügen von Identitätsfeldern zum Datensatz mit dem Schema-Editor. Attribution AI und Customer AI verwenden die primäre Identität zur Kombination von Ereignissen. |
 
-Weitere Informationen finden Sie im Abschnitt zum [Hinzufügen von Identitätsfeldern zu einem Datensatz](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) im Vorbereitungshandbuch für intelligente Dienste.
+Weitere Informationen finden Sie im Abschnitt [Hinzufügen von Identitätsfeldern zu einem Datensatz](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) im Handbuch zur Datenvorbereitung für intelligente Dienste.
 
 ### Attribution AI
 
@@ -152,7 +152,7 @@ Attribution AI als Teil von Intelligent Services ist ein algorithmischer Zuordnu
 | Instanzname bearbeiten | Sie können jetzt den Namen einer vorhandenen Attribution AI-Instanz ändern. |
 | Kloninstanz | Kopiert die derzeit ausgewählte Dienstinstanz-Einrichtung und lässt Änderungen zu. |
 | Instanzkonfigurationsparameter ändern | Sie können jetzt die Konfiguration einer vorhandenen Attribution AI-Instanz ändern, wenn diese noch nicht mit der Bewertung begonnen hat. |
-| Einmalig | Sie können jetzt Ad-hoc-Modellbewertungen in Ihren Attribution AI-Instanzen auslösen. |
+| Einmalig | Sie können jetzt Ad-hoc-Modellbewertungen in Ihren Attribution AI-Instanzen Trigger erstellen. |
 | Durch Spalten weiterleiten | Sie können jetzt zusätzliche Spalten konfigurieren, die zu den Rohdaten für das Ausgabeergebnis hinzugefügt werden, um zusätzliche Dimensionen zu BI-Ansichten hinzuzufügen. |
 | Instanz-Aktivierung und Deaktivierung der Aktivierung | Sie können jetzt die geplante Modellschulung und -bewertung Ihrer Attribution AI-Instanzen aktivieren und deaktivieren. |
 | Berechtigungsverfolgung | Sie können die Gesamtanzahl der von Ihrem Konto verwendeten Zuordnungseinblicke im Container Instanz erstellen ermitteln. |
@@ -160,7 +160,7 @@ Attribution AI als Teil von Intelligent Services ist ein algorithmischer Zuordnu
 | Top-Umrechnungspfade | Ein neues Einblicke-Diagramm auf der Registerkarte &quot;Analyse&quot;des Pfads. Das Diagramm enthält eine Liste der fünf wichtigsten Umrechnungspfade, die die Sequenz der Marketing-Kanal-Touchpoints anzeigen, die zu den meisten Umrechnungen führten. |
 | Touchpoint-Effektivität | Bietet ausführliche Einblicke in die drei wichtigsten Variablen, mit denen Ihr Modell die Touchpoint-Effektivität misst. Bei den Variablen handelt es sich um das Verhältnis zwischen berührten positiven und negativen Pfaden, Touchpoint-Effizienz und Touchpoint-Lautstärke. |
 
-For more information, please read the [Attribution AI overview](../../intelligent-services/attribution-ai/overview.md).
+Weitere Informationen finden Sie unter [Übersicht über Attribution AIS](../../intelligent-services/attribution-ai/overview.md).
 
 ### Customer AI
 
@@ -178,7 +178,7 @@ Customer AI bietet Marketing-Experten als Teil von Intelligent Services die Mög
 | Prognoseziel | Die Flexibilität bei der Erstellung eines Prognoseziels wurde durch neue Optionen erhöht, um vorherzusagen, ob etwas &quot;eintritt&quot;oder &quot;nicht eintritt&quot;. Darüber hinaus wurden die Optionen hinzugefügt, mit denen vorhergesagt werden kann, ob &quot;alle&quot;oder &quot;eines der&quot;Ereignis bei Verwendung mehrerer Ereignis auftreten. |
 | Drilldown für Einflussfaktoren | Propensity Top-Einflussfaktor-Behälter enthalten jetzt Drilldowns. Drilldowns sind eine tiefer gehende Zusammenfassung der Werte für jeden der wichtigsten einflussreichsten Faktoren in einem Tendenzbehälter. |
 
-For more information, please read the [Customer AI overview](../../intelligent-services/customer-ai/overview.md).
+Weitere Informationen finden Sie unter [Übersicht über die Kundentelefonie](../../intelligent-services/customer-ai/overview.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -191,11 +191,11 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Arbeitsablauf für Zusammenführungsrichtlinien aktualisiert | Plattform hat die Konfiguration der Richtlinie zum Zusammenführen zu einem neuen schrittweisen Arbeitsablauf aktualisiert. Dieser Arbeitsablauf ermöglicht es den Benutzern, Datenfragmente aus mehreren Profil-Datensätzen zusammenzuführen und die Priorität für die Zusammenführung der Daten in diesen Datensätzen festzulegen, um eine umfassende Ansicht der einzelnen Daten zu erstellen. Die Benutzer können ausgewählte XDM-Profil-Datensätze zusammenführen, indem sie die entsprechende Zusammenführungsmethode (mit Zeitstempel sortiert oder mit Dataset-Priorität) auswählen und ExperienceEvent-Datensätze an die Profil-Datasets anhängen. |
 | Vereinigung Schema Ansicht | In der Benutzeroberfläche &quot;Experience Platform&quot;können Benutzer leichter Informationen zu allen Schemas und Datensätzen finden, die zum Schema der Vereinigung beitragen, sowie zu Oberflächenattributen wie Identitäts- und Beziehungsfeldern. Diese Updates verbessern die Fehlerbehebung und die Überprüfung der ordnungsgemäßen Konfiguration von Profilen, der richtigen Zuordnung von Identitäten und der erfolgreichen Erfassung von Daten. |
 
-Weitere Informationen zum Echtzeit-Profil von Kunden, einschließlich Übungen und Best Practices für die Arbeit mit [!DNL Profile] Daten, finden Sie in der Übersicht über das [Echtzeit-Profil](../../profile/home.md)von Kunden.
+Weitere Informationen zum Echtzeit-Profil von Kunden, einschließlich Schulungen und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Profil von Kunden](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie diese Daten mithilfe der [!DNL Platform]-Dienste strukturieren, beschriften und erweitern können. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -203,15 +203,15 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!DNL Shopify] | Sie können jetzt eine Verbindung [!DNL Shopify] mit [!DNL Experience Platform] der [!DNL Flow Service] API oder der Benutzeroberfläche herstellen. See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
+| [!DNL Shopify] | Sie können [!DNL Shopify] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weitere Informationen finden Sie unter [Übersicht über den Shopify Connector](../../sources/connectors/ecommerce/shopify.md). |
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Verbindungsinformationen aktualisieren | Sie können nun die Namen, Beschreibungen und Anmeldeinformationen vorhandener Batch-Verbindungen mit der [!DNL Flow Service] API und der Benutzeroberfläche aktualisieren. Weitere Informationen finden Sie im Lernprogramm zum [Aktualisieren von Verbindungen mithilfe der Flow Service API](../../sources/tutorials/api/update.md) und zum [Bearbeiten von Kontodetails mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/monitor.md). |
-| Verbindungen löschen | Stapelverbindungen, die Fehler enthalten oder unnötig geworden sind, können jetzt mit der [!DNL Flow Service] API und der Benutzeroberfläche gelöscht werden. Weitere Informationen finden Sie im Lernprogramm zum [Löschen von Verbindungen mithilfe der Flow Service API](../../sources/tutorials/api/delete.md) und zum [Löschen von Konten über die Benutzeroberfläche](../../sources/tutorials/ui/delete-accounts.md). |
-| Hierarchische Zuordnung | Sie können eine hierarchische Quelldatei, wie JSON oder Parquet, während des Datenerfassungsprozesses Vorschau haben. Weitere Informationen finden Sie im Lernprogramm zum [Konfigurieren eines Datenflusses für Cloud-Datenspeicherung-Connectors in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
+| Verbindungsinformationen aktualisieren | Sie können nun die Namen, Beschreibungen und Anmeldeinformationen vorhandener Batch-Verbindungen mit der API und der Benutzeroberfläche aktualisieren. [!DNL Flow Service] Weitere Informationen finden Sie im Lernprogramm zu [Aktualisieren von Verbindungen mit der Flow Service API](../../sources/tutorials/api/update.md) und [Bearbeiten von Kontodetails mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/monitor.md). |
+| Verbindungen löschen | Stapelverbindungen, die Fehler enthalten oder unnötig geworden sind, können jetzt mit der API und der Benutzeroberfläche gelöscht werden. [!DNL Flow Service] Weitere Informationen finden Sie im Lernprogramm zum Löschen von Verbindungen mit der Flow Service API](../../sources/tutorials/api/delete.md) und zum Löschen von Konten mit der Benutzeroberfläche](../../sources/tutorials/ui/delete-accounts.md).[[ |
+| Hierarchische Zuordnung | Sie können eine hierarchische Quelldatei, wie JSON oder Parquet, während des Datenerfassungsprozesses Vorschau haben. Weitere Informationen finden Sie im Lernprogramm unter [Konfigurieren eines Datenflusses für Cloud-Datenspeicherung-Connectors in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 | API-Unterstützung für die Zuordnung in Streaming-Quellen | Sie können jetzt APIs verwenden, um Zuordnungsfunktionen mit Streaming-Quellen auszuführen. |
 | API-Unterstützung für benutzerdefinierte Trennzeichen für Cloud-Datenspeicherung-Quellen | Sie können jetzt nicht CSV-getrennte Datenspeicherung mit Cloud-Quellen erfassen. Sie können beliebige Trennzeichen für einzelne Spalten verwenden, z. B. Tabulatoren, Kommas, Senkrechtstriche oder Hashwerte, um einfache Dateien in einem beliebigen Format zu erfassen. |
 | Sandbox-Unterstützung für Adobe Audience Manager Connector | Der Audience Manager-Anschluss ist jetzt sandbox-fähig. Benutzer können den Connector aktivieren, um Audience Manager-Datensätze an die Sandbox ihrer Wahl zu leiten (einschließlich Nicht-Produktions-Sandboxes). Die Konfiguration ist auf eine Sandbox pro IMS Org beschränkt. |
