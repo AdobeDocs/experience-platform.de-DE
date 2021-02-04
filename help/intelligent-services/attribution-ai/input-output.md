@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
+keywords: Experience Platform;Erste Schritte;Attribution-ai;beliebte Themen;Attribution-ai-Eingabe;Attribution-ai-Ausgabe;
 solution: Experience Platform, Intelligent Services
 title: Eingabe und Ausgabe von Attribution AIS
 topic: Input and Output data for Attribution AI
@@ -7,7 +7,7 @@ description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge e
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '2075'
+source-wordcount: '2089'
 ht-degree: 4%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 4%
 
 # [!DNL Attribution AI] Eingabe und Ausgabe
 
-Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in [!DNL Attribution AI]verwendet werden.
+Im folgenden Dokument werden die verschiedenen Eingabe- und Ausgabedaten umrissen, die in [!DNL Attribution AI] verwendet werden.
 
 ## [!DNL Attribution AI] Eingabedaten
 
-[!DNL Attribution AI] verwendet [!DNL Consumer Experience Event] Daten, um algorithmische Ergebnisse zu berechnen. Weitere Informationen zu [!DNL Consumer Experience Event]finden Sie in der Dokumentation [zu Intelligent Services unter](../data-preparation.md)Vorbereiten von Daten für die Verwendung.
+[!DNL Attribution AI] verwendet  [!DNL Consumer Experience Event] Daten, um algorithmische Ergebnisse zu berechnen. Weitere Informationen zu [!DNL Consumer Experience Event] finden Sie unter [Daten für die Verwendung in der Intelligent Services-Dokumentation ](../data-preparation.md) vorbereiten.
 
 Nicht alle Spalten im Schema [!DNL Consumer Experience Event] (CEE) sind für Attribution AIS obligatorisch.
 
 >[!NOTE]
 >
-> Die folgenden 9 Spalten sind obligatorisch, zusätzliche Spalten sind optional, werden aber empfohlen/erforderlich, wenn Sie dieselben Daten für andere Adoben wie [!DNL Customer AI] und [!DNL Journey AI]verwenden möchten.
+> Die folgenden 9 Spalten sind obligatorisch, zusätzliche Spalten sind optional, werden jedoch empfohlen/erforderlich, wenn Sie dieselben Daten für andere Adoben wie [!DNL Customer AI] und [!DNL Journey AI] verwenden möchten.
 
 | Obligatorische Spalten | Benötigt für |
 | --- | --- |
@@ -60,7 +60,7 @@ Die folgenden Spalten sind nicht erforderlich, es wird jedoch empfohlen, sie in 
 
 Attribution AI erfordert historische Daten als Eingabe für Modellschulungen. Die erforderliche Datendauer wird hauptsächlich von zwei Hauptfaktoren bestimmt: Schulungsfenster und Lookback-Fenster. Die Eingabe mit kürzeren Schulungsfenstern ist anfälliger für aktuelle Trends, während längere Schulungsfenster stabilere und genauere Modelle erzeugen. Es ist wichtig, das Ziel mit historischen Daten zu modellieren, die Ihre Geschäftsziele am besten widerspiegeln.
 
-In der Konfiguration [des](./user-guide.md#training-window) Schulungsfensters werden Ereignis zur Konvertierung für Modellschulungen basierend auf der Häufigkeit des Auftretens Filter. Derzeit beträgt das Schulungsfenster mindestens 1 Quartal (90 Tage). Das [Lookback-Fenster](./user-guide.md#lookback-window) bietet einen Zeitraum, der angibt, wie viele Tage vor dem Konversions-Ereignis-Touchpoints im Zusammenhang mit diesem Konversions-Ereignis eingeschlossen werden sollten. Diese beiden Konzepte bestimmen zusammen die Menge der Eingabedaten (gemessen nach Tagen), die für eine Anwendung erforderlich sind.
+Die [Schulungsfenster-Konfiguration](./user-guide.md#training-window) Filter-Konvertierungseinstellungen, die für die Modellschulung auf der Grundlage der Ereigniszeit festgelegt sind. Derzeit beträgt das Schulungsfenster mindestens 1 Quartal (90 Tage). Das [Lookback-Fenster](./user-guide.md#lookback-window) bietet einen Zeitraum, der angibt, wie viele Tage vor dem Konversions-Ereignis-Touchpoints im Zusammenhang mit diesem Konversions-Ereignis eingeschlossen werden sollen. Diese beiden Konzepte bestimmen zusammen die Menge der Eingabedaten (gemessen nach Tagen), die für eine Anwendung erforderlich sind.
 
 Standardmäßig definiert Attribution AI das Schulungsfenster als die letzten 2 Quartale (6 Monate) und das Lookback-Fenster als 56 Tage. Anders ausgedrückt, berücksichtigt das Modell alle definierten Konvertierungsmodelle, die in den letzten zwei Quartalen aufgetreten sind, und sucht nach allen Touchpoints, die innerhalb von 56 Tagen vor dem/den zugehörigen Konversions-Ereignissen aufgetreten sind.
 
@@ -89,7 +89,7 @@ Attribution AI gibt Folgendes aus:
 
 ### Rohe granulare Punktzahlen {#raw-granular-scores}
 
-Attribution AI gibt Zuordnungswerte auf möglichst granularer Ebene aus, sodass Sie die Ergebnisse nach jeder beliebigen Ergebnisspalte ausschneiden und würfeln können. Um diese Ergebnisse in der Benutzeroberfläche Ansicht, lesen Sie den Abschnitt zum [Anzeigen von Rohwertpfaden](#raw-score-path). Um die Punktzahlen mit der API herunterzuladen, besuchen Sie die [Download-Punktzahlen im Attribution AI](./download-scores.md) Dokument.
+Attribution AI gibt Zuordnungswerte auf möglichst granularer Ebene aus, sodass Sie die Ergebnisse nach jeder beliebigen Ergebnisspalte ausschneiden und würfeln können. Um diese Ergebnisse in der Benutzeroberfläche Ansicht, lesen Sie den Abschnitt [Anzeigen von Rohwertpfaden](#raw-score-path). Um die Punktzahlen mit der API herunterzuladen, besuchen Sie das Dokument [Herunterladen von Punktzahlen in Attribution AI](./download-scores.md).
 
 >[!NOTE]
 >
@@ -104,43 +104,43 @@ Die folgende Tabelle zeigt die Schema-Felder in der Rohwertbeispiel-Ausgabe:
 | --- | --- | --- |
 | timestamp (DateTime) | False | Der Zeitpunkt, zu dem ein Konversions-Ereignis oder eine Beobachtung aufgetreten ist. <br> **Beispiel:** 2020-06-09T00:01:51.000Z |
 | identityMap (Map) | True | identityMap des Benutzers ähnlich dem CEE XDM-Format. |
-| eventType (String) | True | The primary event type for this time-series record. <br> **Beispiel:** &quot;Bestellung&quot;, &quot;Kauf&quot;, &quot;Besuch&quot; |
-| eventMergeId (String) | True | Eine ID zum Korrelieren oder Zusammenführen mehrerer [!DNL Experience Events] Elemente, die im Wesentlichen dasselbe Ereignis sind oder zusammengeführt werden sollten. Dieser soll vor der Aufnahme vom Datenhersteller ausgefüllt werden. <br> **Beispiel:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| eventType (String) | true | Der primäre Ereignistyp für diesen Zeitreihendatensatz. <br> **Beispiel:** &quot;Bestellung&quot;, &quot;Kauf&quot;, &quot;Besuch&quot; |
+| eventMergeId (String) | true | Eine ID, die mehrere [!DNL Experience Events] miteinander korreliert oder zusammenführt, die im Wesentlichen dasselbe Ereignis sind oder zusammengeführt werden sollten. Dieser soll vor der Aufnahme vom Datenhersteller ausgefüllt werden. <br> **Beispiel:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id (Zeichenfolge) | False | Eine eindeutige Kennung für das Ereignis der Zeitreihen. <br> **Beispiel:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _tenantId (Objekt) | False | Der Container des Objekts auf oberster Ebene, der Ihrer Tent-ID entspricht. <br> **Beispiel:** _atsdsnrmmsv2 |
 | your_Schema_name (Objekt) | False | Ergebniszeile mit Konversions-Ereignis mit allen damit verknüpften Touchpoint-Ereignissen und deren Metadaten. <br> **Beispiel:** Attribution AI Scores - Modellname__2020 |
-| segmentation (Zeichenfolge) | True | Konversionssegment wie die Geo-Segmentierung, auf dem das Modell basiert. Wenn keine Segmente vorhanden sind, ist das Segment mit dem von convertName identisch. <br> **Beispiel:** ORDER_US |
-| convertName (String) | True | Name der Konvertierung, die während der Einrichtung konfiguriert wurde. <br> **Beispiel:** Bestellung, Interessent, Besuch |
+| segmentation (Zeichenfolge) | true | Konversionssegment wie die Geo-Segmentierung, auf dem das Modell basiert. Wenn keine Segmente vorhanden sind, ist das Segment mit dem von convertName identisch. <br> **Beispiel:** ORDER_US |
+| convertName (String) | true | Name der Konvertierung, die während der Einrichtung konfiguriert wurde. <br> **Beispiel:** Bestellung, Interessent, Besuch |
 | Konversion (Objekt) | False | Konvertierungsmetadatenspalten. |
-| dataSource (String) | True | Globale eindeutige Identifizierung einer Datenquelle. <br> **Beispiel:** Adobe Analytics |
-| eventSource (String) | True | Die Quelle, an der das eigentliche Ereignis aufgetreten ist. <br> **Beispiel:** Adobe.com |
-| eventType (String) | True | The primary event type for this time-series record. <br> **Beispiel:** Bestellung |
-| geo (Zeichenfolge) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Beispiel:** US |
-| priceTotal (Dublette) | True | Durch die Umrechnung erzielte Einnahmen <br> **Beispiel:** 99,9 |
-| product (Zeichenfolge) | True | Die XDM-ID des Produkts. <br> **Beispiel:** RX 1080 ti |
-| productType (Zeichenfolge) | True | Der Anzeigename für das Produkt, der dem Benutzer für diese Ansicht angezeigt wird. <br> **Beispiel:** Gpus |
-| quantity (Integer) | True | Während der Konvertierung gekaufte Menge <br> **Beispiel:** 1 1080 ti |
-| receiveTimestamp (DateTime) | True | Zeitstempel der Konvertierung erhalten. <br> **Beispiel:** 2020-06-09T00:01:51.000Z |
-| skuId (Zeichenfolge) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Beispiel:** MJ-03-XS-Black |
-| timestamp (DateTime) | True | Zeitstempel der Konversion. <br> **Beispiel:** 2020-06-09T00:01:51.000Z |
-| passThrough (Objekt) | True | Zusätzliche Score-Datenset-Spalten, die vom Benutzer beim Konfigurieren des Modells angegeben werden. |
-| commerce_order_purchaseCity (Zeichenfolge) | True | Zusätzliche Datensatzspalte für die Punktzahl. <br> **Beispiel:** Ort: San Jose |
+| dataSource (String) | true | Globale eindeutige Identifizierung einer Datenquelle. <br> **Beispiel:** Adobe Analytics |
+| eventSource (String) | true | Die Quelle, an der das eigentliche Ereignis aufgetreten ist. <br> **Beispiel:** Adobe.com |
+| eventType (String) | true | Der primäre Ereignistyp für diesen Zeitreihendatensatz. <br> **Beispiel:** Reihenfolge |
+| geo (Zeichenfolge) | true | Der geografische Ort, an dem die Konvertierung bereitgestellt wurde `placeContext.geo.countryCode`. <br> **Beispiel:** US |
+| priceTotal (Dublette) | true | Durch die Umrechnung erzielter Umsatz <br> **Beispiel:** 99.9 |
+| product (Zeichenfolge) | true | Die XDM-ID des Produkts. <br> **Beispiel:** RX 1080 ti |
+| productType (Zeichenfolge) | true | Der Anzeigename für das Produkt, der dem Benutzer für diese Ansicht angezeigt wird. <br> **Beispiel:** GPUS |
+| quantity (Integer) | true | Während der Konvertierung gekaufte Menge <br> **Beispiel:** 1 1080 ti |
+| receiveTimestamp (DateTime) | true | Zeitstempel der Konvertierung erhalten. <br> **Beispiel:** 2020-06-09T00:01:51.000Z |
+| skuId (Zeichenfolge) | true | Bestandsabwicklungseinheit (SKU), die eindeutige Kennung für ein vom Anbieter definiertes Produkt. <br> **Beispiel:** MJ-03-XS-Black |
+| timestamp (DateTime) | true | Zeitstempel der Konversion. <br> **Beispiel:** 2020-06-09T00:01:51.000Z |
+| passThrough (Objekt) | true | Zusätzliche Score-Datenset-Spalten, die vom Benutzer beim Konfigurieren des Modells angegeben werden. |
+| commerce_order_purchaseCity (Zeichenfolge) | true | Zusätzliche Datensatzspalte für die Punktzahl. <br> **Beispiel:** city: San Jose |
 | customerProfile (Objekt) | False | Identitätsdetails des Benutzers, der zum Erstellen des Modells verwendet wird. |
 | identity (Objekt) | False | Enthält die Details des Benutzers, der zum Erstellen des Modells verwendet wird, z. B. `id` und `namespace`. |
-| id (Zeichenfolge) | True | Identitäts-ID des Benutzers, z. B. Cookie-ID oder AAID oder MCID usw. <br> **Beispiel:** 17348762725408656344688320891369597404 |
-| namensraum (Zeichenfolge) | True | Identitäts-Namensraum, der zum Erstellen der Pfade und damit des Modells verwendet wird. <br> **Beispiel:** aaid |
-| touchpointsDetail (Object-Array) | True | Die Liste der Touchpoint-Details, die zur nach Touchpoint-Vorkommen oder Zeitstempel sortierten Konvertierung führen. |
-| touchpointName (Zeichenfolge) | True | Name des Touchpoints, der während der Einrichtung konfiguriert wurde. <br> **Beispiel:** PAID_SEARCH_CLICK |
-| scores (Objekt) | True | Touchpoint-Beitrag zu dieser Konversion als Ergebnis. Weitere Informationen zu den in diesem Objekt erzeugten Ergebnissen finden Sie im Abschnitt [Aggregierte Zuordnungswerte](#aggregated-attribution-scores) . |
-| touchPoint (Objekt) | True | Touchpoint-Metadaten. Weitere Informationen zu den in diesem Objekt erzeugten Ergebnissen finden Sie im Abschnitt zu [aggregierten Ergebnissen](#aggregated-scores) . |
+| id (Zeichenfolge) | true | Identitäts-ID des Benutzers, z. B. Cookie-ID oder AAID oder MCID usw. <br> **Beispiel:** 17348762725408656344688320891369597404 |
+| namensraum (Zeichenfolge) | true | Identitäts-Namensraum, der zum Erstellen der Pfade und damit des Modells verwendet wird. <br> **Beispiel:** aid |
+| touchpointsDetail (Object-Array) | true | Die Liste der Touchpoint-Details, die zur nach Touchpoint-Vorkommen oder Zeitstempel sortierten Konvertierung führen. |
+| touchpointName (Zeichenfolge) | true | Name des Touchpoints, der während der Einrichtung konfiguriert wurde. <br> **Beispiel:** PAID_SEARCH_CLICK |
+| scores (Objekt) | true | Touchpoint-Beitrag zu dieser Konversion als Ergebnis. Weitere Informationen zu den in diesem Objekt erzeugten Ergebnissen finden Sie im Abschnitt [Aggregierte Zuordnungswerte](#aggregated-attribution-scores). |
+| touchPoint (Objekt) | true | Touchpoint-Metadaten. Weitere Informationen zu den in diesem Objekt erzeugten Ergebnissen finden Sie im Abschnitt [Aggregierte Werte](#aggregated-scores). |
 
 ### Anzeigen von Rohwertpfaden (UI) {#raw-score-path}
 
-Sie können den Pfad zu Ihren Rohwerten in der Benutzeroberfläche Ansicht haben. Beginn durch Auswahl von **[!UICONTROL Schemas]** in der Benutzeroberfläche &quot;Plattform&quot;suchen und wählen Sie dann auf der Registerkarte &quot; **[!UICONTROL Durchsuchen]** &quot;das Schema für die Zuordnungs-AI-Bewertungen aus.
+Sie können den Pfad zu Ihren Rohwerten in der Benutzeroberfläche Ansicht haben. Beginn durch Auswahl von **[!UICONTROL Schema]** in der Plattform-Benutzeroberfläche suchen und wählen Sie dann Ihr Schema für die Zuordnungs-AI-Ergebnisse aus der Registerkarte **[!UICONTROL Durchsuchen]**.
 
 ![Schema auswählen](./images/input-output/schemas_browse.png)
 
-Wählen Sie anschließend im Fenster &quot; **[!UICONTROL Struktur]** &quot;der Benutzeroberfläche ein Feld aus. Die Registerkarte &quot; **[!UICONTROL Feldeigenschaften]** &quot;wird geöffnet. Innerhalb der **[!UICONTROL Feldeigenschaften]** ist das Pfadfeld, das Ihren Rohwerten zugeordnet ist.
+Wählen Sie als Nächstes ein Feld im Fenster **[!UICONTROL Struktur]** der Benutzeroberfläche aus. Die Registerkarte **[!UICONTROL Feldeigenschaften]** wird geöffnet. Innerhalb von **[!UICONTROL Feldeigenschaften]** ist das Pfadfeld, das Ihren Rohwerten zugeordnet ist.
 
 ![Schema auswählen](./images/input-output/field_properties.png)
 
@@ -171,7 +171,7 @@ Die nachstehende Tabelle enthält weitere Details zu den einzelnen Zuordnungswer
 
 **Referenz zur Rohbewertung (Zuordnungswerte)**
 
-Die nachstehende Tabelle ordnet die Zuordnungswerte den Rohwerten zu. Wenn Sie Ihre Rohwerte herunterladen möchten, finden Sie entsprechende [Downloads in der Attribution AI](./download-scores.md) Dokumentation.
+Die nachstehende Tabelle ordnet die Zuordnungswerte den Rohwerten zu. Wenn Sie Ihre Rohwerte herunterladen möchten, lesen Sie die Dokumentation [Download-Ergebnisse in Attribution AI](./download-scores.md).
 
 | Zuordnungswerte | Referenzspalte für Rohwerte |
 | --- | --- |
@@ -190,23 +190,23 @@ Aggregierte Punktzahlen können im CSV-Format von der Plattform-Benutzeroberflä
 | Spaltenname | Constraint | Nullable | Beschreibung |
 | --- | --- | --- | --- |
 | customerevents_date (DateTime) | Benutzerdefiniertes und festes Format | False | Ereignis des Kunden im Format JJJJ-MM-TT. <br> **Beispiel**: 2016-05-02 |
-| mediatouchpoints_date (DateTime) | Benutzerdefiniertes und festes Format | True | Media Touchpoint Date im Format JJJJ-MM-TT <br> **Beispiel**: 2017-04-21 |
+| mediatouchpoints_date (DateTime) | Benutzerdefiniertes und festes Format | true | Media Touchpoint Date im Format JJJJ-MM-TT <br> **Beispiel**: 2017-04-21 |
 | segment (String) | Berechnet | False | Konversionssegment, z. B. Geo-Segmentierung, auf dem das Modell basiert. Wenn keine Segmente vorhanden sind, ist das Segment identisch mit dem Wert &quot;conversion_scope&quot;. <br> **Beispiel**: ORDER_AMER |
 | convert_scope (Zeichenfolge) | Benutzerdefiniert | False | Name der vom Benutzer konfigurierten Konvertierung. <br> **Beispiel**: BESTELLUNG |
-| touchpoint_scope (Zeichenfolge) | Benutzerdefiniert | True | Name des vom Benutzer konfigurierten Touchpoints <br> **Beispiel**: PAID_SEARCH_CLICK |
-| product (Zeichenfolge) | Benutzerdefiniert | True | The XDM identifier of the product. <br> **Beispiel**: CC |
-| product_type (Zeichenfolge) | Benutzerdefiniert | True | Der Anzeigename für das Produkt, der dem Benutzer für diese Ansicht angezeigt wird. <br> **Beispiel**: Gpus, Laptops |
-| geo (Zeichenfolge) | Benutzerdefiniert | True | The geographic location where the conversion was delivered (placeContext.geo.countryCode) <br> **Beispiel**: US |
-| ereignis_type (Zeichenfolge) | Benutzerdefiniert | True | The primary event type for this time-series record <br> **Beispiel**: Gebührenpflichtige Konversion |
+| touchpoint_scope (Zeichenfolge) | Benutzerdefiniert | true | Name des Touchpoints, wie vom Benutzer <br> konfiguriert **Beispiel**: PAID_SEARCH_CLICK |
+| product (Zeichenfolge) | Benutzerdefiniert | true | Die XDM-ID des Produkts. <br> **Beispiel**: CC |
+| product_type (Zeichenfolge) | Benutzerdefiniert | true | Der Anzeigename für das Produkt, der dem Benutzer für diese Ansicht angezeigt wird. <br> **Beispiel**: Gpus, Laptops |
+| geo (Zeichenfolge) | Benutzerdefiniert | true | Der geografische Speicherort, an dem die Konvertierung bereitgestellt wurde (placeContext.geo.countryCode) <br> **Beispiel**: US |
+| ereignis_type (Zeichenfolge) | Benutzerdefiniert | true | Der primäre Ereignistyp für diesen Zeitreihendatensatz <br> **Beispiel**: Gebührenpflichtige Konversion |
 | media_type (Zeichenfolge) | ENUM | False | Beschreibt, ob der Medientyp bezahlt, im Besitz oder verdient ist. <br> **Beispiel**: BEZAHLTE, EIGENTÜMER |
-| kanal (Zeichenfolge) | ENUM | False | Die `channel._type` Eigenschaft, die verwendet wird, um eine grobe Klassifizierung von Kanälen mit ähnlichen Eigenschaften in [!DNL Consumer Experience Event] XDM bereitzustellen. <br> **Beispiel**: SUCHE |
-| action (Zeichenfolge) | ENUM | False | Die `mediaAction` Eigenschaft wird verwendet, um eine Art Erlebnis-Ereignis-Medienaktion bereitzustellen. <br> **Beispiel**: KLICKEN |
-| kampagne_Gruppe (Zeichenfolge) | Benutzerdefiniert | True | Name der Kampagne, in der mehrere Kampagnen gruppiert sind, z. B. &quot;50%_DISCOUNT&quot;. <br> **Beispiel**: KOMMERZIELL |
-| kampagne_name (Zeichenfolge) | Benutzerdefiniert | True | Name der Kampagne, die zur Identifizierung der Marketing-Kampagne verwendet wird, z. B. &#39;50%_DISCOUNT_USA&#39; oder &#39;50%_DISCOUNT_ASIA&#39;. <br> **Beispiel**: Erntedankverkauf |
+| kanal (Zeichenfolge) | ENUM | False | Die `channel._type`-Eigenschaft, mit der eine grobe Klassifizierung von Kanälen mit ähnlichen Eigenschaften in [!DNL Consumer Experience Event] XDM bereitgestellt wird. <br> **Beispiel**: SUCHE |
+| action (Zeichenfolge) | ENUM | False | Die `mediaAction`-Eigenschaft wird verwendet, um eine Art von Erlebnis-Ereignis-Medienaktion bereitzustellen. <br> **Beispiel**: KLICKEN |
+| kampagne_Gruppe (Zeichenfolge) | Benutzerdefiniert | true | Name der Kampagne, in der mehrere Kampagnen gruppiert sind, z. B. &quot;50%_DISCOUNT&quot;. <br> **Beispiel**: KOMMERZIELL |
+| kampagne_name (Zeichenfolge) | Benutzerdefiniert | true | Name der Kampagne, die zur Identifizierung der Marketing-Kampagne verwendet wird, z. B. &#39;50%_DISCOUNT_USA&#39; oder &#39;50%_DISCOUNT_ASIA&#39;. <br> **Beispiel**: Erntedankverkauf |
 
 **Referenz zur Rohbewertung (aggregiert)**
 
-Die nachstehende Tabelle ordnet die aggregierten Ergebnisse den Rohwerten zu. Wenn Sie Ihre Rohwerte herunterladen möchten, finden Sie entsprechende [Downloads in der Attribution AI](./download-scores.md) Dokumentation. Um die Rohwertpfade in der Benutzeroberfläche Ansicht, besuchen Sie den Abschnitt zum [Anzeigen von Rohwertpfaden](#raw-score-path) in diesem Dokument.
+Die nachstehende Tabelle ordnet die aggregierten Ergebnisse den Rohwerten zu. Wenn Sie Ihre Rohwerte herunterladen möchten, lesen Sie die Dokumentation [Download-Ergebnisse in Attribution AI](./download-scores.md). Um die Rohwertpfade aus der Benutzeroberfläche Ansicht, besuchen Sie den Abschnitt [Rohwertpfade](#raw-score-path) in diesem Dokument.
 
 | Spaltenname | Referenzspalte &quot;Rohdaten&quot; |
 | --- | --- |
@@ -228,4 +228,4 @@ Die nachstehende Tabelle ordnet die aggregierten Ergebnisse den Rohwerten zu. We
 
 ## Nächste Schritte {#next-steps}
 
-Once you have prepared your data and have all your credentials and schemas in place, start by following the [Attribution AI user guide](./user-guide.md). Dieser Leitfaden führt Sie durch das Erstellen einer Instanz für Attribution AI.
+Nachdem Sie Ihre Daten vorbereitet haben und alle Ihre Anmeldedaten und Schema vorhanden sind, führen Sie den Beginn im [Attribution AI Benutzerhandbuch](./user-guide.md) durch. Dieser Leitfaden führt Sie durch das Erstellen einer Instanz für Attribution AI.
