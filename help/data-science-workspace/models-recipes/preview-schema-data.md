@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
+keywords: Experience Platform;Vorschau Schema Data;Data Science Workspace;beliebte Themen
 solution: Experience Platform
 title: Vorschau auf Schemas und Datensätze
 topic: tutorial
@@ -8,15 +8,15 @@ description: Im folgenden Dokument wird die Vorschau von Schemas und Datensätze
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 70%
+source-wordcount: '237'
+ht-degree: 67%
 
 ---
 
 
 # Vorschau auf Schemas und Datensätze
 
-Nach erfolgreichem Abschluss des Bootstrap-Skripts aus dem Tutorial zum [Erstellen des Einzelhandelsschemas und -datensatzes](./create-retails-sales-dataset.md). Output schemas and datasets can be viewed on [!DNL Experience Platform]. Gehen Sie zur Anzeige der Schemas und Datensätze wie folgt vor:
+Nach erfolgreichem Abschluss des Bootstrap-Skripts aus dem Tutorial zum [Erstellen des Einzelhandelsschemas und -datensatzes](./create-retails-sales-dataset.md). Output-Schema und -Datensätze können unter [!DNL Experience Platform] angezeigt werden. Gehen Sie zur Anzeige der Schemas und Datensätze wie folgt vor:
 
 1. Klicken Sie in der linken Navigationsspalte auf den Link **[!UICONTROL Schemas]** und suchen Sie das vom Bootstrap-Skript erstellte Eingabeschema. Der Name des Schemas entspricht dem, der im vorherigen Schritt unter `config.yaml` definiert wurde. Zeigen Sie die Schemadetails und deren Komposition an, indem Sie darauf klicken.
 
@@ -32,10 +32,10 @@ Nach erfolgreichem Abschluss des Bootstrap-Skripts aus dem Tutorial zum [Erstell
 
 ## Nächste Schritte
 
-You have now successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
+Sie haben nun mit dem bereitgestellten Bootstrap-Skript erfolgreich Musterdaten zum Einzelhandelsverkauf in [!DNL Experience Platform] erfasst.
 
 So arbeiten Sie weiter mit den aufgenommenen Daten:
 - [Daten mit Jupyter-Notebooks analysieren](../jupyterlab/analyze-your-data.md)
-   - Use Jupyter notebooks in [!DNL Data Science Workspace] to access, explore, visualize, and understand your data.
+   - Verwenden Sie Jupyter-Notebooks in [!DNL Data Science Workspace], um auf Ihre Daten zuzugreifen, sie zu untersuchen, darzustellen und sie zu verstehen.
 - [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md)
-   - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.
+   - Folgen Sie diesem Lernprogramm, um zu erfahren, wie Sie Ihr eigenes Modell in [!DNL Data Science Workspace] durch Verpacken von Quelldateien in einer wichtigen Recipe-Datei bringen.
