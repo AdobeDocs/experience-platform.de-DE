@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
+keywords: Experience Platform;Startseite;beliebte Themen;Datenerfassung;Datenposition;Datenposition;Data Management;Data Management;Lineage;Linie;Batch;Stapel;Ingetierte Daten
 solution: Experience Platform
 title: Übersicht über die Adobe Experience Platform-Dateneinbindung
 topic: overview
@@ -7,46 +7,46 @@ description: In diesem Dokument werden die drei Hauptwege für die Dateneinbindu
 translation-type: tm+mt
 source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 17%
+source-wordcount: '463'
+ht-degree: 16%
 
 ---
 
 
 # Datenerfassung – Übersicht
 
-Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Adobe Experience Platform Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
+Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Adobe Experience Platform Data Ingestion stellt die verschiedenen Methoden dar, mit denen [!DNL Platform] Daten aus diesen Quellen erfasst und wie diese Daten im Data Lake für die Verwendung durch nachgelagerte [!DNL Platform]-Dienste beibehalten werden.
 
-In diesem Dokument werden die drei Hauptwege für die Dateneingabe vorgestellt [!DNL Platform], mit Links zu den jeweiligen Übersichtsdokumenten.
+In diesem Dokument werden die drei Hauptwege für die Erfassung von Daten in [!DNL Platform] mit Links zu den jeweiligen Übersichtsdokumenten vorgestellt.
 
 ## Batch-Erfassung
 
-Batch ingestion allows you to ingest data into [!DNL Experience Platform] as batch files. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Nach der Erfassung stellen Batches Metadaten bereit, die die Anzahl der erfolgreich erfassten Datensätze sowie alle fehlgeschlagenen Datensätze und zugehörigen Fehlermeldungen beschreiben.
+Mit der Stapelverarbeitung können Sie Daten als Stapeldateien in [!DNL Experience Platform] erfassen. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Nach der Erfassung stellen Batches Metadaten bereit, die die Anzahl der erfolgreich erfassten Datensätze sowie alle fehlgeschlagenen Datensätze und zugehörigen Fehlermeldungen beschreiben.
 
 Manuell hochgeladene Datendateien wie flache CSV-Dateien (XDM-Schemas zugeordnet) und Parquet-Datenbilder müssen mit dieser Methode erfasst werden.
 
-See the [batch ingestion overview](./batch-ingestion/overview.md) for more information.
+Weitere Informationen finden Sie unter [Überblick über die Stapelverarbeitung](./batch-ingestion/overview.md).
 
 ## Streaming-Erfassung
 
-Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real-time. [!DNL Platform] unterstützt die Verwendung von Dateneinlässen zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake beibehalten werden. Dateneingänge können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
+Mit der Streaming-Erfassung können Sie Daten von client- und serverseitigen Geräten in Echtzeit an [!DNL Experience Platform] senden. [!DNL Platform] unterstützt die Verwendung von Dateneinlässen zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake beibehalten werden. Dateneingänge können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
 
-See the [streaming ingestion overview](./streaming-ingestion/overview.md) for more information.
+Weitere Informationen finden Sie unter [Streaming-Erfassungsübersicht](./streaming-ingestion/overview.md).
 
 ## Quellen
 
 [!DNL Experience Platform] ermöglicht es Ihnen, Quellverbindungen zu verschiedenen Datenanbietern einzurichten. Mit diesen Verbindungen können Sie sich bei Ihren externen Datenquellen authentifizieren, Zeiten für die Erfassung festlegen und den Erfassungsdurchsatz verwalten.
 
-Source connections can be configured to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon] S3, FTP servers, and SFTP servers), and third-party CRM systems (such as [!DNL Microsoft Dynamics] and [!DNL Salesforce]).
+Quellverbindungen können so konfiguriert werden, dass Daten aus anderen Anwendungen der Adobe (z. B. Adobe Analytics und Adobe Audience Manager), Cloud-Datenspeicherung von Drittanbietern (z. B. [!DNL Azure Blob], [!DNL Amazon] S3-, FTP- und SFTP-Server) und CRM-Systemen von Drittanbietern (z. B. [!DNL Microsoft Dynamics] und [!DNL Salesforce]) erfasst werden.
 
-See the [Sources overview](../sources/home.md) for more information.
+Weitere Informationen finden Sie unter [Übersicht über Quellen](../sources/home.md).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Dieses Dokument gab eine kurze Einführung zu den verschiedenen Aspekten von [!DNL Data Ingestion] in [!DNL Experience Platform]. Bitte lesen Sie weiterhin die Übersichtsdokumentation für jede Erfassungsmethode, um sich mit ihren verschiedenen Fähigkeiten, Anwendungsfällen und Best Practices vertraut zu machen. Sie können Ihr Lernen auch ergänzen, indem Sie sich das unten stehende Video zur Erfassung ansehen. Weitere Informationen zum [!DNL Experience Platform] Verfolgen der Metadaten für erfasste Datensätze finden Sie in der Übersicht über den [Katalogdienst](../catalog/home.md).
+Dieses Dokument bietet eine kurze Einführung zu den verschiedenen Aspekten von [!DNL Data Ingestion] in [!DNL Experience Platform]. Bitte lesen Sie weiterhin die Übersichtsdokumentation für jede Erfassungsmethode, um sich mit ihren verschiedenen Fähigkeiten, Anwendungsfällen und Best Practices vertraut zu machen. Sie können Ihr Lernen auch ergänzen, indem Sie sich das unten stehende Video zur Erfassung ansehen. Weitere Informationen dazu, wie [!DNL Experience Platform] die Metadaten nach erfassten Datensätzen verfolgt, finden Sie unter [Übersicht über den Katalogdienst](../catalog/home.md).
 
 >[!WARNING]
 >
->Der Begriff &quot;Einheitliches Profil&quot;, der im folgenden Video verwendet wird, ist veraltet. Die Begriffe [!DNL "Profile"] oder [!DNL "Real-time Customer Profile"] sind die richtigen Begriffe, die in der [!DNL Experience Platform] Dokumentation verwendet werden. Die neuesten Funktionen finden Sie in der Dokumentation.
+>Der Begriff &quot;Einheitliches Profil&quot;, der im folgenden Video verwendet wird, ist veraltet. Die Begriffe [!DNL "Profile"] oder [!DNL "Real-time Customer Profile"] sind die korrekten Begriffe, die in der [!DNL Experience Platform]-Dokumentation verwendet werden. Die neuesten Funktionen finden Sie in der Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
