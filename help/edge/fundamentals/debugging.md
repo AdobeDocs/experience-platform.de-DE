@@ -3,12 +3,12 @@ title: Debugging
 seo-title: Adobe Experience Platform Web SDK – Debugging
 description: Erfahren Sie, wie Sie das Debugging im Experience Platform Web SDK aktivieren
 seo-description: Erfahren Sie, wie Sie das Debugging im Experience Platform Web SDK aktivieren
-keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
+keywords: Debugging von Web SDK;Debugging;Konfigurieren;Befehl;Debugging-Befehl;edgeConfigId;setDebug;debugEnabled;Debuggen;
 translation-type: tm+mt
 source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 92%
+source-wordcount: '397'
+ht-degree: 89%
 
 ---
 
