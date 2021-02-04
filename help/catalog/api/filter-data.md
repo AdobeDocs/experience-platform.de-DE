@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
+keywords: Experience Platform;Startseite;beliebte Themen;Filter;Filter;Filterdaten;Daten filtern;Datumsbereich
 solution: Experience Platform
 title: Catalog-Daten mithilfe von Abfrageparametern filtern
 topic: developer guide
@@ -7,17 +7,17 @@ description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mi
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2077'
-ht-degree: 90%
+source-wordcount: '2090'
+ht-degree: 89%
 
 ---
 
 
-# Filter [!DNL Catalog] data using query parameters
+# Filtern von [!DNL Catalog]-Daten mithilfe von Abfragen
 
-The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
+Die [!DNL Catalog Service]-API ermöglicht das Filtern von Antwortdaten mithilfe von Anforderungsparametern für die Abfrage. Zu den Best Practices für [!DNL Catalog] gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Belastung der API verringern und die Gesamtleistung verbessern.
 
-This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren.[!DNL Catalog] For more general information on [!DNL Catalog Service], see the [[!DNL Catalog] overview](../home.md).
+In diesem Dokument werden die am häufigsten verwendeten Methoden zum Filtern von [!DNL Catalog]-Objekten in der API beschrieben. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren.[!DNL Catalog] Weitere allgemeine Informationen zu [!DNL Catalog Service] finden Sie unter [[!DNL Catalog] overview](../home.md).
 
 ## Zurückgegebene Objekte begrenzen
 
@@ -37,7 +37,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | Eine Ganzzahl, die die Zahl der zurückzugebenden Objekte angibt (im Bereich von 1 bis 100). |
 
 **Anfrage**
@@ -105,9 +105,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | Der Name eines Attributs, das im Antworttext enthalten sein soll. |
-| `{OBJECT_ID}` | The unique identifier of a specific [!DNL Catalog] object being retrieved. |
+| `{OBJECT_ID}` | Der eindeutige Bezeichner eines bestimmten [!DNL Catalog]-Objekts, das abgerufen wird. |
 
 **Anfrage**
 
@@ -124,7 +124,7 @@ curl -X GET \
 
 **Antwort**
 
-A successful response returns a list of [!DNL Catalog] objects with only the requested properties displayed.
+Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog]-Objekten zurück, wobei nur die angeforderten Eigenschaften angezeigt werden.
 
 ```json
 {
@@ -206,7 +206,7 @@ Bei Verwendung von Tags sind einige Einschränkungen zu beachten:
 * Die einzigen Catalog-Objekte, die derzeit Tags unterstützen, sind Datensätze, Batches und Verbindungen.
 * Tag-Namen sind für Ihre IMS-Organisation eindeutig.
 * Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig „adobe“ vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
-* The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
+* Die folgenden Tag-Namen sind für die Verwendung in [!DNL Experience Platform] reserviert und können daher nicht als Tag-Name für Ihr Unternehmen deklariert werden:
    * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-time Customer Profile]](../../profile/home.md) erfasst werden sollen.
    * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Identity Service]](../../identity-service/home.md) erfasst werden sollen.
 
@@ -262,7 +262,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | Der Name des Tags, nach dem gefiltert werden soll. |
 | `{TAG_VALUE}` | Der Wert des Tags, nach dem gefiltert werden soll. Unterstützt Platzhalterzeichen (`*`). |
 
@@ -333,7 +333,7 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleT
 
 ## Nach Datumsbereich filtern
 
-Some endpoints in the [!DNL Catalog] API have query parameters that allow for ranged queries, most often in the case of dates.
+Einige Endpunkte in der [!DNL Catalog]-API verfügen über Abfrage-Parameter, die für Abfragen in einem bestimmten Bereich geeignet sind, meist bei Datumsangaben.
 
 **API-Format**
 
@@ -360,7 +360,7 @@ curl -X GET \
 
 **Antwort**
 
-A successful response contains a list of [!DNL Catalog] objects that fall within the specified date range. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog]-Objekten, die innerhalb des angegebenen Datumsbereichs liegen. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -428,7 +428,7 @@ curl -X GET \
 
 **Antwort**
 
-A successful response contains a list of [!DNL Catalog] objects that are sorted according to the `orderBy` parameter. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog]-Objekten, die gemäß dem Parameter `orderBy` sortiert werden. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -497,7 +497,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | Der Name der Eigenschaft, nach deren Wert Sie filtern möchten. |
 | `{VALUE}` | Ein Eigenschaftswert, der bestimmt, welche Ergebnisse ein- oder ausgeschlossen werden (je nach Abfrage). |
 
@@ -573,7 +573,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | Ein bedingter Ausdruck, der angibt, welche Eigenschaft abgefragt und wie ihr Wert ausgewertet werden soll. Nachfolgend finden Sie verschiedene Beispiele. |
 
 Der Wert des `property`-Parameters unterstützt unterschiedliche Typen von bedingten Ausdrücken. Folgende Tabelle enthält die grundlegende Syntax für unterstützte Ausdrücke:
