@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
+keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;Jupyterlab
 solution: Experience Platform
 title: JupyterLab-Benutzerhandbuch
 topic: Overview
@@ -7,7 +7,7 @@ description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project J
 translation-type: tm+mt
 source-git-commit: d5e7679ac41fd476c77a98920d7f7aeaefacec6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1950'
 ht-degree: 72%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 72%
 
 [!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [Project Jupyter](https://jupyter.org/) und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten.
 
-This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
+In diesem Dokument erhalten Sie einen Überblick über [!DNL JupyterLab] und die zugehörigen Funktionen sowie Anweisungen zum Durchführen gemeinsamer Aktionen.
 
-## [!DNL JupyterLab] on [!DNL Experience Platform]
+## [!DNL JupyterLab] on  [!DNL Experience Platform]
 
 Die JupyterLab-Integration mit Experience Platform wird von Architekturänderungen, Designüberlegungen, benutzerdefinierten Notebook-Erweiterungen, vorinstallierten Bibliotheken und einer Oberfläche im Stil von Adobe begleitet.
 
@@ -27,33 +27,33 @@ In der folgenden Liste werden einige der Funktionen vorgestellt, die bei Jupyter
 
 | Funktion | Beschreibung |
 | --- | --- |
-| **Kernels** | Kernels provide notebook and other [!DNL JupyterLab] front-ends the ability to execute and introspect code in different programming languages. [!DNL Experience Platform] bietet zusätzliche Kernel zur Unterstützung der Entwicklung in [!DNL Python], R, PySpark und [!DNL Spark]. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
-| **Datenzugriff** | Access existing datasets directly from within [!DNL JupyterLab] with full support for read and write capabilities. |
-| **[!DNL Platform]Dienstintegration** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. Eine vollständige Liste der unterstützten Integrationen finden Sie im Abschnitt zur [Integration mit anderen Platform-Diensten](#service-integration). |
+| **Kernels** | Kernels bieten Notebook- und andere [!DNL JupyterLab] Front-Ends die Möglichkeit, Code in verschiedenen Programmiersprachen auszuführen und einzustellen. [!DNL Experience Platform] bietet zusätzliche Kernel zur Unterstützung der Entwicklung in  [!DNL Python], R, PySpark und  [!DNL Spark]. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
+| **Datenzugriff** | Greifen Sie direkt von [!DNL JupyterLab] aus auf vorhandene Datensätze zu, und nutzen Sie die volle Unterstützung für Lese- und Schreibfunktionen. |
+| **[!DNL Platform]Dienstintegration** | Integrierte Integrationen ermöglichen es Ihnen, andere [!DNL Platform]-Dienste direkt von [!DNL JupyterLab] aus zu nutzen. Eine vollständige Liste der unterstützten Integrationen finden Sie im Abschnitt zur [Integration mit anderen Platform-Diensten](#service-integration). |
 | **Authentifizierung** | Zusätzlich zum <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">nativen Sicherheitsmodell von JupyterLab</a> wird jede Interaktion zwischen Ihrer Anwendung und Experience Platform, einschließlich der Kommunikation zwischen Platform-Diensten, über das <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a> verschlüsselt und authentifiziert. |
-| **Entwicklungsbibliotheken** | In [!DNL Experience Platform]bietet [!DNL JupyterLab] vorinstallierte Bibliotheken für [!DNL Python], R und PySpark. Eine vollständige Liste der unterstützten Bibliotheken finden Sie im [Anhang](#supported-libraries). |
-| **Bibliotheks-Controller** | When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
+| **Entwicklungsbibliotheken** | In [!DNL Experience Platform] stellt [!DNL JupyterLab] vorinstallierte Bibliotheken für [!DNL Python], R und PySpark bereit. Eine vollständige Liste der unterstützten Bibliotheken finden Sie im [Anhang](#supported-libraries). |
+| **Bibliotheks-Controller** | Wenn die vorinstallierten Bibliotheken Ihren Anforderungen nicht entsprechen, können zusätzliche Bibliotheken für Python und R installiert und vorübergehend in isolierten Containern gespeichert werden, um die Integrität von [!DNL Platform] zu wahren und die Datensicherheit zu gewährleisten. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels). |
 
 >[!NOTE]
 >
 > Zusätzliche Bibliotheken sind nur für die Sitzung verfügbar, in der sie installiert werden. Wenn Sie neue Sitzungen starten, müssen Sie alle zusätzlichen Bibliotheken, die Sie benötigen, neu installieren.
 
-## Integration with other [!DNL Platform] services {#service-integration}
+## Integration mit anderen [!DNL Platform]-Diensten {#service-integration}
 
-Standardization and interoperability are key concepts behind [!DNL Experience Platform]. The integration of [!DNL JupyterLab] on [!DNL Platform] as an embedded IDE allows it to interact with other [!DNL Platform] services, enabling you to utilize [!DNL Platform] to its full potential. The following [!DNL Platform] services are available in [!DNL JupyterLab]:
+Normung und Interoperabilität sind Schlüsselkonzepte hinter [!DNL Experience Platform]. Die Integration von [!DNL JupyterLab] auf [!DNL Platform] als eingebettete IDE ermöglicht die Interaktion mit anderen [!DNL Platform]-Diensten, sodass Sie [!DNL Platform] voll ausschöpfen können. Die folgenden [!DNL Platform]-Dienste sind in [!DNL JupyterLab] verfügbar:
 
 * **[!DNL Catalog Service]:** Aufrufen und Erkunden von Datensätzen mit Lese- und Schreibfunktionen.
 * **[!DNL Query Service]:** Aufrufen und Erkunden von Datensätzen mit SQL, wodurch sich beim Datenzugriff bei großen Datenmengen der Overhead verringert.
 * **[!DNL Sensei ML Framework]:** Modellentwicklung mit der Möglichkeit, Daten zu trainieren und zu bewerten, sowie Rezepterstellung mit einem Klick.
-* **[!DNL Experience Data Model (XDM)]:** Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [Erlebnis-Datenmodell (XDM)](https://www.adobe.com/go/xdm-home-en), angetrieben von Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
+* **[!DNL Experience Data Model (XDM)]:** Normung und Interoperabilität sind Schlüsselkonzepte hinter Adobe Experience Platform. [Erlebnis-Datenmodell (XDM)](https://www.adobe.com/go/xdm-home-en), angetrieben von Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
 >[!NOTE]
 >
->Some [!DNL Platform] service integrations on [!DNL JupyterLab] are limited to specific kernels. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels).
+>Einige [!DNL Platform] Dienstintegrationen auf [!DNL JupyterLab] sind auf bestimmte Kernels beschränkt. Weiterführende Informationen finden Sie im Abschnitt [Kernels](#kernels).
 
 ## Wichtigste Funktionen und allgemeine Vorgänge
 
-Information regarding key features of [!DNL JupyterLab] and instructions on performing common operations are provided in the sections below:
+Informationen zu Schlüsselfunktionen von [!DNL JupyterLab] und Anweisungen zur Durchführung gemeinsamer Vorgänge finden Sie in den folgenden Abschnitten:
 
 * [Zugriff auf JupyterLab](#access-jupyterlab)
 * [Oberfläche von JupyterLab](#jupyterlab-interface)
@@ -64,17 +64,17 @@ Information regarding key features of [!DNL JupyterLab] and instructions on perf
 
 ### Zugriff auf [!DNL JupyterLab] {#access-jupyterlab}
 
-Wählen Sie in [Adobe Experience Platform](https://platform.adobe.com)in der linken Navigationsspalte **Notebooks** aus. Allow some time for [!DNL JupyterLab] to fully initialize.
+Wählen Sie unter [Adobe Experience Platform](https://platform.adobe.com) **Notebooks** in der linken Navigationsspalte aus. Warten Sie einige Zeit, bis [!DNL JupyterLab] vollständig initialisiert ist.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
 ### [!DNL JupyterLab] Benutzeroberfläche {#jupyterlab-interface}
 
-The [!DNL JupyterLab] interface consists of a menu bar, a collapsible left sidebar, and the main work area containing tabs of documents and activities.
+Die [!DNL JupyterLab]-Schnittstelle besteht aus einer Menüleiste, einer reduzierbaren linken Seitenleiste und dem Hauptarbeitsbereich mit Registerkarten von Dokumenten und Aktivitäten.
 
 **Menüleiste**
 
-The menu bar at the top of the interface has top-level menus that expose actions available in [!DNL JupyterLab] with their keyboard shortcuts:
+Die Menüleiste oben auf der Oberfläche verfügt über Menüs der obersten Ebene, die in [!DNL JupyterLab] verfügbare Aktionen mit ihren Tastaturbefehlen aufdecken:
 
 * **Datei:** Aktionen im Zusammenhang mit Dateien und Ordnern
 * **Bearbeiten:** Aktionen im Zusammenhang mit der Bearbeitung von Dokumenten und anderen Aktivitäten
@@ -102,7 +102,7 @@ Klicken Sie auf eine Registerkarte, um deren Funktionen anzuzeigen, oder klicken
 
 **Hauptarbeitsbereich**
 
-The main work area in [!DNL JupyterLab] enables you to arrange documents and other activities into panels of tabs that can be resized or subdivided. Ziehen Sie eine Registerkarte in die Mitte eines Registerkarten-Panels, um die Registerkarte zu verschieben. Unterteilen Sie ein Panel durch Ziehen einer Registerkarte nach links, rechts, oben oder unten im Panel:
+Der Hauptarbeitsbereich in [!DNL JupyterLab] ermöglicht es Ihnen, Dokumente und andere Aktivitäten in Registerkartenbedienfelder anzuordnen, die skaliert oder unterteilt werden können. Ziehen Sie eine Registerkarte in die Mitte eines Registerkarten-Panels, um die Registerkarte zu verschieben. Unterteilen Sie ein Panel durch Ziehen einer Registerkarte nach links, rechts, oben oder unten im Panel:
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
@@ -124,7 +124,7 @@ Häufige Zellaktionen werden nachfolgend beschrieben:
 
 ### Kernels {#kernels}
 
-Notebook-Kernel sind sprachspezifische Rechen-Engines zur Verarbeitung von Notebook-Zellen. In addition to [!DNL Python], [!DNL JupyterLab] provides additional language support in R, PySpark, and [!DNL Spark] (Scala). Wenn Sie ein Notebook-Dokument öffnen, wird der zugehörige Kernel gestartet. Wenn eine Notebook-Zelle ausgeführt wird, führt der Kernel die Berechnung durch und erzeugt Ergebnisse, die erhebliche CPU- und Arbeitsspeicherressourcen beanspruchen können. Beachten Sie, dass zugewiesener Arbeitsspeicher erst freigegeben wird, wenn der Kernel heruntergefahren wird.
+Notebook-Kernel sind sprachspezifische Rechen-Engines zur Verarbeitung von Notebook-Zellen. Zusätzlich zu [!DNL Python] bietet [!DNL JupyterLab] zusätzliche Sprachunterstützung in R, PySpark und [!DNL Spark] (Scala). Wenn Sie ein Notebook-Dokument öffnen, wird der zugehörige Kernel gestartet. Wenn eine Notebook-Zelle ausgeführt wird, führt der Kernel die Berechnung durch und erzeugt Ergebnisse, die erhebliche CPU- und Arbeitsspeicherressourcen beanspruchen können. Beachten Sie, dass zugewiesener Arbeitsspeicher erst freigegeben wird, wenn der Kernel heruntergefahren wird.
 
 Bestimmte Funktionen und Funktionen sind auf bestimmte Kernels beschränkt, wie in der folgenden Tabelle beschrieben:
 
@@ -136,7 +136,7 @@ Bestimmte Funktionen und Funktionen sind auf bestimmte Kernels beschränkt, wie 
 
 ### Kernel-Sitzungen {#kernel-sessions}
 
-Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session. Alle aktiven Sitzungen finden Sie, indem Sie auf der linken Seitenleiste die Registerkarte **Laufende Terminals und Kernel** erweitern. Typ und Zustand des Kernels eines Notebooks finden Sie in der oberen rechten Ecke der Notebook-Oberfläche. In der Abbildung unten ist der zugehörige Kernel des Notebooks **[!DNL Python]3** und der aktuelle Status wird durch einen grauen Kreis rechts dargestellt. Ein leerer Kreis impliziert einen Kernel im Leerlauf, während ein ausgefüllter Kreis einen aktiven Kernel darstellt.
+Jedes aktive Notebook oder jede aktive Aktivität auf [!DNL JupyterLab] nutzt eine Kernelsitzung. Alle aktiven Sitzungen finden Sie, indem Sie auf der linken Seitenleiste die Registerkarte **Laufende Terminals und Kernel** erweitern. Typ und Zustand des Kernels eines Notebooks finden Sie in der oberen rechten Ecke der Notebook-Oberfläche. In der Abbildung unten ist der zugehörige Kernel des Notebooks **[!DNL Python]3** und der aktuelle Status wird durch einen grauen Kreis rechts dargestellt. Ein leerer Kreis impliziert einen Kernel im Leerlauf, während ein ausgefüllter Kreis einen aktiven Kernel darstellt.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -154,9 +154,9 @@ Der angepasste *Starter* bietet nützliche Notebook-Vorlagen für die unterstüt
 | --- | --- |
 | Leer | Eine leere Notebook-Datei. |
 | Starter | Ein vorausgefülltes Notebook, das die Datenerfassung anhand von Musterdaten demonstriert. |
-| Einzelhandelsumsätze | A pre-filled notebook featuring the [retail sales recipe](https://docs.adobe.com/content/help/de-DE/experience-platform/data-science-workspace/home.translate.html#!api-specification/markdown/narrative/technical_overview/data_science_workspace_overview/dsw_prebuilt_recipes/retail_sales_recipe/retail_sales_recipe.md) using sample data. |
-| Recipe Builder | Eine Notebook-Vorlage zum Erstellen eines Rezepts in [!DNL JupyterLab]. Sie ist mit Code und Kommentaren vorausgefüllt, die die Erstellung von Rezepten demonstrieren und beschreiben. Eine ausführliche Vorgehensweise finden Sie im Tutorial [Notebook an Rezept](https://docs.adobe.com/content/help/de-DE/experience-platform/data-science-workspace/jupyterlab/create-a-recipe.html). |
-| [!DNL Query Service] | A pre-filled notebook demonstrating the usage of [!DNL Query Service] directly in [!DNL JupyterLab] with provided sample workflows that analyzes data at scale. |
+| Einzelhandelsumsätze | Ein vorgefülltes Notebook mit dem Vertriebsrezept [für den Einzelhandel](https://docs.adobe.com/content/help/de-DE/experience-platform/data-science-workspace/home.translate.html#!api-specification/markdown/narrative/technical_overview/data_science_workspace_overview/dsw_prebuilt_recipes/retail_sales_recipe/retail_sales_recipe.md), das Beispieldaten verwendet. |
+| Recipe Builder | Eine Notebook-Vorlage zum Erstellen eines Rezepts in [!DNL JupyterLab]. Sie ist mit Code und Kommentaren vorausgefüllt, die die Erstellung von Rezepten demonstrieren und beschreiben. Eine ausführliche Vorgehensweise finden Sie im Tutorial [Notebook an Rezept](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en). |
+| [!DNL Query Service] | Ein vorausgefülltes Notebook, das die Verwendung von [!DNL Query Service] direkt in [!DNL JupyterLab] mit bereitgestellter Workflows zeigt, die Daten im Maßstab analysieren. |
 | ExperienceEvents | Ein vorausgefülltes Notebook, das die Datenerkundung bei Nachwertdaten von Erlebnisereignissen demonstriert und sich auf Funktionen konzentriert, die in der ganzen Datenstruktur einheitlich sind. |
 | XDM Queries | Ein vorausgefülltes Notebook, das geschäftliche Beispielabfragen zu Erlebnisereignisdaten veranschaulicht. |
 | Aggregation | Ein vorausgefülltes Notebook, das Beispiel-Workflows zur Aggregation großer Datenmengen in kleineren, besser handhabbaren Blöcken veranschaulicht. |
@@ -170,10 +170,10 @@ Einige Notebook-Vorlagen sind auf bestimmte Kernels beschränkt. Die Vorlagenver
         <th><strong>Leer</strong></th>
         <th><strong>Starter</strong></th>
         <th><strong>Einzelhandelsumsätze</strong></th>
-        <th><strong>Recipe Builder</strong></th>
+        <th><strong>Rezepturaufbau</strong></th>
         <th><strong>[!DNL Abfrage Service]</strong></th>
         <th><strong>ExperienceEvents</strong></th>
-        <th><strong>XDM Queries</strong></th>
+        <th><strong>XDM-Abfragen</strong></th>
         <th><strong>Aggregation</strong></th>
         <th><strong>Clustering</strong></th>
     </tr>
@@ -233,7 +233,7 @@ Um einen neuen *Starter* zu öffnen, klicken Sie auf **Datei > Neuer Starter**. 
 
 ### GPU- und Speicherserverkonfiguration in [!DNL Python]/R
 
-Wählen Sie [!DNL JupyterLab] das Zahnradsymbol in der oberen rechten Ecke aus, um die *Notebook-Serverkonfiguration* zu öffnen. Mit dem Schieberegler können Sie die GPU aktivieren und die benötigte Speichermenge zuweisen. Wie viel Arbeitsspeicher Sie zuweisen können, hängt davon ab, wie viel Arbeitsspeicher Ihr Unternehmen bereitgestellt hat. Wählen Sie **[!UICONTROL Zu speichernde Konfigurationen]** aktualisieren.
+Wählen Sie in [!DNL JupyterLab] das Zahnradsymbol in der oberen rechten Ecke aus, um *Notebook-Serverkonfiguration* zu öffnen. Mit dem Schieberegler können Sie die GPU aktivieren und die benötigte Speichermenge zuweisen. Wie viel Arbeitsspeicher Sie zuweisen können, hängt davon ab, wie viel Arbeitsspeicher Ihr Unternehmen bereitgestellt hat. Wählen Sie **[!UICONTROL Konfigurationen aktualisieren]** zum Speichern aus.
 
 >[!NOTE]
 >
@@ -243,7 +243,7 @@ Wählen Sie [!DNL JupyterLab] das Zahnradsymbol in der oberen rechten Ecke aus, 
 
 ## Nächste Schritte
 
-Weitere Informationen zu den einzelnen unterstützten Notebooks und deren Verwendung finden Sie im [Jupyterlab-Handbuch für den Datenzugriff](./access-notebook-data.md) auf Notebooks. Dieser Leitfaden konzentriert sich darauf, wie Sie mit JupyterLab-Notebooks auf Ihre Daten zugreifen können, einschließlich Lesen, Schreiben und Abfragen von Daten. Die Anleitung zum Datenzugriff enthält außerdem Informationen zur maximalen Datenmenge, die von jedem unterstützten Notebook gelesen werden kann.
+Weitere Informationen zu den einzelnen unterstützten Notebooks und deren Verwendung finden Sie im [Jupyterlab-Handbuch für den Datenzugriff auf Notebooks](./access-notebook-data.md). Dieser Leitfaden konzentriert sich darauf, wie Sie mit JupyterLab-Notebooks auf Ihre Daten zugreifen können, einschließlich Lesen, Schreiben und Abfragen von Daten. Die Anleitung zum Datenzugriff enthält außerdem Informationen zur maximalen Datenmenge, die von jedem unterstützten Notebook gelesen werden kann.
 
 ## Unterstützte Bibliotheken {#supported-libraries}
 
@@ -309,7 +309,7 @@ Weitere Informationen zu den einzelnen unterstützten Notebooks und deren Verwen
 | r-rsolnp | 1,16 |
 | r-reticulate | 1,12 |
 | r-mlr | 2.14.0 |
-| r-viridis | 0.5.1 |
+| r-viridis | 0,5,1 |
 | r-corrplot | 0,84 |
 | r-fnn | 1.1.3 |
 | r-lubridate | 1.7.4 |
@@ -319,7 +319,7 @@ Weitere Informationen zu den einzelnen unterstützten Notebooks und deren Verwen
 | pymongo | 3.8.0 |
 | pyarrow | 0.14.1 |
 | boto3 | 1.9.199 |
-| ipyvolume | 0.5.2 |
+| ipyvolume | 0,5,2 |
 | fastparquet | 0.3.2 |
 | python-snappy | 0.5.4 |
 | ipywebrtc | 0.5.0 |
@@ -349,22 +349,22 @@ Weitere Informationen zu den einzelnen unterstützten Notebooks und deren Verwen
 
 | Bibliothek | Version |
 | :------ | :------ |
-| requests | 2.18.4 |
-| gensim | 2.3.0 |
+| Anforderungen | 2.18.4 |
+| Gensim | 2.3.0 |
 | keras | 2.0.6 |
 | nltk | 3.2.4 |
-| pandas | 0.20.1 |
-| pandasql | 0.7.3 |
-| pillow | 5.3.0 |
+| Pandas | 0.20.1 |
+| pandasql | 0,7,3 |
+| Kissen | 5.3.0 |
 | scikit-image | 0.13.0 |
 | scikit-learn | 0.19.0 |
-| scipy | 0.19.1 |
-| scrapy | 1.3.3 |
+| Skript | 0.19.1 |
+| Scrapie | 1.3.3 |
 | statsmodels | 0.8.0 |
-| elastic | 4.0.30.44 |
-| py-xgboost | 0,60 |
+| elastisch | 4.0.30.44 |
+| py-xgpush | 0,60 |
 | opencv | 3.1.0 |
-| pyarrow | 0.8.0 |
+| pyarrow | 0,8,0 |
 | boto3 | 1.5.18 |
 | azure-storage-blob | 1.4.0 |
 | [!DNL python] | 3.6.7 |
