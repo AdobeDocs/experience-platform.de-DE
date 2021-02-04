@@ -3,19 +3,19 @@ title: Verfolgen von Ereignissen
 seo-title: Verfolgen von Adobe Experience Platform Web SDK-Ereignissen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisse verfolgen
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
+keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;documentUnloading;Dokument Unloading;onBeforeEventSend;
 translation-type: tm+mt
 source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1331'
-ht-degree: 59%
+source-wordcount: '1342'
+ht-degree: 58%
 
 ---
 
 
 # Verfolgen von Ereignissen
 
-To send event data to Adobe Experience Cloud, use the `sendEvent` command. Der `sendEvent`-Befehl ist die wichtigste Methode zum Senden von Daten an und zum Abrufen von personalisierten Inhalten, Identitäten und Zielgruppenzielen.[!DNL Experience Cloud]
+Verwenden Sie zum Senden von Ereignis-Daten an Adobe Experience Cloud den Befehl `sendEvent`. Der `sendEvent`-Befehl ist die wichtigste Methode zum Senden von Daten an und zum Abrufen von personalisierten Inhalten, Identitäten und Zielgruppenzielen.[!DNL Experience Cloud]
 
 An Adobe Experience Cloud gesendete Daten gehören zwei Kategorien an:
 
@@ -26,7 +26,7 @@ An Adobe Experience Cloud gesendete Daten gehören zwei Kategorien an:
 
 XDM-Daten sind Objekte, deren Inhalt und Struktur mit einem Schema übereinstimmen, das Sie in Adobe Experience Platform erstellt haben. [Erfahren Sie mehr darüber, wie Sie ein Schema erstellen.](../../xdm/tutorials/create-schema-ui.md)
 
-Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
+Alle XDM-Daten, die Sie in Ihre Analyse-, Personalisierungs-, Audiencen- oder Zielorte aufnehmen möchten, sollten mit der Option `xdm` gesendet werden.
 
 
 ```javascript
@@ -44,7 +44,7 @@ alloy("sendEvent", {
 });
 ```
 
-Zwischen der Ausführung des `sendEvent` Befehls und dem Senden der Daten an den Server kann eine gewisse Zeit vergehen (z. B. wenn die Web SDK-Bibliothek noch nicht vollständig geladen wurde oder die Zustimmung noch nicht eingegangen ist). Wenn Sie einen Teil des `xdm` Objekts nach dem Ausführen des `sendEvent` Befehls ändern möchten, sollten Sie das `xdm` Objekt unbedingt klonen, _bevor_ Sie den `sendEvent` Befehl ausführen. Beispiel:
+Zwischen der Ausführung des Befehls `sendEvent` und dem Senden der Daten an den Server kann eine gewisse Zeit vergehen (z. B. wenn die Web SDK-Bibliothek noch nicht vollständig geladen wurde oder die Zustimmung noch nicht eingegangen ist). Wenn Sie nach dem Ausführen des Befehls `sendEvent` einen beliebigen Teil des Objekts ändern möchten, sollten Sie das `xdm`-Objekt _vor dem Ausführen des Befehls_ unbedingt klonen. `xdm``sendEvent` Beispiel:
 
 ```javascript
 var clone = function(value) {
@@ -71,7 +71,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In diesem Beispiel wird die Datenschicht geklont, indem sie in JSON serialisiert und anschließend deserialisiert wird. Als Nächstes wird das geklonte Ergebnis an den `sendEvent` Befehl übergeben. Dadurch wird sichergestellt, dass der `sendEvent` Befehl über eine Momentaufnahme der Datenschicht verfügt, wie sie bei Ausführung des `sendEvent` Befehls bestand, sodass spätere Änderungen am ursprünglichen Datenschichtobjekt nicht in den an den Server gesendeten Daten übernommen werden. Wenn Sie eine Ereignis-basierte Datenschicht verwenden, wird das Klonen der Daten wahrscheinlich bereits automatisch durchgeführt. Wenn Sie beispielsweise die [Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)verwenden, stellt die `getState()` Methode einen berechneten, geklonten Schnappschuss aller vorherigen Änderungen bereit. Dies wird auch automatisch für Sie verarbeitet, wenn Sie die AEP Web SDK Launch Extension verwenden.
+In diesem Beispiel wird die Datenschicht geklont, indem sie in JSON serialisiert und anschließend deserialisiert wird. Als Nächstes wird das geklonte Ergebnis an den Befehl `sendEvent` übergeben. Dadurch wird sichergestellt, dass der Befehl `sendEvent` eine Momentaufnahme der Datenschicht enthält, wie sie bei Ausführung des Befehls `sendEvent` existierte, sodass spätere Änderungen am ursprünglichen Datenschichtobjekt nicht in den an den Server gesendeten Daten übernommen werden. Wenn Sie eine Ereignis-basierte Datenschicht verwenden, wird das Klonen der Daten wahrscheinlich bereits automatisch durchgeführt. Wenn Sie beispielsweise die Client-Datenschicht [Adobe](https://github.com/adobe/adobe-client-data-layer/wiki) verwenden, stellt die `getState()`-Methode einen berechneten, geklonten Schnappschuss aller vorherigen Änderungen bereit. Dies wird auch automatisch für Sie verarbeitet, wenn Sie die AEP Web SDK Launch Extension verwenden.
 
 >[!NOTE]
 >
@@ -83,7 +83,7 @@ Derzeit wird das Senden von Daten, die nicht mit einem XDM-Schema übereinstimme
 
 ### Einstellen von `eventType`
 
-In an XDM experience event, there is an optional `eventType` field. Dies enthält den primären Ereignistyp für den Datensatz. Das Festlegen eines Ereignistyps kann Ihnen helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet mehrere vordefinierte Ereignistyp, die Sie verwenden können, oder Sie erstellen Ihre eigenen benutzerdefinierten Ereignistyp für Ihre Anwendungsfälle. Nachfolgend finden Sie eine Liste aller vordefinierten Ereignistyp, die von XDM bereitgestellt werden. [Lesen Sie mehr im öffentlichen XDM-Bericht](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
+In einem XDM-Erlebnis-Ereignis gibt es ein optionales `eventType`-Feld. Dies enthält den primären Ereignistyp für den Datensatz. Das Festlegen eines Ereignistyps kann Ihnen helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet mehrere vordefinierte Ereignistyp, die Sie verwenden können, oder Sie erstellen Ihre eigenen benutzerdefinierten Ereignistyp für Ihre Anwendungsfälle. Nachfolgend finden Sie eine Liste aller vordefinierten Ereignistyp, die von XDM bereitgestellt werden. [Lesen Sie mehr im öffentlichen XDM-Bericht](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
 
 | **Ereignistyp:** | **Definition:** |
@@ -112,7 +112,7 @@ In an XDM experience event, there is an optional `eventType` field. Dies enthäl
 | delivery.feedback | Feedback-Ereignis für einen Versand. Beispiel-Feedback-Ereignisse für einen E-Mail-Versand |
 
 
-Diese Ereignistyp werden in einer Dropdown-Liste angezeigt, wenn Sie die Adobe Experience Platform Launch-Erweiterung verwenden, oder Sie können sie immer ohne Experience Platform Launch weitergeben. They can be passed in as part of the `xdm` option.
+Diese Ereignistyp werden in einer Dropdown-Liste angezeigt, wenn Sie die Adobe Experience Platform Launch-Erweiterung verwenden, oder Sie können sie immer ohne Experience Platform Launch weitergeben. Sie können als Teil der `xdm`-Option übergeben werden.
 
 
 ```javascript
@@ -145,7 +145,7 @@ alloy("sendEvent", {
 
 ### Außerkraftsetzen der DataSet-ID
 
-In einigen Anwendungsfällen möchten Sie möglicherweise ein Ereignis an einen anderen Datensatz als den in der Konfigurationsoberfläche konfigurierten senden. Dazu müssen Sie die `datasetId` Option auf dem `sendEvent` Befehl festlegen:
+In einigen Anwendungsfällen möchten Sie möglicherweise ein Ereignis an einen anderen Datensatz als den in der Konfigurationsoberfläche konfigurierten senden. Dazu müssen Sie die Option `datasetId` für den Befehl `sendEvent` festlegen:
 
 
 ```javascript
@@ -164,7 +164,7 @@ Benutzerspezifische Identitätsinformationen können auch dem Ereignis hinzugef�
 
 ## Verwenden der sendBeacon-API
 
-Es kann schwierig sein, Ereignisdaten zu senden, kurz bevor der Nutzer die Web-Seite verlassen hat. Wenn die Anforderung zu lange dauert, kann der Browser die Anforderung abbrechen. Einige Browser haben eine Web-Standard-API namens `sendBeacon` implementiert, mit der Daten in dieser Zeit leichter erfasst werden können. Bei der Verwendung von `sendBeacon` stellt der Browser die Web-Anforderung im globalen Browser-Kontext dar. Das bedeutet, dass der Browser die Beacon-Anforderung im Hintergrund ausführt und die Seitennavigation nicht beeinträchtigt. To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Siehe folgendes Beispiel:
+Es kann schwierig sein, Ereignisdaten zu senden, kurz bevor der Nutzer die Web-Seite verlassen hat. Wenn die Anforderung zu lange dauert, kann der Browser die Anforderung abbrechen. Einige Browser haben eine Web-Standard-API namens `sendBeacon` implementiert, mit der Daten in dieser Zeit leichter erfasst werden können. Bei der Verwendung von `sendBeacon` stellt der Browser die Web-Anforderung im globalen Browser-Kontext dar. Das bedeutet, dass der Browser die Beacon-Anforderung im Hintergrund ausführt und die Seitennavigation nicht beeinträchtigt. Um Adobe Experience Platform [!DNL Web SDK] anzuweisen, `sendBeacon` zu verwenden, fügen Sie die Option `"documentUnloading": true` zum Ereignis-Befehl hinzu.  Siehe folgendes Beispiel:
 
 
 ```javascript
@@ -183,7 +183,7 @@ alloy("sendEvent", {
 });
 ```
 
-Browser haben Beschränkungen für die Datenmenge, die mit `sendBeacon` gleichzeitig gesendet werden kann. In vielen Browsern beträgt die Beschränkung 64 K. If the browser rejects the event because the payload is too large, Adobe Experience Platform [!DNL Web SDK] falls back to using its normal transport method (for example, fetch).
+Browser haben Beschränkungen für die Datenmenge, die mit `sendBeacon` gleichzeitig gesendet werden kann. In vielen Browsern beträgt die Beschränkung 64 K. Wenn der Browser das Ereignis ablehnt, weil die Nutzlast zu groß ist, kehrt Adobe Experience Platform [!DNL Web SDK] zurück zu seiner normalen Transportmethode (z. B. fetch).
 
 ## Umgang mit Antworten von Ereignissen
 
