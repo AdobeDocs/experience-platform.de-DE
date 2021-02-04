@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;label identities
+keywords: Experience Platform;Startseite;beliebte Themen;Beschriftungskennungen
 solution: Experience Platform
 title: Kennzeichnen eines Felds als Identität
 topic: api guide
@@ -7,15 +7,15 @@ description: Felder, die persönliche identifizierbare Informationen (PII) entha
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 93%
+source-wordcount: '194'
+ht-degree: 89%
 
 ---
 
 
 # Kennzeichnen eines Felds als Identität
 
-Felder, die persönliche identifizierbare Informationen (PII) enthalten, können als Identitätsfelder gekennzeichnet werden. A value provided in an identity field is interpreted as an identity by [!DNL Identity Service]. Der Namensraum der Identität wird als Teil der Kennzeichnung des Felds angegeben.
+Felder, die persönliche identifizierbare Informationen (PII) enthalten, können als Identitätsfelder gekennzeichnet werden. Ein in einem Identitätsfeld bereitgestellter Wert wird von [!DNL Identity Service] als Identität interpretiert. Der Namensraum der Identität wird als Teil der Kennzeichnung des Felds angegeben.
 
 Die folgenden Kriterien müssen erfüllt sein, damit ein Feld als Identität gekennzeichnet wird:
 
