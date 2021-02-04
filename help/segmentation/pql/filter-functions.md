@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;filter functions;filter;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Filterfunktionen;Filter;
 solution: Experience Platform
 title: Filterfunktionen
 topic: developer guide
@@ -7,15 +7,15 @@ description: Filterfunktionen werden zum Filtern von Daten in Arrays in Profil A
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 83%
+source-wordcount: '219'
+ht-degree: 77%
 
 ---
 
 
 # Filterfunktionen
 
-Filterfunktionen werden zum Filtern von Daten in Arrays in [!DNL Profile Query Language] (PQL) verwendet. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Filterfunktionen werden zum Filtern von Daten innerhalb von Arrays in [!DNL Profile Query Language] (PQL) verwendet. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Filter
 
