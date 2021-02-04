@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;object lookup;api
+keywords: Experience Platform;Home;beliebte Themen;Katalog;Objektsuche;API
 solution: Experience Platform
 title: Objekt nachschlagen
 topic: developer guide
@@ -7,15 +7,15 @@ description: 'Wenn Sie die eindeutige Kennung eines bestimmten Catalog-Objekts k
 translation-type: tm+mt
 source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 81%
+source-wordcount: '163'
+ht-degree: 77%
 
 ---
 
 
 # Objekt nachschlagen
 
-If you know the unique identifier for a specific [!DNL Catalog] object, you can perform a GET request to view that object&#39;s details.
+Wenn Sie den eindeutigen Bezeichner für ein bestimmtes [!DNL Catalog]-Objekt kennen, können Sie eine GET zur Ansicht der Objektdetails durchführen.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie abrufen möchten. |
 
 **Anfrage**
