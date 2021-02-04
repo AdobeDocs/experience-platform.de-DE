@@ -1,5 +1,5 @@
 ---
-keywords: Visual similarity;visual similarity;ccai api
+keywords: Visuelle Ähnlichkeit;Visuelle Ähnlichkeit;ccai API
 solution: Experience Platform, Intelligent Services
 title: Visuelle Ähnlichkeit
 topic: Developer guide
@@ -7,7 +7,7 @@ description: Der Dienst für visuelle Ähnlichkeit findet bei einem gegebenen Bi
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '503'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ Die folgende Anforderung ruft visuell ähnliche Bilder aus einem Katalog ab, bas
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten. Wenden Sie sich an das AI Beta-Team von Content and Commerce, um Ihren `analyzer_id` Service zu erhalten.
+>`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Bitte überprüfen Sie, ob Sie die richtige `analyzer_id` haben, bevor Sie Ihre Anfrage machen. Wenden Sie sich an das AI Beta-Team von Content and Commerce, um Ihre `analyzer_id` für diesen Dienst zu erhalten.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,21 +76,21 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `analyzer_id` | Die [!DNL Sensei] Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Mit dieser ID wird festgelegt, welche der Variablen verwendet [!DNL Sensei Content Frameworks] werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
+| `analyzer_id` | Die [!DNL Sensei]-Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
 | `application-id` | Die ID der erstellten Anwendung. | Ja |
-| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Bild darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem `data` Array außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können von innen aus überschrieben werden `data`. | Ja |
+| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Bild darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem Array `data` außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können innerhalb von `data` überschrieben werden. | Ja |
 | `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
-| `content` | Der Inhalt, der vom Dienst für visuelle Ähnlichkeit analysiert werden soll. In dem Ereignis, dass das Bild zum Anforderungstext gehört, verwenden Sie `-F file=@<filename>` den Befehl curl, um das Bild zu übergeben, wobei dieser Parameter als leere Zeichenfolge hinterlegt wird. <br> Wenn das Bild eine Datei auf S3 ist, übergeben Sie die signierte URL. Wenn der Inhalt zum Anforderungstext gehört, sollte die Liste der Datenelemente nur ein Objekt enthalten. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
+| `content` | Der Inhalt, der vom Dienst für visuelle Ähnlichkeit analysiert werden soll. Verwenden Sie im Ereignis, dass das Image zum Anforderungstext gehört, `-F file=@<filename>` im curl-Befehl, um das Image zu übergeben, wobei dieser Parameter eine leere Zeichenfolge bleibt. <br> Wenn das Bild eine Datei auf S3 ist, übergeben Sie die signierte URL. Wenn der Inhalt zum Anforderungstext gehört, sollte die Liste der Datenelemente nur ein Objekt enthalten. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
 | `content-type` | Wird verwendet, um anzugeben, ob die Eingabe Teil des Anforderungstextes oder einer signierten URL für einen S3-Behälter ist. Die Standardeinstellung für diese Eigenschaft ist `inline`. | Nein |
 | `encoding` | Das Dateiformat des Eingabebilds. Derzeit können nur JPEG- und PNG-Bilder verarbeitet werden. Die Standardeinstellung für diese Eigenschaft ist `jpeg`. | Nein |
-| `threshold` | Der Schwellenwert des Ergebnisses (0 bis 1), ab dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert, `0` um alle Ergebnisse zurückzugeben. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
-| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert, `0` um alle Ergebnisse zurückzugeben. Bei gleichzeitiger Verwendung `threshold`ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
+| `threshold` | Der Schwellenwert des Ergebnisses (0 bis 1), ab dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
+| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden angegebenen Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
 | `custom` | Alle benutzerdefinierten Parameter, die übergeben werden sollen. | Nein |
 | `historic-metadata` | Ein Array, an das Metadaten übergeben werden können. | Nein |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein `response` Array zurück, das ein `feature_value` und `feature_name` für jedes der visuell ähnlichen Bilder im Katalog enthält.
+Bei einer erfolgreichen Antwort wird ein `response`-Array zurückgegeben, das ein `feature_value` und `feature_name` für jedes der visuell ähnlichen Bilder im Katalog enthält.
 
 Die folgenden visuell ähnlichen Bilder wurden in der folgenden Beispielantwort zurückgegeben:
 
