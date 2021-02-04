@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
+keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;API-Leitfaden;Abfragen;Abfrage;Abfrage-Dienst;
 solution: Experience Platform
 title: Entwicklerhandbuch für Query Service
 topic: queries
@@ -7,8 +7,8 @@ description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 33%
+source-wordcount: '676'
+ht-degree: 32%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 33%
 
 ## Beispiel-API-Aufrufe
 
-The following sections walk through calls you can make using the `/queries` endpoint in the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden Aufrufe durchlaufen, die Sie mit dem `/queries`-Endpunkt in der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Eine Liste von Abfragen abrufen
 
-You can retrieve a list of all queries for your IMS Organization by making a GET request to the `/queries` endpoint.
+Sie können eine Liste aller Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET an den `/queries`-Endpunkt anfordern.
 
 **API-Format**
 
@@ -41,9 +41,9 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfragen für die Auflistung
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
 | `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
-| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. The supported fields are `created`, `updated`, `state`, and `id`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `>=` (größer gleich), `<=` (kleiner gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). Gibt beispielsweise alle Abfragen mit der angegebenen ID zurück. `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` |
-| `excludeSoftDeleted` | Gibt an, ob eine Abfrage, die weich gelöscht wurde, einbezogen werden soll. Beispielsweise `excludeSoftDeleted=false` werden **auch** gelöschte Abfragen einbezogen. (*Boolescher Wert, Standardwert: true*) |
-| `excludeHidden` | Gibt an, ob nicht vom Benutzer gesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, werden nicht vom Benutzer gesteuerte Abfragen wie CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen **einbezogen** . (*Boolescher Wert, Standardwert: true*) |
+| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state` und `id`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `>=` (größer oder gleich), `<=` (kleiner oder gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt beispielsweise alle Abfragen mit der angegebenen ID zurück. |
+| `excludeSoftDeleted` | Gibt an, ob eine Abfrage, die weich gelöscht wurde, einbezogen werden soll. `excludeSoftDeleted=false` enthält beispielsweise **auch** gelöschte Abfragen. (*Boolean, Standardwert: true*) |
+| `excludeHidden` | Gibt an, ob nicht vom Benutzer gesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, werden **auch nicht vom Benutzer gesteuerte Abfragen wie CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen einbezogen.** (*Boolean, Standardwert: true*) |
 
 **Anfrage**
 
@@ -120,7 +120,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Abfragen für
 
 ### Eine Abfrage erstellen
 
-You can create a new query by making a POST request to the `/queries` endpoint.
+Sie können eine neue Abfrage erstellen, indem Sie eine POST an den `/queries`-Endpunkt anfordern.
 
 **API-Format**
 
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten Abfrage zurück. Sobald die Abfrage aktiviert ist und erfolgreich ausgeführt wurde, ändert sich der `state` Vorgang von `SUBMITTED` zu `SUCCESS`.
+Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten Abfrage zurück. Nachdem die Abfrage aktiviert wurde und erfolgreich ausgeführt wurde, ändert sich `state` von `SUBMITTED` in `SUCCESS`.
 
 ```json
 {
@@ -199,11 +199,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer
 
 >[!NOTE]
 >
->You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
+>Sie können den Wert von `_links.cancel` verwenden, um [Ihre erstellte Abfrage abzubrechen](#cancel-a-query).
 
 ### Abrufen einer Abfrage nach ID
 
-You can retrieve detailed information about a specific query by making a GET request to the `/queries` endpoint and providing the query&#39;s `id` value in the request path.
+Sie können detaillierte Informationen zu einer bestimmten Abfrage abrufen, indem Sie eine GET an den Endpunkt `/queries` anfordern und den Wert `id` der Abfrage im Anforderungspfad angeben.
 
 **API-Format**
 
@@ -213,7 +213,7 @@ GET /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | The `id` value of the query you want to retrieve. |
+| `{QUERY_ID}` | Der `id`-Wert der Abfrage, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -270,11 +270,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 >[!NOTE]
 >
->You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
+>Sie können den Wert von `_links.cancel` verwenden, um [Ihre erstellte Abfrage abzubrechen](#cancel-a-query).
 
 ### Abfrage abbrechen
 
-You can request to delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query&#39;s `id` value in the request path.
+Sie können das Löschen einer angegebenen Abfrage anfordern, indem Sie eine PATCH-Anforderung an den Endpunkt `/queries` stellen und den Wert `id` der Abfrage im Anforderungspfad angeben.
 
 **API-Format**
 
@@ -284,7 +284,7 @@ PATCH /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | The `id` value of the query you want to cancel. |
+| `{QUERY_ID}` | Der `id`-Wert der Abfrage, die Sie abbrechen möchten. |
 
 
 **Anfrage**
@@ -305,7 +305,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `op` | Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert festlegen `cancel `. |
+| `op` | Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel ` festlegen. |
 
 **Antwort**
 
