@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;Vorschauen;Schätzungen;Vorschauen und Schätzungen;Schätzungen und Vorschauen;API;API;
 solution: Experience Platform
 title: Endpunkte für Vorschauen und Schätzungen
 topic: developer guide
@@ -7,7 +7,7 @@ description: Während Sie Ihre Segmentdefinition entwickeln, können Sie die Too
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '792'
 ht-degree: 7%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 7%
 
 # Endpunkte für Vorschauen und Schätzungen
 
-Bei der Entwicklung Ihrer Segmentdefinition können Sie die Tools für Schätzung und Vorschau innerhalb der Informationen auf der Ebene der Ansicht verwenden, um sicherzustellen, dass Sie die erwartete Audience isolieren. [!DNL Adobe Experience Platform] **Vorschauen** bieten paginierte Listen von qualifizierten Profilen für eine Segmentdefinition, mit denen Sie die Ergebnisse mit Ihren Erwartungen vergleichen können. **Schätzungen** liefern statistische Informationen zu einer Segmentdefinition, z. B. die projizierte Audience, das Konfidenzintervall und die Standardabweichung.
+Während Sie Ihre Segmentdefinition entwickeln, können Sie die Tools für Schätzung und Vorschau innerhalb von [!DNL Adobe Experience Platform] verwenden, um Informationen auf Ansicht-Zusammenfassungsebene zu erhalten, um sicherzustellen, dass Sie die erwartete Audience isolieren. **In der** Vorschau werden paginierte Listen von qualifizierten Profilen für eine Segmentdefinition angezeigt, sodass Sie die Ergebnisse mit Ihren Erwartungen vergleichen können. **Die** Schätzwerte liefern statistische Informationen zu einer Segmentdefinition, z. B. die projizierte Audience, das Konfidenzintervall und die Standardabweichung für Fehler.
 
 ## Erste Schritte
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der API [!DNL Adobe Experience Platform Segmentation Service]. Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach wichtigen Informationen, die Sie kennen müssen, um die API erfolgreich aufzurufen, einschließlich erforderlicher Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Erstellung von Schätzungen
 
@@ -41,9 +41,9 @@ Die Stichprobengröße der Überprüfung hängt von der Gesamtanzahl der Entitä
 >
 >Die Ausführung von Schätzungen dauert in der Regel 10 bis 15 Sekunden, beginnend mit einer groben Schätzung und einer Feinabstimmung, wenn mehr Datensätze gelesen werden.
 
-## Create a new preview {#create-preview}
+## Neue Vorschau {#create-preview} erstellen
 
-You can create a new preview by making a POST request to the `/preview` endpoint.
+Sie können eine neue Vorschau erstellen, indem Sie eine POST an den `/preview`-Endpunkt anfordern.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | Der PQL-Ausdruck, um die Daten Abfrage. |
 | `predicateType` | Der Vorhersagetyp für den Ausdruck Abfrage unter `predicateExpression`. Derzeit ist der einzige akzeptierte Wert für diese Eigenschaft `pql/text`. |
-| `predicateModel` | Der Name des [!DNL Experience Data Model] (XDM-)Schemas, auf dem die Profil-Daten basieren. |
+| `predicateModel` | Der Name des [!DNL Experience Data Model] (XDM)-Schemas, auf dem die Profil-Daten basieren. |
 
 **Antwort**
 
@@ -99,7 +99,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) mit Details zu Ihrer n
 
 ## Abrufen der Ergebnisse einer bestimmten Vorschau {#get-preview}
 
-You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview ID in the request path.
+Sie können detaillierte Informationen zu einer bestimmten Vorschau abrufen, indem Sie eine GET an den Endpunkt `/preview` anfordern und die Vorschauen-ID im Anforderungspfad angeben.
 
 **API-Format**
 
@@ -109,7 +109,7 @@ GET /preview/{PREVIEW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | The `previewId` value of the preview you want to retrieve. |
+| `{PREVIEW_ID}` | Der `previewId`-Wert der Vorschau, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -172,11 +172,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `results` | Eine Liste von Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können zum Nachschlagen der angegebenen Entitäten verwendet werden, indem die [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Eine Liste von Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können zum Nachschlagen der angegebenen Entitäten mit dem [[!DNL Profile Access API]](../../profile/api/entities.md) verwendet werden. |
 
 ## Abrufen der Ergebnisse eines bestimmten Schätzauftrags {#get-estimate}
 
-Nachdem Sie einen Vorschau-Auftrag erstellt haben, können Sie ihn `previewId` im Pfad einer GET-Anforderung an den `/estimate` Endpunkt verwenden, um statistische Informationen zur Segmentdefinition, einschließlich projizierter Audience, Konfidenzintervall und standardmäßiger Fehlerabweichung, Ansicht.
+Nachdem Sie einen Vorschau-Auftrag erstellt haben, können Sie dessen `previewId` im Pfad einer GET-Anforderung zum `/estimate`-Endpunkt verwenden, um statistische Informationen zur Segmentdefinition wie die projizierte Audience, das Konfidenzintervall und die Standardabweichung für Fehler Ansicht.
 
 **API-Format**
 
@@ -186,7 +186,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Ein Schätzauftrag wird nur ausgelöst, wenn ein Auftragsauftrag erstellt wird und die beiden Vorschauen denselben ID-Wert für Suchzwecke verwenden. Dies ist insbesondere der `previewId` Wert, der beim Erstellen des Auftrags für die Vorschau zurückgegeben wird. |
+| `{PREVIEW_ID}` | Ein Schätzauftrag wird nur ausgelöst, wenn ein Auftragsauftrag erstellt wird und die beiden Vorschauen denselben ID-Wert für Suchzwecke verwenden. Dies ist insbesondere der Wert `previewId`, der beim Erstellen des Auftrags für die Vorschau zurückgegeben wird. |
 
 **Anfrage**
 
@@ -231,4 +231,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen [!DNL Segmentation Service] API-Endpunkten finden Sie im Handbuch [Segmentierungsdienst-Entwickler](./overview.md).
+Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen [!DNL Segmentation Service] API-Endpunkten finden Sie im [Handbuch für den Entwickler des Segmentierungsdienstes](./overview.md).
