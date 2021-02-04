@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;Segmentaufträge;Segmentauftrag;API;API;
 solution: Experience Platform
 title: Segmentaufträge
 topic: developer guide
@@ -7,21 +7,21 @@ description: Dieses Handbuch enthält Informationen zum besseren Verständnis vo
 translation-type: tm+mt
 source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 35%
+source-wordcount: '1167'
+ht-degree: 34%
 
 ---
 
 
 # Endpunkt für Segmentaufträge
 
-Ein Segmentauftrag ist ein asynchroner Vorgang, bei dem ein neues Zielgruppensegment erstellt wird. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
+Ein Segmentauftrag ist ein asynchroner Vorgang, bei dem ein neues Zielgruppensegment erstellt wird. Er verweist auf eine [Segmentdefinition](./segment-definitions.md) sowie alle [Mergerichtlinien](../../profile/api/merge-policies.md), die steuern, wie [!DNL Real-time Customer Profile] überlappende Profil-Fragmente zusammenführt. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentaufträgen und umfasst Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 
 ## Erste Schritte
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der API [!DNL Adobe Experience Platform Segmentation Service]. Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach wichtigen Informationen, die Sie kennen müssen, um die API erfolgreich aufzurufen, einschließlich erforderlicher Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Liste mit Segmentaufträgen abrufen {#retrieve-list}
 
@@ -29,7 +29,7 @@ Sie können eine Liste aller Segmentaufträge für Ihre IMS-Organisation abrufen
 
 **API-Format**
 
-Der `/segment/jobs` Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Exportaufträge abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
+Der `/segment/jobs`-Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Diese Parameter sind optional, ihre Verwendung wird jedoch dringend empfohlen, um den kostspieligen Aufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Exportaufträge abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /segment/jobs
@@ -182,7 +182,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentau
 
 ## Neuen Segmentauftrag erstellen {#create}
 
-Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST an den `/segment/jobs` Endpunkt anfordern und die ID der Segmentdefinition einschließen, aus der Sie eine neue Audience erstellen möchten.
+Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST an den Endpunkt `/segment/jobs` anfordern und die ID der Segmentdefinition einschließen, aus der Sie eine neue Audience erstellen möchten.
 
 **API-Format**
 
@@ -276,7 +276,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
 
 ## Bestimmten Segmentauftrag abrufen {#get}
 
-You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to retrieve in the request path.
+Sie können detaillierte Informationen zu einem bestimmten Segmentauftrag abrufen, indem Sie eine GET an den Endpunkt `/segment/jobs` anfordern und die ID des Segmentauftrags angeben, den Sie im Anforderungspfad abrufen möchten.
 
 **API-Format**
 
@@ -373,7 +373,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum
 
 ## Massenabruf von Segmentaufträgen {#bulk-get}
 
-Sie können detaillierte Informationen zu mehreren Segmentaufträgen abrufen, indem Sie eine POST an den `/segment/jobs/bulk-get` Endpunkt anfordern und die `id` Werte der Segmentaufträge im Anforderungstext angeben.
+Sie können detaillierte Informationen zu mehreren Segmentaufträgen abrufen, indem Sie eine POST an den `/segment/jobs/bulk-get`-Endpunkt anfordern und die `id`-Werte der Segmentaufträge im Anforderungstext angeben.
 
 **API-Format**
 
@@ -479,7 +479,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 207 mit den angeforderten Segmentauft
 
 ## Bestimmten Segmentauftrag abbrechen oder löschen {#delete}
 
-Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anforderung an den `/segment/jobs` Endpunkt senden und die ID des Segmentauftrags angeben, den Sie im Anforderungspfad löschen möchten.
+Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anforderung an den Endpunkt `/segment/jobs` stellen und die ID des Segmentauftrags angeben, der im Anforderungspfad gelöscht werden soll.
 
 >[!NOTE]
 >
