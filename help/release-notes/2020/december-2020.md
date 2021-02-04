@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 33%
+ht-degree: 35%
 
 ---
 
@@ -28,7 +28,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## [!DNL Dataflows] {#dataflows}
 
-Datenflüsse sind eine Darstellung von Datenaufträgen, die Daten über die Plattform verschieben. Diese Datenflüsse werden über verschiedene Dienste konfiguriert und unterstützen Sie beim Verschieben von Daten von den Quellschnittstellen zu den Zielgruppen-Datensätzen, zum Identitäts- und Profil-Dienst und zu Zielen.
+Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Dienste konfiguriert und unterstützen Sie beim Verschieben von Daten von den Quellschnittstellen zu den Zielgruppen-Datensätzen, zum Identitäts- und Profil-Dienst und zu Zielen.
 
 **Wichtigste Funktion**
 
@@ -36,7 +36,7 @@ Datenflüsse sind eine Darstellung von Datenaufträgen, die Daten über die Plat
 | ------- | ----------- |
 | Transparenz für Datenflüsse | Sie können Datenflüsse auf Quellen und Ziele überwachen. Weitere Informationen finden Sie im [Tutorial zu Überwachungsquellen](../../dataflows/ui/monitor-sources.md) oder im [Tutorial zu Überwachungszielen](../../dataflows/ui/monitor-destinations.md). |
 
-Weitere Informationen zu Datenflüssen finden Sie in der Übersicht über die [Datenflüsse](../../dataflows/home.md).
+Weitere Informationen zu Datenflüssen finden Sie unter [Datenaflows overview](../../dataflows/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -48,11 +48,11 @@ Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz
 | --- | ---|
 | Adobe Experience Platform Intelligence-Paket-Addon | Das Adobe Experience Platform Intelligence-Paket-Addon ist ein Data Science Workspace-Upgrade, mit dem zusätzliche wichtige Funktionen wie die folgenden entdeckt werden: <li> Experimentieren und Testen von benutzeroberflächengesteuerten Modellen</li><li> Möglichkeit zur Bereitstellung und Inbetriebnahme von Modellen mit geplanten Schulungen und Unterrichtsaufträgen.</li><li> Unterstützung für tiefes Lernen in Tensorflow-Modellen (GPU Compute).</li><li> Spark-basierte verteilte Berechnung zur Schulung und Bewertung mit großen Datensätzen (10MM + Zeilen).</li><li>Und mehr</li> |
 
-Weitere Informationen zum Adobe Experience Platform Intelligence-Paket finden Sie in der Dokumentation zum Zugriff auf den [Data Science Workspace und seinen Funktionen](../../data-science-workspace/access-features-dsw.md).
+Weitere Informationen zum Adobe Experience Platform Intelligence-Paket-Add-On finden Sie in der Dokumentation zu [Data Science Workspace und Funktionen](../../data-science-workspace/access-features-dsw.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie diese Daten mithilfe der [!DNL Platform]-Dienste strukturieren, beschriften und erweitern können. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -60,8 +60,8 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Konto- und Verbindungsdetails für Streaming-Quellen aktualisieren | Sie können nun die Namen, Beschreibungen und Anmeldeinformationen der vorhandenen Streaming-Verbindungen mithilfe der [!DNL Flow Service] API und der Benutzeroberfläche aktualisieren. Weitere Informationen finden Sie im Lernprogramm zum [Aktualisieren von Verbindungen mithilfe der API](../../sources/tutorials/api/update.md) und zum [Bearbeiten von Kontodetails mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/monitor.md). |
-| Datenflüsse löschen | Streaming-Datenflüsse, die Fehler enthalten oder unnötig geworden sind, können jetzt mit der [!DNL Flow Service] API und der Benutzeroberfläche gelöscht werden. Weitere Informationen finden Sie im Lernprogramm zum [Löschen von Datenflüssen mithilfe der API](../../sources/tutorials/api/delete-dataflows.md) und zum [Löschen von Datenflüssen mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/delete.md). |
+| Konto- und Verbindungsdetails für Streaming-Quellen aktualisieren | Sie können nun die Namen, Beschreibungen und Anmeldeinformationen vorhandener Streaming-Verbindungen mithilfe der API und der Benutzeroberfläche aktualisieren. [!DNL Flow Service] Weitere Informationen finden Sie im Lernprogramm zu [Aktualisieren von Verbindungen mit der API](../../sources/tutorials/api/update.md) und [Bearbeiten von Kontodetails mithilfe der Benutzeroberfläche](../../sources/tutorials/ui/monitor.md). |
+| Datenflüsse löschen | Streaming-Datenflüsse, die Fehler enthalten oder unnötig geworden sind, können jetzt mit der API und der Benutzeroberfläche gelöscht werden. [!DNL Flow Service] Weitere Informationen finden Sie im Lernprogramm zum Löschen von Datenflüssen mit der API](../../sources/tutorials/api/delete-dataflows.md) und zum Löschen von Datenflüssen mit der Benutzeroberfläche](../../sources/tutorials/ui/delete.md).[[ |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
 
