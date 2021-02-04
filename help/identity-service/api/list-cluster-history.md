@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;identities;cluster history
+keywords: Experience Platform;Home;beliebte Themen;Identitäten;Clusterverlauf
 solution: Experience Platform
 title: Abrufen des Clusterverlaufs einer Identität
 topic: API guide
@@ -7,8 +7,8 @@ description: Identitäten können Cluster über den Verlauf verschiedener Gerät
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 49%
+source-wordcount: '337'
+ht-degree: 48%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 49%
 
 Identitäten können Cluster über den Verlauf verschiedener Gerätediagramme verschieben. [!DNL Identity Service] ermöglicht die Sichtbarkeit der Clusterzuordnungen einer bestimmten Identität im Laufe der Zeit.
 
-Verwenden Sie einen optionalen `graph-type` Parameter, um den Ausgabetyp anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
+Verwenden Sie den optionalen Parameter `graph-type`, um den Ausgabetyp anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
 
 - `None` - Keine Identitätszuordnung durchführen.
 - `Private Graph` - Führen Sie Identitätszuordnungen auf Basis Ihres persönlichen Identitätsdiagramms durch. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
@@ -67,7 +67,7 @@ curl -X GET \
 
 ## Abrufen des Clusterverlaufs von mehreren Identitäten
 
-Use the `POST` method as a batch equivalent of the `GET` method described above to return the cluster histories of multiple identities.
+Verwenden Sie die `POST`-Methode als Stapeläquivalent der oben beschriebenen `GET`-Methode, um die Cluster-Historien mehrerer Identitäten zurückzugeben.
 
 >[!NOTE]
 >
@@ -219,4 +219,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Proceed to the next tutorial to [list identity mappings](./list-identity-mappings.md)
+Fahren Sie mit dem nächsten Lernprogramm zu [Listen-Identitätszuordnungen](./list-identity-mappings.md) fort
