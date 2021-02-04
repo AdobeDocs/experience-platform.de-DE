@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform;Produktkaufrezept;Data Science Workspace;beliebte Themen;Rezepte;Prä-Build-Rezept
 solution: Experience Platform
 title: Rezept zum Produktkauf
 topic: overview
@@ -7,8 +7,8 @@ description: Mit dem Produktkaufprognostizierungsrezept können Sie die Wahrsche
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 14%
+source-wordcount: '396'
+ht-degree: 13%
 
 ---
 
@@ -35,7 +35,7 @@ Das Rezept zur Prognose des Produktkaufs verwendet maschinelles Lernen, um das K
 
 ## Datenschema
 
-Dieses Rezept verwendet [XDM-Schema](../../xdm/home.md) , um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
+Dieses Rezept verwendet [XDM-Schema](../../xdm/home.md), um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
 
 | Feldname | Typ |
 --- | ---
@@ -60,6 +60,6 @@ Dieses Rezept verwendet [XDM-Schema](../../xdm/home.md) , um die Daten zu modell
 
 ## Algorithmus
 
-Zunächst wird der Schulungsdatensatz im Schema *ProductPrediction* geladen. Von hier aus wird das Modell mit einem [zufälligen Waldklassifizierer](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)trainiert. Random forest classifier ist eine Art zusammengesetzter Algorithmus, der sich auf einen Algorithmus bezieht, der mehrere Algorithmen kombiniert, um eine bessere Vorhersageleistung zu erzielen. Die Idee hinter dem Algorithmus ist, dass der Random Forest Classifier mehrere Entscheidungsbäume baut und diese zusammenführt, um eine genauere und stabilere Prognose zu erstellen.
+Zunächst wird der Schulungsdatensatz im Schema *ProductPrediction* geladen. Von hier aus wird das Modell mit einem [random forest classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) trainiert. Random forest classifier ist eine Art zusammengesetzter Algorithmus, der sich auf einen Algorithmus bezieht, der mehrere Algorithmen kombiniert, um eine bessere Vorhersageleistung zu erzielen. Die Idee hinter dem Algorithmus ist, dass der Random Forest Classifier mehrere Entscheidungsbäume baut und diese zusammenführt, um eine genauere und stabilere Prognose zu erstellen.
 
 Dieser Vorgang Beginn beim Erstellen einer Reihe von Entscheidungsbäumen, die nach dem Zufallsprinzip Untergruppen von Schulungsdaten auswählen. Danach werden die Ergebnisse der einzelnen Entscheidungsbaume gemittelt.
