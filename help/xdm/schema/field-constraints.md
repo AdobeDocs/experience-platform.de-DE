@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;Mixin;Mixin;Mixins;Mixins;Datentyp;Datentypen;Datentypen;Datentyp;Datenentwurf;Schema-Design;Datentyp;Datentyp;Datentyp;Schema;Schemas;Schema-Design;Map;Map;Map;
 solution: Experience Platform
 title: XDM-Feldtypeinschränkungen
 topic: overview
@@ -7,8 +7,8 @@ description: Eine Referenz für XDM-Feldtypeinschränkungen, einschließlich der
 translation-type: tm+mt
 source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
-source-wordcount: '994'
-ht-degree: 74%
+source-wordcount: '1027'
+ht-degree: 71%
 
 ---
 
@@ -19,30 +19,30 @@ Die XDM-Feldtypen, die Sie für Ihre Schema auswählen, beschränken, welche Dat
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schema-Komposition](./composition.md) , um eine Einführung in XDM-Schemas, -Klassen und -Mixins zu erhalten.
+Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schema-Komposition](./composition.md), um eine Einführung in XDM-Schemas, -Klassen und -Mixins zu erhalten.
 
-Wenn Sie Ihre eigenen Feldtypen definieren möchten, sollten Sie unbedingt mit dem Entwicklerhandbuch für die [Schema-Registrierung](../api/getting-started.md) Beginn haben, um zu erfahren, wie Mixins und Datentypen erstellt werden, die Ihre benutzerdefinierten Felder einschließen.
+Wenn Sie Ihre eigenen Feldtypen definieren möchten, sollten Sie unbedingt mit dem [Schema Registry-Entwicklerhandbuch](../api/getting-started.md) Beginn haben, um zu erfahren, wie Mixins und Datentypen erstellt werden, die Ihre benutzerdefinierten Felder einschließen.
 
 ## Zuordnen von XDM-Typen zu anderen Formaten
 
-The table below describes the mapping between each XDM type (`meta:xdmType`) and other serialization formats.
+Die folgende Tabelle beschreibt die Zuordnung zwischen jedem XDM-Typ (`meta:xdmType`) und anderen Serialisierungsformaten.
 
 | XDM-Typ<br>(meta:xdmType) | JSON<br>(JSON-Schema) | Parquet<br>(type/annotation) | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | Typ: Zeichenfolge | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Zeichenfolge | System.String | Zeichenfolge | string | Zeichenfolge | string |
-| number | Typ: Zahl | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Zahl | double | Double | double |
+| number | Typ: Zahl | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Zahl | double | Dublette | dublette |
 | long | Typ: Ganzzahl<br>Maximum:2^53+1<br>Minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Nummer | long | Ganzzahl | int64 |
 | int | Typ: Ganzzahl<br>Maximum:2^31<br>Minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Nummer | int | Ganzzahl | int32 |
 | short | Typ: Ganzzahl<br>Maximum:2^15<br>Minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Short | System.Int16 | Nummer | int | Ganzzahl | int32 |
 | Byte | Typ: Ganzzahl<br>Maximum:2^7<br>Minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Zahl | int | Ganzzahl | int32 |
 | boolean | Typ: Boolescher Wert | BOOLEAN | BooleanType | java.lang.Boolean | Boolesch | System.Boolean | Boolesch | bool | Ganzzahl | Ganzzahl | bool |
 | date | Typ: Zeichenfolge<br>Format: Datum<br>(RFC 3339, Abschnitt 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | date | Ganzzahl<br>(unix millis) | int64<br>(unix millis) |
-| date-time | Typ: Zeichenfolge<br>Format: Datum/Uhrzeit<br>(RFC 3339, Abschnitt 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | timestamp | Ganzzahl<br>(unix millis) | int64<br>(unix millis) |
+| date-time | Typ: Zeichenfolge<br>Format: Datum/Uhrzeit<br>(RFC 3339, Abschnitt 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | timestamp | Ganzzahl<br>(unix millis) | int64<br>(unix Millis) |
 | map | object | ZUORDNEN kommentierter Gruppe<br><br>&lt;<span>key_type</span>> MUSS ZEICHENFOLGE sein<br><br>&lt;<span>value_type</span>> Typ der Zuordnungwerte | MapType<br><br>&quot;keyType&quot; MUSS StringType sein<br><br>&quot;valueType&quot; ist Typ der Zuordnungwerte. | java.util.Map | Map | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
 
 ## Definieren von XDM-Feldtypen in der API {#define-fields}
 
-XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards and basic field types, with additional constraints for field names which are enforced by [!DNL Experience Platform]. The [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) allows you to define additional field types through the use of formats and optional constraints. XDM field types are exposed by the field-level attribute, `meta:xdmType`.
+XDM-Schema werden mit den Standards [JSON-Schema](https://json-schema.org/) und den grundlegenden Feldtypen definiert, mit zusätzlichen Einschränkungen für Feldnamen, die von [!DNL Experience Platform] erzwungen werden. Mit der [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. XDM-Feldtypen werden durch das Attribut auf Feldebene, `meta:xdmType`, verfügbar gemacht.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
 
 In der folgenden Tabelle sind die entsprechenden Formatierungen zur Definition von skalaren Feldtypen und spezifischeren Feldtypen mit optionalen Eigenschaften aufgeführt. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung zum [Erstellen einer Mischung](../api/mixins.md#create) oder zum [Erstellen eines Datentyps](../api/data-types.md#create)bereitgestellt wird.
+Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung für [Erstellen einer Mischung](../api/mixins.md#create) oder [zum Erstellen eines Datentyps](../api/data-types.md#create) bereitgestellt wird.
 
 <table>
   <tr>
