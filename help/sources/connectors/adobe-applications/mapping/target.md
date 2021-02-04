@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;target mapping;Target mapping
+keywords: Experience Platform;Home;beliebte Themen;Zielgruppen-Mapping;Zielgruppen-Mapping
 solution: Experience Platform
 title: Zielgruppen-Mapping
 topic: overview
@@ -7,17 +7,17 @@ description: In der folgenden Tabelle sind die Felder eines Experience Ereignis-
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 3%
+source-wordcount: '471'
+ht-degree: 2%
 
 ---
 
 
 # Zielgruppen-Mapping-Felder
 
-Mit Adobe Experience Platform können Sie Adobe Target-Daten über den Zielgruppen-Quellanschluss erfassen. Bei Verwendung des Connectors müssen alle Daten aus den Feldern der Zielgruppe den XDM-Feldern ( [Experience Data Model)](../../../../xdm/home.md) zugeordnet sein, die der XDM ExperienceEvent-Klasse zugeordnet sind.
+Mit Adobe Experience Platform können Sie Adobe Target-Daten über den Zielgruppen-Quellanschluss erfassen. Bei Verwendung des Connectors müssen alle Daten aus den Feldern der Zielgruppe den mit der XDM ExperienceEvent-Klasse verknüpften Feldern [Erlebnisdatenmodell (XDM)](../../../../xdm/home.md) zugeordnet werden.
 
-In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (Feld *XDM ExperienceEvent) und die entsprechenden Felder für die Zielgruppe, denen sie zugeordnet werden sollen (Feld**Zielgruppe anfordern*), aufgeführt. Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
+In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (*XDM ExperienceEvent-Feld*) und die entsprechenden Felder für die Zielgruppe, denen sie zugeordnet werden sollen (*Feld für die Zielgruppe-Anforderung*), aufgeführt. Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
 
 >[!NOTE]
 >
