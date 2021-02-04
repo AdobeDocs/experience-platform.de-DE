@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;environment;datatype;data-type;data type;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Umgebung;Datentyp;Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp der Umgebung
 topic: overview
@@ -7,25 +7,25 @@ description: Dieses Dokument gibt einen Überblick über den XDM-Datentyp der Um
 translation-type: tm+mt
 source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 15%
+source-wordcount: '464'
+ht-degree: 14%
 
 ---
 
 
-# [!UICONTROL Umgebung] -Datentyp
+# [!UICONTROL Typ ] Environmentdata
 
-[!UICONTROL Umgebung] ist ein standardmäßiger XDM-Datentyp, der die umliegende Umgebung eines beobachteten Ereignisses beschreibt und dabei insbesondere Übergangsdaten wie Netzwerk- und Softwareversionen beschreibt.
+[!UICONTROL Die ] Umgebung ist ein Standard-XDM-Datentyp, der die umliegende Umgebung eines beobachteten Ereignisses beschreibt und dabei insbesondere vorübergehende Informationen wie Netzwerk- und Softwareversionen beschreibt.
 
 >[!IMPORTANT]
 >
->Alle Werte sollten mit der von der Adobe lizenzierten [DeviceAtlas](https://deviceatlas.com) -Datenbank übereinstimmen.
+>Alle Werte sollten mit der [DeviceAtlas](https://deviceatlas.com)-Datenbank, lizenziert von der Adobe, übereinstimmen.
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `_dc` | Objekt | Ein Objekt, das ein einzelnes Feld enthält `language`, das die Sprache der Umgebung angibt, in der die sprachlichen, geografischen oder kulturellen Präferenzen des Benutzers für die Datendarstellung dargestellt werden. Languages are specified in language code as defined in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
+| `_dc` | Objekt | Ein Objekt, das ein einzelnes Feld mit der Bezeichnung `language` enthält, das die Sprache der Umgebung angibt, in der die sprachlichen, geografischen oder kulturellen Präferenzen des Benutzers für die Datendarstellung dargestellt werden sollen. Die Sprache wird im Sprachcode angegeben, wie in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt) definiert. |
 | `browserDetails` | [Browserdetails](./browser-details.md) | Beschreibt die browserspezifischen Details der Umgebung, z. B. Browsername, Version, JavaScript-Version, Benutzeragenten-Zeichenfolge und Annahmesprache. |
 | `ISP` | Zeichenfolge | Der Name des Internet-Dienstleisters des Benutzers. |
 | `carrier` | Zeichenfolge | Der Name des Mobilfunknetzbetreibers oder der Mobilfunknetzbetreiber (auch als Wireless-Dienstleister, Wireless-Netzbetreiber, Mobilnetzbetreiber oder Mobilnetzbetreiber bezeichnet), der Kommunikationsdienste verkauft und für den Nutzer bereitstellt. |
@@ -34,10 +34,10 @@ ht-degree: 15%
 | `domain` | Zeichenfolge | Die Domäne des ISP des Benutzers. |
 | `ipV4` | Zeichenfolge | Die numerische Beschriftung, die einem Gerät zugewiesen ist, das an einem Computernetzwerk teilnimmt, das das Internetprotokoll für die Kommunikation verwendet (32-Bit). |
 | `ipV6` | Zeichenfolge | Die numerische Beschriftung, die einem Gerät zugewiesen wird, das an einem Computernetzwerk teilnimmt, das das Internet-Protokoll für die Kommunikation verwendet (128 Bit). |
-| `operatingSystem` | Zeichenfolge | Der Name des Betriebssystems, das bei der Beobachtung verwendet wurde. The attribute should not contain any version information such as `10.5.3`, but instead contain &quot;edition&quot; designations such as `Ultimate` or `Professional`. |
+| `operatingSystem` | Zeichenfolge | Der Name des Betriebssystems, das bei der Beobachtung verwendet wurde. Das Attribut sollte keine Versionsinformationen wie `10.5.3` enthalten, sondern stattdessen &quot;Edition&quot;-Bezeichnungen wie `Ultimate` oder `Professional`. |
 | `operatingSystemVendor` | Zeichenfolge | Der Name des Betriebssystemanbieters, das bei der Beobachtung verwendet wurde. |
 | `operatingSystemVersion` | Zeichenfolge | Die Vollversionskennung des Betriebssystems, das bei der Beobachtung verwendet wurde. Versionen werden in der Regel numerisch zusammengestellt, können jedoch in einem vom Anbieter definierten Format vorliegen. |
-| `type` | Zeichenfolge | Der Typ der Anwendungs-Umgebung. Zulässige Werte finden Sie im [Anhang](#type) . |
+| `type` | Zeichenfolge | Der Typ der Anwendungs-Umgebung. Die zulässigen Werte finden Sie im Anhang [a1/>.](#type) |
 | `viewportHeight` | Ganzzahl | Die vertikale Größe in Pixeln des Fensters, in dem das Erlebnis angezeigt wurde. Bei einem Web-Ansicht-Ereignis ist dies die Browser-Viewport-Höhe. |
 | `viewPortWidth` | Ganzzahl | Die horizontale Größe in Pixeln des Fensters, in dem das Erlebnis angezeigt wurde. Bei einem Web-Ansicht-Ereignis ist dies die Browser-Viewport-Breite. |
 
@@ -48,11 +48,11 @@ Weitere Informationen zum Mixin finden Sie im öffentlichen XDM-Repository:
 
 ## Anhang
 
-Der folgende Abschnitt enthält weitere Informationen zum Datentyp [!UICONTROL des Geräts] .
+Der folgende Abschnitt enthält weitere Informationen zum Datentyp [!UICONTROL Gerät].
 
-## Akzeptierte Werte für Typ {#type}
+## Akzeptierte Werte für den Typ {#type}
 
-In der folgenden Tabelle sind die zulässigen Werte für `type` und die damit verbundene Bedeutung aufgeführt:
+In der folgenden Tabelle sind die für `type` zulässigen Werte und die damit verbundenen Bedeutungen aufgeführt:
 
 | Wert | Beschreibung |
 | --- | --- |
