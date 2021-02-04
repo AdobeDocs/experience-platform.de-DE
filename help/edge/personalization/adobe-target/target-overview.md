@@ -3,35 +3,35 @@ title: 'Adobe Target und Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK und Verwendung von Adobe Target
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
+keywords: zielgruppe;adobe-Zielgruppe;Aktivität.id;Experience.id;renderDecision;DecisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;Audiencen;Beschlüsse;Scope;Schema;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 5%
+source-wordcount: '647'
+ht-degree: 4%
 
 ---
 
 
 # [!DNL Target] Übersicht
 
-Adobe Experience Platform [!DNL Web SDK] kann personalisierte Erlebnisse, die in Adobe Target verwaltet werden, für den Web-Kanal bereitstellen und rendern. Sie können einen WYSIWYG-Editor, den so genannten [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), oder eine nicht visuelle Schnittstelle, den [Form-Based Experience Composer](https://docs.adobe.com/content/help/de-DE/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
+Adobe Experience Platform [!DNL Web SDK] kann personalisierte Erlebnisse, die in Adobe Target verwaltet werden, für den Web-Kanal bereitstellen und rendern. Sie können einen WYSIWYG-Editor mit dem Namen [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC) oder eine nicht visuelle Schnittstelle, den [Form-Based Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
 
 ## Aktivieren von Adobe Target
 
-Zur Aktivierung [!DNL Target]müssen Sie folgende Schritte ausführen:
+Um [!DNL Target] zu aktivieren, müssen Sie folgende Schritte ausführen:
 
 1. Aktivieren Sie die Zielgruppe in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) mit dem entsprechenden Clientcode.
-1. hinzufügen Sie die `renderDecisions` Option auf Ihre Ereignis.
+1. hinzufügen Sie die Option `renderDecisions` zu Ihren Ereignissen.
 
 Dann können Sie optional auch:
 
-* hinzufügen Sie `decisionScopes` Ihre Ereignis an, um bestimmte Aktivitäten abzurufen (nützlich für Aktivitäten, die mit dem formularbasierten Composer erstellt wurden).
-* hinzufügen Sie das [Ausblendungsfragment](../manage-flicker.md) , um nur bestimmte Teile der Seite auszublenden.
+* hinzufügen Sie `decisionScopes` auf Ihre Ereignis, um bestimmte Aktivitäten abzurufen (nützlich für Aktivitäten, die mit dem formularbasierten Composer erstellt wurden).
+* hinzufügen Sie das Prähiding-Snippet [, um nur bestimmte Teile der Seite auszublenden.](../manage-flicker.md)
 
 ## Verwenden des Adobe Target VEC
 
-Um den VEC mit einer Platform Web SDK-Implementierung zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) - oder [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension installieren und aktivieren.
+Um VEC mit einer Platform Web SDK-Implementierung zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)- oder [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension installieren und aktivieren.
 
 ## VEC-Aktivitäten automatisch rendern
 
@@ -58,7 +58,7 @@ alloy
 
 ## Verwenden des formularbasierten Composers
 
-Der formularbasierte Experience Composer ist eine nicht visuelle Benutzeroberfläche, die zum Konfigurieren von A/B-Tests, [!DNL Experience Targeting]Automated Personalization- und Recommendations-Aktivitäten mit verschiedenen Antworttypen wie JSON, HTML, Image usw. nützlich ist. Abhängig vom Antworttyp oder der von Adobe Target zurückgegebenen Entscheidung kann Ihre Kerngeschäftslogik ausgeführt werden. Um Entscheidungen für Ihre formularbasierten Composer-Aktivitäten abzurufen, senden Sie ein Ereignis mit allen &quot;DecisionScopes&quot;, für die Sie eine Entscheidung abrufen möchten.
+Der formularbasierte Experience Composer ist eine nicht visuelle Benutzeroberfläche, die zum Konfigurieren von A/B-Tests, [!DNL Experience Targeting]-, Automated Personalization- und Recommendations-Aktivitäten mit verschiedenen Antworttypen wie JSON, HTML, Image usw. nützlich ist. Abhängig vom Antworttyp oder der von Adobe Target zurückgegebenen Entscheidung kann Ihre Kerngeschäftslogik ausgeführt werden. Um Entscheidungen für Ihre formularbasierten Composer-Aktivitäten abzurufen, senden Sie ein Ereignis mit allen &quot;DecisionScopes&quot;, für die Sie eine Entscheidung abrufen möchten.
 
 ```javascript
 alloy
@@ -81,11 +81,11 @@ alloy
 
 ## Entscheidungsbereiche
 
-`decisionScopes` definiert Abschnitte, Orte oder Teile Ihrer Seiten, in denen Sie ein personalisiertes Erlebnis darstellen möchten. Diese `decisionScopes` sind benutzerdefiniert und anpassbar. Für aktuelle [!DNL Target] Kunden `decisionScopes` werden auch &quot;mboxes&quot;genannt. In der [!DNL Target] Benutzeroberfläche wird `decisionScopes` &quot;Speicherorte&quot;angezeigt.
+`decisionScopes` definiert Abschnitte, Orte oder Teile Ihrer Seiten, in denen Sie ein personalisiertes Erlebnis darstellen möchten. Diese `decisionScopes` sind anpassbar und benutzerdefiniert. Bei aktuellen [!DNL Target]-Kunden werden `decisionScopes` auch als &quot;mboxes&quot;bezeichnet. In der Benutzeroberfläche [!DNL Target] wird `decisionScopes` als &quot;Speicherorte&quot;angezeigt.
 
-## Der `__view__` Anwendungsbereich
+## Der Bereich `__view__`
 
-Adobe Experience Platform Web SDK bietet Funktionen, mit denen Sie VEC-Aktionen abrufen können, ohne dabei auf das SDK zurückgreifen zu müssen, um die VEC-Aktionen für Sie wiederzugeben. Senden Sie ein Ereignis mit der `__view__` Definition als `decisionScopes`.
+Adobe Experience Platform Web SDK bietet Funktionen, mit denen Sie VEC-Aktionen abrufen können, ohne dabei auf das SDK zurückgreifen zu müssen, um die VEC-Aktionen für Sie wiederzugeben. Senden Sie ein Ereignis mit `__view__`, das als `decisionScopes` definiert ist.
 
 ```javascript
 alloy("sendEvent", {
@@ -124,10 +124,10 @@ Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfüge
 
 ## Terminologie
 
-__Beschlüsse:__ In [!DNL Target]diesem Fall beziehen sich diese auf das Erlebnis, das aus einer Aktivität ausgewählt wurde.
+__Entscheidungen:__ In  [!DNL Target]diesen Fällen wird das Erlebnis, das aus einer Aktivität ausgewählt wurde, korreliert.
 
-__Schema:__ Das Schema einer Entscheidung ist die Art des Angebots in [!DNL Target].
+__Schema:__ Das Schema einer Entscheidung ist die Art des Angebots in  [!DNL Target].
 
-__Anwendungsbereich:__ Der Anwendungsbereich des Beschlusses. Das ist [!DNL Target]die mBox. Die globale mBox ist der `__view__` Anwendungsbereich.
+__Anwendungsbereich:__ Der Anwendungsbereich des Beschlusses. In [!DNL Target] ist dies die mBox. Die globale mBox ist der Bereich `__view__`.
 
-__XDM:__ Der XDM wird in Punktnotation serialisiert und dann [!DNL Target] als mBox-Parameter eingefügt.
+__XDM:__ Der XDM wird in Punktnotation serialisiert und dann  [!DNL Target] als mBox-Parameter eingefügt.
