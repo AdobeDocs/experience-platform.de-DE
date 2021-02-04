@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
+keywords: Experience Platform;Home;beliebte Themen;Löschen eines Objekts;Katalogdienst;API
 solution: Experience Platform
 title: Löschen eines Objekts
 topic: developer guide
@@ -7,19 +7,19 @@ description: Sie können ein Katalogobjekt löschen, indem Sie dessen ID im Pfad
 translation-type: tm+mt
 source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 55%
+source-wordcount: '201'
+ht-degree: 52%
 
 ---
 
 
 # Löschen eines Objekts
 
-You can delete a [!DNL Catalog] object by providing its ID in the path of a DELETE request.
+Sie können ein [!DNL Catalog]-Objekt löschen, indem Sie dessen ID im Pfad einer DELETE-Anforderung angeben.
 
 >[!WARNING]
 >
->Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in [!DNL Experience Platform].
+>Seien Sie beim Löschen von Objekten besonders vorsichtig, da dies nicht rückgängig gemacht werden kann und andernorts in [!DNL Experience Platform] umbruchartige Änderungen hervorrufen kann.
 
 **API-Format**
 
@@ -29,11 +29,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Der `DELETE /batches/{ID}` Endpunkt wurde nicht mehr unterstützt. Um einen Stapel zu löschen, sollten Sie die [Stapelverarbeitungs-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)verwenden.
+>Der Endpunkt `DELETE /batches/{ID}` wurde nicht mehr unterstützt. Um einen Stapel zu löschen, sollten Sie die [Batch Ingestion API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) verwenden.
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be deleted. Gültige Objekte sind: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu löschenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -61,4 +61,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein Array mit der ID des
 
 >[!NOTE]
 >
->If no [!DNL Catalog] objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
+>Wenn keine [!DNL Catalog]-Objekte mit der in Ihrer Anforderung angegebenen ID übereinstimmen, erhalten Sie möglicherweise trotzdem einen HTTP-Statuscode 200, aber das Antwortarray ist leer.
