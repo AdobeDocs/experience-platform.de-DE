@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
+keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle-Berechtigungen;Zugriffskontrolle-Ressourcentypen;Zugriffskontrolle-API
 solution: Experience Platform
 title: Berechtigungsnamen und Ressourcentypen auflisten
 topic: developer guide
@@ -7,8 +7,8 @@ description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie 
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 62%
+source-wordcount: '199'
+ht-degree: 57%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 62%
 
 Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den `/acl/reference`-Endpunkt stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um [effektive Richtlinien](./effective-policies.md) für den aktuellen Anwender anzuzeigen.
 
-Eine Berechtigung ist eine Richtlinie, die über die Adobe Admin Console verwaltet wird und keiner bzw. mehr Richtlinien vom Typ Ressource zugeordnet ist. A resource type is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Platform] resource (such as datasets or schemas).
+Eine Berechtigung ist eine Richtlinie, die über die Adobe Admin Console verwaltet wird und keiner bzw. mehr Richtlinien vom Typ Ressource zugeordnet ist. Ein Ressourcentyp ist eine Richtlinie, die Lese-, Schreib- und/oder Löschfunktionen für einen bestimmten Typ von [!DNL Platform]-Ressource (z. B. DataSets oder Schema) aktiviert.
 
 **API-Format**
 
