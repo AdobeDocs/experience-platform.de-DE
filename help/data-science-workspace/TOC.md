@@ -18,7 +18,7 @@ ht-degree: 56%
 * [Übersicht über den Data Science Workspace](home.md)
 * [Zugriff auf den Data Science Workspace und Funktionen](access-features-dsw.md)
 * [Anleitung für Data Science Workspace](walkthrough.md)
-* JupyterLab-Notebooks {#jupyterlab}
+* JupyterLab Notebooks {#jupyterlab}
    * [JupyterLab-Benutzerhandbuch](jupyterlab/overview.md)
    * [Datenzugriff](jupyterlab/access-notebook-data.md)
    * [Analysieren Ihrer Daten](jupyterlab/analyze-your-data.md)
@@ -39,17 +39,17 @@ ht-degree: 56%
    * [Erste Schritte](real-time-machine-learning/getting-started.md)
    * [Benutzerhandbuch zu RTML Authoring-Notebooks](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Node Reference Guide](real-time-machine-learning/node-reference.md)
-* Vordefinierte Rezepte {#pre-built-recipes}
+* Vorgefertigte Rezepte {#pre-built-recipes}
    * [Rezept für Produktempfehlungen](pre-built-recipes/product-recommendations.md)
    * [Prognosen zum Produktkauf](pre-built-recipes/product-purchase-prediction.md)
    * [Rezept für Einzelhandel](pre-built-recipes/retail-sales.md)
-* Model Authoring {#authoring}
+* Modell-Authoring {#authoring}
    * [Modell-Authoring-SDK](authoring/sdk.md)
    * [Erstellen einer Feature Pipeline](authoring/feature-pipeline.md)
    * [Platform SDK-Handbuch (Python)](authoring/platform-sdk.md)
    * [Python-Datenzugriff](authoring/python.md)
    * [Spark-Datenzugriff](authoring/spark.md)
-* Modell- und Rezeptutorials {#models-recipes}
+* Modell- und Rezept-Tutorials {#models-recipes}
    * [Exemplarische Vorgehensweise zum Erstellen und Veröffentlichen eines maschinellen Lernmodells](models-recipes/create-publish-model.md)
    * [Erstellen des Schemas und Datensatzes für den Einzelhandel](models-recipes/create-retails-sales-dataset.md)
    * [Vorschau auf Schemas und Datensätze](models-recipes/preview-schema-data.md)
