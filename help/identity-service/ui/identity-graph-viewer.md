@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
 translation-type: tm+mt
-source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
+source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '930'
 ht-degree: 3%
 
 ---
@@ -100,7 +100,7 @@ Im folgenden Abschnitt finden Sie weitere Informationen zum Arbeiten mit dem Ide
 Fehler können beim Zugriff auf den Identitätsdiagramm-Viewer auftreten. Im Folgenden finden Sie eine Liste der Voraussetzungen und Einschränkungen, die beim Arbeiten mit dem Identitätsdiagramm-Viewer zu beachten sind.
 
 - Im ausgewählten Namensraum muss ein Identitätswert vorhanden sein.
-- Für den Identitätsdiagramm-Viewer sind mindestens zwei verknüpfte Identitäten erforderlich.
+- Für den Identitätsdiagramm-Viewer sind mindestens zwei verknüpfte Identitäten erforderlich. Es ist möglich, dass es nur einen Identitätswert und keine verknüpften Identitäten gibt. In diesem Fall wäre der Wert nur im Viewer [!DNL Profile] vorhanden.
 - Der Identitätsdiagramm-Viewer darf nicht länger als 150 Identitäten sein.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
