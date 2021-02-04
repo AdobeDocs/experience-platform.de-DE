@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
+keywords: Experience Platform;Einblicke;Kundenberatung;beliebte Themen;Einblicke in die Kundenwerbung
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Einblicke in die Kundentechnik
 topic: Discovering insights
@@ -7,7 +7,7 @@ description: Dieses Dokument dient als Leitfaden für die Interaktion mit Dienst
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1399'
 ht-degree: 12%
 
 ---
@@ -25,7 +25,7 @@ Um Einblicke in die Kundenaktivität zu erhalten, benötigen Sie eine Dienstinst
 
 ## Übersicht über die Dienstinstanzen
 
-In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Der *Dienste*-Browser wird geöffnet und zeigt verfügbare Intelligent Services an. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
+Klicken Sie in der Benutzeroberfläche [!DNL Adobe Experience Platform] in der linken Navigation auf **[!UICONTROL Dienste]**. Der *Dienste*-Browser wird geöffnet und zeigt verfügbare Intelligent Services an. Klicken Sie im Container für Customer AI auf **[!UICONTROL Öffnen]**.
 
 ![Zugreifen auf Ihre Instanz](../images/insights/navigate-to-service.png)
 
@@ -52,8 +52,8 @@ Es gibt zwei Möglichkeiten, Dienstinstanzdetails Ansicht: aus dem Dashboard ode
 
 Um eine Übersicht über die Details der Dienstinstanz im Dashboard Ansicht, wählen Sie einen Dienstinstanz-Container aus, wobei der mit dem Namen verknüpfte Hyperlink vermieden werden soll. Dadurch wird eine rechte Leiste mit weiteren Details geöffnet. Die Steuerelemente enthalten Folgendes:
 
-- **[!UICONTROL Bearbeiten]**: Durch Auswahl von **[!UICONTROL Bearbeiten]** können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten.
-- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird die aktuell ausgewählte Dienstinstanz kopiert, die eingerichtet wurde. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
+- **[!UICONTROL Bearbeiten]**: Durch Auswahl von  **** Bearbeiten können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten.
+- **[!UICONTROL Klonen]**: Durch Auswahl von  **** Clonecopies wird die derzeit ausgewählte Dienstinstanz, die eingerichtet ist, kopiert. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
 - **[!UICONTROL Löschen]**: Sie können eine Dienstinstanz einschließlich aller historischen Ausführung löschen.
 - **[!UICONTROL Datenquelle]**: Ein Link zum Datensatz, der von dieser Instanz verwendet wird.
 - **[!UICONTROL Ausführungsfrequenz]**: Wie oft und wann eine Punktwertung stattfindet.
@@ -63,11 +63,11 @@ Um eine Übersicht über die Details der Dienstinstanz im Dashboard Ansicht, wä
 
 >[!NOTE]
 >
->In dem Ereignis, dass eine Bewertungsausführung fehlschlägt, wird eine Fehlermeldung angezeigt. Die Fehlermeldung wird unter **Letzte Ausführung Details** in der rechten Leiste aufgeführt, die nur für fehlgeschlagene Ausführung sichtbar ist.
+>In dem Ereignis, dass eine Bewertungsausführung fehlschlägt, wird eine Fehlermeldung angezeigt. Die Fehlermeldung wird unter **Letzte Ausführungsdetails** in der rechten Leiste aufgelistet, die nur für fehlgeschlagene Ausführung sichtbar ist.
 
 ![fehlgeschlagene Ausführungsmeldung](../images/insights/failed-run.png)
 
-Die zweite Möglichkeit zur Ansicht zusätzlicher Details für eine Dienstinstanz befindet sich auf der Einblicke-Seite. Sie können oben rechts auf Mehr **** anzeigen klicken, um eine Dropdown-Liste auszufüllen. Details werden aufgelistet, wie die Score-Definition, der Erstellungszeitpunkt und der Tendenztyp. Weitere Informationen zu den aufgelisteten Eigenschaften finden Sie unter [Konfigurieren einer Kunden-AI-Instanz](./configure.md).
+Die zweite Möglichkeit zur Ansicht zusätzlicher Details für eine Dienstinstanz befindet sich auf der Einblicke-Seite. Sie können oben rechts auf **[!UICONTROL Mehr anzeigen klicken, um eine Dropdown-Liste auszufüllen.]** Details werden aufgelistet, wie die Score-Definition, der Erstellungszeitpunkt und der Tendenztyp. Weitere Informationen zu den aufgelisteten Eigenschaften finden Sie unter [Konfigurieren einer Kunden-AI-Instanz](./configure.md).
 
 ![Mehr anzeigen](../images/insights/landing-show-more.png)
 
@@ -79,7 +79,7 @@ Um eine Instanz zu bearbeiten, klicken Sie in oben rechts in der Navigation auf 
 
 ![Auf Bearbeiten-Schaltfläche klicken](../images/insights/edit-button.png)
 
-Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie den Namen, die Beschreibung, den Status und die Bewertungsfrequenz der Instanz bearbeiten können. To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
+Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie den Namen, die Beschreibung, den Status und die Bewertungsfrequenz der Instanz bearbeiten können. Um Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen, wählen Sie **[!UICONTROL Speichern]** in der unteren rechten Ecke aus.
 
 ![Bearbeiten-Popup-Fenster](../images/insights/edit-instance.png)
 
@@ -87,9 +87,9 @@ Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie den Namen, die B
 
 Die Schaltfläche **[!UICONTROL Mehr Aktionen]** befindet sich in der oberen rechten Navigation neben **[!UICONTROL Bearbeiten]**. Wenn Sie auf **[!UICONTROL Mehr Aktionen]** klicken, wird ein Dropdown-Menü geöffnet, in dem Sie eine der folgenden Vorgänge auswählen können:
 
-- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird die eingerichtete Dienstinstanz kopiert. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
+- **[!UICONTROL Klonen]**: Wenn Sie  **** Clonecopies auswählen, wird die Dienstinstanz eingerichtet. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen und ihn als neue Instanz umzubenennen.
 - **[!UICONTROL Löschen]**: Löscht die Instanz.
-- **[!UICONTROL Zugangsdaten]**: Durch Auswahl von **[!UICONTROL Zugriffsergebnissen]** wird ein Dialogfeld geöffnet, das einen Link zu den [Download-Ergebnissen für das Tutorial zur Kundenwerbung](./download-scores.md) enthält. Außerdem enthält das Dialogfeld die Dataset-ID, die zum Aufrufen von API-Aufrufen erforderlich ist.
+- **[!UICONTROL Zugangsdaten]**: Durch Auswahl von  **[!UICONTROL Zugriffs-]** Scores wird ein Dialogfeld geöffnet, das einen Link zu den  [Download-Ergebnissen für das Customer ](./download-scores.md) AItutorial enthält. Außerdem enthält das Dialogfeld die Dataset-ID, die zum Aufrufen von API-Aufrufen erforderlich ist.
 - **[!UICONTROL Ansicht-Ausführungsverlauf]**: Ein Dialogfeld mit einer Liste aller mit der Dienstinstanz verknüpften Bewertungsläufe wird angezeigt.
 
 ![Mehr Aktionen](../images/insights/more-actions.png)
@@ -110,7 +110,7 @@ Wenn Sie den Mauszeiger über eine beliebige Farbe auf dem Ring halten, werden z
 
 ## Verteilung der Ergebnisse
 
-Die Karte **[!UICONTROL Verteilung der Ergebnisse]** gibt Ihnen eine visuelle Zusammenfassung der Population, die auf dem Ergebnis basiert. Die Farben, die Sie in der Karte [!UICONTROL Verteilung der Ergebnisse] sehen, stellen die Art des generierten Tendenzwerts dar. Wenn Sie den Mauszeiger über eine der Scoring-Distributionen bewegen, erhalten Sie die exakte Anzahl, die zu dieser Distribution gehört.
+Die Karte **[!UICONTROL Verteilung der Ergebnisse]** gibt Ihnen eine visuelle Zusammenfassung der Population basierend auf dem Ergebnis. Die Farben, die Sie auf der Karte [!UICONTROL Verteilung der Ergebnisse] sehen, stellen den Typ des generierten Tendenzwerts dar. Wenn Sie den Mauszeiger über eine der Scoring-Distributionen bewegen, erhalten Sie die exakte Anzahl, die zu dieser Distribution gehört.
 
 ![Verteilung der Ergebnisse](../images/insights/distribution-of-scores.png)
 
@@ -134,17 +134,17 @@ Sie können sehen, dass Profil mit geringer Tendenz zur Konvertierung weniger h�
 
 ### Erstellen eines Segments
 
-Durch Auswahl der Schaltfläche Segment **** erstellen in einer der Behälter für niedrige, mittlere und hohe Tendenz werden Sie zum Segmentaufbau weitergeleitet.
+Durch Auswahl der Schaltfläche **[!UICONTROL Segment]** erstellen in einer der Behälter für niedrige, mittlere und hohe Tendenz werden Sie zum Segmentaufbau weitergeleitet.
 
 >[!NOTE]
 >
->Die Schaltfläche &quot;Segment **** erstellen&quot;ist nur verfügbar, wenn für den Datensatz das Kundenkonto in Echtzeit aktiviert ist. Weitere Informationen zur Aktivierung von Echtzeit-Kundendaten finden Sie in der Übersicht über das [Echtzeit-Profil](../../../rtcdp/overview.md).
+>Die Schaltfläche **[!UICONTROL Segment erstellen]** ist nur verfügbar, wenn das Kundensegment in Echtzeit für den Datensatz aktiviert ist. Weitere Informationen zur Aktivierung des Echtzeit-Kundenprofils finden Sie unter [Überblick über das Echtzeit-Profil](../../../rtcdp/overview.md).
 
 ![Klicken Sie auf Segment erstellen](../images/insights/influential-factors-create-segment.png)
 
 ![Erstellen eines Segments](../images/insights/create-segment.png)
 
-Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;Einblicke&quot;die Option Segment **** erstellen auswählen, fügt die Kunden-API dem Segment automatisch die ausgewählten Behälterinformationen hinzu. Füllen Sie zum Abschluss der Segmenterstellung einfach die Container *Name* und *Beschreibung* in der rechten Leiste der Segment Builder-Benutzeroberfläche aus. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, klicken Sie oben rechts auf **[!UICONTROL Speichern]** .
+Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;Einblicke&quot;die Option **[!UICONTROL Segment erstellen]** auswählen, fügt die Kunden-API dem Segment automatisch die ausgewählten Behälterinformationen hinzu. Um das Erstellen des Segments abzuschließen, füllen Sie einfach die Container *Name* und *Beschreibung* in der rechten Leiste der Segment Builder-Benutzeroberfläche aus. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, klicken Sie oben rechts auf **[!UICONTROL Speichern]**.
 
 >[!NOTE]
 >
@@ -152,13 +152,13 @@ Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;E
 
 ![Segmentfüllung](../images/insights/segment-saving.png)
 
-Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]** . Die Seite &quot; **[!UICONTROL Durchsuchen]** &quot;wird angezeigt und zeigt alle verfügbaren Segmente an.
+Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]**. Die Seite **[!UICONTROL Durchsuchen]** wird angezeigt und zeigt alle verfügbaren Segmente an.
 
 ![Alle Segmente](../images/insights/Segments-dashboard.png)
 
 ## Nächste Schritte
 
-In diesem Dokument werden die Einblicke einer Instanz des Kundenservice erläutert. Sie können jetzt das Tutorial zum [Herunterladen von Punktzahlen in der Kundenaktivität](./download-scores.md) fortsetzen oder die anderen angebotenen [Adobe Intelligent Services](../../home.md) -Handbücher durchsuchen.
+In diesem Dokument werden die Einblicke einer Instanz des Kundenservice erläutert. Sie können nun das Tutorial zum Herunterladen von Punktzahlen in Customer AI](./download-scores.md) oder die anderen [Adobe Intelligent Services](../../home.md)-Leitfäden, die angeboten werden, fortsetzen.[
 
 ## Zusätzliche Ressourcen
 
