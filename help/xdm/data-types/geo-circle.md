@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;circle;datatype;data-type;data type;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Geo;Kreis;Datentyp;Datentyp;Datentyp;
 solution: Experience Platform
 title: Geo Circle-Datentyp
 topic: overview
@@ -7,15 +7,15 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für
 translation-type: tm+mt
 source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 26%
+source-wordcount: '133'
+ht-degree: 23%
 
 ---
 
 
-# [!UICONTROL Geo Circle] -Datentyp
+# [!UICONTROL Geo ] Circledata-Typ
 
-[!UICONTROL Geo Circle] ist ein standardmäßiger XDM-Datentyp, der eine kreisförmige geografische Region beschreibt, sofern ein bestimmter Radius auf einem bestimmten Satz von Koordinaten zentriert ist. Dieser Datentyp basiert auf der in [Schema.org](http://schema.org/GeoCircle)dokumentierten öffentlichen Spezifikation.
+[!UICONTROL Geo ] Circleis ist ein standardmäßiger XDM-Datentyp, der eine kreisförmige geografische Region beschreibt, wobei ein bestimmter Radius auf einem bestimmten Koordinatensatz zentriert ist. Dieser Datentyp basiert auf der in [Schema.org](http://schema.org/GeoCircle) dokumentierten öffentlichen Spezifikation.
 
 <img src="../images/data-types/geo-circle.png" width="400" /><br />
 
