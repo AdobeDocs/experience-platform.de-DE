@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;logical quantifiers;logical quantifier;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Logische Quantifizierer;Logischer Quantifizierer;
 solution: Experience Platform
 title: Logische Quantoren
 topic: developer guide
@@ -7,19 +7,19 @@ description: Logische Quantifizierer können verwendet werden, um Bedingungen mi
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 13%
+source-wordcount: '218'
+ht-degree: 11%
 
 ---
 
 
 # Logikquantifizierer-Funktionen
 
-Logische Quantifizierer können verwendet werden, um Bedingungen mit Arrays in [!DNL Profile Query Language] (PQL) zu erlangen. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Logische Quantifizierer können verwendet werden, um Bedingungen mit Arrays in [!DNL Profile Query Language] (PQL) zu bestätigen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Exists
 
-Die `exists` Funktion bestimmt, ob ein Element in einem Array vorhanden ist, vorausgesetzt, es erfüllt die bereitgestellte Bedingung.
+Die Funktion `exists` bestimmt, ob ein Element in einem Array vorhanden ist, sofern die angegebene Bedingung erfüllt ist.
 
 **Format**
 
@@ -44,7 +44,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Für alle
 
-Die `forall` Funktion bestimmt alle Elemente in einem Array, die alle angegebenen Bedingungen erfüllen.
+Die Funktion `forall` bestimmt alle Elemente in einem Array, die alle angegebenen Bedingungen erfüllen.
 
 **Format**
 
