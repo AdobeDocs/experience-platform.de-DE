@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
+keywords: Experience Platform;Home;beliebte Themen;erfasste Daten;Fehlerbehebung;FAQ;Einstieg;Stapelverarbeitung;Stapelverarbeitung; Stapelverarbeitung;
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Batch-Ingestion
 topic: troubleshooting
@@ -7,15 +7,15 @@ description: 'Diese Dokumentation hilft bei der Beantwortung häufig gestellter 
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 88%
+source-wordcount: '1416'
+ht-degree: 87%
 
 ---
 
 
 # Handbuch zur Fehlerbehebung bei der Batch-Erfassung
 
-This documentation will help answer frequently asked questions regarding Adobe Experience Platform [!DNL Batch Data Ingestion] APIs.
+Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform [!DNL Batch Data Ingestion]-APIs.
 
 ## Batch-API-Aufrufe
 
@@ -122,7 +122,7 @@ Bei mehrzeiliger JSON kann ein Objekt mehrere Zeilen belegen, während alle Obje
 ]
 ```
 
-By default, [!DNL Batch Data Ingestion] uses single-line JSON.
+Standardmäßig verwendet [!DNL Batch Data Ingestion] einzeiliges JSON.
 
 ### Wird CSV-Erfassung unterstützt?
 
@@ -184,7 +184,7 @@ Ein Batch kann in seinem Lebenszyklus die folgenden Status durchlaufen:
 | Status | In Master geschriebene Daten | Beschreibung |
 | ------ | ---------------------- | ----------- |
 | Vorzeitig beendet |  | Der Client hat den Batch im erwarteten Zeitrahmen nicht abgeschlossen. |
-| Abgebrochen |  | The client has explicitly called, via the [!DNL Batch Data Ingestion] APIs, an abort operation for the specified batch. Sobald sich ein Batch im Status „Geladen“ befindet, kann der Batch nicht mehr abgebrochen werden. |
+| Abgebrochen |  | Der Client hat explizit über die APIs [!DNL Batch Data Ingestion] einen Abbruchvorgang für den angegebenen Stapel aufgerufen. Sobald sich ein Batch im Status „Geladen“ befindet, kann der Batch nicht mehr abgebrochen werden. |
 | Aktiv/Erfolg | x | Der Batch wurde erfolgreich von „Staging“ zu „Master“ höher gestuft und steht nun für den nachgelagerten Gebrauch zur Verfügung. **Hinweis:** „Aktiv“ und „Erfolg“ werden synonym verwendet. |
 | Archiviert |  | Der Batch wurde in Cold Storage archiviert. |
 | Fehlgeschlagen/Fehler |  | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Zusammen mit dem Batch wird ein eine Aktion erfordernder Fehler aufgezeichnet, um es Clients zu erlauben, die Daten zu korrigieren und erneut zu übermitteln. **Hinweis:** „Fehlgeschlagen“ und „Fehler“ werden synonym verwendet. |
@@ -206,7 +206,7 @@ Wenn ein Batch den Status „Wird wiederholt“ aufweist, bedeutet dies, dass di
 
 ### Was bedeutet das, wenn ein Stapel „angehalten“ wurde?
 
-When a batch is in &quot;Stalled&quot;, it means that [!DNL Data Ingestion Services] is experiencing difficulty ingesting the batch and all retries have been exhausted.
+Befindet sich ein Stapel in &quot;Angehalten&quot;, bedeutet dies, dass [!DNL Data Ingestion Services] Schwierigkeiten beim Erfassen des Stapels hat und alle weitere Zustellversuche erschöpft sind.
 
 ### Was bedeutet es, wenn der Status eines Batch immer noch „Wird geladen“ lautet?
 
@@ -241,7 +241,7 @@ Nach der Korrektur der Fehler kann der Batch erneut hochgeladen werden.
 
 ### Wie sollten Batches gelöscht werden?
 
-Instead of deleting directly from [!DNL Catalog], batches should be removed using either method provided below:
+Anstatt Stapel direkt aus [!DNL Catalog] zu löschen, sollten sie mit einer der folgenden Methoden entfernt werden:
 
 1. Wenn der Batch in Bearbeitung ist, sollte der Batch abgebrochen werden.
 2. Wenn der Batch erfolgreich zum „Master“ höher gestuft wurde, sollte der Batch zurückgesetzt werden.
@@ -252,11 +252,11 @@ Für Batches mit dem Status „Aktiv“/„Erfolg“ stehen auf Batch­Ebene die
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
-| inputByteSize | The total number of bytes staged for [!DNL Data Ingestion Services] to process. |
-| inputRecordSize | The total number of rows staged for [!DNL Data Ingestion Services] to process. |
-| outputByteSize | Die Gesamtanzahl der Bytes, die von [!DNL Data Ingestion Services] bis ausgegeben werden [!DNL Data Lake]. |
-| outputRecordSize | Die Gesamtanzahl der Zeilen, die von [!DNL Data Ingestion Services] bis ausgegeben werden [!DNL Data Lake]. |
-| partitionCount | The total number of partitions written into [!DNL Data Lake]. |
+| inputByteSize | Die Gesamtanzahl der für die Verarbeitung von [!DNL Data Ingestion Services] inszenierten Bytes. |
+| inputRecordSize | Die Gesamtzahl der für die Verarbeitung von [!DNL Data Ingestion Services] inszenierten Zeilen. |
+| outputByteSize | Die Gesamtanzahl der Bytes, die von [!DNL Data Ingestion Services] bis [!DNL Data Lake] ausgegeben werden. |
+| outputRecordSize | Die Gesamtanzahl der Zeilen, die von [!DNL Data Ingestion Services] bis [!DNL Data Lake] ausgegeben werden. |
+| partitionCount | Die Gesamtanzahl der Partitionen, die in [!DNL Data Lake] geschrieben wurden. |
 
 ### Warum sind Metriken nicht bei allen Batches verfügbar?
 
