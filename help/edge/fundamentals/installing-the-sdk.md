@@ -3,32 +3,32 @@ title: Installieren des Adobe Experience Platform Web SDK
 seo-title: Adobe Experience Platform Web SDK – Installieren des SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
-keywords: web sdk installation;installing web sdk;internet explorer;promise;
+keywords: Web-SDK-Installation;Installieren von Web-SDK;Internet-Explorer;Versprechen;
 translation-type: tm+mt
 source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 65%
+source-wordcount: '632'
+ht-degree: 64%
 
 ---
 
 
 # Installieren des SDK {#installing-the-sdk}
 
-Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK ist über [Adobe Experience Platform Launch](http://launch.adobe.com/de). Suchen Sie `AEP Web SDK` im Erweiterungskatalog nach, installieren Sie die Erweiterung und konfigurieren Sie sie.
+Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK ist [Adobe Experience Platform Launch](http://launch.adobe.com/de). Suchen Sie im Erweiterungskatalog nach `AEP Web SDK`, installieren Sie die Erweiterung und konfigurieren Sie sie.
 
 Adobe Experience Platform Web SDK steht Ihnen auch als CDN zur Verfügung. Sie können auf diese Datei verweisen oder sie herunterladen und in Ihrer eigenen Infrastruktur hosten. Es ist in einer minimierten und nicht-minimierten Version verfügbar. Die nicht minimierte Version ist hilfreich zum Debugging.
 
-URL-Struktur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR metal.js für die nicht minimierte Version.
+URL-Struktur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR benzyl.js für die nicht minimierte Version.
 
 Beispiel:
 
 * Minimiert: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
 * Nicht minimiert: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
 
-## Code hinzufügen {#adding-the-code}
+## Code {#adding-the-code} hinzufügen
 
-The first step in implementing Adobe Experience Platform [!DNL Web SDK] is to copy and paste the following &quot;base code&quot; as high as possible in the `<head>` tag of your HTML:
+Der erste Schritt bei der Implementierung von Adobe Experience Platform [!DNL Web SDK] besteht darin, den folgenden &quot;Basiscode&quot;so hoch wie möglich im `<head>`-Tag Ihres HTML-Codes zu kopieren und einzufügen:
 
 ```markup
 <script>
@@ -62,11 +62,11 @@ Dieser Basis-Code lädt neben der Erstellung einer globalen Funktion auch zusät
 
 ## Unterstützen von Internet Explorer {#support-internet-explore}
 
-Dieses SDK nutzt Promises, um die Fertigstellung asynchroner Aufgaben zu kommunizieren. The [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Dieses SDK nutzt Promises, um die Fertigstellung asynchroner Aufgaben zu kommunizieren. Die vom SDK verwendete Implementierung von [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) wird nativ von allen Browsern der Zielgruppe mit Ausnahme von [!DNL Internet Explorer] unterstützt. Um das SDK für [!DNL Internet Explorer] zu verwenden, müssen Sie `window.Promise` [polygefüllt](https://remysharp.com/2010/10/08/what-is-a-polyfill) haben.
 
 So stellen Sie fest, ob Sie bereits über ein `window.Promise`-Polyfill verfügen:
 
-1. Open your website in [!DNL Internet Explorer].
+1. Öffnen Sie Ihre Website in [!DNL Internet Explorer].
 1. Öffnen Sie die Debugging-Konsole des Browsers.
 1. Geben Sie `window.Promise` in die Konsole ein und drücken Sie die Eingabetaste.
 
@@ -82,11 +82,11 @@ Dadurch wird ein Skript geladen, das sicherstellt, dass `window.Promise` eine g�
 
 >[!NOTE]
 >
->Wenn Sie sich dafür entscheiden, eine andere Promise-Implementierung zu laden, stellen Sie sicher, dass sie unterstützt `Promise.prototype.finally`.
+>Wenn Sie eine andere Promise-Implementierung laden möchten, stellen Sie sicher, dass `Promise.prototype.finally` unterstützt wird.
 
 ## Synchrones Laden der JavaScript-Datei {#loading-javascript-synchronously}
 
-As explained in the section [Adding the code](#adding-the-code), the base code you have copied and pasted into your website&#39;s HTML loads an external file with additional code. Dieser zusätzliche Code enthält die Kernfunktionalität des SDK. Jeder Befehl, den Sie ausführen möchten, während diese Datei geladen wird, wird in die Warteschlange gestellt und nach dem Laden der Datei verarbeitet. Dies ist die leistungsstärkste Installationsmethode.
+Wie im Abschnitt [Code](#adding-the-code) hinzugefügt, lädt der Basiscode, den Sie kopiert und in den HTML Ihrer Website eingefügt haben, eine externe Datei mit zusätzlichem Code. Dieser zusätzliche Code enthält die Kernfunktionalität des SDK. Jeder Befehl, den Sie ausführen möchten, während diese Datei geladen wird, wird in die Warteschlange gestellt und nach dem Laden der Datei verarbeitet. Dies ist die leistungsstärkste Installationsmethode.
 
 Unter bestimmten Umständen möchten Sie die Datei jedoch möglicherweise synchron laden \(weitere Details zu diesen Umständen werden später dokumentiert\). Dadurch wird verhindert, dass der Rest des HTML-Dokuments vom Browser analysiert und gerendert wird, bis die externe Datei geladen und ausgeführt wurde. Diese zusätzliche Verzögerung vor der Anzeige von Primärinhalten für Nutzer wird in der Regel nicht empfohlen, kann aber je nach den Umständen sinnvoll sein.
 
