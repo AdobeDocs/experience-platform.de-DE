@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
+keywords: Experience Platform;Home;Data Science Workspace;beliebte Themen;Datenwissenschaftsarbeitsbereich;Datenwissenschaften
 solution: Experience Platform
 title: Übersicht über den Data Science Workspace
 topic: overview
@@ -7,7 +7,7 @@ description: Dieser Leitfaden bietet einen Überblick über die wichtigsten Konz
 translation-type: tm+mt
 source-git-commit: 8b1be4e94c147124fd26f4b877ca807177c9f5ff
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2384'
 ht-degree: 2%
 
 ---
@@ -15,23 +15,23 @@ ht-degree: 2%
 
 # Übersicht über den Data Science Workspace
 
-Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
+Adobe Experience Platform [!DNL Data Science Workspace] verwendet maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu entfesseln. In Adobe Experience Platform integriert hilft [!DNL Data Science Workspace] Ihnen bei der Erstellung von Prognosen mit Ihren Inhalten und Daten-Assets in allen Adoben.
 
 Datenwissenschaftler aller Qualifikationsstufen finden ausgereifte, einfach zu bedienende Werkzeuge, die eine schnelle Entwicklung, Ausbildung und Abstimmung von maschinellen Lernrezepten unterstützen - all die Vorteile der AI-Technologie, ohne die Komplexität.
 
-Mithilfe [!DNL Data Science Workspace]von Daten können Wissenschaftler auf einfache Weise intelligente Services-APIs erstellen - basierend auf maschinellem Lernen. Diese Dienste können mit anderen Adoben-Diensten wie Adobe Target und Adobe Analytics Cloud kombiniert werden, um Ihnen bei der Automatisierung personalisierter, gezielter digitaler Erlebnisse in Web-, Desktop- und mobilen Apps zu helfen.
+Mit [!DNL Data Science Workspace] können Datenwissenschaftler auf einfache Weise intelligente Services-APIs erstellen - powered by machine learning. Diese Dienste können mit anderen Adoben-Diensten wie Adobe Target und Adobe Analytics Cloud kombiniert werden, um Ihnen bei der Automatisierung personalisierter, gezielter digitaler Erlebnisse in Web-, Desktop- und mobilen Apps zu helfen.
 
-Dieser Leitfaden bietet einen Überblick über die wichtigsten Konzepte in Bezug auf [!DNL Data Science Workspace].
+Dieses Handbuch bietet einen Überblick über die wichtigsten Konzepte im Zusammenhang mit [!DNL Data Science Workspace].
 
 ## Einführung
 
 Das heutige Unternehmen legt großen Wert auf die Erfassung von Big Data für Prognosen und Einblicke, die es ihnen ermöglichen, Kundenerlebnisse zu personalisieren und Kunden - und Unternehmen - mehr Wert zu verschaffen.
 So wichtig es auch ist, dass es zu hohen Kosten kommen kann, von Daten zu Erkenntnissen zu gelangen. Es erfordert in der Regel qualifizierte Datenwissenschaftler, die intensive und zeitaufwendige Datenforschung betreiben, um Modelle für maschinelles Lernen oder Rezepte zu entwickeln, die intelligente Dienste unterstützen. Der Prozess ist langwierig, die Technologie ist komplex und qualifizierte Datenwissenschaftler können schwer zu finden sein.
 
-Mit [!DNL Data Science Workspace]Adobe Experience Platform können Sie unternehmensweit erlebnisorientierte KI einführen, Daten optimieren und schneller in die Programmierung einarbeiten mit:
+Mit [!DNL Data Science Workspace] ermöglicht Ihnen Adobe Experience Platform, erlebnisorientierte KI im gesamten Unternehmen zu implementieren, die Datenverarbeitung zu optimieren und zu beschleunigen mit:
 - Ein Framework für maschinelles Lernen und Laufzeit
 - Integrierter Zugriff auf Ihre in Adobe Experience Platform gespeicherten Daten
-- Ein auf [!DNL Experience Data Model] (XDM) basierendes einheitliches Data Schema
+- Ein auf [!DNL Experience Data Model] (XDM) erstelltes einheitliches Schema für Daten
 - Die Rechenleistung ist unverzichtbar für maschinelles Lernen/AI und die Verwaltung von Big DataSets
 - Vorgefertigte maschinelle Lernrezepte zur Beschleunigung des Abstiegs in AI-basierte Erlebnisse
 - Vereinfachtes Authoring, Wiederverwendung und Modifizierung von Rezepten für Datenwissenschaftler mit unterschiedlichem Kenntnisstand
@@ -41,16 +41,16 @@ Datenwissenschaftler aller Qualifikationsstufen werden schneller und effektivere
 
 ## Erste Schritte
 
-Bevor Sie in die Details zu [!DNL Data Science Workspace]den Themen eintauchen, hier eine kurze Zusammenfassung der wichtigsten Begriffe:
+Bevor Sie in die Details von [!DNL Data Science Workspace] eintauchen, hier eine kurze Zusammenfassung der Schlüsselbegriffe:
 
 | Begriff | Definition |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] Innerhalb von [!DNL Experience Platform] ermöglicht es Kunden, maschinelle Lernmodelle zu erstellen, die Daten aus verschiedenen Lösungen [!DNL Experience Platform] und Adoben verwenden, um intelligente Einblicke und Prognosen zu generieren, um ansprechende digitale Erlebnisse für Endbenutzer zu entwickeln. |
+| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] Innerhalb von  [!DNL Experience Platform] ermöglicht es Kunden, maschinelle Lernmodelle zu erstellen, die Daten aus verschiedenen Lösungen  [!DNL Experience Platform] und Adoben verwenden, um intelligente Einblicke und Prognosen zu generieren, um ansprechende digitale Erlebnisse für Endbenutzer zu entwickeln. |
 | Künstliche Intelligenz | Künstliche Intelligenz ist eine Theorie und Entwicklung von Computersystemen, die in der Lage sind, Aufgaben auszuführen, die normalerweise menschliche Intelligenz erfordern, wie visuelle Wahrnehmung, Spracherkennung, Entscheidungsfindung und Übersetzung zwischen Sprachen. |
 | Maschinelles Lernen | Maschinelles Lernen ist der Studienbereich, der es Computern ermöglicht, zu lernen, ohne explizit programmiert zu werden. |
-| [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework ist ein einheitliches maschinelles Lernumfeld für die gesamte Adobe, das Daten nutzt, [!DNL Experience Platform] um Datenwissenschaftler bei der Entwicklung maschinenlerngestützter Intelligenzdienste auf schnellere, skalierbare und wiederverwendbare Weise zu unterstützen. |
-| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) ist der Standardisierungsaufwand, der von der Adobe zur Definition von Standard-Schemas wie [!DNL Profile] und [!DNL ExperienceEvent]für Customer Experience Management führt. |
-| [!DNL JupyterLab] | [!DNL JupyterLab] ist eine Open-Source Web-basierte Schnittstelle für Project Jupyter und ist eng in [!DNL Experience Platform]integriert. |
+| [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework ist ein einheitliches maschinelles Lernumfeld für die gesamte Adobe, das Daten nutzt,  [!DNL Experience Platform] um Datenwissenschaftler bei der Entwicklung maschinenlerngestützter Intelligenzdienste schneller, skalierbar und wiederverwendbar zu unterstützen. |
+| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) ist der Standardisierungsaufwand, der von der Adobe zur Definition von Standard-Schemas wie  [!DNL Profile] und  [!DNL ExperienceEvent]für Customer Experience Management führt. |
+| [!DNL JupyterLab] | [!DNL JupyterLab] ist eine Open-Source Web-basierte Schnittstelle für Project Jupyter und ist eng in  [!DNL Experience Platform]integriert. |
 | Rezepte | Ein Rezept ist der Begriff der Adobe für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der ein bestimmtes maschinelles Lernen, einen AI-Algorithmus oder ein Ensemble von Algorithmen, Verarbeitungslogik und Konfiguration darstellt, die zum Aufbau und Ausführen eines geschulten Modells erforderlich sind und somit zur Lösung spezifischer Geschäftsprobleme beitragen. |
 | Modell | Ein Modell ist eine Instanz eines Rezepts für maschinelles Lernen, das mithilfe von historischen Daten und Konfigurationen dazu trainiert wird, eine geschäftliche Fragestellung zu lösen. |
 | Training | Ein Training besteht aus dem Erlernen von Mustern und Insights auf Grundlage gekennzeichneter Daten. |
@@ -62,19 +62,19 @@ Das folgende Diagramm zeigt die hierarchische Beziehung zwischen Rezepten, Model
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
-## Erläuterungen [!DNL Data Science Workspace]
+## Grundlagen zu [!DNL Data Science Workspace]
 
-Mit [!DNL Data Science Workspace]diesen Daten können Ihre Wissenschaftler den umständlichen Prozess der Ermittlung von Erkenntnissen in großen Datensätzen optimieren. Basierend auf einem gemeinsamen Framework für maschinelles Lernen und Laufzeitumgebung [!DNL Data Science Workspace] bietet es ein erweitertes Workflow-Management, eine Modellverwaltung und Skalierbarkeit. Intelligente Dienste unterstützen die Wiederverwendung von maschinellen Lernrezepten, um eine Vielzahl von Anwendungen zu ermöglichen, die mithilfe von Adobe-Produkten und -Lösungen erstellt wurden.
+Mit [!DNL Data Science Workspace] können Ihre Datenwissenschaftler den umständlichen Prozess der Aufdeckung von Erkenntnissen in großen Datensätzen optimieren. Die auf einem gemeinsamen maschinellen Lernframework und der Laufzeitumgebung aufbauende Funktion [!DNL Data Science Workspace] bietet erweiterte Workflow-Verwaltung, Modellverwaltung und Skalierbarkeit. Intelligente Dienste unterstützen die Wiederverwendung von maschinellen Lernrezepten, um eine Vielzahl von Anwendungen zu ermöglichen, die mithilfe von Adobe-Produkten und -Lösungen erstellt wurden.
 
 ### Datenzugriff aus einer Hand
 
 Daten sind der Eckpfeiler von KI und maschinellem Lernen.
 
-[!DNL Data Science Workspace] ist vollständig in Adobe Experience Platform integriert, einschließlich Data Lake, [!DNL Real-time Customer Profile]und [!DNL Unified Edge]. Entdecken Sie alle in Adobe Experience Platform gespeicherten Organisationsdaten zusammen mit gemeinsamen Big Data und Deep-Learning-Bibliotheken wie [!DNL Spark] ML und [!DNL TensorFlow]. Wenn Sie nicht finden, was Sie benötigen, erfassen Sie Ihre eigenen Datensätze mit dem XDM-standardisierten Schema.
+[!DNL Data Science Workspace] ist vollständig in Adobe Experience Platform integriert, einschließlich Data Lake,  [!DNL Real-time Customer Profile]und  [!DNL Unified Edge]. Entdecken Sie alle in Adobe Experience Platform gespeicherten Organisationsdaten zusammen mit gemeinsamen Big Data und Deep-Learning-Bibliotheken wie [!DNL Spark] ML und [!DNL TensorFlow]. Wenn Sie nicht finden, was Sie benötigen, erfassen Sie Ihre eigenen Datensätze mit dem XDM-standardisierten Schema.
 
 ### Vorgefertigte maschinelle Lernrezepte
 
-[!DNL Data Science Workspace] umfasst vorgefertigte maschinelle Lernrezepte für gängige Geschäftsanforderungen, z. B. Prognosen zum Einzelhandel und Anomalieerkennung, sodass Datenwissenschaftler und Entwickler nicht von Grund auf Beginn benötigen. Derzeit werden drei Rezepte angeboten: [Produktkaufprognosen](./pre-built-recipes/product-purchase-prediction.md), [Produktempfehlungen](./pre-built-recipes/product-recommendations.md)und [Einzelhandelsverkäufe](./pre-built-recipes/retail-sales.md).
+[!DNL Data Science Workspace] umfasst vorgefertigte maschinelle Lernrezepte für gängige Geschäftsanforderungen, z. B. Prognosen zum Einzelhandel und Anomalieerkennung, sodass Datenwissenschaftler und Entwickler nicht von Grund auf Beginn benötigen. Derzeit werden drei Rezepte angeboten: [Produktkaufprognosen](./pre-built-recipes/product-purchase-prediction.md), [Produktempfehlungen](./pre-built-recipes/product-recommendations.md) und [Einzelhandelsverkäufe](./pre-built-recipes/retail-sales.md).
 
 [//]: # (The built-in recipe gallery offers recommendations for prebuilt recipes based on your business needs.)
 
@@ -82,7 +82,7 @@ Wenn Sie es bevorzugen, können Sie ein vorgefertigtes Rezept an Ihre Anforderun
 
 ### Arbeitsablauf, der auf den Datenwissenschaftler ausgerichtet ist
 
-Unabhängig vom Grad Ihrer fachlichen Erfahrung in der Datenwissenschaft [!DNL Data Science Workspace] können Sie den Prozess der Suche nach Einblicken in Daten und deren Anwendung auf digitale Erfahrungen vereinfachen und beschleunigen.
+[!DNL Data Science Workspace] hilft Ihnen unabhängig von Ihrem Kenntnisstand in der Datenwissenschaft, den Prozess der Suche nach Einblicken in Daten zu vereinfachen und zu beschleunigen und diese auf digitale Erfahrungen anzuwenden.
 
 ### Datenforschung
 
@@ -90,21 +90,21 @@ Die richtigen Daten zu finden und sie vorzubereiten, ist der arbeitsintensivste 
 
 Unter Adobe Experience Platform werden Ihre Daten über den Kanal hinweg zentralisiert und im XDM-standardisierten Schema gespeichert, sodass sie leichter zu finden, zu verstehen und zu reinigen sind. Ein Datenspeicher auf der Grundlage eines gemeinsamen Schemas kann Ihnen unzählige Stunden an Datenforschung und -vorbereitung ersparen.
 
-Verwenden Sie während des Browsens R, [!DNL Python]oder Scala mit integriertem Hosting, [!DNL Jupyter Notebook] um den Datenkatalog zu durchsuchen [!DNL Platform]. Mit einer dieser Sprachen können Sie auch die Vorteile von [!DNL Spark] ML und TensorFlow nutzen. Beginn von Grund auf, oder verwenden Sie eine der Notebook-Vorlagen für spezifische Geschäftsprobleme.
+Verwenden Sie beim Durchsuchen R, [!DNL Python] oder Scala mit dem integrierten gehosteten [!DNL Jupyter Notebook], um den Datenkatalog auf [!DNL Platform] zu durchsuchen. Mit einer dieser Sprachen können Sie auch [!DNL Spark] ML und TensorFlow nutzen. Beginn von Grund auf, oder verwenden Sie eine der Notebook-Vorlagen für spezifische Geschäftsprobleme.
 
 Im Rahmen des Arbeitsablaufs für die Datenforschung können Sie auch neue Daten erfassen oder vorhandene Funktionen zur Datenvorbereitung verwenden.
 
 ### Authoring
 
-Mit [!DNL Data Science Workspace]dieser Option entscheiden Sie, wie Sie Rezepte erstellen möchten.
+Mit [!DNL Data Science Workspace] entscheiden Sie, wie Sie Rezepte erstellen möchten.
 
 - Sparen Sie Zeit, indem Sie nach einem vorgefertigten Rezept suchen, das Ihren geschäftlichen Anforderungen entspricht und das Sie nach Bedarf verwenden oder konfigurieren können, um Ihre spezifischen Anforderungen zu erfüllen.
 - Erstellen Sie ein Rezept von Grund auf neu, indem Sie die Authoring-Laufzeit in Jupyter Notebook verwenden, um das Rezept zu entwickeln und zu registrieren.
-- Laden Sie ein außerhalb von Adobe Experience Platform erstelltes Rezept in ein [!DNL Data Science Workspace] oder importieren Sie Rezeptcode aus einem Repository, z. B. [!DNL Git]mit der zwischen- [!DNL Git] und [!DNL Data Science Workspace]verfügbaren Authentifizierung und Integration.
+- Laden Sie ein außerhalb von Adobe Experience Platform erstelltes Rezept in [!DNL Data Science Workspace] hoch oder importieren Sie Rezept-Code aus einem Repository, z. B. [!DNL Git], mit der zwischen [!DNL Git] und [!DNL Data Science Workspace] verfügbaren Authentifizierung und Integration.
 
 ### Experimentieren
 
-Data Science Workspace bietet eine enorme Flexibilität beim Experimentieren. Beginn mit Ihrem Rezept. Erstellen Sie dann eine separate Instanz, indem Sie denselben Core-Algorithmus mit eindeutigen Merkmalen wie Hypertuning-Parameter verwenden. Sie können so viele Instanzen erstellen, wie Sie benötigen, und jede Instanz so oft trainieren und bewerten, wie Sie möchten. Wenn Sie sie trainieren, werden Rezepte, Rezeptorinstanzen und geschulte Instanzen sowie Evaluierungsmetriken [!DNL Data Science Workspace] verfolgt, sodass Sie dies nicht benötigen.
+Data Science Workspace bietet eine enorme Flexibilität beim Experimentieren. Beginn mit Ihrem Rezept. Erstellen Sie dann eine separate Instanz, indem Sie denselben Core-Algorithmus mit eindeutigen Merkmalen wie Hypertuning-Parameter verwenden. Sie können so viele Instanzen erstellen, wie Sie benötigen, und jede Instanz so oft trainieren und bewerten, wie Sie möchten. Wenn Sie sie trainieren, verfolgt [!DNL Data Science Workspace] Rezepte, Rezeptorinstanzen und geschulte Instanzen zusammen mit Bewertungsmetriken, sodass Sie nicht müssen.
 
 ### Operationalisierung
 
@@ -129,7 +129,7 @@ Weitere Informationen zu Adoben- und Softwaresicherheit, Compliance und mehr fin
 
 ## [!DNL Data Science Workspace] in Aktion
 
-Prognosen und Einblicke liefern die Informationen, die Sie benötigen, um jedem Kunden, der Ihre Website besucht, Ihr Call-Center kontaktiert oder andere digitale Erlebnisse nutzt, ein hoch personalisiertes Erlebnis zu bieten. Hier sehen Sie, wie Ihre tägliche Arbeit abläuft [!DNL Data Science Workspace].
+Prognosen und Einblicke liefern die Informationen, die Sie benötigen, um jedem Kunden, der Ihre Website besucht, Ihr Call-Center kontaktiert oder andere digitale Erlebnisse nutzt, ein hoch personalisiertes Erlebnis zu bieten. So funktioniert Ihre tägliche Arbeit mit [!DNL Data Science Workspace].
 
 ### Problem definieren
 
@@ -153,15 +153,15 @@ Wenn Sie von Grund auf neu beginnen oder ein vorhandenes Rezept konfigurieren, b
 Sämtliche Daten in Adobe Experience Platform entsprechen einem standardisierten XDM-Schema, sodass kein komplexes Modell für die Datenzusammenführung oder Hilfe eines Dateningenieurs erstellt werden muss.
 
 Wenn Sie die benötigten Daten nicht sofort finden, sie aber außerhalb von Adobe Experience Platform existieren, ist es eine relativ einfache Aufgabe, zusätzliche Datensätze zu erfassen, die sich auch in das standardisierte XDM-Schema umwandeln.\
-Sie können [!DNL Jupyter Notebook] die Vorverarbeitung von Daten vereinfachen - möglicherweise beginnend mit einer Notebook-Vorlage oder einem Notebook, das Sie zuvor für die Kaufneigung verwendet haben.
+Sie können [!DNL Jupyter Notebook] verwenden, um die Vorverarbeitung von Daten zu vereinfachen - möglicherweise beginnend mit einer Notebook-Vorlage oder einem Notebook, das Sie zuvor für die Kaufneigung verwendet haben.
 
 ![](./images/home/notebook_templates.png)
 
 ### Rezept erstellen
 
-Wenn Sie bereits ein Rezept gefunden haben, das Ihren Anforderungen entspricht, können Sie mit dem Experimentieren fortfahren. Oder Sie können das Rezept ein wenig ändern oder von Grund auf neu erstellen - unter Nutzung der [!DNL Data Science Workspace] Authoring-Laufzeit in [!DNL Jupyter Notebook]. Die Verwendung der Authoring-Laufzeit stellt sicher, dass Sie sowohl den [!DNL Data Science Workspace] Schulungs- als auch den Bewertungsarbeitsablauf verwenden und das Rezept später konvertieren können, damit es von anderen Mitgliedern Ihres Unternehmens gespeichert und wiederverwendet werden kann.
+Wenn Sie bereits ein Rezept gefunden haben, das Ihren Anforderungen entspricht, können Sie mit dem Experimentieren fortfahren. Oder Sie können das Rezept ein wenig ändern oder von Grund auf neu erstellen - unter Nutzung der [!DNL Data Science Workspace] Authoring-Laufzeit in [!DNL Jupyter Notebook]. Die Verwendung der Authoring-Laufzeit stellt sicher, dass Sie sowohl den Schulungs- und Bewertungsarbeitsablauf [!DNL Data Science Workspace] verwenden als auch das Rezept später konvertieren können, damit es von anderen Mitgliedern Ihres Unternehmens gespeichert und wiederverwendet werden kann.
 
-Sie können auch ein Rezept in die Workflows importieren [!DNL Data Science Workspace] und diese nutzen, während Sie Ihren intelligenten Dienst erstellen.
+Sie können auch ein Rezept in [!DNL Data Science Workspace] importieren und die Workflows nutzen, um Ihren intelligenten Dienst zu erstellen.
 
 ### Experimentieren mit dem Rezept
 
@@ -173,27 +173,27 @@ Während Sie Ihre Modelle trainieren, werden Schulungen und Bewertungen generier
 
 ![](./images/home/evaluation_metrics.png)
 
-Besuchen Sie entweder das [API](./models-recipes/train-evaluate-model-api.md) - oder [UI](./models-recipes/train-evaluate-model-ui.md) -Lernprogramm, um zu erfahren, wie Sie Modelle trainieren und auswerten können [!DNL Data Science Workspace].
+Sehen Sie sich das Lernprogramm [API](./models-recipes/train-evaluate-model-api.md) oder [UI](./models-recipes/train-evaluate-model-ui.md) an, in dem Sie erfahren, wie Sie Modelle in [!DNL Data Science Workspace] trainieren und auswerten können.
 
 ### Modell operationalisieren
 
-Wenn Sie das am besten geschulte Rezept für Ihre geschäftlichen Anforderungen ausgewählt haben, können Sie einen intelligenten Dienst [!DNL Data Science Workspace] ohne Hilfe von Entwicklern erstellen. Es sind nur ein paar Klicks - keine Kodierung erforderlich. Ein veröffentlichter intelligenter Dienst steht anderen Mitgliedern Ihrer Organisation zur Verfügung, ohne dass das Modell neu erstellt werden muss.
+Wenn Sie das am besten geschulte Rezept für Ihre geschäftlichen Anforderungen ausgewählt haben, können Sie einen intelligenten Dienst in [!DNL Data Science Workspace] ohne Unterstützung durch den Entwickler erstellen. Es sind nur ein paar Klicks - keine Kodierung erforderlich. Ein veröffentlichter intelligenter Dienst steht anderen Mitgliedern Ihrer Organisation zur Verfügung, ohne dass das Modell neu erstellt werden muss.
 
 Ein veröffentlichter intelligenter Dienst ist konfigurierbar, um sich von Zeit zu Zeit mit neuen Daten zu trainieren, sobald diese verfügbar werden. Dadurch wird sichergestellt, dass Ihr Service seine Effizienz und Wirksamkeit im Laufe der Zeit erhält.
 
 ## Nächste Schritte
 
-[!DNL Data Science Workspace] hilft bei der Straffung und Vereinfachung des Arbeitsablaufs in der Datenwissenschaft, von der Datenerfassung über Algorithmen bis hin zu intelligenten Diensten für Datenwissenschaftler aller Qualifikationsstufen. Mit den ausgereiften Tools [!DNL Data Science Workspace] können Sie die Zeit von Daten bis zu Erkenntnissen erheblich verkürzen.
+[!DNL Data Science Workspace] hilft bei der Straffung und Vereinfachung des Arbeitsablaufs in der Datenwissenschaft, von der Datenerfassung über Algorithmen bis hin zu intelligenten Diensten für Datenwissenschaftler aller Qualifikationsstufen. Mit den ausgereiften Werkzeugen [!DNL Data Science Workspace] können Sie die Zeit von Daten bis zu Erkenntnissen erheblich verkürzen.
 
-Wichtiger noch ist, dass [!DNL Data Science Workspace] die Datenwissenschaft und die algorithmische Optimierung der führenden Marketingplattform der Adobe in die Hände von Unternehmensdatenwissenschaftlern gelegt werden. Zum ersten Mal können Unternehmen proprietäre Algorithmen auf die Plattform übertragen, indem sie die leistungsstarken maschinellen Lernfunktionen und KI-Funktionen der Adobe nutzen, um hochpersonalisierte Kundenerlebnisse in großem Maßstab zu bieten.
+Noch wichtiger ist, dass [!DNL Data Science Workspace] die Datenwissenschaft und die algorithmische Optimierung der führenden Marketingplattform der Adobe in die Hände von Unternehmensdatenwissenschaftlern stellt. Zum ersten Mal können Unternehmen proprietäre Algorithmen auf die Plattform übertragen, indem sie die leistungsstarken maschinellen Lernfunktionen und KI-Funktionen der Adobe nutzen, um hochpersonalisierte Kundenerlebnisse in großem Maßstab zu bieten.
 
 Durch die Verbindung von Markenwissen und maschinellem Lernen und KI-Fähigkeiten der Adobe können Unternehmen den Geschäftswert und die Markentreue steigern, indem sie ihren Kunden das geben, was sie wollen, bevor sie danach fragen.
 
-Weitere Informationen, z. B. einen kompletten täglichen Arbeitsablauf, finden Sie in der [Data Science Workspace-Dokumentation](./walkthrough.md) .
+Weitere Informationen, z. B. einen kompletten täglichen Arbeitsablauf, finden Sie in der [Data Science Workspace-Dokumentation.](./walkthrough.md)
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video unterstützt Sie dabei, [!DNL Data Science Workspace]die
+Das folgende Video unterstützt Ihr Verständnis von [!DNL Data Science Workspace].
 
 >[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
 
