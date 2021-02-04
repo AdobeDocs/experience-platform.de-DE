@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
+keywords: Experience Platform;Modellplanen;Arbeitsbereich für Datenwissenschaften;beliebte Themen;Planen der Punktzahl;Planen der Schulung
 solution: Experience Platform
 title: Modell planen (Benutzeroberfläche)
 topic: tutorial
@@ -8,15 +8,15 @@ description: Mit dem Adobe Experience Platform Data Science Workspace können Si
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 84%
+source-wordcount: '547'
+ht-degree: 82%
 
 ---
 
 
 # Modell planen (Benutzeroberfläche)
 
-Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning Service. Die Automatisierung des Trainings- und Bewertungsvorgangs kann dazu beitragen, die Effizienz eines Service im Laufe der Zeit zu erhalten und zu verbessern, indem Sie über Muster in Ihren Daten auf dem Laufenden bleiben.
+Mit Adobe Experience Platform [!DNL Data Science Workspace] können Sie geplante Scoring- und Schulungsläufe auf einem maschinellen Lerndienst einrichten. Die Automatisierung des Trainings- und Bewertungsvorgangs kann dazu beitragen, die Effizienz eines Service im Laufe der Zeit zu erhalten und zu verbessern, indem Sie über Muster in Ihren Daten auf dem Laufenden bleiben.
 
 Dieses Tutorial führt Sie durch die Schritte, die Sie zum Konfigurieren von Trainings- und Scoring-Zeitplänen für einen vorhandenen Dienst über die [!UICONTROL Dienstgalerie] ausführen müssen. Es ist in die folgenden Hauptabschnitte unterteilt:
 
@@ -25,7 +25,7 @@ Dieses Tutorial führt Sie durch die Schritte, die Sie zum Konfigurieren von Tra
 
 ## Erste Schritte
 
-Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform] haben, wenden Sie sich bitte an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Für dieses Tutorial ist ein bestehender Dienst erforderlich. Wenn Sie über keinen Dienst verfügen, mit dem Sie arbeiten können, können Sie einen Dienst erstellen, indem Sie dem Tutorial [Ihr Modell als Dienst in der Benutzeroberfläche veröffentlichen](./publish-model-service-ui.md) folgen.
 
@@ -46,7 +46,7 @@ Das Modell-Scoring kann als automatisierter Prozess auf geplanter Basis konfigur
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Geplantes Training konfigurieren {#configure-scheduled-training}
+## Geplantes Training konfigurieren  {#configure-scheduled-training}
 
 Durch die Konfiguration geplanter Trainings-Läufe für einen Dienst können Sie sicherstellen, dass das Modell für maschinelles Lernen auf die neuesten Datenmuster aktualisiert wird. Bei jedem Abschluss eines geplanten Trainings-Laufs wird das resultierende trainierte Modell verwendet, um den Dienst bis zum nächsten geplanten Trainings-Lauf zu unterstützen.
 
@@ -66,4 +66,4 @@ Nach der Erstellung eines Diensts können Sie folgende Schritte ausführen, um e
 
 ## Nächste Schritte
 
-By following this tutorial, you have successfully scheduled automated training and scoring runs on a Service, and completed the [!DNL Data Science Workspace] tutorial UI workflow. Wenn Sie es noch nicht getan haben, können Sie das [Tutorial neu starten](./create-retails-sales-dataset.md) und dem API-Workflow folgen, um ein Modell zu erstellen, zu trainieren, zu bewerten und zu veröffentlichen.
+Durch Befolgen dieses Lernprogramms haben Sie die automatische Schulung und Auswertung für einen Dienst erfolgreich geplant und den Arbeitsablauf für die Benutzeroberfläche des Lehrgangs [!DNL Data Science Workspace] abgeschlossen. Wenn Sie es noch nicht getan haben, können Sie das [Tutorial neu starten](./create-retails-sales-dataset.md) und dem API-Workflow folgen, um ein Modell zu erstellen, zu trainieren, zu bewerten und zu veröffentlichen.
