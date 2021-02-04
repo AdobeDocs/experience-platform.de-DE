@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;browser;browser details;datatype;data-type;data type;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Browser;Browserdetails;Datentyp;Datentyp;Datentyp;
 solution: Experience Platform
 title: Datentyp "Browserdetails"
 topic: overview
@@ -7,21 +7,21 @@ description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp von B
 translation-type: tm+mt
 source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 21%
+source-wordcount: '262'
+ht-degree: 19%
 
 ---
 
 
-# [!UICONTROL Datentyp der] Browserdetails
+# [!UICONTROL Browser-] DetailsDatentyp
 
-[!UICONTROL Browserdetails] sind ein standardmäßiger XDM-Datentyp, der Details zu einem Browser oder einer Anwendung beschreibt.
+[!UICONTROL Browser-] Details enthalten einen Standard-XDM-Datentyp, der Details zu einem Browser oder einer Anwendung beschreibt.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `acceptLanguage` | Zeichenfolge | An IETF language tag ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
+| `acceptLanguage` | Zeichenfolge | Ein IETF-Sprach-Tag ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
 | `cookiesEnabled` | Boolesch | Gibt an, ob die Benutzereinstellungen das Schreiben von Cookies zulassen. |
 | `javaEnabled` | Boolesch | Gibt an, ob Java auf dem Gerät, von dem die Beobachtung ausgeführt wurde, aktiviert wurde. |
 | `javaScriptEnabled` | Boolesch | Gibt an, ob JavaScript auf dem Gerät, von dem die Beobachtung durchgeführt wurde, aktiviert wurde. |
