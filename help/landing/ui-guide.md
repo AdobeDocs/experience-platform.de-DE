@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;platform ui guide;introduction to platform;dashboard;
+keywords: Experience Platform;Home;beliebte Themen;Adobe Experience Platform;Benutzerhandbuch;Handbuch;Plattform-Handbuch;Einführung in die Plattform;Dashboard;
 solution: Experience Platform
 title: Adobe Experience Platform UI-Handbuch
 topic: ui guide
@@ -7,7 +7,7 @@ description: 'Adobe Experience Platform '
 translation-type: tm+mt
 source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1756'
 ht-degree: 3%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 3%
 
 Dieser Leitfaden dient als Einführung in die Verwendung der Adobe Experience Platform-Benutzeroberfläche, erklärt, wofür die verschiedenen Komponenten verwendet werden, und enthält Links zu weiteren Dokumentationen für weitere Informationen.
 
-Weitere Informationen zu Adobe Experience Platform erhalten Sie in der Übersicht über die [Experience Platform](home.md).
+Weitere Informationen zu Adobe Experience Platform erhalten Sie im [Überblick über die Experience Platform](home.md).
 
 ## Startbildschirm
 
-Nach dem Anmelden bei Adobe Experience Platform befinden Sie sich auf der [!UICONTROL Startseite] , die aus dem [Metriken-Dashboard](#metrics), den [neuesten Daten](#recent-data)und den [empfohlenen Lernabschnitten](#recommended-learning) besteht.
+Nach der Anmeldung bei Adobe Experience Platform befinden Sie sich auf der Seite [!UICONTROL Home], die aus den Abschnitten [metrics Dashboard](#metrics), [Letzte Daten](#recent-data) und [empfohlene Lernerfahrung](#recommended-learning) besteht.
 
 ![](images/user-guide/homepage.png)
 
@@ -31,13 +31,13 @@ Das Dashboard &quot;Metriken&quot;enthält Karten, mit denen Sie Informationen z
 
 ![](images/user-guide/homepage-dashboard.png)
 
-Der Abschnitt **[!UICONTROL Datensätze]** zeigt die Anzahl der Datensätze in Ihrer IMS-Organisation an. Diese Nummer wird aktualisiert, wenn ein neuer Datensatz erstellt wird. Weitere Informationen zu Datensätzen finden Sie in der Übersicht über die [Datensätze](../catalog/datasets/overview.md).
+Der Abschnitt **[!UICONTROL Datensätze]** zeigt die Anzahl der Datensätze in Ihrer IMS-Organisation an. Diese Nummer wird aktualisiert, wenn ein neuer Datensatz erstellt wird. Weitere Informationen zu Datensätzen finden Sie im [Datensatzüberblick](../catalog/datasets/overview.md).
 
-Der Abschnitt **[!UICONTROL Profil]** zeigt die Gesamtzahl der Personen mit Profilen innerhalb Ihrer IMS-Organisation, ausgenommen Profil-Fragmente. Diese Gesamtzahl von Personen stellt die gesamte adressierbare Audience dar und wird alle 24 Stunden aktualisiert. Weitere Informationen zu Profilen finden Sie in der Übersicht über das [Echtzeit-Profil](../profile/home.md).
+Der Abschnitt **[!UICONTROL Profil]** zeigt die Gesamtzahl der Personen mit Profilen innerhalb Ihrer IMS-Organisation, ausgenommen Profil-Fragmente. Diese Gesamtzahl von Personen stellt die gesamte adressierbare Audience dar und wird alle 24 Stunden aktualisiert. Weitere Informationen zu Profilen finden Sie im [Überblick über das Echtzeit-Profil des Kunden](../profile/home.md).
 
-Der Abschnitt **[!UICONTROL Segmente]** zeigt die Gesamtzahl der Segmente, die innerhalb Ihrer IMS-Organisation erstellt wurden. Diese Nummer wird aktualisiert, wenn ein neues Segment erstellt wird. Weitere Informationen zu Segmenten finden Sie in der Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
+Der Abschnitt **[!UICONTROL Segmente]** zeigt die Gesamtanzahl der in Ihrem IMS-Unternehmen erstellten Segmente an. Diese Nummer wird aktualisiert, wenn ein neues Segment erstellt wird. Weitere Informationen zu Segmenten finden Sie unter [Übersicht über den Segmentdienst](../segmentation/home.md).
 
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. Diese Nummer wird aktualisiert, wenn ein neues Ziel erstellt wird. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../destinations/home.md).
+Der Abschnitt **[!UICONTROL Ziele]** zeigt die Gesamtzahl der für die IMS-Organisation erstellten Ziele an. Diese Nummer wird aktualisiert, wenn ein neues Ziel erstellt wird. Weitere Informationen zu Zielen finden Sie im [Überblick über Ziele](../destinations/home.md).
 
 ### Letzte Daten
 
@@ -45,13 +45,13 @@ Das Dashboard &quot;Zuletzt erstellte Daten&quot;enthält Informationen zu kürz
 
 ![](images/user-guide/homepage-recent.png)
 
-Im Abschnitt **[!UICONTROL Letzte Datensätze]** werden die fünf zuletzt erstellten Datensätze in Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Datensatz erstellt wird. Sie können einen Datensatz aus der Liste auswählen, um weitere Informationen zum angegebenen Datensatz Ansicht, oder Sie können die Option &quot; **[!UICONTROL Ansicht alle]** &quot;auswählen, um eine Liste aller erstellten Datensätze anzuzeigen. Weitere Informationen zu Datensätzen finden Sie in der Übersicht über die [Datensätze](../catalog/datasets/overview.md).
+Im Abschnitt **[!UICONTROL Letzte Datensätze]** werden die fünf zuletzt erstellten Datensätze in Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Datensatz erstellt wird. Sie können einen Datensatz aus der Liste zur Ansicht weiterer Informationen zum angegebenen Datensatz auswählen oder **[!UICONTROL Ansicht all]** auswählen, um eine Liste aller erstellten Datensätze anzuzeigen. Weitere Informationen zu Datensätzen finden Sie im [Datensatzüberblick](../catalog/datasets/overview.md).
 
-Im Abschnitt **[!UICONTROL Zuletzt verwendete Quellen]** werden die fünf zuletzt erstellten Quellschnittstellen in Ihrem IMS-Unternehmen Liste. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Quell-Connector erstellt wird. Sie können eine Quellverbindung aus der Liste auswählen, um weitere Informationen zum angegebenen Connector Ansicht, oder Sie können die Option &quot; **[!UICONTROL Ansicht alle]** &quot;auswählen, um eine Liste aller erstellten Quellverbindungen anzuzeigen. Weitere Informationen zu den Quellen finden Sie in der [Quellenübersicht](../sources/home.md).
+Im Abschnitt **[!UICONTROL Letzte Quellen]** werden die fünf zuletzt erstellten Quellschnittstellen in Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Quell-Connector erstellt wird. Sie können eine Quellverbindung aus der Liste auswählen, um weitere Informationen zum angegebenen Connector Ansicht, oder **[!UICONTROL Ansicht all]** auswählen, um eine Liste aller erstellten Quellverbindungen anzuzeigen. Weitere Informationen zu Quellen finden Sie im [sources overview](../sources/home.md).
 
-Im Abschnitt **[!UICONTROL Letzte Segmente]** werden die fünf zuletzt erstellten Segmentdefinitionen in Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn eine neue Segmentdefinition erstellt wird. Sie können eine Segmentdefinition aus der Liste auswählen, um weitere Informationen zur angegebenen Segmentdefinition Ansicht, oder Sie können &quot; **[!UICONTROL Ansicht alle]** &quot;auswählen, um eine Liste aller erstellten Segmentdefinitionen anzuzeigen. Weitere Informationen zu Segmenten finden Sie in der Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
+Im Abschnitt **[!UICONTROL Letzte Segmente]** werden die fünf zuletzt erstellten Segmentdefinitionen in Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn eine neue Segmentdefinition erstellt wird. Sie können eine Segmentdefinition aus der Liste auswählen, um weitere Informationen zur angegebenen Segmentdefinition Ansicht, oder **[!UICONTROL Ansicht alle]** auswählen, um eine Liste aller erstellten Segmentdefinitionen anzuzeigen. Weitere Informationen zu Segmenten finden Sie unter [Übersicht über den Segmentdienst](../segmentation/home.md).
 
-Im Abschnitt **[!UICONTROL Zuletzt verwendete Ziele]** werden die fünf zuletzt erstellten Ziele innerhalb Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen zum angegebenen Ziel Ansicht, oder Sie können die Option &quot; **[!UICONTROL Ansicht alle]** &quot;auswählen, um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../destinations/home.md).
+Im Abschnitt **[!UICONTROL Letzte Ziele]** werden die fünf zuletzt erstellten Ziele in Ihrer IMS-Organisation Liste. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen zum angegebenen Ziel Ansicht, oder **[!UICONTROL Ansicht alle]** auswählen, um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie im [Überblick über Ziele](../destinations/home.md).
 
 ### Empfohlenes Lernen
 
@@ -69,7 +69,7 @@ Auf der linken Seite der Navigationsleiste befindet sich das Adobe Experience Pl
 
 ### IMS-Organisationsumschalter
 
-Das erste Element auf der rechten Seite der oberen Navigationsleiste ist der **IMS-Organisationsschalter**.
+Das erste Element auf der rechten Seite der oberen Navigationsleiste ist der Umschalter **IMS-Organisation**.
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,25 +79,25 @@ Wenn Sie den Umschalter auswählen, wird ein Dropdown-Menü der IMS-Organisation
 
 ### Wechseln von Anwendungen
 
-Das nächste Element auf der rechten Seite der oberen Navigation ist der **Anwendungsumschalter**, der durch das ![Anwendungsumschalter](./images/user-guide/app-switcher-icon.png) -Symbol dargestellt wird. Wenn Sie dieses Symbol auswählen, können Sie zwischen Adobe-Anwendungen, auf die Ihr IMS-Org Zugriff hat, wie Experience Platform, Analytics, Assets und Start wechseln.
+Das nächste Element auf der rechten Seite der oberen Navigation ist der **Anwendungsschalter**, dargestellt durch das ![Anwendungsschalter](./images/user-guide/app-switcher-icon.png)-Symbol. Wenn Sie dieses Symbol auswählen, können Sie zwischen Adobe-Anwendungen, auf die Ihr IMS-Org Zugriff hat, wie Experience Platform, Analytics, Assets und Start wechseln.
 
 ### Hilfe
 
-Rechts neben dem Anwendungsschalter befindet sich das **Hilfe- und Supportmenü**, das durch das ![Fragezeichen/Hilfesymbol](./images/user-guide/help-icon.png) dargestellt wird. Wenn Sie dieses Symbol auswählen, wird ein Popupmenü mit mehreren Hilfe- und Supportressourcen angezeigt. Auf der Registerkarte &quot; **[!UICONTROL Hilfe]** &quot;finden Sie eine Liste der Dokumentation zu Ihrer aktuellen Seite. Auf der Registerkarte &quot; **[!UICONTROL Support]** &quot;können Sie ein Support-Ticket mit dem Support-Team der Adobe erstellen. Über die Registerkarte **[!UICONTROL Feedback]** können Sie Feedback zur Plattform an die Adobe senden.
+Rechts neben dem Anwendungsschalter befindet sich das Menü **Hilfe und Support**, das durch das ![Fragezeichen/help](./images/user-guide/help-icon.png)-Symbol dargestellt wird. Wenn Sie dieses Symbol auswählen, wird ein Popupmenü mit mehreren Hilfe- und Supportressourcen angezeigt. Die Registerkarte **[!UICONTROL Help]** zeigt eine Liste der entsprechenden Dokumentation für die Seite, auf der Sie sich gerade befinden. Mit der Registerkarte **[!UICONTROL Support]** können Sie ein Support-Ticket beim Support-Team der Adobe erstellen. Mit dem Register **[!UICONTROL Feedback]** können Sie Feedback zur Plattform an die Adobe senden.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Benachrichtigungen und Mitteilungen
 
-Im Bereich **** Benachrichtigungen, der durch das Symbol ![bell/notifications und ankündigungen](images/user-guide/notification-icon.png) dargestellt wird. Auf der Registerkarte &quot; **[!UICONTROL Benachrichtigungen]** &quot;werden wichtige Informationen zum Produkt und andere relevante Aktualisierungen angezeigt, während auf der Registerkarte &quot; **[!UICONTROL Mitteilungen]** &quot;Informationen zur Dienstwartung angezeigt werden.
+Im Abschnitt **Benachrichtigungen**, der durch das Symbol ![bell/Benachrichtigungen und Mitteilungen](images/user-guide/notification-icon.png) dargestellt wird. Auf der Registerkarte **[!UICONTROL Benachrichtigungen]** werden wichtige Informationen zum Produkt und andere relevante Aktualisierungen angezeigt, während auf der Registerkarte **[!UICONTROL Mitteilungen]** Informationen zur Dienstwartung angezeigt werden.
 
 ### User Profil
 
-Das letzte Element in der oberen Navigationsleiste sind die **Benutzereinstellungen**, die durch das Symbol &quot; ![Benutzereinstellungen/Profil](images/user-guide/profile-icon.png) &quot;dargestellt werden. Wählen Sie dieses Symbol, um Ihre Voreinstellungen zu bearbeiten oder sich abzumelden.
+Das letzte Element in der oberen Navigationsleiste sind die **Benutzereinstellungen**, die durch das ![Benutzereinstellungen/Benutzersymbol](images/user-guide/profile-icon.png) dargestellt werden. Wählen Sie dieses Symbol, um Ihre Voreinstellungen zu bearbeiten oder sich abzumelden.
 
 ### Sandboxes
 
-Direkt unterhalb der oberen Navigationsleiste befindet sich die Sandbox-Leiste. Diese Leiste zeigt, welche Sandbox Sie derzeit für Plattform verwenden. Weitere Informationen zu Sandboxen finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
+Direkt unterhalb der oberen Navigationsleiste befindet sich die Sandbox-Leiste. Diese Leiste zeigt, welche Sandbox Sie derzeit für Plattform verwenden. Weitere Informationen zu Sandboxen finden Sie in der [Übersicht über Sandboxen](../sandboxes/home.md).
 
 ## Linke Navigation {#left-nav}
 
@@ -109,55 +109,55 @@ Die Navigation auf der linken Seite des Bildschirms Liste alle verschiedenen Die
 
 ![](images/user-guide/homepage-left.png)
 
-Im Bereich **[!UICONTROL Startseite]** können Sie zur Homepage der Plattform-Benutzeroberfläche zurückkehren.
+Im Abschnitt **[!UICONTROL Home]** können Sie zur Homepage der Plattform-Benutzeroberfläche zurückkehren.
 
-Der **[!UICONTROL Workflows]** Abschnitt zeigt eine Liste mehrstufiger Workflows für die Ausführung von Vorgängen innerhalb der Plattform. Weitere Informationen zu Workflows finden Sie in der [Workflows Übersicht](./workflows.md).
+Der Abschnitt **[!UICONTROL Workflows]** zeigt eine Liste mehrstufiger Workflows für die Ausführung von Vorgängen innerhalb der Plattform. Weitere Informationen zu Workflows finden Sie in der [Workflows Übersicht](./workflows.md).
 
 ### [!UICONTROL Verbindungen]
 
-Im Abschnitt **[!UICONTROL Quellen]** können Sie Quellverbindungen erstellen, aktualisieren und löschen, sodass Sie Daten aus externen Quellen in die Plattform aufnehmen können. Weitere Informationen zu den Quellen finden Sie in der [Quellenübersicht](../sources/home.md).
+Im Abschnitt **[!UICONTROL Quellen]** können Sie Quellverbindungen erstellen, aktualisieren und löschen, sodass Sie Daten aus externen Quellen in die Plattform aufnehmen können. Weitere Informationen zu Quellen finden Sie im [sources overview](../sources/home.md).
 
-Im Abschnitt &quot; **[!UICONTROL Ziele]** &quot;können Sie Ziele erstellen, aktualisieren und löschen, sodass Sie Daten von der Plattform in viele externe Ziele exportieren können. Weitere Informationen zu Zielen finden Sie in der [Zielgruppenübersicht](../destinations/home.md).
+Im Abschnitt **[!UICONTROL Ziele]** können Sie Ziele erstellen, aktualisieren und löschen, sodass Sie Daten von der Plattform in viele externe Ziele exportieren können. Weitere Informationen zu Zielen finden Sie im [Überblick über Ziele](../destinations/home.md).
 
 ### [!UICONTROL Customer ]
 
-Im Abschnitt &quot; **[!UICONTROL Profil]** &quot;können Sie nach Profilen von Kunden, Ansichten-Profil-Metriken, Zusammenführungsrichtlinien und Schemas zur Ansicht von Vereinigungen suchen und diese verwalten. Weitere Informationen zur Verwendung der [!UICONTROL Profile] finden Sie im [[!DNL Profile] Benutzerhandbuch](../profile/ui/user-guide.md). Weitere Informationen zum Echtzeit-Profil von Kunden finden Sie in der Übersicht zum [Echtzeit-Profil](../profile/home.md).
+Im Abschnitt **[!UICONTROL Profil]** können Sie nach Profilen von Kunden, Ansicht-Profil-Metriken, Zusammenführungsrichtlinien und Schemas zur Ansicht-Vereinigung suchen und diese verwalten. Weitere Informationen zur Verwendung des Abschnitts [!UICONTROL Profil] finden Sie im [[!DNL Profile] Benutzerhandbuch](../profile/ui/user-guide.md). Weitere Informationen zum Echtzeit-Profil von Kunden finden Sie im [Überblick über das Echtzeit-Profil des Kunden](../profile/home.md).
 
-Im Abschnitt **[!UICONTROL Segmente]** können Sie Segmentdefinitionen erstellen und verwalten. Weitere Informationen zur Verwendung des [!UICONTROL Segmentabschnitts] finden Sie im [Segmentierungsbenutzerleitfaden](../segmentation/ui/overview.md). Weitere Informationen zum Segmentierungsdienst finden Sie in der Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
+Im Abschnitt **[!UICONTROL Segmente]** können Sie Segmentdefinitionen erstellen und verwalten. Weitere Informationen zur Verwendung des Abschnitts [!UICONTROL Segmente] finden Sie im [Benutzerhandbuch zur Segmentierung](../segmentation/ui/overview.md). Weitere Informationen zum Segmentierungsdienst finden Sie in der Übersicht über den [Segmentierungsdienst](../segmentation/home.md).
 
-Im Abschnitt **[!UICONTROL Identitäten]** können Sie Identitäts-Namensraum erstellen und verwalten. Weitere Informationen zum Abschnitt [!UICONTROL Identitäten] , einschließlich Informationen zu Identitäts-Namensräumen und zur Verwendung von Identitäten in der Plattform-Benutzeroberfläche, finden Sie in der Übersicht über den [Identitäts-Namensraum](../identity-service/namespaces.md).
+Im Abschnitt **[!UICONTROL Identitäten]** können Sie Identitäts-Namensraum erstellen und verwalten. Weitere Informationen zum Abschnitt [!UICONTROL Identitäten], einschließlich Informationen zu Identitäts-Namensräumen und zur Verwendung von Identitäten in der Plattform-Benutzeroberfläche, finden Sie unter [Übersicht über Identitäts-Namensraum](../identity-service/namespaces.md).
 
 ### [!UICONTROL Datenschutz]
 
-Im Abschnitt **[!UICONTROL Richtlinien]** können Sie Datenverwendungsrichtlinien erstellen und verwalten. Weitere Informationen zur Verwendung des Abschnitts &quot;Richtlinien&quot;finden Sie im Benutzerhandbuch zu den [Datenverwendungsrichtlinien](../data-governance/policies/user-guide.md). Weitere Informationen zu Datenverwendungsrichtlinien finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](../data-governance/policies/overview.md).
+Im Abschnitt **[!UICONTROL Richtlinien]** können Sie Datenverwendungsrichtlinien erstellen und verwalten. Weitere Informationen zur Verwendung des Abschnitts &quot;Richtlinien&quot;finden Sie im Benutzerhandbuch [Datenverwendungsrichtlinien](../data-governance/policies/user-guide.md). Weitere Informationen zu Datenverwendungsrichtlinien finden Sie im [Übersicht über Datenverwendungsrichtlinien](../data-governance/policies/overview.md).
 
-Im Abschnitt **[!UICONTROL Anforderungen]** können Sie Datenschutzanforderungen erstellen und verwalten. Bitte beachten Sie, dass Sie auf die Zulassungsliste gesetzt werden müssen, um Zugriff auf die Benutzeroberfläche des Privacy Service zu haben. Weitere Informationen zur Verwendung des Abschnitts Anforderungen finden Sie im Benutzerhandbuch zum [Privacy Service](../privacy-service/ui/user-guide.md). Weitere Informationen zu Privacy Service finden Sie in der Übersicht über den [Privacy Service](../privacy-service/home.md).
+Im Abschnitt **[!UICONTROL Anforderungen]** können Sie Datenschutzanforderungen erstellen und verwalten. Bitte beachten Sie, dass Sie auf die Zulassungsliste gesetzt werden müssen, um Zugriff auf die Benutzeroberfläche des Privacy Service zu haben. Weitere Informationen zur Verwendung des Abschnitts &quot;Anforderungen&quot;finden Sie im [Privacy Service-Benutzerhandbuch](../privacy-service/ui/user-guide.md). Weitere Informationen zu Privacy Service finden Sie unter [Übersicht über Privacy Service](../privacy-service/home.md).
 
 ### [!UICONTROL Datenwissenschaften]
 
-Der **[!UICONTROL Bereich &quot;Notebooks]** &quot;bietet Zugriff auf JupyterLab, eine interaktive Entwicklungs-Umgebung, mit der Sie Ihre Daten untersuchen, analysieren und modellieren können. Weitere Informationen zur Verwendung des Bereichs &quot;Notebooks&quot;finden Sie im [JupyterLab Benutzerhandbuch](../data-science-workspace/jupyterlab/overview.md). Weitere Informationen zum Data Science Workspace finden Sie in der Übersicht über den [Data Science Workspace](../data-science-workspace/home.md)
+Der Bereich **[!UICONTROL Notebooks]** bietet Zugriff auf JupyterLab, eine interaktive Entwicklungs-Umgebung, mit der Sie Ihre Daten untersuchen, analysieren und modellieren können. Weitere Informationen zur Verwendung des Bereichs &quot;Notebooks&quot;finden Sie im [JupyterLab Benutzerhandbuch](../data-science-workspace/jupyterlab/overview.md). Weitere Informationen zum Data Science Workspace finden Sie im [Überblick über den Data Science Workspace](../data-science-workspace/home.md)
 
-Im Abschnitt &quot; **[!UICONTROL Modelle]** &quot;können Sie maschinelles Lernen und künstliche Intelligenz nutzen, um Modelle zu erstellen, zu entwickeln, auszubilden und anzupassen, um Prognosen zu erstellen. Weitere Informationen zum Abschnitt Modelle finden Sie im Tutorial zur [Schulung und Bewertung eines Modells](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+Im Abschnitt **[!UICONTROL Modelle]** können Sie maschinelles Lernen und künstliche Intelligenz nutzen, um Modelle zu erstellen, zu entwickeln, auszubilden und zu optimieren, um Prognosen zu erstellen. Weitere Informationen zum Abschnitt Modelle finden Sie im Tutorial zu [Schulung und Bewertung eines Modells](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-Im Bereich &quot; **[!UICONTROL Services]** &quot;können Sie Ihre veröffentlichten Modelle für geplante Schulungen und Bewertungen verwalten oder Intelligent Services der Adobe nutzen, eine Reihe von AI-Diensten, die eine personalisierte Kundenerfahrung in Echtzeit bereitstellen. Weitere Informationen zum Abschnitt &quot;Dienste&quot;finden Sie im Lehrgang zum [Veröffentlichen eines Modells als Service-Lernprogramm](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+Im Abschnitt **[!UICONTROL Dienste]** können Sie Ihre veröffentlichten Modelle für geplante Schulungen und Bewertungen verwalten oder die Intelligent Services der Adobe nutzen, eine Reihe von AI-Diensten, die eine personalisierte Kundenerfahrung in Echtzeit bereitstellen. Weitere Informationen zum Abschnitt &quot;Dienste&quot;finden Sie unter [Veröffentlichen eines Modells als Service-Lernprogramm](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Data management]
 
-Im Abschnitt **[!UICONTROL Schema]** können Sie Erlebnisdatenmodell-Schema (XDM) erstellen und verwalten. Weitere Informationen zu Schemas finden Sie im Tutorial zum [Erstellen eines Schemas](../xdm/tutorials/create-schema-ui.md). More information about XDM can be found in the [XDM System overview](../xdm/home.md).
+Im Abschnitt **[!UICONTROL Schema]** können Sie Erlebnisdatenmodell-Schema (XDM) erstellen und verwalten. Weitere Informationen zu Schemas finden Sie im Tutorial [Erstellen eines Schemas](../xdm/tutorials/create-schema-ui.md). Weitere Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
 
-Im Abschnitt &quot; **[!UICONTROL Datensätze]** &quot;können Sie Datensätze erstellen und verwalten. Weitere Informationen zu Datensätzen finden Sie im [Benutzerhandbuch](../catalog/datasets/user-guide.md)zu Datensätzen.
+Im Abschnitt **[!UICONTROL Datensätze]** können Sie Datensätze erstellen und verwalten. Weitere Informationen zu Datasets finden Sie im [Datasets Benutzerhandbuch](../catalog/datasets/user-guide.md).
 
-Im Abschnitt **[!UICONTROL Abfragen]** können Sie Abfragen erstellen und verwalten, SQL-Abfragen protokollieren, die vom Adobe Experience Platform Abfrage Service vorgenommen wurden, und Ihre PostgreSQL-Anmeldeinformationen Ansicht geben. Weitere Informationen zu Abfragen finden Sie im Benutzerhandbuch zum [Abfrage-Dienst](../query-service/ui/overview.md).
+Im Abschnitt **[!UICONTROL Abfragen]** können Sie Abfragen erstellen und verwalten, SQL-Abfragen des Adobe Experience Platform Abfrage Service protokollieren und Ihre PostgreSQL-Anmeldeinformationen Ansicht geben. Weitere Informationen zu Abfragen finden Sie im Benutzerhandbuch [Abfrage Service](../query-service/ui/overview.md).
 
-Im Abschnitt **[!UICONTROL Überwachung]** können Sie die Batch- und Streaming-Erfassung überwachen. Weitere Informationen zur Überwachung finden Sie im Benutzerhandbuch [zur](../ingestion/quality/monitor-data-ingestion.md)Überwachung von Daten.
+Im Abschnitt **[!UICONTROL Überwachung]** können Sie die Batch- und Streaming-Erfassung überwachen. Weitere Informationen zur Überwachung finden Sie im [Benutzerhandbuch zur Datenerfassung mit Überwachungsdaten](../ingestion/quality/monitor-data-ingestion.md).
 
 ### [!UICONTROL Entscheidungsfindung]
 
-Offer Decisioning ist ein in Adobe Experience Platform integrierter Anwendungsdienst. Damit können Sie Experience Platform nutzen, um Kunden zur richtigen Zeit und an allen Berührungspunkten das optimale Angebot und Erlebnis zu unterbreiten. Weitere Informationen zu Offer Decisioning, einschließlich der Arbeit mit [!UICONTROL Angeboten] und [!UICONTROL Aktivitäten] , finden Sie in der [Offer Decisioning-Dokumentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Offer Decisioning ist ein in Adobe Experience Platform integrierter Anwendungsdienst. Damit können Sie Experience Platform nutzen, um Kunden zur richtigen Zeit und an allen Berührungspunkten das optimale Angebot und Erlebnis zu unterbreiten. Weitere Informationen zu Offer Decisioning, einschließlich der Arbeit mit [!UICONTROL Angeboten] und [!UICONTROL Aktivitäten] finden Sie in der [Offer Decisioning-Dokumentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
 
 ### [!UICONTROL Administration]
 
-Die Benutzeroberfläche von Platform bietet ein Dashboard, mit dem Sie wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen, wie sie in einem täglichen Schnappschuss erfasst werden, Ansicht haben. Sie können darauf zugreifen, indem Sie in der Navigation die Option **[!UICONTROL Lizenzverwendung]** auswählen. Weitere Informationen zum Dashboard der Lizenznutzung finden Sie im Dashboard zur [Lizenznutzung](license-usage-dashboard.md).
+Die Benutzeroberfläche von Platform bietet ein Dashboard, mit dem Sie wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen, wie sie in einem täglichen Schnappschuss erfasst werden, Ansicht haben. Sie können darauf zugreifen, indem Sie in der Navigation **[!UICONTROL Lizenznutzung]** auswählen. Weitere Informationen zum Dashboard der Lizenznutzung finden Sie im Handbuch [Dashboard zur Lizenznutzung](license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
@@ -165,4 +165,4 @@ Die Benutzeroberfläche von Platform bietet ein Dashboard, mit dem Sie wichtige 
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs wurden Sie nun mit der Startseite und den wichtigsten Navigationselementen der Plattform-Benutzeroberfläche vertraut gemacht. Detailliertere Informationen zum Arbeiten in der Benutzeroberfläche finden Sie in der Dokumentation zu den einzelnen Plattformdiensten. Links zu dieser Dokumentation finden Sie im [linken Navigationsabschnitt](#left-nav) , der weiter oben in diesem Dokument zu finden ist.
+Durch Lesen dieses Handbuchs wurden Sie nun mit der Startseite und den wichtigsten Navigationselementen der Plattform-Benutzeroberfläche vertraut gemacht. Detailliertere Informationen zum Arbeiten in der Benutzeroberfläche finden Sie in der Dokumentation zu den einzelnen Plattformdiensten. Links zu dieser Dokumentation finden Sie im Abschnitt [Linke Navigation](#left-nav), der weiter oben in diesem Dokument gefunden wurde.
