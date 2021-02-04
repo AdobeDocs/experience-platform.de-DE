@@ -1,5 +1,5 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
+keywords: Datenverwaltung rtcdp;rtcdp Datenverwaltung;Echtzeit-Daten-Profil-Datenverwaltung
 title: Data Governance – Übersicht
 seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
@@ -7,8 +7,8 @@ seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei 
 translation-type: tm+mt
 source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 45%
+source-wordcount: '707'
+ht-degree: 44%
 
 ---
 
