@@ -3,19 +3,19 @@ title: Variablen in Adobe Analytics automatisch zugeordnet
 seo-title: Variablen in Adobe Analytics mit Adobe Experience Platform Web SDK automatisch zugeordnet
 description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Experience Platform Web SDK zugeordnet werden.
 seo-description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Experience Platform Web SDK zugeordnet werden.
-keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
+keywords: adobe analytics;variables;analytics;automate map;automatisch zugeordnet;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 36%
+source-wordcount: '683'
+ht-degree: 35%
 
 ---
 
 
-# Variables automatically mapped in [!DNL Analytics]
+# Variablen werden automatisch in [!DNL Analytics] zugeordnet
 
-Below is a list of variables that Adobe Experience Platform Edge Network automatically maps into [!DNL Analytics].
+Nachstehend finden Sie eine Liste von Variablen, die Adobe Experience Platform Edge Network automatisch [!DNL Analytics] zuordnet.
 
 | XDM-Feldpfad | [!DNL Analytics Query String] / HTTP-Header | Beschreibung |
 | ---------- | ------------------------- | ----------------------------------------- |
@@ -34,8 +34,8 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `commerce.productListViews.id` | `events` | `scView` ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
 | `commerce.productListViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der KonversionsCOMMERCE_SC_ANSICHT unter Verwendung des Trennzeichens `,`. |
 | `commerce.productViews.id` | `events` | `prodView` ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
-| `commerce.productViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_Referrer_ANSICHT unter Verwendung des Trennzeichens `,`. |
-| `commerce.purchases.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit Konversions-COMMERCE_PURCHASE unter Verwendung des Trennzeichens `,`. |
+| `commerce.productViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit KonversionsCOMMERCE_Referrer_ANSICHT unter Verwendung des Trennzeichens `,`. |
+| `commerce.purchases.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit KonversionsCOMMERCE_PURCHASE unter Verwendung des Trennzeichens `,`. |
 | `device.colorDepth` | `c` | AppMeasurement-Abfrageparameter, C_COLOR-Zuordnung. |
 | `device.screenHeight` | `s` | AppMeasurement Abfrage-Parameterzuordnung Bildschirmauflösung. |
 | `device.screenWidth` | `s` | AppMeasurement Abfrage-Parameterzuordnung Bildschirmauflösung. |
@@ -68,7 +68,7 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | AppMeasurement-Kontextdatenzuordnung `a.media.name`. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | AppMeasurement-Kontextdatenzuordnung `c.a.media.show`. |
 | `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement-Kontextdatenzuordnung `c.a.media.type` mit Konvertierung VEDIO_SHOW_TYPE. |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement context data `c.a.media.type` mapping with conversion VIDEO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement-Kontextdaten `c.a.media.type`-Zuordnung mit KonversionsVIDEO_SHOW_TYPE. |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | AppMeasurement-Kontextdatenzuordnung `c.a.media.length`. |
 | `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | AppMeasurement-Kontextdaten. |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | AppMeasurement-Kontextdatenzuordnung `c.a.media.channel`. |
@@ -96,7 +96,7 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `productlistitems.[N].quantity` | `products` | AppMeasurement Abfrage-Parameter Produktmengenzuordnung. |
 | `web.webInteraction.URL` | `pev1` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS_VAR1-Zuordnung. |
 | `web.webInteraction.name` | `pev2` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS_VAR2-Zuordnung. |
-| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` nach `pe=lnk_o`; `web.webInteraction.type=download` nach `pe=lnk_d`; `web.webInteraction.type=exit` nach `pe=lnk_e` |
+| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` nach  `pe=lnk_o`;  `web.webInteraction.type=download` nach  `pe=lnk_d`;  `web.webInteraction.type=exit` nach  `pe=lnk_e` |
 | `web.webPageDetails.URL` | `g` | AppMeasurement Abfrageparameter, PAGE_URL-Zuordnung. |
 | `web.webPageDetails.errorPage` | `pageType` | AppMeasurement-Abfrage-Parameter PAGE_TYPE_FULL-Zuordnung mit Konversion ERROR_PAGE_TYPE. |
 | `web.webPageDetails.homePage` | `hp` | AppMeasurement-Abfrageparameter, HOMEPAGE-Zuordnung mit der Konvertierung BOOLEAN_TO_YN. |
