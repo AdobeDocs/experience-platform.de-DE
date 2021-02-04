@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Tutorials für Segmentierung
 topic: tutorial
@@ -8,7 +8,7 @@ description: Adobe Experience Platform Segmentation Service bietet eine Benutzer
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '589'
 ht-degree: 56%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 56%
 
 # Tutorials für Segmentierung
 
-Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die [Segmentation Service – Übersicht](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren [!DNL Real-time Customer Profile]-Daten generieren können. Diese Segmente werden zentral konfiguriert und auf [!DNL Platform] gepflegt und sind für jede Adobe leicht zugänglich. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die [Segmentation Service – Übersicht](../segmentation/home.md).
 
 ## Erstellen einer Segmentdefinition
 
-Eine Segmentdefinition ist der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Zielgruppenmitglieder für ein Segment zu bestimmen. The developing, testing, previewing, and saving of a segment definition can be done using the [!DNL Platform] user interface or APIs. Um eine Segmentdefinition zu erstellen, folgen Sie dem [Tutorial zum Erstellen eines Segment-APIs](../segmentation/tutorials/create-a-segment.md) oder dem [Benutzerhandbuch für die Segmentaufbau-Benutzeroberfläche](../segmentation/ui/overview.md).
+Eine Segmentdefinition ist der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Zielgruppenmitglieder für ein Segment zu bestimmen. Das Entwickeln, Testen, Anzeigen und Speichern einer Segmentdefinition kann über die [!DNL Platform]-Benutzeroberfläche oder -APIs durchgeführt werden. Um eine Segmentdefinition zu erstellen, folgen Sie dem [Tutorial zum Erstellen eines Segment-APIs](../segmentation/tutorials/create-a-segment.md) oder dem [Benutzerhandbuch für die Segmentaufbau-Benutzeroberfläche](../segmentation/ui/overview.md).
 
 ## Bewerten eines Segments und Zugriffsergebnisse
 
@@ -28,15 +28,15 @@ Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, k
 
 ## Exportieren von Segmentdaten
 
-Exporting segments containing [!DNL Profile] data requires first [creating a dataset into which the data will be exported](../segmentation/tutorials/create-dataset-export-segment.md), then initiating a new export job. Schritte zum Generieren eines Exportauftrags finden Sie im Lernprogramm zum [Auswerten eines Segments](../segmentation/tutorials/evaluate-a-segment.md).
+Für das Exportieren von Segmenten, die [!DNL Profile]-Daten enthalten, ist zunächst [ein Datensatz zu erstellen, in den die Daten exportiert werden.](../segmentation/tutorials/create-dataset-export-segment.md) und anschließend ein neuer Exportauftrag zu starten. Schritte zum Generieren eines Exportauftrags finden Sie im Lernprogramm [zum Auswerten eines Segments](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Konfigurieren von Zusammenführungsrichtlinien
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. To work with merge policies in the [!DNL Platform] UI, visit the [merge policies user guide](../profile/ui/merge-policies.md). To work with merge policies using the [!DNL Real-time Customer Profile] API, see the [merge policies developer guide](../profile/api/merge-policies.md).
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die [!DNL Platform] verwenden, um zu bestimmen, wie die Daten priorisiert werden und welche Daten kombiniert werden, um diese einheitliche Ansicht zu erstellen. Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. Um mit Mergerichtlinien in der [!DNL Platform]-Benutzeroberfläche zu arbeiten, besuchen Sie das [Mergepolicies-Benutzerhandbuch](../profile/ui/merge-policies.md). Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API finden Sie im [Entwicklerhandbuch für Zusammenführungsrichtlinien](../profile/api/merge-policies.md).[!DNL Real-time Customer Profile]
 
 ## Einhalten der Datennutzungs-Compliance für Segmente
 
-Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datennutzung enthalten. Spezifische Schritte zum Einhalten der Datennutzungs-Compliance für ein Zielgruppensegment finden Sie im [Tutorial zur Datennutzungs-Compliance für Segmente](../segmentation/tutorials/governance.md).
+Segmente, die für die Verwendung in [!DNL Real-time Customer Profile] aktiviert sind, enthalten eine Richtlinie-ID zum Zusammenführen innerhalb ihrer Segmentdefinition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datennutzung enthalten. Spezifische Schritte zum Einhalten der Datennutzungs-Compliance für ein Zielgruppensegment finden Sie im [Tutorial zur Datennutzungs-Compliance für Segmente](../segmentation/tutorials/governance.md).
 
 ## Streaming-Segmentierung
 
@@ -44,4 +44,4 @@ Streaming-Segmentierung ist die Möglichkeit, einen Kunden sofort zu bewerten, s
 
 ## Segmentierung mit mehreren Entitäten
 
-Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema. Informationen zum Verschieben finden Sie in der [Dokumentation zur Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md).
+Die Segmentierung mehrerer Entitäten ist die Möglichkeit, [!DNL Profile]-Daten um zusätzliche Daten zu erweitern, die auf Produktklassen, Stores oder anderen Nicht-Profil-Klassen basieren. Nach der Verbindung stehen Daten aus zusätzlichen Klassen zur Verfügung, als wären sie nativ für das [!DNL Profile]-Schema. Informationen zum Verschieben finden Sie in der [Dokumentation zur Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md).
