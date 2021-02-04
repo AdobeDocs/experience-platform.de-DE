@@ -3,12 +3,12 @@ title: Flackern für personalisierte Erlebnisse verwalten
 seo-title: Adobe Experience Platform Web SDK Flackern verwalten
 description: Erfahren Sie, wie Sie Flackern in Benutzererlebnissen verwalten
 seo-description: Erfahren Sie, wie Sie Flackern mit den Experience Platform Web SDK-Eigenschaften verwalten
-keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
+keywords: zielgruppe;Flackern;prehidingStyle;asynchron;asynchron;
 translation-type: tm+mt
 source-git-commit: e0f992eafbb973fa1c48acc3b165788137d143a4
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 76%
+source-wordcount: '496'
+ht-degree: 75%
 
 ---
 
@@ -27,7 +27,7 @@ Die Funktion zum Beheben von Flackern umfasst einige Phasen:
 
 Während der Vorabausblendungsphase verwendet das SDK die `prehidingStyle`-Konfigurationsoption, um ein HTML-Tag zu erstellen und es an die DOM anzuhängen, um sicherzustellen, dass große Teile der Seite ausgeblendet werden. Wenn Sie sich nicht sicher sind, welche Teile der Seite personalisiert werden, sollten Sie `prehidingStyle` auf `body { opacity: 0 !important }` einstellen. Dadurch wird sichergestellt, dass die gesamte Seite ausgeblendet wird. Dies führt jedoch zu einer schlechteren Seitenwiedergabeleistung, die von Tools wie Lighthouse, Webseitentests usw. gemeldet wird. Um die beste Leistung beim Seiten-Rendering zu erzielen, wird empfohlen, `prehidingStyle` auf eine Liste von Container-Elementen einzustellen, die die Seitenabschnitte enthalten, die personalisiert werden.
 
-Assuming you have an HTML page like the one below and you know that only `bar` and `bazz` container elements will be ever personalized:
+Wenn Sie eine HTML-Seite wie die unten stehende haben und Sie wissen, dass nur `bar`- und `bazz` Container-Elemente jemals personalisiert werden:
 
 ```html
 <html>
