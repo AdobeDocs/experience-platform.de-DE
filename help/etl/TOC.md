@@ -13,7 +13,7 @@ ht-degree: 69%
 ---
 
 
-# Verfahren zum Extrahieren, Transformieren und Laden in der Experience Platform {#etl}
+# Verfahren zum Extrahieren, Transformieren und Laden in Experience Platform {#etl}
 
 - [Erstellen von ETL-Integrationen](home.md)
 - [ETL-Transformation](transformations.md)
