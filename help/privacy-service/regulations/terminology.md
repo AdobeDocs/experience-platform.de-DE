@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;regulation;Regulation;regulations;Regulations;privacy;Privacy;
+keywords: Experience Platform;Home;beliebte Themen;GDPR;gdpr;CCPA;ccpa;PDPA;PDPA;LGPD;lgpd;overview;Overview;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
 solution: Experience Platform
 title: Terminologie der Datenschutzverordnung
 topic: troubleshooting
@@ -7,7 +7,7 @@ description: Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zus
 translation-type: tm+mt
 source-git-commit: 714b071bfa68ad0796afad25525b62b42bd56b3f
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1512'
 ht-degree: 3%
 
 ---
@@ -23,11 +23,11 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 **BCR (BCR)**: Eine Reihe verbindlicher Vorschriften soll es multinationalen Firmen und Organisationen ermöglichen, personenbezogene Daten, die sie kontrollieren, von der EU an ihre Tochtergesellschaften außerhalb der EU (aber innerhalb der Organisation) zu übermitteln.
 
-**Biometrische Daten** Alle personenbezogenen Daten, die sich auf die physischen, physiologischen oder verhaltensbezogenen Merkmale einer Person beziehen und deren eindeutige Identifizierung ermöglichen.
+**Biometrische** DatenPersonenbezogene Daten, die sich auf die physischen, physiologischen oder verhaltensbezogenen Merkmale einer Person beziehen und deren eindeutige Identifizierung ermöglichen.
 
 ## C 
 
-**CCPA**: Die [!DNL California Consumer Privacy Act] (CCPA) gibt kalifornischen Einwohnern mehr Kontrolle über die persönlichen Daten, die Unternehmen von da an sammeln. Das Gesetz sieht mehrere neue Rechte für Verbraucher vor, darunter das Recht auf Zugang und die von ihnen gesammelten personenbezogenen Daten sowie das Recht auf Opt-out des Verkaufs ihrer personenbezogenen Daten an Dritte.
+**CCPA**: Die  [!DNL California Consumer Privacy Act] (CCPA) gibt kalifornischen Einwohnern mehr Kontrolle über die persönlichen Daten, die Unternehmen von da an sammeln. Das Gesetz sieht mehrere neue Rechte für Verbraucher vor, darunter das Recht auf Zugang und die von ihnen gesammelten personenbezogenen Daten sowie das Recht auf Opt-out des Verkaufs ihrer personenbezogenen Daten an Dritte.
 
 **Zustimmung**: Einwilligung in eine Erklärung oder Handlung, die die Verarbeitung ihrer personenbezogenen Daten zum Gegenstand hat, ausdrücklich, auf Kenntnis der Sachlage und ausdrücklich gestattet.
 
@@ -69,7 +69,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 ## G
 
-**GDPR**: Der [!DNL General Data Protection Regulation] (GDPR) ist ein Rechtsrahmen, der Leitlinien für die Erhebung und Verarbeitung personenbezogener Daten innerhalb der Europäischen Vereinigung (EU) festlegt. Der GDPR legt die Grundsätze für das Data Management und die Rechte des Einzelnen fest und verhängt auch Geldbußen, die einnahmenbasiert sein können. Das GDPR deckt alle Firmen ab, die mit den Daten der EU-Bürger zu tun haben. Daher ist es eine wichtige Regelung für die Compliance von Unternehmen bei Banken, Versicherern und anderen finanziellen Firmen.
+**GDPR**: Der  [!DNL General Data Protection Regulation] (GDPR) ist ein Rechtsrahmen, der Leitlinien für die Erhebung und Verarbeitung personenbezogener Daten innerhalb der Europäischen Vereinigung (EU) festlegt. Der GDPR legt die Grundsätze für das Data Management und die Rechte des Einzelnen fest und verhängt auch Geldbußen, die einnahmenbasiert sein können. Das GDPR deckt alle Firmen ab, die mit den Daten der EU-Bürger zu tun haben. Daher ist es eine wichtige Regelung für die Compliance von Unternehmen bei Banken, Versicherern und anderen finanziellen Firmen.
 
 **Genetische Daten**: Daten über die Merkmale einer Person, die geerbt oder erworben werden und die eindeutige Informationen über die Gesundheit oder Physiologie der Person geben.
 
@@ -79,7 +79,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 ## I
 
-**Identity Management Services (IMS)**: Die Adobe Implementierung von Federated ID und OAuth 2.0 für die Authentifizierung von Adobe ID-Benutzern und die Autorisierung von Adoben-Ressourcen. Sie müssen IMS in Ihre Adobe-Anwendung oder Ihren -Service integrieren, damit sich Ihre Benutzer bei den Adobe-Services anmelden und diese nutzen können. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+**Identity Management Services (IMS)**: Die Adobe Implementierung von Federated ID und OAuth 2.0 für die Authentifizierung von Adobe ID-Benutzern und die Autorisierung von Adoben-Ressourcen. Sie müssen IMS in Ihre Adobe-Anwendung oder Ihren -Service integrieren, damit sich Ihre Benutzer bei den Adobe-Services anmelden und diese nutzen können. Die Benutzer können sich direkt bei Renga (dem Identitäts-Service-Provider der Adobe) anmelden oder sich über eine vertrauenswürdige Drittanbieter-Authentifizierungsdomäne (z. B. [!DNL Google], [!DNL Facebook] oder ein Unternehmens-/Organisations-LDAP) anmelden.
 
 **Implizite Zustimmung**: Auch als eindeutige Einwilligung bezeichnet, bezieht sich dies auf eine Einwilligung, die nicht ausdrücklich von der betroffenen Person erteilt wurde, aber dennoch eindeutig ist. Beispielsweise wird während des Anmeldeprozesses für eine Website der Firma darauf hingewiesen, dass die betroffene Person durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu bestimmten Angeboten zustimmt. Wenn die betroffene Person die Mitteilung liest, reicht die positive Handlung der Eingabe ihrer E-Mail aus, um als implizite Zustimmung betrachtet zu werden.
 
@@ -91,7 +91,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 ## L
 
-**LGPD**: Das [!DNL Lei Geral de Proteção de Dados] (LGPD) zielt darauf ab, die Behandlung personenbezogener Daten aller Personen oder natürlichen Personen in Brasilien zu regeln. Die LGPD verleiht brasilianischen Bürgern das Recht, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen, zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem), und das Recht, ihre Daten an Dritte zu verkaufen Opt-out.
+**LGPD**: Das  [!DNL Lei Geral de Proteção de Dados] (LGPD) zielt darauf ab, die Behandlung von personenbezogenen Daten aller Personen oder natürlichen Personen in Brasilien zu regeln. Die LGPD verleiht brasilianischen Bürgern das Recht, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen, zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem), und das Recht, ihre Daten an Dritte zu verkaufen Opt-out.
 
 ## M
 
@@ -103,7 +103,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 ## P
 
-**PDPA**: Der [!DNL Personal Data Protection Act] von Thailand (PDPA) wurde eingeführt, um die thailändischen Dateneigner vor der illegalen Erhebung, Verwendung oder Weitergabe ihrer personenbezogenen Daten zu schützen. Auf der Grundlage des GDPR der Europäischen Vereinigung gewährt die Verordnung den thailändischen Bürgern das Recht, Zugang zu ihren gespeicherten personenbezogenen Daten oder deren Löschung zu beantragen.
+**PDPA**: Der  [!DNL Personal Data Protection Act] von Thailand (PDPA) wurde eingeführt, um die thailändischen Dateneigner vor der illegalen Erhebung, Verwendung oder Weitergabe ihrer personenbezogenen Daten zu schützen. Auf der Grundlage des GDPR der Europäischen Vereinigung gewährt die Verordnung den thailändischen Bürgern das Recht, Zugang zu ihren gespeicherten personenbezogenen Daten oder deren Löschung zu beantragen.
 
 **Persönliche Daten**: Alle Informationen, die sich auf eine natürliche Person oder &quot;Datensubjekt&quot; beziehen und die zur direkten oder indirekten Identifizierung der Person verwendet werden können.
 
@@ -135,7 +135,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 ## S
 
-**Sensible Daten**:  Personenbezogene Daten, die sich auf rassische oder ethnische Herkünfte, politische Meinungen, religiöse oder philosophische Überzeugungen, sexuelles Verhalten, Strafregister, Gesundheitsdaten, Behinderung, Informationen zur Vereinigung des Handels, genetische Daten, biometrische Daten oder alle Daten beziehen, die die betroffene Person betreffen können.
+**Sensible Daten**: Personenbezogene Daten, die sich auf rassische oder ethnische Herkünfte, politische Meinungen, religiöse oder philosophische Überzeugungen, sexuelles Verhalten, Strafregister, Gesundheitsdaten, Behinderung, Informationen zur Vereinigung des Handels, genetische Daten, biometrische Daten oder alle Daten beziehen, die die betroffene Person betreffen können.
 
 **Zugriffsrecht** für Betreff: Er wird auch als Zugriffsrecht bezeichnet und berechtigt die betroffene Person, Zugang zu den sie betreffenden personenbezogenen Daten und Informationen darüber zu haben, welche sie von einem für die Verarbeitung Verantwortlichen hat.
 
