@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Datums- und Uhrzeitfunktionen;Datenzeitfunktionen;Datenzeit;Datum;Uhrzeit;
 solution: Experience Platform
 title: Datums- und Uhrzeitfunktionen
 topic: developer guide
@@ -7,7 +7,7 @@ description: Datums- und Uhrzeitfunktionen werden zur Durchführung von Datums- 
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '507'
 ht-degree: 8%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 8%
 
 # Datums- und Uhrzeitfunktionen
 
-Datums- und Uhrzeitfunktionen werden verwendet, um Datums- und Uhrzeitvorgänge für Werte innerhalb [!DNL Profile Query Language] (PQL) durchzuführen. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Datums- und Uhrzeitfunktionen werden verwendet, um Datums- und Uhrzeitvorgänge für Werte innerhalb von [!DNL Profile Query Language] (PQL) durchzuführen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Aktueller Monat
 
-Die `currentMonth` Funktion gibt den aktuellen Monat als Ganzzahl zurück.
+Die Funktion `currentMonth` gibt den aktuellen Monat als Ganzzahl zurück.
 
 **Format**
 
@@ -37,7 +37,7 @@ person.birthMonth = currentMonth()
 
 ## Monat
 
-Die `getMonth` Funktion gibt den Monat als Ganzzahl basierend auf einem bestimmten Zeitstempel zurück.
+Die Funktion `getMonth` gibt den Monat als Ganzzahl basierend auf einem angegebenen Zeitstempel zurück.
 
 **Format**
 
@@ -55,7 +55,7 @@ person.birthdate.getMonth() = 6
 
 ## Aktuelles Jahr
 
-Die `currentYear` Funktion gibt das aktuelle Jahr als Ganzzahl zurück.
+Die Funktion `currentYear` gibt das aktuelle Jahr als Ganzzahl zurück.
 
 **Format**
 
@@ -73,7 +73,7 @@ product.saleYear = currentYear()
 
 ## Jahr
 
-Die `getYear` Funktion gibt das Jahr als Ganzzahl basierend auf einem bestimmten Zeitstempel zurück.
+Die Funktion `getYear` gibt das Jahr als Ganzzahl basierend auf einem angegebenen Zeitstempel zurück.
 
 **Format**
 
@@ -91,7 +91,7 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 ## Aktueller Tag des Monats
 
-Die `currentDayOfMonth` Funktion gibt den aktuellen Tag des Monats als Ganzzahl zurück.
+Die Funktion `currentDayOfMonth` gibt den aktuellen Tag des Monats als Ganzzahl zurück.
 
 **Format**
 
@@ -109,7 +109,7 @@ person.birthDay = currentDayOfMonth()
 
 ## Monatstag abrufen
 
-Die `getDayOfMonth` Funktion gibt den Tag als Ganzzahl basierend auf einem bestimmten Zeitstempel zurück.
+Die Funktion `getDayOfMonth` gibt den Tag als Ganzzahl basierend auf einem bestimmten Zeitstempel zurück.
 
 **Format**
 
@@ -127,11 +127,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## Occurs
 
-Die `occurs` Funktion vergleicht die angegebene Zeitstempelfunktion mit einem festen Zeitraum.
+Die Funktion `occurs` vergleicht die angegebene Zeitstempelfunktion mit einem bestimmten Zeitraum.
 
 **Format**
 
-Die `occurs` Funktion kann in einem der folgenden Formate geschrieben werden:
+Die Funktion `occurs` kann in einem der folgenden Formate geschrieben werden:
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -144,13 +144,13 @@ Die `occurs` Funktion kann in einem der folgenden Formate geschrieben werden:
 | --------- | ----------- |
 | `{COMPARISON}` | Ein Vergleichsoperator. Kann eine der folgenden Operatoren sein: `>`, `>=`, `<`, `<=`, `=`, `!=`. Weitere Informationen zu den Vergleichsfunktionen finden Sie im Dokument [Vergleichsfunktionen](./comparison-functions.md). |
 | `{INTEGER}` | Eine nicht negative Ganzzahl. |
-| `{TIME_UNIT}` | Eine Zeiteinheit. Kann eines der folgenden Wörter sein: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`,. |
+| `{TIME_UNIT}` | Eine Zeiteinheit. Kann eines der folgenden Wörter sein: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
 | `{DIRECTION}` | Eine Präposition, die beschreibt, wann das Datum mit dem Datum zu vergleichen ist. Kann eines der folgenden Wörter sein: `before`, `after`, `from`. |
-| `{TIME}` | Kann ein Zeitstempelliteral (`today`, `now`, `yesterday`, `tomorrow`), eine relative Zeiteinheit (eine von `this`, `last`oder `next` gefolgt von einer Zeiteinheit) oder ein Zeitstempelattribut sein. |
+| `{TIME}` | Kann ein Zeitstempelliteral (`today`, `now`, `yesterday`, `tomorrow`), eine relative Zeiteinheit (eine von `this`, `last` oder `next` gefolgt von einer Zeiteinheit) oder ein Zeitstempelattribut sein. |
 
 >[!NOTE]
 >
->Die Verwendung des Wortes `on` ist optional. Es ist da, um die Lesbarkeit für einige Kombinationen zu verbessern, wie `timestamp occurs on date(2019,12,31)`.
+>Die Verwendung des Wortes `on` ist optional. Es ist vorhanden, um die Lesbarkeit für einige Kombinationen zu verbessern, z. B. `timestamp occurs on date(2019,12,31)`.
 
 **Beispiel**
 
