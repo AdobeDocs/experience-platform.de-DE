@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
+keywords: Experience Platform;Home;beliebte Themen;ETL;ETL;El-Arbeitsablauf;ETL-Arbeitsablauf
 solution: Experience Platform
 title: ETL-Workflow
 topic: overview
@@ -7,8 +7,8 @@ description: Verschiedene Tools für Extract, Transform and Load (ETL) untersche
 translation-type: tm+mt
 source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 90%
+source-wordcount: '213'
+ht-degree: 85%
 
 ---
 
@@ -27,7 +27,7 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image2.png)
 
-### Abbildung 2: Aktivierter [!DNL Experience Platform] Anschluss:
+### Abbildung 2: [!DNL Experience Platform] Anschluss aktiviert:
 
 ![](images/image3.png)
 
@@ -35,11 +35,11 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image4.png)
 
-### Figure 4 - New Transformation UI, selecting [!DNL Experience Platform] Connection:
+### Abbildung 4: Benutzeroberfläche für neue Transformationen: [!DNL Experience Platform] Verbindung auswählen
 
 ![](images/image5.png)
 
-### Abbildung 5: Durchsuchen von [!DNL Experience Platform] Quelldatensätzen:
+### Abbildung 5: Suchen nach Quelldatensätzen [!DNL Experience Platform]:
 
 ![](images/image6.png)
 
@@ -59,7 +59,7 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image10.png)
 
-### Abbildung 10: Definieren des Datasets für die [!DNL Experience Data Model] (XDM-)Zielgruppe:
+### Abbildung 10: Definieren des Datasets [!DNL Experience Data Model] (XDM) der Zielgruppe:
 
 ![](images/image11.png)
 
