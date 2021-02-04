@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;boolean functions;boolean;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Boolesche Funktionen;Boolescher Wert;
 solution: Experience Platform
 title: Boolesche Funktionen
 topic: developer guide
@@ -7,19 +7,19 @@ description: Boolesche Funktionen werden verwendet, um eine Boolesche Logik für
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 14%
+source-wordcount: '253'
+ht-degree: 13%
 
 ---
 
 
 # Boolesche Funktionen
 
-Boolesche Funktionen werden verwendet, um eine boolesche Logik für verschiedene Elemente in [!DNL Profile Query Language] (PQL) durchzuführen.  More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Boolesche Funktionen werden verwendet, um eine boolesche Logik für verschiedene Elemente in [!DNL Profile Query Language] (PQL) durchzuführen.  Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Und
 
-Die `and` Funktion wird verwendet, um eine logische Verbindung zu erstellen.
+Die Funktion `and` wird zur Erstellung einer logischen Verbindung verwendet.
 
 **Format**
 
@@ -37,7 +37,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## Oder
 
-Die `or` Funktion wird verwendet, um eine logische Trennung zu erzeugen.
+Die Funktion `or` wird verwendet, um eine logische Trennung zu erstellen.
 
 **Format**
 
@@ -55,7 +55,7 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 ## Nicht
 
-Die Funktion `not` (oder `!`) dient zur Erstellung einer logischen Negation.
+Die Funktion `not` (oder `!`) wird zum Erstellen einer logischen Negation verwendet.
 
 **Format**
 
@@ -74,7 +74,7 @@ not (homeAddress.countryISO = "CA")
 
 ## Wenn 
 
-Die `if` Funktion wird zum Auflösen eines Ausdrucks verwendet, je nachdem, ob eine angegebene Bedingung wahr ist.
+Die Funktion `if` wird verwendet, um einen Ausdruck aufzulösen, je nachdem, ob eine angegebene Bedingung wahr ist.
 
 **Format**
 
@@ -85,12 +85,12 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 | Argument | Beschreibung |
 | --------- | ----------- |
 | `{TEST_EXPRESSION}` | Der boolesche Ausdruck, der getestet wird. |
-| `{TRUE_EXPRESSION}` | Der Ausdruck, dessen Wert verwendet wird, wenn `{TEST_EXPRESSION}` true lautet. |
-| `{FALSE_EXPRESSION}` | Der Ausdruck, dessen Wert verwendet wird, wenn `{TEST_EXPRESSION}` false lautet. |
+| `{TRUE_EXPRESSION}` | Der Ausdruck, dessen Wert verwendet wird, wenn `{TEST_EXPRESSION}` &quot;true&quot;ist. |
+| `{FALSE_EXPRESSION}` | Der Ausdruck, dessen Wert verwendet wird, wenn `{TEST_EXPRESSION}` &quot;false&quot;ist. |
 
 **Beispiel**
 
-In der folgenden PQL-Abfrage wird der Wert so eingestellt, `1` als wäre das Heimatland Kanada und `2` das Heimatland nicht Kanada.
+Die folgende PQL-Abfrage setzt den Wert auf `1`, wenn das Heimatland Kanada ist, und `2`, wenn das Heimatland nicht Kanada ist.
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
