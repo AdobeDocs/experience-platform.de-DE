@@ -3,12 +3,12 @@ title: Automatisch erfasste Informationen
 seo-title: Informationen, die automatisch vom Adobe Experience Platform Web SDK erfasst werden
 description: Beschreibung der von Adobe Experience Cloud SDK automatisch erfassten Informationen
 seo-description: Beschreibung der von Adobe Experience Cloud SDK automatisch erfassten Informationen
-keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+keywords: Informationen erfassen;Kontext;konfigurieren;Gerät;Bildschirmhöhe;Bildschirmausrichtung;Bildschirmbreite;Bildschirmbreite;Umgebung;ViewportHeight;Viewport-Höhe;Viewport-Breite;Viewport-Breite;Viewport-Breite;Browserdetails;Browserdetails;Implementierungsdetails;Name;Version;OrtContext;localTime;localTimeOffset;LocalTimeOffset Local TimeZone Offset;timestamp;web;url;webPageDetails;Webseitendetails;webReferrer;web Werber;landscape;portrait;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 84%
+source-wordcount: '434'
+ht-degree: 74%
 
 ---
 
