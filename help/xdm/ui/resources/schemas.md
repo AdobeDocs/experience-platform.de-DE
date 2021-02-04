@@ -5,9 +5,9 @@ title: Schemas in der Benutzeroberfläche erstellen und bearbeiten
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche der Experience Platform kennen.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1321'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ Um ein vorhandenes Schema zu bearbeiten, wählen Sie die Registerkarte **[!UICON
 >
 >Sie können die Such- und Filterfunktionen des Arbeitsbereichs verwenden, um das Schema leichter zu finden. Weitere Informationen finden Sie im Handbuch [XDM-Ressourcen](../explore.md) zu erkunden.
 
-Wenn Sie ein Schema auswählen, wird [!DNL Schema Editor] mit der auf der Arbeitsfläche angezeigten Struktur des Schemas angezeigt. Sie können dem Schema jetzt [Mixins](#add-mixins) hinzufügen oder [vorhandene benutzerdefinierte Mixins bearbeiten](./mixins.md#edit), wenn das Schema eine davon verwendet.
+Wenn Sie ein Schema auswählen, wird [!DNL Schema Editor] mit der auf der Arbeitsfläche angezeigten Struktur des Schemas angezeigt. Sie können nun [Mixins](#add-mixins) zum Schema, [Anzeigenamen für Felder bearbeiten](#display-names) oder [vorhandene benutzerdefinierte Mixins bearbeiten](./mixins.md#edit), wenn das Schema solche verwendet.
 
 ## Hinzufügen von Mixins zu einem Schema {#add-mixins}
 
@@ -116,6 +116,22 @@ Um den Vorgang abzuschließen, wählen Sie **[!UICONTROL Speichern]**, um das Sc
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 Das Schema ist jetzt für die Verwendung im Echtzeit-Kundenkonto-Profil aktiviert. Wenn Platform Daten in Datasets auf der Grundlage dieses Schemas einfügt, werden diese Daten in Ihre zusammengesetzten Profil-Daten eingebunden.
+
+## Anzeigenamen für Schema-Felder {#display-names} bearbeiten
+
+Nachdem Sie einem Schema eine Klasse zugewiesen und Mixins hinzugefügt haben, können Sie die Anzeigenamen der Felder eines Schemas bearbeiten, unabhängig davon, ob diese Felder von Standard- oder benutzerdefinierten XDM-Ressourcen bereitgestellt wurden.
+
+>[!NOTE]
+>
+>Beachten Sie, dass die Anzeigenamen von Feldern, die zu Standardklassen oder Mixins gehören, nur im Kontext eines bestimmten Schemas bearbeitet werden können. Das heißt, dass eine Änderung des Anzeigenamens eines Standardfelds in einem Schema keine Auswirkungen auf andere Schema hat, die dieselbe Klasse oder dasselbe Mixin verwenden.
+
+Um den Anzeigenamen eines Schemas zu bearbeiten, wählen Sie das Feld auf der Arbeitsfläche aus. Geben Sie in der rechten Leiste unter **[!UICONTROL Anzeigename]** den neuen Namen ein.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Wählen Sie **[!UICONTROL Apply]** in der rechten Leiste und die Arbeitsfläche wird aktualisiert, um den neuen Anzeigenamen des Felds anzuzeigen. Wählen Sie **[!UICONTROL Speichern]**, um die Änderungen auf das Schema anzuwenden.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Ändern der Klasse eines Schemas {#change-class}
 
