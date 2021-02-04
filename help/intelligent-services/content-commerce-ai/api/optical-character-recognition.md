@@ -1,5 +1,5 @@
 ---
-keywords: OCR;text presence;optical character recognition
+keywords: OCR;Textpräsenz;optische Zeichenerkennung
 solution: Experience Platform, Intelligent Services
 title: Optische Zeichenerkennung
 topic: Developer guide
@@ -7,7 +7,7 @@ description: Der Dienst "Texterkennung/Optische Zeichenerkennung"(OCR) kann bei 
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '518'
 ht-degree: 4%
 
 ---
@@ -37,7 +37,7 @@ Die folgende Anforderung prüft, ob Text auf der Grundlage des in der Nutzlast b
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet [!DNL Sensei Content Framework] wird. Vergewissern Sie sich bitte, dass Sie über die erforderlichen Informationen verfügen, `analyzer_id` bevor Sie Ihre Anfrage bearbeiten. Wenden Sie sich an das AI Beta-Team von Content and Commerce, um Ihren `analyzer_id` Service zu erhalten.
+>`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Bitte überprüfen Sie, ob Sie die richtige `analyzer_id` haben, bevor Sie Ihre Anfrage machen. Wenden Sie sich an das AI Beta-Team von Content and Commerce, um Ihre `analyzer_id` für diesen Dienst zu erhalten.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -74,21 +74,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `analyzer_id` | Die [!DNL Sensei] Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Mit dieser ID wird festgelegt, welche der Variablen verwendet [!DNL Sensei Content Frameworks] werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
+| `analyzer_id` | Die [!DNL Sensei]-Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
 | `application-id` | Die ID der erstellten Anwendung. | Ja |
-| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein weitergeleitetes Bild darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem `data` Array außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können von innen aus überschrieben werden `data`. | Ja |
+| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein weitergeleitetes Bild darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem Array `data` außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können innerhalb von `data` überschrieben werden. | Ja |
 | `language` | Sprache des Eingabetexts. Der Standardwert lautet `en`. | Nein |
 | `content-type` | Wird verwendet, um anzugeben, ob die Eingabe Teil des Anforderungstextes oder einer signierten URL für einen S3-Behälter ist. Die Standardeinstellung für diese Eigenschaft ist `inline`. | Nein |
 | `encoding` | Das Dateiformat des Eingabebilds. Derzeit können nur JPEG- und PNG-Bilder verarbeitet werden. Die Standardeinstellung für diese Eigenschaft ist `jpeg`. | Nein |
-| `threshold` | Der Schwellenwert des Ergebnisses (0 bis 1), ab dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert, `0` um alle Ergebnisse zurückzugeben. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
-| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert, `0` um alle Ergebnisse zurückzugeben. Bei gleichzeitiger Verwendung `threshold`ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
+| `threshold` | Der Schwellenwert des Ergebnisses (0 bis 1), ab dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
+| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden angegebenen Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
 | `custom` | Alle benutzerdefinierten Parameter, die übergeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, um zu funktionieren. | Nein |
 | `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
 | `content` | Der Inhalt kann ein Rohbild (&quot;inline&quot;-Inhaltstyp) sein. <br> Wenn es sich bei dem Inhalt um eine Datei unter S3 handelt (Content-Typ des s3-Buckets), übergeben Sie die signierte URL. | Ja |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den Text zurück, der im `feature_value` Array erkannt wurde. Der Text wird gelesen und von links nach rechts oben zurückgegeben. Wenn also &quot;Ich liebe Adobe&quot;erkannt wurde, gibt Ihre Nutzlast &quot;Ich&quot;, &quot;Liebe&quot;und &quot;Adobe&quot;in separaten Objekten zurück. Im Objekt erhalten Sie eine `feature_name` Beschreibung, die das Wort und eine `feature_value` mit einer Konfidenzmetrik für diesen Text enthält.
+Eine erfolgreiche Antwort gibt den Text zurück, der im Array `feature_value` erkannt wurde. Der Text wird gelesen und von links nach rechts oben zurückgegeben. Wenn also &quot;Ich liebe Adobe&quot;erkannt wurde, gibt Ihre Nutzlast &quot;Ich&quot;, &quot;Liebe&quot;und &quot;Adobe&quot;in separaten Objekten zurück. Im Objekt erhalten Sie ein `feature_name`, das das Wort und ein `feature_value` enthält, das eine Konfidenzmetrik für diesen Text enthält.
 
 ```json
 {
