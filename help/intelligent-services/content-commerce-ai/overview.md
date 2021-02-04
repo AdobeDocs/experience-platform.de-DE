@@ -1,5 +1,5 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
+keywords: Experience Cloud;Erste Schritte;Inhalts- und Commerce-Hilfe;beliebte Themen;Intelligente Dienste;CCAI
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: Überblick über die Inhalts- und Commerce-API
 topic: Content and Commerce AI
@@ -7,7 +7,7 @@ description: Content and Commerce AI ist eine Reihe von AI-Diensten, mit denen S
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '419'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Inhalt ist eine wesentliche Komponente dieser Erlebnisse. Um Marketingfragen bes
 
 | Content-Typ | Funktionen | Übersicht über die Funktionen |
 | --- | --- | --- |
-| Text | - Extraktion &quot;Keyword &amp; Entity&quot; <br>- Benutzerdefinierte Classifications | - Automatisches Extrahieren von Suchbegriffen und Tags aus Enterprise-Dokumenten und Webseiten mithilfe eines sofort einsetzbaren AI-Dienstes. <br> - Automatisches Kennzeichnen von Dokumenten oder Webseiten eines Unternehmens pro Unternehmenstaxonomie mithilfe eines auf benutzerdefinierten AI-Modellen basierenden Dienstes. |
+| Text | - Keyword &amp; Entity Extraktion <br>- Benutzerdefinierte Classifications | - Automatisches Extrahieren von Suchbegriffen und Tags aus Enterprise-Dokumenten und Webseiten mithilfe eines sofort einsetzbaren AI-Dienstes. <br> - Automatisches Kennzeichnen von Dokumenten oder Webseiten eines Unternehmens pro Unternehmenstaxonomie mithilfe eines auf benutzerdefinierten AI-Modellen basierenden Dienstes. |
 | Bilder | - Visuelle Empfehlungen <br> - Extraktion | - Bieten Sie Verbrauchern visuell ähnliche Produktempfehlungen an, die auf einem AI-Modell basieren, das auf intuitiven Produktfunktionen (Design, Farbe, Form) entwickelt wurde. <br> - Extrahieren Sie exakt dominante Farben (Etiketten und Hex-Werte) und deren Gewichtung aus einem Produktbild. |
 
 ## Informationen zur Content- und Commerce-API
@@ -38,7 +38,7 @@ Die Gesamtvision der Content and Commerce AI ist in drei Schritte unterteilt, um
 
 >[!NOTE]
 >
->Für Beta, Content and Commerce AI konzentriert sich auf die Erprobung des Gründungsschritts der Reise (Schritt 1). Die Schritte 2 und 3 werden voraussichtlich in einer späteren Version dokumentiert und in der aktuellen Dokumentation nicht erweitert.
+>Bei Beta konzentriert sich die Content and Commerce AI auf das Testen des Gründungsschritts in der Journey (Schritt 1). Die Schritte 2 und 3 werden voraussichtlich in einer späteren Version dokumentiert und in der aktuellen Dokumentation nicht erweitert.
 
 **Schritt 1: Informationen zum Inhalt**
 - Extrahieren Sie intelligente Funktionen und Metadaten.
