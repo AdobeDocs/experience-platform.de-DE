@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;effective policies;access control api
+keywords: Experience Platform;Home;beliebte Themen;Effektive Richtlinien;Zugriffskontrolle API
 solution: Experience Platform
 title: Anzeigen effektiver Richtlinien
 topic: developer guide
@@ -7,15 +7,15 @@ description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie 
 translation-type: tm+mt
 source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 59%
+source-wordcount: '319'
+ht-degree: 57%
 
 ---
 
 
 # Anzeigen effektiver Richtlinien
 
-To view effective policies for the current user, make a POST request to the `/acl/effective-policies` endpoint in the [!DNL Access Control] API. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
+Um effektive Richtlinien für den aktuellen Benutzer Ansicht, stellen Sie eine POST-Anforderung an den `/acl/effective-policies`-Endpunkt in der [!DNL Access Control]-API ein. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
 
 **API-Format**
 
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **Anfrage**
 
-The following requests retrieves information about the &quot;[!UICONTROL Manage Datasets]&quot; permission and access to the &quot;[!UICONTROL schemas]&quot; resource type for the current user.
+Die folgenden Anforderungen rufen Informationen zur Berechtigung &quot;[!UICONTROL Datenbestände verwalten]&quot;und zum Zugriff auf den Ressourcentyp &quot;[!UICONTROL Schema]&quot;für den aktuellen Benutzer ab.
 
 ```shell
 curl -X POST \
@@ -66,11 +66,11 @@ Eine erfolgreiche Antwort gibt Informationen über die in der Anfrage angegebene
 
 ## Nächste Schritte
 
-This document covered how to make calls to the [!DNL Access Control] API to return information on active permissions and related policies for resource types. For more information about access control for [!DNL Experience Platform], see the [access control overview](../home.md).
+In diesem Dokument wurde beschrieben, wie Sie Aufrufe an die [!DNL Access Control]-API durchführen, um Informationen über aktive Berechtigungen und zugehörige Richtlinien für Ressourcentypen zurückzugeben. Weitere Informationen zur Zugriffskontrolle für [!DNL Experience Platform] finden Sie unter [Übersicht über die Zugriffskontrolle](../home.md).
 
 ## Anhang
 
-This section provides supplemental information for using the [!DNL Access Control] API.
+Dieser Abschnitt enthält zusätzliche Informationen zur Verwendung der API [!DNL Access Control].
 
 ### Akzeptierte Berechtigungen und Ressourcentypen
 
