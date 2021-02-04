@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
+keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Python-SDK;Datenzugriffs-API;Lesen-Python;Schreiben-Python
 solution: Experience Platform
 title: Zugriff auf Daten mit Python
 topic: tutorial
@@ -8,7 +8,7 @@ description: Das folgende Dokument enthält Beispiele für den Zugriff auf Daten
 translation-type: tm+mt
 source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '412'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # Zugriff auf Daten mit Python
 
-Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Python zur Verwendung in Data Science Workspace. Informationen zum Zugriff auf Daten mit JupyterLab-Notebooks finden Sie in der Dokumentation zum Datenzugriff auf [JupyterLab-Notebooks](../jupyterlab/access-notebook-data.md) .
+Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Python zur Verwendung in Data Science Workspace. Informationen zum Zugriff auf Daten mit JupyterLab-Notebooks finden Sie in der Dokumentation [JupyterLab-Notebook-Datenzugriff](../jupyterlab/access-notebook-data.md).
 
 ## Lesen eines Datensatzes
 
@@ -55,7 +55,7 @@ partitions = dataset.get_partitions_info()
 
 Mit der DISTINCT-Klausel können Sie alle eindeutigen Werte auf Zeilen-/Spaltenebene abrufen und alle Duplikat-Werte aus der Antwort entfernen.
 
-Ein Beispiel für die Verwendung der `distinct()` Funktion ist unten aufgeführt:
+Ein Beispiel für die Verwendung der Funktion `distinct()` ist unten aufgeführt:
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -87,9 +87,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY-Klausel
 
-Die ORDER BY-Klausel ermöglicht es, die empfangenen Ergebnisse in einer bestimmten Reihenfolge (aufsteigend oder absteigend) nach einer bestimmten Spalte zu sortieren. Dies geschieht mithilfe der `sort()` Funktion.
+Die ORDER BY-Klausel ermöglicht es, die empfangenen Ergebnisse in einer bestimmten Reihenfolge (aufsteigend oder absteigend) nach einer bestimmten Spalte zu sortieren. Dies geschieht mit der Funktion `sort()`.
 
-Ein Beispiel für die Verwendung der `sort()` Funktion ist unten aufgeführt:
+Ein Beispiel für die Verwendung der Funktion `sort()` ist unten aufgeführt:
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -99,7 +99,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 Die LIMIT-Klausel ermöglicht es Ihnen, die Anzahl der vom Datensatz erhaltenen Datensätze zu begrenzen.
 
-Ein Beispiel für die Verwendung der `limit()` Funktion ist unten aufgeführt:
+Ein Beispiel für die Verwendung der Funktion `limit()` ist unten aufgeführt:
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -109,7 +109,7 @@ df = dataset_reader.limit(100).read()
 
 Mit der OFFSET-Klausel können Sie Zeilen von Anfang an überspringen, bis der Beginn Zeilen von einem späteren Zeitpunkt zurückgibt. In Verbindung mit LIMIT kann dies zur Iteration von Zeilen in Blöcken verwendet werden.
 
-Ein Beispiel für die Verwendung der `offset()` Funktion ist unten aufgeführt:
+Ein Beispiel für die Verwendung der Funktion `offset()` ist unten aufgeführt:
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -138,7 +138,7 @@ Bei längeren Aufträgen müssen Sie eventuell Zwischenschritte speichern. In so
 
 >[!NOTE]
 >
->Pfade zu den Daten werden **nicht** gespeichert. Sie müssen den entsprechenden Pfad zu den entsprechenden Daten speichern.
+>Die Pfade zu den Daten werden nicht **gespeichert.** Sie müssen den entsprechenden Pfad zu den entsprechenden Daten speichern.
 
 ### In den Benutzerbereich schreiben
 
@@ -160,4 +160,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Nächste Schritte
 
-Adobe Experience Platform Data Science Workspace bietet ein Rezept, in dem die oben genannten Codebeispiele zum Lesen und Schreiben von Daten verwendet werden. Wenn Sie mehr über die Verwendung von Python für den Zugriff auf Ihre Daten erfahren möchten, lesen Sie bitte das [Data Science Workspace Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Adobe Experience Platform Data Science Workspace bietet ein Rezept, in dem die oben genannten Codebeispiele zum Lesen und Schreiben von Daten verwendet werden. Wenn Sie mehr darüber erfahren möchten, wie Sie Python für den Zugriff auf Ihre Daten verwenden, lesen Sie bitte das [Data Science Workspace Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
