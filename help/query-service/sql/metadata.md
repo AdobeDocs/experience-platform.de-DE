@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
+keywords: Experience Platform;Home;beliebte Themen;PSQL;psql;Abfrage-Dienst;Abfrage-Dienst;Metadaten;Befehle;Metadaten-Befehle
 solution: Experience Platform
 title: Metadaten, Befehle
 topic: metadata
@@ -7,7 +7,7 @@ description: Eine Liste von PSQL-Befehlen, die derzeit zum Abfragen von Metadate
 translation-type: tm+mt
 source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Für Metadaten in Ihrem Datensatz werden derzeit die folgenden PSQL-Befehle zum 
 | `\showtables` | Zeigt die folgenden Informationen an: <br>name: Der Name, unter dem auf die Tabelle verwiesen wird.<br>datasetId: Die ID des gespeicherten Datensatzes.<br>Datensatz: Der Name des gespeicherten Datensatzes.<br>description: Eine Beschreibung des Datensatzes.<br>gelöst: Ein boolescher Wert, der angibt, ob der Datensatz in der aktuellen Sitzung aufgelöst wird. |
 | `\timing` | Schaltet die Anzeige zwischen ein und aus um. Die Anzeige erfolgt in Millisekunden. Zeiträume von mehr als einer Sekunde werden im Format Minuten:Sekunden angezeigt, wobei bei Bedarf Stunden- und Tagesfelder hinzugefügt werden. |
 
-Alle Befehle, mit denen Beginn kombiniert werden `\d` kann. Beispielsweise können Sie eine Liste aller Tabellen, Sequenzen und Schema anzeigen `\dtsn` lassen. `\d` zeigt alle sichtbaren Tabellen, Ansichten, materialisierten Ansichten und Sequenzen an.
+Alle Befehle, die mit `\d` Beginn werden, können kombiniert werden. Beispielsweise können Sie `\dtsn` ausgeben, um eine Liste aller Tabellen, Sequenzen und Schema anzuzeigen. `\d` zeigt alle sichtbaren Tabellen, Ansichten, materialisierten Ansichten und Sequenzen an.
 
-Weitere Informationen zu den oben aufgeführten Befehlen finden Sie in der Dokumentation unter [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Beachten Sie jedoch, dass nicht alle in der PostgreSQL-Dokumentation angezeigten Optionen von unterstützt werden [!DNL Experience Platform].
+Weitere Informationen zu den oben aufgeführten Befehlen finden Sie in der Dokumentation unter [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Beachten Sie jedoch, dass nicht alle in der PostgreSQL-Dokumentation angezeigten Optionen von [!DNL Experience Platform] unterstützt werden.
 
