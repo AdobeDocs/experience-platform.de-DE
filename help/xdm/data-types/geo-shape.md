@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;geo shape;datatype;data-type;data type;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Geo;Geo-Form;Datentyp;Datentyp;Datentyp;
 solution: Experience Platform
 title: Geo-Form-Datentyp
 topic: overview
@@ -7,15 +7,15 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für
 translation-type: tm+mt
 source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 39%
+source-wordcount: '250'
+ht-degree: 36%
 
 ---
 
 
-# [!UICONTROL Geo-Form] -Datentyp
+# [!UICONTROL Geo ] Shapedata-Typ
 
-[!UICONTROL Geo-Form] ist ein standardmäßiger XDM-Datentyp, der die Form eines geografischen Gebiets beschreibt. Dieser Datentyp basiert auf der in [Schema.org](https://schema.org/GeoShape)dokumentierten öffentlichen Spezifikation.
+[!UICONTROL Geo ] Shapeis ist ein standardmäßiger XDM-Datentyp, der die Form eines geografischen Gebiets beschreibt. Dieser Datentyp basiert auf der in [Schema.org](https://schema.org/GeoShape) dokumentierten öffentlichen Spezifikation.
 
 <img src="../images/data-types/geo-shape.png" width="500" /><br />
 
@@ -27,4 +27,4 @@ ht-degree: 39%
 | `_schema.description` | Zeichenfolge | Eine Beschreibung, was die Form definiert. |
 | `_schema.elevation` | Double | Die spezifische oder minimale Höhe der Form. Dieser Wert entspricht dem [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/)-Datum und wird in Metern gemessen. In Kombination mit `ceiling` kann mit dieser Eigenschaft ein dreidimensionaler Begrenzungsrahmen für eine Position angegeben werden. |
 | `_id` | Zeichenfolge | Ein eindeutiger, systemgenerierter Bezeichner für die Form. |
-| `ceiling` | Double | Die maximale Höhe der Form. Diese Eigenschaft ist nur gültig, wenn sie in Verbindung mit `elevation`verwendet wird. The value conforms to the [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/) datum and is measured in meters. In Kombination mit `elevation` kann mit dieser Eigenschaft ein dreidimensionaler Begrenzungsrahmen für eine Position angegeben werden. |
+| `ceiling` | Dublette | Die maximale Höhe der Form. Diese Eigenschaft ist nur gültig, wenn sie in Kombination mit `elevation` verwendet wird. Der Wert entspricht dem [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/)-Datum und wird in Metern gemessen. In Kombination mit `elevation` kann mit dieser Eigenschaft ein dreidimensionaler Begrenzungsrahmen für eine Position angegeben werden. |
