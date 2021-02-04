@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
+keywords: Experience Platform;Home;Intelligente Dienste;beliebte Themen;Intelligenter Dienst;Intelligente Dienste
 solution: Experience Platform, Intelligent Services
 title: Intelligent Services – Übersicht
 topic: Intelligent Services overview
@@ -7,15 +7,15 @@ description: Mit Intelligent Services können Marketing-Analysten und -Experten 
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 76%
+source-wordcount: '502'
+ht-degree: 74%
 
 ---
 
 
 # Intelligent Services – Übersicht
 
-Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich ist. Additionally, marketing practitioners can activate predictions in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], and 3rd party applications.
+Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketingfachleute Prognosen in Anwendungen von [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] und Drittanbietern aktivieren.
 
 Das folgende Video unterstützt Sie dabei, Intelligente Dienste besser zu verstehen. In diesem Video, das Beispielfälle für geschäftliche Nutzung enthält, wird ein Workflow auf hoher Ebene erläutert und die Funktionen von Attribution AI und Customer AI erläutert.
 
@@ -23,7 +23,7 @@ Das folgende Video unterstützt Sie dabei, Intelligente Dienste besser zu verste
 
 ## Vorteile von Intelligent Services
 
-Intelligent Services, built on [!DNL Adobe Experience Platform], gives marketers responsible for customer experience access to AI-as-a-service, making it easy for anyone to predict customer behavior, measure the impact of a campaign, or ensure better return on every investment. Nachstehend sind einige der Vorteile aufgeführt, die Intelligent Services bietet.
+Intelligente Dienste, die auf [!DNL Adobe Experience Platform] basieren, bieten Marketingexperten, die für die Kundenerfahrung verantwortlich sind, Zugriff auf AI-as-a-Service, sodass jeder das Kundenverhalten vorhersagen, die Auswirkungen einer Kampagne messen oder eine bessere Rendite für jede Investition sicherstellen kann. Nachstehend sind einige der Vorteile aufgeführt, die Intelligent Services bietet.
 
 ### Kosteneffiziente Markteinführung
 
@@ -41,7 +41,7 @@ Ermöglichen Sie Marketing-Experten, sofort mit KI/ML zu beginnen und die Market
 
 ### Erfassen
 
-Customer data is ingested and transformed with the Experience Data Model (XDM) on [!DNL Adobe Experience Platform]. Weitere Informationen zu XDM finden Sie in [XDM – Übersicht](../xdm/home.md).
+Kundendaten werden mit dem Experience Data Model (XDM) auf [!DNL Adobe Experience Platform] erfasst und transformiert. Weitere Informationen zu XDM finden Sie in [XDM – Übersicht](../xdm/home.md).
 
 ### Konfigurieren
 
@@ -53,7 +53,7 @@ Nachdem die Modelle Training und Bewertung abgeschlossen haben, werden die Ergeb
 
 ### Handeln
 
-Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the [!DNL Adobe Experience Cloud], and building custom dashboards.
+Schließlich können Sie festlegen, welche Aktionen mit den Prognosen ausgeführt werden sollen, z. B. Einblicke verbrauchen, Anwendungen über das [!DNL Adobe Experience Cloud] aktivieren und benutzerdefinierte Dashboard erstellen.
 
 ## Nächste Schritte
 
