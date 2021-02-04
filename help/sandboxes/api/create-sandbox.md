@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Sandbox;sandbox
+keywords: Experience Platform;Home;beliebte Themen;Sandbox;Sandbox
 solution: Experience Platform
 title: Sandbox erstellen
 topic: developer guide
@@ -7,8 +7,8 @@ description: Sie können eine neue Sandbox erstellen, indem Sie eine POST an den
 translation-type: tm+mt
 source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 90%
+source-wordcount: '158'
+ht-degree: 86%
 
 ---
 
