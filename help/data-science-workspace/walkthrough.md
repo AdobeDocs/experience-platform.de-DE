@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
+keywords: Experience Platform;exemplarische Vorgehensweise;Data Science Workspace;beliebte Themen
 solution: Experience Platform
 title: Anleitung für Data Science Workspace
 topic: Walkthrough
@@ -7,7 +7,7 @@ description: Dieses Dokument bietet eine schrittweise Anleitung für Adobe Exper
 translation-type: tm+mt
 source-git-commit: 0d76b14599bc6b6089f9c760ef6a6be3a19243d4
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1716'
 ht-degree: 33%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 33%
 
 # [!DNL Data Science Workspace] exemplarische Vorgehensweise
 
-This document provides a walkthrough for Adobe Experience Platform [!DNL Data Science Workspace]. In diesem Lernprogramm wird ein allgemeiner Arbeitsablauf für Datenwissenschaftler vorgestellt, in dem erläutert wird, wie sie mit maschinellem Lernen auf ein Problem zugehen und es lösen können.
+Dieses Dokument bietet eine exemplarische Vorgehensweise für Adobe Experience Platform [!DNL Data Science Workspace]. In diesem Lernprogramm wird ein allgemeiner Arbeitsablauf für Datenwissenschaftler vorgestellt, in dem erläutert wird, wie sie mit maschinellem Lernen auf ein Problem zugehen und es lösen können.
 
 ## Voraussetzungen
 
 - Ein registriertes Adobe ID-Konto
-   - The Adobe ID account must have been added to an Organization with access to Adobe Experience Platform and [!DNL Data Science Workspace].
+   - Das Adobe ID-Konto muss einer Organisation mit Zugriff auf Adobe Experience Platform und [!DNL Data Science Workspace] hinzugefügt worden sein.
 
 ## Einzelhandelsanwendungsfall
 
@@ -30,7 +30,7 @@ Einem Einzelhändler hat Probleme damit, auf dem aktuellen Markt wettbewerbsfäh
 
 Die Lösung eines Datenwissenschaftlers besteht darin, die Fülle historischer Informationen eines Einzelhändlers zu nutzen, zukünftige Trends vorherzusagen und Preisentscheidungen zu optimieren. In dieser exemplarischen Vorgehensweise werden bisherige Verkaufsdaten verwendet, um ein Modell für maschinelles Lernen zu schulen und anhand des Modells künftige Verkaufstrends vorherzusagen. Damit können Sie Einblicke generieren, um optimale Preisänderungen vorzunehmen.
 
-Diese Übersicht spiegelt die Schritte wider, die ein Datenwissenschaftler ausführen würde, um einen Datensatz zu erstellen und ein Modell zur Vorhersage der wöchentlichen Verkäufe zu erstellen. Dieses Tutorial behandelt die folgenden Abschnitte im Beispiel für Einzelhandelsverkäufe auf Adobe Experience Platform [!DNL Data Science Workspace]:
+Diese Übersicht spiegelt die Schritte wider, die ein Datenwissenschaftler ausführen würde, um einen Datensatz zu erstellen und ein Modell zur Vorhersage der wöchentlichen Verkäufe zu erstellen. Dieses Tutorial behandelt die folgenden Abschnitte im Beispiel-Einzelhandelsverkaufsbericht unter Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Einrichten](#setup)
 - [Erkunden von Daten](#exploring-data)
@@ -39,13 +39,13 @@ Diese Übersicht spiegelt die Schritte wider, die ein Datenwissenschaftler ausf�
 
 ### Notebooks in [!DNL Data Science Workspace]
 
-Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche auf der Registerkarte &quot; **[!UICONTROL Datenwissenschaften]** &quot;die Option &quot; **[!UICONTROL Notebooks]** &quot;aus, um zur Übersichtsseite &quot; [!UICONTROL Notebooks] &quot;zu gelangen. Wählen Sie auf dieser Seite die [!DNL JupyterLab] Registerkarte aus, um Ihre [!DNL JupyterLab] Umgebung zu starten. Die standardmäßige Landingpage für [!DNL JupyterLab] ist der **[!UICONTROL Starter]**.
+Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche unter der Registerkarte **[!UICONTROL Datenwissenschaft]** die Option **[!UICONTROL Notebooks]**, um zur Übersichtsseite [!UICONTROL Notebooks] zu gelangen. Wählen Sie auf dieser Seite die Registerkarte [!DNL JupyterLab], um Ihre [!DNL JupyterLab]-Umgebung zu starten. Die standardmäßige Landingpage für [!DNL JupyterLab] ist **[!UICONTROL Launcher]**.
 
 ![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-Dieses Lernprogramm verwendet [!DNL Python] 3 in, [!DNL JupyterLab Notebooks] um zu zeigen, wie Sie auf die Daten zugreifen und diese untersuchen. Auf der Starter-Seite stehen Ihnen Beispiel-Notebooks zur Verfügung. In den unten stehenden Beispielen wird das Beispielheft **[!UICONTROL für den Einzelhandel]** verwendet.
+Dieses Lernprogramm verwendet [!DNL Python] 3 in [!DNL JupyterLab Notebooks], um zu zeigen, wie Sie auf die Daten zugreifen und sie untersuchen können. Auf der Starter-Seite stehen Ihnen Beispiel-Notebooks zur Verfügung. Das Beispiel-Notebook **[!UICONTROL Einzelhandel]** wird in den unten stehenden Beispielen verwendet.
 
 ### Einrichten {#setup}
 
@@ -62,21 +62,21 @@ Wenn das Notebook für den Einzelhandel geöffnet ist, sollten Sie als Erstes di
 
 #### Laden von Daten
 
-Nachdem die Bibliotheken geladen wurden, können Sie den Beginn mit der Anzeige der Daten aufrufen. The following [!DNL Python] code uses pandas&#39; `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the pandas DataFrame:
+Nachdem die Bibliotheken geladen wurden, können Sie den Beginn mit der Anzeige der Daten aufrufen. Der folgende [!DNL Python]-Code verwendet pandas&#39; `DataFrame`-Datenstruktur und die [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)-Funktion, um die auf [!DNL Github] gehostete CSV-Datei in das Pandas DataFrame zu lesen:
 
 ![](./images/walkthrough/read_csv.png)
 
-Die DataFrame-Datenstruktur von pandas ist eine zweidimensionale beschriftete Datenstruktur. To quickly see the dimensions of your data, you can use `df.shape`. Dadurch wird ein Tupel zurückgegeben, das die Dimensionalität des DataFrame darstellt:
+Die DataFrame-Datenstruktur von pandas ist eine zweidimensionale beschriftete Datenstruktur. Um die Dimensionen Ihrer Daten schnell anzuzeigen, können Sie `df.shape` verwenden. Dadurch wird ein Tupel zurückgegeben, das die Dimensionalität des DataFrame darstellt:
 
 ![](./images/walkthrough/df_shape.png)
 
-Schließlich können Sie Vorschauen darüber vornehmen, wie Ihre Daten aussehen. You can use `df.head(n)` to view the first `n` rows of the DataFrame:
+Schließlich können Sie Vorschauen darüber vornehmen, wie Ihre Daten aussehen. Sie können `df.head(n)` verwenden, um die ersten `n` Zeilen des DataFrame Ansicht:
 
 ![](./images/walkthrough/df_head.png)
 
 #### Statistische Zusammenfassung
 
-We can leverage [!DNL Python's] pandas library to get the data type of each attribute. Die Ausgabe des folgenden Aufrufs liefert uns Informationen über die Anzahl der Einträge und den Datentyp für die einzelnen Spalten:
+Wir können die Pandas-Bibliothek [!DNL Python's] nutzen, um den Datentyp der einzelnen Attribute abzurufen. Die Ausgabe des folgenden Aufrufs liefert uns Informationen über die Anzahl der Einträge und den Datentyp für die einzelnen Spalten:
 
 ```PYTHON
 df.info()
@@ -96,7 +96,7 @@ df.describe()
 
 Damit können Sie sehen, dass für jedes Merkmal 6435 Instanzen vorhanden sind. Darüber hinaus werden statistische Daten wie Mittelwert, Standardabweichung (std), Minimum, Maximum und Interquartile angegeben. So erfahren wir mehr über die Abweichung der Daten. Im nächsten Abschnitt werden Sie über Visualisierung gehen, die mit diesen Informationen zusammenarbeitet, um uns ein vollständiges Verständnis Ihrer Daten zu geben.
 
-Looking at the minimum and maximum values for `store`, you can see that there are 45 unique stores the data represents. Es gibt auch `storeTypes`, die unterscheiden, was ein Geschäft ist. you can see the distribution of `storeTypes` by doing the following:
+Wenn Sie sich die Mindest- und Höchstwerte für `store` ansehen, können Sie sehen, dass es 45 einzigartige Speicher gibt, die die Daten repräsentieren. Es gibt auch `storeTypes`, die unterscheiden, was ein Geschäft ist. Sie können die Verteilung von `storeTypes` sehen, indem Sie folgende Schritte ausführen:
 
 ![](./images/walkthrough/df_groupby.png)
 
@@ -143,7 +143,7 @@ In diesem Abschnitt wird die Funktionstechnik verwendet, um Änderungen an Ihrem
 
 #### Wochen- und Jahresspalten hinzufügen
 
-The current format for date (`2010-02-05`) can make it hard to differentiate that the data is for every week. Aus diesem Grund sollten Sie das Datum in Woche und Jahr konvertieren.
+Das aktuelle Datumsformat (`2010-02-05`) kann die Unterscheidung zwischen den Daten für jede Woche erschweren. Aus diesem Grund sollten Sie das Datum in Woche und Jahr konvertieren.
 
 ![](./images/walkthrough/date_to_week_year.png)
 
@@ -153,11 +153,11 @@ Nun sehen die Woche und das Datum wie folgt aus:
 
 #### storeType in Indikatorvariable konvertieren
 
-Next, you want to convert the storeType column to columns representing each `storeType`. There are 3 store types, (`A`, `B`, `C`), from which you are creating 3 new columns. The value set in each is a boolean value where a &#39;1&#39; is set depending on what the `storeType` was and `0` for the other 2 columns.
+Als Nächstes konvertieren Sie die Spalte storeType in Spalten, die jeweils `storeType` repräsentieren. Es gibt 3 Store-Typen (`A`, `B`, `C`), aus denen Sie 3 neue Spalten erstellen. Der in jedem dieser Spalten eingestellte Wert ist ein boolescher Wert, bei dem je nachdem, was das `storeType` war, und `0` für die anderen 2 Spalten ein &#39;1&#39; eingestellt wird.
 
 ![](./images/walkthrough/storeType.png)
 
-Die aktuelle `storeType` Spalte wird abgelegt.
+Die aktuelle Spalte `storeType` wird abgelegt.
 
 #### isHoliday in numerischen Typ konvertieren
 
@@ -167,11 +167,11 @@ Die nächste Änderung besteht darin, den booleschen `isHoliday`-Wert in eine nu
 
 #### weeklySales der nächsten Woche vorhersagen
 
-Jetzt möchten Sie jedem Datensatz vorherigen und zukünftigen wöchentlichen Verkauf hinzufügen. Sie können dies tun, indem Sie Ihre `weeklySales`. Zusätzlich wird die `weeklySales` Differenz berechnet. Dazu wird `weeklySales` von `weeklySales` der Vorwoche abgezogen.
+Jetzt möchten Sie jedem Datensatz vorherigen und zukünftigen wöchentlichen Verkauf hinzufügen. Sie können dies tun, indem Sie Ihre `weeklySales` vergleichen. Zusätzlich wird die `weeklySales` Differenz berechnet. Dazu wird `weeklySales` von `weeklySales` der Vorwoche abgezogen.
 
 ![](./images/walkthrough/weekly_past_future.png)
 
-Since you are offsetting the `weeklySales` data 45 datasets forwards and 45 datasets backwards to create new columns, the first and last 45 data points have NaN values. You can remove these points from your dataset by using the `df.dropna()` function which removes all rows that have NaN values.
+Da Sie die `weeklySales`-Daten mit 45 Datensätzen nach vorne und 45 Datensätzen nach hinten verschieben, um neue Spalten zu erstellen, haben die ersten und letzten 45 Datenpunkte NaN-Werte. Sie können diese Punkte aus Ihrem Datensatz entfernen, indem Sie die Funktion `df.dropna()` verwenden, mit der alle Zeilen mit NaN-Werten entfernt werden.
 
 ![](./images/walkthrough/dropna.png)
 
@@ -191,19 +191,19 @@ Nun ist es an der Zeit, verschiedene Datenmodelle zu erstellen und zu entscheide
 
 #### Datensatz in Untergruppen für Training und Tests aufteilen
 
-Sie müssen wissen, wie genau Ihr Modell Werte vorhersagen kann. Diese Bewertung kann durchgeführt werden, indem ein Teil des Datensatzes als Validierungs- und der Rest als Trainings-Daten zugewiesen wird. Since `weeklySalesAhead` is the actual future values of `weeklySales`, you can use this to evaluate how accurate the model is at predicting the value. Die Aufteilung sehen Sie im Folgenden:
+Sie müssen wissen, wie genau Ihr Modell Werte vorhersagen kann. Diese Bewertung kann durchgeführt werden, indem ein Teil des Datensatzes als Validierungs- und der Rest als Trainings-Daten zugewiesen wird. Da `weeklySalesAhead` die tatsächlichen zukünftigen Werte von `weeklySales` sind, können Sie dies verwenden, um zu bewerten, wie genau das Modell bei der Vorhersage des Werts ist. Die Aufteilung sehen Sie im Folgenden:
 
 ![](./images/walkthrough/split_data.png)
 
-You now have `X_train` and `y_train` for preparing the models and `X_test` and `y_test` for evaluation later.
+Sie haben jetzt `X_train` und `y_train` zum Vorbereiten der Modelle und `X_test` und `y_test` zum Testen später.
 
 #### Stichprobenalgorithmen
 
-In this section, you declare all the algorithms into an array called `model`. Next, you iterate through this array and for each algorithm, input your training data with `model.fit()` which creates a model `mdl`. Mit diesem Modell können Sie `weeklySalesAhead` mit Ihren `X_test` Daten vorhersagen.
+In diesem Abschnitt deklarieren Sie alle Algorithmen in einem Array mit dem Namen `model`. Als Nächstes durchlaufen Sie dieses Array und geben für jeden Algorithmus Ihre Schulungsdaten mit `model.fit()` ein, wodurch ein Modell `mdl` erstellt wird. Mit diesem Modell können Sie `weeklySalesAhead` mit Ihren `X_test`-Daten vorhersagen.
 
 ![](./images/walkthrough/training_scoring.png)
 
-For the scoring, you are taking the mean percentage difference between the predicted `weeklySalesAhead` with the actual values in the `y_test` data. Da Sie den Unterschied zwischen Ihrer Prognose und dem tatsächlichen Ergebnis minimieren möchten, ist der Regressor für die Verlaufsverstärkung das leistungsstärkste Modell.
+Für die Bewertung nehmen Sie die mittlere prozentuale Differenz zwischen den prognostizierten `weeklySalesAhead` und den tatsächlichen Werten in den `y_test`-Daten. Da Sie den Unterschied zwischen Ihrer Prognose und dem tatsächlichen Ergebnis minimieren möchten, ist der Regressor für die Verlaufsverstärkung das leistungsstärkste Modell.
 
 #### Prognosen visualisieren
 
@@ -220,4 +220,4 @@ In diesem Dokument wurde ein allgemeiner Arbeitsablauf für Datenwissenschaftler
 - Als Nächstes wird die Funktionstechnik verwendet, um Änderungen an Ihrem Retail-Datensatz vorzunehmen.
 - Erstellen Sie schließlich Modelle der Daten und wählen Sie das Modell aus, das die beste Leistung für die Vorhersage künftiger Verkäufe bietet.
 
-Sobald Sie bereit sind, erhalten Sie im [JupyterLab Benutzerhandbuch](./jupyterlab/overview.md) einen schnellen Überblick über Notebooks in Adobe Experience Platform Data Science Workspace. Außerdem, wenn Sie interessiert sind, über Modelle und Rezepte zu lernen, Beginn durch Lesen der [Einzelhandel Schema und Dataset](./models-recipes/create-retails-sales-dataset.md) Tutorial. Dieses Lernprogramm bereitet Sie auf nachfolgende Data Science Workspace-Tutorials vor, die Sie auf der [Seite](../tutorials/data-science-workspace.md)&quot;Data Science Workspace-Tutorials&quot;ansehen können.
+Sobald Sie bereit sind, erhalten Sie im Benutzerhandbuch [JupyterLab](./jupyterlab/overview.md) einen schnellen Überblick über Notebooks in Adobe Experience Platform Data Science Workspace. Wenn Sie mehr über Modelle und Rezepte erfahren möchten, lesen Sie dazu das Tutorial [Schema für den Einzelhandel und Dataset](./models-recipes/create-retails-sales-dataset.md) in Beginn. Dieses Lernprogramm bereitet Sie auf nachfolgende Data Science Workspace-Tutorials vor, die im Data Science Workspace [Tutorials-Seite](../tutorials/data-science-workspace.md) angezeigt werden können.
