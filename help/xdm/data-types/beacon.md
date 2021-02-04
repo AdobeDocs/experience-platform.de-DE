@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Beacon;Interaktionsdetails;Datentyp;Datentyp;Datentyp;
 solution: Experience Platform
 title: Beacon-Datentyp
 topic: overview
@@ -7,23 +7,23 @@ description: Dieses Dokument bietet einen Überblick über die XDM Individual Pr
 translation-type: tm+mt
 source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '248'
 ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL Beacon] -Datentyp
+#  Beacondata-Typ
 
-[!UICONTROL Beacon] ist ein standardmäßiger XDM-Datentyp, der das Wireless-Gerät beschreibt, das Identitätsinformationen an mobile Anwendungen weitergibt, wenn mobile Geräte in Reichweite kommen.
+ Beaconis ist ein standardmäßiger XDM-Datentyp, der das Wireless-Gerät beschreibt, das Identitätsinformationen an mobile Anwendungen weitergibt, wenn mobile Geräte in Reichweite kommen.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `beaconMajor` | Double | Hauptwerte identifizieren und unterscheiden eine Gruppe und vorzeichenlose Ganzzahlwerte zwischen 1 und 65.535. |
-| `beaconMinor` | Double | Geringfügige Werte identifizieren und unterscheiden eine einzelne und vorzeichenlose Ganzzahl zwischen 1 und 65.535. |
-| `proximity` | Zeichenfolge | Geschätzte Entfernung vom Beacon. Zulässige Werte und Definitionen finden Sie im [Anhang](#proximity) . |
+| `beaconMinor` | Dublette | Geringfügige Werte identifizieren und unterscheiden eine einzelne und vorzeichenlose Ganzzahl zwischen 1 und 65.535. |
+| `proximity` | Zeichenfolge | Geschätzte Entfernung vom Beacon. Akzeptierte Werte und Definitionen finden Sie im Anhang [a1/>.](#proximity) |
 | `proximityUUID` | Zeichenfolge | Eine UUID für die Nähe (Universally Unique Identifier) ist ein spezieller Identifizierungstyp, mit dem Beacons in Ihrem Netzwerk von allen anderen Beacons in Netzwerken außerhalb Ihrer Kontrolle unterschieden werden. Die UUID für die Nähe wird zu einem Beacon konfiguriert, der auf Mobilgeräte im Bereich der Identifizierung der Beacons eines Unternehmens übertragen wird. |
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
@@ -33,11 +33,11 @@ Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
 ## Anhang
 
-Der folgende Abschnitt enthält weitere Informationen zum [!UICONTROL Beacon] -Datentyp.
+Der folgende Abschnitt enthält weitere Informationen zum Datentyp [!UICONTROL Beacon].
 
-## Akzeptierte Werte für die Nähe {#proximity}
+## Akzeptierte Werte für Nähe {#proximity}
 
-In der folgenden Tabelle sind die zulässigen Werte für `proximity` und die damit verbundene Bedeutung aufgeführt:
+In der folgenden Tabelle sind die für `proximity` zulässigen Werte und die damit verbundenen Bedeutungen aufgeführt:
 
 | Wert | Beschreibung |
 | --- | --- |
