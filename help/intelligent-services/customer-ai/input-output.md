@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform;Erste Schritte;Kundenhilfe;beliebte Themen;Kundenai-Eingabe;Kundenai-Ausgabe
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Eingabe und Ausgabe von Kunden-AI
 topic: Getting started
@@ -7,8 +7,8 @@ description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedate
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 34%
+source-wordcount: '838'
+ht-degree: 33%
 
 ---
 
@@ -19,7 +19,7 @@ Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten erläutert,
 
 ## Daten zur Kundenaktieneingabe
 
-Die Kundentelefonie verwendet Consumer Experience Ereignis-Daten, um Tendenzwerte zu berechnen. Weitere Informationen zu Consumer Experience Ereignis finden Sie in der Dokumentation [](../data-preparation.md)Vorbereiten von Daten für die Verwendung in Intelligent Services.
+Die Kundentelefonie verwendet Consumer Experience Ereignis-Daten, um Tendenzwerte zu berechnen. Weitere Informationen zu Consumer Experience Ereignis finden Sie unter [Daten für die Verwendung in der Dokumentation zu Intelligent Services vorbereiten](../data-preparation.md).
 
 ### Historische Daten
 
@@ -68,4 +68,4 @@ Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe 
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie Ihre Daten vorbereitet haben und über alle Anmeldeinformationen und Schema verfügen, befolgen Sie den Beginn im Handbuch &quot; [Eine Kundeninstanz](./user-guide/configure.md) konfigurieren&quot;. Dieser Leitfaden führt Sie durch das Erstellen einer Instanz für die Kundenunterstützung.
+Nachdem Sie Ihre Daten vorbereitet haben und alle Ihre Anmeldedaten und Schema vorhanden sind, führen Sie Beginn unter [Eine Kundeninstanz konfigurieren](./user-guide/configure.md) aus. Dieser Leitfaden führt Sie durch das Erstellen einer Instanz für die Kundenunterstützung.
