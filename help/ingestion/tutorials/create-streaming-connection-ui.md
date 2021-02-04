@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;ui guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform;Home;beliebte Themen;Streaming-Verbindung;Streaming-Verbindung erstellen;UI-Handbuch;Tutorial;Erstellen einer Streaming-Verbindung;Streaming-Verbindung;Erfassung;
 solution: Experience Platform
 title: Aufbauen einer Streaming-Verbindung über die Benutzeroberfläche
 topic: tutorial
@@ -8,8 +8,8 @@ description: Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erste
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 74%
+source-wordcount: '532'
+ht-degree: 71%
 
 ---
 
@@ -20,15 +20,15 @@ Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer St
 
 ## Erste Schritte
 
-In order to start streaming data to [!DNL Experience Platform], you must first create a streaming HTTP connection. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und festlegen, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen.
+Um Streaming-Daten auf [!DNL Experience Platform] Beginn, müssen Sie zunächst eine Streaming-HTTP-Verbindung erstellen. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und festlegen, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen.
 
-After registering a streaming connection you will have a unique URL which can be used to stream data to [!DNL Platform].
+Nach der Registrierung einer Streaming-Verbindung haben Sie eine eindeutige URL, mit der Daten an [!DNL Platform] gestreamt werden können.
 
-Beachten Sie, dass Sie zum Ausführen dieser Anleitung Zugriff auf Adobe Experience Platform benötigen. If you do not have access to [!DNL Platform], please contact your system administrator before proceeding.
+Beachten Sie, dass Sie zum Ausführen dieser Anleitung Zugriff auf Adobe Experience Platform benötigen. Wenn Sie keinen Zugriff auf [!DNL Platform] haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
 ## Aufbauen einer Streaming-Verbindung
 
-After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the **[!UICONTROL Catalog]** tab. Auf dieser Seite werden die verfügbaren Quelltypen als einzelne Karten angezeigt. Jede Karte enthält dabei eine Blase, die die Anzahl der Datenflüsse anzeigt, die über Streaming-Verbindungen zu Datensätzen erstellt wurden.
+Klicken Sie nach dem Anmelden bei der [!DNL Experience Platform]-Benutzeroberfläche auf **[!UICONTROL Quellen]**, um die Registerkarte **[!UICONTROL Katalog]** zu öffnen. Auf dieser Seite werden die verfügbaren Quelltypen als einzelne Karten angezeigt. Jede Karte enthält dabei eine Blase, die die Anzahl der Datenflüsse anzeigt, die über Streaming-Verbindungen zu Datensätzen erstellt wurden.
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
@@ -40,7 +40,7 @@ Der Bildschirm **[!UICONTROL Mit HTTP verbinden]** wird angezeigt. Geben Sie unt
 
 Wählen Sie unter **[!UICONTROL Kontoauthentifizierung]** die folgenden Konfigurationseigenschaften für Ihre Streaming-Verbindung aus:
 
-- **[!UICONTROL Authentifizierung]:** Gibt an, ob die Streaming-Verbindung authentifiziert werden muss. Authentifizierung stellt sicher, dass Daten aus vertrauenswürdigen Quellen erfasst werden. Es wird empfohlen, diese Option zu aktivieren, wenn Sie mit personenbezogenen Daten arbeiten.
+- **[!UICONTROL Authentifizierung]:** Hierfür ist eine Authentifizierung für die Streaming-Verbindung erforderlich. Authentifizierung stellt sicher, dass Daten aus vertrauenswürdigen Quellen erfasst werden. Es wird empfohlen, diese Option zu aktivieren, wenn Sie mit personenbezogenen Daten arbeiten.
 - **[!UICONTROL XDM-Schema-Kompatibilität]:** Ob diese Streaming-Verbindung Ereignis sendet, die mit XDM-Schemas kompatibel sind. Standardmäßig ist diese Eigenschaft **aktiviert**.
 
 Nachdem Sie die Konfigurationseigenschaften ausgewählt haben, klicken Sie auf **[!UICONTROL Verbinden]**. Ihre Streaming-HTTP-Verbindung wird erstellt und kann jetzt auf dem Tab **[!UICONTROL Durchsuchen]** im Arbeitsbereich **[!UICONTROL Quellen]** angezeigt werden.
@@ -79,4 +79,4 @@ Nachdem Sie auf **[!UICONTROL Weiter]** geklickt haben, können Sie die Details 
 
 ## Nächste Schritte
 
-By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to access a variety of [!DNL Data Ingestion] APIs. Anweisungen zum Erstellen einer Streaming-Verbindung in der API finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
+In diesem Lernprogramm haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie den Streaming-Endpunkt verwenden können, um auf eine Vielzahl von [!DNL Data Ingestion]-APIs zuzugreifen. Anweisungen zum Erstellen einer Streaming-Verbindung in der API finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../tutorials/create-streaming-connection.md).
