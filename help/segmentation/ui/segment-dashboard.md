@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profile;segment;segments;segmentation;user interface;UI;customization;segment dashboard;dashboard
+keywords: Experience Platform;Profil;Segment;Segmente;Segmentierung;Benutzeroberfläche;UI;Anpassen;SegmentDashboard;Dashboard
 title: Segment-Dashboard
 description: 'In diesem Handbuch wird das in der Adobe Experience Platform-Benutzeroberfläche verfügbare Segment-Dashboard beschrieben. '
 topic: guide
@@ -7,7 +7,7 @@ type: Documentation
 translation-type: tm+mt
 source-git-commit: 63758450276d47e7e0eddeb047779222cb80a3e2
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '741'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Die Adobe Experience Platform-Benutzeroberfläche (UI) bietet ein Dashboard, mit dem Sie wichtige Informationen zu Ihren Segmenten, wie sie in einem täglichen Schnappschuss erfasst werden, Ansichten durchführen können. In diesem Handbuch wird beschrieben, wie Sie auf das Segmentelement in der Benutzeroberfläche zugreifen und mit ihm arbeiten, und es werden weitere Informationen zu den im Dashboard angezeigten Visualisierungen bereitgestellt.
 
-Einen Überblick über alle Funktionen des Adobe Experience Platform-Segmentierungsdiensts in der Benutzeroberfläche der Plattform finden Sie im Benutzerhandbuch zum [Segmentierungsdienst](overview.md).
+Einen Überblick über alle Adobe Experience Platform-Segmentierungsdienstfunktionen in der Plattform-Benutzeroberfläche finden Sie im Handbuch [Segmentierungsdienst-Benutzeroberfläche](overview.md).
 
 ## Segmentdaten Dashboard
 
@@ -35,23 +35,23 @@ Die Attributdaten im Schnappschuss zeigen die Daten exakt so an, wie sie zu dem 
 
 ## Segmentanalyse - Dashboard
 
-Um zum Segmentelement in der Plattform-Benutzeroberfläche zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Segmente]** aus und klicken Sie dann auf die Registerkarte **[!UICONTROL Übersicht]** , um das Dashboard anzuzeigen.
+Um zum Segmentelement in der Plattform-Benutzeroberfläche zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Segmente]** aus und klicken Sie dann auf die Registerkarte **[!UICONTROL Übersicht]**, um das Dashboard anzuzeigen.
 
 ![](../images/ui/segment-dashboard/dashboard-overview.png)
 
 ### Segment auswählen
 
-Um ein zu Ansicht Segment im Dashboard auszuwählen, wählen Sie die Dialogfeldauswahl für das Textfeld Segment **[!UICONTROL auswählen]** .
+Um ein zu Ansicht Segment im Dashboard auszuwählen, wählen Sie die Dialogfeldauswahl für das Textfeld **[!UICONTROL Segment]** auswählen.
 
 ![](../images/ui/segment-dashboard/select-segment.png)
 
 >[!NOTE]
 >
->Wenn ein Segment bereits ausgewählt ist, verwenden Sie zunächst die `X` , um das Segment zu entfernen, und dann wird die Dialogauswahl angezeigt.
+>Wenn ein Segment bereits ausgewählt ist, verwenden Sie `X`, um das Segment zuerst zu entfernen, und dann wird die Dialogauswahl angezeigt.
 >
 >![](../images/ui/segment-dashboard/remove-segment.png)
 
-Das Dialogfeld &quot;Segment **** auswählen&quot;wird geöffnet, in dem Sie das zu Ansicht Segment auswählen können. Nachdem Sie das gewünschte Segment ausgewählt haben, verwenden Sie **[!UICONTROL Auswählen]** , um zum Dashboard zurückzukehren.
+Das Dialogfeld **[!UICONTROL Segment auswählen]** wird geöffnet, in dem Sie das zu Ansicht Segment auswählen können. Nach Auswahl des gewünschten Segments verwenden Sie **[!UICONTROL Select]**, um zum Dashboard zurückzukehren.
 
 ![](../images/ui/segment-dashboard/select-segment-dialog.png)
 
@@ -59,7 +59,7 @@ Das Dialogfeld &quot;Segment **** auswählen&quot;wird geöffnet, in dem Sie das
 
 Nach Auswahl eines Segments wird das Textfeld für die Zusammenführungsrichtlinie automatisch mit der für dieses Segment geltenden Richtlinie gefüllt.
 
-Weitere Informationen zum Erstellen von Segmenten in der Experience Platform finden Sie im Benutzerhandbuch zum [Segmentaufbau](segment-builder.md). Weitere Informationen zu den Zusammenführungsrichtlinien erhalten Sie zunächst in der Übersicht über das [Echtzeit-Profil](../../profile/home.md).
+Weitere Informationen zum Erstellen von Segmenten in der Experience Platform finden Sie im Handbuch [Segmentaufbau-Benutzeroberfläche](segment-builder.md). Weitere Informationen zu Zusammenführungsrichtlinien erhalten Sie zunächst im [Überblick über das Echtzeit-Profil des Kunden](../../profile/home.md).
 
 ![](../images/ui/segment-dashboard/merge-policy.png)
 
@@ -78,27 +78,27 @@ Experience Platform bietet mehrere Widgets, mit denen Sie verschiedene Metriken 
 
 ### [!UICONTROL Segmentgröße] {#segment-size}
 
-Das Widget &quot; **[!UICONTROL Segmentgröße]** &quot;zeigt die Gesamtzahl der zusammengeführten Profil innerhalb des ausgewählten Segments zum Zeitpunkt des Snapshots an. Diese Anzahl ist das Ergebnis der Anwendung der Segmentzusammenführungs-Richtlinie auf Ihre Profil-Daten, um Profil-Fragmente zu einem einzigen Profil für jede einzelne Segmentperson zusammenzuführen.
+Das Widget **[!UICONTROL Segmentgröße]** zeigt die Gesamtanzahl der zusammengeführten Profil im ausgewählten Segment zum Zeitpunkt des Snapshots an. Diese Anzahl ist das Ergebnis der Anwendung der Segmentzusammenführungs-Richtlinie auf Ihre Profil-Daten, um Profil-Fragmente zu einem einzigen Profil für jede einzelne Segmentperson zusammenzuführen.
 
-Weitere Informationen zu Fragmenten und zusammengeführten Profilen erhalten Sie in der Übersicht über das [Echtzeit-Profil](../home.md).
+Weitere Informationen zu Fragmenten und zusammengeführten Profilen erhalten Sie zunächst im [Überblick über das Echtzeit-Profil des Kunden](../home.md).
 
 ![](../images/ui/segment-dashboard/segment-size.png)
 
 ### [!UICONTROL Profile nach Namensraum] {#profiles-by-namespace}
 
-Das Widget &quot; **[!UICONTROL Profil nach Namensraum]** &quot;zeigt die Aufschlüsselung der Namensraum für alle zusammengeführten Profil im ausgewählten Segment an. Die Gesamtanzahl der Profil nach [!UICONTROL ID-Namensraum] (d. h. das Addieren der für jeden Namensraum angezeigten Werte) ist in der Regel höher als die Gesamtanzahl der Profil im Segment, da ein Profil mehrere Namensraum damit verknüpft sein könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, können mehrere Namensraum mit diesem Kunden verknüpft werden.
+Das Widget **[!UICONTROL Profil nach Namensraum]** zeigt die Aufschlüsselung der Namensraum für alle zusammengeführten Profil im ausgewählten Segment an. Die Gesamtanzahl der Profil nach [!UICONTROL ID-Namensraum] (d. h. addieren Sie die für jeden Namensraum angezeigten Werte) ist in der Regel höher als die Gesamtanzahl der Profil im Segment, da ein Profil mehrere Namensraum damit verknüpft sein könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, können mehrere Namensraum mit diesem Kunden verknüpft werden.
 
-Weitere Informationen zu Identitäts-Namensräumen finden Sie in der Dokumentation zum [Adobe Experience Platform-Identitätsdienst](../../identity-service/home.md).
+Weitere Informationen zu Identitäts-Namensräumen finden Sie in der [Adobe Experience Platform Identity Service-Dokumentation](../../identity-service/home.md).
 
 ![](../images/ui/segment-dashboard/profiles-by-namespace.png)
 
 ## Zusätzliche Dashboards
 
-Die Plattform-Benutzeroberfläche bietet zusätzliche Dashboards zum Anzeigen von Momentaufnahmen Ihrer Daten in der Experience Platform. Zu diesen Dashboards gehören Echtzeit-Profil für Kunden und [!UICONTROL Lizenznutzung]. Weitere Informationen zu diesen zusätzlichen Dashboards finden Sie unter den folgenden Links:
+Die Plattform-Benutzeroberfläche bietet zusätzliche Dashboards zum Anzeigen von Momentaufnahmen Ihrer Daten in der Experience Platform. Zu diesen Dashboards zählen Echtzeit-Kundendaten und [!UICONTROL Lizenznutzung]. Weitere Informationen zu diesen zusätzlichen Dashboards finden Sie unter den folgenden Links:
 
 * [[!DNL Profile] dashboard](../../profile/ui/profile-dashboard.md)
-* [[!UICONTROL Dashboard zur Lizenzverwendung]](../../landing/license-usage-dashboard.md)
+* [[!UICONTROL License ] usagedashboard](../../landing/license-usage-dashboard.md)
 
 ## Nächste Schritte
 
-Indem Sie diesem Dokument folgen, sollten Sie nun in der Lage sein, das Segmentsegment zu suchen und ein Dashboard zur Ansicht auszuwählen. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Segmenten in der Benutzeroberfläche der Experience Platform finden Sie im Handbuch zur Benutzeroberfläche des [Segmentierungsdienstes](overview.md).
+Indem Sie diesem Dokument folgen, sollten Sie nun in der Lage sein, das Segmentsegment zu suchen und ein Dashboard zur Ansicht auszuwählen. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Segmenten in der Benutzeroberfläche der Experience Platform finden Sie im Handbuch [Segmentierungsdienst-Benutzeroberfläche](overview.md).
