@@ -22,7 +22,7 @@ ht-degree: 0%
 In diesem Video werden vier wichtige Anwendungsfälle für die Experience Platform vorgestellt:
 
 * Echtzeit-Kundendatenplattform
-* Intelligenz der Customer Journey
+* Journey-Intelligenz
 * Versand- und Cross-Kanal-Erfahrung
 * Anwendungsentwicklung für Kunden
 
