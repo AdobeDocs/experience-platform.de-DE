@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;arithmetic functions;arithmetic;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Arithmetik;
 solution: Experience Platform
 title: Arithmetische Funktionen
 topic: developer guide
@@ -7,15 +7,15 @@ description: Arithmetische Funktionen werden zur Durchführung von Basisberechnu
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 85%
+source-wordcount: '259'
+ht-degree: 79%
 
 ---
 
 
 # Arithmetische Funktionen
 
-Arithmetische Funktionen werden zur Durchführung grundlegender Berechnungen für Werte in [!DNL Profile Query Language] (PQL) verwendet. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Arithmetische Funktionen werden verwendet, um grundlegende Berechnungen für Werte in [!DNL Profile Query Language] (PQL) durchzuführen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Addieren
 
