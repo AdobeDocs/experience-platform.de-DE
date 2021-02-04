@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
+keywords: Experience Platform;Startseite;beliebte Themen;Segmentierung;Segmentierung;Segmentaufbau;Segmentaufbau
 solution: Experience Platform
 title: Änderungsleitfaden zum Segmentaufbau für Segmente
 topic: ui guide
@@ -7,7 +7,7 @@ description: 'Segment Builder bietet eine umfangreiche Arbeitsfläche, über die
 translation-type: tm+mt
 source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 13%
 
 ---
@@ -23,7 +23,7 @@ Zuvor wurden an ein einzelnes Ereignis mehrere Zeitbeschränkungsregeln angehän
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Wie Sie sehen können, unterliegt dieses Segment auf Regelebene zwei Einschränkungen: Eine für &quot;[!UICONTROL Heute]&quot;und die andere für &quot;[!UICONTROL Gestern]&quot;.
+Wie Sie sehen können, unterliegt dieses Segment auf Regelebene zwei Einschränkungen: Eine für &quot;[!UICONTROL Today]&quot;und die andere für &quot;[!UICONTROL Gestern]&quot;.
 
 Das vorherige Segment entspricht dem folgenden Segment — Beide Zeitbeschränkungen auf Ereignis-Ebene wurden mit einem UND-Operator verbunden. Die erste Zeitbeschränkung auf Ereignis-Ebene verweist auf ein click-Ereignis, dessen Name gleich &quot;Schulung&quot;ist und das heute stattfindet, während die zweite Zeitbeschränkung auf Ereignis-Ebene auf ein click-Ereignis verweist, dessen Name &quot;Haustiere&quot;entspricht und gestern stattgefunden hat.
 
