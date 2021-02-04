@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics; notifications
+keywords: Experience Platform;Home;beliebte Themen; Benachrichtigungen
 description: Mit den Adobe I/O-Ereignissen können Sie Ereignis abonnieren und Webhooks verwenden, um Benachrichtigungen über den Status Ihrer Flussläufe zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehlschlagen einer Ausführung beigetragen haben.
 solution: Experience Platform
 title: Flusslaufbenachrichtigungen
@@ -7,7 +7,7 @@ topic: overview
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '787'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 # Flusslaufbenachrichtigungen
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen unterschiedlichen Quellen innerhalb [!DNL Platform]. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen unterschiedlichen Quellen innerhalb  [!DNL Platform]. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
 Mit Adobe I/O-Ereignissen können Sie Ereignis abonnieren und Webhooks verwenden, um Benachrichtigungen über den Status Ihrer Flussläufe zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehlschlagen einer Ausführung beigetragen haben.
 
@@ -25,15 +25,15 @@ In diesem Dokument wird beschrieben, wie Sie Ereignis abonnieren, Webhooks regis
 
 ## Erste Schritte
 
-In diesem Lernprogramm wird davon ausgegangen, dass Sie bereits mindestens eine Quellverbindung erstellt haben, deren Fluss überwacht werden soll. Wenn Sie noch keine Quellverbindung konfiguriert haben, sollten Sie den Beginn in der [Quellübersicht](./home.md) aufrufen, um die Quelldatei Ihrer Wahl zu konfigurieren, bevor Sie zu diesem Handbuch zurückkehren.
+In diesem Lernprogramm wird davon ausgegangen, dass Sie bereits mindestens eine Quellverbindung erstellt haben, deren Fluss überwacht werden soll. Wenn Sie noch keine Quellverbindung konfiguriert haben, verwenden Sie den Beginn [sources overview](./home.md), um die Quelldatei Ihrer Wahl zu konfigurieren, bevor Sie zu diesem Handbuch zurückkehren.
 
-Dieses Dokument erfordert auch ein funktionierendes Verständnis von Webhooks und wie ein Webhaken von einer Anwendung zur anderen verbunden werden kann. Eine Einführung in Webhooks finden Sie in der [[!DNL I/O Events] Dokumentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) .
+Dieses Dokument erfordert auch ein funktionierendes Verständnis von Webhooks und wie ein Webhaken von einer Anwendung zur anderen verbunden werden kann. Eine Einführung zu Webhooks finden Sie in der [[!DNL I/O Events] Dokumentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md).
 
 ## WebHook für Flusslaufbenachrichtigungen registrieren
 
-Um Benachrichtigungen über Flusslaufvorgänge zu erhalten, müssen Sie Adobe Developer Console verwenden, um einen Webshaken für Ihre [!DNL Experience Platform] Integration zu registrieren.
+Um Benachrichtigungen über Flusslaufvorgänge zu erhalten, müssen Sie Adobe Developer Console verwenden, um einen Webshaken bei Ihrer [!DNL Experience Platform]-Integration zu registrieren.
 
-Folgen Sie dem Tutorial zum [Abonnieren von [!DNL I/O Event] Tonbenachrichtigungen](../observability/notifications/subscribe.md) , um detaillierte Schritte dazu zu erhalten.
+Folgen Sie dem Tutorial [Abonnieren von [!DNL I/O Event] Benachrichtigungen](../observability/notifications/subscribe.md), um detaillierte Schritte dazu zu erhalten.
 
 >[!IMPORTANT]
 >
@@ -47,15 +47,15 @@ Folgen Sie dem Tutorial zum [Abonnieren von [!DNL I/O Event] Tonbenachrichtigung
 
 Wenn Ihr WebHook angeschlossen ist und Ihr Ereignis-Abonnement abgeschlossen ist, können Sie Beginn, die Flusslaufbenachrichtigungen empfangen, über das WebHook-Dashboard ausführen.
 
-Eine Benachrichtigung gibt Informationen wie die Anzahl der ausgeführten Erfassungsaufträge, die Dateigröße und Fehler zurück. Eine Benachrichtigung gibt auch eine Nutzlast zurück, die mit Ihrer Flussausführung im JSON-Format verknüpft ist. Die Antwortnutzlast kann entweder als `sources_flow_run_success` oder `sources_flow_run_failure`klassifiziert werden.
+Eine Benachrichtigung gibt Informationen wie die Anzahl der ausgeführten Erfassungsaufträge, die Dateigröße und Fehler zurück. Eine Benachrichtigung gibt auch eine Nutzlast zurück, die mit Ihrer Flussausführung im JSON-Format verknüpft ist. Die Antwortnutzlast kann entweder als `sources_flow_run_success` oder `sources_flow_run_failure` klassifiziert werden.
 
 >[!IMPORTANT]
 >
->Wenn die teilweise Erfassung während des Prozesses der Flusserstellung aktiviert ist, wird ein Fluss, der sowohl erfolgreiche als auch fehlgeschlagene Einträge enthält, `sources_flow_run_success` nur dann als markiert, wenn die Anzahl der Fehler unter dem Fehlerschwellenprozentsatz liegt, der während des Prozesses der Flusserstellung festgelegt wurde. Wenn eine erfolgreiche Flussausführung Fehler enthält, werden diese Fehler weiterhin als Teil der Rückgabeauslastung einbezogen.
+>Wenn die teilweise Erfassung während des Prozesses der Flusserstellung aktiviert ist, wird ein Fluss, der sowohl erfolgreiche als auch fehlgeschlagene Einträge enthält, nur dann als `sources_flow_run_success` markiert, wenn die Anzahl der Fehler unter dem Fehlerschwellenprozentsatz liegt, der während des Prozesses der Flusserstellung festgelegt wurde. Wenn eine erfolgreiche Flussausführung Fehler enthält, werden diese Fehler weiterhin als Teil der Rückgabeauslastung einbezogen.
 
 ### Erfolg
 
-Eine erfolgreiche Antwort gibt eine Reihe von Antworten zurück, `metrics` die Eigenschaften eines bestimmten Flusslaufs definieren und `activities` die beschreiben, wie Daten transformiert werden.
+Eine erfolgreiche Antwort gibt einen Satz von `metrics` zurück, der die Eigenschaften eines bestimmten Flusslaufs definiert, und `activities`, in dem beschrieben wird, wie Daten transformiert werden.
 
 ```json
 {
@@ -314,11 +314,11 @@ Die folgende Antwort ist ein Beispiel für einen fehlgeschlagenen Fluss, bei dem
 
 >[!NOTE]
 >
->Weitere Informationen zu Fehlermeldungen finden Sie im [Anhang](#errors) .
+>Weitere Informationen zu Fehlermeldungen finden Sie unter [Anhang](#errors).
 
 ## Nächste Schritte
 
-Sie können jetzt Ereignis abonnieren, mit denen Sie Echtzeitbenachrichtigungen zu den Status Ihrer Flusslaufvorgänge erhalten können. Weitere Informationen zu Flussläufen und -quellen finden Sie in der [Quellenübersicht](./home.md).
+Sie können jetzt Ereignis abonnieren, mit denen Sie Echtzeitbenachrichtigungen zu den Status Ihrer Flusslaufvorgänge erhalten können. Weitere Informationen zu Flussläufen und -quellen finden Sie unter [Quellübersicht](./home.md).
 
 ## Anhang
 
@@ -326,9 +326,9 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit F
 
 ### Fehlermeldungen {#errors}
 
-Ingestion-Fehler können auftreten, wenn Daten aus der Quelle kopiert werden oder wenn die kopierten Daten verarbeitet werden zu [!DNL Platform]. Weitere Informationen zu bestimmten Fehlern finden Sie in der unten stehenden Tabelle.
+Ingestion-Fehler können auftreten, wenn Daten aus der Quelle kopiert werden oder wenn die kopierten Daten nach [!DNL Platform] verarbeitet werden. Weitere Informationen zu bestimmten Fehlern finden Sie in der unten stehenden Tabelle.
 
 | Fehler | Beschreibung |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Beim Kopieren von Daten aus einer Quelle ist ein Fehler aufgetreten. |
-| `CONNECTOR-2001-500` | Während der Verarbeitung kopierter Daten zu [!DNL Platform]ist ein Fehler aufgetreten. Dieser Fehler kann bei der Analyse, Validierung oder Transformation auftreten. |
+| `CONNECTOR-2001-500` | Während der Verarbeitung kopierter Daten zu [!DNL Platform] ist ein Fehler aufgetreten. Dieser Fehler kann bei der Analyse, Validierung oder Transformation auftreten. |
