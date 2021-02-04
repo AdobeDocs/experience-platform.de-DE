@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;Home;beliebte Themen;Liste-Sandboxen
 solution: Experience Platform
 title: Auflisten unterstützter Sandbox-Typen
 topic: developer guide
@@ -7,8 +7,8 @@ description: Sie können eine Liste der unterstützten Sandbox-Typen für Ihr Un
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 69%
+source-wordcount: '75'
+ht-degree: 62%
 
 ---
 
