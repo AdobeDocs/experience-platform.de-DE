@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
+keywords: Experience Platform;JupyterLab;Rezept;Notebooks;Data Science Workspace;beliebte Themen;Rezept erstellen
 solution: Experience Platform
 title: Rezept erstellen mit Jupyter Notebooks
 topic: tutorial
@@ -8,7 +8,7 @@ description: Dieses Tutorial umfasst zwei Hauptabschnitte. Zuerst erstellen Sie 
 translation-type: tm+mt
 source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
 workflow-type: tm+mt
-source-wordcount: '2350'
+source-wordcount: '2362'
 ht-degree: 82%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 82%
 
 # Rezept erstellen mit Jupyter Notebooks
 
-Dieses Tutorial umfasst zwei Hauptabschnitte. First, you will create a machine learning model using a template within [!DNL JupyterLab Notebook]. Next, you will exercise the notebook to recipe workflow within [!DNL JupyterLab] to create a recipe within [!DNL Data Science Workspace].
+Dieses Tutorial umfasst zwei Hauptabschnitte. Zuerst erstellen Sie ein maschinelles Lernmodell mit einer Vorlage innerhalb von [!DNL JupyterLab Notebook]. Als Nächstes führen Sie den Workflow für die Rezeptur des Notebooks innerhalb von [!DNL JupyterLab] aus, um ein Rezept innerhalb von [!DNL Data Science Workspace] zu erstellen.
 
 ## Vorgestellte Konzepte:
 
@@ -25,11 +25,11 @@ Dieses Tutorial umfasst zwei Hauptabschnitte. First, you will create a machine l
 - **Training:** Ein Training besteht aus dem Erlernen von Mustern und Insights auf Grundlage gekennzeichneter Daten.
 - **Scoring:** Beim Scoring werden mithilfe eines trainierten Modells Insights aus Daten generiert.
 
-## Get started with the [!DNL JupyterLab] notebook environment
+## Erste Schritte mit der [!DNL JupyterLab] Notebook-Umgebung
 
-Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. Navigieren Sie zum Beginn zu [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **[!UICONTROL Notebooks]** . Erstellen Sie ein neues Notebook, indem Sie die Vorlage Rezept-Builder aus dem [!DNL JupyterLab Launcher].
+Das Erstellen eines Rezepts von Grund auf kann innerhalb von [!DNL Data Science Workspace] erfolgen. Navigieren Sie zum Beginn zu [Adobe Experience Platform](https://platform.adobe.com) und klicken Sie auf der linken Seite auf die Registerkarte **[!UICONTROL Notebooks]**. Erstellen Sie ein neues Notebook, indem Sie die Vorlage Rezept Builder aus dem [!DNL JupyterLab Launcher] auswählen.
 
-The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring runs inside the notebook. So können Sie zwischen laufenden Experimenten für Trainings- und Scoring-Daten flexibel Änderungen an den `train()`- und `score()`-Methoden vorzunehmen. Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in [!DNL Data Science Workspace] using the notebook to recipe functionality built in to the Recipe Builder notebook.
+Mit dem [!UICONTROL Rezept Builder] Notebook können Sie Schulungen und Bewertungsläufe im Notebook ausführen. So können Sie zwischen laufenden Experimenten für Trainings- und Scoring-Daten flexibel Änderungen an den `train()`- und `score()`-Methoden vorzunehmen. Sobald Sie mit den Ausgaben der Schulung und Bewertung zufrieden sind, können Sie ein Rezept erstellen, das in [!DNL Data Science Workspace] verwendet werden kann, indem Sie die Funktionen des Notebooks nutzen, die in das Rezept Builder-Notebook integriert sind.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 
 Wenn Sie vom Starter auf das Rezept Builder-Notebook klicken, wird das Notebook in der Registerkarte geöffnet. Die im Notebook verwendete Vorlage ist das Rezept „Python Retail Sales Forecasting“, das auch in [diesem öffentlichen Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/) zu finden ist.
 
-You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. Weiterführende Informationen zu diesen Aktionen erhalten Sie im Abschnitt [Training und Scoring](#training-and-scoring), nachdem Sie Ihr Rezept im Notebook erstellt haben.
+Beachten Sie, dass es in der Symbolleiste drei weitere Aktionen gibt: **[!UICONTROL Zug]**, **[!UICONTROL Ergebnis]** und **[!UICONTROL Rezept erstellen]**. Diese Symbole werden nur im Notebook [!UICONTROL Rezept Builder] angezeigt. Weiterführende Informationen zu diesen Aktionen erhalten Sie im Abschnitt [Training und Scoring](#training-and-scoring), nachdem Sie Ihr Rezept im Notebook erstellt haben.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -55,7 +55,7 @@ Nehmen Sie die erforderlichen Änderungen in der Zelle vor und führen Sie die Z
 
 ## Erste Schritte mit dem Recipe Builder-Notebook
 
-Now that you know the basics for the [!DNL JupyterLab] notebook environment, you can begin looking at the files that make up a machine learning model recipe. Die Dateien, über die wir reden werden, sind hier dargestellt:
+Nachdem Sie die Grundlagen für die [!DNL JupyterLab] Notebook-Umgebung kennen, können Sie sich die Dateien ansehen, aus denen ein Rezept für ein maschinelles Lernmodell besteht. Die Dateien, über die wir reden werden, sind hier dargestellt:
 
 - [Anforderungsdatei](#requirements-file)
 - [Konfigurationsdateien](#configuration-files)
@@ -67,7 +67,7 @@ Now that you know the basics for the [!DNL JupyterLab] notebook environment, you
 
 ### Anforderungsdatei {#requirements-file}
 
-Die Anforderungsdatei dient zum Deklarieren zusätzlicher Bibliotheken, die Sie im Rezept verwenden möchten. Sie können die Versionsnummer angeben, wenn eine Abhängigkeit vorliegt. To look for additional libraries, visit [anaconda.org](https://anaconda.org). Informationen zum Formatieren der Anforderungsdatei finden Sie unter [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). Die Liste der bereits verwendeten Hauptbibliotheken umfasst:
+Die Anforderungsdatei dient zum Deklarieren zusätzlicher Bibliotheken, die Sie im Rezept verwenden möchten. Sie können die Versionsnummer angeben, wenn eine Abhängigkeit vorliegt. Weitere Bibliotheken finden Sie unter [anaconda.org](https://anaconda.org). Informationen zum Formatieren der Anforderungsdatei finden Sie unter [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). Die Liste der bereits verwendeten Hauptbibliotheken umfasst:
 
 ```JSON
 python=3.6.7
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->Bibliotheken oder spezifische Versionen, die Sie hinzufügen, sind möglicherweise nicht mit den oben genannten Bibliotheken kompatibel. Wenn Sie sich außerdem dafür entscheiden, eine Umgebung manuell zu erstellen, darf das `name` Feld nicht überschrieben werden.
+>Bibliotheken oder spezifische Versionen, die Sie hinzufügen, sind möglicherweise nicht mit den oben genannten Bibliotheken kompatibel. Wenn Sie außerdem festlegen, dass eine Umgebung manuell erstellt werden soll, darf das Feld `name` nicht überschrieben werden.
 
 ### Konfigurationsdateien {#configuration-files}
 
@@ -105,17 +105,17 @@ Standardmäßig sind für den Zugriff auf Daten die folgenden Konfigurationspara
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## Ladeprogramm für Trainings-Daten {#training-data-loader}
+## Ladeprogramm für Trainings-Daten  {#training-data-loader}
 
 Der Zweck des Ladeprogramms für Trainings-Daten besteht darin, Daten zu instanziieren, die zum Erstellen des maschinellen Lernmodells verwendet werden. In der Regel gibt es zwei Aufgaben, die das Ladeprogramm für Trainings-Daten erledigen wird:
-- Load data from [!DNL Platform]
+- Daten von [!DNL Platform] laden
 - Datenvorbereitung und Funktionsentwicklung
 
 Die folgenden beiden Abschnitte liefern Informationen über das Laden und Vorbereiten von Daten.
 
-### Laden von Daten {#loading-data}
+### Laden von Daten  {#loading-data}
 
-In diesem Schritt wird der [pandas-Dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html) verwendet. Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas&#39; `read_csv()` or `read_json()` functions.
+In diesem Schritt wird der [pandas-Dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html) verwendet. Daten können entweder mit dem SDK [!DNL Platform] (`platform_sdk`) oder mit den Pandas-Funktionen `read_csv()` oder `read_json()` aus externen Quellen geladen werden.[!DNL Adobe Experience Platform]
 
 - [[!DNL Platform SDK]](#platform-sdk)
 - [Externe Quellen](#external-sources)
@@ -128,7 +128,7 @@ In diesem Schritt wird der [pandas-Dataframe](https://pandas.pydata.org/pandas-d
 
 Eine ausführliche Anleitung zur Verwendung des Datenladeprogramms `platform_sdk` finden Sie im [Handbuch zum Platform-SDK](../authoring/platform-sdk.md). Dieses Tutorial enthält Informationen zur Build-Authentifizierung, zum grundlegenden Lesen von Daten sowie zum grundlegenden Schreiben von Daten.
 
-### Externe Quellen {#external-sources}
+### Externe Quellen  {#external-sources}
 
 Dieser Abschnitt veranschaulicht, wie Sie eine JSON- oder CSV-Datei in ein pandas-Objekt importieren können. Die offizielle Dokumentation der pandas-Bibliothek finden Sie hier:
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -173,7 +173,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform using `client_context`:
+>Wie im Abschnitt [Konfigurationsdatei](#configuration-files) erwähnt, werden die folgenden Konfigurationsparameter für Sie eingestellt, wenn Sie mit `client_context` auf Daten aus der Experience Platform zugreifen:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -182,7 +182,7 @@ def load(config_properties):
 
 Jetzt, da Sie über Ihre Daten verfügen, können Sie mit der Datenvorbereitung und Funktionsentwicklung beginnen.
 
-### Datenvorbereitung und Funktionsentwicklung {#data-preparation-and-feature-engineering}
+### Datenvorbereitung und Funktionsentwicklung  {#data-preparation-and-feature-engineering}
 
 Nach dem Laden werden die Daten vorbereitet und auf die Datensätze `train` und `val` aufgeteilt. Betrachten Sie folgenden Beispiel-Code:
 
@@ -214,7 +214,7 @@ In diesem Beispiel werden auf den ursprünglichen Datensatz fünf Aktionen angew
 - Versetzen von `weeklySales` für zukünftige und vorherige Umsatzwerte
 - Aufteilen von Daten anhand des Datums in die Datensätze `train` und `val`
 
-First, `week` and `year` columns are created and the original `date` column converted to [!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). Wochen- und Jahreswerte werden aus dem datetime-Objekt extrahiert.
+Zuerst werden die Spalten `week` und `year` erstellt und die ursprüngliche Spalte `date` in [!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html) konvertiert. Wochen- und Jahreswerte werden aus dem datetime-Objekt extrahiert.
 
 Dann wird `storeType` in drei Spalten konvertiert, die die drei verschiedenen Speichertypen (`A`, `B` und `C`) darstellen. Jede wird einen booleschen Wert für den Status enthalten, wobei `storeType` „true“ lautet. Die `storeType`-Spalte wird verworfen.
 
@@ -224,7 +224,7 @@ Diese Daten werden auf die Datensätze `train` und `val` aufgeteilt.
 
 Die `load()`-Funktion sollte mit den Datensätzen `train` und `val` als Ausgabe abgeschlossen werden.
 
-### Ladeprogramm für Scoring-Daten {#scoring-data-loader}
+### Ladeprogramm für Scoring-Daten  {#scoring-data-loader}
 
 Das Laden von Daten zum Scoring ähnelt dem Laden von Trainings-Daten in der `split()`-Funktion. Wir verwenden das Data Access-SDK, um Daten aus der `scoringDataSetId` in unserer `recipe.conf`-Datei zu laden.
 
@@ -299,7 +299,7 @@ df.dropna(0, inplace=True)
 
 Die `load()`-Funktion in Ihrem Ladeprogramm für Scoring-Daten sollte mit dem Scoring-Datensatz als Ausgabe abschließen.
 
-### Pipeline-Datei {#pipeline-file}
+### Pipeline-Datei  {#pipeline-file}
 
 Die `pipeline.py`-Datei enthält Logiken für Training und Scoring.
 
@@ -349,7 +349,7 @@ def train(configProperties, data):
 
 Beachten Sie, dass je nach Anwendung Argumente in Ihrer `GradientBoostingRegressor()`-Funktion vorhanden sind. `xTrainingDataset` sollte Ihre für das Training genutzten Funktionen enthalten, während `yTrainingDataset` die Bezeichnungen beinhalten sollte.
 
-### Scoring {#scoring}
+### Scoring  {#scoring}
 
 Die `score()`-Funktion sollte den Scoring-Algorithmus enthalten und einen Messwert zurückgeben, der angibt, wie gut das Modell funktioniert. Die `score()`-Funktion nutzt die Bezeichnungen des Scoring-Datensatzes und das trainierte Modell, um eine Reihe von prognostizierten Funktionen zu generieren. Die prognostizierten Werte werden dann mit den tatsächlichen Funktionen im Scoring-Datensatz abgeglichen. In diesem Beispiel verwendet die Funktion `score()` das trainierte Modell, um Funktionen mithilfe der Bezeichnungen aus dem Scoring-Datensatz vorherzusagen. Die prognostizierten Funktionen werden zurückgegeben.
 
@@ -371,11 +371,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### Evaluator-Datei {#evaluator-file}
+### Evaluator-Datei  {#evaluator-file}
 
 Die `evaluator.py`-Datei enthält eine Logik dafür, wie Sie Ihr trainiertes Rezept bewerten und die Trainings-Daten aufteilen wollen. Für das Einzelhandelsbeispiel wird die Logik zum Laden und Vorbereiten der Trainings-Daten einbezogen. Wir sehen uns die beiden folgenden Abschnitte an.
 
-### Datensatz aufteilen {#split-the-dataset}
+### Datensatz aufteilen  {#split-the-dataset}
 
 Die Vorbereitung der Daten für das Training erfordert eine Aufteilung des Datensatzes, damit er sich für Training und Tests verwenden lässt. Diese `val`-Daten dienen implizit dazu, das Modell nach dem Trainieren zu bewerten. Dieser Prozess erfolgt getrennt vom Scoring.
 
@@ -394,7 +394,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### Trainiertes Modell bewerten {#evaluate-the-trained-model}
+### Trainiertes Modell bewerten  {#evaluate-the-trained-model}
 
 Die `evaluate()`-Funktion wird ausgeführt, nachdem das Modell trainiert wurde, und gibt einen Messwert zurück, der angibt, wie gut das Modell funktioniert. Die `evaluate()`-Funktion nutzt die Testdatensatzbezeichnungen und das trainierte Modell, um eine Reihe von Funktionen vorherzusagen. Die prognostizierten Werte werden dann mit den tatsächlichen Funktionen im Testdatensatz abgeglichen. Häufige Scoring-Algorithmen sind:
 - [Mittlerer absoluter prozentualer Fehler (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -423,9 +423,9 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 Beachten Sie, dass die Funktion ein `metric`-Objekt zurückgibt, das eine Gruppe von Bewertungsmetriken enthält. Anhand dieser Metriken lässt sich bewerten, wie gut das trainierte Modell funktioniert.
 
-### Data Saver-Datei {#data-saver-file}
+### Data Saver-Datei  {#data-saver-file}
 
-Die `datasaver.py`-Datei enthält die `save()`-Funktion zum Speichern Ihrer Prognose beim Testen des Scoring. The `save()` function will take your prediction and using [!DNL Experience Platform Catalog] APIs, write the data to the `scoringResultsDataSetId` you specified in your `scoring.conf` file.
+Die `datasaver.py`-Datei enthält die `save()`-Funktion zum Speichern Ihrer Prognose beim Testen des Scoring. Die Funktion `save()` nimmt Ihre Prognose auf und schreibt mithilfe von [!DNL Experience Platform Catalog]-APIs die Daten in die `scoringResultsDataSetId`, die Sie in Ihrer `scoring.conf`-Datei angegeben haben.
 
 Das Beispiel, das im Rezept für Einzelhandelsumsätze verwendet wird, ist hier dargestellt. Beachten Sie den Einsatz der `DataSetWriter`-Bibliothek zum Schreiben von Daten in Platform:
 
@@ -456,7 +456,7 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## Training und Scoring {#training-and-scoring}
+## Training und Scoring  {#training-and-scoring}
 
 Wenn Sie die Änderungen an Ihrem Notebook abgeschlossen haben und Ihr Rezept trainieren möchten, können Sie oben in der Leiste auf die entsprechenden Schaltflächen klicken, um einen Trainings-Lauf in der Zelle zu erstellen. Nach dem Klicken auf die Schaltfläche wird ein Protokoll mit Befehlen und Ausgaben aus dem Trainings-Skript im Notebook angezeigt (unter der Zelle `evaluator.py`). Conda installiert zunächst alle Abhängigkeiten, dann wird das Training initiiert.
 
@@ -464,13 +464,13 @@ Beachten Sie, dass Sie ein Training mindestens einmal ausführen müssen, bevor 
 
 Wenn Sie zum Debuggen die ausgeblendete Ausgabe anzeigen möchten, fügen Sie `debug` am Ende der Ausgabenzelle hinzu und führen Sie das Scoring erneut aus.
 
-## Rezept erstellen {#create-recipe}
+## Rezept erstellen  {#create-recipe}
 
-When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **[!UICONTROL Create Recipe]** in the top-right navigation.
+Wenn Sie die Bearbeitung des Rezepts abgeschlossen haben und mit der Schulungs-/Bewertungsausgabe zufrieden sind, können Sie ein Rezept aus dem Notebook erstellen, indem Sie in der Navigation oben rechts auf **[!UICONTROL Rezept erstellen]** drücken.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Nach dem Klicken auf die Schaltfläche werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das am [!DNL Platform].
+Nach dem Klicken auf die Schaltfläche werden Sie aufgefordert, einen Rezeptnamen einzugeben. Dieser Name stellt das eigentliche Rezept dar, das auf [!DNL Platform] erstellt wurde.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -489,11 +489,11 @@ Sobald der Prozess abgeschlossen ist, sieht das Rezept in etwa wie folgt aus:
 > - Erstellen Sie nicht gleichzeitig Rezepte in verschiedenen Notebooks.
 
 
-## Nächste Schritte {#next-steps}
+## Nächste Schritte  {#next-steps}
 
-In diesem Tutorial haben Sie gelernt, wie Sie im Recipe Builder-Notebook ein Modell für maschinelles Lernen einrichten können. You have also learned how to exercise the notebook to recipe workflow within the notebook to create a recipe within [!DNL Data Science Workspace].
+In diesem Tutorial haben Sie gelernt, wie Sie im Recipe Builder-Notebook ein Modell für maschinelles Lernen einrichten können. Sie haben auch gelernt, wie Sie das Notebook mit dem Rezept-Arbeitsablauf im Notebook ausüben können, um ein Rezept innerhalb von [!DNL Data Science Workspace] zu erstellen.
 
-To continue learning how to work with resources within [!DNL Data Science Workspace], please visit the [!DNL Data Science Workspace] recipes and models dropdown.
+Um weiterhin zu lernen, wie mit Ressourcen innerhalb von [!DNL Data Science Workspace] gearbeitet wird, besuchen Sie bitte die Dropdownliste [!DNL Data Science Workspace] Rezepte und Modelle.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
