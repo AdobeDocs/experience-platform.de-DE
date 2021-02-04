@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts
+keywords: Experience Platform;Startseite;beliebte Themen;Aktualisieren von Konten
 description: Unter bestimmten Umständen kann es erforderlich sein, die Details eines Kontos mit vorhandenen Quellen zu aktualisieren. Der Quellenarbeitsbereich bietet Ihnen die Möglichkeit, Details zu einer vorhandenen Stapel- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
 solution: Experience Platform
 title: Kontodetails in der Benutzeroberfläche aktualisieren
@@ -8,7 +8,7 @@ type: Tutorial
 translation-type: tm+mt
 source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '449'
 ht-degree: 4%
 
 ---
