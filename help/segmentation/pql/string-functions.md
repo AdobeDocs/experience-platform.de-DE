@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Zeichenfolgen-Funktionen;Zeichenfolge;
 solution: Experience Platform
 title: Zeichenfolgen-Funktionen
 topic: developer guide
@@ -7,19 +7,19 @@ description: Profil Abfrage Language (PQL)-Angebote erleichtern die Interaktion 
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 11%
+source-wordcount: '783'
+ht-degree: 10%
 
 ---
 
 
 # Zeichenfolgen-Funktionen
 
-[!DNL Profile Query Language] (PQL) Angebot Funktionen, um die Interaktion mit Zeichenfolgen zu vereinfachen. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) Angebot Funktionen, um die Interaktion mit Zeichenfolgen zu vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## like
 
-Mit der `like` Funktion wird bestimmt, ob eine Zeichenfolge einem angegebenen Muster entspricht.
+Mit der Funktion `like` wird bestimmt, ob eine Zeichenfolge einem angegebenen Muster entspricht.
 
 **Format**
 
@@ -42,7 +42,7 @@ city like "%es%"
 
 ## Beginnt mit
 
-Mit der `startsWith` Funktion wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge Beginn.
+Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge Beginn.
 
 **Format**
 
@@ -66,7 +66,7 @@ person.name.startsWith("Joe")
 
 ## Beginnt nicht mit
 
-Mit der `doesNotStartWith` Funktion wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge Beginn.
+Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge Beginn.
 
 **Format**
 
@@ -90,7 +90,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Endet mit
 
-Mit der `endsWith` Funktion wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge endet.
+Mit der Funktion `endsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge endet.
 
 **Format**
 
@@ -114,7 +114,7 @@ person.emailAddress.endsWith(".com")
 
 ## Endet nicht mit
 
-Mit der `doesNotEndWith` Funktion wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge endet.
+Mit der Funktion `doesNotEndWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge endet.
 
 **Format**
 
@@ -138,7 +138,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-Mit der `contains` Funktion wird bestimmt, ob eine Zeichenfolge eine angegebene Unterzeichenfolge enthält.
+Mit der Funktion `contains` wird bestimmt, ob eine Zeichenfolge eine angegebene Unterzeichenfolge enthält.
 
 **Format**
 
@@ -162,7 +162,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Enthält nicht
 
-Mit der `doesNotContain` Funktion wird bestimmt, ob eine Zeichenfolge keine angegebene Unterzeichenfolge enthält.
+Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge keine angegebene Unterzeichenfolge enthält.
 
 **Format**
 
@@ -186,7 +186,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Gleich
 
-Mit der `equals` Funktion wird bestimmt, ob eine Zeichenfolge mit der angegebenen Zeichenfolge übereinstimmt.
+Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge mit der angegebenen Zeichenfolge übereinstimmt.
 
 **Format**
 
@@ -209,7 +209,7 @@ person.name.equals("John")
 
 ## Ungleich
 
-Mit der `notEqualTo` Funktion wird bestimmt, ob eine Zeichenfolge nicht mit der angegebenen Zeichenfolge übereinstimmt.
+Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht mit der angegebenen Zeichenfolge übereinstimmt.
 
 **Format**
 
@@ -232,7 +232,7 @@ person.name.notEqualTo("John")
 
 ## Stimmt überein mit
 
-Mit der `matches` Funktion wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zu Übereinstimmungsmustern in regulären Ausdrücken finden Sie in [diesem Dokument](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) .
+Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zu Übereinstimmungsmustern in regulären Ausdrücken finden Sie in [diesem Dokument](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
 
 **Format**
 
@@ -250,7 +250,7 @@ person.name.matches("(?i)^John")
 
 ## Regelmäßiger Ausdruck
 
-Die `regexGroup` Funktion wird verwendet, um spezifische Informationen basierend auf dem regulären Ausdruck zu extrahieren.
+Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend auf dem bereitgestellten regulären Ausdruck zu extrahieren.
 
 **Format**
 
