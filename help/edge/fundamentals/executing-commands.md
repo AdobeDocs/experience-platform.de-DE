@@ -3,12 +3,12 @@ title: Ausführen von Befehlen
 seo-title: Ausführen von Adobe Experience Platform Web SDK-Befehlen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
-keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
+keywords: Ausführen von Befehlen;commandName;Promises;getLibraryInfo;response-Objekte;Zustimmung;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 75%
+source-wordcount: '428'
+ht-degree: 73%
 
 ---
 
@@ -67,7 +67,7 @@ alloy("commandName", options)
 
 ### Antwortobjekte
 
-Alle von Befehlen zurückgegebenen Versprechungen werden mit einem `result` Objekt gelöst. Das Ergebnisobjekt enthält Daten, die vom Befehl und der Zustimmung des Benutzers abhängen. Bibliotheksinformationen werden beispielsweise im folgenden Befehl als Eigenschaft des results-Objekts übergeben.
+Alle von Befehlen zurückgegebenen Versprechungen werden mit einem `result`-Objekt gelöst. Das Ergebnisobjekt enthält Daten, die vom Befehl und der Zustimmung des Benutzers abhängen. Bibliotheksinformationen werden beispielsweise im folgenden Befehl als Eigenschaft des results-Objekts übergeben.
 
 ```js
 alloy("getLibraryInfo")
