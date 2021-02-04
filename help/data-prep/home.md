@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
+keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datenvorbereitung;Datenvorbereitung;Vorbereiten von Daten;
 solution: Experience Platform
 title: Zuordnungsfunktionen
 topic: overview
@@ -7,7 +7,7 @@ description: Dieses Dokument führt die Datenvorbereitung in Adobe Experience Pl
 translation-type: tm+mt
 source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '333'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Data Prep wendet außerdem mehrere intrinsische Datenvalidierungen an, um sicher
 
 Eine Zuordnung ist eine Zuordnung eines Eingabedatums oder eines berechneten Felds zu einem XDM-Attribut. Ein einzelnes Attribut kann mehreren XDM-Attributen zugeordnet werden, indem einzelne Zuordnungen erstellt werden.
 
-Um mehr über die verschiedenen Zuordnungsfunktionen zu erfahren, lesen Sie bitte das Handbuch [Zuordnungsfunktionen](./functions.md).
+Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md).
 
 ## Zuordnungssatz
 
@@ -37,4 +37,4 @@ Eine Reihe von Zuordnungen, die ein Schema in ein anderes umwandeln, werden koll
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md). Weitere Informationen zu den verschiedenen Datums- und Uhrzeitzeichenfolgen finden Sie im [Handbuch](./dates.md)zu Datumszeichenfolgen.
+In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md). Weitere Informationen zu den verschiedenen Datums-Uhrzeit-Zeichenfolgen finden Sie im Handbuch [Datums-Zeichenfolgen](./dates.md).
