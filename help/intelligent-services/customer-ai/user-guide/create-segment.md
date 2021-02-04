@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai segments
+keywords: Experience Platform;Einblicke;Kundenwerbung;beliebte Themen;Kundendienstsegmente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Kundensegmente mit prognostizierten Werten erstellen
 topic: Create a segment
@@ -7,8 +7,8 @@ description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwe
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 88%
+source-wordcount: '318'
+ht-degree: 85%
 
 ---
 
@@ -35,7 +35,7 @@ Geben Sie in der rechten Spalte *Segmenteigenschaften* einen Namen für das Segm
 
 ![](../images/user-guide/properties.png)
 
-Above the left-hand *Fields* column, click the **gear** icon and select a *Merge policy* from the drop-down. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
+Klicken Sie über der Spalte *Felder* auf das Symbol **Zahnrad** und wählen Sie aus der Dropdownliste eine *Richtlinie zusammenführen*. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
 
 ![](../images/user-guide/merge_policy.png)
 
