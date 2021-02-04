@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;address;xdm:address;datatype;data-type;data type;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Adresse;xdm:address;datatype;Datentyp;Datentyp;
 solution: Experience Platform
 title: Datentyp der Postanschrift
 topic: overview
@@ -7,15 +7,15 @@ description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp der P
 translation-type: tm+mt
 source-git-commit: 6a7967ac9e652c7e73fd713e89a9079287cf0ae5
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 25%
+source-wordcount: '336'
+ht-degree: 24%
 
 ---
 
 
-# [!UICONTROL Datentyp für Postanschrift]
+# [!UICONTROL Datentyp ] für Postadressen
 
-[!UICONTROL Postanschrift] ist ein standardmäßiger XDM-Datentyp, der die Details einer Postanschrift beschreibt.
+[!UICONTROL Postadresse ] ist ein Standard-XDM-Datentyp, der die Details einer Postanschrift beschreibt.
 
 <img src="../images/data-types/postal-address.png" width="450" /><br />
 
@@ -32,14 +32,14 @@ ht-degree: 25%
 | `msaID` | Das metropolitane statistische Gebiet in den Vereinigten Staaten, in dem die Beobachtung stattfand. |
 | `postOfficeBox` | Das Postfach der Adresse. |
 | `postalCode` | Die Postleitzahl des Ortes. Postleitzahlen sind nicht für alle Länder verfügbar. In einigen Ländern wird dies nur einen Teil der Postleitzahl enthalten. |
-| `primary` | Ein boolescher Wert, der angibt, ob es sich hierbei um die primäre Adresse des Benutzers handelt. Ein Profil kann zu einem bestimmten Zeitpunkt nur eine `primary` Adresse haben. |
+| `primary` | Ein boolescher Wert, der angibt, ob es sich hierbei um die primäre Adresse des Benutzers handelt. Ein Profil kann zu einem bestimmten Zeitpunkt nur eine `primary`-Adresse haben. |
 | `region` | Die Region, der Kreis oder der Bezirk der Adresse. |
 | `repositoryCreatedBy` | Die ID des Benutzers, der den Datensatz erstellt hat. |
 | `repositoryLastModifiedBy` | Die ID des Benutzers, der den Datensatz zuletzt geändert hat. |
 | `stateProvince` | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](http://www.unece.org/cefact/locode/subdivisions.html). |
 | `status` | Gibt an, ob die Adresse derzeit verwendet werden kann. |
 | `statusReason` | Eine Beschreibung des aktuellen `status`. |
-| `street1` - `street4` | Diese vier Felder enthalten Informationen auf der ersten Straßenseite, die Nummer der Wohnung, die Nummer der Straße und den Namen der Straße. `street2` optional `street4` sind. |
+| `street1` - `street4` | Diese vier Felder enthalten Informationen auf der ersten Straßenseite, die Nummer der Wohnung, die Nummer der Straße und den Namen der Straße. `street2` optional  `street4` sind. |
 
 Weitere Informationen zum Datentyp der Postanschrift finden Sie im öffentlichen XDM-Repository:
 
