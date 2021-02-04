@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api
+keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung API;Policy-Dienst-API
 solution: Experience Platform
 title: 'Verwalten von Datenverwendungsbeschriftungen mit APIs '
 topic: developer guide
@@ -7,7 +7,7 @@ description: Mit der DataSet-Dienst-API können Sie Nutzungsbezeichnungen für D
 translation-type: tm+mt
 source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1017'
 ht-degree: 5%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 5%
 
 # Verwalten von Datenverwendungsbeschriftungen mit APIs
 
-In diesem Dokument wird beschrieben, wie Sie Datenverwendungsbeschriftungen mit der [!DNL Policy Service] API und der [!DNL Dataset Service] API verwalten.
+In diesem Dokument wird beschrieben, wie Sie Datenverwendungsbeschriftungen mit der API [!DNL Policy Service] und der [!DNL Dataset Service]-API verwalten.
 
-Das [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) bietet mehrere Endpunkte, mit denen Sie Datenverwendungsbeschriftungen für Ihr Unternehmen erstellen und verwalten können.
+Das [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) stellt mehrere Endpunkte bereit, mit denen Sie Datenverwendungsbeschriftungen für Ihr Unternehmen erstellen und verwalten können.
 
-Mit der [!DNL Dataset Service] API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service] API, die DataSet-Metadaten verwaltet, getrennt.
+Mit der API [!DNL Dataset Service] können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service]-API getrennt, die DataSet-Metadaten verwaltet.
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [&quot;](../../catalog/api/getting-started.md) Erste Schritte&quot;im Handbuch für den Katalogentwickler beschrieben sind, um die erforderlichen Anmeldeinformationen für Aufrufe von [!DNL Platform] APIs zu sammeln.
+Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [Erste Schritte](../../catalog/api/getting-started.md) im Catalog Developer-Handbuch beschrieben sind, um die erforderlichen Anmeldeinformationen für Aufrufe an [!DNL Platform]-APIs zu sammeln.
 
-Um die in diesem Dokument beschriebenen [!DNL Dataset Service] Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id` Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch zur [Auflistung von Katalogobjekten](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
+Um die in diesem Dokument beschriebenen [!DNL Dataset Service]-Endpunkte aufzurufen, müssen Sie über den eindeutigen `id`-Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch [Auflistung der Katalogobjekte](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
 
 ## Liste aller Bezeichnungen {#list-labels}
 
-Mithilfe der [!DNL Policy Service] API können Sie alle `core` bzw. `custom` Bezeichnungen durch eine GET an `/labels/core` bzw. `/labels/custom`anfordern.
+Mit der API [!DNL Policy Service] können Sie alle `core`- oder `custom`-Beschriftungen durch eine GET an `/labels/core` bzw. `/labels/custom` Liste durchführen.
 
 **API-Format**
 
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von benutzerdefinierten Beschriftungen zurück, die vom System abgerufen werden. Da die obige Beispielanforderung ausgeführt wurde, zeigt `/labels/custom`die unten stehende Antwort nur benutzerdefinierte Beschriftungen an.
+Eine erfolgreiche Antwort gibt eine Liste von benutzerdefinierten Beschriftungen zurück, die vom System abgerufen werden. Da die obige Beispielanforderung an `/labels/custom` erfolgte, zeigt die unten stehende Antwort nur benutzerdefinierte Bezeichnungen an.
 
 ```json
 {
@@ -109,9 +109,9 @@ Eine erfolgreiche Antwort gibt eine Liste von benutzerdefinierten Beschriftungen
 }
 ```
 
-## Eine Beschriftung nachschlagen {#look-up-label}
+## Suchen Sie eine Beschriftung {#look-up-label}
 
-Sie können eine bestimmte Beschriftung nachschlagen, indem Sie die `name` Eigenschaft dieser Beschriftung in den Pfad einer GET-Anforderung zur [!DNL Policy Service] API aufnehmen.
+Sie können eine bestimmte Beschriftung nachschlagen, indem Sie die `name`-Eigenschaft dieser Beschriftung in den Pfad einer GET-Anforderung zur [!DNL Policy Service]-API aufnehmen.
 
 **API-Format**
 
@@ -122,11 +122,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{LABEL_NAME}` | The `name` property of the custom label you want to look up. |
+| `{LABEL_NAME}` | Die `name`-Eigenschaft der benutzerdefinierten Beschriftung, die Sie nachschlagen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird die benutzerdefinierte Beschriftung `L2`wie im Pfad angegeben abgerufen.
+Die folgende Anforderung ruft die benutzerdefinierte Beschriftung `L2` ab, wie im Pfad angegeben.
 
 ```shell
 curl -X GET \
@@ -163,9 +163,9 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 }
 ```
 
-## Erstellen oder Aktualisieren einer benutzerdefinierten Bezeichnung {#create-update-label}
+## Erstellen oder aktualisieren Sie eine benutzerdefinierte Beschriftung {#create-update-label}
 
-Um eine benutzerdefinierte Bezeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT an die [!DNL Policy Service] API senden.
+Um eine benutzerdefinierte Bezeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT an die [!DNL Policy Service]-API anfordern.
 
 **API-Format**
 
@@ -175,11 +175,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{LABEL_NAME}` | Die `name` Eigenschaft einer benutzerdefinierten Beschriftung. Wenn keine benutzerdefinierte Bezeichnung mit diesem Namen vorhanden ist, wird eine neue Bezeichnung erstellt. Wenn eine vorhanden ist, wird diese Bezeichnung aktualisiert. |
+| `{LABEL_NAME}` | Die `name`-Eigenschaft einer benutzerdefinierten Bezeichnung. Wenn keine benutzerdefinierte Bezeichnung mit diesem Namen vorhanden ist, wird eine neue Bezeichnung erstellt. Wenn eine vorhanden ist, wird diese Bezeichnung aktualisiert. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein neues Etikett erstellt, `L3`das Daten beschreiben soll, die Informationen zu den ausgewählten Zahlungsplänen der Kunden enthalten.
+Mit der folgenden Anforderung wird ein neues Etikett (`L3`) erstellt, das Daten beschreiben soll, die Informationen zu den ausgewählten Zahlungsplänen der Kunden enthalten.
 
 ```shell
 curl -X PUT \
@@ -199,7 +199,7 @@ curl -X PUT \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Eine eindeutige Zeichenfolgenkennung für die Bezeichnung. Dieser Wert wird für Nachschlagezwecke und die Anwendung der Beschriftung auf Datensätze und Felder verwendet. Es wird daher empfohlen, kurz und knapp zu sein. |
-| `category` | Die Kategorie des Etiketts. Sie können zwar eigene Kategorien für benutzerdefinierte Beschriftungen erstellen, es wird jedoch dringend empfohlen, die Beschriftung `Custom` in der Benutzeroberfläche anzuzeigen. |
+| `category` | Die Kategorie des Etiketts. Sie können zwar eigene Kategorien für benutzerdefinierte Beschriftungen erstellen, es wird jedoch dringend empfohlen, `Custom` zu verwenden, wenn die Beschriftung in der Benutzeroberfläche angezeigt werden soll. |
 | `friendlyName` | Ein benutzerfreundlicher Name für die Beschriftung, der zu Anzeigezwecken verwendet wird. |
 | `description` | (Optional) Eine Beschreibung der Beschriftung, um einen weiteren Kontext bereitzustellen. |
 
@@ -229,9 +229,9 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 }
 ```
 
-## Suchen von Beschriftungen für einen Datensatz {#look-up-dataset-labels}
+## Suchen Sie nach Beschriftungen für einen Datensatz {#look-up-dataset-labels}
 
-Sie können die Datenverwendungsbeschriftungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET an die [!DNL Dataset Service] API anfordern.
+Sie können die Datenverwendungsbeschriftungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET an die API [!DNL Dataset Service] anfordern.
 
 **API-Format**
 
@@ -241,7 +241,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige `id` Wert des Datensatzes, dessen Beschriftungen Sie nachschlagen möchten. |
+| `{DATASET_ID}` | Der eindeutige Wert von `id` des Datensatzes, dessen Beschriftungen Sie nachschlagen möchten. |
 
 **Anfrage**
 
@@ -284,7 +284,7 @@ Eine erfolgreiche Antwort gibt die Datenverwendungsbeschriftungen zurück, die a
 
 ## Anwenden von Beschriftungen auf einen Datensatz {#apply-dataset-labels}
 
-Sie können einen Satz von Bezeichnungen für ein Dataset erstellen, indem Sie sie in der Nutzlast einer POST oder einer PUT-Anforderung an die [!DNL Dataset Service] API bereitstellen. Wenn Sie eine dieser Methoden verwenden, werden vorhandene Beschriftungen überschrieben und durch die in der Payload bereitgestellten ersetzt.
+Sie können einen Satz von Bezeichnungen für ein Dataset erstellen, indem Sie sie in der Nutzlast einer POST oder einer PUT-Anforderung an die [!DNL Dataset Service]-API bereitstellen. Wenn Sie eine dieser Methoden verwenden, werden vorhandene Beschriftungen überschrieben und durch die in der Payload bereitgestellten ersetzt.
 
 **API-Format**
 
@@ -295,7 +295,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige `id` Wert des Datensatzes, für den Sie Beschriftungen erstellen. |
+| `{DATASET_ID}` | Der eindeutige Wert von `id` des Datensatzes, für den Sie Beschriftungen erstellen. |
 
 **Anfrage**
 
@@ -327,7 +327,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `labels` | Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Datensatz hinzufügen möchten. |
-| `optionalLabels` | Eine Liste der einzelnen Felder im Datensatz, denen Sie Beschriftungen hinzufügen möchten. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen: <br/><br/>`option`: Ein Objekt, das die [!DNL Experience Data Model] (XDM-)Attribute des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li>id</code>: Der URI $id</code> -Wert des Schemas, das dem Feld zugeordnet ist.</li><li>contentType</code>: Der Inhaltstyp und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/getting-started.md#accept">Accept-Header</a> für eine XDM-Suchanfrage erfolgen.</li><li>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Feld hinzufügen möchten. |
+| `optionalLabels` | Eine Liste der einzelnen Felder im Datensatz, denen Sie Beschriftungen hinzufügen möchten. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen: <br/><br/>`option`: Ein Objekt, das die Attribute [!DNL Experience Data Model] (XDM) des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li>id</code>: Der URI $id</code>-Wert des Schemas, das dem Feld zugeordnet ist.</li><li>contentType</code>: Der Inhaltstyp und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> für eine XDM-Suchanfrage erfolgen.</li><li>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Feld hinzufügen möchten. |
 
 **Antwort**
 
@@ -351,7 +351,7 @@ Eine erfolgreiche Antwort gibt die Beschriftungen zurück, die dem Datensatz hin
 
 ## Entfernen von Bezeichnungen aus einem Datensatz {#remove-dataset-labels}
 
-Sie können die auf einen Datensatz angewendeten Beschriftungen entfernen, indem Sie eine DELETE-Anforderung an die [!DNL Dataset Service] API senden.
+Sie können die auf einen Datensatz angewendeten Beschriftungen entfernen, indem Sie eine DELETE-Anforderung an die API [!DNL Dataset Service] stellen.
 
 **API-Format**
 
@@ -361,7 +361,7 @@ DELETE /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige `id` Wert des Datensatzes, dessen Beschriftungen Sie entfernen möchten. |
+| `{DATASET_ID}` | Der eindeutige Wert von `id` des Datensatzes, dessen Beschriftungen Sie entfernen möchten. |
 
 **Anfrage**
 
@@ -376,14 +376,14 @@ curl -X DELETE \
 
 **Antwort**
 
-Ein erfolgreicher HTTP-Status 200 (OK), der angibt, dass die Beschriftungen entfernt wurden. Sie können die vorhandenen Bezeichnungen [für den Datensatz in einem separaten Aufruf](#look-up-dataset-labels) nachschlagen, um dies zu bestätigen.
+Ein erfolgreicher HTTP-Status 200 (OK), der angibt, dass die Beschriftungen entfernt wurden. Sie können [die vorhandenen Bezeichnungen](#look-up-dataset-labels) für den Datensatz in einem separaten Aufruf nachschlagen, um dies zu bestätigen.
 
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Datenverwendungsbeschriftungen mithilfe von APIs verwalten können.
 
-Nachdem Sie Datenverwendungsbeschriftungen auf der Dataset- und Feldebene hinzugefügt haben, können Sie beginnen, Daten zu erfassen [!DNL Experience Platform]. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
+Nachdem Sie Datenverwendungsbeschriftungen auf der Dataset- und Feldebene hinzugefügt haben, können Sie beginnen, Daten in [!DNL Experience Platform] zu erfassen. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
 
-Sie können jetzt auch Datenverwendungsrichtlinien auf Basis der von Ihnen angewendeten Beschriftungen definieren. Weitere Informationen finden Sie in der Übersicht über die [Datenverwendungsrichtlinien](../policies/overview.md).
+Sie können jetzt auch Datenverwendungsrichtlinien auf Basis der von Ihnen angewendeten Beschriftungen definieren. Weitere Informationen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../policies/overview.md).
 
-Weitere Informationen zum Verwalten von Datensätzen in [!DNL Experience Platform]finden Sie in der Übersicht über [Datensätze](../../catalog/datasets/overview.md).
+Weitere Informationen zum Verwalten von Datensätzen in [!DNL Experience Platform] finden Sie unter [Übersicht über Datensätze](../../catalog/datasets/overview.md).
