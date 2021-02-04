@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
+keywords: Experience Platform;Startseite;beliebte Themen;Katalog;Suche nach mehreren Objekten;API
 solution: Experience Platform
 title: Suchen nach mehreren Objekten
 topic: developer guide
@@ -7,19 +7,19 @@ description: Wenn Sie mehrere bestimmte Objekte anzeigen möchten, anstatt eine 
 translation-type: tm+mt
 source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 60%
+source-wordcount: '235'
+ht-degree: 58%
 
 ---
 
 
 # Suchen nach mehreren Objekten
 
-If you wish to view several specific objects, rather than making one request per object, [!DNL Catalog] provides a simple shortcut for requesting multiple objects of the same type. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
+Wenn Sie anstelle einer Anforderung pro Objekt mehrere bestimmte Objekte Ansicht haben möchten, stellt [!DNL Catalog] eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs bereit. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
 
 >[!NOTE]
 >
->Even when requesting specific [!DNL Catalog] objects, it is still best practice to `properties` query parameter to return only the properties you need.
+>Auch wenn Sie bestimmte [!DNL Catalog]-Objekte anfordern, ist es immer noch empfehlenswert, den Parameter `properties` &quot;Abfrage&quot;so zu verwenden, dass nur die benötigten Eigenschaften zurückgegeben werden.
 
 **API-Format**
 
@@ -30,7 +30,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Eine Kennung für eines der spezifischen Objekte, die Sie abrufen möchten. |
 
 **Anfrage**
@@ -52,7 +52,7 @@ Eine erfolgreiche Antwort gibt eine Liste der angegebenen Datensätze zurück, d
 
 >[!NOTE]
 >
->If a returned object does not contain one ore more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in ***`Sample Dataset 3`*** and ***`Sample Dataset 4`*** below.
+>Wenn ein zurückgegebenes Objekt nicht mehr als eine der angeforderten Eigenschaften enthält, die durch die `properties`-Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die darin enthalten sind, wie unten unter ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** dargestellt.
 
 ```json
 {
