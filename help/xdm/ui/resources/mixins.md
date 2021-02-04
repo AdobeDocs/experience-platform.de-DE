@@ -5,9 +5,9 @@ title: Erstellen und Bearbeiten von Mixins in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Mixins in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: cf74c7922271035474c7f10534692983add48616
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '704'
 ht-degree: 5%
 
 ---
@@ -45,9 +45,9 @@ Das [!DNL Schema Editor] wird wieder angezeigt, wobei das neue mixin der linken 
 
 >[!NOTE]
 >
->Es können nur benutzerdefinierte Mixins bearbeitet werden, die von Ihrem Unternehmen definiert wurden.
+>Nur benutzerdefinierte Mixins, die von Ihrem Unternehmen definiert wurden, können vollständig bearbeitet und angepasst werden. Bei von der Adobe definierten Core-Mixins können nur die Anzeigenamen für ihre Felder im Kontext einzelner Schema bearbeitet werden. Weitere Informationen finden Sie im Abschnitt [Bearbeiten von Anzeigenamen für Schema-Felder](./schemas.md#display-names).
 >
->Darüber hinaus können nach dem Speichern und der Verwendung eines Mixins in einem Schema zur Datenerfassung nur noch zusätzliche Änderungen am Mixin vorgenommen werden. Weitere Informationen finden Sie unter [Regeln der Schema-Evolution](../../schema/composition.md#evolution).
+>Nachdem ein benutzerdefiniertes Mixin gespeichert und in einem Schema zur Datenaufnahme verwendet wurde, können danach nur noch zusätzliche Änderungen am Mixin vorgenommen werden. Weitere Informationen finden Sie unter [Regeln der Schema-Evolution](../../schema/composition.md#evolution).
 
 Um ein vorhandenes Mixin zu bearbeiten, müssen Sie zunächst ein Schema öffnen, das das mixin innerhalb von [!DNL Schema Editor] verwendet. Sie können [ein vorhandenes Schema zur Bearbeitung auswählen oder [ein neues Schema](./schemas.md#create) erstellen und das betreffende Gemisch hinzufügen.](./schemas.md#edit)
 
