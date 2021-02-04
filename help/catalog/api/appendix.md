@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
+keywords: Experience Platform;Startseite;beliebte Themen;Katalogdienst;Katalogdatei;Anhang
 solution: Experience Platform
 title: Anhang zum Entwicklerhandbuch für den Catalog Service
 topic: developer guide
@@ -7,19 +7,19 @@ description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei de
 translation-type: tm+mt
 source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 80%
+source-wordcount: '920'
+ht-degree: 79%
 
 ---
 
 
 # [!DNL Catalog Service] Entwicklerhandbuch
 
-This document contains additional information to help you work with the [!DNL Catalog] API.
+Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der [!DNL Catalog]-API unterstützen.
 
 ## Verwandte Objekte anzeigen {#view-interrelated-objects}
 
-Some [!DNL Catalog] objects can be interrelated with other [!DNL Catalog] objects. Alle Felder, die in Antwort-Payloads das Präfix `@` aufweisen, bezeichnen verwandte Objekte. Die Werte für diese Felder haben die Form eines URI, der in einer separaten GET-Anfrage zum Abrufen der zugehörigen Objekte, die sie darstellen, genutzt werden kann.
+Einige [!DNL Catalog]-Objekte können mit anderen [!DNL Catalog]-Objekten verknüpft werden. Alle Felder, die in Antwort-Payloads das Präfix `@` aufweisen, bezeichnen verwandte Objekte. Die Werte für diese Felder haben die Form eines URI, der in einer separaten GET-Anfrage zum Abrufen der zugehörigen Objekte, die sie darstellen, genutzt werden kann.
 
 Der Beispieldatensatz, der im Dokument zum [Nachschlagen eines bestimmten Datensatzes](look-up-object.md) zurückgegeben wird, enthält ein `files`-Feld mit dem folgenden URI-Wert: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. Der Inhalt des `files`-Felds kann durch Verwendung des URI als Pfad für eine neue GET-Anfrage angezeigt werden.
 
@@ -93,9 +93,9 @@ Eine erfolgreiche Antwort gibt eine Liste verwandter Objekte zurück. In diesem 
 
 ## Mehrere Anfragen in einem einzelnen Aufruf stellen
 
-The root endpoint of the [!DNL Catalog] API allows for multiple requests to be made within a single call. Die Anfrage-Payload enthält eine Gruppe von Objekten, die normalerweise einzelne Anfragen darstellen würden, die dann der Reihenfolge nach ausgeführt werden.
+Der Stamm-Endpunkt der [!DNL Catalog]-API ermöglicht es, mehrere Anforderungen innerhalb eines einzelnen Aufrufs zu stellen. Die Anfrage-Payload enthält eine Gruppe von Objekten, die normalerweise einzelne Anfragen darstellen würden, die dann der Reihenfolge nach ausgeführt werden.
 
-If these requests are modifications or additions to [!DNL Catalog] and any one of the changes fails, all changes will revert.
+Wenn es sich bei diesen Anforderungen um Änderungen oder Ergänzungen von [!DNL Catalog] handelt und eine der Änderungen fehlschlägt, werden alle Änderungen zurückgesetzt.
 
 **API-Format**
 
@@ -146,13 +146,13 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `id` | Vom Anwender angegebene Kennung, die an das Antwortobjekt angehängt wird, damit Sie Anfragen Antworten zuordnen können. [!DNL Catalog] speichert diesen Wert nicht und gibt ihn in der Antwort lediglich zu Referenzzwecken zurück. |
-| `resource` | The resource path relative to the root of the [!DNL Catalog] API. Das Protokoll und die Domain sollten nicht Teil dieses Werts sein und sollten mit dem Präfix „/“ versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranfrage verwenden`method`, fügen Sie die Objektkennung in den Ressourcenpfad ein. Not to be confused with the user-supplied `id`, the resource path uses the ID of the [!DNL Catalog] object itself (for example, `resource: "/dataSets/1234567890"`). |
+| `resource` | Der Ressourcenpfad relativ zum Stammordner der [!DNL Catalog]-API. Das Protokoll und die Domain sollten nicht Teil dieses Werts sein und sollten mit dem Präfix „/“ versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranfrage verwenden`method`, fügen Sie die Objektkennung in den Ressourcenpfad ein. Dieser Ressourcenpfad ist nicht mit dem vom Benutzer bereitgestellten `id` zu verwechseln, sondern verwendet die ID des [!DNL Catalog]-Objekts selbst (z. B. `resource: "/dataSets/1234567890"`). |
 | `method` | Der Name der Methode (GET, PUT, POST, PATCH oder DELETE), die mit der in der Anfrage ausgeführten Aktion verknüpft ist. |
 | `body` | Das JSON-Dokument, das in einer POST-, PUT- oder PATCH-Anfrage normalerweise als Payload übergeben wird. Diese Eigenschaft ist bei GET- oder DELETE-Anfragen nicht erforderlich. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Gruppe von Objekten, die die einzelnen Anfragen zugewiesene `id` enthalten, den HTTP-Status-Code für die jeweilige Anfrage und den `body` (Text) der Antwort zurück. Since the three sample requests were all to create new objects, the `body` of each object is an array containing only the ID of the newly created object, as is the standard with most successful POST responses in [!DNL Catalog].
+Eine erfolgreiche Antwort gibt eine Gruppe von Objekten, die die einzelnen Anfragen zugewiesene `id` enthalten, den HTTP-Status-Code für die jeweilige Anfrage und den `body` (Text) der Antwort zurück. Da die drei Musteranforderungen alle neue Objekte erstellen sollten, ist das `body` jedes Objekts ein Array, das nur die ID des neu erstellten Objekts enthält, ebenso wie der Standard mit den erfolgreichsten Antworten auf die POST in [!DNL Catalog].
 
 ```json
 [
@@ -193,6 +193,6 @@ Es kann vorkommen, dass Sie ein Objekt prüfen möchten, ohne die Informationen 
 
 ## Datenkomprimierung
 
-Compaction is an [!DNL Experience Platform] service that merges data from small files into larger files without changing any data. Aus Leistungsgründen kann es sinnvoll sein, mehrere kleine Dateien in größeren Dateien zu kombinieren, um bei Abfragen schneller auf Daten zugreifen zu können.
+Compaction ist ein [!DNL Experience Platform]-Dienst, der Daten aus kleinen Dateien in größere Dateien zusammenführt, ohne Daten zu ändern. Aus Leistungsgründen kann es sinnvoll sein, mehrere kleine Dateien in größeren Dateien zu kombinieren, um bei Abfragen schneller auf Daten zugreifen zu können.
 
-When the files in an ingested batch have been compacted, its associated [!DNL Catalog] object is updated for monitoring purposes.
+Wenn die Dateien in einem erfassten Stapel komprimiert wurden, wird das zugehörige [!DNL Catalog]-Objekt zu Überwachungszwecken aktualisiert.
