@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real-time Machine Learning;node reference;
+keywords: Experience Platform;Entwicklerhandbuch;Data Science Workspace;beliebte Themen;Echtzeit-maschinelles Lernen;Node-Referenz;
 solution: Experience Platform
 title: Referenzhandbuch zu Nodes für maschinelles Lernen in Echtzeit
 topic: Nodes reference
@@ -7,7 +7,7 @@ description: Eine Node ist die grundlegende Einheit, aus der Diagramme gebildet 
 translation-type: tm+mt
 source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '680'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ In der folgenden Anleitung werden die unterstützten Node-Bibliotheken für masc
 
 ## Entdecken von Nodes zur Verwendung in Ihrer ML-Pipeline
 
-Kopieren Sie den folgenden Code in ein [!DNL Python] Notebook, um alle verfügbaren Knoten Ansicht.
+Kopieren Sie den folgenden Code in ein [!DNL Python]-Notizbuch, um alle verfügbaren Nodes Ansicht.
 
 ```python
 from pprint import pprint
@@ -83,9 +83,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-Mit dem folgenden Pandas-Knoten können Sie eine beliebige `pd.DataFrame` Methode oder eine allgemeine Pandas-Funktion auf oberster Ebene importieren. Weitere Informationen zu Pandas-Methoden finden Sie in der Dokumentation zu den [Pandas-Methoden](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Weitere Informationen zu Funktionen auf oberster Ebene finden Sie im [Pandas API-Referenzhandbuch für allgemeine Funktionen](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Mit dem folgenden Pandas-Knoten können Sie eine beliebige `pd.DataFrame`-Methode oder eine beliebige allgemeine Pandas-Funktion auf oberster Ebene importieren. Weitere Informationen zu Pandas-Methoden finden Sie in der Dokumentation [Pandas-Methoden](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Weitere Informationen zu Funktionen der obersten Ebene finden Sie im Handbuch [Pandas API-Referenz für allgemeine Funktionen](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Der unten stehende Knoten verwendet `"import": "map"` den Methodennamen als Zeichenfolge in die Parameter, gefolgt von der Eingabe der Parameter als Zuordnungsfunktion. Im folgenden Beispiel wird dies mithilfe von `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Nachdem Sie die Karte eingerichtet haben, können Sie sie `inplace` als `True` oder `False`festlegen. Legen Sie `inplace` als `True` oder `False` basierend darauf fest, ob die Transformation angewendet werden soll oder nicht. Standardmäßig `"inplace": False` wird eine neue Spalte erstellt. Die Unterstützung für die Bereitstellung eines neuen Spaltennamens ist so eingestellt, dass er in einer späteren Version hinzugefügt wird. Die letzte Zeile `cols` kann ein einzelner Spaltenname oder eine Liste von Spalten sein. Geben Sie die Spalten an, auf die die Transformation angewendet werden soll. In diesem Beispiel `device` wird angegeben.
+Der unten stehende Knoten verwendet `"import": "map"`, um den Methodennamen als Zeichenfolge in die Parameter zu importieren, gefolgt von der Eingabe der Parameter als Zuordnungsfunktion. Im folgenden Beispiel wird dies mit `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` durchgeführt. Nachdem Sie die Map platziert haben, haben Sie die Möglichkeit, `inplace` auf `True` oder `False` einzustellen. Stellen Sie `inplace` auf `True` oder `False` ein, je nachdem, ob Sie die Transformation anstelle der Transformation anwenden möchten oder nicht. Standardmäßig erstellt `"inplace": False` eine neue Spalte. Die Unterstützung für die Bereitstellung eines neuen Spaltennamens ist so eingestellt, dass er in einer späteren Version hinzugefügt wird. Die letzte Zeile `cols` kann ein einzelner Spaltenname oder eine Liste von Spalten sein. Geben Sie die Spalten an, auf die die Transformation angewendet werden soll. In diesem Beispiel wird `device` angegeben.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -126,14 +126,14 @@ msg6 = model_train.process(msg5)
 | Funktionen | Eingabefunktionen für das Modell (Liste von Zeichenfolgen). <br> Beispiel: `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | label | Spaltenname der Zielgruppe (Zeichenfolge). |
 | mode | Zug/Test (Zeichenfolge). |
-| model_path | Pfad zum gespeicherten Modell lokal im Format &quot;onnx&quot;. |
+| model_path | Pfad zum Speichermodell lokal im Format &quot;onnx&quot;. |
 | params.model | Absoluter Importpfad zum Modell (Zeichenfolge), z. B.: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Modell-Hyperparameter finden Sie in der Dokumentation zur [Sklearn-API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) . |
-| node_instance.process(data_message_from_previous_node) | Die Methode `process()` nimmt DataMsg von der vorherigen Node und wendet eine Transformation an. Dies hängt von der aktuell verwendeten Node ab. |
+| params.model_params | Modellhyperparameter finden Sie in der Dokumentation [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) weitere Informationen. |
+| node_instance.process(data_message_from_previous_node) | Die Methode `process()` nimmt DataMsg vom vorherigen Knoten und wendet eine Transformation an. Dies hängt von der aktuell verwendeten Node ab. |
 
 ### Split
 
-Verwenden Sie den folgenden Knoten, um Ihren Dataframe in Zug zu teilen und zu testen, indem Sie ihn bestehen `train_size` oder `test_size`. Dadurch wird ein Dataframe mit einem Multi-Index zurückgegeben. Sie können mithilfe des folgenden Beispiels auf Zug- und Testdataframes zugreifen `msg5.data.xs(“train”)`.
+Verwenden Sie den folgenden Knoten, um den Dataframe in Zug zu teilen und zu testen, indem Sie `train_size` oder `test_size` übergeben. Dadurch wird ein Dataframe mit einem Multi-Index zurückgegeben. Sie können mit dem folgenden Beispiel `msg5.data.xs(“train”)` auf Zug- und Testdataframes zugreifen.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +142,4 @@ msg5 = splitter.process(msg4)
 
 ## Nächste Schritte
 
-Der nächste Schritt besteht darin, Nodes zur Verwendung bei der Bewertung eines Echtzeit-maschinellen Lernmodells zu erstellen. Weitere Informationen finden Sie im Benutzerhandbuch für [Notebook-Computer in Echtzeit](./rtml-authoring-notebook.md).
+Der nächste Schritt besteht darin, Nodes zur Verwendung bei der Bewertung eines Echtzeit-maschinellen Lernmodells zu erstellen. Weitere Informationen finden Sie im Benutzerhandbuch für das Notebook [Echtzeit-Lernen für Maschinen](./rtml-authoring-notebook.md).
