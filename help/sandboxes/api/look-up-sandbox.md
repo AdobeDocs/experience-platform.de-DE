@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
+keywords: Experience Platform;Home;beliebte Themen;Sandbox suchen;Sandbox aufsuchen
 solution: Experience Platform
 title: Nachschlagen einer Sandbox
 topic: developer guide
@@ -7,8 +7,8 @@ description: Sie können eine einzelne Sandbox nachschlagen, indem Sie eine GET 
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 90%
+source-wordcount: '237'
+ht-degree: 86%
 
 ---
 
