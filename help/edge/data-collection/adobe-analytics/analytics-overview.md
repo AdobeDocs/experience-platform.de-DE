@@ -7,15 +7,15 @@ keywords: adobe analytics;analytics;mapped data;mapped vars;
 translation-type: tm+mt
 source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 84%
+source-wordcount: '209'
+ht-degree: 81%
 
 ---
 
 
 # Daten an Adobe Analytics senden
 
-The Adobe Experience Platform [!DNL Web SDK] can send data to Adobe Analytics. Dies funktioniert durch die Übersetzung von `xdm` in ein Format, das Adobe Analytics verwenden kann.
+Das Adobe Experience Platform [!DNL Web SDK] kann Daten an Adobe Analytics senden. Dies funktioniert durch die Übersetzung von `xdm` in ein Format, das Adobe Analytics verwenden kann.
 
 ## Einrichten
 
@@ -23,7 +23,7 @@ Adobe Analytics nimmt die gesendeten Daten automatisch auf, wenn in der Benutzer
 
 ## Automatisch zugeordnete Daten
 
-The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM variables automatically. Die vollständige Liste der automatisch zugeordneten Variablen ist [hier](automatically-mapped-vars.md) aufgeführt.
+Das Adobe Experience Platform [!DNL Edge Network] ordnet automatisch viele XDM-Variablen zu. Die vollständige Liste der automatisch zugeordneten Variablen ist [hier](automatically-mapped-vars.md) aufgeführt.
 
 ## Manuell zugeordnete Daten
 
