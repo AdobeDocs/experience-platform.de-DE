@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;identity xid;XID
+keywords: Experience Platform;Home;beliebte Themen;Identitätsangabe;XID
 solution: Experience Platform
 title: Native Kennung für eine Identität abrufen
 topic: API guide
@@ -7,19 +7,19 @@ description: Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und I
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 74%
+source-wordcount: '230'
+ht-degree: 72%
 
 ---
 
 
 # XID für eine Identität abrufen
 
-Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und Identitäts-Namespace in erfassten XDM-Daten und bei der Bereitstellung einer Identität zur Verwendung in einem API-Aufruf bereitgestellt. When identities are persisted in [!DNL Identity Service], an ID is generated and assigned to that identity, called the native XID. [!DNL Platform] APIs, für die Identitätsdaten unterstützt werden müssen, verwenden dieses kompaktere Formular für die aggregierte ID und den Namensraum. XID ist eine Base64-kodierte Zeichenfolge.
+Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und Identitäts-Namespace in erfassten XDM-Daten und bei der Bereitstellung einer Identität zur Verwendung in einem API-Aufruf bereitgestellt. Wenn Identitäten in [!DNL Identity Service] beibehalten werden, wird eine ID generiert und dieser Identität zugewiesen, die als native XID bezeichnet wird. [!DNL Platform] APIs, für die Identitätsdaten unterstützt werden müssen, verwenden dieses kompaktere Formular für die aggregierte ID und den Namensraum. XID ist eine Base64-kodierte Zeichenfolge.
 
 >[!NOTE]
 >
-> Dieses Format ist vor allem für den internen Adobe-Gebrauch vorgesehen. Native XID as a singular value is more space efficient and is what is used internally within [!DNL Platform] solutions for storage and serialization. Sie ist jedoch nicht für Menschen lesbar, ist opak und erfordert einen separaten Aufruf, um sie zur Verwendung abzurufen.
+> Dieses Format ist vor allem für den internen Adobe-Gebrauch vorgesehen. Native XID als Singular-Wert ist platzsparender und wird intern in [!DNL Platform]-Lösungen für Datenspeicherung und Serialisierung verwendet. Sie ist jedoch nicht für Menschen lesbar, ist opak und erfordert einen separaten Aufruf, um sie zur Verwendung abzurufen.
 
 Verschaffen Sie sich die XID für einen angegebenen ID-Wert und Namespace mithilfe des in diesem Abschnitt beschriebenen Diensts.
 
