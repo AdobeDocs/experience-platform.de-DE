@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
+keywords: Experience Platform;Modellbewertung;Data Science Workspace;beliebte Themen;sensei-maschinelles Lernen
 solution: Experience Platform
 title: Scoring für ein Modell vornehmen (API)
 topic: tutorial
@@ -8,8 +8,8 @@ description: In diesem Lernprogramm erfahren Sie, wie Sie die Sensei Machine Lea
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 96%
+source-wordcount: '543'
+ht-degree: 93%
 
 ---
 
