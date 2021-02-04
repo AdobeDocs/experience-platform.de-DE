@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;Home;beliebte Themen;Liste-Sandboxen
 solution: Experience Platform
 title: Alle Sandboxes auflisten
 topic: developer guide
@@ -7,15 +7,15 @@ description: Um alle Sandboxen Ihrer IMS-Organisation (aktiv oder anderweitig) L
 translation-type: tm+mt
 source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 55%
+source-wordcount: '316'
+ht-degree: 54%
 
 ---
 
 
 # Alle Sandboxes auflisten
 
-Um alle Sandboxen Ihrer IMS-Organisation (aktiv oder anderweitig) Liste, stellen Sie eine GET an den `/sandboxes` Endpunkt.
+Um alle Sandboxen Ihrer IMS-Organisation (aktiv oder anderweitig) Liste, stellen Sie eine GET an den `/sandboxes`-Endpunkt.
 
 **API-Format**
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu den Parametern für die [Abfrage](#query) . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrage parameters](#query). |
 
 **Anfrage**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Sandboxen zurück, die zu Ihrem Unternehmen gehören, einschließlich Details wie `name`, `title`, `state`und `type`.
+Eine erfolgreiche Antwort gibt eine Liste von Sandboxen zurück, die zu Ihrem Unternehmen gehören, einschließlich Details wie `name`, `title`, `state` und `type`.
 
 ```json
 {
@@ -130,11 +130,11 @@ Eine erfolgreiche Antwort gibt eine Liste von Sandboxen zurück, die zu Ihrem Un
 
 ## Verwenden von Abfrageparametern {#query}
 
-Die [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API unterstützt die Verwendung von Abfrage-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Sandboxen.
+Die [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)-API unterstützt die Verwendung von Abfragen-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Sandboxen.
 
 >[!NOTE]
 >
->Die Parameter `limit` und `offset` Abfrage müssen zusammen angegeben werden. Wenn Sie nur eine angeben, gibt die API einen Fehler zurück. Wenn Sie none angeben, ist der Standardwert 50 und der Offset 0.
+>Die Parameter `limit` und `offset` für die Abfrage müssen zusammen angegeben werden. Wenn Sie nur eine angeben, gibt die API einen Fehler zurück. Wenn Sie none angeben, ist der Standardwert 50 und der Offset 0.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
