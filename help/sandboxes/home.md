@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox;Sandbox;testing;Testing
+keywords: Experience Platform;Startseite;beliebte Themen;Sandbox;Sandbox;Test;Test
 solution: Experience Platform
 title: Sandbox-Übersicht
 topic: overview
@@ -7,8 +7,8 @@ description: Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Ex
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 90%
+source-wordcount: '755'
+ht-degree: 89%
 
 ---
 
@@ -51,7 +51,7 @@ In der [Benutzeroberfläche von Experience Platform](https://platform.adobe.com)
 
 ## Sandboxes in Experience Platform-APIs
 
-Beim Aufrufen von Experience Platform-APIs muss unter der Kopfzeile `x-sandbox-name` ein Sandbox-Name angegeben werden. For example, when making a call to the [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) to view all datasets within the Production sandbox, the sandbox&#39;s name (&quot;prod&quot;) is provided as a header in the API request:
+Beim Aufrufen von Experience Platform-APIs muss unter der Kopfzeile `x-sandbox-name` ein Sandbox-Name angegeben werden. Wenn Sie beispielsweise den Befehl [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) aufrufen, um alle Datensätze in der Produktions-Sandbox Ansicht, wird der Name der Sandbox (&quot;prod&quot;) als Kopfzeile in der API-Anforderung bereitgestellt:
 
 ```shell
 curl -X GET \
