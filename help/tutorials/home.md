@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;workflow
+keywords: Experience Platform;Startseite;beliebte Themen;Workflow
 solution: Experience Platform
 title: Query Service von Adobe Experience Platform
 topic: overview
@@ -7,8 +7,8 @@ description: Diese Tutorials dienen als Ergänzung zu den in der Dokumentation z
 translation-type: tm+mt
 source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 79%
+source-wordcount: '181'
+ht-degree: 76%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Die Tutorials zu Adobe Experience Platform wurden kürzlich an einen anderen Ort migriert. To find a tutorial, select the correct [!DNL Platform] area from the left-navigation. Bitte nehmen Sie sich einen Moment Zeit, um Ihre ggf. bestehenden Lesezeichen zu aktualisieren.
+>Die Tutorials zu Adobe Experience Platform wurden kürzlich an einen anderen Ort migriert. Um ein Tutorial zu finden, wählen Sie den richtigen Bereich [!DNL Platform] in der linken Navigation aus. Bitte nehmen Sie sich einen Moment Zeit, um Ihre ggf. bestehenden Lesezeichen zu aktualisieren.
 
-Adobe Experience Platform ist die branchenweit erste speziell für das Customer Experience Management konzipierte Plattform. Mit Echtzeit-Kundenprofilen, durchgängiger Intelligenz und einer offenen und erweiterbaren Architektur lässt die Lösung die Umsetzung personalisierter Erlebnisse in großem Maßstab Realität werden. Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms.
+Adobe Experience Platform ist die branchenweit erste speziell für das Customer Experience Management konzipierte Plattform. Mit Echtzeit-Kundenprofilen, durchgängiger Intelligenz und einer offenen und erweiterbaren Architektur lässt die Lösung die Umsetzung personalisierter Erlebnisse in großem Maßstab Realität werden. Beginnen Sie schnell und einfach mit [!DNL Platform], indem Sie sich mit Schritt-für-Schritt-Übungen für alles - von der Vorbereitung Ihrer Daten für die Erfassung bis hin zu fortgeschrittenen maschinellen Lernalgorithmen - beschäftigen.
 
 Diese Tutorials dienen als Ergänzung zu den in der [Dokumentation zu Experience Platform](../landing/documentation/overview.md) enthaltenen Informationen. Die besten Ergebnisse erzielen Sie, wenn Sie diese parat halten, während Sie die Tutorials absolvieren. Für den Fall, dass bei Ihnen im Verlauf des Tutorials Fehler auftreten sollten, konsultieren Sie das [Handbuch zur Fehlerbehebung für Adobe Experience Platform](../landing/troubleshooting.md) oder die zu den einzelnen Funktionen verfügbaren Handbücher.
