@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
+keywords: Experience Platform;Startseite;beliebte Themen;Zuordnung von Audience Managern;Zuordnung von Audiencen-Managern
 solution: Experience Platform
 title: Audience Manager-Mapping-Feld
 topic: overview
@@ -7,8 +7,8 @@ description: Die folgenden Tabellen enthalten die Mappings zwischen den Feldern 
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 97%
+source-wordcount: '162'
+ht-degree: 90%
 
 ---
 
