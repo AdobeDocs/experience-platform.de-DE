@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Vergleichsfunktionen;Vergleich;
 solution: Experience Platform
 title: Vergleichsfunktionen
 topic: developer guide
@@ -7,7 +7,7 @@ description: Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Au
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '325'
 ht-degree: 15%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 15%
 
 # Vergleichsfunktionen
 
-Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen, zurückzugeben `true` oder `false` entsprechend. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Vergleichsfunktionen werden zum Vergleich zwischen verschiedenen Ausdrücken und Werten verwendet und geben `true` oder `false` entsprechend zurück. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Gleich
 
-Die Funktion `=` (gleich) prüft, ob ein Wert oder Ausdruck mit einem anderen Wert oder Ausdruck übereinstimmt.
+Die Funktion `=` (gleich) prüft, ob ein Wert oder Ausdruck gleich einem anderen Wert oder Ausdruck ist.
 
 **Format**
 
@@ -37,7 +37,7 @@ homeAddress.countryISO = "CA"
 
 ## Ungleich
 
-Die Funktion `!=` (nicht gleich) prüft, ob ein Wert oder Ausdruck **nicht** mit einem anderen Wert oder Ausdruck übereinstimmt.
+Die Funktion `!=` (nicht gleich) prüft, ob ein Wert oder Ausdruck **nicht** einem anderen Wert oder Ausdruck entspricht.
 
 **Format**
 
@@ -91,7 +91,7 @@ person.birthMonth >= 3
 
 ## Kleiner als
 
-Mit der Vergleichsfunktion `<` (kleiner als) wird überprüft, ob der erste Wert kleiner als der zweite ist.
+Mit der Vergleichsfunktion `<` (less than) wird geprüft, ob der erste Wert kleiner als der zweite ist.
 
 **Format**
 
@@ -109,7 +109,7 @@ person.birthMonth < 2
 
 ## Kleiner oder gleich
 
-Mit der Vergleichsfunktion `<=` (kleiner oder gleich) wird überprüft, ob der erste Wert kleiner oder gleich dem zweiten Wert ist.
+Mit der Vergleichsfunktion `<=` (kleiner oder gleich) wird geprüft, ob der erste Wert kleiner oder gleich dem zweiten Wert ist.
 
 **Format**
 
