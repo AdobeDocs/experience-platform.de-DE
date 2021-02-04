@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;create batch;catalog service;api
+keywords: Experience Platform;Startseite;beliebte Themen;Stapel erstellen;Katalogdienst;API
 solution: Experience Platform
 title: Erstellen eines Datensatzes
 topic: developer guide
@@ -7,8 +7,8 @@ description: Damit in einem Datensatz Daten aufgenommen werden können, muss ihm
 translation-type: tm+mt
 source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 79%
+source-wordcount: '138'
+ht-degree: 73%
 
 ---
 
