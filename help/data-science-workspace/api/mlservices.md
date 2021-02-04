@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
+keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;mlservices;sensei-maschinelles Lernen
 solution: Experience Platform
 title: Dienste
 topic: Developer guide
@@ -7,7 +7,7 @@ description: Ein MLService ist ein veröffentlichtes, geschultes Modell, das Ihr
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '887'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 Ein MLService ist ein veröffentlichtes, geschultes Modell, das Ihrem Unternehmen die Möglichkeit gibt, auf bereits entwickelte Modelle zuzugreifen und sie wiederzuverwenden. Eine wichtige Funktion von MLServices ist die Möglichkeit, Schulungen und Bewertungen planmäßig zu automatisieren. Terminierte Schulungen können dazu beitragen, die Effizienz und Genauigkeit eines Modells zu erhalten, während geplante Bewertungsläufe sicherstellen können, dass stets neue Erkenntnisse generiert werden.
 
-Automatisierte Schulungs- und Bewertungszeitpläne werden mit einem Startzeitstempel, einem Endzeitstempel und einer Häufigkeit als [Cron-Ausdruck](https://en.wikipedia.org/wiki/Cron)definiert. Zeitpläne können beim [Erstellen eines MLService](#create-an-mlservice) definiert oder durch [Aktualisierung eines vorhandenen MLService](#update-an-mlservice)angewendet werden.
+Automatisierte Schulungs- und Bewertungszeitpläne werden mit einem Startzeitstempel, einem Endzeitstempel und einer Häufigkeit definiert, die als [cron-Ausdruck](https://en.wikipedia.org/wiki/Cron) dargestellt wird. Zeitpläne können definiert werden, wenn [ein MLService](#create-an-mlservice) erstellt wird oder [ein vorhandener MLService](#update-an-mlservice) aktualisiert wird.
 
 ## Erstellen eines MLService {#create-an-mlservice}
 
@@ -78,7 +78,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu erstellten MLService einschließlich der eindeutigen Kennung (`id`), der Experiment-ID für die Schulung (`trainingExperimentId`), der Experiment-ID für die Bewertung (`scoringExperimentId`) und der Eingabe-Schulungsdatensatz-ID (`trainingDataSetId`) enthält.
+Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu erstellten MLService einschließlich seiner eindeutigen Kennung (`id`), Experiment-ID für die Schulung (`trainingExperimentId`), Experiment-ID für die Auswertung (`scoringExperimentId`) und der Eingabe-Schulungsdatensatz-ID (`trainingDataSetId`) enthält.
 
 ```json
 {
@@ -107,7 +107,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu er
 }
 ```
 
-## Retrieve a list of MLServices {#retrieve-a-list-of-mlservices}
+## Abrufen einer Liste von MLServices {#retrieve-a-list-of-mlservices}
 
 Sie können eine Liste von MLServices abrufen, indem Sie eine einzige GET anfordern. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
@@ -121,7 +121,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Einer der [verfügbaren Parameter](./appendix.md#query) für die Abfrage zum Filtern der Ergebnisse. |
+| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrage-Parameter](./appendix.md#query), der zum Filtern der Ergebnisse verwendet wird. |
 | `{VALUE}` | Der Wert für den Parameter der vorherigen Abfrage. |
 
 **Anfrage**
@@ -139,7 +139,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von MLServices und deren Details zurück, einschließlich der MLService-ID (`{MLSERVICE_ID}`), Experiment-ID für Schulungen (`{TRAINING_ID}`), Experiment-ID für die Auswertung (`{SCORING_ID}`) und der Input Training DataSet-ID (`{DATASET_ID}`).
+Eine erfolgreiche Antwort gibt eine Liste von MLServices und deren Details zurück, einschließlich ihrer MLService-ID (`{MLSERVICE_ID}`), Experiment-ID für die Schulung (`{TRAINING_ID}`), Experiment-ID für die Auswertung (`{SCORING_ID}`) und der Eingabe-Schulungsdatensatz-ID (`{DATASET_ID}`).
 
 ```json
 {
@@ -166,7 +166,7 @@ Eine erfolgreiche Antwort gibt eine Liste von MLServices und deren Details zurü
 }
 ```
 
-## Retrieve a specific MLService {#retrieve-a-specific-mlservice}
+## Abrufen eines bestimmten MLService {#retrieve-a-specific-mlservice}
 
 Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET durchführen, die die gewünschte MLService-ID im Anforderungspfad enthält.
 
@@ -216,7 +216,7 @@ Sie können einen vorhandenen MLService aktualisieren, indem Sie seine Eigenscha
 
 >[!TIP]
 >
->In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the MLService by ID](#retrieve-a-specific-mlservice). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zunächst eine GET an [den MLService nach ID](#retrieve-a-specific-mlservice) abzurufen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 **API-Format**
 
