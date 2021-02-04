@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;miscellaneous functions;misc;
+keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Verschiedene Funktionen;misc;
 solution: Experience Platform
 title: Sonstige Funktionen
 topic: developer guide
@@ -7,15 +7,15 @@ description: Die folgende Funktion ist eine sonstige Funktion für Profil Query 
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 81%
+source-wordcount: '131'
+ht-degree: 70%
 
 ---
 
 
 # Sonstige Funktionen
 
-The following function is a miscellaneous function for [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Die folgende Funktion ist eine verschiedene Funktion für [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Let
 
