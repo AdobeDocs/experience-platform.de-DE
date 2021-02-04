@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
+keywords: Experience Platform;Home;beliebte Themen;Namensraum;Namensraum;Namensraum;Namensraum;Identitäts-Namensraum;Namensraum;Identität;Identität;Identität
 solution: Experience Platform
 title: Benutzerdefinierten Namespace erstellen
 topic: API guide
@@ -7,17 +7,17 @@ description: Mithilfe der Identitäts-Namensraum-API können Sie einen benutzerd
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 10%
+source-wordcount: '110'
+ht-degree: 9%
 
 ---
 
 
 # Erstellen eines benutzerspezifischen Namensraums
 
-Mithilfe der [!DNL Identity Namespace] API können Sie einen benutzerdefinierten Identitäts-Namensraum erstellen, der nur für Ihr Unternehmen verfügbar ist.
+Mit der API [!DNL Identity Namespace] können Sie einen benutzerdefinierten Identitäts-Namensraum erstellen, der nur für Ihr Unternehmen verfügbar ist.
 
-Empfehlungen zum Erstellen benutzerdefinierter Namensraum finden Sie in [der FAQ-Dokumentation](../troubleshooting-guide.md)zum Identitätsdienst.
+Empfehlungen zum Erstellen benutzerdefinierter Namensraum finden Sie in der [FAQ-Dokumentation zum Identitätsdienst](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -65,4 +65,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Proceed to the next tutorial to [list the native ID of an identity](./list-native-id.md)
+Fahren Sie mit dem nächsten Lernprogramm fort, um [die native ID einer Identität](./list-native-id.md) zu Liste.
