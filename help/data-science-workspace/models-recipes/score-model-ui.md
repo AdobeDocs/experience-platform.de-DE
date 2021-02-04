@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
+keywords: Experience Platform;Modellbewertung;Arbeitsbereich für Datenwissenschaften;beliebte Themen;ui;Punktzahl;Ergebnisse bewerten
 solution: Experience Platform
 title: Bewerten eines Modells (Benutzeroberfläche)
 topic: tutorial
@@ -8,21 +8,21 @@ description: 'Scoring in Adobe Experience Platform Data Science Workspace kann d
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 89%
+source-wordcount: '624'
+ht-degree: 87%
 
 ---
 
 
 # Bewerten eines Modells (Benutzeroberfläche)
 
-Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
+Die Punktzahl in Adobe Experience Platform [!DNL Data Science Workspace] lässt sich erreichen, indem Eingabedaten in ein vorhandenes geschultes Modell eingespeist werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
 
-This tutorial demonstrates the steps required to score a Model in the [!DNL Data Science Workspace] user interface.
+In diesem Lernprogramm werden die Schritte erläutert, die erforderlich sind, um ein Modell in der [!DNL Data Science Workspace]-Benutzeroberfläche zu bewerten.
 
 ## Erste Schritte
 
-Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform] haben, wenden Sie sich bitte an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Diese Anleitung setzt ein trainiertes Modell voraus. Wenn Sie noch kein trainiertes Modell haben, folgen Sie der Anleitung zum [Trainieren und Bewerten eines Modells in der Benutzeroberfläche](./train-evaluate-model-ui.md), bevor Sie fortfahren.
 
@@ -65,4 +65,4 @@ Für einen Scoring-Lauf wird einer der vier folgenden Status angezeigt: „Ausst
 
 ## Nächste Schritte
 
-This tutorial walked you through the steps to score data using a trained Model in [!DNL Data Science Workspace]. Befolgen Sie die Anleitung zum [Publizieren eines Modells als Dienst in der Benutzeroberfläche](./publish-model-service-ui.md), damit Benutzer in Ihrer Organisation Daten bewerten können, indem sie einfachen Zugriff auf einen maschinellen Lerndienst erhalten.
+Dieses Lernprogramm begleitet Sie durch die Schritte, um Daten mit einem trainierten Modell in [!DNL Data Science Workspace] zu bewerten. Befolgen Sie die Anleitung zum [Publizieren eines Modells als Dienst in der Benutzeroberfläche](./publish-model-service-ui.md), damit Benutzer in Ihrer Organisation Daten bewerten können, indem sie einfachen Zugriff auf einen maschinellen Lerndienst erhalten.
