@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
+keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Python-SDK;Spark-SDK;Datenzugriffs-API
 solution: Experience Platform
 title: Übersicht über den Datenzugriff
 topic: overview
@@ -7,28 +7,28 @@ description: Data Access unterstützt Adobe Experience Platform, indem es Benutz
 translation-type: tm+mt
 source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 7%
+source-wordcount: '187'
+ht-degree: 6%
 
 ---
 
 
 # [!DNL Data Access]Übersicht
 
-[!DNL Data Access] unterstützt Adobe Experience Platform durch die Bereitstellung von Benutzerwerkzeugen, die sich auf die Erkennung und Zugänglichkeit von erfassten Datensätzen innerhalb von [!DNL Experience Platform]konzentrieren.
+[!DNL Data Access] unterstützt Adobe Experience Platform durch die Bereitstellung von Benutzerwerkzeugen, die sich auf die Erkennung und Zugänglichkeit von erfassten Datensätzen innerhalb von  [!DNL Experience Platform]konzentrieren.
 
 ![Datenzugriff auf Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## [!DNL Data Access] API
 
-Ausführliche Informationen zur Verwendung der [!DNL Data Access] API für die Verbindung mit [!DNL Platform] finden Sie im Entwicklerhandbuch für [Datenzugriff](api.md).
+Ausführliche Informationen zur Verwendung der [!DNL Data Access]-API für die Verbindung mit [!DNL Platform] finden Sie im [Entwicklerhandbuch für Datenzugriff](api.md).
 
 ## Zugriff auf Daten im Data Science Workspace
 
-Sie können mit und für die Entwicklung von Rezepten [!DNL Python] [!DNL Spark] und Modellen in Data Science Workspace in Datensätze schreiben. Weitere Informationen zum Zugriff auf Ihre Daten finden Sie in der Dokumentation zum [Python-Datenzugriff](../data-science-workspace/authoring/python.md) oder [Spark-Datenzugriff](../data-science-workspace/authoring/spark.md) .
+Sie können mit [!DNL Python] und [!DNL Spark] für die Skript- und Modellentwicklung in Data Science Workspace lesen und in Datensätze schreiben. Weitere Informationen zum Zugriff auf Ihre Daten finden Sie in der Dokumentation [Python data access](../data-science-workspace/authoring/python.md) oder [Spark data access](../data-science-workspace/authoring/spark.md).
 
-Weitere Informationen finden Sie [!DNL Data Science Workspace]in der Übersicht über den [Data Science Workspace unter Beginn](../data-science-workspace/home.md).
+Weitere Informationen zu [!DNL Data Science Workspace] erhalten Sie im Beginn unter [Übersicht über den Data Science Workspace](../data-science-workspace/home.md).
 
 ## Abonnieren von Datenerfassungsereignissen
 
-[!DNL Platform] stellt bestimmte hochwertige Ereignis über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de)zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md) .
+[!DNL Platform] stellt bestimmte hochwertige Ereignis über die  [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_de) zum Abonnement bereit. Sie können beispielsweise Ereignisse zur Datenerfassung abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zu [Abonnieren von Datenerfassungsbenachrichtigungen](../ingestion/quality/subscribe-events.md).
