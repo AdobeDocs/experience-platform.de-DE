@@ -17,7 +17,7 @@ ht-degree: 83%
 
 - [Übersicht](home.md)
 - [Segmentdatentypen](data-types.md)
-- Entwicklerhandbuch zur Segmentierungs-API {#api}
+- Entwicklerhandbuch für die Segmentierungs-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
    - [Exportaufträge](api/export-jobs.md)
