@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;ExperienceEvent;Felder;Schemas;Schemas;Schema-Design;mixin;mixin;Umgebung;Umgebung Details;
 solution: Experience Platform
 title: Umgebung Details-Mixin
 topic: overview
@@ -7,19 +7,19 @@ description: Dieses Dokument bietet einen Überblick über das ExperienceEvent U
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '198'
 ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Umgebung Details] mixen
+# [!UICONTROL Umgebung ] Detailsmixin
 
 >[!NOTE]
 >
->Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument zu [Mixin-Namensaktualisierungen](../name-updates.md) .
+>Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument [mixin name updates](../name-updates.md).
 
-[!UICONTROL Umgebung Details] ist ein Standardmixin für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/individual-profile.md) , mit der Informationen zu Umgebung in Bezug auf ein Experience Ereignis erfasst werden, z. B. Gerätedetails, Browserinformationen, Ortszeit und andere geografische Informationen.
+[!UICONTROL Umgebung ] Details ist ein Standardmixin für die  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) Klasse, mit der Informationen zu Umgebung in Bezug auf ein Experience Ereignis erfasst werden, z. B. Gerätedetails, Browserinformationen, Ortszeit und andere geografische Informationen.
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
