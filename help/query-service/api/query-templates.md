@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
+keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Vorlagen;API-Handbuch;Vorlagen;Abfrage-Dienst
 solution: Experience Platform
 title: Entwicklerhandbuch für Query Service
 topic: query templates
@@ -7,8 +7,8 @@ description: Die folgende Dokumentation führt Sie durch die verschiedenen API-A
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 91%
+source-wordcount: '673'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 91%
 
 ## Beispiel-API-Aufrufe
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie wissen, welche Header verwendet werden sollen, können Sie mit dem Aufrufen der [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der API [!DNL Query Service] durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Liste von Abfragevorlagen abrufen
 
