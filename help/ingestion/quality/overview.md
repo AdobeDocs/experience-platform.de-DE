@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
+keywords: Experience Platform;Startseite;beliebte Themen;Datenqualität;Qualität;Qualität;Unterstützte Validierung;Validierung;Unterstützte Validierung;
 solution: Experience Platform
 title: Qualität der Datenerfassung
 topic: overview
@@ -7,8 +7,8 @@ description: Das folgende Dokument enthält eine Zusammenfassung der unterstütz
 translation-type: tm+mt
 source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 80%
+source-wordcount: '318'
+ht-degree: 77%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform bietet klar definierte Garantien für Vollständigkeit
 
 ## Unterstützte Validierungsverfahren
 
-Both batch and streaming ingestion prevent failed data from going downstream by moving bad data for retrieval and analysis in [!DNL Data Lake]. Die Datenerfassung bietet die folgenden Validierungen für die Batch- und Streaming-Erfassung.
+Sowohl die Batch- als auch die Streaming-Erfassung verhindern, dass fehlerhafte Daten nach unten gelangen, indem fehlerhafte Daten für den Abruf und die Analyse in [!DNL Data Lake] verschoben werden. Die Datenerfassung bietet die folgenden Validierungen für die Batch- und Streaming-Erfassung.
 
 ### Batch-Erfassung
 
@@ -56,4 +56,4 @@ Die folgenden Validierungen werden für die Streaming-Erfassung durchgeführt:
 | Datensatz | Stellt sicher, dass der Datensatz angegeben, aktiviert und nicht entfernt wurde. |
 | Kopfzeile | Stellt sicher, dass die Kopfzeile angegeben und gültig ist. |
 
-More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
+Weitere Informationen darüber, wie [!DNL Platform] Daten überwacht und validiert, finden Sie in der [Dokumentation zu Überwachungsdatenströmen](./monitor-data-ingestion.md).
