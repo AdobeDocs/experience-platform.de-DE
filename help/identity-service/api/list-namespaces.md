@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: Experience Platform;Home;beliebte Themen;Namensraum-Liste;Liste-Namensraum
 solution: Experience Platform
 title: Verfügbare Namensräume auflisten
 topic: API guide
@@ -7,8 +7,8 @@ description: Liste aller verfügbaren Namensraum.
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 59%
+source-wordcount: '81'
+ht-degree: 53%
 
 ---
 
@@ -34,7 +34,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namespaces with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL false]&quot; are standard namespaces, while those with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL true]&quot; are namespaces that your organization has created.
+Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namensraum mit dem Wert &quot;[!UICONTROL custom]&quot;von &quot;[!UICONTROL false]&quot;sind Standardwerte, während Namensraum mit dem Wert &quot;[!UICONTROL custom]&quot;von &quot;[!UICONTROL true]&quot;Namensraum sind, die Ihr Unternehmen erstellt hat.
 
 >[!NOTE]
 >
