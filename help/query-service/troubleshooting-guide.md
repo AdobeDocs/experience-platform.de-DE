@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
+keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Fehlerbehebungshandbuch;FAQ;Fehlerbehebung;
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Adobe Experience Platform Query Service
 topic: troubleshooting
@@ -7,8 +7,8 @@ description: Dieses Dokument enthält Informationen zu häufig auftretenden Fehl
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 91%
+source-wordcount: '181'
+ht-degree: 85%
 
 ---
 
