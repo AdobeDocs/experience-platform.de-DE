@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox troubleshooting
+keywords: Experience Platform;Startseite;beliebte Themen;Sandbox-Fehlerbehebung
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Sandboxes
 topic: troubleshooting guide
@@ -7,8 +7,8 @@ description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu 
 translation-type: tm+mt
 source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 92%
+source-wordcount: '551'
+ht-degree: 90%
 
 ---
 
