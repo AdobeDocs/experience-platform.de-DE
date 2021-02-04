@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
+keywords: Experience Platform;Schulung und Auswertung;Data Science Workspace;beliebte Themen;Erstellen eines Modells;Erstellen eines Schulungslaufs
 solution: Experience Platform
 title: Modell erstellen und bewerten (UI)
 topic: tutorial
@@ -8,8 +8,8 @@ description: In Adobe Experience Platform Data Science Workspace können Sie ein
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1038'
-ht-degree: 94%
+source-wordcount: '1055'
+ht-degree: 93%
 
 ---
 
@@ -22,7 +22,7 @@ Dieses Tutorial leitet Sie durch die Schritte zum Erstellen, Trainieren und Bewe
 
 ## Erste Schritte
 
-Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform] haben, wenden Sie sich bitte an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Das Tutorial setzt ein vorhandenes Rezept voraus. Wenn Sie kein Rezept haben, befolgen Sie die Anweisungen im Tutorial zum [Importieren eines gepackten Rezepts in der UI](./import-packaged-recipe-ui.md), bevor Sie fortfahren.
 
@@ -50,7 +50,7 @@ Das Tutorial setzt ein vorhandenes Rezept voraus. Wenn Sie kein Rezept haben, be
 1. Klicken Sie in Adobe Experience Platform in der linken Navigationsspalte auf den Link **[!UICONTROL Modelle]**, um alle vorhandenen Modelle aufzulisten. Klicken Sie auf den Namen des Modells, das Sie trainieren möchten.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Alle vorhandenen Trainings-Läufe werden mit ihrem aktuellen Trainings-Status aufgeführt. For Models created using the [!DNL Data Science Workspace] user interface, a training run is automatically generated and executed using the default configurations and input training dataset.
+2. Alle vorhandenen Trainings-Läufe werden mit ihrem aktuellen Trainings-Status aufgeführt. Bei Modellen, die mit der [!DNL Data Science Workspace]-Benutzeroberfläche erstellt wurden, wird automatisch ein Schulungslauf mit den Standardkonfigurationen und dem Eingabeteilschulungsdatensatz generiert und ausgeführt.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
 3. Erstellen Sie ein neues Training, indem Sie oben rechts auf der Modellübersichtsseite auf **[!UICONTROL Trainieren]** klicken.
@@ -88,7 +88,7 @@ Das Tutorial setzt ein vorhandenes Rezept voraus. Wenn Sie kein Rezept haben, be
 
 ## Nächste Schritte
 
-This tutorial walked you through creating, training, and evaluating a Model in [!DNL Data Science Workspace]. Sobald Sie ein optimiertes Modell erreicht haben, können Sie das trainierte Modell nutzen, um Einblicke zu generieren; folgen Sie dazu dem Tutorial [Modell in der UI bewerten](./score-model-ui.md).
+Dieses Lernprogramm führte Sie durch das Erstellen, Training und Evaluieren eines Modells in [!DNL Data Science Workspace]. Sobald Sie ein optimiertes Modell erreicht haben, können Sie das trainierte Modell nutzen, um Einblicke zu generieren; folgen Sie dazu dem Tutorial [Modell in der UI bewerten](./score-model-ui.md).
 
 ## Referenz {#reference}
 
