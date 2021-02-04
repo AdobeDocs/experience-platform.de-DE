@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
+keywords: Experience Platform;Startseite;beliebte Themen;Überwachung;Überwachung;Datenflüsse;Überwachung der Erfassung;Datenaufnahme;Datenaufnahme;Ansicht;Ansichten-Stapel;
 solution: Experience Platform
 title: Überwachen der Datenaufnahme
 topic: overview
@@ -7,15 +7,15 @@ description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihr
 translation-type: tm+mt
 source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 70%
+source-wordcount: '571'
+ht-degree: 67%
 
 ---
 
 
 # Überwachen der Datenaufnahme
 
-Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufnehmen. You can either use batch ingestion, which allows you to insert your data using various file types (such as CSVs), or streaming ingestion, which allows you to ingest your data to [!DNL Platform] using streaming endpoints in real-time.
+Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufnehmen. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie Ihre Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder Streaming, mit dem Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit bis [!DNL Platform] erfassen können.
 
 Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 
@@ -25,7 +25,7 @@ Klicken Sie in der [Experience Platform-Benutzeroberfläche](https://platform.ad
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gesendeten Ereignis anzeigt, [!DNL Platform]ein Diagramm mit der Rate der gestreamen Ereignis, die erfolgreich verarbeitet wurden [[!DNL Real-time Customer Profile]](../../profile/home.md), sowie eine detaillierte Liste der eingehenden Daten.
+Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der Streaming-Ereignis anzeigt, die von [!DNL Platform] empfangen werden. Es zeigt die Rate der Streaming-Ereignis, die erfolgreich von [[!DNL Real-time Customer Profile]](../../profile/home.md) verarbeitet wurden, sowie eine detaillierte Liste der eingehenden Daten.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -33,11 +33,11 @@ Standardmäßig zeigt das obere Diagramm die Rate der Aufnahme in den letzten si
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-Das untere Diagramm zeigt die Rate der erfolgreich verarbeiteten Streaming-Ereignis [!DNL Profile] über die letzten sieben Tage an. Dieser Datumsbereich kann angepasst werden, um verschiedene Zeiträume anzuzeigen, indem Sie auf die hervorgehobene Schaltfläche klicken.
+Das untere Diagramm zeigt die Rate der erfolgreich verarbeiteten Streaming-Ereignis von [!DNL Profile] in den letzten sieben Tagen. Dieser Datumsbereich kann angepasst werden, um verschiedene Zeiträume anzuzeigen, indem Sie auf die hervorgehobene Schaltfläche klicken.
 
 >[!NOTE]
 >
->Damit Daten in diesem Diagramm angezeigt werden, müssen sie **explizit** aktiviert werden [!DNL Profile]. Informationen zum Aktivieren von Streaming-Daten [!DNL Profile]finden Sie im [Benutzerhandbuch](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)zu Datasets.
+>Damit Daten in diesem Diagramm angezeigt werden, müssen die Daten für **explizit** aktiviert sein. [!DNL Profile] Informationen zum Aktivieren von Streaming-Daten für [!DNL Profile] finden Sie im [Benutzerhandbuch für Datensätze](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -61,7 +61,7 @@ Darüber hinaus geben fehlerhafte Datensätze Details zu den Fehlern an, die wä
 
 ## Überwachen der Batch-End-to-End-Datenaufnahme
 
-In the [[!DNL Experience Platform UI]](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
+Klicken Sie im linken Navigationsmenü unter [[!DNL Experience Platform UI]](https://platform.adobe.com) auf **[!UICONTROL Monitoring]**.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
