@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;date range
+keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 solution: Experience Platform
 title: Adobe Experience Platform Observability Insights
 topic: overview
@@ -7,7 +7,7 @@ description: Observability Insights ist eine RESTful-API, mit der Sie wichtige B
 translation-type: tm+mt
 source-git-commit: dc491ff523416a34cc01afc9d7ce3af715f2b607
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '229'
 ht-degree: 23%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 23%
 
 ## [!DNL Observability Insights] API
 
-The [!DNL Observability Insights] API is a RESTful API that allows you to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into [!DNL Platform] usage statistics, health-checks for [!DNL Platform] services, historical trends, and performance indicators for various [!DNL Platform] functionalities.
+Die [!DNL Observability Insights]-API ist eine RESTful-API, mit der Sie wichtige Kennzeichnungsmetriken in Adobe Experience Platform verfügbar machen können. Diese Metriken bieten Einblicke in die [!DNL Platform]-Nutzungsstatistik, Gesundheitskontrollen für [!DNL Platform]-Dienste, historische Trends und Leistungsindikatoren für verschiedene [!DNL Platform]-Funktionen.
 
 Weitere Informationen zum Arbeiten mit der API finden Sie im [[!DNL Observability Insights] API-Entwicklerhandbuch](./api/overview.md).
 
@@ -27,8 +27,8 @@ Weitere Informationen zum Arbeiten mit der API finden Sie im [[!DNL Observabilit
 
 [!DNL Observability Insights] können Sie Ereignis-Benachrichtigungen zu Adobe Experience Platform-Aktivitäten abonnieren. Durch das Abonnieren von Ereignissen können Sie eigene nachgelagerte Protokolle einrichten, um festzustellen, wann ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Workflows erreicht wurde oder ob während des Vorgangs Fehler aufgetreten sind.
 
-Weitere Informationen finden Sie in der Übersicht zu [Ereignis-Benachrichtigungen](./notifications/overview.md) .
+Weitere Informationen finden Sie in der Übersicht zu [Ereignis-Benachrichtigungen](./notifications/overview.md).
 
 ## Nächste Schritte
 
-Dieses Dokument deckte die verschiedenen Fähigkeiten von [!DNL Observability Insights]. Weitere Informationen zu den einzelnen Funktionen finden Sie in der Dokumentation zu den einzelnen Funktionen.
+Dieses Dokument deckte die verschiedenen Funktionen von [!DNL Observability Insights] ab. Weitere Informationen zu den einzelnen Funktionen finden Sie in der Dokumentation zu den einzelnen Funktionen.
