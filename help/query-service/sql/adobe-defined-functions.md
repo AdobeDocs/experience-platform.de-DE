@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;adobe-definierte Funktionen;SQL
 solution: Experience Platform
-title: Adobe-definierte Funktionen
+title: Adobe-definierte SQL-Funktionen im Abfrage-Dienst
 topic: functions
-description: Nachfolgend finden Sie Informationen zu den in Query Service verfügbaren Adobe-definierten Funktionen.
+description: In diesem Dokument finden Sie Informationen zu Adoben-definierten Funktionen, die im Adobe Experience Platform Abfrage Service verfügbar sind.
 translation-type: tm+mt
-source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2902'
-ht-degree: 22%
+source-wordcount: '2913'
+ht-degree: 21%
 
 ---
 
 
-# Adobe-definierte Funktionen
+# Adobe-definierte SQL-Funktionen im Abfrage-Dienst
 
 Adobe-definierte Funktionen, hierin ADFs genannt, sind vordefinierte Funktionen im Adobe Experience Platform Abfrage Service, die häufig geschäftsbezogene Aufgaben an [!DNL Experience Event]-Daten durchführen. Dazu gehören Funktionen für [Sessionisation](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) wie in Adobe Analytics.
 
