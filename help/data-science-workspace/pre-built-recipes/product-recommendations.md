@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Produktempfehlungsrezept;Datenwissenschaftliche Arbeitsfläche;beliebte Themen;Rezepte;Rezepte vor dem Erstellen
 solution: Experience Platform
-title: Rezept für Produktempfehlungen
+title: Rezept für Produktempfehlung
 topic: overview
 description: Mit dem Rezept „Produktempfehlungen“ können Sie personalisierte Produktempfehlungen bereitstellen, die auf die Bedürfnisse und Interessen Ihrer Kunden zugeschnitten sind. Mit einem präzisen Prognosemodell können Sie anhand der Einkaufshistorie von Kunden feststellen, für welche Produkte sie sich interessieren.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
