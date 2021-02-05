@@ -1,21 +1,17 @@
 ---
 keywords: LinkedIn;linkedin;LinkedIn Insight-Tag;insight-Tag;Insight-Tag
-title: LinkedIn Insight-Tag-Erweiterung
-seo-title: LinkedIn Insight-Tag-Erweiterung
+title: Ziel der LinkedIn Insight-Tag-Erweiterung
 description: Die LinkedIn Insight-Tag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die LinkedIn Insight-Tag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 26%
+source-wordcount: '515'
+ht-degree: 23%
 
 ---
 
 
-# [!DNL LinkedIn Insight Tag] Erweiterung {#linkedin-insights-extension}
-
-## Übersicht {#overview}
+# [!DNL LinkedIn Insight Tag]-Erweiterung {#linkedin-insights-extension}
 
 Installieren Sie das [!DNL LinkedIn Insight Tag], um die demografischen Funktionen für Konversionsverfolgung, -retargeting und Website zu verwenden.
 
