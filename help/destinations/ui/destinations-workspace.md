@@ -1,19 +1,18 @@
 ---
 keywords: Plattform;Ziele;Ziel-Arbeitsbereich;Arbeitsbereich;Benutzeroberfläche;Ziele ui;Katalog;Zielkatalog; Zielkatalog;
-title: Arbeitsbereich „Ziele“
-seo-title: Arbeitsbereich „Ziele“
+title: Ziel-Arbeitsbereich - Übersicht
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste "Ziele"aus, um auf den Zielarbeitsbereich zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 44%
+ht-degree: 43%
 
 ---
 
 
-# Arbeitsbereich „Ziele“ {#destinations-workspace}
+# Übersicht über den Ziel-Arbeitsbereich{#destinations-workspace}
 
 Wählen Sie in Adobe Experience Platform **[!UICONTROL Ziele]** aus der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Ziele] zuzugreifen.
 
