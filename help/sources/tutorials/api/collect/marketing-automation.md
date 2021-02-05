@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Marketingautomatisierungssystem;Erfassen von Daten zur Marketingautomatisierung
 solution: Experience Platform
-title: Erfassen von Daten zur Marketingautomatisierung über Quellschnittstellen und APIs
+title: Erfassen von Marketing-Automatisierungsdaten mithilfe von Source Connectors und APIs
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Marketingautomatisierungssystem und deren Integration in die Plattform über Quellschnittstellen und APIs erläutert.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Marketingautomatisierungssystem und zum Einleiten in Adobe Experience Platform mithilfe von Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1538'
 ht-degree: 20%
 
 ---
 
 
-# Erfassen von Daten zur Marketingautomatisierung über Quellschnittstellen und APIs
+# Erfassen von Daten zur Marketingautomatisierung mithilfe von Quellschnittstellen und APIs
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Marketingautomatisierungssystem eines Drittanbieters und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
 
