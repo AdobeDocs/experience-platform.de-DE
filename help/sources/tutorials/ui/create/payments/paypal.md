@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;PayPal;PayPal
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für PayPal über die Benutzeroberfläche
+title: PayPal-Quellverbindung in der Benutzeroberfläche erstellen
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines PayPal-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine PayPal-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 11%
+source-wordcount: '465'
+ht-degree: 9%
 
 ---
 
 
-# Erstellen eines [!DNL PayPal]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL PayPal]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
