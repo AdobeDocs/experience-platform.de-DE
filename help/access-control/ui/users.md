@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Profil
 solution: Experience Platform
-title: Benutzer für ein Produktprofil verwalten
+title: Verwalten von Benutzern für ein Produkt-Profil
 topic: user guide
 description: Dieses Dokument zeigt Ihnen, wie Sie Benutzer für ein Profil in der Benutzeroberfläche von Adobe Experience Platform verwalten.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 6%
+ht-degree: 3%
 
 ---
 
