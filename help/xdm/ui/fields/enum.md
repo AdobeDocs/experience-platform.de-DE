@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Workspace;enum;Feld;
 solution: Experience Platform
-title: Definieren eines Enum-Felds in der Benutzeroberfläche
+title: Enum-Felder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie ein Enum-Feld in der Benutzeroberfläche "Experience Platform"definieren.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
 
-# Definieren eines Enum-Felds in der Benutzeroberfläche
+# Definieren von Enum-Feldern in der Benutzeroberfläche
 
 Im Erlebnis-Datenmodell (XDM) stellt ein Enum-Feld ein Feld dar, das auf eine vordefinierte Liste zulässiger Werte beschränkt ist.
 
