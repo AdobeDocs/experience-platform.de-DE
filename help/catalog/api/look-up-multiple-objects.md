@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Katalog;Suche nach mehreren Objekten;API
 solution: Experience Platform
-title: Suchen nach mehreren Objekten
+title: Mehrere Katalogobjekte suchen
 topic: developer guide
 description: Wenn Sie mehrere bestimmte Objekte anzeigen möchten, anstatt eine Anfrage pro Objekt zu stellen, bietet der Katalog eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
 translation-type: tm+mt
-source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 58%
+source-wordcount: '237'
+ht-degree: 54%
 
 ---
 
 
-# Suchen nach mehreren Objekten
+# Mehrere Katalogobjekte suchen
 
 Wenn Sie anstelle einer Anforderung pro Objekt mehrere bestimmte Objekte Ansicht haben möchten, stellt [!DNL Catalog] eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs bereit. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
 
