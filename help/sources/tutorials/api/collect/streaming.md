@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Cloud-Datenspeicherung-Daten;Streaming-Daten;Streaming
 solution: Experience Platform
-title: Erfassen von Streaming-Daten über Quellschnittstellen und APIs
+title: Erfassen von Streaming-Daten mithilfe von Source Connectors und APIs
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Streaming-Daten und deren Integration in die Plattform über Quellschnittstellen und APIs erläutert.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Streaming-Daten und zum Einbringen dieser Daten in die Plattform mithilfe von Quellschnittstellen und APIs erläutert.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 19%
@@ -14,7 +14,7 @@ ht-degree: 19%
 ---
 
 
-# Erfassen von Streaming-Daten über Quellschnittstellen und APIs
+# Erfassen von Streaming-Daten mithilfe von Quellschnittstellen und APIs
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
