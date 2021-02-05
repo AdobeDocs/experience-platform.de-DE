@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Tableau;Tableau;Abfrage-Dienst;Abfrage-Dienst;Verbindung mit Abfrage-Dienst herstellen
 solution: Experience Platform
-title: Verbinden mit Tableau
+title: Anschluss von Tableau an den Abfrage-Dienst
 topic: connect
 description: Dieses Dokument führt Sie durch die Schritte, um Tableau mit dem Adobe Experience Platform Abfrage Service zu verbinden.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 13%
+source-wordcount: '213'
+ht-degree: 11%
 
 ---
 
 
-# [!DNL Tableau]
+# Verbinden Sie [!DNL Tableau] mit dem Abfrage-Dienst
 
 Dieses Dokument beschreibt die Schritte zum Verbinden von Tableau mit Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL Tableau] haben und mit der Navigation in der Oberfläche vertraut sind. Weitere Informationen zu [!DNL Tableau] finden Sie in der [offiziellen  [!DNL Tableau] Dokumentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
-
-## [!DNL Tableau] mit Plattform verbinden
 
 Um [!DNL Tableau] mit [!DNL Query Service] zu verbinden, öffnen Sie [!DNL Tableau] und wählen Sie im Abschnitt **[!DNL To a Server]** **[!DNL More]**, gefolgt von **[!DNL PostgreSQL]**
 
