@@ -1,21 +1,17 @@
 ---
 keywords: Amazon S3;S3-Ziel;s3;Amazon s3
-title: Amazon S3-Ziel
-seo-title: Amazon S3-Ziel
+title: Amazon S3-Verbindungsziel
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Buckets zu exportieren.
-seo-description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Buckets zu exportieren.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 26%
+source-wordcount: '223'
+ht-degree: 14%
 
 ---
 
 
-# [!DNL Amazon S3] Ziel
-
-## Übersicht
+# [!DNL Amazon S3] connection
 
 Erstellen Sie eine Live-Ausgehende Verbindung zu Ihrer [!DNL Amazon Web Services] (AWS) S3-Datenspeicherung, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 
