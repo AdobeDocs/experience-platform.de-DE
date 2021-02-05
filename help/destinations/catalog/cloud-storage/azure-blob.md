@@ -1,19 +1,17 @@
 ---
 keywords: Azurblauch;Blob-Ziel;s3;Azzurblende-Ziel
-title: Blumenziel
-seo-title: Blumenziel
+title: Azurblauch-Verbindungsziel
 description: Erstellen Sie eine Live-Ausgangs-Verbindung mit Ihrer Blue Blob-Datenspeicherung, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform zu exportieren.
-seo-description: Erstellen Sie eine Live-Ausgangs-Verbindung mit Ihrer Blue Blob-Datenspeicherung, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: 739c7cb55f943675d5ee63d81bba58a2b250c814
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 9%
+source-wordcount: '477'
+ht-degree: 10%
 
 ---
 
 
-# Erstellen eines [!DNL Azure Blob]-Ziels in der Benutzeroberfläche
+# [!DNL Azure Blob] connection
 
 [!DNL Azure Blob] (im Folgenden &quot;[!DNL Blob]&quot; genannt) ist die Objektlösung von Microsoft für die Cloud. Dieses Lernprogramm enthält Schritte zum Erstellen eines [!DNL Blob]-Ziels mithilfe der [!DNL Platform]-Benutzeroberfläche.
 
