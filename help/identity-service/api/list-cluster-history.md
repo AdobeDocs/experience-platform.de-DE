@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Identitäten;Clusterverlauf
 solution: Experience Platform
-title: Abrufen des Clusterverlaufs einer Identität
+title: Abrufen des Cluster-Verlaufs einer Identität
 topic: API guide
 description: Identitäten können Cluster über den Verlauf verschiedener Gerätediagramme verschieben. Der Identitätsdienst ermöglicht die Sichtbarkeit der Clusterzuordnungen einer bestimmten Identität im Laufe der Zeit.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 48%
