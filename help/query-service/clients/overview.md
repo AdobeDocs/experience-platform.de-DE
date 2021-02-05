@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Verbindung mit Abfrage-Dienst;Aqua-Datenstudio;Aqua Data Studio;Looker;Looker;Looker;Popostico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
 solution: Experience Platform
-title: Clients mit Query Service verbinden
+title: Clients mit dem Abfrage Service verbinden
 topic: connect
 description: In diesem Dokument wird beschrieben, wie Sie von verschiedenen Desktop-Clientanwendungen aus eine Verbindung zum Abfrage Service herstellen und diese Verbindungen überprüfen.
 translation-type: tm+mt
-source-git-commit: 5c5ea35dbed85518f7925bd13a2280cae6215927
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
 source-wordcount: '112'
-ht-degree: 10%
+ht-degree: 6%
 
 ---
 
