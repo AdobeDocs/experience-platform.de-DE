@@ -1,21 +1,17 @@
 ---
 keywords: Facebook-Pixelerweiterungen;Facebook-Pixelerweiterung;Facebook-Pixelziele;Facebook-Pixel
-title: Facebook-Pixel-Erweiterung
-seo-title: Facebook-Pixel-Erweiterung
+title: Ziel der Facebook-Pixel-Erweiterung
 description: Die Facebook Pixel Extension ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Facebook Pixel Extension ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 23%
+source-wordcount: '509'
+ht-degree: 20%
 
 ---
 
 
 # [!DNL Facebook Pixel]-Erweiterung {#facebook-pixel-extension}
-
-## Übersicht {#overview}
 
 Das [!DNL Facebook Pixel] ist ein Analysetool, mit dem Sie die Effektivität Ihrer Werbung messen können, indem Sie die Aktionen verstehen, die Personen auf Ihrer Website ausführen.
 
