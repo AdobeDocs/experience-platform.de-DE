@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Ereignis-Hubs;azure-Ereignis-Hubs;Ereignis-Hubs;Ereignis-Hubs
 solution: Experience Platform
-title: Azurblauer Ereignis-Hubs-Anschluss
+title: Übersicht über den Avocent Ereignis Hubs Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie Azurblase-Ereignis-Hubs mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbinden.
+description: Erfahren Sie, wie Sie Azurblase-Ereignis-Hubs mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -33,10 +33,10 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Even
 
 ### APIs verwenden
 
-- [Erstellen eines Azurblauen Ereignis-Hubs-Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
+- [Erstellen einer Azurblauen Ereignis-Hubs-Quellverbindung mit der Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Erfassen von Streaming-Daten mithilfe der Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### Verwenden der UI
 
-- [Erstellen eines Azurblauen Ereignis-Hubs-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Erstellen einer Azurblauen Ereignis-Hubs-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/eventhub.md)
+- [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
