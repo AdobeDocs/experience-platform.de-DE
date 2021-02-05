@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Verhalten;Verhalten;Verhalten;Verhalten;
 solution: Experience Platform
-title: Handbuch zum Endpunkt "Verhalten"
+title: Verhalten-API-Endpunkt
 description: Mit dem Endpunkt "/verhaltenors"in der Schema Registry-API können Sie alle verfügbaren Verhaltensweisen im globalen Container abrufen.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%
