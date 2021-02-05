@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 translation-type: tm+mt
-source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
+source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '103'
 ht-degree: 93%
 
 ---
@@ -40,6 +40,5 @@ ht-degree: 93%
    * [Customer AI](segmentation/customer-ai.md)
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
-   * [Website-Tags mit Adobe Launch implementieren](sources/launch.md)
 * [Versionshinweise zur Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
