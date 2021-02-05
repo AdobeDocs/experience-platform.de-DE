@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Zugriffskontrolle;API;Erste Schritte
 solution: Experience Platform
-title: Entwicklerhandbuch zur Zugriffskontrolle
+title: Handbuch zur Zugriffskontrolle-API
 topic: developer guide
-description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können.
+description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Entwickler benötigen, um die Schema Registry API erfolgreich aufzurufen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
 source-wordcount: '389'
-ht-degree: 67%
+ht-degree: 60%
 
 ---
 
 
-# [!DNL Access control] Entwicklerhandbuch
+# [!DNL Access Control] API-Handbuch
 
 [!DNL Access control] verabreicht  [!DNL Experience Platform] wird, über das  [Adobe Admin Console](https://adminconsole.adobe.com). Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugriffskontrolle – Übersicht](../home.md).
 
