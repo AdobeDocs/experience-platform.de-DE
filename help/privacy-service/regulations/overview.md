@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;GDPR;gdpr;CCPA;ccpa;PDPA;PDPA;LGPD;lgpd;overview;Overview;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
 solution: Experience Platform
-title: Übersicht über die Datenschutzbestimmungen
+title: Übersicht über Datenschutzbestimmungen
 topic: troubleshooting
 description: Dieses Dokument gibt einen Überblick über die verschiedenen Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 7%
