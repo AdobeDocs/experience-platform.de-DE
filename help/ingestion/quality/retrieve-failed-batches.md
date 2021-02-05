@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abrufen fehlgeschlagener Stapel;Fehlgeschlagene Stapel;Stapelverarbeitung;Stapelverarbeitung;Fehlgeschlagene Stapel;Abrufen fehlgeschlagener Stapel;Herunterladen fehlgeschlagener Stapel;Herunterladen fehlgeschlagener Stapel; Herunterladen fehlgeschlagener Stapel;
 solution: Experience Platform
-title: Abrufen fehlgeschlagener Batches
+title: Abrufen fehlgeschlagener Stapel mit der Datenzugriffs-API
 topic: tutorial
 type: Tutorial
 description: In diesem Tutorial wird erläutert, wie Sie mithilfe von APIs für die Datenaufnahme Informationen aus einem fehlgeschlagenen Batch abrufen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 79%
+source-wordcount: '652'
+ht-degree: 76%
 
 ---
 
 
-# Abrufen fehlgeschlagener Batches mithilfe der API
+# Abrufen fehlgeschlagener Stapel mit der Datenzugriffs-API
 
 Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie ihre Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder Streaming, mit dem Sie ihre Daten mit Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
 
