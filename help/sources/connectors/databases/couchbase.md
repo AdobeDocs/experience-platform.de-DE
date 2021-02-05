@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Couchbase;Couchbase
 solution: Experience Platform
-title: Steckverbinder
+title: Überblick über den Connector für Couchbase-Quelle
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie Couchbase mit APIs oder der Benutzeroberfläche mit der Plattform verbinden.
+description: Erfahren Sie, wie Sie Couchbase mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
@@ -29,11 +29,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Couchbase]
 
 ## Verbinden Sie [!DNL Couchbase] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Couchbase-Connectors mit der Flow Service API](../../tutorials/api/create/databases/couchbase.md)
+- [Erstellen einer Couchbase-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/couchbase.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Couchbase] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Couchbase-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/couchbase.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer ChatBase-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/couchbase.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
