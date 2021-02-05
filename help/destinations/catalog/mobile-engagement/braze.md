@@ -1,25 +1,21 @@
 ---
 keywords: mobil; einblenden; Messaging;
-title: Ziel abbremsen
-seo-title: Ziel abbremsen
+title: Verbindungsziel begrenzen
 description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
-seo-description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
 
 
-# (Beta) [!DNL Braze]-Ziel
+# (Beta) [!DNL Braze]-Verbindung
 
 >[!IMPORTANT]
 >
 >Das Braze-Ziel in Adobe Experience Platform befindet sich derzeit in Beta. Die Dokumentation und Funktionalität können sich ändern.
-
-## Übersicht {#overview}
 
 Mit dem [!DNL Braze]-Ziel können Sie Profil-Daten an [!DNL Braze] senden.
 
