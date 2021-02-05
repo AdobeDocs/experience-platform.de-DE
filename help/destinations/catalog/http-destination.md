@@ -1,25 +1,21 @@
 ---
 keywords: Streaming;
-title: Das HTTP-Ziel ist ein Adobe Experience Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
-seo-title: Das HTTP-Ziel ist ein Adobe Experience Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
-description: Das HTTP-Ziel ist ein Adobe Experience Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
-seo-description: Das HTTP-Ziel ist ein Adobe Experience Platform-Ziel, mit dem Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden können.
+title: HTTP-Verbindungsziel
+description: Mit dem HTTP-Ziel in Adobe Experience Platform können Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '488'
 ht-degree: 8%
 
 ---
 
 
-# (Alpha) [!DNL HTTP] Ziel
+# (Alpha) [!DNL HTTP]-Verbindung
 
 >[!IMPORTANT]
 >
 >Das [!DNL HTTP]-Ziel in der Plattform befindet sich derzeit in Alpha. Die Dokumentation und Funktionalität können sich ändern.
-
-## Übersicht {#overview}
 
 Das [!DNL HTTP]-Ziel ist ein [!DNL Adobe Experience Platform]-Streaming-Ziel, mit dem Sie Profil-Daten an Drittanbieter-Endpunkte [!DNL HTTP] senden können.
 
