@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;ip-Adresse;ip-Adressen;ip-Adresse-Zulassungsliste; zulassungsliste
 description: IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können.
 solution: Experience Platform
-title: ZULASSUNGSLISTE der IP-Adresse
+title: IP-Adressen-Zulassungsliste für Quellverbindungen
 topic: overview
 translation-type: tm+mt
-source-git-commit: a812ad3b130c5998013688dcda522e7d20ae578f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
