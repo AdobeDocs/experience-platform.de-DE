@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Erfassung;Entwicklerhandbuch;API-Handbuch;Hochladen;Parquet erfassen;JSON erfassen;
 solution: Experience Platform
-title: Entwicklerhandbuch für die Batch-Ingestion
+title: Handbuch zur Batch Ingestion API
 topic: developer guide
 description: Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von APIs für die Batch-Erfassung.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 89%
@@ -13,7 +13,7 @@ ht-degree: 89%
 ---
 
 
-# Entwicklerhandbuch zur Batch-Erfassung
+# Handbuch zur Batchaufnahme-API
 
 Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von [APIs für die Batch-Erfassung](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
