@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Google Cloud-Datenspeicherung;Google Cloud-Datenspeicherung;Google;Google
 solution: Experience Platform
-title: Erstellen eines Google Cloud-Datenspeicherung-Connectors mithilfe der Flow Service API
+title: Erstellen einer Google Cloud-Datenspeicherung-Quellverbindung mit der Flow Service API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, mit denen Sie die Experience Platform mit einem Google Cloud-Datenspeicherung-Konto verbinden.
+description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und einem Google Cloud-Datenspeicherung-Konto herstellen.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 26%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Google Cloud Storage]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Google Cloud Storage]-Quellverbindung mit der [!DNL Flow Service]-API
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
