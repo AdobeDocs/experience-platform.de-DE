@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Namensraum-Liste;Liste-Namensraum
 solution: Experience Platform
-title: Verfügbare Namensräume auflisten
+title: Liste Verfügbare Identitäts-Namensraum
 topic: API guide
 description: Liste aller verfügbaren Namensraum.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 53%
+source-wordcount: '83'
+ht-degree: 44%
 
 ---
 
 
-# Verfügbare Namensräume auflisten
+# Liste verfügbarer Identitäts-Namensraum
 
 **API-Format**
 
