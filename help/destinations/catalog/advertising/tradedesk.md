@@ -1,21 +1,17 @@
 ---
 keywords: Werbung; die Fachstelle;
-title: Ziel des Trade Desk
-seo-title: Ziel des Trade Desk
+title: Verbindungsziel des Trade Desk
 description: 'Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, um zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg auszuführen. '
-seo-description: Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, um zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg auszuführen.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '550'
 ht-degree: 5%
 
 ---
 
 
-# [!DNL The Trade Desk] Ziel
-
-## Übersicht {#overview}
+# [!DNL The Trade Desk] connection
 
 [!DNL The Trade Desk] Mit &quot;target&quot;können Sie Profil-Daten an  [!DNL The Trade Desk].
 
