@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;ATS;ats;Azurblase Datenspeicherung
 solution: Experience Platform
-title: Erstellen eines Azurblauen Datenspeicherung-Connectors mit der Flow Service API
+title: Erstellen einer Azurblauen Tabelle Datenspeicherung Source Connection mithilfe der Flow Service API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die die Datenspeicherung von Azurblauer Tabelle (im Folgenden "ATS" genannt) mit der Experience Platform verbinden.
+description: Erfahren Sie, wie Sie die Datenspeicherung von Blauen Tabellen mit der Flow-Dienst-API verbinden.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 24%
+source-wordcount: '586'
+ht-degree: 25%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Azure Table Storage]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Azure Table Storage]-Quellverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
