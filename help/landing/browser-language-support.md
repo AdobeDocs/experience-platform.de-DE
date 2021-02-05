@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;CJA;Journey-Analyse;Kundenanalysen;Journey-Analyse;Kampagne-Orchestrierung;Orchestrierung;Kundenorientierung;Journey;Journey;Journey-Orchestrierung;Funktion;Region
 solution: Experience Platform
-title: Adobe Experience Platform Browser- und Sprachunterstützung
+title: Browser- und Sprachunterstützung für die Benutzeroberfläche der Experience Platform
 topic: getting started
 description: Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. Mit Adobe Experience Platform können Unternehmen Kundendaten und Content aus beliebigen Systemen zentral zusammenführen und standardisieren sowie mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessern.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '248'
 ht-degree: 29%
 
 ---
 
 
-# Experience Platform-Browser und Sprachunterstützung
+# Browser- und Sprachunterstützung für die Benutzeroberfläche der Experience Platform
 
 Die Adobe Experience Platform-Benutzeroberfläche unterstützt mehrere Browser und Sprachen.
 
