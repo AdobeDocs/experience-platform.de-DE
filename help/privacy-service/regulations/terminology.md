@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;GDPR;gdpr;CCPA;ccpa;PDPA;PDPA;LGPD;lgpd;overview;Overview;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
 solution: Experience Platform
-title: Terminologie der Datenschutzverordnung
+title: Terminologie der Datenschutzbestimmungen
 topic: troubleshooting
 description: Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 translation-type: tm+mt
-source-git-commit: 714b071bfa68ad0796afad25525b62b42bd56b3f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# Terminologie der Datenschutzverordnung
+# Terminologie der Datenschutzbestimmungen
 
 Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 
@@ -111,7 +111,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 **Datenschutz nach Design**: Ein Grundsatz, der die Einbeziehung des Datenschutzes ab dem Beginn der Systementwicklung anstelle einer Ergänzung vorsieht.
 
-**Datenschutz-Folgenabschätzung**: Ein Tool zur Identifizierung und Verringerung der Datenschutzrisiken von Unternehmen durch Analyse der verarbeiteten personenbezogenen Daten und der geltenden Datenschutzrichtlinien.
+**Datenschutz-Folgenabschätzung**: Ein Werkzeug zur Identifizierung und Verringerung der Datenschutzrisiken von Unternehmen durch Analyse der verarbeiteten personenbezogenen Daten und der geltenden Datenschutzrichtlinien.
 
 **Verarbeitung**: Jeder Vorgang, der an personenbezogenen Daten durchgeführt wird, unabhängig davon, ob er automatisiert erfolgt oder nicht, einschließlich der Erhebung, Verwendung, Aufzeichnung usw.
 
