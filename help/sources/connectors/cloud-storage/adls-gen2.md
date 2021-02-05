@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblase Data Lake Datenspeicherung Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
-title: Datenspeicherung Gen2-Stecker für den Azurblau-Data-See
+title: Azurblase Data Lake Datenspeicherung Gen2 Source Connector - Übersicht
 topic: overview
-description: Die nachstehende Dokumentation beschreibt, wie Sie die Datenspeicherung Gen2 mit der Plattform mithilfe von APIs oder der Benutzeroberfläche verbinden können.
+description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Azurblase Data Lake Datenspeicherung Gen2 und Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 3%
@@ -40,11 +40,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Data
 
 ### APIs verwenden
 
-- [Erstellen eines ADLS-Gen2-Connectors mithilfe der Flow Service API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Erstellen einer ADLS-Gen2-Quellverbindung mit der Flow Service API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ## Verwenden der UI
 
-- [ADLS-Gen2-Quellanschluss in der Benutzeroberfläche erstellen](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Erstellen einer ADLS-Gen2-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
