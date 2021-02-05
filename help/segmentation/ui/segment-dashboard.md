@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Profil;Segment;Segmente;Segmentierung;Benutzeroberfläche;UI;Anpassen;SegmentDashboard;Dashboard
-title: Segment-Dashboard
+title: Segment-Dashboard-UI-Handbuch
 description: 'In diesem Handbuch wird das in der Adobe Experience Platform-Benutzeroberfläche verfügbare Segment-Dashboard beschrieben. '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 63758450276d47e7e0eddeb047779222cb80a3e2
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 1%
 
 ---
