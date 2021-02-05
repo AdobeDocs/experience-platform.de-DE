@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Benutzerhandbuch zur Datenverwendungsrichtlinie
 solution: Experience Platform
-title: Benutzerhandbuch zu Datennutzungsrichtlinien
+title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 topic: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie in der Benutzeroberfläche "Experience Platform"im Arbeitsbereich "Richtlinien"ausführen können.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 34%
+source-wordcount: '772'
+ht-degree: 31%
 
 ---
 
 
-# Benutzerhandbuch zu Datennutzungsrichtlinien
+# Datennutzungsrichtlinien in der Benutzeroberfläche verwalten
 
 Adobe Experience Platform [!DNL Data Governance] bietet eine Benutzeroberfläche, über die Sie Datenverwendungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie in der **Richtlinien**-Arbeitsfläche der [!DNL Experience Platform]-Benutzeroberfläche ausführen können.
 
@@ -28,7 +28,7 @@ Dieses Handbuch erfordert ein funktionierendes Verständnis der folgenden [!DNL 
 - [[!DNL Data Governance]](../home.md)
 - [Datennutzungsrichtlinien](./overview.md)
 
-## Datennutzungsrichtlinien anzeigen {#view-policies}
+## Ansicht bestehender Richtlinien {#view-policies}
 
 Wählen Sie in der Benutzeroberfläche [!DNL Experience Platform] **[!UICONTROL Richtlinien]** aus, um den Arbeitsbereich **[!UICONTROL Richtlinien]** zu öffnen. Auf der Registerkarte **[!UICONTROL Durchsuchen]** wird eine Liste der verfügbaren Richtlinien angezeigt, einschließlich der zugehörigen Bezeichnungen, Marketing-Aktionen und Status.
 
@@ -38,7 +38,7 @@ Wählen Sie eine aufgelistete Richtlinie aus, um deren Beschreibung und Typ Ansi
 
 ![](../images/policies/policy-details.png)
 
-## Benutzerdefinierte Datennutzungsrichtlinie erstellen  {#create-policy}
+## Erstellen einer benutzerdefinierten Richtlinie {#create-policy}
 
 Um eine neue benutzerdefinierte Datenverwendungsrichtlinie zu erstellen, wählen Sie **[!UICONTROL Richtlinie erstellen]** in der oberen rechten Ecke der Registerkarte **[!UICONTROL Durchsuchen]** im Arbeitsbereich **[!UICONTROL Richtlinien]**.
 
@@ -68,7 +68,7 @@ Die Registerkarte **[!UICONTROL Durchsuchen]** wird erneut angezeigt, wo die neu
 
 ![](../images/policies/created-policy.png)
 
-## Datennutzungsrichtlinie aktivieren oder deaktivieren {#enable}
+## Aktivieren oder Deaktivieren einer Richtlinie {#enable}
 
 Alle Datenverwendungsrichtlinien (einschließlich der von der Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell über die API oder Benutzeroberfläche aktivieren.
 
