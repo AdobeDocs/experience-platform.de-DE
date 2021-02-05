@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Erfassung;Erfassen von Stapeldaten;Tutorial;Stapelverarbeitung;Tutorial;Handbuch;ui;
 solution: Experience Platform
-title: Daten in Adobe Experience Platform erfassen
+title: Daten in Experience Platform aufnehmen
 topic: tutorial
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie problemlos Daten als Stapeldateien in Form von Parquet-Dateien oder Daten importieren, die einem bekannten XDM-Schema (Experience Data Model) entsprechen.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1322'
 ht-degree: 50%
 
 ---
