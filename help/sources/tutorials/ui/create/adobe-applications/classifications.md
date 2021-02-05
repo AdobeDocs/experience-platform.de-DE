@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen; Analyse;Klassifizierungen
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines Adobe Analytics Classifications Data Connectors in der Benutzeroberfläche beschrieben, um Classification-Daten in Adobe Experience Platform zu importieren.
+description: Erfahren Sie, wie Sie einen Adobe Analytics-Quellanschluss in der Benutzeroberfläche erstellen, um Classification-Daten in Adobe Experience Platform zu importieren.
 solution: Experience Platform
-title: Adobe Analytics Classifications Data Connector in der Benutzeroberfläche erstellen
+title: Erstellen einer Adobe Analytics-Quellverbindung für Classification-Daten in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '660'
 ht-degree: 6%
 
 ---
 
 
-# Adobe Analytics Classifications Data Connector in der Benutzeroberfläche erstellen
+# Erstellen einer Adobe Analytics-Quellverbindung für Classification-Daten in der Benutzeroberfläche
 
-In diesem Lernprogramm werden Schritte zum Erstellen eines Adobe Analytics Classifications Data Connectors in der Benutzeroberfläche beschrieben, um Classification-Daten in Adobe Experience Platform zu importieren.
+In diesem Lernprogramm werden Schritte zum Erstellen einer Adobe Analytics Classifications-Datenquelle-Verbindung in der Benutzeroberfläche beschrieben, um Classification-Daten in Adobe Experience Platform zu importieren.
 
 ## Erste Schritte
 
@@ -86,5 +86,5 @@ Auf der Seite **[!UICONTROL Aktivität des Datensatzes]** werden Informationen �
 In diesem Lernprogramm haben Sie einen Analytics Classifications Data Connector erstellt, der [!DNL Classifications]-Daten in [!DNL Platform] einfügt. Weitere Informationen zu [!DNL Analytics]- und [!DNL Classifications]-Daten finden Sie in den folgenden Dokumenten:
 
 * [Überblick über Analytics Data Connector](../../../../connectors/adobe-applications/analytics.md)
-* [Erstellen eines Analytics-Data Connectors in der Benutzeroberfläche](./analytics.md)
+* [Erstellen einer Analytics-Datenverbindung in der Benutzeroberfläche](./analytics.md)
 * [Informationen über Klassifizierungen](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
