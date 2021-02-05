@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Anzeigen-System;Anzeigen-System
 solution: Experience Platform
-title: Durchsuchen Sie ein Werbetechniksystem mit der Flow Service API.
+title: Verwenden der Flow-Dienst-API, um ein Anzeigen-System zu erkunden
 topic: overview
 description: Der Flow Service dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können. In diesem Lernprogramm wird die Flow Service API verwendet, um Anzeigen-Systeme zu untersuchen.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 23%
