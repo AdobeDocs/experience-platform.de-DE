@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Data Science Workspace-Anleitung
 user-guide-description: Nutzen Sie maschinelles Lernen, um Modelle und Rezepte mit Adobe Sensei- und JupyterLab-Notebooks zu entwickeln, zu trainieren und zu bewerten.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '233'
 ht-degree: 56%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 56%
 * [Zugriff auf den Data Science Workspace und Funktionen](access-features-dsw.md)
 * [Anleitung für Data Science Workspace](walkthrough.md)
 * JupyterLab Notebooks {#jupyterlab}
-   * [JupyterLab-Benutzerhandbuch](jupyterlab/overview.md)
+   * [Übersicht](jupyterlab/overview.md)
    * [Datenzugriff](jupyterlab/access-notebook-data.md)
    * [Analysieren Ihrer Daten](jupyterlab/analyze-your-data.md)
    * [Abfrage](jupyterlab/query-service.md)
@@ -37,7 +37,7 @@ ht-degree: 56%
 * Echtzeit-maschinelles Lernen (Alpha) {#real-time-machine-learning}
    * [Übersicht](real-time-machine-learning/home.md)
    * [Erste Schritte](real-time-machine-learning/getting-started.md)
-   * [Benutzerhandbuch zu RTML Authoring-Notebooks](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [Verwalten von Notebooks](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Node Reference Guide](real-time-machine-learning/node-reference.md)
 * Vorgefertigte Rezepte {#pre-built-recipes}
    * [Rezept für Produktempfehlungen](pre-built-recipes/product-recommendations.md)
@@ -46,11 +46,11 @@ ht-degree: 56%
 * Modell-Authoring {#authoring}
    * [Modell-Authoring-SDK](authoring/sdk.md)
    * [Erstellen einer Feature Pipeline](authoring/feature-pipeline.md)
-   * [Platform SDK-Handbuch (Python)](authoring/platform-sdk.md)
+   * [Modellerstellung mit dem Platform SDK (Python)](authoring/platform-sdk.md)
    * [Python-Datenzugriff](authoring/python.md)
    * [Spark-Datenzugriff](authoring/spark.md)
 * Modell- und Rezept-Tutorials {#models-recipes}
-   * [Exemplarische Vorgehensweise zum Erstellen und Veröffentlichen eines maschinellen Lernmodells](models-recipes/create-publish-model.md)
+   * [Erstellen und Veröffentlichen eines Modells für maschinelles Lernen](models-recipes/create-publish-model.md)
    * [Erstellen des Schemas und Datensatzes für den Einzelhandel](models-recipes/create-retails-sales-dataset.md)
    * [Vorschau auf Schemas und Datensätze](models-recipes/preview-schema-data.md)
    * [Verpacken von Quelldateien in einem Rezept](models-recipes/package-source-files-recipe.md)
