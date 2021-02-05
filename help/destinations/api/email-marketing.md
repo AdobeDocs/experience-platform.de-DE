@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: E-Mail-Marketing-Ziele erstellen
+title: Erstellen von E-Mail-Marketingzielen mit API-Aufrufen
 description: Dieses Dokument behandelt die Erstellung von E-Mail-Marketingzielen mithilfe der Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1644'
 ht-degree: 73%
 
 ---
 
 
-# E-Mail-Marketing-Ziele erstellen und Daten mithilfe von API-Aufrufen in Adobe Experience Platform aktivieren
+# E-Mail-Marketing-Ziele erstellen und Daten mithilfe von API-Aufrufen aktivieren
 
 In dieser Anleitung erfahren Sie, wie Sie mithilfe von API-Aufrufen eine Verbindung zu Ihren Adobe Experience Platform-Daten herstellen, ein [E-Mail-Marketing-Ziel](../catalog/email-marketing/overview.md) erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel einrichten und Daten zu Ihrem neu erstellten Ziel aktivieren können.
 
