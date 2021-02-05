@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Shopify;Shopify;
 solution: Experience Platform
-title: Shopify Connector
+title: Übersicht über den Quell-Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Shopify mit APIs oder der Benutzeroberfläche mit der Plattform verbunden werden kann.
+description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Shopify mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: b31b7dc04d32129ba5522e1b0d3e52a213347a40
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 10%
@@ -27,11 +27,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Shopify] m
 
 ## Verbinden Sie [!DNL Shopify] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Shopify-Connectors mithilfe der Flow Service API](../../tutorials/api/create/ecommerce/shopify.md)
+- [Erstellen einer Shopify-Quellverbindung mit der Flow Service API](../../tutorials/api/create/ecommerce/shopify.md)
 - [Durchsuchen einer E-Commerce-Verbindung mit der Flow Service API](../../tutorials/api/explore/ecommerce.md)
 - [Erfassen von eCommerce-Daten mithilfe der Flow Service API](../../tutorials/api/collect/ecommerce.md)
 
 ## Verbinden Sie [!DNL Shopify] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Shopify-Quell-Connectors in der Benutzeroberfläche](../../tutorials/ui/create/ecommerce/shopify.md)
-- [Konfigurieren eines Datenflusses für einen eCommerce-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/ecommerce.md)
+- [Erstellen einer Shopify-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/ecommerce/shopify.md)
+- [Konfigurieren eines Datenflusses für eine E-Commerce-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/ecommerce.md)
