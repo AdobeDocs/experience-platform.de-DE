@@ -5,9 +5,9 @@ title: Übersicht über den Identitätsdiagramm-Viewer
 topic: tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
@@ -108,3 +108,9 @@ Fehler können beim Zugriff auf den Identitätsdiagramm-Viewer auftreten. Im Fol
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie die Identitätsdiagramme Ihrer Kunden in der Plattform-Benutzeroberfläche erkunden können. Weitere Informationen zu Identitäten in der Plattform finden Sie unter [Übersicht über den Identitätsdienst](../home.md)
+
+## Zusätzliche Ressourcen
+
+Das folgende Video soll Ihnen das Verständnis des Identitätsdiagramm-Viewers erleichtern.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
