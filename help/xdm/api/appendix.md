@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Kompatibilität;Kompatibilitätsmodus;Kompatibilitätsmodus;Feldtyp;Feldtypen;Feldtypen;
 solution: Experience Platform
-title: Entwickleranhang für Schema Registry
+title: Handbuch zur API für die Registrierung von Schemas
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 50%
+source-wordcount: '772'
+ht-degree: 49%
 
 ---
 
 
-# Anhang
+# Handbuch zur API zur Schema-Registrierung
 
 Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der [!DNL Schema Registry]-API.
 
