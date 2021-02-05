@@ -5,10 +5,10 @@ user-guide-title: Hilfe zur Datenerfassung in Adobe Experience Platform
 breadcrumb-title: Anleitung zur Datenaufnahme
 user-guide-description: Implementieren Sie Ihre Daten durch Batch- oder Streaming-Aufnahmen in Platform.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 95%
+source-wordcount: '121'
+ht-degree: 91%
 
 ---
 
@@ -34,13 +34,13 @@ ht-degree: 95%
    - [Streaming von Datensatzdaten](tutorials/streaming-record-data.md)
    - [Streaming von Zeitreihendaten](tutorials/streaming-time-series-data.md)
    - [Streaming mehrerer Nachrichten](tutorials/streaming-multiple-messages.md)
-- Qualität und Überwachung der Datenaufnahme {#quality}
+- Datenqualität und Überwachung{#quality}
    - [Übersicht](quality/overview.md)
    - [Überwachen der Datenerfassung](quality/monitor-data-ingestion.md)
    - [Fehlerdiagnose abrufen](quality/error-diagnostics.md)
    - [Abrufen fehlgeschlagener Batches](quality/retrieve-failed-batches.md)
    - [Validieren der Streaming-Erfasssung](quality/streaming-validation.md)
-   - [Abonnieren von Datenaufnahme-Ereignissen](quality/subscribe-events.md)
+   - [Benachrichtigungen zur Datenerfassung](quality/subscribe-events.md)
 - [Quellen-Connectoren](source-connectors.md)
 - [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
