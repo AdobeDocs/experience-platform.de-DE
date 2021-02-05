@@ -1,11 +1,11 @@
 ---
 keywords: Experience Cloud;Erste Schritte;Inhalts- und Commerce-Hilfe;beliebte Themen;Intelligente Dienste;CCAI
 solution: Experience Cloud, Intelligent Services, Experience Platform
-title: Überblick über die Inhalts- und Commerce-API
+title: Übersicht über Content- und Commerce-API
 topic: Content and Commerce AI
 description: Content and Commerce AI ist eine Reihe von AI-Diensten, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren, optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
