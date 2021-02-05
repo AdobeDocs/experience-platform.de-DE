@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 23%
@@ -103,7 +103,7 @@ Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz
 | ------- | ----------- |
 | [!DNL JupyterLab] Rezept-Builder-Vorlage | Verwendung der Notebook-zu-Rezept-Anforderungen und Versionen aktualisiert. [!DNL Python] Das ML Runtime-Basisbild wurde aktualisiert und verwendet nun ausschließlich  [!DNL Python] 3.6.7 und eine  [!DNL Conda] Umgebung. |
 
-Weitere Informationen finden Sie im Dokument [Erstellen eines Skripts mit Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+Weitere Informationen finden Sie im Dokument [Erstellen eines Skripts mit Jupyter-Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
 
 ## [!DNL Destinations] Dienst {#destinations}
 
