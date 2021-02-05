@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Entwicklerhandbuch für die Policy Service-API
+title: Handbuch zur Policy Service API
 topic: developer guide
-description: Erfahren Sie, wie Sie mit der Policy Service-API Datenverwendungsbeschriftungen und -richtlinien in der Experience Platform verwalten.
+description: Die Policy-Service-API ermöglicht es Entwicklern, Datenverwendungsbeschriftungen und -richtlinien in der Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 16%
+source-wordcount: '504'
+ht-degree: 14%
 
 ---
 
 
-# [!DNL Policy Service]-API-Entwicklerhandbuch
+# [!DNL Policy Service] API-Handbuch
 
 Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung sicherstellen. Es spielt eine Schlüsselrolle innerhalb von [!DNL Experience Platform] auf verschiedenen Ebenen, einschließlich Katalogisierung, Datenlineage, Datenverwendungsbeschriftung, Datenverwendungsrichtlinien und Steuerung der Verwendung von Daten für Marketingaktionen.
 
