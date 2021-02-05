@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Profil aktivieren;Profil aktivieren
-title: Hinzufügen von Daten zum Echtzeit-Kundenprofil
+title: Daten Hinzufügen Echtzeit-Profil des Kunden
 topic: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte beschrieben, die zum Hinzufügen von Daten zum Echtzeit-Kundenprofil erforderlich sind.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '380'
-ht-degree: 51%
+ht-degree: 50%
 
 ---
 
