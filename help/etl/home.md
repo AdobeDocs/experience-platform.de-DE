@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;ETL;etl;etl-Integrationen;ETL-Integrationen
 solution: Experience Platform
-title: Erstellen von ETL-Integrationen
+title: Entwickeln von ETL-Integrationen für Adobe Experience Platform
 topic: overview
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '4139'
+source-wordcount: '4143'
 ht-degree: 81%
 
 ---
