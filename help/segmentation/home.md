@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierung;Segmentierung;Segmentdienst;Segment;Segmente;Segmente
 solution: Experience Platform
-title: Adobe Experience Platform-Segmentdienst
+title: Übersicht über den Segmentdienst
 topic: overview
-description: Dieses Dokument bietet einen Überblick über den Segmentierungsdienst und die Rolle, die dieser in Adobe Experience Platform spielt.
+description: Erfahren Sie mehr über den Adobe Experience Platform Segmentation Service und seine Rolle im Plattform-Ökosystem.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1394'
 ht-degree: 8%
 
 ---
 
 
-# Überblick über Adobe Experience Platform [!DNL Segmentation Service]
+# [!DNL Segmentation Service]Übersicht
 
 Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren [!DNL Real-time Customer Profile]-Daten generieren können. Diese Segmente werden zentral konfiguriert und auf [!DNL Platform] gepflegt und sind für jede Adobe leicht zugänglich.
 
