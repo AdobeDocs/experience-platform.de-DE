@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;HP Vertica
 solution: Experience Platform
-title: Erstellen eines HP Vertica-Quellconnectors in der Benutzeroberfläche
+title: Erstellen einer HP Vertica-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines HP Vertica-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine HP Vertica-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '495'
 ht-degree: 9%
 
 ---
 
 
-# Erstellen eines HP [!DNL Vertica]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer HP [!DNL Vertica]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
