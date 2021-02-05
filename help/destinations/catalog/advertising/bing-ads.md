@@ -1,21 +1,17 @@
 ---
 keywords: bing;Anzeigen - Ereignis-Tracking;Ereignis-Verfolgung;UET;UET-Erweiterung
-title: Bing Ads Universal Ereignis Tracking (UET)-Erweiterung
-seo-title: Bing Ads Universal Ereignis Tracking (UET)-Erweiterung
+title: Bing Ads Universal Ereignis Tracking (UET) Extension Destination
 description: Die Erweiterung Bing Ads Universal Ereignis Tracking (UET) ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Erweiterung Bing Ads Universal Ereignis Tracking (UET) ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 22%
+source-wordcount: '537'
+ht-degree: 20%
 
 ---
 
 
 # [!DNL Bing Ads Universal Event Tracking] (UET) Erweiterung  {#bing-ads-extension}
-
-## Übersicht {#overview}
 
 [!DNL Bing Ads Universal Event Tracking] (UET) for  [!DNL Experience Platform Launch] ist eine nützliche Methode, um zu verfolgen, was passiert, wenn jemand auf Ihre Suchanzeige geklickt hat. Durch Verwendung eines einzelnen UET-Tags zur Aufzeichnung der Kundenaktivitäten auf Ihrer Website können Sie diese Daten nutzen, um Konversionen oder Audiencen der Zielgruppe mithilfe von Remarketing-Listen zu verfolgen.
 
