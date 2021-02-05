@@ -1,20 +1,18 @@
 ---
 keywords: E-Mail;E-Mail;E-Mail;E-Mail-Ziele
-title: E-Mail-Marketing-Ziele
-seo-title: E-Mail-Marketing-Ziele
+title: Übersicht über E-Mail-Marketing-Ziele
 type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
-seo-description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 35%
+source-wordcount: '791'
+ht-degree: 32%
 
 ---
 
 
-# E-Mail-Marketing-Ziele {#email-marketing-destinations}
+# E-Mail-Marketing-Ziele – Übersicht {#email-marketing-destinations}
 
 E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen. Adobe Experience Platform kann mit ESPs integriert werden, indem Sie Segmente aktivieren können, um E-Mail-Marketing-Ziele zu erreichen.
 
