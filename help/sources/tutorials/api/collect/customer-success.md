@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Kundenerfolg erfassen;Kundenerfolg
 solution: Experience Platform
-title: Erfassen von Daten aus einem Kundenerfolgssystem über Quellschnittstellen und APIs
+title: Erfassen von Daten aus einem Customer Success System mithilfe von Source Connectors und APIs
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Kundenerfolgssystem und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und APIs erläutert.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Kundenerfolgssystem und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 16%
@@ -14,7 +14,7 @@ ht-degree: 16%
 ---
 
 
-# Erfassen von Daten aus einem Kundenerfolgssystem über Quellschnittstellen und APIs
+# Erfassen von Daten aus einem Kundenerfolgssystem mithilfe von Quellschnittstellen und APIs
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Kundenerfolgssystem und zum Einbetten in [!DNL Platform] über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
 
