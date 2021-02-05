@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblase-Datenspeicherung;Azimarktisch-Datenspeicherung;ATS;ats
 solution: Experience Platform
-title: Azurblauer Tischstecker, Datenspeicherung
+title: Übersicht über den Source Connector für die Datenspeicherung von Avocent
 topic: overview
-description: Die nachstehende Dokumentation beschreibt, wie Sie die Datenspeicherung von Blauen Tabellen mit APIs oder der Benutzeroberfläche mit der Plattform verbinden.
+description: Erfahren Sie, wie Sie die Azurblase Table-Datenspeicherung mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 10%
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Tabl
 
 ## Verbinden Sie [!DNL Azure Table Storage] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Azurblauen Datenspeicherung-Connectors mit der Flow Service API](../../tutorials/api/create/databases/ats.md)
+- [Erstellen einer Azurblauen Tabelle-Datenspeicherung-Quellverbindung mit der Flow-Dienst-API](../../tutorials/api/create/databases/ats.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Azure Table Storage] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Quellconnectors für die Datenspeicherung eines Blauen Diagramms in der Benutzeroberfläche](../../tutorials/ui/create/databases/ats.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer Quellverbindung zur Datenspeicherung einer Azurblauen Tabelle in der Benutzeroberfläche](../../tutorials/ui/create/databases/ats.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
