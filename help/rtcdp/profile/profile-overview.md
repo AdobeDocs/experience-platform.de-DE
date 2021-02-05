@@ -1,14 +1,14 @@
 ---
 keywords: rtcdp-Profil;Profile rtcdp;rtcdp-Identitäten;rtcdp-Zusammenführungsrichtlinien;Echtzeit-Profil von Kunden
-title: Übersicht über das Echtzeit-Kundenprofil
+title: Übersicht über das Echtzeit-Profil von Kunden
 seo-title: Echtzeit-Kundenprofil in der Echtzeit-Kundendatenplattform
-description: Ein Überblick darüber, wie Sie mit der Echtzeit-Kundendatenplattform unter Verwendung von Echtzeit-Kundenprofilen koordinierte, konsistente und relevante Erlebnisse für Kunden erstellen können.
+description: Erfahren Sie, wie Sie mit der Echtzeit-Kundendatenplattform koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden mit Echtzeit-Profilen erstellen können.
 seo-description: Echtzeit-Kundendatenplattform, Profil, Daten, Erlebnisse, Kanäle
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 45%
+source-wordcount: '404'
+ht-degree: 39%
 
 ---
 
