@@ -1,21 +1,17 @@
 ---
 keywords: dialogtech extension;dialogtech;dialogtech;dialogtech-Ziel;DialogTech SourceTrak
-title: DialogTech-Erweiterung
-seo-title: DialogTech-Erweiterung
+title: DialogfeldTech-Erweiterungsziel
 description: Die DialogTech-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die DialogTech-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 23%
+source-wordcount: '484'
+ht-degree: 20%
 
 ---
 
 
 # [!DNL DialogTech]-Erweiterung {#dialogtech-extension}
-
-## Übersicht {#overview}
 
 Schließen Sie das JavaScript-Snippet [!DNL DialogTech SourceTrak] in Adobe Launch ein
 
