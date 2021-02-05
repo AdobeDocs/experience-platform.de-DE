@@ -2,13 +2,13 @@
 keywords: Ziele;adobe-Erlebnisplattform;Plattform;Ziele-Übersicht;Daten aktivieren;Aktivieren;
 title: Ziele – Übersicht
 seo-title: Ziele – Übersicht
-description: Stellen Sie Platform-Daten für kanalübergreifende Marketing-Kampagnen, E-Mails, zielgruppengerechte Werbung und vieles mehr bereit.
+description: Erfahren Sie, wie Sie Adobe Experience Platform-Daten für Cross-Kanal-Marketing-Kampagnen, E-Mails, gezielte Werbung und mehr aktivieren können.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Destinations in Adobe Experience Platform verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: 32eae2ed782e46941bb21e3aca62c6bce68cde1e
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 35%
+source-wordcount: '493'
+ht-degree: 32%
 
 ---
 
