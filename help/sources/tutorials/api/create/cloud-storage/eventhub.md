@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Ereignis-Hub;Azurblase-Ereignis-Hub;Ereignis-Hub
 solution: Experience Platform
-title: Erstellen eines Azurblauen Ereignis-Hubs-Connectors mit der Flow Service API
+title: Erstellen einer Azurblauch-Ereignis-Hubs-Quellverbindung mit der Flow-Dienst-API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die erforderlich sind, um die Experience Platform mit einem Azurblauen Ereignis Hubs-Konto zu verbinden.
+description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und einem Azurblauen Ereignis Hubs-Konto herstellen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '566'
 ht-degree: 25%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Azure Event Hubs]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Azure Event Hubs]-Quellverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
