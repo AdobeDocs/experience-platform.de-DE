@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Überwachen von Datenflüssen;Flussdienst-API;Flussdienst
 solution: Experience Platform
-title: Überwachen von Flüssen und Ausgängen
+title: Überwachen von Datenflüssen mit der Flussdienst-API
 topic: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zur Überwachung von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service API beschrieben.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '632'
 ht-degree: 23%
 
 ---
