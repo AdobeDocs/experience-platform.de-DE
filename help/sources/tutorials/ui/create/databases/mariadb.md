@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Maria DB;Malaria db
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für MariaDB über die Benutzeroberfläche
+title: Erstellen einer MariaDB-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines Maria DB-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Maria DB-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 16%
+source-wordcount: '432'
+ht-degree: 14%
 
 ---
 
 
-# Erstellen eines [!DNL MariaDB]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL MariaDB]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
