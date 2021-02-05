@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Identitätsdiagramm-Viewer;Identitätsdiagramm-Viewer;Diagramm-Viewer;Namensraum;Identitäts-Namensraum;Identität;Identitätsdienst;Identitätsdienst;Identitätsdienst
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Übersicht über den Identitätsdiagramm-Viewer
 topic: tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
 translation-type: tm+mt
-source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '930'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
 
-# (Beta) Identitätsdiagramm-Viewer
+# (Beta) Übersicht über den Identitätsdiagramm-Viewer
 
 >[!NOTE]
 >
