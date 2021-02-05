@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;HDFS;HDFS;Apache HDFS;Apache HDFS;Apache HDF
 solution: Experience Platform
-title: HDFS-Anschluss
+title: Übersicht über den Apache HDFS Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Apache HDFS mithilfe von APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
+description: Erfahren Sie, wie Sie Apache HDFS mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '381'
 ht-degree: 3%
 
 ---
@@ -42,11 +42,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Apache] HD
 
 ### APIs verwenden
 
-- [Erstellen eines HDFS-Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/hdfs.md)
+- [Erstellen einer HDFS-Quellverbindung mit der Flow Service API](../../tutorials/api/create/cloud-storage/hdfs.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der UI
 
-- [Erstellen eines Apache HDFS-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/hdfs.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Erstellen einer Apache HDFS-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/hdfs.md)
+- [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
