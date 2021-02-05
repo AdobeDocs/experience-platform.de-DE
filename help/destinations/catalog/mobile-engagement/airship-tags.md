@@ -1,19 +1,17 @@
 ---
 keywords: Luftschiff-Tags;Luftschiff-Ziel
-title: Ziel der Airship Tags
-seo-title: Ziel der Luftschiff-Tags
+title: Verbindungsziel für Airship-Tags
 description: Übergeben Sie nahtlos Daten zur Audience der Adobe als Audience-Tags für das Targeting innerhalb von Airship an Airship.
-seo-description: Übergeben Sie nahtlos Daten zur Audience der Adobe als Audience-Tags für das Targeting innerhalb von Airship an Airship.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1197'
 ht-degree: 11%
 
 ---
 
 
-# (Beta) [!DNL Airship Tags] Ziel {#airship-tags-destination}
+# (Beta) [!DNL Airship Tags] Verbindung {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
