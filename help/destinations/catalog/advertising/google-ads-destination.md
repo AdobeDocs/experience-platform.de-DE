@@ -1,21 +1,17 @@
 ---
 keywords: Google-Anzeigen;Google-Anzeigen;Google-Adwords;Google AdWords;Google-Adwords
-title: Google Ads-Ziel
-seo-title: Google Ads-Ziel
+title: Verbindungsziel für Google Ads
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
-seo-description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 25%
+source-wordcount: '660'
+ht-degree: 21%
 
 ---
 
 
-# [!DNL Google Ads] Ziel
-
-## Übersicht
+# [!DNL Google Ads] connection
 
 [!DNL Google Ads], früher bekannt als  [!DNL Google AdWords], ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, Grafikanzeigen,  [!DNL YouTube] Videos und mobile In-App-Anzeigen zu bezahlen.
 
