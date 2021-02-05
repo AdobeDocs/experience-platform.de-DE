@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenbankdatenbank;Drittanbieterdatenbank
 solution: Experience Platform
-title: Erfassen von Daten aus einer Datenbank über Quellschnittstellen und APIs
+title: Erfassen von Daten aus einer Datenbank mithilfe von Source Connectors und APIs
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank und zum Integrieren in die Plattform über Quellschnittstellen und APIs beschrieben.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 19%
@@ -14,7 +14,7 @@ ht-degree: 19%
 ---
 
 
-# Erfassen von Daten aus einer Datenbank über Quellschnittstellen und APIs
+# Erfassen von Daten aus einer Datenbank mithilfe von Quellschnittstellen und APIs
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Datenbank und zum Integrieren in die Plattform über Quellschnittstellen und die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) beschrieben.
 
