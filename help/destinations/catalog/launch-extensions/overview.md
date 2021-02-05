@@ -1,19 +1,17 @@
 ---
 keywords: Start-Erweiterungen;Start-Erweiterung;Start-Ziele; Plattformstarterweiterungen;Plattformstarterweiterung;Plattformstartziele
-title: Experience Platform Launch-Erweiterungen
-seo-title: Experience Platform Launch-Erweiterungen
-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
-seo-description: Launch ist mit Adobe-Tag-Management-Funktionen der nächsten Generation ausgestattet. Mit Launch können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die für relevante Kundenerlebnisse erforderlich sind.
+title: Adobe Experience Platform Launch Extension-Ziele
+description: Adobe Experience Platform Launch ist die nächste Generation von Tag-Management-Funktionen aus der Adobe. Platform Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 52%
+source-wordcount: '617'
+ht-degree: 46%
 
 ---
 
 
-# Adobe Experience Platform Launch-Erweiterungen {#overview.md}
+# Adobe Experience Platform Launch-Erweiterungen
 
 Adobe Experience Platform Launch ist die nächste Generation von Tag-Management-Funktionen aus der Adobe. Platform
 Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.  Platform Launch ist für Adobe Experience Cloud-Kunden als integrierte, Mehrwert bietende Funktion verfügbar.
