@@ -1,21 +1,17 @@
 ---
 keywords: foresee;foresee extension;foresee destination
-title: Gainsight-Erweiterung
-seo-title: Gainsight-Erweiterung
+title: Gainsight Extension-Ziel
 description: Die Gainsight-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Gainsight-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 30%
+source-wordcount: '517'
+ht-degree: 28%
 
 ---
 
 
 # [!DNL Gainsight]-Erweiterung {#gainsight-extension}
-
-## Übersicht {#overview}
 
 [!DNL Gainsight]Mit den Tools von können Produktverantwortliche das Benutzerverhalten verstehen, die Produktakzeptanz steigern und Feedback von Benutzern erfassen.
 
