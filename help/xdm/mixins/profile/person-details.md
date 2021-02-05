@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Schema-Design;mixin;mixin;Person;Personenangaben;Profil-Personenangaben;Person;
 solution: Experience Platform
-title: Demographische Details-Mixin
+title: Demografisches Details-Mixin
 topic: overview
 description: In diesem Dokument erhalten Sie einen Überblick über das Mixin "Demografische Details".
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 22%
