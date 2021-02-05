@@ -1,21 +1,17 @@
 ---
 keywords: demandbase extension;demandbase;demandbase;demandbase-Ziel
-title: Demandbase-Erweiterung
-seo-title: Demandbase-Erweiterung
+title: Ziel der Demandbase-Erweiterung
 description: Die Demandbase-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Demandbase-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 28%
+source-wordcount: '539'
+ht-degree: 26%
 
 ---
 
 
 # [!DNL Demandbase]-Erweiterung {#demandbase-extension}
-
-## Übersicht {#overview}
 
 Holen Sie sich [!DNL Demandbase] B2B-Kontoeinblicke direkt in Adobe Analytics, wo Sie Traffic und Verhalten nach Branche, Umsatz und Ihren Zielgruppen-Konten segmentieren können. Diese kundenbasierte Ansicht liefert einzigartige Einblicke in Interaktion und Konversion und dient als Quelle für Ihre wertvollsten Besucher.
 
