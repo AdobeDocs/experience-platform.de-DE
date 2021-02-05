@@ -1,21 +1,17 @@
 ---
 keywords: Google-Anzeigen;Google-Anzeigen;Google-Anzeigen-Erweiterung;Google Ads-Erweiterung
-title: Google Ads-Erweiterung
-seo-title: Google Ads-Erweiterung
+title: Ziel der Google Ads Extension
 description: Die Google Ads Extension ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Google Ads Extension ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 26%
+source-wordcount: '538'
+ht-degree: 23%
 
 ---
 
 
 # [!DNL Google Ads]-Erweiterung 
-
-## Übersicht {#overview}
 
 Diese Erweiterung verfolgt Konversionen von Benutzern, die auf [!DNL Google Ads] klicken. Sie müssen auch die Erweiterung gtag.js installieren und der Bibliothek hinzufügen, da [!DNL Google Ads] davon abhängt.
 
