@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Google AdWords;Google Adwords
 solution: Experience Platform
-title: Google AdWords Connector
+title: Übersicht über Google AdWords Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Google AdWords mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
+description: Erfahren Sie, wie Sie Google AdWords mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 9%
@@ -33,11 +33,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Google AdW
 
 ### APIs verwenden
 
-- [Erstellen eines Google AdWords-Connectors mithilfe der Flow Service API](../../tutorials/api/create/advertising/ads.md)
+- [Erstellen einer Google AdWords-Quellverbindung mithilfe der Flow Service API](../../tutorials/api/create/advertising/ads.md)
 - [Kennenlernen eines Werbetrugs mithilfe der Flow Service API](../../tutorials/api/explore/advertising.md)
 - [Erfassen von Anzeigendaten mithilfe der Flow Service API](../../tutorials/api/collect/advertising.md)
 
 ### Verwenden der UI
 
-- [Erstellen eines Google AdWords-Quell-Connectors in der Benutzeroberfläche](../../tutorials/ui/create/advertising/ads.md)
-- [Konfigurieren eines Datenflusses für einen Werbeanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/advertising.md)
+- [Erstellen einer Google AdWords-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/advertising/ads.md)
+- [Konfigurieren eines Datenflusses für eine Werbeverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/advertising.md)
