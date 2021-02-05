@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Katalogdienst;Katalogdatei;Anhang
 solution: Experience Platform
-title: Anhang zum Entwicklerhandbuch für den Catalog Service
+title: Handbuch zur API für Katalogdienst
 topic: developer guide
 description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der Katalog-API in Adobe Experience Platform unterstützen.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 79%
@@ -13,7 +13,7 @@ ht-degree: 79%
 ---
 
 
-# [!DNL Catalog Service] Entwicklerhandbuch
+# [!DNL Catalog Service] API-Handbuch
 
 Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der [!DNL Catalog]-API unterstützen.
 
