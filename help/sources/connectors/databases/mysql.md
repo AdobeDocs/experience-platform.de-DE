@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;MySQL;mysql;MySQL;MySQL
 solution: Experience Platform
-title: MySQL Connector
+title: Übersicht über MySQL Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie MySQL mit der Plattform mithilfe von APIs oder der Benutzeroberfläche verbunden werden kann.
+description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen MySQL und Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '251'
-ht-degree: 14%
+ht-degree: 11%
 
 ---
 
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen zum Verbinden von MySQL mi
 
 ## Verbinden von MySQL mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines MySQL-Connectors mithilfe der Flow Service API](../../tutorials/api/create/databases/mysql.md)
+- [Erstellen einer MySQL-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/mysql.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden von MySQL mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Quell-Connectors für MySQL über die Benutzeroberfläche](../../tutorials/ui/create/databases/mysql.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer MySQL-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/mysql.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
