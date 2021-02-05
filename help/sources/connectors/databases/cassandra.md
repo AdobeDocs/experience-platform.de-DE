@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Apache Cassandra;Apache Cassandra;Cassandra;Cassandra
 solution: Experience Platform
-title: Apache Cassandra-Anschluss
+title: Apache Cassandra Source Connector - Übersicht
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Apache Cassandra mithilfe von APIs mit der Plattform verbunden werden kann.
+description: Erfahren Sie, wie Sie Apache Cassandra mithilfe von APIs mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 18%
@@ -23,6 +23,6 @@ Die nachstehende Dokumentation enthält Informationen zum Verbinden von [!DNL Ap
 
 ## Verbinden Sie [!DNL Apache Cassandra] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Apache Cassandra-Connectors mithilfe der Flow Service API](../../tutorials/api/create/databases/cassandra.md)
+- [Erstellen einer Apache Cassandra-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/cassandra.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
