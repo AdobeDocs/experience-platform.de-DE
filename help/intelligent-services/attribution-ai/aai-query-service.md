@@ -1,19 +1,19 @@
 ---
 keywords: Einblicke;Zuordnungsai;Zuordnungs-ai-Einblicke;AAI-Abfrage-Dienst;Zuordnungs-Abfragen;Zuordnungswerte
 solution: Intelligent Services, Experience Platform
-title: Handbuch zu AAI-Abfragen-Beginn
+title: Analysieren von Zuordnungswerten mithilfe des Abfrage Service
 topic: Attribution AI queries
-description: Dieses Dokument enthält eine Anleitung und Vorlagen zur Verwendung des Abfrage Service zur Analyse Ihrer Zuordnungsergebnisse.
+description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Abfrage Service Attribution AI-Ergebnisse analysieren können.
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform Abfrage Service - Kurzanleitung zur Analyse von Zuordnungswerten
+# Analysieren von Zuordnungswerten mithilfe des Abfrage Service
 
 Jede Zeile in den Daten stellt eine Konversion dar, bei der Informationen für verwandte Touchpoints als Strukturarray unter der Spalte `touchpointsDetail` gespeichert werden.
 
@@ -21,7 +21,7 @@ Jede Zeile in den Daten stellt eine Konversion dar, bei der Informationen für v
 | ---------------------- | ------ |
 | Touchpoint-Name | `touchpointsDetail. touchpointName` |
 | Touchpoint-Kanal | `touchpointsDetail.touchPoint.mediaChannel` |
-| Algorithmische Touchpoint-AAI-Ergebnisse | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Algorithmische Ergebnisse des Touchpoint-Attribution AIS | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Suchen von Datenpfaden
 
