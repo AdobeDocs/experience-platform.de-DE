@@ -5,15 +5,15 @@ seo-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 seo-description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 79%
+source-wordcount: '638'
+ht-degree: 78%
 
 ---
 
 
-# [!DNL Real-time Customer Data Platform] Metriken - Übersicht
+# [!DNL Real-time Customer Data Platform] startseite und Dashboards
 
 Die Startseite der Echtzeit-Kundendatenplattform von , die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
 
