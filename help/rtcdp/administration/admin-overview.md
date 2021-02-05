@@ -1,19 +1,19 @@
 ---
 keywords: rtcdp-Verwaltungsübersicht;Verwaltungsübersicht
-title: Administration – Übersicht
+title: Übersicht über die Verwaltung der Kundendatenplattform in Echtzeit
 seo-title: Übersicht über die Administration der Echtzeit-Kundendatenplattform
 description: 'Das vorliegende Dokument bietet Ihnen einen Überblick über die Verwaltungsfunktionen der Echtzeit-Kundendatenplattform, die auf Adobe Experience Platform basiert. '
 seo-description: SEO-Beschreibung
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 59%
+source-wordcount: '288'
+ht-degree: 55%
 
 ---
 
 
-# Übersicht über die Administration der Echtzeit-Kundendatenplattform
+# Übersicht über die Verwaltung der Kundendatenplattform in Echtzeit
 
 Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen von [!DNL Real-time Customer Data Platform], powered by Adobe Experience Platform.
 
