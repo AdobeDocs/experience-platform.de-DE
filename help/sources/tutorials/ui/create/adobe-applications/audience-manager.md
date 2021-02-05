@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Audience Manager-Quellanschluss;Audience Manager;Audience-Manager-Anschluss
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche
+title: Erstellen einer Adobe Audience Manager-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 description: Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen von Quell-Connectors für Adobe Audience Manager, um Verbrauchererlebnis-Ereignis-Daten über die Benutzeroberfläche in Platform einzubringen.
 translation-type: tm+mt
-source-git-commit: bdf95d75bf8db9f3438011f298d17c4259d2c63c
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 6%
+ht-degree: 2%
 
 ---
 
 
-# Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche
+# Erstellen einer Adobe Audience Manager-Quellverbindung in der Benutzeroberfläche
 
 Dieses Lernprogramm führt Sie durch die Schritte zum Erstellen eines Quell-Connectors für Adobe Audience Manager, um Verbrauchererlebnis-Ereignis-Daten über die Benutzeroberfläche in Platform einzubringen.
 
