@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Funkk SDK;Datenzugriffs-API;Funkrezept;Lese-Funken;Schreibfunk
 solution: Experience Platform
-title: Zugriff auf Daten mit Spark
+title: Zugriff auf Daten mithilfe von Spark in Data Science Workspace
 topic: tutorial
 type: Tutorial
 description: Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Spark zur Verwendung in Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: e1035f3d1ad225a0892c5f97ca51618cd6b47412
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
 
 
-# Zugriff auf Daten mit Spark
+# Zugriff auf Daten mithilfe von Spark in Data Science Workspace
 
 Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Spark zur Verwendung in Data Science Workspace. Informationen zum Zugriff auf Daten mit JupyterLab-Notebooks finden Sie in der Dokumentation [JupyterLab-Notebook-Datenzugriff](../jupyterlab/access-notebook-data.md).
 
