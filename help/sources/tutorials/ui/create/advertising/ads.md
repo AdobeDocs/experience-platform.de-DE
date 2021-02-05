@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Google AdWords;Google AdWords-Quellanschluss;Google Adwords-Connector
 solution: Experience Platform
-title: Erstellen eines Google AdWords-Quell-Connectors in der Benutzeroberfläche
+title: Erstellen einer Google AdWords-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm enthält Schritte zum Erstellen eines Google AdWords-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche.
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Google AdWords-Quellverbindung erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '506'
 ht-degree: 9%
 
 ---
 
 
-# Erstellen eines [!DNL Google AdWords]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Google AdWords]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
