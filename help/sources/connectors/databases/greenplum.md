@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Greenplum;GreenPlum
 solution: Experience Platform
-title: GreenPlum-Anschluss
+title: GreenPlum Source Connector - Übersicht
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie GreenPlum mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbunden werden kann.
+description: Erfahren Sie, wie Sie GreenPlum mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL GreenPlum]
 
 ## Verbinden Sie [!DNL GreenPlum] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines GreenPlum-Connectors mithilfe der Flow Service API](../../tutorials/api/create/databases/greenplum.md)
+- [Erstellen einer GreenPlum-Quellverbindung mithilfe der Flow Service API](../../tutorials/api/create/databases/greenplum.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL GreenPlum] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines GreenPlum-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/greenplum.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer GreenPlum-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/greenplum.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
