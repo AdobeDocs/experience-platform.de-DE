@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Persönliche Daten;Schema-Design;Mixin;Mixin;
 solution: Experience Platform
-title: persönliche Kontaktdaten-Mixer
+title: Details des persönlichen Kontakts Mixin
 topic: overview
 description: Dieses Dokument gibt einen Überblick über das Mixin Persönliche Kontaktdaten.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 9%
