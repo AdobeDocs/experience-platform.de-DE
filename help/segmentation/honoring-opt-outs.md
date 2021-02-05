@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Ausschluss;Segmentierung;Segmentierungsdienst;Segmentierungsdienst;Ausschlussoption;Opt-out;Ausschluss;
 solution: Experience Platform
-title: Erfüllen von Opt-outs
+title: Abrufen von Abmeldeanforderungen in Segmenten
 topic: overview
-description: 'Mit der Experience Platform können Ihre Kunden Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils senden.] Diese Opt-out-Anfragen sind Teil des California Consumer Privacy Act (CCPA), der kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem). '
+description: 'Adobe Experience Platform ermöglicht es Ihren Kunden, Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils des Kunden zu senden.] Diese Opt-out-Anfragen sind Teil des California Consumer Privacy Act (CCPA), der kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem). '
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 61%
+source-wordcount: '1031'
+ht-degree: 60%
 
 ---
 
 
 # Erfüllen von Opt-out-Anfragen in Segmenten
 
-[!DNL Experience Platform] ermöglicht es Ihren Kunden, Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb von  [!DNL Real-time Customer Profile]zu senden. Diese Abmeldeanträge sind Teil des [!DNL California Consumer Privacy Act] (CCPA), das kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem).
+Mit Adobe Experience Platform können Ihre Kunden Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb von [!DNL Real-time Customer Profile] senden. Diese Abmeldeanträge sind Teil des [!DNL California Consumer Privacy Act] (CCPA), das kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem).
 
 Nachdem ein Kunde sich für ein Opt-out entschieden hat, muss Ihr Unternehmen diese Ausschlussmöglichkeiten bei der Generierung von Zielgruppen für Marketing-Aktivitäten berücksichtigen. In diesem Dokument werden wichtige Details zur Erfüllung von Opt-out-Anfragen beschrieben.
 
