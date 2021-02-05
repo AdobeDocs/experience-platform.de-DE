@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Deskriptor;Deskriptoren;Deskriptoren;Identität;Freundlicher Name;Anzeigename;AlternativeDisplayInfo;Referenz;Beziehung;Beziehung;Beziehung
 solution: Experience Platform
-title: Deskriptoren
+title: Descriptors-API-Endpunkt
 description: Mit dem /descriptors-Endpunkt in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Experience-Anwendung programmgesteuert verwalten.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 55%
+source-wordcount: '1613'
+ht-degree: 54%
 
 ---
 
