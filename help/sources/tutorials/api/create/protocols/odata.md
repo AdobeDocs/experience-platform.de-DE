@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Generische OData;generische Daten
 solution: Experience Platform
-title: Erstellen eines generischen OData-Connectors mithilfe der Flow Service API
+title: Erstellen einer generischen OData-Quellverbindung mit der Flow Service API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die notwendig sind, um die Verbindung von Generic OData mit der Experience Platform herzustellen.
+description: Erfahren Sie, wie Sie mithilfe der Flow Service API generische OData mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '546'
 ht-degree: 27%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Generic OData]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Generic OData]-Quellverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
