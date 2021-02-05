@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;SFTP;SFTP
 solution: Experience Platform
-title: Erstellen eines SFTP-Quellconnectors in der Benutzeroberfläche
+title: Erstellen einer SFTP-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines SFTP-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine SFTP-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 6%
@@ -14,13 +14,13 @@ ht-degree: 6%
 ---
 
 
-# Erstellen eines SFTP-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer SFTP-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
 >Der SFTP-Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
-In diesem Lernprogramm werden Schritte zum Erstellen eines SFTP-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+In diesem Lernprogramm werden Schritte zum Erstellen einer SFTP-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
