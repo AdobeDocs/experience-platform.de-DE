@@ -1,21 +1,17 @@
 ---
 keywords: Advertising Cloud;Erweiterung der Werbewolke; werbeCloud-Ziel
-title: Adobe Advertising Cloud-Erweiterung
-seo-title: Adobe Advertising Cloud-Erweiterung
+title: Adobe Advertising Cloud Extension-Ziel
 description: Die Adobe Advertising Cloud-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Adobe Advertising Cloud-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 25%
+source-wordcount: '465'
+ht-degree: 22%
 
 ---
 
 
-# Adobe Advertising Cloud-Erweiterung {#adobe-advertising-cloud-extension}
-
-## Übersicht {#overview}
+# Adobe Advertising Cloud-Erweiterung {#adobe-advertising-cloud-extension}
 
 Dies ist die Erweiterung [!DNL Advertising Cloud] für die Implementierung von [!DNL Advertising Cloud]-Konversions- und Segment-Tags für die DSP und Suche (DCO wird derzeit nicht unterstützt).
 
