@@ -1,14 +1,14 @@
 ---
 keywords: Textklassifizierung;Textklassifizierung
 solution: Experience Platform, Intelligent Services
-title: Endpunkt der Textklassifizierungs-API
+title: Textklassifizierung in der API für Content and Commerce
 topic: Developer guide
 description: Der Text-Classification-Dienst kann ein Textfragment in eine oder mehrere Beschriftungen klassifizieren. Die Klassifizierung kann aus einer einzelnen Bezeichnung, mehreren Beschriftungen oder einer hierarchischen Struktur bestehen.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 5%
+source-wordcount: '441'
+ht-degree: 4%
 
 ---
 
