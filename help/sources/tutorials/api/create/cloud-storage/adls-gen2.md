@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Lake Datenspeicherung Gen2;Azurblauer Data Lake Datenspeicherung
 solution: Experience Platform
-title: Erstellen eines Azurblauen Data Lake Datenspeicherung Gen2-Connectors mithilfe der Flow Service API
+title: Erstellen einer Azurblauen Data Lake Datenspeicherung Gen2-Quellverbindung mithilfe der Flow Service API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die notwendig sind, um die Experience Platform mit Azurblase Data Lake Datenspeicherung Gen2 (im Folgenden "ADLS Gen2") zu verbinden.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mit der Flow Service API mit der Azurblauen Data Lake Datenspeicherung Gen2 verbinden.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '602'
 ht-degree: 24%
 
 ---
 
 
-# [!DNL Azure] Data Lake Datenspeicherung Gen2 Connector mithilfe der [!DNL Flow Service]-API erstellen
+# Erstellen Sie eine [!DNL Azure] Data Lake Datenspeicherung Gen2-Quellverbindung mit der [!DNL Flow Service]-API
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
 * [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxen, die eine einzelne Plattforminstanz in separate virtuelle Umgebung aufteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der API [!DNL Flow Service] einen ADLS Gen2-Quellanschluss erfolgreich zu erstellen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine ADLS Gen2-Quellverbindung mit der API [!DNL Flow Service] erfolgreich zu erstellen.
 
 ### Erforderliche Anmeldedaten sammeln
 
