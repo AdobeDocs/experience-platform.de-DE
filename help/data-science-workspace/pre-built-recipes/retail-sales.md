@@ -5,7 +5,7 @@ title: Rezept für Einzelhandel
 topic: overview
 description: Mit dem Retail Sales-Rezept können Sie eine Prognose der Verkaufszahlen für alle Läden für einen bestimmten Zeitraum erstellen. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 20%
@@ -34,7 +34,7 @@ Das Rezept für die Verkaufsvorausschätzung verwendet maschinelles Lernen, um V
 
 Beginnen Sie mit diesem [Tutorial](../jupyterlab/create-a-recipe.md).
 
-In diesem Lernprogramm wird beschrieben, wie Sie das Rezept für den Einzelhandel in einem Jupyter-Notebook erstellen und mithilfe des Notebooks Arbeitsabläufe für die Rezeptur in Adobe Experience Platform erstellen.
+In diesem Lernprogramm wird beschrieben, wie Sie in einem Jupyter-Notebook das Rezept für den Einzelhandel erstellen und mit dem Notebook-Workflow das Rezept in Adobe Experience Platform erstellen.
 
 ## Datenschema
 
