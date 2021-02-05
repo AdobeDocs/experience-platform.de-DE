@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;DULE;Modul
 solution: Experience Platform
-title: Adobe Experience Platform Data Governance
+title: Übersicht über die Datenverwaltung
 topic: overview
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 72%
@@ -13,7 +13,7 @@ ht-degree: 72%
 ---
 
 
-# [!DNL Data Governance]Übersicht
+# Data Governance – Übersicht
 
 Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Es ist daher wichtig sicherzustellen, dass Ihre Datenoperationen innerhalb von [!DNL Platform] den Datenverwendungsrichtlinien entsprechen.
 
