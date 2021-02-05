@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;GDPR;gdpr;CCPA;ccpa;PDPA;PDPA;LGPD;lgpd;faq;FAQ;Regulation;Regulation;Regulations;Regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
-title: Häufig gestellte Fragen zur Datenschutzregelung
+title: Häufig gestellte Fragen zu Datenschutzbestimmungen
 topic: troubleshooting
 description: Dieses Dokument beantwortet häufig gestellte Fragen zu unterstützten Datenschutzbestimmungen und deren Umsetzung in Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 00904291ab7e2f119d3886b5aae9be50d4e8bd2b
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 35%
@@ -13,7 +13,7 @@ ht-degree: 35%
 ---
 
 
-# Häufig gestellte Fragen zur Datenschutzregelung
+# Häufig gestellte Fragen zu Datenschutzbestimmungen
 
 Dieses Dokument beantwortet häufig gestellte Fragen zu unterstützten Datenschutzbestimmungen und deren Umsetzung in Adobe Experience Cloud.
 
