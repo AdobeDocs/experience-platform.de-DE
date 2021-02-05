@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;SQL-Syntax;sql;ctas;CTAS;Tabelle erstellen als Auswahl
 solution: Experience Platform
-title: SQL-Syntax
+title: SQL-Syntax im Abfrage-Dienst
 topic: syntax
-description: In diesem Dokument finden Sie die von Query Service unterstützte SQL-Syntax.
+description: Dieses Dokument zeigt die SQL-Syntax, die vom Adobe Experience Platform Abfrage Service unterstützt wird.
 translation-type: tm+mt
-source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2212'
-ht-degree: 84%
+source-wordcount: '2221'
+ht-degree: 83%
 
 ---
 
 
-# SQL-Syntax
+# SQL-Syntax in Abfrage Service
 
 [!DNL Query Service]Mit können Sie Standard-ANSI-SQL für `SELECT`-Anweisungen und andere begrenzte Befehle verwenden. Dieses Dokument zeigt die SQL-Syntax, die von [!DNL Query Service] unterstützt wird.
 
