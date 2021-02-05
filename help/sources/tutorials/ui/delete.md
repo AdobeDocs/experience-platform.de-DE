@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen; dataflows löschen
 description: Der Arbeitsbereich "Quellen"bietet Ihnen die Möglichkeit, vorhandene Batch- und Streaming-Datenflüsse zu löschen, die Fehler enthalten oder veraltet sind.
 solution: Experience Platform
-title: Datenflüsse löschen
+title: Datenflüsse in der Benutzeroberfläche löschen
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '368'
 ht-degree: 5%
 
 ---
