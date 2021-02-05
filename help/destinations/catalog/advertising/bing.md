@@ -1,21 +1,17 @@
 ---
 keywords: 'Werbung; bing; '
-title: Microsoft Bing-Ziel
-seo-title: Das Microsoft Bing-Ziel unterstützt Sie beim Senden von Profil-Daten an die Microsoft Display-Werbung.
-description: Mit dem Microsoft Bing-Ziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen in der gesamten Microsoft Display-Werbung durchführen.
-seo-description: Mit dem Microsoft Bing-Ziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen in der gesamten Microsoft Display-Werbung durchführen.
+title: Microsoft Bing-Verbindungsziel
+description: Mit dem Microsoft Bing-Verbindungsziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen über Microsoft Display Advertising durchführen.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '461'
 ht-degree: 6%
 
 ---
 
 
-# [!DNL Microsoft Bing] Ziel
-
-## Übersicht {#overview}
+# [!DNL Microsoft Bing] connection
 
 Mit dem [!DNL Microsoft Bing]-Ziel können Sie Profil-Daten an [!DNL Microsoft Display Advertising] senden.
 
