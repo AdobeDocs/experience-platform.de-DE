@@ -1,21 +1,17 @@
 ---
 keywords: clicktale;clicktale extension;clicktale-Ziel
-title: Clicktale-Erweiterung
-seo-title: Clicktale-Erweiterung
+title: Ziel der Erweiterung anklicken
 description: Die Clicktale-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Clicktale-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 23%
+source-wordcount: '519'
+ht-degree: 21%
 
 ---
 
 
 # [!DNL Clicktale]-Erweiterung {#clicktale-extension}
-
-## Übersicht {#overview}
 
 [!DNL Clicktale's] Die Integration mit Experience Platform Launch ermöglicht die Bereitstellung von  [!DNL Clicktale] Code und die Möglichkeit, Datenelemente mit  [!DNL Clicktale's] Visual Editor innerhalb von Launch zuzuordnen.
 
