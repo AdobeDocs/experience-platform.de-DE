@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Sandbox suchen;Sandbox aufsuchen
 solution: Experience Platform
-title: Nachschlagen einer Sandbox
+title: Sandbox in der API suchen
 topic: developer guide
 description: Sie können eine einzelne Sandbox nachschlagen, indem Sie eine GET anfordern, die die Eigenschaft name der Sandbox im Anforderungspfad enthält.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 86%
+source-wordcount: '243'
+ht-degree: 80%
 
 ---
 
 
-# Nachschlagen einer Sandbox
+# Suchen einer Sandbox in der API
 
 Sie können eine Sandbox mittels GET-Anfrage nachschlagen, in der Sie im Anfragepfad die `name`-Eigenschaft der jeweiligen Sandbox angeben.
 
