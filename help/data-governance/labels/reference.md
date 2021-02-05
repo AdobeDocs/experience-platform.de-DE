@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung API;Policy-Dienst-API;Unterstützte Datenverwendungsbeschriftungen;Beschriftungen;Identitätsbeschriftungen;sensible Beschriftungen
 solution: Experience Platform
-title: Nutzungsbeschreibungen der Kerndaten
+title: Glossar zu Datenverwendungsbezeichnungen
 topic: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Beschriftungen zur Datenverwendung beschrieben.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 6%
@@ -13,7 +13,7 @@ ht-degree: 6%
 ---
 
 
-# Nutzungsbeschreibungen der Kerndaten
+# Glossar zu Datenverwendungsbezeichnungen
 
 Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Adobe Experience Platform Data Governance bietet mehrere gebrauchsfertige Beschriftungen für die Kerndatenverwendung, die Sie zum Kategorisieren Ihrer Daten verwenden können.
 
