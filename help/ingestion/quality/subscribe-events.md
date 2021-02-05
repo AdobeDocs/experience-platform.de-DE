@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datenerfassungsbenachrichtigungen;Benachrichtigungen;abonnierte Ereignisse;Ereignisse zum Datenerfassungsstatus;Ereignisse;Abonnieren;Statusbenachrichtigungen;
 solution: Experience Platform
-title: Abonnieren von Datenerfassungsereignissen
+title: Dateneinbettungsbenachrichtigungen
 topic: overview
 description: Um den Erfassungsvorgang zu überwachen, kann Adobe Experience Platform eine Reihe von Ereignissen abonnieren, die von jedem Prozessschritt veröffentlicht werden, und Sie über den Status der erfassten Daten und eventuelle Fehler informieren.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '681'
 ht-degree: 29%
 
 ---
