@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Übersicht über die Benutzeroberfläche von Privacy Service
+title: Übersicht über die Benutzeroberfläche des Privacy Service
 topic: UI guide
 description: Beginnen Sie mit der Verwendung der Benutzeroberfläche von Privacy Service, um Datenschutzanforderungen über verschiedene Experience Cloud-Anwendungen hinweg zu koordinieren und zu überwachen.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
