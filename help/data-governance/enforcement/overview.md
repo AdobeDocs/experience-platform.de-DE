@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Richtliniendurchsetzung;Automatische Durchsetzung;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
-title: Übersicht über die Durchsetzung von Richtlinien
+title: Übersicht über die Richtliniendurchsetzung
 topic: guide
 description: Sobald Datenverwendungsbeschriftungen auf Adobe Experience Platform-Datensätze angewendet wurden und für Marketingaktionen mit diesen Bezeichnungen Richtlinien zur Datenverwendung definiert wurden, können Sie diese Richtlinien mithilfe der Datenverwaltungsfunktionen durchsetzen und Datenvorgänge verhindern, die Richtlinienverletzungen darstellen. Es gibt zwei Methoden zur Durchsetzung von Richtlinien, die durch die Datenverwaltungsfunktionen auf Plattform, API-basierte Durchsetzung und automatische Durchsetzung bereitgestellt werden.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 12%
+source-wordcount: '237'
+ht-degree: 10%
 
 ---
 
 
 # Übersicht über die Durchsetzung von Richtlinien
 
-Sobald Datenverwendungsbezeichnungen auf [!DNL Platform]-Datensätze angewendet wurden und für Marketingaktionen mit diesen Bezeichnungen Datenverwendungsrichtlinien definiert wurden, können Sie mithilfe der [!DNL Data Governance]-Funktionen diese Richtlinien durchsetzen und Datenoperationen verhindern, die Richtlinienverletzungen darstellen.
+Sobald Datenverwendungsbeschriftungen auf Datasets angewendet wurden und für Marketingaktionen mit diesen Bezeichnungen Richtlinien zur Datenverwendung definiert wurden, können Sie mit den Adobe Experience Platform-Funktionen zur Datenverwaltung diese Richtlinien durchsetzen und Datenvorgänge verhindern, die Richtlinienverletzungen darstellen.
 
 Es gibt zwei Methoden zur Richtliniendurchsetzung, die von [!DNL Data Governance]-Funktionen für [!DNL Platform] bereitgestellt werden: API-basierte Durchsetzung und automatische Durchsetzung.
 
