@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Handbuch zum Privacy Service-API-Entwickler
+title: Privacy Service-API-Handbuch
 topic: developer guide
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Privacy Service-API.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '501'
 ht-degree: 11%
 
 ---
 
 
-# Anhang
+# Handbuch zur Privacy Service-API
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit der Adobe Experience Platform Privacy Service API.
 
