@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;API;API;
-title: Entwicklerhandbuch für den Adobe Experience Platform Segmentdienst
+title: Handbuch zur Segmentdienst-API
 topic: guide
-description: Dieses Dokument mit einer Übersicht enthält allgemeine Einführungen zu den einzelnen Segmentierungsdienst-API-Endpunkten sowie Links zu den zugehörigen Endpunktleitfäden.
+description: Die Segmentierungsdienst-API ermöglicht es Entwicklern, Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 6%
@@ -12,7 +12,7 @@ ht-degree: 6%
 ---
 
 
-# Adobe Experience Platform [!DNL Segmentation Service] API-Entwicklerhandbuch
+# Handbuch zur Segmentdienst-API
 
 [!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Audiencen  [!DNL Adobe Experience Platform] aus Ihren  [!DNL Real-time Customer Profile] Daten.
 
