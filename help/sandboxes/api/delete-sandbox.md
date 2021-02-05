@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Sandbox löschen
 solution: Experience Platform
-title: Sandbox löschen
+title: Eine Sandbox in der API löschen
 topic: developer guide
 description: Sie können eine Sandbox löschen, indem Sie eine DELETE-Anforderung ausführen, die den Namen der Sandbox im Anforderungspfad enthält.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 76%
+source-wordcount: '116'
+ht-degree: 67%
 
 ---
 
 
-# Sandbox löschen
+# Eine Sandbox in der API löschen
 
 Sie können eine Sandbox löschen, indem Sie eine DELETE-Anfrage ausführen, die den `name` der Sandbox im Anfragepfad enthält.
 
