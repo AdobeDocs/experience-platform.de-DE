@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;PSQL;psqlconnect to Abfrage Service;Abfrage-Dienst;Abfrage-Dienst
 solution: Experience Platform
-title: Anbinden an PSQL
+title: PSQL mit dem Abfrage-Dienst verbinden
 topic: connect
 description: 'PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation von PostgreSQL auf Ihrem Computer verwendet wird. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen. '
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 25%
+source-wordcount: '247'
+ht-degree: 23%
 
 ---
 
 
-# PSQL
+# PSQL mit dem Abfrage-Dienst verbinden
 
 PSQL ist eine Befehlszeilenschnittstelle, die installiert wird, wenn Sie [!DNL PostgreSQL] auf Ihrem Computer installieren. Dieses Dokument beschreibt die Schritte zum Verbinden von PSQL mit Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL PSQL] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL PSQL] finden Sie in der [offiziellen [!DNL PSQL] Dokumentation](https://www.postgresql.org/docs/current/app-psql.html.
-
-## Verbinden Sie PSQL und [!DNL Query Service]
 
 Nachdem Sie PSQL auf Ihrem Computer installiert haben, können Sie PSQL mit dem Abfrage Service verbinden. Kehren Sie zur Benutzeroberfläche [!DNL Platform] zurück und wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
