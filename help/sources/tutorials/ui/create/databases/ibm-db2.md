@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
-title: IBM DB2-Quellanschluss in der Benutzeroberfläche erstellen
+title: Erstellen einer IBM DB2-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm enthält Schritte zum Erstellen eines IBM DB2-Quellconnectors (im Folgenden "DB2") mithilfe der Plattform-Benutzeroberfläche.
+description: Erfahren Sie, wie Sie eine IBM DB2-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '536'
 ht-degree: 8%
 
 ---
 
 
 
-# IBM DB2-Quellanschluss in der Benutzeroberfläche erstellen
+# Erstellen einer IBM DB2-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
