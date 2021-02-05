@@ -1,23 +1,23 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Hilfe zu Adobe Experience Platform Segmentation Service
+user-guide-title: Adobe Experience Platform-Segmentdienst
 breadcrumb-title: Anleitung zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Segmente und generieren Sie Audiences aus Ihren Echtzeit-Kundenprofildaten.
 translation-type: tm+mt
-source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 83%
+source-wordcount: '135'
+ht-degree: 80%
 
 ---
 
 
-# Hilfe zu Adobe Experience Platform Segmentation Service {#segmentation}
+# Adobe Experience Platform-Segmentdienst {#segmentation}
 
-- [Übersicht](home.md)
+- [Übersicht über den Segmentierungsdienst](home.md)
 - [Segmentdatentypen](data-types.md)
-- Entwicklerhandbuch für die Segmentierungs-API {#api}
+- Segmentation-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
    - [Exportaufträge](api/export-jobs.md)
@@ -28,7 +28,7 @@ ht-degree: 83%
    - [Segmentsuche](api/segment-search.md)
    - [Streaming-Segmentierung](api/streaming-segmentation.md)
 - Segmentierungsbenutzeroberfläche {#ui}
-   - [Handbuch zur Segmentierungsbenutzeroberfläche](ui/overview.md)
+   - [Übersicht](ui/overview.md)
    - [Segment-Dashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Streaming-Segmentierung](ui/streaming-segmentation.md)
