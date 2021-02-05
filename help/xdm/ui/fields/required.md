@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Erforderlich;Feld;
 solution: Experience Platform
-title: Definieren eines erforderlichen Felds in der Benutzeroberfläche
+title: Erforderliche Felder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie ein erforderliches XDM-Feld in der Benutzeroberfläche der Experience Platform definieren.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 48025fc11558bf6773ce5c48054483758c7e993f
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 1%
 
 ---
 
 
-# Definieren eines erforderlichen Felds in der Benutzeroberfläche
+# Definieren der erforderlichen Felder in der Benutzeroberfläche
 
 Im Erlebnis-Datenmodell (XDM) gibt ein erforderliches Feld an, dass ein gültiger Wert angegeben werden muss, damit ein bestimmtes Ereignis für Datensätze oder Zeitreihen während der Datenerfassung akzeptiert werden kann. Häufige Anwendungsfälle für erforderliche Felder umfassen Informationen zur Benutzeridentität und Zeitstempel.
 
