@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Partielle Erfassung;Partielle Erfassung;Fehler abrufen;Fehler abrufen;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Erfassung;Ingestion;Fehlerdiagnose;Fehlerdiagnose;Fehlerdiagnose;Fehlerdiagnose;Fehler abruf;Fehler abrufen;
 solution: Experience Platform
-title: Übersicht zur partiellen Batch-Erfassung in Adobe Experience Platform
+title: Fehlerdiagnose beim Abrufen der Dateneinlastung
 topic: overview
 description: Dieses Dokument enthält Informationen zur Überwachung der Stapelverarbeitung, zur Verwaltung von Fehlern bei der Partiellen Stapelverarbeitung sowie eine Referenz für Stapelverarbeitungsarten.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
-ht-degree: 36%
+ht-degree: 35%
 
 ---
 
 
-# Fehlerdiagnose abrufen
+# Fehlerdiagnose beim Abrufen der Datenerfassung
 
 Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder die Streaming-Erfassung, mit der Sie ihre Daten mit Streaming-Endpunkten in Echtzeit an [!DNL Platform] einfügen können.
 
