@@ -1,22 +1,18 @@
 ---
 keywords: Facebook;Facebook;Social-Netzwerk;Social-Netzwerk;Social-Netzwerkauthentifizierung;Social-Netzwerkauthentifizierung
-title: Workflow für Ziele in sozialen Netzwerken
+title: Social-Netzwerkziel erstellen
 type: Tutorial
-seo-title: Workflow für Ziele in sozialen Netzwerken
-description: Anleitung zum Herstellen einer Verbindung zu Ihren Anzeigenkonten für soziale Netzwerke
-seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Anzeigenkonten für soziale Netzwerke
+description: Erfahren Sie, wie Sie eine Verbindung zu Ihren Social-Netzwerk-Anzeigenkonten in Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 56%
+source-wordcount: '460'
+ht-degree: 52%
 
 ---
 
 
-# Authentifizierungsarbeitsablauf für Social-Netzwerkziele {#social-network-destinations-workflow}
-
-## Arbeitsablauf zum Erstellen von Social-Netzwerk-Zielen
+# Social-Netzwerkziel {#social-network-destinations-workflow} erstellen
 
 Dieses Lernprogramm verwendet [!DNL Facebook] als Beispiel, aber der Arbeitsablauf in Adobe Experience Platform ist für alle Social-Netzwerk-Ziele gleich, sobald dem Produkt mehr hinzugefügt wird.
 
