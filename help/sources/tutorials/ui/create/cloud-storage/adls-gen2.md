@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Lake Datenspeicherung Gen2;ADLS Gen2;adls gen2;adls Connector
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für Azure Data Lake Storage Gen2 über die Benutzeroberfläche
+title: Erstellen einer Azurblauen Data Lake Datenspeicherung Gen2-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Authentifizieren eines Azurblauen Data Lake Datenspeicherung Gen2 (im Folgenden "ADLS Gen2" genannt)-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Azurblase Data Lake Datenspeicherung Gen2-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 11%
+source-wordcount: '484'
+ht-degree: 9%
 
 ---
 
 
-# Erstellen eines [!DNL Azure Data Lake Storage Gen2]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Azure Data Lake Storage Gen2]-Quellverbindung in der Benutzeroberfläche
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Authentifizieren eines [!DNL Azure Data Lake Storage Gen2]-Quellconnectors (nachstehend &quot;a1/>&quot;genannt) mithilfe der [!DNL Platform]-Benutzeroberfläche beschrieben.[!DNL ADLS Gen2]
 
