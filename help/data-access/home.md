@@ -3,12 +3,12 @@ keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Python-SDK;Spark
 solution: Experience Platform
 title: Übersicht über den Datenzugriff
 topic: overview
-description: Data Access unterstützt Adobe Experience Platform, indem es Benutzerwerkzeuge bereitstellt, die auf die Entdeckung und Zugänglichkeit von erfassten Datensätzen innerhalb der Experience Platform ausgerichtet sind.
+description: Data Access unterstützt Adobe Experience Platform, indem es Benutzerwerkzeuge bereitstellt, die auf die Entdeckung und Zugänglichkeit von erfassten Plattformdatensätzen ausgerichtet sind.
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 6%
+source-wordcount: '185'
+ht-degree: 7%
 
 ---
 
