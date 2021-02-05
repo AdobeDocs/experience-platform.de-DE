@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblut;Amazon S3;Blob;Blob;S3;s3
 solution: Experience Platform
-title: Azurblauch und Amazon S3-Stecker
+title: Azurblauch und Amazon S3 Source Connectors - Übersicht
 topic: overview
-description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Azurblase und Amazon S3 und Platform herstellen.
+description: Erfahren Sie, wie Sie Blase und Amazon S3 mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
 
-# Azurblauch und Amazon S3-Stecker
+# Azurblase und Amazon S3-Stecker
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform] übertragen.
 
