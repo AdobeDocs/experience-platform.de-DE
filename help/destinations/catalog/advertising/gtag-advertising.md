@@ -1,21 +1,17 @@
 ---
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
-title: Google gtag-Erweiterung
-seo-title: Google gtag-Erweiterung
+title: Google Tag Extension-Ziel
 description: Die Google-Tag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Google-Tag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 21%
+source-wordcount: '553'
+ht-degree: 18%
 
 ---
 
 
 # Google gtag-Erweiterung {#gtag-advertising-extension}
-
-## Übersicht {#overview}
 
 Laden Sie die Datei `gtag.js` von Google in Ihre Site, um Ereignis-Daten an [!DNL Google Analytics], Google Ads und [!DNL Google Marketing Platform] zu senden. Diese Erweiterung fügt nur den gtag-Code zu Ihrer Site hinzu. Sie müssen andere Google-Erweiterungen verwenden, um Ereignis und Aktionen hinzuzufügen, die gtag verwenden.
 
