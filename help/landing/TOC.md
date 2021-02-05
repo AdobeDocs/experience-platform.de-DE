@@ -5,10 +5,10 @@ user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Experience Platform es ermöglicht, Ihren Kunden personalisierte Erlebnisse in Echtzeit bereitzustellen.
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 29%
+source-wordcount: '159'
+ht-degree: 32%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 29%
    * [Workflows](workflows.md)
    * [Browser- und Sprachunterstützung](browser-language-support.md)
 * Experience Platform-APIs {#platform-apis}
+   * [ Platform-APIs authentifizieren und aufrufen](api-authentication.md)
    * [API-Grundlagen](api-fundamentals.md)
    * [API-Referenz-Dokumente](http://www.adobe.com/go/platform-api-reference-en)
-   * [Übung &quot;APIs für Authentifizierung und Zugriff&quot;](api-authentication.md)
 * Plattformdokumentation {#documentation}
-   * [Dokumentationsübersicht](documentation/overview.md)
-   * [Unterstützung von Dokumentationssprachen](documentation/language-support.md)
+   * [Übersicht](documentation/overview.md)
+   * [Sprachunterstützung](documentation/language-support.md)
 * Plattform im Adobe-Ökosystem {#ecosystem}
    * [Anwendungsdienste](application-services.md)
    * [Anwendungen und intelligente Dienste (Video)](video/application-intelligent-services.md)
@@ -48,6 +48,6 @@ ht-degree: 29%
          * [Dataset zur Erfassung von Einwilligungs- und Präferenzdaten konfigurieren](./governance-privacy-security/consent/iab/dataset.md)
 * [Dashboard zur Lizenzverwendung](license-usage-dashboard.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
-* [ADLS Gen2 Migration](adls2-gen2-migration.md)
+* [Generale2-Datenschichtmigration](adls2-gen2-migration.md)
 * [Glossar](glossary.md)
 * [Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
