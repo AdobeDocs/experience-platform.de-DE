@@ -4,7 +4,7 @@ title: Handbuch zur Benutzeroberfläche des Profils in Echtzeit
 topic: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 9%
