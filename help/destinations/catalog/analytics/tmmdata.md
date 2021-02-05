@@ -1,21 +1,17 @@
 ---
 keywords: TMMData;tmm data;tmmdata;TMM-Daten
-title: TMMData-Erweiterung
-seo-title: TMMData-Erweiterung
+title: Ziel der TMMData-Erweiterung
 description: Die TMMData-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die TMMData-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 20%
+source-wordcount: '544'
+ht-degree: 18%
 
 ---
 
 
-# [!DNL TMMData] Erweiterung {#tmmdata-extension}
-
-## Übersicht {#overview}
+# [!DNL TMMData]-Erweiterung {#tmmdata-extension}
 
 [!DNL TMMData's] Die Foundation-Plattform für Adobe Marketing Cloud bietet Marketingteams die Werkzeuge, mit denen sie auf alle wichtigen Datenquellen zugreifen und diese miteinander verknüpfen können - einschließlich interner/externer und Online-/Offline-Daten - für eine sichere, umfassende Analyse über Kanal hinweg mit automatisierter Kampagne-Einrichtung und direktem Import in Adobe und andere Analytics- und BI-Tools.
 
