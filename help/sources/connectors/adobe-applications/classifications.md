@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Adobe Analytics Classifications Data Connector
 solution: Experience Platform
-title: Adobe Analytics Classification Data Connector
+title: Adobe Analytics Source Connector for Classifications Data
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Analytics-Classifications mithilfe der Benutzeroberfläche mit Platform verbunden werden können
+description: Erfahren Sie, wie Sie Analytics-Klassifizierungen mithilfe der Benutzeroberfläche mit der Plattform verbinden.
 translation-type: tm+mt
-source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '181'
 ht-degree: 10%
 
 ---
 
 
-# Adobe Analytics Classifications Data Connector
+# Adobe Analytics-Quellanschluss für Classification-Daten
 
 Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -25,4 +25,4 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie Analytics-Klassi
 
 ## Verbinden von Analytics-Klassifizierungen mit der Plattform mithilfe der Benutzeroberfläche
 
-- [Analytics Classifications Data Connector in der Benutzeroberfläche erstellen](../../tutorials/ui/create/adobe-applications/classifications.md)
+- [Verbindung zu Analytics Classifications-Daten in der Benutzeroberfläche erstellen](../../tutorials/ui/create/adobe-applications/classifications.md)
