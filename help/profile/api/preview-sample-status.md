@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Vorschau;Beispiel
-title: Profil-Vorschau - Echtzeit-Client-Profil-API
+title: API-Endpunkt für Profil-Musterstatus
 description: Mithilfe von Echtzeit-API-Endpunkten für Kunden-Profil können Sie die neueste erfolgreiche Vorschau Ihrer Profil-Daten sowie die Verteilung von Listen-Profilen nach Dataset und Identitäts-Namensraum innerhalb von Adobe Experience Platform verwenden.
 topic: guide
 translation-type: tm+mt
-source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1553'
 ht-degree: 5%
 
 ---
