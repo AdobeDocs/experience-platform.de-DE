@@ -6,10 +6,10 @@ description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehun
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 32%
+source-wordcount: '945'
+ht-degree: 31%
 
 ---
 
