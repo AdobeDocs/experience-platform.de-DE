@@ -1,21 +1,17 @@
 ---
 keywords: Verlängerung der Quantenmetrik;Quantenmetrik;Quantenmetrik;Quantenmetrik
-title: Quantum Metric-Erweiterung
-seo-title: Quantum Metric-Erweiterung
+title: Ziel der Erweiterung um Quantenmetriken
 description: Die Erweiterung "Quantum-Metrik"ist ein Analysenziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Erweiterung "Quantum-Metrik"ist ein Analysenziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 21%
+source-wordcount: '536'
+ht-degree: 18%
 
 ---
 
 
-# [!DNL Quantum Metric] Erweiterung {#quantum-metric-extension}
-
-## Übersicht {#overview}
+# [!DNL Quantum Metric]-Erweiterung {#quantum-metric-extension}
 
 [!DNL Quantum Metric's] Die Integration mit Adobe Launch erleichtert die kodellose Bereitstellung von  [!DNL Quantum Metric's] Datenerfassungstag. Darüber hinaus Angebot diese Erweiterung die Möglichkeit, Launch-Datenelemente zu erfassen, die nützliche Informationen aus der API [!DNL Quantum Metric] enthalten.
 
