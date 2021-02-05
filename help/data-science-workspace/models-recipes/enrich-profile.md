@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;Modell für maschinelles Lernen;Arbeitsbereich für Datenwissenschaften;Echtzeit-Profil für Kunden;beliebte Themen;Einblicke in maschinelles Lernen
 solution: Experience Platform
-title: Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen anreichern
+title: Verbessern Sie Ihr Echtzeit-Profil durch maschinelles Lernen - Insights
 topic: tutorial
 type: Tutorial
-description: Dieses Dokument bietet einen Leitfaden, wie Sie Ihr Echtzeit-Kundenerlebnis mit maschinell gewonnenen Erkenntnissen bereichern können.
+description: Dieses Dokument bietet einen Leitfaden, wie Sie Echtzeit-Kundeneinblicke durch maschinelles Lernen bereichern können.
 translation-type: tm+mt
-source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '635'
-ht-degree: 26%
+source-wordcount: '640'
+ht-degree: 24%
 
 ---
 
 
 # Bereichern Sie [!DNL Real-time Customer Profile] durch Einblicke in maschinelles Lernen.
 
-Adobe Experience Platform [!DNL Data Science Workspace] bietet die Werkzeuge und Ressourcen zum Erstellen, Auswerten und Verwenden von Modellen für maschinelles Lernen, um Datenprognosen und Erkenntnisse zu generieren. Wenn Einblicke in das maschinelle Lernen in einen [!DNL Profile]-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als [!DNL Profile]-Datensätze erfasst, die dann mit [!DNL Adobe Experience Platform Segmentation Service] segmentiert werden können. Bevor aufgenommene Profil- und Zeitreihendaten mit bestehenden Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird, bestimmt das Echtzeit-Kundenprofil anhand der sogenannten Streaming-Segmentierung durchgehend automatisch, ob die neuen Daten in den Segmenten eingeschlossen oder von ihnen ausgeschlossen werden. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen.
+Adobe Experience Platform [!DNL Data Science Workspace] bietet die Werkzeuge und Ressourcen zum Erstellen, Auswerten und Verwenden von maschinellen Lernmodellen, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke in das maschinelle Lernen in einen [!DNL Profile]-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als [!DNL Profile]-Datensätze erfasst, die dann mit [!DNL Adobe Experience Platform Segmentation Service] segmentiert werden können. Bevor aufgenommene Profil- und Zeitreihendaten mit bestehenden Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird, bestimmt das Echtzeit-Kundenprofil anhand der sogenannten Streaming-Segmentierung durchgehend automatisch, ob die neuen Daten in den Segmenten eingeschlossen oder von ihnen ausgeschlossen werden. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen.
 
-Dieses Dokument enthält Links zu Tutorials, mit denen Sie [!DNL Real-time Customer Profile] mit Ihren maschinell gelernten Erkenntnissen bereichern können.
+Dieses Dokument enthält Links zu Tutorials, mit denen Sie [!DNL Real-time Customer Profile] mit Ihren Erkenntnissen aus dem maschinellen Lernen bereichern können.
 
 ## Erste Schritte
 
