@@ -1,22 +1,19 @@
 ---
 keywords: Ziel der Cloud-Datenspeicherung;Cloud-Datenspeicherung
-title: Workflow für Cloud-Speicher-Ziele
-seo-title: Workflow für Cloud-Speicher-Ziele
+title: Cloud-Datenspeicherung-Ziel erstellen
 type: Tutorial
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 36%
+source-wordcount: '534'
+ht-degree: 33%
 
 ---
 
 
-# Workflow zum Erstellen von Cloud-Speicher-Zielen
-
-## Übersicht
+# Ziel einer Cloud-Datenspeicherung erstellen
 
 Auf dieser Seite wird erläutert, wie Sie eine Verbindung zu Cloud-Datenspeicherung in Adobe Experience Platform herstellen können.
 
