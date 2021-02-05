@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;vorbereitete Anweisungen;Vorbereitung;SQL
 solution: Experience Platform
-title: Vorbereitete Anweisungen
+title: Vorbereitende Anweisungen im Abfrage-Dienst
 topic: prepared statements
 description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen der Vorlage zuzuordnen. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen durch Einsatz einer parametrisierten Abfrage.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 90%
+source-wordcount: '381'
+ht-degree: 89%
 
 ---
 
