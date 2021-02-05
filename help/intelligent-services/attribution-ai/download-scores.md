@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Zuordnungs-Hilfe;Zugriffszahlen;beliebte Themen;Download-Bewertungen;Zuordnungsai-Bewertungen;Export;Export
 solution: Experience Platform, Intelligent Services
-title: Aufrufen von Bewertungen in Attribution AI
-topic: Accessing scores
+title: Herunterladen von Ergebnissen in Attribution AI
+topic: Downloading scores
 description: Dieses Dokument dient als Anleitung zum Herunterladen von Punktzahlen für Attribution AIS.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1056'
-ht-degree: 68%
+ht-degree: 67%
 
 ---
 
