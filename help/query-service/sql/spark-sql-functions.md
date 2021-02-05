@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Spark-SQL;Spark-SQL;Spark;Zwiebelfunktionen;Funktionen
 solution: Experience Platform
-title: Spark SQL-Funktionen
+title: Spark SQL-Funktionen im Abfrage-Dienst
 topic: spark sql functions
 description: Diese Dokumentation enthält Informationen zu Spark-SQL-Funktionen, die die SQL-Funktionalität erweitern.
 translation-type: tm+mt
-source-git-commit: 019de34c5e4ac53d38887752e893733f843dd22f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '3890'
+source-wordcount: '3893'
 ht-degree: 2%
 
 ---
