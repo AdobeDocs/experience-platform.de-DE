@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Beacon;Interaktionsdetails;Datentyp;Datentyp;Datentyp;
 solution: Experience Platform
-title: Datentyp für Geo-Interaktionsdetails
+title: Datentyp "Geo-Interaktionsdetails"
 topic: overview
 description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp für Geo-Interaktionsdetails.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 5%
