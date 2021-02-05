@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;Retail-Vertriebsrezept;Data Science Workspace;beliebte Themen;Rezepte
 solution: Experience Platform
-title: Schema und Datensatz für Einzelhandelsumsätze erstellen
+title: Schema und Datensatz für Einzelhandelsverkäufe erstellen
 topic: tutorial
 type: Tutorial
 description: Diese Anleitung beinhaltet Informationen über die Voraussetzungen und Elemente, die bei allen anderen Anleitungen für Adobe Experience Platform Data Science Workspace benötigt werden. Danach stehen Ihnen und den Mitgliedern Ihrer IMS-Organisation in Experience Platform das Schema „Einzelhandelsumsätze“ und entsprechende Datensätze zur Verfügung.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 65%
+ht-degree: 60%
 
 ---
 
@@ -111,7 +111,7 @@ Nach erfolgreichem Abschluss des Bootstrap-Skripts können die Retail Sales-Eing
 Sie haben auch erfolgreich Musterdaten für Einzelhandelsverkäufe in [!DNL Experience Platform] mit dem bereitgestellten Bootstrap-Skript erfasst.
 
 So arbeiten Sie weiter mit den aufgenommenen Daten:
-- [Daten mit Jupyter-Notebooks analysieren](../jupyterlab/analyze-your-data.md)
-   - Verwenden Sie Jupyter Notebooks in Data Science Workspace, um auf Ihre Daten zuzugreifen, sie zu untersuchen, zu visualisieren und zu verstehen.
+- [Analysieren Ihrer Daten mit Jupyter-Notebooks](../jupyterlab/analyze-your-data.md)
+   - Verwenden Sie Jupyter-Notebooks in Data Science Workspace, um auf Ihre Daten zuzugreifen, sie zu erkunden, sie zu visualisieren und zu verstehen.
 - [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md)
    - Folgen Sie diesem Lernprogramm, um zu erfahren, wie Sie Ihr eigenes Modell in [!DNL Data Science Workspace] durch Verpacken von Quelldateien in einer wichtigen Recipe-Datei bringen.
