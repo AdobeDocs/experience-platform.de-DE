@@ -1,21 +1,17 @@
 ---
 keywords: contentsquare extension;contentsquare destination;contentsquare
-title: Contentsquare-Erweiterung
-seo-title: Contentsquare-Erweiterung
+title: ContentSquare Extension-Ziel
 description: Die ContentSquare-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die ContentSquare-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 22%
+source-wordcount: '542'
+ht-degree: 20%
 
 ---
 
 
 # [!DNL Contentsquare]-Erweiterung {#contentsquare-extension}
-
-## Übersicht {#overview}
 
 Visualisieren Sie das Verhalten von Inpage, siehe WARUM Kunden abbrechen und wie Sie Verbesserungen vornehmen können. Ordnen Sie Umsatz für jeden Analytics-Segment- und -Zielgruppen-Test UX- und Inhaltselemente zu. Installieren Sie das [!DNL Contentsquare]-Tag, richten Sie benutzerdefinierte Variablen und Ereignis ein. Beginn sammeln Daten für Ihre UX-Analyse in wenigen Klicks.
 
