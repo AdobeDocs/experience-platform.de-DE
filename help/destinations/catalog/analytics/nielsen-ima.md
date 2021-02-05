@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen IMA Handler;Nielsen ima handler;Nielsen ima;Nielsen ima;Nielsen IMA
-title: Nielsen IMA Handler-Erweiterung
-seo-title: Nielsen IMA Handler-Erweiterung
+title: Nielsen IMA Handler Extension-Ziel
 description: Die Nielsen IMA Handler Extension ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Nielsen IMA Handler Extension ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 22%
+source-wordcount: '473'
+ht-degree: 19%
 
 ---
 
 
-# [!DNL Nielsen IMA Handler] Erweiterung {#nielsen-ima-extension}
-
-## Übersicht {#overview}
+# [!DNL Nielsen IMA Handler]-Erweiterung {#nielsen-ima-extension}
 
 [!DNL Nielsen IMA Handler] ist eine Analytics-Erweiterung in Adobe Experience Platform.
 
