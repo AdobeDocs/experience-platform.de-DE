@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Arbeitsbereich „Zugriffskontrolle“ durchsuchen
+title: Wählen Sie ein Profil zum Bearbeiten der Zugriffskontrolle-Berechtigungen aus
 topic: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs "Zugriffskontrolle"beschrieben. Um die Zugriffskontrolle für Experience Platform über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer IMS-Organisation sein, die über ein Abonnement für Experience Platform verfügt.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 76%
+source-wordcount: '315'
+ht-degree: 70%
 
 ---
 
 
-# Arbeitsbereich „Zugriffskontrolle“ durchsuchen
+# Wählen Sie ein Profil aus, um die Zugriffskontrolle zu verwalten
 
 Um die Zugriffskontrolle für [!DNL Experience Platform] über das Adobe Admin Console zu konfigurieren, müssen Sie Administrator für eine IMS-Organisation sein, die über ein Abonnement zu [!DNL Experience Platform] verfügt. Zwar unterstützt Adobe flexible Administrationshierarchien für IMS-Organisationen, doch benötigen Sie zur Konfiguration der Zugriffskontrolle Systemadministrator-, Produktadministrator- oder Produktprofiladministrator-Berechtigungen. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
