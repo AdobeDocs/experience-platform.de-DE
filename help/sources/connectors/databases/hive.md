@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Apache-Hive;Hive;Hive;Azurblauer HDInsights;Azure-Hdinsights;
 solution: Experience Platform
-title: Apache Hive auf der Azurblauen HDInsights-Steckverbindung
+title: Apache Hive auf Azurblaus HDInsights Source Connector Übersicht
 topic: overview
-description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie Apache Hive auf Blue HDInsights mit APIs oder der Benutzeroberfläche mit Platform verbinden.
+description: Erfahren Sie, wie Sie Apache Hive auf Azurblauen HDInsights mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 10%
@@ -31,11 +31,11 @@ In der folgenden Dokumentation finden Sie Informationen dazu, wie [!DNL Apache H
 
 ## Verbinden Sie [!DNL Apache Hive] unter [!DNL Azure HDInsights] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen Sie einen Apache Hive auf einem Avocent HDInsights-Connector mithilfe der Flow Service API](../../tutorials/api/create/databases/hive.md)
+- [Erstellen Sie eine Apache Hive auf der Azurblauen HDInsights-Quellverbindung mithilfe der Flow Service API](../../tutorials/api/create/databases/hive.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Apache Hive] auf [!DNL Azure HDInsights] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen Sie einen Apache Hive auf einem Azurblauen HDInsights-Quellanschluss in der Benutzeroberfläche](../../tutorials/ui/create/databases/hive.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen Sie eine Apache Hive auf der Azurblauen HDInsights-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/hive.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
