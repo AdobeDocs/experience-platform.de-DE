@@ -5,7 +5,7 @@ title: Adobe I/O-Ereignis-Benachrichtigungen abonnieren
 topic: developer guide
 description: 'In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignis-Benachrichtigungen für Adobe Experience Platform-Dienste abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignis-Daten für jeden entsprechenden Dienst bereitgestellt. [!DNL Platform] '
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 4%
