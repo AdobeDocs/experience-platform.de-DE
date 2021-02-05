@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblüte;Blob;Blob;Blob
 solution: Experience Platform
-title: Erstellen eines Azurblauch-Connectors mit der Flow Service API
+title: Erstellen einer Blase-Quellverbindung mit der Flow-Dienst-API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, mit denen Sie die Experience Platform mit einer Azurblase-Datenspeicherung (im Folgenden "Blob" genannt) verbinden können.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mit der Flow Service API mit Azurblase verbinden.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '761'
 ht-degree: 26%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Azure Blob]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Azure Blob]-Quellverbindung mit der [!DNL Flow Service]-API
 
-Dieses Lernprogramm verwendet die API[[!DNL Flow Service] um Sie durch die Schritte zur Verbindung von [!DNL Azure Blob] (nachfolgend &quot;Blob&quot; genannt) mit der Experience Platform zu führen.](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
+Dieses Lernprogramm verwendet die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml), um Sie durch die Schritte zur Verbindung von [!DNL Azure Blob] (nachfolgend &quot;Blob&quot; genannt) mit Adobe Experience Platform zu führen.
 
 ## Erste Schritte
 
@@ -25,7 +25,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu kennzeichnen und zu verbessern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich einen [!DNL Blob]-Quellanschluss mit der [!DNL Flow Service]-API zu erstellen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Flow Service]-API eine [!DNL Blob]-Quellverbindung erfolgreich zu erstellen.
 
 ### Erforderliche Anmeldedaten sammeln
 
