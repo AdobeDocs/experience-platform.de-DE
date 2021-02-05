@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datum;Datumsfunktionen;Datumswerte;
 solution: Experience Platform
-title: Datumsfunktionen
+title: Datenvorgabedatumsfunktionen
 topic: overview
 description: In diesem Dokument werden die Datumsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 translation-type: tm+mt
-source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 17%
+source-wordcount: '415'
+ht-degree: 16%
 
 ---
 
 
-# Datumsfunktionen
+# Datenvorgabedatumsfunktionen
 
 Data Prep unterstützt Datumsfunktionen sowohl als Zeichenfolgen als auch als Datenzeitobjekte.
 
