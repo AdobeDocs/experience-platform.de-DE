@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Arithmetik;
 solution: Experience Platform
-title: Arithmetische Funktionen
+title: PAL Arithmetic-Funktionen
 topic: developer guide
-description: Arithmetische Funktionen werden zur Durchführung von Basisberechnungen für Profil Abfrage Language (PQL) verwendet.
+description: Mit arithmetischen Funktionen lassen sich Basisberechnungen für Werte in Profile Query Language (PQL) durchführen.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 79%
+source-wordcount: '260'
+ht-degree: 83%
 
 ---
 
