@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Salesforce;salesforce
 solution: Experience Platform
-title: Erstellen eines Salesforce-Quellconnectors in der Benutzeroberfläche
+title: Erstellen einer Salesforce-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines Salesforce-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Salesforce-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '453'
 ht-degree: 10%
 
 ---
 
 
-# Erstellen eines [!DNL Salesforce]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Salesforce]-Quellverbindung in der Benutzeroberfläche
 
 Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte CRM-Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines [!DNL Salesforce]-Quellconnectors mithilfe der [!DNL Platform]-Benutzeroberfläche.
 
