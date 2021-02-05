@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Zugriffskontrolle;Adobe Admin Console
 solution: Experience Platform
-title: Benutzerhandbuch zur Zugriffskontrolle
+title: Übersicht über die Benutzeroberfläche der Zugriffskontrolle
 topic: user guide
 description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Navigieren in der Admin Console zum Verwalten der Zugriffskontrolle für Plattform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 14%
@@ -13,7 +13,7 @@ ht-degree: 14%
 ---
 
 
-# Benutzerhandbuch zur Zugriffskontrolle
+# Übersicht über die Benutzeroberfläche der Zugriffskontrolle
 
 Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene [!DNL Platform]-Funktionen mithilfe von [Adobe Admin Console](https://adminconsole.adobe.com) verwalten. Dieses Dokument dient als Anleitung zum Navigieren in [!DNL Admin Console], um die Zugriffskontrolle für [!DNL Platform] zu verwalten. Einen Überblick über die Zugriffskontrolle auf hoher Ebene in [!DNL Experience Platform] finden Sie unter [Übersicht über die Zugriffskontrolle](./../home.md).
 
