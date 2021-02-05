@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;Guardrails;Guidelines;limit;entity;primary entity;dimension entity;
-title: Experience Platform Guardrails für Echtzeit-Daten zum Profil von Kunden
+title: Leitlinien für Daten zum Echtzeit-Profil von Kunden
 solution: Experience Platform
 product: experience platform
 topic: guide
 type: Documentation
 description: 'Adobe Experience Platform bietet eine Reihe von Garantieleistungen, mit denen Sie vermeiden können, Datenmodelle zu erstellen, die vom Echtzeit-Profil nicht unterstützt werden können. In diesem Dokument werden Best Practices und Einschränkungen erläutert, die bei der Modellierung von Profil-Daten zu beachten sind. '
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1456'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Platform] Guardradien für  [!DNL Real-time Customer Profile]
+# Grundlagen für [!DNL Real-time Customer Profile]-Daten
 
 [!DNL Real-time Customer Profile] stellt individuelle Profil bereit, mit denen Sie personalisierte Erlebnisse für Kanal auf der Grundlage von Einblicken in das Verhalten und Kundenattributen bereitstellen können. Um dieses Targeting zu erreichen, verwenden [!DNL Profile] und die Segmentierungsmaschine in Adobe Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das einen neuen Ansatz zur Entwicklung von Profilen von Kunden Angebot. Die Verwendung dieses Hybrid-Datenmodells macht es äußerst wichtig, dass die erfassten Daten korrekt modelliert werden. Während der [!DNL Profile]-Datenspeicher zur Verwaltung von Profil-Daten kein relativer Speicher ist, ermöglicht [!DNL Profile] die Integration mit kleinen Dimensionentitäten, um Segmente auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als Segmentierung mehrerer Entitäten bezeichnet.
 
