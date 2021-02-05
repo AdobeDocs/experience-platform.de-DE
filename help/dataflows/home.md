@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datenflüsse;Datenflüsse;Daten;Überwachung;Datenflüsse überwachen;Datenflüsse überwachen;Überwachen;Überwachen von Datenflüssen;Überwachen von Datenflüssen;Fluss;Flussdienst
 solution: Experience Platform
-title: Übersicht über den Adobe Experience Platform-Datenfluss
+title: Übersicht über Datenflüsse
 topic: overview
 description: In diesem Dokument werden Datenflüsse vorgestellt, in denen erläutert wird, wie sie in Adobe Experience Platform verwendet werden.
 translation-type: tm+mt
-source-git-commit: 791ad61f2f28da03ef3e5cb5efdd89154e9b1a0b
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '178'
 ht-degree: 6%
 
 ---
