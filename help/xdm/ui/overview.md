@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;API;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich
 solution: Experience Platform
-title: Übersicht über den Arbeitsbereich für Schemas
+title: Übersicht über die Benutzeroberfläche von Schemas
 description: Dieser Überblick beschreibt die wichtigsten Funktionen des Schemas Workspace in der Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL Übersicht über ] Schemasworkspace
+# [!UICONTROL Übersicht über ] SchemasUI
 
 Mit dem Arbeitsbereich [!UICONTROL Schemas] in der Adobe Experience Platform-Benutzeroberfläche können Sie Erlebnisdatenmodellressourcen (XDM) verwalten, einschließlich Schemas, Klassen, Mixins und Datentypen. Sie können die wichtigsten Ressourcen, die durch die Adobe bereitgestellt werden, Ansichten durchführen und benutzerdefinierte Ressourcen und Schema für Ihr Unternehmen erstellen.
 
