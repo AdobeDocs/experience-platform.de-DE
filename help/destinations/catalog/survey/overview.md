@@ -1,19 +1,17 @@
 ---
 keywords: Umfragen-Ziele;Umfrage;vorhersehen;Insight;Web-Abfangen-Umfragen;Qualitäten
-title: Umfrageziele
-seo-title: Umfrageziele
-description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit mithilfe von Datenelementen und geben Daten für die Plattform frei.
-seo-description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit mithilfe von Datenelementen und geben Daten für die Plattform frei.
+title: Übersicht über Umfragen-Ziele
+description: Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit über Datenelemente und geben Daten mit Adobe Experience Platform frei.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 30%
+source-wordcount: '89'
+ht-degree: 32%
 
 ---
 
 
-# Umfrageziele {#survey-destinations}
+# Umfrageziele – Übersicht {#survey-destinations}
 
 Umfragen-Plattformen erkennen Ereignis von Umfragen, erfassen Kundenfeedback in Echtzeit über Datenelemente und geben Daten mit Adobe Experience Platform frei.
 
