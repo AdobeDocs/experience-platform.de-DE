@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datenverwaltung;Datenverwendungsrichtlinie
 solution: Experience Platform
-title: Datennutzungsrichtlinie erstellen
+title: Eine Datennutzungsrichtlinie in der API erstellen
 topic: policies
 type: Tutorial
 description: Mit der Policy Service-API können Sie Datenverwendungsrichtlinien erstellen und verwalten, um zu bestimmen, welche Marketingaktionen für Daten mit bestimmten Datenverwendungsbeschriftungen durchgeführt werden können. Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer Richtlinie mithilfe der Policy Service API.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 50%
+source-wordcount: '1219'
+ht-degree: 49%
 
 ---
 
@@ -24,8 +24,8 @@ Dieses Dokument bietet eine schrittweise Anleitung zum Erstellen einer Richtlini
 
 Dieses Lernprogramm erfordert ein Verständnis der folgenden Schlüsselkonzepte, die beim Erstellen und Evaluieren von Richtlinien zum Einsatz kommen:
 
-* [[!DNL Data Governance]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung  [!DNL Platform] erzwungen wird.
-* [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
+* [Adobe Experience Platform-Datenverwaltung](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung  [!DNL Platform] erzwungen wird.
+   * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 * [Sandboxen](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
