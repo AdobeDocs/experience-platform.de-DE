@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Schema;Schema;Schema;Beziehung;Beziehung;Beziehungsdeskriptor;Beziehungsdeskriptor;Referenzidentität;Referenzidentität;
 solution: Experience Platform
-title: Beziehung zwischen zwei Schemas mithilfe der Schema Registry-API definieren
+title: Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Registry API
 description: Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrer Organisation mithilfe der Schema Registry-API definiert wurden.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1337'
-ht-degree: 46%
+ht-degree: 45%
 
 ---
 
