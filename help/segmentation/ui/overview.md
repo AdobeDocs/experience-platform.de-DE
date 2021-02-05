@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierungsdienst;Segmentierungsdienst;Segmentierungsdienst;Benutzerhandbuch;Segmentierungsleitfaden;Segmentaufbau;Segmentaufbau;Realisierung;Bestehend;Ausstieg;
 solution: Experience Platform
-title: Benutzerhandbuch zum Segmentdienst
+title: Handbuch zur Benutzeroberfläche des Segmentdienstes
 topic: ui guide
 description: Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 translation-type: tm+mt
-source-git-commit: 3e83215cc24b32b7fe9486c6faf455f247b6c922
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 23%
