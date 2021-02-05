@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Einblicke;Zuordnungs-Hilfe;beliebte Themen;Zuordnungsai-Einblicke
 solution: Intelligent Services, Experience Platform
-title: Gewinnen von Einblicken in Attribution AI
+title: Discover Insight in Attribution AI
 topic: Attribution AI insights
 description: Dieses Dokument dient als Handbuch für die Interaktion mit Einblicken der Dienstinstanz in der Benutzeroberfläche von Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1656'
-ht-degree: 50%
+ht-degree: 49%
 
 ---
 
 
-# Gewinnen von Einblicken in Attribution AI
+# Entdecken Sie Einblicke in Attribution AI
 
 Die Instanzen des Attribution AI-Service bieten Einblicke, anhand derer Marketing-Entscheidungen in Bezug auf Marketing-Performance und ROI getroffen und gemessen werden können. Durch die Auswahl einer Dienstinstanz erhalten Sie Visualisierungen und Filter, anhand derer Sie die Auswirkungen jeder Kundeninteraktion in jeder Phase der Customer Journey verstehen können.
 
