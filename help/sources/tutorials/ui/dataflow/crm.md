@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;crm-Schema;crm;CRM;Datenaflow;Datenaflow
 solution: Experience Platform
-title: Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche
+title: Konfigurieren eines Datenflusses für eine CRM-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Konto.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1522'
 ht-degree: 3%
 
 ---
 
 
-# Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche
+# Konfigurieren eines Datenflusses für eine CRM-Verbindung in der Benutzeroberfläche
 
 Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen [!DNL Platform]-Datensatz eingefügt werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem CRM-Konto.
 
