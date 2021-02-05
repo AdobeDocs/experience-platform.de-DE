@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Kundenattribute
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für Kundenattribute in der Benutzeroberfläche
+title: Erstellen einer Quellenverbindung für Kundenattribute in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm wird beschrieben, wie Sie in der Benutzeroberfläche einen Quellanschluss für die Erfassung von Kundenattributdaten in Adobe Experience Platform erstellen können.
+description: Erfahren Sie, wie Sie eine Quellverbindung in der Benutzeroberfläche erstellen, um Kundenattributdaten-Profil-Daten in Adobe Experience Platform zu erfassen.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '377'
 ht-degree: 6%
 
 ---
 
 
-# Erstellen eines Quell-Connectors für Kundenattribute in der Benutzeroberfläche
+# Erstellen einer Quellverbindung zu Kundenattributen in der Benutzeroberfläche
 
-In diesem Lernprogramm wird beschrieben, wie Sie in der Benutzeroberfläche einen Quellanschluss für die Erfassung von Kundenattributdaten in Adobe Experience Platform erstellen können. Weitere Informationen zu Kundenattributen finden Sie im Dokument [overview](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
+In diesem Lernprogramm werden die Schritte zum Erstellen einer Quellverbindung in der Benutzeroberfläche zum Sammeln der Daten des Profils &quot;Kundenattribute&quot;in Adobe Experience Platform beschrieben. Weitere Informationen zu Kundenattributen finden Sie im Dokument [overview](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 ## Erstellen einer Quellverbindung
 
