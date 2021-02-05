@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Identitätsdienst-API;Identitätsdienst-Entwicklerhandbuch;Region
 solution: Experience Platform
-title: Erste Schritte
+title: Identitätsdienst-API-Handbuch
 topic: API guide
-description: 'Der Adobe Experience Platform Identity Service verwaltet die geräteübergreifende, geräteübergreifende Kanal- und Echtzeitidentifizierung Ihrer Kunden in einem so genannten Identitätsdiagramm in Adobe Experience Platform. '
+description: Die Identitätsdienst-API ermöglicht es Entwicklern, geräteübergreifende Kanal- und Echtzeitidentifizierungen Ihrer Kunden mithilfe von Identitätsdiagrammen Adobe Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 30%
+source-wordcount: '769'
+ht-degree: 28%
 
 ---
 
 
-# [!DNL Identity Service]-API-Entwicklerhandbuch
+# [!DNL Identity Service] API-Handbuch
 
 Adobe Experience Platform [!DNL Identity Service] verwaltet die geräteübergreifende, geräteübergreifende und nahezu Echtzeit-Identifizierung Ihrer Kunden in einem so genannten Identitätsdiagramm innerhalb von Adobe Experience Platform.
 
