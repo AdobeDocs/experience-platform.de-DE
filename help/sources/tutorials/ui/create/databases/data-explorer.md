@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Explorer;Azure Data Explorer;Data Explorer;Data Explorer
 solution: Experience Platform
-title: Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche
+title: Erstellen einer Azurblauen Data Explorer-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines Azurblauen Data Explorers (im Folgenden "Data Explorer")-Quellconnectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Azurblase-Quellverbindung mit der Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '512'
 ht-degree: 8%
 
 ---
 
 
-# Erstellen eines [!DNL Azure Data Explorer]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Azure Data Explorer]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
