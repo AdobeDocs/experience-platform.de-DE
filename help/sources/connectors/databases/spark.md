@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Apache Spark;Apache Spark;Azurblaue HDInsights;Azure Hdinsights
 solution: Experience Platform
-title: Apache Spark auf dem Azurblauen HDInsights-Connector
+title: Apache Spark auf Azurblaus HDInsights Source Connector Übersicht
 topic: overview
-description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie Apache Spark auf Azurblauen HDInsights mit APIs oder der Benutzeroberfläche mit Platform verbinden.
+description: Erfahren Sie, wie Sie Apache Spark auf Azurblauen HDInsights mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 10%
@@ -31,11 +31,11 @@ In der folgenden Dokumentation finden Sie Informationen dazu, wie [!DNL Apache S
 
 ## Verbinden Sie [!DNL Apache Spark] unter [!DNL Azure HDInsights] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen Sie einen Apache Spark auf einem Blue HDInsights-Connector mithilfe der Flow Service API](../../tutorials/api/create/databases/spark.md)
+- [Erstellen Sie einen Apache Spark auf der Azurblauen HDInsights-Quellverbindung mithilfe der Flow Service API](../../tutorials/api/create/databases/spark.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Apache Spark] auf [!DNL Azure HDInsights] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen Sie einen Apache Spark auf einem Azurblauen HDInsights-Quellanschluss in der Benutzeroberfläche](../../tutorials/ui/create/databases/spark.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen Sie einen Apache Spark auf der Azurblauen HDInsights-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/spark.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
