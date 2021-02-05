@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
-title: Erstellen eines PostgreSQL-Connectors mit der Flow Service API
+title: Erstellen einer PostgreSQL-Quellverbindung mit der Flow Service API
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die zur Verbindung der Experience Platform mit PostgreSQL (im Folgenden "PSQL" genannt) durchgeführt werden.
+description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und PostgreSQL herstellen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '576'
 ht-degree: 25%
 
 ---
 
 
-# Erstellen Sie einen [!DNL PostgreSQL]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL PostgreSQL]-Quellverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
