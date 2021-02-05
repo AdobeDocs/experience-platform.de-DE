@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;FTP;FTP
 solution: Experience Platform
-title: Erstellen eines FTP-Quellconnectors in der Benutzeroberfläche
+title: Erstellen einer FTP-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines FTP-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine FTP-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: e28a3ec2d4330f0e9f3895e0236c9ebea2ef2776
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 10%
@@ -14,13 +14,13 @@ ht-degree: 10%
 ---
 
 
-# Erstellen eines FTP-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer FTP-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
 >Der FTP-Anschluss befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
-In diesem Lernprogramm werden Schritte zum Erstellen eines FTP-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+In diesem Lernprogramm werden Schritte zum Erstellen einer FTP-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
