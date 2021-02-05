@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Einheitliches Profil;Einheitliches Profil;Profil;RTCP;Profil aktivieren;Profil aktivieren
-title: Entwicklerhandbuch zur Echtzeit-Profil-API
+title: Handbuch zur Echtzeit-Client-Profil-API
 topic: guide
-description: Die Echtzeit-Client-Profil-API enthält mehrere Endpunkte zum Erforschen und Arbeiten mit Profil-Daten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Sampling von Profil-Daten und Löschen von Profil-Daten, die Sie nicht mehr benötigen oder die fälschlicherweise hinzugefügt wurden.
+description: Mit der Echtzeit-Client-Profil-API können Entwickler Profil-Daten, einschließlich Ansicht-Profilen, prüfen und bearbeiten, Zusammenführungsrichtlinien erstellen und aktualisieren, Profil- oder Musterdaten exportieren und löschen sowie Profil-Daten löschen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 translation-type: tm+mt
-source-git-commit: 823d89ab37156e775a2879e3a2c91bfd911b83bb
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '870'
 ht-degree: 21%
 
 ---
 
 
-# [!DNL Real-time Customer Profile]-API-Entwicklerhandbuch
+# [!DNL Real-time Customer Profile] API-Handbuch
 
 [!DNL Real-time Customer Profile] ermöglicht es Ihnen, eine ganzheitliche Ansicht Ihrer einzelnen Kunden in Adobe Experience Platform zu sehen. [!DNL Profile] ermöglicht Ihnen die Konsolidierung unterschiedlicher Kundendaten aus mehreren Kanälen, z. B. Online-, Offline-, CRM- und Drittanbieterdaten, in einer einheitlichen Ansicht, die ein umsetzbares Zeitstempelkonto für jede Kundeninteraktion bietet.
 
