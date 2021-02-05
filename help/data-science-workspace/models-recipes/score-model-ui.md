@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Modellbewertung;Arbeitsbereich für Datenwissenschaften;beliebte Themen;ui;Punktzahl;Ergebnisse bewerten
 solution: Experience Platform
-title: Bewerten eines Modells (Benutzeroberfläche)
+title: Modellbewertung in der Benutzeroberfläche des Arbeitsbereichs "Datenwissenschaften"
 topic: tutorial
 type: Tutorial
 description: 'Scoring in Adobe Experience Platform Data Science Workspace kann durch Einspeisung von Eingabedaten in ein vorhandenes trainiertes Modell erreicht werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 87%
+source-wordcount: '634'
+ht-degree: 84%
 
 ---
 
 
-# Bewerten eines Modells (Benutzeroberfläche)
+# Modellbewertung in der Benutzeroberfläche von Data Science Workspace
 
 Die Punktzahl in Adobe Experience Platform [!DNL Data Science Workspace] lässt sich erreichen, indem Eingabedaten in ein vorhandenes geschultes Modell eingespeist werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
 
