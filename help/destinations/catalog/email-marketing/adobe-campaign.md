@@ -1,21 +1,17 @@
 ---
 keywords: E-Mail;E-Mail;E-Mail-Ziele;Adobe-Kampagne;Kampagne
-title: Adobe Campaign
-seo-title: Adobe Campaign
+title: Verbindungsziel des Adobe Campaigns
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
-seo-description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 translation-type: tm+mt
-source-git-commit: cf2d76799c03a2ea0414aedd83b35f3ce2ca3cb5
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 44%
+source-wordcount: '654'
+ht-degree: 41%
 
 ---
 
 
-# Adobe Campaign
-
-## Übersicht
+# Adobe Campaign-Verbindung
 
 Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können. Weiterführende Informationen finden Sie unter [Info zu Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html).
 
