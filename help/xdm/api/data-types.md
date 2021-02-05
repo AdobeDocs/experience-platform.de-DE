@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Datentypregistrierung;Schema;Datentyp;Datentyp;Datentypen;Datentypen;Erstellen;Erstellen
 solution: Experience Platform
-title: Erstellen eines Datentyps
+title: Datentyp-API-Endpunkt
 description: Mit dem Endpunkt /datatypes in der Schema Registry API können Sie XDM-Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 12%
