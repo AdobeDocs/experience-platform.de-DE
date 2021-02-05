@@ -1,19 +1,19 @@
 ---
 keywords: Datenverwaltung rtcdp;rtcdp Datenverwaltung;Datenverwaltung in Echtzeit für Kundendaten-Profil;Datenschutz rtcdp;rtcdp Privatsphäre
-title: Datenschutz im Echtzeit-Kundendatenprofil
-seo-title: Datenschutz im Echtzeit-Kundendatenprofil
-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
-seo-description: Mit dem Echtzeit-Kundendatenprofil können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
+title: Datenschutz in Echtzeit-Kundendatenplattform
+seo-title: Datenschutz in Echtzeit-Kundendatenplattform
+description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess der Einhaltung von Datenschutzbestimmungen durch Ihre Datenvorgänge optimieren.
+seo-description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess der Einhaltung von Datenschutzbestimmungen durch Ihre Datenvorgänge optimieren.
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 19%
+source-wordcount: '390'
+ht-degree: 6%
 
 ---
 
 
-# Datenschutz in [!DNL Real-time CDP]
+# Datenschutz in Echtzeit-Kundendatenplattform
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) hilft Marketingexperten, Daten aus mehreren Unternehmenssystemen zusammenzubringen, sodass sie ihre Kunden besser identifizieren, verstehen und ansprechen können. Adobe betrachtet den Schutz von Kundendaten als grundlegendes Design-Prinzip und bietet verschiedene Steuerelemente, mit denen Marketer den Datenschutz von Kunden verwalten können.
 
