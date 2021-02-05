@@ -1,21 +1,17 @@
 ---
 keywords: Digitales Feedback bestätigen;Verlängerung bestätigen;Bestätigung
-title: Confirmit Digital Feedback-Erweiterung
-seo-title: Confirmit Digital Feedback-Erweiterung
+title: Ziel der digitalen Feedback-Erweiterung bestätigen
 description: Die Erweiterung "Digitales Feedback bestätigen"ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Erweiterung "Digitales Feedback bestätigen"ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 28%
+source-wordcount: '563'
+ht-degree: 26%
 
 ---
 
 
-# [!DNL Confirmit Digital Feedback] Erweiterung
-
-## Übersicht {#overview}
+# [!DNL Confirmit Digital Feedback]-Erweiterung 
 
 [!DNL Confirmit Digital Feedback] hilft Ihnen, Ihren Website-Traffic in Echtzeit-Einblicke zu verwandeln. Mit [!DNL Confirmit] können unauffällige und hochgradig zielgerichtete Umfragen entsprechend Ihren Anforderungen angezeigt werden, was Besucher dazu anregt, Feedback zu geben, z. B.:
 
