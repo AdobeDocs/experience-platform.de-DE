@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Eingehende Daten aktivieren;Profil ausfüllen;rtcp ausfüllen;Einheitliches Profil ausfüllen
 solution: Experience Platform
-title: Aktivieren Sie eingehende Quelldaten, um Kundendaten zu füllen.
+title: Aktivieren Sie Eingangsquellendaten, um die Profil der Kunden in der Benutzeroberfläche zu füllen.
 topic: overview
 type: Tutorial
 description: Eingehende Daten aus Ihrem Quell-Connector können zur Bereicherung und zum Ausfüllen Ihrer Echtzeit-Kundendaten verwendet werden.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '507'
 ht-degree: 13%
 
 ---
