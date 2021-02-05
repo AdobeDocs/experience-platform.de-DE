@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Sandbox;Sandbox
 solution: Experience Platform
-title: Sandbox erstellen
+title: Sandbox in der API erstellen
 topic: developer guide
 description: Sie können eine neue Sandbox erstellen, indem Sie eine POST an den Endpunkt "/sandboxes"anfordern.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 86%
+source-wordcount: '164'
+ht-degree: 79%
 
 ---
 
 
-# Sandbox erstellen
+# Erstellen einer Sandbox in der API
 
 Sie können eine neue Sandbox erstellen, indem Sie eine POST-Anfrage an den `/sandboxes`-Endpunkt senden.
 
