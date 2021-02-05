@@ -1,19 +1,17 @@
 ---
 keywords: Sprach-Ziele;Voice-Ziele
-title: Stimme der Kundenziele
-seo-title: Stimme der Kundenziele
+title: Übersicht über die Kundenziele
 description: Voice-Plattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Call-Daten und Chat-Konversationen. Die erfassten Informationen können gefiltert und analysiert werden, damit Firmen ihre Website entsprechend ihren Anforderungen optimieren können.
-seo-description: Voice-Plattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Call-Daten und Chat-Konversationen. Die erfassten Informationen können gefiltert und analysiert werden, damit Firmen ihre Website entsprechend ihren Anforderungen optimieren können.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 15%
+source-wordcount: '127'
+ht-degree: 20%
 
 ---
 
 
-# Stimme der Kundenziele {#voice-of-customer-destinations}
+# Übersicht über die Ziele des Kunden {#voice-of-customer-destinations}
 
 Voice-Plattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Call-Daten und Chat-Konversationen. Die erfassten Informationen können gefiltert und analysiert werden, damit Firmen ihre Website entsprechend ihren Anforderungen optimieren können.
 
