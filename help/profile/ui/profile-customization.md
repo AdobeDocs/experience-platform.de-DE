@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Kundendaten;Profil;Benutzeroberfläche;Anpassung;Profil;Details
-title: Anpassen der Ansicht von Profilen in der Benutzeroberfläche
+title: Profil-Detailanpassung in der Benutzeroberfläche
 description: 'Dieses Handbuch enthält schrittweise Anleitungen zum Anpassen der Art und Weise, wie Kundendaten in Echtzeit in der Adobe Experience Platform-Benutzeroberfläche angezeigt werden. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1183'
 ht-degree: 0%
 
 ---
