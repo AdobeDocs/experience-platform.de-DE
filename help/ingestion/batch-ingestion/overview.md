@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenerfassung;Batch;Stapel;Datensatz aktivieren;Stapelverarbeitungsübersicht;Übersicht;Stapelverarbeitungsübersicht; Stapelverarbeitungsübersicht;
 solution: Experience Platform
-title: Batch-Erfassung – Übersicht
+title: Batch Ingestion - Übersicht
 topic: overview
-description: Mit der Batch Ingestion-API können Sie Daten als Batch-Dateien in Adobe Experience Platform aufnehmen. Daten, die erfasst werden, können Profil-Daten aus einer reduzierten Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der XDM-Registrierung (Experience Data Model) entsprechen.
+description: Mit der Adobe Experience Platform Data Ingestion API können Sie Daten als Batch-Dateien in Plattform erfassen. Daten, die erfasst werden, können Profil-Daten aus einer reduzierten Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der XDM-Registrierung (Experience Data Model) entsprechen.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 77%
+source-wordcount: '1222'
+ht-degree: 75%
 
 ---
 
 
-# [!DNL Batch Ingestion]Übersicht
+# Überblick über die Stapelverarbeitung
 
-Mit der API [!DNL Batch Ingestion] können Sie Daten als Stapeldateien in Adobe Experience Platform erfassen. Daten, die erfasst werden, können die Profil-Daten aus einer einfachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der [!DNL Experience Data Model]-Registrierung (XDM) entsprechen.
+Mit der Adobe Experience Platform Data Ingestion API können Sie Daten als Batch-Dateien in Plattform erfassen. Daten, die erfasst werden, können die Profil-Daten aus einer einfachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der [!DNL Experience Data Model]-Registrierung (XDM) entsprechen.
 
 Der [Datenaufnahme-API-Verweis](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) enthält weitere Informationen zu diesen API-Aufrufen.
 
