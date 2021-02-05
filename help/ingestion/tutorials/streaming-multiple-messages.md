@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Streaming-Erfassung;Erfassung;Streaming mehrerer Nachrichten;Mehrere Nachrichten;
 solution: Experience Platform
-title: Streaming mehrerer Nachrichten in einer einzelnen HTTP-Anfrage
+title: Senden mehrerer Nachrichten in einer einzelnen HTTP-Anforderung
 topic: tutorial
 type: Tutorial
 description: Dieses Dokument bietet eine Anleitung zum Senden mehrerer Nachrichten an Adobe Experience Platform innerhalb einer einzigen HTTP-Anforderung mithilfe der Streaming-Erfassung.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 69%
+ht-degree: 68%
 
 ---
 
 
-# Senden mehrerer Nachrichten in einer einzelnen HTTP-Anfrage
+# Senden mehrerer Nachrichten in einer einzelnen HTTP-Anforderung
 
 Beim Streaming von Daten an Adobe Experience Platform kann das Ausführen zahlreicher HTTP-Aufrufe teuer werden. Anstatt beispielsweise 200 HTTP-Anfragen mit Payloads von 1 KB zu erstellen, ist es viel effizienter, 1 HTTP-Anfrage mit 200 Nachrichten mit jeweils 1 KB und einer Payload von 200 KB zu erstellen. Bei korrekter Verwendung ist die Gruppierung mehrerer Nachrichten in einer einzigen Anforderung eine hervorragende Möglichkeit, Daten zu optimieren, die an [!DNL Experience Platform] gesendet werden.
 
