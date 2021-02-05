@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Abfrage
 solution: Experience Platform
-title: Query Service von Adobe Experience Platform
+title: Übersicht über den Abfrage Service
 topic: overview
 description: Dieses Dokument gibt einen Überblick über die Rolle von Query Service in Experience Platform.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 29%
+source-wordcount: '635'
+ht-degree: 28%
 
 ---
 
