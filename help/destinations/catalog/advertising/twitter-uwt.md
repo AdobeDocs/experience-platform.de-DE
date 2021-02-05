@@ -1,21 +1,17 @@
 ---
 keywords: twitter;Twitter;Twitter universelle Website-Tag;Twitter universelle Website-Tag;Twitter-UWT-Tag;Twitter-WT;Twitter-WT
-title: Twitter Universal Website Tag-Erweiterung
-seo-title: Twitter Universal Website Tag-Erweiterung
+title: Ziel der Erweiterung des universellen Twitter-Website-Tags
 description: Die Erweiterung Twitter Universal Website Tag ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Erweiterung Twitter Universal Website Tag ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 20%
+source-wordcount: '508'
+ht-degree: 16%
 
 ---
 
 
-# [!DNL Twitter Universal Website Tag] Erweiterung {#twitter-uwt-extension}
-
-## Übersicht {#overview}
+# [!DNL Twitter Universal Website Tag]-Erweiterung {#twitter-uwt-extension}
 
 [!DNL Twitter Universal Website Tag] stellt Aktionen zum Senden von Beacons an das Twitter-UWT-Tag bereit.
 
