@@ -1,21 +1,17 @@
 ---
 keywords: SFTP;SFTP
-title: SFTP-Ziel
-seo-title: SFTP-Ziel
+title: SFTP-Verbindungsziel
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
-seo-description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 47%
+source-wordcount: '185'
+ht-degree: 38%
 
 ---
 
 
-# SFTP-Ziel
-
-## Übersicht
+# SFTP-Verbindung
 
 Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
 
