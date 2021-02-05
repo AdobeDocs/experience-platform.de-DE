@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;crm;CRM
 solution: Experience Platform
-title: Erfassen von CRM-Daten über Quellschnittstellen und APIs
+title: Erfassen von CRM-Daten über Source Connectors und APIs
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem CRM-System eines Drittanbieters und deren Integration in die Plattform über Quellschnittstellen und APIs erläutert.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem CRM-System eines Drittanbieters und zum Übertragen dieser Daten auf die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 20%
@@ -14,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# Erfassen von CRM-Daten über Quellschnittstellen und APIs
+# CRM-Daten mithilfe von Quellschnittstellen und APIs erfassen
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-CRM und zum Einbinden in Adobe Experience Platform über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
 
