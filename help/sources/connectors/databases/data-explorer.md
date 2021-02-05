@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Explorer;Azure Data Explorer
 solution: Experience Platform
-title: Data Explorer-Stecker
+title: Übersicht über den Avocent Data Explorer Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Azurblauer Data Explorer und Plattform herstellen können.
+description: Erfahren Sie, wie Sie Azurblase-Data Explorer mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Data
 
 ## Verbinden Sie [!DNL Azure Data Explorer] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Azurblauen Data Explorer-Connectors mit der Flow Service API](../../tutorials/api/create/databases/data-explorer.md)
+- [Erstellen einer Azurblauer Data Explorer-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/data-explorer.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Azure Data Explorer] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Azurblauen Data Explorer-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/data-explorer.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer Azurblauer Data Explorer-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/data-explorer.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
