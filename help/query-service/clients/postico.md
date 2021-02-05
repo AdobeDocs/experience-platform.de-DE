@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Posting;Potstico;Verbindung mit Abfrage-Dienst;
 solution: Experience Platform
-title: Mit Postico verbinden
+title: Anschlussmöglichkeit an Abfrage-Dienst
 topic: connect
 description: Dieses Dokument enthält den Link zum Installieren des Backup-Clients "Postico for Adobe Experience Platform Abfrage Service".
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 17%
+source-wordcount: '253'
+ht-degree: 16%
 
 ---
 
 
-# [!DNL Postico]
+# Verbinden von [!DNL Postico] mit Abfrage Service (Mac)
 
 Dieses Dokument beschreibt die Schritte zum Verbinden von [!DNL Postico] mit Adobe Experience Platform [!DNL Query Service].
 
@@ -22,8 +22,6 @@ Dieses Dokument beschreibt die Schritte zum Verbinden von [!DNL Postico] mit Ado
 > Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL Postico] haben und mit der Navigation in der Oberfläche vertraut sind. Weitere Informationen zu [!DNL Postico] finden Sie in der [offiziellen  [!DNL Postico] Dokumentation](https://eggerapps.at/postico/docs).
 > 
 > Außerdem ist [!DNL Postico] nur **auf macOS-Geräten verfügbar.**
-
-## Verbinden Sie [!DNL Postico] mit dem Abfrage-Dienst
 
 Um [!DNL Postico] mit Abfrage Service zu verbinden, öffnen Sie [!DNL Postico] und wählen Sie **[!DNL New Favorite]**.
 
