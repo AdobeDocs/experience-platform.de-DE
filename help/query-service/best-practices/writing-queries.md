@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Schreiben von Abfragen;Schreiben von Abfrage;
 solution: Experience Platform
-title: Schreiben von Abfragen
+title: Allgemeine Leitlinien für die Ausführung von Abfragen im Dienst Abfrage
 topic: queries
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen im Adobe Experience Platform Abfrage Service beschrieben.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '976'
 ht-degree: 3%
 
 ---
