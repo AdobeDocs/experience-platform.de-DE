@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Profil;Berechtigungen verwalten
 solution: Experience Platform
-title: Berechtigungen für ein Produktprofil verwalten
+title: Berechtigungen für ein Produkt-Profil verwalten
 topic: user guide
 description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Verwalten von Berechtigungen für ein Produkt-Profil für Plattform.
 translation-type: tm+mt
-source-git-commit: 8d234eaecbecef45ea4d4cbc6b65a7d7dcc18f2e
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 59%
+ht-degree: 57%
 
 ---
 
