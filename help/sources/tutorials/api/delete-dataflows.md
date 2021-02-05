@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Flussdienst;API;API;Löschen;Datenflüsse löschen
 solution: Experience Platform
-title: Löschen eines Datenflusses mithilfe der Flow Service API
+title: Löschen eines Datenflusses mit der Flussdienst-API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Löschen von Batch- und Streaming-Datenflüssen mithilfe der Flow Service API beschrieben.
+description: Erfahren Sie, wie Sie Batch- und Streaming-Datenflüsse mithilfe der Flow Service API löschen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '480'
 ht-degree: 28%
 
 ---
