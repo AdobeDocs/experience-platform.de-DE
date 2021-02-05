@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Protokolldaten erfassen;Protokolldaten
 solution: Experience Platform
-title: Protokolldaten über Quellschnittstellen und APIs erfassen
+title: Protokolldaten mithilfe von Quellschnittstellen und APIs erfassen
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Protokollanwendung und zum Integrieren in die Plattform über Quellschnittstellen und APIs beschrieben.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Protokollanwendung und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 20%
@@ -14,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# Protokolldaten über Quellschnittstellen und APIs erfassen
+# Protokolldaten mithilfe von Quellschnittstellen und APIs erfassen
 
 Dieses Lernprogramm beschreibt die Schritte zum Abrufen von Daten aus einer Drittanbieter-Protokollanwendung und zum Einbinden in Adobe Experience Platform über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API.
 
