@@ -1,21 +1,17 @@
 ---
 keywords: Kickfire;Kickfire;Kickfire-Erweiterung;Kickfire-Erweiterung
-title: KickFire-Erweiterung
-seo-title: KickFire-Erweiterung
+title: KickFire Extension-Ziel
 description: Die KickFire-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die KickFire-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 22%
+source-wordcount: '507'
+ht-degree: 19%
 
 ---
 
 
 # [!DNL KickFire]-Erweiterung {#kickfire-extension}
-
-## Übersicht {#overview}
 
 [!DNL KickFire's] IP-Adressenintelligenz &amp; B2B-firmographische Daten ermöglichen es Ihnen, IP-Adressen in Firmen zu übersetzen, anonyme Web-Besucher zu identifizieren und Kontodaten in Ihren Technologiestapel zu integrieren - alles basierend auf der IP-Adresse einer Firma.
 
