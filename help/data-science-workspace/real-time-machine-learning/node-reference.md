@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Entwicklerhandbuch;Data Science Workspace;beliebte Themen;Echtzeit-maschinelles Lernen;Node-Referenz;
 solution: Experience Platform
-title: Referenzhandbuch zu Nodes für maschinelles Lernen in Echtzeit
+title: Referenz zum maschinellen Lernen in Echtzeit
 topic: Nodes reference
 description: Eine Node ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe durch und kann mithilfe von Links miteinander verkettet werden, um ein Diagramm zu bilden, das eine ML-Pipeline darstellt. Die von einer Node ausgeführte Aufgabe stellt einen Vorgang mit Eingabedaten dar, z. B. eine Transformation von Daten oder Schemas oder eine maschinelle Lerninferenz. Die Node gibt den transformierten oder abgeleiteten Wert an die nächste(n) Node(s) aus.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
 
-# Referenzhandbuch zu Nodes für maschinelles Lernen in Echtzeit (Alpha)
+# Referenz zum Node für maschinelles Lernen in Echtzeit (Alpha)
 
 >[!IMPORTANT]
 >
