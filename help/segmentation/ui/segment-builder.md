@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierungsdienst;Segmentierungsdienst;Segmentierungsdienst;Benutzerhandbuch;Segmentierungsleitfaden;Segmentaufbau;Segmentaufbau;
 solution: Experience Platform
-title: Benutzerhandbuch zum Segmentaufbau für Segmentierungsdienste
+title: Handbuch zur Segmentaufbau-Benutzeroberfläche
 topic: ui guide
-description: 'Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
+description: 'Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen Rich-Workspace, mit dem Sie mit Profil-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 49%
+source-wordcount: '1800'
+ht-degree: 48%
 
 ---
 
