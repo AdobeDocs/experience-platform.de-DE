@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwendungsbeschriftungen;Katalogdienst
 solution: Experience Platform
-title: Datennutzungsbezeichnungen
+title: Beschriftungen für die Datenverwendung in der DataSet-Dienst-API
 topic: developer guide
-description: Die Katalogdienst-API bietet Endpunkte zum Verwalten von Datenverwendungsbeschriftungen für Datensätze.
+description: Die DataSet-Dienst-API stellt Endpunkte zum Verwalten von Datenverwendungsbeschriftungen für Datensätze bereit.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 8%
+source-wordcount: '85'
+ht-degree: 0%
 
 ---
 
 
-# Datennutzungsbezeichnungen
+# Beschriftungen für die Datenverwendung in der DataSet-Dienst-API
 
-Die API [!DNL Catalog Service] stellt Endpunkte zum Verwalten von Datenverwendungsbeschriftungen für Datensätze bereit. Anweisungen zum Aufrufen dieser Endpunkte finden Sie im Handbuch [Verwalten von Datenverwendungsbeschriftungen mithilfe der API](../../data-governance/labels/overview.md) in der Dokumentation zu Adobe Experience Platform [!DNL Data Governance].
+Die API stellt unabhängig von der Katalogdienst-API Endpunkte zum Verwalten von Datenverwendungsbeschriftungen für Datensätze bereit. [!DNL Dataset Service] Anweisungen zum Aufrufen dieser Endpunkte finden Sie im Handbuch [Verwalten von Datenverwendungsbeschriftungen mithilfe der API](../../data-governance/labels/dataset-api.md) in der Dokumentation zu Adobe Experience Platform [!DNL Data Governance].
