@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Power BI;Power-bi;Verbindung zum Abfrage-Dienst herstellen
 solution: Experience Platform
-title: Verbindung mit Power BI
+title: Power BI mit dem Abfrage-Dienst verbinden
 topic: connect
 description: Dieses Dokument führt Sie durch die Schritte, um Power BI mit dem Adobe Experience Platform Abfrage Service zu verbinden.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '466'
 ht-degree: 5%
 
 ---
 
 
-# [!DNL Power BI]
+# Verbinden Sie [!DNL Power BI] mit dem Abfrage Service (PC)
 
 In diesem Dokument werden die Schritte zur Verbindung von Power BI mit dem Adobe Experience Platform Abfrage Service beschrieben.
 
@@ -22,8 +22,6 @@ In diesem Dokument werden die Schritte zur Verbindung von Power BI mit dem Adobe
 > Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL Power BI] haben und mit der Navigation in der Oberfläche vertraut sind. Weitere Informationen zu [!DNL Power BI] finden Sie in der [offiziellen  [!DNL Power BI] Dokumentation](https://docs.looker.com/).
 >
 > Zusätzlich ist Power BI **nur** auf Windows-Geräten verfügbar.
-
-## [!DNL Power BI] einrichten
 
 Nach der Installation von Power BI müssen Sie `Npgsql`, ein .NET-Treiberpaket für PostgreSQL, installieren. Weitere Informationen zu Npgsql finden Sie in der [Npgsql Dokumentation](https://www.npgsql.org/doc/index.html).
 
