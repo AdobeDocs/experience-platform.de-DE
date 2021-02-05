@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Amazon Redshift;amazon Rotverschiebung;Redshift;Rotverschiebung
 solution: Experience Platform
-title: Amazon Redshift-Quellanschluss in der Benutzeroberfläche erstellen
+title: Erstellen einer Amazon Redshift-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines Amazon Redshift-Quellconnectors (im Folgenden "Redshift") mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Amazon Redshift-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '478'
 ht-degree: 9%
 
 ---
 
 
-# Erstellen eines [!DNL Amazon Redshift]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Amazon Redshift]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
