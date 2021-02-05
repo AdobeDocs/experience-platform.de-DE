@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Beziehung;Feld;
 solution: Experience Platform
-title: Definieren eines Beziehungsfelds in der Benutzeroberfläche
+title: Definieren von Beziehungsfeldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein Beziehungsfeld in der Benutzeroberfläche "Experience Platform"definieren.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
 
-# Definieren eines Beziehungsfelds in der Benutzeroberfläche
+# Definieren von Beziehungsfeldern in der Benutzeroberfläche
 
 Im Erlebnisdatenmodell (XDM) ist ein [Vereinigung-Schema](../../schema/composition.md#union) eine einheitliche Ansicht aller Schema derselben Klasse, die auch für [Echtzeit-Kundendaten-Profil](../../../profile/home.md) aktiviert wurden. Das Schema Vereinigung wird von Profil genutzt, um eine vollständige Kundendarstellung aus unterschiedlichen Erlebnisdaten zu erstellen.
 
