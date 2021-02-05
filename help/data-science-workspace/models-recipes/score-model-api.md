@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Modellbewertung;Data Science Workspace;beliebte Themen;sensei-maschinelles Lernen
 solution: Experience Platform
-title: Scoring für ein Modell vornehmen (API)
+title: Modellbewertung mit der Sensei Machine Learning API
 topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm erfahren Sie, wie Sie die Sensei Machine Learning APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 93%
+source-wordcount: '549'
+ht-degree: 91%
 
 ---
 
 
-# Scoring für ein Modell vornehmen (API)
+# Score a model using [!DNL Sensei Machine Learning API]
 
 In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine detaillierte Liste der API-Dokumentationen finden Sie in [diesem Dokument](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
 
