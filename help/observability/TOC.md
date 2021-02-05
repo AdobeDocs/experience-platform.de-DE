@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Observability Insights-Anleitung
 user-guide-description: Überwachung von Platform-aktivitäten durch Verwendung statistischer Metriken und Ereignisbenachrichtigungen.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 92e3edaba5793d18e826d3e3f3151ba8a51fce53
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 74%
+source-wordcount: '53'
+ht-degree: 77%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 74%
 # Observability Insights {#observability}
 
 * [Observability Insights – Übersicht](home.md)
-* Observability Insights API-Entwicklerhandbuch {#api}
+* Observability Insights API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [Metriken](api/metrics.md)
