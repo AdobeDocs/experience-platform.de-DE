@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Erlebnisereignis-Abfragen;Erlebnis-Abfrage;Experience Ereignis-Abfrage
 solution: Experience Platform
-title: Experience Ereignis-Abfragen
+title: Beispielwerte für Abfragen für Experience Ereignisses
 topic: queries
 type: Tutorial
-description: Das folgende Dokument enthält Beispiele für Abfragen mit Experience Ereignisses.
+description: Das folgende Dokument enthält Beispiele für Abfragen, die Experience Ereignisses in Adobe Experience Platform Abfrage Service beinhalten.
 translation-type: tm+mt
-source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 60%
+source-wordcount: '320'
+ht-degree: 58%
 
 ---
 
 
-# [!DNL Experience Event] abfragen
+# Abfragen für Muster für [!DNL Experience Events]
 
 Zusätzlich zu den standardmäßigen SQL-Abfragen unterstützt Adobe Experience Platform [!DNL Query Service] das Schreiben von Abfragen mit [!DNL Experience Events]. Experience Ereignisses wird durch die Experience Data Model (XDM) ExperienceEvent-Klasse dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert, und daher für die Analyse der Zeitdomäne verwendet werden kann.
 
