@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Array;Feld;
 solution: Experience Platform
-title: Definieren eines Array-Felds in der Benutzeroberfläche
+title: Definieren von Array-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein Array-Feld in der Benutzeroberfläche "Experience Platform"definieren.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
 
 
-# Definieren eines Array-Felds in der Benutzeroberfläche
+# Definieren von Array-Feldern in der Benutzeroberfläche
 
 Beim Definieren eines XDM-Felds (Experience Data Model) in der Adobe Experience Platform-Benutzeroberfläche können Sie dieses Feld als Array definieren.
 
