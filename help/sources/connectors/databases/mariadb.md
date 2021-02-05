@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;MariaDB;Mariadb;Maria DB;Maria db
 solution: Experience Platform
-title: MariaDB-Anschluss
+title: Übersicht über den MariaDB Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Sie MariaDB mit APIs oder der Benutzeroberfläche mit der Plattform verbinden.
+description: Erfahren Sie, wie Sie MariaDB mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '247'
-ht-degree: 15%
+ht-degree: 12%
 
 ---
 
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL MariaDB] m
 
 ## Verbinden Sie [!DNL MariaDB] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines MariaDB-Connectors mit der Flow Service API](../../tutorials/api/create/databases/mariadb.md)
+- [Erstellen einer MariaDB-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/mariadb.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL MariaDB] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Quell-Connectors für MariaDB über die Benutzeroberfläche](../../tutorials/ui/create/databases/mariadb.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer MariaDB-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/mariadb.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
