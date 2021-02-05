@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc; Ad-hoc;
 solution: Experience Platform
-title: Ad-hoc-Schemata
+title: Ad-hoc-Schema
 description: Unter bestimmten Umständen kann es erforderlich sein, ein XDM-Schema mit Feldern zu erstellen, die nur für die Verwendung durch einen einzigen Datensatz benannt werden. Dies wird als Ad-hoc-Schema bezeichnet.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 16%
+ht-degree: 15%
 
 ---
 
