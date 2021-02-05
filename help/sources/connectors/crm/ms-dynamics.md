@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Microsoft Dynamics;Mikrosoft dynamik;Dynamik;Dynamik
 solution: Experience Platform
-title: Microsoft Dynamics-Connector
+title: Übersicht über Microsoft Dynamics Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Microsoft Dynamics mit Platform über APIs oder die Benutzeroberfläche verbunden werden kann.
+description: Erfahren Sie, wie Sie Microsoft Dynamics mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 11%
+ht-degree: 10%
 
 ---
 
@@ -27,11 +27,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Microsoft 
 
 ## Verbinden Sie [!DNL Microsoft Dynamics] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Microsoft Dynamics Connectors mithilfe der Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Erstellen einer Microsoft Dynamics-Quellverbindung mithilfe der Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
 - [CRM-System mit der Flow Service API erkunden](../../tutorials/api/explore/crm.md)
 - [CRM-Daten mithilfe der Flow Service API erfassen](../../tutorials/api/collect/crm.md)
 
 ## Verbinden Sie [!DNL Microsoft Dynamics] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Microsoft Dynamics-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/crm/dynamics.md)
-- [Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)
+- [Erstellen einer Microsoft Dynamics-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/crm/dynamics.md)
+- [Konfigurieren eines Datenflusses für eine CRM-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)
