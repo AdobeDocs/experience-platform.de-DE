@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;crm-Schema;crm;CRM;Salesforce;Salesforce
 solution: Experience Platform
-title: Salesforce-Anschluss
+title: Übersicht über Salesforce Source Connector
 topic: overview
-description: Experience Platform unterstützt die Erfassung von Daten aus einem CRM-System eines Drittanbieters. Zu den CRM-Anbietern zählen Salesforce.
+description: Erfahren Sie, wie Salesforce mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbunden wird.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 12%
+ht-degree: 8%
 
 ---
 
@@ -27,11 +27,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Salesforce
 
 ## Verbinden Sie [!DNL Salesforce] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Salesforce-Connectors mithilfe der Flow Service API](../../tutorials/api/create/crm/salesforce.md)
+- [Erstellen einer Salesforce-Quellverbindung mit der Flow Service API](../../tutorials/api/create/crm/salesforce.md)
 - [CRM-System mit der Flow Service API erkunden](../../tutorials/api/explore/crm.md)
 - [CRM-Daten mithilfe der Flow Service API erfassen](../../tutorials/api/collect/crm.md)
 
 ## Verbinden Sie [!DNL Salesforce] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Quell-Connectors für Salesforce über die Benutzeroberfläche](../../tutorials/ui/create/crm/salesforce.md)
-- [Konfigurieren eines Datenflusses für einen CRM-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)
+- [Erstellen einer Salesforce-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/crm/salesforce.md)
+- [Konfigurieren eines Datenflusses für eine CRM-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)
