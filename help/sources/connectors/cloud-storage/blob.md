@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Blob;Blob;Azurblauch;Azurblübe
 solution: Experience Platform
-title: Azurblutstecker
+title: Übersicht über den Blue-Blob-Anschluss
 topic: overview
-description: In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie Blaus Blob mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbinden.
+description: Erfahren Sie, wie Sie Azurblase mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 3%
 
 ---
@@ -36,15 +36,15 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennu
 
 ## Verbinden Sie [!DNL Azure Blob] mit [!DNL Platform]
 
-In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung von Azurblauch mit der Plattform herstellen:
+In der folgenden Dokumentation finden Sie Informationen dazu, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung von Azurblauch mit Adobe Experience Platform herstellen:
 
 ### APIs verwenden
 
-- [Erstellen eines Azurblauch-Connectors mit der Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
+- [Erstellen einer Azurblauch-Quellverbindung mit der Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der UI
 
-- [Erstellen eines Azurblauch-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Erstellen einer Azurblauch-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/blob.md)
+- [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
