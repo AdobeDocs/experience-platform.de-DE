@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Download-Punkte;Kundenwerbung;beliebte Themen;Exportieren;Exportieren;Download der Kundenwerbung;Punktzahlen der Kundenwerbung
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Herunterladen von Bewertungen in Customer AI
+title: Herunterladen von Ergebnissen in der Kunden-API
 topic: Downloading scores
 description: Mit der Kunden-API können Sie Ergebnisse im Parquet-Dateiformat herunterladen.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 86%
+ht-degree: 85%
 
 ---
 
 
-# Herunterladen von Bewertungen in Customer AI
+# Herunterladen von Punktzahlen in der Kunden-API
 
 Dieses Dokument dient als Anleitung zum Herunterladen von Ergebnissen für Customer AI.
 
