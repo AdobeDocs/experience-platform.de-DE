@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Adobe Experience Platform Source Connectors
+title: Source Connectors
 topic: overview
 description: Mithilfe von Quellverbindungen können Sie Ihre Datenspeicherung- und CRM-Dienste authentifizieren,  für die Erfassung festlegen und den Datendurchsatz verwalten.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 15%
+source-wordcount: '135'
+ht-degree: 16%
 
 ---
 
