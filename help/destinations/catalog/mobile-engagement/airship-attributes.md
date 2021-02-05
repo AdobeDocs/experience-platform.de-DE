@@ -1,25 +1,21 @@
 ---
 keywords: Luftschiffsattribute;Luftschiffsziel
-title: Ziel der Luftverkehrsattribute
-seo-title: Ziel der Luftverkehrsattribute
+title: Verbindungsziel für Luftverkehrsattribute
 description: Übermitteln Sie die Daten zur Audience der Adobe nahtlos an Airship als Audiencen-Attribute für das Targeting innerhalb von Airship.
-seo-description: Übermitteln Sie die Daten zur Audience der Adobe nahtlos an Airship als Audiencen-Attribute für das Targeting innerhalb von Airship.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1205'
 ht-degree: 11%
 
 ---
 
 
-# (Beta) [!DNL Airship Attributes] Ziel {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] Verbindung {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >Das [!DNL Airship Attributes]-Ziel in Adobe Experience Platform befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
-
-## Übersicht {#overview}
 
 [!DNL Airship] ist die führende Plattform für Kundeninteraktion, mit der Sie Ihren Benutzern in jeder Phase des Kundenlebenszyklus aussagekräftige, personalisierte Omniannel-Nachrichten bereitstellen können.
 
