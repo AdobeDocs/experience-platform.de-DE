@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Explorer;Datenforscher;Data Explorer
 solution: Experience Platform
-title: Erstellen eines Azurblauen Data Explorer-Connectors mit der Flow Service API
+title: Erstellen einer Azurblauer Data Explorer-Quellverbindung mit der Flow-Dienst-API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm wird die Flow Service API verwendet, um Sie durch die Schritte zu führen, die den Azurblauen Data Explorer (im Folgenden "Data Explorer" genannt) mit der Experience Platform zu verbinden.
+description: Erfahren Sie, wie Sie mit der Flow-Dienst-API den Azurblauen Data Explorer mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 22%
+source-wordcount: '632'
+ht-degree: 23%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Azure Data Explorer]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Azure Data Explorer]-Quellverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
