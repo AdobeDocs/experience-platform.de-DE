@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Cloud-Datenspeicherung;Cloud-Datenspeicherung
 solution: Experience Platform
-title: Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API
+title: Durchsuchen eines cLoud-Datenspeicherung-Systems mithilfe der Flow Service API
 topic: overview
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um ein Cloud-Datenspeicherung-System eines Drittanbieters zu untersuchen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '758'
 ht-degree: 20%
 
 ---
