@@ -1,21 +1,17 @@
 ---
 keywords: flackernde OneTag-Erweiterungen;flashsprechende OneTag-Erweiterung;flashsprechende OneTag-Ziele;flashsprechendes onetag
-title: Flashspeak OneTag-Erweiterung
-seo-title: Flashspeak OneTag-Erweiterung
+title: Flackerndes OneTag-Erweiterungsziel
 description: Die Flashgespräch OneTag Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Flashgespräch OneTag Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 21%
+source-wordcount: '538'
+ht-degree: 18%
 
 ---
 
 
 # [!DNL Flashtalking OneTag]-Erweiterung {#flashtalking-extension}
-
-## Übersicht {#overview}
 
 Mit der Erweiterung [!DNL Flashtalking OneTag] für Experience Platform Launch ist es ganz einfach, Site-Aktionen für Anzeige, Video und mobile Aktivität von Anzeigen zuzuordnen. Stellen Sie [!DNL Flashtalking OneTag] mithilfe von Launch in Ihren Webeigenschaften bereit.
 
