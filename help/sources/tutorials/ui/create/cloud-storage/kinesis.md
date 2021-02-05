@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Amazon Kinesis;Amazonaskinese;Kinesis;Kininose
 solution: Experience Platform
-title: Amazon Kinesis-Quellanschluss in der Benutzeroberfläche erstellen
+title: Amazon Kinesis-Quellverbindung in der Benutzeroberfläche erstellen
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Authentifizieren eines Amazon Kinesis (im Folgenden "Kinesis")-Quellconnectors über die Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Amazon Kinesis-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '482'
 ht-degree: 9%
 
 ---
 
 
-# Erstellen eines [!DNL Amazon Kinesis]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Amazon Kinesis]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
