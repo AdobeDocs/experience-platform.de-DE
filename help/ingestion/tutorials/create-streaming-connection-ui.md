@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Streaming-Verbindung;Streaming-Verbindung erstellen;UI-Handbuch;Tutorial;Erstellen einer Streaming-Verbindung;Streaming-Verbindung;Erfassung;
 solution: Experience Platform
-title: Aufbauen einer Streaming-Verbindung über die Benutzeroberfläche
+title: Erstellen einer Streaming-Verbindung mithilfe der Benutzeroberfläche
 topic: tutorial
 type: Tutorial
 description: Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung für Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '532'
-ht-degree: 71%
+ht-degree: 70%
 
 ---
 
