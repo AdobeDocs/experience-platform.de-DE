@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schema;Segment;Segmentmitgliedschaft;Segmentmitgliedschaft;Schema-Design;Landkarte;Landkarte;
 solution: Experience Platform
-title: Segment-Mitgliedsdetails-Mixin
+title: Details zur Segmentmitgliedschaft im Mixin
 topic: overview
 description: Dieses Dokument bietet einen Überblick über das Segment-Mitgliedsdetails-Mixin.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 1%
