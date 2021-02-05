@@ -1,21 +1,17 @@
 ---
 keywords: Google-Anzeigenmanager;Google-Anzeige;DoubleClick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google-Anzeigenmanager
-title: Google Ad Manager-Ziel
-seo-title: Google Ad Manager-Ziel
-description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
-seo-description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten. '
+title: Verbindungsziel für Google Ad Manager
+description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.  '
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 37%
+source-wordcount: '676'
+ht-degree: 32%
 
 ---
 
 
-# [!DNL Google Ad Manager Destination]
-
-## Übersicht
+# [!DNL Google Ad Manager] connection
 
 [!DNL Google Ad Manager], früher als für Herausgeber oder bekannt, ist eine AdX-Plattform von , die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.[!DNL DoubleClick][!DNL DoubleClick AdX][!DNL Google]
 
