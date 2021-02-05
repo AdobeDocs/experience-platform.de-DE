@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenflug;Datenflug
 solution: Experience Platform
-title: Konfigurieren eines Datenflusses für einen Batch-Connector für eine Cloud-Datenspeicherung in der Benutzeroberfläche
+title: Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Batch-Connector in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 translation-type: tm+mt
-source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# Konfigurieren eines Datenflusses für einen Batch-Connector für eine Cloud-Datenspeicherung in der Benutzeroberfläche
+# Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Batch-Verbindung in der Benutzeroberfläche
 
 Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen [!DNL Platform]-Datensatz eingefügt werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 
