@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;importiertes verpacktes Rezept;Data Science Workspace;beliebte Themen;Rezepte;API;sensei maschinelles Lernen;Engine erstellen
 solution: Experience Platform
-title: Verpacktes Rezept (API) importieren
+title: Importieren eines gepackten Rezepts mit der Sensei Machine Learning API
 topic: tutorial
 type: Tutorial
 description: 'Dieses Lernprogramm verwendet die Sensei Machine Learning API, um eine Engine zu erstellen, die auch als Rezept in der Benutzeroberfläche bezeichnet wird. '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1007'
 ht-degree: 31%
 
 ---
 
 
-# Verpacktes Rezept (API) importieren
+# Importieren eines gepackten Rezeptes mit der Sensei Machine Learning API
 
 In diesem Lernprogramm wird mithilfe von [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) eine [Engine](../api/engines.md), auch als Rezept in der Benutzeroberfläche bezeichnet, erstellt.
 
