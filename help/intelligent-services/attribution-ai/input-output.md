@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Erste Schritte;Attribution-ai;beliebte Themen;Attribution-ai-Eingabe;Attribution-ai-Ausgabe;
 solution: Experience Platform, Intelligent Services
-title: Eingabe und Ausgabe von Attribution AIS
+title: Eingabe und Ausgabe in Attribution AI
 topic: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '2089'
+source-wordcount: '2091'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Attribution AI] Eingabe und Ausgabe
+# Eingabe und Ausgabe in [!DNL Attribution AI]
 
 Im folgenden Dokument werden die verschiedenen Eingabe- und Ausgabedaten umrissen, die in [!DNL Attribution AI] verwendet werden.
 
