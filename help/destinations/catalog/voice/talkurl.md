@@ -1,21 +1,17 @@
 ---
 keywords: URL-Posteingang für Gespräche;URL-Posteingang für Vorträge;URL-Posteingang für Vorträge;URL-Posteingang für Vorträge;Gespräch-URL;Gespräch-URL
-title: Talk URL Inbox-Erweiterung
-seo-title: Sprecher-URL-Posteingang
+title: Ziel der Inbox-Erweiterung für Talk-URL
 description: Die Talk URL Inbox Extension ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Talk URL Inbox Extension ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 22%
+source-wordcount: '550'
+ht-degree: 20%
 
 ---
 
 
-# [!DNL Talk URL Inbox] Erweiterung {#talk-url-extension}
-
-## Übersicht {#overview}
+# [!DNL Talk URL Inbox]-Erweiterung {#talk-url-extension}
 
 Erhalten Sie Sprachnachrichten von Ihren Webseiten-Besuchern. Beinhaltet gehostete Benutzeroberfläche und Cloud-basiertes maschinelles Lernen, um Ihre Sprachnachrichten sofort in Texteinblicke zu transkribieren.
 
