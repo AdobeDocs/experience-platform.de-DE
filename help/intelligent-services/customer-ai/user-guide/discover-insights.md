@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Einblicke;Kundenberatung;beliebte Themen;Einblicke in die Kundenwerbung
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Einblicke in die Kundentechnik
+title: Discover Insights mit Kunden-API
 topic: Discovering insights
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Dienstinstanzinformationen in der Benutzeroberfläche der Intelligent Services Customer AI.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1399'
 ht-degree: 12%
@@ -13,7 +13,7 @@ ht-degree: 12%
 ---
 
 
-# Einblicke in die Kundentechnik
+# Entdecken Sie Einblicke in die Kundentechnik.
 
 Die Kundentechnik als Teil von Intelligent Services bietet Marketern die Möglichkeit, Adobe Sensei zu nutzen, um vorherzusehen, was Ihre Kunden als Nächstes tun werden. Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Das ist möglich, ohne dass die geschäftlichen Anforderungen in eine Aufgabe für maschinelles Lernen umgewandelt werden müssen, indem ein Algorithmus, ein Training oder eine Implementierung ausgewählt wird.
 
