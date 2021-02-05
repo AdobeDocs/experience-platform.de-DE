@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Amazon S3;Azurblauch
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für Azure Blob oder Amazon S3 über die Benutzeroberfläche
+title: Erstellen einer Azurblauch- oder Amazon S3-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: 'Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. '
+description: Erfahren Sie, wie Sie eine Azurblase- oder Amazon S3-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 8%
+ht-degree: 0%
 
 ---
 
 
-# Erstellen eines [!DNL Azure Blob]- oder [!DNL Amazon] S3-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Azure Blob]- oder [!DNL Amazon] S3-Quellverbindung in der Benutzeroberfläche
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen.
 
