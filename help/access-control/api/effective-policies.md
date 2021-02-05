@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Effektive Richtlinien;Zugriffskontrolle API
 solution: Experience Platform
-title: Anzeigen effektiver Richtlinien
+title: API-Endpunkt für effektive Richtlinien
 topic: developer guide
 description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Dieses Dokument dient als Leitfaden für die Ansicht effektiver Richtlinien mithilfe der Zugriffskontrolle-API für Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 57%
+source-wordcount: '320'
+ht-degree: 55%
 
 ---
 
 
-# Anzeigen effektiver Richtlinien
+# Endpunkt für effektive Richtlinien
 
 Um effektive Richtlinien für den aktuellen Benutzer Ansicht, stellen Sie eine POST-Anforderung an den `/acl/effective-policies`-Endpunkt in der [!DNL Access Control]-API ein. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
 
