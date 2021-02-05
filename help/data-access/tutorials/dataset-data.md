@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Datenzugriff API;Abfrage Datenzugriff
 solution: Experience Platform
-title: Übersicht über den Datenzugriff
+title: Ansicht DataSet-Daten mit der Datenzugriffs-API
 topic: tutorial
 type: Tutorial
-description: Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Zugreifen und Herunterladen von Daten, die in einem Datensatz mit der Datenzugriff-API in Adobe Experience Platform gespeichert sind. Außerdem werden Sie mit einigen der einzigartigen Funktionen der Datenzugriff-API, wie z. B. Paging und teilweise Downloads, vorgestellt.
+description: Erfahren Sie, wie Sie mit der Data Access API in Adobe Experience Platform in einem Datensatz gespeicherte Daten suchen, aufrufen und herunterladen können. Außerdem werden Sie mit einigen der einzigartigen Funktionen der Datenzugriff-API, wie z. B. Paging und teilweise Downloads, vorgestellt.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1398'
 ht-degree: 16%
 
 ---
 
 
-# Abfrage von Datensatzdaten mit der API[!DNL Data Access]
+# Ansicht von Datensatzdaten mit der API[!DNL Data Access]
 
 Dieses Dokument bietet eine schrittweise Anleitung zum Auffinden, Aufrufen und Herunterladen von Daten, die in einem Datensatz mit der [!DNL Data Access]-API in Adobe Experience Platform gespeichert sind. Außerdem werden Sie mit einigen der einzigartigen Funktionen der [!DNL Data Access]-API, wie z. B. Paging und teilweise Downloads, vorgestellt.
 
