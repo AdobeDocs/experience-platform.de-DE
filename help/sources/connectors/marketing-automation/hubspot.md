@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Hubspot;Hubspot;HubSpot
 solution: Experience Platform
-title: HubSpot-Anschluss
+title: HubSpot Source Connector - Übersicht
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie HubSpot mit APIs oder der Benutzeroberfläche mit der Plattform verbunden werden kann.
+description: Erfahren Sie, wie Sie HubSpot über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '232'
-ht-degree: 16%
+ht-degree: 12%
 
 ---
 
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL HubSpot] m
 
 ## Verbinden Sie [!DNL HubSpot] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines HubSpot-Connectors mit der Flow Service API](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [Erstellen einer HubSpot-Quellverbindung mit der Flow Service API](../../tutorials/api/create/marketing-automation/hubspot.md)
 - [Kennenlernen eines Marketingautomatisierungssystems mithilfe der Flow Service API](../../tutorials/api/explore/marketing-automation.md)
 - [Erfassen von Daten zur Marketingautomatisierung mithilfe der Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Verbinden Sie [!DNL HubSpot] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Quell-Connectors für HubSpot über die Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [Konfigurieren eines Datenflusses für einen Marketingautomatisierungsanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)
+- [Erstellen einer HubSpot-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/hubspot.md)
+- [Konfigurieren eines Datenflusses für eine Verbindung zur Marketingautomatisierung in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)
