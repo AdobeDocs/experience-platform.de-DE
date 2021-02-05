@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen; Flussdienst; Aktualisieren von Verbindungen
 solution: Experience Platform
-title: Aktualisieren von Verbindungsinformationen mithilfe der Flow Service API
+title: Aktualisieren von Verbindungsinformationen mithilfe der Flussdienst-API
 topic: overview
 type: Tutorial
 description: Unter bestimmten Umständen kann es erforderlich sein, die Details einer bestehenden Quellverbindung zu aktualisieren. Die Flow Service API bietet Ihnen die Möglichkeit, Details zu einer vorhandenen Stapel- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 24%
