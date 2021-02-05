@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Erste Schritte;Kundenhilfe;beliebte Themen
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Erste Schritte in Customer AI
+title: Erste Schritte mit der Kunden-API
 topic: Getting started
 description: In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '571'
-ht-degree: 71%
+ht-degree: 70%
 
 ---
 
