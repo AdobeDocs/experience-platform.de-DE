@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie eine CSV-Datei mithilfe der Adobe Experience Platform-Benutzeroberfläche einem XDM-Schema zuordnen.
 translation-type: tm+mt
-source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 3%
