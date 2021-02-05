@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;ExperienceEvent;Felder;Schemas;Schemas;Schema-Design;mixin;mixin;enduserids;Endbenutzer;Endbenutzer;ID;Updates;
 solution: Experience Platform
-title: Aktualisierung von Mischnamen
+title: Aktualisierungen von Mischnamen
 topic: overview
 description: Eine Liste der letzten XDM-Mixin-Namen ändert sich.
 translation-type: tm+mt
-source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 2%
