@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Google Cloud-Datenspeicherung;Google Cloud-Datenspeicherung
 solution: Experience Platform
-title: Google Cloud-Datenspeicherung-Connector
+title: Google Cloud Datenspeicherung Source Connector - Übersicht
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie die Google Cloud-Datenspeicherung mithilfe von APIs oder der Benutzeroberfläche mit der Plattform verbunden werden kann.
+description: Erfahren Sie, wie Sie Google Cloud-Datenspeicherung mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '568'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
@@ -58,11 +58,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Google Clo
 
 ### APIs verwenden
 
-- [Erstellen eines Google Cloud-Datenspeicherung-Connectors mithilfe der Flow Service API](../../tutorials/api/create/cloud-storage/google.md)
+- [Erstellen einer Google Cloud-Datenspeicherung-Quellverbindung mit der Flow Service API](../../tutorials/api/create/cloud-storage/google.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der UI
 
-- [Erstellen eines Quell-Connectors für Google Cloud Storage über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Erstellen einer Google Cloud-Datenspeicherung-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
