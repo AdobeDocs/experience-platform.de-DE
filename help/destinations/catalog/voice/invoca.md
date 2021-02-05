@@ -1,21 +1,17 @@
 ---
 keywords: Invoca;invoca
-title: Invoca Tags-Erweiterung
-seo-title: Invoca Tags-Erweiterung
+title: Invoca Tags Extension-Ziel
 description: Die Erweiterung Invoca Tags ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Erweiterung Invoca Tags ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 27%
+source-wordcount: '536'
+ht-degree: 25%
 
 ---
 
 
 # [!DNL Invoca Tags]-Erweiterung {#invoca-extension}
-
-## Übersicht {#overview}
 
 [!DNL Invoca] sorgt für die Einbeziehung von Anrufdaten und Spracheinblicken in die digitale Customer Journey. Mit der Call-Intelligence-Plattform [!DNL Invoca’s] verfügen Marketingexperten endlich über Analysen, um die Ergebnisse der Anrufe zu messen und Offline-Konversionen wieder an digitale Ausgaben zu binden.
 
