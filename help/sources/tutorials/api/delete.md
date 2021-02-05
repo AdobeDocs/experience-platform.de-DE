@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Flussdienst;Löschen von Verbindungen;Löschen;API
 solution: Experience Platform
-title: Eine Verbindung mit der Flow Service API löschen
+title: Löschen einer Verbindung mit der Flussdienst-API
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Löschen einer Verbindung mithilfe der Flow Service API beschrieben.
+description: Erfahren Sie, wie Sie eine Verbindung mit der Flow Service API löschen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '592'
 ht-degree: 27%
 
 ---
