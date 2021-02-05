@@ -1,19 +1,17 @@
 ---
 keywords: Ziel der Cloud-Datenspeicherung;Cloud-Datenspeicherung
-title: Cloud-Speicher-Ziele
-seo-title: Cloud-Speicher-Ziele
-description: Die Plattform kann Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azurblauen Ereignis-Hubs- oder SFTP-Cloud-Datenspeicherung liefern.
-seo-description: Die Plattform kann Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azurblauen Ereignis-Hubs- oder SFTP-Cloud-Datenspeicherung liefern.
+title: Übersicht über die Ziele der Cloud-Datenspeicherung
+description: Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Standorte Amazon S3, AWS Kinesis, AWS Ereignis Hubs oder SFTP-Cloud-Datenspeicherung liefern.
 translation-type: tm+mt
-source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 32%
+source-wordcount: '161'
+ht-degree: 34%
 
 ---
 
 
-# Cloud-Speicher-Ziele {#cloud-storage-destinations}
+# Übersicht über die Cloud-Speicher-Ziele {#cloud-storage-destinations}
 
 Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Cloud-Datenspeicherung-Speicherorte liefern. Auf diese Weise können Sie Audiencen und deren Profil-Attribute über CSV- oder tabulatorgetrennte Dateien für [!DNL Amazon S3] und SFTP an Ihre internen Systeme senden. Bei [!DNL AWS Kinesis]- und [!DNL Azure Event Hubs]-Zielen werden die Daten aus der Experience Platform im JSON-Format gestreamt.
 
