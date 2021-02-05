@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei der Batch-Ingestion
 topic: troubleshooting
 description: 'Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform Batch Data Ingestion-APIs. '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 87%
