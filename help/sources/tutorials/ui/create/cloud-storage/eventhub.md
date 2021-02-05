@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Ereignis Hubs;Ereignis Hubs;Azurblauer Ereignis Hubs
 solution: Experience Platform
-title: Erstellen eines Azurblauen Ereignis-Hubs-Quellconnectors in der Benutzeroberfläche
+title: Erstellen einer Azurblauen Ereignis-Hubs-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Authentifizieren eines Azurblauen Ereignis-Hubs (im Folgenden "Ereignis Hubs" genannt) mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Azurblase-Ereignis-Hubs-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '496'
 ht-degree: 9%
 
 ---
 
 
-# Erstellen eines [!DNL Azure Event Hubs]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Azure Event Hubs]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
