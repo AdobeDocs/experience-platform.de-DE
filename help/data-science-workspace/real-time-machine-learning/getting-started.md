@@ -5,7 +5,7 @@ title: Erste Schritte mit maschinellem Lernen in Echtzeit
 topic: Getting started
 description: Im folgenden Dokument werden die erforderlichen Schritte zum Erstellen eines Echtzeit-maschinellen Lernmodells in Adobe Experience Platform beschrieben.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Um maschinelles Lernen in Echtzeit nutzen zu können, benötigen Sie Zugriff auf eine mit Adobe Experience Platform und [!DNL Data Science Workspace] ausgestattete Organisation. Darüber hinaus benötigen Sie einen vollständigen Datensatz, der für Schulungen und Bewertungen verwendet werden kann.
 
-Die Handbücher für maschinelles Lernen in Echtzeit erfordern ein funktionierendes Verständnis von Python 3, [Jupyter Notebooks](../jupyterlab/overview.md), Datenwissenschaft und maschinellem Lernen.
+Die Handbücher für maschinelles Lernen in Echtzeit erfordern ein funktionierendes Verständnis von Python 3, [Jupyter-Notebooks](../jupyterlab/overview.md), Datenwissenschaft und maschinellem Lernen.
 
 **Schlüsselbegriffe:**
 
