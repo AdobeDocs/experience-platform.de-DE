@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Entwicklerhandbuch;SDK;Modellerstellung;Data Science Workspace;beliebte Themen;Testen
 solution: Experience Platform
-title: SDK-Entwicklerhandbuch
+title: Modell-Authoring-SDK
 topic: Overview
 description: Das Model Authoring-SDK ermöglicht Ihnen die Entwicklung von benutzerdefinierten maschinellen Lernrezepten und Feature Pipelines, die in Adobe Experience Platform Data Science Workspace verwendet werden können, und stellt implementierbare Vorlagen in PySpark und Spark (Scala) bereit.
 translation-type: tm+mt
-source-git-commit: e1b8bc378c2f72862c0c28e44dceb8a35e44a29e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '977'
-ht-degree: 70%
+ht-degree: 69%
 
 ---
 
 
-# SDK-Entwicklerhandbuch
+# Modell-Authoring-SDK
 
 Das Modell-Authoring-SDK ermöglicht Ihnen die Entwicklung benutzerdefinierter maschineller Lernrezepte und Feature Pipelines, die in [!DNL Adobe Experience Platform] Data Science Workspace verwendet werden können, und stellt implementierbare Vorlagen in [!DNL PySpark] und [!DNL Spark (Scala)] bereit.
 
