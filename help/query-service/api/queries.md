@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;API-Leitfaden;Abfragen;Abfrage;Abfrage-Dienst;
 solution: Experience Platform
-title: Entwicklerhandbuch für Query Service
+title: Abfragen-API-Endpunkt
 topic: queries
 description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des Endpunkts /Abfragen in der Abfrage Service API durchführen können.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 32%
@@ -13,7 +13,7 @@ ht-degree: 32%
 ---
 
 
-# Abfragen
+# Abfragen-Endpunkt
 
 ## Beispiel-API-Aufrufe
 
