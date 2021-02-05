@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datenfluss-Dienst;Flussdienst;Flussdienstverbindung
 solution: Experience Platform
-title: Erstellen einer Experience Platform-Datenbank-Basisverbindung mit der Flow Service API
+title: Erstellen einer Adobe Experience Platform DataSet-Basisverbindung mit der Flow Service API
 topic: overview
 type: Tutorial
-description: Der Flow Service dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+description: Erfahren Sie, wie Sie mit der Flow Service API eine DataSet-Basisverbindung zu Adobe Experience Platform erstellen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 29%
+source-wordcount: '721'
+ht-degree: 30%
 
 ---
 
