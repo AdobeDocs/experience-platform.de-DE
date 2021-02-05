@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenerfassung;Datenposition;Datenposition;Data Management;Data Management;Lineage;Linie;Batch;Stapel;Ingetierte Daten
 solution: Experience Platform
-title: Übersicht über die Adobe Experience Platform-Dateneinbindung
+title: Übersicht über die Dateneinbindung
 topic: overview
 description: In diesem Dokument werden die drei Hauptwege für die Dateneinbindung in die Plattform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten für weitere Informationen.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '460'
 ht-degree: 16%
 
 ---
