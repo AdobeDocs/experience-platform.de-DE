@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Apache-Bienenstock;Bienenstock;Hive
 solution: Experience Platform
-title: Erstellen Sie einen Apache Hive auf einem Avocent HDInsights-Connector mithilfe der Flow Service API
+title: Erstellen eines Apache-Hive auf der Azurblauen HDInsights-Quellverbindung mithilfe der Flow-Dienst-API
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, um Apache Hive auf Azurblauen HDInsights mit der Experience Platform zu verbinden.
+description: Erfahren Sie, wie Sie Apache Hive mit Azurblauen HDInsights über die Flow Service API mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '573'
 ht-degree: 25%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Apache Hive]-Connector für [!DNL Azure HDInsights] mithilfe der [!DNL Flow Service]-API
+# Erstellen Sie eine [!DNL Apache Hive]-Quellverbindung mit der [!DNL Flow Service]-API[!DNL Azure HDInsights]
 
 >[!NOTE]
 >
