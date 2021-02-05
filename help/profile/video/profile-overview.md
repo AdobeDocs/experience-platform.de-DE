@@ -1,5 +1,5 @@
 ---
-title: Übersicht über das Echtzeit-Kundenprofil
+title: Übersicht über das Echtzeit-Profil von Kunden
 description: Dieses Video vermittelt ein grundlegendes Verständnis des Echtzeit-Profils von Kunden innerhalb von Adobe Experience Platform und beschreibt, wie Profil in der Plattform-Benutzeroberfläche durchsucht werden.
 product: experience platform
 type: Documentation
@@ -9,10 +9,10 @@ audience: all
 doc-type: video
 activity: understand
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 6%
+ht-degree: 3%
 
 ---
 
