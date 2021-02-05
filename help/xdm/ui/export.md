@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -205,11 +205,11 @@ Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend au
 
 Die Nutzlast erfolgt in Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine benutzerdefinierte XDM-Ressource darstellt, die exportiert werden soll. Im obigen Beispiel sind das benutzerdefinierte Mixin und das Schema &quot;[!DNL Loyalty Members]&quot;enthalten. [!DNL Loyalty details] Die vom Schema verwendeten Kernressourcen werden nicht in den Export einbezogen, da diese Ressourcen in allen Sandboxen und IMS-Organisationen verfügbar sind.
 
-Beachten Sie, dass jede Instanz der Mandanten-ID Ihres Unternehmens in der Payload als `<XDM_TENANTID_PLACEHOLDER>` angezeigt wird. Diese Platzhalter werden automatisch durch den entsprechenden Wert für die Mandanten-ID ersetzt, je nachdem, wo Sie das Schema im nächsten Schritt exportieren.
+Beachten Sie, dass jede Instanz der Mandanten-ID Ihres Unternehmens in der Payload als `<XDM_TENANTID_PLACEHOLDER>` angezeigt wird. Diese Platzhalter werden automatisch durch den entsprechenden Wert für die Mandanten-ID ersetzt, je nachdem, wo Sie das Schema im nächsten Schritt importieren.
 
 ## Ressource mit der API importieren
 
-Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Nutzlast für eine POST-Anforderung an den `/import`-Endpunkt in der Schema-Registrierungs-API verwenden. Weitere Informationen zum Konfigurieren des Aufrufs zum Senden des Schemas an das richtige IMS-Org und die richtige Sandbox finden Sie im Abschnitt [Importieren einer XDM-Ressource in der API](../api/export-import.md#import).
+Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Nutzlast für eine POST-Anforderung an den `/import`-Endpunkt in der Schema-Registrierungs-API verwenden. Weitere Informationen zum Konfigurieren des Aufrufs zum Senden des Schemas an das gewünschte IMS-Org und die Sandbox finden Sie im Abschnitt [Importieren einer XDM-Ressource in der API](../api/export-import.md#import).
 
 ## Nächste Schritte
 
