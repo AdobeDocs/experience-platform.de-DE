@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Felder;Zuordnungsfunktionen; Zuordnungsfunktionen
 solution: Experience Platform
-title: Funktionen zur Datenvorbereitung
+title: Funktionen für die Datenvorlagenzuordnung
 topic: overview
 description: In diesem Dokument werden die Zuordnungsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 translation-type: tm+mt
-source-git-commit: bfcb1924e40b67c0af41dc789b5ff0bf8e8366e1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3599'
 ht-degree: 7%
 
 ---
 
 
-# Funktionen zur Datenvorbereitung
+# Zuordnungsfunktionen für die Datenvorbereitung
 
 Mithilfe der Funktion &quot;Datenvorgabe&quot;können Werte basierend auf den in die Quellfelder eingegebenen Werten berechnet und berechnet werden.
 
