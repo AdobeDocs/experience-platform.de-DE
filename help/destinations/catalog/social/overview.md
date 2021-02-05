@@ -1,19 +1,17 @@
 ---
 keywords: soziales Netzwerk;Social-Netzwerk-Ziele;Livefyre;Facebook;Facebook
-title: Ziele in sozialen Netzwerken
-seo-title: Ziele in sozialen Netzwerken
+title: Übersicht über Social-Netzwerkziele
 description: Mit Zielen in sozialen Netzwerken können Sie Profile für Ihre Kampagnen basierend auf Hash-E-Mails für Zielgruppenbestimmung, Personalisierung und Unterdrückung aktivieren.
-seo-description: Mit Zielen in sozialen Netzwerken können Sie Profile für Ihre Kampagnen basierend auf Hash-E-Mails für Zielgruppenbestimmung, Personalisierung und Unterdrückung aktivieren.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 80%
+source-wordcount: '71'
+ht-degree: 69%
 
 ---
 
 
-# Ziele in sozialen Netzwerken {#social-network-destinations}
+# Ziele in sozialen Netzwerken – Übersicht {#social-network-destinations}
 
 Mit Zielen in sozialen Netzwerken können Sie Profile für Ihre Kampagnen basierend auf Hash-E-Mails für Zielgruppenbestimmung, Personalisierung und Unterdrückung aktivieren.
 
