@@ -1,21 +1,17 @@
 ---
 keywords: Facebook-Erweiterungen;Facebook-Erweiterung;Facebook-Ziele;Facebook;Instagram;Messenger;Facebook-Messenger
-title: Facebook-Ziel
-seo-title: Facebook-Ziel
+title: Ziel der Facebook-Erweiterung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
-seo-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 15%
+source-wordcount: '952'
+ht-degree: 13%
 
 ---
 
 
-# [!DNL Facebook] Ziel
-
-## Übersicht {#overview}
+# [!DNL Facebook]-Erweiterung 
 
 >[!IMPORTANT]
 >
