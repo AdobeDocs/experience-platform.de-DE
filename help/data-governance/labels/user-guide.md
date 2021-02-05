@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung;Richtliniendienst;Datenverwendungsbeschriftungen Benutzerhandbuch
 solution: Experience Platform
-title: Benutzerhandbuch zu den Datennutzungsbezeichnungen
+title: Datenverwendungsbezeichnungen in der Benutzeroberfläche verwalten
 topic: labels
-description: In diesem Benutzerhandbuch werden die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der Adobe Experience Platform-Benutzeroberfläche beschrieben.
+description: In diesem Handbuch werden die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 1%
+source-wordcount: '1134'
+ht-degree: 0%
 
 ---
 
 
-# Benutzerhandbuch zu den Datennutzungsbezeichnungen
+# Verwalten von Datenverwendungsbeschriftungen in der Benutzeroberfläche
 
 Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der [!DNL Experience Platform]-Benutzeroberfläche. Bevor Sie das Handbuch verwenden, lesen Sie bitte den [[!DNL Data Governance] overview](../home.md) für eine stabilere Einführung in das [!DNL Data Governance]-Framework.
 
-## Verwalten von Datenverwendungsbeschriftungen auf der Datensatzebene
+## Verwalten von Beschriftungen auf der Ebene des Datensatzes
 
 Zur Verwaltung der Datenverwendungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Nach der Anmeldung bei Adobe Experience Platform wählen Sie **[!UICONTROL Datensätze]** in der linken Navigation aus, um den Arbeitsbereich **[!UICONTROL Datensätze]** zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz Liste.
 
@@ -75,7 +75,7 @@ Der Umschalter **[!UICONTROL Vererbte Bezeichnungen anzeigen]** ist standardmä�
 
 ![Vererbte Beschriftungen ausblenden](../images/labels/hide_inherited_labels.png)
 
-## Verwalten von Datenverwendungsbeschriftungen auf der Ebene des Datensatzfelds
+## Verwalten von Beschriftungen auf Feldebene
 
 Wenn Sie den Arbeitsablauf für [Hinzufügen und Bearbeiten von Beschriftungen zur Datenverwendung auf Datensatzebene](#add-labels) fortsetzen, können Sie auch Beschriftungen auf Feldebene im Arbeitsbereich **[!UICONTROL Datenverwaltung]** für diesen Datensatz verwalten.
 
@@ -101,7 +101,7 @@ Sie können diese Schritte wiederholen, um weiterhin Beschriftungen auf Feldeben
 
 Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene nach unten verschoben wird (Dataset → Felder), d. h. dass auf Feldebene angewendete Beschriftungen nicht in andere Felder oder Datensätze übertragen werden.
 
-## Verwalten benutzerdefinierter Beschriftungen
+## Benutzerdefinierte Beschriftungen verwalten
 
 Sie können Ihre eigenen benutzerdefinierten Nutzungsbezeichnungen im Arbeitsbereich **[!UICONTROL Richtlinien]** der [!DNL Experience Platform]-Benutzeroberfläche erstellen. Wählen Sie **[!UICONTROL Richtlinien]** in der linken Navigation und dann **[!UICONTROL Bezeichnungen]** aus, um eine Liste der vorhandenen Bezeichnungen Ansicht. Wählen Sie **[!UICONTROL Beschriftung]** erstellen.
 
