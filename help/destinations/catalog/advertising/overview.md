@@ -1,19 +1,19 @@
 ---
 keywords: Werbeziele;Ziele;Plattformziele
 title: Werbeziele
-seo-title: Werbeziele
+seo-title: Werbeziele Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) und geben Sie pseudonyme Audiencen für diese Plattformen frei.
 seo-description: Verbinden Sie Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) und geben Sie pseudonyme Audiencen für diese Plattformen frei.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '227'
 ht-degree: 48%
 
 ---
 
 
-# Werbeziele {#advertising-destinations}
+# Werbeziele – Übersicht {#advertising-destinations}
 
 Verbinden Sie Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) und geben Sie pseudonyme Audiencen für diese Plattformen frei.
 
