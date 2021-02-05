@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Export;Export
 solution: Experience Platform
-title: Benutzerhandbuch zum Privacy Service
+title: Datenschutzaufträge in der Benutzeroberfläche des Privacy Service verwalten
 topic: UI guide
 description: Erfahren Sie, wie Sie mit der Benutzeroberfläche von Privacy Service Datenschutzanforderungen über verschiedene Experience Cloud-Anwendungen hinweg koordinieren und überwachen.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Privacy Service] Benutzerhandbuch
+# Datenschutzaufträge in der Benutzeroberfläche von Privacy Service verwalten
 
 In diesem Dokument werden Schritte zum Erstellen und Verwalten von Datenschutzanforderungen mithilfe der [!DNL Privacy Service]-Benutzeroberfläche beschrieben.
 
