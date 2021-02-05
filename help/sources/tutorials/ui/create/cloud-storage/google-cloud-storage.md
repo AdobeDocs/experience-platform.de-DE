@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Google Cloud-Datenspeicherung;Google Cloud-Datenspeicherung;GCS;Gcs
 solution: Experience Platform
-title: Google Cloud-Datenspeicherung-Quellanschluss (Benutzeroberfläche)
+title: Erstellen einer Google Cloud-Datenspeicherung-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines Google Cloud-Datenspeicherung-Quellconnectors (im Folgenden "GCS") mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Google Cloud-Datenspeicherung-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '561'
 ht-degree: 8%
 
 ---
 
 
-# Erstellen eines [!DNL Google Cloud Storage]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Google Cloud Storage]-Quellverbindung in der Benutzeroberfläche
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Google Cloud Storage] (im Folgenden &quot;GCS&quot; genannt) Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche beschrieben.
 
