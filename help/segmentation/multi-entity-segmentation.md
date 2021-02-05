@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierung;Segmentierung;Segmentdienst;Segmente;Multientity;Segmentierung mehrerer Entitäten;Segmente;
 solution: Experience Platform
-title: Segmentierung mit mehreren Entitäten
+title: Übersicht über die Segmentierung mehrerer Entitäten
 topic: overview
 description: Bei der Segmentierung mit mehreren Entitäten können Sie Profildaten um zusätzliche Daten erweitern, die auf Produkten, Geschäften oder anderen nicht-profilbasierten Klassen beruhen. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden.
 translation-type: tm+mt
-source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '674'
 ht-degree: 6%
 
 ---
 
 
-# Segmentierung mit mehreren Entitäten
+# Übersicht über die Segmentierung mehrerer Entitäten
 
 Die Segmentierung mehrerer Entitäten ist eine erweiterte Funktion, die als Teil von Adobe Experience Platform [!DNL Segmentation Service] verfügbar ist. Mit dieser Funktion können Sie [!DNL Real-time Customer Profile]-Daten um weitere &quot;Nicht-Personen&quot;-Daten erweitern (auch als &quot;Dimensionseinheiten&quot;bezeichnet), die Ihr Unternehmen definieren kann, z. B. Daten zu Produkten oder Stores. Die Segmentierung mehrerer Entitäten bietet Flexibilität bei der Definition von Segmenten auf der Grundlage von Daten, die für Ihre spezifischen Geschäftsanforderungen relevant sind, und kann ohne Kenntnisse in der Datenbankabfrage durchgeführt werden. Mit der Segmentierung mehrerer Entitäten können Sie wichtige Daten zu Ihren Segmenten hinzufügen, ohne dass Sie kostspielige Änderungen an den Datenströmen vornehmen oder auf eine Back-End-Datenzusammenführung warten müssen.
 
