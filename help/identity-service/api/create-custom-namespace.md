@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Namensraum;Namensraum;Namensraum;Namensraum;Identitäts-Namensraum;Namensraum;Identität;Identität;Identität
 solution: Experience Platform
-title: Benutzerdefinierten Namespace erstellen
+title: Erstellen eines benutzerspezifischen Namensraums in der Identitätsdienst-API
 topic: API guide
 description: Mithilfe der Identitäts-Namensraum-API können Sie einen benutzerdefinierten Identitäts-Namensraum erstellen, der nur für Ihr Unternehmen verfügbar ist.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 9%
+source-wordcount: '120'
+ht-degree: 5%
 
 ---
 
 
-# Erstellen eines benutzerspezifischen Namensraums
+# Erstellen eines benutzerdefinierten Namensraums in der Identitätsdienst-API
 
 Mit der API [!DNL Identity Namespace] können Sie einen benutzerdefinierten Identitäts-Namensraum erstellen, der nur für Ihr Unternehmen verfügbar ist.
 
