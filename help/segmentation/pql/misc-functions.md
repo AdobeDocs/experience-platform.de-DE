@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Verschiedene Funktionen;misc;
 solution: Experience Platform
-title: Sonstige Funktionen
+title: PQL Verschiedene Funktionen
 topic: developer guide
 description: Die folgende Funktion ist eine sonstige Funktion für Profil Query Language (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 70%
+source-wordcount: '132'
+ht-degree: 68%
 
 ---
 
