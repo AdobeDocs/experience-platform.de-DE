@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;geplante Abfragen;geplante Abfrage
 solution: Experience Platform
-title: Entwicklerhandbuch für Query Service
+title: API-Endpunkt für terminierte Abfragen
 topic: scheduled queries
 description: Die folgenden Abschnitte führen Sie durch die verschiedenen API-Aufrufe, die Sie für geplante Abfragen mit der Abfrage Service API durchführen können.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '977'
 ht-degree: 44%
 
 ---
 
 
-# Geplante Abfragen
+# Endpunkt für terminierte Abfragen
 
 ## Beispiel-API-Aufrufe
 
