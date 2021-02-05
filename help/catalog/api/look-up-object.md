@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Katalog;Objektsuche;API
 solution: Experience Platform
-title: Objekt nachschlagen
+title: Nachschlagen eines Katalogobjekts
 topic: developer guide
 description: 'Wenn Sie die eindeutige Kennung eines bestimmten Catalog-Objekts kennen, können Sie eine GET-Anfrage ausführen, um Details zu diesem Objekt anzuzeigen. '
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 77%
+source-wordcount: '165'
+ht-degree: 71%
 
 ---
 
 
-# Objekt nachschlagen
+# Nachschlagen eines Katalogobjekts
 
 Wenn Sie den eindeutigen Bezeichner für ein bestimmtes [!DNL Catalog]-Objekt kennen, können Sie eine GET zur Ansicht der Objektdetails durchführen.
 
