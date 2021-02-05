@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Quellverbindungen;Quellanschluss;Quellen;Datenquellen;Datenquelle;Datenquellen;Datenquellenverbindung
 solution: Experience Platform
-title: Überblick über Adobe Experience Platform Connectoren für Datenquellen
+title: Übersicht über Source Connectors
 topic: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 60%
+source-wordcount: '940'
+ht-degree: 58%
 
 ---
 
@@ -30,12 +30,12 @@ Die für die Aufnahme in Experience Platform verwendeten Datenquellen sind in fo
 Experience Platform ermöglicht die Aufnahme von Daten aus Adobe-Anwendungen wie Adobe Analytics, Adobe Audience Manager und [!DNL Experience Platform Launch]. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über den Adobe Audience Manager-Connector](connectors/adobe-applications/audience-manager.md)
-- [Erstellen eines Quell-Connectors für Adobe Audience Manager über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Erstellen einer Adobe Audience Manager-Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Übersicht über den Adobe Analytics Classifications Data Connector](connectors/adobe-applications/classifications.md)
-- [Adobe Analytics Classifications-Datenquellenanschluss in der Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Erstellen einer Adobe Analytics Classifications-Datenquelle-Verbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Übersicht über den Adobe Analytics-Connector](connectors/adobe-applications/analytics.md)
-- [Erstellen eines Quell-Connectors für Adobe Analytics über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Erstellen eines Quell-Connectors für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Erstellen einer Adobe Analytics-Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Erstellen einer Quellverbindung zu Kundenattributen in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Werbung
 
