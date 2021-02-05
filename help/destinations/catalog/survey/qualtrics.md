@@ -1,21 +1,17 @@
 ---
 keywords: Qualtrics;Qualtrics;Qualtrics Website Feedback;Qualtrics Website Feedback;Qualtrics Website Feedback
-title: Qualtrics Website Feedback-Erweiterung
-seo-title: Qualtrics Website Feedback-Erweiterung
+title: Feedback-Erweiterungsziel für Qualtrics Website
 description: Die Qualtrics Website Feedback Extension ist ein Ziel der Umfragen in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Qualtrics Website Feedback Extension ist ein Ziel der Umfragen in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '621'
-ht-degree: 34%
+source-wordcount: '590'
+ht-degree: 32%
 
 ---
 
 
-# [!DNL Qualtrics Website Feedback] Erweiterung {#qualtrics-extension}
-
-## Übersicht {#overview}
+# [!DNL Qualtrics Website Feedback]-Erweiterung {#qualtrics-extension}
 
 [!DNL Qualtrics Website Feedback] ermöglicht es Ihnen, zur richtigen Zeit mit der richtigen Nachricht mit Ihren Website-Besuchern zu interagieren. Unabhängig davon, ob Sie die Benutzererfahrung mit Website-Feedback-Umfragen verbessern oder die Umrechnung erhöhen möchten, [!DNL Qualtrics Website Feedback] wurde bereits behandelt.
 
