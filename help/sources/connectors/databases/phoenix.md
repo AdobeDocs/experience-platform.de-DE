@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Phoenix;Phoenix
 solution: Experience Platform
-title: Phoenix-Anschluss
+title: Phoenix Source Connector - Übersicht
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Phoenix mit APIs oder der Benutzeroberfläche mit einer Plattform verbunden werden kann.
+description: Erfahren Sie, wie Sie Phoenix mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 22%
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Phoenix] m
 
 ## Verbinden Sie [!DNL Phoenix] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Phoenix-Connectors mit der Flow Service API](../../tutorials/api/create/databases/phoenix.md)
+- [Erstellen einer Phoenix-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/phoenix.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Phoenix] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Phoenix-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/databases/phoenix.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer Phoenix-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/phoenix.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
