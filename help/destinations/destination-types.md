@@ -2,13 +2,12 @@
 keywords: Ziele;Ziel;Zieltypen;Zieltypen
 title: Zieltypen und Kategorien
 seo-title: Zieltypen und Kategorien
-description: 'In Adobe Experience Platform erfassen Profil-/Segmentexport-Ziele Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Experience Platform Launch Extensions leiten Rohdaten aus Ereignissen an verschiedene Zieltypen weiter. '
-seo-description: In Adobe Experience Platform erfassen Profil-/Segmentexport-Ziele Ereignis-Daten, kombinieren sie mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele. Experience Platform Launch Extensions leiten Rohdaten aus Ereignissen an verschiedene Zieltypen weiter.
+description: Erfahren Sie mehr über die verschiedenen Arten und Kategorien von Destinationen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 16%
+source-wordcount: '514'
+ht-degree: 19%
 
 ---
 
