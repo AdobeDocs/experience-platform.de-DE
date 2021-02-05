@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Partielle Erfassung;Partielle Erfassung;Fehler abrufen;Fehler abrufen;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Erfassung;Einnahme;Einbettung; Einbettung;
 solution: Experience Platform
-title: Überblick über die Partielle Stapelverarbeitung
+title: Übersicht über die partielle Batch-Ingestion
 topic: overview
 description: Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfassung.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 42%
