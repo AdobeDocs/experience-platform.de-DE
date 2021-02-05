@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datensatz;Datensatz;Datensatz;Datensatz erstellen;Datensatz erstellen;Datensatz erstellen;Datenbestand aktivieren
 solution: Experience Platform
-title: Erstellen eines Datensatzes
+title: Erstellen eines Datensatzes in der API
 topic: developer guide
-description: In diesem Dokument wird beschrieben, wie Sie ein Datensatzobjekt im Katalog erstellen.
+description: In diesem Dokument wird beschrieben, wie Sie ein Datensatzobjekt in der Katalogdienst-API erstellen.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 57%
+source-wordcount: '232'
+ht-degree: 53%
 
 ---
 
 
-# Erstellen eines Datensatzes
+# Erstellen eines Datensatzes in der API
 
 Zum Erstellen eines Datensatzes mit der API [!DNL Catalog] müssen Sie den `$id`-Wert des [!DNL Experience Data Model] (XDM)-Schemas kennen, auf dem der Datensatz basieren soll. Nachdem Sie die Schema-ID haben, können Sie einen Datensatz erstellen, indem Sie eine POST an den `/datasets`-Endpunkt in der [!DNL Catalog]-API anfordern.
 
