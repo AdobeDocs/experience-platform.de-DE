@@ -5,10 +5,10 @@ seo-title: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzei
 description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 seo-description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 58%
+source-wordcount: '183'
+ht-degree: 51%
 
 ---
 
