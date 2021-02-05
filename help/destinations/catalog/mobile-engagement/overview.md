@@ -1,13 +1,11 @@
 ---
 keywords: Mobile Messaging;Mobilnachrichtenziele;Braze; Luftschiff
-title: Ziele für mobile Interaktionen
-seo-title: Ziele für mobile Interaktionen
-description: Adobe Experience Platform unterstützt die unten aufgeführten Ziele für die Interaktion mit Mobilgeräten
-seo-description: Adobe Experience Platform unterstützt die unten aufgeführten Ziele für die Interaktion mit Mobilgeräten
+title: Übersicht über die Ziele mobiler Interaktionen
+description: Erfahren Sie mehr über die verschiedenen von Adobe Experience Platform unterstützten Ziele für die Interaktion mit Mobilgeräten.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
