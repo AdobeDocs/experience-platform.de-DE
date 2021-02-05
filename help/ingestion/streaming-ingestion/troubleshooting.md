@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Streaming;Streaming-Erfassung;Fehlerbehebung;Streaming-Erfassung Fehlerbehebung;Streaming-ErfassungsFAQ;FAQ;
 solution: Experience Platform
-title: Fehlerbehebung bei der Streaming-Erfassung
+title: Streaming-Ingestion - Fehlerbehebungshandbuch
 topic: troubleshooting
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Erfassung in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1025'
 ht-degree: 64%
 
 ---
