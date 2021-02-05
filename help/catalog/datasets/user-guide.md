@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datensatz aktivieren;Datensatz;Datensatz;Datensatz
 solution: Experience Platform
-title: Benutzerhandbuch zu Datensätzen
+title: Handbuch zur Benutzeroberfläche von Datasets
 topic: datasets
-description: Dieses Benutzerhandbuch zu Datensätzen enthält Anweisungen zur Durchführung allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche.
+description: Erfahren Sie, wie Sie allgemeine Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche durchführen.
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 72%
+source-wordcount: '1140'
+ht-degree: 71%
 
 ---
 
 
-# Benutzerhandbuch zu Datensätzen
+# Handbuch zur Benutzeroberfläche von Datasets
 
 Dieses Benutzerhandbuch enthält Anweisungen zur Ausführung allgemeiner Aktionen beim Verwenden von Datensätzen in der Benutzeroberfläche von Adobe Experience Platform.
 
