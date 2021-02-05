@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Salesforce;salesforce
 solution: Experience Platform
-title: Erstellen eines Salesforce-Connectors mithilfe der Flow Service API
+title: Erstellen einer Salesforce-Quellverbindung mit der Flow Service API
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, mit denen Sie die Plattform mit einem Salesforce-Konto verbinden können, um CRM-Daten zu erfassen.
+description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und einem Salesforce-Konto herstellen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 25%
+source-wordcount: '565'
+ht-degree: 26%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Salesforce]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Salesforce]-Quellverbindung mit der [!DNL Flow Service]-API
 
 Der Flow Service dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zu führen, die notwendig sind, um [!DNL Platform] mit einem [!DNL Salesforce]-Konto für die Erfassung von CRM-Daten zu verbinden.
+Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zu führen, die notwendig sind, um [!DNL Platform] mit der Flow Service API mit einem [!DNL Salesforce]-Konto zu verbinden.
 
 ## Erste Schritte
 
