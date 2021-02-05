@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Streaming;Streaming-Erfassung;Streaming-Validierung;Validierung;Streaming-Erfassungsvalidierung;Validierung;Synchrones Validieren;Synchrones Validieren;Asynchrone Validierung;Asynchrone Validierung;asynchrone Validierung;
 solution: Experience Platform
-title: Validieren der Streaming-Erfasssung
+title: Validierung der Streaming-Ingestion
 topic: tutorial
 type: Tutorial
 description: Mit der Streaming-Erfassung können Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit nach Adobe Experience Platform hochladen. Die Streaming-Erfassungsmethode-APIs unterstützen zwei Überprüfungsmodi - synchron und asynchron.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 22%
