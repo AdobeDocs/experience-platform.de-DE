@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Erste Schritte;Inhaltshilfe;Commerce-Hilfe;Inhalts- und Commerce-Hilfe;Suchbegriff-Extraktion;Suchbegriff-Extraktion
 solution: Experience Platform, Intelligent Services
-title: Suchbegriff-Extraktion
+title: Extraktion des Suchbegriffs in der API für Inhalts- und Commerce
 topic: Developer guide
 description: Der Suchbegriff-Extraktion-Dienst extrahiert automatisch Suchbegriffe oder Schlüsselbegriffe, die das Dokument am besten beschreiben, wenn er ein Textfeld erhält. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Unternehmenserkennung (NER) und unbeaufsichtigten Suchbegriffserkennung (Keyword Extraktion) verwendet.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1082'
 ht-degree: 4%
 
 ---
