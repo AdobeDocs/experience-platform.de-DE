@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;PSQL;psql;Abfrage-Dienst;Abfrage-Dienst;Metadaten;Befehle;Metadaten-Befehle
 solution: Experience Platform
-title: Metadaten, Befehle
+title: Metadaten-PostgreSQL-Befehle im Abfrage-Dienst
 topic: metadata
-description: Eine Liste von PSQL-Befehlen, die derzeit zum Abfragen von Metadaten unterstützt werden.
+description: Eine Liste von PostgreSQL-Befehlen, die derzeit für die Abfrage von Metadaten im Adobe Experience Platform Abfrage Service unterstützt werden.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
 
-# Metadaten, Befehle
+# Metadaten-PostgreSQL-Befehle im Abfrage-Dienst
 
-Für Metadaten in Ihrem Datensatz werden derzeit die folgenden PSQL-Befehle zum Abfragen unterstützt:
+Für Metadaten in Ihrem Datensatz werden derzeit die folgenden PostgreSQL-Befehle zum Abfragen unterstützt:
 
 >[!NOTE]
 >
