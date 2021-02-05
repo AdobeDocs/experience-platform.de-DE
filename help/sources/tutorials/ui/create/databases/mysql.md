@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;mysql;MySQL
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für MySQL über die Benutzeroberfläche
+title: Erstellen einer MySQL-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm enthält Schritte zum Erstellen eines MySQL-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche.
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine MySQL-Quellverbindung erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '433'
-ht-degree: 12%
+ht-degree: 10%
 
 ---
 
 
-# Erstellen eines [!DNL MySQL]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL MySQL]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
 > Der [!DNL MySQL]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
-Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL MySQL]-Quell-Connectors mithilfe der Plattform-Benutzeroberfläche beschrieben.
+Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen einer [!DNL MySQL]-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
