@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Abfrage
 solution: Experience Platform
-title: Adobe Experience Platform Query Service – Schnellstartanleitung
+title: Schnellstartanleitung für den Adobe Experience Platform Abfrage-Dienst
 topic: quickstart
-description: Schnellstartanleitung für Adobe Experience Platform Abfrage Service.
+description: Schnellstartanleitung für den Adobe Experience Platform Abfrage Service.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 49%
+ht-degree: 42%
 
 ---
 
