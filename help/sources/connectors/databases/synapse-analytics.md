@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Azure synapse Analytics;azure synapse-Analyse;Zusammenfassung;Zusammenfassung
 solution: Experience Platform
-title: azure synapse Analytics Connector
+title: Übersicht über den azure synapse Analytics-Quell-Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Azure synapse Analytics mithilfe von APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
+description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Azure synapse Analytics und Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 11%
@@ -27,11 +27,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Syna
 
 ## Verbinden Sie [!DNL Azure Synapse Analytics] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Azure synapse Analytics-Connectors mit der Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Erstellen einer Azure synapse Analytics-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Azure Synapse Analytics] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Azure synapse Analytics-Quellanschluss in der Benutzeroberfläche erstellen](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer Azure synapse Analytics-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
