@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Schulung und Auswertung;Data Science Workspace;beliebte Themen;Sensei-Maschinen-Learning-API
 solution: Experience Platform
-title: Schulung und Auswertung eines Modells (API)
+title: Ausbildung und Bewertung eines Modells mit der Sensei Machine Learning API
 topic: tutorial
 type: Tutorial
 description: In diesem Lernprogramm erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning API-Aufrufen erstellen, ausbilden und auswerten können.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 96%
+source-wordcount: '1237'
+ht-degree: 94%
 
 ---
 
 
-# Schulung und Auswertung eines Modells (API)
+# Schulen und Auswerten eines Modells mithilfe der API[!DNL Sensei Machine Learning]
 
 
 In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen erstellen, dazu schulen und auswerten. Eine detaillierte Liste der API-Dokumentation finden Sie in [diesem Dokument](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
