@@ -1,21 +1,19 @@
 ---
 keywords: Experience Platform;Produktkaufrezept;Data Science Workspace;beliebte Themen;Rezepte;Prä-Build-Rezept
 solution: Experience Platform
-title: Rezept zum Produktkauf
+title: Rezept für Produktkäufe
 topic: overview
 description: Mit dem Produktkaufprognostizierungsrezept können Sie die Wahrscheinlichkeit eines bestimmten Ereignisses des Kundenkaufs vorhersagen, z. B. eines Produktkaufs.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '397'
 ht-degree: 13%
 
 ---
 
 
-# Rezept zum Produktkauf
-
-## Übersicht
+# Rezept für Produktkaufprognosen
 
 Mit dem Produktkaufprognostizierungsrezept können Sie die Wahrscheinlichkeit eines bestimmten Ereignisses des Kundenkaufs vorhersagen, z. B. eines Produktkaufs.
 
