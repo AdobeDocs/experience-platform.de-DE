@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;E-Commerce-Daten erfassen;eCommerce-Daten
 solution: Experience Platform
-title: Erfassen von eCommerce-Daten über Quellschnittstellen und APIs
+title: Erfassen von eCommerce-Daten mithilfe von Source Connectors und APIs
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-E-Commerce-System und zum Einbinden dieser Daten in die Plattform über Quellschnittstellen und APIs beschrieben.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-eCommerce-System und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 16%
@@ -14,7 +14,7 @@ ht-degree: 16%
 ---
 
 
-# Erfassen von eCommerce-Daten über Quellschnittstellen und APIs
+# Erfassen von eCommerce-Daten mithilfe von Quellschnittstellen und APIs
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten von einem Drittanbieter-System **[!UICONTROL eCommerce]** und zum Einfügen in [!DNL Platform] über Quellschnittstellen und die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) beschrieben.
 
