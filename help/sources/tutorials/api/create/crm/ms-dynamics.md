@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Microsoft Dynamics;Mikrosoft dynamik;Dynamik;Dynamik
 solution: Experience Platform
-title: Erstellen eines Microsoft Dynamics Connectors mithilfe der Flow Service API
+title: Erstellen einer Microsoft Dynamics Source-Verbindung mithilfe der Flow Service API
 topic: overview
 type: Tutorial
-description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zu führen, die Plattform mit einem Microsoft Dynamics-Konto (im Folgenden "Dynamics" genannt) zu verbinden, um CRM-Daten zu erfassen.
+description: Erfahren Sie, wie Sie mithilfe der Flow Service API eine Verbindung zwischen Platform und einem Microsoft Dynamics-Konto herstellen.
 translation-type: tm+mt
-source-git-commit: 75566ef0dc45f59b47af0b85f4692c2496e53f29
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '739'
 ht-degree: 27%
 
 ---
 
 
-# Erstellen Sie einen [!DNL Microsoft Dynamics]-Connector mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Microsoft Dynamics]-Quellverbindung mit der [!DNL Flow Service]-API
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm wird die [!DNL Flow Service]-API verwendet, um Sie durch die Schritte zu führen, mit denen Sie eine Verbindung zwischen Plattform und einem [!DNL Microsoft Dynamics]-Konto (nachfolgend &quot;Dynamics&quot; genannt) herstellen können, um CRM-Daten zu erfassen.
+Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zu führen, die notwendig sind, um die Plattform mit einem [!DNL Microsoft Dynamics]-Konto (nachstehend &quot;Dynamics&quot; genannt) zu verbinden, das die Flow Service API verwendet.
 
 ## Erste Schritte
 
