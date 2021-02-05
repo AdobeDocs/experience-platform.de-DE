@@ -1,21 +1,17 @@
 ---
 keywords: InMoment;inmoment;Insight;Start-Integration
-title: InMoment-Erweiterung
-seo-title: InMoment-Erweiterung
+title: InMoment Extension-Ziel
 description: Die InMoment-Erweiterung ist ein Zielort der Umfrage in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die InMoment-Erweiterung ist ein Zielort der Umfrage in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 25%
+source-wordcount: '538'
+ht-degree: 23%
 
 ---
 
 
 # [!DNL InMoment]-Erweiterung {#inmoment-extension}
-
-## Übersicht {#overview}
 
 Mit der [!DNL InMoment] Launch Integration können Sie schnell und einfach Online-Feedback über das Digital Intercept-Produkt aktivieren. In der App können Abfangen über den CXI Cloud-Admin konfiguriert und verwaltet werden, sodass CX-Manager ihre Programme besser steuern können.
 
