@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Microsoft SQL Server;SQL Server;SQL-Server
 solution: Experience Platform
-title: Erstellen eines Quell-Connectors für Microsoft SQL Server über die Benutzeroberfläche
+title: Erstellen einer Microsoft SQL Server-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden Schritte zum Erstellen eines Microsoft SQL Server-Quellconnectors (im Folgenden "SQL Server" genannt) mithilfe der Plattform-Benutzeroberfläche beschrieben.
+description: Erfahren Sie, wie Sie eine Microsoft SQL Server-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 11%
+source-wordcount: '477'
+ht-degree: 9%
 
 ---
 
 
-# Erstellen eines [!DNL Microsoft SQL Server]-Quellconnectors in der Benutzeroberfläche
+# Erstellen einer [!DNL Microsoft SQL Server]-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
