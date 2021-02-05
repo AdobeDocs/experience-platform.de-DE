@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Identitätsfeld;
 solution: Experience Platform
-title: Identitätsfeld in der Benutzeroberfläche definieren
+title: Identitätsfelder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie ein Identitätsfeld in der Benutzeroberfläche "Experience Platform"definieren.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: f5f507c2e962e2ff9f81376bfe363a6f438056cd
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
 
-# Identitätsfeld in der Benutzeroberfläche definieren
+# Identitätsfelder in der Benutzeroberfläche definieren
 
 Im Erlebnis-Datenmodell (XDM) stellt ein Identitätsfeld ein Feld dar, das zur Identifizierung einer einzelnen Person verwendet werden kann, die mit einem Datensatz- oder Zeitreihen-Ereignis in Zusammenhang steht. In diesem Dokument wird beschrieben, wie Sie ein Identitätsfeld in der Adobe Experience Platform-Benutzeroberfläche definieren.
 
