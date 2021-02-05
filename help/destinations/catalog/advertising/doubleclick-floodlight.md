@@ -1,21 +1,17 @@
 ---
 keywords: DoubleClick Floodlight;doubleclick Floodlight extension;doubleclick;floodlight
-title: DoubleClick Floodlight (Beta)-Erweiterung
-seo-title: DoubleClick Floodlight (Beta)-Erweiterung
+title: DoubleClick Floodlight (Beta) Extension Destination
 description: Die DoubleClick Floodlight (Beta) Extension ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die DoubleClick Floodlight (Beta) Extension ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 18%
+source-wordcount: '517'
+ht-degree: 16%
 
 ---
 
 
 # [!DNL DoubleClick Floodlight] (Beta) Erweiterung
-
-## Übersicht {#overview}
 
 Diese Erweiterung ermöglicht eine schnelle und einfache Bereitstellung von [!DNL DoubleClick Floodlight]-Tags im herkömmlichen Floodlight-Format (nicht im globalen Site-Tag). Hinweis: Diese Erweiterung befindet sich in der Betaphase.
 
