@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Sandbox-Fehlerbehebung
 solution: Experience Platform
-title: Handbuch zur Fehlerbehebung bei Sandboxes
+title: Sandboxen - Fehlerbehebungshandbuch
 topic: troubleshooting guide
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Sandboxes in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 90%
