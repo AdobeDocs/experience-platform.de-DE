@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Vergleichsfunktionen;Vergleich;
 solution: Experience Platform
-title: Vergleichsfunktionen
+title: PQL-Vergleichsfunktionen
 topic: developer guide
 description: Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen und "true"oder "false"entsprechend zurückzugeben.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 15%
+source-wordcount: '326'
+ht-degree: 14%
 
 ---
 
