@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Benutzerhandbuch;Zuordnungs-Hilfe;beliebte Themen;Region
 solution: Experience Platform, Intelligent Services
-title: Attribution AI-Benutzerhandbuch
+title: Attribution AI UI Guide
 topic: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AIS in der Benutzeroberfläche von Intelligent Services.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '1755'
 ht-degree: 6%
@@ -13,7 +13,7 @@ ht-degree: 6%
 ---
 
 
-# Attribution AI-Benutzerhandbuch
+# Handbuch zur Benutzeroberfläche von Attribution AI
 
 Attribution AI als Teil von Intelligent Services ist ein algorithmischer Zuordnungsdienst mit mehreren Kanälen, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketing-Experten die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen einzelner Kundeninteraktionen in einzelnen Phasen der Customer Journey untersuchen.
 
