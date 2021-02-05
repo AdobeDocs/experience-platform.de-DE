@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Identitätsangabe;XID
 solution: Experience Platform
-title: Native Kennung für eine Identität abrufen
+title: Native-ID für eine Identität abrufen
 topic: API guide
 description: Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und Identitäts-Namespace in erfassten XDM-Daten und bei der Bereitstellung einer Identität zur Verwendung in einem API-Aufruf bereitgestellt. Wenn Identitäten im Identity Service persistiert werden, wird eine Kennung generiert und der jeweiligen Identität zugewiesen. Diese Kennung wird als native XID bezeichnet. Platform-APIs, die Identitätsdaten erfordern, unterstützen die Nutzung dieser kompakteren Form für aggregierte Kennung und Namespace. XID ist eine Base64-kodierte Zeichenfolge.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 72%
+source-wordcount: '231'
+ht-degree: 69%
 
 ---
 
 
-# XID für eine Identität abrufen
+# Native Kennung für eine Identität abrufen
 
 Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und Identitäts-Namespace in erfassten XDM-Daten und bei der Bereitstellung einer Identität zur Verwendung in einem API-Aufruf bereitgestellt. Wenn Identitäten in [!DNL Identity Service] beibehalten werden, wird eine ID generiert und dieser Identität zugewiesen, die als native XID bezeichnet wird. [!DNL Platform] APIs, für die Identitätsdaten unterstützt werden müssen, verwenden dieses kompaktere Formular für die aggregierte ID und den Namensraum. XID ist eine Base64-kodierte Zeichenfolge.
 
