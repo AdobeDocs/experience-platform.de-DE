@@ -1,25 +1,21 @@
 ---
 keywords: Azurblauer Ereignis Hub Destination;Azurer Ereignis Hub;Azurabend
-title: (Beta) Azurblauer Ereignis Hubs-Ziel
-seo-title: (Beta) Azurblauer Ereignis Hubs-Ziel
+title: (Beta) Azurblauer Ereignis Hubs Verbindungsziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
-seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 97c0a9f4726ec85b7a72dc682fbd201a6152c1ba
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '487'
 ht-degree: 6%
 
 ---
 
 
-# (Beta) [!DNL Azure Event Hubs]-Ziel
+# (Beta) [!DNL Azure Event Hubs]-Verbindung
 
 >[!IMPORTANT]
 >
 >Das [!DNL Azure Event Hubs]-Ziel in der Plattform befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
-
-## Übersicht {#overview}
 
 [!DNL Azure Event Hubs] ist eine große Datenstreaming-Plattform und ein Ereignis-Erfassungsdienst. Es kann Millionen von Ereignissen pro Sekunde empfangen und verarbeiten. Daten, die an einen Ereignis-Hub gesendet werden, können mithilfe eines beliebigen Echtzeitanalyseanbieters oder von Batch-/Datenspeicherung-Adaptern transformiert und gespeichert werden.
 
