@@ -1,19 +1,18 @@
 ---
 keywords: Verbindungsziel;Zielverbindung;Verbindungsziel
 title: Herstellen einer Verbindung zu einem Ziel in Adobe Experience Platform
-seo-title: Herstellen einer Verbindung zu einem Ziel in Adobe Experience Platform
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Verbinden eines Ziels in Adobe Experience Platform Liste.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 52%
+source-wordcount: '117'
+ht-degree: 55%
 
 ---
 
 
-# So stellen Sie eine Verbindung zu einem Ziel her
+# Mit Ziel verbinden
 
 Gehen Sie wie folgt vor, um eine Verbindung zu einem Ziel in Adobe Experience Platform herzustellen:
 
