@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Zielgruppen-Mapping;Zielgruppen-Mapping
 solution: Experience Platform
-title: Zielgruppen-Mapping
+title: Zuordnen von Adobe Target-Ereignis-Daten zu XDM
 topic: overview
-description: In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (*XDM ExperienceEvent-Feld*) und die entsprechenden Felder für die Zielgruppe, denen sie zugeordnet werden sollen (Feld "Zielgruppe-Anforderung"), aufgeführt. Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
+description: Erfahren Sie, wie Sie Adobe Target-Ereignis-Felder einem Experience Data Model (XDM)-Schema zuordnen, das in Adobe Experience Platform verwendet werden kann.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 2%
+source-wordcount: '462'
+ht-degree: 3%
 
 ---
 
 
-# Zielgruppen-Mapping-Felder
+# Feldzuordnungen für Zielgruppen-Mappings
 
 Mit Adobe Experience Platform können Sie Adobe Target-Daten über den Zielgruppen-Quellanschluss erfassen. Bei Verwendung des Connectors müssen alle Daten aus den Feldern der Zielgruppe den mit der XDM ExperienceEvent-Klasse verknüpften Feldern [Erlebnisdatenmodell (XDM)](../../../../xdm/home.md) zugeordnet werden.
 
