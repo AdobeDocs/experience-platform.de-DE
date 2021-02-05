@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;XDM;XDM-System;XDM-Profil;XDM-Experience-Ereignis;XDM-Ereignis;Experience-Ereignis;Experience-Ereignis;Mixins;mixin;Mixin;Experience-Ereignis;XDM-Experience-Ereignis;XDM-ExperienceEvent;experienceEvent;XDM-Erlebnis-Ereignis;Erlebnis-Datenmodell;Erlebnis-Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Schema-Bibliothek;Schema-Bibliothek;Schema;Datensatzdaten;Zeitreihen;Zeitreihen
 solution: Experience Platform
-title: XDM-System – Übersicht
+title: XDM-Systemübersicht
 topic: overview
 description: 'Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. '
 translation-type: tm+mt
-source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 9%
