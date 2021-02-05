@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Entwicklerhandbuch;SDK;Data Access SDK;Data Science Workspace;beliebte Themen
 solution: Experience Platform
-title: Handbuch zum Platform SDK
+title: Modellerstellung mit dem Adobe Experience Platform Platform SDK
 topic: SDK authoring
 description: Dieses Lernprogramm enthält Informationen zum Konvertieren von data_access_sdk_python in das neue Python platform_sdk in Python und R.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 82%
+source-wordcount: '495'
+ht-degree: 79%
 
 ---
 
 
-# [!DNL Platform] SDK-Handbuch
+# Modellerstellung mit dem Adobe Experience Platform [!DNL Platform]-SDK
 
 Diese Anleitung bietet Ihnen Informationen zum Konvertieren von `data_access_sdk_python` in das neue Python `platform_sdk` in sowohl Python als auch R. Diese Anleitung enthält Informationen zu den folgenden Vorgängen:
 
