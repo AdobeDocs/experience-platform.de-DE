@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Poi;Interaktion;Zielpunkt;Zielpunkt;Datentyp;Datentyp;Datentyp;
 solution: Experience Platform
-title: Interaktionsdatentyp des Point-Interest
+title: Interaktionsdatentyp des Zielpunkts
 topic: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp von Point-of-Interest-Interaktion.
 translation-type: tm+mt
-source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 3%
