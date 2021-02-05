@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 19%
@@ -36,7 +36,7 @@ Weitere Informationen und die erforderlichen Werte für die Ausführung von CRUD
 
 ## Verwendung von [!DNL JupyterLab]-Notebooks
 
-[!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [!DNL Project Jupyter] und ist eng in Adobe Experience Platform integriert. Es bietet eine interaktive Entwicklungs-Umgebung, mit der Datenwissenschaftler mit [!DNL Jupyter notebooks], Code und Daten arbeiten können. In diesem Dokument erhalten Sie einen Überblick über [!DNL JupyterLab] und die zugehörigen Funktionen sowie Anweisungen zum Durchführen gemeinsamer Aktionen.
+[!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [!DNL Project Jupyter] und ist eng in Adobe Experience Platform integriert. Es bietet eine interaktive Entwicklungs-Umgebung, mit der Datenwissenschaftler mit [!DNL Jupyter Notebooks], Code und Daten arbeiten können. In diesem Dokument erhalten Sie einen Überblick über [!DNL JupyterLab] und die zugehörigen Funktionen sowie Anweisungen zum Durchführen gemeinsamer Aktionen.
 
 **Dieses Handbuch hilft Ihnen:**
 - Greifen Sie auf die [!DNL JupyterLab]-Schnittstelle zu und verstehen Sie sie.
