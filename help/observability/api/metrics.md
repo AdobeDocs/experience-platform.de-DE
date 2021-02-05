@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Metrik-Endpunkt
+title: Metrik-API-Endpunkt
 topic: developer guide
 description: Erfahren Sie, wie Sie mithilfe der Observability Insights API in Experience Platform beobachtbare Metriken abrufen.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '2026'
+source-wordcount: '2027'
 ht-degree: 40%
 
 ---
