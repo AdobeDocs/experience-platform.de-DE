@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Liste-Sandboxen
 solution: Experience Platform
-title: Auflisten unterstützter Sandbox-Typen
+title: Von Liste unterstützte Sandbox-Typen in der API
 topic: developer guide
 description: Sie können eine Liste der unterstützten Sandbox-Typen für Ihr Unternehmen abrufen, indem Sie eine GET an den Endpunkt /sandboxTypes anfordern.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '75'
-ht-degree: 62%
+source-wordcount: '81'
+ht-degree: 48%
 
 ---
 
 
-# Auflisten unterstützter Sandbox-Typen
+# Von der Liste unterstützte Sandbox-Typen in der API
 
 Sie können eine Liste der unterstützten Sandbox-Typen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/sandboxTypes` senden.
 
