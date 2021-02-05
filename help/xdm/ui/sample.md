@@ -4,7 +4,7 @@ title: Musterdaten für ein XDM-Schema in der Benutzeroberfläche generieren
 description: Hier erfahren Sie, wie Sie JSON-Beispieldaten auf Grundlage eines vorhandenen Schemas in der Adobe Experience Platform-Benutzeroberfläche generieren.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 87497ef8a0ebf8de8b6c2dff1650c0b982299e8a
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Um Daten in Adobe Experience Platform zu erfassen, müssen Format und Struktur d
 
 Für jedes Schema, das Sie in der Benutzeroberfläche &quot;Experience Platform&quot;definieren, können Sie ein JSON-Beispielobjekt generieren, das der Struktur des Schemas entspricht. Dieses Objekt kann als Vorlage für alle Daten dienen, die in Datasets mit dem betreffenden Schema erfasst werden.
 
-Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;im linken Navigationsbereich **[!UICONTROL Schema]** aus. Suchen Sie unter der Registerkarte **[!UICONTROL Durchsuchen]** das Schema, für das Sie Musterdaten generieren möchten. Wählen Sie es aus der Liste aus und die rechte Leiste wird aktualisiert, um Details zum Schema anzuzeigen. Wählen Sie hier **[!UICONTROL Beispieldatei herunterladen].**
+Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;im linken Navigationsbereich **[!UICONTROL Schema]** aus. Suchen Sie unter der Registerkarte **[!UICONTROL Durchsuchen]** das Schema, für das Sie Musterdaten generieren möchten. Wählen Sie es aus der Liste aus und die rechte Leiste wird aktualisiert, um Details zum Schema anzuzeigen. Wählen Sie **[!UICONTROL Beispieldatei herunterladen]**.
 
 ![](../images/ui/sample/sample-data.png)
 
