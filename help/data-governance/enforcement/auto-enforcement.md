@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Richtliniendurchsetzung;Automatische Durchsetzung;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
-title: Automatische Durchsetzung von Richtlinien
+title: Automatische Richtliniendurchsetzung
 topic: guide
 description: In diesem Dokument wird erläutert, wie Datenverwendungsrichtlinien automatisch erzwungen werden, wenn in der Experience Platform Segmente zu Zielen aktiviert werden.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1128'
 ht-degree: 19%
