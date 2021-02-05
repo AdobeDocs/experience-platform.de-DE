@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Datenspeicherung von Azurblase-Dateien;Azoure-Datei-Datenspeicherung
 solution: Experience Platform
-title: Adapterkabel für die Datenspeicherung
+title: Übersicht über den Source Connector für die AEM File Datenspeicherung
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen zum Verbinden der Azurblauen Datenspeicherung mit der Plattform mithilfe von APIs oder der Benutzeroberfläche.
+description: Erfahren Sie, wie Sie die Datenspeicherung von Blauen Dateien mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 3%
@@ -44,11 +44,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure File
 
 ### APIs verwenden
 
-- [Erstellen Sie einen Azurblase-Datenspeicherung-Connector mit der Flow-Dienst-API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Erstellen Sie eine Quellverbindung für eine Azurblase-Datenspeicherung mithilfe der Flow Service API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der UI
 
-- [Erstellen eines Azurblase-Datenspeicherung-Quellconnectors in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Connector in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Erstellen einer Azurblase-Datenspeicherung-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
+- [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
