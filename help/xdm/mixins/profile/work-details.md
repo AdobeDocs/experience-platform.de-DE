@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Schema-Design;Mixin;Mixins;Arbeitsdetails;Profil arbeiten;
 solution: Experience Platform
-title: Vergleich "Work Contact Details"
+title: Details des Arbeitskontakts-Mixer
 topic: overview
 description: In diesem Dokument erhalten Sie einen Überblick über das Mixin "Work Contact Details".
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 5%
