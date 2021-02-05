@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Flussdienst;Werbung;Google Adwords;Werbung
 solution: Experience Platform
-title: Erfassen von Anzeigendaten über Quell-Connectors und APIs
+title: Erfassen von Werbedaten mithilfe von Source Connectors und APIs
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Werbeanwendung eines Drittanbieters und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und die Flow Service API beschrieben.
+description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Werbeanwendung eines Drittanbieters und zum Integrieren dieser Daten in die Plattform mithilfe von Quellschnittstellen und der Flow Service API beschrieben.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 20%
@@ -14,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# Erfassen von Anzeigendaten über Quell-Connectors und APIs
+# Erfassen von Werbedaten mithilfe von Quellschnittstellen und APIs
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Werbeanwendung eines Drittanbieters und zum Einleiten in Adobe Experience Platform über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
 
