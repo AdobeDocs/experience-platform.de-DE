@@ -1,21 +1,17 @@
 ---
 keywords: Marketo;marketo;Marketo-Erweiterung;Marketo-Erweiterung
-title: Marketo-Erweiterung
-seo-title: Marketo-Erweiterung
+title: Marketing Extension-Ziel
 description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 26%
+source-wordcount: '519'
+ht-degree: 24%
 
 ---
 
 
-# [!DNL Marketo] Erweiterung {#marketo-extension}
-
-## Übersicht {#overview}
+# [!DNL Marketo]-Erweiterung {#marketo-extension}
 
 [!DNL Marketo]Mit seiner leistungsstarken Marketing-Automatisierungssoftware können Marketingexperten die Kunst und Wissenschaft des digitalen Marketings Übergeordnet werden, um Kunden und Potenzieller Kunden zu binden.
 
