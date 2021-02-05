@@ -1,12 +1,12 @@
 ---
 keywords: Ziel aktivieren;Ziele aktivieren;Daten aktivieren
-title: Profile und Segmente für ein Ziel aktivieren
+title: Aktivieren von Profilen und Segmenten für ein Ziel
 type: Tutorial
 seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 15%
