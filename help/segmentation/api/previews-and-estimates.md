@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;Vorschauen;Schätzungen;Vorschauen und Schätzungen;Schätzungen und Vorschauen;API;API;
 solution: Experience Platform
-title: Endpunkte für Vorschauen und Schätzungen
+title: Vorschauen und Schätzwerte für API-Endpunkte
 topic: developer guide
-description: Während Sie Ihre Segmentdefinition entwickeln, können Sie die Tools für Schätzung und Vorschau innerhalb von Adobe Experience Platform verwenden, um Informationen auf Ansicht-Zusammenfassungsebene zu erhalten, um sicherzustellen, dass Sie die erwartete Audience isolieren.
+description: Die Vorschauen- und Schätzendpunkte in der Adobe Experience Platform Segmentierungsdienst-API ermöglichen Ihnen die Ansicht von Informationen auf Zusammenfassungsebene, um sicherzustellen, dass Sie die erwartete Audience in Ihren Segmenten isolieren.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '793'
 ht-degree: 7%
 
 ---
