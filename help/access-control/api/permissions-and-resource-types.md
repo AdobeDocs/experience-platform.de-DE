@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle-Berechtigungen;Zugriffskontrolle-Ressourcentypen;Zugriffskontrolle-API
 solution: Experience Platform
-title: Berechtigungsnamen und Ressourcentypen auflisten
+title: Referenz-API-Endpunkt
 topic: developer guide
-description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Sie können die Namen aller Berechtigungen und Ressourcentypen Liste haben, indem Sie eine GET an den Endpunkt /acl/reference anfordern. Diese Namen können dann in API-Aufrufen verwendet werden, um effektive Richtlinien für den aktuellen Anwender anzuzeigen.
+description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Sie können die Namen aller Berechtigungen und Ressourcentypen Liste haben, indem Sie eine GET an den Endpunkt /acl/reference in der Zugriffskontrolle-API anfordern. Diese Namen können dann in API-Aufrufen verwendet werden, um effektive Richtlinien für den aktuellen Anwender anzuzeigen.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 57%
+source-wordcount: '195'
+ht-degree: 51%
 
 ---
 
 
-# Berechtigungsnamen und Ressourcentypen auflisten
+# Referenz-Endpunkt
 
 Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den `/acl/reference`-Endpunkt stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um [effektive Richtlinien](./effective-policies.md) für den aktuellen Anwender anzuzeigen.
 
