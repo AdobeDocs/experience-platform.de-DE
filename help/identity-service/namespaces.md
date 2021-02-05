@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Namensraum;Namensraum;Namensraum;Namensraum;Identitäts-Namensraum;Identitäts-Namensraum;Identität;Identitätsdienst;Identitätsdienst;Identitätsdienst
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Übersicht über Identitäts-Namensraum
 topic: overview
 description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID. '
 translation-type: tm+mt
-source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 23%
+source-wordcount: '1473'
+ht-degree: 22%
 
 ---
 
@@ -63,7 +63,7 @@ Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfüg
 | CORE | Ein Namensraum, der Adobe Audience Manager repräsentiert. Dieser Namensraum kann auch durch seinen Legacy-Namen referenziert werden: &quot;Adobe AudienceManager&quot;. Weitere Informationen finden Sie im folgenden Dokument unter [Audience Manager-IDs](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids). |
 | ECID | Ein Namensraum, der die ECID darstellt. Dieser Namensraum kann auch durch folgende Aliase referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Weitere Informationen finden Sie im folgenden Dokument unter [ECID](./ecid.md). |
 | E-Mail  | Ein Namensraum, der eine E-Mail-Adresse darstellt. Dieser Namensraum wird oft einer einzelnen Person zugeordnet und kann daher für die Identifizierung dieser Person über verschiedene Kanäle hinweg verwendet werden. |
-| E-Mails (SHA256, Kleinbuchstaben) | Ein Namensraum für eine E-Mail-Adresse mit einem Hash-Tag. Die in diesem Namensraum bereitgestellten Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen Leerzeichen am Anfang und Ende abgeschnitten werden. Diese Einstellung kann nicht rückwirkend geändert werden. Weitere Informationen finden Sie im folgenden Dokument unter [SHA256 Hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support). |
+| E-Mails (SHA256, Kleinbuchstaben) | Ein Namensraum für eine E-Mail-Adresse mit einem Hash-Code. Die in diesem Namensraum bereitgestellten Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen Leerzeichen am Anfang und Ende abgeschnitten werden. Diese Einstellung kann nicht rückwirkend geändert werden. Weitere Informationen finden Sie im folgenden Dokument unter [SHA256 Hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support). |
 | Firebase Cloud Messaging | Ein Namensraum, der Identitäten darstellt, die mit Google Firebase Cloud Messaging für Push-Benachrichtigungen erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument unter [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging). |
 | Google Ad ID (GAID) | Ein Namensraum, der eine Google Advertising-ID darstellt. Weitere Informationen finden Sie im folgenden Dokument unter [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
 | Google Click-ID | Ein Namensraum, der eine Google Click-ID darstellt. Weitere Informationen finden Sie im folgenden Dokument unter [Klick-Tracking in Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking). |
