@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;eCommerce-Connector;eCommerce-Connector
 solution: Experience Platform
-title: Konfigurieren eines Datenflusses für einen eCommerce-Connector in der Benutzeroberfläche
+title: Konfigurieren eines Datenflusses für eine E-Commerce-Quellverbindung in der Benutzeroberfläche
 topic: overview
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Datensatz [!DNL Platform] aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem eCommerce-Konto.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1317'
 ht-degree: 3%
 
 ---
 
 
-# Konfigurieren eines Datenflusses für einen eCommerce-Connector in der Benutzeroberfläche
+# Konfigurieren eines Datenflusses für eine E-Commerce-Verbindung in der Benutzeroberfläche
 
 Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen [!DNL Platform]-Datensatz eingefügt werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem **[!UICONTROL eCommerce]**-Konto.
 
