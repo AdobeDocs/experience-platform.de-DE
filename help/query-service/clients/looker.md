@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Suche;Suche;Verbindung mit Abfrage-Dienst herstellen
 solution: Experience Platform
-title: Verbindung mit Suchmaschine
+title: Connect Looker mit dem Abfrage Service
 topic: connect
 description: Dieses Dokument führt Sie durch die Schritte zur Verbindung von Looker mit dem Adobe Experience Platform Abfrage Service.
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 11%
 
 ---
 
 
-# [!DNL Looker]
+# Verbinden Sie [!DNL Looker] mit dem Abfrage-Dienst
 
 Dieses Dokument beschreibt die Schritte zum Verbinden von [!DNL Looker] mit Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL Looker] haben und mit der Navigation in der Oberfläche vertraut sind. Weitere Informationen zu [!DNL Looker] finden Sie in der [offiziellen  [!DNL Looker] Dokumentation](https://docs.looker.com/).
-
-## [!DNL Looker] mit Plattform verbinden
 
 Wählen Sie nach der Anmeldung bei [!DNL Looker] **[!DNL Admin]** und anschließend **[!DNL Connections]** aus.
 
