@@ -5,10 +5,10 @@ title: ETL-Workflow
 topic: overview
 description: Verschiedene Tools für Extract, Transform and Load (ETL) unterscheiden sich im Format, bieten jedoch meist ähnliche Funktionen, um eine Kombination aus mehreren Datenquellen zu unterstützen.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 85%
+ht-degree: 84%
 
 ---
 
