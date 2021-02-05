@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;Jupyterlab
 solution: Experience Platform
-title: JupyterLab-Benutzerhandbuch
+title: Übersicht über die JupyterLab-Benutzeroberfläche
 topic: Overview
-description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project Jupyter und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten. In diesem Dokument erhalten Sie einen Überblick über JupyterLab und die Funktionen sowie Anleitungen zum Durchführen häufiger Aktionen.
+description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project Jupyter und ist eng in Adobe Experience Platform integriert. Es bietet eine interaktive Entwicklungs-Umgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, Code und Daten arbeiten können. In diesem Dokument erhalten Sie einen Überblick über JupyterLab und die Funktionen sowie Anleitungen zum Durchführen häufiger Aktionen.
 translation-type: tm+mt
-source-git-commit: d5e7679ac41fd476c77a98920d7f7aeaefacec6d
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1950'
-ht-degree: 72%
+ht-degree: 70%
 
 ---
 
 
-# [!DNL JupyterLab] Benutzerhandbuch
+# [!DNL JupyterLab] UI-Übersicht
 
-[!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [Project Jupyter](https://jupyter.org/) und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten.
+[!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [Project Jupyter](https://jupyter.org/) und ist eng in Adobe Experience Platform integriert. Es bietet eine interaktive Entwicklungs-Umgebung für Datenwissenschaftler, die mit Jupyter-Notebooks, Code und Daten arbeiten können.
 
 In diesem Dokument erhalten Sie einen Überblick über [!DNL JupyterLab] und die zugehörigen Funktionen sowie Anweisungen zum Durchführen gemeinsamer Aktionen.
 
