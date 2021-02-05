@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Katalogdienst;Katalog;Katalogdienst;Katalog
 solution: Experience Platform
-title: Entwicklerhandbuch zum Catalog Service
+title: Handbuch zur API für Katalogdienst
 topic: developer guide
-description: In diesem Entwicklerhandbuch finden Sie Anweisungen dazu, wie Sie mit der Verwendung der Catalog-API beginnen können. Dann bietet das Handbuch Beispiel-API-Aufrufe für die Ausführung wichtiger Vorgänge mithilfe von Catalog.
+description: Mit der Katalogdienst-API können Entwickler Datensatzmetadaten in Adobe Experience Platform verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 62%
+source-wordcount: '599'
+ht-degree: 57%
 
 ---
 
 
-# [!DNL Catalog Service] Entwicklerhandbuch
+# [!DNL Catalog Service] API-Handbuch
 
 [!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Experience Platform. [!DNL Catalog] dient als Metadatenspeicher oder „Katalog“, in dem Sie Informationen über Ihre Daten in finden können, ohne auf die Daten selbst zugreifen zu müssen.[!DNL Experience Platform] Weitere Informationen finden Sie in der [[!DNL Catalog] Übersicht über ](../home.md).
 
