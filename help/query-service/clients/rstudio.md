@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;RStudio;Studio;Verbindung mit Abfrage-Dienst;
 solution: Experience Platform
-title: Mit RStudio verbinden
+title: Verbinden von RStudio mit dem Abfrage-Dienst
 topic: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von R Studio mit Adobe Experience Platform Query Service beschrieben.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 39%
+source-wordcount: '282'
+ht-degree: 36%
 
 ---
 
 
-# [!DNL RStudio]
+# Verbinden Sie [!DNL RStudio] mit dem Abfrage-Dienst
 
 Dieses Dokument führt Sie durch die Schritte zum Verbinden von [!DNL RStudio] mit Adobe Experience Platform [!DNL Query Service].
 
@@ -21,7 +21,7 @@ Dieses Dokument führt Sie durch die Schritte zum Verbinden von [!DNL RStudio] m
 >
 > Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL RStudio] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL RStudio] finden Sie in der [offiziellen  [!DNL RStudio] Dokumentation](https://rstudio.com/products/rstudio/).
 
-## Verbinden von [!DNL RStudio] mit [!DNL Query Service]
+## [!DNL Query Service]-Verbindung in der [!DNL RStudio]-Schnittstelle erstellen
 
 Nach der Installation von [!DNL RStudio] müssen Sie auf dem Bildschirm **[!DNL Console]**, der angezeigt wird, zunächst Ihr R-Skript für die Verwendung von [!DNL PostgreSQL] vorbereiten.
 
