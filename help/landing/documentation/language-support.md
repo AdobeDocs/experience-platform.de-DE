@@ -5,7 +5,7 @@ title: Sprachunterstützung der Experience Platform
 topic: getting started
 description: Adobe Experience Platform ermöglicht es Unternehmen, Kundendaten zu zentralisieren und zu standardisieren, bevor sie Datenwissenschaften und maschinelles Lernen anwenden, um die Gestaltung und den Versand von komplexen, personalisierten Erlebnissen erheblich zu verbessern.
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
