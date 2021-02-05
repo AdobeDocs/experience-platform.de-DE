@@ -3,9 +3,9 @@ keywords: Experience Platform;Home;IAB;IAB 2.0;Zustimmung;Zustimmung
 solution: Experience Platform
 title: IAB TCF 2.0-Unterstützung für Experience Platform
 topic: privacy events
-description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schema so konfigurieren, dass bei der Aktivierung von Segmenten an Zielorte in Adobe Experience Platform Benutzereinwilligungsentscheidungen übertragen werden.
+description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schema so konfigurieren, dass bei der Aktivierung von Segmenten an Zielorte in Adobe Experience Platform Auswahlmöglichkeiten für die Kundengenehmigung angezeigt werden.
 translation-type: tm+mt
-source-git-commit: b2d3e4608dc0640472966edccd3fb5a612d7583c
+source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 0%
