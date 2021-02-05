@@ -1,13 +1,13 @@
 ---
 keywords: Visuelle Ähnlichkeit;Visuelle Ähnlichkeit;ccai API
 solution: Experience Platform, Intelligent Services
-title: Visuelle Ähnlichkeit
+title: Visuelle Ähnlichkeit in der API für Inhalts- und Commerce-API
 topic: Developer guide
 description: Der Dienst für visuelle Ähnlichkeit findet bei einem gegebenen Bild automatisch visuell ähnliche Bilder aus einem Katalog.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '510'
 ht-degree: 3%
 
 ---
