@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Erfassen von Zahlungsdaten;Zahlungsdaten
 solution: Experience Platform
-title: Erfassen von Zahlungsdaten über Quell-Connectors und APIs
+title: Erfassen von Zahlungsdaten mithilfe von Quell-Connectors und APIs
 topic: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Zahlungsanwendung und zum Integrieren in die Plattform über Quellschnittstellen und APIs beschrieben.
+description: Dieses Lernprogramm beschreibt die Schritte zum Abrufen von Daten aus einer Zahlungsanwendung und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs.
 translation-type: tm+mt
-source-git-commit: 9b4965e4256967961a92c544bbe355eae768e3dd
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 20%
@@ -14,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# Erfassen von Zahlungsdaten über Quellschnittstellen und APIs
+# Erfassen von Zahlungsdaten mithilfe von Quellschnittstellen und APIs
 
 In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Zahlungsanwendung und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
 
