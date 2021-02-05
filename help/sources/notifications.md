@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen; Benachrichtigungen
-description: Mit den Adobe I/O-Ereignissen können Sie Ereignis abonnieren und Webhooks verwenden, um Benachrichtigungen über den Status Ihrer Flussläufe zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehlschlagen einer Ausführung beigetragen haben.
+description: Durch das Abonnieren von Adobe I/O-Ereignissen können Sie Webhooks verwenden, um Benachrichtigungen über den Status Ihrer Quellverbindungen zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehlschlagen einer Ausführung beigetragen haben.
 solution: Experience Platform
 title: Flusslaufbenachrichtigungen
 topic: overview
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '785'
 ht-degree: 5%
 
 ---
