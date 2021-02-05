@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Salesforce Service Cloud;Salesforce-Dienst-Cloud
 solution: Experience Platform
-title: Salesforce Service Cloud Connector
+title: Salesforce Service Cloud-Quellschnittstellen - Übersicht
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Salesforce Service Cloud mit Plattform mithilfe von APIs oder der Benutzeroberfläche verbunden werden kann.
+description: Erfahren Sie, wie Sie Salesforce Service Cloud mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '245'
-ht-degree: 11%
+ht-degree: 7%
 
 ---
 
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Salesforce
 
 ## Verbinden Sie [!DNL Salesforce Service Cloud ]mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Salesforce Service Cloud-Connectors mit der Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
+- [Erstellen einer Salesforce Service Cloud-Quellverbindung mit der Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
 - [Erforschen Sie ein Kundenerfolgssystem mithilfe der Flow Service API](../../tutorials/api/explore/customer-success.md)
 - [Erfassen von Daten aus einem Kundenerfolgssystem mithilfe der Flow Service API](../../tutorials/api/collect/customer-success.md)
 
 ## Verbinden Sie [!DNL Salesforce Service Cloud] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Quell-Connectors für Salesforce Service Cloud über die Benutzeroberfläche](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-- [Konfigurieren des Datenflusses für einen Kunden-Erfolgsstecker in der Benutzeroberfläche](../../tutorials/ui/dataflow/customer-success.md)
+- [Erstellen einer Salesforce Service Cloud-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+- [Konfigurieren des Datenflusses für eine Kundenerfolgsverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/customer-success.md)
