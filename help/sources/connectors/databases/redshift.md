@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Amazon Redshift;Amazon Rotverschiebung;Rotverschiebung;Redshift
 solution: Experience Platform
-title: Amazon Redshift Connector
+title: Übersicht über Amazon Redshift Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Amazon Redshift mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
+description: Erfahren Sie, wie Sie Amazon Redshift mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 11%
@@ -31,11 +31,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Amazon Red
 
 ## Verbinden Sie [!DNL Amazon Redshift] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Amazon Redshift-Connectors mit der Flow Service API](../../tutorials/api/create/databases/redshift.md)
+- [Erstellen einer Amazon Redshift-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/redshift.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Amazon Redshift] mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Amazon Redshift-Quellanschluss in der Benutzeroberfläche erstellen](../../tutorials/ui/create/databases/redshift.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer Amazon Redshift-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/redshift.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
