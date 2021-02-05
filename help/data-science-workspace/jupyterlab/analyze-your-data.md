@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;Analyse von Daten-Notebooks
 solution: Experience Platform
-title: Analysieren Ihrer Daten mithilfe von Notebooks
+title: Analysieren Ihrer Daten mit Notebooks
 topic: tutorial
 type: Tutorial
-description: Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Workspace erstellten Jupyter-Notebooks, um auf Ihre Daten zuzugreifen, sie zu untersuchen und sie zu visualisieren.
+description: Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Workspace integrierten Jupyter-Notebooks, um auf Ihre Daten zuzugreifen, sie zu untersuchen und sie zu visualisieren.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1735'
 ht-degree: 22%
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 # Analysieren Ihrer Daten mithilfe von Notebooks
 
-Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Workspace erstellten Jupyter-Notebooks, um auf Ihre Daten zuzugreifen, sie zu untersuchen und sie zu visualisieren. Am Ende dieses Lernprogramms sollten Sie sich mit einigen Funktionen des Jupyter Notebook-Angebots vertraut machen, um Ihre Daten besser zu verstehen.
+Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Workspace integrierten Jupyter-Notebooks, um auf Ihre Daten zuzugreifen, sie zu untersuchen und sie zu visualisieren. Am Ende dieses Lernprogramms sollten Sie einige der Funktionen von Jupyter Notebooks Angebot kennen, um Ihre Daten besser zu verstehen.
 
 Die folgenden Konzepte werden eingeführt:
 
@@ -196,7 +196,7 @@ Beachten Sie, dass die Diagonale von 1 in der Mitte unten ist. Das bedeutet, das
 
 ## Nächste Schritte
 
-In diesem Lernprogramm wurde erläutert, wie ein neues Jupyter-Notizbuch im Data Science Workspace erstellt wird und wie Daten extern sowie von [!DNL Adobe Experience Platform] abgerufen werden können. Im Einzelnen haben wir die folgenden Schritte ausgeführt:
+In diesem Tutorial wurde erläutert, wie ein neues Jupyter-Notebook im Data Science Workspace erstellt und wie Daten extern sowie von [!DNL Adobe Experience Platform] aufgerufen werden können. Im Einzelnen haben wir die folgenden Schritte ausgeführt:
 - Neues Jupyter-Notebook erstellen
 - Zugriff auf Daten und Schema
 - Datasets erkunden
