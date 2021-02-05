@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Segmentierung;Segmentierungsdienst;Fehlerbehebung;API;SEG;Segment;Segment;Suche;Segmentsuche
-title: Endpunkt der Segmentsuche
+title: API-Endpunkt für Segmentsuche
 topic: guide
-description: Die Segmentsuche dient zum Durchsuchen von Feldern, die in verschiedenen Datenquellen enthalten sind, und zum Zurückgeben in Echtzeit. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
+description: In der Adobe Experience Platform Segmentation Service API wird die Segmentsuche verwendet, um in verschiedenen Datenquellen enthaltene Felder zu suchen und sie in Echtzeit zurückzugeben. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 5%
+source-wordcount: '1201'
+ht-degree: 4%
 
 ---
 
