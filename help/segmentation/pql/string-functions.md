@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Zeichenfolgen-Funktionen;Zeichenfolge;
 solution: Experience Platform
-title: Zeichenfolgen-Funktionen
+title: PQL-Zeichenfolgen-Funktionen
 topic: developer guide
 description: Profil Abfrage Language (PQL)-Angebote erleichtern die Interaktion mit Zeichenfolgen.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '784'
 ht-degree: 10%
 
 ---
