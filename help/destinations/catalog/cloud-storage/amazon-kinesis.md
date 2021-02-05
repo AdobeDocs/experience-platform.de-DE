@@ -1,25 +1,21 @@
 ---
 keywords: Amazon Kinesis;Kinesis-Ziel;Kinesis
-title: Amazon Kinesis-Ziel
-seo-title: Amazon Kinesis-Ziel
+title: Amazon Kinesis-Verbindungsziel
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
-seo-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '451'
 ht-degree: 7%
 
 ---
 
 
-# (Beta) [!DNL Amazon Kinesis]-Ziel
+# (Beta) [!DNL Amazon Kinesis]-Verbindung
 
 >[!IMPORTANT]
 >
 >Das [!DNL Amazon Kinesis]-Ziel in der Plattform befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
-
-## Übersicht {#overview}
 
 Mit dem [!DNL Kinesis Data Streams]-Dienst von [!DNL Amazon Web Services] können Sie große Datenströme in Echtzeit erfassen und verarbeiten.
 
