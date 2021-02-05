@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Datenerfassung beinhaltet die Batch-Erfassung, Streaming-Erfassung und Erfassung mithilfe von Quell-Connectoren.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 41%
+ht-degree: 40%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 41%
 
 Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Die Adobe [!DNL Experience Platform Data Ingestion] stellt die verschiedenen Methoden dar, mit denen [!DNL Platform] Daten aus diesen Quellen erfasst und wie diese Daten im Data Lake zur Verwendung durch nachgelagerte [!DNL Platform services] beibehalten werden. [!DNL Data Ingestion] umfasst die Stapelverarbeitung, Streaming-Erfassung und -Erfassung mithilfe von Quell-Connectors. Weiterführende Informationen finden Sie in der [Datenerfassung – Übersicht](../ingestion/home.md) oder direkt in der [Quellendokumentation](../sources/home.md).
 
-## Quell-Connector in der Benutzeroberfläche und der API erstellen
+## Erstellen einer Quellverbindung in der Benutzeroberfläche und der API
 
 Mithilfe von Source Connectors können Sie Daten aus mehreren Quellen erfassen und dann mit [!DNL Platform services] beschriftet, strukturiert und erweitert werden. Informationen zum Erstellen eines Quell-Connectors finden Sie unter [Quellübersicht](../sources/home.md).
 
