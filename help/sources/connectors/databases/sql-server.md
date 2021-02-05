@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Microsoft SQL;Microsoft sql;SQL;sql
 solution: Experience Platform
-title: SQL Server-Anschluss
+title: Übersicht über SQL Server Source Connector
 topic: overview
-description: Die nachstehende Dokumentation enthält Informationen dazu, wie Microsoft SQL Server mit APIs oder der Benutzeroberfläche mit Platform verbunden werden kann.
+description: Erfahren Sie, wie Sie Microsoft SQL Server mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '246'
-ht-degree: 15%
+ht-degree: 11%
 
 ---
 
@@ -27,11 +27,11 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Microsoft]
 
 ## Verbinden Sie [!DNL Microsoft] SQL Server mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen eines Microsoft SQL Server-Connectors mithilfe der Flow Service API](../../tutorials/api/create/databases/sql-server.md)
+- [Erstellen einer Microsoft SQL Server-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/sql-server.md)
 - [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Microsoft] SQL Server mit [!DNL Platform] mithilfe der Benutzeroberfläche
 
-- [Erstellen eines Quell-Connectors für Microsoft SQL Server über die Benutzeroberfläche](../../tutorials/ui/create/databases/sql-server.md)
-- [Konfigurieren eines Datenflusses für einen Datenbankanschluss in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer Microsoft SQL Server-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/sql-server.md)
+- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
