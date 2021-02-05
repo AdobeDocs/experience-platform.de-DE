@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Daten-Deduplizierung-Duplikate;Deduplizierung-Duplikate
 solution: Experience Platform
-title: Data Deduplizierung-Duplikate
+title: Data Deduplizierung-Duplikate im Abfrage-Dienst
 topic: queries
 type: Tutorial
 description: In diesem Dokument werden Beispiele für die Unter-Auswahl- und vollständige Abfrage von Beispielen für die Deduplizierung von drei gängigen Anwendungsfällen erläutert. Erlebnis-Ereignis, Käufe und Metriken.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
