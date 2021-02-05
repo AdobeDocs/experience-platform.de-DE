@@ -6,9 +6,9 @@ user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Intelligent Services-Handbuch
 user-guide-description: Nutzen Sie intelligente KI-Dienste, um Ergebnisse zu generieren, Einblicke zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
 translation-type: tm+mt
-source-git-commit: 0675b38397667e8764c75e22a1e2f2e4aaddeb3c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '119'
 ht-degree: 35%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 35%
    - [Erste Schritte mit Attribution AI](attribution-ai/getting-started.md)
    - [Eingabe und Ausgabe](attribution-ai/input-output.md)
    - [Handbuch zur Benutzeroberfläche](attribution-ai/user-guide.md)
-   - [Einblicke entdecken](attribution-ai/discover-insights.md)
-   - [Zugreifen auf Ergebnisse](attribution-ai/download-scores.md)
-   - [Handbuch zu AAI-Abfragen-Beginn](attribution-ai/aai-query-service.md)
+   - [Discover-Einblicke](attribution-ai/discover-insights.md)
+   - [Download-Punktzahlen](attribution-ai/download-scores.md)
+   - [Bewertung mithilfe des Abfrage Service analysieren](attribution-ai/aai-query-service.md)
 - Content and Commerce AI (beta) {#content-commerce-ai}
    - [Übersicht](content-commerce-ai/overview.md)
    - [Erste Schritte](content-commerce-ai/getting-started.md)
@@ -41,7 +41,7 @@ ht-degree: 35%
    - [Eingabe und Ausgabe](customer-ai/input-output.md)
    - UI-Hilfslinien{#user-guide}
       - [Instanz konfigurieren](customer-ai/user-guide/configure.md)
-      - [Einblicke entdecken](customer-ai/user-guide/discover-insights.md)
+      - [Discover-Einblicke](customer-ai/user-guide/discover-insights.md)
       - [Erstellen von Segmenten mit Kunden-AI-Ergebnissen](customer-ai/user-guide/create-segment.md)
-      - [Herunterladen von Scores](customer-ai/user-guide/download-scores.md)
+      - [Download-Punktzahlen](customer-ai/user-guide/download-scores.md)
 - [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
