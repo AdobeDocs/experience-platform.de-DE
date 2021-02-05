@@ -5,7 +5,7 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 translation-type: tm+mt
-source-git-commit: c82ad393ecaa46d01596dbba06f5fc756711bc31
+source-git-commit: 288f47306853fcc39234ad098bc0e73f24f8540a
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 56%
@@ -95,10 +95,10 @@ ht-degree: 56%
    * [Ad-hoc-Schemata](api/ad-hoc.md)
    * [Anhang](api/appendix.md)
 * Tutorials {#tutorials}
-   * [Erstellen eines Schemas (API)](tutorials/create-schema-api.md)
    * [Erstellen eines Schemas (Benutzeroberfläche)](tutorials/create-schema-ui.md)
-   * [Definieren einer Beziehung zwischen zwei Schemata (API)](tutorials/relationship-api.md)
+   * [Erstellen eines Schemas (API)](tutorials/create-schema-api.md)
    * [Definieren einer Beziehung zwischen zwei Schemata (Benutzeroberfläche)](tutorials/relationship-ui.md)
+   * [Definieren einer Beziehung zwischen zwei Schemata (API)](tutorials/relationship-api.md)
    * [Erstellen eines Ad-hoc-Schemas (API)](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
