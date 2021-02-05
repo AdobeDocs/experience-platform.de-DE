@@ -1,21 +1,17 @@
 ---
 keywords: erweiterung des zieldatensatzes;Zielgruppe;Zielgruppe v2;Zielgruppe v2 Erweiterung
-title: Adobe Target v2-Erweiterung
-seo-title: Adobe Target v2-Erweiterung
+title: Adobe Target v2 Extension-Ziel
 description: Die Adobe Target v2-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Adobe Target v2-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 32%
+source-wordcount: '531'
+ht-degree: 30%
 
 ---
 
 
-# Adobe Target v2-Erweiterung {#adobe-target-v2-extension}
-
-## Übersicht {#overview}
+# Adobe Target v2-Erweiterung {#adobe-target-v2-extension}
 
 Adobe Target ist die Adobe Experience Cloud-Lösung, die Ihnen all das bietet, was Sie zur Anpassung und Personalisierung Ihrer Kundenerlebnisse benötigen, sodass Sie Umsätze auf Ihren Web- und mobilen Sites, in Mobile Apps, Social Media und anderen digitalen Kanälen maximieren können.
 
