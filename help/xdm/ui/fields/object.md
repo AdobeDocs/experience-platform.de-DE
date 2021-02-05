@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebnisdatenmodell;Datenmodell;ui;Arbeitsbereich;Objekt;Feld;
 solution: Experience Platform
-title: Definieren eines Objektfelds in der Benutzeroberfläche
+title: Objektfelder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie ein Objekttypfeld in der Benutzeroberfläche "Experience Platform"definieren.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
 
-# Definieren eines Objektfelds in der Benutzeroberfläche
+# Definieren von Objektfeldern in der Benutzeroberfläche
 
 Mit Adobe Experience Platform können Sie die Struktur Ihrer benutzerdefinierten Experience Data Model-(XDM-)Klassen, Mixins und Datentypen vollständig anpassen. Um verwandte Felder in benutzerdefinierten XDM-Ressourcen zu organisieren und zu verschachteln, können Sie Objekttypfelder definieren, die zusätzliche Unterfelder enthalten können.
 
