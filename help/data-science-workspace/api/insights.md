@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;Einblicke;sensei-maschinelles Lernen API
 solution: Experience Platform
-title: Insights
+title: Insight API-Endpunkt
 topic: Developer guide
 description: Insights bieten Metriken, mit denen Datenwissenschaftler durch Anzeige relevanter Bewertungsmetriken optimale ML-Modelle ermitteln und auswählen können.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 97%
+source-wordcount: '515'
+ht-degree: 96%
 
 ---
 
 
-# Einblicke
+# Insight-Endpunkt
 
 Insights bieten Metriken, mit denen Datenwissenschaftler durch Anzeige relevanter Bewertungsmetriken optimale ML-Modelle ermitteln und auswählen können.
 
