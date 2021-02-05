@@ -1,21 +1,17 @@
 ---
 keywords: Verzweigung;Verzweigungs-Erweiterung;Verzweigungsziel
-title: Branch-Erweiterung
-seo-title: Branch-Erweiterung
+title: Ziel der Zweigstellenerweiterung
 description: Die Branch-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
-seo-description: Die Branch-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 27%
+source-wordcount: '498'
+ht-degree: 25%
 
 ---
 
 
 # [!DNL Branch]-Erweiterung {#branch-extension}
-
-## Übersicht {#overview}
 
 Branch bietet leistungsstarke Links und Lösungen, die Ihnen beim Erwerb, der Interaktion und der Messung auf allen Geräten, Kanälen und Plattformen helfen.
 
