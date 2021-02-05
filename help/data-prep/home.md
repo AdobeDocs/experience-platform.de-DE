@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datenvorbereitung;Datenvorbereitung;Vorbereiten von Daten;
 solution: Experience Platform
-title: Zuordnungsfunktionen
+title: Übersicht über die Datenvorbereitung
 topic: overview
 description: Dieses Dokument führt die Datenvorbereitung in Adobe Experience Platform ein.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 1%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
 
-# Datenvorbereitung
+# Datenvorgabe - Übersicht
 
 Data Prep ermöglicht es Datenentwicklern, Daten dem Experience Data Model (XDM) zuzuordnen, umzuformen und zu validieren. Die Datenvorgabe wird als &quot;Map&quot;-Schritt in den Datenaufnahmemechanismen einschließlich des CSV-Ingestion-Arbeitsablaufs angezeigt. Dateningenieure können Data Prep verwenden, um die folgende Datenbearbeitung während der Erfassung durchzuführen:
 
