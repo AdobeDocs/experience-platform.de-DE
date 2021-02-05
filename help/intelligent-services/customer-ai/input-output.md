@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Erste Schritte;Kundenhilfe;beliebte Themen;Kundenai-Eingabe;Kundenai-Ausgabe
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Eingabe und Ausgabe von Kunden-AI
+title: Eingabe und Ausgabe in der Kundentechnik
 topic: Getting started
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten erläutert, die in der Kundentechnik verwendet werden.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '840'
 ht-degree: 33%
 
 ---
 
 
-# Eingabe und Ausgabe von Kunden-AI
+# Eingabe und Ausgabe in der Kundentransfer-API
 
 Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten erläutert, die in der Kundentechnik verwendet werden.
 
