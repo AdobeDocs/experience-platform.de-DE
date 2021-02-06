@@ -5,10 +5,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 translation-type: tm+mt
-source-git-commit: 288f47306853fcc39234ad098bc0e73f24f8540a
+source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 56%
+source-wordcount: '236'
+ht-degree: 55%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 56%
    * [Anwendung](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
+   * [Handel](./data-types/commerce.md)
    * [Zustimmung und Voreinstellungen](./data-types/consents.md)
    * [Gerät](./data-types/device.md)
    * [E-Mail-Adresse](./data-types/email-address.md)
@@ -50,6 +51,8 @@ ht-degree: 56%
    * [Geo-Form](./data-types/geo-shape.md)
    * [Identität](./data-types/identity.md)
    * [Maßnahme](./data-types/measure.md)
+   * [Auftrag](./data-types/order.md)
+   * [Zahlungsbefehl](./data-types/payment-item.md)
    * [Person](./data-types/person.md)
    * [Personenname](./data-types/person-name.md)
    * [Telefonnummer](./data-types/phone-number.md)
