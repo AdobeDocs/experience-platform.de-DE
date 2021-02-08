@@ -5,10 +5,10 @@ title: Handbuch zur Segmentaufbau-Benutzeroberfläche
 topic: ui guide
 description: 'Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen Rich-Workspace, mit dem Sie mit Profil-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 48%
+source-wordcount: '1928'
+ht-degree: 45%
 
 ---
 
@@ -100,6 +100,22 @@ Alternativ dazu können Sie eine codebasierte Version einer Regel, die in [!DNL 
 Die Code-Ansicht bietet eine Schaltfläche, mit der Sie den Segmentwert kopieren können, der in API-Aufrufen verwendet werden soll. Um die neueste Version des Segments abzurufen, stellen Sie sicher, dass Sie die neuesten Änderungen am Segment gespeichert haben.
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### Aggregationsfunktionen
+
+Eine Aggregation in [!DNL Segment Builder] ist eine Berechnung für eine Gruppe von XDM-Attributen, deren Datentyp eine Zahl ist (entweder eine Dublette oder eine Ganzzahl). Die vier unterstützten Aggregationsfunktionen im Segmentaufbau sind SUM, DURCHSCHNITT, MIN und MAX.
+
+Um eine Aggregationsfunktion zu erstellen, wählen Sie in der linken Leiste ein Ereignis aus und fügen Sie es in den Container [!UICONTROL Ereignis] ein.
+
+![](../images/ui/segment-builder/select-event.png)
+
+Nachdem Sie das Ereignis im Container &quot;Ereignis&quot;platziert haben, wählen Sie das Auslassungszeichen (...) und anschließend **[!UICONTROL Aggregat]**.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+Die Aggregation wird jetzt hinzugefügt. Sie können jetzt die Aggregationsfunktion auswählen, das Aggregat-Attribut, die Gleichheitsfunktion sowie den Wert auswählen. Im unten stehenden Beispiel würde dieses Segment alle Profil mit einer Kaufsumme von mehr als 100 USD qualifizieren, selbst wenn jeder Einzelkauf unter 100 USD liegt.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## Container
 
