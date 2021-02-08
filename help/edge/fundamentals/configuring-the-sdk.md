@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;Umgebung;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;webSDK-Einstellungen;prehidingStyle;opacity;cookieDestinationEnabled;urlDestination Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '740'
 ht-degree: 72%
 
 ---
@@ -66,6 +66,7 @@ Gibt an, ob Debugging aktiviert werden soll. Durch das Festlegen dieser Konfigur
 | **Typ** | **Erforderlich** | **Standardwert** |
 | -------- | ------------ | ------------------ |
 | Zeichenfolge | Nein | `beta.adobedc.net` |
+| Zeichenfolge | Nein | `omtrdc.net` |
 
 Die Domäne, die für die Interaktion mit Adobe-Diensten verwendet wird. Wird nur verwendet, wenn Sie über eine Erstanbieter-Domäne (CNAME) verfügen, die Anforderungen an die Adobe Edge-Infrastruktur weiterleitet.
 
