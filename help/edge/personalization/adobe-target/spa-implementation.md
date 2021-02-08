@@ -5,10 +5,10 @@ description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platfo
 seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: zielgruppe;adobe-Zielgruppe;xdm-Ansichten ansichten;Einzelseitenanwendungen;SPA;SPA Lebenszyklus;Clientseitige;AB-Tests;AB;Erlebnis-Targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '1689'
-ht-degree: 14%
+source-wordcount: '1688'
+ht-degree: 12%
 
 ---
 
@@ -33,7 +33,7 @@ Die Verwendung des Adobe Experience Platform Web SDK für Einzelseitenanwendunge
 
 ## XDM-Ansichten und Einzelseitenanwendungen
 
-Adobe Target VEC für SPAs basiert auf einem neuen Konzept für Ansichten: Eine Ansicht entspricht einer logischen Gruppe visueller Elemente, aus denen sich ein SPA-Erlebnis zusammensetzt. Eine Einzelseitenanwendung kann daher aufgrund von Benutzerinteraktionen als Übergang durch Ansichten und nicht als URLs betrachtet werden. Eine Ansicht umfasst in der Regel eine ganze Site oder eine Gruppe visueller Elemente innerhalb einer Site.
+Der Adobe Target VEC for SPA nutzt das Konzept der Ansichten: eine logische Gruppe von visuellen Elementen, die zusammen ein SPA Erlebnis bilden. Eine Einzelseitenanwendung kann daher aufgrund von Benutzerinteraktionen als Übergang durch Ansichten und nicht als URLs betrachtet werden. Eine Ansicht umfasst in der Regel eine ganze Site oder eine Gruppe visueller Elemente innerhalb einer Site.
 
 Zur weiteren Erläuterung der Ansichten verwendet das folgende Beispiel eine hypothetische Online-E-Commerce-Website, die in React implementiert ist, um Beispielslösungen zu untersuchen.
 
