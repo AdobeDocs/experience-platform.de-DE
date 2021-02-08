@@ -3,19 +3,27 @@ keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;S
 solution: Experience Platform
 title: Vorschauen und Schätzwerte für API-Endpunkte
 topic: developer guide
-description: Die Vorschauen- und Schätzendpunkte in der Adobe Experience Platform Segmentierungsdienst-API ermöglichen Ihnen die Ansicht von Informationen auf Zusammenfassungsebene, um sicherzustellen, dass Sie die erwartete Audience in Ihren Segmenten isolieren.
+description: Während die Segmentdefinition entwickelt wird, können Sie die Tools für Schätzung und Vorschau innerhalb von Adobe Experience Platform verwenden, um Informationen auf der Ebene der Ansicht zusammenzufassen, um sicherzustellen, dass Sie die erwartete Audience isolieren.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 7%
+source-wordcount: '949'
+ht-degree: 6%
 
 ---
 
 
 # Endpunkte für Vorschauen und Schätzungen
 
-Während Sie Ihre Segmentdefinition entwickeln, können Sie die Tools für Schätzung und Vorschau innerhalb von [!DNL Adobe Experience Platform] verwenden, um Informationen auf Ansicht-Zusammenfassungsebene zu erhalten, um sicherzustellen, dass Sie die erwartete Audience isolieren. **In der** Vorschau werden paginierte Listen von qualifizierten Profilen für eine Segmentdefinition angezeigt, sodass Sie die Ergebnisse mit Ihren Erwartungen vergleichen können. **Die** Schätzwerte liefern statistische Informationen zu einer Segmentdefinition, z. B. die projizierte Audience, das Konfidenzintervall und die Standardabweichung für Fehler.
+Beim Entwickeln einer Segmentdefinition können Sie die Tools für Schätzung und Vorschau innerhalb von Adobe Experience Platform verwenden, um Informationen auf Ansicht-Ebene zu erhalten, um sicherzustellen, dass Sie die erwartete Audience isolieren.
+
+* **In der** Vorschau werden paginierte Listen von qualifizierten Profilen für eine Segmentdefinition angezeigt, sodass Sie die Ergebnisse mit Ihren Erwartungen vergleichen können.
+
+* **Die** Schätzwerte liefern statistische Informationen zu einer Segmentdefinition, z. B. die projizierte Audience, das Konfidenzintervall und die Standardabweichung für Fehler.
+
+>[!NOTE]
+>
+>Weitere Informationen zum Zugriff auf ähnliche Metriken im Zusammenhang mit Echtzeit-Kundendaten wie die Gesamtanzahl der Profil-Fragmente und zusammengeführten Profil in bestimmten Namensräumen oder den Profil-Datenspeicher insgesamt finden Sie im [Profil-Vorschau (Vorschau-Musterstatus)-Endpunkt-Handbuch](../../profile/api/preview-sample-status.md), Teil des Profil-API-Entwicklerhandbuchs.
 
 ## Erste Schritte
 
@@ -23,11 +31,10 @@ Die in diesem Handbuch verwendeten Endpunkte sind Teil der API [!DNL Adobe Exper
 
 ## Erstellung von Schätzungen
 
-Die Art und Weise, wie die Datenerfassung ausgelöst wird, hängt von der Erfassungsmethode ab.
+Wenn die Erfassung von Datensätzen im Profil Store die Gesamtanzahl der Profil um mehr als 5 % erhöht oder verringert, wird ein Stichprobenauftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie die Datenerfassung ausgelöst wird, hängt von der Erfassungsmethode ab:
 
-Zur Stapelverarbeitung wird der Profil-Store alle 15 Minuten automatisch überprüft, um festzustellen, ob ein neuer Stapel seit Ausführung des letzten Stichprobenauftrags erfolgreich aufgenommen wurde. Ist dies der Fall, wird der Profil-Store anschließend gescannt, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % verändert hat. Wenn diese Bedingungen erfüllt sind, wird ein neuer Stichprobenauftrag ausgelöst.
-
-Zur Streaming-Erfassung wird der Profil-Store stündlich automatisch überprüft, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % verändert hat. Wenn diese Bedingung erfüllt ist, wird ein neuer Stichprobenauftrag ausgelöst.
+* **Stapelverarbeitung:** Bei Stapelverarbeitung wird innerhalb von 15 Minuten nach erfolgreichem Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Zählung zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
+* **Streaming-Erfassung:** Bei Workflows von Streaming-Daten wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl zu aktualisieren.
 
 Die Stichprobengröße der Überprüfung hängt von der Gesamtanzahl der Entitäten in Ihrem Profil-Store ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 
@@ -76,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | Der PQL-Ausdruck, um die Daten Abfrage. |
 | `predicateType` | Der Vorhersagetyp für den Ausdruck Abfrage unter `predicateExpression`. Derzeit ist der einzige akzeptierte Wert für diese Eigenschaft `pql/text`. |
-| `predicateModel` | Der Name des [!DNL Experience Data Model] (XDM)-Schemas, auf dem die Profil-Daten basieren. |
+| `predicateModel` | Der Name der [!DNL Experience Data Model] (XDM) Schema-Klasse, auf der die Profil-Daten basieren. |
 
 **Antwort**
 
@@ -172,7 +179,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `results` | Eine Liste von Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können zum Nachschlagen der angegebenen Entitäten mit dem [[!DNL Profile Access API]](../../profile/api/entities.md) verwendet werden. |
+| `results` | Eine Liste von Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können zum Nachschlagen der angegebenen Entitäten verwendet werden, indem der [API-Endpunkt für den Zugriff auf Profile](../../profile/api/entities.md) verwendet wird. |
 
 ## Abrufen der Ergebnisse eines bestimmten Schätzauftrags {#get-estimate}
 
@@ -206,17 +213,27 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 
 ```json
 {
-    "estimatedSize": 0,
-    "numRowsToRead": 1,
+    "estimatedSize": 4275,
+    "numRowsToRead": 4275,
+    "estimatedNamespaceDistribution": [
+        {
+            "namespaceId": "4",
+            "profilesMatchedSoFar": 35
+        },
+        {
+            "namespaceId": "6",
+            "profilesMatchedSoFar": 4275
+        }
+    ],
     "state": "RESULT_READY",
-    "profilesReadSoFar": 1,
+    "profilesReadSoFar": 4275,
     "standardError": 0,
     "error": {
         "description": "",
         "traceback": ""
     },
-    "profilesMatchedSoFar": 0,
-    "totalRows": 1,
+    "profilesMatchedSoFar": 4275,
+    "totalRows": 4275,
     "confidenceInterval": "95%",
     "_links": {
         "preview": "https://platform.adobe.io/data/core/ups/preview/app-32be0328-3f31-4b64-8d84-acd0c4fbdad3/execution/0?previewQueryId=e890068b-f5ca-4a8f-a6b5-af87ff0caac3"
@@ -226,9 +243,10 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `state` | Der aktuelle Status des Auftrags für die Vorschau. Ist &quot;WIRD AUSGEFÜHRT&quot;bis die Verarbeitung abgeschlossen ist, und wird dann &quot;ERGEBNIS_BEREIT&quot;oder &quot;FEHLGESCHLAGEN&quot;. |
-| `_links.preview` | Wenn der aktuelle Status des Vorschau-Auftrags &quot;RESULT_READY&quot;lautet, stellt dieses Attribut eine URL zur Ansicht der Schätzung bereit. |
+| `estimatedNamespaceDistribution` | Ein Array von Objekten, das die Anzahl der Profil innerhalb des Segments anzeigt, aufgeschlüsselt nach Identitäts-Namensraum. Die Gesamtanzahl der Profil nach Namensraum (addieren Sie die für jeden Namensraum angezeigten Werte) kann höher als die Metrik für die Anzahl der Profil sein, da ein Profil mit mehreren Namensräumen verknüpft werden könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft. |
+| `state` | Der aktuelle Status des Auftrags für die Vorschau. Der Status lautet &quot;WIRD AUSGEFÜHRT&quot;, bis die Verarbeitung abgeschlossen ist. Anschließend wird er &quot;ERGEBNIS_READY&quot;oder &quot;FEHLGESCHLAGEN&quot;. |
+| `_links.preview` | Wenn `state` &quot;RESULT_READY&quot;ist, stellt dieses Feld eine URL zur Ansicht der Schätzung bereit. |
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie nun ein besseres Verständnis dafür, wie Sie mit Vorschauen und Schätzungen arbeiten können. Weitere Informationen zu den anderen [!DNL Segmentation Service] API-Endpunkten finden Sie im [Handbuch für den Entwickler des Segmentierungsdienstes](./overview.md).
+Nach dem Lesen dieses Handbuchs sollten Sie mit der Segmentierungs-API ein besseres Verständnis für die Arbeit mit Vorschauen und Schätzungen haben. Informationen zum Zugriff auf Metriken zu Ihren Echtzeit-Kundendaten, wie z. B. die Gesamtanzahl der Profil-Fragmente und zusammengeführten Profil in bestimmten Namensräumen oder dem Profil-Datenspeicher insgesamt, finden Sie im Endpunkt-Handbuch [Profil-Vorschau (`/previewsamplestatus`)](../../profile/api/preview-sample-status.md).
