@@ -5,10 +5,10 @@ description: Erfahren Sie, wie Daten mit dem Experience Platform Web SDK an Adob
 seo-description: Erfahren Sie, wie Daten mit dem Experience Platform Web SDK an Adobe Analytics gesendet werden
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 81%
+source-wordcount: '207'
+ht-degree: 77%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Analytics nimmt die gesendeten Daten automatisch auf, wenn in der Benutzer
 
 ## Automatisch zugeordnete Daten
 
-Das Adobe Experience Platform [!DNL Edge Network] ordnet automatisch viele XDM-Variablen zu. Die vollständige Liste der automatisch zugeordneten Variablen ist [hier](automatically-mapped-vars.md) aufgeführt.
+Das Adobe Experience Platform [!DNL Edge Network] ordnet automatisch viele XDM-Variablen zu. Die vollständige Liste dieser Variablen ist [hier](automatically-mapped-vars.md) aufgeführt.
 
 ## Manuell zugeordnete Daten
 
