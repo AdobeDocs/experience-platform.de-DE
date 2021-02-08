@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie die Adobe Experience Cloud-ID abrufen.
 seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud-ID abrufen.
 keywords: Identität;Erstanbieter-Identität;Identitätsdienst;Drittanbieter-Identität;ID-Migration;Besucher-ID;Drittanbieter-Identität;Drittanbieter-CookiesEnabled;idMigrationEnabled;getIdentity;Syncing-Identitäten;syncIdentity;sendEvent;identityMap;primary;ecid;Identity-Namensraum;Namensraum-ID;authenticationState;HashEnabled;
 translation-type: tm+mt
-source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform Web SDK verwendet [Adobe Identity Service](../../ident
 
 ## Drittanbieter-Identität
 
-Das [!DNL Identity Service] kann eine ID mit einer Drittanbieterdomäne (demdex.net) synchronisieren, um die Verfolgung über mehrere Sites hinweg zu ermöglichen. Wenn dies aktiviert ist, wird die erste Anforderung für einen Besucher (z.B. eine Person ohne ECID) an demdex.net gesendet. Dies geschieht nur in Browsern, die es zulassen (z.B. Chrome) und wird durch den Parameter `thirdPartyCookiesEnabled` in der Konfiguration gesteuert. Wenn Sie diese Funktion zusammen deaktivieren möchten, setzen Sie `thirdPartyCookiesEnabled` auf false.
+Das [!DNL Identity Service] kann eine ID mit einer Drittanbieterdomäne (demdex.net) synchronisieren, um die Verfolgung über mehrere Sites hinweg zu ermöglichen. Wenn dies aktiviert ist, wird die erste Anforderung für einen Besucher (z. B. eine Person ohne ECID) an demdex.net gesendet. Dies geschieht nur in Browsern, die dies zulassen, wie Chrome) und wird durch den Parameter `thirdPartyCookiesEnabled` in der Konfiguration gesteuert. Wenn Sie diese Funktion zusammen deaktivieren möchten, setzen Sie `thirdPartyCookiesEnabled` auf false.
 
 ## ID-Migration
 
