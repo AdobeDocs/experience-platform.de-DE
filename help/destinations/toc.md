@@ -5,10 +5,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und nicht bekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele weitere Anwendungsfälle.
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f98fb81fee57151e6424355f64bccb29c5669dad
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 40%
+source-wordcount: '339'
+ht-degree: 41%
 
 ---
 
@@ -129,3 +129,4 @@ ht-degree: 40%
       * [Invoca-Tags](./catalog/voice/invoca.md)
       * [Medallia](./catalog/voice/medallia.md)
       * [Sprecher-URL-Posteingang](./catalog/voice/talkurl.md)
+* [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
