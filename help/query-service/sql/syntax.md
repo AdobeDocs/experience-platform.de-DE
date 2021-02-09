@@ -5,19 +5,19 @@ title: SQL-Syntax im Abfrage-Dienst
 topic: syntax
 description: Dieses Dokument zeigt die SQL-Syntax, die vom Adobe Experience Platform Abfrage Service unterstützt wird.
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 78707257c179101b29e68036bf9173d74f01e03a
 workflow-type: tm+mt
-source-wordcount: '2221'
-ht-degree: 83%
+source-wordcount: '1981'
+ht-degree: 14%
 
 ---
 
 
 # SQL-Syntax in Abfrage Service
 
-[!DNL Query Service]Mit können Sie Standard-ANSI-SQL für `SELECT`-Anweisungen und andere begrenzte Befehle verwenden. Dieses Dokument zeigt die SQL-Syntax, die von [!DNL Query Service] unterstützt wird.
+Der Adobe Experience Platform Abfrage Service bietet die Möglichkeit, ANSI-StandardSQL für `SELECT`-Anweisungen und andere eingeschränkte Befehle zu verwenden. Dieses Dokument behandelt die SQL-Syntax, die von [!DNL Query Service] unterstützt wird.
 
-## Definieren einer SELECT-Abfrage
+## AUSWÄHLEN VON Abfragen {#select-queries}
 
 Die folgende Syntax definiert eine `SELECT`-Abfrage, die von [!DNL Query Service] unterstützt wird:
 
@@ -37,37 +37,61 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-wobei `from_item` eines der Folgenden sein kann:
+wobei `from_item` eine der folgenden Optionen sein kann:
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
-    [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
-    with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
-    from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-und `grouping_element` eines der Folgenden:
+```sql
+[ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
+```
+
+```sql
+with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+```
+
+```sql
+from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
+```
+
+und `grouping_element` kann eine der folgenden Optionen sein:
 
 ```sql
 ( )
-    expression
-    ( expression [, ...] )
-    ROLLUP ( { expression | ( expression [, ...] ) } [, ...] )
-    CUBE ( { expression | ( expression [, ...] ) } [, ...] )
-    GROUPING SETS ( grouping_element [, ...] )
+```
+
+```sql
+expression
+```
+
+```sql
+( expression [, ...] )
+```
+
+```sql
+ROLLUP ( { expression | ( expression [, ...] ) } [, ...] )
+```
+
+```sql
+CUBE ( { expression | ( expression [, ...] ) } [, ...] )
+```
+
+```sql
+GROUPING SETS ( grouping_element [, ...] )
 ```
 
 und `with_query`:
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
- 
-TABLE [ ONLY ] table_name [ * ]
 ```
+
+Die folgenden Unterabschnitte enthalten Details zu Zusatzklauseln, die Sie in Ihren Abfragen verwenden können, sofern sie dem oben beschriebenen Format entsprechen.
 
 ### SNAPSHOT-Klausel
 
-Diese Klausel kann verwendet werden, um Daten in einer Tabelle inkrementell basierend auf Snapshot-IDs zu lesen. Eine Snapshot-ID ist eine Checkpoint-Markierung, die jedes Mal, wenn Daten in eine Datentabelle geschrieben werden, durch eine Zahl vom Typ &quot;Long&quot;identifiziert wird. Die SNAPSHOT-Klausel fügt sich in die Tabellenbeziehung ein, die sie neben der Tabelle verwendet.
+Diese Klausel kann verwendet werden, um Daten auf einer Tabelle basierend auf Snapshot-IDs inkrementell zu lesen. Eine Schnappschuss-ID ist eine Checkpoint-Markierung, die durch eine lange Nummer dargestellt wird, die jedes Mal, wenn Daten darauf geschrieben werden, auf eine Daten-Seetabelle angewendet wird. Die `SNAPSHOT`-Klausel hängt sich an die Tabellenbeziehung an, die sie neben verwendet wird.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -82,40 +106,48 @@ SELECT * FROM Customers SNAPSHOT AS OF 345;
 
 SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
 
+SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+
 SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
 
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Bitte beachten Sie, dass eine SNAPSHOT-Klausel mit einem Tabellen- oder Tabellenalias funktioniert, jedoch nicht über einer Unter-Abfrage oder Ansicht. Eine SNAPHOST-Klausel funktioniert überall dort, wo eine SELECT-Abfrage auf einer Tabelle angewendet werden kann.
+Beachten Sie, dass eine `SNAPSHOT`-Klausel mit einem Tabellen- oder Tabellenalias, jedoch nicht über einer Unter-Abfrage oder Ansicht funktioniert. Eine `SNAPSHOT`-Klausel funktioniert überall dort, wo eine `SELECT`-Abfrage auf einer Tabelle angewendet werden kann.
 
-### WHERE ILIKE-Klausel
+Zusätzlich können Sie `HEAD` und `TAIL` als spezielle Offset-Werte für Snapshot-Klauseln verwenden. Die Verwendung von `HEAD` bezieht sich auf einen Offset vor dem ersten Schnappschuss, während `TAIL` auf einen Offset nach dem letzten Schnappschuss verweist.
 
-Das Schlüsselwort ILIKE kann anstelle von LIKE verwendet werden, um Übereinstimmungen mit der WHERE-Klausel der SELECT-Abfrage zu finden, ohne die Groß-/Kleinschreibung zu berücksichtigen.
+### WO-Klausel
+
+Bei Übereinstimmungen, die mit einer `WHERE`-Klausel auf einer `SELECT`-Abfrage erstellt wurden, wird standardmäßig die Groß-/Kleinschreibung beachtet. Wenn bei Übereinstimmungen nicht zwischen Groß- und Kleinschreibung unterschieden werden soll, können Sie anstelle von `LIKE` den Suchbegriff `ILIKE` verwenden.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
-Hier die Logik der LIKE- und ILIKE-Klauseln:
-- ```WHERE condition LIKE pattern```, ```~~``` entspricht pattern
-- ```WHERE condition NOT LIKE pattern```, ```!~~``` entspricht pattern
-- ```WHERE condition ILIKE pattern```, ```~~*``` entspricht pattern
-- ```WHERE condition NOT ILIKE pattern```, ```!~~*``` entspricht pattern
+Die Logik der LIKE- und ILIKE-Klauseln wird in der folgenden Tabelle erläutert:
 
+| Klausel | Operator |
+| ------ | -------- |
+| `WHERE condition LIKE pattern` | `~~` |
+| `WHERE condition NOT LIKE pattern` | `!~~` |
+| `WHERE condition ILIKE pattern` | `~~*` |
+| `WHERE condition NOT ILIKE pattern` | `!~~*` |
 
-#### Beispiel
+**Beispiel**
 
 ```sql
 SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
 
-Gibt Kunden zurück, deren Namen mit „A“ oder „a“ beginnen.
+Diese Abfrage gibt Kunden zurück, deren Namen mit &quot;A&quot;oder &quot;a&quot;beginnen.
 
-## JOINS
+### JOIN
 
-Eine `SELECT`-Abfrage mit JOINS hat die folgende Syntax:
+Eine `SELECT`-Abfrage, die Joins verwendet, hat folgende Syntax:
 
 ```sql
 SELECT statement
@@ -124,10 +156,9 @@ FROM statement
 ON join condition
 ```
 
+### UNION, INTERSECT und EXCEPT
 
-## UNION, INTERSECT und EXCEPT
-
-Die `UNION`-, `INTERSECT`- und `EXCEPT`-Klauseln werden unterstützt, um gleichartige Zeilen aus zwei oder mehr Tabellen zu kombinieren oder auszuschließen:
+Die Klauseln `UNION`, `INTERSECT` und `EXCEPT` werden verwendet, um gleichartige Zeilen aus zwei oder mehr Tabellen zu kombinieren oder auszuschließen:
 
 ```sql
 SELECT statement 1
@@ -135,106 +166,105 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-## CREATE TABLE AS SELECT
+### CREATE TABLE AS SELECT
 
-Die folgende Syntax definiert eine `CREATE TABLE AS SELECT` (CTAS)-Abfrage, die von [!DNL Query Service] unterstützt wird:
+Die folgende Syntax definiert eine `CREATE TABLE AS SELECT` (CTAS)-Abfrage:
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-wobei
-`target_schema_title` ist der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von CTAS Abfrage erstellt wurde
-`rowvalidation` gibt an, ob der Benutzer die Überprüfung auf Zeilenebene aller neuen Stapel, die für den neu erstellten Datensatz erfasst werden, vornehmen möchte. Standardwert ist &quot;true&quot;
+**Parameter**
 
-und `select_query` ist eine `SELECT`-Anweisung, deren Syntax oben in diesem Dokument definiert ist.
+- `schema`: Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage erstellt wurde.
+- `rowvalidation`: (Optional) Gibt an, ob der Benutzer eine Validierung auf Zeilenebene für alle neuen Stapel wünscht, die für den neu erstellten Datensatz erfasst werden. Der Standardwert lautet `true`.
+- `select_query`: Eine  `SELECT` Aussage. Die Syntax der `SELECT`-Abfrage finden Sie im Abschnitt [SELECT-Abfragen](#select-queries).
 
-
-### Beispiel
+**Beispiel**
 
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-```
 
-Bitte beachten Sie Folgendes für eine CTAS-Abfrage:
-
-1. Die `SELECT`-Anweisung muss einen Alias für die Aggregat-Funktionen wie `COUNT`, `SUM`, `MIN` usw. enthalten.
-2. Die `SELECT`-Anweisung kann mit oder ohne Klammern () angegeben werden.
-3. Die `SELECT`-Anweisung kann mit einer SNAPSHOT-Klausel bereitgestellt werden, um inkrementelle Deltas in die Zielgruppe zu lesen.
-
-```sql
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 ```
 
+>[!NOTE]
+>
+>Die `SELECT`-Anweisung muss einen Alias für die Aggregat-Funktionen wie `COUNT`, `SUM`, `MIN` usw. enthalten. Darüber hinaus kann die `SELECT`-Anweisung mit oder ohne Klammern () bereitgestellt werden. Sie können eine `SNAPSHOT`-Klausel bereitstellen, um inkrementelle Deltas in der Tabelle &quot;Zielgruppe&quot;zu lesen.
+
 ## INSERT INTO
 
-Die folgende Syntax definiert eine `INSERT INTO`-Abfrage, die von [!DNL Query Service] unterstützt wird:
+Der Befehl `INSERT INTO` wird wie folgt definiert:
 
 ```sql
 INSERT INTO table_name select_query
 ```
 
-wobei `select_query` eine `SELECT`-Anweisung ist, deren Syntax oben in diesem Dokument definiert ist.
+**Parameter**
 
-### Beispiel
+- `table_name`: Der Name der Tabelle, in die die Abfrage eingefügt werden soll.
+- `select_query`: Eine  `SELECT` Aussage. Die Syntax der `SELECT`-Abfrage finden Sie im Abschnitt [SELECT-Abfragen](#select-queries).
+
+**Beispiel**
 
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
-```
 
-Bitte beachten Sie Folgendes für eine INSERT INTO-Abfrage:
-
-1. Die `SELECT`-Anweisung DARF NICHT in Klammern () gesetzt werden.
-2. Das Schema des Ergebnisses der `SELECT`-Anweisung muss mit dem in der `INSERT INTO`-Anweisung definierten Tabelle übereinstimmen.
-3. Die `SELECT`-Anweisung kann mit einer SNAPSHOT-Klausel bereitgestellt werden, um inkrementelle Deltas in die Zielgruppe zu lesen.
-
-```sql
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
-### DROP TABLE
+>[!NOTE]
+> Die `SELECT`-Anweisung **darf nicht** in Klammern () stehen. Darüber hinaus muss das Schema des Ergebnisses der `SELECT`-Anweisung mit dem in der `INSERT INTO`-Anweisung definierten  übereinstimmen. Sie können eine `SNAPSHOT`-Klausel bereitstellen, um inkrementelle Deltas in der Tabelle &quot;Zielgruppe&quot;zu lesen.
 
-Löscht eine Tabelle und löscht das mit der Tabelle verknüpfte Verzeichnis aus dem Dateisystem, wenn es sich nicht um eine EXTERNE Tabelle handelt. Wenn die zu löschende Tabelle nicht vorhanden ist, tritt ein Fehler (Ausnahmebedingung) auf.
+## DROP TABLE
+
+Der Befehl `DROP TABLE` legt eine vorhandene Tabelle ab und löscht den mit der Tabelle verknüpften Ordner aus dem Dateisystem, wenn es sich nicht um eine externe Tabelle handelt. Wenn die Tabelle nicht vorhanden ist, tritt eine Ausnahme auf.
 
 ```sql
-DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
+DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-### Parameter
+**Parameter**
 
-- `IF EXISTS`: Wenn die Tabelle nicht vorhanden ist, wird nichts ausgeführt
-- `TEMP`: Temporäre Tabelle
+- `IF EXISTS`: Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Tabelle  **** nicht vorhanden ist.
 
 ## CREATE VIEW
 
-Die folgende Syntax definiert eine `CREATE VIEW`-Abfrage, die von [!DNL Query Service] unterstützt wird:
+Die folgende Syntax definiert eine `CREATE VIEW`-Abfrage:
 
 ```sql
-CREATE [ OR REPLACE ] VIEW view_name AS select_query
+CREATE VIEW view_name AS select_query
 ```
 
-wobei `view_name` der Name der zu erstellenden Ansicht
-und `select_query` eine `SELECT`-Anweisung ist, deren Syntax oben in diesem Dokument definiert ist.
+**Parameter**
 
-Beispiel:
+- `view_name`: Der Name der zu erstellenden Ansicht.
+- `select_query`: Eine  `SELECT` Aussage. Die Syntax der `SELECT`-Abfrage finden Sie im Abschnitt [SELECT-Abfragen](#select-queries).
+
+**Beispiel**
 
 ```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
+
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-### DROP VIEW
+## DROP VIEW
 
-Die folgende Syntax definiert eine `DROP VIEW`-Abfrage, die von [!DNL Query Service] unterstützt wird:
+Die folgende Syntax definiert eine `DROP VIEW`-Abfrage:
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
-wobei `view_name` der Name der zu löschenden Ansicht ist
+**Parameter**
 
-Beispiel:
+- `IF EXISTS`: Wenn dieser Wert angegeben ist, wird keine Ausnahme ausgelöst, wenn die Ansicht  **** keine ist.
+- `view_name`: Der Name der zu löschenden Ansicht.
+
+**Beispiel**
 
 ```sql
 DROP VIEW v1
@@ -243,133 +273,121 @@ DROP VIEW IF EXISTS v1
 
 ## [!DNL Spark] SQL-Befehle
 
+Im folgenden Unterabschnitt werden die von Abfrage Service unterstützten Spark-SQL-Befehle beschrieben.
+
 ### SET
 
-Legen Sie eine Eigenschaft fest, geben Sie den Wert einer vorhandenen Eigenschaft zurück oder listen Sie alle vorhandenen Eigenschaften auf. Wenn für einen vorhandenen Eigenschaftenschlüssel ein Wert angegeben wird, wird der alte Wert überschrieben.
+Der Befehl `SET` legt eine Eigenschaft fest und gibt entweder den Wert einer vorhandenen Eigenschaft zurück oder alle vorhandenen Eigenschaften werden Liste. Wenn für einen vorhandenen Eigenschaftenschlüssel ein Wert angegeben wird, wird der alte Wert überschrieben.
 
 ```sql
-SET property_key [ To | =] property_value
+SET property_key = property_value
 ```
 
-Um den Wert einer Einstellung zurückzugeben, verwenden Sie `SHOW [setting name]`.
+**Parameter**
+
+- `property_key`: Der Name der Eigenschaft, die Liste oder geändert werden soll.
+- `property_value`: Der Wert, als den die Eigenschaft festgelegt werden soll.
+
+Um den Wert für eine Einstellung zurückzugeben, verwenden Sie `SET [property key]` ohne `property_value`.
 
 ## PostgreSQL-Befehle
 
+Die folgenden Unterabschnitte decken die von Abfrage Service unterstützten PostgreSQL-Befehle ab.
+
 ### BEGIN
 
-Dieser Befehl wird geparst, und der abgeschlossene Befehl wird an den Client zurückgesendet. Dies entspricht dem `START TRANSACTION`-Befehl.
+Der Befehl `BEGIN` oder alternativ der Befehl `BEGIN WORK` oder `BEGIN TRANSACTION` initiiert einen Transaktionsblock. Alle Anweisungen, die nach dem Befehl &quot;begin&quot;eingegeben werden, werden in einer einzigen Transaktion ausgeführt, bis ein expliziter COMMIT- oder ROLLBACK-Befehl angegeben ist. Dieser Befehl ist identisch mit `START TRANSACTION`.
 
 ```sql
-BEGIN [ TRANSACTION ]
+BEGIN
+BEGIN WORK
+BEGIN TRANSACTION
 ```
-
-#### Parameter
-
-- `TRANSACTION`: Optionale Schlüsselwörter. Listet sie auf, es werden keine Maßnahmen ergriffen.
 
 ### CLOSE
 
-`CLOSE` gibt die Ressourcen frei, die mit einem geöffneten Cursor verknüpft sind. Nach dem Schließen des Cursors sind keine weiteren Vorgänge zulässig. Ein Cursor sollte geschlossen werden, wenn er nicht mehr benötigt wird.
+Der Befehl `CLOSE` gibt die Ressourcen frei, die mit einem geöffneten Cursor verknüpft sind. Nach dem Schließen des Cursors sind keine weiteren Vorgänge zulässig. Ein Cursor sollte geschlossen werden, wenn er nicht mehr benötigt wird.
 
 ```sql
-CLOSE { name }
+CLOSE name
+CLOSE ALL
 ```
 
-#### Parameter
-
-- `name`: der Name eines geöffneten Cursors, der geschlossen werden soll.
-
-### COMMIT
-
-In [!DNL Query Service] wird keine Aktion als Antwort auf die commit-Anweisung ausgeführt.
-
-```sql
-COMMIT [ WORK | TRANSACTION ]
-```
-
-#### Parameter
-
-- `WORK`
-- `TRANSACTION`: Optionale Schlüsselwörter. Diese haben keine Auswirkungen.
+Wenn `CLOSE name` verwendet wird, stellt `name` den Namen eines geöffneten Cursors dar, der geschlossen werden muss. Wenn `CLOSE ALL` verwendet wird, werden alle geöffneten Cursor geschlossen.
 
 ### DEALLOCATE
 
-Verwenden Sie `DEALLOCATE`, um die Zuordnung einer zuvor vorbereiteten SQL-Anweisung aufzuheben. Wenn Sie die Zuordnung einer vorbereiteten Anweisung nicht explizit aufheben, wird dies am Ende der Sitzung ausgeführt.
+Mit dem Befehl `DEALLOCATE` können Sie die Zuweisung einer zuvor vorbereiteten SQL-Anweisung aufheben. Wenn Sie die Zuordnung einer vorbereiteten Anweisung nicht explizit aufheben, wird dies am Ende der Sitzung ausgeführt. Weitere Informationen zu vorbereiteten Anweisungen finden Sie im Abschnitt [VORBEREITEN Befehl](#prepare).
 
 ```sql
-DEALLOCATE [ PREPARE ] { name | ALL }
+DEALLOCATE name
+DEALLOCATE ALL
 ```
 
-#### Parameter
-
-- `Prepare`: Dieses Keyword wird ignoriert.
-- `name`: Der Name der vorbereiteten Anweisung, deren Zuordnung aufgehoben werden soll.
-- `ALL`: Die Zuordnung aller vorbereiteten Anweisungen wird aufgehoben.
+Wenn `DEALLOCATE name` verwendet wird, stellt `name` den Namen der vorbereiteten Anweisung dar, die dezugeordnet werden muss. Wenn `DEALLOCATE ALL` verwendet wird, wird die Zuordnung aller vorbereiteten Anweisungen aufgehoben.
 
 ### DECLARE
 
-Mit `DECLARE` kann ein Benutzer Cursor erstellen, mit denen eine kleine Anzahl von Zeilen gleichzeitig aus einer größeren Abfrage abgerufen werden kann. Nachdem der Cursor erstellt wurde, werden Zeilen mit `FETCH` abgerufen.
+Mit dem Befehl `DECLARE` können Sie einen Cursor erstellen, mit dem Sie eine kleine Anzahl Zeilen aus einer größeren Abfrage abrufen können. Nachdem der Cursor erstellt wurde, werden Zeilen mit `FETCH` abgerufen.
 
 ```sql
-DECLARE name CURSOR [ WITH  HOLD ] FOR query
+DECLARE name CURSOR FOR query
 ```
 
-#### Parameter
+**Parameter**
 
 - `name`: Der Name des zu erstellenden Cursors.
-- `WITH HOLD`: Gibt an, dass der Cursor weiterhin verwendet werden kann, nachdem die Transaktion, die ihn erstellt hatte, erfolgreich abgeschlossen wurde.
 - `query`: Ein `SELECT`- oder `VALUES`-Befehl, der die vom Cursor zurückzugebenden Zeilen angibt.
 
 ### EXECUTE
 
-`EXECUTE` wird verwendet, um eine zuvor vorbereitete Anweisung auszuführen. Da vorbereitete Anweisungen nur für die Dauer einer Sitzung vorhanden sind, muss die vorbereitete Anweisung durch eine `PREPARE`-Anweisung erstellt worden sein, die zuvor in der aktuellen Sitzung ausgeführt wurde.
+Mit dem Befehl `EXECUTE` wird eine zuvor vorbereitete Anweisung ausgeführt. Da vorbereitete Anweisungen nur für die Dauer einer Sitzung vorhanden sind, muss die vorbereitete Anweisung durch eine `PREPARE`-Anweisung erstellt worden sein, die zuvor in der aktuellen Sitzung ausgeführt wurde. Weitere Informationen zur Verwendung vorbereiteter Anweisungen finden Sie im Abschnitt [`PREPARE` command](#prepare).
 
-Wenn in der `PREPARE`-Anweisung, mit der die Anweisung erstellt wurde, einige Parameter angegeben wurden, muss ein kompatibler Satz von Parametern an die `EXECUTE`-Anweisung übergeben werden. Andernfalls wird ein Fehler ausgegeben. Beachten Sie, dass vorbereitete Anweisungen (im Gegensatz zu Funktionen) nicht aufgrund des Typs oder der Anzahl ihrer Parameter überladen werden. Der Name einer vorbereiteten Anweisung muss innerhalb einer Datenbanksitzung eindeutig sein.
+Wenn die `PREPARE`-Anweisung, mit der die Anweisung erstellt wurde, einige Parameter angegeben hat, muss ein kompatibler Satz von Parametern an die `EXECUTE`-Anweisung übergeben werden. Wenn diese Parameter nicht weitergegeben werden, wird ein Fehler ausgegeben.
 
 ```sql
-EXECUTE name [ ( parameter [, ...] ) ]
+EXECUTE name [ ( parameter ) ]
 ```
 
-#### Parameter
+**Parameter**
 
 - `name`: Der Name der vorbereiteten Anweisung, die ausgeführt werden soll.
-- `parameter`: Der tatsächliche Wert eines Parameters für die vorbereitete Anweisung. Hierbei muss es sich um einen Ausdruck handeln, der einen Wert liefert, der mit dem Datentyp dieses Parameters kompatibel ist, der bei der Erstellung der vorbereiteten Anweisung festgelegt wurde.
+- `parameter`: Der tatsächliche Wert eines Parameters für die vorbereitete Anweisung. Hierbei muss es sich um einen Ausdruck handeln, der einen Wert liefert, der mit dem Datentyp dieses Parameters kompatibel ist, der bei der Erstellung der vorbereiteten Anweisung festgelegt wurde.  Wenn mehrere Parameter für die vorbereitete Anweisung vorhanden sind, werden diese durch Kommas getrennt.
 
 ### EXPLAIN
 
-Dieser Befehl zeigt den Ausführungsplan an, den der PostgreSQL-Planer für die angegebene Anweisung generiert. Der Ausführungsplan zeigt, wie die in der Anweisung referenzierten Tabellen gescannt werden – durch einfaches sequenzielles Scannen, Index-Scannen usw. – und, wenn mehrere Tabellen referenziert werden, welche Join-Algorithmen werden verwendet, um die erforderlichen Zeilen aus jeder Eingabetabelle zusammenzuführen.
-
-Der wichtigste Teil der Anzeige sind die geschätzten Anweisungsausführungskosten. Das ist die Schätzung des Planers, wie lange die Ausführung der Anweisung dauern wird (gemessen in Kosteneinheiten, die frei wählbar sind, aber üblicherweise Abrufe der Festplattenseite bedeuten). Es werden zwei Zahlen angezeigt: die Startkosten, bevor die erste Zeile zurückgegeben werden kann, und die Gesamtkosten für die Rückgabe aller Zeilen. Bei den meisten Abfragen kommt es auf die Gesamtkosten an. In Kontexten wie einer Unterabfrage in EXISTS wählt der Planer jedoch die geringsten Startkosten anstelle der geringsten Gesamtkosten aus (da die Ausführung ohnehin nach einer Zeile anhält). Wenn Sie die Anzahl der Zeilen begrenzen, die mit einer `LIMIT`-Klausel zurückgegeben werden sollen, führt der Planer eine geeignete Interpolation zwischen den Endpunktkosten durch, um abzuschätzen, welcher Plan wirklich der günstigste ist.
-
-Die `ANALYZE`-Option bewirkt, dass die Anweisung ausgeführt und nicht nur geplant wird. Anschließend werden der Anzeige die tatsächlichen Laufzeitstatistiken hinzugefügt, einschließlich der insgesamt verstrichenen Zeit, die innerhalb der einzelnen Planknoten verbracht wurde (in Millisekunden), und der Gesamtzahl der zurückgegebenen Zeilen. Damit können Sie sehen, wie genau die Schätzungen des Planers mit der Realität übereinstimmen.
+Der Befehl `EXPLAIN` zeigt den Ausführungsplan für die angegebene Anweisung an. Der Ausführungsplan zeigt an, wie die Tabellen, auf die sich die Anweisung bezieht, gescannt werden.  Wenn mehrere Tabellen referenziert werden, zeigt es, welche Verbindungsalgorithmen verwendet werden, um die erforderlichen Zeilen aus den einzelnen Eingabetabellen zusammenzuführen.
 
 ```sql
-EXPLAIN [ ( option [, ...] ) ] statement
-EXPLAIN [ ANALYZE ] statement
-
-where option can be one of:
-    ANALYZE [ boolean ]
-    TYPE VALIDATE
-    FORMAT { TEXT | JSON }
+EXPLAIN option statement
 ```
 
-#### Parameter
+Dabei kann `option` einer der folgenden sein:
 
-- `ANALYZE`: Führen Sie den Befehl aus und zeigen Sie die tatsächlichen Laufzeiten und andere Statistiken an. Dieser Parameter ist standardmäßig auf `FALSE` voreingestellt.
-- `FORMAT`: Geben Sie das Ausgabeformat an, das TEXT, XML, JSON oder YAML sein kann. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT` voreingestellt.
+```sql
+ANALYZE
+FORMAT { TEXT | JSON }
+```
+
+**Parameter**
+
+- `ANALYZE`: Wenn der  `option` enthält  `ANALYZE`, werden die Laufzeiten und andere Statistiken angezeigt.
+- `FORMAT`: Wenn die Datei  `option` enthält  `FORMAT`, gibt sie das Ausgabeformat an, das sein kann  `TEXT` oder  `JSON`. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT` voreingestellt.
 - `statement`: Jede `SELECT`-, `INSERT`-, `UPDATE`-, `DELETE`-, `VALUES`-, `EXECUTE`-, `DECLARE`-, `CREATE TABLE AS`- oder `CREATE MATERIALIZED VIEW AS`-Anweisung, deren Ausführungsplan Sie sehen möchten.
 
 >[!IMPORTANT]
 >
 > Denken Sie daran, dass die Anweisung genau genommen ausgeführt wird, wenn die `ANALYZE`-Option verwendet wird. Obwohl `EXPLAIN` alle Ausgaben verwirft, die `SELECT` zurückgibt, verworfen werden, treten andere Nebenwirkungen der Anweisung wie gewohnt auf.
 
-#### Beispiel
+**Beispiel**
 
-So zeigen Sie den Plan für eine einfache Abfrage in einer Tabelle mit einer einzelnen `integer`-Spalte und 10000 Zeilen an:
+Das folgende Beispiel zeigt den Plan für eine einfache Abfrage auf einer Tabelle mit einer einzelnen `integer`-Spalte und 10000 Zeilen:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
+```
 
+```console
                        QUERY PLAN
 ---------------------------------------------------------
  Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
@@ -378,54 +396,46 @@ EXPLAIN SELECT * FROM foo;
 
 ### FETCH
 
-`FETCH` ruft Zeilen mit einem zuvor erstellten Cursor ab.
-
-Ein Cursor hat eine verknüpfte Position, die von `FETCH` verwendet wird. Der Cursor kann sich vor der ersten Zeile des Abfrageergebnisses, in einer beliebigen Zeile des Ergebnisses oder nach der letzten Zeile des Ergebnisses befinden. Nach der Erstellung wird ein Cursor vor der ersten Zeile positioniert. Nach dem Abrufen einiger Zeilen wird der Cursor auf der zuletzt abgerufenen Zeile positioniert. Wenn `FETCH` am Ende der verfügbaren Zeilen ausgeführt wird, bleibt der Cursor nach der letzten Zeile positioniert. Wenn keine solche Zeile vorhanden ist, wird ein leeres Ergebnis zurückgegeben und der Cursor wird je nachdem vor der ersten Zeile bzw. nach der letzten Zeile positioniert.
+Der Befehl `FETCH` ruft Zeilen mit einem zuvor erstellten Cursor ab.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-#### Parameter
+**Parameter**
 
-- `num_of_rows`: Eine möglicherweise vorzeichenbehaftete Ganzzahlkonstante, die die Position oder die Anzahl der abzurufenden Zeilen bestimmt.
-- `cursor_name`: Name eines geöffneten Cursors.
+- `num_of_rows`: Die Anzahl der abzurufenden Zeilen.
+- `cursor_name`: Der Name des Cursors, aus dem Sie Informationen abrufen.
 
-### PREPARE
+### PREPARE {#prepare}
 
-`PREPARE` erstellt eine vorbereitete Anweisung. Eine vorbereitete Anweisung ist ein Server-seitiges Objekt, das zur Leistungsoptimierung verwendet werden kann. Wenn die `PREPARE`-Anweisung ausgeführt wird, wird die angegebene Anweisung geparst, analysiert und umgeschrieben. Wenn anschließend ein `EXECUTE`-Befehl ausgegeben wird, wird die vorbereitete Erklärung geplant und ausgeführt. Diese Arbeitsteilung vermeidet sich wiederholende Parse-Analysen, während der Ausführungsplan von den angegebenen spezifischen Parameterwerten abhängt.
+Mit dem Befehl `PREPARE` können Sie eine vorbereitete Anweisung erstellen. Eine vorbereitete Anweisung ist ein serverseitiges Objekt, mit dem ähnliche SQL-Anweisungen als Vorlage dienen können.
 
-Vorbereitete Anweisungen können Parameter beinhalten, d. h. Werte, die bei der Ausführung der Anweisung ersetzt werden. Beziehen Sie sich beim Erstellen der vorbereiteten Anweisung auf Parameter nach Position. Verwenden Sie dazu $1, $2 usw. Eine entsprechende Liste von Parameterdatentypen kann optional angegeben werden. Wenn der Datentyp eines Parameters nicht angegeben ist oder als unbekannt deklariert wird, wird der Typ ggf. aus dem Kontext abgeleitet, in dem der Parameter zuerst referenziert wird. Geben Sie beim Ausführen der Anweisung die tatsächlichen Werte für diese Parameter in der `EXECUTE`-Anweisung an.
+Zubereitete Anweisungen können Parameter annehmen, bei denen es sich um Werte handelt, die bei der Ausführung in der Anweisung ersetzt werden. Parameter werden nach Position referenziert, unter Verwendung von $1, $2 usw., wenn vorbereitete Anweisungen verwendet werden.
 
-Vorbereitete Anweisungen gelten nur für die Dauer der aktuellen Datenbanksitzung. Wenn die Sitzung endet, wird die vorbereitete Anweisung vergessen, sodass sie neu erstellt werden muss, bevor sie erneut verwendet wird. Dies bedeutet auch, dass eine einzelne vorbereitete Anweisung nicht von mehreren gleichzeitigen Datenbank-Clients verwendet werden kann. Jeder Client kann jedoch eine eigene vorbereitete Anweisung erstellen, die verwendet werden soll. Vorbereitete Anweisungen können mithilfe des `DEALLOCATE`-Befehls manuell bereinigt werden.
-
-Vorbereitete Anweisungen haben potenziell den größten Leistungsvorteil, wenn eine einzelne Sitzung zur Ausführung einer großen Anzahl ähnlicher Anweisungen verwendet wird. Der Leistungsunterschied ist besonders dann von Bedeutung, wenn die Anweisungen komplex zu planen oder umzuschreiben sind, wenn die Abfrage beispielsweise mehrere Tabellen umfasst oder mehrere Regeln erfordert. Wenn die Anweisung relativ einfach zu planen und umzuschreiben, aber relativ teuer in der Ausführung ist, ist der Leistungsvorteil von vorbereiteten Anweisungen weniger bemerkbar.
+Optional können Sie eine Liste von Parameterdatentypen angeben. Wenn der Datentyp eines Parameters nicht aufgeführt ist, kann der Typ aus dem Kontext abgeleitet werden.
 
 ```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-#### Parameter
+**Parameter**
 
-- `name`: Ein beliebiger Name, der dieser vorbereiteten Aussage gegeben wird. Er muss innerhalb einer einzelnen Sitzung eindeutig sein und wird anschließend zum Ausführen oder Deklarieren einer zuvor vorbereiteten Anweisung verwendet.
-- `data-type`: Der Datentyp eines Parameters für die vorbereitete Anweisung. Wenn der Datentyp eines bestimmten Parameters nicht angegeben oder als unbekannt angegeben wird, wird er aus dem Kontext abgeleitet, in dem der Parameter zum ersten Mal referenziert wird. Verwenden Sie $ 1, $ 2 usw., um auf die Parameter in der vorbereiteten Anweisung zu verweisen.
-
+- `name`: Der Name der vorbereiteten Anweisung.
+- `data_type`: Die Datentypen der Parameter der vorbereiteten Anweisung. Wenn der Datentyp eines Parameters nicht aufgeführt ist, kann der Typ aus dem Kontext abgeleitet werden. Wenn Sie mehrere Datentypen hinzufügen müssen, können Sie diese in einer durch Kommas getrennten Liste hinzufügen.
 
 ### ROLLBACK
 
-`ROLLBACK` setzt die aktuelle Transaktion zurück und bewirkt, dass alle durch die Transaktion vorgenommenen Aktualisierungen verworfen werden.
+Der Befehl `ROLLBACK` hebt die aktuelle Transaktion auf und verwirft alle durch die Transaktion vorgenommenen Aktualisierungen.
 
 ```sql
-ROLLBACK [ WORK ]
+ROLLBACK
+ROLLBACK WORK
 ```
-
-#### Parameter
-
-- `WORK`
 
 ### SELECT INTO
 
-`SELECT INTO` erstellt eine neue Tabelle und füllt sie mit Daten, die von einer Abfrage berechnet wurden. Die Daten werden nicht wie bei einem normalen `SELECT` an den Client zurückgegeben. Die Spalten der neuen Tabelle haben die Namen und Datentypen, die den Ausgabespalten von `SELECT` zugeordnet sind.
+Mit dem Befehl `SELECT INTO` wird eine neue Tabelle erstellt und mit Daten gefüllt, die von einer Abfrage berechnet werden. Die Daten werden nicht an den Client zurückgegeben, wie bei einem normalen Befehl `SELECT`. Die Spalten der neuen Tabelle haben die Namen und Datentypen, die mit den Ausgabespalten des Befehls `SELECT` verknüpft sind.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -445,15 +455,17 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-#### Parameter
+**Parameter**
 
-- `TEMPORARAY` oder `TEMP`: Wenn angegeben, wird die Tabelle als temporäre Tabelle erstellt.
-- `UNLOGGED:`: Wenn angegeben, wird die Tabelle als nicht protokollierte Tabelle erstellt.
-- `new_table` Der Name der zu erstellenden Tabelle (optional mit Schema versehen).
+Weitere Informationen zu den Standardparametern für die SELECT-Abfrage finden Sie im Abschnitt [SELECT-Abfrage](#select-queries). In diesem Abschnitt werden nur Liste-Parameter angegeben, die ausschließlich für den Befehl `SELECT INTO` gelten.
 
-#### Beispiel
+- `TEMPORARY` oder  `TEMP`: Ein optionaler Parameter. Bei Angabe der Tabelle handelt es sich um eine temporäre Tabelle.
+- `UNLOGGED`: Ein optionaler Parameter. Bei Angabe der Tabelle, die wie eine nicht angemeldete Tabelle erstellt wird. Weitere Informationen zu nicht protokollierten Tabellen finden Sie in der [PostgreSQL-Dokumentation](https://www.postgresql.org/docs/current/sql-createtable.html).
+- `new_table`: Der Name der zu erstellenden Tabelle.
 
-Erstellen Sie eine neue Tabelle `films_recent`, die nur aus den aktuellen Einträgen der Tabelle `films` besteht:
+**Beispiel**
+
+Mit der folgenden Abfrage wird eine neue Tabelle `films_recent` erstellt, die nur aus den letzten Einträgen der Tabelle `films` besteht:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -461,106 +473,129 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### SHOW
 
-`SHOW` zeigt die aktuelle Einstellung der Laufzeitparameter an. Diese Variablen können mithilfe der `SET`-Anweisung, durch Bearbeiten der Konfigurationsdatei postgresql.conf, durch die `PGOPTIONS`-Umgebungsvariable (bei Verwendung von libpq oder einer libpq-basierten Anwendung) oder durch Befehlszeilenflags beim Starten des Postgres-Servers eingestellt werden.
+Der Befehl `SHOW` zeigt die aktuelle Einstellung der Laufzeitparameter an. Diese Variablen können mithilfe der Anweisung `SET`, durch Bearbeiten der Konfigurationsdatei `postgresql.conf`, durch die Umgebungsvariable `PGOPTIONS` (bei Verwendung von libpq oder einer libpq-basierten Anwendung) oder durch Befehlszeilenflags beim Starten des Postgres-Servers eingestellt werden.
 
 ```sql
 SHOW name
+SHOW ALL
 ```
 
-#### Parameter
+**Parameter**
 
-- `name`:
-   - `SERVER_VERSION`: Zeigt die Versionsnummer des Servers an.
-   - `SERVER_ENCODING`: Zeigt die Server-seitige Zeichensatzkodierung an. Derzeit kann dieser Parameter angezeigt, aber nicht eingestellt werden, da die Kodierung zum Zeitpunkt der Datenbankerstellung festgelegt wird.
-   - `LC_COLLATE`: Zeigt die Gebietsschemaeinstellung der Datenbank für die Sortierung (Textanordnung) an. Derzeit kann dieser Parameter angezeigt, aber nicht eingestellt werden, da die Einstellung zum Zeitpunkt der Datenbankerstellung festgelegt wird.
-   - `LC_CTYPE`: Zeigt die Gebietsschemaeinstellung der Datenbank für die Zeichenklassifizierung an. Derzeit kann dieser Parameter angezeigt, aber nicht eingestellt werden, da die Einstellung zum Zeitpunkt der Datenbankerstellung festgelegt wird.
-      `IS_SUPERUSER`: Wahr (True), wenn die aktuelle Rolle über Superuser-Berechtigungen verfügt.
+- `name`: Der Name des Laufzeitparameters, über den Sie Informationen erhalten möchten. Mögliche Werte für den Parameter runtime umfassen die folgenden Werte:
+   - `SERVER_VERSION`: Dieser Parameter zeigt die Versionsnummer des Servers an.
+   - `SERVER_ENCODING`: Dieser Parameter zeigt die serverseitige Zeichensatzkodierung.
+   - `LC_COLLATE`: Dieser Parameter zeigt die Spracheinstellung der Datenbank für die Sortierreihenfolge (Textreihenfolge) an.
+   - `LC_CTYPE`: Dieser Parameter zeigt die Spracheinstellung der Datenbank für die Zeichenklassifizierung an.
+      `IS_SUPERUSER`: Dieser Parameter zeigt an, ob die aktuelle Rolle über Superuser-Berechtigungen verfügt.
 - `ALL`: Zeigt die Werte aller Konfigurationsparameter mit Beschreibungen an.
 
-#### Beispiel
+**Beispiel**
 
-Anzeigen der aktuellen Einstellung des Parameters `DateStyle`
+Die folgende Abfrage zeigt die aktuelle Parametereinstellung `DateStyle`.
 
 ```sql
 SHOW DateStyle;
+```
+
+```console
  DateStyle
 -----------
  ISO, MDY
 (1 row)
 ```
 
-### START TRANSACTION
-
-Dieser Befehl wird geparst und sendet den abgeschlossenen Befehl zurück an den Client. Dies entspricht dem `BEGIN`-Befehl.
-
-```sql
-START TRANSACTION [ transaction_mode [, ...] ]
-
-where transaction_mode is one of:
-
-    ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
-    READ WRITE | READ ONLY
-```
-
 ### KOPIE
 
-Mit diesem Befehl wird die Ausgabe einer beliebigen SELECT-Abfrage an einen angegebenen Speicherort ausgegeben. Der Benutzer muss Zugriff auf diesen Speicherort haben, damit dieser Befehl erfolgreich ausgeführt werden kann.
+Mit dem Befehl `COPY` wird die Ausgabe einer `SELECT`-Abfrage an einen angegebenen Speicherort ausgeliefert. Der Benutzer muss Zugriff auf diesen Speicherort haben, damit dieser Befehl erfolgreich ausgeführt werden kann.
 
 ```sql
-COPY  query
+COPY query
     TO '%scratch_space%/folder_location'
     [  WITH FORMAT 'format_name']
-
-where 'format_name' is be one of:
-    'parquet', 'csv', 'json'
-
-'parquet' is the default format.
 ```
+
+**Parameter**
+
+- `query`: Die Abfrage, die Sie kopieren möchten.
+- `format_name`: Das Format, in das die Abfrage kopiert werden soll. Das `format_name` kann eines von `parquet`, `csv` oder `json` sein. Der Standardwert ist `parquet`.
 
 >[!NOTE]
 >
 >Der vollständige Ausgabepfad lautet `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
+### ALTERNATIVTABELLE
 
-### ALTER
+Mit dem Befehl `ALTER TABLE` können Sie Primär- oder Fremdschlüsseleinschränkungen hinzufügen oder ablegen sowie Spalten zur Tabelle hinzufügen.
 
-Mit diesem Befehl können Sie Primär- oder Fremdschlüsseleinschränkungen zur Tabelle hinzufügen oder ablegen.
+#### hinzufügen- oder DROP-BESCHRÄNKUNG
+
+Die folgenden SQL-Abfragen zeigen Beispiele für das Hinzufügen oder Ablegen von Einschränkungen zu einer Tabelle.
 
 ```sql
-Alter TABLE table_name ADD CONSTRAINT Primary key ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
-Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name Namespace 'namespace'
+ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
 
-Alter TABLE table_name DROP CONSTRAINT Primary key ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
-Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
 
->[!NOTE]
->Das Schema &quot;Tabelle&quot;sollte eindeutig sein und nicht für mehrere Tabellen freigegeben sein. Darüber hinaus ist der Namensraum obligatorisch.
+**Parameter**
 
+- `table_name`: Der Name der Tabelle, die Sie bearbeiten.
+- `constraint_name`: Der Name der Beschränkung, die hinzugefügt oder gelöscht werden soll.
+- `column_name`: Der Name der Spalte, der Sie eine Beschränkung hinzufügen.
+- `referenced_table_name`: Der Name der Tabelle, auf die der Fremdschlüssel verweist.
+- `primary_column_name`: Der Name der Spalte, auf die der Fremdschlüssel verweist.
+
+>[!NOTE]
+>
+>Das Schema &quot;Tabelle&quot;sollte eindeutig sein und nicht für mehrere Tabellen freigegeben sein. Darüber hinaus ist der Namensraum für primäre Schlüsseleinschränkungen obligatorisch.
+
+#### hinzufügen SPALTE
+
+Die folgenden SQL-Abfragen zeigen Beispiele zum Hinzufügen von Spalten zu einer Tabelle.
+
+```sql
+ALTER TABLE table_name ADD COLUMN column_name data_type
+
+ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
+```
+
+**Parameter**
+
+- `table_name`: Der Name der Tabelle, die Sie bearbeiten.
+- `column_name`: Der Name der Spalte, die Sie hinzufügen möchten.
+- `data_type`: Der Datentyp der Spalte, die Sie hinzufügen möchten. Folgende Datentypen werden unterstützt: bigint, char, string, date, datetime, Dublette, Genauigkeit der Dublette, integer, smallint, tinyint, varchar.
 
 ### PRIMÄR-TASTEN ANZEIGEN
 
-Dieser Befehl Liste alle primären Schlüsseleinschränkungen für die jeweilige Datenbank.
+Der Befehl `SHOW PRIMARY KEYS` Liste alle primären Schlüsseleinschränkungen für die jeweilige Datenbank.
 
 ```sql
 SHOW PRIMARY KEYS
+```
+
+```console
     tableName | columnName    | datatype | namespace
 ------------------+----------------------+----------+-----------
  table_name_1 | column_name1  | text     | "ECID"
  table_name_2 | column_name2  | text     | "AAID"
 ```
 
-
 ### AUSLÄNDISCHE TASTEN ANZEIGEN
 
-Dieser Befehl Liste alle Fremdschlüsseleinschränkungen für die jeweilige Datenbank.
+Der Befehl `SHOW FOREIGN KEYS` Liste alle Fremdschlüsseleinschränkungen für die jeweilige Datenbank.
 
 ```sql
 SHOW FOREIGN KEYS
+```
+
+```console
     tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
