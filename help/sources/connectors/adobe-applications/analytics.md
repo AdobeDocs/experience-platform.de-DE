@@ -5,7 +5,7 @@ title: Adobe Analytics Source Connector for Report Suite Data
 topic: overview
 description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: e480ce789c849db24713da312345ea3162e617a6
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 41%
@@ -49,7 +49,7 @@ Detaillierte Informationen zur Feldzuordnung zwischen [!DNL Analytics] und [!DNL
 | -------------- | ---------------- |
 | Neue Daten zu [!DNL Real-time Customer Profile] (A4T **nicht** aktiviert) | &lt; 2 Minuten |
 | Neue Daten zu [!DNL Real-time Customer Profile] (A4T **ist** aktiviert) | &lt; 15 Minuten |
-| Neue Daten an Data Lake | &lt; 45 Minuten |
+| Neue Daten an Data Lake | &lt; 90 Minuten |
 | Aufstockungsdaten (13 Monate Daten oder 10 Milliarden Ereignisse, je nachdem, welcher Wert niedriger ist) | &lt; 4 Wochen |
 
 >[!NOTE]
