@@ -3,7 +3,7 @@ keywords: Ziel der Cloud-Datenspeicherung;Cloud-Datenspeicherung
 title: Übersicht über die Ziele der Cloud-Datenspeicherung
 description: Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Standorte Amazon S3, AWS Kinesis, AWS Ereignis Hubs oder SFTP-Cloud-Datenspeicherung liefern.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 34%
