@@ -1,12 +1,12 @@
 ---
 keywords: Ziele;Erlebnis-Cloud-Lösungen; zielgruppe;Bestimmungsort der Zielgruppe; Anzeigenwolke; Werbekloud; audience-Manager; Zielort der adobe-Zielgruppe; zielgruppe; Bestimmungsort des Audience-Managers;
-title: Übersicht über Adoben-Ziele
+title: Adobe-Ziele – Übersicht
 description: Verwalten Sie Ihre Kundenerfahrung, indem Sie Ihre Daten in Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
