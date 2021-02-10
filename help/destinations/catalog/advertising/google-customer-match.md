@@ -1,17 +1,17 @@
 ---
 keywords: Google-Kundenübereinstimmungen;Google-Kundenübereinstimmung;Google-Kundenübereinstimmung
-title: Ziel der Google-Kundenabgleich-Verbindung
+title: Google-Kundenabgleich-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1470'
 ht-degree: 4%
 
 ---
 
 
-# Google-Kundenabgleich-Verbindung
+# [!DNL Google Customer Match] connection
 
 >[!IMPORTANT]
 >
