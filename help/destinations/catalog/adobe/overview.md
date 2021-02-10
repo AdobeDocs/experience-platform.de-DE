@@ -3,10 +3,10 @@ keywords: Ziele;Erlebnis-Cloud-Lösungen; zielgruppe;Bestimmungsort der Zielgrup
 title: Adobe-Ziele – Übersicht
 description: Verwalten Sie Ihre Kundenerfahrung, indem Sie Ihre Daten in Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 24%
+source-wordcount: '220'
+ht-degree: 23%
 
 ---
 
@@ -19,7 +19,7 @@ Verwalten Sie Ihre Kundenerfahrung, indem Sie Ihre Daten in Adobe Experience Pla
 
 Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite &quot;Zieltypen und Kategorien&quot;.
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Adobe Campaign-Verbindung](../email-marketing/adobe-campaign.md)
 
 ## Erweiterungen
 
