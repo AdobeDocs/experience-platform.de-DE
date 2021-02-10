@@ -1,14 +1,14 @@
 ---
 keywords: Werbeziele;Ziele;Plattformziele
-title: Werbeziele
-seo-title: Werbeziele Übersicht
+title: Werbeziele – Übersicht
+seo-title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) und geben Sie pseudonyme Audiencen für diese Plattformen frei.
 seo-description: Verbinden Sie Adobe Experience Platform mit einer Werbeplattform von Drittanbietern (z. B. DSP, Werbenetzwerk, SSP) und geben Sie pseudonyme Audiencen für diese Plattformen frei.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 48%
+source-wordcount: '233'
+ht-degree: 43%
 
 ---
 
@@ -25,12 +25,12 @@ Derzeit unterstützt Platform die unten aufgeführten Werbeziele. Informationen 
 
 Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite &quot;Zieltypen und Kategorien&quot;.
 
-- [Google Display &amp; Video 360](./google-dv360.md)
-- [Google Ads](./google-ads-destination.md)
-- [Google Ad Manager](./google-ad-manager.md)
-- [Google-Kundenabgleich](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [Ziel des Trade Desk](./tradedesk.md)
+- [Google Display &amp; Video 360-Verbindung](./google-dv360.md)
+- [Google Ads-Verbindung](./google-ads-destination.md)
+- [Google Ad Manager-Verbindung](./google-ad-manager.md)
+- [Google-Kundenabgleich-Verbindung](./google-customer-match.md)
+- [Microsoft Bing-Verbindung](./bing.md)
+- [Verbindung zum Trade Desk](./tradedesk.md)
 
 ## Erweiterungen
 
