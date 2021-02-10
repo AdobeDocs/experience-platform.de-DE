@@ -1,11 +1,11 @@
 ---
 keywords: E-Mail;E-Mail;E-Mail-Ziele;E-Mail-Ziele;Verkaufsforce;Verkaufsziel
-title: Verbindungsziel des Salesforce-Marketing Cloud
+title: Salesforce-Marketing Cloud-Verbindung
 seo-description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '512'
 ht-degree: 58%
 
 ---
