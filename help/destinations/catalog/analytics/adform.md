@@ -1,17 +1,17 @@
 ---
 keywords: adform extension;adform
-title: Erweiterungsziel hinzufügen
+title: Adform Website Tracking-Erweiterung
 description: Die Adform-Erweiterung ist ein Analysenziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 24%
+source-wordcount: '486'
+ht-degree: 25%
 
 ---
 
 
-# Erweiterung hinzufügen {#adform-extension}
+# Adform Website Tracking-Erweiterung {#adform-extension}
 
 Die Erweiterung &quot;Adform Website Tracking&quot; ermöglicht es Anbietern, Adform Tracking Points mühelos über die [!DNL Experience Platform Launch]-Plattform auf ihren Websites zu implementieren.
 
