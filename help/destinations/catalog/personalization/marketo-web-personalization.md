@@ -1,12 +1,12 @@
 ---
 keywords: Marketo Web Personalization;Marketo Web Personalization;Marketo Web Personalization extension;Marketo;Marketo;Marketo
-title: Marketing-Web-Personalisierung - Erweiterungsziel
+title: Marketo Web Personalization-Erweiterung
 description: Die Marketo Web Personalization Extension ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 31%
+source-wordcount: '579'
+ht-degree: 32%
 
 ---
 
