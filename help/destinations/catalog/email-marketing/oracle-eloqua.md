@@ -1,11 +1,11 @@
 ---
 keywords: E-Mail;E-Mail;E-Mail-Ziele;oracle eloqua;oracle
-title: Oracle Eloqua-Verbindungsziel
+title: Verbindung oracle Eloqua
 description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '520'
 ht-degree: 56%
 
 ---
