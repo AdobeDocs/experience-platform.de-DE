@@ -1,12 +1,12 @@
 ---
 keywords: FragePro-Konstante-Umfragen;Fragenpro-Abfangen-Umfragen;FragePro;Fragepro
-title: Extension Destination für FragePro Umfragen abfangen
+title: QuestionPro Intercept Surveys-Erweiterung
 description: Die Umfragen-Erweiterung "QuestionPro Intercept"ist ein Ziel der Umfrage in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 28%
+source-wordcount: '531'
+ht-degree: 29%
 
 ---
 
