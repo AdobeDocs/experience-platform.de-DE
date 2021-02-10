@@ -1,9 +1,9 @@
 ---
-keywords: Facebook-Erweiterungen;Facebook-Erweiterung;Facebook-Ziele;Facebook;Instagram;Messenger;Facebook-Messenger
-title: Facebook-Erweiterung
+keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instagram;Messaging;Facebook-Botenenger
+title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 13%
@@ -11,7 +11,7 @@ ht-degree: 13%
 ---
 
 
-# [!DNL Facebook]-Erweiterung 
+# [!DNL Facebook] connection
 
 >[!IMPORTANT]
 >
