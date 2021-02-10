@@ -1,11 +1,11 @@
 ---
 keywords: Digitales Feedback bestätigen;Verlängerung bestätigen;Bestätigung
-title: Ziel der digitalen Feedback-Erweiterung bestätigen
+title: Confirmit Digital Feedback-Erweiterung
 description: Die Erweiterung "Digitales Feedback bestätigen"ist eine Stimme des Kundenziels in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '562'
 ht-degree: 26%
 
 ---
