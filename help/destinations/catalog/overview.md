@@ -1,19 +1,19 @@
 ---
 keywords: Katalog;Katalog
-title: Zielkatalog
-seo-title: Zielkatalog
+title: Zielkatalog – Übersicht
+seo-title: Zielkatalog – Übersicht
 description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adoben, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen und mehr.
 seo-description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adoben, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen und mehr.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 54%
+source-wordcount: '177'
+ht-degree: 38%
 
 ---
 
 
-# Zielkatalog 
+# Zielkatalog – Übersicht
 
 Der Zielkatalog bietet eine Liste der verfügbaren Zielplattformen, die zum Empfang von Daten bereit sind. Zu diesen Zielplattformen zählen Adoben, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen, Erweiterungen von Experience Platformen und mehr.
 
