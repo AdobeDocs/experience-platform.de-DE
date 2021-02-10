@@ -5,10 +5,10 @@ seo-title: Ziele – Übersicht
 description: Erfahren Sie, wie Sie Adobe Experience Platform-Daten für Cross-Kanal-Marketing-Kampagnen, E-Mails, gezielte Werbung und mehr aktivieren können.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Destinations in Adobe Experience Platform verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 31%
+ht-degree: 27%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 31%
 
 ## Ziele und Quellen {#destinations-and-sources}
 
-Eine der Kernfunktionen von Platform besteht darin, Ihre Erstanbieter-Daten zu integrieren und sie für Ihre geschäftlichen Anforderungen zu aktivieren. Verwenden Sie Quellen, um Daten in Plattform und Ziele zu erfassen und Daten von der Plattform zu exportieren.
+Eine der Kernfunktionen von Platform besteht darin, Ihre Erstanbieter-Daten zu integrieren und sie für Ihre geschäftlichen Anforderungen zu aktivieren. Verwenden Sie [sources](../sources/home.md), um Daten in Plattform und Ziele zu erfassen und Daten von der Plattform zu exportieren.
 
 ## Ziele – Schritte {#steps}
 
 * Wählen Sie aus einem [Selbstbedienungskatalog](./catalog/overview.md) aller in der Plattform verfügbaren Ziele.
-* Verwenden Sie **[!UICONTROL Ziele]**, um Profile oder Segmente zu [aktivieren](./ui/activate-destinations.md) und an Plattformen für Marketing-Automatisierung, digitale Werbung und andere zu senden.
+* Verwenden Sie Ziele, um [zu aktivieren](./ui/activate-destinations.md) und senden Sie Profil oder Segmente an Marketingautomationsplattformen, digitale Werbungsplattformen und mehr.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
 ## Steuerelemente {#controls}
