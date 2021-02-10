@@ -1,11 +1,11 @@
 ---
 keywords: Ziel der Cloud-Datenspeicherung;Cloud-Datenspeicherung
-title: Cloud-Datenspeicherung-Ziel erstellen
+title: Ziel einer Cloud-Datenspeicherung erstellen
 type: Tutorial
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 33%
