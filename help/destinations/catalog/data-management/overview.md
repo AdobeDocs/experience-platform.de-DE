@@ -1,9 +1,9 @@
 ---
 keywords: DMP-Ziele;DIL;Audience-Manager-DMP-Erweiterung;DMP-Erweiterung;Data Management-Plattform;Data Management-Plattformziele
-title: Übersicht über Data Management Platform (DMP)-Ziele
+title: Übersicht über Data Management Platform-(DMP-)Ziele
 description: Data Management-Plattformen (DMPs) ermöglichen es Werbetreibenden, Herausgebern und Agenturen, Profil für einzigartige Audiencen zu erstellen, ihre wertvollsten Segmente zu identifizieren und sie für alle digitalen Kanal zu nutzen. Dadurch können Sie eine echte 360-Ansicht eines Consumer-Profils erstellen, aussagekräftige Audiencen erstellen und aktivieren.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 12%
