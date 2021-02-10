@@ -5,10 +5,10 @@ seo-title: Ziele – Übersicht
 description: Erfahren Sie, wie Sie Adobe Experience Platform-Daten für Cross-Kanal-Marketing-Kampagnen, E-Mails, gezielte Werbung und mehr aktivieren können.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Destinations in Adobe Experience Platform verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
@@ -43,7 +43,7 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 
 Detaillierte Informationen finden Sie unter [Übersicht über Zieltypen und Kategorien](./destination-types.md).
 
-## Ziele und Zugangssteuerungen {#access-controls}
+## Ziele und Zugriffskontrollen {#access-controls}
 
 Die Funktion &quot;Ziele&quot;in &quot;Plattform&quot;funktioniert mit Adobe Experience Platform-Zugriffskontrolle-Berechtigungen. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
 
