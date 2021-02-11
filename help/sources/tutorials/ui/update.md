@@ -6,10 +6,10 @@ title: Kontodetails der Quellverbindung in der Benutzeroberfläche aktualisieren
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 4%
+source-wordcount: '681'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,9 @@ ht-degree: 4%
 
 Unter bestimmten Umständen kann es erforderlich sein, die Details eines Kontos mit vorhandenen Quellen zu aktualisieren. Der Arbeitsbereich [!UICONTROL Quellen] bietet Ihnen die Möglichkeit, Details zu einer vorhandenen Stapel- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
 
-Dieses Lernprogramm enthält Schritte zum Aktualisieren der Details und Anmeldeinformationen eines vorhandenen Kontos im Arbeitsbereich [!UICONTROL Quellen].
+Der Arbeitsbereich [!UICONTROL Quellen] bietet Ihnen außerdem die Möglichkeit, den Zeitplan für Batch-Datenflüsse zu bearbeiten, sodass Sie die Erfassungsfrequenz und die Intervallrate aktualisieren können.
+
+Dieses Lernprogramm enthält Schritte zum Aktualisieren der Details und Anmeldeinformationen eines vorhandenen Kontos im Arbeitsbereich [!UICONTROL Quellen] sowie zum Aktualisieren des Erfassungszeitplans eines Datenflusses.
 
 ## Erste Schritte
 
@@ -53,12 +55,39 @@ Im Dialogfeld **[!UICONTROL Kontodetails bearbeiten]** können Sie den Namen, di
 
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
-Nach einigen Augenblicken wird am unteren Bildschirmrand ein grünes Bestätigungsfeld angezeigt, um eine erfolgreiche Aktualisierung zu bestätigen.
+Nach einigen Augenblicken wird unten im Bildschirm ein Bestätigungsfeld angezeigt, um eine erfolgreiche Aktualisierung zu bestätigen.
 
 ![update-bestätigte](../../images/tutorials/update/update-confirmed.png)
 
+## Zeitplan bearbeiten
+
+Auf der Seite **[!UICONTROL Konten]** können Sie den Erfassungszeitplan eines Datenflusses bearbeiten. Wählen Sie in der Liste der Konten das Konto aus, das den Datendurchlauf enthält, den Sie neu planen möchten.
+
+![select-account](../../images/tutorials/update/select-account.png)
+
+Die Seite mit den Datenflüssen wird angezeigt. Diese Seite enthält eine Liste der vorhandenen Datenflüsse, die mit dem ausgewählten Konto verknüpft sind. Wählen Sie die Auslassungspunkte (`...`) neben dem Datendurchlauf aus, den Sie neu planen möchten.
+
+![umplanen](../../images/tutorials/update/reschedule.png)
+
+Es wird ein Dropdown-Menü angezeigt, in dem Sie die Optionen **[!UICONTROL Plan bearbeiten]**, **[!UICONTROL Datenfluss aktivieren]**, **[!UICONTROL Ansicht bei der Überwachung]** und **[!UICONTROL Löschen]** auswählen können. Wählen Sie **[!UICONTROL Plan bearbeiten]** aus dem Menü.
+
+![edit-schedule](../../images/tutorials/update/edit-schedule.png)
+
+Das Dialogfeld **[!UICONTROL Plan bearbeiten]** enthält Optionen zum Aktualisieren der Erfassungsfrequenz und Intervallrate Ihres Datenflusses. Nachdem Sie die aktualisierten Werte für Häufigkeit und Intervall festgelegt haben, wählen Sie **[!UICONTROL Speichern]**.
+
+![schedule-dialog-box](../../images/tutorials/update/schedule-dialog-box.png)
+
+| Zeitplan | Beschreibung |
+| ---------- | ----------- |
+| Häufigkeit | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Folgende Werte sind für die Bearbeitung des Zeitplans für einen bereits vorhandenen Datenaflow zulässig: `minute`, `hour`, `day` oder `week`. |
+| Intervall | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl von nicht null sein und größer als oder gleich `15` sein. |
+
+Nach einigen Augenblicken wird unten im Bildschirm ein Bestätigungsfeld angezeigt, um eine erfolgreiche Aktualisierung zu bestätigen.
+
+![schedule-verify](../../images/tutorials/update/schedule-confirm.png)
+
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie erfolgreich den Arbeitsbereich [!UICONTROL Quellen] verwendet, um Kontoinformationen zu aktualisieren.
+In diesem Lernprogramm haben Sie erfolgreich den Arbeitsbereich [!UICONTROL Quellen] verwendet, um Kontoinformationen zu aktualisieren und Ihren Datenplanplan zu bearbeiten.
 
 Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit der API [!DNL Flow Service] finden Sie im Lehrgang [zum Aktualisieren der Verbindungsinformationen mit der Flow Service API](../../tutorials/api/update.md).
