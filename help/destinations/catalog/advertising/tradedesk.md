@@ -3,9 +3,9 @@ keywords: Werbung; die Fachstelle;
 title: Verbindung zum Trade Desk
 description: 'Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, um zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg auszuführen. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '540'
 ht-degree: 5%
 
 ---
@@ -50,7 +50,6 @@ Geben Sie im Schritt [!UICONTROL Authentication] die Verbindungsdetails [!DNL Th
 * **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, mit der Sie dieses Ziel in Zukunft identifizieren können.
 * **[!UICONTROL Konto-ID]**: Ihre  [!DNL Trade Desk] [!UICONTROL Konto-ID].
-* **[!UICONTROL geheim]**: Der in den  `clientSecret` Clientberechtigungen verwendete  [!DNL OAuth2] Parameter.
 * **[!UICONTROL Serverort]**: Fragen Sie Ihren  [!DNL The Trade Desk] Kundenbetreuer, welchen regionalen Server Sie verwenden sollten. Die folgenden regionalen Server stehen zur Auswahl:
 
    * **[!UICONTROL Europa]**
