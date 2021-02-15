@@ -3,10 +3,10 @@ keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instag
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 13%
+source-wordcount: '1001'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 >
->Die Kundenmigration zu den neuen Zielversionen wird derzeit durchgeführt. Bis die Migration abgeschlossen ist, sehen Sie nur die verfügbaren Identitäten [!UICONTROL EMAIL] und [!UICONTROL EMAIL_LC_SHA_256] für dieses Ziel.
+>Wir migrieren derzeit Kunden zur neuen Version dieses Ziels, [!DNL Facebook Custom Audience].
+>
+> Die Anweisungen in diesem Artikel gelten für beide Versionen mit folgendem Hinweis: während diese Migration ausgeführt wird, sehen Sie nur die aktuelle Version des Ziels [!DNL Facebook] in der Benutzeroberfläche, wo Sie nur die Identitäten [!UICONTROL EMAIL] und [!UICONTROL EMAIL_LC_SHA_256] für die Aktivierung verwenden können.
 
 Aktivieren Sie Profil für Ihre [!DNL Facebook]-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 
@@ -37,7 +39,7 @@ Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silver und Gold) un
 
 Um sie über soziale Netzwerke hinweg Zielgruppe, können sie die Kundendaten aus ihrem CRM-System in Adobe Experience Platform einbinden und dabei die E-Mail-Adressen als Bezeichner verwenden.
 
-Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das [!DNL Facebook]-Ziel Zielgruppe haben.
+Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das [!DNL Facebook]-Ziel Zielgruppe werden können.
 
 ## Zielspezifikationen {#destination-specs}
 
@@ -95,9 +97,12 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
    - Beispiel: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, nicht `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Salt die Zeichenfolge nicht.
 
-Daten von Namensräumen ohne Hash werden bei Aktivierung automatisch durch [!DNL Platform] gehasht.
+>[!NOTE]
+>
+>Daten von Namensräumen ohne Hash werden bei Aktivierung automatisch durch [!DNL Platform] gehasht.
+> Attributquellendaten werden nicht automatisch mit Hashing versehen. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash.
+> Die Option **[!UICONTROL Transformation anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Es wird nicht angezeigt, wenn Sie Namensraum auswählen.
 
-Attributquellendaten werden nicht automatisch mit Hashing versehen. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash.
 ![Identitätszuordnungs-Transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### Verwenden benutzerdefinierter Namensraum {#custom-namespaces}
