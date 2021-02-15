@@ -6,7 +6,7 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 15%
@@ -26,7 +26,7 @@ Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbin
 
 Die Schritte im Arbeitsablauf für die Aktivierung unterscheiden sich geringfügig von den Zieltypen. Der vollständige Arbeitsablauf für alle Zieltypen wird nachfolgend beschrieben.
 
-### Wählen Sie das Ziel aus, an dem Daten für {#select-destination} aktiviert werden sollen
+### Wählen Sie das Ziel aus, an dem die Daten für {#select-destination} aktiviert werden sollen
 
 Gilt für: Alle Ziele
 
@@ -38,7 +38,7 @@ Wählen Sie den Namen des Ziels aus, um zum Arbeitsablauf für die Aktivierung z
 
 ![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-Beachten Sie, dass Sie, wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, die derzeit aktivierten Segmente für das Ziel sehen können. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
+Beachten Sie, dass Sie, wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, die aktuell aktivierten Segmente sehen können. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
 
 Nachdem Sie ein Ziel ausgewählt haben, wählen Sie **[!UICONTROL Aktivieren]**.
 
@@ -60,7 +60,7 @@ Gilt für: Social-Ziele und Werbeziel Google-Kunden-Übereinstimmung
 
 Bei Social-Zielen müssen Sie Quellattribute oder Identitäts-Namensraum auswählen, die als Zielgruppen-IDs im Ziel zugeordnet werden sollen.
 
-#### Beispiel: Aktivieren von Audiencen in [!DNL Facebook] {#example-facebook}
+#### Beispiel: Aktivieren von Audiencen in [!DNL Facebook Custom Audience] {#example-facebook}
 
 Dies ist ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Audiencen in [!DNL Facebook].
 
@@ -150,7 +150,7 @@ Es wird ein Popup mit Optionen zum Erstellen des Segmentplans angezeigt.
 
 * **Dateiexport**: Sie haben die Möglichkeit, entweder vollständige oder inkrementelle Dateien zu exportieren. Beim Exportieren einer vollständigen Datei wird eine vollständige Momentaufnahme aller Profil veröffentlicht, die für dieses Segment qualifiziert sind. Beim Exportieren einer inkrementellen Datei wird das Delta der Profil veröffentlicht, die seit dem letzten Export für dieses Segment qualifiziert sind.
 * **Häufigkeit**: Wenn &quot;Vollständige  **[!UICONTROL Datei]** exportieren&quot;ausgewählt ist, können Sie &quot;Einmalig&quot;oder &quot; ****  **[!UICONTROL Täglich]**&quot;exportieren. Wenn **[!UICONTROL Inkrementelle Dateien exportieren]** ausgewählt ist, haben Sie nur die Möglichkeit, **[!UICONTROL Täglich]** zu exportieren. Beim Exportieren einer Datei **[!UICONTROL Sobald]** wird die Datei einmal exportiert. Beim Exportieren einer Datei **[!UICONTROL Täglich]** wird die Datei jeden Tag vom Beginn bis zum Enddatum um 12:00 Uhr UTC (19:00 Uhr EST) exportiert, wenn vollständige Dateien ausgewählt sind, und um 22:00 Uhr UTC (7:00 Uhr EST), wenn inkrementelle Dateien ausgewählt wurden.
-* **Datum**: Wenn &quot;Einmalig&quot; **** ausgewählt ist, können Sie das Datum für den einmaligen Export auswählen. Wenn **[!UICONTROL Täglich]** ausgewählt ist, können Sie die Beginns- und Enddaten für die Exporte auswählen.
+* **Datum**: Wenn &quot;Einmalig&quot; **** ausgewählt ist, können Sie das Datum für den einmaligen Export auswählen. Wenn **[!UICONTROL Täglich]** ausgewählt ist, können Sie Beginns- und Enddaten für die Exporte auswählen.
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
