@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 15%
+source-wordcount: '557'
+ht-degree: 16%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 15%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
+      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -117,6 +117,8 @@ ht-degree: 15%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protokolle {#protocols}
          - [Generische OData](tutorials/api/create/protocols/odata.md)
+      - Streaming {#streaming}
+         - [HTTP-API](tutorials/api/create/streaming/http.md)
    - Daten erkunden {#explore}
       - [Werbedaten](tutorials/api/explore/advertising.md)
       - [Daten zur Cloud-Datenspeicherung](tutorials/api/explore/cloud-storage.md)
@@ -196,6 +198,8 @@ ht-degree: 15%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protokolle {#protocols}
          - [Generische OData](tutorials/ui/create/protocols/odata.md)
+      - Streaming {#streaming}
+         - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Konfigurieren eines Datenflusses {#dataflow}
       - [Dataflow für Werbungsanschluss](tutorials/ui/dataflow/advertising.md)
       - [Verbindungsdataflow zur Batch Cloud-Datenspeicherung](tutorials/ui/dataflow/batch/cloud-storage.md)
@@ -213,5 +217,5 @@ ht-degree: 15%
    - [Konten löschen](tutorials/ui/delete-accounts.md)
    - [Datenflüsse löschen](tutorials/ui/delete.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
-- [ZULASSUNGSLISTE der IP-Adresse](ip-address-allow-list.md)
+- [Zulassungsliste der IP-Adresse](ip-address-allow-list.md)
 - [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
