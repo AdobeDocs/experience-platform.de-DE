@@ -3,102 +3,261 @@ keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;Mixin;Mixin;Mix
 solution: Experience Platform
 title: Einschränkungen des XDM-Feldtyps
 topic: overview
-description: Eine Referenz für XDM-Feldtypeinschränkungen, einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren.
+description: Eine Referenz für Feldtypeinschränkungen im Experience Data Model (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: c9ea7471bb18c92443a5e45c14c8505ef3ccf30d
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 71%
+source-wordcount: '1079'
+ht-degree: 18%
 
 ---
 
 
 # XDM-Feldtypeinschränkungen
 
-Die XDM-Feldtypen, die Sie für Ihre Schema auswählen, beschränken, welche Datentypen diese Felder enthalten können. Dieses Dokument bietet einen Überblick über die einzelnen Kernfeldtypen, einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren, um verschiedene Einschränkungen zu erzwingen.
+In Experience Data Model-(XDM-)Schemas beschränkt der Feldtyp, welche Daten das Feld enthalten kann. Dieses Dokument bietet einen Überblick über die einzelnen Kernfeldtypen, einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren, um verschiedene Einschränkungen zu erzwingen.
 
 ## Erste Schritte
 
 Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schema-Komposition](./composition.md), um eine Einführung in XDM-Schemas, -Klassen und -Mixins zu erhalten.
 
-Wenn Sie Ihre eigenen Feldtypen definieren möchten, sollten Sie unbedingt mit dem [Schema Registry-Entwicklerhandbuch](../api/getting-started.md) Beginn haben, um zu erfahren, wie Mixins und Datentypen erstellt werden, die Ihre benutzerdefinierten Felder einschließen.
+Wenn Sie Ihre eigenen Feldtypen in der API definieren möchten, sollten Sie unbedingt mit dem [Schema Registry-Entwicklerhandbuch](../api/getting-started.md) Beginn haben, um zu erfahren, wie Mixins und Datentypen erstellt werden, die Ihre benutzerdefinierten Felder einschließen. Wenn Sie die Benutzeroberfläche für die Experience Platform verwenden, um Ihre Schema zu erstellen, lesen Sie das Handbuch zu [Definieren von Feldern in der Benutzeroberfläche](../ui/fields/overview.md), um zu erfahren, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Mixins und Datentypen definieren.
 
-## Zuordnen von XDM-Typen zu anderen Formaten
+## Basisstruktur und Beispiele
 
-Die folgende Tabelle beschreibt die Zuordnung zwischen jedem XDM-Typ (`meta:xdmType`) und anderen Serialisierungsformaten.
-
-| XDM-Typ<br>(meta:xdmType) | JSON<br>(JSON-Schema) | Parquet<br>(type/annotation) | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protobuf 2 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| string | Typ: Zeichenfolge | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Zeichenfolge | System.String | Zeichenfolge | string | Zeichenfolge | string |
-| number | Typ: Zahl | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Zahl | double | Dublette | dublette |
-| long | Typ: Ganzzahl<br>Maximum:2^53+1<br>Minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Nummer | long | Ganzzahl | int64 |
-| int | Typ: Ganzzahl<br>Maximum:2^31<br>Minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Nummer | int | Ganzzahl | int32 |
-| short | Typ: Ganzzahl<br>Maximum:2^15<br>Minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Short | System.Int16 | Nummer | int | Ganzzahl | int32 |
-| Byte | Typ: Ganzzahl<br>Maximum:2^7<br>Minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Zahl | int | Ganzzahl | int32 |
-| boolean | Typ: Boolescher Wert | BOOLEAN | BooleanType | java.lang.Boolean | Boolesch | System.Boolean | Boolesch | bool | Ganzzahl | Ganzzahl | bool |
-| date | Typ: Zeichenfolge<br>Format: Datum<br>(RFC 3339, Abschnitt 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | date | Ganzzahl<br>(unix millis) | int64<br>(unix millis) |
-| date-time | Typ: Zeichenfolge<br>Format: Datum/Uhrzeit<br>(RFC 3339, Abschnitt 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Zeichenfolge | timestamp | Ganzzahl<br>(unix millis) | int64<br>(unix Millis) |
-| map | object | ZUORDNEN kommentierter Gruppe<br><br>&lt;<span>key_type</span>> MUSS ZEICHENFOLGE sein<br><br>&lt;<span>value_type</span>> Typ der Zuordnungwerte | MapType<br><br>&quot;keyType&quot; MUSS StringType sein<br><br>&quot;valueType&quot; ist Typ der Zuordnungwerte. | java.util.Map | Map | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
-
-## Definieren von XDM-Feldtypen in der API {#define-fields}
-
-XDM-Schema werden mit den Standards [JSON-Schema](https://json-schema.org/) und den grundlegenden Feldtypen definiert, mit zusätzlichen Einschränkungen für Feldnamen, die von [!DNL Experience Platform] erzwungen werden. Mit der [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. XDM-Feldtypen werden durch das Attribut auf Feldebene, `meta:xdmType`, verfügbar gemacht.
+XDM basiert auf dem JSON-Schema, und deshalb erben XDM-Felder eine ähnliche Syntax, wenn sie ihren Typ definieren. Wenn Sie wissen, wie verschiedene Feldtypen im JSON-Schema dargestellt werden, können Sie die Basisbeschränkungen der einzelnen Typen erkennen.
 
 >[!NOTE]
 >
->`meta:xdmType` : Beim Meta-XDM-Typ handelt sich um einen systemgenerierten Wert. Daher müssen Sie diese Eigenschaft nicht zum JSON für Ihr Feld hinzufügen. Es empfiehlt sich, JSON-Schema-Typen (z. B. Zeichenfolge und Ganzzahl) mit den entsprechenden Min.-/Max.-Einschränkungen zu verwenden, wie in der nachstehenden Tabelle definiert.
+>Weitere Informationen zu JSON-Schemas und anderen zugrunde liegenden Technologien in Plattform-APIs finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md#json-schema).
 
-In der folgenden Tabelle sind die entsprechenden Formatierungen zur Definition von skalaren Feldtypen und spezifischeren Feldtypen mit optionalen Eigenschaften aufgeführt. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
+Die folgende Tabelle zeigt, wie jeder XDM-Typ im JSON-Schema dargestellt wird, zusammen mit einem Beispielwert, der dem Typ entspricht:
+
+<table>
+  <thead>
+    <tr>
+      <th>XDM-Typ</th>
+      <th>JSON-Schema</th>
+      <th>Beispiel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[!UICONTROL-Zeichenfolge]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{"type": "string"}</pre>
+      </td>
+      <td><code>"Platinum"</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL-Dublette]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{"type": "number"}</pre>
+      </td>
+      <td><code>12925.49</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Long]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{
+  "type": "integer",
+  "maximum": 9007199254740991,
+  "minimum": -9007199254740991
+}</pre>
+      </td>
+      <td><code>1478108935</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Integer]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{
+  "type": "integer",
+  "maximum": 2147483648,
+  "minimum": -2147483648
+}</pre>
+      </td>
+      <td><code>24906290</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Short]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{
+  "type": "integer",
+  "maximum": 32768,
+  "minimum": -32768
+}</pre>
+      </td>
+      <td><code>15781</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Byte]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{
+  "type": "integer",
+  "maximum": 128,
+  "minimum": -128
+}</pre>
+      </td>
+      <td><code>90</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL-Datum]*</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{
+  "type": "string",
+  "format": "date"
+}</pre>
+      </td>
+      <td><code>"2019-05-15"</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL DateTime]*</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{
+  "type": "string",
+  "format": "date-time"
+}</pre>
+      </td>
+      <td><code>"2019-05-15T20:20:39+00:00"</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Boolean]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+{"type": "string"}</pre>
+      </td>
+      <td><code>true</code></td>
+    </tr>
+  </tbody>
+</table>
+
+**Alle datumsformatierten Zeichenfolgen müssen dem ISO 8601-Standard ([RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)) entsprechen.*
+
+## Zuordnen von XDM-Typen zu anderen Formaten
+
+Die folgenden Abschnitte beschreiben, wie jeder XDM-Typ anderen gängigen Serialisierungsformaten zugeordnet wird:
+
+* [Parquet, Spark SQL und Java](#parquet)
+* [Scala, .NET und CosmosDB](#scala)
+* [MongoDB, Aerospike und Protobuf 2](#mongo)
+
+>[!IMPORTANT]
+>
+>Unter den in den Tabellen unten aufgeführten Standard-XDM-Typen ist auch der Typ [!UICONTROL Map] enthalten. Karten werden in Standard-Schemas verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel vernünftigerweise nicht in ein statisches Schema eingeschlossen werden können und als Datenwerte behandelt werden müssen.
+>
+>Kartenfelder sind für die Verwendung von Schemas der Industrie und des Anbieters reserviert und können daher nicht in von Ihnen definierten benutzerdefinierten Ressourcen verwendet werden. Die Aufnahme des Map-Typs in die folgenden Tabellen soll Ihnen nur bei der Bestimmung helfen, wie Sie Ihre vorhandenen Daten XDM zuordnen, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
+
+### Parquet, Spark SQL und Java {#parquet}
+
+| XDM-Typ | Parkett | Spark SQL | Java |
+| --- | --- | --- | --- |
+| [!UICONTROL Zeichenfolge] | Typ: `BYTE_ARRAY`<br>Anmerkung: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Double] | Typ: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Lang] | Typ: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Ganzzahl] | Typ: `INT32`<br>Anmerkung: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Kurz] | Typ: `INT32`<br>Anmerkung: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Byte] | Typ: `INT32`<br>Anmerkung: `INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL Datum] | Typ: `INT32`<br>Anmerkung: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL DateTime] | Typ: `INT64`<br>Anmerkung: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL Boolesch] | Typ: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Landkarte] | `MAP`-kommentierte Gruppe<br><br>(`<key-type>` muss  `STRING`sein) | `MapType`<br><br>(`keyType` muss  `StringType`) | `java.util.Map` |
+
+### Scala, .NET und CosmosDB {#scala}
+
+| XDM-Typ | Scala | .NET | CosmosDB |
+| --- | --- | --- | --- |
+| [!UICONTROL Zeichenfolge] | `String` | `System.String` | `String` |
+| [!UICONTROL Dublette] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Lang] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Ganzzahl] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Kurz] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
+| [!UICONTROL Datum] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Boolesch] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Landkarte] | `Map` | (Nicht angegeben) | `object` |
+
+### MongoDB, Aerospike und Protobuf 2 {#mongo}
+
+| XDM-Typ | MongoDB | Aerospike | Protobuf 2 |
+| --- | --- | --- | --- |
+| [!UICONTROL Zeichenfolge] | `string` | `String` | `string` |
+| [!UICONTROL Dublette] | `double` | `Double` | `double` |
+| [!UICONTROL Lang] | `long` | `Integer` | `int64` |
+| [!UICONTROL Ganzzahl] | `int` | `Integer` | `int32` |
+| [!UICONTROL Kurz] | `int` | `Integer` | `int32` |
+| [!UICONTROL Byte] | `int` | `Integer` | `int32` |
+| [!UICONTROL Datum] | `date` | `Integer`<br>(Unix Millisekunden) | `int64`<br>(Unix Millisekunden) |
+| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix Millisekunden) | `int64`<br>(Unix Millisekunden) |
+| [!UICONTROL Boolesch] | `bool` | `Integer`<br>(0/1 binär) | `bool` |
+| [!UICONTROL Landkarte] | `object` | `map` | `map<key_type, value_type>` |
+
+## Definieren von XDM-Feldtypen in der API {#define-fields}
+
+Alle XDM-Felder werden mit den standardmäßigen Einschränkungen [JSON-Schema](https://json-schema.org/) definiert, die für den jeweiligen Feldtyp gelten, mit zusätzlichen Einschränkungen für Feldnamen, die von [!DNL Experience Platform] erzwungen werden. Mit der Schema Registry API können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. XDM-Feldtypen werden durch das Attribut auf Feldebene, `meta:xdmType`, verfügbar gemacht.
+
+>[!NOTE]
+>
+>`meta:xdmType` ist ein vom System generierter Wert. Daher müssen Sie diese Eigenschaft nicht zum JSON für Ihr Feld hinzufügen, wenn Sie die API verwenden. Es empfiehlt sich, JSON-Schema-Typen (z. B. `string` und `integer`) mit den entsprechenden Min-/Max-Einschränkungen zu verwenden, wie in der folgenden Tabelle definiert.
+
+In der folgenden Tabelle sind die entsprechenden Formatierungen zur Definition verschiedener Feldtypen, einschließlich derjenigen mit optionalen Eigenschaften, aufgeführt. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
 
 Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung für [Erstellen einer Mischung](../api/mixins.md#create) oder [zum Erstellen eines Datentyps](../api/data-types.md#create) bereitgestellt wird.
 
 <table>
   <tr>
-    <th>Gewünschter Typ<br/>(meta:xdmType)</th>
-    <th>JSON<br/>(JSON-Schema)</th>
-    <th>Code-Beispiel</th>
+    <th>XDM-Typ</th>
+    <th>Optionale Eigenschaften</th>
+    <th>Beispiel</th>
   </tr>
   <tr>
-    <td>string</td>
-    <td>Typ: Zeichenfolge<br/><br/><strong>Optionale Eigenschaften:</strong><br/>
+    <td>[!UICONTROL-Zeichenfolge]</td>
+    <td>
       <ul>
-        <li>pattern</li>
-        <li>minLength</li>
-        <li>maxLength</li>
+        <li><code>pattern</code></li>
+        <li><code>minLength</code></li>
+        <li><code>maxLength</code></li>
       </ul>
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
             "type": "string",
             "pattern": "^[A-Z]{2}$",
             "maxLength": 2
-        }
-      </pre>
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>uri<br/>(xdmType:string)</td>
-    <td>Typ: Zeichenfolge<br/>Format: URI</td>
+    <td>[!UICONTROL-URI]</td>
+    <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "string",
           "format": "uri"
-        }
-      </pre>
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>enum<br/>(xdmType: string)</td>
-    <td>Typ: Zeichenfolge<br/><br/><strong>Optionale Eigenschaft:</strong><br/>
+    <td>[!UICONTROL Enum]</td>
+    <td>
       <ul>
-        <li>Standard</li>
+        <li><code>default</code></li>
+        <li><code>meta:enum</code></li>
       </ul>
     </td>
-    <td>Geben Sie mit „meta:enum“ Beschriftungen für kundenorientierte Optionen an:
+    <td>Eingeschränkte Enum-Werte werden unter dem Array <code>enum</code> bereitgestellt, während optionale kundenorientierte Beschriftungen für jeden Wert unter <code>meta:enum</code> bereitgestellt werden können:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "string",
           "enum": [
               "value1",
@@ -111,147 +270,133 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
               "value3": "Value 3"
           },
           "default": "value1"
-        }
-      </pre>
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>number</td>
-    <td>Typ: Zahl<br/>Minimum: ±2,23×10^308<br/>Maximum: ±1,80×10^308</td>
+    <td>[!UICONTROL Number]</td>
+    <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "number"
-        }
-      </pre>
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>long</td>
-    <td>Typ: Ganzzahl<br/>Maximum:2^53+1<br>Minimum:-2^53+1</td>
+    <td>[!UICONTROL Long]</td>
+    <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "integer",
           "minimum": -9007199254740992,
           "maximum": 9007199254740992
-        }
-      </pre>
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>int</td>
-    <td>Typ: Ganzzahl<br/>Maximum:2^31<br>Minimum:-2^31</td>
+    <td>[!UICONTROL Integer]</td>
+    <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "integer",
           "minimum": -2147483648,
           "maximum": 2147483648
-        }
-      </pre>
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>short</td>
-    <td>Typ: Ganzzahl<br/>Maximum:2^15<br>Minimum:-2^15</td>
+    <td>[!UICONTROL Short]</td>
+    <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "integer",
           "minimum": -32768,
           "maximum": 32768
-        }
-      </pre>
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>byte</td>
-    <td>Typ: Ganzzahl<br/>Maximum:2^7<br>Minimum:-2^7</td>
+    <td>[!UICONTROL Byte]</td>
+    <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "integer",
           "minimum": -128,
           "maximum": 128
-          }
-      </pre>
+  }</pre>
     </td>
   </tr>
   <tr>
-    <td>boolean</td>
-    <td><br/>Typ: Boolescher Wert<br/>{true, false}<br/><br/><strong>Optionale Eigenschaft:</strong><br/>
+    <td>[!UICONTROL Boolean]</td>
+    <td>
       <ul>
-        <li>Standard</li>
+        <li><code>default</code></li>
       </ul>
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "boolean",
           "default": false
-        }
-      </pre>
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>date</td>
-    <td>Typ: Zeichenfolge<br/>Format: Datum</td>
+    <td>[!UICONTROL-Datum]</td>
+    <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "string",
           "format": "date",
           "examples": ["2004-10-23"]
-        }
-      </pre>
-      date definiert durch <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, Abschnitt 5.6</a>, wobei "full-date" = date-fullyear "-" date-month "-" date-mday (YYYY-MM-DD)
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>date-time</td>
-    <td>Typ: Zeichenfolge<br/>Format: Datum/Uhrzeit</td>
+    <td>[!UICONTROL DateTime]</td>
+    <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "string",
           "format": "date-time",
           "examples": ["2004-10-23T12:00:00-06:00"]
-        }
-      </pre>
-      date-time definiert durch <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, Abschnitt 5.6</a>, wobei "date-time" = full-date "T" full-time:<br/>(YYYY-MM-DD'T'HH:MM:SS.SSSSX)
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>array</td>
-    <td>Typ: Array</td>
-    <td>items.type kann mit einem beliebigen Skalartyp definiert werden:
+    <td>[!UICONTROL-Array]</td>
+    <td></td>
+    <td>Ein Array mit einfachen Skalartypen (z. B. Zeichenfolgen):
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "array",
           "items": {
             "type": "string"
-          }
-        }
-      </pre>
-      Array von Objekten, die durch ein anderes Schema definiert werden:<br/>
+  }
+}</pre>
+      Ein Array von Objekten, die durch ein anderes Schema definiert werden:<br/>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "array",
-          "items": {
-            "$ref": "id"
-          }
-        }
-      </pre>
-      Dabei ist „id“ die {id} des Referenzschemas.
+"sampleField": {
+  "type": "array",
+  "Elemente": {
+    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
+  }
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>object</td>
-    <td>Typ: Objekt</td>
-    <td>properties.{field}.type kann mit einem beliebigen Skalartyp definiert werden:
+    <td>[!UICONTROL-Objekt]</td>
+    <td></td>
+    <td>Das <code>type</code>-Attribut jedes unter <code>properties</code> definierten Unterfelds kann mit einem beliebigen Skalartyp definiert werden:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "object",
           "properties": {
             "field1": {
@@ -259,54 +404,47 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
             },
             "field2": {
               "type": "number"
-            }
-          }
-        }
-      </pre>
-      Feld des Typs „Objekt“, das durch ein Referenz-Schema definiert wird:
+    }
+  }
+}</pre>
+      Objekttypfelder können durch Verweis auf den Datentyp <code>$id</code> definiert werden:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "object",
-          "$ref": "id"
-        }
-      </pre>
-      Dabei ist „id“ die {id} des Referenzschemas.
+"sampleField": {
+  "type": "object",
+  "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction"
+}</pre>
     </td>
   </tr>
   <tr>
-    <td>map</td>
-    <td>Typ: Objekt<br/><br/><strong>Hinweis:</strong><br/>Die Verwendung des Datentyps „map“ ist für die Verwendung durch Branchen- und Händlerschemas reserviert und steht nicht zur Verwendung in Mandantenfeldern zur Verfügung. Sie wird in Standardschemas verwendet, wenn Daten als Schlüssel dargestellt werden, die einem bestimmten Wert zugeordnet sind oder bei denen Schlüssel vernünftigerweise nicht in ein statisches Schema einbezogen werden können und als Datenwerte behandelt werden müssen.</td>
-    <td>Eine „map“ DARF KEINE Eigenschaften definieren. Es MUSS ein einzelnes "[!UICONTROL additionalProperties]"-Schema definieren, um die in der 'map' enthaltenen Werte zu beschreiben. Eine „map“ in XDM kann nur einen einzigen Datentyp enthalten. Werte können eine beliebige gültige XDM-Schema-Definition sein, einschließlich eines Arrays oder eines Objekts, oder als Verweis auf ein anderes Schema (über $ref).<br/><br/>Zuordnungsfeld mit Werten vom Typ „Zeichenfolge“:
+    <td>[!UICONTROL Map]</td>
+    <td></td>
+    <td>Eine Map <strong>darf keine Eigenschaften definieren. </strong> <strong>muss</strong> ein einzelnes <code>additionalProperties</code>-Schema definieren, um den Werttyp zu beschreiben, der in der Zuordnung enthalten ist (jede Zuordnung kann nur einen einzigen Datentyp enthalten). Werte können ein beliebiges gültiges XDM <code>type</code>-Attribut oder ein Verweis auf ein anderes Schema mit einem <code>$ref</code>-Attribut sein.<br/><br/>Ein Zuordnungsfeld mit Zeichenfolgentypwerten:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "object",
           "additionalProperties":{
             "type": "string"
-          }
-        }
-      </pre>
-    Zuordnungsfeld mit Werten als Array von Zeichenfolgen:
+  }
+}</pre>
+    Ein Zuordnungsfeld mit Zeichenfolgen-Arrays für Werte:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
+"sampleField": {
           "type": "object",
           "additionalProperties":{
             "type": "array",
             "items": {
               "type": "string"
-            }
-          }
-        }
-      </pre>
-    Zuordnungsfeld, das auf ein anderes Schema verweist:
+    }
+  }
+}</pre>
+    Ein Zuordnungsfeld, das auf einen anderen Datentyp verweist:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "object",
-          "additionalProperties":{
-            "$ref": "id"
-          }
-        }
-      </pre>
-      Dabei ist „id“ die {id} des Referenzschemas.
+"sampleField": {
+  "type": "object",
+  "additionalProperties":{
+    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
+  }
+}</pre>
     </td>
   </tr>
 </table>
