@@ -5,9 +5,9 @@ title: Handbuch zur Streaming-Segmentierung
 topic: ui guide
 description: Durch Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in die Plattform gelangen, was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Plattform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '802'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,9 @@ Die Streaming-Segmentierung für [!DNL Adobe Experience Platform] ermöglicht es
 
 >[!NOTE]
 >
->Streaming-Segmentierung kann nur zur Auswertung von Daten verwendet werden, die in Plattform gestreamt werden. Mit anderen Worten, Daten, die durch die Stapelverarbeitung erfasst werden, werden nicht durch Streaming-Segmentierung ausgewertet und werden zusammen mit dem nächtlich geplanten segmentierten Auftrag ausgewertet.
+>Streaming-Segmentierung kann nur zur Auswertung von Daten verwendet werden, die in Plattform gestreamt werden. Mit anderen Worten, Daten, die durch die Stapelverarbeitung erfasst werden, werden nicht durch Streaming-Segmentierung ausgewertet und werden zusammen mit dem nächtlich geplanten Segmentauftrag ausgewertet.
+>
+>Darüber hinaus können Segmente, die mit Streaming-Segmentierung ausgewertet werden, zwischen idealer und tatsächlicher Mitgliedschaft wechseln, wenn das Segment auf einem anderen Segment basiert, das mithilfe der Stapelsegmentierung bewertet wird. Beispiel: Wenn Segment A auf Segment B basiert und Segment B mithilfe der Stapelsegmentierung ausgewertet wird, da Segment B nur alle 24 Stunden aktualisiert wird, entfernt sich Segment A weiter von den tatsächlichen Daten, bis es mit der Aktualisierung Segment B erneut synchronisiert wird.
 
 ## Streaming-Segmentierungsarten für Abfragen
 
