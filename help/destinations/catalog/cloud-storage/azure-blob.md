@@ -3,10 +3,10 @@ keywords: Azurblauch;Blob-Ziel;s3;Azzurblende-Ziel
 title: Azurblauch-Verbindung
 description: Erstellen Sie eine Live-Ausgangs-Verbindung mit Ihrer Blue Blob-Datenspeicherung, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 10%
+source-wordcount: '602'
+ht-degree: 7%
 
 ---
 
@@ -30,7 +30,7 @@ Wenn Sie bereits über ein gültiges Blob-Ziel verfügen, können Sie den Rest d
 
 [!DNL Experience Platform] unterstützt das folgende Dateiformat, in das exportiert werden soll  [!DNL Blob]:
 
-- Trennzeichen-getrennte Werte (DSV): Die Unterstützung für DSV-formatierte Datendateien ist derzeit auf kommagetrennte Werte beschränkt. Die Unterstützung für allgemeine DSV-Dateien wird in Zukunft bereitgestellt. Weitere Informationen zu unterstützten Dateien finden Sie im Abschnitt zur Cloud-Datenspeicherung im Lernprogramm [Aktivieren von Zielen](../../ui/activate-destinations.md#esp-and-cloud-storage)
+- Trennzeichen-getrennte Werte (DSV): Die Unterstützung für DSV-formatierte Datendateien ist derzeit auf kommagetrennte Werte beschränkt. Die Unterstützung für allgemeine DSV-Dateien wird in Zukunft bereitgestellt. Weitere Informationen zu unterstützten Datenspeicherung finden Sie im Abschnitt Cloud- im Lernprogramm [Aktivieren von Zielen](../../ui/activate-destinations.md#esp-and-cloud-storage).
 
 ## Verbinden Sie Ihr Blob-Konto {#connect-destination}
 
@@ -38,15 +38,21 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an u
 
 Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie mit der Suchoption das gewünschte Ziel finden.
 
-Wählen Sie unter der Kategorie **[!UICONTROL Cloud-Datenspeicherung]** die Option **[!UICONTROL Blaue Blase-Datenspeicherung]**, gefolgt von **[!UICONTROL Aktivieren]**.
+Wählen Sie unter der Kategorie **[!UICONTROL Cloud-Datenspeicherung]** **[!UICONTROL Blaue Blase-Datenspeicherung]**, gefolgt von **[!UICONTROL Configure]**.
 
 ![Katalog](../../assets/catalog/cloud-storage/blob/catalog.png)
+
+>[!NOTE]
+>
+>Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
 Die Seite **[!UICONTROL Verbindung mit der Azurblauch-Datenspeicherung]** herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto {#new-account}
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im eingeblendeten Eingabebild die Verbindungszeichenfolge ein. Die Verbindungszeichenfolge, die für den Zugriff auf Daten in Ihrer Blob-Datenspeicherung erforderlich ist. Die [!DNL Blob]-Verbindungszeichenfolgen-Beginn mit: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im eingeblendeten Eingabebild die Verbindungszeichenfolge ein. Die Verbindungszeichenfolge ist erforderlich, um auf Daten in Ihrer Blob-Datenspeicherung zuzugreifen. Die [!DNL Blob]-Verbindungszeichenfolgen-Beginn mit: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+
+Weitere Informationen zum Konfigurieren der [!DNL Blob]-Verbindungszeichenfolge finden Sie unter [Verbindungszeichenfolge für ein &quot;Blaue Datenspeicherung&quot;-Konto](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in der Microsoft-Dokumentation.
 
 Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel **als Base64-kodierte Zeichenfolge geschrieben werden muss.**
 
@@ -60,7 +66,11 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Blob]-Konto, mit de
 
 ## Authentifizierung {#authentication}
 
-Die Seite **Authentifizierung** wird angezeigt. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung, den Ordnerpfad und den Container für Ihre Dateien ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Ziel erstellen]**.
+Die Seite **Authentifizierung** wird angezeigt. Geben Sie im eingeblendeten Eingabefeld einen Namen, eine optionale Beschreibung, den Ordnerpfad und den Container für Ihre Dateien ein.
+
+In diesem Schritt können Sie auch alle **[!UICONTROL Marketingaktionen]** auswählen, die für dieses Ziel gelten sollen. Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Ziel erstellen]**.
 
 ![Authentifizierung](../../assets/catalog/cloud-storage/blob/authentication.png)
 
