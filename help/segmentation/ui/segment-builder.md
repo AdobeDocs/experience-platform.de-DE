@@ -5,9 +5,9 @@ title: Handbuch zur Segmentaufbau-Benutzeroberfläche
 topic: ui guide
 description: 'Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen Rich-Workspace, mit dem Sie mit Profil-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '1928'
+source-wordcount: '1896'
 ht-degree: 45%
 
 ---
@@ -143,7 +143,7 @@ Wenn Sie **[!UICONTROL Container aufheben]** auswählen, wird der untergeordnete
 
 [!DNL Experience Platform]Mit können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die [!DNL Platform] verwenden, um zu bestimmen, wie die Daten priorisiert werden und welche Daten kombiniert werden, um ein Profil zu erstellen.
 
-Sie können eine Zusammenführungsrichtlinie auswählen, die Ihrem Marketingzweck für diese Audience entspricht, oder die standardmäßige Zusammenführungsrichtlinie verwenden, die von [!DNL Platform] bereitgestellt wird. Sie können verschiedene, für Ihre Organisation spezifische Zusammenführungsrichtlinien erstellen, einschließlich einer eigenen standardmäßigen Zusammenführungsrichtlinie. Eine schrittweise Anleitung zum Erstellen von Zusammenführungsrichtlinien für Ihre Organisation finden Sie in der Anleitung zum [Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche](../../profile/ui/merge-policies.md).
+Sie können eine Zusammenführungsrichtlinie auswählen, die Ihrem Marketingzweck für diese Audience entspricht, oder die standardmäßige Zusammenführungsrichtlinie verwenden, die von [!DNL Platform] bereitgestellt wird. Sie können verschiedene, für Ihre Organisation eindeutige Zusammenführungsrichtlinien erstellen, einschließlich einer eigenen standardmäßigen Zusammenführungsrichtlinie. Eine schrittweise Anleitung zum Erstellen von Zusammenführungsrichtlinien für Ihre Organisation finden Sie in der Anleitung zum [Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche](../../profile/ui/merge-policies.md).
 
 Um eine Richtlinie zum Zusammenführen für Ihre Segmentdefinition auszuwählen, wählen Sie auf der Registerkarte **[!UICONTROL Felder]** das Zahnradsymbol aus und wählen Sie dann im Dropdownmenü **[!UICONTROL Richtlinie zusammenführen]** die anzuwendende Richtlinie aus.
 
@@ -163,7 +163,7 @@ Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durc
 >
 > Audience-Schätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet; bei mehr als 20 Millionen Entitäten werden 5 % der Gesamtentitäten genutzt. Weiterführende Informationen zum Generieren von Segmentschätzungen finden Sie in der Anleitung zur Segmenterstellung im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
 
-## Nächste Schritte und zusätzliche Ressourcen {#next-steps}
+## Nächste Schritte {#next-steps}
 
 Der Segmentaufbau bietet einen umfassenden Arbeitsablauf, mit dem Sie marktfähige Audiencen aus [!DNL Real-time Customer Profile]-Daten isolieren können. Nach dem Lesen dieses Handbuchs sollten Sie jetzt Folgendes können:
 
@@ -173,16 +173,4 @@ Der Segmentaufbau bietet einen umfassenden Arbeitsablauf, mit dem Sie marktfähi
 - Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
 - Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
 
-Um mehr über [!DNL Segmentation Service] zu erfahren, lesen Sie bitte weiterhin die Dokumentation und ergänzen Sie Ihre Lernerfahrung, indem Sie sich die Videos unten ansehen. Weitere Informationen zu den anderen Teilen der [!DNL Segmentation Service]-Benutzeroberfläche finden Sie im [[!DNL Segmentation Service] Benutzerhandbuch](./overview.md)
-
->[!WARNING]
->
-> Die in den folgenden Videos angezeigte [!DNL Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
-
-**Erstellen eines Segments:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**Erstellen Sie ein dynamisches Segment:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+Um mehr über [!DNL Segmentation Service] zu erfahren, lesen Sie bitte weiterhin die Dokumentation und ergänzen Sie Ihre Lernerfahrung, indem Sie sich die entsprechenden Videos ansehen. Weitere Informationen zu den anderen Teilen der [!DNL Segmentation Service]-Benutzeroberfläche finden Sie im [[!DNL Segmentation Service] Benutzerhandbuch](./overview.md)
