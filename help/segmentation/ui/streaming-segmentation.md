@@ -5,9 +5,9 @@ title: Handbuch zur Streaming-Segmentierung
 topic: ui guide
 description: Durch Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in die Plattform gelangen, was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Plattform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
@@ -75,12 +75,6 @@ Weitere Informationen zur letzten Segmentbewertung finden Sie durch Auswahl der 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 Weitere Informationen zu Segmentdefinitionen finden Sie im vorherigen Abschnitt unter [Segmentdefinitionsdetails](#segment-details).
-
-## Videodemo zur Streaming-Segmentierung
-
-Das folgende Video soll Ihr Verständnis von Streaming-Segmentierung unterstützen. Es zeigt ein Beispiel für ein Kundenerlebnis, gefolgt von einem kurzen Überblick über die wichtigsten Funktionen in der [!DNL Platform]-Oberfläche.
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## Nächste Schritte
 
