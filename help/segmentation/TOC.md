@@ -1,19 +1,19 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform-Segmentdienst
+user-guide-title: Hilfe zum Adobe Experience Platform-Segmentierungs-Service
 breadcrumb-title: Anleitung zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Segmente und generieren Sie Audiences aus Ihren Echtzeit-Kundenprofildaten.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 80%
+source-wordcount: '152'
+ht-degree: 78%
 
 ---
 
 
-# Adobe Experience Platform-Segmentdienst {#segmentation}
+# Hilfe zum Adobe Experience Platform-Segmentierungs-Service {#segmentation}
 
 - [Übersicht über den Segmentierungsdienst](home.md)
 - [Segmentdatentypen](data-types.md)
@@ -32,6 +32,7 @@ ht-degree: 80%
    - [Segment-Dashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Streaming-Segmentierung](ui/streaming-segmentation.md)
+   - [Streaming-Segmentierung (Video)](video/streaming-segmentation-overview.md)
    - [Umgestaltung von Zeitbeschränkungen](ui/segment-refactoring.md)
 - [Anerkennen von Opt-outs](honoring-opt-outs.md)
 - [Segmentierung mehrerer Entitäten](multi-entity-segmentation.md)
@@ -51,6 +52,9 @@ ht-degree: 80%
    - [Sonstige Funktionen](pql/misc-functions.md)
 - Tutorials {#tutorials}
    - [Erstellen eines Segments](tutorials/create-a-segment.md)
+   - [Segment erstellen (Video)](video/create-segment.md)
+   - [Erstellen eines dynamischen Segments (Video)](video/create-a-dynamic-segment.md)
+   - [Erstellen eines Segments mit mehreren Entitäten (Video)](video/create-multi-entity-segments.md)
    - [Bewerten eines Segments](tutorials/evaluate-a-segment.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datenverwendungskonformität für Segmente](tutorials/governance.md)
