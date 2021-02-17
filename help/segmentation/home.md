@@ -5,9 +5,9 @@ title: Übersicht über den Segmentdienst
 topic: overview
 description: Erfahren Sie mehr über den Adobe Experience Platform Segmentation Service und seine Rolle im Plattform-Ökosystem.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1407'
 ht-degree: 8%
 
 ---
@@ -46,6 +46,8 @@ Informationen zum Erstellen von Segmentdefinitionen mit der API finden Sie im Le
 >In dem Ereignis, in dem ein Schema erweitert wird, müssen alle zukünftigen Uploads neu hinzugefügte Felder entsprechend aktualisieren. Weitere Informationen zum Anpassen von [!DNL Experience Data Model] (XDM) finden Sie im Tutorial [Schema-Editor](../xdm/tutorials/create-schema-ui.md).
 
 ## Segmente bewerten
+
+Die Plattform unterstützt derzeit zwei Methoden zur Bewertung von Segmenten: Streaming-Segmentierung und Stapelsegmentierung.
 
 ### Streaming-Segmentierung
 
