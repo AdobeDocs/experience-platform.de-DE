@@ -1,19 +1,17 @@
 ---
-title: Offer Decisioning-Übersicht
-seo-title: Offer Decisioning und Adobe Experience Platform Web SDK
-description: Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer Decisioning-Benutzeroberfläche oder -API erstellen.
-seo-description: Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer Decisioning-Benutzeroberfläche oder -API erstellen.
-keywords: angebot-Entscheidungsfindung;Entscheidungsfindung;Web-SDK;Plattform-Web-SDK;personalisierte Angebot;Angebote bereitstellen;Angebot-Versand;Angebot-Personalisierung;
+title: Verwenden von Offer Decisioning mit dem Platform Web SDK
+description: Das Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer Decisioning-Benutzeroberfläche oder -API erstellen.
+keywords: Angebot-Entscheidungsfindung;Entscheidungsfindung;Web-SDK;Plattform-Web-SDK;personalisierte Angebot;Angebote bereitstellen;Angebot-Versand;Angebot-Personalisierung;
 translation-type: tm+mt
-source-git-commit: 05049025bdfc67af4d811e90218bf6e2613fab51
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 15%
+source-wordcount: '849'
+ht-degree: 16%
 
 ---
 
 
-# [!DNL Offer Decisioning] Übersicht
+# Verwenden von Offer Decisioning mit dem Platform Web SDK
 
 >[!NOTE]
 >
@@ -65,7 +63,7 @@ Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie z
 Um Offer Decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführen:
 
 1. Adobe Experience Platform in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) aktiviert und das Kontrollkästchen &quot;Offer Decisioning&quot;
-   ![angebot-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
+   ![Angebot-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 2. Befolgen Sie die Anweisungen zum Installieren des SDK](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de) installiert werden. [ Hier finden Sie eine [Schnellanleitung zum Plattformstart](https://docs.adobe.com/content/help/de-DE/launch/using/intro/get-started/quick-start.html)).
 3. [Konfigurieren Sie das ](../../fundamentals/configuring-the-sdk.md) SDKfor Offer Decisioning. Weitere Offer Decisioning-spezifische Schritte finden Sie unten.
    * Eigenständiges installiertes SDK
