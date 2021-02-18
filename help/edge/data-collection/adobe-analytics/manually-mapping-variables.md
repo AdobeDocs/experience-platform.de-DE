@@ -1,14 +1,13 @@
 ---
-title: Manuelles Zuordnen von Variablen in Adobe Analytics
-seo-title: Manuelles Zuordnen von Variablen in Adobe Analytics mit Web SDK
-description: Manuelles Zuordnen von Variablen zu Adobe Analytics mithilfe von Verarbeitungsregeln
+title: Manuelles Zuordnen von Adobe Analytics-Variablen im Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mithilfe der Verarbeitungsregeln im Experience Platform Web SDK Variablen manuell Adobe Analytics zuordnen.
 seo-description: Manuelles Zuordnen von Variablen zu Adobe Analytics mithilfe von Verarbeitungsregeln mit Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;contextData;Processing rules;rules;xdm;Schema;
 translation-type: tm+mt
-source-git-commit: 206b5addd6baf5a120b469b21313ee86ac1fe53b
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 34%
+source-wordcount: '405'
+ht-degree: 33%
 
 ---
 
