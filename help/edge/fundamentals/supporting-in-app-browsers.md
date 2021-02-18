@@ -1,14 +1,12 @@
 ---
-title: Unterstützung von In-App-Browsern
-seo-title: Unterstützung von In-App-Browsern mit dem Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie In-App-Browser mit dem Experience Platform Web SDK unterstützen
-seo-description: Erfahren Sie, wie Sie In-App-Browser mit dem Experience Platform Web SDK unterstützen
+title: Unterstützung von In-App-Browsern mit dem Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie In-App-Browser mit dem Adobe Experience Platform Web SDK unterstützen.
 keywords: In-App-Browser;Browser;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 86%
+source-wordcount: '112'
+ht-degree: 66%
 
 ---
 
