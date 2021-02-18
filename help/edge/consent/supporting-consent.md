@@ -1,19 +1,17 @@
 ---
-title: Unterstützen von Zustimmung
-seo-title: Unterstützen der Zustimmungseinstellung des Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
-seo-description: Erfahren Sie, wie Sie mit dem Experience Platform Web SDK die Zustimmungseinstellungen unterstützen.
+title: Unterstützende Voreinstellungen für die Zustimmung des Kunden mit dem Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie die Voreinstellungen für die Zustimmung mit dem Adobe Experience Platform Web SDK unterstützen.
 keywords: approval;defaultConsent;default approval;setConsent;Profil Privacy Mixin;Experience Ereignis Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 62%
+source-wordcount: '760'
+ht-degree: 58%
 
 ---
 
 
-# Unterstützen von Zustimmung
+# Unterstützende Voreinstellungen für die Kundengenehmigung
 
 Um die Privatsphäre Ihres Nutzers zu respektieren, sollten Sie die Zustimmung des Nutzers einholen, bevor Sie dem SDK die Verwendung benutzerspezifischer Daten für bestimmte Zwecke gestatten. Das SDK erlaubt es derzeit nur Nutzern, alle Zwecke ein- oder auszuschalten, in Zukunft möchte Adobe jedoch eine genauere Kontrolle über bestimmte Zwecke ermöglichen.
 
@@ -82,7 +80,7 @@ Da der Nutzer sich für eine Abmeldung entschieden hat, werden Promises, die von
 >
 >Derzeit unterstützt das SDK nur den `general`-Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, bietet die aktuelle Implementierung nur die Alles-oder-Nichts-Methode zur Teilnahme.  Dies gilt nur für Adobe Experience Platform [!DNL Web SDK]- und NICHT für andere JavaScript-Bibliotheken der Adobe.
 
-## Übermittlung von Voreinstellungen für die Zustimmung über den IAB-TCF-Standard
+## Übermittlung von Präferenzen für die Zustimmung über den IAB-TCF-Standard
 
 Das SDK unterstützt die Aufzeichnung von Voreinstellungen für die Zustimmung eines Benutzers, die über den IAB-Standard (Interactive Advertising Bureau Europe) Transparency and Consent Framework (TCF) bereitgestellt werden. Die Zeichenfolge für die Einwilligung kann mit demselben Befehl wie oben festgelegt werden:`setConsent`
 
