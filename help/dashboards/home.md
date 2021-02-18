@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Experience Platform Dashboard
+title: Einführung in die Dashboards der Experience Platform
 topic: overview
 type: Documentation
-description: 'Adobe Experience Platform bietet mehrere Dashboard zur Ansicht wichtiger Informationen über die Daten Ihres Unternehmens, wie sie bei täglichen Schnappschüssen erfasst werden. '
+description: 'Lernen Sie mehrere Dashboard in Adobe Experience Platform kennen, um wichtige Informationen zu den Daten Ihres Unternehmens, wie sie bei täglichen Schnappschüssen erfasst werden, Ansicht. '
 translation-type: tm+mt
-source-git-commit: 5d33b8db91491ec5d7f45b3ebe3067cd382d9d46
+source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 3%
