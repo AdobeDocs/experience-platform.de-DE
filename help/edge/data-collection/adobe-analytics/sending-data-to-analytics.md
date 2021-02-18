@@ -1,13 +1,11 @@
 ---
-title: Seiten- und Linktracking mit Adobe Analytics
-seo-title: Linktracking mit Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
-seo-description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
+title: Senden von Daten an Adobe Analytics mit dem Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Daten mit dem Adobe Experience Platform Web SDK an Adobe Analytics gesendet werden.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page-Ansichten;Link-Verfolgung;Links;track-Links;clickCollection;click-Auflistung;
 translation-type: tm+mt
-source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
