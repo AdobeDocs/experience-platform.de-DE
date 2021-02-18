@@ -1,19 +1,17 @@
 ---
-title: Rendern von personalisiertem Inhalt
-seo-title: Adobe Experience Platform Web SDK – Rendern von personalisiertem Inhalt
-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
-seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK rendern
+title: Rendern von personalisierten Inhalten mit dem Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Adobe Experience Platform Web SDK wiedergeben.
 keywords: personalization;renderDecision;sendEvent;DecisionScopes;result.Decision;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 23%
+source-wordcount: '230'
+ht-degree: 10%
 
 ---
 
 
-# Übersicht über die Optionen zur Personalisierung
+# Rendern von personalisiertem Inhalt
 
 Adobe Experience Platform [!DNL Web SDK] unterstützt die Abfrage der Personalisierungslösungen bei der Adobe, einschließlich Adobe Target. Es gibt zwei Arten der Personalisierung: Abrufen von Inhalten, die automatisch wiedergegeben werden können, und von Inhalten, die vom Entwickler wiedergegeben werden müssen. Das SDK bietet außerdem Funktionen für [Flicker](../personalization/manage-flicker.md) verwalten.
 
