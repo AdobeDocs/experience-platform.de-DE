@@ -1,19 +1,18 @@
 ---
-title: Abrufen der Experience Cloud-ID
-seo-title: Adobe Experience Platform Web SDK Experience Cloud-ID abrufen
-description: Erfahren Sie, wie Sie die Adobe Experience Cloud-ID abrufen.
+title: Abrufen von Experience Cloud-IDs mit dem Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Adobe Experience Cloud-IDs (ECIDs) abrufen.
 seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud-ID abrufen.
 keywords: Identität;Erstanbieter-Identität;Identitätsdienst;Drittanbieter-Identität;ID-Migration;Besucher-ID;Drittanbieter-Identität;Drittanbieter-CookiesEnabled;idMigrationEnabled;getIdentity;Syncing-Identitäten;syncIdentity;sendEvent;identityMap;primary;ecid;Identity-Namensraum;Namensraum-ID;authenticationState;HashEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '924'
 ht-degree: 3%
 
 ---
 
 
-# Identität - Abrufen der Experience Cloud-ID
+# Abrufen von Adobe Experience Cloud-IDs
 
 Adobe Experience Platform Web SDK verwendet [Adobe Identity Service](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige ID verfügt, die auf dem Gerät beibehalten wird, damit die Aktivität zwischen den Seiten miteinander verknüpft werden kann.
 
