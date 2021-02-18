@@ -1,13 +1,11 @@
 ---
 title: Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK
-seo-title: Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK
-description: Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK
-seo-description: Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK
+description: Erfahren Sie mehr über die Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK.
 keywords: Erstanbieterdomäne;CNAME;Schema;Schema erstellen;Start;aep-Web-SDK-Erweiterung;Erweiterung;Konfigurations-ID;Konfigurationstool;Datenelement;Datenelement erstellen;XDM-Objekt;sendEvent;Ereignis senden;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 4%
 
 ---
