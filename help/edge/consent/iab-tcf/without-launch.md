@@ -1,18 +1,17 @@
 ---
-title: Verwenden von IAB TCF 2.0 ohne Experience Platform Launch
-seo-title: Einrichten der IAB TCF 2.0-Zustimmung mit Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit dem Adobe Experience Platform Web SDK einrichten.
+title: IAB TCF 2.0-Unterstützung mithilfe des Adobe Experience Platform Web SDK integrieren
+description: Erfahren Sie, wie Sie die IAB TCF 2.0-Unterstützung für Ihre Website ohne Verwendung von Adobe Experience Platform Launch einrichten.
 seo-description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit dem Adobe Experience Platform Web SDK einrichten.
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
 
 
-# Verwenden von IAB TCF 2.0 mit der AEP Web SDK-Erweiterung
+# Integrieren der IAB TCF 2.0-Unterstützung in das Platform Web SDK
 
 In diesem Handbuch wird gezeigt, wie das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0), ohne Verwendung von Experience Platform Launch in das Adobe Experience Platform Web SDK integriert werden kann. Eine Übersicht zur Integration in IAB TCF 2.0 finden Sie im Abschnitt [overview](./overview.md). Eine Anleitung zur Integration in Experience Platform Launch finden Sie im Handbuch [IAB TCF 2.0 für Experience Platform Launch](./with-launch.md).
 
@@ -106,7 +105,7 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 In diesem Beispiel werden die Informationen zur Einwilligung für die TCF-API abgerufen und dann ein Ereignis mit den dem XDM-Schema hinzugefügten Informationen zur Einwilligung gesendet. Informationen zu den [Tracking-Ereignissen](../../fundamentals/tracking-events.md) finden Sie im Handbuch `sendEvent`-Befehlsoptionen.
 
-Die andere Möglichkeit, die Einwilligungsinformationen jeder Anforderung hinzuzufügen, ist der `onBeforeEventSend`-Rückruf. Weitere Informationen dazu finden Sie im Abschnitt [Globales Ändern von Ereignissen](../../fundamentals/tracking-events.md#modifying-events-globally) in der Dokumentation zu Tracking-Ereignissen.
+Die andere Möglichkeit, die Einwilligungsinformationen jeder Anforderung hinzuzufügen, ist der `onBeforeEventSend`-Rückruf. Weitere Informationen dazu finden Sie im Abschnitt [Globale Änderungen an Ereignissen](../../fundamentals/tracking-events.md#modifying-events-globally) in der Dokumentation zu Tracking-Ereignissen.
 
 ## Nächste Schritte
 
