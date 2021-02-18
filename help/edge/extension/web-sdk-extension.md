@@ -1,18 +1,16 @@
 ---
-title: Adobe Experience Platform Web SDK-Erweiterung
-seo-title: Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch
-description: Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch
-seo-description: Adobe Experience Platform Web SDK-Erweiterung Adobe Experience Platform Launch
+title: Adobe Experience Platform Web SDK-Erweiterung Übersicht
+description: Weitere Informationen zur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 58%
+source-wordcount: '645'
+ht-degree: 55%
 
 ---
 
 
-# Adobe Experience Platform Web SDK Extension for Platform Launch
+# Übersicht über die Adobe Experience Platform Web SDK-Erweiterung
 
 Die Adobe Experience Platform Web SDK Extension sendet Daten aus Webeigenschaften über das Adobe Experience Platform Edge Network an das Adobe Experience Cloud. Die Adobe Experience Platform Web SDK-Erweiterung ermöglicht das Streamen von Daten zu Platform, die Synchronisierung von Identitäten, das Opt-in und die automatische Erfassung von Kontextdaten.
 
@@ -65,7 +63,7 @@ Die Erweiterung erfasst automatisch Informationen zum Kontext der Anfrage (z.. B
 
 - **[!UICONTROL web]**  - Details zur Webseite wie URL, Werber usw.
 - **[!UICONTROL device]**  - Details zum Gerät, z. B. Bildschirmausrichtung, Bildschirmhöhe und Bildschirmbreite.
-- **[!UICONTROL umgebung]**  - Informationen zur Computing-Umgebung (Browser, Verbindung usw.)
+- **[!UICONTROL Umgebung]**  - Informationen zur Computing-Umgebung (Browser, Verbindung usw.)
 - **[!UICONTROL location]**  - Begrenzte Informationen zum Standort des Benutzers
 
 ## Nächste Schritte
