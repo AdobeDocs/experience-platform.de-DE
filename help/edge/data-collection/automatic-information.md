@@ -1,21 +1,19 @@
 ---
-title: Automatisch erfasste Informationen
-seo-title: Informationen, die automatisch vom Adobe Experience Platform Web SDK erfasst werden
-description: Beschreibung der von Adobe Experience Cloud SDK automatisch erfassten Informationen
-seo-description: Beschreibung der von Adobe Experience Cloud SDK automatisch erfassten Informationen
+title: Automatisch erfasste Informationen im Adobe Experience Platform Web SDK
+description: Eine Übersicht über alle Informationen, die das Adobe Experience Platform SDK automatisch erfasst.
 keywords: Informationen erfassen;Kontext;konfigurieren;Gerät;Bildschirmhöhe;Bildschirmausrichtung;Bildschirmbreite;Bildschirmbreite;Umgebung;ViewportHeight;Viewport-Höhe;Viewport-Breite;Viewport-Breite;Viewport-Breite;Browserdetails;Browserdetails;Implementierungsdetails;Name;Version;OrtContext;localTime;localTimeOffset;LocalTimeOffset Local TimeZone Offset;timestamp;web;url;webPageDetails;Webseitendetails;webReferrer;web Werber;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 74%
+source-wordcount: '422'
+ht-degree: 73%
 
 ---
 
 
 # Automatisch erfasste Informationen
 
-Adobe Experience Platform Web SDK sammelt eine Reihe von Informationen automatisch ohne spezielle Konfiguration. Diese Informationen können jedoch bei Bedarf mit der `context`-Option im `configure`-Befehl deaktiviert werden. Siehe [Konfigurieren des SDK](../fundamentals/configuring-the-sdk.md). Nachstehend eine Liste dieser Informationen. Der Name in Klammern gibt die Zeichenfolge an, die beim Konfigurieren des Kontexts verwendet wird.
+Das Adobe Experience Platform Web SDK sammelt eine Reihe von Informationen automatisch ohne spezielle Konfiguration. Diese Informationen können jedoch bei Bedarf mit der `context`-Option im `configure`-Befehl deaktiviert werden. Siehe [Konfigurieren des SDK](../fundamentals/configuring-the-sdk.md). Nachstehend eine Liste dieser Informationen. Der Name in Klammern gibt die Zeichenfolge an, die beim Konfigurieren des Kontexts verwendet wird.
 
 ## Gerät (`device`)
 
