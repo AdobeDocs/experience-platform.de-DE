@@ -1,19 +1,17 @@
 ---
-title: Ausführen von Befehlen
-seo-title: Ausführen von Adobe Experience Platform Web SDK-Befehlen
+title: Adobe Experience Platform Web SDK-Befehle ausführen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
-seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 keywords: Ausführen von Befehlen;commandName;Promises;getLibraryInfo;response-Objekte;Zustimmung;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 73%
+source-wordcount: '417'
+ht-degree: 70%
 
 ---
 
 
-# Ausführen von Befehlen
+# Befehle ausführen
 
 Nachdem der Basis-Code auf Ihrer Web-Seite implementiert wurde, können Sie mit der Ausführung von Befehlen mit dem SDK beginnen. Sie müssen nicht warten, bis die externe Datei (legierte.js) vom Server geladen wird, bevor Sie Befehle ausführen. Wenn das SDK noch nicht fertig geladen wurde, werden Befehle in die Warteschlange gestellt und so bald wie möglich vom SDK verarbeitet.
 
