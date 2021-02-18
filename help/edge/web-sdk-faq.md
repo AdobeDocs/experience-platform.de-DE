@@ -1,20 +1,18 @@
 ---
-title: Häufig gestellte Fragen zum Web SDK
-seo-title: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
-description: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
-seo-description: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
+title: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
+description: Erhalten Sie Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Web SDK.
 translation-type: tm+mt
-source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1808'
-ht-degree: 2%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
 
 # Häufig gestellte Fragen 
 
-Diese häufig gestellten Fragen enthalten Fragen zur Adobe Web SDK.
+Dieses Handbuch enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Web SDK.
 
 ## Was ist das Adobe Experience Platform Web SDK?
 
@@ -138,7 +136,7 @@ Ja, das Adobe Experience Platform Web SDK bietet eine Funktion zur Identitätsmi
 
 Nein. Sie können die Datei `alloy.js` selbst herunterladen.
 
-Allerdings:
+Beachten Sie jedoch Folgendes:
 
 * Adobe Experience Platform Web SDK erfordert eine so genannte Experience Edge-Konfigurations-ID, damit das Edge-Netzwerk den Stream identifizieren und bestimmen kann, was mit den Daten zu tun ist. Diese ID wird in Experience Platform Launch erstellt. Dies bedeutet nicht, dass Sie Experience Platform Launch zum Erstellen von Eigenschaften oder Bereitstellen des JavaScript-Codes verwenden müssen, Sie müssen jedoch Experience Platform Launch verwenden, um eine Konfigurations-ID zu erstellen.
 
