@@ -1,14 +1,12 @@
 ---
-title: Versionshinweise zum Adobe Experience Platform Web SDK
-seo-title: Versionshinweise zum Adobe Experience Platform Web SDK
-description: Versionshinweise zum Adobe Experience Platform Web SDK.
-seo-description: Versionshinweise zum Adobe Experience Platform Web SDK.
+title: Versionshinweise zum Adobe Experience Platform Web-SDK
+description: Die neuesten Versionshinweise für das Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise
 translation-type: tm+mt
-source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 14%
+source-wordcount: '223'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +15,7 @@ ht-degree: 14%
 
 ## Version 2.3.0
 
-* Neue nonce-Unterstützung, um strengere Sicherheitsrichtlinien für Inhalte zu ermöglichen.
+* Neue nonce-Unterstützung, um strengere Content-Sicherheitsrichtlinien zu ermöglichen.
 * Unterstützung der Personalisierung für Einzelseitenanwendungen hinzugefügt.
 * Verbesserte Kompatibilität mit anderen On-Page-JavaScript-Code, der `window.console`-APIs überschreiben kann.
 * Fehlerbehebung: `sendBeacon` wurde nicht verwendet, wenn `documentUnloading` auf `true` gesetzt wurde oder wenn Link-Klicks automatisch verfolgt wurden.
