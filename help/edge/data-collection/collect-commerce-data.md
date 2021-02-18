@@ -1,19 +1,17 @@
 ---
-title: Produkte
-seo-title: Unterstützen von Produkten mit Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
-seo-description: Erfahren Sie, wie Sie mit Experience Platform Web SDK Daten hinzufügen können, wenn Sie über Produkte oder einen Warenkorb verfügen
-keywords: products;commerce;actions;measure;order;cartAbandons;checkouts;productListAdds;productListOpen;productListRemoval;productListReöffnings;productListViews;productViews;purchase;saveForLaters;currencyCode;PaymentAmount;PaymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
+title: Erfassen von Commerce- und Produktinformationen mithilfe des Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Produktdaten oder Warenkorb hinzufügen.
+keywords: products;commerce;actions;measure;order;cartAbandons;checkouts;productListAdds;productListOpen;productListRemoval;productListReöffnings;productListViews;productViews;purchase;saveForLaters;currencyCode;PaymentAmount;PaymentType;transactionID;priceTotal;purchaseID;purchaseNumber;
 translation-type: tm+mt
-source-git-commit: c34cd52301d812655c85d4e1bca42049204f9403
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 97%
+source-wordcount: '1321'
+ht-degree: 95%
 
 ---
 
 
-# Erfassen von Handel und Produkten
+# Erfassen von Handels- und Produktinformationen
 
 Wenn Sie Produkte auf Ihrer Site haben, ist dies ein Standardsatz, den Sie möglicherweise senden möchten, um die meisten Funktionen von Adobe zu aktivieren. Dies ist nur ein Vorschlag, Sie verfügen damit jedoch von Anfang an über einen sehr starken Datensatz.
 
