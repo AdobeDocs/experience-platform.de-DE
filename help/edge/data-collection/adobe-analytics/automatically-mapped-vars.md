@@ -1,13 +1,12 @@
 ---
-title: Variablen in Adobe Analytics automatisch zugeordnet
-seo-title: Variablen in Adobe Analytics mit Adobe Experience Platform Web SDK automatisch zugeordnet
+title: Automatisch zugeordnete Adobe Analytics-Variablen im Adobe Experience Platform Web SDK
 description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Experience Platform Web SDK zugeordnet werden.
-seo-description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Experience Platform Web SDK zugeordnet werden.
+seo-description: Erfahren Sie, welche Variablen in Adobe Analytics mit dem Adobe Experience Platform Web SDK automatisch zugeordnet werden.
 keywords: adobe analytics;variables;analytics;automate map;automatisch zugeordnet;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '681'
 ht-degree: 35%
 
 ---
@@ -15,25 +14,25 @@ ht-degree: 35%
 
 # Variablen werden automatisch in [!DNL Analytics] zugeordnet
 
-Nachstehend finden Sie eine Liste von Variablen, die Adobe Experience Platform Edge Network automatisch [!DNL Analytics] zuordnet.
+Nachfolgend finden Sie eine Liste von Variablen, die Adobe Experience Platform Edge Network automatisch Adobe Analytics zuordnet.
 
 | XDM-Feldpfad | [!DNL Analytics Query String] / HTTP-Header | Beschreibung |
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | AppMeasurement-Kontextdatenzuordnung `c.a.appid`. |
 | `application.launches.value` | `c.a.launches` | AppMeasurement-Kontextdatenzuordnung `c.a.launches`. |
-| `commerce.checkouts.id` | `events` | `scCheckout` ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.checkouts.id` | `events` | `scCheckout` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
 | `commerce.checkouts.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_CHECKOUT unter Verwendung des Trennzeichens `,`. |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement-Abfrageparameter, CURRENCY-Zuordnung. |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement Abfrageparameter, PURCHASEID-Zuordnung. |
-| `commerce.productListAdds.id` | `events` | `scAdd` ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListAdds.id` | `events` | `scAdd` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
 | `commerce.productListAdds.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_HINZUFÜGEN unter Verwendung des Trennzeichens `,`. |
-| `commerce.productListOpens.id` | `events` | `scOpen` ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListOpens.id` | `events` | `scOpen` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
 | `commerce.productListOpens.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_OPEN unter Verwendung des Trennzeichens `,`. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
 | `commerce.productListRemovals.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_REMOVE unter Verwendung des Trennzeichens `,`. |
-| `commerce.productListViews.id` | `events` | `scView` ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListViews.id` | `events` | `scView` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
 | `commerce.productListViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der KonversionsCOMMERCE_SC_ANSICHT unter Verwendung des Trennzeichens `,`. |
-| `commerce.productViews.id` | `events` | `prodView` ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productViews.id` | `events` | `prodView` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
 | `commerce.productViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit KonversionsCOMMERCE_Referrer_ANSICHT unter Verwendung des Trennzeichens `,`. |
 | `commerce.purchases.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit KonversionsCOMMERCE_PURCHASE unter Verwendung des Trennzeichens `,`. |
 | `device.colorDepth` | `c` | AppMeasurement-Abfrageparameter, C_COLOR-Zuordnung. |
