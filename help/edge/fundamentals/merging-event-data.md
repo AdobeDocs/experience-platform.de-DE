@@ -1,19 +1,17 @@
 ---
-title: Zusammenführen von Ereignisdaten
-seo-title: Zusammenführen von Adobe Experience Platform Web SDK-Ereignisdaten
+title: Ereignis-Daten im Adobe Experience Platform Web SDK zusammenführen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisdaten zusammenführen
-seo-description: Erfahren Sie, wie Sie Experience Platform Web SDK-Ereignisdaten zusammenführen
 keywords: merge;Ereignis data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Zusammenführungs-ID-Versprechen;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 52%
+source-wordcount: '464'
+ht-degree: 48%
 
 ---
 
 
-# Zusammenführen von Ereignisdaten
+# Ereignis zusammenführen
 
 >[!IMPORTANT]
 >
