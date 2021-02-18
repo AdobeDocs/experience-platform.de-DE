@@ -1,18 +1,16 @@
 ---
-title: Verwenden von IAB TCF 2.0 mit Experience Platform Launch
-seo-title: Einrichten der IAB TCF 2.0-Zustimmung mit Adobe Experience Platform Launch und Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit Adobe Experience Platform Launch und Adobe Experience Platform Web SDK einrichten.
-seo-description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit Adobe Experience Platform Launch und Adobe Experience Platform Web SDK einrichten.
+title: Integration der IAB TCF 2.0-Unterstützung mithilfe von Platform Launch und der Platform Web SDK Extension
+description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit Adobe Experience Platform Launch und der Adobe Experience Platform Web SDK-Erweiterung einrichten.
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
 
 
-# Verwenden von IAB TCF 2.0 mit Experience Platform Launch und der AEP Web SDK-Erweiterung
+# Integrieren Sie die IAB TCF 2.0-Unterstützung mithilfe von Platform Launch und der Platform Web SDK-Erweiterung.
 
 Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). Dieses Handbuch zeigt Ihnen, wie Sie eine Adobe Experience Platform Launch-Eigenschaft zum Senden von IAB TCF 2.0-Einwilligungsinformationen an die Adobe mithilfe der AEP Web SDK Extension for Experience Platform Launch einrichten.
 
