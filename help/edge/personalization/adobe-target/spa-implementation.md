@@ -1,19 +1,17 @@
 ---
-title: 'Adobe Target und Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform Web SDK und Verwendung von Adobe Target
-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
-seo-description: Erfahren Sie, wie Sie personalisierte Inhalte mit Experience Platform Web SDK mit Adobe Target wiedergeben
-keywords: zielgruppe;adobe-Zielgruppe;xdm-Ansichten ansichten;Einzelseitenanwendungen;SPA;SPA Lebenszyklus;Clientseitige;AB-Tests;AB;Erlebnis-Targeting;XT;VEC
+title: Implementierung von Einzelseitenanwendungen für das Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie eine Implementierung des Adobe Experience Platform Web SDK mit Adobe Target für eine einseitige Anwendung (SPA) erstellen.
+keywords: Zielgruppe;adobe-Zielgruppe;xdm-Ansichten Ansichten;Einzelseitenanwendungen;SPA;SPA Lebenszyklus;Clientseitige;AB-Tests;AB;Erlebnis-Targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 12%
 
 ---
 
 
-# Implementieren von Einzelseiten-Apps
+# Implementierung von Einzelseitenanwendungen
 
 Adobe Experience Platform Web SDK bietet umfassende Funktionen, mit denen Ihr Unternehmen Personalisierungen auf clientseitigen Technologien der nächsten Generation, wie z. B. Einzelseitenanwendungen (SPA), durchführen kann.
 
@@ -33,7 +31,7 @@ Die Verwendung des Adobe Experience Platform Web SDK für Einzelseitenanwendunge
 
 ## XDM-Ansichten und Einzelseitenanwendungen
 
-Der Adobe Target VEC for SPA nutzt das Konzept der Ansichten: eine logische Gruppe von visuellen Elementen, die zusammen ein SPA Erlebnis bilden. Eine Einzelseitenanwendung kann daher aufgrund von Benutzerinteraktionen als Übergang durch Ansichten und nicht als URLs betrachtet werden. Eine Ansicht umfasst in der Regel eine ganze Site oder eine Gruppe visueller Elemente innerhalb einer Site.
+Der Adobe Target VEC for SPA nutzt das Konzept der Ansichten: eine logische Gruppe von visuellen Elementen, die zusammen ein SPA Erlebnis bilden. Eine Einzelseitenanwendung kann daher als Übergang durch Ansichten und nicht als URLs betrachtet werden, basierend auf Benutzerinteraktionen. Eine Ansicht umfasst in der Regel eine ganze Site oder eine Gruppe visueller Elemente innerhalb einer Site.
 
 Zur weiteren Erläuterung der Ansichten verwendet das folgende Beispiel eine hypothetische Online-E-Commerce-Website, die in React implementiert ist, um Beispielslösungen zu untersuchen.
 
