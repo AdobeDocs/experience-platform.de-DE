@@ -19,7 +19,7 @@ In diesem Dokument wird beschrieben, wie Sie mit Datenschutzaufträgen mit API-A
 
 >[!NOTE]
 >
->Wenn Sie versuchen, Zustimmungs- oder Abmeldeanforderungen von Kunden zu verwalten, lesen Sie das [Endpunkt-Handbuch ](./consent.md).
+>Wenn Sie versuchen, Zustimmungs- oder Abmeldeanforderungen von Kunden zu verwalten, lesen Sie das [Endpunkthandbuch ](./consent.md).
 
 ## Alle Aufträge auflisten {#list}
 
