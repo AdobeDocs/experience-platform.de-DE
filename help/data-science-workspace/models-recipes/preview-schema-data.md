@@ -32,7 +32,7 @@ Nach erfolgreichem Abschluss des Bootstrap-Skripts aus dem Tutorial zum [Erstell
 
 ## Nächste Schritte
 
-Sie haben nun mit dem bereitgestellten Bootstrap-Skript erfolgreich Musterdaten zum Einzelhandelsverkauf in [!DNL Experience Platform] erfasst.
+Sie haben nun mit dem bereitgestellten Bootstrap-Skript erfolgreich Musterdaten für Einzelhandelsverkäufe in [!DNL Experience Platform] erfasst.
 
 So arbeiten Sie weiter mit den aufgenommenen Daten:
 - [Analysieren Ihrer Daten mit Jupyter-Notebooks](../jupyterlab/analyze-your-data.md)
