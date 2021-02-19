@@ -81,7 +81,7 @@ Um die Details eines bestimmten Datenflusses Ansicht, wählen Sie die Ausführun
 
 ## [!UICONTROL Aktivierungen]
 
-Auf der Registerkarte [!UICONTROL Aktivierung data] wird eine Liste von Segmenten angezeigt, die dem Ziel zugeordnet wurden, einschließlich des Beginns- und Enddatums (falls zutreffend). Um die Details zu einem bestimmten Segment Ansicht, wählen Sie dessen Namen in der Liste aus.
+Auf der Registerkarte [!UICONTROL Aktivierung data] wird eine Liste von Segmenten angezeigt, die dem Ziel zugeordnet wurden, einschließlich des Beginn- und Enddatums (falls zutreffend). Um die Details zu einem bestimmten Segment Ansicht, wählen Sie dessen Namen in der Liste aus.
 
 ![](../assets/ui/details-page/activation-data.png)
 
