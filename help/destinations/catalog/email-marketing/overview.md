@@ -4,9 +4,9 @@ title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '786'
 ht-degree: 33%
 
 ---
@@ -40,7 +40,7 @@ Geben Sie im Schritt **[!UICONTROL Setup]** einen Namen und eine Beschreibung f�
 
 Wenn Sie im vorherigen Schritt die Option &quot;Amazon S3&quot;als Datenspeicherung ausgewählt haben, fügen Sie den Behälternamen und den Ordnerpfad in das Ziel der Cloud-Datenspeicherung ein, an das die Dateien gesendet werden sollen. Geben Sie für die Option &quot;SFTP-Datenspeicherung&quot;den Ordnerpfad ein, unter dem die Dateien bereitgestellt werden sollen.
 
-In diesem Schritt können Sie auch einen beliebigen Anwendungsfall für das Marketing auswählen, der für dieses Ziel gelten soll. Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+In diesem Schritt können Sie außerdem jede Marketingaktion auswählen, die auf dieses Ziel angewendet werden soll. Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 ![Email-Setup](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 
