@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;ip-Adresse;ip-Adressen;ip-Adresse-Zulassungsliste; zulassungsliste
+keywords: Experience Platform;Home;beliebte Themen;ip-Adresse;ip-Adressen;ip-Adresse-Zulassungsliste; Zulassungsliste
 description: IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können.
 solution: Experience Platform
 title: IP-Adressen-Zulassungsliste für Quellverbindungen
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# ZULASSUNGSLISTE der IP-Adresse
+# Zulassungsliste der IP-Adresse
 
 Sie können Netzwerk-Zugriffskontrollen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
