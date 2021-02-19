@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Übersicht;Kundenhilfe;beliebte Themen;Kundenübersicht
+keywords: Experience Platform;Übersicht;Kundenberatung;beliebte Themen;Kundenübersicht
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Customer AI – Übersicht
 topic: Customer AI Overview
