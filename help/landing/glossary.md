@@ -129,7 +129,7 @@ ht-degree: 1%
 
 **Vertragsbezeichnung** C9: Eine  `C9` Beschriftung für die Verwendung von Vertragsdaten gibt an, dass Daten nicht in datenwissenschaftlichen Workflows verwendet werden können. Einige Verträge beinhalten explizite Verbote von Daten, die für die Datenwissenschaft verwendet werden. Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verbieten.
 
-**C10-Kontraktbeschriftung**: Eine Beschriftung für die  `C10` Vertragsdatenverwendung gibt an, dass Daten nicht für die Aktivierung von zusammengenähten Identitäten verwendet werden können. Einige Datenverwendungsrichtlinien beschränken die Verwendung von gehefteten Identitätsdaten für die Personalisierung. Die Beschriftung `C10` wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option &quot;Privates Diagramm&quot;verwenden.
+**C10-Kontraktbeschriftung**: Eine Beschriftung für die  `C10` Vertragsdatennutzung gibt an, dass Daten nicht für die Aktivierung von zusammengenähten Identitäten verwendet werden können. Einige Datenverwendungsrichtlinien beschränken die Verwendung von gehefteten Identitätsdaten für die Personalisierung. Die Beschriftung `C10` wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option &quot;Privates Diagramm&quot;verwenden.
 
 **Spalte** Erstellungsdatum: Die Auswahl der Spalte &quot;Erstellungsdatum&quot;ist eine Option, wenn Sie Daten von Drittanbietern über eine Quellverbindung angeben. Wenn die Option zum Anhängen einer Speicherstrategie ausgewählt ist und das DataSet-Schema mehrere Datumsfelder enthält, müssen Sie aus dem verfügbaren Schema eine Schlüsselspalte für das Erstellungsdatum angeben. Die Option &quot;Erstellungsdatum&quot;steht nicht zur Verfügung, wenn die Speicherstrategie zum Überschreiben ausgewählt wurde.
 
@@ -307,7 +307,7 @@ ht-degree: 1%
 
 **Bibliothek**: Eine Bibliothek ist  [!DNL Platform Launch]ein Satz von Geschäftslogik, die Anweisungen zum Verhalten der  [!DNL Platform Launch] Bibliothek auf dem Client-Gerät enthält.
 
-**Suchentitäten**: Im Zusammenhang mit der Datenmodellierung stellen Suchentitäten Konzepte dar, die sich auf eine einzelne Person beziehen können, aber nicht direkt zur Identifizierung der Person verwendet werden können. Entitäten, die unter diese Kategorie fallen, sollten durch Schema dargestellt werden, die auf benutzerdefinierten XDM-Klassen (Experience Data Model) basieren.
+**Suchentitäten**: Im Zusammenhang mit der Datenmodellierung stellen Suchentitäten Konzepte dar, die sich auf eine einzelne Person beziehen können, aber nicht direkt zur Identifizierung der Person verwendet werden können. Entitäten, die unter diese Kategorie fallen, sollten durch Schema dargestellt werden, die auf benutzerdefinierten Experience Data Model-Klassen (XDM) basieren.
 
 ## M
 
